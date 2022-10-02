@@ -50,11 +50,11 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
         json.dump(contents, fd)
 
 
-def sorted_entries(entries, progress):
-    """Sort the entries from low to high retention."""
+def next_entry(entries, progress):
+    """Return the next entry to quiz the user with."""
     sortable_entries = [(progress.get(str(entry), 0), entry) for entry in entries]
     sortable_entries.sort()
-    return [entry[1] for entry in sortable_entries]
+    return sortable_entries[0][1]
 
 
 PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
@@ -67,8 +67,14 @@ for deck in pathlib.Path(".").glob("deck-*.json"):
 
 progress = load_json(PROGRESS_JSON, default={})
 
+print("""Welcome to 'Kieli'!
+Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
+Kieli tracks how many times you correctly translate words and phrases. The fewer times you have
+translated a word or phrase successfully, the more often it is presented for you to translate.
+""")
 try:
-    for entry in sorted_entries(entries, progress):
+    while True:
+        entry = next_entry(entries, progress)
         print(entry[0])
         guess = input("> ")
         correct = match(guess, entry[1])
