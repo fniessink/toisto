@@ -1,7 +1,29 @@
+import difflib
 import json
 import pathlib
-import readline
 import string
+
+
+red = lambda text: f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
+green = lambda text: f"\033[38;2;0;255;0m{text}\033[38;2;255;255;255m"
+
+
+def get_edits_string(old: str, new: str) -> str:
+    """Return a colored edit string."""
+    result = ""
+    codes = difflib.SequenceMatcher(a=old, b=new).get_opcodes()
+    for operator, i1, i2, j1, j2 in codes:
+        old_fragment = old[i1:i2]
+        new_fragment = new[j1:j2]
+        if operator == "equal" or (operator == "replace" and old_fragment.lower() == new_fragment.lower()):
+            result += old_fragment
+        elif operator == "delete":
+            result += red(old_fragment)
+        elif operator == "insert":
+            result += green(new_fragment)
+        elif operator == "replace":
+            result += (red(old_fragment) + green(new_fragment))
+    return result
 
 
 def without_punctuation(text: str) -> str:
@@ -17,14 +39,14 @@ def match(text1: str, text2: str) -> bool:
 def load_json(json_file_path: pathlib.Path, default=None):
     """Load the JSON from the file. Return default if file does not exist."""
     if json_file_path.exists():
-        with json_file_path.open() as fd:
+        with json_file_path.open(encoding="utf-8") as fd:
             return json.load(fd)
     return default
 
 
 def dump_json(json_file_path: pathlib.Path, contents) -> None:
     """Dump the JSON into the file."""
-    with json_file_path.open("w") as fd:
+    with json_file_path.open("w", encoding="utf-8") as fd:
         json.dump(contents, fd)
 
 
@@ -51,8 +73,9 @@ try:
         guess = input("> ")
         correct = match(guess, entry[1])
         key = str(entry)
-        score = progress[key] = progress.setdefault(key, 0) + 1 if correct else 0
-        print(("Correct." if correct else f'Incorrect. The correct answer is "{entry[1]}".') + f" Score = {score}.\n""")
+        progress[key] = progress.setdefault(key, 0) + 1 if correct else 0
+        diff = get_edits_string(guess, entry[1])
+        print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
 except (KeyboardInterrupt, EOFError):
     print()  # Make sure the shell prompt is displayed on a new line
 finally:
