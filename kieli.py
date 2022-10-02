@@ -8,21 +8,21 @@ red = lambda text: f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
 green = lambda text: f"\033[38;2;0;255;0m{text}\033[38;2;255;255;255m"
 
 
-def get_edits_string(old: str, new: str) -> str:
-    """Return a colored edit string."""
+def colored_diff(old: str, new: str) -> str:
+    """Return a colored string showing the diffs between old and new."""
     result = ""
     codes = difflib.SequenceMatcher(a=old, b=new).get_opcodes()
     for operator, i1, i2, j1, j2 in codes:
         old_fragment = old[i1:i2]
         new_fragment = new[j1:j2]
-        if operator == "equal" or (operator == "replace" and old_fragment.lower() == new_fragment.lower()):
-            result += old_fragment
-        elif operator == "delete":
+        if operator == "delete":
             result += red(old_fragment)
         elif operator == "insert":
             result += green(new_fragment)
-        elif operator == "replace":
+        elif operator == "replace" and old_fragment.lower() != new_fragment.lower():
             result += (red(old_fragment) + green(new_fragment))
+        else:
+            result += old_fragment
     return result
 
 
@@ -74,7 +74,7 @@ try:
         correct = match(guess, entry[1])
         key = str(entry)
         progress[key] = progress.setdefault(key, 0) + 1 if correct else 0
-        diff = get_edits_string(guess, entry[1])
+        diff = colored_diff(guess, entry[1])
         print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
 except (KeyboardInterrupt, EOFError):
     print()  # Make sure the shell prompt is displayed on a new line
