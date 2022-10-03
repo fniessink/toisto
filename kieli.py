@@ -1,7 +1,16 @@
 import difflib
 import json
+import os
 import pathlib
 import string
+
+
+VOICES = dict(fi="Satu", nl="Xander")
+
+def say(language: str, text: str) -> None:
+    """Say the text in the specified language."""
+    voice = VOICES[language]
+    os.system(f"say --voice={voice} --interactive=bold '{text}'")
 
 
 red = lambda text: f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
@@ -52,9 +61,9 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
 
 def next_entry(entries, progress):
     """Return the next entry to quiz the user with."""
-    sortable_entries = [(progress.get(str(entry), 0), entry) for entry in entries]
+    sortable_entries = [(progress.get(str(entry), 0), index) for index, entry in enumerate(entries)]
     sortable_entries.sort()
-    return sortable_entries[0][1]
+    return entries[sortable_entries[0][1]]
 
 
 PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
@@ -62,8 +71,7 @@ PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
 entries = []
 for deck in pathlib.Path(".").glob("deck-*.json"):
     for entry in load_json(deck):
-        translations = tuple(entry.values())
-        entries.extend([translations, tuple(reversed(translations))])
+        entries.extend([entry, dict(reversed(entry.items()))])
 
 progress = load_json(PROGRESS_JSON, default={})
 
@@ -75,12 +83,14 @@ translated a word or phrase successfully, the more often it is presented for you
 try:
     while True:
         entry = next_entry(entries, progress)
-        print(entry[0])
+        question, answer = entry.values()
+        question_language, answer_language = entry.keys()
+        say(question_language, question)
         guess = input("> ")
-        correct = match(guess, entry[1])
+        correct = match(guess, answer)
         key = str(entry)
         progress[key] = progress.setdefault(key, 0) + 1 if correct else 0
-        diff = colored_diff(guess, entry[1])
+        diff = colored_diff(guess, answer)
         print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
 except (KeyboardInterrupt, EOFError):
     print()  # Make sure the shell prompt is displayed on a new line
