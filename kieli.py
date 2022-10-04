@@ -69,7 +69,7 @@ def next_entry(entries, progress):
 PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
 
 entries = []
-for deck in pathlib.Path(".").glob("deck-*.json"):
+for deck in pathlib.Path("decks").glob("*.json"):
     for entry in load_json(deck):
         entries.extend([entry, dict(reversed(entry.items()))])
 
