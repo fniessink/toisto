@@ -66,34 +66,38 @@ def next_entry(entries, progress):
     return random.choice(next_entries)
 
 
-PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
+PROGRESS_JSON = pathlib.Path.home() / ".kieli-progress.json"
+DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
 
-entries = []
-for deck in pathlib.Path("decks").glob("*.json"):
-    for entry in load_json(deck):
-        entries.extend([entry, dict(reversed(entry.items()))])
 
-progress = load_json(PROGRESS_JSON, default={})
+def main():
+    """Main program."""
+    entries = []
+    for deck in DECKS_FOLDER.glob("*.json"):
+        for entry in load_json(deck):
+            entries.extend([entry, dict(reversed(entry.items()))])
 
-print("""Welcome to 'Kieli'!
-Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
-Kieli tracks how many times you correctly translate words and phrases. The fewer times you have
-translated a word or phrase successfully, the more often it is presented for you to translate.
-""")
-try:
-    while True:
-        entry = next_entry(entries, progress)
-        question, answer = entry.values()
-        question_language, answer_language = entry.keys()
-        say(question_language, question)
-        guess = input("> ")
-        correct = match(guess, answer)
-        key = str(entry)
-        progress[key] = progress.setdefault(key, 0) + 2 if correct else -1
-        diff = colored_diff(guess, answer)
-        print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
-except (KeyboardInterrupt, EOFError):
-    print()  # Make sure the shell prompt is displayed on a new line
-finally:
-    dump_json(PROGRESS_JSON, progress)
+    progress = load_json(PROGRESS_JSON, default={})
 
+    print("""Welcome to 'Kieli'!
+
+    Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
+    Kieli tracks how many times you correctly translate words and phrases. The fewer times you have
+    translated a word or phrase successfully, the more often it is presented for you to translate.
+    """)
+    try:
+        while True:
+            entry = next_entry(entries, progress)
+            question, answer = entry.values()
+            question_language, answer_language = entry.keys()
+            say(question_language, question)
+            guess = input("> ")
+            correct = match(guess, answer)
+            key = str(entry)
+            progress[key] = progress.setdefault(key, 0) + 2 if correct else -1
+            diff = colored_diff(guess, answer)
+            print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
+    except (KeyboardInterrupt, EOFError):
+        print()  # Make sure the shell prompt is displayed on a new line
+    finally:
+        dump_json(PROGRESS_JSON, progress)

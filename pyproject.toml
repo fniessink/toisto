@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "build>=0.8.0", "twine>=4.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Kieli"
+version = "0.0.1"
+authors = [
+  { name="Frank Niessink", email="frank@niessink.com" },
+]
+description = "Command-line app to practice languages."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+]
+
+[project.scripts]
+kieli = "kieli.app:main"
+
+[project.urls]
+"Homepage" = "https://github.com/fniessink/kieli"
+"Bug Tracker" = "https://github.com/fniessink/kieli/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+kieli = ["decks/*.json"]

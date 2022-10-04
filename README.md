@@ -2,16 +2,24 @@
 
 Command-line app to practice languages. *Kieli* is Finnish for *language*.
 
+Kieli is alpha software at the moment. It comes with a limited set of words and phrases in Dutch and Finnish.
+
 ## Prerequisites
 
-MacOS (for the say command) and Python 3.10.
+MacOS (for the say command), [Python 3.10 or newer](https://python.org), and [pipx](https://pypa.github.io/pipx/).
+
+## How to install
+
+```console
+$ pipx install Kieli
+```
 
 ## How to use
 
-Clone this repository, open a terminal, and then start the program as follows:
+Start the program as follows:
 
 ```console
- $ python3 kieli.py
+ $ kieli
  ```
 
 ## Example session
@@ -42,3 +50,7 @@ Neljätoista
 > veertien
 ✅ Correct.
 ```
+
+## How it works
+
+Kieli presents words and phrases in Dutch and Finnish for you to translate. Words and phrases are sorted by 'progress'. When you translate a word or phrase correctly, its progress increases, otherwise it decreases. Words and phrases are sorted by progress so that the ones with the lowest score are presented to you first. When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.kieli-progress.json` in your home folder.
