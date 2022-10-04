@@ -2,6 +2,7 @@ import difflib
 import json
 import os
 import pathlib
+import random
 import string
 
 
@@ -22,8 +23,7 @@ def colored_diff(old: str, new: str) -> str:
     result = ""
     codes = difflib.SequenceMatcher(a=old, b=new).get_opcodes()
     for operator, i1, i2, j1, j2 in codes:
-        old_fragment = old[i1:i2]
-        new_fragment = new[j1:j2]
+        old_fragment, new_fragment = old[i1:i2], new[j1:j2]
         if operator == "delete":
             result += red(old_fragment)
         elif operator == "insert":
@@ -61,9 +61,9 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
 
 def next_entry(entries, progress):
     """Return the next entry to quiz the user with."""
-    sortable_entries = [(progress.get(str(entry), 0), index) for index, entry in enumerate(entries)]
-    sortable_entries.sort()
-    return entries[sortable_entries[0][1]]
+    min_progress = min(progress.get(str(entry), 0) for entry in entries)
+    next_entries = [entry for entry in entries if progress.get(str(entry), 0) == min_progress]
+    return random.choice(next_entries)
 
 
 PROGRESS_JSON = pathlib.Path(".kieli-progress.json")
@@ -89,7 +89,7 @@ try:
         guess = input("> ")
         correct = match(guess, answer)
         key = str(entry)
-        progress[key] = progress.setdefault(key, 0) + 1 if correct else 0
+        progress[key] = progress.setdefault(key, 0) + 2 if correct else -1
         diff = colored_diff(guess, answer)
         print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
 except (KeyboardInterrupt, EOFError):
