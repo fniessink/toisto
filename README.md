@@ -44,7 +44,7 @@ Veertien
 
 Neljätoista
 > viertien
-❌ Incorrect. The correct answer is "viVeertien".
+❌ Incorrect. The correct answer is "veertien".
 
 Neljätoista
 > veertien
