@@ -20,7 +20,7 @@ Start the program as follows:
 
 ```console
  $ kieli
- ```
+```
 
 ## Example session
 
