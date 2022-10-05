@@ -54,3 +54,39 @@ Neljätoista
 ## How it works
 
 Toisto presents words and phrases in Dutch and Finnish for you to translate. Words and phrases are sorted by 'progress'. When you translate a word or phrase correctly, its progress increases, otherwise it decreases. Words and phrases are sorted by progress so that the ones with the lowest score are presented to you first. When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
+
+## Developer guidelines
+
+### How to prepare
+
+Clone the repository:
+
+```console
+$ git clone https://github.com/fniessink/toisto.git
+```
+
+Create a virtual environment, activate it, install the dependencies and install Toisto in development mode:
+
+```console
+$ cd toisto
+$ python3 -m venv venv
+$ . venv/bin/activate
+$ pip install -r requirements-dev.txt
+$ pip install -e .
+```
+
+### How to release
+
+Update the version number in `pyproject.toml`.
+
+Create the distribution files by running:
+
+```console
+$ python -m build
+```
+
+Upload the distribution files to PyPI by running:
+
+```console
+$ twine upload dist/*
+```
