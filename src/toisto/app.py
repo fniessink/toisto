@@ -1,5 +1,6 @@
 """Main module for Toisto."""
 
+from dataclasses import dataclass
 import json
 import os
 import pathlib
@@ -32,11 +33,22 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
         json.dump(contents, json_file)
 
 
-def next_entry(entries, progress):
+@dataclass
+class Entry:
+    question_language: str
+    answer_language: str
+    question: str
+    answer: str
+
+
+def next_entry(entries, progress) -> Entry:
     """Return the next entry to quiz the user with."""
     min_progress = min(progress.get(str(entry), 0) for entry in entries)
     next_entries = [entry for entry in entries if progress.get(str(entry), 0) == min_progress]
-    return random.choice(next_entries)
+    entry_dict = random.choice(next_entries)
+    question_language, answer_language = entry_dict.keys()
+    question, answer = entry_dict.values()
+    return Entry(question_language, answer_language, question, answer)
 
 
 PROGRESS_JSON = pathlib.Path.home() / ".toisto-progress.json"
@@ -61,14 +73,12 @@ def main():
     try:
         while True:
             entry = next_entry(entries, progress)
-            question, answer = entry.values()
-            question_language = list(entry.keys())[0]
-            say(question_language, question)
+            say(entry.question_language, entry.question)
             guess = input("> ")
-            correct = match(guess, answer)
+            correct = match(guess, entry.answer)
             key = str(entry)
             progress[key] = progress.setdefault(key, 0) + 2 if correct else -1
-            diff = colored_diff(guess, answer)
+            diff = colored_diff(guess, entry.answer)
             print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
     except (KeyboardInterrupt, EOFError):
         print()  # Make sure the shell prompt is displayed on a new line
