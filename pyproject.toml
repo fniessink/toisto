@@ -33,3 +33,6 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 kieli = ["decks/*.json"]
+
+[tool.pylint.messages_control]
+max-line-length = 120

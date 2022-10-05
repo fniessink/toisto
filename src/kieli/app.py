@@ -1,8 +1,11 @@
+"""Main module for Kieli."""
+
 import difflib
 import json
 import os
 import pathlib
 import random
+import readline  # pylint: disable=unused-import
 import string
 
 
@@ -14,16 +17,21 @@ def say(language: str, text: str) -> None:
     os.system(f"say --voice={voice} --interactive=bold '{text}'")
 
 
-red = lambda text: f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
-green = lambda text: f"\033[38;2;0;255;0m{text}\033[38;2;255;255;255m"
+def red(text: str) -> str:
+    """Return the text in red."""
+    return f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
+
+def green(text: str) -> str:
+    """Return thr text in green."""
+    return f"\033[38;2;0;255;0m{text}\033[38;2;255;255;255m"
 
 
-def colored_diff(old: str, new: str) -> str:
-    """Return a colored string showing the diffs between old and new."""
+def colored_diff(old_text: str, new_text: str) -> str:
+    """Return a colored string showing the diffs between old and new text."""
     result = ""
-    codes = difflib.SequenceMatcher(a=old, b=new).get_opcodes()
-    for operator, i1, i2, j1, j2 in codes:
-        old_fragment, new_fragment = old[i1:i2], new[j1:j2]
+    codes = difflib.SequenceMatcher(a=old_text, b=new_text).get_opcodes()
+    for operator, old_start, old_end, new_start, new_end in codes:
+        old_fragment, new_fragment = old_text[old_start:old_end], new_text[new_start:new_end]
         if operator == "delete":
             result += red(old_fragment)
         elif operator == "insert":
@@ -48,15 +56,15 @@ def match(text1: str, text2: str) -> bool:
 def load_json(json_file_path: pathlib.Path, default=None):
     """Load the JSON from the file. Return default if file does not exist."""
     if json_file_path.exists():
-        with json_file_path.open(encoding="utf-8") as fd:
-            return json.load(fd)
+        with json_file_path.open(encoding="utf-8") as json_file:
+            return json.load(json_file)
     return default
 
 
 def dump_json(json_file_path: pathlib.Path, contents) -> None:
     """Dump the JSON into the file."""
-    with json_file_path.open("w", encoding="utf-8") as fd:
-        json.dump(contents, fd)
+    with json_file_path.open("w", encoding="utf-8") as json_file:
+        json.dump(contents, json_file)
 
 
 def next_entry(entries, progress):
@@ -89,7 +97,7 @@ def main():
         while True:
             entry = next_entry(entries, progress)
             question, answer = entry.values()
-            question_language, answer_language = entry.keys()
+            question_language = list(entry.keys())[0]
             say(question_language, question)
             guess = input("> ")
             correct = match(guess, answer)
