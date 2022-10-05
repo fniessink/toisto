@@ -75,6 +75,20 @@ $ pip install -r requirements-dev.txt
 $ pip install -e .
 ```
 
+## How to test
+
+Run the unit tests as follows:
+
+```console
+$ green
+```
+
+To get a coverage report, run:
+
+```console
+$ green -r
+```
+
 ### How to release
 
 Update the version number in `pyproject.toml`.

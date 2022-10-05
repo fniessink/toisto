@@ -1,12 +1,13 @@
 """Main module for Toisto."""
 
-import difflib
 import json
 import os
 import pathlib
 import random
 import readline  # pylint: disable=unused-import
-import string
+
+from .diff import colored_diff
+from .match import match
 
 
 VOICES = dict(fi="Satu", nl="Xander")
@@ -15,42 +16,6 @@ def say(language: str, text: str) -> None:
     """Say the text in the specified language."""
     voice = VOICES[language]
     os.system(f"say --voice={voice} --interactive=bold '{text}'")
-
-
-def red(text: str) -> str:
-    """Return the text in red."""
-    return f"\033[38;2;255;0;0m{text}\033[38;2;255;255;255m"
-
-def green(text: str) -> str:
-    """Return thr text in green."""
-    return f"\033[38;2;0;255;0m{text}\033[38;2;255;255;255m"
-
-
-def colored_diff(old_text: str, new_text: str) -> str:
-    """Return a colored string showing the diffs between old and new text."""
-    result = ""
-    codes = difflib.SequenceMatcher(a=old_text, b=new_text).get_opcodes()
-    for operator, old_start, old_end, new_start, new_end in codes:
-        old_fragment, new_fragment = old_text[old_start:old_end], new_text[new_start:new_end]
-        if operator == "delete":
-            result += red(old_fragment)
-        elif operator == "insert":
-            result += green(new_fragment)
-        elif operator == "replace" and old_fragment.lower() != new_fragment.lower():
-            result += (red(old_fragment) + green(new_fragment))
-        else:
-            result += old_fragment
-    return result
-
-
-def without_punctuation(text: str) -> str:
-    """Remove text without punctuation."""
-    return ''.join(char for char in text if char not in string.punctuation)
-
-
-def match(text1: str, text2: str) -> bool:
-    """Return whether the texts match."""
-    return without_punctuation(text1.strip().lower()) == without_punctuation(text2.strip().lower())
 
 
 def load_json(json_file_path: pathlib.Path, default=None):

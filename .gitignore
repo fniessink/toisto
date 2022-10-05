@@ -1,6 +1,7 @@
 build
 dist
 venv
+.coverage
 **/*.egg-info
 **/__pycache__/**
 
