@@ -1,4 +1,4 @@
-"""Main module for Kieli."""
+"""Main module for Toisto."""
 
 import difflib
 import json
@@ -74,7 +74,7 @@ def next_entry(entries, progress):
     return random.choice(next_entries)
 
 
-PROGRESS_JSON = pathlib.Path.home() / ".kieli-progress.json"
+PROGRESS_JSON = pathlib.Path.home() / ".toisto-progress.json"
 DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
 
 
@@ -87,10 +87,10 @@ def main():
 
     progress = load_json(PROGRESS_JSON, default={})
 
-    print("""Welcome to 'Kieli'!
+    print("""Welcome to 'Toisto'!
 
     Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
-    Kieli tracks how many times you correctly translate words and phrases. The fewer times you have
+    Toisto tracks how many times you correctly translate words and phrases. The fewer times you have
     translated a word or phrase successfully, the more often it is presented for you to translate.
     """)
     try:

@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "build>=0.8.0", "twine>=4.0.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Kieli"
+name = "Toisto"
 version = "0.0.1"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
@@ -22,17 +22,17 @@ classifiers = [
 ]
 
 [project.scripts]
-kieli = "kieli.app:main"
+toisto = "toisto.app:main"
 
 [project.urls]
-"Homepage" = "https://github.com/fniessink/kieli"
-"Bug Tracker" = "https://github.com/fniessink/kieli/issues"
+"Homepage" = "https://github.com/fniessink/toisto"
+"Bug Tracker" = "https://github.com/fniessink/toisto/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-kieli = ["decks/*.json"]
+toisto = ["decks/*.json"]
 
 [tool.pylint.messages_control]
 max-line-length = 120

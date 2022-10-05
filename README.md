@@ -1,8 +1,8 @@
-# Kieli
+# Toisto
 
-Command-line app to practice languages. *Kieli* is Finnish for *language*.
+Command-line app to practice languages. *Toisto* is Finnish and means *reiteration, playback, repetition, reproduction*.
 
-Kieli is alpha software at the moment. It comes with a limited set of words and phrases in Dutch and Finnish.
+Toisto is alpha software at the moment. It comes with a limited set of words and phrases in Dutch and Finnish.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ MacOS (for the say command), [Python 3.10 or newer](https://python.org), and [pi
 ## How to install
 
 ```console
-$ pipx install Kieli
+$ pipx install Toisto
 ```
 
 ## How to use
@@ -19,15 +19,15 @@ $ pipx install Kieli
 Start the program as follows:
 
 ```console
- $ kieli
+ $ toisto
 ```
 
 ## Example session
 
 ```console
-Welcome to 'Kieli'!
+Welcome to 'Toisto'!
 Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
-Kieli tracks how many times you correctly translate words and phrases. The fewer times you have
+Toisto tracks how many times you correctly translate words and phrases. The fewer times you have
 translated a word or phrase successfully, the more often it is presented for you to translate.
 
 Dertien
@@ -53,4 +53,4 @@ Neljätoista
 
 ## How it works
 
-Kieli presents words and phrases in Dutch and Finnish for you to translate. Words and phrases are sorted by 'progress'. When you translate a word or phrase correctly, its progress increases, otherwise it decreases. Words and phrases are sorted by progress so that the ones with the lowest score are presented to you first. When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.kieli-progress.json` in your home folder.
+Toisto presents words and phrases in Dutch and Finnish for you to translate. Words and phrases are sorted by 'progress'. When you translate a word or phrase correctly, its progress increases, otherwise it decreases. Words and phrases are sorted by progress so that the ones with the lowest score are presented to you first. When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
