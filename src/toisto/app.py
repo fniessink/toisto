@@ -1,44 +1,13 @@
 """Main module for Toisto."""
 
-from dataclasses import dataclass
-import json
-import os
-import pathlib
 import random
 import readline  # pylint: disable=unused-import
+from importlib.metadata import version
 
 from .diff import colored_diff
-from .match import match
-
-
-VOICES = dict(fi="Satu", nl="Xander")
-
-def say(language: str, text: str) -> None:
-    """Say the text in the specified language."""
-    voice = VOICES[language]
-    os.system(f"say --voice={voice} --interactive=bold '{text}'")
-
-
-def load_json(json_file_path: pathlib.Path, default=None):
-    """Load the JSON from the file. Return default if file does not exist."""
-    if json_file_path.exists():
-        with json_file_path.open(encoding="utf-8") as json_file:
-            return json.load(json_file)
-    return default
-
-
-def dump_json(json_file_path: pathlib.Path, contents) -> None:
-    """Dump the JSON into the file."""
-    with json_file_path.open("w", encoding="utf-8") as json_file:
-        json.dump(contents, json_file)
-
-
-@dataclass
-class Entry:
-    question_language: str
-    answer_language: str
-    question: str
-    answer: str
+from .model import Entry
+from .persistence import dump_json, load_json, DECKS_FOLDER, PROGRESS_JSON
+from .speech import say
 
 
 def next_entry(entries, progress) -> Entry:
@@ -51,10 +20,6 @@ def next_entry(entries, progress) -> Entry:
     return Entry(question_language, answer_language, question, answer)
 
 
-PROGRESS_JSON = pathlib.Path.home() / ".toisto-progress.json"
-DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
-
-
 def main():
     """Main program."""
     entries = []
@@ -64,7 +29,7 @@ def main():
 
     progress = load_json(PROGRESS_JSON, default={})
 
-    print("""Welcome to 'Toisto'!
+    print(f"""Welcome to 'Toisto' v{version('Toisto')}!
 
     Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
     Toisto tracks how many times you correctly translate words and phrases. The fewer times you have
@@ -75,7 +40,7 @@ def main():
             entry = next_entry(entries, progress)
             say(entry.question_language, entry.question)
             guess = input("> ")
-            correct = match(guess, entry.answer)
+            correct = entry.is_correct(guess)
             key = str(entry)
             progress[key] = progress.setdefault(key, 0) + 2 if correct else -1
             diff = colored_diff(guess, entry.answer)

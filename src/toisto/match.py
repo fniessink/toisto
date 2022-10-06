@@ -1,4 +1,4 @@
-"""Matching."""
+"""Text matching."""
 
 import string
 
