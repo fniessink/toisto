@@ -27,3 +27,11 @@ class MatchTest(unittest.TestCase):
     def test_strip_whitespace(self):
         """Test that whitespace is ignored."""
         self.assertTrue(match("foo ", "\tfoo"))
+
+    def test_match_none_of_many(self):
+        """Test that the text can be matched against multiple texts."""
+        self.assertFalse(match("foö", "foo", "fool"))
+
+    def test_match_one_of_many(self):
+        """Test that the text can be matched against multiple texts."""
+        self.assertTrue(match("foo", "foo", "fool", "fools"))

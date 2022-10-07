@@ -24,6 +24,24 @@ class EntryTest(unittest.TestCase):
         """Test that an entry can be reversed."""
         self.assertEqual(Entry("nl", "en", "Engels", "English"), self.entry.reversed())
 
+    def test_get_answer(self):
+        """Test that the answer is returned."""
+        self.assertEqual("Engels", self.entry.get_answer())
+
+    def test_get_first_answer(self):
+        """Test that the first answer is returned when there are multiple."""
+        entry = Entry("en", "nl", "One", ["Een", "Eén"])
+        self.assertEqual("Een", entry.get_answer())
+
+    def test_get_question(self):
+        """Test that the question is returned."""
+        self.assertEqual("English", self.entry.get_question())
+
+    def test_get_first_answer(self):
+        """Test that the first answer is returned when there are multiple."""
+        entry = Entry("en", "nl", "One", ["Een", "Eén"]).reversed()
+        self.assertEqual("Een", entry.get_question())
+
 
 class ProgressTest(unittest.TestCase):
     """Unit tests for the progress class."""

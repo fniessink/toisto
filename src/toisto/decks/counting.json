@@ -1,6 +1,6 @@
 [
     { "nl": "Tellen", "fi": "Laskea" },
-    { "nl": "Eén", "fi": "Yksi" },
+    { "nl": ["Eén", "één", "Een"], "fi": "Yksi" },
     { "nl": "Twee", "fi": "Kaksi" },
     { "nl": "Drie", "fi": "Kolme" },
     { "nl": "Vier", "fi": "Neljä" },
@@ -33,6 +33,6 @@
     { "nl": "Negentig", "fi": "Yhdeksänkymmentä" },
     { "nl": "Honderd", "fi": "Sata" },
     { "nl": "Tweehonderd", "fi": "Kaksisataa" },
-    { "nl": "Duizend", "fi": "Tuhat" }
+    { "nl": "Duizend", "fi": "Tuhat" },
+    { "nl": "Tweeduizend", "fi": "Kaksituhatta" }
 ]
-

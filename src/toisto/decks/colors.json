@@ -8,6 +8,6 @@
     { "nl": "Paars", "fi": "Violetti" },
     { "nl": "Oranje", "fi": "Oranssi" },
     { "nl": "Bruin", "fi": "Ruskea" },
-    { "nl": "Roze", "fi": "Vaaleanpunainen" },
+    { "nl": "Roze", "fi": ["Vaaleanpunainen", "Pinkki"] },
     { "nl": "Grijs", "fi": "Harmaa" }
 ]

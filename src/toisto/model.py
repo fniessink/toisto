@@ -10,16 +10,25 @@ class Entry:
     """Class representing one word or phrase question/answer pair with a specific direction."""
     question_language: str
     answer_language: str
-    question: str
-    answer: str
+    question: str | list[str]
+    answer: str | list[str]
 
     def is_correct(self, guess: str) -> bool:
         """Return whether the guess is correct."""
-        return match(self.answer, guess)
+        answers = self.answer if type(self.answer) == list else [self.answer]
+        return match(guess, *answers)
 
     def reversed(self) -> "Entry":
         """Return the reversed version of this entry."""
         return self.__class__(self.answer_language, self.question_language, self.answer, self.question)
+
+    def get_answer(self) -> str:
+        """Return the answer. If answer is a list, return the first answer."""
+        return self.answer[0] if type(self.answer) == list else self.answer
+
+    def get_question(self) -> str:
+        """Return the question. If question is a list, return the first question."""
+        return self.question[0] if type(self.question) == list else self.question
 
 
 class Progress:

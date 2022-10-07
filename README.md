@@ -130,3 +130,20 @@ Upload the distribution files to PyPI by running:
 ```console
 $ twine upload dist/*
 ```
+
+## Software documentation
+
+### Decks
+
+Decks are located in `src/toisto/decks` in the form of JSON files. The format of the JSON files is as follows:
+
+```json
+[
+    {"fi": "Terve", "nl": ["Hoi", "Hallo"]},
+    {"fi": "Tervetuloa", "nl": "Welkom"}
+]
+```
+
+Each deck is a list of entries. Each entry is a mapping with exactly two language key-value pairs. The key is a language identifier. Currently only "fi" for Finnish and "nl" for Dutch are supported. Each language identifier has a value which is either a string or a list of strings. The values are words, phrases, or sentences in the language indicated by the key.
+
+Toisto quizzes the user in both directions, Finnish-Dutch and Dutch-Finnish. If the language value is a list, Toisto only uses the first item as question, but uses all values to check answers. So when quizzing Finnish-Dutch, both "Hoi" and "Hello" are accepted as answer to "Terve". But when quizzing Dutch-Finnish only "Hoi" is used as question.
