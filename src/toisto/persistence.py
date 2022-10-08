@@ -4,12 +4,11 @@ import json
 import pathlib
 import sys
 
-from .metadata import NAME
+from .metadata import NAME, DECKS_JSON_FILES
 from .model import Entry, Progress
 
 
 PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
-DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
 
 
 def load_json(json_file_path: pathlib.Path, default=None):
@@ -26,13 +25,14 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
         json.dump(contents, json_file)
 
 
-def load_entries() -> list[Entry]:
+def load_entries(decks_to_load: list[str]) -> list[Entry]:
     """Load the entries from the decks."""
     entries = []
-    for deck in DECKS_FOLDER.glob("*.json"):
-        for entry_dict in load_json(deck):
-            entry = Entry("nl", "fi", entry_dict["nl"], entry_dict["fi"])
-            entries.extend([entry, entry.reversed()])
+    for deck in DECKS_JSON_FILES:
+        if not decks_to_load or deck.stem in decks_to_load:
+            for entry_dict in load_json(deck):
+                entry = Entry("nl", "fi", entry_dict["nl"], entry_dict["fi"])
+                entries.extend([entry, entry.reversed()])
     return entries
 
 

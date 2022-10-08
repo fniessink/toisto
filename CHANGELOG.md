@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
-- Added a deck with colors.
+- Added a deck with colors and a deck with family related words.
+- Added command line options for help, version, and specifying decks to use. Run `toisto -h` to see the help information.
 - Entries in decks can have multiple answers.
 
 ### Fixed

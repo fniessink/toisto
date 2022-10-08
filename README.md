@@ -28,30 +28,32 @@ Start Toista as follows:
  $ toisto
 ```
 
+Add `--help` to get help information:
+
+```console
+ $ toisto --help
+```
+
 ### Example session
 
 ```console
-Welcome to 'Toisto' v0.0.1!
+Welcome to 'Toisto' v0.0.2!
 
     Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
     Toisto tracks how many times you correctly translate words and phrases. The fewer times you have
     translated a word or phrase successfully, the more often it is presented for you to translate.
 
-Negentig
-> yhdeksänkymmentä
+Isoäiti
+> opa
+❌ Incorrect. The correct answer is "De grootmoeder".
+
+Isoäiti
+> De grootmoeder
 ✅ Correct.
 
-Kaksitoista
-> twaalf
+De familie
+> Perhe
 ✅ Correct.
-
-Zestien
-> kuusitoista
-✅ Correct.
-
-Kuukaudet
-> De maand
-❌ Incorrect. The correct answer is "De maanden".
 ```
 
 ### How it works

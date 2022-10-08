@@ -11,8 +11,8 @@ from .speech import say
 
 def main():
     """Main program."""
-    parser.parse_args()
-    entries = load_entries()
+    namespace = parser.parse_args()
+    entries = load_entries(namespace.deck)
     progress = load_progress()
 
     print(f"""Welcome to '{NAME}' v{VERSION}!
