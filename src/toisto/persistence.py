@@ -4,10 +4,11 @@ import json
 import pathlib
 import sys
 
+from .metadata import NAME
 from .model import Entry, Progress
 
 
-PROGRESS_JSON = pathlib.Path.home() / ".toisto-progress.json"
+PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
 DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
 
 
@@ -41,9 +42,10 @@ def load_progress() -> Progress:
         return Progress(load_json(PROGRESS_JSON, default={}))
     except json.decoder.JSONDecodeError as reason:
         sys.stderr.write(
-            f"""Toisto cannot parse the progress information in {PROGRESS_JSON}: {reason}.
-To fix this, remove or rename {PROGRESS_JSON} and start Toisto again. Unfortunately, this will reset your progress.
-Please consider opening a bug report at https://github.com/fniessink/toisto. Please attach the invalid progress file to the issue.
+            f"""{NAME} cannot parse the progress information in {PROGRESS_JSON}: {reason}.
+To fix this, remove or rename {PROGRESS_JSON} and start {NAME} again. Unfortunately, this will reset your progress.
+Please consider opening a bug report at https://github.com/fniessink/{NAME.lower()}. Be sure to attach the invalid
+progress file to the issue.
 """)
         sys.exit(1)
 

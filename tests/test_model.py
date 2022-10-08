@@ -37,7 +37,7 @@ class EntryTest(unittest.TestCase):
         """Test that the question is returned."""
         self.assertEqual("English", self.entry.get_question())
 
-    def test_get_first_answer(self):
+    def test_get_first_question(self):
         """Test that the first answer is returned when there are multiple."""
         entry = Entry("en", "nl", "One", ["Een", "Eén"]).reversed()
         self.assertEqual("Een", entry.get_question())
@@ -49,7 +49,7 @@ class ProgressTest(unittest.TestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.entry = Entry("en", "nl", "English", "Engels")
-        self.progress = Progress(dict())
+        self.progress = Progress({})
 
     def test_progress_new_entry(self):
         """Test that the progress of an entry without progress."""

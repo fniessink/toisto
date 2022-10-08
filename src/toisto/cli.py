@@ -2,8 +2,8 @@
 
 import argparse
 
-from importlib.metadata import metadata, version
+from .metadata import SUMMARY, VERSION
 
 
-parser = argparse.ArgumentParser(description=metadata("Toisto")["summary"])
-parser.add_argument("-V", "--version", action="version", version=version("Toisto"))
+parser = argparse.ArgumentParser(description=SUMMARY)
+parser.add_argument("-V", "--version", action="version", version=VERSION)

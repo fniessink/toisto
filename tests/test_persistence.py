@@ -62,9 +62,9 @@ class ProgressPersistenceTest(unittest.TestCase):
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr", Mock())
     @patch("pathlib.Path.open")
-    def test_load_non_existing_progress(self, open):
+    def test_load_invalid_progress(self, path_open):
         """Test that the default value is returned when the progress cannot be loaded."""
-        open.return_value.__enter__.return_value.read.return_value = ""
+        path_open.return_value.__enter__.return_value.read.return_value = ""
         self.assertRaises(SystemExit, load_progress)
 
     @patch("pathlib.Path.open", MagicMock())
@@ -75,8 +75,8 @@ class ProgressPersistenceTest(unittest.TestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_progress(self, dump, open):
+    def test_save_progress(self, dump, path_open):
         """Test that the progress can be saved."""
-        open.return_value.__enter__.return_value = json_file = MagicMock()
+        path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress({}))
         dump.assert_called_once_with({}, json_file)

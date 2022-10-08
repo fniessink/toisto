@@ -15,7 +15,7 @@ class Entry:
 
     def is_correct(self, guess: str) -> bool:
         """Return whether the guess is correct."""
-        answers = self.answer if type(self.answer) == list else [self.answer]
+        answers = self.answer if isinstance(self.answer, list) else [self.answer]
         return match(guess, *answers)
 
     def reversed(self) -> "Entry":
@@ -24,11 +24,11 @@ class Entry:
 
     def get_answer(self) -> str:
         """Return the answer. If answer is a list, return the first answer."""
-        return self.answer[0] if type(self.answer) == list else self.answer
+        return self.answer[0] if isinstance(self.answer, list) else self.answer
 
     def get_question(self) -> str:
         """Return the question. If question is a list, return the first question."""
-        return self.question[0] if type(self.question) == list else self.question
+        return self.question[0] if isinstance(self.question, list) else self.question
 
 
 class Progress:

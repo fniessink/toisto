@@ -1,10 +1,10 @@
-"""Main module for Toisto."""
+"""Main module for the application."""
 
 import readline  # pylint: disable=unused-import
-from importlib.metadata import version
 
 from .cli import parser
 from .diff import colored_diff
+from .metadata import NAME, VERSION
 from .persistence import load_entries, load_progress, save_progress
 from .speech import say
 
@@ -15,10 +15,10 @@ def main():
     entries = load_entries()
     progress = load_progress()
 
-    print(f"""Welcome to 'Toisto' v{version('Toisto')}!
+    print(f"""Welcome to '{NAME}' v{VERSION}!
 
     Practice as many words and phrases as you like, as long as you like. Hit Ctrl-C or Ctrl-D to quit.
-    Toisto tracks how many times you correctly translate words and phrases. The fewer times you have
+    {NAME} tracks how many times you correctly translate words and phrases. The fewer times you have
     translated a word or phrase successfully, the more often it is presented for you to translate.
     """)
     try:

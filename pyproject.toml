@@ -8,7 +8,7 @@ version = "0.0.2"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
 ]
-description = "Command-line app to practice languages."
+description = "Toisto is a command-line app to practice languages."
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
