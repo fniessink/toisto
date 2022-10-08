@@ -4,20 +4,14 @@ import readline  # pylint: disable=unused-import
 from importlib.metadata import version
 
 from .diff import colored_diff
-from .model import Entry, Progress
-from .persistence import dump_json, load_json, DECKS_FOLDER, PROGRESS_JSON
+from .persistence import load_entries, load_progress, save_progress
 from .speech import say
 
 
 def main():
     """Main program."""
-    entries = []
-    for deck in DECKS_FOLDER.glob("*.json"):
-        for entry in load_json(deck):
-            entry = Entry("nl", "fi", entry["nl"], entry["fi"])
-            entries.extend([entry, entry.reversed()])
-
-    progress = Progress(load_json(PROGRESS_JSON, default={}))
+    entries = load_entries()
+    progress = load_progress()
 
     print(f"""Welcome to 'Toisto' v{version('Toisto')}!
 
@@ -37,4 +31,4 @@ def main():
     except (KeyboardInterrupt, EOFError):
         print()  # Make sure the shell prompt is displayed on a new line
     finally:
-        dump_json(PROGRESS_JSON, progress.as_dict())
+        save_progress(progress)

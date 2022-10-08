@@ -3,6 +3,8 @@
 import json
 import pathlib
 
+from .model import Entry, Progress
+
 
 PROGRESS_JSON = pathlib.Path.home() / ".toisto-progress.json"
 DECKS_FOLDER = pathlib.Path(__file__).parent / "decks"
@@ -20,3 +22,23 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
     """Dump the JSON into the file."""
     with json_file_path.open("w", encoding="utf-8") as json_file:
         json.dump(contents, json_file)
+
+
+def load_entries() -> list[Entry]:
+    """Load the entries from the decks."""
+    entries = []
+    for deck in DECKS_FOLDER.glob("*.json"):
+        for entry in load_json(deck):
+            entry = Entry("nl", "fi", entry["nl"], entry["fi"])
+            entries.extend([entry, entry.reversed()])
+    return entries
+
+
+def load_progress() -> Progress:
+    """Load the progress from the user's home folder."""
+    return Progress(load_json(PROGRESS_JSON, default={}))
+
+
+def save_progress(progress: Progress) -> None:
+    """Save the progress to the user's home folder."""
+    dump_json(PROGRESS_JSON, progress.as_dict())
