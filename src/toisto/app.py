@@ -3,6 +3,7 @@
 import readline  # pylint: disable=unused-import
 from importlib.metadata import version
 
+from .cli import parser
 from .diff import colored_diff
 from .persistence import load_entries, load_progress, save_progress
 from .speech import say
@@ -10,6 +11,7 @@ from .speech import say
 
 def main():
     """Main program."""
+    parser.parse_args()
     entries = load_entries()
     progress = load_progress()
 
