@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
 ]
@@ -26,7 +26,8 @@ toisto = "toisto.app:main"
 
 [project.urls]
 "Homepage" = "https://github.com/fniessink/toisto"
-"Bug Tracker" = "https://github.com/fniessink/toisto/issues"
+"Issue tracker" = "https://github.com/fniessink/toisto/issues"
+"Changelog" = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]

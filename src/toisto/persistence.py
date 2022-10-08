@@ -2,6 +2,7 @@
 
 import json
 import pathlib
+import sys
 
 from .model import Entry, Progress
 
@@ -36,7 +37,15 @@ def load_entries() -> list[Entry]:
 
 def load_progress() -> Progress:
     """Load the progress from the user's home folder."""
-    return Progress(load_json(PROGRESS_JSON, default={}))
+    try:
+        return Progress(load_json(PROGRESS_JSON, default={}))
+    except json.decoder.JSONDecodeError as reason:
+        sys.stderr.write(
+            f"""Toisto cannot parse the progress information in {PROGRESS_JSON}: {reason}.
+To fix this, remove or rename {PROGRESS_JSON} and start Toisto again. Unfortunately, this will reset your progress.
+Please consider opening a bug report at https://github.com/fniessink/toisto. Please attach the invalid progress file to the issue.
+""")
+        sys.exit(1)
 
 
 def save_progress(progress: Progress) -> None:
