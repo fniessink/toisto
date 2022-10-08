@@ -28,8 +28,11 @@ def main():
             guess = input("> ")
             correct = entry.is_correct(guess)
             progress.update(entry, correct)
-            diff = colored_diff(guess, entry.get_answer())
-            print(("✅ Correct" if correct else f'❌ Incorrect. The correct answer is "{diff}"') + ".\n")
+            if correct:
+                print("✅ Correct.\n")
+            else:
+                diff = colored_diff(guess, entry.get_answer())
+                print(f'❌ Incorrect. The correct answer is "{diff}".\n')
     except (KeyboardInterrupt, EOFError):
         print()  # Make sure the shell prompt is displayed on a new line
     finally:
