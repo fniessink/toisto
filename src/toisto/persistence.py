@@ -30,8 +30,8 @@ def load_entries() -> list[Entry]:
     """Load the entries from the decks."""
     entries = []
     for deck in DECKS_FOLDER.glob("*.json"):
-        for entry in load_json(deck):
-            entry = Entry("nl", "fi", entry["nl"], entry["fi"])
+        for entry_dict in load_json(deck):
+            entry = Entry("nl", "fi", entry_dict["nl"], entry_dict["fi"])
             entries.extend([entry, entry.reversed()])
     return entries
 
