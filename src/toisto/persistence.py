@@ -39,7 +39,8 @@ def load_entries(decks_to_load: list[str]) -> list[Entry]:
 def load_progress() -> Progress:
     """Load the progress from the user's home folder."""
     try:
-        return Progress(load_json(PROGRESS_JSON, default={}))
+        progress_dict = load_json(PROGRESS_JSON, default={})
+        return Progress(progress_dict)
     except json.decoder.JSONDecodeError as reason:
         sys.stderr.write(
             f"""{NAME} cannot parse the progress information in {PROGRESS_JSON}: {reason}.

@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import patch, MagicMock, Mock
 
-from toisto.model import Entry, Progress
+from toisto.model import Entry, EntryProgress, Progress
 from toisto.persistence import dump_json, load_entries, load_json, load_progress, save_progress
 
 
@@ -72,10 +72,10 @@ class ProgressPersistenceTest(unittest.TestCase):
         self.assertRaises(SystemExit, load_progress)
 
     @patch("pathlib.Path.open", MagicMock())
-    @patch("json.load", Mock(return_value=dict(progress=True)))
+    @patch("json.load", Mock(return_value=dict(entry=dict(count=0))))
     def test_load_existing_progress(self):
         """Test that the default value is returned when the progress cannot be loaded."""
-        self.assertEqual(dict(progress=True), load_progress().progress_dict)
+        self.assertEqual(dict(entry=EntryProgress()), load_progress().progress_dict)
 
     @patch("pathlib.Path.open")
     @patch("json.dump")

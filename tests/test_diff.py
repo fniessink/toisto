@@ -2,7 +2,8 @@
 
 import unittest
 
-from toisto.diff import colored_diff, GREEN, RED, WHITE
+from toisto.color import GREEN, RED, WHITE
+from toisto.diff import colored_diff
 
 
 class DiffTest(unittest.TestCase):

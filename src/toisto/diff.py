@@ -2,19 +2,7 @@
 
 import difflib
 
-
-RED = "\033[38;2;255;0;0m"
-GREEN = "\033[38;2;0;255;0m"
-WHITE = "\033[38;2;255;255;255m"
-
-
-def red(text: str) -> str:
-    """Return the text in red."""
-    return f"{RED}{text}{WHITE}"
-
-def green(text: str) -> str:
-    """Return the text in green."""
-    return f"{GREEN}{text}{WHITE}"
+from .color import red, green
 
 
 def colored_diff(old_text: str, new_text: str) -> str:

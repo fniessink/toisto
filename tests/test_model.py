@@ -58,12 +58,12 @@ class ProgressTest(unittest.TestCase):
     def test_update_progress_correct(self):
         """Test that the progress of an entry can be updated."""
         self.progress.update(self.entry, correct=True)
-        self.assertEqual(2, self.progress.get_progress(self.entry))
+        self.assertEqual(1, self.progress.get_progress(self.entry))
 
     def test_update_progress_incorrect(self):
         """Test that the progress of an entry can be updated."""
         self.progress.update(self.entry, correct=False)
-        self.assertEqual(-1, self.progress.get_progress(self.entry))
+        self.assertEqual(0, self.progress.get_progress(self.entry))
 
     def test_next_entry(self):
         """Test that the next entry has the lowest score."""

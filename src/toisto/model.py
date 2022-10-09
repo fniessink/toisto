@@ -1,6 +1,6 @@
 """Model classes."""
 
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 import random
 
 from .match import match
@@ -31,20 +31,34 @@ class Entry:
         return self.question[0] if isinstance(self.question, list) else self.question
 
 
+@dataclass
+class EntryProgress:
+    """Class to keep track of progress on one entry."""
+
+    count: int = 0  # The number of consecutive correct guesses
+
+    def update(self, correct: bool) -> None:
+        """Update the progress of the entry."""
+        if correct:
+            self.count += 1
+        else:
+            self.count = 0
+
+
 class Progress:
     """Keep track of progress on entries."""
-    def __init__(self, progress_dict: dict[str, int]) -> None:
-        self.progress_dict = progress_dict
+    def __init__(self, progress_dict: dict[str, dict[str, int]]) -> None:
+        self.progress_dict = {key: EntryProgress(**value) for key, value in progress_dict.items()}
 
     def update(self, entry: Entry, correct: bool) -> None:
         """Update the progress of the entry."""
         key = str(entry)
-        self.progress_dict[key] = self.progress_dict.setdefault(key, 0) + (2 if correct else -1)
+        self.progress_dict.setdefault(key, EntryProgress()).update(correct)
 
     def get_progress(self, entry: Entry) -> int:
         """Return the progress of the entry."""
         key = str(entry)
-        return self.progress_dict.get(key, 0)
+        return self.progress_dict.get(key, EntryProgress()).count
 
     def next_entry(self, entries: list[Entry]) -> Entry:
         """Return the next entry to quiz the user with."""
@@ -52,6 +66,6 @@ class Progress:
         next_entries = [entry for entry in entries if self.get_progress(entry) == min_progress]
         return random.choice(next_entries)
 
-    def as_dict(self) -> dict[str, int]:
+    def as_dict(self) -> dict[str, dict[str, int]]:
         """Return the progress as dict."""
-        return self.progress_dict
+        return {key: asdict(value) for key, value in self.progress_dict.items()}

@@ -3,8 +3,8 @@
 import readline  # pylint: disable=unused-import
 
 from .cli import parser
-from .diff import colored_diff
 from .metadata import NAME, VERSION
+from .output import feedback
 from .persistence import load_entries, load_progress, save_progress
 from .speech import say
 
@@ -28,11 +28,7 @@ def main():
             guess = input("> ")
             correct = entry.is_correct(guess)
             progress.update(entry, correct)
-            if correct:
-                print("✅ Correct.\n")
-            else:
-                diff = colored_diff(guess, entry.get_answer())
-                print(f'❌ Incorrect. The correct answer is "{diff}".\n')
+            print(feedback(entry, correct, guess, progress))
     except (KeyboardInterrupt, EOFError):
         print()  # Make sure the shell prompt is displayed on a new line
     finally:
