@@ -41,7 +41,7 @@ def load_progress() -> Progress:
     try:
         progress_dict = load_json(PROGRESS_JSON, default={})
         return Progress(progress_dict)
-    except json.decoder.JSONDecodeError as reason:
+    except Exception as reason:  # pylint: disable=broad-except
         sys.stderr.write(
             f"""{NAME} cannot parse the progress information in {PROGRESS_JSON}: {reason}.
 To fix this, remove or rename {PROGRESS_JSON} and start {NAME} again. Unfortunately, this will reset your progress.
