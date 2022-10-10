@@ -79,8 +79,24 @@ class ProgressPersistenceTest(unittest.TestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_progress(self, dump, path_open):
+    def test_save_empty_progress(self, dump, path_open):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress({}))
         dump.assert_called_once_with({}, json_file)
+
+    @patch("pathlib.Path.open")
+    @patch("json.dump")
+    def test_save_incorrect_only_progress(self, dump, path_open):
+        """Test that the progress can be saved."""
+        path_open.return_value.__enter__.return_value = json_file = MagicMock()
+        save_progress(Progress(dict(entry=dict(count=0))))
+        dump.assert_called_once_with(dict(entry=dict(count=0)), json_file)
+
+    @patch("pathlib.Path.open")
+    @patch("json.dump")
+    def test_save_progress(self, dump, path_open):
+        """Test that the progress can be saved."""
+        path_open.return_value.__enter__.return_value = json_file = MagicMock()
+        save_progress(Progress(dict(entry=dict(count=5, silence_until="3000-01-01"))))
+        dump.assert_called_once_with(dict(entry=dict(count=5, silence_until="3000-01-01T00:00:00")), json_file)

@@ -53,17 +53,17 @@ class ProgressTest(unittest.TestCase):
 
     def test_progress_new_entry(self):
         """Test that the progress of an entry without progress."""
-        self.assertEqual(0, self.progress.get_progress(self.entry))
+        self.assertEqual(0, self.progress.get_progress(self.entry).count)
 
     def test_update_progress_correct(self):
         """Test that the progress of an entry can be updated."""
         self.progress.update(self.entry, correct=True)
-        self.assertEqual(1, self.progress.get_progress(self.entry))
+        self.assertEqual(1, self.progress.get_progress(self.entry).count)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of an entry can be updated."""
         self.progress.update(self.entry, correct=False)
-        self.assertEqual(0, self.progress.get_progress(self.entry))
+        self.assertEqual(0, self.progress.get_progress(self.entry).count)
 
     def test_next_entry(self):
         """Test that the next entry has the lowest score."""
@@ -71,6 +71,12 @@ class ProgressTest(unittest.TestCase):
         reversed_entry = self.entry.reversed()
         self.progress.update(reversed_entry, correct=False)
         self.assertEqual(reversed_entry, self.progress.next_entry([self.entry, reversed_entry]))
+
+    def test_no_next_entry(self):
+        """Test that there are no next entries when they are all silenced."""
+        self.progress.update(self.entry, correct=True)
+        self.progress.update(self.entry, correct=True)
+        self.assertEqual(None, self.progress.next_entry([self.entry]))
 
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
