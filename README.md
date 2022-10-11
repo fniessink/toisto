@@ -10,11 +10,11 @@ Toisto is alpha software at the moment. It comes with a limited set of words and
 
 Make sure you have these prequisities installed:
 
-- MacOS (needed because Toista uses the say command for text-to-speech),
+- MacOS (needed because Toisto uses the say command for text-to-speech),
 - [Python 3.10 or newer](https://python.org), and
 - [pipx](https://pypa.github.io/pipx/).
 
-Install Toista as follows:
+Install Toisto as follows:
 
 ```console
 $ pipx install Toisto
@@ -22,7 +22,7 @@ $ pipx install Toisto
 
 ### How to use
 
-Start Toista as follows:
+Start Toisto as follows:
 
 ```console
  $ toisto

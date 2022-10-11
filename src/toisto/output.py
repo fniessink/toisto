@@ -19,7 +19,7 @@ in a row, the longer words and phrases are silenced.''')}
 """
 
 DONE = f"""Very good 👍. You're done for now. Please come back later or try a different deck.
-{grey('Type `toista -h` for more information.')}
+{grey(f'Type `{NAME.lower()} -h` for more information.')}
 """
 
 
