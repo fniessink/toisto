@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from .color import grey
 from .diff import colored_diff
 from .metadata import NAME, VERSION
-from .model import EntryProgress
+from .model import QuizProgress
 
 
 WELCOME = f"""👋 Welcome to {NAME} v{VERSION}!
@@ -34,14 +34,14 @@ def format_duration(duration: timedelta) -> str:
     return f"{minutes} minutes"
 
 
-def feedback(correct: bool, guess: str, answer: str, entry_progress: EntryProgress) -> str:
+def feedback(correct: bool, guess: str, answer: str, quiz_progress: QuizProgress) -> str:
     """Create the user feedback."""
     if correct:
         text = "✅ Correct"
-        if entry_progress.silence_until:
-            silence_duration = format_duration(entry_progress.silence_until - datetime.now())
+        if quiz_progress.silence_until:
+            silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
             text += grey(
-                f", {entry_progress.count} times in a row. I won't quiz you on this one for {silence_duration}."
+                f", {quiz_progress.count} times in a row. I won't quiz you on this one for {silence_duration}."
             )
         else:
             text += "."

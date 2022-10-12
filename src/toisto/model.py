@@ -9,40 +9,58 @@ from .match import match
 
 
 @dataclass
-class Entry:
-    """Class representing one word or phrase question/answer pair with a specific direction."""
+class Quiz:
+    """Class representing one question word or phrase question with one ore more correct answers."""
     question_language: str
     answer_language: str
-    question: str | list[str]
-    answer: str | list[str]
+    question: str
+    answers: list[str]
 
     def is_correct(self, guess: str) -> bool:
         """Return whether the guess is correct."""
-        answers = self.answer if isinstance(self.answer, list) else [self.answer]
-        return match(guess, *answers)
-
-    def reversed(self) -> "Entry":
-        """Return the reversed version of this entry."""
-        return self.__class__(self.answer_language, self.question_language, self.answer, self.question)
+        return match(guess, *self.answers)
 
     def get_answer(self) -> str:
-        """Return the answer. If answer is a list, return the first answer."""
-        return self.answer[0] if isinstance(self.answer, list) else self.answer
-
-    def get_question(self) -> str:
-        """Return the question. If question is a list, return the first question."""
-        return self.question[0] if isinstance(self.question, list) else self.question
+        """Return the first answer."""
+        return self.answers[0]
 
 
 @dataclass
-class EntryProgress:
-    """Class to keep track of progress on one entry."""
+class Entry:
+    """Class representing a word or phrase from a deck."""
+    question_language: str
+    answer_language: str
+    questions: list[str]
+    answers: list[str]
+
+    def quizzes(self) -> list[Quiz]:
+        """Generate the possible quizzes from the entry."""
+        return (
+            [Quiz(self.question_language, self.answer_language, question, self.answers) for question in self.questions]
+            +
+            [Quiz(self.answer_language, self.question_language, answer, self.questions) for answer in self.answers]
+        )
+
+    @classmethod
+    def from_dict(cls, entry_dict: dict[str, str | list[str]]) -> "Entry":
+        """Instantiate an entry from a dict."""
+        question_language, answer_language = list(entry_dict.keys())
+        question = entry_dict[question_language]
+        questions = question if isinstance(question, list) else [question]
+        answer = entry_dict[answer_language]
+        answers = answer if isinstance(answer, list) else [answer]
+        return cls(question_language, answer_language, questions, answers)
+
+
+@dataclass
+class QuizProgress:
+    """Class to keep track of progress on one quiz."""
 
     count: int = 0  # The number of consecutive correct guesses
-    silence_until: datetime | None = None  # Don't quiz the entry again until after the datetime
+    silence_until: datetime | None = None  # Don't quiz this again until after the datetime
 
     def update(self, correct: bool) -> None:
-        """Update the progress of the entry."""
+        """Update the progress of the quiz."""
         if correct:
             self.count += 1
         else:
@@ -50,7 +68,7 @@ class EntryProgress:
         self.silence_until = self.__calculate_next_quiz() if self.count > 1 else None
 
     def is_silenced(self):
-        """Return whether the entry can be quizzed."""
+        """Return whether the quiz is silenced."""
         return self.silence_until > datetime.now() if self.silence_until else False
 
     def __calculate_next_quiz(self) -> datetime:
@@ -64,44 +82,44 @@ class EntryProgress:
         return datetime.now() + time_delta
 
     def as_dict(self) -> dict[str, int | str]:
-        """Return the progress entry as dict."""
+        """Return the quiz progress as dict."""
         result: dict[str, int | str] = dict(count=self.count)
         if self.silence_until:
             result["silence_until"] = self.silence_until.isoformat()
         return result
 
     @classmethod
-    def from_dict(cls, entry_progress_dict: dict[str, int | str]) -> "EntryProgress":
-        """Instantiate a entry progress from a dict."""
-        count = int(entry_progress_dict.get("count", 0))
-        silence_until_text = str(entry_progress_dict.get("silence_until", ""))
+    def from_dict(cls, quiz_progress_dict: dict[str, int | str]) -> "QuizProgress":
+        """Instantiate a quiz progress from a dict."""
+        count = int(quiz_progress_dict.get("count", 0))
+        silence_until_text = str(quiz_progress_dict.get("silence_until", ""))
         silence_until = datetime.fromisoformat(silence_until_text) if silence_until_text else None
         return cls(count, silence_until)
 
 
 class Progress:
-    """Keep track of progress on entries."""
+    """Keep track of progress on quizzes."""
     def __init__(self, progress_dict: dict[str, dict[str, int | str]]) -> None:
-        self.progress_dict = {key: EntryProgress.from_dict(value) for key, value in progress_dict.items()}
+        self.progress_dict = {key: QuizProgress.from_dict(value) for key, value in progress_dict.items()}
 
-    def update(self, entry: Entry, correct: bool) -> None:
-        """Update the progress of the entry."""
-        key = str(entry)
-        self.progress_dict.setdefault(key, EntryProgress()).update(correct)
+    def update(self, quiz: Quiz, correct: bool) -> None:
+        """Update the progress of the quiz."""
+        key = str(quiz)
+        self.progress_dict.setdefault(key, QuizProgress()).update(correct)
 
-    def get_progress(self, entry: Entry) -> EntryProgress:
+    def get_progress(self, quiz: Quiz) -> QuizProgress:
         """Return the progress of the entry."""
-        key = str(entry)
-        return self.progress_dict.get(key, EntryProgress())
+        key = str(quiz)
+        return self.progress_dict.get(key, QuizProgress())
 
-    def next_entry(self, entries: list[Entry]) -> Entry | None:
-        """Return the next entry to quiz the user with."""
-        eligible_entries = [entry for entry in entries if not self.get_progress(entry).is_silenced()]
-        if not eligible_entries:
+    def next_quiz(self, quizzes: list[Quiz]) -> Quiz | None:
+        """Return the next quiz."""
+        eligible_quizzes = [quiz for quiz in quizzes if not self.get_progress(quiz).is_silenced()]
+        if not eligible_quizzes:
             return None
-        min_progress = min(self.get_progress(entry).count for entry in eligible_entries)
-        next_entries = [entry for entry in eligible_entries if self.get_progress(entry).count == min_progress]
-        return random.choice(next_entries)
+        min_progress = min(self.get_progress(quiz).count for quiz in eligible_quizzes)
+        next_quizzes = [quiz for quiz in eligible_quizzes if self.get_progress(quiz).count == min_progress]
+        return random.choice(next_quizzes)
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""

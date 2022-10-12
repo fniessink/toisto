@@ -12,7 +12,7 @@ class FeedbackTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.entry = Entry("nl", "fi", "Hoi", "Terve")
+        self.entry = Entry("nl", "fi", ["Hoi"], ["Terve"])
         self.progress = Progress({})
 
     def update_progress(self, nr_correct: int) -> None:
