@@ -3,7 +3,7 @@
 import readline  # pylint: disable=unused-import
 
 from .cli import parser
-from .output import feedback, DONE, WELCOME
+from .output import feedback_correct, feedback_incorrect, DONE, WELCOME
 from .persistence import load_quizzes, load_progress, save_progress
 from .speech import say
 
@@ -20,7 +20,8 @@ def main():
             guess = input("> ")
             correct = quiz.is_correct(guess)
             progress.update(quiz, correct)
-            print(feedback(correct, guess, quiz.get_answer(), progress.get_progress(quiz)))
+            quiz_progress = progress.get_progress(quiz)
+            print(feedback_correct(guess, quiz, quiz_progress) if correct else feedback_incorrect(guess, quiz))
         print(DONE)
     except (KeyboardInterrupt, EOFError):
         print()  # Make sure the shell prompt is displayed on a new line

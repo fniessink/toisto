@@ -2,9 +2,9 @@
 
 import unittest
 
-from toisto.color import green
+from toisto.color import green, grey
 from toisto.model import Progress, Quiz
-from toisto.output import feedback
+from toisto.output import feedback_correct, feedback_incorrect
 
 
 class FeedbackTestCase(unittest.TestCase):
@@ -27,28 +27,53 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        feedback_text = feedback(True, "terve", "Terve", self.progress.get_progress(self.quiz))
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
         self.assertEqual("✅ Correct.\n", feedback_text)
 
     def test_correct_second_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(2)
-        feedback_text = feedback(True, "terve", "Terve", self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(feedback_text, ", 2 times in a row. I won't quiz", "minutes")
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        self.assert_feedback_contains(
+            feedback_text, "Since you answered correctly 2 times in a row, I won't quiz", "minutes"
+        )
 
     def test_correct_silenced_for_hours(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(10)
-        feedback_text = feedback(True, "terve", "Terve", self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(feedback_text, ", 10 times in a row. I won't quiz", "hours")
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        self.assert_feedback_contains(
+            feedback_text, "Since you answered correctly 10 times in a row, I won't quiz", "hours"
+        )
 
     def test_correct_silenced_for_days(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(20)
-        feedback_text = feedback(True, "terve", "Terve", self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(feedback_text, ", 20 times in a row. I won't quiz", "days")
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        self.assert_feedback_contains(
+            feedback_text, "Since you answered correctly 20 times in a row, I won't quiz", "days"
+        )
+
+    def test_show_alternative_answer(self):
+        """Test that alternative answers are shown."""
+        self.quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        self.assertEqual(
+            f"""✅ Correct.\n{grey(f'Another correct answer is "{self.quiz.other_answers("Terve")[0]}".')}\n""",
+            feedback_text
+        )
+
+    def test_show_alternative_answers(self):
+        """Test that alternative answers are shown."""
+        self.quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        other_answers = [f'"{answer}"' for answer in self.quiz.other_answers("Terve")]
+        self.assertEqual(
+            f"""✅ Correct.\n{grey(f'Other correct answers are {", ".join(other_answers)}.')}\n""",
+            feedback_text
+        )
 
     def test_incorrect(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
-        feedback_text = feedback(False, "", "Terve", self.progress.get_progress(self.quiz))
+        feedback_text = feedback_incorrect("", self.quiz)
         self.assertEqual(f"""❌ Incorrect. The correct answer is "{green('Terve')}".\n""", feedback_text)

@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Added a deck with furniture and a deck with words related to houses.
+- When the user translates a word correctly and there are multiple correct translations, also show the other translations.
 
 ## v0.0.2 - 2022-10-10
 

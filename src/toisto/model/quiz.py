@@ -20,3 +20,8 @@ class Quiz:
     def get_answer(self) -> str:
         """Return the first answer."""
         return self.answers[0]
+
+    def other_answers(self, guess: str) -> list[str]:
+        """Return the answers not equal to the guess."""
+        assert self.is_correct(guess)
+        return [answer for answer in self.answers if not match(guess, answer)]

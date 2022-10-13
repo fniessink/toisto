@@ -28,3 +28,8 @@ class QuizTest(unittest.TestCase):
         """Test that the first answer is returned when there are multiple."""
         quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
         self.assertEqual("Een", quiz.get_answer())
+
+    def test_other_answers(self):
+        """Test that the other answers can be retrieved."""
+        quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
+        self.assertEqual(["Eén"], quiz.other_answers("Een"))
