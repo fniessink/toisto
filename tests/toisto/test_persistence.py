@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import patch, MagicMock, Mock
 
-from toisto.model import Entry, QuizProgress, Progress, Quiz
+from toisto.model import QuizProgress, Progress, Quiz
 from toisto.persistence import dump_json, load_quizzes, load_json, load_progress, save_progress
 
 
@@ -75,7 +75,7 @@ class ProgressPersistenceTest(unittest.TestCase):
     @patch("pathlib.Path.open")
     def test_load_existing_progress(self, path_open):
         """Test that the progress can be loaded."""
-        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz":{"count": 0}}'
+        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {"count": 0}}'
         self.assertEqual(dict(quiz=QuizProgress()), load_progress().progress_dict)
 
     @patch("pathlib.Path.open")

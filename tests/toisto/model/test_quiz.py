@@ -1,0 +1,30 @@
+"""Quiz unit tests."""
+
+import unittest
+
+from toisto.model import Quiz
+
+
+class QuizTest(unittest.TestCase):
+    """Unit tests for the quiz class."""
+
+    def setUp(self) -> None:
+        """Override to set up test fixtures."""
+        self.quiz = Quiz("en", "nl", "English", ["Engels"])
+
+    def test_is_correct(self):
+        """Test a correct guess."""
+        self.assertTrue(self.quiz.is_correct("engels"))
+
+    def test_is_not_correct(self):
+        """Test an incorrect guess."""
+        self.assertFalse(self.quiz.is_correct("engles"))
+
+    def test_get_answer(self):
+        """Test that the answer is returned."""
+        self.assertEqual("Engels", self.quiz.get_answer())
+
+    def test_get_first_answer(self):
+        """Test that the first answer is returned when there are multiple."""
+        quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
+        self.assertEqual("Een", quiz.get_answer())
