@@ -40,6 +40,11 @@ class ProgressTest(unittest.TestCase):
         self.progress.update(self.quiz, correct=True)
         self.assertEqual(None, self.progress.next_quiz([self.quiz]))
 
+    def test_next_quiz_is_different_from_previous(self):
+        """Test that the next quiz is different from the previous one."""
+        self.assertEqual(self.quiz, self.progress.next_quiz([self.quiz]))
+        self.assertEqual(None, self.progress.next_quiz([self.quiz]))
+
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
         self.assertEqual({}, self.progress.as_dict())
