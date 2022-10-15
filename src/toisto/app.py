@@ -5,7 +5,7 @@ import readline  # pylint: disable=unused-import
 from .cli import parser
 from .color import purple
 from .model import Progress, Quiz
-from .output import feedback_correct, feedback_incorrect, DONE, WELCOME
+from .output import feedback_correct, feedback_incorrect, DONE, WELCOME, TRY_AGAIN
 from .persistence import load_quizzes, load_progress, save_progress
 from .speech import say
 
@@ -16,6 +16,10 @@ def do_quiz(quiz: Quiz, progress: Progress):
     say(quiz.question_language, quiz.question)
     guess = input("> ")
     correct = quiz.is_correct(guess)
+    if not correct:
+        print(TRY_AGAIN)
+        guess = input("> ")
+        correct = quiz.is_correct(guess)
     progress.update(quiz, correct)
     quiz_progress = progress.get_progress(quiz)
     print(feedback_correct(guess, quiz, quiz_progress) if correct else feedback_incorrect(guess, quiz))

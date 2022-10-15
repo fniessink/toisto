@@ -22,6 +22,8 @@ DONE = f"""👍 Good job. You're done for now. Please come back later or try a d
 {grey(f'Type `{NAME.lower()} -h` for more information.')}
 """
 
+TRY_AGAIN = f"⚠️  Incorrect. {grey('Please try again.')}"
+
 
 def format_duration(duration: timedelta) -> str:
     """Format the duration in a human friendly way."""

@@ -58,18 +58,22 @@ Punainen
 > rood
 ✅ Correct.
 
+Translate into Dutch:
+Harmaa
+> bruin
+⚠️  Incorrect. Please try again.
+> grijs
+✅ Correct.
+
 Translate into Finnish:
 Paars
 > violetti
 ✅ Correct.
 
-Translate into Dutch:
-Vaaleanpunainen
-> roze
-✅ Correct.
-
 Translate into Finnish:
 Groen
+> virea
+⚠️  Incorrect. Please try again.
 > vihrea
 ❌ Incorrect. The correct answer is "Vihreä".
 ```
