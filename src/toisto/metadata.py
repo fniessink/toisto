@@ -9,6 +9,7 @@ NAME = _metadata["name"]
 SUMMARY = _metadata["summary"]
 
 VERSION = version(NAME)
+SUPPORTED_LANGUAGES = dict(fi="Finnish", nl="Dutch")
 
 _decks_folder = pathlib.Path(__file__).parent / "decks"
 DECKS_JSON_FILES = list(_decks_folder.glob("*.json"))

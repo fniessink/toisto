@@ -3,9 +3,7 @@
 from dataclasses import dataclass
 
 from ..match import match
-
-
-LANGUAGES = dict(en="English", fi="Finnish", nl="Dutch")
+from ..metadata import SUPPORTED_LANGUAGES
 
 
 @dataclass
@@ -31,4 +29,4 @@ class Quiz:
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        return f"Translate into {LANGUAGES[self.answer_language]}"
+        return f"Translate into {SUPPORTED_LANGUAGES[self.answer_language]}"
