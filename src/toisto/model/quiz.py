@@ -5,6 +5,9 @@ from dataclasses import dataclass
 from ..match import match
 
 
+LANGUAGES = dict(en="English", fi="Finnish", nl="Dutch")
+
+
 @dataclass
 class Quiz:
     """Class representing one question word or phrase question with one ore more correct answers."""
@@ -25,3 +28,7 @@ class Quiz:
         """Return the answers not equal to the guess."""
         assert self.is_correct(guess)
         return [answer for answer in self.answers if not match(guess, answer)]
+
+    def instruction(self) -> str:
+        """Generate the quiz instruction."""
+        return f"Translate into {LANGUAGES[self.answer_language]}"

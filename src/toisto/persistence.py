@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 from .metadata import NAME, DECKS_JSON_FILES
-from .model import Entry, Progress, Quiz
+from .model import entry_factory, Progress, Quiz
 
 
 PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
@@ -31,7 +31,7 @@ def load_quizzes(decks_to_load: list[str]) -> list[Quiz]:
     for deck in DECKS_JSON_FILES:
         if not decks_to_load or deck.stem in decks_to_load:
             for entry_dict in load_json(deck):
-                entry = Entry.from_dict(entry_dict)
+                entry = entry_factory(entry_dict)
                 quizzes.extend(entry.quizzes())
     return quizzes
 

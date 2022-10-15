@@ -1,13 +1,8 @@
 [
     {"fi": "Aika", "nl": "De tijd"},
-    {"fi": "Vuodenaika", "nl": "Het seizoen"},
-    {"fi": "Vuodenajat", "nl": "De seizoenen"},
-    {"fi": "Kevät", "nl": "De lente"},
-    {"fi": "Keväät", "nl": "De lentes"},
-    {"fi": "Kesä", "nl": "De zomer"},
-    {"fi": "Kesät", "nl": "De zomers"},
-    {"fi": "Syksy", "nl": "De herfst"},
-    {"fi": "Syksyt", "nl": "De herfsten"},
-    {"fi": "Talvi", "nl": "De winter"},
-    {"fi": "Talvet", "nl": "De winters"}
+    {"singular": {"fi": "Vuodenaika", "nl": "Het seizoen"}, "plural": {"fi": "Vuodenajat", "nl": "De seizoenen"}},
+    {"singular": {"fi": "Kevät", "nl": "De lente"}, "plural": {"fi": "Keväät", "nl": "De lentes"}},
+    {"singular": {"fi": "Kesä", "nl": "De zomer"}, "plural": {"fi": "Kesät", "nl": "De zomers"}},
+    {"singular": {"fi": "Syksy", "nl": "De herfst"}, "plural": {"fi": "Syksyt", "nl": "De herfsten"}},
+    {"singular": {"fi": "Talvi", "nl": "De winter"}, "plural": {"fi": "Talvet", "nl": "De winters"}}
 ]

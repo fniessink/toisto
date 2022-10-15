@@ -2,9 +2,9 @@
 
 import unittest
 
-from toisto.color import green, grey
+from toisto.color import green, grey, purple
 from toisto.model import Progress, Quiz
-from toisto.output import feedback_correct, feedback_incorrect
+from toisto.output import feedback_correct, feedback_incorrect, instruction
 
 
 class FeedbackTestCase(unittest.TestCase):
@@ -77,3 +77,7 @@ class FeedbackTestCase(unittest.TestCase):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         feedback_text = feedback_incorrect("", self.quiz)
         self.assertEqual(f"""❌ Incorrect. The correct answer is "{green('Terve')}".\n""", feedback_text)
+
+    def test_instruction(self):
+        """Test that the quiz instruction is correctly formatted."""
+        self.assertEqual(purple("Translate into Finnish:"), instruction(self.quiz))

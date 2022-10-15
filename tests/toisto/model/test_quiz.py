@@ -33,3 +33,7 @@ class QuizTest(unittest.TestCase):
         """Test that the other answers can be retrieved."""
         quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
         self.assertEqual(["Eén"], quiz.other_answers("Een"))
+
+    def test_instruction(self):
+        """Test the quiz instruction."""
+        self.assertEqual("Translate into Dutch", self.quiz.instruction())

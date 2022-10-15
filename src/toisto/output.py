@@ -1,7 +1,7 @@
 """Output for the user."""
 
 from datetime import datetime, timedelta
-from .color import grey
+from .color import grey, purple
 from .diff import colored_diff
 from .metadata import NAME, VERSION
 from .model import Quiz, QuizProgress
@@ -54,3 +54,8 @@ def feedback_incorrect(guess: str, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
     diff = colored_diff(guess, quiz.get_answer())
     return f'❌ Incorrect. The correct answer is "{diff}".\n'
+
+
+def instruction(quiz: Quiz) -> str:
+    """Return the instruction for the quiz."""
+    return purple(f"{quiz.instruction()}:")
