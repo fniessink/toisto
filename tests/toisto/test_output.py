@@ -56,18 +56,18 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        self.quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
+        feedback_text = feedback_correct("Terve", quiz, self.progress.get_progress(quiz))
         self.assertEqual(
-            f"""✅ Correct.\n{grey(f'Another correct answer is "{self.quiz.other_answers("Terve")[0]}".')}\n""",
+            f"""✅ Correct.\n{grey(f'Another correct answer is "{quiz.other_answers("Terve")[0]}".')}\n""",
             feedback_text
         )
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        self.quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
-        other_answers = [f'"{answer}"' for answer in self.quiz.other_answers("Terve")]
+        quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        feedback_text = feedback_correct("Terve", quiz, self.progress.get_progress(quiz))
+        other_answers = [f'"{answer}"' for answer in quiz.other_answers("Terve")]
         self.assertEqual(
             f"""✅ Correct.\n{grey(f'Other correct answers are {", ".join(other_answers)}.')}\n""",
             feedback_text

@@ -1,18 +1,23 @@
 """Quiz classes."""
 
 from dataclasses import dataclass
+from typing import Literal
 
 from ..match import match
 from ..metadata import SUPPORTED_LANGUAGES
 
 
+INSTRUCTION = dict(translate="Translate into", pluralize="Give the plural in", singularize="Give the singular in")
+
+
 @dataclass
 class Quiz:
-    """Class representing one question word or phrase question with one ore more correct answers."""
+    """Class representing a quiz."""
     question_language: str
     answer_language: str
     question: str
     answers: list[str]
+    quiz_type: Literal["translate", "pluralize", "singularize"] = "translate"
 
     def is_correct(self, guess: str) -> bool:
         """Return whether the guess is correct."""
@@ -29,4 +34,4 @@ class Quiz:
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        return f"Translate into {SUPPORTED_LANGUAGES[self.answer_language]}"
+        return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}"

@@ -2,6 +2,7 @@
 
 import pathlib
 from importlib.metadata import metadata, version
+from typing import Literal
 
 
 _metadata = metadata("Toisto")
@@ -10,6 +11,7 @@ SUMMARY = _metadata["summary"]
 
 VERSION = version(NAME)
 SUPPORTED_LANGUAGES = dict(fi="Finnish", nl="Dutch")
+Language = Literal["fi", "nl"]
 
 _decks_folder = pathlib.Path(__file__).parent / "decks"
 DECKS_JSON_FILES = list(_decks_folder.glob("*.json"))

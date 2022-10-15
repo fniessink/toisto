@@ -1,25 +1,27 @@
 """Entry classes."""
 
 from dataclasses import dataclass
-from typing import cast
+from typing import cast, Literal
 
+from ..metadata import Language
 from .quiz import Quiz
 
 
-EntryDict = dict[str, str | list[str]]
-NounEntryDict = dict[str, EntryDict]
+EntryDict = dict[Language, str | list[str]]
+NounType = Literal["plural", "singular"]
+NounEntryDict = dict[NounType, EntryDict]
 
 
 @dataclass
 class Entry:
     """Class representing a word or phrase from a deck."""
 
-    question_language: str
-    answer_language: str
+    question_language: Language
+    answer_language: Language
     questions: list[str]
     answers: list[str]
 
-    def quizzes(self) -> list[Quiz]:
+    def quizzes(self, language: Language) -> list[Quiz]:  # pylint: disable=unused-argument
         """Generate the possible quizzes from the entry."""
         question_language, answer_language = self.question_language, self.answer_language
         questions, answers = self.questions, self.answers
@@ -46,9 +48,27 @@ class NounEntry:
     singular: Entry
     plural: Entry
 
-    def quizzes(self) -> list[Quiz]:
+    def quizzes(self, language: Language) -> list[Quiz]:
         """Generate the possible quizzes from the entry."""
-        return self.singular.quizzes() + self.plural.quizzes()
+        if language == self.singular.question_language:
+            pluralize = [
+                Quiz(language, language, question, self.plural.questions, "pluralize")
+                for question in self.singular.questions
+            ]
+            singularize = [
+                Quiz(language, language, question, self.singular.questions, "singularize")
+                for question in self.plural.questions
+            ]
+        else:
+            pluralize = [
+                Quiz(language, language, answer, self.plural.answers, "pluralize")
+                for answer in self.singular.answers
+            ]
+            singularize = [
+                Quiz(language, language, answer, self.singular.answers, "singularize")
+                for answer in self.plural.answers
+            ]
+        return self.singular.quizzes(language) + self.plural.quizzes(language) + pluralize + singularize
 
     @classmethod
     def from_dict(cls, entry_dict: NounEntryDict) -> "NounEntry":

@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Added decks with words related to furniture and houses.
 - When the user translates a word correctly and there are multiple correct translations, also show the other translations.
+- When words have a singular and plural version add quizzes for pluralizing and singularizing the words.
 
 ## v0.0.2 - 2022-10-10
 

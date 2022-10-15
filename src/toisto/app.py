@@ -24,7 +24,7 @@ def do_quiz(quiz: Quiz, progress: Progress):
 def main():
     """Main program."""
     namespace = parser.parse_args()
-    quizzes = load_quizzes(namespace.deck)
+    quizzes = load_quizzes(namespace.language, namespace.deck)
     progress = load_progress()
     print(WELCOME)
     try:

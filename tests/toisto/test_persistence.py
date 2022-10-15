@@ -47,11 +47,11 @@ class LoadEntriesTest(unittest.TestCase):
 
     def test_load_entries(self):
         """Test that the entries can be loaded."""
-        self.assertIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes([]))
+        self.assertIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi", []))
 
     def test_load_entries_by_name(self):
         """Test that a subsetof the entries can be loaded."""
-        self.assertNotIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes(["family"]))
+        self.assertNotIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi", ["family"]))
 
 
 class ProgressPersistenceTest(unittest.TestCase):

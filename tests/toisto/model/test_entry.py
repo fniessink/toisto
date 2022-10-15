@@ -12,7 +12,11 @@ class EntryTest(unittest.TestCase):
         """Test that quizzes can be generated from an entry."""
         entry = Entry("en", "nl", ["English"], ["Engels"])
         self.assertEqual(
-            [Quiz("en", "nl", "English", ["Engels"]), Quiz("nl", "en", "Engels", ["English"])], entry.quizzes()
+            [
+                Quiz("en", "nl", "English", ["Engels"]),
+                Quiz("nl", "en", "Engels", ["English"])
+            ],
+            entry.quizzes("nl")
         )
 
     def test_multiple_answers(self):
@@ -24,5 +28,5 @@ class EntryTest(unittest.TestCase):
                 Quiz("en", "nl", "Couch", ["Bank"]),
                 Quiz("en", "nl", "Bank", ["Bank"])
             ],
-            entry.quizzes()
+            entry.quizzes("nl")
         )
