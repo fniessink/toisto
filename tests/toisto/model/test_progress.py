@@ -28,10 +28,10 @@ class ProgressTest(unittest.TestCase):
         self.assertEqual(0, self.progress.get_progress(self.quiz).count)
 
     def test_next_quiz(self):
-        """Test that the next quiz has the lowest score."""
+        """Test that the next quiz is not silenced."""
+        self.progress.update(self.quiz, correct=True)
         self.progress.update(self.quiz, correct=True)
         another_quiz = Quiz("nl", "en", "Engels", "English")
-        self.progress.update(another_quiz, correct=False)
         self.assertEqual(another_quiz, self.progress.next_quiz([self.quiz, another_quiz]))
 
     def test_no_next_quiz(self):

@@ -23,12 +23,9 @@ class Progress:
 
     def next_quiz(self, quizzes: list[Quiz]) -> Quiz | None:
         """Return the next quiz."""
-        eligible_quizzes = [quiz for quiz in quizzes if not self.get_progress(quiz).is_silenced()]
-        if not eligible_quizzes:
-            return None
-        min_progress = min(self.get_progress(quiz).count for quiz in eligible_quizzes)
-        next_quizzes = [quiz for quiz in eligible_quizzes if self.get_progress(quiz).count == min_progress]
-        return random.choice(next_quizzes)
+        if eligible_quizzes := [quiz for quiz in quizzes if not self.get_progress(quiz).is_silenced()]:
+            return random.choice(eligible_quizzes)
+        return None
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""
