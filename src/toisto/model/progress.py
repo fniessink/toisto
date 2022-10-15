@@ -10,7 +10,7 @@ class Progress:
     """Keep track of progress on quizzes."""
     def __init__(self, progress_dict: dict[str, dict[str, int | str]]) -> None:
         self.progress_dict = {key: QuizProgress.from_dict(value) for key, value in progress_dict.items()}
-        self.current_quiz = None
+        self.current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
         """Update the progress of the quiz."""
