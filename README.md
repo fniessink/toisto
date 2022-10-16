@@ -31,7 +31,7 @@ Start Toisto as follows, giving the language you want to practice as argument, e
 To practice a specific deck, pass it as follows:
 
 ```console
-$ toiso fi --deck colors
+$ toisto fi --deck colors
 ```
 
 Add `--help` or `-h` to get help information:
