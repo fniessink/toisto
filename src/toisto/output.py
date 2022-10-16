@@ -22,7 +22,8 @@ DONE = f"""👍 Good job. You're done for now. Please come back later or try a d
 {grey(f'Type `{NAME.lower()} -h` for more information.')}
 """
 
-TRY_AGAIN = f"⚠️  Incorrect. {grey('Please try again.')}"
+TRY_AGAIN = "⚠️  Incorrect. Please try again."
+CORRECT = "✅ Correct.\n"
 
 
 def format_duration(duration: timedelta) -> str:
@@ -38,7 +39,7 @@ def format_duration(duration: timedelta) -> str:
 
 def feedback_correct(guess: str, quiz: Quiz, quiz_progress: QuizProgress) -> str:
     """Return the feedback about a correct result."""
-    text = "✅ Correct.\n"
+    text = CORRECT
     if quiz_progress.silence_until:
         silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
         text += grey(

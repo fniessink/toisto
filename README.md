@@ -28,10 +28,10 @@ Start Toisto as follows, giving the language you want to practice as argument, e
  $ toisto fi
 ```
 
-To practice a specific decks, pass it as follows:
+To practice a specific deck, pass it as follows:
 
 ```console
-$ toiso --deck colors fi
+$ toiso fi --deck colors
 ```
 
 Add `--help` or `-h` to get help information:
