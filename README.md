@@ -25,7 +25,7 @@ $ pipx install Toisto
 Start Toisto as follows, giving the language you want to practice as argument, either `nl` or `fi` at the moment:
 
 ```console
- $ toisto fi
+$ toisto fi
 ```
 
 To practice a specific deck, pass it as follows:
@@ -37,7 +37,7 @@ $ toisto fi --deck colors
 Add `--help` or `-h` to get help information:
 
 ```console
- $ toisto --help
+$ toisto --help
 ```
 
 ### Example session
@@ -61,7 +61,7 @@ Punainen
 Translate into Dutch:
 Harmaa
 > bruin
-⚠️  Incorrect. Please try again.
+⚠️ Incorrect. Please try again.
 > grijs
 ✅ Correct.
 
@@ -73,7 +73,7 @@ Paars
 Translate into Finnish:
 Groen
 > virea
-⚠️  Incorrect. Please try again.
+⚠️ Incorrect. Please try again.
 > vihrea
 ❌ Incorrect. The correct answer is "Vihreä".
 ```
