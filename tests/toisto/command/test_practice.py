@@ -1,7 +1,7 @@
 """Unit tests for the practice command."""
 
 import unittest
-from unittest.mock import call, patch, Mock
+from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
 from toisto.model import Progress, Quiz
@@ -9,6 +9,7 @@ from toisto.output import DONE, TRY_AGAIN
 
 
 @patch("os.system", Mock())
+@patch("pathlib.Path.open", MagicMock())
 class PracticeTest(unittest.TestCase):
     """Test the practice command."""
 
