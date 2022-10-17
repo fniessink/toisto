@@ -10,7 +10,7 @@ class ProgressTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("en", "nl", "English", ["Engels"])
+        self.quiz = Quiz("fi", "nl", "Englanti", ["Engels"])
         self.progress = Progress({})
 
     def test_progress_new_entry(self):
@@ -31,7 +31,7 @@ class ProgressTest(unittest.TestCase):
         """Test that the next quiz is not silenced."""
         self.progress.update(self.quiz, correct=True)
         self.progress.update(self.quiz, correct=True)
-        another_quiz = Quiz("nl", "en", "Engels", "English")
+        another_quiz = Quiz("fi", "en", "Englanti", "English")
         self.assertEqual(another_quiz, self.progress.next_quiz([self.quiz, another_quiz]))
 
     def test_no_next_quiz(self):
@@ -42,7 +42,7 @@ class ProgressTest(unittest.TestCase):
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        another_quiz = Quiz("nl", "en", "Engels", "English")
+        another_quiz = Quiz("nl", "fi", "Engels", "Englanti")
         self.assertEqual(self.quiz, self.progress.next_quiz([self.quiz]))
         self.assertEqual(another_quiz, self.progress.next_quiz([self.quiz, another_quiz]))
 

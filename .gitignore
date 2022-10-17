@@ -2,6 +2,7 @@ build
 dist
 venv
 .coverage
+.vscode
 **/*.egg-info
 **/__pycache__/**
 

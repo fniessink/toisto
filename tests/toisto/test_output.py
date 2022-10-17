@@ -35,7 +35,7 @@ class FeedbackTestCase(unittest.TestCase):
         self.update_progress(2)
         feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
-            feedback_text, "Since you answered correctly 2 times in a row, I won't quiz", "minutes"
+            feedback_text, "That's 2 times in a row. Skipping this quiz for", "minutes"
         )
 
     def test_correct_silenced_for_hours(self):
@@ -43,7 +43,7 @@ class FeedbackTestCase(unittest.TestCase):
         self.update_progress(10)
         feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
-            feedback_text, "Since you answered correctly 10 times in a row, I won't quiz", "hours"
+            feedback_text, "That's 10 times in a row. Skipping this quiz for", "hours"
         )
 
     def test_correct_silenced_for_days(self):
@@ -51,7 +51,7 @@ class FeedbackTestCase(unittest.TestCase):
         self.update_progress(20)
         feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
-            feedback_text, "Since you answered correctly 20 times in a row, I won't quiz", "days"
+            feedback_text, "That's 20 times in a row. Skipping this quiz for", "days"
         )
 
     def test_show_alternative_answer(self):

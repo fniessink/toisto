@@ -4,20 +4,23 @@ from dataclasses import dataclass
 from typing import Literal
 
 from ..match import match
-from ..metadata import SUPPORTED_LANGUAGES
+from ..metadata import Language, SUPPORTED_LANGUAGES
 
 
-INSTRUCTION = dict(translate="Translate into", pluralize="Give the plural in", singularize="Give the singular in")
+QuizType = Literal["translate", "pluralize", "singularize"]
+INSTRUCTION: dict[QuizType, str] = dict(
+    translate="Translate into", pluralize="Give the plural in", singularize="Give the singular in"
+)
 
 
 @dataclass
 class Quiz:
     """Class representing a quiz."""
-    question_language: str
-    answer_language: str
+    question_language: Language
+    answer_language: Language
     question: str
     answers: list[str]
-    quiz_type: Literal["translate", "pluralize", "singularize"] = "translate"
+    quiz_type: QuizType = "translate"
 
     def is_correct(self, guess: str) -> bool:
         """Return whether the guess is correct."""

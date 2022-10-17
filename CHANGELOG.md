@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Added decks with words related to furniture and houses.
+- Add command to show progress (`toisto {language} progress`).
 - When the user translates a word correctly and there are multiple correct translations, also show the other translations.
 - When words have a singular and plural version add quizzes for pluralizing and singularizing the words.
 - When the user answers incorrectly, give them a chance to correct typo's.

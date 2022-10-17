@@ -10,7 +10,7 @@ class QuizTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("en", "nl", "English", ["Engels"])
+        self.quiz = Quiz("fi", "nl", "Englanti", ["Engels"])
 
     def test_is_correct(self):
         """Test a correct guess."""
@@ -26,12 +26,12 @@ class QuizTest(unittest.TestCase):
 
     def test_get_first_answer(self):
         """Test that the first answer is returned when there are multiple."""
-        quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
+        quiz = Quiz("fi", "nl", "Yksi", ["Een", "Eén"])
         self.assertEqual("Een", quiz.get_answer())
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
-        quiz = Quiz("en", "nl", "One", ["Een", "Eén"])
+        quiz = Quiz("fi", "nl", "Yksi", ["Een", "Eén"])
         self.assertEqual(["Eén"], quiz.other_answers("Een"))
 
     def test_instruction(self):
