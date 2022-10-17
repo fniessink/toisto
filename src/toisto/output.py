@@ -1,6 +1,8 @@
 """Output for the user."""
 
 from datetime import datetime, timedelta
+import random
+
 from .color import grey, purple
 from .diff import colored_diff
 from .metadata import NAME, VERSION
@@ -23,7 +25,14 @@ DONE = f"""👍 Good job. You're done for now. Please come back later or try a d
 """
 
 TRY_AGAIN = "⚠️  Incorrect. Please try again."
+
 CORRECT = "✅ Correct.\n"
+
+WELL_DONE = [
+    "Nice", "Cool", "Cheers", "Kudos", "Well-done", "Great", "Grand", "Swell", "Bravo", "Great job", "Nailed it",
+    "Outstanding", "Excellent", "Awesome", "Terrific", "Brilliant", "Lovely", "Tremendous", "Wow", "Marvellous",
+    "Amazing", "Remarkable", "Magnificent", "Splendid", "Superb", "Wonderful", "Incredible", "Impressive",
+    "Sensational", "Fantastic", "Extraordinary", "Sublime", "Spectacular", "Perfect", "Awe-inspiring"]
 
 
 def format_duration(duration: timedelta) -> str:
@@ -42,9 +51,9 @@ def feedback_correct(guess: str, quiz: Quiz, quiz_progress: QuizProgress) -> str
     text = CORRECT
     if quiz_progress.silence_until:
         silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
+        well_done = random.choice(WELL_DONE)
         text += grey(
-            f"Since you answered correctly {quiz_progress.count} times in a row, "
-            f"I won't quiz you again for {silence_duration}.\n"
+            f"{well_done}! That's {quiz_progress.count} times in a row. Skipping this quiz for {silence_duration}.\n"
         )
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
