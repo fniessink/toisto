@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
 ]
@@ -19,6 +19,9 @@ classifiers = [
     "Operating System :: MacOS",
     "Programming Language :: Python :: 3",
     "Topic :: Education",
+]
+dependencies = [
+    "rich >= 12.6.0",
 ]
 
 [project.scripts]
