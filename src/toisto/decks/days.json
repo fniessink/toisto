@@ -9,6 +9,10 @@
     {"singular": {"fi": "Perjantai", "nl": "Vrijdag"}, "plural": {"fi": "Perjantait", "nl": "De vrijdagen"}},
     {"singular": {"fi": "Lauantai", "nl": "Zaterdag"}, "plural": {"fi": "Lauantait", "nl": "De zaterdagen"}},
     {"singular": {"fi": "Sunnuntai", "nl": "Zondag"}, "plural": {"fi": "Sunnuntait", "nl": "De zondagen"}},
+    {"fi": "Tänään", "nl": "Vandaag"},
+    {"fi": "Eilen", "nl": "Gisteren"},
+    {"fi": "Huomenna", "nl": "Morgen"},
+    {"fi": "Ensi viikolla", "nl": "Volgende week"},
     {"fi": "Tänään on maanantai", "nl": "Vandaag is het maandag"},
     {"fi": "Huomenna on tiistai", "nl": "Morgen is het dinsdag"},
     {"fi": ["Mikä päivä tänään on?", "Mikä päivä on tänään?"], "nl": "Welke dag is het vandaag?"}

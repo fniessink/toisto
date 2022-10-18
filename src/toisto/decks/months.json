@@ -14,5 +14,5 @@
     {"fi": "Lokakuu", "nl": "Oktober"},
     {"fi": "Marraskuu", "nl": "November"},
     {"fi": "Joulukuu", "nl": "December"},
-    {"fi": "Nyt on heinäkuu", "nl": "Het is juli"}
+    {"fi": ["Nyt on heinäkuu", "On heinäkuu"], "nl": "Het is juli"}
 ]
