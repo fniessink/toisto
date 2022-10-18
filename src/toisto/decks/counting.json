@@ -1,38 +1,186 @@
 [
-    { "nl": "Tellen", "fi": "Laskea" },
-    { "nl": ["Eén", "één", "Een"], "fi": "Yksi" },
-    { "nl": "Twee", "fi": "Kaksi" },
-    { "nl": "Drie", "fi": "Kolme" },
-    { "nl": "Vier", "fi": "Neljä" },
-    { "nl": "Vijf", "fi": "Viisi" },
-    { "nl": "Zes", "fi": "Kuusi" },
-    { "nl": "Zeven", "fi": "Seitsemän" },
-    { "nl": "Acht", "fi": "Kahdeksan" },
-    { "nl": "Negen", "fi": "Yhdeksän" },
-    { "nl": "Tien", "fi": "Kymmenen" },
-    { "nl": "Elf", "fi": "Yksitoista" },
-    { "nl": "Twaalf", "fi": "Kaksitoista" },
-    { "nl": "Dertien", "fi": "Kolmetoista" },
-    { "nl": "Veertien", "fi": "Neljätoista" },
-    { "nl": "Vijftien", "fi": "Viisitoista" },
-    { "nl": "Zestien", "fi": "Kuusitoista" },
-    { "nl": "Zeventien", "fi": "Seitsemäntoista" },
-    { "nl": "Achttien", "fi": "Kahdeksantoista" },
-    { "nl": "Negentien", "fi": "Yhdeksäntoista" },
-    { "nl": "Twintig", "fi": "Kaksikymmentä" },
-    { "nl": "Eenentwintig", "fi": "Kaksikymmentäyksi" },
-    { "nl": "Tweeëntwintig", "fi": "Kaksikymmentäkaksi" },
-    { "nl": "Drieëntwintig", "fi": "Kaksikymmentäkolme" },
-    { "nl": "Vierentwintig", "fi": "Kaksikymmentäneljä" },
-    { "nl": "Dertig", "fi": "Kolmekymmentä" },
-    { "nl": "Veertig", "fi": "Neljäkymmentä" },
-    { "nl": "Vijftig", "fi": "Viisikymmentä" },
-    { "nl": "Zestig", "fi": "Kuusikymmentä" },
-    { "nl": "Zeventig", "fi": "Seitsemänkymmentä" },
-    { "nl": "Tachtig", "fi": "Kahdeksankymmentä" },
-    { "nl": "Negentig", "fi": "Yhdeksänkymmentä" },
-    { "nl": "Honderd", "fi": "Sata" },
-    { "nl": "Tweehonderd", "fi": "Kaksisataa" },
-    { "nl": "Duizend", "fi": "Tuhat" },
-    { "nl": "Tweeduizend", "fi": "Kaksituhatta" }
+    {
+        "en": "To count",
+        "fi": "Laskea",
+        "nl": "Tellen"
+    },
+    {
+        "en": "One",
+        "fi": "Yksi",
+        "nl": [
+            "Eén",
+            "één",
+            "Een"
+        ]
+    },
+    {
+        "en": "Two",
+        "fi": "Kaksi",
+        "nl": "Twee"
+    },
+    {
+        "en": "Three",
+        "fi": "Kolme",
+        "nl": "Drie"
+    },
+    {
+        "en": "Four",
+        "fi": "Neljä",
+        "nl": "Vier"
+    },
+    {
+        "en": "Five",
+        "fi": "Viisi",
+        "nl": "Vijf"
+    },
+    {
+        "en": "Six",
+        "fi": "Kuusi",
+        "nl": "Zes"
+    },
+    {
+        "en": "Seven",
+        "fi": "Seitsemän",
+        "nl": "Zeven"
+    },
+    {
+        "en": "Eight",
+        "fi": "Kahdeksan",
+        "nl": "Acht"
+    },
+    {
+        "en": "Nine",
+        "nl": "Negen",
+        "fi": "Yhdeksän"
+    },
+    {
+        "en": "Ten",
+        "fi": "Kymmenen",
+        "nl": "Tien"
+    },
+    {
+        "en": "Eleven",
+        "fi": "Yksitoista",
+        "nl": "Elf"
+    },
+    {
+        "en": "Twelve",
+        "fi": "Kaksitoista",
+        "nl": "Twaalf"
+    },
+    {
+        "en": "Thirteen",
+        "fi": "Kolmetoista",
+        "nl": "Dertien"
+    },
+    {
+        "en": "Fourteen",
+        "nl": "Veertien",
+        "fi": "Neljätoista"
+    },
+    {
+        "en": "Fifteen",
+        "fi": "Viisitoista",
+        "nl": "Vijftien"
+    },
+    {
+        "en": "Sixteen",
+        "fi": "Kuusitoista",
+        "nl": "Zestien"
+    },
+    {
+        "en": "Seventeen",
+        "fi": "Seitsemäntoista",
+        "nl": "Zeventien"
+    },
+    {
+        "en": "Eightteen",
+        "fi": "Kahdeksantoista",
+        "nl": "Achttien"
+    },
+    {
+        "en": "Nineteen",
+        "fi": "Yhdeksäntoista",
+        "nl": "Negentien"
+    },
+    {
+        "en": "Twenty",
+        "fi": "Kaksikymmentä",
+        "nl": "Twintig"
+    },
+    {
+        "en": "Twenty-one",
+        "fi": "Kaksikymmentäyksi",
+        "nl": "Eenentwintig"
+    },
+    {
+        "en": "Twenty-two",
+        "fi": "Kaksikymmentäkaksi",
+        "nl": "Tweeëntwintig"
+    },
+    {
+        "en": "Twenty-three",
+        "fi": "Kaksikymmentäkolme",
+        "nl": "Drieëntwintig"
+    },
+    {
+        "en": "Twenty-four",
+        "fi": "Kaksikymmentäneljä",
+        "nl": "Vierentwintig"
+    },
+    {
+        "en": "Thirty",
+        "fi": "Kolmekymmentä",
+        "nl": "Dertig"
+    },
+    {
+        "en": "Fourty",
+        "fi": "Neljäkymmentä",
+        "nl": "Veertig"
+    },
+    {
+        "en": "Fifty",
+        "fi": "Viisikymmentä",
+        "nl": "Vijftig"
+    },
+    {
+        "en": "Sixty",
+        "fi": "Kuusikymmentä",
+        "nl": "Zestig"
+    },
+    {
+        "en": "Seventy",
+        "fi": "Seitsemänkymmentä",
+        "nl": "Zeventig"
+    },
+    {
+        "en": "Eighty",
+        "fi": "Kahdeksankymmentä",
+        "nl": "Tachtig"
+    },
+    {
+        "en": "Ninety",
+        "fi": "Yhdeksänkymmentä",
+        "nl": "Negentig"
+    },
+    {
+        "en": "Hundred",
+        "fi": "Sata",
+        "nl": "Honderd"
+    },
+    {
+        "en": "Two hundred",
+        "fi": "Kaksisataa",
+        "nl": "Tweehonderd"
+    },
+    {
+        "en": "Thousand",
+        "fi": "Tuhat",
+        "nl": "Duizend"
+    },
+    {
+        "en": "Two thousand",
+        "fi": "Kaksituhatta",
+        "nl": "Tweeduizend"
+    }
 ]

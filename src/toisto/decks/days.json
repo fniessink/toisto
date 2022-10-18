@@ -1,19 +1,159 @@
 [
-    {"singular": {"fi": "Päivä", "nl": "De dag"}, "plural": {"fi": "Päivät", "nl": "De dagen"}},
-    {"singular": {"fi": "Viikko", "nl": "De week"}, "plural": {"fi": "Viikot", "nl": "De weken"}},
-    {"fi": "Viikonpäivät", "nl": "De dagen van de week"},
-    {"singular": {"fi": "Maanantai", "nl": "Maandag"}, "plural": {"fi": "Maanantait", "nl": "De maandagen"}},
-    {"singular": {"fi": "Tiistai", "nl": "Dinsdag"}, "plural": {"fi": "Tiistait", "nl": "De dinsdagen"}},
-    {"singular": {"fi": "Keskiviikko", "nl": "Woensdag"}, "plural": {"fi": "Keskiviikot", "nl": "De woensdagen"}},
-    {"singular": {"fi": "Torstai", "nl": "Donderdag"}, "plural": {"fi": "Torstait", "nl": "De donderdagen"}},
-    {"singular": {"fi": "Perjantai", "nl": "Vrijdag"}, "plural": {"fi": "Perjantait", "nl": "De vrijdagen"}},
-    {"singular": {"fi": "Lauantai", "nl": "Zaterdag"}, "plural": {"fi": "Lauantait", "nl": "De zaterdagen"}},
-    {"singular": {"fi": "Sunnuntai", "nl": "Zondag"}, "plural": {"fi": "Sunnuntait", "nl": "De zondagen"}},
-    {"fi": "Tänään", "nl": "Vandaag"},
-    {"fi": "Eilen", "nl": "Gisteren"},
-    {"fi": "Huomenna", "nl": "Morgen"},
-    {"fi": "Ensi viikolla", "nl": "Volgende week"},
-    {"fi": "Tänään on maanantai", "nl": "Vandaag is het maandag"},
-    {"fi": "Huomenna on tiistai", "nl": "Morgen is het dinsdag"},
-    {"fi": ["Mikä päivä tänään on?", "Mikä päivä on tänään?"], "nl": "Welke dag is het vandaag?"}
+    {
+        "singular": {
+            "en": "Day",
+            "fi": "Päivä",
+            "nl": "De dag"
+        },
+        "plural": {
+            "en": "Days",
+            "fi": "Päivät",
+            "nl": "De dagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Week",
+            "fi": "Viikko",
+            "nl": "De week"
+        },
+        "plural": {
+            "en": "Weeks",
+            "fi": "Viikot",
+            "nl": "De weken"
+        }
+    },
+    {
+        "en": "Days of the week",
+        "fi": "Viikonpäivät",
+        "nl": "De dagen van de week"
+    },
+    {
+        "singular": {
+            "en": "Monday",
+            "fi": "Maanantai",
+            "nl": "Maandag"
+        },
+        "plural": {
+            "en": "Mondays",
+            "fi": "Maanantait",
+            "nl": "De maandagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Tuesday",
+            "fi": "Tiistai",
+            "nl": "Dinsdag"
+        },
+        "plural": {
+            "en": "Tuesdays",
+            "fi": "Tiistait",
+            "nl": "De dinsdagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Wednesday",
+            "fi": "Keskiviikko",
+            "nl": "Woensdag"
+        },
+        "plural": {
+            "en": "Wednesdays",
+            "fi": "Keskiviikot",
+            "nl": "De woensdagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Thursday",
+            "fi": "Torstai",
+            "nl": "Donderdag"
+        },
+        "plural": {
+            "en": "Thursdays",
+            "fi": "Torstait",
+            "nl": "De donderdagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Friday",
+            "fi": "Perjantai",
+            "nl": "Vrijdag"
+        },
+        "plural": {
+            "en": "Fridays",
+            "fi": "Perjantait",
+            "nl": "De vrijdagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Saturday",
+            "fi": "Lauantai",
+            "nl": "Zaterdag"
+        },
+        "plural": {
+            "en": "Saturdays",
+            "fi": "Lauantait",
+            "nl": "De zaterdagen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Sunday",
+            "fi": "Sunnuntai",
+            "nl": "Zondag"
+        },
+        "plural": {
+            "en": "Sundays",
+            "fi": "Sunnuntait",
+            "nl": "De zondagen"
+        }
+    },
+    {
+        "en": "Today",
+        "fi": "Tänään",
+        "nl": "Vandaag"
+    },
+    {
+        "en": "Yesterday",
+        "fi": "Eilen",
+        "nl": "Gisteren"
+    },
+    {
+        "en": "Tomorrow",
+        "fi": "Huomenna",
+        "nl": "Morgen"
+    },
+    {
+        "en": "Next week",
+        "fi": "Ensi viikolla",
+        "nl": "Volgende week"
+    },
+    {
+        "en": [
+            "Today it is Monday",
+            "Today it's Monday"
+        ],
+        "fi": "Tänään on maanantai",
+        "nl": "Vandaag is het maandag"
+    },
+    {
+        "en": [
+            "Tomorrow it is Tuesday",
+            "Tomorrow it's Tuesday"
+        ],
+        "fi": "Huomenna on tiistai",
+        "nl": "Morgen is het dinsdag"
+    },
+    {
+        "en": "What day is it today?",
+        "fi": [
+            "Mikä päivä tänään on?",
+            "Mikä päivä on tänään?"
+        ],
+        "nl": "Welke dag is het vandaag?"
+    }
 ]

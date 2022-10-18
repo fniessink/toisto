@@ -1,7 +1,80 @@
 [
-    {"singular": {"fi": "Vuodenaika", "nl": "Het seizoen"}, "plural": {"fi": "Vuodenajat", "nl": "De seizoenen"}},
-    {"singular": {"fi": "Kevät", "nl": "De lente"}, "plural": {"fi": "Keväät", "nl": "De lentes"}},
-    {"singular": {"fi": "Kesä", "nl": "De zomer"}, "plural": {"fi": "Kesät", "nl": "De zomers"}},
-    {"singular": {"fi": "Syksy", "nl": "De herfst"}, "plural": {"fi": "Syksyt", "nl": "De herfsten"}},
-    {"singular": {"fi": "Talvi", "nl": "De winter"}, "plural": {"fi": "Talvet", "nl": "De winters"}}
+    {
+        "singular": {
+            "en": "Season",
+            "fi": "Vuodenaika",
+            "nl": "Het seizoen"
+        },
+        "plural": {
+            "en": "Seasons",
+            "fi": "Vuodenajat",
+            "nl": "De seizoenen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Spring",
+            "fi": "Kevät",
+            "nl": [
+                "De lente",
+                "Het voorjaar"
+            ]
+        },
+        "plural": {
+            "en": "Springs",
+            "fi": "Keväät",
+            "nl": [
+                "De lentes",
+                "De voorjaren"
+            ]
+        }
+    },
+    {
+        "singular": {
+            "en": "Summer",
+            "fi": "Kesä",
+            "nl": "De zomer"
+        },
+        "plural": {
+            "en": "Summers",
+            "fi": "Kesät",
+            "nl": "De zomers"
+        }
+    },
+    {
+        "singular": {
+            "en": [
+                "Autumn",
+                "Fall"
+            ],
+            "fi": "Syksy",
+            "nl": [
+                "De herfst",
+                "Het najaar"
+            ]
+        },
+        "plural": {
+            "en": [
+                "Autumns",
+                "Falls"
+            ],
+            "fi": "Syksyt",
+            "nl": [
+                "De herfsten",
+                "De najaren"
+            ]
+        }
+    },
+    {
+        "singular": {
+            "en": "Winter",
+            "fi": "Talvi",
+            "nl": "De winter"
+        },
+        "plural": {
+            "en": "Winters",
+            "fi": "Talvet",
+            "nl": "De winters"
+        }
+    }
 ]

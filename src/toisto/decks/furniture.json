@@ -1,10 +1,98 @@
 [
-    {"singular": { "nl": "De tafel", "fi": "Pöytä" }, "plural": { "nl": "De tafels", "fi": "Pöydät" }},
-    {"singular": { "nl": "Het bed", "fi": "Sänky" }, "plural": { "nl": "De bedden", "fi": "Sängyt" }},
-    {"singular": { "nl": "De sofa", "fi": "Sohva" }, "plural": { "nl": "De sofa's", "fi": "Sohvat" }},
-    {"singular": { "nl": "Het kussen", "fi": "Tyyny" }, "plural": { "nl": "De kussens", "fi": "Tyynyt" }},
-    {"singular": { "nl": "De stoel", "fi": "Tuoli" }, "plural": { "nl": "De stoelen", "fi": "Tuolit" }},
-    {"singular": { "nl": "De lamp", "fi": "Lamppu" }, "plural": { "nl": "De lampen", "fi": "Lamput" }},
-    {"singular": { "nl": "Het gordijn", "fi": "Verho" }, "plural": { "nl": "De gordijnen", "fi": "Verhot" }},
-    {"singular": { "nl": "Het tapijt", "fi": "Matto" }, "plural": { "nl": "De tapijten", "fi": "Matot" }}
+    {
+        "singular": {
+            "en": "Table",
+            "fi": "Pöytä",
+            "nl": "De tafel"
+        },
+        "plural": {
+            "en": "Tables",
+            "fi": "Pöydät",
+            "nl": "De tafels"
+        }
+    },
+    {
+        "singular": {
+            "en": "Bed",
+            "fi": "Sänky",
+            "nl": "Het bed"
+        },
+        "plural": {
+            "en": "Beds",
+            "fi": "Sängyt",
+            "nl": "De bedden"
+        }
+    },
+    {
+        "singular": {
+            "en": "Sofa",
+            "fi": "Sohva",
+            "nl": "De sofa"
+        },
+        "plural": {
+            "en": "Sofas",
+            "fi": "Sohvat",
+            "nl": "De sofa's"
+        }
+    },
+    {
+        "singular": {
+            "en": "Pillow",
+            "fi": "Tyyny",
+            "nl": "Het kussen"
+        },
+        "plural": {
+            "en": "Pillows",
+            "fi": "Tyynyt",
+            "nl": "De kussens"
+        }
+    },
+    {
+        "singular": {
+            "en": "Chair",
+            "fi": "Tuoli",
+            "nl": "De stoel"
+        },
+        "plural": {
+            "en": "Chairs",
+            "fi": "Tuolit",
+            "nl": "De stoelen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Lamp",
+            "fi": "Lamppu",
+            "nl": "De lamp"
+        },
+        "plural": {
+            "en": "Lamps",
+            "fi": "Lamput",
+            "nl": "De lampen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Curtain",
+            "fi": "Verho",
+            "nl": "Het gordijn"
+        },
+        "plural": {
+            "en": "Curtains",
+            "fi": "Verhot",
+            "nl": "De gordijnen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Carpet",
+            "fi": "Matto",
+            "nl": "Het tapijt"
+        },
+        "plural": {
+            "en": "Carpets",
+            "fi": "Matot",
+            "nl": "De tapijten"
+        }
+    }
 ]

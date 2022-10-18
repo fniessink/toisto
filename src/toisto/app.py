@@ -10,7 +10,7 @@ from .persistence import load_quizzes, load_progress
 def main():
     """Main program."""
     namespace = parser.parse_args()
-    quizzes = load_quizzes(namespace.language, namespace.deck)
+    quizzes = load_quizzes(namespace.language, namespace.source_language, namespace.deck)
     progress = load_progress()
     if namespace.command == "practice":
         practice(quizzes, progress)

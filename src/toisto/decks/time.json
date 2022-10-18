@@ -1,8 +1,60 @@
 [
-    {"fi": "Aika", "nl": "De tijd"},
-    {"fi": "Nyt", "nl": "Nu"},
-    {"singular": {"fi": "Aamu", "nl": "De ochtend"}, "plural": {"fi": "Aamut", "nl": "De ochtenden"}},
-    {"singular": {"fi": "Ilta", "nl": "De avond"}, "plural": {"fi": "Illat", "nl": "De avonden"}},
-    {"singular": {"fi": "Yö", "nl": "De nacht"}, "plural": {"fi": "Yöt", "nl": "De nachten"}},
-    {"singular": {"fi": "Keskiyö", "nl": "De middernacht"}, "plural": {"fi": "Keskiyöt", "nl": "De middernachten"}}
+    {
+        "en": "Time",
+        "fi": "Aika",
+        "nl": "De tijd"
+    },
+    {
+        "en": "Now",
+        "fi": "Nyt",
+        "nl": "Nu"
+    },
+    {
+        "singular": {
+            "en": "Morning",
+            "fi": "Aamu",
+            "nl": "De ochtend"
+        },
+        "plural": {
+            "en": "Mornings",
+            "fi": "Aamut",
+            "nl": "De ochtenden"
+        }
+    },
+    {
+        "singular": {
+            "en": "Evening",
+            "fi": "Ilta",
+            "nl": "De avond"
+        },
+        "plural": {
+            "en": "Evenings",
+            "fi": "Illat",
+            "nl": "De avonden"
+        }
+    },
+    {
+        "singular": {
+            "en": "Night",
+            "fi": "Yö",
+            "nl": "De nacht"
+        },
+        "plural": {
+            "en": "Nights",
+            "fi": "Yöt",
+            "nl": "De nachten"
+        }
+    },
+    {
+        "singular": {
+            "en": "Midnight",
+            "fi": "Keskiyö",
+            "nl": "De middernacht"
+        },
+        "plural": {
+            "en": "Midnights",
+            "fi": "Keskiyöt",
+            "nl": "De middernachten"
+        }
+    }
 ]

@@ -3,7 +3,7 @@
 import os
 
 
-VOICES = dict(fi="Satu", nl="Xander")
+VOICES = dict(en="Daniel", fi="Satu", nl="Xander")
 
 
 def say(language: str, text: str) -> None:

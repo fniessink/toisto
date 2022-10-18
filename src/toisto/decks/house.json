@@ -1,12 +1,115 @@
 [
-    {"singular": { "nl": "Het appartement", "fi": "Asunto" }, "plural": { "nl": "De appartementen", "fi": "Asunnot" }},
-    {"singular": { "nl": "De kamer", "fi": "Huone" }, "plural": { "nl": "De kamers", "fi": "Huoneet" }},
-    {"singular": { "nl": "De kelder", "fi": "Kellari" }, "plural": { "nl": "De kelders", "fi": "Kellarit" }},
-    { "nl": "Het thuis", "fi": "Koti" },
-    {"singular": { "nl": "De tuin", "fi": "Piha" }, "plural": { "nl": "De tuinen", "fi": "Pihat" }},
-    {"singular": { "nl": "Het huis", "fi": "Talo" }, "plural": { "nl": "De huizen", "fi": "Talot" }},
-    {"singular": { "nl": "De veranda", "fi": "Veranta" }, "plural": { "nl": "De veranda's", "fi": "Verannat" }},
-    {"singular": { "nl": "De barbecue", "fi": "Grilli" }, "plural": { "nl": "De barbecues", "fi": "Grillit" }},
-    {"singular": { "nl": "De muur", "fi": "Seinä" }, "plural": { "nl": "De muren", "fi": "Seinät" }},
-    {"singular": { "nl": "De vloer", "fi": "Lattia" }, "plural": { "nl": "De vloeren", "fi": "Lattiat" }}
+    {
+        "singular": {
+            "en": "Apartment",
+            "fi": "Asunto",
+            "nl": "Het appartement"
+        },
+        "plural": {
+            "en": "Apartments",
+            "fi": "Asunnot",
+            "nl": "De appartementen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Room",
+            "fi": "Huone",
+            "nl": "De kamer"
+        },
+        "plural": {
+            "en": "Rooms",
+            "fi": "Huoneet",
+            "nl": "De kamers"
+        }
+    },
+    {
+        "singular": {
+            "en": "Basement",
+            "fi": "Kellari",
+            "nl": "De kelder"
+        },
+        "plural": {
+            "en": "Basements",
+            "fi": "Kellarit",
+            "nl": "De kelders"
+        }
+    },
+    {
+        "en": "Home",
+        "fi": "Koti",
+        "nl": "Het thuis"
+    },
+    {
+        "singular": {
+            "en": "Garden",
+            "fi": "Piha",
+            "nl": "De tuin"
+        },
+        "plural": {
+            "en": "Gardens",
+            "fi": "Pihat",
+            "nl": "De tuinen"
+        }
+    },
+    {
+        "singular": {
+            "en": "House",
+            "fi": "Talo",
+            "nl": "Het huis"
+        },
+        "plural": {
+            "en": "Houses",
+            "fi": "Talot",
+            "nl": "De huizen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Veranda",
+            "fi": "Veranta",
+            "nl": "De veranda"
+        },
+        "plural": {
+            "en": "Verandas",
+            "fi": "Verannat",
+            "nl": "De veranda's"
+        }
+    },
+    {
+        "singular": {
+            "en": "Barbecue",
+            "fi": "Grilli",
+            "nl": "De barbecue"
+        },
+        "plural": {
+            "en": "Barbecues",
+            "fi": "Grillit",
+            "nl": "De barbecues"
+        }
+    },
+    {
+        "singular": {
+            "en": "Wall",
+            "fi": "Seinä",
+            "nl": "De muur"
+        },
+        "plural": {
+            "en": "Walls",
+            "fi": "Seinät",
+            "nl": "De muren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Floor",
+            "fi": "Lattia",
+            "nl": "De vloer"
+        },
+        "plural": {
+            "en": "Floors",
+            "fi": "Lattiat",
+            "nl": "De vloeren"
+        }
+    }
 ]

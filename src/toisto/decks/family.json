@@ -1,24 +1,121 @@
 [
-    {"nl": "De familie", "fi": "Perhe"},
-    {"nl": "De opa", "fi": ["Vaari", "Ukki"]},
-    {"nl": "De grootvader", "fi": "Isoisä"},
-    {"nl": "De oma", "fi": ["Mummo", "Mummi"]},
-    {"nl": "De grootmoeder", "fi": "Isoäiti"},
-    {"nl": "Getrouwd", "fi": "Naimisissa"},
-    {"nl": "Gescheiden", "fi": "Eronnut"},
-    {"nl": "De vader", "fi": "Isä"},
-    {"nl": "De moeder", "fi": "Äiti"},
-    {"nl": "Het kind", "fi": "Lapsi"},
-    {"nl": "De broer", "fi": "Veli"},
-    {"nl": "De zus", "fi": "Sisko"},
-    {"nl": ["De neef", "De nicht"], "fi": "Serkku"},
-    {"nl": "Het kleinkind", "fi": "Lapsenlapsi"},
-    {"nl": "De dochter", "fi": "Tytär"},
-    {"nl": "De zoon", "fi": "Poika"},
-    {"nl": "De echtgenote", "fi": "Vaimo"},
-    {"nl": "De echtgenoot", "fi": "Aviomies"},
-    {"nl": "De partner", "fi": "Puoliso"},
-    {"nl": "Het huwelijk", "fi": "Avioliitto"},
-    {"nl": "De ouders", "fi": "Vanhemmat"},
-    {"nl": "De grootouders", "fi": "Isovanhemmat"}
+    {
+        "en": "Family",
+        "fi": "Perhe",
+        "nl": "De familie"
+    },
+    {
+        "en": "Grandpa",
+        "fi": [
+            "Vaari",
+            "Ukki"
+        ],
+        "nl": "De opa"
+    },
+    {
+        "en": "Grandfather",
+        "fi": "Isoisä",
+        "nl": "De grootvader"
+    },
+    {
+        "en": "Grandma",
+        "fi": [
+            "Mummo",
+            "Mummi"
+        ],
+        "nl": "De oma"
+    },
+    {
+        "en": "Grandmother",
+        "fi": "Isoäiti",
+        "nl": "De grootmoeder"
+    },
+    {
+        "en": "Married",
+        "fi": "Naimisissa",
+        "nl": "Getrouwd"
+    },
+    {
+        "en": "Divorced",
+        "fi": "Eronnut",
+        "nl": "Gescheiden"
+    },
+    {
+        "en": "Father",
+        "fi": "Isä",
+        "nl": "De vader"
+    },
+    {
+        "en": "Mother",
+        "fi": "Äiti",
+        "nl": "De moeder"
+    },
+    {
+        "en": "Child",
+        "fi": "Lapsi",
+        "nl": "Het kind"
+    },
+    {
+        "en": "Brother",
+        "fi": "Veli",
+        "nl": "De broer"
+    },
+    {
+        "en": "Sister",
+        "fi": "Sisko",
+        "nl": "De zus"
+    },
+    {
+        "en": "Cousin",
+        "fi": "Serkku",
+        "nl": [
+            "De neef",
+            "De nicht"
+        ]
+    },
+    {
+        "en": "Grandchild",
+        "fi": "Lapsenlapsi",
+        "nl": "Het kleinkind"
+    },
+    {
+        "en": "Daughter",
+        "fi": "Tytär",
+        "nl": "De dochter"
+    },
+    {
+        "en": "Son",
+        "fi": "Poika",
+        "nl": "De zoon"
+    },
+    {
+        "en": "Wife",
+        "fi": "Vaimo",
+        "nl": "De echtgenote"
+    },
+    {
+        "en": "Husband",
+        "fi": "Aviomies",
+        "nl": "De echtgenoot"
+    },
+    {
+        "en": "Spouse",
+        "fi": "Puoliso",
+        "nl": "De partner"
+    },
+    {
+        "en": "Marriage",
+        "fi": "Avioliitto",
+        "nl": "Het huwelijk"
+    },
+    {
+        "en": "Parents",
+        "fi": "Vanhemmat",
+        "nl": "De ouders"
+    },
+    {
+        "en": "Grandparents",
+        "fi": "Isovanhemmat",
+        "nl": "De grootouders"
+    }
 ]

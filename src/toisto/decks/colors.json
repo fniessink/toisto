@@ -1,13 +1,63 @@
 [
-    { "nl": "Zwart", "fi": "Musta" },
-    { "nl": "Wit", "fi": "Valkoinen" },
-    { "nl": "Blauw", "fi": "Sininen" },
-    { "nl": "Groen", "fi": "Vihreä" },
-    { "nl": "Rood", "fi": "Punainen" },
-    { "nl": "Geel", "fi": "Keltainen" },
-    { "nl": "Paars", "fi": "Violetti" },
-    { "nl": "Oranje", "fi": "Oranssi" },
-    { "nl": "Bruin", "fi": "Ruskea" },
-    { "nl": "Roze", "fi": ["Vaaleanpunainen", "Pinkki"] },
-    { "nl": "Grijs", "fi": "Harmaa" }
+    {
+        "en": "Black",
+        "fi": "Musta",
+        "nl": "Zwart"
+    },
+    {
+        "en": "White",
+        "fi": "Valkoinen",
+        "nl": "Wit"
+    },
+    {
+        "en": "Blue",
+        "fi": "Sininen",
+        "nl": "Blauw"
+    },
+    {
+        "en": "Green",
+        "fi": "Vihreä",
+        "nl": "Groen"
+    },
+    {
+        "en": "Red",
+        "fi": "Punainen",
+        "nl": "Rood"
+    },
+    {
+        "en": "Yellow",
+        "fi": "Keltainen",
+        "nl": "Geel"
+    },
+    {
+        "en": "Purple",
+        "fi": "Violetti",
+        "nl": "Paars"
+    },
+    {
+        "en": "Orange",
+        "fi": "Oranssi",
+        "nl": "Oranje"
+    },
+    {
+        "en": "Brown",
+        "fi": "Ruskea",
+        "nl": "Bruin"
+    },
+    {
+        "en": "Pink",
+        "fi": [
+            "Vaaleanpunainen",
+            "Pinkki"
+        ],
+        "nl": "Roze"
+    },
+    {
+        "en": [
+            "Grey",
+            "Gray"
+        ],
+        "fi": "Harmaa",
+        "nl": "Grijs"
+    }
 ]

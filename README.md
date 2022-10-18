@@ -2,7 +2,7 @@
 
 Command-line app to practice languages. *Toisto* is Finnish and means *reiteration, playback, repetition, reproduction*.
 
-Toisto is alpha software at the moment. It comes with a limited set of words and phrases in Dutch and Finnish.
+Toisto is alpha software at the moment. It comes with a limited set of words and phrases in Dutch, English, and Finnish.
 
 ## User guide
 
@@ -22,16 +22,16 @@ $ pipx install Toisto
 
 ### How to use
 
-Start Toisto as follows, giving the language you want to practice as argument, either `nl` or `fi` at the moment:
+Start Toisto as follows, giving the language you want to practice and your language as arguments:
 
 ```console
-$ toisto fi
+$ toisto fi en
 ```
 
 To practice a specific deck, pass it as follows:
 
 ```console
-$ toisto fi --deck colors
+$ toisto fi en --deck colors
 ```
 
 Add `--help` or `-h` to get help information:
@@ -43,7 +43,8 @@ $ toisto --help
 ### Example session
 
 ```console
-👋 Welcome to Toisto v0.0.3!
+$ toisto fi nl
+👋 Welcome to Toisto v0.0.5!
 
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
@@ -80,7 +81,7 @@ Groen
 
 ### How it works
 
-Toisto presents words and phrases in Dutch and Finnish for you to translate. For each word or phrase, Toisto counts how often you translate it correctly in a row. So each word or phrase has its own streak. When you translate a word or phrase correctly, increasing its streak, Toisto will silence the word for a while. The longer the streak, the longer a word or phrase is silenced.
+Toisto presents words and phrases for you to translate. For each word or phrase, Toisto counts how often you translate it correctly in a row. So each word or phrase has its own streak. When you translate a word or phrase correctly, increasing its streak, Toisto will silence the word for a while. The longer the streak, the longer a word or phrase is silenced.
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
 
@@ -181,12 +182,12 @@ Decks are located in `src/toisto/decks` in the form of JSON files. The format of
 ```
 
 Each deck is a list of entries. There are two types of entries:
-1. A translation entry. Translation entries are a mappings with exactly two language key-value pairs. The key is a language identifier. Currently only "fi" for Finnish and "nl" for Dutch are supported. Each language identifier has a value that is either a string or a list of strings. The values are words, phrases, or sentences in the language indicated by the key.
-2. A noun entry. The entry is a mapping with `singular` and `plural` as keys and translation entries as values. It represents a noun with singular and plural versions in both Finnish and Dutch.
+1. A translation entry. Translation entries are a mappings with exactly two language key-value pairs. The key is a language identifier. Currently "en" for English, "fi" for Finnish, and "nl" for Dutch are supported. Each language identifier has a value that is either a string or a list of strings. The values are words, phrases, or sentences in the language indicated by the key.
+2. A noun entry. The entry is a mapping with `singular` and `plural` as keys and translation entries as values. It represents a noun with singular and plural versions in English, Finnish, and Dutch.
 
 Toisto uses the entries to generate quizzes. Currently, two types of quizzes are generated:
-1. Quizzes to translate a phrase from Dutch to Finnish and vice versa. Toisto quizzes the user in both directions, Finnish-Dutch and Dutch-Finnish. If the language value is a list, Toisto uses all items as question and as answer. So both "Mikä päivä tänään on?" and "Mikä päivä on tänään?" are asked as question and both are accepted as correct answer for the quiz "Welke dag is het vandaag?"
-2. Quizzes to singularize a plural noun or pluralize a singular noun. Users are only asked to singularize and pluralize nouns in their practice language, not their native language.
+1. Quizzes to translate a phrase from one language to another and vice versa. Toisto quizzes the user in both directions. If the language value is a list, Toisto uses all items as question and as answer. So both "Mikä päivä tänään on?" and "Mikä päivä on tänään?" are asked as question and both are accepted as correct answer for the quiz "Welke dag is het vandaag?"
+2. Quizzes to singularize a plural noun or pluralize a singular noun. Users are only asked to singularize and pluralize nouns in their practice language, not their own language.
 
 ### Spaced repetition
 
