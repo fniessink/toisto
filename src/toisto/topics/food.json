@@ -1,6 +1,17 @@
 [
     {
         "singular": {
+            "en": "Food",
+            "fi": "Ruoka",
+            "nl": "Het voedsel"
+        },
+        "plural": {
+            "en": "Foods",
+            "fi": "Ruoat"
+        }
+    },
+    {
+        "singular": {
             "en": "Orange",
             "fi": "Appelsiini",
             "nl": "De sinaasappel"
