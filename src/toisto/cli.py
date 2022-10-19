@@ -2,14 +2,14 @@
 
 import argparse
 
-from .metadata import SUMMARY, VERSION, DECKS, SUPPORTED_LANGUAGES
+from .metadata import SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
 
 
 parser = argparse.ArgumentParser(description=SUMMARY)
 parser.add_argument("-V", "--version", action="version", version=VERSION)
 parser.add_argument(
-    "-d", "--deck", action="append", default=[], choices=DECKS, metavar="{deck}",
-    help="deck to use, can be repeated (default: all); available decks: %(choices)s"
+    "-t", "--topic", action="append", default=[], choices=TOPICS, metavar="{topic}",
+    help="topic to use, can be repeated (default: all); available topics: %(choices)s"
 )
 parser.add_argument(
     "language", metavar="{language to practice}", choices=SUPPORTED_LANGUAGES.keys(),

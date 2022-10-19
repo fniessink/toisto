@@ -14,7 +14,7 @@ NounEntryDict = dict[NounType, EntryDict]
 
 @dataclass
 class Entry:
-    """Class representing a word or phrase from a deck."""
+    """Class representing a word or phrase from a topic."""
 
     entry: dict[Language, list[str]]
 

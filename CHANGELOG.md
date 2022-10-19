@@ -4,7 +4,13 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.05 - 2020-1018
+## v0.0.6 - 2020-1018
+
+### Changed
+
+- Renamed decks to topics. This also means the command line interface option `-d/--deck` was renamed to `-t/--topic`.
+
+## v0.0.5 - 2020-1018
 
 ### Added
 

@@ -20,7 +20,7 @@ When you correctly translate a word or phrase multiple times in a row,
 in a row, the longer words and phrases are silenced.''')}
 """
 
-DONE = f"""👍 Good job. You're done for now. Please come back later or try a different deck.
+DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
 {grey(f'Type `{NAME.lower()} -h` for more information.')}
 """
 

@@ -4,7 +4,7 @@ import json
 import pathlib
 import sys
 
-from .metadata import NAME, DECKS_JSON_FILES, Language
+from .metadata import NAME, TOPIC_JSON_FILES, Language
 from .model import entry_factory, Progress, Quiz
 
 
@@ -25,12 +25,12 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
         json.dump(contents, json_file)
 
 
-def load_quizzes(language: Language, source_language: Language, decks_to_load: list[str]) -> list[Quiz]:
-    """Load the entries from the decks and generate the quizzes."""
+def load_quizzes(language: Language, source_language: Language, topics_to_load: list[str]) -> list[Quiz]:
+    """Load the entries from the topics and generate the quizzes."""
     quizzes = []
-    for deck in DECKS_JSON_FILES:
-        if not decks_to_load or deck.stem in decks_to_load:
-            for entry_dict in load_json(deck):
+    for topic in TOPIC_JSON_FILES:
+        if not topics_to_load or topic.stem in topics_to_load:
+            for entry_dict in load_json(topic):
                 entry = entry_factory(entry_dict)
                 quizzes.extend(entry.quizzes(language, source_language))
     return quizzes

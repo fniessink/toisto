@@ -36,7 +36,7 @@ toisto = "toisto.app:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-toisto = ["decks/*.json"]
+toisto = ["topics/*.json"]
 
 [tool.pylint.messages_control]
 max-line-length = 120

@@ -1,4 +1,4 @@
-"""Command to show deck information."""
+"""Command to show progress information."""
 
 from rich.console import Console
 from rich.table import Table

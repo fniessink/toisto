@@ -13,6 +13,6 @@ VERSION = version(NAME)
 SUPPORTED_LANGUAGES = dict(en="English", fi="Finnish", nl="Dutch")
 Language = Literal["en", "fi", "nl"]
 
-_decks_folder = pathlib.Path(__file__).parent / "decks"
-DECKS_JSON_FILES = list(_decks_folder.glob("*.json"))
-DECKS = [json_file.stem for json_file in DECKS_JSON_FILES]
+_topics_folder = pathlib.Path(__file__).parent / "topics"
+TOPIC_JSON_FILES = list(_topics_folder.glob("*.json"))
+TOPICS = [json_file.stem for json_file in TOPIC_JSON_FILES]

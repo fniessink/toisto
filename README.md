@@ -28,10 +28,10 @@ Start Toisto as follows, giving the language you want to practice and your langu
 $ toisto fi en
 ```
 
-To practice a specific deck, pass it as follows:
+To practice a specific topic, pass it as follows:
 
 ```console
-$ toisto fi en --deck colors
+$ toisto fi en --topic colors
 ```
 
 Add `--help` or `-h` to get help information:
@@ -169,9 +169,9 @@ $ git push --tags
 
 ## Software documentation
 
-### Decks
+###w Topics
 
-Decks are located in `src/toisto/decks` in the form of JSON files. The format of the JSON files is as follows:
+Topics are located in `src/toisto/topics` in the form of JSON files. The format of the JSON files is as follows:
 
 ```json
 [
@@ -181,7 +181,7 @@ Decks are located in `src/toisto/decks` in the form of JSON files. The format of
 ]
 ```
 
-Each deck is a list of entries. There are two types of entries:
+Each topic is a list of entries. There are two types of entries:
 1. A translation entry. Translation entries are a mappings with exactly two language key-value pairs. The key is a language identifier. Currently "en" for English, "fi" for Finnish, and "nl" for Dutch are supported. Each language identifier has a value that is either a string or a list of strings. The values are words, phrases, or sentences in the language indicated by the key.
 2. A noun entry. The entry is a mapping with `singular` and `plural` as keys and translation entries as values. It represents a noun with singular and plural versions in English, Finnish, and Dutch.
 
