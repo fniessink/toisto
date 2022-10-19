@@ -41,16 +41,20 @@ class Entry:
 
 @dataclass
 class NounEntry:
-    """A noun with singular and plural versions."""
+    """A noun with a singular and plural grammatical number.
+
+    See https://en.wikipedia.org/wiki/Grammatical_number.
+    """
 
     singular: Entry
     plural: Entry
 
     def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
         """Generate the possible quizzes from the entry."""
-        result = self.singular.quizzes(language, source_language)
-        if self.plural.has(language, source_language):
-            result.extend(self.plural.quizzes(language, source_language))
+        result = []
+        for entry in self.singular, self.plural:
+            if entry.has(language, source_language):
+                result.extend(entry.quizzes(language, source_language))
         singular_texts, plural_texts = self.singular.texts(language), self.plural.texts(language)
         result.extend([Quiz(language, language, text, plural_texts, "pluralize") for text in singular_texts])
         result.extend([Quiz(language, language, text, singular_texts, "singularize") for text in plural_texts])

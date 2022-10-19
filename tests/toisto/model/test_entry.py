@@ -60,3 +60,14 @@ class EntryTest(unittest.TestCase):
             ],
             entry.quizzes("fi", "nl")
         )
+
+    def test_noun_with_one_language(self):
+        """Test that quizzes can be generated from a noun with one language."""
+        entry = entry_factory(dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
+        self.assertEqual(
+            [
+                Quiz("fi", "fi", "Mämmi", ["Mämmit"], "pluralize"),
+                Quiz("fi", "fi", "Mämmit", ["Mämmi"], "singularize")
+            ],
+            entry.quizzes("fi", "en")
+        )
