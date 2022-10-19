@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.model import entry_factory, Entry, Quiz
+from toisto.model import entry_factory, Quiz
 
 
 class EntryTest(unittest.TestCase):
@@ -44,6 +44,19 @@ class EntryTest(unittest.TestCase):
                 Quiz("nl", "fi", "De ochtenden", ["Aamut"]),
                 Quiz("fi", "fi", "Aamu", ["Aamut"], "pluralize"),
                 Quiz("fi", "fi", "Aamut", ["Aamu"], "singularize")
+            ],
+            entry.quizzes("fi", "nl")
+        )
+
+    def test_noun_with_missing_plural(self):
+        """Test that quizzes can be generated even if one language has no plural for the noun."""
+        entry = entry_factory(dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit")))
+        self.assertEqual(
+            [
+                Quiz("fi", "nl", "Ketsuppi", ["De ketchup"]),
+                Quiz("nl", "fi", "De ketchup", ["Ketsuppi"]),
+                Quiz("fi", "fi", "Ketsuppi", ["Ketsupit"], "pluralize"),
+                Quiz("fi", "fi", "Ketsupit", ["Ketsuppi"], "singularize")
             ],
             entry.quizzes("fi", "nl")
         )

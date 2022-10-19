@@ -25,6 +25,10 @@ class Entry:
             [Quiz(source_language, language, text, self.entry[language]) for text in self.entry[source_language]]
         )
 
+    def has(self, *languages: Language) -> bool:
+        """Return whether the entry has all the specified languages."""
+        return all(language in self.entry for language in languages)
+
     def texts(self, language: Language) -> list[str]:
         """Return the texts for the language."""
         return self.entry[language]
@@ -44,12 +48,13 @@ class NounEntry:
 
     def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
         """Generate the possible quizzes from the entry."""
-        translate_singular = self.singular.quizzes(language, source_language)
-        translate_plural = self.plural.quizzes(language, source_language)
+        result = self.singular.quizzes(language, source_language)
+        if self.plural.has(language, source_language):
+            result.extend(self.plural.quizzes(language, source_language))
         singular_texts, plural_texts = self.singular.texts(language), self.plural.texts(language)
-        pluralize = [Quiz(language, language, text, plural_texts, "pluralize") for text in singular_texts]
-        singularize = [Quiz(language, language, text, singular_texts, "singularize") for text in plural_texts]
-        return translate_singular + translate_plural + pluralize + singularize
+        result.extend([Quiz(language, language, text, plural_texts, "pluralize") for text in singular_texts])
+        result.extend([Quiz(language, language, text, singular_texts, "singularize") for text in plural_texts])
+        return result
 
     @classmethod
     def from_dict(cls, entry_dict: NounEntryDict) -> "NounEntry":
