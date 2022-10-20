@@ -169,7 +169,7 @@ $ git push --tags
 
 ## Software documentation
 
-###w Topics
+### Topics
 
 Topics are located in `src/toisto/topics` in the form of JSON files. The format of the JSON files is as follows:
 
