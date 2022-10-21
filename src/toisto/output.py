@@ -1,7 +1,9 @@
 """Output for the user."""
 
 from datetime import datetime, timedelta
+from typing import NoReturn
 import random
+import sys
 
 from .color import grey, purple
 from .diff import colored_diff
@@ -71,3 +73,9 @@ def feedback_incorrect(guess: str, quiz: Quiz) -> str:
 def instruction(quiz: Quiz) -> str:
     """Return the instruction for the quiz."""
     return purple(f"{quiz.instruction()}:")
+
+
+def show_error_and_exit(message: str) -> NoReturn:
+    """Print the error message to stderr and exit."""
+    sys.stderr.write(message)
+    sys.exit(2)

@@ -3,8 +3,9 @@
 import unittest
 from unittest.mock import patch, MagicMock, Mock
 
+from toisto.metadata import NAME
 from toisto.model import QuizProgress, Progress, Quiz
-from toisto.persistence import dump_json, load_quizzes, load_json, load_progress, save_progress
+from toisto.persistence import dump_json, load_quizzes, load_json, load_progress, save_progress, PROGRESS_JSON
 
 
 class PersistenceTestCase(unittest.TestCase):
@@ -47,11 +48,21 @@ class LoadEntriesTest(unittest.TestCase):
 
     def test_load_entries(self):
         """Test that the entries can be loaded."""
-        self.assertIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi", "nl", []))
+        self.assertIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi", "nl", [], []))
 
     def test_load_entries_by_name(self):
-        """Test that a subsetof the entries can be loaded."""
-        self.assertNotIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi",  "nl", ["family"]))
+        """Test that a subset of the entries can be loaded."""
+        self.assertNotIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi",  "nl", ["family"], []))
+
+    @patch("pathlib.Path.exists", Mock(return_value=False))
+    @patch("sys.stderr.write")
+    def test_load_topic_by_filename(self, stderr_write):
+        """Test that an error message is given when the topic file does not exist."""
+        self.assertRaises(SystemExit, load_quizzes, "fi",  "nl", [], ["file-does-not-exist"])
+        stderr_write.assert_called_with(
+            "Toisto cannot read topic file-does-not-exist: [Errno 2] No such file or directory: "
+            "'file-does-not-exist'.\n"
+        )
 
 
 class ProgressPersistenceTest(unittest.TestCase):
@@ -64,12 +75,18 @@ class ProgressPersistenceTest(unittest.TestCase):
         self.assertEqual({}, load_progress().progress_dict)
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
-    @patch("sys.stderr", Mock())
+    @patch("sys.stderr.write")
     @patch("pathlib.Path.open")
-    def test_load_invalid_progress(self, path_open):
+    def test_load_invalid_progress(self, path_open, stderr_write):
         """Test that the the program exists if the progress cannot be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = ""
         self.assertRaises(SystemExit, load_progress)
+        stderr_write.assert_called_with(
+            f"{NAME} cannot parse the progress information in {PROGRESS_JSON}: Expecting value: line 1 column 1 "
+            f"(char 0).\nTo fix this, remove or rename {PROGRESS_JSON} and start {NAME} again. Unfortunately, this "
+            "will reset your progress.\nPlease consider opening a bug report at https://github.com/fniessink/toisto. "
+            "Be sure to attach the invalid\nprogress file to the issue.\n"
+        )
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")

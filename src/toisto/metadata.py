@@ -15,4 +15,4 @@ Language = Literal["en", "fi", "nl"]
 
 _topics_folder = pathlib.Path(__file__).parent / "topics"
 TOPIC_JSON_FILES = list(_topics_folder.glob("*.json"))
-TOPICS = [json_file.stem for json_file in TOPIC_JSON_FILES]
+TOPICS = sorted(json_file.stem for json_file in TOPIC_JSON_FILES)
