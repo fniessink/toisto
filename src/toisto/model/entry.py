@@ -55,9 +55,10 @@ class NounEntry:
         for entry in self.singular, self.plural:
             if entry.has(language, source_language):
                 result.extend(entry.quizzes(language, source_language))
-        singular_texts, plural_texts = self.singular.texts(language), self.plural.texts(language)
-        result.extend([Quiz(language, language, text, plural_texts, "pluralize") for text in singular_texts])
-        result.extend([Quiz(language, language, text, singular_texts, "singularize") for text in plural_texts])
+        if self.singular.has(language) and self.plural.has(language):
+            singular_texts, plural_texts = self.singular.texts(language), self.plural.texts(language)
+            result.extend([Quiz(language, language, text, plural_texts, "pluralize") for text in singular_texts])
+            result.extend([Quiz(language, language, text, singular_texts, "singularize") for text in plural_texts])
         return result
 
     @classmethod

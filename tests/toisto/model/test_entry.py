@@ -71,3 +71,8 @@ class EntryTest(unittest.TestCase):
             ],
             entry.quizzes("fi", "en")
         )
+
+    def test_noun_with_one_language_reversed(self):
+        """Test that quizzes can be generated from a noun with one language."""
+        entry = entry_factory(dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
+        self.assertEqual([], entry.quizzes("en", "fi"))
