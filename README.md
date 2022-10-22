@@ -97,14 +97,13 @@ Clone the repository:
 $ git clone https://github.com/fniessink/toisto.git
 ```
 
-Create a virtual environment, activate it, install the dependencies and install Toisto in development mode:
+Create a virtual environment, activate it, and install Toisto in development mode, including development-only dependencies:
 
 ```console
 $ cd toisto
 $ python3 -m venv venv
 $ . venv/bin/activate
-$ pip install -r requirements-dev.txt
-$ pip install -e .
+$ pip install -e .[dev]
 ```
 
 ### How to test

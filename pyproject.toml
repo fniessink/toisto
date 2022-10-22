@@ -24,6 +24,17 @@ dependencies = [
     "rich >= 12.6.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "build == 0.8.0",
+    "coverage == 6.5.0",
+    "green == 3.4.3",
+    "mypy == 0.971",
+    "pip == 22.3",
+    "pylint == 2.15.3",
+    "twine == 4.0.1"
+]
+
 [project.scripts]
 toisto = "toisto.app:main"
 
