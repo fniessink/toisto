@@ -40,7 +40,9 @@ Add `--help` or `-h` to get help information:
 $ toisto --help
 ```
 
-### Example session
+### Example sessions
+
+![gif](https://raw.githubusercontent.com/fniessink/toisto/main/docs/demo.gif)
 
 ```console
 $ toisto fi nl
