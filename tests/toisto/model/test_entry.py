@@ -31,6 +31,11 @@ class EntryTest(unittest.TestCase):
             entry.quizzes("nl", "en")
         )
 
+    def test_missing_language(self):
+        """Test that quizzes can be generated from an entry even if it's missing on of the languages."""
+        entry = entry_factory(dict(en=["English"], nl=["Engels"]))
+        self.assertEqual([], entry.quizzes("fi", "en"))
+
     def test_noun(self):
         """Test that quizzes can be generated from a noun entry."""
         entry = entry_factory(

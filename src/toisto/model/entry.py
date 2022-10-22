@@ -23,7 +23,7 @@ class Entry:
         return (
             [Quiz(language, source_language, text, self.entry[source_language]) for text in self.entry[language]] +
             [Quiz(source_language, language, text, self.entry[language]) for text in self.entry[source_language]]
-        )
+        ) if self.has(language, source_language) else []
 
     def has(self, *languages: Language) -> bool:
         """Return whether the entry has all the specified languages."""

@@ -3,6 +3,7 @@ dist
 venv
 .coverage
 .vscode
+.DS_Store
 **/*.egg-info
 **/__pycache__/**
 
