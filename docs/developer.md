@@ -58,7 +58,9 @@ Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
 ## How to release
 
-Update the version number in `pyproject.toml`.
+Update the [changelog](../CHANGELOG.md)
+
+Update the version number in [`pyproject.toml`](../pyproject.toml).
 
 Create the distribution files by running:
 

@@ -58,8 +58,9 @@ class FeedbackTestCase(unittest.TestCase):
         """Test that alternative answers are shown."""
         quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
+        expected_other_answer = quiz.other_answers(self.guess)[0]
         self.assertEqual(
-            f"""✅ Correct.\n[secondary]Another correct answer is "{quiz.other_answers(self.guess)[0]}".[/secondary]\n""",
+            f"""✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n""",
             feedback_text
         )
 
@@ -76,7 +77,7 @@ class FeedbackTestCase(unittest.TestCase):
     def test_incorrect(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         feedback_text = feedback_incorrect("", self.quiz)
-        self.assertEqual(f"""❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n""", feedback_text)
+        self.assertEqual("""❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n""", feedback_text)
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
