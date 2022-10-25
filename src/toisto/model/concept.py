@@ -10,8 +10,8 @@ from .quiz import Quiz
 
 
 ConceptDict = dict[Language, str | list[str]]
-NounType = Literal["plural", "singular"]
-NounConceptDict = dict[NounType, ConceptDict]
+Number = Literal["plural", "singular"]
+NumberedConceptDict = dict[Number, ConceptDict]
 
 
 @dataclass
@@ -47,8 +47,8 @@ class Concept:
 
 
 @dataclass
-class NounConcept:
-    """A concept that is a noun with a singular and plural grammatical number.
+class NumberedConcept:
+    """A concept that has a singular and plural grammatical number.
 
     See https://en.wikipedia.org/wiki/Grammatical_number.
     """
@@ -60,8 +60,7 @@ class NounConcept:
         """Generate the possible quizzes from the concept."""
         result = []
         for concept in self.singular, self.plural:
-            if concept.has_labels(language, source_language):
-                result.extend(concept.quizzes(language, source_language))
+            result.extend(concept.quizzes(language, source_language))
         if self.singular.has_labels(language) and self.plural.has_labels(language):
             singular_labels, plural_labels = self.singular.labels(language), self.plural.labels(language)
             result.extend([Quiz(language, language, label, plural_labels, "pluralize") for label in singular_labels])
@@ -69,15 +68,15 @@ class NounConcept:
         return result
 
     @classmethod
-    def from_dict(cls, concept_dict: NounConceptDict) -> "NounConcept":
+    def from_dict(cls, concept_dict: NumberedConceptDict) -> "NumberedConcept":
         """Instantiate a concept from a dict."""
-        singular = Concept.from_dict(concept_dict["singular"])
-        plural = Concept.from_dict(concept_dict["plural"])
+        singular = cast(Concept, concept_factory(concept_dict["singular"]))
+        plural = cast(Concept, concept_factory(concept_dict["plural"]))
         return cls(singular, plural)
 
 
-def concept_factory(concept_dict: ConceptDict | NounConceptDict) -> Concept | NounConcept:
+def concept_factory(concept_dict: ConceptDict | NumberedConceptDict) -> Concept | NumberedConcept:
     """Create a concept from the concept dict."""
     if "singular" in concept_dict and "plural" in concept_dict:
-        return NounConcept.from_dict(cast(NounConceptDict, concept_dict))
+        return NumberedConcept.from_dict(cast(NumberedConceptDict, concept_dict))
     return Concept.from_dict(cast(ConceptDict, concept_dict))
