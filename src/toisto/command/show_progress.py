@@ -3,8 +3,8 @@
 from rich.console import Console
 from rich.table import Table
 
-from ..metadata import Language, SUPPORTED_LANGUAGES
-from ..model import Progress, Quiz
+from toisto.metadata import Language, SUPPORTED_LANGUAGES
+from toisto.model import Progress, Quiz
 
 
 def show_progress(language: Language, quizzes: list[Quiz], progress: Progress) -> None:

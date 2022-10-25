@@ -1,21 +1,21 @@
 """Practice command."""
 
-from ..color import purple
-from ..model import Progress, Quiz
-from ..output import feedback_correct, feedback_incorrect, DONE, WELCOME, TRY_AGAIN
-from ..persistence import save_progress
-from ..speech import say
+from toisto.color import purple
+from toisto.model import Label, Progress, Quiz
+from toisto.output import feedback_correct, feedback_incorrect, DONE, WELCOME, TRY_AGAIN
+from toisto.persistence import save_progress
+from toisto.speech import say
 
 
 def do_quiz(quiz: Quiz, progress: Progress) -> None:
     """Do one quiz and update the progress."""
     print(purple(f"{quiz.instruction()}:"))
     say(quiz.question_language, quiz.question)
-    guess = input("> ")
+    guess = Label(input("> "))
     correct = quiz.is_correct(guess)
     if not correct:
         print(TRY_AGAIN)
-        guess = input("> ")
+        guess = Label(input("> "))
         correct = quiz.is_correct(guess)
     progress.update(quiz, correct)
     quiz_progress = progress.get_progress(quiz)

@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.model import Quiz
+from toisto.model import Label, Quiz
 
 
 class QuizTest(unittest.TestCase):
@@ -10,7 +10,7 @@ class QuizTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("fi", "nl", "Englanti", ["Engels"])
+        self.quiz = Quiz("fi", "nl", Label("Englanti"), [Label("Engels")])
 
     def test_is_correct(self):
         """Test a correct guess."""

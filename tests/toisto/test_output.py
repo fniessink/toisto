@@ -3,7 +3,7 @@
 import unittest
 
 from toisto.color import green, grey, purple
-from toisto.model import Progress, Quiz
+from toisto.model import Label, Progress, Quiz
 from toisto.output import feedback_correct, feedback_incorrect, instruction
 
 
@@ -12,7 +12,8 @@ class FeedbackTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("nl", "fi", "Hoi", ["Terve"])
+        self.quiz = Quiz("nl", "fi", Label("Hoi"), [Label("Terve")])
+        self.guess = Label("Terve")
         self.progress = Progress({})
 
     def update_progress(self, nr_correct: int) -> None:
@@ -27,13 +28,13 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assertEqual("✅ Correct.\n", feedback_text)
 
     def test_correct_second_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(2)
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
             feedback_text, "That's 2 times in a row. Skipping this quiz for", "minutes"
         )
@@ -41,7 +42,7 @@ class FeedbackTestCase(unittest.TestCase):
     def test_correct_silenced_for_hours(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(10)
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
             feedback_text, "That's 10 times in a row. Skipping this quiz for", "hours"
         )
@@ -49,7 +50,7 @@ class FeedbackTestCase(unittest.TestCase):
     def test_correct_silenced_for_days(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(20)
-        feedback_text = feedback_correct("Terve", self.quiz, self.progress.get_progress(self.quiz))
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(
             feedback_text, "That's 20 times in a row. Skipping this quiz for", "days"
         )
@@ -57,17 +58,17 @@ class FeedbackTestCase(unittest.TestCase):
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
         quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
-        feedback_text = feedback_correct("Terve", quiz, self.progress.get_progress(quiz))
+        feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
         self.assertEqual(
-            f"""✅ Correct.\n{grey(f'Another correct answer is "{quiz.other_answers("Terve")[0]}".')}\n""",
+            f"""✅ Correct.\n{grey(f'Another correct answer is "{quiz.other_answers(self.guess)[0]}".')}\n""",
             feedback_text
         )
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
         quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
-        feedback_text = feedback_correct("Terve", quiz, self.progress.get_progress(quiz))
-        other_answers = [f'"{answer}"' for answer in quiz.other_answers("Terve")]
+        feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
+        other_answers = [f'"{answer}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
             f"""✅ Correct.\n{grey(f'Other correct answers are {", ".join(other_answers)}.')}\n""",
             feedback_text

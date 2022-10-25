@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.model import Progress, Quiz
+from toisto.model import Label, Progress, Quiz
 
 
 class ProgressTest(unittest.TestCase):
@@ -10,11 +10,11 @@ class ProgressTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("fi", "nl", "Englanti", ["Engels"])
+        self.quiz = Quiz("fi", "nl", Label("Englanti"), [Label("Engels")])
         self.progress = Progress({})
 
-    def test_progress_new_entry(self):
-        """Test that the progress of a quiz without progress."""
+    def test_progress_new_quiz(self):
+        """Test that a new quiz has no progress."""
         self.assertEqual(0, self.progress.get_progress(self.quiz).count)
 
     def test_update_progress_correct(self):

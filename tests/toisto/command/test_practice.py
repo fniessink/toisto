@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
-from toisto.model import Progress, Quiz
+from toisto.model import Label, Progress, Quiz
 from toisto.output import DONE, TRY_AGAIN
 
 
@@ -15,7 +15,7 @@ class PracticeTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        self.quiz = Quiz("fi", "nl", "Terve", ["Hoi"])
+        self.quiz = Quiz("fi", "nl", Label("Terve"), [Label("Hoi")])
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", EOFError]))
     def test_quiz(self):

@@ -6,7 +6,7 @@ import os
 import pathlib
 
 from .metadata import NAME, TOPIC_JSON_FILES, Language
-from .model import entry_factory, Progress, Quiz
+from .model import concept_factory, Progress, Quiz
 from .output import show_error_and_exit
 
 
@@ -42,9 +42,9 @@ def load_quizzes(
         topics.extend(TOPIC_JSON_FILES)
     for topic in topics:
         try:
-            for entry_dict in load_json(topic):
-                entry = entry_factory(entry_dict)
-                quizzes.extend(entry.quizzes(language, source_language))
+            for concept_dict in load_json(topic):
+                concept = concept_factory(concept_dict)
+                quizzes.extend(concept.quizzes(language, source_language))
         except Exception as reason:  # pylint: disable=broad-except
             show_error_and_exit(f"{NAME} cannot read topic {topic}: {reason}.\n")
     return quizzes

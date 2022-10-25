@@ -1,4 +1,4 @@
-"""Model classes."""
+"""Progress model class."""
 
 import random
 
@@ -13,12 +13,12 @@ class Progress:
         self.current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
-        """Update the progress of the quiz."""
+        """Update the progress on the quiz."""
         key = str(quiz)
         self.progress_dict.setdefault(key, QuizProgress()).update(correct)
 
     def get_progress(self, quiz: Quiz) -> QuizProgress:
-        """Return the progress of the entry."""
+        """Return the progress on the quiz."""
         key = str(quiz)
         return self.progress_dict.get(key, QuizProgress())
 
@@ -32,7 +32,7 @@ class Progress:
         return None
 #
     def is_eligible(self, quiz: Quiz) -> bool:
-        """Is the quiz eligible."""
+        """Is the quiz eligible?"""
         return not self.get_progress(quiz).is_silenced()
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:

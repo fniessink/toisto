@@ -89,9 +89,13 @@ Groen
 
 ### How it works
 
-Toisto quizzes you repeatably until  words and phrases. A quiz can be to translate a word or phrase
+Toisto quizzes you repeatably on words and phrases in the language you want to practice. At the moment, Toisto has three types of quizzes:
 
-For each quiz, Toisto counts how often you answered it correctly in a row. So each quiz has its own streak. When you answer a quiz correctly, increasing its streak, Toisto will silence the quiz for a while. The longer the streak, the longer a quiz is silenced.
+- Translate a word or phrase from your practice language to your native language or the other way around,
+- Give a singular version of a plural noun,
+- Give a plural version of a singular noun.
+
+For each quiz, Toisto counts how often in a row you answered it correctly. So each quiz has its own streak. When you answer a quiz correctly multiple times, Toisto will silence the quiz for a while. The longer the streak, the longer a quiz is silenced. This starts at a few minutes, but then increases rapidly when you keep answering correctly: a streak of 13 correct answers silences a quiz for 24 hours, a streak of 18 silences the quiz for 10 days, and a streak of 20 silences it for 20 days. The maximum amount of time a quiz is silenced is roughly three months.
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
 

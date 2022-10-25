@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch
 
 from toisto.command import show_progress
-from toisto.model import Progress, Quiz
+from toisto.model import Label, Progress, Quiz
 
 
 class ShowProgressTest(unittest.TestCase):
@@ -18,7 +18,7 @@ class ShowProgressTest(unittest.TestCase):
 
     def test_quiz(self):
         """Test that quizzes are shown."""
-        quiz = Quiz("fi", "nl", "Terve", "Hoi")
+        quiz = Quiz("fi", "nl", Label("Terve"), Label("Hoi"))
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", [quiz], Progress({str(quiz): dict(count=1)}))
         self.assertEqual("1", list(console_print.call_args[0][0].columns[5].cells)[0])

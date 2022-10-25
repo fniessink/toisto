@@ -8,7 +8,7 @@ import sys
 from .color import grey, purple
 from .diff import colored_diff
 from .metadata import NAME, VERSION
-from .model import Quiz, QuizProgress
+from .model import Label, Quiz, QuizProgress
 
 
 WELCOME = f"""👋 Welcome to {NAME} v{VERSION}!
@@ -30,10 +30,10 @@ TRY_AGAIN = "⚠️  Incorrect. Please try again."
 
 CORRECT = "✅ Correct.\n"
 
-WELL_DONE = [
+PRAISE = [
     "Nice", "Cool", "Cheers", "Kudos", "Well-done", "Great", "Grand", "Swell", "Bravo", "Great job", "Nailed it",
     "Outstanding", "Excellent", "Awesome", "Terrific", "Brilliant", "Lovely", "Tremendous", "Wow", "Marvellous",
-    "Amazing", "Remarkable", "Magnificent", "Splendid", "Superb", "Wonderful", "Incredible", "Impressive",
+    "Beautiful", "Amazing", "Remarkable", "Magnificent", "Splendid", "Superb", "Wonderful", "Incredible", "Impressive",
     "Sensational", "Fantastic", "Extraordinary", "Sublime", "Spectacular", "Perfect", "Awe-inspiring"]
 
 
@@ -48,14 +48,14 @@ def format_duration(duration: timedelta) -> str:
     return f"{minutes} minutes"
 
 
-def feedback_correct(guess: str, quiz: Quiz, quiz_progress: QuizProgress) -> str:
+def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
     if quiz_progress.silence_until:
         silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
-        well_done = random.choice(WELL_DONE)
+        praise = random.choice(PRAISE)
         text += grey(
-            f"{well_done}! That's {quiz_progress.count} times in a row. Skipping this quiz for {silence_duration}.\n"
+            f"{praise}! That's {quiz_progress.count} times in a row. Skipping this quiz for {silence_duration}.\n"
         )
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
@@ -64,7 +64,7 @@ def feedback_correct(guess: str, quiz: Quiz, quiz_progress: QuizProgress) -> str
     return text
 
 
-def feedback_incorrect(guess: str, quiz: Quiz) -> str:
+def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
     diff = colored_diff(guess, quiz.get_answer())
     return f'❌ Incorrect. The correct answer is "{diff}".\n'
