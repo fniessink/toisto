@@ -2,7 +2,6 @@
 
 import unittest
 
-from toisto.color import green, grey, purple
 from toisto.model import Label, Progress, Quiz
 from toisto.output import feedback_correct, feedback_incorrect, instruction
 
@@ -60,7 +59,7 @@ class FeedbackTestCase(unittest.TestCase):
         quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
         self.assertEqual(
-            f"""✅ Correct.\n{grey(f'Another correct answer is "{quiz.other_answers(self.guess)[0]}".')}\n""",
+            f"""✅ Correct.\n[secondary]Another correct answer is "{quiz.other_answers(self.guess)[0]}".[/secondary]\n""",
             feedback_text
         )
 
@@ -70,15 +69,15 @@ class FeedbackTestCase(unittest.TestCase):
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
         other_answers = [f'"{answer}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
-            f"""✅ Correct.\n{grey(f'Other correct answers are {", ".join(other_answers)}.')}\n""",
+            f"""✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n""",
             feedback_text
         )
 
     def test_incorrect(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         feedback_text = feedback_incorrect("", self.quiz)
-        self.assertEqual(f"""❌ Incorrect. The correct answer is "{green('Terve')}".\n""", feedback_text)
+        self.assertEqual(f"""❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n""", feedback_text)
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
-        self.assertEqual(purple("Translate into Finnish:"), instruction(self.quiz))
+        self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(self.quiz))

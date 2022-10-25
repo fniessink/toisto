@@ -1,10 +1,10 @@
 """Command to show progress information."""
 
-from rich.console import Console
 from rich.table import Table
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 from toisto.model import Progress, Quiz
+from toisto.output import console
 
 
 def show_progress(language: Language, quizzes: list[Quiz], progress: Progress) -> None:
@@ -27,6 +27,5 @@ def show_progress(language: Language, quizzes: list[Quiz], progress: Progress) -
             "\n".join(quiz.answers),
             str(quiz_progress.count) if quiz_progress.count > 0 else ""
         )
-    console = Console()
     with console.pager():
         console.print(table)

@@ -11,7 +11,9 @@ from .label import Label, Labels
 
 QuizType = Literal["translate", "pluralize", "singularize"]
 INSTRUCTION: dict[QuizType, str] = dict(
-    translate="Translate into", pluralize="Give the plural in", singularize="Give the singular in"
+    translate="Translate into",
+    pluralize="Give the [underline]plural[/underline] in",
+    singularize="Give the [underline]singular[/underline] in"
 )
 
 

@@ -5,25 +5,36 @@ from typing import NoReturn
 import random
 import sys
 
-from .color import grey, purple
+from rich.console import Console
+from rich.theme import Theme
+
 from .diff import colored_diff
 from .metadata import NAME, VERSION
 from .model import Label, Quiz, QuizProgress
 
 
-WELCOME = f"""👋 Welcome to {NAME} v{VERSION}!
+theme = Theme({
+    "secondary": "grey69",
+    "quiz": "medium_purple1",
+    "inserted": "bright_green",
+    "deleted": "bright_red"
+})
+
+console = Console(theme=theme)
+
+WELCOME = f"""👋 Welcome to {NAME} [white not bold]v{VERSION}[/white not bold]!
 
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
 
-{grey(f'''{NAME} tracks how many times you correctly translate words and phrases.
+[secondary]{NAME} tracks how many times you correctly translate words and phrases.
 When you correctly translate a word or phrase multiple times in a row,
 {NAME} will not quiz you on it for a while. The more correct translations
-in a row, the longer words and phrases are silenced.''')}
+in a row, the longer words and phrases are silenced.[/secondary]
 """
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
-{grey(f'Type `{NAME.lower()} -h` for more information.')}
+[secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
 """
 
 TRY_AGAIN = "⚠️  Incorrect. Please try again."
@@ -54,13 +65,14 @@ def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> s
     if quiz_progress.silence_until:
         silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
         praise = random.choice(PRAISE)
-        text += grey(
-            f"{praise}! That's {quiz_progress.count} times in a row. Skipping this quiz for {silence_duration}.\n"
+        text += (
+            f"[secondary]{praise}! That's {quiz_progress.count} times in a row. "
+            f"Skipping this quiz for {silence_duration}.[/secondary]\n"
         )
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
         enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])
-        text += f"""{grey(f'{label} {enumerated_answers}.')}\n"""
+        text += f"""[secondary]{label} {enumerated_answers}.[/secondary]\n"""
     return text
 
 
@@ -72,7 +84,7 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
 
 def instruction(quiz: Quiz) -> str:
     """Return the instruction for the quiz."""
-    return purple(f"{quiz.instruction()}:")
+    return f"[quiz]{quiz.instruction()}:[/quiz]"
 
 
 def show_error_and_exit(message: str) -> NoReturn:
