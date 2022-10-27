@@ -1,30 +1,28 @@
 """Concept classes."""
 
-from dataclasses import dataclass
-from typing import cast, Literal
+from __future__ import annotations
+
+from typing import Iterable, cast, Sequence
 
 from toisto.metadata import Language
 
 from .label import Labels
-from .quiz import Quiz
+from .quiz import Quiz, QuizType, quiz_factory
 
 
 ConceptDict = dict[Language, str | list[str]]
-Number = Literal["plural", "singular"]
-NumberedConceptDict = dict[Number, ConceptDict]
 
 
-@dataclass
 class Concept:
     """Class representing a concept from a topic."""
 
-    _labels: dict[Language, Labels]
+    def __init__(self, labels: dict[Language, Labels]) -> None:
+        self._labels = labels
 
     def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
         """Generate the possible quizzes from the concept and its labels."""
         return (
-            [Quiz(language, source_language, label, self.labels(source_language)) for label in self.labels(language)] +
-            [Quiz(source_language, language, label, self.labels(language)) for label in self.labels(source_language)]
+            quiz_factory(language, source_language, self.labels(language), self.labels(source_language))
         ) if self.has_labels(language, source_language) else []
 
     def has_labels(self, *languages: Language) -> bool:
@@ -35,8 +33,12 @@ class Concept:
         """Return the labels for the language."""
         return self._labels[language]
 
+    def leaf_concepts(self) -> Iterable[Concept]:
+        """Return self as a list of leaf concepts."""
+        return [self]
+
     @classmethod
-    def from_dict(cls, concept_dict: ConceptDict) -> "Concept":
+    def from_dict(cls, concept_dict: ConceptDict) -> Concept:
         """Instantiate a concept from a dict."""
         return cls(
             {
@@ -46,37 +48,53 @@ class Concept:
         )
 
 
-@dataclass
-class NumberedConcept:
-    """A concept that has a singular and plural grammatical number.
+ConceptPair = tuple[Concept, Concept]
 
-    See https://en.wikipedia.org/wiki/Grammatical_number.
-    """
 
-    singular: Concept
-    plural: Concept
+class CompositeConcept:
+    """A concept that consists of multiple other (sub)concepts. Currently assumes precisely two subconcepts."""
+
+    def __init__(self, concepts: Sequence[Concept | CompositeConcept], quiz_types: Sequence[QuizType]) -> None:
+        self._concepts = concepts
+        self._quiz_types = quiz_types
 
     def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
         """Generate the possible quizzes from the concept."""
         result = []
-        for concept in self.singular, self.plural:
+        for concept in self._concepts:
             result.extend(concept.quizzes(language, source_language))
-        if self.singular.has_labels(language) and self.plural.has_labels(language):
-            singular_labels, plural_labels = self.singular.labels(language), self.plural.labels(language)
-            result.extend([Quiz(language, language, label, plural_labels, "pluralize") for label in singular_labels])
-            result.extend([Quiz(language, language, label, singular_labels, "singularize") for label in plural_labels])
+        if self.has_labels(language):
+            for concept1, concept2 in self.paired_concepts():
+                labels1, labels2 = concept1.labels(language), concept2.labels(language)
+                result.extend(quiz_factory(language, language, labels1, labels2, *self._quiz_types))
         return result
 
+    def has_labels(self, *languages: Language) -> bool:
+        """Return whether the concept has labels for all the specified languages."""
+        return all(concept.has_labels(*languages) for concept in self._concepts)
+
+    def leaf_concepts(self) -> Iterable[Concept]:
+        """Return a list of leaf concepts."""
+        for concept in self._concepts:
+            for leaf_concept in concept.leaf_concepts():
+                yield leaf_concept
+
+    def paired_concepts(self) -> Iterable[ConceptPair]:
+        """Pair the leaf concepts from the composite concepts."""
+        leaf_concepts = [concept.leaf_concepts() for concept in self._concepts]
+        for concept_pair in zip(*leaf_concepts):
+            yield cast(ConceptPair, concept_pair)
+
     @classmethod
-    def from_dict(cls, concept_dict: NumberedConceptDict) -> "NumberedConcept":
+    def from_dict(cls, concept_dict, keys: Sequence[str], quiz_types: Sequence[QuizType]) -> CompositeConcept:
         """Instantiate a concept from a dict."""
-        singular = cast(Concept, concept_factory(concept_dict["singular"]))
-        plural = cast(Concept, concept_factory(concept_dict["plural"]))
-        return cls(singular, plural)
+        return cls(tuple(concept_factory(concept_dict[key]) for key in keys), quiz_types)
 
 
-def concept_factory(concept_dict: ConceptDict | NumberedConceptDict) -> Concept | NumberedConcept:
+def concept_factory(concept_dict) -> Concept | CompositeConcept:
     """Create a concept from the concept dict."""
     if "singular" in concept_dict and "plural" in concept_dict:
-        return NumberedConcept.from_dict(cast(NumberedConceptDict, concept_dict))
+        return CompositeConcept.from_dict(concept_dict, ("singular", "plural"), ("pluralize", "singularize"))
+    if "female" in concept_dict and "male" in concept_dict:
+        return CompositeConcept.from_dict(concept_dict, ("female", "male"), ("masculinize", "feminize"))
     return Concept.from_dict(cast(ConceptDict, concept_dict))

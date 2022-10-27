@@ -9,11 +9,13 @@ from toisto.metadata import Language, SUPPORTED_LANGUAGES
 from .label import Label, Labels
 
 
-QuizType = Literal["translate", "pluralize", "singularize"]
+QuizType = Literal["translate", "pluralize", "singularize", "masculinize", "feminize"]
 INSTRUCTION: dict[QuizType, str] = dict(
     translate="Translate into",
     pluralize="Give the [underline]plural[/underline] in",
-    singularize="Give the [underline]singular[/underline] in"
+    singularize="Give the [underline]singular[/underline] in",
+    masculinize="Give the [underline]male[/underline] form in",
+    feminize="Give the [underline]female[/underline] form in",
 )
 
 
@@ -42,3 +44,18 @@ class Quiz:
     def instruction(self) -> str:
         """Generate the quiz instruction."""
         return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}"
+
+
+def quiz_factory(  # pylint: disable=too-many-arguments
+    language1: Language,
+    language2: Language,
+    labels1: Labels,
+    labels2: Labels,
+    quiz_type1: QuizType = "translate",
+    quiz_type2: QuizType = "translate"
+) -> list[Quiz]:
+    """Create quizzes."""
+    return (
+        [Quiz(language1, language2, label, labels2, quiz_type1) for label in labels1] +
+        [Quiz(language2, language1, label, labels1, quiz_type2) for label in labels2]
+    )
