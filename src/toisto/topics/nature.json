@@ -1,0 +1,115 @@
+[
+    {
+        "en": "Nature",
+        "fi": "Luonto",
+        "nl": "De natuur"
+    },
+    {
+        "singular": {
+            "en": ["Forest", "Wood"],
+            "fi": "Metsä",
+            "nl": "Het bos"
+        },
+        "plural": {
+            "en": ["Forests", "Woods"],
+            "fi": "Metsät",
+            "nl": "De bossen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Lake",
+            "fi": "Järvi",
+            "nl": "Het meer"
+        },
+        "plural": {
+            "en": "Lakes",
+            "fi": "Järvet",
+            "nl": "De meren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Sea",
+            "fi": "Meri",
+            "nl": "De zee"
+        },
+        "plural": {
+            "en": "Seas",
+            "fi": "Meret",
+            "nl": "De zeeën"
+        }
+    },
+    {
+        "singular": {
+            "en": "River",
+            "fi": "Joki",
+            "nl": "De rivier"
+        },
+        "plural": {
+            "en": "Rivers",
+            "fi": "Joet",
+            "nl": "De rivieren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Island",
+            "fi": "Saari",
+            "nl": "Het eiland"
+        },
+        "plural": {
+            "en": "Islands",
+            "fi": "Saaret",
+            "nl": "De eilanden"
+        }
+    },
+    {
+        "singular": {
+            "en": "Coast",
+            "fi": "Rannikko",
+            "nl": "De kust"
+        },
+        "plural": {
+            "en": "Coasts",
+            "fi": "Rannikot",
+            "nl": "De kusten"
+        }
+    },
+    {
+        "singular": {
+            "en": "Desert",
+            "fi": ["Aavikko", "Autiomaa"],
+            "nl": "De woestijn"
+        },
+        "plural": {
+            "en": "Deserts",
+            "fi": ["Aavikot", "Autiomaat"],
+            "nl": "De woestijnen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Tree",
+            "fi": "Puu",
+            "nl": "De boom"
+        },
+        "plural": {
+            "en": "Trees",
+            "fi": "Puut",
+            "nl": "De bomen"
+        }
+    },
+    {
+        "singular": {
+            "en": "Beach",
+            "fi": "Ranta",
+            "nl": "Het strand"
+        },
+        "plural": {
+            "en": "Beaches",
+            "fi": "Rannat",
+            "nl": "De stranden"
+        }
+    }
+]

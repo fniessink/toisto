@@ -226,5 +226,17 @@
             "fi": "Satamat",
             "nl": "De havens"
         }
+    },
+    {
+        "singular": {
+            "en": ["Mall", "Shopping center"],
+            "fi": ["Kauppakeskus", "Ostoskeskus"],
+            "nl": ["Het winkelcentrum"]
+        },
+        "plural": {
+            "en": ["Malls", "Shopping centers"],
+            "fi": ["Kauppakeskukset", "ostoskeskukset"],
+            "nl": ["De winkelcentra"]
+        }
     }
 ]
