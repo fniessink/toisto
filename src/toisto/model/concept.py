@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from itertools import permutations
 from typing import Iterable, cast, Sequence
 
 from toisto.metadata import Language
@@ -64,9 +65,9 @@ class CompositeConcept:
         for concept in self._concepts:
             result.extend(concept.quizzes(language, source_language))
         if self.has_labels(language):
-            for concept1, concept2 in self.paired_concepts():
+            for (concept1, concept2), quiz_type in self.paired_concepts():
                 labels1, labels2 = concept1.labels(language), concept2.labels(language)
-                result.extend(quiz_factory(language, language, labels1, labels2, *self._quiz_types))
+                result.extend([Quiz(language, language, label, labels2, quiz_type) for label in labels1])
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -79,11 +80,12 @@ class CompositeConcept:
             for leaf_concept in concept.leaf_concepts():
                 yield leaf_concept
 
-    def paired_concepts(self) -> Iterable[ConceptPair]:
+    def paired_concepts(self) -> Iterable[tuple[ConceptPair, QuizType]]:
         """Pair the leaf concepts from the composite concepts."""
         leaf_concepts = [concept.leaf_concepts() for concept in self._concepts]
-        for concept_pair in zip(*leaf_concepts):
-            yield cast(ConceptPair, concept_pair)
+        for concept_group in zip(*leaf_concepts):
+            for permutation, quiz_type in zip(permutations(concept_group, r=2), self._quiz_types):
+                yield cast(ConceptPair, permutation), quiz_type
 
     @classmethod
     def from_dict(cls, concept_dict, keys: Sequence[str], quiz_types: Sequence[QuizType]) -> CompositeConcept:
@@ -93,8 +95,17 @@ class CompositeConcept:
 
 def concept_factory(concept_dict) -> Concept | CompositeConcept:
     """Create a concept from the concept dict."""
-    if "singular" in concept_dict and "plural" in concept_dict:
+    if {"singular", "plural"} <= set(concept_dict):
         return CompositeConcept.from_dict(concept_dict, ("singular", "plural"), ("pluralize", "singularize"))
-    if "female" in concept_dict and "male" in concept_dict:
+    if {"female", "male"} <= set(concept_dict):
         return CompositeConcept.from_dict(concept_dict, ("female", "male"), ("masculinize", "feminize"))
+    if {"positive_degree", "comparitive_degree", "superlative_degree"} <= set(concept_dict):
+        return CompositeConcept.from_dict(
+            concept_dict,
+            ("positive_degree", "comparitive_degree", "superlative_degree"),
+            (
+                "give comparitive degree", "give superlative degree", "give positive degree",
+                "give superlative degree", "give positive degree", "give comparitive degree"
+            )
+        )
     return Concept.from_dict(cast(ConceptDict, concept_dict))

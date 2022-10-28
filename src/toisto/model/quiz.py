@@ -9,14 +9,26 @@ from toisto.metadata import Language, SUPPORTED_LANGUAGES
 from .label import Label, Labels
 
 
-QuizType = Literal["translate", "pluralize", "singularize", "masculinize", "feminize"]
-INSTRUCTION: dict[QuizType, str] = dict(
-    translate="Translate into",
-    pluralize="Give the [underline]plural[/underline] in",
-    singularize="Give the [underline]singular[/underline] in",
-    masculinize="Give the [underline]male[/underline] form in",
-    feminize="Give the [underline]female[/underline] form in",
-)
+QuizType = Literal[
+    "translate",
+    "pluralize",
+    "singularize",
+    "masculinize",
+    "feminize",
+    "give positive degree",
+    "give comparitive degree",
+    "give superlative degree"
+]
+INSTRUCTION: dict[QuizType, str] = {
+    "translate": "Translate into",
+    "pluralize": "Give the [underline]plural[/underline] in",
+    "singularize": "Give the [underline]singular[/underline] in",
+    "masculinize": "Give the [underline]male[/underline] form in",
+    "feminize": "Give the [underline]female[/underline] form in",
+    "give positive degree": "Give the [underline]positive degree[/underline] in",
+    "give comparitive degree": "Give the [underline]comparitive degree[/underline] in",
+    "give superlative degree": "Give the [underline]superlative degree[/underline] in",
+}
 
 
 @dataclass

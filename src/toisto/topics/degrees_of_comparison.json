@@ -1,0 +1,545 @@
+[
+    {
+        "positive_degree": {
+            "en": "Small",
+            "fi": "Pieni",
+            "nl": "Klein"
+        },
+        "comparitive_degree": {
+            "en": "Smaller",
+            "fi": "Pienempi",
+            "nl": "Kleiner"
+        },
+        "superlative_degree": {
+            "en": "Smallest",
+            "fi": "Pienin",
+            "nl": "Kleinst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Important",
+            "fi": "Tärkeä",
+            "nl": "Belangrijk"
+        },
+        "comparitive_degree": {
+            "en": "More important",
+            "fi": "Tärkeämpi",
+            "nl": "Belangrijker"
+        },
+        "superlative_degree": {
+            "en": "Most important",
+            "fi": "Tärkein",
+            "nl": "Belangrijkst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Expensive",
+            "fi": "Kallis",
+            "nl": "Duur"
+        },
+        "comparitive_degree": {
+            "en": "More expensive",
+            "fi": "Kalliimpi",
+            "nl": "Duurder"
+        },
+        "superlative_degree": {
+            "en": "Most expensive",
+            "fi": "Kallein",
+            "nl": "Duurst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Cheap",
+            "fi": "Halpa",
+            "nl": "Goedkoop"
+        },
+        "comparitive_degree": {
+            "en": "Cheaper",
+            "fi": "Halvempi",
+            "nl": "Goedkoper"
+        },
+        "superlative_degree": {
+            "en": "Cheapest",
+            "fi": "Halvin",
+            "nl": "Goedkoopst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Hot",
+            "fi": "Kuuma",
+            "nl": "Heet"
+        },
+        "comparitive_degree": {
+            "en": "Hotter",
+            "fi": "Kuumempi",
+            "nl": "Heter"
+        },
+        "superlative_degree": {
+            "en": "Hottest",
+            "fi": "Kuumin",
+            "nl": "Heetst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Cold",
+            "fi": "Kylmä",
+            "nl": "Koud"
+        },
+        "comparitive_degree": {
+            "en": "Colder",
+            "fi": "Kylmempi",
+            "nl": "Kouder"
+        },
+        "superlative_degree": {
+            "en": "Coldest",
+            "fi": "Kylmin",
+            "nl": "Koudst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Light",
+            "fi": "Kevyt",
+            "nl": "Licht"
+        },
+        "comparitive_degree": {
+            "en": "Lighter",
+            "fi": "Kevyempi",
+            "nl": "Lichter"
+        },
+        "superlative_degree": {
+            "en": "Lightest",
+            "fi": "Kevyin",
+            "nl": "Lichtst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Easy",
+            "fi": "Helppo",
+            "nl": "Makkelijk"
+        },
+        "comparitive_degree": {
+            "en": "Easier",
+            "fi": "Helpompi",
+            "nl": "Makkelijker"
+        },
+        "superlative_degree": {
+            "en": "Easiest",
+            "fi": "Helpoin",
+            "nl": "Makkelijkst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Hard",
+            "fi": "Vaikea",
+            "nl": "Moeilijk"
+        },
+        "comparitive_degree": {
+            "en": "Harder",
+            "fi": "Vaikeampi",
+            "nl": "Moeilijker"
+        },
+        "superlative_degree": {
+            "en": "Hardest",
+            "fi": "vaikein",
+            "nl": "Moeilijkst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Beautiful",
+            "fi": "Kaunis",
+            "nl": "Mooi"
+        },
+        "comparitive_degree": {
+            "en": "More beautiful",
+            "fi": "Kauniimpi",
+            "nl": "Mooier"
+        },
+        "superlative_degree": {
+            "en": "Most beautiful",
+            "fi": "Kaunein",
+            "nl": "Mooist"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "New",
+            "fi": "Uusi",
+            "nl": "Nieuw"
+        },
+        "comparitive_degree": {
+            "en": "Newer",
+            "fi": "Uudempi",
+            "nl": "Nieuwer"
+        },
+        "superlative_degree": {
+            "en": "Newest",
+            "fi": "Uusin",
+            "nl": "Nieuwst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Old",
+            "fi": "Vanha",
+            "nl": "Oud"
+        },
+        "comparitive_degree": {
+            "en": "Older",
+            "fi": "Vanhempi",
+            "nl": "Ouder"
+        },
+        "superlative_degree": {
+            "en": "Oldest",
+            "fi": "Vanhin",
+            "nl": "Oudst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Cute",
+            "fi": "Söpö",
+            "nl": "Schattig"
+        },
+        "comparitive_degree": {
+            "en": "Cuter",
+            "fi": "Söpömpi",
+            "nl": "Schattiger"
+        },
+        "superlative_degree": {
+            "en": "Cutest",
+            "fi": "Söpöin",
+            "nl": "Schattigst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Fast",
+            "fi": "Nopea",
+            "nl": "Snel"
+        },
+        "comparitive_degree": {
+            "en": "Faster",
+            "fi": "Nopeampi",
+            "nl": "Sneller"
+        },
+        "superlative_degree": {
+            "en": "Fastest",
+            "fi": "Nopein",
+            "nl": "Snelst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Quiet",
+            "fi": "Hiljainen",
+            "nl": "Stil"
+        },
+        "comparitive_degree": {
+            "en": "Quieter",
+            "fi": "Hiljaisempi",
+            "nl": "Stiller"
+        },
+        "superlative_degree": {
+            "en": "Quietest",
+            "fi": "Hiljaisin",
+            "nl": "Stilst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Fresh",
+            "fi": "Tuore",
+            "nl": "Vers"
+        },
+        "comparitive_degree": {
+            "en": "Fresher",
+            "fi": "Tuoreempi",
+            "nl": "Verser"
+        },
+        "superlative_degree": {
+            "en": "Freshest",
+            "fi": "Tuorein",
+            "nl": "Verst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Warm",
+            "fi": "Lämmin",
+            "nl": "Warm"
+        },
+        "comparitive_degree": {
+            "en": "Warmer",
+            "fi": "Lämpimämpi",
+            "nl": "Warmer"
+        },
+        "superlative_degree": {
+            "en": "Warmest",
+            "fi": "Lämpimin",
+            "nl": "Warmst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Round",
+            "fi": "Pyöreä",
+            "nl": "Rond"
+        },
+        "comparitive_degree": {
+            "en": "Rounder",
+            "fi": "Pyöreämpi",
+            "nl": "Ronder"
+        },
+        "superlative_degree": {
+            "en": "Roundest",
+            "fi": "Pyörein",
+            "nl": "Rondst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Strange",
+            "fi": "Outo",
+            "nl": "Vreemd"
+        },
+        "comparitive_degree": {
+            "en": "Stranger",
+            "fi": "Oudompi",
+            "nl": "Vreemder"
+        },
+        "superlative_degree": {
+            "en": "Strangest",
+            "fi": "Oudoin",
+            "nl": "Vreemdst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Honest",
+            "fi": "Rehellinen",
+            "nl": "Eerlijk"
+        },
+        "comparitive_degree": {
+            "en": "More honest",
+            "fi": "Rehellisempi",
+            "nl": "Eerlijker"
+        },
+        "superlative_degree": {
+            "en": "Most honest",
+            "fi": "Rehellisin",
+            "nl": "Eerlijkst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Long",
+            "fi": "Pitkä",
+            "nl": "Lang"
+        },
+        "comparitive_degree": {
+            "en": "Longer",
+            "fi": "Pidempi",
+            "nl": "Langer"
+        },
+        "superlative_degree": {
+            "en": "Longest",
+            "fi": "Pisin",
+            "nl": "Langst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Short",
+            "fi": "Lyhyt",
+            "nl": "Kort"
+        },
+        "comparitive_degree": {
+            "en": "Shorter",
+            "fi": "Lyhyempi",
+            "nl": "Korter"
+        },
+        "superlative_degree": {
+            "en": "Shortest",
+            "fi": "Lyhyin",
+            "nl": "Korter"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Tasty",
+            "fi": "Maukas",
+            "nl": "Lekker"
+        },
+        "comparitive_degree": {
+            "en": "Tastier",
+            "fi": "Maukkaampi",
+            "nl": "Lekkerder"
+        },
+        "superlative_degree": {
+            "en": "Tastiest",
+            "fi": "Maukkain",
+            "nl": "Lekkerst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Slow",
+            "fi": "Hidas",
+            "nl": "Langzaam"
+        },
+        "comparitive_degree": {
+            "en": "Slower",
+            "fi": "Hitaampi",
+            "nl": "Langzamer"
+        },
+        "superlative_degree": {
+            "en": "Slowest",
+            "fi": "Hitain",
+            "nl": "Langzaamst"
+        }
+    },
+    {
+        "positive_degree": {
+            "en": "Sweet",
+            "fi": "Makea",
+            "nl": "Zoet"
+        },
+        "comparitive_degree": {
+            "en": "Sweter",
+            "fi": "Makeampi",
+            "nl": "Zoeter"
+        },
+        "superlative_degree": {
+            "en": "Sweetest",
+            "fi": "Makein",
+            "nl": "Zoetst"
+        }
+    },
+    {
+        "en": "Big",
+        "fi": ["Iso", "Suuri"],
+        "nl": "Groot"
+    },
+    {
+        "en": "Bigger",
+        "fi": ["Isompi", "Suurempi"],
+        "nl": "Groter"
+    },
+    {
+        "en": "Biggest",
+        "fi": ["Isoin", "Suurin"],
+        "nl": "Grootst"
+    },
+    {
+        "positive_degree": {
+            "en": "Big"
+        },
+        "comparitive_degree": {
+            "en": "Bigger"
+        },
+        "superlative_degree": {
+            "en": "Biggest"
+        }
+    },
+    {
+        "positive_degree": {
+            "fi": "Iso"
+        },
+        "comparitive_degree": {
+            "fi": "Isompi"
+        },
+        "superlative_degree": {
+            "fi": "Isoin"
+        }
+    },
+    {
+        "positive_degree": {
+            "fi": "Suuri"
+        },
+        "comparitive_degree": {
+            "fi": "Suurempi"
+        },
+        "superlative_degree": {
+            "fi": "Suurin"
+        }
+    },
+    {
+        "positive_degree": {
+            "nl": "Groot"
+        },
+        "comparitive_degree": {
+            "nl": "Groter"
+        },
+        "superlative_degree": {
+            "nl": "Grootst"
+        }
+    },
+    {
+        "en": "Nice",
+        "fi": ["Kiva", "Mukava"],
+        "nl": "Leuk"
+    },
+    {
+        "en": "Nicer",
+        "fi": ["Kivempi", "Kivampi", "Mukavampi"],
+        "nl": "Leuker"
+    },
+    {
+        "en": "Nicest",
+        "fi": ["Kivoin", "Mukavin"],
+        "nl": "Leukst"
+    },
+    {
+        "positive_degree": {
+            "en": "Nice"
+        },
+        "comparitive_degree": {
+            "en": "Nicer"
+        },
+        "superlative_degree": {
+            "en": "Nicest"
+        }
+    },
+    {
+        "positive_degree": {
+            "fi": "Kiva"
+        },
+        "comparitive_degree": {
+            "fi": ["Kivempi", "Kivampi"]
+        },
+        "superlative_degree": {
+            "fi": "Kivoin"
+        }
+    },
+    {
+        "positive_degree": {
+            "fi": "Mukava"
+        },
+        "comparitive_degree": {
+            "fi": "Mukavampi"
+        },
+        "superlative_degree": {
+            "fi": "Mukavin"
+        }
+    },
+    {
+        "positive_degree": {
+            "nl": "Leuk"
+        },
+        "comparitive_degree": {
+            "nl": "Leuker"
+        },
+        "superlative_degree": {
+            "nl": "Leukst"
+        }
+    }
+]

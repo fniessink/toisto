@@ -99,6 +99,33 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "en")
         )
 
+    def test_degrees_of_comparison(self):
+        """Test that quizzes can be generated for degrees of comparison."""
+        concept = concept_factory(
+            dict(
+                positive_degree=dict(en="Big", nl="Groot"),
+                comparitive_degree=dict(en="Bigger", nl="Groter"),
+                superlative_degree=dict(en="Biggest", nl="Grootst")
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "en", "Groot", ["Big"], "translate"),
+                Quiz("en", "nl", "Big", ["Groot"], "translate"),
+                Quiz("nl", "en", "Groter", ["Bigger"], "translate"),
+                Quiz("en", "nl", "Bigger", ["Groter"], "translate"),
+                Quiz("nl", "en", "Grootst", ["Biggest"], "translate"),
+                Quiz("en", "nl", "Biggest", ["Grootst"], "translate"),
+                Quiz("nl", "nl", "Groot", ["Groter"], "give comparitive degree"),
+                Quiz("nl", "nl", "Groot", ["Grootst"], "give superlative degree"),
+                Quiz("nl", "nl", "Groter", ["Groot"], "give positive degree"),
+                Quiz("nl", "nl", "Groter", ["Grootst"], "give superlative degree"),
+                Quiz("nl", "nl", "Grootst", ["Groot"], "give positive degree"),
+                Quiz("nl", "nl", "Grootst", ["Groter"], "give comparitive degree"),
+            ],
+            concept.quizzes("nl", "en")
+        )
+
     def test_nested_concepts(self):
         """Test that quizzes can be generated for nested concepts."""
         concept = concept_factory(
