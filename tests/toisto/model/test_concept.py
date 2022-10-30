@@ -126,6 +126,116 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "en")
         )
 
+    def test_grammatical_person(self):
+        """Test that quizzes can be generated for grammatical person."""
+        concept = concept_factory(
+            dict(
+                first_person=dict(en="I eat", nl="Ik eet"),
+                second_person=dict(en="You eat", nl="Jij eet"),
+                third_person=dict(en="She eats", nl="Zij eet")
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "en", "Ik eet", ["I eat"], "translate"),
+                Quiz("en", "nl", "I eat", ["Ik eet"], "translate"),
+                Quiz("nl", "en", "Jij eet", ["You eat"], "translate"),
+                Quiz("en", "nl", "You eat", ["Jij eet"], "translate"),
+                Quiz("nl", "en", "Zij eet", ["She eats"], "translate"),
+                Quiz("en", "nl", "She eats", ["Zij eet"], "translate"),
+                Quiz("nl", "nl", "Ik eet", ["Jij eet"], "give second person"),
+                Quiz("nl", "nl", "Ik eet", ["Zij eet"], "give third person"),
+                Quiz("nl", "nl", "Jij eet", ["Ik eet"], "give first person"),
+                Quiz("nl", "nl", "Jij eet", ["Zij eet"], "give third person"),
+                Quiz("nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
+                Quiz("nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
+            ],
+            concept.quizzes("nl", "en")
+        )
+
+    def test_grammatical_person_nested_with_grammatical_gender(self):
+        """Test that quizzes can be generated for grammatical person, nested with grammatical gender."""
+        concept = concept_factory(
+            dict(
+                first_person=dict(en="I eat", nl="Ik eet"),
+                second_person=dict(en="You eat", nl="Jij eet"),
+                third_person=dict(female=dict(en="She eats", nl="Zij eet"), male=dict(en="He eats", nl="Hij eet"))
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "en", "Ik eet", ["I eat"], "translate"),
+                Quiz("en", "nl", "I eat", ["Ik eet"], "translate"),
+                Quiz("nl", "en", "Jij eet", ["You eat"], "translate"),
+                Quiz("en", "nl", "You eat", ["Jij eet"], "translate"),
+                Quiz("nl", "en", "Zij eet", ["She eats"], "translate"),
+                Quiz("en", "nl", "She eats", ["Zij eet"], "translate"),
+                Quiz("nl", "en", "Hij eet", ["He eats"], "translate"),
+                Quiz("en", "nl", "He eats", ["Hij eet"], "translate"),
+                Quiz("nl", "nl", "Zij eet", ["Hij eet"], "masculinize"),
+                Quiz("nl", "nl", "Hij eet", ["Zij eet"], "feminize"),
+                Quiz("nl", "nl", "Ik eet", ["Jij eet"], "give second person"),
+                Quiz("nl", "nl", "Ik eet", ["Zij eet"], "give third person"),
+                Quiz("nl", "nl", "Jij eet", ["Ik eet"], "give first person"),
+                Quiz("nl", "nl", "Jij eet", ["Zij eet"], "give third person"),
+                Quiz("nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
+                Quiz("nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
+            ],
+            concept.quizzes("nl", "en")
+        )
+
+    def test_grammatical_number_nested_with_grammatical_person(self):
+        """Test that quizzes can be generated for grammatical number, nested with grammatical person."""
+        concept = concept_factory(
+            dict(
+                singular=dict(
+                    first_person=dict(fi="Minulla on", nl="Ik heb"),
+                    second_person=dict(fi="Sinulla on", nl="Jij hebt"),
+                    third_person=dict(fi="Hänellä on", nl="Zij heeft"),
+                ),
+                plural=dict(
+                    first_person=dict(fi="Meillä on", nl="Wij hebben"),
+                    second_person=dict(fi="Teillä on", nl="Jullie hebben"),
+                    third_person=dict(fi="Heillä on", nl="Zij hebben"),
+                )
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "fi", "Ik heb", ["Minulla on"], "translate"),
+                Quiz("fi", "nl", "Minulla on", ["Ik heb"], "translate"),
+                Quiz("nl", "fi", "Jij hebt", ["Sinulla on"], "translate"),
+                Quiz("fi", "nl", "Sinulla on", ["Jij hebt"], "translate"),
+                Quiz("nl", "fi", "Zij heeft", ["Hänellä on"], "translate"),
+                Quiz("fi", "nl", "Hänellä on", ["Zij heeft"], "translate"),
+                Quiz("nl", "nl", "Ik heb", ["Jij hebt"], "give second person"),
+                Quiz("nl", "nl", "Ik heb", ["Zij heeft"], "give third person"),
+                Quiz("nl", "nl", "Jij hebt", ["Ik heb"], "give first person"),
+                Quiz("nl", "nl", "Jij hebt", ["Zij heeft"], "give third person"),
+                Quiz("nl", "nl", "Zij heeft", ["Ik heb"], "give first person"),
+                Quiz("nl", "nl", "Zij heeft", ["Jij hebt"], "give second person"),
+                Quiz("nl", "fi", "Wij hebben", ["Meillä on"], "translate"),
+                Quiz("fi", "nl", "Meillä on", ["Wij hebben"], "translate"),
+                Quiz("nl", "fi", "Jullie hebben", ["Teillä on"], "translate"),
+                Quiz("fi", "nl", "Teillä on", ["Jullie hebben"], "translate"),
+                Quiz("nl", "fi", "Zij hebben", ["Heillä on"], "translate"),
+                Quiz("fi", "nl", "Heillä on", ["Zij hebben"], "translate"),
+                Quiz("nl", "nl", "Wij hebben", ["Jullie hebben"], "give second person"),
+                Quiz("nl", "nl", "Wij hebben", ["Zij hebben"], "give third person"),
+                Quiz("nl", "nl", "Jullie hebben", ["Wij hebben"], "give first person"),
+                Quiz("nl", "nl", "Jullie hebben", ["Zij hebben"], "give third person"),
+                Quiz("nl", "nl", "Zij hebben", ["Wij hebben"], "give first person"),
+                Quiz("nl", "nl", "Zij hebben", ["Jullie hebben"], "give second person"),
+                Quiz("nl", "nl", "Ik heb", ["Wij hebben"], "pluralize"),
+                Quiz("nl", "nl", "Wij hebben", ["Ik heb"], "singularize"),
+                Quiz("nl", "nl", "Jij hebt", ["Jullie hebben"], "pluralize"),
+                Quiz("nl", "nl", "Jullie hebben", ["Jij hebt"], "singularize"),
+                Quiz("nl", "nl", "Zij heeft", ["Zij hebben"], "pluralize"),
+                Quiz("nl", "nl", "Zij hebben", ["Zij heeft"], "singularize"),
+            ],
+            concept.quizzes("nl", "fi")
+        )
+
     def test_nested_concepts(self):
         """Test that quizzes can be generated for nested concepts."""
         concept = concept_factory(

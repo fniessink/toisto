@@ -17,7 +17,10 @@ QuizType = Literal[
     "feminize",
     "give positive degree",
     "give comparitive degree",
-    "give superlative degree"
+    "give superlative degree",
+    "give first person",
+    "give second person",
+    "give third person",
 ]
 INSTRUCTION: dict[QuizType, str] = {
     "translate": "Translate into",
@@ -28,6 +31,9 @@ INSTRUCTION: dict[QuizType, str] = {
     "give positive degree": "Give the [underline]positive degree[/underline] in",
     "give comparitive degree": "Give the [underline]comparitive degree[/underline] in",
     "give superlative degree": "Give the [underline]superlative degree[/underline] in",
+    "give first person": "Give the [underline]first person[/underline] in",
+    "give second person": "Give the [underline]second person[/underline] in",
+    "give third person": "Give the [underline]third person[/underline] in",
 }
 
 

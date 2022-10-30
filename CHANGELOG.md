@@ -4,13 +4,14 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.0.12 - unreleased
+## v0.0.12 - 2022-10-30
 
 ### Added
 
 - Added a nature topic.
 - Added shopping center to the city topic.
 - Added quizzes for degrees of comparison and a topic with degrees of comparison.
+- Added quizzes for grammatical person (first, second, and third person) and a topic with the verbs "to be" and "to have".
 
 ## v0.0.11 - 2022-10-27
 

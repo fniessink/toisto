@@ -108,4 +108,13 @@ def concept_factory(concept_dict) -> Concept | CompositeConcept:
                 "give superlative degree", "give positive degree", "give comparitive degree"
             )
         )
+    if {"first_person", "second_person", "third_person"} <= set(concept_dict):
+        return CompositeConcept.from_dict(
+            concept_dict,
+            ("first_person", "second_person", "third_person"),
+            (
+                "give second person", "give third person", "give first person",
+                "give third person", "give first person", "give second person"
+            )
+        )
     return Concept.from_dict(cast(ConceptDict, concept_dict))
