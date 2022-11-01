@@ -9,6 +9,7 @@ from toisto.speech import say
 def do_quiz(quiz: Quiz, progress: Progress) -> None:
     """Do one quiz and update the progress."""
     console.print(instruction(quiz))
+    console.print(quiz.question)
     say(quiz.question_language, quiz.question)
     guess = Label(input("> "))
     correct = quiz.is_correct(guess)

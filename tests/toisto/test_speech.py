@@ -13,4 +13,4 @@ class SayTest(unittest.TestCase):
     def test_system_call(self, mock_os_system):
         """Test that the say program is called with the correct arguments."""
         say("nl", "Hallo")
-        mock_os_system.assert_called_once_with("say --voice=Xander --interactive=bold Hallo")
+        mock_os_system.assert_called_once_with("say --voice=Xander Hallo")
