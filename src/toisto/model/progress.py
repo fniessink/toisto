@@ -26,7 +26,9 @@ class Progress:
         """Return the next quiz."""
         if eligible_quizzes := [quiz for quiz in quizzes if self.is_eligible(quiz)]:
             if len(eligible_quizzes) > 1 and self.current_quiz in eligible_quizzes:
-                eligible_quizzes.remove(self.current_quiz)
+                eligible_quizzes.remove(self.current_quiz)  # Don't repeat the same quiz right away
+            if len(quizzes_with_progress := [quiz for quiz in eligible_quizzes if self.has_progress(quiz)]) > 2:
+                eligible_quizzes = quizzes_with_progress  # Give preference to quizzes the user has seen before
             self.current_quiz = random.choice(eligible_quizzes)
             return self.current_quiz
         return None
@@ -34,6 +36,11 @@ class Progress:
     def is_eligible(self, quiz: Quiz) -> bool:
         """Is the quiz eligible?"""
         return not self.get_progress(quiz).is_silenced()
+
+    def has_progress(self, quiz: Quiz) -> bool:
+        """Has the quiz been presented to the user before?"""
+        key = str(quiz)
+        return key in self.progress_dict
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""

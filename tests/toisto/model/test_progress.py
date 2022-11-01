@@ -11,6 +11,7 @@ class ProgressTest(unittest.TestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.quiz = Quiz("fi", "nl", Label("Englanti"), [Label("Engels")])
+        self.another_quiz = Quiz("nl", "fi", Label("Engels"), [Label("Englanti")])
         self.progress = Progress({})
 
     def test_progress_new_quiz(self):
@@ -42,9 +43,9 @@ class ProgressTest(unittest.TestCase):
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        another_quiz = Quiz("nl", "fi", "Engels", "Englanti")
-        self.assertEqual(self.quiz, self.progress.next_quiz([self.quiz]))
-        self.assertEqual(another_quiz, self.progress.next_quiz([self.quiz, another_quiz]))
+        self.progress.update(self.quiz, correct=True)
+        self.assertEqual(self.quiz, self.progress.next_quiz([self.quiz, self.another_quiz]))
+        self.assertEqual(self.another_quiz, self.progress.next_quiz([self.quiz, self.another_quiz]))
 
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
