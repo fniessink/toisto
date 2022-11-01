@@ -231,12 +231,12 @@
         "singular": {
             "en": ["Mall", "Shopping center"],
             "fi": ["Kauppakeskus", "Ostoskeskus"],
-            "nl": ["Het winkelcentrum"]
+            "nl": "Het winkelcentrum"
         },
         "plural": {
             "en": ["Malls", "Shopping centers"],
-            "fi": ["Kauppakeskukset", "ostoskeskukset"],
-            "nl": ["De winkelcentra"]
+            "fi": ["Kauppakeskukset", "Ostoskeskukset"],
+            "nl": "De winkelcentra"
         }
     }
 ]

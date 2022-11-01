@@ -64,10 +64,17 @@ class CompositeConcept:
         result = []
         for concept in self._concepts:
             result.extend(concept.quizzes(language, source_language))
-        if self.has_labels(language):
-            for (concept1, concept2), quiz_type in self.paired_concepts():
-                labels1, labels2 = concept1.labels(language), concept2.labels(language)
-                result.extend([Quiz(language, language, label, labels2, quiz_type) for label in labels1])
+        if not self.has_labels(language):
+            return result
+        for (concept1, concept2), quiz_type in self.paired_concepts():
+            labels1, labels2 = concept1.labels(language), concept2.labels(language)
+            if quiz_type in ("singularize", "pluralize"):
+                quizzes = [
+                    Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
+                ]
+            else:
+                quizzes = [Quiz(language, language, label1, labels2, quiz_type) for label1 in labels1]
+            result.extend(quizzes)
         return result
 
     def has_labels(self, *languages: Language) -> bool:
