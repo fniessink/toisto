@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - On MacOS Ventura, the say command that Toisto uses for speech does not print the spoken text, even when told to. Work-around the issue by having Toisto print the question itself.
 
+### Changed
+
+- To not overwhelm the user with new quizzes, give preference to guizzes the user has seen before when selecting the next quiz.
+
 ## v0.0.12 - 2022-10-30
 
 ### Added

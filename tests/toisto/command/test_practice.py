@@ -17,7 +17,7 @@ class PracticeTest(unittest.TestCase):
         """Set up the test fixtures."""
         self.quiz = Quiz("fi", "nl", Label("Terve"), [Label("Hoi")])
 
-    @patch("builtins.input", Mock(side_effect=["hoi\n", EOFError]))
+    @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz(self):
         """Test that the user is quizzed."""
         with patch("rich.console.Console.print") as patched_print:
@@ -38,3 +38,10 @@ class PracticeTest(unittest.TestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice([self.quiz], Progress({}))
         self.assertIn(call(DONE), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=[EOFError]))
+    def test_exit(self):
+        """Test that the user can quit."""
+        with patch("rich.console.Console.print") as patched_print:
+            practice([self.quiz], Progress({}))
+        self.assertEqual(call(), patched_print.call_args_list[-1])

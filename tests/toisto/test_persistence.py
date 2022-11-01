@@ -72,7 +72,7 @@ class ProgressPersistenceTest(unittest.TestCase):
     @patch("pathlib.Path.open", MagicMock())
     def test_load_non_existing_progress(self):
         """Test that the default value is returned when the progress cannot be loaded."""
-        self.assertEqual({}, load_progress().progress_dict)
+        self.assertEqual({}, load_progress().as_dict())
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr.write")
@@ -93,7 +93,7 @@ class ProgressPersistenceTest(unittest.TestCase):
     def test_load_existing_progress(self, path_open):
         """Test that the progress can be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {"count": 0}}'
-        self.assertEqual(dict(quiz=QuizProgress()), load_progress().progress_dict)
+        self.assertEqual(dict(quiz=QuizProgress().as_dict()), load_progress().as_dict())
 
     @patch("pathlib.Path.open")
     @patch("json.dump")

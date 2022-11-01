@@ -43,9 +43,15 @@ class ProgressTest(unittest.TestCase):
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        self.progress.update(self.quiz, correct=True)
-        self.assertEqual(self.quiz, self.progress.next_quiz([self.quiz, self.another_quiz]))
-        self.assertEqual(self.another_quiz, self.progress.next_quiz([self.quiz, self.another_quiz]))
+        quizzes = [self.quiz, self.another_quiz]
+        self.assertNotEqual(self.progress.next_quiz(quizzes), self.progress.next_quiz(quizzes))
+
+    def test_next_quiz_is_quiz_with_progress(self):
+        """Test that the next quiz is one the user has seen before if possible."""
+        quizzes = [Quiz("nl", "fi", f"Dutch label {index}", f"Finnish label {index}") for index in range(5)]
+        for index in range(3):
+            self.progress.update(quizzes[index], correct=True)
+        self.assertIn(self.progress.next_quiz(quizzes), quizzes[:3])
 
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
