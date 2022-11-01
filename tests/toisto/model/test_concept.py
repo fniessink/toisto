@@ -82,6 +82,30 @@ class ConceptTest(unittest.TestCase):
         concept = concept_factory(dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
         self.assertEqual([], concept.quizzes("en", "fi"))
 
+    def test_grammatical_number_with_synonyms(self):
+        """Test that in case of synonyms the plural of one synonym isn't the correct answer for the other synonym."""
+        concept = concept_factory(
+            dict(
+                singular=dict(fi=["Kauppakeskus", "Ostoskeskus"], nl="Het winkelcentrum"),
+                plural=dict(fi=["Kauppakeskukset", "Ostoskeskukset"], nl="De winkelcentra")
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("fi", "nl", "Kauppakeskus", ["Het winkelcentrum"]),
+                Quiz("fi", "nl", "Ostoskeskus", ["Het winkelcentrum"],),
+                Quiz("nl", "fi", "Het winkelcentrum", ["Kauppakeskus", "Ostoskeskus"]),
+                Quiz("fi", "nl", "Kauppakeskukset", ["De winkelcentra"]),
+                Quiz("fi", "nl", "Ostoskeskukset", ["De winkelcentra"]),
+                Quiz("nl", "fi", "De winkelcentra", ["Kauppakeskukset", "Ostoskeskukset"]),
+                Quiz("fi", "fi", "Kauppakeskus", ["Kauppakeskukset"], "pluralize"),
+                Quiz("fi", "fi", "Ostoskeskus", ["Ostoskeskukset"], "pluralize"),
+                Quiz("fi", "fi", "Kauppakeskukset", ['Kauppakeskus'], "singularize"),
+                Quiz("fi", "fi", "Ostoskeskukset", ["Ostoskeskus"], "singularize")
+            ],
+            concept.quizzes("fi", "nl")
+        )
+
     def test_grammatical_gender(self):
         """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
         concept = concept_factory(
