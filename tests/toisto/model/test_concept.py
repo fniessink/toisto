@@ -123,6 +123,36 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "en")
         )
 
+    def test_grammatical_number_with_grammatical_gender(self):
+        """Test that quizzes can be generated for grammatical number nested with grammatical gender."""
+        concept = concept_factory(
+            dict(
+                singular=dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat")),
+                plural=dict(female=dict(en="Her cats", nl="Haar katten"), male=dict(en="His cats", nl="Zijn katten"))
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "en", "Haar kat", ["Her cat"], "translate"),
+                Quiz("en", "nl", "Her cat", ["Haar kat"], "translate"),
+                Quiz("nl", "en", "Zijn kat", ["His cat"], "translate"),
+                Quiz("en", "nl", "His cat", ["Zijn kat"], "translate"),
+                Quiz("nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"),
+                Quiz("nl", "nl", "Zijn kat", ["Haar kat"], "feminize"),
+                Quiz("nl", "en", "Haar katten", ["Her cats"], "translate"),
+                Quiz("en", "nl", "Her cats", ["Haar katten"], "translate"),
+                Quiz("nl", "en", "Zijn katten", ["His cats"], "translate"),
+                Quiz("en", "nl", "His cats", ["Zijn katten"], "translate"),
+                Quiz("nl", "nl", "Haar katten", ["Zijn katten"], "masculinize"),
+                Quiz("nl", "nl", "Zijn katten", ["Haar katten"], "feminize"),
+                Quiz("nl", "nl", "Haar kat", ["Haar katten"], "pluralize"),
+                Quiz("nl", "nl", "Haar katten", ["Haar kat"], "singularize"),
+                Quiz("nl", "nl", "Zijn kat", ["Zijn katten"], "pluralize"),
+                Quiz("nl", "nl", "Zijn katten", ["Zijn kat"], "singularize")
+            ],
+            concept.quizzes("nl", "en")
+        )
+
     def test_degrees_of_comparison(self):
         """Test that quizzes can be generated for degrees of comparison."""
         concept = concept_factory(

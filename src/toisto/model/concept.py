@@ -68,18 +68,9 @@ class CompositeConcept:
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            if quiz_type in (
-                "singularize",
-                "pluralize",
-                "give comparitive degree",
-                "give superlative degree",
-                "give positive degree"
-            ):
-                quizzes = [
-                    Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
-                ]
-            else:
-                quizzes = [Quiz(language, language, label1, labels2, quiz_type) for label1 in labels1]
+            quizzes = [
+                Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
+            ]
             result.extend(quizzes)
         return result
 
