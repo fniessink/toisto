@@ -32,9 +32,22 @@ Concepts are represented in the topic files as JSON mappings with language ident
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
+### Spelling variants
+
+When there are multiple ways to spell a label, use the pipe symbol to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
+
+```json
+[
+    {
+        "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
+        "fi": "Huomenna on tiistai"
+    }
+]
+```
+
 ### Concepts with multiple labels
 
-Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below.
+Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toiso will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
 
 ```json
 [
@@ -122,7 +135,7 @@ When concepts, usually verbs and pronouns, have different persons, these are rep
 The format of the JSON files is as follows:
 
 ```json
-
+[
     {
         "singular": {
             "first_person": {
@@ -203,66 +216,24 @@ Degrees of comparison are specified as follows:
 ]
 ```
 
-When there are synonyms, the concept needs to be split as explained above. The specification below prevents Toisto from considering "Suurin" a superlative of "Iso".
+When there are synonyms, they need to be in the same order in every degree. This makes sure Toisto does not consider "Suurin" a superlative of "Iso".
 
 ```json
 [
     {
-        "en": "Big",
-        "fi": ["Iso", "Suuri"],
-        "nl": "Groot"
-    },
-    {
-        "en": "Bigger",
-        "fi": ["Isompi", "Suurempi"],
-        "nl": "Groter"
-    },
-    {
-        "en": "Biggest",
-        "fi": ["Isoin", "Suurin"],
-        "nl": "Grootst"
-    },
-    {
         "positive_degree": {
-            "en": "Big"
-        },
-        "comparitive_degree": {
-            "en": "Bigger"
-        },
-        "superlative_degree": {
-            "en": "Biggest"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Iso"
-        },
-        "comparitive_degree": {
-            "fi": "Isompi"
-        },
-        "superlative_degree": {
-            "fi": "Isoin"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Suuri"
-        },
-        "comparitive_degree": {
-            "fi": "Suurempi"
-        },
-        "superlative_degree": {
-            "fi": "Suurin"
-        }
-    },
-    {
-        "positive_degree": {
+            "en": "Big",
+            "fi": ["Iso", "Suuri"],
             "nl": "Groot"
         },
         "comparitive_degree": {
+            "en": "Bigger",
+            "fi": ["Isompi", "Suurempi"],
             "nl": "Groter"
         },
         "superlative_degree": {
+            "en": "Biggest",
+            "fi": ["Isoin", "Suurin"],
             "nl": "Grootst"
         }
     }

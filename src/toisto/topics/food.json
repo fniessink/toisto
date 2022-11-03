@@ -24,12 +24,12 @@
     },
     {
         "singular": {
-            "en": ["Hotdog", "Hot dog"],
+            "en": ["Hotdog|Hot dog"],
             "fi": "Hotdog",
             "nl": "De hotdog"
         },
         "plural": {
-            "en": ["Hotdogs", "Hot dogs"],
+            "en": ["Hotdogs|Hot dogs"],
             "fi": "Hotdogit",
             "nl": "De hotdogs"
         }

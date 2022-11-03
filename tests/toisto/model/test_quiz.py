@@ -22,12 +22,12 @@ class QuizTest(unittest.TestCase):
 
     def test_get_answer(self):
         """Test that the answer is returned."""
-        self.assertEqual("Engels", self.quiz.get_answer())
+        self.assertEqual("Engels", self.quiz.answer)
 
     def test_get_first_answer(self):
         """Test that the first answer is returned when there are multiple."""
         quiz = Quiz("fi", "nl", "Yksi", ["Een", "Eén"])
-        self.assertEqual("Een", quiz.get_answer())
+        self.assertEqual("Een", quiz.answer)
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
@@ -37,3 +37,28 @@ class QuizTest(unittest.TestCase):
     def test_instruction(self):
         """Test the quiz instruction."""
         self.assertEqual("Translate into Dutch", self.quiz.instruction())
+
+    def test_spelling_alternative_of_answer(self):
+        """Test that a quiz can deal with alternative spellings of answers."""
+        quiz = Quiz("fi", "nl", "Yksi", ["Een|Eén"])
+        self.assertEqual("Een", quiz.answer)
+
+    def test_spelling_alternative_of_question(self):
+        """Test that a quiz can deal with alternative spellings of the question."""
+        quiz = Quiz("nl", "fy", "Een|Eén", ["Yksi"])
+        self.assertEqual("Een", quiz.question)
+
+    def test_spelling_alternative_is_correct(self):
+        """Test that an answer that matches a spelling alternative is correct."""
+        quiz = Quiz("fi", "nl", "Yksi", ["Een|Eén", "één"])
+        for alternative in ("Een", "Eén", "één"):
+            self.assertTrue(quiz.is_correct(alternative))
+
+    def test_other_answers_with_spelling_alternatives(self):
+        """Test the spelling alternatives are returned as other answers."""
+        quiz = Quiz("fi", "nl", "Yksi", ["Een|Eén", "één"])
+        alternatives = ("Een", "Eén", "één")
+        for alternative in alternatives:
+            other_answers = list(alternatives)
+            other_answers.remove(alternative)
+            self.assertEqual(other_answers, quiz.other_answers(alternative))

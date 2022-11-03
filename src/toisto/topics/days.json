@@ -133,18 +133,12 @@
         "nl": "Volgende week"
     },
     {
-        "en": [
-            "Today it is Monday",
-            "Today it's Monday"
-        ],
+        "en": "Today it is Monday|Today it's Monday",
         "fi": "Tänään on maanantai",
         "nl": "Vandaag is het maandag"
     },
     {
-        "en": [
-            "Tomorrow it is Tuesday",
-            "Tomorrow it's Tuesday"
-        ],
+        "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai",
         "nl": "Morgen is het dinsdag"
     },

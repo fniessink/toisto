@@ -78,7 +78,7 @@ def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> s
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    diff = colored_diff(guess, quiz.get_answer())
+    diff = colored_diff(guess, quiz.answer)
     return f'❌ Incorrect. The correct answer is "{diff}".\n'
 
 
