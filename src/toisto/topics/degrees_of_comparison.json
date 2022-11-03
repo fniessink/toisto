@@ -425,120 +425,36 @@
         }
     },
     {
-        "en": "Big",
-        "fi": ["Iso", "Suuri"],
-        "nl": "Groot"
-    },
-    {
-        "en": "Bigger",
-        "fi": ["Isompi", "Suurempi"],
-        "nl": "Groter"
-    },
-    {
-        "en": "Biggest",
-        "fi": ["Isoin", "Suurin"],
-        "nl": "Grootst"
-    },
-    {
         "positive_degree": {
-            "en": "Big"
-        },
-        "comparitive_degree": {
-            "en": "Bigger"
-        },
-        "superlative_degree": {
-            "en": "Biggest"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Iso"
-        },
-        "comparitive_degree": {
-            "fi": "Isompi"
-        },
-        "superlative_degree": {
-            "fi": "Isoin"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Suuri"
-        },
-        "comparitive_degree": {
-            "fi": "Suurempi"
-        },
-        "superlative_degree": {
-            "fi": "Suurin"
-        }
-    },
-    {
-        "positive_degree": {
+            "en": "Big",
+            "fi": ["Iso", "Suuri"],
             "nl": "Groot"
         },
         "comparitive_degree": {
+            "en": "Bigger",
+            "fi": ["Isompi", "Suurempi"],
             "nl": "Groter"
         },
         "superlative_degree": {
+            "en": "Biggest",
+            "fi": ["Isoin", "Suurin"],
             "nl": "Grootst"
         }
     },
     {
-        "en": "Nice",
-        "fi": ["Kiva", "Mukava"],
-        "nl": "Leuk"
-    },
-    {
-        "en": "Nicer",
-        "fi": ["Kivempi", "Kivampi", "Mukavampi"],
-        "nl": "Leuker"
-    },
-    {
-        "en": "Nicest",
-        "fi": ["Kivoin", "Mukavin"],
-        "nl": "Leukst"
-    },
-    {
         "positive_degree": {
-            "en": "Nice"
-        },
-        "comparitive_degree": {
-            "en": "Nicer"
-        },
-        "superlative_degree": {
-            "en": "Nicest"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Kiva"
-        },
-        "comparitive_degree": {
-            "fi": ["Kivempi", "Kivampi"]
-        },
-        "superlative_degree": {
-            "fi": "Kivoin"
-        }
-    },
-    {
-        "positive_degree": {
-            "fi": "Mukava"
-        },
-        "comparitive_degree": {
-            "fi": "Mukavampi"
-        },
-        "superlative_degree": {
-            "fi": "Mukavin"
-        }
-    },
-    {
-        "positive_degree": {
+            "en": "Nice",
+            "fi": ["Kiva", "Mukava"],
             "nl": "Leuk"
         },
         "comparitive_degree": {
+            "en": "Nicer",
+            "fi": ["Kivampi", "Mukavampi"],
             "nl": "Leuker"
         },
         "superlative_degree": {
+            "en": "Nicest",
+            "fi": ["Kivoin", "Mukavin"],
             "nl": "Leukst"
         }
     }
