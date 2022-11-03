@@ -5,34 +5,30 @@
         "nl": "De familie"
     },
     {
-        "female": {
-            "en": "Grandma",
-            "fi": [
-                "Mummo",
-                "Mummi"
-            ],
-            "nl": "De oma"
-        },
-        "male": {
-            "en": "Grandpa",
-            "fi": [
-                "Vaari",
-                "Ukki"
-            ],
-            "nl": "De opa"
-        }
+        "en": "Grandma",
+        "fi": [
+            "Mummo",
+            "Mummi"
+        ],
+        "nl": "De oma"
     },
     {
-        "female": {
-            "en": "Grandmother",
-            "fi": "Isoäiti",
-            "nl": "De grootmoeder"
-        },
-        "male": {
-            "en": "Grandfather",
-            "fi": "Isoisä",
-            "nl": "De grootvader"
-        }
+        "en": "Grandpa",
+        "fi": [
+            "Vaari",
+            "Ukki"
+        ],
+        "nl": "De opa"
+    },
+    {
+        "en": "Grandmother",
+        "fi": "Isoäiti",
+        "nl": "De grootmoeder"
+    },
+    {
+        "en": "Grandfather",
+        "fi": "Isoisä",
+        "nl": "De grootvader"
     },
     {
         "en": "Married",
@@ -45,16 +41,14 @@
         "nl": "Gescheiden"
     },
     {
-        "female": {
-            "en": "Mother",
-            "fi": "Äiti",
-            "nl": "De moeder"
-        },
-        "male": {
-            "en": "Father",
-            "fi": "Isä",
-            "nl": "De vader"
-        }
+        "en": "Mother",
+        "fi": "Äiti",
+        "nl": "De moeder"
+    },
+    {
+        "en": "Father",
+        "fi": "Isä",
+        "nl": "De vader"
     },
     {
         "en": "Child",
@@ -62,16 +56,14 @@
         "nl": "Het kind"
     },
     {
-        "female": {
-            "en": "Sister",
-            "fi": "Sisko",
-            "nl": "De zus"
-        },
-        "male": {
-            "en": "Brother",
-            "fi": "Veli",
-            "nl": "De broer"
-        }
+        "en": "Sister",
+        "fi": "Sisko",
+        "nl": "De zus"
+    },
+    {
+        "en": "Brother",
+        "fi": "Veli",
+        "nl": "De broer"
     },
     {
         "en": "Cousin",
@@ -87,28 +79,24 @@
         "nl": "Het kleinkind"
     },
     {
-        "female": {
-            "en": "Daughter",
-            "fi": "Tytär",
-            "nl": "De dochter"
-        },
-        "male": {
-            "en": "Son",
-            "fi": "Poika",
-            "nl": "De zoon"
-        }
+        "en": "Daughter",
+        "fi": "Tytär",
+        "nl": "De dochter"
     },
     {
-        "female": {
-            "en": "Wife",
-            "fi": "Vaimo",
-            "nl": "De echtgenote"
-        },
-        "male": {
-            "en": "Husband",
-            "fi": "Aviomies",
-            "nl": "De echtgenoot"
-        }
+        "en": "Son",
+        "fi": "Poika",
+        "nl": "De zoon"
+    },
+    {
+        "en": "Wife",
+        "fi": "Vaimo",
+        "nl": "De echtgenote"
+    },
+    {
+        "en": "Husband",
+        "fi": "Aviomies",
+        "nl": "De echtgenoot"
     },
     {
         "en": "Spouse",
