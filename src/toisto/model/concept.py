@@ -53,7 +53,7 @@ ConceptPair = tuple[Concept, Concept]
 
 
 class CompositeConcept:
-    """A concept that consists of multiple other (sub)concepts. Currently assumes precisely two subconcepts."""
+    """A concept that consists of multiple other (sub)concepts."""
 
     def __init__(self, concepts: Sequence[Concept | CompositeConcept], quiz_types: Sequence[QuizType]) -> None:
         self._concepts = concepts
@@ -68,7 +68,13 @@ class CompositeConcept:
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            if quiz_type in ("singularize", "pluralize"):
+            if quiz_type in (
+                "singularize",
+                "pluralize",
+                "give comparitive degree",
+                "give superlative degree",
+                "give positive degree"
+            ):
                 quizzes = [
                     Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
                 ]

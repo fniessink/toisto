@@ -150,6 +150,42 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "en")
         )
 
+    def test_degrees_of_comparison_with_synonyms(self):
+        """Test that quizzes can be generated for degrees of comparison with synonyms."""
+        concept = concept_factory(
+            dict(
+                positive_degree=dict(en="Big", fi=["Iso", "Suuri"]),
+                comparitive_degree=dict(en="Bigger", fi=["Isompi", "Suurempi"]),
+                superlative_degree=dict(en="Biggest", fi=["Isoin", "Suurin"])
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("fi", "en", "Iso", ["Big"], "translate"),
+                Quiz("fi", "en", "Suuri", ["Big"], "translate"),
+                Quiz("en", "fi", "Big", ["Iso", "Suuri"], "translate"),
+                Quiz("fi", "en", "Isompi", ["Bigger"], "translate"),
+                Quiz("fi", "en", "Suurempi", ["Bigger"], "translate"),
+                Quiz("en", "fi", "Bigger", ["Isompi", "Suurempi"], "translate"),
+                Quiz("fi", "en", "Isoin", ["Biggest"], "translate"),
+                Quiz("fi", "en", "Suurin", ["Biggest"], "translate"),
+                Quiz("en", "fi", "Biggest", ["Isoin", "Suurin"], "translate"),
+                Quiz("fi", "fi", "Iso", ["Isompi"], "give comparitive degree"),
+                Quiz("fi", "fi", "Suuri", ["Suurempi"], "give comparitive degree"),
+                Quiz("fi", "fi", "Iso", ["Isoin"], "give superlative degree"),
+                Quiz("fi", "fi", "Suuri", ["Suurin"], "give superlative degree"),
+                Quiz("fi", "fi", "Isompi", ["Iso"], "give positive degree"),
+                Quiz("fi", "fi", "Suurempi", ["Suuri"], "give positive degree"),
+                Quiz("fi", "fi", "Isompi", ["Isoin"], "give superlative degree"),
+                Quiz("fi", "fi", "Suurempi", ["Suurin"], "give superlative degree"),
+                Quiz("fi", "fi", "Isoin", ["Iso"], "give positive degree"),
+                Quiz("fi", "fi", "Suurin", ["Suuri"], "give positive degree"),
+                Quiz("fi", "fi", "Isoin", ["Isompi"], "give comparitive degree"),
+                Quiz("fi", "fi", "Suurin", ["Suurempi"], "give comparitive degree"),
+            ],
+            concept.quizzes("fi", "en")
+        )
+
     def test_grammatical_person(self):
         """Test that quizzes can be generated for grammatical person."""
         concept = concept_factory(
@@ -260,7 +296,7 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "fi")
         )
 
-    def test_nested_concepts(self):
+    def test_grammatical_gender_nested_with_grammatical_number(self):
         """Test that quizzes can be generated for nested concepts."""
         concept = concept_factory(
             dict(
