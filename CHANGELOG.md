@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - On MacOS Ventura, the say command that Toisto uses for speech does not print the spoken text, even when told to. Work-around the issue by having Toisto print the question itself.
 - The plural of one synonym should not be accepted as the plural of another synonym and vice versa. For example, kauppakeskus and ostoskeskus both mean shopping centre, but the plural of kauppakeskus, kauppakeskukset, should still not be accepted as plural for ostoskeskus and vice versa. Fixes [#13](https://github.com/fniessink/toisto/issues/13).
 
+### Added
+
+- Added more words and sentences to the days and time topics.
+
 ### Changed
 
 - To not overwhelm the user with new quizzes, give preference to guizzes the user has seen before when selecting the next quiz.

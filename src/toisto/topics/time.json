@@ -56,5 +56,25 @@
             "fi": "Keskiyöt",
             "nl": "De middernachten"
         }
+    },
+    {
+        "en": "What time is it?",
+        "fi": ["Paljonko kello on?", "Mitä kello on?"],
+        "nl": "Hoe laat is het?"
+    },
+    {
+        "en": "It is twenty past six|It's twenty past six",
+        "fi": ["Kello on kuusi kaksikymmentä", "Kello on kaksikymmentä yli kuusi"],
+        "nl": "Het is tien voor half zeven"
+    },
+    {
+        "en": "It is twenty to seven|It's twenty to seven",
+        "fi": ["Kello on kuusi neljäkymmentä", "Kello on kahtakymmentä vaille seitsemän"],
+        "nl": "Het is tien over half zeven"
+    },
+    {
+        "en": "What time?",
+        "fi": "Mihin aikaan?",
+        "nl": "Hoe laat?"
     }
 ]

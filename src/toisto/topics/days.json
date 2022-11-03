@@ -24,6 +24,18 @@
         }
     },
     {
+        "singular": {
+            "en": "Weekend",
+            "fi": "Viikonloppu",
+            "nl": "Het weekend"
+        },
+        "plural": {
+            "en": "Weekends",
+            "fi": "Viikonloput",
+            "nl": "De weekenden"
+        }
+    },
+    {
         "en": "Days of the week",
         "fi": "Viikonpäivät",
         "nl": "De dagen van de week"
@@ -126,6 +138,16 @@
         "en": "Tomorrow",
         "fi": "Huomenna",
         "nl": "Morgen"
+    },
+    {
+        "en": "This week",
+        "fi": "Tällä viikolla",
+        "nl": "Deze week"
+    },
+    {
+        "en": "Last week",
+        "fi": "Viime viikolla",
+        "nl": "Vorige week"
     },
     {
         "en": "Next week",
