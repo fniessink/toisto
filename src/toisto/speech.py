@@ -10,4 +10,4 @@ def say(language: str, text: str) -> None:
     """Say the text in the specified language."""
     voice = VOICES[language]
     text = text.replace("'", r"\'")
-    os.system(f"say --voice={voice} {text}")
+    os.system(f"say --voice={voice} {text} &")
