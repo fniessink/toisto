@@ -143,9 +143,7 @@ class ConceptTest(unittest.TestCase):
                 Quiz("nl", "nl", "Haar bot", ["Zijn bot"], "masculinize"),
                 Quiz("nl", "nl", "Haar bot", ["Zijn bot"], "neuterize"),
                 Quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
-                Quiz("nl", "nl", "Zijn bot", ["Zijn bot"], "neuterize"),
-                Quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
-                Quiz("nl", "nl", "Zijn bot", ["Zijn bot"], "masculinize")
+                Quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize")
             ],
             concept.quizzes("nl", "en")
         )
@@ -381,4 +379,23 @@ class ConceptTest(unittest.TestCase):
                 Quiz("nl", "nl", "Zijn katten", ["Haar katten"], "feminize")
             ],
             concept.quizzes("nl", "en")
+        )
+
+    def test_same_label_in_different_composite_concepts(self):
+        """Test that the same label in different leaf concepts is ignored."""
+        self.maxDiff = None
+        concept = concept_factory(
+            dict(
+                female=dict(en="She is|She's", fi="Hän on|On;female"),
+                male=dict(en="He is|He's", fi="Hän on|On;male")
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("fi", "en", "Hän on|On;female", ["She is|She's"]),
+                Quiz("en", "fi", "She is|She's", ["Hän on|On;female"]),
+                Quiz("fi", "en", "Hän on|On;male", ["He is|He's"]),
+                Quiz("en", "fi", "He is|He's", ["Hän on|On;male"])
+            ],
+            concept.quizzes("fi", "en")
         )

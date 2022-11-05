@@ -139,11 +139,11 @@ The format of the JSON files is as follows:
     {
         "singular": {
             "first_person": {
-                "en": "I have",
+                "en": "I have|I've",
                 "fi": "Minulla on"
             },
             "second_person": {
-                "en": "You have",
+                "en": "You have|You've;singular",
                 "fi": "Sinulla on"
             },
             "third_person": {
@@ -153,15 +153,15 @@ The format of the JSON files is as follows:
         },
         "plural": {
             "first_person": {
-                "en": "We have",
+                "en": "We have|We've",
                 "fi": "Meillä on"
             },
             "second_person": {
-                "en": "You have",
+                "en": "You have|You've;plural",
                 "fi": "Teillä on"
             },
             "third_person": {
-                "en": "They have",
+                "en": "They have|They've",
                 "fi": "Heillä on"
             }
         }
@@ -169,10 +169,9 @@ The format of the JSON files is as follows:
 ]
 ```
 
-Unfortunately, there are two limitations with verbs at the moment:
+Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the ";".
 
-- Using grammatical gender to further specify the third person singular is not possible at the moment. Fixing [issue #11](https://github.com/fniessink/toisto/issues/11)) should correct that.
-- When practicing from or to English, Toisto has no awareness of the second person singular and second person plural being the same ("You have"), so when quizzing the user to translate the singular "You have" it will consider the plural answer "Teilla on" incorrect. Fixing [issue #12](https://github.com/fniessink/toisto/issues/11)) should correct that.
+Using grammatical gender to further specify the third person singular is not possible at the moment. Fixing [issue #11](https://github.com/fniessink/toisto/issues/11)) should correct that.
 
 ### Grammatical gender
 
@@ -268,7 +267,7 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 1. Quizzes to translate a concept from one language to another and vice versa. Toisto quizzes the user in both directions. If there are multiple labels, Toisto uses all labels as question and as answer. So both "Mikä päivä tänään on?" and "Mikä päivä on tänään?" are asked as question and both are accepted as correct answer for the quiz "What day is it today?".
 2. Quizzes to singularize a plural concept or pluralize a singular concept.
 3. Quizzes to change the person of a concept.
-4. Quizzes to feminize a masculine concept or masculinize a feminine concept.
+4. Quizzes to change the gender of a concept.
 5. Quizzes to provide the positive, comparitive, or superlative degree of comparison, given an adjective in another degree.
 
 Except for the translation type quizzes, quizzes only use the user's practice language.

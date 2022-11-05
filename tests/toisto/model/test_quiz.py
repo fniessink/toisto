@@ -68,8 +68,24 @@ class QuizTest(unittest.TestCase):
     def test_instructions(self):
         """Test the instructions"""
         for quiz_type, instruction in zip(get_args(QuizType), INSTRUCTION.values()):
-            quiz = Quiz("fi", "fi", "Label1", ["Label2"], quiz_type)
+            quiz = Quiz("fi", "fi", "Hei", ["Hei Hei"], quiz_type)
             self.assertEqual(instruction + " Finnish", quiz.instruction())
+
+    def test_instruction_with_hint(self):
+        """Test that the question hint is added to the instruction."""
+        quiz = Quiz("en", "nl", "You are;singular", ["Jij bent|Je bent"])
+        self.assertEqual("Translate into Dutch (singular)", quiz.instruction())
+
+    def test_question_hint(self):
+        """Test that a hint can be added to the question."""
+        quiz = Quiz("en", "nl", "You are;singular", ["Jij bent|Je bent"])
+        self.assertEqual("You are", quiz.question)
+
+    def test_question_hint_is_ignored_in_answer(self):
+        """Test that a hint can be added to the question."""
+        quiz = Quiz("nl", "en", "Jij bent", ["You are;singular"])
+        self.assertEqual("You are", quiz.answer)
+        self.assertEqual(["You are"], quiz.answers)
 
 
 class QuizTypeFactoryTest(unittest.TestCase):
