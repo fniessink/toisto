@@ -189,7 +189,28 @@ When concepts have multiple genders, these can be specified as follows:
             "en": "Father",
             "nl": "De vader"
         }
-    },
+    }
+]
+```
+
+It's also possible to have a neutral gender:
+
+```json
+[
+    {
+        "female": {
+            "en": "Mother",
+            "nl": "De moeder"
+        },
+        "male": {
+            "en": "Father",
+            "nl": "De vader"
+        },
+        "neuter": {
+            "en": "Parent",
+            "nl": "De ouder
+        }
+    }
 ]
 ```
 

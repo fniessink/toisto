@@ -3,6 +3,7 @@
 import unittest
 
 from toisto.model import Label, Quiz
+from toisto.model.quiz import quiz_type_factory
 
 
 class QuizTest(unittest.TestCase):
@@ -62,3 +63,11 @@ class QuizTest(unittest.TestCase):
             other_answers = list(alternatives)
             other_answers.remove(alternative)
             self.assertEqual(other_answers, quiz.other_answers(alternative))
+
+
+class QuizTypeFactoryTest(unittest.TestCase):
+    """Unit tests for the quiz type factory function."""
+
+    def test_unknown_grammatical_categories(self):
+        """Test that unknown grammatical categoriews throw an exception."""
+        self.assertRaises(NotImplementedError, quiz_type_factory, ("not a gramatical category",))
