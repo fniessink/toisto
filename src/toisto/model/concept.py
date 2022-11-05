@@ -8,11 +8,11 @@ from typing import cast, get_args, Iterable, Sequence, Union
 from toisto.metadata import Language
 
 from .grammar import GrammaticalCategory
-from .label import Label, Labels
-from .quiz import Quiz, QuizType, quiz_factory, quiz_type_factory
+from .label import Labels, label_factory
+from .quiz import Quizzes, Quiz, QuizType, quiz_factory, quiz_type_factory
 
 
-ConceptDict = dict[Language, Label | Labels]
+ConceptDict = dict[Language, str | list[str]]
 CompositeConceptDict = dict[GrammaticalCategory, Union["CompositeConceptDict", ConceptDict]]
 
 
@@ -22,7 +22,7 @@ class Concept:
     def __init__(self, labels: dict[Language, Labels]) -> None:
         self._labels = labels
 
-    def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
+    def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
         return (
             quiz_factory(language, source_language, self.labels(language), self.labels(source_language))
@@ -43,12 +43,7 @@ class Concept:
     @classmethod
     def from_dict(cls, concept_dict: ConceptDict) -> Concept:
         """Instantiate a concept from a dict."""
-        return cls(
-            {
-                language: cast(Labels, (label if isinstance(label, list) else [label]))
-                for language, label in concept_dict.items()
-            }
-        )
+        return cls({language: label_factory(label) for language, label in concept_dict.items()})
 
 
 ConceptPair = tuple[Concept, Concept]
@@ -61,7 +56,7 @@ class CompositeConcept:
         self._concepts = concepts
         self._quiz_types = quiz_types
 
-    def quizzes(self, language: Language, source_language: Language) -> list[Quiz]:
+    def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept."""
         result = []
         for concept in self._concepts:
@@ -72,7 +67,7 @@ class CompositeConcept:
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             quizzes = [
                 Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
-                if label1.split(";")[0] != label2.split(";")[0]
+                if label1 != label2
             ]
             result.extend(quizzes)
         return result

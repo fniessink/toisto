@@ -2,7 +2,7 @@
 
 import random
 
-from .quiz import Quiz
+from .quiz import Quiz, Quizzes
 from .quiz_progress import QuizProgress
 
 
@@ -20,13 +20,13 @@ class Progress:
         """Return the progress on the quiz."""
         return self.__progress_dict.get(str(quiz), QuizProgress())
 
-    def next_quiz(self, quizzes: list[Quiz]) -> Quiz | None:
+    def next_quiz(self, quizzes: Quizzes) -> Quiz | None:
         """Return the next quiz."""
         eligible_quizzes = self.__eligible_quizzes(quizzes)
         self.__current_quiz = random.choice(eligible_quizzes) if eligible_quizzes else None
         return self.__current_quiz
 
-    def __eligible_quizzes(self, quizzes: list[Quiz]) -> list[Quiz]:
+    def __eligible_quizzes(self, quizzes: Quizzes) -> Quizzes:
         """Return eligible quizzes."""
         eligible_quizzes = [quiz for quiz in quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
         quizzes_with_progress = [quiz for quiz in eligible_quizzes if self.__has_progress(quiz)]

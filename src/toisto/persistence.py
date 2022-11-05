@@ -6,7 +6,7 @@ import os
 import pathlib
 
 from .metadata import NAME, TOPIC_JSON_FILES, Language
-from .model import concept_factory, Progress, Quiz
+from .model import concept_factory, Progress, Quizzes
 from .output import show_error_and_exit
 
 
@@ -31,7 +31,7 @@ def dump_json(json_file_path: pathlib.Path, contents) -> None:
 
 def load_quizzes(
     language: Language, source_language: Language, topics_to_load: list[str], topic_files_to_load: list[str]
-) -> list[Quiz]:
+) -> Quizzes:
     """Load the entries from the topics and generate the quizzes."""
     quizzes = []
     topics: list[pathlib.Path] = []
