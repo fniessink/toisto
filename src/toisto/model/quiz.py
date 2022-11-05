@@ -103,6 +103,8 @@ def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -
     match grammatical_categories:
         case ("singular", "plural"):
             return ("pluralize", "singularize")
+        case ("female", "male", "neuter"):
+            return ("masculinize", "neuterize", "feminize", "neuterize", "feminize", "masculinize")
         case ("female", "male"):
             return ("masculinize", "feminize")
         case ("positive_degree", "comparitive_degree", "superlative_degree"):

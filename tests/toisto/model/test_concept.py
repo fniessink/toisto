@@ -123,6 +123,33 @@ class ConceptTest(unittest.TestCase):
             concept.quizzes("nl", "en")
         )
 
+    def test_grammatical_gender_with_neuter(self):
+        """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
+        concept = concept_factory(
+            dict(
+                female=dict(en="Her bone", nl="Haar bot"),
+                male=dict(en="His bone", nl="Zijn bot"),
+                neuter=dict(en="Its bone", nl="Zijn bot")
+            )
+        )
+        self.assertEqual(
+            [
+                Quiz("nl", "en", "Haar bot", ["Her bone"], "translate"),
+                Quiz("en", "nl", "Her bone", ["Haar bot"], "translate"),
+                Quiz("nl", "en", "Zijn bot", ["His bone"], "translate"),
+                Quiz("en", "nl", "His bone", ["Zijn bot"], "translate"),
+                Quiz("nl", "en", "Zijn bot", ["Its bone"], "translate"),
+                Quiz("en", "nl", "Its bone", ["Zijn bot"], "translate"),
+                Quiz("nl", "nl", "Haar bot", ["Zijn bot"], "masculinize"),
+                Quiz("nl", "nl", "Haar bot", ["Zijn bot"], "neuterize"),
+                Quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
+                Quiz("nl", "nl", "Zijn bot", ["Zijn bot"], "neuterize"),
+                Quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
+                Quiz("nl", "nl", "Zijn bot", ["Zijn bot"], "masculinize")
+            ],
+            concept.quizzes("nl", "en")
+        )
+
     def test_grammatical_number_with_grammatical_gender(self):
         """Test that quizzes can be generated for grammatical number nested with grammatical gender."""
         concept = concept_factory(
