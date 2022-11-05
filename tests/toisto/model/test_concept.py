@@ -330,8 +330,8 @@ class ConceptTest(unittest.TestCase):
         """Test that quizzes can be generated for nested concepts."""
         concept = concept_factory(
             dict(
-                male=dict(singular=dict(en="His cat", nl="Zijn kat"), plural=dict(en="His cats", nl="Zijn katten")),
-                female=dict(singular=dict(en="Her cat", nl="Haar kat"), plural=dict(en="Her cats", nl="Haar katten"))
+                female=dict(singular=dict(en="Her cat", nl="Haar kat"), plural=dict(en="Her cats", nl="Haar katten")),
+                male=dict(singular=dict(en="His cat", nl="Zijn kat"), plural=dict(en="His cats", nl="Zijn katten"))
             )
         )
         self.assertEqual(

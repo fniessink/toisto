@@ -29,9 +29,9 @@ dev = [
     "build == 0.8.0",
     "coverage == 6.5.0",
     "green == 3.4.3",
-    "mypy == 0.971",
+    "mypy == 0.982",
     "pip == 22.3",
-    "pylint == 2.15.3",
+    "pylint == 2.15.5",
     "twine == 4.0.1"
 ]
 
@@ -59,3 +59,6 @@ source = ["src", "tests"]
 [tool.coverage.report]
 fail_under = 100
 skip_covered = true
+
+[tool.mypy]
+enable_recursive_aliases = true

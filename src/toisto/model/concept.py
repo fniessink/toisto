@@ -3,15 +3,17 @@
 from __future__ import annotations
 
 from itertools import permutations
-from typing import Iterable, cast, Sequence
+from typing import cast, get_args, Iterable, Sequence, Union
 
 from toisto.metadata import Language
 
-from .label import Labels
-from .quiz import Quiz, QuizType, quiz_factory
+from .grammar import GrammaticalCategory
+from .label import Label, Labels
+from .quiz import Quiz, QuizType, quiz_factory, quiz_type_factory
 
 
-ConceptDict = dict[Language, str | list[str]]
+ConceptDict = dict[Language, Label | Labels]
+CompositeConceptDict = dict[GrammaticalCategory, Union["CompositeConceptDict", ConceptDict]]
 
 
 class Concept:
@@ -92,33 +94,14 @@ class CompositeConcept:
                 yield cast(ConceptPair, permutation), quiz_type
 
     @classmethod
-    def from_dict(cls, concept_dict, keys: Sequence[str], quiz_types: Sequence[QuizType]) -> CompositeConcept:
+    def from_dict(cls, concept_dict: CompositeConceptDict) -> CompositeConcept:
         """Instantiate a concept from a dict."""
-        return cls(tuple(concept_factory(concept_dict[key]) for key in keys), quiz_types)
+        keys = concept_dict.keys()
+        return cls(tuple(concept_factory(concept_dict[key]) for key in keys), quiz_type_factory(tuple(keys)))
 
 
-def concept_factory(concept_dict) -> Concept | CompositeConcept:
+def concept_factory(concept_dict: CompositeConceptDict | ConceptDict) -> CompositeConcept | Concept:
     """Create a concept from the concept dict."""
-    if {"singular", "plural"} <= set(concept_dict):
-        return CompositeConcept.from_dict(concept_dict, ("singular", "plural"), ("pluralize", "singularize"))
-    if {"female", "male"} <= set(concept_dict):
-        return CompositeConcept.from_dict(concept_dict, ("female", "male"), ("masculinize", "feminize"))
-    if {"positive_degree", "comparitive_degree", "superlative_degree"} <= set(concept_dict):
-        return CompositeConcept.from_dict(
-            concept_dict,
-            ("positive_degree", "comparitive_degree", "superlative_degree"),
-            (
-                "give comparitive degree", "give superlative degree", "give positive degree",
-                "give superlative degree", "give positive degree", "give comparitive degree"
-            )
-        )
-    if {"first_person", "second_person", "third_person"} <= set(concept_dict):
-        return CompositeConcept.from_dict(
-            concept_dict,
-            ("first_person", "second_person", "third_person"),
-            (
-                "give second person", "give third person", "give first person",
-                "give third person", "give first person", "give second person"
-            )
-        )
+    if set(get_args(GrammaticalCategory)) & set(concept_dict):
+        return CompositeConcept.from_dict(cast(CompositeConceptDict, concept_dict))
     return Concept.from_dict(cast(ConceptDict, concept_dict))

@@ -7,6 +7,7 @@ from typing import cast, Literal
 from toisto.match import match
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
+from .grammar import GrammaticalCategory
 from .label import Label, Labels
 
 
@@ -95,3 +96,24 @@ def quiz_factory(  # pylint: disable=too-many-arguments
         [Quiz(language1, language2, label, labels2, quiz_type1) for label in labels1] +
         [Quiz(language2, language1, label, labels1, quiz_type2) for label in labels2]
     )
+
+
+def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -> tuple[QuizType, ...]:
+    """Generate the quiz types from the grammatical categories."""
+    match grammatical_categories:
+        case ("singular", "plural"):
+            return ("pluralize", "singularize")
+        case ("female", "male"):
+            return ("masculinize", "feminize")
+        case ("positive_degree", "comparitive_degree", "superlative_degree"):
+            return (
+                "give comparitive degree", "give superlative degree", "give positive degree",
+                "give superlative degree", "give positive degree", "give comparitive degree"
+            )
+        case ("first_person", "second_person", "third_person"):
+            return (
+                "give second person", "give third person", "give first person",
+                "give third person", "give first person", "give second person"
+            )
+        case _:
+            raise NotImplementedError(f"Don't know how to generate guizzes for {grammatical_categories}")
