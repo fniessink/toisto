@@ -383,7 +383,6 @@ class ConceptTest(unittest.TestCase):
 
     def test_same_label_in_different_composite_concepts(self):
         """Test that the same label in different leaf concepts is ignored."""
-        self.maxDiff = None
         concept = concept_factory(
             dict(
                 female=dict(en="She is|She's", fi="Hän on|On;female"),
