@@ -3,11 +3,11 @@
 from rich.table import Table
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
-from toisto.model import Progress, Quiz
+from toisto.model import Progress, Quizzes
 from toisto.output import console
 
 
-def show_progress(language: Language, quizzes: list[Quiz], progress: Progress) -> None:
+def show_progress(language: Language, quizzes: Quizzes, progress: Progress) -> None:
     """Show progress."""
     table = Table(title=f"Progress {SUPPORTED_LANGUAGES[language]}")
     table.add_column("Quiz type")

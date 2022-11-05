@@ -91,6 +91,9 @@ class Quiz:
         return self._question.split(";")[1] if ";" in self._question else ""
 
 
+Quizzes = list[Quiz]
+
+
 def quiz_factory(  # pylint: disable=too-many-arguments
     language1: Language,
     language2: Language,
@@ -98,7 +101,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     labels2: Labels,
     quiz_type1: QuizType = "translate",
     quiz_type2: QuizType = "translate"
-) -> list[Quiz]:
+) -> Quizzes:
     """Create quizzes."""
     return (
         [Quiz(language1, language2, label, labels2, quiz_type1) for label in labels1] +
