@@ -72,6 +72,7 @@ class CompositeConcept:
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             quizzes = [
                 Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
+                if label1.split(";")[0] != label2.split(";")[0]
             ]
             result.extend(quizzes)
         return result

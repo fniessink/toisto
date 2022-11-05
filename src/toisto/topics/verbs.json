@@ -7,14 +7,21 @@
                 "nl": "Ik heb"
             },
             "second_person": {
-                "en": "You have|You've",
+                "en": "You have|You've;singular",
                 "fi": "Sinulla on",
                 "nl": "Jij hebt|Je hebt"
             },
             "third_person": {
-                "en": ["He has|He's", "She has|She's"],
-                "nl": ["Hij heeft", "Zij heeft|Ze heeft"],
-                "fi": "Hänellä on"
+                "female": {
+                    "en": "She has|She's",
+                    "nl": "Zij heeft|Ze heeft",
+                    "fi": "Hänellä on;female"
+                },
+                "male": {
+                    "en": "He has|He's",
+                    "nl": "Hij heeft",
+                    "fi": "Hänellä on;male"
+                }
             }
         },
         "plural": {
@@ -24,7 +31,7 @@
                 "nl": "Wij hebben|We hebben"
             },
             "second_person": {
-                "en": "You have|You've",
+                "en": "You have|You've;plural",
                 "fi": "Teillä on",
                 "nl": "Jullie hebben"
             },
@@ -43,14 +50,21 @@
                 "nl": "Ik ben"
             },
             "second_person": {
-                "en": "You are|You're",
+                "en": "You are|You're;singular",
                 "fi": "Sinä olet|Olet",
                 "nl": "Jij bent|Je bent"
             },
             "third_person": {
-                "en": ["He is|He's", "She is|She's"],
-                "fi": "Hän on|On",
-                "nl": ["Hij is", "Zij is|Ze is"]
+                "female": {
+                    "en": "She is|She's",
+                    "fi": "Hän on|On;female",
+                    "nl": "Zij is|Ze is"
+                },
+                "male": {
+                    "en": "He is|He's",
+                    "fi": "Hän on|On;male",
+                    "nl": "Hij is"
+                }
             }
         },
         "plural": {
@@ -60,7 +74,7 @@
                 "nl": "Wij zijn|We zijn"
             },
             "second_person": {
-                "en": "You are|You're",
+                "en": "You are|You're;plural",
                 "fi": "Te olette|Olette",
                 "nl": "Jullie zijn"
             },

@@ -67,7 +67,7 @@ class Quiz:
     @property
     def answers(self) -> Labels:
         """Return all answers."""
-        answers = [answer.split("|") for answer in self._answers]
+        answers = [answer.split(";")[0].split("|") for answer in self._answers]
         return cast(Labels, list(chain(*answers)))
 
     def other_answers(self, guess: Label) -> Labels:
@@ -77,12 +77,18 @@ class Quiz:
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}"
+        if hint := self.__hint():
+            hint = f" ({hint})"
+        return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
     @staticmethod
     def __first_spelling_alternative(label: Label) -> Label:
         """Extract the first spelling alternative from the label."""
-        return Label(label.split("|")[0])
+        return Label(label.split(";")[0].split("|")[0])
+
+    def __hint(self) -> str:
+        """Get the hint from the question."""
+        return self._question.split(";")[1] if ";" in self._question else ""
 
 
 def quiz_factory(  # pylint: disable=too-many-arguments
