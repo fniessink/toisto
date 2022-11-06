@@ -5,30 +5,64 @@
         "nl": "De familie"
     },
     {
-        "en": "Grandma",
-        "fi": [
-            "Mummo",
-            "Mummi"
-        ],
-        "nl": "De oma"
+        "singular": {
+            "en": "Grandma",
+            "fi": [
+                "Mummo",
+                "Mummi"
+            ],
+            "nl": "De oma"
+        },
+        "plural": {
+            "en": "Grandmas",
+            "fi": [
+                "Mummot",
+                "Mummit"
+            ],
+            "nl": "De oma's"
+        }
     },
     {
-        "en": "Grandpa",
-        "fi": [
-            "Vaari",
-            "Ukki"
-        ],
-        "nl": "De opa"
+        "singular": {
+            "en": "Grandpa",
+            "fi": [
+                "Vaari",
+                "Ukki"
+            ],
+            "nl": "De opa"
+        },
+        "plural": {
+            "en": "Grandpas",
+            "fi": [
+                "Vaarit",
+                "Ukit"
+            ],
+            "nl": "De opa's"
+        }
     },
     {
-        "en": "Grandmother",
-        "fi": "Isoäiti",
-        "nl": "De grootmoeder"
+        "singular": {
+            "en": "Grandmother",
+            "fi": "Isoäiti",
+            "nl": "De grootmoeder"
+        },
+        "plural": {
+            "en": "Grandmothers",
+            "fi": "Isoäidit",
+            "nl": "De grootmoeders"
+        }
     },
     {
-        "en": "Grandfather",
-        "fi": "Isoisä",
-        "nl": "De grootvader"
+        "singular": {
+            "en": "Grandfather",
+            "fi": "Isoisä",
+            "nl": "De grootvader"
+        },
+        "plural": {
+            "en": "Grandfathers",
+            "fi": "Isoisät",
+            "nl": "De grootvaders"
+        }
     },
     {
         "en": "Married",
@@ -41,67 +75,154 @@
         "nl": "Gescheiden"
     },
     {
-        "en": "Mother",
-        "fi": "Äiti",
-        "nl": "De moeder"
+        "singular": {
+            "en": "Mother",
+            "fi": "Äiti",
+            "nl": "De moeder"
+        },
+        "plural": {
+            "en": "Mothers",
+            "fi": "Äidit",
+            "nl": "De moeders"
+        }
     },
     {
-        "en": "Father",
-        "fi": "Isä",
-        "nl": "De vader"
+        "singular": {
+            "en": "Father",
+            "fi": "Isä",
+            "nl": "De vader"
+        },
+        "plural": {
+            "en": "Fathers",
+            "fi": "Isät",
+            "nl": "De vaders"
+        }
     },
     {
-        "en": "Child",
-        "fi": "Lapsi",
-        "nl": "Het kind"
+        "singular": {
+            "en": "Child",
+            "fi": "Lapsi",
+            "nl": "Het kind"
+        },
+        "plural": {
+            "en": "Children",
+            "fi": "Lapset",
+            "nl": "De kinderen"
+        }
     },
     {
-        "en": "Sister",
-        "fi": "Sisko",
-        "nl": "De zus"
+        "singular": {
+            "en": "Sister",
+            "fi": "Sisko",
+            "nl": "De zus"
+        },
+        "plural": {
+            "en": "Sisters",
+            "fi": "Siskot",
+            "nl": "De zussen"
+        }
     },
     {
-        "en": "Brother",
-        "fi": "Veli",
-        "nl": "De broer"
+        "singular": {
+            "en": "Brother",
+            "fi": "Veli",
+            "nl": "De broer"
+        },
+        "plural": {
+            "en": "Brothers",
+            "fi": "Veljet",
+            "nl": "De broers"
+        }
     },
     {
-        "en": "Cousin",
-        "fi": "Serkku",
-        "nl": [
-            "De neef",
-            "De nicht"
-        ]
+        "singular": {
+            "en": "Cousin",
+            "fi": "Serkku",
+            "nl": [
+                "De neef",
+                "De nicht"
+            ]
+        },
+        "plural": {
+            "en": "Cousins",
+            "fi": "Serkut",
+            "nl": [
+                "De neven",
+                "De nichten"
+            ]
+        }
     },
     {
-        "en": "Grandchild",
-        "fi": "Lapsenlapsi",
-        "nl": "Het kleinkind"
+        "singular": {
+            "en": "Grandchild",
+            "fi": "Lapsenlapsi",
+            "nl": "Het kleinkind"
+        },
+        "plural": {
+            "en": "Grandchildren",
+            "fi": "Lapsenlapset",
+            "nl": "De kleinkinderen"
+        }
     },
     {
-        "en": "Daughter",
-        "fi": "Tytär",
-        "nl": "De dochter"
+        "singular": {
+            "en": "Daughter",
+            "fi": "Tytär",
+            "nl": "De dochter"
+        },
+        "plural": {
+            "en": "Daughters",
+            "fi": "Tyttäret",
+            "nl": "De dochters"
+        }
     },
     {
-        "en": "Son",
-        "fi": "Poika",
-        "nl": "De zoon"
+        "singular": {
+            "en": "Son",
+            "fi": "Poika",
+            "nl": "De zoon"
+        },
+        "plural": {
+            "en": "Sons",
+            "fi": "Pojat",
+            "nl": "De zonen"
+        }
     },
     {
-        "en": "Wife",
-        "fi": "Vaimo",
-        "nl": "De echtgenote"
+        "singular": {
+            "en": "Wife",
+            "fi": "Vaimo",
+            "nl": "De echtgenote"
+        },
+        "plural": {
+            "en": "Wives",
+            "fi": "Vaimot",
+            "nl": "De echtgenotes"
+        }
     },
     {
-        "en": "Husband",
-        "fi": "Aviomies",
-        "nl": "De echtgenoot"
+        "singular": {
+            "en": "Husband",
+            "fi": "Aviomies|Mies",
+            "nl": "De echtgenoot"
+        },
+        "plural": {
+            "en": "Husbands",
+            "fi": "Aviomiehet|Miehet",
+            "nl": "De echtgenoten"
+        }
     },
     {
-        "en": "Spouse",
-        "fi": "Puoliso",
-        "nl": "De partner"
+        "singular": {
+            "en": "Spouse",
+            "fi": "Puoliso",
+            "nl": "De partner"
+        },
+        "plural": {
+            "en": "Spouses",
+            "fi": "Puolisot",
+            "nl": "De partners"
+        }
     },
     {
         "en": "Marriage",
@@ -109,13 +230,63 @@
         "nl": "Het huwelijk"
     },
     {
-        "en": "Parents",
-        "fi": "Vanhemmat",
-        "nl": "De ouders"
+        "singular": {
+            "en": "Parent",
+            "fi": "Vanhempi",
+            "nl": "De ouder"
+        },
+        "plural": {
+            "en": "Parents",
+            "fi": "Vanhemmat",
+            "nl": "De ouders"
+        }
     },
     {
-        "en": "Grandparents",
-        "fi": "Isovanhemmat",
-        "nl": "De grootouders"
+        "singular": {
+            "en": "Grandparent",
+            "fi": "Isovanhempi",
+            "nl": "De grootouder"
+        },
+        "plural": {
+            "en": "Grandparents",
+            "fi": "Isovanhemmat",
+            "nl": "De grootouders"
+        }
+    },
+    {
+        "singular":{
+            "en": "Parent-in-law",
+            "fi": "Appivanhempi",
+            "nl": "De schoonouder"
+        },
+        "plural":{
+            "en": "Parents-in-law",
+            "fi": "Appivanhemmat",
+            "nl": "De schoonouders"
+        }
+    },
+    {
+        "singular": {
+            "en": "Stepfather",
+            "fi": "Isäpuoli",
+            "nl": "De stiefvader"
+        },
+        "plural": {
+            "en": "Stepfathers",
+            "fi": "Isäpuolet",
+            "nl": "De stiefvaders"
+        }
+    },
+    {
+        "singular": {
+            "en": "Stepmother",
+            "fi": "Äitipuoli",
+            "nl": "De stiefmoeder"
+        },
+        "plural": {
+            "en": "Stepmothers",
+            "fi": "Äitipuolet",
+            "nl": "De stiefmoeders"
+        }
     }
 ]
