@@ -1,17 +1,17 @@
 """Unit tests for the output."""
 
-import unittest
-
-from toisto.model import Label, Progress, Quiz
+from toisto.model import Label, Progress
 from toisto.output import feedback_correct, feedback_incorrect, instruction
 
+from .base import ToistoTestCase
 
-class FeedbackTestCase(unittest.TestCase):
+
+class FeedbackTestCase(ToistoTestCase):
     """Unit tests for the feedback function."""
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("nl", "fi", Label("Hoi"), [Label("Terve")])
+        self.quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve"])
         self.guess = Label("Terve")
         self.progress = Progress({})
 
@@ -56,7 +56,7 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
+        quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
         expected_other_answer = quiz.other_answers(self.guess)[0]
         self.assertEqual(
@@ -66,7 +66,7 @@ class FeedbackTestCase(unittest.TestCase):
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        quiz = Quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_progress(quiz))
         other_answers = [f'"{answer}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
