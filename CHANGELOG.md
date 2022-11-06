@@ -13,11 +13,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
-- Added more words and sentences to the days and time topics.
+- Added more words and sentences to the days, time, and greetings topics.
+- Allow for specifying hints, for example to tell users to interpret "You are" as either singular or plural.
 
 ### Changed
 
-- To not overwhelm the user with new quizzes, give preference to guizzes the user has seen before when selecting the next quiz.
+- To not overwhelm the user with new quizzes, give preference to quizzes the user has seen before when selecting the next quiz.
 
 ## v0.0.12 - 2022-10-30
 

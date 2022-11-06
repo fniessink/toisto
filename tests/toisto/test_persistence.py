@@ -4,8 +4,10 @@ import unittest
 from unittest.mock import patch, MagicMock, Mock
 
 from toisto.metadata import NAME
-from toisto.model import QuizProgress, Progress, Quiz
+from toisto.model import Progress, QuizProgress
 from toisto.persistence import dump_json, load_quizzes, load_json, load_progress, save_progress, PROGRESS_JSON
+
+from .base import ToistoTestCase
 
 
 class PersistenceTestCase(unittest.TestCase):
@@ -43,16 +45,20 @@ class DumpJSONTest(PersistenceTestCase):
         dump.assert_called_once_with(self.contents, json_file)
 
 
-class LoadEntriesTest(unittest.TestCase):
+class LoadEntriesTest(ToistoTestCase):
     """Unit tests for loading the entries."""
+
+    def setUp(self) -> None:
+        """Override to set up test fixtures."""
+        self.quiz = self.create_quiz("fi", "nl", "Tervetuloa", ["Welkom"])
 
     def test_load_entries(self):
         """Test that the entries can be loaded."""
-        self.assertIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi", "nl", [], []))
+        self.assertIn(self.quiz, load_quizzes("fi", "nl", [], []))
 
     def test_load_entries_by_name(self):
         """Test that a subset of the entries can be loaded."""
-        self.assertNotIn(Quiz("fi", "nl", "Tervetuloa", ["Welkom"]), load_quizzes("fi",  "nl", ["family"], []))
+        self.assertNotIn(self.quiz, load_quizzes("fi",  "nl", ["family"], []))
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")

@@ -57,17 +57,17 @@ class Quiz:
     @property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""
-        return self.__first_spelling_alternative(self._question)
+        return self._question.first_spelling_alternative()
 
     @property
     def answer(self) -> Label:
         """Return the first spelling alternative of the first answer."""
-        return self.__first_spelling_alternative(self._answers[0])
+        return self._answers[0].first_spelling_alternative()
 
     @property
     def answers(self) -> Labels:
         """Return all answers."""
-        answers = [answer.split(";")[0].split("|") for answer in self._answers]
+        answers = [answer.spelling_alternatives() for answer in self._answers]
         return cast(Labels, list(chain(*answers)))
 
     def other_answers(self, guess: Label) -> Labels:
@@ -77,18 +77,9 @@ class Quiz:
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        if hint := self.__hint():
+        if hint := self._question.hint():
             hint = f" ({hint})"
         return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
-
-    @staticmethod
-    def __first_spelling_alternative(label: Label) -> Label:
-        """Extract the first spelling alternative from the label."""
-        return Label(label.split(";")[0].split("|")[0])
-
-    def __hint(self) -> str:
-        """Get the hint from the question."""
-        return self._question.split(";")[1] if ";" in self._question else ""
 
 
 Quizzes = list[Quiz]

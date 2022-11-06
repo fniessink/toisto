@@ -1,17 +1,17 @@
 """Progress unit tests."""
 
-import unittest
+from toisto.model import Progress
 
-from toisto.model import Label, Progress, Quiz
+from ..base import ToistoTestCase
 
 
-class ProgressTest(unittest.TestCase):
+class ProgressTest(ToistoTestCase):
     """Unit tests for the progress class."""
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = Quiz("fi", "nl", Label("Englanti"), [Label("Engels")])
-        self.another_quiz = Quiz("nl", "fi", Label("Engels"), [Label("Englanti")])
+        self.quiz = self.create_quiz("fi", "nl", "Englanti", ["Engels"])
+        self.another_quiz = self.create_quiz("nl", "fi", "Engels", ["Englanti"])
         self.progress = Progress({})
 
     def test_progress_new_quiz(self):
@@ -32,7 +32,7 @@ class ProgressTest(unittest.TestCase):
         """Test that the next quiz is not silenced."""
         self.progress.update(self.quiz, correct=True)
         self.progress.update(self.quiz, correct=True)
-        another_quiz = Quiz("fi", "en", "Englanti", "English")
+        another_quiz = self.create_quiz("fi", "en", "Englanti", ["English"])
         self.assertEqual(another_quiz, self.progress.next_quiz([self.quiz, another_quiz]))
 
     def test_no_next_quiz(self):
@@ -48,7 +48,9 @@ class ProgressTest(unittest.TestCase):
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
-        quizzes = [Quiz("nl", "fi", f"Dutch label {index}", f"Finnish label {index}") for index in range(5)]
+        quizzes = [
+            self.create_quiz("nl", "fi", f"Dutch label {index}", [f"Finnish label {index}"]) for index in range(5)
+        ]
         for index in range(3):
             self.progress.update(quizzes[index], correct=True)
         self.assertIn(self.progress.next_quiz(quizzes), quizzes[:3])

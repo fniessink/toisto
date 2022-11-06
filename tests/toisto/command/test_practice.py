@@ -1,21 +1,22 @@
 """Unit tests for the practice command."""
 
-import unittest
 from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
-from toisto.model import Label, Progress, Quiz
+from toisto.model import Progress
 from toisto.output import DONE, TRY_AGAIN
+
+from ..base import ToistoTestCase
 
 
 @patch("os.system", Mock())
 @patch("pathlib.Path.open", MagicMock())
-class PracticeTest(unittest.TestCase):
+class PracticeTest(ToistoTestCase):
     """Test the practice command."""
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        self.quiz = Quiz("fi", "nl", Label("Terve"), [Label("Hoi")])
+        self.quiz = self.create_quiz("fi", "nl", "Terve", ["Hoi"])
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz(self):
