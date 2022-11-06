@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
-- Added more words and sentences to the days, time, and greetings topics.
+- Added more words and sentences to the days, time, family, and greetings topics.
 - Allow for specifying hints, for example to tell users to interpret "You are" as either singular or plural.
 
 ### Changed
