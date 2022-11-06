@@ -15,7 +15,7 @@ class Label(str):
 
     def spelling_alternatives(self) -> "Labels":
         """Extract the spelling alternatives from the label."""
-        return [self.__class__(label) for label in self.split(";", maxsplit=0)[0].split("|")]
+        return [self.__class__(label) for label in self.split(";", maxsplit=1)[0].split("|")]
 
     def first_spelling_alternative(self) -> "Label":
         """Extract the first spelling alternative from the label."""

@@ -34,8 +34,8 @@ class QuizTest(ToistoTestCase):
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
-        quiz = self.create_quiz("fi", "nl", "Yksi", ["Een", "Eén"])
-        self.assertEqual(["Eén"], quiz.other_answers("Een"))
+        quiz = self.create_quiz("fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"])
+        self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
 
     def test_instruction(self):
         """Test the quiz instruction."""
