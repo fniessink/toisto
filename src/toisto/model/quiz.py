@@ -90,14 +90,18 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     language2: Language,
     labels1: Labels,
     labels2: Labels,
-    quiz_type1: QuizType = "translate",
-    quiz_type2: QuizType = "translate"
+    quiz_type: QuizType = "translate"
 ) -> Quizzes:
     """Create quizzes."""
-    return (
-        [Quiz(language1, language2, label, labels2, quiz_type1) for label in labels1] +
-        [Quiz(language2, language1, label, labels1, quiz_type2) for label in labels2]
-    )
+    if quiz_type == "translate":
+        return (
+            [Quiz(language1, language2, label, labels2) for label in labels1] +
+            [Quiz(language2, language1, label, labels1) for label in labels2]
+        )
+    return [
+        Quiz(language1, language2, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
+        if label1 != label2
+    ]
 
 
 def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -> tuple[QuizType, ...]:

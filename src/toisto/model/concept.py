@@ -9,7 +9,7 @@ from toisto.metadata import Language
 
 from .grammar import GrammaticalCategory
 from .label import Labels, label_factory
-from .quiz import Quizzes, Quiz, QuizType, quiz_factory, quiz_type_factory
+from .quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 
 
 ConceptDict = dict[Language, str | list[str]]
@@ -65,11 +65,7 @@ class CompositeConcept:
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            quizzes = [
-                Quiz(language, language, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
-                if label1 != label2
-            ]
-            result.extend(quizzes)
+            result.extend(quiz_factory(language, language, labels1, labels2, quiz_type))
         return result
 
     def has_labels(self, *languages: Language) -> bool:
