@@ -1,9 +1,9 @@
 """Unit tests for the output."""
 
 from toisto.model import Label, Progress
-from toisto.output import feedback_correct, feedback_incorrect, instruction
+from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
-from .base import ToistoTestCase
+from ..base import ToistoTestCase
 
 
 class FeedbackTestCase(ToistoTestCase):

@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import patch
 
-from toisto.speech import say
+from toisto.ui.speech import say
 
 
 class SayTest(unittest.TestCase):

@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.diff import colored_diff
+from toisto.ui.diff import colored_diff
 
 
 class DiffTest(unittest.TestCase):

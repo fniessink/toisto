@@ -9,8 +9,8 @@ from rich.console import Console
 from rich.theme import Theme
 
 from .diff import colored_diff
-from .metadata import NAME, VERSION
-from .model import Label, Quiz, QuizProgress
+from ..metadata import NAME, VERSION
+from ..model import Label, Quiz, QuizProgress
 
 
 theme = Theme({

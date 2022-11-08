@@ -4,11 +4,11 @@ from dataclasses import dataclass
 from itertools import chain
 from typing import cast, Literal
 
-from toisto.match import match
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
 from .grammar import GrammaticalCategory
 from .label import Label, Labels
+from .match import match
 
 
 QuizType = Literal[

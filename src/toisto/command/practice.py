@@ -1,9 +1,9 @@
 """Practice command."""
 
 from toisto.model import Label, Progress, Quiz
-from toisto.output import console, feedback_correct, feedback_incorrect, instruction, DONE, WELCOME, TRY_AGAIN
+from toisto.ui.text import console, feedback_correct, feedback_incorrect, instruction, DONE, WELCOME, TRY_AGAIN
+from toisto.ui.speech import say
 from toisto.persistence import save_progress
-from toisto.speech import say
 
 
 def do_quiz(quiz: Quiz, progress: Progress) -> None:
