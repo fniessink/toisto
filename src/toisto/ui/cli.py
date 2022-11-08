@@ -2,7 +2,7 @@
 
 import argparse
 
-from .metadata import SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
+from ..metadata import SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
 
 
 parser = argparse.ArgumentParser(description=SUMMARY)

@@ -4,7 +4,7 @@ from rich.table import Table
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 from toisto.model import Progress, Quizzes
-from toisto.output import console
+from toisto.ui.text import console
 
 
 def show_progress(language: Language, quizzes: Quizzes, progress: Progress) -> None:

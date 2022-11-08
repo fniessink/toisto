@@ -5,70 +5,8 @@ from unittest.mock import patch, MagicMock, Mock
 
 from toisto.metadata import NAME
 from toisto.model import Progress, QuizProgress
-from toisto.persistence import dump_json, load_quizzes, load_json, load_progress, save_progress, PROGRESS_JSON
-
-from .base import ToistoTestCase
-
-
-class PersistenceTestCase(unittest.TestCase):
-    """Base class for persistence unit tests."""
-
-    def setUp(self):
-        """Override to set up the file path."""
-        self.file_path = MagicMock()
-        self.contents = dict(foo="bar")
-
-
-class LoadJSONTest(PersistenceTestCase):
-    """Unit tests for loading JSON."""
-
-    def test_return_default_if_file_does_not_exist(self):
-        """Test that the default value is returned if the file does not exist."""
-        self.file_path.exists.return_value = False
-        self.assertEqual(self.contents, load_json(self.file_path, default=self.contents))
-
-    def test_return_file_contents(self):
-        """Test that the JSON contents are returned if the file exists."""
-        self.file_path.exists.return_value = True
-        self.file_path.open.return_value.__enter__.return_value.read.return_value = '{"foo": "bar"}'
-        self.assertEqual(self.contents, load_json(self.file_path))
-
-
-class DumpJSONTest(PersistenceTestCase):
-    """Unit tests for dumping JSON."""
-
-    @patch("json.dump")
-    def test_dump(self, dump):
-        """Test that the JSON is dumped."""
-        self.file_path.open.return_value.__enter__.return_value = json_file = MagicMock()
-        dump_json(self.file_path, self.contents)
-        dump.assert_called_once_with(self.contents, json_file)
-
-
-class LoadEntriesTest(ToistoTestCase):
-    """Unit tests for loading the entries."""
-
-    def setUp(self) -> None:
-        """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("fi", "nl", "Tervetuloa", ["Welkom"])
-
-    def test_load_entries(self):
-        """Test that the entries can be loaded."""
-        self.assertIn(self.quiz, load_quizzes("fi", "nl", [], []))
-
-    def test_load_entries_by_name(self):
-        """Test that a subset of the entries can be loaded."""
-        self.assertNotIn(self.quiz, load_quizzes("fi",  "nl", ["family"], []))
-
-    @patch("pathlib.Path.exists", Mock(return_value=False))
-    @patch("sys.stderr.write")
-    def test_load_topic_by_filename(self, stderr_write):
-        """Test that an error message is given when the topic file does not exist."""
-        self.assertRaises(SystemExit, load_quizzes, "fi",  "nl", [], ["file-does-not-exist"])
-        stderr_write.assert_called_with(
-            "Toisto cannot read topic file-does-not-exist: [Errno 2] No such file or directory: "
-            "'file-does-not-exist'.\n"
-        )
+from toisto.persistence import load_progress, save_progress
+from toisto.persistence.progress import PROGRESS_JSON
 
 
 class ProgressPersistenceTest(unittest.TestCase):

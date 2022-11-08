@@ -3,7 +3,7 @@
 import unittest
 from unittest.mock import Mock, patch
 
-from toisto.cli import parser
+from toisto.ui.cli import parser
 
 
 class ParserTest(unittest.TestCase):
