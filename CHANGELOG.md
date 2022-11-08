@@ -4,9 +4,15 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.0.15 - 2022-11-07
+## v0.0.15 - 2022-11-08
 
-- Fix the Dutch label for shortest in the degrees of comparison topic.
+### Fixed
+
+- Fix the Dutch label for "shortest" in the degrees of comparison topic.
+
+### Added
+
+- When selecting new quizzes for the user to answer, do so in the order of topics and order of concepts in the topic files. This makes sure the user will be quizzed on concepts and topics concepts they have already been working on, before being introduced to new concepts and topics. Closes [#32](https://github.com/fniessink/toisto/issues/32).
 
 ## v0.0.14 - 2022-11-06
 
