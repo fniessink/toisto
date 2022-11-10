@@ -45,6 +45,11 @@ class FeedbackTestCase(ToistoTestCase):
         self.assert_feedback_contains(
             feedback_text, "That's 10 times in a row. Skipping this quiz for", "hours"
         )
+        self.update_progress(4)
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
+        self.assert_feedback_contains(
+            feedback_text, "That's 14 times in a row. Skipping this quiz for", "hours"
+        )
 
     def test_correct_silenced_for_days(self):
         """Test that the correct feedback is given when the user guesses correctly."""
