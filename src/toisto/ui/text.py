@@ -50,12 +50,13 @@ PRAISE = [
 
 def format_duration(duration: timedelta) -> str:
     """Format the duration in a human friendly way."""
-    if duration.days >= 1.5:
+    if duration.days > 1:
         return f"{duration.days} days"
-    if duration.seconds >= 1.5 * 3600:  # 1.5 hours
-        hours = round(duration.seconds / 3600)
+    seconds = duration.seconds + (24 * 3600 if duration.days else 0)
+    if seconds >= 1.5 * 3600:  # 1.5 hours
+        hours = round(seconds / 3600)
         return f"{hours} hours"
-    minutes = round(duration.seconds / 60)
+    minutes = round(seconds / 60)
     return f"{minutes} minutes"
 
 
