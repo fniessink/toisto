@@ -94,6 +94,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Show until when a quiz is silenced in the progress table.
 - Add listening-only quizzes. Closes [#43](https://github.com/fniessink/toisto/issues/43).
+- Add a MacOS executable, downloadable via GitHub.
 
 ## v0.0.15 - 2022-11-08
 
