@@ -36,7 +36,7 @@ jobs:
         pylint src tests
     - name: Build MacOS executable
       run: |
-        pyinstaller src/pyinstaller_main.py
+        pyinstaller --onefile --name toisto src/pyinstaller_main.py
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
