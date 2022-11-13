@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - For some streak lengths, Toisto would not give the correct duration for which the quiz will be silenced.
 
+### Added
+
+- Show until when a quiz is silenced in the progress table.
+
 ## v0.0.15 - 2022-11-08
 
 ### Fixed
