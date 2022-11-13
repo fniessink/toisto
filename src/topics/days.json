@@ -44,7 +44,7 @@
         "singular": {
             "en": "Monday",
             "fi": "Maanantai",
-            "nl": "Maandag"
+            "nl": "Maandag|De maandag"
         },
         "plural": {
             "en": "Mondays",
@@ -56,7 +56,7 @@
         "singular": {
             "en": "Tuesday",
             "fi": "Tiistai",
-            "nl": "Dinsdag"
+            "nl": "Dinsdag|De dinsdag"
         },
         "plural": {
             "en": "Tuesdays",
@@ -68,7 +68,7 @@
         "singular": {
             "en": "Wednesday",
             "fi": "Keskiviikko",
-            "nl": "Woensdag"
+            "nl": "Woensdag|De woensdag"
         },
         "plural": {
             "en": "Wednesdays",
@@ -80,7 +80,7 @@
         "singular": {
             "en": "Thursday",
             "fi": "Torstai",
-            "nl": "Donderdag"
+            "nl": "Donderdag|De donderdag"
         },
         "plural": {
             "en": "Thursdays",
@@ -92,7 +92,7 @@
         "singular": {
             "en": "Friday",
             "fi": "Perjantai",
-            "nl": "Vrijdag"
+            "nl": "Vrijdag|De vrijdag"
         },
         "plural": {
             "en": "Fridays",
@@ -104,7 +104,7 @@
         "singular": {
             "en": "Saturday",
             "fi": "Lauantai",
-            "nl": "Zaterdag"
+            "nl": "Zaterdag|De zaterdag"
         },
         "plural": {
             "en": "Saturdays",
@@ -116,7 +116,7 @@
         "singular": {
             "en": "Sunday",
             "fi": "Sunnuntai",
-            "nl": "Zondag"
+            "nl": "Zondag|De zondag"
         },
         "plural": {
             "en": "Sundays",
