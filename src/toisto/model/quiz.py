@@ -13,6 +13,7 @@ from .match import match
 
 QuizType = Literal[
     "translate",
+    "listen",
     "pluralize",
     "singularize",
     "masculinize",
@@ -27,6 +28,7 @@ QuizType = Literal[
 ]
 INSTRUCTION: dict[QuizType, str] = {
     "translate": "Translate into",
+    "listen": "Listen and write in",
     "pluralize": "Give the [underline]plural[/underline] in",
     "singularize": "Give the [underline]singular[/underline] in",
     "masculinize": "Give the [underline]male[/underline] form in",
@@ -100,7 +102,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
         )
     return [
         Quiz(language1, language2, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
-        if label1 != label2
+        if label1 != label2 or quiz_type == "listen"
     ]
 
 

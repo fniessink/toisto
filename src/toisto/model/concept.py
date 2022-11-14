@@ -24,9 +24,12 @@ class Concept:
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
-        return (
-            quiz_factory(language, source_language, self.labels(language), self.labels(source_language))
-        ) if self.has_labels(language, source_language) else []
+        result = []
+        if self.has_labels(language, source_language):
+            result.extend(quiz_factory(language, source_language, self.labels(language), self.labels(source_language)))
+        if self.has_labels(language):
+            result.extend(quiz_factory(language, language, self.labels(language), self.labels(language), "listen"))
+        return result
 
     def has_labels(self, *languages: Language) -> bool:
         """Return whether the concept has labels for all the specified languages."""

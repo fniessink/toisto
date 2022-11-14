@@ -25,6 +25,21 @@ class PracticeTest(ToistoTestCase):
             practice([self.quiz], Progress({}))
         self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(return_value="hoi\n"))
+    def test_quiz_question(self):
+        """Test that the question is printed."""
+        with patch("rich.console.Console.print") as patched_print:
+            practice([self.quiz], Progress({}))
+        self.assertIn(call("Terve"), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(return_value="hoi\n"))
+    def test_quiz_listen(self):
+        """Test that the question is not printed on a listening quiz."""
+        quiz = self.create_quiz("fi", "fi", "Terve", ["Terve"], "listen")
+        with patch("rich.console.Console.print") as patched_print:
+            practice([quiz], Progress({}))
+        self.assertNotIn(call("Terve"), patched_print.call_args_list)
+
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
     def test_quiz_try_again(self):
         """Test that the user is quizzed."""
