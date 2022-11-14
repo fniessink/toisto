@@ -9,11 +9,13 @@ from toisto.persistence import save_progress
 def do_quiz(quiz: Quiz, progress: Progress) -> None:
     """Do one quiz and update the progress."""
     console.print(instruction(quiz))
-    console.print(quiz.question)
+    if quiz.quiz_type != "listen":
+        console.print(quiz.question)
     say(quiz.question_language, quiz.question)
     guess = Label(input("> "))
     correct = quiz.is_correct(guess)
     if not correct:
+        say(quiz.question_language, quiz.question)
         console.print(TRY_AGAIN)
         guess = Label(input("> "))
         correct = quiz.is_correct(guess)

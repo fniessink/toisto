@@ -24,9 +24,12 @@ class Concept:
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
-        return (
-            quiz_factory(language, source_language, self.labels(language), self.labels(source_language))
-        ) if self.has_labels(language, source_language) else []
+        result = set()
+        if self.has_labels(language, source_language):
+            result.update(quiz_factory(language, source_language, self.labels(language), self.labels(source_language)))
+        if self.has_labels(language):
+            result.update(quiz_factory(language, language, self.labels(language), self.labels(language), "listen"))
+        return result
 
     def has_labels(self, *languages: Language) -> bool:
         """Return whether the concept has labels for all the specified languages."""
@@ -58,14 +61,14 @@ class CompositeConcept:
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept."""
-        result = []
+        result = set()
         for concept in self._concepts:
-            result.extend(concept.quizzes(language, source_language))
+            result.update(concept.quizzes(language, source_language))
         if not self.has_labels(language):
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            result.extend(quiz_factory(language, language, labels1, labels2, quiz_type))
+            result.update(quiz_factory(language, language, labels1, labels2, quiz_type))
         return result
 
     def has_labels(self, *languages: Language) -> bool:

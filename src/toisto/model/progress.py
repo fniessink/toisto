@@ -1,6 +1,7 @@
 """Progress model class."""
 
 import random
+import re
 
 from .quiz import Quiz, Quizzes
 from .quiz_progress import QuizProgress
@@ -9,7 +10,12 @@ from .quiz_progress import QuizProgress
 class Progress:
     """Keep track of progress on quizzes."""
     def __init__(self, progress_dict: dict[str, dict[str, int | str]]) -> None:
-        self.__progress_dict = {key: QuizProgress.from_dict(value) for key, value in progress_dict.items()}
+        # The regular expression below is needed because the list of answers was changed to a tuple of answers in
+        # version 0.0.16 of Toisto.
+        self.__progress_dict = {
+            re.sub(r"_answers=\[([^\]]+)\],", r"_answers=(\1,),", key): QuizProgress.from_dict(value)
+            for key, value in progress_dict.items()
+        }
         self.__current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
@@ -23,7 +29,7 @@ class Progress:
     def next_quiz(self, quizzes: Quizzes) -> Quiz | None:
         """Return the next quiz."""
         eligible_quizzes = self.__eligible_quizzes(quizzes)
-        self.__current_quiz = random.choice(eligible_quizzes) if eligible_quizzes else None
+        self.__current_quiz = random.choice(list(eligible_quizzes)) if eligible_quizzes else None
         return self.__current_quiz
 
     def __eligible_quizzes(self, quizzes: Quizzes) -> Quizzes:
@@ -31,7 +37,7 @@ class Progress:
         eligible_quizzes = [quiz for quiz in quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
         quizzes_with_progress = [quiz for quiz in eligible_quizzes if self.__has_progress(quiz)]
         quizzes_without_progress = [quiz for quiz in eligible_quizzes if not self.__has_progress(quiz)]
-        return quizzes_without_progress[:3] if len(quizzes_with_progress) < 3 else quizzes_with_progress
+        return set(quizzes_without_progress[:3] if len(quizzes_with_progress) < 3 else quizzes_with_progress)
 
     def __is_silenced(self, quiz: Quiz) -> bool:
         """Is the quiz silenced?"""

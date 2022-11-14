@@ -92,6 +92,7 @@ Groen
 Toisto quizzes you repeatably on words and phrases in the language you want to practice. At the moment, Toisto has the following types of quizzes:
 
 - Translate a word or phrase from your practice language to your native language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "Maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "Vrijdag").
+- Listen to a word or phrase from your practice language and type what you hear. For example, if your practice language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
 - Give a singular version of a plural, or a plural version of a singular. For example, what is the plural of "Talo" (meaning house in Finnish, and the answer is "Talot") or what is the singular of "Huizen" (meaning houses in Dutch, and the answer is "Huis").
 - Change the grammatical person from and to first person, second person, and third person. For example, when asked what the second person of "Ik eet" (meaning "I eat") is, the correct answer would be "Jij eet" ("You eat").
 - Change the grammatical gender from female to male or the other way around. For example, what is the male version of "Zus" (which means "Sister" and the answer is "Broer") or what is the female version of "Vader" (which means "Father", making the correct answer "Moeder").
