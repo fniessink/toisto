@@ -1,5 +1,6 @@
 """Unit tests for the persistence module."""
 
+from datetime import datetime
 import unittest
 from unittest.mock import patch, MagicMock, Mock
 
@@ -38,6 +39,18 @@ class ProgressPersistenceTest(unittest.TestCase):
         """Test that the progress can be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {"count": 0}}'
         self.assertEqual(dict(quiz=QuizProgress().as_dict()), load_progress().as_dict())
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    def test_load_progress_with_answer_lists(self, path_open):
+        """Test that the progress format where answers were lists can be loaded."""
+        self.maxDiff = None
+        old_key = "Quiz(question_language='fi', answer_language='fi', _question='Kirkko', _answers=['Kirkot'], quiz_type='pluralize')"
+        new_key = "Quiz(question_language='fi', answer_language='fi', _question='Kirkko', _answers=('Kirkot',), quiz_type='pluralize')"
+        silence_until = "2022-11-14T15:27:44.020854"
+        json_text = f'{{"{old_key}": {{"count": 15, "silence_until": "{silence_until}"}}}}'
+        path_open.return_value.__enter__.return_value.read.return_value = json_text
+        self.assertEqual({new_key: dict(count=15, silence_until=silence_until)}, load_progress().as_dict())
 
     @patch("pathlib.Path.open")
     @patch("json.dump")

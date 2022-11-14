@@ -1,6 +1,7 @@
 """Progress model class."""
 
 import random
+import re
 
 from .quiz import Quiz, Quizzes
 from .quiz_progress import QuizProgress
@@ -9,7 +10,12 @@ from .quiz_progress import QuizProgress
 class Progress:
     """Keep track of progress on quizzes."""
     def __init__(self, progress_dict: dict[str, dict[str, int | str]]) -> None:
-        self.__progress_dict = {key: QuizProgress.from_dict(value) for key, value in progress_dict.items()}
+        # The regular expression below is needed because the list of answers was changed to a tuple of answers in
+        # version 0.0.16 of Toisto.
+        self.__progress_dict = {
+            re.sub(r"_answers=\[([^\]]+)\],", r"_answers=(\1,),", key): QuizProgress.from_dict(value)
+            for key, value in progress_dict.items()
+        }
         self.__current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
