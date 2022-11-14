@@ -23,7 +23,7 @@ class Progress:
     def next_quiz(self, quizzes: Quizzes) -> Quiz | None:
         """Return the next quiz."""
         eligible_quizzes = self.__eligible_quizzes(quizzes)
-        self.__current_quiz = random.choice(eligible_quizzes) if eligible_quizzes else None
+        self.__current_quiz = random.choice(list(eligible_quizzes)) if eligible_quizzes else None
         return self.__current_quiz
 
     def __eligible_quizzes(self, quizzes: Quizzes) -> Quizzes:
@@ -31,7 +31,7 @@ class Progress:
         eligible_quizzes = [quiz for quiz in quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
         quizzes_with_progress = [quiz for quiz in eligible_quizzes if self.__has_progress(quiz)]
         quizzes_without_progress = [quiz for quiz in eligible_quizzes if not self.__has_progress(quiz)]
-        return quizzes_without_progress[:3] if len(quizzes_with_progress) < 3 else quizzes_with_progress
+        return set(quizzes_without_progress[:3] if len(quizzes_with_progress) < 3 else quizzes_with_progress)
 
     def __is_silenced(self, quiz: Quiz) -> bool:
         """Is the quiz silenced?"""

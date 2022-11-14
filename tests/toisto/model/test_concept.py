@@ -12,11 +12,11 @@ class ConceptTest(ToistoTestCase):
         """Test that quizzes can be generated from a concept."""
         concept = concept_factory(dict(en=["English"], nl=["Engels"]))
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Engels", ["English"]),
                 self.create_quiz("en", "nl", "English", ["Engels"]),
                 self.create_quiz("nl", "nl", "Engels", ["Engels"], "listen")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -24,19 +24,19 @@ class ConceptTest(ToistoTestCase):
         """Test that quizzes can be generated from a concept with a language with multiple labels."""
         concept = concept_factory(dict(nl=["Bank"], en=["Couch", "Bank"]))
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Bank", ["Couch", "Bank"]),
                 self.create_quiz("en", "nl", "Couch", ["Bank"]),
                 self.create_quiz("en", "nl", "Bank", ["Bank"]),
                 self.create_quiz("nl", "nl", "Bank", ["Bank"], "listen")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
     def test_missing_language(self):
         """Test that quizzes can be generated from a concept even if it's missing one of the languages."""
         concept = concept_factory(dict(en=["English"], nl=["Engels"]))
-        self.assertEqual([], concept.quizzes("fi", "en"))
+        self.assertEqual(set(), concept.quizzes("fi", "en"))
 
     def test_grammatical_number(self):
         """Test that quizzes can be generated for different grammatical numbers, i.e. singular and plural."""
@@ -44,7 +44,7 @@ class ConceptTest(ToistoTestCase):
             dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("fi", "nl", "Aamu", ["De ochtend"]),
                 self.create_quiz("nl", "fi", "De ochtend", ["Aamu"]),
                 self.create_quiz("fi", "fi", "Aamu", ["Aamu"], "listen"),
@@ -53,7 +53,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("fi", "fi", "Aamut", ["Aamut"], "listen"),
                 self.create_quiz("fi", "fi", "Aamu", ["Aamut"], "pluralize"),
                 self.create_quiz("fi", "fi", "Aamut", ["Aamu"], "singularize")
-            ],
+            ]),
             concept.quizzes("fi", "nl")
         )
 
@@ -61,14 +61,14 @@ class ConceptTest(ToistoTestCase):
         """Test that quizzes can be generated even if one language has no plural labels for the concept."""
         concept = concept_factory(dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit")))
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("fi", "nl", "Ketsuppi", ["De ketchup"]),
                 self.create_quiz("nl", "fi", "De ketchup", ["Ketsuppi"]),
                 self.create_quiz("fi", "fi", "Ketsuppi", ["Ketsuppi"], "listen"),
                 self.create_quiz("fi", "fi", "Ketsupit", ["Ketsupit"], "listen"),
                 self.create_quiz("fi", "fi", "Ketsuppi", ["Ketsupit"], "pluralize"),
                 self.create_quiz("fi", "fi", "Ketsupit", ["Ketsuppi"], "singularize")
-            ],
+            ]),
             concept.quizzes("fi", "nl")
         )
 
@@ -76,19 +76,19 @@ class ConceptTest(ToistoTestCase):
         """Test that quizzes can be generated from a concept with labels in the practice language only."""
         concept = concept_factory(dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("fi", "fi", "Mämmi", ["Mämmi"], "listen"),
                 self.create_quiz("fi", "fi", "Mämmit", ["Mämmit"], "listen"),
                 self.create_quiz("fi", "fi", "Mämmi", ["Mämmit"], "pluralize"),
                 self.create_quiz("fi", "fi", "Mämmit", ["Mämmi"], "singularize")
-            ],
+            ]),
             concept.quizzes("fi", "en")
         )
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes can be generated from a noun concept with labels in the native language."""
         concept = concept_factory(dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
-        self.assertEqual([], concept.quizzes("en", "fi"))
+        self.assertEqual(set(), concept.quizzes("en", "fi"))
 
     def test_grammatical_number_with_synonyms(self):
         """Test that in case of synonyms the plural of one synonym isn't the correct answer for the other synonym."""
@@ -99,7 +99,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("fi", "nl", "Kauppakeskus", ["Het winkelcentrum"]),
                 self.create_quiz("fi", "nl", "Ostoskeskus", ["Het winkelcentrum"],),
                 self.create_quiz("nl", "fi", "Het winkelcentrum", ["Kauppakeskus", "Ostoskeskus"]),
@@ -114,7 +114,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("fi", "fi", "Ostoskeskus", ["Ostoskeskukset"], "pluralize"),
                 self.create_quiz("fi", "fi", "Kauppakeskukset", ['Kauppakeskus'], "singularize"),
                 self.create_quiz("fi", "fi", "Ostoskeskukset", ["Ostoskeskus"], "singularize")
-            ],
+            ]),
             concept.quizzes("fi", "nl")
         )
 
@@ -124,7 +124,7 @@ class ConceptTest(ToistoTestCase):
             dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat"))
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Haar kat", ["Her cat"], "translate"),
                 self.create_quiz("en", "nl", "Her cat", ["Haar kat"], "translate"),
                 self.create_quiz("nl", "nl", "Haar kat", ["Haar kat"], "listen"),
@@ -133,7 +133,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Zijn kat", ["Zijn kat"], "listen"),
                 self.create_quiz("nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"),
                 self.create_quiz("nl", "nl", "Zijn kat", ["Haar kat"], "feminize")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -147,7 +147,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Haar bot", ["Her bone"], "translate"),
                 self.create_quiz("en", "nl", "Her bone", ["Haar bot"], "translate"),
                 self.create_quiz("nl", "nl", "Haar bot", ["Haar bot"], "listen"),
@@ -161,7 +161,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Haar bot", ["Zijn bot"], "neuterize"),
                 self.create_quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
                 self.create_quiz("nl", "nl", "Zijn bot", ["Haar bot"], "feminize")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -174,7 +174,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Haar kat", ["Her cat"], "translate"),
                 self.create_quiz("en", "nl", "Her cat", ["Haar kat"], "translate"),
                 self.create_quiz("nl", "nl", "Haar kat", ["Haar kat"], "listen"),
@@ -195,7 +195,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Haar katten", ["Haar kat"], "singularize"),
                 self.create_quiz("nl", "nl", "Zijn kat", ["Zijn katten"], "pluralize"),
                 self.create_quiz("nl", "nl", "Zijn katten", ["Zijn kat"], "singularize")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -209,7 +209,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Groot", ["Big"], "translate"),
                 self.create_quiz("en", "nl", "Big", ["Groot"], "translate"),
                 self.create_quiz("nl", "nl", "Groot", ["Groot"], "listen"),
@@ -225,7 +225,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Groter", ["Grootst"], "give superlative degree"),
                 self.create_quiz("nl", "nl", "Grootst", ["Groot"], "give positive degree"),
                 self.create_quiz("nl", "nl", "Grootst", ["Groter"], "give comparitive degree"),
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -239,7 +239,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("fi", "en", "Iso", ["Big"], "translate"),
                 self.create_quiz("fi", "en", "Suuri", ["Big"], "translate"),
                 self.create_quiz("en", "fi", "Big", ["Iso", "Suuri"], "translate"),
@@ -267,7 +267,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("fi", "fi", "Suurin", ["Suuri"], "give positive degree"),
                 self.create_quiz("fi", "fi", "Isoin", ["Isompi"], "give comparitive degree"),
                 self.create_quiz("fi", "fi", "Suurin", ["Suurempi"], "give comparitive degree"),
-            ],
+            ]),
             concept.quizzes("fi", "en")
         )
 
@@ -281,7 +281,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Ik eet", ["I eat"], "translate"),
                 self.create_quiz("en", "nl", "I eat", ["Ik eet"], "translate"),
                 self.create_quiz("nl", "nl", "Ik eet", ["Ik eet"], "listen"),
@@ -297,7 +297,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Jij eet", ["Zij eet"], "give third person"),
                 self.create_quiz("nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
                 self.create_quiz("nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -311,7 +311,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Ik eet", ["I eat"], "translate"),
                 self.create_quiz("en", "nl", "I eat", ["Ik eet"], "translate"),
                 self.create_quiz("nl", "nl", "Ik eet", ["Ik eet"], "listen"),
@@ -332,7 +332,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Jij eet", ["Zij eet"], "give third person"),
                 self.create_quiz("nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
                 self.create_quiz("nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -353,7 +353,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "fi", "Ik heb", ["Minulla on"], "translate"),
                 self.create_quiz("fi", "nl", "Minulla on", ["Ik heb"], "translate"),
                 self.create_quiz("nl", "nl", "Ik heb", ["Ik heb"], "listen"),
@@ -390,7 +390,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Jullie hebben", ["Jij hebt"], "singularize"),
                 self.create_quiz("nl", "nl", "Zij heeft", ["Zij hebben"], "pluralize"),
                 self.create_quiz("nl", "nl", "Zij hebben", ["Zij heeft"], "singularize"),
-            ],
+            ]),
             concept.quizzes("nl", "fi")
         )
 
@@ -403,7 +403,7 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
+            set([
                 self.create_quiz("nl", "en", "Haar kat", ["Her cat"], "translate"),
                 self.create_quiz("en", "nl", "Her cat", ["Haar kat"], "translate"),
                 self.create_quiz("nl", "nl", "Haar kat", ["Haar kat"], "listen"),
@@ -424,7 +424,7 @@ class ConceptTest(ToistoTestCase):
                 self.create_quiz("nl", "nl", "Zijn kat", ["Haar kat"], "feminize"),
                 self.create_quiz("nl", "nl", "Haar katten", ["Zijn katten"], "masculinize"),
                 self.create_quiz("nl", "nl", "Zijn katten", ["Haar katten"], "feminize")
-            ],
+            ]),
             concept.quizzes("nl", "en")
         )
 
@@ -437,13 +437,12 @@ class ConceptTest(ToistoTestCase):
             )
         )
         self.assertEqual(
-            [
-                self.create_quiz("fi", "en", Label("Hän on|On;female"), ["She is|She's"]),
-                self.create_quiz("en", "fi", "She is|She's", ["Hän on|On;female"]),
-                self.create_quiz("fi", "fi", "Hän on|On;female", ["Hän on|On;female"], "listen"),
-                self.create_quiz("fi", "en", "Hän on|On;male", ["He is|He's"]),
-                self.create_quiz("en", "fi", "He is|He's", ["Hän on|On;male"]),
-                self.create_quiz("fi", "fi", "Hän on|On;male", ["Hän on|On;male"], "listen"),
-            ],
+            set([
+                self.create_quiz("fi", "en", Label("Hän on|On;female"), ("She is|She's",)),
+                self.create_quiz("en", "fi", "She is|She's", ("Hän on|On;female",)),
+                self.create_quiz("fi", "fi", "Hän on|On;female", ("Hän on|On;female",), "listen"),
+                self.create_quiz("fi", "en", "Hän on|On;male", ("He is|He's",)),
+                self.create_quiz("en", "fi", "He is|He's", ("Hän on|On;male",))
+            ]),
             concept.quizzes("fi", "en")
         )

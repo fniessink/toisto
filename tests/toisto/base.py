@@ -24,6 +24,6 @@ class ToistoTestCase(unittest.TestCase):
             cast(Language, question_language),
             cast(Language, answer_language),
             Label(question),
-            [Label(answer) for answer in answers],
+            tuple(Label(answer) for answer in answers),
             cast(QuizType, quiz_type)
         )

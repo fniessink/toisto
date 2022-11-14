@@ -8,12 +8,16 @@ from toisto.model.quiz import quiz_type_factory, QuizType, INSTRUCTION
 from ..base import ToistoTestCase
 
 
-class QuizTest(ToistoTestCase):
-    """Unit tests for the quiz class."""
+class QuizTestCase(ToistoTestCase):
+    """Base class for unit tests for the quiz class."""
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.quiz = self.create_quiz("fi", "nl", "Englanti", ["Engels"])
+
+
+class QuizTest(QuizTestCase):
+    """Unit tests for the quiz class."""
 
     def test_is_correct(self):
         """Test a correct guess."""
@@ -64,12 +68,12 @@ class QuizTest(ToistoTestCase):
         for alternative in alternatives:
             other_answers = list(alternatives)
             other_answers.remove(alternative)
-            self.assertEqual(other_answers, quiz.other_answers(alternative))
+            self.assertEqual(tuple(other_answers), quiz.other_answers(alternative))
 
     def test_instructions(self):
         """Test the instructions"""
         for quiz_type, instruction in zip(get_args(QuizType), INSTRUCTION.values()):
-            quiz = self.create_quiz("fi", "fi", "Hei", ["Hei Hei"], quiz_type)
+            quiz = self.create_quiz("fi", "fi", "Hei", ["Hei hei"], quiz_type)
             self.assertEqual(instruction + " Finnish", quiz.instruction())
 
     def test_instruction_with_hint(self):
@@ -86,7 +90,46 @@ class QuizTest(ToistoTestCase):
         """Test that a hint can be added to the question."""
         quiz = self.create_quiz("nl", "en", "Jij bent", ["You are;singular"])
         self.assertEqual("You are", quiz.answer)
-        self.assertEqual(["You are"], quiz.answers)
+        self.assertEqual(("You are",), quiz.answers)
+
+
+class QuizEqualityTests(QuizTestCase):
+    """Unit tests for the equality of quiz instances."""
+
+    def test_equal(self):
+        """Test that a quiz is equal to itself and to quizzes with the same parameters."""
+        self.assertEqual(self.quiz, self.quiz)
+        same_quiz = self.create_quiz("fi", "nl", "Englanti", ["Engels"])
+        self.assertEqual(same_quiz, self.quiz)
+
+    def test_equal_with_different_hints(self):
+        """Test that quizzes are equal if only their hints differ."""
+        different_answer_hint = self.create_quiz("fi", "nl", "Englanti;hint", ["Engels"])
+        self.assertEqual(different_answer_hint, self.quiz)
+        different_question_hint = self.create_quiz("fi", "nl", "Englanti", ["Engels;hint"])
+        self.assertEqual(different_question_hint, self.quiz)
+
+    def test_not_equal_with_different_languages(self):
+        """Test that quizzes are not equal if only their languages differ."""
+        different_question_language = self.create_quiz("en", "nl", "Englanti", ["Engels"])
+        self.assertNotEqual(different_question_language, self.quiz)
+        different_answer_language = self.create_quiz("fi", "en", "Englanti", ["Engels"])
+        self.assertNotEqual(different_answer_language, self.quiz)
+
+    def test_not_equal_with_different_questions(self):
+        """Test that quizzes are not equal if only their questions differ."""
+        different_question = self.create_quiz("fi", "nl", "Saksa", ["Engels"])
+        self.assertNotEqual(different_question, self.quiz)
+
+    def test_not_equal_with_different_answers(self):
+        """Test that quizzes are not equal if only their answers differ."""
+        different_answers = self.create_quiz("fi", "nl", "Englanti", ["Duits"])
+        self.assertNotEqual(different_answers, self.quiz)
+
+    def test_not_equal_with_different_quiz_types(self):
+        """Test that quizzes are not equal if only their quiz types differ."""
+        different_quiz_type = self.create_quiz("fi", "nl", "Englanti", ["Engels"], "listen")
+        self.assertNotEqual(different_quiz_type, self.quiz)
 
 
 class QuizTypeFactoryTest(unittest.TestCase):

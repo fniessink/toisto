@@ -13,7 +13,7 @@ def load_quizzes(
     language: Language, source_language: Language, topics_to_load: list[str], topic_files_to_load: list[str]
 ) -> Quizzes:
     """Load the entries from the topics and generate the quizzes."""
-    quizzes = []
+    quizzes = set()
     topics: list[pathlib.Path] = []
     if topics_to_load or topic_files_to_load:
         topics.extend(topic for topic in TOPIC_JSON_FILES if topic.stem in topics_to_load)
@@ -24,7 +24,7 @@ def load_quizzes(
         try:
             for concept_dict in load_json(topic):
                 concept = concept_factory(concept_dict)
-                quizzes.extend(concept.quizzes(language, source_language))
+                quizzes.update(concept.quizzes(language, source_language))
         except Exception as reason:  # pylint: disable=broad-except
             show_error_and_exit(f"{NAME} cannot read topic {topic}: {reason}.\n")
     return quizzes

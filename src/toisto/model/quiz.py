@@ -43,7 +43,7 @@ INSTRUCTION: dict[QuizType, str] = {
 }
 
 
-@dataclass
+@dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
     question_language: Language
@@ -70,12 +70,12 @@ class Quiz:
     def answers(self) -> Labels:
         """Return all answers."""
         answers = [answer.spelling_alternatives() for answer in self._answers]
-        return cast(Labels, list(chain(*answers)))
+        return cast(Labels, tuple(chain(*answers)))
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
         assert self.is_correct(guess)
-        return [answer for answer in self.answers if not match(guess, answer)]
+        return tuple(answer for answer in self.answers if not match(guess, answer))
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
@@ -84,7 +84,7 @@ class Quiz:
         return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
 
-Quizzes = list[Quiz]
+Quizzes = set[Quiz]
 
 
 def quiz_factory(  # pylint: disable=too-many-arguments
@@ -97,13 +97,13 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     """Create quizzes."""
     if quiz_type == "translate":
         return (
-            [Quiz(language1, language2, label, labels2) for label in labels1] +
-            [Quiz(language2, language1, label, labels1) for label in labels2]
+            set(Quiz(language1, language2, label, labels2) for label in labels1) |
+            set(Quiz(language2, language1, label, labels1) for label in labels2)
         )
-    return [
-        Quiz(language1, language2, label1, [label2], quiz_type) for label1, label2 in zip(labels1, labels2)
+    return set(
+        Quiz(language1, language2, label1, (label2,), quiz_type) for label1, label2 in zip(labels1, labels2)
         if label1 != label2 or quiz_type == "listen"
-    ]
+    )
 
 
 def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -> tuple[QuizType, ...]:
