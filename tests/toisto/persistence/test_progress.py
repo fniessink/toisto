@@ -47,7 +47,7 @@ class ProgressPersistenceTest(unittest.TestCase):
             "quiz_type='pluralize')"
         new_key = "Quiz(question_language='fi', answer_language='fi', _question='Kirkko', _answers=('Kirkot',), " \
             "quiz_type='pluralize')"
-        silence_until = "2022-11-14T15:27:44.020854"
+        silence_until = "2022-11-14T15:27:44"
         json_text = f'{{"{old_key}": {{"count": 15, "silence_until": "{silence_until}"}}}}'
         path_open.return_value.__enter__.return_value.read.return_value = json_text
         self.assertEqual({new_key: dict(count=15, silence_until=silence_until)}, load_progress().as_dict())
