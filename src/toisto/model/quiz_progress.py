@@ -38,7 +38,7 @@ class QuizProgress:
         """Return the quiz progress as dict."""
         result: dict[str, int | str] = dict(count=self.count)
         if self.silence_until:
-            result["silence_until"] = self.silence_until.isoformat()
+            result["silence_until"] = self.silence_until.isoformat(timespec="seconds")
         return result
 
     @classmethod
