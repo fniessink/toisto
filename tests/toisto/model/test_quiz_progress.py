@@ -52,7 +52,8 @@ class QuizProgressTest(unittest.TestCase):
     def test_one_guess_as_dict(self):
         """Test that the quiz progress can be serialized."""
         self.guess(True)
-        self.assertEqual(dict(count=1), self.quiz_progress.as_dict())
+        quiz_date = self.quiz_progress.quiz_date.isoformat(timespec="seconds")
+        self.assertEqual(dict(count=1, quiz_date=quiz_date), self.quiz_progress.as_dict())
 
     def test_two_guesses_as_dict(self):
         """Test that the quiz progress can be serialized."""
@@ -66,7 +67,10 @@ class QuizProgressTest(unittest.TestCase):
     def test_one_guess_from_dict(self):
         """Test that a quiz progress can be deserialized."""
         self.guess(True)
-        self.assertEqual(QuizProgress(count=1), QuizProgress.from_dict(self.quiz_progress.as_dict()))
+        quiz_date = self.quiz_progress.quiz_date.replace(microsecond=0)
+        self.assertEqual(
+            QuizProgress(count=1, quiz_date=quiz_date), QuizProgress.from_dict(self.quiz_progress.as_dict())
+        )
 
     def test_two_guesses_from_dict(self):
         """Test that a quiz progress can be deserialized."""

@@ -11,6 +11,7 @@ class QuizProgress:
 
     count: int = 0  # The number of consecutive correct guesses
     silence_until: datetime | None = None  # Don't quiz this again until after the datetime
+    quiz_date: datetime | None = None  # Datetime when last quizzed, only used in the progress overview at the moment
 
     def update(self, correct: bool) -> None:
         """Update the progress of the quiz."""
@@ -19,6 +20,7 @@ class QuizProgress:
         else:
             self.count = 0
         self.silence_until = self.__calculate_next_quiz() if self.count > 1 else None
+        self.quiz_date = datetime.now()
 
     def is_silenced(self):
         """Return whether the quiz is silenced."""
@@ -39,6 +41,8 @@ class QuizProgress:
         result: dict[str, int | str] = dict(count=self.count)
         if self.silence_until:
             result["silence_until"] = self.silence_until.isoformat(timespec="seconds")
+        if self.quiz_date:
+            result["quiz_date"] = self.quiz_date.isoformat(timespec="seconds")
         return result
 
     @classmethod
@@ -47,4 +51,6 @@ class QuizProgress:
         count = int(quiz_progress_dict.get("count", 0))
         silence_until_text = str(quiz_progress_dict.get("silence_until", ""))
         silence_until = datetime.fromisoformat(silence_until_text) if silence_until_text else None
-        return cls(count, silence_until)
+        quiz_date_text = str(quiz_progress_dict.get("quiz_date", ""))
+        quiz_date = datetime.fromisoformat(quiz_date_text) if quiz_date_text else None
+        return cls(count, silence_until, quiz_date)
