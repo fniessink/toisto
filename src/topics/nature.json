@@ -111,5 +111,78 @@
             "fi": "Rannat",
             "nl": "De stranden"
         }
+    },
+    {
+        "singular": {
+            "en": "Valley",
+            "fi": "Laakso",
+            "nl": "De vallei"
+        },
+        "plural": {
+            "en": "Valleys",
+            "fi": "Laaksot",
+            "nl": "De valleien"
+        }
+    },
+    {
+        "singular": {
+            "en": "Hill",
+            "fi": ["Mäki", "Kukkula"],
+            "nl": "Heuvel"
+        },
+        "plural": {
+            "en": "Hills",
+            "fi": ["Mäet", "Kukkulat"],
+            "nl": "De heuvels"
+        }
+    },
+    {
+        "singular": {
+            "en": "Mountain",
+            "fi": "Vuori",
+            "nl": "De berg"
+        },
+        "plural": {
+            "en": "Mountains",
+            "fi": "Vuoret",
+            "nl": "De bergen"
+        }
+    },
+    {
+        "en": "North|The north",
+        "fi": "Pohjoinen",
+        "nl": "Het noorden"
+    },
+    {
+        "en": "East|The east",
+        "fi": "Itä",
+        "nl": "Het oosten"
+    },
+    {
+        "en": "South|The south",
+        "fi": "Etelä",
+        "nl": "Het zuiden"
+    },
+    {
+        "en": "West|The west",
+        "fi": "Länsi",
+        "nl": "Het westen"
+    },
+    {
+        "en": "World",
+        "fi": "Maailma",
+        "nl": "De wereld"
+    },
+    {
+        "singular": {
+            "en": "Continent",
+            "fi": "Maanosa",
+            "nl": "Het continent"
+        },
+        "plural": {
+            "en": "Continents",
+            "fi": "Maanosat",
+            "nl": "De continenten"
+        }
     }
 ]

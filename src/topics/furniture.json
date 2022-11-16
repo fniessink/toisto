@@ -61,6 +61,18 @@
     },
     {
         "singular": {
+            "en": "Desk",
+            "fi": ["Työpöytä", "Kirjoituspöytä"],
+            "nl": "Het bureau"
+        },
+        "plural": {
+            "en": "Desks",
+            "fi": ["Työpöydät", "Kirjoituspöydät"],
+            "nl": "De bureaus"
+        }
+    },
+    {
+        "singular": {
             "en": "Lamp",
             "fi": "Lamppu",
             "nl": "De lamp"
@@ -94,5 +106,15 @@
             "fi": "Matot",
             "nl": "De tapijten"
         }
+    },
+    {
+        "en": "The door is locked",
+        "fi": "Ovi on lukossa",
+        "nl": ["De deur is op slot", "De deur zit op slot"]
+    },
+    {
+        "en": "The cat is sleeping on the carpet",
+        "fi": "Kissa nukkuu matolla",
+        "nl": "De kat slaapt op het tapijt"
     }
 ]

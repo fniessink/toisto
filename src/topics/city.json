@@ -97,6 +97,18 @@
     },
     {
         "singular": {
+            "en": "Hospital",
+            "fi": "Sairaala",
+            "nl": "Het ziekenhuis"
+        },
+        "plural": {
+            "en": "Hospitals",
+            "fi": "Sairaalat",
+            "nl": "De ziekenhuizen"
+        }
+    },
+    {
+        "singular": {
             "en": "Office",
             "fi": "Toimisto",
             "nl": "Het kantoor"
@@ -217,6 +229,18 @@
     },
     {
         "singular": {
+            "en": "Bridge",
+            "fi": "Silta",
+            "nl": "De brug"
+        },
+        "plural": {
+            "en": "Bridges",
+            "fi": "Sillat",
+            "nl": "De bruggen"
+        }
+    },
+    {
+        "singular": {
             "en": "Port",
             "fi": "Satama",
             "nl": "De haven"
@@ -238,5 +262,37 @@
             "fi": ["Kauppakeskukset", "Ostoskeskukset"],
             "nl": "De winkelcentra"
         }
+    },
+    {
+        "singular": {
+            "en": "Capital",
+            "fi": "Pääkaupunki",
+            "nl": "De hoofdstad"
+        },
+        "plural": {
+            "en": "Capitals",
+            "fi": "Pääkaupungit",
+            "nl": "De hoofdsteden"
+        }
+    },
+    {
+        "en": "That building is a church",
+        "fi": "Tuo rakennus on kirkko",
+        "nl": "Dat gebouw is een kerk"
+    },
+    {
+        "en": "Where is the library?",
+        "fi": ["Missä on kirjasto?", "Missä kirjasto sijaitsee?"],
+        "nl": "Waar is de bibliotheek?"
+    },
+    {
+        "en": "There is a Christmas tree on the square",
+        "fi": "Aukiolla on joulukuusi",
+        "nl": "Er staat een kerstboom op het plein"
+    },
+    {
+        "en": "I am in the office|I'm in the office",
+        "fi": "Minä olen toimistolla|Olen toimistolla",
+        "nl": "Ik ben op kantoor"
     }
 ]

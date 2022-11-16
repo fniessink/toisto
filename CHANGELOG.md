@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.0.17 - 2022-11-16
+
+###
+
+- Add more concepts to the city, family, furniture, house, nature, and time topics.
+
 ## v0.0.16 - 2022-11-14
 
 ### Fixed
