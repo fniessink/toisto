@@ -58,6 +58,66 @@
         }
     },
     {
+        "singular": {
+            "en": "Year",
+            "fi": "Vuosi",
+            "nl": "Het jaar"
+        },
+        "plural": {
+            "en": "Years",
+            "fi": "Vuodet",
+            "nl": "De jaren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Decade",
+            "fi": "Vuosikymmen",
+            "nl": "Het decennium"
+        },
+        "plural": {
+            "en": "Decades",
+            "fi": "Vuosikymmenet",
+            "nl": "De decennia"
+        }
+    },
+    {
+        "singular": {
+            "en": "Century",
+            "fi": "Vuosisata",
+            "nl": "De eeuw"
+        },
+        "plural": {
+            "en": "Centuries",
+            "fi": "Vuosisadat",
+            "nl": "De eeuwn"
+        }
+    },
+    {
+        "singular": {
+            "en": "Hour",
+            "fi": "Tunti",
+            "nl": "Het uur"
+        },
+        "plural": {
+            "en": "Hours",
+            "fi": "Tunnit",
+            "nl": "De uren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Minute",
+            "fi": "Minuutti",
+            "nl": "De minuut"
+        },
+        "plural": {
+            "en": "Minutes",
+            "fi": "Minuutit",
+            "nl": "De minuten"
+        }
+    },
+    {
         "en": "What time is it?",
         "fi": ["Paljonko kello on?", "Mitä kello on?"],
         "nl": "Hoe laat is het?"
@@ -76,5 +136,15 @@
         "en": "What time?",
         "fi": "Mihin aikaan?",
         "nl": "Hoe laat?"
+    },
+    {
+        "en": "How long does it take?",
+        "fi": ["Kauanko se kestää?", "Kuinka kauan se kestää?"],
+        "nl": "Hoe lang duurt het?"
+    },
+    {
+        "en": "It takes one hour",
+        "fi": "Se kestää tunnin",
+        "nl": "Het duurt één uur|Het duurt een uur"
     }
 ]

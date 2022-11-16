@@ -36,9 +36,15 @@
         }
     },
     {
-        "en": "Home",
-        "fi": "Koti",
-        "nl": "Het thuis"
+        "singular": {
+            "en": "Home",
+            "fi": "Koti",
+            "nl": "Het thuis"
+        },
+        "plural": {
+            "en": "Homes",
+            "fi": "Kodit"
+        }
     },
     {
         "singular": {
@@ -110,6 +116,30 @@
             "en": "Floors",
             "fi": "Lattiat",
             "nl": "De vloeren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Door",
+            "fi": "Ovi",
+            "nl": "De deur"
+        },
+        "plural": {
+            "en": "Doors",
+            "fi": "Ovet",
+            "nl": "De deuren"
+        }
+    },
+    {
+        "singular": {
+            "en": "Window",
+            "fi": "Ikkuna",
+            "nl": "Het raam"
+        },
+        "plural": {
+            "en": "Windows",
+            "fi": "Ikkunat",
+            "nl": "De ramen"
         }
     }
 ]

@@ -136,6 +136,18 @@
     },
     {
         "singular": {
+            "en": "Sibling",
+            "fi": "Sisarus",
+            "nl": "De broer of zus|De zus of broer"
+        },
+        "plural": {
+            "en": "Siblings",
+            "fi": "Sisarukset",
+            "nl": "De broers of zussen|De zussen of broers"
+        }
+    },
+    {
+        "singular": {
             "en": "Cousin",
             "fi": "Serkku",
             "nl": [
@@ -254,15 +266,39 @@
         }
     },
     {
-        "singular":{
+        "singular": {
             "en": "Parent-in-law",
             "fi": "Appivanhempi",
             "nl": "De schoonouder"
         },
-        "plural":{
+        "plural": {
             "en": "Parents-in-law",
             "fi": "Appivanhemmat",
             "nl": "De schoonouders"
+        }
+    },
+    {
+        "singular": {
+            "en": "Mother-in-law",
+            "fi": "Anoppi",
+            "nl": "De schoonmoeder"
+        },
+        "plural": {
+            "en": "Mothers-in-law",
+            "fi": "Anopit",
+            "nl": "De schoonmoeders"
+        }
+    },
+    {
+        "singular": {
+            "en": "Father-in-law",
+            "fi": "Appiukko",
+            "nl": "De schoonvader"
+        },
+        "plural": {
+            "en": "Fathers-in-law",
+            "fi": "Appiukot",
+            "nl": "De schoonvaders"
         }
     },
     {
@@ -288,5 +324,36 @@
             "fi": "Äitipuolet",
             "nl": "De stiefmoeders"
         }
+    },
+    {
+        "en": "They have three children and six grandchildren",
+        "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
+        "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
+    },
+    {
+        "en": "How many brother and sisters do you have?",
+        "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
+        "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
+    },
+    {
+        "en": "I have two brothers and one sister",
+        "fi": "Minulla on kaksi veljeä ja yksi sisko",
+        "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
+    },
+    {
+        "en": [
+            "I have no siblings",
+            "I have no brothers and sisters"
+        ],
+        "fi": [
+            "Minulla ei ole sisaruksia",
+            "Minulla ei ole veljiä tai siskoja"
+        ],
+        "nl": "Ik heb geen broers en zussen"
+    },
+    {
+        "en": "I am an only child|I'm an only child",
+        "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
+        "nl": "Ik ben enig kind|Ik ben enigst kind"
     }
 ]
