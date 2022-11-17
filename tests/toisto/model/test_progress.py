@@ -16,17 +16,17 @@ class ProgressTest(ToistoTestCase):
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
-        self.assertEqual(0, self.progress.get_progress(self.quiz).count)
+        self.assertEqual(0, self.progress.get_progress(self.quiz).streak)
 
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
         self.progress.update(self.quiz, correct=True)
-        self.assertEqual(1, self.progress.get_progress(self.quiz).count)
+        self.assertEqual(1, self.progress.get_progress(self.quiz).streak)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
         self.progress.update(self.quiz, correct=False)
-        self.assertEqual(0, self.progress.get_progress(self.quiz).count)
+        self.assertEqual(0, self.progress.get_progress(self.quiz).streak)
 
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""

@@ -1,5 +1,7 @@
 """Unit tests for the output."""
 
+from datetime import datetime, timedelta
+
 from toisto.model import Label, Progress
 from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
@@ -15,11 +17,6 @@ class FeedbackTestCase(ToistoTestCase):
         self.guess = Label("Terve")
         self.progress = Progress({})
 
-    def update_progress(self, nr_correct: int) -> None:
-        """Update the progress with a number of correct guess."""
-        for _ in range(nr_correct):
-            self.progress.update(self.quiz, True)
-
     def assert_feedback_contains(self, feedback_text: str, *expected_strings: str) -> None:
         """Assert that the expected strings are in the feedback."""
         for expected_string in expected_strings:
@@ -30,24 +27,35 @@ class FeedbackTestCase(ToistoTestCase):
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assertEqual("✅ Correct.\n", feedback_text)
 
-    def test_correct_second_time(self):
+    def test_correct_silenced_for_seconds(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        self.update_progress(2)
+        self.progress.update(self.quiz, True)
+        self.progress.get_progress(self.quiz).start = datetime.now() - timedelta(seconds=10)
+        self.progress.update(self.quiz, True)
+        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
+        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "seconds")
+
+    def test_correct_silenced_for_minutes(self):
+        """Test that the correct feedback is given when the user guesses correctly."""
+        self.progress.update(self.quiz, True)
+        self.progress.get_progress(self.quiz).start = datetime.now() - timedelta(minutes=10)
+        self.progress.update(self.quiz, True)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "minutes")
 
     def test_correct_silenced_for_hours(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        self.update_progress(10)
-        feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "hours")
-        self.update_progress(4)
+        self.progress.update(self.quiz, True)
+        self.progress.get_progress(self.quiz).start = datetime.now() - timedelta(hours=2)
+        self.progress.update(self.quiz, True)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "hours")
 
     def test_correct_silenced_for_days(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        self.update_progress(20)
+        self.progress.update(self.quiz, True)
+        self.progress.get_progress(self.quiz).start = datetime.now() - timedelta(days=2)
+        self.progress.update(self.quiz, True)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
         self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "days")
 

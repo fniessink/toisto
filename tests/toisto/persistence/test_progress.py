@@ -36,7 +36,7 @@ class ProgressPersistenceTest(unittest.TestCase):
     @patch("pathlib.Path.open")
     def test_load_existing_progress(self, path_open):
         """Test that the progress can be loaded."""
-        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {"count": 0}}'
+        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {"streak": 0}}'
         self.assertEqual(dict(quiz=QuizProgress().as_dict()), load_progress().as_dict())
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
@@ -47,10 +47,10 @@ class ProgressPersistenceTest(unittest.TestCase):
             "quiz_type='pluralize')"
         new_key = "Quiz(question_language='fi', answer_language='fi', _question='Kirkko', _answers=('Kirkot',), " \
             "quiz_type='pluralize')"
-        silence_until = "2022-11-14T15:27:44"
-        json_text = f'{{"{old_key}": {{"count": 15, "silence_until": "{silence_until}"}}}}'
+        skip_until = "2022-11-14T15:27:44"
+        json_text = f'{{"{old_key}": {{"streak": 15, "skip_until": "{skip_until}"}}}}'
         path_open.return_value.__enter__.return_value.read.return_value = json_text
-        self.assertEqual({new_key: dict(count=15, silence_until=silence_until)}, load_progress().as_dict())
+        self.assertEqual({new_key: dict(streak=15, skip_until=skip_until)}, load_progress().as_dict())
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
@@ -65,13 +65,13 @@ class ProgressPersistenceTest(unittest.TestCase):
     def test_save_incorrect_only_progress(self, dump, path_open):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
-        save_progress(Progress(dict(quiz=dict(count=0))))
-        dump.assert_called_once_with(dict(quiz=dict(count=0)), json_file)
+        save_progress(Progress(dict(quiz=dict(streak=0))))
+        dump.assert_called_once_with(dict(quiz=dict(streak=0)), json_file)
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
     def test_save_progress(self, dump, path_open):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
-        save_progress(Progress(dict(quiz=dict(count=5, silence_until="3000-01-01"))))
-        dump.assert_called_once_with(dict(quiz=dict(count=5, silence_until="3000-01-01T00:00:00")), json_file)
+        save_progress(Progress(dict(quiz=dict(streak=5, skip_until="3000-01-01"))))
+        dump.assert_called_once_with(dict(quiz=dict(streak=5, skip_until="3000-01-01T00:00:00")), json_file)

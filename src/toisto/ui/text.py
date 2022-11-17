@@ -49,15 +49,17 @@ def format_duration(duration: timedelta) -> str:
     if seconds >= 1.5 * 3600:  # 1.5 hours
         hours = round(seconds / 3600)
         return f"{hours} hours"
-    minutes = round(seconds / 60)
-    return f"{minutes} minutes"
+    if seconds >= 1.5 * 60:  # 1.5 minutes
+        minutes = round(seconds / 60)
+        return f"{minutes} minutes"
+    return f"{seconds} seconds"
 
 
 def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
-    if quiz_progress.silence_until:
-        silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
+    if quiz_progress.skip_until:
+        silence_duration = format_duration(quiz_progress.skip_until - datetime.now())
         text += f"[secondary]Skipping this quiz for {silence_duration}.[/secondary]\n"
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
