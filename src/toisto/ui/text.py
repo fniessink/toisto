@@ -2,7 +2,6 @@
 
 from datetime import datetime, timedelta
 from typing import NoReturn
-import random
 import sys
 
 from rich.console import Console
@@ -41,101 +40,6 @@ TRY_AGAIN = "⚠️  Incorrect. Please try again."
 
 CORRECT = "✅ Correct.\n"
 
-PRAISE = [
-    "A+ work",
-    "Admirable",
-    "Amazing",
-    "Astonishing",
-    "Astounding",
-    "Awe-inspiring",
-    "Awesome",
-    "Beautiful",
-    "Bravo",
-    "Brilliant",
-    "Champ",
-    "Champion",
-    "Cheers",
-    "Class act",
-    "Clever",
-    "Cool",
-    "Crushed it",
-    "Delightful",
-    "Epic",
-    "Exactly right",
-    "Excellent",
-    "Excellent job",
-    "Excellent work",
-    "Extraordinary",
-    "Fabulous",
-    "Fantastic",
-    "Far out",
-    "Fine job",
-    "Flawless",
-    "Genius",
-    "Glorious",
-    "Good job",
-    "Good work",
-    "Grand",
-    "Great",
-    "Great job",
-    "Great performance",
-    "Great work",
-    "Impeccable",
-    "Impressive",
-    "Impressive work",
-    "Incredible",
-    "Inspirational",
-    "Kudos",
-    "Legendary",
-    "Lovely",
-    "Magnificent",
-    "Marvellous",
-    "Masterful",
-    "Masterly",
-    "Miraculous",
-    "Nailed it",
-    "Nice",
-    "Nice going",
-    "Nice job",
-    "Nice work",
-    "Nicely done",
-    "Outstanding",
-    "Perfect",
-    "Perfection",
-    "Phenomenal",
-    "Remarkable",
-    "Right on",
-    "Sensational",
-    "Skilful",
-    "Impeccable",
-    "Smashing",
-    "Smooth",
-    "Spectacular",
-    "Splendid",
-    "Stellar",
-    "Sterling work",
-    "Sublime",
-    "Super",
-    "Superb",
-    "Sweet",
-    "Swell",
-    "Terrific",
-    "That's it",
-    "Thumbs up",
-    "Top class",
-    "Top notch",
-    "Top performance",
-    "Tremendous",
-    "Unbelievable",
-    "Way to go",
-    "Well-done",
-    "Winning",
-    "Wizard",
-    "Wonderful",
-    "Wow",
-    "You make it look easy"
-]
-
 
 def format_duration(duration: timedelta) -> str:
     """Format the duration in a human friendly way."""
@@ -154,11 +58,7 @@ def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> s
     text = CORRECT
     if quiz_progress.silence_until:
         silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
-        praise = random.choice(PRAISE)
-        text += (
-            f"[secondary]{praise}! That's {quiz_progress.count} times in a row. "
-            f"Skipping this quiz for {silence_duration}.[/secondary]\n"
-        )
+        text += f"[secondary]Skipping this quiz for {silence_duration}.[/secondary]\n"
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
         enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])

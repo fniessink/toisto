@@ -34,30 +34,22 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(2)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(
-            feedback_text, "That's 2 times in a row. Skipping this quiz for", "minutes"
-        )
+        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "minutes")
 
     def test_correct_silenced_for_hours(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(10)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(
-            feedback_text, "That's 10 times in a row. Skipping this quiz for", "hours"
-        )
+        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "hours")
         self.update_progress(4)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(
-            feedback_text, "That's 14 times in a row. Skipping this quiz for", "hours"
-        )
+        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "hours")
 
     def test_correct_silenced_for_days(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         self.update_progress(20)
         feedback_text = feedback_correct(self.guess, self.quiz, self.progress.get_progress(self.quiz))
-        self.assert_feedback_contains(
-            feedback_text, "That's 20 times in a row. Skipping this quiz for", "days"
-        )
+        self.assert_feedback_contains(feedback_text, "Skipping this quiz for", "days")
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
