@@ -22,8 +22,7 @@ def show_progress(language: Language, quizzes: Quizzes, progress: Progress) -> N
     table.add_column("From")
     table.add_column("To")
     table.add_column("Answer(s)")
-    table.add_column("Last quizzed")
-    table.add_column("Streak", justify="right")
+    table.add_column("Last passed")
     table.add_column("Silenced until")
     sorted_quizzes = sorted(quizzes, key=lambda quiz: progress.get_progress(quiz).count, reverse=True)
     for quiz in sorted_quizzes:
@@ -37,7 +36,6 @@ def show_progress(language: Language, quizzes: Quizzes, progress: Progress) -> N
             quiz.answer_language,
             "\n".join(quiz.answers),
             format_datetime(quiz_date) if quiz_date else "",
-            str(quiz_progress.count) if quiz_progress.count > 0 else "",
             format_datetime(silence) if silence and silence > datetime.now() else ""
         )
     with console.pager():

@@ -25,7 +25,6 @@ class ShowProgressTest(ToistoTestCase):
         quiz = self.create_quiz("fi", "nl", "Terve", ["Hoi"])
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", [quiz], Progress({str(quiz): dict(count=1, quiz_date=now)}))
-        self.assertEqual("1", list(console_print.call_args[0][0].columns[6].cells)[0])
         self.assertEqual(formatted_now, list(console_print.call_args[0][0].columns[5].cells)[0])
 
     def test_quiz_silenced_until_time_in_the_future(self):
@@ -34,7 +33,7 @@ class ShowProgressTest(ToistoTestCase):
         silence_until = (datetime.now() + timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", [quiz], Progress({str(quiz): dict(count=2, silence_until=silence_until)}))
-        self.assertEqual(silence_until, list(console_print.call_args[0][0].columns[7].cells)[0])
+        self.assertEqual(silence_until, list(console_print.call_args[0][0].columns[6].cells)[0])
 
     def test_quiz_silenced_until_time_in_the_past(self):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
@@ -42,4 +41,4 @@ class ShowProgressTest(ToistoTestCase):
         silence_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", [quiz], Progress({str(quiz): dict(count=2, silence_until=silence_until)}))
-        self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
+        self.assertEqual("", list(console_print.call_args[0][0].columns[6].cells)[0])
