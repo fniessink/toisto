@@ -9,7 +9,7 @@ class Retention:
     """Class to keep track of the retention of one quiz."""
 
     start: datetime | None = None  # Start of the retention period, i.e. the period in which all answers were correct
-    end: datetime | None = None  # End of the retention period, i.e. the datetime of the more recent correct answer
+    end: datetime | None = None  # End of the retention period, i.e. the datetime of the most recent correct answer
     skip_until: datetime | None = None  # Don't quiz this again until after the datetime
 
     def update(self, correct: bool) -> None:
@@ -21,7 +21,7 @@ class Retention:
                 self.start = now
                 self.skip_until = None
             else:
-                self.skip_until = now + (now - self.start) * 5
+                self.skip_until = now + max([(now - self.start) * 5, timedelta(seconds=1)])
         else:
             self.skip_until = self.start = self.end = None
 
