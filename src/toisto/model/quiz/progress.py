@@ -1,34 +1,29 @@
 """Progress model class."""
 
 import random
-import re
 
 from .quiz import Quiz, Quizzes
-from .quiz_progress import QuizProgress
+from .retention import Retention
+from .topic import Topics
 
 
 class Progress:
     """Keep track of progress on quizzes."""
-    def __init__(self, progress_dict: dict[str, dict[str, int | str]]) -> None:
-        # The regular expression below is needed because the list of answers was changed to a tuple of answers in
-        # version 0.0.16 of Toisto.
-        self.__progress_dict = {
-            re.sub(r"_answers=\[([^\]]+)\],", r"_answers=(\1,),", key): QuizProgress.from_dict(value)
-            for key, value in progress_dict.items()
-        }
+    def __init__(self, progress_dict: dict[str, dict[str, str]]) -> None:
+        self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
         """Update the progress on the quiz."""
-        self.__progress_dict.setdefault(str(quiz), QuizProgress()).update(correct)
+        self.__progress_dict.setdefault(str(quiz), Retention()).update(correct)
 
-    def get_progress(self, quiz: Quiz) -> QuizProgress:
-        """Return the progress on the quiz."""
-        return self.__progress_dict.get(str(quiz), QuizProgress())
+    def get_retention(self, quiz: Quiz) -> Retention:
+        """Return the quiz retention."""
+        return self.__progress_dict.get(str(quiz), Retention())
 
-    def next_quiz(self, quizzes: Quizzes) -> Quiz | None:
+    def next_quiz(self, topics: Topics) -> Quiz | None:
         """Return the next quiz."""
-        eligible_quizzes = self.__eligible_quizzes(quizzes)
+        eligible_quizzes = self.__eligible_quizzes(topics.quizzes())
         self.__current_quiz = random.choice(list(eligible_quizzes)) if eligible_quizzes else None
         return self.__current_quiz
 
@@ -41,12 +36,12 @@ class Progress:
 
     def __is_silenced(self, quiz: Quiz) -> bool:
         """Is the quiz silenced?"""
-        return self.get_progress(quiz).is_silenced()
+        return self.get_retention(quiz).is_silenced()
 
     def __has_progress(self, quiz: Quiz) -> bool:
         """Has the quiz been presented to the user before?"""
         return str(quiz) in self.__progress_dict
 
-    def as_dict(self) -> dict[str, dict[str, int | str]]:
+    def as_dict(self) -> dict[str, dict[str, str]]:
         """Return the progress as dict."""
         return {key: value.as_dict() for key, value in self.__progress_dict.items()}

@@ -2,7 +2,7 @@
 
 from toisto.model import concept_factory, Label
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 class ConceptTest(ToistoTestCase):

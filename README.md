@@ -52,7 +52,7 @@ $ toisto --help
 
 ```console
 $ toisto fi nl
-👋 Welcome to Toisto v0.0.8!
+ Welcome to Toisto v0.1.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
@@ -62,22 +62,21 @@ When you correctly translate a word or phrase multiple times in a row,
 Toisto will not quiz you on it for a while. The more correct translations
 in a row, the longer words and phrases are silenced.
 
-Translate into Dutch:
-Punainen
-> rood
-✅ Correct.
-
-Translate into Dutch:
-Harmaa
-> bruin
-⚠️ Incorrect. Please try again.
-> grijs
+Listen and write in Finnish:
+> Oranssi
 ✅ Correct.
 
 Translate into Finnish:
 Paars
-> violetti
+> Violetti
 ✅ Correct.
+Skipping this quiz for 3 days.
+
+Translate into Dutch:
+Keltainen
+> Geel
+✅ Correct.
+Skipping this quiz for 3 days.
 
 Translate into Finnish:
 Groen

@@ -9,7 +9,7 @@ from rich.theme import Theme
 
 from .diff import colored_diff
 from ..metadata import NAME, VERSION
-from ..model import Label, Quiz, QuizProgress
+from ..model import Label, Quiz, Retention
 
 
 theme = Theme({
@@ -26,10 +26,11 @@ WELCOME = f"""👋 Welcome to {NAME} [white not bold]v{VERSION}[/white not bold]
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
 
-[secondary]{NAME} tracks how many times you correctly translate words and phrases.
-When you correctly translate a word or phrase multiple times in a row,
-{NAME} will not quiz you on it for a while. The more correct translations
-in a row, the longer words and phrases are silenced.[/secondary]
+[secondary]{NAME} quizzes you on words and phrases repeatedly. Each time you answer a
+quiz correctly, {NAME} will wait longer before repeating it. If you answer
+a quiz incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, {NAME} will reset the
+quiz interval.[/secondary]
 """
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
@@ -55,7 +56,12 @@ def format_duration(duration: timedelta) -> str:
     return f"{seconds} seconds"
 
 
-def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> str:
+def format_datetime(date_time: datetime) -> str:
+    """Return a human readable version of the datetime"""
+    return date_time.isoformat(sep=" ", timespec="minutes")
+
+
+def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: Retention) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
     if quiz_progress.skip_until:

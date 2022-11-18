@@ -9,7 +9,7 @@ from toisto.metadata import Language
 
 from .grammar import GrammaticalCategory
 from .label import Labels, label_factory
-from .quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
+from ..quiz.quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 
 
 ConceptDict = dict[Language, str | list[str]]
