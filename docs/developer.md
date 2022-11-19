@@ -25,11 +25,11 @@ Run the unit tests as follows:
 
 ```console
 $ green
-.................
+.........................................................................................................
 
-Ran 17 tests in 0.305s using 8 processes
+Ran 105 tests in 0.483s using 8 processes
 
-OK (passes=17)
+OK (passes=105)
 ```
 
 To run the unit tests and get a coverage report, use:
@@ -44,7 +44,7 @@ Run mypy to check for typing issues:
 
 ```console
 $ mpypy src tests
-Success: no issues found in 12 source files
+Success: no issues found in 49 source files
 ```
 
 Run Pylint to check for linting issues:

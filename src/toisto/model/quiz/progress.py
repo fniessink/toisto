@@ -24,22 +24,22 @@ class Progress:
 
     def next_quiz(self, topics: Topics) -> Quiz | None:
         """Return the next quiz."""
-        eligible_topics = Topics(set([self.__current_topic])) if self.__current_topic else topics
-        self.__current_topic, eligible_quizzes = self.__eligible_quizzes(eligible_topics)
-        self.__current_quiz = random.choice(list(eligible_quizzes)) if eligible_quizzes else None
-        return self.__current_quiz
+        current_topics = Topics({self.__current_topic} if self.__current_topic else set())
+        for topic_group, must_have_progress in [(current_topics, False), (topics, True), (topics, False)]:
+            for topic in topic_group:
+                if quizzes := self.__eligible_quizzes(topic.quizzes, must_have_progress=must_have_progress):
+                    self.__current_topic = topic
+                    self.__current_quiz = random.choice(list(quizzes))
+                    return self.__current_quiz
+        self.__current_topic = None
+        self.__current_quiz = None
+        return None
 
-    def __eligible_quizzes(self, topics: Topics) -> tuple[Topic | None, Quizzes]:
-        """Return eligible quizzes."""
-        for topic in topics.topics:
-            quizzes = [quiz for quiz in topic.quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
-            if quizzes_with_progress := [quiz for quiz in quizzes if self.__has_progress(quiz)]:
-                return topic, set(quizzes_with_progress)
-        for topic in topics.topics:
-            quizzes = [quiz for quiz in topic.quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
-            if quizzes_without_progress := [quiz for quiz in quizzes if not self.__has_progress(quiz)]:
-                return topic, set(quizzes_without_progress)
-        return None, set()
+    def __eligible_quizzes(self, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
+        """Return the quizzes that can be the next quiz."""
+        eligible = [quiz for quiz in quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
+        eligible_with_progress = [quiz for quiz in eligible if self.__has_progress(quiz)]
+        return set(eligible_with_progress if must_have_progress else eligible_with_progress or eligible)
 
     def __is_silenced(self, quiz: Quiz) -> bool:
         """Is the quiz silenced?"""

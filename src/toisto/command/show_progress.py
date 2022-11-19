@@ -19,7 +19,7 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
     table.add_column("Answer(s)")
     table.add_column("Retention")
     table.add_column("Skip until")
-    sorted_quizzes = sorted(topics.quizzes(), key=lambda quiz: progress.get_retention(quiz).length, reverse=True)
+    sorted_quizzes = sorted(topics.quizzes, key=lambda quiz: progress.get_retention(quiz).length, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until

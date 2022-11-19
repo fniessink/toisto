@@ -1,7 +1,10 @@
 """Topic class."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from itertools import chain
+from typing import Iterator
 
 from .quiz import Quizzes
 
@@ -24,6 +27,11 @@ class Topics:
 
     topics: set[Topic] = field(default_factory=set)
 
+    @property
     def quizzes(self) -> Quizzes:
         """Return all quizzes."""
         return set(chain.from_iterable(topic.quizzes for topic in self.topics))
+
+    def __iter__(self) -> Iterator[Topic]:
+        """Return an iterator over self.topics."""
+        return iter(self.topics)

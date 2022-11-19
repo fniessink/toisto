@@ -1,5 +1,7 @@
 """Quiz retention."""
 
+from __future__ import annotations
+
 from dataclasses import asdict, dataclass, fields
 from datetime import datetime, timedelta
 
@@ -39,7 +41,7 @@ class Retention:
         return {key: value.isoformat(timespec="seconds") for key, value in asdict(self).items() if value}
 
     @classmethod
-    def from_dict(cls, retention_dict: dict[str, str]) -> "Retention":
+    def from_dict(cls, retention_dict: dict[str, str]) -> Retention:
         """Instantiate a retention from a dict."""
         values = []
         for field in fields(cls):

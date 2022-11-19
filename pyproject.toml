@@ -8,11 +8,11 @@ version = "0.1.0"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
 ]
-description = "Toisto is a command-line app to practice languages."
+description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: End Users/Desktop",
     "License :: OSI Approved :: Apache Software License",
     "Natural Language :: English",
