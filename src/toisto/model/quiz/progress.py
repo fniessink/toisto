@@ -4,7 +4,7 @@ import random
 
 from .quiz import Quiz, Quizzes
 from .retention import Retention
-from .topic import Topic, Topics
+from .topic import Topics
 
 
 class Progress:
@@ -12,7 +12,6 @@ class Progress:
     def __init__(self, progress_dict: dict[str, dict[str, str]]) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__current_quiz: Quiz | None = None
-        self.__current_topic: Topic | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
         """Update the progress on the quiz."""
@@ -24,14 +23,11 @@ class Progress:
 
     def next_quiz(self, topics: Topics) -> Quiz | None:
         """Return the next quiz."""
-        current_topics = Topics({self.__current_topic} if self.__current_topic else set())
-        for topic_group, must_have_progress in [(current_topics, False), (topics, True), (topics, False)]:
+        for topic_group, must_have_progress in [(topics, True), (topics, False)]:
             for topic in topic_group:
                 if quizzes := self.__eligible_quizzes(topic.quizzes, must_have_progress=must_have_progress):
-                    self.__current_topic = topic
                     self.__current_quiz = random.choice(list(quizzes))
                     return self.__current_quiz
-        self.__current_topic = None
         self.__current_quiz = None
         return None
 
