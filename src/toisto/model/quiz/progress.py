@@ -23,9 +23,9 @@ class Progress:
 
     def next_quiz(self, topics: Topics) -> Quiz | None:
         """Return the next quiz."""
-        for topic_group, must_have_progress in [(topics, True), (topics, False)]:
-            for topic in topic_group:
-                if quizzes := self.__eligible_quizzes(topic.quizzes, must_have_progress=must_have_progress):
+        for must_have_progress in (True, False):
+            for topic in topics:
+                if quizzes := self.__eligible_quizzes(topic.quizzes, must_have_progress):
                     self.__current_quiz = random.choice(list(quizzes))
                     return self.__current_quiz
         self.__current_quiz = None
