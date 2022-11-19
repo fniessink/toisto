@@ -162,7 +162,7 @@ It is also possible to have a neutral gender:
         },
         "neuter": {
             "en": "Parent",
-            "nl": "De ouder
+            "nl": "De ouder"
         }
     }
 ]
