@@ -128,6 +128,48 @@ The format of the JSON files is as follows:
 ]
 ```
 
+### Grammatical gender
+
+When concepts have multiple genders, these can be specified as follows:
+
+```json
+[
+    {
+        "female": {
+            "en": "Mother",
+            "nl": "De moeder"
+        },
+        "male": {
+            "en": "Father",
+            "nl": "De vader"
+        }
+    }
+]
+```
+
+It is also possible to have a neutral gender:
+
+```json
+[
+    {
+        "female": {
+            "en": "Mother",
+            "nl": "De moeder"
+        },
+        "male": {
+            "en": "Father",
+            "nl": "De vader"
+        },
+        "neuter": {
+            "en": "Parent",
+            "nl": "De ouder"
+        }
+    }
+]
+```
+
+Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the builtin topic files.
+
 ### Grammatical person
 
 When concepts, usually verbs and pronouns, have different persons, these are represented in the JSON as mappings with `first_person`, `second_person`, and `third_person`.
@@ -147,8 +189,14 @@ The format of the JSON files is as follows:
                 "fi": "Sinulla on"
             },
             "third_person": {
-                "en": ["She has", "He has"],
-                "fi": "Hänellä on"
+                "female": {
+                    "en": "She has|She's",
+                    "fi": "Hänellä on;female"
+                },
+                "male": {
+                    "en": "He has|He's",
+                    "fi": "Hänellä on;male"
+                }
             }
         },
         "plural": {
@@ -169,49 +217,9 @@ The format of the JSON files is as follows:
 ]
 ```
 
-Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the ";".
+Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the `;`.
 
-Using grammatical gender to further specify the third person singular is not possible at the moment. Fixing [issue #11](https://github.com/fniessink/toisto/issues/11)) should correct that.
-
-### Grammatical gender
-
-When concepts have multiple genders, these can be specified as follows:
-
-```json
-[
-    {
-        "female": {
-            "en": "Mother",
-            "nl": "De moeder"
-        },
-        "male": {
-            "en": "Father",
-            "nl": "De vader"
-        }
-    }
-]
-```
-
-It's also possible to have a neutral gender:
-
-```json
-[
-    {
-        "female": {
-            "en": "Mother",
-            "nl": "De moeder"
-        },
-        "male": {
-            "en": "Father",
-            "nl": "De vader"
-        },
-        "neuter": {
-            "en": "Parent",
-            "nl": "De ouder
-        }
-    }
-]
-```
+The same goes for the third person Finnish. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
 ### Degrees of comparison
 
@@ -275,4 +283,8 @@ Except for the translation type quizzes, quizzes only use the user's practice la
 
 ## Spaced repetition
 
-Toisto uses a very simple implementation of a spaced repetition algorithm. Toisto does not make assumptions about how many concepts the user wants to practice per session or per day. It only keeps track of how many times in a row a specific quiz is answered correctly. When a quiz is answered correctly twice or more in a row, the quiz is silenced for a while. The longer the streak, the longer the quiz is silenced. The exact amount is determined by a [S-curve with a maximum value of 90 days](https://www.desmos.com/calculator/itvdhmh6ex). Whenever the user makes a mistake the streak is reset to zero.
+Toisto uses a very simple implementation of a spaced repetition algorithm. Toisto does not make assumptions about how many concepts the user wants to practice per session or per day. It only keeps track of the retention of quizzes, i.e. how long the user has been correctly answering a quiz. Retention is defined as the time between the most recent correct answer and the oldest correct answer, where there have been no incorrect answers in between.
+
+For example, if a user answers a quiz correctly on March 1, incorrectly on March 3, correctly on March 6, correctly on March 8, and correctly on March 15, that quiz has a retention of nine days (March 6 to March 15).
+
+When a quiz is answered correctly twice or more in a row, the quiz is silenced for a while. The longer the quiz's current retention, the longer the quiz is silenced. Whenever the user makes a mistake the retention is reset to zero.

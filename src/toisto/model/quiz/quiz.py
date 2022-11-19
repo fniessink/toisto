@@ -6,8 +6,8 @@ from typing import cast, Literal
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
-from .grammar import GrammaticalCategory
-from .label import Label, Labels
+from ..language.grammar import GrammaticalCategory
+from ..language.label import Label, Labels
 from .match import match
 
 

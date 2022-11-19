@@ -1,5 +1,7 @@
 """Labels."""
 
+from __future__ import annotations
+
 from typing import cast
 
 
@@ -17,11 +19,11 @@ class Label(str):
         """Return the hash of the label, ignoring hints."""
         return hash(self.split(";", maxsplit=1)[0])
 
-    def spelling_alternatives(self) -> "Labels":
+    def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
         return tuple(self.__class__(label) for label in self.split(";", maxsplit=1)[0].split("|"))
 
-    def first_spelling_alternative(self) -> "Label":
+    def first_spelling_alternative(self) -> Label:
         """Extract the first spelling alternative from the label."""
         return self.spelling_alternatives()[0]
 

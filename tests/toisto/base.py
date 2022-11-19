@@ -5,7 +5,7 @@ import unittest
 
 from toisto.metadata import Language
 from toisto.model import Label, Quiz
-from toisto.model.quiz import QuizType
+from toisto.model.quiz.quiz import QuizType
 
 
 class ToistoTestCase(unittest.TestCase):

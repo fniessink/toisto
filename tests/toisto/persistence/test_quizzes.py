@@ -16,11 +16,11 @@ class LoadQuizzesTest(ToistoTestCase):
 
     def test_load_quizzes(self):
         """Test that the quizzes can be loaded."""
-        self.assertIn(self.quiz, load_quizzes("fi", "nl", [], []))
+        self.assertIn(self.quiz, load_quizzes("fi", "nl", [], []).quizzes)
 
     def test_load_quizzes_by_topic_name(self):
         """Test that a subset of the quizzes can be loaded."""
-        self.assertNotIn(self.quiz, load_quizzes("fi", "nl", ["family"], []))
+        self.assertNotIn(self.quiz, load_quizzes("fi", "nl", ["family"], []).quizzes)
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")

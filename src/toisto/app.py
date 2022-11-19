@@ -10,9 +10,9 @@ from .persistence import load_quizzes, load_progress
 def main():
     """Main program."""
     args = parser.parse_args()
-    quizzes = load_quizzes(args.language, args.source_language, args.topic, args.topic_file)
+    topics = load_quizzes(args.language, args.source_language, args.topic, args.topic_file)
     progress = load_progress()
     if args.command == "practice":
-        practice(quizzes, progress)
+        practice(topics, progress)
     else:
-        show_progress(args.language, quizzes, progress)
+        show_progress(args.language, topics, progress)

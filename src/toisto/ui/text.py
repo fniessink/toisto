@@ -2,7 +2,6 @@
 
 from datetime import datetime, timedelta
 from typing import NoReturn
-import random
 import sys
 
 from rich.console import Console
@@ -10,7 +9,7 @@ from rich.theme import Theme
 
 from .diff import colored_diff
 from ..metadata import NAME, VERSION
-from ..model import Label, Quiz, QuizProgress
+from ..model import Label, Quiz, Retention
 
 
 theme = Theme({
@@ -27,10 +26,11 @@ WELCOME = f"""👋 Welcome to {NAME} [white not bold]v{VERSION}[/white not bold]
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
 
-[secondary]{NAME} tracks how many times you correctly translate words and phrases.
-When you correctly translate a word or phrase multiple times in a row,
-{NAME} will not quiz you on it for a while. The more correct translations
-in a row, the longer words and phrases are silenced.[/secondary]
+[secondary]{NAME} quizzes you on words and phrases repeatedly. Each time you answer a
+quiz correctly, {NAME} will wait longer before repeating it. If you answer
+a quiz incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, {NAME} will reset the
+quiz interval.[/secondary]
 """
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
@@ -41,101 +41,6 @@ TRY_AGAIN = "⚠️  Incorrect. Please try again."
 
 CORRECT = "✅ Correct.\n"
 
-PRAISE = [
-    "A+ work",
-    "Admirable",
-    "Amazing",
-    "Astonishing",
-    "Astounding",
-    "Awe-inspiring",
-    "Awesome",
-    "Beautiful",
-    "Bravo",
-    "Brilliant",
-    "Champ",
-    "Champion",
-    "Cheers",
-    "Class act",
-    "Clever",
-    "Cool",
-    "Crushed it",
-    "Delightful",
-    "Epic",
-    "Exactly right",
-    "Excellent",
-    "Excellent job",
-    "Excellent work",
-    "Extraordinary",
-    "Fabulous",
-    "Fantastic",
-    "Far out",
-    "Fine job",
-    "Flawless",
-    "Genius",
-    "Glorious",
-    "Good job",
-    "Good work",
-    "Grand",
-    "Great",
-    "Great job",
-    "Great performance",
-    "Great work",
-    "Impeccable",
-    "Impressive",
-    "Impressive work",
-    "Incredible",
-    "Inspirational",
-    "Kudos",
-    "Legendary",
-    "Lovely",
-    "Magnificent",
-    "Marvellous",
-    "Masterful",
-    "Masterly",
-    "Miraculous",
-    "Nailed it",
-    "Nice",
-    "Nice going",
-    "Nice job",
-    "Nice work",
-    "Nicely done",
-    "Outstanding",
-    "Perfect",
-    "Perfection",
-    "Phenomenal",
-    "Remarkable",
-    "Right on",
-    "Sensational",
-    "Skilful",
-    "Impeccable",
-    "Smashing",
-    "Smooth",
-    "Spectacular",
-    "Splendid",
-    "Stellar",
-    "Sterling work",
-    "Sublime",
-    "Super",
-    "Superb",
-    "Sweet",
-    "Swell",
-    "Terrific",
-    "That's it",
-    "Thumbs up",
-    "Top class",
-    "Top notch",
-    "Top performance",
-    "Tremendous",
-    "Unbelievable",
-    "Way to go",
-    "Well-done",
-    "Winning",
-    "Wizard",
-    "Wonderful",
-    "Wow",
-    "You make it look easy"
-]
-
 
 def format_duration(duration: timedelta) -> str:
     """Format the duration in a human friendly way."""
@@ -145,20 +50,23 @@ def format_duration(duration: timedelta) -> str:
     if seconds >= 1.5 * 3600:  # 1.5 hours
         hours = round(seconds / 3600)
         return f"{hours} hours"
-    minutes = round(seconds / 60)
-    return f"{minutes} minutes"
+    if seconds >= 1.5 * 60:  # 1.5 minutes
+        minutes = round(seconds / 60)
+        return f"{minutes} minutes"
+    return f"{seconds} seconds"
 
 
-def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: QuizProgress) -> str:
+def format_datetime(date_time: datetime) -> str:
+    """Return a human readable version of the datetime"""
+    return date_time.isoformat(sep=" ", timespec="minutes")
+
+
+def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: Retention) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
-    if quiz_progress.silence_until:
-        silence_duration = format_duration(quiz_progress.silence_until - datetime.now())
-        praise = random.choice(PRAISE)
-        text += (
-            f"[secondary]{praise}! That's {quiz_progress.count} times in a row. "
-            f"Skipping this quiz for {silence_duration}.[/secondary]\n"
-        )
+    if quiz_progress.skip_until:
+        silence_duration = format_duration(quiz_progress.skip_until - datetime.now())
+        text += f"[secondary]Skipping this quiz for {silence_duration}.[/secondary]\n"
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
         enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])

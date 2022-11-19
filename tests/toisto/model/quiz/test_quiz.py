@@ -3,9 +3,9 @@
 import unittest
 from typing import get_args
 
-from toisto.model.quiz import quiz_type_factory, QuizType, INSTRUCTION
+from toisto.model.quiz.quiz import quiz_type_factory, QuizType, INSTRUCTION
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 class QuizTestCase(ToistoTestCase):
