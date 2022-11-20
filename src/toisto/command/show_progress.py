@@ -24,8 +24,6 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
-        start = retention.start
-        end = retention.end
         table.add_row(
             quiz.quiz_type.capitalize(),
             quiz.question,
@@ -33,7 +31,7 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
             quiz.answer_language,
             "\n".join(quiz.answers),
             str(retention.count),
-            format_duration(end - start) if start and end else "",
+            format_duration(retention.length) if retention.length else "",
             format_datetime(skip) if skip and skip > datetime.now() else ""
         )
     with console.pager():
