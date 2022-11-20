@@ -25,7 +25,7 @@ class ShowProgressTest(ToistoTestCase):
 
     def test_quiz(self):
         """Test that quizzes are shown."""
-        now = datetime.now()
+        now = datetime.now().isoformat(timespec="seconds")
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", self.topics, Progress({str(self.quiz): dict(start=now, end=now)}))
         for index, value in enumerate(["Translate", "Terve", "fi", "nl", "Hoi", "0 seconds", ""]):

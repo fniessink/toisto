@@ -66,7 +66,8 @@ def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: Retention) -> str:
     text = CORRECT
     if quiz_progress.skip_until:
         silence_duration = format_duration(quiz_progress.skip_until - datetime.now())
-        text += f"[secondary]Skipping this quiz for {silence_duration}.[/secondary]\n"
+        long_initial_skip_explanation = " as you already seem to know this" if quiz_progress.count == 1 else ""
+        text += f"[secondary]Skipping this quiz for {silence_duration}{long_initial_skip_explanation}.[/secondary]\n"
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
         enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])

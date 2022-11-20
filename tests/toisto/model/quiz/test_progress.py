@@ -36,7 +36,6 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
         self.progress.update(self.quiz, correct=True)
-        self.progress.update(self.quiz, correct=True)
         another_quiz = self.create_quiz("fi", "en", "Englanti", ["English"])
         topics = Topics(set([Topic("topic", set([self.quiz, another_quiz]))]))
         self.assertEqual(another_quiz, self.progress.next_quiz(topics))
@@ -44,9 +43,8 @@ class ProgressTest(ToistoTestCase):
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         self.progress.update(self.quiz, correct=True)
-        self.progress.update(self.quiz, correct=True)
         topics = Topics(set([Topic("topic", set([self.quiz]))]))
-        self.assertEqual(None, self.progress.next_quiz(topics))
+        self.assertIsNone(self.progress.next_quiz(topics))
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
@@ -61,6 +59,7 @@ class ProgressTest(ToistoTestCase):
         ]
         for index in range(3):
             self.progress.update(quizzes[index], correct=True)
+            self.progress.get_retention(quizzes[index]).skip_until = None
         topics = Topics(set([Topic("topic", set(quizzes))]))
         self.assertIn(self.progress.next_quiz(topics), quizzes[:3])
 

@@ -17,9 +17,10 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
     table.add_column("From")
     table.add_column("To")
     table.add_column("Answer(s)")
+    table.add_column("Attempts", justify="right")
     table.add_column("Retention")
-    table.add_column("Skip until")
-    sorted_quizzes = sorted(topics.quizzes, key=lambda quiz: progress.get_retention(quiz).length, reverse=True)
+    table.add_column("Not quizzed until")
+    sorted_quizzes = sorted(topics.quizzes, key=lambda quiz: progress.get_retention(quiz).count, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
@@ -31,6 +32,7 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
             quiz.question_language,
             quiz.answer_language,
             "\n".join(quiz.answers),
+            str(retention.count),
             format_duration(end - start) if start and end else "",
             format_datetime(skip) if skip and skip > datetime.now() else ""
         )
