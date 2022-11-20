@@ -4,11 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.1.0 - 2022-11-19
+## v0.1.0 - 2022-11-20
 
 ### Changed
 
 - Determine the time to silence a quiz using the retention so far, instead of the streak. Unfortunately, this is a backwards incompatible change and progress information is lost.
+- Silence quizzes that the user knows on the first attempt for 24 hours.
 
 ### Added
 
