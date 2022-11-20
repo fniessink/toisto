@@ -287,4 +287,6 @@ Toisto uses a very simple implementation of a spaced repetition algorithm. Toist
 
 For example, if a user answers a quiz correctly on March 1, incorrectly on March 3, correctly on March 6, correctly on March 8, and correctly on March 15, that quiz has a retention of nine days (March 6 to March 15).
 
-When a quiz is answered correctly twice or more in a row, the quiz is silenced for a while. The longer the quiz's current retention, the longer the quiz is silenced. Whenever the user makes a mistake the retention is reset to zero.
+Each time a quiz is answered correctly, the quiz is silenced for a while. The longer the quiz's current retention, the longer the quiz is silenced. Whenever the user makes a mistake the retention is reset to zero.
+
+If a user knows the correct answer the first time a quiz is presented, the quiz is silenced for a longer duration (24 hours).
