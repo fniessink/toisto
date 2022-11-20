@@ -9,7 +9,7 @@ from .topic import Topics
 
 class Progress:
     """Keep track of progress on quizzes."""
-    def __init__(self, progress_dict: dict[str, dict[str, str]]) -> None:
+    def __init__(self, progress_dict: dict[str, dict[str, str | int]]) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__current_quiz: Quiz | None = None
 
@@ -45,6 +45,6 @@ class Progress:
         """Has the quiz been presented to the user before?"""
         return str(quiz) in self.__progress_dict
 
-    def as_dict(self) -> dict[str, dict[str, str]]:
+    def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""
         return {key: value.as_dict() for key, value in self.__progress_dict.items()}
