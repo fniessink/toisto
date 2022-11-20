@@ -52,6 +52,10 @@ class Quiz:
     _answers: Labels
     quiz_type: QuizType = "translate"
 
+    def __str__(self) -> str:
+        """Return a string version of the quiz that can be used as key in the progress dict."""
+        return f"{self.question_language}:{self.answer_language}:{self._question}:{self.quiz_type}"
+
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
         return match(guess, *self.answers)
