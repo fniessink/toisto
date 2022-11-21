@@ -1,5 +1,5 @@
-[
-    {
+{
+    "season": {
         "singular": {
             "en": "Season",
             "fi": "Vuodenaika",
@@ -11,7 +11,7 @@
             "nl": "De seizoenen"
         }
     },
-    {
+    "spring": {
         "singular": {
             "en": "Spring",
             "fi": "Kevät",
@@ -29,7 +29,7 @@
             ]
         }
     },
-    {
+    "summer": {
         "singular": {
             "en": "Summer",
             "fi": "Kesä",
@@ -41,7 +41,7 @@
             "nl": "De zomers"
         }
     },
-    {
+    "autumn": {
         "singular": {
             "en": [
                 "Autumn",
@@ -65,7 +65,7 @@
             ]
         }
     },
-    {
+    "winter": {
         "singular": {
             "en": "Winter",
             "fi": "Talvi",
@@ -77,4 +77,4 @@
             "nl": "De winters"
         }
     }
-]
+}

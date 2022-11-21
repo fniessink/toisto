@@ -1,80 +1,89 @@
-[
-    {
-        "en": "Month",
-        "fi": "Kuukausi",
-        "nl": "De maand"
+{
+    "month": {
+        "singular": {
+            "en": "Month",
+            "fi": "Kuukausi",
+            "nl": "De maand"
+        },
+        "plural": {
+            "en": "Months",
+            "fi": "Kuukaudet",
+            "nl": "De maanden"
+        }
     },
-    {
-        "en": "Months",
-        "fi": "Kuukaudet",
-        "nl": "De maanden"
+    "moon": {
+        "singular": {
+            "en": "Moon",
+            "fi": "Kuu",
+            "nl": "De maan"
+        },
+        "plural": {
+            "en": "Moons",
+            "fi": "Kuut",
+            "nl": "De manen"
+        }
     },
-    {
-        "en": "Moon",
-        "fi": "Kuu",
-        "nl": "De maan"
-    },
-    {
+    "january": {
         "en": "January",
         "fi": "Tammikuu",
         "nl": "Januari"
     },
-    {
+    "february": {
         "en": "February",
         "fi": "Helmikuu",
         "nl": "Februari"
     },
-    {
+    "march": {
         "en": "March",
         "fi": "Maaliskuu",
         "nl": "Maart"
     },
-    {
+    "april": {
         "en": "April",
         "fi": "Huhtikuu",
         "nl": "April"
     },
-    {
+    "may": {
         "en": "May",
         "fi": "Toukokuu",
         "nl": "Mei"
     },
-    {
+    "june": {
         "en": "June",
         "fi": "Kesäkuu",
         "nl": "Juni"
     },
-    {
+    "july": {
         "en": "July",
         "fi": "Heinäkuu",
         "nl": "Juli"
     },
-    {
+    "august": {
         "en": "August",
         "fi": "Elokuu",
         "nl": "Augustus"
     },
-    {
+    "september": {
         "en": "September",
         "fi": "Syyskuu",
         "nl": "September"
     },
-    {
+    "october": {
         "en": "October",
         "fi": "Lokakuu",
         "nl": "Oktober"
     },
-    {
+    "november": {
         "en": "November",
         "fi": "Marraskuu",
         "nl": "November"
     },
-    {
+    "december": {
         "en": "December",
         "fi": "Joulukuu",
         "nl": "December"
     },
-    {
+    "it_is_july": {
         "en": "It is July|It's July",
         "fi": [
             "Nyt on heinäkuu",
@@ -82,4 +91,4 @@
         ],
         "nl": "Het is juli"
     }
-]
+}
