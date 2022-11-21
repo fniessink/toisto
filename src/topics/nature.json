@@ -1,10 +1,10 @@
-[
-    {
+{
+    "nature": {
         "en": "Nature",
         "fi": "Luonto",
         "nl": "De natuur"
     },
-    {
+    "forest": {
         "singular": {
             "en": ["Forest", "Wood"],
             "fi": "Metsä",
@@ -16,7 +16,7 @@
             "nl": "De bossen"
         }
     },
-    {
+    "lake": {
         "singular": {
             "en": "Lake",
             "fi": "Järvi",
@@ -28,7 +28,7 @@
             "nl": "De meren"
         }
     },
-    {
+    "sea": {
         "singular": {
             "en": "Sea",
             "fi": "Meri",
@@ -40,7 +40,7 @@
             "nl": "De zeeën"
         }
     },
-    {
+    "river": {
         "singular": {
             "en": "River",
             "fi": "Joki",
@@ -52,7 +52,7 @@
             "nl": "De rivieren"
         }
     },
-    {
+    "island": {
         "singular": {
             "en": "Island",
             "fi": "Saari",
@@ -64,7 +64,7 @@
             "nl": "De eilanden"
         }
     },
-    {
+    "coast": {
         "singular": {
             "en": "Coast",
             "fi": "Rannikko",
@@ -76,7 +76,7 @@
             "nl": "De kusten"
         }
     },
-    {
+    "desert": {
         "singular": {
             "en": "Desert",
             "fi": ["Aavikko", "Autiomaa"],
@@ -88,7 +88,7 @@
             "nl": "De woestijnen"
         }
     },
-    {
+    "tree": {
         "singular": {
             "en": "Tree",
             "fi": "Puu",
@@ -100,7 +100,7 @@
             "nl": "De bomen"
         }
     },
-    {
+    "beach": {
         "singular": {
             "en": "Beach",
             "fi": "Ranta",
@@ -112,7 +112,7 @@
             "nl": "De stranden"
         }
     },
-    {
+    "valley": {
         "singular": {
             "en": "Valley",
             "fi": "Laakso",
@@ -124,7 +124,7 @@
             "nl": "De valleien"
         }
     },
-    {
+    "hill": {
         "singular": {
             "en": "Hill",
             "fi": ["Mäki", "Kukkula"],
@@ -136,7 +136,7 @@
             "nl": "De heuvels"
         }
     },
-    {
+    "mountain": {
         "singular": {
             "en": "Mountain",
             "fi": "Vuori",
@@ -148,32 +148,32 @@
             "nl": "De bergen"
         }
     },
-    {
+    "north": {
         "en": "North|The north",
         "fi": "Pohjoinen",
         "nl": "Het noorden"
     },
-    {
+    "east": {
         "en": "East|The east",
         "fi": "Itä",
         "nl": "Het oosten"
     },
-    {
+    "south": {
         "en": "South|The south",
         "fi": "Etelä",
         "nl": "Het zuiden"
     },
-    {
+    "west": {
         "en": "West|The west",
         "fi": "Länsi",
         "nl": "Het westen"
     },
-    {
+    "world": {
         "en": "World",
         "fi": "Maailma",
         "nl": "De wereld"
     },
-    {
+    "continent": {
         "singular": {
             "en": "Continent",
             "fi": "Maanosa",
@@ -185,4 +185,4 @@
             "nl": "De continenten"
         }
     }
-]
+}

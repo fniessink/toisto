@@ -1,5 +1,5 @@
-[
-    {
+{
+    "city": {
         "singular": {
             "en": "City",
             "fi": "Kaupunki",
@@ -11,7 +11,7 @@
             "nl": "De steden"
         }
     },
-    {
+    "building": {
         "singular": {
             "en": "Building",
             "fi": "Rakennus",
@@ -23,7 +23,7 @@
             "nl": "De gebouwen"
         }
     },
-    {
+    "monument": {
         "singular": {
             "en": "Monument",
             "fi": "Monumentti",
@@ -35,7 +35,7 @@
             "nl": "De monumenten"
         }
     },
-    {
+    "theater": {
         "singular": {
             "en": "Theater",
             "fi": "Teatteri",
@@ -47,7 +47,7 @@
             "nl": "De theaters"
         }
     },
-    {
+    "museum": {
         "singular": {
             "en": "Museum",
             "fi": "Museo",
@@ -59,7 +59,7 @@
             "nl": "De musea"
         }
     },
-    {
+    "church": {
         "singular": {
             "en": "Church",
             "fi": "Kirkko",
@@ -71,7 +71,7 @@
             "nl": "De kerken"
         }
     },
-    {
+    "stadium": {
         "singular": {
             "en": "Stadium",
             "fi": "Stadion",
@@ -83,7 +83,7 @@
             "nl": "De stadions"
         }
     },
-    {
+    "library": {
         "singular": {
             "en": "Library",
             "fi": "Kirjasto",
@@ -95,7 +95,7 @@
             "nl": "De bibliotheken"
         }
     },
-    {
+    "hospital": {
         "singular": {
             "en": "Hospital",
             "fi": "Sairaala",
@@ -107,7 +107,7 @@
             "nl": "De ziekenhuizen"
         }
     },
-    {
+    "office": {
         "singular": {
             "en": "Office",
             "fi": "Toimisto",
@@ -119,7 +119,7 @@
             "nl": "De kantoren"
         }
     },
-    {
+    "airport": {
         "singular": {
             "en": "Airport",
             "fi": "Lentokenttä",
@@ -131,7 +131,7 @@
             "nl": "De vliegvelden"
         }
     },
-    {
+    "store": {
         "singular": {
             "en": "Store",
             "fi": "Kauppa",
@@ -143,7 +143,7 @@
             "nl": "De winkels"
         }
     },
-    {
+    "department store": {
         "singular": {
             "en": "Department store",
             "fi": "Tavaratalo",
@@ -155,7 +155,7 @@
             "nl": "De warenhuizen"
         }
     },
-    {
+    "park": {
         "singular": {
             "en": "Park",
             "fi": "Puisto",
@@ -167,7 +167,7 @@
             "nl": "De parken"
         }
     },
-    {
+    "castle": {
         "singular": {
             "en": "Castle",
             "fi": "Linna",
@@ -179,7 +179,7 @@
             "nl": "De kastelen"
         }
     },
-    {
+    "hotel": {
         "singular": {
             "en": "Hotel",
             "fi": "Hotelli",
@@ -191,7 +191,7 @@
             "nl": "De hotels"
         }
     },
-    {
+    "centre": {
         "singular": {
             "en": "Centre",
             "fi": "Keskusta",
@@ -203,7 +203,7 @@
             "nl": "De centra"
         }
     },
-    {
+    "street": {
         "singular": {
             "en": "Street",
             "fi": "Katu",
@@ -215,7 +215,7 @@
             "nl": "De straten"
         }
     },
-    {
+    "square": {
         "singular": {
             "en": "Square",
             "fi": "Aukio",
@@ -227,7 +227,7 @@
             "nl": "De pleinen"
         }
     },
-    {
+    "bridge": {
         "singular": {
             "en": "Bridge",
             "fi": "Silta",
@@ -239,7 +239,7 @@
             "nl": "De bruggen"
         }
     },
-    {
+    "port": {
         "singular": {
             "en": "Port",
             "fi": "Satama",
@@ -251,7 +251,7 @@
             "nl": "De havens"
         }
     },
-    {
+    "mall": {
         "singular": {
             "en": ["Mall", "Shopping center"],
             "fi": ["Kauppakeskus", "Ostoskeskus"],
@@ -263,7 +263,7 @@
             "nl": "De winkelcentra"
         }
     },
-    {
+    "capital": {
         "singular": {
             "en": "Capital",
             "fi": "Pääkaupunki",
@@ -275,24 +275,24 @@
             "nl": "De hoofdsteden"
         }
     },
-    {
+    "that building is a church": {
         "en": "That building is a church",
         "fi": "Tuo rakennus on kirkko",
         "nl": "Dat gebouw is een kerk"
     },
-    {
+    "where is the library": {
         "en": "Where is the library?",
         "fi": ["Missä on kirjasto?", "Missä kirjasto sijaitsee?"],
         "nl": "Waar is de bibliotheek?"
     },
-    {
+    "there is a christmas tree on the square": {
         "en": "There is a Christmas tree on the square",
         "fi": "Aukiolla on joulukuusi",
         "nl": "Er staat een kerstboom op het plein"
     },
-    {
+    "I am in the office": {
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"
     }
-]
+}

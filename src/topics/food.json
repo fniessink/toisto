@@ -1,5 +1,5 @@
-[
-    {
+{
+    "food": {
         "singular": {
             "en": "Food",
             "fi": "Ruoka",
@@ -10,7 +10,7 @@
             "fi": "Ruoat"
         }
     },
-    {
+    "orange": {
         "singular": {
             "en": "Orange",
             "fi": "Appelsiini",
@@ -22,7 +22,7 @@
             "nl": "De sinaasappels"
         }
     },
-    {
+    "hotdog": {
         "singular": {
             "en": ["Hotdog|Hot dog"],
             "fi": "Hotdog",
@@ -34,7 +34,7 @@
             "nl": "De hotdogs"
         }
     },
-    {
+    "cheese": {
         "singular": {
             "en": "Cheese",
             "fi": "Juusto",
@@ -46,7 +46,7 @@
             "nl": "De kazen"
         }
     },
-    {
+    "coffee": {
         "singular": {
             "en": "Coffee",
             "fi": "Kahvi",
@@ -58,7 +58,7 @@
             "nl": "De koffies"
         }
     },
-    {
+    "fish": {
         "singular": {
             "en": "Fish",
             "fi": "Kala",
@@ -70,7 +70,7 @@
             "nl": "De vissen"
         }
     },
-    {
+    "chicken": {
         "singular": {
             "en": "Chicken",
             "fi": "Kana",
@@ -82,7 +82,7 @@
             "nl": "De kippen"
         }
     },
-    {
+    "dressing": {
         "singular": {
             "en": "Dressing",
             "fi": "Kastike",
@@ -94,7 +94,7 @@
             "nl": "De dressings"
         }
     },
-    {
+    "ketchup": {
         "singular": {
             "en": "Ketchup",
             "fi": "Ketsuppi",
@@ -105,7 +105,7 @@
             "fi": "Ketsupit"
         }
     },
-    {
+    "bread": {
         "singular": {
             "en": "Bread",
             "fi": "Leipä",
@@ -117,7 +117,7 @@
             "nl": "De broden"
         }
     },
-    {
+    "meat": {
         "singular": {
             "en": "Meat",
             "fi": "Liha",
@@ -129,7 +129,7 @@
             "nl": "De vlezen"
         }
     },
-    {
+    "milk": {
         "singular": {
             "en": "Milk",
             "fi": "Maito",
@@ -140,7 +140,7 @@
             "fi": "Maidot"
         }
     },
-    {
+    "sausage": {
         "singular": {
             "en": "Sausage",
             "fi": "Makkara",
@@ -152,7 +152,7 @@
             "nl": "De worsten"
         }
     },
-    {
+    "mämmi": {
         "singular": {
             "fi": "Mämmi"
         },
@@ -160,7 +160,7 @@
             "fi": "Mämmit"
         }
     },
-    {
+    "strawberry": {
         "singular": {
             "en": "Strawberry",
             "fi": "Mansikka",
@@ -172,7 +172,7 @@
             "nl": "De aardbeien"
         }
     },
-    {
+    "spice": {
         "singular": {
             "en": "Spice",
             "fi": "Mauste",
@@ -184,7 +184,7 @@
             "nl": "De kruiden"
         }
     },
-    {
+    "juice": {
         "singular": {
             "en": "Juice",
             "fi": "Mehu",
@@ -196,7 +196,7 @@
             "nl": "De sappen"
         }
     },
-    {
+    "apple": {
         "singular": {
             "en": "Apple",
             "fi": "Omena",
@@ -208,7 +208,7 @@
             "nl": "De appels"
         }
     },
-    {
+    "potato": {
         "singular": {
             "en": "Potato",
             "fi": "Peruna",
@@ -220,7 +220,7 @@
             "nl": "De aardappels"
         }
     },
-    {
+    "steak": {
         "singular": {
             "en": "Steak",
             "fi": "Pihvi",
@@ -232,7 +232,7 @@
             "nl": "De steaks"
         }
     },
-    {
+    "pepper": {
         "singular": {
             "en": "Pepper",
             "fi": "Pippuri",
@@ -244,7 +244,7 @@
             "nl": "De pepers"
         }
     },
-    {
+    "salad": {
         "singular": {
             "en": "Salad",
             "fi": "Salaatti",
@@ -256,7 +256,7 @@
             "nl": "De salades"
         }
     },
-    {
+    "mustard": {
         "singular": {
             "en": "Mustard",
             "fi": "Sinappi",
@@ -268,7 +268,7 @@
             "nl": "De mosterds"
         }
     },
-    {
+    "onion": {
         "singular": {
             "en": "Onion",
             "fi": "Sipuli",
@@ -280,7 +280,7 @@
             "nl": "De uien"
         }
     },
-    {
+    "lemon": {
         "singular": {
             "en": "Lemon",
             "fi": "Sitruuna",
@@ -292,7 +292,7 @@
             "nl": "De citroenen"
         }
     },
-    {
+    "sugar": {
         "singular": {
             "en": "Sugar",
             "fi": "Sokeri",
@@ -304,7 +304,7 @@
             "nl": "De suikers"
         }
     },
-    {
+    "salt": {
         "singular": {
             "en": "Salt",
             "fi": "Suola",
@@ -316,7 +316,7 @@
             "nl": "De zouten"
         }
     },
-    {
+    "tomato": {
         "singular": {
             "en": "Tomato",
             "fi": "Tomaatti",
@@ -328,7 +328,7 @@
             "nl": "De tomaten"
         }
     },
-    {
+    "water": {
         "singular": {
             "en": "Water",
             "fi": "Vesi",
@@ -340,7 +340,7 @@
             "nl": ["De waters", "De wateren"]
         }
     },
-    {
+    "sandwich": {
         "singular": {
             "en": "Sandwich",
             "fi": "Voileipä",
@@ -352,4 +352,4 @@
             "nl": "De boterhammen"
         }
     }
-]
+}

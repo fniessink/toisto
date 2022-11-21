@@ -1,5 +1,5 @@
-[
-    {
+{
+    "day": {
         "singular": {
             "en": "Day",
             "fi": "Päivä",
@@ -11,7 +11,7 @@
             "nl": "De dagen"
         }
     },
-    {
+    "week": {
         "singular": {
             "en": "Week",
             "fi": "Viikko",
@@ -23,7 +23,7 @@
             "nl": "De weken"
         }
     },
-    {
+    "weekend": {
         "singular": {
             "en": "Weekend",
             "fi": "Viikonloppu",
@@ -35,12 +35,12 @@
             "nl": "De weekenden"
         }
     },
-    {
+    "days of the week": {
         "en": "Days of the week",
         "fi": "Viikonpäivät",
         "nl": "De dagen van de week"
     },
-    {
+    "monday": {
         "singular": {
             "en": "Monday",
             "fi": "Maanantai",
@@ -52,7 +52,7 @@
             "nl": "De maandagen"
         }
     },
-    {
+    "tuesday": {
         "singular": {
             "en": "Tuesday",
             "fi": "Tiistai",
@@ -64,7 +64,7 @@
             "nl": "De dinsdagen"
         }
     },
-    {
+    "wednesday": {
         "singular": {
             "en": "Wednesday",
             "fi": "Keskiviikko",
@@ -76,7 +76,7 @@
             "nl": "De woensdagen"
         }
     },
-    {
+    "thursday": {
         "singular": {
             "en": "Thursday",
             "fi": "Torstai",
@@ -88,7 +88,7 @@
             "nl": "De donderdagen"
         }
     },
-    {
+    "friday": {
         "singular": {
             "en": "Friday",
             "fi": "Perjantai",
@@ -100,7 +100,7 @@
             "nl": "De vrijdagen"
         }
     },
-    {
+    "saturday": {
         "singular": {
             "en": "Saturday",
             "fi": "Lauantai",
@@ -112,7 +112,7 @@
             "nl": "De zaterdagen"
         }
     },
-    {
+    "sunday": {
         "singular": {
             "en": "Sunday",
             "fi": "Sunnuntai",
@@ -124,47 +124,47 @@
             "nl": "De zondagen"
         }
     },
-    {
+    "today": {
         "en": "Today",
         "fi": "Tänään",
         "nl": "Vandaag"
     },
-    {
+    "yesterday": {
         "en": "Yesterday",
         "fi": "Eilen",
         "nl": "Gisteren"
     },
-    {
+    "tomorrow": {
         "en": "Tomorrow",
         "fi": "Huomenna",
         "nl": "Morgen"
     },
-    {
+    "this week": {
         "en": "This week",
         "fi": "Tällä viikolla",
         "nl": "Deze week"
     },
-    {
+    "last week": {
         "en": "Last week",
         "fi": "Viime viikolla",
         "nl": "Vorige week"
     },
-    {
+    "next week": {
         "en": "Next week",
         "fi": "Ensi viikolla",
         "nl": "Volgende week"
     },
-    {
+    "today it is monday": {
         "en": "Today it is Monday|Today it's Monday",
         "fi": "Tänään on maanantai",
         "nl": "Vandaag is het maandag"
     },
-    {
+    "tomorrow it is tuesday": {
         "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai",
         "nl": "Morgen is het dinsdag"
     },
-    {
+    "what day is it today": {
         "en": "What day is it today?",
         "fi": [
             "Mikä päivä tänään on?",
@@ -172,4 +172,4 @@
         ],
         "nl": "Welke dag is het vandaag?"
     }
-]
+}

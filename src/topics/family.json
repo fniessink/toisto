@@ -1,10 +1,10 @@
-[
-    {
+{
+    "family": {
         "en": "Family",
         "fi": "Perhe",
         "nl": "De familie"
     },
-    {
+    "grandma": {
         "singular": {
             "en": "Grandma",
             "fi": [
@@ -22,7 +22,7 @@
             "nl": "De oma's"
         }
     },
-    {
+    "grandpa": {
         "singular": {
             "en": "Grandpa",
             "fi": [
@@ -40,7 +40,7 @@
             "nl": "De opa's"
         }
     },
-    {
+    "grandmmother": {
         "singular": {
             "en": "Grandmother",
             "fi": "Isoäiti",
@@ -52,7 +52,7 @@
             "nl": "De grootmoeders"
         }
     },
-    {
+    "grandfather": {
         "singular": {
             "en": "Grandfather",
             "fi": "Isoisä",
@@ -64,17 +64,17 @@
             "nl": "De grootvaders"
         }
     },
-    {
+    "married": {
         "en": "Married",
         "fi": "Naimisissa",
         "nl": "Getrouwd"
     },
-    {
+    "divorced": {
         "en": "Divorced",
         "fi": "Eronnut",
         "nl": "Gescheiden"
     },
-    {
+    "mother": {
         "singular": {
             "en": "Mother",
             "fi": "Äiti",
@@ -86,7 +86,7 @@
             "nl": "De moeders"
         }
     },
-    {
+    "father": {
         "singular": {
             "en": "Father",
             "fi": "Isä",
@@ -98,7 +98,7 @@
             "nl": "De vaders"
         }
     },
-    {
+    "child": {
         "singular": {
             "en": "Child",
             "fi": "Lapsi",
@@ -110,7 +110,7 @@
             "nl": "De kinderen"
         }
     },
-    {
+    "sister": {
         "singular": {
             "en": "Sister",
             "fi": "Sisko",
@@ -122,7 +122,7 @@
             "nl": "De zussen"
         }
     },
-    {
+    "brother": {
         "singular": {
             "en": "Brother",
             "fi": "Veli",
@@ -134,7 +134,7 @@
             "nl": "De broers"
         }
     },
-    {
+    "sibling": {
         "singular": {
             "en": "Sibling",
             "fi": "Sisarus",
@@ -146,7 +146,7 @@
             "nl": "De broers of zussen|De zussen of broers"
         }
     },
-    {
+    "cousin": {
         "singular": {
             "en": "Cousin",
             "fi": "Serkku",
@@ -164,7 +164,7 @@
             ]
         }
     },
-    {
+    "grandchild": {
         "singular": {
             "en": "Grandchild",
             "fi": "Lapsenlapsi",
@@ -176,7 +176,7 @@
             "nl": "De kleinkinderen"
         }
     },
-    {
+    "daughter": {
         "singular": {
             "en": "Daughter",
             "fi": "Tytär",
@@ -188,7 +188,7 @@
             "nl": "De dochters"
         }
     },
-    {
+    "son": {
         "singular": {
             "en": "Son",
             "fi": "Poika",
@@ -200,7 +200,7 @@
             "nl": "De zonen"
         }
     },
-    {
+    "wife": {
         "singular": {
             "en": "Wife",
             "fi": "Vaimo",
@@ -212,7 +212,7 @@
             "nl": "De echtgenotes"
         }
     },
-    {
+    "husband:": {
         "singular": {
             "en": "Husband",
             "fi": "Aviomies|Mies",
@@ -224,7 +224,7 @@
             "nl": "De echtgenoten"
         }
     },
-    {
+    "spouse": {
         "singular": {
             "en": "Spouse",
             "fi": "Puoliso",
@@ -236,12 +236,12 @@
             "nl": "De partners"
         }
     },
-    {
+    "marriage": {
         "en": "Marriage",
         "fi": "Avioliitto",
         "nl": "Het huwelijk"
     },
-    {
+    "parent": {
         "singular": {
             "en": "Parent",
             "fi": "Vanhempi",
@@ -253,7 +253,7 @@
             "nl": "De ouders"
         }
     },
-    {
+    "grandparent": {
         "singular": {
             "en": "Grandparent",
             "fi": "Isovanhempi",
@@ -265,7 +265,7 @@
             "nl": "De grootouders"
         }
     },
-    {
+    "parent-in-law": {
         "singular": {
             "en": "Parent-in-law",
             "fi": "Appivanhempi",
@@ -277,7 +277,7 @@
             "nl": "De schoonouders"
         }
     },
-    {
+    "mother-in-law": {
         "singular": {
             "en": "Mother-in-law",
             "fi": "Anoppi",
@@ -289,7 +289,7 @@
             "nl": "De schoonmoeders"
         }
     },
-    {
+    "father-in-law": {
         "singular": {
             "en": "Father-in-law",
             "fi": "Appiukko",
@@ -301,7 +301,7 @@
             "nl": "De schoonvaders"
         }
     },
-    {
+    "stepfather": {
         "singular": {
             "en": "Stepfather",
             "fi": "Isäpuoli",
@@ -313,7 +313,7 @@
             "nl": "De stiefvaders"
         }
     },
-    {
+    "stepmother": {
         "singular": {
             "en": "Stepmother",
             "fi": "Äitipuoli",
@@ -325,22 +325,22 @@
             "nl": "De stiefmoeders"
         }
     },
-    {
+    "they have x children and y grandchildren": {
         "en": "They have three children and six grandchildren",
         "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
         "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
     },
-    {
-        "en": "How many brother and sisters do you have?",
+    "how many brothers and sisters do you have": {
+        "en": "How many brothers and sisters do you have?",
         "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
         "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
     },
-    {
+    "I have x brothers and y sisters": {
         "en": "I have two brothers and one sister",
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
-    {
+    "I have no siblings:": {
         "en": [
             "I have no siblings",
             "I have no brothers and sisters"
@@ -351,9 +351,9 @@
         ],
         "nl": "Ik heb geen broers en zussen"
     },
-    {
+    "I am an only child": {
         "en": "I am an only child|I'm an only child",
         "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
         "nl": "Ik ben enig kind|Ik ben enigst kind"
     }
-]
+}

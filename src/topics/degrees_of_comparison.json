@@ -1,5 +1,5 @@
-[
-    {
+{
+    "small": {
         "positive_degree": {
             "en": "Small",
             "fi": "Pieni",
@@ -16,7 +16,7 @@
             "nl": "Kleinst"
         }
     },
-    {
+    "important": {
         "positive_degree": {
             "en": "Important",
             "fi": "Tärkeä",
@@ -33,7 +33,7 @@
             "nl": "Belangrijkst"
         }
     },
-    {
+    "expensive": {
         "positive_degree": {
             "en": "Expensive",
             "fi": "Kallis",
@@ -50,7 +50,7 @@
             "nl": "Duurst"
         }
     },
-    {
+    "cheap": {
         "positive_degree": {
             "en": "Cheap",
             "fi": "Halpa",
@@ -67,7 +67,7 @@
             "nl": "Goedkoopst"
         }
     },
-    {
+    "hot": {
         "positive_degree": {
             "en": "Hot",
             "fi": "Kuuma",
@@ -84,7 +84,7 @@
             "nl": "Heetst"
         }
     },
-    {
+    "cold": {
         "positive_degree": {
             "en": "Cold",
             "fi": "Kylmä",
@@ -101,7 +101,7 @@
             "nl": "Koudst"
         }
     },
-    {
+    "light": {
         "positive_degree": {
             "en": "Light",
             "fi": "Kevyt",
@@ -118,7 +118,7 @@
             "nl": "Lichtst"
         }
     },
-    {
+    "easy": {
         "positive_degree": {
             "en": "Easy",
             "fi": "Helppo",
@@ -135,7 +135,7 @@
             "nl": "Makkelijkst"
         }
     },
-    {
+    "hard": {
         "positive_degree": {
             "en": "Hard",
             "fi": "Vaikea",
@@ -152,7 +152,7 @@
             "nl": "Moeilijkst"
         }
     },
-    {
+    "beautiful": {
         "positive_degree": {
             "en": "Beautiful",
             "fi": "Kaunis",
@@ -169,7 +169,7 @@
             "nl": "Mooist"
         }
     },
-    {
+    "new": {
         "positive_degree": {
             "en": "New",
             "fi": "Uusi",
@@ -186,7 +186,7 @@
             "nl": "Nieuwst"
         }
     },
-    {
+    "old": {
         "positive_degree": {
             "en": "Old",
             "fi": "Vanha",
@@ -203,7 +203,7 @@
             "nl": "Oudst"
         }
     },
-    {
+    "cute": {
         "positive_degree": {
             "en": "Cute",
             "fi": "Söpö",
@@ -220,7 +220,7 @@
             "nl": "Schattigst"
         }
     },
-    {
+    "fast": {
         "positive_degree": {
             "en": "Fast",
             "fi": "Nopea",
@@ -237,7 +237,7 @@
             "nl": "Snelst"
         }
     },
-    {
+    "quiet": {
         "positive_degree": {
             "en": "Quiet",
             "fi": "Hiljainen",
@@ -254,7 +254,7 @@
             "nl": "Stilst"
         }
     },
-    {
+    "fresh": {
         "positive_degree": {
             "en": "Fresh",
             "fi": "Tuore",
@@ -271,7 +271,7 @@
             "nl": "Verst"
         }
     },
-    {
+    "warm": {
         "positive_degree": {
             "en": "Warm",
             "fi": "Lämmin",
@@ -288,7 +288,7 @@
             "nl": "Warmst"
         }
     },
-    {
+    "round": {
         "positive_degree": {
             "en": "Round",
             "fi": "Pyöreä",
@@ -305,7 +305,7 @@
             "nl": "Rondst"
         }
     },
-    {
+    "strange": {
         "positive_degree": {
             "en": "Strange",
             "fi": "Outo",
@@ -322,7 +322,7 @@
             "nl": "Vreemdst"
         }
     },
-    {
+    "honest": {
         "positive_degree": {
             "en": "Honest",
             "fi": "Rehellinen",
@@ -339,7 +339,7 @@
             "nl": "Eerlijkst"
         }
     },
-    {
+    "long": {
         "positive_degree": {
             "en": "Long",
             "fi": "Pitkä",
@@ -356,7 +356,7 @@
             "nl": "Langst"
         }
     },
-    {
+    "short": {
         "positive_degree": {
             "en": "Short",
             "fi": "Lyhyt",
@@ -373,7 +373,7 @@
             "nl": "Kortst"
         }
     },
-    {
+    "tasty": {
         "positive_degree": {
             "en": "Tasty",
             "fi": "Maukas",
@@ -390,7 +390,7 @@
             "nl": "Lekkerst"
         }
     },
-    {
+    "slow": {
         "positive_degree": {
             "en": "Slow",
             "fi": "Hidas",
@@ -407,7 +407,7 @@
             "nl": "Langzaamst"
         }
     },
-    {
+    "sweet": {
         "positive_degree": {
             "en": "Sweet",
             "fi": "Makea",
@@ -424,7 +424,7 @@
             "nl": "Zoetst"
         }
     },
-    {
+    "big": {
         "positive_degree": {
             "en": "Big",
             "fi": ["Iso", "Suuri"],
@@ -441,7 +441,7 @@
             "nl": "Grootst"
         }
     },
-    {
+    "nice": {
         "positive_degree": {
             "en": "Nice",
             "fi": ["Kiva", "Mukava"],
@@ -458,4 +458,4 @@
             "nl": "Leukst"
         }
     }
-]
+}

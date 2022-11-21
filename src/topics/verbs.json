@@ -1,5 +1,5 @@
-[
-    {
+{
+    "to have": {
         "singular": {
             "first_person": {
                 "en": "I have|I've",
@@ -42,7 +42,7 @@
             }
         }
     },
-    {
+    "to be": {
         "singular": {
             "first_person": {
                 "en": "I am|I'm",
@@ -85,4 +85,4 @@
             }
         }
     }
-]
+}

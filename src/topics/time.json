@@ -1,15 +1,15 @@
-[
-    {
+{
+    "time": {
         "en": "Time",
         "fi": "Aika",
         "nl": "De tijd"
     },
-    {
+    "now": {
         "en": "Now",
         "fi": "Nyt",
         "nl": "Nu"
     },
-    {
+    "morning": {
         "singular": {
             "en": "Morning",
             "fi": "Aamu",
@@ -21,7 +21,7 @@
             "nl": "De ochtenden"
         }
     },
-    {
+    "evening": {
         "singular": {
             "en": "Evening",
             "fi": "Ilta",
@@ -33,7 +33,7 @@
             "nl": "De avonden"
         }
     },
-    {
+    "night": {
         "singular": {
             "en": "Night",
             "fi": "Yö",
@@ -45,7 +45,7 @@
             "nl": "De nachten"
         }
     },
-    {
+    "midnight": {
         "singular": {
             "en": "Midnight",
             "fi": "Keskiyö",
@@ -57,7 +57,7 @@
             "nl": "De middernachten"
         }
     },
-    {
+    "year": {
         "singular": {
             "en": "Year",
             "fi": "Vuosi",
@@ -69,7 +69,7 @@
             "nl": "De jaren"
         }
     },
-    {
+    "decade": {
         "singular": {
             "en": "Decade",
             "fi": "Vuosikymmen",
@@ -81,7 +81,7 @@
             "nl": "De decennia"
         }
     },
-    {
+    "century": {
         "singular": {
             "en": "Century",
             "fi": "Vuosisata",
@@ -93,7 +93,7 @@
             "nl": "De eeuwn"
         }
     },
-    {
+    "hour": {
         "singular": {
             "en": "Hour",
             "fi": "Tunti",
@@ -105,7 +105,7 @@
             "nl": "De uren"
         }
     },
-    {
+    "minute": {
         "singular": {
             "en": "Minute",
             "fi": "Minuutti",
@@ -117,34 +117,34 @@
             "nl": "De minuten"
         }
     },
-    {
+    "what time is it": {
         "en": "What time is it?",
         "fi": ["Paljonko kello on?", "Mitä kello on?"],
         "nl": "Hoe laat is het?"
     },
-    {
+    "it is 6:20": {
         "en": "It is twenty past six|It's twenty past six",
         "fi": ["Kello on kuusi kaksikymmentä", "Kello on kaksikymmentä yli kuusi"],
         "nl": "Het is tien voor half zeven"
     },
-    {
+    "it is 6:40": {
         "en": "It is twenty to seven|It's twenty to seven",
         "fi": ["Kello on kuusi neljäkymmentä", "Kello on kahtakymmentä vaille seitsemän"],
         "nl": "Het is tien over half zeven"
     },
-    {
+    "what time": {
         "en": "What time?",
         "fi": "Mihin aikaan?",
         "nl": "Hoe laat?"
     },
-    {
+    "how long does it take": {
         "en": "How long does it take?",
         "fi": ["Kauanko se kestää?", "Kuinka kauan se kestää?"],
         "nl": "Hoe lang duurt het?"
     },
-    {
+    "it takes one hour": {
         "en": "It takes one hour",
         "fi": "Se kestää tunnin",
         "nl": "Het duurt één uur|Het duurt een uur"
     }
-]
+}

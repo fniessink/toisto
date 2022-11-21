@@ -1,50 +1,50 @@
-[
-    {
+{
+    "black": {
         "en": "Black",
         "fi": "Musta",
         "nl": "Zwart"
     },
-    {
+    "white": {
         "en": "White",
         "fi": "Valkoinen",
         "nl": "Wit"
     },
-    {
+    "blue": {
         "en": "Blue",
         "fi": "Sininen",
         "nl": "Blauw"
     },
-    {
+    "green": {
         "en": "Green",
         "fi": "Vihreä",
         "nl": "Groen"
     },
-    {
+    "red": {
         "en": "Red",
         "fi": "Punainen",
         "nl": "Rood"
     },
-    {
+    "yellow": {
         "en": "Yellow",
         "fi": "Keltainen",
         "nl": "Geel"
     },
-    {
+    "purple": {
         "en": "Purple",
         "fi": "Violetti",
         "nl": "Paars"
     },
-    {
+    "orange": {
         "en": "Orange",
         "fi": "Oranssi",
         "nl": "Oranje"
     },
-    {
+    "brown": {
         "en": "Brown",
         "fi": "Ruskea",
         "nl": "Bruin"
     },
-    {
+    "pink": {
         "en": "Pink",
         "fi": [
             "Vaaleanpunainen",
@@ -52,9 +52,9 @@
         ],
         "nl": "Roze"
     },
-    {
+    "grey": {
         "en": "Grey|Gray",
         "fi": "Harmaa",
         "nl": "Grijs"
     }
-]
+}

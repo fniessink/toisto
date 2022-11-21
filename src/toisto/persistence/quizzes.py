@@ -24,8 +24,7 @@ def load_quizzes(
         topic_quizzes = set()
         try:
             topic_json = load_json(topic_file)
-            concept_dicts = topic_json if isinstance(topic_json, list) else topic_json.values()
-            for concept_dict in concept_dicts:
+            for concept_dict in topic_json.values():
                 concept = concept_factory(concept_dict)
                 topic_quizzes.update(concept.quizzes(language, source_language))
         except Exception as reason:  # pylint: disable=broad-except

@@ -83,7 +83,8 @@
         "fi": "Joulukuu",
         "nl": "December"
     },
-    "it_is_july": {
+    "it is july": {
+        "uses": ["july", "to be"],
         "en": "It is July|It's July",
         "fi": [
             "Nyt on heinäkuu",
