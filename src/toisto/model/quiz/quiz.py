@@ -46,6 +46,7 @@ INSTRUCTION: dict[QuizType, str] = {
 @dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
+    concept_id: str
     question_language: Language
     answer_language: Language
     _question: Label
@@ -92,6 +93,7 @@ Quizzes = set[Quiz]
 
 
 def quiz_factory(  # pylint: disable=too-many-arguments
+    concept_id: str,
     language1: Language,
     language2: Language,
     labels1: Labels,
@@ -101,11 +103,11 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     """Create quizzes."""
     if quiz_type == "translate":
         return (
-            set(Quiz(language1, language2, label, labels2) for label in labels1) |
-            set(Quiz(language2, language1, label, labels1) for label in labels2)
+            set(Quiz(concept_id, language1, language2, label, labels2) for label in labels1) |
+            set(Quiz(concept_id, language2, language1, label, labels1) for label in labels2)
         )
     return set(
-        Quiz(language1, language2, label1, (label2,), quiz_type) for label1, label2 in zip(labels1, labels2)
+        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type) for label1, label2 in zip(labels1, labels2)
         if label1 != label2 or quiz_type == "listen"
     )
 

@@ -13,7 +13,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve"])
+        self.quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve"])
         self.guess = Label("Terve")
         self.progress = Progress({})
 
@@ -61,7 +61,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve", "Hei"])
+        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_retention(quiz))
         expected_other_answer = quiz.other_answers(self.guess)[0]
         self.assertEqual(
@@ -71,7 +71,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz("nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
         feedback_text = feedback_correct(self.guess, quiz, self.progress.get_retention(quiz))
         other_answers = [f'"{answer}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(

@@ -7,9 +7,9 @@ from typing import cast, get_args, Iterable, Sequence, Union
 
 from toisto.metadata import Language
 
+from ..quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 from .grammar import GrammaticalCategory
 from .label import Labels, label_factory
-from ..quiz.quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 
 
 ConceptDict = dict[Language, str | list[str]]
@@ -19,16 +19,21 @@ CompositeConceptDict = dict[GrammaticalCategory, Union["CompositeConceptDict", C
 class Concept:
     """Class representing a concept from a topic."""
 
-    def __init__(self, labels: dict[Language, Labels]) -> None:
+    def __init__(self, concept_id: str, labels: dict[Language, Labels]) -> None:
+        self._id = concept_id
         self._labels = labels
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
         result = set()
         if self.has_labels(language, source_language):
-            result.update(quiz_factory(language, source_language, self.labels(language), self.labels(source_language)))
+            result.update(
+                quiz_factory(self._id, language, source_language, self.labels(language), self.labels(source_language))
+            )
         if self.has_labels(language):
-            result.update(quiz_factory(language, language, self.labels(language), self.labels(language), "listen"))
+            result.update(
+                quiz_factory(self._id, language, language, self.labels(language), self.labels(language), "listen")
+            )
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -44,9 +49,9 @@ class Concept:
         return [self]
 
     @classmethod
-    def from_dict(cls, concept_dict: ConceptDict) -> Concept:
+    def from_dict(cls, concept_id: str, concept_dict: ConceptDict) -> Concept:
         """Instantiate a concept from a dict."""
-        return cls({language: label_factory(label) for language, label in concept_dict.items()})
+        return cls(concept_id, {language: label_factory(label) for language, label in concept_dict.items()})
 
 
 ConceptPair = tuple[Concept, Concept]
@@ -55,7 +60,10 @@ ConceptPair = tuple[Concept, Concept]
 class CompositeConcept:
     """A concept that consists of multiple other (sub)concepts."""
 
-    def __init__(self, concepts: Sequence[Concept | CompositeConcept], quiz_types: Sequence[QuizType]) -> None:
+    def __init__(
+        self, concept_id: str, concepts: Sequence[Concept | CompositeConcept], quiz_types: Sequence[QuizType]
+    ) -> None:
+        self._id = concept_id
         self._concepts = concepts
         self._quiz_types = quiz_types
 
@@ -68,7 +76,7 @@ class CompositeConcept:
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            result.update(quiz_factory(language, language, labels1, labels2, quiz_type))
+            result.update(quiz_factory(self._id, language, language, labels1, labels2, quiz_type))
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -89,14 +97,15 @@ class CompositeConcept:
                 yield cast(ConceptPair, permutation), quiz_type
 
     @classmethod
-    def from_dict(cls, concept_dict: CompositeConceptDict) -> CompositeConcept:
+    def from_dict(cls, concept_id: str, concept_dict: CompositeConceptDict) -> CompositeConcept:
         """Instantiate a concept from a dict."""
         keys = concept_dict.keys()
-        return cls(tuple(concept_factory(concept_dict[key]) for key in keys), quiz_type_factory(tuple(keys)))
+        constituent_concepts = tuple(concept_factory(concept_id, concept_dict[key]) for key in keys)
+        return cls(concept_id, constituent_concepts, quiz_type_factory(tuple(keys)))
 
 
-def concept_factory(concept_dict: CompositeConceptDict | ConceptDict) -> CompositeConcept | Concept:
+def concept_factory(concept_id: str, concept_dict: CompositeConceptDict | ConceptDict) -> CompositeConcept | Concept:
     """Create a concept from the concept dict."""
     if set(get_args(GrammaticalCategory)) & set(concept_dict):
-        return CompositeConcept.from_dict(cast(CompositeConceptDict, concept_dict))
-    return Concept.from_dict(cast(ConceptDict, concept_dict))
+        return CompositeConcept.from_dict(concept_id, cast(CompositeConceptDict, concept_dict))
+    return Concept.from_dict(concept_id, cast(ConceptDict, concept_dict))

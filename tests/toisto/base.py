@@ -12,15 +12,17 @@ class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
 
     @staticmethod
-    def create_quiz(
+    def create_quiz(  # pylint: disable=too-many-arguments
+        concept_id: str,
         question_language: str,
         answer_language: str,
         question: str,
         answers: list[str],
-        quiz_type: str = "translate"
+        quiz_type: str = "translate",
     ) -> Quiz:
         """Create a quiz."""
         return Quiz(
+            concept_id,
             cast(Language, question_language),
             cast(Language, answer_language),
             Label(question),

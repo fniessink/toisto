@@ -16,7 +16,7 @@ class PracticeTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        self.quiz = self.create_quiz("fi", "nl", "Terve", ["Hoi"])
+        self.quiz = self.create_quiz("hi", "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
@@ -42,7 +42,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quiz = self.create_quiz("fi", "fi", "Terve", ["Terve"], "listen")
+        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen")
         topics = Topics(set([Topic("topic", set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
