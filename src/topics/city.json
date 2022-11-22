@@ -144,6 +144,7 @@
         }
     },
     "department store": {
+        "uses": ["house", "store"],
         "singular": {
             "en": "Department store",
             "fi": "Tavaratalo",
@@ -252,6 +253,7 @@
         }
     },
     "mall": {
+        "uses": ["centre", "shop"],
         "singular": {
             "en": ["Mall", "Shopping center"],
             "fi": ["Kauppakeskus", "Ostoskeskus"],
@@ -264,6 +266,7 @@
         }
     },
     "capital": {
+        "uses": "city",
         "singular": {
             "en": "Capital",
             "fi": "Pääkaupunki",
@@ -276,21 +279,25 @@
         }
     },
     "that building is a church": {
+        "uses": ["building", "church"],
         "en": "That building is a church",
         "fi": "Tuo rakennus on kirkko",
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
+        "uses": "library",
         "en": "Where is the library?",
         "fi": ["Missä on kirjasto?", "Missä kirjasto sijaitsee?"],
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {
+        "uses": ["square", "tree"],
         "en": "There is a Christmas tree on the square",
         "fi": "Aukiolla on joulukuusi",
         "nl": "Er staat een kerstboom op het plein"
     },
     "I am in the office": {
+        "uses": "office",
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"

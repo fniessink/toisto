@@ -41,6 +41,7 @@
         }
     },
     "grandmmother": {
+        "uses": ["big", "mother"],
         "singular": {
             "en": "Grandmother",
             "fi": "Isoäiti",
@@ -53,6 +54,7 @@
         }
     },
     "grandfather": {
+        "uses": ["big", "father"],
         "singular": {
             "en": "Grandfather",
             "fi": "Isoisä",
@@ -135,6 +137,7 @@
         }
     },
     "sibling": {
+        "uses": ["brother", "sister"],
         "singular": {
             "en": "Sibling",
             "fi": "Sisarus",
@@ -165,6 +168,7 @@
         }
     },
     "grandchild": {
+        "uses": "child",
         "singular": {
             "en": "Grandchild",
             "fi": "Lapsenlapsi",
@@ -254,6 +258,7 @@
         }
     },
     "grandparent": {
+        "uses": "parent",
         "singular": {
             "en": "Grandparent",
             "fi": "Isovanhempi",
@@ -266,6 +271,7 @@
         }
     },
     "parent-in-law": {
+        "uses": "parent",
         "singular": {
             "en": "Parent-in-law",
             "fi": "Appivanhempi",
@@ -278,6 +284,7 @@
         }
     },
     "mother-in-law": {
+        "uses": "mother",
         "singular": {
             "en": "Mother-in-law",
             "fi": "Anoppi",
@@ -290,6 +297,7 @@
         }
     },
     "father-in-law": {
+        "uses": "father",
         "singular": {
             "en": "Father-in-law",
             "fi": "Appiukko",
@@ -302,6 +310,7 @@
         }
     },
     "stepfather": {
+        "uses": "father",
         "singular": {
             "en": "Stepfather",
             "fi": "Isäpuoli",
@@ -314,6 +323,7 @@
         }
     },
     "stepmother": {
+        "uses": "mother",
         "singular": {
             "en": "Stepmother",
             "fi": "Äitipuoli",
@@ -326,21 +336,25 @@
         }
     },
     "they have x children and y grandchildren": {
+        "uses": ["child", "grandchild"],
         "en": "They have three children and six grandchildren",
         "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
         "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
     },
     "how many brothers and sisters do you have": {
+        "uses": ["brother", "sister"],
         "en": "How many brothers and sisters do you have?",
         "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
         "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
     },
     "I have x brothers and y sisters": {
+        "uses": ["brother", "sister"],
         "en": "I have two brothers and one sister",
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
     "I have no siblings:": {
+        "uses": "sibling",
         "en": [
             "I have no siblings",
             "I have no brothers and sisters"
@@ -352,6 +366,7 @@
         "nl": "Ik heb geen broers en zussen"
     },
     "I am an only child": {
+        "uses": "child",
         "en": "I am an only child|I'm an only child",
         "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
         "nl": "Ik ben enig kind|Ik ben enigst kind"

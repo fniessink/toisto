@@ -60,6 +60,7 @@
         }
     },
     "desk": {
+        "uses": "table",
         "singular": {
             "en": "Desk",
             "fi": ["Työpöytä", "Kirjoituspöytä"],
@@ -108,11 +109,13 @@
         }
     },
     "the door is locked": {
+        "uses": "door",
         "en": "The door is locked",
         "fi": "Ovi on lukossa",
         "nl": ["De deur is op slot", "De deur zit op slot"]
     },
     "the cat is sleeping on the carpet": {
+        "uses": ["cat", "carpet"],
         "en": "The cat is sleeping on the carpet",
         "fi": "Kissa nukkuu matolla",
         "nl": "De kat slaapt op het tapijt"

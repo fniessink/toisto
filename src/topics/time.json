@@ -46,6 +46,7 @@
         }
     },
     "midnight": {
+        "uses": "night",
         "singular": {
             "en": "Midnight",
             "fi": "Keskiyö",
@@ -118,21 +119,25 @@
         }
     },
     "what time is it": {
+        "uses": "time",
         "en": "What time is it?",
         "fi": ["Paljonko kello on?", "Mitä kello on?"],
         "nl": "Hoe laat is het?"
     },
     "it is 6:20": {
+        "uses": ["20", "6", "7"],
         "en": "It is twenty past six|It's twenty past six",
         "fi": ["Kello on kuusi kaksikymmentä", "Kello on kaksikymmentä yli kuusi"],
         "nl": "Het is tien voor half zeven"
     },
     "it is 6:40": {
+        "uses": ["20", "10", "7"],
         "en": "It is twenty to seven|It's twenty to seven",
         "fi": ["Kello on kuusi neljäkymmentä", "Kello on kahtakymmentä vaille seitsemän"],
         "nl": "Het is tien over half zeven"
     },
     "what time": {
+        "uses": "time",
         "en": "What time?",
         "fi": "Mihin aikaan?",
         "nl": "Hoe laat?"
@@ -143,6 +148,7 @@
         "nl": "Hoe lang duurt het?"
     },
     "it takes one hour": {
+        "uses": "houe",
         "en": "It takes one hour",
         "fi": "Se kestää tunnin",
         "nl": "Het duurt één uur|Het duurt een uur"
