@@ -52,7 +52,7 @@ $ toisto --help
 
 ```console
 $ toisto fi nl
- Welcome to Toisto v0.1.0!
+ Welcome to Toisto v0.2.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.

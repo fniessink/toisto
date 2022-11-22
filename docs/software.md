@@ -268,6 +268,42 @@ When there are synonyms, they need to be in the same order in every degree. This
 }
 ```
 
+### Concept relationships
+
+When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
+
+```json
+{
+    "day": {
+        "singular": {
+            "en": "Day",
+            "nl": "De dag"
+        },
+        "plural": {
+            "en": "Days",
+            "nl": "De dagen"
+        }
+    },
+    "week": {
+        "singular": {
+            "en": "Week",
+            "nl": "De week"
+        },
+        "plural": {
+            "en": "Weeks",
+            "nl": "De weken"
+        }
+    },
+    "days of the week": {
+        "uses": ["day", "week"],
+        "en": "Days of the week",
+        "nl": "De dagen van de week"
+    }
+}
+```
+
+If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
+
 ## Quizzes
 
 Toisto uses the concepts to generate quizzes. Currently, the following types of quizzes are generated:
