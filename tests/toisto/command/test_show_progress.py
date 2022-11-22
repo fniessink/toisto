@@ -14,7 +14,7 @@ class ShowProgressTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.quiz = self.create_quiz("fi", "nl", "Terve", ["Hoi"])
+        self.quiz = self.create_quiz("hello", "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
 
     def test_title(self):

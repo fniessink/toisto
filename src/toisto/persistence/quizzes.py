@@ -23,8 +23,9 @@ def load_quizzes(
     for topic_file in topic_files:
         topic_quizzes = set()
         try:
-            for concept_dict in load_json(topic_file):
-                concept = concept_factory(concept_dict)
+            topic_json = load_json(topic_file)
+            for concept_key, concept_value in topic_json.items():
+                concept = concept_factory(concept_key, concept_value)
                 topic_quizzes.update(concept.quizzes(language, source_language))
         except Exception as reason:  # pylint: disable=broad-except
             show_error_and_exit(f"{NAME} cannot read topic {topic_file}: {reason}.\n")

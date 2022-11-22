@@ -1,10 +1,10 @@
-[
-    {
+{
+    "family": {
         "en": "Family",
         "fi": "Perhe",
         "nl": "De familie"
     },
-    {
+    "grandma": {
         "singular": {
             "en": "Grandma",
             "fi": [
@@ -22,7 +22,7 @@
             "nl": "De oma's"
         }
     },
-    {
+    "grandpa": {
         "singular": {
             "en": "Grandpa",
             "fi": [
@@ -40,7 +40,8 @@
             "nl": "De opa's"
         }
     },
-    {
+    "grandmmother": {
+        "uses": ["big", "mother"],
         "singular": {
             "en": "Grandmother",
             "fi": "Isoäiti",
@@ -52,7 +53,8 @@
             "nl": "De grootmoeders"
         }
     },
-    {
+    "grandfather": {
+        "uses": ["big", "father"],
         "singular": {
             "en": "Grandfather",
             "fi": "Isoisä",
@@ -64,17 +66,17 @@
             "nl": "De grootvaders"
         }
     },
-    {
+    "married": {
         "en": "Married",
         "fi": "Naimisissa",
         "nl": "Getrouwd"
     },
-    {
+    "divorced": {
         "en": "Divorced",
         "fi": "Eronnut",
         "nl": "Gescheiden"
     },
-    {
+    "mother": {
         "singular": {
             "en": "Mother",
             "fi": "Äiti",
@@ -86,7 +88,7 @@
             "nl": "De moeders"
         }
     },
-    {
+    "father": {
         "singular": {
             "en": "Father",
             "fi": "Isä",
@@ -98,7 +100,7 @@
             "nl": "De vaders"
         }
     },
-    {
+    "child": {
         "singular": {
             "en": "Child",
             "fi": "Lapsi",
@@ -110,7 +112,7 @@
             "nl": "De kinderen"
         }
     },
-    {
+    "sister": {
         "singular": {
             "en": "Sister",
             "fi": "Sisko",
@@ -122,7 +124,7 @@
             "nl": "De zussen"
         }
     },
-    {
+    "brother": {
         "singular": {
             "en": "Brother",
             "fi": "Veli",
@@ -134,7 +136,8 @@
             "nl": "De broers"
         }
     },
-    {
+    "sibling": {
+        "uses": ["brother", "sister"],
         "singular": {
             "en": "Sibling",
             "fi": "Sisarus",
@@ -146,7 +149,7 @@
             "nl": "De broers of zussen|De zussen of broers"
         }
     },
-    {
+    "cousin": {
         "singular": {
             "en": "Cousin",
             "fi": "Serkku",
@@ -164,7 +167,8 @@
             ]
         }
     },
-    {
+    "grandchild": {
+        "uses": "child",
         "singular": {
             "en": "Grandchild",
             "fi": "Lapsenlapsi",
@@ -176,7 +180,7 @@
             "nl": "De kleinkinderen"
         }
     },
-    {
+    "daughter": {
         "singular": {
             "en": "Daughter",
             "fi": "Tytär",
@@ -188,7 +192,7 @@
             "nl": "De dochters"
         }
     },
-    {
+    "son": {
         "singular": {
             "en": "Son",
             "fi": "Poika",
@@ -200,7 +204,7 @@
             "nl": "De zonen"
         }
     },
-    {
+    "wife": {
         "singular": {
             "en": "Wife",
             "fi": "Vaimo",
@@ -212,7 +216,7 @@
             "nl": "De echtgenotes"
         }
     },
-    {
+    "husband:": {
         "singular": {
             "en": "Husband",
             "fi": "Aviomies|Mies",
@@ -224,7 +228,7 @@
             "nl": "De echtgenoten"
         }
     },
-    {
+    "spouse": {
         "singular": {
             "en": "Spouse",
             "fi": "Puoliso",
@@ -236,12 +240,12 @@
             "nl": "De partners"
         }
     },
-    {
+    "marriage": {
         "en": "Marriage",
         "fi": "Avioliitto",
         "nl": "Het huwelijk"
     },
-    {
+    "parent": {
         "singular": {
             "en": "Parent",
             "fi": "Vanhempi",
@@ -253,7 +257,8 @@
             "nl": "De ouders"
         }
     },
-    {
+    "grandparent": {
+        "uses": "parent",
         "singular": {
             "en": "Grandparent",
             "fi": "Isovanhempi",
@@ -265,7 +270,8 @@
             "nl": "De grootouders"
         }
     },
-    {
+    "parent-in-law": {
+        "uses": "parent",
         "singular": {
             "en": "Parent-in-law",
             "fi": "Appivanhempi",
@@ -277,7 +283,8 @@
             "nl": "De schoonouders"
         }
     },
-    {
+    "mother-in-law": {
+        "uses": "mother",
         "singular": {
             "en": "Mother-in-law",
             "fi": "Anoppi",
@@ -289,7 +296,8 @@
             "nl": "De schoonmoeders"
         }
     },
-    {
+    "father-in-law": {
+        "uses": "father",
         "singular": {
             "en": "Father-in-law",
             "fi": "Appiukko",
@@ -301,7 +309,8 @@
             "nl": "De schoonvaders"
         }
     },
-    {
+    "stepfather": {
+        "uses": "father",
         "singular": {
             "en": "Stepfather",
             "fi": "Isäpuoli",
@@ -313,7 +322,8 @@
             "nl": "De stiefvaders"
         }
     },
-    {
+    "stepmother": {
+        "uses": "mother",
         "singular": {
             "en": "Stepmother",
             "fi": "Äitipuoli",
@@ -325,22 +335,26 @@
             "nl": "De stiefmoeders"
         }
     },
-    {
+    "they have x children and y grandchildren": {
+        "uses": ["child", "grandchild"],
         "en": "They have three children and six grandchildren",
         "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
         "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
     },
-    {
-        "en": "How many brother and sisters do you have?",
+    "how many brothers and sisters do you have": {
+        "uses": ["brother", "sister"],
+        "en": "How many brothers and sisters do you have?",
         "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
         "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
     },
-    {
+    "I have x brothers and y sisters": {
+        "uses": ["brother", "sister"],
         "en": "I have two brothers and one sister",
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
-    {
+    "I have no siblings:": {
+        "uses": "sibling",
         "en": [
             "I have no siblings",
             "I have no brothers and sisters"
@@ -351,9 +365,10 @@
         ],
         "nl": "Ik heb geen broers en zussen"
     },
-    {
+    "I am an only child": {
+        "uses": "child",
         "en": "I am an only child|I'm an only child",
         "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
         "nl": "Ik ben enig kind|Ik ben enigst kind"
     }
-]
+}

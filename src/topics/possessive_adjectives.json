@@ -1,5 +1,5 @@
-[
-    {
+{
+    "my cat": {
         "singular": {
             "en": "My cat",
             "nl": "Mijn kat"
@@ -9,21 +9,21 @@
             "nl": "Mijn katten"
         }
     },
-    {
+    "my cat en:fi": {
         "en": [
             "My cat",
             "My cats"
         ],
         "fi": "Minun kissani"
     },
-    {
+    "my cat fi:nl": {
         "fi": "Minun kissani",
         "nl": [
             "Mijn kat",
             "Mijn katten"
         ]
     },
-    {
+    "your cat": {
         "singular": {
             "en": "Your cat",
             "nl": [
@@ -39,7 +39,7 @@
             ]
         }
     },
-    {
+    "your cat en:fi": {
         "en": [
             "Your cat",
             "Your cats"
@@ -49,14 +49,14 @@
             "Teidän kissanne"
         ]
     },
-    {
+    "your cat fi:nl": {
         "fi": "Sinun kissasi",
         "nl": [
             "Jouw kat",
             "Jouw katten"
         ]
     },
-    {
+    "his/her cat": {
         "female": {
             "singular": {
                 "en": "Her cat",
@@ -78,7 +78,7 @@
             }
         }
     },
-    {
+    "his/her cat en:fi": {
         "en": [
             "His cat",
             "His cats",
@@ -87,7 +87,7 @@
         ],
         "fi": "Hänen kissansa"
     },
-    {
+    "his/her cat fi:nl": {
         "fi": "Hänen kissansa",
         "nl": [
             "Zijn kat",
@@ -96,7 +96,7 @@
             "Haar katten"
         ]
     },
-    {
+    "our cat": {
         "singular": {
             "en": "Our cat",
             "nl": "Onze kat"
@@ -106,28 +106,28 @@
             "nl": "Onze katten"
         }
     },
-    {
+    "our cat en:fi": {
         "en": [
             "Our cat",
             "Our cats"
         ],
         "fi": "Meidän kissamme"
     },
-    {
+    "our cat fi:nl": {
         "fi": "Meidän kissamme",
         "nl": [
             "Onze kat",
             "Onze katten"
         ]
     },
-    {
+    "your (pl) cat": {
         "fi": "Teidän kissanne",
         "nl": [
             "Jullie kat",
             "Jullie katten"
         ]
     },
-    {
+    "their cat ": {
         "singular": {
             "en": "Their cat",
             "nl": "Hun kat"
@@ -137,21 +137,21 @@
             "nl": "Hun katten"
         }
     },
-    {
+    "their cat en:fi": {
         "en": [
             "Their cat",
             "Their cats"
         ],
         "fi": "Heidän kissansa"
     },
-    {
+    "their cat fi:nl": {
         "fi": "Heidän kissansa",
         "nl": [
             "Hun kat",
             "Hun katten"
         ]
     },
-    {
+    "my house": {
         "singular": {
             "en": "My house",
             "nl": "Mijn huis"
@@ -161,21 +161,21 @@
             "nl": "Mijn huizen"
         }
     },
-    {
+    "my house en:fi": {
         "en": [
             "My house",
             "My houses"
         ],
         "fi": "Minun taloni"
     },
-    {
+    "my house fi:nl": {
         "fi": "Minun taloni",
         "nl": [
             "Mijn huis",
             "Mijn huizen"
         ]
     },
-    {
+    "your house": {
         "singular": {
             "en": "Your house",
             "nl": [
@@ -191,7 +191,7 @@
             ]
         }
     },
-    {
+   "your house en:fi": {
         "en": [
             "Your house",
             "Your houses"
@@ -201,14 +201,14 @@
             "Teidän talonne"
         ]
     },
-    {
+    "your house fi:nl": {
         "fi": "Sinun talosi",
         "nl": [
             "Jouw huis",
             "Jouw huizen"
         ]
     },
-    {
+    "her/his house": {
         "female": {
             "singular": {
                 "en": "Her house",
@@ -230,7 +230,7 @@
             }
         }
     },
-    {
+    "her/his house en:fi": {
         "en": [
             "His house",
             "His houses",
@@ -239,7 +239,7 @@
         ],
         "fi": "Hänen talonsa"
     },
-    {
+    "her/his house fi:nl": {
         "fi": "Hänen talonsa",
         "nl": [
             "Zijn huis",
@@ -248,7 +248,7 @@
             "Haar huizen"
         ]
     },
-    {
+    "our house": {
         "singular": {
             "en": "Our house",
             "nl": "Ons huis"
@@ -258,28 +258,28 @@
             "nl": "Onze huizen"
         }
     },
-    {
+    "our house en:fi": {
         "en": [
             "Our house",
             "Our houses"
         ],
         "fi": "Meidän talomme"
     },
-    {
+    "our house fi:nl": {
         "fi": "Meidän talomme",
         "nl": [
             "Ons huis",
             "Onze huizen"
         ]
     },
-    {
+    "your (pl) house fi:nl": {
         "fi": "Teidän talonne",
         "nl": [
             "Jullie huis",
             "Jullie huizen"
         ]
     },
-    {
+    "their house": {
         "singular": {
             "en": "Their house",
             "nl": "Hun huis"
@@ -289,18 +289,18 @@
             "nl": "Hun huizen"
         }
     },
-    {
+    "their house en:fi": {
         "en": [
             "Their house",
             "Their houses"
         ],
         "fi": "Heidän talonsa"
     },
-    {
+    "their house fi:nl": {
         "fi": "Heidän talonsa",
         "nl": [
             "Hun huis",
             "Hun huizen"
         ]
     }
-]
+}

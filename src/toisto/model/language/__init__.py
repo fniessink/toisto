@@ -1,4 +1,4 @@
 """Language classes."""
 
-from .concept import Concept, concept_factory
+from .concept import LeafConcept, concept_factory
 from .label import  Label

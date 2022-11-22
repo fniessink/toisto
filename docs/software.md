@@ -4,31 +4,31 @@
 
 Builtin topics are located in `src/topics` in the form of JSON files. Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-t/--topic-file` command-line option.
 
-Each topic is a list of *concepts* with *labels* in different languages. A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language.
+Each topic is a collection of *concepts*. Each concept has *labels* in different languages. A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language.
 
-The contents of a JSON topic file look as follows:
+The contents of a JSON topic file looks as follows:
 
 ```json
-[
-    {
+{
+    "today": {
         "en": "Today",
         "fi": "Tänään",
         "nl": "Vandaag"
     },
-    {
+    "yesterday": {
         "en": "Yesterday",
         "fi": "Eilen",
         "nl": "Gisteren"
     },
-    {
+    "tomorrow": {
         "en": "Tomorrow",
         "fi": "Huomenna",
         "nl": "Morgen"
     }
-]
+}
 ```
 
-Concepts are represented in the topic files as JSON mappings with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
+Concepts are represented in the topic files as objects. The key is an identifier for the concept. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
@@ -37,12 +37,12 @@ When using more than two languages is not essential to explain how things work, 
 When there are multiple ways to spell a label, use the pipe symbol to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
 
 ```json
-[
-    {
+{
+    "tomorrow it is tuesday": {
         "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai"
     }
-]
+}
 ```
 
 ### Concepts with multiple labels
@@ -50,15 +50,15 @@ When there are multiple ways to spell a label, use the pipe symbol to separate t
 Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toiso will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
 
 ```json
-[
-    {
+{
+    "what day is it today": {
         "en": "What day is it today?",
         "fi": [
             "Mikä päivä tänään on?",
             "Mikä päivä on tänään?"
         ]
     }
-]
+}
 ```
 
 ### Multiple concepts with the same label
@@ -73,16 +73,16 @@ If we would include all these labels in one concept, Toisto would consider "Goed
 In the topic file this looks as follows:
 
 ```json
-[
-    {
+{
+    "good day": {
         "en": "Good day",
         "nl": "Goedendag"
     },
-    {
+    "good afternoon": {
         "en": "Good afternoon",
         "nl": "Goedemiddag"
     },
-    {
+    "good day fi:en": {
         "fi": [
             "Hyvää päivää",
             "Päivää"
@@ -92,7 +92,7 @@ In the topic file this looks as follows:
             "Good day"
         ]
     },
-    {
+    "good day fi:nl": {
         "fi": [
             "Hyvää päivää",
             "Päivää"
@@ -102,7 +102,7 @@ In the topic file this looks as follows:
             "Goedemiddag"
         ]
     }
-]
+}
 ```
 
 ### Grammatical number
@@ -112,8 +112,8 @@ When concepts can have both singular and plural forms, such as with most nouns, 
 The format of the JSON files is as follows:
 
 ```json
-[
-    {
+{
+    "day": {
         "singular": {
             "en": "Day",
             "fi": "Päivä",
@@ -125,7 +125,7 @@ The format of the JSON files is as follows:
             "nl": "De dagen"
         }
     }
-]
+}
 ```
 
 ### Grammatical gender
@@ -133,8 +133,8 @@ The format of the JSON files is as follows:
 When concepts have multiple genders, these can be specified as follows:
 
 ```json
-[
-    {
+{
+    "parent": {
         "female": {
             "en": "Mother",
             "nl": "De moeder"
@@ -144,14 +144,14 @@ When concepts have multiple genders, these can be specified as follows:
             "nl": "De vader"
         }
     }
-]
+}
 ```
 
 It is also possible to have a neutral gender:
 
 ```json
-[
-    {
+{
+    "parent": {
         "female": {
             "en": "Mother",
             "nl": "De moeder"
@@ -165,7 +165,7 @@ It is also possible to have a neutral gender:
             "nl": "De ouder"
         }
     }
-]
+}
 ```
 
 Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the builtin topic files.
@@ -177,8 +177,8 @@ When concepts, usually verbs and pronouns, have different persons, these are rep
 The format of the JSON files is as follows:
 
 ```json
-[
-    {
+{
+    "to have": {
         "singular": {
             "first_person": {
                 "en": "I have|I've",
@@ -214,7 +214,7 @@ The format of the JSON files is as follows:
             }
         }
     }
-]
+}
 ```
 
 Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the `;`.
@@ -226,8 +226,8 @@ The same goes for the third person Finnish. Because Finnish does not distinguish
 Degrees of comparison are specified as follows:
 
 ```json
-[
-    {
+{
+    "small": {
         "positive_degree": {
             "en": "Small",
             "nl": "Klein"
@@ -241,14 +241,14 @@ Degrees of comparison are specified as follows:
             "nl": "Kleinst"
         }
     }
-]
+}
 ```
 
 When there are synonyms, they need to be in the same order in every degree. This makes sure Toisto does not consider "Suurin" a superlative of "Iso".
 
 ```json
-[
-    {
+{
+    "big": {
         "positive_degree": {
             "en": "Big",
             "fi": ["Iso", "Suuri"],
@@ -265,8 +265,44 @@ When there are synonyms, they need to be in the same order in every degree. This
             "nl": "Grootst"
         }
     }
-]
+}
 ```
+
+### Concept relationships
+
+When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
+
+```json
+{
+    "day": {
+        "singular": {
+            "en": "Day",
+            "nl": "De dag"
+        },
+        "plural": {
+            "en": "Days",
+            "nl": "De dagen"
+        }
+    },
+    "week": {
+        "singular": {
+            "en": "Week",
+            "nl": "De week"
+        },
+        "plural": {
+            "en": "Weeks",
+            "nl": "De weken"
+        }
+    },
+    "days of the week": {
+        "uses": ["day", "week"],
+        "en": "Days of the week",
+        "nl": "De dagen van de week"
+    }
+}
+```
+
+If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
 
 ## Quizzes
 

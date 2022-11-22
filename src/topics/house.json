@@ -1,5 +1,5 @@
-[
-    {
+{
+    "apartment": {
         "singular": {
             "en": "Apartment",
             "fi": "Asunto",
@@ -11,7 +11,7 @@
             "nl": "De appartementen"
         }
     },
-    {
+    "room": {
         "singular": {
             "en": "Room",
             "fi": "Huone",
@@ -23,7 +23,7 @@
             "nl": "De kamers"
         }
     },
-    {
+    "basement": {
         "singular": {
             "en": "Basement",
             "fi": "Kellari",
@@ -35,7 +35,7 @@
             "nl": "De kelders"
         }
     },
-    {
+    "home": {
         "singular": {
             "en": "Home",
             "fi": "Koti",
@@ -46,7 +46,7 @@
             "fi": "Kodit"
         }
     },
-    {
+    "garden": {
         "singular": {
             "en": "Garden",
             "fi": "Piha",
@@ -58,7 +58,7 @@
             "nl": "De tuinen"
         }
     },
-    {
+    "house": {
         "singular": {
             "en": "House",
             "fi": "Talo",
@@ -70,7 +70,7 @@
             "nl": "De huizen"
         }
     },
-    {
+    "veranda": {
         "singular": {
             "en": "Veranda",
             "fi": "Veranta",
@@ -82,7 +82,7 @@
             "nl": "De veranda's"
         }
     },
-    {
+    "barbecue": {
         "singular": {
             "en": "Barbecue",
             "fi": "Grilli",
@@ -94,7 +94,7 @@
             "nl": "De barbecues"
         }
     },
-    {
+    "wall": {
         "singular": {
             "en": "Wall",
             "fi": "Seinä",
@@ -106,7 +106,7 @@
             "nl": "De muren"
         }
     },
-    {
+    "floor": {
         "singular": {
             "en": "Floor",
             "fi": "Lattia",
@@ -118,7 +118,7 @@
             "nl": "De vloeren"
         }
     },
-    {
+    "door": {
         "singular": {
             "en": "Door",
             "fi": "Ovi",
@@ -130,7 +130,7 @@
             "nl": "De deuren"
         }
     },
-    {
+    "window": {
         "singular": {
             "en": "Window",
             "fi": "Ikkuna",
@@ -142,4 +142,4 @@
             "nl": "De ramen"
         }
     }
-]
+}

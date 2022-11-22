@@ -1,5 +1,5 @@
-[
-    {
+{
+    "table": {
         "singular": {
             "en": "Table",
             "fi": "Pöytä",
@@ -11,7 +11,7 @@
             "nl": "De tafels"
         }
     },
-    {
+    "bed": {
         "singular": {
             "en": "Bed",
             "fi": "Sänky",
@@ -23,7 +23,7 @@
             "nl": "De bedden"
         }
     },
-    {
+    "sofa": {
         "singular": {
             "en": "Sofa",
             "fi": "Sohva",
@@ -35,7 +35,7 @@
             "nl": "De sofa's"
         }
     },
-    {
+    "pillow": {
         "singular": {
             "en": "Pillow",
             "fi": "Tyyny",
@@ -47,7 +47,7 @@
             "nl": "De kussens"
         }
     },
-    {
+    "chair": {
         "singular": {
             "en": "Chair",
             "fi": "Tuoli",
@@ -59,7 +59,8 @@
             "nl": "De stoelen"
         }
     },
-    {
+    "desk": {
+        "uses": "table",
         "singular": {
             "en": "Desk",
             "fi": ["Työpöytä", "Kirjoituspöytä"],
@@ -71,7 +72,7 @@
             "nl": "De bureaus"
         }
     },
-    {
+    "lamp": {
         "singular": {
             "en": "Lamp",
             "fi": "Lamppu",
@@ -83,7 +84,7 @@
             "nl": "De lampen"
         }
     },
-    {
+    "curtain": {
         "singular": {
             "en": "Curtain",
             "fi": "Verho",
@@ -95,7 +96,7 @@
             "nl": "De gordijnen"
         }
     },
-    {
+    "carpet": {
         "singular": {
             "en": "Carpet",
             "fi": "Matto",
@@ -107,14 +108,16 @@
             "nl": "De tapijten"
         }
     },
-    {
+    "the door is locked": {
+        "uses": "door",
         "en": "The door is locked",
         "fi": "Ovi on lukossa",
         "nl": ["De deur is op slot", "De deur zit op slot"]
     },
-    {
+    "the cat is sleeping on the carpet": {
+        "uses": ["cat", "carpet"],
         "en": "The cat is sleeping on the carpet",
         "fi": "Kissa nukkuu matolla",
         "nl": "De kat slaapt op het tapijt"
     }
-]
+}

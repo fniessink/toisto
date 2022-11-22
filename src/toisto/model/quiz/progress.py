@@ -34,6 +34,8 @@ class Progress:
     def __eligible_quizzes(self, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
         """Return the quizzes that can be the next quiz."""
         eligible = [quiz for quiz in quizzes if not self.__is_silenced(quiz) and quiz != self.__current_quiz]
+        concepts = set(quiz.concept_id for quiz in eligible)
+        eligible = [quiz for quiz in eligible if not set(quiz.uses) & concepts]
         eligible_with_progress = [quiz for quiz in eligible if self.__has_progress(quiz)]
         return set(eligible_with_progress if must_have_progress else eligible_with_progress or eligible)
 

@@ -1,5 +1,5 @@
-[
-    {
+{
+    "hi": {
         "en": [
             "Hi"
         ],
@@ -11,7 +11,7 @@
             "Hoi"
         ]
     },
-    {
+    "hello": {
         "en": [
             "Hello"
         ],
@@ -22,7 +22,7 @@
             "Hallo"
         ]
     },
-    {
+    "bye": {
         "en": [
             "Bye",
             "Bye bye"
@@ -37,22 +37,22 @@
             "Tot ziens"
         ]
     },
-    {
+    "welcome": {
         "en": "Welcome",
         "fi": "Tervetuloa",
         "nl": "Welkom"
     },
-    {
+    "who are you": {
         "en": "Who are you?",
         "fi": "Kuka sinä olet?",
         "nl": "Wie ben jij?"
     },
-    {
+    "I am alice": {
         "en": "I am Alice|I'm Alice",
         "fi": "Minä olen Alice",
         "nl": "Ik ben Alice"
     },
-    {
+    "how are you": {
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -60,16 +60,12 @@
         ],
         "nl": "Hoe gaat het?"
     },
-    {
+    "my name is bob": {
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
-    {
-        "en": "Good day",
-        "nl": "Goedendag"
-    },
-    {
+    "good morning": {
         "en": "Good morning",
         "fi": [
             "Hyvää huomenta",
@@ -77,11 +73,15 @@
         ],
         "nl": "Goedemorgen"
     },
-    {
+    "good afternoon": {
         "en": "Good afternoon",
         "nl": "Goedemiddag"
     },
-    {
+    "good day": {
+        "en": "Good day",
+        "nl": "Goedendag"
+    },
+    "good day en:fi": {
         "en": [
             "Good afternoon",
             "Good day"
@@ -91,7 +91,7 @@
             "Päivää"
         ]
     },
-    {
+    "good day fi:nl": {
         "fi": [
             "Hyvää päivää",
             "Päivää"
@@ -101,7 +101,7 @@
             "Goedemiddag"
         ]
     },
-    {
+    "good evening": {
         "en": "Good evening",
         "fi": [
             "Hyvää iltaa",
@@ -109,7 +109,7 @@
         ],
         "nl": "Goedenavond"
     },
-    {
+    "good night": {
         "en": "Good night",
         "fi": "Hyvää yötä",
         "nl": [
@@ -117,9 +117,9 @@
             "Welterusten"
         ]
     },
-    {
+    "sleep well": {
         "en": "Sleep well",
         "fi": "Nuku hyvin",
         "nl": "Slaap lekker"
     }
-]
+}
