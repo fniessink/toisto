@@ -1,6 +1,7 @@
 """Progress unit tests."""
 
 from toisto.model import Progress, Topic, Topics
+from toisto.model.types import ConceptId
 
 from ...base import ToistoTestCase
 
@@ -10,8 +11,8 @@ class ProgressTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
-        self.another_quiz = self.create_quiz("english", "nl", "fi", "Engels", ["Englanti"])
+        self.quiz = self.create_quiz(ConceptId("english"), "fi", "nl", "Englanti", ["Engels"])
+        self.another_quiz = self.create_quiz(ConceptId("english"), "nl", "fi", "Engels", ["Englanti"])
         self.progress = Progress({})
 
     def test_progress_new_quiz(self):
@@ -48,9 +49,15 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        quizzes = [self.quiz, self.another_quiz]
-        topics = Topics(set([Topic("topic", set(quizzes))]))
+        topics = Topics(set([Topic("topic", {self.quiz, self.another_quiz})]))
         self.assertNotEqual(self.progress.next_quiz(topics), self.progress.next_quiz(topics))
+
+    def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes(self):
+        """Test that the concept of the next quiz does not use other concepts with eligible quizzes."""
+        quiz1 = self.create_quiz("good day", "nl", "en", "Goedendag", ["Good day"], uses=("good",))
+        quiz2 = self.create_quiz("good", "nl", "en", "Goed", ["Good"])
+        topics = Topics(set([Topic("topic", {quiz1, quiz2})]))
+        self.assertEqual(quiz2, self.progress.next_quiz(topics))
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""

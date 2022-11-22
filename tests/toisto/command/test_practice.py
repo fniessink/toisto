@@ -4,6 +4,7 @@ from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
 from toisto.model import Progress, Topic, Topics
+from toisto.model.types import ConceptId
 from toisto.ui.text import DONE, TRY_AGAIN
 
 from ..base import ToistoTestCase
@@ -16,7 +17,7 @@ class PracticeTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        self.quiz = self.create_quiz("hi", "fi", "nl", "Terve", ["Hoi"])
+        self.quiz = self.create_quiz(ConceptId("hi"), "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
 
     @patch("builtins.input", Mock(return_value="hoi\n"))

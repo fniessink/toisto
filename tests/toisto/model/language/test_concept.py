@@ -5,7 +5,7 @@ from toisto.model import concept_factory, Label
 from ...base import ToistoTestCase
 
 
-class ConceptTest(ToistoTestCase):
+class ConceptQuizzesTest(ToistoTestCase):
     """Unit tests for the concept class."""
 
     def test_quizzes(self):
@@ -459,3 +459,32 @@ class ConceptTest(ToistoTestCase):
             ]),
             concept.quizzes("fi", "en")
         )
+
+
+class ConceptRelationshipsTest(ToistoTestCase):
+    """Unit tests for relationships between concepts."""
+
+    def test_concept_relationship_leaf_concept(self):
+        """Test that concepts can declare to use, i.e. depend on, other concepts."""
+        concept = concept_factory(
+            "mall",
+            dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"),
+        )
+        self.assertEqual(("shop", "centre"), concept.quizzes("fi", "nl").pop().uses)
+
+    def test_concept_relationship_composite_concept(self):
+        """Test that concepts can declare to use, i.e. depend on, other concepts."""
+        concept = concept_factory(
+            "mall",
+            dict(
+                uses=["shop", "centre"],
+                singular=dict(fi="Kauppakeskus", nl="Het winkelcentrum"),
+                plural=dict(fi="Kauppakeskukset", nl="De winkelcentra")
+            )
+        )
+        self.assertEqual(("shop", "centre"), concept.quizzes("fi", "nl").pop().uses)
+
+    def test_concept_relationship_leaf_concept_one_uses(self):
+        """Test that concepts can declare to use, i.e. depend on, other concepts."""
+        concept = concept_factory("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
+        self.assertEqual(("city",), concept.quizzes("fi", "en").pop().uses)

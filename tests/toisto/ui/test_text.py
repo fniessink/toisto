@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta
 
 from toisto.model import Label, Progress
+from toisto.model.types import ConceptId
 from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
 from ..base import ToistoTestCase
@@ -13,7 +14,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve"])
+        self.quiz = self.create_quiz(ConceptId("hello"), "nl", "fi", "Hoi", ["Terve"])
         self.guess = Label("Terve")
         self.progress = Progress({})
 

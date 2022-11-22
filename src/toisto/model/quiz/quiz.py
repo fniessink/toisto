@@ -8,6 +8,7 @@ from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
+from ..types import ConceptId
 from .match import match
 
 
@@ -46,12 +47,13 @@ INSTRUCTION: dict[QuizType, str] = {
 @dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
-    concept_id: str
+    concept_id: ConceptId
     question_language: Language
     answer_language: Language
     _question: Label
     _answers: Labels
     quiz_type: QuizType = "translate"
+    uses: tuple[ConceptId, ...] = tuple()
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
@@ -93,22 +95,23 @@ Quizzes = set[Quiz]
 
 
 def quiz_factory(  # pylint: disable=too-many-arguments
-    concept_id: str,
+    concept_id: ConceptId,
     language1: Language,
     language2: Language,
     labels1: Labels,
     labels2: Labels,
-    quiz_type: QuizType = "translate"
+    quiz_type: QuizType = "translate",
+    uses: tuple[ConceptId, ...] = tuple()
 ) -> Quizzes:
     """Create quizzes."""
     if quiz_type == "translate":
         return (
-            set(Quiz(concept_id, language1, language2, label, labels2) for label in labels1) |
-            set(Quiz(concept_id, language2, language1, label, labels1) for label in labels2)
+            set(Quiz(concept_id, language1, language2, label, labels2, "translate", uses) for label in labels1) |
+            set(Quiz(concept_id, language2, language1, label, labels1, "translate", uses) for label in labels2)
         )
     return set(
-        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type) for label1, label2 in zip(labels1, labels2)
-        if label1 != label2 or quiz_type == "listen"
+        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses)
+        for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_type == "listen"
     )
 
 

@@ -2,6 +2,7 @@
 
 from unittest.mock import patch, Mock
 
+from toisto.model.types import ConceptId
 from toisto.persistence import load_quizzes
 
 from ..base import ToistoTestCase
@@ -12,7 +13,7 @@ class LoadQuizzesTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("welcome", "fi", "nl", "Tervetuloa", ["Welkom"])
+        self.quiz = self.create_quiz(ConceptId("welcome"), "fi", "nl", "Tervetuloa", ["Welkom"])
 
     def test_load_quizzes(self):
         """Test that the quizzes can be loaded."""

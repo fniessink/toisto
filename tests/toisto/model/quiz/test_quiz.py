@@ -3,6 +3,7 @@
 import unittest
 from typing import get_args
 
+from toisto.model.types import ConceptId
 from toisto.model.quiz.quiz import quiz_type_factory, QuizType, INSTRUCTION
 
 from ...base import ToistoTestCase
@@ -13,7 +14,7 @@ class QuizTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
+        self.quiz = self.create_quiz(ConceptId("english"), "fi", "nl", "Englanti", ["Engels"])
 
 
 class QuizTest(QuizTestCase):
