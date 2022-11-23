@@ -184,5 +184,35 @@
             "fi": "Maanosat",
             "nl": "De continenten"
         }
+    },
+    "it is cold in the north": {
+        "uses": ["cold", "north"],
+        "en": "It is cold in the North",
+        "fi": "Pohjoisessa on kylmä",
+        "nl": "Het is koud in het Noorden"
+    },
+    "it is warm in the south": {
+        "uses": ["warm", "south"],
+        "en": "It is warm in the South",
+        "fi": "Etelässä on lämmin",
+        "nl": "Het is warm in het Zuiden"
+    },
+    "she is from the north": {
+        "uses": "north",
+        "en": "She is from the North",
+        "fi": ["Hän tulee pohjoisesta;female", "Hän on kotoisin pohjoisesta;female"],
+        "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
+    },
+    "they live in the west": {
+        "uses": "west",
+        "en": "They live in the West",
+        "fi": "He asuvat lännessä",
+        "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
+    },
+    "the city is in the east": {
+        "uses": ["city", "east"],
+        "en": "The city is in the East",
+        "fi": ["Kaupunki on idässä", "Kaupunki sijaitsee idässä"],
+        "nl": "De stad ligt in het Oosten"
     }
 }

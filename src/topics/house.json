@@ -142,6 +142,16 @@
             "nl": "De ramen"
         }
     },
+    "stairs": {
+        "singular": {
+            "en": "Stairs",
+            "fi": ["Portaat", "Rappuset"],
+            "nl": "De trap"
+        },
+        "plural": {
+            "nl": "De trappen"
+        }
+    },
     "living room": {
         "uses": "room",
         "singular": {
