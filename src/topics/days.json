@@ -174,10 +174,7 @@
     "what day is it today": {
         "uses": ["day", "today"],
         "en": "What day is it today?",
-        "fi": [
-            "Mikä päivä tänään on?",
-            "Mikä päivä on tänään?"
-        ],
+        "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"
     }
 }

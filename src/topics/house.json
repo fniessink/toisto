@@ -141,5 +141,66 @@
             "fi": "Ikkunat",
             "nl": "De ramen"
         }
+    },
+    "stairs": {
+        "singular": {
+            "en": "Stairs",
+            "fi": ["Portaat", "Rappuset"],
+            "nl": "De trap"
+        },
+        "plural": {
+            "nl": "De trappen"
+        }
+    },
+    "living room": {
+        "uses": "room",
+        "singular": {
+            "en": "Living room",
+            "fi": "Olohuone",
+            "nl": ["De huiskamer", "De woonkamer"]
+        },
+        "plural": {
+            "en": "living rooms",
+            "fi": "Olohuoneet",
+            "nl": ["De huiskamers", "De woonkamers"]
+        }
+    },
+    "kitchen": {
+        "singular": {
+            "en": "Kitchen",
+            "fi": "Keittiö",
+            "nl": "De keuken"
+        },
+        "plural": {
+            "en": "Kitchens",
+            "fi": "Keittiöt",
+            "nl": "De keukens"
+        }
+    },
+    "bedroom": {
+        "uses": "room",
+        "singular": {
+            "en": "Bedroom",
+            "fi": "Makuuhuone",
+            "nl": "De slaapkamer"
+        },
+        "plural": {
+            "en": "Bedrooms",
+            "fi": "Makuuhuoneet",
+            "nl": "De slaapkamers"
+        }
+    },
+    "bathroom": {
+        "uses": "room",
+        "singular": {
+            "en": "Bathroom",
+            "fi": "Kylpyhuone",
+            "nl": "De badkamer"
+        },
+        "plural": {
+            "en": "Bathrooms",
+            "fi": "Kylpyhuoneet",
+            "nl": "De badkamers"
+        }
     }
 }

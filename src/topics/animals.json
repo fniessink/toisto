@@ -1,0 +1,256 @@
+{
+    "animal": {
+        "singular": {
+            "en": "Animal",
+            "fi": "Eläin",
+            "nl": "Het dier"
+        },
+        "plural": {
+            "en": "Animals",
+            "fi": "Eläimet",
+            "nl": "De dieren"
+        }
+    },
+    "pet": {
+        "uses": "animal",
+        "singular": {
+            "en": "Pet",
+            "fi": ["Lemmikki", "Kotieläin"],
+            "nl": "Het huisdier"
+        },
+        "plural": {
+            "en": "Pets",
+            "fi": ["Lemmikit", "Kotieläimet"],
+            "nl": "De huisdieren"
+        }
+    },
+    "dog": {
+        "singular": {
+            "en": "Dog",
+            "fi": "Koira",
+            "nl": "De hond"
+        },
+        "plural": {
+            "en": "Dogs",
+            "fi": "Koirat",
+            "nl": "De honden"
+        }
+    },
+    "cat": {
+        "singular": {
+            "en": "Cat",
+            "fi": "Kissa",
+            "nl": "De kat"
+        },
+        "plural": {
+            "en": "Cats",
+            "fi": "Kissat",
+            "nl": "De katten"
+        }
+    },
+    "rhino": {
+        "uses": ["horn", "nose"],
+        "singular": {
+            "en": "Rhinoceros|Rhino",
+            "fi": "Sarvikuono",
+            "nl": "De neushoorn"
+        },
+        "plural": {
+            "en": "Rhinoceroses|Rhinos",
+            "fi": "Sarvikuonot",
+            "nl": "De neushoorns"
+        }
+    },
+    "elephant": {
+        "singular": {
+            "en": "Elephant",
+            "fi": ["Elefantti", "Norsu"],
+            "nl": "De olifant"
+        },
+        "plural": {
+            "en": "Elephants",
+            "fi": ["Elefantit", "Norsut"],
+            "nl": "De olifanten"
+        }
+    },
+    "mouse": {
+        "singular": {
+            "en": "Mouse",
+            "fi": "Hiiri",
+            "nl": "De muis"
+        },
+        "plural": {
+            "en": "Mice",
+            "fi": "Hiiret",
+            "nl": "De muizen"
+        }
+    },
+    "duck": {
+        "singular": {
+            "en": "Duck",
+            "fi": "Ankka",
+            "nl": "De eend"
+        },
+        "plural": {
+            "en": "Ducks",
+            "fi": "Ankat",
+            "nl": "De eenden"
+        }
+    },
+    "goose": {
+        "singular": {
+            "en": "Goose",
+            "fi": "Hanhi",
+            "nl": "De gans"
+        },
+        "plural":{
+            "en": "Geese",
+            "fi": "Hanhet",
+            "nl": "De ganzen"
+        }
+    },
+    "bird": {
+        "singular": {
+            "en": "Bird",
+            "fi": "Lintu",
+            "nl": "De vogel"
+        },
+        "plural": {
+            "en": "Birds",
+            "fi": "Linnut",
+            "nl": "De vogels"
+        }
+    },
+    "horse": {
+        "singular": {
+            "en": "Horse",
+            "fi": "Hevonen",
+            "nl": "Het paard"
+        },
+        "plural": {
+            "en": "Horses",
+            "fi": "Hevoset",
+            "nl": "De paarden"
+        }
+    },
+    "cow": {
+        "singular": {
+            "en": "Cow",
+            "fi": "Lehmä",
+            "nl": "De koe"
+        },
+        "plural": {
+            "en": "Cows",
+            "fi": "Lehmät",
+            "nl": "De koeien"
+        }
+    },
+    "pig": {
+        "singular": {
+            "en": "Pig",
+            "fi": ["Possu", "Sika"],
+            "nl": "Het varken"
+        },
+        "plural": {
+            "en": "Pigs",
+            "fi": ["Possut", "Siat"],
+            "nl": "De varkens"
+        }
+    },
+    "deer": {
+        "singular": {
+            "en": "Deer",
+            "fi": "Peura",
+            "nl": "Het hert"
+        },
+        "plural": {
+            "en": "Deer",
+            "fi": "Peurat",
+            "nl": "De herten"
+        }
+    },
+    "bear": {
+        "singular": {
+            "en": "Bear",
+            "fi": "Karhu",
+            "nl": "De beer"
+        },
+        "plural": {
+            "en": "Bears",
+            "fi": "Karhut",
+            "nl": "De beren"
+        }
+    },
+    "sheep": {
+        "singular": {
+            "en": "Sheep",
+            "fi": "Lammas",
+            "nl": "Het schaap"
+        },
+        "plural": {
+            "en": "Sheep",
+            "fi": "Lampaat",
+            "nl": "De schapen"
+        }
+    },
+    "crab": {
+        "singular": {
+            "en": "Crab",
+            "fi": "Rapu",
+            "nl": "De krab"
+        },
+        "plural": {
+            "en": "Crabs",
+            "fi": "Ravut",
+            "nl": "De krabben"
+        }
+    },
+    "spider": {
+        "singular": {
+            "en": "Spider",
+            "fi": "Hämähäkki",
+            "nl": "De spin"
+        },
+        "plural": {
+            "en": "Spiders",
+            "fi": "Hämähäkit",
+            "nl": "De spinnen"
+        }
+    },
+    "rabbit": {
+        "singular": {
+            "en": ["Rabbit", "Bunny"],
+            "fi": ["Jänis", "Pupu"],
+            "nl": "Het konijn"
+        },
+        "plural": {
+            "en": ["Rabbits", "Bunnies"],
+            "fi": ["Jänikset", "Puput"],
+            "nl": "De konijnen"
+        }
+    },
+    "horn": {
+        "singular": {
+            "en": "Horn",
+            "fi": "Sarvi",
+            "nl": "De hoorn"
+        },
+        "plural": {
+            "en": "Horns",
+            "fi": "Sarvet",
+            "nl": "De hoorns"
+        }
+    },
+    "tail": {
+        "singular": {
+            "en": "Tail",
+            "fi": "Häntä",
+            "nl": "De staart"
+        },
+        "plural": {
+            "en": "Tails",
+            "fi": "Hännät",
+            "nl": "De staarten"
+        }
+    }
+}

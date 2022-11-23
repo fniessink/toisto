@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - It is possible to specify usage relations between concepts in topic files. For example, the concept "days of the week" uses the concepts "day" and "week". Toisto will first quiz the user on "day" and "week" before quizzing "days of the week".
+- Add more concepts to the house and nature topics.
+- Add an animals topic.
 
 ## v0.1.0 - 2022-11-20
 
