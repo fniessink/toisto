@@ -71,6 +71,7 @@
         }
     },
     "decade": {
+        "uses": ["10", "year"],
         "singular": {
             "en": "Decade",
             "fi": "Vuosikymmen",
@@ -83,6 +84,7 @@
         }
     },
     "century": {
+        "uses": ["100", "year"],
         "singular": {
             "en": "Century",
             "fi": "Vuosisata",
@@ -91,7 +93,7 @@
         "plural": {
             "en": "Centuries",
             "fi": "Vuosisadat",
-            "nl": "De eeuwn"
+            "nl": "De eeuwen"
         }
     },
     "hour": {
@@ -148,7 +150,7 @@
         "nl": "Hoe lang duurt het?"
     },
     "it takes one hour": {
-        "uses": "houe",
+        "uses": "hour",
         "en": "It takes one hour",
         "fi": "Se kestää tunnin",
         "nl": "Het duurt één uur|Het duurt een uur"
