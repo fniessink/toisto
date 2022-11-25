@@ -128,6 +128,8 @@ The format of the JSON files is as follows:
 }
 ```
 
+The singular and plural forms are considered *subconcepts* of the main concept. Both implicitly get their own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the singular form gets `day/singular` as key and the plural form `day/plural`.
+
 ### Grammatical gender
 
 When concepts have multiple genders, these can be specified as follows:
@@ -169,6 +171,8 @@ It is also possible to have a neutral gender:
 ```
 
 Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the builtin topic files.
+
+The gendered forms are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the female form gets `parent/female` as key, the male form `parent/male`, and the neuter form `parent/neuter`.
 
 ### Grammatical person
 
@@ -221,6 +225,8 @@ Note that because the second person singular and plural are the same in English,
 
 The same goes for the third person Finnish. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
+The different persons are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the first person singular gets `to have/singular/first_person` as key, the second person singular `to have/singular/second_person`, etc.
+
 ### Degrees of comparison
 
 Degrees of comparison are specified as follows:
@@ -268,6 +274,8 @@ When there are synonyms, they need to be in the same order in every degree. This
 }
 ```
 
+The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive_degree` as key, the comparitive degree `big/comparitive_degree`, and the superlative degree `big/superlative degree`.
+
 ### Concept relationships
 
 When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
@@ -303,6 +311,18 @@ When a concept uses one or more other concepts, this can be specified with the `
 ```
 
 If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
+
+As mentioned in the previous sections, subconcepts automatically get a more specific key. This means the uses relationsips in the example above could be made more specific be referring to the singular of week and the plural of day:
+
+```json
+{
+    "days of the week": {
+        "uses": ["day/plural", "week/singular"],
+        "en": "Days of the week",
+        "nl": "De dagen van de week"
+    }
+}
+```
 
 ## Quizzes
 

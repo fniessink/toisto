@@ -49,7 +49,7 @@
         }
     },
     "rhino": {
-        "uses": ["horn", "nose"],
+        "uses": ["horn", "nose/singular"],
         "singular": {
             "en": "Rhinoceros|Rhino",
             "fi": "Sarvikuono",

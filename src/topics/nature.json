@@ -128,7 +128,7 @@
         "singular": {
             "en": "Hill",
             "fi": ["Mäki", "Kukkula"],
-            "nl": "Heuvel"
+            "nl": "De heuvel"
         },
         "plural": {
             "en": "Hills",
@@ -210,7 +210,7 @@
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
     },
     "the city is in the east": {
-        "uses": ["city", "east"],
+        "uses": ["city/singular", "east"],
         "en": "The city is in the East",
         "fi": ["Kaupunki on idässä", "Kaupunki sijaitsee idässä"],
         "nl": "De stad ligt in het Oosten"

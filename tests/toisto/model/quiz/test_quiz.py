@@ -4,7 +4,7 @@ import unittest
 from typing import get_args
 
 from toisto.model.types import ConceptId
-from toisto.model.quiz.quiz import quiz_type_factory, QuizType, INSTRUCTION
+from toisto.model.quiz.quiz import easiest_quizzes, quiz_type_factory, QuizType, INSTRUCTION
 
 from ...base import ToistoTestCase
 
@@ -122,10 +122,10 @@ class QuizEqualityTests(QuizTestCase):
         different_question = self.create_quiz("english", "fi", "nl", "Saksa", ["Engels"])
         self.assertNotEqual(different_question, self.quiz)
 
-    def test_not_equal_with_different_answers(self):
-        """Test that quizzes are not equal if only their answers differ."""
+    def test_equal_with_different_answers(self):
+        """Test that quizzes are equal if only their answers differ."""
         different_answers = self.create_quiz("english", "fi", "nl", "Englanti", ["Duits"])
-        self.assertNotEqual(different_answers, self.quiz)
+        self.assertEqual(different_answers, self.quiz)
 
     def test_not_equal_with_different_quiz_types(self):
         """Test that quizzes are not equal if only their quiz types differ."""
@@ -139,3 +139,22 @@ class QuizTypeFactoryTest(unittest.TestCase):
     def test_unknown_grammatical_categories(self):
         """Test that unknown grammatical categoriews throw an exception."""
         self.assertRaises(NotImplementedError, quiz_type_factory, ("not a grammatical category",))
+
+
+class EasiestQuizzesTest(ToistoTestCase):
+    """Unit tests for finding the easiest quizzes."""
+
+    def test_no_quizzes(self):
+        """Test the easiest quizzes out of none."""
+        self.assertEqual(set(), easiest_quizzes(set()))
+
+    def test_one_quiz(self):
+        """Test that the easiest quiz out of one is that one quiz."""
+        quiz = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
+        self.assertEqual({quiz}, easiest_quizzes({quiz}))
+
+    def test_two_quizzes(self):
+        """Test two quizzes."""
+        quiz1 = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
+        quiz2 = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"], "listen")
+        self.assertEqual({quiz1}, easiest_quizzes({quiz1, quiz2}))

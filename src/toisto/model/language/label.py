@@ -7,6 +7,7 @@ from typing import cast
 
 class Label(str):
     """Class representing labels for concepts."""
+
     def __eq__(self, other) -> bool:
         """Ignore hints when determining equality."""
         return self.split(";", maxsplit=1)[0] == other.split(";", maxsplit=1)[0]
