@@ -40,7 +40,7 @@
             "nl": "De opa's"
         }
     },
-    "grandmmother": {
+    "grandmother": {
         "uses": ["big", "mother"],
         "singular": {
             "en": "Grandmother",
@@ -216,7 +216,7 @@
             "nl": "De echtgenotes"
         }
     },
-    "husband:": {
+    "husband": {
         "singular": {
             "en": "Husband",
             "fi": "Aviomies|Mies",
@@ -353,7 +353,7 @@
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
-    "I have no siblings:": {
+    "I have no siblings": {
         "uses": "sibling",
         "en": [
             "I have no siblings",
