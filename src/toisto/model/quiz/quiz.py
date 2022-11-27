@@ -109,7 +109,6 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
-        assert self.is_correct(guess)
         return tuple(answer for answer in self.answers if not match(guess, answer))
 
     def instruction(self) -> str:
@@ -139,7 +138,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     meaning: Label = Label()
 ) -> Quizzes:
     """Create quizzes."""
-    if quiz_type == "translate":
+    if quiz_type == "translate" and labels1 and labels2:
         return (
             set(Quiz(concept_id, language1, language2, label, labels2, "translate", uses) for label in labels1) |
             set(Quiz(concept_id, language2, language1, label, labels1, "translate", uses) for label in labels2)

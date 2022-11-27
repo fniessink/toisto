@@ -31,10 +31,6 @@ class Concept(ABC):
         """Generate the possible quizzes from the concept."""
 
     @abstractmethod
-    def has_labels(self, *languages: Language) -> bool:
-        """Return whether the concept has labels for all the specified languages."""
-
-    @abstractmethod
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return self as a list of leaf concepts."""
 
@@ -55,27 +51,15 @@ class LeafConcept(Concept):
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
-        result = set()
-        if self.has_labels(language, source_language):
-            labels, source_labels = self.labels(language), self.labels(source_language)
-            result.update(
-                quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
-            )
-        if self.has_labels(language):
-            labels = self.labels(language)
-            meaning = self.meaning(source_language)
-            result.update(
-                quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses, meaning)
-            )
-        return result
-
-    def has_labels(self, *languages: Language) -> bool:
-        """Return whether the concept has labels for all the specified languages."""
-        return all(language in self._labels for language in languages)
+        labels, source_labels = self.labels(language), self.labels(source_language)
+        meaning = self.meaning(source_language)
+        translate = quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
+        listen = quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses, meaning)
+        return translate | listen
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""
-        return self._labels[language]
+        return self._labels.get(language, Labels())
 
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return self as a list of leaf concepts."""
@@ -116,8 +100,6 @@ class CompositeConcept(Concept):
         result = set()
         for concept in self._concepts:
             result.update(concept.quizzes(language, source_language))
-        if not self.has_labels(language):
-            return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
@@ -125,15 +107,10 @@ class CompositeConcept(Concept):
             result.update(quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses, meaning))
         return result
 
-    def has_labels(self, *languages: Language) -> bool:
-        """Return whether the concept has labels for all the specified languages."""
-        return all(concept.has_labels(*languages) for concept in self._concepts)
-
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return a list of leaf concepts."""
         for concept in self._concepts:
-            for leaf_concept in concept.leaf_concepts():
-                yield leaf_concept
+            yield from concept.leaf_concepts()
 
     def paired_concepts(self) -> Iterable[tuple[LeafConceptPair, QuizType]]:
         """Pair the leaf concepts from the composite concepts."""
