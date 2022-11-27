@@ -11,7 +11,7 @@ from toisto.metadata import Language
 from ..types import ConceptId
 from ..quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 from .grammar import GrammaticalCategory
-from .label import Labels, label_factory
+from .label import Labels, Label, label_factory
 
 ConceptRelation = Literal["uses"]
 LeafConceptDict = dict[Language | ConceptRelation, str | ConceptId | list[str] | list[ConceptId]]
@@ -63,7 +63,10 @@ class LeafConcept(Concept):
             )
         if self.has_labels(language):
             labels = self.labels(language)
-            result.update(quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses))
+            meaning = self.meaning(source_language)
+            result.update(
+                quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses, meaning)
+            )
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -77,6 +80,10 @@ class LeafConcept(Concept):
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return self as a list of leaf concepts."""
         return [self]
+
+    def meaning(self, language: Language) -> Label:
+        """Return the meaning of the concept in the specified language."""
+        return Label(self._labels.get(language, [""])[0])
 
     @classmethod
     def from_dict(cls, concept_id: ConceptId, concept_dict: LeafConceptDict) -> LeafConcept:
@@ -114,7 +121,8 @@ class CompositeConcept(Concept):
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
-            result.update(quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses))
+            meaning = concept1.meaning(source_language)
+            result.update(quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses, meaning))
         return result
 
     def has_labels(self, *languages: Language) -> bool:

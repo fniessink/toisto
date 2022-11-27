@@ -45,7 +45,7 @@ INSTRUCTION: dict[QuizType, str] = {
 
 
 @dataclass(frozen=True)
-class Quiz:
+class Quiz:  # pylint: disable=too-many-instance-attributes
     """Class representing a quiz."""
 
     concept_id: ConceptId
@@ -55,6 +55,7 @@ class Quiz:
     _answers: Labels
     quiz_type: QuizType = "translate"
     uses: tuple[ConceptId, ...] = tuple()
+    meaning: Label = Label()
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
@@ -121,7 +122,8 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     labels1: Labels,
     labels2: Labels,
     quiz_type: QuizType = "translate",
-    uses: tuple[ConceptId, ...] = tuple()
+    uses: tuple[ConceptId, ...] = tuple(),
+    meaning: Label = Label()
 ) -> Quizzes:
     """Create quizzes."""
     if quiz_type == "translate":
@@ -130,7 +132,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
             set(Quiz(concept_id, language2, language1, label, labels1, "translate", uses) for label in labels2)
         )
     return set(
-        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses)
+        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses, meaning)
         for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_type == "listen"
     )
 
