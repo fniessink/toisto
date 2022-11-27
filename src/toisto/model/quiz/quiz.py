@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from itertools import chain
-from typing import cast, Literal
+from typing import cast, get_args, Literal
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
@@ -47,6 +47,7 @@ INSTRUCTION: dict[QuizType, str] = {
 @dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
+
     concept_id: ConceptId
     question_language: Language
     answer_language: Language
@@ -58,6 +59,25 @@ class Quiz:
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
         return f"{self.question_language}:{self.answer_language}:{self._question}:{self.quiz_type}"
+
+    def __hash__(self) -> int:
+        """Return a hash using the same attributes as used for testing equality."""
+        return hash((self.question_language, self.answer_language, self.question, self.quiz_type))
+
+    def __eq__(self, other) -> bool:
+        """Return whether this quiz is equal to the other."""
+        if not isinstance(other, self.__class__):
+            return False
+        return (
+            self.question_language == other.question_language and
+            self.answer_language == other.answer_language and
+            self.question == other.question and
+            self.quiz_type == other.quiz_type
+        )
+
+    def __ne__(self, other) -> bool:
+        """Return whether this quiz is not equal to the other."""
+        return not self == other
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
@@ -136,3 +156,11 @@ def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -
             )
         case _:
             raise NotImplementedError(f"Don't know how to generate guizzes for {grammatical_categories}")
+
+
+def easiest_quizzes(quizzes: Quizzes) -> Quizzes:
+    """Return the easiest quizzes."""
+    for quiz_type in get_args(QuizType):
+        if quizzes_subset := set(quiz for quiz in quizzes if quiz.quiz_type == quiz_type):
+            return quizzes_subset
+    return quizzes

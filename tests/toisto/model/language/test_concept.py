@@ -482,9 +482,162 @@ class ConceptRelationshipsTest(ToistoTestCase):
                 plural=dict(fi="Kauppakeskukset", nl="De winkelcentra")
             )
         )
-        self.assertEqual(("shop", "centre"), concept.quizzes("fi", "nl").pop().uses)
+        for quiz in concept.quizzes("fi", "nl"):
+            self.assertIn("shop", quiz.uses)
+            self.assertIn("centre", quiz.uses)
 
     def test_concept_relationship_leaf_concept_one_uses(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
         concept = concept_factory("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
         self.assertEqual(("city",), concept.quizzes("fi", "en").pop().uses)
+
+    def test_generated_concept_ids_for_constituent_concepts(self):
+        """Test that constituent concepts get a generated concept id."""
+        concept = concept_factory(
+            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+        )
+        expected_concept_ids = {
+            self.create_quiz("morning", "fi", "nl", "Aamu", ["De ochtend"]): "morning/singular",
+            self.create_quiz("morning", "nl", "fi", "De ochtend", ["Aamu"]): "morning/singular",
+            self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamu"], "listen"): "morning/singular",
+            self.create_quiz("morning", "fi", "nl", "Aamut", ["De ochtenden"]): "morning/plural",
+            self.create_quiz("morning", "nl", "fi", "De ochtenden", ["Aamut"]): "morning/plural",
+            self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamut"], "listen"): "morning/plural",
+            self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamut"], "pluralize"): "morning",
+            self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamu"], "singularize"): "morning"
+        }
+        for quiz in concept.quizzes("fi", "nl"):
+            self.assertEqual(expected_concept_ids[quiz], quiz.concept_id)
+
+    def test_generated_uses_for_grammatical_number(self):
+        """Test that constituent concepts get a generated uses list."""
+        concept = concept_factory(
+            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+        )
+        expected_uses = {
+            self.create_quiz("morning", "fi", "nl", "Aamu", ["De ochtend"]): (),
+            self.create_quiz("morning", "nl", "fi", "De ochtend", ["Aamu"]): (),
+            self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamu"], "listen"): (),
+            self.create_quiz("morning", "fi", "nl", "Aamut", ["De ochtenden"]): ("morning/singular",),
+            self.create_quiz("morning", "nl", "fi", "De ochtenden", ["Aamut"]): ("morning/singular",),
+            self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamut"], "listen"): ("morning/singular",),
+            self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamut"], "pluralize"): ("morning/plural",),
+            self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamu"], "singularize"): ("morning/singular",)
+        }
+        for quiz in concept.quizzes("fi", "nl"):
+            self.assertEqual(expected_uses[quiz], quiz.uses)
+
+    def test_generated_uses_for_grammatical_gender(self):
+        """Test that use relations are generated for different grammatical genders, i.e. female and male."""
+        concept = concept_factory(
+            "cat",
+            dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat"))
+        )
+        expected_uses = {
+            self.create_quiz("cat", "nl", "en", "Haar kat", ["Her cat"], "translate"): (),
+            self.create_quiz("cat", "en", "nl", "Her cat", ["Haar kat"], "translate"): (),
+            self.create_quiz("cat", "nl", "nl", "Haar kat", ["Haar kat"], "listen"): (),
+            self.create_quiz("cat", "nl", "en", "Zijn kat", ["His cat"], "translate"): (),
+            self.create_quiz("cat", "en", "nl", "His cat", ["Zijn kat"], "translate"): (),
+            self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Zijn kat"], "listen"): (),
+            self.create_quiz("cat", "nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"): ("cat/male",),
+            self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Haar kat"], "feminize"): ("cat/female",)
+        }
+        for quiz in concept.quizzes("nl", "en"):
+            self.assertEqual(expected_uses[quiz], quiz.uses)
+
+    def test_generated_uses_for_grammatical_gender_with_neuter(self):
+        """Test that use relations are generated for different grammatical genders, i.e. female and male."""
+        concept = concept_factory(
+            "bone",
+            dict(
+                female=dict(en="Her bone", nl="Haar bot"),
+                male=dict(en="His bone", nl="Zijn bot"),
+                neuter=dict(en="Its bone", nl="Zijn bot")
+            )
+        )
+        expected_uses = {
+            self.create_quiz("bone", "nl", "en", "Haar bot", ["Her bone"], "translate"): (),
+            self.create_quiz("bone", "en", "nl", "Her bone", ["Haar bot"], "translate"): (),
+            self.create_quiz("bone", "nl", "nl", "Haar bot", ["Haar bot"], "listen"): (),
+            self.create_quiz("bone", "nl", "en", "Zijn bot", ["His bone"], "translate"): (),
+            self.create_quiz("bone", "en", "nl", "His bone", ["Zijn bot"], "translate"): (),
+            self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Zijn bot"], "listen"): (),
+            self.create_quiz("bone", "nl", "en", "Zijn bot", ["Its bone"], "translate"): (),
+            self.create_quiz("bone", "en", "nl", "Its bone", ["Zijn bot"], "translate"): (),
+            self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Zijn bot"], "listen"): (),
+            self.create_quiz("bone", "nl", "nl", "Haar bot", ["Zijn bot"], "masculinize"): ("bone/male",),
+            self.create_quiz("bone", "nl", "nl", "Haar bot", ["Zijn bot"], "neuterize"): ("bone/neuter",),
+            self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize"): ("bone/female",),
+            self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize"): ("bone/female",)
+        }
+        for quiz in concept.quizzes("nl", "en"):
+            self.assertEqual(expected_uses[quiz], quiz.uses)
+
+    def test_generated_uses_for_grammatical_number_with_grammatical_gender(self):
+        """Test that use relations are generated for grammatical number nested with grammatical gender."""
+        concept = concept_factory(
+            "cat",
+            dict(
+                singular=dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat")),
+                plural=dict(female=dict(en="Her cats", nl="Haar katten"), male=dict(en="His cats", nl="Zijn katten"))
+            )
+        )
+        expected_uses = {
+            self.create_quiz("cat", "nl", "en", "Haar kat", ["Her cat"], "translate"): (),
+            self.create_quiz("cat", "en", "nl", "Her cat", ["Haar kat"], "translate"): (),
+            self.create_quiz("cat", "nl", "nl", "Haar kat", ["Haar kat"], "listen"): (),
+            self.create_quiz("cat", "nl", "en", "Zijn kat", ["His cat"], "translate"): (),
+            self.create_quiz("cat", "en", "nl", "His cat", ["Zijn kat"], "translate"): (),
+            self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Zijn kat"], "listen"): (),
+            self.create_quiz("cat", "nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"): ("cat/singular/male",),
+            self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Haar kat"], "feminize"): ("cat/singular/female",),
+            self.create_quiz("cat", "nl", "en", "Haar katten", ["Her cats"], "translate"): ("cat/singular/female",),
+            self.create_quiz("cat", "en", "nl", "Her cats", ["Haar katten"], "translate"): ("cat/singular/female",),
+            self.create_quiz("cat", "nl", "nl", "Haar katten", ["Haar katten"], "listen"): ("cat/singular/female",),
+            self.create_quiz("cat", "nl", "en", "Zijn katten", ["His cats"], "translate"): ("cat/singular/male",),
+            self.create_quiz("cat", "en", "nl", "His cats", ["Zijn katten"], "translate"): ("cat/singular/male",),
+            self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Zijn katten"], "listen"): ("cat/singular/male",),
+            self.create_quiz("cat", "nl", "nl", "Haar katten", ["Zijn katten"], "masculinize"): ("cat/plural/male",),
+            self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Haar katten"], "feminize"): ("cat/plural/female",),
+            self.create_quiz("cat", "nl", "nl", "Haar kat", ["Haar katten"], "pluralize"): ("cat/plural/female",),
+            self.create_quiz("cat", "nl", "nl", "Haar katten", ["Haar kat"], "singularize"): ("cat/singular/female",),
+            self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Zijn katten"], "pluralize"): ("cat/plural/male",),
+            self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Zijn kat"], "singularize"): ("cat/singular/male",)
+        }
+        for quiz in concept.quizzes("nl", "en"):
+            self.assertEqual(expected_uses[quiz], quiz.uses)
+
+    def test_generated_uses_for_degrees_of_comparison(self):
+        """Test that use relations are generated for degrees of comparison."""
+        concept = concept_factory(
+            "big",
+            dict(
+                positive_degree=dict(en="Big", nl="Groot"),
+                comparitive_degree=dict(en="Bigger", nl="Groter"),
+                superlative_degree=dict(en="Biggest", nl="Grootst")
+            )
+        )
+        expected_uses = {
+            self.create_quiz("big", "nl", "en", "Groot", ["Big"], "translate"): (),
+            self.create_quiz("big", "en", "nl", "Big", ["Groot"], "translate"): (),
+            self.create_quiz("big", "nl", "nl", "Groot", ["Groot"], "listen"): (),
+            self.create_quiz("big", "nl", "en", "Groter", ["Bigger"], "translate"): (),
+            self.create_quiz("big", "en", "nl", "Bigger", ["Groter"], "translate"): (),
+            self.create_quiz("big", "nl", "nl", "Groter", ["Groter"], "listen"): (),
+            self.create_quiz("big", "nl", "en", "Grootst", ["Biggest"], "translate"): (),
+            self.create_quiz("big", "en", "nl", "Biggest", ["Grootst"], "translate"): (),
+            self.create_quiz("big", "nl", "nl", "Grootst", ["Grootst"], "listen"): (),
+            self.create_quiz(
+                "big", "nl", "nl", "Groot", ["Groter"], "give comparitive degree"): ("big/comparitive_degree",),
+            self.create_quiz(
+                "big", "nl", "nl", "Groot", ["Grootst"], "give superlative degree"): ("big/superlative_degree",),
+            self.create_quiz("big", "nl", "nl", "Groter", ["Groot"], "give positive degree"): ("big/positive_degree",),
+            self.create_quiz(
+                "big", "nl", "nl", "Groter", ["Grootst"], "give superlative degree"): ("big/superlative_degree",),
+            self.create_quiz("big", "nl", "nl", "Grootst", ["Groot"], "give positive degree"): ("big/positive_degree",),
+            self.create_quiz(
+                "big", "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"): ("big/comparitive_degree",)
+        }
+        for quiz in concept.quizzes("nl", "en"):
+            self.assertEqual(expected_uses[quiz], quiz.uses)

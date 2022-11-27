@@ -279,25 +279,25 @@
         }
     },
     "that building is a church": {
-        "uses": ["building", "church"],
+        "uses": ["building/singular", "church/singular"],
         "en": "That building is a church",
         "fi": "Tuo rakennus on kirkko",
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
-        "uses": "library",
+        "uses": "library/singular",
         "en": "Where is the library?",
         "fi": ["Missä on kirjasto?", "Missä kirjasto sijaitsee?"],
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {
-        "uses": ["square", "tree"],
+        "uses": ["square/singular", "tree/singular"],
         "en": "There is a Christmas tree on the square",
         "fi": "Aukiolla on joulukuusi",
         "nl": "Er staat een kerstboom op het plein"
     },
     "I am in the office": {
-        "uses": "office",
+        "uses": "office/singular",
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"

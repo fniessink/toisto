@@ -23,7 +23,7 @@ class Concept(ABC):
     """Abstract base class for concepts."""
 
     def __init__(self, concept_id: ConceptId, uses: tuple[ConceptId, ...]) -> None:
-        self._id = concept_id
+        self.concept_id = concept_id
         self._uses = uses
 
     @abstractmethod
@@ -49,7 +49,8 @@ class LeafConcept(Concept):
     """Class representing an atomic concept from a topic."""
 
     def __init__(self, concept_id: ConceptId, labels: dict[Language, Labels], uses: tuple[ConceptId, ...]) -> None:
-        super().__init__(concept_id, uses)
+        extra_uses = (concept_id.replace("plural", "singular"),) if "plural" in concept_id else ()
+        super().__init__(concept_id, uses + cast(tuple[ConceptId], extra_uses))
         self._labels = labels
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
@@ -57,10 +58,12 @@ class LeafConcept(Concept):
         result = set()
         if self.has_labels(language, source_language):
             labels, source_labels = self.labels(language), self.labels(source_language)
-            result.update(quiz_factory(self._id, language, source_language, labels, source_labels, uses=self._uses))
+            result.update(
+                quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
+            )
         if self.has_labels(language):
             labels = self.labels(language)
-            result.update(quiz_factory(self._id, language, language, labels, labels, "listen", self._uses))
+            result.update(quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses))
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -110,7 +113,8 @@ class CompositeConcept(Concept):
             return result
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
-            result.update(quiz_factory(self._id, language, language, labels1, labels2, quiz_type, self._uses))
+            uses = self._uses + (concept2.concept_id,)
+            result.update(quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses))
         return result
 
     def has_labels(self, *languages: Language) -> bool:
@@ -138,7 +142,7 @@ class CompositeConcept(Concept):
         )
         uses = cls.get_uses_from_concept_dict(concept_dict)
         constituent_concepts = tuple(
-            concept_factory(concept_id, cast(ConceptDict, concept_dict[key] | dict(uses=uses)))
+            concept_factory(ConceptId(f"{concept_id}/{key}"), cast(ConceptDict, concept_dict[key] | dict(uses=uses)))
             for key in grammatical_categories
         )
         return cls(concept_id, constituent_concepts, quiz_type_factory(tuple(grammatical_categories)), tuple(uses))
