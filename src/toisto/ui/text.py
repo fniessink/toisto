@@ -64,6 +64,8 @@ def format_datetime(date_time: datetime) -> str:
 def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: Retention) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
+    if quiz.meaning:
+        text += f'[secondary]Meaning "{quiz.meaning}".[/secondary]\n'
     if quiz_progress.skip_until:
         silence_duration = format_duration(quiz_progress.skip_until - datetime.now())
         long_initial_skip_explanation = " as you already seem to know this" if quiz_progress.count == 1 else ""

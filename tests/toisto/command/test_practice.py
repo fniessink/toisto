@@ -49,6 +49,21 @@ class PracticeTest(ToistoTestCase):
             practice(topics, Progress({}))
         self.assertNotIn(call("Terve"), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(return_value="Terve\n"))
+    def test_quiz_non_translate(self):
+        """Test that the translation not printed on a non-translate quiz."""
+        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen", meaning="Hoi")
+        topics = Topics(set([Topic("topic", set([quiz]))]))
+        with patch("rich.console.Console.print") as patched_print:
+            practice(topics, Progress({}))
+        self.assertIn(call(
+                "✅ Correct.\n"
+                '[secondary]Meaning "Hoi".[/secondary]\n'
+                "[secondary]Skipping this quiz for 24 hours as you already seem to know this.[/secondary]\n"
+            ),
+            patched_print.call_args_list
+        )
+
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
     def test_quiz_try_again(self):
         """Test that the user is quizzed."""

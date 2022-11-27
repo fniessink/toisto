@@ -20,7 +20,8 @@ class ToistoTestCase(unittest.TestCase):
         question: str,
         answers: list[str],
         quiz_type: str = "translate",
-        uses: tuple[ConceptId, ...] = tuple()
+        uses: tuple[ConceptId, ...] = tuple(),
+        meaning: str = ""
     ) -> Quiz:
         """Create a quiz."""
         return Quiz(
@@ -30,5 +31,6 @@ class ToistoTestCase(unittest.TestCase):
             Label(question),
             tuple(Label(answer) for answer in answers),
             cast(QuizType, quiz_type),
-            uses
+            uses,
+            cast(Label, meaning)
         )
