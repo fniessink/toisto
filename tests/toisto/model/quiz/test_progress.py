@@ -62,7 +62,9 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         quizzes = [
-            self.create_quiz("id", "nl", "fi", f"Dutch label {index}", [f"Finnish label {index}"]) for index in range(5)
+            self.create_quiz(
+                f"id{index}", "nl", "fi", f"Dutch label {index}", [f"Finnish label {index}"]
+            ) for index in range(5)
         ]
         for index in range(3):
             self.progress.update(quizzes[index], correct=True)

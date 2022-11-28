@@ -1,5 +1,7 @@
 """Quiz classes."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
 from itertools import chain
 from typing import cast, get_args, Literal
@@ -110,6 +112,12 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         if hint := self._question.hint():
             hint = f" ({hint})"
         return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
+
+    def has_same_concept(self, other) -> bool:
+        """Return whether this quiz belongs to the same concept as the other quiz."""
+        if not isinstance(other, self.__class__):
+            return False
+        return self.concept_id.split("/", maxsplit=1)[0] == other.concept_id.split("/", maxsplit=1)[0]
 
 
 Quizzes = set[Quiz]
