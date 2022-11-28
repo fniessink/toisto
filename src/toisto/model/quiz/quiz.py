@@ -57,7 +57,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     _answers: Labels
     quiz_type: QuizType = "translate"
     uses: tuple[ConceptId, ...] = tuple()
-    meaning: Label = Label()
+    _meaning: Label = Label()
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
@@ -101,6 +101,11 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         """Return all answers."""
         answers = [answer.spelling_alternatives() for answer in self._answers]
         return cast(Labels, tuple(chain(*answers)))
+
+    @property
+    def meaning(self) -> Label:
+        """Return the first spelling alternative of the meaning."""
+        return self._meaning.first_spelling_alternative()
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""

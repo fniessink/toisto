@@ -32,5 +32,5 @@ class ToistoTestCase(unittest.TestCase):
             tuple(Label(answer) for answer in answers),
             cast(QuizType, quiz_type),
             uses,
-            cast(Label, meaning)
+            Label(meaning)
         )
