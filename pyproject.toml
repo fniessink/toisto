@@ -21,7 +21,8 @@ classifiers = [
     "Topic :: Education",
 ]
 dependencies = [
-    "rich >= 12.6.0",
+    "gTTS >= 2.3.0",
+    "rich >= 12.6.0"
 ]
 
 [project.optional-dependencies]
@@ -59,3 +60,9 @@ source = ["src", "tests"]
 [tool.coverage.report]
 fail_under = 100
 skip_covered = true
+
+[[tool.mypy.overrides]]
+module = [
+    "gtts"
+]
+ignore_missing_imports = true

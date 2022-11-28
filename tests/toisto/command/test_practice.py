@@ -12,6 +12,7 @@ from ..base import ToistoTestCase
 
 @patch("os.system", Mock())
 @patch("pathlib.Path.open", MagicMock())
+@patch("gtts.gTTS.save", Mock())
 class PracticeTest(ToistoTestCase):
     """Test the practice command."""
 

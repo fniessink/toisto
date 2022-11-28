@@ -10,7 +10,7 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 Make sure you have these prequisities installed:
 
-- MacOS (needed because Toisto uses the say command for text-to-speech),
+- MacOS (because Toisto uses the MacOS `say` and/or `afplay` command for text-to-speech),
 - [Python 3.10 or newer](https://python.org), and
 - [pipx](https://pypa.github.io/pipx/).
 

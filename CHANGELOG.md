@@ -10,8 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - It is possible to specify usage relations between concepts in topic files. For example, the concept "days of the week" uses the concepts "day" and "week". Toisto will first quiz the user on "day" and "week" before quizzing "days of the week". Plural concepts automatically "use" singular concepts so that plural forms of concepts are quizzed before their singular form.
 - When the quiz type is not "translate", as a reminder, show the meaning of the quizzed concept in the user's language after the quiz is finished. Closes [#31](https://github.com/fniessink/toisto/issues/31).
-- Add more concepts to the house and nature topics.
-- Add an animals topic.
+- Add more concepts to the house and nature topics and add an animals topic.
+- Use Google Translate for text-to-speech, but fall back to the MacOS say command if getting the audio from Google Translate fails.
 
 ## v0.1.0 - 2022-11-20
 
