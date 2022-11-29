@@ -47,7 +47,7 @@ When there are multiple ways to spell a label, use the pipe symbol to separate t
 
 ### Concepts with multiple labels
 
-Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toiso will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
+Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toisto will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
 
 ```json
 {
