@@ -15,7 +15,7 @@ def do_quiz(quiz: Quiz, progress: Progress) -> None:
     guess = Label(input("> "))
     correct = quiz.is_correct(guess)
     if not correct:
-        say(quiz.question_language, quiz.question)
+        say(quiz.question_language, quiz.question, slow=True)
         console.print(TRY_AGAIN)
         guess = Label(input("> "))
         correct = quiz.is_correct(guess)
