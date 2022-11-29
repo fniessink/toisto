@@ -113,8 +113,8 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        if hint := self._question.hint():
-            hint = f" ({hint})"
+        hint = self._question.hint()
+        hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
         return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
     def has_same_concept(self, other) -> bool:
