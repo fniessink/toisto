@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Show hints only when translating. Fixes [#51](https://github.com/fniessink/toisto/issues/51).
 - When showing the meaning of a concept, only show the first spelling variant. Fixes [#63](https://github.com/fniessink/toisto/issues/63).
 
+### Changed
+
+- When the user makes a mistake and the question is repeated, say the question slightly slower. Closes [#48](https://github.com/fniessink/toisto/issues/48).
+
 ### Added
 
 - It is possible to specify usage relations between concepts in topic files. For example, the concept "days of the week" uses the concepts "day" and "week". Toisto will first quiz the user on "day" and "week" before quizzing "days of the week". Plural concepts automatically "use" singular concepts so that plural forms of concepts are quizzed before their singular form.
