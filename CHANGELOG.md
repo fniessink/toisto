@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
-- When showing the meaning of a concept, show only the first spelling variant. Fixes [#63](https://github.com/fniessink/toisto/issues/63).
+- Show hints only when translating. Fixes [#51](https://github.com/fniessink/toisto/issues/51).
+- When showing the meaning of a concept, only show the first spelling variant. Fixes [#63](https://github.com/fniessink/toisto/issues/63).
 
 ### Added
 
