@@ -9,7 +9,7 @@ from rich.theme import Theme
 
 from .diff import colored_diff
 from ..metadata import NAME, VERSION
-from ..model import Label, Quiz, Retention
+from ..model import Label, Quiz
 
 
 theme = Theme({
@@ -61,15 +61,11 @@ def format_datetime(date_time: datetime) -> str:
     return date_time.isoformat(sep=" ", timespec="minutes")
 
 
-def feedback_correct(guess: Label, quiz: Quiz, quiz_progress: Retention) -> str:
+def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
     text = CORRECT
     if quiz.meaning:
         text += f'[secondary]Meaning "{quiz.meaning}".[/secondary]\n'
-    if quiz_progress.skip_until:
-        silence_duration = format_duration(quiz_progress.skip_until - datetime.now())
-        long_initial_skip_explanation = " as you already seem to know this" if quiz_progress.count == 1 else ""
-        text += f"[secondary]Skipping this quiz for {silence_duration}{long_initial_skip_explanation}.[/secondary]\n"
     if other_answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
         enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])

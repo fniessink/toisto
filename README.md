@@ -52,38 +52,42 @@ $ toisto --help
 
 ```console
 $ toisto fi nl
- Welcome to Toisto v0.2.0!
+👋 Welcome to Toisto v0.2.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 Hit Ctrl-C or Ctrl-D to quit.
 
-Toisto tracks how many times you correctly translate words and phrases.
-When you correctly translate a word or phrase multiple times in a row,
-Toisto will not quiz you on it for a while. The more correct translations
-in a row, the longer words and phrases are silenced.
-
-Listen and write in Finnish:
-> Oranssi
-✅ Correct.
+Toisto quizzes you on words and phrases repeatedly. Each time you answer a
+quiz correctly, Toisto will wait longer before repeating it. If you answer
+a quiz incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, Toisto will reset the
+quiz interval.
 
 Translate into Finnish:
-Paars
-> Violetti
-✅ Correct.
-Skipping this quiz for 3 days.
+Zij komt uit het Noorden
+> hän tuluu pohjoisesta
+⚠️  Incorrect. Please try again.
+> hän kuluu pohjoisesta
+❌ Incorrect. The correct answer is "Hän tulee pohjoisesta".
 
 Translate into Dutch:
-Keltainen
-> Geel
+Pohjoisessa on kylmä
+> het is koud in het noorden
 ✅ Correct.
-Skipping this quiz for 3 days.
 
 Translate into Finnish:
-Groen
-> virea
-⚠️ Incorrect. Please try again.
-> vihrea
-❌ Incorrect. The correct answer is "Vihreä".
+Zij komt uit het Noorden
+> hän tulee pohjoisesta
+✅ Correct.
+Another correct answer is "Hän on kotoisin pohjoisesta".
+
+Translate into Dutch:
+Hyvää yötä
+> Goedenavond
+⚠️  Incorrect. Please try again.
+> Goedenacht
+✅ Correct.
+Another correct answer is "Welterusten".
 ```
 
 ### How it works
