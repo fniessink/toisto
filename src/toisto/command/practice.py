@@ -20,8 +20,7 @@ def do_quiz(quiz: Quiz, progress: Progress) -> None:
         guess = Label(input("> "))
         correct = quiz.is_correct(guess)
     progress.update(quiz, correct)
-    quiz_progress = progress.get_retention(quiz)
-    console.print(feedback_correct(guess, quiz, quiz_progress) if correct else feedback_incorrect(guess, quiz))
+    console.print(feedback_correct(guess, quiz) if correct else feedback_incorrect(guess, quiz))
 
 
 def practice(topics: Topics, progress: Progress) -> None:

@@ -26,13 +26,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the user is quizzed."""
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
-        self.assertIn(
-            call(
-                "✅ Correct.\n"
-                "[secondary]Skipping this quiz for 24 hours as you already seem to know this.[/secondary]\n"
-            ),
-            patched_print.call_args_list
-        )
+        self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_question(self):
@@ -57,13 +51,7 @@ class PracticeTest(ToistoTestCase):
         topics = Topics(set([Topic("topic", set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
-        self.assertIn(call(
-                "✅ Correct.\n"
-                '[secondary]Meaning "Hoi".[/secondary]\n'
-                "[secondary]Skipping this quiz for 24 hours as you already seem to know this.[/secondary]\n"
-            ),
-            patched_print.call_args_list
-        )
+        self.assertIn(call("""✅ Correct.\n[secondary]Meaning "Hoi".[/secondary]\n"""), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
     def test_quiz_try_again(self):
@@ -71,12 +59,7 @@ class PracticeTest(ToistoTestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(
-            call(
-                "✅ Correct.\n"
-                "[secondary]Skipping this quiz for 24 hours as you already seem to know this.[/secondary]\n"
-            ),
-            patched_print.call_args_list)
+        self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):
