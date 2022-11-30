@@ -10,10 +10,15 @@ def do_quiz_attempt(quiz: Quiz, first_attempt: bool = True) -> tuple[Label, bool
     """Present the question, get the answer from the user, and evaluate it."""
     if first_attempt and quiz.quiz_type != "listen":
         console.print(quiz.question)
-    say(quiz.question_language, quiz.question, slow=not first_attempt)
-    if not first_attempt:
-        console.print(TRY_AGAIN)
-    answer = Label(input("> "))
+    try_again_shown = False
+    while True:
+        say(quiz.question_language, quiz.question, slow=not first_attempt)
+        if not first_attempt and not try_again_shown:
+            console.print(TRY_AGAIN)
+            try_again_shown = True
+        if answer := Label(input("> ").strip()):
+            break
+        print("\033[F", end="")  # Move cursor one line up
     correct = quiz.is_correct(answer)
     return answer, correct
 
