@@ -28,6 +28,14 @@ class PracticeTest(ToistoTestCase):
             practice(self.topics, Progress({}))
         self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(side_effect=["\n", "hoi\n"]))
+    @patch("builtins.print")
+    def test_quiz_empty_answer(self, mock_print):
+        """Test that the user is quizzed."""
+        with patch("rich.console.Console.print"):
+            practice(self.topics, Progress({}))
+        self.assertEqual([call("\x1b[F", end="")], mock_print.call_args_list)
+
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_question(self):
         """Test that the question is printed."""

@@ -21,17 +21,21 @@ theme = Theme({
 
 console = Console(theme=theme)
 
-WELCOME = f"""👋 Welcome to {NAME} [white not bold]v{VERSION}[/white not bold]!
+WELCOME = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VERSION}[/white not bold][/underline]!
 
 Practice as many words and phrases as you like, for as long as you like.
-Hit Ctrl-C or Ctrl-D to quit.
 
-[secondary]{NAME} quizzes you on words and phrases repeatedly. Each time you answer a
-quiz correctly, {NAME} will wait longer before repeating it. If you answer
-a quiz incorrectly, you get one additional attempt to give the correct
-answer. If the second attempt is not correct either, {NAME} will reset the
-quiz interval.[/secondary]
-"""
+[secondary]{NAME} quizzes you on words and phrases repeatedly. Each time you answer
+a quiz correctly, {NAME} will wait longer before repeating it. If you
+answer incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, {NAME} will reset
+the quiz interval.
+
+How does it work?
+● To answer a quiz: type the answer, followed by Enter
+● To repeat the spoken text: type Enter without answer
+● To quit: type Ctrl-C or Ctrl-D
+[/secondary]"""
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
 [secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
