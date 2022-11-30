@@ -4,7 +4,7 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v0.2.0 - 2022-11-30
+## v0.2.0 - 2022-12-01
 
 ### Removed
 
@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - It is possible to specify usage relations between concepts in topic files. For example, the concept "days of the week" uses the concepts "day" and "week". Toisto will first quiz the user on "day" and "week" before quizzing "days of the week". Plural concepts automatically "use" singular concepts so that plural forms of concepts are quizzed before their singular form.
 - When the quiz type is not "translate", as a reminder, show the meaning of the quizzed concept in the user's language after the quiz is finished. Closes [#31](https://github.com/fniessink/toisto/issues/31).
+- When the user enters an empty answer, repeat the spoken question. Closes [#47](https://github.com/fniessink/toisto/issues/47).
 - Add more concepts to the house and nature topics and add an animals topic.
 - Use Google Translate for text-to-speech, but fall back to the MacOS say command if getting the audio from Google Translate fails.
 
