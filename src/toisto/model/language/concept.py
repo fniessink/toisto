@@ -8,7 +8,7 @@ from typing import cast, get_args, Iterable, Literal, Sequence, Union
 
 from toisto.metadata import Language
 
-from ..types import ConceptId
+from ..model_types import ConceptId
 from ..quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
 from .grammar import GrammaticalCategory
 from .label import Labels, Label, label_factory

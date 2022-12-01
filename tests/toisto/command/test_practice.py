@@ -4,7 +4,7 @@ from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
 from toisto.model import Progress, Topic, Topics
-from toisto.model.types import ConceptId
+from toisto.model.model_types import ConceptId
 from toisto.ui.text import DONE, TRY_AGAIN
 
 from ..base import ToistoTestCase

@@ -10,7 +10,7 @@ from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
-from ..types import ConceptId
+from ..model_types import ConceptId
 from .match import match
 
 
@@ -109,6 +109,8 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
+        if self.quiz_type == "listen":
+            return Labels()  # Other answers doesn't make sense if the user has to type what is spoken
         return tuple(answer for answer in self.answers if not match(guess, answer))
 
     def instruction(self) -> str:

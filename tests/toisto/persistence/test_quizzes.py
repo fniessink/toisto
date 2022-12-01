@@ -2,7 +2,7 @@
 
 from unittest.mock import patch, Mock
 
-from toisto.model.types import ConceptId
+from toisto.model.model_types import ConceptId
 from toisto.persistence import load_quizzes
 
 from ..base import ToistoTestCase
