@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - When the quiz type is "listen and type what you hear", don't show alternative answers as that doesn't make sense for this quiz type. Fixes [#74](https://github.com/fniessink/toisto/issues/74).
+- Relations between concepts were only taken into account when both concepts belonged to the same topic. Fixes [#76](https://github.com/fniessink/toisto/issues/76).
 
 ## v0.2.0 - 2022-12-01
 

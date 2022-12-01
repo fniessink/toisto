@@ -1,10 +1,11 @@
 """Progress model class."""
 
+import itertools
 import random
 
 from .quiz import easiest_quizzes, Quiz, Quizzes
 from .retention import Retention
-from .topic import Topics
+from .topic import Topics, Topic
 
 
 class Progress:
@@ -23,21 +24,23 @@ class Progress:
 
     def next_quiz(self, topics: Topics) -> Quiz | None:
         """Return the next quiz."""
+        all_quizzes = set(itertools.chain(*[topic.quizzes for topic in topics]))
         for must_have_progress in (True, False):
             for topic in topics:
-                if quizzes := self.__eligible_quizzes(topic.quizzes, must_have_progress):
+                if quizzes := self.__eligible_quizzes(topic, all_quizzes, must_have_progress):
                     self.__current_quiz = random.choice(list(quizzes))
                     return self.__current_quiz
         self.__current_quiz = None
         return None
 
-    def __eligible_quizzes(self, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
-        """Return the eligible next quizzes from this set if possible."""
+    def __eligible_quizzes(self, topic: Topic, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
+        """Return the eligible next quizzes for the topic if possible."""
         eligible = set(
-            quiz for quiz in quizzes if not self.__is_silenced(quiz) and not quiz.has_same_concept(self.__current_quiz)
+            quiz for quiz in quizzes
+            if not self.__is_silenced(quiz) and not quiz.has_same_concept(self.__current_quiz)
         )
         concepts = set(quiz.concept_id for quiz in eligible)
-        eligible = set(quiz for quiz in eligible if not set(quiz.uses) & concepts)
+        eligible = set(quiz for quiz in eligible if not set(quiz.uses) & concepts and quiz in topic.quizzes)
         eligible_with_progress = set(quiz for quiz in eligible if self.__has_progress(quiz))
         return easiest_quizzes(eligible_with_progress if must_have_progress else eligible_with_progress or eligible)
 
