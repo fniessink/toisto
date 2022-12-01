@@ -38,25 +38,33 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is not silenced."""
         self.progress.update(self.quiz, correct=True)
         another_quiz = self.create_quiz("english", "fi", "en", "Englanti", ["English"])
-        topics = Topics(set([Topic("topic", set([self.quiz, another_quiz]))]))
+        topics = Topics({Topic("topic", {self.quiz, another_quiz})})
         self.assertEqual(another_quiz, self.progress.next_quiz(topics))
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         self.progress.update(self.quiz, correct=True)
-        topics = Topics(set([Topic("topic", set([self.quiz]))]))
+        topics = Topics({Topic("topic", {self.quiz})})
         self.assertIsNone(self.progress.next_quiz(topics))
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        topics = Topics(set([Topic("topic", {self.quiz, self.another_quiz})]))
+        topics = Topics({Topic("topic", {self.quiz, self.another_quiz})})
         self.assertNotEqual(self.progress.next_quiz(topics), self.progress.next_quiz(topics))
 
     def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes(self):
         """Test that the concept of the next quiz does not use other concepts with eligible quizzes."""
         quiz1 = self.create_quiz("good day", "nl", "en", "Goedendag", ["Good day"], uses=("good",))
         quiz2 = self.create_quiz("good", "nl", "en", "Goed", ["Good"])
-        topics = Topics(set([Topic("topic", {quiz1, quiz2})]))
+        topics = Topics({Topic("topic", {quiz1, quiz2})})
+        self.assertEqual(quiz2, self.progress.next_quiz(topics))
+
+    def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes_even_across_topics(self):
+        """Test that the concept of the next quiz does not use other concepts with eligible quizzes, even when the
+        concepts belong to different topics."""
+        quiz1 = self.create_quiz("good day", "nl", "en", "Goedendag", ["Good day"], uses=("good",))
+        quiz2 = self.create_quiz("good", "nl", "en", "Goed", ["Good"])
+        topics = Topics({Topic("topic1", {quiz1}), Topic("topic1", {quiz2})})
         self.assertEqual(quiz2, self.progress.next_quiz(topics))
 
     def test_next_quiz_is_quiz_with_progress(self):
