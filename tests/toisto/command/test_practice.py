@@ -21,11 +21,16 @@ class PracticeTest(ToistoTestCase):
         self.quiz = self.create_quiz(ConceptId("hi"), "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
 
+    def practice(self):
+        """Run the practice command and return the patch print statement."""
+        with patch("rich.console.Console.print") as patched_print:
+            practice(self.topics, Progress({}))
+        return patched_print
+
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz(self):
         """Test that the user is quizzed."""
-        with patch("rich.console.Console.print") as patched_print:
-            practice(self.topics, Progress({}))
+        patched_print = self.practice()
         self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["\n", "hoi\n"]))
@@ -54,12 +59,23 @@ class PracticeTest(ToistoTestCase):
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
-        """Test that the translation not printed on a non-translate quiz."""
-        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen", meaning="Hoi")
+        """Test that the translation is not printed on a non-translate quiz."""
+        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
         topics = Topics(set([Topic("topic", set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
         self.assertIn(call("""✅ Correct.\n[secondary]Meaning "Hoi".[/secondary]\n"""), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(return_value="Talot\n"))
+    def test_quiz_with_multiple_meanings(self):
+        """Test that the translation is not printed on a non-translate quiz."""
+        quiz = self.create_quiz("house", "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
+        topics = Topics(set([Topic("topic", set([quiz]))]))
+        with patch("rich.console.Console.print") as patched_print:
+            practice(topics, Progress({}))
+        self.assertIn(call(
+            """✅ Correct.\n[secondary]Meaning "Huis", "Huizen".[/secondary]\n"""), patched_print.call_args_list
+        )
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
     def test_quiz_try_again(self):

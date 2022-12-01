@@ -4,7 +4,7 @@ from typing import cast
 import unittest
 
 from toisto.metadata import Language
-from toisto.model import Label, Quiz
+from toisto.model import Label, Labels, Quiz
 from toisto.model.model_types import ConceptId
 from toisto.model.quiz.quiz import QuizType
 
@@ -21,7 +21,7 @@ class ToistoTestCase(unittest.TestCase):
         answers: list[str],
         quiz_type: str = "translate",
         uses: tuple[ConceptId, ...] = tuple(),
-        meaning: str = ""
+        meanings: tuple[str, ...] = tuple()
     ) -> Quiz:
         """Create a quiz."""
         return Quiz(
@@ -32,5 +32,5 @@ class ToistoTestCase(unittest.TestCase):
             tuple(Label(answer) for answer in answers),
             cast(QuizType, quiz_type),
             uses,
-            Label(meaning)
+            Labels(Label(meaning) for meaning in meanings)
         )
