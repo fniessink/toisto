@@ -57,7 +57,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     _answers: Labels
     quiz_type: QuizType = "translate"
     uses: tuple[ConceptId, ...] = tuple()
-    _meaning: Label = Label()
+    _meanings: Labels = Labels()
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
@@ -103,9 +103,9 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         return cast(Labels, tuple(chain(*answers)))
 
     @property
-    def meaning(self) -> Label:
-        """Return the first spelling alternative of the meaning."""
-        return self._meaning.first_spelling_alternative()
+    def meanings(self) -> Labels:
+        """Return the first spelling alternative of the meanings."""
+        return Labels(meaning.first_spelling_alternative() for meaning in self._meanings)
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
@@ -137,7 +137,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     labels2: Labels,
     quiz_type: QuizType = "translate",
     uses: tuple[ConceptId, ...] = tuple(),
-    meaning: Label = Label()
+    meanings: Labels = Labels()
 ) -> Quizzes:
     """Create quizzes."""
     if quiz_type == "translate" and labels1 and labels2:
@@ -146,7 +146,7 @@ def quiz_factory(  # pylint: disable=too-many-arguments
             set(Quiz(concept_id, language2, language1, label, labels1, "translate", uses) for label in labels2)
         )
     return set(
-        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses, meaning)
+        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses, meanings)
         for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_type == "listen"
     )
 
