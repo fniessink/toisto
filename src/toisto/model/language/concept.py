@@ -52,7 +52,7 @@ class LeafConcept(Concept):
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
         labels, source_labels = self.labels(language), self.labels(source_language)
-        meanings = Labels((self.meaning(source_language),))
+        meanings = (self.meaning(source_language),)
         translate = quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
         listen = quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses, meanings)
         return translate | listen
@@ -103,8 +103,10 @@ class CompositeConcept(Concept):
         for (concept1, concept2), quiz_type in self.paired_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
-            meanings = Labels((concept1.meaning(source_language), concept2.meaning(source_language)))
-            result.update(quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses, meanings))
+            meanings = concept1.meaning(source_language), concept2.meaning(source_language)
+            result.update(
+                quiz_factory(self.concept_id, language, language, labels1, labels2, quiz_type, uses, meanings)
+            )
         return result
 
     def leaf_concepts(self) -> Iterable[LeafConcept]:
