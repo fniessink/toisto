@@ -3,7 +3,7 @@
 from datetime import timedelta
 
 from toisto.model import Label, Progress
-from toisto.model.types import ConceptId
+from toisto.model.model_types import ConceptId
 from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction
 
 from ..base import ToistoTestCase

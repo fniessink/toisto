@@ -10,7 +10,7 @@ from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
-from ..types import ConceptId
+from ..model_types import ConceptId
 from .match import match
 
 

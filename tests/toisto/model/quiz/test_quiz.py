@@ -3,7 +3,7 @@
 import unittest
 from typing import get_args
 
-from toisto.model.types import ConceptId
+from toisto.model.model_types import ConceptId
 from toisto.model.quiz.quiz import easiest_quizzes, quiz_type_factory, QuizType, INSTRUCTION
 
 from ...base import ToistoTestCase

@@ -5,7 +5,7 @@ import unittest
 
 from toisto.metadata import Language
 from toisto.model import Label, Quiz
-from toisto.model.types import ConceptId
+from toisto.model.model_types import ConceptId
 from toisto.model.quiz.quiz import QuizType
 
 
