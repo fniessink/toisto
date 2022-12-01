@@ -42,6 +42,11 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz("1", "fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"])
         self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
 
+    def test_no_other_answers_when_quiz_type_is_listen(self):
+        """Test that the other answers are not returned if the zuiz type is listen."""
+        quiz = self.create_quiz("1", "fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"], "listen")
+        self.assertEqual((), quiz.other_answers("Een"))
+
     def test_instruction(self):
         """Test the quiz instruction."""
         self.assertEqual("Translate into Dutch", self.quiz.instruction())
