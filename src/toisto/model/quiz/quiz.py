@@ -160,12 +160,12 @@ def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -
             return ("masculinize", "neuterize", "feminize", "neuterize", "feminize", "masculinize")
         case ("female", "male"):
             return ("masculinize", "feminize")
-        case ("positive_degree", "comparitive_degree", "superlative_degree"):
+        case ("positive degree", "comparitive degree", "superlative degree"):
             return (
                 "give comparitive degree", "give superlative degree", "give positive degree",
                 "give superlative degree", "give positive degree", "give comparitive degree"
             )
-        case ("first_person", "second_person", "third_person"):
+        case ("first person", "second person", "third person"):
             return (
                 "give second person", "give third person", "give first person",
                 "give third person", "give first person", "give second person"

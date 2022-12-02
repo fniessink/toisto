@@ -209,11 +209,11 @@ class ConceptQuizzesTest(ToistoTestCase):
         """Test that quizzes can be generated for degrees of comparison."""
         concept = concept_factory(
             "big",
-            dict(
-                positive_degree=dict(en="Big", nl="Groot"),
-                comparitive_degree=dict(en="Bigger", nl="Groter"),
-                superlative_degree=dict(en="Biggest", nl="Grootst")
-            )
+            {
+                "positive degree": dict(en="Big", nl="Groot"),
+                "comparitive degree": dict(en="Bigger", nl="Groter"),
+                "superlative degree": dict(en="Biggest", nl="Grootst")
+            }
         )
         self.assertEqual(
             set([
@@ -240,11 +240,11 @@ class ConceptQuizzesTest(ToistoTestCase):
         """Test that quizzes can be generated for degrees of comparison with synonyms."""
         concept = concept_factory(
             "big",
-            dict(
-                positive_degree=dict(en="Big", fi=["Iso", "Suuri"]),
-                comparitive_degree=dict(en="Bigger", fi=["Isompi", "Suurempi"]),
-                superlative_degree=dict(en="Biggest", fi=["Isoin", "Suurin"])
-            )
+            {
+                "positive degree": dict(en="Big", fi=["Iso", "Suuri"]),
+                "comparitive degree": dict(en="Bigger", fi=["Isompi", "Suurempi"]),
+                "superlative degree": dict(en="Biggest", fi=["Isoin", "Suurin"])
+            }
         )
         self.assertEqual(
             set([
@@ -283,11 +283,11 @@ class ConceptQuizzesTest(ToistoTestCase):
         """Test that quizzes can be generated for grammatical person."""
         concept = concept_factory(
             "to eat",
-            dict(
-                first_person=dict(en="I eat", nl="Ik eet"),
-                second_person=dict(en="You eat", nl="Jij eet"),
-                third_person=dict(en="She eats", nl="Zij eet")
-            )
+            {
+                "first person": dict(en="I eat", nl="Ik eet"),
+                "second person": dict(en="You eat", nl="Jij eet"),
+                "third person": dict(en="She eats", nl="Zij eet")
+            }
         )
         self.assertEqual(
             set([
@@ -314,11 +314,11 @@ class ConceptQuizzesTest(ToistoTestCase):
         """Test that quizzes can be generated for grammatical person, nested with grammatical gender."""
         concept = concept_factory(
             "to eat",
-            dict(
-                first_person=dict(en="I eat", nl="Ik eet"),
-                second_person=dict(en="You eat", nl="Jij eet"),
-                third_person=dict(female=dict(en="She eats", nl="Zij eet"), male=dict(en="He eats", nl="Hij eet"))
-            )
+            {
+                "first person": dict(en="I eat", nl="Ik eet"),
+                "second person": dict(en="You eat", nl="Jij eet"),
+                "third person": dict(female=dict(en="She eats", nl="Zij eet"), male=dict(en="He eats", nl="Hij eet"))
+            }
         )
         self.assertEqual(
             set([
@@ -351,16 +351,16 @@ class ConceptQuizzesTest(ToistoTestCase):
         concept = concept_factory(
             "to have",
             dict(
-                singular=dict(
-                    first_person=dict(fi="Minulla on", nl="Ik heb"),
-                    second_person=dict(fi="Sinulla on", nl="Jij hebt"),
-                    third_person=dict(fi="Hänellä on", nl="Zij heeft"),
-                ),
-                plural=dict(
-                    first_person=dict(fi="Meillä on", nl="Wij hebben"),
-                    second_person=dict(fi="Teillä on", nl="Jullie hebben"),
-                    third_person=dict(fi="Heillä on", nl="Zij hebben"),
-                )
+                singular={
+                    "first person": dict(fi="Minulla on", nl="Ik heb"),
+                    "second person": dict(fi="Sinulla on", nl="Jij hebt"),
+                    "third person": dict(fi="Hänellä on", nl="Zij heeft"),
+                },
+                plural={
+                    "first person": dict(fi="Meillä on", nl="Wij hebben"),
+                    "second person": dict(fi="Teillä on", nl="Jullie hebben"),
+                    "third person": dict(fi="Heillä on", nl="Zij hebben"),
+                }
             )
         )
         self.assertEqual(
@@ -612,11 +612,11 @@ class ConceptRelationshipsTest(ToistoTestCase):
         """Test that use relations are generated for degrees of comparison."""
         concept = concept_factory(
             "big",
-            dict(
-                positive_degree=dict(en="Big", nl="Groot"),
-                comparitive_degree=dict(en="Bigger", nl="Groter"),
-                superlative_degree=dict(en="Biggest", nl="Grootst")
-            )
+            {
+                "positive degree": dict(en="Big", nl="Groot"),
+                "comparitive degree": dict(en="Bigger", nl="Groter"),
+                "superlative degree": dict(en="Biggest", nl="Grootst")
+            }
         )
         expected_uses = {
             self.create_quiz("big", "nl", "en", "Groot", ["Big"], "translate"): (),
@@ -629,15 +629,15 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("big", "en", "nl", "Biggest", ["Grootst"], "translate"): (),
             self.create_quiz("big", "nl", "nl", "Grootst", ["Grootst"], "listen"): (),
             self.create_quiz(
-                "big", "nl", "nl", "Groot", ["Groter"], "give comparitive degree"): ("big/comparitive_degree",),
+                "big", "nl", "nl", "Groot", ["Groter"], "give comparitive degree"): ("big/comparitive degree",),
             self.create_quiz(
-                "big", "nl", "nl", "Groot", ["Grootst"], "give superlative degree"): ("big/superlative_degree",),
-            self.create_quiz("big", "nl", "nl", "Groter", ["Groot"], "give positive degree"): ("big/positive_degree",),
+                "big", "nl", "nl", "Groot", ["Grootst"], "give superlative degree"): ("big/superlative degree",),
+            self.create_quiz("big", "nl", "nl", "Groter", ["Groot"], "give positive degree"): ("big/positive degree",),
             self.create_quiz(
-                "big", "nl", "nl", "Groter", ["Grootst"], "give superlative degree"): ("big/superlative_degree",),
-            self.create_quiz("big", "nl", "nl", "Grootst", ["Groot"], "give positive degree"): ("big/positive_degree",),
+                "big", "nl", "nl", "Groter", ["Grootst"], "give superlative degree"): ("big/superlative degree",),
+            self.create_quiz("big", "nl", "nl", "Grootst", ["Groot"], "give positive degree"): ("big/positive degree",),
             self.create_quiz(
-                "big", "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"): ("big/comparitive_degree",)
+                "big", "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"): ("big/comparitive degree",)
         }
         for quiz in concept.quizzes("nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
