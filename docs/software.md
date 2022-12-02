@@ -176,7 +176,7 @@ The gendered forms are considered *subconcepts* of the main concept. Each subcon
 
 ### Grammatical person
 
-When concepts, usually verbs and pronouns, have different persons, these are represented in the JSON as mappings with `first_person`, `second_person`, and `third_person`.
+When concepts, usually verbs and pronouns, have different persons, these are represented in the JSON as mappings with `first person`, `second person`, and `third person`.
 
 The format of the JSON files is as follows:
 
@@ -184,15 +184,15 @@ The format of the JSON files is as follows:
 {
     "to have": {
         "singular": {
-            "first_person": {
+            "first person": {
                 "en": "I have|I've",
                 "fi": "Minulla on"
             },
-            "second_person": {
+            "second person": {
                 "en": "You have|You've;singular",
                 "fi": "Sinulla on"
             },
-            "third_person": {
+            "third person": {
                 "female": {
                     "en": "She has|She's",
                     "fi": "Hänellä on;female"
@@ -204,15 +204,15 @@ The format of the JSON files is as follows:
             }
         },
         "plural": {
-            "first_person": {
+            "first person": {
                 "en": "We have|We've",
                 "fi": "Meillä on"
             },
-            "second_person": {
+            "second person": {
                 "en": "You have|You've;plural",
                 "fi": "Teillä on"
             },
-            "third_person": {
+            "third person": {
                 "en": "They have|They've",
                 "fi": "Heillä on"
             }
@@ -225,7 +225,7 @@ Note that because the second person singular and plural are the same in English,
 
 The same goes for the third person Finnish. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
-The different persons are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the first person singular gets `to have/singular/first_person` as key, the second person singular `to have/singular/second_person`, etc.
+The different persons are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the first person singular gets `to have/singular/first person` as key, the second person singular `to have/singular/second person`, etc.
 
 ### Degrees of comparison
 
@@ -234,15 +234,15 @@ Degrees of comparison are specified as follows:
 ```json
 {
     "small": {
-        "positive_degree": {
+        "positive degree": {
             "en": "Small",
             "nl": "Klein"
         },
-        "comparitive_degree": {
+        "comparitive degree": {
             "en": "Smaller",
             "nl": "Kleiner"
         },
-        "superlative_degree": {
+        "superlative degree": {
             "en": "Smallest",
             "nl": "Kleinst"
         }
@@ -255,17 +255,17 @@ When there are synonyms, they need to be in the same order in every degree. This
 ```json
 {
     "big": {
-        "positive_degree": {
+        "positive degree": {
             "en": "Big",
             "fi": ["Iso", "Suuri"],
             "nl": "Groot"
         },
-        "comparitive_degree": {
+        "comparitive degree": {
             "en": "Bigger",
             "fi": ["Isompi", "Suurempi"],
             "nl": "Groter"
         },
-        "superlative_degree": {
+        "superlative degree": {
             "en": "Biggest",
             "fi": ["Isoin", "Suurin"],
             "nl": "Grootst"
@@ -274,7 +274,7 @@ When there are synonyms, they need to be in the same order in every degree. This
 }
 ```
 
-The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive_degree` as key, the comparitive degree `big/comparitive_degree`, and the superlative degree `big/superlative degree`.
+The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive degree` as key, the comparitive degree `big/comparitive degree`, and the superlative degree `big/superlative degree`.
 
 ### Concept relationships
 
