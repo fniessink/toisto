@@ -466,6 +466,30 @@ class ConceptQuizzesTest(ToistoTestCase):
             concept.quizzes("fi", "en")
         )
 
+    def test_infinitive_verb_form(self):
+        """Test the infinitive verb form."""
+        concept = concept_factory(
+            "to sleep",
+            dict(
+                infinitive=dict(en="To sleep", nl="Slapen"),
+                singular=dict(en="I sleep", nl="Ik slaap"),
+                plural=dict(en="We sleep", nl="Wij slapen")
+            )
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("to sleep", "nl", "en", "Ik slaap", ["I sleep"], "translate"),
+                self.create_quiz("to sleep", "en", "nl", "I sleep", ["Ik slaap"], "translate"),
+                self.create_quiz("to sleep", "nl", "nl", "Ik slaap", ["Ik slaap"], "listen"),
+                self.create_quiz("to sleep", "nl", "en", "Wij slapen", ["We sleep"], "translate"),
+                self.create_quiz("to sleep", "en", "nl", "We sleep", ["Wij slapen"], "translate"),
+                self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Wij slapen"], "listen"),
+                self.create_quiz("to sleep", "nl", "nl", "Ik slaap", ["Wij slapen"], "pluralize"),
+                self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Ik slaap"], "singularize"),
+            ]),
+            concept.quizzes("nl", "en")
+        )
+
 
 class ConceptRelationshipsTest(ToistoTestCase):
     """Unit tests for relationships between concepts."""
