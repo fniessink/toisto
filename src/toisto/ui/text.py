@@ -32,9 +32,11 @@ answer. If the second attempt is not correct either, {NAME} will reset
 the quiz interval.
 
 How does it work?
-● To answer a quiz: type the answer, followed by Enter
-● To repeat the spoken text: type Enter without answer
-● To quit: type Ctrl-C or Ctrl-D
+● To answer a quiz: type the answer, followed by Enter.
+● To repeat the spoken text: type Enter without answer.
+● To read more about an [link=https://en.wiktionary.org/wiki/underlined]underlined[/link] word: keep ⌘ (the command key) pressed
+  while clicking the word. Not all terminals may support this.
+● To quit: type Ctrl-C or Ctrl-D.
 [/secondary]"""
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
@@ -63,6 +65,11 @@ def format_duration(duration: timedelta) -> str:
 def format_datetime(date_time: datetime) -> str:
     """Return a human readable version of the datetime"""
     return date_time.isoformat(sep=" ", timespec="minutes")
+
+
+def linkify(text: str) -> str:
+    """Return a version of the text where each word is turned into a link to a dictionary."""
+    return " ".join(f"[link=https://en.wiktionary.org/wiki/{word.lower()}]{word}[/link]" for word in text.split())
 
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
