@@ -1,7 +1,7 @@
 """Practice command."""
 
 from toisto.model import Label, Progress, Quiz, Topics
-from toisto.ui.text import console, feedback_correct, feedback_incorrect, instruction, DONE, WELCOME, TRY_AGAIN
+from toisto.ui.text import console, feedback_correct, feedback_incorrect, linkify, instruction, DONE, WELCOME, TRY_AGAIN
 from toisto.ui.speech import say
 from toisto.persistence import save_progress
 
@@ -9,7 +9,7 @@ from toisto.persistence import save_progress
 def do_quiz_attempt(quiz: Quiz, first_attempt: bool = True) -> tuple[Label, bool]:
     """Present the question, get the answer from the user, and evaluate it."""
     if first_attempt and quiz.quiz_type != "listen":
-        console.print(quiz.question)
+        console.print(linkify(quiz.question))
     try_again_shown = False
     while True:
         say(quiz.question_language, quiz.question, slow=not first_attempt)

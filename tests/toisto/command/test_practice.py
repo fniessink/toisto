@@ -46,7 +46,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the question is printed."""
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
-        self.assertIn(call("Terve"), patched_print.call_args_list)
+        self.assertIn(call("[link=https://en.wiktionary.org/wiki/terve]Terve[/link]"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
