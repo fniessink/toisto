@@ -29,6 +29,27 @@
             ]
         }
     },
+    "in spring": {
+        "uses": "spring",
+        "en": "In spring",
+        "fi": "Keväällä",
+        "nl": [
+            "In de lente",
+            "In het voorjaar"
+        ]
+    },
+    "next spring": {
+        "uses": "spring",
+        "en": "Next spring",
+        "fi": "Ensi keväänä",
+        "nl": ["Volgende lente", "Volgend voorjaar"]
+    },
+    "last spring": {
+        "uses": "spring",
+        "en": "Last spring",
+        "fi": "Viime keväänä",
+        "nl": ["Vorige lente", "Vorig voorjaar"]
+    },
     "summer": {
         "singular": {
             "en": "Summer",
@@ -40,6 +61,24 @@
             "fi": "Kesät",
             "nl": "De zomers"
         }
+    },
+    "in summer": {
+        "uses": "summer",
+        "en": "In summer",
+        "fi": "Kesällä",
+        "nl": "In de zomer"
+    },
+    "next summer": {
+        "uses": "summer",
+        "en": "Next summer",
+        "fi": "Ensi kesänä",
+        "nl": "Volgende zomer"
+    },
+    "last summer": {
+        "uses": "summer",
+        "en": "Last summer",
+        "fi": "Viime kesänä",
+        "nl": "Vorige zomer"
     },
     "autumn": {
         "singular": {
@@ -65,6 +104,24 @@
             ]
         }
     },
+    "in autumn": {
+        "uses": "autumn",
+        "en": ["In autumn", "In fall"],
+        "fi": "Syksyllä",
+        "nl": ["In de herfst", "In het najaar"]
+    },
+    "next autumn": {
+        "uses": "autumn",
+        "en": "Next autumn",
+        "fi": "Ensi syksynä",
+        "nl": ["Volgende herfst", "Volgend najaar"]
+    },
+    "last autumn": {
+        "uses": "autumn",
+        "en": "Last autumn",
+        "fi": "Viime syksynä",
+        "nl": ["Vorige herfst", "Vorig najaar"]
+    },
     "winter": {
         "singular": {
             "en": "Winter",
@@ -76,5 +133,23 @@
             "fi": "Talvet",
             "nl": "De winters"
         }
+    },
+    "in winter": {
+        "uses": "winter",
+        "en": "In winter",
+        "fi": "Talvella",
+        "nl": "In de winter"
+    },
+    "next winter": {
+        "uses": "winter",
+        "en": "Next winter",
+        "fi": "Ensi talvena",
+        "nl": "Volgende winter"
+    },
+    "last winter": {
+        "uses": "winter",
+        "en": "Last winter",
+        "fi": "Viime talvena",
+        "nl": "Vorige winter"
     }
 }

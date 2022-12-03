@@ -54,6 +54,12 @@
             "nl": "De maandagen"
         }
     },
+    "on monday": {
+        "uses": "monday",
+        "en": "On Monday",
+        "fi": "Maanantaina",
+        "nl": "Op maandag"
+    },
     "tuesday": {
         "singular": {
             "en": "Tuesday",
@@ -77,6 +83,12 @@
             "fi": "Keskiviikot",
             "nl": "De woensdagen"
         }
+    },
+    "on wednesday": {
+        "uses": "wednesday",
+        "en": "On Wednesday",
+        "fi": "Keskiviikkona",
+        "nl": "Op woensdag"
     },
     "thursday": {
         "singular": {
