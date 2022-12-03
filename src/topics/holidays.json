@@ -1,0 +1,133 @@
+{
+    "holiday": {
+        "uses": "day",
+        "singular": {
+            "en": "Holiday",
+            "fi": "Juhlapäivä",
+            "nl": "De feestdag"
+        },
+        "plural": {
+            "en": "Holidays",
+            "fi": "Juhlapäivät",
+            "nl": "De feestdagen"
+        }
+    },
+    "christmas": {
+        "en": "Christmas",
+        "fi": "Joulu",
+        "nl": "Kerstmis"
+    },
+    "christmas eve": {
+        "uses": [
+            "christmas",
+            "evening"
+        ],
+        "en": "Christmas Eve",
+        "fi": "Jouluaatto",
+        "nl": "Kerstavond"
+    },
+    "christmas day": {
+        "uses": [
+            "christmas",
+            "day"
+        ],
+        "en": "Christmas Day",
+        "fi": "Joulupäivä",
+        "nl": "Eerste kerstdag"
+    },
+    "boxing day": {
+        "uses": [
+            "christmas",
+            "day"
+        ],
+        "en": "Boxing Day",
+        "fi": "Tapaninpäivä",
+        "nl": "Tweede kerstdag"
+    },
+    "merry christmas": {
+        "uses": "christmas",
+        "en": "Merry Christmas!",
+        "fi": [
+            "Hyvää joulua!"
+        ],
+        "nl": "Vrolijk kerstfeest!"
+    },
+    "christmas tree": {
+        "uses": [
+            "christmas",
+            "tree"
+        ],
+        "en": "Christmas tree",
+        "fi": "Joulukuusi",
+        "nl": "De kerstboom"
+    },
+    "santa": {
+        "uses": "christmas",
+        "en": "Santa Claus|Santa",
+        "fi": "Joulupukki",
+        "nl": "De kerstman"
+    },
+    "elf": {
+        "en": "Elf",
+        "fi": "Tonttu",
+        "nl": "De elf"
+    },
+    "angel": {
+        "en": "Angel",
+        "fi": "Enkeli",
+        "nl": "De engel"
+    },
+    "bauble": {
+        "uses": "christmas tree",
+        "en": "Bauble",
+        "fi": "Joulukuusenpallo|Joulupallo",
+        "nl": "De kerstbal"
+    },
+    "new year": {
+        "uses": "year",
+        "en": "New Year",
+        "fi": "Uusivuosi",
+        "nl": "Nieuwjaar"
+    },
+    "happy new year": {
+        "uses": "new year",
+        "en": "Happy New Year!",
+        "fi": "Hyvää uutta vuotta!",
+        "nl": "Gelukkig nieuwjaar"
+    },
+    "valentine's day": {
+        "uses": "day",
+        "en": "Valentine's Day",
+        "fi": "Ystävänpäivä",
+        "nl": "Valentijnsdag"
+    },
+    "epiphany": {
+        "en": "Epiphany",
+        "fi": "Loppiainen",
+        "nl": "Driekoningen"
+    },
+    "easter": {
+        "en": "Easter",
+        "fi": "Pääsiäinen",
+        "nl": "Pasen"
+    },
+    "first of may": {
+        "uses": [
+            "may",
+            "day"
+        ],
+        "en": "First of May",
+        "fi": "Vappu",
+        "nl": "Dag van de arbeid"
+    },
+    "midsummer": {
+        "uses": "summer",
+        "en": "Midsummer",
+        "fi": "Juhannus",
+        "nl": "Midzomer"
+    },
+    "finnish independence day": {
+        "uses": "day",
+        "fi": "Itsenäisyyspäivä"
+    }
+}

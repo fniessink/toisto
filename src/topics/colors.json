@@ -31,7 +31,10 @@
     },
     "purple": {
         "en": "Purple",
-        "fi": "Violetti",
+        "fi": [
+            "Liila",
+            "Violetti"
+        ],
         "nl": "Paars"
     },
     "orange": {
@@ -56,5 +59,17 @@
         "en": "Grey|Gray",
         "fi": "Harmaa",
         "nl": "Grijs"
+    },
+    "light blue": {
+        "uses": "blue",
+        "en": "Light blue",
+        "fi": "Vaaleansininen",
+        "nl": "Lichtblauw"
+    },
+    "dark blue": {
+        "uses": "blue",
+        "en": "Dark blue",
+        "fi": "Tummansininen",
+        "nl": "Donkerblauw"
     }
 }
