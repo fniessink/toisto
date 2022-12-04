@@ -52,16 +52,22 @@ $ toisto --help
 
 ```console
 $ toisto fi nl
-👋 Welcome to Toisto v0.2.0!
+👋 Welcome to Toisto v0.3.0!
 
 Practice as many words and phrases as you like, for as long as you like.
-Hit Ctrl-C or Ctrl-D to quit.
 
-Toisto quizzes you on words and phrases repeatedly. Each time you answer a
-quiz correctly, Toisto will wait longer before repeating it. If you answer
-a quiz incorrectly, you get one additional attempt to give the correct
-answer. If the second attempt is not correct either, Toisto will reset the
-quiz interval.
+Toisto quizzes you on words and phrases repeatedly. Each time you answer
+a quiz correctly, Toisto will wait longer before repeating it. If you
+answer incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, Toisto will reset
+the quiz interval.
+
+How does it work?
+● To answer a quiz: type the answer, followed by Enter.
+● To repeat the spoken text: type Enter without answer.
+● To read more about an underlined word: keep ⌘ (the command key) pressed
+  while clicking the word. Not all terminals may support this.
+● To quit: type Ctrl-C or Ctrl-D.
 
 Translate into Finnish:
 Zij komt uit het Noorden
