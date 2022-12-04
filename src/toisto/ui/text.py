@@ -74,21 +74,29 @@ def linkify(text: str) -> str:
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
-    text = CORRECT
-    if quiz.meanings:
-        meanings = ", ".join(f'"{meaning}"' for meaning in quiz.meanings)
-        text += f'[secondary]Meaning {meanings}.[/secondary]\n'
-    if other_answers := quiz.other_answers(guess):
-        label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
-        enumerated_answers = ", ".join([f'"{answer}"' for answer in other_answers])
-        text += f"""[secondary]{label} {enumerated_answers}.[/secondary]\n"""
-    return text
+    return CORRECT + meaning(quiz) + other_answers(guess, quiz)
 
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    diff = colored_diff(guess, quiz.answer)
-    return f'❌ Incorrect. The correct answer is "{diff}".\n'
+    return f'❌ Incorrect. The correct answer is "{colored_diff(guess, quiz.answer)}".\n' + meaning(quiz)
+
+
+def meaning(quiz: Quiz) -> str:
+    """Return the quiz's meaning, if any."""
+    if quiz.meanings:
+        meanings = ", ".join(f'"{meaning}"' for meaning in quiz.meanings)
+        return f'[secondary]Meaning {meanings}.[/secondary]\n'
+    return ""
+
+
+def other_answers(guess: Label, quiz: Quiz) -> str:
+    """Return the quiz's other answers, if any."""
+    if answers := quiz.other_answers(guess):
+        label = "Another correct answer is" if len(answers) == 1 else "Other correct answers are"
+        enumerated_answers = ", ".join([f'"{answer}"' for answer in answers])
+        return f"""[secondary]{label} {enumerated_answers}.[/secondary]\n"""
+    return ""
 
 
 def instruction(quiz: Quiz) -> str:
