@@ -14,7 +14,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz(ConceptId("hello"), "nl", "fi", "Hoi", ["Terve"])
+        self.quiz = self.create_quiz(ConceptId("hello"), "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
         self.guess = Label("Terve")
         self.progress = Progress({})
 
@@ -26,7 +26,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         feedback_text = feedback_correct(self.guess, self.quiz)
-        self.assertEqual("✅ Correct.\n", feedback_text)
+        self.assertEqual("""✅ Correct.\n[secondary]Meaning "Hoi".[/secondary]\n""", feedback_text)
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
@@ -48,10 +48,14 @@ class FeedbackTestCase(ToistoTestCase):
             feedback_text
         )
 
-    def test_incorrect(self):
+    def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         feedback_text = feedback_incorrect("", self.quiz)
-        self.assertEqual("""❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n""", feedback_text)
+        self.assertEqual(
+            """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
+            """[secondary]Meaning "Hoi".[/secondary]\n""",
+            feedback_text
+        )
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""

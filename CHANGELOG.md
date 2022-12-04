@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - When languages of both question and answer are the same, give the meaning of both the question and the answer. Closes [#73](https://github.com/fniessink/toisto/issues/73).
+- Also show the meaning when the answer is incorrect. Closes [#90](https://github.com/fniessink/toisto/issues/90).
 - Add links to https://en.wiktionary.org/ for each word.
 - Add some regular and auxiliary verbs.
 - Add some colors.
