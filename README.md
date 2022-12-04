@@ -6,13 +6,17 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 ## User guide
 
-### How to install
+### Prerequisites
 
 Make sure you have these prequisities installed:
 
 - MacOS (because Toisto uses the MacOS `say` and/or `afplay` command for text-to-speech),
 - [Python 3.10 or newer](https://python.org), and
 - [pipx](https://pypa.github.io/pipx/).
+
+For some features, Toisto needs a more modern terminal than the default one that MacOS offers. We test with [iTerm2](https://iterm2.com). But this is optional, Toisto should work fine with the default MacOS terminal app.
+
+### How to install
 
 Install Toisto as follows:
 
