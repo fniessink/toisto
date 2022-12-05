@@ -1,26 +1,16 @@
 {
     "hi": {
-        "en": [
-            "Hi"
-        ],
+        "en": "Hi",
         "fi": [
             "Hei",
             "Moi"
         ],
-        "nl": [
-            "Hoi"
-        ]
+        "nl": "Hoi"
     },
     "hello": {
-        "en": [
-            "Hello"
-        ],
-        "fi": [
-            "Terve"
-        ],
-        "nl": [
-            "Hallo"
-        ]
+        "en": "Hello",
+        "fi": "Terve",
+        "nl": "Hallo"
     },
     "bye": {
         "en": [
@@ -60,12 +50,26 @@
         ],
         "nl": "Hoe gaat het?"
     },
+    "what is your name": {
+        "uses": "name",
+        "en": "What is your name?",
+        "fi": "Mikä sinun nimesi on?",
+        "nl": "Wat is jouw naam?|Wat is je naam?"
+    },
     "my name is bob": {
+        "uses": "name",
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
+    "how old are you": {
+        "uses": "old",
+        "en": "How old are you?",
+        "fi": "Kuinka vanha olet?",
+        "nl": "Hoe oud ben jij?|Hoe oud ben je?"
+    },
     "good morning": {
+        "uses": "morning",
         "en": "Good morning",
         "fi": [
             "Hyvää huomenta",
@@ -74,6 +78,7 @@
         "nl": "Goedemorgen"
     },
     "good afternoon": {
+        "uses": "day",
         "en": "Good afternoon",
         "nl": "Goedemiddag"
     },
@@ -82,6 +87,7 @@
         "nl": "Goedendag"
     },
     "good day en:fi": {
+        "uses": "day",
         "en": [
             "Good afternoon",
             "Good day"
@@ -92,6 +98,7 @@
         ]
     },
     "good day fi:nl": {
+        "uses": "day",
         "fi": [
             "Hyvää päivää",
             "Päivää"
@@ -102,6 +109,7 @@
         ]
     },
     "good evening": {
+        "uses": "evening",
         "en": "Good evening",
         "fi": [
             "Hyvää iltaa",
@@ -110,6 +118,7 @@
         "nl": "Goedenavond"
     },
     "good night": {
+        "uses": "night",
         "en": "Good night",
         "fi": "Hyvää yötä",
         "nl": [
@@ -118,6 +127,7 @@
         ]
     },
     "sleep well": {
+        "uses": "to sleep",
         "en": "Sleep well",
         "fi": "Nuku hyvin",
         "nl": "Slaap lekker"
