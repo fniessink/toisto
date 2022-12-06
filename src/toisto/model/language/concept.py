@@ -7,6 +7,7 @@ from itertools import permutations
 from typing import cast, get_args, Iterable, Literal, Union
 
 from toisto.metadata import Language
+from toisto.tools import zip_and_cycle
 
 from ..model_types import ConceptId
 from ..quiz import Quizzes, QuizType, quiz_factory, GRAMMATICAL_QUIZ_TYPES
@@ -128,8 +129,8 @@ class CompositeConcept(Concept):
 
     def paired_concepts(self) -> Iterable[LeafConceptPair]:
         """Pair the leaf concepts from the composite concepts."""
-        leaf_concepts = [concept.leaf_concepts() for concept in self._constituent_concepts.values()]
-        for concept_group in zip(*leaf_concepts):
+        leaf_concepts = [list(concept.leaf_concepts()) for concept in self._constituent_concepts.values()]
+        for concept_group in zip_and_cycle(*leaf_concepts):
             for permutation in permutations(concept_group, r=2):
                 yield cast(LeafConceptPair, permutation)
 
