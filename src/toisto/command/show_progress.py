@@ -24,8 +24,9 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
+        quiz_types = " and ".join(quiz.quiz_types)
         table.add_row(
-            quiz.quiz_type.capitalize(),
+            quiz_types.capitalize(),
             quiz.question,
             quiz.question_language,
             quiz.answer_language,

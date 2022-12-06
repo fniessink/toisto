@@ -30,7 +30,7 @@ class ToistoTestCase(unittest.TestCase):
             cast(Language, answer_language),
             Label(question),
             tuple(Label(answer) for answer in answers),
-            cast(QuizType, quiz_type),
+            (cast(QuizType, quiz_type),),
             uses,
             Labels(Label(meaning) for meaning in meanings)
         )

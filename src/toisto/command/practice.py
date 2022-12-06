@@ -8,7 +8,7 @@ from toisto.persistence import save_progress
 
 def do_quiz_attempt(quiz: Quiz, first_attempt: bool = True) -> tuple[Label, bool]:
     """Present the question, get the answer from the user, and evaluate it."""
-    if first_attempt and quiz.quiz_type != "listen":
+    if first_attempt and "listen" not in quiz.quiz_types:
         console.print(linkify(quiz.question))
     try_again_shown = False
     while True:
