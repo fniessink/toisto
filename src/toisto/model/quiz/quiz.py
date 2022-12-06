@@ -29,20 +29,20 @@ QuizType = Literal[
     "give second person",
     "give third person",
 ]
-INSTRUCTION: dict[QuizType, str] = {
-    "translate": "Translate into",
-    "listen": "Listen and write in",
-    "pluralize": "Give the [underline]plural[/underline] in",
-    "singularize": "Give the [underline]singular[/underline] in",
-    "masculinize": "Give the [underline]male[/underline] form in",
-    "feminize": "Give the [underline]female[/underline] form in",
-    "neuterize": "Give the [underline]neuter[/underline] form in",
-    "give positive degree": "Give the [underline]positive degree[/underline] in",
-    "give comparitive degree": "Give the [underline]comparitive degree[/underline] in",
-    "give superlative degree": "Give the [underline]superlative degree[/underline] in",
-    "give first person": "Give the [underline]first person[/underline] in",
-    "give second person": "Give the [underline]second person[/underline] in",
-    "give third person": "Give the [underline]third person[/underline] in",
+INSTRUCTION: dict[tuple[QuizType, ...], str] = {
+    ("translate",): "Translate into",
+    ("listen",): "Listen and write in",
+    ("pluralize",): "Give the [underline]plural[/underline] in",
+    ("singularize",): "Give the [underline]singular[/underline] in",
+    ("masculinize",): "Give the [underline]male[/underline] form in",
+    ("feminize",): "Give the [underline]female[/underline] form in",
+    ("neuterize",): "Give the [underline]neuter[/underline] form in",
+    ("give positive degree",): "Give the [underline]positive degree[/underline] in",
+    ("give comparitive degree",): "Give the [underline]comparitive degree[/underline] in",
+    ("give superlative degree",): "Give the [underline]superlative degree[/underline] in",
+    ("give first person",): "Give the [underline]first person[/underline] in",
+    ("give second person",): "Give the [underline]second person[/underline] in",
+    ("give third person",): "Give the [underline]third person[/underline] in",
 }
 
 
@@ -55,17 +55,18 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     answer_language: Language
     _question: Label
     _answers: Labels
-    quiz_type: QuizType = "translate"
+    quiz_types: tuple[QuizType, ...] = ("translate",)
     uses: tuple[ConceptId, ...] = tuple()
     _meanings: Labels = Labels()
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
-        return f"{self.question_language}:{self.answer_language}:{self._question}:{self.quiz_type}"
+        quiz_types = "+".join(self.quiz_types)
+        return f"{self.question_language}:{self.answer_language}:{self._question}:{quiz_types}"
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
-        return hash((self.question_language, self.answer_language, self.question, self.quiz_type))
+        return hash((self.question_language, self.answer_language, self.question, self.quiz_types))
 
     def __eq__(self, other) -> bool:
         """Return whether this quiz is equal to the other."""
@@ -75,7 +76,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
             self.question_language == other.question_language and
             self.answer_language == other.answer_language and
             self.question == other.question and
-            self.quiz_type == other.quiz_type
+            self.quiz_types == other.quiz_types
         )
 
     def __ne__(self, other) -> bool:
@@ -109,7 +110,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
-        if self.quiz_type == "listen":
+        if self.quiz_types == ("listen",):
             return Labels()  # Other answers doesn't make sense if the user has to type what is spoken
         return tuple(answer for answer in self.answers if not match(guess, answer))
 
@@ -117,7 +118,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         """Generate the quiz instruction."""
         hint = self._question.hint()
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
-        return f"{INSTRUCTION[self.quiz_type]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
+        return f"{INSTRUCTION[self.quiz_types]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
     def has_same_concept(self, other) -> bool:
         """Return whether this quiz belongs to the same concept as the other quiz."""
@@ -135,19 +136,19 @@ def quiz_factory(  # pylint: disable=too-many-arguments
     language2: Language,
     labels1: Labels,
     labels2: Labels,
-    quiz_type: QuizType = "translate",
+    quiz_types: tuple[QuizType, ...] = ("translate",),
     uses: tuple[ConceptId, ...] = tuple(),
     meanings: Labels = Labels()
 ) -> Quizzes:
     """Create quizzes."""
-    if quiz_type == "translate" and labels1 and labels2:
+    if quiz_types == ("translate",) and labels1 and labels2:
         return (
-            set(Quiz(concept_id, language1, language2, label, labels2, "translate", uses) for label in labels1) |
-            set(Quiz(concept_id, language2, language1, label, labels1, "translate", uses) for label in labels2)
+            set(Quiz(concept_id, language1, language2, label, labels2, quiz_types, uses) for label in labels1) |
+            set(Quiz(concept_id, language2, language1, label, labels1, quiz_types, uses) for label in labels2)
         )
     return set(
-        Quiz(concept_id, language1, language2, label1, (label2,), quiz_type, uses, meanings)
-        for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_type == "listen"
+        Quiz(concept_id, language1, language2, label1, (label2,), quiz_types, uses, meanings)
+        for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_types == ("listen",)
     )
 
 
@@ -177,6 +178,6 @@ def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -
 def easiest_quizzes(quizzes: Quizzes) -> Quizzes:
     """Return the easiest quizzes."""
     for quiz_type in get_args(QuizType):
-        if quizzes_subset := set(quiz for quiz in quizzes if quiz.quiz_type == quiz_type):
+        if quizzes_subset := set(quiz for quiz in quizzes if quiz.quiz_types == (quiz_type,)):
             return quizzes_subset
     return quizzes

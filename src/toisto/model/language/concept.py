@@ -55,7 +55,7 @@ class LeafConcept(Concept):
         meaning = self.meaning(source_language)
         meanings = (meaning,) if meaning else ()
         translate = quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
-        listen = quiz_factory(self.concept_id, language, language, labels, labels, "listen", self._uses, meanings)
+        listen = quiz_factory(self.concept_id, language, language, labels, labels, ("listen",), self._uses, meanings)
         return translate | listen
 
     def labels(self, language: Language) -> Labels:
@@ -106,7 +106,7 @@ class CompositeConcept(Concept):
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
             meanings = concept1.meaning(source_language), concept2.meaning(source_language)
-            result.update(quiz_factory(concept_id, language, language, labels1, labels2, quiz_type, uses, meanings))
+            result.update(quiz_factory(concept_id, language, language, labels1, labels2, (quiz_type,), uses, meanings))
         return result
 
     def leaf_concepts(self) -> Iterable[LeafConcept]:
