@@ -117,6 +117,6 @@ When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file na
 
 ## Further documentation
 
-- [More information](docs/background.md) why Toisto exists and what the future plans are.
+- [More information](docs/background.md) onwhy Toisto exists and what the future plans are.
 - The [Toisto software documentation](docs/software.md) describes the inner workings of Toisto, including the format of the topic files.
 - The [Toisto developer documentation](docs/developer.md) provides information on how to develop, test, and release Toisto. This is aimed at people who (want to help) develop Toisto.
