@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from itertools import permutations
-from typing import cast, get_args, Iterable, Literal, Sequence, Union
+from typing import cast, get_args, Iterable, Literal, Union
 
 from toisto.metadata import Language
 
 from ..model_types import ConceptId
-from ..quiz import Quizzes, QuizType, quiz_factory, quiz_type_factory
+from ..quiz import Quizzes, QuizType, quiz_factory, GRAMMATICAL_QUIZ_TYPES
 from .grammar import GrammaticalCategory
 from .label import Labels, Label, label_factory
 
@@ -33,6 +33,12 @@ class Concept(ABC):
     @abstractmethod
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return self as a list of leaf concepts."""
+
+    def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
+        """Return the grammatical categories of this concept."""
+        grammatical_categories = get_args(GrammaticalCategory)
+        id_parts = self.concept_id.split("/")
+        return tuple(cast(GrammaticalCategory, id_part) for id_part in id_parts if id_part in grammatical_categories)
 
     @staticmethod
     def get_uses_from_concept_dict(concept_dict: ConceptDict) -> list[ConceptId]:
@@ -83,43 +89,49 @@ LeafConceptPair = tuple[LeafConcept, LeafConcept]
 
 
 class CompositeConcept(Concept):
-    """A concept that consists of multiple other (sub)concepts."""
+    """A concept that consists of multiple constituent concepts."""
 
     def __init__(
         self,
         concept_id: ConceptId,
-        concepts: Sequence[Concept],
-        quiz_types: Sequence[QuizType],
+        constituent_concepts: dict[GrammaticalCategory, Concept],
         uses: tuple[ConceptId, ...]
     ) -> None:
         super().__init__(concept_id, uses)
-        self._concepts = concepts
-        self._quiz_types = quiz_types
+        self._constituent_concepts = constituent_concepts
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept."""
         result = set()
-        for concept in self._concepts:
+        for concept in self._constituent_concepts.values():
             result.update(concept.quizzes(language, source_language))
         concept_id = self.concept_id
-        for (concept1, concept2), quiz_type in self.paired_concepts():
+        for concept1, concept2 in self.paired_concepts():
+            quiz_type = self.grammatical_quiz_type(concept1, concept2)
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
             meanings = concept1.meaning(source_language), concept2.meaning(source_language)
             result.update(quiz_factory(concept_id, language, language, labels1, labels2, (quiz_type,), uses, meanings))
         return result
 
+    def grammatical_quiz_type(self, concept1: Concept, concept2: Concept) -> QuizType:
+        """Return the quiz type to change the grammatical category of concept1 into that of concept2."""
+        for category1, category2 in zip(concept1.grammatical_categories(), concept2.grammatical_categories()):
+            if category1 != category2:
+                return GRAMMATICAL_QUIZ_TYPES[category2]
+        raise ValueError  # pragma: no cover, should be unreachable due to the filter in from_dict()
+
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return a list of leaf concepts."""
-        for concept in self._concepts:
+        for concept in self._constituent_concepts.values():
             yield from concept.leaf_concepts()
 
-    def paired_concepts(self) -> Iterable[tuple[LeafConceptPair, QuizType]]:
+    def paired_concepts(self) -> Iterable[LeafConceptPair]:
         """Pair the leaf concepts from the composite concepts."""
-        leaf_concepts = [concept.leaf_concepts() for concept in self._concepts]
+        leaf_concepts = [concept.leaf_concepts() for concept in self._constituent_concepts.values()]
         for concept_group in zip(*leaf_concepts):
-            for permutation, quiz_type in zip(permutations(concept_group, r=2), self._quiz_types):
-                yield cast(LeafConceptPair, permutation), quiz_type
+            for permutation in permutations(concept_group, r=2):
+                yield cast(LeafConceptPair, permutation)
 
     @classmethod
     def from_dict(cls, concept_id: ConceptId, concept_dict: CompositeConceptDict) -> CompositeConcept:
@@ -128,11 +140,12 @@ class CompositeConcept(Concept):
             list[GrammaticalCategory], [key for key in concept_dict.keys() if key in get_args(GrammaticalCategory)]
         )
         uses = cls.get_uses_from_concept_dict(concept_dict)
-        constituent_concepts = tuple(
-            concept_factory(ConceptId(f"{concept_id}/{key}"), cast(ConceptDict, concept_dict[key] | dict(uses=uses)))
-            for key in grammatical_categories
-        )
-        return cls(concept_id, constituent_concepts, quiz_type_factory(tuple(grammatical_categories)), tuple(uses))
+        constituent_concepts = {
+            key: concept_factory(
+                ConceptId(f"{concept_id}/{key}"), cast(ConceptDict, concept_dict[key] | dict(uses=uses))
+            ) for key in grammatical_categories
+        }
+        return cls(concept_id, constituent_concepts, tuple(uses))
 
 
 def concept_factory(concept_id: ConceptId, concept_dict: ConceptDict) -> Concept:

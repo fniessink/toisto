@@ -1,10 +1,9 @@
 """Quiz unit tests."""
 
-import unittest
 from typing import get_args
 
 from toisto.model.model_types import ConceptId
-from toisto.model.quiz.quiz import easiest_quizzes, quiz_type_factory, QuizType, INSTRUCTION
+from toisto.model.quiz.quiz import easiest_quizzes, QuizType, INSTRUCTION
 
 from ...base import ToistoTestCase
 
@@ -141,14 +140,6 @@ class QuizEqualityTests(QuizTestCase):
         """Test that quizzes are not equal if only their quiz types differ."""
         different_quiz_type = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"], "listen")
         self.assertNotEqual(different_quiz_type, self.quiz)
-
-
-class QuizTypeFactoryTest(unittest.TestCase):
-    """Unit tests for the quiz type factory function."""
-
-    def test_unknown_grammatical_categories(self):
-        """Test that unknown grammatical categoriews throw an exception."""
-        self.assertRaises(NotImplementedError, quiz_type_factory, ("not a grammatical category",))
 
 
 class EasiestQuizzesTest(ToistoTestCase):

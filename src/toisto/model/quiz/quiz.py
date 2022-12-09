@@ -29,6 +29,19 @@ QuizType = Literal[
     "give second person",
     "give third person",
 ]
+GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
+    "plural": "pluralize",
+    "singular": "singularize",
+    "male": "masculinize",
+    "female": "feminize",
+    "neuter": "neuterize",
+    "positive degree": "give positive degree",
+    "comparitive degree": "give comparitive degree",
+    "superlative degree": "give superlative degree",
+    "first person": "give first person",
+    "second person": "give second person",
+    "third person": "give third person"
+}
 INSTRUCTION: dict[tuple[QuizType, ...], str] = {
     ("translate",): "Translate into",
     ("listen",): "Listen and write in",
@@ -90,23 +103,23 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     @property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""
-        return self._question.first_spelling_alternative()
+        return self._question.spelling_alternatives[0]
 
     @property
     def answer(self) -> Label:
         """Return the first spelling alternative of the first answer."""
-        return self._answers[0].first_spelling_alternative()
+        return self._answers[0].spelling_alternatives[0]
 
     @property
     def answers(self) -> Labels:
         """Return all answers."""
-        answers = [answer.spelling_alternatives() for answer in self._answers]
+        answers = [answer.spelling_alternatives for answer in self._answers]
         return cast(Labels, tuple(chain(*answers)))
 
     @property
     def meanings(self) -> Labels:
         """Return the first spelling alternative of the meanings."""
-        return Labels(meaning.first_spelling_alternative() for meaning in self._meanings)
+        return Labels(meaning.spelling_alternatives[0] for meaning in self._meanings)
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
@@ -116,7 +129,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        hint = self._question.hint()
+        hint = self._question.hint
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
         return f"{INSTRUCTION[self.quiz_types]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
@@ -150,29 +163,6 @@ def quiz_factory(  # pylint: disable=too-many-arguments
         Quiz(concept_id, language1, language2, label1, (label2,), quiz_types, uses, meanings)
         for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_types == ("listen",)
     )
-
-
-def quiz_type_factory(grammatical_categories: tuple[GrammaticalCategory, ...]) -> tuple[QuizType, ...]:
-    """Generate the quiz types from the grammatical categories."""
-    match grammatical_categories:
-        case ("singular", "plural"):
-            return ("pluralize", "singularize")
-        case ("female", "male", "neuter"):
-            return ("masculinize", "neuterize", "feminize", "neuterize", "feminize", "masculinize")
-        case ("female", "male"):
-            return ("masculinize", "feminize")
-        case ("positive degree", "comparitive degree", "superlative degree"):
-            return (
-                "give comparitive degree", "give superlative degree", "give positive degree",
-                "give superlative degree", "give positive degree", "give comparitive degree"
-            )
-        case ("first person", "second person", "third person"):
-            return (
-                "give second person", "give third person", "give first person",
-                "give third person", "give first person", "give second person"
-            )
-        case _:
-            raise NotImplementedError(f"Don't know how to generate guizzes for {grammatical_categories}")
 
 
 def easiest_quizzes(quizzes: Quizzes) -> Quizzes:
