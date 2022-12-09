@@ -35,3 +35,7 @@ class MatchTest(unittest.TestCase):
     def test_match_one_of_many(self):
         """Test that the text can be matched against multiple texts."""
         self.assertTrue(match("foo", "foo", "fool", "fools"))
+
+    def test_match_apostrophe(self):
+        """Test that an apostrophe cannot be left out."""
+        self.assertFalse(match("opa's", "opas"))
