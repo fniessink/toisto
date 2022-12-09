@@ -40,3 +40,9 @@ class DiffTest(unittest.TestCase):
         """Test that replaced parts with multiple characters are only green."""
         self.assertEqual("gr[inserted]oo[/inserted]t", colored_diff("great", "groot"))
         self.assertEqual("grea[inserted]aa[/inserted]t", colored_diff("great", "greaaat"))
+
+    def test_make_deleted_whitespace_visible(self):
+        """Test that deleted whitespace is made visible."""
+        self.assertEqual(
+            "[inserted]Goe[/inserted]de[deleted]_[/deleted]morgen", colored_diff("de morgen", "Goedemorgen")
+        )

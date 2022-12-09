@@ -1,21 +1,27 @@
 """Create a colored diff."""
 
-import difflib
+from difflib import SequenceMatcher
+from string import whitespace
+
+
+def show_whitespace(text: str) -> str:
+    """Make whitespace visible so it can be colored."""
+    return "".join("_" if char in whitespace else char for char in text)
 
 
 def inserted(new_text: str) -> str:
     """Return the annotated text."""
-    return f"[inserted]{new_text}[/inserted]"
+    return f"[inserted]{show_whitespace(new_text)}[/inserted]"
 
 
 def deleted(old_text: str) -> str:
     """Return the annotated text."""
-    return f"[deleted]{old_text}[/deleted]"
+    return f"[deleted]{show_whitespace(old_text)}[/deleted]"
 
 
 def colored_diff(old_text: str, new_text: str) -> str:
     """Return a colored string showing the diffs between old and new text."""
-    matcher = difflib.SequenceMatcher(a=old_text.lower(), b=new_text.lower())
+    matcher = SequenceMatcher(a=old_text.lower(), b=new_text.lower())
     if matcher.ratio() < 0.6:
         return inserted(new_text)
     result = ""

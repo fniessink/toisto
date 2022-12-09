@@ -1,0 +1,29 @@
+{
+    "test good morning": {
+        "uses": "morning",
+        "en": "Good morning",
+        "fi": [
+            "Hyvää huomenta",
+            "Huomenta"
+        ],
+        "nl": "Goedemorgen"
+    },
+    "test good afternoon": {
+        "uses": "day",
+        "en": "Good afternoon",
+        "nl": "Goedemiddag"
+    },
+    "test good day": {
+        "en": "Good day",
+        "nl": "Goedendag"
+    },
+    "test good evening": {
+        "uses": "evening",
+        "en": "Good evening",
+        "fi": [
+            "Hyvää iltaa",
+            "Iltaa"
+        ],
+        "nl": "Goedenavond"
+    }
+}
