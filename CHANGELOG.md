@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - When showing the correct answer, replace inserted or removed spaces with an underscore so it is more clear what the user would have needed to type differently to enter the correct answer. Fixes [#96](https://github.com/fniessink/toisto/issues/96).
+- Apostrophes were ignored when checking answers. Fixes [#97](https://github.com/fniessink/toisto/issues/97).
 
 ## v0.3.0 - 2022-12-04
 
