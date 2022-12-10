@@ -62,6 +62,7 @@ class ConceptQuizzesTest(ToistoTestCase):
         concept = concept_factory(
             "ketchup", dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit"))
         )
+        quizzes = concept.quizzes("fi", "nl")
         self.assertEqual(
             set([
                 self.create_quiz("ketchup", "fi", "nl", "Ketsuppi", ["De ketchup"]),
@@ -71,12 +72,15 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("ketchup", "fi", "fi", "Ketsuppi", ["Ketsupit"], "pluralize"),
                 self.create_quiz("ketchup", "fi", "fi", "Ketsupit", ["Ketsuppi"], "singularize")
             ]),
-            concept.quizzes("fi", "nl")
+            quizzes
         )
+        for quiz in quizzes:
+            self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
 
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the practice language only."""
         concept = concept_factory("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
+        quizzes = concept.quizzes("fi", "en")
         self.assertEqual(
             set([
                 self.create_quiz("mämmi", "fi", "fi", "Mämmi", ["Mämmi"], "listen"),
@@ -84,8 +88,10 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("mämmi", "fi", "fi", "Mämmi", ["Mämmit"], "pluralize"),
                 self.create_quiz("mämmi", "fi", "fi", "Mämmit", ["Mämmi"], "singularize")
             ]),
-            concept.quizzes("fi", "en")
+            quizzes
         )
+        for quiz in quizzes:
+            self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes can be generated from a noun concept with labels in the native language."""
