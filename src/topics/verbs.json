@@ -1,5 +1,10 @@
 {
     "to have": {
+        "infinitive": {
+            "en": "To have",
+            "fi": "Olla (omistaa)",
+            "nl": "Hebben"
+        },
         "singular": {
             "first person": {
                 "en": "I have|I've",
@@ -43,6 +48,11 @@
         }
     },
     "to paint": {
+        "infinitive": {
+            "en": "To paint",
+            "fi": "Maalata",
+            "nl": "Schilderen"
+        },
         "singular": {
             "first person": {
                 "en": "I paint",
@@ -86,6 +96,11 @@
         }
     },
     "to walk": {
+        "infinitive": {
+            "en": "To walk",
+            "fi": "Kävellä",
+            "nl": "Lopen"
+        },
         "singular": {
             "first person": {
                 "en": "I walk",
@@ -129,6 +144,11 @@
         }
     },
     "to run": {
+        "infinitive": {
+            "en": "To run",
+            "fi": "Juosta",
+            "nl": "Rennen"
+        },
         "singular": {
             "first person": {
                 "en": "I run",
@@ -172,6 +192,11 @@
         }
     },
     "to eat": {
+        "infinitive": {
+            "en": "To eat",
+            "fi": "Syödä",
+            "nl": "Eten"
+        },
         "singular": {
             "first person": {
                 "en": "I eat",
@@ -215,6 +240,11 @@
         }
     },
     "to sleep": {
+        "infinitive": {
+            "en": "To sleep",
+            "fi": "Nukkua",
+            "nl": "Slapen"
+        },
         "singular": {
             "first person": {
                 "en": "I sleep",

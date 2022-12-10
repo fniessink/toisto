@@ -48,7 +48,18 @@ INSTRUCTION: dict[tuple[QuizType, ...], str] = {
     ("translate",): "Translate into",
     ("listen",): "Listen and write in",
     ("pluralize",): "Give the [underline]plural[/underline] in",
+    ("pluralize", "give first person"): "Give the [underline]first person plural[/underline] in",
+    ("pluralize", "give second person"): "Give the [underline]second person plural[/underline] in",
+    ("pluralize", "give third person"): "Give the [underline]third person plural[/underline] in",
     ("singularize",): "Give the [underline]singular[/underline] in",
+    ("singularize", "feminize"): "Give the [underline]singular female form[/underline] in",
+    ("singularize", "masculinize"): "Give the [underline]singular male form[/underline] in",
+    ("singularize", "give first person"): "Give the [underline]first person singular[/underline] in",
+    ("singularize", "give second person"): "Give the [underline]first second singular[/underline] in",
+    ("singularize", "give third person", "feminize"):
+        "Give the [underline]third person singular female[/underline] in",
+    ("singularize", "give third person", "masculinize"):
+        "Give the [underline]third person singular male[/underline] in",
     ("give infinitive",): "Give the [underline]infinitive[/underline] form in",
     ("masculinize",): "Give the [underline]male[/underline] form in",
     ("feminize",): "Give the [underline]female[/underline] form in",
@@ -59,6 +70,9 @@ INSTRUCTION: dict[tuple[QuizType, ...], str] = {
     ("give first person",): "Give the [underline]first person[/underline] in",
     ("give second person",): "Give the [underline]second person[/underline] in",
     ("give third person",): "Give the [underline]third person[/underline] in",
+    ("give third person", "feminize"): "Give the [underline]third person female[/underline] in",
+    ("give third person", "masculinize"): "Give the [underline]third person male[/underline] in",
+    ("give third person", "neuterize"): "Give the [underline]third person neuter[/underline] in",
 }
 
 

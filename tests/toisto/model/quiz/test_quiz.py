@@ -1,9 +1,7 @@
 """Quiz unit tests."""
 
-from typing import get_args
-
 from toisto.model.model_types import ConceptId
-from toisto.model.quiz.quiz import easiest_quizzes, QuizType, INSTRUCTION
+from toisto.model.quiz.quiz import easiest_quizzes, INSTRUCTION
 
 from ...base import ToistoTestCase
 
@@ -73,8 +71,8 @@ class QuizTest(QuizTestCase):
 
     def test_instructions(self):
         """Test the instructions"""
-        for quiz_type, instruction in zip(get_args(QuizType), INSTRUCTION.values()):
-            quiz = self.create_quiz("hi", "fi", "fi", "Hei", ["Hei hei"], quiz_type)
+        for quiz_types, instruction in INSTRUCTION.items():
+            quiz = self.create_quiz("hi", "fi", "fi", "Hei", ["Hei hei"], quiz_types)
             self.assertEqual(instruction + " Finnish", quiz.instruction())
 
     def test_instruction_with_hint(self):

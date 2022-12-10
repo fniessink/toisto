@@ -227,6 +227,31 @@ The same goes for the third person Finnish. Because Finnish does not distinguish
 
 The different persons are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the first person singular gets `to have/singular/first person` as key, the second person singular `to have/singular/second person`, etc.
 
+### Infinitive
+
+When concepts are verbs, infinitives can be specified as follows:
+
+```json
+{
+    "to have": {
+        "infinitive": {
+            "en": "To have",
+            "fi": "Olla (omistaa)"
+        },
+        "singular": {
+            "first person": {
+                "en": "I have|I've",
+                "fi": "Minulla on"
+            },
+            "second person": "..."
+        },
+        "plural": "..."
+    }
+}
+```
+
+Infinitives, like the different persons, are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the infinitive gets `to have/infinitive` as key.
+
 ### Degrees of comparison
 
 Degrees of comparison are specified as follows:

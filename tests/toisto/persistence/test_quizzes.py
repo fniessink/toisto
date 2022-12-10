@@ -1,5 +1,6 @@
 """Unit tests for the persistence module."""
 
+from itertools import permutations
 from unittest.mock import patch, Mock
 
 from toisto.model.model_types import ConceptId
@@ -18,6 +19,12 @@ class LoadQuizzesTest(ToistoTestCase):
     def test_load_quizzes(self):
         """Test that the quizzes can be loaded."""
         self.assertIn(self.quiz, load_quizzes("fi", "nl", [], []).quizzes)
+
+    def test_instructions(self):
+        """Test that an instruction can be created for all quizzes."""
+        for language1, language2 in permutations(["en", "fi", "nl"], r=2):
+            for quiz in load_quizzes(language1, language2, [], []).quizzes:
+                quiz.instruction()  # This raises KeyError if types of the quiz are not present in the instructions
 
     def test_load_quizzes_by_topic_name(self):
         """Test that a subset of the quizzes can be loaded."""
