@@ -58,8 +58,7 @@ class LeafConcept(Concept):
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
         """Generate the possible quizzes from the concept and its labels."""
         labels, source_labels = self.labels(language), self.labels(source_language)
-        meaning = self.meaning(source_language)
-        meanings = (meaning,) if meaning else ()
+        meanings = self.meanings(source_language)
         translate = quiz_factory(self.concept_id, language, source_language, labels, source_labels, uses=self._uses)
         listen = quiz_factory(self.concept_id, language, language, labels, labels, ("listen",), self._uses, meanings)
         return translate | listen
@@ -72,9 +71,10 @@ class LeafConcept(Concept):
         """Return self as a list of leaf concepts."""
         return [self]
 
-    def meaning(self, language: Language) -> Label:
+    def meanings(self, language: Language) -> Labels:
         """Return the meaning of the concept in the specified language."""
-        return Label(self._labels.get(language, [""])[0])
+        meaning = Label(self._labels.get(language, [""])[0])
+        return (meaning,) if meaning else ()
 
     @classmethod
     def from_dict(cls, concept_id: ConceptId, concept_dict: LeafConceptDict) -> LeafConcept:
@@ -110,7 +110,7 @@ class CompositeConcept(Concept):
             quiz_type = self.grammatical_quiz_type(concept1, concept2)
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
-            meanings = concept1.meaning(source_language), concept2.meaning(source_language)
+            meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             result.update(quiz_factory(concept_id, language, language, labels1, labels2, (quiz_type,), uses, meanings))
         return result
 

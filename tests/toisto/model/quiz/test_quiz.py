@@ -46,10 +46,6 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz("1", "fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"], "listen")
         self.assertEqual((), quiz.other_answers("Een"))
 
-    def test_instruction(self):
-        """Test the quiz instruction."""
-        self.assertEqual("Translate into Dutch", self.quiz.instruction())
-
     def test_spelling_alternative_of_answer(self):
         """Test that a quiz can deal with alternative spellings of answers."""
         quiz = self.create_quiz("1", "fi", "nl", "Yksi", ["Een|Eén"])
