@@ -343,11 +343,15 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to eat", "nl", "nl", "Zij eet", ["Hij eet"], "masculinize"),
                 self.create_quiz("to eat", "nl", "nl", "Hij eet", ["Zij eet"], "feminize"),
                 self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Jij eet"], "give second person"),
-                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Zij eet"], "give third person"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize")),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Hij eet"], ("give third person", "masculinize")),
                 self.create_quiz("to eat", "nl", "nl", "Jij eet", ["Ik eet"], "give first person"),
-                self.create_quiz("to eat", "nl", "nl", "Jij eet", ["Zij eet"], "give third person"),
+                self.create_quiz("to eat", "nl", "nl", "Jij eet", ["Zij eet"], ("give third person", "feminize")),
+                self.create_quiz("to eat", "nl", "nl", "Jij eet", ["Hij eet"], ("give third person", "masculinize")),
                 self.create_quiz("to eat", "nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
                 self.create_quiz("to eat", "nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
+                self.create_quiz("to eat", "nl", "nl", "Hij eet", ["Ik eet"], "give first person"),
+                self.create_quiz("to eat", "nl", "nl", "Hij eet", ["Jij eet"], "give second person"),
             ]),
             concept.quizzes("nl", "en")
         )
@@ -466,6 +470,113 @@ class ConceptQuizzesTest(ToistoTestCase):
             concept.quizzes("fi", "en")
         )
 
+    def test_infinitive_verb_form(self):
+        """Test the infinitive verb form."""
+        concept = concept_factory(
+            "to sleep",
+            dict(
+                infinitive=dict(en="To sleep", nl="Slapen"),
+                singular=dict(en="I sleep", nl="Ik slaap"),
+                plural=dict(en="We sleep", nl="Wij slapen")
+            )
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("to sleep", "nl", "en", "Slapen", ["To sleep"], "translate"),
+                self.create_quiz("to sleep", "en", "nl", "To sleep", ["Slapen"], "translate"),
+                self.create_quiz("to sleep", "nl", "nl", "Slapen", ["Slapen"], "listen"),
+                self.create_quiz("to sleep", "nl", "en", "Ik slaap", ["I sleep"], "translate"),
+                self.create_quiz("to sleep", "en", "nl", "I sleep", ["Ik slaap"], "translate"),
+                self.create_quiz("to sleep", "nl", "nl", "Ik slaap", ["Ik slaap"], "listen"),
+                self.create_quiz("to sleep", "nl", "en", "Wij slapen", ["We sleep"], "translate"),
+                self.create_quiz("to sleep", "en", "nl", "We sleep", ["Wij slapen"], "translate"),
+                self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Wij slapen"], "listen"),
+                self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Slapen"], "give infinitive"),
+                self.create_quiz("to sleep", "nl", "nl", "Ik slaap", ["Slapen"], "give infinitive"),
+                self.create_quiz("to sleep", "nl", "nl", "Slapen", ["Wij slapen"], "pluralize"),
+                self.create_quiz("to sleep", "nl", "nl", "Ik slaap", ["Wij slapen"], "pluralize"),
+                self.create_quiz("to sleep", "nl", "nl", "Slapen", ["Ik slaap"], "singularize"),
+                self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Ik slaap"], "singularize"),
+            ]),
+            concept.quizzes("nl", "en")
+        )
+
+    def test_grammatical_number_nested_with_grammatical_person_and_infinitive(self):
+        """Test that quizzes can be generated for grammatical number, including infinitive, nested with grammatical
+        person.
+        """
+        concept = concept_factory(
+            "to be",
+            dict(
+                infinitive=dict(fi="Olla", nl="Zijn"),
+                singular={
+                    "first person": dict(fi="Minä olen", nl="Ik ben"),
+                    "second person": dict(fi="Sinä olet", nl="Jij bent"),
+                    "third person": dict(fi="Hän on", nl="Zij is"),
+                },
+                plural={
+                    "first person": dict(fi="Me olemme", nl="Wij zijn"),
+                    "second person": dict(fi="Te olette", nl="Jullie zijn"),
+                    "third person": dict(fi="He ovat", nl="Zij zijn"),
+                }
+            )
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("to have", "nl", "fi", "Ik ben", ["Minä olen"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "Minä olen", ["Ik ben"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Ik ben", ["Ik ben"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Ik ben", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "fi", "Jij bent", ["Sinä olet"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "Sinä olet", ["Jij bent"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Jij bent", ["Jij bent"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Jij bent", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "fi", "Zij is", ["Hän on"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "Hän on", ["Zij is"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Zij is", ["Zij is"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Zij is", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "nl", "Ik ben", ["Jij bent"], "give second person"),
+                self.create_quiz("to have", "nl", "nl", "Ik ben", ["Zij is"], "give third person"),
+                self.create_quiz("to have", "nl", "nl", "Jij bent", ["Ik ben"], "give first person"),
+                self.create_quiz("to have", "nl", "nl", "Jij bent", ["Zij is"], "give third person"),
+                self.create_quiz("to have", "nl", "nl", "Zij is", ["Ik ben"], "give first person"),
+                self.create_quiz("to have", "nl", "nl", "Zij is", ["Jij bent"], "give second person"),
+                self.create_quiz("to have", "nl", "fi", "Wij zijn", ["Me olemme"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "Me olemme", ["Wij zijn"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Wij zijn", ["Wij zijn"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Wij zijn", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "fi", "Jullie zijn", ["Te olette"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "Te olette", ["Jullie zijn"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Jullie zijn", ["Jullie zijn"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Jullie zijn", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "fi", "Zij zijn", ["He ovat"], "translate"),
+                self.create_quiz("to have", "fi", "nl", "He ovat", ["Zij zijn"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Zij zijn", ["Zij zijn"], "listen"),
+                self.create_quiz("to have", "nl", "nl", "Zij zijn", ["Zijn"], "give infinitive"),
+                self.create_quiz("to have", "nl", "nl", "Wij zijn", ["Jullie zijn"], "give second person"),
+                self.create_quiz("to have", "nl", "nl", "Wij zijn", ["Zij zijn"], "give third person"),
+                self.create_quiz("to have", "nl", "nl", "Jullie zijn", ["Wij zijn"], "give first person"),
+                self.create_quiz("to have", "nl", "nl", "Jullie zijn", ["Zij zijn"], "give third person"),
+                self.create_quiz("to have", "nl", "nl", "Zij zijn", ["Wij zijn"], "give first person"),
+                self.create_quiz("to have", "nl", "nl", "Zij zijn", ["Jullie zijn"], "give second person"),
+                self.create_quiz("to have", "nl", "nl", "Ik ben", ["Wij zijn"], "pluralize"),
+                self.create_quiz("to have", "nl", "nl", "Wij zijn", ["Ik ben"], "singularize"),
+                self.create_quiz("to have", "nl", "nl", "Jij bent", ["Jullie zijn"], "pluralize"),
+                self.create_quiz("to have", "nl", "nl", "Jullie zijn", ["Jij bent"], "singularize"),
+                self.create_quiz("to have", "nl", "nl", "Zij is", ["Zij zijn"], "pluralize"),
+                self.create_quiz("to have", "nl", "nl", "Zij zijn", ["Zij is"], "singularize"),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Zijn"], "listen"),
+                self.create_quiz("to have", "fi", "nl", "Olla", ["Zijn"], "translate"),
+                self.create_quiz("to have", "nl", "fi", "Zijn", ["Olla"], "translate"),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Ik ben"], ("singularize", "give first person")),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Jij bent"], ("singularize", "give second person")),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Zij is"], ("singularize", "give third person")),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Wij zijn"], ("pluralize", "give first person")),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Jullie zijn"], ("pluralize", "give second person")),
+                self.create_quiz("to have", "nl", "nl", "Zijn", ["Zij zijn"], ("pluralize", "give third person")),
+            ]),
+            concept.quizzes("nl", "fi")
+        )
 
 class ConceptRelationshipsTest(ToistoTestCase):
     """Unit tests for relationships between concepts."""

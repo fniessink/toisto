@@ -19,18 +19,19 @@ class ToistoTestCase(unittest.TestCase):
         answer_language: str,
         question: str,
         answers: list[str],
-        quiz_type: str = "translate",
+        quiz_type: str | tuple[str] = "translate",
         uses: tuple[ConceptId, ...] = tuple(),
         meanings: tuple[str, ...] = tuple()
     ) -> Quiz:
         """Create a quiz."""
+        quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
         return Quiz(
             concept_id,
             cast(Language, question_language),
             cast(Language, answer_language),
             Label(question),
             tuple(Label(answer) for answer in answers),
-            (cast(QuizType, quiz_type),),
+            quiz_type,
             uses,
             Labels(Label(meaning) for meaning in meanings)
         )

@@ -61,6 +61,13 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the quiz instruction is correctly formatted."""
         self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(self.quiz))
 
+    def test_instruction_multiple_quiz_types(self):
+        """Test that the quiz instruction is correctly formatted for multiple quiz types."""
+        quiz = self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
+        self.assertEqual(
+            "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]", instruction(quiz)
+        )
+
     def test_format_duration_seconds(self):
         """Test format seconds."""
         self.assertEqual("2 seconds", format_duration(timedelta(seconds=2)))

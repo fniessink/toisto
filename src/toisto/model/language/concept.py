@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from itertools import permutations
+from itertools import permutations, zip_longest
 from typing import cast, get_args, Iterable, Literal, Union
 
 from toisto.metadata import Language
+from toisto.tools import zip_and_cycle
 
 from ..model_types import ConceptId
 from ..quiz import Quizzes, QuizType, quiz_factory, GRAMMATICAL_QUIZ_TYPES
@@ -107,19 +108,20 @@ class CompositeConcept(Concept):
             result.update(concept.quizzes(language, source_language))
         concept_id = self.concept_id
         for concept1, concept2 in self.paired_concepts():
-            quiz_type = self.grammatical_quiz_type(concept1, concept2)
+            quiz_types = self.grammatical_quiz_types(concept1, concept2)
             labels1, labels2 = concept1.labels(language), concept2.labels(language)
             uses = self._uses + (concept2.concept_id,)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
-            result.update(quiz_factory(concept_id, language, language, labels1, labels2, (quiz_type,), uses, meanings))
+            result.update(quiz_factory(concept_id, language, language, labels1, labels2, quiz_types, uses, meanings))
         return result
 
-    def grammatical_quiz_type(self, concept1: Concept, concept2: Concept) -> QuizType:
-        """Return the quiz type to change the grammatical category of concept1 into that of concept2."""
-        for category1, category2 in zip(concept1.grammatical_categories(), concept2.grammatical_categories()):
-            if category1 != category2:
-                return GRAMMATICAL_QUIZ_TYPES[category2]
-        raise ValueError  # pragma: no cover, should be unreachable due to the filter in from_dict()
+    def grammatical_quiz_types(self, concept1: Concept, concept2: Concept) -> tuple[QuizType, ...]:
+        """Return the quiz types to change the grammatical category of concept1 into that of concept2."""
+        quiz_types = []
+        for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
+            if category1 != category2 and category2 is not None:
+                quiz_types.append (GRAMMATICAL_QUIZ_TYPES[category2])
+        return tuple(quiz_types)
 
     def leaf_concepts(self) -> Iterable[LeafConcept]:
         """Return a list of leaf concepts."""
@@ -128,8 +130,8 @@ class CompositeConcept(Concept):
 
     def paired_concepts(self) -> Iterable[LeafConceptPair]:
         """Pair the leaf concepts from the composite concepts."""
-        leaf_concepts = [concept.leaf_concepts() for concept in self._constituent_concepts.values()]
-        for concept_group in zip(*leaf_concepts):
+        leaf_concepts = [list(concept.leaf_concepts()) for concept in self._constituent_concepts.values()]
+        for concept_group in zip_and_cycle(*leaf_concepts):
             for permutation in permutations(concept_group, r=2):
                 yield cast(LeafConceptPair, permutation)
 
