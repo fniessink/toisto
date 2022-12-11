@@ -286,5 +286,197 @@
                 "nl": "Zij slapen|Ze slapen"
             }
         }
+    },
+    "to go": {
+        "infinitive": {
+            "en": "To go",
+            "fi": "Mennä",
+            "nl": "Gaan"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go",
+                "fi": "Minä menen|Menen",
+                "nl": "Ik ga"
+            },
+            "second person": {
+                "en": "You go;singular",
+                "fi": "Sinä menet|Menet",
+                "nl": "Jij gaat|Je gaat"
+            },
+            "third person": {
+                "female": {
+                    "en": "She goes",
+                    "fi": "Hän menee|Menee;female",
+                    "nl": "Zij gaat|Ze gaat"
+                },
+                "male": {
+                    "en": "He goes",
+                    "fi": "Hän menee|Menee;male",
+                    "nl": "Hij gaat"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We go",
+                "fi": "Me menemme|Menemme",
+                "nl": "Wij gaan|We gaan"
+            },
+            "second person": {
+                "en": "You go;plural",
+                "fi": "Te menette|Menette",
+                "nl": "Jullie gaan"
+            },
+            "third person": {
+                "en": "They go",
+                "fi": "He menevät|Menevät",
+                "nl": "Zij gaan|Ze gaan"
+            }
+        }
+    },
+    "to come": {
+        "infinitive": {
+            "en": "To come",
+            "fi": "Tulla",
+            "nl": "Komen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I come",
+                "fi": "Minä tulen|Tulen",
+                "nl": "Ik kom"
+            },
+            "second person": {
+                "en": "You come;singular",
+                "fi": "Sinä tulet|Tulet",
+                "nl": "Jij komt|Je komt"
+            },
+            "third person": {
+                "female": {
+                    "en": "She comes",
+                    "fi": "Hän tulee|Tulee;female",
+                    "nl": "Zij komt|Ze komt"
+                },
+                "male": {
+                    "en": "He comes",
+                    "fi": "Hän tulee|Tulee;male",
+                    "nl": "Hij komt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We come",
+                "fi": "Me tulemme|Tulemme",
+                "nl": "Wij komen|We komen"
+            },
+            "second person": {
+                "en": "You come;plural",
+                "fi": "Te tulette|Tulette",
+                "nl": "Jullie komen"
+            },
+            "third person": {
+                "en": "They come",
+                "fi": "He tulevat|Tulevat",
+                "nl": "Zij komen|Ze komen"
+            }
+        }
+    },
+    "to read": {
+        "infinitive": {
+            "en": "To read",
+            "fi": "Tulla",
+            "nl": "Lezen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I read",
+                "fi": "Minä luen|Luen",
+                "nl": "Ik lees"
+            },
+            "second person": {
+                "en": "You read;singular",
+                "fi": "Sinä luet|Luet",
+                "nl": "Jij leest|Je leest"
+            },
+            "third person": {
+                "female": {
+                    "en": "She reads",
+                    "fi": "Hän lukee|Lukee;female",
+                    "nl": "Zij leest|Ze leest"
+                },
+                "male": {
+                    "en": "He reads",
+                    "fi": "Hän lukee|Lukee;male",
+                    "nl": "Hij leest"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We read",
+                "fi": "Me luemme|Luemme",
+                "nl": "Wij lezen|We lezen"
+            },
+            "second person": {
+                "en": "You read;plural",
+                "fi": "Te luette|Luette",
+                "nl": "Jullie lezen"
+            },
+            "third person": {
+                "en": "They read",
+                "fi": "He lukevat|Lukevat",
+                "nl": "Zij lezen|Ze lezen"
+            }
+        }
+    },
+    "to write": {
+        "infinitive": {
+            "en": "To write",
+            "fi": "Kirjoittaa",
+            "nl": "Schrijven"
+        },
+        "singular": {
+            "first person": {
+                "en": "I write",
+                "fi": "Minä kirjoitan|Kirjoitan",
+                "nl": "Ik schrijf"
+            },
+            "second person": {
+                "en": "You write;singular",
+                "fi": "Sinä kirjoitat|Kirjoitat",
+                "nl": "Jij schrijft|Je schrijft"
+            },
+            "third person": {
+                "female": {
+                    "en": "She writes",
+                    "fi": "Hän kirjoittaa|Kirjoittaa;female",
+                    "nl": "Zij schrijft|Ze schrijft"
+                },
+                "male": {
+                    "en": "He writes",
+                    "fi": "Hän kirjoittaa|Kirjoittaa;male",
+                    "nl": "Hij schrijft"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We write",
+                "fi": "Me kirjoitamme|Kirjoitamme",
+                "nl": "Wij schrijven|We schrijven"
+            },
+            "second person": {
+                "en": "You write;plural",
+                "fi": "Te kirjoitatte|Kirjoitatte",
+                "nl": "Jullie schrijven"
+            },
+            "third person": {
+                "en": "They write",
+                "fi": "He kirjoittavat|Kirjoittavat",
+                "nl": "Zij schrijven|Ze schrijven"
+            }
+        }
     }
 }
