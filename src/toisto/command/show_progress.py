@@ -1,6 +1,7 @@
 """Command to show progress information."""
 
 from datetime import datetime
+from typing import Literal
 
 from rich.table import Table
 
@@ -9,7 +10,10 @@ from toisto.model import Progress, Topics
 from toisto.ui.text import console, format_duration, format_datetime
 
 
-def show_progress(language: Language, topics: Topics, progress: Progress) -> None:
+SortColumn = Literal["count", "length"]
+
+
+def show_progress(language: Language, topics: Topics, progress: Progress, sort: SortColumn="count") -> None:
     """Show progress."""
     table = Table(title=f"Progress {SUPPORTED_LANGUAGES[language]}")
     table.add_column("Quiz type")
@@ -20,7 +24,8 @@ def show_progress(language: Language, topics: Topics, progress: Progress) -> Non
     table.add_column("Attempts", justify="right")
     table.add_column("Retention")
     table.add_column("Not quizzed until")
-    sorted_quizzes = sorted(topics.quizzes, key=lambda quiz: progress.get_retention(quiz).count, reverse=True)
+    key = lambda quiz: getattr(progress.get_retention(quiz), sort)  # pylint: disable=unnecessary-lambda-assignment
+    sorted_quizzes = sorted(topics.quizzes, key=key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until

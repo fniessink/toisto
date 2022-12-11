@@ -46,3 +46,15 @@ class ShowProgressTest(ToistoTestCase):
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", self.topics, Progress({str(self.quiz): dict(skip_until=skip_until)}))
         self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
+
+    def test_sort_by_retention(self):
+        """Test that the quizzes can be sorted by retention length."""
+        now = datetime.now()
+        start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
+        end = now.isoformat(timespec="seconds")
+        another_quiz = self.create_quiz("carpet", "fi", "nl", "Matto", ["Het tapijt"])
+        topics = Topics(set([Topic("topic", set([self.quiz, another_quiz]))]))
+        progress = Progress({str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)})
+        with patch("rich.console.Console.print") as console_print:
+            show_progress("fi", topics, progress, sort="length")
+        self.assertEqual(["21", "42"], list(console_print.call_args[0][0].columns[5].cells))

@@ -15,4 +15,4 @@ def main():
     if args.command == "practice":
         practice(topics, progress)
     else:
-        show_progress(args.language, topics, progress)
+        show_progress(args.language, topics, progress, args.sort)
