@@ -1,0 +1,130 @@
+{
+    "clothes": {
+        "en": "Clothes",
+        "fi": "Vaatteet",
+        "nl": "Kleren"
+    },
+    "dress": {
+        "singular": {
+            "en": "Dress",
+            "fi": "Mekko",
+            "nl": "De jurk"
+        },
+        "plular": {
+            "en": "Dresses",
+            "fi": "Mekot",
+            "nl": "De jurken"
+        }
+    },
+    "sock": {
+        "singular": {
+            "en": "Sock",
+            "fi": "Sukka",
+            "nl": "De sok"
+        },
+        "plural": {
+            "en": "Socks",
+            "fi": "Sukat",
+            "nl": "De sokken"
+        }
+    },
+    "skirt": {
+        "singular": {
+            "en": "Skirt",
+            "fi": "Hame",
+            "nl": "De rok"
+        },
+        "plural": {
+            "en": "Skirts",
+            "fi": "Hameet",
+            "nl": "De rokken"
+        }
+    },
+    "trousers": {
+        "singular": {
+            "en": "Trousers",
+            "fi": "Housut",
+            "nl": "De broek"
+        },
+        "plural": {
+            "nl": "De broeken"
+        }
+    },
+    "coat": {
+        "singular": {
+            "en": "Coat",
+            "fi": "Takki",
+            "nl": "De jas"
+        },
+        "plural": {
+            "en": "Coats",
+            "fi": "Takit",
+            "nl": "De jassen"
+        }
+    },
+    "underwear": {
+        "en": "Underwear",
+        "fi": "Alusvaatteet",
+        "nl": "Het ondergoed"
+    },
+    "hat": {
+        "singular": {
+            "en": "Hat",
+            "fi": "Hattu",
+            "nl": "De hoed"
+        },
+        "plular": {
+            "en": "Hats",
+            "fi": "Hatut",
+            "nl": "De hoeden"
+        }
+    },
+    "suit": {
+        "singular": {
+            "en": "Suit",
+            "fi": "Puku",
+            "nl": "Het pak"
+        },
+        "plural": {
+            "en": "Suits",
+            "fi": "Puvut",
+            "nl": "De pakken"
+        }
+    },
+    "shoe": {
+        "singular": {
+            "en": "Shoe",
+            "fi": "Kenkä",
+            "nl": "De schoen"
+        },
+        "plular": {
+            "en": "Shoes",
+            "fi": "Kengät",
+            "nl": "De schoenen"
+        }
+    },
+    "sweater": {
+        "singular": {
+            "en": "Sweater",
+            "fi": "Neulepaita",
+            "nl": "De trui"
+        },
+        "plural": {
+            "en": "Sweaters",
+            "fi": "Neulepaidat",
+            "nl": "De truien"
+        }
+    },
+    "shirt": {
+        "singular": {
+            "en": "Shirt",
+            "fi": "Paita",
+            "nl": "Het hemd"
+        },
+        "plular": {
+            "en": "Shirts",
+            "fi": "Paidat",
+            "nl": "De hemden"
+        }
+    }
+}
