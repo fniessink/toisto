@@ -65,42 +65,28 @@ Labels consist of either one string or a list of strings. A list of strings is u
 
 Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 
-If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to distribute the labels over four different concepts:
-
-- One concept with the labels "Goedemiddag" and "Good afternoon" and one concept with the labels "Goedendag" and "Good day", both without Finnish labels. This ensures that "Goedemiddag" is not considered to be a correct translation of "Good day".
-- One concept with the Finnish labels "Hyvää päivää" and "Päivää" and with both Dutch labels, "Goedendag" and "Goedemiddag" and one concept with the Finnish labels "Hyvää päivää" and "Päivää" and with both English labels, "Good day" and "Good afternoon". This ensures that "Goedendag", "Goedemiddag", "Good day", and "Good afternoon" are all correct translations for "Hyvää päivää" and "Päivää". Unfortunately, we cannot put the English and Dutch labels in one concept with the Finnish labels because otherwise Toisto would still consider "Goedemiddag" to be a correct translation of "Good day".
+If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context.
 
 In the topic file this looks as follows:
 
 ```json
 {
-    "good day": {
-        "en": "Good day",
-        "nl": "Goedendag"
-    },
     "good afternoon": {
+        "uses": "day",
         "en": "Good afternoon",
+        "fi": [
+            "Hyvää päivää;afternoon",
+            "Päivää;afternoon"
+        ],
         "nl": "Goedemiddag"
     },
-    "good day fi:en": {
+    "good day": {
+        "en": "Good day",
         "fi": [
             "Hyvää päivää",
             "Päivää"
         ],
-        "en": [
-            "Good afternoon",
-            "Good day"
-        ]
-    },
-    "good day fi:nl": {
-        "fi": [
-            "Hyvää päivää",
-            "Päivää"
-        ],
-        "nl": [
-            "Goedendag",
-            "Goedemiddag"
-        ]
+        "nl": "Goedendag"
     }
 }
 ```
