@@ -14,10 +14,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add command line option to sort progress information by either quiz retention length or number of attempts.
 - Allow for infinitive forms of verbs in topic files. Add infinitives to current verbs. Closes [#85](https://github.com/fniessink/toisto/issues/85).
 - Add more verbs to the verbs topic.
+- Add more concepts to the time topic.
 - Add a clothes topic.
-- Add command line option to sort progress information by either quiz retention length or number of attempts.
 
 ## v0.3.0 - 2022-12-04
 
