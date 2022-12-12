@@ -3,336 +3,184 @@
         "uses": "cat",
         "singular": {
             "en": "My cat",
+            "fi": "Minun kissani;singular",
             "nl": "Mijn kat"
         },
         "plural": {
             "en": "My cats",
+            "fi": "Minun kissani;plural",
             "nl": "Mijn katten"
         }
-    },
-    "my cat en:fi": {
-        "uses": "cat",
-        "en": [
-            "My cat",
-            "My cats"
-        ],
-        "fi": "Minun kissani"
-    },
-    "my cat fi:nl": {
-        "uses": "cat",
-        "fi": "Minun kissani",
-        "nl": [
-            "Mijn kat",
-            "Mijn katten"
-        ]
     },
     "your cat": {
         "uses": "cat",
         "singular": {
-            "en": "Your cat",
-            "nl": [
-                "Jouw kat",
-                "Jullie kat"
-            ]
+            "en": "Your cat;singular",
+            "fi": "Sinun kissasi;singular",
+            "nl": "Jouw kat"
         },
         "plural": {
-            "en": "Your cats",
-            "nl": [
-                "Jouw katten",
-                "Jullie katten"
-            ]
+            "en": "Your cats;singular",
+            "fi": "Sinun kissasi;plural",
+            "nl": "Jouw katten"
         }
-    },
-    "your cat en:fi": {
-        "uses": "cat",
-        "en": [
-            "Your cat",
-            "Your cats"
-        ],
-        "fi": [
-            "Sinun kissasi",
-            "Teidän kissanne"
-        ]
-    },
-    "your cat fi:nl": {
-        "uses": "cat",
-        "fi": "Sinun kissasi",
-        "nl": [
-            "Jouw kat",
-            "Jouw katten"
-        ]
     },
     "his/her cat": {
         "uses": "cat",
         "female": {
             "singular": {
                 "en": "Her cat",
+                "fi": "Hänen kissansa;female singular",
                 "nl": "Haar kat"
             },
             "plural": {
                 "en": "Her cats",
+                "fi": "Hänen kissansa;female plural",
                 "nl": "Haar katten"
             }
         },
         "male": {
             "singular": {
                 "en": "His cat",
+                "fi": "Hänen kissansa;male singular",
                 "nl": "Zijn kat"
             },
             "plural": {
                 "en": "His cats",
+                "fi": "Hänen kissansa;male plural",
                 "nl": "Zijn katten"
             }
         }
-    },
-    "his/her cat en:fi": {
-        "uses": "cat",
-        "en": [
-            "His cat",
-            "His cats",
-            "Her cat",
-            "Her cats"
-        ],
-        "fi": "Hänen kissansa"
-    },
-    "his/her cat fi:nl": {
-        "uses": "cat",
-        "fi": "Hänen kissansa",
-        "nl": [
-            "Zijn kat",
-            "Zijn katten",
-            "Haar kat",
-            "Haar katten"
-        ]
     },
     "our cat": {
         "uses": "cat",
         "singular": {
             "en": "Our cat",
+            "fi": "Meidän kissamme;singular",
             "nl": "Onze kat"
         },
         "plural": {
             "en": "Our cats",
+            "fi": "Meidän kissamme;plural",
             "nl": "Onze katten"
         }
     },
-    "our cat en:fi": {
-        "uses": "cat",
-        "en": [
-            "Our cat",
-            "Our cats"
-        ],
-        "fi": "Meidän kissamme"
-    },
-    "our cat fi:nl": {
-        "uses": "cat",
-        "fi": "Meidän kissamme",
-        "nl": [
-            "Onze kat",
-            "Onze katten"
-        ]
-    },
     "your (pl) cat": {
         "uses": "cat",
-        "fi": "Teidän kissanne",
-        "nl": [
-            "Jullie kat",
-            "Jullie katten"
-        ]
+        "singular": {
+            "en": "Yuur cat;plural",
+            "fi": "Teidän kissanne;singular",
+            "nl": "Jullie kat"
+        },
+        "plural": {
+            "en": "Your cats;plural",
+            "fi": "Teidän kissanne;plural",
+            "nl": "Jullie katten"
+        }
     },
-    "their cat ": {
+    "their cat": {
         "uses": "cat",
         "singular": {
             "en": "Their cat",
+            "fi": "Heidän kissansa;singular",
             "nl": "Hun kat"
         },
         "plural": {
             "en": "Their cats",
+            "fi": "Heidän kissansa;plural",
             "nl": "Hun katten"
         }
-    },
-    "their cat en:fi": {
-        "uses": "cat",
-        "en": [
-            "Their cat",
-            "Their cats"
-        ],
-        "fi": "Heidän kissansa"
-    },
-    "their cat fi:nl": {
-        "uses": "cat",
-        "fi": "Heidän kissansa",
-        "nl": [
-            "Hun kat",
-            "Hun katten"
-        ]
     },
     "my house": {
         "uses": "house",
         "singular": {
             "en": "My house",
+            "fi": "Minun taloni;singular",
             "nl": "Mijn huis"
         },
         "plural": {
             "en": "My houses",
+            "fi": "Minun taloni;plural",
             "nl": "Mijn huizen"
         }
-    },
-    "my house en:fi": {
-        "uses": "house",
-        "en": [
-            "My house",
-            "My houses"
-        ],
-        "fi": "Minun taloni"
-    },
-    "my house fi:nl": {
-        "uses": "house",
-        "fi": "Minun taloni",
-        "nl": [
-            "Mijn huis",
-            "Mijn huizen"
-        ]
     },
     "your house": {
         "uses": "house",
         "singular": {
-            "en": "Your house",
-            "nl": [
-                "Jouw huis",
-                "Jullie huis"
-            ]
+            "en": "Your house;singular",
+            "fi": "Sinun talosi;singular",
+            "nl": "Jouw huis"
         },
         "plural": {
-            "en": "Your houses",
-            "nl": [
-                "Jouw huizen",
-                "Jullie huizen"
-            ]
+            "en": "Your houses;singular",
+            "fi": "Sinun talosi;plural",
+            "nl": "Jouw huizen"
         }
-    },
-   "your house en:fi": {
-        "uses": "house",
-        "en": [
-            "Your house",
-            "Your houses"
-        ],
-        "fi": [
-            "Sinun talosi ",
-            "Teidän talonne"
-        ]
-    },
-    "your house fi:nl": {
-        "uses": "house",
-        "fi": "Sinun talosi",
-        "nl": [
-            "Jouw huis",
-            "Jouw huizen"
-        ]
     },
     "her/his house": {
         "uses": "house",
         "female": {
             "singular": {
                 "en": "Her house",
+                "fi": "Hänen talonsa;female singular",
                 "nl": "Haar huis"
             },
             "plural": {
                 "en": "Her houses",
+                "fi": "Hänen talonsa;female plural",
                 "nl": "Haar huizen"
             }
         },
         "male": {
             "singular": {
                 "en": "His house",
+                "fi": "Hänen talonsa;male singular",
                 "nl": "Zijn huis"
             },
             "plural": {
                 "en": "His houses",
+                "fi": "Hänen talonsa;male plural",
                 "nl": "Zijn huizen"
             }
         }
-    },
-    "her/his house en:fi": {
-        "uses": "house",
-        "en": [
-            "His house",
-            "His houses",
-            "Her house",
-            "Her houses"
-        ],
-        "fi": "Hänen talonsa"
-    },
-    "her/his house fi:nl": {
-        "uses": "house",
-        "fi": "Hänen talonsa",
-        "nl": [
-            "Zijn huis",
-            "Zijn huizen",
-            "Haar huis",
-            "Haar huizen"
-        ]
     },
     "our house": {
         "uses": "house",
         "singular": {
             "en": "Our house",
+            "fi": "Meidän talomme;singular",
             "nl": "Ons huis"
         },
         "plural": {
             "en": "Our houses",
+            "fi": "Meidän talomme;plural",
             "nl": "Onze huizen"
         }
     },
-    "our house en:fi": {
+    "your (pl) house": {
         "uses": "house",
-        "en": [
-            "Our house",
-            "Our houses"
-        ],
-        "fi": "Meidän talomme"
-    },
-    "our house fi:nl": {
-        "uses": "house",
-        "fi": "Meidän talomme",
-        "nl": [
-            "Ons huis",
-            "Onze huizen"
-        ]
-    },
-    "your (pl) house fi:nl": {
-        "uses": "house",
-        "fi": "Teidän talonne",
-        "nl": [
-            "Jullie huis",
-            "Jullie huizen"
-        ]
+        "singular": {
+            "en": "Your house;plural",
+            "fi": "Teidän talonne;singular",
+            "nl": "Jullie huis"
+        },
+        "plural": {
+            "en": "Your houses;plural",
+            "fi": "Teidän talonne;plural",
+            "nl": "Jullie huizen"
+        }
     },
     "their house": {
         "uses": "house",
         "singular": {
             "en": "Their house",
+            "fi": "Heidän talonsa;singular",
             "nl": "Hun huis"
         },
         "plural": {
             "en": "Their houses",
+            "fi": "Heidän talonsa;plural",
             "nl": "Hun huizen"
         }
-    },
-    "their house en:fi": {
-        "uses": "house",
-        "en": [
-            "Their house",
-            "Their houses"
-        ],
-        "fi": "Heidän talonsa"
-    },
-    "their house fi:nl": {
-        "uses": "house",
-        "fi": "Heidän talonsa",
-        "nl": [
-            "Hun huis",
-            "Hun huizen"
-        ]
     }
 }

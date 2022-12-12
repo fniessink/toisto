@@ -80,33 +80,19 @@
     "good afternoon": {
         "uses": "day",
         "en": "Good afternoon",
+        "fi": [
+            "Hyvää päivää;afternoon",
+            "Päivää;afternoon"
+        ],
         "nl": "Goedemiddag"
     },
     "good day": {
         "en": "Good day",
+        "fi": [
+            "Hyvää päivää",
+            "Päivää"
+        ],
         "nl": "Goedendag"
-    },
-    "good day en:fi": {
-        "uses": "day",
-        "en": [
-            "Good afternoon",
-            "Good day"
-        ],
-        "fi": [
-            "Hyvää päivää",
-            "Päivää"
-        ]
-    },
-    "good day fi:nl": {
-        "uses": "day",
-        "fi": [
-            "Hyvää päivää",
-            "Päivää"
-        ],
-        "nl": [
-            "Goedendag",
-            "Goedemiddag"
-        ]
     },
     "good evening": {
         "uses": "evening",
