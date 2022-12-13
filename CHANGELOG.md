@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Allow for infinitive forms of verbs in topic files. Add infinitives to current verbs. Closes [#85](https://github.com/fniessink/toisto/issues/85).
 - Add more verbs to the verbs topic.
 - Add more concepts to the time topic.
-- Add a clothes topic.
+- Add a clothes topic and a weather topic.
 
 ## v0.3.0 - 2022-12-04
 
