@@ -85,6 +85,22 @@ class PracticeTest(ToistoTestCase):
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
         self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(side_effect=["?\n", EOFError]))
+    def test_quiz_skip_on_first_attempt(self):
+        """Test that the user is quizzed."""
+        with patch("rich.console.Console.print") as patched_print:
+            practice(self.topics, Progress({}))
+        self.assertNotIn(call(TRY_AGAIN), patched_print.call_args_list)
+        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=["first attempt", "?\n", EOFError]))
+    def test_quiz_skip_on_second_attempt(self):
+        """Test that the user is quizzed."""
+        with patch("rich.console.Console.print") as patched_print:
+            practice(self.topics, Progress({}))
+        self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
+        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'), patched_print.call_args_list)
+
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):
         """Test that the user is quizzed until done."""
