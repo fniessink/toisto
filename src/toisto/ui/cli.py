@@ -24,8 +24,8 @@ parser.add_argument(
     help="your language; available languages: %(choices)s"
 )
 parser.add_argument(
-    "-s", "--sort", metavar="{option}", choices=["length", "count"], default="count",
-    help="how to sort progress information (default: by quiz count); available options: %(choices)s"
+    "-s", "--sort", metavar="{option}", choices=["retention", "attempts"], default="retention",
+    help="how to sort progress information (default: by retention); available options: %(choices)s"
 )
 parser.add_argument(
     "command", metavar="{command}", choices=["practice", "progress"], default="practice", nargs="?",

@@ -56,5 +56,5 @@ class ShowProgressTest(ToistoTestCase):
         topics = Topics(set([Topic("topic", set([self.quiz, another_quiz]))]))
         progress = Progress({str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)})
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", topics, progress, sort="length")
+            show_progress("fi", topics, progress, sort="retention")
         self.assertEqual(["21", "42"], list(console_print.call_args[0][0].columns[5].cells))
