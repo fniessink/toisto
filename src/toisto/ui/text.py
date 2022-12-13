@@ -34,6 +34,7 @@ the quiz interval.
 How does it work?
 ● To answer a quiz: type the answer, followed by Enter.
 ● To repeat the spoken text: type Enter without answer.
+● To skip to the answer immediately: type ?, followed by Enter.
 ● To read more about an [link=https://en.wiktionary.org/wiki/underlined]underlined[/link] word: keep ⌘ (the command key) pressed
   while clicking the word. Not all terminals may support this.
 ● To quit: type Ctrl-C or Ctrl-D.
@@ -79,7 +80,8 @@ def feedback_correct(guess: Label, quiz: Quiz) -> str:
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    return f'❌ Incorrect. The correct answer is "{colored_diff(guess, quiz.answer)}".\n' + meaning(quiz)
+    evaluation = "" if guess == "?" else "❌ Incorrect. "
+    return f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n' + meaning(quiz)
 
 
 def meaning(quiz: Quiz) -> str:

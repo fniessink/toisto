@@ -57,6 +57,14 @@ class FeedbackTestCase(ToistoTestCase):
             feedback_text
         )
 
+    def test_show_feedback_on_question_mark(self):
+        """Test that the correct feedback is given when the user doesn't know the answer."""
+        feedback_text = feedback_incorrect("?", self.quiz)
+        self.assertEqual(
+            """The correct answer is "[inserted]Terve[/inserted]".\n[secondary]Meaning "Hoi".[/secondary]\n""",
+            feedback_text
+        )
+
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
         self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(self.quiz))

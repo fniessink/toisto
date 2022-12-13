@@ -27,7 +27,7 @@ def do_quiz(quiz: Quiz, progress: Progress) -> None:
     """Do one quiz and update the progress."""
     console.print(instruction(quiz))
     answer, correct = do_quiz_attempt(quiz)
-    if not correct:
+    if not correct and answer != "?":
         answer, correct = do_quiz_attempt(quiz, first_attempt=False)
     progress.update(quiz, correct)
     console.print(feedback_correct(answer, quiz) if correct else feedback_incorrect(answer, quiz))
