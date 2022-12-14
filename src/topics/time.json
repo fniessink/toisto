@@ -139,37 +139,37 @@
         "nl": "Hoe laat is het?"
     },
     "it is 10:00": {
-        "uses": ["10", "clock", "hour"],
+        "uses": ["to be/singular/third person", "10", "clock", "hour"],
         "en": "It is ten o'clock|It's ten o'clock",
         "fi": "Kello on kymmenen",
         "nl": "Het is tien uur"
     },
     "it is 2:30": {
-        "uses": ["2", "3", "clock"],
+        "uses": ["to be/singular/third person", "2", "3", "clock"],
         "en": "It is half past two|It's half past two",
         "fi": "Kello on puoli kolme",
         "nl": "Het is half drie"
     },
     "it is 3:15": {
-        "uses": ["3", "clock"],
+        "uses": ["to be/singular/third person", "3", "clock"],
         "en": "It is a quarter past three|It's a quarter past three",
         "fi": "Kello on vartin yli kolme",
         "nl": "Het is kwart over drie"
     },
     "it is 3:45": {
-        "uses": ["4", "clock"],
+        "uses": ["to be/singular/third person", "4", "clock"],
         "en": "It is a quarter to four|It's a quarter to four",
         "fi": "Kello on varttia vaille neljä",
         "nl": "Het is kwart voor vier"
     },
     "it is 6:20": {
-        "uses": ["20", "6", "7", "clock"],
+        "uses": ["to be/singular/third person", "20", "6", "7", "clock"],
         "en": "It is twenty past six|It's twenty past six",
         "fi": ["Kello on kuusi kaksikymmentä", "Kello on kaksikymmentä yli kuusi"],
         "nl": "Het is tien voor half zeven"
     },
     "it is 6:40": {
-        "uses": ["20", "10", "6", "7", "clock"],
+        "uses": ["to be/singular/third person", "20", "10", "6", "7", "clock"],
         "en": "It is twenty to seven|It's twenty to seven",
         "fi": ["Kello on kuusi neljäkymmentä", "Kello on kahtakymmentä vaille seitsemän"],
         "nl": "Het is tien over half zeven"

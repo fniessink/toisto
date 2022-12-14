@@ -33,11 +33,13 @@
         "nl": "Welkom"
     },
     "who are you": {
+        "uses": "to be/singular/second person",
         "en": "Who are you?",
         "fi": "Kuka sinä olet?",
         "nl": "Wie ben jij?"
     },
     "I am alice": {
+        "uses": "to be/singular/first person",
         "en": "I am Alice|I'm Alice",
         "fi": "Minä olen Alice",
         "nl": "Ik ben Alice"
@@ -57,13 +59,13 @@
         "nl": "Wat is jouw naam?|Wat is je naam?"
     },
     "my name is bob": {
-        "uses": "name",
+        "uses": ["name", "to be/singular/third person"],
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": "old",
+        "uses": ["old", "to be/singular/second person"],
         "en": "How old are you?",
         "fi": "Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
@@ -87,6 +89,7 @@
         "nl": "Goedemiddag"
     },
     "good day": {
+        "uses": "day",
         "en": "Good day",
         "fi": [
             "Hyvää päivää",

@@ -1,8 +1,51 @@
 {
+    "to be": {
+        "singular": {
+            "first person": {
+                "en": "I am|I'm",
+                "fi": "Minä olen|Olen",
+                "nl": "Ik ben"
+            },
+            "second person": {
+                "en": "You are|You're;singular",
+                "fi": "Sinä olet|Olet",
+                "nl": "Jij bent|Je bent"
+            },
+            "third person": {
+                "female": {
+                    "en": "She is|She's",
+                    "fi": "Hän on|On;female",
+                    "nl": "Zij is|Ze is"
+                },
+                "male": {
+                    "en": "He is|He's",
+                    "fi": "Hän on|On;male",
+                    "nl": "Hij is"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We are|We're",
+                "fi": "Me olemme|Olemme",
+                "nl": "Wij zijn|We zijn"
+            },
+            "second person": {
+                "en": "You are|You're;plural",
+                "fi": "Te olette|Olette",
+                "nl": "Jullie zijn"
+            },
+            "third person": {
+                "en": "They are|They're",
+                "fi": "He ovat|Ovat",
+                "nl": "Zij zijn|Ze zijn"
+            }
+        }
+    },
     "to have": {
         "infinitive": {
             "en": "To have",
-            "fi": "Olla (omistaa)",
+            "fi": "Olla;omistaa",
             "nl": "Hebben"
         },
         "singular": {
