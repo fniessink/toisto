@@ -336,25 +336,25 @@
         }
     },
     "they have x children and y grandchildren": {
-        "uses": ["child/plural", "grandchild/plural"],
+        "uses": ["to have/plural/third person", "3", "child/plural", "6", "grandchild/plural"],
         "en": "They have three children and six grandchildren",
         "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
         "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
     },
     "how many brothers and sisters do you have": {
-        "uses": ["brother/plural", "sister/plural"],
+        "uses": ["to have/singular/second person", "brother/plural", "sister/plural"],
         "en": "How many brothers and sisters do you have?",
         "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
         "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
     },
     "I have x brothers and y sisters": {
-        "uses": ["brother/plural", "sister/singular"],
+        "uses": ["to have/singular/first person", "2", "brother/plural", "1", "sister/singular"],
         "en": "I have two brothers and one sister",
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
     "I have no siblings": {
-        "uses": "sibling/plural",
+        "uses": ["to have/singular/first person", "sibling/plural"],
         "en": [
             "I have no siblings",
             "I have no brothers and sisters"
@@ -366,7 +366,7 @@
         "nl": "Ik heb geen broers en zussen"
     },
     "I am an only child": {
-        "uses": "child/singular",
+        "uses": ["to be/singular/first person", "child/singular"],
         "en": "I am an only child|I'm an only child",
         "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
         "nl": "Ik ben enig kind|Ik ben enigst kind"
