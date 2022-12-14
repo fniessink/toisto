@@ -12,7 +12,7 @@
         }
     },
     "pet": {
-        "uses": "animal",
+        "uses": ["animal", "house/singular", "home/singular"],
         "singular": {
             "en": "Pet",
             "fi": ["Lemmikki", "Kotieläin"],

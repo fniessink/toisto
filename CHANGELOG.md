@@ -17,9 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Reply with "?" to a quiz to skip to the answer immediately. Closes [#112](https://github.com/fniessink/toisto/issues/112).
 - Add command line option to sort progress information by either quiz retention length or number of attempts.
 - Allow for infinitive forms of verbs in topic files. Add infinitives to current verbs. Closes [#85](https://github.com/fniessink/toisto/issues/85).
-- Add more verbs to the verbs topic.
-- Add more concepts to the time topic.
-- Add a clothes topic and a weather topic.
+- Add new concepts to the food, time, and verbs topics.
+- Add body, clothes, and weather topics.
 
 ## v0.3.0 - 2022-12-04
 

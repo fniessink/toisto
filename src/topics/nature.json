@@ -65,6 +65,7 @@
         }
     },
     "coast": {
+        "uses": "beach",
         "singular": {
             "en": "Coast",
             "fi": "Rannikko",
@@ -77,6 +78,7 @@
         }
     },
     "desert": {
+        "uses": "country",
         "singular": {
             "en": "Desert",
             "fi": ["Aavikko", "Autiomaa"],
@@ -169,11 +171,13 @@
         "nl": "Het westen"
     },
     "world": {
+        "uses": "country",
         "en": "World",
         "fi": "Maailma",
         "nl": "De wereld"
     },
     "continent": {
+        "uses": "country",
         "singular": {
             "en": "Continent",
             "fi": "Maanosa",
@@ -198,13 +202,13 @@
         "nl": "Het is warm in het Zuiden"
     },
     "she is from the north": {
-        "uses": "north",
+        "uses": ["north", "to come/singular/third person/female"],
         "en": "She is from the North",
         "fi": ["Hän tulee pohjoisesta;female", "Hän on kotoisin pohjoisesta;female"],
         "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
     },
     "they live in the west": {
-        "uses": "west",
+        "uses": ["west", "to live/plural/third person"],
         "en": "They live in the West",
         "fi": "He asuvat lännessä",
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"

@@ -351,5 +351,125 @@
             "fi": "Voileivät",
             "nl": "De boterhammen"
         }
+    },
+    "nut": {
+        "singular": {
+            "en": "Nut",
+            "fi": "Pähkinä",
+            "nl": "De noot"
+        },
+        "plural": {
+            "en": "Nuts",
+            "fi": "Pähkinät",
+            "nl": "De noten"
+        }
+    },
+    "cherry": {
+        "singular": {
+            "en": "Cherry",
+            "fi": "Kirsikka",
+            "nl": "De kers"
+        },
+        "plural": {
+            "en": "Cherries",
+            "fi": "Kirsikat",
+            "nl": "De kersen"
+        }
+    },
+    "pear": {
+        "singular": {
+            "en": "Pear",
+            "fi": "Päärynä",
+            "nl" :"De peer"
+        },
+        "plural": {
+            "en": "Pears",
+            "fi": "Päärynät",
+            "nl": "De peren"
+        }
+    },
+    "cauliflower": {
+        "uses": "bloem",
+        "singular": {
+            "en": "Cauliflower",
+            "fi": "Kukkakaali",
+            "nl": "De bloemkool"
+        },
+        "plural": {
+            "en": "Cauliflowers",
+            "fi": "Kukkakaalit",
+            "nl": "De bloemkolen"
+        }
+    },
+    "mushroom": {
+        "singular": {
+            "en": "Mushroom",
+            "fi": "Sieni",
+            "nl": "De champignon"
+        },
+        "plural": {
+            "en": "Mushrooms",
+            "fi": "Sienet",
+            "nl": "De champignons"
+        }
+    },
+    "garlic": {
+        "singular": {
+            "en": "Garlic",
+            "fi": "Valkosipuli",
+            "nl": "De knoflook"
+        },
+        "plural": {
+            "en": "Garlics",
+            "fi": "Valkosipulit",
+            "nl": "De knofloken"
+        }
+    },
+    "bean": {
+        "singular": {
+            "en": "Bean",
+            "fi": "Papu",
+            "nl": "De boon"
+        },
+        "plural": {
+            "en": "Beans",
+            "fi": "Pavut",
+            "nl": "De bonen"
+        }
+    },
+    "cookie": {
+        "singular": {
+            "en": "Cookie",
+            "fi": "Keksi",
+            "nl": "Het koekje"
+        },
+        "plural": {
+            "en": "Cookies",
+            "fi": "Keksit",
+            "nl": "De koekjes"
+        }
+    },
+    "cake": {
+        "singular": {
+            "en": "Cake",
+            "fi": "Kakku",
+            "nl": "De taart"
+        },
+        "plural": {
+            "en": "Cakes",
+            "fi": "Kakut",
+            "nl": "De taarten"
+        }
+    },
+    "cream": {
+        "en": "Cream",
+        "fi": "Kerma",
+        "nl": "De room"
+    },
+    "whipped cream": {
+        "uses": "cream",
+        "en": "Whipped cream",
+        "fi": "Kermavaahto",
+        "nl": "De slagroom"
     }
 }
