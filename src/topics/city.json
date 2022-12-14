@@ -266,7 +266,7 @@
         }
     },
     "capital": {
-        "uses": "city",
+        "uses": ["city", "head/singular"],
         "singular": {
             "en": "Capital",
             "fi": "Pääkaupunki",

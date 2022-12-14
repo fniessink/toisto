@@ -478,5 +478,53 @@
                 "nl": "Zij schrijven|Ze schrijven"
             }
         }
+    },
+    "to live": {
+        "infinitive": {
+            "en": "To live",
+            "fi": "Asua",
+            "nl": "Wonen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I live",
+                "fi": "Minä asun|Asun",
+                "nl": "Ik woon"
+            },
+            "second person": {
+                "en": "You live;singular",
+                "fi": "Sinä asut|Asut",
+                "nl": "Jij woont|Je woont"
+            },
+            "third person": {
+                "female": {
+                    "en": "She lives",
+                    "fi": "Hän asuu|Asuu;female",
+                    "nl": "Zij woont|Ze woont"
+                },
+                "male": {
+                    "en": "He lives",
+                    "fi": "Hän asuu|Asuu;male",
+                    "nl": "Hij woont"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "We live",
+                "fi": "Me asumme|Asumme",
+                "nl": "Wij wonen|We wonen"
+            },
+            "second person": {
+                "en": "You live;plural",
+                "fi": "Te asutte|Asutte",
+                "nl": "Jullie wonen"
+            },
+            "third person": {
+                "en": "They live",
+                "fi": "He asuvat|Asuvat",
+                "nl": "Zij wonen|Ze wonen"
+            }
+        }
     }
 }
