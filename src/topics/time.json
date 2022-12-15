@@ -133,7 +133,7 @@
         }
     },
     "what time is it": {
-        "uses": ["time", "clock"],
+        "uses": ["what", "how", "time", "clock", "to be/singular/third person"],
         "en": "What time is it?",
         "fi": ["Paljonko kello on?", "Mitä kello on?"],
         "nl": "Hoe laat is het?"
@@ -175,12 +175,13 @@
         "nl": "Het is tien over half zeven"
     },
     "what time": {
-        "uses": "time",
+        "uses": ["what", "how", "time"],
         "en": "What time?",
         "fi": "Mihin aikaan?",
         "nl": "Hoe laat?"
     },
     "how long does it take": {
+        "uses": "how",
         "en": "How long does it take?",
         "fi": ["Kauanko se kestää?", "Kuinka kauan se kestää?"],
         "nl": "Hoe lang duurt het?"

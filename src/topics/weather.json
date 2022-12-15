@@ -5,7 +5,7 @@
         "nl": "Het weer"
     },
     "how is the weather": {
-        "uses": "to be/singular/third person",
+        "uses": ["how", "what kind of", "to be/singular/third person"],
         "en": "How is the weather?|How's the weather?",
         "fi": [
             "Millainen sää on?",

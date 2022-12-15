@@ -285,9 +285,9 @@
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
-        "uses": ["to be/singular/third person", "library/singular"],
+        "uses": ["where", "to be/singular/third person", "library/singular"],
         "en": "Where is the library?",
-        "fi": ["Missä on kirjasto?", "Missä kirjasto sijaitsee?"],
+        "fi": "Missä on kirjasto?",
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {

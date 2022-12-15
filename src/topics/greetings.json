@@ -33,9 +33,9 @@
         "nl": "Welkom"
     },
     "who are you": {
-        "uses": "to be/singular/second person",
+        "uses": ["who", "to be/singular/second person"],
         "en": "Who are you?",
-        "fi": "Kuka sinä olet?",
+        "fi": "Kuka sinä olet?|Kuka olet?",
         "nl": "Wie ben jij?"
     },
     "I am alice": {
@@ -45,6 +45,7 @@
         "nl": "Ik ben Alice"
     },
     "how are you": {
+        "uses": ["what", "how", "to be"],
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -53,7 +54,7 @@
         "nl": "Hoe gaat het?"
     },
     "what is your name": {
-        "uses": "name",
+        "uses": ["what", "to be/singular/third person", "name"],
         "en": "What is your name?",
         "fi": "Mikä sinun nimesi on?",
         "nl": "Wat is jouw naam?|Wat is je naam?"
@@ -65,7 +66,7 @@
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": ["old", "to be/singular/second person"],
+        "uses": ["how", "old", "to be/singular/second person"],
         "en": "How old are you?",
         "fi": "Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
