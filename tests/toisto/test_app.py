@@ -1,6 +1,7 @@
 """Unit tests for the app."""
 
 import argparse
+import os
 import unittest
 from unittest.mock import Mock, patch
 import sys
@@ -14,6 +15,7 @@ class AppTest(unittest.TestCase):
     @patch.object(argparse.ArgumentParser, "_print_message")
     def test_no_arguments(self, write):
         """Test that the app exits if the user does not provide arguments."""
+        os.environ['COLUMNS'] = "120"  # Fake that the terminal is wide enough.
         self.assertRaises(SystemExit, main)
         self.assertEqual(
             f"usage: {sys.argv[0].split('/')[-1]} [-h] [-V] [-t {{topic}}] [-f {{topic file}}] [-s {{option}}] "
