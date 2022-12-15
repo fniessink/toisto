@@ -32,12 +32,74 @@
             "Welk?"
         ]
     },
+    "how": {
+        "en": "How?",
+        "fi": ["Miten?", "Kuinka?"],
+        "nl": "Hoe?"
+    },
+    "how many": {
+        "uses": "how",
+        "en": "How many?",
+        "fi": "Kuinka monta?",
+        "nl": "Hoeveel"
+    },
     "what kind of": {
         "en": "What kind of?",
         "fi": "Millainen?",
-        "nl": [
-            "Wat voor soort?|Wat voor?",
-            "Wat voor een?|Wat voor?"
-        ]
+        "nl": ["Wat voor soort?", "Wat voor een?"]
+    },
+    "where is the water": {
+        "uses": ["where", "to be/singular/third person", "water/singular"],
+        "en": "Where is the water?",
+        "fi": "Missä vesi on?",
+        "nl": "Waar is het water?"
+    },
+    "where there": {
+        "uses": ["where", "there"],
+        "en": "Where? There!",
+        "fi": "Missä? Tuossa!",
+        "nl": "Waar? Daar!"
+    },
+    "why are you doing that": {
+        "uses": ["why", "to do/singular/second person", "that"],
+        "en": "Why are you doing that?",
+        "fi": ["Miksi teet tuon?", "Miksi teet noin?"],
+        "nl": "Waarom doe je dat?"
+    },
+    "why is that the case": {
+        "uses": ["why", "to be/singular/third person"],
+        "en": "Why is that the case?",
+        "fi": ["Miksi se on noin?", "Miksi se on niin?"],
+        "nl": "Waarom is dat zo?"
+    },
+    "why are you too late": {
+        "uses": ["why", "to be/singular/third person"],
+        "en": "Why are you too late?",
+        "fi": "Miksi olet myöhässä?",
+        "nl": "Waarom ben je te laat?"
+    },
+    "why are bananas bent?": {
+        "uses": ["why", "banana/plural", "to be to be/plural/third person"],
+        "en": "Why are banasas bent?",
+        "fi": "Miksi banaanit ovat käyriä?",
+        "nl": "Waarom zijn bananen krom?|Waarom zijn de bananen krom?"
+    },
+    "where is the toilet": {
+        "uses": ["where", "to be/singular/third person"],
+        "en": ["Where is the toilet?", "Where is the restroom?"],
+        "fi": ["Missä on wc?", "Missä on vessa?"],
+        "nl": ["Waar is de wc?", "Waar is het toilet?"]
+    },
+    "when will you arrive at the airport": {
+        "uses": ["when", "airport/singular"],
+        "en": "When will you arrive at the airport?",
+        "fi": "Milloin saavut lentokentälle?",
+        "nl": "Wanneer kom je aan op het vliegveld?"
+    },
+    "what kind of cat do you have": {
+        "uses": ["what kind of", "cat", "to have/singular/second person"],
+        "en": "What kind of cat do you have?",
+        "fi": "Millainen kissa sinulla on?",
+        "nl": "Wat voor soort kat heb jij?|Wat voor soort kat heb je?|Wat voor een kat heb jij?|Wat voor een kat heb je?"
     }
 }
