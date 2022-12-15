@@ -18,8 +18,8 @@ class AppTest(unittest.TestCase):
         os.environ['COLUMNS'] = "120"  # Fake that the terminal is wide enough.
         self.assertRaises(SystemExit, main)
         self.assertEqual(
-            f"usage: {sys.argv[0].split('/')[-1]} [-h] [-V] [-t {{topic}}] [-f {{topic file}}] [-s {{option}}] "
-            "{language to practice} {your language} [{command}]\n",
+            f"usage: {sys.argv[0].rsplit('/', maxsplit=1)[-1]} [-h] [-V] "
+            "[-t {topic}] [-f {topic file}] [-s {option}] {language to practice} {your language} [{command}]\n",
             write.call_args_list[0][0][0]
         )
 
