@@ -1,6 +1,7 @@
 """Unit tests for the output."""
 
 from datetime import timedelta
+from unittest import TestCase
 
 from toisto.model import Label, Progress
 from toisto.model.model_types import ConceptId
@@ -77,6 +78,10 @@ class FeedbackTestCase(ToistoTestCase):
             "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]", instruction(quiz)
         )
 
+
+class FormatDurationTest(TestCase):
+    """Unit tests for the format duration method."""
+
     def test_format_duration_seconds(self):
         """Test format seconds."""
         self.assertEqual("2 seconds", format_duration(timedelta(seconds=2)))
@@ -92,3 +97,23 @@ class FeedbackTestCase(ToistoTestCase):
     def test_format_duration_daya(self):
         """Test format days."""
         self.assertEqual("2 days", format_duration(timedelta(days=2)))
+
+
+class LinkifyTest(TestCase):
+    """Unit tests for the linkify method."""
+
+    def test_linkify(self):
+        """Test the linkify method."""
+        self.assertEqual("[link=https://en.wiktionary.org/wiki/test]Test[/link]", linkify("Test"))
+
+    def test_linkify_multiple_words(self):
+        """Test the linkify method."""
+        self.assertEqual(
+            "[link=https://en.wiktionary.org/wiki/test]Test[/link] "
+            "[link=https://en.wiktionary.org/wiki/words]words[/link]",
+            linkify("Test words")
+        )
+
+    def test_punctuation(self):
+        """Test that punctuation is not linked."""
+        self.assertEqual("[link=https://en.wiktionary.org/wiki/test]Test[/link].", linkify("Test."))
