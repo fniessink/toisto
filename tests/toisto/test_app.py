@@ -23,6 +23,7 @@ class AppTest(unittest.TestCase):
             write.call_args_list[0][0][0]
         )
 
+    @patch("os.system", Mock())
     @patch("builtins.input", Mock(side_effect=[EOFError]))
     @patch.object(sys, "argv", ["toisto", "fi", "nl"])
     def test_practice(self):

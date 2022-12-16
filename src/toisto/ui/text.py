@@ -1,6 +1,7 @@
 """Output for the user."""
 
 from datetime import datetime, timedelta
+from string import punctuation
 from typing import NoReturn
 import sys
 
@@ -68,9 +69,21 @@ def format_datetime(date_time: datetime) -> str:
     return date_time.isoformat(sep=" ", timespec="minutes")
 
 
+def split_punctuation(text: str) -> tuple[str, str, str]:
+    """Return a tuple of prefixed punctuation, the text without punctuation, and postfix punctuation."""
+    stripped_text = text.strip(punctuation)
+    stripped_text_start = text.find(stripped_text)
+    stripped_text_end = stripped_text_start + len(stripped_text)
+    return text[:stripped_text_start], text[stripped_text_start:stripped_text_end], text[stripped_text_end:]
+
+
 def linkify(text: str) -> str:
     """Return a version of the text where each word is turned into a link to a dictionary."""
-    return " ".join(f"[link=https://en.wiktionary.org/wiki/{word.lower()}]{word}[/link]" for word in text.split())
+    linkified_words = []
+    for word in text.split():
+        prefix, word, postfix = split_punctuation(word)
+        linkified_words.append(f"{prefix}[link=https://en.wiktionary.org/wiki/{word.lower()}]{word}[/link]{postfix}")
+    return " ".join(linkified_words)
 
 
 def linkify_and_enumerate(*texts: str, sep: str = ", ") -> str:
