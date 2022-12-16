@@ -73,6 +73,11 @@ def linkify(text: str) -> str:
     return " ".join(f"[link=https://en.wiktionary.org/wiki/{word.lower()}]{word}[/link]" for word in text.split())
 
 
+def linkify_and_enumerate(*texts: str, sep: str = ", ") -> str:
+    """Return a linkified and enumerated version of the texts."""
+    return sep.join(f'"{linkify(text)}"' for text in texts)
+
+
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
     return CORRECT + meaning(quiz) + other_answers(guess, quiz)
@@ -86,18 +91,14 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
 
 def meaning(quiz: Quiz) -> str:
     """Return the quiz's meaning, if any."""
-    if quiz.meanings:
-        meanings = ", ".join(f'"{meaning}"' for meaning in quiz.meanings)
-        return f'[secondary]Meaning {meanings}.[/secondary]\n'
-    return ""
+    return f'[secondary]Meaning {linkify_and_enumerate(*quiz.meanings)}.[/secondary]\n' if quiz.meanings else ""
 
 
 def other_answers(guess: Label, quiz: Quiz) -> str:
     """Return the quiz's other answers, if any."""
     if answers := quiz.other_answers(guess):
         label = "Another correct answer is" if len(answers) == 1 else "Other correct answers are"
-        enumerated_answers = ", ".join([f'"{answer}"' for answer in answers])
-        return f"""[secondary]{label} {enumerated_answers}.[/secondary]\n"""
+        return f"""[secondary]{label} {linkify_and_enumerate(*answers)}.[/secondary]\n"""
     return ""
 
 

@@ -5,7 +5,7 @@ from unittest.mock import call, patch, Mock, MagicMock
 from toisto.command import practice
 from toisto.model import Progress, Topic, Topics
 from toisto.model.model_types import ConceptId
-from toisto.ui.text import DONE, TRY_AGAIN
+from toisto.ui.text import DONE, TRY_AGAIN, linkify
 
 from ..base import ToistoTestCase
 
@@ -46,7 +46,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the question is printed."""
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
-        self.assertIn(call("[link=https://en.wiktionary.org/wiki/terve]Terve[/link]"), patched_print.call_args_list)
+        self.assertIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
@@ -55,7 +55,7 @@ class PracticeTest(ToistoTestCase):
         topics = Topics(set([Topic("topic", set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
-        self.assertNotIn(call("Terve"), patched_print.call_args_list)
+        self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
@@ -64,7 +64,9 @@ class PracticeTest(ToistoTestCase):
         topics = Topics(set([Topic("topic", set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
-        self.assertIn(call("""✅ Correct.\n[secondary]Meaning "Hoi".[/secondary]\n"""), patched_print.call_args_list)
+        self.assertIn(
+            call(f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'), patched_print.call_args_list
+        )
 
     @patch("builtins.input", Mock(return_value="Talot\n"))
     def test_quiz_with_multiple_meanings(self):
@@ -74,7 +76,8 @@ class PracticeTest(ToistoTestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
         self.assertIn(call(
-            """✅ Correct.\n[secondary]Meaning "Huis", "Huizen".[/secondary]\n"""), patched_print.call_args_list
+            f"""✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n"""),
+            patched_print.call_args_list
         )
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
@@ -91,7 +94,8 @@ class PracticeTest(ToistoTestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
         self.assertNotIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'), patched_print.call_args_list)
+        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'),
+        patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["first attempt", "?\n", EOFError]))
     def test_quiz_skip_on_second_attempt(self):
