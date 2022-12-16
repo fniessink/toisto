@@ -4,7 +4,7 @@ from datetime import timedelta
 
 from toisto.model import Label, Progress
 from toisto.model.model_types import ConceptId
-from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction
+from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction, linkify
 
 from ..base import ToistoTestCase
 
@@ -26,13 +26,13 @@ class FeedbackTestCase(ToistoTestCase):
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         feedback_text = feedback_correct(self.guess, self.quiz)
-        self.assertEqual("""✅ Correct.\n[secondary]Meaning "Hoi".[/secondary]\n""", feedback_text)
+        self.assertEqual(f"""✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""", feedback_text)
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
         quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz)
-        expected_other_answer = quiz.other_answers(self.guess)[0]
+        expected_other_answer = linkify(quiz.other_answers(self.guess)[0])
         self.assertEqual(
             f"""✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n""",
             feedback_text
@@ -42,7 +42,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that alternative answers are shown."""
         quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
         feedback_text = feedback_correct(self.guess, quiz)
-        other_answers = [f'"{answer}"' for answer in quiz.other_answers(self.guess)]
+        other_answers = [f'"{linkify(answer)}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
             f"""✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n""",
             feedback_text
@@ -53,15 +53,16 @@ class FeedbackTestCase(ToistoTestCase):
         feedback_text = feedback_incorrect("", self.quiz)
         self.assertEqual(
             """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
-            """[secondary]Meaning "Hoi".[/secondary]\n""",
+            f"""[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
             feedback_text
         )
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
         feedback_text = feedback_incorrect("?", self.quiz)
+        meaning = linkify("Hoi")
         self.assertEqual(
-            """The correct answer is "[inserted]Terve[/inserted]".\n[secondary]Meaning "Hoi".[/secondary]\n""",
+            f'The correct answer is "[inserted]Terve[/inserted]".\n[secondary]Meaning "{meaning}".[/secondary]\n',
             feedback_text
         )
 
