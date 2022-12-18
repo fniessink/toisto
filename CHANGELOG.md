@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## v0.5.0 - [Unreleased]
 
+### Fixed
+
+- Also show alternative answers if the user answers incorrectly.
+
 ### Added
 
 - Add a topic with interrogative pronouns (who, what, where, ...).

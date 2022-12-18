@@ -58,12 +58,21 @@ class FeedbackTestCase(ToistoTestCase):
             feedback_text
         )
 
+    def test_show_alternative_answers_on_incorrect_guess(self):
+        """Test that alternative answers are also given when the user guesses incorrectly."""
+        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
+        feedback_text = feedback_incorrect("", quiz)
+        self.assertEqual(
+            """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
+            f"""[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n""",
+            feedback_text
+        )
+
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
         feedback_text = feedback_incorrect("?", self.quiz)
-        meaning = linkify("Hoi")
         self.assertEqual(
-            f'The correct answer is "[inserted]Terve[/inserted]".\n[secondary]Meaning "{meaning}".[/secondary]\n',
+            f"""The correct answer is "{linkify("Terve")}".\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
             feedback_text
         )
 
