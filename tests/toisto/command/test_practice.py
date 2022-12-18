@@ -94,7 +94,7 @@ class PracticeTest(ToistoTestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
         self.assertNotIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'),
+        self.assertIn(call(f'The correct answer is "{linkify("Hoi")}".\n'),
         patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["first attempt", "?\n", EOFError]))
@@ -103,7 +103,7 @@ class PracticeTest(ToistoTestCase):
         with patch("rich.console.Console.print") as patched_print:
             practice(self.topics, Progress({}))
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call('The correct answer is "[inserted]Hoi[/inserted]".\n'), patched_print.call_args_list)
+        self.assertIn(call(f'The correct answer is "{linkify("Hoi")}".\n'), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):
