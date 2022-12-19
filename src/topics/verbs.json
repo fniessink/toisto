@@ -1,44 +1,89 @@
 {
     "to be": {
-        "singular": {
-            "first person": {
-                "en": "I am|I'm",
-                "fi": "Minä olen|Olen",
-                "nl": "Ik ben"
-            },
-            "second person": {
-                "en": "You are|You're;singular",
-                "fi": "Sinä olet|Olet",
-                "nl": "Jij bent|Je bent"
-            },
-            "third person": {
-                "female": {
-                    "en": "She is|She's",
-                    "fi": "Hän on|On;female",
-                    "nl": "Zij is|Ze is"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I am|I'm",
+                    "fi": "Minä olen|Olen",
+                    "nl": "Ik ben"
                 },
-                "male": {
-                    "en": "He is|He's",
-                    "fi": "Hän on|On;male",
-                    "nl": "Hij is"
+                "second person": {
+                    "en": "You are|You're;singular",
+                    "fi": "Sinä olet|Olet",
+                    "nl": "Jij bent|Je bent"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She is|She's",
+                        "fi": "Hän on|On;female",
+                        "nl": "Zij is|Ze is"
+                    },
+                    "male": {
+                        "en": "He is|He's",
+                        "fi": "Hän on|On;male",
+                        "nl": "Hij is"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We are|We're",
+                    "fi": "Me olemme|Olemme",
+                    "nl": "Wij zijn|We zijn"
+                },
+                "second person": {
+                    "en": "You are|You're;plural",
+                    "fi": "Te olette|Olette",
+                    "nl": "Jullie zijn"
+                },
+                "third person": {
+                    "en": "They are|They're",
+                    "fi": "He ovat|Ovat",
+                    "nl": "Zij zijn|Ze zijn"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We are|We're",
-                "fi": "Me olemme|Olemme",
-                "nl": "Wij zijn|We zijn"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I was",
+                    "fi": "Minä olin|Olin",
+                    "nl": "Ik was"
+                },
+                "second person": {
+                    "en": "You were;singular",
+                    "fi": "Sinä olit|Olit",
+                    "nl": "Jij was|Je was"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She was",
+                        "fi": "Hän oli|Oli;female",
+                        "nl": "Zij was|Ze was"
+                    },
+                    "male": {
+                        "en": "He was",
+                        "fi": "Hän oli|Oli;male",
+                        "nl": "Hij was"
+                    }
+                }
             },
-            "second person": {
-                "en": "You are|You're;plural",
-                "fi": "Te olette|Olette",
-                "nl": "Jullie zijn"
-            },
-            "third person": {
-                "en": "They are|They're",
-                "fi": "He ovat|Ovat",
-                "nl": "Zij zijn|Ze zijn"
+            "plural": {
+                "first person": {
+                    "en": "We were",
+                    "fi": "Me olimme|Olimme",
+                    "nl": "Wij waren|We waren"
+                },
+                "second person": {
+                    "en": "You were;plural",
+                    "fi": "Te olitte|Olitte",
+                    "nl": "Jullie waren"
+                },
+                "third person": {
+                    "en": "They were",
+                    "fi": "He olivat|Olivat",
+                    "nl": "Zij waren|Ze waren"
+                }
             }
         }
     },
@@ -48,45 +93,90 @@
             "fi": "Olla;omistaa",
             "nl": "Hebben"
         },
-        "singular": {
-            "first person": {
-                "en": "I have|I've",
-                "fi": "Minulla on",
-                "nl": "Ik heb"
-            },
-            "second person": {
-                "en": "You have|You've;singular",
-                "fi": "Sinulla on",
-                "nl": "Jij hebt|Je hebt"
-            },
-            "third person": {
-                "female": {
-                    "en": "She has|She's",
-                    "nl": "Zij heeft|Ze heeft",
-                    "fi": "Hänellä on;female"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have|I've",
+                    "fi": "Minulla on",
+                    "nl": "Ik heb"
                 },
-                "male": {
-                    "en": "He has|He's",
-                    "nl": "Hij heeft",
-                    "fi": "Hänellä on;male"
+                "second person": {
+                    "en": "You have|You've;singular",
+                    "fi": "Sinulla on",
+                    "nl": "Jij hebt|Je hebt"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She has|She's",
+                        "fi": "Hänellä on;female",
+                        "nl": "Zij heeft|Ze heeft"
+                    },
+                    "male": {
+                        "en": "He has|He's",
+                        "fi": "Hänellä on;male",
+                        "nl": "Hij heeft"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We have|We've",
+                    "fi": "Meillä on",
+                    "nl": "Wij hebben|We hebben"
+                },
+                "second person": {
+                    "en": "You have|You've;plural",
+                    "fi": "Teillä on",
+                    "nl": "Jullie hebben"
+                },
+                "third person": {
+                    "en": "They have|They've",
+                    "fi": "Heillä on",
+                    "nl": "Zij hebben|Ze hebben"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We have|We've",
-                "fi": "Meillä on",
-                "nl": "Wij hebben|We hebben"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I had",
+                    "fi": "Minulla oli",
+                    "nl": "Ik had"
+                },
+                "second person": {
+                    "en": "You had;singular",
+                    "fi": "Sinulla oli",
+                    "nl": "Jij had|Je had"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She had",
+                        "fi": "Hänellä oli;female",
+                        "nl": "Zij had|Ze had"
+                    },
+                    "male": {
+                        "en": "He had",
+                        "fi": "Hänellä oli;male",
+                        "nl": "Hij had"
+                    }
+                }
             },
-            "second person": {
-                "en": "You have|You've;plural",
-                "fi": "Teillä on",
-                "nl": "Jullie hebben"
-            },
-            "third person": {
-                "en": "They have|They've",
-                "fi": "Heillä on",
-                "nl": "Zij hebben|Ze hebben"
+            "plural": {
+                "first person": {
+                    "en": "We had",
+                    "fi": "Meillä oli",
+                    "nl": "Wij hadden|We hadden"
+                },
+                "second person": {
+                    "en": "You had;plural",
+                    "fi": "Teillä oli",
+                    "nl": "Jullie hadden"
+                },
+                "third person": {
+                    "en": "They had",
+                    "fi": "Heillä oli",
+                    "nl": "Zij hadden|Ze hadden"
+                }
             }
         }
     },
@@ -96,45 +186,90 @@
             "fi": "Maalata",
             "nl": "Schilderen"
         },
-        "singular": {
-            "first person": {
-                "en": "I paint",
-                "fi": "Minä maalaan|Maalaan",
-                "nl": "Ik schilder"
-            },
-            "second person": {
-                "en": "You paint;singular",
-                "fi": "Sinä maalaat|Maalaat",
-                "nl": "Jij schildert|Je schildert"
-            },
-            "third person": {
-                "female": {
-                    "en": "She paints",
-                    "fi": "Hän maalaa|Maalaa;female",
-                    "nl": "Zij schildert|Ze schildert"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I paint",
+                    "fi": "Minä maalaan|Maalaan",
+                    "nl": "Ik schilder"
                 },
-                "male": {
-                    "en": "He paints",
-                    "fi": "Hän maalaa|Maalaa;male",
-                    "nl": "Hij schildert"
+                "second person": {
+                    "en": "You paint;singular",
+                    "fi": "Sinä maalaat|Maalaat",
+                    "nl": "Jij schildert|Je schildert"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She paints",
+                        "fi": "Hän maalaa|Maalaa;female",
+                        "nl": "Zij schildert|Ze schildert"
+                    },
+                    "male": {
+                        "en": "He paints",
+                        "fi": "Hän maalaa|Maalaa;male",
+                        "nl": "Hij schildert"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We paint",
+                    "fi": "Me maalaamme|Maalaamme",
+                    "nl": "Wij schilderen|We schilderen"
+                },
+                "second person": {
+                    "en": "You paint;plural",
+                    "fi": "Te maalaatte|Maalaatte",
+                    "nl": "Jullie schilderen"
+                },
+                "third person": {
+                    "en": "They paint",
+                    "fi": "He maalaavat|Maalaavat",
+                    "nl": "Zij schilderen|Ze schilderen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We paint",
-                "fi": "Me maalaamme|Maalaamme",
-                "nl": "Wij schilderen|We schilderen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I painted",
+                    "fi": "Minä maalasin|Maalasin",
+                    "nl": "Ik schilderde"
+                },
+                "second person": {
+                    "en": "You painted;singular",
+                    "fi": "Sinä maalasit|Maalasit",
+                    "nl": "Jij schilderde|Je schilderde"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She painted",
+                        "fi": "Hän maalasi|Maalasi;female",
+                        "nl": "Zij schilderde|Ze schilderde"
+                    },
+                    "male": {
+                        "en": "He painted",
+                        "fi": "Hän maalasi|Maalasi;male",
+                        "nl": "Hij schilderde"
+                    }
+                }
             },
-            "second person": {
-                "en": "You paint;plural",
-                "fi": "Te maalaatte|Maalaatte",
-                "nl": "Jullie schilderen"
-            },
-            "third person": {
-                "en": "They paint",
-                "fi": "He maalaavat|Maalaavat",
-                "nl": "Zij schilderen|Ze schilderen"
+            "plural": {
+                "first person": {
+                    "en": "We painted",
+                    "fi": "Me maalasimme|Maalasimme",
+                    "nl": "Wij schilderden|We schilderden"
+                },
+                "second person": {
+                    "en": "You painted;plural",
+                    "fi": "Te maalasitte|Maalasitte",
+                    "nl": "Jullie schilderden"
+                },
+                "third person": {
+                    "en": "They painted",
+                    "fi": "He maalasivat|Maalasivat",
+                    "nl": "Zij schilderden|Ze schilderden"
+                }
             }
         }
     },
@@ -144,45 +279,90 @@
             "fi": "Kävellä",
             "nl": "Lopen"
         },
-        "singular": {
-            "first person": {
-                "en": "I walk",
-                "fi": "Minä kävelen|Kävelen",
-                "nl": "Ik loop"
-            },
-            "second person": {
-                "en": "You walk;singular",
-                "fi": "Sinä kävelet|Kävelet",
-                "nl": "Jij loopt|Je loopt"
-            },
-            "third person": {
-                "female": {
-                    "en": "She walks",
-                    "fi": "Hän kävelee|Kävelee;female",
-                    "nl": "Zij loopt|Ze loopt"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I walk",
+                    "fi": "Minä kävelen|Kävelen",
+                    "nl": "Ik loop"
                 },
-                "male": {
-                    "en": "He walks",
-                    "fi": "Hän kävelee|Kävelee;male",
-                    "nl": "Hij loopt"
+                "second person": {
+                    "en": "You walk;singular",
+                    "fi": "Sinä kävelet|Kävelet",
+                    "nl": "Jij loopt|Je loopt"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She walks",
+                        "fi": "Hän kävelee|Kävelee;female",
+                        "nl": "Zij loopt|Ze loopt"
+                    },
+                    "male": {
+                        "en": "He walks",
+                        "fi": "Hän kävelee|Kävelee;male",
+                        "nl": "Hij loopt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We walk",
+                    "fi": "Me kävelemme|Kävelemme",
+                    "nl": "Wij lopen|We lopen"
+                },
+                "second person": {
+                    "en": "You walk;plural",
+                    "fi": "Te kävelette|Kävelette",
+                    "nl": "Jullie lopen"
+                },
+                "third person": {
+                    "en": "They walk",
+                    "fi": "He kävelevät|Kävelevät",
+                    "nl": "Zij lopen|Ze lopen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We walk",
-                "fi": "Me kävelemme|Kävelemme",
-                "nl": "Wij lopen|We lopen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I walked",
+                    "fi": "Minä kävelen|Kävelen",
+                    "nl": "Ik liep"
+                },
+                "second person": {
+                    "en": "You walked;singular",
+                    "fi": "Sinä kävelet|Kävelet",
+                    "nl": "Jij liep|Je liep"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She walked",
+                        "fi": "Hän kävelee|Kävelee;female",
+                        "nl": "Zij liep|Ze liep"
+                    },
+                    "male": {
+                        "en": "He walked",
+                        "fi": "Hän kävelee|Kävelee;male",
+                        "nl": "Hij liep"
+                    }
+                }
             },
-            "second person": {
-                "en": "You walk;plural",
-                "fi": "Te kävelette|Kävelette",
-                "nl": "Jullie lopen"
-            },
-            "third person": {
-                "en": "They walk",
-                "fi": "He kävelevät|Kävelevät",
-                "nl": "Zij lopen|Ze lopen"
+            "plural": {
+                "first person": {
+                    "en": "We walked",
+                    "fi": "Me kävelemme|Kävelemme",
+                    "nl": "Wij liepen|We liepen"
+                },
+                "second person": {
+                    "en": "You walked;plural",
+                    "fi": "Te kävelette|Kävelette",
+                    "nl": "Jullie liepen"
+                },
+                "third person": {
+                    "en": "They walked",
+                    "fi": "He kävelevät|Kävelevät",
+                    "nl": "Zij liepen|Ze liepen"
+                }
             }
         }
     },
@@ -192,45 +372,90 @@
             "fi": "Juosta",
             "nl": "Rennen"
         },
-        "singular": {
-            "first person": {
-                "en": "I run",
-                "fi": "Minä juoksen|Juoksen",
-                "nl": "Ik ren"
-            },
-            "second person": {
-                "en": "You run;singular",
-                "fi": "Sinä juokset|Juokset",
-                "nl": "Jij rent|Je rent"
-            },
-            "third person": {
-                "female": {
-                    "en": "She runs",
-                    "fi": "Hän juoksee|Juoksee;female",
-                    "nl": "Zij rent|Ze rent"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I run",
+                    "fi": "Minä juoksen|Juoksen",
+                    "nl": "Ik ren"
                 },
-                "male": {
-                    "en": "He runs",
-                    "fi": "Hän juoksee|Juoksee;male",
-                    "nl": "Hij rent"
+                "second person": {
+                    "en": "You run;singular",
+                    "fi": "Sinä juokset|Juokset",
+                    "nl": "Jij rent|Je rent"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She runs",
+                        "fi": "Hän juoksee|Juoksee;female",
+                        "nl": "Zij rent|Ze rent"
+                    },
+                    "male": {
+                        "en": "He runs",
+                        "fi": "Hän juoksee|Juoksee;male",
+                        "nl": "Hij rent"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We run",
+                    "fi": "Me juoksemme|Juoksemme",
+                    "nl": "Wij rennen|We rennen"
+                },
+                "second person": {
+                    "en": "You run;plural",
+                    "fi": "Te juoksette|Juoksette",
+                    "nl": "Jullie rennen"
+                },
+                "third person": {
+                    "en": "They run",
+                    "fi": "He juoksevat|Juoksevat",
+                    "nl": "Zij rennen|Ze rennen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We run",
-                "fi": "Me juoksemme|Juoksemme",
-                "nl": "Wij rennen|We rennen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I ran",
+                    "fi": "Minä juoksin|Juoksin",
+                    "nl": "Ik rende"
+                },
+                "second person": {
+                    "en": "You ran;singular",
+                    "fi": "Sinä juoksit|Juoksit",
+                    "nl": "Jij rende|Je rende"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She ran",
+                        "fi": "Hän juoksi|Juoksi;female",
+                        "nl": "Zij rende|Ze rende"
+                    },
+                    "male": {
+                        "en": "He ran",
+                        "fi": "Hän juoksi|Juoksi;male",
+                        "nl": "Hij rende"
+                    }
+                }
             },
-            "second person": {
-                "en": "You run;plural",
-                "fi": "Te juoksette|Juoksette",
-                "nl": "Jullie rennen"
-            },
-            "third person": {
-                "en": "They run",
-                "fi": "He juoksevat|Juoksevat",
-                "nl": "Zij rennen|Ze rennen"
+            "plural": {
+                "first person": {
+                    "en": "We ran",
+                    "fi": "Me juoksimme|Juoksimme",
+                    "nl": "Wij renden|We renden"
+                },
+                "second person": {
+                    "en": "You ran;plural",
+                    "fi": "Te juoksitte|Juoksitte",
+                    "nl": "Jullie renden"
+                },
+                "third person": {
+                    "en": "They ran",
+                    "fi": "He juoksivat|Juoksivat",
+                    "nl": "Zij renden|Ze renden"
+                }
             }
         }
     },
@@ -240,45 +465,90 @@
             "fi": "Syödä",
             "nl": "Eten"
         },
-        "singular": {
-            "first person": {
-                "en": "I eat",
-                "fi": "Minä syön|Syön",
-                "nl": "Ik eet"
-            },
-            "second person": {
-                "en": "You eat;singular",
-                "fi": "Sinä syöt|Syöt",
-                "nl": "Jij eet|Je eet"
-            },
-            "third person": {
-                "female": {
-                    "en": "She eats",
-                    "fi": "Hän syö|Syö;female",
-                    "nl": "Zij eet|Ze eet"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I eat",
+                    "fi": "Minä syön|Syön",
+                    "nl": "Ik eet"
                 },
-                "male": {
-                    "en": "He eats",
-                    "fi": "Hän syö|Syö;male",
-                    "nl": "Hij eet"
+                "second person": {
+                    "en": "You eat;singular",
+                    "fi": "Sinä syöt|Syöt",
+                    "nl": "Jij eet|Je eet"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She eats",
+                        "fi": "Hän syö|Syö;female",
+                        "nl": "Zij eet|Ze eet"
+                    },
+                    "male": {
+                        "en": "He eats",
+                        "fi": "Hän syö|Syö;male",
+                        "nl": "Hij eet"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We eat",
+                    "fi": "Me syömme|Syömme",
+                    "nl": "Wij eten|We eten"
+                },
+                "second person": {
+                    "en": "You eat;plural",
+                    "fi": "Te syötte|Syötte",
+                    "nl": "Jullie eten"
+                },
+                "third person": {
+                    "en": "They eat",
+                    "fi": "He syövät|Syövät",
+                    "nl": "Zij eten|Ze eten"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We eat",
-                "fi": "Me syömme|Syömme",
-                "nl": "Wij eten|We eten"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I ate",
+                    "fi": "Minä söin|Söin",
+                    "nl": "Ik at"
+                },
+                "second person": {
+                    "en": "You ate;singular",
+                    "fi": "Sinä söit|Söit",
+                    "nl": "Jij at|Je at"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She ate",
+                        "fi": "Hän söi|Sö;female",
+                        "nl": "Zij at|Ze at"
+                    },
+                    "male": {
+                        "en": "He ate",
+                        "fi": "Hän söi|Söi;male",
+                        "nl": "Hij at"
+                    }
+                }
             },
-            "second person": {
-                "en": "You eat;plural",
-                "fi": "Te syötte|Syötte",
-                "nl": "Jullie eten"
-            },
-            "third person": {
-                "en": "They eat",
-                "fi": "He syövät|Syövät",
-                "nl": "Zij eten|Ze eten"
+            "plural": {
+                "first person": {
+                    "en": "We ate",
+                    "fi": "Me söimme|Söimme",
+                    "nl": "Wij aten|We aten"
+                },
+                "second person": {
+                    "en": "You ate;plural",
+                    "fi": "Te söitte|Söitte",
+                    "nl": "Jullie aten"
+                },
+                "third person": {
+                    "en": "They ate",
+                    "fi": "He söivät|Söivät",
+                    "nl": "Zij aten|Ze aten"
+                }
             }
         }
     },
@@ -288,45 +558,90 @@
             "fi": "Nukkua",
             "nl": "Slapen"
         },
-        "singular": {
-            "first person": {
-                "en": "I sleep",
-                "fi": "Minä nukun|Nukun",
-                "nl": "Ik slaap"
-            },
-            "second person": {
-                "en": "You sleep;singular",
-                "fi": "Sinä nukut|Nukut",
-                "nl": "Jij slaapt|Je slaapt"
-            },
-            "third person": {
-                "female": {
-                    "en": "She sleeps",
-                    "fi": "Hän nukkuu|Nukkuu;female",
-                    "nl": "Zij slaapt|Ze slaapt"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I sleep",
+                    "fi": "Minä nukun|Nukun",
+                    "nl": "Ik slaap"
                 },
-                "male": {
-                    "en": "He sleeps",
-                    "fi": "Hän nukkuu|Nukkuu;male",
-                    "nl": "Hij slaapt"
+                "second person": {
+                    "en": "You sleep;singular",
+                    "fi": "Sinä nukut|Nukut",
+                    "nl": "Jij slaapt|Je slaapt"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She sleeps",
+                        "fi": "Hän nukkuu|Nukkuu;female",
+                        "nl": "Zij slaapt|Ze slaapt"
+                    },
+                    "male": {
+                        "en": "He sleeps",
+                        "fi": "Hän nukkuu|Nukkuu;male",
+                        "nl": "Hij slaapt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We sleep",
+                    "fi": "Me nukumme|Nukumme",
+                    "nl": "Wij slapen|We slapen"
+                },
+                "second person": {
+                    "en": "You sleep;plural",
+                    "fi": "Te nukutte|Nukutte",
+                    "nl": "Jullie slapen"
+                },
+                "third person": {
+                    "en": "They sleep",
+                    "fi": "He nukkuvat|Nukkuvat",
+                    "nl": "Zij slapen|Ze slapen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We sleep",
-                "fi": "Me nukumme|Nukumme",
-                "nl": "Wij slapen|We slapen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I slept",
+                    "fi": "Minä nukuin|Nukuin",
+                    "nl": "Ik sliep"
+                },
+                "second person": {
+                    "en": "You slept;singular",
+                    "fi": "Sinä nukuit|Nukuit",
+                    "nl": "Jij sliep|Je sliep"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She slept",
+                        "fi": "Hän nukkui|Nukkui;female",
+                        "nl": "Zij sliep|Ze sliep"
+                    },
+                    "male": {
+                        "en": "He slept",
+                        "fi": "Hän nukkui|Nukkui;male",
+                        "nl": "Hij sliep"
+                    }
+                }
             },
-            "second person": {
-                "en": "You sleep;plural",
-                "fi": "Te nukutte|Nukutte",
-                "nl": "Jullie slapen"
-            },
-            "third person": {
-                "en": "They sleep",
-                "fi": "He nukkuvat|Nukkuvat",
-                "nl": "Zij slapen|Ze slapen"
+            "plural": {
+                "first person": {
+                    "en": "We slept",
+                    "fi": "Me nukuimme|Nukuimme",
+                    "nl": "Wij sliepen|We sliepen"
+                },
+                "second person": {
+                    "en": "You slept;plural",
+                    "fi": "Te nukuitte|Nukuitte",
+                    "nl": "Jullie sliepen"
+                },
+                "third person": {
+                    "en": "They slept",
+                    "fi": "He nukkuivat|Nukkuivat",
+                    "nl": "Zij sliepen|Ze sliepen"
+                }
             }
         }
     },
@@ -336,45 +651,90 @@
             "fi": "Mennä",
             "nl": "Gaan"
         },
-        "singular": {
-            "first person": {
-                "en": "I go",
-                "fi": "Minä menen|Menen",
-                "nl": "Ik ga"
-            },
-            "second person": {
-                "en": "You go;singular",
-                "fi": "Sinä menet|Menet",
-                "nl": "Jij gaat|Je gaat"
-            },
-            "third person": {
-                "female": {
-                    "en": "She goes",
-                    "fi": "Hän menee|Menee;female",
-                    "nl": "Zij gaat|Ze gaat"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I go",
+                    "fi": "Minä menen|Menen",
+                    "nl": "Ik ga"
                 },
-                "male": {
-                    "en": "He goes",
-                    "fi": "Hän menee|Menee;male",
-                    "nl": "Hij gaat"
+                "second person": {
+                    "en": "You go;singular",
+                    "fi": "Sinä menet|Menet",
+                    "nl": "Jij gaat|Je gaat"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She goes",
+                        "fi": "Hän menee|Menee;female",
+                        "nl": "Zij gaat|Ze gaat"
+                    },
+                    "male": {
+                        "en": "He goes",
+                        "fi": "Hän menee|Menee;male",
+                        "nl": "Hij gaat"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We go",
+                    "fi": "Me menemme|Menemme",
+                    "nl": "Wij gaan|We gaan"
+                },
+                "second person": {
+                    "en": "You go;plural",
+                    "fi": "Te menette|Menette",
+                    "nl": "Jullie gaan"
+                },
+                "third person": {
+                    "en": "They go",
+                    "fi": "He menevät|Menevät",
+                    "nl": "Zij gaan|Ze gaan"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We go",
-                "fi": "Me menemme|Menemme",
-                "nl": "Wij gaan|We gaan"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I went",
+                    "fi": "Minä menin|Menin",
+                    "nl": "Ik ging"
+                },
+                "second person": {
+                    "en": "You went;singular",
+                    "fi": "Sinä menit|Menit",
+                    "nl": "Jij ging|Je ging"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She went",
+                        "fi": "Hän meni|Meni;female",
+                        "nl": "Zij ging|Ze ging"
+                    },
+                    "male": {
+                        "en": "He went",
+                        "fi": "Hän meni|Meni;male",
+                        "nl": "Hij ging"
+                    }
+                }
             },
-            "second person": {
-                "en": "You go;plural",
-                "fi": "Te menette|Menette",
-                "nl": "Jullie gaan"
-            },
-            "third person": {
-                "en": "They go",
-                "fi": "He menevät|Menevät",
-                "nl": "Zij gaan|Ze gaan"
+            "plural": {
+                "first person": {
+                    "en": "We went",
+                    "fi": "Me menimme|Menimme",
+                    "nl": "Wij gingen|We gingen"
+                },
+                "second person": {
+                    "en": "You went;plural",
+                    "fi": "Te menitte|Menitte",
+                    "nl": "Jullie gingen"
+                },
+                "third person": {
+                    "en": "They went",
+                    "fi": "He menivät|Menivät",
+                    "nl": "Zij gingen|Ze gingen"
+                }
             }
         }
     },
@@ -384,93 +744,183 @@
             "fi": "Tulla",
             "nl": "Komen"
         },
-        "singular": {
-            "first person": {
-                "en": "I come",
-                "fi": "Minä tulen|Tulen",
-                "nl": "Ik kom"
-            },
-            "second person": {
-                "en": "You come;singular",
-                "fi": "Sinä tulet|Tulet",
-                "nl": "Jij komt|Je komt"
-            },
-            "third person": {
-                "female": {
-                    "en": "She comes",
-                    "fi": "Hän tulee|Tulee;female",
-                    "nl": "Zij komt|Ze komt"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I come",
+                    "fi": "Minä tulen|Tulen",
+                    "nl": "Ik kom"
                 },
-                "male": {
-                    "en": "He comes",
-                    "fi": "Hän tulee|Tulee;male",
-                    "nl": "Hij komt"
+                "second person": {
+                    "en": "You come;singular",
+                    "fi": "Sinä tulet|Tulet",
+                    "nl": "Jij komt|Je komt"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She comes",
+                        "fi": "Hän tulee|Tulee;female",
+                        "nl": "Zij komt|Ze komt"
+                    },
+                    "male": {
+                        "en": "He comes",
+                        "fi": "Hän tulee|Tulee;male",
+                        "nl": "Hij komt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We come",
+                    "fi": "Me tulemme|Tulemme",
+                    "nl": "Wij komen|We komen"
+                },
+                "second person": {
+                    "en": "You come;plural",
+                    "fi": "Te tulette|Tulette",
+                    "nl": "Jullie komen"
+                },
+                "third person": {
+                    "en": "They come",
+                    "fi": "He tulevat|Tulevat",
+                    "nl": "Zij komen|Ze komen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We come",
-                "fi": "Me tulemme|Tulemme",
-                "nl": "Wij komen|We komen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I came",
+                    "fi": "Minä tulin|Tulin",
+                    "nl": "Ik kwam"
+                },
+                "second person": {
+                    "en": "You came;singular",
+                    "fi": "Sinä tulit|Tulit",
+                    "nl": "Jij kwam|Je kwam"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She came",
+                        "fi": "Hän tuli|Tuli;female",
+                        "nl": "Zij kwam|Ze kwam"
+                    },
+                    "male": {
+                        "en": "He came",
+                        "fi": "Hän tuli|Tuli;male",
+                        "nl": "Hij kwam"
+                    }
+                }
             },
-            "second person": {
-                "en": "You come;plural",
-                "fi": "Te tulette|Tulette",
-                "nl": "Jullie komen"
-            },
-            "third person": {
-                "en": "They come",
-                "fi": "He tulevat|Tulevat",
-                "nl": "Zij komen|Ze komen"
+            "plural": {
+                "first person": {
+                    "en": "We came",
+                    "fi": "Me tulimme|Tulimme",
+                    "nl": "Wij kwamen|We kwamen"
+                },
+                "second person": {
+                    "en": "You came;plural",
+                    "fi": "Te tulitte|Tulitte",
+                    "nl": "Jullie kwamen"
+                },
+                "third person": {
+                    "en": "They came",
+                    "fi": "He tulivat|Tulivat",
+                    "nl": "Zij kwamen|Ze kwamen"
+                }
             }
         }
     },
     "to read": {
         "infinitive": {
             "en": "To read",
-            "fi": "Tulla",
+            "fi": "Lukea",
             "nl": "Lezen"
         },
-        "singular": {
-            "first person": {
-                "en": "I read",
-                "fi": "Minä luen|Luen",
-                "nl": "Ik lees"
-            },
-            "second person": {
-                "en": "You read;singular",
-                "fi": "Sinä luet|Luet",
-                "nl": "Jij leest|Je leest"
-            },
-            "third person": {
-                "female": {
-                    "en": "She reads",
-                    "fi": "Hän lukee|Lukee;female",
-                    "nl": "Zij leest|Ze leest"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I read;present tense",
+                    "fi": "Minä luen|Luen",
+                    "nl": "Ik lees"
                 },
-                "male": {
-                    "en": "He reads",
-                    "fi": "Hän lukee|Lukee;male",
-                    "nl": "Hij leest"
+                "second person": {
+                    "en": "You read;singular present tense",
+                    "fi": "Sinä luet|Luet",
+                    "nl": "Jij leest|Je leest"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She reads",
+                        "fi": "Hän lukee|Lukee;female",
+                        "nl": "Zij leest|Ze leest"
+                    },
+                    "male": {
+                        "en": "He reads",
+                        "fi": "Hän lukee|Lukee;male",
+                        "nl": "Hij leest"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We read;present tense",
+                    "fi": "Me luemme|Luemme",
+                    "nl": "Wij lezen|We lezen"
+                },
+                "second person": {
+                    "en": "You read;plural present tense",
+                    "fi": "Te luette|Luette",
+                    "nl": "Jullie lezen"
+                },
+                "third person": {
+                    "en": "They read;present tense",
+                    "fi": "He lukevat|Lukevat",
+                    "nl": "Zij lezen|Ze lezen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We read",
-                "fi": "Me luemme|Luemme",
-                "nl": "Wij lezen|We lezen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I read;past tense",
+                    "fi": "Minä luin|Luin",
+                    "nl": "Ik las"
+                },
+                "second person": {
+                    "en": "You read;singular past tense",
+                    "fi": "Sinä luit|Luit",
+                    "nl": "Jij las|Je las"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She read",
+                        "fi": "Hän luki|Luki;female",
+                        "nl": "Zij las|Ze las"
+                    },
+                    "male": {
+                        "en": "He read",
+                        "fi": "Hän luki|Luki;male",
+                        "nl": "Hij las"
+                    }
+                }
             },
-            "second person": {
-                "en": "You read;plural",
-                "fi": "Te luette|Luette",
-                "nl": "Jullie lezen"
-            },
-            "third person": {
-                "en": "They read",
-                "fi": "He lukevat|Lukevat",
-                "nl": "Zij lezen|Ze lezen"
+            "plural": {
+                "first person": {
+                    "en": "We read;past tense",
+                    "fi": "Me luimme|Luimme",
+                    "nl": "Wij lazen|We lazen"
+                },
+                "second person": {
+                    "en": "You read;plural past tense",
+                    "fi": "Te luitte|Luitte",
+                    "nl": "Jullie lazen"
+                },
+                "third person": {
+                    "en": "They read;past tense",
+                    "fi": "He lukivat|Lukivat",
+                    "nl": "Zij lazen|Ze lazen"
+                }
             }
         }
     },
@@ -480,45 +930,90 @@
             "fi": "Kirjoittaa",
             "nl": "Schrijven"
         },
-        "singular": {
-            "first person": {
-                "en": "I write",
-                "fi": "Minä kirjoitan|Kirjoitan",
-                "nl": "Ik schrijf"
-            },
-            "second person": {
-                "en": "You write;singular",
-                "fi": "Sinä kirjoitat|Kirjoitat",
-                "nl": "Jij schrijft|Je schrijft"
-            },
-            "third person": {
-                "female": {
-                    "en": "She writes",
-                    "fi": "Hän kirjoittaa|Kirjoittaa;female",
-                    "nl": "Zij schrijft|Ze schrijft"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I write",
+                    "fi": "Minä kirjoitan|Kirjoitan",
+                    "nl": "Ik schrijf"
                 },
-                "male": {
-                    "en": "He writes",
-                    "fi": "Hän kirjoittaa|Kirjoittaa;male",
-                    "nl": "Hij schrijft"
+                "second person": {
+                    "en": "You write;singular",
+                    "fi": "Sinä kirjoitat|Kirjoitat",
+                    "nl": "Jij schrijft|Je schrijft"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She writes",
+                        "fi": "Hän kirjoittaa|Kirjoittaa;female",
+                        "nl": "Zij schrijft|Ze schrijft"
+                    },
+                    "male": {
+                        "en": "He writes",
+                        "fi": "Hän kirjoittaa|Kirjoittaa;male",
+                        "nl": "Hij schrijft"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We write",
+                    "fi": "Me kirjoitamme|Kirjoitamme",
+                    "nl": "Wij schrijven|We schrijven"
+                },
+                "second person": {
+                    "en": "You write;plural",
+                    "fi": "Te kirjoitatte|Kirjoitatte",
+                    "nl": "Jullie schrijven"
+                },
+                "third person": {
+                    "en": "They write",
+                    "fi": "He kirjoittavat|Kirjoittavat",
+                    "nl": "Zij schrijven|Ze schrijven"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We write",
-                "fi": "Me kirjoitamme|Kirjoitamme",
-                "nl": "Wij schrijven|We schrijven"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I wrote",
+                    "fi": "Minä kirjoitin|Kirjoitin",
+                    "nl": "Ik schreef"
+                },
+                "second person": {
+                    "en": "You wrote;singular",
+                    "fi": "Sinä kirjoitit|Kirjoitit",
+                    "nl": "Jij schreef|Je schreef"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She wrote",
+                        "fi": "Hän kirjoitti|Kirjoitti;female",
+                        "nl": "Zij schreef|Ze schreef"
+                    },
+                    "male": {
+                        "en": "He wrote",
+                        "fi": "Hän kirjoitti|Kirjoitti;male",
+                        "nl": "Hij schreef"
+                    }
+                }
             },
-            "second person": {
-                "en": "You write;plural",
-                "fi": "Te kirjoitatte|Kirjoitatte",
-                "nl": "Jullie schrijven"
-            },
-            "third person": {
-                "en": "They write",
-                "fi": "He kirjoittavat|Kirjoittavat",
-                "nl": "Zij schrijven|Ze schrijven"
+            "plural": {
+                "first person": {
+                    "en": "We wrote",
+                    "fi": "Me kirjoitimme|Kirjoitimme",
+                    "nl": "Wij schreven|We schreven"
+                },
+                "second person": {
+                    "en": "You wrote;plural",
+                    "fi": "Te kirjoititte|Kirjoititte",
+                    "nl": "Jullie schreven"
+                },
+                "third person": {
+                    "en": "They wrote",
+                    "fi": "He kirjoittivat|Kirjoittivat",
+                    "nl": "Zij schreven|Ze schreven"
+                }
             }
         }
     },
@@ -528,45 +1023,90 @@
             "fi": "Asua",
             "nl": "Wonen"
         },
-        "singular": {
-            "first person": {
-                "en": "I live",
-                "fi": "Minä asun|Asun",
-                "nl": "Ik woon"
-            },
-            "second person": {
-                "en": "You live;singular",
-                "fi": "Sinä asut|Asut",
-                "nl": "Jij woont|Je woont"
-            },
-            "third person": {
-                "female": {
-                    "en": "She lives",
-                    "fi": "Hän asuu|Asuu;female",
-                    "nl": "Zij woont|Ze woont"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I live",
+                    "fi": "Minä asun|Asun",
+                    "nl": "Ik woon"
                 },
-                "male": {
-                    "en": "He lives",
-                    "fi": "Hän asuu|Asuu;male",
-                    "nl": "Hij woont"
+                "second person": {
+                    "en": "You live;singular",
+                    "fi": "Sinä asut|Asut",
+                    "nl": "Jij woont|Je woont"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She lives",
+                        "fi": "Hän asuu|Asuu;female",
+                        "nl": "Zij woont|Ze woont"
+                    },
+                    "male": {
+                        "en": "He lives",
+                        "fi": "Hän asuu|Asuu;male",
+                        "nl": "Hij woont"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "We live",
+                    "fi": "Me asumme|Asumme",
+                    "nl": "Wij wonen|We wonen"
+                },
+                "second person": {
+                    "en": "You live;plural",
+                    "fi": "Te asutte|Asutte",
+                    "nl": "Jullie wonen"
+                },
+                "third person": {
+                    "en": "They live",
+                    "fi": "He asuvat|Asuvat",
+                    "nl": "Zij wonen|Ze wonen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We live",
-                "fi": "Me asumme|Asumme",
-                "nl": "Wij wonen|We wonen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I lived",
+                    "fi": "Minä asuin|Asuin",
+                    "nl": "Ik woonde"
+                },
+                "second person": {
+                    "en": "You lived;singular",
+                    "fi": "Sinä asuit|Asuit",
+                    "nl": "Jij woonde|Je woonde"
+                },
+                "third person": {
+                    "female": {
+                        "en": "She lived",
+                        "fi": "Hän asui|Asui;female",
+                        "nl": "Zij woonde|Ze woonde"
+                    },
+                    "male": {
+                        "en": "He lived",
+                        "fi": "Hän asui|Asui;male",
+                        "nl": "Hij woonde"
+                    }
+                }
             },
-            "second person": {
-                "en": "You live;plural",
-                "fi": "Te asutte|Asutte",
-                "nl": "Jullie wonen"
-            },
-            "third person": {
-                "en": "They live",
-                "fi": "He asuvat|Asuvat",
-                "nl": "Zij wonen|Ze wonen"
+            "plural": {
+                "first person": {
+                    "en": "We lived",
+                    "fi": "Me asuimme|Asuimme",
+                    "nl": "Wij woonden|We woonden"
+                },
+                "second person": {
+                    "en": "You lived;plural",
+                    "fi": "Te asuitte|Asuitte",
+                    "nl": "Jullie woonden"
+                },
+                "third person": {
+                    "en": "They lived",
+                    "fi": "He asuivat|Asuivat",
+                    "nl": "Zij woonden|Ze woonden"
+                }
             }
         }
     }

@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Add a topic with interrogative pronouns (who, what, where, ...).
 - Add links to https://en.wiktionary.org/ for alternative meanings as well.
+- Add past tense of verbs.
 
 ## v0.4.0 - 2022-12-14
 

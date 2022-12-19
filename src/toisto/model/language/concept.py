@@ -52,7 +52,12 @@ class LeafConcept(Concept):
     """Class representing an atomic concept from a topic."""
 
     def __init__(self, concept_id: ConceptId, labels: dict[Language, Labels], uses: tuple[ConceptId, ...]) -> None:
-        extra_uses = (concept_id.replace("plural", "singular"),) if "plural" in concept_id else ()
+        if "plural" in concept_id:
+            extra_uses: tuple[str, ...] = (concept_id.replace("plural", "singular"),)
+        elif "past tense" in concept_id:
+            extra_uses = (concept_id.replace("past tense", "present tense"),)
+        else:
+            extra_uses = ()
         super().__init__(concept_id, uses + cast(tuple[ConceptId], extra_uses))
         self._labels = labels
 
@@ -120,7 +125,7 @@ class CompositeConcept(Concept):
         quiz_types = []
         for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
             if category1 != category2 and category2 is not None:
-                quiz_types.append (GRAMMATICAL_QUIZ_TYPES[category2])
+                quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
         return tuple(quiz_types)
 
     def leaf_concepts(self) -> Iterable[LeafConcept]:
