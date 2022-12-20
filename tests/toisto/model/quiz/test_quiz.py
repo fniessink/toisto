@@ -1,7 +1,9 @@
 """Quiz unit tests."""
 
+from typing import get_args
+
 from toisto.model.model_types import ConceptId
-from toisto.model.quiz.quiz import easiest_quizzes, INSTRUCTION
+from toisto.model.quiz.quiz import easiest_quizzes, instruction, QuizType
 
 from ...base import ToistoTestCase
 
@@ -70,10 +72,10 @@ class QuizTest(QuizTestCase):
             self.assertEqual(tuple(other_answers), quiz.other_answers(alternative))
 
     def test_instructions(self):
-        """Test the instructions"""
-        for quiz_types, instruction in INSTRUCTION.items():
-            quiz = self.create_quiz("hi", "fi", "fi", "Hei", ["Hei hei"], quiz_types)
-            self.assertEqual(instruction + " Finnish", quiz.instruction())
+        """Test the instructions."""
+        for quiz_type in get_args(QuizType):
+            quiz = self.create_quiz("hi", "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
+            self.assertEqual(instruction(quiz_type) + " Finnish", quiz.instruction())
 
     def test_instruction_with_hint(self):
         """Test that the question hint is added to the instruction."""
@@ -88,7 +90,7 @@ class QuizTest(QuizTestCase):
     def test_question_hint_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a hint is not shown when the question and answer languages are the same."""
         quiz = self.create_quiz("to be", "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
-        self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
+        self.assertEqual("Give the [underline]plural form[/underline] in Finnish", quiz.instruction())
 
     def test_question_hint_is_ignored_in_answer(self):
         """Test that a hint can be added to the question."""

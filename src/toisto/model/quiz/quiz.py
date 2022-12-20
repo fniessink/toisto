@@ -19,7 +19,6 @@ QuizType = Literal[
     "listen",
     "pluralize",
     "singularize",
-    "give infinitive",
     "masculinize",
     "feminize",
     "neuterize",
@@ -29,12 +28,14 @@ QuizType = Literal[
     "give first person",
     "give second person",
     "give third person",
+    "give infinitive",
+    "give present tense",
+    "give past tense"
 ]
 GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "plural": "pluralize",
     "singular": "singularize",
     "male": "masculinize",
-    "infinitive": "give infinitive",
     "female": "feminize",
     "neuter": "neuterize",
     "positive degree": "give positive degree",
@@ -42,38 +43,21 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "superlative degree": "give superlative degree",
     "first person": "give first person",
     "second person": "give second person",
-    "third person": "give third person"
+    "third person": "give third person",
+    "infinitive": "give infinitive",
+    "present tense": "give present tense",
+    "past tense": "give past tense"
 }
-INSTRUCTION: dict[tuple[QuizType, ...], str] = {
-    ("translate",): "Translate into",
-    ("listen",): "Listen and write in",
-    ("pluralize",): "Give the [underline]plural[/underline] in",
-    ("pluralize", "give first person"): "Give the [underline]first person plural[/underline] in",
-    ("pluralize", "give second person"): "Give the [underline]second person plural[/underline] in",
-    ("pluralize", "give third person"): "Give the [underline]third person plural[/underline] in",
-    ("singularize",): "Give the [underline]singular[/underline] in",
-    ("singularize", "feminize"): "Give the [underline]singular female form[/underline] in",
-    ("singularize", "masculinize"): "Give the [underline]singular male form[/underline] in",
-    ("singularize", "give first person"): "Give the [underline]first person singular[/underline] in",
-    ("singularize", "give second person"): "Give the [underline]first second singular[/underline] in",
-    ("singularize", "give third person", "feminize"):
-        "Give the [underline]third person singular female[/underline] in",
-    ("singularize", "give third person", "masculinize"):
-        "Give the [underline]third person singular male[/underline] in",
-    ("give infinitive",): "Give the [underline]infinitive[/underline] form in",
-    ("masculinize",): "Give the [underline]male[/underline] form in",
-    ("feminize",): "Give the [underline]female[/underline] form in",
-    ("neuterize",): "Give the [underline]neuter[/underline] form in",
-    ("give positive degree",): "Give the [underline]positive degree[/underline] in",
-    ("give comparitive degree",): "Give the [underline]comparitive degree[/underline] in",
-    ("give superlative degree",): "Give the [underline]superlative degree[/underline] in",
-    ("give first person",): "Give the [underline]first person[/underline] in",
-    ("give second person",): "Give the [underline]second person[/underline] in",
-    ("give third person",): "Give the [underline]third person[/underline] in",
-    ("give third person", "feminize"): "Give the [underline]third person female[/underline] in",
-    ("give third person", "masculinize"): "Give the [underline]third person male[/underline] in",
-    ("give third person", "neuterize"): "Give the [underline]third person neuter[/underline] in",
-}
+QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
+INSTRUCTIONS: dict[QuizType, str] = dict(translate="Translate into", listen="Listen and write in")
+
+
+def instruction(*quiz_types: QuizType) -> str:
+    """Return the instruction text for the quiz types."""
+    if instruction_label := INSTRUCTIONS.get(quiz_types[0]):
+        return instruction_label
+    categories = ' '.join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in quiz_types)
+    return f"Give the [underline]{categories} form[/underline] in"
 
 
 @dataclass(frozen=True)
@@ -148,7 +132,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         """Generate the quiz instruction."""
         hint = self._question.hint
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
-        return f"{INSTRUCTION[self.quiz_types]} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
+        return f"{instruction(*self.quiz_types)} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
     def has_same_concept(self, other) -> bool:
         """Return whether this quiz belongs to the same concept as the other quiz."""

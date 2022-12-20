@@ -111,7 +111,7 @@ At the moment, Toisto has the following types of quizzes:
 - Listen to a word or phrase from your practice language and type what you hear. For example, if your practice language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
 - Give a singular version of a plural, or a plural version of a singular. For example, what is the plural of "Talo" (meaning house in Finnish, and the answer is "Talot") or what is the singular of "Huizen" (meaning houses in Dutch, and the answer is "Huis").
 - Change the grammatical person from and to first person, second person, and third person. For example, when asked what the second person of "Ik eet" (meaning "I eat") is, the correct answer would be "Jij eet" ("You eat").
-- Change the grammatical gender from female to male or the other way around. For example, what is the male version of "She is" or what is the female version of "He is".
+- Change the tense of verbs from present to past tense or the other way around. For example, what is the past tense of "She walks" or what is the present tense version of "He painted".
 - Change the comparative degree of an adjective. For example, what is the superlative degree of "Aardig" (which means "Nice", and the answer would be "Aardigst").
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.

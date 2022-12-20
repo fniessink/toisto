@@ -84,7 +84,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
         quiz = self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
         self.assertEqual(
-            "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]", instruction(quiz)
+            "[quiz]Give the [underline]third person female form[/underline] in Dutch:[/quiz]", instruction(quiz)
         )
 
 

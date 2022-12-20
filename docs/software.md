@@ -238,6 +238,40 @@ When concepts are verbs, infinitives can be specified as follows:
 
 Infinitives, like the different persons, are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the infinitive gets `to have/infinitive` as key.
 
+### Tenses
+
+When concepts are verbs, the present tense and the past tense can be specified as follows:
+
+```json
+{
+    "to be": {
+        "infinitive": "...",
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I am|I'm",
+                    "fi": "Minä olen|Olen",
+                },
+                "second person": "..."
+            },
+            "plural": "..."
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I was",
+                    "fi": "Minä olin|Olin",
+                },
+                "second person": "..."
+            },
+            "plural": "..."
+        }
+    }
+}
+```
+
+Tenses, like the infinitive, are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the present tense gets `to be/present tense` as key and the past tense `to be/past tense`.
+
 ### Degrees of comparison
 
 Degrees of comparison are specified as follows:

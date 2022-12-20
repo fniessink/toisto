@@ -578,6 +578,105 @@ class ConceptQuizzesTest(ToistoTestCase):
             concept.quizzes("nl", "fi")
         )
 
+
+class TenseQuizzesTest(ToistoTestCase):
+    """Unit tests for concepts with tenses."""
+
+    def test_tense_nested_with_grammatical_person(self):
+        """Test that quizzes can be generated for tense nested with grammatical person."""
+        concept = concept_factory(
+            "to eat",
+            {
+                "present tense": {
+                    "singular": dict(en="I eat", nl="Ik eet"),
+                    "plural": dict(en="We eat", nl="Wij eten")
+                },
+                "past tense": {
+                    "singular": dict(en="I ate", nl="Ik at"),
+                    "plural": dict(en="We ate", nl="Wij aten")
+                }
+            }
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("to eat", "nl", "en", "Ik eet", ["I eat"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "I eat", ["Ik eet"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Ik eet"], "listen"),
+                self.create_quiz("to eat", "nl", "en", "Wij eten", ["We eat"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "We eat", ["Wij eten"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Wij eten"], "listen"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Wij eten"], "pluralize"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Ik eet"], "singularize"),
+                self.create_quiz("to eat", "nl", "en", "Ik at", ["I ate"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "I ate", ["Ik at"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik at"], "listen"),
+                self.create_quiz("to eat", "nl", "en", "Wij aten", ["We ate"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "We ate", ["Wij aten"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Wij aten"], "listen"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Wij aten"], "pluralize"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Ik at"], "singularize"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Ik at"], "give past tense"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Wij aten"], "give past tense"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik eet"], "give present tense"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Wij eten"], "give present tense"),
+            ]),
+            concept.quizzes("nl", "en")
+        )
+
+    def test_tense_nested_with_grammatical_person_and_infinitive(self):
+        """Test that quizzes can be generated for tense nested with grammatical person and infinitive."""
+        concept = concept_factory(
+            "to eat",
+            {
+                "infinitive": dict(en="To eat", nl="Eten"),
+                "present tense": {
+                    "singular": dict(en="I eat", nl="Ik eet"),
+                    "plural": dict(en="We eat", nl="Wij eten")
+                },
+                "past tense": {
+                    "singular": dict(en="I ate", nl="Ik at"),
+                    "plural": dict(en="We ate", nl="Wij aten")
+                }
+            }
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("to eat", "nl", "en", "Ik eet", ["I eat"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "I eat", ["Ik eet"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Ik eet"], "listen"),
+                self.create_quiz("to eat", "nl", "en", "Wij eten", ["We eat"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "We eat", ["Wij eten"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Wij eten"], "listen"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Wij eten"], "pluralize"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Ik eet"], "singularize"),
+                self.create_quiz("to eat", "nl", "en", "Ik at", ["I ate"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "I ate", ["Ik at"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik at"], "listen"),
+                self.create_quiz("to eat", "nl", "en", "Wij aten", ["We ate"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "We ate", ["Wij aten"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Wij aten"], "listen"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Wij aten"], "pluralize"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Ik at"], "singularize"),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Ik at"], "give past tense"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Wij aten"], "give past tense"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik eet"], "give present tense"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Wij eten"], "give present tense"),
+                self.create_quiz("to eat", "nl", "en", "Eten", ["To eat"], "translate"),
+                self.create_quiz("to eat", "en", "nl", "To eat", ["Eten"], "translate"),
+                self.create_quiz("to eat", "nl", "nl", "Eten", ["Eten"], "listen"),
+                self.create_quiz("to eat", "nl", "nl", "Eten", ["Ik eet"], ("give present tense", "singularize")),
+                self.create_quiz("to eat", "nl", "nl", "Eten", ["Ik at"], ("give past tense", "singularize")),
+                self.create_quiz("to eat", "nl", "nl", "Eten", ["Wij eten"], ("give present tense", "pluralize")),
+                self.create_quiz("to eat", "nl", "nl", "Eten", ["Wij aten"], ("give past tense", "pluralize")),
+                self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Eten"], "give infinitive"),
+                self.create_quiz("to eat", "nl", "nl", "Wij eten", ["Eten"], "give infinitive"),
+                self.create_quiz("to eat", "nl", "nl", "Ik at", ["Eten at"], "give infinitive"),
+                self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Eten at"], "give infinitive"),
+            ]),
+            concept.quizzes("nl", "en")
+        )
+
+
 class ConceptRelationshipsTest(ToistoTestCase):
     """Unit tests for relationships between concepts."""
 
@@ -758,3 +857,56 @@ class ConceptRelationshipsTest(ToistoTestCase):
         }
         for quiz in concept.quizzes("nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
+
+    def test_generated_uses_for_tenses(self):
+        """Test that use relations are generated for tenses."""
+        concept = concept_factory(
+            "to eat",
+            {
+                "present tense": {
+                    "singular": dict(en="I eat", nl="Ik eet"),
+                    "plural": dict(en="We eat", nl="Wij eten")
+                },
+                "past tense": {
+                    "singular": dict(en="I ate", nl="Ik at"),
+                    "plural": dict(en="We ate", nl="Wij aten")
+                }
+            }
+        )
+        expected_uses = {
+            self.create_quiz("to eat", "nl", "en", "Ik eet", ["I eat"], "translate"): (),
+            self.create_quiz("to eat", "en", "nl", "I eat", ["Ik eet"], "translate"): (),
+            self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Ik eet"], "listen"): (),
+            self.create_quiz(
+                "to eat", "nl", "en", "Wij eten", ["We eat"], "translate"): ("to eat/present tense/singular",),
+            self.create_quiz(
+                "to eat", "en", "nl", "We eat", ["Wij eten"], "translate"): ("to eat/present tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij eten", ["Wij eten"], "listen"): ("to eat/present tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Ik eet", ["Wij eten"], "pluralize"): ("to eat/present tense/plural",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij eten", ["Ik eet"], "singularize"): ("to eat/present tense/singular",),
+            self.create_quiz("to eat", "nl", "en", "Ik at", ["I ate"], "translate"): ("to eat/present tense/singular",),
+            self.create_quiz("to eat", "en", "nl", "I ate", ["Ik at"], "translate"): ("to eat/present tense/singular",),
+            self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik at"], "listen"): ("to eat/present tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "en", "Wij aten", ["We ate"], "translate"): ("to eat/past tense/singular",),
+            self.create_quiz(
+                "to eat", "en", "nl", "We ate", ["Wij aten"], "translate"): ("to eat/past tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij aten", ["Wij aten"], "listen"): ("to eat/past tense/singular",),
+            self.create_quiz("to eat", "nl", "nl", "Ik at", ["Wij aten"], "pluralize"): ("to eat/past tense/plural",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij aten", ["Ik at"], "singularize"): ("to eat/past tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Ik eet", ["Ik at"], "give past tense"): ("to eat/past tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij eten", ["Wij aten"], "give past tense"): ("to eat/past tense/plural",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Ik at", ["Ik eet"], "give present tense"): ("to eat/present tense/singular",),
+            self.create_quiz(
+                "to eat", "nl", "nl", "Wij aten", ["Wij eten"], "give present tense"): ("to eat/present tense/plural",),
+        }
+        for quiz in concept.quizzes("nl", "en"):
+            self.assertEqual(expected_uses[quiz], quiz.uses, msg=quiz)
