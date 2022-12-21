@@ -91,9 +91,6 @@ class LeafConcept(Concept):
         return cls(concept_id, labels, uses)
 
 
-LeafConceptPair = tuple[LeafConcept, LeafConcept]
-
-
 class CompositeConcept(Concept):
     """A concept that consists of multiple constituent concepts."""
 
@@ -133,12 +130,12 @@ class CompositeConcept(Concept):
         for concept in self._constituent_concepts.values():
             yield from concept.leaf_concepts()
 
-    def paired_concepts(self) -> Iterable[LeafConceptPair]:
+    def paired_concepts(self) -> Iterable[tuple[LeafConcept, LeafConcept]]:
         """Pair the leaf concepts from the composite concepts."""
         leaf_concepts = [list(concept.leaf_concepts()) for concept in self._constituent_concepts.values()]
         for concept_group in zip_and_cycle(*leaf_concepts):
             for permutation in permutations(concept_group, r=2):
-                yield cast(LeafConceptPair, permutation)
+                yield cast(tuple[LeafConcept, LeafConcept], permutation)
 
     @classmethod
     def from_dict(cls, concept_id: ConceptId, concept_dict: CompositeConceptDict) -> CompositeConcept:
