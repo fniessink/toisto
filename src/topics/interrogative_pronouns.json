@@ -51,7 +51,7 @@
     "where is the water": {
         "uses": ["where", "to be/singular/third person", "water/singular"],
         "en": "Where is the water?",
-        "fi": "Missä vesi on?",
+        "fi": "Missä vesi on?|Missä on vesi?",
         "nl": "Waar is het water?"
     },
     "where there": {
@@ -75,7 +75,7 @@
     "why are you too late": {
         "uses": ["why", "to be/singular/third person"],
         "en": "Why are you too late?",
-        "fi": "Miksi olet myöhässä?",
+        "fi": "Miksi sinä olet myöhässä?|Miksi olet myöhässä?",
         "nl": "Waarom ben je te laat?"
     },
     "why are bananas bent?": {
@@ -87,7 +87,7 @@
     "where is the toilet": {
         "uses": ["where", "to be/singular/third person"],
         "en": ["Where is the toilet?", "Where is the restroom?"],
-        "fi": ["Missä on wc?", "Missä on vessa?"],
+        "fi": ["Missä on wc?|Missä wc on?", "Missä on vessa?|Missä vessa on?"],
         "nl": ["Waar is de wc?", "Waar is het toilet?"]
     },
     "when will you arrive at the airport": {
