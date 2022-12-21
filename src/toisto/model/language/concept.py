@@ -52,13 +52,7 @@ class LeafConcept(Concept):
     """Class representing an atomic concept from a topic."""
 
     def __init__(self, concept_id: ConceptId, labels: dict[Language, Labels], uses: tuple[ConceptId, ...]) -> None:
-        if "plural" in concept_id:
-            extra_uses: tuple[str, ...] = (concept_id.replace("plural", "singular"),)
-        elif "past tense" in concept_id:
-            extra_uses = (concept_id.replace("past tense", "present tense"),)
-        else:
-            extra_uses = ()
-        super().__init__(concept_id, uses + cast(tuple[ConceptId], extra_uses))
+        super().__init__(concept_id, uses)
         self._labels = labels
 
     def quizzes(self, language: Language, source_language: Language) -> Quizzes:
@@ -87,8 +81,12 @@ class LeafConcept(Concept):
         """Instantiate a concept from a dict."""
         languages = cast(list[Language], [key for key in concept_dict if key in get_args(Language)])
         labels = {language: label_factory(cast(str | list[str], concept_dict[language])) for language in languages}
-        uses = tuple(cls.get_uses_from_concept_dict(concept_dict))
-        return cls(concept_id, labels, uses)
+        uses = cls.get_uses_from_concept_dict(concept_dict)
+        if "plural" in concept_id:
+            uses.append(cast(ConceptId, concept_id.replace("plural", "singular")))
+        elif "past tense" in concept_id:
+            uses.append(cast(ConceptId, concept_id.replace("past tense", "present tense")))
+        return cls(concept_id, labels, tuple(uses))
 
 
 class CompositeConcept(Concept):
