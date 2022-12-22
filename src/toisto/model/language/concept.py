@@ -43,15 +43,23 @@ class Concept(ABC):
 
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
-        grammatical_categories = get_args(GrammaticalCategory)
-        id_parts = self.concept_id.split("/")
-        return tuple(cast(GrammaticalCategory, id_part) for id_part in id_parts if id_part in grammatical_categories)
+        return self.filter_grammatical_categories(*self.concept_id.split("/"))
 
     @staticmethod
     def get_uses_from_concept_dict(concept_dict: ConceptDict) -> list[ConceptId]:
         """Retrieve the uses relationship from the concept dict."""
         uses = cast(list[ConceptId] | ConceptId, concept_dict.get("uses") or [])
         return uses if isinstance(uses, list) else [uses]
+
+    @classmethod
+    def get_grammatical_categories_from_concept_dict(cls, concept_dict: ConceptDict) -> tuple[GrammaticalCategory, ...]:
+        """Retrieve the grammatical categories from the concept dict."""
+        return cls.filter_grammatical_categories(*concept_dict)
+
+    @staticmethod
+    def filter_grammatical_categories(*keys: str) -> tuple[GrammaticalCategory, ...]:
+        """Filter the grammatical categories from the keys."""
+        return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
 
 
 class LeafConcept(Concept):
@@ -134,12 +142,9 @@ class CompositeConcept(Concept):
     @classmethod
     def from_dict(cls, concept_id: ConceptId, concept_dict: CompositeConceptDict) -> CompositeConcept:
         """Instantiate a concept from a dict."""
-        grammatical_categories = cast(
-            list[GrammaticalCategory], [key for key in concept_dict.keys() if key in get_args(GrammaticalCategory)]
-        )
         uses = cls.get_uses_from_concept_dict(concept_dict)
         constituent_concepts = []
-        for category in grammatical_categories:
+        for category in cls.get_grammatical_categories_from_concept_dict(concept_dict):
             constituent_concept_id = ConceptId(f"{concept_id}/{category}")
             constituent_concept_dict = cast(ConceptDict, concept_dict[category] | dict(uses=uses))
             constituent_concepts.append(concept_factory(constituent_concept_id, constituent_concept_dict))
