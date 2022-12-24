@@ -1,6 +1,6 @@
 """Concept unit tests."""
 
-from toisto.model import concept_factory, create_quizzes, Label
+from toisto.model import Label
 
 from ...base import ToistoTestCase
 
@@ -10,19 +10,19 @@ class ConceptQuizzesTest(ToistoTestCase):
 
     def test_quizzes(self):
         """Test that quizzes can be generated from a concept."""
-        concept = concept_factory("english", dict(en=["English"], nl=["Engels"]))
+        concept = self.create_concept("english", dict(en=["English"], nl=["Engels"]))
         self.assertEqual(
             set([
                 self.create_quiz("english", "nl", "en", "Engels", ["English"]),
                 self.create_quiz("english", "en", "nl", "English", ["Engels"]),
                 self.create_quiz("english", "nl", "nl", "Engels", ["Engels"], "listen")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_multiple_labels(self):
         """Test that quizzes can be generated from a concept with a language with multiple labels."""
-        concept = concept_factory("couch", dict(nl=["Bank"], en=["Couch", "Bank"]))
+        concept = self.create_concept("couch", dict(nl=["Bank"], en=["Couch", "Bank"]))
         self.assertEqual(
             set([
                 self.create_quiz("couch", "nl", "en", "Bank", ["Couch", "Bank"]),
@@ -30,17 +30,17 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("couch", "en", "nl", "Bank", ["Bank"]),
                 self.create_quiz("couch", "nl", "nl", "Bank", ["Bank"], "listen")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_missing_language(self):
         """Test that quizzes can be generated from a concept even if it's missing one of the languages."""
-        concept = concept_factory("english", dict(en=["English"], nl=["Engels"]))
-        self.assertEqual(set(), create_quizzes(concept, "fi", "en"))
+        concept = self.create_concept("english", dict(en=["English"], nl=["Engels"]))
+        self.assertEqual(set(), self.create_quizzes(concept, "fi", "en"))
 
     def test_grammatical_number(self):
         """Test that quizzes can be generated for different grammatical numbers, i.e. singular and plural."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
         )
         self.assertEqual(
@@ -54,15 +54,15 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamut"], "pluralize"),
                 self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamu"], "singularize")
             ]),
-            create_quizzes(concept, "fi", "nl")
+            self.create_quizzes(concept, "fi", "nl")
         )
 
     def test_grammatical_number_without_plural(self):
         """Test that quizzes can be generated even if one language has no plural labels for the concept."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "ketchup", dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit"))
         )
-        quizzes = create_quizzes(concept, "fi", "nl")
+        quizzes = self.create_quizzes(concept, "fi", "nl")
         self.assertEqual(
             set([
                 self.create_quiz("ketchup", "fi", "nl", "Ketsuppi", ["De ketchup"]),
@@ -79,8 +79,8 @@ class ConceptQuizzesTest(ToistoTestCase):
 
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the practice language only."""
-        concept = concept_factory("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
-        quizzes = create_quizzes(concept, "fi", "en")
+        concept = self.create_concept("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
+        quizzes = self.create_quizzes(concept, "fi", "en")
         self.assertEqual(
             set([
                 self.create_quiz("mämmi", "fi", "fi", "Mämmi", ["Mämmi"], "listen"),
@@ -95,12 +95,12 @@ class ConceptQuizzesTest(ToistoTestCase):
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes can be generated from a noun concept with labels in the native language."""
-        concept = concept_factory("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
-        self.assertEqual(set(), create_quizzes(concept, "en", "fi"))
+        concept = self.create_concept("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
+        self.assertEqual(set(), self.create_quizzes(concept, "en", "fi"))
 
     def test_grammatical_number_with_synonyms(self):
         """Test that in case of synonyms the plural of one synonym isn't the correct answer for the other synonym."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "mall",
             dict(
                 singular=dict(fi=["Kauppakeskus", "Ostoskeskus"], nl="Het winkelcentrum"),
@@ -124,12 +124,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("mall", "fi", "fi", "Kauppakeskukset", ['Kauppakeskus'], "singularize"),
                 self.create_quiz("mall", "fi", "fi", "Ostoskeskukset", ["Ostoskeskus"], "singularize")
             ]),
-            create_quizzes(concept, "fi", "nl")
+            self.create_quizzes(concept, "fi", "nl")
         )
 
     def test_grammatical_gender(self):
         """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "cat",
             dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat"))
         )
@@ -144,12 +144,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("cat", "nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"),
                 self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Haar kat"], "feminize")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_grammatical_gender_with_neuter(self):
         """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "bone",
             dict(
                 female=dict(en="Her bone", nl="Haar bot"),
@@ -173,12 +173,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize"),
                 self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_grammatical_number_with_grammatical_gender(self):
         """Test that quizzes can be generated for grammatical number nested with grammatical gender."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "cat",
             dict(
                 singular=dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat")),
@@ -208,12 +208,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Zijn katten"], "pluralize"),
                 self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Zijn kat"], "singularize")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_degrees_of_comparison(self):
         """Test that quizzes can be generated for degrees of comparison."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "big",
             {
                 "positive degree": dict(en="Big", nl="Groot"),
@@ -239,12 +239,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("big", "nl", "nl", "Grootst", ["Groot"], "give positive degree"),
                 self.create_quiz("big", "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_degrees_of_comparison_with_synonyms(self):
         """Test that quizzes can be generated for degrees of comparison with synonyms."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "big",
             {
                 "positive degree": dict(en="Big", fi=["Iso", "Suuri"]),
@@ -282,12 +282,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("big", "fi", "fi", "Isoin", ["Isompi"], "give comparitive degree"),
                 self.create_quiz("big", "fi", "fi", "Suurin", ["Suurempi"], "give comparitive degree"),
             ]),
-            create_quizzes(concept, "fi", "en")
+            self.create_quizzes(concept, "fi", "en")
         )
 
     def test_grammatical_person(self):
         """Test that quizzes can be generated for grammatical person."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to eat",
             {
                 "first person": dict(en="I eat", nl="Ik eet"),
@@ -313,12 +313,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to eat", "nl", "nl", "Zij eet", ["Ik eet"], "give first person"),
                 self.create_quiz("to eat", "nl", "nl", "Zij eet", ["Jij eet"], "give second person"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_grammatical_person_nested_with_grammatical_gender(self):
         """Test that quizzes can be generated for grammatical person, nested with grammatical gender."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to eat",
             {
                 "first person": dict(en="I eat", nl="Ik eet"),
@@ -353,12 +353,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to eat", "nl", "nl", "Hij eet", ["Ik eet"], "give first person"),
                 self.create_quiz("to eat", "nl", "nl", "Hij eet", ["Jij eet"], "give second person"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_grammatical_number_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for grammatical number, nested with grammatical person."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to have",
             dict(
                 singular={
@@ -412,12 +412,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to have", "nl", "nl", "Zij heeft", ["Zij hebben"], "pluralize"),
                 self.create_quiz("to have", "nl", "nl", "Zij hebben", ["Zij heeft"], "singularize"),
             ]),
-            create_quizzes(concept, "nl", "fi")
+            self.create_quizzes(concept, "nl", "fi")
         )
 
     def test_grammatical_gender_nested_with_grammatical_number(self):
         """Test that quizzes can be generated for nested concepts."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "cat",
             dict(
                 female=dict(singular=dict(en="Her cat", nl="Haar kat"), plural=dict(en="Her cats", nl="Haar katten")),
@@ -447,12 +447,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("cat", "nl", "nl", "Haar katten", ["Zijn katten"], "masculinize"),
                 self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Haar katten"], "feminize")
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_same_label_in_different_composite_concepts(self):
         """Test that the same label in different leaf concepts is ignored."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to be",
             dict(
                 female=dict(en="She is|She's", fi="Hän on|On;female"),
@@ -467,12 +467,12 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to be", "fi", "en", "Hän on|On;male", ("He is|He's",)),
                 self.create_quiz("to be", "en", "fi", "He is|He's", ("Hän on|On;male",))
             ]),
-            create_quizzes(concept, "fi", "en")
+            self.create_quizzes(concept, "fi", "en")
         )
 
     def test_infinitive_verb_form(self):
         """Test the infinitive verb form."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to sleep",
             dict(
                 infinitive=dict(en="To sleep", nl="Slapen"),
@@ -498,14 +498,14 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to sleep", "nl", "nl", "Slapen", ["Ik slaap"], "singularize"),
                 self.create_quiz("to sleep", "nl", "nl", "Wij slapen", ["Ik slaap"], "singularize"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_grammatical_number_nested_with_grammatical_person_and_infinitive(self):
         """Test that quizzes can be generated for grammatical number, including infinitive, nested with grammatical
         person.
         """
-        concept = concept_factory(
+        concept = self.create_concept(
             "to be",
             dict(
                 infinitive=dict(fi="Olla", nl="Zijn"),
@@ -575,7 +575,7 @@ class ConceptQuizzesTest(ToistoTestCase):
                 self.create_quiz("to have", "nl", "nl", "Zijn", ["Jullie zijn"], ("pluralize", "give second person")),
                 self.create_quiz("to have", "nl", "nl", "Zijn", ["Zij zijn"], ("pluralize", "give third person")),
             ]),
-            create_quizzes(concept, "nl", "fi")
+            self.create_quizzes(concept, "nl", "fi")
         )
 
 
@@ -584,7 +584,7 @@ class TenseQuizzesTest(ToistoTestCase):
 
     def test_tense_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for tense nested with grammatical person."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to eat",
             {
                 "present tense": {
@@ -620,12 +620,12 @@ class TenseQuizzesTest(ToistoTestCase):
                 self.create_quiz("to eat", "nl", "nl", "Ik at", ["Ik eet"], "give present tense"),
                 self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Wij eten"], "give present tense"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
     def test_tense_nested_with_grammatical_person_and_infinitive(self):
         """Test that quizzes can be generated for tense nested with grammatical person and infinitive."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to eat",
             {
                 "infinitive": dict(en="To eat", nl="Eten"),
@@ -673,7 +673,7 @@ class TenseQuizzesTest(ToistoTestCase):
                 self.create_quiz("to eat", "nl", "nl", "Ik at", ["Eten at"], "give infinitive"),
                 self.create_quiz("to eat", "nl", "nl", "Wij aten", ["Eten at"], "give infinitive"),
             ]),
-            create_quizzes(concept, "nl", "en")
+            self.create_quizzes(concept, "nl", "en")
         )
 
 
@@ -682,15 +682,15 @@ class ConceptRelationshipsTest(ToistoTestCase):
 
     def test_concept_relationship_leaf_concept(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "mall",
             dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"),
         )
-        self.assertEqual(("shop", "centre"), create_quizzes(concept, "fi", "nl").pop().uses)
+        self.assertEqual(("shop", "centre"), self.create_quizzes(concept, "fi", "nl").pop().uses)
 
     def test_concept_relationship_composite_concept(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "mall",
             dict(
                 uses=["shop", "centre"],
@@ -698,18 +698,18 @@ class ConceptRelationshipsTest(ToistoTestCase):
                 plural=dict(fi="Kauppakeskukset", nl="De winkelcentra")
             )
         )
-        for quiz in create_quizzes(concept, "fi", "nl"):
+        for quiz in self.create_quizzes(concept, "fi", "nl"):
             self.assertIn("shop", quiz.uses)
             self.assertIn("centre", quiz.uses)
 
     def test_concept_relationship_leaf_concept_one_uses(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        concept = concept_factory("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
-        self.assertEqual(("city",), create_quizzes(concept, "fi", "en").pop().uses)
+        concept = self.create_concept("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
+        self.assertEqual(("city",), self.create_quizzes(concept, "fi", "en").pop().uses)
 
     def test_generated_concept_ids_for_constituent_concepts(self):
         """Test that constituent concepts get a generated concept id."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
         )
         expected_concept_ids = {
@@ -722,12 +722,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamut"], "pluralize"): "morning",
             self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamu"], "singularize"): "morning"
         }
-        for quiz in create_quizzes(concept, "fi", "nl"):
+        for quiz in self.create_quizzes(concept, "fi", "nl"):
             self.assertEqual(expected_concept_ids[quiz], quiz.concept_id)
 
     def test_generated_uses_for_grammatical_number(self):
         """Test that constituent concepts get a generated uses list."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
         )
         expected_uses = {
@@ -740,12 +740,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("morning", "fi", "fi", "Aamu", ["Aamut"], "pluralize"): ("morning/plural",),
             self.create_quiz("morning", "fi", "fi", "Aamut", ["Aamu"], "singularize"): ("morning/singular",)
         }
-        for quiz in create_quizzes(concept, "fi", "nl"):
+        for quiz in self.create_quizzes(concept, "fi", "nl"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
 
     def test_generated_uses_for_grammatical_gender(self):
         """Test that use relations are generated for different grammatical genders, i.e. female and male."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "cat",
             dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat"))
         )
@@ -759,12 +759,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("cat", "nl", "nl", "Haar kat", ["Zijn kat"], "masculinize"): ("cat/male",),
             self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Haar kat"], "feminize"): ("cat/female",)
         }
-        for quiz in create_quizzes(concept, "nl", "en"):
+        for quiz in self.create_quizzes(concept, "nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
 
     def test_generated_uses_for_grammatical_gender_with_neuter(self):
         """Test that use relations are generated for different grammatical genders, i.e. female and male."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "bone",
             dict(
                 female=dict(en="Her bone", nl="Haar bot"),
@@ -787,12 +787,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize"): ("bone/female",),
             self.create_quiz("bone", "nl", "nl", "Zijn bot", ["Haar bot"], "feminize"): ("bone/female",)
         }
-        for quiz in create_quizzes(concept, "nl", "en"):
+        for quiz in self.create_quizzes(concept, "nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
 
     def test_generated_uses_for_grammatical_number_with_grammatical_gender(self):
         """Test that use relations are generated for grammatical number nested with grammatical gender."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "cat",
             dict(
                 singular=dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat")),
@@ -821,12 +821,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz("cat", "nl", "nl", "Zijn kat", ["Zijn katten"], "pluralize"): ("cat/plural/male",),
             self.create_quiz("cat", "nl", "nl", "Zijn katten", ["Zijn kat"], "singularize"): ("cat/singular/male",)
         }
-        for quiz in create_quizzes(concept, "nl", "en"):
+        for quiz in self.create_quizzes(concept, "nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
 
     def test_generated_uses_for_degrees_of_comparison(self):
         """Test that use relations are generated for degrees of comparison."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "big",
             {
                 "positive degree": dict(en="Big", nl="Groot"),
@@ -855,12 +855,12 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz(
                 "big", "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"): ("big/comparitive degree",)
         }
-        for quiz in create_quizzes(concept, "nl", "en"):
+        for quiz in self.create_quizzes(concept, "nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses)
 
     def test_generated_uses_for_tenses(self):
         """Test that use relations are generated for tenses."""
-        concept = concept_factory(
+        concept = self.create_concept(
             "to eat",
             {
                 "present tense": {
@@ -908,5 +908,5 @@ class ConceptRelationshipsTest(ToistoTestCase):
             self.create_quiz(
                 "to eat", "nl", "nl", "Wij aten", ["Wij eten"], "give present tense"): ("to eat/present tense/plural",),
         }
-        for quiz in create_quizzes(concept, "nl", "en"):
+        for quiz in self.create_quizzes(concept, "nl", "en"):
             self.assertEqual(expected_uses[quiz], quiz.uses, msg=quiz)

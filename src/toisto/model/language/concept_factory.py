@@ -2,57 +2,65 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import cast, get_args, Literal, Union
 
 from toisto.metadata import Language
 
 from ..model_types import ConceptId
-from .concept import Concept
+from .concept import Concept, Labels
 from .grammar import GrammaticalCategory
 from .label import label_factory
 
 ConceptRelation = Literal["uses"]
-LeafConceptDict = dict[Language | ConceptRelation, str | ConceptId | list[str] | list[ConceptId]]
+LeafConceptDict = dict[Language | ConceptRelation, str | list[str] | ConceptId | list[ConceptId]]
 CompositeConceptDict = dict[GrammaticalCategory | ConceptRelation, Union["CompositeConceptDict", LeafConceptDict]]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
-def composite_concept(concept_id: ConceptId, concept_dict: CompositeConceptDict) -> Concept:
-    """Create a composite concept from a composite concept dict."""
-    uses = get_uses(concept_dict)
-    constituent_concepts = []
-    for category in get_grammatical_categories(concept_dict):
-        constituent_concept_id = ConceptId(f"{concept_id}/{category}")
-        constituent_concept_dict = cast(ConceptDict, concept_dict[category] | dict(uses=uses))
-        constituent_concepts.append(concept_factory(constituent_concept_id, constituent_concept_dict))
-    return Concept(concept_id, tuple(uses), tuple(constituent_concepts))
+@dataclass
+class ConceptFactory:
+    """Create concepts from the concept dict."""
 
+    concept_id: ConceptId
+    concept_dict: ConceptDict
 
-def leaf_concept(concept_id: ConceptId, concept_dict: LeafConceptDict) -> Concept:
-    """Create a leaf concept from a leaf concept dict."""
-    uses = get_uses(concept_dict)
-    if "plural" in concept_id:
-        uses.append(cast(ConceptId, concept_id.replace("plural", "singular")))
-    elif "past tense" in concept_id:
-        uses.append(cast(ConceptId, concept_id.replace("past tense", "present tense")))
-    languages = cast(list[Language], [key for key in concept_dict if key in get_args(Language)])
-    labels = {language: label_factory(cast(str | list[str], concept_dict[language])) for language in languages}
-    return Concept(concept_id, tuple(uses), (), labels)
+    def create_concept(self) -> Concept:
+        """Create a concept from the concept_dict"""
+        return self.composite_concept() if self.get_grammatical_categories() else self.leaf_concept()
 
+    def composite_concept(self) -> Concept:
+        """Create a composite concept from a composite concept dict."""
+        uses = self.get_uses()
+        constituent_concepts = []
+        for category in self.get_grammatical_categories():
+            constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
+            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | dict(uses=uses)
+            concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
+            constituent_concepts.append(concept_factory.create_concept())
+        return Concept(self.concept_id, tuple(uses), tuple(constituent_concepts))
 
-def get_uses(concept_dict: ConceptDict) -> list[ConceptId]:
-    """Retrieve the uses relationship from the concept dict."""
-    uses = cast(list[ConceptId] | ConceptId, concept_dict.get("uses") or [])
-    return uses if isinstance(uses, list) else [uses]
+    def leaf_concept(self) -> Concept:
+        """Create a leaf concept from a leaf concept dict."""
+        uses = self.get_uses()
+        if "plural" in self.concept_id:
+            uses.append(cast(ConceptId, self.concept_id.replace("plural", "singular")))
+        elif "past tense" in self.concept_id:
+            uses.append(cast(ConceptId, self.concept_id.replace("past tense", "present tense")))
+        labels = {
+            key: label_factory(cast(str | list[str], value))
+            for key, value in self.concept_dict.items()
+            if key in get_args(Language)
+        }
+        return Concept(self.concept_id, tuple(uses), (), cast(dict[Language, Labels], labels))
 
+    def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
+        """Retrieve the grammatical categories from the concept dict."""
+        return tuple(
+            cast(GrammaticalCategory, key) for key in self.concept_dict if key in get_args(GrammaticalCategory)
+        )
 
-def get_grammatical_categories(concept_dict: CompositeConceptDict) -> tuple[GrammaticalCategory, ...]:
-    """Retrieve the grammatical categories from the concept dict."""
-    return tuple(cast(GrammaticalCategory, key) for key in concept_dict if key in get_args(GrammaticalCategory))
-
-
-def concept_factory(concept_id: ConceptId, concept_dict: ConceptDict) -> Concept:
-    """Create a concept from the concept dict."""
-    if set(get_args(GrammaticalCategory)) & set(concept_dict):
-        return composite_concept(concept_id, cast(CompositeConceptDict, concept_dict))
-    return leaf_concept(concept_id, cast(LeafConceptDict, concept_dict))
+    def get_uses(self) -> list[ConceptId]:
+        """Retrieve the uses relationship from the concept dict."""
+        uses = cast(list[ConceptId] | ConceptId, self.concept_dict.get("uses") or [])
+        return uses if isinstance(uses, list) else [uses]

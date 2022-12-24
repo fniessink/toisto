@@ -1,4 +1,4 @@
 """Model classes."""
 
-from .language import Label, Labels, concept_factory
-from .quiz import Progress, Quiz, Quizzes, Retention, Topic, Topics, create_quizzes
+from .language import Concept, ConceptFactory, Label, Labels
+from .quiz import Progress, Quiz, Quizzes, QuizFactory, Retention, Topic, Topics
