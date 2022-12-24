@@ -7,7 +7,7 @@ from typing import cast, get_args, Literal, Union
 from toisto.metadata import Language
 
 from ..model_types import ConceptId
-from .concept import Concept, CompositeConcept, LeafConcept
+from .concept import Concept
 from .grammar import GrammaticalCategory
 from .label import label_factory
 
@@ -17,19 +17,19 @@ CompositeConceptDict = dict[GrammaticalCategory | ConceptRelation, Union["Compos
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
-def composite_concept(concept_id: ConceptId, concept_dict: CompositeConceptDict) -> CompositeConcept:
-    """Create a composite concept."""
+def composite_concept(concept_id: ConceptId, concept_dict: CompositeConceptDict) -> Concept:
+    """Create a composite concept from a composite concept dict."""
     uses = get_uses(concept_dict)
     constituent_concepts = []
     for category in get_grammatical_categories(concept_dict):
         constituent_concept_id = ConceptId(f"{concept_id}/{category}")
         constituent_concept_dict = cast(ConceptDict, concept_dict[category] | dict(uses=uses))
         constituent_concepts.append(concept_factory(constituent_concept_id, constituent_concept_dict))
-    return CompositeConcept(concept_id, tuple(uses), tuple(constituent_concepts))
+    return Concept(concept_id, tuple(uses), tuple(constituent_concepts))
 
 
-def leaf_concept(concept_id: ConceptId, concept_dict: LeafConceptDict) -> LeafConcept:
-    """Create a leaf concept."""
+def leaf_concept(concept_id: ConceptId, concept_dict: LeafConceptDict) -> Concept:
+    """Create a leaf concept from a leaf concept dict."""
     uses = get_uses(concept_dict)
     if "plural" in concept_id:
         uses.append(cast(ConceptId, concept_id.replace("plural", "singular")))
@@ -37,7 +37,7 @@ def leaf_concept(concept_id: ConceptId, concept_dict: LeafConceptDict) -> LeafCo
         uses.append(cast(ConceptId, concept_id.replace("past tense", "present tense")))
     languages = cast(list[Language], [key for key in concept_dict if key in get_args(Language)])
     labels = {language: label_factory(cast(str | list[str], concept_dict[language])) for language in languages}
-    return LeafConcept(concept_id, tuple(uses), labels)
+    return Concept(concept_id, tuple(uses), (), labels)
 
 
 def get_uses(concept_dict: ConceptDict) -> list[ConceptId]:

@@ -3,7 +3,7 @@
 import pathlib
 
 from ..metadata import NAME, TOPIC_JSON_FILES, Language
-from ..model import concept_factory, Topic, Topics
+from ..model import create_quizzes, concept_factory, Topic, Topics
 from ..ui.text import show_error_and_exit
 
 from .json_file import load_json
@@ -26,7 +26,7 @@ def load_quizzes(
             topic_json = load_json(topic_file)
             for concept_key, concept_value in topic_json.items():
                 concept = concept_factory(concept_key, concept_value)
-                topic_quizzes.update(concept.quizzes(language, source_language))
+                topic_quizzes.update(create_quizzes(concept, language, source_language))
         except Exception as reason:  # pylint: disable=broad-except
             show_error_and_exit(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
         topics.add(Topic(topic_file.stem, topic_quizzes))

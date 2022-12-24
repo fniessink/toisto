@@ -144,28 +144,6 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 Quizzes = set[Quiz]
 
 
-def quiz_factory(  # pylint: disable=too-many-arguments
-    concept_id: ConceptId,
-    language1: Language,
-    language2: Language,
-    labels1: Labels,
-    labels2: Labels,
-    quiz_types: tuple[QuizType, ...] = ("translate",),
-    uses: tuple[ConceptId, ...] = tuple(),
-    meanings: Labels = Labels()
-) -> Quizzes:
-    """Create quizzes."""
-    if quiz_types == ("translate",) and labels1 and labels2:
-        return (
-            set(Quiz(concept_id, language1, language2, label, labels2, quiz_types, uses) for label in labels1) |
-            set(Quiz(concept_id, language2, language1, label, labels1, quiz_types, uses) for label in labels2)
-        )
-    return set(
-        Quiz(concept_id, language1, language2, label1, (label2,), quiz_types, uses, meanings)
-        for label1, label2 in zip(labels1, labels2) if label1 != label2 or quiz_types == ("listen",)
-    )
-
-
 def easiest_quizzes(quizzes: Quizzes) -> Quizzes:
     """Return the easiest quizzes."""
     for quiz_type in get_args(QuizType):
