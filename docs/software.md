@@ -321,6 +321,27 @@ When there are synonyms, they need to be in the same order in every degree. This
 
 The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive degree` as key, the comparitive degree `big/comparitive degree`, and the superlative degree `big/superlative degree`.
 
+### Sentence types
+
+When the topic file contains both the declarative and the interrogative type of a sentence, Toisto can generate quizzes to change one into the other. Sentence types are specified as follows:
+
+```json
+{
+    "the car is black": {
+        "declarative": {
+            "en": "The car is black",
+            "nl": "De auto is zwart"
+        },
+        "interrogative": {
+            "en": "Is the car black?",
+            "nl": "Is de auto zwart?"
+        }
+    }
+}
+```
+
+The sentence types are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the declarative sentence type gets `the car is black/declarative` as key and the interrogative type gets `the car is black/interrogative`.
+
 ### Concept relationships
 
 When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
