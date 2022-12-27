@@ -18,7 +18,7 @@ class AppTest(unittest.TestCase):
         os.environ['COLUMNS'] = "120"  # Fake that the terminal is wide enough.
         self.assertRaises(SystemExit, main)
         self.assertEqual(
-            f"usage: {sys.argv[0].rsplit('/', maxsplit=1)[-1]} [-h] [-V] {{practice,progress}} ...\n",
+            f"usage: {sys.argv[0].rsplit('/', maxsplit=1)[-1]} [-h] [-V] {{practice,progress,topics}} ...\n",
             write.call_args_list[0][0][0]
         )
 
@@ -37,3 +37,10 @@ class AppTest(unittest.TestCase):
         with patch("rich.console.Console.print") as patched_print:
             main()
         self.assertTrue(patched_print.call_args_list[0][0][0].title.startswith("Progress"))
+
+    @patch.object(sys, "argv", ["toisto", "topics", "fi", "nl"])
+    def test_topics(self):
+        """Test that the topics command can be invoked."""
+        with patch("rich.console.Console.print") as patched_print:
+            main()
+        self.assertTrue(patched_print.call_args_list[0][0][0].title.startswith("Topic"))

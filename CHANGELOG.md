@@ -16,10 +16,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add declarative and interrogative sentence types and quizzes to change declarative sentences into interrogative sentences and vice versa. Closes [#140](https://github.com/fniessink/toisto/issues/140).
 - Add a topic with interrogative pronouns (who, what, where, ...).
 - Add links to https://en.wiktionary.org/ for alternative meanings as well.
+- Add a command to show the contents of topics. Run `toisto topics -h` for more information.
 
 ### Changed
 
-- Changed the command-line interface to use subcommands, to prepare for more subcommands in the future. Type `toisto -h` for more information.
+- Changed the command-line interface to use subcommands, to prepare for more subcommands. Type `toisto -h` for more information.
 
 ## v0.4.0 - 2022-12-14
 

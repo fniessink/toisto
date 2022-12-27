@@ -19,7 +19,7 @@ class PracticeTest(ToistoTestCase):
     def setUp(self) -> None:
         """Set up the test fixtures."""
         self.quiz = self.create_quiz(ConceptId("hi"), "fi", "nl", "Terve", ["Hoi"])
-        self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
+        self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
 
     def practice(self):
         """Run the practice command and return the patch print statement."""
@@ -52,7 +52,7 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
         quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen")
-        topics = Topics(set([Topic("topic", set([quiz]))]))
+        topics = Topics(set([Topic("topic", (), set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
@@ -61,7 +61,7 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
-        topics = Topics(set([Topic("topic", set([quiz]))]))
+        topics = Topics(set([Topic("topic", (), set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
         self.assertIn(
@@ -72,7 +72,7 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_with_multiple_meanings(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quiz = self.create_quiz("house", "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
-        topics = Topics(set([Topic("topic", set([quiz]))]))
+        topics = Topics(set([Topic("topic", (), set([quiz]))]))
         with patch("rich.console.Console.print") as patched_print:
             practice(topics, Progress({}))
         self.assertIn(call(
