@@ -15,7 +15,7 @@ class ShowProgressTest(ToistoTestCase):
     def setUp(self):
         """Set up test fixtures."""
         self.quiz = self.create_quiz("hello", "fi", "nl", "Terve", ["Hoi"])
-        self.topics = Topics(set([Topic("topic", set([self.quiz]))]))
+        self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
 
     def test_title(self):
         """Test the table title."""
@@ -53,7 +53,7 @@ class ShowProgressTest(ToistoTestCase):
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
         another_quiz = self.create_quiz("carpet", "fi", "nl", "Matto", ["Het tapijt"])
-        topics = Topics(set([Topic("topic", set([self.quiz, another_quiz]))]))
+        topics = Topics(set([Topic("topic", (), set([self.quiz, another_quiz]))]))
         progress = Progress({str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)})
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", topics, progress, sort="retention")

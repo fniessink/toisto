@@ -6,14 +6,16 @@ from dataclasses import dataclass, field
 from itertools import chain
 from typing import Iterator
 
+from ..language import Concept
 from .quiz import Quizzes
 
 
 @dataclass(frozen=True)
 class Topic:
-    """Collection of quizzes centered around a topic."""
+    """Collection of quizzes for concepts centered around a topic."""
 
     name: str
+    concepts: tuple[Concept, ...]
     quizzes: Quizzes
 
     def __hash__(self) -> int:
