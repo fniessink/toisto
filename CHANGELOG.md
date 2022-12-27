@@ -12,9 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add past tense of verbs and quizzes to change past tense into present tense and vice versa.
+- Add declarative and interrogative sentence types and quizzes to change declarative sentences into interrogative sentences and vice versa. Closes [#140](https://github.com/fniessink/toisto/issues/140).
 - Add a topic with interrogative pronouns (who, what, where, ...).
 - Add links to https://en.wiktionary.org/ for alternative meanings as well.
-- Add past tense of verbs.
 
 ## v0.4.0 - 2022-12-14
 

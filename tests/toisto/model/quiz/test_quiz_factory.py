@@ -677,6 +677,33 @@ class TenseQuizzesTest(ToistoTestCase):
         )
 
 
+class SentenceTypeTest(ToistoTestCase):
+    """Unit tests for concepts with different sentence types."""
+
+    def test_declarative_and_interrogative_sentence_types(self):
+        """Test that quizzes can be generated for the declarative and interrogative sentence types."""
+        concept = self.create_concept(
+            "car",
+            {
+                "declarative": dict(en="The car is black", nl="De auto is zwart"),
+                "interrogative": dict(en="Is the car black?", nl="Is de auto zwart?")
+            }
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("car", "nl", "en", "De auto is zwart", ["The car is black"], "translate"),
+                self.create_quiz("car", "en", "nl", "The car is black", ["De auto is zwart"], "translate"),
+                self.create_quiz("car", "nl", "nl", "De auto is zwart", ["De auto is zwart"], "listen"),
+                self.create_quiz("car", "nl", "en", "Is de auto zwart?", ["Is the car black?"], "translate"),
+                self.create_quiz("car", "en", "nl", "Is the car black?", ["Is de auto zwart?"], "translate"),
+                self.create_quiz("car", "nl", "nl", "Is de auto zwart?", ["Is de auto zwart?"], "listen"),
+                self.create_quiz("car", "nl", "nl", "De auto is zwart", ["Is de auto zwart"], "make interrogative"),
+                self.create_quiz("car", "nl", "nl", "Is de auto zwart?", ["De auto is zwart"], "make declarative"),
+            ]),
+            self.create_quizzes(concept, "nl", "en")
+        )
+
+
 class ConceptRelationshipsTest(ToistoTestCase):
     """Unit tests for relationships between concepts."""
 
