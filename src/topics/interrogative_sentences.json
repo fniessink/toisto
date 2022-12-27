@@ -70,12 +70,12 @@
                     "third person": {
                         "female": {
                             "en": "She speaks English",
-                            "fi": "Hän puhuu englantia|Puhuu englantia;female",
+                            "fi": "Hän puhuu englantia;female",
                             "nl": "Zij spreekt Engels|Ze spreekt Engels"
                         },
                         "male": {
                             "en": "He speaks English",
-                            "fi": "Hän puhuu englantia|Puhuu englantia;male",
+                            "fi": "Hän puhuu englantia;male",
                             "nl": "Hij spreekt Engels"
                         }
                     }
@@ -93,7 +93,7 @@
                     },
                     "third person": {
                         "en": "They speak English",
-                        "fi": "He puhuvat englantia|Puhuvat englantia",
+                        "fi": "He puhuvat englantia",
                         "nl": "Zij spreken Engels|Ze spreken Engels"
                     }
                 }
@@ -113,12 +113,12 @@
                     "third person": {
                         "female": {
                             "en": "Does she speak English?",
-                            "fi": "Puhuuko hän englantia?|Puhuuko englantia?;female",
+                            "fi": "Puhuuko hän englantia?;female",
                             "nl": "Spreekt zij Engels?|Spreekt ze Engels?"
                         },
                         "male": {
                             "en": "Does he speak English?",
-                            "fi": "Puhuuko hän englantia?|Puhuuko englantia?;male",
+                            "fi": "Puhuuko hän englantia?;male",
                             "nl": "Spreekt hij Engels?"
                         }
                     }
@@ -136,7 +136,7 @@
                     },
                     "third person": {
                         "en": "Do they speak English?",
-                        "fi": "Puhuvatko he englantia?|Puhuvatko englantia?",
+                        "fi": "Puhuvatko he englantia?",
                         "nl": "Spreken zij Engels?|Spreken ze Engels?"
                     }
                 }
@@ -158,12 +158,12 @@
                     "third person": {
                         "female": {
                             "en": "She spoke English",
-                            "fi": "Hän puhui englantia|Puhui englantia;female",
+                            "fi": "Hän puhui englantia;female",
                             "nl": "Zij sprak Engels|Ze sprak Engels"
                         },
                         "male": {
                             "en": "He spoke English",
-                            "fi": "Hän puhui englantia|Puhui englantia;male",
+                            "fi": "Hän puhui englantia;male",
                             "nl": "Hij sprak Engels"
                         }
                     }
@@ -181,7 +181,7 @@
                     },
                     "third person": {
                         "en": "They spoke English",
-                        "fi": "He puhuivat englantia|Puhuivat englantia",
+                        "fi": "He puhuivat englantia",
                         "nl": "Zij spraken Engels|Ze spraken Engels"
                     }
                 }
@@ -201,12 +201,12 @@
                     "third person": {
                         "female": {
                             "en": "Did she speak English?",
-                            "fi": "Puhuiko hän englantia?|Puhuiko englantia?;female",
+                            "fi": "Puhuiko hän englantia?;female",
                             "nl": "Sprak zij Engels?|Sprak ze Engels?"
                         },
                         "male": {
                             "en": "Did he speak English?",
-                            "fi": "Puhuiko hän englantia?|Puhuiko englantia?;male",
+                            "fi": "Puhuiko hän englantia?;male",
                             "nl": "Sprak hij Engels?"
                         }
                     }
@@ -224,7 +224,7 @@
                     },
                     "third person": {
                         "en": "Did they speak English?",
-                        "fi": "Puhuivatko he englantia?|Puhuivatko englantia?",
+                        "fi": "Puhuivatko he englantia?",
                         "nl": "Spraken zij Engels?|Spraken ze Engels?"
                     }
                 }
