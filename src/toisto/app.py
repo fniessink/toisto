@@ -3,7 +3,7 @@
 import readline  # pylint: disable=unused-import
 
 from .ui.cli import argument_parser
-from .command import practice, show_progress
+from .command import practice, show_topics, show_progress
 from .persistence import load_topics, load_progress
 
 
@@ -14,5 +14,7 @@ def main():
     progress = load_progress()
     if args.command == "practice":
         practice(topics, progress)
+    elif args.command == "topics":
+        show_topics(args.language, args.source_language, topics)
     else:
         show_progress(args.language, topics, progress, args.sort)
