@@ -19,4 +19,4 @@ class ParserTest(unittest.TestCase):
     def test_version(self, write):
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, argument_parser.parse_args, ["--version"])
-        self.assertEqual('0.4.0\n', write.call_args_list[0][0][0])
+        self.assertEqual('0.5.0\n', write.call_args_list[0][0][0])
