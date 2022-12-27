@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add a topic with interrogative pronouns (who, what, where, ...).
 - Add links to https://en.wiktionary.org/ for alternative meanings as well.
 
+### Changed
+
+- Changed the command-line interface to use subcommands, to prepare for more subcommands in the future. Type `toisto -h` for more information.
+
 ## v0.4.0 - 2022-12-14
 
 ### Fixed
