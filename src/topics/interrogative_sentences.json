@@ -1,5 +1,6 @@
 {
     "the car is black": {
+        "uses": ["to be", "car", "black"],
         "present tense": {
             "declarative": {
                 "singular": {
@@ -54,6 +55,7 @@
         }
     },
     "to speak english": {
+        "uses": ["to speak", "english"],
         "present tense": {
             "declarative": {
                 "singular": {

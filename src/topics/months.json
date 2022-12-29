@@ -1,5 +1,6 @@
 {
     "month": {
+        "uses": "moon",
         "singular": {
             "en": "Month",
             "fi": "Kuukausi",
@@ -24,6 +25,7 @@
         }
     },
     "january": {
+        "uses": "moon",
         "en": "January",
         "fi": "Tammikuu",
         "nl": "Januari"
@@ -35,16 +37,19 @@
         "nl": "In januari"
     },
     "february": {
+        "uses": "moon",
         "en": "February",
         "fi": "Helmikuu",
         "nl": "Februari"
     },
     "march": {
+        "uses": "moon",
         "en": "March",
         "fi": "Maaliskuu",
         "nl": "Maart"
     },
     "april": {
+        "uses": "moon",
         "en": "April",
         "fi": "Huhtikuu",
         "nl": "April"
@@ -56,47 +61,65 @@
         "nl": "In april"
     },
     "may": {
+        "uses": "moon",
         "en": "May",
         "fi": "Toukokuu",
         "nl": "Mei"
     },
     "june": {
+        "uses": [
+            "moon",
+            "summer"
+        ],
         "en": "June",
         "fi": "Kesäkuu",
         "nl": "Juni"
     },
     "july": {
+        "uses": "moon",
         "en": "July",
         "fi": "Heinäkuu",
         "nl": "Juli"
     },
     "august": {
+        "uses": "moon",
         "en": "August",
         "fi": "Elokuu",
         "nl": "Augustus"
     },
     "september": {
+        "uses": "moon",
         "en": "September",
         "fi": "Syyskuu",
         "nl": "September"
     },
     "october": {
+        "uses": "moon",
         "en": "October",
         "fi": "Lokakuu",
         "nl": "Oktober"
     },
     "november": {
+        "uses": "moon",
         "en": "November",
         "fi": "Marraskuu",
         "nl": "November"
     },
     "december": {
+        "uses": [
+            "christmas",
+            "moon"
+        ],
         "en": "December",
         "fi": "Joulukuu",
         "nl": "December"
     },
     "it is july": {
-        "uses": ["july", "to be/singular/third person", "now"],
+        "uses": [
+            "july",
+            "to be/present tense/singular/third person",
+            "now"
+        ],
         "en": "It is July|It's July",
         "fi": [
             "Nyt on heinäkuu",

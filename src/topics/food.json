@@ -341,6 +341,7 @@
         }
     },
     "sandwich": {
+        "uses": "bread",
         "singular": {
             "en": "Sandwich",
             "fi": "Voileipä",
@@ -389,7 +390,7 @@
         }
     },
     "cauliflower": {
-        "uses": "bloem",
+        "uses": "flower",
         "singular": {
             "en": "Cauliflower",
             "fi": "Kukkakaali",
