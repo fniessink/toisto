@@ -208,24 +208,24 @@
     "leg": {
         "singular": {
             "en": "Leg",
-            "fi": "Jalka;above the ankle",
+            "fi": "Jalka;upper part",
             "nl": "Het been"
         },
         "plural": {
             "en": "Legs",
-            "fi": "Jalat;above the ankle",
+            "fi": "Jalat;upper part",
             "nl": "De benen"
         }
     },
     "foot": {
         "singular": {
             "en": "Foot",
-            "fi": "Jalka;below the ankle",
+            "fi": "Jalka;lower part",
             "nl": "De voet"
         },
         "plural": {
             "en": "Feet",
-            "fi": "Jalat;below the ankle",
+            "fi": "Jalat;lower part",
             "nl": "De voeten"
         }
     },

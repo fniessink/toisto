@@ -190,31 +190,31 @@
         }
     },
     "it is cold in the north": {
-        "uses": ["to be/singular/third person", "cold", "north"],
+        "uses": ["to be/present tense/singular/third person", "cold", "north"],
         "en": "It is cold in the North",
         "fi": "Pohjoisessa on kylmä",
         "nl": "Het is koud in het Noorden"
     },
     "it is warm in the south": {
-        "uses": ["to be/singular/third person", "warm", "south"],
+        "uses": ["to be/present tense/singular/third person", "warm", "south"],
         "en": "It is warm in the South",
         "fi": "Etelässä on lämmin",
         "nl": "Het is warm in het Zuiden"
     },
     "she is from the north": {
-        "uses": ["north", "to come/singular/third person/female"],
+        "uses": ["north", "to come/present tense/singular/third person/female"],
         "en": "She is from the North",
         "fi": ["Hän tulee pohjoisesta;female", "Hän on kotoisin pohjoisesta;female"],
         "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
     },
     "they live in the west": {
-        "uses": ["west", "to live/plural/third person"],
+        "uses": ["west", "to live/present tense/plural/third person"],
         "en": "They live in the West",
         "fi": "He asuvat lännessä",
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
     },
     "the city is in the east": {
-        "uses": ["city/singular", "to be/singular/third person", "east"],
+        "uses": ["city/singular", "to be/present tense/singular/third person", "east"],
         "en": "The city is in the East",
         "fi": ["Kaupunki on idässä", "Kaupunki sijaitsee idässä"],
         "nl": "De stad ligt in het Oosten"

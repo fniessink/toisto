@@ -63,6 +63,7 @@
         }
     },
     "underwear": {
+        "uses": "clothes",
         "en": "Underwear",
         "fi": "Alusvaatteet",
         "nl": "Het ondergoed"
@@ -104,6 +105,7 @@
         }
     },
     "sweater": {
+        "uses": "shirt",
         "singular": {
             "en": "Sweater",
             "fi": "Neulepaita",
