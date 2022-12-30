@@ -21,7 +21,7 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_uses(self):
         """Test that a concept can have a uses relation with another concept."""
         concept = self.create_concept(
-            "mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"),
+            "mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum")
         )
         self.assertEqual(("shop", "centre"), concept.uses)
 
@@ -38,3 +38,10 @@ class ConcepFactoryTest(ToistoTestCase):
             "to eat", {"present tense": dict(en="I eat", nl="Ik eet"), "past tense": dict(en="I ate", nl="Ik at")}
         )
         self.assertEqual(("to eat/present tense",), concept.constituent_concepts[1].uses)
+
+    def test_negation_auto_uses_affirmation(self):
+        """Test that a negative concept automatically has a uses relation with the affirmative concept."""
+        concept = self.create_concept(
+            "to eat", dict(affirmative=dict(en="I eat", nl="Ik eet"), negative=dict(en="I don't eat", nl="Ik eet niet"))
+        )
+        self.assertEqual(("to eat/affirmative",), concept.constituent_concepts[1].uses)

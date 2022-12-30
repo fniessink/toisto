@@ -704,6 +704,33 @@ class SentenceTypeTest(ToistoTestCase):
         )
 
 
+class PolarityTest(ToistoTestCase):
+    """Unit tests for concepts with different polarities."""
+
+    def test_affirmative_and_negative_polarities(self):
+        """Test that quizzes can be generated for the affirmative and negative polarities."""
+        concept = self.create_concept(
+            "car",
+            {
+                "affirmative": dict(en="The car is black", nl="De auto is zwart"),
+                "negative": dict(en="The car is not black", nl="De auto is niet zwart")
+            }
+        )
+        self.assertEqual(
+            set([
+                self.create_quiz("car", "nl", "en", "De auto is zwart", ["The car is black"], "translate"),
+                self.create_quiz("car", "en", "nl", "The car is black", ["De auto is zwart"], "translate"),
+                self.create_quiz("car", "nl", "nl", "De auto is zwart", ["De auto is zwart"], "listen"),
+                self.create_quiz("car", "nl", "en", "De auto is niet zwart", ["The car is not black"], "translate"),
+                self.create_quiz("car", "en", "nl", "The car is not black", ["De auto is niet zwart"], "translate"),
+                self.create_quiz("car", "nl", "nl", "De auto is niet zwart", ["De auto is niet zwart"], "listen"),
+                self.create_quiz("car", "nl", "nl", "De auto is zwart", ["De auto is niet zwart"], "negate"),
+                self.create_quiz("car", "nl", "nl", "De auto is niet zwart", ["De auto is zwart"], "affirm"),
+            ]),
+            self.create_quizzes(concept, "nl", "en")
+        )
+
+
 class ConceptRelationshipsTest(ToistoTestCase):
     """Unit tests for relationships between concepts."""
 

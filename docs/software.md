@@ -342,6 +342,25 @@ When the topic file contains both the declarative and the interrogative type of 
 
 The sentence types are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the declarative sentence type gets `the car is black/declarative` as key and the interrogative type gets `the car is black/interrogative`.
 
+### Polarity
+
+Polarity (affirmative and negative sentence types) can be specified as follows:
+
+```json
+{
+    "the car is black": {
+        "affirmative": {
+            "en": "The car is black",
+            "nl": "De auto is zwart"
+        },
+        "negative": {
+            "en": "The car is not black",
+            "nl": "De auto is niet zwart"
+        }
+    }
+}
+```
+
 ### Concept relationships
 
 When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
