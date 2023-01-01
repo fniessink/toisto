@@ -677,11 +677,11 @@ class TenseQuizzesTest(ToistoTestCase):
         )
 
 
-class SentenceTypeTest(ToistoTestCase):
-    """Unit tests for concepts with different sentence types."""
+class SentenceFormTest(ToistoTestCase):
+    """Unit tests for concepts with different sentence forms."""
 
     def test_declarative_and_interrogative_sentence_types(self):
-        """Test that quizzes can be generated for the declarative and interrogative sentence types."""
+        """Test that quizzes can be generated for the declarative and interrogative sentence forms."""
         concept = self.create_concept(
             "car",
             {
@@ -704,8 +704,8 @@ class SentenceTypeTest(ToistoTestCase):
         )
 
 
-class PolarityTest(ToistoTestCase):
-    """Unit tests for concepts with different polarities."""
+class GrammaticalPolarityTest(ToistoTestCase):
+    """Unit tests for concepts with different grammatical polarities."""
 
     def test_affirmative_and_negative_polarities(self):
         """Test that quizzes can be generated for the affirmative and negative polarities."""

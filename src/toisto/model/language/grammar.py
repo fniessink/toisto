@@ -8,16 +8,16 @@ GrammaticalNumber = Literal["infinitive", "singular", "plural"]
 GrammaticalPerson = Literal["first person", "second person", "third person"]
 DegreeOfComparison = Literal["positive degree", "comparitive degree", "superlative degree"]
 Tense = Literal["present tense", "past tense"]
-SentenceType = Literal["declarative", "interrogative"]
-Polarity = Literal["affirmative", "negative"]
+SentenceForm = Literal["declarative", "interrogative"]
+GrammaticalPolarity = Literal["affirmative", "negative"]
 GrammaticalCategory = Literal[
     GrammaticalGender,
     GrammaticalNumber,
     GrammaticalPerson,
     DegreeOfComparison,
     Tense,
-    SentenceType,
-    Polarity,
+    SentenceForm,
+    GrammaticalPolarity,
 ]
 
 # Mapping of grammatical categories to grammatical categories they automatically use. For example, a plural concept
