@@ -20,6 +20,25 @@ class LoadTopicsTest(ToistoTestCase):
         """Test that the topics can be loaded."""
         self.assertIn(self.quiz, load_topics("fi", "nl", [], []).quizzes)
 
+    def test_uses_exist(self):
+        """Test that all uses relations use existing concept ids."""
+        all_topics = load_topics("fi", "nl", [], [])
+        all_concept_ids = set()
+        for topic in all_topics:
+            for concept in topic.concepts:
+                for leaf_concept in concept.leaf_concepts():
+                    id_parts = leaf_concept.concept_id.split("/")
+                    concept_id = ""
+                    for id_part in id_parts:
+                        if concept_id:
+                            concept_id += "/"
+                        concept_id += id_part
+                        all_concept_ids.add(concept_id)
+        for topic in all_topics:
+            for concept in topic.concepts:
+                for uses in concept.uses:
+                    self.assertIn(uses, all_concept_ids)
+
     def test_instructions(self):
         """Test that an instruction can be created for all quizzes."""
         for language1, language2 in permutations(["en", "fi", "nl"], r=2):

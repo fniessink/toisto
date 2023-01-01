@@ -172,19 +172,19 @@
         "nl": "Volgende week"
     },
     "today it is monday": {
-        "uses": ["today", "to be/present tense/singular/third person", "monday/singular"],
+        "uses": ["today", "to be/declarative/affirmative/present tense/singular/third person", "monday/singular"],
         "en": "Today it is Monday|Today it's Monday",
         "fi": "Tänään on maanantai",
         "nl": "Vandaag is het maandag"
     },
     "tomorrow it is tuesday": {
-        "uses": ["tomorrow", "to be/present tense/singular/third person", "tuesday/singular"],
+        "uses": ["tomorrow", "to be/declarative/affirmative/present tense/singular/third person", "tuesday/singular"],
         "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai",
         "nl": "Morgen is het dinsdag"
     },
     "what day is it today": {
-        "uses": ["day/singular", "to be/present tense/singular/third person", "today"],
+        "uses": ["day/singular", "to be/interrogative/affirmative/present tense/singular/third person", "today"],
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"

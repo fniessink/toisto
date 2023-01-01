@@ -33,19 +33,19 @@
         "nl": "Welkom"
     },
     "who are you": {
-        "uses": ["who", "to be/present tense/singular/second person"],
+        "uses": ["who", "to be/interrogative/affirmative/present tense/singular/second person"],
         "en": "Who are you?",
         "fi": "Kuka sinä olet?|Kuka olet?",
         "nl": "Wie ben jij?"
     },
     "I am alice": {
-        "uses": "to be/present tense/singular/first person",
+        "uses": "to be/declarative/affirmative/present tense/singular/first person",
         "en": "I am Alice|I'm Alice",
         "fi": "Minä olen Alice",
         "nl": "Ik ben Alice"
     },
     "how are you": {
-        "uses": ["what", "how", "to be"],
+        "uses": ["what", "how", "to be/interrogative/affirmative/present tense/singular"],
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -53,20 +53,32 @@
         ],
         "nl": "Hoe gaat het?"
     },
+    "name": {
+        "singular": {
+            "en": "Name",
+            "fi": "Nimi",
+            "nl": "De naam"
+        },
+        "plural": {
+            "en": "Names",
+            "fi": "Nimet",
+            "nl": "De namen"
+        }
+    },
     "what is your name": {
-        "uses": ["what", "to be/present tense/singular/third person", "name"],
+        "uses": ["what", "to be/interrogative/affirmative/present tense/singular/third person", "name/singular"],
         "en": "What is your name?",
         "fi": "Mikä sinun nimesi on?",
         "nl": "Wat is jouw naam?|Wat is je naam?"
     },
     "my name is bob": {
-        "uses": ["name", "to be/present tense/singular/third person"],
+        "uses": ["name/singular", "to be/declarative/affirmative/present tense/singular/third person"],
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": ["how", "old", "to be/present tense/singular/second person"],
+        "uses": ["how", "old", "to be/interrogative/affirmative/present tense/singular/second person"],
         "en": "How old are you?",
         "fi": "Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"

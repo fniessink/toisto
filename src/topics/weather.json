@@ -5,7 +5,7 @@
         "nl": "Het weer"
     },
     "how is the weather": {
-        "uses": ["how", "what kind of", "to be/present tense/singular/third person"],
+        "uses": ["how", "what kind of", "to be/interrogative/affirmative/present tense/singular/third person"],
         "en": "How is the weather?|How's the weather?",
         "fi": [
             "Millainen sää on?",
@@ -97,7 +97,7 @@
         "nl": "Stormachtig"
     },
     "there is a thunderstorm": {
-        "uses": ["to be/present tense/singular/third person", "storm", "thunder"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "storm", "thunder"],
         "en": "There is a thunderstorm|There's a thunderstorm",
         "fi": ["Ukkostaa", "On ukonilma"],
         "nl": "Het onweert"
@@ -109,49 +109,49 @@
         "nl": "Mistig"
     },
     "it is raining": {
-        "uses": ["to be/present tense/singular/third person", "rain"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "rain"],
         "en": "It is raining|It's raining",
         "fi": ["Sataa vettä", "Sataa"],
         "nl": "Het regent"
     },
     "it is snowing": {
-        "uses": ["to be/present tense/singular/third person", "snow"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "snow"],
         "en": "It is snowing|It's snowing",
         "fi": "Sataa lunta",
         "nl": "Het sneeuwt"
     },
     "it is rainy": {
-        "uses": ["to be/present tense/singular/third person", "rainy"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "rainy"],
         "en": "It is rainy|It's rainy",
         "fi": "On sateista",
         "nl": "Het is regenachtig"
     },
     "it is sunny": {
-        "uses": ["to be/present tense/singular/third person", "sunny"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "sunny"],
         "en": "It is sunny|It's sunny",
         "fi": "On aurinkoista",
         "nl": "Het is zonnig"
     },
     "it is windy": {
-        "uses": ["to be/present tense/singular/third person", "windy"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "windy"],
         "en": "It is windy|It's windy",
         "fi": "On tuulista",
         "nl": "Het is winderig"
     },
     "it is cloudy": {
-        "uses": ["to be/present tense/singular/third person", "cloudy"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "cloudy"],
         "en": "It is cloudy|It's cloudy",
         "fi": "On pilvistä",
         "nl": "Het is bewolkt"
     },
     "it is stormy": {
-        "uses": ["to be/present tense/singular/third person", "stormy"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "stormy"],
         "en": "It is stormy|It's stormy",
         "fi": "On myrskyistä",
         "nl": "Het is stormachtig"
     },
     "it is foggy": {
-        "uses": ["to be/present tense/singular/third person", "foggy"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "foggy"],
         "en": "It is foggy|It's foggy",
         "fi": "On sumuista",
         "nl": "Het is mistig"

@@ -16,6 +16,18 @@
             "nl": "De bossen"
         }
     },
+    "flower": {
+        "singular": {
+            "en": "Flower",
+            "fi": "Kukka",
+            "nl": "De bloem"
+        },
+        "plural": {
+            "en": "Flowers",
+            "fi": "Kukkat",
+            "nl": "De bloemen"
+        }
+    },
     "lake": {
         "singular": {
             "en": "Lake",
@@ -190,13 +202,13 @@
         }
     },
     "it is cold in the north": {
-        "uses": ["to be/present tense/singular/third person", "cold", "north"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "cold", "north"],
         "en": "It is cold in the North",
         "fi": "Pohjoisessa on kylmä",
         "nl": "Het is koud in het Noorden"
     },
     "it is warm in the south": {
-        "uses": ["to be/present tense/singular/third person", "warm", "south"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "warm", "south"],
         "en": "It is warm in the South",
         "fi": "Etelässä on lämmin",
         "nl": "Het is warm in het Zuiden"
@@ -214,7 +226,7 @@
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
     },
     "the city is in the east": {
-        "uses": ["city/singular", "to be/present tense/singular/third person", "east"],
+        "uses": ["city/singular", "to be/declarative/affirmative/present tense/singular/third person", "east"],
         "en": "The city is in the East",
         "fi": ["Kaupunki on idässä", "Kaupunki sijaitsee idässä"],
         "nl": "De stad ligt in het Oosten"
