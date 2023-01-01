@@ -32,7 +32,9 @@ QuizType = Literal[
     "give present tense",
     "give past tense",
     "make declarative",
-    "make interrogative"
+    "make interrogative",
+    "affirm",
+    "negate"
 ]
 GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "plural": "pluralize",
@@ -50,7 +52,9 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "present tense": "give present tense",
     "past tense": "give past tense",
     "declarative": "make declarative",
-    "interrogative": "make interrogative"
+    "interrogative": "make interrogative",
+    "affirmative": "affirm",
+    "negative": "negate"
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
 INSTRUCTIONS: dict[QuizType, str] = dict(translate="Translate into", listen="Listen and write in")

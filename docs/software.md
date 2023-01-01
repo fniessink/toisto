@@ -28,7 +28,7 @@ The contents of a JSON topic file looks as follows:
 }
 ```
 
-Concepts are represented in the topic files as objects. The key is an identifier for the concept. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
+Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
@@ -321,9 +321,9 @@ When there are synonyms, they need to be in the same order in every degree. This
 
 The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive degree` as key, the comparitive degree `big/comparitive degree`, and the superlative degree `big/superlative degree`.
 
-### Sentence types
+### Sentence forms
 
-When the topic file contains both the declarative and the interrogative type of a sentence, Toisto can generate quizzes to change one into the other. Sentence types are specified as follows:
+When the topic file contains both the declarative and the interrogative form of a sentence, Toisto can generate quizzes to change one into the other. Sentence forms are specified as follows:
 
 ```json
 {
@@ -340,7 +340,26 @@ When the topic file contains both the declarative and the interrogative type of 
 }
 ```
 
-The sentence types are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the declarative sentence type gets `the car is black/declarative` as key and the interrogative type gets `the car is black/interrogative`.
+The sentence forms are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the declarative sentence form gets `the car is black/declarative` as key and the interrogative form gets `the car is black/interrogative`.
+
+### Grammatical polarity
+
+Polarity (affirmative and negative sentence forms) can be specified as follows:
+
+```json
+{
+    "the car is black": {
+        "affirmative": {
+            "en": "The car is black",
+            "nl": "De auto is zwart"
+        },
+        "negative": {
+            "en": "The car is not black",
+            "nl": "De auto is niet zwart"
+        }
+    }
+}
+```
 
 ### Concept relationships
 
@@ -394,12 +413,13 @@ As mentioned in the previous sections, subconcepts automatically get a more spec
 
 Toisto uses the concepts to generate quizzes. Currently, the following types of quizzes are generated:
 
-1. Quizzes to translate a concept from one language to another and vice versa. Toisto quizzes the user in both directions. If there are multiple labels, Toisto uses all labels as question and as answer. So both "Mikä päivä tänään on?" and "Mikä päivä on tänään?" are asked as question and both are accepted as correct answer for the quiz "What day is it today?".
+1. Quizzes to translate a concept from one language to another and vice versa. Toisto quizzes the user in both directions.
 2. Quizzes to listen to a concept in the practice language and then type in what was said.
 3. Quizzes to singularize a plural concept or pluralize a singular concept.
 4. Quizzes to change the person of a concept.
 5. Quizzes to change the gender of a concept.
 6. Quizzes to provide the positive, comparitive, or superlative degree of comparison, given an adjective in another degree.
+7. Quizzes to change the sentence form and polarity.
 
 Except for the translation type quizzes, quizzes only use the user's practice language.
 

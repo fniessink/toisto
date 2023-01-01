@@ -8,16 +8,24 @@ GrammaticalNumber = Literal["infinitive", "singular", "plural"]
 GrammaticalPerson = Literal["first person", "second person", "third person"]
 DegreeOfComparison = Literal["positive degree", "comparitive degree", "superlative degree"]
 Tense = Literal["present tense", "past tense"]
-SentenceType = Literal["declarative", "interrogative"]
+SentenceForm = Literal["declarative", "interrogative"]
+GrammaticalPolarity = Literal["affirmative", "negative"]
 GrammaticalCategory = Literal[
     GrammaticalGender,
     GrammaticalNumber,
     GrammaticalPerson,
     DegreeOfComparison,
     Tense,
-    SentenceType]
+    SentenceForm,
+    GrammaticalPolarity,
+]
 
 # Mapping of grammatical categories to grammatical categories they automatically use. For example, a plural concept
 # automatically uses the singular form. This forces Toisto to present quizzes of the used category before presenting
 # quizzes for the using category.
-AUTO_USES = {"plural": "singular", "past tense": "present tense", "interrogative": "declarative"}
+AUTO_USES = {
+    "plural": "singular",
+    "past tense": "present tense",
+    "negative": "affirmative",
+    "interrogative": "declarative",
+}

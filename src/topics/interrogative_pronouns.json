@@ -94,7 +94,7 @@
         "uses": ["when", "airport/singular"],
         "en": "When will you arrive at the airport?",
         "fi": "Milloin saavut lentokentälle?",
-        "nl": "Wanneer kom je aan op het vliegveld?"
+        "nl": "Wanneer kom je aan op het vliegveld?|Wanneer kom je op het vliegveld aan?"
     },
     "what kind of cat do you have": {
         "uses": ["what kind of", "cat", "to have/present tense/singular/second person"],
