@@ -59,7 +59,7 @@ class QuizFactory:
             quiz_types = grammatical_quiz_types(concept1, concept2)
             uses = concept.uses + (concept2.concept_id,)
             quizzes |= set(
-                Quiz(concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
+                Quiz(concept1.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
                 for label1, label2 in zip(labels1, labels2) if label1 != label2
             )
         return quizzes
