@@ -5,9 +5,11 @@ All notable changes to Toisto will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## v0.6.0 - [Unreleased]
+
 ### Added
 
 - Add affirmative and negative sentence types (polarity) and quizzes to change affirmative sentence into negative sentences and vice versa. Closes [#82](https://github.com/fniessink/toisto/issues/82).
+- Add topics for transport, languages, and adverbs.
 
 ## v0.5.0 - 2022-12-27
 

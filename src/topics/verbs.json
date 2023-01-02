@@ -1,365 +1,767 @@
 {
     "to be": {
-        "affirmative": {
-            "infinitive": {
-                "en": "To be",
-                "fi": "Olla",
-                "nl": "Zijn"
-            },
-            "present tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I am|I'm",
-                        "fi": "Minä olen|Olen",
-                        "nl": "Ik ben"
-                    },
-                    "second person": {
-                        "en": "You are|You're;singular",
-                        "fi": "Sinä olet|Olet",
-                        "nl": "Jij bent|Je bent"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She is|She's",
-                            "fi": "Hän on|On;female",
-                            "nl": "Zij is|Ze is"
+        "declarative": {
+            "affirmative": {
+                "infinitive": {
+                    "en": "To be",
+                    "fi": "Olla",
+                    "nl": "Zijn"
+                },
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I am|I'm",
+                            "fi": "Minä olen|Olen",
+                            "nl": "Ik ben"
                         },
-                        "male": {
-                            "en": "He is|He's",
-                            "fi": "Hän on|On;male",
-                            "nl": "Hij is"
+                        "second person": {
+                            "en": "You are|You're;singular",
+                            "fi": "Sinä olet|Olet",
+                            "nl": "Jij bent|Je bent"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She is|She's",
+                                "fi": "Hän on|On;female",
+                                "nl": "Zij is|Ze is"
+                            },
+                            "male": {
+                                "en": "He is|He's",
+                                "fi": "Hän on|On;male",
+                                "nl": "Hij is"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "We are|We're",
+                            "fi": "Me olemme|Olemme",
+                            "nl": "Wij zijn|We zijn"
+                        },
+                        "second person": {
+                            "en": "You are|You're;plural",
+                            "fi": "Te olette|Olette",
+                            "nl": "Jullie zijn"
+                        },
+                        "third person": {
+                            "en": "They are|They're",
+                            "fi": "He ovat|Ovat",
+                            "nl": "Zij zijn|Ze zijn"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We are|We're",
-                        "fi": "Me olemme|Olemme",
-                        "nl": "Wij zijn|We zijn"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I was",
+                            "fi": "Minä olin|Olin",
+                            "nl": "Ik was"
+                        },
+                        "second person": {
+                            "en": "You were;singular",
+                            "fi": "Sinä olit|Olit",
+                            "nl": "Jij was|Je was"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She was",
+                                "fi": "Hän oli|Oli;female",
+                                "nl": "Zij was|Ze was"
+                            },
+                            "male": {
+                                "en": "He was",
+                                "fi": "Hän oli|Oli;male",
+                                "nl": "Hij was"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You are|You're;plural",
-                        "fi": "Te olette|Olette",
-                        "nl": "Jullie zijn"
-                    },
-                    "third person": {
-                        "en": "They are|They're",
-                        "fi": "He ovat|Ovat",
-                        "nl": "Zij zijn|Ze zijn"
+                    "plural": {
+                        "first person": {
+                            "en": "We were",
+                            "fi": "Me olimme|Olimme",
+                            "nl": "Wij waren|We waren"
+                        },
+                        "second person": {
+                            "en": "You were;plural",
+                            "fi": "Te olitte|Olitte",
+                            "nl": "Jullie waren"
+                        },
+                        "third person": {
+                            "en": "They were",
+                            "fi": "He olivat|Olivat",
+                            "nl": "Zij waren|Ze waren"
+                        }
                     }
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I was",
-                        "fi": "Minä olin|Olin",
-                        "nl": "Ik was"
-                    },
-                    "second person": {
-                        "en": "You were;singular",
-                        "fi": "Sinä olit|Olit",
-                        "nl": "Jij was|Je was"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She was",
-                            "fi": "Hän oli|Oli;female",
-                            "nl": "Zij was|Ze was"
+            "negative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I am not|I'm not",
+                            "fi": "Minä en ole|En ole",
+                            "nl": "Ik ben niet"
                         },
-                        "male": {
-                            "en": "He was",
-                            "fi": "Hän oli|Oli;male",
-                            "nl": "Hij was"
+                        "second person": {
+                            "en": "You are not|You're not;singular",
+                            "fi": "Sinä et ole|Et ole",
+                            "nl": "Jij bent niet|Je bent niet"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She is not|She's not|She isn't",
+                                "fi": "Hän ei ole|Ei ole;female",
+                                "nl": "Zij is niet|Ze is niet"
+                            },
+                            "male": {
+                                "en": "He is not|He's not|He isn't",
+                                "fi": "Hän ei ole|Ei ole;male",
+                                "nl": "Hij is niet"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "We are not|We're not|We aren't",
+                            "fi": "Me emme ole|Emme ole",
+                            "nl": "Wij zijn niet|We zijn niet"
+                        },
+                        "second person": {
+                            "en": "You are not|You're not|You aren't;plural",
+                            "fi": "Te ette ole|Ette ole",
+                            "nl": "Jullie zijn niet"
+                        },
+                        "third person": {
+                            "en": "They are not|They're not|They aren't",
+                            "fi": "He eivät ole|Eivät ole",
+                            "nl": "Zij zijn nietl|Ze zijn nietl"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We were",
-                        "fi": "Me olimme|Olimme",
-                        "nl": "Wij waren|We waren"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I was not|I wasn't",
+                            "fi": "Minä en ollut|En ollut",
+                            "nl": "Ik was niet"
+                        },
+                        "second person": {
+                            "en": "You were not|You weren't;singular",
+                            "fi": "Sinä et ollut|Et ollut",
+                            "nl": "Jij was niet|Je was niet"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She was not|She wasn't",
+                                "fi": "Hän ei ollut|Ei ollut;female",
+                                "nl": "Zij was niet|Ze was niet"
+                            },
+                            "male": {
+                                "en": "He was not|He wasn't",
+                                "fi": "Hän ei ollut|Ei ollut;male",
+                                "nl": "Hij was niet"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You were;plural",
-                        "fi": "Te olitte|Olitte",
-                        "nl": "Jullie waren"
-                    },
-                    "third person": {
-                        "en": "They were",
-                        "fi": "He olivat|Olivat",
-                        "nl": "Zij waren|Ze waren"
+                    "plural": {
+                        "first person": {
+                            "en": "We were not|We weren't",
+                            "fi": "Me emme olleet|Emme olleet",
+                            "nl": "Wij waren niet|We waren niet"
+                        },
+                        "second person": {
+                            "en": "You were not|You weren't;plural",
+                            "fi": "Te ette olleet|Ette olleet",
+                            "nl": "Jullie waren niet"
+                        },
+                        "third person": {
+                            "en": "They were not|They weren't",
+                            "fi": "He eivät olleet|Eivät olleet",
+                            "nl": "Zij waren niet|Ze waren niet"
+                        }
                     }
                 }
             }
         },
-        "negative": {
-            "present tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I am not|I'm not",
-                        "fi": "Minä en ole|En ole",
-                        "nl": "Ik ben niet"
-                    },
-                    "second person": {
-                        "en": "You are not|You're not;singular",
-                        "fi": "Sinä et ole|Et ole",
-                        "nl": "Jij bent niet|Je bent niet"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She is not|She's not|She isn't",
-                            "fi": "Hän ei ole|Ei ole;female",
-                            "nl": "Zij is niet|Ze is niet"
+        "interrogative": {
+            "affirmative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Am I?",
+                            "fi": "Olenko minä?|Olenko?",
+                            "nl": "Ben ik?"
                         },
-                        "male": {
-                            "en": "He is not|He's not|He isn't",
-                            "fi": "Hän ei ole|Ei ole;male",
-                            "nl": "Hij is niet"
+                        "second person": {
+                            "en": "Are you?;singular",
+                            "fi": "Oletko sinä?|Oletko?",
+                            "nl": "Ben jij?|Ben je?"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Is she?",
+                                "fi": "Onko hän?;female",
+                                "nl": "Is zij?|Is ze?"
+                            },
+                            "male": {
+                                "en": "Is he?",
+                                "fi": "Onko hän?;male",
+                                "nl": "Is hij?"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "Are we?",
+                            "fi": "Olemmeko me?|Olemmeko?",
+                            "nl": "Zijn wij?|Zijn we?"
+                        },
+                        "second person": {
+                            "en": "Are you?;plural",
+                            "fi": "Oletteko te?|Oletteko?",
+                            "nl": "Zijn jullie?"
+                        },
+                        "third person": {
+                            "en": "Are they?",
+                            "fi": "Ovatko he?",
+                            "nl": "Zijn zij?|Zijn ze?"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We are not|We're not|We aren't",
-                        "fi": "Me emme ole|Emme ole",
-                        "nl": "Wij zijn niet|We zijn niet"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Was I?",
+                            "fi": "Olinko minä?|Olinko?",
+                            "nl": "Was ik?"
+                        },
+                        "second person": {
+                            "en": "Were you?;singular",
+                            "fi": "Olitko sinä?|Olitko?",
+                            "nl": "Was jij?|Was je?"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Was she?",
+                                "fi": "Oliko hän?;female",
+                                "nl": "Was zij?|Was ze?"
+                            },
+                            "male": {
+                                "en": "Was he?",
+                                "fi": "Oliko hän?;male",
+                                "nl": "Was hij?"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You are not|You're not|You aren't;plural",
-                        "fi": "Te ette ole|Ette ole",
-                        "nl": "Jullie zijn niet"
-                    },
-                    "third person": {
-                        "en": "They are not|They're not|They aren't",
-                        "fi": "He eivät ole|Eivät ole",
-                        "nl": "Zij zijn nietl|Ze zijn nietl"
+                    "plural": {
+                        "first person": {
+                            "en": "Were we?",
+                            "fi": "Olimmeko me?|Olimmeko?",
+                            "nl": "Waren wij?|Waren we?"
+                        },
+                        "second person": {
+                            "en": "Were you?;plural",
+                            "fi": "Olitteko te?|Olitteko?",
+                            "nl": "Waren jullie?"
+                        },
+                        "third person": {
+                            "en": "Were they?",
+                            "fi": "Olivatko he?",
+                            "nl": "Waren zij?|Waren ze?"
+                        }
                     }
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I was not|I wasn't",
-                        "fi": "Minä en ollut|En ollut",
-                        "nl": "Ik was niet"
-                    },
-                    "second person": {
-                        "en": "You were not|You weren't;singular",
-                        "fi": "Sinä et ollut|Et ollut",
-                        "nl": "Jij was niet|Je was niet"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She was not|She wasn't",
-                            "fi": "Hän ei ollut|Ei ollut;female",
-                            "nl": "Zij was niet|Ze was niet"
+            "negative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Am I not?",
+                            "fi": "Enkö minä ole?|Enkö ole?",
+                            "nl": [
+                                "Ben ik niet?",
+                                "Ben ik geen?"
+                            ]
                         },
-                        "male": {
-                            "en": "He was not|He wasn't",
-                            "fi": "Hän ei ollut|Ei ollut;male",
-                            "nl": "Hij was niet"
+                        "second person": {
+                            "en": "Are you not?;singular",
+                            "fi": "Etkö sinä ole?|Etkö ole?",
+                            "nl": [
+                                "Ben jij niet?|Ben je niet?",
+                                "Ben jij geen?|Ben je geen?"
+                            ]
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Is she not?",
+                                "fi": "Eikö hän ole?;female",
+                                "nl": [
+                                    "Is zij niet?|Is ze niet?",
+                                    "Is zij geen?|Is ze geen?"
+                                ]
+                            },
+                            "male": {
+                                "en": "Is he not?",
+                                "fi": "Eikö hän ole?;male",
+                                "nl": [
+                                    "Is hij niet?",
+                                    "Is hij geen?"
+                                ]
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "Are we not?",
+                            "fi": "Emmekö me ole?|Emmokö ole?",
+                            "nl": [
+                                "Zijn wij niet?|Zijn we niet?",
+                                "Zijn we geen?|Zijn we geen?"
+                            ]
+                        },
+                        "second person": {
+                            "en": "Are you not?;plural",
+                            "fi": "Ettekö te ole?|Ettekö ole?",
+                            "nl": [
+                                "Zijn jullie niet?",
+                                "Zijn jullie geen?"
+                            ]
+                        },
+                        "third person": {
+                            "en": "Are they not?",
+                            "fi": "Eivätkö he ole?",
+                            "nl": [
+                                "Zijn zij niet?|Zijn ze niet?",
+                                "Zijn zij geen?|Zijn ze geen?"
+                            ]
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We were not|We weren't",
-                        "fi": "Me emme olleet|Emme olleet",
-                        "nl": "Wij waren niet|We waren niet"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Was I not?|Wasn't I",
+                            "fi": "Enkö minä ole?|Enkö ole?",
+                            "nl": [
+                                "Was ik niet?",
+                                "Was ik geen?"
+                            ]
+                        },
+                        "second person": {
+                            "en": "Were you not?|Weren't you?;singular",
+                            "fi": "Etkö sinä ollut?|Etkö ollut?",
+                            "nl": [
+                                "Was jij niet?|Was je niet?",
+                                "Was jij geen?|Was je geen?"
+                            ]
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Was she not?|Wasn't she?",
+                                "fi": "Eikö hän ollut?;female",
+                                "nl": [
+                                    "Was zij niet?|Was ze niet?",
+                                    "Was zij geen?|Was ze geen?"
+                                ]
+                            },
+                            "male": {
+                                "en": "Was he not?",
+                                "fi": "Eikö hän ollut?;male",
+                                "nl": [
+                                    "Was hij niet?",
+                                    "Was hij geen?"
+                                ]
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You were not|You weren't;plural",
-                        "fi": "Te ette olleet|Ette olleet",
-                        "nl": "Jullie waren niet"
-                    },
-                    "third person": {
-                        "en": "They were not|They weren't",
-                        "fi": "He eivät olleet|Eivät olleet",
-                        "nl": "Zij waren niet|Ze waren niet"
+                    "plural": {
+                        "first person": {
+                            "en": "Were we not?|Waren't we?",
+                            "fi": "Emmekö me olleet?|Emmokö olleet?",
+                            "nl": [
+                                "Waren wij niet?|Waren we niet?",
+                                "Waren we geen?|Waren we geen?"
+                            ]
+                        },
+                        "second person": {
+                            "en": "Were you not?|Weren't you?;plural",
+                            "fi": "Ettekö te olleet?|Ettekö olleet?",
+                            "nl": [
+                                "Waren jullie niet?",
+                                "Waren jullie geen?"
+                            ]
+                        },
+                        "third person": {
+                            "en": "Were they not?|Weren't they?",
+                            "fi": "Eivätkö he olleet?",
+                            "nl": [
+                                "Waren zij niet?|Waren ze niet?",
+                                "Waren zij geen?|Waren ze geen?"
+                            ]
+                        }
                     }
                 }
             }
         }
     },
     "to have": {
-        "affirmative": {
-            "infinitive": {
-                "en": "To have",
-                "fi": "Olla;omistaa",
-                "nl": "Hebben"
-            },
-            "present tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I have|I've",
-                        "fi": "Minulla on",
-                        "nl": "Ik heb"
-                    },
-                    "second person": {
-                        "en": "You have|You've;singular",
-                        "fi": "Sinulla on",
-                        "nl": "Jij hebt|Je hebt"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She has|She's",
-                            "fi": "Hänellä on;female",
-                            "nl": "Zij heeft|Ze heeft"
+        "declarative": {
+            "affirmative": {
+                "infinitive": {
+                    "en": "To have",
+                    "fi": "Olla;omistaa",
+                    "nl": "Hebben"
+                },
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I have|I've",
+                            "fi": "Minulla on",
+                            "nl": "Ik heb"
                         },
-                        "male": {
-                            "en": "He has|He's",
-                            "fi": "Hänellä on;male",
-                            "nl": "Hij heeft"
+                        "second person": {
+                            "en": "You have|You've;singular",
+                            "fi": "Sinulla on",
+                            "nl": "Jij hebt|Je hebt"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She has|She's",
+                                "fi": "Hänellä on;female",
+                                "nl": "Zij heeft|Ze heeft"
+                            },
+                            "male": {
+                                "en": "He has|He's",
+                                "fi": "Hänellä on;male",
+                                "nl": "Hij heeft"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "We have|We've",
+                            "fi": "Meillä on",
+                            "nl": "Wij hebben|We hebben"
+                        },
+                        "second person": {
+                            "en": "You have|You've;plural",
+                            "fi": "Teillä on",
+                            "nl": "Jullie hebben"
+                        },
+                        "third person": {
+                            "en": "They have|They've",
+                            "fi": "Heillä on",
+                            "nl": "Zij hebben|Ze hebben"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We have|We've",
-                        "fi": "Meillä on",
-                        "nl": "Wij hebben|We hebben"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I had",
+                            "fi": "Minulla oli",
+                            "nl": "Ik had"
+                        },
+                        "second person": {
+                            "en": "You had;singular",
+                            "fi": "Sinulla oli",
+                            "nl": "Jij had|Je had"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She had",
+                                "fi": "Hänellä oli;female",
+                                "nl": "Zij had|Ze had"
+                            },
+                            "male": {
+                                "en": "He had",
+                                "fi": "Hänellä oli;male",
+                                "nl": "Hij had"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You have|You've;plural",
-                        "fi": "Teillä on",
-                        "nl": "Jullie hebben"
-                    },
-                    "third person": {
-                        "en": "They have|They've",
-                        "fi": "Heillä on",
-                        "nl": "Zij hebben|Ze hebben"
+                    "plural": {
+                        "first person": {
+                            "en": "We had",
+                            "fi": "Meillä oli",
+                            "nl": "Wij hadden|We hadden"
+                        },
+                        "second person": {
+                            "en": "You had;plural",
+                            "fi": "Teillä oli",
+                            "nl": "Jullie hadden"
+                        },
+                        "third person": {
+                            "en": "They had",
+                            "fi": "Heillä oli",
+                            "nl": "Zij hadden|Ze hadden"
+                        }
                     }
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I had",
-                        "fi": "Minulla oli",
-                        "nl": "Ik had"
-                    },
-                    "second person": {
-                        "en": "You had;singular",
-                        "fi": "Sinulla oli",
-                        "nl": "Jij had|Je had"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She had",
-                            "fi": "Hänellä oli;female",
-                            "nl": "Zij had|Ze had"
+            "negative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I have not|I've not|I haven't",
+                            "fi": "Minulla ei ole",
+                            "nl": "Ik heb niet"
                         },
-                        "male": {
-                            "en": "He had",
-                            "fi": "Hänellä oli;male",
-                            "nl": "Hij had"
+                        "second person": {
+                            "en": "You have not|You've not|You haven't;singular",
+                            "fi": "Sinulla ei ole",
+                            "nl": "Jij hebt nietl|Je hebt nietl"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She has not|She's not|She hasn't",
+                                "fi": "Hänellä ei ole;female",
+                                "nl": "Zij heeft niet|Ze heeft niet"
+                            },
+                            "male": {
+                                "en": "He has not|He's not|He hasn't",
+                                "fi": "Hänellä ei ole;male",
+                                "nl": "Hij heeft niet"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "We have not|We've not|We haven't",
+                            "fi": "Meillä ei ole",
+                            "nl": "Wij hebben niet|We hebben niet"
+                        },
+                        "second person": {
+                            "en": "You have not|You've not|You haven't;plural",
+                            "fi": "Teillä ei ole",
+                            "nl": "Jullie hebben niet"
+                        },
+                        "third person": {
+                            "en": "They have not|They've not|They haven't",
+                            "fi": "Heillä ei ole",
+                            "nl": "Zij hebben niet|Ze hebben niet"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We had",
-                        "fi": "Meillä oli",
-                        "nl": "Wij hadden|We hadden"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I had not|I hadn't",
+                            "fi": "Minulla ei ollut",
+                            "nl": "Ik had niet"
+                        },
+                        "second person": {
+                            "en": "You had not|You hadn't;singular",
+                            "fi": "Sinulla ei ollut",
+                            "nl": "Jij had niet|Je had niet"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "She had|She hadn't",
+                                "fi": "Hänellä ei ollut;female",
+                                "nl": "Zij had niet|Ze had niet"
+                            },
+                            "male": {
+                                "en": "He had not|He hadn't",
+                                "fi": "Hänellä ei ollut;male",
+                                "nl": "Hij had niet"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You had;plural",
-                        "fi": "Teillä oli",
-                        "nl": "Jullie hadden"
-                    },
-                    "third person": {
-                        "en": "They had",
-                        "fi": "Heillä oli",
-                        "nl": "Zij hadden|Ze hadden"
+                    "plural": {
+                        "first person": {
+                            "en": "We had not|We hadn't",
+                            "fi": "Meillä ei ollut",
+                            "nl": "Wij hadden niet|We hadden niet"
+                        },
+                        "second person": {
+                            "en": "You had not|You hadn't;plural",
+                            "fi": "Teillä ei ollut",
+                            "nl": "Jullie hadden niet"
+                        },
+                        "third person": {
+                            "en": "They had not|They hadn't",
+                            "fi": "Heillä ei ollut",
+                            "nl": "Zij hadden niet|Ze hadden niet"
+                        }
                     }
                 }
             }
         },
-        "negative": {
-            "present tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I have not|I've not|I haven't",
-                        "fi": "Minulla ei ole",
-                        "nl": "Ik heb niet"
-                    },
-                    "second person": {
-                        "en": "You have not|You've not|You haven't;singular",
-                        "fi": "Sinulla ei ole",
-                        "nl": "Jij hebt nietl|Je hebt nietl"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She has not|She's not|She hasn't",
-                            "fi": "Hänellä ei ole;female",
-                            "nl": "Zij heeft niet|Ze heeft niet"
+        "interrogative": {
+            "affirmative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": ["Have I got?", "Do I have?"],
+                            "fi": "Onko minulla?",
+                            "nl": "Heb ik?"
                         },
-                        "male": {
-                            "en": "He has not|He's not|He hasn't",
-                            "fi": "Hänellä ei ole;male",
-                            "nl": "Hij heeft niet"
+                        "second person": {
+                            "en": ["Have you got?|;singular", "Do you have?;singular"],
+                            "fi": "Onko sinulla?",
+                            "nl": "Heb jij?|Heb je?"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": ["Has she got?", "Does she have?"],
+                                "fi": "Onko hänellä?;female",
+                                "nl": "Heeft zij?|Heeft ze?"
+                            },
+                            "male": {
+                                "en": ["Has he got?", "Does he have?"],
+                                "fi": "Onko hänellä?;male",
+                                "nl": "Heeft hij?"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": ["Have we got?", "Do we have?"],
+                            "fi": "Onko meillä?",
+                            "nl": "Hebben wij?|Hebben we?"
+                        },
+                        "second person": {
+                            "en": ["Have you got?;plural", "Do you have?;plural"],
+                            "fi": "Onko teillä?",
+                            "nl": "Hebben jullie?"
+                        },
+                        "third person": {
+                            "en": ["Have they got?", "Do they have?"],
+                            "fi": "Onko heillä?",
+                            "nl": "Hebben zij?|Hebben ze?"
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We have not|We've not|We haven't",
-                        "fi": "Meillä ei ole",
-                        "nl": "Wij hebben niet|We hebben niet"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Did I have?",
+                            "fi": "Oliko minulla?",
+                            "nl": "Had ik?"
+                        },
+                        "second person": {
+                            "en": "Did you have?;singular",
+                            "fi": "Oliko sinulla?",
+                            "nl": "Had jij?|Had je?"
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Did she have?",
+                                "fi": "Oliko hänellä?;female",
+                                "nl": "Had zij?|Had ze?"
+                            },
+                            "male": {
+                                "en": "Did he have?",
+                                "fi": "Oliko hänellä?;male",
+                                "nl": "Had hij?"
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You have not|You've not|You haven't;plural",
-                        "fi": "Teillä ei ole",
-                        "nl": "Jullie hebben niet"
-                    },
-                    "third person": {
-                        "en": "They have not|They've not|They haven't",
-                        "fi": "Heillä ei ole",
-                        "nl": "Zij hebben niet|Ze hebben niet"
+                    "plural": {
+                        "first person": {
+                            "en": "Did we have?",
+                            "fi": "Oliko meillä?",
+                            "nl": "Hadden wij?|Hadden we?"
+                        },
+                        "second person": {
+                            "en": "Did you have?;plural",
+                            "fi": "Oliko teillä?",
+                            "nl": "Hadden jullie?"
+                        },
+                        "third person": {
+                            "en": "Did they have?",
+                            "fi": "Oliko heillä?",
+                            "nl": "Hadden zij?|Hadden ze?"
+                        }
                     }
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": {
-                        "en": "I had not|I hadn't",
-                        "fi": "Minulla ei ollut",
-                        "nl": "Ik had niet"
-                    },
-                    "second person": {
-                        "en": "You had not|You hadn't;singular",
-                        "fi": "Sinulla ei ollut",
-                        "nl": "Jij had niet|Je had niet"
-                    },
-                    "third person": {
-                        "female": {
-                            "en": "She had|She hadn't",
-                            "fi": "Hänellä ei ollut;female",
-                            "nl": "Zij had niet|Ze had niet"
+            "negative": {
+                "present tense": {
+                    "singular": {
+                        "first person": {
+                            "en": ["Have I not got?|Haven't I got?", "Do I not have?|Don't I have?"],
+                            "fi": "Eikö minulla ole?",
+                            "nl": ["Heb ik niet?", "Heb ik geen?"]
                         },
-                        "male": {
-                            "en": "He had not|He hadn't",
-                            "fi": "Hänellä ei ollut;male",
-                            "nl": "Hij had niet"
+                        "second person": {
+                            "en": ["Have you not got?|Haven't you got;singular", "Do you not have?|Don't you have?;singular"],
+                            "fi": "Eikö sinulla ole?",
+                            "nl": ["Heb jij niet?|Heb je niet?", "Heb jij geen?|Heb je geen?"]
+                        },
+                        "third person": {
+                            "female": {
+                                "en": ["Has she not got?|Hasn't she got?", "Does she not have?|Doesn't she have?"],
+                                "fi": "Eikö hänellä ole;female",
+                                "nl": ["Heeft zij niet?|Heeft ze niet?", "Heeft zij geen?|Heeft ze geen?"]
+                            },
+                            "male": {
+                                "en": ["Has he not got?|Hasn't he got?", "Does he not have?|Doesn't he have?"],
+                                "fi": "Hänellä ei ole;male",
+                                "nl": ["Heeft hij niet?", "Heeft hij geen?"]
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": ["Have we not got?|Haven't we got?", "Do we not have?|Don't we have?"],
+                            "fi": "Eikö meillä ole?",
+                            "nl": ["Hebben wij niet?|Hebben we niet?", "Hebben wij geen?|Hebben we geen?"]
+                        },
+                        "second person": {
+                            "en": ["Have you not got?|Haven't you got;plural", "Do you not have?|Don't you have?;plural"],
+                            "fi": "Eikö teillä ole?",
+                            "nl": ["Hebben jullie niet?", "Hebben jullie geen?"]
+                        },
+                        "third person": {
+                            "en": ["Have they not got?|Haven't they got", "Do they not have?|Don't they have?"],
+                            "fi": "Eikö heillä ole?",
+                            "nl": ["Hebben zij niet?|Hebben ze niet?", "Hebben zij geen?|Hebben ze geen?"]
                         }
                     }
                 },
-                "plural": {
-                    "first person": {
-                        "en": "We had not|We hadn't",
-                        "fi": "Meillä ei ollut",
-                        "nl": "Wij hadden niet|We hadden niet"
+                "past tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "Did I not have?|Didn't I have?",
+                            "fi": "Eikö minulla ollut?",
+                            "nl": ["Had ik niet?", "Had ik geen?"]
+                        },
+                        "second person": {
+                            "en": "Did you not have?|Didn't you have?;singular",
+                            "fi": "Eikö sinulla ollut",
+                            "nl": ["Had jij niet?|Had je niet?", "Had jij geen?|Had je geen?"]
+                        },
+                        "third person": {
+                            "female": {
+                                "en": "Did she not have?|Didn't she have?",
+                                "fi": "Eikö hänellä ollut?;female",
+                                "nl": ["Had zij niet?|Had ze niet?", "Hsd zij geen?|Had ze geen?"]
+                            },
+                            "male": {
+                                "en": "Did he not have?|Didn't he have?",
+                                "fi": "Eikö hänellä ollut?;male",
+                                "nl": ["Had hij niet?", "Had hij geen?"]
+                            }
+                        }
                     },
-                    "second person": {
-                        "en": "You had not|You hadn't;plural",
-                        "fi": "Teillä ei ollut",
-                        "nl": "Jullie hadden niet"
-                    },
-                    "third person": {
-                        "en": "They had not|They hadn't",
-                        "fi": "Heillä ei ollut",
-                        "nl": "Zij hadden niet|Ze hadden niet"
+                    "plural": {
+                        "first person": {
+                            "en": "Did we not have?|Didn't we have?",
+                            "fi": "Eikö meillä ollut?",
+                            "nl": ["Hadden wij niet?|Hadden we niet?", "Hadden wij geen?|Hadden we heen?"]
+                        },
+                        "second person": {
+                            "en": "Did you not have?|Didn't you have?;plural",
+                            "fi": "Eikö teillä ollut?",
+                            "nl": ["Hadden jullie niet?", "Hadden jullie geen?"]
+                        },
+                        "third person": {
+                            "en": "Did they not have?|Didn't they have?",
+                            "fi": "Eikö heillä ollut?",
+                            "nl": ["Hadden zij niet?|Hadden ze niet?", "Hadden zij geen?|Hadden ze geen?"]
+                        }
                     }
                 }
             }

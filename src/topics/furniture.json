@@ -109,7 +109,7 @@
         }
     },
     "the door is locked": {
-        "uses": ["to be/present tense/singular/third person", "door/singular"],
+        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "door/singular"],
         "en": "The door is locked",
         "fi": "Ovi on lukossa",
         "nl": "De deur is op slot"
