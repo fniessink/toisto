@@ -1,7 +1,118 @@
 {
+    "language": {
+        "singular": {
+            "en": "Language",
+            "fi": "Kieli",
+            "nl": "De taal"
+        },
+        "plural": {
+            "en": "Languages",
+            "fi": "Kielet",
+            "nl": "De talen"
+        }
+    },
+    "dialect": {
+        "singular": {
+            "en": "Dialect",
+            "fi": "Murre",
+            "nl": "Het dialect"
+        },
+        "plural": {
+            "en": "Dialects",
+            "fi": "Murteet",
+            "nl": "De dialecten"
+        }
+    },
+    "accent": {
+        "singular": {
+            "en": "Accent",
+            "fi": "Aksentti",
+            "nl": "Het accent"
+        },
+        "plural": {
+            "en": "Accents",
+            "fi": "Aksentit",
+            "nl": "De accenten"
+        }
+    },
     "english": {
         "en": "English",
-        "fi": "englanti",
+        "fi": "Englanti;language",
         "nl": "Engels"
+    },
+    "chinese": {
+        "en": "Chinese",
+        "fi": "Kiina;language",
+        "nl": "Chinees"
+    },
+    "german": {
+        "en": "German",
+        "fi": "Saksa;language",
+        "nl": "Duits"
+    },
+    "estionian": {
+        "en": "Estionian",
+        "fi": "Viro;language",
+        "nl": "Estisch"
+    },
+    "finnish": {
+        "en": "Finnish",
+        "fi": "Suomi;language",
+        "nl": "Fins"
+    },
+    "french": {
+        "en": "French",
+        "fi": "Ranska;language",
+        "nl": "Frans"
+    },
+    "hungarian": {
+        "en": "Hungarian",
+        "fi": "Unkari;language",
+        "nl": "Hongaars"
+    },
+    "japanese": {
+        "en": "Japanese",
+        "fi": "Japani;language",
+        "nl": "Japans"
+    },
+    "korean": {
+        "en": "Korean",
+        "fi": "Korea;language",
+        "nl": "Koreaans"
+    },
+    "spanish": {
+        "en": "Spanish",
+        "fi": "Espanja;language",
+        "nl": "Spaans"
+    },
+    "dutch": {
+        "en": "Dutch",
+        "fi": "Hollanti",
+        "nl": "Nederlands"
+    },
+    "danish": {
+        "en": "Danish",
+        "fi": "Tanska;language",
+        "nl": "Deens"
+    },
+    "norwegian": {
+        "en": "Norwegian",
+        "fi": "Norja;language",
+        "nl": "Noors"
+    },
+    "swedish": {
+        "en": "Swedish",
+        "fi": "Ruotsi;language",
+        "nl": "Zweeds"
+    },
+    "russian": {
+        "en": "Russian",
+        "fi": "Venäjä;language",
+        "nl": "Russisch"
+    },
+    "icelandic": {
+        "en": "Icelandic",
+        "fi": "Islanti;language",
+        "nl": "IJslands"
     }
 }

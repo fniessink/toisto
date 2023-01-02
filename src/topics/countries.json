@@ -14,34 +14,34 @@
     "finland": {
         "uses": "country/singular",
         "en": "Finland",
-        "fi": "Suomi",
+        "fi": "Suomi;country",
         "nl": "Finland"
     },
     "estland": {
         "uses": "country/singular",
         "en": "Estland",
-        "fi": "Viro",
+        "fi": "Viro;country",
         "nl": "Estland"
     },
     "denmark": {
         "en": "Denmark",
-        "fi": "Tanska",
+        "fi": "Tanska;country",
         "nl": "Denemarken"
     },
     "norway": {
         "en": "Norway",
-        "fi": "Norja",
+        "fi": "Norja;country",
         "nl": "Noorwegen"
     },
     "sweden": {
         "en": "Sweden",
-        "fi": "Ruotsi",
+        "fi": "Ruotsi;country",
         "nl": "Zweden"
     },
     "russia": {
         "uses": "country/singular",
         "en": "Russia",
-        "fi": "Venäjä",
+        "fi": "Venäjä;country",
         "nl": "Rusland"
     },
     "belgium": {
@@ -57,24 +57,49 @@
     },
     "germany": {
         "en": "Germany",
-        "fi": "Saksa",
+        "fi": "Saksa;country",
         "nl": "Duitsland"
     },
     "france": {
         "en": "France",
-        "fi": "Ranska",
+        "fi": "Ranska;country",
         "nl": "Frankrijk"
     },
     "england": {
         "uses": "country/singular",
         "en": "England",
-        "fi": "Englanti",
+        "fi": "Englanti;country",
         "nl": "Engeland"
     },
     "iceland": {
         "uses": "country/singular",
         "en": "Iceland",
-        "fi": "Islanti",
+        "fi": "Islanti;country",
         "nl": "IJsland"
+    },
+    "china": {
+        "en": "China",
+        "fi": "Kiina;country",
+        "nl": "China"
+    },
+    "hungary": {
+        "en": "Hungary",
+        "fi": "Unkari;country",
+        "nl": "Hongarije"
+    },
+    "japan": {
+        "en": "Japan",
+        "fi": "Japani;country",
+        "nl": "Japan"
+    },
+    "korea": {
+        "en": "Korea",
+        "fi": "Korea;country",
+        "nl": "Korea"
+    },
+    "spain": {
+        "en": "Spain",
+        "fi": "Espanja;country",
+        "nl": "Spanje"
     }
 }
