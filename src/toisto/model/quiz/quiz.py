@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from functools import cached_property
 from itertools import chain
 from typing import cast, get_args, Literal
 
@@ -80,6 +81,14 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     quiz_types: tuple[QuizType, ...] = ("translate",)
     uses: tuple[ConceptId, ...] = tuple()
     _meanings: Labels = Labels()
+    _hash: int = 0
+
+    def __post_init__(self):
+        """Initialize calculated attributes."""
+        # The dataclass is frozen, so some magic is needed to set the hash attribute.
+        super().__setattr__(
+            "_hash", hash((self.question_language, self.answer_language, self.question, self.quiz_types))
+        )
 
     def __str__(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
@@ -88,7 +97,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
-        return hash((self.question_language, self.answer_language, self.question, self.quiz_types))
+        return self._hash
 
     def __eq__(self, other) -> bool:
         """Return whether this quiz is equal to the other."""
@@ -109,7 +118,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         """Return whether the guess is correct."""
         return match(guess, *self.answers)
 
-    @property
+    @cached_property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""
         return self._question.spelling_alternatives[0]

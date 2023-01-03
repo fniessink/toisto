@@ -54,10 +54,11 @@ class Progress:
 
     def __used_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
         """Return whether the quiz uses concepts that have quizzes."""
-        for each_quiz in quizzes:
-            for concept_id in quiz.uses:
-                if each_quiz != quiz and equal_or_prefix(each_quiz.concept_id, concept_id):
-                    return True
+        for other_quiz in quizzes:
+            if quiz is not other_quiz:
+                for concept_id in quiz.uses:
+                    if equal_or_prefix(other_quiz.concept_id, concept_id):
+                        return True
         return False
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
