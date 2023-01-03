@@ -3,6 +3,8 @@
 import itertools
 import random
 
+from ..model_types import equal_or_prefix
+
 from .quiz import easiest_quizzes, Quiz, Quizzes
 from .retention import Retention
 from .topic import Topics, Topic
@@ -36,8 +38,7 @@ class Progress:
     def __eligible_quizzes(self, topic: Topic, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
         """Return the eligible next quizzes for the topic if possible."""
         eligible = set(quiz for quiz in quizzes if self.__is_eligible(topic, quiz))
-        concepts = set(quiz.concept_id for quiz in quizzes)
-        eligible = set(quiz for quiz in eligible if not set(quiz.uses) & concepts)
+        eligible = set(quiz for quiz in eligible if not self.__used_concepts_have_quizzes(quiz, quizzes))
         eligible_with_progress = set(quiz for quiz in eligible if self.__has_progress(quiz))
         return easiest_quizzes(eligible_with_progress if must_have_progress else eligible_with_progress or eligible)
 
@@ -50,6 +51,14 @@ class Progress:
     def __has_progress(self, quiz: Quiz) -> bool:
         """Has the quiz been presented to the user before?"""
         return str(quiz) in self.__progress_dict
+
+    def __used_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
+        """Return whether the quiz uses concepts that have quizzes."""
+        for each_quiz in quizzes:
+            for concept_id in quiz.uses:
+                if each_quiz != quiz and equal_or_prefix(each_quiz.concept_id, concept_id):
+                    return True
+        return False
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""
