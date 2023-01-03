@@ -59,12 +59,12 @@
             "third person": {
                 "female": {
                     "en": "She is painting the house|She's painting the house",
-                    "fi": "Hän on maalaamassa taloa|On maalaamassa taloa;female",
+                    "fi": "Hän on maalaamassa taloa;female",
                     "nl": "Zij is het huis aan het schilderen|Ze is het huis aan het schilderen"
                 },
                 "male": {
                     "en": "He is painting the house|He's painting the house",
-                    "fi": "Hän on maalaamassa taloa|On maalaamassa taloa;male",
+                    "fi": "Hän on maalaamassa taloa;male",
                     "nl": "Hij is het huis aan het schilderen"
                 }
             }
@@ -82,7 +82,7 @@
             },
             "third person": {
                 "en": "They are painting the house|They're painting the house",
-                "fi": "He ovat maalaamassa taloa|Ovat maalaamassa taloa",
+                "fi": "He ovat maalaamassa taloa",
                 "nl": "Zij zijn het huis aan het schilderen|Ze zijn het huis aan het schilderen"
             }
         }
