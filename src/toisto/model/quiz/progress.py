@@ -3,7 +3,9 @@
 import itertools
 import random
 
-from .quiz import easiest_quizzes, Quiz, Quizzes, ConceptId
+from ..model_types import equal_or_prefix
+
+from .quiz import easiest_quizzes, Quiz, Quizzes
 from .retention import Retention
 from .topic import Topics, Topic
 
@@ -55,18 +57,9 @@ class Progress:
         for each_quiz in quizzes:
             for concept_id in quiz.uses:
                 if each_quiz != quiz and equal_or_prefix(each_quiz.concept_id, concept_id):
-                    print(f"{str(quiz.concept_id)}, {(str(quiz))} uses {quiz.uses}. Found {each_quiz.concept_id}, {str(each_quiz)}")
                     return True
         return False
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""
         return {key: value.as_dict() for key, value in self.__progress_dict.items()}
-
-
-def equal_or_prefix(concept_id1: ConceptId, concept_id2: ConceptId) -> bool:
-    """Return True when one tuple is a prefix of the other or they are equal."""
-    for element1, element2 in zip(concept_id1.split("/"), concept_id2.split("/")):
-        if element1 != element2:
-            return False
-    return True
