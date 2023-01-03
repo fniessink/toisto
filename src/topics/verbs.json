@@ -22,12 +22,12 @@
                         "third person": {
                             "female": {
                                 "en": "She is|She's",
-                                "fi": "Hän on|On;female",
+                                "fi": "Hän on;female",
                                 "nl": "Zij is|Ze is"
                             },
                             "male": {
                                 "en": "He is|He's",
-                                "fi": "Hän on|On;male",
+                                "fi": "Hän on;male",
                                 "nl": "Hij is"
                             }
                         }
@@ -45,7 +45,7 @@
                         },
                         "third person": {
                             "en": "They are|They're",
-                            "fi": "He ovat|Ovat",
+                            "fi": "He ovat",
                             "nl": "Zij zijn|Ze zijn"
                         }
                     }
@@ -65,12 +65,12 @@
                         "third person": {
                             "female": {
                                 "en": "She was",
-                                "fi": "Hän oli|Oli;female",
+                                "fi": "Hän oli;female",
                                 "nl": "Zij was|Ze was"
                             },
                             "male": {
                                 "en": "He was",
-                                "fi": "Hän oli|Oli;male",
+                                "fi": "Hän oli;male",
                                 "nl": "Hij was"
                             }
                         }
@@ -88,7 +88,7 @@
                         },
                         "third person": {
                             "en": "They were",
-                            "fi": "He olivat|Olivat",
+                            "fi": "He olivat",
                             "nl": "Zij waren|Ze waren"
                         }
                     }
@@ -110,12 +110,12 @@
                         "third person": {
                             "female": {
                                 "en": "She is not|She's not|She isn't",
-                                "fi": "Hän ei ole|Ei ole;female",
+                                "fi": "Hän ei ole;female",
                                 "nl": "Zij is niet|Ze is niet"
                             },
                             "male": {
                                 "en": "He is not|He's not|He isn't",
-                                "fi": "Hän ei ole|Ei ole;male",
+                                "fi": "Hän ei ole;male",
                                 "nl": "Hij is niet"
                             }
                         }
@@ -133,7 +133,7 @@
                         },
                         "third person": {
                             "en": "They are not|They're not|They aren't",
-                            "fi": "He eivät ole|Eivät ole",
+                            "fi": "He eivät ole",
                             "nl": "Zij zijn nietl|Ze zijn nietl"
                         }
                     }
@@ -153,12 +153,12 @@
                         "third person": {
                             "female": {
                                 "en": "She was not|She wasn't",
-                                "fi": "Hän ei ollut|Ei ollut;female",
+                                "fi": "Hän ei ollut;female",
                                 "nl": "Zij was niet|Ze was niet"
                             },
                             "male": {
                                 "en": "He was not|He wasn't",
-                                "fi": "Hän ei ollut|Ei ollut;male",
+                                "fi": "Hän ei ollut;male",
                                 "nl": "Hij was niet"
                             }
                         }
@@ -176,7 +176,7 @@
                         },
                         "third person": {
                             "en": "They were not|They weren't",
-                            "fi": "He eivät olleet|Eivät olleet",
+                            "fi": "He eivät olleet",
                             "nl": "Zij waren niet|Ze waren niet"
                         }
                     }
@@ -788,12 +788,12 @@
                 "third person": {
                     "female": {
                         "en": "She paints",
-                        "fi": "Hän maalaa|Maalaa;female",
+                        "fi": "Hän maalaa;female",
                         "nl": "Zij schildert|Ze schildert"
                     },
                     "male": {
                         "en": "He paints",
-                        "fi": "Hän maalaa|Maalaa;male",
+                        "fi": "Hän maalaa;male",
                         "nl": "Hij schildert"
                     }
                 }
@@ -811,7 +811,7 @@
                 },
                 "third person": {
                     "en": "They paint",
-                    "fi": "He maalaavat|Maalaavat",
+                    "fi": "He maalaavat",
                     "nl": "Zij schilderen|Ze schilderen"
                 }
             }
@@ -831,12 +831,12 @@
                 "third person": {
                     "female": {
                         "en": "She painted",
-                        "fi": "Hän maalasi|Maalasi;female",
+                        "fi": "Hän maalasi;female",
                         "nl": "Zij schilderde|Ze schilderde"
                     },
                     "male": {
                         "en": "He painted",
-                        "fi": "Hän maalasi|Maalasi;male",
+                        "fi": "Hän maalasi;male",
                         "nl": "Hij schilderde"
                     }
                 }
@@ -854,7 +854,7 @@
                 },
                 "third person": {
                     "en": "They painted",
-                    "fi": "He maalasivat|Maalasivat",
+                    "fi": "He maalasivat",
                     "nl": "Zij schilderden|Ze schilderden"
                 }
             }
@@ -881,12 +881,12 @@
                 "third person": {
                     "female": {
                         "en": "She walks",
-                        "fi": "Hän kävelee|Kävelee;female",
+                        "fi": "Hän kävelee;female",
                         "nl": "Zij loopt|Ze loopt"
                     },
                     "male": {
                         "en": "He walks",
-                        "fi": "Hän kävelee|Kävelee;male",
+                        "fi": "Hän kävelee;male",
                         "nl": "Hij loopt"
                     }
                 }
@@ -904,7 +904,7 @@
                 },
                 "third person": {
                     "en": "They walk",
-                    "fi": "He kävelevät|Kävelevät",
+                    "fi": "He kävelevät",
                     "nl": "Zij lopen|Ze lopen"
                 }
             }
@@ -924,12 +924,12 @@
                 "third person": {
                     "female": {
                         "en": "She walked",
-                        "fi": "Hän kävelee|Kävelee;female",
+                        "fi": "Hän kävelee;female",
                         "nl": "Zij liep|Ze liep"
                     },
                     "male": {
                         "en": "He walked",
-                        "fi": "Hän kävelee|Kävelee;male",
+                        "fi": "Hän kävelee;male",
                         "nl": "Hij liep"
                     }
                 }
@@ -947,7 +947,7 @@
                 },
                 "third person": {
                     "en": "They walked",
-                    "fi": "He kävelevät|Kävelevät",
+                    "fi": "He kävelevät",
                     "nl": "Zij liepen|Ze liepen"
                 }
             }
@@ -974,12 +974,12 @@
                 "third person": {
                     "female": {
                         "en": "She runs",
-                        "fi": "Hän juoksee|Juoksee;female",
+                        "fi": "Hän juoksee;female",
                         "nl": "Zij rent|Ze rent"
                     },
                     "male": {
                         "en": "He runs",
-                        "fi": "Hän juoksee|Juoksee;male",
+                        "fi": "Hän juoksee;male",
                         "nl": "Hij rent"
                     }
                 }
@@ -997,7 +997,7 @@
                 },
                 "third person": {
                     "en": "They run",
-                    "fi": "He juoksevat|Juoksevat",
+                    "fi": "He juoksevat",
                     "nl": "Zij rennen|Ze rennen"
                 }
             }
@@ -1017,12 +1017,12 @@
                 "third person": {
                     "female": {
                         "en": "She ran",
-                        "fi": "Hän juoksi|Juoksi;female",
+                        "fi": "Hän juoksi;female",
                         "nl": "Zij rende|Ze rende"
                     },
                     "male": {
                         "en": "He ran",
-                        "fi": "Hän juoksi|Juoksi;male",
+                        "fi": "Hän juoksi;male",
                         "nl": "Hij rende"
                     }
                 }
@@ -1040,7 +1040,7 @@
                 },
                 "third person": {
                     "en": "They ran",
-                    "fi": "He juoksivat|Juoksivat",
+                    "fi": "He juoksivat",
                     "nl": "Zij renden|Ze renden"
                 }
             }
@@ -1067,12 +1067,12 @@
                 "third person": {
                     "female": {
                         "en": "She eats",
-                        "fi": "Hän syö|Syö;female",
+                        "fi": "Hän syö;female",
                         "nl": "Zij eet|Ze eet"
                     },
                     "male": {
                         "en": "He eats",
-                        "fi": "Hän syö|Syö;male",
+                        "fi": "Hän syö;male",
                         "nl": "Hij eet"
                     }
                 }
@@ -1090,7 +1090,7 @@
                 },
                 "third person": {
                     "en": "They eat",
-                    "fi": "He syövät|Syövät",
+                    "fi": "He syövät",
                     "nl": "Zij eten|Ze eten"
                 }
             }
@@ -1110,12 +1110,12 @@
                 "third person": {
                     "female": {
                         "en": "She ate",
-                        "fi": "Hän söi|Sö;female",
+                        "fi": "Hän söi;female",
                         "nl": "Zij at|Ze at"
                     },
                     "male": {
                         "en": "He ate",
-                        "fi": "Hän söi|Söi;male",
+                        "fi": "Hän söi;male",
                         "nl": "Hij at"
                     }
                 }
@@ -1133,7 +1133,7 @@
                 },
                 "third person": {
                     "en": "They ate",
-                    "fi": "He söivät|Söivät",
+                    "fi": "He söivät",
                     "nl": "Zij aten|Ze aten"
                 }
             }
@@ -1160,12 +1160,12 @@
                 "third person": {
                     "female": {
                         "en": "She sleeps",
-                        "fi": "Hän nukkuu|Nukkuu;female",
+                        "fi": "Hän nukkuu;female",
                         "nl": "Zij slaapt|Ze slaapt"
                     },
                     "male": {
                         "en": "He sleeps",
-                        "fi": "Hän nukkuu|Nukkuu;male",
+                        "fi": "Hän nukkuu;male",
                         "nl": "Hij slaapt"
                     }
                 }
@@ -1183,7 +1183,7 @@
                 },
                 "third person": {
                     "en": "They sleep",
-                    "fi": "He nukkuvat|Nukkuvat",
+                    "fi": "He nukkuvat",
                     "nl": "Zij slapen|Ze slapen"
                 }
             }
@@ -1203,12 +1203,12 @@
                 "third person": {
                     "female": {
                         "en": "She slept",
-                        "fi": "Hän nukkui|Nukkui;female",
+                        "fi": "Hän nukkui;female",
                         "nl": "Zij sliep|Ze sliep"
                     },
                     "male": {
                         "en": "He slept",
-                        "fi": "Hän nukkui|Nukkui;male",
+                        "fi": "Hän nukkui;male",
                         "nl": "Hij sliep"
                     }
                 }
@@ -1226,7 +1226,7 @@
                 },
                 "third person": {
                     "en": "They slept",
-                    "fi": "He nukkuivat|Nukkuivat",
+                    "fi": "He nukkuivat",
                     "nl": "Zij sliepen|Ze sliepen"
                 }
             }
@@ -1253,12 +1253,12 @@
                 "third person": {
                     "female": {
                         "en": "She goes",
-                        "fi": "Hän menee|Menee;female",
+                        "fi": "Hän menee;female",
                         "nl": "Zij gaat|Ze gaat"
                     },
                     "male": {
                         "en": "He goes",
-                        "fi": "Hän menee|Menee;male",
+                        "fi": "Hän menee;male",
                         "nl": "Hij gaat"
                     }
                 }
@@ -1276,7 +1276,7 @@
                 },
                 "third person": {
                     "en": "They go",
-                    "fi": "He menevät|Menevät",
+                    "fi": "He menevät",
                     "nl": "Zij gaan|Ze gaan"
                 }
             }
@@ -1296,12 +1296,12 @@
                 "third person": {
                     "female": {
                         "en": "She went",
-                        "fi": "Hän meni|Meni;female",
+                        "fi": "Hän meni;female",
                         "nl": "Zij ging|Ze ging"
                     },
                     "male": {
                         "en": "He went",
-                        "fi": "Hän meni|Meni;male",
+                        "fi": "Hän meni;male",
                         "nl": "Hij ging"
                     }
                 }
@@ -1319,7 +1319,7 @@
                 },
                 "third person": {
                     "en": "They went",
-                    "fi": "He menivät|Menivät",
+                    "fi": "He menivät",
                     "nl": "Zij gingen|Ze gingen"
                 }
             }
@@ -1346,12 +1346,12 @@
                 "third person": {
                     "female": {
                         "en": "She comes",
-                        "fi": "Hän tulee|Tulee;female",
+                        "fi": "Hän tulee;female",
                         "nl": "Zij komt|Ze komt"
                     },
                     "male": {
                         "en": "He comes",
-                        "fi": "Hän tulee|Tulee;male",
+                        "fi": "Hän tulee;male",
                         "nl": "Hij komt"
                     }
                 }
@@ -1369,7 +1369,7 @@
                 },
                 "third person": {
                     "en": "They come",
-                    "fi": "He tulevat|Tulevat",
+                    "fi": "He tulevat",
                     "nl": "Zij komen|Ze komen"
                 }
             }
@@ -1389,12 +1389,12 @@
                 "third person": {
                     "female": {
                         "en": "She came",
-                        "fi": "Hän tuli|Tuli;female",
+                        "fi": "Hän tuli;female",
                         "nl": "Zij kwam|Ze kwam"
                     },
                     "male": {
                         "en": "He came",
-                        "fi": "Hän tuli|Tuli;male",
+                        "fi": "Hän tuli;male",
                         "nl": "Hij kwam"
                     }
                 }
@@ -1412,7 +1412,7 @@
                 },
                 "third person": {
                     "en": "They came",
-                    "fi": "He tulivat|Tulivat",
+                    "fi": "He tulivat",
                     "nl": "Zij kwamen|Ze kwamen"
                 }
             }
@@ -1439,12 +1439,12 @@
                 "third person": {
                     "female": {
                         "en": "She reads",
-                        "fi": "Hän lukee|Lukee;female",
+                        "fi": "Hän lukee;female",
                         "nl": "Zij leest|Ze leest"
                     },
                     "male": {
                         "en": "He reads",
-                        "fi": "Hän lukee|Lukee;male",
+                        "fi": "Hän lukee;male",
                         "nl": "Hij leest"
                     }
                 }
@@ -1462,7 +1462,7 @@
                 },
                 "third person": {
                     "en": "They read;present tense",
-                    "fi": "He lukevat|Lukevat",
+                    "fi": "He lukevat",
                     "nl": "Zij lezen|Ze lezen"
                 }
             }
@@ -1482,12 +1482,12 @@
                 "third person": {
                     "female": {
                         "en": "She read",
-                        "fi": "Hän luki|Luki;female",
+                        "fi": "Hän luki;female",
                         "nl": "Zij las|Ze las"
                     },
                     "male": {
                         "en": "He read",
-                        "fi": "Hän luki|Luki;male",
+                        "fi": "Hän luki;male",
                         "nl": "Hij las"
                     }
                 }
@@ -1505,7 +1505,7 @@
                 },
                 "third person": {
                     "en": "They read;past tense",
-                    "fi": "He lukivat|Lukivat",
+                    "fi": "He lukivat",
                     "nl": "Zij lazen|Ze lazen"
                 }
             }
@@ -1532,12 +1532,12 @@
                 "third person": {
                     "female": {
                         "en": "She writes",
-                        "fi": "Hän kirjoittaa|Kirjoittaa;female",
+                        "fi": "Hän kirjoittaa;female",
                         "nl": "Zij schrijft|Ze schrijft"
                     },
                     "male": {
                         "en": "He writes",
-                        "fi": "Hän kirjoittaa|Kirjoittaa;male",
+                        "fi": "Hän kirjoittaa;male",
                         "nl": "Hij schrijft"
                     }
                 }
@@ -1555,7 +1555,7 @@
                 },
                 "third person": {
                     "en": "They write",
-                    "fi": "He kirjoittavat|Kirjoittavat",
+                    "fi": "He kirjoittavat",
                     "nl": "Zij schrijven|Ze schrijven"
                 }
             }
@@ -1575,12 +1575,12 @@
                 "third person": {
                     "female": {
                         "en": "She wrote",
-                        "fi": "Hän kirjoitti|Kirjoitti;female",
+                        "fi": "Hän kirjoitti;female",
                         "nl": "Zij schreef|Ze schreef"
                     },
                     "male": {
                         "en": "He wrote",
-                        "fi": "Hän kirjoitti|Kirjoitti;male",
+                        "fi": "Hän kirjoitti;male",
                         "nl": "Hij schreef"
                     }
                 }
@@ -1598,7 +1598,7 @@
                 },
                 "third person": {
                     "en": "They wrote",
-                    "fi": "He kirjoittivat|Kirjoittivat",
+                    "fi": "He kirjoittivat",
                     "nl": "Zij schreven|Ze schreven"
                 }
             }
@@ -1625,12 +1625,12 @@
                 "third person": {
                     "female": {
                         "en": "She lives",
-                        "fi": "Hän asuu|Asuu;female",
+                        "fi": "Hän asuu;female",
                         "nl": "Zij woont|Ze woont"
                     },
                     "male": {
                         "en": "He lives",
-                        "fi": "Hän asuu|Asuu;male",
+                        "fi": "Hän asuu;male",
                         "nl": "Hij woont"
                     }
                 }
@@ -1648,7 +1648,7 @@
                 },
                 "third person": {
                     "en": "They live",
-                    "fi": "He asuvat|Asuvat",
+                    "fi": "He asuvat",
                     "nl": "Zij wonen|Ze wonen"
                 }
             }
@@ -1668,12 +1668,12 @@
                 "third person": {
                     "female": {
                         "en": "She lived",
-                        "fi": "Hän asui|Asui;female",
+                        "fi": "Hän asui;female",
                         "nl": "Zij woonde|Ze woonde"
                     },
                     "male": {
                         "en": "He lived",
-                        "fi": "Hän asui|Asui;male",
+                        "fi": "Hän asui;male",
                         "nl": "Hij woonde"
                     }
                 }
@@ -1691,7 +1691,7 @@
                 },
                 "third person": {
                     "en": "They lived",
-                    "fi": "He asuivat|Asuivat",
+                    "fi": "He asuivat",
                     "nl": "Zij woonden|Ze woonden"
                 }
             }

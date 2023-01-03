@@ -455,17 +455,17 @@ class ConceptQuizzesTest(ToistoTestCase):
         concept = self.create_concept(
             "to be",
             dict(
-                female=dict(en="She is|She's", fi="Hän on|On;female"),
-                male=dict(en="He is|He's", fi="Hän on|On;male")
+                female=dict(en="She is|She's", fi="Hän on;female"),
+                male=dict(en="He is|He's", fi="Hän on;male")
             )
         )
         self.assertEqual(
             set([
-                self.create_quiz("to be", "fi", "en", Label("Hän on|On;female"), ("She is|She's",)),
-                self.create_quiz("to be", "en", "fi", "She is|She's", ("Hän on|On;female",)),
-                self.create_quiz("to be", "fi", "fi", "Hän on|On;female", ("Hän on|On;female",), "listen"),
-                self.create_quiz("to be", "fi", "en", "Hän on|On;male", ("He is|He's",)),
-                self.create_quiz("to be", "en", "fi", "He is|He's", ("Hän on|On;male",))
+                self.create_quiz("to be", "fi", "en", Label("Hän on;female"), ("She is|She's",)),
+                self.create_quiz("to be", "en", "fi", "She is|She's", ("Hän on;female",)),
+                self.create_quiz("to be", "fi", "fi", "Hän on;female", ("Hän on;female",), "listen"),
+                self.create_quiz("to be", "fi", "en", "Hän on;male", ("He is|He's",)),
+                self.create_quiz("to be", "en", "fi", "He is|He's", ("Hän on;male",))
             ]),
             self.create_quizzes(concept, "fi", "en")
         )
