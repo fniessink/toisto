@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import cast, get_args, Literal
+from typing import cast, Literal
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
@@ -151,19 +151,5 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
         return f"{instruction(*self.quiz_types)} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
 
-    def has_same_concept(self, other) -> bool:
-        """Return whether this quiz belongs to the same concept as the other quiz."""
-        if not isinstance(other, self.__class__):
-            return False
-        return self.concept_id.split("/", maxsplit=1)[0] == other.concept_id.split("/", maxsplit=1)[0]
-
 
 Quizzes = set[Quiz]
-
-
-def easiest_quizzes(quizzes: Quizzes) -> Quizzes:
-    """Return the easiest quizzes."""
-    for quiz_type in get_args(QuizType):
-        if quizzes_subset := set(quiz for quiz in quizzes if quiz.quiz_types == (quiz_type,)):
-            return quizzes_subset
-    return quizzes

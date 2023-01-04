@@ -1,13 +1,10 @@
 """Progress model class."""
 
-import itertools
-import random
-
 from ..model_types import equal_or_prefix
 
-from .quiz import easiest_quizzes, Quiz, Quizzes
+from .quiz import Quiz, Quizzes
 from .retention import Retention
-from .topic import Topics, Topic
+from .topic import Topics
 
 
 class Progress:
@@ -20,33 +17,25 @@ class Progress:
         """Update the progress on the quiz."""
         self.__progress_dict.setdefault(str(quiz), Retention()).update(correct)
 
+    def next_quiz(self, topics: Topics) -> Quiz | None:
+        """Return the next quiz."""
+        all_quizzes = set(quiz for topic in topics for quiz in topic.quizzes if self.__is_eligible(quiz))
+        quizzes_with_progress = {quiz for quiz in all_quizzes if self.__has_progress(quiz)}
+        quizzes = quizzes_with_progress or all_quizzes
+        while quizzes:
+            self.__current_quiz = quizzes.pop()
+            if not self.__used_concepts_have_quizzes(self.__current_quiz, quizzes):
+                return self.__current_quiz
+        self.__current_quiz = None
+        return None
+
     def get_retention(self, quiz: Quiz) -> Retention:
         """Return the quiz retention."""
         return self.__progress_dict.get(str(quiz), Retention())
 
-    def next_quiz(self, topics: Topics) -> Quiz | None:
-        """Return the next quiz."""
-        all_quizzes = set(itertools.chain(*[topic.quizzes for topic in topics]))
-        for must_have_progress in (True, False):
-            for topic in topics:
-                if quizzes := self.__eligible_quizzes(topic, all_quizzes, must_have_progress):
-                    self.__current_quiz = random.choice(list(quizzes))
-                    return self.__current_quiz
-        self.__current_quiz = None
-        return None
-
-    def __eligible_quizzes(self, topic: Topic, quizzes: Quizzes, must_have_progress: bool) -> Quizzes:
-        """Return the eligible next quizzes for the topic if possible."""
-        eligible = set(quiz for quiz in quizzes if self.__is_eligible(topic, quiz))
-        eligible = set(quiz for quiz in eligible if not self.__used_concepts_have_quizzes(quiz, quizzes))
-        eligible_with_progress = set(quiz for quiz in eligible if self.__has_progress(quiz))
-        return easiest_quizzes(eligible_with_progress if must_have_progress else eligible_with_progress or eligible)
-
-    def __is_eligible(self, topic: Topic, quiz: Quiz) -> bool:
-        """Is the quiz eligible?"""
-        return quiz in topic.quizzes and \
-            not self.get_retention(quiz).is_silenced() and \
-            not quiz.has_same_concept(self.__current_quiz)
+    def __is_eligible(self, quiz: Quiz) -> bool:
+        """Return whether the quiz is not silenced and not the current quiz."""
+        return quiz != self.__current_quiz and not self.get_retention(quiz).is_silenced()
 
     def __has_progress(self, quiz: Quiz) -> bool:
         """Has the quiz been presented to the user before?"""
@@ -55,10 +44,9 @@ class Progress:
     def __used_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
         """Return whether the quiz uses concepts that have quizzes."""
         for other_quiz in quizzes:
-            if quiz is not other_quiz:
-                for concept_id in quiz.uses:
-                    if equal_or_prefix(other_quiz.concept_id, concept_id):
-                        return True
+            for concept_id in quiz.uses:
+                if equal_or_prefix(other_quiz.concept_id, concept_id):
+                    return True
         return False
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:

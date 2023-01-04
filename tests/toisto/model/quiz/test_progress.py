@@ -71,6 +71,18 @@ class ProgressTest(ToistoTestCase):
         topics = Topics({Topic("topic1", (), {quiz1}), Topic("topic2",  (), {quiz2})})
         self.assertEqual(quiz2, self.progress.next_quiz(topics))
 
+    def test_quiz_order(self):
+        """Test that the first quizzes test the singular concept."""
+        concept = self.create_concept(
+            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+        )
+        quizzes = self.create_quizzes(concept, "fi", "nl")
+        topics = self.create_topics(quizzes)
+        for _ in range(3):
+            quiz = self.progress.next_quiz(topics)
+            self.assertEqual("morning/singular", quiz.concept_id)
+            self.progress.update(quiz, correct=True)
+
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         quizzes = [
