@@ -3,7 +3,7 @@
 from typing import get_args
 
 from toisto.model.model_types import ConceptId
-from toisto.model.quiz.quiz import easiest_quizzes, instruction, QuizType
+from toisto.model.quiz.quiz import instruction, QuizType
 
 from ...base import ToistoTestCase
 
@@ -136,22 +136,3 @@ class QuizEqualityTests(QuizTestCase):
         """Test that quizzes are not equal if only their quiz types differ."""
         different_quiz_type = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"], "listen")
         self.assertNotEqual(different_quiz_type, self.quiz)
-
-
-class EasiestQuizzesTest(ToistoTestCase):
-    """Unit tests for finding the easiest quizzes."""
-
-    def test_no_quizzes(self):
-        """Test the easiest quizzes out of none."""
-        self.assertEqual(set(), easiest_quizzes(set()))
-
-    def test_one_quiz(self):
-        """Test that the easiest quiz out of one is that one quiz."""
-        quiz = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
-        self.assertEqual({quiz}, easiest_quizzes({quiz}))
-
-    def test_two_quizzes(self):
-        """Test two quizzes."""
-        quiz1 = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"])
-        quiz2 = self.create_quiz("english", "fi", "nl", "Englanti", ["Engels"], "listen")
-        self.assertEqual({quiz1}, easiest_quizzes({quiz1, quiz2}))
