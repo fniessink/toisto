@@ -1,16 +1,18 @@
 """Model types."""
 
-from functools import cache
 from typing import NewType
 
 
 ConceptId = NewType("ConceptId", str)
 
 
-@cache
-def equal_or_prefix(concept_id1: ConceptId, concept_id2: ConceptId) -> bool:
-    """Return True when one tuple is a prefix of the other or they are equal."""
-    for element1, element2 in zip(concept_id1.split("/"), concept_id2.split("/")):
-        if element1 != element2:
-            return False
-    return True
+def parent_ids(concept_id: ConceptId) -> tuple[ConceptId, ...]:
+    """return the parent ids of the concept id including the concept id itself."""
+    all_concept_ids = []
+    partial_id = ""
+    for part in concept_id.split("/"):
+        if partial_id:
+            partial_id += "/"
+        partial_id += part
+        all_concept_ids.append(ConceptId(partial_id))
+    return tuple(all_concept_ids)
