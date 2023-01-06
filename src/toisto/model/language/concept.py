@@ -19,7 +19,8 @@ class Concept:
     in different languages.
     """
 
-    def __init__(self,
+    def __init__(
+        self,
         concept_id: ConceptId,
         uses: tuple[ConceptId, ...],
         constituent_concepts: tuple[Concept, ...] = (),

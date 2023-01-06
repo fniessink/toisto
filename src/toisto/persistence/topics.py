@@ -10,7 +10,10 @@ from .json_file import load_json
 
 
 def load_topics(
-    language: Language, source_language: Language, builtin_topics_to_load: list[str], topic_files_to_load: list[str]
+    language: Language,
+    source_language: Language,
+    builtin_topics_to_load: list[str],
+    topic_files_to_load: list[str],
 ) -> Topics:
     """Load the topics with the concepts and generate the quizzes."""
     topics = set()

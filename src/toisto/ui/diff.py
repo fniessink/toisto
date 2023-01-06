@@ -25,14 +25,14 @@ def colored_diff(old_text: str, new_text: str) -> str:
         return inserted(new_text)
     result = ""
     for operator, old_start, old_end, new_start, new_end in matcher.get_opcodes():
-        old_fragment, new_fragment = old_text[old_start:old_end], new_text[new_start:new_end]
+        old_fragment, new_fragment = (old_text[old_start:old_end], new_text[new_start:new_end])
         if operator == "delete":
             result += deleted(old_fragment)
         elif operator == "insert":
             result += inserted(new_fragment)
         elif operator == "replace":
             if len(old_fragment) == len(new_fragment) == 1:
-                result += (deleted(old_fragment) + inserted(new_fragment))
+                result += deleted(old_fragment) + inserted(new_fragment)
             else:
                 result += inserted(new_fragment)
         else:

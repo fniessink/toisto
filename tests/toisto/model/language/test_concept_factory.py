@@ -20,9 +20,7 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_uses(self):
         """Test that a concept can have a uses relation with another concept."""
-        concept = self.create_concept(
-            "mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum")
-        )
+        concept = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         self.assertEqual(("shop", "centre"), concept.uses)
 
     def test_plural_auto_uses_singular(self):

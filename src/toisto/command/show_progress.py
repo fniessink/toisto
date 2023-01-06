@@ -25,7 +25,9 @@ def show_progress(language: Language, topics: Topics, progress: Progress, sort: 
     table.add_column("Attempts", justify="right")
     table.add_column("Retention")
     table.add_column("Not quizzed until")
-    key = lambda quiz: getattr(progress.get_retention(quiz), RETENTION_ATTRIBUTE[sort])  # pylint: disable=unnecessary-lambda-assignment
+    key = lambda quiz: getattr(  # pylint: disable=unnecessary-lambda-assignment
+        progress.get_retention(quiz), RETENTION_ATTRIBUTE[sort]
+    )
     sorted_quizzes = sorted(topics.quizzes, key=key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
@@ -39,7 +41,7 @@ def show_progress(language: Language, topics: Topics, progress: Progress, sort: 
             "\n".join(quiz.answers),
             str(retention.count),
             format_duration(retention.length) if retention.length else "",
-            format_datetime(skip) if skip and skip > datetime.now() else ""
+            format_datetime(skip) if skip and skip > datetime.now() else "",
         )
     with console.pager():
         console.print(table)

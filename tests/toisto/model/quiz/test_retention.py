@@ -85,5 +85,5 @@ class RetentionTest(unittest.TestCase):
         skip_until = self.retention.skip_until.replace(microsecond=0)
         self.assertEqual(
             Retention(start=start, end=end, skip_until=skip_until, count=1),
-            Retention.from_dict(self.retention.as_dict())
+            Retention.from_dict(self.retention.as_dict()),
         )

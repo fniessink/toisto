@@ -3,7 +3,7 @@
 from datetime import timedelta
 from unittest import TestCase
 
-from toisto.model import Label, Progress
+from toisto.model import Label, Progress, Topics
 from toisto.model.model_types import ConceptId
 from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction, linkify
 
@@ -17,7 +17,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Override to set up test fixtures."""
         self.quiz = self.create_quiz(ConceptId("hello"), "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
         self.guess = Label("Terve")
-        self.progress = Progress({})
+        self.progress = Progress({}, Topics(set()))
 
     def assert_feedback_contains(self, feedback_text: str, *expected_strings: str) -> None:
         """Assert that the expected strings are in the feedback."""
@@ -36,7 +36,7 @@ class FeedbackTestCase(ToistoTestCase):
         expected_other_answer = linkify(quiz.other_answers(self.guess)[0])
         self.assertEqual(
             f"""✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n""",
-            feedback_text
+            feedback_text,
         )
 
     def test_show_alternative_answers(self):
@@ -46,7 +46,7 @@ class FeedbackTestCase(ToistoTestCase):
         other_answers = [f'"{linkify(answer)}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
             f"""✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n""",
-            feedback_text
+            feedback_text,
         )
 
     def test_show_feedback_on_incorrect_guess(self):
@@ -55,7 +55,7 @@ class FeedbackTestCase(ToistoTestCase):
         self.assertEqual(
             """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
             f"""[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
-            feedback_text
+            feedback_text,
         )
 
     def test_show_alternative_answers_on_incorrect_guess(self):
@@ -65,7 +65,7 @@ class FeedbackTestCase(ToistoTestCase):
         self.assertEqual(
             """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
             f"""[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n""",
-            feedback_text
+            feedback_text,
         )
 
     def test_show_feedback_on_question_mark(self):
@@ -73,7 +73,7 @@ class FeedbackTestCase(ToistoTestCase):
         feedback_text = feedback_incorrect("?", self.quiz)
         self.assertEqual(
             f"""The correct answer is "{linkify("Terve")}".\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
-            feedback_text
+            feedback_text,
         )
 
     def test_instruction(self):
@@ -120,7 +120,7 @@ class LinkifyTest(TestCase):
         self.assertEqual(
             "[link=https://en.wiktionary.org/wiki/test]Test[/link] "
             "[link=https://en.wiktionary.org/wiki/words]words[/link]",
-            linkify("Test words")
+            linkify("Test words"),
         )
 
     def test_punctuation(self):

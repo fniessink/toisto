@@ -32,8 +32,9 @@ def add_practice_command(subparser: _SubParsersAction) -> None:
 
 def add_progress_command(subparser: _SubParsersAction) -> None:
     """Add a command to show progress."""
-    command_help = "show progress, for example `%(prog)s progress fi en` shows progress on practicing " \
-        "Finnish from English"
+    command_help = (
+        "show progress, for example `%(prog)s progress fi en` shows progress on practicing Finnish from English"
+    )
     parser = add_command(subparser, "progress", "Show progress.", command_help)
     sort_help = "how to sort progress information (default: by retention); available options: %(choices)s"
     parser.add_argument(

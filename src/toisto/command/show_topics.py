@@ -25,7 +25,7 @@ def topic_table(language: Language, source_language: Language, topic: Topic) -> 
             table.add_row(
                 enumerate_labels(leaf_concept.labels(language)),
                 enumerate_labels(leaf_concept.labels(source_language)),
-                "/".join(leaf_concept.grammatical_categories())
+                "/".join(leaf_concept.grammatical_categories()),
             )
         table.add_section()
     return table

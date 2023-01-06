@@ -53,7 +53,7 @@ class LoadTopicsTest(ToistoTestCase):
     @patch("sys.stderr.write")
     def test_load_topic_by_filename(self, stderr_write):
         """Test that an error message is given when the topic file does not exist."""
-        self.assertRaises(SystemExit, load_topics, "fi",  "nl", [], ["file-does-not-exist"])
+        self.assertRaises(SystemExit, load_topics, "fi", "nl", [], ["file-does-not-exist"])
         stderr_write.assert_called_with(
             "Toisto cannot read topic file-does-not-exist: [Errno 2] No such file or directory: "
             "'file-does-not-exist'.\n"

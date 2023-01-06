@@ -5,7 +5,7 @@ import string
 
 def without_punctuation(text: str) -> str:
     """Remove text without punctuation."""
-    return ''.join(char for char in text if char not in string.punctuation or char == "'")
+    return "".join(char for char in text if char not in string.punctuation or char == "'")
 
 
 def match(text1: str, *texts: str) -> bool:

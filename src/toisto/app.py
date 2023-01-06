@@ -11,9 +11,9 @@ def main():
     """Main program."""
     args = argument_parser.parse_args()
     topics = load_topics(args.language, args.source_language, args.topic, args.topic_file)
-    progress = load_progress()
+    progress = load_progress(topics)
     if args.command == "practice":
-        practice(topics, progress)
+        practice(progress)
     elif args.command == "topics":
         show_topics(args.language, args.source_language, topics)
     else:

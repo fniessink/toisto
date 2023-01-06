@@ -1,6 +1,6 @@
 """Practice command."""
 
-from toisto.model import Label, Progress, Quiz, Topics
+from toisto.model import Label, Progress, Quiz
 from toisto.ui.text import console, feedback_correct, feedback_incorrect, linkify, instruction, DONE, WELCOME, TRY_AGAIN
 from toisto.ui.speech import say
 from toisto.persistence import save_progress
@@ -33,11 +33,11 @@ def do_quiz(quiz: Quiz, progress: Progress) -> None:
     console.print(feedback_correct(answer, quiz) if correct else feedback_incorrect(answer, quiz))
 
 
-def practice(topics: Topics, progress: Progress) -> None:
+def practice(progress: Progress) -> None:
     """Practice a language."""
     console.print(WELCOME)
     try:
-        while quiz := progress.next_quiz(topics):
+        while quiz := progress.next_quiz():
             do_quiz(quiz, progress)
         console.print(DONE)
     except (KeyboardInterrupt, EOFError):
