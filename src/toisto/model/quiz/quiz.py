@@ -35,7 +35,7 @@ QuizType = Literal[
     "make declarative",
     "make interrogative",
     "affirm",
-    "negate"
+    "negate",
 ]
 GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "plural": "pluralize",
@@ -55,7 +55,7 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "declarative": "make declarative",
     "interrogative": "make interrogative",
     "affirmative": "affirm",
-    "negative": "negate"
+    "negative": "negate",
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
 INSTRUCTIONS: dict[QuizType, str] = dict(translate="Translate into", listen="Listen and write in")
@@ -65,7 +65,7 @@ def instruction(*quiz_types: QuizType) -> str:
     """Return the instruction text for the quiz types."""
     if instruction_label := INSTRUCTIONS.get(quiz_types[0]):
         return instruction_label
-    categories = ' '.join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in quiz_types)
+    categories = " ".join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in quiz_types)
     return f"Give the [underline]{categories}[/underline] form in"
 
 
@@ -104,10 +104,10 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         if not isinstance(other, self.__class__):
             return False
         return (
-            self.question_language == other.question_language and
-            self.answer_language == other.answer_language and
-            self.question == other.question and
-            self.quiz_types == other.quiz_types
+            self.question_language == other.question_language
+            and self.answer_language == other.answer_language
+            and self.question == other.question
+            and self.quiz_types == other.quiz_types
         )
 
     def __ne__(self, other) -> bool:

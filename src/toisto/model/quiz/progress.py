@@ -9,17 +9,19 @@ from .topic import Topics
 
 class Progress:
     """Keep track of progress on quizzes."""
-    def __init__(self, progress_dict: dict[str, dict[str, str | int]]) -> None:
+
+    def __init__(self, progress_dict: dict[str, dict[str, str | int]], topics: Topics) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
+        self.__topics = topics
         self.__current_quiz: Quiz | None = None
 
     def update(self, quiz: Quiz, correct: bool) -> None:
         """Update the progress on the quiz."""
         self.__progress_dict.setdefault(str(quiz), Retention()).update(correct)
 
-    def next_quiz(self, topics: Topics) -> Quiz | None:
+    def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
-        all_quizzes = set(quiz for topic in topics for quiz in topic.quizzes if self.__is_eligible(quiz))
+        all_quizzes = set(quiz for topic in self.__topics for quiz in topic.quizzes if self.__is_eligible(quiz))
         quizzes_with_progress = {quiz for quiz in all_quizzes if self.__has_progress(quiz)}
         quizzes = quizzes_with_progress or all_quizzes
         while quizzes:

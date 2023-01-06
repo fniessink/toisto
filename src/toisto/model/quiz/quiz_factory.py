@@ -36,10 +36,9 @@ class QuizFactory:
             return set()
         concept_id = concept.concept_id
         uses = concept.uses
-        return (
-            set(Quiz(concept_id, language, source_language, label, source_labels, uses=uses) for label in labels) |
-            set(Quiz(concept_id, source_language, language, label, labels, uses=uses) for label in source_labels)
-        )
+        back = set(Quiz(concept_id, language, source_language, label, source_labels, uses=uses) for label in labels)
+        forth = set(Quiz(concept_id, source_language, language, label, labels, uses=uses) for label in source_labels)
+        return back | forth
 
     def create_listen_quizzes(self, concept: Concept) -> Quizzes:
         """Create listening quizzes for the concept."""
@@ -57,10 +56,11 @@ class QuizFactory:
             labels1, labels2 = concept1.labels(self.language), concept2.labels(self.language)
             meanings = concept1.meanings(self.source_language) + concept2.meanings(self.source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
-            uses = concept.uses + (concept2.concept_id,)
+            uses = concept.uses + (concept1.concept_id, concept2.concept_id)
             quizzes |= set(
                 Quiz(concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
-                for label1, label2 in zip(labels1, labels2) if label1 != label2
+                for label1, label2 in zip(labels1, labels2)
+                if label1 != label2
             )
         return quizzes
 

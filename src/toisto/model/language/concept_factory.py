@@ -45,7 +45,7 @@ class ConceptFactory:
         uses = self.get_uses()
         for category, used_category in AUTO_USES.items():
             if category in self.concept_id:
-                uses.append(cast(ConceptId, self.concept_id.replace(category,  used_category)))
+                uses.append(cast(ConceptId, self.concept_id.replace(category, used_category)))
                 break
         labels = {
             key: label_factory(cast(str | list[str], value))

@@ -13,12 +13,7 @@ from ..metadata import NAME, VERSION
 from ..model import Label, Quiz
 
 
-theme = Theme({
-    "secondary": "grey69",
-    "quiz": "medium_purple1",
-    "inserted": "bright_green",
-    "deleted": "bright_red"
-})
+theme = Theme(dict(secondary="grey69", quiz="medium_purple1", inserted="bright_green", deleted="bright_red"))
 
 console = Console(theme=theme)
 
@@ -102,13 +97,16 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     if guess == "?":
         label = "The correct answer is" if len(quiz.answers) == 1 else "The correct answers are"
         return f"{label} {linkify_and_enumerate(*quiz.answers)}.\n" + meaning(quiz)
-    return f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n' + meaning(quiz) + \
-        other_answers(quiz.answer, quiz)
+    return (
+        f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
+        + meaning(quiz)
+        + other_answers(quiz.answer, quiz)
+    )
 
 
 def meaning(quiz: Quiz) -> str:
     """Return the quiz's meaning, if any."""
-    return f'[secondary]Meaning {linkify_and_enumerate(*quiz.meanings)}.[/secondary]\n' if quiz.meanings else ""
+    return f"[secondary]Meaning {linkify_and_enumerate(*quiz.meanings)}.[/secondary]\n" if quiz.meanings else ""
 
 
 def other_answers(guess: Label, quiz: Quiz) -> str:

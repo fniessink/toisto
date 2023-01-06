@@ -27,6 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "black == 22.12.0",
     "build == 0.9.0",
     "coverage == 7.0.1",
     "green == 3.4.3",
@@ -43,6 +44,9 @@ toisto = "toisto.app:main"
 "Homepage" = "https://github.com/fniessink/toisto"
 "Issue tracker" = "https://github.com/fniessink/toisto/issues"
 "Changelog" = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
+
+[tool.black]
+line-length = 120
 
 [tool.setuptools.packages.find]
 where = ["src"]
