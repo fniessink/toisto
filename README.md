@@ -35,13 +35,13 @@ $ pipx upgrade Toisto
 Start Toisto as follows, giving the language you want to practice and your language as arguments:
 
 ```console
-$ toisto fi en
+$ toisto practice fi en
 ```
 
 To practice a specific topic, pass it as follows:
 
 ```console
-$ toisto fi en --topic colors
+$ toisto practice fi en --topic colors
 ```
 
 Add `--help` or `-h` to get more information about the command-line options and arguments:
@@ -55,8 +55,8 @@ $ toisto --help
 ![gif](https://raw.githubusercontent.com/fniessink/toisto/main/docs/demo.gif)
 
 ```console
-$ toisto fi nl
- Welcome to Toisto v0.5.0!
+$ toisto practice fi nl
+ Welcome to Toisto v0.6.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 
