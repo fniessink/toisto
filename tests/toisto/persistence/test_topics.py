@@ -3,7 +3,7 @@
 from itertools import permutations
 from unittest.mock import patch, Mock
 
-from toisto.model.model_types import ConceptId
+from toisto.model.model_types import ConceptId, parent_ids
 from toisto.persistence import load_topics
 
 from ..base import ToistoTestCase
@@ -27,13 +27,7 @@ class LoadTopicsTest(ToistoTestCase):
         for topic in all_topics:
             for concept in topic.concepts:
                 for leaf_concept in concept.leaf_concepts():
-                    id_parts = leaf_concept.concept_id.split("/")
-                    concept_id = ""
-                    for id_part in id_parts:
-                        if concept_id:
-                            concept_id += "/"
-                        concept_id += id_part
-                        all_concept_ids.add(concept_id)
+                    all_concept_ids |= set(parent_ids(leaf_concept.concept_id))
         for topic in all_topics:
             for concept in topic.concepts:
                 for uses in concept.uses:
