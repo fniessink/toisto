@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass, field
 from typing import cast, get_args, Iterable
 
 from toisto.metadata import Language
@@ -11,6 +12,7 @@ from .grammar import GrammaticalCategory
 from .label import Labels, Label
 
 
+@dataclass
 class Concept:
     """Class representing language concepts.
 
@@ -19,17 +21,10 @@ class Concept:
     in different languages.
     """
 
-    def __init__(
-        self,
-        concept_id: ConceptId,
-        uses: tuple[ConceptId, ...],
-        constituent_concepts: tuple[Concept, ...] = (),
-        labels: dict[Language, Labels] | None = None,
-    ) -> None:
-        self.concept_id = concept_id
-        self.uses = uses
-        self.constituent_concepts = constituent_concepts
-        self._labels = labels or {}
+    concept_id: ConceptId
+    uses: tuple[ConceptId, ...]
+    constituent_concepts: tuple[Concept, ...] = ()
+    _labels: dict[Language, Labels] = field(default_factory=dict)
 
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""

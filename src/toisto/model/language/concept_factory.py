@@ -38,6 +38,7 @@ class ConceptFactory:
             constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | dict(uses=uses)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             constituent_concepts.append(concept_factory.create_concept())
+        uses += [concept.concept_id for concept in constituent_concepts]
         return Concept(self.concept_id, tuple(uses), tuple(constituent_concepts))
 
     def leaf_concept(self) -> Concept:

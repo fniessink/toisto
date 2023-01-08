@@ -52,11 +52,11 @@ class QuizFactory:
     def create_grammatical_quizzes(self, concept: Concept) -> Quizzes:
         """Create grammatical quizzes for the concept."""
         quizzes = set()
+        uses = concept.uses
         for concept1, concept2 in paired_leaf_concepts(*concept.constituent_concepts):
             labels1, labels2 = concept1.labels(self.language), concept2.labels(self.language)
             meanings = concept1.meanings(self.source_language) + concept2.meanings(self.source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
-            uses = concept.uses + (concept1.concept_id, concept2.concept_id)
             quizzes |= set(
                 Quiz(concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
                 for label1, label2 in zip(labels1, labels2)
