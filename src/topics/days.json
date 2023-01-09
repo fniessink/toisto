@@ -24,7 +24,7 @@
         }
     },
     "weekend": {
-        "uses": "week/singular",
+        "uses": "week",
         "singular": {
             "en": "Weekend",
             "fi": "Viikonloppu",
@@ -37,7 +37,7 @@
         }
     },
     "days of the week": {
-        "uses": ["day/plural", "week/singular"],
+        "uses": ["day", "week"],
         "en": "Days of the week",
         "fi": "Viikonpäivät",
         "nl": "De dagen van de week"
@@ -154,37 +154,37 @@
         "nl": "Morgen"
     },
     "this week": {
-        "uses": "week/singular",
+        "uses": "week",
         "en": "This week",
         "fi": "Tällä viikolla",
         "nl": "Deze week"
     },
     "last week": {
-        "uses": "week/singular",
+        "uses": "week",
         "en": "Last week",
         "fi": "Viime viikolla",
         "nl": "Vorige week"
     },
     "next week": {
-        "uses": "week/singular",
+        "uses": "week",
         "en": "Next week",
         "fi": "Ensi viikolla",
         "nl": "Volgende week"
     },
     "today it is monday": {
-        "uses": ["today", "to be/declarative/affirmative/present tense/singular/third person", "monday/singular"],
+        "uses": ["today", "to be", "monday"],
         "en": "Today it is Monday|Today it's Monday",
         "fi": "Tänään on maanantai",
         "nl": "Vandaag is het maandag"
     },
     "tomorrow it is tuesday": {
-        "uses": ["tomorrow", "to be/declarative/affirmative/present tense/singular/third person", "tuesday/singular"],
+        "uses": ["tomorrow", "to be", "tuesday"],
         "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai",
         "nl": "Morgen is het dinsdag"
     },
     "what day is it today": {
-        "uses": ["day/singular", "to be/interrogative/affirmative/present tense/singular/third person", "today"],
+        "uses": ["day", "to be", "today"],
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"

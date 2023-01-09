@@ -49,7 +49,7 @@
         "nl": ["Wat voor soort?", "Wat voor een?"]
     },
     "where is the water": {
-        "uses": ["where", "to be/interrogative/affirmative/present tense/singular/third person", "water/singular"],
+        "uses": ["where", "to be", "water"],
         "en": "Where is the water?",
         "fi": "Missä vesi on?|Missä on vesi?",
         "nl": "Waar is het water?"
@@ -67,37 +67,37 @@
         "nl": "Waarom doe je dat?"
     },
     "why is that the case": {
-        "uses": ["why", "to be/interrogative/affirmative/present tense/singular/third person"],
+        "uses": ["why", "to be"],
         "en": "Why is that the case?",
         "fi": ["Miksi se on noin?", "Miksi se on niin?"],
         "nl": "Waarom is dat zo?"
     },
     "why are you too late": {
-        "uses": ["why", "to be/interrogative/affirmative/present tense/singular/third person"],
+        "uses": ["why", "to be"],
         "en": "Why are you too late?",
         "fi": "Miksi sinä olet myöhässä?|Miksi olet myöhässä?",
         "nl": "Waarom ben je te laat?"
     },
     "why are bananas bent": {
-        "uses": ["why", "banana/plural", "to be/interrogative/affirmative/present tense/plural/third person"],
+        "uses": ["why", "banana", "to be"],
         "en": "Why are banasas bent?",
         "fi": "Miksi banaanit ovat käyriä?",
         "nl": "Waarom zijn bananen krom?|Waarom zijn de bananen krom?"
     },
     "where is the toilet": {
-        "uses": ["where", "to be/interrogative/affirmative/present tense/singular/third person"],
+        "uses": ["where", "to be"],
         "en": ["Where is the toilet?", "Where is the restroom?"],
         "fi": ["Missä on wc?|Missä wc on?", "Missä on vessa?|Missä vessa on?"],
         "nl": ["Waar is de wc?", "Waar is het toilet?"]
     },
     "when will you arrive at the airport": {
-        "uses": ["when", "airport/singular"],
+        "uses": ["when", "airport"],
         "en": "When will you arrive at the airport?",
         "fi": "Milloin saavut lentokentälle?",
         "nl": "Wanneer kom je aan op het vliegveld?|Wanneer kom je op het vliegveld aan?"
     },
     "what kind of cat do you have": {
-        "uses": ["what kind of", "cat", "to have/interrogative/affirmative/present tense/singular/second person"],
+        "uses": ["what kind of", "cat", "to have"],
         "en": "What kind of cat do you have?",
         "fi": "Millainen kissa sinulla on?",
         "nl": "Wat voor soort kat heb jij?|Wat voor soort kat heb je?|Wat voor een kat heb jij?|Wat voor een kat heb je?"
