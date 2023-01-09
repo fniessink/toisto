@@ -24,8 +24,8 @@ class QuizFactory:
         for concept in concepts:
             quizzes |= self.create_quizzes(*concept.constituent_concepts)
             quizzes |= self.create_grammatical_quizzes(concept)
-            quizzes |= self.create_translation_quizzes(concept)
-            quizzes |= self.create_listen_quizzes(concept)
+            quizzes |= (translation_quizzes := self.create_translation_quizzes(concept))
+            quizzes |= self.create_listen_quizzes(concept, translation_quizzes)
         return quizzes
 
     def create_translation_quizzes(self, concept: Concept) -> Quizzes:
@@ -40,12 +40,22 @@ class QuizFactory:
         forth = set(Quiz(concept_id, source_language, language, label, labels, uses=uses) for label in source_labels)
         return back | forth
 
-    def create_listen_quizzes(self, concept: Concept) -> Quizzes:
+    def create_listen_quizzes(self, concept: Concept, translation_quizzes: Quizzes) -> Quizzes:
         """Create listening quizzes for the concept."""
         labels = concept.labels(self.language)
         meanings = concept.meanings(self.source_language)
         return set(
-            Quiz(concept.concept_id, self.language, self.language, label, (label,), ("listen",), concept.uses, meanings)
+            Quiz(
+                concept.concept_id,
+                self.language,
+                self.language,
+                label,
+                (label,),
+                ("listen",),
+                concept.uses,
+                tuple(translation_quizzes),
+                meanings,
+            )
             for label in labels
         )
 
@@ -58,7 +68,9 @@ class QuizFactory:
             meanings = concept1.meanings(self.source_language) + concept2.meanings(self.source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
             quizzes |= set(
-                Quiz(concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
+                Quiz(
+                    concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, (), meanings
+                )
                 for label1, label2 in zip(labels1, labels2)
                 if label1 != label2
             )

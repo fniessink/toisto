@@ -53,7 +53,11 @@ class Progress:
 
         Quiz A is blocked by quiz B if the concept of quiz A uses a concept that is quizzed by quiz B.
         """
-        return {quiz for quiz in quizzes if not self.__used_concepts_have_quizzes(quiz, quizzes)}
+        return {
+            quiz
+            for quiz in quizzes
+            if not self.__used_concepts_have_quizzes(quiz, quizzes) and not quiz.is_blocked_by(quizzes)
+        }
 
     def __used_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
         """Return whether the quiz uses concepts that have quizzes."""
