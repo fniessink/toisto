@@ -33,19 +33,19 @@
         "nl": "Welkom"
     },
     "who are you": {
-        "uses": ["who", "to be/interrogative/affirmative/present tense/singular/second person"],
+        "uses": ["who", "to be"],
         "en": "Who are you?",
         "fi": "Kuka sinä olet?|Kuka olet?",
         "nl": "Wie ben jij?"
     },
     "I am alice": {
-        "uses": "to be/declarative/affirmative/present tense/singular/first person",
+        "uses": "to be",
         "en": "I am Alice|I'm Alice",
         "fi": "Minä olen Alice",
         "nl": "Ik ben Alice"
     },
     "how are you": {
-        "uses": ["what", "how", "to be/interrogative/affirmative/present tense/singular"],
+        "uses": ["what", "how", "to be"],
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -66,19 +66,19 @@
         }
     },
     "what is your name": {
-        "uses": ["what", "to be/interrogative/affirmative/present tense/singular/third person", "name/singular"],
+        "uses": ["what", "to be", "name"],
         "en": "What is your name?",
         "fi": "Mikä sinun nimesi on?",
         "nl": "Wat is jouw naam?|Wat is je naam?"
     },
     "my name is bob": {
-        "uses": ["name/singular", "to be/declarative/affirmative/present tense/singular/third person"],
+        "uses": ["name", "to be"],
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": ["how", "old", "to be/interrogative/affirmative/present tense/singular/second person"],
+        "uses": ["how", "old", "to be"],
         "en": "How old are you?",
         "fi": "Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"

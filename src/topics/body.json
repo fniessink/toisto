@@ -133,7 +133,7 @@
         }
     },
     "arm": {
-        "uses": "hand/singular",
+        "uses": "hand",
         "singular": {
             "en": "Arm",
             "fi": "Käsivarsi",

@@ -28,7 +28,7 @@ The contents of a JSON topic file looks as follows:
 }
 ```
 
-Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
+Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. It should be unique across all topic files. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
@@ -65,7 +65,7 @@ Labels consist of either one string or a list of strings. A list of strings is u
 
 Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 
-If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context.
+If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The hint is the part after the `;`.
 
 In the topic file this looks as follows:
 
@@ -114,8 +114,6 @@ The format of the JSON files is as follows:
 }
 ```
 
-The singular and plural forms are considered *subconcepts* of the main concept. Both implicitly get their own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the singular form gets `day/singular` as key and the plural form `day/plural`.
-
 ### Grammatical gender
 
 When concepts have multiple genders, these can be specified as follows:
@@ -157,8 +155,6 @@ It is also possible to have a neutral gender:
 ```
 
 Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the builtin topic files.
-
-The gendered forms are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the female form gets `parent/female` as key, the male form `parent/male`, and the neuter form `parent/neuter`.
 
 ### Grammatical person
 
@@ -211,8 +207,6 @@ Note that because the second person singular and plural are the same in English,
 
 The same goes for the third person Finnish. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
-The different persons are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the first person singular gets `to have/singular/first person` as key, the second person singular `to have/singular/second person`, etc.
-
 ### Infinitive
 
 When concepts are verbs, infinitives can be specified as follows:
@@ -235,8 +229,6 @@ When concepts are verbs, infinitives can be specified as follows:
     }
 }
 ```
-
-Infinitives, like the different persons, are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the infinitive gets `to have/infinitive` as key.
 
 ### Tenses
 
@@ -269,8 +261,6 @@ When concepts are verbs, the present tense and the past tense can be specified a
     }
 }
 ```
-
-Tenses, like the infinitive, are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the present tense gets `to be/present tense` as key and the past tense `to be/past tense`.
 
 ### Degrees of comparison
 
@@ -319,8 +309,6 @@ When there are synonyms, they need to be in the same order in every degree. This
 }
 ```
 
-The diffent degrees of comparison are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the positive degree gets `big/positive degree` as key, the comparitive degree `big/comparitive degree`, and the superlative degree `big/superlative degree`.
-
 ### Sentence forms
 
 When the topic file contains both the declarative and the interrogative form of a sentence, Toisto can generate quizzes to change one into the other. Sentence forms are specified as follows:
@@ -339,8 +327,6 @@ When the topic file contains both the declarative and the interrogative form of 
     }
 }
 ```
-
-The sentence forms are considered *subconcepts* of the main concept. Each subconcept gets its own key that can be used to refer to the subconcept, see the section on [concept relationships](#concept-relationships) below. In the example above, the declarative sentence form gets `the car is black/declarative` as key and the interrogative form gets `the car is black/interrogative`.
 
 ### Grammatical polarity
 
@@ -396,18 +382,6 @@ When a concept uses one or more other concepts, this can be specified with the `
 ```
 
 If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
-
-As mentioned in the previous sections, subconcepts automatically get a more specific key. This means the uses relationsips in the example above could be made more specific be referring to the singular of week and the plural of day:
-
-```json
-{
-    "days of the week": {
-        "uses": ["day/plural", "week/singular"],
-        "en": "Days of the week",
-        "nl": "De dagen van de week"
-    }
-}
-```
 
 ## Quizzes
 

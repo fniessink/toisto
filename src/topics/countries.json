@@ -12,13 +12,13 @@
         }
     },
     "finland": {
-        "uses": "country/singular",
+        "uses": "country",
         "en": "Finland",
         "fi": "Suomi;country",
         "nl": "Finland"
     },
     "estland": {
-        "uses": "country/singular",
+        "uses": "country",
         "en": "Estland",
         "fi": "Viro;country",
         "nl": "Estland"
@@ -39,7 +39,7 @@
         "nl": "Zweden"
     },
     "russia": {
-        "uses": "country/singular",
+        "uses": "country",
         "en": "Russia",
         "fi": "Venäjä;country",
         "nl": "Rusland"
@@ -66,13 +66,13 @@
         "nl": "Frankrijk"
     },
     "england": {
-        "uses": "country/singular",
+        "uses": "country",
         "en": "England",
         "fi": "Englanti;country",
         "nl": "Engeland"
     },
     "iceland": {
-        "uses": "country/singular",
+        "uses": "country",
         "en": "Iceland",
         "fi": "Islanti;country",
         "nl": "IJsland"
