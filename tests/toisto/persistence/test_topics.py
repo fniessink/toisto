@@ -3,7 +3,7 @@
 from itertools import permutations
 from unittest.mock import patch, Mock
 
-from toisto.model.model_types import ConceptId, parent_ids
+from toisto.model.model_types import ConceptId
 from toisto.persistence import load_topics
 
 from ..base import ToistoTestCase
@@ -23,11 +23,7 @@ class LoadTopicsTest(ToistoTestCase):
     def test_uses_exist(self):
         """Test that all uses relations use existing concept ids."""
         all_topics = load_topics("fi", "nl", [], [])
-        all_concept_ids = set()
-        for topic in all_topics:
-            for concept in topic.concepts:
-                for leaf_concept in concept.leaf_concepts():
-                    all_concept_ids |= set(parent_ids(leaf_concept.concept_id))
+        all_concept_ids = set(concept.concept_id for topic in all_topics for concept in topic.concepts)
         for topic in all_topics:
             for concept in topic.concepts:
                 for uses in concept.uses:

@@ -80,6 +80,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     _answers: Labels
     quiz_types: tuple[QuizType, ...] = ("translate",)
     uses: tuple[ConceptId, ...] = tuple()
+    blocked_by: tuple[Quiz, ...] = tuple()
     _meanings: Labels = Labels()
     _hash: int = 0
 
@@ -150,6 +151,10 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         hint = self._question.hint
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
         return f"{instruction(*self.quiz_types)} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
+
+    def is_blocked_by(self, quizzes: Quizzes) -> bool:
+        """Return whether this quiz should come after any of the given quizzes."""
+        return bool(set(self.blocked_by) & quizzes)
 
 
 Quizzes = set[Quiz]

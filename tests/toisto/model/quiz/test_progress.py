@@ -60,6 +60,12 @@ class ProgressTest(ToistoTestCase):
         progress = self.create_progress({self.quiz, self.another_quiz})
         self.assertNotEqual(progress.next_quiz(), progress.next_quiz())
 
+    def test_next_quiz_is_not_blocked(self):
+        """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
+        listen = self.create_quiz("english", "fi", "fi", "Englanti", ["Englanti"], "listen", blocked_by=(self.quiz,))
+        progress = self.create_progress({listen, self.quiz})
+        self.assertEqual(self.quiz, progress.next_quiz())
+
     def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes(self):
         """Test that the concept of the next quiz does not use other concepts with eligible quizzes."""
         quiz1 = self.create_quiz("good day", "nl", "en", "Goedendag", ["Good day"], uses=("good",))

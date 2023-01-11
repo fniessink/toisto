@@ -2,15 +2,19 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass, field
+from itertools import permutations
 from typing import cast, get_args, Iterable
 
 from toisto.metadata import Language
+from toisto.tools import zip_and_cycle
 
 from ..model_types import ConceptId
 from .grammar import GrammaticalCategory
 from .label import Labels, Label
 
 
+@dataclass
 class Concept:
     """Class representing language concepts.
 
@@ -19,17 +23,10 @@ class Concept:
     in different languages.
     """
 
-    def __init__(
-        self,
-        concept_id: ConceptId,
-        uses: tuple[ConceptId, ...],
-        constituent_concepts: tuple[Concept, ...] = (),
-        labels: dict[Language, Labels] | None = None,
-    ) -> None:
-        self.concept_id = concept_id
-        self.uses = uses
-        self.constituent_concepts = constituent_concepts
-        self._labels = labels or {}
+    concept_id: ConceptId
+    uses: tuple[ConceptId, ...]
+    constituent_concepts: tuple[Concept, ...] = ()
+    _labels: dict[Language, Labels] = field(default_factory=dict)
 
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
@@ -38,6 +35,12 @@ class Concept:
                 yield from concept.leaf_concepts()
         else:
             yield self
+
+    def paired_leaf_concepts(self) -> Iterable[tuple[Concept, Concept]]:
+        """Pair the leaf concepts from the constituent concepts."""
+        for concept_group in zip_and_cycle(*[list(concept.leaf_concepts()) for concept in self.constituent_concepts]):
+            for permutation in permutations(concept_group, r=2):
+                yield cast(tuple[Concept, Concept], permutation)
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""

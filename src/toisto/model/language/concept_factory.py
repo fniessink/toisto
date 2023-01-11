@@ -9,7 +9,7 @@ from toisto.metadata import Language
 
 from ..model_types import ConceptId
 from .concept import Concept, Labels
-from .grammar import GrammaticalCategory, AUTO_USES
+from .grammar import GrammaticalCategory
 from .label import label_factory
 
 ConceptRelation = Literal["uses"]
@@ -42,17 +42,12 @@ class ConceptFactory:
 
     def leaf_concept(self) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
-        uses = self.get_uses()
-        for category, used_category in AUTO_USES.items():
-            if category in self.concept_id:
-                uses.append(cast(ConceptId, self.concept_id.replace(category, used_category)))
-                break
         labels = {
             key: label_factory(cast(str | list[str], value))
             for key, value in self.concept_dict.items()
             if key in get_args(Language)
         }
-        return Concept(self.concept_id, tuple(uses), (), cast(dict[Language, Labels], labels))
+        return Concept(self.concept_id, tuple(self.get_uses()), (), cast(dict[Language, Labels], labels))
 
     def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""

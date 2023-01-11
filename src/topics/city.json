@@ -266,7 +266,7 @@
         }
     },
     "capital": {
-        "uses": ["city", "head/singular"],
+        "uses": ["city", "head"],
         "singular": {
             "en": "Capital",
             "fi": "Pääkaupunki",
@@ -279,25 +279,25 @@
         }
     },
     "that building is a church": {
-        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "building/singular", "church/singular"],
+        "uses": ["to be", "building", "church"],
         "en": "That building is a church",
         "fi": "Tuo rakennus on kirkko",
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
-        "uses": ["where", "to be/interrogative/affirmative/present tense/singular/third person", "library/singular"],
+        "uses": ["where", "to be", "library"],
         "en": "Where is the library?",
         "fi": "Missä on kirjasto?",
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {
-        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "square/singular", "christmas tree"],
+        "uses": ["to be", "square", "christmas tree"],
         "en": "There is a Christmas tree on the square",
         "fi": "Aukiolla on joulukuusi",
         "nl": "Er staat een kerstboom op het plein"
     },
     "I am in the office": {
-        "uses": ["to be/declarative/affirmative/present tense/singular/first person", "office/singular"],
+        "uses": ["to be", "office"],
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"
