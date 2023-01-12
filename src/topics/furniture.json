@@ -109,13 +109,13 @@
         }
     },
     "the door is locked": {
-        "uses": ["to be/declarative/affirmative/present tense/singular/third person", "door/singular"],
+        "uses": ["to be", "door"],
         "en": "The door is locked",
         "fi": "Ovi on lukossa",
         "nl": "De deur is op slot"
     },
     "the cat is sleeping on the carpet": {
-        "uses": ["cat/singular", "to sleep/present tense/singular/third person", "carpet/singular"],
+        "uses": ["cat", "to sleep", "carpet"],
         "en": "The cat is sleeping on the carpet",
         "fi": "Kissa nukkuu matolla",
         "nl": "De kat slaapt op het tapijt"

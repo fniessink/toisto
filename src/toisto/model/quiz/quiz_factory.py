@@ -1,11 +1,9 @@
 """Quiz factory."""
 
 from dataclasses import dataclass
-from itertools import permutations, zip_longest
-from typing import cast, Iterable
+from itertools import zip_longest
 
 from toisto.metadata import Language
-from toisto.tools import zip_and_cycle
 
 from .quiz import Quiz, Quizzes, QuizType, GRAMMATICAL_QUIZ_TYPES
 from ..language import Concept
@@ -19,46 +17,75 @@ class QuizFactory:
     source_language: Language
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
-        """Create quizzes for the concept."""
-        quizzes = set()
+        """Create quizzes for the concepts."""
+        quizzes = Quizzes()
         for concept in concepts:
-            quizzes |= self.create_quizzes(*concept.constituent_concepts)
-            quizzes |= self.create_grammatical_quizzes(concept)
-            quizzes |= self.create_translation_quizzes(concept)
-            quizzes |= self.create_listen_quizzes(concept)
+            quizzes |= self.create_concept_quizzes(concept, Quizzes())
         return quizzes
 
-    def create_translation_quizzes(self, concept: Concept) -> Quizzes:
+    def create_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+        """Create the quizzes for a concept."""
+        if concept.constituent_concepts:
+            return self.create_composite_concept_quizzes(concept, previous_quizzes)
+        return self.create_leaf_concept_quizzes(concept, previous_quizzes)
+
+    def create_composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+        """Create the quizzes for a composite concept."""
+        quizzes = Quizzes()
+        for constituent_concept in concept.constituent_concepts:
+            quizzes |= self.create_concept_quizzes(constituent_concept, quizzes.copy() | previous_quizzes)
+        quizzes |= self.create_grammatical_quizzes(concept, quizzes.copy() | previous_quizzes)
+        return quizzes
+
+    def create_leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+        """Create the quizzes for a leaf concept."""
+        translation_quizzes = self.create_translation_quizzes(concept, previous_quizzes)
+        listening_quizzes = self.create_listening_quizzes(concept, translation_quizzes.copy() | previous_quizzes)
+        return translation_quizzes | listening_quizzes
+
+    def create_translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create translation quizzes for the concept."""
         language, source_language = self.language, self.source_language
         labels, source_labels = concept.labels(language), concept.labels(source_language)
         if not labels or not source_labels:
-            return set()
+            return Quizzes()
         concept_id = concept.concept_id
-        uses = concept.uses
-        back = set(Quiz(concept_id, language, source_language, label, source_labels, uses=uses) for label in labels)
-        forth = set(Quiz(concept_id, source_language, language, label, labels, uses=uses) for label in source_labels)
+        blocked_by = tuple(previous_quizzes)
+        back = Quizzes(
+            Quiz(concept_id, language, source_language, label, source_labels, uses=concept.uses, blocked_by=blocked_by)
+            for label in labels
+        )
+        forth = Quizzes(
+            Quiz(concept_id, source_language, language, label, labels, uses=concept.uses, blocked_by=blocked_by)
+            for label in source_labels
+        )
         return back | forth
 
-    def create_listen_quizzes(self, concept: Concept) -> Quizzes:
+    def create_listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create listening quizzes for the concept."""
-        labels = concept.labels(self.language)
-        meanings = concept.meanings(self.source_language)
-        return set(
-            Quiz(concept.concept_id, self.language, self.language, label, (label,), ("listen",), concept.uses, meanings)
+        language, source_language = self.language, self.source_language
+        labels = concept.labels(language)
+        concept_id = concept.concept_id
+        blocked_by = tuple(previous_quizzes)
+        meanings = concept.meanings(source_language)
+        return Quizzes(
+            Quiz(concept_id, language, language, label, (label,), ("listen",), concept.uses, blocked_by, meanings)
             for label in labels
         )
 
-    def create_grammatical_quizzes(self, concept: Concept) -> Quizzes:
+    def create_grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""
-        quizzes = set()
-        for concept1, concept2 in paired_leaf_concepts(*concept.constituent_concepts):
-            labels1, labels2 = concept1.labels(self.language), concept2.labels(self.language)
-            meanings = concept1.meanings(self.source_language) + concept2.meanings(self.source_language)
+        language, source_language = self.language, self.source_language
+        concept_id = concept.concept_id
+        blocked_by = tuple(previous_quizzes)
+        uses = concept.uses
+        quizzes = Quizzes()
+        for concept1, concept2 in concept.paired_leaf_concepts():
+            labels1, labels2 = concept1.labels(language), concept2.labels(language)
+            meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
-            uses = concept.uses + (concept1.concept_id, concept2.concept_id)
-            quizzes |= set(
-                Quiz(concept.concept_id, self.language, self.language, label1, (label2,), quiz_types, uses, meanings)
+            quizzes |= Quizzes(
+                Quiz(concept_id, language, language, label1, (label2,), quiz_types, uses, blocked_by, meanings)
                 for label1, label2 in zip(labels1, labels2)
                 if label1 != label2
             )
@@ -72,10 +99,3 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
         if category1 != category2 and category2 is not None:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
     return tuple(quiz_types)
-
-
-def paired_leaf_concepts(*concepts: Concept) -> Iterable[tuple[Concept, Concept]]:
-    """Pair the leaf concepts from the concepts."""
-    for concept_group in zip_and_cycle(*[list(concept.leaf_concepts()) for concept in concepts]):
-        for permutation in permutations(concept_group, r=2):
-            yield cast(tuple[Concept, Concept], permutation)

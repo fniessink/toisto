@@ -32,6 +32,7 @@ class ToistoTestCase(unittest.TestCase):
         answers: list[str],
         quiz_type: str | tuple[str] = "translate",
         uses: tuple[ConceptId, ...] = tuple(),
+        blocked_by: tuple[Quiz, ...] = tuple(),
         meanings: tuple[str, ...] = tuple(),
     ) -> Quiz:
         """Create a quiz."""
@@ -44,5 +45,6 @@ class ToistoTestCase(unittest.TestCase):
             tuple(Label(answer) for answer in answers),
             quiz_type,
             uses,
+            blocked_by,
             Labels(Label(meaning) for meaning in meanings),
         )
