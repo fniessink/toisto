@@ -83,14 +83,30 @@ class ProgressTest(ToistoTestCase):
 
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
-        concept = self.create_concept(
+        morning = self.create_concept(
             "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
         )
-        quizzes = self.create_quizzes(concept, "fi", "nl")
+        afternoon = self.create_concept(
+            "afternoon",
+            dict(
+                uses="morning",
+                singular=dict(fi="Iltapäivä", nl="De middag"),
+                plural=dict(fi="Iltapäivät", nl="De middagen"),
+            ),
+        )
+        evening = self.create_concept(
+            "evening",
+            dict(uses="afternoon", singular=dict(fi="Ilta", nl="De avond"), plural=dict(fi="Illat", nl="De avonden")),
+        )
+        quizzes = (
+            self.create_quizzes(morning, "fi", "nl")
+            | self.create_quizzes(afternoon, "fi", "nl")
+            | self.create_quizzes(evening, "fi", "nl")
+        )
         progress = self.create_progress(quizzes)
-        for _ in range(3):
+        for _ in range(9):
             quiz = progress.next_quiz()
-            self.assertEqual("morning/singular", quiz.concept_id)
+            self.assertTrue("singular" in quiz.concept_id)
             progress.update(quiz, correct=True)
 
     def test_next_quiz_is_quiz_with_progress(self):

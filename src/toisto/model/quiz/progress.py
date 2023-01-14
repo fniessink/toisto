@@ -1,5 +1,7 @@
 """Progress model class."""
 
+from collections import deque
+
 from ..model_types import ConceptId
 
 from .quiz import Quiz, Quizzes
@@ -13,7 +15,7 @@ class Progress:
     def __init__(self, progress_dict: dict[str, dict[str, str | int]], topics: Topics) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__topics = topics
-        self.__current_quiz: Quiz | None = None
+        self.__recent_concepts: deque[ConceptId] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
         self.__quizzes_by_concept_id: dict[ConceptId, Quizzes] = {}
         for quiz in self.__topics.quizzes:
             self.__quizzes_by_concept_id.setdefault(ConceptId(quiz.concept_id.split("/")[0]), set()).add(quiz)
@@ -27,11 +29,13 @@ class Progress:
         eligible_quizzes = {quiz for quiz in self.__topics.quizzes if self.__is_eligible(quiz)}
         quizzes_for_concepts_in_progress = {quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz)}
         quizzes_in_progress = {quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz)}
-        potential_quizzes = quizzes_in_progress or quizzes_for_concepts_in_progress or eligible_quizzes
-        self.__current_quiz = (
-            self.__unblocked_quizzes(potential_quizzes, eligible_quizzes).pop() if potential_quizzes else None
-        )
-        return self.__current_quiz
+        for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
+            unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
+            if unblocked_quizzes:
+                quiz = unblocked_quizzes.pop()
+                self.__recent_concepts.append(ConceptId(quiz.concept_id.split("/")[0]))
+                return quiz
+        return None
 
     def get_retention(self, quiz: Quiz) -> Retention:
         """Return the quiz retention."""
@@ -39,7 +43,9 @@ class Progress:
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
-        return quiz != self.__current_quiz and not self.get_retention(quiz).is_silenced()
+        return (
+            quiz.concept_id.split("/")[0] not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
+        )
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Has the quiz's concept been presented to the user before?"""

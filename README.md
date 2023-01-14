@@ -56,7 +56,7 @@ $ toisto --help
 
 ```console
 $ toisto practice fi nl
- Welcome to Toisto v0.6.0!
+ Welcome to Toisto v0.6.1!
 
 Practice as many words and phrases as you like, for as long as you like.
 
