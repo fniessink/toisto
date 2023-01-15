@@ -18,10 +18,11 @@
         "nl": "Kerstmis"
     },
     "christmas eve": {
-        "uses": [
-            "christmas",
-            "evening"
-        ],
+        "uses": {
+            "en": "christmas",
+            "fi": "christmas",
+            "nl": ["christmas", "evening"]
+        },
         "en": "Christmas Eve",
         "fi": "Jouluaatto",
         "nl": "Kerstavond"
@@ -36,10 +37,11 @@
         "nl": "Eerste kerstdag"
     },
     "boxing day": {
-        "uses": [
-            "christmas",
-            "day"
-        ],
+        "uses": {
+            "en": "day",
+            "fi": "day",
+            "nl": ["christmas", "day"]
+        },
         "en": "Boxing Day",
         "fi": "Tapaninpäivä",
         "nl": "Tweede kerstdag"
@@ -62,7 +64,10 @@
         "nl": "De kerstboom"
     },
     "santa": {
-        "uses": "christmas",
+        "uses": {
+            "fi": "christmas",
+            "nl": "christmas"
+        },
         "en": "Santa Claus|Santa",
         "fi": "Joulupukki",
         "nl": "De kerstman"
@@ -78,13 +83,16 @@
         "nl": "De engel"
     },
     "bauble": {
-        "uses": "christmas tree",
+        "uses": {
+            "fi": ["christmas tree", "christmas"],
+            "nl": "christmas"
+        },
         "en": "Bauble",
         "fi": "Joulukuusenpallo|Joulupallo",
         "nl": "De kerstbal"
     },
     "new year": {
-        "uses": "year",
+        "uses": ["new", "year"],
         "en": "New Year",
         "fi": "Uusivuosi",
         "nl": "Nieuwjaar"
@@ -112,16 +120,19 @@
         "nl": "Pasen"
     },
     "first of may": {
-        "uses": [
-            "may",
-            "day"
-        ],
+        "uses": {
+            "en": "may",
+            "nl": "day"
+        },
         "en": "First of May",
         "fi": "Vappu",
         "nl": "Dag van de arbeid"
     },
     "midsummer": {
-        "uses": "summer",
+        "uses": {
+            "en": "summer",
+            "nl": "summer"
+        },
         "en": "Midsummer",
         "fi": "Juhannus",
         "nl": "Midzomer"

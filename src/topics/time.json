@@ -71,7 +71,12 @@
         }
     },
     "decade": {
-        "uses": ["10", "year"],
+        "uses": {
+            "fi": [
+                "10",
+                "year"
+            ]
+        },
         "singular": {
             "en": "Decade",
             "fi": "Vuosikymmen",
@@ -84,7 +89,12 @@
         }
     },
     "century": {
-        "uses": ["100", "year"],
+        "uses": {
+            "fi": [
+                "100",
+                "year"
+            ]
+        },
         "singular": {
             "en": "Century",
             "fi": "Vuosisata",
@@ -133,49 +143,177 @@
         }
     },
     "what time is it": {
-        "uses": ["what", "how", "time", "clock", "to be"],
+        "uses": {
+            "en": [
+                "what",
+                "time",
+                "to be"
+            ],
+            "fi": [
+                "what",
+                "how",
+                "time",
+                "clock",
+                "to be"
+            ],
+            "nl": [
+                "how",
+                "to be"
+            ]
+        },
         "en": "What time is it?",
-        "fi": ["Paljonko kello on?", "Mitä kello on?"],
+        "fi": [
+            "Paljonko kello on?",
+            "Mitä kello on?"
+        ],
         "nl": "Hoe laat is het?"
     },
     "it is 10:00": {
-        "uses": ["to be", "10", "clock", "hour"],
+        "uses": {
+            "en": [
+                "to be",
+                "10",
+                "clock"
+            ],
+            "fi": [
+                "to be",
+                "10",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "10",
+                "hour"
+            ]
+        },
         "en": "It is ten o'clock|It's ten o'clock",
         "fi": "Kello on kymmenen",
         "nl": "Het is tien uur"
     },
     "it is 2:30": {
-        "uses": ["to be", "2", "3", "clock"],
+        "uses": {
+            "en": [
+                "to be",
+                "2",
+                "10"
+            ],
+            "fi": [
+                "to be",
+                "3",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "3"
+            ]
+        },
         "en": "It is half past two|It's half past two",
         "fi": "Kello on puoli kolme",
         "nl": "Het is half drie"
     },
     "it is 3:15": {
-        "uses": ["to be", "3", "clock"],
+        "uses": {
+            "en": [
+                "to be",
+                "3"
+            ],
+            "fi": [
+                "to be",
+                "3",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "3"
+            ]
+        },
         "en": "It is a quarter past three|It's a quarter past three",
         "fi": "Kello on vartin yli kolme",
         "nl": "Het is kwart over drie"
     },
     "it is 3:45": {
-        "uses": ["to be", "4", "clock"],
+        "uses": {
+            "en": [
+                "to be",
+                "4"
+            ],
+            "fi": [
+                "to be",
+                "4",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "4"
+            ]
+        },
         "en": "It is a quarter to four|It's a quarter to four",
         "fi": "Kello on varttia vaille neljä",
         "nl": "Het is kwart voor vier"
     },
     "it is 6:20": {
-        "uses": ["to be", "20", "6", "7", "clock"],
+        "uses": {
+            "en": [
+                "to be",
+                "6",
+                "20"
+            ],
+            "fi": [
+                "to be",
+                "6",
+                "20",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "10",
+                "7"
+            ]
+        },
         "en": "It is twenty past six|It's twenty past six",
-        "fi": ["Kello on kuusi kaksikymmentä", "Kello on kaksikymmentä yli kuusi"],
+        "fi": [
+            "Kello on kuusi kaksikymmentä",
+            "Kello on kaksikymmentä yli kuusi"
+        ],
         "nl": "Het is tien voor half zeven"
     },
     "it is 6:40": {
-        "uses": ["to be", "20", "10", "6", "7", "clock"],
+        "uses": {
+            "en": [
+                "to be",
+                "7",
+                "20"
+            ],
+            "fi": [
+                "to be",
+                "6",
+                "7",
+                "20",
+                "40",
+                "clock"
+            ],
+            "nl": [
+                "to be",
+                "10",
+                "7"
+            ]
+        },
         "en": "It is twenty to seven|It's twenty to seven",
-        "fi": ["Kello on kuusi neljäkymmentä", "Kello on kahtakymmentä vaille seitsemän"],
+        "fi": [
+            "Kello on kuusi neljäkymmentä",
+            "Kello on kahtakymmentä vaille seitsemän"
+        ],
         "nl": "Het is tien over half zeven"
     },
     "what time": {
-        "uses": ["what", "how", "time"],
+        "uses": {
+            "en": [
+                "what",
+                "time"
+            ],
+            "fi": "time",
+            "nl": "how"
+        },
         "en": "What time?",
         "fi": "Mihin aikaan?",
         "nl": "Hoe laat?"
@@ -183,11 +321,24 @@
     "how long does it take": {
         "uses": "how",
         "en": "How long does it take?",
-        "fi": ["Kauanko se kestää?", "Kuinka kauan se kestää?"],
+        "fi": [
+            "Kauanko se kestää?",
+            "Kuinka kauan se kestää?"
+        ],
         "nl": "Hoe lang duurt het?"
     },
     "it takes one hour": {
-        "uses": "hour",
+        "uses": {
+            "en": [
+                "1",
+                "hour"
+            ],
+            "fi": "hour",
+            "nl": [
+                "1",
+                "hour"
+            ]
+        },
         "en": "It takes one hour",
         "fi": "Se kestää tunnin",
         "nl": "Het duurt één uur|Het duurt een uur"

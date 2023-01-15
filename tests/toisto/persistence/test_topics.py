@@ -26,7 +26,7 @@ class LoadTopicsTest(ToistoTestCase):
         all_concept_ids = set(concept.concept_id for topic in all_topics for concept in topic.concepts)
         for topic in all_topics:
             for concept in topic.concepts:
-                for uses in concept.uses:
+                for uses in concept.used_concepts("fi"):
                     self.assertIn(uses, all_concept_ids)
 
     def test_instructions(self):

@@ -11,6 +11,9 @@
         }
     },
     "orange": {
+        "uses": {
+            "nl": "apple"
+        },
         "singular": {
             "en": "Orange",
             "fi": "Appelsiini",
@@ -23,6 +26,9 @@
         }
     },
     "hotdog": {
+        "uses": {
+            "en": ["hot", "dog"]
+        },
         "singular": {
             "en": ["Hotdog|Hot dog"],
             "fi": "Hotdog",
@@ -209,6 +215,9 @@
         }
     },
     "potato": {
+        "uses": {
+            "nl": "apple"
+        },
         "singular": {
             "en": "Potato",
             "fi": "Peruna",
@@ -341,7 +350,9 @@
         }
     },
     "sandwich": {
-        "uses": "bread",
+        "uses": {
+            "fi": "bread"
+        },
         "singular": {
             "en": "Sandwich",
             "fi": "Voileipä",
@@ -403,6 +414,9 @@
         }
     },
     "mushroom": {
+        "uses": {
+            "nl": "chair"
+        },
         "singular": {
             "en": "Mushroom",
             "fi": "Sieni",
@@ -415,6 +429,9 @@
         }
     },
     "garlic": {
+        "uses": {
+            "fi": ["white", "onion"]
+        },
         "singular": {
             "en": "Garlic",
             "fi": "Valkosipuli",

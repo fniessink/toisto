@@ -77,7 +77,9 @@
         }
     },
     "coast": {
-        "uses": "beach",
+        "uses": {
+            "fi": "beach"
+        },
         "singular": {
             "en": "Coast",
             "fi": "Rannikko",
@@ -90,7 +92,9 @@
         }
     },
     "desert": {
-        "uses": "country",
+        "uses": {
+            "fi": "country"
+        },
         "singular": {
             "en": "Desert",
             "fi": ["Aavikko", "Autiomaa"],
@@ -183,13 +187,17 @@
         "nl": "Het westen"
     },
     "world": {
-        "uses": "country",
+        "uses": {
+            "fi": "country"
+        },
         "en": "World",
         "fi": "Maailma",
         "nl": "De wereld"
     },
     "continent": {
-        "uses": "country",
+        "uses": {
+            "fi": "country"
+        },
         "singular": {
             "en": "Continent",
             "fi": "Maanosa",

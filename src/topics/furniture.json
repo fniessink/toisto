@@ -60,7 +60,9 @@
         }
     },
     "desk": {
-        "uses": "table",
+        "uses": {
+            "fi": ["to write", "table"]
+        },
         "singular": {
             "en": "Desk",
             "fi": ["Työpöytä", "Kirjoituspöytä"],

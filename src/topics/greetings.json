@@ -93,7 +93,11 @@
         "nl": "Goedemorgen"
     },
     "good afternoon": {
-        "uses": "day",
+        "uses": {
+            "en": "afternoon",
+            "fi": "day",
+            "nl": "afternoon"
+        },
         "en": "Good afternoon",
         "fi": [
             "Hyvää päivää;afternoon",

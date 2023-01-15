@@ -144,7 +144,11 @@
         }
     },
     "department store": {
-        "uses": ["house", "store"],
+        "uses": {
+            "en": "store",
+            "fi": "house",
+            "nl": "house"
+        },
         "singular": {
             "en": "Department store",
             "fi": "Tavaratalo",
@@ -253,7 +257,11 @@
         }
     },
     "mall": {
-        "uses": ["centre", "store"],
+        "uses": {
+            "en": "centre",
+            "fi": ["centre", "store"],
+            "nl": ["centre", "store"]
+        },
         "singular": {
             "en": ["Mall", "Shopping center"],
             "fi": ["Kauppakeskus", "Ostoskeskus"],
@@ -266,7 +274,10 @@
         }
     },
     "capital": {
-        "uses": ["city", "head"],
+        "uses": {
+            "fi": ["city", "head"],
+            "nl": ["city", "head"]
+        },
         "singular": {
             "en": "Capital",
             "fi": "Pääkaupunki",
