@@ -132,5 +132,53 @@
             "fi": "Paidat",
             "nl": "De hemden"
         }
+    },
+    "to dress (": {
+        "infinitive": {
+            "en": ["To dress", "To get dressed"],
+            "fi": "Pukeutua",
+            "nl": "Zich aankleden"
+        },
+        "singular": {
+            "first person": {
+                "en": ["I dress", "I get dressed"],
+                "fi": "Minä pukeudun|Pukeudun",
+                "nl": "Ik kleed mij aan|Ik kleed me aan"
+            },
+            "second person": {
+                "en": ["You dress;singular", "You get dressed;singular"],
+                "fi": "Sinä pukeudut|Pukeudut",
+                "nl": "Jij kleedt je aan"
+            },
+            "third person": {
+                "female": {
+                    "en": ["She dresses", "She gets dressed"],
+                    "fi": "Hän pukeutuu;female",
+                    "nl": "Zij kleedt zich aan|Ze kleedt zich aan"
+                },
+                "male": {
+                    "en": ["He dresses", "He gets dressed"],
+                    "fi": "Hän pukeutuu;male",
+                    "nl": "Hij kleedt zich aan"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": ["We dress", "We get dressed"],
+                "fi": "Me pukeudumme|Pukeudumme",
+                "nl": "Wij kleden ons aan|We kleden ons aan"
+            },
+            "second person": {
+                "en": ["You dress;plural", "You get dressed;plural"],
+                "fi": "Te pukeudutte|Pukeudutte",
+                "nl": "Jullie kleden je aan"
+            },
+            "third person": {
+                "en": ["They dress", "They get dressed"],
+                "fi": "He pukeutuvat|Pukeutuvat",
+                "nl": "Zij kleden zich aan|Ze kleden zich aan"
+            }
+        }
     }
 }

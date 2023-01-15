@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Allow for specifying different concept usage relations per language. Closes [#163](https://github.com/fniessink/toisto/issues/163).
+- Added "to dress" to the clothes topic.
 
 ## v0.6.1 - 2023-01-14
 
