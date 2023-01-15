@@ -1,6 +1,9 @@
 {
     "month": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon",
+            "nl": "moon"
+        },
         "singular": {
             "en": "Month",
             "fi": "Kuukausi",
@@ -25,7 +28,9 @@
         }
     },
     "january": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "January",
         "fi": "Tammikuu",
         "nl": "Januari"
@@ -37,19 +42,25 @@
         "nl": "In januari"
     },
     "february": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "February",
         "fi": "Helmikuu",
         "nl": "Februari"
     },
     "march": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "March",
         "fi": "Maaliskuu",
         "nl": "Maart"
     },
     "april": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "April",
         "fi": "Huhtikuu",
         "nl": "April"
@@ -61,55 +72,74 @@
         "nl": "In april"
     },
     "may": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "May",
         "fi": "Toukokuu",
         "nl": "Mei"
     },
     "june": {
-        "uses": [
-            "moon",
-            "summer"
-        ],
+        "uses": {
+            "fi": [
+                "summer",
+                "moon"
+            ]
+        },
         "en": "June",
         "fi": "Kesäkuu",
         "nl": "Juni"
     },
     "july": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "July",
         "fi": "Heinäkuu",
         "nl": "Juli"
     },
     "august": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "August",
         "fi": "Elokuu",
         "nl": "Augustus"
     },
     "september": {
-        "uses": "moon",
+        "uses": {
+            "fi": [
+                "autumn",
+                "moon"
+            ]
+        },
         "en": "September",
         "fi": "Syyskuu",
         "nl": "September"
     },
     "october": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "October",
         "fi": "Lokakuu",
         "nl": "Oktober"
     },
     "november": {
-        "uses": "moon",
+        "uses": {
+            "fi": "moon"
+        },
         "en": "November",
         "fi": "Marraskuu",
         "nl": "November"
     },
     "december": {
-        "uses": [
-            "christmas",
-            "moon"
-        ],
+        "uses": {
+            "fi": [
+                "christmas",
+                "moon"
+            ]
+        },
         "en": "December",
         "fi": "Joulukuu",
         "nl": "December"

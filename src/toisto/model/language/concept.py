@@ -24,7 +24,7 @@ class Concept:
     """
 
     concept_id: ConceptId
-    uses: tuple[ConceptId, ...]
+    _used_concepts: dict[Language, tuple[ConceptId, ...]]
     constituent_concepts: tuple[Concept, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
 
@@ -41,6 +41,10 @@ class Concept:
         for concept_group in zip_and_cycle(*[list(concept.leaf_concepts()) for concept in self.constituent_concepts]):
             for permutation in permutations(concept_group, r=2):
                 yield cast(tuple[Concept, Concept], permutation)
+
+    def used_concepts(self, language: Language) -> tuple[ConceptId, ...]:
+        """Return the ids of the concepts that this concept uses, for the specified language."""
+        return self._used_concepts.get(language, ())
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""

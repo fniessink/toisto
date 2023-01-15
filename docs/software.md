@@ -381,7 +381,23 @@ When a concept uses one or more other concepts, this can be specified with the `
 }
 ```
 
-If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
+If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers. If the used concepts differ per language, an object with languages as keys can be used:
+
+```json
+{
+    "shirt": {
+        "en": "Shirt",
+        "fi": "Paita"
+    },
+    "sweater": {
+        "uses": {
+            "fi": "shirt"
+        },
+        "en": "Sweater",
+        "fi": "Neulepaita"
+    }
+}
+```
 
 ## Quizzes
 

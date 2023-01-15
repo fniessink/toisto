@@ -43,6 +43,10 @@
         "nl": "De dagen van de week"
     },
     "monday": {
+        "uses": {
+            "en": "day",
+            "nl": ["moon", "day"]
+        },
         "singular": {
             "en": "Monday",
             "fi": "Maanantai",
@@ -61,6 +65,10 @@
         "nl": "Op maandag"
     },
     "tuesday": {
+        "uses": {
+            "en": "day",
+            "nl": "day"
+        },
         "singular": {
             "en": "Tuesday",
             "fi": "Tiistai",
@@ -73,6 +81,11 @@
         }
     },
     "wednesday": {
+        "uses": {
+            "en": "day",
+            "fi": "week",
+            "nl": "day"
+        },
         "singular": {
             "en": "Wednesday",
             "fi": "Keskiviikko",
@@ -91,6 +104,10 @@
         "nl": "Op woensdag"
     },
     "thursday": {
+        "uses": {
+            "en": "day",
+            "nl": "day"
+        },
         "singular": {
             "en": "Thursday",
             "fi": "Torstai",
@@ -103,6 +120,10 @@
         }
     },
     "friday": {
+        "uses": {
+            "en": "day",
+            "nl": "day"
+        },
         "singular": {
             "en": "Friday",
             "fi": "Perjantai",
@@ -115,6 +136,10 @@
         }
     },
     "saturday": {
+        "uses": {
+            "en": "day",
+            "nl": "day"
+        },
         "singular": {
             "en": "Saturday",
             "fi": "Lauantai",
@@ -127,6 +152,10 @@
         }
     },
     "sunday": {
+        "uses": {
+            "en": "day",
+            "nl": "day"
+        },
         "singular": {
             "en": "Sunday",
             "fi": "Sunnuntai",
@@ -139,11 +168,17 @@
         }
     },
     "today": {
+        "uses": {
+            "en": "day"
+        },
         "en": "Today",
         "fi": "Tänään",
         "nl": "Vandaag"
     },
     "yesterday": {
+        "uses": {
+            "en": "day"
+        },
         "en": "Yesterday",
         "fi": "Eilen",
         "nl": "Gisteren"

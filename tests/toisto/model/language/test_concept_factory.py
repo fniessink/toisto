@@ -21,4 +21,10 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_uses(self):
         """Test that a concept can have a uses relation with another concept."""
         concept = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
-        self.assertEqual(("shop", "centre"), concept.uses)
+        self.assertEqual(("shop", "centre"), concept.used_concepts("fi"))
+
+    def test_language_specific_uses(self):
+        """Test that a concept can have a uses relation with another concept in one language but not in another."""
+        concept = self.create_concept("decade", dict(uses=dict(fi="year"), fi="Vuosikymmen", en="Decade"))
+        self.assertEqual(("year",), concept.used_concepts("fi"))
+        self.assertEqual((), concept.used_concepts("en"))

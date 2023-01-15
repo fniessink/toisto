@@ -51,12 +51,13 @@ class QuizFactory:
             return Quizzes()
         concept_id = concept.concept_id
         blocked_by = tuple(previous_quizzes)
+        uses = concept.used_concepts(language)
         back = Quizzes(
-            Quiz(concept_id, language, source_language, label, source_labels, uses=concept.uses, blocked_by=blocked_by)
+            Quiz(concept_id, language, source_language, label, source_labels, uses=uses, blocked_by=blocked_by)
             for label in labels
         )
         forth = Quizzes(
-            Quiz(concept_id, source_language, language, label, labels, uses=concept.uses, blocked_by=blocked_by)
+            Quiz(concept_id, source_language, language, label, labels, uses=uses, blocked_by=blocked_by)
             for label in source_labels
         )
         return back | forth
@@ -68,8 +69,9 @@ class QuizFactory:
         concept_id = concept.concept_id
         blocked_by = tuple(previous_quizzes)
         meanings = concept.meanings(source_language)
+        uses = concept.used_concepts(language)
         return Quizzes(
-            Quiz(concept_id, language, language, label, (label,), ("listen",), concept.uses, blocked_by, meanings)
+            Quiz(concept_id, language, language, label, (label,), ("listen",), uses, blocked_by, meanings)
             for label in labels
         )
 
@@ -78,7 +80,7 @@ class QuizFactory:
         language, source_language = self.language, self.source_language
         concept_id = concept.concept_id
         blocked_by = tuple(previous_quizzes)
-        uses = concept.uses
+        uses = concept.used_concepts(language)
         quizzes = Quizzes()
         for concept1, concept2 in concept.paired_leaf_concepts():
             labels1, labels2 = concept1.labels(language), concept2.labels(language)

@@ -8,10 +8,7 @@ class ConceptRelationshipsTest(QuizFactoryTestCase):
 
     def test_concept_relationship_leaf_concept(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        concept = self.create_concept(
-            "mall",
-            dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"),
-        )
+        concept = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         self.assertEqual(("shop", "centre"), self.create_quizzes(concept, "fi", "nl").pop().uses)
 
     def test_concept_relationship_composite_concept(self):

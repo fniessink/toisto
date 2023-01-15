@@ -2,12 +2,18 @@
     "body": {
         "singular": {
             "en": "Body",
-            "fi": ["Vartalo", "Keho"],
+            "fi": [
+                "Vartalo",
+                "Keho"
+            ],
             "nl": "Het lichaam"
         },
         "plural": {
             "en": "Bodies",
-            "fi": ["Vartalot", "Kehot"],
+            "fi": [
+                "Vartalot",
+                "Kehot"
+            ],
             "nl": "De lichamen"
         }
     },
@@ -39,7 +45,10 @@
         "singular": {
             "en": "Hair",
             "fi": "Hius",
-            "nl": ["De haar", "Het haar"]
+            "nl": [
+                "De haar",
+                "Het haar"
+            ]
         },
         "plural": {
             "en": "Hairs",
@@ -120,7 +129,9 @@
         }
     },
     "shoulder": {
-        "uses": "head",
+        "uses": {
+            "fi": "head"
+        },
         "singular": {
             "en": "Shoulder",
             "fi": "Olkapää",
@@ -133,7 +144,9 @@
         }
     },
     "arm": {
-        "uses": "hand",
+        "uses": {
+            "fi": "hand"
+        },
         "singular": {
             "en": "Arm",
             "fi": "Käsivarsi",
@@ -184,12 +197,18 @@
     "belly": {
         "singular": {
             "en": "Belly",
-            "fi": ["Maha", "Masu"],
+            "fi": [
+                "Maha",
+                "Masu"
+            ],
             "nl": "De buik"
         },
         "plural": {
             "en": "Bellies",
-            "fi": ["Mahat", "Masut"],
+            "fi": [
+                "Mahat",
+                "Masut"
+            ],
             "nl": "De buiken"
         }
     },

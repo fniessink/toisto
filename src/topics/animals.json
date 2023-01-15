@@ -12,7 +12,10 @@
         }
     },
     "pet": {
-        "uses": ["animal", "house", "home"],
+        "uses": {
+            "fi": ["animal", "home"],
+            "nl": ["animal", "house"]
+        },
         "singular": {
             "en": "Pet",
             "fi": ["Lemmikki", "Kotieläin"],
@@ -49,7 +52,10 @@
         }
     },
     "rhino": {
-        "uses": ["horn", "nose"],
+        "uses": {
+            "fi": ["horn"],
+            "nl": ["horn", "nose"]
+        },
         "singular": {
             "en": "Rhinoceros|Rhino",
             "fi": "Sarvikuono",
