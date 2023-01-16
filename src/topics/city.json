@@ -84,6 +84,9 @@
         }
     },
     "library": {
+        "uses": {
+            "fi": "book"
+        },
         "singular": {
             "en": "Library",
             "fi": "Kirjasto",
@@ -259,24 +262,48 @@
     "mall": {
         "uses": {
             "en": "centre",
-            "fi": ["centre", "store"],
-            "nl": ["centre", "store"]
+            "fi": [
+                "centre",
+                "store"
+            ],
+            "nl": [
+                "centre",
+                "store"
+            ]
         },
         "singular": {
-            "en": ["Mall", "Shopping center"],
-            "fi": ["Kauppakeskus", "Ostoskeskus"],
+            "en": [
+                "Mall",
+                "Shopping center"
+            ],
+            "fi": [
+                "Kauppakeskus",
+                "Ostoskeskus"
+            ],
             "nl": "Het winkelcentrum"
         },
         "plural": {
-            "en": ["Malls", "Shopping centers"],
-            "fi": ["Kauppakeskukset", "Ostoskeskukset"],
+            "en": [
+                "Malls",
+                "Shopping centers"
+            ],
+            "fi": [
+                "Kauppakeskukset",
+                "Ostoskeskukset"
+            ],
             "nl": "De winkelcentra"
         }
     },
     "capital": {
         "uses": {
-            "fi": ["city", "head"],
-            "nl": ["city", "head"]
+            "fi": [
+                "city",
+                "head"
+            ],
+            "nl": [
+                "city",
+                "head"
+            ]
         },
         "singular": {
             "en": "Capital",
@@ -290,25 +317,40 @@
         }
     },
     "that building is a church": {
-        "uses": ["to be", "building", "church"],
+        "uses": [
+            "to be",
+            "building",
+            "church"
+        ],
         "en": "That building is a church",
         "fi": "Tuo rakennus on kirkko",
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
-        "uses": ["where", "to be", "library"],
+        "uses": [
+            "where",
+            "to be",
+            "library"
+        ],
         "en": "Where is the library?",
         "fi": "Missä on kirjasto?",
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {
-        "uses": ["to be", "square", "christmas tree"],
+        "uses": [
+            "to be",
+            "square",
+            "christmas tree"
+        ],
         "en": "There is a Christmas tree on the square",
         "fi": "Aukiolla on joulukuusi",
         "nl": "Er staat een kerstboom op het plein"
     },
     "I am in the office": {
-        "uses": ["to be", "office"],
+        "uses": [
+            "to be",
+            "office"
+        ],
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"
