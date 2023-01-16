@@ -5,7 +5,8 @@ from unittest import TestCase
 
 from toisto.model import Label, Progress, Topics
 from toisto.model.model_types import ConceptId
-from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction, linkify
+from toisto.ui.dictionary import linkify
+from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction
 
 from ..base import ToistoTestCase
 
@@ -53,7 +54,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         feedback_text = feedback_incorrect("", self.quiz)
         self.assertEqual(
-            """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
+            f"""❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n"""
             f"""[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
             feedback_text,
         )
@@ -63,7 +64,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_incorrect("", quiz)
         self.assertEqual(
-            """❌ Incorrect. The correct answer is "[inserted]Terve[/inserted]".\n"""
+            f"""❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n"""
             f"""[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n""",
             feedback_text,
         )

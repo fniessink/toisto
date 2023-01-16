@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## 0.7.0 - [Unreleased]
 
+### Fixed
+
+- Also link labels to https://en.wiktionary.org/ when the user answered incorrectly. Closes [#169](https://github.com/fniessink/toisto/issues/169).
+
 ### Added
 
 - Allow for specifying different concept usage relations per language. Closes [#163](https://github.com/fniessink/toisto/issues/163).
