@@ -29,7 +29,7 @@ dependencies = [
 dev = [
     "black == 22.12.0",
     "build == 0.9.0",
-    "coverage == 7.0.4",
+    "coverage == 7.0.5",
     "green == 3.4.3",
     "mypy == 0.991",
     "pip == 22.3.1",
