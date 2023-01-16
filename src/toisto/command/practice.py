@@ -1,8 +1,9 @@
 """Practice command."""
 
 from toisto.model import Label, Progress, Quiz
-from toisto.ui.text import console, feedback_correct, feedback_incorrect, linkify, instruction, DONE, WELCOME, TRY_AGAIN
+from toisto.ui.dictionary import linkify
 from toisto.ui.speech import say
+from toisto.ui.text import console, feedback_correct, feedback_incorrect, instruction, DONE, WELCOME, TRY_AGAIN
 from toisto.persistence import save_progress
 
 
