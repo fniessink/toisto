@@ -2,9 +2,10 @@
 
 import readline  # pylint: disable=unused-import
 
-from .ui.cli import argument_parser
 from .command import practice, show_topics, show_progress
 from .persistence import load_topics, load_progress
+from .ui.cli import argument_parser
+from .ui.text import show_welcome
 
 
 def main():
@@ -13,6 +14,7 @@ def main():
     topics = load_topics(args.language, args.source_language, args.topic, args.topic_file)
     progress = load_progress(topics)
     if args.command == "practice":
+        show_welcome()
         practice(progress)
     elif args.command == "topics":
         show_topics(args.language, args.source_language, topics)
