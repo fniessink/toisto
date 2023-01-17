@@ -7,7 +7,8 @@ from rich.table import Table
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 from toisto.model import Progress, Topics
-from toisto.ui.text import console, format_duration, format_datetime
+from toisto.ui.format import format_datetime, format_duration
+from toisto.ui.text import console
 
 
 SortColumn = Literal["attempts", "retention"]
