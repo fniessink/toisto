@@ -1,12 +1,11 @@
 """Unit tests for the output."""
 
-from datetime import timedelta
 from unittest import TestCase
 
 from toisto.model import Label, Progress, Topics
 from toisto.model.model_types import ConceptId
 from toisto.ui.dictionary import linkify
-from toisto.ui.text import feedback_correct, feedback_incorrect, format_duration, instruction
+from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
 from ..base import ToistoTestCase
 
@@ -87,26 +86,6 @@ class FeedbackTestCase(ToistoTestCase):
         self.assertEqual(
             "[quiz]Give the [underline]third person female[/underline] form in Dutch:[/quiz]", instruction(quiz)
         )
-
-
-class FormatDurationTest(TestCase):
-    """Unit tests for the format duration method."""
-
-    def test_format_duration_seconds(self):
-        """Test format seconds."""
-        self.assertEqual("2 seconds", format_duration(timedelta(seconds=2)))
-
-    def test_format_duration_minutes(self):
-        """Test format minutes."""
-        self.assertEqual("2 minutes", format_duration(timedelta(seconds=90)))
-
-    def test_format_duration_hours(self):
-        """Test format hours."""
-        self.assertEqual("2 hours", format_duration(timedelta(seconds=7200)))
-
-    def test_format_duration_daya(self):
-        """Test format days."""
-        self.assertEqual("2 days", format_duration(timedelta(days=2)))
 
 
 class LinkifyTest(TestCase):

@@ -18,32 +18,28 @@ class QuizFactory:
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
         """Create quizzes for the concepts."""
-        quizzes = Quizzes()
-        for concept in concepts:
-            quizzes |= self.create_concept_quizzes(concept, Quizzes())
-        return quizzes
+        return Quizzes().union(*(self.concept_quizzes(concept, Quizzes()) for concept in concepts))
 
-    def create_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
-        if concept.constituent_concepts:
-            return self.create_composite_concept_quizzes(concept, previous_quizzes)
-        return self.create_leaf_concept_quizzes(concept, previous_quizzes)
+        create_quizzes = self.composite_concept_quizzes if concept.constituent_concepts else self.leaf_concept_quizzes
+        return create_quizzes(concept, previous_quizzes)
 
-    def create_composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a composite concept."""
         quizzes = Quizzes()
         for constituent_concept in concept.constituent_concepts:
-            quizzes |= self.create_concept_quizzes(constituent_concept, quizzes.copy() | previous_quizzes)
-        quizzes |= self.create_grammatical_quizzes(concept, quizzes.copy() | previous_quizzes)
+            quizzes |= self.concept_quizzes(constituent_concept, quizzes.copy() | previous_quizzes)
+        quizzes |= self.grammatical_quizzes(concept, quizzes.copy() | previous_quizzes)
         return quizzes
 
-    def create_leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a leaf concept."""
-        translation_quizzes = self.create_translation_quizzes(concept, previous_quizzes)
-        listening_quizzes = self.create_listening_quizzes(concept, translation_quizzes.copy() | previous_quizzes)
+        translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
+        listening_quizzes = self.listening_quizzes(concept, translation_quizzes.copy() | previous_quizzes)
         return translation_quizzes | listening_quizzes
 
-    def create_translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create translation quizzes for the concept."""
         language, source_language = self.language, self.source_language
         labels, source_labels = concept.labels(language), concept.labels(source_language)
@@ -62,7 +58,7 @@ class QuizFactory:
         )
         return back | forth
 
-    def create_listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create listening quizzes for the concept."""
         language, source_language = self.language, self.source_language
         labels = concept.labels(language)
@@ -75,7 +71,7 @@ class QuizFactory:
             for label in labels
         )
 
-    def create_grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""
         language, source_language = self.language, self.source_language
         concept_id = concept.concept_id

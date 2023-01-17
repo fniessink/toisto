@@ -8,7 +8,7 @@ from typing import cast, get_args, Literal, Union
 from toisto.metadata import Language
 
 from ..model_types import ConceptId
-from .concept import Concept, Labels
+from .concept import Concept
 from .grammar import GrammaticalCategory
 from .label import label_factory
 
@@ -34,7 +34,7 @@ class ConceptFactory:
     def composite_concept(self) -> Concept:
         """Create a composite concept from a composite concept dict."""
         constituent_concepts = []
-        uses = cast(UsesDictOrListOrString, self.concept_dict.get("uses", []))
+        uses = self.get_uses()
         for category in self.get_grammatical_categories():
             constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
             constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | dict(uses=uses)
@@ -45,11 +45,11 @@ class ConceptFactory:
     def leaf_concept(self) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
         labels = {
-            key: label_factory(cast(str | list[str], value))
+            cast(Language, key): label_factory(cast(str | list[str], value))
             for key, value in self.concept_dict.items()
             if key in get_args(Language)
         }
-        return Concept(self.concept_id, self.get_used_concepts(), (), cast(dict[Language, Labels], labels))
+        return Concept(self.concept_id, self.get_used_concepts(), (), labels)
 
     def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
@@ -58,11 +58,15 @@ class ConceptFactory:
         )
 
     def get_used_concepts(self) -> dict[Language, tuple[ConceptId, ...]]:
-        """Retrieve the uses relationship from the concept dict."""
-        uses = cast(UsesDictOrListOrString, self.concept_dict.get("uses", {}))
+        """Retrieve the uses relationships from the concept dict."""
+        uses = self.get_uses()
         if not isinstance(uses, dict):
-            uses = {language: uses for language in get_args(Language)}
+            uses = {language: uses for language in get_args(Language)}  # Uses are the same for all languages
         return {
             language: tuple(concept_ids) if isinstance(concept_ids, list) else (concept_ids,)
             for language, concept_ids in uses.items()
         }
+
+    def get_uses(self) -> UsesDictOrListOrString:
+        """Get the uses from the concept dict."""
+        return cast(UsesDictOrListOrString, self.concept_dict.get("uses", {}))
