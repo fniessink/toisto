@@ -81,6 +81,11 @@ def instruction(quiz: Quiz) -> str:
     return f"[quiz]{quiz.instruction()}:[/quiz]"
 
 
+def show_welcome() -> None:
+    """Show the welcome message."""
+    console.print(WELCOME)
+
+
 def show_error_and_exit(message: str) -> NoReturn:
     """Print the error message to stderr and exit."""
     sys.stderr.write(message)
