@@ -4,9 +4,10 @@ from typing import NoReturn
 import sys
 
 from rich.console import Console
+from rich.panel import Panel
 from rich.theme import Theme
 
-from ..metadata import NAME, VERSION
+from ..metadata import CHANGELOG_URL, NAME, VERSION
 from ..model import Label, Quiz
 
 from .diff import colored_diff
@@ -35,6 +36,12 @@ How does it work?
   while clicking the word. Not all terminals may support this.
 ● To quit: type Ctrl-C or Ctrl-D.
 [/secondary]"""
+
+NEWS = (
+    f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
+    f"Upgrade with [code]pipx upgrade {NAME}[/code]."
+    ""
+)
 
 DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
 [secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
@@ -81,9 +88,12 @@ def instruction(quiz: Quiz) -> str:
     return f"[quiz]{quiz.instruction()}:[/quiz]"
 
 
-def show_welcome() -> None:
+def show_welcome(latest_version: str | None) -> None:
     """Show the welcome message."""
     console.print(WELCOME)
+    if latest_version and latest_version.strip("v") > VERSION:
+        console.print(Panel(NEWS.format(latest_version), expand=False))
+        console.print()
 
 
 def show_error_and_exit(message: str) -> NoReturn:

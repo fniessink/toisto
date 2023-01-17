@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser, _SubParsersAction
 
-from ..metadata import SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
+from ..metadata import latest_version, SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
 
 
 def add_language_arguments(parser: ArgumentParser) -> None:
@@ -57,7 +57,9 @@ def add_command(subparser: _SubParsersAction, command: str, description: str, co
 
 
 argument_parser = ArgumentParser(description=SUMMARY)
-argument_parser.add_argument("-V", "--version", action="version", version=VERSION)
+latest = latest_version()
+version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
+argument_parser.add_argument("-V", "--version", action="version", version=version)
 COMMAND_HELP = "type `%(prog)s {command} -h` for more information on a command"
 subparser_action = argument_parser.add_subparsers(dest="command", title="commands", help=COMMAND_HELP, required=True)
 add_practice_command(subparser_action)
