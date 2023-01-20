@@ -10,6 +10,7 @@ from toisto.metadata import Language
 from toisto.tools import zip_and_cycle
 
 from ..model_types import ConceptId
+from .cefr import CommonReferenceLevel, CommonReferenceLevelSource
 from .grammar import GrammaticalCategory
 from .label import Labels, Label
 
@@ -27,6 +28,7 @@ class Concept:
     _used_concepts: dict[Language, tuple[ConceptId, ...]]
     constituent_concepts: tuple[Concept, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
+    _level: dict[CommonReferenceLevelSource, CommonReferenceLevel] = field(default_factory=dict)
 
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
@@ -59,3 +61,10 @@ class Concept:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
+
+    @property
+    def level(self) -> CommonReferenceLevel:
+        """Return the Common European Framework Reference level of the concept."""
+        concept_levels = [level for level in self._level.values() if level is not None]
+        unknown_level = get_args(CommonReferenceLevel)[-1]
+        return max(concept_levels, default=unknown_level)

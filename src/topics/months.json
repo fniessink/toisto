@@ -1,5 +1,9 @@
 {
     "month": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon",
             "nl": "moon"
@@ -16,6 +20,10 @@
         }
     },
     "moon": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Moon",
             "fi": "Kuu",
@@ -28,6 +36,10 @@
         }
     },
     "january": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -42,6 +54,10 @@
         "nl": "In januari"
     },
     "february": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -50,6 +66,10 @@
         "nl": "Februari"
     },
     "march": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -58,6 +78,10 @@
         "nl": "Maart"
     },
     "april": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -72,6 +96,10 @@
         "nl": "In april"
     },
     "may": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -80,6 +108,10 @@
         "nl": "Mei"
     },
     "june": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "summer",
@@ -91,6 +123,10 @@
         "nl": "Juni"
     },
     "july": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -99,6 +135,10 @@
         "nl": "Juli"
     },
     "august": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -107,6 +147,10 @@
         "nl": "Augustus"
     },
     "september": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "autumn",
@@ -118,6 +162,10 @@
         "nl": "September"
     },
     "october": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -126,6 +174,10 @@
         "nl": "Oktober"
     },
     "november": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "moon"
         },
@@ -134,6 +186,10 @@
         "nl": "November"
     },
     "december": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "christmas",

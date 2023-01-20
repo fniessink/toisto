@@ -1,15 +1,30 @@
 {
     "time": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Time",
         "fi": "Aika",
         "nl": "De tijd"
     },
     "now": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Now",
         "fi": "Nyt",
         "nl": "Nu"
     },
     "morning": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Morning",
             "fi": "Aamu",
@@ -22,6 +37,10 @@
         }
     },
     "afternoon": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Afternoon",
             "fi": "Iltapäivä",
@@ -34,6 +53,11 @@
         }
     },
     "evening": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Evening",
             "fi": "Ilta",
@@ -46,6 +70,11 @@
         }
     },
     "night": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Night",
             "fi": "Yö",
@@ -58,6 +87,10 @@
         }
     },
     "midnight": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": "night",
         "singular": {
             "en": "Midnight",
@@ -71,6 +104,11 @@
         }
     },
     "year": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Year",
             "fi": "Vuosi",
@@ -83,6 +121,10 @@
         }
     },
     "decade": {
+        "level": {
+            "EP": "B2",
+            "OD": "B1"
+        },
         "uses": {
             "fi": [
                 "10",
@@ -101,6 +143,10 @@
         }
     },
     "century": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "100",
@@ -119,6 +165,11 @@
         }
     },
     "hour": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hour",
             "fi": "Tunti",
@@ -131,6 +182,11 @@
         }
     },
     "minute": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Minute",
             "fi": "Minuutti",
@@ -143,6 +199,11 @@
         }
     },
     "clock": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Clock",
             "fi": "Kello",

@@ -1,10 +1,18 @@
 {
     "clothes": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Clothes",
         "fi": "Vaatteet",
         "nl": "De kleren"
     },
     "dress": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Dress",
             "fi": "Mekko",
@@ -17,6 +25,10 @@
         }
     },
     "sock": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Sock",
             "fi": "Sukka",
@@ -29,6 +41,10 @@
         }
     },
     "skirt": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Skirt",
             "fi": "Hame",
@@ -41,6 +57,10 @@
         }
     },
     "trousers": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Trousers",
             "fi": "Housut",
@@ -51,6 +71,10 @@
         }
     },
     "coat": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Coat",
             "fi": "Takki",
@@ -63,6 +87,10 @@
         }
     },
     "underwear": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "uses": {
             "fi": "clothes"
         },
@@ -71,6 +99,10 @@
         "nl": "Het ondergoed"
     },
     "hat": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hat",
             "fi": "Hattu",
@@ -83,6 +115,10 @@
         }
     },
     "suit": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Suit",
             "fi": "Puku",
@@ -95,6 +131,10 @@
         }
     },
     "shoe": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Shoe",
             "fi": "Kenkä",
@@ -107,6 +147,10 @@
         }
     },
     "sweater": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "shirt"
         },
@@ -122,6 +166,10 @@
         }
     },
     "shirt": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Shirt",
             "fi": "Paita",
@@ -133,7 +181,11 @@
             "nl": "De hemden"
         }
     },
-    "to dress (": {
+    "to dress": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": [
                 "To dress",

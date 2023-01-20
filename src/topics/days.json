@@ -1,5 +1,10 @@
 {
     "day": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Day",
             "fi": "Päivä",
@@ -12,6 +17,11 @@
         }
     },
     "week": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Week",
             "fi": "Viikko",
@@ -24,6 +34,10 @@
         }
     },
     "weekend": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "week",
         "singular": {
             "en": "Weekend",
@@ -46,6 +60,10 @@
         "nl": "De dagen van de week"
     },
     "monday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": [
@@ -71,6 +89,10 @@
         "nl": "Op maandag"
     },
     "tuesday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": "day"
@@ -87,6 +109,10 @@
         }
     },
     "wednesday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "fi": "week",
@@ -110,6 +136,10 @@
         "nl": "Op woensdag"
     },
     "thursday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": "day"
@@ -126,6 +156,10 @@
         }
     },
     "friday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": "day"
@@ -142,6 +176,10 @@
         }
     },
     "saturday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": "day"
@@ -158,6 +196,10 @@
         }
     },
     "sunday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day",
             "nl": "day"
@@ -174,6 +216,11 @@
         }
     },
     "today": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day"
         },
@@ -182,6 +229,11 @@
         "nl": "Vandaag"
     },
     "yesterday": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": "day"
         },
@@ -190,23 +242,40 @@
         "nl": "Gisteren"
     },
     "tomorrow": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Tomorrow",
         "fi": "Huomenna",
         "nl": "Morgen"
     },
     "this week": {
+        "level": {
+            "EP": null,
+            "OD": "A1"
+        },
         "uses": "week",
         "en": "This week",
         "fi": "Tällä viikolla",
         "nl": "Deze week"
     },
     "last week": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "week",
         "en": "Last week",
         "fi": "Viime viikolla",
         "nl": "Vorige week"
     },
     "next week": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "week",
         "en": "Next week",
         "fi": "Ensi viikolla",

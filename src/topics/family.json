@@ -1,10 +1,19 @@
 {
     "family": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Family",
         "fi": "Perhe",
         "nl": "De familie"
     },
     "grandma": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Grandma",
             "fi": [
@@ -23,6 +32,10 @@
         }
     },
     "grandpa": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Grandpa",
             "fi": [
@@ -41,6 +54,10 @@
         }
     },
     "grandmother": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "en": "mother",
             "fi": [
@@ -64,6 +81,10 @@
         }
     },
     "grandfather": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "en": "father",
             "fi": [
@@ -87,16 +108,29 @@
         }
     },
     "married": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "Married",
         "fi": "Naimisissa",
         "nl": "Getrouwd"
     },
     "divorced": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "en": "Divorced",
         "fi": "Eronnut",
         "nl": "Gescheiden"
     },
     "mother": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Mother",
             "fi": "Äiti",
@@ -109,6 +143,11 @@
         }
     },
     "father": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Father",
             "fi": "Isä",
@@ -121,6 +160,11 @@
         }
     },
     "child": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Child",
             "fi": "Lapsi",
@@ -133,6 +177,10 @@
         }
     },
     "sister": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Sister",
             "fi": "Sisko",
@@ -145,6 +193,10 @@
         }
     },
     "brother": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Brother",
             "fi": "Veli",
@@ -157,6 +209,10 @@
         }
     },
     "sibling": {
+        "level": {
+            "EP": "C2",
+            "OD": "B2"
+        },
         "uses": {
             "nl": [
                 "brother",
@@ -175,6 +231,10 @@
         }
     },
     "cousin": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Cousin",
             "fi": "Serkku",
@@ -193,6 +253,10 @@
         }
     },
     "grandchild": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "en": "child",
             "fi": "child",
@@ -213,6 +277,10 @@
         }
     },
     "daughter": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Daughter",
             "fi": "Tytär",
@@ -225,6 +293,11 @@
         }
     },
     "son": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Son",
             "fi": "Poika",
@@ -237,6 +310,11 @@
         }
     },
     "wife": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Wife",
             "fi": "Vaimo",
@@ -249,6 +327,11 @@
         }
     },
     "husband": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Husband",
             "fi": "Aviomies|Mies",
@@ -261,6 +344,10 @@
         }
     },
     "spouse": {
+        "level": {
+            "EP": "C2",
+            "OD": "C1"
+        },
         "singular": {
             "en": "Spouse",
             "fi": "Puoliso",
@@ -273,11 +360,20 @@
         }
     },
     "marriage": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "en": "Marriage",
         "fi": "Avioliitto",
         "nl": "Het huwelijk"
     },
     "parent": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "old",
             "nl": "old"
@@ -294,6 +390,10 @@
         }
     },
     "grandparent": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "en": "parent",
             "fi": [
@@ -317,6 +417,10 @@
         }
     },
     "parent-in-law": {
+        "level": {
+            "EP": null,
+            "OD": "B1"
+        },
         "uses": "parent",
         "singular": {
             "en": "Parent-in-law",
@@ -330,6 +434,10 @@
         }
     },
     "mother-in-law": {
+        "level": {
+            "EP": "B2",
+            "OD": "B1"
+        },
         "uses": "mother",
         "singular": {
             "en": "Mother-in-law",
@@ -343,6 +451,10 @@
         }
     },
     "father-in-law": {
+        "level": {
+            "EP": "B2",
+            "OD": "B1"
+        },
         "uses": "father",
         "singular": {
             "en": "Father-in-law",
@@ -356,6 +468,10 @@
         }
     },
     "stepfather": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "uses": "father",
         "singular": {
             "en": "Stepfather",
@@ -369,6 +485,10 @@
         }
     },
     "stepmother": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "uses": "mother",
         "singular": {
             "en": "Stepmother",

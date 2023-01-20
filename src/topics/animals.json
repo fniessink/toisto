@@ -1,5 +1,10 @@
 {
     "animal": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Animal",
             "fi": "Eläin",
@@ -12,6 +17,10 @@
         }
     },
     "pet": {
+        "level": {
+            "EP": "A1",
+            "OD": "A2"
+        },
         "uses": {
             "fi": [
                 "animal",
@@ -40,6 +49,11 @@
         }
     },
     "dog": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Dog",
             "fi": "Koira",
@@ -52,6 +66,11 @@
         }
     },
     "cat": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Cat",
             "fi": "Kissa",
@@ -64,6 +83,10 @@
         }
     },
     "rhino": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": {
             "fi": [
                 "horn"
@@ -85,6 +108,10 @@
         }
     },
     "elephant": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Elephant",
             "fi": [
@@ -103,6 +130,10 @@
         }
     },
     "mouse": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Mouse",
             "fi": "Hiiri",
@@ -115,6 +146,10 @@
         }
     },
     "duck": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Duck",
             "fi": "Ankka",
@@ -127,6 +162,10 @@
         }
     },
     "goose": {
+        "level": {
+            "EP": null,
+            "OD": "A2"
+        },
         "singular": {
             "en": "Goose",
             "fi": "Hanhi",
@@ -139,6 +178,10 @@
         }
     },
     "bird": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Bird",
             "fi": "Lintu",
@@ -151,6 +194,11 @@
         }
     },
     "horse": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Horse",
             "fi": "Hevonen",
@@ -163,6 +211,9 @@
         }
     },
     "cow": {
+        "level": {
+            "OD": "A1"
+        },
         "singular": {
             "en": "Cow",
             "fi": "Lehmä",
@@ -175,6 +226,10 @@
         }
     },
     "pig": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Pig",
             "fi": [
@@ -193,6 +248,10 @@
         }
     },
     "deer": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Deer",
             "fi": "Peura",
@@ -205,6 +264,10 @@
         }
     },
     "bear": {
+        "level": {
+            "EP": "A2",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Bear",
             "fi": "Karhu",
@@ -217,6 +280,10 @@
         }
     },
     "sheep": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Sheep",
             "fi": "Lammas",
@@ -229,6 +296,10 @@
         }
     },
     "crab": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Crab",
             "fi": "Rapu",
@@ -241,6 +312,10 @@
         }
     },
     "spider": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Spider",
             "fi": "Hämähäkki",
@@ -253,6 +328,10 @@
         }
     },
     "rabbit": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": [
                 "Rabbit",
@@ -277,6 +356,10 @@
         }
     },
     "horn": {
+        "level": {
+            "EP": "C1",
+            "OD": "C1"
+        },
         "singular": {
             "en": "Horn",
             "fi": "Sarvi",
@@ -289,6 +372,10 @@
         }
     },
     "tail": {
+        "level": {
+            "EP": "B2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Tail",
             "fi": "Häntä",

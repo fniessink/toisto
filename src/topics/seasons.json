@@ -1,5 +1,9 @@
 {
     "season": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Season",
             "fi": "Vuodenaika",
@@ -12,6 +16,11 @@
         }
     },
     "spring": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Spring",
             "fi": "Kevät",
@@ -57,6 +66,11 @@
         ]
     },
     "summer": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Summer",
             "fi": "Kesä",
@@ -87,6 +101,11 @@
         "nl": "Vorige zomer"
     },
     "autumn": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": [
                 "Autumn",
@@ -141,6 +160,11 @@
         ]
     },
     "winter": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Winter",
             "fi": "Talvi",

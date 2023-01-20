@@ -32,7 +32,7 @@ class Progress:
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
             unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
             if unblocked_quizzes:
-                quiz = unblocked_quizzes.pop()
+                quiz = self.__sort_by_language_level(unblocked_quizzes)[0]
                 self.__recent_concepts.append(quiz.root_concept_id)
                 return quiz
         return None
@@ -71,9 +71,13 @@ class Progress:
         return any(
             other_quiz
             for concept_id in quiz.used_concepts
-            for other_quiz in self.__quizzes_by_concept_id[concept_id]
+            for other_quiz in self.__quizzes_by_concept_id.get(concept_id, set())
             if other_quiz != quiz and other_quiz in quizzes
         )
+
+    def __sort_by_language_level(self, quizzes: Quizzes) -> list[Quiz]:
+        """Sort the quizzes by the language level of the concept."""
+        return sorted(quizzes, key=lambda quiz: str(quiz.concept.level))
 
     def as_dict(self) -> dict[str, dict[str, int | str]]:
         """Return the progress as dict."""

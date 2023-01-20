@@ -1,30 +1,57 @@
 {
     "who": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Who?",
         "fi": "Kuka?",
         "nl": "Wie?"
     },
     "what": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "What?",
         "fi": "Mitä?",
         "nl": "Wat?"
     },
     "why": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Why?",
         "fi": "Miksi?",
         "nl": "Waarom?"
     },
     "where": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Where?",
         "fi": "Missä?",
         "nl": "Waar?"
     },
     "when": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "When?",
         "fi": "Milloin?",
         "nl": "Wanneer?"
     },
     "which": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Which?",
         "fi": "Mikä?",
         "nl": [
@@ -33,6 +60,11 @@
         ]
     },
     "how": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "How?",
         "fi": [
             "Miten?",
@@ -41,12 +73,21 @@
         "nl": "Hoe?"
     },
     "how many": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "how",
         "en": "How many?",
         "fi": "Kuinka monta?",
         "nl": "Hoeveel"
     },
     "what kind of": {
+        "level": {
+            "EP": null,
+            "KK": "A1",
+            "OD": null
+        },
         "en": "What kind of?",
         "fi": "Millainen?",
         "nl": [

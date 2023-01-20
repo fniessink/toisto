@@ -1,35 +1,67 @@
 {
     "black": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Black",
         "fi": "Musta",
         "nl": "Zwart"
     },
     "white": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "White",
         "fi": "Valkoinen",
         "nl": "Wit"
     },
     "blue": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Blue",
         "fi": "Sininen",
         "nl": "Blauw"
     },
     "green": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Green",
         "fi": "Vihreä",
         "nl": "Groen"
     },
     "red": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Red",
         "fi": "Punainen",
         "nl": "Rood"
     },
     "yellow": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Yellow",
         "fi": "Keltainen",
         "nl": "Geel"
     },
     "purple": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "Purple",
         "fi": [
             "Liila",
@@ -38,16 +70,28 @@
         "nl": "Paars"
     },
     "orange": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Orange",
         "fi": "Oranssi",
         "nl": "Oranje"
     },
     "brown": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Brown",
         "fi": "Ruskea",
         "nl": "Bruin"
     },
     "pink": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "Pink",
         "fi": [
             "Vaaleanpunainen",
@@ -56,17 +100,29 @@
         "nl": "Roze"
     },
     "grey": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Grey|Gray",
         "fi": "Harmaa",
         "nl": "Grijs"
     },
     "light blue": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": "blue",
         "en": "Light blue",
         "fi": "Vaaleansininen",
         "nl": "Lichtblauw"
     },
     "dark blue": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": "blue",
         "en": "Dark blue",
         "fi": "Tummansininen",

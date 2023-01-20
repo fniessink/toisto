@@ -1,5 +1,9 @@
 {
     "body": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Body",
             "fi": [
@@ -18,6 +22,11 @@
         }
     },
     "eye": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Eye",
             "fi": "Silmä",
@@ -30,6 +39,11 @@
         }
     },
     "ear": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Ear",
             "fi": "Korva",
@@ -42,6 +56,10 @@
         }
     },
     "hair": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hair",
             "fi": "Hius",
@@ -57,6 +75,10 @@
         }
     },
     "nose": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Nose",
             "fi": "Nenä",
@@ -69,6 +91,10 @@
         }
     },
     "mouth": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Mouth",
             "fi": "Suu",
@@ -81,6 +107,10 @@
         }
     },
     "lip": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Lip",
             "fi": "Huuli",
@@ -93,6 +123,10 @@
         }
     },
     "tooth": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Tooth",
             "fi": "Hammas",
@@ -105,6 +139,11 @@
         }
     },
     "head": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Head",
             "fi": "Pää",
@@ -117,6 +156,10 @@
         }
     },
     "back": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Back",
             "fi": "Selkä",
@@ -129,6 +172,10 @@
         }
     },
     "shoulder": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "uses": {
             "fi": "head"
         },
@@ -144,6 +191,10 @@
         }
     },
     "arm": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "hand"
         },
@@ -159,6 +210,11 @@
         }
     },
     "hand": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hand",
             "fi": "Käsi",
@@ -171,6 +227,11 @@
         }
     },
     "finger": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Finger",
             "fi": "Sormi",
@@ -183,6 +244,10 @@
         }
     },
     "stomach": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Stomach",
             "fi": "Vatsa",
@@ -195,6 +260,10 @@
         }
     },
     "belly": {
+        "level": {
+            "EP": null,
+            "OD": "C2"
+        },
         "singular": {
             "en": "Belly",
             "fi": [
@@ -213,6 +282,10 @@
         }
     },
     "knee": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Knee",
             "fi": "Polvi",
@@ -225,6 +298,11 @@
         }
     },
     "leg": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Leg",
             "fi": "Jalka;upper part",
@@ -237,6 +315,11 @@
         }
     },
     "foot": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Foot",
             "fi": "Jalka;lower part",
@@ -249,6 +332,10 @@
         }
     },
     "toe": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Toe",
             "fi": "Varvas",

@@ -1,5 +1,10 @@
 {
     "small": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Small",
             "fi": "Pieni",
@@ -17,6 +22,10 @@
         }
     },
     "important": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Important",
             "fi": "Tärkeä",
@@ -34,6 +43,10 @@
         }
     },
     "expensive": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Expensive",
             "fi": "Kallis",
@@ -51,6 +64,10 @@
         }
     },
     "cheap": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Cheap",
             "fi": "Halpa",
@@ -68,6 +85,10 @@
         }
     },
     "hot": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Hot",
             "fi": "Kuuma",
@@ -85,6 +106,11 @@
         }
     },
     "cold": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Cold",
             "fi": "Kylmä",
@@ -101,7 +127,11 @@
             "nl": "Koudst"
         }
     },
-    "light": {
+    "light (not heavy)": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Light",
             "fi": "Kevyt",
@@ -119,6 +149,11 @@
         }
     },
     "easy": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Easy",
             "fi": "Helppo",
@@ -136,6 +171,11 @@
         }
     },
     "hard": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Hard",
             "fi": "Vaikea",
@@ -153,6 +193,11 @@
         }
     },
     "beautiful": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Beautiful",
             "fi": "Kaunis",
@@ -170,6 +215,11 @@
         }
     },
     "new": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "New",
             "fi": "Uusi",
@@ -187,6 +237,11 @@
         }
     },
     "old": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Old",
             "fi": "Vanha",
@@ -204,6 +259,10 @@
         }
     },
     "cute": {
+        "level": {
+            "EP": null,
+            "OD": "B2"
+        },
         "positive degree": {
             "en": "Cute",
             "fi": "Söpö",
@@ -221,6 +280,11 @@
         }
     },
     "fast": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Fast",
             "fi": "Nopea",
@@ -238,6 +302,10 @@
         }
     },
     "quiet": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Quiet",
             "fi": "Hiljainen",
@@ -255,6 +323,10 @@
         }
     },
     "fresh": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "positive degree": {
             "en": "Fresh",
             "fi": "Tuore",
@@ -272,6 +344,10 @@
         }
     },
     "warm": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Warm",
             "fi": "Lämmin",
@@ -289,6 +365,10 @@
         }
     },
     "round": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "positive degree": {
             "en": "Round",
             "fi": "Pyöreä",
@@ -306,6 +386,11 @@
         }
     },
     "strange": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "positive degree": {
             "en": "Strange",
             "fi": "Outo",
@@ -323,6 +408,10 @@
         }
     },
     "honest": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "positive degree": {
             "en": "Honest",
             "fi": "Rehellinen",
@@ -340,6 +429,11 @@
         }
     },
     "long": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Long",
             "fi": "Pitkä",
@@ -357,6 +451,11 @@
         }
     },
     "short": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Short",
             "fi": "Lyhyt",
@@ -374,6 +473,10 @@
         }
     },
     "tasty": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "positive degree": {
             "en": "Tasty",
             "fi": "Maukas",
@@ -391,6 +494,10 @@
         }
     },
     "slow": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Slow",
             "fi": "Hidas",
@@ -408,6 +515,10 @@
         }
     },
     "sweet": {
+        "level": {
+            "EP": "A1",
+            "OD": "A2"
+        },
         "positive degree": {
             "en": "Sweet",
             "fi": "Makea",
@@ -425,6 +536,11 @@
         }
     },
     "big": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Big",
             "fi": [
@@ -451,6 +567,11 @@
         }
     },
     "nice": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "positive degree": {
             "en": "Nice",
             "fi": [

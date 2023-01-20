@@ -1,5 +1,10 @@
 {
     "food": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Food",
             "fi": "Ruoka",
@@ -10,8 +15,13 @@
             "fi": "Ruoat"
         }
     },
-    "orange": {
+    "orange (fruit)": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
+            "en": "orange",
             "nl": "apple"
         },
         "singular": {
@@ -26,6 +36,10 @@
         }
     },
     "hotdog": {
+        "level": {
+            "EP": null,
+            "OD": "A2"
+        },
         "uses": {
             "en": [
                 "hot",
@@ -48,6 +62,10 @@
         }
     },
     "cheese": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Cheese",
             "fi": "Juusto",
@@ -60,6 +78,11 @@
         }
     },
     "coffee": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Coffee",
             "fi": "Kahvi",
@@ -72,6 +95,11 @@
         }
     },
     "fish": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Fish",
             "fi": "Kala",
@@ -87,6 +115,10 @@
         }
     },
     "chicken": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Chicken",
             "fi": "Kana",
@@ -99,6 +131,10 @@
         }
     },
     "dressing": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "singular": {
             "en": "Dressing",
             "fi": "Kastike",
@@ -111,6 +147,10 @@
         }
     },
     "ketchup": {
+        "level": {
+            "EP": null,
+            "OD": "B2"
+        },
         "singular": {
             "en": "Ketchup",
             "fi": "Ketsuppi",
@@ -122,6 +162,10 @@
         }
     },
     "bread": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Bread",
             "fi": "Leipä",
@@ -134,6 +178,10 @@
         }
     },
     "meat": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Meat",
             "fi": "Liha",
@@ -146,6 +194,10 @@
         }
     },
     "milk": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Milk",
             "fi": "Maito",
@@ -157,6 +209,10 @@
         }
     },
     "sausage": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Sausage",
             "fi": "Makkara",
@@ -177,6 +233,10 @@
         }
     },
     "strawberry": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Strawberry",
             "fi": "Mansikka",
@@ -189,6 +249,10 @@
         }
     },
     "spice": {
+        "level": {
+            "EP": "B1",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Spice",
             "fi": "Mauste",
@@ -201,6 +265,10 @@
         }
     },
     "juice": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Juice",
             "fi": "Mehu",
@@ -213,6 +281,10 @@
         }
     },
     "apple": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Apple",
             "fi": "Omena",
@@ -225,6 +297,10 @@
         }
     },
     "potato": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "nl": "apple"
         },
@@ -240,6 +316,10 @@
         }
     },
     "steak": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Steak",
             "fi": "Pihvi",
@@ -252,6 +332,10 @@
         }
     },
     "pepper": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Pepper",
             "fi": "Pippuri",
@@ -264,6 +348,10 @@
         }
     },
     "salad": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Salad",
             "fi": "Salaatti",
@@ -276,6 +364,10 @@
         }
     },
     "mustard": {
+        "level": {
+            "EP": "C1",
+            "OD": "C2"
+        },
         "singular": {
             "en": "Mustard",
             "fi": "Sinappi",
@@ -288,6 +380,10 @@
         }
     },
     "onion": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Onion",
             "fi": "Sipuli",
@@ -300,6 +396,10 @@
         }
     },
     "lemon": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Lemon",
             "fi": "Sitruuna",
@@ -312,6 +412,10 @@
         }
     },
     "sugar": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Sugar",
             "fi": "Sokeri",
@@ -324,6 +428,10 @@
         }
     },
     "salt": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Salt",
             "fi": "Suola",
@@ -336,6 +444,10 @@
         }
     },
     "tomato": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Tomato",
             "fi": "Tomaatti",
@@ -348,6 +460,11 @@
         }
     },
     "water": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Water",
             "fi": "Vesi",
@@ -363,6 +480,10 @@
         }
     },
     "sandwich": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "bread"
         },
@@ -378,6 +499,10 @@
         }
     },
     "nut": {
+        "level": {
+            "EP": "B2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Nut",
             "fi": "Pähkinä",
@@ -390,6 +515,10 @@
         }
     },
     "cherry": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Cherry",
             "fi": "Kirsikka",
@@ -402,6 +531,10 @@
         }
     },
     "pear": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Pear",
             "fi": "Päärynä",
@@ -414,6 +547,10 @@
         }
     },
     "cauliflower": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": "flower",
         "singular": {
             "en": "Cauliflower",
@@ -427,6 +564,10 @@
         }
     },
     "mushroom": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "uses": {
             "nl": "chair"
         },
@@ -442,6 +583,10 @@
         }
     },
     "garlic": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "uses": {
             "fi": [
                 "white",
@@ -460,6 +605,10 @@
         }
     },
     "bean": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Bean",
             "fi": "Papu",
@@ -472,6 +621,10 @@
         }
     },
     "cookie": {
+        "level": {
+            "EP": null,
+            "OD": "A2"
+        },
         "singular": {
             "en": "Cookie",
             "fi": "Keksi",
@@ -484,6 +637,10 @@
         }
     },
     "cake": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Cake",
             "fi": "Kakku",
@@ -496,17 +653,29 @@
         }
     },
     "cream": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Cream",
         "fi": "Kerma",
         "nl": "De room"
     },
     "whipped cream": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": "cream",
         "en": "Whipped cream",
         "fi": "Kermavaahto",
         "nl": "De slagroom"
     },
     "banana": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Banana",
             "fi": "Banaani",
