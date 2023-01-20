@@ -1,5 +1,6 @@
 """Unit tests for the practice command."""
 
+from configparser import ConfigParser
 from unittest.mock import call, patch, Mock, MagicMock
 
 from toisto.command import practice
@@ -26,8 +27,11 @@ class PracticeTest(ToistoTestCase):
 
     def practice(self, progress: Progress | None = None) -> Mock:
         """Run the practice command and return the patch print statement."""
+        config = ConfigParser()
+        config.add_section("commands")
+        config.set("commands", "mp3player", "mpg123")
         with patch("rich.console.Console.print") as patched_print:
-            practice(progress or self.progress)
+            practice(progress or self.progress, config)
         return patched_print
 
     @patch("builtins.input", Mock(return_value="hoi\n"))

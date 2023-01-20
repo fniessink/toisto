@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Allow for specifying different concept usage relations per language. Closes [#163](https://github.com/fniessink/toisto/issues/163).
 - If a newer version of Toisto is available, show it on startup. Closes [#171](https://github.com/fniessink/toisto/issues/171).
+- Add support for Linux and Windows. Closes [#176](https://github.com/fniessink/toisto/issues/176).
 - Added "to dress" to the clothes topic.
 - Add example sentences to the colors topic.
 

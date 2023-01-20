@@ -10,9 +10,11 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 Make sure you have these prequisities installed:
 
-- MacOS (because Toisto uses the MacOS `say` and/or `afplay` command for text-to-speech),
-- [Python 3.10 or newer](https://python.org), and
+- [Python 3.10 or newer](https://python.org).
 - [pipx](https://pypa.github.io/pipx/).
+- On Linux: the `mpg123` mp3 player.
+
+If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
 
 For some features, Toisto needs a more modern terminal than the default one that MacOS offers. We test with [iTerm2](https://iterm2.com). But this is optional, Toisto should work fine with the default MacOS terminal app.
 
@@ -49,6 +51,17 @@ Add `--help` or `-h` to get more information about the command-line options and 
 ```console
 $ toisto --help
 ```
+
+### How to configure a different mp3 player
+
+By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory with the following contents:
+
+```ini
+[commands]
+mp3player = name_of_mp3_player
+```
+
+Make sure the mp3 player is on the `PATH` or put the complete filepath in the config file.
 
 ### Example sessions
 
