@@ -56,12 +56,17 @@ def add_command(subparser: _SubParsersAction, command: str, description: str, co
     return parser
 
 
-argument_parser = ArgumentParser(description=SUMMARY)
-latest = latest_version()
-version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
-argument_parser.add_argument("-V", "--version", action="version", version=version)
-COMMAND_HELP = "type `%(prog)s {command} -h` for more information on a command"
-subparser_action = argument_parser.add_subparsers(dest="command", title="commands", help=COMMAND_HELP, required=True)
-add_practice_command(subparser_action)
-add_progress_command(subparser_action)
-add_topics_command(subparser_action)
+def create_argument_parser() -> ArgumentParser:
+    """Create the argument parser."""
+    argument_parser = ArgumentParser(description=SUMMARY)
+    latest = latest_version()
+    version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
+    argument_parser.add_argument("-V", "--version", action="version", version=version)
+    command_help = "type `%(prog)s {command} -h` for more information on a command"
+    subparser_action = argument_parser.add_subparsers(
+        dest="command", title="commands", help=command_help, required=True
+    )
+    add_practice_command(subparser_action)
+    add_progress_command(subparser_action)
+    add_topics_command(subparser_action)
+    return argument_parser
