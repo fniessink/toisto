@@ -3,8 +3,8 @@
 from itertools import permutations
 from unittest.mock import patch, Mock
 
-from toisto.model.model_types import ConceptId
 from toisto.persistence import load_topics
+from toisto.model.model_types import ConceptId
 
 from ..base import ToistoTestCase
 
@@ -14,7 +14,8 @@ class LoadTopicsTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz(ConceptId("welcome"), "fi", "nl", "Tervetuloa", ["Welkom"])
+        concept = self.create_concept(ConceptId("welcome"))
+        self.quiz = self.create_quiz(concept, "fi", "nl", "Tervetuloa", ["Welkom"])
 
     def test_load_topics(self):
         """Test that the topics can be loaded."""

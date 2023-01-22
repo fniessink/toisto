@@ -19,7 +19,8 @@ class PracticeTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        quiz = self.create_quiz(ConceptId("hi"), "fi", "nl", "Terve", ["Hoi"])
+        self.concept = self.create_concept(ConceptId("hi"))
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Terve", ["Hoi"])
         topics = Topics({Topic("topic", (), {quiz})})
         self.progress = Progress({}, topics)
 
@@ -51,7 +52,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen")
+        quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen")
         topics = Topics(set([Topic("topic", (), set([quiz]))]))
         patched_print = self.practice(Progress({}, topics))
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
@@ -59,7 +60,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quiz = self.create_quiz("hello", "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
+        quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
         topics = Topics(set([Topic("topic", (), set([quiz]))]))
         patched_print = self.practice(Progress({}, topics))
         self.assertIn(
@@ -69,7 +70,8 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="Talot\n"))
     def test_quiz_with_multiple_meanings(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quiz = self.create_quiz("house", "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
+        concept = self.create_concept("house")
+        quiz = self.create_quiz(concept, "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
         topics = Topics(set([Topic("topic", (), set([quiz]))]))
         patched_print = self.practice(Progress({}, topics))
         self.assertIn(

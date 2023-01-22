@@ -14,9 +14,9 @@ class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
 
     @staticmethod
-    def create_concept(concept_id: ConceptId, conccept_dict: ConceptDict) -> Concept:
+    def create_concept(concept_id: ConceptId, concept_dict: ConceptDict | None = None) -> Concept:
         """Create a concept from the concept dict."""
-        return ConceptFactory(concept_id, conccept_dict).create_concept()
+        return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {})).create_concept()
 
     @staticmethod
     def create_quizzes(concept: Concept, language: Language, source_language: Language) -> Quizzes:
@@ -25,26 +25,24 @@ class ToistoTestCase(unittest.TestCase):
 
     @staticmethod
     def create_quiz(  # pylint: disable=too-many-arguments
-        concept_id: ConceptId,
+        concept: Concept,
         question_language: str,
         answer_language: str,
         question: str,
         answers: list[str],
         quiz_type: str | tuple[str] = "translate",
-        uses: tuple[ConceptId, ...] = tuple(),
         blocked_by: tuple[Quiz, ...] = tuple(),
         meanings: tuple[str, ...] = tuple(),
     ) -> Quiz:
         """Create a quiz."""
         quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
         return Quiz(
-            concept_id,
+            concept,
             cast(Language, question_language),
             cast(Language, answer_language),
             Label(question),
             tuple(Label(answer) for answer in answers),
             quiz_type,
-            uses,
             blocked_by,
             Labels(Label(meaning) for meaning in meanings),
         )

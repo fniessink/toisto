@@ -13,7 +13,8 @@ class ShowTopicsTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.quiz = self.create_quiz("hello", "fi", "nl", "Terve", ["Hoi"])
+        concept = self.create_concept("hello")
+        self.quiz = self.create_quiz(concept, "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
 
     def test_title(self):

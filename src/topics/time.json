@@ -21,6 +21,18 @@
             "nl": "De ochtenden"
         }
     },
+    "afternoon": {
+        "singular": {
+            "en": "Afternoon",
+            "fi": "Iltapäivä",
+            "nl": "De middag"
+        },
+        "plural": {
+            "en": "Afternoons",
+            "fi": "Iltapäidät",
+            "nl": "De middagen"
+        }
+    },
     "evening": {
         "singular": {
             "en": "Evening",

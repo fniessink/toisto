@@ -14,7 +14,8 @@ class ShowProgressTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.quiz = self.create_quiz("hello", "fi", "nl", "Terve", ["Hoi"])
+        self.concept = self.create_concept("hello", dict(fi="Terve", nl="Hoi"))
+        self.quiz = self.create_quiz(self.concept, "fi", "nl", "Terve", ["Hoi"])
         self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
 
     def test_title(self):
@@ -52,7 +53,8 @@ class ShowProgressTest(ToistoTestCase):
         now = datetime.now()
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
-        another_quiz = self.create_quiz("carpet", "fi", "nl", "Matto", ["Het tapijt"])
+        another_concept = self.create_concept("carpet")
+        another_quiz = self.create_quiz(another_concept, "fi", "nl", "Matto", ["Het tapijt"])
         topics = Topics(set([Topic("topic", (), set([self.quiz, another_quiz]))]))
         progress = Progress(
             {str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)}, self.topics

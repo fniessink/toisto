@@ -15,7 +15,8 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.quiz = self.create_quiz(ConceptId("hello"), "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
+        self.concept = self.create_concept(ConceptId("hello"))
+        self.quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
         self.guess = Label("Terve")
         self.progress = Progress({}, Topics(set()))
 
@@ -31,7 +32,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
+        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_correct(self.guess, quiz)
         expected_other_answer = linkify(quiz.other_answers(self.guess)[0])
         self.assertEqual(
@@ -41,7 +42,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
         feedback_text = feedback_correct(self.guess, quiz)
         other_answers = [f'"{linkify(answer)}"' for answer in quiz.other_answers(self.guess)]
         self.assertEqual(
@@ -60,7 +61,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
-        quiz = self.create_quiz("hello", "nl", "fi", "Hoi", ["Terve", "Hei"])
+        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
         feedback_text = feedback_incorrect("", quiz)
         self.assertEqual(
             f"""❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n"""
@@ -82,7 +83,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_instruction_multiple_quiz_types(self):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
-        quiz = self.create_quiz("to eat", "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
+        quiz = self.create_quiz(self.concept, "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
         self.assertEqual(
             "[quiz]Give the [underline]third person female[/underline] form in Dutch:[/quiz]", instruction(quiz)
         )
