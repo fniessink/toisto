@@ -154,12 +154,12 @@
         "uses": ["to read", "red", "book"],
         "singular": {
             "en": "I read the red book;present tense",
-            "fi": "Luin punaisen kirjan",
+            "fi": "Minä luen punaisen kirjan|Luen punaisen kirjan",
             "nl": "Ik lees het rode boek"
         },
         "plural": {
             "en": "I read the red books;present tense",
-            "fi": "Luin punaisia ​​kirjoja",
+            "fi": "Minä luen punaisia ​​kirjoj|Luen punaisia ​​kirjoja",
             "nl": "Ik lees de rode boeken"
         }
     },
@@ -167,12 +167,12 @@
         "uses": ["to live", "purple", "house"],
         "singular": {
             "en": "I live in a purple house",
-            "fi": "Asun violetissa talossa",
+            "fi": "Minä asun violetissa talossa|Asun violetissa talossa",
             "nl": "Ik woon in een paars huis"
         },
         "plural": {
             "en": "I live in purple houses",
-            "fi": "Asun violeteissa taloissa",
+            "fi": "Minä asun violeteissa taloissa|Asun violeteissa taloissa",
             "nl": "Ik woon in paarse huizen"
         }
     },
@@ -180,12 +180,12 @@
         "uses": ["green", "sofa"],
         "singular": {
             "en": "I sit on a green sofa",
-            "fi": "Istun vihreällä sohvalla",
+            "fi": "Minä istun vihreällä sohvalla|Istun vihreällä sohvalla",
             "nl": "Ik zit op een groene sofa"
         },
         "plural": {
             "en": "I sit on green sofas",
-            "fi": "Istun vihreillä sohvilla",
+            "fi": "Minä istun vihreillä sohvilla|Istun vihreillä sohvilla",
             "nl": "Ik zit op groene sofa's"
         }
     }
