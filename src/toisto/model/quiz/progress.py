@@ -18,7 +18,7 @@ class Progress:
         self.__recent_concepts: deque[ConceptId] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
         self.__quizzes_by_concept_id: dict[ConceptId, Quizzes] = {}
         for quiz in self.__topics.quizzes:
-            self.__quizzes_by_concept_id.setdefault(ConceptId(quiz.concept_id.split("/")[0]), set()).add(quiz)
+            self.__quizzes_by_concept_id.setdefault(quiz.root_concept_id, set()).add(quiz)
 
     def update(self, quiz: Quiz, correct: bool) -> None:
         """Update the progress on the quiz."""
@@ -33,7 +33,7 @@ class Progress:
             unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
             if unblocked_quizzes:
                 quiz = unblocked_quizzes.pop()
-                self.__recent_concepts.append(ConceptId(quiz.concept_id.split("/")[0]))
+                self.__recent_concepts.append(quiz.root_concept_id)
                 return quiz
         return None
 
@@ -43,13 +43,11 @@ class Progress:
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
-        return (
-            quiz.concept_id.split("/")[0] not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
-        )
+        return quiz.root_concept_id not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Has the quiz's concept been presented to the user before?"""
-        quizzes_for_same_concept = self.__quizzes_by_concept_id[ConceptId(quiz.concept_id.split("/")[0])]
+        quizzes_for_same_concept = self.__quizzes_by_concept_id[quiz.root_concept_id]
         return any(self.__in_progress(quiz_for_same_concept) for quiz_for_same_concept in quizzes_for_same_concept)
 
     def __in_progress(self, quiz: Quiz) -> bool:
@@ -72,7 +70,7 @@ class Progress:
         """Return whether the quiz uses concepts that have quizzes."""
         return any(
             other_quiz
-            for concept_id in quiz.uses
+            for concept_id in quiz.used_concepts
             for other_quiz in self.__quizzes_by_concept_id[concept_id]
             if other_quiz != quiz and other_quiz in quizzes
         )

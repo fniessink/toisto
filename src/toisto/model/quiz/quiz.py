@@ -9,6 +9,7 @@ from typing import cast, Literal
 
 from toisto.metadata import Language, SUPPORTED_LANGUAGES
 
+from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
 from ..model_types import ConceptId
@@ -73,13 +74,12 @@ def instruction(*quiz_types: QuizType) -> str:
 class Quiz:  # pylint: disable=too-many-instance-attributes
     """Class representing a quiz."""
 
-    concept_id: ConceptId
+    concept: Concept
     question_language: Language
     answer_language: Language
     _question: Label
     _answers: Labels
     quiz_types: tuple[QuizType, ...] = ("translate",)
-    uses: tuple[ConceptId, ...] = tuple()
     blocked_by: tuple[Quiz, ...] = tuple()
     _meanings: Labels = Labels()
     _hash: int = 0
@@ -155,6 +155,21 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(set(self.blocked_by) & quizzes)
+
+    @property
+    def concept_id(self) -> ConceptId:
+        """Return the id of the quiz's concept."""
+        return self.concept.concept_id
+
+    @property
+    def root_concept_id(self) -> ConceptId:
+        """Return the root id of the quiz's concept."""
+        return ConceptId(self.concept_id.split("/")[0])
+
+    @property
+    def used_concepts(self) -> tuple[ConceptId, ...]:
+        """Return the ids of the concepts used by the concept that this quiz quizzes."""
+        return self.concept.used_concepts(self.question_language)
 
 
 Quizzes = set[Quiz]
