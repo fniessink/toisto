@@ -36,7 +36,7 @@ dev = [
     "pip == 22.3.1",
     "pylint == 2.15.10",
     "twine == 4.0.2",
-    "types-requests == 2.28.11.7"
+    "types-requests == 2.28.11.8"
 ]
 
 [project.scripts]
