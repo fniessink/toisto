@@ -1,10 +1,11 @@
 """Load concepts from topic files and generate quizzes."""
 
+from argparse import ArgumentParser
+from typing import NoReturn
 import pathlib
 
 from ..metadata import NAME, TOPIC_JSON_FILES, Language
 from ..model import ConceptFactory, QuizFactory, Topic, Topics
-from ..ui.text import show_error_and_exit
 
 from .json_file import load_json
 
@@ -14,7 +15,8 @@ def load_topics(
     source_language: Language,
     builtin_topics_to_load: list[str],
     topic_files_to_load: list[str],
-) -> Topics:
+    argument_parser: ArgumentParser,
+) -> Topics | NoReturn:
     """Load the topics with the concepts and generate the quizzes."""
     topics = set()
     topic_files: list[pathlib.Path] = []
@@ -28,12 +30,11 @@ def load_topics(
         concepts = []
         topic_quizzes = set()
         try:
-            topic_json = load_json(topic_file)
-            for concept_key, concept_value in topic_json.items():
+            for concept_key, concept_value in load_json(topic_file).items():
                 concept = ConceptFactory(concept_key, concept_value).create_concept()
                 concepts.append(concept)
                 topic_quizzes.update(quiz_factory.create_quizzes(concept))
         except Exception as reason:  # pylint: disable=broad-except
-            show_error_and_exit(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
+            return argument_parser.error(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
         topics.add(Topic(topic_file.stem, tuple(concepts), topic_quizzes))
     return Topics(topics)

@@ -1,8 +1,5 @@
 """Output for the user."""
 
-from typing import NoReturn
-import sys
-
 from rich.console import Console
 from rich.panel import Panel
 from rich.theme import Theme
@@ -94,9 +91,3 @@ def show_welcome(latest_version: str | None) -> None:
     if latest_version and latest_version.strip("v") > VERSION:
         console.print(Panel(NEWS.format(latest_version), expand=False))
         console.print()
-
-
-def show_error_and_exit(message: str) -> NoReturn:
-    """Print the error message to stderr and exit."""
-    sys.stderr.write(message)
-    sys.exit(2)
