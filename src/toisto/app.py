@@ -3,6 +3,7 @@
 import readline  # pylint: disable=unused-import
 import logging
 
+# Suppress warning messages printed by the playsound module.
 logging.getLogger().setLevel(logging.ERROR)  # pylint: disable=wrong-import-position
 
 from .command import practice, show_topics, show_progress
