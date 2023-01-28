@@ -427,34 +427,52 @@
     "big": {
         "positive degree": {
             "en": "Big",
-            "fi": ["Iso", "Suuri"],
+            "fi": [
+                "Iso",
+                "Suuri"
+            ],
             "nl": "Groot"
         },
         "comparitive degree": {
             "en": "Bigger",
-            "fi": ["Isompi", "Suurempi"],
+            "fi": [
+                "Isompi",
+                "Suurempi"
+            ],
             "nl": "Groter"
         },
         "superlative degree": {
             "en": "Biggest",
-            "fi": ["Isoin", "Suurin"],
+            "fi": [
+                "Isoin",
+                "Suurin"
+            ],
             "nl": "Grootst"
         }
     },
     "nice": {
         "positive degree": {
             "en": "Nice",
-            "fi": ["Kiva", "Mukava"],
+            "fi": [
+                "Kiva",
+                "Mukava"
+            ],
             "nl": "Leuk"
         },
         "comparitive degree": {
             "en": "Nicer",
-            "fi": ["Kivampi|Kivempt", "Mukavampi"],
+            "fi": [
+                "Kivampi|Kivempt",
+                "Mukavampi"
+            ],
             "nl": "Leuker"
         },
         "superlative degree": {
             "en": "Nicest",
-            "fi": ["Kivoin", "Mukavin"],
+            "fi": [
+                "Kivoin",
+                "Mukavin"
+            ],
             "nl": "Leukst"
         }
     }

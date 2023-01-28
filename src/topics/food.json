@@ -27,15 +27,22 @@
     },
     "hotdog": {
         "uses": {
-            "en": ["hot", "dog"]
+            "en": [
+                "hot",
+                "dog"
+            ]
         },
         "singular": {
-            "en": ["Hotdog|Hot dog"],
+            "en": [
+                "Hotdog|Hot dog"
+            ],
             "fi": "Hotdog",
             "nl": "De hotdog"
         },
         "plural": {
-            "en": ["Hotdogs|Hot dogs"],
+            "en": [
+                "Hotdogs|Hot dogs"
+            ],
             "fi": "Hotdogit",
             "nl": "De hotdogs"
         }
@@ -71,7 +78,10 @@
             "nl": "De vis"
         },
         "plural": {
-            "en": ["Fish", "Fishes"],
+            "en": [
+                "Fish",
+                "Fishes"
+            ],
             "fi": "Kalat",
             "nl": "De vissen"
         }
@@ -346,7 +356,10 @@
         "plural": {
             "en": "Waters",
             "fi": "Vedet",
-            "nl": ["De waters", "De wateren"]
+            "nl": [
+                "De waters",
+                "De wateren"
+            ]
         }
     },
     "sandwich": {
@@ -392,7 +405,7 @@
         "singular": {
             "en": "Pear",
             "fi": "Päärynä",
-            "nl" :"De peer"
+            "nl": "De peer"
         },
         "plural": {
             "en": "Pears",
@@ -430,7 +443,10 @@
     },
     "garlic": {
         "uses": {
-            "fi": ["white", "onion"]
+            "fi": [
+                "white",
+                "onion"
+            ]
         },
         "singular": {
             "en": "Garlic",

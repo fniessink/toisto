@@ -593,23 +593,35 @@
                 "present tense": {
                     "singular": {
                         "first person": {
-                            "en": ["Have I got?", "Do I have?"],
+                            "en": [
+                                "Have I got?",
+                                "Do I have?"
+                            ],
                             "fi": "Onko minulla?",
                             "nl": "Heb ik?"
                         },
                         "second person": {
-                            "en": ["Have you got?|;singular", "Do you have?;singular"],
+                            "en": [
+                                "Have you got?|;singular",
+                                "Do you have?;singular"
+                            ],
                             "fi": "Onko sinulla?",
                             "nl": "Heb jij?|Heb je?"
                         },
                         "third person": {
                             "female": {
-                                "en": ["Has she got?", "Does she have?"],
+                                "en": [
+                                    "Has she got?",
+                                    "Does she have?"
+                                ],
                                 "fi": "Onko hänellä?;female",
                                 "nl": "Heeft zij?|Heeft ze?"
                             },
                             "male": {
-                                "en": ["Has he got?", "Does he have?"],
+                                "en": [
+                                    "Has he got?",
+                                    "Does he have?"
+                                ],
                                 "fi": "Onko hänellä?;male",
                                 "nl": "Heeft hij?"
                             }
@@ -617,17 +629,26 @@
                     },
                     "plural": {
                         "first person": {
-                            "en": ["Have we got?", "Do we have?"],
+                            "en": [
+                                "Have we got?",
+                                "Do we have?"
+                            ],
                             "fi": "Onko meillä?",
                             "nl": "Hebben wij?|Hebben we?"
                         },
                         "second person": {
-                            "en": ["Have you got?;plural", "Do you have?;plural"],
+                            "en": [
+                                "Have you got?;plural",
+                                "Do you have?;plural"
+                            ],
                             "fi": "Onko teillä?",
                             "nl": "Hebben jullie?"
                         },
                         "third person": {
-                            "en": ["Have they got?", "Do they have?"],
+                            "en": [
+                                "Have they got?",
+                                "Do they have?"
+                            ],
                             "fi": "Onko heillä?",
                             "nl": "Hebben zij?|Hebben ze?"
                         }
@@ -681,43 +702,85 @@
                 "present tense": {
                     "singular": {
                         "first person": {
-                            "en": ["Have I not got?|Haven't I got?", "Do I not have?|Don't I have?"],
+                            "en": [
+                                "Have I not got?|Haven't I got?",
+                                "Do I not have?|Don't I have?"
+                            ],
                             "fi": "Eikö minulla ole?",
-                            "nl": ["Heb ik niet?", "Heb ik geen?"]
+                            "nl": [
+                                "Heb ik niet?",
+                                "Heb ik geen?"
+                            ]
                         },
                         "second person": {
-                            "en": ["Have you not got?|Haven't you got;singular", "Do you not have?|Don't you have?;singular"],
+                            "en": [
+                                "Have you not got?|Haven't you got;singular",
+                                "Do you not have?|Don't you have?;singular"
+                            ],
                             "fi": "Eikö sinulla ole?",
-                            "nl": ["Heb jij niet?|Heb je niet?", "Heb jij geen?|Heb je geen?"]
+                            "nl": [
+                                "Heb jij niet?|Heb je niet?",
+                                "Heb jij geen?|Heb je geen?"
+                            ]
                         },
                         "third person": {
                             "female": {
-                                "en": ["Has she not got?|Hasn't she got?", "Does she not have?|Doesn't she have?"],
+                                "en": [
+                                    "Has she not got?|Hasn't she got?",
+                                    "Does she not have?|Doesn't she have?"
+                                ],
                                 "fi": "Eikö hänellä ole;female",
-                                "nl": ["Heeft zij niet?|Heeft ze niet?", "Heeft zij geen?|Heeft ze geen?"]
+                                "nl": [
+                                    "Heeft zij niet?|Heeft ze niet?",
+                                    "Heeft zij geen?|Heeft ze geen?"
+                                ]
                             },
                             "male": {
-                                "en": ["Has he not got?|Hasn't he got?", "Does he not have?|Doesn't he have?"],
+                                "en": [
+                                    "Has he not got?|Hasn't he got?",
+                                    "Does he not have?|Doesn't he have?"
+                                ],
                                 "fi": "Hänellä ei ole;male",
-                                "nl": ["Heeft hij niet?", "Heeft hij geen?"]
+                                "nl": [
+                                    "Heeft hij niet?",
+                                    "Heeft hij geen?"
+                                ]
                             }
                         }
                     },
                     "plural": {
                         "first person": {
-                            "en": ["Have we not got?|Haven't we got?", "Do we not have?|Don't we have?"],
+                            "en": [
+                                "Have we not got?|Haven't we got?",
+                                "Do we not have?|Don't we have?"
+                            ],
                             "fi": "Eikö meillä ole?",
-                            "nl": ["Hebben wij niet?|Hebben we niet?", "Hebben wij geen?|Hebben we geen?"]
+                            "nl": [
+                                "Hebben wij niet?|Hebben we niet?",
+                                "Hebben wij geen?|Hebben we geen?"
+                            ]
                         },
                         "second person": {
-                            "en": ["Have you not got?|Haven't you got;plural", "Do you not have?|Don't you have?;plural"],
+                            "en": [
+                                "Have you not got?|Haven't you got;plural",
+                                "Do you not have?|Don't you have?;plural"
+                            ],
                             "fi": "Eikö teillä ole?",
-                            "nl": ["Hebben jullie niet?", "Hebben jullie geen?"]
+                            "nl": [
+                                "Hebben jullie niet?",
+                                "Hebben jullie geen?"
+                            ]
                         },
                         "third person": {
-                            "en": ["Have they not got?|Haven't they got", "Do they not have?|Don't they have?"],
+                            "en": [
+                                "Have they not got?|Haven't they got",
+                                "Do they not have?|Don't they have?"
+                            ],
                             "fi": "Eikö heillä ole?",
-                            "nl": ["Hebben zij niet?|Hebben ze niet?", "Hebben zij geen?|Hebben ze geen?"]
+                            "nl": [
+                                "Hebben zij niet?|Hebben ze niet?",
+                                "Hebben zij geen?|Hebben ze geen?"
+                            ]
                         }
                     }
                 },
@@ -726,23 +789,35 @@
                         "first person": {
                             "en": "Did I not have?|Didn't I have?",
                             "fi": "Eikö minulla ollut?",
-                            "nl": ["Had ik niet?", "Had ik geen?"]
+                            "nl": [
+                                "Had ik niet?",
+                                "Had ik geen?"
+                            ]
                         },
                         "second person": {
                             "en": "Did you not have?|Didn't you have?;singular",
                             "fi": "Eikö sinulla ollut",
-                            "nl": ["Had jij niet?|Had je niet?", "Had jij geen?|Had je geen?"]
+                            "nl": [
+                                "Had jij niet?|Had je niet?",
+                                "Had jij geen?|Had je geen?"
+                            ]
                         },
                         "third person": {
                             "female": {
                                 "en": "Did she not have?|Didn't she have?",
                                 "fi": "Eikö hänellä ollut?;female",
-                                "nl": ["Had zij niet?|Had ze niet?", "Hsd zij geen?|Had ze geen?"]
+                                "nl": [
+                                    "Had zij niet?|Had ze niet?",
+                                    "Hsd zij geen?|Had ze geen?"
+                                ]
                             },
                             "male": {
                                 "en": "Did he not have?|Didn't he have?",
                                 "fi": "Eikö hänellä ollut?;male",
-                                "nl": ["Had hij niet?", "Had hij geen?"]
+                                "nl": [
+                                    "Had hij niet?",
+                                    "Had hij geen?"
+                                ]
                             }
                         }
                     },
@@ -750,17 +825,26 @@
                         "first person": {
                             "en": "Did we not have?|Didn't we have?",
                             "fi": "Eikö meillä ollut?",
-                            "nl": ["Hadden wij niet?|Hadden we niet?", "Hadden wij geen?|Hadden we heen?"]
+                            "nl": [
+                                "Hadden wij niet?|Hadden we niet?",
+                                "Hadden wij geen?|Hadden we heen?"
+                            ]
                         },
                         "second person": {
                             "en": "Did you not have?|Didn't you have?;plural",
                             "fi": "Eikö teillä ollut?",
-                            "nl": ["Hadden jullie niet?", "Hadden jullie geen?"]
+                            "nl": [
+                                "Hadden jullie niet?",
+                                "Hadden jullie geen?"
+                            ]
                         },
                         "third person": {
                             "en": "Did they not have?|Didn't they have?",
                             "fi": "Eikö heillä ollut?",
-                            "nl": ["Hadden zij niet?|Hadden ze niet?", "Hadden zij geen?|Hadden ze geen?"]
+                            "nl": [
+                                "Hadden zij niet?|Hadden ze niet?",
+                                "Hadden zij geen?|Hadden ze geen?"
+                            ]
                         }
                     }
                 }

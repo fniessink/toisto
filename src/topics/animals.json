@@ -13,17 +13,29 @@
     },
     "pet": {
         "uses": {
-            "fi": ["animal", "home"],
-            "nl": ["animal", "house"]
+            "fi": [
+                "animal",
+                "home"
+            ],
+            "nl": [
+                "animal",
+                "house"
+            ]
         },
         "singular": {
             "en": "Pet",
-            "fi": ["Lemmikki", "Kotieläin"],
+            "fi": [
+                "Lemmikki",
+                "Kotieläin"
+            ],
             "nl": "Het huisdier"
         },
         "plural": {
             "en": "Pets",
-            "fi": ["Lemmikit", "Kotieläimet"],
+            "fi": [
+                "Lemmikit",
+                "Kotieläimet"
+            ],
             "nl": "De huisdieren"
         }
     },
@@ -53,8 +65,13 @@
     },
     "rhino": {
         "uses": {
-            "fi": ["horn"],
-            "nl": ["horn", "nose"]
+            "fi": [
+                "horn"
+            ],
+            "nl": [
+                "horn",
+                "nose"
+            ]
         },
         "singular": {
             "en": "Rhinoceros|Rhino",
@@ -70,12 +87,18 @@
     "elephant": {
         "singular": {
             "en": "Elephant",
-            "fi": ["Elefantti", "Norsu"],
+            "fi": [
+                "Elefantti",
+                "Norsu"
+            ],
             "nl": "De olifant"
         },
         "plural": {
             "en": "Elephants",
-            "fi": ["Elefantit", "Norsut"],
+            "fi": [
+                "Elefantit",
+                "Norsut"
+            ],
             "nl": "De olifanten"
         }
     },
@@ -109,7 +132,7 @@
             "fi": "Hanhi",
             "nl": "De gans"
         },
-        "plural":{
+        "plural": {
             "en": "Geese",
             "fi": "Hanhet",
             "nl": "De ganzen"
@@ -154,12 +177,18 @@
     "pig": {
         "singular": {
             "en": "Pig",
-            "fi": ["Possu", "Sika"],
+            "fi": [
+                "Possu",
+                "Sika"
+            ],
             "nl": "Het varken"
         },
         "plural": {
             "en": "Pigs",
-            "fi": ["Possut", "Siat"],
+            "fi": [
+                "Possut",
+                "Siat"
+            ],
             "nl": "De varkens"
         }
     },
@@ -225,13 +254,25 @@
     },
     "rabbit": {
         "singular": {
-            "en": ["Rabbit", "Bunny"],
-            "fi": ["Jänis", "Pupu"],
+            "en": [
+                "Rabbit",
+                "Bunny"
+            ],
+            "fi": [
+                "Jänis",
+                "Pupu"
+            ],
             "nl": "Het konijn"
         },
         "plural": {
-            "en": ["Rabbits", "Bunnies"],
-            "fi": ["Jänikset", "Puput"],
+            "en": [
+                "Rabbits",
+                "Bunnies"
+            ],
+            "fi": [
+                "Jänikset",
+                "Puput"
+            ],
             "nl": "De konijnen"
         }
     },

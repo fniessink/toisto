@@ -33,7 +33,10 @@
         "nl": "Welkom"
     },
     "who are you": {
-        "uses": ["who", "to be"],
+        "uses": [
+            "who",
+            "to be"
+        ],
         "en": "Who are you?",
         "fi": "Kuka sinä olet?|Kuka olet?",
         "nl": "Wie ben jij?"
@@ -45,7 +48,11 @@
         "nl": "Ik ben Alice"
     },
     "how are you": {
-        "uses": ["what", "how", "to be"],
+        "uses": [
+            "what",
+            "how",
+            "to be"
+        ],
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -66,19 +73,30 @@
         }
     },
     "what is your name": {
-        "uses": ["what", "to be", "name"],
+        "uses": [
+            "what",
+            "to be",
+            "name"
+        ],
         "en": "What is your name?",
         "fi": "Mikä sinun nimesi on?",
         "nl": "Wat is jouw naam?|Wat is je naam?"
     },
     "my name is bob": {
-        "uses": ["name", "to be"],
+        "uses": [
+            "name",
+            "to be"
+        ],
         "en": "My name is Bob",
         "fi": "Minun nimeni on Bob",
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": ["how", "old", "to be"],
+        "uses": [
+            "how",
+            "old",
+            "to be"
+        ],
         "en": "How old are you?",
         "fi": "Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"

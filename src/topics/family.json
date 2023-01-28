@@ -43,8 +43,14 @@
     "grandmother": {
         "uses": {
             "en": "mother",
-            "fi": ["big", "mother"],
-            "nl": ["big", "mother"]
+            "fi": [
+                "big",
+                "mother"
+            ],
+            "nl": [
+                "big",
+                "mother"
+            ]
         },
         "singular": {
             "en": "Grandmother",
@@ -60,8 +66,14 @@
     "grandfather": {
         "uses": {
             "en": "father",
-            "fi": ["big", "father"],
-            "nl": ["big", "father"]
+            "fi": [
+                "big",
+                "father"
+            ],
+            "nl": [
+                "big",
+                "father"
+            ]
         },
         "singular": {
             "en": "Grandfather",
@@ -146,7 +158,10 @@
     },
     "sibling": {
         "uses": {
-            "nl": ["brother", "sister"]
+            "nl": [
+                "brother",
+                "sister"
+            ]
         },
         "singular": {
             "en": "Sibling",
@@ -181,7 +196,10 @@
         "uses": {
             "en": "child",
             "fi": "child",
-            "nl": ["small", "child"]
+            "nl": [
+                "small",
+                "child"
+            ]
         },
         "singular": {
             "en": "Grandchild",
@@ -278,8 +296,14 @@
     "grandparent": {
         "uses": {
             "en": "parent",
-            "fi": ["big", "parent"],
-            "nl": ["big", "parent"]
+            "fi": [
+                "big",
+                "parent"
+            ],
+            "nl": [
+                "big",
+                "parent"
+            ]
         },
         "singular": {
             "en": "Grandparent",
@@ -358,25 +382,45 @@
         }
     },
     "they have x children and y grandchildren": {
-        "uses": ["to have", "3", "child", "6", "grandchild"],
+        "uses": [
+            "to have",
+            "3",
+            "child",
+            "6",
+            "grandchild"
+        ],
         "en": "They have three children and six grandchildren",
         "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
         "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
     },
     "how many brothers and sisters do you have": {
-        "uses": ["how many", "to have", "brother", "sister"],
+        "uses": [
+            "how many",
+            "to have",
+            "brother",
+            "sister"
+        ],
         "en": "How many brothers and sisters do you have?",
         "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
         "nl": "Hoeveel broers en zussen heb jij?|Hoeveel broers en zussen heb je?"
     },
     "I have x brothers and y sisters": {
-        "uses": ["to have", "2", "brother", "1", "sister"],
+        "uses": [
+            "to have",
+            "2",
+            "brother",
+            "1",
+            "sister"
+        ],
         "en": "I have two brothers and one sister",
         "fi": "Minulla on kaksi veljeä ja yksi sisko",
         "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
     },
     "I have no siblings": {
-        "uses": ["to have", "sibling"],
+        "uses": [
+            "to have",
+            "sibling"
+        ],
         "en": [
             "I have no siblings",
             "I have no brothers and sisters"
@@ -388,7 +432,10 @@
         "nl": "Ik heb geen broers en zussen"
     },
     "I am an only child": {
-        "uses": ["to be", "child"],
+        "uses": [
+            "to be",
+            "child"
+        ],
         "en": "I am an only child|I'm an only child",
         "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
         "nl": "Ik ben enig kind|Ik ben enigst kind"

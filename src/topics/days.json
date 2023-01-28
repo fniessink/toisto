@@ -37,7 +37,10 @@
         }
     },
     "days of the week": {
-        "uses": ["day", "week"],
+        "uses": [
+            "day",
+            "week"
+        ],
         "en": "Days of the week",
         "fi": "Viikonpäivät",
         "nl": "De dagen van de week"
@@ -45,7 +48,10 @@
     "monday": {
         "uses": {
             "en": "day",
-            "nl": ["moon", "day"]
+            "nl": [
+                "moon",
+                "day"
+            ]
         },
         "singular": {
             "en": "Monday",
@@ -207,19 +213,31 @@
         "nl": "Volgende week"
     },
     "today it is monday": {
-        "uses": ["today", "to be", "monday"],
+        "uses": [
+            "today",
+            "to be",
+            "monday"
+        ],
         "en": "Today it is Monday|Today it's Monday",
         "fi": "Tänään on maanantai",
         "nl": "Vandaag is het maandag"
     },
     "tomorrow it is tuesday": {
-        "uses": ["tomorrow", "to be", "tuesday"],
+        "uses": [
+            "tomorrow",
+            "to be",
+            "tuesday"
+        ],
         "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
         "fi": "Huomenna on tiistai",
         "nl": "Morgen is het dinsdag"
     },
     "what day is it today": {
-        "uses": ["day", "to be", "today"],
+        "uses": [
+            "day",
+            "to be",
+            "today"
+        ],
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"

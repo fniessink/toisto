@@ -42,13 +42,19 @@
         "uses": "spring",
         "en": "Next spring",
         "fi": "Ensi keväänä",
-        "nl": ["Volgende lente", "Volgend voorjaar"]
+        "nl": [
+            "Volgende lente",
+            "Volgend voorjaar"
+        ]
     },
     "last spring": {
         "uses": "spring",
         "en": "Last spring",
         "fi": "Viime keväänä",
-        "nl": ["Vorige lente", "Vorig voorjaar"]
+        "nl": [
+            "Vorige lente",
+            "Vorig voorjaar"
+        ]
     },
     "summer": {
         "singular": {
@@ -106,21 +112,33 @@
     },
     "in autumn": {
         "uses": "autumn",
-        "en": ["In autumn", "In fall"],
+        "en": [
+            "In autumn",
+            "In fall"
+        ],
         "fi": "Syksyllä",
-        "nl": ["In de herfst", "In het najaar"]
+        "nl": [
+            "In de herfst",
+            "In het najaar"
+        ]
     },
     "next autumn": {
         "uses": "autumn",
         "en": "Next autumn",
         "fi": "Ensi syksynä",
-        "nl": ["Volgende herfst", "Volgend najaar"]
+        "nl": [
+            "Volgende herfst",
+            "Volgend najaar"
+        ]
     },
     "last autumn": {
         "uses": "autumn",
         "en": "Last autumn",
         "fi": "Viime syksynä",
-        "nl": ["Vorige herfst", "Vorig najaar"]
+        "nl": [
+            "Vorige herfst",
+            "Vorig najaar"
+        ]
     },
     "winter": {
         "singular": {
