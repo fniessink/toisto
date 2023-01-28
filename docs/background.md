@@ -29,3 +29,5 @@ Add more grammar and semantics. For example, more verb tenses or opposites (big/
 Add more quiz types, such as cloze deletions or reading exercises.
 
 Explain grammar.
+
+Internationalise the user interface.

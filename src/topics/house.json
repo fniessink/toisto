@@ -145,7 +145,10 @@
     "stairs": {
         "singular": {
             "en": "Stairs",
-            "fi": ["Portaat", "Rappuset"],
+            "fi": [
+                "Portaat",
+                "Rappuset"
+            ],
             "nl": "De trap"
         },
         "plural": {
@@ -154,19 +157,32 @@
     },
     "living room": {
         "uses": {
-            "en": ["room", "to live"],
+            "en": [
+                "room",
+                "to live"
+            ],
             "fi": "room",
-            "nl": ["house", "room", "to live"]
+            "nl": [
+                "house",
+                "room",
+                "to live"
+            ]
         },
         "singular": {
             "en": "Living room",
             "fi": "Olohuone",
-            "nl": ["De huiskamer", "De woonkamer"]
+            "nl": [
+                "De huiskamer",
+                "De woonkamer"
+            ]
         },
         "plural": {
             "en": "living rooms",
             "fi": "Olohuoneet",
-            "nl": ["De huiskamers", "De woonkamers"]
+            "nl": [
+                "De huiskamers",
+                "De woonkamers"
+            ]
         }
     },
     "kitchen": {
@@ -183,9 +199,15 @@
     },
     "bedroom": {
         "uses": {
-            "en": ["room", "bed"],
+            "en": [
+                "room",
+                "bed"
+            ],
             "fi": "room",
-            "nl": ["room", "to sleep"]
+            "nl": [
+                "room",
+                "to sleep"
+            ]
         },
         "singular": {
             "en": "Bedroom",

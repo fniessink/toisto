@@ -6,12 +6,18 @@
     },
     "forest": {
         "singular": {
-            "en": ["Forest", "Wood"],
+            "en": [
+                "Forest",
+                "Wood"
+            ],
             "fi": "Metsä",
             "nl": "Het bos"
         },
         "plural": {
-            "en": ["Forests", "Woods"],
+            "en": [
+                "Forests",
+                "Woods"
+            ],
             "fi": "Metsät",
             "nl": "De bossen"
         }
@@ -97,12 +103,18 @@
         },
         "singular": {
             "en": "Desert",
-            "fi": ["Aavikko", "Autiomaa"],
+            "fi": [
+                "Aavikko",
+                "Autiomaa"
+            ],
             "nl": "De woestijn"
         },
         "plural": {
             "en": "Deserts",
-            "fi": ["Aavikot", "Autiomaat"],
+            "fi": [
+                "Aavikot",
+                "Autiomaat"
+            ],
             "nl": "De woestijnen"
         }
     },
@@ -145,12 +157,18 @@
     "hill": {
         "singular": {
             "en": "Hill",
-            "fi": ["Mäki", "Kukkula"],
+            "fi": [
+                "Mäki",
+                "Kukkula"
+            ],
             "nl": "De heuvel"
         },
         "plural": {
             "en": "Hills",
-            "fi": ["Mäet", "Kukkulat"],
+            "fi": [
+                "Mäet",
+                "Kukkulat"
+            ],
             "nl": "De heuvels"
         }
     },
@@ -210,33 +228,57 @@
         }
     },
     "it is cold in the north": {
-        "uses": ["to be", "cold", "north"],
+        "uses": [
+            "to be",
+            "cold",
+            "north"
+        ],
         "en": "It is cold in the North",
         "fi": "Pohjoisessa on kylmä",
         "nl": "Het is koud in het Noorden"
     },
     "it is warm in the south": {
-        "uses": ["to be", "warm", "south"],
+        "uses": [
+            "to be",
+            "warm",
+            "south"
+        ],
         "en": "It is warm in the South",
         "fi": "Etelässä on lämmin",
         "nl": "Het is warm in het Zuiden"
     },
     "she is from the north": {
-        "uses": ["north", "to come"],
+        "uses": [
+            "north",
+            "to come"
+        ],
         "en": "She is from the North",
-        "fi": ["Hän tulee pohjoisesta;female", "Hän on kotoisin pohjoisesta;female"],
+        "fi": [
+            "Hän tulee pohjoisesta;female",
+            "Hän on kotoisin pohjoisesta;female"
+        ],
         "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
     },
     "they live in the west": {
-        "uses": ["west", "to live"],
+        "uses": [
+            "west",
+            "to live"
+        ],
         "en": "They live in the West",
         "fi": "He asuvat lännessä",
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
     },
     "the city is in the east": {
-        "uses": ["city", "to be", "east"],
+        "uses": [
+            "city",
+            "to be",
+            "east"
+        ],
         "en": "The city is in the East",
-        "fi": ["Kaupunki on idässä", "Kaupunki sijaitsee idässä"],
+        "fi": [
+            "Kaupunki on idässä",
+            "Kaupunki sijaitsee idässä"
+        ],
         "nl": "De stad ligt in het Oosten"
     }
 }

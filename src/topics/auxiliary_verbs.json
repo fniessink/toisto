@@ -1,6 +1,10 @@
 {
     "to have (aux)": {
-        "uses": ["to have", "to paint", "house"],
+        "uses": [
+            "to have",
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I have painted the house|I've painted the house",
@@ -44,7 +48,11 @@
         }
     },
     "to be (aux)": {
-        "uses": ["to be", "to paint", "house"],
+        "uses": [
+            "to be",
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I am painting the house|I'm painting the house",
@@ -88,7 +96,10 @@
         }
     },
     "to be able to": {
-        "uses": ["to paint", "house"],
+        "uses": [
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I can paint the house",
@@ -132,7 +143,10 @@
         }
     },
     "to have to": {
-        "uses": ["to paint", "house"],
+        "uses": [
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I have to paint the house",
@@ -176,7 +190,10 @@
         }
     },
     "to be allowed to": {
-        "uses": ["to paint", "house"],
+        "uses": [
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I am allowed to paint the house|I'm allowed to paint the house",
@@ -220,7 +237,10 @@
         }
     },
     "to want": {
-        "uses": ["to paint", "house"],
+        "uses": [
+            "to paint",
+            "house"
+        ],
         "singular": {
             "first person": {
                 "en": "I want to paint the house",

@@ -73,7 +73,11 @@
         "nl": "Donkerblauw"
     },
     "the car is blue": {
-        "uses": ["car", "to be", "blue"],
+        "uses": [
+            "car",
+            "to be",
+            "blue"
+        ],
         "singular": {
             "en": "The car is blue",
             "fi": "Auto on sininen",
@@ -86,7 +90,12 @@
         }
     },
     "the blue car is old": {
-        "uses": ["blue", "car", "to be", "old"],
+        "uses": [
+            "blue",
+            "car",
+            "to be",
+            "old"
+        ],
         "singular": {
             "en": "The blue car is old",
             "fi": "Sininen auto on vanha",
@@ -99,7 +108,11 @@
         }
     },
     "the house is white": {
-        "uses": ["house", "to be", "white"],
+        "uses": [
+            "house",
+            "to be",
+            "white"
+        ],
         "singular": {
             "en": "The house is white",
             "fi": "Talo on valkoinen",
@@ -112,7 +125,11 @@
         }
     },
     "the white house is big": {
-        "uses": ["white", "house", "big"],
+        "uses": [
+            "white",
+            "house",
+            "big"
+        ],
         "singular": {
             "en": "The white house is big",
             "fi": "Valkoinen talo on suuri",
@@ -125,7 +142,11 @@
         }
     },
     "i have a green table": {
-        "uses": ["green", "to have", "table"],
+        "uses": [
+            "green",
+            "to have",
+            "table"
+        ],
         "singular": {
             "en": "I have a green table",
             "fi": "Minulla on vihreä pöytä",
@@ -138,7 +159,11 @@
         }
     },
     "the green table is mine": {
-        "uses": ["green", "table", "to be"],
+        "uses": [
+            "green",
+            "table",
+            "to be"
+        ],
         "singular": {
             "en": "The green table is mine",
             "fi": "Vihreä pöytä on minun",
@@ -151,7 +176,11 @@
         }
     },
     "I read the red book": {
-        "uses": ["to read", "red", "book"],
+        "uses": [
+            "to read",
+            "red",
+            "book"
+        ],
         "singular": {
             "en": "I read the red book;present tense",
             "fi": "Minä luen punaisen kirjan|Luen punaisen kirjan",
@@ -164,7 +193,11 @@
         }
     },
     "i live in a purple house": {
-        "uses": ["to live", "purple", "house"],
+        "uses": [
+            "to live",
+            "purple",
+            "house"
+        ],
         "singular": {
             "en": "I live in a purple house",
             "fi": "Minä asun violetissa talossa|Asun violetissa talossa",
@@ -177,7 +210,10 @@
         }
     },
     "i sit on a green sofa": {
-        "uses": ["green", "sofa"],
+        "uses": [
+            "green",
+            "sofa"
+        ],
         "singular": {
             "en": "I sit on a green sofa",
             "fi": "Minä istun vihreällä sohvalla|Istun vihreällä sohvalla",

@@ -4,6 +4,8 @@
 
 Builtin topics are located in `src/topics` in the form of JSON files. Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-t/--topic-file` command-line option.
 
+## Concepts and labels
+
 Each topic is a collection of *concepts*. Each concept has *labels* in different languages. A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language.
 
 The contents of a JSON topic file looks as follows:
@@ -72,7 +74,6 @@ In the topic file this looks as follows:
 ```json
 {
     "good afternoon": {
-        "uses": "day",
         "en": "Good afternoon",
         "fi": [
             "Hyvää päivää;afternoon",
@@ -292,18 +293,15 @@ When there are synonyms, they need to be in the same order in every degree. This
     "big": {
         "positive degree": {
             "en": "Big",
-            "fi": ["Iso", "Suuri"],
-            "nl": "Groot"
+            "fi": ["Iso", "Suuri"]
         },
         "comparitive degree": {
             "en": "Bigger",
-            "fi": ["Isompi", "Suurempi"],
-            "nl": "Groter"
+            "fi": ["Isompi", "Suurempi"]
         },
         "superlative degree": {
             "en": "Biggest",
-            "fi": ["Isoin", "Suurin"],
-            "nl": "Grootst"
+            "fi": ["Isoin", "Suurin"]
         }
     }
 }

@@ -21,7 +21,10 @@
         "uses": {
             "en": "christmas",
             "fi": "christmas",
-            "nl": ["christmas", "evening"]
+            "nl": [
+                "christmas",
+                "evening"
+            ]
         },
         "en": "Christmas Eve",
         "fi": "Jouluaatto",
@@ -40,7 +43,10 @@
         "uses": {
             "en": "day",
             "fi": "day",
-            "nl": ["christmas", "day"]
+            "nl": [
+                "christmas",
+                "day"
+            ]
         },
         "en": "Boxing Day",
         "fi": "Tapaninpäivä",
@@ -84,7 +90,10 @@
     },
     "bauble": {
         "uses": {
-            "fi": ["christmas tree", "christmas"],
+            "fi": [
+                "christmas tree",
+                "christmas"
+            ],
             "nl": "christmas"
         },
         "en": "Bauble",
@@ -92,7 +101,10 @@
         "nl": "De kerstbal"
     },
     "new year": {
-        "uses": ["new", "year"],
+        "uses": [
+            "new",
+            "year"
+        ],
         "en": "New Year",
         "fi": "Uusivuosi",
         "nl": "Nieuwjaar"
