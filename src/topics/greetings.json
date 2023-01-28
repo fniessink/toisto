@@ -1,5 +1,8 @@
 {
     "hi": {
+        "level": {
+            "KK": "A1"
+        },
         "en": "Hi",
         "fi": [
             "Hei",
@@ -8,6 +11,9 @@
         "nl": "Hoi"
     },
     "hello": {
+        "level": {
+            "KK": "A1"
+        },
         "en": "Hello",
         "fi": "Terve",
         "nl": "Hallo"
@@ -61,6 +67,9 @@
         "nl": "Hoe gaat het?"
     },
     "name": {
+        "level": {
+            "KK": "A1"
+        },
         "singular": {
             "en": "Name",
             "fi": "Nimi",

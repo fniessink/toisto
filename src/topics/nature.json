@@ -1,10 +1,20 @@
 {
     "nature": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "en": "Nature",
         "fi": "Luonto",
         "nl": "De natuur"
     },
     "forest": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "singular": {
             "en": [
                 "Forest",
@@ -23,6 +33,10 @@
         }
     },
     "flower": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Flower",
             "fi": "Kukka",
@@ -35,6 +49,10 @@
         }
     },
     "lake": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Lake",
             "fi": "Järvi",
@@ -47,6 +65,11 @@
         }
     },
     "sea": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Sea",
             "fi": "Meri",
@@ -59,6 +82,10 @@
         }
     },
     "river": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "River",
             "fi": "Joki",
@@ -71,6 +98,10 @@
         }
     },
     "island": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Island",
             "fi": "Saari",
@@ -83,6 +114,10 @@
         }
     },
     "coast": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "uses": {
             "fi": "beach"
         },
@@ -98,6 +133,10 @@
         }
     },
     "desert": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "uses": {
             "fi": "country"
         },
@@ -119,6 +158,11 @@
         }
     },
     "tree": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Tree",
             "fi": "Puu",
@@ -131,6 +175,11 @@
         }
     },
     "beach": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Beach",
             "fi": "Ranta",
@@ -143,6 +192,10 @@
         }
     },
     "valley": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Valley",
             "fi": "Laakso",
@@ -155,6 +208,10 @@
         }
     },
     "hill": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Hill",
             "fi": [
@@ -173,6 +230,10 @@
         }
     },
     "mountain": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Mountain",
             "fi": "Vuori",
@@ -185,26 +246,47 @@
         }
     },
     "north": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "North|The north",
         "fi": "Pohjoinen",
         "nl": "Het noorden"
     },
     "east": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "East|The east",
         "fi": "Itä",
         "nl": "Het oosten"
     },
     "south": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "South|The south",
         "fi": "Etelä",
         "nl": "Het zuiden"
     },
     "west": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "en": "West|The west",
         "fi": "Länsi",
         "nl": "Het westen"
     },
     "world": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "country"
         },
@@ -213,6 +295,10 @@
         "nl": "De wereld"
     },
     "continent": {
+        "level": {
+            "EP": "B1",
+            "OD": "A2"
+        },
         "uses": {
             "fi": "country"
         },

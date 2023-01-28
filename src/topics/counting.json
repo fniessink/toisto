@@ -1,60 +1,116 @@
 {
     "to count": {
+        "level": {
+            "EP": "B1",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "en": "To count",
         "fi": "Laskea",
         "nl": "Tellen"
     },
     "1": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "One",
         "fi": "Yksi",
         "nl": "Eén|één|Een"
     },
     "2": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Two",
         "fi": "Kaksi",
         "nl": "Twee"
     },
     "3": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Three",
         "fi": "Kolme",
         "nl": "Drie"
     },
     "4": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Four",
         "fi": "Neljä",
         "nl": "Vier"
     },
     "5": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Five",
         "fi": "Viisi",
         "nl": "Vijf"
     },
     "6": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Six",
         "fi": "Kuusi",
         "nl": "Zes"
     },
     "7": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Seven",
         "fi": "Seitsemän",
         "nl": "Zeven"
     },
     "8": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Eight",
         "fi": "Kahdeksan",
         "nl": "Acht"
     },
     "9": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "en": "Nine",
         "nl": "Negen",
         "fi": "Yhdeksän"
     },
     "10": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Ten",
         "fi": "Kymmenen",
         "nl": "Tien"
     },
     "11": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "1",
             "10"
@@ -64,6 +120,10 @@
         "nl": "Elf"
     },
     "12": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "2",
             "10"
@@ -73,6 +133,10 @@
         "nl": "Twaalf"
     },
     "13": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "3",
             "10"
@@ -82,6 +146,10 @@
         "nl": "Dertien"
     },
     "14": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "4",
             "10"
@@ -91,6 +159,10 @@
         "nl": "Veertien"
     },
     "15": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "5",
             "10"
@@ -100,6 +172,10 @@
         "nl": "Vijftien"
     },
     "16": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "6",
             "10"
@@ -109,6 +185,10 @@
         "nl": "Zestien"
     },
     "17": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "7",
             "10"
@@ -118,6 +198,10 @@
         "nl": "Zeventien"
     },
     "18": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "8",
             "10"
@@ -127,6 +211,10 @@
         "nl": "Achttien"
     },
     "19": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "9",
             "10"
@@ -136,6 +224,10 @@
         "nl": "Negentien"
     },
     "20": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": [
             "2",
             "10"
@@ -145,6 +237,10 @@
         "nl": "Twintig"
     },
     "21": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "1",
             "20"
@@ -154,6 +250,10 @@
         "nl": "Eenentwintig"
     },
     "22": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "2",
             "20"
@@ -163,6 +263,10 @@
         "nl": "Tweeëntwintig"
     },
     "23": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "3",
             "20"
@@ -172,6 +276,10 @@
         "nl": "Drieëntwintig"
     },
     "24": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "4",
             "20"
@@ -181,6 +289,10 @@
         "nl": "Vierentwintig"
     },
     "30": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "3",
             "10"
@@ -190,15 +302,23 @@
         "nl": "Dertig"
     },
     "40": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "4",
             "10"
         ],
-        "en": "Fourty",
+        "en": "Forty",
         "fi": "Neljäkymmentä",
         "nl": "Veertig"
     },
     "50": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "5",
             "10"
@@ -208,6 +328,10 @@
         "nl": "Vijftig"
     },
     "60": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "6",
             "10"
@@ -217,6 +341,10 @@
         "nl": "Zestig"
     },
     "70": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "7",
             "10"
@@ -226,6 +354,10 @@
         "nl": "Zeventig"
     },
     "80": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "8",
             "10"
@@ -235,6 +367,10 @@
         "nl": "Tachtig"
     },
     "90": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": [
             "9",
             "10"
@@ -244,11 +380,20 @@
         "nl": "Negentig"
     },
     "100": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Hundred",
         "fi": "Sata",
         "nl": "Honderd"
     },
     "200": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "2",
             "100"
@@ -258,11 +403,20 @@
         "nl": "Tweehonderd"
     },
     "1000": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "en": "Thousand",
         "fi": "Tuhat",
         "nl": "Duizend"
     },
     "2000": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "2",
             "1000"

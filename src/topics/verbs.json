@@ -1,5 +1,10 @@
 {
     "to be": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -405,6 +410,10 @@
         }
     },
     "to have": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -852,6 +861,10 @@
         }
     },
     "to paint": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To paint",
             "fi": "Maalata",
@@ -945,6 +958,11 @@
         }
     },
     "to walk": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To walk",
             "fi": "Kävellä",
@@ -1038,6 +1056,10 @@
         }
     },
     "to run": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To run",
             "fi": "Juosta",
@@ -1131,6 +1153,11 @@
         }
     },
     "to eat": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To eat",
             "fi": "Syödä",
@@ -1224,6 +1251,11 @@
         }
     },
     "to sleep": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To sleep",
             "fi": "Nukkua",
@@ -1317,6 +1349,11 @@
         }
     },
     "to go": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To go",
             "fi": "Mennä",
@@ -1410,6 +1447,10 @@
         }
     },
     "to come": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To come",
             "fi": "Tulla",
@@ -1503,6 +1544,11 @@
         }
     },
     "to read": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To read",
             "fi": "Lukea",
@@ -1596,6 +1642,11 @@
         }
     },
     "to write": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To write",
             "fi": "Kirjoittaa",
@@ -1689,6 +1740,11 @@
         }
     },
     "to live": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "infinitive": {
             "en": "To live",
             "fi": "Asua",

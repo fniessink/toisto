@@ -28,3 +28,21 @@ class ConcepFactoryTest(ToistoTestCase):
         concept = self.create_concept("decade", dict(uses=dict(fi="year"), fi="Vuosikymmen", en="Decade"))
         self.assertEqual(("year",), concept.used_concepts("fi"))
         self.assertEqual((), concept.used_concepts("en"))
+
+    def test_level(self):
+        """Test that a concept can have a level."""
+        concept = self.create_concept("one", dict(level=dict(EP="A1"), fi="Yksi", nl="Eén"))
+        self.assertEqual("A1", concept.level)
+
+    def test_override_level(self):
+        """Test that constituent concepts can override the level of their composite concept."""
+        concept = self.create_concept(
+            "morning",
+            dict(
+                level=dict(EP="A1"),
+                singular=dict(fi="Aamu", nl="De ochtend"),
+                plural=dict(level=dict(EP="A2"), fi="Aamut", nl="De ochtenden"),
+            ),
+        )
+        self.assertEqual("A1", concept.constituent_concepts[0].level)
+        self.assertEqual("A2", concept.constituent_concepts[1].level)

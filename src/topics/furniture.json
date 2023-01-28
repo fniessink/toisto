@@ -1,5 +1,10 @@
 {
     "table": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Table",
             "fi": "Pöytä",
@@ -12,6 +17,10 @@
         }
     },
     "bed": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Bed",
             "fi": "Sänky",
@@ -24,6 +33,10 @@
         }
     },
     "sofa": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Sofa",
             "fi": "Sohva",
@@ -36,6 +49,10 @@
         }
     },
     "pillow": {
+        "level": {
+            "EP": "A2",
+            "OD": null
+        },
         "singular": {
             "en": "Pillow",
             "fi": "Tyyny",
@@ -48,6 +65,10 @@
         }
     },
     "chair": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Chair",
             "fi": "Tuoli",
@@ -60,6 +81,10 @@
         }
     },
     "desk": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "to write",
@@ -84,6 +109,10 @@
         }
     },
     "lamp": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Lamp",
             "fi": "Lamppu",
@@ -96,6 +125,10 @@
         }
     },
     "curtain": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Curtain",
             "fi": "Verho",
@@ -108,6 +141,10 @@
         }
     },
     "carpet": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Carpet",
             "fi": "Matto",

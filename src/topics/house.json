@@ -1,5 +1,9 @@
 {
     "apartment": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Apartment",
             "fi": "Asunto",
@@ -12,6 +16,11 @@
         }
     },
     "room": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Room",
             "fi": "Huone",
@@ -24,6 +33,10 @@
         }
     },
     "basement": {
+        "level": {
+            "EP": "B2",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Basement",
             "fi": "Kellari",
@@ -36,6 +49,11 @@
         }
     },
     "home": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Home",
             "fi": "Koti",
@@ -47,6 +65,11 @@
         }
     },
     "garden": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Garden",
             "fi": "Piha",
@@ -59,6 +82,11 @@
         }
     },
     "house": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "House",
             "fi": "Talo",
@@ -71,6 +99,10 @@
         }
     },
     "veranda": {
+        "level": {
+            "EP": null,
+            "OD": "C2"
+        },
         "singular": {
             "en": "Veranda",
             "fi": "Veranta",
@@ -83,6 +115,10 @@
         }
     },
     "barbecue": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Barbecue",
             "fi": "Grilli",
@@ -95,6 +131,10 @@
         }
     },
     "wall": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Wall",
             "fi": "Seinä",
@@ -107,6 +147,10 @@
         }
     },
     "floor": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Floor",
             "fi": "Lattia",
@@ -119,6 +163,11 @@
         }
     },
     "door": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Door",
             "fi": "Ovi",
@@ -131,6 +180,11 @@
         }
     },
     "window": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Window",
             "fi": "Ikkuna",
@@ -143,6 +197,10 @@
         }
     },
     "stairs": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Stairs",
             "fi": [
@@ -156,6 +214,10 @@
         }
     },
     "living room": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": [
                 "room",
@@ -186,6 +248,10 @@
         }
     },
     "kitchen": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Kitchen",
             "fi": "Keittiö",
@@ -198,6 +264,10 @@
         }
     },
     "bedroom": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": {
             "en": [
                 "room",
@@ -221,6 +291,10 @@
         }
     },
     "bathroom": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "room",
         "singular": {
             "en": "Bathroom",

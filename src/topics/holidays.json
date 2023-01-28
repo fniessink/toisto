@@ -1,5 +1,9 @@
 {
     "holiday": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "uses": "day",
         "singular": {
             "en": "Holiday",
@@ -13,11 +17,19 @@
         }
     },
     "christmas": {
+        "level": {
+            "EP": null,
+            "OD": "A1"
+        },
         "en": "Christmas",
         "fi": "Joulu",
         "nl": "Kerstmis"
     },
     "christmas eve": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": {
             "en": "christmas",
             "fi": "christmas",
@@ -31,6 +43,10 @@
         "nl": "Kerstavond"
     },
     "christmas day": {
+        "level": {
+            "EP": null,
+            "OD": "A1"
+        },
         "uses": [
             "christmas",
             "day"
@@ -40,6 +56,10 @@
         "nl": "Eerste kerstdag"
     },
     "boxing day": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": {
             "en": "day",
             "fi": "day",
@@ -53,6 +73,10 @@
         "nl": "Tweede kerstdag"
     },
     "merry christmas": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": "christmas",
         "en": "Merry Christmas!",
         "fi": [
@@ -61,6 +85,10 @@
         "nl": "Vrolijk kerstfeest!"
     },
     "christmas tree": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": [
             "christmas",
             "tree"
@@ -70,6 +98,10 @@
         "nl": "De kerstboom"
     },
     "santa": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": {
             "fi": "christmas",
             "nl": "christmas"
@@ -79,6 +111,10 @@
         "nl": "De kerstman"
     },
     "elf": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Elf",
         "fi": "Tonttu",
         "nl": "De elf"
@@ -89,6 +125,10 @@
         "nl": "De engel"
     },
     "bauble": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": {
             "fi": [
                 "christmas tree",
@@ -101,6 +141,10 @@
         "nl": "De kerstbal"
     },
     "new year": {
+        "level": {
+            "EP": null,
+            "OD": "A1"
+        },
         "uses": [
             "new",
             "year"
@@ -110,28 +154,48 @@
         "nl": "Nieuwjaar"
     },
     "happy new year": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": "new year",
         "en": "Happy New Year!",
         "fi": "Hyvää uutta vuotta!",
         "nl": "Gelukkig nieuwjaar"
     },
     "valentine's day": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": "day",
         "en": "Valentine's Day",
         "fi": "Ystävänpäivä",
         "nl": "Valentijnsdag"
     },
     "epiphany": {
+        "level": {
+            "EP": null,
+            "OD": "C2"
+        },
         "en": "Epiphany",
         "fi": "Loppiainen",
         "nl": "Driekoningen"
     },
     "easter": {
+        "level": {
+            "EP": null,
+            "OD": "B1"
+        },
         "en": "Easter",
         "fi": "Pääsiäinen",
         "nl": "Pasen"
     },
     "first of may": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": {
             "en": "may",
             "nl": "day"
@@ -141,6 +205,10 @@
         "nl": "Dag van de arbeid"
     },
     "midsummer": {
+        "level": {
+            "EP": null,
+            "OD": "C1"
+        },
         "uses": {
             "en": "summer",
             "nl": "summer"
@@ -150,6 +218,10 @@
         "nl": "Midzomer"
     },
     "finnish independence day": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "uses": "day",
         "fi": "Itsenäisyyspäivä"
     }

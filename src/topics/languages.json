@@ -1,5 +1,10 @@
 {
     "language": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Language",
             "fi": "Kieli",
@@ -12,6 +17,10 @@
         }
     },
     "dialect": {
+        "level": {
+            "EP": "C2",
+            "OD": "C1"
+        },
         "singular": {
             "en": "Dialect",
             "fi": "Murre",
@@ -24,6 +33,10 @@
         }
     },
     "accent": {
+        "level": {
+            "EP": "C2",
+            "OD": "C1"
+        },
         "singular": {
             "en": "Accent",
             "fi": "Aksentti",
@@ -36,81 +49,146 @@
         }
     },
     "english": {
+        "level": {
+            "EP": "C1",
+            "OD": "A1"
+        },
         "en": "English",
         "fi": "Englanti;language",
         "nl": "Engels"
     },
     "chinese": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Chinese",
         "fi": "Kiina;language",
         "nl": "Chinees"
     },
     "german": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "German",
         "fi": "Saksa;language",
         "nl": "Duits"
     },
-    "estionian": {
-        "en": "Estionian",
+    "estonian": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
+        "en": "Estonian",
         "fi": "Viro;language",
         "nl": "Estisch"
     },
     "finnish": {
+        "level": {
+            "EP": null,
+            "KK": "A1",
+            "OD": null
+        },
         "en": "Finnish",
         "fi": "Suomi;language",
         "nl": "Fins"
     },
     "french": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "French",
         "fi": "Ranska;language",
         "nl": "Frans"
     },
     "hungarian": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Hungarian",
         "fi": "Unkari;language",
         "nl": "Hongaars"
     },
     "japanese": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Japanese",
         "fi": "Japani;language",
         "nl": "Japans"
     },
     "korean": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Korean",
         "fi": "Korea;language",
         "nl": "Koreaans"
     },
     "spanish": {
+        "level": {
+            "EP": "A1",
+            "OD": null
+        },
         "en": "Spanish",
         "fi": "Espanja;language",
         "nl": "Spaans"
     },
     "dutch": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Dutch",
         "fi": "Hollanti",
         "nl": "Nederlands"
     },
     "danish": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Danish",
         "fi": "Tanska;language",
         "nl": "Deens"
     },
     "norwegian": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Norwegian",
         "fi": "Norja;language",
         "nl": "Noors"
     },
     "swedish": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Swedish",
         "fi": "Ruotsi;language",
         "nl": "Zweeds"
     },
     "russian": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Russian",
         "fi": "Venäjä;language",
         "nl": "Russisch"
     },
     "icelandic": {
+        "level": {
+            "EP": null,
+            "OD": null
+        },
         "en": "Icelandic",
         "fi": "Islanti;language",
         "nl": "IJslands"

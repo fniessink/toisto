@@ -1,5 +1,10 @@
 {
     "city": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "City",
             "fi": "Kaupunki",
@@ -12,6 +17,11 @@
         }
     },
     "building": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Building",
             "fi": "Rakennus",
@@ -24,6 +34,10 @@
         }
     },
     "monument": {
+        "level": {
+            "EP": "B1",
+            "OD": "B2"
+        },
         "singular": {
             "en": "Monument",
             "fi": "Monumentti",
@@ -36,6 +50,10 @@
         }
     },
     "theater": {
+        "level": {
+            "EP": null,
+            "OD": "B2"
+        },
         "singular": {
             "en": "Theater",
             "fi": "Teatteri",
@@ -48,6 +66,10 @@
         }
     },
     "museum": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Museum",
             "fi": "Museo",
@@ -60,6 +82,11 @@
         }
     },
     "church": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Church",
             "fi": "Kirkko",
@@ -72,6 +99,10 @@
         }
     },
     "stadium": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Stadium",
             "fi": "Stadion",
@@ -84,6 +115,10 @@
         }
     },
     "library": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "fi": "book"
         },
@@ -99,6 +134,11 @@
         }
     },
     "hospital": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hospital",
             "fi": "Sairaala",
@@ -111,6 +151,10 @@
         }
     },
     "office": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Office",
             "fi": "Toimisto",
@@ -123,6 +167,13 @@
         }
     },
     "airport": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
+        "uses": {
+            "en": "port"
+        },
         "singular": {
             "en": "Airport",
             "fi": "Lentokenttä",
@@ -135,6 +186,11 @@
         }
     },
     "store": {
+        "level": {
+            "EP": "B1",
+            "KK": "A1",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Store",
             "fi": "Kauppa",
@@ -147,6 +203,10 @@
         }
     },
     "department store": {
+        "level": {
+            "EP": "A2",
+            "OD": "B1"
+        },
         "uses": {
             "en": "store",
             "fi": "house",
@@ -164,6 +224,10 @@
         }
     },
     "park": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Park",
             "fi": "Puisto",
@@ -176,6 +240,10 @@
         }
     },
     "castle": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Castle",
             "fi": "Linna",
@@ -188,6 +256,10 @@
         }
     },
     "hotel": {
+        "level": {
+            "EP": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Hotel",
             "fi": "Hotelli",
@@ -200,6 +272,11 @@
         }
     },
     "centre": {
+        "level": {
+            "EP": "A2",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Centre",
             "fi": "Keskusta",
@@ -212,6 +289,11 @@
         }
     },
     "street": {
+        "level": {
+            "EP": "A1",
+            "KK": "A1",
+            "OD": "A1"
+        },
         "singular": {
             "en": "Street",
             "fi": "Katu",
@@ -224,6 +306,10 @@
         }
     },
     "square": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Square",
             "fi": "Aukio",
@@ -236,6 +322,10 @@
         }
     },
     "bridge": {
+        "level": {
+            "EP": "A2",
+            "OD": "A2"
+        },
         "singular": {
             "en": "Bridge",
             "fi": "Silta",
@@ -248,6 +338,10 @@
         }
     },
     "port": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "singular": {
             "en": "Port",
             "fi": "Satama",
@@ -260,6 +354,10 @@
         }
     },
     "mall": {
+        "level": {
+            "EP": "B1",
+            "OD": "B1"
+        },
         "uses": {
             "en": "centre",
             "fi": [
@@ -295,6 +393,10 @@
         }
     },
     "capital": {
+        "level": {
+            "EP": "A2",
+            "OD": "A1"
+        },
         "uses": {
             "fi": [
                 "city",
