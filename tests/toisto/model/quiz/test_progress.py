@@ -129,8 +129,8 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_has_lower_language_level(self):
         """Test that the next quiz has the lowest language level of the eligible quizzes."""
-        morning = self.create_concept("morning", dict(level=dict(EP="A1"), fi="Aamu", nl="De ochtend"))
-        noon = self.create_concept("noon", dict(level=dict(EP="A2"), fi="Keskipäivä", nl="De middag"))
+        morning = self.create_concept("morning", dict(level=dict(A1="EP"), fi="Aamu", nl="De ochtend"))
+        noon = self.create_concept("noon", dict(level=dict(A2="EP"), fi="Keskipäivä", nl="De middag"))
         quizzes = self.create_quizzes(morning, "fi", "nl") | self.create_quizzes(noon, "fi", "nl")
         self.assertEqual("morning", self.create_progress(quizzes).next_quiz().concept_id)
 

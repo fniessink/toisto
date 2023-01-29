@@ -1,9 +1,11 @@
 {
     "who": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Who?",
         "fi": "Kuka?",
@@ -11,8 +13,10 @@
     },
     "what": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "What?",
         "fi": "Mitä?",
@@ -20,9 +24,11 @@
     },
     "why": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Why?",
         "fi": "Miksi?",
@@ -30,8 +36,10 @@
     },
     "where": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Where?",
         "fi": "Missä?",
@@ -39,8 +47,10 @@
     },
     "when": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "When?",
         "fi": "Milloin?",
@@ -48,9 +58,11 @@
     },
     "which": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Which?",
         "fi": "Mikä?",
@@ -61,9 +73,11 @@
     },
     "how": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "How?",
         "fi": [
@@ -74,8 +88,10 @@
     },
     "how many": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "how",
         "en": "How many?",
@@ -84,9 +100,11 @@
     },
     "what kind of": {
         "level": {
-            "EP": null,
-            "KK": "A1",
-            "OD": null
+            "A1": "KK",
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "What kind of?",
         "fi": "Millainen?",

@@ -1,9 +1,11 @@
 {
     "day": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Day",
@@ -18,9 +20,11 @@
     },
     "week": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Week",
@@ -35,8 +39,10 @@
     },
     "weekend": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "week",
         "singular": {
@@ -61,8 +67,10 @@
     },
     "monday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -90,8 +98,10 @@
     },
     "tuesday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -110,8 +120,10 @@
     },
     "wednesday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -137,8 +149,10 @@
     },
     "thursday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -157,8 +171,10 @@
     },
     "friday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -177,8 +193,10 @@
     },
     "saturday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -197,8 +215,10 @@
     },
     "sunday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day",
@@ -217,9 +237,11 @@
     },
     "today": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day"
@@ -230,9 +252,11 @@
     },
     "yesterday": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "uses": {
             "en": "day"
@@ -243,9 +267,11 @@
     },
     "tomorrow": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Tomorrow",
         "fi": "Huomenna",
@@ -263,8 +289,10 @@
     },
     "last week": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "week",
         "en": "Last week",
@@ -273,8 +301,10 @@
     },
     "next week": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "week",
         "en": "Next week",

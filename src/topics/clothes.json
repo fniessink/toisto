@@ -1,8 +1,10 @@
 {
     "clothes": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Clothes",
         "fi": "Vaatteet",
@@ -10,8 +12,10 @@
     },
     "dress": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Dress",
@@ -26,8 +30,10 @@
     },
     "sock": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Sock",
@@ -42,8 +48,10 @@
     },
     "skirt": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Skirt",
@@ -58,8 +66,10 @@
     },
     "trousers": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Trousers",
@@ -72,8 +82,10 @@
     },
     "coat": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Coat",
@@ -88,8 +100,10 @@
     },
     "underwear": {
         "level": {
-            "EP": "B1",
-            "OD": "B1"
+            "B1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "clothes"
@@ -100,8 +114,10 @@
     },
     "hat": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Hat",
@@ -116,8 +132,10 @@
     },
     "suit": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Suit",
@@ -132,8 +150,10 @@
     },
     "shoe": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Shoe",
@@ -148,8 +168,8 @@
     },
     "sweater": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "uses": {
             "fi": "shirt"
@@ -167,8 +187,10 @@
     },
     "shirt": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Shirt",
@@ -183,8 +205,8 @@
     },
     "to dress": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "infinitive": {
             "en": [

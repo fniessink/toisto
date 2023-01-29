@@ -1,8 +1,10 @@
 {
     "weather": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Weather",
         "fi": "Sää",
@@ -35,8 +37,10 @@
     },
     "rain": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Rain",
         "fi": "Sade",
@@ -44,9 +48,11 @@
     },
     "sun": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Sun",
         "fi": "Aurinko",
@@ -54,9 +60,11 @@
     },
     "wind": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A2"
+            "A1": [
+                "EP",
+                "KK"
+            ],
+            "A2": "OD"
         },
         "en": "Wind",
         "fi": "Tuuli",
@@ -64,8 +72,10 @@
     },
     "cloud": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Cloud",
@@ -80,8 +90,10 @@
     },
     "snow": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Snow",
         "fi": "Lumi",
@@ -89,8 +101,10 @@
     },
     "storm": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Storm",
         "fi": "Myrsky",
@@ -98,8 +112,8 @@
     },
     "thunder": {
         "level": {
-            "EP": "B1",
-            "OD": "C1"
+            "B1": "EP",
+            "C1": "OD"
         },
         "en": "Thunder",
         "fi": "Ukkonen",
@@ -107,8 +121,8 @@
     },
     "fog": {
         "level": {
-            "EP": "A2",
-            "OD": "B2"
+            "A2": "EP",
+            "B2": "OD"
         },
         "en": "Fog",
         "fi": "Sumu",
@@ -116,8 +130,8 @@
     },
     "rainy": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "uses": "rain",
         "en": "Rainy",
@@ -126,8 +140,8 @@
     },
     "sunny": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "uses": "sun",
         "en": "Sunny",
@@ -136,8 +150,10 @@
     },
     "windy": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "wind",
         "en": "Windy",
@@ -146,8 +162,8 @@
     },
     "cloudy": {
         "level": {
-            "EP": "A2",
-            "OD": "B1"
+            "A2": "EP",
+            "B1": "OD"
         },
         "uses": "cloud",
         "en": "Cloudy",
@@ -156,8 +172,8 @@
     },
     "snowy": {
         "level": {
-            "EP": null,
-            "OD": "A2"
+            "A2": "OD",
+            "none": "EP"
         },
         "uses": "snow",
         "en": "Snowy",
@@ -166,8 +182,10 @@
     },
     "stormy": {
         "level": {
-            "EP": "B2",
-            "OD": "B2"
+            "B2": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "storm",
         "en": "Stormy",

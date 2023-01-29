@@ -28,7 +28,7 @@ class Concept:
     _used_concepts: dict[Language, tuple[ConceptId, ...]]
     constituent_concepts: tuple[Concept, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
-    level: CommonReferenceLevel = get_args(CommonReferenceLevel)[-1]  # The highest level means the level is unknown
+    level: CommonReferenceLevel | None = None
 
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""

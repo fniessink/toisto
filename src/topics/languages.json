@@ -1,9 +1,11 @@
 {
     "language": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Language",
@@ -18,8 +20,8 @@
     },
     "dialect": {
         "level": {
-            "EP": "C2",
-            "OD": "C1"
+            "C1": "OD",
+            "C2": "EP"
         },
         "singular": {
             "en": "Dialect",
@@ -34,8 +36,8 @@
     },
     "accent": {
         "level": {
-            "EP": "C2",
-            "OD": "C1"
+            "C1": "OD",
+            "C2": "EP"
         },
         "singular": {
             "en": "Accent",
@@ -50,8 +52,8 @@
     },
     "english": {
         "level": {
-            "EP": "C1",
-            "OD": "A1"
+            "A1": "OD",
+            "C1": "EP"
         },
         "en": "English",
         "fi": "Englanti;language",
@@ -59,8 +61,10 @@
     },
     "chinese": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Chinese",
         "fi": "Kiina;language",
@@ -68,8 +72,10 @@
     },
     "german": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "German",
         "fi": "Saksa;language",
@@ -77,8 +83,10 @@
     },
     "estonian": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Estonian",
         "fi": "Viro;language",
@@ -86,9 +94,11 @@
     },
     "finnish": {
         "level": {
-            "EP": null,
-            "KK": "A1",
-            "OD": null
+            "A1": "KK",
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Finnish",
         "fi": "Suomi;language",
@@ -96,8 +106,10 @@
     },
     "french": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "French",
         "fi": "Ranska;language",
@@ -105,8 +117,10 @@
     },
     "hungarian": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Hungarian",
         "fi": "Unkari;language",
@@ -114,8 +128,10 @@
     },
     "japanese": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Japanese",
         "fi": "Japani;language",
@@ -123,8 +139,10 @@
     },
     "korean": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Korean",
         "fi": "Korea;language",
@@ -132,8 +150,8 @@
     },
     "spanish": {
         "level": {
-            "EP": "A1",
-            "OD": null
+            "A1": "EP",
+            "none": "OD"
         },
         "en": "Spanish",
         "fi": "Espanja;language",
@@ -141,8 +159,10 @@
     },
     "dutch": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Dutch",
         "fi": "Hollanti",
@@ -150,8 +170,10 @@
     },
     "danish": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Danish",
         "fi": "Tanska;language",
@@ -159,8 +181,10 @@
     },
     "norwegian": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Norwegian",
         "fi": "Norja;language",
@@ -168,8 +192,10 @@
     },
     "swedish": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Swedish",
         "fi": "Ruotsi;language",
@@ -177,8 +203,10 @@
     },
     "russian": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Russian",
         "fi": "Venäjä;language",
@@ -186,8 +214,10 @@
     },
     "icelandic": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Icelandic",
         "fi": "Islanti;language",

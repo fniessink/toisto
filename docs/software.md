@@ -419,17 +419,15 @@ Because the sources may disagree on the language level of words, we add the lang
 {
     "1000": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": ["KK", "OD"],
+            "A2": "EP"
         },
         "en": "Thousand",
         "fi": "Tuhat"
     },
     "2000": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": ["EP", "OD"]
         },
         "en": "Two thousand",
         "fi": "Kaksituhatta"
@@ -437,7 +435,7 @@ Because the sources may disagree on the language level of words, we add the lang
 }
 ```
 
-If the source does not provide a language level for a concept, this can be indicated by setting the level to `null`. This makes it clear that the source has been consulted but did not provide a language level for the concept.
+If the source does not provide a language level for a concept, this can be indicated by adding the source to the key `none`. This makes it clear that the source has been consulted but did not provide a language level for the concept.
 
 ## Quizzes
 

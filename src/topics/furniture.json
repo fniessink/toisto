@@ -1,9 +1,11 @@
 {
     "table": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Table",
@@ -18,8 +20,10 @@
     },
     "bed": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Bed",
@@ -34,8 +38,8 @@
     },
     "sofa": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Sofa",
@@ -50,8 +54,8 @@
     },
     "pillow": {
         "level": {
-            "EP": "A2",
-            "OD": null
+            "A2": "EP",
+            "none": "OD"
         },
         "singular": {
             "en": "Pillow",
@@ -66,8 +70,10 @@
     },
     "chair": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Chair",
@@ -82,8 +88,10 @@
     },
     "desk": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": [
@@ -110,8 +118,10 @@
     },
     "lamp": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Lamp",
@@ -126,8 +136,8 @@
     },
     "curtain": {
         "level": {
-            "EP": "A2",
-            "OD": "B1"
+            "A2": "EP",
+            "B1": "OD"
         },
         "singular": {
             "en": "Curtain",
@@ -142,8 +152,10 @@
     },
     "carpet": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Carpet",

@@ -1,8 +1,7 @@
 {
     "there": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": ["EP", "OD"]
         },
         "en": "There",
         "fi": "Tuossa",

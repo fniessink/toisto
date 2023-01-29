@@ -13,7 +13,7 @@ from .concept import Concept
 from .grammar import GrammaticalCategory
 from .label import label_factory
 
-CommonReferenceLevelDict = dict[CommonReferenceLevelSource, CommonReferenceLevel]
+CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 UsesListOrString = ConceptId | list[ConceptId]
 UsesDictOrListOrString = dict[Language, UsesListOrString] | UsesListOrString
 MetaData = Literal["level", "uses"]
@@ -85,11 +85,10 @@ class ConceptFactory:
         """Get the Common Reference Levels from the concept dict."""
         return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
 
-    def get_level(self) -> CommonReferenceLevel:
+    def get_level(self) -> CommonReferenceLevel | None:
         """Determine the Common Reference Level for this concept.
 
         At the moment, just use the highest language level specified by the available sources.
         """
-        concept_levels = [level for level in self.get_levels().values() if level is not None]
-        unknown_level = get_args(CommonReferenceLevel)[-1]
-        return max(concept_levels, default=unknown_level)
+        concept_levels = [level for level in self.get_levels().keys() if level in get_args(CommonReferenceLevel)]
+        return max(concept_levels, default=None)

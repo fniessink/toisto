@@ -1,8 +1,10 @@
 {
     "body": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Body",
@@ -23,9 +25,11 @@
     },
     "eye": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Eye",
@@ -40,9 +44,11 @@
     },
     "ear": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Ear",
@@ -57,8 +63,10 @@
     },
     "hair": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Hair",
@@ -76,8 +84,10 @@
     },
     "nose": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Nose",
@@ -92,8 +102,10 @@
     },
     "mouth": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Mouth",
@@ -108,8 +120,10 @@
     },
     "lip": {
         "level": {
-            "EP": "B1",
-            "OD": "B1"
+            "B1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Lip",
@@ -124,8 +138,10 @@
     },
     "tooth": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Tooth",
@@ -140,9 +156,11 @@
     },
     "head": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Head",
@@ -157,8 +175,8 @@
     },
     "back": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Back",
@@ -173,8 +191,8 @@
     },
     "shoulder": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "uses": {
             "fi": "head"
@@ -192,8 +210,10 @@
     },
     "arm": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "hand"
@@ -211,9 +231,11 @@
     },
     "hand": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Hand",
@@ -228,9 +250,11 @@
     },
     "finger": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A2"
+            "A1": "KK",
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Finger",
@@ -245,8 +269,10 @@
     },
     "stomach": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Stomach",
@@ -261,8 +287,8 @@
     },
     "belly": {
         "level": {
-            "EP": null,
-            "OD": "C2"
+            "C2": "OD",
+            "none": "EP"
         },
         "singular": {
             "en": "Belly",
@@ -283,8 +309,8 @@
     },
     "knee": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "singular": {
             "en": "Knee",
@@ -299,9 +325,11 @@
     },
     "leg": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Leg",
@@ -316,9 +344,11 @@
     },
     "foot": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Foot",
@@ -333,8 +363,8 @@
     },
     "toe": {
         "level": {
-            "EP": "A2",
-            "OD": "B1"
+            "A2": "EP",
+            "B1": "OD"
         },
         "singular": {
             "en": "Toe",

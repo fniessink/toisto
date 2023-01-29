@@ -1,8 +1,8 @@
 {
     "season": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "singular": {
             "en": "Season",
@@ -17,9 +17,11 @@
     },
     "spring": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
         },
         "singular": {
             "en": "Spring",
@@ -67,9 +69,11 @@
     },
     "summer": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Summer",
@@ -102,9 +106,11 @@
     },
     "autumn": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
         },
         "singular": {
             "en": [
@@ -161,9 +167,11 @@
     },
     "winter": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Winter",

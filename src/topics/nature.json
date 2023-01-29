@@ -1,9 +1,11 @@
 {
     "nature": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A2"
+            "A1": "KK",
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Nature",
         "fi": "Luonto",
@@ -11,9 +13,11 @@
     },
     "forest": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A2"
+            "A1": "KK",
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": [
@@ -34,8 +38,10 @@
     },
     "flower": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Flower",
@@ -50,8 +56,10 @@
     },
     "lake": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Lake",
@@ -66,9 +74,11 @@
     },
     "sea": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Sea",
@@ -83,8 +93,10 @@
     },
     "river": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "River",
@@ -99,8 +111,8 @@
     },
     "island": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Island",
@@ -115,8 +127,8 @@
     },
     "coast": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "uses": {
             "fi": "beach"
@@ -134,8 +146,10 @@
     },
     "desert": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "country"
@@ -159,9 +173,11 @@
     },
     "tree": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Tree",
@@ -176,9 +192,11 @@
     },
     "beach": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Beach",
@@ -193,8 +211,8 @@
     },
     "valley": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "singular": {
             "en": "Valley",
@@ -209,8 +227,10 @@
     },
     "hill": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Hill",
@@ -231,8 +251,8 @@
     },
     "mountain": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Mountain",
@@ -247,8 +267,8 @@
     },
     "north": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "North|The north",
         "fi": "Pohjoinen",
@@ -256,8 +276,8 @@
     },
     "east": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "East|The east",
         "fi": "Itä",
@@ -265,8 +285,8 @@
     },
     "south": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "South|The south",
         "fi": "Etelä",
@@ -274,8 +294,8 @@
     },
     "west": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "West|The west",
         "fi": "Länsi",
@@ -283,9 +303,11 @@
     },
     "world": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "country"
@@ -296,8 +318,8 @@
     },
     "continent": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "uses": {
             "fi": "country"
