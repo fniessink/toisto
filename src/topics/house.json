@@ -1,8 +1,8 @@
 {
     "apartment": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Apartment",
@@ -17,9 +17,11 @@
     },
     "room": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Room",
@@ -34,8 +36,10 @@
     },
     "basement": {
         "level": {
-            "EP": "B2",
-            "OD": "B2"
+            "B2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Basement",
@@ -50,9 +54,11 @@
     },
     "home": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Home",
@@ -66,9 +72,11 @@
     },
     "garden": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Garden",
@@ -83,9 +91,11 @@
     },
     "house": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "House",
@@ -100,8 +110,8 @@
     },
     "veranda": {
         "level": {
-            "EP": null,
-            "OD": "C2"
+            "C2": "OD",
+            "none": "EP"
         },
         "singular": {
             "en": "Veranda",
@@ -116,8 +126,8 @@
     },
     "barbecue": {
         "level": {
-            "EP": "A2",
-            "OD": "B1"
+            "A2": "EP",
+            "B1": "OD"
         },
         "singular": {
             "en": "Barbecue",
@@ -132,8 +142,10 @@
     },
     "wall": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Wall",
@@ -148,8 +160,10 @@
     },
     "floor": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Floor",
@@ -164,9 +178,11 @@
     },
     "door": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Door",
@@ -181,9 +197,11 @@
     },
     "window": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Window",
@@ -198,8 +216,10 @@
     },
     "stairs": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Stairs",
@@ -215,8 +235,10 @@
     },
     "living room": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": [
@@ -249,8 +271,10 @@
     },
     "kitchen": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Kitchen",
@@ -265,8 +289,10 @@
     },
     "bedroom": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": [
@@ -292,8 +318,10 @@
     },
     "bathroom": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "room",
         "singular": {

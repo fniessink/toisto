@@ -1,9 +1,11 @@
 {
     "book": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Book",

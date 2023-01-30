@@ -1,9 +1,11 @@
 {
     "time": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Time",
         "fi": "Aika",
@@ -11,9 +13,11 @@
     },
     "now": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Now",
         "fi": "Nyt",
@@ -21,9 +25,11 @@
     },
     "morning": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Morning",
@@ -38,8 +44,10 @@
     },
     "afternoon": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Afternoon",
@@ -54,9 +62,11 @@
     },
     "evening": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Evening",
@@ -71,9 +81,11 @@
     },
     "night": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Night",
@@ -88,8 +100,8 @@
     },
     "midnight": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "uses": "night",
         "singular": {
@@ -105,9 +117,11 @@
     },
     "year": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Year",
@@ -122,8 +136,8 @@
     },
     "decade": {
         "level": {
-            "EP": "B2",
-            "OD": "B1"
+            "B1": "OD",
+            "B2": "EP"
         },
         "uses": {
             "fi": [
@@ -144,8 +158,8 @@
     },
     "century": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "B1": "OD",
+            "B2": "EP"
         },
         "uses": {
             "fi": [
@@ -166,9 +180,11 @@
     },
     "hour": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Hour",
@@ -183,9 +199,11 @@
     },
     "minute": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Minute",
@@ -200,9 +218,11 @@
     },
     "clock": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Clock",

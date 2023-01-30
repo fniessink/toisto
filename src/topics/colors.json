@@ -1,9 +1,11 @@
 {
     "black": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Black",
         "fi": "Musta",
@@ -11,9 +13,11 @@
     },
     "white": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "White",
         "fi": "Valkoinen",
@@ -21,8 +25,10 @@
     },
     "blue": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Blue",
         "fi": "Sininen",
@@ -30,9 +36,11 @@
     },
     "green": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Green",
         "fi": "Vihreä",
@@ -40,9 +48,11 @@
     },
     "red": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Red",
         "fi": "Punainen",
@@ -50,8 +60,10 @@
     },
     "yellow": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Yellow",
         "fi": "Keltainen",
@@ -59,8 +71,8 @@
     },
     "purple": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "Purple",
         "fi": [
@@ -71,8 +83,10 @@
     },
     "orange": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Orange",
         "fi": "Oranssi",
@@ -80,8 +94,10 @@
     },
     "brown": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Brown",
         "fi": "Ruskea",
@@ -89,8 +105,8 @@
     },
     "pink": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "en": "Pink",
         "fi": [
@@ -101,8 +117,10 @@
     },
     "grey": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Grey|Gray",
         "fi": "Harmaa",
@@ -110,8 +128,8 @@
     },
     "light blue": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "uses": "blue",
         "en": "Light blue",
@@ -120,8 +138,8 @@
     },
     "dark blue": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "uses": "blue",
         "en": "Dark blue",

@@ -1,8 +1,10 @@
 {
     "month": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon",
@@ -21,8 +23,10 @@
     },
     "moon": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Moon",
@@ -37,8 +41,10 @@
     },
     "january": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -55,8 +61,10 @@
     },
     "february": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -67,8 +75,10 @@
     },
     "march": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -79,8 +89,10 @@
     },
     "april": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -97,8 +109,10 @@
     },
     "may": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -109,8 +123,10 @@
     },
     "june": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": [
@@ -124,8 +140,10 @@
     },
     "july": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -136,8 +154,10 @@
     },
     "august": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -148,8 +168,10 @@
     },
     "september": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": [
@@ -163,8 +185,10 @@
     },
     "october": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -175,8 +199,10 @@
     },
     "november": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "moon"
@@ -187,8 +213,10 @@
     },
     "december": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": [

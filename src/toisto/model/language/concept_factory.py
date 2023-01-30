@@ -13,7 +13,7 @@ from .concept import Concept
 from .grammar import GrammaticalCategory
 from .label import label_factory
 
-CommonReferenceLevelDict = dict[CommonReferenceLevelSource, CommonReferenceLevel]
+CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 UsesListOrString = ConceptId | list[ConceptId]
 UsesDictOrListOrString = dict[Language, UsesListOrString] | UsesListOrString
 MetaData = Literal["level", "uses"]
@@ -41,14 +41,16 @@ class ConceptFactory:
         """Create a composite concept from a composite concept dict."""
         constituent_concepts = []
         uses = self.get_uses()
-        level = self.get_level()
+        levels = self.get_levels()
         for category in self.get_grammatical_categories():
             constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
-            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | dict(uses=uses)
-            constituent_concept_dict.setdefault("level", level)  # type: ignore
+            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | cast(
+                CompositeConceptDict, dict(uses=uses)
+            )
+            constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             constituent_concepts.append(concept_factory.create_concept())
-        return Concept(self.concept_id, self.get_used_concepts(), tuple(constituent_concepts), _level=level)
+        return Concept(self.concept_id, self.get_used_concepts(), tuple(constituent_concepts), level=self.get_level())
 
     def leaf_concept(self) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
@@ -79,6 +81,14 @@ class ConceptFactory:
         """Get the uses from the concept dict."""
         return cast(UsesDictOrListOrString, self.concept_dict.get("uses", {}))
 
-    def get_level(self) -> CommonReferenceLevelDict:
-        """Get the Common Reference Levels."""
+    def get_levels(self) -> CommonReferenceLevelDict:
+        """Get the Common Reference Levels from the concept dict."""
         return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
+
+    def get_level(self) -> CommonReferenceLevel | None:
+        """Determine the Common Reference Level for this concept.
+
+        At the moment, just use the highest language level specified by the available sources.
+        """
+        concept_levels = [level for level in self.get_levels().keys() if level in get_args(CommonReferenceLevel)]
+        return max(concept_levels, default=None)

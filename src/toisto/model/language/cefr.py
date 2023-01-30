@@ -4,7 +4,7 @@ from typing import Literal
 
 
 # Source: https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions
-CommonReferenceLevel = Literal["A1", "A2", "B1", "B2", "C1", "C2", "Z?"]
+CommonReferenceLevel = Literal["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # Toisto uses different sources to assess the common reference level for concepts:
 CommonReferenceLevelSource = Literal["EP", "KK", "OD"]

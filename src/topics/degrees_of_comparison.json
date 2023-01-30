@@ -1,9 +1,11 @@
 {
     "small": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Small",
@@ -23,8 +25,10 @@
     },
     "important": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Important",
@@ -44,8 +48,10 @@
     },
     "expensive": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Expensive",
@@ -65,8 +71,10 @@
     },
     "cheap": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Cheap",
@@ -86,8 +94,10 @@
     },
     "hot": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Hot",
@@ -107,9 +117,11 @@
     },
     "cold": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Cold",
@@ -129,8 +141,8 @@
     },
     "light (not heavy)": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "positive degree": {
             "en": "Light",
@@ -150,9 +162,11 @@
     },
     "easy": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Easy",
@@ -172,9 +186,11 @@
     },
     "hard": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Hard",
@@ -194,9 +210,11 @@
     },
     "beautiful": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Beautiful",
@@ -216,9 +234,11 @@
     },
     "new": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "New",
@@ -238,9 +258,11 @@
     },
     "old": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Old",
@@ -260,8 +282,8 @@
     },
     "cute": {
         "level": {
-            "EP": null,
-            "OD": "B2"
+            "B2": "OD",
+            "none": "EP"
         },
         "positive degree": {
             "en": "Cute",
@@ -281,9 +303,11 @@
     },
     "fast": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Fast",
@@ -303,8 +327,8 @@
     },
     "quiet": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "positive degree": {
             "en": "Quiet",
@@ -324,8 +348,10 @@
     },
     "fresh": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Fresh",
@@ -345,8 +371,10 @@
     },
     "warm": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Warm",
@@ -366,8 +394,10 @@
     },
     "round": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Round",
@@ -387,9 +417,11 @@
     },
     "strange": {
         "level": {
-            "EP": "A2",
-            "KK": "A1",
-            "OD": "A2"
+            "A1": "KK",
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Strange",
@@ -409,8 +441,10 @@
     },
     "honest": {
         "level": {
-            "EP": "B1",
-            "OD": "B1"
+            "B1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Honest",
@@ -430,9 +464,11 @@
     },
     "long": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Long",
@@ -452,9 +488,11 @@
     },
     "short": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Short",
@@ -474,8 +512,10 @@
     },
     "tasty": {
         "level": {
-            "EP": "B1",
-            "OD": "B1"
+            "B1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Tasty",
@@ -495,8 +535,10 @@
     },
     "slow": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Slow",
@@ -516,8 +558,8 @@
     },
     "sweet": {
         "level": {
-            "EP": "A1",
-            "OD": "A2"
+            "A1": "EP",
+            "A2": "OD"
         },
         "positive degree": {
             "en": "Sweet",
@@ -537,9 +579,11 @@
     },
     "big": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Big",
@@ -568,9 +612,11 @@
     },
     "nice": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "Nice",

@@ -1,8 +1,10 @@
 {
     "holiday": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "day",
         "singular": {
@@ -18,8 +20,8 @@
     },
     "christmas": {
         "level": {
-            "EP": null,
-            "OD": "A1"
+            "A1": "OD",
+            "none": "EP"
         },
         "en": "Christmas",
         "fi": "Joulu",
@@ -27,8 +29,8 @@
     },
     "christmas eve": {
         "level": {
-            "EP": null,
-            "OD": "C1"
+            "C1": "OD",
+            "none": "EP"
         },
         "uses": {
             "en": "christmas",
@@ -44,8 +46,8 @@
     },
     "christmas day": {
         "level": {
-            "EP": null,
-            "OD": "A1"
+            "A1": "OD",
+            "none": "EP"
         },
         "uses": [
             "christmas",
@@ -57,8 +59,8 @@
     },
     "boxing day": {
         "level": {
-            "EP": null,
-            "OD": "C1"
+            "C1": "OD",
+            "none": "EP"
         },
         "uses": {
             "en": "day",
@@ -74,8 +76,10 @@
     },
     "merry christmas": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "christmas",
         "en": "Merry Christmas!",
@@ -86,8 +90,10 @@
     },
     "christmas tree": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": [
             "christmas",
@@ -99,8 +105,10 @@
     },
     "santa": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": "christmas",
@@ -112,8 +120,10 @@
     },
     "elf": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "en": "Elf",
         "fi": "Tonttu",
@@ -126,8 +136,10 @@
     },
     "bauble": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "fi": [
@@ -142,8 +154,8 @@
     },
     "new year": {
         "level": {
-            "EP": null,
-            "OD": "A1"
+            "A1": "OD",
+            "none": "EP"
         },
         "uses": [
             "new",
@@ -155,8 +167,10 @@
     },
     "happy new year": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "new year",
         "en": "Happy New Year!",
@@ -165,8 +179,10 @@
     },
     "valentine's day": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "day",
         "en": "Valentine's Day",
@@ -175,8 +191,8 @@
     },
     "epiphany": {
         "level": {
-            "EP": null,
-            "OD": "C2"
+            "C2": "OD",
+            "none": "EP"
         },
         "en": "Epiphany",
         "fi": "Loppiainen",
@@ -184,8 +200,8 @@
     },
     "easter": {
         "level": {
-            "EP": null,
-            "OD": "B1"
+            "B1": "OD",
+            "none": "EP"
         },
         "en": "Easter",
         "fi": "Pääsiäinen",
@@ -193,8 +209,10 @@
     },
     "first of may": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": {
             "en": "may",
@@ -206,8 +224,8 @@
     },
     "midsummer": {
         "level": {
-            "EP": null,
-            "OD": "C1"
+            "C1": "OD",
+            "none": "EP"
         },
         "uses": {
             "en": "summer",
@@ -219,8 +237,10 @@
     },
     "finnish independence day": {
         "level": {
-            "EP": null,
-            "OD": null
+            "none": [
+                "EP",
+                "OD"
+            ]
         },
         "uses": "day",
         "fi": "Itsenäisyyspäivä"

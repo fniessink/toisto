@@ -1,7 +1,11 @@
 {
     "hi": {
         "level": {
-            "KK": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Hi",
         "fi": [
@@ -12,13 +16,24 @@
     },
     "hello": {
         "level": {
-            "KK": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "en": "Hello",
         "fi": "Terve",
         "nl": "Hallo"
     },
     "bye": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "en": [
             "Bye",
             "Bye bye"
@@ -34,6 +49,10 @@
         ]
     },
     "welcome": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP"
+        },
         "en": "Welcome",
         "fi": "Tervetuloa",
         "nl": "Welkom"
@@ -68,7 +87,11 @@
     },
     "name": {
         "level": {
-            "KK": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Name",
@@ -111,6 +134,10 @@
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
     },
     "good morning": {
+        "level": {
+            "A1": "EP",
+            "none": "OD"
+        },
         "uses": "morning",
         "en": "Good morning",
         "fi": [
@@ -120,6 +147,10 @@
         "nl": "Goedemorgen"
     },
     "good afternoon": {
+        "level": {
+            "A1": "EP",
+            "none": "OD"
+        },
         "uses": {
             "en": "afternoon",
             "fi": "day",
@@ -133,6 +164,12 @@
         "nl": "Goedemiddag"
     },
     "good day": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
         "uses": "day",
         "en": "Good day",
         "fi": [
@@ -142,6 +179,10 @@
         "nl": "Goedendag"
     },
     "good evening": {
+        "level": {
+            "A1": "EP",
+            "none": "OD"
+        },
         "uses": "evening",
         "en": "Good evening",
         "fi": [
@@ -151,6 +192,10 @@
         "nl": "Goedenavond"
     },
     "good night": {
+        "level": {
+            "A1": "EP",
+            "none": "OD"
+        },
         "uses": "night",
         "en": "Good night",
         "fi": "Hyvää yötä",
@@ -160,6 +205,12 @@
         ]
     },
     "sleep well": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
         "uses": "to sleep",
         "en": "Sleep well",
         "fi": "Nuku hyvin",

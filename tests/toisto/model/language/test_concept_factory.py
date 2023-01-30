@@ -31,7 +31,7 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_level(self):
         """Test that a concept can have a level."""
-        concept = self.create_concept("one", dict(level=dict(EP="A1"), fi="Yksi", nl="Eén"))
+        concept = self.create_concept("one", dict(level=dict(A1="EP"), fi="Yksi", nl="Eén"))
         self.assertEqual("A1", concept.level)
 
     def test_override_level(self):
@@ -39,10 +39,15 @@ class ConcepFactoryTest(ToistoTestCase):
         concept = self.create_concept(
             "morning",
             dict(
-                level=dict(EP="A1"),
+                level=dict(A1="EP"),
                 singular=dict(fi="Aamu", nl="De ochtend"),
-                plural=dict(level=dict(EP="A2"), fi="Aamut", nl="De ochtenden"),
+                plural=dict(level=dict(A2="EP"), fi="Aamut", nl="De ochtenden"),
             ),
         )
         self.assertEqual("A1", concept.constituent_concepts[0].level)
         self.assertEqual("A2", concept.constituent_concepts[1].level)
+
+    def test_missing_level(self):
+        """Test that the concept has no level if the concept dict does not contain one."""
+        concept = self.create_concept("one", dict(level=dict(none="EP"), fi="Yksi", nl="Eén"))
+        self.assertEqual(None, concept.level)

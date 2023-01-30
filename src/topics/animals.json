@@ -1,9 +1,11 @@
 {
     "animal": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Animal",
@@ -18,8 +20,8 @@
     },
     "pet": {
         "level": {
-            "EP": "A1",
-            "OD": "A2"
+            "A1": "EP",
+            "A2": "OD"
         },
         "uses": {
             "fi": [
@@ -50,9 +52,11 @@
     },
     "dog": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Dog",
@@ -67,9 +71,11 @@
     },
     "cat": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Cat",
@@ -84,8 +90,8 @@
     },
     "rhino": {
         "level": {
-            "EP": null,
-            "OD": "C1"
+            "C1": "OD",
+            "none": "EP"
         },
         "uses": {
             "fi": [
@@ -109,8 +115,8 @@
     },
     "elephant": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Elephant",
@@ -131,8 +137,8 @@
     },
     "mouse": {
         "level": {
-            "EP": "A2",
-            "OD": "A1"
+            "A1": "OD",
+            "A2": "EP"
         },
         "singular": {
             "en": "Mouse",
@@ -147,8 +153,10 @@
     },
     "duck": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Duck",
@@ -163,8 +171,8 @@
     },
     "goose": {
         "level": {
-            "EP": null,
-            "OD": "A2"
+            "A2": "OD",
+            "none": "EP"
         },
         "singular": {
             "en": "Goose",
@@ -179,8 +187,10 @@
     },
     "bird": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Bird",
@@ -195,9 +205,11 @@
     },
     "horse": {
         "level": {
-            "EP": "A1",
-            "KK": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Horse",
@@ -212,7 +224,7 @@
     },
     "cow": {
         "level": {
-            "OD": "A1"
+            "A1": "OD"
         },
         "singular": {
             "en": "Cow",
@@ -227,8 +239,10 @@
     },
     "pig": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Pig",
@@ -249,8 +263,10 @@
     },
     "deer": {
         "level": {
-            "EP": "B2",
-            "OD": "B2"
+            "B2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Deer",
@@ -265,8 +281,8 @@
     },
     "bear": {
         "level": {
-            "EP": "A2",
-            "OD": "B2"
+            "A2": "EP",
+            "B2": "OD"
         },
         "singular": {
             "en": "Bear",
@@ -281,8 +297,10 @@
     },
     "sheep": {
         "level": {
-            "EP": "A1",
-            "OD": "A1"
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Sheep",
@@ -297,8 +315,10 @@
     },
     "crab": {
         "level": {
-            "EP": "B2",
-            "OD": "B2"
+            "B2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Crab",
@@ -313,8 +333,8 @@
     },
     "spider": {
         "level": {
-            "EP": "B1",
-            "OD": "A2"
+            "A2": "OD",
+            "B1": "EP"
         },
         "singular": {
             "en": "Spider",
@@ -329,8 +349,10 @@
     },
     "rabbit": {
         "level": {
-            "EP": "A2",
-            "OD": "A2"
+            "A2": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": [
@@ -357,8 +379,10 @@
     },
     "horn": {
         "level": {
-            "EP": "C1",
-            "OD": "C1"
+            "C1": [
+                "EP",
+                "OD"
+            ]
         },
         "singular": {
             "en": "Horn",
@@ -373,8 +397,8 @@
     },
     "tail": {
         "level": {
-            "EP": "B2",
-            "OD": "B1"
+            "B1": "OD",
+            "B2": "EP"
         },
         "singular": {
             "en": "Tail",
