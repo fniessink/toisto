@@ -2,7 +2,6 @@
 
 from typing import Literal
 
-
 GrammaticalGender = Literal["female", "male", "neuter"]
 GrammaticalNumber = Literal["infinitive", "singular", "plural"]
 GrammaticalPerson = Literal["first person", "second person", "third person"]

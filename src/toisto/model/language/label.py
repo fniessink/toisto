@@ -6,11 +6,11 @@ from __future__ import annotations
 class Label(str):
     """Class representing labels for concepts."""
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: object) -> bool:
         """Ignore hints when determining equality."""
-        return self.split(";", maxsplit=1)[0] == other.split(";", maxsplit=1)[0]
+        return self.split(";", maxsplit=1)[0] == str(other).split(";", maxsplit=1)[0]
 
-    def __ne__(self, other) -> bool:
+    def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
         return not self == other
 

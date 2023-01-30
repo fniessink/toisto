@@ -1,11 +1,12 @@
 """Unit tests for the practice command."""
 
 from configparser import ConfigParser
-from unittest.mock import call, patch, Mock, MagicMock
+from unittest.mock import MagicMock, Mock, call, patch
 
-from toisto.command import practice
-from toisto.model import Progress, Topic, Topics
+from toisto.command.practice import practice
 from toisto.model.model_types import ConceptId
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.topic import Topic, Topics
 from toisto.ui.dictionary import linkify
 from toisto.ui.text import DONE, TRY_AGAIN
 
@@ -42,7 +43,7 @@ class PracticeTest(ToistoTestCase):
 
     @patch("builtins.input", Mock(side_effect=["\n", "hoi\n"]))
     @patch("builtins.print")
-    def test_quiz_empty_answer(self, mock_print):
+    def test_quiz_empty_answer(self, mock_print: Mock):
         """Test that the user is quizzed."""
         self.practice()
         self.assertEqual([call("\x1b[F", end="")], mock_print.call_args_list)
@@ -57,7 +58,7 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen")
-        topics = Topics(set([Topic("topic", (), set([quiz]))]))
+        topics = Topics({Topic("topic", (), {quiz})})
         patched_print = self.practice(Progress({}, topics))
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
@@ -65,23 +66,20 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
-        topics = Topics(set([Topic("topic", (), set([quiz]))]))
+        topics = Topics({Topic("topic", (), {quiz})})
         patched_print = self.practice(Progress({}, topics))
-        self.assertIn(
-            call(f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'), patched_print.call_args_list
-        )
+        expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
+        self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Talot\n"))
     def test_quiz_with_multiple_meanings(self):
         """Test that the translation is not printed on a non-translate quiz."""
         concept = self.create_concept("house")
         quiz = self.create_quiz(concept, "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
-        topics = Topics(set([Topic("topic", (), set([quiz]))]))
+        topics = Topics({Topic("topic", (), {quiz})})
         patched_print = self.practice(Progress({}, topics))
-        self.assertIn(
-            call(f"""✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n"""),
-            patched_print.call_args_list,
-        )
+        expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n'
+        self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
     def test_quiz_try_again(self):

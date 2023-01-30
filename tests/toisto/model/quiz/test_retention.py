@@ -1,9 +1,9 @@
 """Retention unit tests."""
 
-from datetime import datetime, timedelta
 import unittest
+from datetime import datetime, timedelta
 
-from toisto.model import Retention
+from toisto.model.quiz.retention import Retention
 
 
 class RetentionTest(unittest.TestCase):
@@ -16,9 +16,11 @@ class RetentionTest(unittest.TestCase):
     def guess(self, *guesses: bool) -> None:
         """Register the guesses with the retention."""
         for guess in guesses:
-            self.retention.update(guess)
             if guess:
+                self.retention.increase()
                 self.retention.start = (self.retention.start or datetime.now()) - timedelta(minutes=30)
+            else:
+                self.retention.reset()
 
     def test_equality(self):
         """Test that two retentions with the same attributes are equal."""

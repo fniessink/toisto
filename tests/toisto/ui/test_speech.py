@@ -2,10 +2,9 @@
 
 import unittest
 from configparser import ConfigParser
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
 import gtts
-
 from toisto.ui.speech import say
 
 
@@ -20,7 +19,7 @@ class SayTest(unittest.TestCase):
     @patch("sys.platform", "darwin")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
     @patch("os.system")
-    def test_google_translate_fails_on_mac_os(self, mock_os_system):
+    def test_google_translate_fails_on_mac_os(self, mock_os_system: Mock):
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
@@ -35,7 +34,7 @@ class SayTest(unittest.TestCase):
 
     @patch("gtts.gTTS.save", Mock())
     @patch("os.system")
-    def test_system_call_afplay(self, mock_os_system):
+    def test_system_call_afplay(self, mock_os_system: Mock):
         """Test that the afplay program is called with the correct arguments."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
@@ -44,7 +43,7 @@ class SayTest(unittest.TestCase):
 
     @patch("gtts.gTTS.save", Mock())
     @patch("toisto.ui.speech.playsound")
-    def test_call_playsound(self, mock_playsound):
+    def test_call_playsound(self, mock_playsound: Mock):
         """Test that the playsound function is called."""
         self.config.set("commands", "mp3player", "playsound")
         say("nl", "Hallo", self.config)

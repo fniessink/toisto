@@ -5,7 +5,6 @@ from __future__ import annotations
 from dataclasses import dataclass, fields
 from datetime import datetime, timedelta
 
-
 optional_datetime = datetime | None
 SKIP_INTERVAL_GROWTH_FACTOR = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
 
@@ -19,22 +18,23 @@ class Retention:
     skip_until: optional_datetime = None  # Don't quiz this again until after the datetime
     count: int = 0  # Number of times the quiz was presented
 
-    def update(self, correct: bool) -> None:
-        """Update the retention of the quiz."""
-        now = datetime.now()
+    def increase(self) -> None:
+        """Increase the retention of the quiz after a correct answer."""
         self.count += 1
-        if correct:
-            self.end = now
-            if self.start is None:
-                self.start = now
-            if self.count == 1:
-                self.skip_until = now + timedelta(days=1)  # User already knows the answer, skip ahead
-            elif now > self.start:
-                self.skip_until = now + (now - self.start) * SKIP_INTERVAL_GROWTH_FACTOR
-            else:
-                self.skip_until = None
+        self.end = now = datetime.now()
+        if self.start is None:
+            self.start = now
+        if self.count == 1:
+            self.skip_until = now + timedelta(days=1)  # User already knows the answer, skip ahead
+        elif now > self.start:
+            self.skip_until = now + (now - self.start) * SKIP_INTERVAL_GROWTH_FACTOR
         else:
-            self.skip_until = self.start = self.end = None
+            self.skip_until = None
+
+    def reset(self) -> None:
+        """Reset the retention of the quiz after an incorrect answer."""
+        self.count += 1
+        self.skip_until = self.start = self.end = None
 
     @property
     def length(self) -> timedelta:

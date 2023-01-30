@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import cast, get_args, Literal, Union
+from typing import Literal, Union, cast, get_args
 
 from toisto.metadata import Language
 
@@ -18,10 +18,12 @@ UsesListOrString = ConceptId | list[ConceptId]
 UsesDictOrListOrString = dict[Language, UsesListOrString] | UsesListOrString
 MetaData = Literal["level", "uses"]
 LeafConceptDict = dict[
-    Language | MetaData, ConceptId | list[ConceptId] | UsesDictOrListOrString | CommonReferenceLevelDict
+    Language | MetaData,
+    ConceptId | list[ConceptId] | UsesDictOrListOrString | CommonReferenceLevelDict,
 ]
 CompositeConceptDict = dict[
-    GrammaticalCategory | MetaData, Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict]
+    GrammaticalCategory | MetaData,
+    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict],
 ]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
@@ -34,19 +36,17 @@ class ConceptFactory:
     concept_dict: ConceptDict
 
     def create_concept(self) -> Concept:
-        """Create a concept from the concept_dict"""
+        """Create a concept from the concept_dict."""
         return self.composite_concept() if self.get_grammatical_categories() else self.leaf_concept()
 
     def composite_concept(self) -> Concept:
         """Create a composite concept from a composite concept dict."""
         constituent_concepts = []
-        uses = self.get_uses()
+        uses = cast(CompositeConceptDict, dict(uses=self.get_uses()))
         levels = self.get_levels()
         for category in self.get_grammatical_categories():
             constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
-            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | cast(
-                CompositeConceptDict, dict(uses=uses)
-            )
+            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | uses
             constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             constituent_concepts.append(concept_factory.create_concept())
@@ -90,5 +90,5 @@ class ConceptFactory:
 
         At the moment, just use the highest language level specified by the available sources.
         """
-        concept_levels = [level for level in self.get_levels().keys() if level in get_args(CommonReferenceLevel)]
+        concept_levels = [level for level in self.get_levels() if level in get_args(CommonReferenceLevel)]
         return max(concept_levels, default=None)

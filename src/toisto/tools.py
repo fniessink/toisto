@@ -1,10 +1,13 @@
 """Zip function that cycles shorter lists."""
 
 from itertools import cycle
+from typing import Iterator, TypeVar
+
+T = TypeVar("T")
 
 
-def zip_and_cycle(*lists):
+def zip_and_cycle(*lists: list[T]) -> Iterator[tuple[T]]:
     """Zip the lists, while cycling lists that are shorter than the longest list."""
-    max_len = max(len(l) for l in lists) if lists else 0
-    lists = [cycle(l) if len(l) < max_len else l for l in lists]
-    return zip(*lists)
+    max_len = max(len(lst) for lst in lists) if lists else 0
+    cycled_lists = [cycle(lst) if len(lst) < max_len else lst for lst in lists]
+    yield from zip(*cycled_lists, strict=False)

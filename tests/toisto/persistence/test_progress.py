@@ -2,11 +2,12 @@
 
 import unittest
 from argparse import ArgumentParser
-from unittest.mock import patch, MagicMock, Mock
+from unittest.mock import MagicMock, Mock, patch
 
-from toisto.model import Progress, Retention, Topics
-from toisto.persistence import load_progress, save_progress
-from toisto.persistence.progress import PROGRESS_JSON
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.retention import Retention
+from toisto.model.quiz.topic import Topics
+from toisto.persistence.progress import PROGRESS_JSON, load_progress, save_progress
 
 
 class ProgressPersistenceTest(unittest.TestCase):
@@ -21,7 +22,7 @@ class ProgressPersistenceTest(unittest.TestCase):
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr.write")
     @patch("pathlib.Path.open")
-    def test_load_invalid_progress(self, path_open, stderr_write):
+    def test_load_invalid_progress(self, path_open: Mock, stderr_write: Mock):
         """Test that the the program exists if the progress cannot be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = ""
         self.assertRaises(SystemExit, load_progress, Topics(set()), ArgumentParser())
@@ -29,14 +30,14 @@ class ProgressPersistenceTest(unittest.TestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
-    def test_load_existing_progress(self, path_open):
+    def test_load_existing_progress(self, path_open: Mock):
         """Test that the progress can be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {}}'
         self.assertEqual(dict(quiz=Retention().as_dict()), load_progress(Topics(set()), ArgumentParser()).as_dict())
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_empty_progress(self, dump, path_open):
+    def test_save_empty_progress(self, dump: Mock, path_open: Mock):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress({}, Topics(set())))
@@ -44,7 +45,7 @@ class ProgressPersistenceTest(unittest.TestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_incorrect_only_progress(self, dump, path_open):
+    def test_save_incorrect_only_progress(self, dump: Mock, path_open: Mock):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress(dict(quiz={}), Topics(set())))
@@ -52,7 +53,7 @@ class ProgressPersistenceTest(unittest.TestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_progress(self, dump, path_open):
+    def test_save_progress(self, dump: Mock, path_open: Mock):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress(dict(quiz=dict(skip_until="3000-01-01")), Topics(set())))

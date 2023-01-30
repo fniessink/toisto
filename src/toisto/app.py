@@ -1,20 +1,24 @@
 """Main module for the application."""
 
-import readline  # pylint: disable=unused-import
 import logging
+import readline  # noqa: F401 `readline` imported but unused
 
 # Suppress warning messages printed by the playsound module.
-logging.getLogger().setLevel(logging.ERROR)  # pylint: disable=wrong-import-position
+logging.getLogger().setLevel(logging.ERROR)
 
-from .command import practice, show_topics, show_progress
+from .command.practice import practice
+from .command.show_progress import show_progress
+from .command.show_topics import show_topics
 from .metadata import latest_version
-from .persistence import load_topics, load_progress, read_config
+from .persistence.config import read_config
+from .persistence.progress import load_progress
+from .persistence.topics import load_topics
 from .ui.cli import create_argument_parser
 from .ui.text import show_welcome
 
 
-def main():
-    """Main program."""
+def main() -> None:
+    """Run the main program."""
     config = read_config()
     argument_parser = create_argument_parser()
     args = argument_parser.parse_args()

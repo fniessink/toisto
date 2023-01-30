@@ -43,17 +43,24 @@ $ green -r
 Run mypy to check for typing issues:
 
 ```console
-$ mpypy src tests
+$ mypy src tests
 Success: no issues found in 49 source files
 ```
 
-Run Pylint to check for linting issues:
+Run Ruff to check for linting issues:
 
 ```console
-$ pylint src tests
+$ ruff .
+```
 
---------------------------------------------------------------------
-Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+## How to format the source code
+
+Run Black to format the code:
+
+```console
+$ black src tests
+All done! ✨ 🍰 ✨
+67 files left unchanged.
 ```
 
 ## How to release

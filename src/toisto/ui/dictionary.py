@@ -2,6 +2,8 @@
 
 from string import punctuation
 
+DICTIONARY_URL = "https://en.wiktionary.org/wiki"
+
 
 def linkify_and_enumerate(*texts: str, sep: str = ", ") -> str:
     """Return a linkified and enumerated version of the texts."""
@@ -13,7 +15,7 @@ def linkify(text: str) -> str:
     linkified_words = []
     for word in text.split():
         prefix, word, postfix = split_punctuation(word)
-        linkified_words.append(f"{prefix}[link=https://en.wiktionary.org/wiki/{word.lower()}]{word}[/link]{postfix}")
+        linkified_words.append(f"{prefix}[link={DICTIONARY_URL}/{word.lower()}]{word}[/link]{postfix}")
     return " ".join(linkified_words)
 
 

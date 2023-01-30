@@ -2,7 +2,6 @@
 
 from typing import Literal
 
-
 # Source: https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions
 CommonReferenceLevel = Literal["A1", "A2", "B1", "B2", "C1", "C2"]
 
@@ -17,7 +16,7 @@ SOURCES: dict[CommonReferenceLevelSource, dict[Literal["name", "url", "language"
     ),
     KK=dict(name="Yle Kielikoulu Learning Profile", url="https://kielikoulu.yle.fi/#/profile", language="fi"),
     OD=dict(
-        name="Oxford Advanced Learner’s Dictionary online",
+        name="Oxford Advanced Learner's Dictionary online",
         url="https://www.oxfordlearnersdictionaries.com",
         language="en",
     ),

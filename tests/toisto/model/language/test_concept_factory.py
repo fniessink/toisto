@@ -14,7 +14,8 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_composite_concept(self):
         """Test that a composite concept has constituent concepts."""
         concept = self.create_concept(
-            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+            "morning",
+            dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden")),
         )
         self.assertEqual(2, len(concept.constituent_concepts))
 

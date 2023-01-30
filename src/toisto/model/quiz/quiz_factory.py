@@ -5,8 +5,8 @@ from itertools import zip_longest
 
 from toisto.metadata import Language
 
-from .quiz import Quiz, Quizzes, QuizType, GRAMMATICAL_QUIZ_TYPES
-from ..language import Concept
+from ..language.concept import Concept
+from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 
 
 @dataclass
@@ -75,7 +75,7 @@ class QuizFactory:
             quiz_types = grammatical_quiz_types(concept1, concept2)
             quizzes |= Quizzes(
                 Quiz(concept, language, language, label1, (label2,), quiz_types, blocked_by, meanings)
-                for label1, label2 in zip(labels1, labels2)
+                for label1, label2 in zip(labels1, labels2, strict=False)
                 if label1 != label2
             )
         return quizzes

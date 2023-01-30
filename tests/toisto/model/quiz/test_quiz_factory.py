@@ -1,6 +1,6 @@
 """Concept unit tests."""
 
-from toisto.model import Label
+from toisto.model.language.label import Label
 
 from ...base import ToistoTestCase
 
@@ -39,13 +39,15 @@ class QuizFactoryTestCase(ToistoTestCase):
     def create_noun_with_grammatical_number(self):
         """Create a noun with grammatical number."""
         return self.create_concept(
-            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+            "morning",
+            dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden")),
         )
 
     def create_noun_with_grammatical_gender(self):
         """Create a noun with grammatical gender."""
         return self.create_concept(
-            "cat", dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat"))
+            "cat",
+            dict(female=dict(en="Her cat", nl="Haar kat"), male=dict(en="His cat", nl="Zijn kat")),
         )
 
     def create_noun_with_grammatical_gender_including_neuter(self):
@@ -123,7 +125,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_without_plural(self):
         """Test that quizzes can be generated even if one language has no plural labels for the concept."""
         concept = self.create_concept(
-            "ketchup", dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit"))
+            "ketchup",
+            dict(singular=dict(fi="Ketsuppi", nl="De ketchup"), plural=dict(fi="Ketsupit")),
         )
         quizzes = self.create_quizzes(concept, "fi", "nl")
         self.assertEqual(
@@ -539,9 +542,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         )
 
     def test_grammatical_number_nested_with_grammatical_person_and_infinitive(self):
-        """Test that quizzes can be generated for grammatical number, including infinitive, nested with grammatical
-        person.
-        """
+        """Test generating quizzes for grammatical number, including infinitive, nested with grammatical person."""
         concept = self.create_concept(
             "to be",
             dict(

@@ -26,7 +26,7 @@ class ParserTest(unittest.TestCase):
         self.assertRaises(SystemExit, self.argument_parser.parse_args, [])
 
     @patch.object(argparse.ArgumentParser, "_print_message")
-    def test_version(self, write):
+    def test_version(self, write: Mock):
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, self.argument_parser.parse_args, ["--version"])
         self.assertRegex(write.call_args_list[0][0][0], r"\d+.\d+.\d+")

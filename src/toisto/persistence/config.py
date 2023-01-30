@@ -1,8 +1,9 @@
 """Config file parser."""
 
+import logging
+import sys
 from configparser import ConfigParser, Error
 from pathlib import Path
-import sys
 
 
 def read_config() -> ConfigParser:
@@ -11,8 +12,8 @@ def read_config() -> ConfigParser:
     try:
         with Path("~/.toisto.cfg").expanduser().open("r", encoding="utf-8") as config_file:
             parser.read_file(config_file)
-    except (IOError, Error):
-        pass
+    except (OSError, Error) as reason:
+        logging.warning("Could not read ~/.toisto.cfg: %s", reason)
     if parser.get("commands", "mp3player", fallback=None) is None:
         if "commands" not in parser.sections():
             parser.add_section("commands")

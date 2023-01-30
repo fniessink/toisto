@@ -2,5 +2,4 @@
 
 from typing import NewType
 
-
 ConceptId = NewType("ConceptId", str)
