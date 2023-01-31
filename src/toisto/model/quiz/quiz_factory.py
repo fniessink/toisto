@@ -13,7 +13,7 @@ from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 class QuizFactory:
     """Create quizzes for concepts."""
 
-    language: Language
+    target_language: Language
     source_language: Language
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
@@ -41,40 +41,43 @@ class QuizFactory:
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create translation quizzes for the concept."""
-        language, source_language = self.language, self.source_language
-        labels, source_labels = concept.labels(language), concept.labels(source_language)
-        if not labels or not source_labels:
+        target_language, source_language = self.target_language, self.source_language
+        target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
+        if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes)
-        back = Quizzes(
-            Quiz(concept, language, source_language, label, source_labels, blocked_by=blocked_by) for label in labels
+        target_to_source = Quizzes(
+            Quiz(concept, target_language, source_language, target_label, source_labels, blocked_by=blocked_by)
+            for target_label in target_labels
         )
-        forth = Quizzes(
-            Quiz(concept, source_language, language, label, labels, blocked_by=blocked_by) for label in source_labels
+        source_to_target = Quizzes(
+            Quiz(concept, source_language, target_language, source_label, target_labels, blocked_by=blocked_by)
+            for source_label in source_labels
         )
-        return back | forth
+        return target_to_source | source_to_target
 
     def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create listening quizzes for the concept."""
-        language, source_language = self.language, self.source_language
-        labels = concept.labels(language)
+        target_language, source_language = self.target_language, self.source_language
+        labels = concept.labels(target_language)
         blocked_by = tuple(previous_quizzes)
         meanings = concept.meanings(source_language)
         return Quizzes(
-            Quiz(concept, language, language, label, (label,), ("listen",), blocked_by, meanings) for label in labels
+            Quiz(concept, target_language, target_language, label, (label,), ("listen",), blocked_by, meanings)
+            for label in labels
         )
 
     def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""
-        language, source_language = self.language, self.source_language
+        target_language, source_language = self.target_language, self.source_language
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
         for concept1, concept2 in concept.paired_leaf_concepts():
-            labels1, labels2 = concept1.labels(language), concept2.labels(language)
+            labels1, labels2 = concept1.labels(target_language), concept2.labels(target_language)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
             quizzes |= Quizzes(
-                Quiz(concept, language, language, label1, (label2,), quiz_types, blocked_by, meanings)
+                Quiz(concept, target_language, target_language, label1, (label2,), quiz_types, blocked_by, meanings)
                 for label1, label2 in zip(labels1, labels2, strict=False)
                 if label1 != label2
             )

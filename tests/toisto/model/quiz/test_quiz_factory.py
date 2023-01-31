@@ -144,7 +144,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
 
     def test_grammatical_number_with_one_language(self):
-        """Test that quizzes can be generated from a concept with labels in the practice language only."""
+        """Test that quizzes can be generated from a concept with labels in the target language only."""
         concept = self.create_concept("mämmi", dict(singular=dict(fi="Mämmi"), plural=dict(fi="Mämmit")))
         quizzes = self.create_quizzes(concept, "fi", "en")
         self.assertEqual(

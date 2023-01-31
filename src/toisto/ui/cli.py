@@ -8,10 +8,10 @@ from ..metadata import SUMMARY, SUPPORTED_LANGUAGES, TOPICS, VERSION, latest_ver
 def add_language_arguments(parser: ArgumentParser) -> None:
     """Add the language arguments to the parser."""
     choices = SUPPORTED_LANGUAGES.keys()
-    practice_language_help = "language to practice; available languages: %(choices)s"
-    parser.add_argument("language", metavar="{practice language}", choices=choices, help=practice_language_help)
-    source_language_help = "your language; available languages: %(choices)s"
-    parser.add_argument("source_language", metavar="{your language}", choices=choices, help=source_language_help)
+    target_language_help = "language to practice; available languages: %(choices)s"
+    parser.add_argument("target_language", metavar="{target language}", choices=choices, help=target_language_help)
+    source_language_help = "source language; available languages: %(choices)s"
+    parser.add_argument("source_language", metavar="{source language}", choices=choices, help=source_language_help)
 
 
 def add_topic_arguments(parser: ArgumentParser) -> None:

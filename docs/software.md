@@ -442,14 +442,14 @@ If the source does not provide a language level for a concept, this can be indic
 Toisto uses the concepts to generate quizzes. Currently, the following types of quizzes are generated:
 
 1. Quizzes to translate a concept from one language to another and vice versa. Toisto quizzes the user in both directions.
-2. Quizzes to listen to a concept in the practice language and then type in what was said.
+2. Quizzes to listen to a concept in the target language and then type in what was said.
 3. Quizzes to singularize a plural concept or pluralize a singular concept.
 4. Quizzes to change the person of a concept.
 5. Quizzes to change the gender of a concept.
 6. Quizzes to provide the positive, comparitive, or superlative degree of comparison, given an adjective in another degree.
 7. Quizzes to change the sentence form and polarity.
 
-Except for the translation type quizzes, quizzes only use the user's practice language.
+Except for the translation type quizzes, quizzes only use the user's target language.
 
 ## Spaced repetition
 
