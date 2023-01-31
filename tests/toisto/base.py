@@ -1,13 +1,15 @@
 """Base class for unit tests."""
 
-from typing import cast
 import unittest
+from typing import cast
 
 from toisto.metadata import Language
-from toisto.model import Concept, ConceptFactory, Label, Labels, Quiz, Quizzes, QuizFactory
-from toisto.model.language.concept_factory import ConceptDict
+from toisto.model.language.concept import Concept
+from toisto.model.language.concept_factory import ConceptDict, ConceptFactory
+from toisto.model.language.label import Label, Labels
 from toisto.model.model_types import ConceptId
-from toisto.model.quiz.quiz import QuizType
+from toisto.model.quiz.quiz import Quiz, QuizType, Quizzes
+from toisto.model.quiz.quiz_factory import QuizFactory
 
 
 class ToistoTestCase(unittest.TestCase):
@@ -24,7 +26,7 @@ class ToistoTestCase(unittest.TestCase):
         return QuizFactory(language, source_language).create_quizzes(concept)
 
     @staticmethod
-    def create_quiz(  # pylint: disable=too-many-arguments
+    def create_quiz(
         concept: Concept,
         question_language: str,
         answer_language: str,

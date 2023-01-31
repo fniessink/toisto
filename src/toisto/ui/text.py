@@ -5,11 +5,10 @@ from rich.panel import Panel
 from rich.theme import Theme
 
 from ..metadata import CHANGELOG_URL, NAME, VERSION
-from ..model import Label, Quiz
-
+from ..model.language.label import Label
+from ..model.quiz.quiz import Quiz
+from .dictionary import DICTIONARY_URL, linkify_and_enumerate
 from .diff import colored_diff
-from .dictionary import linkify_and_enumerate
-
 
 theme = Theme(dict(secondary="grey69", quiz="medium_purple1", inserted="bright_green", deleted="bright_red"))
 
@@ -29,7 +28,7 @@ How does it work?
 ● To answer a quiz: type the answer, followed by Enter.
 ● To repeat the spoken text: type Enter without answer.
 ● To skip to the answer immediately: type ?, followed by Enter.
-● To read more about an [link=https://en.wiktionary.org/wiki/underlined]underlined[/link] word: keep ⌘ (the command key) pressed
+● To read more about an [link={DICTIONARY_URL}/underlined]underlined[/link] word: keep ⌘ (the command key) pressed
   while clicking the word. Not all terminals may support this.
 ● To quit: type Ctrl-C or Ctrl-D.
 [/secondary]"""

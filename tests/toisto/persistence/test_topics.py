@@ -2,10 +2,10 @@
 
 from argparse import ArgumentParser
 from itertools import permutations
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
-from toisto.persistence import load_topics
 from toisto.model.model_types import ConceptId
+from toisto.persistence.topics import load_topics
 
 from ..base import ToistoTestCase
 
@@ -25,7 +25,7 @@ class LoadTopicsTest(ToistoTestCase):
     def test_uses_exist(self):
         """Test that all uses relations use existing concept ids."""
         all_topics = load_topics("fi", "nl", [], [], ArgumentParser())
-        all_concept_ids = set(concept.concept_id for topic in all_topics for concept in topic.concepts)
+        all_concept_ids = {concept.concept_id for topic in all_topics for concept in topic.concepts}
         for topic in all_topics:
             for concept in topic.concepts:
                 for uses in concept.used_concepts("fi"):
@@ -43,7 +43,7 @@ class LoadTopicsTest(ToistoTestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")
-    def test_load_topic_by_filename(self, stderr_write):
+    def test_load_topic_by_filename(self, stderr_write: Mock):
         """Test that an error message is given when the topic file does not exist."""
         self.assertRaises(SystemExit, load_topics, "fi", "nl", [], ["file-does-not-exist"], ArgumentParser())
         self.assertIn(

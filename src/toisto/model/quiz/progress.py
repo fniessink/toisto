@@ -3,7 +3,6 @@
 from collections import deque
 
 from ..model_types import ConceptId
-
 from .quiz import Quiz, Quizzes
 from .retention import Retention
 from .topic import Topics
@@ -20,9 +19,13 @@ class Progress:
         for quiz in self.__topics.quizzes:
             self.__quizzes_by_concept_id.setdefault(quiz.root_concept_id, set()).add(quiz)
 
-    def update(self, quiz: Quiz, correct: bool) -> None:
-        """Update the progress on the quiz."""
-        self.__progress_dict.setdefault(str(quiz), Retention()).update(correct)
+    def increase_retention(self, quiz: Quiz) -> None:
+        """Increase the retention of the quiz."""
+        self.__progress_dict.setdefault(str(quiz), Retention()).increase()
+
+    def reset_retention(self, quiz: Quiz) -> None:
+        """Reset the retention of the quiz."""
+        self.__progress_dict.setdefault(str(quiz), Retention()).reset()
 
     def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
@@ -46,12 +49,12 @@ class Progress:
         return quiz.root_concept_id not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
-        """Has the quiz's concept been presented to the user before?"""
+        """Return whether the quiz's concept has been presented to the user before."""
         quizzes_for_same_concept = self.__quizzes_by_concept_id[quiz.root_concept_id]
         return any(self.__in_progress(quiz_for_same_concept) for quiz_for_same_concept in quizzes_for_same_concept)
 
     def __in_progress(self, quiz: Quiz) -> bool:
-        """Has the quiz been presented to the user before?"""
+        """Return whether the quiz has been presented to the user before."""
         return str(quiz) in self.__progress_dict
 
     def __unblocked_quizzes(self, quizzes: Quizzes, eligible_quizzes: Quizzes) -> Quizzes:

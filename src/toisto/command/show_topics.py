@@ -4,8 +4,9 @@ from itertools import chain
 
 from rich.table import Table
 
-from toisto.metadata import Language, SUPPORTED_LANGUAGES
-from toisto.model import Labels, Topic, Topics
+from toisto.metadata import SUPPORTED_LANGUAGES, Language
+from toisto.model.language.label import Labels
+from toisto.model.quiz.topic import Topic, Topics
 from toisto.ui.text import console
 
 

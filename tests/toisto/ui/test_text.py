@@ -2,9 +2,11 @@
 
 from unittest import TestCase
 
-from toisto.model import Label, Progress, Topics
+from toisto.model.language.label import Label
 from toisto.model.model_types import ConceptId
-from toisto.ui.dictionary import linkify
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.topic import Topics
+from toisto.ui.dictionary import DICTIONARY_URL, linkify
 from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
 from ..base import ToistoTestCase
@@ -28,54 +30,45 @@ class FeedbackTestCase(ToistoTestCase):
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         feedback_text = feedback_correct(self.guess, self.quiz)
-        self.assertEqual(f"""✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""", feedback_text)
+        self.assertEqual(f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n', feedback_text)
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
         quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
-        feedback_text = feedback_correct(self.guess, quiz)
         expected_other_answer = linkify(quiz.other_answers(self.guess)[0])
-        self.assertEqual(
-            f"""✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n""",
-            feedback_text,
-        )
+        expected_text = f'✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n'
+        self.assertEqual(expected_text, feedback_correct(self.guess, quiz))
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
         quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
-        feedback_text = feedback_correct(self.guess, quiz)
         other_answers = [f'"{linkify(answer)}"' for answer in quiz.other_answers(self.guess)]
-        self.assertEqual(
-            f"""✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n""",
-            feedback_text,
-        )
+        expected_text = f'✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n'
+        self.assertEqual(expected_text, feedback_correct(self.guess, quiz))
 
     def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
-        feedback_text = feedback_incorrect("", self.quiz)
-        self.assertEqual(
-            f"""❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n"""
-            f"""[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
-            feedback_text,
+        expected_text = (
+            f'❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n'
+            f'[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         )
+        self.assertEqual(expected_text, feedback_incorrect("", self.quiz))
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
         quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
-        feedback_text = feedback_incorrect("", quiz)
-        self.assertEqual(
-            f"""❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n"""
-            f"""[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n""",
-            feedback_text,
+        expected_text = (
+            f'❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n'
+            f'[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n'
         )
+        self.assertEqual(expected_text, feedback_incorrect("", quiz))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
-        feedback_text = feedback_incorrect("?", self.quiz)
-        self.assertEqual(
-            f"""The correct answer is "{linkify("Terve")}".\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n""",
-            feedback_text,
+        expected_text = (
+            f'The correct answer is "{linkify("Terve")}".\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         )
+        self.assertEqual(expected_text, feedback_incorrect("?", self.quiz))
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
@@ -84,9 +77,8 @@ class FeedbackTestCase(ToistoTestCase):
     def test_instruction_multiple_quiz_types(self):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
         quiz = self.create_quiz(self.concept, "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
-        self.assertEqual(
-            "[quiz]Give the [underline]third person female[/underline] form in Dutch:[/quiz]", instruction(quiz)
-        )
+        expected_text = "[quiz]Give the [underline]third person female[/underline] form in Dutch:[/quiz]"
+        self.assertEqual(expected_text, instruction(quiz))
 
 
 class LinkifyTest(TestCase):
@@ -94,16 +86,13 @@ class LinkifyTest(TestCase):
 
     def test_linkify(self):
         """Test the linkify method."""
-        self.assertEqual("[link=https://en.wiktionary.org/wiki/test]Test[/link]", linkify("Test"))
+        self.assertEqual(f"[link={DICTIONARY_URL}/test]Test[/link]", linkify("Test"))
 
     def test_linkify_multiple_words(self):
         """Test the linkify method."""
-        self.assertEqual(
-            "[link=https://en.wiktionary.org/wiki/test]Test[/link] "
-            "[link=https://en.wiktionary.org/wiki/words]words[/link]",
-            linkify("Test words"),
-        )
+        expected_text = f"[link={DICTIONARY_URL}/test]Test[/link] [link={DICTIONARY_URL}/words]words[/link]"
+        self.assertEqual(expected_text, linkify("Test words"))
 
     def test_punctuation(self):
         """Test that punctuation is not linked."""
-        self.assertEqual("[link=https://en.wiktionary.org/wiki/test]Test[/link].", linkify("Test."))
+        self.assertEqual(f"[link={DICTIONARY_URL}/test]Test[/link].", linkify("Test."))

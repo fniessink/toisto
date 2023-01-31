@@ -33,5 +33,4 @@ jobs:
     - name: Quality
       run: |
         mypy src tests
-        pylint src tests
-
+        ruff .

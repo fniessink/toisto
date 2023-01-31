@@ -1,7 +1,7 @@
 """Unit tests for the config module."""
 
-from unittest.mock import patch, Mock
 import unittest
+from unittest.mock import Mock, patch
 
 from toisto.persistence.config import read_config
 
@@ -15,22 +15,21 @@ class ReadConfigTest(unittest.TestCase):
         self.assertIn("commands", read_config().sections())
 
     @patch("pathlib.Path.open")
-    def test_invalid_config(self, path_open):
+    def test_invalid_config(self, path_open: Mock):
         """Test reading an invalid config."""
         path_open.return_value.__enter__.return_value.__iter__.return_value = iter(["invalid\n"])
         self.assertIn("commands", read_config().sections())
 
     @patch("pathlib.Path.open")
-    def test_valid_config(self, path_open):
+    def test_valid_config(self, path_open: Mock):
         """Test reading a valid config."""
-        path_open.return_value.__enter__.return_value.__iter__.return_value = iter(
-            ["[commands]\n", "mp3player = afplay\n"]
-        )
+        config_file_contents = ["[commands]\n", "mp3player = afplay\n"]
+        path_open.return_value.__enter__.return_value.__iter__.return_value = iter(config_file_contents)
         self.assertEqual("afplay", read_config().get("commands", "mp3player"))
 
     @patch("sys.platform", "darwin")
     @patch("pathlib.Path.open")
-    def test_incomplete_config(self, path_open):
+    def test_incomplete_config(self, path_open: Mock):
         """Test reading an incomplete config."""
         path_open.return_value.__enter__.return_value.__iter__.return_value = iter(["[commands]\n"])
         self.assertEqual("afplay", read_config().get("commands", "mp3player"))

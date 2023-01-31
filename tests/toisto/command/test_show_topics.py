@@ -2,8 +2,8 @@
 
 from unittest.mock import patch
 
-from toisto.command import show_topics
-from toisto.model import Topic, Topics
+from toisto.command.show_topics import show_topics
+from toisto.model.quiz.topic import Topic, Topics
 
 from ..base import ToistoTestCase
 
@@ -15,7 +15,7 @@ class ShowTopicsTest(ToistoTestCase):
         """Set up test fixtures."""
         concept = self.create_concept("hello")
         self.quiz = self.create_quiz(concept, "fi", "nl", "Terve", ["Hoi"])
-        self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
+        self.topics = Topics({Topic("topic", (), {self.quiz})})
 
     def test_title(self):
         """Test the table title."""

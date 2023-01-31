@@ -1,12 +1,13 @@
 """Load concepts from topic files and generate quizzes."""
 
+import pathlib
 from argparse import ArgumentParser
 from typing import NoReturn
-import pathlib
 
 from ..metadata import NAME, TOPIC_JSON_FILES, Language
-from ..model import ConceptFactory, QuizFactory, Topic, Topics
-
+from ..model.language.concept_factory import ConceptFactory
+from ..model.quiz.quiz_factory import QuizFactory
+from ..model.quiz.topic import Topic, Topics
 from .json_file import load_json
 
 
@@ -34,7 +35,7 @@ def load_topics(
                 concept = ConceptFactory(concept_key, concept_value).create_concept()
                 concepts.append(concept)
                 topic_quizzes.update(quiz_factory.create_quizzes(concept))
-        except Exception as reason:  # pylint: disable=broad-except
+        except Exception as reason:  # noqa: BLE001
             return argument_parser.error(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
         topics.add(Topic(topic_file.stem, tuple(concepts), topic_quizzes))
     return Topics(topics)

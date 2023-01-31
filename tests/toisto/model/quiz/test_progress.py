@@ -1,7 +1,9 @@
 """Progress unit tests."""
 
-from toisto.model import Progress, Quizzes, Topic, Topics
 from toisto.model.model_types import ConceptId
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.quiz import Quizzes
+from toisto.model.quiz.topic import Topic, Topics
 
 from ...base import ToistoTestCase
 
@@ -33,13 +35,13 @@ class ProgressTest(ToistoTestCase):
 
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
-        self.progress.update(self.quiz, correct=True)
+        self.progress.increase_retention(self.quiz)
         self.assertIsNotNone(self.progress.get_retention(self.quiz).start)
         self.assertIsNotNone(self.progress.get_retention(self.quiz).end)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
-        self.progress.update(self.quiz, correct=False)
+        self.progress.reset_retention(self.quiz)
         self.assertIsNone(self.progress.get_retention(self.quiz).start)
         self.assertIsNone(self.progress.get_retention(self.quiz).end)
         self.assertIsNone(self.progress.get_retention(self.quiz).skip_until)
@@ -47,13 +49,13 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
         progress = self.create_progress({self.quiz, self.another_quiz})
-        progress.update(self.quiz, correct=True)
+        progress.increase_retention(self.quiz)
         self.assertEqual(self.another_quiz, progress.next_quiz())
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         progress = self.create_progress([self.quiz])
-        progress.update(self.quiz, correct=True)
+        progress.increase_retention(self.quiz)
         self.assertIsNone(progress.next_quiz())
 
     def test_next_quiz_is_different_from_previous(self):
@@ -77,8 +79,10 @@ class ProgressTest(ToistoTestCase):
         self.assertEqual(quiz2, progress.next_quiz())
 
     def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes_even_across_topics(self):
-        """Test that the concept of the next quiz does not use other concepts with eligible quizzes, even when the
-        concepts belong to different topics."""
+        """Test that the concept of the next quiz does not use other concepts with eligible quizzes.
+
+        Even when the concepts belong to different topics.
+        """
         concept1 = self.create_concept("good day", dict(uses="good"))
         quiz1 = self.create_quiz(concept1, "nl", "en", "Goedendag", ["Good day"])
         concept2 = self.create_concept("good")
@@ -89,7 +93,8 @@ class ProgressTest(ToistoTestCase):
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
         morning = self.create_concept(
-            "morning", dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden"))
+            "morning",
+            dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden")),
         )
         afternoon = self.create_concept(
             "afternoon",
@@ -112,7 +117,7 @@ class ProgressTest(ToistoTestCase):
         for _ in range(9):
             quiz = progress.next_quiz()
             self.assertTrue("singular" in quiz.concept_id)
-            progress.update(quiz, correct=True)
+            progress.increase_retention(quiz)
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
@@ -123,7 +128,7 @@ class ProgressTest(ToistoTestCase):
         ]
         progress = self.create_progress(quizzes)
         for index in range(3):
-            progress.update(quizzes[index], correct=True)
+            progress.increase_retention(quizzes[index])
             progress.get_retention(quizzes[index]).skip_until = None
         self.assertIn(progress.next_quiz(), quizzes[:3])
 

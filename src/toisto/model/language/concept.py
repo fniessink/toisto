@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from itertools import permutations
-from typing import cast, get_args, Iterable
+from typing import Iterable, cast, get_args
 
 from toisto.metadata import Language
 from toisto.tools import zip_and_cycle
@@ -12,7 +12,7 @@ from toisto.tools import zip_and_cycle
 from ..model_types import ConceptId
 from .cefr import CommonReferenceLevel
 from .grammar import GrammaticalCategory
-from .label import Labels, Label
+from .label import Label, Labels
 
 
 @dataclass

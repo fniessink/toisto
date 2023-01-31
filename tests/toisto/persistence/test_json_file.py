@@ -1,7 +1,7 @@
 """Unit tests for the persistence module."""
 
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, Mock, patch
 
 from toisto.persistence.json_file import dump_json, load_json
 
@@ -34,7 +34,7 @@ class DumpJSONTest(PersistenceTestCase):
     """Unit tests for dumping JSON."""
 
     @patch("json.dump")
-    def test_dump(self, dump):
+    def test_dump(self, dump: Mock):
         """Test that the JSON is dumped."""
         self.file_path.open.return_value.__enter__.return_value = json_file = MagicMock()
         dump_json(self.file_path, self.contents)

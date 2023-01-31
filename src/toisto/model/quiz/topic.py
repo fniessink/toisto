@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from itertools import chain
 from typing import Iterator
 
-from ..language import Concept
+from ..language.concept import Concept
 from .quiz import Quizzes
 
 

@@ -18,5 +18,5 @@ def format_duration(duration: timedelta) -> str:
 
 
 def format_datetime(date_time: datetime) -> str:
-    """Return a human readable version of the datetime"""
+    """Return a human readable version of the datetime."""
     return date_time.isoformat(sep=" ", timespec="minutes")

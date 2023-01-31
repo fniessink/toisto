@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser, _SubParsersAction
 
-from ..metadata import latest_version, SUMMARY, VERSION, TOPICS, SUPPORTED_LANGUAGES
+from ..metadata import SUMMARY, SUPPORTED_LANGUAGES, TOPICS, VERSION, latest_version
 
 
 def add_language_arguments(parser: ArgumentParser) -> None:
@@ -18,7 +18,13 @@ def add_topic_arguments(parser: ArgumentParser) -> None:
     """Add the topic arguments to the parser."""
     topic_help = "topic to use, can be repeated (default: all); available topics: %(choices)s"
     parser.add_argument(
-        "-t", "--topic", action="append", default=[], choices=TOPICS, metavar="{topic}", help=topic_help
+        "-t",
+        "--topic",
+        action="append",
+        default=[],
+        choices=TOPICS,
+        metavar="{topic}",
+        help=topic_help,
     )
     topic_file_help = "topic file to use, can be repeated"
     parser.add_argument("-f", "--topic-file", action="append", default=[], metavar="{topic file}", help=topic_file_help)
@@ -38,7 +44,12 @@ def add_progress_command(subparser: _SubParsersAction) -> None:
     parser = add_command(subparser, "progress", "Show progress.", command_help)
     sort_help = "how to sort progress information (default: by retention); available options: %(choices)s"
     parser.add_argument(
-        "-s", "--sort", metavar="{option}", choices=["retention", "attempts"], default="retention", help=sort_help
+        "-s",
+        "--sort",
+        metavar="{option}",
+        choices=["retention", "attempts"],
+        default="retention",
+        help=sort_help,
     )
 
 
@@ -64,7 +75,10 @@ def create_argument_parser() -> ArgumentParser:
     argument_parser.add_argument("-V", "--version", action="version", version=version)
     command_help = "type `%(prog)s {command} -h` for more information on a command"
     subparser_action = argument_parser.add_subparsers(
-        dest="command", title="commands", help=command_help, required=True
+        dest="command",
+        title="commands",
+        help=command_help,
+        required=True,
     )
     add_practice_command(subparser_action)
     add_progress_command(subparser_action)

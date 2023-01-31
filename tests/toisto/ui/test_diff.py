@@ -2,8 +2,8 @@
 
 import unittest
 
-from toisto.ui.diff import colored_diff
 from toisto.ui.dictionary import linkify
+from toisto.ui.diff import colored_diff
 
 
 class DiffTest(unittest.TestCase):
@@ -44,9 +44,8 @@ class DiffTest(unittest.TestCase):
 
     def test_make_deleted_whitespace_visible(self):
         """Test that deleted whitespace is made visible."""
-        self.assertEqual(
-            "[inserted]Goe[/inserted]de[deleted]_[/deleted]morgen", colored_diff("de morgen", "Goedemorgen")
-        )
+        expected_diff = "[inserted]Goe[/inserted]de[deleted]_[/deleted]morgen"
+        self.assertEqual(expected_diff, colored_diff("de morgen", "Goedemorgen"))
 
     def test_make_inserted_whitespace_not_visible(self):
         """Test that inserted whitespace is not made visible."""

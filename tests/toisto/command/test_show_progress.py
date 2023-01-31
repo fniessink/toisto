@@ -3,8 +3,9 @@
 from datetime import datetime, timedelta
 from unittest.mock import patch
 
-from toisto.command import show_progress
-from toisto.model import Progress, Topic, Topics
+from toisto.command.show_progress import show_progress
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.topic import Topic, Topics
 
 from ..base import ToistoTestCase
 
@@ -16,7 +17,7 @@ class ShowProgressTest(ToistoTestCase):
         """Set up test fixtures."""
         self.concept = self.create_concept("hello", dict(fi="Terve", nl="Hoi"))
         self.quiz = self.create_quiz(self.concept, "fi", "nl", "Terve", ["Hoi"])
-        self.topics = Topics(set([Topic("topic", (), set([self.quiz]))]))
+        self.topics = Topics({Topic("topic", (), {self.quiz})})
 
     def test_title(self):
         """Test the table title."""
@@ -55,9 +56,10 @@ class ShowProgressTest(ToistoTestCase):
         end = now.isoformat(timespec="seconds")
         another_concept = self.create_concept("carpet")
         another_quiz = self.create_quiz(another_concept, "fi", "nl", "Matto", ["Het tapijt"])
-        topics = Topics(set([Topic("topic", (), set([self.quiz, another_quiz]))]))
+        topics = Topics({Topic("topic", (), {self.quiz, another_quiz})})
         progress = Progress(
-            {str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)}, self.topics
+            {str(self.quiz): dict(count=21, start=start, end=end), str(another_quiz): dict(count=42)},
+            self.topics,
         )
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", topics, progress, sort="retention")

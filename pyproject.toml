@@ -39,7 +39,7 @@ dev = [
     "green == 3.4.3",
     "mypy == 0.991",
     "pip == 22.3.1",
-    "pylint == 2.15.10",
+    "ruff == 0.0.237",
     "twine == 4.0.2",
     "types-playsound == 1.3.1.1",
     "types-requests == 2.28.11.8"
@@ -56,15 +56,6 @@ toisto = "toisto.app:main"
 [tool.black]
 line-length = 120
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-topics = ["*.json"]
-
-[tool.pylint.messages_control]
-max-line-length = 120
-
 [tool.coverage.run]
 branch = true
 source = ["src", "tests"]
@@ -78,3 +69,20 @@ module = [
     "gtts"
 ]
 ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
+select = ["ALL"]
+ignore = ["ANN101", "ANN102", "C408", "D107", "D203", "D213", "DTZ005", "FBT003", "PT", "TCH001", "TCH002", "TCH003", "TID252"]
+
+[tool.ruff.per-file-ignores]
+"src/toisto/app.py" = ["E402"]
+"src/toisto/ui/speech.py" = ["FBT001", "FBT002"]
+"__init__.py" = ["D104"]
+"tests/*" = ["ANN201"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+topics = ["*.json"]

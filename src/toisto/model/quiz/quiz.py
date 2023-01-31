@@ -5,16 +5,15 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import cast, Literal
+from typing import Literal, cast
 
-from toisto.metadata import Language, SUPPORTED_LANGUAGES
+from toisto.metadata import SUPPORTED_LANGUAGES, Language
 
 from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
 from ..model_types import ConceptId
 from .match import match
-
 
 QuizType = Literal[
     "translate",
@@ -71,7 +70,7 @@ def instruction(*quiz_types: QuizType) -> str:
 
 
 @dataclass(frozen=True)
-class Quiz:  # pylint: disable=too-many-instance-attributes
+class Quiz:
     """Class representing a quiz."""
 
     concept: Concept
@@ -80,15 +79,16 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
     _question: Label
     _answers: Labels
     quiz_types: tuple[QuizType, ...] = ("translate",)
-    blocked_by: tuple[Quiz, ...] = tuple()
+    blocked_by: tuple[Quiz, ...] = ()
     _meanings: Labels = Labels()
     _hash: int = 0
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """Initialize calculated attributes."""
         # The dataclass is frozen, so some magic is needed to set the hash attribute.
         super().__setattr__(
-            "_hash", hash((self.question_language, self.answer_language, self.question, self.quiz_types))
+            "_hash",
+            hash((self.question_language, self.answer_language, self.question, self.quiz_types)),
         )
 
     def __str__(self) -> str:
@@ -100,7 +100,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
         """Return a hash using the same attributes as used for testing equality."""
         return self._hash
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: object) -> bool:
         """Return whether this quiz is equal to the other."""
         if not isinstance(other, self.__class__):
             return False
@@ -111,7 +111,7 @@ class Quiz:  # pylint: disable=too-many-instance-attributes
             and self.quiz_types == other.quiz_types
         )
 
-    def __ne__(self, other) -> bool:
+    def __ne__(self, other: object) -> bool:
         """Return whether this quiz is not equal to the other."""
         return not self == other
 

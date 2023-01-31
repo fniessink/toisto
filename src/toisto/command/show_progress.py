@@ -1,18 +1,32 @@
 """Command to show progress information."""
 
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Literal
 
 from rich.table import Table
 
-from toisto.metadata import Language, SUPPORTED_LANGUAGES
-from toisto.model import Progress, Topics
+from toisto.metadata import SUPPORTED_LANGUAGES, Language
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.quiz import Quiz
+from toisto.model.quiz.topic import Topics
 from toisto.ui.format import format_datetime, format_duration
 from toisto.ui.text import console
 
-
 SortColumn = Literal["attempts", "retention"]
 RETENTION_ATTRIBUTE = dict(attempts="count", retention="length")
+
+
+@dataclass
+class QuizSorter:
+    """Class to provide a sort function to sort quizzes."""
+
+    progress: Progress
+    sort: SortColumn
+
+    def get_sort_key(self, quiz: Quiz) -> str:
+        """Return the retention attribute to sort by."""
+        return getattr(self.progress.get_retention(quiz), RETENTION_ATTRIBUTE[self.sort])
 
 
 def show_progress(language: Language, topics: Topics, progress: Progress, sort: SortColumn = "attempts") -> None:
@@ -26,10 +40,7 @@ def show_progress(language: Language, topics: Topics, progress: Progress, sort: 
     table.add_column("Attempts", justify="right")
     table.add_column("Retention")
     table.add_column("Not quizzed until")
-    key = lambda quiz: getattr(  # pylint: disable=unnecessary-lambda-assignment
-        progress.get_retention(quiz), RETENTION_ATTRIBUTE[sort]
-    )
-    sorted_quizzes = sorted(topics.quizzes, key=key, reverse=True)
+    sorted_quizzes = sorted(topics.quizzes, key=QuizSorter(progress, sort).get_sort_key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
