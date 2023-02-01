@@ -27,7 +27,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             "big",
             {
                 "positive degree": dict(en="Big", nl="Groot"),
-                "comparitive degree": dict(en="Bigger", nl="Groter"),
+                "comparative degree": dict(en="Bigger", nl="Groter"),
                 "superlative degree": dict(en="Biggest", nl="Grootst"),
             },
         )
@@ -275,12 +275,12 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "nl", "en", "Grootst", ["Biggest"], "translate"),
                 self.create_quiz(concept, "en", "nl", "Biggest", ["Grootst"], "translate"),
                 self.create_quiz(concept, "nl", "nl", "Grootst", ["Grootst"], "listen"),
-                self.create_quiz(concept, "nl", "nl", "Groot", ["Groter"], "give comparitive degree"),
+                self.create_quiz(concept, "nl", "nl", "Groot", ["Groter"], "give comparative degree"),
                 self.create_quiz(concept, "nl", "nl", "Groot", ["Grootst"], "give superlative degree"),
                 self.create_quiz(concept, "nl", "nl", "Groter", ["Groot"], "give positive degree"),
                 self.create_quiz(concept, "nl", "nl", "Groter", ["Grootst"], "give superlative degree"),
                 self.create_quiz(concept, "nl", "nl", "Grootst", ["Groot"], "give positive degree"),
-                self.create_quiz(concept, "nl", "nl", "Grootst", ["Groter"], "give comparitive degree"),
+                self.create_quiz(concept, "nl", "nl", "Grootst", ["Groter"], "give comparative degree"),
             },
             self.create_quizzes(concept, "nl", "en"),
         )
@@ -291,7 +291,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             "big",
             {
                 "positive degree": dict(en="Big", fi=["Iso", "Suuri"]),
-                "comparitive degree": dict(en="Bigger", fi=["Isompi", "Suurempi"]),
+                "comparative degree": dict(en="Bigger", fi=["Isompi", "Suurempi"]),
                 "superlative degree": dict(en="Biggest", fi=["Isoin", "Suurin"]),
             },
         )
@@ -312,8 +312,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "en", "fi", "Biggest", ["Isoin", "Suurin"], "translate"),
                 self.create_quiz(concept, "fi", "fi", "Isoin", ["Isoin"], "listen"),
                 self.create_quiz(concept, "fi", "fi", "Suurin", ["Suurin"], "listen"),
-                self.create_quiz(concept, "fi", "fi", "Iso", ["Isompi"], "give comparitive degree"),
-                self.create_quiz(concept, "fi", "fi", "Suuri", ["Suurempi"], "give comparitive degree"),
+                self.create_quiz(concept, "fi", "fi", "Iso", ["Isompi"], "give comparative degree"),
+                self.create_quiz(concept, "fi", "fi", "Suuri", ["Suurempi"], "give comparative degree"),
                 self.create_quiz(concept, "fi", "fi", "Iso", ["Isoin"], "give superlative degree"),
                 self.create_quiz(concept, "fi", "fi", "Suuri", ["Suurin"], "give superlative degree"),
                 self.create_quiz(concept, "fi", "fi", "Isompi", ["Iso"], "give positive degree"),
@@ -322,8 +322,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "fi", "fi", "Suurempi", ["Suurin"], "give superlative degree"),
                 self.create_quiz(concept, "fi", "fi", "Isoin", ["Iso"], "give positive degree"),
                 self.create_quiz(concept, "fi", "fi", "Suurin", ["Suuri"], "give positive degree"),
-                self.create_quiz(concept, "fi", "fi", "Isoin", ["Isompi"], "give comparitive degree"),
-                self.create_quiz(concept, "fi", "fi", "Suurin", ["Suurempi"], "give comparitive degree"),
+                self.create_quiz(concept, "fi", "fi", "Isoin", ["Isompi"], "give comparative degree"),
+                self.create_quiz(concept, "fi", "fi", "Suurin", ["Suurempi"], "give comparative degree"),
             },
             self.create_quizzes(concept, "fi", "en"),
         )
