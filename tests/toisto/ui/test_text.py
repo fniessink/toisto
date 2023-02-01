@@ -77,7 +77,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_instruction_multiple_quiz_types(self):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
         quiz = self.create_quiz(self.concept, "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
-        expected_text = "[quiz]Give the [underline]third person female[/underline] form in Dutch:[/quiz]"
+        expected_text = "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]"
         self.assertEqual(expected_text, instruction(quiz))
 
 
