@@ -22,12 +22,12 @@ def main() -> None:
     config = read_config()
     argument_parser = create_argument_parser()
     args = argument_parser.parse_args()
-    topics = load_topics(args.language, args.source_language, args.topic, args.topic_file, argument_parser)
+    topics = load_topics(args.target_language, args.source_language, args.topic, args.topic_file, argument_parser)
     progress = load_progress(topics, argument_parser)
     if args.command == "practice":
         show_welcome(latest_version())
         practice(progress, config)
     elif args.command == "topics":
-        show_topics(args.language, args.source_language, topics)
+        show_topics(args.target_language, args.source_language, topics)
     else:
-        show_progress(args.language, topics, progress, args.sort)
+        show_progress(args.target_language, topics, progress, args.sort)

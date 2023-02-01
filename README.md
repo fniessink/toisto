@@ -34,7 +34,7 @@ $ pipx upgrade Toisto
 
 ### How to use
 
-Start Toisto as follows, giving the language you want to practice and your language as arguments:
+Start Toisto as follows, giving the language you want to practice (the target language) and your language (the source language) as arguments:
 
 ```console
 $ toisto practice fi en
@@ -116,12 +116,12 @@ Another correct answer is "Welterusten".
 
 ### How it works
 
-Toisto quizzes you repeatably on words and phrases in the language you want to practice. For each quiz, Toisto keeps track of how long you answer it correctly. When you answer a quiz correctly multiple times, Toisto will silence the quiz for a while. The longer the time you have answered the quiz correctly, the longer a quiz is silenced. This starts at a few minutes, but then increases rapidly when you keep answering correctly.
+Toisto quizzes you repeatably on words and phrases in the language you want to practice, your target language. For each quiz, Toisto keeps track of how long you answer it correctly. When you answer a quiz correctly multiple times, Toisto will silence the quiz for a while. The longer the time you have answered the quiz correctly, the longer a quiz is silenced. This starts at a few minutes, but then increases rapidly when you keep answering correctly.
 
 At the moment, Toisto has the following types of quizzes:
 
-- Translate a word or phrase from your practice language to your native language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "Maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "Vrijdag").
-- Listen to a word or phrase from your practice language and type what you hear. For example, if your practice language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
+- Translate a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "Maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "Vrijdag").
+- Listen to a word or phrase from your target language and type what you hear. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
 - Give a singular version of a plural, or a plural version of a singular. For example, what is the plural of "Talo" (meaning house in Finnish, and the answer is "Talot") or what is the singular of "Huizen" (meaning houses in Dutch, and the answer is "Huis").
 - Change the grammatical person from and to first person, second person, and third person. For example, when asked what the second person of "Ik eet" (meaning "I eat") is, the correct answer would be "Jij eet" ("You eat").
 - Change the tense of verbs from present to past tense or the other way around. For example, what is the past tense of "She walks" or what is the present tense version of "He painted".

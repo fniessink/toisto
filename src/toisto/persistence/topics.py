@@ -12,7 +12,7 @@ from .json_file import load_json
 
 
 def load_topics(
-    language: Language,
+    target_language: Language,
     source_language: Language,
     builtin_topics_to_load: list[str],
     topic_files_to_load: list[str],
@@ -26,7 +26,7 @@ def load_topics(
         topic_files.extend(pathlib.Path(topic) for topic in topic_files_to_load)
     else:
         topic_files.extend(TOPIC_JSON_FILES)
-    quiz_factory = QuizFactory(language, source_language)
+    quiz_factory = QuizFactory(target_language, source_language)
     for topic_file in topic_files:
         concepts = []
         topic_quizzes = set()
