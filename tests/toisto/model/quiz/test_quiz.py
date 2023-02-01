@@ -91,7 +91,7 @@ class QuizTest(QuizTestCase):
     def test_question_hint_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a hint is not shown when the question and answer languages are the same."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
-        self.assertEqual("Give the [underline]plural[/underline] form in Finnish", quiz.instruction())
+        self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
 
     def test_question_hint_is_ignored_in_answer(self):
         """Test that a hint can be added to the question."""

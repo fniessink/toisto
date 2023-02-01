@@ -66,7 +66,7 @@ def instruction(*quiz_types: QuizType) -> str:
     if instruction_label := INSTRUCTIONS.get(quiz_types[0]):
         return instruction_label
     categories = " ".join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in quiz_types)
-    return f"Give the [underline]{categories}[/underline] form in"
+    return f"Give the [underline]{categories}[/underline] in"
 
 
 @dataclass(frozen=True)
