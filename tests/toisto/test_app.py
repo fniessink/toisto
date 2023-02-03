@@ -24,7 +24,7 @@ class AppTest(unittest.TestCase):
             main()
         return patched_print
 
-    @patch.object(sys, "argv", ["toisto", "practice", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_practice(self, requests_get: Mock):
         """Test that the practice command can be invoked."""
@@ -32,7 +32,7 @@ class AppTest(unittest.TestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[1][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
-    @patch.object(sys, "argv", ["toisto", "practice", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_new_version(self, requests_get: Mock):
         """Test that the practice command shows a new version."""
@@ -40,7 +40,7 @@ class AppTest(unittest.TestCase):
         patched_print = self.run_main()
         self.assertTrue("v9999" in patched_print.call_args_list[2][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_current_version(self, requests_get: Mock):
         """Test that the practice command does not show the current version."""
@@ -48,7 +48,7 @@ class AppTest(unittest.TestCase):
         patched_print = self.run_main()
         self.assertTrue("[quiz]" in patched_print.call_args_list[2][0][0])
 
-    @patch.object(sys, "argv", ["toisto", "practice", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_github_connection_error(self, requests_get: Mock):
         """Test that the practice command starts even if GitHub cannot be reached to get the latest version."""
@@ -56,7 +56,7 @@ class AppTest(unittest.TestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[1][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
-    @patch.object(sys, "argv", ["toisto", "progress", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "progress", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_progress(self, requests_get: Mock):
         """Test that the progress command can be invoked."""
@@ -64,7 +64,7 @@ class AppTest(unittest.TestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[1][0][0].title.startswith("Progress"))
 
-    @patch.object(sys, "argv", ["toisto", "topics", "fi", "nl"])
+    @patch.object(sys, "argv", ["toisto", "topics", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_topics(self, requests_get: Mock):
         """Test that the topics command can be invoked."""

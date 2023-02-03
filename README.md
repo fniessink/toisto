@@ -37,13 +37,13 @@ $ pipx upgrade Toisto
 Start Toisto as follows, giving the language you want to practice (the target language) and your language (the source language) as arguments:
 
 ```console
-$ toisto practice fi en
+$ toisto practice --target fi --source en
 ```
 
 To practice a specific topic, pass it as follows:
 
 ```console
-$ toisto practice fi en --topic colors
+$ toisto practice --target fi -source en --topic colors
 ```
 
 Add `--help` or `-h` to get more information about the command-line options and arguments:
@@ -52,9 +52,21 @@ Add `--help` or `-h` to get more information about the command-line options and 
 $ toisto --help
 ```
 
-### How to configure a different mp3 player
+## How to configure Toisto
 
-By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory with the following contents:
+ #### How to configure your language
+
+ To prevent having to pass your target and source language as command-line arguments each time you run Toisto, put them in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the target and source language:
+
+ ```ini
+ [languages]
+ target = nl
+ source = en
+ ```
+
+ #### How to configure a different mp3 player
+
+ By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
 
 ```ini
 [commands]
@@ -68,8 +80,8 @@ Make sure the mp3 player is on the `PATH` or put the complete filepath in the co
 ![gif](https://raw.githubusercontent.com/fniessink/toisto/main/docs/demo.gif)
 
 ```console
-$ toisto practice fi nl
- Welcome to Toisto v0.6.1!
+$ toisto practice --target fi --source nl
+ Welcome to Toisto v0.8.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 

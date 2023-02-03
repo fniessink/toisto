@@ -2,6 +2,7 @@
 
 import argparse
 import unittest
+from configparser import ConfigParser
 from unittest.mock import Mock, patch
 
 from toisto.ui.cli import create_argument_parser
@@ -13,7 +14,7 @@ class ParserTest(unittest.TestCase):
     def setUp(self) -> None:
         """Set up the test fixtures."""
         with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[dict(name="v9999")])))):
-            self.argument_parser = create_argument_parser()
+            self.argument_parser = create_argument_parser(ConfigParser())
 
     @patch("sys.stdout", Mock())
     def test_help(self):
