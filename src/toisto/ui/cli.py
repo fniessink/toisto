@@ -1,67 +1,91 @@
 """Command-line interface."""
 
 from argparse import ArgumentParser, _SubParsersAction
+from configparser import ConfigParser
 
 from rich_argparse import RichHelpFormatter
 
 from ..metadata import HOMEPAGE_URL, SUMMARY, SUPPORTED_LANGUAGES, TOPICS, VERSION, latest_version
 
 
-def add_language_arguments(parser: ArgumentParser) -> None:
+def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
     """Add the language arguments to the parser."""
     choices = SUPPORTED_LANGUAGES.keys()
-    target_language_help = "target language; available languages: %(choices)s"
-    parser.add_argument("target_language", metavar="{target language}", choices=choices, help=target_language_help)
-    source_language_help = "source language; available languages: %(choices)s"
-    parser.add_argument("source_language", metavar="{source language}", choices=choices, help=source_language_help)
+    for argument in ("target", "source"):
+        default = config.get("languages", argument, fallback=None)
+        default_help = f"default: {default}; " if default else ""
+        parser.add_argument(
+            f"-{argument[0]}",
+            f"--{argument}",
+            choices=choices,
+            default=default,
+            dest=f"{argument}_language",
+            help=f"{argument} language; {default_help}available languages: %(choices)s",
+            metavar="{language}",
+            required=not default,
+        )
 
 
 def add_topic_arguments(parser: ArgumentParser) -> None:
     """Add the topic arguments to the parser."""
-    topic_help = "topic to use, can be repeated; default: all; available topics: %(choices)s"
     parser.add_argument(
-        "-t",
+        "-T",
         "--topic",
         action="append",
         default=[],
         choices=TOPICS,
         metavar="{topic}",
-        help=topic_help,
+        help="topic to use, can be repeated; default: all; available topics: %(choices)s",
     )
-    topic_file_help = "topic file to use, can be repeated"
-    parser.add_argument("-f", "--topic-file", action="append", default=[], metavar="{topic file}", help=topic_file_help)
+    parser.add_argument(
+        "-f",
+        "--topic-file",
+        action="append",
+        default=[],
+        metavar="{topic file}",
+        help="topic file to use, can be repeated",
+    )
 
 
-def add_practice_command(subparser: _SubParsersAction) -> None:
+def add_practice_command(subparser: _SubParsersAction, config: ConfigParser) -> None:
     """Add a practice command."""
-    command_help = "practice a language, for example type `%(prog)s practice fi en` to practice Finnish from English"
-    add_command(subparser, "practice", "Practice a language.", command_help)
+    command_help = (
+        "practice a language, for example type `%(prog)s practice --target fi --source en` to "
+        "practice Finnish from English"
+    )
+    add_command(subparser, "practice", "Practice a language.", command_help, config)
 
 
-def add_progress_command(subparser: _SubParsersAction) -> None:
+def add_progress_command(subparser: _SubParsersAction, config: ConfigParser) -> None:
     """Add a command to show progress."""
     command_help = (
-        "show progress, for example `%(prog)s progress fi en` shows progress on practicing Finnish from English"
+        "show progress, for example `%(prog)s progress --target fi --source en` shows progress "
+        "on practicing Finnish from English"
     )
-    parser = add_command(subparser, "progress", "Show progress.", command_help)
-    sort_help = "how to sort progress information; default: by retention; available options: %(choices)s"
+    parser = add_command(subparser, "progress", "Show progress.", command_help, config)
     parser.add_argument(
-        "-s",
+        "-S",
         "--sort",
         metavar="{option}",
         choices=["retention", "attempts"],
         default="retention",
-        help=sort_help,
+        help="how to sort progress information; default: by retention; available options: %(choices)s",
     )
 
 
-def add_topics_command(subparser: _SubParsersAction) -> None:
+def add_topics_command(subparser: _SubParsersAction, config: ConfigParser) -> None:
     """Add a command to show topics."""
-    command_help = "show topics, for example `%(prog)s topics -t nature` shows the contents of the nature topic"
-    add_command(subparser, "topics", "Show topics.", command_help)
+    command_help = "show topics, for example `%(prog)s topics --topic nature` shows the contents of the nature topic"
+    add_command(subparser, "topics", "Show topics.", command_help, config)
 
 
-def add_command(subparser: _SubParsersAction, command: str, description: str, command_help: str) -> ArgumentParser:
+def add_command(
+    subparser: _SubParsersAction,
+    command: str,
+    description: str,
+    command_help: str,
+    config: ConfigParser,
+) -> ArgumentParser:
     """Add a command."""
     parser = subparser.add_parser(
         command,
@@ -69,12 +93,12 @@ def add_command(subparser: _SubParsersAction, command: str, description: str, co
         help=command_help,
         formatter_class=RichHelpFormatter,
     )
-    add_language_arguments(parser)
+    add_language_arguments(parser, config)
     add_topic_arguments(parser)
     return parser
 
 
-def create_argument_parser() -> ArgumentParser:
+def create_argument_parser(config: ConfigParser) -> ArgumentParser:
     """Create the argument parser."""
     epilog = f"See {HOMEPAGE_URL}/blob/main/README.md for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
@@ -88,7 +112,7 @@ def create_argument_parser() -> ArgumentParser:
         help=command_help,
         required=True,
     )
-    add_practice_command(subparser_action)
-    add_progress_command(subparser_action)
-    add_topics_command(subparser_action)
+    add_practice_command(subparser_action, config)
+    add_progress_command(subparser_action, config)
+    add_topics_command(subparser_action, config)
     return argument_parser
