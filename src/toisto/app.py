@@ -22,7 +22,14 @@ def main() -> None:
     config = read_config()
     argument_parser = create_argument_parser(config)
     args = argument_parser.parse_args()
-    topics = load_topics(args.target_language, args.source_language, args.topic, args.topic_file, argument_parser)
+    topics = load_topics(
+        args.target_language,
+        args.source_language,
+        args.levels,
+        args.topic,
+        args.topic_file,
+        argument_parser,
+    )
     progress = load_progress(topics, argument_parser)
     if args.command == "practice":
         show_welcome(latest_version())
