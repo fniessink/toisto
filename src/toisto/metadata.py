@@ -9,6 +9,7 @@ import requests
 _metadata = metadata("Toisto")
 NAME = _metadata["name"]
 SUMMARY = _metadata["summary"]
+HOMEPAGE_URL = _metadata["Project-URL"].split(", ")[1]
 CHANGELOG_URL = [url for url in _metadata.get_all("Project-URL") if "Changelog" in url][0].split(", ")[1]
 TAGS_API_URL = "https://api.github.com/repos/fniessink/toisto/tags"
 

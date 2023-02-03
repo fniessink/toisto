@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Show the language level in the output of the topics command.
+- More colorful help information.
 
 ## 0.7.0 - 2023-01-28
 
