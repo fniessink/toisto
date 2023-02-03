@@ -21,12 +21,14 @@ def topic_table(language: Language, source_language: Language, topic: Topic) -> 
     table.add_column(SUPPORTED_LANGUAGES[language])
     table.add_column(SUPPORTED_LANGUAGES[source_language])
     table.add_column("Grammatical categories")
+    table.add_column("Language level")
     for concept in topic.concepts:
         for leaf_concept in concept.leaf_concepts():
             table.add_row(
                 enumerate_labels(leaf_concept.labels(language)),
                 enumerate_labels(leaf_concept.labels(source_language)),
                 "/".join(leaf_concept.grammatical_categories()),
+                leaf_concept.level,
             )
         table.add_section()
     return table

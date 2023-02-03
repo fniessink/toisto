@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Fix spelling error (comparative, not comparitive). Unfortunately, this means that progress on quizzes that ask to give the comparative degree is reset.
 - Remove the unnecessary word 'form' from the instructions. Fixes [#193](https://github.com/fniessink/toisto/issues/193).
 
+### Added
+
+- Show the language level in the output of the topics command.
+
 ## 0.7.0 - 2023-01-28
 
 ### Fixed
