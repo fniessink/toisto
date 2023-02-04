@@ -2,10 +2,12 @@
 
 from argparse import ArgumentParser, _SubParsersAction
 from configparser import ConfigParser
+from typing import get_args
 
 from rich_argparse import RichHelpFormatter
 
 from ..metadata import HOMEPAGE_URL, SUMMARY, SUPPORTED_LANGUAGES, TOPICS, VERSION, latest_version
+from ..model.language.cefr import CommonReferenceLevel
 
 
 def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
@@ -44,6 +46,23 @@ def add_topic_arguments(parser: ArgumentParser) -> None:
         default=[],
         metavar="{topic file}",
         help="topic file to use, can be repeated",
+    )
+
+
+def add_level_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
+    """Add the language level arguments to the parser."""
+    levels = get_args(CommonReferenceLevel)
+    default = [level for level in levels if level in config.get("languages", "levels", fallback="")]
+    default_help = ", ".join(default) if default else "all"
+    parser.add_argument(
+        "-l",
+        "--level",
+        action="append",
+        default=default,
+        dest="levels",
+        metavar="{level}",
+        choices=levels,
+        help=f"language levels to use, can be repeated; default: {default_help}; available levels: %(choices)s",
     )
 
 
@@ -94,6 +113,7 @@ def add_command(
         formatter_class=RichHelpFormatter,
     )
     add_language_arguments(parser, config)
+    add_level_arguments(parser, config)
     add_topic_arguments(parser)
     return parser
 

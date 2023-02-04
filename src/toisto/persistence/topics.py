@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from typing import NoReturn
 
 from ..metadata import NAME, TOPIC_JSON_FILES, Language
+from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.concept_factory import ConceptFactory
 from ..model.quiz.quiz_factory import QuizFactory
 from ..model.quiz.topic import Topic, Topics
@@ -14,6 +15,7 @@ from .json_file import load_json
 def load_topics(
     target_language: Language,
     source_language: Language,
+    levels: list[CommonReferenceLevel],
     builtin_topics_to_load: list[str],
     topic_files_to_load: list[str],
     argument_parser: ArgumentParser,
@@ -33,6 +35,8 @@ def load_topics(
         try:
             for concept_key, concept_value in load_json(topic_file).items():
                 concept = ConceptFactory(concept_key, concept_value).create_concept()
+                if levels and concept.level not in levels:
+                    continue
                 concepts.append(concept)
                 topic_quizzes.update(quiz_factory.create_quizzes(concept))
         except Exception as reason:  # noqa: BLE001
