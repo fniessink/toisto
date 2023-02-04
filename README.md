@@ -54,19 +54,19 @@ $ toisto --help
 
 ## How to configure Toisto
 
- #### How to configure your language
+#### How to configure your language
 
- To prevent having to pass your target and source language as command-line arguments each time you run Toisto, put them in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the target and source language:
+To prevent having to pass your target and source language as command-line arguments each time you run Toisto, put them in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the target and source language:
 
- ```ini
- [languages]
- target = nl
- source = en
- ```
+```ini
+[languages]
+target = nl
+source = en
+```
 
- #### How to configure a different mp3 player
+#### How to configure a different mp3 player
 
- By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
+By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
 
 ```ini
 [commands]
