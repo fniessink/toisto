@@ -81,11 +81,16 @@
                 "OD"
             ]
         },
-        "uses": "christmas",
+        "uses": {
+            "en": "christmas",
+            "fi": [
+                "good",
+                "christmas"
+            ],
+            "nl": "christmas"
+        },
         "en": "Merry Christmas!",
-        "fi": [
-            "Hyvää joulua!"
-        ],
+        "fi": "Hyvää joulua!",
         "nl": "Vrolijk kerstfeest!"
     },
     "christmas tree": {
@@ -172,7 +177,21 @@
                 "OD"
             ]
         },
-        "uses": "new year",
+        "uses": {
+            "en": [
+                "happy",
+                "new year"
+            ],
+            "fi": [
+                "good",
+                "new",
+                "year"
+            ],
+            "nl": [
+                "happy",
+                "new year"
+            ]
+        },
         "en": "Happy New Year!",
         "fi": "Hyvää uutta vuotta!",
         "nl": "Gelukkig nieuwjaar"

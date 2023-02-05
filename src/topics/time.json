@@ -42,12 +42,39 @@
             "nl": "De ochtenden"
         }
     },
+    "noon": {
+        "level": {
+            "A2": "EP",
+            "C1": "OD"
+        },
+        "uses": {
+            "fi": "day",
+            "nl": [
+                "12",
+                "hour",
+                "afternoon"
+            ]
+        },
+        "singular": {
+            "en": "Noon",
+            "fi": "Keskipäivä",
+            "nl": "Twaalf uur 's middags"
+        },
+        "plural": {
+            "fi": "Keskipäivät"
+        }
+    },
     "afternoon": {
         "level": {
             "A1": [
                 "EP",
                 "OD"
             ]
+        },
+        "uses": {
+            "en": "noon",
+            "fi": ["evening", "day"],
+            "nl": "day"
         },
         "singular": {
             "en": "Afternoon",
@@ -56,7 +83,7 @@
         },
         "plural": {
             "en": "Afternoons",
-            "fi": "Iltapäidät",
+            "fi": "Iltapäivät",
             "nl": "De middagen"
         }
     },

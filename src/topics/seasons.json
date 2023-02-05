@@ -149,7 +149,7 @@
     },
     "next autumn": {
         "uses": "autumn",
-        "en": "Next autumn",
+        "en": "Next autumn|Next fall",
         "fi": "Ensi syksynä",
         "nl": [
             "Volgende herfst",
@@ -201,5 +201,60 @@
         "en": "Last winter",
         "fi": "Viime talvena",
         "nl": "Vorige winter"
+    },
+    "the finnish winter is cold": {
+        "uses": [
+            "winter",
+            "to be",
+            "cold"
+        ],
+        "en": "The Finnish winter is cold",
+        "fi": "Suomen talvi on kylmä",
+        "nl": "De Finse winter is koud"
+    },
+    "the dutch autumn is wet": {
+        "uses": [
+            "autumn",
+            "to be",
+            "wet"
+        ],
+        "en": [
+            "The Dutch autumn is wet",
+            "The Dutch fall is wet"
+        ],
+        "fi": [
+            "Hollannin syksy on märkä",
+            "Alankomaiden syksy on märkä"
+        ],
+        "nl": [
+            "De Nederlandse herfst is nat",
+            "Het Nederlandse najaar is nat"
+        ]
+    },
+    "finnish winters are cold": {
+        "uses": [
+            "winter",
+            "to be",
+            "cold"
+        ],
+        "en": "Finnish winters are cold",
+        "fi": "Suomen talvet ovat kylmiä",
+        "nl": "Finse winters zijn koud"
+    },
+    "dutch springs are wet": {
+        "uses": [
+            "spring",
+            "to be",
+            "wet"
+        ],
+        "en": "Dutch springs are wet",
+        "fi": [
+            "Hollannin keväät ovat märkiä",
+            "Alankomaiden keväät ovat märkiä"
+        ],
+        "nl": [
+            "Nederlandse lentes zijn nat",
+            "Nederlandse voorjaren zijn nat"
+        ]
     }
 }
