@@ -50,7 +50,7 @@ class ConceptFactory:
             constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             constituent_concepts.append(concept_factory.create_concept())
-        return Concept(self.concept_id, self.get_used_concepts(), tuple(constituent_concepts), level=self.get_level())
+        return Concept(self.concept_id, tuple(constituent_concepts), self.get_used_concepts(), level=self.get_level())
 
     def leaf_concept(self) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
@@ -59,7 +59,7 @@ class ConceptFactory:
             for key, value in self.concept_dict.items()
             if key in get_args(Language)
         }
-        return Concept(self.concept_id, self.get_used_concepts(), (), labels, self.get_level())
+        return Concept(self.concept_id, (), self.get_used_concepts(), labels, self.get_level())
 
     def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
