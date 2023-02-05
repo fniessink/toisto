@@ -138,7 +138,10 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": "morning",
+        "uses": [
+            "good",
+            "morning"
+        ],
         "en": "Good morning",
         "fi": [
             "Hyvää huomenta",
@@ -152,9 +155,18 @@
             "none": "OD"
         },
         "uses": {
-            "en": "afternoon",
-            "fi": "day",
-            "nl": "afternoon"
+            "en": [
+                "good",
+                "afternoon"
+            ],
+            "fi": [
+                "good",
+                "day"
+            ],
+            "nl": [
+                "good",
+                "afternoon"
+            ]
         },
         "en": "Good afternoon",
         "fi": [
@@ -170,7 +182,10 @@
                 "OD"
             ]
         },
-        "uses": "day",
+        "uses": [
+            "good",
+            "day"
+        ],
         "en": "Good day",
         "fi": [
             "Hyvää päivää",
@@ -183,7 +198,10 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": "evening",
+        "uses": [
+            "good",
+            "evening"
+        ],
         "en": "Good evening",
         "fi": [
             "Hyvää iltaa",
@@ -196,13 +214,13 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": "night",
+        "uses": [
+            "good",
+            "night"
+        ],
         "en": "Good night",
         "fi": "Hyvää yötä",
-        "nl": [
-            "Goedenacht",
-            "Welterusten"
-        ]
+        "nl": "Goedenacht"
     },
     "sleep well": {
         "level": {
@@ -214,6 +232,9 @@
         "uses": "to sleep",
         "en": "Sleep well",
         "fi": "Nuku hyvin",
-        "nl": "Slaap lekker"
+        "nl": [
+            "Slaap lekker",
+            "Welterusten"
+        ]
     }
 }

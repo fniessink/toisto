@@ -1,0 +1,206 @@
+{
+    "health": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP"
+        },
+        "en": "Health",
+        "fi": "Terveys",
+        "nl": "De gezondheid"
+    },
+    "care": {
+        "level": {
+            "A2": "OD",
+            "B2": "EP"
+        },
+        "en": "Care",
+        "fi": "Hoito",
+        "nl": "De zorg"
+    },
+    "health care": {
+        "level": {
+            "B2": "OD",
+            "C1": "EP"
+        },
+        "uses": [
+            "health",
+            "care"
+        ],
+        "en": "Health care",
+        "fi": "Terveydenhoito",
+        "nl": "De gezondheidszorg"
+    },
+    "disease": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "Disease",
+            "fi": "Sairaus",
+            "nl": "De ziekte"
+        },
+        "plural": {
+            "en": "Diseases",
+            "fi": "Sairaudet",
+            "nl": "De ziektes;De ziekten"
+        }
+    },
+    "patient": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "Patient",
+            "fi": "Potilas",
+            "nl": "De patiënt"
+        },
+        "plural": {
+            "en": "Patients",
+            "fi": "Potilaat",
+            "nl": "De patiënten"
+        }
+    },
+    "medicine": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "Medicine",
+            "fi": "Lääke",
+            "nl": "Het medicijn"
+        },
+        "plural": {
+            "en": "Medicines",
+            "fi": "Lääkkeet",
+            "nl": "De medicijnen"
+        }
+    },
+    "wound": {
+        "level": {
+            "B2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "Wound",
+            "fi": "Haava",
+            "nl": "De wond"
+        },
+        "plural": {
+            "en": "Wounds",
+            "fi": "Haavat",
+            "nl": "De wonden"
+        }
+    },
+    "flu": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "Flu",
+            "fi": "Flunssa",
+            "nl": "De griep"
+        },
+        "plural": {
+            "en": "Flus",
+            "fi": "Flunssat",
+            "nl": "De griepen"
+        }
+    },
+    "fever": {
+        "level": {
+            "B1": "EP",
+            "B2": "OD"
+        },
+        "singular": {
+            "en": "Fever",
+            "fi": "Kuume",
+            "nl": "De koorts"
+        },
+        "plural": {
+            "en": "Fevers",
+            "fi": "Kuumeet",
+            "nl": "Koortsen"
+        }
+    },
+    "blood": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "Blood",
+            "fi": "Veri",
+            "nl": "Het bloed"
+        },
+        "plural": {
+            "en": "Bloods",
+            "fi": "Veret"
+        }
+    },
+    "ache": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "Ache",
+            "fi": "Särky",
+            "nl": "De pijn;dull"
+        },
+        "plural": {
+            "en": "Aches",
+            "fi": "Säryt",
+            "nl": "De pijnen;dull"
+        }
+    },
+    "pain": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "Pain",
+            "fi": "Kipu",
+            "nl": "De pijn;sharp"
+        },
+        "plural": {
+            "en": "Pains",
+            "fi": "Kivut",
+            "nl": "De pijnen;sharp"
+        }
+    },
+    "headache": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "uses": [
+            "head",
+            "ache"
+        ],
+        "singular": {
+            "en": "Headache",
+            "fi": "Päänsärky",
+            "nl": "De hoofdpijn"
+        },
+        "plural": {
+            "en": "Headaches",
+            "fi": "Päänsäryt",
+            "nl": "De hoofdpijnen"
+        }
+    }
+}

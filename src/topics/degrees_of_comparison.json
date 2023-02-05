@@ -642,5 +642,120 @@
             ],
             "nl": "Leukst"
         }
+    },
+    "wet": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "positive degree": {
+            "en": "Wet",
+            "fi": "Märkä",
+            "nl": "Nat"
+        },
+        "comparative degree": {
+            "en": "Wetter",
+            "fi": "Märempi",
+            "nl": "Natter"
+        },
+        "superlative degree": {
+            "en": "Wettest",
+            "fi": "Märin",
+            "nl": "Natst"
+        }
+    },
+    "dry": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "positive degree": {
+            "en": "Dry",
+            "fi": "Kuiva",
+            "nl": "Droog"
+        },
+        "comparative degree": {
+            "en": "Dryer",
+            "fi": "Kuivempi",
+            "nl": "Droger"
+        },
+        "superlative degree": {
+            "en": "Dryest",
+            "fi": "Kuivin",
+            "nl": "Droogst"
+        }
+    },
+    "good": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "positive degree": {
+            "en": "Good",
+            "fi": "Hyvä",
+            "nl": "Goed"
+        },
+        "comparative degree": {
+            "en": "Better",
+            "fi": "Parempi",
+            "nl": "Beter"
+        },
+        "superlative degree": {
+            "en": "Best",
+            "fi": "Paras",
+            "nl": "Best"
+        }
+    },
+    "bad": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "positive degree": {
+            "en": "Bad",
+            "fi": "Huono",
+            "nl": "Slecht"
+        },
+        "comparative degree": {
+            "en": "Badder",
+            "fi": "Huonompi",
+            "nl": "Slechter"
+        },
+        "superlative degree": {
+            "en": "Baddest",
+            "fi": "Huonoin",
+            "nl": "Slechtst"
+        }
+    },
+    "happy": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "positive degree": {
+            "en": "Happy",
+            "fi": "Onnellinen",
+            "nl": "Gelukkig"
+        },
+        "comparative degree": {
+            "en": "Happier",
+            "fi": "Onnellisempi",
+            "nl": "Gelukkiger"
+        },
+        "superlative degree": {
+            "en": "Happiest",
+            "fi": "Onnellisin",
+            "nl": "Gelukkigst"
+        }
     }
 }
