@@ -14,12 +14,12 @@ from .grammar import GrammaticalCategory
 from .label import label_factory
 
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
-UsesListOrString = ConceptId | list[ConceptId]
-UsesDictOrListOrString = dict[Language, UsesListOrString] | UsesListOrString
+ConceptIdListOrString = ConceptId | list[ConceptId]
+ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
 MetaData = Literal["level", "uses"]
 LeafConceptDict = dict[
     Language | MetaData,
-    ConceptId | list[ConceptId] | UsesDictOrListOrString | CommonReferenceLevelDict,
+    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict,
 ]
 CompositeConceptDict = dict[
     GrammaticalCategory | MetaData,
@@ -77,9 +77,9 @@ class ConceptFactory:
             for language, concept_ids in uses.items()
         }
 
-    def get_uses(self) -> UsesDictOrListOrString:
+    def get_uses(self) -> ConceptIdDictOrListOrString:
         """Get the uses from the concept dict."""
-        return cast(UsesDictOrListOrString, self.concept_dict.get("uses", {}))
+        return cast(ConceptIdDictOrListOrString, self.concept_dict.get("uses", {}))
 
     def get_levels(self) -> CommonReferenceLevelDict:
         """Get the Common Reference Levels from the concept dict."""
