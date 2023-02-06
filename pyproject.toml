@@ -34,7 +34,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "black == 22.12.0",
+    "black == 23.1.0",
     "build == 0.10.0",
     "coverage == 7.1.0",
     "green == 3.4.3",
