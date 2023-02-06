@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from itertools import permutations
-from typing import Iterable, cast, get_args
+from typing import cast, get_args
 
 from toisto.metadata import Language
 from toisto.tools import zip_and_cycle

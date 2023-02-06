@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterator
 from dataclasses import dataclass, field
 from itertools import chain
-from typing import Iterator
 
 from ..language.concept import Concept
 from .quiz import Quizzes

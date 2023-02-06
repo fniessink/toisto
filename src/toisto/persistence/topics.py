@@ -12,7 +12,7 @@ from ..model.quiz.topic import Topic, Topics
 from .json_file import load_json
 
 
-def load_topics(
+def load_topics(  # noqa: PLR0913
     target_language: Language,
     source_language: Language,
     levels: list[CommonReferenceLevel],
