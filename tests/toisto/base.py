@@ -26,7 +26,7 @@ class ToistoTestCase(unittest.TestCase):
         return QuizFactory(language, source_language).create_quizzes(concept)
 
     @staticmethod
-    def create_quiz(
+    def create_quiz(  # noqa: PLR0913
         concept: Concept,
         question_language: str,
         answer_language: str,

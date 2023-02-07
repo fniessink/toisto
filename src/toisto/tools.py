@@ -1,7 +1,8 @@
 """Zip function that cycles shorter lists."""
 
+from collections.abc import Iterator
 from itertools import cycle
-from typing import Iterator, TypeVar
+from typing import TypeVar
 
 T = TypeVar("T")
 
