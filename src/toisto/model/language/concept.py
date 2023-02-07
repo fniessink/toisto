@@ -28,6 +28,7 @@ class Concept:
     concept_id: ConceptId
     constituent_concepts: tuple[Concept, ...] = ()
     _used_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
+    opposite_concepts: tuple[ConceptId, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
 

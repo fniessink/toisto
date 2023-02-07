@@ -16,7 +16,7 @@ from .label import label_factory
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-MetaData = Literal["level", "uses"]
+MetaData = Literal["level", "opposite", "uses"]
 LeafConceptDict = dict[
     Language | MetaData,
     ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict,
@@ -43,14 +43,23 @@ class ConceptFactory:
         """Create a composite concept from a composite concept dict."""
         constituent_concepts = []
         uses = cast(CompositeConceptDict, dict(uses=self.get_uses()))
+        opposites = self.get_opposite_concepts()
         levels = self.get_levels()
         for category in self.get_grammatical_categories():
             constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
-            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | uses
+            opposite_concept_ids = [ConceptId(f"{opposite}/{category}") for opposite in opposites]
+            opposites_dict = dict(opposite=opposite_concept_ids)
+            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | uses | opposites_dict
             constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             constituent_concepts.append(concept_factory.create_concept())
-        return Concept(self.concept_id, tuple(constituent_concepts), self.get_used_concepts(), level=self.get_level())
+        return Concept(
+            self.concept_id,
+            tuple(constituent_concepts),
+            self.get_used_concepts(),
+            self.get_opposite_concepts(),
+            level=self.get_level(),
+        )
 
     def leaf_concept(self) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
@@ -59,7 +68,14 @@ class ConceptFactory:
             for key, value in self.concept_dict.items()
             if key in get_args(Language)
         }
-        return Concept(self.concept_id, (), self.get_used_concepts(), labels, self.get_level())
+        return Concept(
+            self.concept_id,
+            (),
+            self.get_used_concepts(),
+            self.get_opposite_concepts(),
+            labels,
+            self.get_level(),
+        )
 
     def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
@@ -80,6 +96,15 @@ class ConceptFactory:
     def get_uses(self) -> ConceptIdDictOrListOrString:
         """Get the uses from the concept dict."""
         return cast(ConceptIdDictOrListOrString, self.concept_dict.get("uses", {}))
+
+    def get_opposite_concepts(self) -> tuple[ConceptId, ...]:
+        """Return the opposite concepts."""
+        opposites = self.get_opposites()
+        return tuple(opposites) if isinstance(opposites, list) else (opposites,)
+
+    def get_opposites(self) -> ConceptIdListOrString:
+        """Get the opposites from the concept dict."""
+        return cast(ConceptIdListOrString, self.concept_dict.get("opposite", []))
 
     def get_levels(self) -> CommonReferenceLevelDict:
         """Get the Common Reference Levels from the concept dict."""

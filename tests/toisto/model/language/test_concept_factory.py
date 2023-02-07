@@ -30,6 +30,31 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual(("year",), concept.used_concepts("fi"))
         self.assertEqual((), concept.used_concepts("en"))
 
+    def test_opposite(self):
+        """Test that a concept can have an opposite relation with another concept."""
+        concept = self.create_concept("big", dict(opposite="small", en="Big"))
+        self.assertEqual(("small",), concept.opposite_concepts)
+
+    def test_multiple_opposites(self):
+        """Test that a concept can have multiple opposites."""
+        concept = self.create_concept("big", dict(opposite=["small", "little"], en="Big"))
+        self.assertEqual(("small", "little"), concept.opposite_concepts)
+
+    def test_opposites_of_composite(self):
+        """Test that a composite concepts can have an opposite."""
+        concept = self.create_concept(
+            "big",
+            {
+                "opposite": "small",
+                "positive degree": dict(en="Big"),
+                "comparative degree": dict(en="Bigger"),
+                "superlative degree": dict(en="Biggest"),
+            },
+        )
+        self.assertEqual(("small",), concept.opposite_concepts)
+        for index, degree in enumerate(["positive", "comparative", "superlative"]):
+            self.assertEqual((f"small/{degree} degree",), concept.constituent_concepts[index].opposite_concepts)
+
     def test_level(self):
         """Test that a concept can have a level."""
         concept = self.create_concept("one", dict(level=dict(A1="EP"), fi="Yksi", nl="Eén"))
