@@ -5,7 +5,7 @@ from __future__ import annotations
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from itertools import permutations
-from typing import cast, get_args
+from typing import ClassVar, cast, get_args
 
 from toisto.metadata import Language
 from toisto.tools import zip_and_cycle
@@ -28,9 +28,15 @@ class Concept:
     concept_id: ConceptId
     constituent_concepts: tuple[Concept, ...] = ()
     _used_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
-    opposite_concepts: tuple[ConceptId, ...] = ()
+    _opposite_concepts: tuple[ConceptId, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
+
+    instances: ClassVar[dict[ConceptId, Concept]] = {}
+
+    def __post_init__(self) -> None:
+        """Add the concept to the concept id -> concept mapping."""
+        self.instances[self.concept_id] = self
 
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
@@ -49,6 +55,11 @@ class Concept:
     def used_concepts(self, language: Language) -> tuple[ConceptId, ...]:
         """Return the ids of the concepts that this concept uses, for the specified language."""
         return self._used_concepts.get(language, ())
+
+    @property
+    def opposite_concepts(self) -> tuple[Concept, ...]:
+        """Return the opposite concepts of this concept."""
+        return tuple(self.instances[opposite] for opposite in self._opposite_concepts if opposite in self.instances)
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""

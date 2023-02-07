@@ -32,17 +32,20 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_opposite(self):
         """Test that a concept can have an opposite relation with another concept."""
-        concept = self.create_concept("big", dict(opposite="small", en="Big"))
-        self.assertEqual(("small",), concept.opposite_concepts)
+        big = self.create_concept("big", dict(opposite="small", en="Big"))
+        small = self.create_concept("small", dict(en="Small"))
+        self.assertEqual((small,), big.opposite_concepts)
 
     def test_multiple_opposites(self):
         """Test that a concept can have multiple opposites."""
-        concept = self.create_concept("big", dict(opposite=["small", "little"], en="Big"))
-        self.assertEqual(("small", "little"), concept.opposite_concepts)
+        big = self.create_concept("big", dict(opposite=["small", "little"], en="Big"))
+        little = self.create_concept("little", dict(en="Little"))
+        small = self.create_concept("small", dict(en="Small"))
+        self.assertEqual((small, little), big.opposite_concepts)
 
     def test_opposites_of_composite(self):
         """Test that a composite concepts can have an opposite."""
-        concept = self.create_concept(
+        big = self.create_concept(
             "big",
             {
                 "opposite": "small",
@@ -51,9 +54,17 @@ class ConcepFactoryTest(ToistoTestCase):
                 "superlative degree": dict(en="Biggest"),
             },
         )
-        self.assertEqual(("small",), concept.opposite_concepts)
-        for index, degree in enumerate(["positive", "comparative", "superlative"]):
-            self.assertEqual((f"small/{degree} degree",), concept.constituent_concepts[index].opposite_concepts)
+        small = self.create_concept(
+            "small",
+            {
+                "positive degree": dict(en="Small"),
+                "comparative degree": dict(en="Smaller"),
+                "superlative degree": dict(en="Smallest"),
+            },
+        )
+        self.assertEqual((small,), big.opposite_concepts)
+        for index in range(3):
+            self.assertEqual((small.constituent_concepts[index],), big.constituent_concepts[index].opposite_concepts)
 
     def test_level(self):
         """Test that a concept can have a level."""
