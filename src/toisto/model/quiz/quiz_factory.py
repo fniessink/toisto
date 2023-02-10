@@ -37,11 +37,11 @@ class QuizFactory:
         """Create the quizzes for a leaf concept."""
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
         listening_quizzes = self.listening_quizzes(concept, translation_quizzes.copy() | previous_quizzes)
-        opposite_quizzes = self.opposite_quizzes(
+        antonym_quizzes = self.antonym_quizzes(
             concept,
             translation_quizzes.copy() | listening_quizzes.copy() | previous_quizzes,
         )
-        return translation_quizzes | listening_quizzes | opposite_quizzes
+        return translation_quizzes | listening_quizzes | antonym_quizzes
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create translation quizzes for the concept."""
@@ -87,23 +87,23 @@ class QuizFactory:
             )
         return quizzes
 
-    def opposite_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
-        """Create opposite quizzes for the concept."""
+    def antonym_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+        """Create antonym quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
         labels = concept.labels(target_language)
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for opposite in concept.opposite_concepts:
-            opposite_labels = opposite.labels(target_language)
-            meanings = concept.meanings(source_language) + opposite.meanings(source_language)
+        for antonym in concept.antonym_concepts:
+            antonym_labels = antonym.labels(target_language)
+            meanings = concept.meanings(source_language) + antonym.meanings(source_language)
             quizzes |= Quizzes(
                 Quiz(
                     concept,
                     target_language,
                     target_language,
                     label,
-                    opposite_labels,
-                    ("opposite",),
+                    antonym_labels,
+                    ("antonym",),
                     blocked_by,
                     meanings,
                 )

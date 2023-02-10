@@ -24,7 +24,7 @@ Have Toisto make the user progress through the topics in a logical order.
 
 Add more languages, but this requires help from native speakers in those languages.
 
-Add more grammar and semantics. For example, more verb tenses or opposites.
+Add more grammar and semantics. For example, more verb tenses.
 
 Add more quiz types, such as cloze deletions or reading exercises.
 

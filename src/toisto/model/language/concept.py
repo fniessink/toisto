@@ -28,7 +28,7 @@ class Concept:
     concept_id: ConceptId
     constituent_concepts: tuple[Concept, ...] = ()
     _used_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
-    _opposite_concepts: tuple[ConceptId, ...] = ()
+    _antonym_concepts: tuple[ConceptId, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
 
@@ -57,9 +57,9 @@ class Concept:
         return self._used_concepts.get(language, ())
 
     @property
-    def opposite_concepts(self) -> tuple[Concept, ...]:
-        """Return the opposite concepts of this concept."""
-        return tuple(self.instances[opposite] for opposite in self._opposite_concepts if opposite in self.instances)
+    def antonym_concepts(self) -> tuple[Concept, ...]:
+        """Return the antonym concepts of this concept."""
+        return tuple(self.instances[antonym] for antonym in self._antonym_concepts if antonym in self.instances)
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""

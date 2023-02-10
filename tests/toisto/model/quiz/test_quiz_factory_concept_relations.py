@@ -49,14 +49,14 @@ class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
             self.assertEqual(expected_concept_ids[quiz], quiz.concept_id)
 
 
-class OppositeConceptsTest(QuizFactoryTestCase):
-    """Unit tests for opposite concepts."""
+class AntonymConceptsTest(QuizFactoryTestCase):
+    """Unit tests for antonym concepts."""
 
-    def test_opposite_leaf_concepts(self):
-        """Test that quizzes are generated for concepts with opposite other concepts."""
-        big = self.create_concept("big", dict(opposite="small", en="Big"))
-        small = self.create_concept("small", dict(opposite="big", en="Small"))
+    def test_antonym_leaf_concepts(self):
+        """Test that quizzes are generated for concepts with antonym concepts."""
+        big = self.create_concept("big", dict(antonym="small", en="Big"))
+        small = self.create_concept("small", dict(antonym="big", en="Small"))
         quizzes = QuizFactory("en", "en").create_quizzes(big, small)
         for question, answer in [("Big", "Small"), ("Small", "Big")]:
-            opposite = self.create_quiz(big, "en", "en", question, [answer], "opposite")
-            self.assertIn(opposite, quizzes)
+            antonym = self.create_quiz(big, "en", "en", question, [answer], "antonym")
+            self.assertIn(antonym, quizzes)

@@ -30,25 +30,25 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual(("year",), concept.used_concepts("fi"))
         self.assertEqual((), concept.used_concepts("en"))
 
-    def test_opposite(self):
-        """Test that a concept can have an opposite relation with another concept."""
-        big = self.create_concept("big", dict(opposite="small", en="Big"))
+    def test_antonym(self):
+        """Test that a concept can have an antonym concept."""
+        big = self.create_concept("big", dict(antonym="small", en="Big"))
         small = self.create_concept("small", dict(en="Small"))
-        self.assertEqual((small,), big.opposite_concepts)
+        self.assertEqual((small,), big.antonym_concepts)
 
-    def test_multiple_opposites(self):
-        """Test that a concept can have multiple opposites."""
-        big = self.create_concept("big", dict(opposite=["small", "little"], en="Big"))
+    def test_multiple_antonyms(self):
+        """Test that a concept can have multiple antonyms."""
+        big = self.create_concept("big", dict(antonym=["small", "little"], en="Big"))
         little = self.create_concept("little", dict(en="Little"))
         small = self.create_concept("small", dict(en="Small"))
-        self.assertEqual((small, little), big.opposite_concepts)
+        self.assertEqual((small, little), big.antonym_concepts)
 
-    def test_opposites_of_composite(self):
-        """Test that a composite concepts can have an opposite."""
+    def test_antonyms_of_composite(self):
+        """Test that a composite concept can have an antonym."""
         big = self.create_concept(
             "big",
             {
-                "opposite": "small",
+                "antonym": "small",
                 "positive degree": dict(en="Big"),
                 "comparative degree": dict(en="Bigger"),
                 "superlative degree": dict(en="Biggest"),
@@ -62,9 +62,9 @@ class ConcepFactoryTest(ToistoTestCase):
                 "superlative degree": dict(en="Smallest"),
             },
         )
-        self.assertEqual((small,), big.opposite_concepts)
+        self.assertEqual((small,), big.antonym_concepts)
         for index in range(3):
-            self.assertEqual((small.constituent_concepts[index],), big.constituent_concepts[index].opposite_concepts)
+            self.assertEqual((small.constituent_concepts[index],), big.constituent_concepts[index].antonym_concepts)
 
     def test_level(self):
         """Test that a concept can have a level."""
