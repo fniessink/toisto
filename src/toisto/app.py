@@ -1,7 +1,10 @@
 """Main module for the application."""
 
 import logging
-import readline  # noqa: F401 `readline` imported but unused
+from contextlib import suppress
+
+with suppress(ImportError):
+    import readline  # noqa: F401 `readline` imported but unused
 
 # Suppress warning messages printed by the playsound module.
 logging.getLogger().setLevel(logging.ERROR)
