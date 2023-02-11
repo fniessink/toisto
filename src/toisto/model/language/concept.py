@@ -26,7 +26,8 @@ class Concept:
     """
 
     concept_id: ConceptId
-    constituent_concepts: tuple[Concept, ...] = ()
+    _parent_concept: ConceptId | None = None
+    _constituent_concepts: tuple[ConceptId, ...] = ()
     _used_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
     _antonym_concepts: tuple[ConceptId, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
@@ -52,15 +53,24 @@ class Concept:
             for permutation in permutations(concept_group, r=2):
                 yield cast(tuple[Concept, Concept], permutation)
 
+    @property
+    def constituent_concepts(self) -> tuple[Concept, ...]:
+        """Return the constituent concepts of this concept."""
+        return self._get_concepts(self._constituent_concepts)
+
+    @property
+    def root_concept(self) -> Concept:
+        """Return the root concept of this concept."""
+        return self.instances[self._parent_concept].root_concept if self._parent_concept in self.instances else self
+
     def used_concepts(self, language: Language) -> tuple[Concept, ...]:
         """Return the concepts that this concept uses, for the specified language."""
-        used_concept_ids = self._used_concepts.get(language, ())
-        return tuple(self.instances[concept_id] for concept_id in used_concept_ids if concept_id in self.instances)
+        return self._get_concepts(self._used_concepts.get(language, ()))
 
     @property
     def antonym_concepts(self) -> tuple[Concept, ...]:
         """Return the antonym concepts of this concept."""
-        return tuple(self.instances[antonym] for antonym in self._antonym_concepts if antonym in self.instances)
+        return self._get_concepts(self._antonym_concepts)
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""
@@ -75,3 +85,7 @@ class Concept:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
+
+    def _get_concepts(self, concept_ids: tuple[ConceptId, ...]) -> tuple[Concept, ...]:
+        """Return the concepts with the given concept ids."""
+        return tuple(self.instances[concept_id] for concept_id in concept_ids if concept_id in self.instances)

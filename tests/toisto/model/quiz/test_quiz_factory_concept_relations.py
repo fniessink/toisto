@@ -13,7 +13,7 @@ class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
         mall = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
-        self.assertEqual((shop, centre), self.create_quizzes(mall, "fi", "nl").pop().used_concepts)
+        self.assertEqual((shop, centre), self.create_quizzes(mall, "fi", "nl").pop().concept.used_concepts("fi"))
 
     def test_concept_relationship_composite_concept(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
@@ -28,14 +28,14 @@ class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
         for quiz in self.create_quizzes(mall, "fi", "nl"):
-            self.assertIn(shop, quiz.used_concepts)
-            self.assertIn(centre, quiz.used_concepts)
+            self.assertIn(shop, quiz.concept.used_concepts("fi"))
+            self.assertIn(centre, quiz.concept.used_concepts("fi"))
 
     def test_concept_relationship_leaf_concept_one_uses(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
         capital = self.create_concept("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
         city = self.create_concept("city", dict(fi="Kaupunki"))
-        self.assertEqual((city,), self.create_quizzes(capital, "fi", "en").pop().used_concepts)
+        self.assertEqual((city,), self.create_quizzes(capital, "fi", "en").pop().concept.used_concepts("fi"))
 
     def test_generated_concept_ids_for_constituent_concepts(self):
         """Test that constituent concepts get a generated concept id."""
@@ -51,7 +51,7 @@ class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
             self.create_quiz(concept, "fi", "fi", "Aamut", ["Aamu"], "singularize"): "morning",
         }
         for quiz in self.create_quizzes(concept, "fi", "nl"):
-            self.assertEqual(expected_concept_ids[quiz], quiz.concept_id)
+            self.assertEqual(expected_concept_ids[quiz], quiz.concept.concept_id)
 
 
 class AntonymConceptsTest(QuizFactoryTestCase):

@@ -25,23 +25,23 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_earlier_grammatical_quizzes_block_later_grammatical_quizzes(self):
         """Test that e.g. quizzes for singular forms block quizzes for plural forms."""
         quizzes = self.create_quizzes(self.create_noun_with_grammatical_number(), "fi", "nl")
-        singular_quizzes = {quiz for quiz in quizzes if "singular" in quiz.concept_id}
-        plural_quizzes = {quiz for quiz in quizzes if "plural" in quiz.concept_id}
+        singular_quizzes = {quiz for quiz in quizzes if "singular" in quiz.concept.concept_id}
+        plural_quizzes = {quiz for quiz in quizzes if "plural" in quiz.concept.concept_id}
         for quiz in plural_quizzes:
             self.assertTrue(singular_quizzes.issubset(set(quiz.blocked_by)), msg=quiz)
 
     def test_constituent_concept_quizzes_block_composite_concept_quizzes(self):
         """Test that quizzes for constituent quizzes block quizzes for their composite concepts."""
         quizzes = self.create_quizzes(self.create_noun_with_grammatical_number(), "fi", "nl")
-        composite_quizzes = {quiz for quiz in quizzes if "/" not in quiz.concept_id}
-        constituent_quizzes = {quiz for quiz in quizzes if "/" in quiz.concept_id}
+        composite_quizzes = {quiz for quiz in quizzes if "/" not in quiz.concept.concept_id}
+        constituent_quizzes = {quiz for quiz in quizzes if "/" in quiz.concept.concept_id}
         for quiz in composite_quizzes:
             self.assertEqual(constituent_quizzes, set(quiz.blocked_by), msg=quiz)
 
     def test_nested_constituent_concept_quizzes_block_composite_concept_quizzes(self):
         """Test that nested quizzes for constituent quizzes block quizzes for their composite concepts."""
         quizzes = self.create_quizzes(self.create_noun_with_grammatical_number_and_gender(), "en", "nl")
-        female_quizzes = {quiz for quiz in quizzes if "female" in quiz.concept_id}
-        male_quizzes = {quiz for quiz in quizzes if "cat/plural/male" in quiz.concept_id}
+        female_quizzes = {quiz for quiz in quizzes if "female" in quiz.concept.concept_id}
+        male_quizzes = {quiz for quiz in quizzes if "cat/plural/male" in quiz.concept.concept_id}
         for quiz in male_quizzes:
             self.assertTrue(female_quizzes.issubset(set(quiz.blocked_by)), msg=quiz)
