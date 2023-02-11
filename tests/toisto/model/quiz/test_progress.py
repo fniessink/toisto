@@ -116,7 +116,7 @@ class ProgressTest(ToistoTestCase):
         progress = self.create_progress(quizzes)
         for _ in range(9):
             quiz = progress.next_quiz()
-            self.assertTrue("singular" in quiz.concept_id)
+            self.assertTrue("singular" in quiz.concept.concept_id)
             progress.increase_retention(quiz)
 
     def test_next_quiz_is_quiz_with_progress(self):
@@ -137,7 +137,7 @@ class ProgressTest(ToistoTestCase):
         morning = self.create_concept("morning", dict(level=dict(A1="EP"), fi="Aamu", nl="De ochtend"))
         noon = self.create_concept("noon", dict(level=dict(A2="EP"), fi="Keskipäivä", nl="De middag"))
         quizzes = self.create_quizzes(morning, "fi", "nl") | self.create_quizzes(noon, "fi", "nl")
-        self.assertEqual("morning", self.create_progress(quizzes).next_quiz().concept_id)
+        self.assertEqual("morning", self.create_progress(quizzes).next_quiz().concept.concept_id)
 
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""

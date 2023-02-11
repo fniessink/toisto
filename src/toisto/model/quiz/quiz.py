@@ -12,7 +12,6 @@ from toisto.metadata import SUPPORTED_LANGUAGES, Language
 from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.label import Label, Labels
-from ..model_types import ConceptId
 from .match import match
 
 QuizType = Literal[
@@ -160,21 +159,6 @@ class Quiz:
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(set(self.blocked_by) & quizzes)
-
-    @property
-    def concept_id(self) -> ConceptId:
-        """Return the id of the quiz's concept."""
-        return self.concept.concept_id
-
-    @property
-    def root_concept_id(self) -> ConceptId:
-        """Return the root id of the quiz's concept."""
-        return ConceptId(self.concept_id.split("/")[0])
-
-    @property
-    def used_concepts(self) -> tuple[Concept, ...]:
-        """Return the concepts used by the concept that this quiz quizzes."""
-        return self.concept.used_concepts(self.question_language)
 
 
 Quizzes = set[Quiz]

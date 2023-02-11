@@ -35,33 +35,37 @@ class ConceptFactory:
     concept_id: ConceptId
     concept_dict: ConceptDict
 
-    def create_concept(self) -> Concept:
+    def create_concept(self, parent_concept_id: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
-        return self.composite_concept() if self.get_grammatical_categories() else self.leaf_concept()
+        if self._get_grammatical_categories():
+            return self._create_composite_concept(parent_concept_id)
+        return self._create_leaf_concept(parent_concept_id)
 
-    def composite_concept(self) -> Concept:
+    def _create_composite_concept(self, parent_concept_id: ConceptId | None = None) -> Concept:
         """Create a composite concept from a composite concept dict."""
-        constituent_concepts = []
-        uses = cast(CompositeConceptDict, dict(uses=self.get_uses()))
-        antonyms = self.get_antonym_concepts()
-        levels = self.get_levels()
-        for category in self.get_grammatical_categories():
+        constituent_concept_ids = []
+        uses = cast(CompositeConceptDict, dict(uses=self._get_uses()))
+        antonyms = self._get_antonym_concepts()
+        levels = self._get_levels()
+        for category in self._get_grammatical_categories():
             constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
+            constituent_concept_ids.append(constituent_concept_id)
             antonym_concept_ids = [ConceptId(f"{antonym}/{category}") for antonym in antonyms]
             antonyms_dict = dict(antonym=antonym_concept_ids)
             constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | uses | antonyms_dict
             constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
-            constituent_concepts.append(concept_factory.create_concept())
+            concept_factory.create_concept(self.concept_id)
         return Concept(
             self.concept_id,
-            tuple(constituent_concepts),
-            self.get_used_concepts(),
-            self.get_antonym_concepts(),
-            level=self.get_level(),
+            parent_concept_id,
+            tuple(constituent_concept_ids),
+            self._get_used_concepts(),
+            self._get_antonym_concepts(),
+            level=self._get_level(),
         )
 
-    def leaf_concept(self) -> Concept:
+    def _create_leaf_concept(self, parent_concept_id: ConceptId | None = None) -> Concept:
         """Create a leaf concept from a leaf concept dict."""
         labels = {
             cast(Language, key): label_factory(cast(str | list[str], value))
@@ -70,22 +74,23 @@ class ConceptFactory:
         }
         return Concept(
             self.concept_id,
+            parent_concept_id,
             (),
-            self.get_used_concepts(),
-            self.get_antonym_concepts(),
+            self._get_used_concepts(),
+            self._get_antonym_concepts(),
             labels,
-            self.get_level(),
+            self._get_level(),
         )
 
-    def get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
+    def _get_grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
         return tuple(
             cast(GrammaticalCategory, key) for key in self.concept_dict if key in get_args(GrammaticalCategory)
         )
 
-    def get_used_concepts(self) -> dict[Language, tuple[ConceptId, ...]]:
+    def _get_used_concepts(self) -> dict[Language, tuple[ConceptId, ...]]:
         """Retrieve the uses relationships from the concept dict."""
-        uses = self.get_uses()
+        uses = self._get_uses()
         if not isinstance(uses, dict):
             uses = {language: uses for language in get_args(Language)}  # Uses are the same for all languages
         return {
@@ -93,27 +98,27 @@ class ConceptFactory:
             for language, concept_ids in uses.items()
         }
 
-    def get_uses(self) -> ConceptIdDictOrListOrString:
+    def _get_uses(self) -> ConceptIdDictOrListOrString:
         """Get the uses from the concept dict."""
         return cast(ConceptIdDictOrListOrString, self.concept_dict.get("uses", {}))
 
-    def get_antonym_concepts(self) -> tuple[ConceptId, ...]:
+    def _get_antonym_concepts(self) -> tuple[ConceptId, ...]:
         """Return the antonym concepts."""
-        antonyms = self.get_antonyms()
+        antonyms = self._get_antonyms()
         return tuple(antonyms) if isinstance(antonyms, list) else (antonyms,)
 
-    def get_antonyms(self) -> ConceptIdListOrString:
+    def _get_antonyms(self) -> ConceptIdListOrString:
         """Get the antonyms from the concept dict."""
         return cast(ConceptIdListOrString, self.concept_dict.get("antonym", []))
 
-    def get_levels(self) -> CommonReferenceLevelDict:
+    def _get_levels(self) -> CommonReferenceLevelDict:
         """Get the Common Reference Levels from the concept dict."""
         return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
 
-    def get_level(self) -> CommonReferenceLevel | None:
+    def _get_level(self) -> CommonReferenceLevel | None:
         """Determine the Common Reference Level for this concept.
 
         At the moment, just use the highest language level specified by the available sources.
         """
-        concept_levels = [level for level in self.get_levels() if level in get_args(CommonReferenceLevel)]
+        concept_levels = [level for level in self._get_levels() if level in get_args(CommonReferenceLevel)]
         return max(concept_levels, default=None)
