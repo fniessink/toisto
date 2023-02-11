@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Allow for specifying the target and source language in the configuration file. Note: because this change makes the target and source language parameters optional, this changes the command-line interface. You need to use: `toisto practice --target fi --source en` instead of `toisto practice fi en` when specifying the languages on the command-line.
 - Allow for practicing a specific language level with `--level {level}`. Also allow for specifying the language level in the configuration file. Closes [#186](https://github.com/fniessink/toisto/issues/186).
+- Add quizzes for antonyms (opposites). Closes [#7](https://github.com/fniessink/toisto/issues/7).
 - Show the language level in the output of the topics command.
 - More colorful help information.
 - Health topic.

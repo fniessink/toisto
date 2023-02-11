@@ -18,6 +18,7 @@ from .match import match
 QuizType = Literal[
     "translate",
     "listen",
+    "antonym",
     "pluralize",
     "singularize",
     "masculinize",
@@ -58,7 +59,11 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "negative": "negate",
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
-INSTRUCTIONS: dict[QuizType, str] = dict(translate="Translate into", listen="Listen and write in")
+INSTRUCTIONS: dict[QuizType, str] = dict(
+    translate="Translate into",
+    listen="Listen and write in",
+    antonym="Give the [underline]antonym[/underline] in",
+)
 
 
 def instruction(*quiz_types: QuizType) -> str:

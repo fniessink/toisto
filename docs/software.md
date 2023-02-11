@@ -347,6 +347,8 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 
 ### Concept relationships
 
+#### Use relations
+
 When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
 
 ```json
@@ -379,7 +381,9 @@ When a concept uses one or more other concepts, this can be specified with the `
 }
 ```
 
-If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers. If the used concepts differ per language, an object with languages as keys can be used:
+If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
+
+If the used concepts differ per language, an object with languages as keys can be used:
 
 ```json
 {
@@ -396,6 +400,27 @@ If a concept uses exactly one other concept, the `uses` value can be a string in
     }
 }
 ```
+
+#### Antonym
+
+When one concept is an antonym (opposite) of another concept, this can be specified with the `antonym` relation. Toisto will add quizzes to ask users for the antonym of concepts in their target language.
+
+```json
+{
+    "big": {
+        "en": "Big",
+        "nl": "Groot",
+        "antonym": "small"
+    },
+    "small": {
+        "en": "Small",
+        "nl": "Klein",
+        "antonym": "big"
+    }
+}
+```
+
+If a concept has more than antonym (for example, large and big are both antonyms of small), the `antonym` value can be a list of concept identifiers instead of a string.
 
 ### Concept levels
 
@@ -448,6 +473,7 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 5. Quizzes to change the gender of a concept.
 6. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
 7. Quizzes to change the sentence form and polarity.
+8. Quizzes to give the antonym.
 
 Except for the translation type quizzes, quizzes only use the user's target language.
 

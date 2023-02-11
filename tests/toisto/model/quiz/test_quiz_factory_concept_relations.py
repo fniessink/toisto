@@ -1,10 +1,12 @@
 """Concept relations unit tests."""
 
+from toisto.model.quiz.quiz_factory import QuizFactory
+
 from .test_quiz_factory import QuizFactoryTestCase
 
 
-class ConceptRelationshipsTest(QuizFactoryTestCase):
-    """Unit tests for relationships between concepts."""
+class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
+    """Unit tests for uses relationships between concepts."""
 
     def test_concept_relationship_leaf_concept(self):
         """Test that concepts can declare to use, i.e. depend on, other concepts."""
@@ -45,3 +47,16 @@ class ConceptRelationshipsTest(QuizFactoryTestCase):
         }
         for quiz in self.create_quizzes(concept, "fi", "nl"):
             self.assertEqual(expected_concept_ids[quiz], quiz.concept_id)
+
+
+class AntonymConceptsTest(QuizFactoryTestCase):
+    """Unit tests for antonym concepts."""
+
+    def test_antonym_leaf_concepts(self):
+        """Test that quizzes are generated for concepts with antonym concepts."""
+        big = self.create_concept("big", dict(antonym="small", en="Big"))
+        small = self.create_concept("small", dict(antonym="big", en="Small"))
+        quizzes = QuizFactory("en", "en").create_quizzes(big, small)
+        for question, answer in [("Big", "Small"), ("Small", "Big")]:
+            antonym = self.create_quiz(big, "en", "en", question, [answer], "antonym")
+            self.assertIn(antonym, quizzes)

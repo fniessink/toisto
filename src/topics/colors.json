@@ -1,5 +1,6 @@
 {
     "black": {
+        "antonym": "white",
         "level": {
             "A1": [
                 "EP",
@@ -12,6 +13,7 @@
         "nl": "Zwart"
     },
     "white": {
+        "antonym": "black",
         "level": {
             "A1": [
                 "EP",
