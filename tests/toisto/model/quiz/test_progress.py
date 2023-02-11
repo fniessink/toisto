@@ -69,21 +69,18 @@ class ProgressTest(ToistoTestCase):
         progress = self.create_progress({listen, self.quiz})
         self.assertEqual(self.quiz, progress.next_quiz())
 
-    def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes(self):
-        """Test that the concept of the next quiz does not use other concepts with eligible quizzes."""
-        concept1 = self.create_concept("good day", dict(uses="good"))
+    def test_roots_block_quizzes(self):
+        """Test that quizzes are blocked if roots have eligible quizzes."""
+        concept1 = self.create_concept("good day", dict(roots="good"))
         quiz1 = self.create_quiz(concept1, "nl", "en", "Goedendag", ["Good day"])
         concept2 = self.create_concept("good")
         quiz2 = self.create_quiz(concept2, "nl", "en", "Goed", ["Good"])
         progress = self.create_progress([quiz1, quiz2])
         self.assertEqual(quiz2, progress.next_quiz())
 
-    def test_concept_of_next_quiz_does_not_use_other_concepts_with_eligible_quizzes_even_across_topics(self):
-        """Test that the concept of the next quiz does not use other concepts with eligible quizzes.
-
-        Even when the concepts belong to different topics.
-        """
-        concept1 = self.create_concept("good day", dict(uses="good"))
+    def test_roots_block_quizzes_even_across_topics(self):
+        """Test that quizzes are blocked if roots have eligible quizzes, even when they belong to different topics."""
+        concept1 = self.create_concept("good day", dict(roots="good"))
         quiz1 = self.create_quiz(concept1, "nl", "en", "Goedendag", ["Good day"])
         concept2 = self.create_concept("good")
         quiz2 = self.create_quiz(concept2, "nl", "en", "Goed", ["Good"])
@@ -99,14 +96,14 @@ class ProgressTest(ToistoTestCase):
         afternoon = self.create_concept(
             "afternoon",
             dict(
-                uses="morning",
+                roots="morning",
                 singular=dict(fi="Iltapäivä", nl="De middag"),
                 plural=dict(fi="Iltapäivät", nl="De middagen"),
             ),
         )
         evening = self.create_concept(
             "evening",
-            dict(uses="afternoon", singular=dict(fi="Ilta", nl="De avond"), plural=dict(fi="Illat", nl="De avonden")),
+            dict(roots="afternoon", singular=dict(fi="Ilta", nl="De avond"), plural=dict(fi="Illat", nl="De avonden")),
         )
         quizzes = (
             self.create_quizzes(morning, "fi", "nl")

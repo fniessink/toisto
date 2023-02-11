@@ -1,6 +1,6 @@
 {
     "the car is black": {
-        "uses": [
+        "roots": [
             "to be",
             "car",
             "black"
@@ -115,7 +115,7 @@
         }
     },
     "to speak english": {
-        "uses": [
+        "roots": [
             "english"
         ],
         "declarative": {

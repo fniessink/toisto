@@ -5,22 +5,22 @@ from toisto.model.quiz.quiz_factory import QuizFactory
 from .test_quiz_factory import QuizFactoryTestCase
 
 
-class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
-    """Unit tests for uses relationships between concepts."""
+class ConceptRootsTest(QuizFactoryTestCase):
+    """Unit tests for roots."""
 
     def test_concept_relationship_leaf_concept(self):
-        """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        mall = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
+        """Test that leaf concepts can declare to have roots."""
+        mall = self.create_concept("mall", dict(roots=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
-        self.assertEqual((shop, centre), self.create_quizzes(mall, "fi", "nl").pop().concept.used_concepts("fi"))
+        self.assertEqual((shop, centre), self.create_quizzes(mall, "fi", "nl").pop().concept.root_concepts("fi"))
 
     def test_concept_relationship_composite_concept(self):
-        """Test that concepts can declare to use, i.e. depend on, other concepts."""
+        """Test that composite concepts can declare to have roots."""
         mall = self.create_concept(
             "mall",
             dict(
-                uses=["shop", "centre"],
+                roots=["shop", "centre"],
                 singular=dict(fi="Kauppakeskus", nl="Het winkelcentrum"),
                 plural=dict(fi="Kauppakeskukset", nl="De winkelcentra"),
             ),
@@ -28,14 +28,14 @@ class ConceptUsesRelationshipsTest(QuizFactoryTestCase):
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
         for quiz in self.create_quizzes(mall, "fi", "nl"):
-            self.assertIn(shop, quiz.concept.used_concepts("fi"))
-            self.assertIn(centre, quiz.concept.used_concepts("fi"))
+            self.assertIn(shop, quiz.concept.root_concepts("fi"))
+            self.assertIn(centre, quiz.concept.root_concepts("fi"))
 
-    def test_concept_relationship_leaf_concept_one_uses(self):
-        """Test that concepts can declare to use, i.e. depend on, other concepts."""
-        capital = self.create_concept("capital", dict(uses="city", fi="Pääkaupunki", en="Capital"))
+    def test_concept_relationship_leaf_concept_one_root(self):
+        """Test that leaf concepts can declare to have one root."""
+        capital = self.create_concept("capital", dict(roots="city", fi="Pääkaupunki", en="Capital"))
         city = self.create_concept("city", dict(fi="Kaupunki"))
-        self.assertEqual((city,), self.create_quizzes(capital, "fi", "en").pop().concept.used_concepts("fi"))
+        self.assertEqual((city,), self.create_quizzes(capital, "fi", "en").pop().concept.root_concepts("fi"))
 
     def test_generated_concept_ids_for_constituent_concepts(self):
         """Test that constituent concepts get a generated concept id."""

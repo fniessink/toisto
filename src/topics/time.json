@@ -47,7 +47,7 @@
             "A2": "EP",
             "C1": "OD"
         },
-        "uses": {
+        "roots": {
             "fi": "day",
             "nl": [
                 "12",
@@ -71,7 +71,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "noon",
             "fi": ["evening", "day"],
             "nl": "day"
@@ -130,7 +130,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": "night",
+        "roots": "night",
         "singular": {
             "en": "Midnight",
             "fi": "Keskiyö",
@@ -166,7 +166,7 @@
             "B1": "OD",
             "B2": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "10",
                 "year"
@@ -188,7 +188,7 @@
             "B1": "OD",
             "B2": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "100",
                 "year"
@@ -263,7 +263,7 @@
         }
     },
     "what time is it": {
-        "uses": {
+        "roots": {
             "en": [
                 "what",
                 "time",
@@ -289,7 +289,7 @@
         "nl": "Hoe laat is het?"
     },
     "it is 10:00": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "10",
@@ -311,7 +311,7 @@
         "nl": "Het is tien uur"
     },
     "it is 2:30": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "2",
@@ -332,7 +332,7 @@
         "nl": "Het is half drie"
     },
     "it is 3:15": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "3"
@@ -352,7 +352,7 @@
         "nl": "Het is kwart over drie"
     },
     "it is 3:45": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "4"
@@ -372,7 +372,7 @@
         "nl": "Het is kwart voor vier"
     },
     "it is 6:20": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "6",
@@ -398,7 +398,7 @@
         "nl": "Het is tien voor half zeven"
     },
     "it is 6:40": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "7",
@@ -426,7 +426,7 @@
         "nl": "Het is tien over half zeven"
     },
     "what time": {
-        "uses": {
+        "roots": {
             "en": [
                 "what",
                 "time"
@@ -439,7 +439,7 @@
         "nl": "Hoe laat?"
     },
     "how long does it take": {
-        "uses": "how",
+        "roots": "how",
         "en": "How long does it take?",
         "fi": [
             "Kauanko se kestää?",
@@ -448,7 +448,7 @@
         "nl": "Hoe lang duurt het?"
     },
     "it takes one hour": {
-        "uses": {
+        "roots": {
             "en": [
                 "1",
                 "hour"

@@ -58,7 +58,7 @@
         "nl": "Welkom"
     },
     "who are you": {
-        "uses": [
+        "roots": [
             "who",
             "to be"
         ],
@@ -67,13 +67,13 @@
         "nl": "Wie ben jij?"
     },
     "I am alice": {
-        "uses": "to be",
+        "roots": "to be",
         "en": "I am Alice|I'm Alice",
         "fi": "Minä olen Alice",
         "nl": "Ik ben Alice"
     },
     "how are you": {
-        "uses": [
+        "roots": [
             "what",
             "how",
             "to be"
@@ -105,7 +105,7 @@
         }
     },
     "what is your name": {
-        "uses": [
+        "roots": [
             "what",
             "to be",
             "name"
@@ -115,7 +115,7 @@
         "nl": "Wat is jouw naam?|Wat is je naam?"
     },
     "my name is bob": {
-        "uses": [
+        "roots": [
             "name",
             "to be"
         ],
@@ -124,7 +124,7 @@
         "nl": "Mijn naam is Bob"
     },
     "how old are you": {
-        "uses": [
+        "roots": [
             "how",
             "old",
             "to be"
@@ -138,7 +138,7 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": [
+        "roots": [
             "good",
             "morning"
         ],
@@ -154,7 +154,7 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": {
+        "roots": {
             "en": [
                 "good",
                 "afternoon"
@@ -182,7 +182,7 @@
                 "OD"
             ]
         },
-        "uses": [
+        "roots": [
             "good",
             "day"
         ],
@@ -198,7 +198,7 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": [
+        "roots": [
             "good",
             "evening"
         ],
@@ -214,7 +214,7 @@
             "A1": "EP",
             "none": "OD"
         },
-        "uses": [
+        "roots": [
             "good",
             "night"
         ],
@@ -229,7 +229,7 @@
                 "OD"
             ]
         },
-        "uses": "to sleep",
+        "roots": "to sleep",
         "en": "Sleep well",
         "fi": "Nuku hyvin",
         "nl": [

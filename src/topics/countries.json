@@ -19,7 +19,7 @@
         }
     },
     "finland": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "Finland",
@@ -27,7 +27,7 @@
         "nl": "Finland"
     },
     "estland": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "Estland",
@@ -50,7 +50,7 @@
         "nl": "Zweden"
     },
     "russia": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "Russia",
@@ -63,7 +63,7 @@
         "nl": "België"
     },
     "netherlands": {
-        "uses": {
+        "roots": {
             "fi": "country",
             "nl": "country"
         },
@@ -72,7 +72,7 @@
         "nl": "Nederland"
     },
     "germany": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "Germany",
@@ -85,7 +85,7 @@
         "nl": "Frankrijk"
     },
     "england": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "England",
@@ -93,7 +93,7 @@
         "nl": "Engeland"
     },
     "iceland": {
-        "uses": {
+        "roots": {
             "nl": "country"
         },
         "en": "Iceland",

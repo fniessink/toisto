@@ -130,7 +130,7 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": "beach"
         },
         "singular": {
@@ -151,7 +151,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "country"
         },
         "singular": {
@@ -309,7 +309,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "country"
         },
         "en": "World",
@@ -321,7 +321,7 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": "country"
         },
         "singular": {
@@ -336,7 +336,7 @@
         }
     },
     "it is cold in the north": {
-        "uses": [
+        "roots": [
             "to be",
             "cold",
             "north"
@@ -346,7 +346,7 @@
         "nl": "Het is koud in het Noorden"
     },
     "it is warm in the south": {
-        "uses": [
+        "roots": [
             "to be",
             "warm",
             "south"
@@ -356,7 +356,7 @@
         "nl": "Het is warm in het Zuiden"
     },
     "she is from the north": {
-        "uses": [
+        "roots": [
             "north",
             "to come"
         ],
@@ -368,7 +368,7 @@
         "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
     },
     "they live in the west": {
-        "uses": [
+        "roots": [
             "west",
             "to live"
         ],
@@ -377,7 +377,7 @@
         "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
     },
     "the city is in the east": {
-        "uses": [
+        "roots": [
             "city",
             "to be",
             "east"

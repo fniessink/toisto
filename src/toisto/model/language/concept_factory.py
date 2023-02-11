@@ -16,7 +16,7 @@ from .label import label_factory
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-MetaData = Literal["level", "antonym", "uses"]
+MetaData = Literal["level", "antonym", "roots"]
 LeafConceptDict = dict[
     Language | MetaData,
     ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict,
@@ -44,7 +44,7 @@ class ConceptFactory:
     def _create_composite_concept(self, parent_concept_id: ConceptId | None = None) -> Concept:
         """Create a composite concept from a composite concept dict."""
         constituent_concept_ids = []
-        uses = cast(CompositeConceptDict, dict(uses=self._get_uses()))
+        roots_dict = cast(CompositeConceptDict, dict(roots=self._get_roots()))
         antonyms = self._get_antonym_concepts()
         levels = self._get_levels()
         for category in self._get_grammatical_categories():
@@ -52,7 +52,9 @@ class ConceptFactory:
             constituent_concept_ids.append(constituent_concept_id)
             antonym_concept_ids = [ConceptId(f"{antonym}/{category}") for antonym in antonyms]
             antonyms_dict = dict(antonym=antonym_concept_ids)
-            constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | uses | antonyms_dict
+            constituent_concept_dict = (
+                cast(CompositeConceptDict, self.concept_dict)[category] | roots_dict | antonyms_dict
+            )
             constituent_concept_dict.setdefault("level", levels)
             concept_factory = self.__class__(constituent_concept_id, cast(ConceptDict, constituent_concept_dict))
             concept_factory.create_concept(self.concept_id)
@@ -60,7 +62,7 @@ class ConceptFactory:
             self.concept_id,
             parent_concept_id,
             tuple(constituent_concept_ids),
-            self._get_used_concepts(),
+            self._get_root_concepts(),
             self._get_antonym_concepts(),
             level=self._get_level(),
         )
@@ -76,7 +78,7 @@ class ConceptFactory:
             self.concept_id,
             parent_concept_id,
             (),
-            self._get_used_concepts(),
+            self._get_root_concepts(),
             self._get_antonym_concepts(),
             labels,
             self._get_level(),
@@ -88,19 +90,19 @@ class ConceptFactory:
             cast(GrammaticalCategory, key) for key in self.concept_dict if key in get_args(GrammaticalCategory)
         )
 
-    def _get_used_concepts(self) -> dict[Language, tuple[ConceptId, ...]]:
-        """Retrieve the uses relationships from the concept dict."""
-        uses = self._get_uses()
-        if not isinstance(uses, dict):
-            uses = {language: uses for language in get_args(Language)}  # Uses are the same for all languages
+    def _get_root_concepts(self) -> dict[Language, tuple[ConceptId, ...]]:
+        """Retrieve the roots from the concept dict."""
+        roots = self._get_roots()
+        if not isinstance(roots, dict):
+            roots = {language: roots for language in get_args(Language)}  # Roots are the same for all languages
         return {
             language: tuple(concept_ids) if isinstance(concept_ids, list) else (concept_ids,)
-            for language, concept_ids in uses.items()
+            for language, concept_ids in roots.items()
         }
 
-    def _get_uses(self) -> ConceptIdDictOrListOrString:
-        """Get the uses from the concept dict."""
-        return cast(ConceptIdDictOrListOrString, self.concept_dict.get("uses", {}))
+    def _get_roots(self) -> ConceptIdDictOrListOrString:
+        """Get the roots from the concept dict."""
+        return cast(ConceptIdDictOrListOrString, self.concept_dict.get("roots", {}))
 
     def _get_antonym_concepts(self) -> tuple[ConceptId, ...]:
         """Return the antonym concepts."""

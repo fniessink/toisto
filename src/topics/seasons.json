@@ -41,7 +41,7 @@
         }
     },
     "in spring": {
-        "uses": "spring",
+        "roots": "spring",
         "en": "In spring",
         "fi": "Keväällä",
         "nl": [
@@ -50,7 +50,7 @@
         ]
     },
     "next spring": {
-        "uses": "spring",
+        "roots": "spring",
         "en": "Next spring",
         "fi": "Ensi keväänä",
         "nl": [
@@ -59,7 +59,7 @@
         ]
     },
     "last spring": {
-        "uses": "spring",
+        "roots": "spring",
         "en": "Last spring",
         "fi": "Viime keväänä",
         "nl": [
@@ -87,19 +87,19 @@
         }
     },
     "in summer": {
-        "uses": "summer",
+        "roots": "summer",
         "en": "In summer",
         "fi": "Kesällä",
         "nl": "In de zomer"
     },
     "next summer": {
-        "uses": "summer",
+        "roots": "summer",
         "en": "Next summer",
         "fi": "Ensi kesänä",
         "nl": "Volgende zomer"
     },
     "last summer": {
-        "uses": "summer",
+        "roots": "summer",
         "en": "Last summer",
         "fi": "Viime kesänä",
         "nl": "Vorige zomer"
@@ -136,7 +136,7 @@
         }
     },
     "in autumn": {
-        "uses": "autumn",
+        "roots": "autumn",
         "en": [
             "In autumn",
             "In fall"
@@ -148,7 +148,7 @@
         ]
     },
     "next autumn": {
-        "uses": "autumn",
+        "roots": "autumn",
         "en": "Next autumn|Next fall",
         "fi": "Ensi syksynä",
         "nl": [
@@ -157,7 +157,7 @@
         ]
     },
     "last autumn": {
-        "uses": "autumn",
+        "roots": "autumn",
         "en": "Last autumn",
         "fi": "Viime syksynä",
         "nl": [
@@ -185,25 +185,25 @@
         }
     },
     "in winter": {
-        "uses": "winter",
+        "roots": "winter",
         "en": "In winter",
         "fi": "Talvella",
         "nl": "In de winter"
     },
     "next winter": {
-        "uses": "winter",
+        "roots": "winter",
         "en": "Next winter",
         "fi": "Ensi talvena",
         "nl": "Volgende winter"
     },
     "last winter": {
-        "uses": "winter",
+        "roots": "winter",
         "en": "Last winter",
         "fi": "Viime talvena",
         "nl": "Vorige winter"
     },
     "the finnish winter is cold": {
-        "uses": [
+        "roots": [
             "winter",
             "to be",
             "cold"
@@ -213,7 +213,7 @@
         "nl": "De Finse winter is koud"
     },
     "the dutch autumn is wet": {
-        "uses": [
+        "roots": [
             "autumn",
             "to be",
             "wet"
@@ -232,7 +232,7 @@
         ]
     },
     "finnish winters are cold": {
-        "uses": [
+        "roots": [
             "winter",
             "to be",
             "cold"
@@ -242,7 +242,7 @@
         "nl": "Finse winters zijn koud"
     },
     "dutch springs are wet": {
-        "uses": [
+        "roots": [
             "spring",
             "to be",
             "wet"

@@ -6,7 +6,7 @@
                 "OD"
             ]
         },
-        "uses": "day",
+        "roots": "day",
         "singular": {
             "en": "Holiday",
             "fi": "Juhlapäivä",
@@ -32,7 +32,7 @@
             "C1": "OD",
             "none": "EP"
         },
-        "uses": {
+        "roots": {
             "en": "christmas",
             "fi": "christmas",
             "nl": [
@@ -49,7 +49,7 @@
             "A1": "OD",
             "none": "EP"
         },
-        "uses": [
+        "roots": [
             "christmas",
             "day"
         ],
@@ -62,7 +62,7 @@
             "C1": "OD",
             "none": "EP"
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "fi": "day",
             "nl": [
@@ -81,7 +81,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "christmas",
             "fi": [
                 "good",
@@ -100,7 +100,7 @@
                 "OD"
             ]
         },
-        "uses": [
+        "roots": [
             "christmas",
             "tree"
         ],
@@ -115,7 +115,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "christmas",
             "nl": "christmas"
         },
@@ -146,7 +146,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "christmas tree",
                 "christmas"
@@ -162,7 +162,7 @@
             "A1": "OD",
             "none": "EP"
         },
-        "uses": [
+        "roots": [
             "new",
             "year"
         ],
@@ -177,7 +177,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": [
                 "happy",
                 "new year"
@@ -203,7 +203,7 @@
                 "OD"
             ]
         },
-        "uses": "day",
+        "roots": "day",
         "en": "Valentine's Day",
         "fi": "Ystävänpäivä",
         "nl": "Valentijnsdag"
@@ -233,7 +233,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "may",
             "nl": "day"
         },
@@ -246,7 +246,7 @@
             "C1": "OD",
             "none": "EP"
         },
-        "uses": {
+        "roots": {
             "en": "summer",
             "nl": "summer"
         },
@@ -261,7 +261,7 @@
                 "OD"
             ]
         },
-        "uses": "day",
+        "roots": "day",
         "fi": "Itsenäisyyspäivä"
     }
 }

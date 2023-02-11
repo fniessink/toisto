@@ -22,7 +22,7 @@
             "B2": "OD",
             "C1": "EP"
         },
-        "uses": [
+        "roots": [
             "health",
             "care"
         ],
@@ -188,7 +188,7 @@
                 "OD"
             ]
         },
-        "uses": [
+        "roots": [
             "head",
             "ache"
         ],

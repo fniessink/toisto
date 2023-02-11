@@ -347,9 +347,9 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 
 ### Concept relationships
 
-#### Use relations
+#### Compound concepts
 
-When a concept uses one or more other concepts, this can be specified with the `uses` relation. Toisto will only quiz a *using* concept when all *used* concepts have been quizzed. The `uses` relationship can be specified by adding a `uses` key to the concept with a list of concept identifiers as value:
+When a concept is a compound of one or more other concepts, this can be specified with the `roots` relation. Toisto will only quiz a *compound* concept when all *root* concepts have been quizzed. The `roots` relationship can be specified by adding a `roots` key to the concept with a list of concept identifiers as value:
 
 ```json
 {
@@ -374,16 +374,16 @@ When a concept uses one or more other concepts, this can be specified with the `
         }
     },
     "days of the week": {
-        "uses": ["day", "week"],
+        "roots": ["day", "week"],
         "en": "Days of the week",
         "nl": "De dagen van de week"
     }
 }
 ```
 
-If a concept uses exactly one other concept, the `uses` value can be a string instead of a list of concept identifiers.
+If a concept has exactly one root, for example becuase not all roots have been included in the topic file yet, the `roots` value can be a string instead of a list of concept identifiers.
 
-If the used concepts differ per language, an object with languages as keys can be used:
+If the root concepts differ per language, an object with languages as keys can be used:
 
 ```json
 {
@@ -392,7 +392,7 @@ If the used concepts differ per language, an object with languages as keys can b
         "fi": "Paita"
     },
     "sweater": {
-        "uses": {
+        "roots": {
             "fi": "shirt"
         },
         "en": "Sweater",
