@@ -24,7 +24,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "orange",
             "nl": "apple"
         },
@@ -44,7 +44,7 @@
             "A2": "OD",
             "none": "EP"
         },
-        "uses": {
+        "roots": {
             "en": [
                 "hot",
                 "dog"
@@ -325,7 +325,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "nl": "apple"
         },
         "singular": {
@@ -520,7 +520,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "bread"
         },
         "singular": {
@@ -589,7 +589,7 @@
             "C1": "OD",
             "none": "EP"
         },
-        "uses": "flower",
+        "roots": "flower",
         "singular": {
             "en": "Cauliflower",
             "fi": "Kukkakaali",
@@ -608,7 +608,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "nl": "chair"
         },
         "singular": {
@@ -627,7 +627,7 @@
             "A2": "EP",
             "B1": "OD"
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "white",
                 "onion"
@@ -712,7 +712,7 @@
             "C1": "OD",
             "none": "EP"
         },
-        "uses": "cream",
+        "roots": "cream",
         "en": "Whipped cream",
         "fi": "Kermavaahto",
         "nl": "De slagroom"

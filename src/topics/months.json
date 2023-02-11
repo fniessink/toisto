@@ -6,7 +6,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon",
             "nl": "moon"
         },
@@ -46,7 +46,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "January",
@@ -54,7 +54,7 @@
         "nl": "Januari"
     },
     "in january": {
-        "uses": "january",
+        "roots": "january",
         "en": "In January",
         "fi": "Tammikuussa",
         "nl": "In januari"
@@ -66,7 +66,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "February",
@@ -80,7 +80,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "March",
@@ -94,7 +94,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "April",
@@ -102,7 +102,7 @@
         "nl": "April"
     },
     "in april": {
-        "uses": "april",
+        "roots": "april",
         "en": "In April",
         "fi": "Huhtikuussa",
         "nl": "In april"
@@ -114,7 +114,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "May",
@@ -128,7 +128,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "summer",
                 "moon"
@@ -145,7 +145,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "July",
@@ -159,7 +159,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "August",
@@ -173,7 +173,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "autumn",
                 "moon"
@@ -190,7 +190,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "October",
@@ -204,7 +204,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": "moon"
         },
         "en": "November",
@@ -218,7 +218,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "christmas",
                 "moon"
@@ -229,7 +229,7 @@
         "nl": "December"
     },
     "it is july": {
-        "uses": [
+        "roots": [
             "july",
             "to be",
             "now"

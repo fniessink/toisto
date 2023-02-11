@@ -1,6 +1,6 @@
 {
     "to have (aux)": {
-        "uses": [
+        "roots": [
             "to have",
             "to paint",
             "house"
@@ -48,7 +48,7 @@
         }
     },
     "to be (aux)": {
-        "uses": [
+        "roots": [
             "to be",
             "to paint",
             "house"
@@ -96,7 +96,7 @@
         }
     },
     "to be able to": {
-        "uses": [
+        "roots": [
             "to paint",
             "house"
         ],
@@ -143,7 +143,7 @@
         }
     },
     "to have to": {
-        "uses": [
+        "roots": [
             "to paint",
             "house"
         ],
@@ -190,7 +190,7 @@
         }
     },
     "to be allowed to": {
-        "uses": [
+        "roots": [
             "to paint",
             "house"
         ],
@@ -237,7 +237,7 @@
         }
     },
     "to want": {
-        "uses": [
+        "roots": [
             "to paint",
             "house"
         ],

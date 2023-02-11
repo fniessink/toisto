@@ -133,7 +133,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": "blue",
+        "roots": "blue",
         "en": "Light blue",
         "fi": "Vaaleansininen",
         "nl": "Lichtblauw"
@@ -143,13 +143,13 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": "blue",
+        "roots": "blue",
         "en": "Dark blue",
         "fi": "Tummansininen",
         "nl": "Donkerblauw"
     },
     "the car is blue": {
-        "uses": [
+        "roots": [
             "car",
             "to be",
             "blue"
@@ -166,7 +166,7 @@
         }
     },
     "the blue car is old": {
-        "uses": [
+        "roots": [
             "blue",
             "car",
             "to be",
@@ -184,7 +184,7 @@
         }
     },
     "the house is white": {
-        "uses": [
+        "roots": [
             "house",
             "to be",
             "white"
@@ -201,7 +201,7 @@
         }
     },
     "the white house is big": {
-        "uses": [
+        "roots": [
             "white",
             "house",
             "big"
@@ -218,7 +218,7 @@
         }
     },
     "i have a green table": {
-        "uses": [
+        "roots": [
             "green",
             "to have",
             "table"
@@ -235,7 +235,7 @@
         }
     },
     "the green table is mine": {
-        "uses": [
+        "roots": [
             "green",
             "table",
             "to be"
@@ -252,7 +252,7 @@
         }
     },
     "I read the red book": {
-        "uses": [
+        "roots": [
             "to read",
             "red",
             "book"
@@ -269,7 +269,7 @@
         }
     },
     "i live in a purple house": {
-        "uses": [
+        "roots": [
             "to live",
             "purple",
             "house"
@@ -286,7 +286,7 @@
         }
     },
     "i sit on a green sofa": {
-        "uses": [
+        "roots": [
             "green",
             "sofa"
         ],

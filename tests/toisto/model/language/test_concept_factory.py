@@ -19,19 +19,19 @@ class ConcepFactoryTest(ToistoTestCase):
         )
         self.assertEqual(2, len(concept.constituent_concepts))
 
-    def test_uses(self):
-        """Test that a concept can have a uses relation with another concept."""
-        concept = self.create_concept("mall", dict(uses=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
+    def test_roots(self):
+        """Test that a concept can have roots."""
+        concept = self.create_concept("mall", dict(roots=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
-        self.assertEqual((shop, centre), concept.used_concepts("fi"))
+        self.assertEqual((shop, centre), concept.root_concepts("fi"))
 
-    def test_language_specific_uses(self):
-        """Test that a concept can have a uses relation with another concept in one language but not in another."""
-        decade = self.create_concept("decade", dict(uses=dict(fi="year"), fi="Vuosikymmen", en="Decade"))
+    def test_language_specific_roots(self):
+        """Test that a concept can have a root in one language but not in another."""
+        decade = self.create_concept("decade", dict(roots=dict(fi="year"), fi="Vuosikymmen", en="Decade"))
         year = self.create_concept("year", dict(fi="Vuosi"))
-        self.assertEqual((year,), decade.used_concepts("fi"))
-        self.assertEqual((), decade.used_concepts("en"))
+        self.assertEqual((year,), decade.root_concepts("fi"))
+        self.assertEqual((), decade.root_concepts("en"))
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""

@@ -93,7 +93,7 @@
                 "OD"
             ]
         },
-        "uses": "how",
+        "roots": "how",
         "en": "How many?",
         "fi": "Kuinka monta?",
         "nl": "Hoeveel"
@@ -114,7 +114,7 @@
         ]
     },
     "where is the water": {
-        "uses": [
+        "roots": [
             "where",
             "to be",
             "water"
@@ -124,7 +124,7 @@
         "nl": "Waar is het water?"
     },
     "where there": {
-        "uses": [
+        "roots": [
             "where",
             "there"
         ],
@@ -133,7 +133,7 @@
         "nl": "Waar? Daar!"
     },
     "why are you doing that": {
-        "uses": "why",
+        "roots": "why",
         "en": "Why are you doing that?",
         "fi": [
             "Miksi teet tuon?",
@@ -142,7 +142,7 @@
         "nl": "Waarom doe je dat?"
     },
     "why is that the case": {
-        "uses": [
+        "roots": [
             "why",
             "to be"
         ],
@@ -154,7 +154,7 @@
         "nl": "Waarom is dat zo?"
     },
     "why are you too late": {
-        "uses": [
+        "roots": [
             "why",
             "to be"
         ],
@@ -163,7 +163,7 @@
         "nl": "Waarom ben je te laat?"
     },
     "why are bananas bent": {
-        "uses": [
+        "roots": [
             "why",
             "banana",
             "to be"
@@ -173,7 +173,7 @@
         "nl": "Waarom zijn bananen krom?|Waarom zijn de bananen krom?"
     },
     "where is the toilet": {
-        "uses": [
+        "roots": [
             "where",
             "to be"
         ],
@@ -191,7 +191,7 @@
         ]
     },
     "when will you arrive at the airport": {
-        "uses": [
+        "roots": [
             "when",
             "airport"
         ],
@@ -200,7 +200,7 @@
         "nl": "Wanneer kom je aan op het vliegveld?|Wanneer kom je op het vliegveld aan?"
     },
     "what kind of cat do you have": {
-        "uses": [
+        "roots": [
             "what kind of",
             "cat",
             "to have"

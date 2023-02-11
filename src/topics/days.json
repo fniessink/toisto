@@ -44,7 +44,7 @@
                 "OD"
             ]
         },
-        "uses": "week",
+        "roots": "week",
         "singular": {
             "en": "Weekend",
             "fi": "Viikonloppu",
@@ -57,7 +57,7 @@
         }
     },
     "days of the week": {
-        "uses": [
+        "roots": [
             "day",
             "week"
         ],
@@ -72,7 +72,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": [
                 "moon",
@@ -91,7 +91,7 @@
         }
     },
     "on monday": {
-        "uses": "monday",
+        "roots": "monday",
         "en": "On Monday",
         "fi": "Maanantaina",
         "nl": "Op maandag"
@@ -103,7 +103,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": "day"
         },
@@ -125,7 +125,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "fi": "week",
             "nl": "day"
@@ -142,7 +142,7 @@
         }
     },
     "on wednesday": {
-        "uses": "wednesday",
+        "roots": "wednesday",
         "en": "On Wednesday",
         "fi": "Keskiviikkona",
         "nl": "Op woensdag"
@@ -154,7 +154,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": "day"
         },
@@ -176,7 +176,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": "day"
         },
@@ -198,7 +198,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": "day"
         },
@@ -220,7 +220,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day",
             "nl": "day"
         },
@@ -243,7 +243,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day"
         },
         "en": "Today",
@@ -258,7 +258,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "day"
         },
         "en": "Yesterday",
@@ -282,7 +282,7 @@
             "EP": null,
             "OD": "A1"
         },
-        "uses": "week",
+        "roots": "week",
         "en": "This week",
         "fi": "Tällä viikolla",
         "nl": "Deze week"
@@ -294,7 +294,7 @@
                 "OD"
             ]
         },
-        "uses": "week",
+        "roots": "week",
         "en": "Last week",
         "fi": "Viime viikolla",
         "nl": "Vorige week"
@@ -306,13 +306,13 @@
                 "OD"
             ]
         },
-        "uses": "week",
+        "roots": "week",
         "en": "Next week",
         "fi": "Ensi viikolla",
         "nl": "Volgende week"
     },
     "today it is monday": {
-        "uses": [
+        "roots": [
             "today",
             "to be",
             "monday"
@@ -322,7 +322,7 @@
         "nl": "Vandaag is het maandag"
     },
     "tomorrow it is tuesday": {
-        "uses": [
+        "roots": [
             "tomorrow",
             "to be",
             "tuesday"
@@ -332,7 +332,7 @@
         "nl": "Morgen is het dinsdag"
     },
     "what day is it today": {
-        "uses": [
+        "roots": [
             "day",
             "to be",
             "today"

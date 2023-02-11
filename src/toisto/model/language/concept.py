@@ -28,7 +28,7 @@ class Concept:
     concept_id: ConceptId
     _parent_concept: ConceptId | None = None
     _constituent_concepts: tuple[ConceptId, ...] = ()
-    _used_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
+    _root_concepts: dict[Language, tuple[ConceptId, ...]] = field(default_factory=dict)
     _antonym_concepts: tuple[ConceptId, ...] = ()
     _labels: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
@@ -59,13 +59,13 @@ class Concept:
         return self._get_concepts(self._constituent_concepts)
 
     @property
-    def root_concept(self) -> Concept:
-        """Return the root concept of this concept."""
-        return self.instances[self._parent_concept].root_concept if self._parent_concept in self.instances else self
+    def base_concept(self) -> Concept:
+        """Return the base concept of this concept."""
+        return self.instances[self._parent_concept].base_concept if self._parent_concept in self.instances else self
 
-    def used_concepts(self, language: Language) -> tuple[Concept, ...]:
-        """Return the concepts that this concept uses, for the specified language."""
-        return self._get_concepts(self._used_concepts.get(language, ()))
+    def root_concepts(self, language: Language) -> tuple[Concept, ...]:
+        """Return the root concepts of this compound concept, for the specified language."""
+        return self._get_concepts(self._root_concepts.get(language, ()))
 
     @property
     def antonym_concepts(self) -> tuple[Concept, ...]:

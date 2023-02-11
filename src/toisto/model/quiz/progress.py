@@ -19,7 +19,7 @@ class Progress:
         self.__recent_concepts: deque[Concept] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
         self.__quizzes_by_concept_id: dict[ConceptId, Quizzes] = {}
         for quiz in self.__topics.quizzes:
-            self.__quizzes_by_concept_id.setdefault(quiz.concept.root_concept.concept_id, set()).add(quiz)
+            self.__quizzes_by_concept_id.setdefault(quiz.concept.base_concept.concept_id, set()).add(quiz)
 
     def increase_retention(self, quiz: Quiz) -> None:
         """Increase the retention of the quiz."""
@@ -38,7 +38,7 @@ class Progress:
             unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
             if unblocked_quizzes:
                 quiz = self.__sort_by_language_level(unblocked_quizzes)[0]
-                self.__recent_concepts.append(Concept.instances[quiz.concept.root_concept.concept_id])
+                self.__recent_concepts.append(Concept.instances[quiz.concept.base_concept.concept_id])
                 return quiz
         return None
 
@@ -48,12 +48,12 @@ class Progress:
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
-        root_concept = Concept.instances[quiz.concept.root_concept.concept_id]
-        return root_concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
+        base_concept = Concept.instances[quiz.concept.base_concept.concept_id]
+        return base_concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz's concept has been presented to the user before."""
-        quizzes_for_same_concept = self.__quizzes_by_concept_id[quiz.concept.root_concept.concept_id]
+        quizzes_for_same_concept = self.__quizzes_by_concept_id[quiz.concept.base_concept.concept_id]
         return any(self.__in_progress(quiz_for_same_concept) for quiz_for_same_concept in quizzes_for_same_concept)
 
     def __in_progress(self, quiz: Quiz) -> bool:
@@ -63,20 +63,20 @@ class Progress:
     def __unblocked_quizzes(self, quizzes: Quizzes, eligible_quizzes: Quizzes) -> Quizzes:
         """Return the quizzes that are not blocked by other quizzes.
 
-        Quiz A is blocked by quiz B if the concept of quiz A uses a concept that is quizzed by quiz B.
+        Quiz A is blocked by quiz B if the concept of quiz A is a compound with a root that is quizzed by quiz B.
         """
         return {
             quiz
             for quiz in quizzes
-            if not self.__used_concepts_have_quizzes(quiz, eligible_quizzes)
+            if not self.__root_concepts_have_quizzes(quiz, eligible_quizzes)
             and not quiz.is_blocked_by(eligible_quizzes)
         }
 
-    def __used_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
-        """Return whether the quiz uses concepts that have quizzes."""
+    def __root_concepts_have_quizzes(self, quiz: Quiz, quizzes: Quizzes) -> bool:
+        """Return whether the quiz's concept has root concepts that have quizzes."""
         return any(
             other_quiz
-            for concept in quiz.concept.used_concepts(quiz.question_language)
+            for concept in quiz.concept.root_concepts(quiz.question_language)
             for other_quiz in self.__quizzes_by_concept_id.get(concept.concept_id, set())
             if other_quiz != quiz and other_quiz in quizzes
         )

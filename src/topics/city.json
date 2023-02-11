@@ -129,7 +129,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": "book"
         },
         "singular": {
@@ -151,7 +151,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "nl": "house"
         },
         "singular": {
@@ -186,7 +186,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": {
+        "roots": {
             "en": "port"
         },
         "singular": {
@@ -222,7 +222,7 @@
             "A2": "EP",
             "B1": "OD"
         },
-        "uses": {
+        "roots": {
             "en": "store",
             "fi": "house",
             "nl": "house"
@@ -391,7 +391,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": "centre",
             "fi": [
                 "centre",
@@ -430,7 +430,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "city",
                 "head"
@@ -452,7 +452,7 @@
         }
     },
     "that building is a church": {
-        "uses": [
+        "roots": [
             "to be",
             "building",
             "church"
@@ -462,7 +462,7 @@
         "nl": "Dat gebouw is een kerk"
     },
     "where is the library": {
-        "uses": [
+        "roots": [
             "where",
             "to be",
             "library"
@@ -472,7 +472,7 @@
         "nl": "Waar is de bibliotheek?"
     },
     "there is a christmas tree on the square": {
-        "uses": [
+        "roots": [
             "to be",
             "square",
             "christmas tree"
@@ -482,7 +482,7 @@
         "nl": "Er staat een kerstboom op het plein"
     },
     "I am in the office": {
-        "uses": [
+        "roots": [
             "to be",
             "office"
         ],

@@ -240,7 +240,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": [
                 "room",
                 "to live"
@@ -294,7 +294,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "en": [
                 "room",
                 "bed"
@@ -323,7 +323,7 @@
                 "OD"
             ]
         },
-        "uses": "room",
+        "roots": "room",
         "singular": {
             "en": "Bathroom",
             "fi": "Kylpyhuone",

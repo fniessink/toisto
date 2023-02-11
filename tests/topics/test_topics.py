@@ -27,12 +27,12 @@ class TopicsTest(ToistoTestCase):
         self.assertIn(self.quiz, load_topics("fi", "nl", self.levels, [], [], ArgumentParser()).quizzes)
 
     def test_uses_exist(self):
-        """Test that all uses relations use existing concept ids."""
+        """Test that all roots use existing concept ids."""
         all_topics = load_topics("fi", "nl", self.levels, [], [], ArgumentParser())
         for topic in all_topics:
             for concept in topic.concepts:
-                for uses in concept._used_concepts.get("fi", ()):  # noqa: SLF001
-                    self.assertIn(uses, Concept.instances)
+                for root in concept.root_concepts("fi"):
+                    self.assertIn(root.concept_id, Concept.instances)
 
     def test_instructions(self):
         """Test that an instruction can be created for all quizzes."""

@@ -1,6 +1,6 @@
 {
     "my cat": {
-        "uses": "cat",
+        "roots": "cat",
         "singular": {
             "en": "My cat",
             "fi": "Minun kissani;singular",
@@ -13,7 +13,7 @@
         }
     },
     "your cat": {
-        "uses": "cat",
+        "roots": "cat",
         "singular": {
             "en": "Your cat;singular",
             "fi": "Sinun kissasi;singular",
@@ -26,7 +26,7 @@
         }
     },
     "hes or his cat": {
-        "uses": "cat",
+        "roots": "cat",
         "female": {
             "singular": {
                 "en": "Her cat",
@@ -53,7 +53,7 @@
         }
     },
     "our cat": {
-        "uses": "cat",
+        "roots": "cat",
         "singular": {
             "en": "Our cat",
             "fi": "Meidän kissamme;singular",
@@ -66,7 +66,7 @@
         }
     },
     "your (pl) cat": {
-        "uses": "cat",
+        "roots": "cat",
         "singular": {
             "en": "Yuur cat;plural",
             "fi": "Teidän kissanne;singular",
@@ -79,7 +79,7 @@
         }
     },
     "their cat": {
-        "uses": "cat",
+        "roots": "cat",
         "singular": {
             "en": "Their cat",
             "fi": "Heidän kissansa;singular",
@@ -92,7 +92,7 @@
         }
     },
     "my house": {
-        "uses": "house",
+        "roots": "house",
         "singular": {
             "en": "My house",
             "fi": "Minun taloni;singular",
@@ -105,7 +105,7 @@
         }
     },
     "your house": {
-        "uses": "house",
+        "roots": "house",
         "singular": {
             "en": "Your house;singular",
             "fi": "Sinun talosi;singular",
@@ -118,7 +118,7 @@
         }
     },
     "her or his house": {
-        "uses": "house",
+        "roots": "house",
         "female": {
             "singular": {
                 "en": "Her house",
@@ -145,7 +145,7 @@
         }
     },
     "our house": {
-        "uses": "house",
+        "roots": "house",
         "singular": {
             "en": "Our house",
             "fi": "Meidän talomme;singular",
@@ -158,7 +158,7 @@
         }
     },
     "your (pl) house": {
-        "uses": "house",
+        "roots": "house",
         "singular": {
             "en": "Your house;plural",
             "fi": "Teidän talonne;singular",
@@ -171,7 +171,7 @@
         }
     },
     "their house": {
-        "uses": "house",
+        "roots": "house",
         "singular": {
             "en": "Their house",
             "fi": "Heidän talonsa;singular",

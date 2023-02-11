@@ -11,7 +11,7 @@
         "nl": "Het weer"
     },
     "how is the weather": {
-        "uses": {
+        "roots": {
             "en": [
                 "how",
                 "to be",
@@ -133,7 +133,7 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "uses": "rain",
+        "roots": "rain",
         "en": "Rainy",
         "fi": "Sateinen",
         "nl": "Regenachtig"
@@ -143,7 +143,7 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "uses": "sun",
+        "roots": "sun",
         "en": "Sunny",
         "fi": "Aurinkoinen",
         "nl": "Zonnig"
@@ -155,7 +155,7 @@
                 "OD"
             ]
         },
-        "uses": "wind",
+        "roots": "wind",
         "en": "Windy",
         "fi": "Tuulinen",
         "nl": "Winderig"
@@ -165,7 +165,7 @@
             "A2": "EP",
             "B1": "OD"
         },
-        "uses": "cloud",
+        "roots": "cloud",
         "en": "Cloudy",
         "fi": "Pilvinen",
         "nl": "Bewolkt"
@@ -175,7 +175,7 @@
             "A2": "OD",
             "none": "EP"
         },
-        "uses": "snow",
+        "roots": "snow",
         "en": "Snowy",
         "fi": "Luminen",
         "nl": "Besneeuwd"
@@ -187,13 +187,13 @@
                 "OD"
             ]
         },
-        "uses": "storm",
+        "roots": "storm",
         "en": "Stormy",
         "fi": "Myrskyinen",
         "nl": "Stormachtig"
     },
     "there is a thunderstorm": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "storm",
@@ -217,13 +217,13 @@
             "EP": "A2",
             "OD": "B2"
         },
-        "uses": "fog",
+        "roots": "fog",
         "en": "Foggy",
         "fi": "Sumuinen",
         "nl": "Mistig"
     },
     "it is raining": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "rain"
@@ -239,7 +239,7 @@
         "nl": "Het regent"
     },
     "it is snowing": {
-        "uses": {
+        "roots": {
             "en": [
                 "to be",
                 "snow"
@@ -252,7 +252,7 @@
         "nl": "Het sneeuwt"
     },
     "it is rainy": {
-        "uses": [
+        "roots": [
             "to be",
             "rainy"
         ],
@@ -261,7 +261,7 @@
         "nl": "Het is regenachtig"
     },
     "it is sunny": {
-        "uses": [
+        "roots": [
             "to be",
             "sunny"
         ],
@@ -270,7 +270,7 @@
         "nl": "Het is zonnig"
     },
     "it is windy": {
-        "uses": [
+        "roots": [
             "to be",
             "windy"
         ],
@@ -279,7 +279,7 @@
         "nl": "Het is winderig"
     },
     "it is cloudy": {
-        "uses": [
+        "roots": [
             "to be",
             "cloudy"
         ],
@@ -288,7 +288,7 @@
         "nl": "Het is bewolkt"
     },
     "it is stormy": {
-        "uses": [
+        "roots": [
             "to be",
             "stormy"
         ],
@@ -297,7 +297,7 @@
         "nl": "Het is stormachtig"
     },
     "it is foggy": {
-        "uses": [
+        "roots": [
             "to be",
             "foggy"
         ],

@@ -93,7 +93,7 @@
                 "OD"
             ]
         },
-        "uses": {
+        "roots": {
             "fi": [
                 "to write",
                 "table"
@@ -169,7 +169,7 @@
         }
     },
     "the door is locked": {
-        "uses": [
+        "roots": [
             "to be",
             "door"
         ],
@@ -178,7 +178,7 @@
         "nl": "De deur is op slot"
     },
     "the cat is sleeping on the carpet": {
-        "uses": [
+        "roots": [
             "cat",
             "to sleep",
             "carpet"
