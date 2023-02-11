@@ -39,6 +39,10 @@ class Concept:
         """Add the concept to the concept id -> concept mapping."""
         self.instances[self.concept_id] = self
 
+    def __hash__(self) -> int:
+        """Return the concept hash."""
+        return hash(self.concept_id)
+
     def leaf_concepts(self) -> Iterable[Concept]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
         if self.constituent_concepts:
