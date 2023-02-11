@@ -9,7 +9,7 @@ from toisto.model.quiz.topic import Topics
 from toisto.ui.dictionary import DICTIONARY_URL, linkify
 from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 class FeedbackTestCase(ToistoTestCase):

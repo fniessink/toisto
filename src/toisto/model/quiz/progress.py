@@ -2,6 +2,8 @@
 
 from collections import deque
 
+from toisto.model.language.concept import Concept
+
 from ..model_types import ConceptId
 from .quiz import Quiz, Quizzes
 from .retention import Retention
@@ -14,7 +16,7 @@ class Progress:
     def __init__(self, progress_dict: dict[str, dict[str, str | int]], topics: Topics) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__topics = topics
-        self.__recent_concepts: deque[ConceptId] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
+        self.__recent_concepts: deque[Concept] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
         self.__quizzes_by_concept_id: dict[ConceptId, Quizzes] = {}
         for quiz in self.__topics.quizzes:
             self.__quizzes_by_concept_id.setdefault(quiz.root_concept_id, set()).add(quiz)
@@ -36,7 +38,7 @@ class Progress:
             unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
             if unblocked_quizzes:
                 quiz = self.__sort_by_language_level(unblocked_quizzes)[0]
-                self.__recent_concepts.append(quiz.root_concept_id)
+                self.__recent_concepts.append(Concept.instances[quiz.root_concept_id])
                 return quiz
         return None
 
@@ -46,7 +48,8 @@ class Progress:
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
-        return quiz.root_concept_id not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
+        root_concept = Concept.instances[quiz.root_concept_id]
+        return root_concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz's concept has been presented to the user before."""
@@ -73,8 +76,8 @@ class Progress:
         """Return whether the quiz uses concepts that have quizzes."""
         return any(
             other_quiz
-            for concept_id in quiz.used_concepts
-            for other_quiz in self.__quizzes_by_concept_id.get(concept_id, set())
+            for concept in quiz.used_concepts
+            for other_quiz in self.__quizzes_by_concept_id.get(concept.concept_id, set())
             if other_quiz != quiz and other_quiz in quizzes
         )
 

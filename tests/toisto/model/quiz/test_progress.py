@@ -5,7 +5,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.topic import Topic, Topics
 
-from ...base import ToistoTestCase
+from ....base import ToistoTestCase
 
 
 class ProgressTest(ToistoTestCase):

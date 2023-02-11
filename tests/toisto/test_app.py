@@ -18,8 +18,10 @@ class AppTest(unittest.TestCase):
 
     @patch("os.system", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
-    def run_main(self) -> Mock:
+    @patch("pathlib.Path.open")
+    def run_main(self, path_open: Mock) -> Mock:
         """Run the main function and return the patched print method."""
+        path_open.return_value.__enter__.return_value.read.return_value = '{"bad": {"fi": "Huono"}}\n'
         with patch("rich.console.Console.print") as patched_print:
             main()
         return patched_print

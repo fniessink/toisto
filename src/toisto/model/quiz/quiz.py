@@ -172,8 +172,8 @@ class Quiz:
         return ConceptId(self.concept_id.split("/")[0])
 
     @property
-    def used_concepts(self) -> tuple[ConceptId, ...]:
-        """Return the ids of the concepts used by the concept that this quiz quizzes."""
+    def used_concepts(self) -> tuple[Concept, ...]:
+        """Return the concepts used by the concept that this quiz quizzes."""
         return self.concept.used_concepts(self.question_language)
 
 

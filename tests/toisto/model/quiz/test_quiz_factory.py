@@ -2,7 +2,7 @@
 
 from toisto.model.language.label import Label
 
-from ...base import ToistoTestCase
+from ....base import ToistoTestCase
 
 
 class QuizFactoryTestCase(ToistoTestCase):

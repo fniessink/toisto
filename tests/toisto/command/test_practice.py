@@ -10,7 +10,7 @@ from toisto.model.quiz.topic import Topic, Topics
 from toisto.ui.dictionary import linkify
 from toisto.ui.text import DONE, TRY_AGAIN
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 @patch("os.system", Mock())
