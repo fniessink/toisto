@@ -2,7 +2,7 @@
 
 from toisto.model.language.concept import Concept
 
-from ...base import ToistoTestCase
+from ....base import ToistoTestCase
 
 
 class ConceptTest(ToistoTestCase):

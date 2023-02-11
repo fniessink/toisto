@@ -7,7 +7,7 @@ from toisto.command.show_progress import show_progress
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.topic import Topic, Topics
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 class ShowProgressTest(ToistoTestCase):

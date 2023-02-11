@@ -14,12 +14,13 @@ CHANGELOG_URL = [url for url in _metadata.get_all("Project-URL") if "Changelog" 
 TAGS_API_URL = "https://api.github.com/repos/fniessink/toisto/tags"
 
 VERSION = version(NAME)
-SUPPORTED_LANGUAGES = dict(en="English", fi="Finnish", nl="Dutch")
 Language = Literal["en", "fi", "nl"]
+SUPPORTED_LANGUAGES: dict[Language, str] = dict(en="English", fi="Finnish", nl="Dutch")
 
 _topics_folder = pathlib.Path(__file__).parent.parent / "topics"
 TOPIC_JSON_FILES = sorted(_topics_folder.glob("*.json"))
 TOPICS = [json_file.stem for json_file in TOPIC_JSON_FILES]
+PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
 
 
 def latest_version() -> str | None:

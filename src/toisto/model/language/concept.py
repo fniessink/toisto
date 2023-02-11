@@ -52,9 +52,10 @@ class Concept:
             for permutation in permutations(concept_group, r=2):
                 yield cast(tuple[Concept, Concept], permutation)
 
-    def used_concepts(self, language: Language) -> tuple[ConceptId, ...]:
-        """Return the ids of the concepts that this concept uses, for the specified language."""
-        return self._used_concepts.get(language, ())
+    def used_concepts(self, language: Language) -> tuple[Concept, ...]:
+        """Return the concepts that this concept uses, for the specified language."""
+        used_concept_ids = self._used_concepts.get(language, ())
+        return tuple(self.instances[concept_id] for concept_id in used_concept_ids if concept_id in self.instances)
 
     @property
     def antonym_concepts(self) -> tuple[Concept, ...]:

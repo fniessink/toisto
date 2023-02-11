@@ -1,15 +1,12 @@
 """Store and load progress data."""
 
-import pathlib
 from argparse import ArgumentParser
 from typing import NoReturn
 
-from ..metadata import NAME
+from ..metadata import NAME, PROGRESS_JSON
 from ..model.quiz.progress import Progress
 from ..model.quiz.topic import Topics
 from .json_file import dump_json, load_json
-
-PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
 
 
 def load_progress(topics: Topics, argument_parser: ArgumentParser) -> Progress | NoReturn:

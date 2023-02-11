@@ -5,7 +5,7 @@ from unittest.mock import patch
 from toisto.command.show_topics import show_topics
 from toisto.model.quiz.topic import Topic, Topics
 
-from ..base import ToistoTestCase
+from ...base import ToistoTestCase
 
 
 class ShowTopicsTest(ToistoTestCase):
