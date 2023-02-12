@@ -34,8 +34,7 @@ class Progress:
         quizzes_for_concepts_in_progress = {quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz)}
         quizzes_in_progress = {quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz)}
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
-            unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes)
-            if unblocked_quizzes:
+            if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes):
                 quiz = self.__sort_by_language_level(unblocked_quizzes)[0]
                 self.__recent_concepts.append(quiz.concept.base_concept)
                 return quiz
@@ -74,7 +73,7 @@ class Progress:
         """Return whether the quiz's concept has root concepts that have quizzes."""
         return any(
             other_quiz
-            for root in quiz.concept.root_concepts(quiz.question_language)
+            for root in quiz.concept.related_concepts.roots(quiz.question_language)
             for other_quiz in self.__quizzes_by_concept.get(root, set())
             if other_quiz != quiz and other_quiz in quizzes
         )

@@ -4,7 +4,7 @@ from configparser import ConfigParser
 from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
-from toisto.model.model_types import ConceptId
+from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.topic import Topic, Topics
 from toisto.ui.dictionary import linkify

@@ -1,9 +1,12 @@
 """Quiz factory."""
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from itertools import zip_longest
+from itertools import permutations, zip_longest
+from typing import cast
 
 from toisto.metadata import Language
+from toisto.tools import zip_and_cycle
 
 from ..language.concept import Concept
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
@@ -22,13 +25,14 @@ class QuizFactory:
 
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
-        create_quizzes = self.composite_concept_quizzes if concept.constituent_concepts else self.leaf_concept_quizzes
-        return create_quizzes(concept, previous_quizzes)
+        if concept.constituents:
+            return self.composite_concept_quizzes(concept, previous_quizzes)
+        return self.leaf_concept_quizzes(concept, previous_quizzes)
 
     def composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a composite concept."""
         quizzes = Quizzes()
-        for constituent_concept in concept.constituent_concepts:
+        for constituent_concept in concept.constituents:
             quizzes |= self.concept_quizzes(constituent_concept, quizzes.copy() | previous_quizzes)
         quizzes |= self.grammatical_quizzes(concept, quizzes.copy() | previous_quizzes)
         return quizzes
@@ -76,7 +80,7 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for concept1, concept2 in concept.paired_leaf_concepts():
+        for concept1, concept2 in paired_leaf_concepts(concept):
             labels1, labels2 = concept1.labels(target_language), concept2.labels(target_language)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             quiz_types = grammatical_quiz_types(concept1, concept2)
@@ -93,7 +97,7 @@ class QuizFactory:
         labels = concept.labels(target_language)
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for antonym in concept.antonym_concepts:
+        for antonym in concept.antonyms:
             antonym_labels = antonym.labels(target_language)
             meanings = concept.meanings(source_language) + antonym.meanings(source_language)
             quizzes |= Quizzes(
@@ -119,3 +123,10 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
         if category1 != category2 and category2 is not None:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
     return tuple(quiz_types)
+
+
+def paired_leaf_concepts(concept: Concept) -> Iterable[tuple[Concept, Concept]]:
+    """Pair the leaf concepts from the constituent concepts."""
+    for concept_group in zip_and_cycle(*[list(constituent.leaf_concepts()) for constituent in concept.constituents]):
+        for permutation in permutations(concept_group, r=2):
+            yield cast(tuple[Concept, Concept], permutation)

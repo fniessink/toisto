@@ -9,7 +9,7 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_leaf_concept(self):
         """Test that a leaf concept has no constituent concepts."""
         concept = self.create_concept("english", dict(en=["English"], nl=["Engels"]))
-        self.assertEqual((), concept.constituent_concepts)
+        self.assertEqual((), concept.constituents)
 
     def test_composite_concept(self):
         """Test that a composite concept has constituent concepts."""
@@ -17,34 +17,34 @@ class ConcepFactoryTest(ToistoTestCase):
             "morning",
             dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden")),
         )
-        self.assertEqual(2, len(concept.constituent_concepts))
+        self.assertEqual(2, len(concept.constituents))
 
     def test_roots(self):
         """Test that a concept can have roots."""
         concept = self.create_concept("mall", dict(roots=["shop", "centre"], fi="Kauppakeskus", nl="Het winkelcentrum"))
         shop = self.create_concept("shop", dict(fi="Kauppa"))
         centre = self.create_concept("centre", dict(fi="Keskusta"))
-        self.assertEqual((shop, centre), concept.root_concepts("fi"))
+        self.assertEqual((shop, centre), concept.roots("fi"))
 
     def test_language_specific_roots(self):
         """Test that a concept can have a root in one language but not in another."""
         decade = self.create_concept("decade", dict(roots=dict(fi="year"), fi="Vuosikymmen", en="Decade"))
         year = self.create_concept("year", dict(fi="Vuosi"))
-        self.assertEqual((year,), decade.root_concepts("fi"))
-        self.assertEqual((), decade.root_concepts("en"))
+        self.assertEqual((year,), decade.roots("fi"))
+        self.assertEqual((), decade.roots("en"))
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""
         big = self.create_concept("big", dict(antonym="small", en="Big"))
         small = self.create_concept("small", dict(en="Small"))
-        self.assertEqual((small,), big.antonym_concepts)
+        self.assertEqual((small,), big.antonyms)
 
     def test_multiple_antonyms(self):
         """Test that a concept can have multiple antonyms."""
         big = self.create_concept("big", dict(antonym=["small", "little"], en="Big"))
         little = self.create_concept("little", dict(en="Little"))
         small = self.create_concept("small", dict(en="Small"))
-        self.assertEqual((small, little), big.antonym_concepts)
+        self.assertEqual((small, little), big.antonyms)
 
     def test_antonyms_of_composite(self):
         """Test that a composite concept can have an antonym."""
@@ -65,9 +65,9 @@ class ConcepFactoryTest(ToistoTestCase):
                 "superlative degree": dict(en="Smallest"),
             },
         )
-        self.assertEqual((small,), big.antonym_concepts)
+        self.assertEqual((small,), big.antonyms)
         for index in range(3):
-            self.assertEqual((small.constituent_concepts[index],), big.constituent_concepts[index].antonym_concepts)
+            self.assertEqual((small.constituents[index],), big.constituents[index].antonyms)
 
     def test_level(self):
         """Test that a concept can have a level."""
@@ -84,8 +84,8 @@ class ConcepFactoryTest(ToistoTestCase):
                 plural=dict(level=dict(A2="EP"), fi="Aamut", nl="De ochtenden"),
             ),
         )
-        self.assertEqual("A1", concept.constituent_concepts[0].level)
-        self.assertEqual("A2", concept.constituent_concepts[1].level)
+        self.assertEqual("A1", concept.constituents[0].level)
+        self.assertEqual("A2", concept.constituents[1].level)
 
     def test_missing_level(self):
         """Test that the concept has no level if the concept dict does not contain one."""

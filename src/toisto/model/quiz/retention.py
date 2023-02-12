@@ -65,5 +65,5 @@ class Retention:
 
     @staticmethod
     def __get_datetime(retention_dict: dict[str, str | int], key: str) -> optional_datetime:
-        """Get a datetime from the Retention dict."""
+        """Get a datetime from the retention dict."""
         return datetime.fromisoformat(str(retention_dict.get(key))) if retention_dict.get(key) else None

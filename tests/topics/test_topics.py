@@ -6,8 +6,7 @@ from typing import get_args
 
 from toisto.metadata import SUPPORTED_LANGUAGES
 from toisto.model.language.cefr import CommonReferenceLevel
-from toisto.model.language.concept import Concept
-from toisto.model.model_types import ConceptId
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.persistence.topics import load_topics
 
 from ..base import ToistoTestCase
@@ -31,7 +30,7 @@ class TopicsTest(ToistoTestCase):
         all_topics = load_topics("fi", "nl", self.levels, [], [], ArgumentParser())
         for topic in all_topics:
             for concept in topic.concepts:
-                for root in concept.root_concepts("fi"):
+                for root in concept.roots("fi"):
                     self.assertIn(root.concept_id, Concept.instances)
 
     def test_instructions(self):

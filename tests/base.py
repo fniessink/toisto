@@ -4,10 +4,9 @@ import unittest
 from typing import cast
 
 from toisto.metadata import Language
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, ConceptFactory
 from toisto.model.language.label import Label, Labels
-from toisto.model.model_types import ConceptId
 from toisto.model.quiz.quiz import Quiz, QuizType, Quizzes
 from toisto.model.quiz.quiz_factory import QuizFactory
 

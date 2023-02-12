@@ -5,7 +5,7 @@ from typing import get_args
 from unittest.mock import Mock, patch
 
 from toisto.model.language.cefr import CommonReferenceLevel
-from toisto.model.model_types import ConceptId
+from toisto.model.language.concept import ConceptId
 from toisto.persistence.topics import load_topics
 
 from ...base import ToistoTestCase
