@@ -420,7 +420,7 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 }
 ```
 
-If a concept has more than antonym (for example, large and big are both antonyms of small), the `antonym` value can be a list of concept identifiers instead of a string.
+If a concept has more than one antonym (for example, large and big are both antonyms of small), the `antonym` value can be a list of concept identifiers instead of a string.
 
 ### Concept levels
 
@@ -472,8 +472,10 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 4. Quizzes to change the person of a concept.
 5. Quizzes to change the gender of a concept.
 6. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
-7. Quizzes to change the sentence form and polarity.
-8. Quizzes to give the antonym.
+7. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
+7. Quizzes to change the sentence form from declarative to interrogative and vice versa.
+8. Quizzes to change the polarity from affirmative to negative and vice versa.
+9. Quizzes to give the antonym.
 
 Except for the translation type quizzes, quizzes only use the user's target language.
 
