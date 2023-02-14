@@ -23,7 +23,7 @@ LeafConceptDict = dict[
 ]
 CompositeConceptDict = dict[
     GrammaticalCategory | MetaData,
-    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict],  # noqa: UP037
+    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict],
 ]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
