@@ -2,7 +2,7 @@
 
 from typing import get_args
 
-from toisto.model.model_types import ConceptId
+from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.quiz import QuizType, instruction
 
 from ....base import ToistoTestCase

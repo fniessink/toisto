@@ -381,7 +381,7 @@ When a concept is a compound of one or more other concepts, this can be specifie
 }
 ```
 
-If a concept has exactly one root, for example becuase not all roots have been included in the topic file yet, the `roots` value can be a string instead of a list of concept identifiers.
+If a concept has exactly one root, for example because not all roots have been included in the topic file yet, the `roots` value can be a string instead of a list of concept identifiers.
 
 If the root concepts differ per language, an object with languages as keys can be used:
 

@@ -6,7 +6,7 @@ from collections.abc import Iterator
 from dataclasses import dataclass, field
 from itertools import chain
 
-from ..language.concept import Concept
+from ..language.concept import Concepts
 from .quiz import Quizzes
 
 
@@ -15,7 +15,7 @@ class Topic:
     """Collection of quizzes for concepts centered around a topic."""
 
     name: str
-    concepts: tuple[Concept, ...]
+    concepts: Concepts
     quizzes: Quizzes
 
     def __hash__(self) -> int:

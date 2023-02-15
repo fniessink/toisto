@@ -2,8 +2,8 @@
 
 from unittest import TestCase
 
+from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
-from toisto.model.model_types import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.topic import Topics
 from toisto.ui.dictionary import DICTIONARY_URL, linkify
