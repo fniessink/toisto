@@ -1,31 +1,40 @@
 """Command-line interface."""
 
-from argparse import ArgumentParser, _SubParsersAction
+from argparse import ArgumentParser, ArgumentTypeError, _SubParsersAction
 from configparser import ConfigParser
 from typing import get_args
 
 from rich_argparse import RichHelpFormatter
 
-from ..metadata import HOMEPAGE_URL, SUMMARY, SUPPORTED_LANGUAGES, TOPICS, VERSION, latest_version
+from ..metadata import BUILT_IN_LANGUAGES, HOMEPAGE_URL, SUMMARY, TOPICS, VERSION, latest_version
 from ..model.language.cefr import CommonReferenceLevel
+from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 
 
 def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
     """Add the language arguments to the parser."""
-    choices = SUPPORTED_LANGUAGES.keys()
+    languages = ", ".join(sorted(BUILT_IN_LANGUAGES))
     for argument in ("target", "source"):
         default = config.get("languages", argument, fallback=None)
         default_help = f"default: {default}; " if default else ""
         parser.add_argument(
             f"-{argument[0]}",
             f"--{argument}",
-            choices=choices,
             default=default,
             dest=f"{argument}_language",
-            help=f"{argument} language; {default_help}available languages: %(choices)s",
+            help=f"{argument} language; {default_help}languages available in built-in topics: {languages}",
             metavar="{language}",
             required=not default,
+            type=check_language,
         )
+
+
+def check_language(language: str) -> str:
+    """Check that the language is valid."""
+    if language in ALL_LANGUAGES:
+        return language
+    message = f"invalid choice: '{language}' (see {IANA_LANGUAGE_SUBTAG_REGISTRY_URL} for valid choices)"
+    raise ArgumentTypeError(message)
 
 
 def add_topic_arguments(parser: ArgumentParser) -> None:

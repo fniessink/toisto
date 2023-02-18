@@ -87,4 +87,5 @@ ignore = ["ANN101", "ANN102", "C408", "D107", "D203", "D213", "DTZ005", "FBT003"
 where = ["src"]
 
 [tool.setuptools.package-data]
+languages = ["*.txt"]
 topics = ["*.json"]

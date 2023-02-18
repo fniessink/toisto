@@ -7,15 +7,15 @@ from configparser import ConfigParser, Error
 from pathlib import Path
 from typing import NoReturn, get_args
 
-from toisto.metadata import SUPPORTED_LANGUAGES
 from toisto.model.language.cefr import CommonReferenceLevel
+from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 
 # The schema for the config file. Top-level keys are sections, values are a dict per option with the key being the
 # option name and the value being a tuple of a specifier and the allowed option values.
 CONFIG_SCHEMA: dict[str, dict[str, tuple[str, Iterable]]] = dict(
     languages=dict(
-        target=("one of", SUPPORTED_LANGUAGES.keys()),
-        source=("one of", SUPPORTED_LANGUAGES.keys()),
+        target=("one of", ALL_LANGUAGES.keys()),
+        source=("one of", ALL_LANGUAGES.keys()),
         levels=("one or more of", get_args(CommonReferenceLevel)),
     ),
     commands=dict(mp3player=("any", [])),

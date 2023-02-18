@@ -5,11 +5,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal, Union, cast, get_args
 
-from toisto.metadata import Language
-
+from . import Language
 from .cefr import CommonReferenceLevel, CommonReferenceLevelSource
 from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts
 from .grammar import GrammaticalCategory
+from .iana_language_subtag_registry import ALL_LANGUAGES
 from .label import Labels, label_factory
 
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
@@ -43,7 +43,7 @@ class ConceptFactory:
         return {
             cast(Language, key): label_factory(cast(str | list[str], value))
             for key, value in self.concept_dict.items()
-            if key in get_args(Language)
+            if key in ALL_LANGUAGES
         }
 
     def _level(self) -> CommonReferenceLevel | None:
@@ -83,15 +83,15 @@ class ConceptFactory:
         keys = self.concept_dict.keys()
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
 
-    def _root_concepts(self) -> dict[Language, ConceptIds]:
+    def _root_concepts(self) -> dict[Language, ConceptIds] | ConceptIds:
         """Retrieve the roots from the concept dict."""
         roots = self._get_roots()
-        if not isinstance(roots, dict):
-            roots = {language: roots for language in get_args(Language)}  # Roots are the same for all languages
-        return {
-            language: tuple(concept_ids) if isinstance(concept_ids, list) else (concept_ids,)
-            for language, concept_ids in roots.items()
-        }
+        if isinstance(roots, dict):  # Roots are not the same for all languages
+            return {
+                language: tuple(concept_ids) if isinstance(concept_ids, list) else (concept_ids,)
+                for language, concept_ids in roots.items()
+            }
+        return tuple(roots) if isinstance(roots, list) else (roots,)
 
     def _get_roots(self) -> ConceptIdDictOrListOrString:
         """Get the roots from the concept dict."""

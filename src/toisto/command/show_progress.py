@@ -6,7 +6,8 @@ from typing import Literal
 
 from rich.table import Table
 
-from toisto.metadata import SUPPORTED_LANGUAGES, Language
+from toisto.model.language import Language
+from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.topic import Topics
@@ -31,7 +32,7 @@ class QuizSorter:
 
 def show_progress(language: Language, topics: Topics, progress: Progress, sort: SortColumn = "attempts") -> None:
     """Show progress."""
-    table = Table(title=f"Progress {SUPPORTED_LANGUAGES[language]}")
+    table = Table(title=f"Progress {ALL_LANGUAGES[language]}")
     table.add_column("Quiz type")
     table.add_column("Question")
     table.add_column("From")

@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## 0.8.2 - 2023-02-18
 
+- Allow users to specify languages besides the built-in languages so they can use their own topic files with other languages. Fixes [#225](https://github.com/fniessink/toisto/issues/225).
 - Ignore timeouts when checking the latest Toisto version with GitHub. Fixes [#226](https://github.com/fniessink/toisto/issues/226).
 
 ## 0.8.1 - 2023-02-18
@@ -236,7 +237,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Added a food topic.
-- In addition to using builtin topic files, allow the user to load their own local topic files, using the command line interface option `-f/--topic-file`.
+- In addition to using built-in topic files, allow the user to load their own local topic files, using the command line interface option `-f/--topic-file`.
 
 ## v0.0.5 - 2022-10-18
 

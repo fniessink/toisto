@@ -4,7 +4,8 @@ import pathlib
 from argparse import ArgumentParser
 from typing import NoReturn
 
-from ..metadata import NAME, TOPIC_JSON_FILES, Language
+from ..metadata import NAME, TOPIC_JSON_FILES
+from ..model.language import Language
 from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.concept_factory import ConceptFactory
 from ..model.quiz.quiz_factory import QuizFactory

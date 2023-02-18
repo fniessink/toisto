@@ -7,10 +7,10 @@ from functools import cached_property
 from itertools import chain
 from typing import Literal, cast
 
-from toisto.metadata import SUPPORTED_LANGUAGES, Language
-
+from ..language import Language
 from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
+from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .match import match
 
@@ -154,7 +154,7 @@ class Quiz:
         """Generate the quiz instruction."""
         hint = self._question.hint
         hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
-        return f"{instruction(*self.quiz_types)} {SUPPORTED_LANGUAGES[self.answer_language]}{hint}"
+        return f"{instruction(*self.quiz_types)} {ALL_LANGUAGES[self.answer_language]}{hint}"
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""

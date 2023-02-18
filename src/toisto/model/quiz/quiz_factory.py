@@ -5,9 +5,9 @@ from dataclasses import dataclass
 from itertools import permutations, zip_longest
 from typing import cast
 
-from toisto.metadata import Language
 from toisto.tools import zip_and_cycle
 
+from ..language import Language
 from ..language.concept import Concept
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 

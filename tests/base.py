@@ -3,7 +3,7 @@
 import unittest
 from typing import cast
 
-from toisto.metadata import Language
+from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, ConceptFactory
 from toisto.model.language.label import Label, Labels
