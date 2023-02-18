@@ -27,5 +27,5 @@ def latest_version() -> str | None:
     """Return the latest version."""
     try:
         return requests.get(TAGS_API_URL, timeout=2).json()[0]["name"]
-    except requests.ConnectionError:
+    except requests.RequestException:
         return None
