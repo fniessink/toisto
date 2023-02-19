@@ -2,11 +2,13 @@
 
 ## Topics
 
-Builtin topics are located in `src/topics` in the form of JSON files. Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-t/--topic-file` command-line option.
+Built-in topics are located in `src/topics` in the form of JSON files. Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-f/--topic-file` command-line option.
 
 ## Concepts and labels
 
-Each topic is a collection of *concepts*. Each concept has *labels* in different languages. A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language.
+Each topic is a collection of *concepts*. Each concept has *labels* in different languages, identified by *language identifiers*.
+
+A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language. The language identifiers are two or three letter strings as listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 The contents of a JSON topic file looks as follows:
 
@@ -30,7 +32,9 @@ The contents of a JSON topic file looks as follows:
 }
 ```
 
-Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. It should be unique across all topic files. The value is a mapping with language identifiers as keys and labels as values. Currently supported language identifiers are `en` for English, `fi` for Finnish, and `nl` for Dutch.
+Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. It should be unique across all topic files. The value is a mapping with language identifiers as keys and labels as values. Currently, the built-in topic files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
+
+If you add new languages to the built-in topic files, or create your own topic files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
@@ -155,7 +159,7 @@ It is also possible to have a neutral gender:
 }
 ```
 
-Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the builtin topic files.
+Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the built-in topic files.
 
 ### Grammatical person
 

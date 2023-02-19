@@ -6,8 +6,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ClassVar, NewType, cast, get_args
 
-from toisto.metadata import Language
-
+from . import Language
 from .cefr import CommonReferenceLevel
 from .grammar import GrammaticalCategory
 from .label import Label, Labels
@@ -38,7 +37,7 @@ class RelatedConcepts:
 
     _parent: ConceptId | None = None
     _constituents: ConceptIds = ()
-    _roots: dict[Language, ConceptIds] = field(default_factory=dict)
+    _roots: dict[Language, ConceptIds] | ConceptIds = ()  # Tuple if all languages have the same roots
     _antonyms: ConceptIds = ()
 
     @property
@@ -58,7 +57,8 @@ class RelatedConcepts:
 
     def roots(self, language: Language) -> Concepts:
         """Return the root concepts, for the specified language."""
-        return self._get_concepts(*self._roots.get(language, ()))
+        concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
+        return self._get_concepts(*concept_ids_of_roots)
 
     def _get_concepts(self, *concept_ids: ConceptId) -> Concepts:
         """Return the concepts with the given concept ids."""

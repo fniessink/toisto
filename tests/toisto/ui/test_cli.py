@@ -31,3 +31,12 @@ class ParserTest(unittest.TestCase):
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, self.argument_parser.parse_args, ["--version"])
         self.assertRegex(write.call_args_list[0][0][0], r"\d+.\d+.\d+")
+
+    @patch("sys.stderr.write")
+    def test_invalid_language(self, sys_stderr_write: Mock):
+        """Test that an error message is displayed if an invalid language is supplied."""
+        self.assertRaises(SystemExit, self.argument_parser.parse_args, ["practice", "--target", "42", "--source", "@@"])
+        self.assertIn(
+            "invalid choice: '42' (see https://www.iana.org/assignments/language-subtag-registry for valid choices)",
+            sys_stderr_write.call_args_list[1][0][0],
+        )

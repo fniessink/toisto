@@ -87,3 +87,9 @@ Tag the commit and push it:
 $ git tag vX.Y.Z
 $ git push --tags
 ```
+
+## How to keep dependencies up-to-date
+
+Python dependencies are kept up-to-date via a Dependabot GitHub action that checks for updated dependencies and creates pull request automatically.
+
+The [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry) needs to be copied into the repository by hand, from time to time.

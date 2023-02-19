@@ -21,12 +21,12 @@ class LoadTopicsTest(ToistoTestCase):
         self.levels = get_args(CommonReferenceLevel)
 
     def test_load_topic_by_name(self):
-        """Test that a subset of the builtin topics can be loaded by name."""
+        """Test that a subset of the built-in topics can be loaded by name."""
         self.assertNotIn(self.quiz, load_topics("fi", "nl", self.levels, ["family"], [], ArgumentParser()).quizzes)
 
     def test_load_topic_by_level(self):
-        """Test that a subset of the builtin concepts can be loaded by level."""
-        all_topics = load_topics("fi", "nl", self.levels[0:1], [], [], ArgumentParser())
+        """Test that a subset of the built-in concepts can be loaded by level."""
+        all_topics = load_topics("fi", "nl", self.levels[0:1], ["family"], [], ArgumentParser())
         for topic in all_topics:
             for concept in topic.concepts:
                 self.assertEqual(self.levels[0], concept.level)
