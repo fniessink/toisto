@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Literal
 
+from rich.console import JustifyMethod
 from rich.table import Table
 
 from toisto.model.language import Language
@@ -33,21 +34,16 @@ class QuizSorter:
 def show_progress(language: Language, topics: Topics, progress: Progress, sort: SortColumn = "attempts") -> None:
     """Show progress."""
     table = Table(title=f"Progress {ALL_LANGUAGES[language]}")
-    table.add_column("Quiz type")
-    table.add_column("Question")
-    table.add_column("From")
-    table.add_column("To")
-    table.add_column("Answer(s)")
-    table.add_column("Attempts", justify="right")
-    table.add_column("Retention")
-    table.add_column("Not quizzed until")
+    justify: dict[str, JustifyMethod] = dict(Attempts="right")
+    for column in ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"):
+        table.add_column(column, justify=justify.get(column, "left"))
     sorted_quizzes = sorted(topics.quizzes, key=QuizSorter(progress, sort).get_sort_key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
-        quiz_types = " and ".join(quiz.quiz_types)
+        quiz_types = " and ".join(quiz.quiz_types).capitalize()
         table.add_row(
-            quiz_types.capitalize(),
+            quiz_types,
             quiz.question,
             quiz.question_language,
             quiz.answer_language,

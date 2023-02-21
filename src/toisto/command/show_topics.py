@@ -19,10 +19,9 @@ def enumerate_labels(labels: Labels) -> str:
 def topic_table(target_language: Language, source_language: Language, topic: Topic) -> Table:
     """Show the concepts of the topic."""
     table = Table(title=f"Topic {topic.name}")
-    table.add_column(ALL_LANGUAGES[target_language])
-    table.add_column(ALL_LANGUAGES[source_language])
-    table.add_column("Grammatical categories")
-    table.add_column("Language level")
+    target_language_name, source_language_name = ALL_LANGUAGES[target_language], ALL_LANGUAGES[source_language]
+    for column in (target_language_name, source_language_name, "Grammatical categories", "Language level"):
+        table.add_column(column)
     for concept in topic.concepts:
         for leaf_concept in concept.leaf_concepts():
             target_labels = leaf_concept.labels(target_language)
