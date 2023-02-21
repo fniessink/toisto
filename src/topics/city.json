@@ -489,5 +489,15 @@
         "en": "I am in the office|I'm in the office",
         "fi": "Minä olen toimistolla|Olen toimistolla",
         "nl": "Ik ben op kantoor"
+    },
+    "my house is in this street": {
+        "roots": [
+            "to be",
+            "house",
+            "street"
+        ],
+        "en": "My house is in this street",
+        "fi": "Minun taloni on tällä kadulla|Taloni on tällä kadulla",
+        "nl": "Mijn huis is in deze straat"
     }
 }
