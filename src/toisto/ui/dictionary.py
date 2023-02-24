@@ -14,8 +14,8 @@ def linkify(text: str) -> str:
     """Return a version of the text where each word is turned into a link to a dictionary."""
     linkified_words = []
     for word in text.split():
-        prefix, word, postfix = split_punctuation(word)
-        linkified_words.append(f"{prefix}[link={DICTIONARY_URL}/{word.lower()}]{word}[/link]{postfix}")
+        prefix, infix, postfix = split_punctuation(word)
+        linkified_words.append(f"{prefix}[link={DICTIONARY_URL}/{infix.lower()}]{infix}[/link]{postfix}")
     return " ".join(linkified_words)
 
 
