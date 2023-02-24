@@ -11,7 +11,7 @@ class Label(str):
 
     def __eq__(self, other: object) -> bool:
         """Ignore hints when determining equality."""
-        return self.split(self.HINT_SEP, maxsplit=1)[0] == str(other).split(self.HINT_SEP, maxsplit=1)[0]
+        return self.without_hint == Label(other).without_hint
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
@@ -19,18 +19,22 @@ class Label(str):
 
     def __hash__(self) -> int:
         """Return the hash of the label, ignoring hints."""
-        return hash(self.split(self.HINT_SEP, maxsplit=1)[0])
+        return hash(self.without_hint)
 
     @property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
-        alternatives = self.split(self.HINT_SEP, maxsplit=1)[0].split(self.SPELLING_ALTERNATIVES_SEP)
-        return tuple(self.__class__(label) for label in alternatives)
+        return label_factory(self.without_hint.split(self.SPELLING_ALTERNATIVES_SEP))
 
     @property
     def hint(self) -> str:
         """Return the label hint, if any."""
         return self.split(self.HINT_SEP)[1] if self.HINT_SEP in self else ""
+
+    @property
+    def without_hint(self) -> str:
+        """Return the label without the hint."""
+        return self.split(self.HINT_SEP)[0]
 
 
 Labels = tuple[Label, ...]
