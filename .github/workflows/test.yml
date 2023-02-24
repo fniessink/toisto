@@ -34,3 +34,4 @@ jobs:
       run: |
         mypy src tests
         ruff .
+        vulture src tests
