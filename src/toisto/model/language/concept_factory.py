@@ -36,7 +36,7 @@ class ConceptFactory:
 
     def create_concept(self, parent: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
-        return Concept(self.concept_id, self._labels(), self._level(), self._related_concepts(parent))
+        return Concept(self.concept_id, self._labels(), self._meanings(), self._level(), self._related_concepts(parent))
 
     def _labels(self) -> dict[Language, Labels]:
         """Return the concept labels."""
@@ -45,6 +45,10 @@ class ConceptFactory:
             for key, value in self.concept_dict.items()
             if key in ALL_LANGUAGES
         }
+
+    def _meanings(self) -> dict[Language, Labels]:
+        """Return the concept meanings."""
+        return {language: (label[0],) for language, label in self._labels().items()}
 
     def _level(self) -> CommonReferenceLevel | None:
         """Determine the Common Reference Level for this concept.

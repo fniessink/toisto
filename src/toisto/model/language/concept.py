@@ -9,7 +9,7 @@ from typing import ClassVar, NewType, cast, get_args
 from . import Language
 from .cefr import CommonReferenceLevel
 from .grammar import GrammaticalCategory
-from .label import Label, Labels
+from .label import Labels
 
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
@@ -76,6 +76,7 @@ class Concept:
 
     concept_id: ConceptId
     _labels: dict[Language, Labels] = field(default_factory=dict)
+    _meanings: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
     related_concepts: RelatedConcepts = RelatedConcepts()
 
@@ -111,9 +112,8 @@ class Concept:
         return self._labels.get(language, Labels())
 
     def meanings(self, language: Language) -> Labels:
-        """Return the meaning of the concept in the specified language."""
-        meaning = Label(self._labels.get(language, [""])[0])
-        return (meaning,) if meaning else ()
+        """Return the meanings of the concept in the specified language."""
+        return self._meanings.get(language, Labels())
 
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
