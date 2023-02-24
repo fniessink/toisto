@@ -38,7 +38,7 @@ If you add new languages to the built-in topic files, or create your own topic f
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
-### Spelling variants
+### Labels with spelling variants
 
 When there are multiple ways to spell a label, use the pipe symbol to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
 
@@ -63,6 +63,19 @@ Labels consist of either one string or a list of strings. A list of strings is u
             "Mikä päivä tänään on?",
             "Mikä päivä on tänään?"
         ]
+    }
+}
+```
+
+### Concepts without label in some languages
+
+Some concepts have a label in one language, but not in other languages. Mämmi, for example, is a traditional Finnish dessert, eaten around Eastern. There's no label in English or Dutch for mämmi. To allow Toisto to explain the meaning of mämmi when quizzing the user, specify it between brackets:
+
+```json
+{
+    "mämmi": {
+        "en": "(Traditional Finnish Easter dessert)",
+        "fi": "Mämmi"
     }
 }
 ```

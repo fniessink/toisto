@@ -4,7 +4,15 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Allow for specifying the meaning of concepts that have no label in a language. Closes [#138](https://github.com/fniessink/toisto/issues/138).
+
 ## 0.8.2 - 2023-02-18
+
+### Fixed
 
 - Allow users to specify languages besides the built-in languages so they can use their own topic files with other languages. Fixes [#225](https://github.com/fniessink/toisto/issues/225).
 - Ignore timeouts when checking the latest Toisto version with GitHub. Fixes [#226](https://github.com/fniessink/toisto/issues/226).

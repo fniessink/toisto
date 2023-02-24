@@ -43,4 +43,10 @@ Labels = tuple[Label, ...]
 def label_factory(string: str | list[str]) -> Labels:
     """Instantiate the labels from a string or list of strings."""
     labels = string if isinstance(string, list) else [string]
-    return tuple(Label(label) for label in labels)
+    return tuple(Label(label) for label in labels if not label.startswith("("))
+
+
+def meaning_factory(string: str | list[str]) -> Labels:
+    """Instantiate the meanings from a string or list of strings."""
+    meanings = string if isinstance(string, list) else [string]
+    return (Label(meanings[0].strip("(").strip(")")),) if meanings else Labels()

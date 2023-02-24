@@ -91,3 +91,10 @@ class ConcepFactoryTest(ToistoTestCase):
         """Test that the concept has no level if the concept dict does not contain one."""
         concept = self.create_concept("one", dict(level=dict(none="EP"), fi="Yksi", nl="Eén"))
         self.assertEqual(None, concept.level)
+
+    def test_meaning_only_label(self):
+        """Test that a label between brackets is used as meaning but not as label."""
+        concept = self.create_concept("mämmi", dict(fi="Mämmi", nl="(Finse paascake)"))
+        self.assertEqual(("Mämmi",), concept.labels("fi"))
+        self.assertEqual((), concept.labels("nl"))
+        self.assertEqual((("Finse paascake",)), concept.meanings("nl"))

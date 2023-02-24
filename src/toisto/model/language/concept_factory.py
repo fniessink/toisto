@@ -10,7 +10,7 @@ from .cefr import CommonReferenceLevel, CommonReferenceLevelSource
 from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts
 from .grammar import GrammaticalCategory
 from .iana_language_subtag_registry import ALL_LANGUAGES
-from .label import Labels, label_factory
+from .label import Labels, label_factory, meaning_factory
 
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 ConceptIdListOrString = ConceptId | list[ConceptId]
@@ -48,7 +48,11 @@ class ConceptFactory:
 
     def _meanings(self) -> dict[Language, Labels]:
         """Return the concept meanings."""
-        return {language: (label[0],) for language, label in self._labels().items()}
+        return {
+            cast(Language, key): meaning_factory(cast(str | list[str], value))
+            for key, value in self.concept_dict.items()
+            if key in ALL_LANGUAGES
+        }
 
     def _level(self) -> CommonReferenceLevel | None:
         """Determine the Common Reference Level for this concept.
