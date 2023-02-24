@@ -22,11 +22,6 @@ class FeedbackTestCase(ToistoTestCase):
         self.guess = Label("Terve")
         self.progress = Progress({}, Topics(set()))
 
-    def assert_feedback_contains(self, feedback_text: str, *expected_strings: str) -> None:
-        """Assert that the expected strings are in the feedback."""
-        for expected_string in expected_strings:
-            self.assertIn(expected_string, feedback_text)
-
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
         feedback_text = feedback_correct(self.guess, self.quiz)

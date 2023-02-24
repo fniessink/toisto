@@ -53,6 +53,12 @@ Run Ruff to check for linting issues:
 $ ruff .
 ```
 
+Run vulture to check for dead code:
+
+```console
+$ vulture src tests
+```
+
 ## How to format the source code
 
 Run Black to format the code:

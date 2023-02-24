@@ -18,10 +18,6 @@ class ProgressTest(ToistoTestCase):
         self.another_quiz = self.create_quiz(self.concept, "nl", "fi", "Engels", ["Englanti"])
         self.progress = Progress({}, Topics(set()))
 
-    def create_topics(self, quizzes: Quizzes) -> Topics:
-        """Create a test topics collection."""
-        return Topics({Topic("topic", (), quizzes)})
-
     def create_progress(self, *topic_quizzes: Quizzes) -> Progress:
         """Create progress for the quizzes."""
         topics = Topics({Topic(f"topic{index}", (), quizzes) for index, quizzes in enumerate(topic_quizzes)})
