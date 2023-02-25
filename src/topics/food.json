@@ -721,6 +721,32 @@
         "fi": "Kermavaahto",
         "nl": "De slagroom"
     },
+    "ice cream": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": [
+                "ice",
+                "cream"
+            ],
+            "fi": "ice",
+            "nl": "ice"
+        },
+        "singular": {
+            "en": "Ice cream",
+            "fi": "Jäätelö",
+            "nl": "Het ijsje|Het ijs"
+        },
+        "plural": {
+            "en": "Ice creams",
+            "fi": "Jäätelöt",
+            "nl": "De ijsjes"
+        }
+    },
     "banana": {
         "level": {
             "A1": [

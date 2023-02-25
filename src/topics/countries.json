@@ -9,12 +9,12 @@
         },
         "singular": {
             "en": "Country",
-            "fi": "Maa",
+            "fi": "Maa;geography",
             "nl": "Het land"
         },
         "plural": {
             "en": "Countries",
-            "fi": "Maat",
+            "fi": "Maat;geography",
             "nl": "De landen"
         }
     },
