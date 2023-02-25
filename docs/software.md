@@ -449,9 +449,9 @@ The [Common European Framework of Reference for Languages (CEFR)](https://www.co
 
 Some dictionaries provide the language levels of words. Toisto uses these resources as source for the language level (and only for the language level, no other information from these source is used in Toisto):
 
-1. The [English Vocabulary Profile Online - British English]("https://www.englishprofile.org/wordlists/evp"). Key: `EP`. Language: English.
-2. The [Yle Kielikoulu Learning Profile]("https://kielikoulu.yle.fi/#/profile"). Key: `KK`. Language: Finnish.
-3. The [Oxford Advanced Learner’s Dictionary online]("https://www.oxfordlearnersdictionaries.com"). Key: `OD`. Language: English.
+1. The [English Vocabulary Profile Online - British English](https://www.englishprofile.org/wordlists/evp). Key: `EP`. Language: English.
+2. The [Yle Kielikoulu Learning Profile](https://kielikoulu.yle.fi/#/profile). Key: `KK`. Language: Finnish.
+3. The [Oxford Advanced Learner’s Dictionary online](https://www.oxfordlearnersdictionaries.com). Key: `OD`. Language: English.
 
 Toisto uses the language level of words as one of the factors in determining the order in which to present concepts to the user.
 
