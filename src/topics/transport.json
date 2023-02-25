@@ -8,14 +8,30 @@
             ]
         },
         "singular": {
-            "en": "Car",
-            "fi": "Auto",
-            "nl": "De auto"
+            "en": "car",
+            "fi": "auto",
+            "nl": "de auto"
         },
         "plural": {
-            "en": "Cars",
-            "fi": "Autot",
-            "nl": "De auto's"
+            "en": "cars",
+            "fi": "autot",
+            "nl": "de auto's"
+        }
+    },
+    "elevator": {
+        "level": {
+            "B1": "OD",
+            "none": "EP"
+        },
+        "singular": {
+            "en": ["elevator", "lift"],
+            "fi": "hissi",
+            "nl": "de lift"
+        },
+        "plural": {
+            "en": ["elevators", "lifts"],
+            "fi": "hissit",
+            "nl": "de liften"
         }
     }
 }

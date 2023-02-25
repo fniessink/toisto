@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "Country",
-            "fi": "Maa;geography",
-            "nl": "Het land"
+            "en": "country",
+            "fi": "maa;geography",
+            "nl": "het land"
         },
         "plural": {
-            "en": "Countries",
-            "fi": "Maat;geography",
-            "nl": "De landen"
+            "en": "countries",
+            "fi": "maat;geography",
+            "nl": "de landen"
         }
     },
     "finland": {
@@ -23,7 +23,7 @@
             "nl": "country"
         },
         "en": "Finland",
-        "fi": "Suomi;country",
+        "fi": "Suomi",
         "nl": "Finland"
     },
     "estland": {
@@ -31,22 +31,22 @@
             "nl": "country"
         },
         "en": "Estland",
-        "fi": "Viro;country",
+        "fi": "Viro",
         "nl": "Estland"
     },
     "denmark": {
         "en": "Denmark",
-        "fi": "Tanska;country",
+        "fi": "Tanska",
         "nl": "Denemarken"
     },
     "norway": {
         "en": "Norway",
-        "fi": "Norja;country",
+        "fi": "Norja",
         "nl": "Noorwegen"
     },
     "sweden": {
         "en": "Sweden",
-        "fi": "Ruotsi;country",
+        "fi": "Ruotsi",
         "nl": "Zweden"
     },
     "russia": {
@@ -54,7 +54,7 @@
             "nl": "country"
         },
         "en": "Russia",
-        "fi": "Venäjä;country",
+        "fi": "Venäjä",
         "nl": "Rusland"
     },
     "belgium": {
@@ -76,12 +76,12 @@
             "nl": "country"
         },
         "en": "Germany",
-        "fi": "Saksa;country",
+        "fi": "Saksa",
         "nl": "Duitsland"
     },
     "france": {
         "en": "France",
-        "fi": "Ranska;country",
+        "fi": "Ranska",
         "nl": "Frankrijk"
     },
     "england": {
@@ -89,7 +89,7 @@
             "nl": "country"
         },
         "en": "England",
-        "fi": "Englanti;country",
+        "fi": "Englanti",
         "nl": "Engeland"
     },
     "iceland": {
@@ -97,32 +97,32 @@
             "nl": "country"
         },
         "en": "Iceland",
-        "fi": "Islanti;country",
+        "fi": "Islanti",
         "nl": "IJsland"
     },
     "china": {
         "en": "China",
-        "fi": "Kiina;country",
+        "fi": "Kiina",
         "nl": "China"
     },
     "hungary": {
         "en": "Hungary",
-        "fi": "Unkari;country",
+        "fi": "Unkari",
         "nl": "Hongarije"
     },
     "japan": {
         "en": "Japan",
-        "fi": "Japani;country",
+        "fi": "Japani",
         "nl": "Japan"
     },
     "korea": {
         "en": "Korea",
-        "fi": "Korea;country",
+        "fi": "Korea",
         "nl": "Korea"
     },
     "spain": {
         "en": "Spain",
-        "fi": "Espanja;country",
+        "fi": "Espanja",
         "nl": "Spanje"
     }
 }

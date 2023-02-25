@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "Animal",
-            "fi": "Eläin",
-            "nl": "Het dier"
+            "en": "animal",
+            "fi": "eläin",
+            "nl": "het dier"
         },
         "plural": {
-            "en": "Animals",
-            "fi": "Eläimet",
-            "nl": "De dieren"
+            "en": "animals",
+            "fi": "eläimet",
+            "nl": "de dieren"
         }
     },
     "pet": {
@@ -34,20 +34,20 @@
             ]
         },
         "singular": {
-            "en": "Pet",
+            "en": "pet",
             "fi": [
-                "Lemmikki",
-                "Kotieläin"
+                "lemmikki",
+                "kotieläin"
             ],
-            "nl": "Het huisdier"
+            "nl": "het huisdier"
         },
         "plural": {
-            "en": "Pets",
+            "en": "pets",
             "fi": [
-                "Lemmikit",
-                "Kotieläimet"
+                "lemmikit",
+                "kotieläimet"
             ],
-            "nl": "De huisdieren"
+            "nl": "de huisdieren"
         }
     },
     "dog": {
@@ -59,14 +59,14 @@
             ]
         },
         "singular": {
-            "en": "Dog",
-            "fi": "Koira",
-            "nl": "De hond"
+            "en": "dog",
+            "fi": "koira",
+            "nl": "de hond"
         },
         "plural": {
-            "en": "Dogs",
-            "fi": "Koirat",
-            "nl": "De honden"
+            "en": "dogs",
+            "fi": "koirat",
+            "nl": "de honden"
         }
     },
     "cat": {
@@ -78,14 +78,14 @@
             ]
         },
         "singular": {
-            "en": "Cat",
-            "fi": "Kissa",
-            "nl": "De kat"
+            "en": "cat",
+            "fi": "kissa",
+            "nl": "de kat"
         },
         "plural": {
-            "en": "Cats",
-            "fi": "Kissat",
-            "nl": "De katten"
+            "en": "cats",
+            "fi": "kissat",
+            "nl": "de katten"
         }
     },
     "rhino": {
@@ -103,14 +103,14 @@
             ]
         },
         "singular": {
-            "en": "Rhinoceros|Rhino",
-            "fi": "Sarvikuono",
-            "nl": "De neushoorn"
+            "en": "rhinoceros|rhino",
+            "fi": "sarvikuono",
+            "nl": "de neushoorn"
         },
         "plural": {
-            "en": "Rhinoceroses|Rhinos",
-            "fi": "Sarvikuonot",
-            "nl": "De neushoorns"
+            "en": "rhinoceroses|rhinos",
+            "fi": "sarvikuonot",
+            "nl": "de neushoorns"
         }
     },
     "elephant": {
@@ -119,20 +119,20 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Elephant",
+            "en": "elephant",
             "fi": [
-                "Elefantti",
-                "Norsu"
+                "elefantti",
+                "norsu"
             ],
-            "nl": "De olifant"
+            "nl": "de olifant"
         },
         "plural": {
-            "en": "Elephants",
+            "en": "elephants",
             "fi": [
-                "Elefantit",
-                "Norsut"
+                "elefantit",
+                "norsut"
             ],
-            "nl": "De olifanten"
+            "nl": "de olifanten"
         }
     },
     "mouse": {
@@ -141,14 +141,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Mouse",
-            "fi": "Hiiri",
-            "nl": "De muis"
+            "en": "mouse",
+            "fi": "hiiri",
+            "nl": "de muis"
         },
         "plural": {
-            "en": "Mice",
-            "fi": "Hiiret",
-            "nl": "De muizen"
+            "en": "mice",
+            "fi": "hiiret",
+            "nl": "de muizen"
         }
     },
     "duck": {
@@ -159,14 +159,14 @@
             ]
         },
         "singular": {
-            "en": "Duck",
-            "fi": "Ankka",
-            "nl": "De eend"
+            "en": "duck",
+            "fi": "ankka",
+            "nl": "de eend"
         },
         "plural": {
-            "en": "Ducks",
-            "fi": "Ankat",
-            "nl": "De eenden"
+            "en": "ducks",
+            "fi": "ankat",
+            "nl": "de eenden"
         }
     },
     "goose": {
@@ -175,14 +175,14 @@
             "none": "EP"
         },
         "singular": {
-            "en": "Goose",
-            "fi": "Hanhi",
-            "nl": "De gans"
+            "en": "goose",
+            "fi": "hanhi",
+            "nl": "de gans"
         },
         "plural": {
-            "en": "Geese",
-            "fi": "Hanhet",
-            "nl": "De ganzen"
+            "en": "geese",
+            "fi": "hanhet",
+            "nl": "de ganzen"
         }
     },
     "bird": {
@@ -193,14 +193,14 @@
             ]
         },
         "singular": {
-            "en": "Bird",
-            "fi": "Lintu",
-            "nl": "De vogel"
+            "en": "bird",
+            "fi": "lintu",
+            "nl": "de vogel"
         },
         "plural": {
-            "en": "Birds",
-            "fi": "Linnut",
-            "nl": "De vogels"
+            "en": "birds",
+            "fi": "linnut",
+            "nl": "de vogels"
         }
     },
     "horse": {
@@ -212,14 +212,14 @@
             ]
         },
         "singular": {
-            "en": "Horse",
-            "fi": "Hevonen",
-            "nl": "Het paard"
+            "en": "horse",
+            "fi": "hevonen",
+            "nl": "het paard"
         },
         "plural": {
-            "en": "Horses",
-            "fi": "Hevoset",
-            "nl": "De paarden"
+            "en": "horses",
+            "fi": "hevoset",
+            "nl": "de paarden"
         }
     },
     "cow": {
@@ -227,14 +227,14 @@
             "A1": "OD"
         },
         "singular": {
-            "en": "Cow",
-            "fi": "Lehmä",
-            "nl": "De koe"
+            "en": "cow",
+            "fi": "lehmä",
+            "nl": "de koe"
         },
         "plural": {
-            "en": "Cows",
-            "fi": "Lehmät",
-            "nl": "De koeien"
+            "en": "cows",
+            "fi": "lehmät",
+            "nl": "de koeien"
         }
     },
     "pig": {
@@ -245,20 +245,20 @@
             ]
         },
         "singular": {
-            "en": "Pig",
+            "en": "pig",
             "fi": [
-                "Possu",
-                "Sika"
+                "possu",
+                "sika"
             ],
-            "nl": "Het varken"
+            "nl": "het varken"
         },
         "plural": {
-            "en": "Pigs",
+            "en": "pigs",
             "fi": [
-                "Possut",
-                "Siat"
+                "possut",
+                "siat"
             ],
-            "nl": "De varkens"
+            "nl": "de varkens"
         }
     },
     "deer": {
@@ -269,14 +269,34 @@
             ]
         },
         "singular": {
-            "en": "Deer",
-            "fi": "Peura",
-            "nl": "Het hert"
+            "en": "deer",
+            "fi": "peura",
+            "nl": "het hert"
         },
         "plural": {
-            "en": "Deer",
-            "fi": "Peurat",
-            "nl": "De herten"
+            "en": "deer",
+            "fi": "peurat",
+            "nl": "de herten"
+        }
+    },
+    "reindeer": {
+        "level": {
+            "B2": "OD",
+            "none": "EP"
+        },
+        "roots": {
+            "en": "deer",
+            "nl": ["to run", "animal"]
+        },
+        "singular": {
+            "en": "reindeer;singular",
+            "fi": "poro",
+            "nl": "rendier"
+        },
+        "plural": {
+            "en": "reindeer;plural",
+            "fi": "porot",
+            "nl": "rendieren"
         }
     },
     "bear": {
@@ -285,14 +305,14 @@
             "B2": "OD"
         },
         "singular": {
-            "en": "Bear",
-            "fi": "Karhu",
-            "nl": "De beer"
+            "en": "bear",
+            "fi": "karhu",
+            "nl": "de beer"
         },
         "plural": {
-            "en": "Bears",
-            "fi": "Karhut",
-            "nl": "De beren"
+            "en": "bears",
+            "fi": "karhut",
+            "nl": "de beren"
         }
     },
     "sheep": {
@@ -303,14 +323,14 @@
             ]
         },
         "singular": {
-            "en": "Sheep",
-            "fi": "Lammas",
-            "nl": "Het schaap"
+            "en": "sheep",
+            "fi": "lammas",
+            "nl": "het schaap"
         },
         "plural": {
-            "en": "Sheep",
-            "fi": "Lampaat",
-            "nl": "De schapen"
+            "en": "sheep",
+            "fi": "lampaat",
+            "nl": "de schapen"
         }
     },
     "crab": {
@@ -321,14 +341,14 @@
             ]
         },
         "singular": {
-            "en": "Crab",
-            "fi": "Rapu",
-            "nl": "De krab"
+            "en": "crab",
+            "fi": "rapu",
+            "nl": "de krab"
         },
         "plural": {
-            "en": "Crabs",
-            "fi": "Ravut",
-            "nl": "De krabben"
+            "en": "crabs",
+            "fi": "ravut",
+            "nl": "de krabben"
         }
     },
     "spider": {
@@ -337,14 +357,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Spider",
-            "fi": "Hämähäkki",
-            "nl": "De spin"
+            "en": "spider",
+            "fi": "hämähäkki",
+            "nl": "de spin"
         },
         "plural": {
-            "en": "Spiders",
-            "fi": "Hämähäkit",
-            "nl": "De spinnen"
+            "en": "spiders",
+            "fi": "hämähäkit",
+            "nl": "de spinnen"
         }
     },
     "rabbit": {
@@ -356,25 +376,25 @@
         },
         "singular": {
             "en": [
-                "Rabbit",
-                "Bunny"
+                "rabbit",
+                "bunny"
             ],
             "fi": [
-                "Jänis",
-                "Pupu"
+                "jänis",
+                "pupu"
             ],
-            "nl": "Het konijn"
+            "nl": "het konijn"
         },
         "plural": {
             "en": [
-                "Rabbits",
-                "Bunnies"
+                "rabbits",
+                "bunnies"
             ],
             "fi": [
-                "Jänikset",
-                "Puput"
+                "jänikset",
+                "puput"
             ],
-            "nl": "De konijnen"
+            "nl": "de konijnen"
         }
     },
     "horn": {
@@ -385,14 +405,14 @@
             ]
         },
         "singular": {
-            "en": "Horn",
-            "fi": "Sarvi",
-            "nl": "De hoorn"
+            "en": "horn",
+            "fi": "sarvi",
+            "nl": "de hoorn"
         },
         "plural": {
-            "en": "Horns",
-            "fi": "Sarvet",
-            "nl": "De hoorns"
+            "en": "horns",
+            "fi": "sarvet",
+            "nl": "de hoorns"
         }
     },
     "tail": {
@@ -401,14 +421,14 @@
             "B2": "EP"
         },
         "singular": {
-            "en": "Tail",
-            "fi": "Häntä",
-            "nl": "De staart"
+            "en": "tail",
+            "fi": "häntä",
+            "nl": "de staart"
         },
         "plural": {
             "en": "Tails",
-            "fi": "Hännät",
-            "nl": "De staarten"
+            "fi": "hännät",
+            "nl": "de staarten"
         }
     }
 }

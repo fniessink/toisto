@@ -7,9 +7,9 @@
                 "OD"
             ]
         },
-        "en": "Time",
-        "fi": "Aika",
-        "nl": "De tijd"
+        "en": "time",
+        "fi": "aika",
+        "nl": "de tijd"
     },
     "now": {
         "level": {
@@ -19,9 +19,9 @@
                 "OD"
             ]
         },
-        "en": "Now",
-        "fi": "Nyt",
-        "nl": "Nu"
+        "en": "now",
+        "fi": "nyt",
+        "nl": "nu"
     },
     "morning": {
         "level": {
@@ -32,14 +32,14 @@
             ]
         },
         "singular": {
-            "en": "Morning",
-            "fi": "Aamu",
-            "nl": "De ochtend"
+            "en": "morning",
+            "fi": "aamu",
+            "nl": "de ochtend"
         },
         "plural": {
-            "en": "Mornings",
-            "fi": "Aamut",
-            "nl": "De ochtenden"
+            "en": "mornings",
+            "fi": "aamut",
+            "nl": "de ochtenden"
         }
     },
     "noon": {
@@ -56,12 +56,12 @@
             ]
         },
         "singular": {
-            "en": "Noon",
-            "fi": "Keskipäivä",
-            "nl": "Twaalf uur 's middags"
+            "en": "noon",
+            "fi": "keskipäivä",
+            "nl": "twaalf uur 's middags"
         },
         "plural": {
-            "fi": "Keskipäivät"
+            "fi": "keskipäivät"
         }
     },
     "afternoon": {
@@ -77,14 +77,14 @@
             "nl": "day"
         },
         "singular": {
-            "en": "Afternoon",
-            "fi": "Iltapäivä",
-            "nl": "De middag"
+            "en": "afternoon",
+            "fi": "iltapäivä",
+            "nl": "de middag"
         },
         "plural": {
-            "en": "Afternoons",
-            "fi": "Iltapäivät",
-            "nl": "De middagen"
+            "en": "afternoons",
+            "fi": "iltapäivät",
+            "nl": "de middagen"
         }
     },
     "evening": {
@@ -96,14 +96,14 @@
             ]
         },
         "singular": {
-            "en": "Evening",
-            "fi": "Ilta",
-            "nl": "De avond"
+            "en": "evening",
+            "fi": "ilta",
+            "nl": "de avond"
         },
         "plural": {
-            "en": "Evenings",
-            "fi": "Illat",
-            "nl": "De avonden"
+            "en": "evenings",
+            "fi": "illat",
+            "nl": "de avonden"
         }
     },
     "night": {
@@ -115,14 +115,14 @@
             ]
         },
         "singular": {
-            "en": "Night",
-            "fi": "Yö",
-            "nl": "De nacht"
+            "en": "night",
+            "fi": "yö",
+            "nl": "de nacht"
         },
         "plural": {
-            "en": "Nights",
-            "fi": "Yöt",
-            "nl": "De nachten"
+            "en": "nights",
+            "fi": "yöt",
+            "nl": "de nachten"
         }
     },
     "midnight": {
@@ -132,14 +132,14 @@
         },
         "roots": "night",
         "singular": {
-            "en": "Midnight",
-            "fi": "Keskiyö",
-            "nl": "De middernacht"
+            "en": "midnight",
+            "fi": "keskiyö",
+            "nl": "de middernacht"
         },
         "plural": {
-            "en": "Midnights",
-            "fi": "Keskiyöt",
-            "nl": "De middernachten"
+            "en": "midnights",
+            "fi": "keskiyöt",
+            "nl": "de middernachten"
         }
     },
     "year": {
@@ -151,14 +151,14 @@
             ]
         },
         "singular": {
-            "en": "Year",
-            "fi": "Vuosi",
-            "nl": "Het jaar"
+            "en": "year",
+            "fi": "vuosi",
+            "nl": "het jaar"
         },
         "plural": {
-            "en": "Years",
-            "fi": "Vuodet",
-            "nl": "De jaren"
+            "en": "years",
+            "fi": "vuodet",
+            "nl": "de jaren"
         }
     },
     "decade": {
@@ -173,14 +173,14 @@
             ]
         },
         "singular": {
-            "en": "Decade",
-            "fi": "Vuosikymmen",
-            "nl": "Het decennium"
+            "en": "decade",
+            "fi": "vuosikymmen",
+            "nl": "het decennium"
         },
         "plural": {
-            "en": "Decades",
-            "fi": "Vuosikymmenet",
-            "nl": "De decennia"
+            "en": "decades",
+            "fi": "vuosikymmenet",
+            "nl": "de decennia"
         }
     },
     "century": {
@@ -195,14 +195,14 @@
             ]
         },
         "singular": {
-            "en": "Century",
-            "fi": "Vuosisata",
-            "nl": "De eeuw"
+            "en": "century",
+            "fi": "vuosisata",
+            "nl": "de eeuw"
         },
         "plural": {
-            "en": "Centuries",
-            "fi": "Vuosisadat",
-            "nl": "De eeuwen"
+            "en": "centuries",
+            "fi": "vuosisadat",
+            "nl": "de eeuwen"
         }
     },
     "hour": {
@@ -214,14 +214,14 @@
             ]
         },
         "singular": {
-            "en": "Hour",
-            "fi": "Tunti",
-            "nl": "Het uur"
+            "en": "hour",
+            "fi": "tunti",
+            "nl": "het uur"
         },
         "plural": {
-            "en": "Hours",
-            "fi": "Tunnit",
-            "nl": "De uren"
+            "en": "hours",
+            "fi": "tunnit",
+            "nl": "de uren"
         }
     },
     "minute": {
@@ -233,14 +233,14 @@
             ]
         },
         "singular": {
-            "en": "Minute",
-            "fi": "Minuutti",
-            "nl": "De minuut"
+            "en": "minute",
+            "fi": "minuutti",
+            "nl": "de minuut"
         },
         "plural": {
-            "en": "Minutes",
-            "fi": "Minuutit",
-            "nl": "De minuten"
+            "en": "minutes",
+            "fi": "minuutit",
+            "nl": "de minuten"
         }
     },
     "clock": {
@@ -252,14 +252,14 @@
             ]
         },
         "singular": {
-            "en": "Clock",
-            "fi": "Kello",
-            "nl": "De klok"
+            "en": "clock",
+            "fi": "kello",
+            "nl": "de klok"
         },
         "plural": {
-            "en": "Clocks",
-            "fi": "Kelloja",
-            "nl": "De klokken"
+            "en": "clocks",
+            "fi": "kelloja",
+            "nl": "de klokken"
         }
     },
     "what time is it": {

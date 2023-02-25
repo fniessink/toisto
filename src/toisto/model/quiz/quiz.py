@@ -90,7 +90,7 @@ class Quiz:
     def __post_init__(self) -> None:
         """Initialize calculated attributes."""
         # The dataclass is frozen, so some magic is needed to set the hash attribute.
-        super().__setattr__("_hash", hash(self.key()))
+        super().__setattr__("_hash", hash(self.key))
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
@@ -98,12 +98,13 @@ class Quiz:
 
     def __eq__(self, other: object) -> bool:
         """Return whether this quiz is equal to the other."""
-        return self.key() == other.key() if isinstance(other, self.__class__) else False
+        return self.key == other.key if isinstance(other, self.__class__) else False
 
     def __ne__(self, other: object) -> bool:
         """Return whether this quiz is not equal to the other."""
         return not self == other
 
+    @cached_property
     def key(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
         concept_id = self.concept.base_concept.concept_id

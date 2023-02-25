@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "Language",
-            "fi": "Kieli",
-            "nl": "De taal"
+            "en": "language",
+            "fi": "kieli",
+            "nl": "de taal"
         },
         "plural": {
-            "en": "Languages",
-            "fi": "Kielet",
-            "nl": "De talen"
+            "en": "languages",
+            "fi": "kielet",
+            "nl": "de talen"
         }
     },
     "dialect": {
@@ -24,14 +24,14 @@
             "C2": "EP"
         },
         "singular": {
-            "en": "Dialect",
-            "fi": "Murre",
-            "nl": "Het dialect"
+            "en": "dialect",
+            "fi": "murre",
+            "nl": "het dialect"
         },
         "plural": {
-            "en": "Dialects",
-            "fi": "Murteet",
-            "nl": "De dialecten"
+            "en": "dialects",
+            "fi": "murteet",
+            "nl": "de dialecten"
         }
     },
     "accent": {
@@ -40,14 +40,14 @@
             "C2": "EP"
         },
         "singular": {
-            "en": "Accent",
-            "fi": "Aksentti",
-            "nl": "Het accent"
+            "en": "accent",
+            "fi": "aksentti",
+            "nl": "het accent"
         },
         "plural": {
-            "en": "Accents",
-            "fi": "Aksentit",
-            "nl": "De accenten"
+            "en": "accents",
+            "fi": "aksentit",
+            "nl": "de accenten"
         }
     },
     "english": {
@@ -56,7 +56,7 @@
             "C1": "EP"
         },
         "en": "English",
-        "fi": "Englanti;language",
+        "fi": "englanti",
         "nl": "Engels"
     },
     "chinese": {
@@ -67,7 +67,7 @@
             ]
         },
         "en": "Chinese",
-        "fi": "Kiina;language",
+        "fi": "kiina",
         "nl": "Chinees"
     },
     "german": {
@@ -78,7 +78,7 @@
             ]
         },
         "en": "German",
-        "fi": "Saksa;language",
+        "fi": "saksa",
         "nl": "Duits"
     },
     "estonian": {
@@ -89,7 +89,7 @@
             ]
         },
         "en": "Estonian",
-        "fi": "Viro;language",
+        "fi": "viro",
         "nl": "Estisch"
     },
     "finnish": {
@@ -101,7 +101,7 @@
             ]
         },
         "en": "Finnish",
-        "fi": "Suomi;language",
+        "fi": "suomi",
         "nl": "Fins"
     },
     "french": {
@@ -112,7 +112,7 @@
             ]
         },
         "en": "French",
-        "fi": "Ranska;language",
+        "fi": "ranska",
         "nl": "Frans"
     },
     "hungarian": {
@@ -123,7 +123,7 @@
             ]
         },
         "en": "Hungarian",
-        "fi": "Unkari;language",
+        "fi": "unkari",
         "nl": "Hongaars"
     },
     "japanese": {
@@ -134,7 +134,7 @@
             ]
         },
         "en": "Japanese",
-        "fi": "Japani;language",
+        "fi": "japani",
         "nl": "Japans"
     },
     "korean": {
@@ -145,7 +145,7 @@
             ]
         },
         "en": "Korean",
-        "fi": "Korea;language",
+        "fi": "korea",
         "nl": "Koreaans"
     },
     "spanish": {
@@ -154,7 +154,7 @@
             "none": "OD"
         },
         "en": "Spanish",
-        "fi": "Espanja;language",
+        "fi": "espanja",
         "nl": "Spaans"
     },
     "dutch": {
@@ -165,7 +165,7 @@
             ]
         },
         "en": "Dutch",
-        "fi": "Hollanti",
+        "fi": "hollanti",
         "nl": "Nederlands"
     },
     "danish": {
@@ -176,7 +176,7 @@
             ]
         },
         "en": "Danish",
-        "fi": "Tanska;language",
+        "fi": "tanska",
         "nl": "Deens"
     },
     "norwegian": {
@@ -187,7 +187,7 @@
             ]
         },
         "en": "Norwegian",
-        "fi": "Norja;language",
+        "fi": "norja",
         "nl": "Noors"
     },
     "swedish": {
@@ -198,7 +198,7 @@
             ]
         },
         "en": "Swedish",
-        "fi": "Ruotsi;language",
+        "fi": "ruotsi",
         "nl": "Zweeds"
     },
     "russian": {
@@ -209,7 +209,7 @@
             ]
         },
         "en": "Russian",
-        "fi": "Venäjä;language",
+        "fi": "venäjä",
         "nl": "Russisch"
     },
     "icelandic": {
@@ -220,7 +220,7 @@
             ]
         },
         "en": "Icelandic",
-        "fi": "Islanti;language",
+        "fi": "islanti",
         "nl": "IJslands"
     },
     "I have a dutch accent": {

@@ -6,9 +6,9 @@
                 "OD"
             ]
         },
-        "en": "Weather",
-        "fi": "Sää",
-        "nl": "Het weer"
+        "en": "weather",
+        "fi": "sää",
+        "nl": "het weer"
     },
     "how is the weather": {
         "roots": {
@@ -42,9 +42,9 @@
                 "OD"
             ]
         },
-        "en": "Rain",
-        "fi": "Sade",
-        "nl": "De regen"
+        "en": "rain",
+        "fi": "sade",
+        "nl": "de regen"
     },
     "sun": {
         "level": {
@@ -54,9 +54,9 @@
                 "OD"
             ]
         },
-        "en": "Sun",
-        "fi": "Aurinko",
-        "nl": "De zon"
+        "en": "sun",
+        "fi": "aurinko",
+        "nl": "de zon"
     },
     "wind": {
         "level": {
@@ -66,9 +66,9 @@
             ],
             "A2": "OD"
         },
-        "en": "Wind",
-        "fi": "Tuuli",
-        "nl": "De wind"
+        "en": "wind",
+        "fi": "tuuli",
+        "nl": "de wind"
     },
     "cloud": {
         "level": {
@@ -78,14 +78,14 @@
             ]
         },
         "singular": {
-            "en": "Cloud",
-            "fi": "Pilvi",
-            "nl": "De wolk"
+            "en": "cloud",
+            "fi": "pilvi",
+            "nl": "de wolk"
         },
         "plural": {
-            "en": "Clouds",
-            "fi": "Pilvet",
-            "nl": "De wolken"
+            "en": "clouds",
+            "fi": "pilvet",
+            "nl": "de wolken"
         }
     },
     "snow": {
@@ -95,18 +95,18 @@
                 "OD"
             ]
         },
-        "en": "Snow",
-        "fi": "Lumi",
-        "nl": "De sneeuw"
+        "en": "snow",
+        "fi": "lumi",
+        "nl": "de sneeuw"
     },
     "ice": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "Ice",
-        "fi": "Jää",
-        "nl": "Het ijs"
+        "en": "ice",
+        "fi": "jää",
+        "nl": "het ijs"
     },
     "storm": {
         "level": {
@@ -115,27 +115,27 @@
                 "OD"
             ]
         },
-        "en": "Storm",
-        "fi": "Myrsky",
-        "nl": "De storm"
+        "en": "storm",
+        "fi": "myrsky",
+        "nl": "de storm"
     },
     "thunder": {
         "level": {
             "B1": "EP",
             "C1": "OD"
         },
-        "en": "Thunder",
-        "fi": "Ukkonen",
-        "nl": "De donder"
+        "en": "thunder",
+        "fi": "ukkonen",
+        "nl": "de donder"
     },
     "fog": {
         "level": {
             "A2": "EP",
             "B2": "OD"
         },
-        "en": "Fog",
-        "fi": "Sumu",
-        "nl": "De mist"
+        "en": "fog",
+        "fi": "sumu",
+        "nl": "de mist"
     },
     "rainy": {
         "level": {
@@ -143,9 +143,9 @@
             "B1": "EP"
         },
         "roots": "rain",
-        "en": "Rainy",
-        "fi": "Sateinen",
-        "nl": "Regenachtig"
+        "en": "rainy",
+        "fi": "sateinen",
+        "nl": "regenachtig"
     },
     "sunny": {
         "level": {
@@ -153,9 +153,9 @@
             "A2": "EP"
         },
         "roots": "sun",
-        "en": "Sunny",
-        "fi": "Aurinkoinen",
-        "nl": "Zonnig"
+        "en": "sunny",
+        "fi": "aurinkoinen",
+        "nl": "zonnig"
     },
     "windy": {
         "level": {
@@ -165,9 +165,9 @@
             ]
         },
         "roots": "wind",
-        "en": "Windy",
-        "fi": "Tuulinen",
-        "nl": "Winderig"
+        "en": "windy",
+        "fi": "tuulinen",
+        "nl": "winderig"
     },
     "cloudy": {
         "level": {
@@ -175,9 +175,9 @@
             "B1": "OD"
         },
         "roots": "cloud",
-        "en": "Cloudy",
-        "fi": "Pilvinen",
-        "nl": "Bewolkt"
+        "en": "cloudy",
+        "fi": "pilvinen",
+        "nl": "bewolkt"
     },
     "snowy": {
         "level": {
@@ -185,9 +185,9 @@
             "none": "EP"
         },
         "roots": "snow",
-        "en": "Snowy",
-        "fi": "Luminen",
-        "nl": "Besneeuwd"
+        "en": "snowy",
+        "fi": "luminen",
+        "nl": "besneeuwd"
     },
     "stormy": {
         "level": {
@@ -197,9 +197,9 @@
             ]
         },
         "roots": "storm",
-        "en": "Stormy",
-        "fi": "Myrskyinen",
-        "nl": "Stormachtig"
+        "en": "stormy",
+        "fi": "myrskyinen",
+        "nl": "stormachtig"
     },
     "there is a thunderstorm": {
         "roots": {
@@ -227,9 +227,9 @@
             "OD": "B2"
         },
         "roots": "fog",
-        "en": "Foggy",
-        "fi": "Sumuinen",
-        "nl": "Mistig"
+        "en": "foggy",
+        "fi": "sumuinen",
+        "nl": "mistig"
     },
     "it is raining": {
         "roots": {

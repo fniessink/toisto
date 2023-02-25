@@ -512,10 +512,10 @@ When the program is stopped, progress is saved in a file named `.toisto-progress
 
 ```json
 {
-    "to read:nl:fi:Lezen:translate": {
+    "to read:nl:fi:lezen:translate": {
         "count": 2
     },
-    "eye:nl:fi:Het oog:translate": {
+    "eye:nl:fi:het oog:translate": {
         "start": "2023-02-25T17:34:37",
         "end": "2023-02-25T17:35:37",
         "skip_until": "2023-02-26T17:40:37",

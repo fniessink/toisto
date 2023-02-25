@@ -7,20 +7,20 @@
             ]
         },
         "singular": {
-            "en": "Body",
+            "en": "body",
             "fi": [
-                "Vartalo",
-                "Keho"
+                "vartalo",
+                "keho"
             ],
-            "nl": "Het lichaam"
+            "nl": "het lichaam"
         },
         "plural": {
-            "en": "Bodies",
+            "en": "bodies",
             "fi": [
-                "Vartalot",
-                "Kehot"
+                "vartalot",
+                "kehot"
             ],
-            "nl": "De lichamen"
+            "nl": "de lichamen"
         }
     },
     "eye": {
@@ -32,14 +32,14 @@
             ]
         },
         "singular": {
-            "en": "Eye",
-            "fi": "Silmä",
-            "nl": "Het oog"
+            "en": "eye",
+            "fi": "silmä",
+            "nl": "het oog"
         },
         "plural": {
-            "en": "Eyes",
-            "fi": "Silmät",
-            "nl": "De ogen"
+            "en": "eyes",
+            "fi": "silmät",
+            "nl": "de ogen"
         }
     },
     "ear": {
@@ -51,14 +51,14 @@
             ]
         },
         "singular": {
-            "en": "Ear",
-            "fi": "Korva",
-            "nl": "Het oor"
+            "en": "ear",
+            "fi": "korva",
+            "nl": "het oor"
         },
         "plural": {
-            "en": "Ears",
-            "fi": "Korvat",
-            "nl": "De oren"
+            "en": "ears",
+            "fi": "korvat",
+            "nl": "de oren"
         }
     },
     "hair": {
@@ -69,17 +69,17 @@
             ]
         },
         "singular": {
-            "en": "Hair",
-            "fi": "Hius",
+            "en": "hair",
+            "fi": "hius",
             "nl": [
-                "De haar",
-                "Het haar"
+                "de haar",
+                "het haar"
             ]
         },
         "plural": {
-            "en": "Hairs",
-            "fi": "Hiukset",
-            "nl": "De haren"
+            "en": "hairs",
+            "fi": "hiukset",
+            "nl": "de haren"
         }
     },
     "nose": {
@@ -90,14 +90,14 @@
             ]
         },
         "singular": {
-            "en": "Nose",
-            "fi": "Nenä",
-            "nl": "De neus"
+            "en": "nose",
+            "fi": "nenä",
+            "nl": "de neus"
         },
         "plural": {
-            "en": "Noses",
-            "fi": "Nenät",
-            "nl": "De neuzen"
+            "en": "noses",
+            "fi": "nenät",
+            "nl": "de neuzen"
         }
     },
     "mouth": {
@@ -108,14 +108,14 @@
             ]
         },
         "singular": {
-            "en": "Mouth",
-            "fi": "Suu",
-            "nl": "De mond"
+            "en": "mouth",
+            "fi": "suu",
+            "nl": "de mond"
         },
         "plural": {
-            "en": "Mouths",
-            "fi": "Suut",
-            "nl": "De monden"
+            "en": "mouths",
+            "fi": "suut",
+            "nl": "de monden"
         }
     },
     "lip": {
@@ -126,14 +126,14 @@
             ]
         },
         "singular": {
-            "en": "Lip",
-            "fi": "Huuli",
-            "nl": "De lip"
+            "en": "lip",
+            "fi": "huuli",
+            "nl": "de lip"
         },
         "plural": {
-            "en": "Lips",
-            "fi": "Huulet",
-            "nl": "De lippen"
+            "en": "lips",
+            "fi": "huulet",
+            "nl": "de lippen"
         }
     },
     "tooth": {
@@ -144,14 +144,14 @@
             ]
         },
         "singular": {
-            "en": "Tooth",
-            "fi": "Hammas",
-            "nl": "De tand"
+            "en": "tooth",
+            "fi": "hammas",
+            "nl": "de tand"
         },
         "plural": {
-            "en": "Teeth",
-            "fi": "Hampaat",
-            "nl": "De tanden"
+            "en": "teeth",
+            "fi": "hampaat",
+            "nl": "de tanden"
         }
     },
     "head": {
@@ -163,14 +163,14 @@
             ]
         },
         "singular": {
-            "en": "Head",
-            "fi": "Pää",
-            "nl": "Het hoofd"
+            "en": "head",
+            "fi": "pää",
+            "nl": "het hoofd"
         },
         "plural": {
-            "en": "Heads",
-            "fi": "Päät",
-            "nl": "De hoofden"
+            "en": "heads",
+            "fi": "päät",
+            "nl": "de hoofden"
         }
     },
     "back": {
@@ -179,14 +179,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Back",
-            "fi": "Selkä",
-            "nl": "De rug"
+            "en": "back",
+            "fi": "selkä",
+            "nl": "de rug"
         },
         "plural": {
-            "en": "Backs",
-            "fi": "Selät",
-            "nl": "De ruggen"
+            "en": "backs",
+            "fi": "selät",
+            "nl": "de ruggen"
         }
     },
     "shoulder": {
@@ -198,14 +198,14 @@
             "fi": "head"
         },
         "singular": {
-            "en": "Shoulder",
-            "fi": "Olkapää",
-            "nl": "De schouder"
+            "en": "shoulder",
+            "fi": "olkapää",
+            "nl": "de schouder"
         },
         "plural": {
-            "en": "Shoulders",
-            "fi": "Olkapäät",
-            "nl": "De schouders"
+            "en": "shoulders",
+            "fi": "olkapäät",
+            "nl": "de schouders"
         }
     },
     "arm": {
@@ -219,14 +219,14 @@
             "fi": "hand"
         },
         "singular": {
-            "en": "Arm",
-            "fi": "Käsivarsi",
-            "nl": "De arm"
+            "en": "arm",
+            "fi": "käsivarsi",
+            "nl": "de arm"
         },
         "plural": {
-            "en": "Arms",
-            "fi": "Käsivarret",
-            "nl": "De armen"
+            "en": "arms",
+            "fi": "käsivarret",
+            "nl": "de armen"
         }
     },
     "hand": {
@@ -238,14 +238,14 @@
             ]
         },
         "singular": {
-            "en": "Hand",
-            "fi": "Käsi",
-            "nl": "De hand"
+            "en": "hand",
+            "fi": "käsi",
+            "nl": "de hand"
         },
         "plural": {
-            "en": "Hands",
-            "fi": "Kädet",
-            "nl": "De handen"
+            "en": "hands",
+            "fi": "kädet",
+            "nl": "de handen"
         }
     },
     "finger": {
@@ -257,14 +257,14 @@
             ]
         },
         "singular": {
-            "en": "Finger",
-            "fi": "Sormi",
-            "nl": "De vinger"
+            "en": "finger",
+            "fi": "sormi",
+            "nl": "de vinger"
         },
         "plural": {
-            "en": "Fingers",
-            "fi": "Sormet",
-            "nl": "De vingers"
+            "en": "fingers",
+            "fi": "sormet",
+            "nl": "de vingers"
         }
     },
     "stomach": {
@@ -275,14 +275,14 @@
             ]
         },
         "singular": {
-            "en": "Stomach",
-            "fi": "Vatsa",
-            "nl": "De maag"
+            "en": "stomach",
+            "fi": "vatsa",
+            "nl": "de maag"
         },
         "plural": {
-            "en": "Stomachs",
-            "fi": "Vatsat",
-            "nl": "De magen"
+            "en": "stomachs",
+            "fi": "vatsat",
+            "nl": "de magen"
         }
     },
     "belly": {
@@ -291,20 +291,20 @@
             "none": "EP"
         },
         "singular": {
-            "en": "Belly",
+            "en": "belly",
             "fi": [
-                "Maha",
-                "Masu"
+                "maha",
+                "masu"
             ],
-            "nl": "De buik"
+            "nl": "de buik"
         },
         "plural": {
-            "en": "Bellies",
+            "en": "bellies",
             "fi": [
-                "Mahat",
-                "Masut"
+                "mahat",
+                "masut"
             ],
-            "nl": "De buiken"
+            "nl": "de buiken"
         }
     },
     "knee": {
@@ -313,14 +313,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Knee",
-            "fi": "Polvi",
-            "nl": "De knie"
+            "en": "knee",
+            "fi": "polvi",
+            "nl": "de knie"
         },
         "plural": {
-            "en": "Knees",
-            "fi": "Polvet",
-            "nl": "De knieën"
+            "en": "knees",
+            "fi": "polvet",
+            "nl": "de knieën"
         }
     },
     "leg": {
@@ -332,14 +332,14 @@
             ]
         },
         "singular": {
-            "en": "Leg",
-            "fi": "Jalka;upper part",
-            "nl": "Het been"
+            "en": "leg",
+            "fi": "jalka;upper part",
+            "nl": "het been"
         },
         "plural": {
-            "en": "Legs",
-            "fi": "Jalat;upper part",
-            "nl": "De benen"
+            "en": "legs",
+            "fi": "jalat;upper part",
+            "nl": "de benen"
         }
     },
     "foot": {
@@ -351,14 +351,14 @@
             ]
         },
         "singular": {
-            "en": "Foot",
-            "fi": "Jalka;lower part",
-            "nl": "De voet"
+            "en": "foot",
+            "fi": "jalka;lower part",
+            "nl": "de voet"
         },
         "plural": {
-            "en": "Feet",
-            "fi": "Jalat;lower part",
-            "nl": "De voeten"
+            "en": "feet",
+            "fi": "jalat;lower part",
+            "nl": "de voeten"
         }
     },
     "toe": {
@@ -367,14 +367,14 @@
             "B1": "OD"
         },
         "singular": {
-            "en": "Toe",
-            "fi": "Varvas",
-            "nl": "De teen"
+            "en": "toe",
+            "fi": "varvas",
+            "nl": "de teen"
         },
         "plural": {
-            "en": "Toes",
-            "fi": "Varpaat",
-            "nl": "De tenen"
+            "en": "toes",
+            "fi": "varpaat",
+            "nl": "de tenen"
         }
     }
 }

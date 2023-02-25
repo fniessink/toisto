@@ -42,6 +42,12 @@ class ProgressTest(ToistoTestCase):
         self.assertIsNone(self.progress.get_retention(self.quiz).end)
         self.assertIsNone(self.progress.get_retention(self.quiz).skip_until)
 
+    def test_update_progress_when_case_changed(self):
+        """Test that changing the case of labels does impact the progress."""
+        self.progress.increase_retention(self.quiz)
+        quiz_with_case_changed = self.copy_quiz(self.quiz, question=self.quiz.question.lower())
+        self.assertNotEqual(self.progress.get_retention(self.quiz), self.progress.get_retention(quiz_with_case_changed))
+
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
         progress = self.create_progress({self.quiz, self.another_quiz})

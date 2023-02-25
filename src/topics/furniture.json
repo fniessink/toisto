@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "Table",
-            "fi": "Pöytä",
-            "nl": "De tafel"
+            "en": "table",
+            "fi": "pöytä",
+            "nl": "de tafel"
         },
         "plural": {
-            "en": "Tables",
-            "fi": "Pöydät",
-            "nl": "De tafels"
+            "en": "tables",
+            "fi": "pöydät",
+            "nl": "de tafels"
         }
     },
     "bed": {
@@ -26,14 +26,14 @@
             ]
         },
         "singular": {
-            "en": "Bed",
-            "fi": "Sänky",
-            "nl": "Het bed"
+            "en": "bed",
+            "fi": "sänky",
+            "nl": "het bed"
         },
         "plural": {
-            "en": "Beds",
-            "fi": "Sängyt",
-            "nl": "De bedden"
+            "en": "beds",
+            "fi": "sängyt",
+            "nl": "de bedden"
         }
     },
     "sofa": {
@@ -42,14 +42,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Sofa",
-            "fi": "Sohva",
-            "nl": "De sofa"
+            "en": "sofa",
+            "fi": "sohva",
+            "nl": "de sofa"
         },
         "plural": {
-            "en": "Sofas",
-            "fi": "Sohvat",
-            "nl": "De sofa's"
+            "en": "sofas",
+            "fi": "sohvat",
+            "nl": "de sofa's"
         }
     },
     "pillow": {
@@ -58,14 +58,14 @@
             "none": "OD"
         },
         "singular": {
-            "en": "Pillow",
-            "fi": "Tyyny",
-            "nl": "Het kussen"
+            "en": "pillow",
+            "fi": "tyyny",
+            "nl": "het kussen"
         },
         "plural": {
-            "en": "Pillows",
-            "fi": "Tyynyt",
-            "nl": "De kussens"
+            "en": "pillows",
+            "fi": "tyynyt",
+            "nl": "de kussens"
         }
     },
     "chair": {
@@ -76,14 +76,14 @@
             ]
         },
         "singular": {
-            "en": "Chair",
-            "fi": "Tuoli",
-            "nl": "De stoel"
+            "en": "chair",
+            "fi": "tuoli",
+            "nl": "de stoel"
         },
         "plural": {
-            "en": "Chairs",
-            "fi": "Tuolit",
-            "nl": "De stoelen"
+            "en": "chairs",
+            "fi": "tuolit",
+            "nl": "de stoelen"
         }
     },
     "desk": {
@@ -100,20 +100,20 @@
             ]
         },
         "singular": {
-            "en": "Desk",
+            "en": "desk",
             "fi": [
-                "Työpöytä",
-                "Kirjoituspöytä"
+                "työpöytä",
+                "kirjoituspöytä"
             ],
-            "nl": "Het bureau"
+            "nl": "het bureau"
         },
         "plural": {
-            "en": "Desks",
+            "en": "desks",
             "fi": [
-                "Työpöydät",
-                "Kirjoituspöydät"
+                "työpöydät",
+                "kirjoituspöydät"
             ],
-            "nl": "De bureaus"
+            "nl": "de bureaus"
         }
     },
     "lamp": {
@@ -124,14 +124,14 @@
             ]
         },
         "singular": {
-            "en": "Lamp",
-            "fi": "Lamppu",
-            "nl": "De lamp"
+            "en": "lamp",
+            "fi": "lamppu",
+            "nl": "de lamp"
         },
         "plural": {
-            "en": "Lamps",
-            "fi": "Lamput",
-            "nl": "De lampen"
+            "en": "lamps",
+            "fi": "lamput",
+            "nl": "de lampen"
         }
     },
     "curtain": {
@@ -140,14 +140,14 @@
             "B1": "OD"
         },
         "singular": {
-            "en": "Curtain",
-            "fi": "Verho",
-            "nl": "Het gordijn"
+            "en": "curtain",
+            "fi": "verho",
+            "nl": "het gordijn"
         },
         "plural": {
-            "en": "Curtains",
-            "fi": "Verhot",
-            "nl": "De gordijnen"
+            "en": "curtains",
+            "fi": "verhot",
+            "nl": "de gordijnen"
         }
     },
     "carpet": {
@@ -158,14 +158,14 @@
             ]
         },
         "singular": {
-            "en": "Carpet",
-            "fi": "Matto",
-            "nl": "Het tapijt"
+            "en": "carpet",
+            "fi": "matto",
+            "nl": "het tapijt"
         },
         "plural": {
-            "en": "Carpets",
-            "fi": "Matot",
-            "nl": "De tapijten"
+            "en": "carpets",
+            "fi": "matot",
+            "nl": "de tapijten"
         }
     },
     "the door is locked": {

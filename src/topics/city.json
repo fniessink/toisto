@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "City",
-            "fi": "Kaupunki",
-            "nl": "De stad"
+            "en": "city",
+            "fi": "kaupunki",
+            "nl": "de stad"
         },
         "plural": {
-            "en": "Cities",
-            "fi": "Kaupungit",
-            "nl": "De steden"
+            "en": "cities",
+            "fi": "kaupungit",
+            "nl": "de steden"
         }
     },
     "building": {
@@ -27,14 +27,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Building",
-            "fi": "Rakennus",
-            "nl": "Het gebouw"
+            "en": "building",
+            "fi": "rakennus",
+            "nl": "het gebouw"
         },
         "plural": {
-            "en": "Buildings",
-            "fi": "Rakennukset",
-            "nl": "De gebouwen"
+            "en": "buildings",
+            "fi": "rakennukset",
+            "nl": "de gebouwen"
         }
     },
     "monument": {
@@ -43,14 +43,14 @@
             "B2": "OD"
         },
         "singular": {
-            "en": "Monument",
-            "fi": "Monumentti",
-            "nl": "Het monument"
+            "en": "monument",
+            "fi": "monumentti",
+            "nl": "het monument"
         },
         "plural": {
-            "en": "Monuments",
-            "fi": "Monumentit",
-            "nl": "De monumenten"
+            "en": "monuments",
+            "fi": "monumentit",
+            "nl": "de monumenten"
         }
     },
     "theater": {
@@ -59,14 +59,14 @@
             "none": "EP"
         },
         "singular": {
-            "en": "Theater",
-            "fi": "Teatteri",
+            "en": "theater",
+            "fi": "teatteri",
             "nl": "Het theater"
         },
         "plural": {
-            "en": "Theaters",
-            "fi": "Teatterit",
-            "nl": "De theaters"
+            "en": "theaters",
+            "fi": "teatterit",
+            "nl": "de theaters"
         }
     },
     "museum": {
@@ -77,14 +77,14 @@
             ]
         },
         "singular": {
-            "en": "Museum",
-            "fi": "Museo",
-            "nl": "Het museum"
+            "en": "museum",
+            "fi": "museo",
+            "nl": "het museum"
         },
         "plural": {
-            "en": "Museums",
-            "fi": "Museot",
-            "nl": "De musea"
+            "en": "museums",
+            "fi": "museot",
+            "nl": "de musea"
         }
     },
     "church": {
@@ -96,14 +96,14 @@
             ]
         },
         "singular": {
-            "en": "Church",
-            "fi": "Kirkko",
-            "nl": "De kerk"
+            "en": "church",
+            "fi": "kirkko",
+            "nl": "de kerk"
         },
         "plural": {
-            "en": "Churches",
-            "fi": "Kirkot",
-            "nl": "De kerken"
+            "en": "churches",
+            "fi": "kirkot",
+            "nl": "de kerken"
         }
     },
     "stadium": {
@@ -114,14 +114,14 @@
             ]
         },
         "singular": {
-            "en": "Stadium",
-            "fi": "Stadion",
-            "nl": "Het stadion"
+            "en": "stadium",
+            "fi": "stadion",
+            "nl": "het stadion"
         },
         "plural": {
-            "en": "Stadiums",
-            "fi": "Stadionit",
-            "nl": "De stadions"
+            "en": "stadiums",
+            "fi": "stadionit",
+            "nl": "de stadions"
         }
     },
     "library": {
@@ -133,14 +133,14 @@
             "fi": "book"
         },
         "singular": {
-            "en": "Library",
-            "fi": "Kirjasto",
-            "nl": "De bibliotheek"
+            "en": "library",
+            "fi": "kirjasto",
+            "nl": "de bibliotheek"
         },
         "plural": {
-            "en": "Libraries",
-            "fi": "Kirjastot",
-            "nl": "De bibliotheken"
+            "en": "libraries",
+            "fi": "kirjastot",
+            "nl": "de bibliotheken"
         }
     },
     "hospital": {
@@ -155,14 +155,14 @@
             "nl": "house"
         },
         "singular": {
-            "en": "Hospital",
-            "fi": "Sairaala",
-            "nl": "Het ziekenhuis"
+            "en": "hospital",
+            "fi": "sairaala",
+            "nl": "het ziekenhuis"
         },
         "plural": {
-            "en": "Hospitals",
-            "fi": "Sairaalat",
-            "nl": "De ziekenhuizen"
+            "en": "hospitals",
+            "fi": "sairaalat",
+            "nl": "de ziekenhuizen"
         }
     },
     "office": {
@@ -171,14 +171,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Office",
-            "fi": "Toimisto",
-            "nl": "Het kantoor"
+            "en": "office",
+            "fi": "toimisto",
+            "nl": "het kantoor"
         },
         "plural": {
-            "en": "Offices",
-            "fi": "Toimistot",
-            "nl": "De kantoren"
+            "en": "offices",
+            "fi": "toimistot",
+            "nl": "de kantoren"
         }
     },
     "airport": {
@@ -190,14 +190,14 @@
             "en": "port"
         },
         "singular": {
-            "en": "Airport",
-            "fi": "Lentokenttä",
-            "nl": "Het vliegveld"
+            "en": "airport",
+            "fi": "lentokenttä",
+            "nl": "het vliegveld"
         },
         "plural": {
-            "en": "Airports",
-            "fi": "Lentokentät",
-            "nl": "De vliegvelden"
+            "en": "airports",
+            "fi": "lentokentät",
+            "nl": "de vliegvelden"
         }
     },
     "store": {
@@ -207,14 +207,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Store",
-            "fi": "Kauppa",
-            "nl": "De winkel"
+            "en": "store",
+            "fi": "kauppa",
+            "nl": "de winkel"
         },
         "plural": {
-            "en": "Stores",
-            "fi": "Kaupat",
-            "nl": "De winkels"
+            "en": "stores",
+            "fi": "kaupat",
+            "nl": "de winkels"
         }
     },
     "department store": {
@@ -228,14 +228,14 @@
             "nl": "house"
         },
         "singular": {
-            "en": "Department store",
-            "fi": "Tavaratalo",
-            "nl": "Het warenhuis"
+            "en": "department store",
+            "fi": "tavaratalo",
+            "nl": "het warenhuis"
         },
         "plural": {
-            "en": "Department stores",
-            "fi": "Tavaratalot",
-            "nl": "De warenhuizen"
+            "en": "department stores",
+            "fi": "tavaratalot",
+            "nl": "de warenhuizen"
         }
     },
     "park": {
@@ -246,14 +246,14 @@
             ]
         },
         "singular": {
-            "en": "Park",
-            "fi": "Puisto",
-            "nl": "Het park"
+            "en": "park",
+            "fi": "puisto",
+            "nl": "het park"
         },
         "plural": {
-            "en": "Parks",
-            "fi": "Puistot",
-            "nl": "De parken"
+            "en": "parks",
+            "fi": "puistot",
+            "nl": "de parken"
         }
     },
     "castle": {
@@ -264,14 +264,14 @@
             ]
         },
         "singular": {
-            "en": "Castle",
-            "fi": "Linna",
-            "nl": "Het kasteel"
+            "en": "castle",
+            "fi": "linna",
+            "nl": "het kasteel"
         },
         "plural": {
-            "en": "Castles",
-            "fi": "Linnat",
-            "nl": "De kastelen"
+            "en": "castles",
+            "fi": "linnat",
+            "nl": "de kastelen"
         }
     },
     "hotel": {
@@ -282,14 +282,14 @@
             ]
         },
         "singular": {
-            "en": "Hotel",
-            "fi": "Hotelli",
-            "nl": "Het hotel"
+            "en": "hotel",
+            "fi": "hotelli",
+            "nl": "het hotel"
         },
         "plural": {
-            "en": "Hotels",
-            "fi": "Hotellit",
-            "nl": "De hotels"
+            "en": "hotels",
+            "fi": "hotellit",
+            "nl": "de hotels"
         }
     },
     "centre": {
@@ -301,14 +301,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Centre",
-            "fi": "Keskusta",
-            "nl": "Het centrum"
+            "en": "centre",
+            "fi": "keskusta",
+            "nl": "het centrum"
         },
         "plural": {
-            "en": "Centres",
-            "fi": "Keskustat",
-            "nl": "De centra"
+            "en": "centres",
+            "fi": "keskustat",
+            "nl": "de centra"
         }
     },
     "street": {
@@ -320,14 +320,14 @@
             ]
         },
         "singular": {
-            "en": "Street",
-            "fi": "Katu",
-            "nl": "De straat"
+            "en": "street",
+            "fi": "katu",
+            "nl": "de straat"
         },
         "plural": {
-            "en": "Streets",
-            "fi": "Kadut",
-            "nl": "De straten"
+            "en": "streets",
+            "fi": "kadut",
+            "nl": "de straten"
         }
     },
     "square": {
@@ -338,14 +338,14 @@
             ]
         },
         "singular": {
-            "en": "Square",
-            "fi": "Aukio",
-            "nl": "Het plein"
+            "en": "square",
+            "fi": "aukio",
+            "nl": "het plein"
         },
         "plural": {
-            "en": "Squares",
-            "fi": "Aukiot",
-            "nl": "De pleinen"
+            "en": "squares",
+            "fi": "aukiot",
+            "nl": "de pleinen"
         }
     },
     "bridge": {
@@ -356,14 +356,14 @@
             ]
         },
         "singular": {
-            "en": "Bridge",
-            "fi": "Silta",
-            "nl": "De brug"
+            "en": "bridge",
+            "fi": "silta",
+            "nl": "de brug"
         },
         "plural": {
-            "en": "Bridges",
-            "fi": "Sillat",
-            "nl": "De bruggen"
+            "en": "bridges",
+            "fi": "sillat",
+            "nl": "de bruggen"
         }
     },
     "port": {
@@ -374,14 +374,14 @@
             ]
         },
         "singular": {
-            "en": "Port",
-            "fi": "Satama",
-            "nl": "De haven"
+            "en": "port",
+            "fi": "satama",
+            "nl": "de haven"
         },
         "plural": {
-            "en": "Ports",
-            "fi": "Satamat",
-            "nl": "De havens"
+            "en": "ports",
+            "fi": "satamat",
+            "nl": "de havens"
         }
     },
     "mall": {
@@ -404,25 +404,25 @@
         },
         "singular": {
             "en": [
-                "Mall",
-                "Shopping center"
+                "mall",
+                "shopping center"
             ],
             "fi": [
-                "Kauppakeskus",
-                "Ostoskeskus"
+                "kauppakeskus",
+                "ostoskeskus"
             ],
             "nl": "Het winkelcentrum"
         },
         "plural": {
             "en": [
-                "Malls",
-                "Shopping centers"
+                "malls",
+                "shopping centers"
             ],
             "fi": [
-                "Kauppakeskukset",
-                "Ostoskeskukset"
+                "kauppakeskukset",
+                "ostoskeskukset"
             ],
-            "nl": "De winkelcentra"
+            "nl": "de winkelcentra"
         }
     },
     "capital": {
@@ -441,14 +441,14 @@
             ]
         },
         "singular": {
-            "en": "Capital",
-            "fi": "Pääkaupunki",
-            "nl": "De hoofdstad"
+            "en": "capital",
+            "fi": "pääkaupunki",
+            "nl": "de hoofdstad"
         },
         "plural": {
-            "en": "Capitals",
-            "fi": "Pääkaupungit",
-            "nl": "De hoofdsteden"
+            "en": "capitals",
+            "fi": "pääkaupungit",
+            "nl": "de hoofdsteden"
         }
     },
     "that building is a church": {
