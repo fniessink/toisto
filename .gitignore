@@ -2,9 +2,9 @@ build
 dist
 htmlcov
 venv
-.coverage
+.coverage*
+.venv
 .vscode
 .DS_Store
 **/*.egg-info
 **/__pycache__/**
-
