@@ -90,15 +90,8 @@ class Quiz:
     def __post_init__(self) -> None:
         """Initialize calculated attributes."""
         # The dataclass is frozen, so some magic is needed to set the hash attribute.
-        super().__setattr__(
-            "_hash",
-            hash((self.question_language, self.answer_language, self.question, self.quiz_types)),
-        )
-
-    def __str__(self) -> str:
-        """Return a string version of the quiz that can be used as key in the progress dict."""
-        quiz_types = "+".join(self.quiz_types)
-        return f"{self.question_language}:{self.answer_language}:{self._question}:{quiz_types}"
+        quiz_hash = hash((self.question_language, self.answer_language, self.question, self.quiz_types))
+        super().__setattr__("_hash", quiz_hash)
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
@@ -118,6 +111,11 @@ class Quiz:
     def __ne__(self, other: object) -> bool:
         """Return whether this quiz is not equal to the other."""
         return not self == other
+
+    def key(self) -> str:
+        """Return a string version of the quiz that can be used as key in the progress dict."""
+        quiz_types = "+".join(self.quiz_types)
+        return f"{self.question_language}:{self.answer_language}:{self._question}:{quiz_types}"
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""

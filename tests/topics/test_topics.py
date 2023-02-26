@@ -1,10 +1,8 @@
 """Integration tests for the topics."""
 
 from argparse import ArgumentParser
-from typing import get_args
 
 from toisto.model.language import Language
-from toisto.model.language.cefr import CommonReferenceLevel
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.persistence.topics import load_topics
 
@@ -18,8 +16,7 @@ class TopicsTest(ToistoTestCase):
         """Override to set up test fixtures."""
         concept = self.create_concept(ConceptId("welcome"))
         self.quiz = self.create_quiz(concept, "fi", "nl", "Tervetuloa", ["Welkom"])
-        self.levels = list(get_args(CommonReferenceLevel))
-        self.topics = load_topics(Language("fi"), Language("nl"), self.levels, [], [], ArgumentParser())
+        self.topics = load_topics(Language("fi"), Language("nl"), [], [], [], ArgumentParser())
 
     def test_load_topics(self):
         """Test that the topics can be loaded."""

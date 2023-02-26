@@ -505,3 +505,27 @@ For example, if a user answers a quiz correctly on March 1, incorrectly on March
 Each time a quiz is answered correctly, the quiz is silenced for a while. The longer the quiz's current retention, the longer the quiz is silenced. Whenever the user makes a mistake the retention is reset to zero.
 
 If a user knows the correct answer the first time a quiz is presented, the quiz is silenced for a longer duration (24 hours).
+
+## Progress savefile
+
+When the program is stopped, progress is saved in a file named `.toisto-progress.json` in the user's home folder. Each entry in the file is the progress of one specific quiz. The key denotes the quiz, the value contains information about the user's retention of the quiz. This looks as follows:
+
+```json
+{
+    "nl:fi:Lezen:translate": {
+        "count": 2
+    },
+    "nl:fi:Het oog:translate": {
+        "start": "2023-02-25T17:34:37",
+        "end": "2023-02-25T17:35:37",
+        "skip_until": "2023-02-26T17:40:37",
+        "count": 3
+    }
+}
+```
+
+The first entry is the quiz to translate "Lezen" from Dutch to Finnish. This quiz has been presented to the user twice (`count` is 2), but they haven't answered it correctly since the last time it was presented.
+
+The second entry is the quiz to translate "Het oog" from Dutch to Finnish. This quiz has been presented to the user three times (`count` is 3) in the period between `start` and `end` and they have answered it correctly each time. Toisto will not present to quiz again until after `skip_until`.
+
+The keys in the savefile contain the question label of quizzes. That means that when the label of a concept changes, for example to fix spelling, progress on quizzes that use the label will be lost.

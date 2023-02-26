@@ -22,11 +22,11 @@ class Progress:
 
     def increase_retention(self, quiz: Quiz) -> None:
         """Increase the retention of the quiz."""
-        self.__progress_dict.setdefault(str(quiz), Retention()).increase()
+        self.__progress_dict.setdefault(quiz.key(), Retention()).increase()
 
     def reset_retention(self, quiz: Quiz) -> None:
         """Reset the retention of the quiz."""
-        self.__progress_dict.setdefault(str(quiz), Retention()).reset()
+        self.__progress_dict.setdefault(quiz.key(), Retention()).reset()
 
     def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
@@ -42,7 +42,7 @@ class Progress:
 
     def get_retention(self, quiz: Quiz) -> Retention:
         """Return the quiz retention."""
-        return self.__progress_dict.get(str(quiz), Retention())
+        return self.__progress_dict.get(quiz.key(), Retention())
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
@@ -55,7 +55,7 @@ class Progress:
 
     def __in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz has been presented to the user before."""
-        return str(quiz) in self.__progress_dict
+        return quiz.key() in self.__progress_dict
 
     def __unblocked_quizzes(self, quizzes: Quizzes, eligible_quizzes: Quizzes) -> Quizzes:
         """Return the quizzes that are not blocked by other quizzes.
