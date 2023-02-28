@@ -65,6 +65,6 @@ class AntonymConceptsTest(QuizFactoryTestCase):
         big = self.create_concept("big", dict(antonym="small", en="Big"))
         small = self.create_concept("small", dict(antonym="big", en="Small"))
         quizzes = QuizFactory("en", "en").create_quizzes(big, small)
-        for question, answer in [("Big", "Small"), ("Small", "Big")]:
-            antonym = self.create_quiz(big, "en", "en", question, [answer], "antonym")
+        for concept, question, answer in [(big, "Big", "Small"), (small, "Small", "Big")]:
+            antonym = self.create_quiz(concept, "en", "en", question, [answer], "antonym")
             self.assertIn(antonym, quizzes)
