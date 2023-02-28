@@ -17,10 +17,6 @@ class Label(str):
         """Return whether the labels are not equal."""
         return not self == other
 
-    def __hash__(self) -> int:
-        """Return the hash of the label, ignoring hints."""
-        return hash(self.without_hint)
-
     @property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""

@@ -46,7 +46,7 @@ class ShowProgressTest(ToistoTestCase):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
         skip_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.topics, Progress({str(self.quiz): dict(skip_until=skip_until)}, self.topics))
+            show_progress("fi", self.topics, Progress({self.quiz.key(): dict(skip_until=skip_until)}, self.topics))
         self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
 
     def test_sort_by_retention(self):

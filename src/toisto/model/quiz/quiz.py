@@ -90,8 +90,7 @@ class Quiz:
     def __post_init__(self) -> None:
         """Initialize calculated attributes."""
         # The dataclass is frozen, so some magic is needed to set the hash attribute.
-        quiz_hash = hash((self.question_language, self.answer_language, self.question, self.quiz_types))
-        super().__setattr__("_hash", quiz_hash)
+        super().__setattr__("_hash", hash(self.key()))
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
@@ -99,14 +98,7 @@ class Quiz:
 
     def __eq__(self, other: object) -> bool:
         """Return whether this quiz is equal to the other."""
-        if not isinstance(other, self.__class__):
-            return False
-        return (
-            self.question_language == other.question_language
-            and self.answer_language == other.answer_language
-            and self.question == other.question
-            and self.quiz_types == other.quiz_types
-        )
+        return self.key() == other.key() if isinstance(other, self.__class__) else False
 
     def __ne__(self, other: object) -> bool:
         """Return whether this quiz is not equal to the other."""
@@ -114,8 +106,9 @@ class Quiz:
 
     def key(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
+        concept_id = self.concept.base_concept.concept_id
         quiz_types = "+".join(self.quiz_types)
-        return f"{self.question_language}:{self.answer_language}:{self._question}:{quiz_types}"
+        return f"{concept_id}:{self.question_language}:{self.answer_language}:{self.question}:{quiz_types}"
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
