@@ -40,3 +40,18 @@ class LoadTopicsTest(ToistoTestCase):
             "cannot read topic file-doesnt-exist: [Errno 2] No such file or directory: 'file-doesnt-exist'.\n",
             stderr_write.call_args_list[1][0][0],
         )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
+    def test_load_topics_with_same_concept_id(self, stderr_write: Mock, path_open: Mock):
+        """Test that an error message is given when a topic file contains the same concept id as another topic file."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
+            '{"concept_id": {"fi": "Label3", "nl": "Label4"}}\n',
+        ]
+        self.assertRaises(SystemExit, load_topics, "fi", "nl", [], [], ["file1", "file2"], ArgumentParser())
+        self.assertIn(
+            "Toisto cannot read topic file2: concept identifier 'concept_id' also occurs in topic 'file1'.\n",
+            stderr_write.call_args_list[1][0][0],
+        )

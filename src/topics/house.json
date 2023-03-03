@@ -5,14 +5,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Apartment",
-            "fi": "Asunto",
-            "nl": "Het appartement"
+            "en": "apartment",
+            "fi": "asunto",
+            "nl": "het appartement"
         },
         "plural": {
-            "en": "Apartments",
-            "fi": "Asunnot",
-            "nl": "De appartementen"
+            "en": "apartments",
+            "fi": "asunnot",
+            "nl": "de appartementen"
         }
     },
     "room": {
@@ -24,14 +24,14 @@
             ]
         },
         "singular": {
-            "en": "Room",
-            "fi": "Huone",
-            "nl": "De kamer"
+            "en": "room",
+            "fi": "huone",
+            "nl": "de kamer"
         },
         "plural": {
-            "en": "Rooms",
-            "fi": "Huoneet",
-            "nl": "De kamers"
+            "en": "rooms",
+            "fi": "huoneet",
+            "nl": "de kamers"
         }
     },
     "basement": {
@@ -42,14 +42,14 @@
             ]
         },
         "singular": {
-            "en": "Basement",
-            "fi": "Kellari",
-            "nl": "De kelder"
+            "en": "basement",
+            "fi": "kellari",
+            "nl": "de kelder"
         },
         "plural": {
-            "en": "Basements",
-            "fi": "Kellarit",
-            "nl": "De kelders"
+            "en": "basements",
+            "fi": "kellarit",
+            "nl": "de kelders"
         }
     },
     "home": {
@@ -61,13 +61,13 @@
             ]
         },
         "singular": {
-            "en": "Home",
-            "fi": "Koti",
-            "nl": "Het thuis"
+            "en": "home",
+            "fi": "koti",
+            "nl": "het thuis"
         },
         "plural": {
-            "en": "Homes",
-            "fi": "Kodit"
+            "en": "homes",
+            "fi": "kodit"
         }
     },
     "garden": {
@@ -79,14 +79,14 @@
             ]
         },
         "singular": {
-            "en": "Garden",
-            "fi": "Piha",
-            "nl": "De tuin"
+            "en": "garden",
+            "fi": "piha",
+            "nl": "de tuin"
         },
         "plural": {
-            "en": "Gardens",
-            "fi": "Pihat",
-            "nl": "De tuinen"
+            "en": "gardens",
+            "fi": "pihat",
+            "nl": "de tuinen"
         }
     },
     "house": {
@@ -98,14 +98,14 @@
             ]
         },
         "singular": {
-            "en": "House",
-            "fi": "Talo",
-            "nl": "Het huis"
+            "en": "house",
+            "fi": "talo",
+            "nl": "het huis"
         },
         "plural": {
-            "en": "Houses",
-            "fi": "Talot",
-            "nl": "De huizen"
+            "en": "houses",
+            "fi": "talot",
+            "nl": "de huizen"
         }
     },
     "veranda": {
@@ -114,14 +114,14 @@
             "none": "EP"
         },
         "singular": {
-            "en": "Veranda",
-            "fi": "Veranta",
-            "nl": "De veranda"
+            "en": "veranda",
+            "fi": "veranta",
+            "nl": "de veranda"
         },
         "plural": {
-            "en": "Verandas",
-            "fi": "Verannat",
-            "nl": "De veranda's"
+            "en": "verandas",
+            "fi": "verannat",
+            "nl": "de veranda's"
         }
     },
     "barbecue": {
@@ -130,14 +130,14 @@
             "B1": "OD"
         },
         "singular": {
-            "en": "Barbecue",
-            "fi": "Grilli",
-            "nl": "De barbecue"
+            "en": "barbecue",
+            "fi": "grilli",
+            "nl": "de barbecue"
         },
         "plural": {
-            "en": "Barbecues",
-            "fi": "Grillit",
-            "nl": "De barbecues"
+            "en": "barbecues",
+            "fi": "grillit",
+            "nl": "de barbecues"
         }
     },
     "wall": {
@@ -148,14 +148,14 @@
             ]
         },
         "singular": {
-            "en": "Wall",
-            "fi": "Seinä",
-            "nl": "De muur"
+            "en": "wall",
+            "fi": "seinä",
+            "nl": "de muur"
         },
         "plural": {
-            "en": "Walls",
-            "fi": "Seinät",
-            "nl": "De muren"
+            "en": "walls",
+            "fi": "seinät",
+            "nl": "de muren"
         }
     },
     "floor": {
@@ -166,14 +166,14 @@
             ]
         },
         "singular": {
-            "en": "Floor",
-            "fi": "Lattia",
-            "nl": "De vloer"
+            "en": "floor",
+            "fi": "lattia",
+            "nl": "de vloer"
         },
         "plural": {
-            "en": "Floors",
-            "fi": "Lattiat",
-            "nl": "De vloeren"
+            "en": "floors",
+            "fi": "lattiat",
+            "nl": "de vloeren"
         }
     },
     "door": {
@@ -185,14 +185,14 @@
             ]
         },
         "singular": {
-            "en": "Door",
-            "fi": "Ovi",
-            "nl": "De deur"
+            "en": "door",
+            "fi": "ovi",
+            "nl": "de deur"
         },
         "plural": {
-            "en": "Doors",
-            "fi": "Ovet",
-            "nl": "De deuren"
+            "en": "doors",
+            "fi": "ovet",
+            "nl": "de deuren"
         }
     },
     "window": {
@@ -204,14 +204,14 @@
             ]
         },
         "singular": {
-            "en": "Window",
-            "fi": "Ikkuna",
-            "nl": "Het raam"
+            "en": "window",
+            "fi": "ikkuna",
+            "nl": "het raam"
         },
         "plural": {
-            "en": "Windows",
-            "fi": "Ikkunat",
-            "nl": "De ramen"
+            "en": "windows",
+            "fi": "ikkunat",
+            "nl": "de ramen"
         }
     },
     "stairs": {
@@ -222,15 +222,15 @@
             ]
         },
         "singular": {
-            "en": "Stairs",
+            "en": "stairs",
             "fi": [
-                "Portaat",
-                "Rappuset"
+                "portaat",
+                "rappuset"
             ],
-            "nl": "De trap"
+            "nl": "de trap"
         },
         "plural": {
-            "nl": "De trappen"
+            "nl": "de trappen"
         }
     },
     "living room": {
@@ -253,19 +253,19 @@
             ]
         },
         "singular": {
-            "en": "Living room",
-            "fi": "Olohuone",
+            "en": "living room",
+            "fi": "olohuone",
             "nl": [
-                "De huiskamer",
-                "De woonkamer"
+                "de huiskamer",
+                "de woonkamer"
             ]
         },
         "plural": {
             "en": "living rooms",
-            "fi": "Olohuoneet",
+            "fi": "olohuoneet",
             "nl": [
-                "De huiskamers",
-                "De woonkamers"
+                "de huiskamers",
+                "de woonkamers"
             ]
         }
     },
@@ -277,14 +277,14 @@
             ]
         },
         "singular": {
-            "en": "Kitchen",
-            "fi": "Keittiö",
-            "nl": "De keuken"
+            "en": "kitchen",
+            "fi": "keittiö",
+            "nl": "de keuken"
         },
         "plural": {
-            "en": "Kitchens",
-            "fi": "Keittiöt",
-            "nl": "De keukens"
+            "en": "kitchens",
+            "fi": "keittiöt",
+            "nl": "de keukens"
         }
     },
     "bedroom": {
@@ -306,14 +306,14 @@
             ]
         },
         "singular": {
-            "en": "Bedroom",
-            "fi": "Makuuhuone",
-            "nl": "De slaapkamer"
+            "en": "bedroom",
+            "fi": "makuuhuone",
+            "nl": "de slaapkamer"
         },
         "plural": {
-            "en": "Bedrooms",
-            "fi": "Makuuhuoneet",
-            "nl": "De slaapkamers"
+            "en": "bedrooms",
+            "fi": "makuuhuoneet",
+            "nl": "de slaapkamers"
         }
     },
     "bathroom": {
@@ -325,14 +325,14 @@
         },
         "roots": "room",
         "singular": {
-            "en": "Bathroom",
-            "fi": "Kylpyhuone",
-            "nl": "De badkamer"
+            "en": "bathroom",
+            "fi": "kylpyhuone",
+            "nl": "de badkamer"
         },
         "plural": {
-            "en": "Bathrooms",
-            "fi": "Kylpyhuoneet",
-            "nl": "De badkamers"
+            "en": "bathrooms",
+            "fi": "kylpyhuoneet",
+            "nl": "de badkamers"
         }
     }
 }

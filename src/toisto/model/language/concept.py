@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
+from functools import cached_property
 from typing import ClassVar, NewType, cast, get_args
 
 from . import Language
@@ -94,7 +95,7 @@ class Concept:
         """Forward properties to related concepts."""
         return getattr(self.related_concepts, attribute)
 
-    @property
+    @cached_property
     def base_concept(self) -> Concept:
         """Return the base concept of this concept."""
         return self.related_concepts.parent.base_concept if self.related_concepts.parent else self

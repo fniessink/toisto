@@ -7,9 +7,9 @@
                 "OD"
             ]
         },
-        "en": "Nature",
-        "fi": "Luonto",
-        "nl": "De natuur"
+        "en": "nature",
+        "fi": "luonto",
+        "nl": "de natuur"
     },
     "forest": {
         "level": {
@@ -21,24 +21,24 @@
         },
         "singular": {
             "en": [
-                "Forest",
-                "Wood"
+                "forest",
+                "wood"
             ],
-            "fi": "Metsä",
+            "fi": "metsä",
             "nl": [
-                "Het bos",
-                "Het woud"
+                "het bos",
+                "het woud"
             ]
         },
         "plural": {
             "en": [
-                "Forests",
-                "Woods"
+                "forests",
+                "woods"
             ],
-            "fi": "Metsät",
+            "fi": "metsät",
             "nl": [
-                "De bossen",
-                "De wouden"
+                "de bossen",
+                "de wouden"
             ]
         }
     },
@@ -50,14 +50,14 @@
             ]
         },
         "singular": {
-            "en": "Flower",
-            "fi": "Kukka",
-            "nl": "De bloem"
+            "en": "flower",
+            "fi": "kukka",
+            "nl": "de bloem"
         },
         "plural": {
-            "en": "Flowers",
-            "fi": "Kukat",
-            "nl": "De bloemen"
+            "en": "flowers",
+            "fi": "kukat",
+            "nl": "de bloemen"
         }
     },
     "lake": {
@@ -68,14 +68,14 @@
             ]
         },
         "singular": {
-            "en": "Lake",
-            "fi": "Järvi",
-            "nl": "Het meer"
+            "en": "lake",
+            "fi": "järvi",
+            "nl": "het meer"
         },
         "plural": {
-            "en": "Lakes",
-            "fi": "Järvet",
-            "nl": "De meren"
+            "en": "lakes",
+            "fi": "järvet",
+            "nl": "de meren"
         }
     },
     "sea": {
@@ -87,14 +87,14 @@
             ]
         },
         "singular": {
-            "en": "Sea",
-            "fi": "Meri",
-            "nl": "De zee"
+            "en": "sea",
+            "fi": "meri",
+            "nl": "de zee"
         },
         "plural": {
-            "en": "Seas",
-            "fi": "Meret",
-            "nl": "De zeeën"
+            "en": "seas",
+            "fi": "meret",
+            "nl": "de zeeën"
         }
     },
     "river": {
@@ -105,14 +105,14 @@
             ]
         },
         "singular": {
-            "en": "River",
-            "fi": "Joki",
-            "nl": "De rivier"
+            "en": "river",
+            "fi": "joki",
+            "nl": "de rivier"
         },
         "plural": {
-            "en": "Rivers",
-            "fi": "Joet",
-            "nl": "De rivieren"
+            "en": "rivers",
+            "fi": "joet",
+            "nl": "de rivieren"
         }
     },
     "island": {
@@ -121,14 +121,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Island",
-            "fi": "Saari",
-            "nl": "Het eiland"
+            "en": "island",
+            "fi": "saari",
+            "nl": "het eiland"
         },
         "plural": {
-            "en": "Islands",
-            "fi": "Saaret",
-            "nl": "De eilanden"
+            "en": "islands",
+            "fi": "saaret",
+            "nl": "de eilanden"
         }
     },
     "coast": {
@@ -140,14 +140,14 @@
             "fi": "beach"
         },
         "singular": {
-            "en": "Coast",
-            "fi": "Rannikko",
-            "nl": "De kust"
+            "en": "coast",
+            "fi": "rannikko",
+            "nl": "de kust"
         },
         "plural": {
-            "en": "Coasts",
-            "fi": "Rannikot",
-            "nl": "De kusten"
+            "en": "coasts",
+            "fi": "rannikot",
+            "nl": "de kusten"
         }
     },
     "desert": {
@@ -161,20 +161,20 @@
             "fi": "country"
         },
         "singular": {
-            "en": "Desert",
+            "en": "desert",
             "fi": [
-                "Aavikko",
-                "Autiomaa"
+                "aavikko",
+                "autiomaa"
             ],
-            "nl": "De woestijn"
+            "nl": "de woestijn"
         },
         "plural": {
-            "en": "Deserts",
+            "en": "deserts",
             "fi": [
-                "Aavikot",
-                "Autiomaat"
+                "aavikot",
+                "autiomaat"
             ],
-            "nl": "De woestijnen"
+            "nl": "de woestijnen"
         }
     },
     "tree": {
@@ -186,14 +186,14 @@
             ]
         },
         "singular": {
-            "en": "Tree",
-            "fi": "Puu",
-            "nl": "De boom"
+            "en": "tree",
+            "fi": "puu",
+            "nl": "de boom"
         },
         "plural": {
-            "en": "Trees",
-            "fi": "Puut",
-            "nl": "De bomen"
+            "en": "trees",
+            "fi": "puut",
+            "nl": "de bomen"
         }
     },
     "beach": {
@@ -205,14 +205,14 @@
             ]
         },
         "singular": {
-            "en": "Beach",
-            "fi": "Ranta",
-            "nl": "Het strand"
+            "en": "beach",
+            "fi": "ranta",
+            "nl": "het strand"
         },
         "plural": {
-            "en": "Beaches",
-            "fi": "Rannat",
-            "nl": "De stranden"
+            "en": "beaches",
+            "fi": "rannat",
+            "nl": "de stranden"
         }
     },
     "valley": {
@@ -221,14 +221,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Valley",
-            "fi": "Laakso",
-            "nl": "De vallei"
+            "en": "valley",
+            "fi": "laakso",
+            "nl": "de vallei"
         },
         "plural": {
-            "en": "Valleys",
-            "fi": "Laaksot",
-            "nl": "De valleien"
+            "en": "valleys",
+            "fi": "laaksot",
+            "nl": "de valleien"
         }
     },
     "hill": {
@@ -239,20 +239,20 @@
             ]
         },
         "singular": {
-            "en": "Hill",
+            "en": "hill",
             "fi": [
-                "Mäki",
-                "Kukkula"
+                "mäki",
+                "kukkula"
             ],
-            "nl": "De heuvel"
+            "nl": "de heuvel"
         },
         "plural": {
-            "en": "Hills",
+            "en": "hills",
             "fi": [
-                "Mäet",
-                "Kukkulat"
+                "mäet",
+                "kukkulat"
             ],
-            "nl": "De heuvels"
+            "nl": "de heuvels"
         }
     },
     "mountain": {
@@ -261,14 +261,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Mountain",
-            "fi": "Vuori",
-            "nl": "De berg"
+            "en": "mountain",
+            "fi": "vuori",
+            "nl": "de berg"
         },
         "plural": {
-            "en": "Mountains",
-            "fi": "Vuoret",
-            "nl": "De bergen"
+            "en": "mountains",
+            "fi": "vuoret",
+            "nl": "de bergen"
         }
     },
     "north": {
@@ -276,36 +276,36 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "North|The north",
-        "fi": "Pohjoinen",
-        "nl": "Het noorden"
+        "en": "north|the North",
+        "fi": "pohjoinen",
+        "nl": "het noorden"
     },
     "east": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "East|The east",
-        "fi": "Itä",
-        "nl": "Het oosten"
+        "en": "east|the East",
+        "fi": "itä",
+        "nl": "het oosten"
     },
     "south": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "South|The south",
-        "fi": "Etelä",
-        "nl": "Het zuiden"
+        "en": "south|the South",
+        "fi": "etelä",
+        "nl": "het zuiden"
     },
     "west": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "West|The west",
-        "fi": "Länsi",
-        "nl": "Het westen"
+        "en": "west|the West",
+        "fi": "länsi",
+        "nl": "het westen"
     },
     "world": {
         "level": {
@@ -318,9 +318,9 @@
         "roots": {
             "fi": "country"
         },
-        "en": "World",
-        "fi": "Maailma",
-        "nl": "De wereld"
+        "en": "world",
+        "fi": "maailma",
+        "nl": "de wereld"
     },
     "continent": {
         "level": {
@@ -331,14 +331,14 @@
             "fi": "country"
         },
         "singular": {
-            "en": "Continent",
-            "fi": "Maanosa",
-            "nl": "Het continent"
+            "en": "continent",
+            "fi": "maanosa",
+            "nl": "het continent"
         },
         "plural": {
-            "en": "Continents",
-            "fi": "Maanosat",
-            "nl": "De continenten"
+            "en": "continents",
+            "fi": "maanosat",
+            "nl": "de continenten"
         }
     },
     "sand": {
@@ -349,14 +349,14 @@
             ]
         },
         "singular": {
-            "en": "Sand",
-            "fi": "Hiekka",
-            "nl": "Het zand"
+            "en": "sand",
+            "fi": "hiekka",
+            "nl": "het zand"
         },
         "plural": {
-            "en": "Sands",
-            "fi": "Hiekat",
-            "nl": "De zanden"
+            "en": "sands",
+            "fi": "hiekat",
+            "nl": "de zanden"
         }
     },
     "ground": {
@@ -365,14 +365,14 @@
             "B1": "B1"
         },
         "singular": {
-            "en": "Ground",
-            "fi": "Maa;solid surface of the earth",
-            "nl": "De grond"
+            "en": "ground",
+            "fi": "maa;solid surface of the earth",
+            "nl": "de grond"
         },
         "plural": {
-            "en": "Grounds",
-            "fi": "Maat;solid surfaces of the earth",
-            "nl": "De gronden"
+            "en": "grounds",
+            "fi": "maat;solid surfaces of the earth",
+            "nl": "de gronden"
         }
     },
     "stone": {
@@ -381,14 +381,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Stone",
-            "fi": "Kivi",
-            "nl": "De steen"
+            "en": "stone",
+            "fi": "kivi",
+            "nl": "de steen"
         },
         "plural": {
-            "en": "Stones",
-            "fi": "Kivet",
-            "nl": "De stenen"
+            "en": "stones",
+            "fi": "kivet",
+            "nl": "de stenen"
         }
     },
     "fire": {
@@ -397,14 +397,14 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Fire",
-            "fi": "Tuli",
-            "nl": "Het vuur"
+            "en": "fire",
+            "fi": "tuli",
+            "nl": "het vuur"
         },
         "plural": {
-            "en": "Fires",
-            "fi": "Tulet",
-            "nl": "De vuren"
+            "en": "fires",
+            "fi": "tulet",
+            "nl": "de vuren"
         }
     },
     "volcano": {
@@ -419,14 +419,14 @@
             ]
         },
         "singular": {
-            "en": "Volcano",
-            "fi": "Tulivuori",
-            "nl": "De vulkaan"
+            "en": "volcano",
+            "fi": "tulivuori",
+            "nl": "de vulkaan"
         },
         "plural": {
-            "en": "Volcanoes|Volcanos",
-            "fi": "Tulivuoret",
-            "nl": "De vulkanen"
+            "en": "volcanoes|Volcanos",
+            "fi": "tulivuoret",
+            "nl": "de vulkanen"
         }
     },
     "cave": {
@@ -435,14 +435,14 @@
             "B2": "OD"
         },
         "singular": {
-            "en": "Cave",
-            "fi": "Luola",
-            "nl": "De grot"
+            "en": "cave",
+            "fi": "luola",
+            "nl": "de grot"
         },
         "plural": {
-            "en": "Caves",
-            "fi": "Luolat",
-            "nl": "De grotten"
+            "en": "caves",
+            "fi": "luolat",
+            "nl": "de grotten"
         }
     },
     "canyon": {
@@ -451,14 +451,14 @@
             "none": "EP"
         },
         "singular": {
-            "en": "Canyon",
-            "fi": "Rotko",
-            "nl": "De kloof"
+            "en": "canyon",
+            "fi": "rotko",
+            "nl": "de kloof"
         },
         "plural": {
-            "en": "Canyons",
-            "fi": "Rotkot",
-            "nl": "De kloven"
+            "en": "canyons",
+            "fi": "rotkot",
+            "nl": "de kloven"
         }
     },
     "rainforest": {
@@ -471,14 +471,14 @@
             "forest"
         ],
         "singular": {
-            "en": "Rainforest|Rain forest",
-            "fi": "Sademetsä",
-            "nl": "Het regenwoud"
+            "en": "Rainforest|rain forest",
+            "fi": "sademetsä",
+            "nl": "het regenwoud"
         },
         "plural": {
-            "en": "Rainforests|Rain forests",
-            "fi": "Sademetsät",
-            "nl": "De regenwouden"
+            "en": "rainforests|rain forests",
+            "fi": "sademetsät",
+            "nl": "de regenwouden"
         }
     },
     "glacier": {
@@ -490,15 +490,35 @@
             "fi": "ice"
         },
         "singular": {
-            "en": "Glacier",
-            "fi": "Jäätikkö",
-            "nl": "De gletsjer"
+            "en": "glacier",
+            "fi": "jäätikkö",
+            "nl": "de gletsjer"
         },
-        "plural":  {
-            "en": "Glaciers",
-            "fi": "Jäätiköt",
-            "nl": "De gletsjers"
+        "plural": {
+            "en": "glaciers",
+            "fi": "jäätiköt",
+            "nl": "de gletsjers"
         }
+    },
+    "northern lights": {
+        "level": {
+            "C2": "OD",
+            "none": "EP"
+        },
+        "roots": {
+            "en": [
+                "north",
+                "light"
+            ],
+            "fi": "fire",
+            "nl": [
+                "north",
+                "light"
+            ]
+        },
+        "en": "northern lights",
+        "fi": "revontulet",
+        "nl": "noorderlicht"
     },
     "it is cold in the north": {
         "roots": [

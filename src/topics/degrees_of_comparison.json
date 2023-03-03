@@ -9,19 +9,19 @@
         },
         "antonym": "big",
         "positive degree": {
-            "en": "Small",
-            "fi": "Pieni",
-            "nl": "Klein"
+            "en": "small",
+            "fi": "pieni",
+            "nl": "klein"
         },
         "comparative degree": {
-            "en": "Smaller",
-            "fi": "Pienempi",
-            "nl": "Kleiner"
+            "en": "smaller",
+            "fi": "pienempi",
+            "nl": "kleiner"
         },
         "superlative degree": {
-            "en": "Smallest",
-            "fi": "Pienin",
-            "nl": "Kleinst"
+            "en": "smallest",
+            "fi": "pienin",
+            "nl": "kleinst"
         }
     },
     "important": {
@@ -32,19 +32,19 @@
             ]
         },
         "positive degree": {
-            "en": "Important",
-            "fi": "Tärkeä",
-            "nl": "Belangrijk"
+            "en": "important",
+            "fi": "tärkeä",
+            "nl": "belangrijk"
         },
         "comparative degree": {
-            "en": "More important",
-            "fi": "Tärkeämpi",
-            "nl": "Belangrijker"
+            "en": "more important",
+            "fi": "tärkeämpi",
+            "nl": "belangrijker"
         },
         "superlative degree": {
-            "en": "Most important",
-            "fi": "Tärkein",
-            "nl": "Belangrijkst"
+            "en": "most important",
+            "fi": "tärkein",
+            "nl": "belangrijkst"
         }
     },
     "expensive": {
@@ -56,19 +56,19 @@
         },
         "antonym": "cheap",
         "positive degree": {
-            "en": "Expensive",
-            "fi": "Kallis",
-            "nl": "Duur"
+            "en": "expensive",
+            "fi": "kallis",
+            "nl": "duur"
         },
         "comparative degree": {
-            "en": "More expensive",
-            "fi": "Kalliimpi",
-            "nl": "Duurder"
+            "en": "more expensive",
+            "fi": "kalliimpi",
+            "nl": "duurder"
         },
         "superlative degree": {
-            "en": "Most expensive",
-            "fi": "Kallein",
-            "nl": "Duurst"
+            "en": "most expensive",
+            "fi": "kallein",
+            "nl": "duurst"
         }
     },
     "cheap": {
@@ -80,19 +80,19 @@
         },
         "antonym": "expensive",
         "positive degree": {
-            "en": "Cheap",
-            "fi": "Halpa",
-            "nl": "Goedkoop"
+            "en": "cheap",
+            "fi": "halpa",
+            "nl": "goedkoop"
         },
         "comparative degree": {
-            "en": "Cheaper",
-            "fi": "Halvempi",
-            "nl": "Goedkoper"
+            "en": "cheaper",
+            "fi": "halvempi",
+            "nl": "goedkoper"
         },
         "superlative degree": {
-            "en": "Cheapest",
-            "fi": "Halvin",
-            "nl": "Goedkoopst"
+            "en": "cheapest",
+            "fi": "halvin",
+            "nl": "goedkoopst"
         }
     },
     "hot": {
@@ -103,19 +103,19 @@
             ]
         },
         "positive degree": {
-            "en": "Hot",
-            "fi": "Kuuma",
-            "nl": "Heet"
+            "en": "hot",
+            "fi": "kuuma",
+            "nl": "heet"
         },
         "comparative degree": {
-            "en": "Hotter",
-            "fi": "Kuumempi",
-            "nl": "Heter"
+            "en": "hotter",
+            "fi": "kuumempi",
+            "nl": "heter"
         },
         "superlative degree": {
-            "en": "Hottest",
-            "fi": "Kuumin",
-            "nl": "Heetst"
+            "en": "hottest",
+            "fi": "kuumin",
+            "nl": "heetst"
         }
     },
     "cold": {
@@ -128,19 +128,19 @@
         },
         "antonym": "warm",
         "positive degree": {
-            "en": "Cold",
-            "fi": "Kylmä",
-            "nl": "Koud"
+            "en": "cold",
+            "fi": "kylmä",
+            "nl": "koud"
         },
         "comparative degree": {
-            "en": "Colder",
-            "fi": "Kylmempi",
-            "nl": "Kouder"
+            "en": "colder",
+            "fi": "kylmempi",
+            "nl": "kouder"
         },
         "superlative degree": {
-            "en": "Coldest",
-            "fi": "Kylmin",
-            "nl": "Koudst"
+            "en": "coldest",
+            "fi": "kylmin",
+            "nl": "koudst"
         }
     },
     "light (not heavy)": {
@@ -149,19 +149,19 @@
             "A2": "EP"
         },
         "positive degree": {
-            "en": "Light",
-            "fi": "Kevyt",
-            "nl": "Licht"
+            "en": "light",
+            "fi": "kevyt",
+            "nl": "licht"
         },
         "comparative degree": {
-            "en": "Lighter",
-            "fi": "Kevyempi",
-            "nl": "Lichter"
+            "en": "lighter",
+            "fi": "kevyempi",
+            "nl": "lichter"
         },
         "superlative degree": {
-            "en": "Lightest",
-            "fi": "Kevyin",
-            "nl": "Lichtst"
+            "en": "lightest",
+            "fi": "kevyin",
+            "nl": "lichtst"
         }
     },
     "easy": {
@@ -174,19 +174,19 @@
         },
         "antonym": "hard",
         "positive degree": {
-            "en": "Easy",
-            "fi": "Helppo",
-            "nl": "Makkelijk"
+            "en": "easy",
+            "fi": "helppo",
+            "nl": "makkelijk"
         },
         "comparative degree": {
-            "en": "Easier",
-            "fi": "Helpompi",
-            "nl": "Makkelijker"
+            "en": "easier",
+            "fi": "helpompi",
+            "nl": "makkelijker"
         },
         "superlative degree": {
-            "en": "Easiest",
-            "fi": "Helpoin",
-            "nl": "Makkelijkst"
+            "en": "easiest",
+            "fi": "helpoin",
+            "nl": "makkelijkst"
         }
     },
     "hard": {
@@ -199,19 +199,19 @@
         },
         "antonym": "easy",
         "positive degree": {
-            "en": "Hard",
-            "fi": "Vaikea",
+            "en": "hard",
+            "fi": "vaikea",
             "nl": "Moeilijk"
         },
         "comparative degree": {
-            "en": "Harder",
-            "fi": "Vaikeampi",
-            "nl": "Moeilijker"
+            "en": "harder",
+            "fi": "vaikeampi",
+            "nl": "moeilijker"
         },
         "superlative degree": {
-            "en": "Hardest",
-            "fi": "Vaikein",
-            "nl": "Moeilijkst"
+            "en": "hardest",
+            "fi": "vaikein",
+            "nl": "moeilijkst"
         }
     },
     "beautiful": {
@@ -223,19 +223,19 @@
             ]
         },
         "positive degree": {
-            "en": "Beautiful",
-            "fi": "Kaunis",
-            "nl": "Mooi"
+            "en": "beautiful",
+            "fi": "kaunis",
+            "nl": "mooi"
         },
         "comparative degree": {
-            "en": "More beautiful",
-            "fi": "Kauniimpi",
-            "nl": "Mooier"
+            "en": "more beautiful",
+            "fi": "kauniimpi",
+            "nl": "mooier"
         },
         "superlative degree": {
-            "en": "Most beautiful",
-            "fi": "Kaunein",
-            "nl": "Mooist"
+            "en": "most beautiful",
+            "fi": "kaunein",
+            "nl": "mooist"
         }
     },
     "new": {
@@ -248,19 +248,19 @@
         },
         "antonym": "old",
         "positive degree": {
-            "en": "New",
-            "fi": "Uusi",
-            "nl": "Nieuw"
+            "en": "new",
+            "fi": "uusi",
+            "nl": "nieuw"
         },
         "comparative degree": {
-            "en": "Newer",
-            "fi": "Uudempi",
-            "nl": "Nieuwer"
+            "en": "newer",
+            "fi": "uudempi",
+            "nl": "nieuwer"
         },
         "superlative degree": {
-            "en": "Newest",
-            "fi": "Uusin",
-            "nl": "Nieuwst"
+            "en": "newest",
+            "fi": "uusin",
+            "nl": "nieuwst"
         }
     },
     "old": {
@@ -273,19 +273,19 @@
         },
         "antonym": "new",
         "positive degree": {
-            "en": "Old",
-            "fi": "Vanha",
-            "nl": "Oud"
+            "en": "old",
+            "fi": "vanha",
+            "nl": "oud"
         },
         "comparative degree": {
-            "en": "Older",
-            "fi": "Vanhempi",
-            "nl": "Ouder"
+            "en": "older",
+            "fi": "vanhempi",
+            "nl": "ouder"
         },
         "superlative degree": {
-            "en": "Oldest",
-            "fi": "Vanhin",
-            "nl": "Oudst"
+            "en": "oldest",
+            "fi": "vanhin",
+            "nl": "oudst"
         }
     },
     "cute": {
@@ -294,19 +294,19 @@
             "none": "EP"
         },
         "positive degree": {
-            "en": "Cute",
-            "fi": "Söpö",
-            "nl": "Schattig"
+            "en": "cute",
+            "fi": "söpö",
+            "nl": "schattig"
         },
         "comparative degree": {
-            "en": "Cuter",
-            "fi": "Söpömpi",
-            "nl": "Schattiger"
+            "en": "cuter",
+            "fi": "söpömpi",
+            "nl": "schattiger"
         },
         "superlative degree": {
-            "en": "Cutest",
-            "fi": "Söpöin",
-            "nl": "Schattigst"
+            "en": "cutest",
+            "fi": "söpöin",
+            "nl": "schattigst"
         }
     },
     "fast": {
@@ -319,19 +319,19 @@
         },
         "antonym": "slow",
         "positive degree": {
-            "en": "Fast",
-            "fi": "Nopea",
-            "nl": "Snel"
+            "en": "fast",
+            "fi": "nopea",
+            "nl": "snel"
         },
         "comparative degree": {
-            "en": "Faster",
-            "fi": "Nopeampi",
-            "nl": "Sneller"
+            "en": "faster",
+            "fi": "nopeampi",
+            "nl": "sneller"
         },
         "superlative degree": {
-            "en": "Fastest",
-            "fi": "Nopein",
-            "nl": "Snelst"
+            "en": "fastest",
+            "fi": "nopein",
+            "nl": "snelst"
         }
     },
     "quiet": {
@@ -340,19 +340,19 @@
             "A2": "EP"
         },
         "positive degree": {
-            "en": "Quiet",
-            "fi": "Hiljainen",
-            "nl": "Stil"
+            "en": "quiet",
+            "fi": "hiljainen",
+            "nl": "stil"
         },
         "comparative degree": {
-            "en": "Quieter",
-            "fi": "Hiljaisempi",
-            "nl": "Stiller"
+            "en": "quieter",
+            "fi": "hiljaisempi",
+            "nl": "stiller"
         },
         "superlative degree": {
-            "en": "Quietest",
-            "fi": "Hiljaisin",
-            "nl": "Stilst"
+            "en": "quietest",
+            "fi": "hiljaisin",
+            "nl": "stilst"
         }
     },
     "fresh": {
@@ -363,19 +363,19 @@
             ]
         },
         "positive degree": {
-            "en": "Fresh",
-            "fi": "Tuore",
-            "nl": "Vers"
+            "en": "fresh",
+            "fi": "tuore",
+            "nl": "vers"
         },
         "comparative degree": {
-            "en": "Fresher",
-            "fi": "Tuoreempi",
-            "nl": "Verser"
+            "en": "fresher",
+            "fi": "tuoreempi",
+            "nl": "verser"
         },
         "superlative degree": {
-            "en": "Freshest",
-            "fi": "Tuorein",
-            "nl": "Verst"
+            "en": "freshest",
+            "fi": "tuorein",
+            "nl": "verst"
         }
     },
     "warm": {
@@ -387,19 +387,19 @@
         },
         "antonym": "cold",
         "positive degree": {
-            "en": "Warm",
-            "fi": "Lämmin",
-            "nl": "Warm"
+            "en": "warm",
+            "fi": "lämmin",
+            "nl": "warm"
         },
         "comparative degree": {
-            "en": "Warmer",
-            "fi": "Lämpimämpi",
-            "nl": "Warmer"
+            "en": "warmer",
+            "fi": "lämpimämpi",
+            "nl": "warmer"
         },
         "superlative degree": {
-            "en": "Warmest",
-            "fi": "Lämpimin",
-            "nl": "Warmst"
+            "en": "warmest",
+            "fi": "lämpimin",
+            "nl": "warmst"
         }
     },
     "round": {
@@ -410,19 +410,19 @@
             ]
         },
         "positive degree": {
-            "en": "Round",
-            "fi": "Pyöreä",
-            "nl": "Rond"
+            "en": "round",
+            "fi": "pyöreä",
+            "nl": "rond"
         },
         "comparative degree": {
-            "en": "Rounder",
-            "fi": "Pyöreämpi",
-            "nl": "Ronder"
+            "en": "rounder",
+            "fi": "pyöreämpi",
+            "nl": "ronder"
         },
         "superlative degree": {
-            "en": "Roundest",
-            "fi": "Pyörein",
-            "nl": "Rondst"
+            "en": "roundest",
+            "fi": "pyörein",
+            "nl": "rondst"
         }
     },
     "strange": {
@@ -434,19 +434,19 @@
             ]
         },
         "positive degree": {
-            "en": "Strange",
-            "fi": "Outo",
-            "nl": "Vreemd"
+            "en": "strange",
+            "fi": "outo",
+            "nl": "vreemd"
         },
         "comparative degree": {
-            "en": "Stranger",
-            "fi": "Oudompi",
-            "nl": "Vreemder"
+            "en": "stranger",
+            "fi": "oudompi",
+            "nl": "vreemder"
         },
         "superlative degree": {
-            "en": "Strangest",
-            "fi": "Oudoin",
-            "nl": "Vreemdst"
+            "en": "strangest",
+            "fi": "oudoin",
+            "nl": "vreemdst"
         }
     },
     "honest": {
@@ -457,19 +457,19 @@
             ]
         },
         "positive degree": {
-            "en": "Honest",
-            "fi": "Rehellinen",
-            "nl": "Eerlijk"
+            "en": "honest",
+            "fi": "rehellinen",
+            "nl": "eerlijk"
         },
         "comparative degree": {
-            "en": "More honest",
-            "fi": "Rehellisempi",
-            "nl": "Eerlijker"
+            "en": "more honest",
+            "fi": "rehellisempi",
+            "nl": "eerlijker"
         },
         "superlative degree": {
-            "en": "Most honest",
-            "fi": "Rehellisin",
-            "nl": "Eerlijkst"
+            "en": "most honest",
+            "fi": "rehellisin",
+            "nl": "eerlijkst"
         }
     },
     "long": {
@@ -482,19 +482,19 @@
         },
         "antonym": "short",
         "positive degree": {
-            "en": "Long",
-            "fi": "Pitkä",
-            "nl": "Lang"
+            "en": "long",
+            "fi": "pitkä",
+            "nl": "lang"
         },
         "comparative degree": {
-            "en": "Longer",
-            "fi": "Pidempi",
-            "nl": "Langer"
+            "en": "longer",
+            "fi": "pidempi",
+            "nl": "langer"
         },
         "superlative degree": {
-            "en": "Longest",
-            "fi": "Pisin",
-            "nl": "Langst"
+            "en": "longest",
+            "fi": "pisin",
+            "nl": "langst"
         }
     },
     "short": {
@@ -507,19 +507,19 @@
         },
         "antonym": "long",
         "positive degree": {
-            "en": "Short",
-            "fi": "Lyhyt",
-            "nl": "Kort"
+            "en": "short",
+            "fi": "lyhyt",
+            "nl": "kort"
         },
         "comparative degree": {
-            "en": "Shorter",
-            "fi": "Lyhyempi",
-            "nl": "Korter"
+            "en": "shorter",
+            "fi": "lyhyempi",
+            "nl": "korter"
         },
         "superlative degree": {
-            "en": "Shortest",
-            "fi": "Lyhyin",
-            "nl": "Kortst"
+            "en": "shortest",
+            "fi": "lyhyin",
+            "nl": "kortst"
         }
     },
     "tasty": {
@@ -530,19 +530,19 @@
             ]
         },
         "positive degree": {
-            "en": "Tasty",
-            "fi": "Maukas",
-            "nl": "Lekker"
+            "en": "tasty",
+            "fi": "maukas",
+            "nl": "lekker"
         },
         "comparative degree": {
-            "en": "Tastier",
-            "fi": "Maukkaampi",
-            "nl": "Lekkerder"
+            "en": "tastier",
+            "fi": "maukkaampi",
+            "nl": "lekkerder"
         },
         "superlative degree": {
-            "en": "Tastiest",
-            "fi": "Maukkain",
-            "nl": "Lekkerst"
+            "en": "tastiest",
+            "fi": "maukkain",
+            "nl": "lekkerst"
         }
     },
     "slow": {
@@ -554,19 +554,19 @@
         },
         "antonym": "fast",
         "positive degree": {
-            "en": "Slow",
-            "fi": "Hidas",
-            "nl": "Langzaam"
+            "en": "slow",
+            "fi": "hidas",
+            "nl": "langzaam"
         },
         "comparative degree": {
-            "en": "Slower",
-            "fi": "Hitaampi",
-            "nl": "Langzamer"
+            "en": "slower",
+            "fi": "hitaampi",
+            "nl": "langzamer"
         },
         "superlative degree": {
-            "en": "Slowest",
-            "fi": "Hitain",
-            "nl": "Langzaamst"
+            "en": "slowest",
+            "fi": "hitain",
+            "nl": "langzaamst"
         }
     },
     "sweet": {
@@ -575,19 +575,19 @@
             "A2": "OD"
         },
         "positive degree": {
-            "en": "Sweet",
-            "fi": "Makea",
-            "nl": "Zoet"
+            "en": "sweet",
+            "fi": "makea",
+            "nl": "zoet"
         },
         "comparative degree": {
-            "en": "Sweter",
-            "fi": "Makeampi",
-            "nl": "Zoeter"
+            "en": "sweeter",
+            "fi": "makeampi",
+            "nl": "zoeter"
         },
         "superlative degree": {
-            "en": "Sweetest",
-            "fi": "Makein",
-            "nl": "Zoetst"
+            "en": "sweetest",
+            "fi": "makein",
+            "nl": "zoetst"
         }
     },
     "big": {
@@ -600,28 +600,28 @@
         },
         "antonym": "small",
         "positive degree": {
-            "en": "Big",
+            "en": "big",
             "fi": [
-                "Iso",
-                "Suuri"
+                "iso",
+                "suuri"
             ],
-            "nl": "Groot"
+            "nl": "groot"
         },
         "comparative degree": {
-            "en": "Bigger",
+            "en": "bigger",
             "fi": [
-                "Isompi",
-                "Suurempi"
+                "isompi",
+                "suurempi"
             ],
-            "nl": "Groter"
+            "nl": "groter"
         },
         "superlative degree": {
-            "en": "Biggest",
+            "en": "biggest",
             "fi": [
-                "Isoin",
-                "Suurin"
+                "isoin",
+                "suurin"
             ],
-            "nl": "Grootst"
+            "nl": "grootst"
         }
     },
     "nice": {
@@ -633,28 +633,28 @@
             ]
         },
         "positive degree": {
-            "en": "Nice",
+            "en": "nice",
             "fi": [
-                "Kiva",
-                "Mukava"
+                "kiva",
+                "mukava"
             ],
             "nl": "Leuk"
         },
         "comparative degree": {
-            "en": "Nicer",
+            "en": "nicer",
             "fi": [
-                "Kivampi|Kivempt",
-                "Mukavampi"
+                "kivampi|kivempt",
+                "mukavampi"
             ],
             "nl": "Leuker"
         },
         "superlative degree": {
-            "en": "Nicest",
+            "en": "nicest",
             "fi": [
-                "Kivoin",
-                "Mukavin"
+                "kivoin",
+                "mukavin"
             ],
-            "nl": "Leukst"
+            "nl": "leukst"
         }
     },
     "wet": {
@@ -666,19 +666,19 @@
         },
         "antonym": "dry",
         "positive degree": {
-            "en": "Wet",
-            "fi": "Märkä",
-            "nl": "Nat"
+            "en": "wet",
+            "fi": "märkä",
+            "nl": "nat"
         },
         "comparative degree": {
-            "en": "Wetter",
-            "fi": "Märempi",
-            "nl": "Natter"
+            "en": "wetter",
+            "fi": "märempi",
+            "nl": "natter"
         },
         "superlative degree": {
-            "en": "Wettest",
-            "fi": "Märin",
-            "nl": "Natst"
+            "en": "wettest",
+            "fi": "märin",
+            "nl": "natst"
         }
     },
     "dry": {
@@ -690,19 +690,19 @@
         },
         "antonym": "wet",
         "positive degree": {
-            "en": "Dry",
-            "fi": "Kuiva",
-            "nl": "Droog"
+            "en": "dry",
+            "fi": "kuiva",
+            "nl": "droog"
         },
         "comparative degree": {
-            "en": "Dryer",
-            "fi": "Kuivempi",
-            "nl": "Droger"
+            "en": "dryer",
+            "fi": "kuivempi",
+            "nl": "droger"
         },
         "superlative degree": {
-            "en": "Dryest",
-            "fi": "Kuivin",
-            "nl": "Droogst"
+            "en": "dryest",
+            "fi": "kuivin",
+            "nl": "droogst"
         }
     },
     "good": {
@@ -714,19 +714,19 @@
         },
         "antonym": "bad",
         "positive degree": {
-            "en": "Good",
-            "fi": "Hyvä",
-            "nl": "Goed"
+            "en": "good",
+            "fi": "hyvä",
+            "nl": "goed"
         },
         "comparative degree": {
-            "en": "Better",
-            "fi": "Parempi",
-            "nl": "Beter"
+            "en": "better",
+            "fi": "parempi",
+            "nl": "beter"
         },
         "superlative degree": {
-            "en": "Best",
-            "fi": "Paras",
-            "nl": "Best"
+            "en": "best",
+            "fi": "paras",
+            "nl": "best"
         }
     },
     "bad": {
@@ -738,19 +738,19 @@
         },
         "antonym": "good",
         "positive degree": {
-            "en": "Bad",
-            "fi": "Huono",
-            "nl": "Slecht"
+            "en": "bad",
+            "fi": "huono",
+            "nl": "slecht"
         },
         "comparative degree": {
-            "en": "Badder",
-            "fi": "Huonompi",
-            "nl": "Slechter"
+            "en": "badder",
+            "fi": "huonompi",
+            "nl": "slechter"
         },
         "superlative degree": {
-            "en": "Baddest",
-            "fi": "Huonoin",
-            "nl": "Slechtst"
+            "en": "baddest",
+            "fi": "huonoin",
+            "nl": "slechtst"
         }
     },
     "happy": {
@@ -761,19 +761,19 @@
             ]
         },
         "positive degree": {
-            "en": "Happy",
-            "fi": "Onnellinen",
-            "nl": "Gelukkig"
+            "en": "happy",
+            "fi": "onnellinen",
+            "nl": "gelukkig"
         },
         "comparative degree": {
-            "en": "Happier",
-            "fi": "Onnellisempi",
-            "nl": "Gelukkiger"
+            "en": "happier",
+            "fi": "onnellisempi",
+            "nl": "gelukkiger"
         },
         "superlative degree": {
-            "en": "Happiest",
-            "fi": "Onnellisin",
-            "nl": "Gelukkigst"
+            "en": "happiest",
+            "fi": "onnellisin",
+            "nl": "gelukkigst"
         }
     }
 }

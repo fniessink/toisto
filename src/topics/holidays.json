@@ -8,14 +8,14 @@
         },
         "roots": "day",
         "singular": {
-            "en": "Holiday",
-            "fi": "Juhlapäivä",
-            "nl": "De feestdag"
+            "en": "holiday",
+            "fi": "juhlapäivä",
+            "nl": "de feestdag"
         },
         "plural": {
-            "en": "Holidays",
-            "fi": "Juhlapäivät",
-            "nl": "De feestdagen"
+            "en": "holidays",
+            "fi": "juhlapäivät",
+            "nl": "de feestdagen"
         }
     },
     "christmas": {
@@ -42,7 +42,7 @@
         },
         "en": "Christmas Eve",
         "fi": "Jouluaatto",
-        "nl": "Kerstavond"
+        "nl": "kerstavond"
     },
     "christmas day": {
         "level": {
@@ -55,7 +55,7 @@
         ],
         "en": "Christmas Day",
         "fi": "Joulupäivä",
-        "nl": "Eerste kerstdag"
+        "nl": "eerste kerstdag"
     },
     "boxing day": {
         "level": {
@@ -72,7 +72,7 @@
         },
         "en": "Boxing Day",
         "fi": "Tapaninpäivä",
-        "nl": "Tweede kerstdag"
+        "nl": "tweede kerstdag"
     },
     "merry christmas": {
         "level": {
@@ -105,8 +105,8 @@
             "tree"
         ],
         "en": "Christmas tree",
-        "fi": "Joulukuusi",
-        "nl": "De kerstboom"
+        "fi": "joulukuusi",
+        "nl": "de kerstboom"
     },
     "santa": {
         "level": {
@@ -120,8 +120,8 @@
             "nl": "christmas"
         },
         "en": "Santa Claus|Santa",
-        "fi": "Joulupukki",
-        "nl": "De kerstman"
+        "fi": "joulupukki",
+        "nl": "de kerstman"
     },
     "elf": {
         "level": {
@@ -130,14 +130,14 @@
                 "OD"
             ]
         },
-        "en": "Elf",
-        "fi": "Tonttu",
-        "nl": "De elf"
+        "en": "elf",
+        "fi": "tonttu",
+        "nl": "de elf"
     },
     "angel": {
-        "en": "Angel",
-        "fi": "Enkeli",
-        "nl": "De engel"
+        "en": "angel",
+        "fi": "enkeli",
+        "nl": "de engel"
     },
     "bauble": {
         "level": {
@@ -153,9 +153,9 @@
             ],
             "nl": "christmas"
         },
-        "en": "Bauble",
-        "fi": "Joulukuusenpallo|Joulupallo",
-        "nl": "De kerstbal"
+        "en": "bauble",
+        "fi": "joulukuusenpallo|joulupallo",
+        "nl": "de kerstbal"
     },
     "new year": {
         "level": {
@@ -250,9 +250,9 @@
             "en": "summer",
             "nl": "summer"
         },
-        "en": "Midsummer",
-        "fi": "Juhannus",
-        "nl": "Midzomer"
+        "en": "midsummer",
+        "fi": "juhannus",
+        "nl": "midzomer"
     },
     "finnish independence day": {
         "level": {

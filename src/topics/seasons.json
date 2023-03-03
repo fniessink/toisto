@@ -5,14 +5,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Season",
-            "fi": "Vuodenaika",
-            "nl": "Het seizoen"
+            "en": "season",
+            "fi": "vuodenaika",
+            "nl": "het seizoen"
         },
         "plural": {
-            "en": "Seasons",
-            "fi": "Vuodenajat",
-            "nl": "De seizoenen"
+            "en": "seasons",
+            "fi": "vuodenajat",
+            "nl": "de seizoenen"
         }
     },
     "spring": {
@@ -24,47 +24,47 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "Spring",
-            "fi": "Kevät",
+            "en": "spring",
+            "fi": "kevät",
             "nl": [
-                "De lente",
-                "Het voorjaar"
+                "de lente",
+                "het voorjaar"
             ]
         },
         "plural": {
-            "en": "Springs",
-            "fi": "Keväät",
+            "en": "springs",
+            "fi": "keväät",
             "nl": [
-                "De lentes",
-                "De voorjaren"
+                "de lentes",
+                "de voorjaren"
             ]
         }
     },
     "in spring": {
         "roots": "spring",
-        "en": "In spring",
-        "fi": "Keväällä",
+        "en": "in spring",
+        "fi": "keväällä",
         "nl": [
-            "In de lente",
-            "In het voorjaar"
+            "in de lente",
+            "in het voorjaar"
         ]
     },
     "next spring": {
         "roots": "spring",
-        "en": "Next spring",
-        "fi": "Ensi keväänä",
+        "en": "next spring",
+        "fi": "ensi keväänä",
         "nl": [
-            "Volgende lente",
-            "Volgend voorjaar"
+            "volgende lente",
+            "volgend voorjaar"
         ]
     },
     "last spring": {
         "roots": "spring",
-        "en": "Last spring",
-        "fi": "Viime keväänä",
+        "en": "last spring",
+        "fi": "viime keväänä",
         "nl": [
-            "Vorige lente",
-            "Vorig voorjaar"
+            "vorige lente",
+            "vorig voorjaar"
         ]
     },
     "summer": {
@@ -76,33 +76,33 @@
             ]
         },
         "singular": {
-            "en": "Summer",
-            "fi": "Kesä",
-            "nl": "De zomer"
+            "en": "summer",
+            "fi": "kesä",
+            "nl": "de zomer"
         },
         "plural": {
-            "en": "Summers",
-            "fi": "Kesät",
-            "nl": "De zomers"
+            "en": "summers",
+            "fi": "kesät",
+            "nl": "de zomers"
         }
     },
     "in summer": {
         "roots": "summer",
-        "en": "In summer",
-        "fi": "Kesällä",
-        "nl": "In de zomer"
+        "en": "in summer",
+        "fi": "kesällä",
+        "nl": "in de zomer"
     },
     "next summer": {
         "roots": "summer",
-        "en": "Next summer",
-        "fi": "Ensi kesänä",
-        "nl": "Volgende zomer"
+        "en": "next summer",
+        "fi": "ensi kesänä",
+        "nl": "volgende zomer"
     },
     "last summer": {
         "roots": "summer",
-        "en": "Last summer",
-        "fi": "Viime kesänä",
-        "nl": "Vorige zomer"
+        "en": "last summer",
+        "fi": "viime kesänä",
+        "nl": "vorige zomer"
     },
     "autumn": {
         "level": {
@@ -114,55 +114,61 @@
         },
         "singular": {
             "en": [
-                "Autumn",
-                "Fall"
+                "autumn",
+                "fall"
             ],
-            "fi": "Syksy",
+            "fi": "syksy",
             "nl": [
-                "De herfst",
-                "Het najaar"
+                "de herfst",
+                "het najaar"
             ]
         },
         "plural": {
             "en": [
-                "Autumns",
-                "Falls"
+                "autumns",
+                "falls"
             ],
-            "fi": "Syksyt",
+            "fi": "syksyt",
             "nl": [
-                "De herfsten",
-                "De najaren"
+                "de herfsten",
+                "de najaren"
             ]
         }
     },
     "in autumn": {
         "roots": "autumn",
         "en": [
-            "In autumn",
-            "In fall"
+            "in autumn",
+            "in fall"
         ],
-        "fi": "Syksyllä",
+        "fi": "syksyllä",
         "nl": [
-            "In de herfst",
-            "In het najaar"
+            "in de herfst",
+            "in het najaar"
         ]
     },
     "next autumn": {
         "roots": "autumn",
-        "en": "Next autumn|Next fall",
-        "fi": "Ensi syksynä",
+        "en": [
+            "next autumn",
+            "next fall"
+        ],
+        "fi": "ensi syksynä",
         "nl": [
-            "Volgende herfst",
-            "Volgend najaar"
+            "volgende herfst",
+            "volgend najaar"
         ]
     },
     "last autumn": {
         "roots": "autumn",
-        "en": "Last autumn",
-        "fi": "Viime syksynä",
+        "en": [
+            "last autumn",
+            "last fall"
+        ],
+        "fi": "viime syksynä",
         "nl": [
-            "Vorige herfst",
-            "Vorig najaar"
+            "vorige herfst",
+            "vorig najaar"
         ]
     },
     "winter": {
@@ -174,33 +180,33 @@
             ]
         },
         "singular": {
-            "en": "Winter",
-            "fi": "Talvi",
-            "nl": "De winter"
+            "en": "winter",
+            "fi": "talvi",
+            "nl": "de winter"
         },
         "plural": {
-            "en": "Winters",
-            "fi": "Talvet",
-            "nl": "De winters"
+            "en": "winters",
+            "fi": "talvet",
+            "nl": "de winters"
         }
     },
     "in winter": {
         "roots": "winter",
-        "en": "In winter",
-        "fi": "Talvella",
-        "nl": "In de winter"
+        "en": "in winter",
+        "fi": "talvella",
+        "nl": "in de winter"
     },
     "next winter": {
         "roots": "winter",
-        "en": "Next winter",
-        "fi": "Ensi talvena",
-        "nl": "Volgende winter"
+        "en": "next winter",
+        "fi": "ensi talvena",
+        "nl": "volgende winter"
     },
     "last winter": {
         "roots": "winter",
-        "en": "Last winter",
-        "fi": "Viime talvena",
-        "nl": "Vorige winter"
+        "en": "last winter",
+        "fi": "viime talvena",
+        "nl": "vorige winter"
     },
     "the finnish winter is cold": {
         "roots": [

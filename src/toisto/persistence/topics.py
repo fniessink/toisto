@@ -7,6 +7,7 @@ from typing import NoReturn
 from ..metadata import NAME, TOPIC_JSON_FILES
 from ..model.language import Language
 from ..model.language.cefr import CommonReferenceLevel
+from ..model.language.concept import ConceptId, ConceptIds
 from ..model.language.concept_factory import ConceptFactory
 from ..model.quiz.quiz_factory import QuizFactory
 from ..model.quiz.topic import Topic, Topics
@@ -30,6 +31,7 @@ def load_topics(  # noqa: PLR0913
     else:
         topic_files.extend(TOPIC_JSON_FILES)
     quiz_factory = QuizFactory(target_language, source_language)
+    registry = ConceptIdRegistry(argument_parser)
     for topic_file in topic_files:
         concepts = []
         topic_quizzes = set()
@@ -41,6 +43,36 @@ def load_topics(  # noqa: PLR0913
                 concepts.append(concept)
                 topic_quizzes.update(quiz_factory.create_quizzes(concept))
         except Exception as reason:  # noqa: BLE001
-            return argument_parser.error(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
+            argument_parser.error(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
+        concept_ids = tuple({quiz.concept.base_concept.concept_id for quiz in topic_quizzes})
+        registry.check_concept_ids(concept_ids, topic_file)
+        registry.register_concept_ids(concept_ids, topic_file)
         topics.add(Topic(topic_file.stem, tuple(concepts), topic_quizzes))
     return Topics(topics)
+
+
+class ConceptIdRegistry:
+    """Registry to check the uniqueness of concept identifiers across topic files."""
+
+    def __init__(self, argument_parser: ArgumentParser) -> None:
+        self.argument_parser = argument_parser
+        self.topic_files_by_concept_id: dict[ConceptId, pathlib.Path] = {}
+
+    def check_concept_ids(self, concept_ids: ConceptIds, topic_file: pathlib.Path) -> None:
+        """Check that the concept ids are unique."""
+        for concept_id in concept_ids:
+            self._check_concept_id(concept_id, topic_file)
+
+    def _check_concept_id(self, concept_id: ConceptId, topic_file: pathlib.Path) -> None:
+        """Check that the concept id is unique."""
+        if concept_id in self.topic_files_by_concept_id:
+            other_topic_file = self.topic_files_by_concept_id[concept_id]
+            self.argument_parser.error(
+                f"{NAME} cannot read topic {topic_file}: concept identifier '{concept_id}' also occurs in topic "
+                f"'{other_topic_file}'.\nConcept identifiers must be unique across topic files.\n",
+            )
+
+    def register_concept_ids(self, concept_ids: ConceptIds, topic_file: pathlib.Path) -> None:
+        """Register the concept ids."""
+        for concept_id in concept_ids:
+            self.topic_files_by_concept_id[concept_id] = topic_file

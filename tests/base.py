@@ -31,7 +31,7 @@ class ToistoTestCase(unittest.TestCase):
         answer_language: str,
         question: str,
         answers: list[str],
-        quiz_type: str | tuple[str] = "translate",
+        quiz_type: str | tuple[str, ...] = "translate",
         blocked_by: tuple[Quiz, ...] = tuple(),
         meanings: tuple[str, ...] = tuple(),
     ) -> Quiz:
@@ -46,4 +46,26 @@ class ToistoTestCase(unittest.TestCase):
             quiz_type,
             blocked_by,
             Labels(Label(meaning) for meaning in meanings),
+        )
+
+    @classmethod
+    def copy_quiz(  # noqa: PLR0913
+        cls,
+        quiz: Quiz,
+        question_language: str = "",
+        answer_language: str = "",
+        question: str = "",
+        answers: list[str] | None = None,
+        quiz_type: str | tuple[str, ...] = "",
+    ) -> Quiz:
+        """Copy the quiz, overriding some of its parameters."""
+        return cls.create_quiz(
+            quiz.concept,
+            question_language or quiz.question_language,
+            answer_language or quiz.answer_language,
+            question or quiz.question,
+            answers or [str(answer) for answer in quiz.answers],
+            quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
+            quiz.blocked_by,
+            quiz.meanings,
         )

@@ -106,34 +106,34 @@ class QuizEqualityTests(QuizTestCase):
     def test_equal(self):
         """Test that a quiz is equal to itself and to quizzes with the same parameters."""
         self.assertEqual(self.quiz, self.quiz)
-        same_quiz = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"])
-        self.assertEqual(same_quiz, self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz), self.quiz)
 
     def test_equal_with_different_hints(self):
         """Test that quizzes are equal if only their hints differ."""
-        different_answer_hint = self.create_quiz(self.concept, "fi", "nl", "Englanti;hint", ["Engels"])
-        self.assertEqual(different_answer_hint, self.quiz)
-        different_question_hint = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels;hint"])
-        self.assertEqual(different_question_hint, self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz, question="Englanti;hint"), self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz, answers=["Engels;hint"]), self.quiz)
 
     def test_not_equal_with_different_languages(self):
         """Test that quizzes are not equal if only their languages differ."""
-        different_question_language = self.create_quiz(self.concept, "en", "nl", "Englanti", ["Engels"])
-        self.assertNotEqual(different_question_language, self.quiz)
-        different_answer_language = self.create_quiz(self.concept, "fi", "en", "Englanti", ["Engels"])
-        self.assertNotEqual(different_answer_language, self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, question_language="nl"), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, answer_language="en"), self.quiz)
 
     def test_not_equal_with_different_questions(self):
         """Test that quizzes are not equal if only their questions differ."""
-        different_question = self.create_quiz(self.concept, "fi", "nl", "Saksa", ["Engels"])
-        self.assertNotEqual(different_question, self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, question="Saksa"), self.quiz)
 
     def test_equal_with_different_answers(self):
         """Test that quizzes are equal if only their answers differ."""
-        different_answers = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Duits"])
-        self.assertEqual(different_answers, self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz, answers=["Duits"]), self.quiz)
 
     def test_not_equal_with_different_quiz_types(self):
         """Test that quizzes are not equal if only their quiz types differ."""
-        different_quiz_type = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"], "listen")
-        self.assertNotEqual(different_quiz_type, self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, quiz_type="listen"), self.quiz)
+
+    def test_not_equal_when_questions_have_different_case(self):
+        """Test that quizzes are different if only the case of the question differs."""
+        self.assertNotEqual(self.copy_quiz(self.quiz, question=self.quiz.question.lower()), self.quiz)
+
+    def test_equal_when_answers_have_different_case(self):
+        """Test that quizzes are equal if only the case of the answers differs."""
+        self.assertEqual(self.copy_quiz(self.quiz, answers=[answer.lower() for answer in self.quiz.answers]), self.quiz)

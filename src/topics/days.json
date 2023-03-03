@@ -8,14 +8,14 @@
             ]
         },
         "singular": {
-            "en": "Day",
-            "fi": "Päivä",
-            "nl": "De dag"
+            "en": "day",
+            "fi": "päivä",
+            "nl": "de dag"
         },
         "plural": {
-            "en": "Days",
-            "fi": "Päivät",
-            "nl": "De dagen"
+            "en": "days",
+            "fi": "päivät",
+            "nl": "de dagen"
         }
     },
     "week": {
@@ -27,14 +27,14 @@
             ]
         },
         "singular": {
-            "en": "Week",
-            "fi": "Viikko",
-            "nl": "De week"
+            "en": "week",
+            "fi": "viikko",
+            "nl": "de week"
         },
         "plural": {
-            "en": "Weeks",
-            "fi": "Viikot",
-            "nl": "De weken"
+            "en": "weeks",
+            "fi": "viikot",
+            "nl": "de weken"
         }
     },
     "weekend": {
@@ -46,14 +46,14 @@
         },
         "roots": "week",
         "singular": {
-            "en": "Weekend",
-            "fi": "Viikonloppu",
-            "nl": "Het weekend"
+            "en": "weekend",
+            "fi": "viikonloppu",
+            "nl": "het weekend"
         },
         "plural": {
-            "en": "Weekends",
-            "fi": "Viikonloput",
-            "nl": "De weekenden"
+            "en": "weekends",
+            "fi": "viikonloput",
+            "nl": "de weekenden"
         }
     },
     "days of the week": {
@@ -61,9 +61,9 @@
             "day",
             "week"
         ],
-        "en": "Days of the week",
-        "fi": "Viikonpäivät",
-        "nl": "De dagen van de week"
+        "en": "days of the week",
+        "fi": "viikonpäivät",
+        "nl": "de dagen van de week"
     },
     "monday": {
         "level": {
@@ -81,20 +81,20 @@
         },
         "singular": {
             "en": "Monday",
-            "fi": "Maanantai",
-            "nl": "Maandag|De maandag"
+            "fi": "maanantai",
+            "nl": "maandag|de maandag"
         },
         "plural": {
             "en": "Mondays",
-            "fi": "Maanantait",
-            "nl": "De maandagen"
+            "fi": "maanantait",
+            "nl": "de maandagen"
         }
     },
     "on monday": {
         "roots": "monday",
-        "en": "On Monday",
-        "fi": "Maanantaina",
-        "nl": "Op maandag"
+        "en": "on Monday",
+        "fi": "maanantaina",
+        "nl": "op maandag"
     },
     "tuesday": {
         "level": {
@@ -109,13 +109,13 @@
         },
         "singular": {
             "en": "Tuesday",
-            "fi": "Tiistai",
-            "nl": "Dinsdag|De dinsdag"
+            "fi": "tiistai",
+            "nl": "dinsdag|de dinsdag"
         },
         "plural": {
             "en": "Tuesdays",
-            "fi": "Tiistait",
-            "nl": "De dinsdagen"
+            "fi": "tiistait",
+            "nl": "de dinsdagen"
         }
     },
     "wednesday": {
@@ -132,20 +132,20 @@
         },
         "singular": {
             "en": "Wednesday",
-            "fi": "Keskiviikko",
-            "nl": "Woensdag|De woensdag"
+            "fi": "keskiviikko",
+            "nl": "woensdag|de woensdag"
         },
         "plural": {
             "en": "Wednesdays",
-            "fi": "Keskiviikot",
-            "nl": "De woensdagen"
+            "fi": "keskiviikot",
+            "nl": "de woensdagen"
         }
     },
     "on wednesday": {
         "roots": "wednesday",
-        "en": "On Wednesday",
-        "fi": "Keskiviikkona",
-        "nl": "Op woensdag"
+        "en": "on Wednesday",
+        "fi": "keskiviikkona",
+        "nl": "op woensdag"
     },
     "thursday": {
         "level": {
@@ -160,13 +160,13 @@
         },
         "singular": {
             "en": "Thursday",
-            "fi": "Torstai",
-            "nl": "Donderdag|De donderdag"
+            "fi": "torstai",
+            "nl": "donderdag|de donderdag"
         },
         "plural": {
             "en": "Thursdays",
-            "fi": "Torstait",
-            "nl": "De donderdagen"
+            "fi": "torstait",
+            "nl": "de donderdagen"
         }
     },
     "friday": {
@@ -182,13 +182,13 @@
         },
         "singular": {
             "en": "Friday",
-            "fi": "Perjantai",
-            "nl": "Vrijdag|De vrijdag"
+            "fi": "perjantai",
+            "nl": "vrijdag|de vrijdag"
         },
         "plural": {
             "en": "Fridays",
-            "fi": "Perjantait",
-            "nl": "De vrijdagen"
+            "fi": "perjantait",
+            "nl": "de vrijdagen"
         }
     },
     "saturday": {
@@ -204,13 +204,13 @@
         },
         "singular": {
             "en": "Saturday",
-            "fi": "Lauantai",
-            "nl": "Zaterdag|De zaterdag"
+            "fi": "lauantai",
+            "nl": "zaterdag|de zaterdag"
         },
         "plural": {
             "en": "Saturdays",
-            "fi": "Lauantait",
-            "nl": "De zaterdagen"
+            "fi": "lauantait",
+            "nl": "de zaterdagen"
         }
     },
     "sunday": {
@@ -226,13 +226,13 @@
         },
         "singular": {
             "en": "Sunday",
-            "fi": "Sunnuntai",
-            "nl": "Zondag|De zondag"
+            "fi": "sunnuntai",
+            "nl": "zondag|de zondag"
         },
         "plural": {
             "en": "Sundays",
-            "fi": "Sunnuntait",
-            "nl": "De zondagen"
+            "fi": "sunnuntait",
+            "nl": "de zondagen"
         }
     },
     "today": {
@@ -246,9 +246,9 @@
         "roots": {
             "en": "day"
         },
-        "en": "Today",
-        "fi": "Tänään",
-        "nl": "Vandaag"
+        "en": "today",
+        "fi": "tänään",
+        "nl": "vandaag"
     },
     "yesterday": {
         "level": {
@@ -261,9 +261,9 @@
         "roots": {
             "en": "day"
         },
-        "en": "Yesterday",
-        "fi": "Eilen",
-        "nl": "Gisteren"
+        "en": "yesterday",
+        "fi": "eilen",
+        "nl": "gisteren"
     },
     "tomorrow": {
         "level": {
@@ -273,9 +273,9 @@
                 "OD"
             ]
         },
-        "en": "Tomorrow",
-        "fi": "Huomenna",
-        "nl": "Morgen"
+        "en": "tomorrow",
+        "fi": "huomenna",
+        "nl": "morgen"
     },
     "this week": {
         "level": {
@@ -283,9 +283,9 @@
             "OD": "A1"
         },
         "roots": "week",
-        "en": "This week",
-        "fi": "Tällä viikolla",
-        "nl": "Deze week"
+        "en": "this week",
+        "fi": "tällä viikolla",
+        "nl": "deze week"
     },
     "last week": {
         "level": {
@@ -295,9 +295,9 @@
             ]
         },
         "roots": "week",
-        "en": "Last week",
-        "fi": "Viime viikolla",
-        "nl": "Vorige week"
+        "en": "last week",
+        "fi": "viime viikolla",
+        "nl": "vorige week"
     },
     "next week": {
         "level": {
@@ -307,9 +307,9 @@
             ]
         },
         "roots": "week",
-        "en": "Next week",
-        "fi": "Ensi viikolla",
-        "nl": "Volgende week"
+        "en": "next week",
+        "fi": "ensi viikolla",
+        "nl": "volgende week"
     },
     "today it is monday": {
         "roots": [

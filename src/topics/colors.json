@@ -8,9 +8,9 @@
                 "OD"
             ]
         },
-        "en": "Black",
-        "fi": "Musta",
-        "nl": "Zwart"
+        "en": "black",
+        "fi": "musta",
+        "nl": "zwart"
     },
     "white": {
         "antonym": "black",
@@ -21,9 +21,9 @@
                 "OD"
             ]
         },
-        "en": "White",
-        "fi": "Valkoinen",
-        "nl": "Wit"
+        "en": "white",
+        "fi": "valkoinen",
+        "nl": "wit"
     },
     "blue": {
         "level": {
@@ -32,9 +32,9 @@
                 "OD"
             ]
         },
-        "en": "Blue",
-        "fi": "Sininen",
-        "nl": "Blauw"
+        "en": "blue",
+        "fi": "sininen",
+        "nl": "blauw"
     },
     "green": {
         "level": {
@@ -44,9 +44,9 @@
                 "OD"
             ]
         },
-        "en": "Green",
-        "fi": "Vihreä",
-        "nl": "Groen"
+        "en": "green",
+        "fi": "vihreä",
+        "nl": "groen"
     },
     "red": {
         "level": {
@@ -56,9 +56,9 @@
                 "OD"
             ]
         },
-        "en": "Red",
-        "fi": "Punainen",
-        "nl": "Rood"
+        "en": "red",
+        "fi": "punainen",
+        "nl": "rood"
     },
     "yellow": {
         "level": {
@@ -67,21 +67,21 @@
                 "OD"
             ]
         },
-        "en": "Yellow",
-        "fi": "Keltainen",
-        "nl": "Geel"
+        "en": "yellow",
+        "fi": "keltainen",
+        "nl": "geel"
     },
     "purple": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "Purple",
+        "en": "purple",
         "fi": [
-            "Liila",
-            "Violetti"
+            "liila",
+            "violetti"
         ],
-        "nl": "Paars"
+        "nl": "paars"
     },
     "orange": {
         "level": {
@@ -90,9 +90,9 @@
                 "OD"
             ]
         },
-        "en": "Orange",
-        "fi": "Oranssi",
-        "nl": "Oranje"
+        "en": "orange",
+        "fi": "oranssi",
+        "nl": "oranje"
     },
     "brown": {
         "level": {
@@ -101,21 +101,21 @@
                 "OD"
             ]
         },
-        "en": "Brown",
-        "fi": "Ruskea",
-        "nl": "Bruin"
+        "en": "brown",
+        "fi": "ruskea",
+        "nl": "bruin"
     },
     "pink": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "Pink",
+        "en": "pink",
         "fi": [
-            "Vaaleanpunainen",
-            "Pinkki"
+            "vaaleanpunainen",
+            "pinkki"
         ],
-        "nl": "Roze"
+        "nl": "roze"
     },
     "grey": {
         "level": {
@@ -124,9 +124,9 @@
                 "OD"
             ]
         },
-        "en": "Grey|Gray",
-        "fi": "Harmaa",
-        "nl": "Grijs"
+        "en": "grey|gray",
+        "fi": "harmaa",
+        "nl": "grijs"
     },
     "light blue": {
         "level": {
@@ -134,9 +134,9 @@
             "A2": "EP"
         },
         "roots": "blue",
-        "en": "Light blue",
-        "fi": "Vaaleansininen",
-        "nl": "Lichtblauw"
+        "en": "light blue",
+        "fi": "vaaleansininen",
+        "nl": "lichtblauw"
     },
     "dark blue": {
         "level": {
@@ -144,8 +144,8 @@
             "A2": "EP"
         },
         "roots": "blue",
-        "en": "Dark blue",
-        "fi": "Tummansininen",
+        "en": "dark blue",
+        "fi": "tummansininen",
         "nl": "Donkerblauw"
     },
     "the car is blue": {
@@ -264,7 +264,7 @@
         },
         "plural": {
             "en": "I read the red books;present tense",
-            "fi": "Minä luen punaisia ​​kirjoj|Luen punaisia ​​kirjoja",
+            "fi": "Minä luen punaisia kirjoja|Luen punaisia kirjoja",
             "nl": "Ik lees de rode boeken"
         }
     },

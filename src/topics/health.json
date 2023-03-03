@@ -4,18 +4,18 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "Health",
-        "fi": "Terveys",
-        "nl": "De gezondheid"
+        "en": "health",
+        "fi": "terveys",
+        "nl": "de gezondheid"
     },
     "care": {
         "level": {
             "A2": "OD",
             "B2": "EP"
         },
-        "en": "Care",
-        "fi": "Hoito",
-        "nl": "De zorg"
+        "en": "care",
+        "fi": "hoito",
+        "nl": "de zorg"
     },
     "health care": {
         "level": {
@@ -26,9 +26,9 @@
             "health",
             "care"
         ],
-        "en": "Health care",
-        "fi": "Terveydenhoito",
-        "nl": "De gezondheidszorg"
+        "en": "health care",
+        "fi": "terveydenhoito",
+        "nl": "de gezondheidszorg"
     },
     "disease": {
         "level": {
@@ -36,14 +36,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Disease",
-            "fi": "Sairaus",
-            "nl": "De ziekte"
+            "en": "disease",
+            "fi": "sairaus",
+            "nl": "de ziekte"
         },
         "plural": {
-            "en": "Diseases",
-            "fi": "Sairaudet",
-            "nl": "De ziektes;De ziekten"
+            "en": "diseases",
+            "fi": "sairaudet",
+            "nl": "de ziektes|de ziekten"
         }
     },
     "patient": {
@@ -52,14 +52,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Patient",
-            "fi": "Potilas",
-            "nl": "De patiënt"
+            "en": "patient",
+            "fi": "potilas",
+            "nl": "de patiënt"
         },
         "plural": {
-            "en": "Patients",
-            "fi": "Potilaat",
-            "nl": "De patiënten"
+            "en": "patients",
+            "fi": "potilaat",
+            "nl": "de patiënten"
         }
     },
     "medicine": {
@@ -70,14 +70,14 @@
             ]
         },
         "singular": {
-            "en": "Medicine",
-            "fi": "Lääke",
-            "nl": "Het medicijn"
+            "en": "medicine",
+            "fi": "lääke",
+            "nl": "het medicijn"
         },
         "plural": {
-            "en": "Medicines",
-            "fi": "Lääkkeet",
-            "nl": "De medicijnen"
+            "en": "medicines",
+            "fi": "lääkkeet",
+            "nl": "de medicijnen"
         }
     },
     "wound": {
@@ -88,14 +88,14 @@
             ]
         },
         "singular": {
-            "en": "Wound",
-            "fi": "Haava",
-            "nl": "De wond"
+            "en": "wound",
+            "fi": "haava",
+            "nl": "de wond"
         },
         "plural": {
-            "en": "Wounds",
-            "fi": "Haavat",
-            "nl": "De wonden"
+            "en": "wounds",
+            "fi": "haavat",
+            "nl": "de wonden"
         }
     },
     "flu": {
@@ -104,14 +104,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Flu",
-            "fi": "Flunssa",
-            "nl": "De griep"
+            "en": "flu",
+            "fi": "flunssa",
+            "nl": "de griep"
         },
         "plural": {
-            "en": "Flus",
-            "fi": "Flunssat",
-            "nl": "De griepen"
+            "en": "flus",
+            "fi": "flunssat",
+            "nl": "de griepen"
         }
     },
     "fever": {
@@ -120,14 +120,14 @@
             "B2": "OD"
         },
         "singular": {
-            "en": "Fever",
-            "fi": "Kuume",
-            "nl": "De koorts"
+            "en": "fever",
+            "fi": "kuume",
+            "nl": "de koorts"
         },
         "plural": {
-            "en": "Fevers",
-            "fi": "Kuumeet",
-            "nl": "Koortsen"
+            "en": "fevers",
+            "fi": "kuumeet",
+            "nl": "koortsen"
         }
     },
     "blood": {
@@ -138,13 +138,13 @@
             ]
         },
         "singular": {
-            "en": "Blood",
-            "fi": "Veri",
-            "nl": "Het bloed"
+            "en": "blood",
+            "fi": "veri",
+            "nl": "het bloed"
         },
         "plural": {
-            "en": "Bloods",
-            "fi": "Veret"
+            "en": "bloods",
+            "fi": "veret"
         }
     },
     "ache": {
@@ -153,14 +153,14 @@
             "B1": "EP"
         },
         "singular": {
-            "en": "Ache",
-            "fi": "Särky",
-            "nl": "De pijn;dull"
+            "en": "ache",
+            "fi": "särky",
+            "nl": "de pijn;dull"
         },
         "plural": {
-            "en": "Aches",
-            "fi": "Säryt",
-            "nl": "De pijnen;dull"
+            "en": "aches",
+            "fi": "säryt",
+            "nl": "de pijnen;dull"
         }
     },
     "pain": {
@@ -171,14 +171,14 @@
             ]
         },
         "singular": {
-            "en": "Pain",
-            "fi": "Kipu",
-            "nl": "De pijn;sharp"
+            "en": "pain",
+            "fi": "kipu",
+            "nl": "de pijn;sharp"
         },
         "plural": {
-            "en": "Pains",
-            "fi": "Kivut",
-            "nl": "De pijnen;sharp"
+            "en": "pains",
+            "fi": "kivut",
+            "nl": "de pijnen;sharp"
         }
     },
     "headache": {
@@ -193,14 +193,14 @@
             "ache"
         ],
         "singular": {
-            "en": "Headache",
-            "fi": "Päänsärky",
-            "nl": "De hoofdpijn"
+            "en": "headache",
+            "fi": "päänsärky",
+            "nl": "de hoofdpijn"
         },
         "plural": {
-            "en": "Headaches",
-            "fi": "Päänsäryt",
-            "nl": "De hoofdpijnen"
+            "en": "headaches",
+            "fi": "päänsäryt",
+            "nl": "de hoofdpijnen"
         }
     }
 }
