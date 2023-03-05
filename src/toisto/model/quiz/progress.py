@@ -74,7 +74,7 @@ class Progress:
         return any(
             other_quiz
             for root in quiz.concept.related_concepts.roots(quiz.question_language)
-            for other_quiz in self.__quizzes_by_concept.get(root, set())
+            for other_quiz in self.__quizzes_by_concept.get(root.base_concept, set())
             if other_quiz != quiz and other_quiz in quizzes
         )
 
