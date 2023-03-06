@@ -32,7 +32,7 @@ class ShowProgressTest(ToistoTestCase):
         end = now.isoformat(timespec="seconds")
         with patch("rich.console.Console.print") as console_print:
             show_progress("fi", self.topics, Progress({self.quiz.key: dict(start=start, end=end)}, self.topics))
-        for index, value in enumerate(["Translate", "Terve", "fi", "nl", "Hoi", "0", "60 minutes", ""]):
+        for index, value in enumerate(["Read", "Terve", "fi", "nl", "Hoi", "0", "60 minutes", ""]):
             self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
 
     def test_quiz_silenced_until_time_in_the_future(self):

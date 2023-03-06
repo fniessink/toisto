@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Note
+
+Unfortunately, this version is backwards incompatible and progress information from previous versions is lost.
+
 ### Fixed
 
-- In the topic files, only have words with capitals when they start a sentence or are always written with an initial capital. Unfortunately, this is a backwards incompatible change and progress information is lost. Fixes [#242](https://github.com/fniessink/toisto/issues/242).
+- In the topic files, only have words with capitals when they start a sentence or are always written with an initial capital. Fixes [#242](https://github.com/fniessink/toisto/issues/242).
+
 ### Added
 
 - Allow for specifying the meaning of concepts that have no label in a language. Closes [#138](https://github.com/fniessink/toisto/issues/138).

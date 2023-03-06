@@ -9,7 +9,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_translation_quizzes_block_listening_quizzes(self):
         """Test that translation quizzes block listening quizzes."""
         quizzes = self.create_quizzes(self.create_noun(), "fi", "nl")
-        translation_quizzes = {quiz for quiz in quizzes if quiz.quiz_types == ("translate",)}
+        translation_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("write",))}
         listening_quizzes = {quiz for quiz in quizzes if quiz.quiz_types == ("listen",)}
         for quiz in listening_quizzes:
             self.assertEqual(translation_quizzes, set(quiz.blocked_by), msg=quiz)
@@ -17,7 +17,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_non_grammatical_quizzes_block_grammatical_quizzes(self):
         """Test that listening and translation quizzes block grammatical quizzes."""
         quizzes = self.create_quizzes(self.create_noun_with_grammatical_number(), "fi", "nl")
-        non_grammatical_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in [("translate",), ("listen",)]}
+        non_grammatical_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("listen",), ("write",))}
         grammatical_quizzes = {quiz for quiz in quizzes if quiz not in non_grammatical_quizzes}
         for quiz in grammatical_quizzes:
             self.assertEqual(non_grammatical_quizzes, set(quiz.blocked_by), msg=quiz)

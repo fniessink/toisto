@@ -3,8 +3,8 @@
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
-from toisto.model.quiz.topic import Topic, Topics
 from toisto.model.quiz.quiz_factory import QuizFactory
+from toisto.model.quiz.topic import Topic, Topics
 
 from ....base import ToistoTestCase
 

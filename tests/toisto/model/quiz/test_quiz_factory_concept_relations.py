@@ -44,12 +44,12 @@ class ConceptRootsTest(QuizFactoryTestCase):
         """Test that constituent concepts get a generated concept id."""
         concept = self.create_noun_with_grammatical_number()
         expected_concept_ids = {
-            self.create_quiz(concept, "fi", "nl", "Aamu", ["De ochtend"]): "morning/singular",
-            self.create_quiz(concept, "nl", "fi", "De ochtend", ["Aamu"]): "morning/singular",
+            self.create_quiz(concept, "fi", "nl", "Aamu", ["De ochtend"], "read"): "morning/singular",
             self.create_quiz(concept, "fi", "fi", "Aamu", ["Aamu"], "listen"): "morning/singular",
-            self.create_quiz(concept, "fi", "nl", "Aamut", ["De ochtenden"]): "morning/plural",
-            self.create_quiz(concept, "nl", "fi", "De ochtenden", ["Aamut"]): "morning/plural",
+            self.create_quiz(concept, "nl", "fi", "De ochtend", ["Aamu"], "write"): "morning/singular",
+            self.create_quiz(concept, "fi", "nl", "Aamut", ["De ochtenden"], "read"): "morning/plural",
             self.create_quiz(concept, "fi", "fi", "Aamut", ["Aamut"], "listen"): "morning/plural",
+            self.create_quiz(concept, "nl", "fi", "De ochtenden", ["Aamut"], "write"): "morning/plural",
             self.create_quiz(concept, "fi", "fi", "Aamu", ["Aamut"], "pluralize"): "morning",
             self.create_quiz(concept, "fi", "fi", "Aamut", ["Aamu"], "singularize"): "morning",
         }

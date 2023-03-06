@@ -31,7 +31,7 @@ class ToistoTestCase(unittest.TestCase):
         answer_language: str,
         question: str,
         answers: list[str],
-        quiz_type: str | tuple[str, ...] = "translate",
+        quiz_type: str | tuple[str, ...] = ("read",),
         blocked_by: tuple[Quiz, ...] = tuple(),
         meanings: tuple[str, ...] = tuple(),
     ) -> Quiz:
