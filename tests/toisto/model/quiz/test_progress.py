@@ -3,6 +3,7 @@
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
+from toisto.model.quiz.quiz_factory import QuizFactory
 from toisto.model.quiz.topic import Topic, Topics
 
 from ....base import ToistoTestCase
@@ -73,21 +74,19 @@ class ProgressTest(ToistoTestCase):
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""
-        concept1 = self.create_concept("good day", dict(roots="good"))
-        quiz1 = self.create_quiz(concept1, "nl", "en", "Goedendag", ["Good day"])
-        concept2 = self.create_concept("good")
-        quiz2 = self.create_quiz(concept2, "nl", "en", "Goed", ["Good"])
-        progress = self.create_progress([quiz1, quiz2])
-        self.assertEqual(quiz2, progress.next_quiz())
+        concept1 = self.create_concept("good day", dict(roots="good", en="good day", nl="goedendag"))
+        concept2 = self.create_concept("good", dict(en="good", nl="goed"))
+        quizzes = QuizFactory("nl", "en").create_quizzes(concept1, concept2)
+        progress = self.create_progress(quizzes)
+        self.assertEqual("good", progress.next_quiz().concept.concept_id)
 
-    def test_roots_block_quizzes_even_across_topics(self):
-        """Test that quizzes are blocked if roots have eligible quizzes, even when they belong to different topics."""
-        concept1 = self.create_concept("good day", dict(roots="good"))
-        quiz1 = self.create_quiz(concept1, "nl", "en", "Goedendag", ["Good day"])
-        concept2 = self.create_concept("good")
-        quiz2 = self.create_quiz(concept2, "nl", "en", "Goed", ["Good"])
-        progress = self.create_progress([quiz1], [quiz2])
-        self.assertEqual(quiz2, progress.next_quiz())
+    def test_roots_block_quizzes_even_if_roots_only_apply_to_target_language(self):
+        """Test that quizzes are blocked, even if the roots only apply to the target language."""
+        concept1 = self.create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
+        concept2 = self.create_concept("good", dict(en="good", nl="goed"))
+        quizzes = QuizFactory("nl", "en").create_quizzes(concept1, concept2)
+        progress = self.create_progress(quizzes)
+        self.assertEqual("good", progress.next_quiz().concept.concept_id)
 
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
@@ -107,11 +106,7 @@ class ProgressTest(ToistoTestCase):
             "evening",
             dict(roots="afternoon", singular=dict(fi="Ilta", nl="De avond"), plural=dict(fi="Illat", nl="De avonden")),
         )
-        quizzes = (
-            self.create_quizzes(morning, "fi", "nl")
-            | self.create_quizzes(afternoon, "fi", "nl")
-            | self.create_quizzes(evening, "fi", "nl")
-        )
+        quizzes = QuizFactory("fi", "nl").create_quizzes(morning, afternoon, evening)
         progress = self.create_progress(quizzes)
         for _ in range(9):
             quiz = progress.next_quiz()
@@ -120,11 +115,8 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
-        concepts = [self.create_concept(f"id{index}") for index in range(5)]
-        quizzes = [
-            self.create_quiz(concept, "nl", "fi", f"Dutch label {index}", [f"Finnish label {index}"])
-            for index, concept in enumerate(concepts)
-        ]
+        concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl="nl{index}")) for index in range(5)]
+        quizzes = list(QuizFactory("nl", "fi").create_quizzes(*concepts))
         progress = self.create_progress(quizzes)
         for index in range(3):
             progress.increase_retention(quizzes[index])
@@ -135,7 +127,7 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz has the lowest language level of the eligible quizzes."""
         morning = self.create_concept("morning", dict(level=dict(A1="EP"), fi="Aamu", nl="De ochtend"))
         noon = self.create_concept("noon", dict(level=dict(A2="EP"), fi="Keskipäivä", nl="De middag"))
-        quizzes = self.create_quizzes(morning, "fi", "nl") | self.create_quizzes(noon, "fi", "nl")
+        quizzes = QuizFactory("fi", "nl").create_quizzes(morning, noon)
         self.assertEqual("morning", self.create_progress(quizzes).next_quiz().concept.concept_id)
 
     def test_as_dict(self):

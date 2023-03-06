@@ -55,11 +55,11 @@ class QuizFactory:
             return Quizzes()
         blocked_by = tuple(previous_quizzes)
         target_to_source = Quizzes(
-            Quiz(concept, target_language, source_language, target_label, source_labels, blocked_by=blocked_by)
+            Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by)
             for target_label in target_labels
         )
         source_to_target = Quizzes(
-            Quiz(concept, source_language, target_language, source_label, target_labels, blocked_by=blocked_by)
+            Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by)
             for source_label in source_labels
         )
         return target_to_source | source_to_target
