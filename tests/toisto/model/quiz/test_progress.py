@@ -80,6 +80,14 @@ class ProgressTest(ToistoTestCase):
         progress = self.create_progress(quizzes)
         self.assertEqual("good", progress.next_quiz().concept.concept_id)
 
+    def test_roots_block_quizzes_even_if_roots_only_apply_to_target_language(self):
+        """Test that quizzes are blocked, even if the roots only apply to the target language."""
+        concept1 = self.create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
+        concept2 = self.create_concept("good", dict(en="good", nl="goed"))
+        quizzes = QuizFactory("nl", "en").create_quizzes(concept1, concept2)
+        progress = self.create_progress(quizzes)
+        self.assertEqual("good", progress.next_quiz().concept.concept_id)
+
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
         morning = self.create_concept(
