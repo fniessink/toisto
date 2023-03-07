@@ -35,13 +35,13 @@ class PracticeTest(ToistoTestCase):
             practice(progress or self.progress, config)
         return patched_print
 
-    @patch("builtins.input", Mock(return_value="hoi\n"))
+    @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_quiz(self):
         """Test that the user is quizzed."""
         patched_print = self.practice()
         self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
 
-    @patch("builtins.input", Mock(side_effect=["\n", "hoi\n"]))
+    @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
     def test_quiz_empty_answer(self, mock_print: Mock):
         """Test that the user is quizzed."""
@@ -81,7 +81,7 @@ class PracticeTest(ToistoTestCase):
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
-    @patch("builtins.input", Mock(side_effect=["incorrect\n", "hoi\n", EOFError]))
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))
     def test_quiz_try_again(self):
         """Test that the user is quizzed."""
         patched_print = self.practice()

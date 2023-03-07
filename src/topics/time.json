@@ -306,9 +306,9 @@
                 "hour"
             ]
         },
-        "en": "It is ten o'clock|It's ten o'clock",
-        "fi": "Kello on kymmenen",
-        "nl": "Het is tien uur"
+        "en": "It is ten o'clock.|It's ten o'clock.",
+        "fi": "Kello on kymmenen.",
+        "nl": "Het is tien uur."
     },
     "it is 2:30": {
         "roots": {
@@ -327,9 +327,9 @@
                 "3"
             ]
         },
-        "en": "It is half past two|It's half past two",
-        "fi": "Kello on puoli kolme",
-        "nl": "Het is half drie"
+        "en": "It is half past two.|It's half past two.",
+        "fi": "Kello on puoli kolme.",
+        "nl": "Het is half drie."
     },
     "it is 3:15": {
         "roots": {
@@ -347,9 +347,9 @@
                 "3"
             ]
         },
-        "en": "It is a quarter past three|It's a quarter past three",
-        "fi": "Kello on vartin yli kolme",
-        "nl": "Het is kwart over drie"
+        "en": "It is a quarter past three.|It's a quarter past three.",
+        "fi": "Kello on vartin yli kolme.",
+        "nl": "Het is kwart over drie."
     },
     "it is 3:45": {
         "roots": {
@@ -367,9 +367,9 @@
                 "4"
             ]
         },
-        "en": "It is a quarter to four|It's a quarter to four",
-        "fi": "Kello on varttia vaille neljä",
-        "nl": "Het is kwart voor vier"
+        "en": "It is a quarter to four.|It's a quarter to four.",
+        "fi": "Kello on varttia vaille neljä.",
+        "nl": "Het is kwart voor vier."
     },
     "it is 6:20": {
         "roots": {
@@ -390,12 +390,12 @@
                 "7"
             ]
         },
-        "en": "It is twenty past six|It's twenty past six",
+        "en": "It is twenty past six.|It's twenty past six.",
         "fi": [
-            "Kello on kuusi kaksikymmentä",
-            "Kello on kaksikymmentä yli kuusi"
+            "Kello on kuusi kaksikymmentä.",
+            "Kello on kaksikymmentä yli kuusi."
         ],
-        "nl": "Het is tien voor half zeven"
+        "nl": "Het is tien voor half zeven."
     },
     "it is 6:40": {
         "roots": {
@@ -418,12 +418,12 @@
                 "7"
             ]
         },
-        "en": "It is twenty to seven|It's twenty to seven",
+        "en": "It is twenty to seven.|It's twenty to seven.",
         "fi": [
-            "Kello on kuusi neljäkymmentä",
-            "Kello on kahtakymmentä vaille seitsemän"
+            "Kello on kuusi neljäkymmentä.",
+            "Kello on kahtakymmentä vaille seitsemän."
         ],
-        "nl": "Het is tien over half zeven"
+        "nl": "Het is tien over half zeven."
     },
     "what time": {
         "roots": {
@@ -459,8 +459,8 @@
                 "hour"
             ]
         },
-        "en": "It takes one hour",
-        "fi": "Se kestää tunnin",
-        "nl": "Het duurt één uur|Het duurt een uur"
+        "en": "It takes one hour.",
+        "fi": "Se kestää tunnin.",
+        "nl": "Het duurt één uur.|Het duurt een uur."
     }
 }

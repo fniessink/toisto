@@ -9,52 +9,52 @@
             "affirmative": {
                 "present tense": {
                     "singular": {
-                        "en": "The car is black",
-                        "fi": "Auto on musta",
-                        "nl": "De auto is zwart"
+                        "en": "The car is black.",
+                        "fi": "Auto on musta.",
+                        "nl": "De auto is zwart."
                     },
                     "plural": {
-                        "en": "The cars are black",
-                        "fi": "Autot ovat mustia",
-                        "nl": "De auto's zijn zwart"
+                        "en": "The cars are black.",
+                        "fi": "Autot ovat mustia.",
+                        "nl": "De auto's zijn zwart."
                     }
                 },
                 "past tense": {
                     "singular": {
-                        "en": "The car was black",
-                        "fi": "Auto oli musta",
-                        "nl": "De auto was zwart"
+                        "en": "The car was black.",
+                        "fi": "Auto oli musta.",
+                        "nl": "De auto was zwart."
                     },
                     "plural": {
-                        "en": "The cars were black",
-                        "fi": "Autot olivat mustia",
-                        "nl": "De auto's waren zwart"
+                        "en": "The cars were black.",
+                        "fi": "Autot olivat mustia.",
+                        "nl": "De auto's waren zwart."
                     }
                 }
             },
             "negative": {
                 "present tense": {
                     "singular": {
-                        "en": "The car is not black|The car isn't black",
-                        "fi": "Auto ei ole musta",
-                        "nl": "De auto is niet zwart"
+                        "en": "The car is not black.|The car isn't black.",
+                        "fi": "Auto ei ole musta.",
+                        "nl": "De auto is niet zwart."
                     },
                     "plural": {
-                        "en": "The cars are not black|The cars aren't black",
-                        "fi": "Autot eivät ole mustia",
-                        "nl": "De auto's zijn niet zwart"
+                        "en": "The cars are not black.|The cars aren't black.",
+                        "fi": "Autot eivät ole mustia.",
+                        "nl": "De auto's zijn niet zwart."
                     }
                 },
                 "past tense": {
                     "singular": {
-                        "en": "The car was not black|The car wasn't black",
-                        "fi": "Auto ei ollut musta",
-                        "nl": "De auto was niet zwart"
+                        "en": "The car was not black.|The car wasn't black.",
+                        "fi": "Auto ei ollut musta.",
+                        "nl": "De auto was niet zwart."
                     },
                     "plural": {
-                        "en": "The cars were not black|The cars weren't black",
-                        "fi": "Autot eivät olleet mustia",
-                        "nl": "De auto's waren niet zwart"
+                        "en": "The cars were not black.|The cars weren't black.",
+                        "fi": "Autot eivät olleet mustia.",
+                        "nl": "De auto's waren niet zwart."
                     }
                 }
             }
@@ -123,86 +123,86 @@
                 "present tense": {
                     "singular": {
                         "first person": {
-                            "en": "I speak English",
-                            "fi": "Minä puhun englantia|Puhun englantia",
-                            "nl": "Ik spreek Engels"
+                            "en": "I speak English.",
+                            "fi": "Minä puhun englantia.|Puhun englantia.",
+                            "nl": "Ik spreek Engels."
                         },
                         "second person": {
-                            "en": "You speak English;singular",
-                            "fi": "Sinä puhut englantia|Puhut englantia",
-                            "nl": "Jij spreekt Engels|Je spreekt Engels"
+                            "en": "You speak English.;singular",
+                            "fi": "Sinä puhut englantia.|Puhut englantia.",
+                            "nl": "Jij spreekt Engels.|Je spreekt Engels."
                         },
                         "third person": {
                             "female": {
-                                "en": "She speaks English",
-                                "fi": "Hän puhuu englantia;female",
-                                "nl": "Zij spreekt Engels|Ze spreekt Engels"
+                                "en": "She speaks English.",
+                                "fi": "Hän puhuu englantia.;female",
+                                "nl": "Zij spreekt Engels.|Ze spreekt Engels."
                             },
                             "male": {
-                                "en": "He speaks English",
-                                "fi": "Hän puhuu englantia;male",
-                                "nl": "Hij spreekt Engels"
+                                "en": "He speaks English.",
+                                "fi": "Hän puhuu englantia.;male",
+                                "nl": "Hij spreekt Engels."
                             }
                         }
                     },
                     "plural": {
                         "first person": {
-                            "en": "We speak English",
-                            "fi": "Me puhumme englantia|Puhumme englantia",
-                            "nl": "Wij spreken Engels|We spreken Engels"
+                            "en": "We speak English.",
+                            "fi": "Me puhumme englantia.|Puhumme englantia.",
+                            "nl": "Wij spreken Engels.|We spreken Engels."
                         },
                         "second person": {
-                            "en": "You speak English;plural",
-                            "fi": "Te puhutte englantia|Puhutte englantia",
-                            "nl": "Jullie spreken Engels"
+                            "en": "You speak English.;plural",
+                            "fi": "Te puhutte englantia.|Puhutte englantia.",
+                            "nl": "Jullie spreken Engels."
                         },
                         "third person": {
-                            "en": "They speak English",
-                            "fi": "He puhuvat englantia",
-                            "nl": "Zij spreken Engels|Ze spreken Engels"
+                            "en": "They speak English.",
+                            "fi": "He puhuvat englantia.",
+                            "nl": "Zij spreken Engels.|Ze spreken Engels."
                         }
                     }
                 },
                 "past tense": {
                     "singular": {
                         "first person": {
-                            "en": "I spoke English",
-                            "fi": "Minä puhuin englantia|Puhuin englantia",
-                            "nl": "Ik sprak Engels"
+                            "en": "I spoke English.",
+                            "fi": "Minä puhuin englantia.|Puhuin englantia.",
+                            "nl": "Ik sprak Engels."
                         },
                         "second person": {
-                            "en": "You spoke English;singular",
-                            "fi": "Sinä puhuit englantia|Puhuit englantia",
-                            "nl": "Jij sprak Engels|Je sprak Engels"
+                            "en": "You spoke English.;singular",
+                            "fi": "Sinä puhuit englantia.|Puhuit englantia.",
+                            "nl": "Jij sprak Engels.|Je sprak Engels."
                         },
                         "third person": {
                             "female": {
-                                "en": "She spoke English",
-                                "fi": "Hän puhui englantia;female",
-                                "nl": "Zij sprak Engels|Ze sprak Engels"
+                                "en": "She spoke English.",
+                                "fi": "Hän puhui englantia.;female",
+                                "nl": "Zij sprak Engels.|Ze sprak Engels."
                             },
                             "male": {
-                                "en": "He spoke English",
-                                "fi": "Hän puhui englantia;male",
-                                "nl": "Hij sprak Engels"
+                                "en": "He spoke English.",
+                                "fi": "Hän puhui englantia.;male",
+                                "nl": "Hij sprak Engels."
                             }
                         }
                     },
                     "plural": {
                         "first person": {
-                            "en": "We spoke English",
-                            "fi": "Me puhuimme englantia|Puhuimme englantia",
-                            "nl": "Wij spraken Engels|We spraken Engels"
+                            "en": "We spoke English.",
+                            "fi": "Me puhuimme englantia.|Puhuimme englantia.",
+                            "nl": "Wij spraken Engels.|We spraken Engels"
                         },
                         "second person": {
-                            "en": "You spoke English;plural",
-                            "fi": "Te puhuitte englantia|Puhuitte englantia",
-                            "nl": "Jullie spraken Engels"
+                            "en": "You spoke English.;plural",
+                            "fi": "Te puhuitte englantia.|Puhuitte englantia.",
+                            "nl": "Jullie spraken Engels."
                         },
                         "third person": {
-                            "en": "They spoke English",
-                            "fi": "He puhuivat englantia",
-                            "nl": "Zij spraken Engels|Ze spraken Engels"
+                            "en": "They spoke English.",
+                            "fi": "He puhuivat englantia.",
+                            "nl": "Zij spraken Engels.|Ze spraken Engels."
                         }
                     }
                 }
@@ -211,86 +211,86 @@
                 "present tense": {
                     "singular": {
                         "first person": {
-                            "en": "I do not speak English|I don't speak English",
-                            "fi": "Minä en puhu englantia|En puhu englantia",
-                            "nl": "Ik spreek geen Engels"
+                            "en": "I do not speak English.|I don't speak English.",
+                            "fi": "Minä en puhu englantia.|En puhu englantia.",
+                            "nl": "Ik spreek geen Engels."
                         },
                         "second person": {
-                            "en": "You do not speak English|You don't speak English;singular",
-                            "fi": "Sinä et puhu englantia|Et puhu englantia",
-                            "nl": "Jij spreekt geen Engels|Je spreekt geen Engels"
+                            "en": "You do not speak English.|You don't speak English.;singular",
+                            "fi": "Sinä et puhu englantia.|Et puhu englantia.",
+                            "nl": "Jij spreekt geen Engels.|Je spreekt geen Engels."
                         },
                         "third person": {
                             "female": {
-                                "en": "She does not speak English|She doesn't speak English",
-                                "fi": "Hän ei puhu englantia;female",
-                                "nl": "Zij spreekt geen Engels|Ze spreekt geen Engels"
+                                "en": "She does not speak English.|She doesn't speak English.",
+                                "fi": "Hän ei puhu englantia.;female",
+                                "nl": "Zij spreekt geen Engels.|Ze spreekt geen Engels."
                             },
                             "male": {
-                                "en": "He speaks English",
-                                "fi": "Hän ei puhu englantia;male",
-                                "nl": "Hij spreekt geen Engels"
+                                "en": "He speaks English.",
+                                "fi": "Hän ei puhu englantia.;male",
+                                "nl": "Hij spreekt geen Engels."
                             }
                         }
                     },
                     "plural": {
                         "first person": {
-                            "en": "We do not speak English|We don't speak English",
-                            "fi": "Me emme puhu englantia|Emme puhu englantia",
-                            "nl": "Wij spreken geen Engels|We spreken geen Engels"
+                            "en": "We do not speak English.|We don't speak English.",
+                            "fi": "Me emme puhu englantia.|Emme puhu englantia.",
+                            "nl": "Wij spreken geen Engels.|We spreken geen Engels."
                         },
                         "second person": {
-                            "en": "You do not speak EnglishYou don't speak English;plural",
-                            "fi": "Te ette puhu englantia|Ette puhu englantia",
-                            "nl": "Jullie spreken geen Engels"
+                            "en": "You do not speak English.|You don't speak English.;plural",
+                            "fi": "Te ette puhu englantia.|Ette puhu englantia.",
+                            "nl": "Jullie spreken geen Engels."
                         },
                         "third person": {
-                            "en": "They do not speak English|They don't speak English",
-                            "fi": "He eivät puhu englantia|Eivät puhu englantia",
-                            "nl": "Zij spreken geen Engels|Ze spreken geen Engels"
+                            "en": "They do not speak English.|They don't speak English.",
+                            "fi": "He eivät puhu englantia.|Eivät puhu englantia.",
+                            "nl": "Zij spreken geen Engels.|Ze spreken geen Engels."
                         }
                     }
                 },
                 "past tense": {
                     "singular": {
                         "first person": {
-                            "en": "I did not speak English|I didn't speak English",
-                            "fi": "Minä en puhunut englantia|En puhunut englantia",
-                            "nl": "Ik sprak geen Engels"
+                            "en": "I did not speak English.|I didn't speak English.",
+                            "fi": "Minä en puhunut englantia.|En puhunut englantia.",
+                            "nl": "Ik sprak geen Engels."
                         },
                         "second person": {
-                            "en": "You did not speak English|You didn't speak English;singular",
-                            "fi": "Sinä et puhunut englantia|Et puhunut englantia",
-                            "nl": "Jij sprak geen Engels|Je sprak geen Engels"
+                            "en": "You did not speak English.|You didn't speak English.;singular",
+                            "fi": "Sinä et puhunut englantia.|Et puhunut englantia.",
+                            "nl": "Jij sprak geen Engels.|Je sprak geen Engels."
                         },
                         "third person": {
                             "female": {
-                                "en": "She did not speak English|She didn't speak English",
-                                "fi": "Hän ei puhunut englantia;female",
-                                "nl": "Zij sprak geen Engels|Ze sprak geen Engels"
+                                "en": "She did not speak English.|She didn't speak English.",
+                                "fi": "Hän ei puhunut englantia.;female",
+                                "nl": "Zij sprak geen Engels.|Ze sprak geen Engels."
                             },
                             "male": {
-                                "en": "He did not speak English|He didn't speak",
-                                "fi": "Hän ei puhunut englantia;male",
-                                "nl": "Hij sprak geen Engels"
+                                "en": "He did not speak English.|He didn't speak.",
+                                "fi": "Hän ei puhunut englantia.;male",
+                                "nl": "Hij sprak geen Engels."
                             }
                         }
                     },
                     "plural": {
                         "first person": {
-                            "en": "We did not speak English|We didn't speak English",
-                            "fi": "Me emme puhuneet englantia|Emme puhuneet englantia",
-                            "nl": "Wij spraken geen Engels|We spraken geen Engels"
+                            "en": "We did not speak English.|We didn't speak English.",
+                            "fi": "Me emme puhuneet englantia.|Emme puhuneet englantia.",
+                            "nl": "Wij spraken geen Engels.|We spraken geen Engels."
                         },
                         "second person": {
-                            "en": "You did not speak English|You didn't speak English;plural",
-                            "fi": "Te ette puhuneet englantia|Ette puhuneet englantia",
-                            "nl": "Jullie spraken geen Engels"
+                            "en": "You did not speak English.|You didn't speak English.;plural",
+                            "fi": "Te ette puhuneet englantia.|Ette puhuneet englantia.",
+                            "nl": "Jullie spraken geen Engels."
                         },
                         "third person": {
-                            "en": "They did not speak English|They didn't speak English",
-                            "fi": "He eivät puhuneet englantia",
-                            "nl": "Zij spraken geen Engels|Ze spraken geen Engels"
+                            "en": "They did not speak English.|They didn't speak English.",
+                            "fi": "He eivät puhuneet englantia.",
+                            "nl": "Zij spraken geen Engels.|Ze spraken geen Engels."
                         }
                     }
                 }

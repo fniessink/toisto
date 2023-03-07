@@ -531,9 +531,9 @@
             "6",
             "grandchild"
         ],
-        "en": "They have three children and six grandchildren",
-        "fi": "Heillä on kolme lasta ja kuusi lastenlasta",
-        "nl": "Zij hebben drie kinderen en zes kleinkinderen|Ze hebben drie kinderen en zes kleinkinderen"
+        "en": "They have three children and six grandchildren.",
+        "fi": "Heillä on kolme lasta ja kuusi lastenlasta.",
+        "nl": "Zij hebben drie kinderen en zes kleinkinderen.|Ze hebben drie kinderen en zes kleinkinderen."
     },
     "how many brothers and sisters do you have": {
         "roots": [
@@ -554,9 +554,9 @@
             "1",
             "sister"
         ],
-        "en": "I have two brothers and one sister",
-        "fi": "Minulla on kaksi veljeä ja yksi sisko",
-        "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus"
+        "en": "I have two brothers and one sister.",
+        "fi": "Minulla on kaksi veljeä ja yksi sisko.",
+        "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus."
     },
     "I have no siblings": {
         "roots": [
@@ -564,22 +564,22 @@
             "sibling"
         ],
         "en": [
-            "I have no siblings",
-            "I have no brothers and sisters"
+            "I have no siblings.",
+            "I have no brothers and sisters."
         ],
         "fi": [
-            "Minulla ei ole sisaruksia",
-            "Minulla ei ole veljiä tai siskoja"
+            "Minulla ei ole sisaruksia.",
+            "Minulla ei ole veljiä tai siskoja."
         ],
-        "nl": "Ik heb geen broers en zussen"
+        "nl": "Ik heb geen broers en zussen."
     },
     "I am an only child": {
         "roots": [
             "to be",
             "child"
         ],
-        "en": "I am an only child|I'm an only child",
-        "fi": "Olen ainoa lapsi|Minä olen ainoa lapsi",
-        "nl": "Ik ben enig kind|Ik ben enigst kind"
+        "en": "I am an only child.|I'm an only child.",
+        "fi": "Olen ainoa lapsi.|Minä olen ainoa lapsi.",
+        "nl": "Ik ben enig kind.|Ik ben enigst kind."
     }
 }

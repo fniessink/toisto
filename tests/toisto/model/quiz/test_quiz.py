@@ -22,7 +22,7 @@ class QuizTest(QuizTestCase):
 
     def test_is_correct(self):
         """Test a correct guess."""
-        self.assertTrue(self.quiz.is_correct("engels"))
+        self.assertTrue(self.quiz.is_correct("Engels"))
 
     def test_is_not_correct(self):
         """Test an incorrect guess."""

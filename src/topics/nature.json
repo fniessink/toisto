@@ -526,9 +526,9 @@
             "cold",
             "north"
         ],
-        "en": "It is cold in the North",
-        "fi": "Pohjoisessa on kylmä",
-        "nl": "Het is koud in het Noorden"
+        "en": "It is cold in the North.",
+        "fi": "Pohjoisessa on kylmä.",
+        "nl": "Het is koud in het Noorden."
     },
     "it is warm in the south": {
         "roots": [
@@ -536,30 +536,30 @@
             "warm",
             "south"
         ],
-        "en": "It is warm in the South",
-        "fi": "Etelässä on lämmin",
-        "nl": "Het is warm in het Zuiden"
+        "en": "It is warm in the South.",
+        "fi": "Etelässä on lämmin.",
+        "nl": "Het is warm in het Zuiden."
     },
     "she is from the north": {
         "roots": [
             "north",
             "to come"
         ],
-        "en": "She is from the North",
+        "en": "She is from the North.",
         "fi": [
-            "Hän tulee pohjoisesta;female",
-            "Hän on kotoisin pohjoisesta;female"
+            "Hän tulee pohjoisesta.;female",
+            "Hän on kotoisin pohjoisesta.;female"
         ],
-        "nl": "Zij komt uit het Noorden|Ze komt uit het Noorden"
+        "nl": "Zij komt uit het Noorden.|Ze komt uit het Noorden."
     },
     "they live in the west": {
         "roots": [
             "west",
             "to live"
         ],
-        "en": "They live in the West",
-        "fi": "He asuvat lännessä",
-        "nl": "Zij wonen in het Westen|Ze wonen in het Westen"
+        "en": "They live in the West.",
+        "fi": "He asuvat lännessä.",
+        "nl": "Zij wonen in het Westen.|Ze wonen in het Westen."
     },
     "the city is in the east": {
         "roots": [
@@ -567,12 +567,12 @@
             "to be",
             "east"
         ],
-        "en": "The city is in the East",
+        "en": "The city is in the East.",
         "fi": [
-            "Kaupunki on idässä",
-            "Kaupunki sijaitsee idässä"
+            "Kaupunki on idässä.",
+            "Kaupunki sijaitsee idässä."
         ],
-        "nl": "De stad ligt in het Oosten"
+        "nl": "De stad ligt in het Oosten."
     },
     "we walk in the forest": {
         "roots": [
@@ -580,10 +580,10 @@
             "forest"
         ],
         "en": [
-            "We walk in the forest",
-            "We walk in the wood"
+            "We walk in the forest.",
+            "We walk in the wood."
         ],
-        "fi": "Me kävelemme metsässä|Kävelemme metsässä",
-        "nl": "Wij wandelen in het bos|We wandelen in het bos"
+        "fi": "Me kävelemme metsässä.|Kävelemme metsässä.",
+        "nl": "Wij wandelen in het bos.|We wandelen in het bos."
     }
 }

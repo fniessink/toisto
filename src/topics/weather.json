@@ -214,12 +214,12 @@
             ],
             "nl": "to be"
         },
-        "en": "There is a thunderstorm|There's a thunderstorm",
+        "en": "There is a thunderstorm.|There's a thunderstorm.",
         "fi": [
-            "Ukkostaa",
-            "On ukonilma"
+            "Ukkostaa.",
+            "On ukonilma."
         ],
-        "nl": "Het onweert"
+        "nl": "Het onweert."
     },
     "foggy": {
         "level": {
@@ -240,12 +240,12 @@
             "fi": "rain",
             "nl": "rain"
         },
-        "en": "It is raining|It's raining",
+        "en": "It is raining.|It's raining.",
         "fi": [
-            "Sataa vettä",
-            "Sataa"
+            "Sataa vettä.",
+            "Sataa."
         ],
-        "nl": "Het regent"
+        "nl": "Het regent."
     },
     "it is snowing": {
         "roots": {
@@ -256,62 +256,62 @@
             "fi": "snow",
             "nl": "snow"
         },
-        "en": "It is snowing|It's snowing",
-        "fi": "Sataa lunta",
-        "nl": "Het sneeuwt"
+        "en": "It is snowing.|It's snowing.",
+        "fi": "Sataa lunta.",
+        "nl": "Het sneeuwt."
     },
     "it is rainy": {
         "roots": [
             "to be",
             "rainy"
         ],
-        "en": "It is rainy|It's rainy",
-        "fi": "On sateista",
-        "nl": "Het is regenachtig"
+        "en": "It is rainy.|It's rainy.",
+        "fi": "On sateista.",
+        "nl": "Het is regenachtig."
     },
     "it is sunny": {
         "roots": [
             "to be",
             "sunny"
         ],
-        "en": "It is sunny|It's sunny",
-        "fi": "On aurinkoista",
-        "nl": "Het is zonnig"
+        "en": "It is sunny.|It's sunny.",
+        "fi": "On aurinkoista.",
+        "nl": "Het is zonnig."
     },
     "it is windy": {
         "roots": [
             "to be",
             "windy"
         ],
-        "en": "It is windy|It's windy",
-        "fi": "On tuulista",
-        "nl": "Het is winderig"
+        "en": "It is windy.|It's windy.",
+        "fi": "On tuulista.",
+        "nl": "Het is winderig."
     },
     "it is cloudy": {
         "roots": [
             "to be",
             "cloudy"
         ],
-        "en": "It is cloudy|It's cloudy",
-        "fi": "On pilvistä",
-        "nl": "Het is bewolkt"
+        "en": "It is cloudy.|It's cloudy.",
+        "fi": "On pilvistä.",
+        "nl": "Het is bewolkt."
     },
     "it is stormy": {
         "roots": [
             "to be",
             "stormy"
         ],
-        "en": "It is stormy|It's stormy",
-        "fi": "On myrskyistä",
-        "nl": "Het is stormachtig"
+        "en": "It is stormy.|It's stormy.",
+        "fi": "On myrskyistä.",
+        "nl": "Het is stormachtig."
     },
     "it is foggy": {
         "roots": [
             "to be",
             "foggy"
         ],
-        "en": "It is foggy|It's foggy",
-        "fi": "On sumuista",
-        "nl": "Het is mistig"
+        "en": "It is foggy.|It's foggy.",
+        "fi": "On sumuista.",
+        "nl": "Het is mistig."
     }
 }

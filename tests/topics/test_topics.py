@@ -15,7 +15,7 @@ class TopicsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         concept = self.create_concept(ConceptId("welcome"))
-        self.quiz = self.create_quiz(concept, "fi", "nl", "Tervetuloa", ["Welkom"])
+        self.quiz = self.create_quiz(concept, "fi", "nl", "Tervetuloa!", ["Welkom!"])
         self.topics = load_topics(Language("fi"), Language("nl"), [], [], [], ArgumentParser())
 
     def test_load_topics(self):

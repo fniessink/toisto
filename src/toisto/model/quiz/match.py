@@ -10,6 +10,4 @@ def without_punctuation(text: str) -> str:
 
 def match(text1: str, *texts: str) -> bool:
     """Return whether the text matches any of the texts."""
-    return any(
-        without_punctuation(text1.strip().lower()) == without_punctuation(text2.strip().lower()) for text2 in texts
-    )
+    return any(without_punctuation(text1.strip()) == without_punctuation(text2.strip()) for text2 in texts)
