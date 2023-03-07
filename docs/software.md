@@ -15,19 +15,19 @@ The contents of a JSON topic file looks as follows:
 ```json
 {
     "today": {
-        "en": "Today",
-        "fi": "Tänään",
-        "nl": "Vandaag"
+        "en": "today",
+        "fi": "tänään",
+        "nl": "vandaag"
     },
     "yesterday": {
-        "en": "Yesterday",
-        "fi": "Eilen",
-        "nl": "Gisteren"
+        "en": "yesterday",
+        "fi": "eilen",
+        "nl": "gisteren"
     },
     "tomorrow": {
-        "en": "Tomorrow",
-        "fi": "Huomenna",
-        "nl": "Morgen"
+        "en": "tomorrow",
+        "fi": "huomenna",
+        "nl": "morgen"
     }
 }
 ```
@@ -38,6 +38,12 @@ If you add new languages to the built-in topic files, or create your own topic f
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
+### Letter case and punctuation in labels
+
+Labels can use both uppercase and lowercase letters, and any mix of them. Toisto will check the answers to quizzes in a case sensitive manner.
+
+Labels that contain complete sentences or utterances (for example, "Hello!") are written with an initial capital letter and with punctuation. Labels that contain individual words or phrases (for example, "days of the week") are not written with an initial capital, unless the first word is always written with a capital (for example, "I am"), and don't have punctuation.
+
 ### Labels with spelling variants
 
 When there are multiple ways to spell a label, use the pipe symbol to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
@@ -45,8 +51,8 @@ When there are multiple ways to spell a label, use the pipe symbol to separate t
 ```json
 {
     "tomorrow it is tuesday": {
-        "en": "Tomorrow it is Tuesday|Tomorrow it's Tuesday",
-        "fi": "Huomenna on tiistai"
+        "en": "Tomorrow it is Tuesday.|Tomorrow it's Tuesday.",
+        "fi": "Huomenna on tiistai."
     }
 }
 ```
@@ -75,7 +81,7 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 {
     "mämmi": {
         "en": "(Traditional Finnish Easter dessert)",
-        "fi": "Mämmi"
+        "fi": "mämmi"
     }
 }
 ```
@@ -91,20 +97,20 @@ In the topic file this looks as follows:
 ```json
 {
     "good afternoon": {
-        "en": "Good afternoon",
+        "en": "Good afternoon!",
         "fi": [
-            "Hyvää päivää;afternoon",
-            "Päivää;afternoon"
+            "Hyvää päivää!;afternoon",
+            "Päivää!;afternoon"
         ],
-        "nl": "Goedemiddag"
+        "nl": "Goedemiddag!"
     },
     "good day": {
-        "en": "Good day",
+        "en": "Good day!",
         "fi": [
-            "Hyvää päivää",
-            "Päivää"
+            "Hyvää päivää!",
+            "Päivää!"
         ],
-        "nl": "Goedendag"
+        "nl": "Goedendag!"
     }
 }
 ```
@@ -119,14 +125,14 @@ The format of the JSON files is as follows:
 {
     "day": {
         "singular": {
-            "en": "Day",
-            "fi": "Päivä",
-            "nl": "De dag"
+            "en": "day",
+            "fi": "päivä",
+            "nl": "de dag"
         },
         "plural": {
-            "en": "Days",
-            "fi": "Päivät",
-            "nl": "De dagen"
+            "en": "days",
+            "fi": "päivät",
+            "nl": "de dagen"
         }
     }
 }
@@ -140,12 +146,12 @@ When concepts have multiple genders, these can be specified as follows:
 {
     "parent": {
         "female": {
-            "en": "Mother",
-            "nl": "De moeder"
+            "en": "mother",
+            "nl": "de moeder"
         },
         "male": {
-            "en": "Father",
-            "nl": "De vader"
+            "en": "father",
+            "nl": "de vader"
         }
     }
 }
@@ -157,16 +163,16 @@ It is also possible to have a neutral gender:
 {
     "parent": {
         "female": {
-            "en": "Mother",
-            "nl": "De moeder"
+            "en": "mother",
+            "nl": "de moeder"
         },
         "male": {
-            "en": "Father",
-            "nl": "De vader"
+            "en": "father",
+            "nl": "de vader"
         },
         "neuter": {
-            "en": "Parent",
-            "nl": "De ouder"
+            "en": "parent",
+            "nl": "de ouder"
         }
     }
 }
@@ -186,35 +192,35 @@ The format of the JSON files is as follows:
         "singular": {
             "first person": {
                 "en": "I have|I've",
-                "fi": "Minulla on"
+                "fi": "minulla on"
             },
             "second person": {
-                "en": "You have|You've;singular",
-                "fi": "Sinulla on"
+                "en": "you have|you've;singular",
+                "fi": "sinulla on"
             },
             "third person": {
                 "female": {
-                    "en": "She has|She's",
-                    "fi": "Hänellä on;female"
+                    "en": "she has|she's",
+                    "fi": "hänellä on;female"
                 },
                 "male": {
-                    "en": "He has|He's",
-                    "fi": "Hänellä on;male"
+                    "en": "he has|he's",
+                    "fi": "hänellä on;male"
                 }
             }
         },
         "plural": {
             "first person": {
-                "en": "We have|We've",
-                "fi": "Meillä on"
+                "en": "we have|we've",
+                "fi": "meillä on"
             },
             "second person": {
-                "en": "You have|You've;plural",
-                "fi": "Teillä on"
+                "en": "you have|you've;plural",
+                "fi": "teillä on"
             },
             "third person": {
-                "en": "They have|They've",
-                "fi": "Heillä on"
+                "en": "they have|they've",
+                "fi": "heillä on"
             }
         }
     }
@@ -233,13 +239,13 @@ When concepts are verbs, infinitives can be specified as follows:
 {
     "to have": {
         "infinitive": {
-            "en": "To have",
-            "fi": "Olla (omistaa)"
+            "en": "to have",
+            "fi": "olla (omistaa)"
         },
         "singular": {
             "first person": {
                 "en": "I have|I've",
-                "fi": "Minulla on"
+                "fi": "minulla on"
             },
             "second person": "..."
         },
@@ -260,7 +266,7 @@ When concepts are verbs, the present tense and the past tense can be specified a
             "singular": {
                 "first person": {
                     "en": "I am|I'm",
-                    "fi": "Minä olen|Olen",
+                    "fi": "minä olen|olen",
                 },
                 "second person": "..."
             },
@@ -270,7 +276,7 @@ When concepts are verbs, the present tense and the past tense can be specified a
             "singular": {
                 "first person": {
                     "en": "I was",
-                    "fi": "Minä olin|Olin",
+                    "fi": "minä olin|olin",
                 },
                 "second person": "..."
             },
@@ -288,16 +294,16 @@ Degrees of comparison are specified as follows:
 {
     "small": {
         "positive degree": {
-            "en": "Small",
-            "nl": "Klein"
+            "en": "small",
+            "nl": "klein"
         },
         "comparative degree": {
-            "en": "Smaller",
-            "nl": "Kleiner"
+            "en": "smaller",
+            "nl": "kleiner"
         },
         "superlative degree": {
-            "en": "Smallest",
-            "nl": "Kleinst"
+            "en": "smallest",
+            "nl": "kleinst"
         }
     }
 }
@@ -309,16 +315,16 @@ When there are synonyms, they need to be in the same order in every degree. This
 {
     "big": {
         "positive degree": {
-            "en": "Big",
-            "fi": ["Iso", "Suuri"]
+            "en": "big",
+            "fi": ["iso", "suuri"]
         },
         "comparative degree": {
-            "en": "Bigger",
-            "fi": ["Isompi", "Suurempi"]
+            "en": "bigger",
+            "fi": ["isompi", "suurempi"]
         },
         "superlative degree": {
-            "en": "Biggest",
-            "fi": ["Isoin", "Suurin"]
+            "en": "biggest",
+            "fi": ["isoin", "suurin"]
         }
     }
 }
@@ -332,8 +338,8 @@ When the topic file contains both the declarative and the interrogative form of 
 {
     "the car is black": {
         "declarative": {
-            "en": "The car is black",
-            "nl": "De auto is zwart"
+            "en": "The car is black.",
+            "nl": "De auto is zwart."
         },
         "interrogative": {
             "en": "Is the car black?",
@@ -351,12 +357,12 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 {
     "the car is black": {
         "affirmative": {
-            "en": "The car is black",
-            "nl": "De auto is zwart"
+            "en": "The car is black.",
+            "nl": "De auto is zwart."
         },
         "negative": {
-            "en": "The car is not black",
-            "nl": "De auto is niet zwart"
+            "en": "The car is not black.",
+            "nl": "De auto is niet zwart."
         }
     }
 }
@@ -372,28 +378,28 @@ When a concept is a compound of one or more other concepts, this can be specifie
 {
     "day": {
         "singular": {
-            "en": "Day",
-            "nl": "De dag"
+            "en": "day",
+            "nl": "de dag"
         },
         "plural": {
-            "en": "Days",
-            "nl": "De dagen"
+            "en": "days",
+            "nl": "de dagen"
         }
     },
     "week": {
         "singular": {
-            "en": "Week",
-            "nl": "De week"
+            "en": "week",
+            "nl": "de week"
         },
         "plural": {
-            "en": "Weeks",
-            "nl": "De weken"
+            "en": "weeks",
+            "nl": "de weken"
         }
     },
     "days of the week": {
         "roots": ["day", "week"],
-        "en": "Days of the week",
-        "nl": "De dagen van de week"
+        "en": "days of the week",
+        "nl": "de dagen van de week"
     }
 }
 ```
@@ -405,15 +411,15 @@ If the root concepts differ per language, an object with languages as keys can b
 ```json
 {
     "shirt": {
-        "en": "Shirt",
-        "fi": "Paita"
+        "en": "shirt",
+        "fi": "paita"
     },
     "sweater": {
         "roots": {
             "fi": "shirt"
         },
-        "en": "Sweater",
-        "fi": "Neulepaita"
+        "en": "sweater",
+        "fi": "neulepaita"
     }
 }
 ```
@@ -425,13 +431,13 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 ```json
 {
     "big": {
-        "en": "Big",
-        "nl": "Groot",
+        "en": "big",
+        "nl": "groot",
         "antonym": "small"
     },
     "small": {
-        "en": "Small",
-        "nl": "Klein",
+        "en": "small",
+        "nl": "klein",
         "antonym": "big"
     }
 }
@@ -464,15 +470,15 @@ Because the sources may disagree on the language level of words, we add the lang
             "A1": ["KK", "OD"],
             "A2": "EP"
         },
-        "en": "Thousand",
-        "fi": "Tuhat"
+        "en": "thousand",
+        "fi": "tuhat"
     },
     "2000": {
         "level": {
             "none": ["EP", "OD"]
         },
-        "en": "Two thousand",
-        "fi": "Kaksituhatta"
+        "en": "two thousand",
+        "fi": "kaksituhatta"
     }
 }
 ```

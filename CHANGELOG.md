@@ -12,7 +12,7 @@ Unfortunately, this version is backwards incompatible and progress information f
 
 ### Fixed
 
-- In the topic files, only have words with capitals when they start a sentence or are always written with an initial capital. Fixes [#242](https://github.com/fniessink/toisto/issues/242).
+- In the topic files, only have words with capitals when they start a sentence or are always written with an initial capital. Use proper punctuation for sentences. Compare answers case sensitive. Fixes [#242](https://github.com/fniessink/toisto/issues/242) and [#242](https://github.com/fniessink/toisto/issues/242).
 
 ### Added
 

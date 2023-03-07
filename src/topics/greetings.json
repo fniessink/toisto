@@ -7,12 +7,12 @@
                 "OD"
             ]
         },
-        "en": "Hi",
+        "en": "Hi!",
         "fi": [
-            "Hei",
-            "Moi"
+            "Hei!",
+            "Moi!"
         ],
-        "nl": "Hoi"
+        "nl": "Hoi!"
     },
     "hello": {
         "level": {
@@ -22,9 +22,9 @@
                 "OD"
             ]
         },
-        "en": "Hello",
-        "fi": "Terve",
-        "nl": "Hallo"
+        "en": "Hello!",
+        "fi": "Terve!",
+        "nl": "Hallo!"
     },
     "bye": {
         "level": {
@@ -35,17 +35,17 @@
             ]
         },
         "en": [
-            "Bye",
-            "Bye bye"
+            "Bye!",
+            "Bye bye!"
         ],
         "fi": [
-            "Hei hei",
-            "Moi moi"
+            "Hei hei!",
+            "Moi moi!"
         ],
         "nl": [
-            "Doei",
-            "Dag",
-            "Tot ziens"
+            "Doei!",
+            "Dag!",
+            "Tot ziens!"
         ]
     },
     "welcome": {
@@ -53,9 +53,9 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "en": "Welcome",
-        "fi": "Tervetuloa",
-        "nl": "Welkom"
+        "en": "Welcome!",
+        "fi": "Tervetuloa!",
+        "nl": "Welkom!"
     },
     "who are you": {
         "roots": [
@@ -68,9 +68,9 @@
     },
     "I am alice": {
         "roots": "to be",
-        "en": "I am Alice|I'm Alice",
-        "fi": "Minä olen Alice",
-        "nl": "Ik ben Alice"
+        "en": "I am Alice.|I'm Alice.",
+        "fi": "Minä olen Alice.",
+        "nl": "Ik ben Alice."
     },
     "how are you": {
         "roots": [
@@ -119,9 +119,9 @@
             "name",
             "to be"
         ],
-        "en": "My name is Bob",
-        "fi": "Minun nimeni on Bob",
-        "nl": "Mijn naam is Bob"
+        "en": "My name is Bob.",
+        "fi": "Minun nimeni on Bob.",
+        "nl": "Mijn naam is Bob."
     },
     "how old are you": {
         "roots": [
@@ -142,12 +142,12 @@
             "good",
             "morning"
         ],
-        "en": "Good morning",
+        "en": "Good morning!",
         "fi": [
-            "Hyvää huomenta",
-            "Huomenta"
+            "Hyvää huomenta!",
+            "Huomenta!"
         ],
-        "nl": "Goedemorgen"
+        "nl": "Goedemorgen!"
     },
     "good afternoon": {
         "level": {
@@ -168,10 +168,10 @@
                 "afternoon"
             ]
         },
-        "en": "Good afternoon",
+        "en": "Good afternoon!",
         "fi": [
-            "Hyvää päivää;afternoon",
-            "Päivää;afternoon"
+            "Hyvää päivää!;afternoon",
+            "Päivää!;afternoon"
         ],
         "nl": "Goedemiddag"
     },
@@ -186,12 +186,12 @@
             "good",
             "day"
         ],
-        "en": "Good day",
+        "en": "Good day!",
         "fi": [
-            "Hyvää päivää",
-            "Päivää"
+            "Hyvää päivää!",
+            "Päivää!"
         ],
-        "nl": "Goedendag"
+        "nl": "Goedendag!"
     },
     "good evening": {
         "level": {
@@ -202,12 +202,12 @@
             "good",
             "evening"
         ],
-        "en": "Good evening",
+        "en": "Good evening!",
         "fi": [
-            "Hyvää iltaa",
-            "Iltaa"
+            "Hyvää iltaa!",
+            "Iltaa!"
         ],
-        "nl": "Goedenavond"
+        "nl": "Goedenavond!"
     },
     "good night": {
         "level": {
@@ -218,9 +218,9 @@
             "good",
             "night"
         ],
-        "en": "Good night",
-        "fi": "Hyvää yötä",
-        "nl": "Goedenacht"
+        "en": "Good night!",
+        "fi": "Hyvää yötä!",
+        "nl": "Goedenacht!"
     },
     "sleep well": {
         "level": {
@@ -230,11 +230,11 @@
             ]
         },
         "roots": "to sleep",
-        "en": "Sleep well",
-        "fi": "Nuku hyvin",
+        "en": "Sleep well!",
+        "fi": "Nuku hyvin!",
         "nl": [
-            "Slaap lekker",
-            "Welterusten"
+            "Slaap lekker!",
+            "Welterusten!"
         ]
     }
 }

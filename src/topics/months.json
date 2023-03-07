@@ -50,14 +50,14 @@
             "fi": "moon"
         },
         "en": "January",
-        "fi": "Tammikuu",
-        "nl": "Januari"
+        "fi": "tammikuu",
+        "nl": "januari"
     },
     "in january": {
         "roots": "january",
-        "en": "In January",
-        "fi": "Tammikuussa",
-        "nl": "In januari"
+        "en": "In January.",
+        "fi": "Tammikuussa.",
+        "nl": "In januari."
     },
     "february": {
         "level": {
@@ -70,8 +70,8 @@
             "fi": "moon"
         },
         "en": "February",
-        "fi": "Helmikuu",
-        "nl": "Februari"
+        "fi": "helmikuu",
+        "nl": "februari"
     },
     "march": {
         "level": {
@@ -84,8 +84,8 @@
             "fi": "moon"
         },
         "en": "March",
-        "fi": "Maaliskuu",
-        "nl": "Maart"
+        "fi": "maaliskuu",
+        "nl": "maart"
     },
     "april": {
         "level": {
@@ -98,14 +98,14 @@
             "fi": "moon"
         },
         "en": "April",
-        "fi": "Huhtikuu",
-        "nl": "April"
+        "fi": "huhtikuu",
+        "nl": "april"
     },
     "in april": {
         "roots": "april",
-        "en": "In April",
-        "fi": "Huhtikuussa",
-        "nl": "In april"
+        "en": "In April.",
+        "fi": "Huhtikuussa.",
+        "nl": "In april."
     },
     "may": {
         "level": {
@@ -118,8 +118,8 @@
             "fi": "moon"
         },
         "en": "May",
-        "fi": "Toukokuu",
-        "nl": "Mei"
+        "fi": "toukokuu",
+        "nl": "mei"
     },
     "june": {
         "level": {
@@ -135,8 +135,8 @@
             ]
         },
         "en": "June",
-        "fi": "Kesäkuu",
-        "nl": "Juni"
+        "fi": "kesäkuu",
+        "nl": "juni"
     },
     "july": {
         "level": {
@@ -149,8 +149,8 @@
             "fi": "moon"
         },
         "en": "July",
-        "fi": "Heinäkuu",
-        "nl": "Juli"
+        "fi": "heinäkuu",
+        "nl": "juli"
     },
     "august": {
         "level": {
@@ -163,8 +163,8 @@
             "fi": "moon"
         },
         "en": "August",
-        "fi": "Elokuu",
-        "nl": "Augustus"
+        "fi": "elokuu",
+        "nl": "augustus"
     },
     "september": {
         "level": {
@@ -180,8 +180,8 @@
             ]
         },
         "en": "September",
-        "fi": "Syyskuu",
-        "nl": "September"
+        "fi": "syyskuu",
+        "nl": "september"
     },
     "october": {
         "level": {
@@ -194,8 +194,8 @@
             "fi": "moon"
         },
         "en": "October",
-        "fi": "Lokakuu",
-        "nl": "Oktober"
+        "fi": "lokakuu",
+        "nl": "oktober"
     },
     "november": {
         "level": {
@@ -208,8 +208,8 @@
             "fi": "moon"
         },
         "en": "November",
-        "fi": "Marraskuu",
-        "nl": "November"
+        "fi": "marraskuu",
+        "nl": "november"
     },
     "december": {
         "level": {
@@ -225,8 +225,8 @@
             ]
         },
         "en": "December",
-        "fi": "Joulukuu",
-        "nl": "December"
+        "fi": "joulukuu",
+        "nl": "december"
     },
     "it is july": {
         "roots": [
@@ -234,11 +234,11 @@
             "to be",
             "now"
         ],
-        "en": "It is July|It's July",
+        "en": "It is July.|It's July.",
         "fi": [
-            "Nyt on heinäkuu",
-            "On heinäkuu"
+            "Nyt on heinäkuu.",
+            "On heinäkuu."
         ],
-        "nl": "Het is juli"
+        "nl": "Het is juli."
     }
 }

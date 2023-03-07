@@ -12,9 +12,12 @@ class MatchTest(unittest.TestCase):
         """Test that equal strings match."""
         self.assertTrue(match("foo", "foo"))
 
-    def test_ignore_case(self):
-        """Test that case is ignored."""
-        self.assertTrue(match("foo", "FoO"))
+    def test_do_not_ignore_case(self):
+        """Test that case is not ignored."""
+        self.assertTrue(match("Foo", "Foo"))
+        self.assertFalse(match("foo", "Foo"))
+        self.assertTrue(match("FOO", "Foo", "FOO"))
+        self.assertFalse(match("foO", "Foo", "FOO"))
 
     def test_ignore_punctuation(self):
         """Test that punctuation is ignored."""
