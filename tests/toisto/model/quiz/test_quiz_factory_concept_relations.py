@@ -68,3 +68,15 @@ class AntonymConceptsTest(QuizFactoryTestCase):
         for concept, question, answer in [(big, "Big", "Small"), (small, "Small", "Big")]:
             antonym = self.create_quiz(concept, "en", "en", question, [answer], "antonym")
             self.assertIn(antonym, quizzes)
+
+    def test_antonym_quiz_order(self):
+        """Test that before quizzing for an antonym, the anytonym itself has been quizzed."""
+        big = self.create_concept("big", dict(antonym="small", en="Big"))
+        small = self.create_concept("small", dict(antonym="big", en="Small"))
+        quizzes = QuizFactory("en", "en").create_quizzes(big, small)
+        antonym_quizzes = {quiz for quiz in quizzes if "antonym" in quiz.quiz_types}
+        other_quizzes = quizzes - antonym_quizzes
+        for antonym_quiz in antonym_quizzes:
+            for other_quiz in other_quizzes:
+                message = f"{antonym_quiz.key} should be blocked by {other_quiz.key}, but isn't"
+                self.assertTrue(antonym_quiz.is_blocked_by({other_quiz}), message)
