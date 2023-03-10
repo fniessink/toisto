@@ -67,14 +67,6 @@ INSTRUCTIONS: dict[QuizType, str] = dict(
 )
 
 
-def instruction(*quiz_types: QuizType) -> str:
-    """Return the instruction text for the quiz types."""
-    if instruction_label := INSTRUCTIONS.get(quiz_types[0]):
-        return instruction_label
-    categories = " ".join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in quiz_types)
-    return f"Give the [underline]{categories}[/underline] in"
-
-
 @dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
@@ -87,16 +79,10 @@ class Quiz:
     quiz_types: tuple[QuizType, ...] = ("read",)
     blocked_by: tuple[Quiz, ...] = ()
     _meanings: Labels = Labels()
-    _hash: int = 0
-
-    def __post_init__(self) -> None:
-        """Initialize calculated attributes."""
-        # The dataclass is frozen, so some magic is needed to set the hash attribute.
-        super().__setattr__("_hash", hash(self.key))
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
-        return self._hash
+        return hash(self.key)
 
     def __eq__(self, other: object) -> bool:
         """Return whether this quiz is equal to the other."""
@@ -147,8 +133,12 @@ class Quiz:
     def instruction(self) -> str:
         """Generate the quiz instruction."""
         hint = self._question.hint
-        hint = f" ({hint})" if self.question_language != self.answer_language and hint else ""
-        return f"{instruction(*self.quiz_types)} {ALL_LANGUAGES[self.answer_language]}{hint}"
+        hint_label = f" ({hint})" if self.question_language != self.answer_language and hint else ""
+        instruction_label = INSTRUCTIONS.get(self.quiz_types[0])
+        if not instruction_label:
+            categories = " ".join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in self.quiz_types)
+            instruction_label = f"Give the [underline]{categories}[/underline] in"
+        return f"{instruction_label} {ALL_LANGUAGES[self.answer_language]}{hint_label}"
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
