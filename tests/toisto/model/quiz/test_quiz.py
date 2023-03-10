@@ -3,7 +3,7 @@
 from typing import get_args
 
 from toisto.model.language.concept import ConceptId
-from toisto.model.quiz.quiz import QuizType, instruction
+from toisto.model.quiz.quiz import QuizType
 
 from ....base import ToistoTestCase
 
@@ -74,9 +74,33 @@ class QuizTest(QuizTestCase):
 
     def test_instructions(self):
         """Test the instructions."""
-        for quiz_type in get_args(QuizType):
+        expected_instructions = [
+            "Translate into",
+            "Listen and write in",
+            "Translate into",
+            "Give the [underline]antonym[/underline] in",
+            "Give the [underline]plural[/underline] in",
+            "Give the [underline]singular[/underline] in",
+            "Give the [underline]male[/underline] in",
+            "Give the [underline]female[/underline] in",
+            "Give the [underline]neuter[/underline] in",
+            "Give the [underline]positive degree[/underline] in",
+            "Give the [underline]comparative degree[/underline] in",
+            "Give the [underline]superlative degree[/underline] in",
+            "Give the [underline]first person[/underline] in",
+            "Give the [underline]second person[/underline] in",
+            "Give the [underline]third person[/underline] in",
+            "Give the [underline]infinitive[/underline] in",
+            "Give the [underline]present tense[/underline] in",
+            "Give the [underline]past tense[/underline] in",
+            "Give the [underline]declarative[/underline] in",
+            "Give the [underline]interrogative[/underline] in",
+            "Give the [underline]affirmative[/underline] in",
+            "Give the [underline]negative[/underline] in",
+        ]
+        for expected_instruction, quiz_type in zip(expected_instructions, get_args(QuizType), strict=True):
             quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
-            self.assertEqual(instruction(quiz_type) + " Finnish", quiz.instruction())
+            self.assertEqual(expected_instruction + " Finnish", quiz.instruction())
 
     def test_instruction_with_hint(self):
         """Test that the question hint is added to the instruction."""
