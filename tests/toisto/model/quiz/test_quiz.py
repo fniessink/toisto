@@ -76,8 +76,8 @@ class QuizTest(QuizTestCase):
         """Test the instructions."""
         expected_instructions = [
             "Translate into",
-            "Listen and write in",
             "Translate into",
+            "Listen and write in",
             "Give the [underline]antonym[/underline] in",
             "Give the [underline]plural[/underline] in",
             "Give the [underline]singular[/underline] in",

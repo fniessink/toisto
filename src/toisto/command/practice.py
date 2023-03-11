@@ -1,10 +1,11 @@
 """Practice command."""
 
 from configparser import ConfigParser
+from typing import get_args
 
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quiz
+from toisto.model.quiz.quiz import ListenQuizType, Quiz
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkify
 from toisto.ui.speech import say
@@ -24,7 +25,7 @@ def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> tuple
 def do_quiz(quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
     """Do one quiz and update the progress."""
     console.print(instruction(quiz))
-    if "listen" not in quiz.quiz_types:
+    if quiz.quiz_types[0] not in get_args(ListenQuizType):
         console.print(linkify(quiz.question))
     answer, correct = do_quiz_attempt(quiz, config)
     if not correct and answer != "?":

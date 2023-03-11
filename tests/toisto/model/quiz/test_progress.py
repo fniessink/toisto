@@ -1,8 +1,10 @@
 """Progress unit tests."""
 
+from typing import get_args
+
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quizzes
+from toisto.model.quiz.quiz import Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import QuizFactory
 from toisto.model.quiz.topic import Topic, Topics
 
@@ -71,7 +73,7 @@ class ProgressTest(ToistoTestCase):
         concept = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = QuizFactory("nl", "en").create_quizzes(concept)
         progress = self.create_progress(quizzes)
-        self.assertTrue(progress.next_quiz().quiz_types in (("read",), ("write",)))
+        self.assertTrue(progress.next_quiz().quiz_types[0] in get_args(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""
