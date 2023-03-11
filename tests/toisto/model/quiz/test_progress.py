@@ -68,9 +68,10 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
-        listen = self.create_quiz(self.concept, "fi", "fi", "Englanti", ["Englanti"], "listen", blocked_by=(self.quiz,))
-        progress = self.create_progress({listen, self.quiz})
-        self.assertEqual(self.quiz, progress.next_quiz())
+        concept = self.create_concept("good", dict(en="good", nl="goed"))
+        quizzes = QuizFactory("nl", "en").create_quizzes(concept)
+        progress = self.create_progress(quizzes)
+        self.assertTrue(progress.next_quiz().quiz_types in (("read",), ("write",)))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""

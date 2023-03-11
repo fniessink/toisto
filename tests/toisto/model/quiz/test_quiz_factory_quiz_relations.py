@@ -1,4 +1,4 @@
-"""Unit tests for quiz relations that thw quiz factory creates."""
+"""Unit tests for quiz relations that the quiz factory creates."""
 
 from .test_quiz_factory import QuizFactoryTestCase
 
@@ -12,7 +12,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
         translation_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("write",))}
         listening_quizzes = {quiz for quiz in quizzes if quiz.quiz_types == ("listen",)}
         for quiz in listening_quizzes:
-            self.assertEqual(translation_quizzes, set(quiz.blocked_by), msg=quiz)
+            self.assertTrue(quiz.is_blocked_by(translation_quizzes))
 
     def test_non_grammatical_quizzes_block_grammatical_quizzes(self):
         """Test that listening and translation quizzes block grammatical quizzes."""
@@ -20,7 +20,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
         non_grammatical_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("listen",), ("write",))}
         grammatical_quizzes = {quiz for quiz in quizzes if quiz not in non_grammatical_quizzes}
         for quiz in grammatical_quizzes:
-            self.assertEqual(non_grammatical_quizzes, set(quiz.blocked_by), msg=quiz)
+            self.assertTrue(quiz.is_blocked_by(non_grammatical_quizzes))
 
     def test_earlier_grammatical_quizzes_block_later_grammatical_quizzes(self):
         """Test that e.g. quizzes for singular forms block quizzes for plural forms."""
@@ -28,7 +28,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
         singular_quizzes = {quiz for quiz in quizzes if "singular" in quiz.concept.concept_id}
         plural_quizzes = {quiz for quiz in quizzes if "plural" in quiz.concept.concept_id}
         for quiz in plural_quizzes:
-            self.assertTrue(singular_quizzes.issubset(set(quiz.blocked_by)), msg=quiz)
+            self.assertTrue(quiz.is_blocked_by(singular_quizzes))
 
     def test_constituent_concept_quizzes_block_composite_concept_quizzes(self):
         """Test that quizzes for constituent quizzes block quizzes for their composite concepts."""
@@ -36,7 +36,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
         composite_quizzes = {quiz for quiz in quizzes if "/" not in quiz.concept.concept_id}
         constituent_quizzes = {quiz for quiz in quizzes if "/" in quiz.concept.concept_id}
         for quiz in composite_quizzes:
-            self.assertEqual(constituent_quizzes, set(quiz.blocked_by), msg=quiz)
+            self.assertTrue(quiz.is_blocked_by(constituent_quizzes))
 
     def test_nested_constituent_concept_quizzes_block_composite_concept_quizzes(self):
         """Test that nested quizzes for constituent quizzes block quizzes for their composite concepts."""
@@ -44,4 +44,4 @@ class QuizRelationsTest(QuizFactoryTestCase):
         female_quizzes = {quiz for quiz in quizzes if "female" in quiz.concept.concept_id}
         male_quizzes = {quiz for quiz in quizzes if "cat/plural/male" in quiz.concept.concept_id}
         for quiz in male_quizzes:
-            self.assertTrue(female_quizzes.issubset(set(quiz.blocked_by)), msg=quiz)
+            self.assertTrue(quiz.is_blocked_by(female_quizzes))
