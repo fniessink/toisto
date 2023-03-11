@@ -1,5 +1,9 @@
 """Unit tests for quiz relations that the quiz factory creates."""
 
+from typing import get_args
+
+from toisto.model.quiz.quiz import GrammaticalQuizType, ListenQuizType, TranslationQuizType
+
 from .test_quiz_factory import QuizFactoryTestCase
 
 
@@ -9,16 +13,16 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_translation_quizzes_block_listening_quizzes(self):
         """Test that translation quizzes block listening quizzes."""
         quizzes = self.create_quizzes(self.create_noun(), "fi", "nl")
-        translation_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("write",))}
-        listening_quizzes = {quiz for quiz in quizzes if quiz.quiz_types == ("listen",)}
+        translation_quizzes = {quiz for quiz in quizzes if quiz.quiz_types[0] in get_args(TranslationQuizType)}
+        listening_quizzes = {quiz for quiz in quizzes if quiz.quiz_types[0] in get_args(ListenQuizType)}
         for quiz in listening_quizzes:
             self.assertTrue(quiz.is_blocked_by(translation_quizzes))
 
     def test_non_grammatical_quizzes_block_grammatical_quizzes(self):
         """Test that listening and translation quizzes block grammatical quizzes."""
         quizzes = self.create_quizzes(self.create_noun_with_grammatical_number(), "fi", "nl")
-        non_grammatical_quizzes = {quiz for quiz in quizzes if quiz.quiz_types in (("read",), ("listen",), ("write",))}
-        grammatical_quizzes = {quiz for quiz in quizzes if quiz not in non_grammatical_quizzes}
+        grammatical_quizzes = {quiz for quiz in quizzes if quiz in get_args(GrammaticalQuizType)}
+        non_grammatical_quizzes = quizzes - grammatical_quizzes
         for quiz in grammatical_quizzes:
             self.assertTrue(quiz.is_blocked_by(non_grammatical_quizzes))
 

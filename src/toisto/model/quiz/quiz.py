@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import Literal, cast
+from typing import Literal, cast, get_args
 
 from ..language import Language
 from ..language.concept import Concept
@@ -14,11 +14,10 @@ from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .match import match
 
-QuizType = Literal[
-    "read",
-    "listen",
-    "write",
-    "antonym",
+TranslationQuizType = Literal["read", "write"]
+ListenQuizType = Literal["listen"]
+SemanticQuizType = Literal["antonym"]
+GrammaticalQuizType = Literal[
     "pluralize",
     "singularize",
     "masculinize",
@@ -38,7 +37,8 @@ QuizType = Literal[
     "affirm",
     "negate",
 ]
-GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
+QuizType = Literal[TranslationQuizType, ListenQuizType, SemanticQuizType, GrammaticalQuizType]
+GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, GrammaticalQuizType] = {
     "plural": "pluralize",
     "singular": "singularize",
     "male": "masculinize",
@@ -59,7 +59,7 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, QuizType] = {
     "negative": "negate",
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
-INSTRUCTIONS: dict[QuizType, str] = dict(
+INSTRUCTIONS: dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str] = dict(
     read="Translate into",
     write="Translate into",
     listen="Listen and write in",
@@ -131,19 +131,23 @@ class Quiz:
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
-        if self.quiz_types == ("listen",):
+        if self.quiz_types[0] in get_args(ListenQuizType):
             return Labels()  # Other answers doesn't make sense if the user has to type what is spoken
         return tuple(answer for answer in self.answers if not match(guess, answer))
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
         hint = self._question.hint
-        hint_label = f" ({hint})" if self.question_language != self.answer_language and hint else ""
-        instruction_label = INSTRUCTIONS.get(self.quiz_types[0])
-        if not instruction_label:
-            categories = " ".join(QUIZ_TYPE_GRAMMATICAL_CATEGORIES[quiz_type] for quiz_type in self.quiz_types)
-            instruction_label = f"Give the [underline]{categories}[/underline] in"
-        return f"{instruction_label} {ALL_LANGUAGES[self.answer_language]}{hint_label}"
+        hint_text = f" ({hint})" if self.question_language != self.answer_language and hint else ""
+        if self.quiz_types[0] in get_args(GrammaticalQuizType):
+            categories = " ".join(
+                QUIZ_TYPE_GRAMMATICAL_CATEGORIES[cast(GrammaticalQuizType, quiz_type)] for quiz_type in self.quiz_types
+            )
+            instruction_text = f"Give the [underline]{categories}[/underline] in"
+        else:
+            quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
+            instruction_text = INSTRUCTIONS[quiz_type]
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{hint_text}"
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
