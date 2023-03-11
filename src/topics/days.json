@@ -277,10 +277,36 @@
         "fi": "huomenna",
         "nl": "morgen"
     },
+    "the day before yesterday": {
+        "level": {
+            "none": ["EP", "OD"]
+        },
+        "roots": {
+            "en": "yesterday",
+            "fi": "day",
+            "nl": "yesterday"
+        },
+        "en": "the day before yesterday",
+        "fi": "toissapäivänä",
+        "nl": "eergisteren"
+    },
+    "the day after tomorrow": {
+        "level": {
+            "none": ["EP", "OD"]
+        },
+        "roots": {
+            "en": ["day", "tomorrow"],
+            "fi": "tomorrow",
+            "nl": "tomorrow"
+        },
+        "en": "the day after tomorrow",
+        "fi": "ylihuomenna",
+        "nl": "overmorgen"
+    },
     "this week": {
         "level": {
-            "EP": null,
-            "OD": "A1"
+            "A1": "OD",
+            "none": "EP"
         },
         "roots": "week",
         "en": "this week",
@@ -340,5 +366,15 @@
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"
+    },
+    "good weekend": {
+        "roots": {
+            "en": ["good", "weekend"],
+            "fi": "weekend",
+            "nl": "weekend"
+        },
+        "en": "Good weekend!",
+        "fi": "Hauskaa viikonloppua!",
+        "nl": "Prettig weekend!"
     }
 }
