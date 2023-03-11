@@ -77,7 +77,7 @@ class Quiz:
     _question: Label
     _answers: Labels
     quiz_types: tuple[QuizType, ...] = ("read",)
-    blocked_by: tuple[Quiz, ...] = ()
+    _blocked_by: tuple[Quiz, ...] = ()
     _meanings: Labels = Labels()
 
     def __hash__(self) -> int:
@@ -118,6 +118,11 @@ class Quiz:
         """Return all answers."""
         answers = [answer.spelling_alternatives for answer in self._answers]
         return cast(Labels, tuple(chain(*answers)))
+
+    @property
+    def blocked_by(self) -> tuple[Quiz, ...]:
+        """Return the quizzes blocking this quiz."""
+        return self._blocked_by
 
     @property
     def meanings(self) -> Labels:
