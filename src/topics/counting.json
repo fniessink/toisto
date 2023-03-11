@@ -9,6 +9,24 @@
         "fi": "laskea",
         "nl": "tellen"
     },
+    "number": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "number",
+            "fi": "numero",
+            "nl": "het getal"
+        },
+        "plural": {
+            "en": "numbers",
+            "fi": "numerot",
+            "nl": "de getallen"
+        }
+    },
     "1": {
         "level": {
             "A1": [
@@ -214,7 +232,7 @@
         ],
         "en": "sixteen",
         "fi": "kuusitoista",
-        "nl": "Zestien"
+        "nl": "zestien"
     },
     "17": {
         "level": {
@@ -454,6 +472,21 @@
         "fi": "kaksisataa",
         "nl": "tweehonderd"
     },
+    "300": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": [
+            "3",
+            "100"
+        ],
+        "en": "three hundred",
+        "fi": "kolmesataa",
+        "nl": "driehonderd"
+    },
     "1000": {
         "level": {
             "A1": [
@@ -480,5 +513,69 @@
         "en": "two thousand",
         "fi": "kaksituhatta",
         "nl": "tweeduizend"
+    },
+    "500000": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": [
+            "5",
+            "100",
+            "1000"
+        ],
+        "en": "five hunderd thousand",
+        "fi": "viisisataatuhatta",
+        "nl": "vijfhonderdduizend"
+    },
+    "1000000": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP"
+        },
+        "en": "million",
+        "fi": "miljoona",
+        "nl": "miljoen"
+    },
+    "2000000": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": [
+            "2",
+            "1000000"
+        ],
+        "en": "two million",
+        "fi": "kaksi miljoonaa",
+        "nl": "twee miljoen"
+    },
+    "1000000000": {
+        "level": {
+            "A2": "OD",
+            "B2": "EP"
+        },
+        "en": "billion",
+        "fi": "miljardi",
+        "nl": "miljard"
+    },
+    "5000000000": {
+        "level": {
+            "node": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": [
+            "5",
+            "1000000000"
+        ],
+        "en": "five billion",
+        "fi": "viisi miljardia",
+        "nl": "vijf miljard"
     }
 }
