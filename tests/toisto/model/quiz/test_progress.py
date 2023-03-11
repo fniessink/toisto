@@ -116,7 +116,7 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
-        concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl="nl{index}")) for index in range(5)]
+        concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
         quizzes = list(QuizFactory("nl", "fi").create_quizzes(*concepts))
         progress = self.create_progress(quizzes)
         for index in range(3):
