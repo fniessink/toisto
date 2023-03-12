@@ -424,6 +424,8 @@ If the root concepts differ per language, an object with languages as keys can b
 }
 ```
 
+If the plural of a compound word is easily derived from the plural of the last root, Toisto may omit the plural of the compound word in the built-in topic files.
+
 #### Antonyms
 
 When one concept is an antonym (opposite) of another concept, this can be specified with the `antonym` relation. Toisto will add quizzes to ask users for the antonym of concepts in their target language.
