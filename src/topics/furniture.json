@@ -134,6 +134,25 @@
             "nl": "de lampen"
         }
     },
+    "table lamp": {
+        "roots": [
+            "table",
+            "lamp"
+        ],
+        "en": "table lamp",
+        "fi": "pöytälamppu",
+        "nl": "de tafellamp"
+    },
+    "dining table": {
+        "roots": {
+            "en": "table",
+            "fi": ["food", "table"],
+            "nl": ["to eat", "table"]
+        },
+        "en": "dining table",
+        "fi": "ruokapöytä",
+        "nl": "de eettafel"
+    },
     "curtain": {
         "level": {
             "A2": "EP",
@@ -149,6 +168,15 @@
             "fi": "verhot",
             "nl": "de gordijnen"
         }
+    },
+    "roller blind": {
+        "roots": {
+            "fi": "curtain",
+            "nl": "curtain"
+        },
+        "en": "roller blind",
+        "fi": "rullaverho",
+        "nl": "het rolgordijn"
     },
     "carpet": {
         "level": {

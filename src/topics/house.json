@@ -252,22 +252,12 @@
                 "to live"
             ]
         },
-        "singular": {
-            "en": "living room",
-            "fi": "olohuone",
-            "nl": [
-                "de huiskamer",
-                "de woonkamer"
-            ]
-        },
-        "plural": {
-            "en": "living rooms",
-            "fi": "olohuoneet",
-            "nl": [
-                "de huiskamers",
-                "de woonkamers"
-            ]
-        }
+        "en": "living room",
+        "fi": "olohuone",
+        "nl": [
+            "de huiskamer",
+            "de woonkamer"
+        ]
     },
     "kitchen": {
         "level": {
@@ -287,6 +277,30 @@
             "nl": "de keukens"
         }
     },
+    "dining room": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": [
+                "room"
+            ],
+            "fi": [
+                "food",
+                "root"
+            ],
+            "nl": [
+                "to eat",
+                "room"
+            ]
+        },
+        "en": "dining room",
+        "fi": "ruokahuone",
+        "nl": "de eetkamer"
+    },
     "bedroom": {
         "level": {
             "A1": [
@@ -305,16 +319,9 @@
                 "to sleep"
             ]
         },
-        "singular": {
-            "en": "bedroom",
-            "fi": "makuuhuone",
-            "nl": "de slaapkamer"
-        },
-        "plural": {
-            "en": "bedrooms",
-            "fi": "makuuhuoneet",
-            "nl": "de slaapkamers"
-        }
+        "en": "bedroom",
+        "fi": "makuuhuone",
+        "nl": "de slaapkamer"
     },
     "bathroom": {
         "level": {
@@ -324,15 +331,8 @@
             ]
         },
         "roots": "room",
-        "singular": {
-            "en": "bathroom",
-            "fi": "kylpyhuone",
-            "nl": "de badkamer"
-        },
-        "plural": {
-            "en": "bathrooms",
-            "fi": "kylpyhuoneet",
-            "nl": "de badkamers"
-        }
+        "en": "bathroom",
+        "fi": "kylpyhuone",
+        "nl": "de badkamer"
     }
 }

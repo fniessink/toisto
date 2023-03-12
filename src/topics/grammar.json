@@ -1,0 +1,95 @@
+{
+    "word": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "word",
+            "fi": "sana",
+            "nl": "het woord"
+        },
+        "plural": {
+            "en": "words",
+            "fi": "sanat",
+            "nl": "de woorden"
+        }
+    },
+    "compound word": {
+        "roots": "word",
+        "en": "compound word",
+        "fi": "yhdyssana",
+        "nl": "het samengestelde woord"
+    },
+    "phrase": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "phrase",
+            "fi": "fraasi",
+            "nl": "de frase"
+        },
+        "plural": {
+            "en": "phrases",
+            "fi": "fraasit",
+            "nl": "de frasen|de frases"
+        }
+    },
+    "sentence": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "sentence",
+            "fi": "lause",
+            "nl": "de zin"
+        },
+        "plural": {
+            "en": "sentences",
+            "fi": "lauseet",
+            "nl": "de zinnen"
+        }
+    },
+    "vowel": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "singular": {
+            "en": "vowel",
+            "fi": "vokaali",
+            "nl": "de klinker"
+        },
+        "plural": {
+            "en": "vowels",
+            "fi": "vokaalit",
+            "nl": "de klinkers"
+        }
+    },
+    "consonant": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "roots": {
+            "nl": "vowel"
+        },
+        "singular": {
+            "en": "consonant",
+            "fi": "konsonantti",
+            "nl": "de medeklinker"
+        },
+        "plural": {
+            "en": "consonants",
+            "fi": "konsonantit",
+            "nl": "de medeklinkers"
+        }
+    }
+}
