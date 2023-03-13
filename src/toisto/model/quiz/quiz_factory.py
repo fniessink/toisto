@@ -95,9 +95,9 @@ class QuizFactory:
         """Create antonym quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
         labels = concept.labels(target_language)
-        blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
         for antonym in concept.antonyms:
+            antonym_quizzes = self.translation_quizzes(antonym, Quizzes()) | self.listening_quizzes(antonym, Quizzes())
             antonym_labels = antonym.labels(target_language)
             meanings = concept.meanings(source_language) + antonym.meanings(source_language)
             quizzes |= Quizzes(
@@ -108,7 +108,7 @@ class QuizFactory:
                     label,
                     antonym_labels,
                     ("antonym",),
-                    blocked_by,
+                    tuple(previous_quizzes | antonym_quizzes),
                     meanings,
                 )
                 for label in labels
