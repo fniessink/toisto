@@ -16,7 +16,7 @@ ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
 
 
-@dataclass
+@dataclass(frozen=True)
 class RelatedConcepts:
     """Class representing the relations of a concept with other concepts.
 
@@ -66,7 +66,7 @@ class RelatedConcepts:
         return tuple(Concept.instances[concept_id] for concept_id in concept_ids if concept_id in Concept.instances)
 
 
-@dataclass
+@dataclass(frozen=True)
 class Concept:
     """Class representing language concepts.
 

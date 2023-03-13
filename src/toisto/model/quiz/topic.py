@@ -23,7 +23,7 @@ class Topic:
         return hash(self.name)
 
 
-@dataclass
+@dataclass(frozen=True)
 class Topics:
     """Collection of topics."""
 

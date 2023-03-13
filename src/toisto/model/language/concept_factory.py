@@ -27,7 +27,7 @@ CompositeConceptDict = dict[
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
-@dataclass
+@dataclass(frozen=True)
 class ConceptFactory:
     """Create concepts from the concept dict."""
 
