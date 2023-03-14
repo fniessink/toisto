@@ -95,19 +95,19 @@ class ProgressTest(ToistoTestCase):
         """Test that the first quizzes test the singular concept."""
         morning = self.create_concept(
             "morning",
-            dict(singular=dict(fi="Aamu", nl="De ochtend"), plural=dict(fi="Aamut", nl="De ochtenden")),
+            dict(singular=dict(fi="Aamu", nl="de ochtend"), plural=dict(fi="aamut", nl="de ochtenden")),
         )
         afternoon = self.create_concept(
             "afternoon",
             dict(
                 roots="morning",
-                singular=dict(fi="Iltapäivä", nl="De middag"),
-                plural=dict(fi="Iltapäivät", nl="De middagen"),
+                singular=dict(fi="iltapäivä", nl="de middag"),
+                plural=dict(fi="iltapäivät", nl="de middagen"),
             ),
         )
         evening = self.create_concept(
             "evening",
-            dict(roots="afternoon", singular=dict(fi="Ilta", nl="De avond"), plural=dict(fi="Illat", nl="De avonden")),
+            dict(roots="afternoon", singular=dict(fi="ilta", nl="de avond"), plural=dict(fi="illat", nl="de avonden")),
         )
         quizzes = QuizFactory("fi", "nl").create_quizzes(morning, afternoon, evening)
         progress = self.create_progress(quizzes)
@@ -128,8 +128,8 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_has_lower_language_level(self):
         """Test that the next quiz has the lowest language level of the eligible quizzes."""
-        morning = self.create_concept("morning", dict(level=dict(A1="EP"), fi="Aamu", nl="De ochtend"))
-        noon = self.create_concept("noon", dict(level=dict(A2="EP"), fi="Keskipäivä", nl="De middag"))
+        morning = self.create_concept("morning", dict(level=dict(A1="EP"), fi="aamu", nl="de ochtend"))
+        noon = self.create_concept("noon", dict(level=dict(A2="EP"), fi="keskipäivä", nl="de middag"))
         quizzes = QuizFactory("fi", "nl").create_quizzes(morning, noon)
         self.assertEqual("morning", self.create_progress(quizzes).next_quiz().concept.concept_id)
 

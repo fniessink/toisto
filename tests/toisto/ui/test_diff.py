@@ -49,4 +49,4 @@ class DiffTest(unittest.TestCase):
 
     def test_make_inserted_whitespace_not_visible(self):
         """Test that inserted whitespace is not made visible."""
-        self.assertEqual(f"[inserted]{linkify('De morgen')}[/inserted]", colored_diff("uhm", "De morgen"))
+        self.assertEqual(f"[inserted]{linkify('de morgen')}[/inserted]", colored_diff("uhm", "de morgen"))
