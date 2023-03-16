@@ -19,7 +19,7 @@ SortColumn = Literal["attempts", "retention"]
 RETENTION_ATTRIBUTE = dict(attempts="count", retention="length")
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuizSorter:
     """Class to provide a sort function to sort quizzes."""
 

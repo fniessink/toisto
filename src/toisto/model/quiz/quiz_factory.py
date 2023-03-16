@@ -12,7 +12,7 @@ from ..language.concept import Concept
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 
 
-@dataclass
+@dataclass(frozen=True)
 class QuizFactory:
     """Create quizzes for concepts."""
 
