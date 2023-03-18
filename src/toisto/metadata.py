@@ -21,7 +21,12 @@ BUILT_IN_LANGUAGES = [Language("en"), Language("fi"), Language("nl")]
 _data_folder = pathlib.Path(__file__).parent.parent
 TOPIC_JSON_FILES = sorted((_data_folder / "topics").glob("*.json"))
 LANGUAGES_FILE = _data_folder / "languages" / "iana-language-subtag-registry.txt"
-PROGRESS_JSON = pathlib.Path.home() / f".{NAME.lower()}-progress.json"
+
+
+def get_progress_filepath(target_language: Language) -> pathlib.Path:
+    """Return the filename of the progress file for the specified target language."""
+    return pathlib.Path.home() / f".{NAME.lower()}-progress-{target_language}.json"
+
 
 TOPICS = [json_file.stem for json_file in TOPIC_JSON_FILES]
 

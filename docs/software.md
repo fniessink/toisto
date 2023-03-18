@@ -517,7 +517,9 @@ If a user knows the correct answer the first time a quiz is presented, the quiz 
 
 ## Progress savefile
 
-When the program is stopped, progress is saved in a file named `.toisto-progress.json` in the user's home folder. Each entry in the file is the progress of one specific quiz. The key denotes the quiz, the value contains information about the user's retention of the quiz. This looks as follows:
+When the program is stopped, progress is saved in a file named `.toisto-progress-{target language}.json` in the user's home folder, for example `.toisto-progress-fi.json`. So each target language gets its own progress file.
+
+Each entry in the file is the progress of one specific quiz. The key denotes the quiz, the value contains information about the user's retention of the quiz. This looks as follows:
 
 ```json
 {

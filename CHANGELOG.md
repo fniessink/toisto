@@ -19,6 +19,10 @@ Unfortunately, this version is backwards incompatible and progress information f
 
 - Allow for specifying the meaning of concepts that have no label in a language. Closes [#138](https://github.com/fniessink/toisto/issues/138).
 
+### Changed
+
+- Save progress for different target languages in different files. The progress files are saved in the user's home directory as before, but now include the target language in the filename, for example `/home/user/.toisto-progress-fi.json`. Closes [#271](https://github.com/fniessink/toisto/issues/271).
+
 ## 0.8.2 - 2023-02-18
 
 ### Fixed

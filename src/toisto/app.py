@@ -33,7 +33,7 @@ def main() -> None:
         args.topic_file,
         argument_parser,
     )
-    progress = load_progress(topics, argument_parser)
+    progress = load_progress(topics, args.target_language, argument_parser)
     if args.command == "practice":
         show_welcome(latest_version())
         practice(progress, config)
