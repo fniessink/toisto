@@ -2,6 +2,7 @@
 
 from typing import get_args
 
+from toisto.model.language import Language
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes, TranslationQuizType
@@ -19,12 +20,12 @@ class ProgressTest(ToistoTestCase):
         self.concept = self.create_concept(ConceptId("english"))
         self.quiz = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"])
         self.another_quiz = self.create_quiz(self.concept, "nl", "fi", "Engels", ["Englanti"])
-        self.progress = Progress({}, Topics(set()))
+        self.progress = Progress({}, Topics(set()), Language("fi"))
 
     def create_progress(self, *topic_quizzes: Quizzes) -> Progress:
         """Create progress for the quizzes."""
         topics = Topics({Topic(f"topic{index}", (), quizzes) for index, quizzes in enumerate(topic_quizzes)})
-        return Progress({}, topics)
+        return Progress({}, topics, Language("fi"))
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
@@ -119,7 +120,7 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = list(QuizFactory("nl", "fi").create_quizzes(*concepts))
+        quizzes = list(QuizFactory("fi", "nl").create_quizzes(*concepts))
         progress = self.create_progress(quizzes)
         for index in range(3):
             progress.increase_retention(quizzes[index])

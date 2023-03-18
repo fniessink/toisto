@@ -2,19 +2,23 @@
 
 from collections import deque
 
+from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 
 from .quiz import Quiz, Quizzes
 from .retention import Retention
 from .topic import Topics
 
+ProgressDict = dict[str, dict[str, str | int]]
+
 
 class Progress:
     """Keep track of progress on quizzes."""
 
-    def __init__(self, progress_dict: dict[str, dict[str, str | int]], topics: Topics) -> None:
+    def __init__(self, progress_dict: ProgressDict, topics: Topics, target_language: Language) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.__topics = topics
+        self.target_language = target_language
         self.__recent_concepts: deque[Concept] = deque(maxlen=2)  # Recent concepts to skip when selecting next quiz
         self.__quizzes_by_concept: dict[Concept, Quizzes] = {}
         for quiz in self.__topics.quizzes:

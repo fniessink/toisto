@@ -4,6 +4,7 @@ from configparser import ConfigParser
 from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
+from toisto.model.language import Language
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.topic import Topic, Topics
@@ -24,7 +25,7 @@ class PracticeTest(ToistoTestCase):
         self.concept = self.create_concept(ConceptId("hi"))
         quiz = self.create_quiz(self.concept, "fi", "nl", "Terve", ["Hoi"])
         topics = Topics({Topic("topic", (), {quiz})})
-        self.progress = Progress({}, topics)
+        self.progress = Progress({}, topics, Language("fi"))
 
     def practice(self, progress: Progress | None = None) -> Mock:
         """Run the practice command and return the patch print statement."""
@@ -59,7 +60,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the question is not printed on a listening quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen")
         topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics))
+        patched_print = self.practice(Progress({}, topics, "fi"))
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
@@ -67,7 +68,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
         topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics))
+        patched_print = self.practice(Progress({}, topics, "fi"))
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
@@ -77,7 +78,7 @@ class PracticeTest(ToistoTestCase):
         concept = self.create_concept("house")
         quiz = self.create_quiz(concept, "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
         topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics))
+        patched_print = self.practice(Progress({}, topics, "fi"))
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 

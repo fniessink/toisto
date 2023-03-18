@@ -2,6 +2,7 @@
 
 from unittest import TestCase
 
+from toisto.model.language import Language
 from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
@@ -20,7 +21,7 @@ class FeedbackTestCase(ToistoTestCase):
         self.concept = self.create_concept(ConceptId("hello"))
         self.quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
         self.guess = Label("Terve")
-        self.progress = Progress({}, Topics(set()))
+        self.progress = Progress({}, Topics(set()), Language("nl"))
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
