@@ -25,7 +25,7 @@ class ProgressTest(ToistoTestCase):
     def create_progress(self, *topic_quizzes: Quizzes) -> Progress:
         """Create progress for the quizzes."""
         topics = Topics({Topic(f"topic{index}", (), quizzes) for index, quizzes in enumerate(topic_quizzes)})
-        return Progress({}, topics, Language("fi"))
+        return Progress({}, topics, Language("fi"), skip_concepts=2)
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
