@@ -19,7 +19,7 @@ class Topic:
     quizzes: Quizzes
 
     def __hash__(self) -> int:
-        """Return the hash of the file name."""
+        """Return the hash of the topic name."""
         return hash(self.name)
 
 

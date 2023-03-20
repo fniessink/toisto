@@ -7,16 +7,9 @@
             ]
         },
         "roots": "day",
-        "singular": {
-            "en": "holiday",
-            "fi": "juhlapäivä",
-            "nl": "de feestdag"
-        },
-        "plural": {
-            "en": "holidays",
-            "fi": "juhlapäivät",
-            "nl": "de feestdagen"
-        }
+        "en": "holiday",
+        "fi": "juhlapäivä",
+        "nl": "de feestdag"
     },
     "christmas": {
         "level": {
