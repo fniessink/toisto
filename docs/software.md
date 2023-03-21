@@ -531,13 +531,14 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 2. Quizzes to listen to a concept in the target language and then type in what was said.
 3. Quizzes to translate a concept from the source language to the target language.
 4. Quizzes to singularize a plural concept or pluralize a singular concept.
-5. Quizzes to change the person of a concept.
-6. Quizzes to change the gender of a concept.
-7. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
-8. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
-9. Quizzes to change the sentence form from declarative to interrogative and vice versa.
-10. Quizzes to change the polarity from affirmative to negative and vice versa.
-11. Quizzes to give the antonym.
+5. Quizzes to diminutize a concept.
+6. Quizzes to change the person of a concept.
+7. Quizzes to change the gender of a concept.
+8. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
+9. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
+10. Quizzes to change the sentence form from declarative to interrogative and vice versa.
+11. Quizzes to change the polarity from affirmative to negative and vice versa.
+12. Quizzes to give the antonym.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 
@@ -571,8 +572,8 @@ Each entry in the file is the progress of one specific quiz. The key denotes the
 }
 ```
 
-The first entry is the quiz to translate "Lezen" from Dutch to Finnish. This quiz has been presented to the user twice (`count` is 2), but they haven't answered it correctly since the last time it was presented.
+The first entry is the quiz to translate "lezen" from Dutch to Finnish. This quiz has been presented to the user twice (`count` is 2), but they haven't answered it correctly since the last time it was presented.
 
-The second entry is the quiz to translate "Het oog" from Dutch to Finnish. This quiz has been presented to the user three times (`count` is 3) in the period between `start` and `end` and they have answered it correctly each time. Toisto will not present to quiz again until after `skip_until`.
+The second entry is the quiz to translate "het oog" from Dutch to Finnish. This quiz has been presented to the user three times (`count` is 3) in the period between `start` and `end` and they have answered it correctly each time. Toisto will not present to quiz again until after `skip_until`.
 
 The keys in the savefile contain the question label of quizzes. That means that when the label of a concept changes, for example to fix spelling, progress on quizzes that use the label will be lost.
