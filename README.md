@@ -4,6 +4,8 @@ Command-line app to practice languages. *Toisto* is Finnish and means *reiterati
 
 Toisto is beta software at the moment. It comes with a limited set of words and phrases in Dutch, English, and Finnish.
 
+Heads up: as long as Toisto is in beta the progress file format may change occasionally, causing your progress to be lost.
+
 ## User guide
 
 ### Prerequisites
@@ -73,7 +75,7 @@ To prevent having to pass your language level as command-line argument each time
 levels = A1 A2 B1
 ```
 
-Note that not all words and phrases have a language level associated with them. This means that specifying `levels = A1 A2 B1 B2 C1 C2` will cause Toisto to load only words and phrases with a language level.
+Note that not all words and phrases have a language level associated with them. This means that specifying `levels = A1 A2 B1 B2 C1 C2` will cause Toisto to load only words and phrases with a known language level.
 
 #### How to configure a different mp3 player
 
@@ -92,7 +94,7 @@ Make sure the mp3 player is on the `PATH` or put the complete filepath in the co
 
 ```console
 $ toisto practice --target fi --source nl
- Welcome to Toisto v0.8.0!
+👋 Welcome to Toisto v0.9.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 
@@ -110,31 +112,29 @@ How does it work?
   while clicking the word. Not all terminals may support this.
 ● To quit: type Ctrl-C or Ctrl-D.
 
-Translate into Finnish:
-Zij komt uit het Noorden
-> hän tuluu pohjoisesta
-⚠️  Incorrect. Please try again.
-> hän kuluu pohjoisesta
-❌ Incorrect. The correct answer is "Hän tulee pohjoisesta".
+Translate into Dutch:
+musta
+> zwart
+✅ Correct.
 
 Translate into Dutch:
-Pohjoisessa on kylmä
-> het is koud in het noorden
+valkoinen
+> wit
+✅ Correct.
+
+Translate into Dutch:
+keltainen
+> oranje
+⚠️  Incorrect. Please try again.
+> geel
 ✅ Correct.
 
 Translate into Finnish:
-Zij komt uit het Noorden
-> hän tulee pohjoisesta
-✅ Correct.
-Another correct answer is "Hän on kotoisin pohjoisesta".
-
-Translate into Dutch:
-Hyvää yötä
-> Goedenavond
+oranje
+> oransi
 ⚠️  Incorrect. Please try again.
-> Goedenacht
-✅ Correct.
-Another correct answer is "Welterusten".
+> oransie
+❌ Incorrect. The correct answer is "oranssi".
 ```
 
 ### How it works
@@ -143,13 +143,15 @@ Toisto quizzes you repeatably on words and phrases in the language you want to p
 
 At the moment, Toisto has the following types of quizzes:
 
-- Translate a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "Maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "Vrijdag").
+- Translate a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "vrijdag").
 - Listen to a word or phrase from your target language and type what you hear. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
-- Give a singular version of a plural, or a plural version of a singular. For example, what is the plural of "Talo" (meaning house in Finnish, and the answer is "Talot") or what is the singular of "Huizen" (meaning houses in Dutch, and the answer is "Huis").
-- Change the grammatical person from and to first person, second person, and third person. For example, when asked what the second person of "Ik eet" (meaning "I eat") is, the correct answer would be "Jij eet" ("You eat").
-- Change the tense of verbs from present to past tense or the other way around. For example, what is the past tense of "She walks" or what is the present tense version of "He painted".
-- Change the comparative degree of an adjective. For example, what is the superlative degree of "Aardig" (which means "Nice", and the answer would be "Aardigst").
-- Change the sentence type of declarative sentences into interrogative sentences and vice versa. For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?"
+- Give a singular version of a plural, or a plural version of a singular. For example, what is the plural of "talo" (meaning house in Finnish, and the answer is "talot") or what is the singular of "de huizen" (meaning the houses in Dutch, and the answer would be "het huis").
+- Give the diminutive form of a word. For example, what is the diminutive form of "het huis" in Dutch (meaning house in Dutch and the answer would be "het huisje").
+- Change the grammatical person from and to first person, second person, and third person. For example, when asked what the second person of "ik eet" (meaning "I eat") is, the correct answer would be "jij eet" ("you eat").
+- Change the tense of verbs from present to past tense or the other way around. For example, what is the past tense of "she walks" or what is the present tense version of "he painted".
+- Change the comparative degree of an adjective. For example, what is the superlative degree of "aardig" (which means "nice", and the answer would be "aardigst").
+- Give the antonym of adjectives. For example, what is the antonym of "good"? The answer of course being "bad".
+- Change the sentence type of declarative sentences into interrogative sentences and vice versa. For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?".
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
 

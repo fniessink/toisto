@@ -25,11 +25,11 @@ Run the unit tests as follows:
 
 ```console
 $ green
-.........................................................................................................
+.......................................................................................................................................................................................................
 
-Ran 105 tests in 0.483s using 8 processes
+Ran 199 tests in 2.127s using 8 processes
 
-OK (passes=105)
+OK (passes=199)
 ```
 
 To run the unit tests and get a coverage report, use:
@@ -44,7 +44,7 @@ Run mypy to check for typing issues:
 
 ```console
 $ mypy src tests
-Success: no issues found in 49 source files
+Success: no issues found in 70 source files
 ```
 
 Run Ruff to check for linting issues:
@@ -66,7 +66,7 @@ Run Black to format the code:
 ```console
 $ black src tests
 All done! ✨ 🍰 ✨
-67 files left unchanged.
+70 files left unchanged.
 ```
 
 ## How to release
@@ -74,6 +74,12 @@ All done! ✨ 🍰 ✨
 Update the [changelog](../CHANGELOG.md)
 
 Update the version number in [`pyproject.toml`](../pyproject.toml).
+
+Clean up old build and dist files:
+
+```console
+$ rm -rf build dist
+```
 
 Create the distribution files by running:
 
