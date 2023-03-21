@@ -81,6 +81,7 @@ class QuizTest(QuizTestCase):
             "Give the [underline]antonym[/underline] in",
             "Give the [underline]plural[/underline] in",
             "Give the [underline]singular[/underline] in",
+            "Give the [underline]diminutive[/underline] in",
             "Give the [underline]male[/underline] in",
             "Give the [underline]female[/underline] in",
             "Give the [underline]neuter[/underline] in",

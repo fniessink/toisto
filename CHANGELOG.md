@@ -18,6 +18,7 @@ Unfortunately, this version is backwards incompatible and progress information f
 ### Added
 
 - Allow for specifying the meaning of concepts that have no label in a language. Closes [#138](https://github.com/fniessink/toisto/issues/138).
+- Allow for adding diminutives to concepts. Closes [#240](https://github.com/fniessink/toisto/issues/240).
 
 ### Changed
 

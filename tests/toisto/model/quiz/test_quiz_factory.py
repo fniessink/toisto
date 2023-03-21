@@ -779,3 +779,41 @@ class GrammaticalPolarityTest(ToistoTestCase):
             },
             self.create_quizzes(concept, "nl", "en"),
         )
+
+
+class DiminutiveTest(ToistoTestCase):
+    """Unit tests for diminutive forms."""
+
+    def test_diminutive(self):
+        """Test that quizzes can be generated for diminutive forms."""
+        concept = self.create_concept("car", dict(root=dict(nl="de auto"), diminutive=dict(nl="het autootje")))
+        root, diminutive = concept.constituents
+        self.assertEqual(
+            {
+                self.create_quiz(root, "nl", "nl", "de auto", ["de auto"], "listen"),
+                self.create_quiz(diminutive, "nl", "nl", "het autootje", ["het autootje"], "listen"),
+                self.create_quiz(concept, "nl", "nl", "de auto", ["het autootje"], "diminutize"),
+            },
+            self.create_quizzes(concept, "nl", "en"),
+        )
+
+    def test_diminutive_and_translation(self):
+        """Test that quizzes can be generated for diminutive forms."""
+        concept = self.create_concept(
+            "car",
+            {
+                "root": dict(en="car", nl="de auto"),
+                "diminutive": dict(nl="het autootje"),
+            },
+        )
+        root, diminutive = concept.constituents
+        self.assertEqual(
+            {
+                self.create_quiz(root, "nl", "en", "de auto", ["car"], "read"),
+                self.create_quiz(root, "nl", "nl", "de auto", ["de auto"], "listen"),
+                self.create_quiz(root, "en", "nl", "car", ["de auto"], "write"),
+                self.create_quiz(diminutive, "nl", "nl", "het autootje", ["het autootje"], "listen"),
+                self.create_quiz(concept, "nl", "nl", "de auto", ["het autootje"], "diminutize"),
+            },
+            self.create_quizzes(concept, "nl", "en"),
+        )

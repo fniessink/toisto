@@ -81,9 +81,11 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
         for concept1, concept2 in paired_leaf_concepts(concept):
+            quiz_types = grammatical_quiz_types(concept1, concept2)
+            if not quiz_types:
+                continue
             labels1, labels2 = concept1.labels(target_language), concept2.labels(target_language)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
-            quiz_types = grammatical_quiz_types(concept1, concept2)
             quizzes |= Quizzes(
                 Quiz(concept, target_language, target_language, label1, (label2,), quiz_types, blocked_by, meanings)
                 for label1, label2 in zip(labels1, labels2, strict=False)
@@ -120,7 +122,7 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
     """Return the quiz types to change the grammatical category of concept1 into that of concept2."""
     quiz_types = []
     for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
-        if category1 != category2 and category2 is not None:
+        if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
     return tuple(quiz_types)
 

@@ -7,15 +7,29 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "car",
-            "fi": "auto",
-            "nl": "de auto"
+        "root": {
+            "singular": {
+                "en": "car",
+                "fi": "auto",
+                "nl": "de auto"
+            },
+            "plural": {
+                "en": "cars",
+                "fi": "autot",
+                "nl": "de auto's"
+            }
         },
-        "plural": {
-            "en": "cars",
-            "fi": "autot",
-            "nl": "de auto's"
+        "diminutive": {
+            "singular": {
+                "en": "(little car)",
+                "fi": "(pieni auto)",
+                "nl": "het autootje"
+            },
+            "plural": {
+                "en": "(little cars)",
+                "fi": "(pienet autot)",
+                "nl": "de autootjes"
+            }
         }
     },
     "elevator": {
@@ -24,12 +38,18 @@
             "none": "EP"
         },
         "singular": {
-            "en": ["elevator", "lift"],
+            "en": [
+                "elevator",
+                "lift"
+            ],
             "fi": "hissi",
             "nl": "de lift"
         },
         "plural": {
-            "en": ["elevators", "lifts"],
+            "en": [
+                "elevators",
+                "lifts"
+            ],
             "fi": "hissit",
             "nl": "de liften"
         }

@@ -138,6 +138,42 @@ The format of the JSON files is as follows:
 }
 ```
 
+### Diminutive
+
+When a concept has a diminutive, the diminutive be included in the JSON file by using `root` for the base form of the concept and `diminutive` for the diminutive form:
+
+```json
+{
+    "table": {
+        "root": {
+            "nl": "de tafel"
+        },
+        "diminutive": {
+            "nl": "het tafeltje"
+        }
+    }
+}
+```
+
+With the example above, Toisto will quiz users with Dutch as target language for the diminutive form of "de tafel".
+
+Note that in many languages, diminutives can (also) be formed by using multi-word constructions such as "little table". Though possible, it is not recommended to add these to the topic files because then Toisto will quiz both the translation of the multi-word construction as well as the diminutive form of the root, wich seems superfluous. To help the user understand the meaning of the diminutive, include the multi-word construction as follows (see the section [Concepts without label in some languages](#concepts-without-label-in-some-languages) above):
+
+```json
+{
+    "table": {
+        "root": {
+            "en": "table"
+            "nl": "de tafel"
+        },
+        "diminutive": {
+            "en": "(little table)",
+            "nl": "het tafeltje"
+        }
+    }
+}
+```
+
 ### Grammatical gender
 
 When concepts have multiple genders, these can be specified as follows:
