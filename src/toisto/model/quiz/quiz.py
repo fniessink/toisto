@@ -20,6 +20,7 @@ SemanticQuizType = Literal["antonym"]
 GrammaticalQuizType = Literal[
     "pluralize",
     "singularize",
+    "diminutize",
     "masculinize",
     "feminize",
     "neuterize",
@@ -41,6 +42,7 @@ QuizType = Literal[TranslationQuizType, ListenQuizType, SemanticQuizType, Gramma
 GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, GrammaticalQuizType] = {
     "plural": "pluralize",
     "singular": "singularize",
+    "diminutive": "diminutize",
     "male": "masculinize",
     "female": "feminize",
     "neuter": "neuterize",

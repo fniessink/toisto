@@ -173,15 +173,32 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "child",
-            "fi": "lapsi",
-            "nl": "het kind"
+        "root": {
+            "singular": {
+                "en": "child",
+                "fi": "lapsi",
+                "nl": "het kind"
+            },
+            "plural": {
+                "en": "children",
+                "fi": "lapset",
+                "nl": "de kinderen"
+            }
         },
-        "plural": {
-            "en": "children",
-            "fi": "lapset",
-            "nl": "de kinderen"
+        "diminutive": {
+            "singular": {
+                "en": "(little child)",
+                "nl": "het kindje",
+                "fi": "(pieni lapsi)"
+            },
+            "plural": {
+                "en": "(little children)",
+                "nl": [
+                    "de kindjes",
+                    "de kindertjes"
+                ],
+                "fi": "(pienet lapset)"
+            }
         }
     },
     "sister": {
@@ -191,15 +208,29 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "sister",
-            "fi": "sisko",
-            "nl": "de zus"
+        "root": {
+            "singular": {
+                "en": "sister",
+                "fi": "sisko",
+                "nl": "de zus"
+            },
+            "plural": {
+                "en": "sisters",
+                "fi": "siskot",
+                "nl": "de zussen"
+            }
         },
-        "plural": {
-            "en": "sisters",
-            "fi": "siskot",
-            "nl": "de zussen"
+        "diminutive": {
+            "singular": {
+                "en": "(little sister)",
+                "nl": "het zusje",
+                "fi": "pikkusisko"
+            },
+            "plural": {
+                "en": "(little sisters)",
+                "nl": "de zusjes",
+                "fi": "pikkusiskot"
+            }
         }
     },
     "brother": {
@@ -209,15 +240,29 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "brother",
-            "fi": "veli",
-            "nl": "de broer"
+        "root": {
+            "singular": {
+                "en": "brother",
+                "fi": "veli",
+                "nl": "de broer"
+            },
+            "plural": {
+                "en": "brothers",
+                "fi": "veljet",
+                "nl": "de broers"
+            }
         },
-        "plural": {
-            "en": "brothers",
-            "fi": "veljet",
-            "nl": "de broers"
+        "diminutive": {
+            "singular": {
+                "en": "(little brother)",
+                "nl": "het broertje",
+                "fi": "pikkuveli"
+            },
+            "plural": {
+                "en": "(little brothers)",
+                "nl": "de broertjes",
+                "fi": "pikkuveljet"
+            }
         }
     },
     "sibling": {
@@ -289,15 +334,29 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "daughter",
-            "fi": "tytär",
-            "nl": "de dochter"
+        "root": {
+            "singular": {
+                "en": "daughter",
+                "fi": "tytär",
+                "nl": "de dochter"
+            },
+            "plural": {
+                "en": "daughters",
+                "fi": "tyttäret",
+                "nl": "de dochters"
+            }
         },
-        "plural": {
-            "en": "daughters",
-            "fi": "tyttäret",
-            "nl": "de dochters"
+        "diminutive": {
+            "singular": {
+                "en": "(little  daughter)",
+                "nl": "het dochtertje",
+                "fi": "(pieni tytär)"
+            },
+            "plural": {
+                "en": "(little  daughters)",
+                "nl": "de dochtertjes",
+                "fi": "(pienet tytäret)"
+            }
         }
     },
     "son": {
@@ -308,15 +367,29 @@
                 "OD"
             ]
         },
-        "singular": {
-            "en": "son",
-            "fi": "poika",
-            "nl": "de zoon"
+        "root": {
+            "singular": {
+                "en": "son",
+                "fi": "poika",
+                "nl": "de zoon"
+            },
+            "plural": {
+                "en": "sons",
+                "fi": "pojat",
+                "nl": "de zonen"
+            }
         },
-        "plural": {
-            "en": "sons",
-            "fi": "pojat",
-            "nl": "de zonen"
+        "diminutive": {
+            "singular": {
+                "en": "(little son)",
+                "nl": "het zoontje",
+                "fi": "(pieni poika)"
+            },
+            "plural": {
+                "en": "(little sons)",
+                "nl": "de zoontjes",
+                "fi": "(pienet pojat)"
+            }
         }
     },
     "wife": {
