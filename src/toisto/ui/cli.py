@@ -6,7 +6,7 @@ from typing import get_args
 
 from rich_argparse import RichHelpFormatter
 
-from ..metadata import BUILT_IN_LANGUAGES, HOMEPAGE_URL, SUMMARY, TOPICS, VERSION, latest_version
+from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, TOPICS, VERSION, latest_version
 from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 
@@ -129,7 +129,7 @@ def add_command(
 
 def create_argument_parser(config: ConfigParser) -> ArgumentParser:
     """Create the argument parser."""
-    epilog = f"See {HOMEPAGE_URL}/blob/main/README.md for more information."
+    epilog = f"See {README_URL} for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
