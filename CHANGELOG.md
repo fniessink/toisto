@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.10.0 - Unreleased
+
+### Added
+
+- Make `practice` the default command. Closes [#278](https://github.com/fniessink/toisto/issues/278).
+
 ## 0.9.0 - 2023-03-21
 
 ### Note

@@ -94,7 +94,7 @@ Make sure the mp3 player is on the `PATH` or put the complete filepath in the co
 
 ```console
 $ toisto practice --target fi --source nl
-👋 Welcome to Toisto v0.9.0!
+👋 Welcome to Toisto v0.10.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 
