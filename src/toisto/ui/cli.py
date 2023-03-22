@@ -1,5 +1,6 @@
 """Command-line interface."""
 
+import sys
 from argparse import ArgumentParser, ArgumentTypeError, _SubParsersAction
 from configparser import ConfigParser
 from typing import get_args
@@ -134,14 +135,15 @@ def create_argument_parser(config: ConfigParser) -> ArgumentParser:
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
     argument_parser.add_argument("-V", "--version", action="version", version=version)
-    command_help = "type `%(prog)s {command} --help` for more information on a command"
+    command_help = "type `%(prog)s {command} --help` for more information on a command; default: practice"
     subparser_action = argument_parser.add_subparsers(
         dest="command",
         title="commands",
         help=command_help,
-        required=True,
     )
     add_practice_command(subparser_action, config)
     add_progress_command(subparser_action, config)
     add_topics_command(subparser_action, config)
+    if not {"practice", "progress", "topics", "-h", "--help", "-V", "--version"} & set(sys.argv):
+        sys.argv.insert(1, "practice")  # Insert practice as default subcommand
     return argument_parser
