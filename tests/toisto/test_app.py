@@ -14,6 +14,8 @@ from toisto.model.language.concept import Concept
 class AppTest(unittest.TestCase):
     """Unit tests for the main method."""
 
+    topic_file_count = 0  # Counter for generating unique topic files
+
     def setUp(self):
         """Set up test fixtures."""
         Concept.instances = {}
@@ -25,10 +27,15 @@ class AppTest(unittest.TestCase):
     @patch("pathlib.Path.open")
     def run_main(self, path_open: Mock) -> Mock:
         """Run the main function and return the patched print method."""
-        path_open.return_value.__enter__.return_value.read.return_value = '{"xxx": {"nl": "XXX", "fi": "YYY"}}\n'
+        path_open.return_value.__enter__.return_value.read.side_effect = self.read_topic_file
         with patch("rich.console.Console.print") as patched_print, suppress(SystemExit):
             main()
         return patched_print
+
+    def read_topic_file(self):
+        """Generate a unique topic file."""
+        self.topic_file_count += 1
+        return f'{{"concept-{self.topic_file_count}": {{"fi": "fi", "nl": "nl"}}}}\n'
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--topic-file", "test"])
     @patch("requests.get")
@@ -52,7 +59,7 @@ class AppTest(unittest.TestCase):
         """Test that the practice command does not show the current version."""
         requests_get.return_value = Mock(json=Mock(return_value=[dict(name=VERSION)]))
         patched_print = self.run_main()
-        self.assertTrue("[quiz]" in patched_print.call_args_list[3][0][0])
+        self.assertFalse(VERSION in patched_print.call_args_list[3][0][0])
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--topic-file", "test"])
     @patch("requests.get")

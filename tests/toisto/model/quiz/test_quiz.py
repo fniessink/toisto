@@ -1,9 +1,9 @@
 """Quiz unit tests."""
 
-from typing import get_args
+from typing import cast, get_args
 
 from toisto.model.language.concept import ConceptId
-from toisto.model.language.concept_factory import create_concept
+from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.quiz.quiz import QuizType
 
 from ....base import ToistoTestCase
@@ -14,7 +14,7 @@ class QuizTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.concept = create_concept(ConceptId("english"))
+        self.concept = create_concept(ConceptId("english"), cast(ConceptDict, {}))
         self.quiz = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"])
 
 

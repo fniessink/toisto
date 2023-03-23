@@ -40,6 +40,25 @@ If you add new languages to the built-in topic files, or create your own topic f
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
+### Multiple topics per concept
+
+Concepts automatically belong to the topic of the topic file they are included in, but it's also possible to add a concept to one or more other topics, for example:
+
+```json
+{
+    "car": {
+        "topics": [
+            "travel",
+            "vehicles"
+        ],
+        "en": "car",
+        "nl": "de auto"
+    }
+}
+```
+
+The `topics` value is a list of topic identifiers. If a concept has exactly one additional topic, the `topics` value can be a string instead of a list of topic identifiers.
+
 ### Letter case and punctuation in labels
 
 Labels can use both uppercase and lowercase letters, and any mix of them. Toisto will check the answers to quizzes in a case sensitive manner.

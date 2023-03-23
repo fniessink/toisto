@@ -14,7 +14,7 @@ class ShowTopicsTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        concept = create_concept("hello", dict(fi="Terve", nl="Hoi"), topics={"topic"})
+        concept = create_concept("hello", dict(fi="Terve", nl="Hoi"), topic="topic")
         self.quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
         self.concepts = {concept}
 
