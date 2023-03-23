@@ -153,7 +153,7 @@ At the moment, Toisto has the following types of quizzes:
 - Give the antonym of adjectives. For example, what is the antonym of "good"? The answer of course being "bad".
 - Change the sentence type of declarative sentences into interrogative sentences and vice versa. For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?".
 
-When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress.json` in your home folder.
+When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress-{target language}.json` in your home folder, for example `.toisto-progress-fi.json`.
 
 ## Further documentation
 
