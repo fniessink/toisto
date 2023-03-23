@@ -135,7 +135,7 @@ def create_argument_parser(config: ConfigParser) -> ArgumentParser:
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
     argument_parser.add_argument("-V", "--version", action="version", version=version)
-    command_help = "type `%(prog)s {command} --help` for more information on a command; default: practice"
+    command_help = "default: practice; type `%(prog)s {command} --help` for more information on a command"
     subparser_action = argument_parser.add_subparsers(
         dest="command",
         title="commands",
