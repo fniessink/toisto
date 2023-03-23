@@ -2,7 +2,9 @@
 
 ## Topics
 
-Built-in topics are located in `src/topics` in the form of JSON files. Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-f/--topic-file` command-line option.
+Built-in topics are located in `src/topics` in the form of JSON files. Users can specify which built-in topics to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available built-in topics.
+
+Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-f/--topic-file` command-line option.
 
 ## Concepts and labels
 
@@ -46,7 +48,7 @@ Labels that contain complete sentences or utterances (for example, "Hello!") are
 
 ### Labels with spelling variants
 
-When there are multiple ways to spell a label, use the pipe symbol to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
+When there are multiple ways to spell a label, use the pipe symbol (`|`) to separate the alternatives. Toisto will only use the first of the alternatives to quiz the user, but will accept the other alternatives as answer.
 
 ```json
 {
@@ -90,7 +92,7 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 
 Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 
-If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The hint is the part after the `;`.
+If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The hint is the part after the semicolon (`;`).
 
 In the topic file this looks as follows:
 
@@ -140,7 +142,7 @@ The format of the JSON files is as follows:
 
 ### Diminutive
 
-When a concept has a diminutive, the diminutive be included in the JSON file by using `root` for the base form of the concept and `diminutive` for the diminutive form:
+When a concept has a diminutive, the diminutive can be included in the JSON file by using `root` for the base form of the concept and `diminutive` for the diminutive form:
 
 ```json
 {
@@ -263,9 +265,9 @@ The format of the JSON files is as follows:
 }
 ```
 
-Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the `;`.
+Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the semicolon (`;`).
 
-The same goes for the third person Finnish. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
+The third person in Finnish also needs a hint. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
 ### Infinitive
 
@@ -345,7 +347,7 @@ Degrees of comparison are specified as follows:
 }
 ```
 
-When there are synonyms, they need to be in the same order in every degree. This makes sure Toisto does not consider "Suurin" a superlative of "Iso".
+When there are synonyms, they need to be in the same order in every degree. This makes sure Toisto does not consider "suurin" a superlative of "iso".
 
 ```json
 {
@@ -460,7 +462,7 @@ If the root concepts differ per language, an object with languages as keys can b
 }
 ```
 
-If the plural of a compound word is easily derived from the plural of the last root, Toisto may omit the plural of the compound word in the built-in topic files.
+If the plural of a compound word is easily derived from the plural of the last root, built-in topic files may omit the plural of the compound word.
 
 #### Antonyms
 
@@ -481,7 +483,7 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 }
 ```
 
-If a concept has more than one antonym (for example, large and big are both antonyms of small), the `antonym` value can be a list of concept identifiers instead of a string.
+If a concept has more than one antonym (for example, "large" and "big" are both antonyms of "small"), the `antonym` value can be a list of concept identifiers instead of a string.
 
 ### Concept levels
 
