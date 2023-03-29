@@ -17,7 +17,7 @@
             "none": "EP"
         },
         "en": "Christmas",
-        "fi": "Joulu",
+        "fi": "joulu",
         "nl": "Kerstmis"
     },
     "christmas eve": {
@@ -34,7 +34,7 @@
             ]
         },
         "en": "Christmas Eve",
-        "fi": "Jouluaatto",
+        "fi": "jouluaatto",
         "nl": "kerstavond"
     },
     "christmas day": {
@@ -47,7 +47,7 @@
             "day"
         ],
         "en": "Christmas Day",
-        "fi": "Joulupäivä",
+        "fi": "joulupäivä",
         "nl": "eerste kerstdag"
     },
     "boxing day": {
@@ -64,7 +64,7 @@
             ]
         },
         "en": "Boxing Day",
-        "fi": "Tapaninpäivä",
+        "fi": "tapaninpäivä",
         "nl": "tweede kerstdag"
     },
     "merry christmas": {
@@ -80,7 +80,10 @@
                 "good",
                 "christmas"
             ],
-            "nl": "christmas"
+            "nl": [
+                "cheerful",
+                "christmas"
+            ]
         },
         "en": "Merry Christmas!",
         "fi": "Hyvää joulua!",
@@ -218,6 +221,25 @@
         "en": "Easter",
         "fi": "Pääsiäinen",
         "nl": "Pasen"
+    },
+    "happy easter": {
+        "roots": {
+            "en": [
+                "happy",
+                "easter"
+            ],
+            "fi": [
+                "good",
+                "easter"
+            ],
+            "nl": [
+                "cheerful",
+                "easter"
+            ]
+        },
+        "en": "Happy Easter!",
+        "fi": "Hyvää pääsiäistä!",
+        "nl": "Vrolijk Pasen!"
     },
     "first of may": {
         "level": {

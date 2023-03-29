@@ -28,6 +28,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -52,7 +53,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "antonym": "cheap",
         "positive degree": {
@@ -76,7 +78,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "antonym": "expensive",
         "positive degree": {
@@ -99,6 +102,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -146,7 +150,8 @@
     "light (not heavy)": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B2": "KK"
         },
         "positive degree": {
             "en": "light",
@@ -290,6 +295,7 @@
     },
     "cute": {
         "level": {
+            "B1": "KK",
             "B2": "OD",
             "none": "EP"
         },
@@ -337,7 +343,7 @@
     "quiet": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": ["EP", "KK"]
         },
         "positive degree": {
             "en": "quiet",
@@ -359,6 +365,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -383,7 +390,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "antonym": "cold",
         "positive degree": {
@@ -407,7 +415,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "positive degree": {
             "en": "round",
@@ -453,6 +462,7 @@
         "level": {
             "B1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -527,7 +537,8 @@
             "B1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "positive degree": {
             "en": "tasty",
@@ -550,7 +561,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "antonym": "fast",
         "positive degree": {
@@ -572,7 +584,8 @@
     "sweet": {
         "level": {
             "A1": "EP",
-            "A2": "OD"
+            "A2": "OD",
+            "B1": "KK"
         },
         "positive degree": {
             "en": "sweet",
@@ -662,7 +675,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "antonym": "dry",
         "positive degree": {
@@ -686,7 +700,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "antonym": "wet",
         "positive degree": {
@@ -709,6 +724,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -733,6 +749,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -757,6 +774,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -774,6 +792,27 @@
             "en": "happiest",
             "fi": "onnellisin",
             "nl": "gelukkigst"
+        }
+    },
+    "cheerful": {
+        "level": {
+            "A1": "KK",
+            "B1": ["EP", "OD"]
+        },
+        "positive degree": {
+            "en": "cheerful",
+            "fi": "iloinen",
+            "nl": "vrolijk"
+        },
+        "comparative degree": {
+            "en": "cheerfuller",
+            "fi": "iloisempi",
+            "nl": "vrolijker"
+        },
+        "superlative degree": {
+            "en": "cheerfullest",
+            "fi": "iloisin",
+            "nl": "vrolijkst"
         }
     }
 }

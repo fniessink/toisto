@@ -4,7 +4,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "body",
@@ -66,7 +67,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "hair",
@@ -87,7 +89,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "nose",
@@ -104,6 +107,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -122,6 +126,7 @@
         "level": {
             "B1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -141,7 +146,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "tooth",
@@ -176,7 +182,10 @@
     "back": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "back",
@@ -192,7 +201,8 @@
     "shoulder": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "roots": {
             "fi": "head"
@@ -213,7 +223,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "hand"
@@ -271,6 +282,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -287,6 +299,7 @@
     },
     "belly": {
         "level": {
+            "A2": "KK",
             "C2": "OD",
             "none": "EP"
         },
@@ -309,7 +322,10 @@
     },
     "knee": {
         "level": {
-            "A2": "OD",
+            "A2": [
+                "OD",
+                "KK"
+            ],
             "B1": "EP"
         },
         "singular": {
@@ -364,7 +380,8 @@
     "toe": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "toe",

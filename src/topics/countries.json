@@ -19,6 +19,13 @@
         }
     },
     "finland": {
+        "level": {
+            "A1": "KK",
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
         "roots": {
             "nl": "country"
         },
@@ -27,6 +34,13 @@
         "nl": "Finland"
     },
     "estland": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "roots": {
             "nl": "country"
         },
@@ -85,6 +99,13 @@
         "nl": "Frankrijk"
     },
     "england": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "roots": {
             "nl": "country"
         },

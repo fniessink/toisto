@@ -42,7 +42,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C2": "KK"
         },
         "roots": "week",
         "singular": {
@@ -70,7 +71,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "day",
@@ -101,7 +103,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "day",
@@ -123,7 +126,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "day",
@@ -152,7 +156,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "roots": {
             "en": "day",
@@ -174,7 +179,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "day",
@@ -196,7 +202,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "day",
@@ -218,7 +225,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "roots": {
             "en": "day",
@@ -279,7 +287,11 @@
     },
     "the day before yesterday": {
         "level": {
-            "none": ["EP", "OD"]
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "roots": {
             "en": "yesterday",
@@ -292,10 +304,17 @@
     },
     "the day after tomorrow": {
         "level": {
-            "none": ["EP", "OD"]
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "roots": {
-            "en": ["day", "tomorrow"],
+            "en": [
+                "day",
+                "tomorrow"
+            ],
             "fi": "tomorrow",
             "nl": "tomorrow"
         },
@@ -369,7 +388,10 @@
     },
     "good weekend": {
         "roots": {
-            "en": ["good", "weekend"],
+            "en": [
+                "good",
+                "weekend"
+            ],
             "fi": "weekend",
             "nl": "weekend"
         },

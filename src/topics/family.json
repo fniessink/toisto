@@ -14,7 +14,10 @@
     "grandma": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "grandma",
@@ -36,7 +39,8 @@
     "grandpa": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C1": "KK"
         },
         "singular": {
             "en": "grandpa",
@@ -58,7 +62,8 @@
     "grandmother": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C1": "KK"
         },
         "roots": {
             "en": "mother",
@@ -71,21 +76,15 @@
                 "mother"
             ]
         },
-        "singular": {
-            "en": "grandmother",
-            "fi": "isoäiti",
-            "nl": "de grootmoeder"
-        },
-        "plural": {
-            "en": "grandmothers",
-            "fi": "isoäidit",
-            "nl": "de grootmoeders"
-        }
+        "en": "grandmother",
+        "fi": "isoäiti",
+        "nl": "de grootmoeder"
     },
     "grandfather": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "none": "KK"
         },
         "roots": {
             "en": "father",
@@ -98,21 +97,15 @@
                 "father"
             ]
         },
-        "singular": {
-            "en": "grandfather",
-            "fi": "isoisä",
-            "nl": "de grootvader"
-        },
-        "plural": {
-            "en": "grandfathers",
-            "fi": "isoisät",
-            "nl": "de grootvaders"
-        }
+        "en": "grandfather",
+        "fi": "isoisä",
+        "nl": "de grootvader"
     },
     "married": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B2": "KK"
         },
         "en": "married",
         "fi": "naimisissa",
@@ -121,7 +114,8 @@
     "divorced": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "en": "divorced",
         "fi": "eronnut",
@@ -205,6 +199,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -237,6 +232,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -267,7 +263,10 @@
     },
     "sibling": {
         "level": {
-            "B2": "OD",
+            "B2": [
+                "KK",
+                "OD"
+            ],
             "C2": "EP"
         },
         "roots": {
@@ -290,7 +289,8 @@
     "cousin": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B1": "KK"
         },
         "singular": {
             "en": "cousin",
@@ -306,7 +306,8 @@
     "grandchild": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C1": "KK"
         },
         "roots": {
             "en": "child",
@@ -331,6 +332,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -432,6 +434,7 @@
     },
     "spouse": {
         "level": {
+            "A2": "KK",
             "C1": "OD",
             "C2": "OD"
         },
@@ -451,7 +454,8 @@
             "B1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "en": "marriage",
         "fi": "avioliitto",
@@ -483,7 +487,8 @@
     "grandparent": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C1": "KK"
         },
         "roots": {
             "en": "parent",
@@ -496,38 +501,28 @@
                 "parent"
             ]
         },
-        "singular": {
-            "en": "grandparent",
-            "fi": "isovanhempi",
-            "nl": "de grootouder"
-        },
-        "plural": {
-            "en": "grandparents",
-            "fi": "isovanhemmat",
-            "nl": "de grootouders"
-        }
+        "en": "grandparent",
+        "fi": "isovanhempi",
+        "nl": "de grootouder"
     },
     "parent-in-law": {
         "level": {
             "B1": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "roots": "parent",
-        "singular": {
-            "en": "parent-in-law",
-            "fi": "appivanhempi",
-            "nl": "de schoonouder"
-        },
-        "plural": {
-            "en": "parents-in-law",
-            "fi": "appivanhemmat",
-            "nl": "de schoonouders"
-        }
+        "en": "parent-in-law",
+        "fi": "appivanhempi",
+        "nl": "de schoonouder"
     },
     "mother-in-law": {
         "level": {
             "B1": "OD",
-            "B2": "EP"
+            "B2": "EP",
+            "none": "KK"
         },
         "roots": "mother",
         "singular": {
@@ -544,7 +539,8 @@
     "father-in-law": {
         "level": {
             "B1": "OD",
-            "B2": "EP"
+            "B2": "EP",
+            "none": "KK"
         },
         "roots": "father",
         "singular": {
@@ -563,7 +559,8 @@
             "B2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": "father",
         "singular": {
@@ -582,7 +579,8 @@
             "B2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": "mother",
         "singular": {

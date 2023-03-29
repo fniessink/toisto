@@ -22,7 +22,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "orange",
@@ -42,7 +43,10 @@
     "hotdog": {
         "level": {
             "A2": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "roots": {
             "en": [
@@ -70,7 +74,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C2": "KK"
         },
         "singular": {
             "en": "cheese",
@@ -127,7 +132,10 @@
     "chicken": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "chicken",
@@ -143,7 +151,10 @@
     "dressing": {
         "level": {
             "C1": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "dressing",
@@ -159,7 +170,10 @@
     "ketchup": {
         "level": {
             "B2": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "ketchup",
@@ -176,7 +190,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "bread",
@@ -194,7 +209,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "meat",
@@ -212,7 +228,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "milk",
@@ -228,6 +245,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -243,6 +261,13 @@
         }
     },
     "mämmi": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "singular": {
             "en": "(traditional Finnish Easter dessert)",
             "fi": "mämmi",
@@ -257,7 +282,8 @@
     "strawberry": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "strawberry",
@@ -273,7 +299,8 @@
     "spice": {
         "level": {
             "B1": "EP",
-            "B2": "OD"
+            "B2": "OD",
+            "C2": "KK"
         },
         "singular": {
             "en": "spice",
@@ -291,7 +318,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C2": "KK"
         },
         "singular": {
             "en": "juice",
@@ -309,7 +337,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "singular": {
             "en": "apple",
@@ -327,7 +356,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "roots": {
             "nl": "apple"
@@ -346,7 +376,8 @@
     "steak": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "steak",
@@ -362,7 +393,8 @@
     "pepper": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "pepper",
@@ -378,7 +410,8 @@
     "salad": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C1": "KK"
         },
         "singular": {
             "en": "salad",
@@ -394,7 +427,8 @@
     "mustard": {
         "level": {
             "C1": "EP",
-            "C2": "OD"
+            "C2": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "mustard",
@@ -410,7 +444,8 @@
     "onion": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "C2": "KK"
         },
         "singular": {
             "en": "onion",
@@ -428,7 +463,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "lemon",
@@ -446,7 +482,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "singular": {
             "en": "sugar",
@@ -464,7 +501,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C2": "KK"
         },
         "singular": {
             "en": "salt",
@@ -482,7 +520,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "singular": {
             "en": "tomato",
@@ -522,7 +561,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "bread"
@@ -541,7 +581,8 @@
     "nut": {
         "level": {
             "A2": "OD",
-            "B2": "EP"
+            "B2": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "nut",
@@ -559,7 +600,8 @@
             "B2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "cherry",
@@ -575,7 +617,8 @@
     "pear": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "pear",
@@ -591,7 +634,10 @@
     "cauliflower": {
         "level": {
             "C1": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "roots": "flower",
         "singular": {
@@ -610,7 +656,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "roots": {
             "nl": "chair"
@@ -629,7 +676,8 @@
     "garlic": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "roots": {
             "fi": [
@@ -653,7 +701,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "bean",
@@ -669,6 +718,7 @@
     "cookie": {
         "level": {
             "A2": "OD",
+            "B2": "KK",
             "none": "EP"
         },
         "singular": {
@@ -687,7 +737,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "cake",
@@ -705,7 +756,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "en": "cream",
         "fi": "kerma",
@@ -714,7 +766,10 @@
     "whipped cream": {
         "level": {
             "C1": "OD",
-            "none": "EP"
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
         "roots": "cream",
         "en": "whipped cream",
@@ -726,7 +781,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "roots": {
             "en": [
@@ -752,7 +808,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "banana",

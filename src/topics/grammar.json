@@ -3,6 +3,7 @@
         "level": {
             "A1": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -18,6 +19,13 @@
         }
     },
     "compound word": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "roots": "word",
         "en": "compound word",
         "fi": "yhdyssana",
@@ -26,7 +34,8 @@
     "phrase": {
         "level": {
             "A1": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "phrase",
@@ -44,7 +53,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "sentence",
@@ -60,7 +70,8 @@
     "vowel": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "vowel",
@@ -76,7 +87,8 @@
     "consonant": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "roots": {
             "nl": "vowel"
@@ -91,5 +103,15 @@
             "fi": "konsonantit",
             "nl": "de medeklinkers"
         }
+    },
+    "alphabet": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "en": "alphabet",
+        "fi": "aakkoset",
+        "nl": "het alfabet"
     }
 }
