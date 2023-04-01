@@ -2,6 +2,7 @@
 
 import sys
 import unittest
+from contextlib import suppress
 from unittest.mock import Mock, patch
 
 import requests
@@ -25,7 +26,7 @@ class AppTest(unittest.TestCase):
     def run_main(self, path_open: Mock) -> Mock:
         """Run the main function and return the patched print method."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"xxx": {"nl": "XXX", "fi": "YYY"}}\n'
-        with patch("rich.console.Console.print") as patched_print:
+        with patch("rich.console.Console.print") as patched_print, suppress(SystemExit):
             main()
         return patched_print
 
@@ -76,3 +77,13 @@ class AppTest(unittest.TestCase):
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Topic"))
+
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--topic", "easter"])
+    @patch("webbrowser.open", Mock())
+    @patch("time.sleep", Mock())
+    @patch("requests.get")
+    def test_show_easter_egg(self, requests_get: Mock):
+        """Test the easter egg."""
+        requests_get.return_value = self.latest_version
+        patched_print = self.run_main()
+        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("🎉🐇🐣 Happy Easter! 🎉🐇🐣"))
