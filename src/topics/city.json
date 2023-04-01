@@ -40,7 +40,8 @@
     "monument": {
         "level": {
             "B1": "EP",
-            "B2": "OD"
+            "B2": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "monument",
@@ -55,6 +56,7 @@
     },
     "theater": {
         "level": {
+            "A2": "KK",
             "B2": "OD",
             "none": "EP"
         },
@@ -74,7 +76,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "singular": {
             "en": "museum",
@@ -111,7 +114,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "stadium",
@@ -127,7 +131,8 @@
     "library": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B1": "KK"
         },
         "roots": {
             "fi": "book"
@@ -168,7 +173,8 @@
     "office": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B1": "KK"
         },
         "singular": {
             "en": "office",
@@ -179,25 +185,6 @@
             "en": "offices",
             "fi": "toimistot",
             "nl": "de kantoren"
-        }
-    },
-    "airport": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
-        "roots": {
-            "en": "port"
-        },
-        "singular": {
-            "en": "airport",
-            "fi": "lentokenttä",
-            "nl": "het vliegveld"
-        },
-        "plural": {
-            "en": "airports",
-            "fi": "lentokentät",
-            "nl": "de vliegvelden"
         }
     },
     "store": {
@@ -220,7 +207,8 @@
     "department store": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "roots": {
             "en": "store",
@@ -243,7 +231,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "park",
@@ -260,6 +249,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -279,7 +269,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "hotel",
@@ -335,7 +326,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "singular": {
             "en": "square",
@@ -353,7 +345,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "singular": {
             "en": "bridge",
@@ -366,30 +359,13 @@
             "nl": "de bruggen"
         }
     },
-    "port": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
-        "singular": {
-            "en": "port",
-            "fi": "satama",
-            "nl": "de haven"
-        },
-        "plural": {
-            "en": "ports",
-            "fi": "satamat",
-            "nl": "de havens"
-        }
-    },
     "mall": {
         "level": {
             "B1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "en": "centre",
@@ -428,7 +404,8 @@
     "capital": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "none": "KK"
         },
         "roots": {
             "fi": [

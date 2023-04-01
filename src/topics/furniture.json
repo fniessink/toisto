@@ -23,7 +23,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "bed",
@@ -39,7 +40,8 @@
     "sofa": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "B1": "KK"
         },
         "singular": {
             "en": "sofa",
@@ -55,6 +57,7 @@
     "pillow": {
         "level": {
             "A2": "EP",
+            "C1": "KK",
             "none": "OD"
         },
         "singular": {
@@ -73,7 +76,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "singular": {
             "en": "chair",
@@ -91,7 +95,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": [
@@ -121,7 +126,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "singular": {
             "en": "lamp",
@@ -156,7 +162,8 @@
     "curtain": {
         "level": {
             "A2": "EP",
-            "B1": "OD"
+            "B1": "OD",
+            "none": "KK"
         },
         "singular": {
             "en": "curtain",
@@ -183,7 +190,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "singular": {
             "en": "carpet",

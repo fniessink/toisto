@@ -4,7 +4,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "en": "clothes",
         "fi": "vaatteet",
@@ -15,7 +16,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "singular": {
             "en": "dress",
@@ -32,6 +34,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -51,7 +54,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "C1": "KK"
         },
         "singular": {
             "en": "skirt",
@@ -69,7 +73,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "singular": {
             "en": "trousers",
@@ -87,7 +92,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "coat",
@@ -105,7 +111,8 @@
             "B1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "clothes"
@@ -119,7 +126,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B1": "KK"
         },
         "singular": {
             "en": "hat",
@@ -137,7 +145,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "B2": "KK"
         },
         "singular": {
             "en": "suit",
@@ -155,7 +164,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "shoe",
@@ -171,7 +181,8 @@
     "sweater": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": "EP",
+            "none": "KK"
         },
         "roots": {
             "fi": "shirt"
@@ -192,7 +203,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
         "singular": {
             "en": "shirt",
@@ -208,7 +220,10 @@
     "to dress": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "infinitive": {
             "en": [

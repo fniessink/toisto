@@ -53,5 +53,60 @@
             "fi": "hissit",
             "nl": "de liften"
         }
+    },
+    "flight": {
+        "level": {
+            "A1": "OD",
+            "A2": ["EP", "KK"]
+        },
+        "singular": {
+            "en": "flight",
+            "fi": "lento",
+            "nl": "de vlucht"
+        },
+        "plural": {
+            "en": "flights",
+            "fi": "lennot",
+            "nl": "de vluchten"
+        }
+    },
+    "port": {
+        "level": {
+            "B1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "port",
+            "fi": "satama",
+            "nl": "de haven"
+        },
+        "plural": {
+            "en": "ports",
+            "fi": "satamat",
+            "nl": "de havens"
+        }
+    },
+    "airport": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "en": "port",
+            "fi": "flight"
+        },
+        "singular": {
+            "en": "airport",
+            "fi": "lentokenttä",
+            "nl": "het vliegveld"
+        },
+        "plural": {
+            "en": "airports",
+            "fi": "lentokentät",
+            "nl": "de vliegvelden"
+        }
     }
 }

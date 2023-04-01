@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Make `practice` the default command. Closes [#278](https://github.com/fniessink/toisto/issues/278).
+- Add some more concepts.
+
+### Removed
+
+- Remove plurals of compound nouns if the plural of the compound is simply the plural of the last root.
 
 ## 0.9.0 - 2023-03-21
 
