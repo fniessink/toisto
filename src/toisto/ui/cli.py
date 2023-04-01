@@ -45,7 +45,7 @@ def add_topic_arguments(parser: ArgumentParser) -> None:
         "--topic",
         action="append",
         default=[],
-        choices=TOPICS,
+        choices=sorted([*TOPICS, "easter"]),
         metavar="{topic}",
         help="topic to use, can be repeated; default: all; available topics: %(choices)s",
     )
