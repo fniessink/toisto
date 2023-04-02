@@ -1,0 +1,76 @@
+{
+    "book": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "root": {
+            "singular": {
+                "en": "book",
+                "fi": "kirja",
+                "nl": "het boek"
+            },
+            "plural": {
+                "en": "books",
+                "fi": "kirjat",
+                "nl": "de boeken"
+            }
+        },
+        "diminutive": {
+            "singular": {
+                "en": "booklet",
+                "fi": "kirjanen",
+                "nl": "het boekje"
+            },
+            "plural": {
+                "en": "booklets",
+                "fi": "kirjasia",
+                "nl": "de boekjes"
+            }
+        }
+    },
+    "chapter": {
+        "level": {
+            "A1": "KK",
+            "B1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": {
+            "nl": "head"
+        },
+        "singular": {
+            "en": "chapter",
+            "fi": "kappale",
+            "nl": "het hoofdstuk"
+        },
+        "plural": {
+            "en": "chapters",
+            "fi": "kappaleet",
+            "nl": "de hoofdstukken"
+        }
+    },
+    "page": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "page",
+            "fi": "sivu",
+            "nl": "de pagina"
+        },
+        "plural": {
+            "en": "pages",
+            "fi": "sivut",
+            "nl": "de pagina's"
+        }
+    }
+}
