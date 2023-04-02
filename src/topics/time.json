@@ -23,6 +23,18 @@
         "fi": "nyt",
         "nl": "nu"
     },
+    "then": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "en": "then",
+        "fi": "sitten",
+        "nl": "dan"
+    },
     "morning": {
         "level": {
             "A1": [
@@ -73,7 +85,10 @@
         },
         "roots": {
             "en": "noon",
-            "fi": ["evening", "day"],
+            "fi": [
+                "evening",
+                "day"
+            ],
             "nl": "day"
         },
         "singular": {
