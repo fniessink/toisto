@@ -120,12 +120,11 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = list(QuizFactory("fi", "nl").create_quizzes(*concepts))
+        quizzes = [quiz for quiz in QuizFactory("fi", "nl").create_quizzes(*concepts) if quiz.quiz_types == ("listen",)]
         progress = self.create_progress(quizzes)
-        for index in range(3):
-            progress.increase_retention(quizzes[index])
-            progress.get_retention(quizzes[index]).skip_until = None
-        self.assertIn(progress.next_quiz(), quizzes[:3])
+        progress.increase_retention(quizzes[0])
+        progress.get_retention(quizzes[0]).skip_until = None
+        self.assertEqual(progress.next_quiz(), quizzes[0])
 
     def test_next_quiz_has_lower_language_level(self):
         """Test that the next quiz has the lowest language level of the eligible quizzes."""
