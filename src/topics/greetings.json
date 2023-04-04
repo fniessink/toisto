@@ -104,6 +104,39 @@
             "nl": "de namen"
         }
     },
+    "first name": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "roots": [
+            "name"
+        ],
+        "en": "first name",
+        "fi": "etunimi",
+        "nl": "de voornaam"
+    },
+    "last name": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "roots": [
+            "name"
+        ],
+        "en": [
+            "last name",
+            "surname"
+        ],
+        "fi": "sukunimi",
+        "nl": "de achternaam"
+    },
     "what is your name": {
         "roots": [
             "what",
@@ -122,6 +155,22 @@
         "en": "My name is Bob.",
         "fi": "Minun nimeni on Bob.",
         "nl": "Mijn naam is Bob."
+    },
+    "how do you spell that": {
+        "roots": {
+            "en": "how",
+            "fi": [
+                "how",
+                "to write"
+            ],
+            "nl": [
+                "how",
+                "to write"
+            ]
+        },
+        "en": "How do you spell that?",
+        "fi": "Miten se kirjoitetaan?",
+        "nl": "Hoe schrijf je dat?"
     },
     "how old are you": {
         "roots": [
