@@ -504,6 +504,79 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 
 If a concept has more than one antonym (for example, "large" and "big" are both antonyms of "small"), the `antonym` value can be a list of concept identifiers instead of a string.
 
+#### Questions/answers
+
+When one concept is a question and the other concept is the answer, this can be specified using the `answer` relation. Toisto will add a quiz, asking the user to answer the question in their target language.
+
+```json
+{
+    "what do you like": {
+        "en": "What do you like?;ice cream",
+        "fi": "Mistä sinä pidät?;jäätelöä",
+        "answer": "i like ice cream"
+    },
+    "i like ice cream": {
+        "en": "I like ice cream.",
+        "fi": "Minä pidän jäätelöstä.|Pidän jäätelöstä."
+    }
+}
+```
+
+Answers are also possible if the concept has multiple grammatical forms, like singular and plural:
+
+```json
+{
+    "what do you like": {
+        "singular": {
+            "en": "What do you like?;ice cream",
+            "fi": "Mistä sinä pidät?;jäätelöä"
+        },
+        "plural": {
+            "en": "What do you like?;ice cream",
+            "fi": "Mistä te pidätte?;jäätelöä"
+        },
+        "answer": "i like ice cream"
+    },
+    "i like ice cream": {
+        "singular": {
+            "en": "I like ice cream.",
+            "fi": "Minä pidän jäätelöstä.|Pidän jäätelöstä."
+        },
+        "plural": {
+            "en": "We like ice cream.",
+            "fi": "Me pidämme jäätelöstä.|Pidämme jäätelöstä."
+        }
+    }
+}
+```
+
+If a concept has multiple answers, the `answer` value can be a list of concept identifiers instead of a string:
+
+```json
+{
+    "do you like ice cream": {
+        "en": "Do you like ice cream?",
+        "fi": "Pidätko sinä jäätelöstä?",
+        "answer": [
+            "yes, i like ice cream",
+            "no, i don't like ice cream"
+        ]
+    },
+    "yes, i like ice cream": {
+        "answer-only": true,
+        "en": "Yes, I do.",
+        "fi": "Pidän."
+    },
+    "no, i don't like ice cream": {
+        "answer-only": true,
+        "en": "No, I don't.",
+        "fi": "En."
+    }
+}
+```
+
+The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example. translate "Yes, I do" into "Pidän".
+
 ### Concept levels
 
 The [Common European Framework of Reference for Languages (CEFR)](https://www.coe.int/en/web/common-european-framework-reference-languages) organises language proficiency into six levels:

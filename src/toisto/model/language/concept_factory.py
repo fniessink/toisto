@@ -16,14 +16,14 @@ CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
 TopicList = list[Topic]
-MetaData = Literal["level", "antonym", "roots", "topics"]
+MetaData = Literal["level", "antonym", "answer", "answer-only", "roots", "topics"]
 LeafConceptDict = dict[
     Language | MetaData,
-    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict | TopicList,
+    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict | TopicList | bool,
 ]
 CompositeConceptDict = dict[
     GrammaticalCategory | MetaData,
-    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict, TopicList],
+    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict, TopicList, bool],
 ]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
@@ -45,6 +45,7 @@ class ConceptFactory:
             self._level(),
             self._related_concepts(parent),
             self._topics(),
+            self._answer_only(),
         )
 
     def _labels(self) -> dict[Language, Labels]:
@@ -73,11 +74,21 @@ class ConceptFactory:
 
     def _related_concepts(self, parent: ConceptId | None) -> RelatedConcepts:
         """Create the related concepts."""
-        return RelatedConcepts(parent, self._constituent_concepts(), self._root_concepts(), self._antonym_concepts())
+        return RelatedConcepts(
+            parent,
+            self._constituent_concepts(),
+            self._root_concepts(),
+            self._related_concept_ids("antonym"),
+            self._related_concept_ids("answer"),
+        )
 
     def _topics(self) -> set[Topic]:
         """Return the concept topics."""
         return self._get_topics() | {self.topic}
+
+    def _answer_only(self) -> bool:
+        """Return whether the concept is answer-only."""
+        return bool(self.concept_dict.get("answer-only"))
 
     def _constituent_concepts(self) -> ConceptIds:
         """Create a constituent concept for each grammatical category."""
@@ -92,14 +103,17 @@ class ConceptFactory:
 
     def _constituent_concept_dict(self, category: GrammaticalCategory) -> ConceptDict:
         """Create a constituent concept dict that can be used to create a constituent concept."""
-        antonym_concept_ids = [ConceptId(f"{antonym}/{category}") for antonym in self._antonym_concepts()]
-        antonyms_dict = dict(antonym=antonym_concept_ids)
+        antonym_concept_ids = self._related_concept_ids("antonym")
+        antonyms_dict = dict(antonym=[ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids])
+        answer_concept_ids = self._related_concept_ids("answer")
+        answers_dict = dict(answer=[ConceptId(f"{answer}/{category}") for answer in answer_concept_ids])
         roots_dict = cast(CompositeConceptDict, dict(roots=self._get_roots()))
         topics_dict = cast(CompositeConceptDict, dict(topics=list(self._get_topics())))
         constituent_concept_dict = (
             cast(ConceptDict, cast(CompositeConceptDict, self.concept_dict)[category])
             | roots_dict
             | antonyms_dict
+            | answers_dict
             | topics_dict
         )
         constituent_concept_dict.setdefault("level", self._get_levels())
@@ -124,10 +138,10 @@ class ConceptFactory:
         """Get the roots from the concept dict."""
         return cast(ConceptIdDictOrListOrString, self.concept_dict.get("roots", {}))
 
-    def _antonym_concepts(self) -> ConceptIds:
-        """Return the antonym concepts."""
-        antonyms = cast(ConceptIdListOrString, self.concept_dict.get("antonym", []))
-        return tuple(antonyms) if isinstance(antonyms, list) else (antonyms,)
+    def _related_concept_ids(self, relation: MetaData) -> ConceptIds:
+        """Return the ids of the related concept(s)."""
+        related = cast(ConceptIdListOrString, self.concept_dict.get(relation, []))
+        return tuple(related) if isinstance(related, list) else (related,)
 
     def _get_levels(self) -> CommonReferenceLevelDict:
         """Get the Common Reference Levels from the concept dict."""

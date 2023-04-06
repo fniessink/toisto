@@ -2,6 +2,7 @@
 
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
+from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 
 from ....base import ToistoTestCase
@@ -79,7 +80,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_quizzes(self):
         """Test that quizzes can be generated from a concept."""
-        concept = create_concept("english", dict(en=["English"], nl=["Engels"]))
+        concept = create_concept("english", dict(en="English", nl="Engels"))
         self.assertEqual(
             {
                 self.create_quiz(concept, "nl", "en", "Engels", ["English"], "read"),
@@ -88,6 +89,21 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             },
             create_quizzes("nl", "en", concept),
         )
+
+    def test_only_listening_quizzes_for_one_language(self):
+        """Test that only listening quizzes are generated for a concept with one language."""
+        concept = create_concept("english", dict(nl="Engels"))
+        self.assertEqual(
+            {
+                self.create_quiz(concept, "nl", "nl", "Engels", ["Engels"], "listen"),
+            },
+            create_quizzes("nl", "en", concept),
+        )
+
+    def test_answer_only_concept(self):
+        """Test that no quizzes are generated for an answer-only concept."""
+        concept = create_concept("yes, i do like something", {"answer-only": True, "en": "Yes, I do.", "fi": "Pidän"})
+        self.assertEqual(Quizzes(), create_quizzes("en", "fi", concept))
 
     def test_multiple_labels(self):
         """Test that quizzes can be generated from a concept with a language with multiple labels."""
@@ -103,9 +119,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         )
 
     def test_missing_language(self):
-        """Test that quizzes can be generated from a concept even if it's missing one of the languages."""
+        """Test that no quizzes are generated from a concept if it's missing one of the languages."""
         concept = create_concept("english", dict(en=["English"], nl=["Engels"]))
-        self.assertEqual(set(), create_quizzes("fi", "en", concept))
+        self.assertEqual(Quizzes(), create_quizzes("fi", "en", concept))
 
     def test_grammatical_number(self):
         """Test that quizzes can be generated for different grammatical numbers, i.e. singular and plural."""
@@ -165,9 +181,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
 
     def test_grammatical_number_with_one_language_reversed(self):
-        """Test that no quizzes can be generated from a noun concept with labels in the native language."""
+        """Test that no quizzes are generated from a noun concept with labels in the native language."""
         concept = create_concept("mämmi", dict(singular=dict(fi="mämmi"), plural=dict(fi="mämmit")))
-        self.assertEqual(set(), create_quizzes("en", "fi", concept))
+        self.assertEqual(Quizzes(), create_quizzes("en", "fi", concept))
 
     def test_grammatical_number_with_synonyms(self):
         """Test that in case of synonyms the plural of one synonym isn't the correct answer for the other synonym."""

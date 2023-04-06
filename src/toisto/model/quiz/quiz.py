@@ -17,7 +17,7 @@ from .match import match
 
 TranslationQuizType = Literal["read", "write"]
 ListenQuizType = Literal["listen"]
-SemanticQuizType = Literal["antonym"]
+SemanticQuizType = Literal["answer", "antonym"]
 GrammaticalQuizType = Literal[
     "pluralize",
     "singularize",
@@ -66,6 +66,7 @@ INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQu
     read="Translate into",
     write="Translate into",
     listen="Listen and write in",
+    answer="Answer the question in",
     antonym="Give the [underline]antonym[/underline] in",
 )
 
@@ -135,8 +136,6 @@ class Quiz:
 
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        hint = self._question.hint
-        hint_text = f" ({hint})" if self.question_language != self.answer_language and hint else ""
         if self.quiz_types[0] in get_args(GrammaticalQuizType):
             categories = " ".join(
                 QUIZ_TYPE_GRAMMATICAL_CATEGORIES[cast(GrammaticalQuizType, quiz_type)] for quiz_type in self.quiz_types
@@ -145,11 +144,16 @@ class Quiz:
         else:
             quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
             instruction_text = INSTRUCTIONS[quiz_type]
-        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{hint_text}"
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._instruction_hint()}"
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(Quizzes(self.blocked_by) & quizzes)
+
+    def _instruction_hint(self) -> str:
+        """Return the instruction hint, if applicable."""
+        hint_applicable = self.question_language != self.answer_language or "answer" in self.quiz_types
+        return f" ({hint})" if hint_applicable and (hint := self._question.hint) else ""
 
 
 class Quizzes(set[Quiz]):

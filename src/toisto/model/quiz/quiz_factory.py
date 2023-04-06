@@ -8,7 +8,7 @@ from typing import cast
 from toisto.tools import zip_and_cycle
 
 from ..language import Language
-from ..language.concept import Concept
+from ..language.concept import Concept, Concepts
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 
 
@@ -25,6 +25,8 @@ class QuizFactory:
 
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
+        if concept.answer_only:
+            return Quizzes()
         if concept.constituents:
             return self.composite_concept_quizzes(concept, previous_quizzes)
         return self.leaf_concept_quizzes(concept, previous_quizzes)
@@ -33,27 +35,27 @@ class QuizFactory:
         """Create the quizzes for a composite concept."""
         quizzes = Quizzes()
         for constituent_concept in concept.constituents:
-            quizzes |= self.concept_quizzes(constituent_concept, Quizzes(quizzes.copy() | previous_quizzes))
-        quizzes |= self.grammatical_quizzes(concept, Quizzes(quizzes.copy() | previous_quizzes))
+            quizzes |= self.concept_quizzes(constituent_concept, Quizzes(quizzes | previous_quizzes))
+        quizzes |= self.grammatical_quizzes(concept, Quizzes(quizzes | previous_quizzes))
         return quizzes
 
     def leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a leaf concept."""
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
-        listening_quizzes = self.listening_quizzes(concept, Quizzes(translation_quizzes.copy() | previous_quizzes))
-        antonym_quizzes = self.antonym_quizzes(
+        listening_quizzes = self.listening_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
+        semantic_quizzes = self.semantic_quizzes(
             concept,
-            Quizzes(translation_quizzes.copy() | listening_quizzes.copy() | previous_quizzes),
+            Quizzes(translation_quizzes | listening_quizzes | previous_quizzes),
         )
-        return Quizzes(translation_quizzes | listening_quizzes | antonym_quizzes)
+        return Quizzes(translation_quizzes | listening_quizzes | semantic_quizzes)
 
-    def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create translation quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
         target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
         if not target_labels or not source_labels:
             return Quizzes()
-        blocked_by = tuple(previous_quizzes)
+        blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         target_to_source = Quizzes(
             Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by)
             for target_label in target_labels
@@ -64,11 +66,11 @@ class QuizFactory:
         )
         return Quizzes(target_to_source | source_to_target)
 
-    def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+    def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create listening quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
         labels = concept.labels(target_language)
-        blocked_by = tuple(previous_quizzes)
+        blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
         return Quizzes(
             Quiz(concept, target_language, target_language, label, (label,), ("listen",), blocked_by, meanings)
@@ -93,29 +95,48 @@ class QuizFactory:
             )
         return quizzes
 
-    def antonym_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
-        """Create antonym quizzes for the concept."""
+    def semantic_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
+        """Create semantic quizzes for the concept."""
+        answer_quizzes = self.related_concept_quizzes(concept, previous_quizzes, "answer", concept.answers)
+        antonym_quizzes = self.related_concept_quizzes(
+            concept,
+            Quizzes(answer_quizzes | previous_quizzes),
+            "antonym",
+            concept.antonyms,
+        )
+        return Quizzes(answer_quizzes | antonym_quizzes)
+
+    def related_concept_quizzes(
+        self,
+        concept: Concept,
+        previous_quizzes: Quizzes,
+        quiz_type: QuizType,
+        related_concepts: Concepts,
+    ) -> Quizzes:
+        """Create quizzes for the related concepts."""
+        if not related_concepts:
+            return Quizzes()
         target_language, source_language = self.target_language, self.source_language
         labels = concept.labels(target_language)
-        quizzes = Quizzes()
-        for antonym in concept.antonyms:
-            antonym_quizzes = self.translation_quizzes(antonym, Quizzes()) | self.listening_quizzes(antonym, Quizzes())
-            antonym_labels = antonym.labels(target_language)
-            meanings = concept.meanings(source_language) + antonym.meanings(source_language)
-            quizzes |= Quizzes(
-                Quiz(
-                    concept,
-                    target_language,
-                    target_language,
-                    label,
-                    antonym_labels,
-                    ("antonym",),
-                    tuple(previous_quizzes | antonym_quizzes),
-                    meanings,
-                )
-                for label in labels
+        meanings = list(concept.meanings(source_language))
+        related_concept_labels = []
+        for related_concept in related_concepts:
+            meanings.extend(related_concept.meanings(source_language))
+            related_concept_labels.extend(list(related_concept.labels(target_language)))
+            previous_quizzes |= self.translation_quizzes(related_concept) | self.listening_quizzes(related_concept)
+        return Quizzes(
+            Quiz(
+                concept,
+                target_language,
+                target_language,
+                label,
+                tuple(related_concept_labels),
+                (quiz_type,),
+                tuple(previous_quizzes),
+                tuple(meanings),
             )
-        return quizzes
+            for label in labels
+        )
 
 
 def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizType, ...]:

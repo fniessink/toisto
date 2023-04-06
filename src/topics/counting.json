@@ -689,5 +689,59 @@
             "fi": "parit",
             "nl": "de paren"
         }
+    },
+    "what is 15 + 4": {
+        "answer": "that is 19",
+        "roots": [
+            "15",
+            "4"
+        ],
+        "topics": "SM1.1",
+        "en": "What is fifteen plus four?",
+        "fi": "Mitä on viisitoista plus neljä?",
+        "nl": "Wat is vijftien plus vier?"
+    },
+    "that is 19": {
+        "answer-only": true,
+        "topics": "SM1.1",
+        "en": "That is nineteen.",
+        "fi": "Se on yhdeksäntoista.",
+        "nl": "Dat is negentien."
+    },
+    "what is 3 x 10": {
+        "answer": "that is 30",
+        "roots": [
+            "3",
+            "10"
+        ],
+        "topics": "SM1.1",
+        "en": "What is three times ten?",
+        "fi": "Mitä on kolme kertaa kymmenen?",
+        "nl": "Wat is drie keer tien?"
+    },
+    "that is 30": {
+        "answer-only": true,
+        "topics": "SM1.1",
+        "en": "That is thirty.",
+        "fi": "Se on kolmekymmentä.",
+        "nl": "Dat is dertig."
+    },
+    "what is 20 - 7": {
+        "answer": "that is 13",
+        "roots": [
+            "20",
+            "7"
+        ],
+        "topics": "SM1.1",
+        "en": "What is twenty minus seven?",
+        "fi": "Mitä on kaksikymmentä minus seitsemän?",
+        "nl": "Wat is twintig min zeven?"
+    },
+    "that is 13": {
+        "answer-only": true,
+        "topics": "SM1.1",
+        "en": "That is thirteen.",
+        "fi": "Se on kolmetoista.",
+        "nl": "Dat is dertien."
     }
 }
