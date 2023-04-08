@@ -77,13 +77,3 @@ class AppTest(unittest.TestCase):
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Topic"))
-
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--topic", "easter"])
-    @patch("webbrowser.open", Mock())
-    @patch("time.sleep", Mock())
-    @patch("requests.get")
-    def test_show_easter_egg(self, requests_get: Mock):
-        """Test the easter egg."""
-        requests_get.return_value = self.latest_version
-        patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("🎉🐇🐣 Happy Easter! 🎉🐇🐣"))
