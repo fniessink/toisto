@@ -29,7 +29,7 @@ def get_progress_filepath(target_language: Language) -> pathlib.Path:
     return pathlib.Path.home() / f".{NAME.lower()}-progress-{target_language}.json"
 
 
-TOPICS = [json_file.stem for json_file in TOPIC_JSON_FILES]
+TOPICS = sorted([json_file.stem for json_file in TOPIC_JSON_FILES])
 
 
 def latest_version() -> str | None:

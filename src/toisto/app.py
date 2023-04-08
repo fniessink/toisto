@@ -10,7 +10,6 @@ with suppress(ImportError):
 logging.getLogger().setLevel(logging.ERROR)
 
 from .command.practice import practice
-from .command.show_easter_egg import show_easter_egg
 from .command.show_progress import show_progress
 from .command.show_topics import show_topics
 from .metadata import latest_version
@@ -26,8 +25,6 @@ def main() -> None:
     config = read_config(create_argument_parser(default_config()))
     argument_parser = create_argument_parser(config)
     args = argument_parser.parse_args()
-    if "easter" in args.topic:
-        show_easter_egg(argument_parser)
     topics = load_topics(
         args.target_language,
         args.source_language,
