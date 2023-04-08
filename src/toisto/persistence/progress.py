@@ -6,11 +6,11 @@ from typing import NoReturn
 from ..metadata import NAME, get_progress_filepath
 from ..model.language import Language
 from ..model.quiz.progress import Progress
-from ..model.quiz.topic import Topics
+from ..model.quiz.quiz import Quizzes
 from .json_file import dump_json, load_json
 
 
-def load_progress(topics: Topics, target_language: Language, argument_parser: ArgumentParser) -> Progress | NoReturn:
+def load_progress(quizzes: Quizzes, target_language: Language, argument_parser: ArgumentParser) -> Progress | NoReturn:
     """Load the progress from the user's home folder."""
     progress_filepath = get_progress_filepath(target_language)
     try:
@@ -23,7 +23,7 @@ Please consider opening a bug report at https://github.com/fniessink/{NAME.lower
 progress file to the issue.
 """,
         )
-    return Progress(progress_dict, topics, target_language)
+    return Progress(progress_dict, quizzes, target_language)
 
 
 def save_progress(progress: Progress) -> None:

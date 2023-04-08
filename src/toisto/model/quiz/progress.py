@@ -7,7 +7,6 @@ from toisto.model.language.concept import Concept
 
 from .quiz import Quiz, Quizzes
 from .retention import Retention
-from .topic import Topics
 
 ProgressDict = dict[str, dict[str, str | int]]
 
@@ -18,16 +17,16 @@ class Progress:
     def __init__(
         self,
         progress_dict: ProgressDict,
-        topics: Topics,
+        quizzes: Quizzes,
         target_language: Language,
         skip_concepts: int = 5,
     ) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
-        self.__topics = topics
+        self.__quizzes = quizzes
         self.target_language = target_language
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
         self.__quizzes_by_concept: dict[Concept, Quizzes] = {}
-        for quiz in self.__topics.quizzes:
+        for quiz in self.__quizzes:
             self.__quizzes_by_concept.setdefault(quiz.concept.base_concept, set()).add(quiz)
 
     def increase_retention(self, quiz: Quiz) -> None:
@@ -40,7 +39,7 @@ class Progress:
 
     def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
-        eligible_quizzes = {quiz for quiz in self.__topics.quizzes if self.__is_eligible(quiz)}
+        eligible_quizzes = {quiz for quiz in self.__quizzes if self.__is_eligible(quiz)}
         quizzes_for_concepts_in_progress = {quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz)}
         quizzes_in_progress = {quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz)}
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:

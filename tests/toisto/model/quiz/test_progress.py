@@ -7,7 +7,6 @@ from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import QuizFactory
-from toisto.model.quiz.topic import Topic, Topics
 
 from ....base import ToistoTestCase
 
@@ -20,12 +19,11 @@ class ProgressTest(ToistoTestCase):
         self.concept = self.create_concept(ConceptId("english"))
         self.quiz = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"])
         self.another_quiz = self.create_quiz(self.concept, "nl", "fi", "Engels", ["Englanti"])
-        self.progress = Progress({}, Topics(set()), Language("fi"))
+        self.progress = Progress({}, Quizzes(), Language("fi"))
 
-    def create_progress(self, *topic_quizzes: Quizzes) -> Progress:
+    def create_progress(self, quizzes: Quizzes) -> Progress:
         """Create progress for the quizzes."""
-        topics = Topics({Topic(f"topic{index}", (), quizzes) for index, quizzes in enumerate(topic_quizzes)})
-        return Progress({}, topics, Language("fi"), skip_concepts=2)
+        return Progress({}, quizzes, Language("fi"), skip_concepts=2)
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""

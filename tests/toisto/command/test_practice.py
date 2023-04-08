@@ -7,7 +7,6 @@ from toisto.command.practice import practice
 from toisto.model.language import Language
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.topic import Topic, Topics
 from toisto.ui.dictionary import linkify
 from toisto.ui.text import DONE, TRY_AGAIN
 
@@ -24,8 +23,7 @@ class PracticeTest(ToistoTestCase):
         """Set up the test fixtures."""
         self.concept = self.create_concept(ConceptId("hi"))
         quiz = self.create_quiz(self.concept, "fi", "nl", "Terve", ["Hoi"])
-        topics = Topics({Topic("topic", (), {quiz})})
-        self.progress = Progress({}, topics, Language("fi"))
+        self.progress = Progress({}, {quiz}, Language("fi"))
 
     def practice(self, progress: Progress | None = None) -> Mock:
         """Run the practice command and return the patch print statement."""
@@ -59,16 +57,14 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen")
-        topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics, "fi"))
+        patched_print = self.practice(Progress({}, {quiz}, "fi"))
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Terve", ["Terve"], "listen", meanings=("Hoi",))
-        topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics, "fi"))
+        patched_print = self.practice(Progress({}, {quiz}, "fi"))
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
@@ -77,8 +73,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         concept = self.create_concept("house")
         quiz = self.create_quiz(concept, "fi", "fi", "Talo", ["Talot"], "pluralize", meanings=("Huis", "Huizen"))
-        topics = Topics({Topic("topic", (), {quiz})})
-        patched_print = self.practice(Progress({}, topics, "fi"))
+        patched_print = self.practice(Progress({}, {quiz}, "fi"))
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Huis")}", "{linkify("Huizen")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 

@@ -22,7 +22,7 @@ class ShowProgressTest(ToistoTestCase):
     def test_title(self):
         """Test the table title."""
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", Topics(), Progress({}, self.topics, "fi"))
+            show_progress("fi", Topics(), Progress({}, {self.quiz}, "fi"))
         self.assertEqual("Progress Finnish", console_print.call_args[0][0].title)
 
     def test_quiz(self):
@@ -31,7 +31,11 @@ class ShowProgressTest(ToistoTestCase):
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.topics, Progress({self.quiz.key: dict(start=start, end=end)}, self.topics, "fi"))
+            show_progress(
+                "fi",
+                self.topics,
+                Progress({self.quiz.key: dict(start=start, end=end)}, {self.quiz}, "fi"),
+            )
         for index, value in enumerate(["Read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
 
@@ -39,14 +43,22 @@ class ShowProgressTest(ToistoTestCase):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
         skip_until = (datetime.now() + timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.topics, Progress({self.quiz.key: dict(skip_until=skip_until)}, self.topics, "fi"))
+            show_progress(
+                "fi",
+                self.topics,
+                Progress({self.quiz.key: dict(skip_until=skip_until)}, {self.quiz}, "fi"),
+            )
         self.assertEqual(skip_until, list(console_print.call_args[0][0].columns[7].cells)[0])
 
     def test_quiz_silenced_until_time_in_the_past(self):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
         skip_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.topics, Progress({self.quiz.key: dict(skip_until=skip_until)}, self.topics, "fi"))
+            show_progress(
+                "fi",
+                self.topics,
+                Progress({self.quiz.key: dict(skip_until=skip_until)}, {self.quiz}, "fi"),
+            )
         self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
 
     def test_sort_by_retention(self):
@@ -59,7 +71,7 @@ class ShowProgressTest(ToistoTestCase):
         topics = Topics({Topic("topic", (), {self.quiz, another_quiz})})
         progress = Progress(
             {self.quiz.key: dict(count=21, start=start, end=end), another_quiz.key: dict(count=42)},
-            self.topics,
+            {self.quiz},
             "fi",
         )
         with patch("rich.console.Console.print") as console_print:
