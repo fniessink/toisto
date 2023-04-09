@@ -113,5 +113,101 @@
         "en": "alphabet",
         "fi": "aakkoset",
         "nl": "het alfabet"
+    },
+    "question": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "question",
+            "fi": "kysymys",
+            "nl": "de vraag"
+        },
+        "plural": {
+            "en": "questions",
+            "fi": "kysymykset",
+            "nl": "de vragen"
+        }
+    },
+    "answer": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "nl": "word"
+        },
+        "singular": {
+            "en": "answer",
+            "fi": "vastaus",
+            "nl": "het antwoord"
+        },
+        "plural": {
+            "en": "answers",
+            "fi": "vastaukset",
+            "nl": "de antwoorden"
+        }
+    },
+    "question word": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": [
+            "question",
+            "word"
+        ],
+        "en": "question word",
+        "fi": "kysymyssana",
+        "nl": "het vraagwoord"
+    },
+    "subject": {
+        "level": {
+            "B1": "EP",
+            "none": [
+                "KK",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "subject",
+            "fi": "subjekti",
+            "nl": "het onderwerp"
+        },
+        "plural": {
+            "en": "subjects",
+            "fi": "subjektit",
+            "nl": "de onderwerpen"
+        }
+    },
+    "verb": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "nl": "word"
+        },
+        "singular": {
+            "en": "verb",
+            "fi": "verbi",
+            "nl": "het werkwoord"
+        },
+        "plural": {
+            "en": "verbs",
+            "fi": "verbit",
+            "nl": "de werkwoorden"
+        }
     }
 }
