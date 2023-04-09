@@ -9,6 +9,7 @@ from ..model.language import Language
 from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.concept import ConceptId, ConceptIds
 from ..model.language.concept_factory import ConceptFactory
+from ..model.quiz.quiz import Quizzes
 from ..model.quiz.quiz_factory import QuizFactory
 from ..model.quiz.topic import Topic, Topics
 from .json_file import load_json
@@ -34,7 +35,7 @@ def load_topics(  # noqa: PLR0913
     registry = ConceptIdRegistry(argument_parser)
     for topic_file in topic_files:
         concepts = []
-        topic_quizzes = set()
+        topic_quizzes = Quizzes()
         try:
             for concept_key, concept_value in load_json(topic_file).items():
                 concept = ConceptFactory(concept_key, concept_value).create_concept()

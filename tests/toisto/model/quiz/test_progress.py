@@ -52,19 +52,19 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
-        progress = self.create_progress({self.quiz, self.another_quiz})
+        progress = self.create_progress(Quizzes({self.quiz, self.another_quiz}))
         progress.increase_retention(self.quiz)
         self.assertEqual(self.another_quiz, progress.next_quiz())
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
-        progress = self.create_progress([self.quiz])
+        progress = self.create_progress(Quizzes({self.quiz}))
         progress.increase_retention(self.quiz)
         self.assertIsNone(progress.next_quiz())
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        progress = self.create_progress({self.quiz, self.another_quiz})
+        progress = self.create_progress(Quizzes({self.quiz, self.another_quiz}))
         self.assertNotEqual(progress.next_quiz(), progress.next_quiz())
 
     def test_next_quiz_is_not_blocked(self):
@@ -118,11 +118,14 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = [quiz for quiz in QuizFactory("fi", "nl").create_quizzes(*concepts) if quiz.quiz_types == ("listen",)]
+        quizzes = Quizzes(
+            quiz for quiz in QuizFactory("fi", "nl").create_quizzes(*concepts) if quiz.quiz_types == ("listen",)
+        )
         progress = self.create_progress(quizzes)
-        progress.increase_retention(quizzes[0])
-        progress.get_retention(quizzes[0]).skip_until = None
-        self.assertEqual(progress.next_quiz(), quizzes[0])
+        random_quiz = list(quizzes)[0]
+        progress.increase_retention(random_quiz)
+        progress.get_retention(random_quiz).skip_until = None
+        self.assertEqual(progress.next_quiz(), random_quiz)
 
     def test_next_quiz_has_lower_language_level(self):
         """Test that the next quiz has the lowest language level of the eligible quizzes."""
