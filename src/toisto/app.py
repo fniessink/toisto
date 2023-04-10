@@ -33,10 +33,10 @@ def main() -> None:
         args.topic_file,
         argument_parser,
     )
-    progress = load_progress(topics.quizzes, args.target_language, argument_parser)
+    progress = load_progress(args.target_language, argument_parser)
     if args.command == "practice":
         show_welcome(latest_version())
-        practice(progress, config)
+        practice(topics.quizzes, progress, config)
     elif args.command == "topics":
         show_topics(args.target_language, args.source_language, topics)
     else:
