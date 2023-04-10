@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
@@ -148,7 +149,22 @@ class Quiz:
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
-        return bool(set(self.blocked_by) & quizzes)
+        return bool(Quizzes(self.blocked_by) & quizzes)
 
 
-Quizzes = set[Quiz]
+class Quizzes(set[Quiz]):
+    """Set of quizzes."""
+
+    def __init__(self, iterable: Iterable[Quiz] | None = None) -> None:
+        super().__init__(iterable or set())
+        self._quizzes_by_concept: dict[Concept, Quizzes] = {}
+        for quiz in self:
+            self._quizzes_by_concept.setdefault(quiz.concept.base_concept, Quizzes()).add(quiz)
+
+    def by_concept(self, concept: Concept) -> Quizzes:
+        """Return the quizzes for the concept."""
+        return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
+
+    def lowest_level(self) -> Quiz | None:
+        """Return the quiz with the lowest language level concept."""
+        return sorted(self, key=lambda quiz: str(quiz.concept.level))[0] if self else None

@@ -21,7 +21,7 @@ class QuizFactory:
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
         """Create quizzes for the concepts."""
-        return Quizzes().union(*(self.concept_quizzes(concept, Quizzes()) for concept in concepts))
+        return Quizzes(Quizzes().union(*(self.concept_quizzes(concept, Quizzes()) for concept in concepts)))
 
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
@@ -33,19 +33,19 @@ class QuizFactory:
         """Create the quizzes for a composite concept."""
         quizzes = Quizzes()
         for constituent_concept in concept.constituents:
-            quizzes |= self.concept_quizzes(constituent_concept, quizzes.copy() | previous_quizzes)
-        quizzes |= self.grammatical_quizzes(concept, quizzes.copy() | previous_quizzes)
+            quizzes |= self.concept_quizzes(constituent_concept, Quizzes(quizzes.copy() | previous_quizzes))
+        quizzes |= self.grammatical_quizzes(concept, Quizzes(quizzes.copy() | previous_quizzes))
         return quizzes
 
     def leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a leaf concept."""
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
-        listening_quizzes = self.listening_quizzes(concept, translation_quizzes.copy() | previous_quizzes)
+        listening_quizzes = self.listening_quizzes(concept, Quizzes(translation_quizzes.copy() | previous_quizzes))
         antonym_quizzes = self.antonym_quizzes(
             concept,
-            translation_quizzes.copy() | listening_quizzes.copy() | previous_quizzes,
+            Quizzes(translation_quizzes.copy() | listening_quizzes.copy() | previous_quizzes),
         )
-        return translation_quizzes | listening_quizzes | antonym_quizzes
+        return Quizzes(translation_quizzes | listening_quizzes | antonym_quizzes)
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create translation quizzes for the concept."""
@@ -62,7 +62,7 @@ class QuizFactory:
             Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by)
             for source_label in source_labels
         )
-        return target_to_source | source_to_target
+        return Quizzes(target_to_source | source_to_target)
 
     def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create listening quizzes for the concept."""

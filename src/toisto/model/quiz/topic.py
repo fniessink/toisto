@@ -32,7 +32,7 @@ class Topics:
     @property
     def quizzes(self) -> Quizzes:
         """Return all quizzes."""
-        return set(chain.from_iterable(topic.quizzes for topic in self.topics))
+        return Quizzes(chain.from_iterable(topic.quizzes for topic in self.topics))
 
     def __iter__(self) -> Iterator[Topic]:
         """Return an iterator over self.topics."""

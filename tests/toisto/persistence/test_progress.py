@@ -39,7 +39,7 @@ class ProgressPersistenceTest(unittest.TestCase):
         path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {}}'
         self.assertEqual(
             dict(quiz=Retention().as_dict()),
-            load_progress(set(), Language("nl"), ArgumentParser()).as_dict(),
+            load_progress(Quizzes(), Language("nl"), ArgumentParser()).as_dict(),
         )
 
     @patch("pathlib.Path.open")
