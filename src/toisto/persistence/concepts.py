@@ -5,51 +5,42 @@ from argparse import ArgumentParser
 from typing import NoReturn
 
 from ..metadata import NAME, TOPIC_JSON_FILES
-from ..model.language import Language
 from ..model.language.cefr import CommonReferenceLevel
-from ..model.language.concept import ConceptId, ConceptIds
-from ..model.language.concept_factory import ConceptFactory
-from ..model.quiz.quiz import Quizzes
-from ..model.quiz.quiz_factory import QuizFactory
-from ..model.quiz.topic import Topic, Topics
+from ..model.language.concept import Concept, ConceptId, ConceptIds
+from ..model.language.concept_factory import create_concept
 from .json_file import load_json
 
 
-def load_topics(  # noqa: PLR0913
-    target_language: Language,
-    source_language: Language,
+def load_concepts(
     levels: list[CommonReferenceLevel],
     builtin_topics_to_load: list[str],
     topic_files_to_load: list[str],
     argument_parser: ArgumentParser,
-) -> Topics | NoReturn:
-    """Load the topics with the concepts and generate the quizzes."""
-    topics = set()
+) -> set[Concept] | NoReturn:
+    """Load the concepts from the specified topics and with the specified levels."""
+    all_concepts = set()
     topic_files: list[pathlib.Path] = []
     if builtin_topics_to_load or topic_files_to_load:
         topic_files.extend(topic for topic in TOPIC_JSON_FILES if topic.stem in builtin_topics_to_load)
         topic_files.extend(pathlib.Path(topic) for topic in topic_files_to_load)
     else:
         topic_files.extend(TOPIC_JSON_FILES)
-    quiz_factory = QuizFactory(target_language, source_language)
     registry = ConceptIdRegistry(argument_parser)
     for topic_file in topic_files:
         concepts = []
-        topic_quizzes = Quizzes()
         try:
             for concept_key, concept_value in load_json(topic_file).items():
-                concept = ConceptFactory(concept_key, concept_value).create_concept()
+                concept = create_concept(concept_key, concept_value, topics={topic_file.stem})
                 if levels and concept.level not in levels:
                     continue
                 concepts.append(concept)
-                topic_quizzes.update(quiz_factory.create_quizzes(concept))
         except Exception as reason:  # noqa: BLE001
             argument_parser.error(f"{NAME} cannot read topic {topic_file}: {reason}.\n")
-        concept_ids = tuple({quiz.concept.base_concept.concept_id for quiz in topic_quizzes})
+        concept_ids = tuple(concept.concept_id for concept in concepts)
         registry.check_concept_ids(concept_ids, topic_file)
         registry.register_concept_ids(concept_ids, topic_file)
-        topics.add(Topic(topic_file.stem, tuple(concepts), topic_quizzes))
-    return Topics(topics)
+        all_concepts |= set(concepts)
+    return all_concepts
 
 
 class ConceptIdRegistry:

@@ -165,6 +165,10 @@ class Quizzes(set[Quiz]):
         """Return the quizzes for the concept."""
         return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
 
+    def by_quiz_type(self, quiz_type: QuizType) -> Quizzes:
+        """Return the quizzes of the specified type."""
+        return self.__class__(quiz for quiz in self if quiz_type in quiz.quiz_types)
+
     def lowest_level(self) -> Quiz | None:
         """Return the quiz with the lowest language level concept."""
         return sorted(self, key=lambda quiz: str(quiz.concept.level))[0] if self else None

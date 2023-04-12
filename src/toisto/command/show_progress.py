@@ -10,8 +10,7 @@ from rich.table import Table
 from toisto.model.language import Language
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quiz
-from toisto.model.quiz.topic import Topics
+from toisto.model.quiz.quiz import Quiz, Quizzes
 from toisto.ui.format import format_datetime, format_duration
 from toisto.ui.text import console
 
@@ -31,13 +30,13 @@ class QuizSorter:
         return getattr(self.progress.get_retention(quiz), RETENTION_ATTRIBUTE[self.sort])
 
 
-def show_progress(language: Language, topics: Topics, progress: Progress, sort: SortColumn = "attempts") -> None:
+def show_progress(language: Language, quizzes: Quizzes, progress: Progress, sort: SortColumn = "attempts") -> None:
     """Show progress."""
     table = Table(title=f"Progress {ALL_LANGUAGES[language]}")
     justify: dict[str, JustifyMethod] = dict(Attempts="right")
     for column in ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"):
         table.add_column(column, justify=justify.get(column, "left"))
-    sorted_quizzes = sorted(topics.quizzes, key=QuizSorter(progress, sort).get_sort_key, reverse=True)
+    sorted_quizzes = sorted(quizzes, key=QuizSorter(progress, sort).get_sort_key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until

@@ -2,8 +2,9 @@
 
 from unittest import TestCase
 
-from toisto.model.language.concept import ConceptId
+from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
+from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.ui.dictionary import DICTIONARY_URL, linkify
 from toisto.ui.text import feedback_correct, feedback_incorrect, instruction
 
@@ -15,60 +16,73 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.concept = self.create_concept(ConceptId("hello"))
-        self.quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve"], meanings=("Hoi",))
-        self.guess = Label("Terve")
+        self.guess = Label("terve")
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        feedback_text = feedback_correct(self.guess, self.quiz)
-        self.assertEqual(f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n', feedback_text)
+        concept = create_concept("hi", dict(nl="hoi", fi="terve"))
+        quiz = create_quizzes("nl", "fi", concept).by_quiz_type("read").pop()
+        feedback_text = feedback_correct(self.guess, quiz)
+        self.assertEqual("✅ Correct.\n", feedback_text)
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
+        concept = create_concept("hi", dict(nl="hoi", fi=["terve", "hei"]))
+        quiz = create_quizzes("nl", "fi", concept).by_quiz_type("read").pop()
         expected_other_answer = linkify(quiz.other_answers(self.guess)[0])
         expected_text = f'✅ Correct.\n[secondary]Another correct answer is "{expected_other_answer}".[/secondary]\n'
         self.assertEqual(expected_text, feedback_correct(self.guess, quiz))
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei", "Hei hei"])
+        concept = create_concept("hi", dict(nl="hoi", fi=["terve", "hei", "hei hei"]))
+        quiz = create_quizzes("nl", "fi", concept).by_quiz_type("read").pop()
         other_answers = [f'"{linkify(answer)}"' for answer in quiz.other_answers(self.guess)]
         expected_text = f'✅ Correct.\n[secondary]Other correct answers are {", ".join(other_answers)}.[/secondary]\n'
         self.assertEqual(expected_text, feedback_correct(self.guess, quiz))
 
     def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
+        concept = create_concept("hi", dict(nl="hoi", fi="terve"))
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("listen").pop()
         expected_text = (
-            f'❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n'
-            f'[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
+            f'❌ Incorrect. The correct answer is "[inserted]{linkify("terve")}[/inserted]".\n'
+            f'[secondary]Meaning "{linkify("hoi")}".[/secondary]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("", self.quiz))
+        self.assertEqual(expected_text, feedback_incorrect("", quiz))
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
-        quiz = self.create_quiz(self.concept, "nl", "fi", "Hoi", ["Terve", "Hei"])
+        concept = create_concept("hi", dict(nl="hoi", fi=["terve", "hei"]))
+        quiz = create_quizzes("nl", "fi", concept).by_quiz_type("read").pop()
         expected_text = (
-            f'❌ Incorrect. The correct answer is "[inserted]{linkify("Terve")}[/inserted]".\n'
-            f'[secondary]Another correct answer is "{linkify("Hei")}".[/secondary]\n'
+            f'❌ Incorrect. The correct answer is "[inserted]{linkify("terve")}[/inserted]".\n'
+            f'[secondary]Another correct answer is "{linkify("hei")}".[/secondary]\n'
         )
         self.assertEqual(expected_text, feedback_incorrect("", quiz))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
+        concept = create_concept("hi", dict(nl="hoi", fi="terve"))
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("listen").pop()
         expected_text = (
-            f'The correct answer is "{linkify("Terve")}".\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
+            f'The correct answer is "{linkify("terve")}".\n[secondary]Meaning "{linkify("hoi")}".[/secondary]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("?", self.quiz))
+        self.assertEqual(expected_text, feedback_incorrect("?", quiz))
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
-        self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(self.quiz))
+        concept = create_concept("hi", dict(nl="hoi", fi="terve"))
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("write").pop()
+        self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(quiz))
 
     def test_instruction_multiple_quiz_types(self):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
-        quiz = self.create_quiz(self.concept, "nl", "nl", "Ik eet", ["Zij eet"], ("give third person", "feminize"))
+        concept = create_concept(
+            "eat",
+            {"first person": dict(nl="ik eet"), "third person": dict(female=dict(nl="zij eet"))},
+        )
+        quiz = create_quizzes("nl", "nl", concept).by_quiz_type("give third person").by_quiz_type("feminize").pop()
         expected_text = "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]"
         self.assertEqual(expected_text, instruction(quiz))
 
