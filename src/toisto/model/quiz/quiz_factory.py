@@ -132,3 +132,8 @@ def paired_leaf_concepts(concept: Concept) -> Iterable[tuple[Concept, Concept]]:
     for concept_group in zip_and_cycle(*[list(constituent.leaf_concepts()) for constituent in concept.constituents]):
         for permutation in permutations(concept_group, r=2):
             yield cast(tuple[Concept, Concept], permutation)
+
+
+def create_quizzes(target_language: Language, source_language: Language, *concepts: Concept) -> Quizzes:
+    """Create quizzes for the concepts, using the target and source language."""
+    return QuizFactory(target_language, source_language).create_quizzes(*concepts)

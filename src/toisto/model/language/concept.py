@@ -80,6 +80,7 @@ class Concept:
     _meanings: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
     related_concepts: RelatedConcepts = RelatedConcepts()
+    topics: set[str] = field(default_factory=set)
 
     instances: ClassVar[dict[ConceptId, Concept]] = {}
 

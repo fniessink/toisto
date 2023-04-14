@@ -34,9 +34,16 @@ class ConceptFactory:
     concept_id: ConceptId
     concept_dict: ConceptDict
 
-    def create_concept(self, parent: ConceptId | None = None) -> Concept:
+    def create_concept(self, parent: ConceptId | None = None, topics: set[str] | None = None) -> Concept:
         """Create a concept from the concept_dict."""
-        return Concept(self.concept_id, self._labels(), self._meanings(), self._level(), self._related_concepts(parent))
+        return Concept(
+            self.concept_id,
+            self._labels(),
+            self._meanings(),
+            self._level(),
+            self._related_concepts(parent),
+            topics or set(),
+        )
 
     def _labels(self) -> dict[Language, Labels]:
         """Return the concept labels."""
@@ -113,3 +120,12 @@ class ConceptFactory:
     def _get_levels(self) -> CommonReferenceLevelDict:
         """Get the Common Reference Levels from the concept dict."""
         return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
+
+
+def create_concept(
+    concept_id: ConceptId,
+    concept_dict: ConceptDict | None = None,
+    topics: set[str] | None = None,
+) -> Concept:
+    """Create a concept from the concept dict."""
+    return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {})).create_concept(topics=topics)
