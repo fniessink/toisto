@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+from typing import Final
+
 
 class Label(str):
     """Class representing labels for concepts."""
 
-    HINT_SEP = ";"
-    SPELLING_ALTERNATIVES_SEP = "|"
+    HINT_SEP: Final = ";"
+    SPELLING_ALTERNATIVES_SEP: Final = "|"
 
     def __eq__(self, other: object) -> bool:
         """Ignore hints when determining equality."""

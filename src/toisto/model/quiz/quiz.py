@@ -6,7 +6,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import Literal, cast, get_args
+from typing import Final, Literal, cast, get_args
 
 from ..language import Language
 from ..language.concept import Concept
@@ -40,7 +40,7 @@ GrammaticalQuizType = Literal[
     "negate",
 ]
 QuizType = Literal[TranslationQuizType, ListenQuizType, SemanticQuizType, GrammaticalQuizType]
-GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, GrammaticalQuizType] = {
+GRAMMATICAL_QUIZ_TYPES: Final[dict[GrammaticalCategory, GrammaticalQuizType]] = {
     "plural": "pluralize",
     "singular": "singularize",
     "diminutive": "diminutize",
@@ -61,8 +61,8 @@ GRAMMATICAL_QUIZ_TYPES: dict[GrammaticalCategory, GrammaticalQuizType] = {
     "affirmative": "affirm",
     "negative": "negate",
 }
-QUIZ_TYPE_GRAMMATICAL_CATEGORIES = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
-INSTRUCTIONS: dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str] = dict(
+QUIZ_TYPE_GRAMMATICAL_CATEGORIES: Final = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
+INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str]] = dict(
     read="Translate into",
     write="Translate into",
     listen="Listen and write in",

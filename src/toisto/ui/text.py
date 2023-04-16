@@ -1,6 +1,7 @@
 """Output for the user."""
 
 import sys
+from typing import Final
 
 from rich.console import Console
 from rich.panel import Panel
@@ -12,13 +13,13 @@ from ..model.quiz.quiz import Quiz
 from .dictionary import DICTIONARY_URL, linkify_and_enumerate
 from .diff import colored_diff
 
-theme = Theme(dict(secondary="grey69", quiz="medium_purple1", inserted="bright_green", deleted="bright_red"))
+theme: Final = Theme(dict(secondary="grey69", quiz="medium_purple1", inserted="bright_green", deleted="bright_red"))
 
 console = Console(theme=theme)
 
-LINK_KEY = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
+LINK_KEY: Final = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
 
-WELCOME = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VERSION}[/white not bold][/underline]!
+WELCOME: Final = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VERSION}[/white not bold][/underline]!
 
 Practice as many words and phrases as you like, for as long as you like.
 
@@ -37,19 +38,19 @@ How does it work?
 ● To quit: type Ctrl-C or Ctrl-D.
 [/secondary]"""
 
-NEWS = (
+NEWS: Final = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
     f"Upgrade with [code]pipx upgrade {NAME}[/code]."
     ""
 )
 
-DONE = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
+DONE: Final = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
 [secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
 """
 
-TRY_AGAIN = "⚠️  Incorrect. Please try again."
+TRY_AGAIN: Final = "⚠️  Incorrect. Please try again."
 
-CORRECT = "✅ Correct.\n"
+CORRECT: Final = "✅ Correct.\n"
 
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
