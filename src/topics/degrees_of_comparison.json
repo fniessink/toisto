@@ -728,6 +728,7 @@
                 "OD"
             ]
         },
+        "topics": "sm1_1",
         "antonym": "bad",
         "positive degree": {
             "en": "good",
@@ -813,6 +814,27 @@
             "en": "cheerfullest",
             "fi": "iloisin",
             "nl": "vrolijkst"
+        }
+    },
+    "funny": {
+        "level": {
+            "A1": ["EP", "KK", "OD"]
+        },
+        "topics": "sm1_1",
+        "positive degree": {
+            "en": "funny",
+            "fi": "hauska",
+            "nl": "grappig"
+        },
+        "comparative degree": {
+            "en": "funnier",
+            "fi": "hauskemmpi",
+            "nl": "grappiger"
+        },
+        "superlative degree": {
+            "en": "funniest",
+            "fi": "hauskin",
+            "nl": "grappigst"
         }
     }
 }

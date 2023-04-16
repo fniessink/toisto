@@ -1,0 +1,119 @@
+{
+    "no": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "sm1_1",
+        "en": "No!",
+        "fi": "Ei!",
+        "nl": "Nee!"
+    },
+    "yes": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "sm1_1",
+        "en": "Yes!",
+        "fi": "Joo!",
+        "nl": "Ja!"
+    },
+    "you're welcome": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "en": [
+                "to be",
+                "welcome"
+            ],
+            "fi": "no"
+        },
+        "en": "You're welcome!",
+        "nl": [
+            "Geen dank!",
+            "Graag gedaan!"
+        ],
+        "fi": "Ei kestä!"
+    },
+    "sorry": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "sm1_1",
+        "en": "Sorry!",
+        "fi": "Anteeksi!",
+        "nl": "Sorry!"
+    },
+    "no problem": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "en": "no",
+            "fi": "no"
+        },
+        "topics": "sm1_1",
+        "en": "No problem!",
+        "fi": "Ei se mitään!",
+        "nl": [
+            "Geen probleem!",
+            "Geeft niets!|Geeft niet!|Geeft niks!"
+        ]
+    },
+    "and": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "sm1_1",
+        "en": "and",
+        "fi": [
+            "entä",
+            "ja"
+        ],
+        "nl": "en"
+    },
+    "and you": {
+        "roots": "and",
+        "topics": "sm1_1",
+        "en": "And you?",
+        "fi": "Entä sinulle?",
+        "nl": "En met jou?"
+    },
+    "enjoy your meal": {
+        "roots": {
+            "fi": ["good", "food"],
+            "nl": "to eat"
+        },
+        "topics": "sm1_1",
+        "en": "Enjoy your meal",
+        "fi": "Hyvää ruokahalua!",
+        "nl": "Eet smakelijk!"
+    },
+    "very well, thank you": {
+        "roots": ["good"],
+        "topics": "sm1_1",
+        "en": "Very well, thank you.|Very well, thanks.",
+        "fi": "Ihan hyvää, kiitos.",
+        "nl": "Heel goed, dank je."
+    }
+}

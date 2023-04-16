@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "sm1_1",
         "en": "Hi!",
         "fi": [
             "Hei!",
@@ -34,13 +35,15 @@
                 "OD"
             ]
         },
+        "topics": "sm1_1",
         "en": [
             "Bye!",
             "Bye bye!"
         ],
         "fi": [
             "Hei hei!",
-            "Moi moi!"
+            "Moi moi!",
+            "Heippa!"
         ],
         "nl": [
             "Doei!",
@@ -115,6 +118,7 @@
         "roots": [
             "name"
         ],
+        "topics": "sm1_1",
         "en": "first name",
         "fi": "etunimi",
         "nl": "de voornaam"
@@ -156,6 +160,14 @@
         "fi": "Minun nimeni on Bob.",
         "nl": "Mijn naam is Bob."
     },
+    "a pleasure to meet you": {
+        "roots": {
+            "fi": "hauska"
+        },
+        "en": "A pleasure to meet you!",
+        "fi": "Hauska tutustua!",
+        "nl": "Aangenaam kennis te maken!"
+    },
     "how do you spell that": {
         "roots": {
             "en": "how",
@@ -185,12 +197,14 @@
     "good morning": {
         "level": {
             "A1": "EP",
+            "A2": "KK",
             "none": "OD"
         },
         "roots": [
             "good",
             "morning"
         ],
+        "topics": "sm1_1",
         "en": "Good morning!",
         "fi": [
             "Hyvää huomenta!",
@@ -201,7 +215,10 @@
     "good afternoon": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": {
             "en": [
@@ -217,6 +234,7 @@
                 "afternoon"
             ]
         },
+        "topics": "sm1_1",
         "en": "Good afternoon!",
         "fi": [
             "Hyvää päivää!;afternoon",
@@ -228,6 +246,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -235,6 +254,7 @@
             "good",
             "day"
         ],
+        "topics": "sm1_1",
         "en": "Good day!",
         "fi": [
             "Hyvää päivää!",
@@ -245,12 +265,16 @@
     "good evening": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": [
             "good",
             "evening"
         ],
+        "topics": "sm1_1",
         "en": "Good evening!",
         "fi": [
             "Hyvää iltaa!",
@@ -261,12 +285,16 @@
     "good night": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": [
             "good",
             "night"
         ],
+        "topics": "sm1_1",
         "en": "Good night!",
         "fi": "Hyvää yötä!",
         "nl": "Goedenacht!"
@@ -275,6 +303,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },

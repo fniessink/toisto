@@ -269,6 +269,7 @@
         "roots": {
             "en": "day"
         },
+        "topics": "sm1_1",
         "en": "yesterday",
         "fi": "eilen",
         "nl": "gisteren"
@@ -281,6 +282,7 @@
                 "OD"
             ]
         },
+        "topics": "sm1_1",
         "en": "tomorrow",
         "fi": "huomenna",
         "nl": "morgen"
@@ -395,6 +397,7 @@
             "fi": "weekend",
             "nl": "weekend"
         },
+        "topics": "sm1_1",
         "en": "Good weekend!",
         "fi": "Hauskaa viikonloppua!",
         "nl": "Prettig weekend!"
