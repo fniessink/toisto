@@ -125,3 +125,14 @@ class Concept:
 
 
 Concepts = tuple[Concept, ...]
+
+
+def topics(concepts: set[Concept]) -> list[Topic]:
+    """Gather the topics from the concepts."""
+    return sorted({topic for concept in concepts for topic in concept.topics})
+
+
+def filter_concepts(levels: list[CommonReferenceLevel], topics: list[Topic], concepts: set[Concept]) -> set[Concept]:
+    """Filter the concepts by levels and topics."""
+    concepts = {concept for concept in concepts if (concept.level in levels if levels else True)}
+    return {concept for concept in concepts if concept.topics & set(topics)}

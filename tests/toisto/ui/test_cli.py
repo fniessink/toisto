@@ -16,7 +16,7 @@ class ParserTest(unittest.TestCase):
     def argument_parser(self) -> ArgumentParser:
         """Create the argument parser."""
         with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[dict(name="v9999")])))):
-            return create_argument_parser(ConfigParser())
+            return create_argument_parser(ConfigParser(), [])
 
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")

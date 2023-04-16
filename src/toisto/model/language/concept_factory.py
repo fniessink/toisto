@@ -15,14 +15,15 @@ from .label import Labels, label_factory, meaning_factory
 CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-MetaData = Literal["level", "antonym", "roots"]
+TopicList = list[Topic]
+MetaData = Literal["level", "antonym", "roots", "topics"]
 LeafConceptDict = dict[
     Language | MetaData,
-    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict,
+    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict | TopicList,
 ]
 CompositeConceptDict = dict[
     GrammaticalCategory | MetaData,
-    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict],
+    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict, TopicList],
 ]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
@@ -33,8 +34,9 @@ class ConceptFactory:
 
     concept_id: ConceptId
     concept_dict: ConceptDict
+    topic: Topic
 
-    def create_concept(self, parent: ConceptId | None = None, topics: set[Topic] | None = None) -> Concept:
+    def create_concept(self, parent: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
         return Concept(
             self.concept_id,
@@ -42,7 +44,7 @@ class ConceptFactory:
             self._meanings(),
             self._level(),
             self._related_concepts(parent),
-            topics or set(),
+            self._topics(),
         )
 
     def _labels(self) -> dict[Language, Labels]:
@@ -73,6 +75,10 @@ class ConceptFactory:
         """Create the related concepts."""
         return RelatedConcepts(parent, self._constituent_concepts(), self._root_concepts(), self._antonym_concepts())
 
+    def _topics(self) -> set[Topic]:
+        """Return the concept topics."""
+        return self._get_topics() | {self.topic}
+
     def _constituent_concepts(self) -> ConceptIds:
         """Create a constituent concept for each grammatical category."""
         return tuple(self._constituent_concept(category) for category in self._grammatical_categories())
@@ -80,7 +86,7 @@ class ConceptFactory:
     def _constituent_concept(self, category: GrammaticalCategory) -> ConceptId:
         """Create a constituent concept for the specified grammatical category."""
         constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
-        concept_factory = self.__class__(constituent_concept_id, self._constituent_concept_dict(category))
+        concept_factory = self.__class__(constituent_concept_id, self._constituent_concept_dict(category), self.topic)
         concept_factory.create_concept(self.concept_id)
         return constituent_concept_id
 
@@ -89,7 +95,13 @@ class ConceptFactory:
         antonym_concept_ids = [ConceptId(f"{antonym}/{category}") for antonym in self._antonym_concepts()]
         antonyms_dict = dict(antonym=antonym_concept_ids)
         roots_dict = cast(CompositeConceptDict, dict(roots=self._get_roots()))
-        constituent_concept_dict = cast(CompositeConceptDict, self.concept_dict)[category] | roots_dict | antonyms_dict
+        topics_dict = cast(CompositeConceptDict, dict(topics=list(self._get_topics())))
+        constituent_concept_dict = (
+            cast(ConceptDict, cast(CompositeConceptDict, self.concept_dict)[category])
+            | roots_dict
+            | antonyms_dict
+            | topics_dict
+        )
         constituent_concept_dict.setdefault("level", self._get_levels())
         return cast(ConceptDict, constituent_concept_dict)
 
@@ -121,11 +133,17 @@ class ConceptFactory:
         """Get the Common Reference Levels from the concept dict."""
         return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
 
+    def _get_topics(self) -> set[Topic]:
+        """Get the topics from the concept dict."""
+        topics = cast(Topic | list[Topic], self.concept_dict.get("topics", []))
+        return set(topics) if isinstance(topics, list) else {topics}
+
 
 def create_concept(
     concept_id: ConceptId,
-    concept_dict: ConceptDict | None = None,
-    topics: set[Topic] | None = None,
+    concept_dict: ConceptDict,
+    topic: Topic | None = None,
 ) -> Concept:
     """Create a concept from the concept dict."""
-    return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {})).create_concept(topics=topics)
+    topic = topic or Topic("<unknown topic>")
+    return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {}), topic).create_concept()
