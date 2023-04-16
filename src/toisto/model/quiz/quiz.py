@@ -157,14 +157,14 @@ class Quizzes(set[Quiz]):
 
     def __init__(self, iterable: Iterable[Quiz] | None = None) -> None:
         super().__init__(iterable or set())
-        # Can't use functools.cache as Quizzes instances are not hashable, so use a dict as cache:
+        # Can't use functools.cache as Quizzes instances are not hashable, so use a dict as cache.
+        # Note that the cache is not updated when quizzes are added or removed after initialization.
         self._quizzes_by_concept: dict[Concept, Quizzes] = {}
+        for quiz in self:
+            self._quizzes_by_concept.setdefault(quiz.concept.base_concept, Quizzes()).add(quiz)
 
     def by_concept(self, concept: Concept) -> Quizzes:
         """Return the quizzes for the concept."""
-        if concept.base_concept not in self._quizzes_by_concept:
-            quizzes_for_same_concept = {quiz for quiz in self if quiz.concept.base_concept == concept.base_concept}
-            self._quizzes_by_concept[concept.base_concept] = self.__class__(quizzes_for_same_concept)
         return self._quizzes_by_concept[concept.base_concept]
 
     def by_quiz_type(self, quiz_type: QuizType) -> Quizzes:
