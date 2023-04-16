@@ -33,6 +33,6 @@ def main() -> None:
         show_welcome(latest_version())
         practice(quizzes, progress, config)
     elif args.command == "topics":
-        show_topics(args.target_language, args.source_language, args.topic, args.topic_file, concepts)
+        show_topics(args.target_language, args.source_language, concepts)
     else:
         show_progress(args.target_language, quizzes, progress, args.sort)

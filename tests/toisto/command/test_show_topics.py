@@ -21,18 +21,18 @@ class ShowTopicsTest(ToistoTestCase):
     def test_title(self):
         """Test the table title."""
         with patch("rich.console.Console.print") as console_print:
-            show_topics("fi", "nl", ["topic"], [], self.concepts)
+            show_topics("fi", "nl", self.concepts)
         self.assertEqual("Topic topic", console_print.call_args[0][0].title)
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_contents(self):
         """Test that the table contains the concept."""
         with patch("rich.console.Console.print") as console_print:
-            show_topics("fi", "nl", ["topic"], [], self.concepts)
+            show_topics("fi", "nl", self.concepts)
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_skip_concepts_without_labels_in_the_selected_languages(self):
         """Test that concepts without labels in the target or source language are not shown."""
         with patch("rich.console.Console.print") as console_print:
-            show_topics("en", "fr", ["topic"], [], self.concepts)
+            show_topics("en", "fr", self.concepts)
         self.assertEqual(0, console_print.call_args_list[0][0][0].row_count)

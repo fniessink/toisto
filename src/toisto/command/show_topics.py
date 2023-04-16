@@ -1,7 +1,6 @@
 """Command to show concepts."""
 
 from itertools import chain
-from pathlib import Path
 
 from rich.table import Table
 
@@ -38,16 +37,10 @@ def topic_table(target_language: Language, source_language: Language, topic: Top
     return table
 
 
-def show_topics(
-    language: Language,
-    source_language: Language,
-    topics: list[Topic],
-    topic_files: list[str],
-    concepts: set[Concept],
-) -> None:
-    """Show the concepts of the topics."""
-    topics = topics + [Topic(Path(topic_file).stem) for topic_file in topic_files]
+def show_topics(target_language: Language, source_language: Language, concepts: set[Concept]) -> None:
+    """Show the concepts by topic."""
+    topics = sorted({topic for concept in concepts for topic in concept.topics})
     with console.pager():
         for topic in topics:
             topic_concepts = {concept for concept in concepts if topic in concept.topics}
-            console.print(topic_table(language, source_language, topic, topic_concepts))
+            console.print(topic_table(target_language, source_language, topic, topic_concepts))
