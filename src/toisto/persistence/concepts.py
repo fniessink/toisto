@@ -1,7 +1,7 @@
 """Load concepts from topic files and generate quizzes."""
 
-import pathlib
 from argparse import ArgumentParser
+from pathlib import Path
 from typing import NoReturn
 
 from ..metadata import NAME, TOPIC_JSON_FILES
@@ -19,10 +19,10 @@ def load_concepts(
 ) -> set[Concept] | NoReturn:
     """Load the concepts from the specified topics and with the specified levels."""
     all_concepts = set()
-    topic_files: list[pathlib.Path] = []
+    topic_files: list[Path] = []
     if builtin_topics_to_load or topic_files_to_load:
         topic_files.extend(topic for topic in TOPIC_JSON_FILES if topic.stem in builtin_topics_to_load)
-        topic_files.extend(pathlib.Path(topic) for topic in topic_files_to_load)
+        topic_files.extend(Path(topic) for topic in topic_files_to_load)
     else:
         topic_files.extend(TOPIC_JSON_FILES)
     registry = ConceptIdRegistry(argument_parser)
@@ -48,14 +48,14 @@ class ConceptIdRegistry:
 
     def __init__(self, argument_parser: ArgumentParser) -> None:
         self.argument_parser = argument_parser
-        self.topic_files_by_concept_id: dict[ConceptId, pathlib.Path] = {}
+        self.topic_files_by_concept_id: dict[ConceptId, Path] = {}
 
-    def check_concept_ids(self, concept_ids: ConceptIds, topic_file: pathlib.Path) -> None:
+    def check_concept_ids(self, concept_ids: ConceptIds, topic_file: Path) -> None:
         """Check that the concept ids are unique."""
         for concept_id in concept_ids:
             self._check_concept_id(concept_id, topic_file)
 
-    def _check_concept_id(self, concept_id: ConceptId, topic_file: pathlib.Path) -> None:
+    def _check_concept_id(self, concept_id: ConceptId, topic_file: Path) -> None:
         """Check that the concept id is unique."""
         if concept_id in self.topic_files_by_concept_id:
             other_topic_file = self.topic_files_by_concept_id[concept_id]
@@ -64,7 +64,7 @@ class ConceptIdRegistry:
                 f"'{other_topic_file}'.\nConcept identifiers must be unique across topic files.\n",
             )
 
-    def register_concept_ids(self, concept_ids: ConceptIds, topic_file: pathlib.Path) -> None:
+    def register_concept_ids(self, concept_ids: ConceptIds, topic_file: Path) -> None:
         """Register the concept ids."""
         for concept_id in concept_ids:
             self.topic_files_by_concept_id[concept_id] = topic_file

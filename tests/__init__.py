@@ -1,10 +1,10 @@
 """Unit tests."""
 
 import logging
-import pathlib
 import sys
+from pathlib import Path
 
 logging.getLogger().setLevel(logging.ERROR)
 
-src_folder = pathlib.Path(__file__).parent / ".." / "src"
+src_folder = Path(__file__).parent / ".." / "src"
 sys.path.insert(0, str(src_folder.resolve()))
