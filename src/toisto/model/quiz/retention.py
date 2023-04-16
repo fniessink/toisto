@@ -4,9 +4,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, fields
 from datetime import datetime, timedelta
+from typing import Final
 
 optional_datetime = datetime | None
-SKIP_INTERVAL_GROWTH_FACTOR = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
+SKIP_INTERVAL_GROWTH_FACTOR: Final = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
 
 
 @dataclass

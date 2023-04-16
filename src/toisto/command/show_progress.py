@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from datetime import datetime
-from typing import Literal
+from typing import Final, Literal
 
 from rich.console import JustifyMethod
 from rich.table import Table
@@ -15,7 +15,7 @@ from toisto.ui.format import format_datetime, format_duration
 from toisto.ui.text import console
 
 SortColumn = Literal["attempts", "retention"]
-RETENTION_ATTRIBUTE = dict(attempts="count", retention="length")
+RETENTION_ATTRIBUTE: Final = dict(attempts="count", retention="length")
 
 
 @dataclass(frozen=True)
