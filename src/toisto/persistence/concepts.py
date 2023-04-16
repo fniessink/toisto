@@ -6,14 +6,14 @@ from typing import NoReturn
 
 from ..metadata import NAME, TOPIC_JSON_FILES
 from ..model.language.cefr import CommonReferenceLevel
-from ..model.language.concept import Concept, ConceptId, ConceptIds
+from ..model.language.concept import Concept, ConceptId, ConceptIds, Topic
 from ..model.language.concept_factory import create_concept
 from .json_file import load_json
 
 
 def load_concepts(
     levels: list[CommonReferenceLevel],
-    builtin_topics_to_load: list[str],
+    builtin_topics_to_load: list[Topic],
     topic_files_to_load: list[str],
     argument_parser: ArgumentParser,
 ) -> set[Concept] | NoReturn:
@@ -30,7 +30,7 @@ def load_concepts(
         concepts = []
         try:
             for concept_key, concept_value in load_json(topic_file).items():
-                concept = create_concept(concept_key, concept_value, topics={topic_file.stem})
+                concept = create_concept(concept_key, concept_value, topics={Topic(topic_file.stem)})
                 if levels and concept.level not in levels:
                     continue
                 concepts.append(concept)

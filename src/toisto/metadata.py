@@ -7,6 +7,7 @@ from typing import Final
 import requests
 
 from toisto.model.language import Language
+from toisto.model.language.concept import Topic
 
 _metadata = metadata("Toisto")
 NAME: Final = _metadata["name"]
@@ -30,7 +31,7 @@ def get_progress_filepath(target_language: Language) -> pathlib.Path:
     return pathlib.Path.home() / f".{NAME.lower()}-progress-{target_language}.json"
 
 
-TOPICS: Final = sorted([json_file.stem for json_file in TOPIC_JSON_FILES])
+TOPICS: Final = sorted([Topic(json_file.stem) for json_file in TOPIC_JSON_FILES])
 
 
 def latest_version() -> str | None:

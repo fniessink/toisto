@@ -14,6 +14,7 @@ from .label import Labels
 
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
+Topic = NewType("Topic", str)
 
 
 @dataclass(frozen=True)
@@ -80,7 +81,7 @@ class Concept:
     _meanings: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
     related_concepts: RelatedConcepts = RelatedConcepts()
-    topics: set[str] = field(default_factory=set)
+    topics: set[Topic] = field(default_factory=set)
 
     instances: ClassVar[dict[ConceptId, Concept]] = {}
 

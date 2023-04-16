@@ -6,7 +6,7 @@ from pathlib import Path
 from rich.table import Table
 
 from toisto.model.language import Language
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, Topic
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Labels
 from toisto.ui.text import console
@@ -17,7 +17,7 @@ def enumerate_labels(labels: Labels) -> str:
     return "\n".join(chain.from_iterable(label.spelling_alternatives for label in labels))
 
 
-def topic_table(target_language: Language, source_language: Language, topic: str, concepts: set[Concept]) -> Table:
+def topic_table(target_language: Language, source_language: Language, topic: Topic, concepts: set[Concept]) -> Table:
     """Show the concepts of the topic."""
     table = Table(title=f"Topic {topic}")
     target_language_name, source_language_name = ALL_LANGUAGES[target_language], ALL_LANGUAGES[source_language]
@@ -41,12 +41,12 @@ def topic_table(target_language: Language, source_language: Language, topic: str
 def show_topics(
     language: Language,
     source_language: Language,
-    topics: list[str],
+    topics: list[Topic],
     topic_files: list[str],
     concepts: set[Concept],
 ) -> None:
     """Show the concepts of the topics."""
-    topics = topics + [Path(topic_file).stem for topic_file in topic_files]
+    topics = topics + [Topic(Path(topic_file).stem) for topic_file in topic_files]
     with console.pager():
         for topic in topics:
             topic_concepts = {concept for concept in concepts if topic in concept.topics}
