@@ -7,7 +7,7 @@ from typing import Literal, Union, cast, get_args
 
 from . import Language
 from .cefr import CommonReferenceLevel, CommonReferenceLevelSource
-from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts
+from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts, Topic
 from .grammar import GrammaticalCategory
 from .iana_language_subtag_registry import ALL_LANGUAGES
 from .label import Labels, label_factory, meaning_factory
@@ -34,7 +34,7 @@ class ConceptFactory:
     concept_id: ConceptId
     concept_dict: ConceptDict
 
-    def create_concept(self, parent: ConceptId | None = None, topics: set[str] | None = None) -> Concept:
+    def create_concept(self, parent: ConceptId | None = None, topics: set[Topic] | None = None) -> Concept:
         """Create a concept from the concept_dict."""
         return Concept(
             self.concept_id,
@@ -125,7 +125,7 @@ class ConceptFactory:
 def create_concept(
     concept_id: ConceptId,
     concept_dict: ConceptDict | None = None,
-    topics: set[str] | None = None,
+    topics: set[Topic] | None = None,
 ) -> Concept:
     """Create a concept from the concept dict."""
     return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {})).create_concept(topics=topics)
