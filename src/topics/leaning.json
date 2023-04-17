@@ -1,0 +1,74 @@
+{
+    "course": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "topics": "sm1_1",
+        "en": "course",
+        "fi": "kurssi",
+        "nl": "de cursus"
+    },
+    "course day": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": [
+            "course",
+            "day"
+        ],
+        "topics": "sm1_1",
+        "en": "course day",
+        "fi": "kurssipäivä",
+        "nl": "de cursusdag"
+    },
+    "question": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "sm1_1",
+        "singular": {
+            "en": "question",
+            "fi": "kysymys",
+            "nl": "de vraag"
+        },
+        "plural": {
+            "en": "questions",
+            "fi": "kysymykset",
+            "nl": "de vragen"
+        }
+    },
+    "answer": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "nl": "word"
+        },
+        "singular": {
+            "en": "answer",
+            "fi": "vastaus",
+            "nl": "het antwoord"
+        },
+        "plural": {
+            "en": "answers",
+            "fi": "vastaukset",
+            "nl": "de antwoorden"
+        }
+    }
+}

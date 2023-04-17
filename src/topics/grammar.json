@@ -1,4 +1,18 @@
 {
+    "grammar": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "fi": "language"
+        },
+        "topics": "sm1_1",
+        "en": "grammar",
+        "fi": "kielioppi",
+        "nl": "de grammatica"
+    },
     "word": {
         "level": {
             "A1": [
@@ -115,47 +129,6 @@
         "en": "alphabet",
         "fi": "aakkoset",
         "nl": "het alfabet"
-    },
-    "question": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "singular": {
-            "en": "question",
-            "fi": "kysymys",
-            "nl": "de vraag"
-        },
-        "plural": {
-            "en": "questions",
-            "fi": "kysymykset",
-            "nl": "de vragen"
-        }
-    },
-    "answer": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "roots": {
-            "nl": "word"
-        },
-        "singular": {
-            "en": "answer",
-            "fi": "vastaus",
-            "nl": "het antwoord"
-        },
-        "plural": {
-            "en": "answers",
-            "fi": "vastaukset",
-            "nl": "de antwoorden"
-        }
     },
     "question word": {
         "level": {

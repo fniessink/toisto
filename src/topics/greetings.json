@@ -11,7 +11,8 @@
         "en": "Hi!",
         "fi": [
             "Hei!",
-            "Moi!"
+            "Moi!",
+            "Moikka!"
         ],
         "nl": "Hoi!"
     },
@@ -43,13 +44,46 @@
         "fi": [
             "Hei hei!",
             "Moi moi!",
-            "Heippa!"
+            "Heippa!",
+            "Moikka!"
         ],
         "nl": [
             "Doei!",
-            "Dag!",
-            "Tot ziens!"
+            "Dag!"
         ]
+    },
+    "see you": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "sm1_1",
+        "en": "See you!",
+        "fi": [
+            "Nähdään!",
+            "Näkemiin!"
+        ],
+        "nl": "Tot ziens!"
+    },
+    "see you tomorrow": {
+        "roots": {
+            "en": [
+                "see you",
+                "tomorrow"
+            ],
+            "fi": [
+                "see you",
+                "tomorrow"
+            ],
+            "nl": "tomorrow"
+        },
+        "topics": "sm1_1",
+        "en": "See you tomorrow!",
+        "fi": "Nähdään huomenna!",
+        "nl": "Tot morgen!"
     },
     "welcome": {
         "level": {
@@ -81,12 +115,24 @@
             "how",
             "to be"
         ],
+        "topics": "sm1_1",
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
             "Miten menee?"
         ],
         "nl": "Hoe gaat het?"
+    },
+    "i am fine": {
+        "roots": {
+            "en": "to be",
+            "fi": "good",
+            "nl": "good"
+        },
+        "topics": "sm1_1",
+        "en": "I am fine.|I'm fine.",
+        "fi": "Minulle kuuluu hyvää.",
+        "nl": "Met mij gaat het goed."
     },
     "name": {
         "level": {
@@ -96,6 +142,7 @@
                 "OD"
             ]
         },
+        "topics": "sm1_1",
         "singular": {
             "en": "name",
             "fi": "nimi",
@@ -180,6 +227,7 @@
                 "to write"
             ]
         },
+        "topics": "sm1_1",
         "en": "How do you spell that?",
         "fi": "Miten se kirjoitetaan?",
         "nl": "Hoe schrijf je dat?"
@@ -190,8 +238,9 @@
             "old",
             "to be"
         ],
+        "topics": "sm1_1",
         "en": "How old are you?",
-        "fi": "Kuinka vanha olet?",
+        "fi": "Kuinka vanha sinä olet?|Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
     },
     "good morning": {
@@ -308,6 +357,7 @@
             ]
         },
         "roots": "to sleep",
+        "topics": "sm1_1",
         "en": "Sleep well!",
         "fi": "Nuku hyvin!",
         "nl": [
