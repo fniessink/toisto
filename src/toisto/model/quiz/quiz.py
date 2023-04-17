@@ -165,7 +165,7 @@ class Quizzes(set[Quiz]):
 
     def by_concept(self, concept: Concept) -> Quizzes:
         """Return the quizzes for the concept."""
-        return self._quizzes_by_concept[concept.base_concept]
+        return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
 
     def by_quiz_type(self, quiz_type: QuizType) -> Quizzes:
         """Return the quizzes of the specified type."""
