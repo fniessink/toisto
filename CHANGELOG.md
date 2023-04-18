@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Concepts can belong to multiple topics. Closes [#234](https://github.com/fniessink/toisto/issues/234).
-- Added a books topic.
+- Added several topics and concepts.
 
 ## 0.10.0 - 2023-04-01
 

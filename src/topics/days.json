@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "day",
             "fi": "päivä",
@@ -26,6 +27,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "week",
             "fi": "viikko",
@@ -46,6 +48,7 @@
             "C2": "KK"
         },
         "roots": "week",
+        "topics": "SM1.1",
         "singular": {
             "en": "weekend",
             "fi": "viikonloppu",
@@ -62,6 +65,7 @@
             "day",
             "week"
         ],
+        "topics": "SM1.1",
         "en": "days of the week",
         "fi": "viikonpäivät",
         "nl": "de dagen van de week"
@@ -81,6 +85,7 @@
                 "day"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Monday",
             "fi": "maanantai",
@@ -134,6 +139,7 @@
             "fi": "week",
             "nl": "day"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Wednesday",
             "fi": "keskiviikko",
@@ -163,6 +169,7 @@
             "en": "day",
             "nl": "day"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Thursday",
             "fi": "torstai",
@@ -186,6 +193,7 @@
             "en": "day",
             "nl": "day"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Friday",
             "fi": "perjantai",
@@ -209,6 +217,7 @@
             "en": "day",
             "nl": "day"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Saturday",
             "fi": "lauantai",
@@ -232,6 +241,7 @@
             "en": "day",
             "nl": "day"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "Sunday",
             "fi": "sunnuntai",
@@ -254,6 +264,7 @@
         "roots": {
             "en": "day"
         },
+        "topics": "SM1.1",
         "en": "today",
         "fi": "tänään",
         "nl": "vandaag"
@@ -269,6 +280,7 @@
         "roots": {
             "en": "day"
         },
+        "topics": "SM1.1",
         "en": "yesterday",
         "fi": "eilen",
         "nl": "gisteren"
@@ -281,6 +293,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "tomorrow",
         "fi": "huomenna",
         "nl": "morgen"
@@ -298,6 +311,7 @@
             "fi": "day",
             "nl": "yesterday"
         },
+        "topics": "SM1.1",
         "en": "the day before yesterday",
         "fi": "toissapäivänä",
         "nl": "eergisteren"
@@ -318,6 +332,7 @@
             "fi": "tomorrow",
             "nl": "tomorrow"
         },
+        "topics": "SM1.1",
         "en": "the day after tomorrow",
         "fi": "ylihuomenna",
         "nl": "overmorgen"
@@ -382,6 +397,7 @@
             "to be",
             "today"
         ],
+        "topics": "SM1.1",
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"
@@ -395,6 +411,7 @@
             "fi": "weekend",
             "nl": "weekend"
         },
+        "topics": "SM1.1",
         "en": "Good weekend!",
         "fi": "Hauskaa viikonloppua!",
         "nl": "Prettig weekend!"

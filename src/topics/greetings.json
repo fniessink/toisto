@@ -7,10 +7,12 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "Hi!",
         "fi": [
             "Hei!",
-            "Moi!"
+            "Moi!",
+            "Moikka!;arriving"
         ],
         "nl": "Hoi!"
     },
@@ -22,6 +24,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "Hello!",
         "fi": "Terve!",
         "nl": "Hallo!"
@@ -34,25 +37,61 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": [
             "Bye!",
             "Bye bye!"
         ],
         "fi": [
             "Hei hei!",
-            "Moi moi!"
+            "Moi moi!",
+            "Heippa!",
+            "Moikka!;leaving"
         ],
         "nl": [
             "Doei!",
-            "Dag!",
-            "Tot ziens!"
+            "Dag!"
         ]
+    },
+    "see you": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "SM1.1",
+        "en": "See you!",
+        "fi": [
+            "Nähdään!",
+            "Näkemiin!"
+        ],
+        "nl": "Tot ziens!"
+    },
+    "see you tomorrow": {
+        "roots": {
+            "en": [
+                "see you",
+                "tomorrow"
+            ],
+            "fi": [
+                "see you",
+                "tomorrow"
+            ],
+            "nl": "tomorrow"
+        },
+        "topics": "SM1.1",
+        "en": "See you tomorrow!",
+        "fi": "Nähdään huomenna!",
+        "nl": "Tot morgen!"
     },
     "welcome": {
         "level": {
             "A1": "OD",
             "A2": "EP"
         },
+        "topics": "SM1.1",
         "en": "Welcome!",
         "fi": "Tervetuloa!",
         "nl": "Welkom!"
@@ -78,12 +117,24 @@
             "how",
             "to be"
         ],
+        "topics": "SM1.1",
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
             "Miten menee?"
         ],
         "nl": "Hoe gaat het?"
+    },
+    "i am fine": {
+        "roots": {
+            "en": "to be",
+            "fi": "good",
+            "nl": "good"
+        },
+        "topics": "SM1.1",
+        "en": "I am fine.|I'm fine.",
+        "fi": "Minulle kuuluu hyvää.",
+        "nl": "Met mij gaat het goed."
     },
     "name": {
         "level": {
@@ -93,6 +144,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "name",
             "fi": "nimi",
@@ -115,6 +167,7 @@
         "roots": [
             "name"
         ],
+        "topics": "SM1.1",
         "en": "first name",
         "fi": "etunimi",
         "nl": "de voornaam"
@@ -130,6 +183,7 @@
         "roots": [
             "name"
         ],
+        "topics": "SM1.1",
         "en": [
             "last name",
             "surname"
@@ -156,6 +210,15 @@
         "fi": "Minun nimeni on Bob.",
         "nl": "Mijn naam is Bob."
     },
+    "a pleasure to meet you": {
+        "roots": {
+            "fi": "hauska"
+        },
+        "topics": "SM1.1",
+        "en": "A pleasure to meet you!",
+        "fi": "Hauska tutustua!",
+        "nl": "Aangenaam kennis te maken!"
+    },
     "how do you spell that": {
         "roots": {
             "en": "how",
@@ -168,6 +231,7 @@
                 "to write"
             ]
         },
+        "topics": "SM1.1",
         "en": "How do you spell that?",
         "fi": "Miten se kirjoitetaan?",
         "nl": "Hoe schrijf je dat?"
@@ -178,30 +242,33 @@
             "old",
             "to be"
         ],
+        "topics": "SM1.1",
         "en": "How old are you?",
-        "fi": "Kuinka vanha olet?",
+        "fi": "Kuinka vanha sinä olet?|Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
     },
     "good morning": {
         "level": {
             "A1": "EP",
+            "A2": "KK",
             "none": "OD"
         },
         "roots": [
             "good",
             "morning"
         ],
+        "topics": "SM1.1",
         "en": "Good morning!",
-        "fi": [
-            "Hyvää huomenta!",
-            "Huomenta!"
-        ],
+        "fi": "Hyvää huomenta!",
         "nl": "Goedemorgen!"
     },
     "good afternoon": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": {
             "en": [
@@ -217,17 +284,16 @@
                 "afternoon"
             ]
         },
+        "topics": "SM1.1",
         "en": "Good afternoon!",
-        "fi": [
-            "Hyvää päivää!;afternoon",
-            "Päivää!;afternoon"
-        ],
+        "fi": "Hyvää päivää!;afternoon",
         "nl": "Goedemiddag"
     },
     "good day": {
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -235,38 +301,41 @@
             "good",
             "day"
         ],
+        "topics": "SM1.1",
         "en": "Good day!",
-        "fi": [
-            "Hyvää päivää!",
-            "Päivää!"
-        ],
+        "fi": "Hyvää päivää!|Päivää!",
         "nl": "Goedendag!"
     },
     "good evening": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": [
             "good",
             "evening"
         ],
+        "topics": "SM1.1",
         "en": "Good evening!",
-        "fi": [
-            "Hyvää iltaa!",
-            "Iltaa!"
-        ],
+        "fi": "Hyvää iltaa!|Iltaa!",
         "nl": "Goedenavond!"
     },
     "good night": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": [
             "good",
             "night"
         ],
+        "topics": "SM1.1",
         "en": "Good night!",
         "fi": "Hyvää yötä!",
         "nl": "Goedenacht!"
@@ -275,10 +344,12 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
         "roots": "to sleep",
+        "topics": "SM1.1",
         "en": "Sleep well!",
         "fi": "Nuku hyvin!",
         "nl": [

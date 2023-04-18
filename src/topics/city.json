@@ -18,6 +18,22 @@
             "nl": "de steden"
         }
     },
+    "place": {
+        "level": {
+            "A1": ["EP", "KK", "OD"]
+        },
+        "topics": "SM1.1",
+        "singular": {
+            "en": "place",
+            "fi": "paikka",
+            "nl": "de plaats"
+        },
+        "plural": {
+            "en": "places",
+            "fi": "paikat",
+            "nl": "de plaatsen"
+        }
+    },
     "building": {
         "level": {
             "A1": [
@@ -225,6 +241,13 @@
             "fi": "tavaratalot",
             "nl": "de warenhuizen"
         }
+    },
+    "ice cream kiosk": {
+        "roots": "ice cream",
+        "topics": "SM1.1",
+        "en": "ice cream kiosk",
+        "fi": "jäätelökioski",
+        "nl": "de ijskraam"
     },
     "park": {
         "level": {

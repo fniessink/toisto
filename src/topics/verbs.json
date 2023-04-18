@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -1254,6 +1255,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to eat",
             "fi": "syödä",
@@ -1354,6 +1356,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to sleep",
             "fi": "nukkua",
@@ -1553,6 +1556,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to come",
             "fi": "tulla",
@@ -1653,6 +1657,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1753,6 +1758,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to write",
             "fi": "kirjoittaa",
@@ -1853,6 +1859,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "infinitive": {
             "en": "to live",
             "fi": "asua",
@@ -1942,6 +1949,55 @@
                     "fi": "he asuivat",
                     "nl": "zij woonden|ze woonden"
                 }
+            }
+        }
+    },
+    "to save": {
+        "topics": "SM1.1",
+        "infinitive": {
+            "en": "to save",
+            "fi": "säästä",
+            "nl": "sparen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I save",
+                "fi": "minä säästän|säästän",
+                "nl": "ik spaar"
+            },
+            "second person": {
+                "en": "you save;singular",
+                "fi": "sinä säästät|säästät",
+                "nl": "jij spaart|je spaart"
+            },
+            "third person": {
+                "female": {
+                    "en": "she saves",
+                    "fi": "hän säästää;female",
+                    "nl": "zij spaart|ze spaart"
+                },
+                "male": {
+                    "en": "he saves",
+                    "fi": "hän säästää;male",
+                    "nl": "hij spaart"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we save",
+                "fi": "me säästämme|säästämme",
+                "nl": "wij sparen|we sparen"
+            },
+            "second person": {
+                "en": "you save;plural",
+                "fi": "te säästätte|säästätte",
+                "nl": "jullie sparen"
+            },
+            "third person": {
+                "en": "they save",
+                "fi": "he säästävät",
+                "nl": "zij sparen|ze sparen"
             }
         }
     }

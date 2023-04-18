@@ -1,0 +1,61 @@
+{
+    "job": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "en": "job",
+        "fi": "työ",
+        "nl": "het werk"
+    },
+    "engineer": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "B1": "KK"
+        },
+        "topics": "SM1.1",
+        "singular": {
+            "en": "engineer",
+            "fi": "insinööri",
+            "nl": "de ingenieur"
+        },
+        "plural": {
+            "en": "engineers",
+            "fi": "insinöörit",
+            "nl": "de ingenieurs"
+        }
+    },
+    "teacher": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": ["learning", "SM1.1"],
+        "singular": {
+            "en": "teacher",
+            "fi": "opettaja",
+            "nl": [
+                "de docent",
+                "de leraar"
+            ]
+        },
+        "plural": {
+            "en": "teachers",
+            "fi": "opettajat",
+            "nl": [
+                "de docenten",
+                "de leraren"
+            ]
+        }
+    }
+}
