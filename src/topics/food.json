@@ -10,7 +10,10 @@
         "singular": {
             "en": "food",
             "fi": "ruoka",
-            "nl": "het voedsel"
+            "nl": [
+                "het voedsel",
+                "het eten"
+            ]
         },
         "plural": {
             "en": "foods",
@@ -96,7 +99,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "coffee",
             "fi": "kahvi",
@@ -232,7 +235,7 @@
             ],
             "A2": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "milk",
             "fi": "maito",
@@ -323,7 +326,7 @@
             ],
             "C2": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "juice",
             "fi": "mehu",
@@ -488,6 +491,7 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "sugar",
             "fi": "sokeri",
@@ -724,7 +728,7 @@
             "B2": "KK",
             "none": "EP"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "cookie",
             "fi": "keksi",
@@ -744,7 +748,7 @@
             ],
             "A2": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "cake",
             "fi": "kakku",
@@ -797,7 +801,7 @@
             "fi": "ice",
             "nl": "ice"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "ice cream",
             "fi": "jäätelö",
@@ -808,6 +812,13 @@
             "fi": "jäätelöt",
             "nl": "de ijsjes"
         }
+    },
+    "chocolate ice cream": {
+        "roots": "ice cream",
+        "topics": "SM1.1",
+        "en": "chocolate ice cream",
+        "fi": "suklaajäätelö",
+        "nl": "het chocolade-ijsje|het chocolade-ijs"
     },
     "banana": {
         "level": {

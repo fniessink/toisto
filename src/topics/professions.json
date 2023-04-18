@@ -1,4 +1,17 @@
 {
+    "job": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "en": "job",
+        "fi": "työ",
+        "nl": "het werk"
+    },
     "engineer": {
         "level": {
             "A2": [
@@ -7,7 +20,7 @@
             ],
             "B1": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "engineer",
             "fi": "insinööri",
@@ -27,7 +40,7 @@
                 "OD"
             ]
         },
-        "topics": ["learning", "sm1_1"],
+        "topics": ["learning", "SM1.1"],
         "singular": {
             "en": "teacher",
             "fi": "opettaja",

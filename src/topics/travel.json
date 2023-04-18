@@ -7,7 +7,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "root": {
             "singular": {
                 "en": "car",
@@ -33,28 +33,6 @@
             }
         }
     },
-    "elevator": {
-        "level": {
-            "B1": "OD",
-            "none": "EP"
-        },
-        "singular": {
-            "en": [
-                "elevator",
-                "lift"
-            ],
-            "fi": "hissi",
-            "nl": "de lift"
-        },
-        "plural": {
-            "en": [
-                "elevators",
-                "lifts"
-            ],
-            "fi": "hissit",
-            "nl": "de liften"
-        }
-    },
     "flight": {
         "level": {
             "A1": "OD",
@@ -69,6 +47,24 @@
             "en": "flights",
             "fi": "lennot",
             "nl": "de vluchten"
+        }
+    },
+    "passport": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "B1": "KK"
+        },
+        "topics": "SM1.1",
+        "singular": {
+            "en": "passport",
+            "fi": "passi",
+            "nl": "het paspoort"
+        },
+        "plural": {
+            "en": "passports",
+            "fi": "passit",
+            "nl": "de paspoorten"
         }
     },
     "port": {

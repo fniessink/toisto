@@ -43,7 +43,7 @@
         "roots": {
             "nl": "head"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "chapter",
             "fi": "kappale",
@@ -63,6 +63,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "page",
             "fi": "sivu",
@@ -80,7 +81,7 @@
             "B2": "EP",
             "none": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "code",
             "fi": "koodi",

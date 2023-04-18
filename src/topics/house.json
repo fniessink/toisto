@@ -184,7 +184,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "door",
             "fi": "ovi",
@@ -232,6 +232,28 @@
         },
         "plural": {
             "nl": "de trappen"
+        }
+    },
+    "elevator": {
+        "level": {
+            "B1": "OD",
+            "none": "EP"
+        },
+        "singular": {
+            "en": [
+                "elevator",
+                "lift"
+            ],
+            "fi": "hissi",
+            "nl": "de lift"
+        },
+        "plural": {
+            "en": [
+                "elevators",
+                "lifts"
+            ],
+            "fi": "hissit",
+            "nl": "de liften"
         }
     },
     "living room": {

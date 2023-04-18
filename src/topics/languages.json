@@ -7,7 +7,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "language",
             "fi": "kieli",
@@ -18,6 +18,74 @@
             "fi": "kielet",
             "nl": "de talen"
         }
+    },
+    "spoken language": {
+        "level": {
+            "A1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "roots": [
+            "language"
+        ],
+        "topics": "SM1.1",
+        "en": "spoken language",
+        "fi": "puhekieli",
+        "nl": "de spreektaal"
+    },
+    "written language": {
+        "level": {
+            "A1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "roots": {
+            "en": [
+                "to write",
+                "language"
+            ],
+            "fi": [
+                "book",
+                "language"
+            ],
+            "nl": [
+                "to write",
+                "language"
+            ]
+        },
+        "en": "written language",
+        "fi": "kirjakieli",
+        "nl": "de schrijftaal"
+    },
+    "mother tongue": {
+        "level": {
+            "B2": "EP",
+            "none": ["KK", "OD"]
+        },
+        "roots": {
+            "en": "mother",
+            "fi": ["mother", "language"],
+            "nl": ["mother", "language"]
+        },
+        "topics": "SM1.1",
+        "en": "nother tongue",
+        "fi": "äidinkieli",
+        "nl": "de moedertaal"
+    },
+    "pronunciation": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "topics": "SM1.1",
+        "en": "pronunciation",
+        "fi": "ääntäminen",
+        "nl": "de uitspraak"
     },
     "dialect": {
         "level": {
@@ -51,11 +119,19 @@
             "nl": "de accenten"
         }
     },
+    "vowel harmony": {
+        "roots": "vowel",
+        "topics": "SM1.1",
+        "en": "vowel harmony",
+        "fi": "vokaaliharmonia",
+        "nl": "de klinkerharmonie"
+    },
     "english": {
         "level": {
             "A1": "OD",
             "C1": "EP"
         },
+        "topics": "SM1.1",
         "en": "English",
         "fi": "englanti",
         "nl": "Engels"
@@ -101,6 +177,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "Finnish",
         "fi": "suomi",
         "nl": "Fins"
@@ -112,6 +189,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "French",
         "fi": "ranska",
         "nl": "Frans"
@@ -198,6 +276,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "en": "Swedish",
         "fi": "ruotsi",
         "nl": "Zweeds"

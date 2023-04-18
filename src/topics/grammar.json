@@ -8,7 +8,7 @@
         "roots": {
             "fi": "language"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "en": "grammar",
         "fi": "kielioppi",
         "nl": "de grammatica"
@@ -21,6 +21,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "word",
             "fi": "sana",
@@ -32,6 +33,21 @@
             "nl": "de woorden"
         }
     },
+    "vocabulary": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "fi": "word",
+            "nl": "word"
+        },
+        "topics": "SM1.1",
+        "en": "vocabulary",
+        "fi": "sanasto",
+        "nl": "de woordenschat"
+    },
     "compound word": {
         "level": {
             "none": [
@@ -41,6 +57,7 @@
             ]
         },
         "roots": "word",
+        "topics": "SM1.1",
         "en": "compound word",
         "fi": "yhdyssana",
         "nl": "het samengestelde woord"
@@ -51,7 +68,7 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "phrase",
             "fi": "fraasi",
@@ -88,6 +105,7 @@
             "B1": "EP",
             "none": "KK"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "vowel",
             "fi": "vokaali",
@@ -125,7 +143,7 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "en": "alphabet",
         "fi": "aakkoset",
         "nl": "het alfabet"
@@ -172,8 +190,9 @@
             "none": "KK"
         },
         "roots": {
-            "nl": "word"
+            "nl": ["job", "word"]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "verb",
             "fi": "verbi",
@@ -184,5 +203,26 @@
             "fi": "verbit",
             "nl": "de werkwoorden"
         }
+    },
+    "pronoun": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "en": "pronoun",
+        "fi": "pronomini",
+        "nl": "het voornaamwoord"
+    },
+    "personal pronoun": {
+        "level": {
+            "B2": "OD",
+            "none": ["EP", "KK"]
+        },
+        "roots": ["pronoun"],
+        "topics": "SM1.1",
+        "en": "personal pronoun",
+        "fi": "persoonapronomini",
+        "nl": "het persoonlijk voornaamwoord"
     }
 }

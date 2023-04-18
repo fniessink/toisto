@@ -7,10 +7,17 @@
             ],
             "A2": "KK"
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "en": "course",
         "fi": "kurssi",
         "nl": "de cursus"
+    },
+    "finnish course": {
+        "roots": ["finnish", "course"],
+        "topics": "SM1.1",
+        "en": "Finnish course",
+        "fi": "suomen kurssi",
+        "nl": "de cursus Fins"
     },
     "course day": {
         "level": {
@@ -24,7 +31,7 @@
             "course",
             "day"
         ],
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "en": "course day",
         "fi": "kurssipäivä",
         "nl": "de cursusdag"
@@ -37,7 +44,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "singular": {
             "en": "question",
             "fi": "kysymys",
@@ -60,6 +67,7 @@
         "roots": {
             "nl": "word"
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "answer",
             "fi": "vastaus",
@@ -69,6 +77,24 @@
             "en": "answers",
             "fi": "vastaukset",
             "nl": "de antwoorden"
+        }
+    },
+    "exercise": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "B1": "KK"
+        },
+        "topics": "SM1.1",
+        "singular": {
+            "en": "exercise",
+            "fi": "harjoitus",
+            "nl": "de oefening"
+        },
+        "plural": {
+            "en": "exercises",
+            "fi": "harjoitukset",
+            "nl": "de oefeningen"
         }
     }
 }

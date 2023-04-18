@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.1",
         "singular": {
             "en": "table",
             "fi": "pöytä",
@@ -36,6 +37,29 @@
             "fi": "sängyt",
             "nl": "de bedden"
         }
+    },
+    "double bed": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": "bed",
+            "fi": [
+                "pair",
+                "bed"
+            ],
+            "nl": [
+                "2",
+                "bed"
+            ]
+        },
+        "en": "double bed",
+        "fi": "parisänky",
+        "nl": "het tweepersoonsbed"
     },
     "sofa": {
         "level": {
@@ -100,6 +124,7 @@
         },
         "roots": {
             "fi": [
+                "job",
                 "to write",
                 "table"
             ]
@@ -120,6 +145,26 @@
             ],
             "nl": "de bureaus"
         }
+    },
+    "office chair": {
+        "roots": {
+            "en": [
+                "office",
+                "chair"
+            ],
+            "fi": [
+                "job",
+                "chair"
+            ],
+            "nl": [
+                "desk",
+                "chair"
+            ]
+        },
+        "topics": "SM1.1",
+        "en": "office chair",
+        "fi": "työtuoli",
+        "nl": "de bureaustoel"
     },
     "lamp": {
         "level": {
@@ -152,9 +197,16 @@
     "dining table": {
         "roots": {
             "en": "table",
-            "fi": ["food", "table"],
-            "nl": ["to eat", "table"]
+            "fi": [
+                "food",
+                "table"
+            ],
+            "nl": [
+                "to eat",
+                "table"
+            ]
         },
+        "topics": "SM1.1",
         "en": "dining table",
         "fi": "ruokapöytä",
         "nl": "de eettafel"
@@ -181,6 +233,7 @@
             "fi": "curtain",
             "nl": "curtain"
         },
+        "topics": "SM1.1",
         "en": "roller blind",
         "fi": "rullaverho",
         "nl": "het rolgordijn"

@@ -131,7 +131,7 @@
             ]
         },
         "antonym": "warm",
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "cold",
             "fi": "kylmä",
@@ -278,6 +278,7 @@
             ]
         },
         "antonym": "new",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "old",
             "fi": "vanha",
@@ -300,6 +301,7 @@
             "B2": "OD",
             "none": "EP"
         },
+        "topics": "SM1.1",
         "positive degree": {
             "en": "cute",
             "fi": "söpö",
@@ -344,7 +346,10 @@
     "quiet": {
         "level": {
             "A1": "OD",
-            "A2": ["EP", "KK"]
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "positive degree": {
             "en": "quiet",
@@ -492,6 +497,7 @@
             ]
         },
         "antonym": "short",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "long",
             "fi": "pitkä",
@@ -517,7 +523,7 @@
             ]
         },
         "antonym": "long",
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "short",
             "fi": "lyhyt",
@@ -647,7 +653,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "nice",
             "fi": [
@@ -731,7 +737,7 @@
                 "OD"
             ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "antonym": "bad",
         "positive degree": {
             "en": "good",
@@ -801,7 +807,10 @@
     "cheerful": {
         "level": {
             "A1": "KK",
-            "B1": ["EP", "OD"]
+            "B1": [
+                "EP",
+                "OD"
+            ]
         },
         "positive degree": {
             "en": "cheerful",
@@ -821,9 +830,13 @@
     },
     "funny": {
         "level": {
-            "A1": ["EP", "KK", "OD"]
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
-        "topics": "sm1_1",
+        "topics": "SM1.1",
         "positive degree": {
             "en": "funny",
             "fi": "hauska",
@@ -838,6 +851,31 @@
             "en": "funniest",
             "fi": "hauskin",
             "nl": "grappigst"
+        }
+    },
+    "free": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.1",
+        "positive degree": {
+            "en": "free",
+            "fi": "vapaa",
+            "nl": "vrij"
+        },
+        "comparative degree": {
+            "en": "freer",
+            "fi": "vapaampi",
+            "nl": "vrijer"
+        },
+        "superlative degree": {
+            "en": "freest",
+            "fi": "vapain",
+            "nl": "vrijst"
         }
     }
 }
