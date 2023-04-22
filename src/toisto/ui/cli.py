@@ -46,9 +46,8 @@ def add_topic_arguments(parser: ArgumentParser, topics: list[Topic]) -> None:
         "--topic",
         action="append",
         default=[],
-        choices=topics,
         metavar="{topic}",
-        help="topic to use, can be repeated; default: all; available topics: %(choices)s",
+        help=f"topic to use, can be repeated; default: all; built-in topics: {', '.join(topics)}",
     )
     parser.add_argument(
         "-f",
