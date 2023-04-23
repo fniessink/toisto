@@ -71,6 +71,40 @@ class ConcepFactoryTest(ToistoTestCase):
         for index in range(3):
             self.assertEqual((small.constituents[index],), big.constituents[index].antonyms)
 
+    def test_answer(self):
+        """Test that a concept can have an answer relation with another concept."""
+        question = create_concept("ice cream", dict(en=["Do you like ice cream?"], answer="yes"))
+        answer = create_concept("yes", dict(en="Yes!"))
+        self.assertEqual((answer,), question.answers)
+
+    def test_multiple_answers(self):
+        """Test that a concept can have an answer relation with multiple concepts."""
+        question = create_concept("ice cream", dict(en=["Do you like ice cream?"], answer=["yes", "no"]))
+        yes = create_concept("yes", dict(en="Yes!"))
+        no = create_concept("no", dict(en="No!"))
+        self.assertEqual((yes, no), question.answers)
+
+    def test_answer_of_composite(self):
+        """Test that a composite concept can have answers."""
+        question = create_concept(
+            "question",
+            {
+                "answer": "answer",
+                "singular": dict(fi="Puhutko englantia?"),
+                "plural": dict(fi="Puhutteko englantia?"),
+            },
+        )
+        answer = create_concept(
+            "answer",
+            {
+                "singular": dict(fi="Puhun."),
+                "plural": dict(fi="Puhumme."),
+            },
+        )
+        self.assertEqual((answer,), question.answers)
+        for index in range(2):
+            self.assertEqual((answer.constituents[index],), question.constituents[index].answers)
+
     def test_level(self):
         """Test that a concept can have a level."""
         concept = create_concept("one", dict(level=dict(A1="EP"), fi="yksi", nl="één"))
@@ -115,3 +149,8 @@ class ConcepFactoryTest(ToistoTestCase):
         """Test that multiple extra topics can be given to the concept."""
         concept = create_concept("english", dict(topics=["England", "USA"], en=["English"], nl=["Engels"]), "language")
         self.assertEqual({"language", "England", "USA"}, concept.topics)
+
+    def test_answer_only(self):
+        """Test that a concept can be flagged as answer only."""
+        concept = create_concept("yes", {"answer-only": True, "en": "Yes, I do.", "fi": "Pidän."})
+        self.assertTrue(concept.answer_only)

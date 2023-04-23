@@ -32,6 +32,9 @@ class RelatedConcepts:
     The antonym relation is used to capture opposites. For example 'bad' has 'good' as antonym and 'good' has 'bad'
     as antonym.
 
+    The answer relation is used to specify possible answers to questions. Using the answer relation it is possible to
+    specify that, for example, 'Do you like ice cream?' has the yes and no concepts as possible answers.
+
     NOTE: This class keeps track of the related concepts using their concept identifier (ConceptId) and only when
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
     prevents to the need for a second pass after instantiating concepts from the topic files to create the relations.
@@ -41,6 +44,7 @@ class RelatedConcepts:
     _constituents: ConceptIds = ()
     _roots: dict[Language, ConceptIds] | ConceptIds = ()  # Tuple if all languages have the same roots
     _antonyms: ConceptIds = ()
+    _answers: ConceptIds = ()
 
     @property
     def parent(self) -> Concept | None:
@@ -56,6 +60,11 @@ class RelatedConcepts:
     def antonyms(self) -> Concepts:
         """Return the antonym (opposite) concepts."""
         return self._get_concepts(*self._antonyms)
+
+    @property
+    def answers(self) -> Concepts:
+        """Return the answers to the question that this concept poses."""
+        return self._get_concepts(*self._answers)
 
     def roots(self, language: Language) -> Concepts:
         """Return the root concepts, for the specified language."""
@@ -82,6 +91,7 @@ class Concept:
     level: CommonReferenceLevel | None = None
     related_concepts: RelatedConcepts = RelatedConcepts()
     topics: set[Topic] = field(default_factory=set)
+    answer_only: bool = False
 
     instances: ClassVar[dict[ConceptId, Concept]] = {}
 

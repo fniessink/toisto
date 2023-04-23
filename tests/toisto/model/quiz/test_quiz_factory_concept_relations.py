@@ -81,3 +81,65 @@ class AntonymConceptsTest(QuizFactoryTestCase):
             for other_quiz in other_quizzes:
                 message = f"{antonym_quiz.key} should be blocked by {other_quiz.key}, but isn't"
                 self.assertTrue(antonym_quiz.is_blocked_by({other_quiz}), message)
+
+
+class AnswerConceptsTest(QuizFactoryTestCase):
+    """Unit tests for answer concepts."""
+
+    def test_answer_leaf_concepts(self):
+        """Test that quizzes are generated for concepts with answer concepts."""
+        question = create_concept("question", dict(answer="answer", en="How are you?"))
+        answer = create_concept("answer", dict(en="I'm fine, thank you."))
+        quizzes = create_quizzes("en", "en", question, answer)
+        answer_quiz = self.create_quiz(question, "en", "en", "How are you?", ["I'm fine, thank you."], "answer")
+        self.assertIn(answer_quiz, quizzes)
+
+    def test_answer_composite_concepts(self):
+        """Test that quizzes are generated for composite concepts with answer concepts."""
+        question = create_concept(
+            "question",
+            dict(answer="answer", singular=dict(en="How are you?;singular"), plural=dict(en="How are you?;plural")),
+        )
+        answer = create_concept(
+            "answer",
+            dict(singular=dict(en="I'm fine, thank you."), plural=dict(en="We're fine, thank you.")),
+        )
+        quizzes = create_quizzes("en", "en", question, answer)
+        singular_answer_quiz = self.create_quiz(
+            question,
+            "en",
+            "en",
+            "How are you?;singular",
+            ["I'm fine, thank you."],
+            "answer",
+        )
+        plural_answer_quiz = self.create_quiz(
+            question,
+            "en",
+            "en",
+            "How are you?;plural",
+            ["We're fine, thank you."],
+            "answer",
+        )
+        self.assertIn(singular_answer_quiz, quizzes)
+        self.assertIn(plural_answer_quiz, quizzes)
+
+    def test_multiple_answers(self):
+        """Test that quizzes can have multiple answers."""
+        question = create_concept("question", dict(answer=["fine", "good"], en="How are you?"))
+        fine = create_concept("fine", dict(en="I'm fine, thank you."))
+        good = create_concept("good", dict(en="I'm doing good, thank you."))
+        quiz = [quiz for quiz in create_quizzes("en", "en", question, fine, good) if "answer" in quiz.quiz_types][0]
+        self.assertEqual((fine.labels("en")[0], good.labels("en")[0]), quiz.answers)
+
+    def test_answer_quiz_order(self):
+        """Test that before quizzing for an answer to a question, the answer itself has been quizzed."""
+        question = create_concept("question", dict(answer="answer", en="How are you?"))
+        answer = create_concept("answer", dict(en="I'm fine, thank you."))
+        quizzes = create_quizzes("en", "en", question, answer)
+        answer_quizzes = {quiz for quiz in quizzes if "answer" in quiz.quiz_types}
+        other_quizzes = quizzes - answer_quizzes
+        for answer_quiz in answer_quizzes:
+            for other_quiz in other_quizzes:
+                message = f"{answer_quiz.key} should be blocked by {other_quiz.key}, but isn't"
+                self.assertTrue(answer_quiz.is_blocked_by({other_quiz}), message)

@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add question/answer concepts. Closes [#233](https://github.com/fniessink/toisto/issues/233).
 - Concepts can belong to multiple topics. Closes [#234](https://github.com/fniessink/toisto/issues/234).
 - Added several topics and concepts.
 
