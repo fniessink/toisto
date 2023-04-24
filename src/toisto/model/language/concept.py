@@ -89,7 +89,7 @@ class Concept:
     _labels: dict[Language, Labels] = field(default_factory=dict)
     _meanings: dict[Language, Labels] = field(default_factory=dict)
     level: CommonReferenceLevel | None = None
-    related_concepts: RelatedConcepts = RelatedConcepts()
+    related_concepts: RelatedConcepts = field(default_factory=RelatedConcepts)
     topics: set[Topic] = field(default_factory=set)
     answer_only: bool = False
 

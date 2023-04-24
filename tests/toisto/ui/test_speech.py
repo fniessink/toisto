@@ -2,6 +2,7 @@
 
 import unittest
 from configparser import ConfigParser
+from subprocess import DEVNULL
 from unittest.mock import Mock, patch
 
 import gtts
@@ -18,12 +19,31 @@ class SayTest(unittest.TestCase):
 
     @patch("sys.platform", "darwin")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
-    @patch("os.system")
-    def test_google_translate_fails_on_mac_os(self, mock_os_system: Mock):
+    @patch("toisto.ui.speech.Popen")
+    def test_google_translate_fails_on_mac_os(self, mock_subprocess_popen: Mock):
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
-        mock_os_system.assert_called_once_with("say --voice=Xander Hallo &")
+        mock_subprocess_popen.assert_called_once_with(
+            ["say", "--voice=Xander", "Hallo"],
+            stdin=DEVNULL,
+            stdout=DEVNULL,
+            stderr=DEVNULL,
+        )
+
+    @patch("sys.platform", "darwin")
+    @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
+    @patch("toisto.ui.speech.Popen")
+    def test_google_translate_fails_on_mac_os_twice(self, mock_subprocess_popen: Mock):
+        """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
+        self.config.set("commands", "mp3player", "afplay")
+        say("nl", "Hallo", self.config, slow=True)
+        mock_subprocess_popen.assert_called_once_with(
+            ["say", "--voice=Xander", "--rate=150", "Hallo"],
+            stdin=DEVNULL,
+            stdout=DEVNULL,
+            stderr=DEVNULL,
+        )
 
     @patch("sys.platform", "windows")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
@@ -33,13 +53,13 @@ class SayTest(unittest.TestCase):
         self.assertRaises(RuntimeError, say, "nl", "Hallo", self.config)
 
     @patch("gtts.gTTS.save", Mock())
-    @patch("os.system")
-    def test_system_call_afplay(self, mock_os_system: Mock):
+    @patch("toisto.ui.speech.Popen")
+    def test_system_call_afplay(self, mock_subprocess_popen: Mock):
         """Test that the afplay program is called with the correct arguments."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
-        mock_os_system.assert_called_once()
-        self.assertTrue(mock_os_system.call_args_list[0][0][0].startswith("afplay "))
+        mock_subprocess_popen.assert_called_once()
+        self.assertTrue(mock_subprocess_popen.call_args_list[0][0][0][0] == "afplay")
 
     @patch("gtts.gTTS.save", Mock())
     @patch("toisto.ui.speech.playsound")

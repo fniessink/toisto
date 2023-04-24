@@ -17,7 +17,7 @@ from toisto.ui.text import DONE, TRY_AGAIN
 from ...base import ToistoTestCase
 
 
-@patch("os.system", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
 @patch("pathlib.Path.open", MagicMock())
 @patch("gtts.gTTS.save", Mock())
 class PracticeTest(ToistoTestCase):

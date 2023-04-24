@@ -21,7 +21,7 @@ class AppTest(unittest.TestCase):
         Concept.instances = {}
         self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
 
-    @patch("os.system", Mock())
+    @patch("toisto.ui.speech.Popen", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
