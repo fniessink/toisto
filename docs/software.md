@@ -78,9 +78,9 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 }
 ```
 
-### Labels with hints
+### Labels with notes
 
-Sometimes labels are ambiguous. For example, "you" in English can mean both one or multiple persons. To help the user understand which meaning is intended, a hint can be added to the label. The hint is the part after the semicolon (`;`):
+Sometimes labels are ambiguous. For example, "you" in English can mean both one or multiple persons. To help the user understand which meaning is intended, a note can be added to the label. The note is the part after the semicolon (`;`):
 
 ```json
 {
@@ -105,7 +105,7 @@ Sometimes labels are ambiguous. For example, "you" in English can mean both one 
 }
 ```
 
-Toisto will show the hint to the user when asking for the Dutch translation of "you live".
+Toisto will show the note to the user when asking for the Dutch translation of "you live".
 
 ### Concepts with multiple labels
 
@@ -140,7 +140,7 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 
 Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 
-If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a hint that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The hint is the part after the semicolon (`;`).
+If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a note that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The note is the part after the semicolon (`;`).
 
 In the topic file this looks as follows:
 
@@ -313,9 +313,9 @@ The format of the JSON files is as follows:
 }
 ```
 
-Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The hint is the part after the semicolon (`;`).
+Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The note is the part after the semicolon (`;`).
 
-The third person in Finnish also needs a hint. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
+The third person in Finnish also needs a note. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
 
 ### Infinitive
 

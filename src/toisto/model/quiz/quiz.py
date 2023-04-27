@@ -144,16 +144,16 @@ class Quiz:
         else:
             quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
             instruction_text = INSTRUCTIONS[quiz_type]
-        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._instruction_hint()}"
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._instruction_note()}"
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(Quizzes(self.blocked_by) & quizzes)
 
-    def _instruction_hint(self) -> str:
-        """Return the instruction hint, if applicable."""
-        hint_applicable = self.question_language != self.answer_language or "answer" in self.quiz_types
-        return f" ({hint})" if hint_applicable and (hint := self._question.hint) else ""
+    def _instruction_note(self) -> str:
+        """Return the instruction note, if applicable."""
+        note_applicable = self.question_language != self.answer_language or "answer" in self.quiz_types
+        return f" ({note})" if note_applicable and (note := self._question.note) else ""
 
 
 class Quizzes(set[Quiz]):

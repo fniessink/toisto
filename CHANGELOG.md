@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Concepts can belong to multiple topics. Closes [#234](https://github.com/fniessink/toisto/issues/234).
 - Added several topics and concepts.
 
+### Changed
+
+- The context information that can be added to labels and that is shown as part of quiz instructions is no longer called a "hint" but a "note". This prepares for supporting notes that are shown after the quiz.
+
 ## 0.10.0 - 2023-04-01
 
 ### Added
