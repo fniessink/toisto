@@ -78,6 +78,35 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 }
 ```
 
+### Labels with hints
+
+Sometimes labels are ambiguous. For example, "you" in English can mean both one or multiple persons. To help the user understand which meaning is intended, a hint can be added to the label. The hint is the part after the semicolon (`;`):
+
+```json
+{
+    "to live": {
+        "singular": {
+            "first person": "...",
+            "second person": {
+                "en": "you live;singular",
+                "nl": "jij woont"
+            },
+            "third person": "..."
+        },
+        "plural": {
+            "first person": "...",
+            "second person": {
+                "en": "you live;plural",
+                "nl": "jullie wonen"
+            },
+            "third person": "..."
+        }
+    }
+}
+```
+
+Toisto will show the hint to the user when asking for the Dutch translation of "you live".
+
 ### Concepts with multiple labels
 
 Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toisto will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
