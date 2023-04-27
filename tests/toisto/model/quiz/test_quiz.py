@@ -40,12 +40,12 @@ class QuizTest(QuizTestCase):
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"])
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"])
         self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the zuiz type is listen."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;hint should be ignored"], "listen")
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "listen")
         self.assertEqual((), quiz.other_answers("Een"))
 
     def test_spelling_alternative_of_answer(self):
@@ -105,23 +105,23 @@ class QuizTest(QuizTestCase):
             quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
             self.assertEqual(expected_instruction + " Finnish", quiz.instruction())
 
-    def test_instruction_with_hint(self):
-        """Test that the question hint is added to the instruction."""
+    def test_instruction_with_note(self):
+        """Test that the question note is added to the instruction."""
         quiz = self.create_quiz(self.concept, "en", "nl", "You are;singular", ["Jij bent|Je bent"])
         self.assertEqual("Translate into Dutch (singular)", quiz.instruction())
 
-    def test_question_hint(self):
-        """Test that a hint can be added to the question."""
+    def test_question_note(self):
+        """Test that a note can be added to the question."""
         quiz = self.create_quiz(self.concept, "en", "nl", "You are;singular", ["Jij bent|Je bent"])
         self.assertEqual("You are", quiz.question)
 
-    def test_question_hint_is_not_shown_when_question_and_answer_language_are_the_same(self):
-        """Test that a hint is not shown when the question and answer languages are the same."""
+    def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
+        """Test that a note is not shown when the question and answer languages are the same."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
 
-    def test_question_hint_is_ignored_in_answer(self):
-        """Test that a hint can be added to the question."""
+    def test_question_note_is_ignored_in_answer(self):
+        """Test that a note can be added to the question."""
         quiz = self.create_quiz(self.concept, "nl", "en", "Jij bent", ["You are;singular"])
         self.assertEqual("You are", quiz.answer)
         self.assertEqual(("You are",), quiz.answers)
@@ -135,10 +135,10 @@ class QuizEqualityTests(QuizTestCase):
         self.assertEqual(self.quiz, self.quiz)
         self.assertEqual(self.copy_quiz(self.quiz), self.quiz)
 
-    def test_equal_with_different_hints(self):
-        """Test that quizzes are equal if only their hints differ."""
-        self.assertEqual(self.copy_quiz(self.quiz, question="Englanti;hint"), self.quiz)
-        self.assertEqual(self.copy_quiz(self.quiz, answers=["Engels;hint"]), self.quiz)
+    def test_equal_with_different_notes(self):
+        """Test that quizzes are equal if only their notes differ."""
+        self.assertEqual(self.copy_quiz(self.quiz, question="Englanti;note"), self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz, answers=["Engels;note"]), self.quiz)
 
     def test_not_equal_with_different_languages(self):
         """Test that quizzes are not equal if only their languages differ."""
