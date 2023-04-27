@@ -1,9 +1,9 @@
 """Text to speech."""
 
-import os
 import sys
 import tempfile
 from configparser import ConfigParser
+from subprocess import DEVNULL, Popen
 
 import gtts
 from playsound import playsound
@@ -11,12 +11,21 @@ from playsound import playsound
 SAY_VOICES = dict(en="Daniel", fi="Satu", nl="Xander")
 
 
+def _run_command(command: str, *args: str) -> None:
+    """Run the command in the background and send output to /dev/null."""
+    # Suppress the ruff message: "S603 `subprocess` call: check for execution of untrusted input". Popen should be
+    # safe because it's invoked with either "say" or a mp3 play command provided by the user in the config file.
+    Popen([command, *args], stdin=DEVNULL, stdout=DEVNULL, stderr=DEVNULL)  # noqa: S603
+
+
 def _say_with_macos_say(language: str, text: str, slow: bool) -> None:
     """Say the text with the MacOS say command."""
     voice = SAY_VOICES[language]
-    rate = "--rate 150 " if slow else ""
-    text = text.replace("'", r"\'")
-    os.system(f"say --voice={voice} {rate}{text} &")
+    args = [f"--voice={voice}"]
+    if slow:
+        args.append("--rate=150")
+    args.append(text.replace("'", r"\'"))
+    _run_command("say", *args)
 
 
 def _say_with_google_translate(language: str, text: str, config: ConfigParser, slow: bool) -> None:
@@ -32,7 +41,7 @@ def _say_with_google_translate(language: str, text: str, config: ConfigParser, s
     if mp3_play_command == "playsound":
         playsound(mp3_file.name)
     else:
-        os.system(f"{mp3_play_command} {mp3_file.name} &")
+        _run_command(mp3_play_command, mp3_file.name)
 
 
 def say(language: str, text: str, config: ConfigParser, slow: bool = False) -> None:
