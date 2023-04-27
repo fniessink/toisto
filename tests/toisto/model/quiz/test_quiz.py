@@ -105,15 +105,18 @@ class QuizTest(QuizTestCase):
             quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
             self.assertEqual(expected_instruction + " Finnish", quiz.instruction())
 
-    def test_instruction_with_note(self):
-        """Test that the question note is added to the instruction."""
-        quiz = self.create_quiz(self.concept, "en", "nl", "You are;singular", ["Jij bent|Je bent"])
-        self.assertEqual("Translate into Dutch (singular)", quiz.instruction())
-
-    def test_question_note(self):
-        """Test that a note can be added to the question."""
-        quiz = self.create_quiz(self.concept, "en", "nl", "You are;singular", ["Jij bent|Je bent"])
-        self.assertEqual("You are", quiz.question)
+    def test_note(self):
+        """Test that the first note is added to the instruction, the second is not, and neither to the question."""
+        for question in (
+            "You are;singular",
+            "You are;singular;post quiz note",
+            "You are;;post quiz note",
+            "You are;;post quiz note 1;post quiz note 2",
+        ):
+            quiz = self.create_quiz(self.concept, "en", "nl", question, ["Jij bent|Je bent"])
+            hint = " (singular)" if "singular" in question else ""
+            self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction())
+            self.assertEqual("You are", quiz.question)
 
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown when the question and answer languages are the same."""

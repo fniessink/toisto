@@ -55,7 +55,7 @@ CORRECT: Final = "✅ Correct.\n"
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
-    return CORRECT + meaning(quiz) + other_answers(guess, quiz)
+    return CORRECT + meaning(quiz) + other_answers(guess, quiz) + post_quiz_notes(quiz)
 
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
@@ -82,6 +82,16 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
         label = "Another correct answer is" if len(answers) == 1 else "Other correct answers are"
         return f"""[secondary]{label} {linkify_and_enumerate(*answers)}.[/secondary]\n"""
     return ""
+
+
+def post_quiz_notes(quiz: Quiz) -> str:
+    """Return the post quiz notes, if any."""
+    notes = quiz.notes[1:]
+    if len(notes) == 0:
+        return ""
+    if len(notes) == 1:
+        return f"[secondary]Note: {notes[0]}.[/secondary]\n"
+    return "\n".join(["[secondary]Notes:"] + [f"- {note}." for note in notes] + ["[/secondary]\n"])
 
 
 def instruction(quiz: Quiz) -> str:

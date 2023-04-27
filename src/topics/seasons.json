@@ -24,11 +24,11 @@
             "A2": "EP"
         },
         "singular": {
-            "en": "spring",
-            "fi": "kevät",
+            "en": "spring;;In English, names of seasons are not capitalized",
+            "fi": "kevät;;In Finnish, names of seasons are not capitalized",
             "nl": [
-                "de lente",
-                "het voorjaar"
+                "de lente;;In Dutch, names of seasons are not capitalized",
+                "het voorjaar;;In Dutch, names of seasons are not capitalized"
             ]
         },
         "plural": {
@@ -76,9 +76,9 @@
             ]
         },
         "singular": {
-            "en": "summer",
-            "fi": "kesä",
-            "nl": "de zomer"
+            "en": "summer;;In English, names of seasons are not capitalized",
+            "fi": "kesä;;In Finnish, names of seasons are not capitalized",
+            "nl": "de zomer;;In Dutch, names of seasons are not capitalized"
         },
         "plural": {
             "en": "summers",
@@ -114,13 +114,13 @@
         },
         "singular": {
             "en": [
-                "autumn",
-                "fall"
+                "autumn;;In English, names of seasons are not capitalized",
+                "fall;;In English, names of seasons are not capitalized"
             ],
-            "fi": "syksy",
+            "fi": "syksy;;In Finnish, names of seasons are not capitalized",
             "nl": [
-                "de herfst",
-                "het najaar"
+                "de herfst;;In Dutch, names of seasons are not capitalized",
+                "het najaar;;In Dutch, names of seasons are not capitalized"
             ]
         },
         "plural": {
@@ -180,9 +180,9 @@
             ]
         },
         "singular": {
-            "en": "winter",
-            "fi": "talvi",
-            "nl": "de winter"
+            "en": "winter;;In English, names of seasons are not capitalized",
+            "fi": "talvi;;In Finnish, names of seasons are not capitalized",
+            "nl": "de winter;;In Dutch, names of seasons are not capitalized"
         },
         "plural": {
             "en": "winters",

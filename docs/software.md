@@ -105,7 +105,42 @@ Sometimes labels are ambiguous. For example, "you" in English can mean both one 
 }
 ```
 
-Toisto will show the note to the user when asking for the Dutch translation of "you live".
+In the above example, Toisto will show the note to the user when asking for the Dutch translation of "you live".
+
+It's also possible to add two notes. The first note will be shown as part of the quiz instruction. The second note will be shown after the user has answered. This can be used to point out extra information, for example:
+
+```json
+{
+    "to live": {
+        "singular": {
+            "first person": "...",
+            "second person": {
+                "en": "you live;singular;the second-person pronoun you is used for both the singular and the plural",
+                "nl": "jij woont"
+            },
+            "third person": "..."
+        },
+        "plural": {
+            "first person": "...",
+            "second person": {
+                "en": "you live;plural;the second-person pronoun you is used for both the singular and the plural",
+                "nl": "jullie wonen"
+            },
+            "third person": "..."
+        }
+    }
+}
+```
+
+If only the second note is needed, simply leave the first one empty:
+
+```json
+{
+    "garlic": {
+        "fi": "valkosipuli;;valko- ('white') + sipuli ('onion')"
+    }
+}
+```
 
 ### Concepts with multiple labels
 
