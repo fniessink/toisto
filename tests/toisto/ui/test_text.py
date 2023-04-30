@@ -86,6 +86,24 @@ class FeedbackTestCase(ToistoTestCase):
         expected_text = "[quiz]Give the [underline]third person female[/underline] in Dutch:[/quiz]"
         self.assertEqual(expected_text, instruction(quiz))
 
+    def test_post_quiz_note(self):
+        """Test that the post quiz note is formatted correctly."""
+        concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        self.assertEqual(
+            "[secondary]Note: Moi is an informal greeting.[/secondary]",
+            feedback_correct("moi", quiz).split("\n")[-2],
+        )
+
+    def test_multiple_post_quiz_notes(self):
+        """Test that multiple post quiz notes are formatted correctly."""
+        concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting;'Moi moi' means goodbye"))
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        self.assertIn(
+            "[secondary]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.\n[/secondary]",
+            feedback_correct("moi", quiz),
+        )
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""

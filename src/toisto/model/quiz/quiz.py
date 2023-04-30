@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, field
 from functools import cached_property
 from itertools import chain
@@ -146,6 +146,11 @@ class Quiz:
             instruction_text = INSTRUCTIONS[quiz_type]
         return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._instruction_note()}"
 
+    @property
+    def notes(self) -> Sequence[str]:
+        """Return the quiz notes."""
+        return self._question.notes
+
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(Quizzes(self.blocked_by) & quizzes)
@@ -153,7 +158,8 @@ class Quiz:
     def _instruction_note(self) -> str:
         """Return the instruction note, if applicable."""
         note_applicable = self.question_language != self.answer_language or "answer" in self.quiz_types
-        return f" ({note})" if note_applicable and (note := self._question.note) else ""
+        instruction_note = self.notes[0] if self.notes else ""
+        return f" ({instruction_note})" if (note_applicable and instruction_note) else ""
 
 
 class Quizzes(set[Quiz]):

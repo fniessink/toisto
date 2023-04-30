@@ -87,9 +87,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Monday",
-            "fi": "maanantai",
-            "nl": "maandag|de maandag"
+            "en": "Monday;;In English, the names of weekdays are capitalized",
+            "fi": "maanantai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "maandag|de maandag;;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Mondays",
@@ -116,9 +116,9 @@
             "nl": "day"
         },
         "singular": {
-            "en": "Tuesday",
-            "fi": "tiistai",
-            "nl": "dinsdag|de dinsdag"
+            "en": "Tuesday;;In English, the names of weekdays are capitalized",
+            "fi": "tiistai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "dinsdag|de dinsdag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Tuesdays",
@@ -141,9 +141,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Wednesday",
-            "fi": "keskiviikko",
-            "nl": "woensdag|de woensdag"
+            "en": "Wednesday;;In English, the names of weekdays are capitalized",
+            "fi": "keskiviikko;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "woensdag|de woensdag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Wednesdays",
@@ -171,9 +171,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Thursday",
-            "fi": "torstai",
-            "nl": "donderdag|de donderdag"
+            "en": "Thursday;;In English, the names of weekdays are capitalized",
+            "fi": "torstai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "donderdag|de donderdag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Thursdays",
@@ -195,9 +195,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Friday",
-            "fi": "perjantai",
-            "nl": "vrijdag|de vrijdag"
+            "en": "Friday;;In English, the names of weekdays are capitalized",
+            "fi": "perjantai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "vrijdag|de vrijdag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Fridays",
@@ -219,9 +219,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Saturday",
-            "fi": "lauantai",
-            "nl": "zaterdag|de zaterdag"
+            "en": "Saturday;;In English, the names of weekdays are capitalized",
+            "fi": "lauantai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "zaterdag|de zaterdag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Saturdays",
@@ -243,9 +243,9 @@
         },
         "topics": "SM1.1",
         "singular": {
-            "en": "Sunday",
-            "fi": "sunnuntai",
-            "nl": "zondag|de zondag"
+            "en": "Sunday;;In English, the names of weekdays are capitalized",
+            "fi": "sunnuntai;;In Finnish, the names of weekdays are not capitalized",
+            "nl": "zondag|de zondag;In Dutch, the names of weekdays are not capitalized"
         },
         "plural": {
             "en": "Sundays",

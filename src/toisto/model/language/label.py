@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from typing import Final
 
 
@@ -13,7 +14,7 @@ class Label(str):
 
     def __eq__(self, other: object) -> bool:
         """Ignore notes when determining equality."""
-        return self.without_note == Label(other).without_note
+        return self.without_notes == Label(other).without_notes
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
@@ -22,16 +23,16 @@ class Label(str):
     @property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
-        return label_factory(self.without_note.split(self.SPELLING_ALTERNATIVES_SEP))
+        return label_factory(self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
 
     @property
-    def note(self) -> str:
-        """Return the label note, if any."""
-        return self.split(self.NOTE_SEP)[1] if self.NOTE_SEP in self else ""
+    def notes(self) -> Sequence[str]:
+        """Return the label notes."""
+        return self.split(self.NOTE_SEP)[1:] if self.NOTE_SEP in self else ()
 
     @property
-    def without_note(self) -> str:
-        """Return the label without the note."""
+    def without_notes(self) -> str:
+        """Return the label without the notes."""
         return self.split(self.NOTE_SEP)[0]
 
 
