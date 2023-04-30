@@ -104,6 +104,24 @@ class FeedbackTestCase(ToistoTestCase):
             feedback_correct("moi", quiz),
         )
 
+    def test_post_quiz_note_on_incorrect_answer(self):
+        """Test that the post quiz note is formatted correctly."""
+        concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        self.assertEqual(
+            "[secondary]Note: Moi is an informal greeting.[/secondary]",
+            feedback_incorrect("toi", quiz).split("\n")[-2],
+        )
+
+    def test_post_quiz_note_on_skip_to_answer(self):
+        """Test that the post quiz note is formatted correctly."""
+        concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        self.assertEqual(
+            "[secondary]Note: Moi is an informal greeting.[/secondary]",
+            feedback_incorrect("?", quiz).split("\n")[-2],
+        )
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""
