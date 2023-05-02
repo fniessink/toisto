@@ -8,6 +8,7 @@
             ]
         },
         "antonym": "big",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "small",
             "fi": "pieni",
@@ -82,6 +83,7 @@
             "B1": "KK"
         },
         "antonym": "expensive",
+        "topics": "SM1.2",
         "positive degree": {
             "en": "cheap",
             "fi": "halpa",
@@ -106,6 +108,8 @@
                 "OD"
             ]
         },
+        "antonym": "cold",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "hot",
             "fi": "kuuma",
@@ -130,8 +134,11 @@
                 "OD"
             ]
         },
-        "antonym": "warm",
-        "topics": "SM1.1",
+        "antonym": "hot",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "positive degree": {
             "en": "cold",
             "fi": "kylmä",
@@ -179,6 +186,7 @@
             ]
         },
         "antonym": "hard",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "easy",
             "fi": "helppo",
@@ -204,6 +212,7 @@
             ]
         },
         "antonym": "easy",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "hard",
             "fi": "vaikea",
@@ -228,6 +237,8 @@
                 "OD"
             ]
         },
+        "antonym": "ugly",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "beautiful",
             "fi": "kaunis",
@@ -244,6 +255,30 @@
             "nl": "mooist"
         }
     },
+    "ugly": {
+        "level": {
+            "A2": "KK",
+            "B1": "OD",
+            "none": "EP"
+        },
+        "antonym": "beautiful",
+        "topics": "SM1.3",
+        "positive degree": {
+            "en": "ugly",
+            "fi": "ruma",
+            "nl": "lelijk"
+        },
+        "comparative degree": {
+            "en": "uglier",
+            "fi": "rumempi",
+            "nl": "lelijker"
+        },
+        "superlative degree": {
+            "en": "ugliest",
+            "fi": "rumin",
+            "nl": "lelijkst"
+        }
+    },
     "new": {
         "level": {
             "A1": [
@@ -253,6 +288,7 @@
             ]
         },
         "antonym": "old",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "new",
             "fi": "uusi",
@@ -278,7 +314,10 @@
             ]
         },
         "antonym": "new",
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "positive degree": {
             "en": "old",
             "fi": "vanha",
@@ -327,6 +366,7 @@
             ]
         },
         "antonym": "slow",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "fast",
             "fi": "nopea",
@@ -400,6 +440,7 @@
             "A2": "KK"
         },
         "antonym": "cold",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "warm",
             "fi": "lämmin",
@@ -414,6 +455,30 @@
             "en": "warmest",
             "fi": "lämpimin",
             "nl": "warmst"
+        }
+    },
+    "cool": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "C1": "KK"
+        },
+        "antonym": "warm",
+        "topics": "SM1.3",
+        "positive degree": {
+            "en": "cool",
+            "fi": "viileä",
+            "nl": "koel"
+        },
+        "comparative degree": {
+            "en": "cooler",
+            "fi": "viileämpi",
+            "nl": "koeler"
+        },
+        "superlative degree": {
+            "en": "coolest",
+            "fi": "villein",
+            "nl": "koelst"
         }
     },
     "round": {
@@ -497,7 +562,11 @@
             ]
         },
         "antonym": "short",
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2",
+            "SM1.3"
+        ],
         "positive degree": {
             "en": "long",
             "fi": "pitkä",
@@ -523,7 +592,11 @@
             ]
         },
         "antonym": "long",
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2",
+            "SM1.3"
+        ],
         "positive degree": {
             "en": "short",
             "fi": "lyhyt",
@@ -573,6 +646,7 @@
             "C1": "KK"
         },
         "antonym": "fast",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "slow",
             "fi": "hidas",
@@ -620,6 +694,7 @@
             ]
         },
         "antonym": "small",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "big",
             "fi": [
@@ -737,7 +812,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "antonym": "bad",
         "positive degree": {
             "en": "good",
@@ -764,6 +842,7 @@
             ]
         },
         "antonym": "good",
+        "topics": "SM1.3",
         "positive degree": {
             "en": "bad",
             "fi": "huono",
@@ -876,6 +955,120 @@
             "en": "freest",
             "fi": "vapain",
             "nl": "vrijst"
+        }
+    },
+    "bright": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "B2": "KK"
+        },
+        "antonym": "dark",
+        "topics": "SM1.3",
+        "positive degree": {
+            "en": "bright",
+            "fi": "valoisa",
+            "nl": "licht"
+        },
+        "comparative degree": {
+            "en": "brighter",
+            "fi": "valoisampi",
+            "nl": "lichter"
+        },
+        "superlative degree": {
+            "en": "brightest",
+            "fi": "valoisin",
+            "nl": "lichtst"
+        }
+    },
+    "dark": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "antonym": "bright",
+        "topics": "SM1.3",
+        "positive degree": {
+            "en": "dark",
+            "fi": "pimeä",
+            "nl": "donker"
+        },
+        "comparative degree": {
+            "en": "darker",
+            "fi": "pimeâmpi",
+            "nl": "donkerder"
+        },
+        "superlative degree": {
+            "en": "darkest",
+            "fi": "pimein",
+            "nl": "donkerst"
+        }
+    },
+    "many/much": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "antonym": "few/a little",
+        "positive degree": {
+            "en": [
+                "many;;Use 'many' with countable nouns and 'much' with uncountable nouns",
+                "much;;Use 'much' with uncountable noins and 'many' with countable nouns"
+            ],
+            "fi": "paljon",
+            "nl": "veel"
+        },
+        "comparative degree": {
+            "en": "more",
+            "fi": "enemmän",
+            "nl": "meer"
+        },
+        "superlative degree": {
+            "en": "most",
+            "fi": "eniten",
+            "nl": "meest"
+        }
+    },
+    "few/a little": {
+        "level": {
+            "A1": "KK",
+            "A2": "OD",
+            "B1": "EP"
+        },
+        "antonym": "many/much",
+        "topics": "SM1.3",
+        "positive degree": {
+            "en": [
+                "few;;Use 'few' with countable nouns and 'little' with uncountable nouns",
+                "little;;Use 'little' with uncountable nouns and 'few' with countable nouns"
+            ],
+            "fi": "vähän",
+            "nl": "weinig"
+        },
+        "comparative degree": {
+            "en": [
+                "fewer;;Use 'fewer' with countable nouns and 'less' with uncountable nouns",
+                "less;;Use 'less' with uncountable nouns and 'fewer' with countable nouns"
+            ],
+            "fi": "vähemmän",
+            "nl": "minder"
+        },
+        "superlative degree": {
+            "en": [
+                "fewest;;Use 'fewest' with countable nouns and 'least' with uncountable nouns",
+                "least;;Use 'least' with uncountable nouns and 'fewest' with countable nouns"
+            ],
+            "fi": "vähiten",
+            "nl": "minst"
         }
     }
 }

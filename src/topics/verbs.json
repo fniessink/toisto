@@ -1457,6 +1457,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "infinitive": {
             "en": "to go",
             "fi": "mennä",
@@ -1556,7 +1557,7 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": ["SM1.1", "SM1.2"],
         "infinitive": {
             "en": "to come",
             "fi": "tulla",
@@ -1657,7 +1658,7 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": ["SM1.1", "SM1.2"],
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1758,7 +1759,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "infinitive": {
             "en": "to write",
             "fi": "kirjoittaa",
@@ -1859,7 +1863,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "infinitive": {
             "en": "to live",
             "fi": "asua",

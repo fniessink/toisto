@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "root": {
             "singular": {
                 "en": "car",
@@ -36,7 +39,10 @@
     "flight": {
         "level": {
             "A1": "OD",
-            "A2": ["EP", "KK"]
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "singular": {
             "en": "flight",
@@ -105,6 +111,35 @@
             "en": "airports",
             "fi": "lentokentät",
             "nl": "de vliegvelden"
+        }
+    },
+    "bus": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "roots": {
+            "fi": "car"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "bus",
+            "fi": [
+                "bussi",
+                "linja-auto"
+            ],
+            "nl": "de bus"
+        },
+        "plural": {
+            "en": "buses",
+            "fi": [
+                "bussit",
+                "linja-autot"
+            ],
+            "nl": "de bussen"
         }
     }
 }

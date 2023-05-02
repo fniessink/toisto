@@ -60,6 +60,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "home",
             "fi": "koti",
@@ -184,7 +185,7 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": ["SM1.1", "SM1.2"],
         "singular": {
             "en": "door",
             "fi": "ovi",
@@ -289,6 +290,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "kitchen",
             "fi": "keittiö",
@@ -346,14 +348,38 @@
         "fi": "makuuhuone",
         "nl": "de slaapkamer"
     },
+    "bath": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "bath",
+            "fi": "kylpy",
+            "nl": "het bad"
+        },
+        "plural": {
+            "en": "baths",
+            "fi": "kylpyjä",
+            "nl": "de baden"
+        }
+    },
     "bathroom": {
         "level": {
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
-        "roots": "room",
+        "roots": [
+            "bath",
+            "room"
+        ],
         "en": "bathroom",
         "fi": "kylpyhuone",
         "nl": "de badkamer"

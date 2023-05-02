@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "language",
             "fi": "kieli",
@@ -30,7 +33,10 @@
         "roots": [
             "language"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "spoken language",
         "fi": "puhekieli",
         "nl": "de spreektaal"
@@ -64,14 +70,26 @@
     "mother tongue": {
         "level": {
             "B2": "EP",
-            "none": ["KK", "OD"]
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "roots": {
             "en": "mother",
-            "fi": ["mother", "language"],
-            "nl": ["mother", "language"]
+            "fi": [
+                "mother",
+                "language"
+            ],
+            "nl": [
+                "mother",
+                "language"
+            ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "nother tongue",
         "fi": "äidinkieli",
         "nl": "de moedertaal"
@@ -131,7 +149,10 @@
             "A1": "OD",
             "C1": "EP"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "English;;In English, the names of languages are capitalized",
         "fi": "englanti;;In Finnish, the names of languages are not capitalized",
         "nl": "Engels;;In Dutch, the names of languages are capitalized"
@@ -143,6 +164,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "en": "Chinese;;In English, the names of languages are capitalized",
         "fi": "kiina;;In Finnish, the names of languages are not capitalized",
         "nl": "Chinees;;In Dutch, the names of languages are capitalized"
@@ -154,6 +176,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "en": "German;;In English, the names of languages are capitalized",
         "fi": "saksa;;In Finnish, the names of languages are not capitalized",
         "nl": "Duits;;In Dutch, the names of languages are capitalized"
@@ -189,7 +212,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "French;;In English, the names of languages are capitalized",
         "fi": "ranska;;In Finnish, the names of languages are not capitalized",
         "nl": "Frans;;In Dutch, the names of languages are capitalized"
@@ -232,6 +258,7 @@
             "A1": "EP",
             "none": "OD"
         },
+        "topics": "SM1.2",
         "en": "Spanish;;In English, the names of languages are capitalized",
         "fi": "espanja;;In Finnish, the names of languages are not capitalized",
         "nl": "Spaans;;In Dutch, the names of languages are capitalized"
@@ -276,7 +303,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "Swedish;;In English, the names of languages are capitalized",
         "fi": "ruotsi;;In Finnish, the names of languages are not capitalized",
         "nl": "Zweeds;;In Dutch, the names of languages are capitalized"
@@ -288,6 +318,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "en": "Russian;;In English, the names of languages are capitalized",
         "fi": "venäjä;;In Finnish, the names of languages are not capitalized",
         "nl": "Russisch;;In Dutch, the names of languages are capitalized"
@@ -299,6 +330,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "en": "Icelandic;;In English, the names of languages are capitalized",
         "fi": "islanti;;In Finnish, the names of languages are not capitalized",
         "nl": "IJslands;;In Dutch, the names of languages are capitalized"

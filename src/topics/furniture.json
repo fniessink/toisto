@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "table",
             "fi": "pöytä",
@@ -27,6 +30,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "bed",
             "fi": "sänky",
@@ -67,6 +71,7 @@
             "A2": "EP",
             "B1": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "sofa",
             "fi": "sohva",
@@ -174,6 +179,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "lamp",
             "fi": "lamppu",
@@ -246,6 +252,7 @@
             ],
             "C1": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "carpet",
             "fi": "matto",
@@ -256,6 +263,46 @@
             "fi": "matot",
             "nl": "de tapijten"
         }
+    },
+    "shelf": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "B2": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "shelf",
+            "fi": "hylly",
+            "nl": "de plank"
+        },
+        "plural": {
+            "en": "shelves",
+            "fi": "hyllyt",
+            "nl": "de planken"
+        }
+    },
+    "bookcase": {
+        "level": {
+            "A2": "EP",
+            "B2": "OD",
+            "none": "KK"
+        },
+        "roots": {
+            "en": "book",
+            "fi": [
+                "book",
+                "shelf"
+            ],
+            "nl": "book"
+        },
+        "topics": [
+            "books",
+            "SM1.2"
+        ],
+        "en": "bookcase",
+        "fi": "kirjahylly",
+        "nl": "de boekenkast"
     },
     "the door is locked": {
         "roots": [

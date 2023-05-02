@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "city",
             "fi": "kaupunki",
@@ -20,7 +21,11 @@
     },
     "place": {
         "level": {
-            "A1": ["EP", "KK", "OD"]
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "topics": "SM1.1",
         "singular": {
@@ -209,6 +214,7 @@
             "A2": "OD",
             "B1": "EP"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -242,8 +248,25 @@
             "nl": "de warenhuizen"
         }
     },
+    "kiosk": {
+        "level": {
+            "C1": [
+                "KK",
+                "OD"
+            ],
+            "none": "EP"
+        },
+        "topics": "SM1.2",
+        "en": "kiosk",
+        "fi": "kioski",
+        "nl": "de kiosk"
+    },
     "ice cream kiosk": {
-        "roots": "ice cream",
+        "roots": {
+            "en": ["kiosk", "ice cream"],
+            "fi": ["kiosk", "ice cream"],
+            "nl": "ice cream"
+        },
         "topics": "SM1.1",
         "en": "ice cream kiosk",
         "fi": "jäätelökioski",
@@ -257,6 +280,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "park",
             "fi": "puisto",
@@ -333,6 +357,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -371,6 +396,7 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "bridge",
             "fi": "silta",
