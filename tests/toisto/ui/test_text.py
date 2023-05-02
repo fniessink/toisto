@@ -70,6 +70,16 @@ class FeedbackTestCase(ToistoTestCase):
         )
         self.assertEqual(expected_text, feedback_incorrect("?", quiz))
 
+    def test_show_feedback_on_question_mark_with_multiple_answers(self):
+        """Test that the correct feedback is given when the user doesn't know the answer."""
+        concept = create_concept("hi", dict(nl="hoi", fi=["terve", "hei"]))
+        quiz = create_quizzes("nl", "fi", concept).by_quiz_type("read").pop()
+        expected_text = (
+            'The correct answers are "[link=https://en.wiktionary.org/wiki/terve]terve[/link]", '
+            '"[link=https://en.wiktionary.org/wiki/hei]hei[/link]".\n'
+        )
+        self.assertEqual(expected_text, feedback_incorrect("?", quiz))
+
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
         concept = create_concept("hi", dict(nl="hoi", fi="terve"))

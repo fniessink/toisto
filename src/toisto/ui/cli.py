@@ -7,6 +7,7 @@ from typing import get_args
 
 from rich_argparse import RichHelpFormatter
 
+from ..command.show_progress import SortColumn
 from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
 from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.concept import Topic
@@ -117,7 +118,7 @@ class CommandBuilder:
             "-S",
             "--sort",
             metavar="{option}",
-            choices=["retention", "attempts"],
+            choices=sorted(get_args(SortColumn)),
             default="retention",
             help="how to sort progress information; default: by retention; available options: %(choices)s",
         )

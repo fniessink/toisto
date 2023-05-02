@@ -107,8 +107,9 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_level(self):
         """Test that a concept can have a level."""
-        concept = create_concept("one", dict(level=dict(A1="EP"), fi="yksi", nl="één"))
-        self.assertEqual("A1", concept.level)
+        for level in ("A1", "A2", "B1", "B2", "C1", "C2"):
+            concept = create_concept("one", dict(level={level: "EP"}, en=level))
+            self.assertEqual(level, concept.level)
 
     def test_override_level(self):
         """Test that constituent concepts can override the level of their composite concept."""

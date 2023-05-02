@@ -1,8 +1,9 @@
 """Link words to an online dictionary."""
 
 from string import punctuation
+from typing import Final
 
-DICTIONARY_URL = "https://en.wiktionary.org/wiki"
+DICTIONARY_URL: Final = "https://en.wiktionary.org/wiki"
 
 
 def linkify_and_enumerate(*texts: str, sep: str = ", ") -> str:

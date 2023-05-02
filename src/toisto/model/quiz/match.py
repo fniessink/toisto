@@ -2,12 +2,11 @@
 
 import string
 
-
-def without_punctuation(text: str) -> str:
-    """Remove text without punctuation."""
-    return "".join(char for char in text if char not in string.punctuation or char == "'")
+# Translation table to remove punctuation (including whitespace) from strings, except apostrophes.
+WITHOUT_PUNCTUATION = str.maketrans("", "", string.punctuation + string.whitespace)
+del WITHOUT_PUNCTUATION[ord("'")]
 
 
 def match(text1: str, *texts: str) -> bool:
     """Return whether the text matches any of the texts."""
-    return any(without_punctuation(text1.strip()) == without_punctuation(text2.strip()) for text2 in texts)
+    return any(text1.translate(WITHOUT_PUNCTUATION) == text2.translate(WITHOUT_PUNCTUATION) for text2 in texts)

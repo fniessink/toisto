@@ -4,11 +4,12 @@ import sys
 import tempfile
 from configparser import ConfigParser
 from subprocess import DEVNULL, Popen
+from typing import Final
 
 import gtts
 from playsound import playsound
 
-SAY_VOICES = dict(en="Daniel", fi="Satu", nl="Xander")
+MAC_OS_SAY_VOICES: Final = dict(en="Daniel", fi="Satu", nl="Xander")
 
 
 def _run_command(command: str, *args: str) -> None:
@@ -20,7 +21,7 @@ def _run_command(command: str, *args: str) -> None:
 
 def _say_with_macos_say(language: str, text: str, slow: bool) -> None:
     """Say the text with the MacOS say command."""
-    voice = SAY_VOICES[language]
+    voice = MAC_OS_SAY_VOICES[language]
     args = [f"--voice={voice}"]
     if slow:
         args.append("--rate=150")

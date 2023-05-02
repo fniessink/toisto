@@ -1,9 +1,10 @@
 """Unit tests for the show progress command."""
 
 from datetime import datetime, timedelta
-from unittest.mock import patch
+from unittest.mock import MagicMock, Mock, patch
 
-from toisto.command.show_progress import show_progress
+from toisto.command.show_progress import SortColumn, show_progress
+from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -21,11 +22,30 @@ class ShowProgressTest(ToistoTestCase):
         self.quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("read")
         self.quiz = list(self.quizzes)[0]
 
+    @patch("rich.console.Console.pager", MagicMock())
+    def show_progress(self, progress: Progress, quizzes: Quizzes | None = None, sort: SortColumn = "attempts") -> Mock:
+        """Run the show progress command."""
+        with patch("rich.console.Console.print") as console_print:
+            show_progress(Language("fi"), quizzes or Quizzes(), progress, sort=sort)
+        return console_print
+
     def test_title(self):
         """Test the table title."""
-        with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", Quizzes(), Progress({}, "fi"))
+        progress = Progress({}, "fi")
+        console_print = self.show_progress(progress)
         self.assertEqual("Progress Finnish", console_print.call_args[0][0].title)
+
+    def test_column_headers(self):
+        """Test that the column headers are shown."""
+        now = datetime.now()
+        start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
+        end = now.isoformat(timespec="seconds")
+        progress = Progress({self.quiz.key: dict(start=start, end=end)}, "fi")
+        console_print = self.show_progress(progress)
+        for index, value in enumerate(
+            ["Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"],
+        ):
+            self.assertEqual(value, console_print.call_args[0][0].columns[index].header)
 
     def test_quiz(self):
         """Test that quizzes are shown."""
@@ -33,8 +53,7 @@ class ShowProgressTest(ToistoTestCase):
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
         progress = Progress({self.quiz.key: dict(start=start, end=end)}, "fi")
-        with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.quizzes, progress)
+        console_print = self.show_progress(progress, self.quizzes)
         for index, value in enumerate(["Read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
 
@@ -42,16 +61,14 @@ class ShowProgressTest(ToistoTestCase):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
         skip_until = (datetime.now() + timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi")
-        with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.quizzes, progress)
+        console_print = self.show_progress(progress, self.quizzes)
         self.assertEqual(skip_until, list(console_print.call_args[0][0].columns[7].cells)[0])
 
     def test_quiz_silenced_until_time_in_the_past(self):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
         skip_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi")
-        with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", self.quizzes, progress)
+        console_print = self.show_progress(progress, self.quizzes)
         self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
 
     def test_sort_by_retention(self):
@@ -66,6 +83,5 @@ class ShowProgressTest(ToistoTestCase):
             {self.quiz.key: dict(count=21, start=start, end=end), another_quiz.key: dict(count=42)},
             "fi",
         )
-        with patch("rich.console.Console.print") as console_print:
-            show_progress("fi", quizzes, progress, sort="retention")
+        console_print = self.show_progress(progress, quizzes, sort="retention")
         self.assertEqual(["21", "42"], list(console_print.call_args[0][0].columns[5].cells))
