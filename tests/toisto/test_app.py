@@ -3,7 +3,7 @@
 import sys
 import unittest
 from contextlib import suppress
-from unittest.mock import Mock, patch
+from unittest.mock import MagicMock, Mock, patch
 
 import requests
 from toisto.app import main
@@ -21,6 +21,7 @@ class AppTest(unittest.TestCase):
         Concept.instances = {}
         self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
 
+    @patch("rich.console.Console.pager", MagicMock())
     @patch("toisto.ui.speech.Popen", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
     @patch("pathlib.Path.exists", Mock(return_value=True))

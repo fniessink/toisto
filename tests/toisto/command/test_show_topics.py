@@ -1,8 +1,9 @@
 """Unit tests for the show topics command."""
 
-from unittest.mock import patch
+from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_topics import show_topics
+from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.quiz_factory import create_quizzes
 
@@ -18,21 +19,25 @@ class ShowTopicsTest(ToistoTestCase):
         self.quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
         self.concepts = {concept}
 
+    @patch("rich.console.Console.pager", MagicMock())
+    def show_topics(self, target_language: Language | None = None, source_language: Language | None = None) -> Mock:
+        """Run the show topics command."""
+        with patch("rich.console.Console.print") as console_print:
+            show_topics(target_language or Language("fi"), source_language or Language("nl"), self.concepts)
+        return console_print
+
     def test_title(self):
         """Test the table title."""
-        with patch("rich.console.Console.print") as console_print:
-            show_topics("fi", "nl", self.concepts)
+        console_print = self.show_topics()
         self.assertEqual("Topic topic", console_print.call_args[0][0].title)
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_contents(self):
         """Test that the table contains the concept."""
-        with patch("rich.console.Console.print") as console_print:
-            show_topics("fi", "nl", self.concepts)
+        console_print = self.show_topics()
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_skip_concepts_without_labels_in_the_selected_languages(self):
         """Test that concepts without labels in the target or source language are not shown."""
-        with patch("rich.console.Console.print") as console_print:
-            show_topics("en", "fr", self.concepts)
+        console_print = self.show_topics("en", "fr")
         self.assertEqual(0, console_print.call_args_list[0][0][0].row_count)

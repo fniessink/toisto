@@ -1,8 +1,10 @@
 build
 dist
+html
 htmlcov
 venv
 .coverage*
+.mutmut-cache
 .venv
 .vscode
 .DS_Store

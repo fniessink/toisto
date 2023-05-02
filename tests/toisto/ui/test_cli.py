@@ -1,16 +1,23 @@
 """Unit tests for the CLI module."""
 
+import os
+import re
 import unittest
 from argparse import ArgumentParser, Namespace
 from configparser import ConfigParser
 from unittest.mock import Mock, patch
 
-from toisto.metadata import SUMMARY
 from toisto.ui.cli import create_argument_parser
 
 
 class ParserTest(unittest.TestCase):
     """Unit tests for the CLI parser."""
+
+    ANSI_ESCAPE_CODES = re.compile(r"\x1B\[\d+(;\d+){0,2}m")
+
+    def setUp(self) -> None:
+        """Set up the test fixtures."""
+        os.environ["COLUMNS"] = "120"  # Set the width of the terminal to match the formatting of the expected results
 
     @property
     def argument_parser(self) -> ArgumentParser:
@@ -21,9 +28,30 @@ class ParserTest(unittest.TestCase):
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")
     def test_help(self, sys_stdout_write: Mock):
-        """Test that a help message is displayed."""
+        """Test that the help message is displayed."""
         self.assertRaises(SystemExit, self.argument_parser.parse_args)
-        self.assertIn(SUMMARY, sys_stdout_write.call_args_list[2][0][0])
+        self.assertEqual(
+            """Usage: toisto [-h] [-V] {practice,progress,topics} ...
+
+Toisto is a command-line terminal app to practice languages.
+
+Options:
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
+
+Commands:
+  {practice,progress,topics}
+                        default: practice; type `toisto {command} --help` for more information on a command
+    practice            practice a language, for example type `toisto practice --target fi --source en` to practice
+                        Finnish from English
+    progress            show progress, for example `toisto progress --target fi --source en` shows progress on
+                        practicing Finnish from English
+    topics              show topics, for example `toisto topics --topic nature` shows the contents of the nature topic
+
+See https://github.com/fniessink/toisto/blob/main/README.md for more information.
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+        )
 
     @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi"])
     def test_practice_command(self):
@@ -37,6 +65,84 @@ class ParserTest(unittest.TestCase):
             topic_file=[],
         )
         self.assertEqual(expected_namespace, self.argument_parser.parse_args())
+
+    @patch("sys.argv", ["toisto", "practice", "--help"])
+    @patch("sys.stdout.write")
+    def test_practice_help(self, sys_stdout_write: Mock):
+        """Test that the practice help message is displayed."""
+        self.assertRaises(SystemExit, self.argument_parser.parse_args)
+        self.assertEqual(
+            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {topic file}]
+
+Practice a language.
+
+Options:
+  -h, --help            show this help message and exit
+  -t, --target {language}
+                        target language; languages available in built-in topics: en, fi, nl
+  -s, --source {language}
+                        source language; languages available in built-in topics: en, fi, nl
+  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
+                        C2
+  -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
+  -f, --topic-file {topic file}
+                        topic file to use, can be repeated
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+        )
+
+    @patch("sys.argv", ["toisto", "progress", "--help"])
+    @patch("sys.stdout.write")
+    def test_progress_help(self, sys_stdout_write: Mock):
+        """Test that the progress help message is displayed."""
+        self.assertRaises(SystemExit, self.argument_parser.parse_args)
+        self.assertEqual(
+            """Usage: toisto progress [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {topic file}] \
+[-S {option}]
+
+Show progress.
+
+Options:
+  -h, --help            show this help message and exit
+  -t, --target {language}
+                        target language; languages available in built-in topics: en, fi, nl
+  -s, --source {language}
+                        source language; languages available in built-in topics: en, fi, nl
+  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
+                        C2
+  -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
+  -f, --topic-file {topic file}
+                        topic file to use, can be repeated
+  -S, --sort {option}   how to sort progress information; default: by retention; available options: attempts,
+                        retention
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+        )
+
+    @patch("sys.argv", ["toisto", "topics", "--help"])
+    @patch("sys.stdout.write")
+    def test_topics_help(self, sys_stdout_write: Mock):
+        """Test that the topics help message is displayed."""
+        self.assertRaises(SystemExit, self.argument_parser.parse_args)
+        self.assertEqual(
+            """Usage: toisto topics [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {topic file}]
+
+Show topics.
+
+Options:
+  -h, --help            show this help message and exit
+  -t, --target {language}
+                        target language; languages available in built-in topics: en, fi, nl
+  -s, --source {language}
+                        source language; languages available in built-in topics: en, fi, nl
+  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
+                        C2
+  -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
+  -f, --topic-file {topic file}
+                        topic file to use, can be repeated
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+        )
 
     @patch("sys.argv", ["toisto", "--target", "nl", "--source", "fi"])
     def test_no_command(self):
