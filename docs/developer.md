@@ -64,9 +64,9 @@ $ vulture src tests
 Run Black to format the code:
 
 ```console
-$ black src tests
+$ black .
 All done! ✨ 🍰 ✨
-70 files left unchanged.
+69 files left unchanged.
 ```
 
 ## How to release
