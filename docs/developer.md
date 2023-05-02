@@ -59,6 +59,12 @@ Run vulture to check for dead code:
 vulture src tests
 ```
 
+Run mutmut to check for unit test quality:
+
+```console
+$ mutmut run
+```
+
 ## How to format the source code
 
 Run Ruff to format the code:
