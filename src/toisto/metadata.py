@@ -36,7 +36,8 @@ TOPICS: Final = sorted([Topic(json_file.stem) for json_file in TOPIC_JSON_FILES]
 
 def latest_version() -> str | None:
     """Return the latest version."""
+    timeout: Final = 2
     try:
-        return requests.get(TAGS_API_URL, timeout=2).json()[0]["name"]
+        return requests.get(TAGS_API_URL, timeout=timeout).json()[0]["name"]
     except requests.RequestException:
         return None

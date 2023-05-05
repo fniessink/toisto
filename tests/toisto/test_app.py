@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, Mock, patch
 
 import requests
 from toisto.app import main
-from toisto.metadata import VERSION
+from toisto.metadata import TOPICS, VERSION
 from toisto.model.language.concept import Concept
 
 
@@ -36,7 +36,8 @@ class AppTest(unittest.TestCase):
     def read_topic_file(self):
         """Generate a unique topic file."""
         self.topic_file_count += 1
-        return f'{{"concept-{self.topic_file_count}": {{"fi": "fi", "nl": "nl"}}}}\n'
+        count = self.topic_file_count
+        return f'{{"concept-{count}": {{"fi": "concept-{count} in fi", "nl": "concept-{count} in nl"}}}}\n'
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--topic-file", "test"])
     @patch("requests.get")
@@ -85,3 +86,5 @@ class AppTest(unittest.TestCase):
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Topic"))
+        last_concept = patched_print.call_args_list[2 + len(TOPICS)][0][0].columns[1]._cells[0]  # noqa: SLF001
+        self.assertEqual(f"concept-{len(TOPICS)} in nl", last_concept)
