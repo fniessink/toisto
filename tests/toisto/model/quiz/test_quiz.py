@@ -21,6 +21,12 @@ class QuizTestCase(ToistoTestCase):
 class QuizTest(QuizTestCase):
     """Unit tests for the quiz class."""
 
+    def test_defaults(self):
+        """Test default values of optional attributes."""
+        self.assertEqual(("read",), self.quiz.quiz_types)
+        self.assertEqual((), self.quiz.blocked_by)
+        self.assertEqual((), self.quiz.meanings)
+
     def test_is_correct(self):
         """Test a correct guess."""
         self.assertTrue(self.quiz.is_correct("Engels"))

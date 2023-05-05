@@ -21,6 +21,7 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, tuple[Quantifier, Iterable]]]] = dict(
     ),
     commands=dict(mp3player=("any", [])),
 )
+CONFIG_FILENAME = Path("~/.toisto.cfg").expanduser()
 
 
 class ConfigSchemaValidator:
@@ -65,10 +66,9 @@ class ConfigSchemaValidator:
             )
 
 
-def read_config(argument_parser: ArgumentParser) -> ConfigParser | NoReturn:
+def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser | NoReturn:
     """Read the config file, validate it, and exit with an error message if it doesn't pass."""
     parser = ConfigParser()
-    config_filename = Path("~/.toisto.cfg").expanduser()
     try:
         with config_filename.open("r", encoding="utf-8") as config_file:
             parser.read_file(config_file)

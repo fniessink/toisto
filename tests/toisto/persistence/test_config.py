@@ -5,7 +5,7 @@ import configparser
 import unittest
 from unittest.mock import Mock, patch
 
-from toisto.persistence.config import default_config, read_config
+from toisto.persistence.config import CONFIG_FILENAME, default_config, read_config
 
 
 class ConfigTestCase(unittest.TestCase):
@@ -48,8 +48,8 @@ class ReadValidConfigTest(ConfigTestCase):
 
     def test_valid_commands(self, path_open: Mock):
         """Test reading a valid config."""
-        config = self.read_config(path_open, "[commands]\n", "mp3player = afplay\n")
-        self.assertEqual("afplay", config.get("commands", "mp3player"))
+        config = self.read_config(path_open, "[commands]\n", "mp3player = some mp3 player\n")
+        self.assertEqual("some mp3 player", config.get("commands", "mp3player"))
 
     def test_valid_levels(self, path_open: Mock):
         """Test reading a valid config."""
@@ -92,20 +92,29 @@ class ReadInvalidConfigTest(ConfigTestCase):
         """Test reading an invalid config (invalid section)."""
         config_file_contents = ["[command]\n", "mp3player = afplay\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
-        self.assertIn("unknown section 'command'", sys_stderr_write.call_args_list[1][0][0])
+        self.assertIn(
+            f"While reading from '{CONFIG_FILENAME}': unknown section 'command'. "
+            "Allowed sections are: languages, commands",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
 
     def test_invalid_option(self, path_open: Mock, sys_stderr_write: Mock):
         """Test reading an invalid config (invalid option)."""
         config_file_contents = ["[commands]\n", "mp4player = afplay\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
-        self.assertIn("unknown option 'mp4player' in section 'commands'", sys_stderr_write.call_args_list[1][0][0])
+        self.assertIn(
+            f"While reading from '{CONFIG_FILENAME}': unknown option 'mp4player' in section 'commands'. "
+            "Allowed options are: mp3player.",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
 
     def test_invalid_one_of_option_value(self, path_open: Mock, sys_stderr_write: Mock):
         """Test reading an invalid config (invalid option value, one of)."""
         config_file_contents = ["[languages]\n", "target = foo\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
         self.assertIn(
-            "unknown value 'foo' for option 'target' in section 'languages'",
+            f"While reading from '{CONFIG_FILENAME}': unknown value 'foo' for option 'target' in section 'languages'. "
+            "Allowed values are one of: aa, ab",
             sys_stderr_write.call_args_list[1][0][0],
         )
 
@@ -114,6 +123,7 @@ class ReadInvalidConfigTest(ConfigTestCase):
         config_file_contents = ["[languages]\n", "levels = D3\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
         self.assertIn(
-            "unknown value 'D3' for option 'levels' in section 'languages'",
+            f"While reading from '{CONFIG_FILENAME}': unknown value 'D3' for option 'levels' in section 'languages'. "
+            "Allowed values are one or more of: A1, A2",
             sys_stderr_write.call_args_list[1][0][0],
         )

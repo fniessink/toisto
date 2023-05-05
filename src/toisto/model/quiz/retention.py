@@ -8,6 +8,7 @@ from typing import Final
 
 optional_datetime = datetime | None
 SKIP_INTERVAL_GROWTH_FACTOR: Final = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
+SKIP_INTERVAL_WHEN_FIRST_ANSWER_IS_CORRECT: Final = timedelta(days=1)
 
 
 @dataclass
@@ -26,7 +27,7 @@ class Retention:
         if self.start is None:
             self.start = now
         if self.count == 1:
-            self.skip_until = now + timedelta(days=1)  # User already knows the answer, skip ahead
+            self.skip_until = now + SKIP_INTERVAL_WHEN_FIRST_ANSWER_IS_CORRECT
         elif now > self.start:
             self.skip_until = now + (now - self.start) * SKIP_INTERVAL_GROWTH_FACTOR
         else:
@@ -67,4 +68,5 @@ class Retention:
     @staticmethod
     def __get_datetime(retention_dict: dict[str, str | int], key: str) -> optional_datetime:
         """Get a datetime from the retention dict."""
-        return datetime.fromisoformat(str(retention_dict.get(key))) if retention_dict.get(key) else None
+        value = retention_dict.get(key)
+        return datetime.fromisoformat(str(value)) if value else None

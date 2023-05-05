@@ -55,6 +55,7 @@ class RetentionTest(unittest.TestCase):
         self.guess(True, False)
         self.assertFalse(self.retention.is_silenced())
         self.assertIsNone(self.retention.skip_until)
+        self.assertEqual(2, self.retention.count)
 
     def test_no_guesses_as_dict(self):
         """Test that the retention can be serialized."""

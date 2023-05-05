@@ -9,6 +9,21 @@ from ....base import ToistoTestCase
 class ConceptTest(ToistoTestCase):
     """Unit tests for the Concept class."""
 
+    def test_defaults(self):
+        """Test the default attributes of a concept."""
+        concept = create_concept("concept_id", {})
+        self.assertEqual("concept_id", concept.concept_id)
+        self.assertEqual((), concept.labels("fi"))
+        self.assertEqual((), concept.meanings("fi"))
+        self.assertEqual(None, concept.level)
+        self.assertEqual({"<unknown topic>"}, concept.topics)
+        self.assertEqual((), concept.answers)
+        self.assertEqual(False, concept.answer_only)
+        self.assertEqual((), concept.roots("fi"))
+        self.assertEqual(None, concept.parent)
+        self.assertEqual((), concept.constituents)
+        self.assertEqual((), concept.antonyms)
+
     def test_level(self):
         """Test that the level of a concept is the maximum of the available levels."""
         concept = create_concept("one", dict(level=dict(A1="EP", A2="OD"), fi="kolmekymmentä", nl="dertig"))
