@@ -129,9 +129,14 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
 
+    def test_question_note_is_shown_when_question_language_equals_answer_language_but_quiz_type_is_answer(self):
+        """Test that a note is not shown when the question and answer languages are the same."""
+        quiz = self.create_quiz(self.concept, "fi", "fi", "Onko hän Bob?", ["On", "Ei"], "answer")
+        self.assertEqual("Answer the question in Finnish", quiz.instruction())
+
     def test_question_note_is_ignored_in_answer(self):
         """Test that a note can be added to the question."""
-        quiz = self.create_quiz(self.concept, "nl", "en", "Jij bent", ["You are;singular"])
+        quiz = self.create_quiz(self.concept, "en", "nl", "Jij bent", ["You are;singular"])
         self.assertEqual("You are", quiz.answer)
         self.assertEqual(("You are",), quiz.answers)
 
