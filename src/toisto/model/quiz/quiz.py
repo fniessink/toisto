@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable, Sequence
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
 from typing import Final, Literal, cast, get_args
@@ -80,9 +80,9 @@ class Quiz:
     answer_language: Language
     _question: Label
     _answers: Labels
-    quiz_types: tuple[QuizType, ...] = ("read",)
-    blocked_by: tuple[Quiz, ...] = ()
-    _meanings: Labels = field(default_factory=Labels)
+    quiz_types: tuple[QuizType, ...]
+    blocked_by: tuple[Quiz, ...]
+    _meanings: Labels
 
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
