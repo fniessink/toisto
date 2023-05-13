@@ -21,7 +21,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "word",
             "fi": "sana",
@@ -88,6 +91,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "sentence",
             "fi": "lause",
@@ -126,6 +130,7 @@
         "roots": {
             "nl": "vowel"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "consonant",
             "fi": "konsonantti",
@@ -160,6 +165,7 @@
             "question",
             "word"
         ],
+        "topics": "SM1.2",
         "en": "question word",
         "fi": "kysymyssana",
         "nl": "het vraagwoord"
@@ -172,6 +178,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "subject",
             "fi": "subjekti",
@@ -190,7 +197,10 @@
             "none": "KK"
         },
         "roots": {
-            "nl": ["job", "word"]
+            "nl": [
+                "job",
+                "word"
+            ]
         },
         "topics": "SM1.1",
         "singular": {
@@ -217,9 +227,14 @@
     "personal pronoun": {
         "level": {
             "B2": "OD",
-            "none": ["EP", "KK"]
+            "none": [
+                "EP",
+                "KK"
+            ]
         },
-        "roots": ["pronoun"],
+        "roots": [
+            "pronoun"
+        ],
         "topics": "SM1.1",
         "en": "personal pronoun",
         "fi": "persoonapronomini",

@@ -13,9 +13,15 @@
     },
     "here": {
         "level": {
-            "A1": ["EP", "OD"]
+            "A1": [
+                "EP",
+                "OD"
+            ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "here",
         "fi": "tässä",
         "nl": "hier"

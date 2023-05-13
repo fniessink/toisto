@@ -13,7 +13,10 @@
         "nl": "de cursus"
     },
     "finnish course": {
-        "roots": ["finnish", "course"],
+        "roots": [
+            "finnish",
+            "course"
+        ],
         "topics": "SM1.1",
         "en": "Finnish course",
         "fi": "suomen kurssi",
@@ -44,7 +47,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "question",
             "fi": "kysymys",
@@ -67,7 +73,10 @@
         "roots": {
             "nl": "word"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "answer",
             "fi": "vastaus",

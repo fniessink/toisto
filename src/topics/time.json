@@ -19,7 +19,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "now",
         "fi": "nyt",
         "nl": "nu"
@@ -32,6 +35,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "en": "then",
         "fi": "sitten",
         "nl": "dan"
@@ -169,6 +173,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "year",
             "fi": "vuosi",
@@ -232,6 +237,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "hour",
             "fi": "tunti",

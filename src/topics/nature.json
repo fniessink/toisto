@@ -50,6 +50,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "flower",
             "fi": "kukka",
@@ -278,6 +279,7 @@
             "A1": "OD",
             "A2": "EP"
         },
+        "topics": "SM1.2",
         "en": "north|the North",
         "fi": "pohjoinen",
         "nl": "het noorden"
@@ -287,6 +289,7 @@
             "A1": "OD",
             "A2": "EP"
         },
+        "topics": "SM1.2",
         "en": "east|the East",
         "fi": "itä",
         "nl": "het oosten"
@@ -296,6 +299,7 @@
             "A1": "OD",
             "A2": "EP"
         },
+        "topics": "SM1.2",
         "en": "south|the South",
         "fi": "etelä",
         "nl": "het zuiden"
@@ -305,6 +309,7 @@
             "A1": "OD",
             "A2": "EP"
         },
+        "topics": "SM1.2",
         "en": "west|the West",
         "fi": "länsi",
         "nl": "het westen"
@@ -320,28 +325,10 @@
         "roots": {
             "fi": "country"
         },
+        "topics": "SM1.2",
         "en": "world",
         "fi": "maailma",
         "nl": "de wereld"
-    },
-    "continent": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
-        "roots": {
-            "fi": "country"
-        },
-        "singular": {
-            "en": "continent",
-            "fi": "maanosa",
-            "nl": "het continent"
-        },
-        "plural": {
-            "en": "continents",
-            "fi": "maanosat",
-            "nl": "de continenten"
-        }
     },
     "sand": {
         "level": {

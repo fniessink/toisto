@@ -7,6 +7,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "food",
             "fi": "ruoka",
@@ -80,6 +81,7 @@
             ],
             "C2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "cheese",
             "fi": "juusto",
@@ -99,7 +101,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "coffee",
             "fi": "kahvi",
@@ -197,6 +202,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "bread",
             "fi": "leipä",
@@ -235,7 +241,10 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "milk",
             "fi": "maito",
@@ -290,6 +299,7 @@
             "B1": "EP",
             "none": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "strawberry",
             "fi": "mansikka",
@@ -346,6 +356,7 @@
             ],
             "B2": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "apple",
             "fi": "omena",
@@ -530,6 +541,7 @@
             ],
             "C1": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "tomato",
             "fi": "tomaatti",
@@ -627,6 +639,7 @@
             "B1": "OD",
             "none": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "pear",
             "fi": "päärynä",
@@ -801,7 +814,10 @@
             "fi": "ice",
             "nl": "ice"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "ice cream",
             "fi": "jäätelö",
@@ -828,6 +844,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.2",
         "singular": {
             "en": "banana",
             "fi": "banaani",
