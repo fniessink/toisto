@@ -305,6 +305,32 @@
             "nl": "nieuwst"
         }
     },
+    "young": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "antonym": "old",
+        "positive degree": {
+            "en": "young",
+            "fi": "nuori",
+            "nl": "jong"
+        },
+        "comparative degree": {
+            "en": "younger",
+            "fi": "nuorempi",
+            "nl": "jonger"
+        },
+        "superlative degree": {
+            "en": "youngest",
+            "fi": "nuorin",
+            "nl": "jongst"
+        }
+    },
     "old": {
         "level": {
             "A1": [
@@ -313,7 +339,10 @@
                 "OD"
             ]
         },
-        "antonym": "new",
+        "antonym": [
+            "new",
+            "young"
+        ],
         "topics": [
             "SM1.1",
             "SM1.3"
