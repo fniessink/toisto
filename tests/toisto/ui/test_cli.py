@@ -159,7 +159,14 @@ Options:
 
     @patch("sys.argv", ["toisto", "--version"])
     @patch.object(ArgumentParser, "_print_message")
-    def test_version(self, print_message: Mock):
+    def test_version_long_option(self, print_message: Mock):
+        """Test that the app writes the version number to stdout."""
+        self.assertRaises(SystemExit, self.argument_parser.parse_args)
+        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
+
+    @patch("sys.argv", ["toisto", "-V"])
+    @patch.object(ArgumentParser, "_print_message")
+    def test_version_short_option(self, print_message: Mock):
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, self.argument_parser.parse_args)
         self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
