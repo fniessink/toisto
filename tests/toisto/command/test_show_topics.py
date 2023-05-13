@@ -15,7 +15,7 @@ class ShowTopicsTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        concept = create_concept("hello", dict(fi="Terve", nl="Hoi"), topic="topic")
+        concept = create_concept("hello", dict(fi="Terve", nl="Hoi", topics="greetings"), topic="topic")
         self.quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
         self.concepts = {concept}
 
@@ -32,9 +32,17 @@ class ShowTopicsTest(ToistoTestCase):
         self.assertEqual("Topic topic", console_print.call_args[0][0].title)
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
+    def test_column_headers(self):
+        """Test that the column headers are shown."""
+        console_print = self.show_topics()
+        for index, value in enumerate(["Finnish", "Dutch", "Grammatical categories", "Language level", "Other topics"]):
+            self.assertEqual(value, console_print.call_args[0][0].columns[index].header)
+
     def test_contents(self):
         """Test that the table contains the concept."""
         console_print = self.show_topics()
+        for index, value in enumerate(["Terve", "Hoi", "", "", "greetings"]):
+            self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_skip_concepts_without_labels_in_the_selected_languages(self):

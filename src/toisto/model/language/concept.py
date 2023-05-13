@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from functools import cached_property
 from typing import ClassVar, NewType, cast, get_args
 
@@ -40,11 +40,11 @@ class RelatedConcepts:
     prevents to the need for a second pass after instantiating concepts from the topic files to create the relations.
     """
 
-    _parent: ConceptId | None = None
-    _constituents: ConceptIds = ()
-    _roots: dict[Language, ConceptIds] | ConceptIds = ()  # Tuple if all languages have the same roots
-    _antonyms: ConceptIds = ()
-    _answers: ConceptIds = ()
+    _parent: ConceptId | None
+    _constituents: ConceptIds
+    _roots: dict[Language, ConceptIds] | ConceptIds  # Tuple if all languages have the same roots
+    _antonyms: ConceptIds
+    _answers: ConceptIds
 
     @property
     def parent(self) -> Concept | None:
@@ -86,12 +86,12 @@ class Concept:
     """
 
     concept_id: ConceptId
-    _labels: dict[Language, Labels] = field(default_factory=dict)
-    _meanings: dict[Language, Labels] = field(default_factory=dict)
-    level: CommonReferenceLevel | None = None
-    related_concepts: RelatedConcepts = field(default_factory=RelatedConcepts)
-    topics: set[Topic] = field(default_factory=set)
-    answer_only: bool = False
+    _labels: dict[Language, Labels]
+    _meanings: dict[Language, Labels]
+    level: CommonReferenceLevel | None
+    related_concepts: RelatedConcepts
+    topics: set[Topic]
+    answer_only: bool
 
     instances: ClassVar[dict[ConceptId, Concept]] = {}
 

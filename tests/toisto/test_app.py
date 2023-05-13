@@ -18,7 +18,7 @@ class AppTest(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        Concept.instances = {}
+        Concept.instances.clear()
         self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
 
     @patch("rich.console.Console.pager", MagicMock())
