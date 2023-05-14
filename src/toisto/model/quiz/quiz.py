@@ -149,7 +149,7 @@ class Quiz:
     @property
     def notes(self) -> Sequence[str]:
         """Return the quiz notes."""
-        return self._question.notes
+        return self._answers[0].notes if "write" in self.quiz_types else self._question.notes
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
