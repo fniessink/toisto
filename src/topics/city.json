@@ -100,6 +100,7 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "museum",
             "fi": "museo",
@@ -214,7 +215,10 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.4"
+        ],
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -263,8 +267,14 @@
     },
     "ice cream kiosk": {
         "roots": {
-            "en": ["kiosk", "ice cream"],
-            "fi": ["kiosk", "ice cream"],
+            "en": [
+                "kiosk",
+                "ice cream"
+            ],
+            "fi": [
+                "kiosk",
+                "ice cream"
+            ],
             "nl": "ice cream"
         },
         "topics": "SM1.1",
@@ -319,6 +329,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "hotel",
             "fi": "hotelli",
@@ -338,6 +349,7 @@
             ],
             "A2": "EP"
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "centre",
             "fi": "keskusta",
@@ -357,7 +369,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.4"
+        ],
         "singular": {
             "en": "street",
             "fi": "katu",

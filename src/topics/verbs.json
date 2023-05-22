@@ -1557,7 +1557,10 @@
                 "OD"
             ]
         },
-        "topics": ["SM1.1", "SM1.2"],
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "infinitive": {
             "en": "to come",
             "fi": "tulla",
@@ -1658,7 +1661,11 @@
                 "OD"
             ]
         },
-        "topics": ["SM1.1", "SM1.2"],
+        "topics": [
+            "SM1.1",
+            "SM1.2",
+            "SM1.4"
+        ],
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1761,7 +1768,8 @@
         },
         "topics": [
             "SM1.1",
-            "SM1.2"
+            "SM1.2",
+            "SM1.4"
         ],
         "infinitive": {
             "en": "to write",

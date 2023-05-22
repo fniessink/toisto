@@ -88,6 +88,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "sea",
             "fi": "meri",
@@ -188,6 +189,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "tree",
             "fi": "puu",
@@ -395,6 +397,26 @@
             "en": "fires",
             "fi": "tulet",
             "nl": "de vuren"
+        }
+    },
+    "wave": {
+        "level": {
+            "A2": "OD",
+            "B1": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "wave",
+            "fi": "aalto",
+            "nl": "de golf"
+        },
+        "plural": {
+            "en": "waves",
+            "fi": "aallot",
+            "nl": "de golven"
         }
     },
     "volcano": {

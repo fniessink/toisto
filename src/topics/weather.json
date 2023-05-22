@@ -55,7 +55,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.4"
+        ],
         "en": "sun",
         "fi": "aurinko",
         "nl": "de zon"
@@ -80,6 +83,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "cloud",
             "fi": "pilvi",

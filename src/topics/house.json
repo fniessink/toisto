@@ -2,8 +2,12 @@
     "apartment": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "apartment",
             "fi": "asunto",
@@ -23,6 +27,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "room",
             "fi": "huone",
@@ -98,6 +103,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "house",
             "fi": "talo",
@@ -185,7 +191,10 @@
                 "OD"
             ]
         },
-        "topics": ["SM1.1", "SM1.2"],
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "door",
             "fi": "ovi",
@@ -290,7 +299,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.4"
+        ],
         "singular": {
             "en": "kitchen",
             "fi": "keittiö",

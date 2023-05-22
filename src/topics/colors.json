@@ -8,6 +8,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "en": "black",
         "fi": "musta",
         "nl": "zwart"
@@ -21,6 +22,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "en": "white",
         "fi": "valkoinen",
         "nl": "wit"
@@ -33,6 +35,7 @@
             ],
             "A2": "KK"
         },
+        "topics": "SM1.4",
         "en": "blue",
         "fi": "sininen",
         "nl": "blauw"
@@ -45,6 +48,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "en": "green",
         "fi": "vihreä",
         "nl": "groen"
@@ -57,6 +61,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "en": "red",
         "fi": "punainen",
         "nl": "rood"
@@ -69,6 +74,7 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.4",
         "en": "yellow",
         "fi": "keltainen",
         "nl": "geel"
@@ -79,6 +85,7 @@
             "A2": "EP",
             "none": "KK"
         },
+        "topics": "SM1.4",
         "en": "purple",
         "fi": [
             "liila",
@@ -94,6 +101,7 @@
             ],
             "C2": "KK"
         },
+        "topics": "SM1.4",
         "en": "orange",
         "fi": "oranssi",
         "nl": "oranje"
@@ -106,6 +114,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.4",
         "en": "brown",
         "fi": "ruskea",
         "nl": "bruin"
@@ -116,12 +125,26 @@
             "A2": "EP",
             "none": "KK"
         },
+        "topics": "SM1.4",
         "en": "pink",
         "fi": [
             "vaaleanpunainen",
             "pinkki"
         ],
         "nl": "roze"
+    },
+    "beige": {
+        "level": {
+            "C1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.4",
+        "en": "beige",
+        "fi": "beige",
+        "nl": "beige"
     },
     "grey": {
         "level": {
@@ -131,6 +154,7 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.4",
         "en": "grey|gray",
         "fi": "harmaa",
         "nl": "grijs"
@@ -153,6 +177,7 @@
             "none": "KK"
         },
         "roots": "blue",
+        "topics": "SM1.4",
         "en": "dark blue",
         "fi": "tummansininen",
         "nl": "donkerblauw"
