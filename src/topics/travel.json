@@ -141,5 +141,48 @@
             ],
             "nl": "de bussen"
         }
+    },
+    "bus driver": {
+        "roots": "bus",
+        "en": "bus driver",
+        "fi": "bussikuski",
+        "nl": "de buschauffeur"
+    },
+    "stop": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "singular": {
+            "en": "stop",
+            "fi": "pysäkki",
+            "nl": "de halte"
+        },
+        "plural": {
+            "en": "stops",
+            "fi": "pysäkit",
+            "nl": "de haltes"
+        }
+    },
+    "bus stop": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": [
+            "bus",
+            "stop"
+        ],
+        "topics": "SM1.2",
+        "en": "bus stop",
+        "fi": [
+            "linja-autopysäkki",
+            "bussipysäkki"
+        ],
+        "nl": "de bushalte"
     }
 }

@@ -678,7 +678,11 @@
                 "OD"
             ]
         },
-        "topics": ["SM1.1", "SM1.2"],
+        "topics": [
+            "SM1.1",
+            "SM1.2",
+            "SM1.4"
+        ],
         "singular": {
             "en": "pair",
             "fi": "pari",

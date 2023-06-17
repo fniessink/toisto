@@ -238,7 +238,10 @@
             ]
         },
         "antonym": "ugly",
-        "topics": "SM1.3",
+        "topics": [
+            "SM1.3",
+            "SM1.4"
+        ],
         "positive degree": {
             "en": "beautiful",
             "fi": "kaunis",
@@ -313,7 +316,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.4"
+        ],
         "antonym": "old",
         "positive degree": {
             "en": "young",
@@ -345,7 +351,8 @@
         ],
         "topics": [
             "SM1.1",
-            "SM1.3"
+            "SM1.3",
+            "SM1.4"
         ],
         "positive degree": {
             "en": "old",
@@ -369,7 +376,10 @@
             "B2": "OD",
             "none": "EP"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.4"
+        ],
         "positive degree": {
             "en": "cute",
             "fi": "söpö",
@@ -420,6 +430,7 @@
                 "KK"
             ]
         },
+        "topics": "SM1.4",
         "positive degree": {
             "en": "quiet",
             "fi": "hiljainen",
@@ -594,7 +605,8 @@
         "topics": [
             "SM1.1",
             "SM1.2",
-            "SM1.3"
+            "SM1.3",
+            "SM1.4"
         ],
         "positive degree": {
             "en": "long",
@@ -624,7 +636,8 @@
         "topics": [
             "SM1.1",
             "SM1.2",
-            "SM1.3"
+            "SM1.3",
+            "SM1.4"
         ],
         "positive degree": {
             "en": "short",
@@ -896,6 +909,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "positive degree": {
             "en": "happy",
             "fi": "onnellinen",
@@ -920,6 +934,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "positive degree": {
             "en": "cheerful",
             "fi": "iloinen",

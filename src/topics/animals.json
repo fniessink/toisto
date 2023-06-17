@@ -34,6 +34,7 @@
                 "house"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "pet",
             "fi": [
@@ -59,6 +60,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.4",
         "singular": {
             "en": "dog",
             "fi": "koira",
@@ -78,7 +80,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.4"
+        ],
         "singular": {
             "en": "cat",
             "fi": "kissa",

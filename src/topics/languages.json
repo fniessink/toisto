@@ -155,7 +155,7 @@
         ],
         "en": "English;;In English, the names of languages are capitalized",
         "fi": "englanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "Engels;;In Dutch, the names of languages are capitalized"
+        "nl": "Engels|het Engels;;In Dutch, the names of languages are capitalized"
     },
     "chinese": {
         "level": {
@@ -167,7 +167,7 @@
         "topics": "SM1.2",
         "en": "Chinese;;In English, the names of languages are capitalized",
         "fi": "kiina;;In Finnish, the names of languages are not capitalized",
-        "nl": "Chinees;;In Dutch, the names of languages are capitalized"
+        "nl": "Chinees|het Chiness;;In Dutch, the names of languages are capitalized"
     },
     "german": {
         "level": {
@@ -179,7 +179,7 @@
         "topics": "SM1.2",
         "en": "German;;In English, the names of languages are capitalized",
         "fi": "saksa;;In Finnish, the names of languages are not capitalized",
-        "nl": "Duits;;In Dutch, the names of languages are capitalized"
+        "nl": "Duits|het Duits;;In Dutch, the names of languages are capitalized"
     },
     "estonian": {
         "level": {
@@ -190,7 +190,7 @@
         },
         "en": "Estonian;;In English, the names of languages are capitalized",
         "fi": "viro;;In Finnish, the names of languages are not capitalized",
-        "nl": "Estisch;;In Dutch, the names of languages are capitalized"
+        "nl": "Estisch|het Estisch;;In Dutch, the names of languages are capitalized"
     },
     "finnish": {
         "level": {
@@ -203,7 +203,7 @@
         "topics": "SM1.1",
         "en": "Finnish;;In English, the names of languages are capitalized",
         "fi": "suomi;language;In Finnish, the names of languages are not capitalized",
-        "nl": "Fins;;In Dutch, the names of languages are capitalized"
+        "nl": "Fins|het Fins;;In Dutch, the names of languages are capitalized"
     },
     "french": {
         "level": {
@@ -218,7 +218,7 @@
         ],
         "en": "French;;In English, the names of languages are capitalized",
         "fi": "ranska;;In Finnish, the names of languages are not capitalized",
-        "nl": "Frans;;In Dutch, the names of languages are capitalized"
+        "nl": "Frans|het Frans;;In Dutch, the names of languages are capitalized"
     },
     "hungarian": {
         "level": {
@@ -229,7 +229,7 @@
         },
         "en": "Hungarian;;In English, the names of languages are capitalized",
         "fi": "unkari;;In Finnish, the names of languages are not capitalized",
-        "nl": "Hongaars;;In Dutch, the names of languages are capitalized"
+        "nl": "Hongaars|het Hongaars;;In Dutch, the names of languages are capitalized"
     },
     "japanese": {
         "level": {
@@ -240,7 +240,7 @@
         },
         "en": "Japanese;;In English, the names of languages are capitalized",
         "fi": "japani;;In Finnish, the names of languages are not capitalized",
-        "nl": "Japans;;In Dutch, the names of languages are capitalized"
+        "nl": "Japans|het Japans;;In Dutch, the names of languages are capitalized"
     },
     "korean": {
         "level": {
@@ -251,7 +251,7 @@
         },
         "en": "Korean;;In English, the names of languages are capitalized",
         "fi": "korea;;In Finnish, the names of languages are not capitalized",
-        "nl": "Koreaans;;In Dutch, the names of languages are capitalized"
+        "nl": "Koreaans|het Koreaans;;In Dutch, the names of languages are capitalized"
     },
     "spanish": {
         "level": {
@@ -261,7 +261,7 @@
         "topics": "SM1.2",
         "en": "Spanish;;In English, the names of languages are capitalized",
         "fi": "espanja;;In Finnish, the names of languages are not capitalized",
-        "nl": "Spaans;;In Dutch, the names of languages are capitalized"
+        "nl": "Spaans|het Spaans;;In Dutch, the names of languages are capitalized"
     },
     "dutch": {
         "level": {
@@ -272,7 +272,7 @@
         },
         "en": "Dutch;;In English, the names of languages are capitalized",
         "fi": "hollanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "Nederlands;;In Dutch, the names of languages are capitalized"
+        "nl": "Nederlands|het Nederlands;;In Dutch, the names of languages are capitalized"
     },
     "danish": {
         "level": {
@@ -283,7 +283,7 @@
         },
         "en": "Danish;;In English, the names of languages are capitalized",
         "fi": "tanska;;In Finnish, the names of languages are not capitalized",
-        "nl": "Deens;;In Dutch, the names of languages are capitalized"
+        "nl": "Deens|het Deens;;In Dutch, the names of languages are capitalized"
     },
     "norwegian": {
         "level": {
@@ -294,7 +294,7 @@
         },
         "en": "Norwegian;;In English, the names of languages are capitalized",
         "fi": "norja;;In Finnish, the names of languages are not capitalized",
-        "nl": "Noors;;In Dutch, the names of languages are capitalized"
+        "nl": "Noors|het Noors;;In Dutch, the names of languages are capitalized"
     },
     "swedish": {
         "level": {
@@ -309,7 +309,7 @@
         ],
         "en": "Swedish;;In English, the names of languages are capitalized",
         "fi": "ruotsi;;In Finnish, the names of languages are not capitalized",
-        "nl": "Zweeds;;In Dutch, the names of languages are capitalized"
+        "nl": "Zweeds|het Zweeds;;In Dutch, the names of languages are capitalized"
     },
     "russian": {
         "level": {
@@ -321,7 +321,7 @@
         "topics": "SM1.2",
         "en": "Russian;;In English, the names of languages are capitalized",
         "fi": "venäjä;;In Finnish, the names of languages are not capitalized",
-        "nl": "Russisch;;In Dutch, the names of languages are capitalized"
+        "nl": "Russisch|het Russisch;;In Dutch, the names of languages are capitalized"
     },
     "icelandic": {
         "level": {
@@ -333,7 +333,7 @@
         "topics": "SM1.2",
         "en": "Icelandic;;In English, the names of languages are capitalized",
         "fi": "islanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "IJslands;;In Dutch, the names of languages are capitalized"
+        "nl": "IJslands|het IJslands;;In Dutch, the names of languages are capitalized"
     },
     "I have a dutch accent": {
         "roots": [
