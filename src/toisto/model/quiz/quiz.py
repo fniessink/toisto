@@ -157,7 +157,7 @@ class Quiz:
 
     def _instruction_note(self) -> str:
         """Return the instruction note, if applicable."""
-        note_applicable = self.question_language != self.answer_language or "answer" in self.quiz_types
+        note_applicable = self.question_language != self.answer_language or {"answer", "listen"} & set(self.quiz_types)
         instruction_note = self.notes[0] if self.notes else ""
         return f" ({instruction_note})" if (note_applicable and instruction_note) else ""
 

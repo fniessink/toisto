@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Fixed a few typo's.
+- Show notes for listening quizzes. Fixes [#351](https://github.com/fniessink/toisto/issues/351).
 
 ### Added
 
