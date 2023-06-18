@@ -7,7 +7,10 @@
                 "KK"
             ]
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.3",
+            "SM1.4"
+        ],
         "singular": {
             "en": "apartment",
             "fi": "asunto",
@@ -368,7 +371,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "bath",
             "fi": "kylpy",

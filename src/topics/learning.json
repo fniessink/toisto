@@ -47,11 +47,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2",
-            "SM1.4"
-        ],
+        "topics": "SM1.2",
         "singular": {
             "en": "question",
             "fi": "kysymys",
@@ -74,10 +70,7 @@
         "roots": {
             "nl": "word"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "singular": {
             "en": "answer",
             "fi": "vastaus",
@@ -95,7 +88,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "exercise",
             "fi": "harjoitus",

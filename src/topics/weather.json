@@ -42,7 +42,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "rain",
         "fi": "sade",
         "nl": "de regen"
@@ -55,10 +54,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4"
-        ],
+        "topics": "SM1.4",
         "en": "sun",
         "fi": "aurinko",
         "nl": "de zon"
@@ -83,7 +79,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "cloud",
             "fi": "pilvi",
@@ -207,6 +202,26 @@
         "en": "stormy",
         "fi": "myrskyinen",
         "nl": "stormachtig"
+    },
+    "degree": {
+        "level": {
+            "A2": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "singular": {
+            "en": "degree",
+            "fi": "aste",
+            "nl": "de graad"
+        },
+        "plural": {
+            "en": "degrees",
+            "fi": "asteet",
+            "nl": "de graden"
+        }
     },
     "there is a thunderstorm": {
         "roots": {

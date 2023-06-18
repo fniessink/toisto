@@ -135,10 +135,7 @@
             ]
         },
         "antonym": "hot",
-        "topics": [
-            "SM1.1",
-            "SM1.3"
-        ],
+        "topics": "SM1.3",
         "positive degree": {
             "en": "cold",
             "fi": "kylmä",
@@ -316,10 +313,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.4"
-        ],
+        "topics": "SM1.4",
         "antonym": "old",
         "positive degree": {
             "en": "young",
@@ -603,7 +597,6 @@
         },
         "antonym": "short",
         "topics": [
-            "SM1.1",
             "SM1.2",
             "SM1.3",
             "SM1.4"
@@ -634,7 +627,6 @@
         },
         "antonym": "long",
         "topics": [
-            "SM1.1",
             "SM1.2",
             "SM1.3",
             "SM1.4"

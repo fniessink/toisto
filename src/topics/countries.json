@@ -19,6 +19,24 @@
             "nl": "de landen"
         }
     },
+    "nationality": {
+        "level": {
+            "A1": "EP",
+            "C1": "KK",
+            "none": "OD"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "nationality",
+            "fi": "kansalaisuus",
+            "nl": "de nationaliteit"
+        },
+        "plural": {
+            "en": "nationalities",
+            "fi": "kansalaisuudet",
+            "nl": "de nationaliteiten"
+        }
+    },
     "finland": {
         "level": {
             "A1": "KK",
@@ -30,10 +48,7 @@
         "roots": {
             "nl": "country"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "en": "Finland",
         "fi": "Suomi;country",
         "nl": "Finland"

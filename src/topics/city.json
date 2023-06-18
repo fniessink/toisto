@@ -7,7 +7,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "city",
             "fi": "kaupunki",
@@ -17,6 +16,26 @@
             "en": "cities",
             "fi": "kaupungit",
             "nl": "de steden"
+        }
+    },
+    "village": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "village",
+            "fi": "kylä",
+            "nl": "het dorp"
+        },
+        "plural": {
+            "en": "villages",
+            "fi": "kylät",
+            "nl": "de dorpen"
         }
     },
     "place": {
@@ -215,10 +234,7 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4"
-        ],
+        "topics": "SM1.4",
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -349,7 +365,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "centre",
             "fi": "keskusta",
@@ -369,10 +384,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4"
-        ],
+        "topics": "SM1.2",
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -382,6 +394,26 @@
             "en": "streets",
             "fi": "kadut",
             "nl": "de straten"
+        }
+    },
+    "road": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "singular": {
+            "en": "road",
+            "fi": "tie",
+            "nl": "de weg"
+        },
+        "plural": {
+            "en": "roads",
+            "fi": "tiet",
+            "nl": "de wegen"
         }
     },
     "square": {
@@ -411,7 +443,6 @@
             ],
             "B1": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "bridge",
             "fi": "silta",

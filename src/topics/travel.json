@@ -61,7 +61,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "passport",
             "fi": "passi",
@@ -111,6 +110,26 @@
             "en": "airports",
             "fi": "lentokentät",
             "nl": "de vliegvelden"
+        }
+    },
+    "train": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "train",
+            "fi": "juna",
+            "nl": "de trein"
+        },
+        "plural": {
+            "en": "trains",
+            "fi": "junat",
+            "nl": "de treinen"
         }
     },
     "bus": {

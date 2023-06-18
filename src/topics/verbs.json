@@ -1255,7 +1255,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "infinitive": {
             "en": "to eat",
             "fi": "syödä",
@@ -1356,7 +1355,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "infinitive": {
             "en": "to sleep",
             "fi": "nukkua",
@@ -1557,10 +1555,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "infinitive": {
             "en": "to come",
             "fi": "tulla",
@@ -1661,11 +1656,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2",
-            "SM1.4"
-        ],
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1766,11 +1756,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2",
-            "SM1.4"
-        ],
+        "topics": "SM1.2",
         "infinitive": {
             "en": "to write",
             "fi": "kirjoittaa",
@@ -1871,10 +1857,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "infinitive": {
             "en": "to live",
             "fi": "asua",
@@ -2013,6 +1996,55 @@
                 "en": "they save",
                 "fi": "he säästävät",
                 "nl": "zij sparen|ze sparen"
+            }
+        }
+    },
+    "to sit": {
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to sit",
+            "fi": "istua",
+            "nl": "zitten"
+        },
+        "singular": {
+            "first person": {
+                "en": "I sit",
+                "fi": "minä istun|istun",
+                "nl": "ik zit"
+            },
+            "second person": {
+                "en": "you sit;singular",
+                "fi": "sinä istut|istut",
+                "nl": "jij zit|je zit"
+            },
+            "third person": {
+                "female": {
+                    "en": "she sits",
+                    "fi": "hän istuu;female",
+                    "nl": "zij zit|ze zit"
+                },
+                "male": {
+                    "en": "he sits",
+                    "fi": "hän istuu;male",
+                    "nl": "hij zit"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we sit",
+                "fi": "me istumme|istumme",
+                "nl": "wij zitten|we zitten"
+            },
+            "second person": {
+                "en": "you sit;plural",
+                "fi": "te istutte|istutte",
+                "nl": "jullie zitten"
+            },
+            "third person": {
+                "en": "they sit",
+                "fi": "he istuvat",
+                "nl": "zij zitten|ze zitten"
             }
         }
     }
