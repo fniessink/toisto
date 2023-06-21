@@ -1,4 +1,23 @@
 {
+    "color": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "color|colour",
+            "fi": "väri",
+            "nl": "de kleur"
+        },
+        "plural": {
+            "en": "colors|colours",
+            "fi": "värit",
+            "nl": "de kleuren"
+        }
+    },
     "black": {
         "antonym": "white",
         "level": {
@@ -321,6 +340,7 @@
     },
     "i sit on a green sofa": {
         "roots": [
+            "to sit",
             "green",
             "sofa"
         ],

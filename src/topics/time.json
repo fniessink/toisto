@@ -19,10 +19,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "en": "now",
         "fi": "nyt",
         "nl": "nu"
@@ -48,15 +45,18 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "singular": {
             "en": "morning",
-            "fi": "aamu",
+            "fi": "aamu|aamupäivä",
             "nl": "de ochtend"
         },
         "plural": {
             "en": "mornings",
-            "fi": "aamut",
+            "fi": "aamut|aamupäivät",
             "nl": "de ochtenden"
         }
     },
@@ -116,7 +116,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "evening",
             "fi": "ilta",
@@ -237,10 +236,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4"
-        ],
         "singular": {
             "en": "hour",
             "fi": "tunti",

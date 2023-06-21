@@ -86,10 +86,7 @@
                 "language"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "en": "nother tongue",
         "fi": "äidinkieli",
         "nl": "de moedertaal"
@@ -147,36 +144,47 @@
     "english": {
         "level": {
             "A1": "OD",
-            "C1": "EP"
+            "C1": "EP",
+            "none": "KK"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "en": "English;;In English, the names of languages are capitalized",
         "fi": "englanti;;In Finnish, the names of languages are not capitalized",
         "nl": "Engels|het Engels;;In Dutch, the names of languages are capitalized"
+    },
+    "arabic": {
+        "level": {
+            "A2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "Arabic;;In English, the names of languages are capitalized",
+        "fi": "arabia;;In Finnish, the names of languages are not capitalized",
+        "nl": "Arabisch|het Arabisch;;In Dutch, the names of languages are capitalized"
     },
     "chinese": {
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Chinese;;In English, the names of languages are capitalized",
         "fi": "kiina;;In Finnish, the names of languages are not capitalized",
-        "nl": "Chinees|het Chiness;;In Dutch, the names of languages are capitalized"
+        "nl": "Chinees|het Chinees;;In Dutch, the names of languages are capitalized"
     },
     "german": {
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "German;;In English, the names of languages are capitalized",
         "fi": "saksa;;In Finnish, the names of languages are not capitalized",
         "nl": "Duits|het Duits;;In Dutch, the names of languages are capitalized"
@@ -185,6 +193,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -209,13 +218,11 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "en": "French;;In English, the names of languages are capitalized",
         "fi": "ranska;;In Finnish, the names of languages are not capitalized",
         "nl": "Frans|het Frans;;In Dutch, the names of languages are capitalized"
@@ -235,6 +242,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -246,6 +254,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -256,17 +265,34 @@
     "spanish": {
         "level": {
             "A1": "EP",
-            "none": "OD"
+            "none": [
+                "KK",
+                "OD"
+            ]
         },
         "topics": "SM1.2",
         "en": "Spanish;;In English, the names of languages are capitalized",
         "fi": "espanja;;In Finnish, the names of languages are not capitalized",
         "nl": "Spaans|het Spaans;;In Dutch, the names of languages are capitalized"
     },
+    "italian": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "Italian;;In English, the names of languages are capitalized",
+        "fi": "italia;;In Finnish, the names of languages are not capitalized",
+        "nl": "Italiaans|het Italiaans;;In Dutch, the names of languages are capitalized"
+    },
     "dutch": {
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -278,6 +304,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -289,6 +316,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -300,13 +328,10 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "Swedish;;In English, the names of languages are capitalized",
         "fi": "ruotsi;;In Finnish, the names of languages are not capitalized",
         "nl": "Zweeds|het Zweeds;;In Dutch, the names of languages are capitalized"
@@ -315,6 +340,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -327,6 +353,7 @@
         "level": {
             "none": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },

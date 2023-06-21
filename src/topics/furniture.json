@@ -7,10 +7,7 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
+        "topics": "SM1.2",
         "singular": {
             "en": "table",
             "fi": "pöytä",
@@ -30,7 +27,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "bed",
             "fi": "sänky",
@@ -71,7 +67,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "sofa",
             "fi": "sohva",
@@ -166,7 +161,6 @@
                 "chair"
             ]
         },
-        "topics": "SM1.1",
         "en": "office chair",
         "fi": "työtuoli",
         "nl": "de bureaustoel"
@@ -179,7 +173,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "lamp",
             "fi": "lamppu",
@@ -212,7 +205,6 @@
                 "table"
             ]
         },
-        "topics": "SM1.1",
         "en": "dining table",
         "fi": "ruokapöytä",
         "nl": "de eettafel"
@@ -239,7 +231,6 @@
             "fi": "curtain",
             "nl": "curtain"
         },
-        "topics": "SM1.1",
         "en": "roller blind",
         "fi": "rullaverho",
         "nl": "het rolgordijn"
