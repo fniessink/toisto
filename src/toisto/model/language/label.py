@@ -9,6 +9,8 @@ from typing import Final
 class Label(str):
     """Class representing labels for concepts."""
 
+    __slots__ = ()
+
     NOTE_SEP: Final = ";"
     SPELLING_ALTERNATIVES_SEP: Final = "|"
 
