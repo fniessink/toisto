@@ -162,7 +162,11 @@
         }
     },
     "bus driver": {
-        "roots": "bus",
+        "roots": {
+            "en": ["bus", "to drive"],
+            "fi": "bus",
+            "nl": "bus"
+        },
         "en": "bus driver",
         "fi": "bussikuski",
         "nl": "de buschauffeur"
