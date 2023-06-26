@@ -1857,7 +1857,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to live",
             "fi": "asua",
@@ -1915,7 +1918,7 @@
                 },
                 "second person": {
                     "en": "you lived;singular",
-                    "fi": "sinä asuit|Asuit",
+                    "fi": "sinä asuit|asuit",
                     "nl": "jij woonde|je woonde"
                 },
                 "third person": {
@@ -2045,6 +2048,174 @@
                 "en": "they sit",
                 "fi": "he istuvat",
                 "nl": "zij zitten|ze zitten"
+            }
+        }
+    },
+    "to drive": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "infinitive": {
+            "en": "to drive",
+            "fi": "ajaa",
+            "nl": "rijden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I drive",
+                "fi": "minä ajan|ajan",
+                "nl": "ik rijd|ik rij"
+            },
+            "second person": {
+                "en": "you drive;singular",
+                "fi": "sinä ajat|ajat",
+                "nl": "jij rijdt|je rijdt"
+            },
+            "third person": {
+                "female": {
+                    "en": "she drives",
+                    "fi": "hän ajaa;female",
+                    "nl": "zij rijdt|ze rijdt"
+                },
+                "male": {
+                    "en": "he drives",
+                    "fi": "hän ajaa;male",
+                    "nl": "hij rijdt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we drive",
+                "fi": "me ajamme|ajamme",
+                "nl": "wij rijden|we rijden"
+            },
+            "second person": {
+                "en": "you drive;plural",
+                "fi": "te ajatte|ajatte",
+                "nl": "jullie rijden"
+            },
+            "third person": {
+                "en": "they drive",
+                "fi": "he ajavat",
+                "nl": "zij rijden|ze rijden"
+            }
+        }
+    },
+    "to give": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "infinitive": {
+            "en": "to give",
+            "fi": "antaa",
+            "nl": "geven"
+        },
+        "singular": {
+            "first person": {
+                "en": "I give",
+                "fi": "minä annan|annan",
+                "nl": "ik geef"
+            },
+            "second person": {
+                "en": "you give;singular",
+                "fi": "sinä annat|annat",
+                "nl": "jij geeft|je geeft"
+            },
+            "third person": {
+                "female": {
+                    "en": "she gives",
+                    "fi": "hän antaa;female",
+                    "nl": "zij geeft|ze geeft"
+                },
+                "male": {
+                    "en": "he gives",
+                    "fi": "hän antaa;male",
+                    "nl": "hij geeft"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we give",
+                "fi": "me annamme|annamme",
+                "nl": "wij geven|we geven"
+            },
+            "second person": {
+                "en": "you give;plural",
+                "fi": "te annatte|annatte",
+                "nl": "jullie geven"
+            },
+            "third person": {
+                "en": "they give",
+                "fi": "he antavat",
+                "nl": "zij geven|ze geven"
+            }
+        }
+    },
+    "to open": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "infinitive": {
+            "en": "to open",
+            "fi": "avata",
+            "nl": "openen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I open",
+                "fi": "minä avaan|avaan",
+                "nl": "ik open"
+            },
+            "second person": {
+                "en": "you open;singular",
+                "fi": "sinä avaat|avaat",
+                "nl": "jij opent|je opent"
+            },
+            "third person": {
+                "female": {
+                    "en": "she opens",
+                    "fi": "hän avaa;female",
+                    "nl": "zij opent|ze opent"
+                },
+                "male": {
+                    "en": "he opens",
+                    "fi": "hän avaa;male",
+                    "nl": "hij opent"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we open",
+                "fi": "me avaamme|avaamme",
+                "nl": "wij openen|we openen"
+            },
+            "second person": {
+                "en": "you open;plural",
+                "fi": "te avaatte|avaatte",
+                "nl": "jullie openen"
+            },
+            "third person": {
+                "en": "they open",
+                "fi": "he avaavat",
+                "nl": "zij openen|ze openen"
             }
         }
     }

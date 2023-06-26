@@ -202,5 +202,45 @@
             "fi": "päänsäryt",
             "nl": "de hoofdpijnen"
         }
+    },
+    "hospital": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "nl": "house"
+        },
+        "singular": {
+            "en": "hospital",
+            "fi": "sairaala",
+            "nl": "het ziekenhuis"
+        },
+        "plural": {
+            "en": "hospitals",
+            "fi": "sairaalat",
+            "nl": "de ziekenhuizen"
+        }
+    },
+    "pharmacy": {
+        "level": {
+            "B1": "EP",
+            "B2": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.5",
+        "singular": {
+            "en": "pharmacy",
+            "fi": "apteekki",
+            "nl": "de apotheek"
+        },
+        "plural": {
+            "en": "pharmacies",
+            "fi": "apteekit",
+            "nl": "de apotheken"
+        }
     }
 }

@@ -20,6 +20,19 @@
             "fi": "ruoat"
         }
     },
+    "breakfast": {
+        "level": {
+            "A1": ["EP", "OD"],
+            "C1": "KK"
+        },
+        "roots": {
+            "fi": "morning"
+        },
+        "topics": "SM1.5",
+        "en": "breakfast",
+        "fi": "aamupala",
+        "nl": "het ontbijt"
+    },
     "appetiser": {
         "level": {
             "C1": "OD",

@@ -189,28 +189,6 @@
             "nl": "de bibliotheken"
         }
     },
-    "hospital": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "roots": {
-            "nl": "house"
-        },
-        "singular": {
-            "en": "hospital",
-            "fi": "sairaala",
-            "nl": "het ziekenhuis"
-        },
-        "plural": {
-            "en": "hospitals",
-            "fi": "sairaalat",
-            "nl": "de ziekenhuizen"
-        }
-    },
     "office": {
         "level": {
             "A1": "OD",
