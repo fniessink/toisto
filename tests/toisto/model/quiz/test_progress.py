@@ -106,7 +106,7 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
         quizzes = Quizzes(quiz for quiz in create_quizzes("fi", "nl", *concepts) if quiz.quiz_types == ("listen",))
-        random_quiz = list(quizzes)[0]
+        random_quiz = next(iter(quizzes))
         self.progress.increase_retention(random_quiz)
         self.progress.get_retention(random_quiz).skip_until = None
         self.assertEqual(self.progress.next_quiz(quizzes), random_quiz)
