@@ -255,6 +255,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.5",
         "singular": {
             "en": "minute",
             "fi": "minuutti",
@@ -286,6 +287,23 @@
             "nl": "de klokken"
         }
     },
+    "alarm clock": {
+        "level": {
+            "A2": "EP",
+            "none": [
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": "clock",
+            "fi": "clock"
+        },
+        "topics": "SM1.5",
+        "en": "alarm clock",
+        "fi": "herätyskello",
+        "nl": "de wekker"
+    },
     "what time is it": {
         "roots": {
             "en": [
@@ -305,6 +323,7 @@
                 "to be"
             ]
         },
+        "topics": "SM1.5",
         "en": "What time is it?",
         "fi": [
             "Paljonko kello on?",

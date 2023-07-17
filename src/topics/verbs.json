@@ -1056,6 +1056,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.5",
         "infinitive": {
             "en": "to walk",
             "fi": "kävellä",
@@ -1455,7 +1456,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to go",
             "fi": "mennä",
@@ -1656,6 +1660,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.5",
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1756,7 +1761,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to write",
             "fi": "kirjoittaa",
@@ -2059,7 +2067,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
+        "topics": [
+            "SM1.2",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to drive",
             "fi": "ajaa",
@@ -2216,6 +2227,175 @@
                 "en": "they open",
                 "fi": "he avaavat",
                 "nl": "zij openen|ze openen"
+            }
+        }
+    },
+    "to want": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "infinitive": {
+            "en": "to want",
+            "fi": "haluta",
+            "nl": "willen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I want",
+                "fi": "minä haluan|haluan",
+                "nl": "ik wil"
+            },
+            "second person": {
+                "en": "you want;singular",
+                "fi": "sinä haluat|haluat",
+                "nl": "jij wilt|je wilt|jij wil|je wil"
+            },
+            "third person": {
+                "female": {
+                    "en": "she wants",
+                    "fi": "hän haluaa;female",
+                    "nl": "zij wil|ze wil"
+                },
+                "male": {
+                    "en": "he wants",
+                    "fi": "hän haluaa;male",
+                    "nl": "hij wil"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we want",
+                "fi": "me haluamme|haluamme",
+                "nl": "wij willen|we willen"
+            },
+            "second person": {
+                "en": "you want;plural",
+                "fi": "te haluatte|haluatte",
+                "nl": "jullie willen"
+            },
+            "third person": {
+                "en": "they want",
+                "fi": "he haluavat",
+                "nl": "zij willen|ze willen"
+            }
+        }
+    },
+    "to wake up": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "infinitive": {
+            "en": "to wake up",
+            "fi": "herätä",
+            "nl": "wakker worden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I wake up",
+                "fi": "minä herään|herään",
+                "nl": "ik word wakker"
+            },
+            "second person": {
+                "en": "you wake up;singular",
+                "fi": "sinä heräät|heräät",
+                "nl": "jij wordt wakker|je wordt wakker"
+            },
+            "third person": {
+                "female": {
+                    "en": "she wakes up",
+                    "fi": "hän herää;female",
+                    "nl": "zij wordt wakker|ze wordt wakker"
+                },
+                "male": {
+                    "en": "he wakes up",
+                    "fi": "hän herää;male",
+                    "nl": "hij wordt wakker"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we wake up",
+                "fi": "me heräämme|heräämme",
+                "nl": "wij worden wakker|we worden wakker"
+            },
+            "second person": {
+                "en": "you wake up;plural",
+                "fi": "te heräätte|heräätte",
+                "nl": "jullie worden wakker"
+            },
+            "third person": {
+                "en": "they wake up",
+                "fi": "he heräävät",
+                "nl": "zij worden wakker|ze worden wakker"
+            }
+        }
+    },
+    "to ski": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "C1": "KK"
+        },
+        "topics": [
+            "sport",
+            "SM1.5"
+        ],
+        "infinitive": {
+            "en": "to ski",
+            "fi": "hiihtää",
+            "nl": "skiën"
+        },
+        "singular": {
+            "first person": {
+                "en": "I ski",
+                "fi": "minä hiihdän|hiihdän",
+                "nl": "ik ski"
+            },
+            "second person": {
+                "en": "you ski;singular",
+                "fi": "sinä hiihdät|hiihdät",
+                "nl": "jij skiet|je skiet"
+            },
+            "third person": {
+                "female": {
+                    "en": "she skis|she skies",
+                    "fi": "hän hiihtää;female",
+                    "nl": "zij skiet|ze skiet"
+                },
+                "male": {
+                    "en": "he skis|he skies",
+                    "fi": "hän hiihtää;male",
+                    "nl": "hij skiet"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we ski",
+                "fi": "me hiihdämme|hiihdämme",
+                "nl": "wij skiën|we skiën"
+            },
+            "second person": {
+                "en": "you ski;plural",
+                "fi": "te hiihdätte|hiihdätte",
+                "nl": "jullie skiën"
+            },
+            "third person": {
+                "en": "they ski",
+                "fi": "he hiihtävät",
+                "nl": "zij skiën|ze skiën"
             }
         }
     }

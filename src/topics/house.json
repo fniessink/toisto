@@ -228,6 +228,28 @@
             "nl": "de ramen"
         }
     },
+    "brick": {
+        "level": {
+            "B2": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": [
+            "SM1.1"
+        ],
+        "singular": {
+            "en": "brick",
+            "fi": "tiili",
+            "nl": "de baksteen"
+        },
+        "plural": {
+            "en": "bricks",
+            "fi": "tiilet",
+            "nl": "de bakstenen"
+        }
+    },
     "stairs": {
         "level": {
             "A2": [

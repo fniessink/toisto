@@ -202,7 +202,10 @@
                 "word"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.5"
+        ],
         "singular": {
             "en": "verb",
             "fi": "verbi",
@@ -213,6 +216,17 @@
             "fi": "verbit",
             "nl": "de werkwoorden"
         }
+    },
+    "infinitive": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "topics": "SM1.5",
+        "en": "infinitive",
+        "fi": "infinitiivi",
+        "nl": "de infinitief"
     },
     "pronoun": {
         "level": {

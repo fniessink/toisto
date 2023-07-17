@@ -9,5 +9,44 @@
         "en": "nothing",
         "fi": "ei mitään",
         "nl": "niets"
+    },
+    "something": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "SM1.5",
+        "en": "something",
+        "fi": "jotain",
+        "nl": "iets"
+    },
+    "often": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "en": "often",
+        "fi": "usein",
+        "nl": "vaak"
+    },
+    "first": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "first",
+        "fi": "ensin",
+        "nl": "eerst"
     }
 }
