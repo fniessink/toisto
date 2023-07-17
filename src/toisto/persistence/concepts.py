@@ -50,7 +50,7 @@ def load_concepts(
             for concept_key, concept_value in load_json(topic_file).items():
                 concept = create_concept(concept_key, concept_value, Topic(topic_file.stem))
                 concepts.append(concept)
-        except Exception as reason:  # noqa: BLE001
+        except Exception as reason:  # noqa: BLE001,PERF203
             argument_parser.error(f"{NAME} cannot read topic file {topic_file}: {reason}.\n")
         concept_ids = tuple(concept.concept_id for concept in concepts)
         concept_id_registry.check_concept_ids(concept_ids, topic_file)
