@@ -1,6 +1,6 @@
-"""Zip function that cycles shorter lists."""
+"""Utitity functions."""
 
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator, Sequence
 from itertools import cycle
 from typing import TypeVar
 
@@ -12,3 +12,8 @@ def zip_and_cycle(*lists: list[T]) -> Iterator[tuple[T]]:
     max_len = max(len(lst) for lst in lists) if lists else 0
     cycled_lists = [cycle(lst) if len(lst) < max_len else lst for lst in lists]
     yield from zip(*cycled_lists, strict=False)
+
+
+def first(sequence: Sequence[T], where: Callable[[T], bool] = lambda _item: True) -> T:
+    """Return the first item in the sequence."""
+    return next(item for item in sequence if where(item))

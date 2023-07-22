@@ -6,6 +6,7 @@ from toisto.command.show_topics import show_topics
 from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.tools import first
 
 from ...base import ToistoTestCase
 
@@ -42,7 +43,7 @@ class ShowTopicsTest(ToistoTestCase):
         """Test that the table contains the concept."""
         console_print = self.show_topics()
         for index, value in enumerate(["Terve", "Hoi", "", "", "greetings"]):
-            self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
+            self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_skip_concepts_without_labels_in_the_selected_languages(self):

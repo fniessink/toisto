@@ -9,6 +9,7 @@ from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.tools import first
 
 from ...base import ToistoTestCase
 
@@ -20,7 +21,7 @@ class ShowProgressTest(ToistoTestCase):
         """Set up test fixtures."""
         self.concept = create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
         self.quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("read")
-        self.quiz = list(self.quizzes)[0]
+        self.quiz = first(self.quizzes)
 
     @patch("rich.console.Console.pager", MagicMock())
     def show_progress(self, progress: Progress, quizzes: Quizzes | None = None, sort: SortColumn = "attempts") -> Mock:
@@ -55,21 +56,21 @@ class ShowProgressTest(ToistoTestCase):
         progress = Progress({self.quiz.key: dict(start=start, end=end)}, "fi")
         console_print = self.show_progress(progress, self.quizzes)
         for index, value in enumerate(["Read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
-            self.assertEqual(value, list(console_print.call_args[0][0].columns[index].cells)[0])
+            self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
 
     def test_quiz_silenced_until_time_in_the_future(self):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
         skip_until = (datetime.now() + timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi")
         console_print = self.show_progress(progress, self.quizzes)
-        self.assertEqual(skip_until, list(console_print.call_args[0][0].columns[7].cells)[0])
+        self.assertEqual(skip_until, first(console_print.call_args[0][0].columns[7].cells))
 
     def test_quiz_silenced_until_time_in_the_past(self):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
         skip_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
         progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi")
         console_print = self.show_progress(progress, self.quizzes)
-        self.assertEqual("", list(console_print.call_args[0][0].columns[7].cells)[0])
+        self.assertEqual("", first(console_print.call_args[0][0].columns[7].cells))
 
     def test_sort_by_retention(self):
         """Test that the quizzes can be sorted by retention length."""

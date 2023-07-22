@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.tools import zip_and_cycle
+from toisto.tools import first, zip_and_cycle
 
 
 class ZipAndcycleTest(unittest.TestCase):
@@ -31,3 +31,19 @@ class ZipAndcycleTest(unittest.TestCase):
     def test_two_different_length_lists_one_empty(self):
         """Test that the function works with two different length lists."""
         self.assertEqual([], list(zip_and_cycle([], [2, 3])))
+
+
+class FirstTest(unittest.TestCase):
+    """Unit tests for the first function."""
+
+    def test_first(self):
+        """Test that the first item is returned."""
+        self.assertEqual("first", first(["first", "second"]))
+
+    def test_first_with_filter(self):
+        """Test that the first item that matches the filter is returned."""
+        self.assertEqual("second", first(["first", "second"], lambda item: item.startswith("s")))
+
+    def test_empty_sequence(self):
+        """Test that StopIteration is thrown when the sequence is empty."""
+        self.assertRaises(StopIteration, first, [])
