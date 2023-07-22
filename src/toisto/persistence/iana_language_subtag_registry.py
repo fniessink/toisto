@@ -8,6 +8,7 @@ from pathlib import Path
 
 from toisto.metadata import LANGUAGES_FILE
 from toisto.model.language import Language
+from toisto.tools import first
 
 
 def load_languages() -> dict[Language, str]:
@@ -29,6 +30,6 @@ def load_languages() -> dict[Language, str]:
 
 def parse_record(lines: list[str]) -> dict[Language, str]:
     """Parse a language record."""
-    language = [line for line in lines if line.startswith("Subtag")][0].split(": ", maxsplit=1)[1].strip()
-    description = [line for line in lines if line.startswith("Description")][0].split(": ", maxsplit=1)[1].strip()
+    language = first(lines, lambda line: line.startswith("Subtag")).split(": ", maxsplit=1)[1].strip()
+    description = first(lines, lambda line: line.startswith("Description")).split(": ", maxsplit=1)[1].strip()
     return {Language(language): description}

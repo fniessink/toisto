@@ -8,6 +8,7 @@ from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.tools import first
 
 from ....base import ToistoTestCase
 
@@ -45,7 +46,7 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
-        quiz = list(self.quizzes)[0]
+        quiz = first(self.quizzes)
         self.progress.increase_retention(quiz)
         self.assertNotEqual(quiz, self.progress.next_quiz(self.quizzes))
 

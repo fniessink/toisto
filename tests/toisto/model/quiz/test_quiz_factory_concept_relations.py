@@ -2,6 +2,7 @@
 
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.tools import first
 
 from .test_quiz_factory import QuizFactoryTestCase
 
@@ -129,7 +130,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = create_concept("question", dict(answer=["fine", "good"], en="How are you?"))
         fine = create_concept("fine", dict(en="I'm fine, thank you."))
         good = create_concept("good", dict(en="I'm doing good, thank you."))
-        quiz = [quiz for quiz in create_quizzes("en", "en", question, fine, good) if "answer" in quiz.quiz_types][0]
+        quiz = first(create_quizzes("en", "en", question, fine, good), lambda quiz: "answer" in quiz.quiz_types)
         self.assertEqual((fine.labels("en")[0], good.labels("en")[0]), quiz.answers)
 
     def test_answer_quiz_order(self):
