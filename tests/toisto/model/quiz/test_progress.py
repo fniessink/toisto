@@ -32,14 +32,14 @@ class ProgressTest(ToistoTestCase):
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.increase_retention(quiz)
+        self.progress.mark_correct_answer(quiz)
         self.assertIsNotNone(self.progress.get_retention(quiz).start)
         self.assertIsNotNone(self.progress.get_retention(quiz).end)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.reset_retention(quiz)
+        self.progress.mark_incorrect_answer(quiz)
         self.assertIsNone(self.progress.get_retention(quiz).start)
         self.assertIsNone(self.progress.get_retention(quiz).end)
         self.assertIsNone(self.progress.get_retention(quiz).skip_until)
@@ -47,13 +47,13 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
         quiz = first(self.quizzes)
-        self.progress.increase_retention(quiz)
+        self.progress.mark_correct_answer(quiz)
         self.assertNotEqual(quiz, self.progress.next_quiz(self.quizzes))
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         for quiz in self.quizzes:
-            self.progress.increase_retention(quiz)
+            self.progress.mark_correct_answer(quiz)
         self.assertIsNone(self.progress.next_quiz(self.quizzes))
 
     def test_next_quiz_is_different_from_previous(self):
@@ -101,14 +101,14 @@ class ProgressTest(ToistoTestCase):
         for _ in range(9):
             quiz = progress.next_quiz(quizzes)
             self.assertTrue("singular" in quiz.concept.concept_id)
-            progress.increase_retention(quiz)
+            progress.mark_correct_answer(quiz)
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
         quizzes = Quizzes(quiz for quiz in create_quizzes("fi", "nl", *concepts) if quiz.quiz_types == ("listen",))
         random_quiz = next(iter(quizzes))
-        self.progress.increase_retention(random_quiz)
+        self.progress.mark_correct_answer(random_quiz)
         self.progress.get_retention(random_quiz).skip_until = None
         self.assertEqual(self.progress.next_quiz(quizzes), random_quiz)
 

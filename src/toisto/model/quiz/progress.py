@@ -19,11 +19,11 @@ class Progress:
         self.target_language = target_language
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
 
-    def increase_retention(self, quiz: Quiz) -> None:
+    def mark_correct_answer(self, quiz: Quiz) -> None:
         """Increase the retention of the quiz."""
         self.__progress_dict.setdefault(quiz.key, Retention()).increase()
 
-    def reset_retention(self, quiz: Quiz) -> None:
+    def mark_incorrect_answer(self, quiz: Quiz) -> None:
         """Reset the retention of the quiz."""
         self.__progress_dict.setdefault(quiz.key, Retention()).reset()
 

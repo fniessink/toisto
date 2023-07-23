@@ -37,10 +37,11 @@ def main() -> None:
     concepts = filter_concepts(args.levels, selected_topics, concepts)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, argument_parser)
-    if args.command == "practice":
-        show_welcome(latest_version())
-        practice(quizzes, progress, config)
-    elif args.command == "topics":
-        show_topics(args.target_language, args.source_language, concepts)
-    else:
-        show_progress(args.target_language, quizzes, progress, args.sort)
+    match args.command:
+        case "topics":
+            show_topics(args.target_language, args.source_language, concepts)
+        case "progress":
+            show_progress(args.target_language, quizzes, progress, args.sort)
+        case _:  # Default command is "practice"
+            show_welcome(latest_version())
+            practice(quizzes, progress, config)
