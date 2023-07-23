@@ -32,10 +32,10 @@ def do_quiz(quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
         console.print(TRY_AGAIN)
         answer, correct = do_quiz_attempt(quiz, config, attempt=2)
     if correct:
-        progress.increase_retention(quiz)
+        progress.mark_correct_answer(quiz)
         feedback = feedback_correct(answer, quiz)
     else:
-        progress.reset_retention(quiz)
+        progress.mark_incorrect_answer(quiz)
         feedback = feedback_incorrect(answer, quiz)
     console.print(feedback)
 
