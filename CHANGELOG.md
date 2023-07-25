@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Fixed a few typo's.
 - Show notes for listening quizzes. Fixes [#351](https://github.com/fniessink/toisto/issues/351).
+- Don't generate complicated grammatical quizzes like "Give the affirmative past tense plural third person...". Fixes [#372](https://github.com/fniessink/toisto/issues/372).
 
 ### Added
 
