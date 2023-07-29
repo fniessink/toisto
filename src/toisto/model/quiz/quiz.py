@@ -84,6 +84,10 @@ class Quiz:
     blocked_by: tuple[Quiz, ...]
     _meanings: Labels
 
+    def __repr__(self) -> str:
+        """Return a representation of the quiz for test purposes."""
+        return self.key
+
     def __hash__(self) -> int:
         """Return a hash using the same attributes as used for testing equality."""
         return hash(self.key)

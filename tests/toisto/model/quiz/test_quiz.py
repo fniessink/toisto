@@ -27,6 +27,10 @@ class QuizTest(QuizTestCase):
         self.assertEqual((), self.quiz.blocked_by)
         self.assertEqual((), self.quiz.meanings)
 
+    def test_repr(self):
+        """Test the repr() function."""
+        self.assertEqual("english:fi:nl:Englanti:read", repr(self.quiz))
+
     def test_is_correct(self):
         """Test a correct guess."""
         self.assertTrue(self.quiz.is_correct("Engels"))

@@ -139,7 +139,7 @@ class QuizFactory:
         )
 
 
-def grammatical_quiz_types(concept1: Concept, concept2: Concept, max_quizzes: int = 2) -> tuple[QuizType, ...]:
+def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizType, ...]:
     """Return the quiz types to change the grammatical category of concept1 into that of concept2.
 
     For example, to change "I am" into "they are" would mean changing the grammatical number from singular to plural
@@ -150,7 +150,7 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept, max_quizzes: in
     for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
         if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
-    return tuple(quiz_types) if len(quiz_types) <= max_quizzes else tuple()
+    return tuple(quiz_types)
 
 
 def paired_leaf_concepts(concept: Concept) -> Iterable[tuple[Concept, Concept]]:
