@@ -126,7 +126,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number(self):
         """Test that quizzes can be generated for different grammatical numbers, i.e. singular and plural."""
         concept = self.create_noun_with_grammatical_number()
-        singular, plural = concept.leaf_concepts()
+        singular, plural = concept.leaf_concepts("fi")
         self.assertSetEqual(
             {
                 self.create_quiz(singular, "fi", "nl", "aamu", ["de ochtend"], "read"),
@@ -147,7 +147,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             "ketchup",
             dict(singular=dict(fi="ketsuppi", nl="de ketchup"), plural=dict(fi="ketsupit")),
         )
-        singular, plural = concept.leaf_concepts()
+        singular, plural = concept.leaf_concepts("fi")
         quizzes = create_quizzes("fi", "nl", concept)
         self.assertSetEqual(
             {
@@ -166,7 +166,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the target language only."""
         concept = create_concept("mämmi", dict(singular=dict(fi="mämmi"), plural=dict(fi="mämmit")))
-        singular, plural = concept.leaf_concepts()
+        singular, plural = concept.leaf_concepts("fi")
         quizzes = create_quizzes("fi", "nl", concept)
         self.assertSetEqual(
             {
@@ -194,7 +194,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 plural=dict(fi=["kauppakeskukset", "ostoskeskukset"], nl="de winkelcentra"),
             ),
         )
-        singular, plural = concept.leaf_concepts()
+        singular, plural = concept.leaf_concepts("fi")
         self.assertSetEqual(
             {
                 self.create_quiz(singular, "fi", "nl", "kauppakeskus", ["het winkelcentrum"], "read"),
@@ -218,7 +218,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_gender(self):
         """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
         concept = self.create_noun_with_grammatical_gender()
-        female, male = concept.leaf_concepts()
+        female, male = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(female, "nl", "en", "haar kat", ["her cat"], "read"),
@@ -236,7 +236,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_gender_with_neuter(self):
         """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
         concept = self.create_noun_with_grammatical_gender_including_neuter()
-        female, male, neuter = concept.leaf_concepts()
+        female, male, neuter = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(female, "nl", "en", "haar bot", ["her bone"], "read"),
@@ -260,7 +260,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         """Test that quizzes can be generated for grammatical number nested with grammatical gender."""
         concept = self.create_noun_with_grammatical_number_and_gender()
         singular, plural = concept.constituents
-        singular_female, singular_male, plural_female, plural_male = concept.leaf_concepts()
+        singular_female, singular_male, plural_female, plural_male = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(singular_female, "nl", "en", "haar kat", ["her cat"], "read"),
@@ -290,7 +290,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_degrees_of_comparison(self):
         """Test that quizzes can be generated for degrees of comparison."""
         concept = self.create_adjective_with_degrees_of_comparison()
-        positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts()
+        positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(positive_degree, "nl", "en", "groot", ["big"], "read"),
@@ -322,7 +322,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 "superlative degree": dict(en="biggest", fi=["isoin", "suurin"]),
             },
         )
-        positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts()
+        positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts("fi")
         self.assertSetEqual(
             {
                 self.create_quiz(positive_degree, "fi", "en", "iso", ["big"], "read"),
@@ -366,7 +366,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 "third person": dict(en="she eats", nl="zij eet"),
             },
         )
-        first_person, second_person, third_person = concept.leaf_concepts()
+        first_person, second_person, third_person = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(first_person, "nl", "en", "ik eet", ["I eat"], "read"),
@@ -428,6 +428,39 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "nl", "nl", "hij eet", ["jij eet"], "give second person"),
             },
             create_quizzes("nl", "en", concept),
+        )
+
+    def test_grammatical_person_nested_with_grammatical_gender_in_one_language_but_not_the_other(self):
+        """Test quizzes for grammatical person nested with grammatical gender in one language but not the other."""
+        concept = create_concept(
+            "to eat",
+            {
+                "first person": dict(en="I eat", fi="minä syön"),
+                "second person": dict(en="you eat", fi="sinä syöt"),
+                "third person": dict(female=dict(en="she eats"), male=dict(en="he eats"), fi="hän syö"),
+            },
+        )
+        first_person, second_person, third_person = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(first_person, "fi", "en", "minä syön", ["I eat"], "read"),
+                self.create_quiz(first_person, "fi", "fi", "minä syön", ["minä syön"], "listen"),
+                self.create_quiz(first_person, "en", "fi", "I eat", ["minä syön"], "write"),
+                self.create_quiz(second_person, "fi", "en", "sinä syöt", ["you eat"], "read"),
+                self.create_quiz(second_person, "fi", "fi", "sinä syöt", ["sinä syöt"], "listen"),
+                self.create_quiz(second_person, "en", "fi", "you eat", ["sinä syöt"], "write"),
+                self.create_quiz(third_person, "fi", "en", "hän syö", ["she eats", "he eats"], "read"),
+                self.create_quiz(third_person, "fi", "fi", "hän syö", ["hän syö"], "listen"),
+                self.create_quiz(third_person, "en", "fi", "she eats", ["hän syö"], "write"),
+                self.create_quiz(third_person, "en", "fi", "he eats", ["hän syö"], "write"),
+                self.create_quiz(concept, "fi", "fi", "minä syön", ["sinä syöt"], "give second person"),
+                self.create_quiz(concept, "fi", "fi", "minä syön", ["hän syö"], "give third person"),
+                self.create_quiz(concept, "fi", "fi", "sinä syöt", ["minä syön"], "give first person"),
+                self.create_quiz(concept, "fi", "fi", "sinä syöt", ["hän syö"], "give third person"),
+                self.create_quiz(concept, "fi", "fi", "hän syö", ["minä syön"], "give first person"),
+                self.create_quiz(concept, "fi", "fi", "hän syö", ["sinä syöt"], "give second person"),
+            },
+            create_quizzes("fi", "en", concept),
         )
 
     def test_grammatical_number_nested_with_grammatical_person(self):
@@ -502,7 +535,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             ),
         )
         female, male = concept.constituents
-        female_singular, female_plural, male_singular, male_plural = concept.leaf_concepts()
+        female_singular, female_plural, male_singular, male_plural = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(female_singular, "nl", "en", "haar kat", ["her cat"], "read"),
@@ -793,7 +826,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         """Test that quizzes can be generated for tense nested with grammatical person."""
         concept = self.create_verb_with_tense_and_person()
         present, past = concept.constituents
-        present_singular, present_plural, past_singular, past_plural = concept.leaf_concepts()
+        present_singular, present_plural, past_singular, past_plural = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
                 self.create_quiz(present_singular, "nl", "en", "ik eet", ["I eat"], "read"),

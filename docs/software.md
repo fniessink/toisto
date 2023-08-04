@@ -303,7 +303,7 @@ Note that Toisto uses gender only for verbs at the moment, see the next section.
 
 ### Grammatical person
 
-When concepts, usually verbs and pronouns, have different persons, these are represented in the JSON as mappings with `first person`, `second person`, and `third person`.
+When concepts, usually verbs and pronouns, have different persons, these are represented in the JSON as mappings with `first person`, `second person`, and `third person` as keys.
 
 The format of the JSON files is as follows:
 
@@ -312,36 +312,36 @@ The format of the JSON files is as follows:
     "to have": {
         "singular": {
             "first person": {
-                "en": "I have|I've",
-                "fi": "minulla on"
+                "en": "I have",
+                "nl": "ik heb"
             },
             "second person": {
-                "en": "you have|you've;singular",
-                "fi": "sinulla on"
+                "en": "you have;singular",
+                "nl": "jij hebt"
             },
             "third person": {
                 "female": {
-                    "en": "she has|she's",
-                    "fi": "hänellä on;female"
+                    "en": "she has",
+                    "nl": "zij heeft"
                 },
                 "male": {
-                    "en": "he has|he's",
-                    "fi": "hänellä on;male"
+                    "en": "he has",
+                    "nl": "hij heeft"
                 }
             }
         },
         "plural": {
             "first person": {
-                "en": "we have|we've",
-                "fi": "meillä on"
+                "en": "we have",
+                "nl": "wij hebben"
             },
             "second person": {
-                "en": "you have|you've;plural",
-                "fi": "teillä on"
+                "en": "you have;plural",
+                "nl": "jullie hebben"
             },
             "third person": {
-                "en": "they have|they've",
-                "fi": "heillä on"
+                "en": "they have",
+                "nl": "zij hebben"
             }
         }
     }
@@ -350,7 +350,30 @@ The format of the JSON files is as follows:
 
 Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The note is the part after the semicolon (`;`).
 
-The third person in Finnish also needs a note. Because Finnish does not distinguish between male and female gender, Toisto needs to tell the user whether it is asking for the female or the male translation of "Hänellä on".
+Because Finnish does not distinguish between male and female gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
+
+```json
+{
+    "to have": {
+        "singular": {
+            "first person": "...",
+            "second person": "...",
+            "third person": {
+                "fi": "hänellä on",
+                "female": {
+                    "en": "she has",
+                    "nl": "zij heeft"
+                },
+                "male": {
+                    "en": "he has",
+                    "nl": "hij heeft"
+                }
+            }
+        },
+        "plural": "..."
+    }
+}
+```
 
 ### Infinitive
 
@@ -365,7 +388,7 @@ When concepts are verbs, infinitives can be specified as follows:
         },
         "singular": {
             "first person": {
-                "en": "I have|I've",
+                "en": "I have",
                 "fi": "minulla on"
             },
             "second person": "..."
@@ -386,8 +409,8 @@ When concepts are verbs, the present tense and the past tense can be specified a
         "present tense": {
             "singular": {
                 "first person": {
-                    "en": "I am|I'm",
-                    "fi": "minä olen|olen",
+                    "en": "I am",
+                    "fi": "minä olen",
                 },
                 "second person": "..."
             },
@@ -397,7 +420,7 @@ When concepts are verbs, the present tense and the past tense can be specified a
             "singular": {
                 "first person": {
                     "en": "I was",
-                    "fi": "minä olin|olin",
+                    "fi": "minä olin",
                 },
                 "second person": "..."
             },
@@ -639,7 +662,7 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
 }
 ```
 
-The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example. translate "Yes, I do" into "Pidän".
+The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example, translate "Yes, I do" into "Pidän".
 
 ### Concept levels
 

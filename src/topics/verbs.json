@@ -28,14 +28,13 @@
                             "nl": "jij bent|je bent"
                         },
                         "third person": {
+                            "fi": "hän on",
                             "female": {
                                 "en": "she is|she's",
-                                "fi": "hän on;female",
                                 "nl": "zij is|ze is"
                             },
                             "male": {
                                 "en": "he is|he's",
-                                "fi": "hän on;male",
                                 "nl": "hij is"
                             }
                         }
@@ -71,14 +70,13 @@
                             "nl": "jij was|je was"
                         },
                         "third person": {
+                            "fi": "hän oli",
                             "female": {
                                 "en": "she was",
-                                "fi": "hän oli;female",
                                 "nl": "zij was|ze was"
                             },
                             "male": {
                                 "en": "he was",
-                                "fi": "hän oli;male",
                                 "nl": "hij was"
                             }
                         }
@@ -122,9 +120,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "hän ei ole",
                             "female": {
                                 "en": "she is not|she's not|she isn't",
-                                "fi": "hän ei ole;female",
                                 "nl": [
                                     "zij is niet|ze is niet",
                                     "zij is geen|ze is geen"
@@ -132,7 +130,6 @@
                             },
                             "male": {
                                 "en": "he is not|he's not|he isn't",
-                                "fi": "hän ei ole;male",
                                 "nl": [
                                     "hij is niet",
                                     "hij is geen"
@@ -186,9 +183,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "hän ei ollut",
                             "female": {
                                 "en": "she was not|she wasn't",
-                                "fi": "hän ei ollut;female",
                                 "nl": [
                                     "zij was niet|ze was niet",
                                     "zij was geen|ze was geen"
@@ -196,7 +193,6 @@
                             },
                             "male": {
                                 "en": "he was not|he wasn't",
-                                "fi": "hän ei ollut;male",
                                 "nl": [
                                     "hij was niet",
                                     "hij was geen"
@@ -248,14 +244,13 @@
                             "nl": "ben jij?|ben je?"
                         },
                         "third person": {
+                            "fi": "onko hän?",
                             "female": {
                                 "en": "is she?",
-                                "fi": "onko hän?;female",
                                 "nl": "is zij?|is ze?"
                             },
                             "male": {
                                 "en": "is he?",
-                                "fi": "onko hän?;male",
                                 "nl": "is hij?"
                             }
                         }
@@ -291,14 +286,13 @@
                             "nl": "was jij?|was je?"
                         },
                         "third person": {
+                            "fi": "oliko hän?",
                             "female": {
                                 "en": "was she?",
-                                "fi": "oliko hän?;female",
                                 "nl": "was zij?|was ze?"
                             },
                             "male": {
                                 "en": "was he?",
-                                "fi": "oliko hän?;male",
                                 "nl": "was hij?"
                             }
                         }
@@ -342,9 +336,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "eikö hän ole?",
                             "female": {
                                 "en": "is she not?",
-                                "fi": "eikö hän ole?;female",
                                 "nl": [
                                     "is zij niet?|is ze niet?",
                                     "is zij geen?|is ze geen?"
@@ -352,7 +346,6 @@
                             },
                             "male": {
                                 "en": "is he not?",
-                                "fi": "eikö hän ole?;male",
                                 "nl": [
                                     "is hij niet?",
                                     "is hij geen?"
@@ -406,9 +399,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "eikö hän ollut?",
                             "female": {
                                 "en": "was she not?|wasn't she?",
-                                "fi": "eikö hän ollut?;female",
                                 "nl": [
                                     "was zij niet?|was ze niet?",
                                     "was zij geen?|was ze geen?"
@@ -416,7 +409,6 @@
                             },
                             "male": {
                                 "en": "was he not?",
-                                "fi": "eikö hän ollut?;male",
                                 "nl": [
                                     "was hij niet?",
                                     "was hij geen?"
@@ -481,14 +473,13 @@
                             "nl": "jij hebt|je hebt"
                         },
                         "third person": {
+                            "fi": "hänellä on",
                             "female": {
                                 "en": "she has|she's",
-                                "fi": "hänellä on;female",
                                 "nl": "zij heeft|ze heeft"
                             },
                             "male": {
                                 "en": "he has|he's",
-                                "fi": "hänellä on;male",
                                 "nl": "hij heeft"
                             }
                         }
@@ -524,14 +515,13 @@
                             "nl": "jij had|je had"
                         },
                         "third person": {
+                            "fi": "hänellä oli",
                             "female": {
                                 "en": "she had",
-                                "fi": "hänellä oli;female",
                                 "nl": "zij had|ze had"
                             },
                             "male": {
                                 "en": "he had",
-                                "fi": "hänellä oli;male",
                                 "nl": "hij had"
                             }
                         }
@@ -575,9 +565,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "hänellä ei ole",
                             "female": {
                                 "en": "she has not|she's not|she hasn't",
-                                "fi": "hänellä ei ole;female",
                                 "nl": [
                                     "zij heeft niet|ze heeft niet",
                                     "zij heeft geen|ze heeft geen"
@@ -585,7 +575,6 @@
                             },
                             "male": {
                                 "en": "he has not|he's not|he hasn't",
-                                "fi": "hänellä ei ole;male",
                                 "nl": [
                                     "hij heeft niet",
                                     "hij heeft geen"
@@ -639,9 +628,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "hänellä ei ollut",
                             "female": {
                                 "en": "she had|she hadn't",
-                                "fi": "hänellä ei ollut;female",
                                 "nl": [
                                     "zij had niet|ze had niet",
                                     "zij had geen|ze had geen"
@@ -649,7 +638,6 @@
                             },
                             "male": {
                                 "en": "he had not|he hadn't",
-                                "fi": "hänellä ei ollut;male",
                                 "nl": [
                                     "hij had niet",
                                     "hij had geen"
@@ -707,12 +695,12 @@
                             "nl": "heb jij?|heb je?"
                         },
                         "third person": {
+                            "fi": "onko hänellä?",
                             "female": {
                                 "en": [
                                     "has she got?",
                                     "does she have?"
                                 ],
-                                "fi": "onko hänellä?;female",
                                 "nl": "heeft zij?|heeft ze?"
                             },
                             "male": {
@@ -720,7 +708,6 @@
                                     "has he got?",
                                     "does he have?"
                                 ],
-                                "fi": "onko hänellä?;male",
                                 "nl": "heeft hij?"
                             }
                         }
@@ -765,14 +752,13 @@
                             "nl": "had jij?|had je?"
                         },
                         "third person": {
+                            "fi": "oliko hänellä?",
                             "female": {
                                 "en": "did she have?",
-                                "fi": "oliko hänellä?;female",
                                 "nl": "had zij?|had ze?"
                             },
                             "male": {
                                 "en": "did he have?",
-                                "fi": "oliko hänellä?;male",
                                 "nl": "had hij?"
                             }
                         }
@@ -822,12 +808,12 @@
                             ]
                         },
                         "third person": {
+                            "fi": "eikö hänellä ole",
                             "female": {
                                 "en": [
                                     "has she not got?|hasn't she got?",
                                     "does she not have?|doesn't she have?"
                                 ],
-                                "fi": "eikö hänellä ole;female",
                                 "nl": [
                                     "heeft zij niet?|heeft ze niet?",
                                     "heeft zij geen?|heeft ze geen?"
@@ -838,7 +824,6 @@
                                     "has he not got?|hasn't he got?",
                                     "does he not have?|doesn't he have?"
                                 ],
-                                "fi": "hänellä ei ole;male",
                                 "nl": [
                                     "heeft hij niet?",
                                     "heeft hij geen?"
@@ -901,9 +886,9 @@
                             ]
                         },
                         "third person": {
+                            "fi": "eikö hänellä ollut?",
                             "female": {
                                 "en": "did she not have?|didn't she have?",
-                                "fi": "eikö hänellä ollut?;female",
                                 "nl": [
                                     "had zij niet?|had ze niet?",
                                     "had zij geen?|had ze geen?"
@@ -911,7 +896,6 @@
                             },
                             "male": {
                                 "en": "did he not have?|didn't he have?",
-                                "fi": "eikö hänellä ollut?;male",
                                 "nl": [
                                     "had hij niet?",
                                     "had hij geen?"
@@ -974,14 +958,13 @@
                     "nl": "jij schildert|je schildert"
                 },
                 "third person": {
+                    "fi": "hän maalaa",
                     "female": {
                         "en": "she paints",
-                        "fi": "hän maalaa;female",
                         "nl": "zij schildert|ze schildert"
                     },
                     "male": {
                         "en": "he paints",
-                        "fi": "hän maalaa;male",
                         "nl": "hij schildert"
                     }
                 }
@@ -1017,14 +1000,13 @@
                     "nl": "jij schilderde|je schilderde"
                 },
                 "third person": {
+                    "fi": "hän maalasi",
                     "female": {
                         "en": "she painted",
-                        "fi": "hän maalasi;female",
                         "nl": "zij schilderde|ze schilderde"
                     },
                     "male": {
                         "en": "he painted",
-                        "fi": "hän maalasi;male",
                         "nl": "hij schilderde"
                     }
                 }
@@ -1075,14 +1057,13 @@
                     "nl": "jij loopt|je loopt"
                 },
                 "third person": {
+                    "fi": "hän kävelee",
                     "female": {
                         "en": "she walks",
-                        "fi": "hän kävelee;female",
                         "nl": "zij loopt|ze loopt"
                     },
                     "male": {
                         "en": "he walks",
-                        "fi": "hän kävelee;male",
                         "nl": "hij loopt"
                     }
                 }
@@ -1118,14 +1099,13 @@
                     "nl": "jij liep|je liep"
                 },
                 "third person": {
+                    "fi": "hän käveli",
                     "female": {
                         "en": "she walked",
-                        "fi": "hän käveli;female",
                         "nl": "zij liep|ze liep"
                     },
                     "male": {
                         "en": "he walked",
-                        "fi": "hän käveli;male",
                         "nl": "hij liep"
                     }
                 }
@@ -1174,14 +1154,13 @@
                     "nl": "jij rent|je rent"
                 },
                 "third person": {
+                    "fi": "hän juoksee",
                     "female": {
                         "en": "she runs",
-                        "fi": "hän juoksee;female",
                         "nl": "zij rent|ze rent"
                     },
                     "male": {
                         "en": "he runs",
-                        "fi": "hän juoksee;male",
                         "nl": "hij rent"
                     }
                 }
@@ -1217,14 +1196,13 @@
                     "nl": "jij rende|je rende"
                 },
                 "third person": {
+                    "fi": "hän juoksi",
                     "female": {
                         "en": "she ran",
-                        "fi": "hän juoksi;female",
                         "nl": "zij rende|ze rende"
                     },
                     "male": {
                         "en": "he ran",
-                        "fi": "hän juoksi;male",
                         "nl": "hij rende"
                     }
                 }
@@ -1274,14 +1252,13 @@
                     "nl": "jij eet|je eet"
                 },
                 "third person": {
+                    "fi": "hän syö",
                     "female": {
                         "en": "she eats",
-                        "fi": "hän syö;female",
                         "nl": "zij eet|ze eet"
                     },
                     "male": {
                         "en": "he eats",
-                        "fi": "hän syö;male",
                         "nl": "hij eet"
                     }
                 }
@@ -1317,14 +1294,13 @@
                     "nl": "jij at|je at"
                 },
                 "third person": {
+                    "fi": "hän söi",
                     "female": {
                         "en": "she ate",
-                        "fi": "hän söi;female",
                         "nl": "zij at|ze at"
                     },
                     "male": {
                         "en": "he ate",
-                        "fi": "hän söi;male",
                         "nl": "hij at"
                     }
                 }
@@ -1374,14 +1350,13 @@
                     "nl": "jij slaapt|je slaapt"
                 },
                 "third person": {
+                    "fi": "hän nukkuu",
                     "female": {
                         "en": "she sleeps",
-                        "fi": "hän nukkuu;female",
                         "nl": "zij slaapt|ze slaapt"
                     },
                     "male": {
                         "en": "he sleeps",
-                        "fi": "hän nukkuu;male",
                         "nl": "hij slaapt"
                     }
                 }
@@ -1417,14 +1392,13 @@
                     "nl": "jij sliep|je sliep"
                 },
                 "third person": {
+                    "fi": "hän nukkui",
                     "female": {
                         "en": "she slept",
-                        "fi": "hän nukkui;female",
                         "nl": "zij sliep|ze sliep"
                     },
                     "male": {
                         "en": "he slept",
-                        "fi": "hän nukkui;male",
                         "nl": "hij sliep"
                     }
                 }
@@ -1478,14 +1452,13 @@
                     "nl": "jij gaat|je gaat"
                 },
                 "third person": {
+                    "fi": "hän menee",
                     "female": {
                         "en": "she goes",
-                        "fi": "hän menee;female",
                         "nl": "zij gaat|ze gaat"
                     },
                     "male": {
                         "en": "he goes",
-                        "fi": "hän menee;male",
                         "nl": "hij gaat"
                     }
                 }
@@ -1521,14 +1494,13 @@
                     "nl": "jij ging|je ging"
                 },
                 "third person": {
+                    "fi": "hän meni",
                     "female": {
                         "en": "she went",
-                        "fi": "hän meni;female",
                         "nl": "zij ging|ze ging"
                     },
                     "male": {
                         "en": "he went",
-                        "fi": "hän meni;male",
                         "nl": "hij ging"
                     }
                 }
@@ -1578,14 +1550,13 @@
                     "nl": "jij komt|je komt"
                 },
                 "third person": {
+                    "fi": "hän tulee",
                     "female": {
                         "en": "she comes",
-                        "fi": "hän tulee;female",
                         "nl": "zij komt|ze komt"
                     },
                     "male": {
                         "en": "he comes",
-                        "fi": "hän tulee;male",
                         "nl": "hij komt"
                     }
                 }
@@ -1621,14 +1592,13 @@
                     "nl": "jij kwam|je kwam"
                 },
                 "third person": {
+                    "fi": "hän tuli",
                     "female": {
                         "en": "she came",
-                        "fi": "hän tuli;female",
                         "nl": "zij kwam|ze kwam"
                     },
                     "male": {
                         "en": "he came",
-                        "fi": "hän tuli;male",
                         "nl": "hij kwam"
                     }
                 }
@@ -1679,14 +1649,13 @@
                     "nl": "jij leest|je leest"
                 },
                 "third person": {
+                    "fi": "hän lukee",
                     "female": {
                         "en": "she reads",
-                        "fi": "hän lukee;female",
                         "nl": "zij leest|ze leest"
                     },
                     "male": {
                         "en": "he reads",
-                        "fi": "hän lukee;male",
                         "nl": "hij leest"
                     }
                 }
@@ -1722,14 +1691,13 @@
                     "nl": "jij las|je las"
                 },
                 "third person": {
+                    "fi": "hän luki",
                     "female": {
                         "en": "she read",
-                        "fi": "hän luki;female",
                         "nl": "zij las|ze las"
                     },
                     "male": {
                         "en": "he read",
-                        "fi": "hän luki;male",
                         "nl": "hij las"
                     }
                 }
@@ -1783,14 +1751,13 @@
                     "nl": "jij schrijft|je schrijft"
                 },
                 "third person": {
+                    "fi": "hän kirjoittaa",
                     "female": {
                         "en": "she writes",
-                        "fi": "hän kirjoittaa;female",
                         "nl": "zij schrijft|ze schrijft"
                     },
                     "male": {
                         "en": "he writes",
-                        "fi": "hän kirjoittaa;male",
                         "nl": "hij schrijft"
                     }
                 }
@@ -1826,14 +1793,13 @@
                     "nl": "jij schreef|je schreef"
                 },
                 "third person": {
+                    "fi": "hän kirjoitti",
                     "female": {
                         "en": "she wrote",
-                        "fi": "hän kirjoitti;female",
                         "nl": "zij schreef|ze schreef"
                     },
                     "male": {
                         "en": "he wrote",
-                        "fi": "hän kirjoitti;male",
                         "nl": "hij schreef"
                     }
                 }
@@ -1887,14 +1853,13 @@
                     "nl": "jij woont|je woont"
                 },
                 "third person": {
+                    "fi": "hän asuu",
                     "female": {
                         "en": "she lives",
-                        "fi": "hän asuu;female",
                         "nl": "zij woont|ze woont"
                     },
                     "male": {
                         "en": "he lives",
-                        "fi": "hän asuu;male",
                         "nl": "hij woont"
                     }
                 }
@@ -1930,14 +1895,13 @@
                     "nl": "jij woonde|je woonde"
                 },
                 "third person": {
+                    "fi": "hän asui",
                     "female": {
                         "en": "she lived",
-                        "fi": "hän asui;female",
                         "nl": "zij woonde|ze woonde"
                     },
                     "male": {
                         "en": "he lived",
-                        "fi": "hän asui;male",
                         "nl": "hij woonde"
                     }
                 }
@@ -1980,14 +1944,13 @@
                 "nl": "jij spaart|je spaart"
             },
             "third person": {
+                "fi": "hän säästää",
                 "female": {
                     "en": "she saves",
-                    "fi": "hän säästää;female",
                     "nl": "zij spaart|ze spaart"
                 },
                 "male": {
                     "en": "he saves",
-                    "fi": "hän säästää;male",
                     "nl": "hij spaart"
                 }
             }
@@ -2029,14 +1992,13 @@
                 "nl": "jij zit|je zit"
             },
             "third person": {
+                "fi": "hän istuu",
                 "female": {
                     "en": "she sits",
-                    "fi": "hän istuu;female",
                     "nl": "zij zit|ze zit"
                 },
                 "male": {
                     "en": "he sits",
-                    "fi": "hän istuu;male",
                     "nl": "hij zit"
                 }
             }
@@ -2088,14 +2050,13 @@
                 "nl": "jij rijdt|je rijdt"
             },
             "third person": {
+                "fi": "hän ajaa",
                 "female": {
                     "en": "she drives",
-                    "fi": "hän ajaa;female",
                     "nl": "zij rijdt|ze rijdt"
                 },
                 "male": {
                     "en": "he drives",
-                    "fi": "hän ajaa;male",
                     "nl": "hij rijdt"
                 }
             }
@@ -2144,14 +2105,13 @@
                 "nl": "jij geeft|je geeft"
             },
             "third person": {
+                "fi": "hän antaa",
                 "female": {
                     "en": "she gives",
-                    "fi": "hän antaa;female",
                     "nl": "zij geeft|ze geeft"
                 },
                 "male": {
                     "en": "he gives",
-                    "fi": "hän antaa;male",
                     "nl": "hij geeft"
                 }
             }
@@ -2200,14 +2160,13 @@
                 "nl": "jij opent|je opent"
             },
             "third person": {
+                "fi": "hän avaa",
                 "female": {
                     "en": "she opens",
-                    "fi": "hän avaa;female",
                     "nl": "zij opent|ze opent"
                 },
                 "male": {
                     "en": "he opens",
-                    "fi": "hän avaa;male",
                     "nl": "hij opent"
                 }
             }
@@ -2256,14 +2215,13 @@
                 "nl": "jij wilt|je wilt|jij wil|je wil"
             },
             "third person": {
+                "fi": "hän haluaa",
                 "female": {
                     "en": "she wants",
-                    "fi": "hän haluaa;female",
                     "nl": "zij wil|ze wil"
                 },
                 "male": {
                     "en": "he wants",
-                    "fi": "hän haluaa;male",
                     "nl": "hij wil"
                 }
             }
@@ -2312,14 +2270,13 @@
                 "nl": "jij wordt wakker|je wordt wakker"
             },
             "third person": {
+                "fi": "hän herää",
                 "female": {
                     "en": "she wakes up",
-                    "fi": "hän herää;female",
                     "nl": "zij wordt wakker|ze wordt wakker"
                 },
                 "male": {
                     "en": "he wakes up",
-                    "fi": "hän herää;male",
                     "nl": "hij wordt wakker"
                 }
             }
@@ -2350,7 +2307,8 @@
         },
         "topics": [
             "sport",
-            "SM1.5"
+            "SM1.5",
+            "test"
         ],
         "infinitive": {
             "en": "to ski",
@@ -2369,14 +2327,13 @@
                 "nl": "jij skiet|je skiet"
             },
             "third person": {
+                "fi": "hän hiihtää",
                 "female": {
                     "en": "she skis|she skies",
-                    "fi": "hän hiihtää;female",
                     "nl": "zij skiet|ze skiet"
                 },
                 "male": {
                     "en": "he skis|he skies",
-                    "fi": "hän hiihtää;male",
                     "nl": "hij skiet"
                 }
             }

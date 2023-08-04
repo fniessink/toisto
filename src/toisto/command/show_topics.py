@@ -29,17 +29,16 @@ def topic_table(target_language: Language, source_language: Language, topic: Top
     ):
         table.add_column(column)
     for concept in concepts:
-        for leaf_concept in concept.leaf_concepts():
+        for leaf_concept in concept.leaf_concepts(target_language):
             target_labels = leaf_concept.labels(target_language)
             source_labels = leaf_concept.labels(source_language)
-            if target_labels or source_labels:
-                table.add_row(
-                    enumerate_labels(target_labels),
-                    enumerate_labels(source_labels),
-                    "/".join(leaf_concept.grammatical_categories()),
-                    leaf_concept.level,
-                    ", ".join(sorted(other_topic for other_topic in leaf_concept.topics if other_topic != topic)),
-                )
+            table.add_row(
+                enumerate_labels(target_labels),
+                enumerate_labels(source_labels),
+                "/".join(leaf_concept.grammatical_categories()),
+                leaf_concept.level,
+                ", ".join(sorted(other_topic for other_topic in leaf_concept.topics if other_topic != topic)),
+            )
         table.add_section()
     return table
 

@@ -26,10 +26,37 @@ class ConceptTest(ToistoTestCase):
 
     def test_level(self):
         """Test that the level of a concept is the maximum of the available levels."""
-        concept = create_concept("one", dict(level=dict(A1="EP", A2="OD"), fi="kolmekymmentä", nl="dertig"))
+        concept = create_concept("thirty", dict(level=dict(A1="EP", A2="OD"), fi="kolmekymmentä", nl="dertig"))
         self.assertEqual("A2", concept.level)
 
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
-        concept = create_concept("one", dict(fi="kolmekymmentä", nl="dertig"))
-        self.assertEqual(concept, Concept.instances["one"])
+        concept = create_concept("thirty", dict(fi="kolmekymmentä", nl="dertig"))
+        self.assertEqual(concept, Concept.instances["thirty"])
+
+    def test_meaning_leaf_concept(self):
+        """Test the meaning of a leaf concept."""
+        concept = create_concept("one", dict(fi="yksi", nl="een"))
+        self.assertEqual(("yksi",), concept.meanings("fi"))
+        self.assertEqual(("een",), concept.meanings("nl"))
+        self.assertEqual((), concept.meanings("en"))
+
+    def test_meaning_composite_concept(self):
+        """Test the meaning of a composite concept."""
+        concept = create_concept(
+            "table",
+            dict(singular=dict(en="table", nl="de tafel"), plural=dict(en="tables", nl="de tafels")),
+        )
+        self.assertEqual(("table", "tables"), concept.meanings("en"))
+        self.assertEqual(("de tafel", "de tafels"), concept.meanings("nl"))
+        self.assertEqual((), concept.meanings("fi"))
+
+    def test_meaning_mixed_concept(self):
+        """Test the meaning of a concept that is leaf in one language and composite in another."""
+        concept = create_concept(
+            "to eat/third person",
+            dict(fi="hän syö", female=dict(nl="zij eet"), male=dict(nl="hij eet")),
+        )
+        self.assertEqual(("hän syö",), concept.meanings("fi"))
+        self.assertEqual(("zij eet", "hij eet"), concept.meanings("nl"))
+        self.assertEqual((), concept.meanings("en"))

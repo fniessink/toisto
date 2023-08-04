@@ -23,9 +23,10 @@ class QuizFactory:
         """Create the quizzes for a concept."""
         if concept.answer_only:
             return Quizzes()
-        if concept.constituents:
-            return self.composite_concept_quizzes(concept, previous_quizzes)
-        return self.leaf_concept_quizzes(concept, previous_quizzes)
+        return Quizzes(
+            self.composite_concept_quizzes(concept, previous_quizzes) |
+            self.leaf_concept_quizzes(concept, previous_quizzes),
+        )
 
     def composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a composite concept."""
@@ -48,6 +49,8 @@ class QuizFactory:
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create translation quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
+        if concept.is_composite(target_language):
+            return Quizzes()
         target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
         if not target_labels or not source_labels:
             return Quizzes()
@@ -78,7 +81,7 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for concept1, concept2 in permutations(concept.leaf_concepts(), r=2):
+        for concept1, concept2 in permutations(concept.leaf_concepts(target_language), r=2):
             quiz_types = grammatical_quiz_types(concept1, concept2)
             if not quiz_types:
                 continue
