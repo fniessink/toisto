@@ -1,11 +1,7 @@
 """Quiz factory."""
 
-from collections.abc import Iterable
 from dataclasses import dataclass
 from itertools import permutations, zip_longest
-from typing import cast
-
-from toisto.tools import zip_and_cycle
 
 from ..language import Language
 from ..language.concept import Concept, Concepts
@@ -82,7 +78,7 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for concept1, concept2 in paired_leaf_concepts(concept):
+        for concept1, concept2 in permutations(concept.leaf_concepts(), r=2):
             quiz_types = grammatical_quiz_types(concept1, concept2)
             if not quiz_types:
                 continue
@@ -150,14 +146,13 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
     for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
         if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
-    return tuple(quiz_types)
-
-
-def paired_leaf_concepts(concept: Concept) -> Iterable[tuple[Concept, Concept]]:
-    """Pair the leaf concepts from the constituent concepts."""
-    for concept_group in zip_and_cycle(*[list(constituent.leaf_concepts()) for constituent in concept.constituents]):
-        for permutation in permutations(concept_group, r=2):
-            yield cast(tuple[Concept, Concept], permutation)
+    if "infinitive" in concept1.grammatical_categories():
+        return tuple(quiz_types)
+    if set(quiz_types) <= {"feminize", "masculinize", "neuterize", "give third person"}:
+        return tuple(quiz_types)
+    if len(quiz_types) == 1:
+        return tuple(quiz_types)
+    return tuple()
 
 
 def create_quizzes(target_language: Language, source_language: Language, *concepts: Concept) -> Quizzes:
