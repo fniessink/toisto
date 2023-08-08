@@ -16,7 +16,7 @@ from ..language.label import Label, Labels
 from .match import match
 
 TranslationQuizType = Literal["read", "write"]
-ListenQuizType = Literal["listen"]  # noqa: F821
+ListenQuizType = Literal["listen"]
 SemanticQuizType = Literal["answer", "antonym"]
 GrammaticalQuizType = Literal[
     "pluralize",
