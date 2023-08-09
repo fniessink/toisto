@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Generator
 from dataclasses import dataclass
 from functools import cached_property
 from typing import ClassVar, NewType, cast, get_args
@@ -112,7 +112,7 @@ class Concept:
         """Return the base concept of this concept."""
         return self.related_concepts.parent.base_concept if self.related_concepts.parent else self
 
-    def leaf_concepts(self) -> Iterable[Concept]:
+    def leaf_concepts(self) -> Generator[Concept, None, None]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
         if self.constituents:
             for concept in self.constituents:

@@ -98,7 +98,7 @@ class Quiz:
 
     def __ne__(self, other: object) -> bool:
         """Return whether this quiz is not equal to the other."""
-        return not self == other
+        return self.key != other.key if isinstance(other, self.__class__) else True
 
     @cached_property
     def key(self) -> str:
