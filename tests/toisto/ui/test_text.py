@@ -98,11 +98,11 @@ class FeedbackTestCase(ToistoTestCase):
 
     def test_post_quiz_note(self):
         """Test that the post quiz note is formatted correctly."""
-        concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
-        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        concept = create_concept("hi", dict(nl="hoi;;Hoi is an informal greeting"))
+        quiz = create_quizzes("nl", "nl", concept).by_quiz_type("listen").pop()
         self.assertEqual(
-            "[secondary]Note: Moi is an informal greeting.[/secondary]",
-            feedback_correct("moi", quiz).split("\n")[-2],
+            "[secondary]Note: Hoi is an informal greeting.[/secondary]",
+            feedback_correct("hoi", quiz).split("\n")[-2],
         )
 
     def test_multiple_post_quiz_notes(self):

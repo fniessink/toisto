@@ -131,10 +131,10 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
-        concept = create_concept("mämmi", dict(fi="mämmi", nl="(Finse paascake)"))
+        concept = create_concept("Finnish Eastern cake", dict(fi="mämmi", nl="(Finse paascake)"))
         self.assertEqual(("mämmi",), concept.labels("fi"))
         self.assertEqual((), concept.labels("nl"))
-        self.assertEqual((("Finse paascake",)), concept.meanings("nl"))
+        self.assertEqual(("Finse paascake",), concept.meanings("nl"))
 
     def test_topic(self):
         """Test that a topic can be given to the concept."""
