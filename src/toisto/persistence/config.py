@@ -4,22 +4,31 @@ import sys
 from argparse import ArgumentParser
 from collections.abc import Iterable
 from configparser import ConfigParser, Error
+from enum import Enum
 from pathlib import Path
-from typing import Final, Literal, NoReturn, get_args
+from typing import Final, NoReturn, get_args
 
 from toisto.model.language.cefr import CommonReferenceLevel
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 
 # The schema for the config file. Top-level keys are sections, values are a dict per option with the key being the
 # option name and the value being a tuple of a specifier and the allowed option values.
-Quantifier = Literal["any", "one of", "one or more of"]
+
+class Quantifier(Enum):
+    """Quantifier enumeration."""
+
+    ANY = "any"
+    ONE_OF = "one of"
+    ONE_OR_MORE_OF = "one or more of"
+
+
 CONFIG_SCHEMA: Final[dict[str, dict[str, tuple[Quantifier, Iterable]]]] = dict(
     languages=dict(
-        target=("one of", ALL_LANGUAGES.keys()),
-        source=("one of", ALL_LANGUAGES.keys()),
-        levels=("one or more of", get_args(CommonReferenceLevel)),
+        target=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
+        source=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
+        levels=(Quantifier.ONE_OR_MORE_OF, get_args(CommonReferenceLevel)),
     ),
-    commands=dict(mp3player=("any", [])),
+    commands=dict(mp3player=(Quantifier.ANY, [])),
 )
 CONFIG_FILENAME = Path("~/.toisto.cfg").expanduser()
 
@@ -55,14 +64,14 @@ class ConfigSchemaValidator:
                 f"unknown option '{option}' in section '{section}'. Allowed options are: {', '.join(allowed_options)}.",
             )
         specifier, allowed_values = CONFIG_SCHEMA[section][option]
-        if specifier == "any":
+        if specifier == Quantifier.ANY:
             return  # type: ignore[return-value]
         value = self._config_parser.get(section, option)
-        values = [value] if specifier == "one of" else value.split()
+        values = [value] if specifier == Quantifier.ONE_OF else value.split()
         if any(value for value in values if value not in allowed_values):
             self._error(
                 f"unknown value '{value}' for option '{option}' in section '{section}'. "
-                f"Allowed values are {specifier}: {', '.join(allowed_values)}.",
+                f"Allowed values are {specifier.value}: {', '.join(allowed_values)}.",
             )
 
 

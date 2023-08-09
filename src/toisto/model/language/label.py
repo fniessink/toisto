@@ -20,7 +20,7 @@ class Label(str):
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
-        return not self == other
+        return self.without_notes != Label(other).without_notes
 
     @property
     def spelling_alternatives(self) -> Labels:
