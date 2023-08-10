@@ -33,6 +33,7 @@ jobs:
       run: |
         green --run-coverage
         coverage xml  # SonarCloud needs a Cobertura compatible XML coverage report
+        python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
     - name: Quality
       run: |
         mypy src tests
