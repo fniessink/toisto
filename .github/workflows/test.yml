@@ -32,18 +32,12 @@ jobs:
     - name: Test
       run: |
         green --run-coverage
+        coverage xml  # SonarCloud needs a Cobertura compatible XML coverage report
     - name: Quality
       run: |
         mypy src tests
         ruff .
         vulture src tests
-    - name: Prepare SonarCloud scan
-      run: |
-        coverage xml
-        # Create packages
-        touch src/__init__.py
-        # Fix code coverage paths. Needed because the Sonar scanner runs in a container with different file paths.
-        sed -i 's/\/home\/runner\/work\/toisto\/toisto\//\/github\/workspace\//g' build/coverage.xml
     - name: SonarCloud scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
