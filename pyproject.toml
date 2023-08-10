@@ -66,6 +66,9 @@ source = ["src", "tests"]
 fail_under = 100
 skip_covered = true
 
+[tool.coverage.xml]
+output = "build/coverage.xml"
+
 [[tool.mypy.overrides]]
 module = ["gtts"]
 ignore_missing_imports = true

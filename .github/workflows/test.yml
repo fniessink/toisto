@@ -31,7 +31,8 @@ jobs:
         pip install .[dev]
     - name: Test
       run: |
-        green -r
+        green --run-coverage
+        coverage xml
     - name: Quality
       run: |
         mypy src tests
