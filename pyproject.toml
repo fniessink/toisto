@@ -60,7 +60,7 @@ line-length = 120
 
 [tool.coverage.run]
 branch = true
-source = ["src", "tests"]
+source = ["."]
 
 [tool.coverage.report]
 fail_under = 100
