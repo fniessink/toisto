@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Generator
 from dataclasses import dataclass
 from functools import cached_property
+from itertools import chain
 from typing import ClassVar, NewType, cast, get_args
 
 from . import Language
@@ -112,26 +113,34 @@ class Concept:
         """Return the base concept of this concept."""
         return self.related_concepts.parent.base_concept if self.related_concepts.parent else self
 
-    def leaf_concepts(self) -> Generator[Concept, None, None]:
+    def leaf_concepts(self, language: Language) -> Generator[Concept, None, None]:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
-        if self.constituents:
+        if self.is_composite(language):
             for concept in self.constituents:
-                yield from concept.leaf_concepts()
+                yield from concept.leaf_concepts(language)
         else:
             yield self
 
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""
+        if self.is_composite(language):
+            return tuple(chain.from_iterable([concept.labels(language) for concept in self.constituents]))
         return self._labels.get(language, Labels())
 
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept in the specified language."""
+        if self.is_composite(language):
+            return tuple(chain.from_iterable([concept.meanings(language) for concept in self.constituents]))
         return self._meanings.get(language, Labels())
 
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
+
+    def is_composite(self, language: Language) -> bool:
+        """Return whether this concept is composite."""
+        return self._labels.get(language) is None
 
 
 Concepts = tuple[Concept, ...]
