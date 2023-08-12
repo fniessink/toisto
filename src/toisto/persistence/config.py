@@ -14,6 +14,7 @@ from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 # The schema for the config file. Top-level keys are sections, values are a dict per option with the key being the
 # option name and the value being a tuple of a specifier and the allowed option values.
 
+
 class Quantifier(Enum):
     """Quantifier enumeration."""
 

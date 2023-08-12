@@ -24,8 +24,8 @@ class QuizFactory:
         if concept.answer_only:
             return Quizzes()
         return Quizzes(
-            self.composite_concept_quizzes(concept, previous_quizzes) |
-            self.leaf_concept_quizzes(concept, previous_quizzes),
+            self.composite_concept_quizzes(concept, previous_quizzes)
+            | self.leaf_concept_quizzes(concept, previous_quizzes),
         )
 
     def composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:

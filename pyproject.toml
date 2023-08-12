@@ -25,27 +25,27 @@ classifiers = [
     "Topic :: Education",
 ]
 dependencies = [
-    "gTTS >= 2.3.0",
-    "playsound >= 1.3.0",
-    "requests >= 2.28.2",
-    "rich >= 12.6.0",
-    "rich-argparse >= 1.0.0",
+    "gTTS == 2.3.0",
+    "playsound == 1.3.0",
+    "requests >= 2.28.0",
+    "rich == 13.5.2",
+    "rich-argparse == 1.2.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "black == 23.7.0",
     "build == 0.10.0",
-    "coverage == 7.2.7",
+    "coverage == 7.3.0",
     "green == 3.4.3",
-    "mypy == 1.4.1",
+    "mypy == 1.5.0",
     "pip == 23.2.1",
-    "ruff == 0.0.282",
+    "ruff == 0.0.284",
     "twine == 4.0.2",
     "types-playsound == 1.3.1.3",
     "types-requests == 2.31.0.2",
     "unittest-xml-reporting == 3.2.0",
-    "vulture == 2.7",
+    "vulture == 2.8",
 ]
 
 [project.scripts]
