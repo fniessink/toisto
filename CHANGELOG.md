@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add question/answer concepts. Closes [#233](https://github.com/fniessink/toisto/issues/233).
 - Concepts can belong to multiple topics. Closes [#234](https://github.com/fniessink/toisto/issues/234).
 - Allow for adding notes that are shown after a quiz has been answered. Closes [#321](https://github.com/fniessink/toisto/issues/321).
+- Allow for specifying one or more concepts to practice via de command-line interface.
 - Added several topics and concepts.
 
 ### Changed

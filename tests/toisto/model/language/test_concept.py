@@ -1,7 +1,10 @@
 """Unit tests for concepts."""
 
-from toisto.model.language.concept import Concept
-from toisto.model.language.concept_factory import create_concept
+import unittest
+from typing import cast
+
+from toisto.model.language.concept import Concept, ConceptId, Topic, filter_concepts
+from toisto.model.language.concept_factory import ConceptDict, create_concept
 
 from ....base import ToistoTestCase
 
@@ -60,3 +63,36 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual(("hän syö",), concept.meanings("fi"))
         self.assertEqual(("zij eet", "hij eet"), concept.meanings("nl"))
         self.assertEqual((), concept.meanings("en"))
+
+
+class ConceptFilterTest(unittest.TestCase):
+    """Unit tests for the concept filter function."""
+
+    def setUp(self) -> None:
+        """Override to set up concepts."""
+        self.two = create_concept(
+            ConceptId("two"),
+            cast(ConceptDict, dict(level={"A1": "KK"}, fi="kaksi", nl="twee")),
+            Topic("small"),
+        )
+        self.three = create_concept(
+            ConceptId("three"),
+            cast(ConceptDict, dict(level={"A2": "KK"}, fi="kolme", nl="drie")),
+            Topic("big"),
+        )
+
+    def test_no_filter(self):
+        """Test that all concepts are returned when there is no filter specified."""
+        self.assertEqual({self.two}, filter_concepts({self.two}, [], [], []))
+
+    def test_filter_by_selected_concepts(self):
+        """Test that concepts can be filtered by selected concepts."""
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, ["two"], [], []))
+
+    def test_filter_by_level(self):
+        """Test that concepts can be filtered by level."""
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], ["A1"], []))
+
+    def test_filter_by_topic(self):
+        """Test that concepts can be filtered by topic."""
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], [], ["small"]))

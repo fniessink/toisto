@@ -10,7 +10,7 @@ from rich_argparse import RichHelpFormatter
 from ..command.show_progress import SortColumn
 from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
 from ..model.language.cefr import CommonReferenceLevel
-from ..model.language.concept import Topic
+from ..model.language.concept import Concept, Topic, topics
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 
 
@@ -60,6 +60,19 @@ def add_topic_arguments(parser: ArgumentParser, topics: list[Topic]) -> None:
     )
 
 
+def add_concept_arguments(parser: ArgumentParser, concepts: set[Concept]) -> None:
+    """Add the concept arguments to the parser."""
+    concept_ids = sorted(concept.concept_id for concept in concepts)
+    parser.add_argument(
+        "-c",
+        "--concept",
+        action="append",
+        default=[],
+        metavar="{concept}",
+        help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
+    )
+
+
 def add_level_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
     """Add the language level arguments to the parser."""
     levels = get_args(CommonReferenceLevel)
@@ -80,10 +93,10 @@ def add_level_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
 class CommandBuilder:
     """Add commands to the argument parser."""
 
-    def __init__(self, argument_parser: ArgumentParser, topics: list[Topic], config: ConfigParser) -> None:
+    def __init__(self, argument_parser: ArgumentParser, concepts: set[Concept], config: ConfigParser) -> None:
         command_help = "default: practice; type `%(prog)s {command} --help` for more information on a command"
         self.subparsers = argument_parser.add_subparsers(dest="command", title="commands", help=command_help)
-        self.topics = topics
+        self.concepts = concepts
         self.config = config
 
     def add_command(self, command: str, description: str, command_help: str) -> ArgumentParser:
@@ -96,7 +109,8 @@ class CommandBuilder:
         )
         add_language_arguments(parser, self.config)
         add_level_arguments(parser, self.config)
-        add_topic_arguments(parser, self.topics)
+        add_topic_arguments(parser, topics(self.concepts))
+        add_concept_arguments(parser, self.concepts)
         return parser
 
     def add_practice_command(self) -> None:
@@ -131,14 +145,14 @@ class CommandBuilder:
         self.add_command("topics", "Show topics.", command_help)
 
 
-def create_argument_parser(config: ConfigParser, topics: list[Topic] | None = None) -> ArgumentParser:
+def create_argument_parser(config: ConfigParser, concepts: set[Concept] | None = None) -> ArgumentParser:
     """Create the argument parser."""
     epilog = f"See {README_URL} for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
     argument_parser.add_argument("-V", "--version", action="version", version=version)
-    builder = CommandBuilder(argument_parser, topics or [], config)
+    builder = CommandBuilder(argument_parser, concepts or set(), config)
     builder.add_practice_command()
     builder.add_progress_command()
     builder.add_topics_command()
