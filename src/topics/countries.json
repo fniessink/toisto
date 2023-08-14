@@ -149,6 +149,13 @@
         "fi": "Islanti",
         "nl": "IJsland"
     },
+    "icelander": {
+        "roots": "iceland",
+        "topics": "SM1.2",
+        "en": "Icelander",
+        "fi": "islantilainen",
+        "nl": "de IJslander"
+    },
     "china": {
         "en": "China",
         "fi": "Kiina",
@@ -168,6 +175,21 @@
         "en": "Korea",
         "fi": "Korea",
         "nl": "Korea"
+    },
+    "the netherlands": {
+        "topics": "SM1.2",
+        "en": [
+            "The Netherlands",
+            "Holland"
+        ],
+        "fi": [
+            "Alankomaat",
+            "Hollanti"
+        ],
+        "nl": [
+            "Nederland",
+            "Holland"
+        ]
     },
     "spain": {
         "en": "Spain",
@@ -205,5 +227,42 @@
         "en": "Egyptian",
         "fi": "egyptiläinen",
         "nl": "Egyptisch"
+    },
+    "south africa": {
+        "roots": [
+            "south",
+            "africa"
+        ],
+        "topics": "SM1.2",
+        "en": "South Africa",
+        "fi": "Etelä-Afrikka",
+        "nl": "Zuid-Afrika"
+    },
+    "greece": {
+        "roots": {
+            "nl": "country"
+        },
+        "topics": "SM1.2",
+        "en": "Greece",
+        "fi": "Kreikka",
+        "nl": "Griekenland"
+    },
+    "greek": {
+        "topics": "SM1.2",
+        "en": "Greek",
+        "fi": "kreikkalainen",
+        "nl": "Grieks"
+    },
+    "latvia": {
+        "topics": "SM1.2",
+        "en": "Latvia",
+        "fi": "Latvia",
+        "nl": "Letland"
+    },
+    "lithuania": {
+        "topics": "SM1.2",
+        "en": "Lithuania",
+        "fi": "Liettua",
+        "nl": "Litouwen"
     }
 }

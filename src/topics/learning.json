@@ -98,5 +98,22 @@
             "fi": "harjoitukset",
             "nl": "de oefeningen"
         }
+    },
+    "fact": {
+        "level": {
+            "A1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "fact",
+            "fi": "fakta",
+            "nl": "het feit"
+        },
+        "plural": {
+            "en": "facts",
+            "fi": "faktat",
+            "nl": "de feiten"
+        }
     }
 }

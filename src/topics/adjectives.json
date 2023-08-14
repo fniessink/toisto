@@ -1045,6 +1045,56 @@
             "nl": "donkerst"
         }
     },
+    "weak": {
+        "level": {
+            "A2": [
+                "KK",
+                "OD"
+            ],
+            "B1": "EP"
+        },
+        "topics": "SM1.2",
+        "positive degree": {
+            "en": "weak",
+            "fi": "heikko",
+            "nl": "zwak"
+        },
+        "comparative degree": {
+            "en": "weaker",
+            "fi": "heikompi",
+            "nl": "zwakker"
+        },
+        "superlative degree": {
+            "en": "weakest",
+            "fi": "heikoin",
+            "nl": "zwakst"
+        }
+    },
+    "crazy": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK"
+            ],
+            "A2": "OD"
+        },
+        "topics": "SM1.2",
+        "positive degree": {
+            "en": "crazy",
+            "fi": "hullu",
+            "nl": "gek"
+        },
+        "comparative degree": {
+            "en": "crazier",
+            "fi": "hullumpi",
+            "nl": "gekker"
+        },
+        "superlative degree": {
+            "en": "craziest",
+            "fi": "hulluin",
+            "nl": "gekst"
+        }
+    },
     "many/much": {
         "level": {
             "A1": [

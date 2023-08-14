@@ -11,5 +11,25 @@
         "en": "account",
         "fi": "tili",
         "nl": "de rekening"
+    },
+    "price": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "price",
+            "fi": "hinta",
+            "nl": "de prijs"
+        },
+        "plural": {
+            "en": "prices",
+            "fi": "hinnat",
+            "nl": "de prijzen"
+        }
     }
 }

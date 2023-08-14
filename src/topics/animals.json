@@ -341,6 +341,25 @@
             "nl": "de beren"
         }
     },
+    "gorilla": {
+        "level": {
+            "C1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "singular": {
+            "en": "gorilla",
+            "fi": "gorilla",
+            "nl": "de gorilla"
+        },
+        "plural": {
+            "en": "gorillas",
+            "fi": "gorillat",
+            "nl": "de gorilla's"
+        }
+    },
     "sheep": {
         "level": {
             "A1": [

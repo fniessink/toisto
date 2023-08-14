@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "No!",
         "fi": "Ei!",
         "nl": "Nee!"
@@ -116,22 +119,6 @@
         "fi": "Okei!",
         "nl": "OK!|Oké!"
     },
-    "and": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "topics": "SM1.1",
-        "en": "and",
-        "fi": [
-            "entä",
-            "ja"
-        ],
-        "nl": "en"
-    },
     "and you": {
         "roots": "and",
         "topics": "SM1.1",
@@ -220,7 +207,11 @@
     },
     "for example": {
         "level": {
-            "A1": ["EP", "KK", "OD"]
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
         },
         "topics": "SM1.5",
         "en": "for example",

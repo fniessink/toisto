@@ -1,0 +1,34 @@
+{
+    "and": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "en": "and",
+        "fi": [
+            "entä",
+            "ja"
+        ],
+        "nl": "en"
+    },
+    "because": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "because",
+        "fi": "koska",
+        "nl": [
+            "omdat",
+            "want"
+        ]
+    }
+}
