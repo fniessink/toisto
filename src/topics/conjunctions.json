@@ -27,8 +27,17 @@
         "en": "because",
         "fi": "koska",
         "nl": [
-            "omdat",
-            "want"
+            "omdat;;'omdat' is followed by a main clause. For example, 'Ik ga naar huis omdat ik moe ben'",
+            "want;;'want' is followed by a subclause. For example, 'Ik ga naar huis want ik ben moe'"
         ]
+    },
+    "but": {
+        "level": {
+            "A1": ["EP", "KK", "OD"]
+        },
+        "topics": "SM1.2",
+        "en": "but",
+        "fi": "mutta",
+        "nl": "maar"
     }
 }

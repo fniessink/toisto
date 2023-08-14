@@ -447,6 +447,26 @@
             "nl": "de konijnen"
         }
     },
+    "worm": {
+        "level": {
+            "B2": [
+                "EP",
+                "OD"
+            ],
+            "C1": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "worm",
+            "fi": "mato",
+            "nl": "de worm"
+        },
+        "plural": {
+            "en": "worms",
+            "fi": "madot",
+            "nl": "de wormen"
+        }
+    },
     "horn": {
         "level": {
             "C1": [

@@ -2307,8 +2307,7 @@
         },
         "topics": [
             "sport",
-            "SM1.5",
-            "test"
+            "SM1.5"
         ],
         "infinitive": {
             "en": "to ski",
@@ -2353,6 +2352,119 @@
                 "en": "they ski",
                 "fi": "he hiihtävät",
                 "nl": "zij skiën|ze skiën"
+            }
+        }
+    },
+    "to ask": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "learning",
+            "SM1.2"
+        ],
+        "infinitive": {
+            "en": "to ask",
+            "fi": "kysyä",
+            "nl": "vragen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I ask",
+                "fi": "minä kysyn|kysyn",
+                "nl": "ik vraag"
+            },
+            "second person": {
+                "en": "you ask;singular",
+                "fi": "sinä kysyt|kysyt",
+                "nl": "jij vraagt|je vraagt"
+            },
+            "third person": {
+                "fi": "hän kysyy",
+                "female": {
+                    "en": "she asks",
+                    "nl": "zij vraagt|ze vraagt"
+                },
+                "male": {
+                    "en": "he asks",
+                    "nl": "hij vraagt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we ask",
+                "fi": "me kysymme|kysymme",
+                "nl": "wij vragen|we vragen"
+            },
+            "second person": {
+                "en": "you ask;plural",
+                "fi": "te kysytte|kysytte",
+                "nl": "jullie vragen"
+            },
+            "third person": {
+                "en": "they ask",
+                "fi": "he kysyvät",
+                "nl": "zij vragen|ze vragen"
+            }
+        }
+    },
+    "to cost": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to cost",
+            "fi": "maksaa",
+            "nl": "kosten"
+        },
+        "singular": {
+            "first person": {
+                "en": "I cost",
+                "fi": "minä maksan|maksan",
+                "nl": "ik kost"
+            },
+            "second person": {
+                "en": "you cost;singular",
+                "fi": "sinä maksat|maksat",
+                "nl": "jij kost|je kost"
+            },
+            "third person": {
+                "fi": "hän maksaa",
+                "female": {
+                    "en": "she costs",
+                    "nl": "zij kost|ze kost"
+                },
+                "male": {
+                    "en": "he costs",
+                    "nl": "hij kost"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we cost",
+                "fi": "me maksamme|maksamme",
+                "nl": "wij kosten|we kosten"
+            },
+            "second person": {
+                "en": "you cost;plural",
+                "fi": "te maksatte|maksatte",
+                "nl": "jullie kosten"
+            },
+            "third person": {
+                "en": "they cost",
+                "fi": "he maksavat",
+                "nl": "zij kosten|ze kosten"
             }
         }
     }
