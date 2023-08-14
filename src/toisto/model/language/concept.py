@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Generator
+from collections.abc import Generator, Iterable
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
@@ -146,12 +146,22 @@ class Concept:
 Concepts = tuple[Concept, ...]
 
 
-def topics(concepts: set[Concept]) -> list[Topic]:
+def topics(concepts: Iterable[Concept]) -> list[Topic]:
     """Gather the topics from the concepts."""
     return sorted({topic for concept in concepts for topic in concept.topics})
 
 
-def filter_concepts(levels: list[CommonReferenceLevel], topics: list[Topic], concepts: set[Concept]) -> set[Concept]:
-    """Filter the concepts by levels and topics."""
-    concepts = {concept for concept in concepts if (concept.level in levels if levels else True)}
-    return {concept for concept in concepts if concept.topics & set(topics)}
+def filter_concepts(
+    concepts: set[Concept],
+    selected_concepts: list[ConceptId],
+    levels: list[CommonReferenceLevel],
+    topics: list[Topic],
+) -> set[Concept]:
+    """Filter the concepts by selected concepts, levels, and topics."""
+    if selected_concepts:
+        concepts = {concept for concept in concepts if concept.concept_id in selected_concepts}
+    if levels:
+        concepts = {concept for concept in concepts if concept.level in levels}
+    if topics:
+        concepts = {concept for concept in concepts if concept.topics & set(topics)}
+    return concepts
