@@ -253,5 +253,18 @@
         "en": "personal pronoun",
         "fi": "persoonapronomini",
         "nl": "het persoonlijk voornaamwoord"
+    },
+    "intonation": {
+        "level": {
+            "B1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "intonation",
+        "fi": "intonaatio",
+        "nl": "de intonatie"
     }
 }

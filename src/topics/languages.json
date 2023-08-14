@@ -362,6 +362,29 @@
         "fi": "islanti;;In Finnish, the names of languages are not capitalized",
         "nl": "IJslands|het IJslands;;In Dutch, the names of languages are capitalized"
     },
+    "greek language": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "Greek;;In English, the names of languages are capitalized",
+        "fi": "kreikka;;In Finnish, the names of languages are not capitalized",
+        "nl": "Grieks|het Grieks;;In Dutch, the names of languages are capitalized"
+    },
+    "south african": {
+        "roots": [
+            "south",
+            "africa"
+        ],
+        "topics": "SM1.2",
+        "en": "South African;;In English, the names of languages are capitalized",
+        "fi": "eteläafrikkalainen;In Finnish, the names of languages are not capitalized",
+        "nl": "Zuid-Afrikaans|het Zuid-Afrikaans;In Dutch, the names of languages are capitalized"
+    },
     "I have a dutch accent": {
         "roots": [
             "to have",
