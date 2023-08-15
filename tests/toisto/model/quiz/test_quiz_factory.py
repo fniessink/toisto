@@ -1011,4 +1011,4 @@ class QuizNoteTest(ToistoTestCase):
             ),
         )
         for quiz in create_quizzes("fi", "nl", concept):
-            self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.notes[-1])
+            self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.answer_notes[0])

@@ -149,6 +149,12 @@ class QuizTest(QuizTestCase):
         self.assertEqual("You are", quiz.answer)
         self.assertEqual(("You are",), quiz.answers)
 
+    def test_all_answer_notes_are_shown(self):
+        """Test that all answer notes are shown."""
+        answers = ["want;;explain want", "omdat;;explain omdat"]
+        quiz = self.create_quiz(self.concept, "en", "nl", "because", answers, "write")
+        self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
+
 
 class QuizEqualityTests(QuizTestCase):
     """Unit tests for the equality of quiz instances."""
