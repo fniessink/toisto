@@ -148,22 +148,25 @@ class Quiz:
         else:
             quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
             instruction_text = INSTRUCTIONS[quiz_type]
-        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._instruction_note()}"
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._question_note}"
 
     @property
-    def notes(self) -> Sequence[str]:
-        """Return the quiz notes."""
-        return self._answers[0].notes if "write" in self.quiz_types else self._question.notes
+    def answer_notes(self) -> Sequence[str]:
+        """Return the notes to be shown after the quiz has been answered."""
+        if "write" in self.quiz_types:
+            return tuple(chain.from_iterable([answer.answer_notes for answer in self._answers]))
+        return self._question.answer_notes
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(Quizzes(self.blocked_by) & quizzes)
 
-    def _instruction_note(self) -> str:
-        """Return the instruction note, if applicable."""
+    @property
+    def _question_note(self) -> str:
+        """Return the note to be shown as part of the question, if applicable."""
         note_applicable = self.question_language != self.answer_language or {"answer", "listen"} & set(self.quiz_types)
-        instruction_note = self.notes[0] if self.notes else ""
-        return f" ({instruction_note})" if (note_applicable and instruction_note) else ""
+        question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
+        return f" ({question_note})" if (note_applicable and question_note) else ""
 
 
 class Quizzes(set[Quiz]):

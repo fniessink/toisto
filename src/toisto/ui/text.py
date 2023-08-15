@@ -55,7 +55,7 @@ CORRECT: Final = "✅ Correct.\n"
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
-    return CORRECT + meaning(quiz) + other_answers(guess, quiz) + post_quiz_notes(quiz)
+    return CORRECT + meaning(quiz) + other_answers(guess, quiz) + answer_notes(quiz)
 
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
@@ -67,7 +67,7 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
         evaluation = "" if guess == "?" else "❌ Incorrect. "
         label = f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
         feedback = label + meaning(quiz) + other_answers(quiz.answer, quiz)
-    return feedback + post_quiz_notes(quiz)
+    return feedback + answer_notes(quiz)
 
 
 def meaning(quiz: Quiz) -> str:
@@ -83,9 +83,9 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
     return ""
 
 
-def post_quiz_notes(quiz: Quiz) -> str:
-    """Return the post quiz notes, if any."""
-    notes = quiz.notes[1:]
+def answer_notes(quiz: Quiz) -> str:
+    """Return the answer notes, if any."""
+    notes = quiz.answer_notes
     if len(notes) == 0:
         return ""
     if len(notes) == 1:
