@@ -71,9 +71,13 @@ All done! ✨ 🍰 ✨
 
 ## How to release
 
-Update the [changelog](../CHANGELOG.md)
+Create a branch.
+
+Update the [changelog](../CHANGELOG.md).
 
 Update the version number in [`pyproject.toml`](../pyproject.toml).
+
+Commit and push the changes and merge the branch.
 
 Clean up old build and dist files:
 
