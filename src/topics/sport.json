@@ -23,7 +23,10 @@
         "roots": "foot",
         "topics": "SM1.5",
         "en": "football",
-        "fi": "jalkopallo",
+        "fi": [
+            "jalkopallo",
+            "futis*"
+        ],
         "nl": "de voetbal"
     }
 }

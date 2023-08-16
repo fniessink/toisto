@@ -39,51 +39,80 @@ class QuizFactory:
     def leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a leaf concept."""
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
-        listening_quizzes = self.listening_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
-        semantic_quizzes = self.semantic_quizzes(
-            concept,
-            Quizzes(translation_quizzes | listening_quizzes | previous_quizzes),
-        )
-        return Quizzes(translation_quizzes | listening_quizzes | semantic_quizzes)
+        semantic_quizzes = self.semantic_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
+        return Quizzes(translation_quizzes | semantic_quizzes)
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
-        """Create translation quizzes for the concept."""
+        """Create the translation quizzes for a concept."""
+        previous_quizzes = previous_quizzes or Quizzes()
+        read_quizzes = self.read_quizzes(concept, previous_quizzes)
+        dictate_quizzes = self.dictate_quizzes(concept, Quizzes(read_quizzes | previous_quizzes))
+        write_quizzes = self.write_quizzes(concept, Quizzes(read_quizzes | dictate_quizzes | previous_quizzes))
+        interpret_quizzes = self.interpret_quizzes(
+            concept,
+            Quizzes(read_quizzes | write_quizzes | dictate_quizzes | previous_quizzes),
+        )
+        return Quizzes(read_quizzes | write_quizzes | dictate_quizzes | interpret_quizzes)
+
+    def read_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
+        """Create read quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
+        target_labels = concept.non_vernacular_labels(target_language)
+        source_labels = concept.non_vernacular_labels(source_language)
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
-        target_to_source = Quizzes(
+        return Quizzes(
             Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by, ())
             for target_label in target_labels
         )
-        source_to_target = Quizzes(
+
+    def write_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
+        """Create write quizzes for the concept."""
+        target_language, source_language = self.target_language, self.source_language
+        if concept.is_composite(target_language):
+            return Quizzes()
+        target_labels = concept.non_vernacular_labels(target_language)
+        source_labels = concept.non_vernacular_labels(source_language)
+        if not target_labels or not source_labels:
+            return Quizzes()
+        blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
+        return Quizzes(
             Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by, ())
             for source_label in source_labels
         )
-        return Quizzes(target_to_source | source_to_target)
 
-    def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
-        """Create listening quizzes for the concept."""
+    def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
+        """Create dictation quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
-        target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
+        target_labels = concept.non_vernacular_labels(target_language)
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
-        listen_quizzes = Quizzes(
-            Quiz(concept, target_language, target_language, label, (label,), ("listen",), blocked_by, meanings)
+        non_vernacular_quizzes = Quizzes(
+            Quiz(concept, target_language, target_language, label, (label,), ("dictate",), blocked_by, meanings)
             for label in target_labels
         )
+        vernacular_quizzes = Quizzes(
+            Quiz(concept, target_language, target_language, label, target_labels, ("dictate",), blocked_by, meanings)
+            for label in concept.vernacular_labels(target_language)
+        )
+        return Quizzes(non_vernacular_quizzes | vernacular_quizzes)
+
+    def interpret_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
+        """Create interpret (listen and translate) quizzes for the concept."""
+        target_language, source_language = self.target_language, self.source_language
+        source_labels = concept.non_vernacular_labels(source_language)
         if not source_labels or concept.is_composite(target_language):
-            return listen_quizzes
-        blocked_by = blocked_by + tuple(listen_quizzes)
+            return Quizzes()
+        target_labels = concept.labels(target_language)
+        blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(target_language)
-        listen_and_translate_quizzes = Quizzes(
-            Quiz(concept, target_language, source_language, label, source_labels, ("translate",), blocked_by, meanings)
+        return Quizzes(
+            Quiz(concept, target_language, source_language, label, source_labels, ("interpret",), blocked_by, meanings)
             for label in target_labels
         )
-        return Quizzes(listen_quizzes | listen_and_translate_quizzes)
 
     def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""
@@ -94,7 +123,8 @@ class QuizFactory:
             quiz_types = grammatical_quiz_types(concept1, concept2)
             if not quiz_types:
                 continue
-            labels1, labels2 = concept1.labels(target_language), concept2.labels(target_language)
+            labels1 = concept1.non_vernacular_labels(target_language)
+            labels2 = concept2.non_vernacular_labels(target_language)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             quizzes |= Quizzes(
                 Quiz(concept, target_language, target_language, label1, (label2,), quiz_types, blocked_by, meanings)
@@ -125,13 +155,13 @@ class QuizFactory:
         if not related_concepts:
             return Quizzes()
         target_language, source_language = self.target_language, self.source_language
-        labels = concept.labels(target_language)
+        labels = concept.non_vernacular_labels(target_language)
         meanings = list(concept.meanings(source_language))
         related_concept_labels = []
         for related_concept in related_concepts:
             meanings.extend(related_concept.meanings(source_language))
             related_concept_labels.extend(list(related_concept.labels(target_language)))
-            previous_quizzes |= self.translation_quizzes(related_concept) | self.listening_quizzes(related_concept)
+            previous_quizzes |= self.translation_quizzes(related_concept)
         return Quizzes(
             Quiz(
                 concept,

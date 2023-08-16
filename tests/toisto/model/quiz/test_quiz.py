@@ -54,8 +54,8 @@ class QuizTest(QuizTestCase):
         self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
-        """Test that the other answers are not returned if the zuiz type is listen."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "listen")
+        """Test that the other answers are not returned if the quiz type is dictate."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "dictate")
         self.assertEqual((), quiz.other_answers("Een"))
 
     def test_spelling_alternative_of_answer(self):
@@ -130,17 +130,17 @@ class QuizTest(QuizTestCase):
             self.assertEqual("You are", quiz.question)
 
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
-        """Test that a note is not shown when the question and answer languages are the same."""
+        """Test that a note is not shown if the question and answer languages are the same."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_listen(self):
-        """Test that a note is shown when the question and answer languages are the same and the quiz type is listen."""
-        quiz = self.create_quiz(self.concept, "fi", "fi", "Suomi;country", ["Finland"], "listen")
+        """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
+        quiz = self.create_quiz(self.concept, "fi", "fi", "Suomi;country", ["Finland"], "dictate")
         self.assertEqual("Listen and write in Finnish (country)", quiz.instruction())
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
-        """Test that a note is shown when the question and answer languages are the same and the quiz type is answer."""
+        """Test that a note is shown if the question and answer languages are the same and the quiz type is answer."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer")
         self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction())
 
@@ -185,7 +185,7 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_with_different_quiz_types(self):
         """Test that quizzes are not equal if only their quiz types differ."""
-        self.assertNotEqual(self.copy_quiz(self.quiz, quiz_type="listen"), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, quiz_type="dictate"), self.quiz)
 
     def test_not_equal_when_questions_have_different_case(self):
         """Test that quizzes are different if only the case of the question differs."""

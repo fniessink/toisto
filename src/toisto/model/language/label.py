@@ -14,7 +14,9 @@ class Label(str):
     # Labels can have one question note and multiple answer notes. The question note is shown before a quiz is
     # presented to the user. The answer notes are shown afterwards. The format is:
     # 'label;question note;answer note 1;answer note 2;...'
+    # If the label itself ends with an asterisk it's a vernacular label, i.e. spoken language only.
     NOTE_SEP: Final = ";"
+    VERNACULAR_POSTFIX: Final = "*"
     QUESTION_NOTE_INDEX: Final = 1
     ANSWER_NOTE_INDEX: Final = 2
     SPELLING_ALTERNATIVES_SEP: Final = "|"
@@ -48,6 +50,16 @@ class Label(str):
     def without_notes(self) -> str:
         """Return the label without the notes."""
         return self.split(self.NOTE_SEP)[0]
+
+    @property
+    def is_vernacular(self) -> bool:
+        """Return whether this is a vernacular label."""
+        return self.without_notes.endswith(self.VERNACULAR_POSTFIX)
+
+    @property
+    def pronounceable(self) -> str:
+        """Return the label as text that can be sent to a speech synthesizer."""
+        return self.without_notes.rstrip(self.VERNACULAR_POSTFIX)
 
 
 Labels = tuple[Label, ...]

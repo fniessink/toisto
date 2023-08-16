@@ -187,6 +187,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.6",
         "singular": {
             "en": "tree",
             "fi": "puu",
@@ -382,7 +383,10 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "fire",
             "fi": "tuli",

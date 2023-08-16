@@ -212,7 +212,10 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.6"
+        ],
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -256,7 +259,10 @@
         },
         "topics": "SM1.2",
         "en": "kiosk",
-        "fi": "kioski",
+        "fi": [
+            "kioski",
+            "kiska*"
+        ],
         "nl": "de kiosk"
     },
     "ice cream kiosk": {
@@ -343,6 +349,7 @@
             ],
             "A2": "EP"
         },
+        "topics": "SM1.6",
         "singular": {
             "en": "centre",
             "fi": "keskusta",
@@ -362,7 +369,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.6"
+        ],
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -382,7 +392,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.6"
+        ],
         "singular": {
             "en": "road",
             "fi": "tie",

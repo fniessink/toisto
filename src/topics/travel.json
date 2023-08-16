@@ -141,7 +141,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.6"
+        ],
         "singular": {
             "en": "train",
             "fi": "juna",

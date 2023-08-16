@@ -570,7 +570,10 @@
             ],
             "B1": "KK"
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.6"
+        ],
         "singular": {
             "en": "sugar",
             "fi": "sokeri",
@@ -881,12 +884,18 @@
         "topics": "SM1.2",
         "singular": {
             "en": "ice cream",
-            "fi": "jäätelö",
+            "fi": [
+                "jäätelö",
+                "jätski*"
+            ],
             "nl": "het ijsje|het ijs"
         },
         "plural": {
             "en": "ice creams",
-            "fi": "jäätelöt",
+            "fi": [
+                "jäätelöt",
+                "jätskit*"
+            ],
             "nl": "de ijsjes"
         }
     },
