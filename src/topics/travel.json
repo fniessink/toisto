@@ -1,4 +1,24 @@
 {
+    "journey": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "journey",
+            "fi": "matka",
+            "nl": "de reis"
+        },
+        "plural": {
+            "en": "journeys",
+            "fi": "matka",
+            "nl": "de reizen"
+        }
+    },
     "car": {
         "level": {
             "A1": [
@@ -74,6 +94,7 @@
     },
     "port": {
         "level": {
+            "A2": "KK",
             "B1": [
                 "EP",
                 "OD"
@@ -132,6 +153,29 @@
             "nl": "de treinen"
         }
     },
+    "metro": {
+        "level": {
+            "A2": "OD",
+            "C2": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "metro",
+            "fi": [
+                "metro",
+                "maanalainen"
+            ],
+            "nl": "de metro"
+        },
+        "plural": {
+            "en": "metros",
+            "fi": [
+                "metrot",
+                "maanalaiset"
+            ],
+            "nl": "de metro's"
+        }
+    },
     "bus": {
         "level": {
             "A1": [
@@ -163,7 +207,10 @@
     },
     "bus driver": {
         "roots": {
-            "en": ["bus", "to drive"],
+            "en": [
+                "bus",
+                "to drive"
+            ],
             "fi": "bus",
             "nl": "bus"
         },

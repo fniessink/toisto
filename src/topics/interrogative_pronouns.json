@@ -51,6 +51,16 @@
         "fi": "Missä?",
         "nl": "Waar?"
     },
+    "where from": {
+        "level": {
+            "C2": "KK",
+            "none": "OD"
+        },
+        "topics": "SM1.2",
+        "en": "Where from?",
+        "fi": "Mistä?",
+        "nl": "Waar vandaan?"
+    },
     "when": {
         "level": {
             "A1": [
@@ -127,6 +137,18 @@
             "Wat voor soort?",
             "Wat voor een?"
         ]
+    },
+    "to where": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "en": "to where",
+        "fi": "mihin",
+        "nl": "waarheen"
     },
     "where is the water": {
         "roots": [

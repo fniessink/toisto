@@ -19,6 +19,20 @@
             "nl": "de landen"
         }
     },
+    "neighboring country": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": "country",
+        "topics": "SM1.2",
+        "en": "neighboring country",
+        "fi": "naapurimaa",
+        "nl": "buurland"
+    },
     "nationality": {
         "level": {
             "A1": "EP",
