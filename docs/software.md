@@ -711,15 +711,17 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 1. Quizzes to translate a concept from the target language to the source language.
 2. Quizzes to listen to a concept in the target language and then type in what was said.
 3. Quizzes to translate a concept from the source language to the target language.
-4. Quizzes to singularize a plural concept or pluralize a singular concept.
-5. Quizzes to diminutize a concept.
-6. Quizzes to change the person of a concept.
-7. Quizzes to change the gender of a concept.
-8. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
-9. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
-10. Quizzes to change the sentence form from declarative to interrogative and vice versa.
-11. Quizzes to change the polarity from affirmative to negative and vice versa.
-12. Quizzes to give the antonym.
+4. Quizzes to listen to a concept in the target language and then translate what was said in the source language.
+5. Quizzes to singularize a plural concept or pluralize a singular concept.
+6. Quizzes to diminutize a concept.
+7. Quizzes to change the person of a concept.
+9. Quizzes to change the gender of a concept.
+9. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
+10. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
+11. Quizzes to change the sentence form from declarative to interrogative and vice versa.
+12. Quizzes to change the polarity from affirmative to negative and vice versa.
+13. Quizzes to give the antonym.
+14. Quizzes to answer a question.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 

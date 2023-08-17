@@ -68,13 +68,22 @@ class QuizFactory:
     def listening_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create listening quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
-        labels = concept.labels(target_language)
+        target_labels, source_labels = concept.labels(target_language), concept.labels(source_language)
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
-        return Quizzes(
+        listen_quizzes = Quizzes(
             Quiz(concept, target_language, target_language, label, (label,), ("listen",), blocked_by, meanings)
-            for label in labels
+            for label in target_labels
         )
+        if not source_labels or concept.is_composite(target_language):
+            return listen_quizzes
+        blocked_by = blocked_by + tuple(listen_quizzes)
+        meanings = concept.meanings(target_language)
+        listen_and_translate_quizzes = Quizzes(
+            Quiz(concept, target_language, source_language, label, source_labels, ("translate",), blocked_by, meanings)
+            for label in target_labels
+        )
+        return Quizzes(listen_quizzes | listen_and_translate_quizzes)
 
     def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""

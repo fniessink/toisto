@@ -89,6 +89,7 @@ class QuizTest(QuizTestCase):
             "Translate into",
             "Translate into",
             "Listen and write in",
+            "Listen and write in",
             "Answer the question in",
             "Give the [underline]antonym[/underline] in",
             "Give the [underline]plural[/underline] in",

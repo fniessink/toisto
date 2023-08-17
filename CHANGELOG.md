@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.12.0 - [Unreleased]
+
+### Added
+
+- Add a 'translate' quiz type where Toisto speaks the label in the target language and the user has to enter the translation in the source language.
+
 ## 0.11.0 - 2023-08-16
 
 ### Fixed
