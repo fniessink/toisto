@@ -16,7 +16,7 @@ from ..language.label import Label, Labels
 from .match import match
 
 TranslationQuizType = Literal["read", "write"]
-ListenQuizType = Literal["listen"]
+ListenQuizType = Literal["listen", "translate"]
 SemanticQuizType = Literal["answer", "antonym"]
 GrammaticalQuizType = Literal[
     "pluralize",
@@ -62,13 +62,14 @@ GRAMMATICAL_QUIZ_TYPES: Final[dict[GrammaticalCategory, GrammaticalQuizType]] = 
     "negative": "negate",
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES: Final = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
-INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str]] = dict(
-    read="Translate into",
-    write="Translate into",
-    listen="Listen and write in",
-    answer="Answer the question in",
-    antonym="Give the [underline]antonym[/underline] in",
-)
+INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str]] = {
+    "read": "Translate into",
+    "write": "Translate into",
+    "listen": "Listen and write in",
+    "translate": "Listen and write in",
+    "answer": "Answer the question in",
+    "antonym": "Give the [underline]antonym[/underline] in",
+}
 
 
 @dataclass(frozen=True)
