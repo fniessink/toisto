@@ -52,9 +52,15 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "one",
-        "fi": "yksi",
+        "fi": [
+            "yksi",
+            "yks*"
+        ],
         "nl": "één|een"
     },
     "2": {
@@ -65,9 +71,15 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "two",
-        "fi": "kaksi",
+        "fi": [
+            "kaksi",
+            "kaks*"
+        ],
         "nl": "twee"
     },
     "3": {
@@ -104,9 +116,15 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "five",
-        "fi": "viisi",
+        "fi": [
+            "viisi",
+            "viis*"
+        ],
         "nl": "vijf"
     },
     "6": {
@@ -117,9 +135,15 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "six",
-        "fi": "kuusi",
+        "fi": [
+            "kuusi",
+            "kuus*"
+        ],
         "nl": "zes"
     },
     "7": {
@@ -130,9 +154,15 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "seven",
-        "fi": "seitsemän",
+        "fi": [
+            "seitsemän",
+            "seittemän*"
+        ],
         "nl": "zeven"
     },
     "8": {
@@ -145,7 +175,10 @@
         },
         "topics": "SM1.1",
         "en": "eight",
-        "fi": "kahdeksan",
+        "fi": [
+            "kahdeksan",
+            "kaheksan*"
+        ],
         "nl": "acht"
     },
     "9": {
@@ -156,10 +189,16 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "nine",
-        "nl": "negen",
-        "fi": "yhdeksän"
+        "fi": [
+            "yhdeksän",
+            "yheksän*"
+        ],
+        "nl": "negen"
     },
     "10": {
         "level": {
@@ -186,9 +225,15 @@
             "1",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "eleven",
-        "fi": "yksitoista",
+        "fi": [
+            "yksitoista",
+            "ykstoist*"
+        ],
         "nl": "elf"
     },
     "12": {
@@ -341,7 +386,10 @@
         ],
         "topics": "SM1.1",
         "en": "twenty",
-        "fi": "kaksikymmentä",
+        "fi": [
+            "kaksikymmentä",
+            "kakskyt*"
+        ],
         "nl": "twintig"
     },
     "21": {
@@ -356,9 +404,15 @@
             "1",
             "20"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "twenty-one",
-        "fi": "kaksikymmentäyksi",
+        "fi": [
+            "kaksikymmentäyksi",
+            "kakskytyks*"
+        ],
         "nl": "eenentwintig"
     },
     "22": {
@@ -422,9 +476,15 @@
             "3",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "thirty",
-        "fi": "kolmekymmentä",
+        "fi": [
+            "kolmekymmentä",
+            "kolkyt*"
+        ],
         "nl": "dertig"
     },
     "40": {
@@ -437,9 +497,15 @@
             "4",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "forty",
-        "fi": "neljäkymmentä",
+        "fi": [
+            "neljäkymmentä",
+            "nelkyt*"
+        ],
         "nl": "veertig"
     },
     "50": {
@@ -452,9 +518,15 @@
             "5",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "fifty",
-        "fi": "viisikymmentä",
+        "fi": [
+            "viisikymmentä",
+            "viiskyt*"
+        ],
         "nl": "vijftig"
     },
     "60": {
@@ -467,9 +539,15 @@
             "6",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "sixty",
-        "fi": "kuusikymmentä",
+        "fi": [
+            "kuusikymmentä",
+            "kuuskyt*"
+        ],
         "nl": "zestig"
     },
     "70": {
@@ -482,9 +560,15 @@
             "7",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "seventy",
-        "fi": "seitsemänkymmentä",
+        "fi": [
+            "seitsemänkymmentä",
+            "seiskyt*"
+        ],
         "nl": "zeventig"
     },
     "80": {
@@ -497,9 +581,15 @@
             "8",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "eighty",
-        "fi": "kahdeksankymmentä",
+        "fi": [
+            "kahdeksankymmentä",
+            "kaheksankyt*"
+        ],
         "nl": "tachtig"
     },
     "90": {
@@ -512,9 +602,15 @@
             "9",
             "10"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "ninety",
-        "fi": "yhdeksänkymmentä",
+        "fi": [
+            "yhdeksänkymmentä",
+            "yheksänkyt*"
+        ],
         "nl": "negentig"
     },
     "100": {

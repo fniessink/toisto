@@ -78,6 +78,19 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 }
 ```
 
+### Labels with spoken language
+
+To indicate that a label is only used in spoken language, add an asterisk (`*`) to the end. Toisto will only quiz the label using speech.
+
+```json
+{
+    "7": {
+        "en": "seven",
+        "fi: ["seitsemän", "seittemän*"]
+    }
+}
+```
+
 ### Labels with notes
 
 Sometimes labels are ambiguous. For example, "you" in English can mean both one or multiple persons. To help the user understand which meaning is intended, a note can be added to the label. The note is the part after the semicolon (`;`):

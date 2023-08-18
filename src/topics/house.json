@@ -30,7 +30,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.6"
+        ],
         "singular": {
             "en": "room",
             "fi": "huone",
@@ -106,7 +109,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.6"
+        ],
         "singular": {
             "en": "house",
             "fi": "talo",
@@ -157,6 +163,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.6",
         "singular": {
             "en": "wall",
             "fi": "seinä",
@@ -175,6 +182,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.6",
         "singular": {
             "en": "floor",
             "fi": "lattia",
@@ -196,7 +204,8 @@
         },
         "topics": [
             "SM1.1",
-            "SM1.2"
+            "SM1.2",
+            "SM1.6"
         ],
         "singular": {
             "en": "door",
@@ -217,6 +226,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.6",
         "singular": {
             "en": "window",
             "fi": "ikkuna",
@@ -326,7 +336,8 @@
         },
         "topics": [
             "SM1.2",
-            "SM1.4"
+            "SM1.4",
+            "SM1.6"
         ],
         "singular": {
             "en": "kitchen",

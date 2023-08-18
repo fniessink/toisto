@@ -15,7 +15,7 @@ from toisto.ui.text import DONE, TRY_AGAIN, console, feedback_correct, feedback_
 def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> tuple[Label, bool]:
     """Present the question, get the answer from the user, and evaluate it."""
     while True:
-        say(quiz.question_language, quiz.question, config, slow=attempt > 1)
+        say(quiz.question_language, quiz.question.pronounceable, config, slow=attempt > 1)
         if answer := Label(input("> ").strip()):
             break
         print("\033[F", end="")  # noqa: T201  # Move cursor one line up

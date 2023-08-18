@@ -144,7 +144,7 @@ Toisto quizzes you repeatably on words and phrases in the language you want to p
 At the moment, Toisto has the following types of quizzes:
 
 - **Translate** a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "vrijdag").
-- **Listen** to a word or phrase from your target language and type what you hear. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" (Today is Monday) and that's then what you have to type.
+- **Listen** to a word or phrase from your target language and type what you hear either in your target language or your source language. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" and then you have to type ether "Tänään on maanantai" or "Today is Monday".
 - Give a **singular** version of a plural, or a **plural** version of a singular. For example, what is the plural of "talo" (meaning house in Finnish, and the answer is "talot") or what is the singular of "de huizen" (meaning the houses in Dutch, and the answer would be "het huis").
 - Give the **diminutive** form of a word. For example, what is the diminutive form of "het huis" in Dutch (meaning house in Dutch and the answer would be "het huisje").
 - Change the **grammatical person** from and to first person, second person, and third person. For example, when asked what the second person of "ik eet" (meaning "I eat") is, the correct answer would be "jij eet" ("you eat").

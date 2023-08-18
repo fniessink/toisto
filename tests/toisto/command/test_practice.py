@@ -60,14 +60,14 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quizzes = create_quizzes("fi", "fi", self.concept).by_quiz_type("listen")
+        quizzes = create_quizzes("fi", "fi", self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("listen")
+        quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
         expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)

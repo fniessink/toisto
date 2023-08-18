@@ -44,7 +44,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
         concept = create_concept("hi", dict(nl="hoi", fi="terve"))
-        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("dictate").pop()
         expected_text = (
             f'❌ Incorrect. The correct answer is "[inserted]{linkify("terve")}[/inserted]".\n'
             f'[secondary]Meaning "{linkify("hoi")}".[/secondary]\n'
@@ -64,7 +64,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
         concept = create_concept("hi", dict(nl="hoi", fi="terve"))
-        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("dictate").pop()
         expected_text = (
             f'The correct answer is "{linkify("terve")}".\n[secondary]Meaning "{linkify("hoi")}".[/secondary]\n'
         )
@@ -99,7 +99,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_note(self):
         """Test that the post quiz note is formatted correctly."""
         concept = create_concept("hi", dict(nl="hoi;;Hoi is an informal greeting"))
-        quiz = create_quizzes("nl", "nl", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("nl", "nl", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             "[secondary]Note: Hoi is an informal greeting.[/secondary]",
             feedback_correct("hoi", quiz).split("\n")[-2],
@@ -108,7 +108,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_multiple_post_quiz_notes(self):
         """Test that multiple post quiz notes are formatted correctly."""
         concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting;'Moi moi' means goodbye"))
-        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertIn(
             "[secondary]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.\n[/secondary]",
             feedback_correct("moi", quiz),
@@ -117,7 +117,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_note_on_incorrect_answer(self):
         """Test that the post quiz note is formatted correctly."""
         concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
-        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             "[secondary]Note: Moi is an informal greeting.[/secondary]",
             feedback_incorrect("toi", quiz).split("\n")[-2],
@@ -126,7 +126,7 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_note_on_skip_to_answer(self):
         """Test that the post quiz note is formatted correctly."""
         concept = create_concept("hi", dict(fi="moi;;Moi is an informal greeting"))
-        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("listen").pop()
+        quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             "[secondary]Note: Moi is an informal greeting.[/secondary]",
             feedback_incorrect("?", quiz).split("\n")[-2],

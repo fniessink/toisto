@@ -16,7 +16,7 @@ from ..language.label import Label, Labels
 from .match import match
 
 TranslationQuizType = Literal["read", "write"]
-ListenQuizType = Literal["listen", "translate"]
+ListenQuizType = Literal["dictate", "interpret"]
 SemanticQuizType = Literal["answer", "antonym"]
 GrammaticalQuizType = Literal[
     "pluralize",
@@ -65,8 +65,8 @@ QUIZ_TYPE_GRAMMATICAL_CATEGORIES: Final = {value: key for key, value in GRAMMATI
 INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str]] = {
     "read": "Translate into",
     "write": "Translate into",
-    "listen": "Listen and write in",
-    "translate": "Listen and write in",
+    "dictate": "Listen and write in",
+    "interpret": "Listen and write in",
     "answer": "Answer the question in",
     "antonym": "Give the [underline]antonym[/underline] in",
 }
@@ -165,7 +165,7 @@ class Quiz:
     @property
     def _question_note(self) -> str:
         """Return the note to be shown as part of the question, if applicable."""
-        note_applicable = self.question_language != self.answer_language or {"answer", "listen"} & set(self.quiz_types)
+        note_applicable = self.question_language != self.answer_language or {"answer", "dictate"} & set(self.quiz_types)
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
         return f" ({question_note})" if (note_applicable and question_note) else ""
 

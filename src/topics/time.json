@@ -34,7 +34,10 @@
         },
         "topics": "SM1.2",
         "en": "then",
-        "fi": "sitten",
+        "fi": [
+            "sitten",
+            "sit*"
+        ],
         "nl": "dan"
     },
     "morning": {

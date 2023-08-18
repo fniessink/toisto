@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Add a 'translate' quiz type where Toisto speaks the label in the target language and the user has to enter the translation in the source language.
+- Allow for specifying that labels are vernacular, i.e. spoken language, only.
 
 ## 0.11.0 - 2023-08-16
 

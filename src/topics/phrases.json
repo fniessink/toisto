@@ -50,7 +50,10 @@
         },
         "topics": "SM1.1",
         "en": "Thank you!|Thanks!",
-        "fi": "Kiitos!",
+        "fi": [
+            "Kiitos!",
+            "Kiitti!*"
+        ],
         "nl": "Dank je!|Dank u!|Bedankt!"
     },
     "you're welcome": {
