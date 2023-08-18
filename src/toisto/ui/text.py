@@ -52,6 +52,8 @@ TRY_AGAIN: Final = "⚠️  Incorrect. Please try again."
 
 CORRECT: Final = "✅ Correct.\n"
 
+INCORRECT: Final = "❌ Incorrect. "
+
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
@@ -64,7 +66,7 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
         label = "The correct answer is" if len(quiz.answers) == 1 else "The correct answers are"
         feedback = f"{label} {linkify_and_enumerate(*quiz.answers)}.\n" + meaning(quiz)
     else:
-        evaluation = "" if guess == "?" else "❌ Incorrect. "
+        evaluation = "" if guess == "?" else INCORRECT
         label = f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
         feedback = label + meaning(quiz) + other_answers(quiz.answer, quiz)
     return feedback + answer_notes(quiz)

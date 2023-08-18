@@ -12,7 +12,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.ui.dictionary import linkify
-from toisto.ui.text import DONE, TRY_AGAIN
+from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN
 
 from ...base import ToistoTestCase
 
@@ -42,7 +42,23 @@ class PracticeTest(ToistoTestCase):
     def test_quiz(self):
         """Test that the user is quizzed."""
         patched_print = self.practice(self.quizzes)
-        self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
+        self.assertIn(call(CORRECT), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(return_value="Hoi \n"))
+    def test_answer_with_extra_whitespace(self):
+        """Test that whitespace is stripped from answers."""
+        patched_print = self.practice(self.quizzes)
+        self.assertIn(call(CORRECT), patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=["H o i\n", "Ho i\n"]))
+    def test_answer_with_spaces(self):
+        """Test that answers with spaces inside are not considered correct."""
+        patched_print = self.practice(self.quizzes)
+        self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
+        self.assertIn(
+            call(f'{INCORRECT}The correct answer is "Ho[deleted]_[/deleted]i".\n'),
+            patched_print.call_args_list,
+        )
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
@@ -69,7 +85,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
-        expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
+        expected_text = f'{CORRECT}[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="talot\n"))
@@ -81,7 +97,7 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes("fi", "nl", concept).by_quiz_type("pluralize")
         patched_print = self.practice(Quizzes(quizzes))
-        expected_text = f'✅ Correct.\n[secondary]Meaning "{linkify("huis")}", "{linkify("huizen")}".[/secondary]\n'
+        expected_text = f'{CORRECT}[secondary]Meaning "{linkify("huis")}", "{linkify("huizen")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))
@@ -89,7 +105,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the user is quizzed."""
         patched_print = self.practice(self.quizzes)
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call("✅ Correct.\n"), patched_print.call_args_list)
+        self.assertIn(call(CORRECT), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["?\n", EOFError]))
     def test_quiz_skip_on_first_attempt(self):
