@@ -86,7 +86,10 @@ To indicate that a label is only used in spoken language, add an asterisk (`*`) 
 {
     "7": {
         "en": "seven",
-        "fi: ["seitsemän", "seittemän*"]
+        "fi: [
+            "seitsemän",
+            "seittemän*"
+        ]
     }
 }
 ```
