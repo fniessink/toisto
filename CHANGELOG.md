@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## 0.12.0 - [Unreleased]
 
+### Fixed
+
+- Don't consider answers with spaces inside correct. Fixes [#403](https://github.com/fniessink/toisto/issues/403).
+
 ### Added
 
 - Add a 'translate' quiz type where Toisto speaks the label in the target language and the user has to enter the translation in the source language.
