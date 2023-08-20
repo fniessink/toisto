@@ -2467,5 +2467,68 @@
                 "nl": "zij kosten|ze kosten"
             }
         }
+    },
+    "to meet": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "infinitive": {
+            "en": "to meet",
+            "fi": "tutustua",
+            "nl": "kennismaken"
+        }
+    },
+    "to end": {
+        "level": {
+            "A1": [
+                "OD",
+                "KK"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to end",
+            "fi": "loppua",
+            "nl": "eindigen"
+        }
+    },
+    "to buy": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "money",
+            "SM1.2"
+        ],
+        "infinitive": {
+            "en": "to buy",
+            "fi": "ostaa",
+            "nl": "kopen"
+        }
+    },
+    "to take": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to take",
+            "fi": "ottaa",
+            "nl": "nemen"
+        }
     }
 }

@@ -23,7 +23,10 @@
             ]
         },
         "en": "What?",
-        "fi": "Mitä?;;Mitä is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
+        "fi": [
+            "Mitä?;;Mitä is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
+            "Mikä?;;Mikä is only used with 'olla' ('to be'), use 'mitä' with other verbs"
+        ],
         "nl": "Wat?"
     },
     "why": {
@@ -149,6 +152,18 @@
         "en": "to where",
         "fi": "mihin",
         "nl": "waarheen"
+    },
+    "from which country": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "en": "(from which country)",
+        "fi": "minkämaalainen",
+        "nl": "(uit welk land)"
     },
     "where is the water": {
         "roots": [

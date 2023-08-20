@@ -1,0 +1,24 @@
+{
+    "helsinki": {
+        "topics": "SM1.2",
+        "en": "Helsinki",
+        "fi": "Helsinki",
+        "nl": "Helsinki"
+    },
+    "north helsinki": {
+        "topics": "SM1.2",
+        "roots": [
+            "north",
+            "helsinki"
+        ],
+        "en": "North Helsinki",
+        "fi": "Pohjois-Helsinki",
+        "nl": "Helsinki-Noord"
+    },
+    "saint petersburg": {
+        "topics": "SM1.2",
+        "en": "Saint Petersburg",
+        "fi": "Pietari",
+        "nl": "Sint-Petersburg"
+    }
+}

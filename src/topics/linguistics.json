@@ -25,15 +25,29 @@
             "SM1.1",
             "SM1.2"
         ],
-        "singular": {
-            "en": "word",
-            "fi": "sana",
-            "nl": "het woord"
+        "root": {
+            "singular": {
+                "en": "word",
+                "fi": "sana",
+                "nl": "het woord"
+            },
+            "plural": {
+                "en": "words",
+                "fi": "sanat",
+                "nl": "de woorden"
+            }
         },
-        "plural": {
-            "en": "words",
-            "fi": "sanat",
-            "nl": "de woorden"
+        "diminutive": {
+            "singular": {
+                "en": "(little word)",
+                "fi": "pikkusana",
+                "nl": "het woordje"
+            },
+            "plural": {
+                "en": "(little words)",
+                "fi": "pikkusanat",
+                "nl": "de woordjes"
+            }
         }
     },
     "vocabulary": {
@@ -253,6 +267,15 @@
         "en": "personal pronoun",
         "fi": "persoonapronomini",
         "nl": "het persoonlijk voornaamwoord"
+    },
+    "personal ending": {
+        "roots": {
+            "en": "end"
+        },
+        "topics": "SM1.2",
+        "en": "personal ending",
+        "fi": "persoonataivutus",
+        "nl": "persoonsuitgang"
     },
     "intonation": {
         "level": {

@@ -29,8 +29,22 @@
         "fi": "Amerikka",
         "nl": "Amerika"
     },
+    "north america": {
+        "topics": "SM1.2",
+        "roots": [
+            "north",
+            "america"
+        ],
+        "en": "North America",
+        "fi": "Pohjois-Amerikka",
+        "nl": "Noord-Amerika"
+    },
     "south america": {
         "topics": "SM1.2",
+        "roots": [
+            "south",
+            "america"
+        ],
         "en": "South America",
         "fi": "Etelä-Amerikka",
         "nl": "Zuid-Amerika"

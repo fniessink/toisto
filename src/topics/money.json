@@ -1,0 +1,87 @@
+{
+    "bank card": {
+        "level": {
+            "A2": "KK",
+            "B2": "EP",
+            "C1": "OD"
+        },
+        "topics": "SM1.2",
+        "en": [
+            "bank card",
+            "debit card"
+        ],
+        "fi": "kortti",
+        "nl": "de bankpas"
+    },
+    "cash": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "C1": "KK"
+        },
+        "topics": "SM1.2",
+        "en": "cash",
+        "fi": "käteinen",
+        "nl": "contant"
+    },
+    "cash or card": {
+        "roots": {
+            "en": "cash",
+            "fi": [
+                "cash",
+                "bank card"
+            ],
+            "nl": "cash"
+        },
+        "topics": "SM1.2",
+        "en": "Cash or card?",
+        "fi": "Käteisellä vai kortilla?",
+        "nl": "Contant of pinnen?"
+    },
+    "receipt": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "en": "receipt",
+        "fi": "kuitti",
+        "nl": "het bonnetje|de bon"
+    },
+    "account": {
+        "level": {
+            "B1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.1",
+        "en": "account",
+        "fi": "tili",
+        "nl": "de rekening"
+    },
+    "price": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "price",
+            "fi": "hinta",
+            "nl": "de prijs"
+        },
+        "plural": {
+            "en": "prices",
+            "fi": "hinnat",
+            "nl": "de prijzen"
+        }
+    }
+}

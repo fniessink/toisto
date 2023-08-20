@@ -1156,5 +1156,56 @@
             "fi": "vähiten",
             "nl": "minst"
         }
+    },
+    "negative": {
+        "level": {
+            "A1": "OD",
+            "A2": [
+                "EP",
+                "KK"
+            ]
+        },
+        "antonym": "positive",
+        "topics": "SM1.2",
+        "positive degree": {
+            "en": "negative",
+            "fi": "negatiivinen",
+            "nl": "negatief"
+        },
+        "comparative degree": {
+            "en": "more negative",
+            "fi": "negatiivisempi",
+            "nl": "negatiever"
+        },
+        "superlative degree": {
+            "en": "most negative",
+            "fi": "negatiivisin",
+            "nl": "negatiefst"
+        }
+    },
+    "positive": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "B1": "EP"
+        },
+        "antonym": "negative",
+        "positive degree": {
+            "en": "positive",
+            "fi": "positiivinen",
+            "nl": "positief"
+        },
+        "comparative degree": {
+            "en": "more positive",
+            "fi": "positiivisempi",
+            "nl": "positiever"
+        },
+        "superlative degree": {
+            "en": "most positive",
+            "fi": "positiivisin",
+            "nl": "positiefst"
+        }
     }
 }
