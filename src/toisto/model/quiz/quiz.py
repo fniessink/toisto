@@ -139,6 +139,7 @@ class Quiz:
             return Labels()  # Returning other answers doesn't make sense if the user has to type what is spoken
         return tuple(answer for answer in self.answers if not match(guess, answer))
 
+    @property
     def instruction(self) -> str:
         """Generate the quiz instruction."""
         if self.quiz_types[0] in get_args(GrammaticalQuizType):
@@ -148,7 +149,12 @@ class Quiz:
             instruction_text = f"Give the [underline]{categories}[/underline] in"
         else:
             quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
-            instruction_text = INSTRUCTIONS[quiz_type]
+            if self.question.is_colloquial:
+                instruction_text = f"Listen to the colloquial {ALL_LANGUAGES[self.question_language]} and write in"
+                if quiz_type == "dictate":
+                    instruction_text += " standard"
+            else:
+                instruction_text = INSTRUCTIONS[quiz_type]
         return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._question_note}"
 
     @property

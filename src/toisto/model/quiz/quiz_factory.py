@@ -59,8 +59,8 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels = concept.non_vernacular_labels(target_language)
-        source_labels = concept.non_vernacular_labels(source_language)
+        target_labels = concept.non_colloquial_labels(target_language)
+        source_labels = concept.non_colloquial_labels(source_language)
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
@@ -74,8 +74,8 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels = concept.non_vernacular_labels(target_language)
-        source_labels = concept.non_vernacular_labels(source_language)
+        target_labels = concept.non_colloquial_labels(target_language)
+        source_labels = concept.non_colloquial_labels(source_language)
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
@@ -87,23 +87,23 @@ class QuizFactory:
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
-        target_labels = concept.non_vernacular_labels(target_language)
+        target_labels = concept.non_colloquial_labels(target_language)
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
-        non_vernacular_quizzes = Quizzes(
+        non_colloquial_quizzes = Quizzes(
             Quiz(concept, target_language, target_language, label, (label,), ("dictate",), blocked_by, meanings)
             for label in target_labels
         )
-        vernacular_quizzes = Quizzes(
+        colloquial_quizzes = Quizzes(
             Quiz(concept, target_language, target_language, label, target_labels, ("dictate",), blocked_by, meanings)
-            for label in concept.vernacular_labels(target_language)
+            for label in concept.colloquial_labels(target_language)
         )
-        return Quizzes(non_vernacular_quizzes | vernacular_quizzes)
+        return Quizzes(non_colloquial_quizzes | colloquial_quizzes)
 
     def interpret_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create interpret (listen and translate) quizzes for the concept."""
         target_language, source_language = self.target_language, self.source_language
-        source_labels = concept.non_vernacular_labels(source_language)
+        source_labels = concept.non_colloquial_labels(source_language)
         if not source_labels or concept.is_composite(target_language):
             return Quizzes()
         target_labels = concept.labels(target_language)
@@ -123,8 +123,8 @@ class QuizFactory:
             quiz_types = grammatical_quiz_types(concept1, concept2)
             if not quiz_types:
                 continue
-            labels1 = concept1.non_vernacular_labels(target_language)
-            labels2 = concept2.non_vernacular_labels(target_language)
+            labels1 = concept1.non_colloquial_labels(target_language)
+            labels2 = concept2.non_colloquial_labels(target_language)
             meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
             quizzes |= Quizzes(
                 Quiz(concept, target_language, target_language, label1, (label2,), quiz_types, blocked_by, meanings)
@@ -155,7 +155,7 @@ class QuizFactory:
         if not related_concepts:
             return Quizzes()
         target_language, source_language = self.target_language, self.source_language
-        labels = concept.non_vernacular_labels(target_language)
+        labels = concept.non_colloquial_labels(target_language)
         meanings = list(concept.meanings(source_language))
         related_concept_labels = []
         for related_concept in related_concepts:

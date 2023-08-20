@@ -97,7 +97,7 @@ def answer_notes(quiz: Quiz) -> str:
 
 def instruction(quiz: Quiz) -> str:
     """Return the instruction for the quiz."""
-    return f"[quiz]{quiz.instruction()}:[/quiz]"
+    return f"[quiz]{quiz.instruction}:[/quiz]"
 
 
 def show_welcome(latest_version: str | None) -> None:
