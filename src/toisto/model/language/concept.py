@@ -127,13 +127,13 @@ class Concept:
             return tuple(chain.from_iterable([concept.labels(language) for concept in self.constituents]))
         return self._labels.get(language, Labels())
 
-    def vernacular_labels(self, language: Language) -> Labels:
-        """Return the vernacular labels for the language."""
-        return Labels(label for label in self.labels(language) if label.is_vernacular)
+    def colloquial_labels(self, language: Language) -> Labels:
+        """Return the colloquial labels for the language."""
+        return Labels(label for label in self.labels(language) if label.is_colloquial)
 
-    def non_vernacular_labels(self, language: Language) -> Labels:
-        """Return the non-vernacular labels for the language."""
-        return Labels(label for label in self.labels(language) if not label.is_vernacular)
+    def non_colloquial_labels(self, language: Language) -> Labels:
+        """Return the non-colloquial labels for the language."""
+        return Labels(label for label in self.labels(language) if not label.is_colloquial)
 
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept in the specified language."""

@@ -114,7 +114,7 @@ class QuizTest(QuizTestCase):
         ]
         for expected_instruction, quiz_type in zip(expected_instructions, get_args(QuizType), strict=True):
             quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
-            self.assertEqual(expected_instruction + " Finnish", quiz.instruction())
+            self.assertEqual(expected_instruction + " Finnish", quiz.instruction)
 
     def test_note(self):
         """Test that the first note is added to the instruction, the second is not, and neither to the question."""
@@ -126,23 +126,23 @@ class QuizTest(QuizTestCase):
         ):
             quiz = self.create_quiz(self.concept, "en", "nl", question, ["Jij bent|Je bent"])
             hint = " (singular)" if "singular" in question else ""
-            self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction())
+            self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
             self.assertEqual("You are", quiz.question)
 
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown if the question and answer languages are the same."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
-        self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction())
+        self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_listen(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Suomi;country", ["Finland"], "dictate")
-        self.assertEqual("Listen and write in Finnish (country)", quiz.instruction())
+        self.assertEqual("Listen and write in Finnish (country)", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is answer."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer")
-        self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction())
+        self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction)
 
     def test_question_note_is_ignored_in_answer(self):
         """Test that a note in the answer is ignored."""
@@ -155,6 +155,16 @@ class QuizTest(QuizTestCase):
         answers = ["want;;explain want", "omdat;;explain omdat"]
         quiz = self.create_quiz(self.concept, "en", "nl", "because", answers, "write")
         self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
+
+    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dicate(self):
+        """Test that colloquial labels get an automatic note."""
+        quiz = self.create_quiz(self.concept, "fi", "fi", "seittemän*", ["seitsemän"], "dictate")
+        self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
+
+    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_interpret(self):
+        """Test that colloquial labels get an automatic note."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "seittemän*", ["zeven"], "interpret")
+        self.assertEqual("Listen to the colloquial Finnish and write in Dutch", quiz.instruction)
 
 
 class QuizEqualityTests(QuizTestCase):

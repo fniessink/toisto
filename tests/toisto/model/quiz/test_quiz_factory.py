@@ -1105,11 +1105,11 @@ class QuizNoteTest(ToistoTestCase):
             self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.answer_notes[0])
 
 
-class VernacularTest(ToistoTestCase):
-    """Unit tests for concepts with vernacular (spoken language) labels."""
+class ColloquialTest(ToistoTestCase):
+    """Unit tests for concepts with colloquial (spoken language) labels."""
 
-    def test_vernacular_label_only(self):
-        """Test the generated quizzes if one language only has a vernacular label."""
+    def test_colloquial_label_only(self):
+        """Test the generated quizzes if one language only has a colloquial label."""
         concept = create_concept("seven", dict(fi="seittemän*", nl="zeven"))
         self.assertSetEqual(
             {
@@ -1123,8 +1123,8 @@ class VernacularTest(ToistoTestCase):
             create_quizzes("nl", "fi", concept),
         )
 
-    def test_vernacular_and_regular_label(self):
-        """Test the generated quizzes when one language has both a vernacular and a regular label."""
+    def test_colloquial_and_regular_label(self):
+        """Test the generated quizzes when one language has both a colloquial and a regular label."""
         concept = create_concept("seven", dict(fi=["seittemän*", "seitsemän"], nl="zeven"))
         self.assertSetEqual(
             {
@@ -1147,8 +1147,8 @@ class VernacularTest(ToistoTestCase):
             create_quizzes("nl", "fi", concept),
         )
 
-    def test_grammar_and_vernacular(self):
-        """Test the generated quizzes when vernacular labels and grammar are combined."""
+    def test_grammar_and_colloquial(self):
+        """Test the generated quizzes when colloquial labels and grammar are combined."""
         concept = create_concept(
             "kiosk",
             dict(
@@ -1192,8 +1192,8 @@ class VernacularTest(ToistoTestCase):
             create_quizzes("en", "fi", concept),
         )
 
-    def test_related_concepts_and_vernacular(self):
-        """Test the generated quizzes when vernacular labels and related concepts are combined."""
+    def test_related_concepts_and_colloquial(self):
+        """Test the generated quizzes when colloquial labels and related concepts are combined."""
         yes = create_concept("yes", dict(antonym="no", fi=["kylla", "kyl*"]))
         no = create_concept("no", dict(antonym="yes", fi="ei"))
         self.assertSetEqual(
