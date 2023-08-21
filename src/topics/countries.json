@@ -67,6 +67,13 @@
         "fi": "Suomi;country",
         "nl": "Finland"
     },
+    "finnish": {
+        "roots": "finland",
+        "topics": "SM1.2",
+        "en": "Finnish",
+        "fi": "suomalainen",
+        "nl": "Fins"
+    },
     "estland": {
         "level": {
             "none": [
@@ -110,6 +117,13 @@
         "fi": "Venäjä",
         "nl": "Rusland"
     },
+    "russian": {
+        "topics": "SM1.2",
+        "roots": "russia",
+        "en": "Russian",
+        "fi": "venäläinen",
+        "nl": "Russisch"
+    },
     "belgium": {
         "en": "Belgium",
         "fi": "Belgia",
@@ -138,6 +152,13 @@
         "en": "France",
         "fi": "Ranska",
         "nl": "Frankrijk"
+    },
+    "french": {
+        "topics": "SM1.2",
+        "roots": "france",
+        "en": "French",
+        "fi": "ranskalainen",
+        "nl": "Frans"
     },
     "england": {
         "level": {
@@ -291,5 +312,16 @@
         "en": "Pakistani",
         "fi": "pakistanilainen",
         "nl": "de Pakistaan"
+    },
+    "portugal": {
+        "en": "Portugal",
+        "fi": "Portugali",
+        "nl": "Portugal"
+    },
+    "poland": {
+        "topics": "SM1.2",
+        "en": "Poland",
+        "fi": "Puola",
+        "nl": "Polen"
     }
 }

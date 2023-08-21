@@ -201,7 +201,7 @@
         "fi": "viro;;In Finnish, the names of languages are not capitalized",
         "nl": "Estisch|het Estisch;;In Dutch, the names of languages are capitalized"
     },
-    "finnish": {
+    "finnish language": {
         "level": {
             "A1": "KK",
             "none": [
@@ -214,7 +214,7 @@
         "fi": "suomi;language;In Finnish, the names of languages are not capitalized",
         "nl": "Fins|het Fins;;In Dutch, the names of languages are capitalized"
     },
-    "french": {
+    "french language": {
         "level": {
             "none": [
                 "EP",
@@ -336,7 +336,7 @@
         "fi": "ruotsi;;In Finnish, the names of languages are not capitalized",
         "nl": "Zweeds|het Zweeds;;In Dutch, the names of languages are capitalized"
     },
-    "russian": {
+    "russian language": {
         "level": {
             "none": [
                 "EP",
@@ -382,8 +382,20 @@
         ],
         "topics": "SM1.2",
         "en": "South African;;In English, the names of languages are capitalized",
-        "fi": "eteläafrikkalainen;In Finnish, the names of languages are not capitalized",
-        "nl": "Zuid-Afrikaans|het Zuid-Afrikaans;In Dutch, the names of languages are capitalized"
+        "fi": "eteläafrikkalainen;;In Finnish, the names of languages are not capitalized",
+        "nl": "Zuid-Afrikaans|het Zuid-Afrikaans;;In Dutch, the names of languages are capitalized"
+    },
+    "portuguese": {
+        "topics": "SM1.2",
+        "en": "Portuguese;;In English, the names of languages are capitalized",
+        "fi": "portugali;;In Finnish, the names of languages are not capitalized",
+        "nl": "Portugees;;In Dutch, the names of languages are capitalized"
+    },
+    "urdu": {
+        "topics": "SM1.2",
+        "en": "Urdu;;In English, the names of languages are capitalized",
+        "fi": "urdu;;In Finnish, the names of languages are not capitalized",
+        "nl": "Urdu;;In Dutch, the names of languages are capitalized"
     },
     "I have a dutch accent": {
         "roots": [

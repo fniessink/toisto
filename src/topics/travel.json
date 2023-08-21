@@ -257,5 +257,16 @@
             "bussipysäkki"
         ],
         "nl": "de bushalte"
+    },
+    "customs": {
+        "level": {
+            "B1": "EP",
+            "B2": "KK",
+            "C2": "OD"
+        },
+        "topics": "SM1.2",
+        "en": "customs",
+        "fi": "tulli",
+        "nl": "de douane"
     }
 }

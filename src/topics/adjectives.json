@@ -416,6 +416,31 @@
             "nl": "snelst"
         }
     },
+    "strong": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "antonym": "weak",
+        "positive degree": {
+            "en": "strong",
+            "fi": "vahva",
+            "nl": "sterk"
+        },
+        "comparative degree": {
+            "en": "stronger",
+            "fi": "vahvempi",
+            "nl": "sterker"
+        },
+        "superlative degree": {
+            "en": "strongest",
+            "fi": "vahvin",
+            "nl": "sterkst"
+        }
+    },
     "quiet": {
         "level": {
             "A1": "OD",
@@ -1054,6 +1079,7 @@
             "B1": "EP"
         },
         "topics": "SM1.2",
+        "antonym": "strong",
         "positive degree": {
             "en": "weak",
             "fi": "heikko",
@@ -1206,6 +1232,28 @@
             "en": "most positive",
             "fi": "positiivisin",
             "nl": "positiefst"
+        }
+    },
+    "dumb": {
+        "level": {
+            "A2": "KK",
+            "C1": "OD"
+        },
+        "topics": "SM1.2",
+        "positive degree": {
+            "en": "dumb",
+            "fi": "tyhmä",
+            "nl": "dom"
+        },
+        "comparative degree": {
+            "en": "dumber",
+            "fi": "tyhmempi",
+            "nl": "dommer"
+        },
+        "superlative degree": {
+            "en": "dumbest",
+            "fi": "tyhmin",
+            "nl": "domst"
         }
     }
 }

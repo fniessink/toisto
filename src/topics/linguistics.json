@@ -50,6 +50,20 @@
             }
         }
     },
+    "word order": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": "word",
+        "topics": "SM1.2",
+        "en": "word order",
+        "fi": "sanajärjestys",
+        "nl": "woordvolgorde"
+    },
     "vocabulary": {
         "level": {
             "A1": "OD",
@@ -231,6 +245,23 @@
             "nl": "de werkwoorden"
         }
     },
+    "main verb": {
+        "roots": {
+            "en": "verb",
+            "fi": [
+                "head",
+                "verb"
+            ],
+            "nl": [
+                "head",
+                "verb"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "main verb",
+        "fi": "pääverbi",
+        "nl": "het hoofdwerkwoord"
+    },
     "infinitive": {
         "level": {
             "A1": "OD",
@@ -268,9 +299,16 @@
         "fi": "persoonapronomini",
         "nl": "het persoonlijk voornaamwoord"
     },
+    "ending": {
+        "topics": "SM1.2",
+        "en": "ending",
+        "fi": "pääte",
+        "nl": "uitgang"
+    },
     "personal ending": {
         "roots": {
-            "en": "end"
+            "en": "ending",
+            "nl": "ending"
         },
         "topics": "SM1.2",
         "en": "personal ending",

@@ -1,4 +1,17 @@
 {
+    "money": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "money",
+        "fi": "raha",
+        "nl": "het geld"
+    },
     "bank card": {
         "level": {
             "A2": "KK",
@@ -83,5 +96,51 @@
             "fi": "hinnat",
             "nl": "de prijzen"
         }
+    },
+    "cent": {
+        "level": {
+            "A2": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "cent",
+            "fi": "sentti",
+            "nl": "de cent"
+        },
+        "plural": {
+            "en": "cents",
+            "fi": "sentit",
+            "nl": "de centen"
+        }
+    },
+    "banknote": {
+        "level": {
+            "A1": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "en": [
+            "banknote|note",
+            "bill"
+        ],
+        "fi": "seteli",
+        "nl": "het bankbiljet"
+    },
+    "anything else": {
+        "topics": "SM1.2",
+        "en": "Anything else?",
+        "fi": "Tuleeks muuta?*",
+        "nl": "Anders nog iets?"
+    },
+    "all together": {
+        "topics": "SM1.2",
+        "en": "All together?",
+        "fi": "Tuleeks nää samasta?*",
+        "nl": "Alles bij elkaar?"
     }
 }

@@ -919,12 +919,38 @@
             "nl": "de ijsjes"
         }
     },
+    "chocolate": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "C1": "KK"
+        },
+        "topics": "SM1.2",
+        "en": "chocolate",
+        "fi": "suklaa",
+        "nl": "de chocolade"
+    },
     "chocolate ice cream": {
-        "roots": "ice cream",
+        "roots": [
+            "chocolate",
+            "ice cream"
+        ],
         "topics": "SM1.1",
         "en": "chocolate ice cream",
         "fi": "suklaajäätelö",
         "nl": "het chocolade-ijsje|het chocolade-ijs"
+    },
+    "vanilla": {
+        "level": {
+            "C1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "en": "vanilla",
+        "fi": "vanilja",
+        "nl": "vanille"
     },
     "banana": {
         "level": {

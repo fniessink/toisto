@@ -48,5 +48,21 @@
         "en": "first",
         "fi": "ensin",
         "nl": "eerst"
+    },
+    "same": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "en": "same",
+        "fi": "sama",
+        "nl": [
+            "dezelfde",
+            "hetzelfde"
+        ]
     }
 }

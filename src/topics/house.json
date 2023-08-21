@@ -260,6 +260,17 @@
             "nl": "de bakstenen"
         }
     },
+    "step": {
+        "level": {
+            "B1": "EP",
+            "B2": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "en": "step",
+        "fi": "porras",
+        "nl": "de trede"
+    },
     "stairs": {
         "level": {
             "A2": [

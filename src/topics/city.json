@@ -445,6 +445,46 @@
             "nl": "de bruggen"
         }
     },
+    "post": {
+        "level": {
+            "A1": "OD",
+            "A2": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics:": "SM1.2",
+        "en": [
+            "mail",
+            "post"
+        ],
+        "fi": "posti",
+        "nl": "de post"
+    },
+    "post office": {
+        "level": {
+            "A1": "OD",
+            "A2": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.2",
+        "roots": {
+            "en": [
+                "post",
+                "office"
+            ],
+            "fi": "post",
+            "nl": [
+                "post",
+                "office"
+            ]
+        },
+        "en": "post office",
+        "fi": "posti",
+        "nl": "het postkantoor"
+    },
     "mall": {
         "level": {
             "B1": [
