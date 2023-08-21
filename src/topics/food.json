@@ -363,6 +363,26 @@
             "nl": "(traditionele Finse paasdesserts)"
         }
     },
+    "pizza": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "pizza",
+            "fi": "pizza",
+            "nl": "de pizza"
+        },
+        "plural": {
+            "en": "pizzas",
+            "fi": "pizzat",
+            "nl": "de pizza's"
+        }
+    },
     "strawberry": {
         "level": {
             "A2": "OD",

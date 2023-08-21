@@ -47,7 +47,10 @@
             ],
             "C2": "KK"
         },
-        "roots": "week",
+        "roots": [
+            "end",
+            "week"
+        ],
         "topics": "SM1.1",
         "singular": {
             "en": "weekend",
@@ -393,11 +396,26 @@
         "nl": "Morgen is het dinsdag."
     },
     "what day is it today": {
-        "roots": [
-            "day",
-            "to be",
-            "today"
-        ],
+        "roots": {
+            "en": [
+                "what",
+                "day",
+                "to be",
+                "today"
+            ],
+            "fi": [
+                "what",
+                "day",
+                "to be",
+                "today"
+            ],
+            "nl": [
+                "which",
+                "day",
+                "to be",
+                "today"
+            ]
+        },
         "topics": "SM1.1",
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",

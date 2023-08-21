@@ -132,15 +132,14 @@
                             "fi": "Sinä puhut englantia.|Puhut englantia.",
                             "nl": "Jij spreekt Engels.|Je spreekt Engels."
                         },
+                        "fi": "Hän puhuu englantia.",
                         "third person": {
                             "female": {
                                 "en": "She speaks English.",
-                                "fi": "Hän puhuu englantia.;female",
                                 "nl": "Zij spreekt Engels.|Ze spreekt Engels."
                             },
                             "male": {
                                 "en": "He speaks English.",
-                                "fi": "Hän puhuu englantia.;male",
                                 "nl": "Hij spreekt Engels."
                             }
                         }
@@ -176,14 +175,13 @@
                             "nl": "Jij sprak Engels.|Je sprak Engels."
                         },
                         "third person": {
+                            "fi": "Hän puhui englantia.",
                             "female": {
                                 "en": "She spoke English.",
-                                "fi": "Hän puhui englantia.;female",
                                 "nl": "Zij sprak Engels.|Ze sprak Engels."
                             },
                             "male": {
                                 "en": "He spoke English.",
-                                "fi": "Hän puhui englantia.;male",
                                 "nl": "Hij sprak Engels."
                             }
                         }
@@ -221,14 +219,13 @@
                             "nl": "Jij spreekt geen Engels.|Je spreekt geen Engels."
                         },
                         "third person": {
+                            "fi": "Hän ei puhu englantia.",
                             "female": {
                                 "en": "She does not speak English.|She doesn't speak English.",
-                                "fi": "Hän ei puhu englantia.;female",
                                 "nl": "Zij spreekt geen Engels.|Ze spreekt geen Engels."
                             },
                             "male": {
                                 "en": "He speaks English.",
-                                "fi": "Hän ei puhu englantia.;male",
                                 "nl": "Hij spreekt geen Engels."
                             }
                         }
@@ -264,14 +261,13 @@
                             "nl": "Jij sprak geen Engels.|Je sprak geen Engels."
                         },
                         "third person": {
+                            "fi": "Hän ei puhunut englantia.",
                             "female": {
                                 "en": "She did not speak English.|She didn't speak English.",
-                                "fi": "Hän ei puhunut englantia.;female",
                                 "nl": "Zij sprak geen Engels.|Ze sprak geen Engels."
                             },
                             "male": {
                                 "en": "He did not speak English.|He didn't speak.",
-                                "fi": "Hän ei puhunut englantia.;male",
                                 "nl": "Hij sprak geen Engels."
                             }
                         }
@@ -311,14 +307,13 @@
                             "nl": "Spreek jij Engels?|Spreek je Engels?"
                         },
                         "third person": {
+                            "fi": "Puhuuko hän englantia?",
                             "female": {
                                 "en": "Does she speak English?",
-                                "fi": "Puhuuko hän englantia?;female",
                                 "nl": "Spreekt zij Engels?|Spreekt ze Engels?"
                             },
                             "male": {
                                 "en": "Does he speak English?",
-                                "fi": "Puhuuko hän englantia?;male",
                                 "nl": "Spreekt hij Engels?"
                             }
                         }
@@ -354,14 +349,13 @@
                             "nl": "Sprak jij Engels?|Sprak je Engels?"
                         },
                         "third person": {
+                            "fi": "Puhuiko hän englantia?",
                             "female": {
                                 "en": "Did she speak English?",
-                                "fi": "Puhuiko hän englantia?;female",
                                 "nl": "Sprak zij Engels?|Sprak ze Engels?"
                             },
                             "male": {
                                 "en": "Did he speak English?",
-                                "fi": "Puhuiko hän englantia?;male",
                                 "nl": "Sprak hij Engels?"
                             }
                         }
@@ -399,14 +393,13 @@
                             "nl": "Spreek jij geen Engels?|Spreek je geen Engels?"
                         },
                         "third person": {
+                            "fi": "Eikö hän puhu englantia?",
                             "female": {
                                 "en": "Does she not speak English?|Doesn't she speak English?",
-                                "fi": "Eikö hän puhu englantia?;female",
                                 "nl": "Spreekt zij geen Engels?|Spreekt ze geen Engels?"
                             },
                             "male": {
                                 "en": "Does he not speak English?|Doesn't he speak English?",
-                                "fi": "Eikö hän puhu englantia?;male",
                                 "nl": "Spreekt hij geen Engels?"
                             }
                         }
@@ -442,14 +435,13 @@
                             "nl": "Sprak jij geen Engels?|Sprak je geen Engels?"
                         },
                         "third person": {
+                            "fi": "Eikö hän puhunut englantia?",
                             "female": {
                                 "en": "Did she not speak English?|Didn't she speak English?",
-                                "fi": "Eikö hän puhunut englantia?;female",
                                 "nl": "Sprak zij geen Engels?|Sprak ze geen Engels?"
                             },
                             "male": {
                                 "en": "Did he not speak English?|Didn't he speak English?",
-                                "fi": "Eikö hän puhunut englantia?;male",
                                 "nl": "Sprak hij geen Engels?"
                             }
                         }
@@ -466,7 +458,7 @@
                             "nl": "Spraken jullie geen Engels?"
                         },
                         "third person": {
-                            "en": "Did they not speak English?|Didn't they speak English",
+                            "en": "Did they not speak English?|Didn't they speak English?",
                             "fi": "Eivätkö he puhuneet englantia?",
                             "nl": "Spraken zij geen Engels?|Spraken ze geen Engels?"
                         }

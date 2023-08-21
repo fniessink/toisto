@@ -394,5 +394,23 @@
             "fi": "varpaat",
             "nl": "de tenen"
         }
+    },
+    "beard": {
+        "level": {
+            "A1": "EP",
+            "A2": "OD",
+            "B1": "KK"
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "beard",
+            "fi": "parta",
+            "nl": "de baard"
+        },
+        "plural": {
+            "en": "beards",
+            "fi": "parrat",
+            "nl": "de baarden"
+        }
     }
 }

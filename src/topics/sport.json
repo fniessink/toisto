@@ -1,5 +1,12 @@
 {
     "game": {
+        "levels": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
         "topics": "SM1.2",
         "singular": {
             "en": "game",
@@ -12,6 +19,26 @@
             "nl": "de spelen"
         }
     },
+    "ball": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "ball",
+            "fi": "pallo",
+            "nl": "de bal"
+        },
+        "plural": {
+            "en": "balls",
+            "fi": "pallot",
+            "nl": "de ballen"
+        }
+    },
     "football": {
         "level": {
             "A1": [
@@ -20,11 +47,14 @@
                 "OD"
             ]
         },
-        "roots": "foot",
+        "roots": [
+            "ball",
+            "foot"
+        ],
         "topics": "SM1.5",
         "en": "football",
         "fi": [
-            "jalkopallo",
+            "jalkapallo",
             "futis*"
         ],
         "nl": "de voetbal"

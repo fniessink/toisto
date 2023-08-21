@@ -117,7 +117,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.2"
+        ],
         "en": "OK!|Okay!",
         "fi": "Okei!",
         "nl": "OK!|Oké!"

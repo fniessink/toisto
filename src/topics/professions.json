@@ -39,7 +39,10 @@
                 "OD"
             ]
         },
-        "topics": ["learning", "SM1.1"],
+        "topics": [
+            "learning",
+            "SM1.1"
+        ],
         "singular": {
             "en": "teacher",
             "fi": "opettaja",
@@ -56,5 +59,21 @@
                 "de leraren"
             ]
         }
+    },
+    "seller": {
+        "level": {
+            "A2": "KK",
+            "B1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "topics": [
+            "SM1.2",
+            "money"
+        ],
+        "en": "seller",
+        "fi": "myyjä",
+        "nl": "de verkoper"
     }
 }
