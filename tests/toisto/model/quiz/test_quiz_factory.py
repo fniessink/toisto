@@ -1211,3 +1211,15 @@ class ColloquialTest(ToistoTestCase):
             },
             create_quizzes("fi", "en", no),
         )
+
+
+class MeaningsTest(ToistoTestCase):
+    """Test that quizzes have the correct meaning."""
+
+    def test_interpret_with_synonym(self):
+        """Test that interpret quizzes show all synonyms as meaning."""
+        concept = create_concept("yes", dict(fi=["kylla", "joo"], en="yes"))
+        quizzes = create_quizzes("fi", "en", concept)
+        interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
+        for quiz in interpret_quizzes:
+            self.assertEqual(("kylla", "joo"), quiz.meanings)

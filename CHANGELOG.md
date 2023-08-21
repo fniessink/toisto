@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Don't consider answers with spaces inside correct. Fixes [#403](https://github.com/fniessink/toisto/issues/403).
+- After asking the user to listen to and translate a concept with synonyms, show all synonyms as meanings. Fixes [#408](https://github.com/fniessink/toisto/issues/408).
 
 ### Added
 
