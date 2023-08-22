@@ -80,4 +80,8 @@ def label_factory(string: str | list[str]) -> Labels:
 def meaning_factory(string: str | list[str]) -> Labels:
     """Instantiate the meanings from a string or list of strings."""
     meanings = string if isinstance(string, list) else [string]
-    return tuple(Label(meaning.removeprefix("(").removesuffix(")")) for meaning in meanings)
+    return tuple(
+        Label(meaning.removeprefix("(").removesuffix(")"))
+        for meaning in meanings
+        if not meaning.endswith(Label.COLLOQUIAL_POSTFIX)
+    )

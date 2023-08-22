@@ -1223,3 +1223,11 @@ class MeaningsTest(ToistoTestCase):
         interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
         for quiz in interpret_quizzes:
             self.assertEqual(("kylla", "joo"), quiz.meanings)
+
+    def test_interpret_with_colloquial(self):
+        """Test that interpret quizzes don't show colloquial labels as meaning."""
+        concept = create_concept("20", dict(fi=["kaksikymmentä", "kakskyt*"], nl="twintig"))
+        quizzes = create_quizzes("fi", "nl", concept)
+        interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
+        for quiz in interpret_quizzes:
+            self.assertEqual(("kaksikymmentä",), quiz.meanings)
