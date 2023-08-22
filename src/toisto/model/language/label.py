@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
+from string import punctuation
 from typing import Final
 
 
@@ -55,6 +56,11 @@ class Label(str):
     def is_colloquial(self) -> bool:
         """Return whether this is a colloquial label."""
         return self.without_notes.endswith(self.COLLOQUIAL_POSTFIX)
+
+    @property
+    def is_complete_sentence(self) -> bool:
+        """Return whether this is a complete sentence (starts with a capital and has punctuation)."""
+        return self.without_notes[0].isupper() and bool(set(self.without_notes) & set(punctuation))
 
     @property
     def pronounceable(self) -> str:

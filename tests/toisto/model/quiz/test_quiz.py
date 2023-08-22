@@ -156,7 +156,7 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "en", "nl", "because", answers, "write")
         self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
 
-    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dicate(self):
+    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dictate(self):
         """Test that colloquial labels get an automatic note."""
         quiz = self.create_quiz(self.concept, "fi", "fi", "seittemän*", ["seitsemän"], "dictate")
         self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
@@ -165,6 +165,11 @@ class QuizTest(QuizTestCase):
         """Test that colloquial labels get an automatic note."""
         quiz = self.create_quiz(self.concept, "fi", "nl", "seittemän*", ["zeven"], "interpret")
         self.assertEqual("Listen to the colloquial Finnish and write in Dutch", quiz.instruction)
+
+    def test_sentences_get_an_automatic_note_when_quiz_type_is_listen(self):
+        """Test that sentences get an automatic note when the quiz type is a listen quiz."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Terve!", ["Hallo!"], "interpret")
+        self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
 
 class QuizEqualityTests(QuizTestCase):
