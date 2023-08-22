@@ -155,6 +155,8 @@ class Quiz:
                     instruction_text += " standard"
             else:
                 instruction_text = INSTRUCTIONS[quiz_type]
+            if self.question.is_complete_sentence:
+                instruction_text = instruction_text.replace("write ", "write a complete sentence ")
         return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._question_note}"
 
     @property
