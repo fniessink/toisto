@@ -65,7 +65,7 @@ class Label(str):
     @property
     def pronounceable(self) -> str:
         """Return the label as text that can be sent to a speech synthesizer."""
-        return self.without_notes.rstrip(self.COLLOQUIAL_POSTFIX)
+        return self.without_notes.rstrip(self.COLLOQUIAL_POSTFIX).replace("'", "")
 
 
 Labels = tuple[Label, ...]
