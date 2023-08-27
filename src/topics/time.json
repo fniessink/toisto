@@ -19,7 +19,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "en": "now",
         "fi": "nyt",
         "nl": "nu"
@@ -100,6 +103,7 @@
             ],
             "nl": "day"
         },
+        "topics": "SM1.3",
         "singular": {
             "en": "afternoon",
             "fi": "iltapäivä",
@@ -119,6 +123,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "singular": {
             "en": "evening",
             "fi": "ilta",
@@ -138,7 +143,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "singular": {
             "en": "night",
             "fi": "yö",
@@ -270,6 +278,7 @@
             "nl": "de minuten"
         }
     },
+    "": {},
     "clock": {
         "level": {
             "A1": [

@@ -48,13 +48,16 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Thank you!|Thanks!",
         "fi": [
             "Kiitos!",
             "Kiitti!*"
         ],
-        "nl": "Dank je!|Dank u!|Bedankt!"
+        "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
     },
     "you're welcome": {
         "level": {
@@ -90,6 +93,18 @@
         "en": "Sorry!",
         "fi": "Anteeksi!",
         "nl": "Sorry!"
+    },
+    "excuse me": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "en": "Excuse me?|Excuse me!",
+        "fi": "Anteeksi?|Anteeksi!",
+        "nl": "Pardon?|Pardon!"
     },
     "no problem": {
         "level": {
@@ -210,6 +225,26 @@
         "en": "Thank you, same to you!|Thanks, same to you!",
         "fi": "Kiitos samoin!",
         "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
+    },
+    "example": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "CN1.1",
+        "singular": {
+            "en": "example",
+            "fi": "esimerkki",
+            "nl": "het voorbeeld"
+        },
+        "plural": {
+            "en": "examples",
+            "fi": "esimerkit",
+            "nl": "de voorbeelden"
+        }
     },
     "for example": {
         "level": {

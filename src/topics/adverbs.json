@@ -7,8 +7,12 @@
             ],
             "B1": "KK"
         },
+        "topics": "SM1.3",
         "en": "there",
-        "fi": "tuossa",
+        "fi": [
+            "tuolla",
+            "tuossa"
+        ],
         "nl": "daar"
     },
     "here": {
@@ -37,7 +41,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "en": "also",
         "fi": "myös",
         "nl": "ook"

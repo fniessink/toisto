@@ -7,6 +7,10 @@
                 "OD"
             ]
         },
+        "topics": [
+            "CN1.1",
+            "SM1.3"
+        ],
         "singular": {
             "en": "city",
             "fi": "kaupunki",
@@ -195,6 +199,7 @@
             "A2": "EP",
             "B1": "KK"
         },
+        "topics": "SM1.3",
         "singular": {
             "en": "office",
             "fi": "toimisto",

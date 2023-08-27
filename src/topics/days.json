@@ -19,6 +19,12 @@
             "nl": "de dagen"
         }
     },
+    "24 hours": {
+        "topics": "SM1.3",
+        "en": "(twenty-four hours)",
+        "fi": "vuorokausi",
+        "nl": "het etmaal"
+    },
     "week": {
         "level": {
             "A1": [
@@ -27,7 +33,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "SM1.1",
+            "SM1.3"
+        ],
         "singular": {
             "en": "week",
             "fi": "viikko",
@@ -296,7 +305,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "tomorrow",
         "fi": "huomenna",
         "nl": "morgen"

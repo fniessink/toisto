@@ -8,6 +8,7 @@
             ]
         },
         "topics": [
+            "CN1.1",
             "SM1.1",
             "SM1.2"
         ],
@@ -63,6 +64,7 @@
                 "language"
             ]
         },
+        "topics": "SM1.3",
         "en": "written language",
         "fi": "kirjakieli",
         "nl": "de schrijftaal"
@@ -86,8 +88,12 @@
                 "language"
             ]
         },
-        "topics": "SM1.2",
-        "en": "nother tongue",
+        "topics": [
+            "CN1.1",
+            "SM1.2",
+            "SM1.3"
+        ],
+        "en": "mother tongue",
         "fi": "äidinkieli",
         "nl": "de moedertaal"
     },
@@ -296,6 +302,7 @@
                 "OD"
             ]
         },
+        "topics": "CN1.1",
         "en": "Dutch;;In English, the names of languages are capitalized",
         "fi": "hollanti;;In Finnish, the names of languages are not capitalized",
         "nl": "Nederlands|het Nederlands;;In Dutch, the names of languages are capitalized"

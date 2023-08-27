@@ -33,6 +33,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "positive degree": {
             "en": "important",
             "fi": "tärkeä",
@@ -787,7 +788,11 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1",
+            "SM1.3"
+        ],
         "positive degree": {
             "en": "nice",
             "fi": [
@@ -872,6 +877,7 @@
             ]
         },
         "topics": [
+            "CN1.1",
             "SM1.1",
             "SM1.3"
         ],
@@ -1237,7 +1243,10 @@
     "dumb": {
         "level": {
             "A2": "KK",
-            "C1": "OD"
+            "C1": [
+                "EP",
+                "OD"
+            ]
         },
         "topics": "SM1.2",
         "positive degree": {
@@ -1255,5 +1264,18 @@
             "fi": "tyhmin",
             "nl": "domst"
         }
+    },
+    "half": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "en": "half",
+        "fi": "puoli",
+        "nl": "half"
     }
 }
