@@ -42,3 +42,7 @@ class MatchTest(unittest.TestCase):
     def test_match_apostrophe(self):
         """Test that an apostrophe cannot be left out."""
         self.assertFalse(match("opa's", "opas"))
+
+    def test_match_hyphen(self):
+        """Test that a hyphen cannot be left out."""
+        self.assertFalse(match("chocolade-ijs", "chocoladeijs"))

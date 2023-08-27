@@ -2468,7 +2468,7 @@
             }
         }
     },
-    "to meet": {
+    "to meet (someone new)": {
         "level": {
             "A1": [
                 "EP",
@@ -2478,9 +2478,24 @@
         },
         "topics": "SM1.1",
         "infinitive": {
-            "en": "to meet",
+            "en": "to meet;someone new",
             "fi": "tutustua",
             "nl": "kennismaken"
+        }
+    },
+    "to meet (come face to face with)": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to meet;come face to face with",
+            "fi": "tavata",
+            "nl": "ontmoeten"
         }
     },
     "to end": {
@@ -2529,6 +2544,60 @@
             "en": "to take",
             "fi": "ottaa",
             "nl": "nemen"
+        }
+    },
+    "to speak": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": [
+                "to talk",
+                "to speak"
+            ],
+            "fi": "puhua",
+            "nl": [
+                "praten",
+                "spreken"
+            ]
+        }
+    },
+    "to save money": {
+        "level": {
+            "A2": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "money",
+            "SM1.2"
+        ],
+        "infinitive": {
+            "en": "to save",
+            "fi": "säästä",
+            "nl": "sparen"
+        }
+    },
+    "to kill": {
+        "level": {
+            "A2": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "infinitive": {
+            "en": "to kill",
+            "fi": "tappaa",
+            "nl": "doden"
         }
     }
 }

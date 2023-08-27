@@ -1,5 +1,13 @@
 {
     "drill": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
         "en": "drill",
         "fi": "pora",
         "nl": "de boor"
