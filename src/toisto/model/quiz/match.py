@@ -2,9 +2,10 @@
 
 import string
 
-# Translation table to remove punctuation from strings, except apostrophes.
+# Translation table to remove punctuation from strings, except apostrophes and hyphens.
 WITHOUT_PUNCTUATION = str.maketrans("", "", string.punctuation)
-del WITHOUT_PUNCTUATION[ord("'")]
+for char in ["'", "-"]:
+    del WITHOUT_PUNCTUATION[ord(char)]
 
 
 def match(text1: str, *texts: str) -> bool:
