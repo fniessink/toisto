@@ -8,6 +8,7 @@
             ]
         },
         "topics": [
+            "CN1.1",
             "SM1.1",
             "SM1.2"
         ],
@@ -49,7 +50,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "en": "Where?",
         "fi": "Missä?",
         "nl": "Waar?"
@@ -88,6 +92,7 @@
             ]
         },
         "topics": [
+            "CN1.1",
             "SM1.1",
             "SM1.2"
         ],
@@ -106,7 +111,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "en": "How?",
         "fi": [
             "Miten?",
@@ -134,6 +142,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "en": "What kind of?",
         "fi": "Millainen?",
         "nl": [
@@ -227,7 +236,8 @@
     "where is the toilet": {
         "roots": [
             "where",
-            "to be"
+            "to be",
+            "toilet"
         ],
         "en": [
             "Where is the toilet?",

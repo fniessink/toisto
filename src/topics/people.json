@@ -1,0 +1,70 @@
+{
+    "woman": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "singular": {
+            "en": "woman",
+            "fi": "nainen",
+            "nl": "de vrouw"
+        },
+        "plural": {
+            "en": "women",
+            "fi": "naiset",
+            "nl": "de vrouwen"
+        }
+    },
+    "girl": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "singular": {
+            "en": "girl",
+            "fi": "tyttö",
+            "nl": "het meisje"
+        },
+        "plural": {
+            "en": "girls",
+            "fi": "tytöt",
+            "nl": "de meisjes"
+        }
+    },
+    "friend": {
+        "singular": {
+            "en": "friend",
+            "fi": "ystävä",
+            "nl": "de vriend"
+        },
+        "plural": {
+            "en": "friends",
+            "fi": "ystävät",
+            "nl": "de vrienden"
+        }
+    },
+    "female friend": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "en": ["girl", "friend"],
+            "fi": ["girl", "friend"],
+            "nl": "friend"
+        },
+        "topics": "SM1.3",
+        "en": "girlfriend",
+        "fi": "tyttöystävä",
+        "nl": "de vriendin"
+    }
+}

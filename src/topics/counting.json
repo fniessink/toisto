@@ -657,7 +657,7 @@
         ],
         "topics": "SM1.1",
         "en": "three hundred",
-        "fi": "kolmesataa",
+        "fi": "kolmesataa;;'sataa' is the partitive case of 'sata'",
         "nl": "driehonderd"
     },
     "1000": {
@@ -687,7 +687,7 @@
         ],
         "topics": "SM1.1",
         "en": "two thousand",
-        "fi": "kaksituhatta",
+        "fi": "kaksituhatta;;'tuhatta' is the partitive case of 'tuhat'",
         "nl": "tweeduizend"
     },
     "500000": {
@@ -705,7 +705,7 @@
         ],
         "topics": "SM1.1",
         "en": "five hunderd thousand",
-        "fi": "viisisataatuhatta",
+        "fi": "viisisataatuhatta;;'sataa' and 'tuhatta' are the partitive case of 'sata' and 'tuhat' respectively",
         "nl": "vijfhonderdduizend"
     },
     "1000000": {
@@ -735,7 +735,7 @@
         ],
         "topics": "SM1.1",
         "en": "two million",
-        "fi": "kaksi miljoonaa",
+        "fi": "kaksi miljoonaa;;'miljoonaa' is the partitive case of 'miljoona'",
         "nl": "twee miljoen"
     },
     "1000000000": {
@@ -763,7 +763,7 @@
         ],
         "topics": "SM1.1",
         "en": "five billion",
-        "fi": "viisi miljardia",
+        "fi": "viisi miljardia;;'miljardia' is the partitive case of 'miljardi'",
         "nl": "vijf miljard"
     },
     "pair": {
@@ -774,6 +774,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "singular": {
             "en": "pair",
             "fi": "pari",

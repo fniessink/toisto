@@ -11,7 +11,8 @@
             "nl": "moon"
         },
         "topics": [
-            "time"
+            "time",
+            "SM1.3"
         ],
         "singular": {
             "en": "month",
@@ -47,11 +48,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "January;;In English, names of months are capitalized",
         "fi": "tammikuu;;In Finnish, names of months are not capitalized",
         "nl": "januari;;In Dutch, names of months are not capitalized"
@@ -67,11 +70,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "February;;In English, names of months are capitalized",
         "fi": "helmikuu;;In Finnish, names of months are not capitalized",
         "nl": "februari;;In Dutch, names of months are not capitalized"
@@ -81,11 +86,14 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
+
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "March;;In English, names of months are capitalized",
         "fi": "maaliskuu;;In Finnish, names of months are not capitalized",
         "nl": "maart;;In Dutch, names of months are not capitalized"
@@ -95,7 +103,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
@@ -115,11 +124,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "May;;In English, names of months are capitalized",
         "fi": "toukokuu;;In Finnish, names of months are not capitalized",
         "nl": "mei;;In Dutch, names of months are not capitalized"
@@ -129,7 +140,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": [
@@ -137,6 +149,7 @@
                 "moon"
             ]
         },
+        "topics": "SM1.3",
         "en": "June;;In English, names of months are capitalized",
         "fi": "kesäkuu;;In Finnish, names of months are not capitalized",
         "nl": "juni;;In Dutch, names of months are not capitalized"
@@ -146,11 +159,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "July;;In English, names of months are capitalized",
         "fi": "heinäkuu;;In Finnish, names of months are not capitalized",
         "nl": "juli;;In Dutch, names of months are not capitalized"
@@ -160,11 +175,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "August;;In English, names of months are capitalized",
         "fi": "elokuu;;In Finnish, names of months are not capitalized",
         "nl": "augustus;;In Dutch, names of months are not capitalized"
@@ -174,7 +191,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": [
@@ -182,6 +200,7 @@
                 "moon"
             ]
         },
+        "topics": "SM1.3",
         "en": "September;;In English, names of months always capitalized",
         "fi": "syyskuu;;In Finnish, names of months are not capitalized",
         "nl": "september;;In Dutch, names of months are not capitalized"
@@ -191,11 +210,14 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
+
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "October;;In English, names of months are capitalized",
         "fi": "lokakuu;;In Finnish, names of months are not capitalized",
         "nl": "oktober;;In Dutch, names of months are not capitalized"
@@ -205,11 +227,13 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": "moon"
         },
+        "topics": "SM1.3",
         "en": "November;;In English, names of months are capitalized",
         "fi": "marraskuu;;In Finnish, names of months are not capitalized",
         "nl": "november;;In Dutch, names of months are not capitalized"
@@ -219,7 +243,8 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": {
             "fi": [
@@ -227,6 +252,7 @@
                 "moon"
             ]
         },
+        "topics": "SM1.3",
         "en": "December;;In English, names of months are capitalized",
         "fi": "joulukuu;;In Finnish, names of months are not capitalized",
         "nl": "december;;In Dutch, names of months are not capitalized"

@@ -6,8 +6,12 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "en": "weather",
-        "fi": "sää",
+        "fi": [
+            "ilma",
+            "sää"
+        ],
         "nl": "het weer"
     },
     "how is the weather": {
@@ -236,9 +240,11 @@
             ],
             "nl": "to be"
         },
+        "topics": "SM1.3",
         "en": "There is a thunderstorm.|There's a thunderstorm.",
         "fi": [
             "Ukkostaa.",
+            "On ukkonen.",
             "On ukonilma."
         ],
         "nl": "Het onweert."
@@ -262,6 +268,7 @@
             "fi": "rain",
             "nl": "rain"
         },
+        "topics": "SM1.3",
         "en": "It is raining.|It's raining.",
         "fi": [
             "Sataa vettä.",
@@ -278,15 +285,23 @@
             "fi": "snow",
             "nl": "snow"
         },
+        "topics": "SM1.3",
         "en": "It is snowing.|It's snowing.",
         "fi": "Sataa lunta.",
         "nl": "Het sneeuwt."
+    },
+    "it is freezing": {
+        "topics": "SM1.3",
+        "en": "It is freezing.",
+        "fi": "On pakkasta.",
+        "nl": "Het vriest."
     },
     "it is rainy": {
         "roots": [
             "to be",
             "rainy"
         ],
+        "topics": "SM1.3",
         "en": "It is rainy.|It's rainy.",
         "fi": "On sateista.",
         "nl": "Het is regenachtig."
@@ -296,6 +311,7 @@
             "to be",
             "sunny"
         ],
+        "topics": "SM1.3",
         "en": "It is sunny.|It's sunny.",
         "fi": "On aurinkoista.",
         "nl": "Het is zonnig."
@@ -305,18 +321,43 @@
             "to be",
             "windy"
         ],
+        "topics": "SM1.3",
         "en": "It is windy.|It's windy.",
-        "fi": "On tuulista.",
-        "nl": "Het is winderig."
+        "fi": [
+            "On tuulista.",
+            "Tuulee."
+        ],
+        "nl": [
+            "Het is winderig.",
+            "Het waait."
+        ]
     },
     "it is cloudy": {
         "roots": [
             "to be",
             "cloudy"
         ],
+        "topics": "SM1.3",
         "en": "It is cloudy.|It's cloudy.",
         "fi": "On pilvistä.",
         "nl": "Het is bewolkt."
+    },
+    "it is partly cloudy": {
+        "roots": "it is cloudy",
+        "topics": "SM1.3",
+        "en": "It is partly cloudy.",
+        "fi": "On puolipilvistä.",
+        "nl": "Het is half bewolkt."
+    },
+    "it is storming": {
+        "roots": [
+            "to be",
+            "stormy"
+        ],
+        "topics": "SM1.3",
+        "en": "It is storming.",
+        "fi": "On myrsky.",
+        "nl": "Het stormt."
     },
     "it is stormy": {
         "roots": [
@@ -332,8 +373,16 @@
             "to be",
             "foggy"
         ],
+        "topics": "SM1.3",
         "en": "It is foggy.|It's foggy.",
         "fi": "On sumuista.",
         "nl": "Het is mistig."
+    },
+    "the sun shines": {
+        "roots": "sun",
+        "topics": "SM1.3",
+        "en": "The sun shines.",
+        "fi": "Aurinko paistaa.",
+        "nl": "De zon schijnt."
     }
 }

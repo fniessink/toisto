@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Hi!",
         "fi": [
             "Hei!",
@@ -24,7 +27,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Hello!",
         "fi": "Terve!",
         "nl": "Hallo!"
@@ -37,7 +43,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": [
             "Bye!",
             "Bye bye!"
@@ -49,6 +58,7 @@
             "Moikka!;leaving"
         ],
         "nl": [
+            "Doeg!",
             "Doei!",
             "Dag!"
         ]
@@ -61,8 +71,14 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.1",
-        "en": "See you!",
+        "topics": [
+            "SN1.1",
+            "SM1.1"
+        ],
+        "en": [
+            "Goodbye",
+            "See you later!See you!"
+        ],
         "fi": [
             "Nähdään!",
             "Näkemiin!"
@@ -136,6 +152,16 @@
         "fi": "Minulle kuuluu hyvää.",
         "nl": "Met mij gaat het goed."
     },
+    "excuse me, can you help me": {
+        "roots": [
+            "excuse me",
+            "to help"
+        ],
+        "topics": "SM1.3",
+        "en": "Excuse me, can you help me?",
+        "fi": "Anteeksi, voitko auttaa minua?",
+        "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
+    },
     "name": {
         "level": {
             "A1": [
@@ -144,7 +170,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "singular": {
             "en": "name",
             "fi": "nimi",
@@ -167,10 +196,26 @@
         "roots": [
             "name"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1",
+            "SM1.3"
+        ],
         "en": "first name",
         "fi": "etunimi",
         "nl": "de voornaam"
+    },
+    "given name": {
+        "level": {
+            "C1": "OD",
+            "none": "EP"
+        },
+        "roots": "name",
+        "topics": [
+            "CN1.1"
+        ],
+        "en": "given name",
+        "nl": "de roepnaam"
     },
     "last name": {
         "level": {
@@ -183,7 +228,11 @@
         "roots": [
             "name"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1",
+            "SM1.3"
+        ],
         "en": [
             "last name",
             "surname"
@@ -213,7 +262,10 @@
     "a pleasure to meet you": {
         "roots": {
             "en": "to meet",
-            "fi": ["funny", "to meet"],
+            "fi": [
+                "funny",
+                "to meet"
+            ],
             "nl": "to meet"
         },
         "topics": "SM1.1",
@@ -259,7 +311,10 @@
             "good",
             "morning"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Good morning!|Morning!",
         "fi": "Hyvää huomenta!|Huomenta!",
         "nl": "Goedemorgen!|Morgen!"
@@ -286,7 +341,10 @@
                 "afternoon"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Good afternoon!",
         "fi": "Hyvää päivää!;afternoon",
         "nl": "Goedemiddag!"
@@ -320,7 +378,10 @@
             "good",
             "evening"
         ],
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "en": "Good evening!",
         "fi": "Hyvää iltaa!|Iltaa!",
         "nl": "Goedenavond!"

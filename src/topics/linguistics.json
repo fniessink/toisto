@@ -245,6 +245,20 @@
             "nl": "de werkwoorden"
         }
     },
+    "verb type": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": "verb",
+        "topics": "SM1.3",
+        "en": "verb type",
+        "fi": "verbityyppi",
+        "nl": "het werkwoordtype"
+    },
     "main verb": {
         "roots": {
             "en": "verb",
@@ -327,5 +341,32 @@
         "en": "intonation",
         "fi": "intonaatio",
         "nl": "de intonatie"
+    },
+    "genitive": {
+        "level": {
+            "C2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.3",
+        "en": "genitive",
+        "fi": "genetiivi",
+        "nl": "genitief"
+    },
+    "singular": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "B2": "KK"
+        },
+        "roots": {
+            "fi": "1"
+        },
+        "topics": "SM1.3",
+        "en": "singular",
+        "fi": "yksikkö",
+        "nl": "het enkelvoud"
     }
 }

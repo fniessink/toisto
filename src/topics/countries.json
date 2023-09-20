@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "country",
             "fi": "maa;geography",
@@ -39,7 +42,10 @@
             "C1": "KK",
             "none": "OD"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "CN1.1",
+            "SM1.2"
+        ],
         "singular": {
             "en": "nationality",
             "fi": "kansalaisuus",
@@ -134,9 +140,26 @@
             "fi": "country",
             "nl": "country"
         },
+        "topics": "CN1.1",
         "en": "The Netherlands",
-        "fi": "Alankomaat",
+        "fi": [
+            "Alankomaat",
+            "Hollanti"
+        ],
         "nl": "Nederland"
+    },
+    "dutchman": {
+        "roots": {
+            "fi": "netherlands",
+            "nl": "netherlands"
+        },
+        "topics": "CN1.1",
+        "en": "Dutchman",
+        "fi": [
+            "alankomaalainen",
+            "hollantilainen"
+        ],
+        "nl": "de Nederlander"
     },
     "germany": {
         "roots": {

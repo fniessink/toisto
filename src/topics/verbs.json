@@ -7,7 +7,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
+        "topics": [
+            "CN1.1",
+            "SM1.1"
+        ],
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -453,6 +456,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -1234,6 +1238,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "infinitive": {
             "en": "to eat",
             "fi": "syödä",
@@ -1332,6 +1337,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.3",
         "infinitive": {
             "en": "to sleep",
             "fi": "nukkua",
@@ -1575,7 +1581,7 @@
                 "third person": {
                     "en": "they come",
                     "fi": "he tulevat",
-                    "nl": "zij komen|ze Komen"
+                    "nl": "zij komen|ze komen"
                 }
             }
         },
@@ -1630,7 +1636,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
+        "topics": [
+            "SM1.3",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1731,6 +1740,7 @@
         },
         "topics": [
             "SM1.2",
+            "SM1.3",
             "SM1.5"
         ],
         "infinitive": {
@@ -2087,7 +2097,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
+        "topics": [
+            "SM1.3",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to give",
             "fi": "antaa",
@@ -2197,7 +2210,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
+        "topics": [
+            "SM1.3",
+            "SM1.5"
+        ],
         "infinitive": {
             "en": "to want",
             "fi": "haluta",
@@ -2598,6 +2614,69 @@
             "en": "to kill",
             "fi": "tappaa",
             "nl": "doden"
+        }
+    },
+    "to help": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "infinitive": {
+            "en": "to help",
+            "fi": "auttaa",
+            "nl": "helpen"
+        }
+    },
+    "to begin": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "infinitive": {
+            "en": "to begin",
+            "fi": "alkaa",
+            "nl": "beginnen"
+        }
+    },
+    "to understand": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "infinitive": {
+            "en": "to understand",
+            "fi": "ymmärtää",
+            "nl": "begrijpen"
+        }
+    },
+    "to know": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.3",
+        "infinitive": {
+            "en": "to know",
+            "fi": "tietää",
+            "nl": [
+                "weten",
+                "kennen"
+            ]
         }
     }
 }

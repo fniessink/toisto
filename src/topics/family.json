@@ -135,7 +135,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.3",
+            "SM1.4"
+        ],
         "singular": {
             "en": "mother",
             "fi": "äiti",

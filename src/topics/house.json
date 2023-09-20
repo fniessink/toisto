@@ -22,6 +22,30 @@
             "nl": "de appartementen"
         }
     },
+    "single-room apartment ": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": "apartment",
+            "fi": "1",
+            "nl": "apartment"
+        },
+        "topics": "SM1.3",
+        "en": [
+            "studio apartment",
+            "studio"
+        ],
+        "fi": "yksiö",
+        "nl": [
+            "het eenkamerappartement",
+            "de studio"
+        ]
+    },
     "room": {
         "level": {
             "A1": [
@@ -71,7 +95,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.3"
+        ],
         "singular": {
             "en": "home",
             "fi": "koti",
@@ -441,5 +468,27 @@
         "en": "bathroom",
         "fi": "kylpyhuone",
         "nl": "de badkamer"
+    },
+    "toilet": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "topics": "SM1.2",
+        "en": [
+            "restroom",
+            "toilet"
+        ],
+        "fi": [
+            "wc",
+            "vessa"
+        ],
+        "nl": [
+            "de wc",
+            "het toilet"
+        ]
     }
 }
