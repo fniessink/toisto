@@ -456,7 +456,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
+        "topics": [
+            "CN1.1",
+            "SM1.3"
+        ],
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -1842,6 +1845,7 @@
             ]
         },
         "topics": [
+            "CN1.1",
             "SM1.2",
             "SM1.5"
         ],

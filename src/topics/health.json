@@ -2,14 +2,34 @@
     "health": {
         "level": {
             "A1": "OD",
-            "A2": "EP"
+            "A2": [
+                "EP",
+                "KK"
+            ]
         },
         "en": "health",
         "fi": "terveys",
         "nl": "de gezondheid"
     },
+    "health centre": {
+        "level": {
+            "none": [
+                "EP",
+                "OD"
+            ]
+        },
+        "roots": "health",
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "health centre|health center",
+        "fi": "terveysasema",
+        "nl": "het gezondheidscentrum"
+    },
     "care": {
         "level": {
+            "A1": "KK",
             "A2": "OD",
             "B2": "EP"
         },
@@ -20,7 +40,8 @@
     "health care": {
         "level": {
             "B2": "OD",
-            "C1": "EP"
+            "C1": "EP",
+            "none": "KK"
         },
         "roots": [
             "health",
@@ -32,6 +53,7 @@
     },
     "disease": {
         "level": {
+            "A1": "KK",
             "A2": "OD",
             "B1": "EP"
         },
@@ -48,6 +70,7 @@
     },
     "patient": {
         "level": {
+            "A1": "KK",
             "A2": "OD",
             "B1": "EP"
         },
@@ -64,6 +87,7 @@
     },
     "medicine": {
         "level": {
+            "A1": "KK",
             "A2": [
                 "EP",
                 "OD"
@@ -84,6 +108,7 @@
         "level": {
             "B2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -101,7 +126,8 @@
     "flu": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "C1": "KK"
         },
         "singular": {
             "en": "flu",
@@ -117,7 +143,8 @@
     "fever": {
         "level": {
             "B1": "EP",
-            "B2": "OD"
+            "B2": "OD",
+            "C1": "KK"
         },
         "singular": {
             "en": "fever",
@@ -134,6 +161,7 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
@@ -150,7 +178,8 @@
     "ache": {
         "level": {
             "A2": "OD",
-            "B1": "EP"
+            "B1": "EP",
+            "none": "KK"
         },
         "singular": {
             "en": "ache",
@@ -165,6 +194,7 @@
     },
     "pain": {
         "level": {
+            "A1": "KK",
             "A2": [
                 "EP",
                 "OD"
@@ -186,7 +216,8 @@
             "A2": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "none": "KK"
         },
         "roots": [
             "head",
@@ -214,6 +245,10 @@
         "roots": {
             "nl": "house"
         },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
         "singular": {
             "en": "hospital",
             "fi": "sairaala",
@@ -231,7 +266,11 @@
             "B2": "OD",
             "none": "KK"
         },
-        "topics": "SM1.5",
+        "topics": [
+            "city",
+            "SM1.5",
+            "SM1.7"
+        ],
         "singular": {
             "en": "pharmacy",
             "fi": "apteekki",

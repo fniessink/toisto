@@ -118,12 +118,87 @@
     },
     "student": {
         "level": {
-            "A1": ["EP", "OD"],
+            "A1": [
+                "EP",
+                "OD"
+            ],
             "A2": "KK"
         },
         "topics": "SM1.2",
         "en": "student",
         "fi": "opiskelija",
         "nl": "de student"
+    },
+    "university": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "singular": {
+            "en": "university",
+            "fi": "yliopisto",
+            "nl": "de universiteit"
+        },
+        "plural": {
+            "en": "universities",
+            "fi": "yliopistot",
+            "nl": "de universiteiten"
+        }
+    },
+    "school": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "singular": {
+            "en": "school",
+            "fi": "koulu",
+            "nl": "de school"
+        },
+        "plural": {
+            "en": "schools",
+            "fi": "koulut",
+            "nl": "de scholen"
+        }
+    },
+    "day care centre": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": [
+                "day",
+                "care"
+            ],
+            "fi": [
+                "day",
+                "home"
+            ],
+            "nl": "child"
+        },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "day care centre|day care center",
+        "fi": "päiväkoti",
+        "nl": "de kinderopvang"
     }
 }
