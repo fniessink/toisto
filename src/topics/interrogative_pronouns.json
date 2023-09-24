@@ -23,6 +23,7 @@
                 "OD"
             ]
         },
+        "topics": "CN1.1",
         "en": "What?",
         "fi": [
             "Mitä?;;'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
@@ -63,7 +64,10 @@
             "C2": "KK",
             "none": "OD"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "CN1.1"
+        ],
         "en": "Where from?",
         "fi": "Mistä?",
         "nl": "Waar vandaan?"

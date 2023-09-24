@@ -100,6 +100,10 @@
                 "OD"
             ]
         },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
         "singular": {
             "en": "port",
             "fi": "satama",
@@ -117,21 +121,23 @@
             "A2": "EP",
             "none": "KK"
         },
-        "topics": "city",
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
         "roots": {
             "en": "port",
-            "fi": "flight"
+            "fi": [
+                "flight",
+                "station"
+            ]
         },
-        "singular": {
-            "en": "airport",
-            "fi": "lentokenttä",
-            "nl": "het vliegveld"
-        },
-        "plural": {
-            "en": "airports",
-            "fi": "lentokentät",
-            "nl": "de vliegvelden"
-        }
+        "en": "airport",
+        "fi": [
+            "lentoasema",
+            "lentokenttä"
+        ],
+        "nl": "het vliegveld"
     },
     "boat": {
         "level": {
@@ -163,7 +169,8 @@
         },
         "topics": [
             "SM1.2",
-            "SM1.6"
+            "SM1.6",
+            "SM1.7"
         ],
         "singular": {
             "en": "train",
@@ -270,13 +277,84 @@
             "bus",
             "stop"
         ],
-        "topics": "SM1.2",
+        "topics": [
+            "city",
+            "SM1.2",
+            "SM1.7"
+        ],
         "en": "bus stop",
         "fi": [
             "linja-autopysäkki",
             "bussipysäkki"
         ],
         "nl": "de bushalte"
+    },
+    "station": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "singular": {
+            "en": "station",
+            "fi": "asema",
+            "nl": "het station"
+        },
+        "plural": {
+            "en": "stations",
+            "fi": "asemat",
+            "nl": "de stations"
+        }
+    },
+    "bus station": {
+        "level": {
+            "A1": "OD",
+            "A2": "EP",
+            "none": "KK"
+        },
+        "roots": [
+            "bus",
+            "station"
+        ],
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "bus station",
+        "fi": "linja-autoasema",
+        "nl": "het busstation"
+    },
+    "train station": {
+        "level": {
+            "none": [
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": [
+            "train",
+            "station"
+        ],
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "train station",
+        "fi": "rautatieasema",
+        "nl": "het treinstation"
+    },
+    "metro station": {
+        "level": {},
+        "roots": [
+            "metro",
+            "station"
+        ],
+        "topics": "SM1.7",
+        "en": "metro station",
+        "fi": "metroasema",
+        "nl": "het metrostation"
     },
     "customs": {
         "level": {
@@ -288,5 +366,51 @@
         "en": "customs",
         "fi": "tulli",
         "nl": "de douane"
+    },
+    "parking garage": {
+        "level": {
+            "C2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "roots": {
+            "en": "parking"
+        },
+        "en": "parking garage",
+        "fi": "parkkihalli",
+        "nl": "de parkeergarage"
+    },
+    "parking spot": {
+        "level": {
+            "none": "KK"
+        },
+        "roots": {
+            "en": "parking",
+            "fi": "place",
+            "nl": "place"
+        },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "parking spot",
+        "fi": "parkkipaikka",
+        "nl": "de parkeerplaats"
+    },
+    "parking": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "topics": [
+            "city",
+            "SM1.7"
+        ],
+        "en": "parking",
+        "fi": "pysäköinti",
+        "nl": "de parkeergelegenheid"
     }
 }

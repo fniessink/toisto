@@ -58,5 +58,57 @@
             "futis*"
         ],
         "nl": "de voetbal"
+    },
+    "playing field": {
+        "level": {
+            "B2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": [
+            "SM1.7",
+            "city"
+        ],
+        "en": "playing field",
+        "fi": "urheilukenttä",
+        "nl": "het sportveld"
+    },
+    "swimming pool": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "roots": {
+            "nl": "bath"
+        },
+        "topics": [
+            "SM1.7",
+            "city"
+        ],
+        "en": "swimming pool",
+        "fi": "uimahalli",
+        "nl": "het zwembad"
+    },
+    "ice rink": {
+        "level": {
+            "C1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "roots": "ice",
+        "topics": [
+            "SM1.7",
+            "city"
+        ],
+        "en": "ice rink",
+        "fi": "jäähalli",
+        "nl": "de ijsbaan"
     }
 }

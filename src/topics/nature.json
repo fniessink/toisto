@@ -66,9 +66,11 @@
         "level": {
             "A2": [
                 "EP",
+                "KK",
                 "OD"
             ]
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "lake",
             "fi": "järvi",
@@ -104,8 +106,10 @@
             "A1": [
                 "EP",
                 "OD"
-            ]
+            ],
+            "A2": "KK"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "river",
             "fi": "joki",

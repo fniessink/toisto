@@ -9,7 +9,8 @@
         },
         "topics": [
             "CN1.1",
-            "SM1.3"
+            "SM1.3",
+            "SM1.7"
         ],
         "singular": {
             "en": "city",
@@ -104,6 +105,7 @@
             "B2": "OD",
             "none": "EP"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "theater",
             "fi": "teatteri",
@@ -115,6 +117,40 @@
             "nl": "de theaters"
         }
     },
+    "movie theater": {
+        "level": {
+            "A1": "OD",
+            "none": "EP"
+        },
+        "roots": {
+            "en": "theater",
+            "fi": "theater"
+        },
+        "topics": "SM1.7",
+        "en": "movie theater",
+        "fi": "elokuvateatteri",
+        "nl": "de bioscoop"
+    },
+    "opera": {
+        "level": {
+            "A2": [
+                "EP",
+                "KK"
+            ],
+            "B2": "OD"
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "opera",
+            "fi": "ooppera",
+            "nl": "de opera"
+        },
+        "plural": {
+            "en": "operas",
+            "fi": "oopperat",
+            "nl": "de opera's"
+        }
+    },
     "museum": {
         "level": {
             "A1": [
@@ -123,7 +159,10 @@
             ],
             "B1": "KK"
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.8"
+        ],
         "singular": {
             "en": "museum",
             "fi": "museo",
@@ -143,6 +182,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "church",
             "fi": "kirkko",
@@ -162,6 +202,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "stadium",
             "fi": "stadion",
@@ -182,6 +223,7 @@
         "roots": {
             "fi": "book"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "library",
             "fi": "kirjasto",
@@ -191,6 +233,63 @@
             "en": "libraries",
             "fi": "kirjastot",
             "nl": "de bibliotheken"
+        }
+    },
+    "café": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "B1": "KK"
+        },
+        "roots": {
+            "fi": "coffee"
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "café",
+            "fi": "kahvila",
+            "nl": "het café"
+        },
+        "plural": {
+            "en": "cafés",
+            "fi": "kahvilat",
+            "nl": "de cafés"
+        }
+    },
+    "bar": {
+        "level": {
+            "A1": "EP",
+            "A2": ["KK", "OD"]
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "bar",
+            "fi": "baari",
+            "nl": "de bar"
+        },
+        "plural": {
+            "en": "bars",
+            "fi": "baarit",
+            "nl": "de bars"
+        }
+    },
+    "restaurant": {
+        "level": {
+            "A1": ["EP", "OD"],
+            "A2": "KK"
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "restaurant",
+            "fi": "ravintola",
+            "nl": "het restaurant"
+        },
+        "plural": {
+            "en": "restaurants",
+            "fi": "ravintolat",
+            "nl": "de restaurants"
         }
     },
     "office": {
@@ -243,6 +342,7 @@
             "fi": "house",
             "nl": "house"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "department store",
             "fi": "tavaratalo",
@@ -295,7 +395,10 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "park",
             "fi": "puisto",
@@ -307,6 +410,61 @@
             "nl": "de parken"
         }
     },
+    "amusement park": {
+        "level": {
+            "B2": "OD",
+            "none": "EP"
+        },
+        "roots": "park",
+        "topics": "SM1.7",
+        "en": "amusement park",
+        "fi": "huvipuisto",
+        "nl": [
+            "het pretpark",
+            "het attractiepark"
+        ]
+    },
+    "playground": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "none": "KK"
+        },
+        "roots": {
+            "en": "ground",
+            "fi": "park",
+            "nl": "garden"
+        },
+        "topics": "SM1.7",
+        "en": "playground",
+        "fi": "leikkipuisto",
+        "nl": "de speeltuin"
+    },
+    "zoo": {
+        "level": {
+            "A1": "EP",
+            "A2": "OD",
+            "none": "KK"
+        },
+        "roots": {
+            "fi": "animal",
+            "nl": [
+                "animal",
+                "garden"
+            ]
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "zoo",
+            "fi": "eläintarha",
+            "nl": "de dierentuin"
+        },
+        "plural": {
+            "en": "zoos",
+            "fi": "eläintarhat",
+            "nl": "de dierentuinen"
+        }
+    },
     "castle": {
         "level": {
             "A2": [
@@ -315,6 +473,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "castle",
             "fi": "linna",
@@ -431,6 +590,44 @@
             "nl": "de pleinen"
         }
     },
+    "market": {
+        "level": {
+            "A1": "OD",
+            "A2": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "market",
+            "fi": "tori",
+            "nl": "de markt"
+        },
+        "plural": {
+            "en": "markets",
+            "fi": "torit",
+            "nl": "de markten"
+        }
+    },
+    "market hall": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": "market",
+            "fi": "store",
+            "nl": "market"
+        },
+        "topics": "SM1.7",
+        "en": "market hall",
+        "fi": "kauppahalli",
+        "nl": "de markthal"
+    },
     "bridge": {
         "level": {
             "A2": [
@@ -509,6 +706,7 @@
                 "store"
             ]
         },
+        "topics": "SM1.7",
         "singular": {
             "en": [
                 "mall",

@@ -20,6 +20,48 @@
             "fi": "ruoat"
         }
     },
+    "drink": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "en": "drink",
+        "fi": "juoma",
+        "nl": "het drinken"
+    },
+    "food and drink": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": [
+            "drink",
+            "food"
+        ],
+        "topics": "SM1.8",
+        "en": "food and drink",
+        "fi": "ruoka ja juoma",
+        "nl": "het eten en drinken"
+    },
+    "fruit": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.8",
+        "en": "fruit",
+        "fi": "hedelmä",
+        "nl": "het fruit"
+    },
     "breakfast": {
         "level": {
             "A1": [
@@ -103,6 +145,7 @@
             "en": "orange",
             "nl": "apple"
         },
+        "topics": "SM1.8",
         "singular": {
             "en": "orange",
             "fi": "appelsiini",
@@ -445,6 +488,7 @@
             ],
             "B2": "KK"
         },
+        "topics": "SM1.8",
         "singular": {
             "en": "apple",
             "fi": "omena",
@@ -571,6 +615,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.8",
         "singular": {
             "en": "lemon",
             "fi": "sitruuna",
@@ -580,6 +625,62 @@
             "en": "lemons",
             "fi": "sitruunat",
             "nl": "de citroenen"
+        }
+    },
+    "plum": {
+        "level": {
+            "C1": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "topics": "SM1.8",
+        "singular": {
+            "en": "plum",
+            "fi": "luumu",
+            "nl": "de pruim"
+        },
+        "plural": {
+            "en": "plums",
+            "fi": "luumut",
+            "nl": "de pruimen"
+        }
+    },
+    "peach": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "topics": "SM1.8",
+        "singular": {
+            "en": "peach",
+            "fi": "persikka",
+            "nl": "de perzik"
+        },
+        "plural": {
+            "en": "peaches",
+            "fi": "persikat",
+            "nl": "de perziken"
+        }
+    },
+    "grape": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.8",
+        "singular": {
+            "en": "grape",
+            "fi": "viinirypäle",
+            "nl": "de druif"
+        },
+        "plural": {
+            "en": "grapes",
+            "fi": "viinirypäleet",
+            "nl": "de druiven"
         }
     },
     "sugar": {
@@ -729,6 +830,7 @@
             "B1": "OD",
             "none": "KK"
         },
+        "topics": "SM1.8",
         "singular": {
             "en": "pear",
             "fi": "päärynä",
@@ -960,7 +1062,10 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.8"
+        ],
         "singular": {
             "en": "banana",
             "fi": "banaani",
@@ -970,6 +1075,47 @@
             "en": "bananas",
             "fi": "banaanit",
             "nl": "de bananen"
+        }
+    },
+    "pineapple": {
+        "level": {
+            "B1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "roots": {
+            "en": "apple"
+        },
+        "topics": "SM1.8",
+        "singular": {
+            "en": "pineapple",
+            "fi": "ananas",
+            "nl": "de ananas"
+        },
+        "plural": {
+            "en": "pineapples",
+            "fi": "ananakset",
+            "nl": "de ananassen"
+        }
+    },
+    "melon": {
+        "level": {
+            "A2": "EP",
+            "B2": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.8",
+        "singular": {
+            "en": "melon",
+            "fi": "meloni",
+            "nl": "de meloen"
+        },
+        "plural": {
+            "en": "melons",
+            "fi": "melonit",
+            "nl": "de meloenen"
         }
     },
     "cocktail": {

@@ -1,0 +1,31 @@
+{
+    "each other": {
+        "level": {
+            "A2": "EP",
+            "none": "OD"
+        },
+        "topics": "CN1.1",
+        "en": [
+            "each other",
+            "one another"
+        ],
+        "fi": "toisiaan",
+        "nl": "elkaar"
+    },
+    "somebody": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "CN1.1",
+        "en": [
+            "somebody",
+            "someone"
+        ],
+        "fi": "joku",
+        "nl": "iemand"
+    }
+}
