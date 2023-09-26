@@ -40,14 +40,21 @@
         }
     },
     "friend": {
+        "topics": "SM1.7",
         "singular": {
             "en": "friend",
-            "fi": "ystävä",
+            "fi": [
+                "kaveri",
+                "ystävä"
+            ],
             "nl": "de vriend"
         },
         "plural": {
             "en": "friends",
-            "fi": "ystävät",
+            "fi": [
+                "kaverit",
+                "ystävät"
+            ],
             "nl": "de vrienden"
         }
     },

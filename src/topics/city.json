@@ -261,7 +261,10 @@
     "bar": {
         "level": {
             "A1": "EP",
-            "A2": ["KK", "OD"]
+            "A2": [
+                "KK",
+                "OD"
+            ]
         },
         "topics": "SM1.7",
         "singular": {
@@ -277,7 +280,10 @@
     },
     "restaurant": {
         "level": {
-            "A1": ["EP", "OD"],
+            "A1": [
+                "EP",
+                "OD"
+            ],
             "A2": "KK"
         },
         "topics": "SM1.7",
@@ -493,7 +499,10 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.4",
+        "topics": [
+            "SM1.4",
+            "SM1.7"
+        ],
         "singular": {
             "en": "hotel",
             "fi": "hotelli",

@@ -75,7 +75,10 @@
         },
         "topics": "SM1.5",
         "en": "breakfast",
-        "fi": "aamupala",
+        "fi": [
+            "aamupala",
+            "aamiainen"
+        ],
         "nl": "het ontbijt"
     },
     "appetiser": {
