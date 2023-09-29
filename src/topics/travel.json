@@ -29,7 +29,8 @@
         },
         "topics": [
             "SM1.1",
-            "SM1.2"
+            "SM1.2",
+            "SM1.7"
         ],
         "root": {
             "singular": {
@@ -74,6 +75,17 @@
             "fi": "lennot",
             "nl": "de vluchten"
         }
+    },
+    "helicopter": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "C2": "KK"
+        },
+        "topics": "SM1.7",
+        "en": "helicopter",
+        "fi": "helikopteri",
+        "nl": "de helikopter"
     },
     "passport": {
         "level": {
@@ -217,7 +229,10 @@
         "roots": {
             "fi": "car"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "bus",
             "fi": [

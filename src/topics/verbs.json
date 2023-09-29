@@ -9,7 +9,8 @@
         },
         "topics": [
             "CN1.1",
-            "SM1.1"
+            "SM1.1",
+            "SM1.7"
         ],
         "declarative": {
             "affirmative": {
@@ -458,7 +459,8 @@
         },
         "topics": [
             "CN1.1",
-            "SM1.3"
+            "SM1.3",
+            "SM1.7"
         ],
         "declarative": {
             "affirmative": {
@@ -1441,7 +1443,8 @@
         },
         "topics": [
             "SM1.2",
-            "SM1.5"
+            "SM1.5",
+            "SM1.7"
         ],
         "infinitive": {
             "en": "to go",
@@ -1540,7 +1543,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "infinitive": {
             "en": "to come",
             "fi": "tulla",

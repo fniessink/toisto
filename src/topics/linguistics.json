@@ -368,5 +368,17 @@
         "en": "singular",
         "fi": "yksikkö",
         "nl": "het enkelvoud"
+    },
+    "imperfect": {
+        "level": {
+            "C2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "en": "imperfect tense",
+        "fi": "imperfekti",
+        "nl": "het imperfectum"
     }
 }
