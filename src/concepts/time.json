@@ -7,9 +7,16 @@
                 "OD"
             ]
         },
-        "en": "time",
-        "fi": "aika",
-        "nl": "de tijd"
+        "singular": {
+            "en": "time",
+            "fi": "aika",
+            "nl": "de tijd"
+        },
+        "plural": {
+            "en": "times",
+            "fi": "ajat",
+            "nl": "de tijden"
+        }
     },
     "now": {
         "level": {
