@@ -1277,5 +1277,40 @@
         "en": "half",
         "fi": "puoli",
         "nl": "half"
+    },
+    "open": {
+        "antonym": "closed",
+        "level": {
+            "A1": [
+                "ED",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.7",
+        "en": "open",
+        "fi": [
+            "avoinna",
+            "auki"
+        ],
+        "nl": "open"
+    },
+    "closed": {
+        "antonym": "open",
+        "level": {
+            "A1": "ED",
+            "A2": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.7",
+        "en": "closed",
+        "fi": [
+            "suljettu",
+            "kiini"
+        ],
+        "nl": [
+            "dicht",
+            "gesloten"
+        ]
     }
 }

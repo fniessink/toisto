@@ -7,7 +7,10 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "journey",
             "fi": "matka",
@@ -15,9 +18,108 @@
         },
         "plural": {
             "en": "journeys",
-            "fi": "matka",
+            "fi": "matkat",
             "nl": "de reizen"
         }
+    },
+    "tourism": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "B2": "KK"
+        },
+        "roots": {
+            "fi": "journey"
+        },
+        "topics": "SM1.7",
+        "en": "tourism",
+        "fi": "matkailu",
+        "nl": "het toerisme"
+    },
+    "ticket": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "A2": "KK"
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "ticket",
+            "fi": "lippu",
+            "nl": "het kaartje"
+        },
+        "plural": {
+            "en": "tickets",
+            "fi": "liput",
+            "nl": "de kaartjes"
+        }
+    },
+    "entry fee": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "nl": "price"
+        },
+        "topics": "SM1.7",
+        "en": [
+            "entry fee",
+            "entrance fee"
+        ],
+        "fi": "pääsymaksu",
+        "nl": "de toegangsprijs"
+    },
+    "discount": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.7",
+        "en": "discount",
+        "fi": "alennus",
+        "nl": "de korting"
+    },
+    "free (no payment)": {
+        "level": {
+            "A2": [
+                "EP",
+                "OD"
+            ],
+            "B1": "KK"
+        },
+        "topics": "SM1.7",
+        "en": "free",
+        "fi": [
+            "ilmainen",
+            "vapaa pääsy",
+            "maksuton"
+        ],
+        "nl": "gratis"
+    },
+    "opening hours": {
+        "levels": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "en": "hour",
+            "fi": "time",
+            "nl": "time"
+        },
+        "topics": "SM1.7",
+        "en": "opening hours",
+        "fi": "aukioloajat",
+        "nl": "de openingstijden"
     },
     "car": {
         "level": {
@@ -427,5 +529,44 @@
         "en": "parking",
         "fi": "pysäköinti",
         "nl": "de parkeergelegenheid"
+    },
+    "taxi": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "B1": "KK"
+        },
+        "topics": "SM1.7",
+        "singular": {
+            "en": "taxi",
+            "fi": "taksi",
+            "nl": "de taxi"
+        },
+        "plural": {
+            "en": "taxis",
+            "fi": "taksit",
+            "nl": "de taxi's"
+        }
+    },
+    "means of transportation": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.7",
+        "en": "means of transportation",
+        "singular": {
+            "fi": "kulkuväline",
+            "nl": "het vervoersmiddel"
+        },
+        "plural": {
+            "fi": "kulkuvälineet",
+            "nl": "de vervoersmiddelen"
+        }
     }
 }
