@@ -38,7 +38,7 @@ class RelatedConcepts:
 
     NOTE: This class keeps track of the related concepts using their concept identifier (ConceptId) and only when
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
-    prevents the need for a second pass after instantiating concepts from the topic files to create the relations.
+    prevents the need for a second pass after instantiating concepts from the concept files to create the relations.
     """
 
     _parent: ConceptId | None

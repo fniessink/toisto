@@ -20,7 +20,7 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")
     def test_load_concepts_by_filename(self, stderr_write: Mock):
-        """Test that an error message is given when the topic file does not exist."""
+        """Test that an error message is given when the concept file does not exist."""
         self.assertRaises(
             SystemExit,
             load_concepts,
@@ -29,7 +29,7 @@ class LoadConceptsTest(ToistoTestCase):
             self.argument_parser,
         )
         self.assertIn(
-            "cannot read topic file file-doesnt-exist: [Errno 2] No such file or directory: 'file-doesnt-exist'.\n",
+            "cannot read concept file file-doesnt-exist: [Errno 2] No such file or directory: 'file-doesnt-exist'.\n",
             stderr_write.call_args_list[1][0][0],
         )
 
@@ -37,7 +37,7 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.open")
     @patch("sys.stderr.write")
     def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock):
-        """Test that an error message is given when a topic file contains the same concept id as another topic file."""
+        """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
             '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
             '{"concept_id": {"fi": "Label3", "nl": "Label4"}}\n',
@@ -50,7 +50,7 @@ class LoadConceptsTest(ToistoTestCase):
             self.argument_parser,
         )
         self.assertIn(
-            f"Toisto cannot read topic file {Path('file2')}: concept identifier 'concept_id' also occurs in "
-            f"topic file {Path('file1')}.\n",
+            f"Toisto cannot read concept file {Path('file2')}: concept identifier 'concept_id' also occurs in "
+            f"concept file {Path('file1')}.\n",
             stderr_write.call_args_list[1][0][0],
         )

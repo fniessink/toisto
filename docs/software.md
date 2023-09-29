@@ -1,18 +1,16 @@
 # Software documentation
 
-## Topics
+## Concepts, labels, and topics
 
-Built-in topics are located in `src/topics` in the form of JSON files. Users can specify which built-in topics to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available built-in topics.
+Built-in concepts are located in `src/concepts` in the form of JSON files. Users can specify which built-in concepts to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available built-in topics.
 
-Users can also create their own topic files as long as it complies with the description below and pass them to Toisto using the `-f/--topic-file` command-line option.
+Users can also create their own concept files as long as they comply with the description below and pass them to Toisto using the `-f/--concept-file` command-line option.
 
-## Concepts and labels
-
-Each topic is a collection of *concepts*. Each concept has *labels* in different languages, identified by *language identifiers*.
+Each concept file contains one or more *concepts*. Each concept has *labels* in different languages, identified by *language identifiers*.
 
 A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language. The language identifiers are two or three letter strings as listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
-The contents of a JSON topic file looks as follows:
+The contents of a JSON concept file looks as follows:
 
 ```json
 {
@@ -34,15 +32,15 @@ The contents of a JSON topic file looks as follows:
 }
 ```
 
-Concepts are represented in the topic files as JSON-objects. The key is an identifier for the concept. It should be unique across all topic files. The value is a mapping with language identifiers as keys and labels as values. Currently, the built-in topic files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
+Concepts are represented in the concept files as JSON-objects. The key is an identifier for the concept. It should be unique across all concept files. The value is a mapping with language identifiers as keys and labels as values. Currently, the built-in concept files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
 
-If you add new languages to the built-in topic files, or create your own topic files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
+If you add new languages to the built-in concept files, or create your own concept files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
 ### Multiple topics per concept
 
-Concepts automatically belong to the topic of the topic file they are included in, but it's also possible to add a concept to one or more other topics, for example:
+Concepts automatically belong to the topic indicated by the name of the concept file they are included in, but it's also possible to add a concept to one or more other topics, for example:
 
 ```json
 {
@@ -193,7 +191,7 @@ Sometimes a concept in one language can be two different concepts in another lan
 
 If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a note that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The note is the part after the semicolon (`;`).
 
-In the topic file this looks as follows:
+In the concept file this looks as follows:
 
 ```json
 {
@@ -258,7 +256,7 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
 
 With the example above, Toisto will quiz users with Dutch as target language for the diminutive form of "de tafel".
 
-Note that in many languages, diminutives can (also) be formed by using multi-word constructions such as "little table". Though possible, it is not recommended to add these to the topic files because then Toisto will quiz both the translation of the multi-word construction as well as the diminutive form of the root, wich seems superfluous. To help the user understand the meaning of the diminutive, include the multi-word construction as follows (see the section [Concepts without label in some languages](#concepts-without-label-in-some-languages) above):
+Note that in many languages, diminutives can (also) be formed by using multi-word constructions such as "little table". Though possible, it is not recommended to add these to the concept files because then Toisto will quiz both the translation of the multi-word construction as well as the diminutive form of the root, wich seems superfluous. To help the user understand the meaning of the diminutive, include the multi-word construction as follows (see the section [Concepts without label in some languages](#concepts-without-label-in-some-languages) above):
 
 ```json
 {
@@ -315,7 +313,7 @@ It is also possible to have a neutral gender:
 }
 ```
 
-Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the built-in topic files.
+Note that Toisto uses gender only for verbs at the moment, see the next section. The examples above are not in the built-in concept files.
 
 ### Grammatical person
 
@@ -492,7 +490,7 @@ When there are synonyms, they need to be in the same order in every degree. This
 
 ### Sentence forms
 
-When the topic file contains both the declarative and the interrogative form of a sentence, Toisto can generate quizzes to change one into the other. Sentence forms are specified as follows:
+When the concept file contains both the declarative and the interrogative form of a sentence, Toisto can generate quizzes to change one into the other. Sentence forms are specified as follows:
 
 ```json
 {
@@ -564,7 +562,7 @@ When a concept is a compound of one or more other concepts, this can be specifie
 }
 ```
 
-If a concept has exactly one root, for example because not all roots have been included in the topic file yet, the `roots` value can be a string instead of a list of concept identifiers.
+If a concept has exactly one root, for example because not all roots have been included in the concept files yet, the `roots` value can be a string instead of a list of concept identifiers.
 
 If the root concepts differ per language, an object with languages as keys can be used:
 
@@ -584,7 +582,7 @@ If the root concepts differ per language, an object with languages as keys can b
 }
 ```
 
-If the plural of a compound word is easily derived from the plural of the last root, built-in topic files may omit the plural of the compound word.
+If the plural of a compound word is easily derived from the plural of the last root, built-in concept files may omit the plural of the compound word.
 
 #### Antonyms
 

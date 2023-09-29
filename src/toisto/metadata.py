@@ -23,7 +23,7 @@ BUILT_IN_LANGUAGES: Final = [Language("en"), Language("fi"), Language("nl")]
 
 # File locations
 _data_folder = Path(__file__).parent.parent
-TOPIC_JSON_FILES: Final = sorted((_data_folder / "topics").glob("*.json"))
+CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("*.json"))
 LANGUAGES_FILE: Final = _data_folder / "languages" / "iana-language-subtag-registry.txt"
 
 
@@ -32,7 +32,7 @@ def get_progress_filepath(target_language: Language) -> Path:
     return Path.home() / f".{NAME.lower()}-progress-{target_language}.json"
 
 
-TOPICS: Final = sorted([Topic(json_file.stem) for json_file in TOPIC_JSON_FILES])
+TOPICS: Final = sorted([Topic(json_file.stem) for json_file in CONCEPT_JSON_FILES])
 
 
 def latest_version() -> str | None:

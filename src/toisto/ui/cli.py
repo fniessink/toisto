@@ -25,7 +25,7 @@ def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None
             f"--{argument}",
             default=default,
             dest=f"{argument}_language",
-            help=f"{argument} language; {default_help}languages available in built-in topics: {languages}",
+            help=f"{argument} language; {default_help}languages available in built-in concepts: {languages}",
             metavar="{language}",
             required=not default,
             type=check_language,
@@ -52,11 +52,11 @@ def add_topic_arguments(parser: ArgumentParser, topics: list[Topic]) -> None:
     )
     parser.add_argument(
         "-f",
-        "--topic-file",
+        "--concept-file",
         action="append",
         default=[],
-        metavar="{topic file}",
-        help="topic file to use, can be repeated",
+        metavar="{concept file}",
+        help="concept file to use, can be repeated",
     )
 
 
