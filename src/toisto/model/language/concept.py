@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+from argparse import ArgumentParser
 from collections.abc import Generator, Iterable
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import ClassVar, NewType, cast, get_args
+from typing import ClassVar, NewType, NoReturn, cast, get_args
 
 from . import Language
 from .cefr import CommonReferenceLevel
@@ -162,14 +163,17 @@ def topics(concepts: Iterable[Concept]) -> list[Topic]:
 def filter_concepts(
     concepts: set[Concept],
     selected_concepts: list[ConceptId],
-    levels: list[CommonReferenceLevel],
-    topics: list[Topic],
-) -> set[Concept]:
+    selected_levels: list[CommonReferenceLevel],
+    selected_topics: list[Topic],
+    argument_parser: ArgumentParser,
+) -> set[Concept] | NoReturn:
     """Filter the concepts by selected concepts, levels, and topics."""
     if selected_concepts:
         concepts = {concept for concept in concepts if concept.concept_id in selected_concepts}
-    if levels:
-        concepts = {concept for concept in concepts if concept.level in levels}
-    if topics:
-        concepts = {concept for concept in concepts if concept.topics & set(topics)}
+    if selected_levels:
+        concepts = {concept for concept in concepts if concept.level in selected_levels}
+    if selected_topics:
+        concepts = {concept for concept in concepts if concept.topics & set(selected_topics)}
+    if (selected_concepts or selected_levels or selected_topics) and not concepts:
+        argument_parser.error("No concepts found that match your selection criteria\n")
     return concepts
