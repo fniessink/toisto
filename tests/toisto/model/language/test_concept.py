@@ -1,7 +1,9 @@
 """Unit tests for concepts."""
 
 import unittest
+from argparse import ArgumentParser
 from typing import cast
+from unittest.mock import Mock, patch
 
 from toisto.model.language.concept import Concept, ConceptId, Topic, filter_concepts
 from toisto.model.language.concept_factory import ConceptDict, create_concept
@@ -83,16 +85,22 @@ class ConceptFilterTest(unittest.TestCase):
 
     def test_no_filter(self):
         """Test that all concepts are returned when there is no filter specified."""
-        self.assertEqual({self.two}, filter_concepts({self.two}, [], [], []))
+        self.assertEqual({self.two}, filter_concepts({self.two}, [], [], [], ArgumentParser()))
 
     def test_filter_by_selected_concepts(self):
         """Test that concepts can be filtered by selected concepts."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, ["two"], [], []))
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, ["two"], [], [], ArgumentParser()))
 
     def test_filter_by_level(self):
         """Test that concepts can be filtered by level."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], ["A1"], []))
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], ["A1"], [], ArgumentParser()))
 
     def test_filter_by_topic(self):
         """Test that concepts can be filtered by topic."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], [], ["small"]))
+        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], [], ["small"], ArgumentParser()))
+
+    @patch("sys.stderr.write")
+    def test_no_match(self, sys_stderr_write: Mock):
+        """Test that an error message is given when no concepts match the filter criteria."""
+        self.assertRaises(SystemExit, filter_concepts, {self.two, self.three}, [], [], ["missing"], ArgumentParser())
+        self.assertIn("No concepts found that match your selection criteria", sys_stderr_write.call_args_list[1][0][0])

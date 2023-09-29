@@ -34,7 +34,7 @@ def main() -> None:
     extra_concept_files = [Path(concept_file) for concept_file in args.concept_file]
     concepts |= load_concepts(extra_concept_files, registry, argument_parser)
     selected_topics = (args.topic or TOPICS) + [Topic(filepath.stem) for filepath in extra_concept_files]
-    concepts = filter_concepts(concepts, args.concept, args.levels, selected_topics)
+    concepts = filter_concepts(concepts, args.concept, args.levels, selected_topics, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, argument_parser)
     match args.command:
