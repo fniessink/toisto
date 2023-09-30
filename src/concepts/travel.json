@@ -253,6 +253,26 @@
         ],
         "nl": "het vliegveld"
     },
+    "airplane": {
+        "level": {
+            "A1": [
+                "EP",
+                "OD"
+            ],
+            "none": "KK"
+        },
+        "topics": "SN1.7",
+        "singular": {
+            "en": "airplane|plane",
+            "fi": "lentokone",
+            "nl": "het vliegtuig"
+        },
+        "plural": {
+            "en": "airplanes|planes",
+            "fi": "lentokoneet",
+            "nl": "de vliegtuigen"
+        }
+    },
     "boat": {
         "level": {
             "A1": [
@@ -261,7 +281,10 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "boat",
             "fi": "vene",
@@ -271,6 +294,26 @@
             "en": "boats",
             "fi": "veneet",
             "nl": "de boten"
+        }
+    },
+    "ship": {
+        "level": {
+            "A1": "KK",
+            "A2": [
+                "EP",
+                "OD"
+            ]
+        },
+        "topics": "SM1.2",
+        "singular": {
+            "en": "ship",
+            "fi": "laiva",
+            "nl": "het schip"
+        },
+        "plural": {
+            "en": "ships",
+            "fi": "laivat",
+            "nl": "de schepen"
         }
     },
     "train": {
@@ -302,7 +345,10 @@
             "A2": "OD",
             "C2": "KK"
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "metro",
             "fi": [
@@ -318,6 +364,39 @@
                 "maanalaiset"
             ],
             "nl": "de metro's"
+        }
+    },
+    "tram": {
+        "level": {
+            "A2": "EP",
+            "B1": "OD",
+            "none": "KK"
+        },
+        "topics": "SM1.7",
+        "roots": {
+            "en": "street"
+        },
+        "singular": {
+            "en": [
+                "tram",
+                "streetcar"
+            ],
+            "fi": [
+                "raitiovaunu",
+                "ratikka"
+            ],
+            "nl": "de tram"
+        },
+        "plural": {
+            "en": [
+                "trams",
+                "streetcars"
+            ],
+            "fi": [
+                "raitiovaunut",
+                "ratikat"
+            ],
+            "nl": "de trams"
         }
     },
     "bus": {
@@ -568,5 +647,67 @@
             "fi": "kulkuvälineet",
             "nl": "de vervoersmiddelen"
         }
+    },
+    "delivery van": {
+        "level": {
+            "none": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "roots": {
+            "fi": "car"
+        },
+        "topics": "SM1.7",
+        "en": "delivery van",
+        "fi": "pakettiauto",
+        "nl": "de bestelwagen"
+    },
+    "lorry": {
+        "level": {
+            "A2": "OD",
+            "B1": "EP",
+            "none": "KK"
+        },
+        "roots": {
+            "fi": "car"
+        },
+        "topics": "SM1.7",
+        "en": [
+            "lorry",
+            "truck"
+        ],
+        "fi": "rekka-auto",
+        "nl": "de vrachtwagen"
+    },
+    "bicycle": {
+        "singular": {
+            "en": "bicycle",
+            "fi": "polkypyörä|pyörä",
+            "nl": "de fiets"
+        },
+        "plural": {
+            "en": "bicycles",
+            "fi": "polkypyörät|pyörät",
+            "nl": "de fietsen"
+        }
+    },
+    "motorcycle": {
+        "level": {
+            "A2": "OD",
+            "none": [
+                "EP",
+                "KK"
+            ]
+        },
+        "roots": {
+            "fi": "bicycle",
+            "nl": "bicycle"
+        },
+        "topics": "SM1.7",
+        "en": "motorcycle",
+        "fi": "moottoripyörä|pyörä",
+        "nl": "de motorfiets|de motor"
     }
 }
