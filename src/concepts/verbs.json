@@ -2517,7 +2517,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "infinitive": {
             "en": "to meet;come face to face with",
             "fi": "tavata",
