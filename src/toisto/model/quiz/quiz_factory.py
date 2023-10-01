@@ -65,7 +65,7 @@ class QuizFactory:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         return Quizzes(
-            Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by, ())
+            Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by)
             for target_label in target_labels
         )
 
@@ -80,7 +80,7 @@ class QuizFactory:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         return Quizzes(
-            Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by, ())
+            Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by)
             for source_label in source_labels
         )
 
@@ -118,17 +118,28 @@ class QuizFactory:
         target_language, source_language = self.target_language, self.source_language
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
-        for concept1, concept2 in permutations(concept.leaf_concepts(target_language), r=2):
-            quiz_types = grammatical_quiz_types(concept1, concept2)
+        for question_concept, answer_concept in permutations(concept.leaf_concepts(target_language), r=2):
+            quiz_types = grammatical_quiz_types(question_concept, answer_concept)
             if not quiz_types:
                 continue
-            labels1 = concept1.non_colloquial_labels(target_language)
-            labels2 = concept2.non_colloquial_labels(target_language)
-            meanings = concept1.meanings(source_language) + concept2.meanings(source_language)
+            question_labels = question_concept.non_colloquial_labels(target_language)
+            answer_labels = answer_concept.non_colloquial_labels(target_language)
+            question_meanings = question_concept.meanings(source_language)
+            answer_meanings = answer_concept.meanings(source_language)
             quizzes |= Quizzes(
-                Quiz(concept, target_language, target_language, label1, (label2,), quiz_types, blocked_by, meanings)
-                for label1, label2 in zip(labels1, labels2, strict=False)
-                if label1 != label2
+                Quiz(
+                    concept,
+                    target_language,
+                    target_language,
+                    question_label,
+                    (answer_label,),
+                    quiz_types,
+                    blocked_by,
+                    question_meanings,
+                    answer_meanings,
+                )
+                for question_label, answer_label in zip(question_labels, answer_labels, strict=False)
+                if question_label != answer_label
             )
         return quizzes
 
@@ -169,6 +180,7 @@ class QuizFactory:
                 tuple(related_concept_labels),
                 (quiz_type,),
                 tuple(previous_quizzes),
+                (),
                 tuple(meanings),
             )
             for label in concept.non_colloquial_labels(target_language)

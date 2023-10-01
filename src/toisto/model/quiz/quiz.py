@@ -83,7 +83,8 @@ class Quiz:
     _answers: Labels
     quiz_types: tuple[QuizType, ...]
     blocked_by: tuple[Quiz, ...]
-    _meanings: Labels
+    _question_meanings: Labels = ()
+    _answer_meanings: Labels = ()
 
     def __repr__(self) -> str:
         """Return a representation of the quiz for test purposes."""
@@ -129,9 +130,14 @@ class Quiz:
         return cast(Labels, tuple(chain(*answers)))
 
     @property
-    def meanings(self) -> Labels:
-        """Return the first spelling alternative of the meanings."""
-        return Labels(meaning.spelling_alternatives[0] for meaning in self._meanings)
+    def question_meanings(self) -> Labels:
+        """Return the first spelling alternative of the question meanings."""
+        return Labels(meaning.spelling_alternatives[0] for meaning in self._question_meanings)
+
+    @property
+    def answer_meanings(self) -> Labels:
+        """Return the first spelling alternative of the answer meanings."""
+        return Labels(meaning.spelling_alternatives[0] for meaning in self._answer_meanings)
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""

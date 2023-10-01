@@ -97,7 +97,7 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes("fi", "nl", concept).by_quiz_type("pluralize")
         patched_print = self.practice(Quizzes(quizzes))
-        expected_text = f'{CORRECT}[secondary]Meaning "{linkify("huis")}", "{linkify("huizen")}".[/secondary]\n'
+        expected_text = f'{CORRECT}[secondary]Meaning "{linkify("huis")}" > "{linkify("huizen")}".[/secondary]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))

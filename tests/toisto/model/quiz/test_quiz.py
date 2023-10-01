@@ -25,7 +25,8 @@ class QuizTest(QuizTestCase):
         """Test default values of optional attributes."""
         self.assertEqual(("read",), self.quiz.quiz_types)
         self.assertEqual((), self.quiz.blocked_by)
-        self.assertEqual((), self.quiz.meanings)
+        self.assertEqual((), self.quiz.question_meanings)
+        self.assertEqual((), self.quiz.answer_meanings)
 
     def test_repr(self):
         """Test the repr() function."""
