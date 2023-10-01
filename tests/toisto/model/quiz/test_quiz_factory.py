@@ -166,7 +166,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             quizzes,
         )
         for quiz in quizzes:
-            self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
+            self.assertNotIn("", (str(meaning) for meaning in quiz.question_meanings))
+            self.assertNotIn("", (str(meaning) for meaning in quiz.answer_meanings))
 
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the target language only."""
@@ -183,7 +184,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             quizzes,
         )
         for quiz in quizzes:
-            self.assertNotIn("", (str(meaning) for meaning in quiz.meanings))
+            self.assertNotIn("", (str(meaning) for meaning in quiz.question_meanings))
+            self.assertNotIn("", (str(meaning) for meaning in quiz.answer_meanings))
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes are generated from a noun concept with labels in the native language."""
@@ -1222,7 +1224,8 @@ class MeaningsTest(ToistoTestCase):
         quizzes = create_quizzes("fi", "en", concept)
         interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
         for quiz in interpret_quizzes:
-            self.assertEqual(("kylla", "joo"), quiz.meanings)
+            self.assertEqual(("kylla", "joo"), quiz.question_meanings)
+            self.assertEqual((), quiz.answer_meanings)
 
     def test_interpret_with_colloquial(self):
         """Test that interpret quizzes don't show colloquial labels as meaning."""
@@ -1230,4 +1233,5 @@ class MeaningsTest(ToistoTestCase):
         quizzes = create_quizzes("fi", "nl", concept)
         interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
         for quiz in interpret_quizzes:
-            self.assertEqual(("kaksikymmentä",), quiz.meanings)
+            self.assertEqual(("kaksikymmentä",), quiz.question_meanings)
+            self.assertEqual((), quiz.answer_meanings)

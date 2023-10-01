@@ -21,7 +21,8 @@ class ToistoTestCase(unittest.TestCase):
         answers: list[str],
         quiz_type: str | tuple[str, ...] = ("read",),
         blocked_by: tuple[Quiz, ...] = tuple(),
-        meanings: tuple[str, ...] = tuple(),
+        question_meanings: tuple[str, ...] = tuple(),
+        answer_meanings: tuple[str, ...] = tuple(),
     ) -> Quiz:
         """Create a quiz."""
         quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
@@ -33,7 +34,8 @@ class ToistoTestCase(unittest.TestCase):
             tuple(Label(answer) for answer in answers),
             quiz_type,
             blocked_by,
-            Labels(Label(meaning) for meaning in meanings),
+            Labels(Label(meaning) for meaning in question_meanings),
+            Labels(Label(meaning) for meaning in answer_meanings),
         )
 
     @classmethod
@@ -55,5 +57,6 @@ class ToistoTestCase(unittest.TestCase):
             answers or [str(answer) for answer in quiz.answers],
             quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
             quiz.blocked_by,
-            quiz.meanings,
+            quiz.answer_meanings,
+            quiz.question_meanings,
         )

@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Distinguish between the meanings of questions and answers by inserting a ">" between them. Closes [#442](https://github.com/fniessink/toisto/issues/442).
 - Added several topics and concepts.
 
 ## 0.12.0 - 2023-09-20

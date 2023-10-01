@@ -74,7 +74,13 @@ def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
 
 def meaning(quiz: Quiz) -> str:
     """Return the quiz's meaning, if any."""
-    return f"[secondary]Meaning {linkify_and_enumerate(*quiz.meanings)}.[/secondary]\n" if quiz.meanings else ""
+    if quiz.question_meanings and quiz.answer_meanings:
+        question_meanings = linkify_and_enumerate(*quiz.question_meanings)
+        answer_meanings = linkify_and_enumerate(*quiz.answer_meanings)
+        meanings = f"{question_meanings} > {answer_meanings}"
+    else:
+        meanings = linkify_and_enumerate(*(quiz.question_meanings + quiz.answer_meanings))
+    return f"[secondary]Meaning {meanings}.[/secondary]\n" if meanings else ""
 
 
 def other_answers(guess: Label, quiz: Quiz) -> str:
