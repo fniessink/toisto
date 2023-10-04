@@ -43,7 +43,7 @@ dev = [
     "ruff == 0.0.291",
     "twine == 4.0.2",
     "types-playsound == 1.3.1.3",
-    "types-requests == 2.31.0.4",
+    "types-requests == 2.31.0.7",
     "unittest-xml-reporting == 3.2.0",
     "vulture == 2.9.1",
 ]
