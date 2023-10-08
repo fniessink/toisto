@@ -1317,5 +1317,24 @@
             "dicht",
             "gesloten"
         ]
+    },
+    "same": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "SM1.2",
+            "SM1.3"
+        ],
+        "en": "same",
+        "fi": "sama",
+        "nl": [
+            "dezelfde",
+            "hetzelfde"
+        ]
     }
 }

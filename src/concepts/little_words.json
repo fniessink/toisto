@@ -23,7 +23,7 @@
         "fi": "jotain",
         "nl": "iets"
     },
-    "often": {
+    "all": {
         "level": {
             "A1": [
                 "EP",
@@ -31,44 +31,32 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
+        "topics": "SM1.7",
+        "en": "all",
+        "fi": "kaikki",
+        "nl": "alle"
     },
-    "first": {
+    "at least": {
         "level": {
-            "A1": [
+            "A1": "KK",
+            "A2": [
                 "EP",
-                "KK",
                 "OD"
             ]
         },
-        "topics": "SM1.2",
-        "en": "first",
-        "fi": "ensin",
-        "nl": "eerst"
-    },
-    "same": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "topics": [
-            "SM1.2",
-            "SM1.3"
+        "topics": "SM1.7",
+        "en": [
+            "at least",
+            "in any case"
         ],
-        "en": "same",
-        "fi": "sama",
+        "fi": "ainakin",
         "nl": [
-            "dezelfde",
-            "hetzelfde"
+            "in ieder geval",
+            "in elk geval",
+            "tenminste"
         ]
     },
-    "maybe": {
+    "by the way": {
         "level": {
             "A1": [
                 "KK",
@@ -77,14 +65,8 @@
             "A2": "EP"
         },
         "topics": "SM1.7",
-        "en": [
-            "maybe",
-            "perhaps"
-        ],
-        "fi": "ehkä",
-        "nl": [
-            "misschien",
-            "wellicht"
-        ]
+        "en": "by the way",
+        "fi": "muuten",
+        "nl": "overigens"
     }
 }
