@@ -8,7 +8,6 @@
         "roots": {
             "fi": "language"
         },
-        "topics": "SM1.1",
         "en": "grammar",
         "fi": "kielioppi",
         "nl": "de grammatica"
@@ -21,10 +20,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "root": {
             "singular": {
                 "en": "word",
@@ -59,7 +54,6 @@
             ]
         },
         "roots": "word",
-        "topics": "SM1.2",
         "en": "word order",
         "fi": "sanajärjestys",
         "nl": "woordvolgorde"
@@ -74,7 +68,6 @@
             "fi": "word",
             "nl": "word"
         },
-        "topics": "SM1.1",
         "en": "vocabulary",
         "fi": "sanasto",
         "nl": "de woordenschat"
@@ -88,7 +81,6 @@
             ]
         },
         "roots": "word",
-        "topics": "SM1.1",
         "en": "compound word",
         "fi": "yhdyssana",
         "nl": "het samengestelde woord"
@@ -99,7 +91,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "phrase",
             "fi": "fraasi",
@@ -119,7 +110,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "sentence",
             "fi": "lause",
@@ -137,7 +127,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "vowel",
             "fi": "vokaali",
@@ -158,7 +147,6 @@
         "roots": {
             "nl": "vowel"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "consonant",
             "fi": "konsonantti",
@@ -176,7 +164,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.1",
         "en": "alphabet",
         "fi": "aakkoset",
         "nl": "het alfabet"
@@ -193,7 +180,6 @@
             "question",
             "word"
         ],
-        "topics": "SM1.2",
         "en": "question word",
         "fi": "kysymyssana",
         "nl": "het vraagwoord"
@@ -206,7 +192,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "subject",
             "fi": "subjekti",
@@ -230,10 +215,6 @@
                 "word"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.5"
-        ],
         "singular": {
             "en": "verb",
             "fi": "verbi",
@@ -254,7 +235,6 @@
             ]
         },
         "roots": "verb",
-        "topics": "SM1.3",
         "en": "verb type",
         "fi": "verbityyppi",
         "nl": "het werkwoordtype"
@@ -271,7 +251,6 @@
                 "verb"
             ]
         },
-        "topics": "SM1.2",
         "en": "main verb",
         "fi": "pääverbi",
         "nl": "het hoofdwerkwoord"
@@ -282,7 +261,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.5",
         "en": "infinitive",
         "fi": "infinitiivi",
         "nl": "de infinitief"
@@ -308,13 +286,11 @@
         "roots": [
             "pronoun"
         ],
-        "topics": "SM1.1",
         "en": "personal pronoun",
         "fi": "persoonapronomini",
         "nl": "het persoonlijk voornaamwoord"
     },
     "ending": {
-        "topics": "SM1.2",
         "en": "ending",
         "fi": "pääte",
         "nl": "uitgang"
@@ -324,7 +300,6 @@
             "en": "ending",
             "nl": "ending"
         },
-        "topics": "SM1.2",
         "en": "personal ending",
         "fi": "persoonataivutus",
         "nl": "persoonsuitgang"
@@ -337,7 +312,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.2",
         "en": "intonation",
         "fi": "intonaatio",
         "nl": "de intonatie"
@@ -350,7 +324,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.3",
         "en": "genitive",
         "fi": "genetiivi",
         "nl": "genitief"
@@ -364,7 +337,6 @@
         "roots": {
             "fi": "1"
         },
-        "topics": "SM1.3",
         "en": "singular",
         "fi": "yksikkö",
         "nl": "het enkelvoud"

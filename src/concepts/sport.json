@@ -7,7 +7,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "game",
             "fi": "kisa",
@@ -27,7 +26,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "ball",
             "fi": "pallo",
@@ -51,7 +49,6 @@
             "ball",
             "foot"
         ],
-        "topics": "SM1.5",
         "en": "football",
         "fi": [
             "jalkapallo",
@@ -67,10 +64,6 @@
                 "KK"
             ]
         },
-        "topics": [
-            "SM1.7",
-            "city"
-        ],
         "en": "playing field",
         "fi": "urheilukenttä",
         "nl": "het sportveld"
@@ -86,10 +79,6 @@
         "roots": {
             "nl": "bath"
         },
-        "topics": [
-            "SM1.7",
-            "city"
-        ],
         "en": "swimming pool",
         "fi": "uimahalli",
         "nl": "het zwembad"
@@ -103,10 +92,6 @@
             ]
         },
         "roots": "ice",
-        "topics": [
-            "SM1.7",
-            "city"
-        ],
         "en": "ice rink",
         "fi": "jäähalli",
         "nl": "de ijsbaan"

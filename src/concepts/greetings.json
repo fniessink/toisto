@@ -7,10 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": "Hi!",
         "fi": [
             "Hei!",
@@ -27,10 +23,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": "Hello!",
         "fi": "Terve!",
         "nl": "Hallo!"
@@ -43,10 +35,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": [
             "Bye!",
             "Bye bye!"
@@ -71,10 +59,6 @@
             ],
             "none": "KK"
         },
-        "topics": [
-            "SN1.1",
-            "SM1.1"
-        ],
         "en": [
             "Goodbye",
             "See you later!See you!"
@@ -97,7 +81,6 @@
             ],
             "nl": "tomorrow"
         },
-        "topics": "SM1.1",
         "en": "See you tomorrow!",
         "fi": "Nähdään huomenna!",
         "nl": "Tot morgen!"
@@ -107,7 +90,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.1",
         "en": "Welcome!",
         "fi": "Tervetuloa!",
         "nl": "Welkom!"
@@ -133,7 +115,6 @@
             "how",
             "to be"
         ],
-        "topics": "SM1.1",
         "en": "How are you?",
         "fi": [
             "Mitä kuuluu?",
@@ -147,7 +128,6 @@
             "fi": "good",
             "nl": "good"
         },
-        "topics": "SM1.1",
         "en": "I am fine.|I'm fine.",
         "fi": "Minulle kuuluu hyvää.",
         "nl": "Met mij gaat het goed."
@@ -157,7 +137,6 @@
             "excuse me",
             "to help"
         ],
-        "topics": "SM1.3",
         "en": "Excuse me, can you help me?",
         "fi": "Anteeksi, voitko auttaa minua?",
         "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
@@ -170,10 +149,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "singular": {
             "en": "name",
             "fi": "nimi",
@@ -196,11 +171,6 @@
         "roots": [
             "name"
         ],
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.3"
-        ],
         "en": "first name",
         "fi": "etunimi",
         "nl": "de voornaam"
@@ -211,9 +181,6 @@
             "none": "EP"
         },
         "roots": "name",
-        "topics": [
-            "CN1.1"
-        ],
         "en": "given name",
         "nl": "de roepnaam"
     },
@@ -227,11 +194,6 @@
         },
         "roots": [
             "name"
-        ],
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.3"
         ],
         "en": [
             "last name",
@@ -268,7 +230,6 @@
             ],
             "nl": "to meet"
         },
-        "topics": "SM1.1",
         "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
         "fi": "Hauska tutustua!",
         "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
@@ -285,7 +246,6 @@
                 "to write"
             ]
         },
-        "topics": "SM1.1",
         "en": "How do you spell that?",
         "fi": "Miten se kirjoitetaan?",
         "nl": "Hoe schrijf je dat?"
@@ -296,7 +256,6 @@
             "old",
             "to be"
         ],
-        "topics": "SM1.1",
         "en": "How old are you?",
         "fi": "Kuinka vanha sinä olet?|Kuinka vanha olet?",
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
@@ -310,10 +269,6 @@
         "roots": [
             "good",
             "morning"
-        ],
-        "topics": [
-            "CN1.1",
-            "SM1.1"
         ],
         "en": "Good morning!|Morning!",
         "fi": "Hyvää huomenta!|Huomenta!",
@@ -341,10 +296,6 @@
                 "afternoon"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": "Good afternoon!",
         "fi": "Hyvää päivää!;afternoon",
         "nl": "Goedemiddag!"
@@ -361,7 +312,6 @@
             "good",
             "day"
         ],
-        "topics": "SM1.1",
         "en": "Good day!",
         "fi": "Hyvää päivää!|Päivää!",
         "nl": "Goedendag!"
@@ -377,10 +327,6 @@
         "roots": [
             "good",
             "evening"
-        ],
-        "topics": [
-            "CN1.1",
-            "SM1.1"
         ],
         "en": "Good evening!",
         "fi": "Hyvää iltaa!|Iltaa!",
@@ -398,7 +344,6 @@
             "good",
             "night"
         ],
-        "topics": "SM1.1",
         "en": "Good night!",
         "fi": "Hyvää yötä!",
         "nl": "Goedenacht!"
@@ -412,7 +357,6 @@
             ]
         },
         "roots": "to sleep",
-        "topics": "SM1.1",
         "en": "Sleep well!",
         "fi": "Nuku hyvin!",
         "nl": [
@@ -422,7 +366,6 @@
     },
     "have a nice day": {
         "roots": "day",
-        "topics": "SM1.7",
         "en": "Have a nice day!",
         "fi": "Hauskaa päivää!",
         "nl": "Prettige dag!"
@@ -434,13 +377,11 @@
             "long",
             "time"
         ],
-        "topics": "SM1.7",
         "en": "Nice to see you after such a long time!",
         "fi": "Kiva nähdä pitkästä aikaa!",
         "nl": "Leuk je na zo lange tijd te zien!|Leuk je te zien na zo lange tijd!"
     },
     "you too": {
-        "topics": "SM1.7",
         "en": "You too!",
         "fi": "Niin sinuakin!",
         "nl": "Jij ook!"

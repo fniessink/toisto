@@ -19,10 +19,6 @@
             ]
         },
         "roots": "health",
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "en": "health centre|health center",
         "fi": "terveysasema",
         "nl": "het gezondheidscentrum"
@@ -245,10 +241,6 @@
         "roots": {
             "nl": "house"
         },
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "singular": {
             "en": "hospital",
             "fi": "sairaala",
@@ -266,11 +258,6 @@
             "B2": "OD",
             "none": "KK"
         },
-        "topics": [
-            "city",
-            "SM1.5",
-            "SM1.7"
-        ],
         "singular": {
             "en": "pharmacy",
             "fi": "apteekki",

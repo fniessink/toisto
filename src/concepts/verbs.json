@@ -7,11 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.7"
-        ],
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -457,11 +452,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.3",
-            "SM1.7"
-        ],
         "declarative": {
             "affirmative": {
                 "infinitive": {
@@ -1047,7 +1037,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
         "infinitive": {
             "en": "to walk",
             "fi": "kävellä",
@@ -1243,7 +1232,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to eat",
             "fi": "syödä",
@@ -1342,7 +1330,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to sleep",
             "fi": "nukkua",
@@ -1441,11 +1428,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.5",
-            "SM1.7"
-        ],
         "infinitive": {
             "en": "to go",
             "fi": "mennä",
@@ -1543,10 +1525,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "infinitive": {
             "en": "to come",
             "fi": "tulla",
@@ -1645,10 +1623,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.3",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to read",
             "fi": "lukea",
@@ -1747,11 +1721,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.3",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to write",
             "fi": "kirjoittaa",
@@ -1850,11 +1819,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.2",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to live",
             "fi": "asua",
@@ -1946,7 +1910,13 @@
         }
     },
     "to save": {
-        "topics": "SM1.1",
+        "level": {
+            "A2": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
         "infinitive": {
             "en": "to save",
             "fi": "säästä",
@@ -1994,7 +1964,6 @@
         }
     },
     "to sit": {
-        "topics": "SM1.2",
         "infinitive": {
             "en": "to sit",
             "fi": "istua",
@@ -2049,10 +2018,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to drive",
             "fi": "ajaa",
@@ -2107,10 +2072,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.3",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to give",
             "fi": "antaa",
@@ -2165,7 +2126,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
         "infinitive": {
             "en": "to open",
             "fi": "avata",
@@ -2220,10 +2180,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.3",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to want",
             "fi": "haluta",
@@ -2278,7 +2234,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
         "infinitive": {
             "en": "to wake up",
             "fi": "herätä",
@@ -2331,10 +2286,6 @@
             "B1": "EP",
             "C1": "KK"
         },
-        "topics": [
-            "sport",
-            "SM1.5"
-        ],
         "infinitive": {
             "en": "to ski",
             "fi": "hiihtää",
@@ -2389,10 +2340,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "learning",
-            "SM1.2"
-        ],
         "infinitive": {
             "en": "to ask",
             "fi": "kysyä",
@@ -2447,7 +2394,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.2",
         "infinitive": {
             "en": "to cost",
             "fi": "maksaa",
@@ -2502,7 +2448,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "infinitive": {
             "en": "to meet;someone new",
             "fi": "tutustua",
@@ -2517,10 +2462,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "infinitive": {
             "en": "to meet;come face to face with",
             "fi": "tavata",
@@ -2535,7 +2476,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.2",
         "infinitive": {
             "en": "to end",
             "fi": "loppua",
@@ -2550,10 +2490,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "money",
-            "SM1.2"
-        ],
         "infinitive": {
             "en": "to buy",
             "fi": "ostaa",
@@ -2568,7 +2504,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "infinitive": {
             "en": "to take",
             "fi": "ottaa",
@@ -2583,7 +2518,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "infinitive": {
             "en": [
                 "to talk",
@@ -2596,24 +2530,6 @@
             ]
         }
     },
-    "to save money": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
-        "topics": [
-            "money",
-            "SM1.2"
-        ],
-        "infinitive": {
-            "en": "to save",
-            "fi": "säästä",
-            "nl": "sparen"
-        }
-    },
     "to kill": {
         "level": {
             "A2": [
@@ -2622,7 +2538,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "infinitive": {
             "en": "to kill",
             "fi": "tappaa",
@@ -2637,7 +2552,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to help",
             "fi": "auttaa",
@@ -2652,7 +2566,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to begin",
             "fi": "alkaa",
@@ -2667,7 +2580,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to understand",
             "fi": "ymmärtää",
@@ -2682,7 +2594,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": "to know",
             "fi": "tietää",

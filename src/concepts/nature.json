@@ -50,7 +50,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "flower",
             "fi": "kukka",
@@ -70,7 +69,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "lake",
             "fi": "järvi",
@@ -90,7 +88,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "sea",
             "fi": "meri",
@@ -110,7 +107,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "river",
             "fi": "joki",
@@ -127,7 +123,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "island",
             "fi": "saari",
@@ -193,7 +188,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "tree",
             "fi": "puu",
@@ -247,7 +241,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "hill",
             "fi": [
@@ -270,7 +263,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "mountain",
             "fi": "vuori",
@@ -287,7 +279,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.2",
         "en": "north|the North",
         "fi": "pohjoinen",
         "nl": "het noorden"
@@ -306,7 +297,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": "SM1.2",
         "en": "south|the South",
         "fi": "etelä",
         "nl": "het zuiden"
@@ -331,7 +321,6 @@
         "roots": {
             "fi": "country"
         },
-        "topics": "SM1.2",
         "en": "world",
         "fi": "maailma",
         "nl": "de wereld"
@@ -391,10 +380,6 @@
             "A1": "OD",
             "A2": "EP"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "singular": {
             "en": "fire",
             "fi": "tuli",

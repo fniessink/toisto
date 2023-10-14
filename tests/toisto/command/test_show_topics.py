@@ -6,6 +6,7 @@ from toisto.command.show_topics import show_topics
 from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.topic.topic import Topic
 from toisto.tools import first
 
 from ...base import ToistoTestCase
@@ -16,21 +17,27 @@ class ShowTopicsTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        concept = create_concept("hello", dict(fi="Terve", nl="Hoi", topics="greetings"), topic="topic")
+        concept = create_concept("hello", dict(fi="Terve", nl="Hoi", topics="greetings"))
         self.quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
         self.concepts = {concept}
+        self.topics = {Topic(name="greetings", concepts=("hello",))}
 
     @patch("rich.console.Console.pager", MagicMock())
     def show_topics(self, target_language: Language | None = None, source_language: Language | None = None) -> Mock:
         """Run the show topics command."""
         with patch("rich.console.Console.print") as console_print:
-            show_topics(target_language or Language("fi"), source_language or Language("nl"), self.concepts)
+            show_topics(
+                target_language or Language("fi"),
+                source_language or Language("nl"),
+                self.topics,
+                self.concepts,
+            )
         return console_print
 
     def test_title(self):
         """Test the table title."""
         console_print = self.show_topics()
-        self.assertEqual("Topic topic", console_print.call_args[0][0].title)
+        self.assertEqual("Topic greetings", console_print.call_args[0][0].title)
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 
     def test_column_headers(self):
@@ -42,7 +49,7 @@ class ShowTopicsTest(ToistoTestCase):
     def test_contents(self):
         """Test that the table contains the concept."""
         console_print = self.show_topics()
-        for index, value in enumerate(["Terve", "Hoi", "", "", "greetings"]):
+        for index, value in enumerate(["Terve", "Hoi", "", "", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 

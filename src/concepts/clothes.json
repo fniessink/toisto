@@ -19,7 +19,6 @@
             ],
             "B2": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "dress",
             "fi": "mekko",
@@ -58,7 +57,6 @@
             ],
             "C1": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "skirt",
             "fi": "hame",
@@ -97,7 +95,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "coat",
             "fi": "takki",
@@ -120,13 +117,11 @@
         "roots": {
             "fi": "clothes"
         },
-        "topics": "SM1.4",
         "en": "underwear",
         "fi": "alusvaatteet",
         "nl": "het ondergoed"
     },
     "underpants": {
-        "topics": "SM1.4",
         "roots": "trousers",
         "en": "underpants",
         "fi": "alushousut",
@@ -159,7 +154,6 @@
             ],
             "B2": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "suit",
             "fi": "puku",
@@ -179,11 +173,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4",
-            "SM1.5"
-        ],
         "singular": {
             "en": "shoe",
             "fi": "kenkä",
@@ -223,7 +212,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "shirt",
             "fi": "paita",
@@ -237,7 +225,6 @@
     },
     "undershirt": {
         "roots": "shirt",
-        "topics": "SM1.4",
         "en": "undershirt",
         "fi": "aluspaita",
         "nl": "onderhemd"
@@ -250,7 +237,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.3",
         "infinitive": {
             "en": [
                 "to dress",

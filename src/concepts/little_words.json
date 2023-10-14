@@ -5,7 +5,6 @@
             "A2": "EP",
             "none": "KK"
         },
-        "topics": "SM1.5",
         "en": "nothing",
         "fi": "ei mitään",
         "nl": "niets"
@@ -18,7 +17,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.5",
         "en": "something",
         "fi": "jotain",
         "nl": "iets"
@@ -31,10 +29,9 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
-        "en": "all",
-        "fi": "kaikki",
-        "nl": "alle"
+        "en": "often",
+        "fi": "usein",
+        "nl": "vaak"
     },
     "at least": {
         "level": {
@@ -44,7 +41,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "en": [
             "at least",
             "in any case"
@@ -64,7 +60,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.7",
         "en": "by the way",
         "fi": "muuten",
         "nl": "overigens"

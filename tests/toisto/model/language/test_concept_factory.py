@@ -136,21 +136,6 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual((), concept.labels("nl"))
         self.assertEqual(("Finse paascake",), concept.meanings("nl"))
 
-    def test_topic(self):
-        """Test that a topic can be given to the concept."""
-        concept = create_concept("english", dict(en=["English"], nl=["Engels"]), "language")
-        self.assertEqual({"language"}, concept.topics)
-
-    def test_topic_in_concept_dict(self):
-        """Test that a single extra topic can be given to the concept."""
-        concept = create_concept("english", dict(topics="England", en=["English"], nl=["Engels"]), "language")
-        self.assertEqual({"language", "England"}, concept.topics)
-
-    def test_topics_in_concept_dict(self):
-        """Test that multiple extra topics can be given to the concept."""
-        concept = create_concept("english", dict(topics=["England", "USA"], en=["English"], nl=["Engels"]), "language")
-        self.assertEqual({"language", "England", "USA"}, concept.topics)
-
     def test_answer_only(self):
         """Test that a concept can be flagged as answer only."""
         concept = create_concept("yes", {"answer-only": True, "en": "Yes, I do.", "fi": "Pidän."})

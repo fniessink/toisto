@@ -44,7 +44,6 @@
             "drink",
             "food"
         ],
-        "topics": "SM1.8",
         "en": "food and drink",
         "fi": "ruoka ja juoma",
         "nl": "het eten en drinken"
@@ -57,7 +56,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.8",
         "en": "fruit",
         "fi": "hedelmä",
         "nl": "het fruit"
@@ -73,7 +71,6 @@
         "roots": {
             "fi": "morning"
         },
-        "topics": "SM1.5",
         "en": "breakfast",
         "fi": [
             "aamupala",
@@ -148,7 +145,6 @@
             "en": "orange",
             "nl": "apple"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "orange",
             "fi": "appelsiini",
@@ -197,7 +193,6 @@
             ],
             "C2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "cheese",
             "fi": "juusto",
@@ -217,10 +212,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.5"
-        ],
         "singular": {
             "en": "coffee",
             "fi": "kahvi",
@@ -318,10 +309,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.5"
-        ],
         "singular": {
             "en": "bread",
             "fi": "leipä",
@@ -360,7 +347,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "milk",
             "fi": "maito",
@@ -417,7 +403,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "pizza",
             "fi": "pizza",
@@ -435,7 +420,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "strawberry",
             "fi": "mansikka",
@@ -491,7 +475,6 @@
             ],
             "B2": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "apple",
             "fi": "omena",
@@ -618,7 +601,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "lemon",
             "fi": "sitruuna",
@@ -638,7 +620,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "plum",
             "fi": "luumu",
@@ -656,7 +637,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "peach",
             "fi": "persikka",
@@ -674,7 +654,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "grape",
             "fi": "viinirypäle",
@@ -694,10 +673,6 @@
             ],
             "B1": "KK"
         },
-        "topics": [
-            "SM1.4",
-            "SM1.6"
-        ],
         "singular": {
             "en": "sugar",
             "fi": "sokeri",
@@ -755,7 +730,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "water",
             "fi": "vesi",
@@ -834,7 +808,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "pear",
             "fi": "päärynä",
@@ -1007,7 +980,6 @@
             "fi": "ice",
             "nl": "ice"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "ice cream",
             "fi": [
@@ -1033,7 +1005,6 @@
             ],
             "C1": "KK"
         },
-        "topics": "SM1.2",
         "en": "chocolate",
         "fi": "suklaa",
         "nl": "de chocolade"
@@ -1043,7 +1014,6 @@
             "chocolate",
             "ice cream"
         ],
-        "topics": "SM1.1",
         "en": "chocolate ice cream",
         "fi": "suklaajäätelö",
         "nl": "het chocolade-ijsje|het chocolade-ijs"
@@ -1053,7 +1023,6 @@
             "C1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.2",
         "en": "vanilla",
         "fi": "vanilja",
         "nl": "vanille"
@@ -1066,10 +1035,6 @@
             ],
             "none": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.8"
-        ],
         "singular": {
             "en": "banana",
             "fi": "banaani",
@@ -1092,7 +1057,6 @@
         "roots": {
             "en": "apple"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "pineapple",
             "fi": "ananas",
@@ -1110,7 +1074,6 @@
             "B2": "OD",
             "none": "KK"
         },
-        "topics": "SM1.8",
         "singular": {
             "en": "melon",
             "fi": "meloni",
@@ -1130,7 +1093,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "cocktail",
             "fi": "cocktail",

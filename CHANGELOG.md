@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Distinguish between the meanings of questions and answers by inserting a ">" between them. Closes [#442](https://github.com/fniessink/toisto/issues/442).
 - Added several topics and concepts.
 
+### Changed
+
+- Concepts and topics are now stored in different files. This allows users to create their own topic files consisting of a list of existing topics.
+
 ## 0.12.0 - 2023-09-20
 
 ### Fixed
@@ -314,7 +318,7 @@ Unfortunately, this version is backwards incompatible and progress information f
 ### Added
 
 - Added a food topic.
-- In addition to using built-in topic files, allow the user to load their own local topic files, using the command line interface option `-f/--topic-file`.
+- In addition to using built-in topic files, allow the user to load their own local topic files, using the command line interface option `--topic-file`.
 
 ## v0.0.5 - 2022-10-18
 

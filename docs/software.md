@@ -1,8 +1,8 @@
 # Software documentation
 
-## Concepts, labels, and topics
+## Concepts and labels
 
-Built-in concepts are located in `src/concepts` in the form of JSON files. Users can specify which built-in concepts to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available built-in topics.
+Built-in concepts are located in `src/concepts` in the form of JSON files.
 
 Users can also create their own concept files as long as they comply with the description below and pass them to Toisto using the `-f/--concept-file` command-line option.
 
@@ -37,25 +37,6 @@ Concepts are represented in the concept files as JSON-objects. The key is an ide
 If you add new languages to the built-in concept files, or create your own concept files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
-
-### Multiple topics per concept
-
-Concepts automatically belong to the topic indicated by the name of the concept file they are included in, but it's also possible to add a concept to one or more other topics, for example:
-
-```json
-{
-    "car": {
-        "topics": [
-            "travel",
-            "vehicles"
-        ],
-        "en": "car",
-        "nl": "de auto"
-    }
-}
-```
-
-The `topics` value is a list of topic identifiers. If a concept has exactly one additional topic, the `topics` value can be a string instead of a list of topic identifiers.
 
 ### Letter case and punctuation in labels
 
@@ -717,6 +698,31 @@ Because the sources may disagree on the language level of words, we add the lang
 ```
 
 If the source does not provide a language level for a concept, this can be indicated by adding the source to the key `none`. This makes it clear that the source has been consulted but did not provide a language level for the concept.
+
+## Topics
+
+Built-in topics are located in `src/topics` in the form of JSON files.
+
+Users can specify which concepts to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available topics.
+
+Users can also create their own topic files as long as they comply with the description below and pass them to Toisto using the `--topic-file` command-line option.
+
+Each topic file contains exactly one *topic*. Each topic has a *name* and a list of *concepts* that belong to that topic.
+
+The contents of a JSON topic file looks as follows:
+
+```json
+{
+    "name": "sport",
+    "concepts": [
+        "football",
+        "tennis",
+        "to ski"
+    ]
+}
+```
+
+The entries in the list of concepts should be concept identifiers.
 
 ## Quizzes
 
