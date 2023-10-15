@@ -261,7 +261,7 @@
             ],
             "none": "KK"
         },
-        "topics": "SN1.7",
+        "topics": "SM1.7",
         "singular": {
             "en": "airplane|plane",
             "fi": "lentokone",
@@ -304,7 +304,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
+        "topics": [
+            "SM1.2",
+            "SM1.7"
+        ],
         "singular": {
             "en": "ship",
             "fi": "laiva",
@@ -452,6 +455,7 @@
             ],
             "none": "KK"
         },
+        "topics": "SM1.7",
         "singular": {
             "en": "stop",
             "fi": "pysäkki",
@@ -574,6 +578,7 @@
         "roots": {
             "en": "parking"
         },
+        "topics":" SM1.7",
         "en": "parking garage",
         "fi": "parkkihalli",
         "nl": "de parkeergarage"
@@ -682,6 +687,7 @@
         "nl": "de vrachtwagen"
     },
     "bicycle": {
+        "topics": "SM1.7",
         "singular": {
             "en": "bicycle",
             "fi": "polkypyörä|pyörä",

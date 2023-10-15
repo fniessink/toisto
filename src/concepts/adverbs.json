@@ -48,5 +48,37 @@
         "en": "also",
         "fi": "myös",
         "nl": "ook"
+    },
+    "maybe": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.7",
+        "en": [
+            "maybe",
+            "perhaps"
+        ],
+        "fi": "ehkä",
+        "nl": [
+            "misschien",
+            "wellicht"
+        ]
+    },
+    "often": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": "SM1.5",
+        "en": "often",
+        "fi": "usein",
+        "nl": "vaak"
     }
 }

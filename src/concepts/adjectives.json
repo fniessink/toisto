@@ -33,7 +33,10 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
+        "topics": [
+            "SM1.3",
+            "SM1.7"
+        ],
         "positive degree": {
             "en": "important",
             "fi": "tärkeä",
@@ -475,6 +478,7 @@
                 "OD"
             ]
         },
+        "topics": "SM1.7",
         "positive degree": {
             "en": "fresh",
             "fi": "tuore",
@@ -791,7 +795,8 @@
         "topics": [
             "CN1.1",
             "SM1.1",
-            "SM1.3"
+            "SM1.3",
+            "SM1.7"
         ],
         "positive degree": {
             "en": "nice",
@@ -1311,6 +1316,25 @@
         "nl": [
             "dicht",
             "gesloten"
+        ]
+    },
+    "same": {
+        "level": {
+            "A1": [
+                "EP",
+                "KK",
+                "OD"
+            ]
+        },
+        "topics": [
+            "SM1.2",
+            "SM1.3"
+        ],
+        "en": "same",
+        "fi": "sama",
+        "nl": [
+            "dezelfde",
+            "hetzelfde"
         ]
     }
 }

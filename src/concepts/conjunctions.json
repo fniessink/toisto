@@ -49,5 +49,35 @@
         "en": "but",
         "fi": "mutta",
         "nl": "maar"
+    },
+    "if": {
+        "level": {
+            "A1": [
+                "KK",
+                "OD"
+            ],
+            "A2": "EP"
+        },
+        "topics": "SM1.7",
+        "en": "if",
+        "fi": "jos",
+        "nl": "als"
+    },
+    "though": {
+        "level": {
+            "A1": "KK",
+            "B1": [
+                "EP",
+                "OD"
+            ]
+        },
+        "topics": "SM1.7",
+        "en": [
+            "though",
+            "although",
+            "even though"
+        ],
+        "fi": "vaikka",
+        "nl": "hoewel"
     }
 }
