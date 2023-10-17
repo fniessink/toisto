@@ -11,7 +11,7 @@ from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId, RelatedConcepts
 from toisto.model.language.label import Label
 from toisto.model.topic.topic import Topic
-from toisto.ui.cli import create_argument_parser
+from toisto.ui.cli import create_argument_parser, parse_arguments
 
 
 class ParserTest(unittest.TestCase):
@@ -37,7 +37,7 @@ class ParserTest(unittest.TestCase):
     @patch("sys.stdout.write")
     def test_help(self, sys_stdout_write: Mock):
         """Test that the help message is displayed."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
             """Usage: toisto [-h] [-V] {practice,progress,topics} ...
 
@@ -74,7 +74,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             concept=[],
             concept_file=[],
         )
-        self.assertEqual(expected_namespace, self.argument_parser().parse_args())
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
@@ -86,8 +86,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, "A1", related, False),
         }
         topics = {Topic(name="T1", concepts=(ConceptId("foo"),)), Topic(name="T2", concepts=(ConceptId("bar"),))}
-        self.maxDiff = None
-        self.assertRaises(SystemExit, self.argument_parser(concepts=concepts, topics=topics).parse_args)
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))
         self.assertEqual(
             """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
@@ -121,8 +120,7 @@ Options:
         config_parser = ConfigParser()
         config_parser.add_section("languages")
         config_parser.set("languages", "target", "fi")
-        self.assertRaises(SystemExit, self.argument_parser(config_parser).parse_args)
-        self.maxDiff = None
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
             """Usage: toisto practice [-h] [-t {language}] -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
@@ -156,8 +154,7 @@ Options:
         config_parser = ConfigParser()
         config_parser.add_section("languages")
         config_parser.set("languages", "levels", "A1 A2")
-        self.assertRaises(SystemExit, self.argument_parser(config_parser).parse_args)
-        self.maxDiff = None
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
             """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
@@ -188,8 +185,7 @@ Options:
     @patch("sys.stdout.write")
     def test_progress_help(self, sys_stdout_write: Mock):
         """Test that the progress help message is displayed."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
-        self.maxDiff = None
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
             """Usage: toisto progress [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
@@ -222,8 +218,7 @@ Options:
     @patch("sys.stdout.write")
     def test_topics_help(self, sys_stdout_write: Mock):
         """Test that the topics help message is displayed."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
-        self.maxDiff = None
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
             """Usage: toisto topics [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
@@ -263,28 +258,38 @@ Options:
             concept=[],
             concept_file=[],
         )
-        self.assertEqual(expected_namespace, self.argument_parser().parse_args())
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
     @patch("sys.argv", ["toisto", "--version"])
     @patch.object(ArgumentParser, "_print_message")
     def test_version_long_option(self, print_message: Mock):
         """Test that the app writes the version number to stdout."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
 
     @patch("sys.argv", ["toisto", "-V"])
     @patch.object(ArgumentParser, "_print_message")
     def test_version_short_option(self, print_message: Mock):
         """Test that the app writes the version number to stdout."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
 
     @patch("sys.argv", ["toisto", "practice", "--target", "42", "--source", "@@"])
     @patch("sys.stderr.write")
     def test_invalid_language(self, sys_stderr_write: Mock):
         """Test that an error message is displayed if an invalid language is supplied."""
-        self.assertRaises(SystemExit, self.argument_parser().parse_args)
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
             "invalid choice: '42' (see https://www.iana.org/assignments/language-subtag-registry for valid choices)",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("sys.argv", ["toisto", "practice", "--target", "fi", "--source", "fi"])
+    @patch("sys.stderr.write")
+    def test_equal_target_and_source_language(self, sys_stderr_write: Mock):
+        """Test that an error message is displayed if the target and source language are equal."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "toisto: error: target and source language are the same: 'fi' \n",
             sys_stderr_write.call_args_list[1][0][0],
         )

@@ -1,7 +1,7 @@
 """Command-line interface."""
 
 import sys
-from argparse import ArgumentParser, ArgumentTypeError
+from argparse import ArgumentParser, ArgumentTypeError, Namespace
 from configparser import ConfigParser
 from typing import get_args
 
@@ -180,3 +180,12 @@ def create_argument_parser(
     if not {"practice", "progress", "topics", "-h", "--help", "-V", "--version"} & set(sys.argv):
         sys.argv.insert(1, "practice")  # Insert practice as default subcommand
     return argument_parser
+
+
+def parse_arguments(argument_parser: ArgumentParser) -> Namespace:
+    """Parse and validate the command-line arguments."""
+    namespace = argument_parser.parse_args()
+    if namespace.target_language == namespace.source_language:
+        message = f"target and source language are the same: '{namespace.target_language}' "
+        argument_parser.error(message)
+    return namespace
