@@ -7,11 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "Who?",
         "fi": "Kuka?",
         "nl": "Wie?"
@@ -23,7 +18,6 @@
                 "OD"
             ]
         },
-        "topics": "CN1.1",
         "en": "What?",
         "fi": [
             "Mitä?;;'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
@@ -39,7 +33,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Why?",
         "fi": "Miksi?",
         "nl": "Waarom?"
@@ -51,10 +44,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.2"
-        ],
         "en": "Where?",
         "fi": "Missä?",
         "nl": "Waar?"
@@ -64,10 +53,6 @@
             "C2": "KK",
             "none": "OD"
         },
-        "topics": [
-            "SM1.2",
-            "CN1.1"
-        ],
         "en": "Where from?",
         "fi": "Mistä?",
         "nl": "Waar vandaan?"
@@ -79,10 +64,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "When?",
         "fi": "Milloin?",
         "nl": "Wanneer?"
@@ -95,11 +76,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "Which?",
         "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
         "nl": [
@@ -115,10 +91,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.2"
-        ],
         "en": "How?",
         "fi": [
             "Miten?",
@@ -146,7 +118,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "en": "What kind of?",
         "fi": "Millainen?",
         "nl": [

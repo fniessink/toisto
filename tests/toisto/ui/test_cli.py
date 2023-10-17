@@ -8,8 +8,9 @@ from configparser import ConfigParser
 from unittest.mock import Mock, patch
 
 from toisto.model.language import Language
-from toisto.model.language.concept import Concept, ConceptId, RelatedConcepts, Topic
+from toisto.model.language.concept import Concept, ConceptId, RelatedConcepts
 from toisto.model.language.label import Label
+from toisto.model.topic.topic import Topic
 from toisto.ui.cli import create_argument_parser
 
 
@@ -26,10 +27,11 @@ class ParserTest(unittest.TestCase):
         self,
         config_parser: ConfigParser | None = None,
         concepts: set[Concept] | None = None,
+        topics: set[Topic] | None = None,
     ) -> ArgumentParser:
         """Create the argument parser."""
         with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[dict(name="v9999")])))):
-            return create_argument_parser(config_parser or ConfigParser(), concepts)
+            return create_argument_parser(config_parser or ConfigParser(), concepts, topics)
 
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")
@@ -68,8 +70,9 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             source_language="fi",
             levels=[],
             topic=[],
-            concept_file=[],
+            topic_file=[],
             concept=[],
+            concept_file=[],
         )
         self.assertEqual(expected_namespace, self.argument_parser().parse_args())
 
@@ -79,14 +82,16 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         """Test that the practice help message is displayed."""
         related = RelatedConcepts(None, (), {}, (), ())
         concepts = {
-            Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, "A1", related, {Topic("T1")}, False),
-            Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, "A1", related, {Topic("T2")}, False),
+            Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, "A1", related, False),
+            Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, "A1", related, False),
         }
+        topics = {Topic(name="T1", concepts=(ConceptId("foo"),)), Topic(name="T2", concepts=(ConceptId("bar"),))}
         self.maxDiff = None
-        self.assertRaises(SystemExit, self.argument_parser(concepts=concepts).parse_args)
+        self.assertRaises(SystemExit, self.argument_parser(concepts=concepts, topics=topics).parse_args)
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {concept file}] \
+            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
+                       [-C {concept file}]
 
 Practice a language.
 
@@ -99,10 +104,12 @@ Options:
   -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
                         C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics: T1, T2
-  -f, --concept-file {concept file}
-                        concept file to use, can be repeated
+  -o, --topic-file {topic file}
+                        extra topic file to use, can be repeated
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts: bar, foo
+  -C, --concept-file {concept file}
+                        extra concept file to use, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -115,9 +122,11 @@ Options:
         config_parser.add_section("languages")
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, self.argument_parser(config_parser).parse_args)
+        self.maxDiff = None
         self.assertEqual(
-            """Usage: toisto practice [-h] [-t {language}] -s {language} [-l {level}] [-T {topic}] [-f {concept file}] \
+            """Usage: toisto practice [-h] [-t {language}] -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
+                       [-C {concept file}]
 
 Practice a language.
 
@@ -130,10 +139,12 @@ Options:
   -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
                         C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -f, --concept-file {concept file}
-                        concept file to use, can be repeated
+  -o, --topic-file {topic file}
+                        extra topic file to use, can be repeated
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
+  -C, --concept-file {concept file}
+                        extra concept file to use, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -146,9 +157,11 @@ Options:
         config_parser.add_section("languages")
         config_parser.set("languages", "levels", "A1 A2")
         self.assertRaises(SystemExit, self.argument_parser(config_parser).parse_args)
+        self.maxDiff = None
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {concept file}] \
+            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
+                       [-C {concept file}]
 
 Practice a language.
 
@@ -161,10 +174,12 @@ Options:
   -l, --level {level}   language levels to use, can be repeated; default: A1, A2; available levels: A1, A2, B1, B2,
                         C1, C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -f, --concept-file {concept file}
-                        concept file to use, can be repeated
+  -o, --topic-file {topic file}
+                        extra topic file to use, can be repeated
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
+  -C, --concept-file {concept file}
+                        extra concept file to use, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -174,10 +189,11 @@ Options:
     def test_progress_help(self, sys_stdout_write: Mock):
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, self.argument_parser().parse_args)
+        self.maxDiff = None
         self.assertEqual(
-            """Usage: toisto progress [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {concept file}] \
+            """Usage: toisto progress [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
-                       [-S {option}]
+                       [-C {concept file}] [-S {option}]
 
 Show progress.
 
@@ -190,10 +206,12 @@ Options:
   -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
                         C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -f, --concept-file {concept file}
-                        concept file to use, can be repeated
+  -o, --topic-file {topic file}
+                        extra topic file to use, can be repeated
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
+  -C, --concept-file {concept file}
+                        extra concept file to use, can be repeated
   -S, --sort {option}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
@@ -207,8 +225,9 @@ Options:
         self.assertRaises(SystemExit, self.argument_parser().parse_args)
         self.maxDiff = None
         self.assertEqual(
-            """Usage: toisto topics [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-f {concept file}] \
+            """Usage: toisto topics [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
 [-c {concept}]
+                     [-C {concept file}]
 
 Show topics.
 
@@ -221,10 +240,12 @@ Options:
   -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
                         C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -f, --concept-file {concept file}
-                        concept file to use, can be repeated
+  -o, --topic-file {topic file}
+                        extra topic file to use, can be repeated
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
+  -C, --concept-file {concept file}
+                        extra concept file to use, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -238,8 +259,9 @@ Options:
             source_language="fi",
             levels=[],
             topic=[],
-            concept_file=[],
+            topic_file=[],
             concept=[],
+            concept_file=[],
         )
         self.assertEqual(expected_namespace, self.argument_parser().parse_args())
 

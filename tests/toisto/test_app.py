@@ -6,9 +6,9 @@ from contextlib import suppress
 from unittest.mock import MagicMock, Mock, patch
 
 import requests
-from toisto.app import main
-from toisto.metadata import TOPICS, VERSION
-from toisto.model.language.concept import Concept
+from toisto.metadata import VERSION
+from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.topic.topic import Topic
 
 
 class AppTest(unittest.TestCase):
@@ -22,6 +22,10 @@ class AppTest(unittest.TestCase):
         self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
 
     @patch("rich.console.Console.pager", MagicMock())
+    @patch(
+        "toisto.persistence.topics.load_topics",
+        Mock(return_value={Topic(name="topic", concepts=(ConceptId("concept-0"),))}),
+    )
     @patch("toisto.ui.speech.Popen", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
     @patch("pathlib.Path.exists", Mock(return_value=True))
@@ -30,6 +34,8 @@ class AppTest(unittest.TestCase):
         """Run the main function and return the patched print method."""
         path_open.return_value.__enter__.return_value.read.side_effect = self.read_concept_file
         with patch("rich.console.Console.print") as patched_print, suppress(SystemExit):
+            from toisto.app import main
+
             main()
         return patched_print
 
@@ -86,5 +92,3 @@ class AppTest(unittest.TestCase):
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Topic"))
-        last_concept = patched_print.call_args_list[2 + len(TOPICS)][0][0].columns[1]._cells[0]  # noqa: SLF001
-        self.assertEqual(f"concept-{len(TOPICS)} in nl", last_concept)

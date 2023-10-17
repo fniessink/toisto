@@ -13,12 +13,13 @@ logging.getLogger().setLevel(logging.ERROR)
 from .command.practice import practice
 from .command.show_progress import show_progress
 from .command.show_topics import show_topics
-from .metadata import CONCEPT_JSON_FILES, TOPICS, latest_version
-from .model.language.concept import Topic, filter_concepts
+from .metadata import CONCEPT_JSON_FILES, TOPIC_FILES, latest_version
+from .model.filter import filter_concepts
 from .model.quiz.quiz_factory import create_quizzes
 from .persistence.concepts import ConceptIdRegistry, load_concepts
 from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
+from .persistence.topics import load_topics
 from .ui.cli import create_argument_parser
 from .ui.text import show_welcome
 
@@ -29,17 +30,19 @@ def main() -> None:
     config = read_config(argument_parser)
     registry = ConceptIdRegistry(argument_parser)
     concepts = load_concepts(CONCEPT_JSON_FILES, registry, argument_parser)
-    argument_parser = create_argument_parser(config, concepts)
+    topics = load_topics(TOPIC_FILES, argument_parser)
+    argument_parser = create_argument_parser(config, concepts, topics)
     args = argument_parser.parse_args()
     extra_concept_files = [Path(concept_file) for concept_file in args.concept_file]
     concepts |= load_concepts(extra_concept_files, registry, argument_parser)
-    selected_topics = (args.topic or TOPICS) + [Topic(filepath.stem) for filepath in extra_concept_files]
-    concepts = filter_concepts(concepts, args.concept, args.levels, selected_topics, argument_parser)
+    extra_topic_files = [Path(topic_file) for topic_file in args.topic_file]
+    topics |= load_topics(extra_topic_files, argument_parser)
+    concepts = filter_concepts(concepts, topics, args.concept, args.levels, args.topic, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, argument_parser)
     match args.command:
         case "topics":
-            show_topics(args.target_language, args.source_language, concepts)
+            show_topics(args.target_language, args.source_language, topics, concepts)
         case "progress":
             show_progress(args.target_language, quizzes, progress, args.sort)
         case _:  # Default command is "practice"

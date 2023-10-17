@@ -8,7 +8,6 @@
             ]
         },
         "antonym": "big",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "small",
             "fi": "pieni",
@@ -33,10 +32,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.3",
-            "SM1.7"
-        ],
         "positive degree": {
             "en": "important",
             "fi": "tärkeä",
@@ -87,7 +82,6 @@
             "B1": "KK"
         },
         "antonym": "expensive",
-        "topics": "SM1.2",
         "positive degree": {
             "en": "cheap",
             "fi": "halpa",
@@ -113,7 +107,6 @@
             ]
         },
         "antonym": "cold",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "hot",
             "fi": "kuuma",
@@ -139,7 +132,6 @@
             ]
         },
         "antonym": "hot",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "cold",
             "fi": "kylmä",
@@ -187,7 +179,6 @@
             ]
         },
         "antonym": "hard",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "easy",
             "fi": "helppo",
@@ -213,7 +204,6 @@
             ]
         },
         "antonym": "easy",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "hard",
             "fi": "vaikea",
@@ -239,10 +229,6 @@
             ]
         },
         "antonym": "ugly",
-        "topics": [
-            "SM1.3",
-            "SM1.4"
-        ],
         "positive degree": {
             "en": "beautiful",
             "fi": "kaunis",
@@ -266,7 +252,6 @@
             "none": "EP"
         },
         "antonym": "beautiful",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "ugly",
             "fi": "ruma",
@@ -292,7 +277,6 @@
             ]
         },
         "antonym": "old",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "new",
             "fi": "uusi",
@@ -317,7 +301,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "antonym": "old",
         "positive degree": {
             "en": "young",
@@ -347,11 +330,6 @@
             "new",
             "young"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.3",
-            "SM1.4"
-        ],
         "positive degree": {
             "en": "old",
             "fi": "vanha",
@@ -374,10 +352,6 @@
             "B2": "OD",
             "none": "EP"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.4"
-        ],
         "positive degree": {
             "en": "cute",
             "fi": "söpö",
@@ -403,7 +377,6 @@
             ]
         },
         "antonym": "slow",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "fast",
             "fi": "nopea",
@@ -427,7 +400,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "antonym": "weak",
         "positive degree": {
             "en": "strong",
@@ -453,7 +425,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.4",
         "positive degree": {
             "en": "quiet",
             "fi": "hiljainen",
@@ -478,7 +449,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "positive degree": {
             "en": "fresh",
             "fi": "tuore",
@@ -504,7 +474,6 @@
             "A2": "KK"
         },
         "antonym": "cold",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "warm",
             "fi": "lämmin",
@@ -528,7 +497,6 @@
             "C1": "KK"
         },
         "antonym": "warm",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "cool",
             "fi": "viileä",
@@ -626,11 +594,6 @@
             ]
         },
         "antonym": "short",
-        "topics": [
-            "SM1.2",
-            "SM1.3",
-            "SM1.4"
-        ],
         "positive degree": {
             "en": "long",
             "fi": "pitkä",
@@ -656,11 +619,6 @@
             ]
         },
         "antonym": "long",
-        "topics": [
-            "SM1.2",
-            "SM1.3",
-            "SM1.4"
-        ],
         "positive degree": {
             "en": "short",
             "fi": "lyhyt",
@@ -710,7 +668,6 @@
             "C1": "KK"
         },
         "antonym": "fast",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "slow",
             "fi": "hidas",
@@ -758,7 +715,6 @@
             ]
         },
         "antonym": "small",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "big",
             "fi": [
@@ -792,12 +748,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.3",
-            "SM1.7"
-        ],
         "positive degree": {
             "en": "nice",
             "fi": [
@@ -881,11 +831,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.3"
-        ],
         "antonym": "bad",
         "positive degree": {
             "en": "good",
@@ -912,7 +857,6 @@
             ]
         },
         "antonym": "good",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "bad",
             "fi": "huono",
@@ -937,7 +881,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "positive degree": {
             "en": "happy",
             "fi": "onnellinen",
@@ -962,7 +905,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "positive degree": {
             "en": "cheerful",
             "fi": "iloinen",
@@ -987,7 +929,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "positive degree": {
             "en": "funny",
             "fi": "hauska",
@@ -1012,7 +953,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.1",
         "positive degree": {
             "en": "free",
             "fi": "vapaa",
@@ -1038,7 +978,6 @@
             "B2": "KK"
         },
         "antonym": "dark",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "bright",
             "fi": "valoisa",
@@ -1064,7 +1003,6 @@
             "A2": "KK"
         },
         "antonym": "bright",
-        "topics": "SM1.3",
         "positive degree": {
             "en": "dark",
             "fi": "pimeä",
@@ -1089,7 +1027,6 @@
             ],
             "B1": "EP"
         },
-        "topics": "SM1.2",
         "antonym": "strong",
         "positive degree": {
             "en": "weak",
@@ -1115,7 +1052,6 @@
             ],
             "A2": "OD"
         },
-        "topics": "SM1.2",
         "positive degree": {
             "en": "crazy",
             "fi": "hullu",
@@ -1140,7 +1076,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "antonym": "few/a little",
         "positive degree": {
             "en": [
@@ -1168,7 +1103,6 @@
             "B1": "EP"
         },
         "antonym": "many/much",
-        "topics": "SM1.3",
         "positive degree": {
             "en": [
                 "few;;Use 'few' with countable nouns and 'little' with uncountable nouns",
@@ -1203,7 +1137,6 @@
             ]
         },
         "antonym": "positive",
-        "topics": "SM1.2",
         "positive degree": {
             "en": "negative",
             "fi": "negatiivinen",
@@ -1253,7 +1186,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "positive degree": {
             "en": "dumb",
             "fi": "tyhmä",
@@ -1278,7 +1210,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "en": "half",
         "fi": "puoli",
         "nl": "half"
@@ -1292,7 +1223,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "en": "open",
         "fi": [
             "avoinna",
@@ -1307,7 +1237,6 @@
             "A2": "OD",
             "none": "KK"
         },
-        "topics": "SM1.7",
         "en": "closed",
         "fi": [
             "suljettu",
@@ -1326,10 +1255,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.3"
-        ],
         "en": "same",
         "fi": "sama",
         "nl": [

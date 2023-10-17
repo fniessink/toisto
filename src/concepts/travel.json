@@ -7,10 +7,6 @@
             ],
             "A2": "EP"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "journey",
             "fi": "matka",
@@ -31,7 +27,6 @@
         "roots": {
             "fi": "journey"
         },
-        "topics": "SM1.7",
         "en": "tourism",
         "fi": "matkailu",
         "nl": "het toerisme"
@@ -44,7 +39,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "ticket",
             "fi": "lippu",
@@ -67,7 +61,6 @@
         "roots": {
             "nl": "price"
         },
-        "topics": "SM1.7",
         "en": [
             "entry fee",
             "entrance fee"
@@ -81,7 +74,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.7",
         "en": "discount",
         "fi": "alennus",
         "nl": "de korting"
@@ -94,7 +86,6 @@
             ],
             "B1": "KK"
         },
-        "topics": "SM1.7",
         "en": "free",
         "fi": [
             "ilmainen",
@@ -116,7 +107,6 @@
             "fi": "time",
             "nl": "time"
         },
-        "topics": "SM1.7",
         "en": "opening hours",
         "fi": "aukioloajat",
         "nl": "de openingstijden"
@@ -129,11 +119,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2",
-            "SM1.7"
-        ],
         "root": {
             "singular": {
                 "en": "car",
@@ -184,7 +169,6 @@
             "B1": "OD",
             "C2": "KK"
         },
-        "topics": "SM1.7",
         "en": "helicopter",
         "fi": "helikopteri",
         "nl": "de helikopter"
@@ -214,10 +198,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "singular": {
             "en": "port",
             "fi": "satama",
@@ -235,10 +215,6 @@
             "A2": "EP",
             "none": "KK"
         },
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "roots": {
             "en": "port",
             "fi": [
@@ -261,7 +237,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "airplane|plane",
             "fi": "lentokone",
@@ -281,10 +256,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "boat",
             "fi": "vene",
@@ -304,10 +275,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "ship",
             "fi": "laiva",
@@ -327,11 +294,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.6",
-            "SM1.7"
-        ],
         "singular": {
             "en": "train",
             "fi": "juna",
@@ -348,10 +310,6 @@
             "A2": "OD",
             "C2": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "metro",
             "fi": [
@@ -375,7 +333,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.7",
         "roots": {
             "en": "street"
         },
@@ -413,10 +370,6 @@
         "roots": {
             "fi": "car"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "bus",
             "fi": [
@@ -455,7 +408,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "stop",
             "fi": "pysäkki",
@@ -476,11 +428,6 @@
         "roots": [
             "bus",
             "stop"
-        ],
-        "topics": [
-            "city",
-            "SM1.2",
-            "SM1.7"
         ],
         "en": "bus stop",
         "fi": [
@@ -518,10 +465,6 @@
             "bus",
             "station"
         ],
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "en": "bus station",
         "fi": "linja-autoasema",
         "nl": "het busstation"
@@ -537,10 +480,6 @@
             "train",
             "station"
         ],
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "en": "train station",
         "fi": "rautatieasema",
         "nl": "het treinstation"
@@ -551,7 +490,6 @@
             "metro",
             "station"
         ],
-        "topics": "SM1.7",
         "en": "metro station",
         "fi": "metroasema",
         "nl": "het metrostation"
@@ -562,7 +500,6 @@
             "B2": "KK",
             "C2": "OD"
         },
-        "topics": "SM1.2",
         "en": "customs",
         "fi": "tulli",
         "nl": "de douane"
@@ -578,7 +515,6 @@
         "roots": {
             "en": "parking"
         },
-        "topics":" SM1.7",
         "en": "parking garage",
         "fi": "parkkihalli",
         "nl": "de parkeergarage"
@@ -592,10 +528,6 @@
             "fi": "place",
             "nl": "place"
         },
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "en": "parking spot",
         "fi": "parkkipaikka",
         "nl": "de parkeerplaats"
@@ -606,10 +538,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": [
-            "city",
-            "SM1.7"
-        ],
         "en": "parking",
         "fi": "pysäköinti",
         "nl": "de parkeergelegenheid"
@@ -622,7 +550,6 @@
             ],
             "B1": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "taxi",
             "fi": "taksi",
@@ -642,7 +569,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "en": "means of transportation",
         "singular": {
             "fi": "kulkuväline",
@@ -664,7 +590,6 @@
         "roots": {
             "fi": "car"
         },
-        "topics": "SM1.7",
         "en": "delivery van",
         "fi": "pakettiauto",
         "nl": "de bestelwagen"
@@ -678,7 +603,6 @@
         "roots": {
             "fi": "car"
         },
-        "topics": "SM1.7",
         "en": [
             "lorry",
             "truck"
@@ -687,7 +611,6 @@
         "nl": "de vrachtwagen"
     },
     "bicycle": {
-        "topics": "SM1.7",
         "singular": {
             "en": "bicycle",
             "fi": "polkypyörä|pyörä",
@@ -711,7 +634,6 @@
             "fi": "bicycle",
             "nl": "bicycle"
         },
-        "topics": "SM1.7",
         "en": "motorcycle",
         "fi": "moottoripyörä|pyörä",
         "nl": "de motorfiets|de motor"

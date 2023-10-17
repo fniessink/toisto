@@ -7,7 +7,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "money",
         "fi": "raha",
         "nl": "het geld"
@@ -18,7 +17,6 @@
             "B2": "EP",
             "C1": "OD"
         },
-        "topics": "SM1.2",
         "en": [
             "bank card",
             "debit card"
@@ -34,7 +32,6 @@
             ],
             "C1": "KK"
         },
-        "topics": "SM1.2",
         "en": "cash",
         "fi": "käteinen",
         "nl": "contant"
@@ -48,7 +45,6 @@
             ],
             "nl": "cash"
         },
-        "topics": "SM1.2",
         "en": "Cash or card?",
         "fi": "Käteisellä vai kortilla?",
         "nl": "Contant of pinnen?"
@@ -59,7 +55,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.2",
         "en": "receipt",
         "fi": "kuitti",
         "nl": "het bonnetje|de bon"
@@ -72,7 +67,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "account",
         "fi": "tili",
         "nl": "de rekening"
@@ -85,7 +79,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "price",
             "fi": "hinta",
@@ -105,7 +98,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "cent",
             "fi": "sentti",
@@ -123,7 +115,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.2",
         "en": [
             "banknote|note",
             "bill"
@@ -132,13 +123,11 @@
         "nl": "het bankbiljet"
     },
     "anything else": {
-        "topics": "SM1.2",
         "en": "Anything else?",
         "fi": "Tuleeks muuta?*",
         "nl": "Anders nog iets?"
     },
     "all together": {
-        "topics": "SM1.2",
         "en": "All together?",
         "fi": "Tuleeks nää samasta?*",
         "nl": "Alles bij elkaar?"

@@ -17,7 +17,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "number",
             "fi": "numero",
@@ -39,7 +38,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.1",
         "en": "zero",
         "fi": "nolla",
         "nl": "nul"
@@ -52,10 +50,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "one",
         "fi": [
             "yksi",
@@ -71,10 +65,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "two",
         "fi": [
             "kaksi",
@@ -90,7 +80,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "three",
         "fi": "kolme",
         "nl": "drie"
@@ -103,7 +92,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "four",
         "fi": "neljä",
         "nl": "vier"
@@ -116,10 +104,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "five",
         "fi": [
             "viisi",
@@ -135,10 +119,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "six",
         "fi": [
             "kuusi",
@@ -154,10 +134,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "seven",
         "fi": [
             "seitsemän",
@@ -173,7 +149,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.1",
         "en": "eight",
         "fi": [
             "kahdeksan",
@@ -189,10 +164,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "nine",
         "fi": [
             "yhdeksän",
@@ -208,7 +179,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "ten",
         "fi": "kymmenen",
         "nl": "tien"
@@ -225,10 +195,6 @@
             "1",
             "10"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "eleven",
         "fi": [
             "yksitoista",
@@ -244,7 +210,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.1",
         "roots": [
             "2",
             "10"
@@ -265,7 +230,6 @@
             "3",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "thirteen",
         "fi": "kolmetoista",
         "nl": "dertien"
@@ -282,7 +246,6 @@
             "4",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "fourteen",
         "fi": "neljätoista",
         "nl": "veertien"
@@ -299,7 +262,6 @@
             "5",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "fifteen",
         "fi": "viisitoista",
         "nl": "vijftien"
@@ -316,7 +278,6 @@
             "6",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "sixteen",
         "fi": "kuusitoista",
         "nl": "zestien"
@@ -333,7 +294,6 @@
             "7",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "seventeen",
         "fi": "seitsemäntoista",
         "nl": "zeventien"
@@ -350,7 +310,6 @@
             "8",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "eightteen",
         "fi": "kahdeksantoista",
         "nl": "achttien"
@@ -367,7 +326,6 @@
             "9",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "nineteen",
         "fi": "yhdeksäntoista",
         "nl": "negentien"
@@ -384,7 +342,6 @@
             "2",
             "10"
         ],
-        "topics": "SM1.1",
         "en": "twenty",
         "fi": [
             "kaksikymmentä",
@@ -403,10 +360,6 @@
         "roots": [
             "1",
             "20"
-        ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
         ],
         "en": "twenty-one",
         "fi": [
@@ -427,7 +380,6 @@
             "2",
             "20"
         ],
-        "topics": "SM1.1",
         "en": "twenty-two",
         "fi": "kaksikymmentäkaksi",
         "nl": "tweeëntwintig"
@@ -444,7 +396,6 @@
             "3",
             "20"
         ],
-        "topics": "SM1.1",
         "en": "twenty-three",
         "fi": "kaksikymmentäkolme",
         "nl": "drieëntwintig"
@@ -461,7 +412,6 @@
             "4",
             "20"
         ],
-        "topics": "SM1.1",
         "en": "twenty-four",
         "fi": "kaksikymmentäneljä",
         "nl": "vierentwintig"
@@ -475,10 +425,6 @@
         "roots": [
             "3",
             "10"
-        ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
         ],
         "en": "thirty",
         "fi": [
@@ -497,10 +443,6 @@
             "4",
             "10"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "forty",
         "fi": [
             "neljäkymmentä",
@@ -517,10 +459,6 @@
         "roots": [
             "5",
             "10"
-        ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
         ],
         "en": "fifty",
         "fi": [
@@ -539,10 +477,6 @@
             "6",
             "10"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "sixty",
         "fi": [
             "kuusikymmentä",
@@ -559,10 +493,6 @@
         "roots": [
             "7",
             "10"
-        ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
         ],
         "en": "seventy",
         "fi": [
@@ -581,10 +511,6 @@
             "8",
             "10"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "eighty",
         "fi": [
             "kahdeksankymmentä",
@@ -602,10 +528,6 @@
             "9",
             "10"
         ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "ninety",
         "fi": [
             "yhdeksänkymmentä",
@@ -621,7 +543,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.1",
         "en": "hundred",
         "fi": "sata",
         "nl": "honderd"
@@ -638,7 +559,6 @@
             "2",
             "100"
         ],
-        "topics": "SM1.1",
         "en": "two hundred",
         "fi": "kaksisataa",
         "nl": "tweehonderd"
@@ -655,7 +575,6 @@
             "3",
             "100"
         ],
-        "topics": "SM1.1",
         "en": "three hundred",
         "fi": "kolmesataa;;'sataa' is the partitive case of 'sata'",
         "nl": "driehonderd"
@@ -668,7 +587,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.1",
         "en": "thousand",
         "fi": "tuhat",
         "nl": "duizend"
@@ -685,7 +603,6 @@
             "2",
             "1000"
         ],
-        "topics": "SM1.1",
         "en": "two thousand",
         "fi": "kaksituhatta;;'tuhatta' is the partitive case of 'tuhat'",
         "nl": "tweeduizend"
@@ -703,7 +620,6 @@
             "100",
             "1000"
         ],
-        "topics": "SM1.1",
         "en": "five hunderd thousand",
         "fi": "viisisataatuhatta;;'sataa' and 'tuhatta' are the partitive case of 'sata' and 'tuhat' respectively",
         "nl": "vijfhonderdduizend"
@@ -716,7 +632,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.1",
         "en": "million",
         "fi": "miljoona",
         "nl": "miljoen"
@@ -733,7 +648,6 @@
             "2",
             "1000000"
         ],
-        "topics": "SM1.1",
         "en": "two million",
         "fi": "kaksi miljoonaa;;'miljoonaa' is the partitive case of 'miljoona'",
         "nl": "twee miljoen"
@@ -744,7 +658,6 @@
             "A2": "OD",
             "B2": "EP"
         },
-        "topics": "SM1.1",
         "en": "billion",
         "fi": "miljardi",
         "nl": "miljard"
@@ -761,7 +674,6 @@
             "5",
             "1000000000"
         ],
-        "topics": "SM1.1",
         "en": "five billion",
         "fi": "viisi miljardia;;'miljardia' is the partitive case of 'miljardi'",
         "nl": "vijf miljard"
@@ -774,7 +686,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "singular": {
             "en": "pair",
             "fi": "pari",
@@ -794,7 +705,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "first",
         "fi": "ensin",
         "nl": "eerst"
@@ -805,14 +715,12 @@
             "15",
             "4"
         ],
-        "topics": "SM1.1",
         "en": "What is fifteen plus four?",
         "fi": "Mitä on viisitoista plus neljä?",
         "nl": "Wat is vijftien plus vier?"
     },
     "that is 19": {
         "answer-only": true,
-        "topics": "SM1.1",
         "en": "That is nineteen.",
         "fi": "Se on yhdeksäntoista.",
         "nl": "Dat is negentien."
@@ -829,7 +737,6 @@
     },
     "that is 30": {
         "answer-only": true,
-        "topics": "SM1.1",
         "en": "That is thirty.",
         "fi": "Se on kolmekymmentä.",
         "nl": "Dat is dertig."
@@ -840,14 +747,12 @@
             "20",
             "7"
         ],
-        "topics": "SM1.1",
         "en": "What is twenty minus seven?",
         "fi": "Mitä on kaksikymmentä minus seitsemän?",
         "nl": "Wat is twintig min zeven?"
     },
     "that is 13": {
         "answer-only": true,
-        "topics": "SM1.1",
         "en": "That is thirteen.",
         "fi": "Se on kolmetoista.",
         "nl": "Dat is dertien."

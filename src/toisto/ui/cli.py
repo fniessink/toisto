@@ -10,8 +10,9 @@ from rich_argparse import RichHelpFormatter
 from ..command.show_progress import SortColumn
 from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
 from ..model.language.cefr import CommonReferenceLevel
-from ..model.language.concept import Concept, Topic, topics
+from ..model.language.concept import Concept
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
+from ..model.topic.topic import Topic
 
 
 def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
@@ -40,23 +41,24 @@ def check_language(language: str) -> str:
     raise ArgumentTypeError(message)
 
 
-def add_topic_arguments(parser: ArgumentParser, topics: list[Topic]) -> None:
+def add_topic_arguments(parser: ArgumentParser, topics: set[Topic]) -> None:
     """Add the topic arguments to the parser."""
+    topic_names = ", ".join(sorted(topic.name for topic in topics))
     parser.add_argument(
         "-T",
         "--topic",
         action="append",
         default=[],
         metavar="{topic}",
-        help=f"topic to use, can be repeated; default: all; built-in topics: {', '.join(topics)}",
+        help=f"topic to use, can be repeated; default: all; built-in topics: {topic_names}",
     )
     parser.add_argument(
-        "-f",
-        "--concept-file",
+        "-o",
+        "--topic-file",
         action="append",
         default=[],
-        metavar="{concept file}",
-        help="concept file to use, can be repeated",
+        metavar="{topic file}",
+        help="extra topic file to use, can be repeated",
     )
 
 
@@ -70,6 +72,14 @@ def add_concept_arguments(parser: ArgumentParser, concepts: set[Concept]) -> Non
         default=[],
         metavar="{concept}",
         help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
+    )
+    parser.add_argument(
+        "-C",
+        "--concept-file",
+        action="append",
+        default=[],
+        metavar="{concept file}",
+        help="extra concept file to use, can be repeated",
     )
 
 
@@ -93,10 +103,17 @@ def add_level_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
 class CommandBuilder:
     """Add commands to the argument parser."""
 
-    def __init__(self, argument_parser: ArgumentParser, concepts: set[Concept], config: ConfigParser) -> None:
+    def __init__(
+        self,
+        argument_parser: ArgumentParser,
+        concepts: set[Concept],
+        topics: set[Topic],
+        config: ConfigParser,
+    ) -> None:
         command_help = "default: practice; type `%(prog)s {command} --help` for more information on a command"
         self.subparsers = argument_parser.add_subparsers(dest="command", title="commands", help=command_help)
         self.concepts = concepts
+        self.topics = topics
         self.config = config
 
     def add_command(self, command: str, description: str, command_help: str) -> ArgumentParser:
@@ -109,7 +126,7 @@ class CommandBuilder:
         )
         add_language_arguments(parser, self.config)
         add_level_arguments(parser, self.config)
-        add_topic_arguments(parser, topics(self.concepts))
+        add_topic_arguments(parser, self.topics)
         add_concept_arguments(parser, self.concepts)
         return parser
 
@@ -145,14 +162,18 @@ class CommandBuilder:
         self.add_command("topics", "Show topics.", command_help)
 
 
-def create_argument_parser(config: ConfigParser, concepts: set[Concept] | None = None) -> ArgumentParser:
+def create_argument_parser(
+    config: ConfigParser,
+    concepts: set[Concept] | None = None,
+    topics: set[Topic] | None = None,
+) -> ArgumentParser:
     """Create the argument parser."""
     epilog = f"See {README_URL} for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
     argument_parser.add_argument("-V", "--version", action="version", version=version)
-    builder = CommandBuilder(argument_parser, concepts or set(), config)
+    builder = CommandBuilder(argument_parser, concepts or set(), topics or set(), config)
     builder.add_practice_command()
     builder.add_progress_command()
     builder.add_topics_command()

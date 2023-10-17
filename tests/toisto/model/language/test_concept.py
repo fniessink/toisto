@@ -5,8 +5,10 @@ from argparse import ArgumentParser
 from typing import cast
 from unittest.mock import Mock, patch
 
-from toisto.model.language.concept import Concept, ConceptId, Topic, filter_concepts
+from toisto.model.filter import filter_concepts
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.topic.topic import Topic
 
 from ....base import ToistoTestCase
 
@@ -21,7 +23,6 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((), concept.labels("fi"))
         self.assertEqual((), concept.meanings("fi"))
         self.assertIsNone(concept.level)
-        self.assertEqual({"<unknown topic>"}, concept.topics)
         self.assertEqual((), concept.answers)
         self.assertFalse(concept.answer_only)
         self.assertEqual((), concept.roots("fi"))
@@ -75,32 +76,43 @@ class ConceptFilterTest(unittest.TestCase):
         self.two = create_concept(
             ConceptId("two"),
             cast(ConceptDict, dict(level={"A1": "KK"}, fi="kaksi", nl="twee")),
-            Topic("small"),
         )
         self.three = create_concept(
             ConceptId("three"),
             cast(ConceptDict, dict(level={"A2": "KK"}, fi="kolme", nl="drie")),
-            Topic("big"),
         )
+        self.concepts = {self.two, self.three}
+        small = Topic(name="small", concepts=(ConceptId("two"),))
+        big = Topic(name="big", concepts=(ConceptId("three"),))
+        self.topics = {small, big}
 
     def test_no_filter(self):
         """Test that all concepts are returned when there is no filter specified."""
-        self.assertEqual({self.two}, filter_concepts({self.two}, [], [], [], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts({self.two}, self.topics, [], [], [], ArgumentParser()))
 
     def test_filter_by_selected_concepts(self):
         """Test that concepts can be filtered by selected concepts."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, ["two"], [], [], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, ["two"], [], [], ArgumentParser()))
 
     def test_filter_by_level(self):
         """Test that concepts can be filtered by level."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], ["A1"], [], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], ["A1"], [], ArgumentParser()))
 
     def test_filter_by_topic(self):
         """Test that concepts can be filtered by topic."""
-        self.assertEqual({self.two}, filter_concepts({self.two, self.three}, [], [], ["small"], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], [], ["small"], ArgumentParser()))
 
     @patch("sys.stderr.write")
     def test_no_match(self, sys_stderr_write: Mock):
         """Test that an error message is given when no concepts match the filter criteria."""
-        self.assertRaises(SystemExit, filter_concepts, {self.two, self.three}, [], [], ["missing"], ArgumentParser())
+        self.assertRaises(
+            SystemExit,
+            filter_concepts,
+            self.concepts,
+            self.topics,
+            [],
+            [],
+            ["missing"],
+            ArgumentParser(),
+        )
         self.assertIn("No concepts found that match your selection criteria", sys_stderr_write.call_args_list[1][0][0])

@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-from argparse import ArgumentParser
-from collections.abc import Generator, Iterable
+from collections.abc import Generator
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
-from typing import ClassVar, NewType, NoReturn, cast, get_args
+from typing import ClassVar, NewType, cast, get_args
 
 from . import Language
 from .cefr import CommonReferenceLevel
@@ -16,7 +15,6 @@ from .label import Labels
 
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
-Topic = NewType("Topic", str)
 
 
 @dataclass(frozen=True)
@@ -92,7 +90,6 @@ class Concept:
     _meanings: dict[Language, Labels]
     level: CommonReferenceLevel | None
     related_concepts: RelatedConcepts
-    topics: set[Topic]
     answer_only: bool
 
     instances: ClassVar[dict[ConceptId, Concept]] = {}
@@ -153,27 +150,3 @@ class Concept:
 
 
 Concepts = tuple[Concept, ...]
-
-
-def topics(concepts: Iterable[Concept]) -> list[Topic]:
-    """Gather the topics from the concepts."""
-    return sorted({topic for concept in concepts for topic in concept.topics})
-
-
-def filter_concepts(
-    concepts: set[Concept],
-    selected_concepts: list[ConceptId],
-    selected_levels: list[CommonReferenceLevel],
-    selected_topics: list[Topic],
-    argument_parser: ArgumentParser,
-) -> set[Concept] | NoReturn:
-    """Filter the concepts by selected concepts, levels, and topics."""
-    if selected_concepts:
-        concepts = {concept for concept in concepts if concept.concept_id in selected_concepts}
-    if selected_levels:
-        concepts = {concept for concept in concepts if concept.level in selected_levels}
-    if selected_topics:
-        concepts = {concept for concept in concepts if concept.topics & set(selected_topics)}
-    if (selected_concepts or selected_levels or selected_topics) and not concepts:
-        argument_parser.error("No concepts found that match your selection criteria\n")
-    return concepts

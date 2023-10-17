@@ -7,10 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "No!",
         "fi": "Ei!",
         "nl": "Nee!"
@@ -23,7 +19,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "Yes!",
         "fi": [
             "Joo!",
@@ -35,7 +30,6 @@
         "roots": {
             "fi": "good"
         },
-        "topics": "SM1.1",
         "en": "Here you go!",
         "fi": "Ole hyvä!",
         "nl": "Alsjeblieft!|Alstublieft!"
@@ -48,10 +42,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": "Thank you!|Thanks!",
         "fi": [
             "Kiitos!",
@@ -73,7 +63,6 @@
             "nl": "thanks",
             "fi": "no"
         },
-        "topics": "SM1.1",
         "en": "You're welcome!",
         "nl": [
             "Geen dank!",
@@ -89,7 +78,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "Sorry!",
         "fi": "Anteeksi!",
         "nl": "Sorry!"
@@ -116,7 +104,6 @@
             "en": "no",
             "fi": "nothing"
         },
-        "topics": "SM1.1",
         "en": "No problem!",
         "fi": "Ei se mitään!",
         "nl": [
@@ -132,17 +119,12 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.2"
-        ],
         "en": "OK!|Okay!",
         "fi": "Okei!",
         "nl": "OK!|Oké!"
     },
     "and you": {
         "roots": "and",
-        "topics": "SM1.1",
         "en": "And you?",
         "fi": "Entä sinulle?",
         "nl": "En met jou?"
@@ -155,13 +137,11 @@
             ],
             "nl": "to eat"
         },
-        "topics": "SM1.1",
         "en": "Enjoy your meal!",
         "fi": "Hyvää ruokahalua!",
         "nl": "Eet smakelijk!"
     },
     "cheers": {
-        "topics": "SM1.1",
         "en": "Cheers!",
         "fi": [
             "Kippis!",
@@ -183,7 +163,6 @@
                 "to eat"
             ]
         },
-        "topics": "SM1.1",
         "en": "Thank you for the meal!|Thanks for the meal!",
         "fi": "Kiitos ruoasta!",
         "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
@@ -205,7 +184,6 @@
                 "tasty"
             ]
         },
-        "topics": "SM1.1",
         "en": "Thank you, it was delicious!|Thanks, it was delicious!",
         "fi": "Kiitos, oli hyvää!",
         "nl": "Dank je, het was lekker!|Dank u, het was lekker!|Bedankt, het was lekker!"
@@ -215,13 +193,11 @@
             "good",
             "thanks"
         ],
-        "topics": "SM1.1",
         "en": "Very well, thank you!|Very well, thanks!",
         "fi": "Ihan hyvää, kiitos!",
         "nl": "Heel goed, dank je!|Heel goed, dank u!|Heel goed, bedankt!"
     },
     "thanks, same to you": {
-        "topics": "SM1.1",
         "en": "Thank you, same to you!|Thanks, same to you!",
         "fi": "Kiitos samoin!",
         "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
@@ -234,7 +210,6 @@
                 "OD"
             ]
         },
-        "topics": "CN1.1",
         "singular": {
             "en": "example",
             "fi": "esimerkki",
@@ -254,7 +229,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
         "en": "for example",
         "fi": "esimerkiksi",
         "nl": "bijvoorbeeld"

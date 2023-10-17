@@ -7,7 +7,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "en": "family",
         "fi": "perhe",
         "nl": "de familie"
@@ -20,7 +19,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "grandma",
             "fi": [
@@ -44,7 +42,6 @@
             "A2": "EP",
             "C1": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "grandpa",
             "fi": [
@@ -79,7 +76,6 @@
                 "mother"
             ]
         },
-        "topics": "SM1.4",
         "en": "grandmother",
         "fi": "isoäiti",
         "nl": "de grootmoeder"
@@ -101,7 +97,6 @@
                 "father"
             ]
         },
-        "topics": "SM1.4",
         "en": "grandfather",
         "fi": "isoisä",
         "nl": "de grootvader"
@@ -122,7 +117,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.4",
         "en": "divorced",
         "fi": "eronnut",
         "nl": "gescheiden"
@@ -135,10 +129,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.3",
-            "SM1.4"
-        ],
         "singular": {
             "en": "mother",
             "fi": "äiti",
@@ -158,10 +148,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.4"
-        ],
         "singular": {
             "en": "father",
             "fi": "isä",
@@ -181,7 +167,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "root": {
             "singular": {
                 "en": "child",
@@ -218,7 +203,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "root": {
             "singular": {
                 "en": "sister",
@@ -252,7 +236,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "root": {
             "singular": {
                 "en": "brother",
@@ -309,7 +292,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "cousin",
             "fi": "serkku",
@@ -420,7 +402,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "wife",
             "fi": "vaimo",
@@ -492,7 +473,6 @@
             "fi": "old",
             "nl": "old"
         },
-        "topics": "SM1.4",
         "singular": {
             "en": "parent",
             "fi": "vanhempi;noun",
@@ -521,7 +501,6 @@
                 "parent"
             ]
         },
-        "topics": "SM1.4",
         "en": "grandparent",
         "fi": "isovanhempi",
         "nl": "de grootouder"

@@ -7,7 +7,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "day",
             "fi": "päivä",
@@ -20,7 +19,6 @@
         }
     },
     "24 hours": {
-        "topics": "SM1.3",
         "en": "(twenty-four hours)",
         "fi": "vuorokausi",
         "nl": "het etmaal"
@@ -33,10 +31,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.3"
-        ],
         "singular": {
             "en": "week",
             "fi": "viikko",
@@ -60,7 +54,6 @@
             "end",
             "week"
         ],
-        "topics": "SM1.1",
         "singular": {
             "en": "weekend",
             "fi": "viikonloppu",
@@ -77,7 +70,6 @@
             "day",
             "week"
         ],
-        "topics": "SM1.1",
         "en": "days of the week",
         "fi": "viikonpäivät",
         "nl": "de dagen van de week"
@@ -97,7 +89,6 @@
                 "day"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Monday;;In English, the names of weekdays are capitalized",
             "fi": "maanantai;;In Finnish, the names of weekdays are not capitalized",
@@ -151,7 +142,6 @@
             "fi": "week",
             "nl": "day"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Wednesday;;In English, the names of weekdays are capitalized",
             "fi": "keskiviikko;;In Finnish, the names of weekdays are not capitalized",
@@ -181,7 +171,6 @@
             "en": "day",
             "nl": "day"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Thursday;;In English, the names of weekdays are capitalized",
             "fi": "torstai;;In Finnish, the names of weekdays are not capitalized",
@@ -205,7 +194,6 @@
             "en": "day",
             "nl": "day"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Friday;;In English, the names of weekdays are capitalized",
             "fi": "perjantai;;In Finnish, the names of weekdays are not capitalized",
@@ -229,7 +217,6 @@
             "en": "day",
             "nl": "day"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Saturday;;In English, the names of weekdays are capitalized",
             "fi": "lauantai;;In Finnish, the names of weekdays are not capitalized",
@@ -253,7 +240,6 @@
             "en": "day",
             "nl": "day"
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "Sunday;;In English, the names of weekdays are capitalized",
             "fi": "sunnuntai;;In Finnish, the names of weekdays are not capitalized",
@@ -276,7 +262,6 @@
         "roots": {
             "en": "day"
         },
-        "topics": "SM1.1",
         "en": "today",
         "fi": "tänään",
         "nl": "vandaag"
@@ -292,7 +277,6 @@
         "roots": {
             "en": "day"
         },
-        "topics": "SM1.1",
         "en": "yesterday",
         "fi": "eilen",
         "nl": "gisteren"
@@ -305,10 +289,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1"
-        ],
         "en": "tomorrow",
         "fi": "huomenna",
         "nl": "morgen"
@@ -326,7 +306,6 @@
             "fi": "day",
             "nl": "yesterday"
         },
-        "topics": "SM1.1",
         "en": "the day before yesterday",
         "fi": "toissapäivänä",
         "nl": "eergisteren"
@@ -347,7 +326,6 @@
             "fi": "tomorrow",
             "nl": "tomorrow"
         },
-        "topics": "SM1.1",
         "en": "the day after tomorrow",
         "fi": "ylihuomenna",
         "nl": "overmorgen"
@@ -358,7 +336,6 @@
             "none": "EP"
         },
         "roots": "week",
-        "topics": "SM1.6",
         "en": "this week",
         "fi": "tällä viikolla",
         "nl": "deze week"
@@ -428,7 +405,6 @@
                 "today"
             ]
         },
-        "topics": "SM1.1",
         "en": "What day is it today?",
         "fi": "Mikä päivä tänään on?|Mikä päivä on tänään?",
         "nl": "Welke dag is het vandaag?"
@@ -442,7 +418,6 @@
             "fi": "weekend",
             "nl": "weekend"
         },
-        "topics": "SM1.1",
         "en": "Good weekend!",
         "fi": "Hauskaa viikonloppua!",
         "nl": "Prettig weekend!"

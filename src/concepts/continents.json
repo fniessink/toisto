@@ -19,7 +19,6 @@
         }
     },
     "africa": {
-        "topics": "SM1.2",
         "en": "Africa",
         "fi": "Afrikka",
         "nl": "Afrika"
@@ -30,7 +29,6 @@
         "nl": "Amerika"
     },
     "north america": {
-        "topics": "SM1.2",
         "roots": [
             "north",
             "america"
@@ -40,7 +38,6 @@
         "nl": "Noord-Amerika"
     },
     "south america": {
-        "topics": "SM1.2",
         "roots": [
             "south",
             "america"
@@ -50,26 +47,22 @@
         "nl": "Zuid-Amerika"
     },
     "middle america": {
-        "topics": "SM1.2",
         "roots": "america",
         "en": "Middle America",
         "fi": "Väli-Amerikka",
         "nl": "Midden-Amerika"
     },
     "asia": {
-        "topics": "SM1.2",
         "en": "Asia",
         "fi": "Aasia",
         "nl": "Azië"
     },
     "europe": {
-        "topics": "SM1.2",
         "en": "Europe",
         "fi": "Eurooppa",
         "nl": "Europa"
     },
     "middle east": {
-        "topics": "SM1.2",
         "roots": "east",
         "en": "Middle East",
         "fi": "Lähi-itä",

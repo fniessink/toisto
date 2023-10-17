@@ -6,7 +6,7 @@ from typing import NoReturn
 
 from ..metadata import NAME
 from ..model.language.concept import Concept, ConceptId, ConceptIds
-from ..model.language.concept_factory import Topic, create_concept
+from ..model.language.concept_factory import create_concept
 from .json_file import load_json
 
 
@@ -48,7 +48,7 @@ def load_concepts(
         concepts = []
         try:
             for concept_key, concept_value in load_json(concept_file).items():
-                concept = create_concept(concept_key, concept_value, Topic(concept_file.stem))
+                concept = create_concept(concept_key, concept_value)
                 concepts.append(concept)
         except Exception as reason:  # noqa: BLE001
             argument_parser.error(f"{NAME} cannot read concept file {concept_file}: {reason}.\n")

@@ -7,11 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.1",
-            "SM1.2"
-        ],
         "singular": {
             "en": "language",
             "fi": "kieli",
@@ -33,10 +28,6 @@
         },
         "roots": [
             "language"
-        ],
-        "topics": [
-            "SM1.1",
-            "SM1.2"
         ],
         "en": "spoken language",
         "fi": "puhekieli",
@@ -64,7 +55,6 @@
                 "language"
             ]
         },
-        "topics": "SM1.3",
         "en": "written language",
         "fi": "kirjakieli",
         "nl": "de schrijftaal"
@@ -88,11 +78,6 @@
                 "language"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.2",
-            "SM1.3"
-        ],
         "en": "mother tongue",
         "fi": "äidinkieli",
         "nl": "de moedertaal"
@@ -103,7 +88,6 @@
             "B1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.1",
         "en": "pronunciation",
         "fi": "ääntäminen",
         "nl": "de uitspraak"
@@ -142,7 +126,6 @@
     },
     "vowel harmony": {
         "roots": "vowel",
-        "topics": "SM1.1",
         "en": "vowel harmony",
         "fi": "vokaaliharmonia",
         "nl": "de klinkerharmonie"
@@ -153,7 +136,6 @@
             "C1": "EP",
             "none": "KK"
         },
-        "topics": "SM1.2",
         "en": "English;;In English, the names of languages are capitalized",
         "fi": "englanti;;In Finnish, the names of languages are not capitalized",
         "nl": "Engels|het Engels;;In Dutch, the names of languages are capitalized"
@@ -166,7 +148,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.2",
         "en": "Arabic;;In English, the names of languages are capitalized",
         "fi": "arabia;;In Finnish, the names of languages are not capitalized",
         "nl": "Arabisch|het Arabisch;;In Dutch, the names of languages are capitalized"
@@ -215,7 +196,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "en": "Finnish;;In English, the names of languages are capitalized",
         "fi": "suomi;language;In Finnish, the names of languages are not capitalized",
         "nl": "Fins|het Fins;;In Dutch, the names of languages are capitalized"
@@ -228,7 +208,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "French;;In English, the names of languages are capitalized",
         "fi": "ranska;;In Finnish, the names of languages are not capitalized",
         "nl": "Frans|het Frans;;In Dutch, the names of languages are capitalized"
@@ -276,7 +255,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Spanish;;In English, the names of languages are capitalized",
         "fi": "espanja;;In Finnish, the names of languages are not capitalized",
         "nl": "Spaans|het Spaans;;In Dutch, the names of languages are capitalized"
@@ -289,7 +267,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Italian;;In English, the names of languages are capitalized",
         "fi": "italia;;In Finnish, the names of languages are not capitalized",
         "nl": "Italiaans|het Italiaans;;In Dutch, the names of languages are capitalized"
@@ -302,7 +279,6 @@
                 "OD"
             ]
         },
-        "topics": "CN1.1",
         "en": "Dutch;;In English, the names of languages are capitalized",
         "fi": "hollanti;;In Finnish, the names of languages are not capitalized",
         "nl": "Nederlands|het Nederlands;;In Dutch, the names of languages are capitalized"
@@ -351,7 +327,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Russian;;In English, the names of languages are capitalized",
         "fi": "venäjä;;In Finnish, the names of languages are not capitalized",
         "nl": "Russisch|het Russisch;;In Dutch, the names of languages are capitalized"
@@ -364,7 +339,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Icelandic;;In English, the names of languages are capitalized",
         "fi": "islanti;;In Finnish, the names of languages are not capitalized",
         "nl": "IJslands|het IJslands;;In Dutch, the names of languages are capitalized"
@@ -377,7 +351,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "Greek;;In English, the names of languages are capitalized",
         "fi": "kreikka;;In Finnish, the names of languages are not capitalized",
         "nl": "Grieks|het Grieks;;In Dutch, the names of languages are capitalized"
@@ -387,19 +360,16 @@
             "south",
             "africa"
         ],
-        "topics": "SM1.2",
         "en": "South African;;In English, the names of languages are capitalized",
         "fi": "eteläafrikkalainen;;In Finnish, the names of languages are not capitalized",
         "nl": "Zuid-Afrikaans|het Zuid-Afrikaans;;In Dutch, the names of languages are capitalized"
     },
     "portuguese": {
-        "topics": "SM1.2",
         "en": "Portuguese;;In English, the names of languages are capitalized",
         "fi": "portugali;;In Finnish, the names of languages are not capitalized",
         "nl": "Portugees;;In Dutch, the names of languages are capitalized"
     },
     "urdu": {
-        "topics": "SM1.2",
         "en": "Urdu;;In English, the names of languages are capitalized",
         "fi": "urdu;;In Finnish, the names of languages are not capitalized",
         "nl": "Urdu;;In Dutch, the names of languages are capitalized"

@@ -26,10 +26,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.2"
-        ],
         "en": "now",
         "fi": "nyt",
         "nl": "nu"
@@ -42,7 +38,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "en": "then",
         "fi": [
             "sitten",
@@ -58,10 +53,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.3"
-        ],
         "singular": {
             "en": "morning",
             "fi": "aamu|aamupäivä",
@@ -110,7 +101,6 @@
             ],
             "nl": "day"
         },
-        "topics": "SM1.3",
         "singular": {
             "en": "afternoon",
             "fi": "iltapäivä",
@@ -130,7 +120,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.3",
         "singular": {
             "en": "evening",
             "fi": "ilta",
@@ -150,10 +139,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.3"
-        ],
         "singular": {
             "en": "night",
             "fi": "yö",
@@ -190,7 +175,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "year",
             "fi": "vuosi",
@@ -254,7 +238,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "hour",
             "fi": "tunti",
@@ -274,7 +257,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.5",
         "singular": {
             "en": "minute",
             "fi": "minuutti",
@@ -294,7 +276,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "clock",
             "fi": "kello",
@@ -318,7 +299,6 @@
             "en": "clock",
             "fi": "clock"
         },
-        "topics": "SM1.5",
         "en": "alarm clock",
         "fi": "herätyskello",
         "nl": "de wekker"
@@ -342,7 +322,6 @@
                 "to be"
             ]
         },
-        "topics": "SM1.5",
         "en": "What time is it?",
         "fi": [
             "Paljonko kello on?",

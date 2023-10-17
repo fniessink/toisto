@@ -7,11 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "CN1.1",
-            "SM1.3",
-            "SM1.7"
-        ],
         "singular": {
             "en": "city",
             "fi": "kaupunki",
@@ -31,7 +26,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "village",
             "fi": "kylä",
@@ -51,7 +45,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.1",
         "singular": {
             "en": "place",
             "fi": "paikka",
@@ -105,7 +98,6 @@
             "B2": "OD",
             "none": "EP"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "theater",
             "fi": "teatteri",
@@ -126,7 +118,6 @@
             "en": "theater",
             "fi": "theater"
         },
-        "topics": "SM1.7",
         "en": "movie theater",
         "fi": "elokuvateatteri",
         "nl": "de bioscoop"
@@ -139,7 +130,6 @@
             ],
             "B2": "OD"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "opera",
             "fi": "ooppera",
@@ -159,11 +149,6 @@
             ],
             "B1": "KK"
         },
-        "topics": [
-            "SM1.4",
-            "SM1.7",
-            "SM1.8"
-        ],
         "singular": {
             "en": "museum",
             "fi": "museo",
@@ -183,7 +168,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "church",
             "fi": "kirkko",
@@ -203,7 +187,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "stadium",
             "fi": "stadion",
@@ -224,7 +207,6 @@
         "roots": {
             "fi": "book"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "library",
             "fi": "kirjasto",
@@ -247,7 +229,6 @@
         "roots": {
             "fi": "coffee"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "café",
             "fi": "kahvila",
@@ -267,7 +248,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "bar",
             "fi": "baari",
@@ -287,7 +267,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "restaurant",
             "fi": "ravintola",
@@ -305,7 +284,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.3",
         "singular": {
             "en": "office",
             "fi": "toimisto",
@@ -323,10 +301,6 @@
             "A2": "OD",
             "B1": "EP"
         },
-        "topics": [
-            "SM1.4",
-            "SM1.6"
-        ],
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -349,7 +323,6 @@
             "fi": "house",
             "nl": "house"
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "department store",
             "fi": "tavaratalo",
@@ -369,7 +342,6 @@
             ],
             "none": "EP"
         },
-        "topics": "SM1.2",
         "en": "kiosk",
         "fi": [
             "kioski",
@@ -389,7 +361,6 @@
             ],
             "nl": "ice cream"
         },
-        "topics": "SM1.1",
         "en": "ice cream kiosk",
         "fi": "jäätelökioski",
         "nl": "de ijskraam"
@@ -402,10 +373,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.7"
-        ],
         "singular": {
             "en": "park",
             "fi": "puisto",
@@ -423,7 +390,6 @@
             "none": "EP"
         },
         "roots": "park",
-        "topics": "SM1.7",
         "en": "amusement park",
         "fi": "huvipuisto",
         "nl": [
@@ -442,7 +408,6 @@
             "fi": "park",
             "nl": "garden"
         },
-        "topics": "SM1.7",
         "en": "playground",
         "fi": "leikkipuisto",
         "nl": "de speeltuin"
@@ -460,7 +425,6 @@
                 "garden"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "zoo",
             "fi": "eläintarha",
@@ -480,7 +444,6 @@
                 "OD"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "castle",
             "fi": "linna",
@@ -500,10 +463,6 @@
             ],
             "A2": "KK"
         },
-        "topics": [
-            "SM1.4",
-            "SM1.7"
-        ],
         "singular": {
             "en": "hotel",
             "fi": "hotelli",
@@ -523,7 +482,6 @@
             ],
             "A2": "EP"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "centre",
             "fi": "keskusta",
@@ -543,10 +501,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.6"
-        ],
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -566,10 +520,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.1",
-            "SM1.6"
-        ],
         "singular": {
             "en": "road",
             "fi": "tie",
@@ -608,7 +558,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": "market",
             "fi": "tori",
@@ -633,7 +582,6 @@
             "fi": "store",
             "nl": "market"
         },
-        "topics": "SM1.7",
         "en": "market hall",
         "fi": "kauppahalli",
         "nl": "de markthal"
@@ -665,7 +613,6 @@
                 "KK"
             ]
         },
-        "topics:": "SM1.2",
         "en": [
             "mail",
             "post"
@@ -681,7 +628,6 @@
                 "KK"
             ]
         },
-        "topics": "SM1.2",
         "roots": {
             "en": [
                 "post",
@@ -716,7 +662,6 @@
                 "store"
             ]
         },
-        "topics": "SM1.7",
         "singular": {
             "en": [
                 "mall",

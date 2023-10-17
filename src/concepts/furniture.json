@@ -7,10 +7,6 @@
                 "OD"
             ]
         },
-        "topics": [
-            "SM1.2",
-            "SM1.6"
-        ],
         "singular": {
             "en": "table",
             "fi": "pöytä",
@@ -30,7 +26,6 @@
             ],
             "A2": "KK"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "bed",
             "fi": "sänky",
@@ -71,7 +66,6 @@
             "A2": "EP",
             "B1": "KK"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "sofa",
             "fi": "sohva",
@@ -108,7 +102,6 @@
             ],
             "B2": "KK"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "chair",
             "fi": "tuoli",
@@ -135,7 +128,6 @@
                 "table"
             ]
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "desk",
             "fi": [
@@ -168,7 +160,6 @@
                 "chair"
             ]
         },
-        "topics": "SM1.6",
         "en": "office chair",
         "fi": "työtuoli",
         "nl": "de bureaustoel"
@@ -181,7 +172,6 @@
             ],
             "none": "KK"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "lamp",
             "fi": "lamppu",
@@ -224,7 +214,6 @@
             "B1": "OD",
             "none": "KK"
         },
-        "topics": "SM1.6",
         "singular": {
             "en": "curtain",
             "fi": "verho",
@@ -253,10 +242,6 @@
             ],
             "C1": "KK"
         },
-        "topics": [
-            "SM1.2",
-            "SM1.6"
-        ],
         "singular": {
             "en": "carpet",
             "fi": "matto",
@@ -274,7 +259,6 @@
             "B1": "OD",
             "B2": "KK"
         },
-        "topics": "SM1.2",
         "singular": {
             "en": "shelf",
             "fi": "hylly",
@@ -300,10 +284,6 @@
             ],
             "nl": "book"
         },
-        "topics": [
-            "books",
-            "SM1.2"
-        ],
         "en": "bookcase",
         "fi": "kirjahylly",
         "nl": "de boekenkast"
