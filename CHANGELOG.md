@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Distinguish between the meanings of questions and answers by inserting a ">" between them. Closes [#442](https://github.com/fniessink/toisto/issues/442).
+- Warn the user if they are answering in their target language when the source language is asked, or vice versa. Closes [#459](https://github.com/fniessink/toisto/issues/459).
 - Added several topics and concepts.
 
 ### Changed

@@ -113,6 +113,10 @@ class Quiz:
         """Return whether the guess is correct."""
         return match(guess, *self.answers)
 
+    def is_question(self, guess: Label) -> bool:
+        """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
+        return match(guess, *self._question.spelling_alternatives)
+
     @cached_property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""

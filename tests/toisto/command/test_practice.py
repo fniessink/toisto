@@ -12,7 +12,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.ui.dictionary import linkify
-from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN
+from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANSWER_LANGUAGE
 
 from ...base import ToistoTestCase
 
@@ -59,6 +59,12 @@ class PracticeTest(ToistoTestCase):
             call(f'{INCORRECT}The correct answer is "Ho[deleted]_[/deleted]i".\n'),
             patched_print.call_args_list,
         )
+
+    @patch("builtins.input", Mock(return_value="Terve\n"))
+    def test_answer_with_question(self):
+        """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
+        patched_print = self.practice(self.quizzes)
+        self.assertIn(call(TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
