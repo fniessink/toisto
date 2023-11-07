@@ -60,6 +60,36 @@
         "fi": "hedelmä",
         "nl": "het fruit"
     },
+    "vegetable": {
+        "singular": {
+            "en": "vegetable",
+            "fi": "vihannes",
+            "nl": "de groente"
+        },
+        "plural": {
+            "en": "vegetables",
+            "fi": [
+                "vihannekset",
+                "kasvikset"
+            ],
+            "nl": "de groenten|de groentes"
+        }
+    },
+    "meal": {
+        "roots": {
+            "nl": "time"
+        },
+        "singular": {
+            "en": "meal",
+            "fi": "ateria",
+            "nl": "de maaltijd"
+        },
+        "plural": {
+            "en": "meals",
+            "fi": "ateriat",
+            "nl": "de maaltijden"
+        }
+    },
     "breakfast": {
         "level": {
             "A1": [
@@ -77,6 +107,39 @@
             "aamiainen"
         ],
         "nl": "het ontbijt"
+    },
+    "lunch": {
+        "en": "lunch",
+        "fi": "lounas",
+        "nl": "de lunch"
+    },
+    "snack": {
+        "en": "snack",
+        "fi": "välipala",
+        "nl": "het tussendoortje"
+    },
+    "dinner": {
+        "roots": {
+            "fi": [
+                "day",
+                "evening"
+            ],
+            "nl": [
+                "evening",
+                "food"
+            ]
+        },
+        "en": "dinner",
+        "fi": [
+            "päivällinen",
+            "illallinen"
+        ],
+        "nl": "het avondeten"
+    },
+    "evening snack": {
+        "en": "(evening snack)",
+        "fi": "iltapala",
+        "nl": "(tussendoortje in de avond)"
     },
     "appetiser": {
         "level": {
@@ -131,7 +194,11 @@
         },
         "en": "dessert",
         "fi": "jälkiruoka",
-        "nl": "het toetje"
+        "nl": [
+            "het dessert",
+            "het toetje",
+            "het nagerecht"
+        ]
     },
     "orange (fruit)": {
         "level": {
@@ -245,6 +312,56 @@
             "nl": "de vissen"
         }
     },
+    "macaroni casserole": {
+        "en": "macaroni casserole",
+        "fi": "makaronilaatikko",
+        "nl": "de macaronischotel"
+    },
+    "salmon": {
+        "en": "salmon",
+        "fi": "lohi",
+        "nl": "de zalm"
+    },
+    "rice": {
+        "en": "rice",
+        "fi": "riisi",
+        "nl": "de rijst"
+    },
+    "pasta": {
+        "en": "pasta",
+        "fi": "pasta",
+        "nl": "de pasta"
+    },
+    "soup": {
+        "en": "soup",
+        "fi": "keitto",
+        "nl": "de soep"
+    },
+    "hamburger": {
+        "en": "hamburger",
+        "fi": "hampurilainen",
+        "nl": "de hamburger"
+    },
+    "wiener": {
+        "roots": {
+            "nl": "sausage"
+        },
+        "en": [
+            "wiener",
+            "frankfurter",
+            "hot dog"
+        ],
+        "fi": "nakki",
+        "nl": "de knakworst"
+    },
+    "shrimp": {
+        "roots": {
+            "fi": "crab"
+        },
+        "en": "shrimp",
+        "fi": "katkarapu",
+        "nl": "de garnaal"
+    },
     "chicken": {
         "level": {
             "A1": "OD",
@@ -263,6 +380,30 @@
             "fi": "kanat",
             "nl": "de kippen"
         }
+    },
+    "beef": {
+        "roots": {
+            "fi": "meat",
+            "nl": "meat"
+        },
+        "en": "beef",
+        "fi": "naudanliha",
+        "nl": "het rundvlees"
+    },
+    "pork": {
+        "roots": {
+            "fi": [
+                "pig",
+                "meat"
+            ],
+            "nl": [
+                "pig",
+                "meat"
+            ]
+        },
+        "en": "pork",
+        "fi": "porsaanliha",
+        "nl": "het varkensvlees"
     },
     "dressing": {
         "level": {
@@ -517,12 +658,18 @@
         "singular": {
             "en": "steak",
             "fi": "pihvi",
-            "nl": "de steak"
+            "nl": [
+                "de biefstuk",
+                "de steak"
+            ]
         },
         "plural": {
             "en": "steaks",
             "fi": "pihvit",
-            "nl": "de steaks"
+            "nl": [
+                "de biefstukken",
+                "de steaks"
+            ]
         }
     },
     "pepper": {
@@ -557,6 +704,18 @@
             "en": "salads",
             "fi": "salaatit",
             "nl": "de salades"
+        }
+    },
+    "cabbage": {
+        "singular": {
+            "en": "cabbage",
+            "fi": "kaali",
+            "nl": "de kool"
+        },
+        "plural": {
+            "en": "cabbages",
+            "fi": "kaalit",
+            "nl": "de kolen"
         }
     },
     "mustard": {
@@ -703,6 +862,39 @@
             "nl": "de zouten"
         }
     },
+    "cucumber": {
+        "en": "cucumber",
+        "fi": "kurkku",
+        "nl": "de komkommer"
+    },
+    "carrot": {
+        "en": "carrot",
+        "fi": "porkkana",
+        "nl": "de wortel"
+    },
+    "olive": {
+        "en": "olive",
+        "fi": "oliivi",
+        "nl": "de olijf"
+    },
+    "soy": {
+        "en": [
+            "soy",
+            "soya"
+        ],
+        "fi": "soija",
+        "nl": "de soja"
+    },
+    "oil": {
+        "en": "oil",
+        "fi": "öljy",
+        "nl": "de olie"
+    },
+    "vinegar": {
+        "en": "vinegar",
+        "fi": "etikka",
+        "nl": "de azijn"
+    },
     "tomato": {
         "level": {
             "A1": [
@@ -827,17 +1019,28 @@
                 "KK"
             ]
         },
-        "roots": "flower",
-        "singular": {
-            "en": "cauliflower",
-            "fi": "kukkakaali",
-            "nl": "de bloemkool"
+        "roots": {
+            "en": "flower",
+            "fi": [
+                "flower",
+                "cabbage"
+            ],
+            "nl": [
+                "flower",
+                "cabbage"
+            ]
         },
-        "plural": {
-            "en": "cauliflowers",
-            "fi": "kukkakaalit",
-            "nl": "de bloemkolen"
-        }
+        "en": "cauliflower",
+        "fi": "kukkakaali",
+        "nl": "de bloemkool"
+    },
+    "aubergine": {
+        "en": [
+            "aubergine",
+            "eggplant"
+        ],
+        "fi": "munakoiso",
+        "nl": "de aubergine"
     },
     "mushroom": {
         "level": {
@@ -860,6 +1063,11 @@
             "fi": "sienet",
             "nl": "de paddenstoelen"
         }
+    },
+    "corn": {
+        "en": "corn",
+        "fi": "maissi",
+        "nl": "de maïs"
     },
     "garlic": {
         "level": {
@@ -884,6 +1092,16 @@
             "nl": "de knofloken"
         }
     },
+    "paprika": {
+        "en": "paprika",
+        "fi": "paprika",
+        "nl": "de paprika"
+    },
+    "pea": {
+        "en": "pea",
+        "fi": "herne",
+        "nl": "de erwt"
+    },
     "bean": {
         "level": {
             "A2": [
@@ -903,6 +1121,14 @@
             "nl": "de bonen"
         }
     },
+    "zucchini": {
+        "roots": {
+            "fi": "summer"
+        },
+        "en": "zucchini",
+        "fi": "kesäkurpitsa",
+        "nl": "de courgette"
+    },
     "cookie": {
         "level": {
             "A2": "OD",
@@ -919,6 +1145,16 @@
             "fi": "keksit",
             "nl": "de koekjes"
         }
+    },
+    "pie": {
+        "en": "pie",
+        "fi": "piirakka",
+        "nl": "de vlaai"
+    },
+    "cinnamon roll": {
+        "en": "cinnamon roll",
+        "fi": "korvapuusti",
+        "nl": "het kaneelbroodje"
     },
     "cake": {
         "level": {
@@ -996,6 +1232,11 @@
             ],
             "nl": "de ijsjes"
         }
+    },
+    "candy": {
+        "en": "candy",
+        "fi": "karkki",
+        "nl": "het snoepje"
     },
     "chocolate": {
         "level": {
@@ -1103,5 +1344,88 @@
             "fi": "cocktailit",
             "nl": "de cocktails"
         }
+    },
+    "tray": {
+        "en": "tray",
+        "fi": "tarjotin",
+        "nl": "het dienblad"
+    },
+    "fork": {
+        "en": "fork",
+        "fi": "haarukka",
+        "nl": "de vork"
+    },
+    "knife": {
+        "en": "knife",
+        "fi": "veitsi",
+        "nl": "het mes"
+    },
+    "spoon": {
+        "en": "spoon",
+        "fi": "lusikka",
+        "nl": "de lepel"
+    },
+    "glass": {
+        "en": "glass",
+        "fi": "lasi",
+        "nl": "het glas"
+    },
+    "cup": {
+        "en": "cup",
+        "fi": "kuppi",
+        "nl": "het kopje"
+    },
+    "mug": {
+        "en": "mug",
+        "fi": "muki",
+        "nl": "de mok"
+    },
+    "bowl": {
+        "en": "bowl",
+        "fi": "kulho",
+        "nl": "de kom"
+    },
+    "bottle": {
+        "en": "bottle",
+        "fi": "pullo",
+        "nl": "de fles"
+    },
+    "plate": {
+        "en": "plate",
+        "fi": "lautanen",
+        "nl": "het bord"
+    },
+    "jug": {
+        "en": "jug",
+        "fi": "kannu",
+        "nl": "de kan"
+    },
+    "pot": {
+        "en": "pot",
+        "fi": "kattila",
+        "nl": "de pan"
+    },
+    "frying pan": {
+        "en": "frying pan",
+        "fi": "paistinpannu",
+        "nl": [
+            "de koekenpan",
+            "de braadpan"
+        ]
+    },
+    "napkin": {
+        "en": "napkin",
+        "fi": "lautasliina",
+        "nl": "het servet"
+    },
+    "come eat": {
+        "en": "Come eat!",
+        "fi": "Tulkaa syömään!",
+        "nl": "Kom eten!"
+    },
+    "the food is ready": {
+        "en": "The food is ready!",
+        "fi": "Ruoka on valmista!",
+        "nl": "Het eten is klaar!"
     }
 }

@@ -84,17 +84,26 @@
         "antonym": "expensive",
         "positive degree": {
             "en": "cheap",
-            "fi": "halpa",
+            "fi": [
+                "halpa",
+                "edullinen"
+            ],
             "nl": "goedkoop"
         },
         "comparative degree": {
             "en": "cheaper",
-            "fi": "halvempi",
+            "fi": [
+                "halvempi",
+                "edullisempi"
+            ],
             "nl": "goedkoper"
         },
         "superlative degree": {
             "en": "cheapest",
-            "fi": "halvin",
+            "fi": [
+                "halvin",
+                "edullisin"
+            ],
             "nl": "goedkoopst"
         }
     },
@@ -685,6 +694,7 @@
         }
     },
     "sweet": {
+        "antonym": "sour",
         "level": {
             "A1": "EP",
             "A2": "OD",
@@ -705,6 +715,34 @@
             "fi": "makein",
             "nl": "zoetst"
         }
+    },
+    "sour": {
+        "antonym": "sweet",
+        "positive degree": {
+            "en": "sour",
+            "fi": "hapan",
+            "nl": "zuur"
+        },
+        "comparative degree": {
+            "en": "sourer",
+            "fi": ["happamampi", "happamempi"],
+            "nl": "zuurder"
+        },
+        "superlative degree": {
+            "en": "sourest",
+            "fi": "happamin",
+            "nl": "zuurst"
+        }
+    },
+    "ripe": {
+        "en": "ripe",
+        "fi": "kypsä",
+        "nl": "rijp"
+    },
+    "raw": {
+        "en": "raw",
+        "fi": "raaka",
+        "nl": "rauw"
     },
     "big": {
         "level": {
@@ -859,17 +897,26 @@
         "antonym": "good",
         "positive degree": {
             "en": "bad",
-            "fi": "huono",
+            "fi": [
+                "huono",
+                "paha"
+            ],
             "nl": "slecht"
         },
         "comparative degree": {
             "en": "badder",
-            "fi": "huonompi",
+            "fi": [
+                "huonompi",
+                "pahempi"
+            ],
             "nl": "slechter"
         },
         "superlative degree": {
             "en": "baddest",
-            "fi": "huonoin",
+            "fi": [
+                "huonoin",
+                "pahin"
+            ],
             "nl": "slechtst"
         }
     },
@@ -1261,5 +1308,54 @@
             "dezelfde",
             "hetzelfde"
         ]
+    },
+    "delicious": {
+        "en": "delicious",
+        "fi": "herkullinen",
+        "nl": "lekker"
+    },
+    "salty": {
+        "antonym": "saltless",
+        "en": "salty",
+        "fi": "suolainen",
+        "nl": "zout"
+    },
+    "saltless": {
+        "antonym": "salty",
+        "en": "saltless",
+        "fi": "suolaton",
+        "nl": "flauw"
+    },
+    "greasy": {
+        "en": "greasy",
+        "fi": "rasvainen",
+        "nl": "vet"
+    },
+    "fat-free": {
+        "en": "fat-free",
+        "fi": "rasvaton",
+        "nl": "mager"
+    },
+    "spicy": {
+        "en": "spicy",
+        "fi": "tulinen",
+        "nl": "pittig"
+    },
+    "mild": {
+        "en": "mild",
+        "fi": "mieto",
+        "nl": "mild"
+    },
+    "healthy": {
+        "antonym": "unhealthy",
+        "en": "healthy",
+        "fi": "terveellinen",
+        "nl": "gezond"
+    },
+    "unhealthy": {
+        "antonym": "healthy",
+        "en": "unhealthy",
+        "fi": "epäterveellinen",
+        "nl": "ongezond"
     }
 }
