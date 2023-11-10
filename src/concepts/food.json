@@ -555,11 +555,26 @@
             "nl": "de pizza's"
         }
     },
+    "berry": {
+        "singular": {
+            "en": "berry",
+            "fi": "marja",
+            "nl": "de bes"
+        },
+        "plural": {
+            "en": "berries",
+            "fi": "marjat",
+            "nl": "de bessen"
+        }
+    },
     "strawberry": {
         "level": {
             "A2": "OD",
             "B1": "EP",
             "none": "KK"
+        },
+        "roots": {
+            "en": "berry"
         },
         "singular": {
             "en": "strawberry",
@@ -571,6 +586,41 @@
             "fi": "mansikat",
             "nl": "de aardbeien"
         }
+    },
+    "cloudberry": {
+        "roots": {
+            "en": ["cloud", "berry"]
+        },
+        "en": "cloudberry",
+        "fi": "lakka",
+        "nl": "de moerasbraam"
+    },
+    "raspberry": {
+        "roots": {
+            "en": "berry"
+        },
+        "en": "raspberry",
+        "fi": "vadelma",
+        "nl": "de framboos"
+    },
+    "bilberry": {
+        "roots": {
+            "en": "berry",
+            "fi": "black",
+            "nl": ["forest", "berry"]
+        },
+        "en": "bilberry",
+        "fi": "mustikka",
+        "nl": "de bosbes"
+    },
+    "lingonberry": {
+        "roots": {
+            "en": "berry",
+            "nl": "berry"
+        },
+        "en": ["lingonberry", "cowberry"],
+        "fi": "puolukka",
+        "nl": "de vossenbes"
     },
     "spice": {
         "level": {
@@ -993,6 +1043,20 @@
             "fi": "kirsikat",
             "nl": "de kersen"
         }
+    },
+    "currant": {
+        "roots": {
+            "fi": ["wine", "berry"],
+            "nl": "berry"
+        },
+        "en": "currant",
+        "fi": "viinimarja",
+        "nl": "de aalbes"
+    },
+    "wine": {
+        "en": "wine",
+        "fi": "viini",
+        "nl": "de wijn"
     },
     "pear": {
         "level": {
