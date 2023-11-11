@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Give an error message when the user's filters (by level, by topic, by concept identifier) don't match any concepts. Fixes [#437](https://github.com/fniessink/toisto/issues/437).
 - Give an error message when the target and source language are the same. Fixes [#453](https://github.com/fniessink/toisto/issues/453).
+- When using the topics command with filters, hide empty topic tables. Fixes [#477](https://github.com/fniessink/toisto/issues/477).
 
 ### Added
 
