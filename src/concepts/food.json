@@ -468,6 +468,30 @@
             "nl": "de broden"
         }
     },
+    "karelian pasty": {
+        "roots": {
+            "fi": "pie"
+        },
+        "en": "Karelian pasty",
+        "fi": "karjalanpiirakka",
+        "nl": "Karelisch pasteitje"
+    },
+    "bread roll": {
+        "roots": {
+            "en": "bread",
+            "nl": "bread"
+        },
+        "en": [
+            "bread roll|roll"
+        ],
+        "fi": "sämpylä",
+        "nl": "het broodje"
+    },
+    "butter": {
+        "en": "butter",
+        "fi": "voi",
+        "nl": "de boter"
+    },
     "meat": {
         "level": {
             "A1": [
@@ -507,7 +531,10 @@
     },
     "buttermilk": {
         "roots": {
-            "en": ["butter", "milk"],
+            "en": [
+                "butter",
+                "milk"
+            ],
             "nl": "milk"
         },
         "en": "buttermilk",
@@ -522,12 +549,33 @@
     },
     "hot chocolate": {
         "roots": {
-            "en": ["hot", "chocoloate"],
-            "nl": ["chocolate", "milk"]
+            "en": [
+                "hot",
+                "chocoloate"
+            ],
+            "nl": [
+                "chocolate",
+                "milk"
+            ]
         },
         "en": "hot chocolate",
         "fi": "kaakao",
         "nl": "de chocolademelk"
+    },
+    "yoghurt": {
+        "en": "yoghurt",
+        "fi": "jogurtti",
+        "nl": "de yoghurt"
+    },
+    "honey": {
+        "en": "honey",
+        "fi": "hunaja",
+        "nl": "de honing"
+    },
+    "jam": {
+        "en": "jam",
+        "fi": "hillo",
+        "nl": "de jam"
     },
     "sausage": {
         "level": {
@@ -547,6 +595,11 @@
             "fi": "makkarat",
             "nl": "de worsten"
         }
+    },
+    "ham": {
+        "en": "ham",
+        "fi": "kinkku",
+        "nl": "de ham"
     },
     "mämmi": {
         "level": {
@@ -1028,7 +1081,10 @@
     },
     "mineral water": {
         "en": "mineral water",
-        "fi": ["kivennäisvesi", "vissy"],
+        "fi": [
+            "kivennäisvesi",
+            "vissy"
+        ],
         "nl": "het mineraalwater"
     },
     "sandwich": {
@@ -1040,7 +1096,8 @@
             "none": "KK"
         },
         "roots": {
-            "fi": "bread"
+            "fi": ["butter", "bread"],
+            "nl": ["butter", "ham"]
         },
         "singular": {
             "en": "sandwich",
@@ -1170,7 +1227,16 @@
         "fi": "kukkakaali",
         "nl": "de bloemkool"
     },
+    "egg": {
+        "en": "egg",
+        "fi": "muna",
+        "nl": "het ei"
+    },
     "aubergine": {
+        "roots": {
+            "en": "egg",
+            "fi": "egg"
+        },
         "en": [
             "aubergine",
             "eggplant"
@@ -1553,6 +1619,16 @@
         "en": "napkin",
         "fi": "lautasliina",
         "nl": "het servet"
+    },
+    "breakfast cereal": {
+        "en": "breakfast cereal|cereal",
+        "fi": "murot",
+        "nl": "de ontbijtgranen"
+    },
+    "porridge": {
+        "en": "porridge",
+        "fi": "puuro",
+        "nl": "de pap"
     },
     "come eat": {
         "en": "Come eat!",
