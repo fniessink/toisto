@@ -10,4 +10,4 @@ class Topic:
     """Topic model."""
 
     name: str
-    concepts: tuple[ConceptId, ...]
+    concepts: frozenset[ConceptId]

@@ -23,7 +23,7 @@ def load_topics(topic_files: list[Path], argument_parser: ArgumentParser) -> set
     try:
         for topic_file in topic_files:
             topic_json = cast(TopicJSON, load_json(topic_file))
-            topics.add(Topic(name=topic_json["name"], concepts=tuple(topic_json["concepts"])))
+            topics.add(Topic(name=topic_json["name"], concepts=frozenset(topic_json["concepts"])))
     except Exception as reason:  # noqa: BLE001
         argument_parser.error(f"{NAME} cannot read topic file {topic_file}: {reason}.\n")
     return topics

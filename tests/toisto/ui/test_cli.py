@@ -85,7 +85,10 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, "A1", related, False),
             Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, "A1", related, False),
         }
-        topics = {Topic(name="T1", concepts=(ConceptId("foo"),)), Topic(name="T2", concepts=(ConceptId("bar"),))}
+        topics = {
+            Topic(name="T1", concepts=frozenset([ConceptId("foo")])),
+            Topic(name="T2", concepts=frozenset([ConceptId("bar")])),
+        }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))
         self.assertEqual(
             """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \

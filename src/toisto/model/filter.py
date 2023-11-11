@@ -22,10 +22,10 @@ def filter_concepts(  # noqa: PLR0913
     if selected_levels:
         concepts = {concept for concept in concepts if concept.level in selected_levels}
     if selected_topics:
-        concept_ids = set()
+        concept_ids: set[ConceptId] = set()
         for topic in topics:
             if topic.name in selected_topics:
-                concept_ids |= set(topic.concepts)
+                concept_ids |= topic.concepts
         concepts = {concept for concept in concepts if concept.concept_id in concept_ids}
     if (selected_concepts or selected_levels or selected_topics) and not concepts:
         argument_parser.error("No concepts found that match your selection criteria\n")
