@@ -198,13 +198,9 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
     for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
         if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
-    if "infinitive" in concept1.grammatical_categories():
-        return tuple(quiz_types)
     if set(quiz_types) <= {"feminize", "masculinize", "neuterize", "give third person"}:
         return tuple(quiz_types)
-    if len(quiz_types) == 1:
-        return tuple(quiz_types)
-    return tuple()
+    return tuple(quiz_types) if len(quiz_types) == 1 else tuple()
 
 
 def create_quizzes(target_language: Language, source_language: Language, *concepts: Concept) -> Quizzes:

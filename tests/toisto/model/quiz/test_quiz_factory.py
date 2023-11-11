@@ -3,13 +3,24 @@
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
-from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_types
 
 from ....base import ToistoTestCase
 
 
 class QuizFactoryTestCase(ToistoTestCase):
     """Base class for quiz factory unit tests."""
+
+    def create_verb_with_person(self):
+        """Create a verb with grammatical person."""
+        return create_concept(
+            "to eat",
+            {
+                "first person": dict(en="I eat", nl="ik eet"),
+                "second person": dict(en="you eat", nl="jij eet"),
+                "third person": dict(en="she eats", nl="zij eet"),
+            },
+        )
 
     def create_verb_with_tense_and_person(self):
         """Create a verb with grammatical person nested within tense."""
@@ -20,8 +31,59 @@ class QuizFactoryTestCase(ToistoTestCase):
                     "singular": dict(en="I eat", nl="ik eet"),
                     "plural": dict(en="we eat", nl="wij eten"),
                 },
-                "past tense": {"singular": dict(en="I ate", nl="ik at"), "plural": dict(en="we ate", nl="wij aten")},
+                "past tense": {
+                    "singular": dict(en="I ate", nl="ik at"),
+                    "plural": dict(en="we ate", nl="wij aten"),
+                },
             },
+        )
+
+    def create_verb_with_number_and_person(self):
+        """Create a verb with grammatical number nested with grammatical person."""
+        return create_concept(
+            "to have",
+            dict(
+                singular={
+                    "first person": dict(fi="minulla on", nl="ik heb"),
+                    "second person": dict(fi="sinulla on", nl="jij hebt"),
+                    "third person": dict(fi="hänellä on", nl="zij heeft"),
+                },
+                plural={
+                    "first person": dict(fi="meillä on", nl="wij hebben"),
+                    "second person": dict(fi="teillä on", nl="jullie hebben"),
+                    "third person": dict(fi="heillä on", nl="zij hebben"),
+                },
+            ),
+        )
+
+    def create_verb_with_infinitive_and_person(self):
+        """Create a verb with infinitive and grammatical person."""
+        return create_concept(
+            "to sleep",
+            dict(
+                infinitive=dict(en="to sleep", nl="slapen"),
+                singular=dict(en="I sleep", nl="ik slaap"),
+                plural=dict(en="we sleep", nl="wij slapen"),
+            ),
+        )
+
+    def create_verb_with_infinitive_and_number_and_person(self):
+        """Create a verb with infinitive and grammatical number nested with person."""
+        return create_concept(
+            "to be",
+            dict(
+                infinitive=dict(fi="olla", nl="zijn"),
+                singular={
+                    "first person": dict(fi="minä olen", nl="ik ben"),
+                    "second person": dict(fi="sinä olet", nl="jij bent"),
+                    "third person": dict(fi="hän on", nl="zij is"),
+                },
+                plural={
+                    "first person": dict(fi="me olemme", nl="wij zijn"),
+                    "second person": dict(fi="te olette", nl="jullie zijn"),
+                    "third person": dict(fi="he ovat", nl="zij zijn"),
+                },
+            ),
         )
 
     def create_adjective_with_degrees_of_comparison(self):
@@ -387,14 +449,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_grammatical_person(self):
         """Test that quizzes can be generated for grammatical person."""
-        concept = create_concept(
-            "to eat",
-            {
-                "first person": dict(en="I eat", nl="ik eet"),
-                "second person": dict(en="you eat", nl="jij eet"),
-                "third person": dict(en="she eats", nl="zij eet"),
-            },
-        )
+        concept = self.create_verb_with_person()
         first_person, second_person, third_person = concept.leaf_concepts("nl")
         self.assertSetEqual(
             {
@@ -504,21 +559,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_grammatical_number_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for grammatical number, nested with grammatical person."""
-        concept = create_concept(
-            "to have",
-            dict(
-                singular={
-                    "first person": dict(fi="minulla on", nl="ik heb"),
-                    "second person": dict(fi="sinulla on", nl="jij hebt"),
-                    "third person": dict(fi="hänellä on", nl="zij heeft"),
-                },
-                plural={
-                    "first person": dict(fi="meillä on", nl="wij hebben"),
-                    "second person": dict(fi="teillä on", nl="jullie hebben"),
-                    "third person": dict(fi="heillä on", nl="zij hebben"),
-                },
-            ),
-        )
+        concept = self.create_verb_with_number_and_person()
         singular, plural = concept.constituents
         first_person_singular, second_person_singular, third_person_singular = singular.constituents
         first_person_plural, second_person_plural, third_person_plural = plural.constituents
@@ -632,14 +673,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_infinitive_verb_form(self):
         """Test the infinitive verb form."""
-        concept = create_concept(
-            "to sleep",
-            dict(
-                infinitive=dict(en="to sleep", nl="slapen"),
-                singular=dict(en="I sleep", nl="ik slaap"),
-                plural=dict(en="we sleep", nl="wij slapen"),
-            ),
-        )
+        concept = self.create_verb_with_infinitive_and_person()
         infinitive, singular, plural = concept.constituents
         self.assertSetEqual(
             {
@@ -667,22 +701,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_grammatical_number_nested_with_grammatical_person_and_infinitive(self):
         """Test generating quizzes for grammatical number, including infinitive, nested with grammatical person."""
-        concept = create_concept(
-            "to be",
-            dict(
-                infinitive=dict(fi="olla", nl="zijn"),
-                singular={
-                    "first person": dict(fi="minä olen", nl="ik ben"),
-                    "second person": dict(fi="sinä olet", nl="jij bent"),
-                    "third person": dict(fi="hän on", nl="zij is"),
-                },
-                plural={
-                    "first person": dict(fi="me olemme", nl="wij zijn"),
-                    "second person": dict(fi="te olette", nl="jullie zijn"),
-                    "third person": dict(fi="he ovat", nl="zij zijn"),
-                },
-            ),
-        )
+        concept = self.create_verb_with_infinitive_and_number_and_person()
         infinitive, singular, plural = concept.constituents
         first_person_singular, second_person_singular, third_person_singular = singular.constituents
         first_person_plural, second_person_plural, third_person_plural = plural.constituents
@@ -740,12 +759,6 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(infinitive, "nl", "nl", "zijn", ["zijn"], "dictate"),
                 self.create_quiz(infinitive, "nl", "fi", "zijn", ["olla"], "interpret"),
                 self.create_quiz(infinitive, "fi", "nl", "olla", ["zijn"], "write"),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["ik ben"], ("singularize", "give first person")),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["jij bent"], ("singularize", "give second person")),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["zij is"], ("singularize", "give third person")),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["wij zijn"], ("pluralize", "give first person")),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["jullie zijn"], ("pluralize", "give second person")),
-                self.create_quiz(concept, "nl", "nl", "zijn", ["zij zijn"], ("pluralize", "give third person")),
             },
             create_quizzes("nl", "fi", concept),
         )
@@ -972,10 +985,6 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(infinitive, "nl", "nl", "eten", ["eten"], "dictate"),
                 self.create_quiz(infinitive, "nl", "en", "eten", ["to eat"], "interpret"),
                 self.create_quiz(infinitive, "en", "nl", "to eat", ["eten"], "write"),
-                self.create_quiz(concept, "nl", "nl", "eten", ["ik eet"], ("give present tense", "singularize")),
-                self.create_quiz(concept, "nl", "nl", "eten", ["ik at"], ("give past tense", "singularize")),
-                self.create_quiz(concept, "nl", "nl", "eten", ["wij eten"], ("give present tense", "pluralize")),
-                self.create_quiz(concept, "nl", "nl", "eten", ["wij aten"], ("give past tense", "pluralize")),
                 self.create_quiz(concept, "nl", "nl", "ik eet", ["eten"], "give infinitive"),
                 self.create_quiz(concept, "nl", "nl", "wij eten", ["eten"], "give infinitive"),
                 self.create_quiz(concept, "nl", "nl", "ik at", ["eten"], "give infinitive"),
@@ -1235,3 +1244,142 @@ class MeaningsTest(ToistoTestCase):
         for quiz in interpret_quizzes:
             self.assertEqual(("kaksikymmentä",), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
+
+
+class GrammaticalQuizTypesTest(QuizFactoryTestCase):
+    """Test the grammatical quiz types generator."""
+
+    def test_adjective_with_degrees_of_comparison(self):
+        """Test the grammatical quiz types for an adjective with degrees of comparison."""
+        positive, comparative, superlative = self.create_adjective_with_degrees_of_comparison().leaf_concepts("en")
+        for concept in (positive, comparative):
+            self.assertEqual(("give superlative degree",), grammatical_quiz_types(concept, superlative))
+        for concept in (positive, superlative):
+            self.assertEqual(("give comparative degree",), grammatical_quiz_types(concept, comparative))
+        for concept in (comparative, superlative):
+            self.assertEqual(("give positive degree",), grammatical_quiz_types(concept, positive))
+
+    def test_noun_with_grammatical_number(self):
+        """Test the grammatical quiz types for a noun with singular and plural form."""
+        singular, plural = self.create_noun_with_grammatical_number().leaf_concepts("fi")
+        self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
+        self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+
+    def test_noun_with_grammatical_gender(self):
+        """Test the grammatical quiz types for a noun with grammatical gender."""
+        female, male = self.create_noun_with_grammatical_gender().leaf_concepts("en")
+        self.assertEqual(("masculinize",), grammatical_quiz_types(female, male))
+        self.assertEqual(("feminize",), grammatical_quiz_types(male, female))
+
+    def test_noun_with_grammatical_gender_including_neuter(self):
+        """Test the grammatical quiz types for a noun with grammatical gender including neuter."""
+        female, male, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts("nl")
+        for concept in (female, neuter):
+            self.assertEqual(("masculinize",), grammatical_quiz_types(concept, male))
+        for concept in (female, male):
+            self.assertEqual(("neuterize",), grammatical_quiz_types(concept, neuter))
+        for concept in (male, neuter):
+            self.assertEqual(("feminize",), grammatical_quiz_types(concept, female))
+
+    def test_noun_with_grammatical_number_and_gender(self):
+        """Test the grammatical quiz types for a noun with grammatical number and gender."""
+        noun = self.create_noun_with_grammatical_number_and_gender()
+        singular_female, singular_male, plural_female, plural_male = noun.leaf_concepts("en")
+        for female, male in ((singular_female, singular_male), (plural_female, plural_male)):
+            self.assertEqual(("masculinize",), grammatical_quiz_types(female, male))
+            self.assertEqual(("feminize",), grammatical_quiz_types(male, female))
+        for singular, plural in ((singular_female, plural_female), (singular_male, plural_male)):
+            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
+            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+
+    def test_verb_with_person(self):
+        """Test the grammatical quiz types for a verb with grammatical person."""
+        verb = self.create_verb_with_person()
+        first, second, third = verb.leaf_concepts("en")
+        for concept in (first, second):
+            self.assertEqual(("give third person",), grammatical_quiz_types(concept, third))
+        for concept in (first, third):
+            self.assertEqual(("give second person",), grammatical_quiz_types(concept, second))
+        for concept in (second, third):
+            self.assertEqual(("give first person",), grammatical_quiz_types(concept, first))
+
+    def test_verb_with_tense_and_person(self):
+        """Test the grammatical quiz types for a verb with tense and grammatical person."""
+        verb = self.create_verb_with_tense_and_person()
+        present_singular, present_plural, past_singular, past_plural = verb.leaf_concepts("nl")
+        for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
+            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
+            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+        for present, past in ((present_singular, past_singular), (present_plural, past_plural)):
+            self.assertEqual(("give past tense",), grammatical_quiz_types(present, past))
+            self.assertEqual(("give present tense",), grammatical_quiz_types(past, present))
+
+    def test_verb_with_infinitive_and_person(self):
+        """Test the grammatical quiz types for a verb with infinitive and grammatical person."""
+        verb = self.create_verb_with_infinitive_and_person()
+        infinitive, singular, plural = verb.leaf_concepts("en")
+        for concept in (infinitive, singular):
+            self.assertEqual(("pluralize",), grammatical_quiz_types(concept, plural))
+        for concept in (infinitive, plural):
+            self.assertEqual(("singularize",), grammatical_quiz_types(concept, singular))
+        for concept in (singular, plural):
+            self.assertEqual(("give infinitive",), grammatical_quiz_types(concept, infinitive))
+
+    def test_verb_with_person_and_number(self):
+        """Test the grammatical quiz types for a verb with grammatical person and number."""
+        verb = self.create_verb_with_number_and_person()
+        (
+            first_singular,
+            second_singular,
+            third_singular,
+            first_plural,
+            second_plural,
+            third_plural,
+        ) = verb.leaf_concepts("nl")
+        for singular, plural in (
+            (first_singular, first_plural),
+            (second_singular, second_plural),
+            (third_singular, third_plural),
+        ):
+            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
+            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+        for first, second in ((first_singular, second_singular), (first_plural, second_plural)):
+            self.assertEqual(("give second person",), grammatical_quiz_types(first, second))
+            self.assertEqual(("give first person",), grammatical_quiz_types(second, first))
+        for first, third in ((first_singular, third_singular), (first_plural, third_plural)):
+            self.assertEqual(("give third person",), grammatical_quiz_types(first, third))
+            self.assertEqual(("give first person",), grammatical_quiz_types(third, first))
+        for second, third in ((second_singular, third_singular), (second_plural, third_plural)):
+            self.assertEqual(("give third person",), grammatical_quiz_types(second, third))
+            self.assertEqual(("give second person",), grammatical_quiz_types(third, second))
+
+    def test_verb_with_infinitive_and_person_and_number(self):
+        """Test the grammatical quiz types for a verb with infinitive, grammatical person and number."""
+        verb = self.create_verb_with_infinitive_and_number_and_person()
+        (
+            infinitive,
+            first_singular,
+            second_singular,
+            third_singular,
+            first_plural,
+            second_plural,
+            third_plural,
+        ) = verb.leaf_concepts("nl")
+        for singular, plural in (
+            (first_singular, first_plural),
+            (second_singular, second_plural),
+            (third_singular, third_plural),
+        ):
+            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
+            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+            self.assertEqual((), grammatical_quiz_types(infinitive, singular))
+            self.assertEqual((), grammatical_quiz_types(infinitive, plural))
+        for first, second in ((first_singular, second_singular), (first_plural, second_plural)):
+            self.assertEqual(("give second person",), grammatical_quiz_types(first, second))
+            self.assertEqual(("give first person",), grammatical_quiz_types(second, first))
+        for first, third in ((first_singular, third_singular), (first_plural, third_plural)):
+            self.assertEqual(("give third person",), grammatical_quiz_types(first, third))
+            self.assertEqual(("give first person",), grammatical_quiz_types(third, first))
+        for second, third in ((second_singular, third_singular), (second_plural, third_plural)):
+            self.assertEqual(("give third person",), grammatical_quiz_types(second, third))
+            self.assertEqual(("give second person",), grammatical_quiz_types(third, second))
