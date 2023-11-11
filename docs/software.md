@@ -22,7 +22,7 @@ The contents of a JSON concept file looks as follows:
     "yesterday": {
         "en": "yesterday",
         "fi": "eilen",
-        "nl": "gisteren"
+        "nl": "gisteren",
     },
     "tomorrow": {
         "en": "tomorrow",
@@ -707,22 +707,27 @@ Users can specify which concepts to practice using the `-T/--topic` command-line
 
 Users can also create their own topic files as long as they comply with the description below and pass them to Toisto using the `--topic-file` command-line option.
 
-Each topic file contains exactly one *topic*. Each topic has a *name* and a list of *concepts* that belong to that topic.
+Each topic file contains exactly one *topic*. Each topic has a *name*, a list of *concepts* that belong to that topic, and a list of *(sub)topics*.
 
 The contents of a JSON topic file looks as follows:
 
 ```json
 {
-    "name": "sport",
+    "name": "food",
     "concepts": [
-        "football",
-        "tennis",
-        "to ski"
+        "hamburger",
+        "pizza",
+        "..."
+    ],
+    "topics": [
+        "fruit",
+        "vegetables",
+        "..."
     ]
 }
 ```
 
-The entries in the list of concepts should be concept identifiers.
+The entries in the list of concepts should be concept identifiers. The entries in the list of (sub)topics should be names of other topics.
 
 ## Quizzes
 
