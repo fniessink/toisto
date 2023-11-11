@@ -34,6 +34,6 @@ class LoadTopicsTest(ToistoTestCase):
         """Test that the topics are read."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"name": "topic", "concepts": ["to be"]}'
         self.assertSetEqual(
-            {Topic(name="topic", concepts=(ConceptId("to be"),))},
+            {Topic(name="topic", concepts=frozenset([ConceptId("to be")]))},
             load_topics([Path("filename")], self.argument_parser),
         )
