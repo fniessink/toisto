@@ -28,9 +28,16 @@
             ],
             "A2": "KK"
         },
-        "en": "drink",
-        "fi": "juoma",
-        "nl": "het drinken"
+        "singular": {
+            "en": "drink",
+            "fi": "juoma",
+            "nl": "de drank"
+        },
+        "plural": {
+            "en": "drinks",
+            "fi": "juomat",
+            "nl": "de dranken"
+        }
     },
     "food and drink": {
         "level": {
@@ -498,6 +505,30 @@
             "fi": "maidot"
         }
     },
+    "buttermilk": {
+        "roots": {
+            "en": ["butter", "milk"],
+            "nl": "milk"
+        },
+        "en": "buttermilk",
+        "fi": "piimä",
+        "nl": "de karnemelk"
+    },
+    "oat milk": {
+        "roots": "milk",
+        "en": "oat milk",
+        "fi": "kauramaito",
+        "nl": "de havermelk"
+    },
+    "hot chocolate": {
+        "roots": {
+            "en": ["hot", "chocoloate"],
+            "nl": ["chocolate", "milk"]
+        },
+        "en": "hot chocolate",
+        "fi": "kaakao",
+        "nl": "de chocolademelk"
+    },
     "sausage": {
         "level": {
             "A2": [
@@ -555,11 +586,26 @@
             "nl": "de pizza's"
         }
     },
+    "berry": {
+        "singular": {
+            "en": "berry",
+            "fi": "marja",
+            "nl": "de bes"
+        },
+        "plural": {
+            "en": "berries",
+            "fi": "marjat",
+            "nl": "de bessen"
+        }
+    },
     "strawberry": {
         "level": {
             "A2": "OD",
             "B1": "EP",
             "none": "KK"
+        },
+        "roots": {
+            "en": "berry"
         },
         "singular": {
             "en": "strawberry",
@@ -571,6 +617,50 @@
             "fi": "mansikat",
             "nl": "de aardbeien"
         }
+    },
+    "cloudberry": {
+        "roots": {
+            "en": [
+                "cloud",
+                "berry"
+            ]
+        },
+        "en": "cloudberry",
+        "fi": "lakka",
+        "nl": "de moerasbraam"
+    },
+    "raspberry": {
+        "roots": {
+            "en": "berry"
+        },
+        "en": "raspberry",
+        "fi": "vadelma",
+        "nl": "de framboos"
+    },
+    "bilberry": {
+        "roots": {
+            "en": "berry",
+            "fi": "black",
+            "nl": [
+                "forest",
+                "berry"
+            ]
+        },
+        "en": "bilberry",
+        "fi": "mustikka",
+        "nl": "de bosbes"
+    },
+    "lingonberry": {
+        "roots": {
+            "en": "berry",
+            "nl": "berry"
+        },
+        "en": [
+            "lingonberry",
+            "cowberry"
+        ],
+        "fi": "puolukka",
+        "nl": "de vossenbes"
     },
     "spice": {
         "level": {
@@ -936,6 +1026,11 @@
             ]
         }
     },
+    "mineral water": {
+        "en": "mineral water",
+        "fi": ["kivennäisvesi", "vissy"],
+        "nl": "het mineraalwater"
+    },
     "sandwich": {
         "level": {
             "A1": [
@@ -993,6 +1088,47 @@
             "fi": "kirsikat",
             "nl": "de kersen"
         }
+    },
+    "currant": {
+        "roots": {
+            "fi": [
+                "wine",
+                "berry"
+            ],
+            "nl": "berry"
+        },
+        "en": "currant",
+        "fi": "viinimarja",
+        "nl": "de aalbes"
+    },
+    "cider": {
+        "en": "cider",
+        "fi": "siideri",
+        "nl": "de cider"
+    },
+    "wine": {
+        "en": "wine",
+        "fi": "viini",
+        "nl": "de wijn"
+    },
+    "beer": {
+        "en": "beer",
+        "fi": "olut",
+        "nl": "het bier"
+    },
+    "soft drink": {
+        "roots": {
+            "en": "drink",
+            "nl": "drink"
+        },
+        "en": "soft drink|softdrink",
+        "fi": "limu",
+        "nl": "de frisdrank"
+    },
+    "tea": {
+        "en": "tea",
+        "fi": "tee",
+        "nl": "de thee"
     },
     "pear": {
         "level": {
