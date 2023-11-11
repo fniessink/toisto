@@ -14,7 +14,7 @@ NAME: Final = _metadata["name"]
 SUMMARY: Final = _metadata["summary"]
 _homepage_url = _metadata["Project-URL"].split(", ")[1]
 README_URL: Final = f"{_homepage_url}/blob/main/README.md"
-CHANGELOG_URL: Final = first(_metadata.get_all("Project-URL"), lambda url: "Changelog" in url).split(", ")[1]
+CHANGELOG_URL: Final = first(_metadata.get_all("Project-URL", []), lambda url: "Changelog" in url).split(", ")[1]
 TAGS_API_URL: Final = "https://api.github.com/repos/fniessink/toisto/tags"
 
 VERSION: Final = version(NAME)
