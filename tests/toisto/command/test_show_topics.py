@@ -57,3 +57,9 @@ class ShowTopicsTest(ToistoTestCase):
         """Test that concepts without labels in the target or source language are not shown."""
         console_print = self.show_topics("en", "fr")
         self.assertEqual(0, console_print.call_args_list[0][0][0].row_count)
+
+    def test_skip_empty_topics(self):
+        """Test that topics without concepts are not shown."""
+        self.concepts = {}
+        console_print = self.show_topics()
+        self.assertIsNone(console_print.call_args)

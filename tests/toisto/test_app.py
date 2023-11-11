@@ -41,8 +41,8 @@ class AppTest(unittest.TestCase):
 
     def read_concept_file(self):
         """Generate a unique concept file."""
-        self.concept_file_count += 1
         count = self.concept_file_count
+        self.concept_file_count += 1
         return f'{{"concept-{count}": {{"fi": "concept-{count} in fi", "nl": "concept-{count} in nl"}}}}\n'
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--concept-file", "test"])

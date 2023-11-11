@@ -63,4 +63,5 @@ def show_topics(
     with console.pager():
         for topic in sorted(topics, key=lambda topic: topic.name):
             topic_concepts = {concept for concept in concepts if concept.concept_id in topic.concepts}
-            console.print(topic_table(target_language, source_language, topic, topics, topic_concepts))
+            if topic_concepts:
+                console.print(topic_table(target_language, source_language, topic, topics, topic_concepts))
