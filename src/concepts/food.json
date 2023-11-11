@@ -28,9 +28,16 @@
             ],
             "A2": "KK"
         },
-        "en": "drink",
-        "fi": "juoma",
-        "nl": "het drinken"
+        "singular": {
+            "en": "drink",
+            "fi": "juoma",
+            "nl": "de drank"
+        },
+        "plural": {
+            "en": "drinks",
+            "fi": "juomat",
+            "nl": "de dranken"
+        }
     },
     "food and drink": {
         "level": {
@@ -498,6 +505,30 @@
             "fi": "maidot"
         }
     },
+    "buttermilk": {
+        "roots": {
+            "en": ["butter", "milk"],
+            "nl": "milk"
+        },
+        "en": "buttermilk",
+        "fi": "piimä",
+        "nl": "de karnemelk"
+    },
+    "oat milk": {
+        "roots": "milk",
+        "en": "oat milk",
+        "fi": "kauramaito",
+        "nl": "de havermelk"
+    },
+    "hot chocolate": {
+        "roots": {
+            "en": ["hot", "chocoloate"],
+            "nl": ["chocolate", "milk"]
+        },
+        "en": "hot chocolate",
+        "fi": "kaakao",
+        "nl": "de chocolademelk"
+    },
     "sausage": {
         "level": {
             "A2": [
@@ -589,7 +620,10 @@
     },
     "cloudberry": {
         "roots": {
-            "en": ["cloud", "berry"]
+            "en": [
+                "cloud",
+                "berry"
+            ]
         },
         "en": "cloudberry",
         "fi": "lakka",
@@ -607,7 +641,10 @@
         "roots": {
             "en": "berry",
             "fi": "black",
-            "nl": ["forest", "berry"]
+            "nl": [
+                "forest",
+                "berry"
+            ]
         },
         "en": "bilberry",
         "fi": "mustikka",
@@ -618,7 +655,10 @@
             "en": "berry",
             "nl": "berry"
         },
-        "en": ["lingonberry", "cowberry"],
+        "en": [
+            "lingonberry",
+            "cowberry"
+        ],
         "fi": "puolukka",
         "nl": "de vossenbes"
     },
@@ -986,6 +1026,11 @@
             ]
         }
     },
+    "mineral water": {
+        "en": "mineral water",
+        "fi": ["kivennäisvesi", "vissy"],
+        "nl": "het mineraalwater"
+    },
     "sandwich": {
         "level": {
             "A1": [
@@ -1046,17 +1091,44 @@
     },
     "currant": {
         "roots": {
-            "fi": ["wine", "berry"],
+            "fi": [
+                "wine",
+                "berry"
+            ],
             "nl": "berry"
         },
         "en": "currant",
         "fi": "viinimarja",
         "nl": "de aalbes"
     },
+    "cider": {
+        "en": "cider",
+        "fi": "siideri",
+        "nl": "de cider"
+    },
     "wine": {
         "en": "wine",
         "fi": "viini",
         "nl": "de wijn"
+    },
+    "beer": {
+        "en": "beer",
+        "fi": "olut",
+        "nl": "het bier"
+    },
+    "soft drink": {
+        "roots": {
+            "en": "drink",
+            "nl": "drink"
+        },
+        "en": "soft drink|softdrink",
+        "fi": "limu",
+        "nl": "de frisdrank"
+    },
+    "tea": {
+        "en": "tea",
+        "fi": "tee",
+        "nl": "de thee"
     },
     "pear": {
         "level": {
