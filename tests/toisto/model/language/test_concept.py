@@ -82,8 +82,8 @@ class ConceptFilterTest(unittest.TestCase):
             cast(ConceptDict, dict(level={"A2": "KK"}, fi="kolme", nl="drie")),
         )
         self.concepts = {self.two, self.three}
-        small = Topic(name="small", concepts=frozenset([ConceptId("two")]))
-        big = Topic(name="big", concepts=frozenset([ConceptId("three")]))
+        small = Topic("small", frozenset([ConceptId("two")]))
+        big = Topic("big", frozenset([ConceptId("three")]))
         self.topics = {small, big}
 
     def test_no_filter(self):

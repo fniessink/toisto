@@ -20,7 +20,7 @@ class ShowTopicsTest(ToistoTestCase):
         concept = create_concept("hello", dict(fi="Terve", nl="Hoi", topics="greetings"))
         self.quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
         self.concepts = {concept}
-        self.topics = {Topic(name="greetings", concepts=("hello",))}
+        self.topics = {Topic("greetings", ("hello",))}
 
     @patch("rich.console.Console.pager", MagicMock())
     def show_topics(self, target_language: Language | None = None, source_language: Language | None = None) -> Mock:

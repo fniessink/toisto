@@ -24,7 +24,7 @@ class AppTest(unittest.TestCase):
     @patch("rich.console.Console.pager", MagicMock())
     @patch(
         "toisto.persistence.topics.load_topics",
-        Mock(return_value={Topic(name="topic", concepts=frozenset([ConceptId("concept-0")]))}),
+        Mock(return_value={Topic("topic", frozenset([ConceptId("concept-0")]))}),
     )
     @patch("toisto.ui.speech.Popen", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
