@@ -16,6 +16,7 @@
         "entry fee",
         "flight",
         "free (no payment)",
+        "giving directions",
         "helicopter",
         "journey",
         "lorry",
@@ -38,5 +39,8 @@
         "train",
         "train station",
         "tram"
+    ],
+    "topics": [
+        "giving directions"
     ]
 }

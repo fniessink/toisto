@@ -637,5 +637,75 @@
         "en": "motorcycle",
         "fi": "moottoripyörä|pyörä",
         "nl": "de motorfiets|de motor"
+    },
+    "giving directions": {
+        "roots": {
+            "fi": "road",
+            "nl": "road"
+        },
+        "en": "giving directions",
+        "fi": "tien neuvominen",
+        "nl": "de weg wijzen"
+    },
+    "it is near": {
+        "antonym": "is is far",
+        "en": "It is near.",
+        "fi": "Se on lähellä.",
+        "nl": "Het is dichtbij."
+    },
+    "it is far": {
+        "antonym": "it is near",
+        "en": "It is far.",
+        "fi": "Se on kaukana.",
+        "nl": "Het is ver."
+    },
+    "straight ahead": {
+        "en": "straight ahead",
+        "fi": "suoraan eteenpäin",
+        "nl": "rechtdoor"
+    },
+    "go straight ahead on Mariankatu": {
+        "roots": [
+            "to go",
+            "straight ahead"
+        ],
+        "en": "Go straight ahead on Mariankatu.",
+        "fi": "Mene Mariankatua suoraan eteenpäin.",
+        "nl": "Ga rechtdoor op de Mariankatu."
+    },
+    "turn left": {
+        "en": "Turn left.",
+        "fi": "Käänny vasemmalle.",
+        "nl": "Sla links af."
+    },
+    "turn right": {
+        "en": "Turn right.",
+        "fi": "Käänny oikealle.",
+        "nl": "Sla rechts af."
+    },
+    "go to Mariankatu": {
+        "en": "Go to Mariankatu.",
+        "fi": "Käänny Mariankadulle.",
+        "nl": "Ga naar de Mariankatu."
+    },
+    "crossroads": {
+        "en": "crossroads",
+        "fi": "risteys",
+        "nl": "het kruispunt"
+    },
+    "turn left at the crossroads": {
+        "roots": [
+            "turn left",
+            "crossroads"
+        ],
+        "en": "Turn left at the crossroads",
+        "fi": "Käänny risteyksestä vasemmalle.",
+        "nl": "Sla links af bij het kruispunt."
+    },
+    "street corner": {
+        "roots": ["street"],
+        "en": "street corner",
+        "fi": "kadunkulma",
+        "nl": "de straathoek"
     }
 }
