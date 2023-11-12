@@ -22,294 +22,511 @@
         "nl": "nul"
     },
     "1": {
-        "en": "one",
-        "fi": [
-            "yksi",
-            "yks*"
-        ],
-        "nl": "één|een"
+        "cardinal": {
+            "en": "one",
+            "fi": [
+                "yksi",
+                "yks*"
+            ],
+            "nl": "één|een"
+        },
+        "ordinal": {
+            "en": "first",
+            "fi": "ensimmäinen",
+            "nl": "eerste"
+        }
     },
     "2": {
-        "en": "two",
-        "fi": [
-            "kaksi",
-            "kaks*"
-        ],
-        "nl": "twee"
+        "cardinal": {
+            "en": "two",
+            "fi": [
+                "kaksi",
+                "kaks*"
+            ],
+            "nl": "twee"
+        },
+        "ordinal": {
+            "en": "second",
+            "fi": "toinen",
+            "nl": "tweede"
+        }
     },
     "3": {
-        "en": "three",
-        "fi": "kolme",
-        "nl": "drie"
+        "cardinal": {
+            "en": "three",
+            "fi": "kolme",
+            "nl": "drie"
+        },
+        "ordinal": {
+            "en": "third",
+            "fi": "kolmas",
+            "nl": "derde"
+        }
     },
     "4": {
-        "en": "four",
-        "fi": "neljä",
-        "nl": "vier"
+        "cardinal": {
+            "en": "four",
+            "fi": "neljä",
+            "nl": "vier"
+        },
+        "ordinal": {
+            "en": "fourth",
+            "fi": "neljäs",
+            "nl": "vierde"
+        }
     },
     "5": {
-        "en": "five",
-        "fi": [
-            "viisi",
-            "viis*"
-        ],
-        "nl": "vijf"
+        "cardinal": {
+            "en": "five",
+            "fi": [
+                "viisi",
+                "viis*"
+            ],
+            "nl": "vijf"
+        },
+        "ordinal": {
+            "en": "fifth",
+            "fi": "viides",
+            "nl": "vijfde"
+        }
     },
     "6": {
-        "en": "six",
-        "fi": [
-            "kuusi",
-            "kuus*"
-        ],
-        "nl": "zes"
+        "cardinal": {
+            "en": "six",
+            "fi": [
+                "kuusi",
+                "kuus*"
+            ],
+            "nl": "zes"
+        },
+        "ordinal": {
+            "en": "sixth",
+            "fi": "kuudes",
+            "nl": "zesde"
+        }
     },
     "7": {
-        "en": "seven",
-        "fi": [
-            "seitsemän",
-            "seittemän*"
-        ],
-        "nl": "zeven"
+        "cardinal": {
+            "en": "seven",
+            "fi": [
+                "seitsemän",
+                "seittemän*"
+            ],
+            "nl": "zeven"
+        },
+        "ordinal": {
+            "en": "seventh",
+            "fi": "seitsemäs",
+            "nl": "zevende"
+        }
     },
     "8": {
-        "en": "eight",
-        "fi": [
-            "kahdeksan",
-            "kaheksan*"
-        ],
-        "nl": "acht"
+        "cardinal": {
+            "en": "eight",
+            "fi": [
+                "kahdeksan",
+                "kaheksan*"
+            ],
+            "nl": "acht"
+        },
+        "ordinal": {
+            "en": "eighth",
+            "fi": "kahdeksas",
+            "nl": "achtste"
+        }
     },
     "9": {
-        "en": "nine",
-        "fi": [
-            "yhdeksän",
-            "yheksän*"
-        ],
-        "nl": "negen"
+        "cardinal": {
+            "en": "nine",
+            "fi": [
+                "yhdeksän",
+                "yheksän*"
+            ],
+            "nl": "negen"
+        },
+        "ordinal": {
+            "en": "ninth",
+            "fi": "yhdeksäs",
+            "nl": "negende"
+        }
     },
     "10": {
-        "en": "ten",
-        "fi": "kymmenen",
-        "nl": "tien"
+        "cardinal": {
+            "en": "ten",
+            "fi": "kymmenen",
+            "nl": "tien"
+        },
+        "ordinal": {
+            "en": "tenth",
+            "fi": "kymmenes",
+            "nl": "tiende"
+        }
     },
     "11": {
         "roots": [
             "1",
             "10"
         ],
-        "en": "eleven",
-        "fi": [
-            "yksitoista",
-            "ykstoist*"
-        ],
-        "nl": "elf"
+        "cardinal": {
+            "en": "eleven",
+            "fi": [
+                "yksitoista",
+                "ykstoist*"
+            ],
+            "nl": "elf"
+        },
+        "ordinal": {
+            "en": "elventh",
+            "fi": "yhdestoista",
+            "nl": "elfde"
+        }
     },
     "12": {
         "roots": [
             "2",
             "10"
         ],
-        "en": "twelve",
-        "fi": "kaksitoista",
-        "nl": "twaalf"
+        "cardinal": {
+            "en": "twelve",
+            "fi": "kaksitoista",
+            "nl": "twaalf"
+        },
+        "ordinal": {
+            "en": "twelfth",
+            "fi": "kahdestoista",
+            "nl": "twaalfde"
+        }
     },
     "13": {
         "roots": [
             "3",
             "10"
         ],
-        "en": "thirteen",
-        "fi": "kolmetoista",
-        "nl": "dertien"
+        "cardinal": {
+            "en": "thirteen",
+            "fi": "kolmetoista",
+            "nl": "dertien"
+        },
+        "ordinal": {
+            "en": "thirteenth",
+            "fi": "kolmastoista",
+            "nl": "dertiende"
+        }
     },
     "14": {
         "roots": [
             "4",
             "10"
         ],
-        "en": "fourteen",
-        "fi": "neljätoista",
-        "nl": "veertien"
+        "cardinal": {
+            "en": "fourteen",
+            "fi": "neljätoista",
+            "nl": "veertien"
+        },
+        "ordinal": {
+            "en": "fourteenth",
+            "fi": "neljästoista",
+            "nl": "veertiende"
+        }
     },
     "15": {
         "roots": [
             "5",
             "10"
         ],
-        "en": "fifteen",
-        "fi": "viisitoista",
-        "nl": "vijftien"
+        "cardinal": {
+            "en": "fifteen",
+            "fi": "viisitoista",
+            "nl": "vijftien"
+        },
+        "ordinal": {
+            "en": "fifteenth",
+            "fi": "viidestoista",
+            "nl": "vijftiende"
+        }
     },
     "16": {
         "roots": [
             "6",
             "10"
         ],
-        "en": "sixteen",
-        "fi": "kuusitoista",
-        "nl": "zestien"
+        "cardinal": {
+            "en": "sixteen",
+            "fi": "kuusitoista",
+            "nl": "zestien"
+        },
+        "ordinal": {
+            "en": "sixteenth",
+            "fi": "kuudestoista",
+            "nl": "zestiende"
+        }
     },
     "17": {
         "roots": [
             "7",
             "10"
         ],
-        "en": "seventeen",
-        "fi": "seitsemäntoista",
-        "nl": "zeventien"
+        "cardinal": {
+            "en": "seventeen",
+            "fi": "seitsemäntoista",
+            "nl": "zeventien"
+        },
+        "ordinal": {
+            "en": "seventeenth",
+            "fi": "seitsemästoista",
+            "nl": "zeventiende"
+        }
     },
     "18": {
         "roots": [
             "8",
             "10"
         ],
-        "en": "eightteen",
-        "fi": "kahdeksantoista",
-        "nl": "achttien"
+        "cardinal": {
+            "en": "eightteen",
+            "fi": "kahdeksantoista",
+            "nl": "achttien"
+        },
+        "ordinal": {
+            "en": "eighteenth",
+            "fi": "kahdeksastoista",
+            "nl": "achttiende"
+        }
     },
     "19": {
         "roots": [
             "9",
             "10"
         ],
-        "en": "nineteen",
-        "fi": "yhdeksäntoista",
-        "nl": "negentien"
+        "cardinal": {
+            "en": "nineteen",
+            "fi": "yhdeksäntoista",
+            "nl": "negentien"
+        },
+        "ordinal": {
+            "en": "nineteenth",
+            "fi": "yhdeksästoista",
+            "nl": "negentiende"
+        }
     },
     "20": {
         "roots": [
             "2",
             "10"
         ],
-        "en": "twenty",
-        "fi": [
-            "kaksikymmentä",
-            "kakskyt*"
-        ],
-        "nl": "twintig"
+        "cardinal": {
+            "en": "twenty",
+            "fi": [
+                "kaksikymmentä",
+                "kakskyt*"
+            ],
+            "nl": "twintig"
+        },
+        "ordinal": {
+            "en": "twentieth",
+            "fi": "kahdeskymmenes",
+            "nl": "twintigste"
+        }
     },
     "21": {
         "roots": [
             "1",
             "20"
         ],
-        "en": "twenty-one",
-        "fi": [
-            "kaksikymmentäyksi",
-            "kakskytyks*"
-        ],
-        "nl": "eenentwintig"
+        "cardinal": {
+            "en": "twenty-one",
+            "fi": [
+                "kaksikymmentäyksi",
+                "kakskytyks*"
+            ],
+            "nl": "eenentwintig"
+        },
+        "ordinal": {
+            "en": "twenty-first",
+            "fi": "kahdeskymmenesensimmäinen",
+            "nl": "eenentwintigste"
+        }
     },
     "22": {
         "roots": [
             "2",
             "20"
         ],
-        "en": "twenty-two",
-        "fi": "kaksikymmentäkaksi",
-        "nl": "tweeëntwintig"
+        "cardinal": {
+            "en": "twenty-two",
+            "fi": "kaksikymmentäkaksi",
+            "nl": "tweeëntwintig"
+        },
+        "ordinal": {
+            "en": "twenty-second",
+            "fi": "kahdeskymmenestoinen",
+            "nl": "tweeëntwintigste"
+        }
     },
     "23": {
         "roots": [
             "3",
             "20"
         ],
-        "en": "twenty-three",
-        "fi": "kaksikymmentäkolme",
-        "nl": "drieëntwintig"
+        "cardinal": {
+            "en": "twenty-three",
+            "fi": "kaksikymmentäkolme",
+            "nl": "drieëntwintig"
+        },
+        "ordinal": {
+            "en": "twenty-third",
+            "fi": "kahdeskymmeneskolmas",
+            "nl": "drieëntwintigste"
+        }
     },
     "24": {
         "roots": [
             "4",
             "20"
         ],
-        "en": "twenty-four",
-        "fi": "kaksikymmentäneljä",
-        "nl": "vierentwintig"
+        "cardinal": {
+            "en": "twenty-four",
+            "fi": "kaksikymmentäneljä",
+            "nl": "vierentwintig"
+        },
+        "ordinal": {
+            "en": "twenty-fourth",
+            "fi": "kahdeskymmenesneljäs",
+            "nl": "vierentwintigste"
+        }
     },
     "30": {
         "roots": [
             "3",
             "10"
         ],
-        "en": "thirty",
-        "fi": [
-            "kolmekymmentä",
-            "kolkyt*"
-        ],
-        "nl": "dertig"
+        "cardinal": {
+            "en": "thirty",
+            "fi": [
+                "kolmekymmentä",
+                "kolkyt*"
+            ],
+            "nl": "dertig"
+        },
+        "ordinal": {
+            "en": "thirtieth",
+            "fi": "kolmaskymmenes",
+            "nl": "dertigste"
+        }
     },
     "40": {
         "roots": [
             "4",
             "10"
         ],
-        "en": "forty",
-        "fi": [
-            "neljäkymmentä",
-            "nelkyt*"
-        ],
-        "nl": "veertig"
+        "cardinal": {
+            "en": "forty",
+            "fi": [
+                "neljäkymmentä",
+                "nelkyt*"
+            ],
+            "nl": "veertig"
+        },
+        "ordinal": {
+            "en": "fortieth",
+            "fi": "neljäskymmenes",
+            "nl": "veertigste"
+        }
     },
     "50": {
         "roots": [
             "5",
             "10"
         ],
-        "en": "fifty",
-        "fi": [
-            "viisikymmentä",
-            "viiskyt*"
-        ],
-        "nl": "vijftig"
+        "cardinal": {
+            "en": "fifty",
+            "fi": [
+                "viisikymmentä",
+                "viiskyt*"
+            ],
+            "nl": "vijftig"
+        },
+        "ordinal": {
+            "en": "fiftieth",
+            "fi": "viideskymmenes",
+            "nl": "vijftigste"
+        }
     },
     "60": {
         "roots": [
             "6",
             "10"
         ],
-        "en": "sixty",
-        "fi": [
-            "kuusikymmentä",
-            "kuuskyt*"
-        ],
-        "nl": "zestig"
+        "cardinal": {
+            "en": "sixty",
+            "fi": [
+                "kuusikymmentä",
+                "kuuskyt*"
+            ],
+            "nl": "zestig"
+        },
+        "ordinal": {
+            "en": "sixtieth",
+            "fi": "kuudeskymmenes",
+            "nl": "zestigste"
+        }
     },
     "70": {
         "roots": [
             "7",
             "10"
         ],
-        "en": "seventy",
-        "fi": [
-            "seitsemänkymmentä",
-            "seiskyt*"
-        ],
-        "nl": "zeventig"
+        "cardinal": {
+            "en": "seventy",
+            "fi": [
+                "seitsemänkymmentä",
+                "seiskyt*"
+            ],
+            "nl": "zeventig"
+        },
+        "ordinal": {
+            "en": "seventieth",
+            "fi": "seitsemäskymmenes",
+            "nl": "zeventigste"
+        }
     },
     "80": {
         "roots": [
             "8",
             "10"
         ],
-        "en": "eighty",
-        "fi": [
-            "kahdeksankymmentä",
-            "kaheksankyt*"
-        ],
-        "nl": "tachtig"
+        "cardinal": {
+            "en": "eighty",
+            "fi": [
+                "kahdeksankymmentä",
+                "kaheksankyt*"
+            ],
+            "nl": "tachtig"
+        },
+        "ordinal": {
+            "en": "eightieth",
+            "fi": "kahdeksaskymmenes",
+            "nl": "tachtigste"
+        }
     },
     "90": {
         "roots": [
             "9",
             "10"
         ],
-        "en": "ninety",
-        "fi": [
-            "yhdeksänkymmentä",
-            "yheksänkyt*"
-        ],
-        "nl": "negentig"
+        "cardinal": {
+            "en": "ninety",
+            "fi": [
+                "yhdeksänkymmentä",
+                "yheksänkyt*"
+            ],
+            "nl": "negentig"
+        },
+        "ordinal": {
+            "en": "ninetieth",
+            "fi": "yhdeksäskymmenes",
+            "nl": "negentigste"
+        }
     },
     "100": {
         "en": "hundred",

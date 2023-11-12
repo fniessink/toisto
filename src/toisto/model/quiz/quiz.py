@@ -38,6 +38,8 @@ GrammaticalQuizType = Literal[
     "make interrogative",
     "affirm",
     "negate",
+    "make cardinal",
+    "make ordinal",
 ]
 QuizType = Literal[TranslationQuizType, ListenQuizType, SemanticQuizType, GrammaticalQuizType]
 GRAMMATICAL_QUIZ_TYPES: Final[dict[GrammaticalCategory, GrammaticalQuizType]] = {
@@ -60,6 +62,8 @@ GRAMMATICAL_QUIZ_TYPES: Final[dict[GrammaticalCategory, GrammaticalQuizType]] = 
     "interrogative": "make interrogative",
     "affirmative": "affirm",
     "negative": "negate",
+    "cardinal": "make cardinal",
+    "ordinal": "make ordinal",
 }
 QUIZ_TYPE_GRAMMATICAL_CATEGORIES: Final = {value: key for key, value in GRAMMATICAL_QUIZ_TYPES.items()}
 INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], str]] = {

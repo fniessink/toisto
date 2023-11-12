@@ -10,6 +10,7 @@ Diminutive = Literal["root", "diminutive"]
 Tense = Literal["present tense", "past tense"]
 SentenceForm = Literal["declarative", "interrogative"]
 GrammaticalPolarity = Literal["affirmative", "negative"]
+Number = Literal["cardinal", "ordinal"]
 GrammaticalCategory = Literal[
     GrammaticalGender,
     GrammaticalNumber,
@@ -19,4 +20,5 @@ GrammaticalCategory = Literal[
     Tense,
     SentenceForm,
     GrammaticalPolarity,
+    Number,
 ]

@@ -507,6 +507,25 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 }
 ```
 
+### Numbers
+
+Cardinal and ordinal numbers can be specified as follows:
+
+```json
+{
+    "one": {
+        "cardinal": {
+            "en": "one",
+            "fi": "yksi"
+        },
+        "ordinal": {
+            "en": "first",
+            "fi": "ensimmäinen"
+        }
+    }
+}
+```
+
 ### Concept relationships
 
 #### Compound concepts
@@ -705,8 +724,9 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 10. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
 11. Quizzes to change the sentence form from declarative to interrogative and vice versa.
 12. Quizzes to change the polarity from affirmative to negative and vice versa.
-13. Quizzes to give the antonym.
-14. Quizzes to answer a question.
+13. Quizzes to change cardinal numbers into ordinal numbers and vice versa.
+14. Quizzes to give the antonym.
+15. Quizzes to answer a question.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 
