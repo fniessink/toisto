@@ -6,24 +6,16 @@ from dataclasses import dataclass
 from typing import Literal, Union, cast, get_args
 
 from . import Language
-from .cefr import CommonReferenceLevel, CommonReferenceLevelSource
 from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts
 from .grammar import GrammaticalCategory
 from .iana_language_subtag_registry import ALL_LANGUAGES
 from .label import Labels, label_factory, meaning_factory
 
-CommonReferenceLevelDict = dict[CommonReferenceLevel, CommonReferenceLevelSource | list[CommonReferenceLevelSource]]
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-MetaData = Literal["level", "antonym", "answer", "answer-only", "roots"]
-LeafConceptDict = dict[
-    Language | MetaData,
-    ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | CommonReferenceLevelDict | bool,
-]
-CompositeConceptDict = dict[
-    GrammaticalCategory | MetaData,
-    Union["CompositeConceptDict", LeafConceptDict, CommonReferenceLevelDict, bool],
-]
+MetaData = Literal["antonym", "answer", "answer-only", "roots"]
+LeafConceptDict = dict[Language | MetaData, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
+CompositeConceptDict = dict[GrammaticalCategory | MetaData, Union["CompositeConceptDict", LeafConceptDict, bool]]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
@@ -40,7 +32,6 @@ class ConceptFactory:
             self.concept_id,
             self._labels(),
             self._meanings(),
-            self._level(),
             self._related_concepts(parent),
             self._answer_only(),
         )
@@ -60,14 +51,6 @@ class ConceptFactory:
             for key, value in self.concept_dict.items()
             if key in ALL_LANGUAGES
         }
-
-    def _level(self) -> CommonReferenceLevel | None:
-        """Determine the Common Reference Level for this concept.
-
-        At the moment, just use the highest language level specified by the available sources.
-        """
-        concept_levels = [level for level in self._get_levels() if level in get_args(CommonReferenceLevel)]
-        return max(concept_levels, default=None)
 
     def _related_concepts(self, parent: ConceptId | None) -> RelatedConcepts:
         """Create the related concepts."""
@@ -107,7 +90,6 @@ class ConceptFactory:
             | antonyms_dict
             | answers_dict
         )
-        constituent_concept_dict.setdefault("level", self._get_levels())
         return cast(ConceptDict, constituent_concept_dict)
 
     def _grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
@@ -133,10 +115,6 @@ class ConceptFactory:
         """Return the ids of the related concept(s)."""
         related = cast(ConceptIdListOrString, self.concept_dict.get(relation, []))
         return tuple(related) if isinstance(related, list) else (related,)
-
-    def _get_levels(self) -> CommonReferenceLevelDict:
-        """Get the Common Reference Levels from the concept dict."""
-        return cast(CommonReferenceLevelDict, self.concept_dict.get("level", {}))
 
 
 def create_concept(concept_id: ConceptId, concept_dict: ConceptDict) -> Concept:

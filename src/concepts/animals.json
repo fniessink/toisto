@@ -1,12 +1,5 @@
 {
     "animal": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "animal",
             "fi": "eläin",
@@ -19,11 +12,6 @@
         }
     },
     "pet": {
-        "level": {
-            "A1": "EP",
-            "A2": "OD",
-            "B2": "KK"
-        },
         "roots": {
             "fi": [
                 "animal",
@@ -52,13 +40,6 @@
         }
     },
     "dog": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "dog",
             "fi": "koira",
@@ -71,13 +52,6 @@
         }
     },
     "cat": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "cat",
             "fi": "kissa",
@@ -90,13 +64,6 @@
         }
     },
     "rhino": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "fi": [
                 "horn"
@@ -118,11 +85,6 @@
         }
     },
     "elephant": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "C2": "KK"
-        },
         "singular": {
             "en": "elephant",
             "fi": [
@@ -141,11 +103,6 @@
         }
     },
     "mouse": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B1": "KK"
-        },
         "singular": {
             "en": "mouse",
             "fi": "hiiri",
@@ -158,13 +115,6 @@
         }
     },
     "duck": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "singular": {
             "en": "duck",
             "fi": "ankka",
@@ -177,13 +127,6 @@
         }
     },
     "goose": {
-        "level": {
-            "A2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "goose",
             "fi": "hanhi",
@@ -196,13 +139,6 @@
         }
     },
     "bird": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "bird",
             "fi": "lintu",
@@ -215,13 +151,6 @@
         }
     },
     "horse": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "horse",
             "fi": "hevonen",
@@ -234,10 +163,6 @@
         }
     },
     "cow": {
-        "level": {
-            "A1": "OD",
-            "A2": "KK"
-        },
         "singular": {
             "en": "cow",
             "fi": "lehmä",
@@ -250,13 +175,6 @@
         }
     },
     "pig": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "pig",
             "fi": [
@@ -277,13 +195,6 @@
         }
     },
     "deer": {
-        "level": {
-            "B2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "deer",
             "fi": "peura",
@@ -296,11 +207,6 @@
         }
     },
     "reindeer": {
-        "level": {
-            "B1": "KK",
-            "B2": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": "deer",
             "nl": [
@@ -320,13 +226,6 @@
         }
     },
     "bear": {
-        "level": {
-            "A2": "EP",
-            "B2": [
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "bear",
             "fi": "karhu",
@@ -339,13 +238,6 @@
         }
     },
     "gorilla": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "gorilla",
             "fi": "gorilla",
@@ -358,13 +250,6 @@
         }
     },
     "sheep": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "sheep",
             "fi": "lammas",
@@ -377,13 +262,6 @@
         }
     },
     "crab": {
-        "level": {
-            "B2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "crab",
             "fi": "rapu",
@@ -396,11 +274,6 @@
         }
     },
     "spider": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "spider",
             "fi": "hämähäkki",
@@ -413,13 +286,6 @@
         }
     },
     "rabbit": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": [
                 "rabbit",
@@ -444,13 +310,6 @@
         }
     },
     "worm": {
-        "level": {
-            "B2": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "singular": {
             "en": "worm",
             "fi": "mato",
@@ -463,13 +322,6 @@
         }
     },
     "horn": {
-        "level": {
-            "C1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "horn",
             "fi": "sarvi",
@@ -482,11 +334,6 @@
         }
     },
     "tail": {
-        "level": {
-            "B1": "OD",
-            "B2": "EP",
-            "C1": "KK"
-        },
         "singular": {
             "en": "tail",
             "fi": "häntä",

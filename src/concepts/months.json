@@ -1,11 +1,5 @@
 {
     "month": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "fi": "moon",
             "nl": "moon"
@@ -22,12 +16,6 @@
         }
     },
     "moon": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "moon",
             "fi": "kuu",
@@ -40,13 +28,6 @@
         }
     },
     "january": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -61,13 +42,6 @@
         "nl": "In januari."
     },
     "february": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -76,14 +50,6 @@
         "nl": "februari;;In Dutch, names of months are not capitalized"
     },
     "march": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-
-        },
         "roots": {
             "fi": "moon"
         },
@@ -92,13 +58,6 @@
         "nl": "maart;;In Dutch, names of months are not capitalized"
     },
     "april": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -113,13 +72,6 @@
         "nl": "In april."
     },
     "may": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -128,13 +80,6 @@
         "nl": "mei;;In Dutch, names of months are not capitalized"
     },
     "june": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "summer",
@@ -146,13 +91,6 @@
         "nl": "juni;;In Dutch, names of months are not capitalized"
     },
     "july": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -161,13 +99,6 @@
         "nl": "juli;;In Dutch, names of months are not capitalized"
     },
     "august": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -176,13 +107,6 @@
         "nl": "augustus;;In Dutch, names of months are not capitalized"
     },
     "september": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "autumn",
@@ -194,14 +118,6 @@
         "nl": "september;;In Dutch, names of months are not capitalized"
     },
     "october": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-
-        },
         "roots": {
             "fi": "moon"
         },
@@ -210,13 +126,6 @@
         "nl": "oktober;;In Dutch, names of months are not capitalized"
     },
     "november": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "moon"
         },
@@ -225,13 +134,6 @@
         "nl": "november;;In Dutch, names of months are not capitalized"
     },
     "december": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "christmas",

@@ -1,22 +1,10 @@
 {
     "to count": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B1": "EP"
-        },
         "en": "to count",
         "fi": "laskea",
         "nl": "tellen"
     },
     "number": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "number",
             "fi": "numero",
@@ -29,27 +17,11 @@
         }
     },
     "0": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "C1": [
-                "KK"
-            ]
-        },
         "en": "zero",
         "fi": "nolla",
         "nl": "nul"
     },
     "1": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "one",
         "fi": [
             "yksi",
@@ -58,13 +30,6 @@
         "nl": "één|een"
     },
     "2": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "two",
         "fi": [
             "kaksi",
@@ -73,37 +38,16 @@
         "nl": "twee"
     },
     "3": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "three",
         "fi": "kolme",
         "nl": "drie"
     },
     "4": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "four",
         "fi": "neljä",
         "nl": "vier"
     },
     "5": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "five",
         "fi": [
             "viisi",
@@ -112,13 +56,6 @@
         "nl": "vijf"
     },
     "6": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "six",
         "fi": [
             "kuusi",
@@ -127,13 +64,6 @@
         "nl": "zes"
     },
     "7": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "seven",
         "fi": [
             "seitsemän",
@@ -142,13 +72,6 @@
         "nl": "zeven"
     },
     "8": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "en": "eight",
         "fi": [
             "kahdeksan",
@@ -157,13 +80,6 @@
         "nl": "acht"
     },
     "9": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "en": "nine",
         "fi": [
             "yhdeksän",
@@ -172,25 +88,11 @@
         "nl": "negen"
     },
     "10": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "ten",
         "fi": "kymmenen",
         "nl": "tien"
     },
     "11": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "1",
             "10"
@@ -203,13 +105,6 @@
         "nl": "elf"
     },
     "12": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "2",
             "10"
@@ -219,13 +114,6 @@
         "nl": "twaalf"
     },
     "13": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "3",
             "10"
@@ -235,13 +123,6 @@
         "nl": "dertien"
     },
     "14": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "4",
             "10"
@@ -251,13 +132,6 @@
         "nl": "veertien"
     },
     "15": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "5",
             "10"
@@ -267,13 +141,6 @@
         "nl": "vijftien"
     },
     "16": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "6",
             "10"
@@ -283,13 +150,6 @@
         "nl": "zestien"
     },
     "17": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "7",
             "10"
@@ -299,13 +159,6 @@
         "nl": "zeventien"
     },
     "18": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "8",
             "10"
@@ -315,13 +168,6 @@
         "nl": "achttien"
     },
     "19": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "9",
             "10"
@@ -331,13 +177,6 @@
         "nl": "negentien"
     },
     "20": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "2",
             "10"
@@ -350,13 +189,6 @@
         "nl": "twintig"
     },
     "21": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "1",
             "20"
@@ -369,13 +201,6 @@
         "nl": "eenentwintig"
     },
     "22": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "2",
             "20"
@@ -385,13 +210,6 @@
         "nl": "tweeëntwintig"
     },
     "23": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "3",
             "20"
@@ -401,13 +219,6 @@
         "nl": "drieëntwintig"
     },
     "24": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "4",
             "20"
@@ -417,11 +228,6 @@
         "nl": "vierentwintig"
     },
     "30": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "3",
             "10"
@@ -434,11 +240,6 @@
         "nl": "dertig"
     },
     "40": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "4",
             "10"
@@ -451,11 +252,6 @@
         "nl": "veertig"
     },
     "50": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "5",
             "10"
@@ -468,11 +264,6 @@
         "nl": "vijftig"
     },
     "60": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "6",
             "10"
@@ -485,11 +276,6 @@
         "nl": "zestig"
     },
     "70": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "7",
             "10"
@@ -502,11 +288,6 @@
         "nl": "zeventig"
     },
     "80": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "8",
             "10"
@@ -519,11 +300,6 @@
         "nl": "tachtig"
     },
     "90": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": [
             "9",
             "10"
@@ -536,25 +312,11 @@
         "nl": "negentig"
     },
     "100": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": "hundred",
         "fi": "sata",
         "nl": "honderd"
     },
     "200": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "2",
             "100"
@@ -564,13 +326,6 @@
         "nl": "tweehonderd"
     },
     "300": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "3",
             "100"
@@ -580,25 +335,11 @@
         "nl": "driehonderd"
     },
     "1000": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": "thousand",
         "fi": "tuhat",
         "nl": "duizend"
     },
     "2000": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "2",
             "1000"
@@ -608,13 +349,6 @@
         "nl": "tweeduizend"
     },
     "500000": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "5",
             "100",
@@ -625,25 +359,11 @@
         "nl": "vijfhonderdduizend"
     },
     "1000000": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": "million",
         "fi": "miljoona",
         "nl": "miljoen"
     },
     "2000000": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "2",
             "1000000"
@@ -653,23 +373,11 @@
         "nl": "twee miljoen"
     },
     "1000000000": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B2": "EP"
-        },
         "en": "billion",
         "fi": "miljardi",
         "nl": "miljard"
     },
     "5000000000": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "5",
             "1000000000"
@@ -679,13 +387,6 @@
         "nl": "vijf miljard"
     },
     "pair": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "pair",
             "fi": "pari",
@@ -698,13 +399,6 @@
         }
     },
     "first": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "first",
         "fi": "ensin",
         "nl": "eerst"

@@ -9,7 +9,6 @@ from itertools import chain
 from typing import ClassVar, NewType, cast, get_args
 
 from . import Language
-from .cefr import CommonReferenceLevel
 from .grammar import GrammaticalCategory
 from .label import Labels
 
@@ -88,7 +87,6 @@ class Concept:
     concept_id: ConceptId
     _labels: dict[Language, Labels]
     _meanings: dict[Language, Labels]
-    level: CommonReferenceLevel | None
     related_concepts: RelatedConcepts
     answer_only: bool
 

@@ -1,10 +1,5 @@
 {
     "grammar": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "fi": "language"
         },
@@ -13,13 +8,6 @@
         "nl": "de grammatica"
     },
     "word": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "root": {
             "singular": {
                 "en": "word",
@@ -46,24 +34,12 @@
         }
     },
     "word order": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": "word",
         "en": "word order",
         "fi": "sanajärjestys",
         "nl": "woordvolgorde"
     },
     "vocabulary": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "fi": "word",
             "nl": "word"
@@ -73,24 +49,12 @@
         "nl": "de woordenschat"
     },
     "compound word": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": "word",
         "en": "compound word",
         "fi": "yhdyssana",
         "nl": "het samengestelde woord"
     },
     "phrase": {
-        "level": {
-            "A1": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "phrase",
             "fi": "fraasi",
@@ -103,13 +67,6 @@
         }
     },
     "sentence": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "sentence",
             "fi": "lause",
@@ -122,11 +79,6 @@
         }
     },
     "vowel": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "vowel",
             "fi": "vokaali",
@@ -139,11 +91,6 @@
         }
     },
     "consonant": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "roots": {
             "nl": "vowel"
         },
@@ -159,23 +106,11 @@
         }
     },
     "alphabet": {
-        "level": {
-            "A1": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "en": "alphabet",
         "fi": "aakkoset",
         "nl": "het alfabet"
     },
     "question word": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "question",
             "word"
@@ -185,13 +120,6 @@
         "nl": "het vraagwoord"
     },
     "subject": {
-        "level": {
-            "B1": "EP",
-            "none": [
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "subject",
             "fi": "subjekti",
@@ -204,11 +132,6 @@
         }
     },
     "verb": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "nl": [
                 "job",
@@ -227,13 +150,6 @@
         }
     },
     "verb type": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": "verb",
         "en": "verb type",
         "fi": "verbityyppi",
@@ -256,33 +172,16 @@
         "nl": "het hoofdwerkwoord"
     },
     "infinitive": {
-        "level": {
-            "A1": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "en": "infinitive",
         "fi": "infinitiivi",
         "nl": "de infinitief"
     },
     "pronoun": {
-        "level": {
-            "A1": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "en": "pronoun",
         "fi": "pronomini",
         "nl": "het voornaamwoord"
     },
     "personal pronoun": {
-        "level": {
-            "B2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": [
             "pronoun"
         ],
@@ -305,35 +204,16 @@
         "nl": "persoonsuitgang"
     },
     "intonation": {
-        "level": {
-            "B1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "intonation",
         "fi": "intonaatio",
         "nl": "de intonatie"
     },
     "genitive": {
-        "level": {
-            "C2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "genitive",
         "fi": "genetiivi",
         "nl": "genitief"
     },
     "singular": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B2": "KK"
-        },
         "roots": {
             "fi": "1"
         },
@@ -342,13 +222,6 @@
         "nl": "het enkelvoud"
     },
     "imperfect": {
-        "level": {
-            "C2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "imperfect tense",
         "fi": "imperfekti",
         "nl": "het imperfectum"

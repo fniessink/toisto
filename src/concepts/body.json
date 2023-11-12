@@ -1,12 +1,5 @@
 {
     "body": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "body",
             "fi": [
@@ -25,13 +18,6 @@
         }
     },
     "eye": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "eye",
             "fi": "silmä",
@@ -44,13 +30,6 @@
         }
     },
     "ear": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "ear",
             "fi": "korva",
@@ -63,13 +42,6 @@
         }
     },
     "hair": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "hair",
             "fi": "hius",
@@ -85,13 +57,6 @@
         }
     },
     "nose": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "nose",
             "fi": "nenä",
@@ -104,13 +69,6 @@
         }
     },
     "mouth": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "mouth",
             "fi": "suu",
@@ -123,13 +81,6 @@
         }
     },
     "lip": {
-        "level": {
-            "B1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "lip",
             "fi": "huuli",
@@ -142,13 +93,6 @@
         }
     },
     "tooth": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "tooth",
             "fi": "hammas",
@@ -161,13 +105,6 @@
         }
     },
     "head": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "head",
             "fi": "pää",
@@ -180,13 +117,6 @@
         }
     },
     "back": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "back",
             "fi": "selkä",
@@ -199,11 +129,6 @@
         }
     },
     "shoulder": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "roots": {
             "fi": "head"
         },
@@ -219,13 +144,6 @@
         }
     },
     "arm": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "hand"
         },
@@ -241,13 +159,6 @@
         }
     },
     "hand": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "hand",
             "fi": "käsi",
@@ -260,13 +171,6 @@
         }
     },
     "finger": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "finger",
             "fi": "sormi",
@@ -279,13 +183,6 @@
         }
     },
     "stomach": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "stomach",
             "fi": "vatsa",
@@ -298,11 +195,6 @@
         }
     },
     "belly": {
-        "level": {
-            "A2": "KK",
-            "C2": "OD",
-            "none": "EP"
-        },
         "singular": {
             "en": "belly",
             "fi": [
@@ -321,13 +213,6 @@
         }
     },
     "knee": {
-        "level": {
-            "A2": [
-                "OD",
-                "KK"
-            ],
-            "B1": "EP"
-        },
         "singular": {
             "en": "knee",
             "fi": "polvi",
@@ -340,13 +225,6 @@
         }
     },
     "leg": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "leg",
             "fi": "jalka;upper part",
@@ -359,13 +237,6 @@
         }
     },
     "foot": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "foot",
             "fi": "jalka;lower part",
@@ -378,11 +249,6 @@
         }
     },
     "toe": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "toe",
             "fi": "varvas",
@@ -395,11 +261,6 @@
         }
     },
     "beard": {
-        "level": {
-            "A1": "EP",
-            "A2": "OD",
-            "B1": "KK"
-        },
         "singular": {
             "en": "beard",
             "fi": "parta",

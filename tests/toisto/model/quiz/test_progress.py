@@ -112,13 +112,6 @@ class ProgressTest(ToistoTestCase):
         self.progress.get_retention(random_quiz).skip_until = None
         self.assertEqual(self.progress.next_quiz(quizzes), random_quiz)
 
-    def test_next_quiz_has_lower_language_level(self):
-        """Test that the next quiz has the lowest language level of the eligible quizzes."""
-        morning = create_concept("morning", dict(level=dict(A1="EP"), fi="aamu", nl="de ochtend"))
-        noon = create_concept("noon", dict(level=dict(A2="EP"), fi="keskipäivä", nl="de middag"))
-        quizzes = create_quizzes("fi", "nl", morning, noon)
-        self.assertEqual("morning", self.progress.next_quiz(quizzes).concept.concept_id)
-
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
         self.assertEqual({}, self.progress.as_dict())

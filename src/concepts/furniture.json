@@ -1,12 +1,5 @@
 {
     "table": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "table",
             "fi": "pöytä",
@@ -19,13 +12,6 @@
         }
     },
     "bed": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "bed",
             "fi": "sänky",
@@ -38,13 +24,6 @@
         }
     },
     "double bed": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "bed",
             "fi": [
@@ -61,11 +40,6 @@
         "nl": "het tweepersoonsbed"
     },
     "sofa": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B1": "KK"
-        },
         "singular": {
             "en": "sofa",
             "fi": "sohva",
@@ -78,11 +52,6 @@
         }
     },
     "pillow": {
-        "level": {
-            "A2": "EP",
-            "C1": "KK",
-            "none": "OD"
-        },
         "singular": {
             "en": "pillow",
             "fi": "tyyny",
@@ -95,13 +64,6 @@
         }
     },
     "chair": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "singular": {
             "en": "chair",
             "fi": "tuoli",
@@ -114,13 +76,6 @@
         }
     },
     "desk": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "job",
@@ -165,13 +120,6 @@
         "nl": "de bureaustoel"
     },
     "lamp": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "lamp",
             "fi": "lamppu",
@@ -209,11 +157,6 @@
         "nl": "de eettafel"
     },
     "curtain": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "curtain",
             "fi": "verho",
@@ -235,13 +178,6 @@
         "nl": "het rolgordijn"
     },
     "carpet": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "singular": {
             "en": "carpet",
             "fi": "matto",
@@ -254,11 +190,6 @@
         }
     },
     "shelf": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "B2": "KK"
-        },
         "singular": {
             "en": "shelf",
             "fi": "hylly",
@@ -271,11 +202,6 @@
         }
     },
     "bookcase": {
-        "level": {
-            "A2": "EP",
-            "B2": "OD",
-            "none": "KK"
-        },
         "roots": {
             "en": "book",
             "fi": [

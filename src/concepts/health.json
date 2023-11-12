@@ -1,44 +1,21 @@
 {
     "health": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "health",
         "fi": "terveys",
         "nl": "de gezondheid"
     },
     "health centre": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "health",
         "en": "health centre|health center",
         "fi": "terveysasema",
         "nl": "het gezondheidscentrum"
     },
     "care": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B2": "EP"
-        },
         "en": "care",
         "fi": "hoito",
         "nl": "de zorg"
     },
     "health care": {
-        "level": {
-            "B2": "OD",
-            "C1": "EP",
-            "none": "KK"
-        },
         "roots": [
             "health",
             "care"
@@ -48,11 +25,6 @@
         "nl": "de gezondheidszorg"
     },
     "disease": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B1": "EP"
-        },
         "singular": {
             "en": "disease",
             "fi": "sairaus",
@@ -65,11 +37,6 @@
         }
     },
     "patient": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B1": "EP"
-        },
         "singular": {
             "en": "patient",
             "fi": "potilas",
@@ -82,13 +49,6 @@
         }
     },
     "medicine": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "medicine",
             "fi": "lääke",
@@ -101,13 +61,6 @@
         }
     },
     "wound": {
-        "level": {
-            "B2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "wound",
             "fi": "haava",
@@ -120,11 +73,6 @@
         }
     },
     "flu": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "C1": "KK"
-        },
         "singular": {
             "en": "flu",
             "fi": "flunssa",
@@ -137,11 +85,6 @@
         }
     },
     "fever": {
-        "level": {
-            "B1": "EP",
-            "B2": "OD",
-            "C1": "KK"
-        },
         "singular": {
             "en": "fever",
             "fi": "kuume",
@@ -154,13 +97,6 @@
         }
     },
     "blood": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "blood",
             "fi": "veri",
@@ -172,11 +108,6 @@
         }
     },
     "ache": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "ache",
             "fi": "särky",
@@ -189,13 +120,6 @@
         }
     },
     "pain": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "pain",
             "fi": "kipu",
@@ -208,13 +132,6 @@
         }
     },
     "headache": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "head",
             "ache"
@@ -231,13 +148,6 @@
         }
     },
     "hospital": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "house"
         },
@@ -253,11 +163,6 @@
         }
     },
     "pharmacy": {
-        "level": {
-            "B1": "EP",
-            "B2": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "pharmacy",
             "fi": "apteekki",

@@ -1,12 +1,5 @@
 {
     "country": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "country",
             "fi": "maa;geography",
@@ -19,24 +12,12 @@
         }
     },
     "neighboring country": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": "country",
         "en": "neighboring country",
         "fi": "naapurimaa",
         "nl": "buurland"
     },
     "nationality": {
-        "level": {
-            "A1": "EP",
-            "C1": "KK",
-            "none": "OD"
-        },
         "singular": {
             "en": "nationality",
             "fi": "kansalaisuus",
@@ -49,13 +30,6 @@
         }
     },
     "finland": {
-        "level": {
-            "A1": "KK",
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "country"
         },
@@ -70,13 +44,6 @@
         "nl": "Fins"
     },
     "estland": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "country"
         },
@@ -168,13 +135,6 @@
         "nl": "Frans"
     },
     "england": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "country"
         },

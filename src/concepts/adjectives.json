@@ -1,12 +1,5 @@
 {
     "small": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "big",
         "positive degree": {
             "en": "small",
@@ -25,13 +18,6 @@
         }
     },
     "important": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "important",
             "fi": "tärkeä",
@@ -49,13 +35,6 @@
         }
     },
     "expensive": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "antonym": "cheap",
         "positive degree": {
             "en": "expensive",
@@ -74,13 +53,6 @@
         }
     },
     "cheap": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "antonym": "expensive",
         "positive degree": {
             "en": "cheap",
@@ -108,13 +80,6 @@
         }
     },
     "hot": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "cold",
         "positive degree": {
             "en": "hot",
@@ -133,13 +98,6 @@
         }
     },
     "cold": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "hot",
         "positive degree": {
             "en": "cold",
@@ -158,11 +116,6 @@
         }
     },
     "light (not heavy)": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B2": "KK"
-        },
         "positive degree": {
             "en": "light",
             "fi": "kevyt",
@@ -180,13 +133,6 @@
         }
     },
     "easy": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "hard",
         "positive degree": {
             "en": "easy",
@@ -205,13 +151,6 @@
         }
     },
     "hard": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "easy",
         "positive degree": {
             "en": "hard",
@@ -230,13 +169,6 @@
         }
     },
     "beautiful": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "ugly",
         "positive degree": {
             "en": "beautiful",
@@ -255,11 +187,6 @@
         }
     },
     "ugly": {
-        "level": {
-            "A2": "KK",
-            "B1": "OD",
-            "none": "EP"
-        },
         "antonym": "beautiful",
         "positive degree": {
             "en": "ugly",
@@ -278,13 +205,6 @@
         }
     },
     "new": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "old",
         "positive degree": {
             "en": "new",
@@ -303,13 +223,6 @@
         }
     },
     "young": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "old",
         "positive degree": {
             "en": "young",
@@ -328,13 +241,6 @@
         }
     },
     "old": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": [
             "new",
             "young"
@@ -356,11 +262,6 @@
         }
     },
     "cute": {
-        "level": {
-            "B1": "KK",
-            "B2": "OD",
-            "none": "EP"
-        },
         "positive degree": {
             "en": "cute",
             "fi": "söpö",
@@ -378,13 +279,6 @@
         }
     },
     "fast": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "slow",
         "positive degree": {
             "en": "fast",
@@ -403,12 +297,6 @@
         }
     },
     "strong": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "weak",
         "positive degree": {
             "en": "strong",
@@ -427,13 +315,6 @@
         }
     },
     "quiet": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "positive degree": {
             "en": "quiet",
             "fi": "hiljainen",
@@ -451,13 +332,6 @@
         }
     },
     "fresh": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "fresh",
             "fi": "tuore",
@@ -475,13 +349,6 @@
         }
     },
     "warm": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "antonym": "cold",
         "positive degree": {
             "en": "warm",
@@ -500,11 +367,6 @@
         }
     },
     "cool": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "C1": "KK"
-        },
         "antonym": "warm",
         "positive degree": {
             "en": "cool",
@@ -523,13 +385,6 @@
         }
     },
     "round": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "positive degree": {
             "en": "round",
             "fi": "pyöreä",
@@ -547,13 +402,6 @@
         }
     },
     "strange": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "strange",
             "fi": "outo",
@@ -571,13 +419,6 @@
         }
     },
     "honest": {
-        "level": {
-            "B1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "honest",
             "fi": "rehellinen",
@@ -595,13 +436,6 @@
         }
     },
     "long": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "short",
         "positive degree": {
             "en": "long",
@@ -620,13 +454,6 @@
         }
     },
     "short": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "long",
         "positive degree": {
             "en": "short",
@@ -645,13 +472,6 @@
         }
     },
     "tasty": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "positive degree": {
             "en": "tasty",
             "fi": "maukas",
@@ -669,13 +489,6 @@
         }
     },
     "slow": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "antonym": "fast",
         "positive degree": {
             "en": "slow",
@@ -695,11 +508,6 @@
     },
     "sweet": {
         "antonym": "sour",
-        "level": {
-            "A1": "EP",
-            "A2": "OD",
-            "B1": "KK"
-        },
         "positive degree": {
             "en": "sweet",
             "fi": "makea",
@@ -745,13 +553,6 @@
         "nl": "rauw"
     },
     "big": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "small",
         "positive degree": {
             "en": "big",
@@ -779,13 +580,6 @@
         }
     },
     "nice": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "nice",
             "fi": [
@@ -812,13 +606,6 @@
         }
     },
     "wet": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "antonym": "dry",
         "positive degree": {
             "en": "wet",
@@ -837,13 +624,6 @@
         }
     },
     "dry": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "antonym": "wet",
         "positive degree": {
             "en": "dry",
@@ -862,13 +642,6 @@
         }
     },
     "good": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "bad",
         "positive degree": {
             "en": "good",
@@ -887,13 +660,6 @@
         }
     },
     "bad": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "good",
         "positive degree": {
             "en": "bad",
@@ -921,13 +687,6 @@
         }
     },
     "happy": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "happy",
             "fi": "onnellinen",
@@ -945,13 +704,6 @@
         }
     },
     "cheerful": {
-        "level": {
-            "A1": "KK",
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "cheerful",
             "fi": "iloinen",
@@ -969,13 +721,6 @@
         }
     },
     "funny": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "funny",
             "fi": "hauska",
@@ -993,13 +738,6 @@
         }
     },
     "free": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "positive degree": {
             "en": "free",
             "fi": "vapaa",
@@ -1017,13 +755,6 @@
         }
     },
     "bright": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "antonym": "dark",
         "positive degree": {
             "en": "bright",
@@ -1042,13 +773,6 @@
         }
     },
     "dark": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "antonym": "bright",
         "positive degree": {
             "en": "dark",
@@ -1067,13 +791,6 @@
         }
     },
     "weak": {
-        "level": {
-            "A2": [
-                "KK",
-                "OD"
-            ],
-            "B1": "EP"
-        },
         "antonym": "strong",
         "positive degree": {
             "en": "weak",
@@ -1092,13 +809,6 @@
         }
     },
     "crazy": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK"
-            ],
-            "A2": "OD"
-        },
         "positive degree": {
             "en": "crazy",
             "fi": "hullu",
@@ -1116,13 +826,6 @@
         }
     },
     "many/much": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "antonym": "few/a little",
         "positive degree": {
             "en": [
@@ -1144,11 +847,6 @@
         }
     },
     "few/a little": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B1": "EP"
-        },
         "antonym": "many/much",
         "positive degree": {
             "en": [
@@ -1176,13 +874,6 @@
         }
     },
     "negative": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "antonym": "positive",
         "positive degree": {
             "en": "negative",
@@ -1201,13 +892,6 @@
         }
     },
     "positive": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "B1": "EP"
-        },
         "antonym": "negative",
         "positive degree": {
             "en": "positive",
@@ -1226,13 +910,6 @@
         }
     },
     "dumb": {
-        "level": {
-            "A2": "KK",
-            "C1": [
-                "EP",
-                "OD"
-            ]
-        },
         "positive degree": {
             "en": "dumb",
             "fi": "tyhmä",
@@ -1250,26 +927,12 @@
         }
     },
     "half": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "half",
         "fi": "puoli",
         "nl": "half"
     },
     "open": {
         "antonym": "closed",
-        "level": {
-            "A1": [
-                "ED",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "open",
         "fi": [
             "avoinna",
@@ -1279,11 +942,6 @@
     },
     "closed": {
         "antonym": "open",
-        "level": {
-            "A1": "ED",
-            "A2": "OD",
-            "none": "KK"
-        },
         "en": "closed",
         "fi": [
             "suljettu",
@@ -1295,13 +953,6 @@
         ]
     },
     "same": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "same",
         "fi": "sama",
         "nl": [

@@ -659,46 +659,6 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
 
 The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example, translate "Yes, I do" into "Pidän".
 
-### Concept levels
-
-The [Common European Framework of Reference for Languages (CEFR)](https://www.coe.int/en/web/common-european-framework-reference-languages) organises language proficiency into six levels:
-
-1. Basic user: `A1` and `A2`
-2. Independent user: `B1` and `B2`
-3. Proficient user: `C1` and `C2`
-
-Some dictionaries provide the language levels of words. Toisto uses these resources as source for the language level (and only for the language level, no other information from these source is used in Toisto):
-
-1. The [English Vocabulary Profile Online - British English](https://www.englishprofile.org/wordlists/evp). Key: `EP`. Language: English.
-2. The [Yle Kielikoulu Learning Profile](https://kielikoulu.yle.fi/#/profile). Key: `KK`. Language: Finnish.
-3. The [Oxford Advanced Learner’s Dictionary online](https://www.oxfordlearnersdictionaries.com). Key: `OD`. Language: English.
-
-Toisto uses the language level of words as one of the factors in determining the order in which to present concepts to the user.
-
-Because the sources may disagree on the language level of words, we add the language level per concept, as follows:
-
-```json
-{
-    "1000": {
-        "level": {
-            "A1": ["KK", "OD"],
-            "A2": "EP"
-        },
-        "en": "thousand",
-        "fi": "tuhat"
-    },
-    "2000": {
-        "level": {
-            "none": ["EP", "OD"]
-        },
-        "en": "two thousand",
-        "fi": "kaksituhatta"
-    }
-}
-```
-
-If the source does not provide a language level for a concept, this can be indicated by adding the source to the key `none`. This makes it clear that the source has been consulted but did not provide a language level for the concept.
-
 ## Topics
 
 Built-in topics are located in `src/topics` in the form of JSON files.

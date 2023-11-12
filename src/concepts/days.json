@@ -1,12 +1,5 @@
 {
     "day": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "day",
             "fi": "päivä",
@@ -24,13 +17,6 @@
         "nl": "het etmaal"
     },
     "week": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "week",
             "fi": "viikko",
@@ -43,13 +29,6 @@
         }
     },
     "weekend": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C2": "KK"
-        },
         "roots": [
             "end",
             "week"
@@ -75,13 +54,6 @@
         "nl": "de dagen van de week"
     },
     "monday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": [
@@ -107,13 +79,6 @@
         "nl": "op maandag"
     },
     "tuesday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": "day"
@@ -130,13 +95,6 @@
         }
     },
     "wednesday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "day",
             "fi": "week",
@@ -160,13 +118,6 @@
         "nl": "op woensdag"
     },
     "thursday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": "day"
@@ -183,13 +134,6 @@
         }
     },
     "friday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": "day"
@@ -206,13 +150,6 @@
         }
     },
     "saturday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": "day"
@@ -229,13 +166,6 @@
         }
     },
     "sunday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "roots": {
             "en": "day",
             "nl": "day"
@@ -252,13 +182,6 @@
         }
     },
     "today": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "day"
         },
@@ -267,13 +190,6 @@
         "nl": "vandaag"
     },
     "yesterday": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "day"
         },
@@ -282,25 +198,11 @@
         "nl": "gisteren"
     },
     "tomorrow": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "tomorrow",
         "fi": "huomenna",
         "nl": "morgen"
     },
     "the day before yesterday": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "yesterday",
             "fi": "day",
@@ -311,13 +213,6 @@
         "nl": "eergisteren"
     },
     "the day after tomorrow": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": [
                 "day",
@@ -331,34 +226,18 @@
         "nl": "overmorgen"
     },
     "this week": {
-        "level": {
-            "A1": "OD",
-            "none": "EP"
-        },
         "roots": "week",
         "en": "this week",
         "fi": "tällä viikolla",
         "nl": "deze week"
     },
     "last week": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "week",
         "en": "last week",
         "fi": "viime viikolla",
         "nl": "vorige week"
     },
     "next week": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "week",
         "en": "next week",
         "fi": "ensi viikolla",

@@ -1,12 +1,5 @@
 {
     "city": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "city",
             "fi": "kaupunki",
@@ -19,13 +12,6 @@
         }
     },
     "village": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "village",
             "fi": "kylä",
@@ -38,13 +24,6 @@
         }
     },
     "place": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "place",
             "fi": "paikka",
@@ -57,13 +36,6 @@
         }
     },
     "building": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "singular": {
             "en": "building",
             "fi": "rakennus",
@@ -76,11 +48,6 @@
         }
     },
     "monument": {
-        "level": {
-            "B1": "EP",
-            "B2": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "monument",
             "fi": "monumentti",
@@ -93,11 +60,6 @@
         }
     },
     "theater": {
-        "level": {
-            "A2": "KK",
-            "B2": "OD",
-            "none": "EP"
-        },
         "singular": {
             "en": "theater",
             "fi": "teatteri",
@@ -110,10 +72,6 @@
         }
     },
     "movie theater": {
-        "level": {
-            "A1": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": "theater",
             "fi": "theater"
@@ -123,13 +81,6 @@
         "nl": "de bioscoop"
     },
     "opera": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK"
-            ],
-            "B2": "OD"
-        },
         "singular": {
             "en": "opera",
             "fi": "ooppera",
@@ -142,13 +93,6 @@
         }
     },
     "museum": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "museum",
             "fi": "museo",
@@ -161,13 +105,6 @@
         }
     },
     "church": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "church",
             "fi": "kirkko",
@@ -180,13 +117,6 @@
         }
     },
     "stadium": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "stadium",
             "fi": "stadion",
@@ -199,11 +129,6 @@
         }
     },
     "library": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B1": "KK"
-        },
         "roots": {
             "fi": "book"
         },
@@ -219,13 +144,6 @@
         }
     },
     "café": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "roots": {
             "fi": "coffee"
         },
@@ -241,13 +159,6 @@
         }
     },
     "bar": {
-        "level": {
-            "A1": "EP",
-            "A2": [
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "bar",
             "fi": "baari",
@@ -260,13 +171,6 @@
         }
     },
     "restaurant": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "restaurant",
             "fi": "ravintola",
@@ -279,11 +183,6 @@
         }
     },
     "office": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B1": "KK"
-        },
         "singular": {
             "en": "office",
             "fi": "toimisto",
@@ -296,11 +195,6 @@
         }
     },
     "store": {
-        "level": {
-            "A1": "KK",
-            "A2": "OD",
-            "B1": "EP"
-        },
         "singular": {
             "en": "store",
             "fi": "kauppa",
@@ -313,11 +207,6 @@
         }
     },
     "department store": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "roots": {
             "en": "store",
             "fi": "house",
@@ -335,13 +224,6 @@
         }
     },
     "kiosk": {
-        "level": {
-            "C1": [
-                "KK",
-                "OD"
-            ],
-            "none": "EP"
-        },
         "en": "kiosk",
         "fi": [
             "kioski",
@@ -366,13 +248,6 @@
         "nl": "de ijskraam"
     },
     "park": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "park",
             "fi": "puisto",
@@ -385,10 +260,6 @@
         }
     },
     "amusement park": {
-        "level": {
-            "B2": "OD",
-            "none": "EP"
-        },
         "roots": "park",
         "en": "amusement park",
         "fi": "huvipuisto",
@@ -398,11 +269,6 @@
         ]
     },
     "playground": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "roots": {
             "en": "ground",
             "fi": "park",
@@ -413,11 +279,6 @@
         "nl": "de speeltuin"
     },
     "zoo": {
-        "level": {
-            "A1": "EP",
-            "A2": "OD",
-            "none": "KK"
-        },
         "roots": {
             "fi": "animal",
             "nl": [
@@ -437,13 +298,6 @@
         }
     },
     "castle": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "castle",
             "fi": "linna",
@@ -456,13 +310,6 @@
         }
     },
     "hotel": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "hotel",
             "fi": "hotelli",
@@ -475,13 +322,6 @@
         }
     },
     "centre": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "singular": {
             "en": "centre",
             "fi": "keskusta",
@@ -494,13 +334,6 @@
         }
     },
     "street": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -513,13 +346,6 @@
         }
     },
     "road": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "road",
             "fi": "tie",
@@ -532,13 +358,6 @@
         }
     },
     "square": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "singular": {
             "en": "square",
             "fi": "aukio",
@@ -551,13 +370,6 @@
         }
     },
     "market": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "market",
             "fi": "tori",
@@ -570,13 +382,6 @@
         }
     },
     "market hall": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "market",
             "fi": "store",
@@ -587,13 +392,6 @@
         "nl": "de markthal"
     },
     "bridge": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "bridge",
             "fi": "silta",
@@ -606,13 +404,6 @@
         }
     },
     "post": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": [
             "mail",
             "post"
@@ -621,13 +412,6 @@
         "nl": "de post"
     },
     "post office": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "en": [
                 "post",
@@ -644,13 +428,6 @@
         "nl": "het postkantoor"
     },
     "mall": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "centre",
             "fi": [
@@ -686,11 +463,6 @@
         }
     },
     "capital": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "city",

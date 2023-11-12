@@ -1,12 +1,5 @@
 {
     "course": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "en": "course",
         "fi": "kurssi",
         "nl": "de cursus"
@@ -21,13 +14,6 @@
         "nl": "de cursus Fins"
     },
     "course day": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "course",
             "day"
@@ -37,13 +23,6 @@
         "nl": "de cursusdag"
     },
     "question": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "question",
             "fi": "kysymys",
@@ -56,13 +35,6 @@
         }
     },
     "answer": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "word"
         },
@@ -78,11 +50,6 @@
         }
     },
     "exercise": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "B1": "KK"
-        },
         "singular": {
             "en": "exercise",
             "fi": "harjoitus",
@@ -95,10 +62,6 @@
         }
     },
     "fact": {
-        "level": {
-            "A1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "fact",
             "fi": "fakta",
@@ -111,24 +74,11 @@
         }
     },
     "student": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "en": "student",
         "fi": "opiskelija",
         "nl": "de student"
     },
     "university": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "university",
             "fi": "yliopisto",
@@ -141,13 +91,6 @@
         }
     },
     "school": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "school",
             "fi": "koulu",
@@ -160,13 +103,6 @@
         }
     },
     "day care centre": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": [
                 "day",

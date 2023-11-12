@@ -31,7 +31,6 @@ def topic_table(
         target_language_name,
         source_language_name,
         "Grammatical categories",
-        "Language level",
         "Other topics",
     ):
         table.add_column(column)
@@ -46,7 +45,6 @@ def topic_table(
                 enumerate_labels(target_labels),
                 enumerate_labels(source_labels),
                 "/".join(leaf_concept.grammatical_categories()),
-                leaf_concept.level,
                 other_topics,
             )
         table.add_section()

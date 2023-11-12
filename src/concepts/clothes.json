@@ -1,24 +1,10 @@
 {
     "clothes": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "en": "clothes",
         "fi": "vaatteet",
         "nl": "de kleren"
     },
     "dress": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "singular": {
             "en": "dress",
             "fi": "mekko",
@@ -31,13 +17,6 @@
         }
     },
     "sock": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "sock",
             "fi": "sukka",
@@ -50,13 +29,6 @@
         }
     },
     "skirt": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "singular": {
             "en": "skirt",
             "fi": "hame",
@@ -69,13 +41,6 @@
         }
     },
     "trousers": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "trousers",
             "fi": "housut",
@@ -88,13 +53,6 @@
         }
     },
     "coat": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "coat",
             "fi": "takki",
@@ -107,13 +65,6 @@
         }
     },
     "underwear": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "clothes"
         },
@@ -128,13 +79,6 @@
         "nl": "de onderbroek"
     },
     "hat": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "hat",
             "fi": "hattu",
@@ -147,13 +91,6 @@
         }
     },
     "suit": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "singular": {
             "en": "suit",
             "fi": "puku",
@@ -166,13 +103,6 @@
         }
     },
     "shoe": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "shoe",
             "fi": "kenkä",
@@ -185,11 +115,6 @@
         }
     },
     "sweater": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "fi": "shirt"
         },
@@ -205,13 +130,6 @@
         }
     },
     "shirt": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "shirt",
             "fi": "paita",
@@ -230,13 +148,6 @@
         "nl": "onderhemd"
     },
     "to dress": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "infinitive": {
             "en": [
                 "to dress",
