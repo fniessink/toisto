@@ -1100,6 +1100,44 @@ class DiminutiveTest(ToistoTestCase):
         )
 
 
+class NumberTest(ToistoTestCase):
+    """Unit tests for numbers."""
+
+    def test_numbers(self):
+        """Test that quizzes can be generated for numbers."""
+        concept = create_concept("one", dict(cardinal=dict(nl="een"), ordinal=dict(nl="eerste")))
+        cardinal, ordinal = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(cardinal, "nl", "nl", "een", ["een"], "dictate"),
+                self.create_quiz(ordinal, "nl", "nl", "eerste", ["eerste"], "dictate"),
+                self.create_quiz(concept, "nl", "nl", "een", ["eerste"], "make ordinal"),
+                self.create_quiz(concept, "nl", "nl", "eerste", ["een"], "make cardinal"),
+            },
+            create_quizzes("nl", "en", concept),
+        )
+
+    def test_numbers_and_translations(self):
+        """Test that quizzes can be generated for numbers."""
+        concept = create_concept("one", dict(cardinal=dict(nl="een", en="one"), ordinal=dict(nl="eerste", en="first")))
+        cardinal, ordinal = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(cardinal, "nl", "en", "een", ["one"], "read"),
+                self.create_quiz(cardinal, "nl", "nl", "een", ["een"], "dictate"),
+                self.create_quiz(cardinal, "nl", "en", "een", ["one"], "interpret"),
+                self.create_quiz(cardinal, "en", "nl", "one", ["een"], "write"),
+                self.create_quiz(ordinal, "nl", "en", "eerste", ["first"], "read"),
+                self.create_quiz(ordinal, "nl", "nl", "eerste", ["eerste"], "dictate"),
+                self.create_quiz(ordinal, "nl", "en", "eerste", ["eerste"], "interpret"),
+                self.create_quiz(ordinal, "en", "nl", "first", ["eerste"], "write"),
+                self.create_quiz(concept, "nl", "nl", "eerste", ["een"], "make cardinal"),
+                self.create_quiz(concept, "nl", "nl", "een", ["eerste"], "make ordinal"),
+            },
+            create_quizzes("nl", "en", concept),
+        )
+
+
 class QuizNoteTest(ToistoTestCase):
     """Unit tests for the quiz notes."""
 
