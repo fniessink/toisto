@@ -68,7 +68,6 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             command="practice",
             target_language="nl",
             source_language="fi",
-            levels=[],
             topic=[],
             topic_file=[],
             concept=[],
@@ -82,14 +81,13 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         """Test that the practice help message is displayed."""
         related = RelatedConcepts(None, (), {}, (), ())
         concepts = {
-            Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, "A1", related, False),
-            Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, "A1", related, False),
+            Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, related, False),
+            Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, related, False),
         }
         topics = {Topic("T1", frozenset([ConceptId("foo")])), Topic("T2", frozenset([ConceptId("bar")]))}
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
-[-c {concept}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-T {topic}] [-o {topic file}] [-c {concept}]
                        [-C {concept file}]
 
 Practice a language.
@@ -100,8 +98,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
-                        C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics: T1, T2
   -o, --topic-file {topic file}
                         extra topic file to use, can be repeated
@@ -122,8 +118,7 @@ Options:
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] [-t {language}] -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
-[-c {concept}]
+            """Usage: toisto practice [-h] [-t {language}] -s {language} [-T {topic}] [-o {topic file}] [-c {concept}]
                        [-C {concept file}]
 
 Practice a language.
@@ -134,8 +129,6 @@ Options:
                         target language; default: fi; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
-                        C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
   -o, --topic-file {topic file}
                         extra topic file to use, can be repeated
@@ -156,8 +149,7 @@ Options:
         config_parser.set("languages", "levels", "A1 A2")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
-[-c {concept}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-T {topic}] [-o {topic file}] [-c {concept}]
                        [-C {concept file}]
 
 Practice a language.
@@ -168,8 +160,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -l, --level {level}   language levels to use, can be repeated; default: A1, A2; available levels: A1, A2, B1, B2,
-                        C1, C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
   -o, --topic-file {topic file}
                         extra topic file to use, can be repeated
@@ -187,8 +177,7 @@ Options:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto progress [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
-[-c {concept}]
+            """Usage: toisto progress [-h] -t {language} -s {language} [-T {topic}] [-o {topic file}] [-c {concept}]
                        [-C {concept file}] [-S {option}]
 
 Show progress.
@@ -199,8 +188,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
-                        C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
   -o, --topic-file {topic file}
                         extra topic file to use, can be repeated
@@ -220,8 +207,7 @@ Options:
         """Test that the topics help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto topics [-h] -t {language} -s {language} [-l {level}] [-T {topic}] [-o {topic file}] \
-[-c {concept}]
+            """Usage: toisto topics [-h] -t {language} -s {language} [-T {topic}] [-o {topic file}] [-c {concept}]
                      [-C {concept file}]
 
 Show topics.
@@ -232,8 +218,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -l, --level {level}   language levels to use, can be repeated; default: all; available levels: A1, A2, B1, B2, C1,
-                        C2
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
   -o, --topic-file {topic file}
                         extra topic file to use, can be repeated
@@ -252,7 +236,6 @@ Options:
             command="practice",
             target_language="nl",
             source_language="fi",
-            levels=[],
             topic=[],
             topic_file=[],
             concept=[],

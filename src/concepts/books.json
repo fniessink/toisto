@@ -1,12 +1,5 @@
 {
     "book": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "root": {
             "singular": {
                 "en": "book",
@@ -33,13 +26,6 @@
         }
     },
     "chapter": {
-        "level": {
-            "A1": "KK",
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "nl": "head"
         },
@@ -55,13 +41,6 @@
         }
     },
     "page": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "page",
             "fi": "sivu",
@@ -74,11 +53,6 @@
         }
     },
     "code": {
-        "level": {
-            "A2": "OD",
-            "B2": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "code",
             "fi": "koodi",

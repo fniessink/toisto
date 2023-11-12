@@ -1,12 +1,5 @@
 {
     "food": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "food",
             "fi": "ruoka",
@@ -21,13 +14,6 @@
         }
     },
     "drink": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "drink",
             "fi": "juoma",
@@ -40,13 +26,6 @@
         }
     },
     "food and drink": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "drink",
             "food"
@@ -56,13 +35,6 @@
         "nl": "het eten en drinken"
     },
     "fruit": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "fruit",
         "fi": "hedelmä",
         "nl": "het fruit"
@@ -98,13 +70,6 @@
         }
     },
     "breakfast": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "roots": {
             "fi": "morning"
         },
@@ -149,13 +114,6 @@
         "nl": "(tussendoortje in de avond)"
     },
     "appetiser": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "fi": "food"
         },
@@ -167,13 +125,6 @@
         "nl": "het voorgerecht"
     },
     "main dish": {
-        "level": {
-            "B1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "fi": [
                 "head",
@@ -189,13 +140,6 @@
         "nl": "het hoofdgerecht"
     },
     "dessert": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": "food"
         },
@@ -208,13 +152,6 @@
         ]
     },
     "orange (fruit)": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "orange",
             "nl": "apple"
@@ -231,13 +168,6 @@
         }
     },
     "hotdog": {
-        "level": {
-            "A2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "en": [
                 "hot",
@@ -260,13 +190,6 @@
         }
     },
     "cheese": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C2": "KK"
-        },
         "singular": {
             "en": "cheese",
             "fi": "juusto",
@@ -279,13 +202,6 @@
         }
     },
     "coffee": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "coffee",
             "fi": "kahvi",
@@ -298,13 +214,6 @@
         }
     },
     "fish": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "fish",
             "fi": "kala",
@@ -370,13 +279,6 @@
         "nl": "de garnaal"
     },
     "chicken": {
-        "level": {
-            "A1": "OD",
-            "A2": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "chicken",
             "fi": "kana",
@@ -413,13 +315,6 @@
         "nl": "het varkensvlees"
     },
     "dressing": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "dressing",
             "fi": "kastike",
@@ -432,13 +327,6 @@
         }
     },
     "ketchup": {
-        "level": {
-            "B2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "ketchup",
             "fi": "ketsuppi",
@@ -450,13 +338,6 @@
         }
     },
     "bread": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "bread",
             "fi": "leipä",
@@ -493,13 +374,6 @@
         "nl": "de boter"
     },
     "meat": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "meat",
             "fi": "liha",
@@ -512,13 +386,6 @@
         }
     },
     "milk": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "milk",
             "fi": "maito",
@@ -530,13 +397,6 @@
         }
     },
     "buttermilk": {
-        "roots": {
-            "en": [
-                "butter",
-                "milk"
-            ],
-            "nl": "milk"
-        },
         "en": "buttermilk",
         "fi": "piimä",
         "nl": "de karnemelk"
@@ -578,13 +438,6 @@
         "nl": "de jam"
     },
     "sausage": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "sausage",
             "fi": "makkara",
@@ -602,13 +455,6 @@
         "nl": "de ham"
     },
     "mämmi": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "(traditional Finnish Easter dessert)",
             "fi": "mämmi",
@@ -621,13 +467,6 @@
         }
     },
     "pizza": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "pizza",
             "fi": "pizza",
@@ -652,11 +491,6 @@
         }
     },
     "strawberry": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "roots": {
             "en": "berry"
         },
@@ -716,11 +550,6 @@
         "nl": "de vossenbes"
     },
     "spice": {
-        "level": {
-            "B1": "EP",
-            "B2": "OD",
-            "C2": "KK"
-        },
         "singular": {
             "en": "spice",
             "fi": "mauste",
@@ -733,13 +562,6 @@
         }
     },
     "juice": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C2": "KK"
-        },
         "singular": {
             "en": "juice",
             "fi": "mehu",
@@ -752,13 +574,6 @@
         }
     },
     "apple": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "singular": {
             "en": "apple",
             "fi": "omena",
@@ -771,13 +586,6 @@
         }
     },
     "potato": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B2": "KK"
-        },
         "roots": {
             "nl": "apple"
         },
@@ -793,11 +601,6 @@
         }
     },
     "steak": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "steak",
             "fi": "pihvi",
@@ -816,11 +619,6 @@
         }
     },
     "pepper": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "pepper",
             "fi": "pippuri",
@@ -833,11 +631,6 @@
         }
     },
     "salad": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "C1": "KK"
-        },
         "singular": {
             "en": "salad",
             "fi": "salaatti",
@@ -862,11 +655,6 @@
         }
     },
     "mustard": {
-        "level": {
-            "C1": "EP",
-            "C2": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "mustard",
             "fi": "sinappi",
@@ -879,11 +667,6 @@
         }
     },
     "onion": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "C2": "KK"
-        },
         "singular": {
             "en": "onion",
             "fi": "sipuli",
@@ -896,13 +679,6 @@
         }
     },
     "lemon": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "lemon",
             "fi": "sitruuna",
@@ -915,13 +691,6 @@
         }
     },
     "plum": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "plum",
             "fi": "luumu",
@@ -934,11 +703,6 @@
         }
     },
     "peach": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "peach",
             "fi": "persikka",
@@ -951,11 +715,6 @@
         }
     },
     "grape": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "grape",
             "fi": "viinirypäle",
@@ -968,13 +727,6 @@
         }
     },
     "sugar": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "sugar",
             "fi": "sokeri",
@@ -987,13 +739,6 @@
         }
     },
     "salt": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C2": "KK"
-        },
         "singular": {
             "en": "salt",
             "fi": "suola",
@@ -1039,13 +784,6 @@
         "nl": "de azijn"
     },
     "tomato": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "singular": {
             "en": "tomato",
             "fi": "tomaatti",
@@ -1058,13 +796,6 @@
         }
     },
     "water": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "water",
             "fi": "vesi",
@@ -1088,13 +819,6 @@
         "nl": "het mineraalwater"
     },
     "sandwich": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "fi": ["butter", "bread"],
             "nl": ["butter", "ham"]
@@ -1111,11 +835,6 @@
         }
     },
     "nut": {
-        "level": {
-            "A2": "OD",
-            "B2": "EP",
-            "none": "KK"
-        },
         "singular": {
             "en": "nut",
             "fi": "pähkinä",
@@ -1128,13 +847,6 @@
         }
     },
     "cherry": {
-        "level": {
-            "B2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "cherry",
             "fi": "kirsikka",
@@ -1188,11 +900,6 @@
         "nl": "de thee"
     },
     "pear": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "pear",
             "fi": "päärynä",
@@ -1205,13 +912,6 @@
         }
     },
     "cauliflower": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": {
             "en": "flower",
             "fi": [
@@ -1245,13 +945,6 @@
         "nl": "de aubergine"
     },
     "mushroom": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "roots": {
             "nl": "chair"
         },
@@ -1272,11 +965,6 @@
         "nl": "de maïs"
     },
     "garlic": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "roots": {
             "fi": [
                 "white",
@@ -1305,13 +993,6 @@
         "nl": "de erwt"
     },
     "bean": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "bean",
             "fi": "papu",
@@ -1332,11 +1013,6 @@
         "nl": "de courgette"
     },
     "cookie": {
-        "level": {
-            "A2": "OD",
-            "B2": "KK",
-            "none": "EP"
-        },
         "singular": {
             "en": "cookie",
             "fi": "keksi",
@@ -1359,13 +1035,6 @@
         "nl": "het kaneelbroodje"
     },
     "cake": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "cake",
             "fi": "kakku",
@@ -1378,38 +1047,17 @@
         }
     },
     "cream": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "en": "cream",
         "fi": "kerma",
         "nl": "de room"
     },
     "whipped cream": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": "cream",
         "en": "whipped cream",
         "fi": "kermavaahto",
         "nl": "de slagroom"
     },
     "ice cream": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "roots": {
             "en": [
                 "ice",
@@ -1441,13 +1089,6 @@
         "nl": "het snoepje"
     },
     "chocolate": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "en": "chocolate",
         "fi": "suklaa",
         "nl": "de chocolade"
@@ -1462,22 +1103,11 @@
         "nl": "het chocolade-ijsje|het chocolade-ijs"
     },
     "vanilla": {
-        "level": {
-            "C1": "OD",
-            "none": "KK"
-        },
         "en": "vanilla",
         "fi": "vanilja",
         "nl": "vanille"
     },
     "banana": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "singular": {
             "en": "banana",
             "fi": "banaani",
@@ -1490,13 +1120,6 @@
         }
     },
     "pineapple": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "en": "apple"
         },
@@ -1512,11 +1135,6 @@
         }
     },
     "melon": {
-        "level": {
-            "A2": "EP",
-            "B2": "OD",
-            "none": "KK"
-        },
         "singular": {
             "en": "melon",
             "fi": "meloni",
@@ -1529,13 +1147,6 @@
         }
     },
     "cocktail": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "cocktail",
             "fi": "cocktail",

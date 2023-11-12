@@ -1,12 +1,5 @@
 {
     "hi": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Hi!",
         "fi": [
             "Hei!",
@@ -16,25 +9,11 @@
         "nl": "Hoi!"
     },
     "hello": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Hello!",
         "fi": "Terve!",
         "nl": "Hallo!"
     },
     "bye": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": [
             "Bye!",
             "Bye bye!"
@@ -52,13 +31,6 @@
         ]
     },
     "see you": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "en": [
             "Goodbye",
             "See you later!See you!"
@@ -86,10 +58,6 @@
         "nl": "Tot morgen!"
     },
     "welcome": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "en": "Welcome!",
         "fi": "Tervetuloa!",
         "nl": "Welkom!"
@@ -142,13 +110,6 @@
         "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
     },
     "name": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "name",
             "fi": "nimi",
@@ -161,13 +122,6 @@
         }
     },
     "first name": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "name"
         ],
@@ -176,22 +130,11 @@
         "nl": "de voornaam"
     },
     "given name": {
-        "level": {
-            "C1": "OD",
-            "none": "EP"
-        },
         "roots": "name",
         "en": "given name",
         "nl": "de roepnaam"
     },
     "last name": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": [
             "name"
         ],
@@ -261,11 +204,6 @@
         "nl": "Hoe oud ben jij?|Hoe oud ben je?"
     },
     "good morning": {
-        "level": {
-            "A1": "EP",
-            "A2": "KK",
-            "none": "OD"
-        },
         "roots": [
             "good",
             "morning"
@@ -275,13 +213,6 @@
         "nl": "Goedemorgen!|Morgen!"
     },
     "good afternoon": {
-        "level": {
-            "A1": "EP",
-            "none": [
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": [
                 "good",
@@ -301,13 +232,6 @@
         "nl": "Goedemiddag!"
     },
     "good day": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "good",
             "day"
@@ -317,13 +241,6 @@
         "nl": "Goedendag!"
     },
     "good evening": {
-        "level": {
-            "A1": "EP",
-            "none": [
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "good",
             "evening"
@@ -333,13 +250,6 @@
         "nl": "Goedenavond!"
     },
     "good night": {
-        "level": {
-            "A1": "EP",
-            "none": [
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "good",
             "night"
@@ -349,13 +259,6 @@
         "nl": "Goedenacht!"
     },
     "sleep well": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": "to sleep",
         "en": "Sleep well!",
         "fi": "Nuku hyvin!",

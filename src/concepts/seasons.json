@@ -1,9 +1,5 @@
 {
     "season": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
         "roots": {
             "fi": [
                 "time",
@@ -29,13 +25,6 @@
         }
     },
     "spring": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "singular": {
             "en": "spring;;In English, names of seasons are not capitalized",
             "fi": "kevät;;In Finnish, names of seasons are not capitalized",
@@ -81,13 +70,6 @@
         ]
     },
     "summer": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "summer;;In English, names of seasons are not capitalized",
             "fi": "kesä;;In Finnish, names of seasons are not capitalized",
@@ -118,13 +100,6 @@
         "nl": "vorige zomer"
     },
     "autumn": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "singular": {
             "en": [
                 "autumn;;In English, names of seasons are not capitalized",
@@ -185,13 +160,6 @@
         ]
     },
     "winter": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "winter;;In English, names of seasons are not capitalized",
             "fi": "talvi;;In Finnish, names of seasons are not capitalized",

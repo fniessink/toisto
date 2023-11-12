@@ -1,24 +1,10 @@
 {
     "no": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "No!",
         "fi": "Ei!",
         "nl": "Nee!"
     },
     "yes": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Yes!",
         "fi": [
             "Joo!",
@@ -35,13 +21,6 @@
         "nl": "Alsjeblieft!|Alstublieft!"
     },
     "thanks": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Thank you!|Thanks!",
         "fi": [
             "Kiitos!",
@@ -50,11 +29,6 @@
         "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
     },
     "you're welcome": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "en": [
                 "to be",
@@ -71,35 +45,16 @@
         "fi": "Ei kestä!"
     },
     "sorry": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Sorry!",
         "fi": "Anteeksi!",
         "nl": "Sorry!"
     },
     "excuse me": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Excuse me?|Excuse me!",
         "fi": "Anteeksi?|Anteeksi!",
         "nl": "Pardon?|Pardon!"
     },
     "no problem": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": {
             "en": "no",
             "fi": "nothing"
@@ -112,13 +67,6 @@
         ]
     },
     "ok": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "OK!|Okay!",
         "fi": "Okei!",
         "nl": "OK!|Oké!"
@@ -203,13 +151,6 @@
         "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
     },
     "example": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "example",
             "fi": "esimerkki",
@@ -222,13 +163,6 @@
         }
     },
     "for example": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "for example",
         "fi": "esimerkiksi",
         "nl": "bijvoorbeeld"

@@ -66,17 +66,6 @@ target = nl
 source = en
 ```
 
-#### How to configure your language level
-
-To prevent having to pass your language level as command-line argument each time you run Toisto, put the language levels you want to practice in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the levels:
-
-```ini
-[languages]
-levels = A1 A2 B1
-```
-
-Note that not all words and phrases have a language level associated with them. This means that specifying `levels = A1 A2 B1 B2 C1 C2` will cause Toisto to load only words and phrases with a known language level.
-
 #### How to configure a different mp3 player
 
 By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:

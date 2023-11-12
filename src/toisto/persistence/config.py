@@ -6,9 +6,8 @@ from collections.abc import Iterable
 from configparser import ConfigParser, Error
 from enum import Enum
 from pathlib import Path
-from typing import Final, NoReturn, get_args
+from typing import Final, NoReturn
 
-from toisto.model.language.cefr import CommonReferenceLevel
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 
 # The schema for the config file. Top-level keys are sections, values are a dict per option with the key being the
@@ -20,14 +19,12 @@ class Quantifier(Enum):
 
     ANY = "any"
     ONE_OF = "one of"
-    ONE_OR_MORE_OF = "one or more of"
 
 
 CONFIG_SCHEMA: Final[dict[str, dict[str, tuple[Quantifier, Iterable]]]] = dict(
     languages=dict(
         target=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
         source=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
-        levels=(Quantifier.ONE_OR_MORE_OF, get_args(CommonReferenceLevel)),
     ),
     commands=dict(mp3player=(Quantifier.ANY, [])),
 )
@@ -68,8 +65,7 @@ class ConfigSchemaValidator:
         if specifier == Quantifier.ANY:
             return  # type: ignore[return-value]
         value = self._config_parser.get(section, option)
-        values = [value] if specifier == Quantifier.ONE_OF else value.split()
-        if any(value for value in values if value not in allowed_values):
+        if value not in allowed_values:
             self._error(
                 f"unknown value '{value}' for option '{option}' in section '{section}'. "
                 f"Allowed values are {specifier.value}: {', '.join(allowed_values)}.",

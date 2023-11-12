@@ -1,12 +1,5 @@
 {
     "woman": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "woman",
             "fi": "nainen",
@@ -19,13 +12,6 @@
         }
     },
     "girl": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "girl",
             "fi": "tyttö",
@@ -56,11 +42,6 @@
         }
     },
     "female friend": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "roots": {
             "en": [
                 "girl",

@@ -1,12 +1,5 @@
 {
     "time": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "time",
             "fi": "aika",
@@ -19,25 +12,11 @@
         }
     },
     "now": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "now",
         "fi": "nyt",
         "nl": "nu"
     },
     "then": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "then",
         "fi": [
             "sitten",
@@ -46,13 +25,6 @@
         "nl": "dan"
     },
     "morning": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "morning",
             "fi": "aamu|aamupäivä",
@@ -65,10 +37,6 @@
         }
     },
     "noon": {
-        "level": {
-            "A2": "EP",
-            "C1": "OD"
-        },
         "roots": {
             "fi": "day",
             "nl": [
@@ -87,12 +55,6 @@
         }
     },
     "afternoon": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "noon",
             "fi": [
@@ -113,13 +75,6 @@
         }
     },
     "evening": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "evening",
             "fi": "ilta",
@@ -132,13 +87,6 @@
         }
     },
     "night": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "night",
             "fi": "yö",
@@ -151,10 +99,6 @@
         }
     },
     "midnight": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "roots": "night",
         "singular": {
             "en": "midnight",
@@ -168,13 +112,6 @@
         }
     },
     "year": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "year",
             "fi": "vuosi",
@@ -187,10 +124,6 @@
         }
     },
     "decade": {
-        "level": {
-            "B1": "OD",
-            "B2": "EP"
-        },
         "roots": {
             "fi": [
                 "10",
@@ -209,10 +142,6 @@
         }
     },
     "century": {
-        "level": {
-            "B1": "OD",
-            "B2": "EP"
-        },
         "roots": {
             "fi": [
                 "100",
@@ -231,13 +160,6 @@
         }
     },
     "hour": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "hour",
             "fi": "tunti",
@@ -250,13 +172,6 @@
         }
     },
     "minute": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "minute",
             "fi": "minuutti",
@@ -269,13 +184,6 @@
         }
     },
     "clock": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "clock",
             "fi": "kello",
@@ -288,13 +196,6 @@
         }
     },
     "alarm clock": {
-        "level": {
-            "A2": "EP",
-            "none": [
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "clock",
             "fi": "clock"

@@ -1,24 +1,10 @@
 {
     "job": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "job",
         "fi": "työ",
         "nl": "het werk"
     },
     "engineer": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "singular": {
             "en": "engineer",
             "fi": "insinööri",
@@ -31,13 +17,6 @@
         }
     },
     "teacher": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "teacher",
             "fi": "opettaja",
@@ -56,13 +35,6 @@
         }
     },
     "seller": {
-        "level": {
-            "A2": "KK",
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "seller",
         "fi": "myyjä",
         "nl": "de verkoper"

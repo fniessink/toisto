@@ -1,12 +1,5 @@
 {
     "game": {
-        "levels": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "game",
             "fi": "kisa",
@@ -19,13 +12,6 @@
         }
     },
     "ball": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "ball",
             "fi": "pallo",
@@ -38,13 +24,6 @@
         }
     },
     "football": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": [
             "ball",
             "foot"
@@ -57,25 +36,11 @@
         "nl": "de voetbal"
     },
     "playing field": {
-        "level": {
-            "B2": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "playing field",
         "fi": "urheilukenttä",
         "nl": "het sportveld"
     },
     "swimming pool": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "roots": {
             "nl": "bath"
         },
@@ -84,13 +49,6 @@
         "nl": "het zwembad"
     },
     "ice rink": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "roots": "ice",
         "en": "ice rink",
         "fi": "jäähalli",

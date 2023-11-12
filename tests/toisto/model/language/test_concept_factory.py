@@ -105,30 +105,6 @@ class ConcepFactoryTest(ToistoTestCase):
         for index in range(2):
             self.assertEqual((answer.constituents[index],), question.constituents[index].answers)
 
-    def test_level(self):
-        """Test that a concept can have a level."""
-        for level in ("A1", "A2", "B1", "B2", "C1", "C2"):
-            concept = create_concept("one", dict(level={level: "EP"}, en=level))
-            self.assertEqual(level, concept.level)
-
-    def test_override_level(self):
-        """Test that constituent concepts can override the level of their composite concept."""
-        concept = create_concept(
-            "morning",
-            dict(
-                level=dict(A1="EP"),
-                singular=dict(fi="aamu", nl="de ochtend"),
-                plural=dict(level=dict(A2="EP"), fi="aamut", nl="de ochtenden"),
-            ),
-        )
-        self.assertEqual("A1", concept.constituents[0].level)
-        self.assertEqual("A2", concept.constituents[1].level)
-
-    def test_missing_level(self):
-        """Test that the concept has no level if the concept dict does not contain one."""
-        concept = create_concept("one", dict(level=dict(none="EP"), fi="yksi", nl="één"))
-        self.assertEqual(None, concept.level)
-
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
         concept = create_concept("Finnish Eastern cake", dict(fi="mämmi", nl="(Finse paascake)"))

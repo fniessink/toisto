@@ -22,18 +22,12 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual("concept_id", concept.concept_id)
         self.assertEqual((), concept.labels("fi"))
         self.assertEqual((), concept.meanings("fi"))
-        self.assertIsNone(concept.level)
         self.assertEqual((), concept.answers)
         self.assertFalse(concept.answer_only)
         self.assertEqual((), concept.roots("fi"))
         self.assertIsNone(concept.parent)
         self.assertEqual((), concept.constituents)
         self.assertEqual((), concept.antonyms)
-
-    def test_level(self):
-        """Test that the level of a concept is the maximum of the available levels."""
-        concept = create_concept("thirty", dict(level=dict(A1="EP", A2="OD"), fi="kolmekymmentä", nl="dertig"))
-        self.assertEqual("A2", concept.level)
 
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
@@ -73,14 +67,8 @@ class ConceptFilterTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to set up concepts."""
-        self.two = create_concept(
-            ConceptId("two"),
-            cast(ConceptDict, dict(level={"A1": "KK"}, fi="kaksi", nl="twee")),
-        )
-        self.three = create_concept(
-            ConceptId("three"),
-            cast(ConceptDict, dict(level={"A2": "KK"}, fi="kolme", nl="drie")),
-        )
+        self.two = create_concept(ConceptId("two"), cast(ConceptDict, dict(fi="kaksi", nl="twee")))
+        self.three = create_concept(ConceptId("three"), cast(ConceptDict, dict(fi="kolme", nl="drie")))
         self.concepts = {self.two, self.three}
         small = Topic("small", frozenset([ConceptId("two")]))
         big = Topic("big", frozenset([ConceptId("three")]))
@@ -88,19 +76,15 @@ class ConceptFilterTest(unittest.TestCase):
 
     def test_no_filter(self):
         """Test that all concepts are returned when there is no filter specified."""
-        self.assertEqual({self.two}, filter_concepts({self.two}, self.topics, [], [], [], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts({self.two}, self.topics, [], [], ArgumentParser()))
 
     def test_filter_by_selected_concepts(self):
         """Test that concepts can be filtered by selected concepts."""
-        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, ["two"], [], [], ArgumentParser()))
-
-    def test_filter_by_level(self):
-        """Test that concepts can be filtered by level."""
-        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], ["A1"], [], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, ["two"], [], ArgumentParser()))
 
     def test_filter_by_topic(self):
         """Test that concepts can be filtered by topic."""
-        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], [], ["small"], ArgumentParser()))
+        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], ["small"], ArgumentParser()))
 
     @patch("sys.stderr.write")
     def test_no_match(self, sys_stderr_write: Mock):
@@ -110,7 +94,6 @@ class ConceptFilterTest(unittest.TestCase):
             filter_concepts,
             self.concepts,
             self.topics,
-            [],
             [],
             ["missing"],
             ArgumentParser(),

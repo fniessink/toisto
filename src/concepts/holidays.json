@@ -1,30 +1,16 @@
 {
     "holiday": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "day",
         "en": "holiday",
         "fi": "juhlapäivä",
         "nl": "de feestdag"
     },
     "christmas": {
-        "level": {
-            "A1": "OD",
-            "none": "EP"
-        },
         "en": "Christmas;;In English, the names of holidays are capitalized",
         "fi": "joulu;;In Finnish, the names of holidays are not capitalized",
         "nl": "Kerstmis;;In Dutch, the names of holidays are capitalized"
     },
     "christmas eve": {
-        "level": {
-            "C1": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": "christmas",
             "fi": "christmas",
@@ -38,10 +24,6 @@
         "nl": "kerstavond;;In Dutch, the names of holidays are capitalized, but derived words are not"
     },
     "christmas day": {
-        "level": {
-            "A1": "OD",
-            "none": "EP"
-        },
         "roots": [
             "christmas",
             "day"
@@ -51,10 +33,6 @@
         "nl": "eerste kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
     },
     "boxing day": {
-        "level": {
-            "C1": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": "day",
             "fi": "day",
@@ -68,12 +46,6 @@
         "nl": "tweede kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
     },
     "merry christmas": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "christmas",
             "fi": [
@@ -90,12 +62,6 @@
         "nl": "Vrolijk kerstfeest!"
     },
     "christmas tree": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": [
             "christmas",
             "tree"
@@ -105,12 +71,6 @@
         "nl": "de kerstboom"
     },
     "santa": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "fi": "christmas",
             "nl": "christmas"
@@ -120,12 +80,6 @@
         "nl": "de kerstman"
     },
     "elf": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "elf",
         "fi": "tonttu",
         "nl": "de elf"
@@ -136,12 +90,6 @@
         "nl": "de engel"
     },
     "bauble": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "fi": [
                 "christmas tree",
@@ -154,10 +102,6 @@
         "nl": "de kerstbal"
     },
     "new year": {
-        "level": {
-            "A1": "OD",
-            "none": "EP"
-        },
         "roots": [
             "new",
             "year"
@@ -167,12 +111,6 @@
         "nl": "Nieuwjaar;;In Dutch, the names of holidays are capitalized"
     },
     "happy new year": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "en": [
                 "happy",
@@ -193,31 +131,17 @@
         "nl": "Gelukkig nieuwjaar!"
     },
     "valentine's day": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "day",
         "en": "Valentine's Day;;In English, the names of holidays are capitalized",
         "fi": "ystävänpäivä;;In Finnish, the names of holidays are not capitalized",
         "nl": "Valentijnsdag;;In Dutch, the names of holidays are capitalized"
     },
     "epiphany": {
-        "level": {
-            "C2": "OD",
-            "none": "EP"
-        },
         "en": "Epiphany;;In English, the names of holidays are capitalized",
         "fi": "loppiainen;;In Finnish, the names of holidays are not capitalized",
         "nl": "Driekoningen;;In Dutch, the names of holidays are capitalized"
     },
     "easter": {
-        "level": {
-            "B1": "OD",
-            "none": "EP"
-        },
         "en": "Easter;;In English, the names of holidays are capitalized",
         "fi": "pääsiäinen;;In Finnish, the names of holidays are not capitalized",
         "nl": "Pasen;;In Dutch, the names of holidays are capitalized"
@@ -242,12 +166,6 @@
         "nl": "Vrolijk Pasen!"
     },
     "first of may": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "en": "may",
             "nl": "day"
@@ -257,10 +175,6 @@
         "nl": "Dag van de arbeid;;In Dutch, the names of holidays are capitalized"
     },
     "midsummer": {
-        "level": {
-            "C1": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": "summer",
             "nl": "summer"
@@ -270,12 +184,6 @@
         "nl": "midzomer"
     },
     "finnish independence day": {
-        "level": {
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "day",
         "en": "(Finnish independence day, December 6th)",
         "fi": "itsenäisyyspäivä;;In Finnish, the names of holidays are not capitalized",

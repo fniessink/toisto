@@ -51,11 +51,6 @@ class ReadValidConfigTest(ConfigTestCase):
         config = self.read_config(path_open, "[commands]\n", "mp3player = some mp3 player\n")
         self.assertEqual("some mp3 player", config.get("commands", "mp3player"))
 
-    def test_valid_levels(self, path_open: Mock):
-        """Test reading a valid config."""
-        config = self.read_config(path_open, "[languages]\n", "levels = A1 A2\n")
-        self.assertEqual("A1 A2", config.get("languages", "levels"))
-
     @patch("sys.platform", "darwin")
     def test_incomplete_config(self, path_open: Mock):
         """Test reading an incomplete config."""
@@ -118,12 +113,8 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
-    def test_invalid_one_or_more_of_option_value(self, path_open: Mock, sys_stderr_write: Mock):
-        """Test reading an invalid config (invalid option value, one or more of)."""
-        config_file_contents = ["[languages]\n", "levels = D3\n"]
-        self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
-        self.assertIn(
-            f"While reading from '{CONFIG_FILENAME}': unknown value 'D3' for option 'levels' in section 'languages'. "
-            "Allowed values are one or more of: A1, A2",
-            sys_stderr_write.call_args_list[1][0][0],
-        )
+    def test_valid_one_of_option_values(self, path_open: Mock, sys_stderr_write: Mock):
+        """Test reading an valid config (one of option)."""
+        config_file_contents = ["[languages]\n", "target = nl\n"]
+        self.read_config(path_open, *config_file_contents)
+        sys_stderr_write.assert_not_called()

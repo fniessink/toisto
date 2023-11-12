@@ -9,7 +9,6 @@ from rich_argparse import RichHelpFormatter
 
 from ..command.show_progress import SortColumn
 from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
-from ..model.language.cefr import CommonReferenceLevel
 from ..model.language.concept import Concept
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 from ..model.topic.topic import Topic
@@ -83,23 +82,6 @@ def add_concept_arguments(parser: ArgumentParser, concepts: set[Concept]) -> Non
     )
 
 
-def add_level_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
-    """Add the language level arguments to the parser."""
-    levels = get_args(CommonReferenceLevel)
-    default = [level for level in levels if level in config.get("languages", "levels", fallback="")]
-    default_help = ", ".join(default) if default else "all"
-    parser.add_argument(
-        "-l",
-        "--level",
-        action="append",
-        default=default,
-        dest="levels",
-        metavar="{level}",
-        choices=levels,
-        help=f"language levels to use, can be repeated; default: {default_help}; available levels: %(choices)s",
-    )
-
-
 class CommandBuilder:
     """Add commands to the argument parser."""
 
@@ -125,7 +107,6 @@ class CommandBuilder:
             formatter_class=RichHelpFormatter,
         )
         add_language_arguments(parser, self.config)
-        add_level_arguments(parser, self.config)
         add_topic_arguments(parser, self.topics)
         add_concept_arguments(parser, self.concepts)
         return parser

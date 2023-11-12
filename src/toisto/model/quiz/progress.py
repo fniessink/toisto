@@ -35,8 +35,8 @@ class Progress:
         )
         quizzes_in_progress = Quizzes(quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz))
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
-            unblocked_quizzes = self.__unblocked_quizzes(potential_quizzes, eligible_quizzes, quizzes)
-            if quiz := unblocked_quizzes.lowest_level():
+            if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes, quizzes):
+                quiz = unblocked_quizzes.pop()
                 self.__recent_concepts.append(quiz.concept.base_concept)
                 return quiz
         return None

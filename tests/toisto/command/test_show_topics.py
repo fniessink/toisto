@@ -43,13 +43,13 @@ class ShowTopicsTest(ToistoTestCase):
     def test_column_headers(self):
         """Test that the column headers are shown."""
         console_print = self.show_topics()
-        for index, value in enumerate(["Finnish", "Dutch", "Grammatical categories", "Language level", "Other topics"]):
+        for index, value in enumerate(["Finnish", "Dutch", "Grammatical categories", "Other topics"]):
             self.assertEqual(value, console_print.call_args[0][0].columns[index].header)
 
     def test_contents(self):
         """Test that the table contains the concept."""
         console_print = self.show_topics()
-        for index, value in enumerate(["Terve", "Hoi", "", "", ""]):
+        for index, value in enumerate(["Terve", "Hoi", "", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
         self.assertEqual(1, console_print.call_args_list[0][0][0].row_count)
 

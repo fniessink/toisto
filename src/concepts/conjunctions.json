@@ -1,12 +1,5 @@
 {
     "and": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "and",
         "fi": [
             "entä",
@@ -15,13 +8,6 @@
         "nl": "en"
     },
     "because": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "because",
         "fi": "koska",
         "nl": [
@@ -30,37 +16,16 @@
         ]
     },
     "but": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "but",
         "fi": "mutta",
         "nl": "maar"
     },
     "if": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": "if",
         "fi": "jos",
         "nl": "als"
     },
     "though": {
-        "level": {
-            "A1": "KK",
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": [
             "though",
             "although",

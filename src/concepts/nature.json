@@ -1,24 +1,10 @@
 {
     "nature": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "nature",
         "fi": "luonto",
         "nl": "de natuur"
     },
     "forest": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": [
                 "forest",
@@ -43,13 +29,6 @@
         }
     },
     "flower": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "flower",
             "fi": "kukka",
@@ -62,13 +41,6 @@
         }
     },
     "lake": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "lake",
             "fi": "järvi",
@@ -81,13 +53,6 @@
         }
     },
     "sea": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "sea",
             "fi": "meri",
@@ -100,13 +65,6 @@
         }
     },
     "river": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "singular": {
             "en": "river",
             "fi": "joki",
@@ -119,10 +77,6 @@
         }
     },
     "island": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "singular": {
             "en": "island",
             "fi": "saari",
@@ -135,10 +89,6 @@
         }
     },
     "coast": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
         "roots": {
             "fi": "beach"
         },
@@ -154,12 +104,6 @@
         }
     },
     "desert": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": {
             "fi": "country"
         },
@@ -181,13 +125,6 @@
         }
     },
     "tree": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "tree",
             "fi": "puu",
@@ -200,13 +137,6 @@
         }
     },
     "beach": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "beach",
             "fi": "ranta",
@@ -219,10 +149,6 @@
         }
     },
     "valley": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
         "singular": {
             "en": "valley",
             "fi": "laakso",
@@ -235,12 +161,6 @@
         }
     },
     "hill": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "hill",
             "fi": [
@@ -259,10 +179,6 @@
         }
     },
     "mountain": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "singular": {
             "en": "mountain",
             "fi": "vuori",
@@ -275,49 +191,26 @@
         }
     },
     "north": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "en": "north|the North",
         "fi": "pohjoinen",
         "nl": "het noorden"
     },
     "east": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "en": "east|the East",
         "fi": "itä",
         "nl": "het oosten"
     },
     "south": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "en": "south|the South",
         "fi": "etelä",
         "nl": "het zuiden"
     },
     "west": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "en": "west|the West",
         "fi": "länsi",
         "nl": "het westen"
     },
     "world": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "roots": {
             "fi": "country"
         },
@@ -326,12 +219,6 @@
         "nl": "de wereld"
     },
     "sand": {
-        "level": {
-            "B1": [
-                "EP",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "sand",
             "fi": "hiekka",
@@ -344,10 +231,6 @@
         }
     },
     "ground": {
-        "level": {
-            "A2": "OD",
-            "B1": "B1"
-        },
         "singular": {
             "en": "ground",
             "fi": "maa;solid surface of the earth",
@@ -360,10 +243,6 @@
         }
     },
     "stone": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
         "singular": {
             "en": "stone",
             "fi": "kivi",
@@ -376,10 +255,6 @@
         }
     },
     "fire": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP"
-        },
         "singular": {
             "en": "fire",
             "fi": "tuli",
@@ -392,13 +267,6 @@
         }
     },
     "wave": {
-        "level": {
-            "A2": "OD",
-            "B1": [
-                "EP",
-                "KK"
-            ]
-        },
         "singular": {
             "en": "wave",
             "fi": "aalto",
@@ -411,10 +279,6 @@
         }
     },
     "volcano": {
-        "level": {
-            "B1": "OD",
-            "B2": "EP"
-        },
         "roots": {
             "fi": [
                 "fire",
@@ -433,10 +297,6 @@
         }
     },
     "cave": {
-        "level": {
-            "B1": "EP",
-            "B2": "OD"
-        },
         "singular": {
             "en": "cave",
             "fi": "luola",
@@ -449,10 +309,6 @@
         }
     },
     "canyon": {
-        "level": {
-            "B2": "OD",
-            "none": "EP"
-        },
         "singular": {
             "en": "canyon",
             "fi": "rotko",
@@ -465,10 +321,6 @@
         }
     },
     "rainforest": {
-        "level": {
-            "A2": "OD",
-            "B1": "EP"
-        },
         "roots": [
             "rain",
             "forest"
@@ -485,10 +337,6 @@
         }
     },
     "glacier": {
-        "level": {
-            "B2": "OD",
-            "none": "EP"
-        },
         "roots": {
             "fi": "ice"
         },
@@ -504,10 +352,6 @@
         }
     },
     "northern lights": {
-        "level": {
-            "C2": "OD",
-            "none": "EP"
-        },
         "roots": {
             "en": [
                 "north",

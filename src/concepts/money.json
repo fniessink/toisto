@@ -1,22 +1,10 @@
 {
     "money": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "money",
         "fi": "raha",
         "nl": "het geld"
     },
     "bank card": {
-        "level": {
-            "A2": "KK",
-            "B2": "EP",
-            "C1": "OD"
-        },
         "en": [
             "bank card",
             "debit card"
@@ -25,13 +13,6 @@
         "nl": "de bankpas"
     },
     "cash": {
-        "level": {
-            "A2": [
-                "EP",
-                "OD"
-            ],
-            "C1": "KK"
-        },
         "en": "cash",
         "fi": "käteinen",
         "nl": "contant"
@@ -50,35 +31,16 @@
         "nl": "Contant of pinnen?"
     },
     "receipt": {
-        "level": {
-            "A2": "EP",
-            "B1": "OD",
-            "none": "KK"
-        },
         "en": "receipt",
         "fi": "kuitti",
         "nl": "het bonnetje|de bon"
     },
     "account": {
-        "level": {
-            "B1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "account",
         "fi": "tili",
         "nl": "de rekening"
     },
     "price": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "singular": {
             "en": "price",
             "fi": "hinta",
@@ -91,13 +53,6 @@
         }
     },
     "cent": {
-        "level": {
-            "A2": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "cent",
             "fi": "sentti",
@@ -110,11 +65,6 @@
         }
     },
     "banknote": {
-        "level": {
-            "A1": "OD",
-            "B1": "EP",
-            "none": "KK"
-        },
         "en": [
             "banknote|note",
             "bill"

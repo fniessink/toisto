@@ -1,12 +1,5 @@
 {
     "there": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "en": "there",
         "fi": [
             "tuolla",
@@ -15,12 +8,6 @@
         "nl": "daar"
     },
     "here": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "here",
         "fi": [
             "täällä",
@@ -29,25 +16,11 @@
         "nl": "hier"
     },
     "also": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "also",
         "fi": "myös",
         "nl": "ook"
     },
     "maybe": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": [
             "maybe",
             "perhaps"
@@ -59,13 +32,6 @@
         ]
     },
     "often": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "often",
         "fi": "usein",
         "nl": "vaak"

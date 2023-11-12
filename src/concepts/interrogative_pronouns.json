@@ -1,23 +1,10 @@
 {
     "who": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Who?",
         "fi": "Kuka?",
         "nl": "Wie?"
     },
     "what": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "What?",
         "fi": [
             "Mitä?;;'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
@@ -26,56 +13,26 @@
         "nl": "Wat?"
     },
     "why": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Why?",
         "fi": "Miksi?",
         "nl": "Waarom?"
     },
     "where": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "Where?",
         "fi": "Missä?",
         "nl": "Waar?"
     },
     "where from": {
-        "level": {
-            "C2": "KK",
-            "none": "OD"
-        },
         "en": "Where from?",
         "fi": "Mistä?",
         "nl": "Waar vandaan?"
     },
     "when": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "When?",
         "fi": "Milloin?",
         "nl": "Wanneer?"
     },
     "which": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "Which?",
         "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
         "nl": [
@@ -84,13 +41,6 @@
         ]
     },
     "how": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "How?",
         "fi": [
             "Miten?",
@@ -99,25 +49,12 @@
         "nl": "Hoe?"
     },
     "how many": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ]
-        },
         "roots": "how",
         "en": "How many?",
         "fi": "Kuinka monta?",
         "nl": "Hoeveel"
     },
     "what kind of": {
-        "level": {
-            "A1": "KK",
-            "none": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": "What kind of?",
         "fi": "Millainen?",
         "nl": [
@@ -126,25 +63,11 @@
         ]
     },
     "to where": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "to where",
         "fi": "mihin",
         "nl": "waarheen"
     },
     "from which country": {
-        "level": {
-            "none": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "(from which country)",
         "fi": "minkämaalainen",
         "nl": "(uit welk land)"

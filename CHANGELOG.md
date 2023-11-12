@@ -22,6 +22,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Concepts and topics are now stored in different files. This allows users to create their own topic files consisting of a list of existing topics.
 
+### Removed
+
+- Toisto no longer includes CEFR-levels in concept files not uses them sort quizzes. Most if not all sources for CEFR-levels prohibit redistribution of their material. Closes [#482](https://github.com/fniessink/toisto/issues/482).
+
 ## 0.12.0 - 2023-09-20
 
 ### Fixed

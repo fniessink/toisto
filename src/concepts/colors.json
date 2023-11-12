@@ -1,12 +1,5 @@
 {
     "color": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "singular": {
             "en": "color|colour",
             "fi": "väri",
@@ -20,84 +13,37 @@
     },
     "black": {
         "antonym": "white",
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "black",
         "fi": "musta",
         "nl": "zwart"
     },
     "white": {
         "antonym": "black",
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "white",
         "fi": "valkoinen",
         "nl": "wit"
     },
     "blue": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "A2": "KK"
-        },
         "en": "blue",
         "fi": "sininen",
         "nl": "blauw"
     },
     "green": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "green",
         "fi": "vihreä",
         "nl": "groen"
     },
     "red": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "red",
         "fi": "punainen",
         "nl": "rood"
     },
     "yellow": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "en": "yellow",
         "fi": "keltainen",
         "nl": "geel"
     },
     "purple": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "en": "purple",
         "fi": [
             "liila",
@@ -106,35 +52,16 @@
         "nl": "paars"
     },
     "orange": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "C2": "KK"
-        },
         "en": "orange",
         "fi": "oranssi",
         "nl": "oranje"
     },
     "brown": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "en": "brown",
         "fi": "ruskea",
         "nl": "bruin"
     },
     "pink": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "en": "pink",
         "fi": [
             "vaaleanpunainen",
@@ -143,46 +70,22 @@
         "nl": "roze"
     },
     "beige": {
-        "level": {
-            "C1": "OD",
-            "none": [
-                "EP",
-                "KK"
-            ]
-        },
         "en": "beige",
         "fi": "beige",
         "nl": "beige"
     },
     "grey": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "B1": "KK"
-        },
         "en": "grey|gray",
         "fi": "harmaa",
         "nl": "grijs"
     },
     "light blue": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": "blue",
         "en": "light blue",
         "fi": "vaaleansininen",
         "nl": "lichtblauw"
     },
     "dark blue": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "roots": "blue",
         "en": "dark blue",
         "fi": "tummansininen",

@@ -1,46 +1,20 @@
 {
     "nothing": {
-        "level": {
-            "A1": "OD",
-            "A2": "EP",
-            "none": "KK"
-        },
         "en": "nothing",
         "fi": "ei mitään",
         "nl": "niets"
     },
     "something": {
-        "level": {
-            "A1": [
-                "EP",
-                "OD"
-            ],
-            "none": "KK"
-        },
         "en": "something",
         "fi": "jotain",
         "nl": "iets"
     },
     "all": {
-        "level": {
-            "A1": [
-                "EP",
-                "KK",
-                "OD"
-            ]
-        },
         "en": "often",
         "fi": "usein",
         "nl": "vaak"
     },
     "at least": {
-        "level": {
-            "A1": "KK",
-            "A2": [
-                "EP",
-                "OD"
-            ]
-        },
         "en": [
             "at least",
             "in any case"
@@ -53,13 +27,6 @@
         ]
     },
     "by the way": {
-        "level": {
-            "A1": [
-                "KK",
-                "OD"
-            ],
-            "A2": "EP"
-        },
         "en": "by the way",
         "fi": "muuten",
         "nl": "overigens"
