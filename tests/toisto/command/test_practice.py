@@ -66,6 +66,13 @@ class PracticeTest(ToistoTestCase):
         patched_print = self.practice(self.quizzes)
         self.assertIn(call(TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch")), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(return_value="Hoi\n"))
+    def test_answer_with_question_listen_quiz(self):
+        """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
+        quizzes = create_quizzes(Language("fi"), Language("nl"), self.concept).by_quiz_type("dictate")
+        patched_print = self.practice(quizzes)
+        self.assertIn(call(TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish")), patched_print.call_args_list)
+
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
     def test_quiz_empty_answer(self, mock_print: Mock):

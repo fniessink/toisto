@@ -119,7 +119,7 @@ class Quiz:
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
-        return match(guess, *self._question.spelling_alternatives)
+        return any(match(guess, *label.spelling_alternatives) for label in (self._question, *self._question_meanings))
 
     @cached_property
     def question(self) -> Label:
