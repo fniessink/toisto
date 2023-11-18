@@ -50,7 +50,7 @@ DONE: Final = f"""👍 Good job. You're done for now. Please come back later or 
 
 TRY_AGAIN: Final = "⚠️  Incorrect. Please try again."
 
-TRY_AGAIN_IN_ANSWER_LANGUAGE: Final = "⚠️  Incorrect. Please try again, in [bold]%(language)s[/bold]."
+TRY_AGAIN_IN_ANSWER_LANGUAGE: Final = "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
 
 CORRECT: Final = "✅ Correct.\n"
 
