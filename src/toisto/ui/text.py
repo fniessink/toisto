@@ -79,7 +79,7 @@ def meaning(quiz: Quiz) -> str:
     if quiz.question_meanings and quiz.answer_meanings:
         question_meanings = linkify_and_enumerate(*quiz.question_meanings)
         answer_meanings = linkify_and_enumerate(*quiz.answer_meanings)
-        meanings = f"{question_meanings} > {answer_meanings}"
+        meanings = f"{question_meanings}, respectively {answer_meanings}"
     else:
         meanings = linkify_and_enumerate(*(quiz.question_meanings + quiz.answer_meanings))
     return f"[secondary]Meaning {meanings}.[/secondary]\n" if meanings else ""
