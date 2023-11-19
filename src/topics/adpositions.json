@@ -1,15 +1,26 @@
 {
     "name": "adpositions",
     "concepts": [
+        "alice sits between bob and carol",
+        "alice sits to the left of bob",
+        "alice sits to the right of bob",
         "around",
         "at",
         "behind",
         "below",
         "between",
+        "bob sits at the table",
         "in front of",
         "in the middle",
         "next to",
         "on top of",
+        "the cat sits in front of the window",
+        "the glass is underneath the table",
+        "the kitchen is behind that door",
+        "the lamp is on top of the cabinet",
+        "the museum is next to the church",
+        "the table is in the middle of the room",
+        "they sit around the table",
         "to the left",
         "to the right"
     ]
