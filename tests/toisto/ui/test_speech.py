@@ -25,7 +25,7 @@ class SayTest(unittest.TestCase):
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
         mock_subprocess_popen.assert_called_once_with(
-            ["say", "--voice=Xander", "Hallo"],
+            ["say", "--voice=Xander (Enhanced)", "Hallo"],
             stdin=DEVNULL,
             stdout=DEVNULL,
             stderr=DEVNULL,
@@ -39,7 +39,7 @@ class SayTest(unittest.TestCase):
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config, slow=True)
         mock_subprocess_popen.assert_called_once_with(
-            ["say", "--voice=Xander", "--rate=150", "Hallo"],
+            ["say", "--voice=Xander (Enhanced)", "--rate=150", "Hallo"],
             stdin=DEVNULL,
             stdout=DEVNULL,
             stderr=DEVNULL,

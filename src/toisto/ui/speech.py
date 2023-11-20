@@ -9,7 +9,7 @@ from typing import Final
 import gtts
 from playsound import playsound
 
-MAC_OS_SAY_VOICES: Final = dict(en="Daniel", fi="Satu", nl="Xander")
+MAC_OS_SAY_VOICES: Final = dict(en="Daniel", fi="Satu (Enhanced)", nl="Xander (Enhanced)")
 
 
 def _run_command(command: str, *args: str) -> None:
