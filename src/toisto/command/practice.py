@@ -1,5 +1,6 @@
 """Practice command."""
 
+from collections.abc import Callable
 from configparser import ConfigParser
 from typing import get_args
 
@@ -14,7 +15,6 @@ from toisto.ui.text import (
     DONE,
     TRY_AGAIN,
     TRY_AGAIN_IN_ANSWER_LANGUAGE,
-    console,
     feedback_correct,
     feedback_incorrect,
     instruction,
@@ -31,18 +31,18 @@ def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> tuple
     return answer, quiz.is_correct(answer)
 
 
-def do_quiz(quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
+def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
     """Do one quiz and update the progress."""
-    console.print(instruction(quiz))
+    write_output(instruction(quiz))
     if quiz.quiz_types[0] not in get_args(ListenQuizType):
-        console.print(linkify(quiz.question))
+        write_output(linkify(quiz.question))
     answer, correct = do_quiz_attempt(quiz, config)
     if not correct and answer != "?":
         if quiz.is_question(answer):
             try_again = TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
         else:
             try_again = TRY_AGAIN
-        console.print(try_again)
+        write_output(try_again)
         answer, correct = do_quiz_attempt(quiz, config, attempt=2)
     if correct:
         progress.mark_correct_answer(quiz)
@@ -50,16 +50,16 @@ def do_quiz(quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
     else:
         progress.mark_incorrect_answer(quiz)
         feedback = feedback_incorrect(answer, quiz)
-    console.print(feedback)
+    write_output(feedback)
 
 
-def practice(quizzes: Quizzes, progress: Progress, config: ConfigParser) -> None:
+def practice(write_output: Callable[..., None], quizzes: Quizzes, progress: Progress, config: ConfigParser) -> None:
     """Practice a language."""
     try:
         while quiz := progress.next_quiz(quizzes):
-            do_quiz(quiz, progress, config)
-        console.print(DONE)
+            do_quiz(write_output, quiz, progress, config)
+        write_output(DONE)
     except (KeyboardInterrupt, EOFError):
-        console.print()  # Make sure the shell prompt is displayed on a new line
+        write_output()  # Make sure the shell prompt is displayed on a new line
     finally:
         save_progress(progress)

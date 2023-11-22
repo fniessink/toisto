@@ -12,7 +12,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.ui.dictionary import linkify
-from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANSWER_LANGUAGE
+from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANSWER_LANGUAGE, console
 
 from ...base import ToistoTestCase
 
@@ -35,7 +35,7 @@ class PracticeTest(ToistoTestCase):
         config.add_section("commands")
         config.set("commands", "mp3player", "mpg123")
         with patch("rich.console.Console.print") as patched_print:
-            practice(quizzes, self.progress, config)
+            practice(console.print, quizzes, self.progress, config)
         return patched_print
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))

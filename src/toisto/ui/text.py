@@ -1,6 +1,7 @@
 """Output for the user."""
 
 import sys
+from collections.abc import Callable
 from typing import Final
 
 from rich.console import Console
@@ -108,9 +109,9 @@ def instruction(quiz: Quiz) -> str:
     return f"[quiz]{quiz.instruction}:[/quiz]"
 
 
-def show_welcome(latest_version: str | None) -> None:
+def show_welcome(write_output: Callable[..., None], latest_version: str | None) -> None:
     """Show the welcome message."""
-    console.print(WELCOME)
+    write_output(WELCOME)
     if latest_version and latest_version.strip("v") > VERSION:
-        console.print(Panel(NEWS.format(latest_version), expand=False))
-        console.print()
+        write_output(Panel(NEWS.format(latest_version), expand=False))
+        write_output()
