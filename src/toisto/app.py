@@ -27,7 +27,7 @@ from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
 from .persistence.topics import load_topics
 from .ui.cli import create_argument_parser, parse_arguments
-from .ui.text import show_welcome
+from .ui.text import console, show_welcome
 
 
 def init() -> tuple[ConfigParser, Namespace, set[Concept], set[Topic], Quizzes, Progress]:
@@ -58,5 +58,5 @@ def main() -> None:
         case "progress":
             show_progress(args.target_language, quizzes, progress, args.sort)
         case _:  # Default command is "practice"
-            show_welcome(latest_version())
-            practice(quizzes, progress, config)
+            show_welcome(console.print, latest_version())
+            practice(console.print, quizzes, progress, config)
