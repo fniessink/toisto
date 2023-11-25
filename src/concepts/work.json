@@ -1,0 +1,457 @@
+{
+    "work": {
+        "en": "work",
+        "fi": "työ",
+        "nl": [
+            "het werk",
+            "de arbeid"
+        ]
+    },
+    "job": {
+        "roots": {
+            "fi": [
+                "work",
+                "place"
+            ]
+        },
+        "en": "job",
+        "fi": "työpaikka",
+        "nl": "de baan"
+    },
+    "company": {
+        "en": [
+            "company",
+            "firm"
+        ],
+        "fi": [
+            "yritys",
+            "firma*"
+        ],
+        "nl": [
+            "de onderneming",
+            "de firma"
+        ]
+    },
+    "study": {
+        "roots": {
+            "fi": [
+                "work",
+                "room"
+            ],
+            "nl": [
+                "work",
+                "room"
+            ]
+        },
+        "en": "study",
+        "fi": "työhuone",
+        "nl": "de werkkamer"
+    },
+    "workplace": {
+        "roots": {
+            "en": [
+                "work",
+                "place"
+            ],
+            "fi": "work",
+            "nl": [
+                "work",
+                "place"
+            ]
+        },
+        "en": "workplace",
+        "fi": "työpiste",
+        "nl": "de werkplek"
+    },
+    "department": {
+        "en": "department",
+        "fi": "osasto",
+        "nl": "de afdeling"
+    },
+    "meeting": {
+        "en": "meeting",
+        "fi": [
+            "kokous",
+            "palaveri",
+            "neuvottelu"
+        ],
+        "nl": "de vergadering"
+    },
+    "meeting room": {
+        "roots": [
+            "meeting",
+            "room"
+        ],
+        "en": "meeting room",
+        "fi": [
+            "neuvotteluhuone",
+            "neukkari*"
+        ],
+        "nl": "de vergaderkamer"
+    },
+    "workday": {
+        "roots": [
+            "work",
+            "day"
+        ],
+        "en": "workday",
+        "fi": "työpäivä",
+        "nl": "de werkdag"
+    },
+    "working time": {
+        "roots": {
+            "en": [
+                "work",
+                "time",
+                "hour"
+            ],
+            "fi": [
+                "work",
+                "time"
+            ],
+            "nl": [
+                "work",
+                "time"
+            ]
+        },
+        "en": [
+            "working time",
+            "working hours"
+        ],
+        "fi": "työaika",
+        "nl": "de werktijd"
+    },
+    "shift": {
+        "roots": {
+            "fi": "work"
+        },
+        "en": "shift",
+        "fi": "työvuoro",
+        "nl": "de dienst"
+    },
+    "overtime": {
+        "roots": {
+            "en": "time",
+            "fi": "work",
+            "nl": "work"
+        },
+        "en": "overtime",
+        "fi": "ylityö",
+        "nl": "het overwerk"
+    },
+    "remote work": {
+        "roots": {
+            "en": "work",
+            "fi": "work",
+            "nl": [
+                "home",
+                "work"
+            ]
+        },
+        "en": "remote work",
+        "fi": "etätyö",
+        "nl": "het thuiswerk"
+    },
+    "part-time job": {
+        "roots": {
+            "en": [
+                "job"
+            ],
+            "fi": [
+                "work"
+            ],
+            "nl": [
+                "werk"
+            ]
+        },
+        "en": "part-time job",
+        "fi": "osa-aikatyö",
+        "nl": "het deeltijdwerk"
+    },
+    "vacation": {
+        "en": "vacation",
+        "fi": "loma",
+        "nl": "de vakantie"
+    },
+    "employment contract": {
+        "roots": {
+            "fi": "work",
+            "nl": "work"
+        },
+        "en": "employment contract",
+        "fi": "työsopimus",
+        "nl": "het arbeidscontract"
+    },
+    "salary": {
+        "en": [
+            "salary",
+            "pay",
+            "wage"
+        ],
+        "fi": "palkka",
+        "nl": [
+            "het salaris",
+            "het loon"
+        ]
+    },
+    "evening allowance": {
+        "roots": "evening",
+        "en": "evening allowance",
+        "fi": "iltalisä",
+        "nl": "de avondtoeslag"
+    },
+    "verokortti": {
+        "en": "(card with personal tax data)",
+        "fi": "verokortti",
+        "nl": "(kaart met persoonlijke belastinggegevens)"
+    },
+    "sick leave": {
+        "roots": {
+            "fi": [
+                "disease",
+                "vacation"
+            ],
+            "nl": "disease"
+        },
+        "en": "sick leave",
+        "fi": "sairausloma",
+        "nl": "het ziekteverlof"
+    },
+    "employer": {
+        "antonym": "emplyee",
+        "roots": {
+            "fi": [
+                "work",
+                "to give"
+            ],
+            "nl": [
+                "work",
+                "to give"
+            ]
+        },
+        "en": "employer",
+        "fi": "työnantaja",
+        "nl": "de werkgever"
+    },
+    "employee": {
+        "antonym": "emplyer",
+        "roots": {
+            "fi": "work",
+            "nl": [
+                "work",
+                "to take"
+            ]
+        },
+        "en": "employee",
+        "fi": "työntekijä",
+        "nl": "de werknemer"
+    },
+    "boss": {
+        "roots": {
+            "fi": "man"
+        },
+        "en": "boss",
+        "fi": [
+            "esimies",
+            "pomo*"
+        ],
+        "nl": "de baas"
+    },
+    "coworker": {
+        "roots": {
+            "fi": [
+                "work",
+                "friend"
+            ]
+        },
+        "en": "coworker",
+        "fi": [
+            "työkaveri",
+            "kollega"
+        ],
+        "nl": "de collega"
+    },
+    "team": {
+        "en": "team",
+        "fi": "tiimi",
+        "nl": "het team"
+    },
+    "information technology": {
+        "en": "information technology",
+        "fi": "informaatioteknologia",
+        "nl": "de informatietechnologie"
+    },
+    "computer": {
+        "en": "computer",
+        "fi": "tietokone",
+        "nl": "de computer"
+    },
+    "laptop": {
+        "en": "laptop",
+        "fi": [
+            "kannettava tietokone",
+            "läppäri"
+        ],
+        "nl": "de laptop"
+    },
+    "email": {
+        "roots": {
+            "en": "mail",
+            "fi": "mail"
+        },
+        "en": "e-mail|email",
+        "fi": "sähkoposti",
+        "nl": "de e-mail"
+    },
+    "username": {
+        "roots": {
+            "en": "name",
+            "nl": "name"
+        },
+        "en": "username",
+        "fi": "käyttäjätunnus",
+        "nl": "de gebruikersnaam"
+    },
+    "password": {
+        "roots": "word",
+        "en": "password",
+        "fi": "salasana",
+        "nl": "het wachtwoord"
+    },
+    "printer": {
+        "en": "printer",
+        "fi": [
+            "tulostin",
+            "printteri*"
+        ],
+        "nl": "de printer"
+    },
+    "to print": {
+        "en": "to print",
+        "fi": [
+            "tulostaa",
+            "printata*"
+        ],
+        "nl": "printen"
+    },
+    "photocopier": {
+        "en": "photocopier|copier",
+        "fi": "kopiokone",
+        "nl": "de kopieermachine"
+    },
+    "to copy": {
+        "en": "to copy",
+        "fi": "kopioida",
+        "nl": "kopiëren"
+    },
+    "to scan": {
+        "en": "to scan",
+        "fi": "skannata",
+        "nl": "scannen"
+    },
+    "telephone": {
+        "en": "telephone|phone",
+        "fi": "puhelin",
+        "nl": "de telefoon"
+    },
+    "mobile telephone": {
+        "en": [
+            "mobile telephone|mobile phone|mobile",
+            "cellullar telephone|cellular phone|cell phone|cellphone"
+        ],
+        "fi": [
+            "matkapuhelin",
+            "kännykkä*"
+        ],
+        "nl": "de mobiele telefoon|de mobiel|het mobieltje"
+    },
+    "smartphone": {
+        "roots": {
+            "en": "telephone",
+            "fi": "telephone"
+        },
+        "en": "smartphone",
+        "fi": "älypuhelin",
+        "nl": "de smartphone"
+    },
+    "project": {
+        "en": "project",
+        "fi": "projekti",
+        "nl": "het project"
+    },
+    "contract": {
+        "en": "contract",
+        "fi": "sopimus",
+        "nl": "het contract"
+    },
+    "schedule": {
+        "roots": {
+            "fi": "time"
+        },
+        "en": "schedule",
+        "fi": "aikataulu",
+        "nl": "het rooster"
+    },
+    "hurry": {
+        "en": [
+            "hurry",
+            "rush"
+        ],
+        "fi": "kiire",
+        "nl": [
+            "de haast",
+            "de druk"
+        ]
+    },
+    "stress": {
+        "en": "stress",
+        "fi": "stressi",
+        "nl": "de stress"
+    },
+    "break": {
+        "en": "break",
+        "fi": "tauko",
+        "nl": "de pauze"
+    },
+    "lunchbreak": {
+        "roots": [
+            "lunch",
+            "break"
+        ],
+        "en": "lunchbreak|lunch break",
+        "fi": "lounastauko",
+        "nl": "de lunchpauze"
+    },
+    "coffee break": {
+        "roots": [
+            "coffee",
+            "break"
+        ],
+        "en": "coffee break",
+        "fi": "kahvitauko",
+        "nl": "de koffiepauze"
+    },
+    "canteen": {
+        "roots": {
+            "fi": "food"
+        },
+        "en": "canteen",
+        "fi": "ruokala",
+        "nl": "de kantine"
+    },
+    "coffee machine": {
+        "roots": "coffee",
+        "en": "coffee machine",
+        "fi": "kahviautomaatti",
+        "nl": "de koffieautomaat"
+    },
+    "packed lunch": {
+        "roots": {
+            "en": "lunch",
+            "nl": "lunch"
+        },
+        "en": "packed lunch",
+        "fi": "eväät",
+        "nl": "het lunchpakket"
+    }
+}
