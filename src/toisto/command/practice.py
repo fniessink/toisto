@@ -21,14 +21,25 @@ from toisto.ui.text import (
 )
 
 
-def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> tuple[Label, bool]:
-    """Present the question, get the answer from the user, and evaluate it."""
+def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> Label:
+    """Present the question and get the answer from the user."""
     while True:
         say(quiz.question_language, quiz.question.pronounceable, config, slow=attempt > 1)
         if answer := Label(input("> ").strip()):
             break
         print("\033[F", end="")  # noqa: T201  # Move cursor one line up
-    return answer, quiz.is_correct(answer)
+    return answer
+
+
+def evaluate_quiz(quiz: Quiz, progress: Progress, answer: Label) -> str:
+    """Evaluate the quiz and return the user feedback."""
+    if quiz.is_correct(answer):
+        progress.mark_correct_answer(quiz)
+        feedback = feedback_correct
+    else:
+        progress.mark_incorrect_answer(quiz)
+        feedback = feedback_incorrect
+    return feedback(answer, quiz)
 
 
 def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
@@ -36,20 +47,15 @@ def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, c
     write_output(instruction(quiz))
     if quiz.quiz_types[0] not in get_args(ListenQuizType):
         write_output(linkify(quiz.question))
-    answer, correct = do_quiz_attempt(quiz, config)
-    if not correct and answer != "?":
+    answer = do_quiz_attempt(quiz, config)
+    if not quiz.is_correct(answer) and answer != "?":
         if quiz.is_question(answer):
             try_again = TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
         else:
             try_again = TRY_AGAIN
         write_output(try_again)
-        answer, correct = do_quiz_attempt(quiz, config, attempt=2)
-    if correct:
-        progress.mark_correct_answer(quiz)
-        feedback = feedback_correct(answer, quiz)
-    else:
-        progress.mark_incorrect_answer(quiz)
-        feedback = feedback_incorrect(answer, quiz)
+        answer = do_quiz_attempt(quiz, config, attempt=2)
+    feedback = evaluate_quiz(quiz, progress, answer)
     write_output(feedback)
 
 
