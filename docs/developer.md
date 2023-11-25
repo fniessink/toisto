@@ -27,17 +27,6 @@ Run the unit tests as follows:
 green
 ```
 
-Example output:
-
-```console
-$ green
-.......................................................................................................................................................................................................
-
-Ran 199 tests in 2.127s using 8 processes
-
-OK (passes=199)
-```
-
 To run the unit tests and get a coverage report, use:
 
 ```console
@@ -52,17 +41,16 @@ Run mypy to check for typing issues:
 mypy src tests
 ```
 
-Example output
-
-```console
-$ mypy src tests
-Success: no issues found in 70 source files
-```
-
 Run Ruff to check for linting issues:
 
 ```console
-ruff .
+ruff check .
+```
+
+Run Ruff to check for formatting issues:
+
+```console
+ruff format --check .
 ```
 
 Run vulture to check for dead code:
@@ -73,18 +61,10 @@ vulture src tests
 
 ## How to format the source code
 
-Run Black to format the code:
+Run Ruff to format the code:
 
 ```console
-black .
-```
-
-Example output:
-
-```console
-$ black .
-All done! ✨ 🍰 ✨
-69 files left unchanged.
+ruff format .
 ```
 
 ## How to release
