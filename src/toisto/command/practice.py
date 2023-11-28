@@ -31,26 +31,17 @@ def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> Label
     return answer
 
 
-def evaluate_second_answer(quiz: Quiz, progress: Progress, answer: Label) -> str:
-    """Evaluate the quiz and return the user feedback."""
+def evaluate_answer(quiz: Quiz, progress: Progress, answer: Label, attempt: int = 1) -> str:
+    """Evaluate the answer and return the user feedback."""
     if quiz.is_correct(answer):
         progress.mark_correct_answer(quiz)
         return feedback_correct(answer, quiz)
+    if answer != "?" and attempt == 1:
+        if quiz.is_question(answer):
+            return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
+        return TRY_AGAIN
     progress.mark_incorrect_answer(quiz)
     return feedback_incorrect(answer, quiz)
-
-
-def evaluate_first_answer(quiz: Quiz, progress: Progress, answer: Label) -> str:
-    """Evaluate the first answer and return the user feedback."""
-    if answer == "?":
-        progress.mark_incorrect_answer(quiz)
-        return feedback_incorrect(answer, quiz)
-    if quiz.is_correct(answer):
-        progress.mark_correct_answer(quiz)
-        return feedback_correct(answer, quiz)
-    if quiz.is_question(answer):
-        return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
-    return TRY_AGAIN
 
 
 def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, config: ConfigParser) -> None:
@@ -58,13 +49,12 @@ def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, c
     write_output(instruction(quiz))
     if quiz.quiz_types[0] not in get_args(ListenQuizType):
         write_output(linkify(quiz.question))
-    answer = do_quiz_attempt(quiz, config)
-    feedback = evaluate_first_answer(quiz, progress, answer)
-    write_output(feedback)
-    if not quiz.is_correct(answer) and answer != "?":
-        answer = do_quiz_attempt(quiz, config, attempt=2)
-        feedback = evaluate_second_answer(quiz, progress, answer)
+    for attempt in range(1, 3):
+        answer = do_quiz_attempt(quiz, config, attempt)
+        feedback = evaluate_answer(quiz, progress, answer, attempt)
         write_output(feedback)
+        if quiz.is_correct(answer) or answer == "?":
+            break
 
 
 def practice(write_output: Callable[..., None], quizzes: Quizzes, progress: Progress, config: ConfigParser) -> None:
