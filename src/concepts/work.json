@@ -29,7 +29,8 @@
         ],
         "nl": [
             "de onderneming",
-            "de firma"
+            "de firma",
+            "het bedrijf"
         ]
     },
     "study": {
@@ -253,6 +254,7 @@
         "en": "boss",
         "fi": [
             "esimies",
+            "esihenkilö",
             "pomo*"
         ],
         "nl": "de baas"
@@ -337,7 +339,10 @@
     "photocopier": {
         "en": "photocopier|copier",
         "fi": "kopiokone",
-        "nl": "de kopieermachine"
+        "nl": [
+            "de kopieermachine",
+            "het kopieerapparaat"
+        ]
     },
     "to copy": {
         "en": "to copy",
