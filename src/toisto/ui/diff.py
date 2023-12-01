@@ -3,6 +3,7 @@
 from difflib import SequenceMatcher
 
 from .dictionary import linkify
+from .style import DELETED, INSERTED
 
 
 def show_whitespace(text: str) -> str:
@@ -12,12 +13,12 @@ def show_whitespace(text: str) -> str:
 
 def inserted(new_text: str) -> str:
     """Return the annotated text."""
-    return f"[inserted]{new_text}[/inserted]"
+    return f"[{INSERTED}]{new_text}[/{INSERTED}]"
 
 
 def deleted(old_text: str) -> str:
     """Return the annotated text."""
-    return f"[deleted]{show_whitespace(old_text)}[/deleted]"
+    return f"[{DELETED}]{show_whitespace(old_text)}[/{DELETED}]"
 
 
 def colored_diff(old_text: str, new_text: str, min_ratio_for_diff: float = 0.6) -> str:
