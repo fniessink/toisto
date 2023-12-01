@@ -12,6 +12,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.ui.dictionary import linkify
+from toisto.ui.style import DELETED, SECONDARY
 from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANSWER_LANGUAGE, console
 
 from ...base import ToistoTestCase
@@ -56,7 +57,7 @@ class PracticeTest(ToistoTestCase):
         patched_print = self.practice(self.quizzes)
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
         self.assertIn(
-            call(f'{INCORRECT}The correct answer is "Ho[deleted]_[/deleted]i".\n'),
+            call(f'{INCORRECT}The correct answer is "Ho[{DELETED}]_[/{DELETED}]i".\n'),
             patched_print.call_args_list,
         )
 
@@ -98,7 +99,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
-        expected_text = f'{CORRECT}[secondary]Meaning "{linkify("Hoi")}".[/secondary]\n'
+        expected_text = f'{CORRECT}[{SECONDARY}]Meaning "{linkify("Hoi")}".[/{SECONDARY}]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="talot\n"))
@@ -111,7 +112,7 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes("fi", "nl", concept).by_quiz_type("pluralize")
         patched_print = self.practice(Quizzes(quizzes))
         expected_call = call(
-            f'{CORRECT}[secondary]Meaning "{linkify("huis")}", respectively "{linkify("huizen")}".[/secondary]\n',
+            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("huis")}", respectively "{linkify("huizen")}".[/{SECONDARY}]\n',
         )
         self.assertIn(expected_call, patched_print.call_args_list)
 
