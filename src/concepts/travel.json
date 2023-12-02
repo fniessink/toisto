@@ -262,17 +262,27 @@
             "nl": "de bussen"
         }
     },
-    "bus driver": {
+    "driver": {
         "roots": {
-            "en": [
-                "bus",
-                "to drive"
-            ],
-            "fi": "bus",
-            "nl": "bus"
+            "en": "to drive"
         },
+        "en": "driver",
+        "fi": [
+            "kuljettaja",
+            "kuski"
+        ],
+        "nl": "de chauffeur"
+    },
+    "bus driver": {
+        "roots": [
+            "bus",
+            "driver"
+        ],
         "en": "bus driver",
-        "fi": "bussikuski",
+        "fi": [
+            "linja-autonkuljettaja",
+            "bussikuski"
+        ],
         "nl": "de buschauffeur"
     },
     "stop": {
@@ -368,12 +378,18 @@
     },
     "taxi": {
         "singular": {
-            "en": "taxi",
+            "en": [
+                "taxi",
+                "cab"
+            ],
             "fi": "taksi",
             "nl": "de taxi"
         },
         "plural": {
-            "en": "taxis",
+            "en": [
+                "taxis",
+                "cabs"
+            ],
             "fi": "taksit",
             "nl": "de taxi's"
         }
@@ -494,7 +510,9 @@
         "nl": "Sla links af bij het kruispunt."
     },
     "street corner": {
-        "roots": ["street"],
+        "roots": [
+            "street"
+        ],
         "en": "street corner",
         "fi": "kadunkulma",
         "nl": "de straathoek"
