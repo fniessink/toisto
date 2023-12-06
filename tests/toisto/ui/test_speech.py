@@ -6,6 +6,7 @@ from subprocess import DEVNULL
 from unittest.mock import Mock, patch
 
 import gtts
+
 from toisto.ui.speech import say
 
 
