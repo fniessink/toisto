@@ -6,6 +6,7 @@ from contextlib import suppress
 from unittest.mock import MagicMock, Mock, patch
 
 import requests
+
 from toisto.metadata import VERSION
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.topic.topic import Topic
