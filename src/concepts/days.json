@@ -253,6 +253,16 @@
         "fi": "Tänään on maanantai.",
         "nl": "Vandaag is het maandag."
     },
+    "today it is saturday": {
+        "roots": [
+            "today",
+            "to be",
+            "saturday"
+        ],
+        "en": "Today it is Saturday.|Today it's Saturday.",
+        "fi": "Tänään on lauantai.",
+        "nl": "Vandaag is het zaterdag."
+    },
     "tomorrow it is tuesday": {
         "roots": [
             "tomorrow",
@@ -262,6 +272,16 @@
         "en": "Tomorrow it is Tuesday.|Tomorrow it's Tuesday.",
         "fi": "Huomenna on tiistai.",
         "nl": "Morgen is het dinsdag."
+    },
+    "tomorrow it is sunday": {
+        "roots": [
+            "tomorrow",
+            "to be",
+            "sunday"
+        ],
+        "en": "Tomorrow it is sunday.|Tomorrow it's Sunday.",
+        "fi": "Huomenna on sunnuntai.",
+        "nl": "Morgen is het zondag."
     },
     "what day is it today": {
         "roots": {
@@ -300,5 +320,15 @@
         "en": "Good weekend!",
         "fi": "Hauskaa viikonloppua!",
         "nl": "Prettig weekend!"
+    },
+    "tomorrow it is sunday what day is it today": {
+        "roots": [
+            "tomorrow it is sunday",
+            "what day is it today"
+        ],
+        "answer": "today it is saturday",
+        "en": "Tomorrow it is Sunday. What day is it today?|Tomorrow it's Sunday. What day is it today?",
+        "fi": "Huomenna on sunnuntai. Mikä päivä tänään on?|Huomenna on sunnuntai. Mikä päivä on tänään?",
+        "nl": "Morgen is het zondag. Welke dag is het vandaag?"
     }
 }
