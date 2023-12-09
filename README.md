@@ -130,7 +130,7 @@ oranje
 
 Toisto quizzes you repeatably on words and phrases in the language you want to practice, your target language. For each quiz, Toisto keeps track of how long you answer it correctly. When you answer a quiz correctly multiple times, Toisto will silence the quiz for a while. The longer the time you have answered the quiz correctly, the longer a quiz is silenced. This starts at a few minutes, but then increases rapidly when you keep answering correctly.
 
-At the moment, Toisto has the following types of quizzes:
+Toisto supports quiz types such as:
 
 - **Translate** a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "vrijdag").
 - **Listen** to a word or phrase from your target language and type what you hear either in your target language or your source language. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" and then you have to type ether "Tänään on maanantai" or "Today is Monday".
@@ -142,6 +142,8 @@ At the moment, Toisto has the following types of quizzes:
 - Give the **antonym** of adjectives. For example, what is the antonym of "good"? The answer is of course "bad".
 - Change the **sentence type** of declarative sentences into interrogative sentences and vice versa. For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?".
 - **Answer a question**. For example, a question in Finnish could be "Pidätko sinä jäätelöstä?" (meaning "Do you like ice cream?") and correct answers would be "Pidän" (meaning "Yes, I do") and "En" (meaning "No, I don't").
+
+See [the documentation](docs/software.md#quizzes) for the complete list of quiz types.
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress-{target language}.json` in your home folder, for example `.toisto-progress-fi.json`.
 

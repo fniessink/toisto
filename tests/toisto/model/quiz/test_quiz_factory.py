@@ -1138,6 +1138,24 @@ class NumberTest(ToistoTestCase):
         )
 
 
+class AbbreviationTest(ToistoTestCase):
+    """Unit tests for abbreviations."""
+
+    def test_abbreviations(self):
+        """Test that quizzes can be generated for abbreviations."""
+        concept = create_concept("llc", {"full form": dict(nl="naamloze vennootschap"), "abbreviation": dict(nl="NV")})
+        full_form, abbreviation = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(full_form, "nl", "nl", "naamloze vennootschap", ["naamloze vennootschap"], "dictate"),
+                self.create_quiz(abbreviation, "nl", "nl", "NV", ["NV"], "dictate"),
+                self.create_quiz(concept, "nl", "nl", "naamloze vennootschap", ["NV"], "abbreviate"),
+                self.create_quiz(concept, "nl", "nl", "NV", ["naamloze vennootschap"], "give full form"),
+            },
+            create_quizzes("nl", "en", concept),
+        )
+
+
 class QuizNoteTest(ToistoTestCase):
     """Unit tests for the quiz notes."""
 

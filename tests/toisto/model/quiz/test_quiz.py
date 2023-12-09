@@ -114,6 +114,8 @@ class QuizTest(QuizTestCase):
             "Give the [underline]negative[/underline] in",
             "Give the [underline]cardinal[/underline] in",
             "Give the [underline]ordinal[/underline] in",
+            "Give the [underline]abbreviation[/underline] in",
+            "Give the [underline]full form[/underline] in",
         ]
         for expected_instruction, quiz_type in zip(expected_instructions, get_args(QuizType), strict=True):
             quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
