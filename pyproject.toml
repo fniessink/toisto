@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.14.0"
+version = "0.14.1"
 authors = [
   { name="Frank Niessink", email="frank@niessink.com" },
 ]
@@ -108,5 +108,5 @@ section-order = ["future", "standard-library", "third-party", "second-party", "f
 where = ["src"]
 
 [tool.setuptools.package-data]
+"*" = ["*.json"]
 languages = ["*.txt"]
-topics = ["*.json"]
