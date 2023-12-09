@@ -4,7 +4,7 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## 0.14.0 - 2023-12-09
 
 ### Fixed
 
@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Make the warning for answering in the wrong language more prominent. Changes [#453](https://github.com/fniessink/toisto/issues/453).
 - Distinguish between the meanings of questions and answers by inserting  "respectively" between them. Changes [#442](https://github.com/fniessink/toisto/issues/442).
 - On Macos, when there is no internet connection, use the "enhanced" voices of the `say` command for Finnish and English.
+
+### Added
+
+- Added several topics and concepts.
 
 ## 0.13.0 - 2023-11-12
 
