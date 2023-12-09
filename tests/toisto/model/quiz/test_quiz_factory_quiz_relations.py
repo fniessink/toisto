@@ -2,7 +2,7 @@
 
 from typing import get_args
 
-from toisto.model.quiz.quiz import GrammaticalQuizType, ListenQuizType, TranslationQuizType
+from toisto.model.quiz.quiz import ListenQuizType, TranslationQuizType
 from toisto.model.quiz.quiz_factory import create_quizzes
 
 from .test_quiz_factory import QuizFactoryTestCase
@@ -22,7 +22,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_non_grammatical_quizzes_block_grammatical_quizzes(self):
         """Test that listening and translation quizzes block grammatical quizzes."""
         quizzes = create_quizzes("fi", "nl", self.create_noun_with_grammatical_number())
-        grammatical_quizzes = {quiz for quiz in quizzes if quiz in get_args(GrammaticalQuizType)}
+        grammatical_quizzes = {quiz for quiz in quizzes if quiz.is_grammatical}
         non_grammatical_quizzes = quizzes - grammatical_quizzes
         for quiz in grammatical_quizzes:
             self.assertTrue(quiz.is_blocked_by(non_grammatical_quizzes))

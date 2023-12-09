@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Toisto wouldn't warn the user when answering in the wrong language in the case of dictation quizzes. Fixes [#453](https://github.com/fniessink/toisto/issues/453).
+- Toisto would incorrectly warn the user about answering in the wrong language in the case of grammatical quizzes if the user would answer with the question. Fixes [#509](https://github.com/fniessink/toisto/issues/509).
 
 ### Changed
 
