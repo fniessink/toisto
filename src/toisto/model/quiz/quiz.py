@@ -156,7 +156,7 @@ class Quiz:
     @property
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        if self.quiz_types[0] in get_args(GrammaticalQuizType):
+        if self.is_grammatical:
             categories = " ".join(
                 QUIZ_TYPE_GRAMMATICAL_CATEGORIES[cast(GrammaticalQuizType, quiz_type)] for quiz_type in self.quiz_types
             )
@@ -190,6 +190,11 @@ class Quiz:
         note_applicable = self.question_language != self.answer_language or {"answer", "dictate"} & set(self.quiz_types)
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
         return f" ({question_note})" if (note_applicable and question_note) else ""
+
+    @property
+    def is_grammatical(self) -> bool:
+        """Return whether this is a grammatical quiz."""
+        return self.quiz_types[0] in get_args(GrammaticalQuizType)
 
 
 class Quizzes(set[Quiz]):

@@ -74,6 +74,14 @@ class PracticeTest(ToistoTestCase):
         patched_print = self.practice(quizzes)
         self.assertIn(call(TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish")), patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(return_value="talo\n"))
+    def test_answer_with_question_grammar_quiz(self):
+        """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
+        concept = create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
+        quizzes = create_quizzes("fi", "fi", concept).by_quiz_type("pluralize")
+        patched_print = self.practice(quizzes)
+        self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
+
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
     def test_quiz_empty_answer(self, mock_print: Mock):
