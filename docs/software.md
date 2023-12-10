@@ -526,6 +526,27 @@ Cardinal and ordinal numbers can be specified as follows:
 }
 ```
 
+### Abbreviations
+
+Abbreviations can be specified as follows:
+
+```json
+{
+    "llc": {
+        "full form": {
+            "en": "limited liability company",
+            "fi": "osakeyhtiö",
+            "nl": "de naamloze vennootschap"
+        },
+        "abbreviation": {
+            "en": "LLC",
+            "fi": "oy",
+            "nl": "de NV"
+        }
+    }
+}
+```
+
 ### Concept relationships
 
 #### Compound concepts
@@ -727,6 +748,7 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 13. Quizzes to change cardinal numbers into ordinal numbers and vice versa.
 14. Quizzes to give the antonym.
 15. Quizzes to answer a question.
+16. Quizzes to abbreviate a concept or give the full-form of the abbreviation.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 

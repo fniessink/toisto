@@ -11,6 +11,7 @@ Tense = Literal["present tense", "past tense"]
 SentenceForm = Literal["declarative", "interrogative"]
 GrammaticalPolarity = Literal["affirmative", "negative"]
 Number = Literal["cardinal", "ordinal"]
+Abbreviation = Literal["abbreviation", "full form"]
 GrammaticalCategory = Literal[
     GrammaticalGender,
     GrammaticalNumber,
@@ -21,4 +22,5 @@ GrammaticalCategory = Literal[
     SentenceForm,
     GrammaticalPolarity,
     Number,
+    Abbreviation,
 ]
