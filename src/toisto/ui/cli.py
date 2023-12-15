@@ -40,16 +40,38 @@ def check_language(language: str) -> str:
     raise ArgumentTypeError(message)
 
 
-def add_topic_arguments(parser: ArgumentParser, topics: set[Topic]) -> None:
-    """Add the topic arguments to the parser."""
+def add_selection_arguments(parser: ArgumentParser, topics: set[Topic], concepts: set[Concept]) -> None:
+    """Add the selection arguments."""
+    selection_group = parser.add_mutually_exclusive_group()
+    concept_ids = sorted(concept.concept_id for concept in concepts)
+    selection_group.add_argument(
+        "-c",
+        "--concept",
+        action="append",
+        default=[],
+        metavar="{concept}",
+        help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
+    )
     topic_names = ", ".join(sorted(topic.name for topic in topics))
-    parser.add_argument(
+    selection_group.add_argument(
         "-T",
         "--topic",
         action="append",
         default=[],
         metavar="{topic}",
         help=f"topic to use, can be repeated; default: all; built-in topics: {topic_names}",
+    )
+
+
+def add_file_arguments(parser: ArgumentParser) -> None:
+    """Add the file arguments."""
+    parser.add_argument(
+        "-C",
+        "--concept-file",
+        action="append",
+        default=[],
+        metavar="{concept file}",
+        help="extra concept file to use, can be repeated",
     )
     parser.add_argument(
         "-o",
@@ -58,27 +80,6 @@ def add_topic_arguments(parser: ArgumentParser, topics: set[Topic]) -> None:
         default=[],
         metavar="{topic file}",
         help="extra topic file to use, can be repeated",
-    )
-
-
-def add_concept_arguments(parser: ArgumentParser, concepts: set[Concept]) -> None:
-    """Add the concept arguments to the parser."""
-    concept_ids = sorted(concept.concept_id for concept in concepts)
-    parser.add_argument(
-        "-c",
-        "--concept",
-        action="append",
-        default=[],
-        metavar="{concept}",
-        help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
-    )
-    parser.add_argument(
-        "-C",
-        "--concept-file",
-        action="append",
-        default=[],
-        metavar="{concept file}",
-        help="extra concept file to use, can be repeated",
     )
 
 
@@ -107,8 +108,8 @@ class CommandBuilder:
             formatter_class=RichHelpFormatter,
         )
         add_language_arguments(parser, self.config)
-        add_topic_arguments(parser, self.topics)
-        add_concept_arguments(parser, self.concepts)
+        add_selection_arguments(parser, self.topics, self.concepts)
+        add_file_arguments(parser)
         return parser
 
     def add_practice_command(self) -> None:
