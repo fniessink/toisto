@@ -98,4 +98,4 @@ class ConceptFilterTest(unittest.TestCase):
             ["missing"],
             ArgumentParser(),
         )
-        self.assertIn("No concepts found that match your selection criteria", sys_stderr_write.call_args_list[1][0][0])
+        self.assertIn("Topic 'missing' not found", sys_stderr_write.call_args_list[1][0][0])

@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Give an error message if a selected concept or topics does not exist. Closes [#516](https://github.com/fniessink/toisto/issues/516).
+
 ### Added
 
 - Support abbreviations. Closes [#498](https://github.com/fniessink/toisto/issues/498).
