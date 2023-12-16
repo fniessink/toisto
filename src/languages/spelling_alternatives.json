@@ -1,0 +1,60 @@
+{
+    "en": {
+        "\\bI am\\b": "I'm",
+        "\\byou are\\b": "you're",
+        "^You are\\b": "You're",
+        "\\bit is\\b": "it's",
+        "^It is\\b": "It's",
+        "\\bshe is\\b": "she's",
+        "^She is\\b": "She's",
+        "\\bhe is\\b": "he's",
+        "^He is\\b": "He's",
+        "\\bwe are\\b": "we're",
+        "^We are\\b": "We're",
+        "\\bthey are\\b": "they're",
+        "^They are\\b": "They're",
+        "\\bI have\\b": "I've",
+        "\\byou have\\b": "you've",
+        "^You have\\b": "You've",
+        "\\bshe has\\b": "she's",
+        "^She has\\b": "She's",
+        "\\bhe has\\b": "he's",
+        "^He has\\b": "He's",
+        "\\bwe have\\b": "we've",
+        "^We have\\b": "We've",
+        "\\bthey have\\b": "they've",
+        "^They have\\b": "They've",
+        "\\bis not\\b": "isn't",
+        "\\bare not\\b": "aren't",
+        "\\bhas not\\b": "hasn't",
+        "\\bhave not\\b": "haven't",
+        "\\bdoes not\\b": "doesn't",
+        "\\bdo not\\b": "don't",
+        "\\bwas not\\b": "wasn't",
+        "\\bwere not\\b": "weren't",
+        "\\bdid not\\b": "didn't",
+        "\\bhad not\\b": "hadn't"
+    },
+    "fi": {
+        "^[ms]inä ": "",
+        " [ms]inä ": " ",
+        " [ms]inä\\?": "?",
+        "^[MS]inä ": "",
+        "^[mt]e ": "",
+        " [mt]e ": " ",
+        " [mt]e\\?": "?",
+        "^[MT]e ": ""
+    },
+    "nl": {
+        "\\bjij\\b": "je",
+        "^Jij\\b": "Je",
+        "\\bzij\\b": "ze",
+        "^Zij\\b": "Ze",
+        "\\bwij\\b": "we",
+        "^Wij\\b": "We"
+    },
+    "nl-if-source-language": {
+        "^de ": "",
+        "^het ": ""
+    }
+}

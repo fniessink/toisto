@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Sequence
 from string import punctuation
-from typing import Final
+from typing import ClassVar, Final
 
 from . import Language
+
+SpellingAlternatives = dict[Language, dict[re.Pattern, str]]
 
 
 class Label(str):
@@ -23,6 +26,7 @@ class Label(str):
     QUESTION_NOTE_INDEX: Final = 1
     ANSWER_NOTE_INDEX: Final = 2
     SPELLING_ALTERNATIVES_SEP: Final = "|"
+    ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
     def __new__(cls, _language: Language, value: str) -> Label:  # noqa: PYI034
         """Create an instance of the label."""
@@ -46,8 +50,17 @@ class Label(str):
 
     @property
     def spelling_alternatives(self) -> Labels:
-        """Extract the spelling alternatives from the label."""
-        return label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+        """Extract the spelling alternatives from the label and generate additional spelling alternatives."""
+        alternatives = label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+        generated_alternatives = set()
+        for alternative in alternatives:
+            for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
+                if re.search(pattern, alternative):
+                    generated_alternative = re.sub(pattern, replacement, alternative)
+                    if alternative[0].isupper():
+                        generated_alternative = generated_alternative[0].capitalize() + generated_alternative[1:]
+                    generated_alternatives.add(generated_alternative)
+        return alternatives + tuple(Label(self.language, alternative) for alternative in generated_alternatives)
 
     @property
     def question_note(self) -> str:

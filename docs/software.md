@@ -50,9 +50,56 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 
 ```json
 {
-    "tomorrow it is tuesday": {
-        "en": "Tomorrow it is Tuesday.|Tomorrow it's Tuesday.",
-        "fi": "Huomenna on tiistai."
+    "vegetable": {
+        "singular": {
+            "en": "vegetable",
+            "nl": "de groente"
+        },
+        "plural": {
+            "en": "vegetables",
+            "nl": "de groenten|de groentes"
+        }
+    }
+}
+```
+
+To prevent having to spell out that "it's" is an alternative for "it is" in every label that contains "it is", Toisto has [builtin spelling variants](../src/languages/spelling_alternatives.json).
+
+The builtin spelling alternatives are specified as a mapping from regular expressions to replacements, organized per language:
+
+```json
+{
+    "en": {
+        "\\bI am\\b": "I'm",
+        "\\byou are\\b": "you're",
+        "^You are\\b": "You're",
+        "...": "..."
+    },
+    "fi": {
+        "^[ms]inä ": "",
+        " [ms]inä ": " ",
+        "...": "..."
+    },
+    "nl": {
+        "\\bjij\\b": "je",
+        "^Jij\\b": "Je",
+        "...": "..."
+    }
+}
+```
+
+> [!NOTE]
+> Backslashes need to be escaped in the JSON file, hence the double backslashes.
+
+Some spelling alternatives should only be applied if the language is the user's source language and not when the language is the user's target language. For example, users with Dutch as target language should learn nouns together with their article ("de" or "het"), but users with Dutch as source language should be allowed to omit them.
+
+These spelling alternatives can be specified under the `<language identifier>-if-source-language` key:
+
+```json
+{
+    "nl-if-source-language": {
+        "^de ": "",
+        "^het ": ""
     }
 }
 ```

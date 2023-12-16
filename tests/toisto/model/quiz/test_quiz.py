@@ -6,6 +6,7 @@ from toisto.model.language.concept import ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import QuizType
+from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 
 from ....base import ToistoTestCase
 
@@ -59,31 +60,6 @@ class QuizTest(QuizTestCase):
         """Test that the other answers are not returned if the quiz type is dictate."""
         quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "dictate")
         self.assertEqual((), quiz.other_answers("Een"))
-
-    def test_spelling_alternative_of_answer(self):
-        """Test that a quiz can deal with alternative spellings of answers."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén"])
-        self.assertEqual(Label("nl", "Een"), quiz.answer)
-
-    def test_spelling_alternative_of_question(self):
-        """Test that a quiz can deal with alternative spellings of the question."""
-        quiz = self.create_quiz(self.concept, "nl", "fi", "Een|Eén", ["Yksi"])
-        self.assertEqual(Label("nl", "Een"), quiz.question)
-
-    def test_spelling_alternative_is_correct(self):
-        """Test that an answer that matches a spelling alternative is correct."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
-        for alternative in ("Een", "Eén", "één"):
-            self.assertTrue(quiz.is_correct(alternative))
-
-    def test_other_answers_with_spelling_alternatives(self):
-        """Test the spelling alternatives are returned as other answers."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
-        alternatives = (Label("nl", "Een"), Label("nl", "Eén"), Label("nl", "één"))
-        for alternative in alternatives:
-            other_answers = list(alternatives)
-            other_answers.remove(alternative)
-            self.assertEqual(tuple(other_answers), quiz.other_answers(alternative))
 
     def test_instructions(self):
         """Test the instructions."""
@@ -153,9 +129,7 @@ class QuizTest(QuizTestCase):
     def test_question_note_is_ignored_in_answer(self):
         """Test that a note in the answer is ignored."""
         quiz = self.create_quiz(self.concept, "nl", "en", "Jij bent", ["You are;singular"])
-        answer = Label("en", "You are")
-        self.assertEqual(answer, quiz.answer)
-        self.assertEqual((answer,), quiz.answers)
+        self.assertEqual(Label("en", "You are"), quiz.answer)
 
     def test_all_answer_notes_are_shown(self):
         """Test that all answer notes are shown."""
@@ -177,6 +151,54 @@ class QuizTest(QuizTestCase):
         """Test that sentences get an automatic note when the quiz type is a listen quiz."""
         quiz = self.create_quiz(self.concept, "fi", "nl", "Terve!", ["Hallo!"], "interpret")
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
+
+
+class QuizSpellingAlternativesTests(QuizTestCase):
+    """Unit tests for checking spelling alternatives."""
+
+    def test_spelling_alternative_of_answer(self):
+        """Test that a quiz can deal with alternative spellings of answers."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén"])
+        self.assertEqual(Label("nl", "Een"), quiz.answer)
+
+    def test_spelling_alternative_of_question(self):
+        """Test that a quiz can deal with alternative spellings of the question."""
+        quiz = self.create_quiz(self.concept, "nl", "fi", "Een|Eén", ["Yksi"])
+        self.assertEqual(Label("nl", "Een"), quiz.question)
+
+    def test_spelling_alternative_is_correct(self):
+        """Test that an answer that matches a spelling alternative is correct."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
+        for alternative in ("Een", "Eén", "één"):
+            self.assertTrue(quiz.is_correct(Label("nl", alternative)))
+
+    def test_other_answers_with_spelling_alternatives(self):
+        """Test the spelling alternatives are returned as other answers."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
+        alternatives = ("Een", "Eén", "één")
+        for alternative in alternatives:
+            other_answers = list(alternatives)
+            other_answers.remove(alternative)
+            self.assertEqual(tuple(Label("nl", answer) for answer in other_answers), quiz.other_answers(alternative))
+
+    def test_generated_spelling_alternative_is_correct(self):
+        """Test that a generated spelling alternative is accepted as answer."""
+        load_spelling_alternatives("en", "nl")
+        quiz = self.create_quiz(self.concept, "nl", "en", "Het is waar", ["It is true"])
+        self.assertTrue(quiz.is_correct("It's true"))
+        quiz = self.create_quiz(self.concept, "nl", "en", "Het is.", ["It is."])
+        self.assertTrue(quiz.is_correct("It's."))
+        quiz = self.create_quiz(self.concept, "nl", "en", "Ik ben Alice.", ["I am Alice."])
+        self.assertTrue(quiz.is_correct("I'm Alice."))
+        quiz = self.create_quiz(self.concept, "nl", "en", "Ik overval.", ["I ambush."])
+        self.assertFalse(quiz.is_correct("I'mbush."))
+        quiz = self.create_quiz(self.concept, "en", "nl", "house", ["het huis"])
+        self.assertTrue(quiz.is_correct("huis"))
+        load_spelling_alternatives("fi", "en")
+        quiz = self.create_quiz(self.concept, "en", "fi", "I am", ["minä olen"])
+        self.assertTrue(quiz.is_correct("olen"))
+        quiz = self.create_quiz(self.concept, "en", "fi", "I am Alice.", ["Minä olen Alice."])
+        self.assertTrue(quiz.is_correct("Olen Alice."))
 
 
 class QuizEqualityTests(QuizTestCase):
