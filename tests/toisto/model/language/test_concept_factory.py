@@ -1,6 +1,7 @@
 """Concept factory unit tests."""
 
 from toisto.model.language.concept_factory import create_concept
+from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
 
@@ -108,9 +109,9 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
         concept = create_concept("Finnish Eastern cake", dict(fi="mämmi", nl="(Finse paascake)"))
-        self.assertEqual(("mämmi",), concept.labels("fi"))
+        self.assertEqual((Label("fi", "mämmi"),), concept.labels("fi"))
         self.assertEqual((), concept.labels("nl"))
-        self.assertEqual(("Finse paascake",), concept.meanings("nl"))
+        self.assertEqual((Label("nl", "Finse paascake"),), concept.meanings("nl"))
 
     def test_answer_only(self):
         """Test that a concept can be flagged as answer only."""

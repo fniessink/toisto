@@ -39,7 +39,7 @@ class ConceptFactory:
     def _labels(self) -> dict[Language, Labels]:
         """Return the concept labels."""
         return {
-            cast(Language, key): label_factory(cast(str | list[str], value))
+            cast(Language, key): label_factory(cast(Language, key), cast(str | list[str], value))
             for key, value in self.concept_dict.items()
             if key in ALL_LANGUAGES
         }
@@ -47,7 +47,7 @@ class ConceptFactory:
     def _meanings(self) -> dict[Language, Labels]:
         """Return the concept meanings."""
         return {
-            cast(Language, key): meaning_factory(cast(str | list[str], value))
+            cast(Language, key): meaning_factory(cast(Language, key), cast(str | list[str], value))
             for key, value in self.concept_dict.items()
             if key in ALL_LANGUAGES
         }

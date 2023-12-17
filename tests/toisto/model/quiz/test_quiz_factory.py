@@ -661,7 +661,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         female, male = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(female, "fi", "en", Label("hän on;female"), ("she is|she's",), "read"),
+                self.create_quiz(female, "fi", "en", "hän on;female", ("she is|she's",), "read"),
                 self.create_quiz(female, "fi", "fi", "hän on;female", ("hän on;female",), "dictate"),
                 self.create_quiz(female, "fi", "en", "hän on;female", ("she is|she's",), "interpret"),
                 self.create_quiz(female, "en", "fi", "she is|she's", ("hän on;female",), "write"),
@@ -1289,7 +1289,7 @@ class MeaningsTest(ToistoTestCase):
         quizzes = create_quizzes("fi", "en", concept)
         interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
         for quiz in interpret_quizzes:
-            self.assertEqual(("kylla", "joo"), quiz.question_meanings)
+            self.assertEqual((Label("fi", "kylla"), Label("fi", "joo")), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
 
     def test_interpret_with_colloquial(self):
@@ -1298,7 +1298,7 @@ class MeaningsTest(ToistoTestCase):
         quizzes = create_quizzes("fi", "nl", concept)
         interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
         for quiz in interpret_quizzes:
-            self.assertEqual(("kaksikymmentä",), quiz.question_meanings)
+            self.assertEqual((Label("fi", "kaksikymmentä"),), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
 
 

@@ -25,7 +25,7 @@ def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> Label
     """Present the question and get the answer from the user."""
     while True:
         say(quiz.question_language, quiz.question.pronounceable, config, slow=attempt > 1)
-        if answer := Label(input("> ").strip()):
+        if answer := Label(quiz.answer_language, input("> ").strip()):
             break
         print("\033[F", end="")  # noqa: T201  # Move cursor one line up
     return answer
@@ -36,7 +36,7 @@ def evaluate_answer(quiz: Quiz, progress: Progress, answer: Label, attempt: int 
     if quiz.is_correct(answer):
         progress.mark_correct_answer(quiz)
         return feedback_correct(answer, quiz)
-    if answer != "?" and attempt == 1:
+    if answer != Label(quiz.answer_language, "?") and attempt == 1:
         if quiz.is_question(answer) and not quiz.is_grammatical:
             return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
         return TRY_AGAIN
@@ -53,7 +53,7 @@ def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, c
         answer = do_quiz_attempt(quiz, config, attempt)
         feedback = evaluate_answer(quiz, progress, answer, attempt)
         write_output(feedback)
-        if quiz.is_correct(answer) or answer == "?":
+        if quiz.is_correct(answer) or answer == Label(quiz.answer_language, "?"):
             break
 
 

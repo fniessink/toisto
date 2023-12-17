@@ -6,11 +6,13 @@ from collections.abc import Sequence
 from string import punctuation
 from typing import Final
 
+from . import Language
+
 
 class Label(str):
     """Class representing labels for concepts."""
 
-    __slots__ = ()
+    __slots__ = ("language",)
 
     # Labels can have one question note and multiple answer notes. The question note is shown before a quiz is
     # presented to the user. The answer notes are shown afterwards. The format is:
@@ -22,18 +24,30 @@ class Label(str):
     ANSWER_NOTE_INDEX: Final = 2
     SPELLING_ALTERNATIVES_SEP: Final = "|"
 
+    def __new__(cls, _language: Language, value: str) -> Label:  # noqa: PYI034
+        """Create an instance of the label."""
+        return super().__new__(cls, value)  # This is needed because we overwrite an immutable type (str)
+
+    def __init__(self, language: Language, _value: str) -> None:
+        """Initialize the label."""
+        self.language = language
+
     def __eq__(self, other: object) -> bool:
-        """Ignore notes when determining equality."""
-        return self.without_notes == Label(other).without_notes
+        """Return whether the labels are equal."""
+        if isinstance(other, Label):
+            return self.language == other.language and self.without_notes == other.without_notes
+        return False
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
-        return self.without_notes != Label(other).without_notes
+        if isinstance(other, Label):
+            return self.language != other.language or self.without_notes != other.without_notes
+        return True
 
     @property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
-        return label_factory(self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+        return label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
 
     @property
     def question_note(self) -> str:
@@ -71,17 +85,17 @@ class Label(str):
 Labels = tuple[Label, ...]
 
 
-def label_factory(string: str | list[str]) -> Labels:
+def label_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the labels from a string or list of strings."""
     labels = string if isinstance(string, list) else [string]
-    return tuple(Label(label) for label in labels if not label.startswith("("))
+    return tuple(Label(language, label) for label in labels if not label.startswith("("))
 
 
-def meaning_factory(string: str | list[str]) -> Labels:
+def meaning_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the meanings from a string or list of strings."""
     meanings = string if isinstance(string, list) else [string]
     return tuple(
-        Label(meaning.removeprefix("(").removesuffix(")"))
+        Label(language, meaning.removeprefix("(").removesuffix(")"))
         for meaning in meanings
         if not meaning.endswith(Label.COLLOQUIAL_POSTFIX)
     )
