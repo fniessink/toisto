@@ -80,9 +80,10 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
     def test_practice_help(self, sys_stdout_write: Mock):
         """Test that the practice help message is displayed."""
         related = RelatedConcepts(None, (), {}, (), ())
+        english = Language("en")
         concepts = {
-            Concept(ConceptId("foo"), {Language("en"): (Label("foo"),)}, {}, related, False),
-            Concept(ConceptId("bar"), {Language("en"): (Label("bar"),)}, {}, related, False),
+            Concept(ConceptId("foo"), {english: (Label(english, "foo"),)}, {}, related, False),
+            Concept(ConceptId("bar"), {english: (Label(english, "bar"),)}, {}, related, False),
         }
         topics = {Topic("T1", frozenset([ConceptId("foo")])), Topic("T2", frozenset([ConceptId("bar")]))}
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))

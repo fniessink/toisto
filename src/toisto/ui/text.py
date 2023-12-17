@@ -63,12 +63,11 @@ def feedback_correct(guess: Label, quiz: Quiz) -> str:
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    if guess == "?":
+    if guess == Label(quiz.answer_language, "?"):
         label = "The correct answer is" if len(quiz.answers) == 1 else "The correct answers are"
         feedback = f"{label} {linkify_and_enumerate(*quiz.answers)}.\n" + meaning(quiz)
     else:
-        evaluation = "" if guess == "?" else INCORRECT
-        label = f'{evaluation}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
+        label = f'{INCORRECT}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
         feedback = label + meaning(quiz) + other_answers(quiz.answer, quiz)
     return feedback + answer_notes(quiz)
 

@@ -8,6 +8,7 @@ from unittest.mock import Mock, patch
 from toisto.model.filter import filter_concepts
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.language.label import Label
 from toisto.model.topic.topic import Topic
 
 from ....base import ToistoTestCase
@@ -37,8 +38,8 @@ class ConceptTest(ToistoTestCase):
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""
         concept = create_concept("one", dict(fi="yksi", nl="een"))
-        self.assertEqual(("yksi",), concept.meanings("fi"))
-        self.assertEqual(("een",), concept.meanings("nl"))
+        self.assertEqual((Label("fi", "yksi"),), concept.meanings("fi"))
+        self.assertEqual((Label("nl", "een"),), concept.meanings("nl"))
         self.assertEqual((), concept.meanings("en"))
 
     def test_meaning_composite_concept(self):
@@ -47,8 +48,8 @@ class ConceptTest(ToistoTestCase):
             "table",
             dict(singular=dict(en="table", nl="de tafel"), plural=dict(en="tables", nl="de tafels")),
         )
-        self.assertEqual(("table", "tables"), concept.meanings("en"))
-        self.assertEqual(("de tafel", "de tafels"), concept.meanings("nl"))
+        self.assertEqual((Label("en", "table"), Label("en", "tables")), concept.meanings("en"))
+        self.assertEqual((Label("nl", "de tafel"), Label("nl", "de tafels")), concept.meanings("nl"))
         self.assertEqual((), concept.meanings("fi"))
 
     def test_meaning_mixed_concept(self):
@@ -57,8 +58,8 @@ class ConceptTest(ToistoTestCase):
             "to eat/third person",
             dict(fi="hän syö", female=dict(nl="zij eet"), male=dict(nl="hij eet")),
         )
-        self.assertEqual(("hän syö",), concept.meanings("fi"))
-        self.assertEqual(("zij eet", "hij eet"), concept.meanings("nl"))
+        self.assertEqual((Label("fi", "hän syö"),), concept.meanings("fi"))
+        self.assertEqual((Label("nl", "zij eet"), Label("nl", "hij eet")), concept.meanings("nl"))
         self.assertEqual((), concept.meanings("en"))
 
 

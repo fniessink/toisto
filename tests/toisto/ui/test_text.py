@@ -2,6 +2,7 @@
 
 from unittest import TestCase
 
+from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -17,7 +18,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.guess = Label("terve")
+        self.guess = Label(Language("fi"), "terve")
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
@@ -50,7 +51,7 @@ class FeedbackTestCase(ToistoTestCase):
             f'{INCORRECT}The correct answer is "[{INSERTED}]{linkify("terve")}[/{INSERTED}]".\n'
             f'[{SECONDARY}]Meaning "{linkify("hoi")}".[/{SECONDARY}]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("", quiz))
+        self.assertEqual(expected_text, feedback_incorrect(Label("fi", "incorrect"), quiz))
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
@@ -60,7 +61,7 @@ class FeedbackTestCase(ToistoTestCase):
             f'{INCORRECT}The correct answer is "[{INSERTED}]{linkify("terve")}[/{INSERTED}]".\n'
             f'[{SECONDARY}]Another correct answer is "{linkify("hei")}".[/{SECONDARY}]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("", quiz))
+        self.assertEqual(expected_text, feedback_incorrect(Label("fi", "incorrect"), quiz))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -69,7 +70,7 @@ class FeedbackTestCase(ToistoTestCase):
         expected_text = (
             f'The correct answer is "{linkify("terve")}".\n[{SECONDARY}]Meaning "{linkify("hoi")}".[/{SECONDARY}]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("?", quiz))
+        self.assertEqual(expected_text, feedback_incorrect(Label("fi", "?"), quiz))
 
     def test_show_feedback_on_question_mark_with_multiple_answers(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -79,7 +80,7 @@ class FeedbackTestCase(ToistoTestCase):
             'The correct answers are "[link=https://en.wiktionary.org/wiki/terve]terve[/link]", '
             '"[link=https://en.wiktionary.org/wiki/hei]hei[/link]".\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect("?", quiz))
+        self.assertEqual(expected_text, feedback_incorrect(Label("fi", "?"), quiz))
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
@@ -103,7 +104,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = create_quizzes("nl", "nl", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             f"[{SECONDARY}]Note: Hoi is an informal greeting.[/{SECONDARY}]",
-            feedback_correct("hoi", quiz).split("\n")[-2],
+            feedback_correct(Label("nl", "hoi"), quiz).split("\n")[-2],
         )
 
     def test_multiple_post_quiz_notes(self):
@@ -112,7 +113,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertIn(
             f"[{SECONDARY}]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.\n[/{SECONDARY}]",
-            feedback_correct("moi", quiz),
+            feedback_correct(Label("fi", "moi"), quiz),
         )
 
     def test_post_quiz_note_on_incorrect_answer(self):
@@ -121,7 +122,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             f"[{SECONDARY}]Note: Moi is an informal greeting.[/{SECONDARY}]",
-            feedback_incorrect("toi", quiz).split("\n")[-2],
+            feedback_incorrect(Label("fi", "toi"), quiz).split("\n")[-2],
         )
 
     def test_post_quiz_note_on_skip_to_answer(self):
@@ -130,7 +131,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = create_quizzes("fi", "fi", concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             f"[{SECONDARY}]Note: Moi is an informal greeting.[/{SECONDARY}]",
-            feedback_incorrect("?", quiz).split("\n")[-2],
+            feedback_incorrect(Label("fi", "?"), quiz).split("\n")[-2],
         )
 
 
