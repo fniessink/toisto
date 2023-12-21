@@ -35,7 +35,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "build == 1.0.3",
-    "coverage == 7.3.2",
+    "coverage == 7.3.3",
     "green == 3.4.3",
     "mypy == 1.7.1",
     "pip == 23.3.1",
