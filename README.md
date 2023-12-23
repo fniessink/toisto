@@ -9,7 +9,7 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 ## Example sessions
 
-<video src="docs/demo.mov" controls="controls" style="max-width: 730px;">
+<video src="https://github.com/fniessink/toisto/assets/3530545/8598dc4d-09ad-4057-9793-cee2fe54e420" controls="controls" style="max-width: 730px;">
 </video>
 
 <details>
