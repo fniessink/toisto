@@ -4,7 +4,64 @@ Command-line app to practice languages. *Toisto* is Finnish and means *reiterati
 
 Toisto is beta software at the moment. It comes with a limited set of words and phrases in Dutch, English, and Finnish.
 
-Heads up: as long as Toisto is in beta the progress file format may change occasionally, causing your progress to be lost.
+> [!NOTE]
+> As long as Toisto is in beta the progress file format may change occasionally, causing your progress to be lost.
+
+## Example sessions
+
+<video src="docs/demo.mov" controls="controls" style="max-width: 730px;">
+</video>
+
+<details>
+
+<summary>Another example in text format</summary>
+
+```console
+$ toisto practice --target fi --source nl
+👋 Welcome to Toisto v0.10.0!
+
+Practice as many words and phrases as you like, for as long as you like.
+
+Toisto quizzes you on words and phrases repeatedly. Each time you answer
+a quiz correctly, Toisto will wait longer before repeating it. If you
+answer incorrectly, you get one additional attempt to give the correct
+answer. If the second attempt is not correct either, Toisto will reset
+the quiz interval.
+
+How does it work?
+● To answer a quiz: type the answer, followed by Enter.
+● To repeat the spoken text: type Enter without answer.
+● To skip to the answer immediately: type ?, followed by Enter.
+● To read more about an underlined word: keep ⌘ (the command key) pressed
+  while clicking the word. Not all terminals may support this.
+● To quit: type Ctrl-C or Ctrl-D.
+
+Translate into Dutch:
+musta
+> zwart
+✅ Correct.
+
+Translate into Dutch:
+valkoinen
+> wit
+✅ Correct.
+
+Translate into Dutch:
+keltainen
+> oranje
+⚠️  Incorrect. Please try again.
+> geel
+✅ Correct.
+
+Translate into Finnish:
+oranje
+> oransi
+⚠️  Incorrect. Please try again.
+> oransie
+❌ Incorrect. The correct answer is "oranssi".
+```
+
+</details>
 
 ## User guide
 
@@ -54,7 +111,7 @@ Add `--help` or `-h` to get more information about the command-line options and 
 $ toisto --help
 ```
 
-## How to configure Toisto
+### How to configure Toisto
 
 #### How to configure your language
 
@@ -77,56 +134,7 @@ mp3player = name_of_mp3_player
 
 Make sure the mp3 player is on the `PATH` or put the complete filepath in the config file.
 
-### Example sessions
-
-![gif](https://raw.githubusercontent.com/fniessink/toisto/main/docs/demo.gif)
-
-```console
-$ toisto practice --target fi --source nl
-👋 Welcome to Toisto v0.10.0!
-
-Practice as many words and phrases as you like, for as long as you like.
-
-Toisto quizzes you on words and phrases repeatedly. Each time you answer
-a quiz correctly, Toisto will wait longer before repeating it. If you
-answer incorrectly, you get one additional attempt to give the correct
-answer. If the second attempt is not correct either, Toisto will reset
-the quiz interval.
-
-How does it work?
-● To answer a quiz: type the answer, followed by Enter.
-● To repeat the spoken text: type Enter without answer.
-● To skip to the answer immediately: type ?, followed by Enter.
-● To read more about an underlined word: keep ⌘ (the command key) pressed
-  while clicking the word. Not all terminals may support this.
-● To quit: type Ctrl-C or Ctrl-D.
-
-Translate into Dutch:
-musta
-> zwart
-✅ Correct.
-
-Translate into Dutch:
-valkoinen
-> wit
-✅ Correct.
-
-Translate into Dutch:
-keltainen
-> oranje
-⚠️  Incorrect. Please try again.
-> geel
-✅ Correct.
-
-Translate into Finnish:
-oranje
-> oransi
-⚠️  Incorrect. Please try again.
-> oransie
-❌ Incorrect. The correct answer is "oranssi".
-```
-
-### How it works
+## How it works
 
 Toisto quizzes you repeatably on words and phrases in the language you want to practice, your target language. For each quiz, Toisto keeps track of how long you answer it correctly. When you answer a quiz correctly multiple times, Toisto will silence the quiz for a while. The longer the time you have answered the quiz correctly, the longer a quiz is silenced. This starts at a few minutes, but then increases rapidly when you keep answering correctly.
 
