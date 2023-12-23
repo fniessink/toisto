@@ -1,0 +1,49 @@
+{
+    "to ski": {
+        "infinitive": {
+            "en": "to ski",
+            "fi": "hiihtää",
+            "nl": "skiën"
+        },
+        "singular": {
+            "first person": {
+                "en": "I ski",
+                "fi": "minä hiihdän",
+                "nl": "ik ski"
+            },
+            "second person": {
+                "en": "you ski;singular",
+                "fi": "sinä hiihdät",
+                "nl": "jij skiet"
+            },
+            "third person": {
+                "fi": "hän hiihtää",
+                "female": {
+                    "en": "she skis|she skies",
+                    "nl": "zij skiet"
+                },
+                "male": {
+                    "en": "he skis|he skies",
+                    "nl": "hij skiet"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we ski",
+                "fi": "me hiihdämme",
+                "nl": "wij skiën"
+            },
+            "second person": {
+                "en": "you ski;plural",
+                "fi": "te hiihdätte",
+                "nl": "jullie skiën"
+            },
+            "third person": {
+                "en": "they ski",
+                "fi": "he hiihtävät",
+                "nl": "zij skiën"
+            }
+        }
+    }
+}

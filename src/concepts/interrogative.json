@@ -1,9 +1,4 @@
 {
-    "who": {
-        "en": "Who?",
-        "fi": "Kuka?",
-        "nl": "Wie?"
-    },
     "what": {
         "en": "What?",
         "fi": [
@@ -31,14 +26,6 @@
         "en": "When?",
         "fi": "Milloin?",
         "nl": "Wanneer?"
-    },
-    "which": {
-        "en": "Which?",
-        "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
-        "nl": [
-            "Welke?",
-            "Welk?"
-        ]
     },
     "how": {
         "en": "How?",

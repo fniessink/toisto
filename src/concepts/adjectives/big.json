@@ -1,0 +1,29 @@
+{
+    "big": {
+        "antonym": "small",
+        "positive degree": {
+            "en": "big",
+            "fi": [
+                "iso",
+                "suuri"
+            ],
+            "nl": "groot"
+        },
+        "comparative degree": {
+            "en": "bigger",
+            "fi": [
+                "isompi",
+                "suurempi"
+            ],
+            "nl": "groter"
+        },
+        "superlative degree": {
+            "en": "biggest",
+            "fi": [
+                "isoin",
+                "suurin"
+            ],
+            "nl": "grootst"
+        }
+    }
+}

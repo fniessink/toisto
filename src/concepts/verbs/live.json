@@ -1,0 +1,93 @@
+{
+    "to live": {
+        "infinitive": {
+            "en": "to live",
+            "fi": "asua",
+            "nl": "wonen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I live",
+                    "fi": "minä asun",
+                    "nl": "ik woon"
+                },
+                "second person": {
+                    "en": "you live;singular",
+                    "fi": "sinä asut",
+                    "nl": "jij woont"
+                },
+                "third person": {
+                    "fi": "hän asuu",
+                    "female": {
+                        "en": "she lives",
+                        "nl": "zij woont"
+                    },
+                    "male": {
+                        "en": "he lives",
+                        "nl": "hij woont"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we live",
+                    "fi": "me asumme",
+                    "nl": "wij wonen"
+                },
+                "second person": {
+                    "en": "you live;plural",
+                    "fi": "te asutte",
+                    "nl": "jullie wonen"
+                },
+                "third person": {
+                    "en": "they live",
+                    "fi": "he asuvat",
+                    "nl": "zij wonen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I lived",
+                    "fi": "minä asuin",
+                    "nl": "ik woonde"
+                },
+                "second person": {
+                    "en": "you lived;singular",
+                    "fi": "sinä asuit",
+                    "nl": "jij woonde"
+                },
+                "third person": {
+                    "fi": "hän asui",
+                    "female": {
+                        "en": "she lived",
+                        "nl": "zij woonde"
+                    },
+                    "male": {
+                        "en": "he lived",
+                        "nl": "hij woonde"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we lived",
+                    "fi": "me asuimme",
+                    "nl": "wij woonden"
+                },
+                "second person": {
+                    "en": "you lived;plural",
+                    "fi": "te asuitte",
+                    "nl": "jullie woonden"
+                },
+                "third person": {
+                    "en": "they lived",
+                    "fi": "he asuivat",
+                    "nl": "zij woonden"
+                }
+            }
+        }
+    }
+}

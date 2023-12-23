@@ -1,0 +1,93 @@
+{
+    "to run": {
+        "infinitive": {
+            "en": "to run",
+            "fi": "juosta",
+            "nl": "rennen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I run",
+                    "fi": "minä juoksen",
+                    "nl": "ik ren"
+                },
+                "second person": {
+                    "en": "you run;singular",
+                    "fi": "sinä juokset",
+                    "nl": "jij rent"
+                },
+                "third person": {
+                    "fi": "hän juoksee",
+                    "female": {
+                        "en": "she runs",
+                        "nl": "zij rent"
+                    },
+                    "male": {
+                        "en": "he runs",
+                        "nl": "hij rent"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we run",
+                    "fi": "me juoksemme",
+                    "nl": "wij rennen"
+                },
+                "second person": {
+                    "en": "you run;plural",
+                    "fi": "te juoksette",
+                    "nl": "jullie rennen"
+                },
+                "third person": {
+                    "en": "they run",
+                    "fi": "he juoksevat",
+                    "nl": "zij rennen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I ran",
+                    "fi": "minä juoksin",
+                    "nl": "ik rende"
+                },
+                "second person": {
+                    "en": "you ran;singular",
+                    "fi": "sinä juoksit",
+                    "nl": "jij rende"
+                },
+                "third person": {
+                    "fi": "hän juoksi",
+                    "female": {
+                        "en": "she ran",
+                        "nl": "zij rende"
+                    },
+                    "male": {
+                        "en": "he ran",
+                        "nl": "hij rende"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we ran",
+                    "fi": "me juoksimme",
+                    "nl": "wij renden"
+                },
+                "second person": {
+                    "en": "you ran;plural",
+                    "fi": "te juoksitte",
+                    "nl": "jullie renden"
+                },
+                "third person": {
+                    "en": "they ran",
+                    "fi": "he juoksivat",
+                    "nl": "zij renden"
+                }
+            }
+        }
+    }
+}

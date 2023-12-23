@@ -1,0 +1,29 @@
+{
+    "bad": {
+        "antonym": "good",
+        "positive degree": {
+            "en": "bad",
+            "fi": [
+                "huono",
+                "paha"
+            ],
+            "nl": "slecht"
+        },
+        "comparative degree": {
+            "en": "badder",
+            "fi": [
+                "huonompi",
+                "pahempi"
+            ],
+            "nl": "slechter"
+        },
+        "superlative degree": {
+            "en": "baddest",
+            "fi": [
+                "huonoin",
+                "pahin"
+            ],
+            "nl": "slechtst"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to sit": {
+        "infinitive": {
+            "en": "to sit",
+            "fi": "istua",
+            "nl": "zitten"
+        },
+        "singular": {
+            "first person": {
+                "en": "I sit",
+                "fi": "minä istun",
+                "nl": "ik zit"
+            },
+            "second person": {
+                "en": "you sit;singular",
+                "fi": "sinä istut",
+                "nl": "jij zit"
+            },
+            "third person": {
+                "fi": "hän istuu",
+                "female": {
+                    "en": "she sits",
+                    "nl": "zij zit"
+                },
+                "male": {
+                    "en": "he sits",
+                    "nl": "hij zit"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we sit",
+                "fi": "me istumme",
+                "nl": "wij zitten"
+            },
+            "second person": {
+                "en": "you sit;plural",
+                "fi": "te istutte",
+                "nl": "jullie zitten"
+            },
+            "third person": {
+                "en": "they sit",
+                "fi": "he istuvat",
+                "nl": "zij zitten"
+            }
+        }
+    }
+}

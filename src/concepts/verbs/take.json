@@ -1,0 +1,49 @@
+{
+    "to take": {
+        "infinitive": {
+            "en": "to take",
+            "fi": "ottaa",
+            "nl": "nemen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I take",
+                "fi": "minä otan",
+                "nl": "ik neem"
+            },
+            "second person": {
+                "en": "you take;singular",
+                "fi": "sinä otat",
+                "nl": "jij neemt"
+            },
+            "third person": {
+                "fi": "hän ottaa",
+                "female": {
+                    "en": "she takes",
+                    "nl": "zij neemt"
+                },
+                "male": {
+                    "en": "he takes",
+                    "nl": "hij neemt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we take",
+                "fi": "me otamme",
+                "nl": "wij nemen"
+            },
+            "second person": {
+                "en": "you take;plural",
+                "fi": "te otatte",
+                "nl": "jullie nemen"
+            },
+            "third person": {
+                "en": "they take",
+                "fi": "he ottavat",
+                "nl": "zij nemen"
+            }
+        }
+    }
+}

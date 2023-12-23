@@ -1,0 +1,49 @@
+{
+    "to listen": {
+        "infinitive": {
+            "en": "to listen",
+            "fi": "kuunnella",
+            "nl": "luisteren"
+        },
+        "singular": {
+            "first person": {
+                "en": "I listen",
+                "fi": "minä kuuntelen",
+                "nl": "ik luister"
+            },
+            "second person": {
+                "en": "you listen;singular",
+                "fi": "sinä kuuntelet",
+                "nl": "jij luistert"
+            },
+            "third person": {
+                "fi": "hän kuuntelee",
+                "female": {
+                    "en": "she listens",
+                    "nl": "zij luistert"
+                },
+                "male": {
+                    "en": "he listens",
+                    "nl": "hij luistert"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we listen",
+                "fi": "me kuuntelemme",
+                "nl": "wij luisteren"
+            },
+            "second person": {
+                "en": "you listen;plural",
+                "fi": "te kuuntelette",
+                "nl": "jullie luisteren"
+            },
+            "third person": {
+                "en": "they listen",
+                "fi": "he kuuntelevat",
+                "nl": "zij luisteren"
+            }
+        }
+    }
+}

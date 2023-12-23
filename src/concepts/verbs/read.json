@@ -1,0 +1,93 @@
+{
+    "to read": {
+        "infinitive": {
+            "en": "to read",
+            "fi": "lukea",
+            "nl": "lezen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I read;present tense",
+                    "fi": "minä luen",
+                    "nl": "ik lees"
+                },
+                "second person": {
+                    "en": "you read;singular present tense",
+                    "fi": "sinä luet",
+                    "nl": "jij leest"
+                },
+                "third person": {
+                    "fi": "hän lukee",
+                    "female": {
+                        "en": "she reads",
+                        "nl": "zij leest"
+                    },
+                    "male": {
+                        "en": "he reads",
+                        "nl": "hij leest"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we read;present tense",
+                    "fi": "me luemme",
+                    "nl": "wij lezen"
+                },
+                "second person": {
+                    "en": "you read;plural present tense",
+                    "fi": "te luette",
+                    "nl": "jullie lezen"
+                },
+                "third person": {
+                    "en": "they read;present tense",
+                    "fi": "he lukevat",
+                    "nl": "zij lezen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I read;past tense",
+                    "fi": "minä luin",
+                    "nl": "ik las"
+                },
+                "second person": {
+                    "en": "you read;singular past tense",
+                    "fi": "sinä luit",
+                    "nl": "jij las"
+                },
+                "third person": {
+                    "fi": "hän luki",
+                    "female": {
+                        "en": "she read",
+                        "nl": "zij las"
+                    },
+                    "male": {
+                        "en": "he read",
+                        "nl": "hij las"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we read;past tense",
+                    "fi": "me luimme",
+                    "nl": "wij lazen"
+                },
+                "second person": {
+                    "en": "you read;plural past tense",
+                    "fi": "te luitte",
+                    "nl": "jullie lazen"
+                },
+                "third person": {
+                    "en": "they read;past tense",
+                    "fi": "he lukivat",
+                    "nl": "zij lazen"
+                }
+            }
+        }
+    }
+}

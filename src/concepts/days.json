@@ -226,7 +226,10 @@
         "nl": "overmorgen"
     },
     "this week": {
-        "roots": "week",
+        "roots": [
+            "this",
+            "week"
+        ],
         "en": "this week",
         "fi": "tällä viikolla",
         "nl": "deze week"

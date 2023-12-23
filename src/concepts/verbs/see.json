@@ -1,0 +1,49 @@
+{
+    "to see": {
+        "infinitive": {
+            "en": "to see",
+            "fi": "nähdä",
+            "nl": "zien"
+        },
+        "singular": {
+            "first person": {
+                "en": "I see",
+                "fi": "minä näen",
+                "nl": "ik zie"
+            },
+            "second person": {
+                "en": "you see;singular",
+                "fi": "sinä näet",
+                "nl": "jij ziet"
+            },
+            "third person": {
+                "fi": "hän näkee",
+                "female": {
+                    "en": "she sees",
+                    "nl": "zij ziet"
+                },
+                "male": {
+                    "en": "he sees",
+                    "nl": "hij ziet"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we see",
+                "fi": "me näemme",
+                "nl": "wij zien"
+            },
+            "second person": {
+                "en": "you see;plural",
+                "fi": "te näette",
+                "nl": "jullie zien"
+            },
+            "third person": {
+                "en": "they see",
+                "fi": "he näkevät",
+                "nl": "zij zien"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to play": {
+        "infinitive": {
+            "en": "to play",
+            "fi": "pelata",
+            "nl": "spelen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I play",
+                "fi": "minä pelaan",
+                "nl": "ik speel"
+            },
+            "second person": {
+                "en": "you play;singular",
+                "fi": "sinä pelaat",
+                "nl": "jij speelt"
+            },
+            "third person": {
+                "fi": "hän pelaa",
+                "female": {
+                    "en": "she plays",
+                    "nl": "zij speelt"
+                },
+                "male": {
+                    "en": "he plays",
+                    "nl": "hij speelt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we play",
+                "fi": "me pelaamme",
+                "nl": "wij spelen"
+            },
+            "second person": {
+                "en": "you play;plural",
+                "fi": "te pelaatte",
+                "nl": "jullie spelen"
+            },
+            "third person": {
+                "en": "they play",
+                "fi": "he pelaavat",
+                "nl": "zij spelen"
+            }
+        }
+    }
+}
