@@ -27,6 +27,7 @@ class AppTest(unittest.TestCase):
         "toisto.persistence.topics.load_topics",
         Mock(return_value={Topic("topic", frozenset([ConceptId("concept-0")]))}),
     )
+    @patch("toisto.persistence.spelling_alternatives.load_spelling_alternatives", Mock(return_value={}))
     @patch("toisto.ui.speech.Popen", Mock())
     @patch("builtins.input", Mock(side_effect=EOFError))
     @patch("pathlib.Path.exists", Mock(return_value=True))

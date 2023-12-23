@@ -291,7 +291,7 @@
             "nl": "de vulkaan"
         },
         "plural": {
-            "en": "volcanoes|Volcanos",
+            "en": "volcanoes|volcanos",
             "fi": "tulivuoret",
             "nl": "de vulkanen"
         }
@@ -397,7 +397,7 @@
             "Hän tulee pohjoisesta.;female",
             "Hän on kotoisin pohjoisesta.;female"
         ],
-        "nl": "Zij komt uit het Noorden.|Ze komt uit het Noorden."
+        "nl": "Zij komt uit het Noorden."
     },
     "they live in the west": {
         "roots": [
@@ -406,7 +406,7 @@
         ],
         "en": "They live in the West.",
         "fi": "He asuvat lännessä.",
-        "nl": "Zij wonen in het Westen.|Ze wonen in het Westen."
+        "nl": "Zij wonen in het Westen."
     },
     "the city is in the east": {
         "roots": [
@@ -430,7 +430,7 @@
             "We walk in the forest.",
             "We walk in the wood."
         ],
-        "fi": "Me kävelemme metsässä.|Kävelemme metsässä.",
-        "nl": "Wij wandelen in het bos.|We wandelen in het bos."
+        "fi": "Me kävelemme metsässä.",
+        "nl": "Wij wandelen in het bos."
     }
 }

@@ -25,6 +25,7 @@ from .model.topic.topic import Topic
 from .persistence.concepts import ConceptIdRegistry, load_concepts
 from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
+from .persistence.spelling_alternatives import load_spelling_alternatives
 from .persistence.topics import load_topics
 from .ui.cli import create_argument_parser, parse_arguments
 from .ui.text import console, show_welcome
@@ -39,6 +40,7 @@ def init() -> tuple[ConfigParser, Namespace, set[Concept], set[Topic], Quizzes, 
     topics = load_topics(TOPIC_FILES, argument_parser)
     argument_parser = create_argument_parser(config, concepts, topics)
     args = parse_arguments(argument_parser)
+    load_spelling_alternatives(args.target_language, args.source_language)
     extra_concept_files = [Path(concept_file) for concept_file in args.concept_file]
     concepts |= load_concepts(extra_concept_files, registry, argument_parser)
     extra_topic_files = [Path(topic_file) for topic_file in args.topic_file]

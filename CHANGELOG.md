@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Support abbreviations. Closes [#498](https://github.com/fniessink/toisto/issues/498).
+- Support generating alternative answers (like accepting "it's" when the label is "is is"). Closes [#520](https://github.com/fniessink/toisto/issues/520).
 
 ## 0.14.1 - 2023-12-09
 

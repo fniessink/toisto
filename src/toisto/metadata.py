@@ -24,7 +24,9 @@ BUILT_IN_LANGUAGES: Final = [Language("en"), Language("fi"), Language("nl")]
 _data_folder = Path(__file__).parent.parent
 CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("*.json"))
 TOPIC_FILES: Final = sorted((_data_folder / "topics").glob("**/*.json"))
-LANGUAGES_FILE: Final = _data_folder / "languages" / "iana-language-subtag-registry.txt"
+_languages_folder = _data_folder / "languages"
+LANGUAGES_FILE: Final = _languages_folder / "iana-language-subtag-registry.txt"
+SPELLING_ALTERNATIVES_FILE: Final = _languages_folder / "spelling_alternatives.json"
 
 
 def get_progress_filepath(target_language: Language) -> Path:

@@ -162,7 +162,7 @@
                     "I dress",
                     "I get dressed"
                 ],
-                "fi": "minä pukeudun|pukeudun",
+                "fi": "minä pukeudun",
                 "nl": "ik kleed mij aan|ik kleed me aan"
             },
             "second person": {
@@ -170,7 +170,7 @@
                     "you dress;singular",
                     "you get dressed;singular"
                 ],
-                "fi": "sinä pukeudut|pukeudut",
+                "fi": "sinä pukeudut",
                 "nl": "jij kleedt je aan"
             },
             "third person": {
@@ -180,7 +180,7 @@
                         "she gets dressed"
                     ],
                     "fi": "hän pukeutuu;female",
-                    "nl": "zij kleedt zich aan|ze kleedt zich aan"
+                    "nl": "zij kleedt zich aan"
                 },
                 "male": {
                     "en": [
@@ -198,15 +198,15 @@
                     "we dress",
                     "we get dressed"
                 ],
-                "fi": "me pukeudumme|pukeudumme",
-                "nl": "wij kleden ons aan|we kleden ons aan"
+                "fi": "me pukeudumme",
+                "nl": "wij kleden ons aan"
             },
             "second person": {
                 "en": [
                     "you dress;plural",
                     "you get dressed;plural"
                 ],
-                "fi": "te pukeudutte|pukeudutte",
+                "fi": "te pukeudutte",
                 "nl": "jullie kleden je aan"
             },
             "third person": {
@@ -214,8 +214,8 @@
                     "they dress",
                     "they get dressed"
                 ],
-                "fi": "he pukeutuvat|pukeutuvat",
-                "nl": "zij kleden zich aan|ze kleden zich aan"
+                "fi": "he pukeutuvat",
+                "nl": "zij kleden zich aan"
             }
         }
     }
