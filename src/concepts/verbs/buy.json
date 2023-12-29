@@ -1,0 +1,49 @@
+{
+    "to buy": {
+        "infinitive": {
+            "en": "to buy",
+            "fi": "ostaa",
+            "nl": "kopen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I buy",
+                "fi": "minä ostan",
+                "nl": "ik koop"
+            },
+            "second person": {
+                "en": "you buy;singular",
+                "fi": "sinä ostat",
+                "nl": "jij koopt"
+            },
+            "third person": {
+                "fi": "hän ostaa",
+                "female": {
+                    "en": "she buys",
+                    "nl": "zij koopt"
+                },
+                "male": {
+                    "en": "he buys",
+                    "nl": "hij koopt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we buy",
+                "fi": "me ostamme",
+                "nl": "wij kopen"
+            },
+            "second person": {
+                "en": "you buy;plural",
+                "fi": "te ostatte",
+                "nl": "jullie kopen"
+            },
+            "third person": {
+                "en": "they buy",
+                "fi": "he ostavat",
+                "nl": "zij kopen"
+            }
+        }
+    }
+}

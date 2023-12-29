@@ -1,0 +1,49 @@
+{
+    "to say": {
+        "infinitive": {
+            "en": "to say",
+            "fi": "sanoa",
+            "nl": "zeggen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I say",
+                "fi": "minä sanon",
+                "nl": "ik zeg"
+            },
+            "second person": {
+                "en": "you say;singular",
+                "fi": "sinä sanot",
+                "nl": "jij zegt"
+            },
+            "third person": {
+                "fi": "hän sanoo",
+                "female": {
+                    "en": "she says",
+                    "nl": "zij zegt"
+                },
+                "male": {
+                    "en": "he says",
+                    "nl": "hij zegt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we say",
+                "fi": "me sanomme",
+                "nl": "wij zeggen"
+            },
+            "second person": {
+                "en": "you say;plural",
+                "fi": "te sanotte",
+                "nl": "jullie zeggen"
+            },
+            "third person": {
+                "en": "they say",
+                "fi": "he sanovat",
+                "nl": "zij zeggen"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to save": {
+        "infinitive": {
+            "en": "to save",
+            "fi": "säästä",
+            "nl": "sparen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I save",
+                "fi": "minä säästän",
+                "nl": "ik spaar"
+            },
+            "second person": {
+                "en": "you save;singular",
+                "fi": "sinä säästät",
+                "nl": "jij spaart"
+            },
+            "third person": {
+                "fi": "hän säästää",
+                "female": {
+                    "en": "she saves",
+                    "nl": "zij spaart"
+                },
+                "male": {
+                    "en": "he saves",
+                    "nl": "hij spaart"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we save",
+                "fi": "me säästämme",
+                "nl": "wij sparen"
+            },
+            "second person": {
+                "en": "you save;plural",
+                "fi": "te säästätte",
+                "nl": "jullie sparen"
+            },
+            "third person": {
+                "en": "they save",
+                "fi": "he säästävät",
+                "nl": "zij sparen"
+            }
+        }
+    }
+}

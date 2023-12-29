@@ -1,0 +1,93 @@
+{
+    "to walk": {
+        "infinitive": {
+            "en": "to walk",
+            "fi": "kävellä",
+            "nl": "lopen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I walk",
+                    "fi": "minä kävelen",
+                    "nl": "ik loop"
+                },
+                "second person": {
+                    "en": "you walk;singular",
+                    "fi": "sinä kävelet",
+                    "nl": "jij loopt"
+                },
+                "third person": {
+                    "fi": "hän kävelee",
+                    "female": {
+                        "en": "she walks",
+                        "nl": "zij loopt"
+                    },
+                    "male": {
+                        "en": "he walks",
+                        "nl": "hij loopt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we walk",
+                    "fi": "me kävelemme",
+                    "nl": "wij lopen"
+                },
+                "second person": {
+                    "en": "you walk;plural",
+                    "fi": "te kävelette",
+                    "nl": "jullie lopen"
+                },
+                "third person": {
+                    "en": "they walk",
+                    "fi": "he kävelevät",
+                    "nl": "zij lopen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I walked",
+                    "fi": "minä kävelin",
+                    "nl": "ik liep"
+                },
+                "second person": {
+                    "en": "you walked;singular",
+                    "fi": "sinä kävelit",
+                    "nl": "jij liep"
+                },
+                "third person": {
+                    "fi": "hän käveli",
+                    "female": {
+                        "en": "she walked",
+                        "nl": "zij liep"
+                    },
+                    "male": {
+                        "en": "he walked",
+                        "nl": "hij liep"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we walked",
+                    "fi": "me kävelimme",
+                    "nl": "wij liepen"
+                },
+                "second person": {
+                    "en": "you walked;plural",
+                    "fi": "te kävelitte",
+                    "nl": "jullie liepen"
+                },
+                "third person": {
+                    "en": "they walked",
+                    "fi": "he kävelivät",
+                    "nl": "zij liepen"
+                }
+            }
+        }
+    }
+}

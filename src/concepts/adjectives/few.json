@@ -1,0 +1,29 @@
+{
+    "few/a little": {
+        "antonym": "many/much",
+        "positive degree": {
+            "en": [
+                "few;;Use 'few' with countable nouns and 'little' with uncountable nouns",
+                "little;;Use 'little' with uncountable nouns and 'few' with countable nouns"
+            ],
+            "fi": "vähän",
+            "nl": "weinig"
+        },
+        "comparative degree": {
+            "en": [
+                "fewer;;Use 'fewer' with countable nouns and 'less' with uncountable nouns",
+                "less;;Use 'less' with uncountable nouns and 'fewer' with countable nouns"
+            ],
+            "fi": "vähemmän",
+            "nl": "minder"
+        },
+        "superlative degree": {
+            "en": [
+                "fewest;;Use 'fewest' with countable nouns and 'least' with uncountable nouns",
+                "least;;Use 'least' with uncountable nouns and 'fewest' with countable nouns"
+            ],
+            "fi": "vähiten",
+            "nl": "minst"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to give": {
+        "infinitive": {
+            "en": "to give",
+            "fi": "antaa",
+            "nl": "geven"
+        },
+        "singular": {
+            "first person": {
+                "en": "I give",
+                "fi": "minä annan",
+                "nl": "ik geef"
+            },
+            "second person": {
+                "en": "you give;singular",
+                "fi": "sinä annat",
+                "nl": "jij geeft"
+            },
+            "third person": {
+                "fi": "hän antaa",
+                "female": {
+                    "en": "she gives",
+                    "nl": "zij geeft"
+                },
+                "male": {
+                    "en": "he gives",
+                    "nl": "hij geeft"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we give",
+                "fi": "me annamme",
+                "nl": "wij geven"
+            },
+            "second person": {
+                "en": "you give;plural",
+                "fi": "te annatte",
+                "nl": "jullie geven"
+            },
+            "third person": {
+                "en": "they give",
+                "fi": "he antavat",
+                "nl": "zij geven"
+            }
+        }
+    }
+}

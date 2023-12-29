@@ -1,0 +1,49 @@
+{
+    "to ask": {
+        "infinitive": {
+            "en": "to ask",
+            "fi": "kysyä",
+            "nl": "vragen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I ask",
+                "fi": "minä kysyn",
+                "nl": "ik vraag"
+            },
+            "second person": {
+                "en": "you ask;singular",
+                "fi": "sinä kysyt",
+                "nl": "jij vraagt"
+            },
+            "third person": {
+                "fi": "hän kysyy",
+                "female": {
+                    "en": "she asks",
+                    "nl": "zij vraagt"
+                },
+                "male": {
+                    "en": "he asks",
+                    "nl": "hij vraagt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we ask",
+                "fi": "me kysymme",
+                "nl": "wij vragen"
+            },
+            "second person": {
+                "en": "you ask;plural",
+                "fi": "te kysytte",
+                "nl": "jullie vragen"
+            },
+            "third person": {
+                "en": "they ask",
+                "fi": "he kysyvät",
+                "nl": "zij vragen"
+            }
+        }
+    }
+}

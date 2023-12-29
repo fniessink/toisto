@@ -1,0 +1,93 @@
+{
+    "to go": {
+        "infinitive": {
+            "en": "to go",
+            "fi": "mennä",
+            "nl": "gaan"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I go",
+                    "fi": "minä menen",
+                    "nl": "ik ga"
+                },
+                "second person": {
+                    "en": "you go;singular",
+                    "fi": "sinä menet",
+                    "nl": "jij gaat"
+                },
+                "third person": {
+                    "fi": "hän menee",
+                    "female": {
+                        "en": "she goes",
+                        "nl": "zij gaat"
+                    },
+                    "male": {
+                        "en": "he goes",
+                        "nl": "hij gaat"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we go",
+                    "fi": "me menemme",
+                    "nl": "wij gaan"
+                },
+                "second person": {
+                    "en": "you go;plural",
+                    "fi": "te menette",
+                    "nl": "jullie gaan"
+                },
+                "third person": {
+                    "en": "they go",
+                    "fi": "he menevät",
+                    "nl": "zij gaan"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I went",
+                    "fi": "minä menin",
+                    "nl": "ik ging"
+                },
+                "second person": {
+                    "en": "you went;singular",
+                    "fi": "sinä menit",
+                    "nl": "jij ging"
+                },
+                "third person": {
+                    "fi": "hän meni",
+                    "female": {
+                        "en": "she went",
+                        "nl": "zij ging"
+                    },
+                    "male": {
+                        "en": "he went",
+                        "nl": "hij ging"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we went",
+                    "fi": "me menimme",
+                    "nl": "wij gingen"
+                },
+                "second person": {
+                    "en": "you went;plural",
+                    "fi": "te menitte",
+                    "nl": "jullie gingen"
+                },
+                "third person": {
+                    "en": "they went",
+                    "fi": "he menivät",
+                    "nl": "zij gingen"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "to eat": {
+        "infinitive": {
+            "en": "to eat",
+            "fi": "syödä",
+            "nl": "eten"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I eat",
+                    "fi": "minä syön",
+                    "nl": "ik eet"
+                },
+                "second person": {
+                    "en": "you eat;singular",
+                    "fi": "sinä syöt",
+                    "nl": "jij eet"
+                },
+                "third person": {
+                    "fi": "hän syö",
+                    "female": {
+                        "en": "she eats",
+                        "nl": "zij eet"
+                    },
+                    "male": {
+                        "en": "he eats",
+                        "nl": "hij eet"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we eat",
+                    "fi": "me syömme",
+                    "nl": "wij eten"
+                },
+                "second person": {
+                    "en": "you eat;plural",
+                    "fi": "te syötte",
+                    "nl": "jullie eten"
+                },
+                "third person": {
+                    "en": "they eat",
+                    "fi": "he syövät",
+                    "nl": "zij eten"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I ate",
+                    "fi": "minä söin",
+                    "nl": "ik at"
+                },
+                "second person": {
+                    "en": "you ate;singular",
+                    "fi": "sinä söit",
+                    "nl": "jij at"
+                },
+                "third person": {
+                    "fi": "hän söi",
+                    "female": {
+                        "en": "she ate",
+                        "nl": "zij at"
+                    },
+                    "male": {
+                        "en": "he ate",
+                        "nl": "hij at"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we ate",
+                    "fi": "me söimme",
+                    "nl": "wij aten"
+                },
+                "second person": {
+                    "en": "you ate;plural",
+                    "fi": "te söitte",
+                    "nl": "jullie aten"
+                },
+                "third person": {
+                    "en": "they ate",
+                    "fi": "he söivät",
+                    "nl": "zij aten"
+                }
+            }
+        }
+    }
+}

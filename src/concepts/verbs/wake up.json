@@ -1,0 +1,49 @@
+{
+    "to wake up": {
+        "infinitive": {
+            "en": "to wake up",
+            "fi": "herätä",
+            "nl": "wakker worden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I wake up",
+                "fi": "minä herään",
+                "nl": "ik word wakker"
+            },
+            "second person": {
+                "en": "you wake up;singular",
+                "fi": "sinä heräät",
+                "nl": "jij wordt wakker"
+            },
+            "third person": {
+                "fi": "hän herää",
+                "female": {
+                    "en": "she wakes up",
+                    "nl": "zij wordt wakker"
+                },
+                "male": {
+                    "en": "he wakes up",
+                    "nl": "hij wordt wakker"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we wake up",
+                "fi": "me heräämme",
+                "nl": "wij worden wakker"
+            },
+            "second person": {
+                "en": "you wake up;plural",
+                "fi": "te heräätte",
+                "nl": "jullie worden wakker"
+            },
+            "third person": {
+                "en": "they wake up",
+                "fi": "he heräävät",
+                "nl": "zij worden wakker"
+            }
+        }
+    }
+}

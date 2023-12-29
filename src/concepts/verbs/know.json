@@ -1,0 +1,73 @@
+{
+    "to know": {
+        "infinitive": {
+            "en": "to know",
+            "fi": "tietää",
+            "nl": [
+                "weten",
+                "kennen"
+            ]
+        },
+        "singular": {
+            "first person": {
+                "en": "I know",
+                "fi": "minä tiedän",
+                "nl": [
+                    "ik weet",
+                    "ik ken"
+                ]
+            },
+            "second person": {
+                "en": "you know;singular",
+                "fi": "sinä tiedät",
+                "nl": [
+                    "jij weet",
+                    "jij kent"
+                ]
+            },
+            "third person": {
+                "fi": "hän tietää",
+                "female": {
+                    "en": "she knows",
+                    "nl": [
+                        "zij weet",
+                        "zij kent"
+                    ]
+                },
+                "male": {
+                    "en": "he knows",
+                    "nl": [
+                        "hij weet",
+                        "hij kent"
+                    ]
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we know",
+                "fi": "me tiedämme",
+                "nl": [
+                    "wij weten",
+                    "wij kennen"
+                ]
+            },
+            "second person": {
+                "en": "you know;plural",
+                "fi": "te tiedätte",
+                "nl": [
+                    "jullie weten",
+                    "jullie kennen"
+                ]
+            },
+            "third person": {
+                "en": "they know",
+                "fi": "he tietävät",
+                "nl": [
+                    "zij weten",
+                    "zij kennen"
+                ]
+            }
+        }
+    }
+}

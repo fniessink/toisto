@@ -1,0 +1,23 @@
+{
+    "many/much": {
+        "antonym": "few/a little",
+        "positive degree": {
+            "en": [
+                "many;;Use 'many' with countable nouns and 'much' with uncountable nouns",
+                "much;;Use 'much' with uncountable noins and 'many' with countable nouns"
+            ],
+            "fi": "paljon",
+            "nl": "veel"
+        },
+        "comparative degree": {
+            "en": "more",
+            "fi": "enemmän",
+            "nl": "meer"
+        },
+        "superlative degree": {
+            "en": "most",
+            "fi": "eniten",
+            "nl": "meest"
+        }
+    }
+}

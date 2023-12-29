@@ -1,0 +1,93 @@
+{
+    "to sleep": {
+        "infinitive": {
+            "en": "to sleep",
+            "fi": "nukkua",
+            "nl": "slapen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I sleep",
+                    "fi": "minä nukun",
+                    "nl": "ik slaap"
+                },
+                "second person": {
+                    "en": "you sleep;singular",
+                    "fi": "sinä nukut",
+                    "nl": "jij slaapt"
+                },
+                "third person": {
+                    "fi": "hän nukkuu",
+                    "female": {
+                        "en": "she sleeps",
+                        "nl": "zij slaapt"
+                    },
+                    "male": {
+                        "en": "he sleeps",
+                        "nl": "hij slaapt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we sleep",
+                    "fi": "me nukumme",
+                    "nl": "wij slapen"
+                },
+                "second person": {
+                    "en": "you sleep;plural",
+                    "fi": "te nukutte",
+                    "nl": "jullie slapen"
+                },
+                "third person": {
+                    "en": "they sleep",
+                    "fi": "he nukkuvat",
+                    "nl": "zij slapen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I slept",
+                    "fi": "minä nukuin",
+                    "nl": "ik sliep"
+                },
+                "second person": {
+                    "en": "you slept;singular",
+                    "fi": "sinä nukuit",
+                    "nl": "jij sliep"
+                },
+                "third person": {
+                    "fi": "hän nukkui",
+                    "female": {
+                        "en": "she slept",
+                        "nl": "zij sliep"
+                    },
+                    "male": {
+                        "en": "he slept",
+                        "nl": "hij sliep"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we slept",
+                    "fi": "me nukuimme",
+                    "nl": "wij sliepen"
+                },
+                "second person": {
+                    "en": "you slept;plural",
+                    "fi": "te nukuitte",
+                    "nl": "jullie sliepen"
+                },
+                "third person": {
+                    "en": "they slept",
+                    "fi": "he nukkuivat",
+                    "nl": "zij sliepen"
+                }
+            }
+        }
+    }
+}
