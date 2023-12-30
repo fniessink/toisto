@@ -61,6 +61,11 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "dictate")
         self.assertEqual((), quiz.other_answers("Een"))
 
+    def test_no_generated_spelling_alternatives_as_other_answer(self):
+        """Test that the other answers do not include generated spelling alternatives."""
+        quiz = self.create_quiz(self.concept, "fi", "nl", "talo", ["het huis"])
+        self.assertEqual((), quiz.other_answers("het huis"))
+
     def test_instructions(self):
         """Test the instructions."""
         expected_instructions = [

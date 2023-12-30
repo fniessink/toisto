@@ -49,9 +49,14 @@ class Label(str):
         return True
 
     @property
+    def non_generated_spelling_alternatives(self) -> Labels:
+        """Extract the spelling alternatives from the label."""
+        return label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+
+    @property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label and generate additional spelling alternatives."""
-        alternatives = label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+        alternatives = self.non_generated_spelling_alternatives
         generated_alternatives = set()
         for alternative in alternatives:
             for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
