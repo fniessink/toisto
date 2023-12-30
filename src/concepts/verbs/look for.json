@@ -1,46 +1,60 @@
 {
     "concepts": {
-        "to search": {
+        "to look for": {
+            "infinitive": {
+                "en": "to look for",
+                "fi": "etsiä",
+                "nl": "zoeken"
+            },
             "singular": {
                 "first person": {
-                    "en": "I search",
+                    "en": "I look for",
                     "fi": "minä etsin",
                     "nl": "ik zoek"
                 },
                 "second person": {
-                    "en": "you search;singular",
+                    "en": "you look for;singular",
                     "fi": "sinä etsit",
                     "nl": "jij zoekt"
                 },
                 "third person": {
                     "fi": "hän etsii",
                     "female": {
-                        "en": "she searches",
+                        "en": "she looks for",
                         "nl": "zij zoekt"
                     },
                     "male": {
-                        "en": "he searches",
+                        "en": "he looks for",
                         "nl": "hij zoekt"
                     }
                 }
             },
             "plural": {
                 "first person": {
-                    "en": "we search",
+                    "en": "we look for",
                     "fi": "me etsimme",
                     "nl": "wij zoeken"
                 },
                 "second person": {
-                    "en": "you search;plural",
+                    "en": "you look for;plural",
                     "fi": "te etsitte",
                     "nl": "jullie zoeken"
                 },
                 "third person": {
-                    "en": "they search",
+                    "en": "they look for",
                     "fi": "he etsivät",
                     "nl": "zij zoeken"
                 }
             }
+        },
+        "I'm looking for a table lamp": {
+            "roots": [
+                "to look for",
+                "table lamp"
+            ],
+            "en": "I'm looking for a table lamp.",
+            "fi": "Minä etsin pöytälamppua.",
+            "nl": "Ik zoek een tafellamp."
         }
     }
 }
