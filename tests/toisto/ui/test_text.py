@@ -6,6 +6,7 @@ from toisto.model.language import Language
 from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 from toisto.ui.dictionary import DICTIONARY_URL, linkify
 from toisto.ui.style import INSERTED, QUIZ, SECONDARY
 from toisto.ui.text import CORRECT, INCORRECT, feedback_correct, feedback_incorrect, instruction
@@ -18,6 +19,7 @@ class FeedbackTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
+        load_spelling_alternatives(Language("fi"), Language("nl"))
         self.guess = Label(Language("fi"), "terve")
 
     def test_correct_first_time(self):
@@ -62,6 +64,20 @@ class FeedbackTestCase(ToistoTestCase):
             f'[{SECONDARY}]Another correct answer is "{linkify("hei")}".[/{SECONDARY}]\n'
         )
         self.assertEqual(expected_text, feedback_incorrect(Label("fi", "incorrect"), quiz))
+
+    def test_do_not_show_generated_alternative_answers_on_incorrect_guess(self):
+        """Test that generated alternative answers are not shown when the user guesses incorrectly."""
+        concept = create_concept("house", dict(nl="het huis", fi=["talo"]))
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
+        expected_text = f'{INCORRECT}The correct answer is "[{INSERTED}]{linkify("het huis")}[/{INSERTED}]".\n'
+        self.assertEqual(expected_text, feedback_incorrect(Label("nl", "incorrect"), quiz))
+
+    def test_do_not_show_generated_alternative_answers_on_question_mark(self):
+        """Test that generated alternative answers are not shown when the user enters a question mark."""
+        concept = create_concept("house", dict(nl="het huis", fi=["talo"]))
+        quiz = create_quizzes("fi", "nl", concept).by_quiz_type("read").pop()
+        expected_text = f'The correct answer is "{linkify("het huis")}".\n'
+        self.assertEqual(expected_text, feedback_incorrect(Label("nl", "?"), quiz))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""

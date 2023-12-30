@@ -142,6 +142,12 @@ class Quiz:
         return cast(Labels, tuple(chain(*answers)))
 
     @property
+    def non_generated_answers(self) -> Labels:
+        """Return all non-generated answers."""
+        answers = [answer.non_generated_spelling_alternatives for answer in self._answers]
+        return cast(Labels, tuple(chain(*answers)))
+
+    @property
     def question_meanings(self) -> Labels:
         """Return the first spelling alternative of the question meanings."""
         return Labels(meaning.spelling_alternatives[0] for meaning in self._question_meanings)
@@ -155,7 +161,7 @@ class Quiz:
         """Return the answers not equal to the guess."""
         if self.quiz_types[0] in get_args(ListenQuizType):
             return Labels()  # Returning other answers doesn't make sense if the user has to type what is spoken
-        return tuple(answer for answer in self.answers if not match(guess, answer))
+        return tuple(answer for answer in self.non_generated_answers if not match(guess, answer))
 
     @property
     def instruction(self) -> str:
