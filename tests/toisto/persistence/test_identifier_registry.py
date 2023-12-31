@@ -9,20 +9,12 @@ from toisto.persistence.identifier_registry import IdentifierRegistry
 from ...base import ToistoTestCase
 
 
-class IdentifierRegistryUnderTest(IdentifierRegistry[int]):
-    """Indentifier registry with integers as identifiers."""
-
-    def _identifier_name(self) -> str:
-        """Override to return the identifier name."""
-        return "integer"
-
-
 class IdentifierRegistryTest(ToistoTestCase):
     """Unit tests for the identifier registry."""
 
     def setUp(self) -> None:
         """Set up the registry."""
-        self.registry = IdentifierRegistryUnderTest(ArgumentParser())
+        self.registry = IdentifierRegistry[int]("integer", ArgumentParser())
 
     @patch("sys.stderr.write")
     def test_same_identifier_in_different_files(self, stderr_write: Mock):

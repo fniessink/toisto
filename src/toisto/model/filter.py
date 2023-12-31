@@ -4,14 +4,14 @@ from argparse import ArgumentParser
 from typing import NoReturn
 
 from .language.concept import Concept, ConceptId
-from .topic.topic import Topic
+from .topic.topic import Topic, TopicId
 
 
 def filter_concepts(
     concepts: set[Concept],
     topics: set[Topic],
     selected_concepts: list[ConceptId],
-    selected_topics: list[str],
+    selected_topics: list[TopicId],
     argument_parser: ArgumentParser,
 ) -> set[Concept] | NoReturn:
     """Filter the concepts by selected concepts or selected topics."""
