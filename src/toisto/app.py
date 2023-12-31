@@ -26,7 +26,7 @@ from .persistence.concepts import ConceptIdRegistry, load_concepts
 from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
 from .persistence.spelling_alternatives import load_spelling_alternatives
-from .persistence.topics import load_topics
+from .persistence.topics import TopicIdRegistry, load_topics
 from .ui.cli import create_argument_parser, parse_arguments
 from .ui.text import console, show_welcome
 
@@ -35,16 +35,17 @@ def init() -> tuple[ConfigParser, Namespace, set[Concept], set[Topic], Quizzes, 
     """Initialize the main program."""
     argument_parser = create_argument_parser(default_config())
     config = read_config(argument_parser)
-    registry = ConceptIdRegistry(argument_parser)
-    concepts = load_concepts(CONCEPT_JSON_FILES, registry, argument_parser)
-    topics = load_topics(TOPIC_FILES, argument_parser)
+    concept_registry = ConceptIdRegistry(argument_parser)
+    concepts = load_concepts(CONCEPT_JSON_FILES, concept_registry, argument_parser)
+    topic_registry = TopicIdRegistry(argument_parser)
+    topics = load_topics(TOPIC_FILES, topic_registry, argument_parser)
     argument_parser = create_argument_parser(config, concepts, topics)
     args = parse_arguments(argument_parser)
     load_spelling_alternatives(args.target_language, args.source_language)
     extra_concept_files = [Path(concept_file) for concept_file in args.concept_file]
-    concepts |= load_concepts(extra_concept_files, registry, argument_parser)
+    concepts |= load_concepts(extra_concept_files, concept_registry, argument_parser)
     extra_topic_files = [Path(topic_file) for topic_file in args.topic_file]
-    topics |= load_topics(extra_topic_files, argument_parser)
+    topics |= load_topics(extra_topic_files, topic_registry, argument_parser)
     concepts = filter_concepts(concepts, topics, args.concept, args.topic, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, argument_parser)
