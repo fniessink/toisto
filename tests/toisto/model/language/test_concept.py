@@ -9,7 +9,7 @@ from toisto.model.filter import filter_concepts
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label
-from toisto.model.topic.topic import Topic
+from toisto.model.topic.topic import Topic, TopicId
 
 from ....base import ToistoTestCase
 
@@ -71,8 +71,8 @@ class ConceptFilterTest(unittest.TestCase):
         self.two = create_concept(ConceptId("two"), cast(ConceptDict, dict(fi="kaksi", nl="twee")))
         self.three = create_concept(ConceptId("three"), cast(ConceptDict, dict(fi="kolme", nl="drie")))
         self.concepts = {self.two, self.three}
-        small = Topic("small", frozenset([ConceptId("two")]))
-        big = Topic("big", frozenset([ConceptId("three")]))
+        small = Topic(TopicId("small"), frozenset([ConceptId("two")]))
+        big = Topic(TopicId("big"), frozenset([ConceptId("three")]))
         self.topics = {small, big}
 
     def test_no_filter(self):

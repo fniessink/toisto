@@ -3,20 +3,22 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import ClassVar
+from typing import ClassVar, NewType
 
 from ..language.concept import ConceptId
+
+TopicId = NewType("TopicId", str)
 
 
 @dataclass(frozen=True)
 class Topic:
     """Topic model."""
 
-    name: str
+    name: TopicId
     _concepts: frozenset[ConceptId] = frozenset()
-    topics: frozenset[str] = frozenset()
+    topics: frozenset[TopicId] = frozenset()
 
-    instances: ClassVar[dict[str, Topic]] = {}
+    instances: ClassVar[dict[TopicId, Topic]] = {}
 
     def __post_init__(self) -> None:
         """Add the topic to the topic name -> topic mapping."""

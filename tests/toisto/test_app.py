@@ -9,7 +9,7 @@ import requests
 
 from toisto.metadata import VERSION
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.topic.topic import Topic
+from toisto.model.topic.topic import Topic, TopicId
 
 
 class AppTest(unittest.TestCase):
@@ -24,8 +24,8 @@ class AppTest(unittest.TestCase):
 
     @patch("rich.console.Console.pager", MagicMock())
     @patch(
-        "toisto.persistence.topics.load_topics",
-        Mock(return_value={Topic("topic", frozenset([ConceptId("concept-0")]))}),
+        "toisto.persistence.topics.TopicLoader.load",
+        Mock(return_value={Topic(TopicId("topic"), frozenset([ConceptId("concept-0")]))}),
     )
     @patch("toisto.persistence.spelling_alternatives.load_spelling_alternatives", Mock(return_value={}))
     @patch("toisto.ui.speech.Popen", Mock())

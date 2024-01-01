@@ -2,9 +2,8 @@
 
 from argparse import ArgumentParser
 
-from toisto.metadata import CONCEPT_JSON_FILES, TOPIC_FILES
-from toisto.persistence.concepts import ConceptIdRegistry, load_concepts
-from toisto.persistence.topics import TopicIdRegistry, load_topics
+from toisto.persistence.concepts import ConceptLoader
+from toisto.persistence.topics import TopicLoader
 
 from ..base import ToistoTestCase
 
@@ -15,9 +14,9 @@ class TopicsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         argument_parser = ArgumentParser()
-        self.concepts = load_concepts(CONCEPT_JSON_FILES, ConceptIdRegistry(argument_parser), argument_parser)
+        self.concepts = ConceptLoader(argument_parser).load()
         self.all_concept_ids = {concept.concept_id for concept in self.concepts}
-        self.topics = load_topics(TOPIC_FILES, TopicIdRegistry(argument_parser), argument_parser)
+        self.topics = TopicLoader(argument_parser).load()
 
     def test_all_concepts_have_at_least_one_topic(self):
         """Test that all concepts have at least one topic."""

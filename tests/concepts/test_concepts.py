@@ -3,10 +3,9 @@
 from argparse import ArgumentParser
 from typing import cast
 
-from toisto.metadata import CONCEPT_JSON_FILES
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
-from toisto.persistence.concepts import ConceptIdRegistry, load_concepts
+from toisto.persistence.concepts import ConceptLoader
 
 from ..base import ToistoTestCase
 
@@ -17,8 +16,7 @@ class ConceptsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.concept = create_concept(ConceptId("welcome"), cast(ConceptDict, {}))
-        argument_parser = ArgumentParser()
-        self.concepts = load_concepts(CONCEPT_JSON_FILES, ConceptIdRegistry(argument_parser), argument_parser)
+        self.concepts = ConceptLoader(ArgumentParser()).load()
 
     def test_load_concepts(self):
         """Test that the concepts can be loaded."""

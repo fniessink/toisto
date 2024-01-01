@@ -10,7 +10,7 @@ from unittest.mock import Mock, patch
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId, RelatedConcepts
 from toisto.model.language.label import Label
-from toisto.model.topic.topic import Topic
+from toisto.model.topic.topic import Topic, TopicId
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
 
@@ -85,7 +85,10 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             Concept(ConceptId("foo"), {english: (Label(english, "foo"),)}, {}, related, False),
             Concept(ConceptId("bar"), {english: (Label(english, "bar"),)}, {}, related, False),
         }
-        topics = {Topic("T1", frozenset([ConceptId("foo")])), Topic("T2", frozenset([ConceptId("bar")]))}
+        topics = {
+            Topic(TopicId("T1"), frozenset([ConceptId("foo")])),
+            Topic(TopicId("T2"), frozenset([ConceptId("bar")])),
+        }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))
         self.assertEqual(
             """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-C {concept file}]

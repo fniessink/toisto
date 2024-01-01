@@ -1,6 +1,5 @@
 """Identifier registry."""
 
-from abc import abstractmethod
 from argparse import ArgumentParser
 from pathlib import Path
 from typing import Generic, TypeVar
@@ -11,9 +10,10 @@ Identifier = TypeVar("Identifier")
 
 
 class IdentifierRegistry(Generic[Identifier]):
-    """Registry to check the uniqueness of identifiers across files."""
+    """Registry to check the uniqueness of domain object identifiers across files."""
 
-    def __init__(self, argument_parser: ArgumentParser) -> None:
+    def __init__(self, domain_object_name: str, argument_parser: ArgumentParser) -> None:
+        self.domain_object_name = domain_object_name
         self.argument_parser = argument_parser
         self.files_by_id: dict[Identifier, Path] = {}
 
@@ -27,13 +27,9 @@ class IdentifierRegistry(Generic[Identifier]):
         if identifier in self.files_by_id:
             other_file_path = self.files_by_id[identifier]
             occurs = "occurs multiple times" if file_path == other_file_path else "also occurs"
-            name = self._identifier_name()
+            name = self.domain_object_name
             self.argument_parser.error(
                 f"{NAME} cannot read {name} file {file_path}: {name} identifier '{identifier}' {occurs} in {name} file "
                 f"{other_file_path}.\n{name.capitalize()} identifiers must be unique across {name} files.\n",
             )
         self.files_by_id[identifier] = file_path
-
-    @abstractmethod
-    def _identifier_name(self) -> str:
-        """Return the name of the identifier."""
