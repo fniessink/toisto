@@ -27,7 +27,7 @@ class Loader(Generic[DomainObjectIdentifierType, DomainObjectType]):
         """Load the domain objects from the files."""
         all_domain_objects = set()
         try:
-            for file_path in files or self.builtin_files:
+            for file_path in self.builtin_files if files is None else files:
                 domain_objects = self._parse_json(load_json(file_path))
                 self.id_registry.check_and_register_identifiers(self._identifiers(domain_objects), file_path)
                 all_domain_objects |= domain_objects
