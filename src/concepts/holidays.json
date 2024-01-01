@@ -1,192 +1,194 @@
 {
-    "holiday": {
-        "roots": "day",
-        "en": "holiday",
-        "fi": "juhlapäivä",
-        "nl": "de feestdag"
-    },
-    "christmas": {
-        "en": "Christmas;;In English, the names of holidays are capitalized",
-        "fi": "joulu;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Kerstmis;;In Dutch, the names of holidays are capitalized"
-    },
-    "christmas eve": {
-        "roots": {
-            "en": "christmas",
-            "fi": "christmas",
-            "nl": [
-                "christmas",
-                "evening"
-            ]
+    "concepts": {
+        "holiday": {
+            "roots": "day",
+            "en": "holiday",
+            "fi": "juhlapäivä",
+            "nl": "de feestdag"
         },
-        "en": "Christmas Eve;;In English, the names of holidays are capitalized",
-        "fi": "jouluaatto;;In Finnish, the names of holidays are not capitalized",
-        "nl": "kerstavond;;In Dutch, the names of holidays are capitalized, but derived words are not"
-    },
-    "christmas day": {
-        "roots": [
-            "christmas",
-            "day"
-        ],
-        "en": "Christmas Day;;In English, the names of holidays are capitalized",
-        "fi": "joulupäivä;;In Finnish, the names of holidays are not capitalized",
-        "nl": "eerste kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
-    },
-    "boxing day": {
-        "roots": {
-            "en": "day",
-            "fi": "day",
-            "nl": [
+        "christmas": {
+            "en": "Christmas;;In English, the names of holidays are capitalized",
+            "fi": "joulu;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Kerstmis;;In Dutch, the names of holidays are capitalized"
+        },
+        "christmas eve": {
+            "roots": {
+                "en": "christmas",
+                "fi": "christmas",
+                "nl": [
+                    "christmas",
+                    "evening"
+                ]
+            },
+            "en": "Christmas Eve;;In English, the names of holidays are capitalized",
+            "fi": "jouluaatto;;In Finnish, the names of holidays are not capitalized",
+            "nl": "kerstavond;;In Dutch, the names of holidays are capitalized, but derived words are not"
+        },
+        "christmas day": {
+            "roots": [
                 "christmas",
                 "day"
-            ]
-        },
-        "en": "Boxing Day;;In English, the names of holidays are capitalized",
-        "fi": "tapaninpäivä;;In Finnish, the names of holidays are not capitalized",
-        "nl": "tweede kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
-    },
-    "merry christmas": {
-        "roots": {
-            "en": "christmas",
-            "fi": [
-                "good",
-                "christmas"
             ],
-            "nl": [
-                "cheerful",
-                "christmas"
-            ]
+            "en": "Christmas Day;;In English, the names of holidays are capitalized",
+            "fi": "joulupäivä;;In Finnish, the names of holidays are not capitalized",
+            "nl": "eerste kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
         },
-        "en": "Merry Christmas!",
-        "fi": "Hyvää joulua!",
-        "nl": "Vrolijk kerstfeest!"
-    },
-    "christmas tree": {
-        "roots": [
-            "christmas",
-            "tree"
-        ],
-        "en": "Christmas tree",
-        "fi": "joulukuusi",
-        "nl": "de kerstboom"
-    },
-    "santa": {
-        "roots": {
-            "fi": "christmas",
-            "nl": "christmas"
+        "boxing day": {
+            "roots": {
+                "en": "day",
+                "fi": "day",
+                "nl": [
+                    "christmas",
+                    "day"
+                ]
+            },
+            "en": "Boxing Day;;In English, the names of holidays are capitalized",
+            "fi": "tapaninpäivä;;In Finnish, the names of holidays are not capitalized",
+            "nl": "tweede kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
         },
-        "en": "Santa Claus|Santa",
-        "fi": "joulupukki",
-        "nl": "de kerstman"
-    },
-    "elf": {
-        "en": "elf",
-        "fi": "tonttu",
-        "nl": "de elf"
-    },
-    "angel": {
-        "en": "angel",
-        "fi": "enkeli",
-        "nl": "de engel"
-    },
-    "bauble": {
-        "roots": {
-            "fi": [
-                "christmas tree",
-                "christmas"
+        "merry christmas": {
+            "roots": {
+                "en": "christmas",
+                "fi": [
+                    "good",
+                    "christmas"
+                ],
+                "nl": [
+                    "cheerful",
+                    "christmas"
+                ]
+            },
+            "en": "Merry Christmas!",
+            "fi": "Hyvää joulua!",
+            "nl": "Vrolijk kerstfeest!"
+        },
+        "christmas tree": {
+            "roots": [
+                "christmas",
+                "tree"
             ],
-            "nl": "christmas"
+            "en": "Christmas tree",
+            "fi": "joulukuusi",
+            "nl": "de kerstboom"
         },
-        "en": "bauble",
-        "fi": "joulukuusenpallo|joulupallo",
-        "nl": "de kerstbal"
-    },
-    "new year": {
-        "roots": [
-            "new",
-            "year"
-        ],
-        "en": "New Year;;In English, the names of holidays are capitalized",
-        "fi": "uusivuosi;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Nieuwjaar;;In Dutch, the names of holidays are capitalized"
-    },
-    "happy new year": {
-        "roots": {
-            "en": [
-                "happy",
-                "new year"
-            ],
-            "fi": [
-                "good",
+        "santa": {
+            "roots": {
+                "fi": "christmas",
+                "nl": "christmas"
+            },
+            "en": "Santa Claus|Santa",
+            "fi": "joulupukki",
+            "nl": "de kerstman"
+        },
+        "elf": {
+            "en": "elf",
+            "fi": "tonttu",
+            "nl": "de elf"
+        },
+        "angel": {
+            "en": "angel",
+            "fi": "enkeli",
+            "nl": "de engel"
+        },
+        "bauble": {
+            "roots": {
+                "fi": [
+                    "christmas tree",
+                    "christmas"
+                ],
+                "nl": "christmas"
+            },
+            "en": "bauble",
+            "fi": "joulukuusenpallo|joulupallo",
+            "nl": "de kerstbal"
+        },
+        "new year": {
+            "roots": [
                 "new",
                 "year"
             ],
-            "nl": [
-                "happy",
-                "new year"
-            ]
+            "en": "New Year;;In English, the names of holidays are capitalized",
+            "fi": "uusivuosi;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Nieuwjaar;;In Dutch, the names of holidays are capitalized"
         },
-        "en": "Happy New Year!",
-        "fi": "Hyvää uutta vuotta!",
-        "nl": "Gelukkig nieuwjaar!"
-    },
-    "valentine's day": {
-        "roots": "day",
-        "en": "Valentine's Day;;In English, the names of holidays are capitalized",
-        "fi": "ystävänpäivä;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Valentijnsdag;;In Dutch, the names of holidays are capitalized"
-    },
-    "epiphany": {
-        "en": "Epiphany;;In English, the names of holidays are capitalized",
-        "fi": "loppiainen;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Driekoningen;;In Dutch, the names of holidays are capitalized"
-    },
-    "easter": {
-        "en": "Easter;;In English, the names of holidays are capitalized",
-        "fi": "pääsiäinen;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Pasen;;In Dutch, the names of holidays are capitalized"
-    },
-    "happy easter": {
-        "roots": {
-            "en": [
-                "happy",
-                "easter"
-            ],
-            "fi": [
-                "good",
-                "easter"
-            ],
-            "nl": [
-                "cheerful",
-                "easter"
-            ]
+        "happy new year": {
+            "roots": {
+                "en": [
+                    "happy",
+                    "new year"
+                ],
+                "fi": [
+                    "good",
+                    "new",
+                    "year"
+                ],
+                "nl": [
+                    "happy",
+                    "new year"
+                ]
+            },
+            "en": "Happy New Year!",
+            "fi": "Hyvää uutta vuotta!",
+            "nl": "Gelukkig nieuwjaar!"
         },
-        "en": "Happy Easter!",
-        "fi": "Hyvää pääsiäistä!",
-        "nl": "Vrolijk Pasen!"
-    },
-    "first of may": {
-        "roots": {
-            "en": "may",
-            "nl": "day"
+        "valentine's day": {
+            "roots": "day",
+            "en": "Valentine's Day;;In English, the names of holidays are capitalized",
+            "fi": "ystävänpäivä;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Valentijnsdag;;In Dutch, the names of holidays are capitalized"
         },
-        "en": "First of May;;In English, the names of holidays are capitalized",
-        "fi": "vappu;;In Finnish, the names of holidays are not capitalized",
-        "nl": "Dag van de arbeid;;In Dutch, the names of holidays are capitalized"
-    },
-    "midsummer": {
-        "roots": {
-            "en": "summer",
-            "nl": "summer"
+        "epiphany": {
+            "en": "Epiphany;;In English, the names of holidays are capitalized",
+            "fi": "loppiainen;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Driekoningen;;In Dutch, the names of holidays are capitalized"
         },
-        "en": "midsummer",
-        "fi": "juhannus;;In Finnish, the names of holidays are not capitalized",
-        "nl": "midzomer"
-    },
-    "finnish independence day": {
-        "roots": "day",
-        "en": "(Finnish independence day, December 6th)",
-        "fi": "itsenäisyyspäivä;;In Finnish, the names of holidays are not capitalized",
-        "nl": "(Finse onafhankelijkheidsdag, 6 december)"
+        "easter": {
+            "en": "Easter;;In English, the names of holidays are capitalized",
+            "fi": "pääsiäinen;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Pasen;;In Dutch, the names of holidays are capitalized"
+        },
+        "happy easter": {
+            "roots": {
+                "en": [
+                    "happy",
+                    "easter"
+                ],
+                "fi": [
+                    "good",
+                    "easter"
+                ],
+                "nl": [
+                    "cheerful",
+                    "easter"
+                ]
+            },
+            "en": "Happy Easter!",
+            "fi": "Hyvää pääsiäistä!",
+            "nl": "Vrolijk Pasen!"
+        },
+        "first of may": {
+            "roots": {
+                "en": "may",
+                "nl": "day"
+            },
+            "en": "First of May;;In English, the names of holidays are capitalized",
+            "fi": "vappu;;In Finnish, the names of holidays are not capitalized",
+            "nl": "Dag van de arbeid;;In Dutch, the names of holidays are capitalized"
+        },
+        "midsummer": {
+            "roots": {
+                "en": "summer",
+                "nl": "summer"
+            },
+            "en": "midsummer",
+            "fi": "juhannus;;In Finnish, the names of holidays are not capitalized",
+            "nl": "midzomer"
+        },
+        "finnish independence day": {
+            "roots": "day",
+            "en": "(Finnish independence day, December 6th)",
+            "fi": "itsenäisyyspäivä;;In Finnish, the names of holidays are not capitalized",
+            "nl": "(Finse onafhankelijkheidsdag, 6 december)"
+        }
     }
 }

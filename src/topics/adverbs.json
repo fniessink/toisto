@@ -1,8 +1,11 @@
 {
-    "name": "adverbs",
-    "concepts": [
-        "also",
-        "here",
-        "there"
-    ]
+    "topics": {
+        "adverbs": {
+            "concepts": [
+                "also",
+                "here",
+                "there"
+            ]
+        }
+    }
 }

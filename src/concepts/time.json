@@ -1,408 +1,410 @@
 {
-    "time": {
-        "singular": {
-            "en": "time",
-            "fi": "aika",
-            "nl": "de tijd"
+    "concepts": {
+        "time": {
+            "singular": {
+                "en": "time",
+                "fi": "aika",
+                "nl": "de tijd"
+            },
+            "plural": {
+                "en": "times",
+                "fi": "ajat",
+                "nl": "de tijden"
+            }
         },
-        "plural": {
-            "en": "times",
-            "fi": "ajat",
-            "nl": "de tijden"
-        }
-    },
-    "now": {
-        "en": "now",
-        "fi": "nyt",
-        "nl": "nu"
-    },
-    "then": {
-        "en": "then",
-        "fi": [
-            "sitten",
-            "sit*"
-        ],
-        "nl": "dan"
-    },
-    "morning": {
-        "singular": {
-            "en": "morning",
-            "fi": "aamu|aamupäivä",
-            "nl": "de ochtend"
+        "now": {
+            "en": "now",
+            "fi": "nyt",
+            "nl": "nu"
         },
-        "plural": {
-            "en": "mornings",
-            "fi": "aamut|aamupäivät",
-            "nl": "de ochtenden"
-        }
-    },
-    "noon": {
-        "roots": {
-            "fi": "day",
-            "nl": [
-                "12",
-                "hour",
-                "afternoon"
-            ]
-        },
-        "singular": {
-            "en": "noon",
-            "fi": "keskipäivä",
-            "nl": "twaalf uur 's middags"
-        },
-        "plural": {
-            "fi": "keskipäivät"
-        }
-    },
-    "afternoon": {
-        "roots": {
-            "en": "noon",
+        "then": {
+            "en": "then",
             "fi": [
-                "evening",
-                "day"
+                "sitten",
+                "sit*"
             ],
-            "nl": "day"
+            "nl": "dan"
         },
-        "singular": {
-            "en": "afternoon",
-            "fi": "iltapäivä",
-            "nl": "de middag"
+        "morning": {
+            "singular": {
+                "en": "morning",
+                "fi": "aamu|aamupäivä",
+                "nl": "de ochtend"
+            },
+            "plural": {
+                "en": "mornings",
+                "fi": "aamut|aamupäivät",
+                "nl": "de ochtenden"
+            }
         },
-        "plural": {
-            "en": "afternoons",
-            "fi": "iltapäivät",
-            "nl": "de middagen"
-        }
-    },
-    "evening": {
-        "singular": {
-            "en": "evening",
-            "fi": "ilta",
-            "nl": "de avond"
+        "noon": {
+            "roots": {
+                "fi": "day",
+                "nl": [
+                    "12",
+                    "hour",
+                    "afternoon"
+                ]
+            },
+            "singular": {
+                "en": "noon",
+                "fi": "keskipäivä",
+                "nl": "twaalf uur 's middags"
+            },
+            "plural": {
+                "fi": "keskipäivät"
+            }
         },
-        "plural": {
-            "en": "evenings",
-            "fi": "illat",
-            "nl": "de avonden"
-        }
-    },
-    "night": {
-        "singular": {
-            "en": "night",
-            "fi": "yö",
-            "nl": "de nacht"
+        "afternoon": {
+            "roots": {
+                "en": "noon",
+                "fi": [
+                    "evening",
+                    "day"
+                ],
+                "nl": "day"
+            },
+            "singular": {
+                "en": "afternoon",
+                "fi": "iltapäivä",
+                "nl": "de middag"
+            },
+            "plural": {
+                "en": "afternoons",
+                "fi": "iltapäivät",
+                "nl": "de middagen"
+            }
         },
-        "plural": {
-            "en": "nights",
-            "fi": "yöt",
-            "nl": "de nachten"
-        }
-    },
-    "midnight": {
-        "roots": "night",
-        "singular": {
-            "en": "midnight",
-            "fi": "keskiyö",
-            "nl": "de middernacht"
+        "evening": {
+            "singular": {
+                "en": "evening",
+                "fi": "ilta",
+                "nl": "de avond"
+            },
+            "plural": {
+                "en": "evenings",
+                "fi": "illat",
+                "nl": "de avonden"
+            }
         },
-        "plural": {
-            "en": "midnights",
-            "fi": "keskiyöt",
-            "nl": "de middernachten"
-        }
-    },
-    "year": {
-        "singular": {
-            "en": "year",
-            "fi": "vuosi",
-            "nl": "het jaar"
+        "night": {
+            "singular": {
+                "en": "night",
+                "fi": "yö",
+                "nl": "de nacht"
+            },
+            "plural": {
+                "en": "nights",
+                "fi": "yöt",
+                "nl": "de nachten"
+            }
         },
-        "plural": {
-            "en": "years",
-            "fi": "vuodet",
-            "nl": "de jaren"
-        }
-    },
-    "decade": {
-        "roots": {
+        "midnight": {
+            "roots": "night",
+            "singular": {
+                "en": "midnight",
+                "fi": "keskiyö",
+                "nl": "de middernacht"
+            },
+            "plural": {
+                "en": "midnights",
+                "fi": "keskiyöt",
+                "nl": "de middernachten"
+            }
+        },
+        "year": {
+            "singular": {
+                "en": "year",
+                "fi": "vuosi",
+                "nl": "het jaar"
+            },
+            "plural": {
+                "en": "years",
+                "fi": "vuodet",
+                "nl": "de jaren"
+            }
+        },
+        "decade": {
+            "roots": {
+                "fi": [
+                    "10",
+                    "year"
+                ]
+            },
+            "singular": {
+                "en": "decade",
+                "fi": "vuosikymmen",
+                "nl": "het decennium"
+            },
+            "plural": {
+                "en": "decades",
+                "fi": "vuosikymmenet",
+                "nl": "de decennia"
+            }
+        },
+        "century": {
+            "roots": {
+                "fi": [
+                    "100",
+                    "year"
+                ]
+            },
+            "singular": {
+                "en": "century",
+                "fi": "vuosisata",
+                "nl": "de eeuw"
+            },
+            "plural": {
+                "en": "centuries",
+                "fi": "vuosisadat",
+                "nl": "de eeuwen"
+            }
+        },
+        "hour": {
+            "singular": {
+                "en": "hour",
+                "fi": "tunti",
+                "nl": "het uur"
+            },
+            "plural": {
+                "en": "hours",
+                "fi": "tunnit",
+                "nl": "de uren"
+            }
+        },
+        "minute": {
+            "singular": {
+                "en": "minute",
+                "fi": "minuutti",
+                "nl": "de minuut"
+            },
+            "plural": {
+                "en": "minutes",
+                "fi": "minuutit",
+                "nl": "de minuten"
+            }
+        },
+        "clock": {
+            "singular": {
+                "en": "clock",
+                "fi": "kello",
+                "nl": "de klok"
+            },
+            "plural": {
+                "en": "clocks",
+                "fi": "kellot",
+                "nl": "de klokken"
+            }
+        },
+        "alarm clock": {
+            "roots": {
+                "en": "clock",
+                "fi": "clock"
+            },
+            "en": "alarm clock",
+            "fi": "herätyskello",
+            "nl": "de wekker"
+        },
+        "what time is it": {
+            "roots": {
+                "en": [
+                    "what",
+                    "time",
+                    "to be"
+                ],
+                "fi": [
+                    "what",
+                    "how",
+                    "time",
+                    "clock",
+                    "to be"
+                ],
+                "nl": [
+                    "how",
+                    "to be"
+                ]
+            },
+            "en": "What time is it?",
             "fi": [
-                "10",
-                "year"
-            ]
+                "Paljonko kello on?",
+                "Mitä kello on?"
+            ],
+            "nl": "Hoe laat is het?"
         },
-        "singular": {
-            "en": "decade",
-            "fi": "vuosikymmen",
-            "nl": "het decennium"
+        "it is 10:00": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "10",
+                    "clock"
+                ],
+                "fi": [
+                    "to be",
+                    "10",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "hour"
+                ]
+            },
+            "en": "It is ten o'clock.",
+            "fi": "Kello on kymmenen.",
+            "nl": "Het is tien uur."
         },
-        "plural": {
-            "en": "decades",
-            "fi": "vuosikymmenet",
-            "nl": "de decennia"
+        "it is 2:30": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "2",
+                    "10"
+                ],
+                "fi": [
+                    "to be",
+                    "3",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "3"
+                ]
+            },
+            "en": "It is half past two.",
+            "fi": "Kello on puoli kolme.",
+            "nl": "Het is half drie."
+        },
+        "it is 3:15": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "3"
+                ],
+                "fi": [
+                    "to be",
+                    "3",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "3"
+                ]
+            },
+            "en": "It is a quarter past three.",
+            "fi": "Kello on vartin yli kolme.",
+            "nl": "Het is kwart over drie."
+        },
+        "it is 3:45": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "4"
+                ],
+                "fi": [
+                    "to be",
+                    "4",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "4"
+                ]
+            },
+            "en": "It is a quarter to four.",
+            "fi": "Kello on varttia vaille neljä.",
+            "nl": "Het is kwart voor vier."
+        },
+        "it is 6:20": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "6",
+                    "20"
+                ],
+                "fi": [
+                    "to be",
+                    "6",
+                    "20",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "7"
+                ]
+            },
+            "en": "It is twenty past six.",
+            "fi": [
+                "Kello on kuusi kaksikymmentä.",
+                "Kello on kaksikymmentä yli kuusi."
+            ],
+            "nl": "Het is tien voor half zeven."
+        },
+        "it is 6:40": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "7",
+                    "20"
+                ],
+                "fi": [
+                    "to be",
+                    "6",
+                    "7",
+                    "20",
+                    "40",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "7"
+                ]
+            },
+            "en": "It is twenty to seven.",
+            "fi": [
+                "Kello on kuusi neljäkymmentä.",
+                "Kello on kahtakymmentä vaille seitsemän."
+            ],
+            "nl": "Het is tien over half zeven."
+        },
+        "what time": {
+            "roots": {
+                "en": [
+                    "what",
+                    "time"
+                ],
+                "fi": "time",
+                "nl": "how"
+            },
+            "en": "What time?",
+            "fi": "Mihin aikaan?",
+            "nl": "Hoe laat?"
+        },
+        "how long does it take": {
+            "roots": "how",
+            "en": "How long does it take?",
+            "fi": [
+                "Kauanko se kestää?",
+                "Kuinka kauan se kestää?"
+            ],
+            "nl": "Hoe lang duurt het?"
+        },
+        "it takes one hour": {
+            "roots": {
+                "en": [
+                    "1",
+                    "hour"
+                ],
+                "fi": "hour",
+                "nl": [
+                    "1",
+                    "hour"
+                ]
+            },
+            "en": "It takes one hour.",
+            "fi": "Se kestää tunnin.",
+            "nl": "Het duurt één uur.|Het duurt een uur."
         }
-    },
-    "century": {
-        "roots": {
-            "fi": [
-                "100",
-                "year"
-            ]
-        },
-        "singular": {
-            "en": "century",
-            "fi": "vuosisata",
-            "nl": "de eeuw"
-        },
-        "plural": {
-            "en": "centuries",
-            "fi": "vuosisadat",
-            "nl": "de eeuwen"
-        }
-    },
-    "hour": {
-        "singular": {
-            "en": "hour",
-            "fi": "tunti",
-            "nl": "het uur"
-        },
-        "plural": {
-            "en": "hours",
-            "fi": "tunnit",
-            "nl": "de uren"
-        }
-    },
-    "minute": {
-        "singular": {
-            "en": "minute",
-            "fi": "minuutti",
-            "nl": "de minuut"
-        },
-        "plural": {
-            "en": "minutes",
-            "fi": "minuutit",
-            "nl": "de minuten"
-        }
-    },
-    "clock": {
-        "singular": {
-            "en": "clock",
-            "fi": "kello",
-            "nl": "de klok"
-        },
-        "plural": {
-            "en": "clocks",
-            "fi": "kellot",
-            "nl": "de klokken"
-        }
-    },
-    "alarm clock": {
-        "roots": {
-            "en": "clock",
-            "fi": "clock"
-        },
-        "en": "alarm clock",
-        "fi": "herätyskello",
-        "nl": "de wekker"
-    },
-    "what time is it": {
-        "roots": {
-            "en": [
-                "what",
-                "time",
-                "to be"
-            ],
-            "fi": [
-                "what",
-                "how",
-                "time",
-                "clock",
-                "to be"
-            ],
-            "nl": [
-                "how",
-                "to be"
-            ]
-        },
-        "en": "What time is it?",
-        "fi": [
-            "Paljonko kello on?",
-            "Mitä kello on?"
-        ],
-        "nl": "Hoe laat is het?"
-    },
-    "it is 10:00": {
-        "roots": {
-            "en": [
-                "to be",
-                "10",
-                "clock"
-            ],
-            "fi": [
-                "to be",
-                "10",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "hour"
-            ]
-        },
-        "en": "It is ten o'clock.",
-        "fi": "Kello on kymmenen.",
-        "nl": "Het is tien uur."
-    },
-    "it is 2:30": {
-        "roots": {
-            "en": [
-                "to be",
-                "2",
-                "10"
-            ],
-            "fi": [
-                "to be",
-                "3",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "3"
-            ]
-        },
-        "en": "It is half past two.",
-        "fi": "Kello on puoli kolme.",
-        "nl": "Het is half drie."
-    },
-    "it is 3:15": {
-        "roots": {
-            "en": [
-                "to be",
-                "3"
-            ],
-            "fi": [
-                "to be",
-                "3",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "3"
-            ]
-        },
-        "en": "It is a quarter past three.",
-        "fi": "Kello on vartin yli kolme.",
-        "nl": "Het is kwart over drie."
-    },
-    "it is 3:45": {
-        "roots": {
-            "en": [
-                "to be",
-                "4"
-            ],
-            "fi": [
-                "to be",
-                "4",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "4"
-            ]
-        },
-        "en": "It is a quarter to four.",
-        "fi": "Kello on varttia vaille neljä.",
-        "nl": "Het is kwart voor vier."
-    },
-    "it is 6:20": {
-        "roots": {
-            "en": [
-                "to be",
-                "6",
-                "20"
-            ],
-            "fi": [
-                "to be",
-                "6",
-                "20",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "7"
-            ]
-        },
-        "en": "It is twenty past six.",
-        "fi": [
-            "Kello on kuusi kaksikymmentä.",
-            "Kello on kaksikymmentä yli kuusi."
-        ],
-        "nl": "Het is tien voor half zeven."
-    },
-    "it is 6:40": {
-        "roots": {
-            "en": [
-                "to be",
-                "7",
-                "20"
-            ],
-            "fi": [
-                "to be",
-                "6",
-                "7",
-                "20",
-                "40",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "7"
-            ]
-        },
-        "en": "It is twenty to seven.",
-        "fi": [
-            "Kello on kuusi neljäkymmentä.",
-            "Kello on kahtakymmentä vaille seitsemän."
-        ],
-        "nl": "Het is tien over half zeven."
-    },
-    "what time": {
-        "roots": {
-            "en": [
-                "what",
-                "time"
-            ],
-            "fi": "time",
-            "nl": "how"
-        },
-        "en": "What time?",
-        "fi": "Mihin aikaan?",
-        "nl": "Hoe laat?"
-    },
-    "how long does it take": {
-        "roots": "how",
-        "en": "How long does it take?",
-        "fi": [
-            "Kauanko se kestää?",
-            "Kuinka kauan se kestää?"
-        ],
-        "nl": "Hoe lang duurt het?"
-    },
-    "it takes one hour": {
-        "roots": {
-            "en": [
-                "1",
-                "hour"
-            ],
-            "fi": "hour",
-            "nl": [
-                "1",
-                "hour"
-            ]
-        },
-        "en": "It takes one hour.",
-        "fi": "Se kestää tunnin.",
-        "nl": "Het duurt één uur.|Het duurt een uur."
     }
 }

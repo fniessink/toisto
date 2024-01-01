@@ -1,8 +1,11 @@
 {
-    "name": "conjunctions",
-    "concepts": [
-        "and",
-        "because",
-        "but"
-    ]
+    "topics": {
+        "conjunctions": {
+            "concepts": [
+                "and",
+                "because",
+                "but"
+            ]
+        }
+    }
 }

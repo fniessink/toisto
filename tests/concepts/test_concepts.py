@@ -5,7 +5,7 @@ from typing import cast
 
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
-from toisto.persistence.concepts import ConceptLoader
+from toisto.persistence.loader import Loader
 
 from ..base import ToistoTestCase
 
@@ -16,7 +16,7 @@ class ConceptsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.concept = create_concept(ConceptId("welcome"), cast(ConceptDict, {}))
-        self.concepts = ConceptLoader(ArgumentParser()).load()
+        self.concepts, self.topics = Loader(ArgumentParser()).load()
 
     def test_load_concepts(self):
         """Test that the concepts can be loaded."""

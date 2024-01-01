@@ -1,9 +1,12 @@
 {
-    "name": "cities",
-    "concepts": [
-        "helsinki",
-        "north helsinki",
-        "saint petersburg",
-        "turku"
-    ]
+    "topics": {
+        "cities": {
+            "concepts": [
+                "helsinki",
+                "north helsinki",
+                "saint petersburg",
+                "turku"
+            ]
+        }
+    }
 }

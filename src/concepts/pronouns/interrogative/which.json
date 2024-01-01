@@ -1,10 +1,12 @@
 {
-    "which": {
-        "en": "Which?",
-        "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
-        "nl": [
-            "Welke?",
-            "Welk?"
-        ]
+    "concepts": {
+        "which": {
+            "en": "Which?",
+            "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
+            "nl": [
+                "Welke?",
+                "Welk?"
+            ]
+        }
     }
 }

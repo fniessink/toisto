@@ -1,48 +1,50 @@
 {
-    "to drive": {
-        "infinitive": {
-            "en": "to drive",
-            "fi": "ajaa",
-            "nl": "rijden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I drive",
-                "fi": "minä ajan",
-                "nl": "ik rijd|ik rij"
+    "concepts": {
+        "to drive": {
+            "infinitive": {
+                "en": "to drive",
+                "fi": "ajaa",
+                "nl": "rijden"
             },
-            "second person": {
-                "en": "you drive;singular",
-                "fi": "sinä ajat",
-                "nl": "jij rijdt"
-            },
-            "third person": {
-                "fi": "hän ajaa",
-                "female": {
-                    "en": "she drives",
-                    "nl": "zij rijdt"
+            "singular": {
+                "first person": {
+                    "en": "I drive",
+                    "fi": "minä ajan",
+                    "nl": "ik rijd|ik rij"
                 },
-                "male": {
-                    "en": "he drives",
-                    "nl": "hij rijdt"
+                "second person": {
+                    "en": "you drive;singular",
+                    "fi": "sinä ajat",
+                    "nl": "jij rijdt"
+                },
+                "third person": {
+                    "fi": "hän ajaa",
+                    "female": {
+                        "en": "she drives",
+                        "nl": "zij rijdt"
+                    },
+                    "male": {
+                        "en": "he drives",
+                        "nl": "hij rijdt"
+                    }
                 }
-            }
-        },
-        "plural": {
-            "first person": {
-                "en": "we drive",
-                "fi": "me ajamme",
-                "nl": "wij rijden"
             },
-            "second person": {
-                "en": "you drive;plural",
-                "fi": "te ajatte",
-                "nl": "jullie rijden"
-            },
-            "third person": {
-                "en": "they drive",
-                "fi": "he ajavat",
-                "nl": "zij rijden"
+            "plural": {
+                "first person": {
+                    "en": "we drive",
+                    "fi": "me ajamme",
+                    "nl": "wij rijden"
+                },
+                "second person": {
+                    "en": "you drive;plural",
+                    "fi": "te ajatte",
+                    "nl": "jullie rijden"
+                },
+                "third person": {
+                    "en": "they drive",
+                    "fi": "he ajavat",
+                    "nl": "zij rijden"
+                }
             }
         }
     }

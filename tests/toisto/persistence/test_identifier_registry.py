@@ -22,8 +22,7 @@ class IdentifierRegistryTest(ToistoTestCase):
         self.registry.check_and_register_identifiers((0, 1, 2), Path("foo"))
         self.assertRaises(SystemExit, self.registry.check_and_register_identifiers, (3, 2, 1), Path("bar"))
         self.assertIn(
-            f"Toisto cannot read integer file {Path('bar')}: integer identifier '2' also occurs in "
-            f"integer file {Path('foo')}.\n",
+            f"Toisto cannot read file {Path('bar')}: integer identifier '2' also occurs in file {Path('foo')}.\n",
             stderr_write.call_args_list[1][0][0],
         )
 
@@ -32,7 +31,7 @@ class IdentifierRegistryTest(ToistoTestCase):
         """Test that an error is thrown when the identifier is registered multiple times for the same file."""
         self.assertRaises(SystemExit, self.registry.check_and_register_identifiers, (3, 2, 2, 1), Path("bar"))
         self.assertIn(
-            f"Toisto cannot read integer file {Path('bar')}: integer identifier '2' occurs multiple times in "
-            f"integer file {Path('bar')}.\n",
+            f"Toisto cannot read file {Path('bar')}: integer identifier '2' occurs multiple times in "
+            f"file {Path('bar')}.\n",
             stderr_write.call_args_list[1][0][0],
         )

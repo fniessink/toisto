@@ -1,39 +1,41 @@
 {
-    "there": {
-        "en": "there",
-        "fi": [
-            "tuolla",
-            "tuossa"
-        ],
-        "nl": "daar"
-    },
-    "here": {
-        "en": "here",
-        "fi": [
-            "täällä",
-            "tässä"
-        ],
-        "nl": "hier"
-    },
-    "also": {
-        "en": "also",
-        "fi": "myös",
-        "nl": "ook"
-    },
-    "maybe": {
-        "en": [
-            "maybe",
-            "perhaps"
-        ],
-        "fi": "ehkä",
-        "nl": [
-            "misschien",
-            "wellicht"
-        ]
-    },
-    "often": {
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
+    "concepts": {
+        "there": {
+            "en": "there",
+            "fi": [
+                "tuolla",
+                "tuossa"
+            ],
+            "nl": "daar"
+        },
+        "here": {
+            "en": "here",
+            "fi": [
+                "täällä",
+                "tässä"
+            ],
+            "nl": "hier"
+        },
+        "also": {
+            "en": "also",
+            "fi": "myös",
+            "nl": "ook"
+        },
+        "maybe": {
+            "en": [
+                "maybe",
+                "perhaps"
+            ],
+            "fi": "ehkä",
+            "nl": [
+                "misschien",
+                "wellicht"
+            ]
+        },
+        "often": {
+            "en": "often",
+            "fi": "usein",
+            "nl": "vaak"
+        }
     }
 }

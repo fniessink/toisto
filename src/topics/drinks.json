@@ -1,19 +1,22 @@
 {
-    "name": "drinks",
-    "concepts": [
-        "beer",
-        "buttermilk",
-        "cider",
-        "cocktail",
-        "coffee",
-        "hot chocolate",
-        "juice",
-        "milk",
-        "mineral water",
-        "oat milk",
-        "soft drink",
-        "tea",
-        "water",
-        "wine"
-    ]
+    "topics": {
+        "drinks": {
+            "concepts": [
+                "beer",
+                "buttermilk",
+                "cider",
+                "cocktail",
+                "coffee",
+                "hot chocolate",
+                "juice",
+                "milk",
+                "mineral water",
+                "oat milk",
+                "soft drink",
+                "tea",
+                "water",
+                "wine"
+            ]
+        }
+    }
 }

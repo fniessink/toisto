@@ -69,9 +69,8 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             target_language="nl",
             source_language="fi",
             topic=[],
-            topic_file=[],
             concept=[],
-            concept_file=[],
+            file=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
@@ -91,8 +90,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts, topics=topics))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-C {concept file}]
-                       [-o {topic file}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-f {file}]
 
 Practice a language.
 
@@ -105,10 +103,7 @@ Options:
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts: bar, foo
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics: T1, T2
-  -C, --concept-file {concept file}
-                        extra concept file to use, can be repeated
-  -o, --topic-file {topic file}
-                        extra topic file to use, can be repeated
+  -f, --file {file}     file with extra concepts and/or topics to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -122,8 +117,7 @@ Options:
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] [-t {language}] -s {language} [-c {concept} | -T {topic}] [-C {concept file}]
-                       [-o {topic file}]
+            """Usage: toisto practice [-h] [-t {language}] -s {language} [-c {concept} | -T {topic}] [-f {file}]
 
 Practice a language.
 
@@ -136,10 +130,7 @@ Options:
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -C, --concept-file {concept file}
-                        extra concept file to use, can be repeated
-  -o, --topic-file {topic file}
-                        extra topic file to use, can be repeated
+  -f, --file {file}     file with extra concepts and/or topics to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -153,8 +144,7 @@ Options:
         config_parser.set("languages", "levels", "A1 A2")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-C {concept file}]
-                       [-o {topic file}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-f {file}]
 
 Practice a language.
 
@@ -167,10 +157,7 @@ Options:
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -C, --concept-file {concept file}
-                        extra concept file to use, can be repeated
-  -o, --topic-file {topic file}
-                        extra topic file to use, can be repeated
+  -f, --file {file}     file with extra concepts and/or topics to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -181,8 +168,8 @@ Options:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto progress [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-C {concept file}]
-                       [-o {topic file}] [-S {option}]
+            """Usage: toisto progress [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-f {file}] \
+[-S {option}]
 
 Show progress.
 
@@ -195,10 +182,7 @@ Options:
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -C, --concept-file {concept file}
-                        extra concept file to use, can be repeated
-  -o, --topic-file {topic file}
-                        extra topic file to use, can be repeated
+  -f, --file {file}     file with extra concepts and/or topics to read, can be repeated
   -S, --sort {option}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
@@ -211,8 +195,7 @@ Options:
         """Test that the topics help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto topics [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-C {concept file}]
-                     [-o {topic file}]
+            """Usage: toisto topics [-h] -t {language} -s {language} [-c {concept} | -T {topic}] [-f {file}]
 
 Show topics.
 
@@ -225,10 +208,7 @@ Options:
   -c, --concept {concept}
                         concept to use, can be repeated; default: all; built-in concepts:
   -T, --topic {topic}   topic to use, can be repeated; default: all; built-in topics:
-  -C, --concept-file {concept file}
-                        extra concept file to use, can be repeated
-  -o, --topic-file {topic file}
-                        extra topic file to use, can be repeated
+  -f, --file {file}     file with extra concepts and/or topics to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -241,9 +221,8 @@ Options:
             target_language="nl",
             source_language="fi",
             topic=[],
-            topic_file=[],
             concept=[],
-            concept_file=[],
+            file=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 

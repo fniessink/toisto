@@ -1,482 +1,484 @@
 {
-    "family": {
-        "en": "family",
-        "fi": "perhe",
-        "nl": "de familie"
-    },
-    "grandma": {
-        "singular": {
-            "en": "grandma",
-            "fi": [
-                "mummo",
-                "mummi"
-            ],
-            "nl": "de oma"
+    "concepts": {
+        "family": {
+            "en": "family",
+            "fi": "perhe",
+            "nl": "de familie"
         },
-        "plural": {
-            "en": "grandmas",
-            "fi": [
-                "mummot",
-                "mummit"
-            ],
-            "nl": "de oma's"
-        }
-    },
-    "grandpa": {
-        "singular": {
-            "en": "grandpa",
-            "fi": [
-                "vaari",
-                "ukki"
-            ],
-            "nl": "de opa"
-        },
-        "plural": {
-            "en": "grandpas",
-            "fi": [
-                "vaarit",
-                "ukit"
-            ],
-            "nl": "de opa's"
-        }
-    },
-    "grandmother": {
-        "roots": {
-            "en": "mother",
-            "fi": [
-                "big",
-                "mother"
-            ],
-            "nl": [
-                "big",
-                "mother"
-            ]
-        },
-        "en": "grandmother",
-        "fi": "isoäiti",
-        "nl": "de grootmoeder"
-    },
-    "grandfather": {
-        "roots": {
-            "en": "father",
-            "fi": [
-                "big",
-                "father"
-            ],
-            "nl": [
-                "big",
-                "father"
-            ]
-        },
-        "en": "grandfather",
-        "fi": "isoisä",
-        "nl": "de grootvader"
-    },
-    "married": {
-        "en": "married",
-        "fi": "naimisissa",
-        "nl": "getrouwd"
-    },
-    "divorced": {
-        "en": "divorced",
-        "fi": "eronnut",
-        "nl": "gescheiden"
-    },
-    "mother": {
-        "singular": {
-            "en": "mother",
-            "fi": "äiti",
-            "nl": "de moeder"
-        },
-        "plural": {
-            "en": "mothers",
-            "fi": "äidit",
-            "nl": "de moeders"
-        }
-    },
-    "father": {
-        "singular": {
-            "en": "father",
-            "fi": "isä",
-            "nl": "de vader"
-        },
-        "plural": {
-            "en": "fathers",
-            "fi": "isät",
-            "nl": "de vaders"
-        }
-    },
-    "child": {
-        "root": {
+        "grandma": {
             "singular": {
-                "en": "child",
-                "fi": "lapsi",
-                "nl": "het kind"
-            },
-            "plural": {
-                "en": "children",
-                "fi": "lapset",
-                "nl": "de kinderen"
-            }
-        },
-        "diminutive": {
-            "singular": {
-                "en": "(little child)",
-                "nl": "het kindje",
-                "fi": "(pieni lapsi)"
-            },
-            "plural": {
-                "en": "(little children)",
-                "nl": [
-                    "de kindjes",
-                    "de kindertjes"
+                "en": "grandma",
+                "fi": [
+                    "mummo",
+                    "mummi"
                 ],
-                "fi": "(pienet lapset)"
-            }
-        }
-    },
-    "sister": {
-        "root": {
-            "singular": {
-                "en": "sister",
-                "fi": "sisko",
-                "nl": "de zus"
+                "nl": "de oma"
             },
             "plural": {
-                "en": "sisters",
-                "fi": "siskot",
-                "nl": "de zussen"
+                "en": "grandmas",
+                "fi": [
+                    "mummot",
+                    "mummit"
+                ],
+                "nl": "de oma's"
             }
         },
-        "diminutive": {
+        "grandpa": {
             "singular": {
-                "en": "(little sister)",
-                "nl": "het zusje",
-                "fi": "pikkusisko"
+                "en": "grandpa",
+                "fi": [
+                    "vaari",
+                    "ukki"
+                ],
+                "nl": "de opa"
             },
             "plural": {
-                "en": "(little sisters)",
-                "nl": "de zusjes",
-                "fi": "pikkusiskot"
-            }
-        }
-    },
-    "brother": {
-        "root": {
-            "singular": {
-                "en": "brother",
-                "fi": "veli",
-                "nl": "de broer"
-            },
-            "plural": {
-                "en": "brothers",
-                "fi": "veljet",
-                "nl": "de broers"
+                "en": "grandpas",
+                "fi": [
+                    "vaarit",
+                    "ukit"
+                ],
+                "nl": "de opa's"
             }
         },
-        "diminutive": {
+        "grandmother": {
+            "roots": {
+                "en": "mother",
+                "fi": [
+                    "big",
+                    "mother"
+                ],
+                "nl": [
+                    "big",
+                    "mother"
+                ]
+            },
+            "en": "grandmother",
+            "fi": "isoäiti",
+            "nl": "de grootmoeder"
+        },
+        "grandfather": {
+            "roots": {
+                "en": "father",
+                "fi": [
+                    "big",
+                    "father"
+                ],
+                "nl": [
+                    "big",
+                    "father"
+                ]
+            },
+            "en": "grandfather",
+            "fi": "isoisä",
+            "nl": "de grootvader"
+        },
+        "married": {
+            "en": "married",
+            "fi": "naimisissa",
+            "nl": "getrouwd"
+        },
+        "divorced": {
+            "en": "divorced",
+            "fi": "eronnut",
+            "nl": "gescheiden"
+        },
+        "mother": {
             "singular": {
-                "en": "(little brother)",
-                "nl": "het broertje",
-                "fi": "pikkuveli"
+                "en": "mother",
+                "fi": "äiti",
+                "nl": "de moeder"
             },
             "plural": {
-                "en": "(little brothers)",
-                "nl": "de broertjes",
-                "fi": "pikkuveljet"
+                "en": "mothers",
+                "fi": "äidit",
+                "nl": "de moeders"
             }
-        }
-    },
-    "sibling": {
-        "roots": {
-            "nl": [
+        },
+        "father": {
+            "singular": {
+                "en": "father",
+                "fi": "isä",
+                "nl": "de vader"
+            },
+            "plural": {
+                "en": "fathers",
+                "fi": "isät",
+                "nl": "de vaders"
+            }
+        },
+        "child": {
+            "root": {
+                "singular": {
+                    "en": "child",
+                    "fi": "lapsi",
+                    "nl": "het kind"
+                },
+                "plural": {
+                    "en": "children",
+                    "fi": "lapset",
+                    "nl": "de kinderen"
+                }
+            },
+            "diminutive": {
+                "singular": {
+                    "en": "(little child)",
+                    "nl": "het kindje",
+                    "fi": "(pieni lapsi)"
+                },
+                "plural": {
+                    "en": "(little children)",
+                    "nl": [
+                        "de kindjes",
+                        "de kindertjes"
+                    ],
+                    "fi": "(pienet lapset)"
+                }
+            }
+        },
+        "sister": {
+            "root": {
+                "singular": {
+                    "en": "sister",
+                    "fi": "sisko",
+                    "nl": "de zus"
+                },
+                "plural": {
+                    "en": "sisters",
+                    "fi": "siskot",
+                    "nl": "de zussen"
+                }
+            },
+            "diminutive": {
+                "singular": {
+                    "en": "(little sister)",
+                    "nl": "het zusje",
+                    "fi": "pikkusisko"
+                },
+                "plural": {
+                    "en": "(little sisters)",
+                    "nl": "de zusjes",
+                    "fi": "pikkusiskot"
+                }
+            }
+        },
+        "brother": {
+            "root": {
+                "singular": {
+                    "en": "brother",
+                    "fi": "veli",
+                    "nl": "de broer"
+                },
+                "plural": {
+                    "en": "brothers",
+                    "fi": "veljet",
+                    "nl": "de broers"
+                }
+            },
+            "diminutive": {
+                "singular": {
+                    "en": "(little brother)",
+                    "nl": "het broertje",
+                    "fi": "pikkuveli"
+                },
+                "plural": {
+                    "en": "(little brothers)",
+                    "nl": "de broertjes",
+                    "fi": "pikkuveljet"
+                }
+            }
+        },
+        "sibling": {
+            "roots": {
+                "nl": [
+                    "brother",
+                    "sister"
+                ]
+            },
+            "singular": {
+                "en": "sibling",
+                "fi": "sisarus",
+                "nl": "(de broer of zus)"
+            },
+            "plural": {
+                "en": "siblings",
+                "fi": "sisarukset",
+                "nl": "(de broers en zussen)"
+            }
+        },
+        "cousin": {
+            "singular": {
+                "en": "cousin",
+                "fi": "serkku",
+                "nl": "(de neef of nicht)"
+            },
+            "plural": {
+                "en": "cousins",
+                "fi": "serkut",
+                "nl": "(de neven en nichten)"
+            }
+        },
+        "grandchild": {
+            "roots": {
+                "en": "child",
+                "fi": "child",
+                "nl": [
+                    "small",
+                    "child"
+                ]
+            },
+            "singular": {
+                "en": "grandchild",
+                "fi": "lapsenlapsi",
+                "nl": "het kleinkind"
+            },
+            "plural": {
+                "en": "grandchildren",
+                "fi": "lapsenlapset",
+                "nl": "de kleinkinderen"
+            }
+        },
+        "daughter": {
+            "root": {
+                "singular": {
+                    "en": "daughter",
+                    "fi": "tytär",
+                    "nl": "de dochter"
+                },
+                "plural": {
+                    "en": "daughters",
+                    "fi": "tyttäret",
+                    "nl": "de dochters"
+                }
+            },
+            "diminutive": {
+                "singular": {
+                    "en": "(little  daughter)",
+                    "nl": "het dochtertje",
+                    "fi": "(pieni tytär)"
+                },
+                "plural": {
+                    "en": "(little  daughters)",
+                    "nl": "de dochtertjes",
+                    "fi": "(pienet tytäret)"
+                }
+            }
+        },
+        "son": {
+            "root": {
+                "singular": {
+                    "en": "son",
+                    "fi": "poika",
+                    "nl": "de zoon"
+                },
+                "plural": {
+                    "en": "sons",
+                    "fi": "pojat",
+                    "nl": "de zonen"
+                }
+            },
+            "diminutive": {
+                "singular": {
+                    "en": "(little son)",
+                    "nl": "het zoontje",
+                    "fi": "(pieni poika)"
+                },
+                "plural": {
+                    "en": "(little sons)",
+                    "nl": "de zoontjes",
+                    "fi": "(pienet pojat)"
+                }
+            }
+        },
+        "wife": {
+            "singular": {
+                "en": "wife",
+                "fi": "vaimo",
+                "nl": "de echtgenote"
+            },
+            "plural": {
+                "en": "wives",
+                "fi": "vaimot",
+                "nl": "de echtgenotes"
+            }
+        },
+        "husband": {
+            "singular": {
+                "en": "husband",
+                "fi": "aviomies|mies",
+                "nl": "de echtgenoot"
+            },
+            "plural": {
+                "en": "husbands",
+                "fi": "aviomiehet|miehet",
+                "nl": "de echtgenoten"
+            }
+        },
+        "spouse": {
+            "singular": {
+                "en": "spouse",
+                "fi": "puoliso",
+                "nl": "de partner"
+            },
+            "plural": {
+                "en": "spouses",
+                "fi": "puolisot",
+                "nl": "de partners"
+            }
+        },
+        "marriage": {
+            "en": "marriage",
+            "fi": "avioliitto",
+            "nl": "het huwelijk"
+        },
+        "parent": {
+            "roots": {
+                "fi": "old",
+                "nl": "old"
+            },
+            "singular": {
+                "en": "parent",
+                "fi": "vanhempi;noun",
+                "nl": "de ouder"
+            },
+            "plural": {
+                "en": "parents",
+                "fi": "vanhemmat",
+                "nl": "de ouders"
+            }
+        },
+        "grandparent": {
+            "roots": {
+                "en": "parent",
+                "fi": [
+                    "big",
+                    "parent"
+                ],
+                "nl": [
+                    "big",
+                    "parent"
+                ]
+            },
+            "en": "grandparent",
+            "fi": "isovanhempi",
+            "nl": "de grootouder"
+        },
+        "parent-in-law": {
+            "roots": "parent",
+            "en": "parent-in-law",
+            "fi": "appivanhempi",
+            "nl": "de schoonouder"
+        },
+        "mother-in-law": {
+            "roots": "mother",
+            "singular": {
+                "en": "mother-in-law",
+                "fi": "anoppi",
+                "nl": "de schoonmoeder"
+            },
+            "plural": {
+                "en": "mothers-in-law",
+                "fi": "anopit",
+                "nl": "de schoonmoeders"
+            }
+        },
+        "father-in-law": {
+            "roots": "father",
+            "singular": {
+                "en": "father-in-law",
+                "fi": "appiukko",
+                "nl": "de schoonvader"
+            },
+            "plural": {
+                "en": "fathers-in-law",
+                "fi": "appiukot",
+                "nl": "de schoonvaders"
+            }
+        },
+        "stepfather": {
+            "roots": "father",
+            "singular": {
+                "en": "stepfather",
+                "fi": "isäpuoli",
+                "nl": "de stiefvader"
+            },
+            "plural": {
+                "en": "stepfathers",
+                "fi": "isäpuolet",
+                "nl": "de stiefvaders"
+            }
+        },
+        "stepmother": {
+            "roots": "mother",
+            "singular": {
+                "en": "stepmother",
+                "fi": "äitipuoli",
+                "nl": "de stiefmoeder"
+            },
+            "plural": {
+                "en": "stepmothers",
+                "fi": "äitipuolet",
+                "nl": "de stiefmoeders"
+            }
+        },
+        "they have x children and y grandchildren": {
+            "roots": [
+                "to have",
+                "3",
+                "child",
+                "6",
+                "grandchild"
+            ],
+            "en": "They have three children and six grandchildren.",
+            "fi": "Heillä on kolme lasta ja kuusi lastenlasta.",
+            "nl": "Zij hebben drie kinderen en zes kleinkinderen."
+        },
+        "how many brothers and sisters do you have": {
+            "roots": [
+                "how many",
+                "to have",
                 "brother",
                 "sister"
-            ]
-        },
-        "singular": {
-            "en": "sibling",
-            "fi": "sisarus",
-            "nl": "(de broer of zus)"
-        },
-        "plural": {
-            "en": "siblings",
-            "fi": "sisarukset",
-            "nl": "(de broers en zussen)"
-        }
-    },
-    "cousin": {
-        "singular": {
-            "en": "cousin",
-            "fi": "serkku",
-            "nl": "(de neef of nicht)"
-        },
-        "plural": {
-            "en": "cousins",
-            "fi": "serkut",
-            "nl": "(de neven en nichten)"
-        }
-    },
-    "grandchild": {
-        "roots": {
-            "en": "child",
-            "fi": "child",
-            "nl": [
-                "small",
-                "child"
-            ]
-        },
-        "singular": {
-            "en": "grandchild",
-            "fi": "lapsenlapsi",
-            "nl": "het kleinkind"
-        },
-        "plural": {
-            "en": "grandchildren",
-            "fi": "lapsenlapset",
-            "nl": "de kleinkinderen"
-        }
-    },
-    "daughter": {
-        "root": {
-            "singular": {
-                "en": "daughter",
-                "fi": "tytär",
-                "nl": "de dochter"
-            },
-            "plural": {
-                "en": "daughters",
-                "fi": "tyttäret",
-                "nl": "de dochters"
-            }
-        },
-        "diminutive": {
-            "singular": {
-                "en": "(little  daughter)",
-                "nl": "het dochtertje",
-                "fi": "(pieni tytär)"
-            },
-            "plural": {
-                "en": "(little  daughters)",
-                "nl": "de dochtertjes",
-                "fi": "(pienet tytäret)"
-            }
-        }
-    },
-    "son": {
-        "root": {
-            "singular": {
-                "en": "son",
-                "fi": "poika",
-                "nl": "de zoon"
-            },
-            "plural": {
-                "en": "sons",
-                "fi": "pojat",
-                "nl": "de zonen"
-            }
-        },
-        "diminutive": {
-            "singular": {
-                "en": "(little son)",
-                "nl": "het zoontje",
-                "fi": "(pieni poika)"
-            },
-            "plural": {
-                "en": "(little sons)",
-                "nl": "de zoontjes",
-                "fi": "(pienet pojat)"
-            }
-        }
-    },
-    "wife": {
-        "singular": {
-            "en": "wife",
-            "fi": "vaimo",
-            "nl": "de echtgenote"
-        },
-        "plural": {
-            "en": "wives",
-            "fi": "vaimot",
-            "nl": "de echtgenotes"
-        }
-    },
-    "husband": {
-        "singular": {
-            "en": "husband",
-            "fi": "aviomies|mies",
-            "nl": "de echtgenoot"
-        },
-        "plural": {
-            "en": "husbands",
-            "fi": "aviomiehet|miehet",
-            "nl": "de echtgenoten"
-        }
-    },
-    "spouse": {
-        "singular": {
-            "en": "spouse",
-            "fi": "puoliso",
-            "nl": "de partner"
-        },
-        "plural": {
-            "en": "spouses",
-            "fi": "puolisot",
-            "nl": "de partners"
-        }
-    },
-    "marriage": {
-        "en": "marriage",
-        "fi": "avioliitto",
-        "nl": "het huwelijk"
-    },
-    "parent": {
-        "roots": {
-            "fi": "old",
-            "nl": "old"
-        },
-        "singular": {
-            "en": "parent",
-            "fi": "vanhempi;noun",
-            "nl": "de ouder"
-        },
-        "plural": {
-            "en": "parents",
-            "fi": "vanhemmat",
-            "nl": "de ouders"
-        }
-    },
-    "grandparent": {
-        "roots": {
-            "en": "parent",
-            "fi": [
-                "big",
-                "parent"
             ],
-            "nl": [
-                "big",
-                "parent"
-            ]
+            "en": "How many brothers and sisters do you have?",
+            "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
+            "nl": "Hoeveel broers en zussen heb jij?"
         },
-        "en": "grandparent",
-        "fi": "isovanhempi",
-        "nl": "de grootouder"
-    },
-    "parent-in-law": {
-        "roots": "parent",
-        "en": "parent-in-law",
-        "fi": "appivanhempi",
-        "nl": "de schoonouder"
-    },
-    "mother-in-law": {
-        "roots": "mother",
-        "singular": {
-            "en": "mother-in-law",
-            "fi": "anoppi",
-            "nl": "de schoonmoeder"
+        "I have x brothers and y sisters": {
+            "roots": [
+                "to have",
+                "2",
+                "brother",
+                "1",
+                "sister"
+            ],
+            "en": "I have two brothers and one sister.",
+            "fi": "Minulla on kaksi veljeä ja yksi sisko.",
+            "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus."
         },
-        "plural": {
-            "en": "mothers-in-law",
-            "fi": "anopit",
-            "nl": "de schoonmoeders"
+        "I have no siblings": {
+            "roots": [
+                "to have",
+                "sibling"
+            ],
+            "en": [
+                "I have no siblings.",
+                "I have no brothers and sisters."
+            ],
+            "fi": [
+                "Minulla ei ole sisaruksia.",
+                "Minulla ei ole veljiä tai siskoja."
+            ],
+            "nl": "Ik heb geen broers en zussen."
+        },
+        "I am an only child": {
+            "roots": [
+                "to be",
+                "child"
+            ],
+            "en": "I am an only child.",
+            "fi": "Minä olen ainoa lapsi.",
+            "nl": "Ik ben enig kind."
         }
-    },
-    "father-in-law": {
-        "roots": "father",
-        "singular": {
-            "en": "father-in-law",
-            "fi": "appiukko",
-            "nl": "de schoonvader"
-        },
-        "plural": {
-            "en": "fathers-in-law",
-            "fi": "appiukot",
-            "nl": "de schoonvaders"
-        }
-    },
-    "stepfather": {
-        "roots": "father",
-        "singular": {
-            "en": "stepfather",
-            "fi": "isäpuoli",
-            "nl": "de stiefvader"
-        },
-        "plural": {
-            "en": "stepfathers",
-            "fi": "isäpuolet",
-            "nl": "de stiefvaders"
-        }
-    },
-    "stepmother": {
-        "roots": "mother",
-        "singular": {
-            "en": "stepmother",
-            "fi": "äitipuoli",
-            "nl": "de stiefmoeder"
-        },
-        "plural": {
-            "en": "stepmothers",
-            "fi": "äitipuolet",
-            "nl": "de stiefmoeders"
-        }
-    },
-    "they have x children and y grandchildren": {
-        "roots": [
-            "to have",
-            "3",
-            "child",
-            "6",
-            "grandchild"
-        ],
-        "en": "They have three children and six grandchildren.",
-        "fi": "Heillä on kolme lasta ja kuusi lastenlasta.",
-        "nl": "Zij hebben drie kinderen en zes kleinkinderen."
-    },
-    "how many brothers and sisters do you have": {
-        "roots": [
-            "how many",
-            "to have",
-            "brother",
-            "sister"
-        ],
-        "en": "How many brothers and sisters do you have?",
-        "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
-        "nl": "Hoeveel broers en zussen heb jij?"
-    },
-    "I have x brothers and y sisters": {
-        "roots": [
-            "to have",
-            "2",
-            "brother",
-            "1",
-            "sister"
-        ],
-        "en": "I have two brothers and one sister.",
-        "fi": "Minulla on kaksi veljeä ja yksi sisko.",
-        "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus."
-    },
-    "I have no siblings": {
-        "roots": [
-            "to have",
-            "sibling"
-        ],
-        "en": [
-            "I have no siblings.",
-            "I have no brothers and sisters."
-        ],
-        "fi": [
-            "Minulla ei ole sisaruksia.",
-            "Minulla ei ole veljiä tai siskoja."
-        ],
-        "nl": "Ik heb geen broers en zussen."
-    },
-    "I am an only child": {
-        "roots": [
-            "to be",
-            "child"
-        ],
-        "en": "I am an only child.",
-        "fi": "Minä olen ainoa lapsi.",
-        "nl": "Ik ben enig kind."
     }
 }

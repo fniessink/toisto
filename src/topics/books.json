@@ -1,10 +1,13 @@
 {
-    "name": "books",
-    "concepts": [
-        "book",
-        "bookcase",
-        "chapter",
-        "code",
-        "page"
-    ]
+    "topics": {
+        "books": {
+            "concepts": [
+                "book",
+                "bookcase",
+                "chapter",
+                "code",
+                "page"
+            ]
+        }
+    }
 }

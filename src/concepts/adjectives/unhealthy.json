@@ -1,8 +1,10 @@
 {
-    "unhealthy": {
-        "antonym": "healthy",
-        "en": "unhealthy",
-        "fi": "epäterveellinen",
-        "nl": "ongezond"
+    "concepts": {
+        "unhealthy": {
+            "antonym": "healthy",
+            "en": "unhealthy",
+            "fi": "epäterveellinen",
+            "nl": "ongezond"
+        }
     }
 }

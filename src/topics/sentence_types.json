@@ -1,7 +1,10 @@
 {
-    "name": "sentence types",
-    "concepts": [
-        "the car is black",
-        "to speak english"
-    ]
+    "topics": {
+        "sentence types": {
+            "concepts": [
+                "the car is black",
+                "to speak english"
+            ]
+        }
+    }
 }
