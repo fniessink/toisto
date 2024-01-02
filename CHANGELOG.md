@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Give an error message if a selected concept or topics does not exist. Closes [#516](https://github.com/fniessink/toisto/issues/516).
 
+### Changed
+
+- The structure of the JSON files with concepts and topics has been changed. Both concepts and topics can be stored in the same file. Because there is no difference between concept files and topic files anymore, the command line parameter for loading extra concept and topic files has been merged into one `-f/--file` parameter.
+
 ### Added
 
 - Support abbreviations. Closes [#498](https://github.com/fniessink/toisto/issues/498).

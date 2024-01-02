@@ -1,160 +1,162 @@
 {
-    "month": {
-        "roots": {
-            "fi": "moon",
-            "nl": "moon"
+    "concepts": {
+        "month": {
+            "roots": {
+                "fi": "moon",
+                "nl": "moon"
+            },
+            "singular": {
+                "en": "month",
+                "fi": "kuukausi",
+                "nl": "de maand"
+            },
+            "plural": {
+                "en": "months",
+                "fi": "kuukaudet",
+                "nl": "de maanden"
+            }
         },
-        "singular": {
-            "en": "month",
-            "fi": "kuukausi",
-            "nl": "de maand"
+        "moon": {
+            "singular": {
+                "en": "moon",
+                "fi": "kuu",
+                "nl": "de maan"
+            },
+            "plural": {
+                "en": "moons",
+                "fi": "kuut",
+                "nl": "de manen"
+            }
         },
-        "plural": {
-            "en": "months",
-            "fi": "kuukaudet",
-            "nl": "de maanden"
+        "january": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "January;;In English, names of months are capitalized",
+            "fi": "tammikuu;;In Finnish, names of months are not capitalized",
+            "nl": "januari;;In Dutch, names of months are not capitalized"
+        },
+        "in january": {
+            "roots": "january",
+            "en": "In January.",
+            "fi": "Tammikuussa.",
+            "nl": "In januari."
+        },
+        "february": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "February;;In English, names of months are capitalized",
+            "fi": "helmikuu;;In Finnish, names of months are not capitalized",
+            "nl": "februari;;In Dutch, names of months are not capitalized"
+        },
+        "march": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "March;;In English, names of months are capitalized",
+            "fi": "maaliskuu;;In Finnish, names of months are not capitalized",
+            "nl": "maart;;In Dutch, names of months are not capitalized"
+        },
+        "april": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "April;;In English, names of months are capitalized",
+            "fi": "huhtikuu;;In Finnish, names of months are not capitalized",
+            "nl": "april;;In Dutch, names of months are not capitalized"
+        },
+        "in april": {
+            "roots": "april",
+            "en": "In April.",
+            "fi": "Huhtikuussa.",
+            "nl": "In april."
+        },
+        "may": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "May;;In English, names of months are capitalized",
+            "fi": "toukokuu;;In Finnish, names of months are not capitalized",
+            "nl": "mei;;In Dutch, names of months are not capitalized"
+        },
+        "june": {
+            "roots": {
+                "fi": [
+                    "summer",
+                    "moon"
+                ]
+            },
+            "en": "June;;In English, names of months are capitalized",
+            "fi": "kesäkuu;;In Finnish, names of months are not capitalized",
+            "nl": "juni;;In Dutch, names of months are not capitalized"
+        },
+        "july": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "July;;In English, names of months are capitalized",
+            "fi": "heinäkuu;;In Finnish, names of months are not capitalized",
+            "nl": "juli;;In Dutch, names of months are not capitalized"
+        },
+        "august": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "August;;In English, names of months are capitalized",
+            "fi": "elokuu;;In Finnish, names of months are not capitalized",
+            "nl": "augustus;;In Dutch, names of months are not capitalized"
+        },
+        "september": {
+            "roots": {
+                "fi": [
+                    "autumn",
+                    "moon"
+                ]
+            },
+            "en": "September;;In English, names of months always capitalized",
+            "fi": "syyskuu;;In Finnish, names of months are not capitalized",
+            "nl": "september;;In Dutch, names of months are not capitalized"
+        },
+        "october": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "October;;In English, names of months are capitalized",
+            "fi": "lokakuu;;In Finnish, names of months are not capitalized",
+            "nl": "oktober;;In Dutch, names of months are not capitalized"
+        },
+        "november": {
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "November;;In English, names of months are capitalized",
+            "fi": "marraskuu;;In Finnish, names of months are not capitalized",
+            "nl": "november;;In Dutch, names of months are not capitalized"
+        },
+        "december": {
+            "roots": {
+                "fi": [
+                    "christmas",
+                    "moon"
+                ]
+            },
+            "en": "December;;In English, names of months are capitalized",
+            "fi": "joulukuu;;In Finnish, names of months are not capitalized",
+            "nl": "december;;In Dutch, names of months are not capitalized"
+        },
+        "it is july": {
+            "roots": [
+                "july",
+                "to be",
+                "now"
+            ],
+            "en": "It is July.",
+            "fi": [
+                "Nyt on heinäkuu.",
+                "On heinäkuu."
+            ],
+            "nl": "Het is juli."
         }
-    },
-    "moon": {
-        "singular": {
-            "en": "moon",
-            "fi": "kuu",
-            "nl": "de maan"
-        },
-        "plural": {
-            "en": "moons",
-            "fi": "kuut",
-            "nl": "de manen"
-        }
-    },
-    "january": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "January;;In English, names of months are capitalized",
-        "fi": "tammikuu;;In Finnish, names of months are not capitalized",
-        "nl": "januari;;In Dutch, names of months are not capitalized"
-    },
-    "in january": {
-        "roots": "january",
-        "en": "In January.",
-        "fi": "Tammikuussa.",
-        "nl": "In januari."
-    },
-    "february": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "February;;In English, names of months are capitalized",
-        "fi": "helmikuu;;In Finnish, names of months are not capitalized",
-        "nl": "februari;;In Dutch, names of months are not capitalized"
-    },
-    "march": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "March;;In English, names of months are capitalized",
-        "fi": "maaliskuu;;In Finnish, names of months are not capitalized",
-        "nl": "maart;;In Dutch, names of months are not capitalized"
-    },
-    "april": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "April;;In English, names of months are capitalized",
-        "fi": "huhtikuu;;In Finnish, names of months are not capitalized",
-        "nl": "april;;In Dutch, names of months are not capitalized"
-    },
-    "in april": {
-        "roots": "april",
-        "en": "In April.",
-        "fi": "Huhtikuussa.",
-        "nl": "In april."
-    },
-    "may": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "May;;In English, names of months are capitalized",
-        "fi": "toukokuu;;In Finnish, names of months are not capitalized",
-        "nl": "mei;;In Dutch, names of months are not capitalized"
-    },
-    "june": {
-        "roots": {
-            "fi": [
-                "summer",
-                "moon"
-            ]
-        },
-        "en": "June;;In English, names of months are capitalized",
-        "fi": "kesäkuu;;In Finnish, names of months are not capitalized",
-        "nl": "juni;;In Dutch, names of months are not capitalized"
-    },
-    "july": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "July;;In English, names of months are capitalized",
-        "fi": "heinäkuu;;In Finnish, names of months are not capitalized",
-        "nl": "juli;;In Dutch, names of months are not capitalized"
-    },
-    "august": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "August;;In English, names of months are capitalized",
-        "fi": "elokuu;;In Finnish, names of months are not capitalized",
-        "nl": "augustus;;In Dutch, names of months are not capitalized"
-    },
-    "september": {
-        "roots": {
-            "fi": [
-                "autumn",
-                "moon"
-            ]
-        },
-        "en": "September;;In English, names of months always capitalized",
-        "fi": "syyskuu;;In Finnish, names of months are not capitalized",
-        "nl": "september;;In Dutch, names of months are not capitalized"
-    },
-    "october": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "October;;In English, names of months are capitalized",
-        "fi": "lokakuu;;In Finnish, names of months are not capitalized",
-        "nl": "oktober;;In Dutch, names of months are not capitalized"
-    },
-    "november": {
-        "roots": {
-            "fi": "moon"
-        },
-        "en": "November;;In English, names of months are capitalized",
-        "fi": "marraskuu;;In Finnish, names of months are not capitalized",
-        "nl": "november;;In Dutch, names of months are not capitalized"
-    },
-    "december": {
-        "roots": {
-            "fi": [
-                "christmas",
-                "moon"
-            ]
-        },
-        "en": "December;;In English, names of months are capitalized",
-        "fi": "joulukuu;;In Finnish, names of months are not capitalized",
-        "nl": "december;;In Dutch, names of months are not capitalized"
-    },
-    "it is july": {
-        "roots": [
-            "july",
-            "to be",
-            "now"
-        ],
-        "en": "It is July.",
-        "fi": [
-            "Nyt on heinäkuu.",
-            "On heinäkuu."
-        ],
-        "nl": "Het is juli."
     }
 }

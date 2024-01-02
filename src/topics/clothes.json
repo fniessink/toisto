@@ -1,20 +1,23 @@
 {
-    "name": "clothes",
-    "concepts": [
-        "clothes",
-        "coat",
-        "dress",
-        "hat",
-        "shirt",
-        "shoe",
-        "skirt",
-        "sock",
-        "suit",
-        "sweater",
-        "to dress",
-        "trousers",
-        "underpants",
-        "undershirt",
-        "underwear"
-    ]
+    "topics": {
+        "clothes": {
+            "concepts": [
+                "clothes",
+                "coat",
+                "dress",
+                "hat",
+                "shirt",
+                "shoe",
+                "skirt",
+                "sock",
+                "suit",
+                "sweater",
+                "to dress",
+                "trousers",
+                "underpants",
+                "undershirt",
+                "underwear"
+            ]
+        }
+    }
 }

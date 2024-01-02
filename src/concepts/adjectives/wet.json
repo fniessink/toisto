@@ -1,20 +1,22 @@
 {
-    "wet": {
-        "antonym": "dry",
-        "positive degree": {
-            "en": "wet",
-            "fi": "märkä",
-            "nl": "nat"
-        },
-        "comparative degree": {
-            "en": "wetter",
-            "fi": "märempi",
-            "nl": "natter"
-        },
-        "superlative degree": {
-            "en": "wettest",
-            "fi": "märin",
-            "nl": "natst"
+    "concepts": {
+        "wet": {
+            "antonym": "dry",
+            "positive degree": {
+                "en": "wet",
+                "fi": "märkä",
+                "nl": "nat"
+            },
+            "comparative degree": {
+                "en": "wetter",
+                "fi": "märempi",
+                "nl": "natter"
+            },
+            "superlative degree": {
+                "en": "wettest",
+                "fi": "märin",
+                "nl": "natst"
+            }
         }
     }
 }

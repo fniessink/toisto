@@ -1,10 +1,13 @@
 {
-    "name": "little words",
-    "concepts": [
-        "first",
-        "nothing",
-        "often",
-        "same",
-        "something"
-    ]
+    "topics": {
+        "little words": {
+            "concepts": [
+                "first",
+                "nothing",
+                "often",
+                "same",
+                "something"
+            ]
+        }
+    }
 }

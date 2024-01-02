@@ -1,186 +1,188 @@
 {
-    "my cat": {
-        "roots": "cat",
-        "singular": {
-            "en": "my cat",
-            "fi": "minun kissani;singular",
-            "nl": "mijn kat"
-        },
-        "plural": {
-            "en": "my cats",
-            "fi": "minun kissani;plural",
-            "nl": "mijn katten"
-        }
-    },
-    "your cat": {
-        "roots": "cat",
-        "singular": {
-            "en": "your cat;singular",
-            "fi": "sinun kissasi;singular",
-            "nl": "jouw kat"
-        },
-        "plural": {
-            "en": "your cats;singular",
-            "fi": "sinun kissasi;plural",
-            "nl": "jouw katten"
-        }
-    },
-    "her or his cat": {
-        "roots": "cat",
-        "female": {
+    "concepts": {
+        "my cat": {
+            "roots": "cat",
             "singular": {
-                "en": "her cat",
-                "fi": "hänen kissansa;female singular",
-                "nl": "haar kat"
+                "en": "my cat",
+                "fi": "minun kissani;singular",
+                "nl": "mijn kat"
             },
             "plural": {
-                "en": "her cats",
-                "fi": "hänen kissansa;female plural",
-                "nl": "haar katten"
+                "en": "my cats",
+                "fi": "minun kissani;plural",
+                "nl": "mijn katten"
             }
         },
-        "male": {
+        "your cat": {
+            "roots": "cat",
             "singular": {
-                "en": "his cat",
-                "fi": "hänen kissansa;male singular",
-                "nl": "zijn kat"
+                "en": "your cat;singular",
+                "fi": "sinun kissasi;singular",
+                "nl": "jouw kat"
             },
             "plural": {
-                "en": "his cats",
-                "fi": "hänen kissansa;male plural",
-                "nl": "zijn katten"
+                "en": "your cats;singular",
+                "fi": "sinun kissasi;plural",
+                "nl": "jouw katten"
             }
-        }
-    },
-    "our cat": {
-        "roots": "cat",
-        "singular": {
-            "en": "our cat",
-            "fi": "meidän kissamme;singular",
-            "nl": "onze kat"
         },
-        "plural": {
-            "en": "our cats",
-            "fi": "meidän kissamme;plural",
-            "nl": "onze katten"
-        }
-    },
-    "your (pl) cat": {
-        "roots": "cat",
-        "singular": {
-            "en": "your cat;plural",
-            "fi": "teidän kissanne;singular",
-            "nl": "jullie kat"
+        "her or his cat": {
+            "roots": "cat",
+            "female": {
+                "singular": {
+                    "en": "her cat",
+                    "fi": "hänen kissansa;female singular",
+                    "nl": "haar kat"
+                },
+                "plural": {
+                    "en": "her cats",
+                    "fi": "hänen kissansa;female plural",
+                    "nl": "haar katten"
+                }
+            },
+            "male": {
+                "singular": {
+                    "en": "his cat",
+                    "fi": "hänen kissansa;male singular",
+                    "nl": "zijn kat"
+                },
+                "plural": {
+                    "en": "his cats",
+                    "fi": "hänen kissansa;male plural",
+                    "nl": "zijn katten"
+                }
+            }
         },
-        "plural": {
-            "en": "your cats;plural",
-            "fi": "teidän kissanne;plural",
-            "nl": "jullie katten"
-        }
-    },
-    "their cat": {
-        "roots": "cat",
-        "singular": {
-            "en": "their cat",
-            "fi": "heidän kissansa;singular",
-            "nl": "hun kat"
-        },
-        "plural": {
-            "en": "their cats",
-            "fi": "heidän kissansa;plural",
-            "nl": "hun katten"
-        }
-    },
-    "my house": {
-        "roots": "house",
-        "singular": {
-            "en": "my house",
-            "fi": "minun taloni;singular",
-            "nl": "mijn huis"
-        },
-        "plural": {
-            "en": "my houses",
-            "fi": "minun taloni;plural",
-            "nl": "mijn huizen"
-        }
-    },
-    "your house": {
-        "roots": "house",
-        "singular": {
-            "en": "your house;singular",
-            "fi": "sinun talosi;singular",
-            "nl": "jouw huis"
-        },
-        "plural": {
-            "en": "your houses;singular",
-            "fi": "sinun talosi;plural",
-            "nl": "jouw huizen"
-        }
-    },
-    "her or his house": {
-        "roots": "house",
-        "female": {
+        "our cat": {
+            "roots": "cat",
             "singular": {
-                "en": "her house",
-                "fi": "hänen talonsa;female singular",
-                "nl": "haar huis"
+                "en": "our cat",
+                "fi": "meidän kissamme;singular",
+                "nl": "onze kat"
             },
             "plural": {
-                "en": "her houses",
-                "fi": "hänen talonsa;female plural",
-                "nl": "haar huizen"
+                "en": "our cats",
+                "fi": "meidän kissamme;plural",
+                "nl": "onze katten"
             }
         },
-        "male": {
+        "your (pl) cat": {
+            "roots": "cat",
             "singular": {
-                "en": "his house",
-                "fi": "hänen talonsa;male singular",
-                "nl": "zijn huis"
+                "en": "your cat;plural",
+                "fi": "teidän kissanne;singular",
+                "nl": "jullie kat"
             },
             "plural": {
-                "en": "his houses",
-                "fi": "hänen talonsa;male plural",
-                "nl": "zijn huizen"
+                "en": "your cats;plural",
+                "fi": "teidän kissanne;plural",
+                "nl": "jullie katten"
             }
-        }
-    },
-    "our house": {
-        "roots": "house",
-        "singular": {
-            "en": "our house",
-            "fi": "meidän talomme;singular",
-            "nl": "ons huis"
         },
-        "plural": {
-            "en": "our houses",
-            "fi": "meidän talomme;plural",
-            "nl": "onze huizen"
-        }
-    },
-    "your (pl) house": {
-        "roots": "house",
-        "singular": {
-            "en": "your house;plural",
-            "fi": "teidän talonne;singular",
-            "nl": "jullie huis"
+        "their cat": {
+            "roots": "cat",
+            "singular": {
+                "en": "their cat",
+                "fi": "heidän kissansa;singular",
+                "nl": "hun kat"
+            },
+            "plural": {
+                "en": "their cats",
+                "fi": "heidän kissansa;plural",
+                "nl": "hun katten"
+            }
         },
-        "plural": {
-            "en": "your houses;plural",
-            "fi": "teidän talonne;plural",
-            "nl": "jullie huizen"
-        }
-    },
-    "their house": {
-        "roots": "house",
-        "singular": {
-            "en": "their house",
-            "fi": "heidän talonsa;singular",
-            "nl": "hun huis"
+        "my house": {
+            "roots": "house",
+            "singular": {
+                "en": "my house",
+                "fi": "minun taloni;singular",
+                "nl": "mijn huis"
+            },
+            "plural": {
+                "en": "my houses",
+                "fi": "minun taloni;plural",
+                "nl": "mijn huizen"
+            }
         },
-        "plural": {
-            "en": "their houses",
-            "fi": "heidän talonsa;plural",
-            "nl": "hun huizen"
+        "your house": {
+            "roots": "house",
+            "singular": {
+                "en": "your house;singular",
+                "fi": "sinun talosi;singular",
+                "nl": "jouw huis"
+            },
+            "plural": {
+                "en": "your houses;singular",
+                "fi": "sinun talosi;plural",
+                "nl": "jouw huizen"
+            }
+        },
+        "her or his house": {
+            "roots": "house",
+            "female": {
+                "singular": {
+                    "en": "her house",
+                    "fi": "hänen talonsa;female singular",
+                    "nl": "haar huis"
+                },
+                "plural": {
+                    "en": "her houses",
+                    "fi": "hänen talonsa;female plural",
+                    "nl": "haar huizen"
+                }
+            },
+            "male": {
+                "singular": {
+                    "en": "his house",
+                    "fi": "hänen talonsa;male singular",
+                    "nl": "zijn huis"
+                },
+                "plural": {
+                    "en": "his houses",
+                    "fi": "hänen talonsa;male plural",
+                    "nl": "zijn huizen"
+                }
+            }
+        },
+        "our house": {
+            "roots": "house",
+            "singular": {
+                "en": "our house",
+                "fi": "meidän talomme;singular",
+                "nl": "ons huis"
+            },
+            "plural": {
+                "en": "our houses",
+                "fi": "meidän talomme;plural",
+                "nl": "onze huizen"
+            }
+        },
+        "your (pl) house": {
+            "roots": "house",
+            "singular": {
+                "en": "your house;plural",
+                "fi": "teidän talonne;singular",
+                "nl": "jullie huis"
+            },
+            "plural": {
+                "en": "your houses;plural",
+                "fi": "teidän talonne;plural",
+                "nl": "jullie huizen"
+            }
+        },
+        "their house": {
+            "roots": "house",
+            "singular": {
+                "en": "their house",
+                "fi": "heidän talonsa;singular",
+                "nl": "hun huis"
+            },
+            "plural": {
+                "en": "their houses",
+                "fi": "heidän talonsa;plural",
+                "nl": "hun huizen"
+            }
         }
     }
 }

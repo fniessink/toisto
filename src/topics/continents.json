@@ -1,14 +1,17 @@
 {
-    "name": "continents",
-    "concepts": [
-        "africa",
-        "america",
-        "asia",
-        "continent",
-        "europe",
-        "middle america",
-        "middle east",
-        "north america",
-        "south america"
-    ]
+    "topics": {
+        "continents": {
+            "concepts": [
+                "africa",
+                "america",
+                "asia",
+                "continent",
+                "europe",
+                "middle america",
+                "middle east",
+                "north america",
+                "south america"
+            ]
+        }
+    }
 }

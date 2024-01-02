@@ -1,247 +1,249 @@
 {
-    "season": {
-        "roots": {
+    "concepts": {
+        "season": {
+            "roots": {
+                "fi": [
+                    "time",
+                    "year"
+                ],
+                "nl": "year"
+            },
+            "singular": {
+                "en": "season",
+                "fi": "vuodenaika",
+                "nl": [
+                    "het seizoen",
+                    "het jaargetijde"
+                ]
+            },
+            "plural": {
+                "en": "seasons",
+                "fi": "vuodenajat",
+                "nl": [
+                    "de seizoenen",
+                    "de jaargetijden"
+                ]
+            }
+        },
+        "spring": {
+            "singular": {
+                "en": "spring;;In English, names of seasons are not capitalized",
+                "fi": "kevät;;In Finnish, names of seasons are not capitalized",
+                "nl": [
+                    "de lente;;In Dutch, names of seasons are not capitalized",
+                    "het voorjaar;;In Dutch, names of seasons are not capitalized"
+                ]
+            },
+            "plural": {
+                "en": "springs",
+                "fi": "keväät",
+                "nl": [
+                    "de lentes",
+                    "de voorjaren"
+                ]
+            }
+        },
+        "in spring": {
+            "roots": "spring",
+            "en": "in spring",
+            "fi": "keväällä",
+            "nl": [
+                "in de lente",
+                "in het voorjaar"
+            ]
+        },
+        "next spring": {
+            "roots": "spring",
+            "en": "next spring",
+            "fi": "ensi keväänä",
+            "nl": [
+                "volgende lente",
+                "volgend voorjaar"
+            ]
+        },
+        "last spring": {
+            "roots": "spring",
+            "en": "last spring",
+            "fi": "viime keväänä",
+            "nl": [
+                "vorige lente",
+                "vorig voorjaar"
+            ]
+        },
+        "summer": {
+            "singular": {
+                "en": "summer;;In English, names of seasons are not capitalized",
+                "fi": "kesä;;In Finnish, names of seasons are not capitalized",
+                "nl": "de zomer;;In Dutch, names of seasons are not capitalized"
+            },
+            "plural": {
+                "en": "summers",
+                "fi": "kesät",
+                "nl": "de zomers"
+            }
+        },
+        "in summer": {
+            "roots": "summer",
+            "en": "in summer",
+            "fi": "kesällä",
+            "nl": "in de zomer"
+        },
+        "next summer": {
+            "roots": "summer",
+            "en": "next summer",
+            "fi": "ensi kesänä",
+            "nl": "volgende zomer"
+        },
+        "last summer": {
+            "roots": "summer",
+            "en": "last summer",
+            "fi": "viime kesänä",
+            "nl": "vorige zomer"
+        },
+        "autumn": {
+            "singular": {
+                "en": [
+                    "autumn;;In English, names of seasons are not capitalized",
+                    "fall;;In English, names of seasons are not capitalized"
+                ],
+                "fi": "syksy;;In Finnish, names of seasons are not capitalized",
+                "nl": [
+                    "de herfst;;In Dutch, names of seasons are not capitalized",
+                    "het najaar;;In Dutch, names of seasons are not capitalized"
+                ]
+            },
+            "plural": {
+                "en": [
+                    "autumns",
+                    "falls"
+                ],
+                "fi": "syksyt",
+                "nl": [
+                    "de herfsten",
+                    "de najaren"
+                ]
+            }
+        },
+        "in autumn": {
+            "roots": "autumn",
+            "en": [
+                "in autumn",
+                "in fall"
+            ],
+            "fi": "syksyllä",
+            "nl": [
+                "in de herfst",
+                "in het najaar"
+            ]
+        },
+        "next autumn": {
+            "roots": "autumn",
+            "en": [
+                "next autumn",
+                "next fall"
+            ],
+            "fi": "ensi syksynä",
+            "nl": [
+                "volgende herfst",
+                "volgend najaar"
+            ]
+        },
+        "last autumn": {
+            "roots": "autumn",
+            "en": [
+                "last autumn",
+                "last fall"
+            ],
+            "fi": "viime syksynä",
+            "nl": [
+                "vorige herfst",
+                "vorig najaar"
+            ]
+        },
+        "winter": {
+            "singular": {
+                "en": "winter;;In English, names of seasons are not capitalized",
+                "fi": "talvi;;In Finnish, names of seasons are not capitalized",
+                "nl": "de winter;;In Dutch, names of seasons are not capitalized"
+            },
+            "plural": {
+                "en": "winters",
+                "fi": "talvet",
+                "nl": "de winters"
+            }
+        },
+        "in winter": {
+            "roots": "winter",
+            "en": "in winter",
+            "fi": "talvella",
+            "nl": "in de winter"
+        },
+        "next winter": {
+            "roots": "winter",
+            "en": "next winter",
+            "fi": "ensi talvena",
+            "nl": "volgende winter"
+        },
+        "last winter": {
+            "roots": "winter",
+            "en": "last winter",
+            "fi": "viime talvena",
+            "nl": "vorige winter"
+        },
+        "the finnish winter is cold": {
+            "roots": [
+                "winter",
+                "to be",
+                "cold"
+            ],
+            "en": "The Finnish winter is cold.",
+            "fi": "Suomen talvi on kylmä.",
+            "nl": "De Finse winter is koud."
+        },
+        "the dutch autumn is wet": {
+            "roots": [
+                "autumn",
+                "to be",
+                "wet"
+            ],
+            "en": [
+                "The Dutch autumn is wet.",
+                "The Dutch fall is wet."
+            ],
             "fi": [
-                "time",
-                "year"
+                "Hollannin syksy on märkä.",
+                "Alankomaiden syksy on märkä."
             ],
-            "nl": "year"
-        },
-        "singular": {
-            "en": "season",
-            "fi": "vuodenaika",
             "nl": [
-                "het seizoen",
-                "het jaargetijde"
+                "De Nederlandse herfst is nat.",
+                "Het Nederlandse najaar is nat."
             ]
         },
-        "plural": {
-            "en": "seasons",
-            "fi": "vuodenajat",
-            "nl": [
-                "de seizoenen",
-                "de jaargetijden"
-            ]
-        }
-    },
-    "spring": {
-        "singular": {
-            "en": "spring;;In English, names of seasons are not capitalized",
-            "fi": "kevät;;In Finnish, names of seasons are not capitalized",
-            "nl": [
-                "de lente;;In Dutch, names of seasons are not capitalized",
-                "het voorjaar;;In Dutch, names of seasons are not capitalized"
-            ]
-        },
-        "plural": {
-            "en": "springs",
-            "fi": "keväät",
-            "nl": [
-                "de lentes",
-                "de voorjaren"
-            ]
-        }
-    },
-    "in spring": {
-        "roots": "spring",
-        "en": "in spring",
-        "fi": "keväällä",
-        "nl": [
-            "in de lente",
-            "in het voorjaar"
-        ]
-    },
-    "next spring": {
-        "roots": "spring",
-        "en": "next spring",
-        "fi": "ensi keväänä",
-        "nl": [
-            "volgende lente",
-            "volgend voorjaar"
-        ]
-    },
-    "last spring": {
-        "roots": "spring",
-        "en": "last spring",
-        "fi": "viime keväänä",
-        "nl": [
-            "vorige lente",
-            "vorig voorjaar"
-        ]
-    },
-    "summer": {
-        "singular": {
-            "en": "summer;;In English, names of seasons are not capitalized",
-            "fi": "kesä;;In Finnish, names of seasons are not capitalized",
-            "nl": "de zomer;;In Dutch, names of seasons are not capitalized"
-        },
-        "plural": {
-            "en": "summers",
-            "fi": "kesät",
-            "nl": "de zomers"
-        }
-    },
-    "in summer": {
-        "roots": "summer",
-        "en": "in summer",
-        "fi": "kesällä",
-        "nl": "in de zomer"
-    },
-    "next summer": {
-        "roots": "summer",
-        "en": "next summer",
-        "fi": "ensi kesänä",
-        "nl": "volgende zomer"
-    },
-    "last summer": {
-        "roots": "summer",
-        "en": "last summer",
-        "fi": "viime kesänä",
-        "nl": "vorige zomer"
-    },
-    "autumn": {
-        "singular": {
-            "en": [
-                "autumn;;In English, names of seasons are not capitalized",
-                "fall;;In English, names of seasons are not capitalized"
+        "finnish winters are cold": {
+            "roots": [
+                "winter",
+                "to be",
+                "cold"
             ],
-            "fi": "syksy;;In Finnish, names of seasons are not capitalized",
-            "nl": [
-                "de herfst;;In Dutch, names of seasons are not capitalized",
-                "het najaar;;In Dutch, names of seasons are not capitalized"
-            ]
+            "en": "Finnish winters are cold.",
+            "fi": "Suomen talvet ovat kylmiä.",
+            "nl": "Finse winters zijn koud."
         },
-        "plural": {
-            "en": [
-                "autumns",
-                "falls"
+        "dutch springs are wet": {
+            "roots": [
+                "spring",
+                "to be",
+                "wet"
             ],
-            "fi": "syksyt",
+            "en": "Dutch springs are wet.",
+            "fi": [
+                "Hollannin keväät ovat märkiä.",
+                "Alankomaiden keväät ovat märkiä."
+            ],
             "nl": [
-                "de herfsten",
-                "de najaren"
+                "Nederlandse lentes zijn nat.",
+                "Nederlandse voorjaren zijn nat."
             ]
         }
-    },
-    "in autumn": {
-        "roots": "autumn",
-        "en": [
-            "in autumn",
-            "in fall"
-        ],
-        "fi": "syksyllä",
-        "nl": [
-            "in de herfst",
-            "in het najaar"
-        ]
-    },
-    "next autumn": {
-        "roots": "autumn",
-        "en": [
-            "next autumn",
-            "next fall"
-        ],
-        "fi": "ensi syksynä",
-        "nl": [
-            "volgende herfst",
-            "volgend najaar"
-        ]
-    },
-    "last autumn": {
-        "roots": "autumn",
-        "en": [
-            "last autumn",
-            "last fall"
-        ],
-        "fi": "viime syksynä",
-        "nl": [
-            "vorige herfst",
-            "vorig najaar"
-        ]
-    },
-    "winter": {
-        "singular": {
-            "en": "winter;;In English, names of seasons are not capitalized",
-            "fi": "talvi;;In Finnish, names of seasons are not capitalized",
-            "nl": "de winter;;In Dutch, names of seasons are not capitalized"
-        },
-        "plural": {
-            "en": "winters",
-            "fi": "talvet",
-            "nl": "de winters"
-        }
-    },
-    "in winter": {
-        "roots": "winter",
-        "en": "in winter",
-        "fi": "talvella",
-        "nl": "in de winter"
-    },
-    "next winter": {
-        "roots": "winter",
-        "en": "next winter",
-        "fi": "ensi talvena",
-        "nl": "volgende winter"
-    },
-    "last winter": {
-        "roots": "winter",
-        "en": "last winter",
-        "fi": "viime talvena",
-        "nl": "vorige winter"
-    },
-    "the finnish winter is cold": {
-        "roots": [
-            "winter",
-            "to be",
-            "cold"
-        ],
-        "en": "The Finnish winter is cold.",
-        "fi": "Suomen talvi on kylmä.",
-        "nl": "De Finse winter is koud."
-    },
-    "the dutch autumn is wet": {
-        "roots": [
-            "autumn",
-            "to be",
-            "wet"
-        ],
-        "en": [
-            "The Dutch autumn is wet.",
-            "The Dutch fall is wet."
-        ],
-        "fi": [
-            "Hollannin syksy on märkä.",
-            "Alankomaiden syksy on märkä."
-        ],
-        "nl": [
-            "De Nederlandse herfst is nat.",
-            "Het Nederlandse najaar is nat."
-        ]
-    },
-    "finnish winters are cold": {
-        "roots": [
-            "winter",
-            "to be",
-            "cold"
-        ],
-        "en": "Finnish winters are cold.",
-        "fi": "Suomen talvet ovat kylmiä.",
-        "nl": "Finse winters zijn koud."
-    },
-    "dutch springs are wet": {
-        "roots": [
-            "spring",
-            "to be",
-            "wet"
-        ],
-        "en": "Dutch springs are wet.",
-        "fi": [
-            "Hollannin keväät ovat märkiä.",
-            "Alankomaiden keväät ovat märkiä."
-        ],
-        "nl": [
-            "Nederlandse lentes zijn nat.",
-            "Nederlandse voorjaren zijn nat."
-        ]
     }
 }

@@ -1,26 +1,28 @@
 {
-    "helsinki": {
-        "en": "Helsinki",
-        "fi": "Helsinki",
-        "nl": "Helsinki"
-    },
-    "north helsinki": {
-        "roots": [
-            "north",
-            "helsinki"
-        ],
-        "en": "North Helsinki",
-        "fi": "Pohjois-Helsinki",
-        "nl": "Helsinki-Noord"
-    },
-    "turku": {
-        "en": "Turku",
-        "fi": "Turku",
-        "nl": "Turku"
-    },
-    "saint petersburg": {
-        "en": "Saint Petersburg",
-        "fi": "Pietari",
-        "nl": "Sint-Petersburg"
+    "concepts": {
+        "helsinki": {
+            "en": "Helsinki",
+            "fi": "Helsinki",
+            "nl": "Helsinki"
+        },
+        "north helsinki": {
+            "roots": [
+                "north",
+                "helsinki"
+            ],
+            "en": "North Helsinki",
+            "fi": "Pohjois-Helsinki",
+            "nl": "Helsinki-Noord"
+        },
+        "turku": {
+            "en": "Turku",
+            "fi": "Turku",
+            "nl": "Turku"
+        },
+        "saint petersburg": {
+            "en": "Saint Petersburg",
+            "fi": "Pietari",
+            "nl": "Sint-Petersburg"
+        }
     }
 }

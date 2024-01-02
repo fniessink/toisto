@@ -1,23 +1,26 @@
 {
-    "name": "fruit",
-    "concepts": [
-        "apple",
-        "banana",
-        "berry",
-        "bilberry",
-        "cherry",
-        "currant",
-        "grape",
-        "lemon",
-        "lingonberry",
-        "melon",
-        "olive",
-        "orange (fruit)",
-        "peach",
-        "pear",
-        "pineapple",
-        "plum",
-        "raspberry",
-        "strawberry"
-    ]
+    "topics": {
+        "fruit": {
+            "concepts": [
+                "apple",
+                "banana",
+                "berry",
+                "bilberry",
+                "cherry",
+                "currant",
+                "grape",
+                "lemon",
+                "lingonberry",
+                "melon",
+                "olive",
+                "orange (fruit)",
+                "peach",
+                "pear",
+                "pineapple",
+                "plum",
+                "raspberry",
+                "strawberry"
+            ]
+        }
+    }
 }

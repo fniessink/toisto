@@ -1,7 +1,10 @@
 {
-    "name": "pronouns",
-    "concepts": [
-        "each other",
-        "somebody"
-    ]
+    "topics": {
+        "pronouns": {
+            "concepts": [
+                "each other",
+                "somebody"
+            ]
+        }
+    }
 }

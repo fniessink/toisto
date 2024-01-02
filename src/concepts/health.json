@@ -1,177 +1,179 @@
 {
-    "health": {
-        "en": "health",
-        "fi": "terveys",
-        "nl": "de gezondheid"
-    },
-    "health centre": {
-        "roots": "health",
-        "en": "health centre|health center",
-        "fi": "terveysasema",
-        "nl": "het gezondheidscentrum"
-    },
-    "care": {
-        "en": "care",
-        "fi": "hoito",
-        "nl": "de zorg"
-    },
-    "health care": {
-        "roots": [
-            "health",
-            "care"
-        ],
-        "en": "health care",
-        "fi": "terveydenhoito",
-        "nl": "de gezondheidszorg"
-    },
-    "disease": {
-        "singular": {
-            "en": "disease",
-            "fi": "sairaus",
-            "nl": "de ziekte"
+    "concepts": {
+        "health": {
+            "en": "health",
+            "fi": "terveys",
+            "nl": "de gezondheid"
         },
-        "plural": {
-            "en": "diseases",
-            "fi": "sairaudet",
-            "nl": "de ziektes|de ziekten"
-        }
-    },
-    "patient": {
-        "singular": {
-            "en": "patient",
-            "fi": "potilas",
-            "nl": "de patiënt"
+        "health centre": {
+            "roots": "health",
+            "en": "health centre|health center",
+            "fi": "terveysasema",
+            "nl": "het gezondheidscentrum"
         },
-        "plural": {
-            "en": "patients",
-            "fi": "potilaat",
-            "nl": "de patiënten"
-        }
-    },
-    "medicine": {
-        "singular": {
-            "en": "medicine",
-            "fi": "lääke",
-            "nl": "het medicijn"
+        "care": {
+            "en": "care",
+            "fi": "hoito",
+            "nl": "de zorg"
         },
-        "plural": {
-            "en": "medicines",
-            "fi": "lääkkeet",
-            "nl": "de medicijnen"
-        }
-    },
-    "wound": {
-        "singular": {
-            "en": "wound",
-            "fi": "haava",
-            "nl": "de wond"
+        "health care": {
+            "roots": [
+                "health",
+                "care"
+            ],
+            "en": "health care",
+            "fi": "terveydenhoito",
+            "nl": "de gezondheidszorg"
         },
-        "plural": {
-            "en": "wounds",
-            "fi": "haavat",
-            "nl": "de wonden"
-        }
-    },
-    "flu": {
-        "singular": {
-            "en": "flu",
-            "fi": "flunssa",
-            "nl": "de griep"
+        "disease": {
+            "singular": {
+                "en": "disease",
+                "fi": "sairaus",
+                "nl": "de ziekte"
+            },
+            "plural": {
+                "en": "diseases",
+                "fi": "sairaudet",
+                "nl": "de ziektes|de ziekten"
+            }
         },
-        "plural": {
-            "en": "flus",
-            "fi": "flunssat",
-            "nl": "de griepen"
-        }
-    },
-    "fever": {
-        "singular": {
-            "en": "fever",
-            "fi": "kuume",
-            "nl": "de koorts"
+        "patient": {
+            "singular": {
+                "en": "patient",
+                "fi": "potilas",
+                "nl": "de patiënt"
+            },
+            "plural": {
+                "en": "patients",
+                "fi": "potilaat",
+                "nl": "de patiënten"
+            }
         },
-        "plural": {
-            "en": "fevers",
-            "fi": "kuumeet",
-            "nl": "koortsen"
-        }
-    },
-    "blood": {
-        "singular": {
-            "en": "blood",
-            "fi": "veri",
-            "nl": "het bloed"
+        "medicine": {
+            "singular": {
+                "en": "medicine",
+                "fi": "lääke",
+                "nl": "het medicijn"
+            },
+            "plural": {
+                "en": "medicines",
+                "fi": "lääkkeet",
+                "nl": "de medicijnen"
+            }
         },
-        "plural": {
-            "en": "bloods",
-            "fi": "veret"
-        }
-    },
-    "ache": {
-        "singular": {
-            "en": "ache",
-            "fi": "särky",
-            "nl": "de pijn;dull"
+        "wound": {
+            "singular": {
+                "en": "wound",
+                "fi": "haava",
+                "nl": "de wond"
+            },
+            "plural": {
+                "en": "wounds",
+                "fi": "haavat",
+                "nl": "de wonden"
+            }
         },
-        "plural": {
-            "en": "aches",
-            "fi": "säryt",
-            "nl": "de pijnen;dull"
-        }
-    },
-    "pain": {
-        "singular": {
-            "en": "pain",
-            "fi": "kipu",
-            "nl": "de pijn;sharp"
+        "flu": {
+            "singular": {
+                "en": "flu",
+                "fi": "flunssa",
+                "nl": "de griep"
+            },
+            "plural": {
+                "en": "flus",
+                "fi": "flunssat",
+                "nl": "de griepen"
+            }
         },
-        "plural": {
-            "en": "pains",
-            "fi": "kivut",
-            "nl": "de pijnen;sharp"
-        }
-    },
-    "headache": {
-        "roots": [
-            "head",
-            "ache"
-        ],
-        "singular": {
-            "en": "headache",
-            "fi": "päänsärky",
-            "nl": "de hoofdpijn"
+        "fever": {
+            "singular": {
+                "en": "fever",
+                "fi": "kuume",
+                "nl": "de koorts"
+            },
+            "plural": {
+                "en": "fevers",
+                "fi": "kuumeet",
+                "nl": "koortsen"
+            }
         },
-        "plural": {
-            "en": "headaches",
-            "fi": "päänsäryt",
-            "nl": "de hoofdpijnen"
-        }
-    },
-    "hospital": {
-        "roots": {
-            "nl": "house"
+        "blood": {
+            "singular": {
+                "en": "blood",
+                "fi": "veri",
+                "nl": "het bloed"
+            },
+            "plural": {
+                "en": "bloods",
+                "fi": "veret"
+            }
         },
-        "singular": {
-            "en": "hospital",
-            "fi": "sairaala",
-            "nl": "het ziekenhuis"
+        "ache": {
+            "singular": {
+                "en": "ache",
+                "fi": "särky",
+                "nl": "de pijn;dull"
+            },
+            "plural": {
+                "en": "aches",
+                "fi": "säryt",
+                "nl": "de pijnen;dull"
+            }
         },
-        "plural": {
-            "en": "hospitals",
-            "fi": "sairaalat",
-            "nl": "de ziekenhuizen"
-        }
-    },
-    "pharmacy": {
-        "singular": {
-            "en": "pharmacy",
-            "fi": "apteekki",
-            "nl": "de apotheek"
+        "pain": {
+            "singular": {
+                "en": "pain",
+                "fi": "kipu",
+                "nl": "de pijn;sharp"
+            },
+            "plural": {
+                "en": "pains",
+                "fi": "kivut",
+                "nl": "de pijnen;sharp"
+            }
         },
-        "plural": {
-            "en": "pharmacies",
-            "fi": "apteekit",
-            "nl": "de apotheken"
+        "headache": {
+            "roots": [
+                "head",
+                "ache"
+            ],
+            "singular": {
+                "en": "headache",
+                "fi": "päänsärky",
+                "nl": "de hoofdpijn"
+            },
+            "plural": {
+                "en": "headaches",
+                "fi": "päänsäryt",
+                "nl": "de hoofdpijnen"
+            }
+        },
+        "hospital": {
+            "roots": {
+                "nl": "house"
+            },
+            "singular": {
+                "en": "hospital",
+                "fi": "sairaala",
+                "nl": "het ziekenhuis"
+            },
+            "plural": {
+                "en": "hospitals",
+                "fi": "sairaalat",
+                "nl": "de ziekenhuizen"
+            }
+        },
+        "pharmacy": {
+            "singular": {
+                "en": "pharmacy",
+                "fi": "apteekki",
+                "nl": "de apotheek"
+            },
+            "plural": {
+                "en": "pharmacies",
+                "fi": "apteekit",
+                "nl": "de apotheken"
+            }
         }
     }
 }

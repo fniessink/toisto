@@ -1,12 +1,15 @@
 {
-    "name": "sport",
-    "concepts": [
-        "ball",
-        "football",
-        "game",
-        "ice rink",
-        "playing field",
-        "swimming pool",
-        "to ski"
-    ]
+    "topics": {
+        "sport": {
+            "concepts": [
+                "ball",
+                "football",
+                "game",
+                "ice rink",
+                "playing field",
+                "swimming pool",
+                "to ski"
+            ]
+        }
+    }
 }

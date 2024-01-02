@@ -1,170 +1,172 @@
 {
-    "no": {
-        "en": "No!",
-        "fi": "Ei!",
-        "nl": "Nee!"
-    },
-    "yes": {
-        "en": "Yes!",
-        "fi": [
-            "Joo!",
-            "Kyllä!"
-        ],
-        "nl": "Ja!"
-    },
-    "here you go": {
-        "roots": {
-            "fi": "good"
+    "concepts": {
+        "no": {
+            "en": "No!",
+            "fi": "Ei!",
+            "nl": "Nee!"
         },
-        "en": "Here you go!",
-        "fi": "Ole hyvä!",
-        "nl": "Alsjeblieft!|Alstublieft!"
-    },
-    "thanks": {
-        "en": "Thank you!|Thanks!",
-        "fi": [
-            "Kiitos!",
-            "Kiitti!*"
-        ],
-        "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
-    },
-    "you are welcome": {
-        "roots": {
-            "en": [
-                "to be",
-                "welcome"
-            ],
-            "nl": "thanks",
-            "fi": "no"
-        },
-        "en": "You are welcome!",
-        "nl": [
-            "Geen dank!",
-            "Graag gedaan!"
-        ],
-        "fi": "Ei kestä!"
-    },
-    "sorry": {
-        "en": "Sorry!",
-        "fi": "Anteeksi!",
-        "nl": "Sorry!"
-    },
-    "excuse me": {
-        "en": "Excuse me?|Excuse me!",
-        "fi": "Anteeksi?|Anteeksi!",
-        "nl": "Pardon?|Pardon!"
-    },
-    "no problem": {
-        "roots": {
-            "en": "no",
-            "fi": "nothing"
-        },
-        "en": "No problem!",
-        "fi": "Ei se mitään!",
-        "nl": [
-            "Geen probleem!",
-            "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
-        ]
-    },
-    "ok": {
-        "en": "OK!|Okay!",
-        "fi": "Okei!",
-        "nl": "OK!|Oké!"
-    },
-    "and you": {
-        "roots": "and",
-        "en": "And you?",
-        "fi": "Entä sinulle?",
-        "nl": "En met jou?"
-    },
-    "enjoy your meal": {
-        "roots": {
+        "yes": {
+            "en": "Yes!",
             "fi": [
-                "good",
-                "food"
+                "Joo!",
+                "Kyllä!"
             ],
-            "nl": "to eat"
+            "nl": "Ja!"
         },
-        "en": "Enjoy your meal!",
-        "fi": "Hyvää ruokahalua!",
-        "nl": "Eet smakelijk!"
-    },
-    "cheers": {
-        "en": "Cheers!",
-        "fi": [
-            "Kippis!",
-            "Skool!"
-        ],
-        "nl": "Proost!"
-    },
-    "thank you for the meal": {
-        "roots": {
-            "en": [
+        "here you go": {
+            "roots": {
+                "fi": "good"
+            },
+            "en": "Here you go!",
+            "fi": "Ole hyvä!",
+            "nl": "Alsjeblieft!|Alstublieft!"
+        },
+        "thanks": {
+            "en": "Thank you!|Thanks!",
+            "fi": [
+                "Kiitos!",
+                "Kiitti!*"
+            ],
+            "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
+        },
+        "you are welcome": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "welcome"
+                ],
+                "nl": "thanks",
+                "fi": "no"
+            },
+            "en": "You are welcome!",
+            "nl": [
+                "Geen dank!",
+                "Graag gedaan!"
+            ],
+            "fi": "Ei kestä!"
+        },
+        "sorry": {
+            "en": "Sorry!",
+            "fi": "Anteeksi!",
+            "nl": "Sorry!"
+        },
+        "excuse me": {
+            "en": "Excuse me?|Excuse me!",
+            "fi": "Anteeksi?|Anteeksi!",
+            "nl": "Pardon?|Pardon!"
+        },
+        "no problem": {
+            "roots": {
+                "en": "no",
+                "fi": "nothing"
+            },
+            "en": "No problem!",
+            "fi": "Ei se mitään!",
+            "nl": [
+                "Geen probleem!",
+                "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
+            ]
+        },
+        "ok": {
+            "en": "OK!|Okay!",
+            "fi": "Okei!",
+            "nl": "OK!|Oké!"
+        },
+        "and you": {
+            "roots": "and",
+            "en": "And you?",
+            "fi": "Entä sinulle?",
+            "nl": "En met jou?"
+        },
+        "enjoy your meal": {
+            "roots": {
+                "fi": [
+                    "good",
+                    "food"
+                ],
+                "nl": "to eat"
+            },
+            "en": "Enjoy your meal!",
+            "fi": "Hyvää ruokahalua!",
+            "nl": "Eet smakelijk!"
+        },
+        "cheers": {
+            "en": "Cheers!",
+            "fi": [
+                "Kippis!",
+                "Skool!"
+            ],
+            "nl": "Proost!"
+        },
+        "thank you for the meal": {
+            "roots": {
+                "en": [
+                    "thanks"
+                ],
+                "fi": [
+                    "thanks",
+                    "food"
+                ],
+                "nl": [
+                    "thanks",
+                    "to eat"
+                ]
+            },
+            "en": "Thank you for the meal!|Thanks for the meal!",
+            "fi": "Kiitos ruoasta!",
+            "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
+        },
+        "it was delicious": {
+            "roots": {
+                "en": [
+                    "thanks",
+                    "to be"
+                ],
+                "fi": [
+                    "thanks",
+                    "to be",
+                    "good"
+                ],
+                "nl": [
+                    "thanks",
+                    "to be",
+                    "tasty"
+                ]
+            },
+            "en": "Thank you, it was delicious!|Thanks, it was delicious!",
+            "fi": "Kiitos, oli hyvää!",
+            "nl": "Dank je, het was lekker!|Dank u, het was lekker!|Bedankt, het was lekker!"
+        },
+        "very well, thank you": {
+            "roots": [
+                "good",
                 "thanks"
             ],
-            "fi": [
-                "thanks",
-                "food"
-            ],
-            "nl": [
-                "thanks",
-                "to eat"
-            ]
+            "en": "Very well, thank you!|Very well, thanks!",
+            "fi": "Ihan hyvää, kiitos!",
+            "nl": "Heel goed, dank je!|Heel goed, dank u!|Heel goed, bedankt!"
         },
-        "en": "Thank you for the meal!|Thanks for the meal!",
-        "fi": "Kiitos ruoasta!",
-        "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
-    },
-    "it was delicious": {
-        "roots": {
-            "en": [
-                "thanks",
-                "to be"
-            ],
-            "fi": [
-                "thanks",
-                "to be",
-                "good"
-            ],
-            "nl": [
-                "thanks",
-                "to be",
-                "tasty"
-            ]
+        "thanks, same to you": {
+            "en": "Thank you, same to you!|Thanks, same to you!",
+            "fi": "Kiitos samoin!",
+            "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
         },
-        "en": "Thank you, it was delicious!|Thanks, it was delicious!",
-        "fi": "Kiitos, oli hyvää!",
-        "nl": "Dank je, het was lekker!|Dank u, het was lekker!|Bedankt, het was lekker!"
-    },
-    "very well, thank you": {
-        "roots": [
-            "good",
-            "thanks"
-        ],
-        "en": "Very well, thank you!|Very well, thanks!",
-        "fi": "Ihan hyvää, kiitos!",
-        "nl": "Heel goed, dank je!|Heel goed, dank u!|Heel goed, bedankt!"
-    },
-    "thanks, same to you": {
-        "en": "Thank you, same to you!|Thanks, same to you!",
-        "fi": "Kiitos samoin!",
-        "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
-    },
-    "example": {
-        "singular": {
-            "en": "example",
-            "fi": "esimerkki",
-            "nl": "het voorbeeld"
+        "example": {
+            "singular": {
+                "en": "example",
+                "fi": "esimerkki",
+                "nl": "het voorbeeld"
+            },
+            "plural": {
+                "en": "examples",
+                "fi": "esimerkit",
+                "nl": "de voorbeelden"
+            }
         },
-        "plural": {
-            "en": "examples",
-            "fi": "esimerkit",
-            "nl": "de voorbeelden"
+        "for example": {
+            "en": "for example",
+            "fi": "esimerkiksi",
+            "nl": "bijvoorbeeld"
         }
-    },
-    "for example": {
-        "en": "for example",
-        "fi": "esimerkiksi",
-        "nl": "bijvoorbeeld"
     }
 }

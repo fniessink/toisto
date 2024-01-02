@@ -2,8 +2,7 @@
 
 from argparse import ArgumentParser
 
-from toisto.persistence.concepts import ConceptLoader
-from toisto.persistence.topics import TopicLoader
+from toisto.persistence.loader import Loader
 
 from ..base import ToistoTestCase
 
@@ -14,9 +13,8 @@ class TopicsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         argument_parser = ArgumentParser()
-        self.concepts = ConceptLoader(argument_parser).load()
+        self.concepts, self.topics = Loader(argument_parser).load()
         self.all_concept_ids = {concept.concept_id for concept in self.concepts}
-        self.topics = TopicLoader(argument_parser).load()
 
     def test_all_concepts_have_at_least_one_topic(self):
         """Test that all concepts have at least one topic."""

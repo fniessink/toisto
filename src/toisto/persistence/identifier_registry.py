@@ -29,7 +29,7 @@ class IdentifierRegistry(Generic[Identifier]):
             occurs = "occurs multiple times" if file_path == other_file_path else "also occurs"
             name = self.domain_object_name
             self.argument_parser.error(
-                f"{NAME} cannot read {name} file {file_path}: {name} identifier '{identifier}' {occurs} in {name} file "
-                f"{other_file_path}.\n{name.capitalize()} identifiers must be unique across {name} files.\n",
+                f"{NAME} cannot read file {file_path}: {name} identifier '{identifier}' {occurs} in file "
+                f"{other_file_path}.\n{name.capitalize()} identifiers must be unique across files.\n",
             )
         self.files_by_id[identifier] = file_path

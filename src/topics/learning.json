@@ -1,18 +1,21 @@
 {
-    "name": "learning",
-    "concepts": [
-        "answer",
-        "course",
-        "course day",
-        "day care centre",
-        "exercise",
-        "fact",
-        "finnish course",
-        "question",
-        "school",
-        "student",
-        "teacher",
-        "to ask",
-        "university"
-    ]
+    "topics": {
+        "learning": {
+            "concepts": [
+                "answer",
+                "course",
+                "course day",
+                "day care centre",
+                "exercise",
+                "fact",
+                "finnish course",
+                "question",
+                "school",
+                "student",
+                "teacher",
+                "to ask",
+                "university"
+            ]
+        }
+    }
 }

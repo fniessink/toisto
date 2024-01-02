@@ -66,20 +66,12 @@ def add_selection_arguments(parser: ArgumentParser, topics: set[Topic], concepts
 def add_file_arguments(parser: ArgumentParser) -> None:
     """Add the file arguments."""
     parser.add_argument(
-        "-C",
-        "--concept-file",
+        "-f",
+        "--file",
         action="append",
         default=[],
-        metavar="{concept file}",
-        help="extra concept file to use, can be repeated",
-    )
-    parser.add_argument(
-        "-o",
-        "--topic-file",
-        action="append",
-        default=[],
-        metavar="{topic file}",
-        help="extra topic file to use, can be repeated",
+        metavar="{file}",
+        help="file with extra concepts and/or topics to read, can be repeated",
     )
 
 

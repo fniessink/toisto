@@ -1,671 +1,673 @@
 {
-    "to count": {
-        "en": "to count",
-        "fi": "laskea",
-        "nl": "tellen"
-    },
-    "number": {
-        "singular": {
-            "en": "number",
-            "fi": "numero",
-            "nl": "het getal"
+    "concepts": {
+        "to count": {
+            "en": "to count",
+            "fi": "laskea",
+            "nl": "tellen"
         },
-        "plural": {
-            "en": "numbers",
-            "fi": "numerot",
-            "nl": "de getallen"
-        }
-    },
-    "0": {
-        "en": "zero",
-        "fi": "nolla",
-        "nl": "nul"
-    },
-    "1": {
-        "cardinal": {
-            "en": "one",
-            "fi": [
-                "yksi",
-                "yks*"
+        "number": {
+            "singular": {
+                "en": "number",
+                "fi": "numero",
+                "nl": "het getal"
+            },
+            "plural": {
+                "en": "numbers",
+                "fi": "numerot",
+                "nl": "de getallen"
+            }
+        },
+        "0": {
+            "en": "zero",
+            "fi": "nolla",
+            "nl": "nul"
+        },
+        "1": {
+            "cardinal": {
+                "en": "one",
+                "fi": [
+                    "yksi",
+                    "yks*"
+                ],
+                "nl": "één|een"
+            },
+            "ordinal": {
+                "en": "first",
+                "fi": "ensimmäinen",
+                "nl": "eerste"
+            }
+        },
+        "2": {
+            "cardinal": {
+                "en": "two",
+                "fi": [
+                    "kaksi",
+                    "kaks*"
+                ],
+                "nl": "twee"
+            },
+            "ordinal": {
+                "en": "second",
+                "fi": "toinen",
+                "nl": "tweede"
+            }
+        },
+        "3": {
+            "cardinal": {
+                "en": "three",
+                "fi": "kolme",
+                "nl": "drie"
+            },
+            "ordinal": {
+                "en": "third",
+                "fi": "kolmas",
+                "nl": "derde"
+            }
+        },
+        "4": {
+            "cardinal": {
+                "en": "four",
+                "fi": "neljä",
+                "nl": "vier"
+            },
+            "ordinal": {
+                "en": "fourth",
+                "fi": "neljäs",
+                "nl": "vierde"
+            }
+        },
+        "5": {
+            "cardinal": {
+                "en": "five",
+                "fi": [
+                    "viisi",
+                    "viis*"
+                ],
+                "nl": "vijf"
+            },
+            "ordinal": {
+                "en": "fifth",
+                "fi": "viides",
+                "nl": "vijfde"
+            }
+        },
+        "6": {
+            "cardinal": {
+                "en": "six",
+                "fi": [
+                    "kuusi",
+                    "kuus*"
+                ],
+                "nl": "zes"
+            },
+            "ordinal": {
+                "en": "sixth",
+                "fi": "kuudes",
+                "nl": "zesde"
+            }
+        },
+        "7": {
+            "cardinal": {
+                "en": "seven",
+                "fi": [
+                    "seitsemän",
+                    "seittemän*"
+                ],
+                "nl": "zeven"
+            },
+            "ordinal": {
+                "en": "seventh",
+                "fi": "seitsemäs",
+                "nl": "zevende"
+            }
+        },
+        "8": {
+            "cardinal": {
+                "en": "eight",
+                "fi": [
+                    "kahdeksan",
+                    "kaheksan*"
+                ],
+                "nl": "acht"
+            },
+            "ordinal": {
+                "en": "eighth",
+                "fi": "kahdeksas",
+                "nl": "achtste"
+            }
+        },
+        "9": {
+            "cardinal": {
+                "en": "nine",
+                "fi": [
+                    "yhdeksän",
+                    "yheksän*"
+                ],
+                "nl": "negen"
+            },
+            "ordinal": {
+                "en": "ninth",
+                "fi": "yhdeksäs",
+                "nl": "negende"
+            }
+        },
+        "10": {
+            "cardinal": {
+                "en": "ten",
+                "fi": "kymmenen",
+                "nl": "tien"
+            },
+            "ordinal": {
+                "en": "tenth",
+                "fi": "kymmenes",
+                "nl": "tiende"
+            }
+        },
+        "11": {
+            "roots": [
+                "1",
+                "10"
             ],
-            "nl": "één|een"
+            "cardinal": {
+                "en": "eleven",
+                "fi": [
+                    "yksitoista",
+                    "ykstoist*"
+                ],
+                "nl": "elf"
+            },
+            "ordinal": {
+                "en": "elventh",
+                "fi": "yhdestoista",
+                "nl": "elfde"
+            }
         },
-        "ordinal": {
+        "12": {
+            "roots": [
+                "2",
+                "10"
+            ],
+            "cardinal": {
+                "en": "twelve",
+                "fi": "kaksitoista",
+                "nl": "twaalf"
+            },
+            "ordinal": {
+                "en": "twelfth",
+                "fi": "kahdestoista",
+                "nl": "twaalfde"
+            }
+        },
+        "13": {
+            "roots": [
+                "3",
+                "10"
+            ],
+            "cardinal": {
+                "en": "thirteen",
+                "fi": "kolmetoista",
+                "nl": "dertien"
+            },
+            "ordinal": {
+                "en": "thirteenth",
+                "fi": "kolmastoista",
+                "nl": "dertiende"
+            }
+        },
+        "14": {
+            "roots": [
+                "4",
+                "10"
+            ],
+            "cardinal": {
+                "en": "fourteen",
+                "fi": "neljätoista",
+                "nl": "veertien"
+            },
+            "ordinal": {
+                "en": "fourteenth",
+                "fi": "neljästoista",
+                "nl": "veertiende"
+            }
+        },
+        "15": {
+            "roots": [
+                "5",
+                "10"
+            ],
+            "cardinal": {
+                "en": "fifteen",
+                "fi": "viisitoista",
+                "nl": "vijftien"
+            },
+            "ordinal": {
+                "en": "fifteenth",
+                "fi": "viidestoista",
+                "nl": "vijftiende"
+            }
+        },
+        "16": {
+            "roots": [
+                "6",
+                "10"
+            ],
+            "cardinal": {
+                "en": "sixteen",
+                "fi": "kuusitoista",
+                "nl": "zestien"
+            },
+            "ordinal": {
+                "en": "sixteenth",
+                "fi": "kuudestoista",
+                "nl": "zestiende"
+            }
+        },
+        "17": {
+            "roots": [
+                "7",
+                "10"
+            ],
+            "cardinal": {
+                "en": "seventeen",
+                "fi": "seitsemäntoista",
+                "nl": "zeventien"
+            },
+            "ordinal": {
+                "en": "seventeenth",
+                "fi": "seitsemästoista",
+                "nl": "zeventiende"
+            }
+        },
+        "18": {
+            "roots": [
+                "8",
+                "10"
+            ],
+            "cardinal": {
+                "en": "eightteen",
+                "fi": "kahdeksantoista",
+                "nl": "achttien"
+            },
+            "ordinal": {
+                "en": "eighteenth",
+                "fi": "kahdeksastoista",
+                "nl": "achttiende"
+            }
+        },
+        "19": {
+            "roots": [
+                "9",
+                "10"
+            ],
+            "cardinal": {
+                "en": "nineteen",
+                "fi": "yhdeksäntoista",
+                "nl": "negentien"
+            },
+            "ordinal": {
+                "en": "nineteenth",
+                "fi": "yhdeksästoista",
+                "nl": "negentiende"
+            }
+        },
+        "20": {
+            "roots": [
+                "2",
+                "10"
+            ],
+            "cardinal": {
+                "en": "twenty",
+                "fi": [
+                    "kaksikymmentä",
+                    "kakskyt*"
+                ],
+                "nl": "twintig"
+            },
+            "ordinal": {
+                "en": "twentieth",
+                "fi": "kahdeskymmenes",
+                "nl": "twintigste"
+            }
+        },
+        "21": {
+            "roots": [
+                "1",
+                "20"
+            ],
+            "cardinal": {
+                "en": "twenty-one",
+                "fi": [
+                    "kaksikymmentäyksi",
+                    "kakskytyks*"
+                ],
+                "nl": "eenentwintig"
+            },
+            "ordinal": {
+                "en": "twenty-first",
+                "fi": "kahdeskymmenesensimmäinen",
+                "nl": "eenentwintigste"
+            }
+        },
+        "22": {
+            "roots": [
+                "2",
+                "20"
+            ],
+            "cardinal": {
+                "en": "twenty-two",
+                "fi": "kaksikymmentäkaksi",
+                "nl": "tweeëntwintig"
+            },
+            "ordinal": {
+                "en": "twenty-second",
+                "fi": "kahdeskymmenestoinen",
+                "nl": "tweeëntwintigste"
+            }
+        },
+        "23": {
+            "roots": [
+                "3",
+                "20"
+            ],
+            "cardinal": {
+                "en": "twenty-three",
+                "fi": "kaksikymmentäkolme",
+                "nl": "drieëntwintig"
+            },
+            "ordinal": {
+                "en": "twenty-third",
+                "fi": "kahdeskymmeneskolmas",
+                "nl": "drieëntwintigste"
+            }
+        },
+        "24": {
+            "roots": [
+                "4",
+                "20"
+            ],
+            "cardinal": {
+                "en": "twenty-four",
+                "fi": "kaksikymmentäneljä",
+                "nl": "vierentwintig"
+            },
+            "ordinal": {
+                "en": "twenty-fourth",
+                "fi": "kahdeskymmenesneljäs",
+                "nl": "vierentwintigste"
+            }
+        },
+        "30": {
+            "roots": [
+                "3",
+                "10"
+            ],
+            "cardinal": {
+                "en": "thirty",
+                "fi": [
+                    "kolmekymmentä",
+                    "kolkyt*"
+                ],
+                "nl": "dertig"
+            },
+            "ordinal": {
+                "en": "thirtieth",
+                "fi": "kolmaskymmenes",
+                "nl": "dertigste"
+            }
+        },
+        "40": {
+            "roots": [
+                "4",
+                "10"
+            ],
+            "cardinal": {
+                "en": "forty",
+                "fi": [
+                    "neljäkymmentä",
+                    "nelkyt*"
+                ],
+                "nl": "veertig"
+            },
+            "ordinal": {
+                "en": "fortieth",
+                "fi": "neljäskymmenes",
+                "nl": "veertigste"
+            }
+        },
+        "50": {
+            "roots": [
+                "5",
+                "10"
+            ],
+            "cardinal": {
+                "en": "fifty",
+                "fi": [
+                    "viisikymmentä",
+                    "viiskyt*"
+                ],
+                "nl": "vijftig"
+            },
+            "ordinal": {
+                "en": "fiftieth",
+                "fi": "viideskymmenes",
+                "nl": "vijftigste"
+            }
+        },
+        "60": {
+            "roots": [
+                "6",
+                "10"
+            ],
+            "cardinal": {
+                "en": "sixty",
+                "fi": [
+                    "kuusikymmentä",
+                    "kuuskyt*"
+                ],
+                "nl": "zestig"
+            },
+            "ordinal": {
+                "en": "sixtieth",
+                "fi": "kuudeskymmenes",
+                "nl": "zestigste"
+            }
+        },
+        "70": {
+            "roots": [
+                "7",
+                "10"
+            ],
+            "cardinal": {
+                "en": "seventy",
+                "fi": [
+                    "seitsemänkymmentä",
+                    "seiskyt*"
+                ],
+                "nl": "zeventig"
+            },
+            "ordinal": {
+                "en": "seventieth",
+                "fi": "seitsemäskymmenes",
+                "nl": "zeventigste"
+            }
+        },
+        "80": {
+            "roots": [
+                "8",
+                "10"
+            ],
+            "cardinal": {
+                "en": "eighty",
+                "fi": [
+                    "kahdeksankymmentä",
+                    "kaheksankyt*"
+                ],
+                "nl": "tachtig"
+            },
+            "ordinal": {
+                "en": "eightieth",
+                "fi": "kahdeksaskymmenes",
+                "nl": "tachtigste"
+            }
+        },
+        "90": {
+            "roots": [
+                "9",
+                "10"
+            ],
+            "cardinal": {
+                "en": "ninety",
+                "fi": [
+                    "yhdeksänkymmentä",
+                    "yheksänkyt*"
+                ],
+                "nl": "negentig"
+            },
+            "ordinal": {
+                "en": "ninetieth",
+                "fi": "yhdeksäskymmenes",
+                "nl": "negentigste"
+            }
+        },
+        "100": {
+            "en": "hundred",
+            "fi": "sata",
+            "nl": "honderd"
+        },
+        "200": {
+            "roots": [
+                "2",
+                "100"
+            ],
+            "en": "two hundred",
+            "fi": "kaksisataa",
+            "nl": "tweehonderd"
+        },
+        "300": {
+            "roots": [
+                "3",
+                "100"
+            ],
+            "en": "three hundred",
+            "fi": "kolmesataa;;'sataa' is the partitive case of 'sata'",
+            "nl": "driehonderd"
+        },
+        "1000": {
+            "en": "thousand",
+            "fi": "tuhat",
+            "nl": "duizend"
+        },
+        "2000": {
+            "roots": [
+                "2",
+                "1000"
+            ],
+            "en": "two thousand",
+            "fi": "kaksituhatta;;'tuhatta' is the partitive case of 'tuhat'",
+            "nl": "tweeduizend"
+        },
+        "500000": {
+            "roots": [
+                "5",
+                "100",
+                "1000"
+            ],
+            "en": "five hunderd thousand",
+            "fi": "viisisataatuhatta;;'sataa' and 'tuhatta' are the partitive case of 'sata' and 'tuhat' respectively",
+            "nl": "vijfhonderdduizend"
+        },
+        "1000000": {
+            "en": "million",
+            "fi": "miljoona",
+            "nl": "miljoen"
+        },
+        "2000000": {
+            "roots": [
+                "2",
+                "1000000"
+            ],
+            "en": "two million",
+            "fi": "kaksi miljoonaa;;'miljoonaa' is the partitive case of 'miljoona'",
+            "nl": "twee miljoen"
+        },
+        "1000000000": {
+            "en": "billion",
+            "fi": "miljardi",
+            "nl": "miljard"
+        },
+        "5000000000": {
+            "roots": [
+                "5",
+                "1000000000"
+            ],
+            "en": "five billion",
+            "fi": "viisi miljardia;;'miljardia' is the partitive case of 'miljardi'",
+            "nl": "vijf miljard"
+        },
+        "pair": {
+            "singular": {
+                "en": "pair",
+                "fi": "pari",
+                "nl": "het paar"
+            },
+            "plural": {
+                "en": "pairs",
+                "fi": "parit",
+                "nl": "de paren"
+            }
+        },
+        "first": {
             "en": "first",
-            "fi": "ensimmäinen",
-            "nl": "eerste"
-        }
-    },
-    "2": {
-        "cardinal": {
-            "en": "two",
-            "fi": [
-                "kaksi",
-                "kaks*"
+            "fi": "ensin",
+            "nl": "eerst"
+        },
+        "what is 15 + 4": {
+            "answer": "that is 19",
+            "roots": [
+                "15",
+                "4"
             ],
-            "nl": "twee"
+            "en": "What is fifteen plus four?",
+            "fi": "Mitä on viisitoista plus neljä?",
+            "nl": "Wat is vijftien plus vier?"
         },
-        "ordinal": {
-            "en": "second",
-            "fi": "toinen",
-            "nl": "tweede"
-        }
-    },
-    "3": {
-        "cardinal": {
-            "en": "three",
-            "fi": "kolme",
-            "nl": "drie"
+        "that is 19": {
+            "answer-only": true,
+            "en": "That is nineteen.",
+            "fi": "Se on yhdeksäntoista.",
+            "nl": "Dat is negentien."
         },
-        "ordinal": {
-            "en": "third",
-            "fi": "kolmas",
-            "nl": "derde"
-        }
-    },
-    "4": {
-        "cardinal": {
-            "en": "four",
-            "fi": "neljä",
-            "nl": "vier"
-        },
-        "ordinal": {
-            "en": "fourth",
-            "fi": "neljäs",
-            "nl": "vierde"
-        }
-    },
-    "5": {
-        "cardinal": {
-            "en": "five",
-            "fi": [
-                "viisi",
-                "viis*"
+        "what is 3 x 10": {
+            "answer": "that is 30",
+            "roots": [
+                "3",
+                "10"
             ],
-            "nl": "vijf"
+            "en": "What is three times ten?",
+            "fi": "Mitä on kolme kertaa kymmenen?",
+            "nl": "Wat is drie keer tien?"
         },
-        "ordinal": {
-            "en": "fifth",
-            "fi": "viides",
-            "nl": "vijfde"
-        }
-    },
-    "6": {
-        "cardinal": {
-            "en": "six",
-            "fi": [
-                "kuusi",
-                "kuus*"
+        "that is 30": {
+            "answer-only": true,
+            "en": "That is thirty.",
+            "fi": "Se on kolmekymmentä.",
+            "nl": "Dat is dertig."
+        },
+        "what is 20 - 7": {
+            "answer": "that is 13",
+            "roots": [
+                "20",
+                "7"
             ],
-            "nl": "zes"
+            "en": "What is twenty minus seven?",
+            "fi": "Mitä on kaksikymmentä minus seitsemän?",
+            "nl": "Wat is twintig min zeven?"
         },
-        "ordinal": {
-            "en": "sixth",
-            "fi": "kuudes",
-            "nl": "zesde"
+        "that is 13": {
+            "answer-only": true,
+            "en": "That is thirteen.",
+            "fi": "Se on kolmetoista.",
+            "nl": "Dat is dertien."
         }
-    },
-    "7": {
-        "cardinal": {
-            "en": "seven",
-            "fi": [
-                "seitsemän",
-                "seittemän*"
-            ],
-            "nl": "zeven"
-        },
-        "ordinal": {
-            "en": "seventh",
-            "fi": "seitsemäs",
-            "nl": "zevende"
-        }
-    },
-    "8": {
-        "cardinal": {
-            "en": "eight",
-            "fi": [
-                "kahdeksan",
-                "kaheksan*"
-            ],
-            "nl": "acht"
-        },
-        "ordinal": {
-            "en": "eighth",
-            "fi": "kahdeksas",
-            "nl": "achtste"
-        }
-    },
-    "9": {
-        "cardinal": {
-            "en": "nine",
-            "fi": [
-                "yhdeksän",
-                "yheksän*"
-            ],
-            "nl": "negen"
-        },
-        "ordinal": {
-            "en": "ninth",
-            "fi": "yhdeksäs",
-            "nl": "negende"
-        }
-    },
-    "10": {
-        "cardinal": {
-            "en": "ten",
-            "fi": "kymmenen",
-            "nl": "tien"
-        },
-        "ordinal": {
-            "en": "tenth",
-            "fi": "kymmenes",
-            "nl": "tiende"
-        }
-    },
-    "11": {
-        "roots": [
-            "1",
-            "10"
-        ],
-        "cardinal": {
-            "en": "eleven",
-            "fi": [
-                "yksitoista",
-                "ykstoist*"
-            ],
-            "nl": "elf"
-        },
-        "ordinal": {
-            "en": "elventh",
-            "fi": "yhdestoista",
-            "nl": "elfde"
-        }
-    },
-    "12": {
-        "roots": [
-            "2",
-            "10"
-        ],
-        "cardinal": {
-            "en": "twelve",
-            "fi": "kaksitoista",
-            "nl": "twaalf"
-        },
-        "ordinal": {
-            "en": "twelfth",
-            "fi": "kahdestoista",
-            "nl": "twaalfde"
-        }
-    },
-    "13": {
-        "roots": [
-            "3",
-            "10"
-        ],
-        "cardinal": {
-            "en": "thirteen",
-            "fi": "kolmetoista",
-            "nl": "dertien"
-        },
-        "ordinal": {
-            "en": "thirteenth",
-            "fi": "kolmastoista",
-            "nl": "dertiende"
-        }
-    },
-    "14": {
-        "roots": [
-            "4",
-            "10"
-        ],
-        "cardinal": {
-            "en": "fourteen",
-            "fi": "neljätoista",
-            "nl": "veertien"
-        },
-        "ordinal": {
-            "en": "fourteenth",
-            "fi": "neljästoista",
-            "nl": "veertiende"
-        }
-    },
-    "15": {
-        "roots": [
-            "5",
-            "10"
-        ],
-        "cardinal": {
-            "en": "fifteen",
-            "fi": "viisitoista",
-            "nl": "vijftien"
-        },
-        "ordinal": {
-            "en": "fifteenth",
-            "fi": "viidestoista",
-            "nl": "vijftiende"
-        }
-    },
-    "16": {
-        "roots": [
-            "6",
-            "10"
-        ],
-        "cardinal": {
-            "en": "sixteen",
-            "fi": "kuusitoista",
-            "nl": "zestien"
-        },
-        "ordinal": {
-            "en": "sixteenth",
-            "fi": "kuudestoista",
-            "nl": "zestiende"
-        }
-    },
-    "17": {
-        "roots": [
-            "7",
-            "10"
-        ],
-        "cardinal": {
-            "en": "seventeen",
-            "fi": "seitsemäntoista",
-            "nl": "zeventien"
-        },
-        "ordinal": {
-            "en": "seventeenth",
-            "fi": "seitsemästoista",
-            "nl": "zeventiende"
-        }
-    },
-    "18": {
-        "roots": [
-            "8",
-            "10"
-        ],
-        "cardinal": {
-            "en": "eightteen",
-            "fi": "kahdeksantoista",
-            "nl": "achttien"
-        },
-        "ordinal": {
-            "en": "eighteenth",
-            "fi": "kahdeksastoista",
-            "nl": "achttiende"
-        }
-    },
-    "19": {
-        "roots": [
-            "9",
-            "10"
-        ],
-        "cardinal": {
-            "en": "nineteen",
-            "fi": "yhdeksäntoista",
-            "nl": "negentien"
-        },
-        "ordinal": {
-            "en": "nineteenth",
-            "fi": "yhdeksästoista",
-            "nl": "negentiende"
-        }
-    },
-    "20": {
-        "roots": [
-            "2",
-            "10"
-        ],
-        "cardinal": {
-            "en": "twenty",
-            "fi": [
-                "kaksikymmentä",
-                "kakskyt*"
-            ],
-            "nl": "twintig"
-        },
-        "ordinal": {
-            "en": "twentieth",
-            "fi": "kahdeskymmenes",
-            "nl": "twintigste"
-        }
-    },
-    "21": {
-        "roots": [
-            "1",
-            "20"
-        ],
-        "cardinal": {
-            "en": "twenty-one",
-            "fi": [
-                "kaksikymmentäyksi",
-                "kakskytyks*"
-            ],
-            "nl": "eenentwintig"
-        },
-        "ordinal": {
-            "en": "twenty-first",
-            "fi": "kahdeskymmenesensimmäinen",
-            "nl": "eenentwintigste"
-        }
-    },
-    "22": {
-        "roots": [
-            "2",
-            "20"
-        ],
-        "cardinal": {
-            "en": "twenty-two",
-            "fi": "kaksikymmentäkaksi",
-            "nl": "tweeëntwintig"
-        },
-        "ordinal": {
-            "en": "twenty-second",
-            "fi": "kahdeskymmenestoinen",
-            "nl": "tweeëntwintigste"
-        }
-    },
-    "23": {
-        "roots": [
-            "3",
-            "20"
-        ],
-        "cardinal": {
-            "en": "twenty-three",
-            "fi": "kaksikymmentäkolme",
-            "nl": "drieëntwintig"
-        },
-        "ordinal": {
-            "en": "twenty-third",
-            "fi": "kahdeskymmeneskolmas",
-            "nl": "drieëntwintigste"
-        }
-    },
-    "24": {
-        "roots": [
-            "4",
-            "20"
-        ],
-        "cardinal": {
-            "en": "twenty-four",
-            "fi": "kaksikymmentäneljä",
-            "nl": "vierentwintig"
-        },
-        "ordinal": {
-            "en": "twenty-fourth",
-            "fi": "kahdeskymmenesneljäs",
-            "nl": "vierentwintigste"
-        }
-    },
-    "30": {
-        "roots": [
-            "3",
-            "10"
-        ],
-        "cardinal": {
-            "en": "thirty",
-            "fi": [
-                "kolmekymmentä",
-                "kolkyt*"
-            ],
-            "nl": "dertig"
-        },
-        "ordinal": {
-            "en": "thirtieth",
-            "fi": "kolmaskymmenes",
-            "nl": "dertigste"
-        }
-    },
-    "40": {
-        "roots": [
-            "4",
-            "10"
-        ],
-        "cardinal": {
-            "en": "forty",
-            "fi": [
-                "neljäkymmentä",
-                "nelkyt*"
-            ],
-            "nl": "veertig"
-        },
-        "ordinal": {
-            "en": "fortieth",
-            "fi": "neljäskymmenes",
-            "nl": "veertigste"
-        }
-    },
-    "50": {
-        "roots": [
-            "5",
-            "10"
-        ],
-        "cardinal": {
-            "en": "fifty",
-            "fi": [
-                "viisikymmentä",
-                "viiskyt*"
-            ],
-            "nl": "vijftig"
-        },
-        "ordinal": {
-            "en": "fiftieth",
-            "fi": "viideskymmenes",
-            "nl": "vijftigste"
-        }
-    },
-    "60": {
-        "roots": [
-            "6",
-            "10"
-        ],
-        "cardinal": {
-            "en": "sixty",
-            "fi": [
-                "kuusikymmentä",
-                "kuuskyt*"
-            ],
-            "nl": "zestig"
-        },
-        "ordinal": {
-            "en": "sixtieth",
-            "fi": "kuudeskymmenes",
-            "nl": "zestigste"
-        }
-    },
-    "70": {
-        "roots": [
-            "7",
-            "10"
-        ],
-        "cardinal": {
-            "en": "seventy",
-            "fi": [
-                "seitsemänkymmentä",
-                "seiskyt*"
-            ],
-            "nl": "zeventig"
-        },
-        "ordinal": {
-            "en": "seventieth",
-            "fi": "seitsemäskymmenes",
-            "nl": "zeventigste"
-        }
-    },
-    "80": {
-        "roots": [
-            "8",
-            "10"
-        ],
-        "cardinal": {
-            "en": "eighty",
-            "fi": [
-                "kahdeksankymmentä",
-                "kaheksankyt*"
-            ],
-            "nl": "tachtig"
-        },
-        "ordinal": {
-            "en": "eightieth",
-            "fi": "kahdeksaskymmenes",
-            "nl": "tachtigste"
-        }
-    },
-    "90": {
-        "roots": [
-            "9",
-            "10"
-        ],
-        "cardinal": {
-            "en": "ninety",
-            "fi": [
-                "yhdeksänkymmentä",
-                "yheksänkyt*"
-            ],
-            "nl": "negentig"
-        },
-        "ordinal": {
-            "en": "ninetieth",
-            "fi": "yhdeksäskymmenes",
-            "nl": "negentigste"
-        }
-    },
-    "100": {
-        "en": "hundred",
-        "fi": "sata",
-        "nl": "honderd"
-    },
-    "200": {
-        "roots": [
-            "2",
-            "100"
-        ],
-        "en": "two hundred",
-        "fi": "kaksisataa",
-        "nl": "tweehonderd"
-    },
-    "300": {
-        "roots": [
-            "3",
-            "100"
-        ],
-        "en": "three hundred",
-        "fi": "kolmesataa;;'sataa' is the partitive case of 'sata'",
-        "nl": "driehonderd"
-    },
-    "1000": {
-        "en": "thousand",
-        "fi": "tuhat",
-        "nl": "duizend"
-    },
-    "2000": {
-        "roots": [
-            "2",
-            "1000"
-        ],
-        "en": "two thousand",
-        "fi": "kaksituhatta;;'tuhatta' is the partitive case of 'tuhat'",
-        "nl": "tweeduizend"
-    },
-    "500000": {
-        "roots": [
-            "5",
-            "100",
-            "1000"
-        ],
-        "en": "five hunderd thousand",
-        "fi": "viisisataatuhatta;;'sataa' and 'tuhatta' are the partitive case of 'sata' and 'tuhat' respectively",
-        "nl": "vijfhonderdduizend"
-    },
-    "1000000": {
-        "en": "million",
-        "fi": "miljoona",
-        "nl": "miljoen"
-    },
-    "2000000": {
-        "roots": [
-            "2",
-            "1000000"
-        ],
-        "en": "two million",
-        "fi": "kaksi miljoonaa;;'miljoonaa' is the partitive case of 'miljoona'",
-        "nl": "twee miljoen"
-    },
-    "1000000000": {
-        "en": "billion",
-        "fi": "miljardi",
-        "nl": "miljard"
-    },
-    "5000000000": {
-        "roots": [
-            "5",
-            "1000000000"
-        ],
-        "en": "five billion",
-        "fi": "viisi miljardia;;'miljardia' is the partitive case of 'miljardi'",
-        "nl": "vijf miljard"
-    },
-    "pair": {
-        "singular": {
-            "en": "pair",
-            "fi": "pari",
-            "nl": "het paar"
-        },
-        "plural": {
-            "en": "pairs",
-            "fi": "parit",
-            "nl": "de paren"
-        }
-    },
-    "first": {
-        "en": "first",
-        "fi": "ensin",
-        "nl": "eerst"
-    },
-    "what is 15 + 4": {
-        "answer": "that is 19",
-        "roots": [
-            "15",
-            "4"
-        ],
-        "en": "What is fifteen plus four?",
-        "fi": "Mitä on viisitoista plus neljä?",
-        "nl": "Wat is vijftien plus vier?"
-    },
-    "that is 19": {
-        "answer-only": true,
-        "en": "That is nineteen.",
-        "fi": "Se on yhdeksäntoista.",
-        "nl": "Dat is negentien."
-    },
-    "what is 3 x 10": {
-        "answer": "that is 30",
-        "roots": [
-            "3",
-            "10"
-        ],
-        "en": "What is three times ten?",
-        "fi": "Mitä on kolme kertaa kymmenen?",
-        "nl": "Wat is drie keer tien?"
-    },
-    "that is 30": {
-        "answer-only": true,
-        "en": "That is thirty.",
-        "fi": "Se on kolmekymmentä.",
-        "nl": "Dat is dertig."
-    },
-    "what is 20 - 7": {
-        "answer": "that is 13",
-        "roots": [
-            "20",
-            "7"
-        ],
-        "en": "What is twenty minus seven?",
-        "fi": "Mitä on kaksikymmentä minus seitsemän?",
-        "nl": "Wat is twintig min zeven?"
-    },
-    "that is 13": {
-        "answer-only": true,
-        "en": "That is thirteen.",
-        "fi": "Se on kolmetoista.",
-        "nl": "Dat is dertien."
     }
 }
