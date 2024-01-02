@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Give an error message if a selected concept or topics does not exist. Closes [#516](https://github.com/fniessink/toisto/issues/516).
+- Remove dashes from labels before sending them to the speech synthesizer for better pronunciation. Closes [#546](https://github.com/fniessink/toisto/issues/546).
 
 ### Changed
 
