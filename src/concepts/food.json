@@ -1171,14 +1171,28 @@
             "nl": "het dienblad"
         },
         "fork": {
-            "en": "fork",
-            "fi": "haarukka",
-            "nl": "de vork"
+            "singular": {
+                "en": "fork",
+                "fi": "haarukka",
+                "nl": "de vork"
+            },
+            "plural": {
+                "en": "forks",
+                "fi": "haarukat",
+                "nl": "de vorken"
+            }
         },
         "knife": {
-            "en": "knife",
-            "fi": "veitsi",
-            "nl": "het mes"
+            "singular": {
+                "en": "knife",
+                "fi": "veitsi",
+                "nl": "het mes"
+            },
+            "plural": {
+                "en": "knives",
+                "fi": "veitset",
+                "nl": "de messen"
+            }
         },
         "spoon": {
             "en": "spoon",
@@ -1186,9 +1200,16 @@
             "nl": "de lepel"
         },
         "glass": {
-            "en": "glass",
-            "fi": "lasi",
-            "nl": "het glas"
+            "singular": {
+                "en": "glass",
+                "fi": "lasi",
+                "nl": "het glas"
+            },
+            "plural": {
+                "en": "glasses",
+                "fi": "lasit",
+                "nl": "de glazen"
+            }
         },
         "cup": {
             "en": "cup",
@@ -1211,9 +1232,16 @@
             "nl": "de fles"
         },
         "plate": {
-            "en": "plate",
-            "fi": "lautanen",
-            "nl": "het bord"
+            "singular": {
+                "en": "plate",
+                "fi": "lautanen",
+                "nl": "het bord"
+            },
+            "plural": {
+                "en": "plates",
+                "fi": "lautaset",
+                "nl": "de borden"
+            }
         },
         "jug": {
             "en": "jug",
@@ -1247,6 +1275,36 @@
             "en": "porridge",
             "fi": "puuro",
             "nl": "de pap"
+        },
+        "hungry": {
+            "en": "hungry",
+            "fi": "nälkä",
+            "nl": "honger"
+        },
+        "i am hungry": {
+            "roots": {
+                "en": ["to be", "hungry"],
+                "fi": ["to have", "hungry"],
+                "nl": ["to have", "hungry"]
+            },
+            "en": "I am hungry.",
+            "fi": "Minulla on nälkä.",
+            "nl": "Ik heb honger."
+        },
+        "thirsty": {
+            "en": "thirsty",
+            "fi": "jano",
+            "nl": "dorst"
+        },
+        "i am thirsty": {
+            "roots": {
+                "en": ["to be", "thirsty"],
+                "fi": ["to have", "thirsty"],
+                "nl": ["to have", "thirsty"]
+            },
+            "en": "I am thirsty.",
+            "fi": "Minulla on jano.",
+            "nl": "Ik heb dorst."
         },
         "come eat": {
             "en": "Come eat!",

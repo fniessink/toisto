@@ -77,9 +77,16 @@
                 "en": "theater",
                 "fi": "theater"
             },
-            "en": "movie theater",
-            "fi": "elokuvateatteri",
-            "nl": "de bioscoop"
+            "singular": {
+                "en": "movie theater",
+                "fi": "elokuvateatteri",
+                "nl": "de bioscoop"
+            },
+            "plural": {
+                "en": "movie theaters",
+                "fi": "elokuvateatterit",
+                "nl": "de bioscopen"
+            }
         },
         "opera": {
             "singular": {
@@ -357,6 +364,90 @@
                 "fi": "tiet",
                 "nl": "de wegen"
             }
+        },
+        "path": {
+            "singular": {
+                "en": "path",
+                "fi": "polku",
+                "nl": "het pad"
+            },
+            "plural": {
+                "en": "paths",
+                "fi": "polut",
+                "nl": "de paden"
+            }
+        },
+        "pedestrian": {
+            "roots": {
+                "fi": "foot",
+                "nl": "foot"
+            },
+            "singular": {
+                "en": "pedestrian",
+                "fi": "jalankulkija",
+                "nl": "de voetganger"
+            },
+            "plural": {
+                "en": "pedestrians",
+                "fi": "jalankulkijat",
+                "nl": "de voetgangers"
+            }
+        },
+        "sidewalk": {
+            "singular": {
+                "en": "sidewalk",
+                "fi": "jalkakäytävä",
+                "nl": "de stoep"
+            },
+            "plural": {
+                "en": "sidewalks",
+                "fi": "jalkakäytävät",
+                "nl": "de stoepen"
+            }
+        },
+        "pedestrian crossing": {
+            "roots": {
+                "en": "pedestrian",
+                "fi": "road",
+                "nl": [
+                    "zebra",
+                    "path"
+                ]
+            },
+            "en": "pedestrian crossing",
+            "fi": "suojatie",
+            "nl": "het zebrapad"
+        },
+        "cyclist": {
+            "singular": {
+                "en": "cyclist",
+                "fi": "pyöräilijä",
+                "nl": "de fietser"
+            },
+            "plural": {
+                "en": "cyclists",
+                "fi": "pyöräilijät",
+                "nl": "de fietsers"
+            }
+        },
+        "cycle path": {
+            "roots": {
+                "en": [
+                    "bicycle",
+                    "path"
+                ],
+                "fi": [
+                    "bicycle",
+                    "road"
+                ],
+                "nl": [
+                    "bicycle",
+                    "path"
+                ]
+            },
+            "en": "cycle path",
+            "fi": "pyörätie",
+            "nl": "het fietspad"
         },
         "square": {
             "singular": {

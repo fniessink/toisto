@@ -274,6 +274,22 @@
             ],
             "nl": "de chauffeur"
         },
+        "motorist": {
+            "roots": {
+                "fi": "car",
+                "nl": "car"
+            },
+            "singular": {
+                "en": "motorist",
+                "fi": "autoilija",
+                "nl": "de automobilist"
+            },
+            "plural": {
+                "en": "motorists",
+                "fi": "autoilijat",
+                "nl": "de automobilisten"
+            }
+        },
         "bus driver": {
             "roots": [
                 "bus",
@@ -348,6 +364,14 @@
             "en": "metro station",
             "fi": "metroasema",
             "nl": "het metrostation"
+        },
+        "public transportation": {
+            "en": "public transportation|public transport",
+            "fi": [
+                "joukkoliikenne",
+                "julkinen liikenne"
+            ],
+            "nl": "het openbaar vervoer"
         },
         "customs": {
             "en": "customs",
