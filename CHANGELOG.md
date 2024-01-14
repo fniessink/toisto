@@ -8,17 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
-- Give an error message if a selected concept or topics does not exist. Closes [#516](https://github.com/fniessink/toisto/issues/516).
+- Give an error message when a selected concept does not exist. Closes [#516](https://github.com/fniessink/toisto/issues/516).
 - Remove dashes from labels before sending them to the speech synthesizer for better pronunciation. Closes [#546](https://github.com/fniessink/toisto/issues/546).
-
-### Changed
-
-- The structure of the JSON files with concepts and topics has been changed. Both concepts and topics can be stored in the same file. Because there is no difference between concept files and topic files anymore, the command line parameter for loading extra concept and topic files has been merged into one `-f/--file` parameter.
 
 ### Added
 
 - Support abbreviations. Closes [#498](https://github.com/fniessink/toisto/issues/498).
 - Support generating alternative answers (like accepting "it's" when the label is "is is"). Closes [#520](https://github.com/fniessink/toisto/issues/520).
+- Specifying a concept to practice with `-c/--concept` also loads related concepts.
+
+### Removed
+
+- Topics and topic files no longer exist. The command line parameter for loading extra files has been renamed to `-f/--file`.
 
 ## 0.14.1 - 2023-12-09
 

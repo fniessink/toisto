@@ -306,7 +306,7 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
 
 With the example above, Toisto will quiz users with Dutch as target language for the diminutive form of "de tafel".
 
-Note that in many languages, diminutives can (also) be formed by using multi-word constructions such as "little table". Though possible, it is not recommended to add these to the JSON files because then Toisto will quiz both the translation of the multi-word construction as well as the diminutive form of the root, wich seems superfluous. To help the user understand the meaning of the diminutive, include the multi-word construction as follows (see the section [Concepts without label in some languages](#concepts-without-label-in-some-languages) above):
+Note that in many languages, diminutives can (also) be formed by using multi-word constructions such as "little table". Though possible, it is not recommended to add these to the JSON files because then Toisto will quiz both the translation of the multi-word construction as well as the diminutive form of the root, which seems superfluous. To help the user understand the meaning of the diminutive, include the multi-word construction as follows (see the section [Concepts without label in some languages](#concepts-without-label-in-some-languages) above):
 
 ```json
 {
@@ -833,11 +833,11 @@ Answers are also possible if the concept has multiple grammatical forms, like si
     "concepts": {
         "what do you like": {
             "singular": {
-                "en": "What do you like?;ice cream",
+                "en": "What do you like?;singular/ice cream",
                 "fi": "Mistä sinä pidät?;jäätelöä"
             },
             "plural": {
-                "en": "What do you like?;ice cream",
+                "en": "What do you like?;plural/ice cream",
                 "fi": "Mistä te pidätte?;jäätelöä"
             },
             "answer": "i like ice cream"
@@ -889,22 +889,22 @@ The answer concepts in the previous example have the key `answer-only` set to `t
 
 Toisto uses the concepts to generate quizzes. Currently, the following types of quizzes are generated:
 
-1. Quizzes to translate a concept from the target language to the source language.
-2. Quizzes to listen to a concept in the target language and then type in what was said.
-3. Quizzes to translate a concept from the source language to the target language.
-4. Quizzes to listen to a concept in the target language and then translate what was said in the source language.
-5. Quizzes to singularize a plural concept or pluralize a singular concept.
-6. Quizzes to diminutize a concept.
-7. Quizzes to change the person of a concept.
-9. Quizzes to change the gender of a concept.
-9. Quizzes to provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
-10. Quizzes to change the tense of a concept between infinitive, present tense, and past tense.
-11. Quizzes to change the sentence form from declarative to interrogative and vice versa.
-12. Quizzes to change the polarity from affirmative to negative and vice versa.
-13. Quizzes to change cardinal numbers into ordinal numbers and vice versa.
-14. Quizzes to give the antonym.
-15. Quizzes to answer a question.
-16. Quizzes to abbreviate a concept or give the full-form of the abbreviation.
+1. Translate a concept from the target language to the source language.
+2. Listen to a concept in the target language and then type in what was said.
+3. Translate a concept from the source language to the target language.
+4. Listen to a concept in the target language and then translate what was said in the source language.
+5. Singularize a plural concept or pluralize a singular concept.
+6. Diminutize a concept.
+7. Change the person of a concept.
+9. Change the gender of a concept.
+9. Provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
+10. Change the tense of a concept between infinitive, present tense, and past tense.
+11. Change the sentence form from declarative to interrogative and vice versa.
+12. Change the polarity from affirmative to negative and vice versa.
+13. Change cardinal numbers into ordinal numbers and vice versa.
+14. Give the antonym.
+15. Answer a question.
+16. Abbreviate a concept or give the full-form of the abbreviation.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 
