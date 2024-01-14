@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "friend": {
+            "singular": {
+                "en": "friend",
+                "fi": [
+                    "kaveri",
+                    "ystävä"
+                ],
+                "nl": "de vriend"
+            },
+            "plural": {
+                "en": "friends",
+                "fi": [
+                    "kaverit",
+                    "ystävät"
+                ],
+                "nl": "de vrienden"
+            }
+        },
+        "female friend": {
+            "hypernym": [
+                "friend",
+                "girl"
+            ],
+            "roots": {
+                "en": [
+                    "girl",
+                    "friend"
+                ],
+                "fi": [
+                    "girl",
+                    "friend"
+                ],
+                "nl": "friend"
+            },
+            "en": "girlfriend",
+            "fi": "tyttöystävä",
+            "nl": "de vriendin"
+        }
+    }
+}

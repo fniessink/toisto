@@ -1,0 +1,21 @@
+{
+    "concepts": {
+        "day": {
+            "singular": {
+                "en": "day",
+                "fi": "päivä",
+                "nl": "de dag"
+            },
+            "plural": {
+                "en": "days",
+                "fi": "päivät",
+                "nl": "de dagen"
+            }
+        },
+        "24 hours": {
+            "en": "(twenty-four hours)",
+            "fi": "vuorokausi",
+            "nl": "het etmaal"
+        }
+    }
+}

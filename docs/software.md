@@ -727,6 +727,85 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 
 If a concept has more than one antonym (for example, "large" and "big" are both antonyms of "small"), the `antonym` value can be a list of concept identifiers instead of a string.
 
+#### Hypernyms
+
+> [!NOTE]
+> Concept X is a hypernym of concept Y if concept Y is a (kind of) X. For example, red is a color, so the concept "color" is a hypernym of the concept "red". The reverse relation is called hyponym, so "red" is a hyponym of "color".
+
+When one concept is a hypernym of another concept (and conversely the other concept is a hyponym of the first concept), this can be specified with the `hypernym` relation. Toisto will derive the hyponym relations automatically. Toisto uses the hypernym and hyponym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept color`, would select both color and red to practice.
+
+```json
+{
+    "concepts": {
+        "color": {
+            "en": "color",
+            "nl": "de kleur",
+        },
+        "red": {
+            "hypernym": "color",
+            "en": "red",
+            "nl": "rood",
+        }
+    }
+}
+```
+
+If a concept has more than one hypernym (for example, "pet" and "mammal" are both hypernyms of "dog"), the `hypernym` value can be a list of concept identifiers instead of a string.
+
+#### Holonyms
+
+> [!NOTE]
+> Concept X is a holonym of concept Y if concept Y is a part of X. For example, cars have wheels, so the concept "car" is a holonym of the concept "wheel". The reverse relation is called meronym, so "wheel" is a meronym of "car".
+
+When one concept is a holonym of another concept (and conversely the other concept is a meronym of the first concept), this can be specified with the `holonym` relation. Toisto will derive the meronym relations automatically. Toisto uses the holonym and meronym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept car`, would select both the concept "car" and the concept "wheel" to practice.
+
+```json
+{
+    "concepts": {
+        "car": {
+            "en": "car",
+            "nl": "de auto",
+        },
+        "wheel": {
+            "holonym": "car",
+            "en": "wheel",
+            "nl": "het wiel",
+        }
+    }
+}
+```
+
+If a concept has more than one holonym (for example, "chair" and "table" are both holonyms of "leg"), the `holonym` value can be a list of concept identifiers instead of a string.
+
+#### Concept involvement
+
+When one concept involves another concept, this can be specified with the `involves` relation. Toisto will derive the inverse relation automatically. Toisto uses the involvement relations to decide with related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept "to paint"`, would select "to paint", "painter", and "painting" to practice.
+
+```json
+{
+    "concepts": {
+        "to paint": {
+            "involves": [
+                "painter",
+                "painting"
+            ],
+            "en": "to paint",
+            "nl": "schilderen",
+        },
+        "painter": {
+            "en": "painter",
+            "nl": "de schilder",
+        },
+        "painting": {
+            "en": "painting",
+            "nl": "het schilderij",
+        }
+    }
+}
+```
+
+If a concept involves just one other concept (for example, "to save" involves only "money"), the `involves` value can be a single concept identifier instead of a list of concept identifiers.
+
 #### Questions/answers
 
 When one concept is a question and the other concept is the answer, this can be specified using the `answer` relation. Toisto will add a quiz, asking the user to answer the question in their target language.
@@ -805,53 +884,6 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
 ```
 
 The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example, translate "Yes, I do" into "Pidän".
-
-## Topics
-
-Built-in topics are located in `src/topics` in the form of JSON files.
-
-Users can specify which concepts to practice using the `-T/--topic` command-line option. `toisto practice --help` shows the available topics.
-
-Users can also create their own files with topics as long as they comply with the description below and pass them to Toisto using the `--file` command-line option.
-
-Each JSON file can contain one or more *topics*. Each topic has an identifier, a list of concepts that belong to that topic, and a list of (sub)topics.
-
-Topics are represented in the JSON files as JSON objects. The key is the identifier of the topic. It should be unique across all JSON files. The value is an object with two possible keys: `concepts` and `topics`. The `concepts` value should be a list of concept identifiers that belong to the topic. The value for the `topics` is a list of topic identifiers that are subtopics of this topic. All concepts of the subtopics also belong to the parent topic.
-
-The contents of a JSON file with topics looks as follows:
-
-```json
-{
-    "topics": {
-        "food": {
-            "concepts": [
-                "hamburger",
-                "pizza",
-                "..."
-            ],
-            "topics": [
-                "fruit",
-                "vegetables",
-                "..."
-            ]
-        },
-        "fruit": {
-            "concepts": [
-                "apple",
-                "pear",
-                "..."
-            ]
-        },
-        "vegetables": {
-            "concepts": [
-                "bean",
-                "cabbage",
-                "..."
-            ]
-        }
-    }
-}
-```
 
 ## Quizzes
 

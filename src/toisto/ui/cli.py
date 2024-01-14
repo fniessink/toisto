@@ -11,7 +11,6 @@ from ..command.show_progress import SortColumn
 from ..metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
 from ..model.language.concept import Concept
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
-from ..model.topic.topic import Topic
 
 
 def add_language_arguments(parser: ArgumentParser, config: ConfigParser) -> None:
@@ -40,7 +39,7 @@ def check_language(language: str) -> str:
     raise ArgumentTypeError(message)
 
 
-def add_selection_arguments(parser: ArgumentParser, topics: set[Topic], concepts: set[Concept]) -> None:
+def add_selection_arguments(parser: ArgumentParser, concepts: set[Concept]) -> None:
     """Add the selection arguments."""
     selection_group = parser.add_mutually_exclusive_group()
     concept_ids = sorted(concept.concept_id for concept in concepts)
@@ -52,15 +51,6 @@ def add_selection_arguments(parser: ArgumentParser, topics: set[Topic], concepts
         metavar="{concept}",
         help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
     )
-    topic_names = ", ".join(sorted(topic.name for topic in topics))
-    selection_group.add_argument(
-        "-T",
-        "--topic",
-        action="append",
-        default=[],
-        metavar="{topic}",
-        help=f"topic to use, can be repeated; default: all; built-in topics: {topic_names}",
-    )
 
 
 def add_file_arguments(parser: ArgumentParser) -> None:
@@ -71,7 +61,7 @@ def add_file_arguments(parser: ArgumentParser) -> None:
         action="append",
         default=[],
         metavar="{file}",
-        help="file with extra concepts and/or topics to read, can be repeated",
+        help="file with extra concepts to read, can be repeated",
     )
 
 
@@ -82,13 +72,11 @@ class CommandBuilder:
         self,
         argument_parser: ArgumentParser,
         concepts: set[Concept],
-        topics: set[Topic],
         config: ConfigParser,
     ) -> None:
         command_help = "default: practice; type `%(prog)s {command} --help` for more information on a command"
         self.subparsers = argument_parser.add_subparsers(dest="command", title="commands", help=command_help)
         self.concepts = concepts
-        self.topics = topics
         self.config = config
 
     def add_command(self, command: str, description: str, command_help: str) -> ArgumentParser:
@@ -100,7 +88,7 @@ class CommandBuilder:
             formatter_class=RichHelpFormatter,
         )
         add_language_arguments(parser, self.config)
-        add_selection_arguments(parser, self.topics, self.concepts)
+        add_selection_arguments(parser, self.concepts)
         add_file_arguments(parser)
         return parser
 
@@ -128,30 +116,18 @@ class CommandBuilder:
             help="how to sort progress information; default: by retention; available options: %(choices)s",
         )
 
-    def add_topics_command(self) -> None:
-        """Add a command to show topics."""
-        command_help = (
-            "show topics, for example `%(prog)s topics --topic nature` shows the contents of the nature topic"
-        )
-        self.add_command("topics", "Show topics.", command_help)
 
-
-def create_argument_parser(
-    config: ConfigParser,
-    concepts: set[Concept] | None = None,
-    topics: set[Topic] | None = None,
-) -> ArgumentParser:
+def create_argument_parser(config: ConfigParser, concepts: set[Concept] | None = None) -> ArgumentParser:
     """Create the argument parser."""
     epilog = f"See {README_URL} for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
     latest = latest_version()
     version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
     argument_parser.add_argument("-V", "--version", action="version", version=version)
-    builder = CommandBuilder(argument_parser, concepts or set(), topics or set(), config)
+    builder = CommandBuilder(argument_parser, concepts or set(), config)
     builder.add_practice_command()
     builder.add_progress_command()
-    builder.add_topics_command()
-    if not {"practice", "progress", "topics", "-h", "--help", "-V", "--version"} & set(sys.argv):
+    if not {"practice", "progress", "-h", "--help", "-V", "--version"} & set(sys.argv):
         sys.argv.insert(1, "practice")  # Insert practice as default subcommand
     return argument_parser
 

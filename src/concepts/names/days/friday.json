@@ -1,0 +1,22 @@
+{
+    "concepts": {
+        "friday": {
+            "hypernym": "day",
+            "holonym": "days of the week",
+            "roots": {
+                "en": "day",
+                "nl": "day"
+            },
+            "singular": {
+                "en": "Friday;;In English, the names of weekdays are capitalized",
+                "fi": "perjantai;;In Finnish, the names of weekdays are not capitalized",
+                "nl": "vrijdag|de vrijdag;In Dutch, the names of weekdays are not capitalized"
+            },
+            "plural": {
+                "en": "Fridays",
+                "fi": "perjantait",
+                "nl": "de vrijdagen"
+            }
+        }
+    }
+}

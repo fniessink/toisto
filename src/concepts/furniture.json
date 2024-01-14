@@ -25,6 +25,7 @@
             }
         },
         "double bed": {
+            "hypernym": "bed",
             "roots": {
                 "en": "bed",
                 "fi": [
@@ -102,6 +103,7 @@
             }
         },
         "office chair": {
+            "hypernym": "chair",
             "roots": {
                 "en": [
                     "office",
@@ -133,6 +135,7 @@
             }
         },
         "table lamp": {
+            "hypernym": "lamp",
             "roots": [
                 "table",
                 "lamp"
@@ -142,6 +145,7 @@
             "nl": "de tafellamp"
         },
         "dining table": {
+            "hypernym": "table",
             "roots": {
                 "en": "table",
                 "fi": [

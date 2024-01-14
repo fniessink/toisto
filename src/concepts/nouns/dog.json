@@ -1,0 +1,17 @@
+{
+    "concepts": {
+        "dog": {
+            "hypernym": "pet",
+            "singular": {
+                "en": "dog",
+                "fi": "koira",
+                "nl": "de hond"
+            },
+            "plural": {
+                "en": "dogs",
+                "fi": "koirat",
+                "nl": "de honden"
+            }
+        }
+    }
+}

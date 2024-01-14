@@ -50,6 +50,7 @@
             "nl": "de woordenschat"
         },
         "compound word": {
+            "hypernym": "word",
             "roots": "word",
             "en": "compound word",
             "fi": "yhdyssana",
@@ -112,6 +113,7 @@
             "nl": "het alfabet"
         },
         "question word": {
+            "hypernym": "word",
             "roots": [
                 "question",
                 "word"
@@ -157,6 +159,7 @@
             "nl": "het werkwoordtype"
         },
         "main verb": {
+            "hypernym": "verb",
             "roots": {
                 "en": "verb",
                 "fi": [
@@ -177,12 +180,18 @@
             "fi": "infinitiivi",
             "nl": "de infinitief"
         },
+        "adjective": {
+            "en": "adjective",
+            "fi": "adjektiivi",
+            "nl": "het bijvoegelijk naamwoord"
+        },
         "pronoun": {
             "en": "pronoun",
             "fi": "pronomini",
             "nl": "het voornaamwoord"
         },
         "personal pronoun": {
+            "hypernym": "pronoun",
             "roots": [
                 "pronoun"
             ],
@@ -196,6 +205,7 @@
             "nl": "uitgang"
         },
         "personal ending": {
+            "hypernym": "ending",
             "roots": {
                 "en": "ending",
                 "nl": "ending"

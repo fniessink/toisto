@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "america": {
+            "hypernym": "continent",
+            "en": "America",
+            "fi": "Amerikka",
+            "nl": "Amerika"
+        },
+        "north america": {
+            "holonym": "america",
+            "roots": [
+                "north",
+                "america"
+            ],
+            "en": "North America",
+            "fi": "Pohjois-Amerikka",
+            "nl": "Noord-Amerika"
+        },
+        "south america": {
+            "holonym": "america",
+            "roots": [
+                "south",
+                "america"
+            ],
+            "en": "South America",
+            "fi": "Etelä-Amerikka",
+            "nl": "Zuid-Amerika"
+        },
+        "middle america": {
+            "holonym": "america",
+            "roots": "america",
+            "en": "Middle America",
+            "fi": "Väli-Amerikka",
+            "nl": "Midden-Amerika"
+        }
+    }
+}

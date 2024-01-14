@@ -99,10 +99,10 @@ Start Toisto as follows, giving the language you want to practice (the target la
 $ toisto practice --target fi --source en
 ```
 
-To practice a specific topic, pass it as follows:
+To practice a specific concept, pass it as follows:
 
 ```console
-$ toisto practice --target fi -source en --topic colors
+$ toisto practice --target fi -source en --concept color
 ```
 
 Add `--help` or `-h` to get more information about the command-line options and arguments:

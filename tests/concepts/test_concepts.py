@@ -16,7 +16,7 @@ class ConceptsTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         self.concept = create_concept(ConceptId("welcome"), cast(ConceptDict, {}))
-        self.concepts, self.topics = Loader(ArgumentParser()).load()
+        self.concepts = Loader(ArgumentParser()).load()
 
     def test_load_concepts(self):
         """Test that the concepts can be loaded."""

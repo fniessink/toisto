@@ -1,0 +1,17 @@
+{
+    "concepts": {
+        "zebra": {
+            "hypernym": "animal",
+            "singular": {
+                "en": "zebra",
+                "fi": "seepra",
+                "nl": "de zebra"
+            },
+            "plural": {
+                "en": "zebras",
+                "fi": "seeprat",
+                "nl": "de zebra's"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "concepts": {
+        "finland": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            },
+            "en": "Finland",
+            "fi": "Suomi;country",
+            "nl": "Finland"
+        },
+        "finnish": {
+            "hypernym": "nationality",
+            "involves": "finland",
+            "roots": "finland",
+            "en": "Finnish",
+            "fi": "suomalainen",
+            "nl": "Fins"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "capital": {
+            "hypernym": "city",
+            "roots": {
+                "fi": [
+                    "city",
+                    "head"
+                ],
+                "nl": [
+                    "city",
+                    "head"
+                ]
+            },
+            "singular": {
+                "en": "capital",
+                "fi": "pääkaupunki",
+                "nl": "de hoofdstad"
+            },
+            "plural": {
+                "en": "capitals",
+                "fi": "pääkaupungit",
+                "nl": "de hoofdsteden"
+            }
+        }
+    }
+}

@@ -33,6 +33,7 @@
             }
         },
         "entry fee": {
+            "hypernym": "price",
             "roots": {
                 "nl": "price"
             },
@@ -94,6 +95,8 @@
             }
         },
         "flight": {
+            "hypernym": "journey",
+            "involves": "airplane",
             "singular": {
                 "en": "flight",
                 "fi": "lento",
@@ -186,6 +189,7 @@
             }
         },
         "train": {
+            "hypernym": "means of transportation",
             "singular": {
                 "en": "train",
                 "fi": "juna",
@@ -198,6 +202,7 @@
             }
         },
         "metro": {
+            "hypernym": "means of transportation",
             "singular": {
                 "en": "metro",
                 "fi": [
@@ -216,6 +221,7 @@
             }
         },
         "tram": {
+            "hypernym": "means of transportation",
             "roots": {
                 "en": "street"
             },
@@ -243,6 +249,7 @@
             }
         },
         "bus": {
+            "hypernym": "means of transportation",
             "roots": {
                 "fi": "car"
             },
@@ -275,6 +282,8 @@
             "nl": "de chauffeur"
         },
         "motorist": {
+            "hypernym": "driver",
+            "involves": "car",
             "roots": {
                 "fi": "car",
                 "nl": "car"
@@ -291,6 +300,8 @@
             }
         },
         "bus driver": {
+            "hypernym": "driver",
+            "involves": "bus",
             "roots": [
                 "bus",
                 "driver"
@@ -315,6 +326,8 @@
             }
         },
         "bus stop": {
+            "hypernym": "stop",
+            "involves": "bus",
             "roots": [
                 "bus",
                 "stop"
@@ -339,6 +352,8 @@
             }
         },
         "bus station": {
+            "hypernym": "station",
+            "involves": "bus",
             "roots": [
                 "bus",
                 "station"
@@ -348,6 +363,8 @@
             "nl": "het busstation"
         },
         "train station": {
+            "hypernym": "station",
+            "involves": "train",
             "roots": [
                 "train",
                 "station"
@@ -357,6 +374,8 @@
             "nl": "het treinstation"
         },
         "metro station": {
+            "hypernym": "station",
+            "involves": "metro",
             "roots": [
                 "metro",
                 "station"
@@ -379,6 +398,10 @@
             "nl": "de douane"
         },
         "parking garage": {
+            "hypernym": [
+                "parking",
+                "building"
+            ],
             "roots": {
                 "en": "parking"
             },
@@ -387,6 +410,7 @@
             "nl": "de parkeergarage"
         },
         "parking spot": {
+            "hypernym": "parking",
             "roots": {
                 "en": "parking",
                 "fi": "place",
@@ -397,11 +421,13 @@
             "nl": "de parkeerplaats"
         },
         "parking": {
+            "involves": "car",
             "en": "parking",
             "fi": "pysäköinti",
             "nl": "de parkeergelegenheid"
         },
         "taxi": {
+            "hypernym": "car",
             "singular": {
                 "en": [
                     "taxi",
@@ -431,6 +457,7 @@
             }
         },
         "delivery van": {
+            "hypernym": "means of transportation",
             "roots": {
                 "fi": "car"
             },
@@ -439,6 +466,7 @@
             "nl": "de bestelwagen"
         },
         "lorry": {
+            "hypernym": "means of transportation",
             "roots": {
                 "fi": "car"
             },
@@ -450,6 +478,7 @@
             "nl": "de vrachtwagen"
         },
         "bicycle": {
+            "hypernym": "means of transportation",
             "singular": {
                 "en": "bicycle",
                 "fi": "polkypyörä|pyörä",
@@ -462,6 +491,7 @@
             }
         },
         "motorcycle": {
+            "hypernym": "means of transportation",
             "roots": {
                 "fi": "bicycle",
                 "nl": "bicycle"

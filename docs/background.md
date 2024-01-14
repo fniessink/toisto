@@ -14,13 +14,13 @@ Toisto is minimalistic, allowing you to focus on the language and practicing. If
 
 Toisto is open source and free, and will always remain so.
 
-Toisto is extensible. You can add your own topics.
+Toisto is extensible. You can add your own concepts.
 
 ## Future plans
 
-Add more topics.
+Add more concepts.
 
-Have Toisto make the user progress through the topics in a logical order.
+Have Toisto make the user progress through the concepts in a logical order.
 
 Add more languages, but this requires help from native speakers in those languages.
 

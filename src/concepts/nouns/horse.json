@@ -1,0 +1,17 @@
+{
+    "concepts": {
+        "horse": {
+            "hypernym": "animal",
+            "singular": {
+                "en": "horse",
+                "fi": "hevonen",
+                "nl": "het paard"
+            },
+            "plural": {
+                "en": "horses",
+                "fi": "hevoset",
+                "nl": "de paarden"
+            }
+        }
+    }
+}

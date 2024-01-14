@@ -1,0 +1,21 @@
+{
+    "concepts": {
+        "iceland": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            },
+            "en": "Iceland",
+            "fi": "Islanti",
+            "nl": "IJsland"
+        },
+        "icelandic (nationality)": {
+            "hypernym": "nationality",
+            "involves": "iceland",
+            "roots": "iceland",
+            "en": "Icelandic",
+            "fi": "islantilainen",
+            "nl": "IJslands"
+        }
+    }
+}

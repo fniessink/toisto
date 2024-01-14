@@ -113,6 +113,7 @@
             }
         },
         "year": {
+            "holonym": "decade",
             "singular": {
                 "en": "year",
                 "fi": "vuosi",
@@ -125,6 +126,7 @@
             }
         },
         "decade": {
+            "holonym": "century",
             "roots": {
                 "fi": [
                     "10",
@@ -161,6 +163,7 @@
             }
         },
         "hour": {
+            "holonym": "day",
             "singular": {
                 "en": "hour",
                 "fi": "tunti",
@@ -173,6 +176,7 @@
             }
         },
         "minute": {
+            "holonym": "hour",
             "singular": {
                 "en": "minute",
                 "fi": "minuutti",
@@ -197,6 +201,7 @@
             }
         },
         "alarm clock": {
+            "hypernym": "clock",
             "roots": {
                 "en": "clock",
                 "fi": "clock"

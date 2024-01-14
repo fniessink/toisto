@@ -35,6 +35,8 @@
             ]
         },
         "study": {
+            "hypernym": "room",
+            "involves": "work",
             "roots": {
                 "fi": [
                     "work",
@@ -50,6 +52,8 @@
             "nl": "de werkkamer"
         },
         "workplace": {
+            "hypernym": "place",
+            "involves": "work",
             "roots": {
                 "en": [
                     "work",
@@ -80,6 +84,8 @@
             "nl": "de vergadering"
         },
         "meeting room": {
+            "hypernym": "room",
+            "involves": "meeting",
             "roots": [
                 "meeting",
                 "room"
@@ -92,6 +98,7 @@
             "nl": "de vergaderkamer"
         },
         "workday": {
+            "hypernym": "day",
             "roots": [
                 "work",
                 "day"
@@ -101,6 +108,7 @@
             "nl": "de werkdag"
         },
         "working time": {
+            "involves": "work",
             "roots": {
                 "en": [
                     "work",
@@ -142,6 +150,7 @@
             "nl": "het overwerk"
         },
         "remote work": {
+            "hypernym": "work",
             "roots": {
                 "en": "work",
                 "fi": "work",
@@ -155,6 +164,7 @@
             "nl": "het thuiswerk"
         },
         "part-time job": {
+            "hypernym": "job",
             "roots": {
                 "en": [
                     "job"
@@ -176,6 +186,7 @@
             "nl": "de vakantie"
         },
         "employment contract": {
+            "hypernym": "contract",
             "roots": {
                 "fi": "work",
                 "nl": "work"
@@ -185,6 +196,7 @@
             "nl": "het arbeidscontract"
         },
         "salary": {
+            "hypernym": "money",
             "en": [
                 "salary",
                 "pay",
@@ -197,6 +209,7 @@
             ]
         },
         "evening allowance": {
+            "hypernym": "salary",
             "roots": "evening",
             "en": "evening allowance",
             "fi": "iltalisä",
@@ -220,7 +233,7 @@
             "nl": "het ziekteverlof"
         },
         "employer": {
-            "antonym": "emplyee",
+            "antonym": "employee",
             "roots": {
                 "fi": [
                     "work",
@@ -236,7 +249,7 @@
             "nl": "de werkgever"
         },
         "employee": {
-            "antonym": "emplyer",
+            "antonym": "employer",
             "roots": {
                 "fi": "work",
                 "nl": [
@@ -290,6 +303,7 @@
             "nl": "de computer"
         },
         "laptop": {
+            "hypernym": "computer",
             "en": "laptop",
             "fi": [
                 "kannettava tietokone",
@@ -330,6 +344,7 @@
             "nl": "de printer"
         },
         "to print": {
+            "involves": "printer",
             "en": "to print",
             "fi": [
                 "tulostaa",
@@ -346,6 +361,7 @@
             ]
         },
         "to copy": {
+            "involves": "photocopier",
             "en": "to copy",
             "fi": "kopioida",
             "nl": "kopiëren"
@@ -361,6 +377,7 @@
             "nl": "de telefoon"
         },
         "mobile telephone": {
+            "hypernym": "telephone",
             "en": [
                 "mobile telephone|mobile phone|mobile",
                 "cellullar telephone|cellular phone|cell phone|cellphone"
@@ -372,6 +389,7 @@
             "nl": "de mobiele telefoon|de mobiel|het mobieltje"
         },
         "smartphone": {
+            "hypernym": "mobile telephone",
             "roots": {
                 "en": "telephone",
                 "fi": "telephone"
@@ -420,6 +438,8 @@
             "nl": "de pauze"
         },
         "lunchbreak": {
+            "hypernym": "break",
+            "involves": "lunch",
             "roots": [
                 "lunch",
                 "break"
@@ -429,6 +449,8 @@
             "nl": "de lunchpauze"
         },
         "coffee break": {
+            "hypernym": "break",
+            "involves": "coffee",
             "roots": [
                 "coffee",
                 "break"
@@ -446,6 +468,7 @@
             "nl": "de kantine"
         },
         "coffee machine": {
+            "involves": "coffee",
             "roots": "coffee",
             "en": "coffee machine",
             "fi": "kahviautomaatti",
@@ -461,6 +484,7 @@
             "nl": "het lunchpakket"
         },
         "llc": {
+            "hypernym": "company",
             "full form": {
                 "en": "limited liability company",
                 "fi": "osakeyhtiö",
