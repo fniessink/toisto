@@ -20,30 +20,50 @@ ConceptIds = tuple[ConceptId, ...]
 class RelatedConcepts:
     """Class representing the relations of a concept with other concepts.
 
-    Concepts can be composites, meaning they consists of subconcepts (called constituent concepts). For example, a noun
-    concept may have a singular and plural form. These forms are represented as constituent concepts of the parent
-    concept. The parent and constituent attributes keep track of these relations.
+    The following types of concept relations are supported:
 
-    Another relation type that may exist between concepts is roots. Compound concepts such as 'blackboard' contain two
-    roots, 'black' and 'board'. The concept for the compound concept refers to its roots with the roots attribute. The
-    roots relation can also be used for sentences, in which case the individual words of a sentence are the roots.
+    - Concepts can be composites, meaning they consists of subconcepts (called constituent concepts).
+      For example, a noun concept may have a singular and plural form. These forms are represented as constituent
+      concepts of the parent concept. The parent and constituent attributes keep track of these relations.
 
-    The antonym relation is used to capture opposites. For example 'bad' has 'good' as antonym and 'good' has 'bad'
-    as antonym.
+    - Another relation type that may exist between concepts is roots. Compound concepts such as 'blackboard'
+      contain two roots, 'black' and 'board'. The concept for the compound concept refers to its roots with the
+      roots attribute. The roots relation can also be used for sentences, in which case the individual words of a
+      sentence are the roots.
 
-    The answer relation is used to specify possible answers to questions. Using the answer relation it is possible to
-    specify that, for example, 'Do you like ice cream?' has the yes and no concepts as possible answers.
+    - The antonym relation is used to capture opposites. For example 'bad' has 'good' as antonym and 'good' has 'bad'
+     as antonym.
+
+    - The hypernym relation is used to capture "is a (kind of)" relations. Y is a hypernym of X if every X is a
+      (kind of) Y. For example, canine is a hypernym of dog. The hypernym relation is transitive.
+
+    - The holonym relation is used to capture "part of" relations. Y is a holonym of X if X is a part of Y.
+     For example, sentences are holonym of words. The holonym relation is transitive.
+
+    - The involves relation is used to link verbs with nouns.
+
+    - The answer relation is used to specify possible answers to questions. Using the answer relation it is possible to
+     specify that, for example, 'Do you like ice cream?' has the yes and no concepts as possible answers.
 
     NOTE: This class keeps track of the related concepts using their concept identifier (ConceptId) and only when
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
     prevents the need for a second pass after instantiating concepts from the concept files to create the relations.
     """
 
+    _concept: ConceptId
     _parent: ConceptId | None
     _constituents: ConceptIds
     _roots: dict[Language, ConceptIds] | ConceptIds  # Tuple if all languages have the same roots
     _antonyms: ConceptIds
+    _hypernyms: ConceptIds
+    _holonyms: ConceptIds
+    _involves: ConceptIds
     _answers: ConceptIds
+
+    @property
+    def concept(self) -> Concept:
+        """Return the concept that has these relations."""
+        return self._get_concepts(self._concept)[0]
 
     @property
     def parent(self) -> Concept | None:
@@ -61,6 +81,42 @@ class RelatedConcepts:
         return self._get_concepts(*self._antonyms)
 
     @property
+    def hypernyms(self) -> Concepts:
+        """Return the hypernym concepts."""
+        hypernyms = list(self._get_concepts(*self._hypernyms))
+        for hypernym in hypernyms[:]:
+            hypernyms.extend(hypernym.hypernyms)
+        return tuple(hypernyms)
+
+    @property
+    def hyponyms(self) -> Concepts:
+        """Return the hyponym concepts."""
+        return tuple(concept for concept in Concept.instances.values() if self.concept in concept.hypernyms)
+
+    @property
+    def holonyms(self) -> Concepts:
+        """Return the holonym concepts."""
+        holonyms = list(self._get_concepts(*self._holonyms))
+        for holonym in holonyms[:]:
+            holonyms.extend(holonym.holonyms)
+        return tuple(holonyms)
+
+    @property
+    def meronyms(self) -> Concepts:
+        """Return the meronym concepts."""
+        return tuple(concept for concept in Concept.instances.values() if self.concept in concept.holonyms)
+
+    @property
+    def involves(self) -> Concepts:
+        """Return the involved concepts."""
+        return self._get_concepts(*self._involves)
+
+    @property
+    def involved_by(self) -> Concepts:
+        """Return the concepts that involve this concept."""
+        return tuple(concept for concept in Concept.instances.values() if self.concept in concept.involves)
+
+    @property
     def answers(self) -> Concepts:
         """Return the answers to the question that this concept poses."""
         return self._get_concepts(*self._answers)
@@ -69,6 +125,10 @@ class RelatedConcepts:
         """Return the root concepts, for the specified language."""
         concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
         return self._get_concepts(*concept_ids_of_roots)
+
+    def compounds(self, language: Language) -> Concepts:
+        """Return the compound concepts, for the specified language."""
+        return tuple(concept for concept in Concept.instances.values() if self.concept in concept.roots(language))
 
     def _get_concepts(self, *concept_ids: ConceptId) -> Concepts:
         """Return the concepts with the given concept ids."""
@@ -145,6 +205,14 @@ class Concept:
     def is_composite(self, language: Language) -> bool:
         """Return whether this concept is composite."""
         return self._labels.get(language) is None
+
+    def roots(self, language: Language) -> Concepts:
+        """Return the roots of the concept."""
+        return self.related_concepts.roots(language)
+
+    def compounds(self, language: Language) -> Concepts:
+        """Return the compounds of the concept."""
+        return self.related_concepts.compounds(language)
 
 
 Concepts = tuple[Concept, ...]

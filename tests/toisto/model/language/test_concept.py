@@ -1,15 +1,8 @@
 """Unit tests for concepts."""
 
-import unittest
-from argparse import ArgumentParser
-from typing import cast
-from unittest.mock import Mock, patch
-
-from toisto.model.filter import filter_concepts
-from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.language.concept import Concept
+from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
-from toisto.model.topic.topic import Topic, TopicId
 
 from ....base import ToistoTestCase
 
@@ -26,9 +19,16 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((), concept.answers)
         self.assertFalse(concept.answer_only)
         self.assertEqual((), concept.roots("fi"))
+        self.assertEqual((), concept.compounds("fi"))
         self.assertIsNone(concept.parent)
         self.assertEqual((), concept.constituents)
         self.assertEqual((), concept.antonyms)
+        self.assertEqual((), concept.hypernyms)
+        self.assertEqual((), concept.hyponyms)
+        self.assertEqual((), concept.holonyms)
+        self.assertEqual((), concept.meronyms)
+        self.assertEqual((), concept.involves)
+        self.assertEqual((), concept.involved_by)
 
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
@@ -61,42 +61,3 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((Label("fi", "hän syö"),), concept.meanings("fi"))
         self.assertEqual((Label("nl", "zij eet"), Label("nl", "hij eet")), concept.meanings("nl"))
         self.assertEqual((), concept.meanings("en"))
-
-
-class ConceptFilterTest(unittest.TestCase):
-    """Unit tests for the concept filter function."""
-
-    def setUp(self) -> None:
-        """Override to set up concepts."""
-        self.two = create_concept(ConceptId("two"), cast(ConceptDict, dict(fi="kaksi", nl="twee")))
-        self.three = create_concept(ConceptId("three"), cast(ConceptDict, dict(fi="kolme", nl="drie")))
-        self.concepts = {self.two, self.three}
-        small = Topic(TopicId("small"), frozenset([ConceptId("two")]))
-        big = Topic(TopicId("big"), frozenset([ConceptId("three")]))
-        self.topics = {small, big}
-
-    def test_no_filter(self):
-        """Test that all concepts are returned when there is no filter specified."""
-        self.assertEqual({self.two}, filter_concepts({self.two}, self.topics, [], [], ArgumentParser()))
-
-    def test_filter_by_selected_concepts(self):
-        """Test that concepts can be filtered by selected concepts."""
-        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, ["two"], [], ArgumentParser()))
-
-    def test_filter_by_topic(self):
-        """Test that concepts can be filtered by topic."""
-        self.assertEqual({self.two}, filter_concepts(self.concepts, self.topics, [], ["small"], ArgumentParser()))
-
-    @patch("sys.stderr.write")
-    def test_no_match(self, sys_stderr_write: Mock):
-        """Test that an error message is given when no concepts match the filter criteria."""
-        self.assertRaises(
-            SystemExit,
-            filter_concepts,
-            self.concepts,
-            self.topics,
-            [],
-            ["missing"],
-            ArgumentParser(),
-        )
-        self.assertIn("Topic 'missing' not found", sys_stderr_write.call_args_list[1][0][0])

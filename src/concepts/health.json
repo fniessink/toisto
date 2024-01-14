@@ -6,6 +6,8 @@
             "nl": "de gezondheid"
         },
         "health centre": {
+            "hypernym": "building",
+            "involves": "health care",
             "roots": "health",
             "en": "health centre|health center",
             "fi": "terveysasema",
@@ -17,6 +19,7 @@
             "nl": "de zorg"
         },
         "health care": {
+            "hypernym": "care",
             "roots": [
                 "health",
                 "care"
@@ -26,6 +29,7 @@
             "nl": "de gezondheidszorg"
         },
         "disease": {
+            "involves": "patient",
             "singular": {
                 "en": "disease",
                 "fi": "sairaus",
@@ -38,6 +42,7 @@
             }
         },
         "patient": {
+            "involves": "hospital",
             "singular": {
                 "en": "patient",
                 "fi": "potilas",
@@ -50,6 +55,10 @@
             }
         },
         "medicine": {
+            "involves": [
+                "hospital",
+                "pharmacy"
+            ],
             "singular": {
                 "en": "medicine",
                 "fi": "lääke",
@@ -62,6 +71,7 @@
             }
         },
         "wound": {
+            "involves": "patient",
             "singular": {
                 "en": "wound",
                 "fi": "haava",
@@ -74,6 +84,7 @@
             }
         },
         "flu": {
+            "hypernym": "disease",
             "singular": {
                 "en": "flu",
                 "fi": "flunssa",
@@ -86,6 +97,7 @@
             }
         },
         "fever": {
+            "involves": "patient",
             "singular": {
                 "en": "fever",
                 "fi": "kuume",
@@ -98,6 +110,7 @@
             }
         },
         "blood": {
+            "holonym": "body",
             "singular": {
                 "en": "blood",
                 "fi": "veri",
@@ -109,6 +122,7 @@
             }
         },
         "ache": {
+            "involves": "patient",
             "singular": {
                 "en": "ache",
                 "fi": "särky",
@@ -121,6 +135,7 @@
             }
         },
         "pain": {
+            "involves": "patient",
             "singular": {
                 "en": "pain",
                 "fi": "kipu",
@@ -133,6 +148,10 @@
             }
         },
         "headache": {
+            "hypernym": [
+                "ache",
+                "pain"
+            ],
             "roots": [
                 "head",
                 "ache"
@@ -149,6 +168,11 @@
             }
         },
         "hospital": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ],
             "roots": {
                 "nl": "house"
             },
@@ -164,6 +188,11 @@
             }
         },
         "pharmacy": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ],
             "singular": {
                 "en": "pharmacy",
                 "fi": "apteekki",

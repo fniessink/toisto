@@ -1,0 +1,23 @@
+{
+    "concepts": {
+        "country": {
+            "singular": {
+                "en": "country",
+                "fi": "maa;geography",
+                "nl": "het land"
+            },
+            "plural": {
+                "en": "countries",
+                "fi": "maat;geography",
+                "nl": "de landen"
+            }
+        },
+        "neighboring country": {
+            "hypernym": "country",
+            "roots": "country",
+            "en": "neighboring country",
+            "fi": "naapurimaa",
+            "nl": "het buurland"
+        }
+    }
+}

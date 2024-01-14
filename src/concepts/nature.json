@@ -138,6 +138,7 @@
             }
         },
         "beach": {
+            "hypernym": "coast",
             "singular": {
                 "en": "beach",
                 "fi": "ranta",
@@ -322,6 +323,7 @@
             }
         },
         "rainforest": {
+            "hypernym": "forest",
             "roots": [
                 "rain",
                 "forest"
@@ -415,12 +417,12 @@
                 "to be",
                 "east"
             ],
-            "en": "The city is in the East.",
+            "en": "The city is in the east.",
             "fi": [
                 "Kaupunki on idässä.",
                 "Kaupunki sijaitsee idässä."
             ],
-            "nl": "De stad ligt in het Oosten."
+            "nl": "De stad ligt in het oosten."
         },
         "we walk in the forest": {
             "roots": [

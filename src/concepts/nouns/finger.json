@@ -1,0 +1,49 @@
+{
+    "concepts": {
+        "finger": {
+            "holonym": "hand",
+            "singular": {
+                "en": "finger",
+                "fi": "sormi",
+                "nl": "de vinger"
+            },
+            "plural": {
+                "en": "fingers",
+                "fi": "sormet",
+                "nl": "de vingers"
+            }
+        },
+        "middle finger": {
+            "hypernym": "finger",
+            "en": "middle finger",
+            "fi": "keskisormi",
+            "nl": "de middelvinger"
+        },
+        "ring finger": {
+            "hypernym": "finger",
+            "singular": {
+                "en": "ring finger",
+                "fi": "nimetön",
+                "nl": "de ringvinger"
+            },
+            "plural": {
+                "en": "ring fingers",
+                "fi": "nimettömät",
+                "nl": "de ringvingers"
+            }
+        },
+        "little finger": {
+            "hypernym": "finger",
+            "singular": {
+                "en": "little finger",
+                "fi": "pikkusormi",
+                "nl": "de pink"
+            },
+            "plural": {
+                "en": "little fingers",
+                "fi": "pikkusormet",
+                "nl": "de pinken"
+            }
+        }
+    }
+}

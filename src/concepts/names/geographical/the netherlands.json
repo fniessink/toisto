@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "the netherlands": {
+            "hypernym": "country",
+            "roots": {
+                "fi": "country",
+                "nl": "country"
+            },
+            "en": [
+                "The Netherlands",
+                "Holland"
+            ],
+            "fi": [
+                "Alankomaat",
+                "Hollanti"
+            ],
+            "nl": [
+                "Nederland",
+                "Holland"
+            ]
+        },
+        "dutch (nationality)": {
+            "hypernym": "nationality",
+            "involves": "the netherlands",
+            "roots": {
+                "fi": "the netherlands",
+                "nl": "the netherlands"
+            },
+            "en": "Dutch",
+            "fi": [
+                "alankomaalainen",
+                "hollantilainen"
+            ],
+            "nl": "Nederlands"
+        }
+    }
+}

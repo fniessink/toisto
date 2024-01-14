@@ -1,0 +1,18 @@
+{
+    "concepts": {
+        "france": {
+            "hypernym": "country",
+            "en": "France",
+            "fi": "Ranska",
+            "nl": "Frankrijk"
+        },
+        "french (nationality)": {
+            "hypernym": "nationality",
+            "involves": "france",
+            "roots": "france",
+            "en": "French",
+            "fi": "ranskalainen",
+            "nl": "Frans"
+        }
+    }
+}

@@ -13,6 +13,7 @@
             }
         },
         "single-room apartment": {
+            "hypernym": "apartment",
             "roots": {
                 "en": "apartment",
                 "fi": "1",
@@ -29,6 +30,7 @@
             ]
         },
         "room": {
+            "holonym": "house",
             "singular": {
                 "en": "room",
                 "fi": "huone",
@@ -41,6 +43,7 @@
             }
         },
         "basement": {
+            "holonym": "house",
             "singular": {
                 "en": "basement",
                 "fi": "kellari",
@@ -88,6 +91,7 @@
             }
         },
         "veranda": {
+            "holonym": "house",
             "singular": {
                 "en": "veranda",
                 "fi": "veranta",
@@ -136,6 +140,7 @@
             }
         },
         "door": {
+            "holonym": "wall",
             "singular": {
                 "en": "door",
                 "fi": "ovi",
@@ -148,6 +153,7 @@
             }
         },
         "window": {
+            "holonym": "wall",
             "singular": {
                 "en": "window",
                 "fi": "ikkuna",
@@ -160,6 +166,7 @@
             }
         },
         "brick": {
+            "holonym": "wall",
             "singular": {
                 "en": "brick",
                 "fi": "tiili",
@@ -172,6 +179,7 @@
             }
         },
         "step": {
+            "holonym": "stairs",
             "en": "step",
             "fi": "porras",
             "nl": "de trede"
@@ -208,6 +216,7 @@
             }
         },
         "living room": {
+            "hypernym": "room",
             "roots": {
                 "en": [
                     "room",
@@ -228,6 +237,7 @@
             ]
         },
         "kitchen": {
+            "hypernym": "room",
             "singular": {
                 "en": "kitchen",
                 "fi": "keittiö",
@@ -240,6 +250,7 @@
             }
         },
         "dining room": {
+            "hypernym": "room",
             "roots": {
                 "en": [
                     "room"
@@ -258,6 +269,7 @@
             "nl": "de eetkamer"
         },
         "bedroom": {
+            "hypernym": "room",
             "roots": {
                 "en": [
                     "room",
@@ -274,6 +286,7 @@
             "nl": "de slaapkamer"
         },
         "bath": {
+            "holonym": "bathroom",
             "singular": {
                 "en": "bath",
                 "fi": "kylpy",
@@ -286,6 +299,7 @@
             }
         },
         "bathroom": {
+            "hypernym": "room",
             "roots": [
                 "bath",
                 "room"
@@ -295,6 +309,7 @@
             "nl": "de badkamer"
         },
         "toilet": {
+            "hypernym": "room",
             "en": [
                 "restroom",
                 "toilet"

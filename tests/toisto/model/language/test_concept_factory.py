@@ -28,6 +28,7 @@ class ConcepFactoryTest(ToistoTestCase):
         shop = create_concept("shop", dict(fi="kauppa"))
         centre = create_concept("centre", dict(fi="keskusta"))
         self.assertEqual((shop, centre), concept.roots("fi"))
+        self.assertEqual((concept,), shop.compounds("fi"))
 
     def test_language_specific_roots(self):
         """Test that a concept can have a root in one language but not in another."""
@@ -71,6 +72,36 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual((small,), big.antonyms)
         for index in range(3):
             self.assertEqual((small.constituents[index],), big.constituents[index].antonyms)
+
+    def test_hypernym_and_hyponym(self):
+        """Test that a concept can have a hypernym concept, and that the hypernym has the concept as hyponym."""
+        canine = create_concept("canine", dict(en="canine"))
+        dog = create_concept("dog", dict(hypernym="canine", en="dog"))
+        self.assertEqual((canine,), dog.hypernyms)
+        self.assertEqual((dog,), canine.hyponyms)
+
+    def test_hypernyms_and_hyponyms_are_transitive(self):
+        """Test that a concept's hypernyms and hyponyms are transitive."""
+        animal = create_concept("animal", dict(en="animal"))
+        canine = create_concept("canine", dict(hypernym="animal", en="canine"))
+        dog = create_concept("dog", dict(hypernym="canine", en="dog"))
+        self.assertEqual((canine, animal), dog.hypernyms)
+        self.assertEqual((canine, dog), animal.hyponyms)
+
+    def test_holonym_and_meronym(self):
+        """Test that a concept can have a holonym concept, and that the meronym has the concept as holonym."""
+        animal = create_concept("animal", dict(en="animal"))
+        tail = create_concept("tail", dict(holonym="animal", en="tail"))
+        self.assertEqual((animal,), tail.holonyms)
+        self.assertEqual((tail,), animal.meronyms)
+
+    def test_holonyms_and_meronyms_are_transitive(self):
+        """Test that a concept's holonyms and meronyms are transitive."""
+        animal = create_concept("animal", dict(en="animal"))
+        head = create_concept("head", dict(holonym="animal", en="head"))
+        eye = create_concept("eye", dict(holonym="head", en="eye"))
+        self.assertEqual((head, animal), eye.holonyms)
+        self.assertEqual((head, eye), animal.meronyms)
 
     def test_answer(self):
         """Test that a concept can have an answer relation with another concept."""

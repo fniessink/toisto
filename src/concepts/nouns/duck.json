@@ -1,0 +1,17 @@
+{
+    "concepts": {
+        "duck": {
+            "hypernym": "bird",
+            "singular": {
+                "en": "duck",
+                "fi": "ankka",
+                "nl": "de eend"
+            },
+            "plural": {
+                "en": "ducks",
+                "fi": "ankat",
+                "nl": "de eenden"
+            }
+        }
+    }
+}

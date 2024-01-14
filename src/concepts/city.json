@@ -1,17 +1,5 @@
 {
     "concepts": {
-        "city": {
-            "singular": {
-                "en": "city",
-                "fi": "kaupunki",
-                "nl": "de stad"
-            },
-            "plural": {
-                "en": "cities",
-                "fi": "kaupungit",
-                "nl": "de steden"
-            }
-        },
         "village": {
             "singular": {
                 "en": "village",
@@ -61,6 +49,7 @@
             }
         },
         "theater": {
+            "hypernym": "building",
             "singular": {
                 "en": "theater",
                 "fi": "teatteri",
@@ -73,6 +62,7 @@
             }
         },
         "movie theater": {
+            "hypernym": "building",
             "roots": {
                 "en": "theater",
                 "fi": "theater"
@@ -89,6 +79,7 @@
             }
         },
         "opera": {
+            "hypernym": "building",
             "singular": {
                 "en": "opera",
                 "fi": "ooppera",
@@ -101,6 +92,7 @@
             }
         },
         "museum": {
+            "hypernym": "building",
             "singular": {
                 "en": "museum",
                 "fi": "museo",
@@ -113,6 +105,7 @@
             }
         },
         "church": {
+            "hypernym": "building",
             "singular": {
                 "en": "church",
                 "fi": "kirkko",
@@ -125,6 +118,7 @@
             }
         },
         "stadium": {
+            "hypernym": "building",
             "singular": {
                 "en": "stadium",
                 "fi": "stadion",
@@ -137,6 +131,7 @@
             }
         },
         "library": {
+            "hypernym": "building",
             "roots": {
                 "fi": "book"
             },
@@ -306,6 +301,7 @@
             }
         },
         "castle": {
+            "hypernym": "building",
             "singular": {
                 "en": "castle",
                 "fi": "linna",
@@ -318,6 +314,7 @@
             }
         },
         "hotel": {
+            "hypernym": "building",
             "singular": {
                 "en": "hotel",
                 "fi": "hotelli",
@@ -552,28 +549,6 @@
                     "ostoskeskukset"
                 ],
                 "nl": "de winkelcentra"
-            }
-        },
-        "capital": {
-            "roots": {
-                "fi": [
-                    "city",
-                    "head"
-                ],
-                "nl": [
-                    "city",
-                    "head"
-                ]
-            },
-            "singular": {
-                "en": "capital",
-                "fi": "pääkaupunki",
-                "nl": "de hoofdstad"
-            },
-            "plural": {
-                "en": "capitals",
-                "fi": "pääkaupungit",
-                "nl": "de hoofdsteden"
             }
         },
         "that building is a church": {

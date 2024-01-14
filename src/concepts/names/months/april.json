@@ -1,0 +1,19 @@
+{
+    "concepts": {
+        "april": {
+            "hypernym": "month",
+            "roots": {
+                "fi": "moon"
+            },
+            "en": "April;;In English, names of months are capitalized",
+            "fi": "huhtikuu;;In Finnish, names of months are not capitalized",
+            "nl": "april;;In Dutch, names of months are not capitalized"
+        },
+        "in april": {
+            "roots": "april",
+            "en": "In April.",
+            "fi": "Huhtikuussa.",
+            "nl": "In april."
+        }
+    }
+}

@@ -12,6 +12,10 @@ from toisto.model.quiz.quiz import Quiz, QuizType
 class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
 
+    def setUp(self):
+        """Override to reset the Concept instances registry."""
+        Concept.instances.clear()
+
     @staticmethod
     def create_quiz(  # noqa: PLR0913
         concept: Concept,

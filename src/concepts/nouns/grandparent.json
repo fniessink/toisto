@@ -1,0 +1,93 @@
+{
+    "concepts": {
+        "grandma": {
+            "hypernym": "grandparent",
+            "singular": {
+                "en": "grandma",
+                "fi": [
+                    "mummo",
+                    "mummi"
+                ],
+                "nl": "de oma"
+            },
+            "plural": {
+                "en": "grandmas",
+                "fi": [
+                    "mummot",
+                    "mummit"
+                ],
+                "nl": "de oma's"
+            }
+        },
+        "grandpa": {
+            "hypernym": "grandparent",
+            "singular": {
+                "en": "grandpa",
+                "fi": [
+                    "vaari",
+                    "ukki"
+                ],
+                "nl": "de opa"
+            },
+            "plural": {
+                "en": "grandpas",
+                "fi": [
+                    "vaarit",
+                    "ukit"
+                ],
+                "nl": "de opa's"
+            }
+        },
+        "grandmother": {
+            "hypernym": "grandparent",
+            "roots": {
+                "en": "mother",
+                "fi": [
+                    "big",
+                    "mother"
+                ],
+                "nl": [
+                    "big",
+                    "mother"
+                ]
+            },
+            "en": "grandmother",
+            "fi": "isoäiti",
+            "nl": "de grootmoeder"
+        },
+        "grandfather": {
+            "hypernym": "grandparent",
+            "roots": {
+                "en": "father",
+                "fi": [
+                    "big",
+                    "father"
+                ],
+                "nl": [
+                    "big",
+                    "father"
+                ]
+            },
+            "en": "grandfather",
+            "fi": "isoisä",
+            "nl": "de grootvader"
+        },
+        "grandparent": {
+            "holonym": "family",
+            "roots": {
+                "en": "parent",
+                "fi": [
+                    "big",
+                    "parent"
+                ],
+                "nl": [
+                    "big",
+                    "parent"
+                ]
+            },
+            "en": "grandparent",
+            "fi": "isovanhempi",
+            "nl": "de grootouder"
+        }
+    }
+}

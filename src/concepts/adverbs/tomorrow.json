@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "tomorrow": {
+            "hypernym": "day",
+            "en": "tomorrow",
+            "fi": "huomenna",
+            "nl": "morgen"
+        },
+        "the day after tomorrow": {
+            "hypernym": "day",
+            "roots": {
+                "en": [
+                    "day",
+                    "tomorrow"
+                ],
+                "fi": "tomorrow",
+                "nl": "tomorrow"
+            },
+            "en": "the day after tomorrow",
+            "fi": "ylihuomenna",
+            "nl": "overmorgen"
+        },
+        "tomorrow it is tuesday": {
+            "roots": [
+                "tomorrow",
+                "to be",
+                "tuesday"
+            ],
+            "en": "Tomorrow it is Tuesday.",
+            "fi": "Huomenna on tiistai.",
+            "nl": "Morgen is het dinsdag."
+        },
+        "tomorrow it is sunday": {
+            "roots": [
+                "tomorrow",
+                "to be",
+                "sunday"
+            ],
+            "en": "Tomorrow it is sunday.",
+            "fi": "Huomenna on sunnuntai.",
+            "nl": "Morgen is het zondag."
+        }
+    }
+}

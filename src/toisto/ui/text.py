@@ -43,7 +43,7 @@ NEWS: Final = (
     ""
 )
 
-DONE: Final = f"""👍 Good job. You're done for now. Please come back later or try a different topic.
+DONE: Final = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
 [{SECONDARY}]Type `{NAME.lower()} -h` for more information.[/{SECONDARY}]
 """
 

@@ -67,6 +67,7 @@
             "nl": "de verpleegkundige"
         },
         "truck driver": {
+            "hypernym": "driver",
             "roots": [
                 "lorry",
                 "driver"
@@ -76,6 +77,7 @@
             "nl": "de vrachtwagenchauffeur"
         },
         "taxi driver": {
+            "hypernym": "driver",
             "roots": [
                 "taxi",
                 "driver"
@@ -205,6 +207,7 @@
             "nl": "de makelaar"
         },
         "real estate broker": {
+            "hypernym": "broker",
             "roots": "broker",
             "en": "real estate broker",
             "fi": "kiinteistonvälittäjä",
@@ -316,6 +319,7 @@
             "nl": "de keukenhulp"
         },
         "kindergarten teacher": {
+            "hypernym": "teacher",
             "en": "kindergarten teacher",
             "fi": "lastentarhanopettaja",
             "nl": "de kleuterjuf"

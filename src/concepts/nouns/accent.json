@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "accent": {
+            "involves": "language",
+            "singular": {
+                "en": "accent",
+                "fi": "aksentti",
+                "nl": "het accent"
+            },
+            "plural": {
+                "en": "accents",
+                "fi": "aksentit",
+                "nl": "de accenten"
+            }
+        },
+        "I have a dutch accent": {
+            "roots": [
+                "to have",
+                "dutch",
+                "accent"
+            ],
+            "en": "I have a Dutch accent.",
+            "fi": "Minulla on hollantilainen aksentti.",
+            "nl": "Ik heb een Nederlands accent."
+        }
+    }
+}

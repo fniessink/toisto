@@ -1,24 +1,24 @@
 """Unit tests for the app."""
 
 import sys
-import unittest
 from contextlib import suppress
 from unittest.mock import MagicMock, Mock, patch
 
 import requests
 
 from toisto.metadata import VERSION
-from toisto.model.language.concept import Concept
+
+from ..base import ToistoTestCase
 
 
-class AppTest(unittest.TestCase):
+class AppTest(ToistoTestCase):
     """Unit tests for the main method."""
 
     concept_file_count = 0  # Counter for generating unique concept files
 
     def setUp(self):
         """Set up test fixtures."""
-        Concept.instances.clear()
+        super().setUp()
         self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -43,9 +43,6 @@ class AppTest(unittest.TestCase):
         return f"""{{
             "concepts": {{
                 "concept-{count}": {{"fi": "concept-{count} in fi", "nl": "concept-{count} in nl"}}
-            }},
-            "topics": {{
-                "topic-{count}": {{"concepts": ["concept-{count}"]}}
             }}
         }}
         """
@@ -89,11 +86,3 @@ class AppTest(unittest.TestCase):
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Progress"))
-
-    @patch.object(sys, "argv", ["toisto", "topics", "--target", "fi", "--source", "nl", "--file", "test"])
-    @patch("requests.get")
-    def test_topics(self, requests_get: Mock):
-        """Test that the topics command can be invoked."""
-        requests_get.return_value = self.latest_version
-        patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Topic"))

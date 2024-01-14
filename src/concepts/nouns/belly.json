@@ -1,0 +1,23 @@
+{
+    "concepts": {
+        "belly": {
+            "holonym": "body",
+            "singular": {
+                "en": "belly",
+                "fi": [
+                    "maha",
+                    "masu"
+                ],
+                "nl": "de buik"
+            },
+            "plural": {
+                "en": "bellies",
+                "fi": [
+                    "mahat",
+                    "masut"
+                ],
+                "nl": "de buiken"
+            }
+        }
+    }
+}

@@ -13,9 +13,9 @@ from .label import Labels, label_factory, meaning_factory
 
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-MetaData = Literal["antonym", "answer", "answer-only", "roots"]
-LeafConceptDict = dict[Language | MetaData, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
-CompositeConceptDict = dict[GrammaticalCategory | MetaData, Union["CompositeConceptDict", LeafConceptDict, bool]]
+ConceptRelation = Literal["antonym", "answer", "answer-only", "holonym", "hypernym", "involves", "roots"]
+LeafConceptDict = dict[Language | ConceptRelation, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
+CompositeConceptDict = dict[GrammaticalCategory | ConceptRelation, Union["CompositeConceptDict", LeafConceptDict, bool]]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
@@ -55,10 +55,14 @@ class ConceptFactory:
     def _related_concepts(self, parent: ConceptId | None) -> RelatedConcepts:
         """Create the related concepts."""
         return RelatedConcepts(
+            self.concept_id,
             parent,
             self._constituent_concepts(),
             self._root_concepts(),
             self._related_concept_ids("antonym"),
+            self._related_concept_ids("hypernym"),
+            self._related_concept_ids("holonym"),
+            self._related_concept_ids("involves"),
             self._related_concept_ids("answer"),
         )
 
@@ -111,7 +115,7 @@ class ConceptFactory:
         """Get the roots from the concept dict."""
         return cast(ConceptIdDictOrListOrString, self.concept_dict.get("roots", {}))
 
-    def _related_concept_ids(self, relation: MetaData) -> ConceptIds:
+    def _related_concept_ids(self, relation: ConceptRelation) -> ConceptIds:
         """Return the ids of the related concept(s)."""
         related = cast(ConceptIdListOrString, self.concept_dict.get(relation, []))
         return tuple(related) if isinstance(related, list) else (related,)

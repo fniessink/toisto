@@ -1,0 +1,19 @@
+{
+    "concepts": {
+        "continent": {
+            "roots": {
+                "fi": "country"
+            },
+            "singular": {
+                "en": "continent",
+                "fi": "maanosa",
+                "nl": "het continent"
+            },
+            "plural": {
+                "en": "continents",
+                "fi": "maanosat",
+                "nl": "de continenten"
+            }
+        }
+    }
+}

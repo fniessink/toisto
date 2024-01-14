@@ -1,0 +1,18 @@
+{
+    "concepts": {
+        "brazil": {
+            "hypernym": "country",
+            "en": "Brazil",
+            "fi": "Brasilia",
+            "nl": "Brazilië"
+        },
+        "brazilian": {
+            "hypernym": "nationality",
+            "involves": "brazil",
+            "roots": "brazil",
+            "en": "Brazilian",
+            "fi": "brasilialainen",
+            "nl": "Braziliaans"
+        }
+    }
+}
