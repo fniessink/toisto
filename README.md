@@ -99,7 +99,7 @@ Start Toisto as follows, giving the language you want to practice (the target la
 $ toisto practice --target fi --source en
 ```
 
-To practice a specific concept, pass it as follows:
+To practice a specific concept and related concepts, pass it as follows:
 
 ```console
 $ toisto practice --target fi -source en --concept color
