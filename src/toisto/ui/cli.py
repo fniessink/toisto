@@ -3,6 +3,7 @@
 import sys
 from argparse import ArgumentParser, ArgumentTypeError, Namespace
 from configparser import ConfigParser
+from pathlib import Path
 from typing import get_args
 
 from rich_argparse import RichHelpFormatter
@@ -62,6 +63,7 @@ def add_file_arguments(parser: ArgumentParser) -> None:
         default=[],
         metavar="{file}",
         help="file with extra concepts to read, can be repeated",
+        type=Path,
     )
 
 
