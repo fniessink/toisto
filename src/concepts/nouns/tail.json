@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "tail": {
-            "holonym": "animal",
-            "singular": {
-                "en": "tail",
-                "fi": "häntä",
-                "nl": "de staart"
-            },
-            "plural": {
-                "en": "tails",
-                "fi": "hännät",
-                "nl": "de staarten"
-            }
+    "tail": {
+        "holonym": "animal",
+        "singular": {
+            "en": "tail",
+            "fi": "häntä",
+            "nl": "de staart"
+        },
+        "plural": {
+            "en": "tails",
+            "fi": "hännät",
+            "nl": "de staarten"
         }
     }
 }

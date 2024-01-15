@@ -1,110 +1,108 @@
 {
-    "concepts": {
-        "parent": {
-            "holonym": "family",
-            "roots": {
-                "fi": "old",
-                "nl": "old"
-            },
-            "singular": {
-                "en": "parent",
-                "fi": "vanhempi;noun",
-                "nl": "de ouder"
-            },
-            "plural": {
-                "en": "parents",
-                "fi": "vanhemmat",
-                "nl": "de ouders"
-            }
+    "parent": {
+        "holonym": "family",
+        "roots": {
+            "fi": "old",
+            "nl": "old"
         },
-        "mother": {
-            "hypernym": "parent",
-            "singular": {
-                "en": "mother",
-                "fi": "äiti",
-                "nl": "de moeder"
-            },
-            "plural": {
-                "en": "mothers",
-                "fi": "äidit",
-                "nl": "de moeders"
-            }
+        "singular": {
+            "en": "parent",
+            "fi": "vanhempi;noun",
+            "nl": "de ouder"
         },
-        "father": {
-            "hypernym": "parent",
-            "singular": {
-                "en": "father",
-                "fi": "isä",
-                "nl": "de vader"
-            },
-            "plural": {
-                "en": "fathers",
-                "fi": "isät",
-                "nl": "de vaders"
-            }
+        "plural": {
+            "en": "parents",
+            "fi": "vanhemmat",
+            "nl": "de ouders"
+        }
+    },
+    "mother": {
+        "hypernym": "parent",
+        "singular": {
+            "en": "mother",
+            "fi": "äiti",
+            "nl": "de moeder"
         },
-        "stepfather": {
-            "hypernym": "father",
-            "roots": "father",
-            "singular": {
-                "en": "stepfather",
-                "fi": "isäpuoli",
-                "nl": "de stiefvader"
-            },
-            "plural": {
-                "en": "stepfathers",
-                "fi": "isäpuolet",
-                "nl": "de stiefvaders"
-            }
+        "plural": {
+            "en": "mothers",
+            "fi": "äidit",
+            "nl": "de moeders"
+        }
+    },
+    "father": {
+        "hypernym": "parent",
+        "singular": {
+            "en": "father",
+            "fi": "isä",
+            "nl": "de vader"
         },
-        "stepmother": {
-            "hypernym": "mother",
-            "roots": "mother",
-            "singular": {
-                "en": "stepmother",
-                "fi": "äitipuoli",
-                "nl": "de stiefmoeder"
-            },
-            "plural": {
-                "en": "stepmothers",
-                "fi": "äitipuolet",
-                "nl": "de stiefmoeders"
-            }
+        "plural": {
+            "en": "fathers",
+            "fi": "isät",
+            "nl": "de vaders"
+        }
+    },
+    "stepfather": {
+        "hypernym": "father",
+        "roots": "father",
+        "singular": {
+            "en": "stepfather",
+            "fi": "isäpuoli",
+            "nl": "de stiefvader"
         },
-        "parent-in-law": {
-            "hypernym": "parent",
-            "roots": "parent",
-            "en": "parent-in-law",
-            "fi": "appivanhempi",
-            "nl": "de schoonouder"
+        "plural": {
+            "en": "stepfathers",
+            "fi": "isäpuolet",
+            "nl": "de stiefvaders"
+        }
+    },
+    "stepmother": {
+        "hypernym": "mother",
+        "roots": "mother",
+        "singular": {
+            "en": "stepmother",
+            "fi": "äitipuoli",
+            "nl": "de stiefmoeder"
         },
-        "mother-in-law": {
-            "hypernym": "parent-in-law",
-            "roots": "mother",
-            "singular": {
-                "en": "mother-in-law",
-                "fi": "anoppi",
-                "nl": "de schoonmoeder"
-            },
-            "plural": {
-                "en": "mothers-in-law",
-                "fi": "anopit",
-                "nl": "de schoonmoeders"
-            }
+        "plural": {
+            "en": "stepmothers",
+            "fi": "äitipuolet",
+            "nl": "de stiefmoeders"
+        }
+    },
+    "parent-in-law": {
+        "hypernym": "parent",
+        "roots": "parent",
+        "en": "parent-in-law",
+        "fi": "appivanhempi",
+        "nl": "de schoonouder"
+    },
+    "mother-in-law": {
+        "hypernym": "parent-in-law",
+        "roots": "mother",
+        "singular": {
+            "en": "mother-in-law",
+            "fi": "anoppi",
+            "nl": "de schoonmoeder"
         },
-        "father-in-law": {
-            "hypernym": "parent-in-law",
-            "roots": "father",
-            "singular": {
-                "en": "father-in-law",
-                "fi": "appiukko",
-                "nl": "de schoonvader"
-            },
-            "plural": {
-                "en": "fathers-in-law",
-                "fi": "appiukot",
-                "nl": "de schoonvaders"
-            }
+        "plural": {
+            "en": "mothers-in-law",
+            "fi": "anopit",
+            "nl": "de schoonmoeders"
+        }
+    },
+    "father-in-law": {
+        "hypernym": "parent-in-law",
+        "roots": "father",
+        "singular": {
+            "en": "father-in-law",
+            "fi": "appiukko",
+            "nl": "de schoonvader"
+        },
+        "plural": {
+            "en": "fathers-in-law",
+            "fi": "appiukot",
+            "nl": "de schoonvaders"
         }
     }
 }

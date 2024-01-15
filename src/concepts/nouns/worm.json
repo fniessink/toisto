@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "worm": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "worm",
-                "fi": "mato",
-                "nl": "de worm"
-            },
-            "plural": {
-                "en": "worms",
-                "fi": "madot",
-                "nl": "de wormen"
-            }
+    "worm": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "worm",
+            "fi": "mato",
+            "nl": "de worm"
+        },
+        "plural": {
+            "en": "worms",
+            "fi": "madot",
+            "nl": "de wormen"
         }
     }
 }

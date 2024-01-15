@@ -1,26 +1,24 @@
 {
-    "concepts": {
-        "rhino": {
-            "hypernym": "animal",
-            "roots": {
-                "fi": [
-                    "horn"
-                ],
-                "nl": [
-                    "horn",
-                    "nose"
-                ]
-            },
-            "singular": {
-                "en": "rhinoceros|rhino",
-                "fi": "sarvikuono",
-                "nl": "de neushoorn"
-            },
-            "plural": {
-                "en": "rhinoceroses|rhinos",
-                "fi": "sarvikuonot",
-                "nl": "de neushoorns"
-            }
+    "rhino": {
+        "hypernym": "animal",
+        "roots": {
+            "fi": [
+                "horn"
+            ],
+            "nl": [
+                "horn",
+                "nose"
+            ]
+        },
+        "singular": {
+            "en": "rhinoceros|rhino",
+            "fi": "sarvikuono",
+            "nl": "de neushoorn"
+        },
+        "plural": {
+            "en": "rhinoceroses|rhinos",
+            "fi": "sarvikuonot",
+            "nl": "de neushoorns"
         }
     }
 }

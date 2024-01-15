@@ -1,24 +1,22 @@
 {
-    "concepts": {
-        "yesterday": {
-            "hypernym": "day",
-            "roots": {
-                "en": "day"
-            },
-            "en": "yesterday",
-            "fi": "eilen",
-            "nl": "gisteren"
+    "yesterday": {
+        "hypernym": "day",
+        "roots": {
+            "en": "day"
         },
-        "the day before yesterday": {
-            "hypernym": "day",
-            "roots": {
-                "en": "yesterday",
-                "fi": "day",
-                "nl": "yesterday"
-            },
-            "en": "the day before yesterday",
-            "fi": "toissapäivänä",
-            "nl": "eergisteren"
-        }
+        "en": "yesterday",
+        "fi": "eilen",
+        "nl": "gisteren"
+    },
+    "the day before yesterday": {
+        "hypernym": "day",
+        "roots": {
+            "en": "yesterday",
+            "fi": "day",
+            "nl": "yesterday"
+        },
+        "en": "the day before yesterday",
+        "fi": "toissapäivänä",
+        "nl": "eergisteren"
     }
 }

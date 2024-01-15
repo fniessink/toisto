@@ -1,22 +1,20 @@
 {
-    "concepts": {
-        "short": {
-            "antonym": "long",
-            "positive degree": {
-                "en": "short",
-                "fi": "lyhyt",
-                "nl": "kort"
-            },
-            "comparative degree": {
-                "en": "shorter",
-                "fi": "lyhyempi",
-                "nl": "korter"
-            },
-            "superlative degree": {
-                "en": "shortest",
-                "fi": "lyhyin",
-                "nl": "kortst"
-            }
+    "short": {
+        "antonym": "long",
+        "positive degree": {
+            "en": "short",
+            "fi": "lyhyt",
+            "nl": "kort"
+        },
+        "comparative degree": {
+            "en": "shorter",
+            "fi": "lyhyempi",
+            "nl": "korter"
+        },
+        "superlative degree": {
+            "en": "shortest",
+            "fi": "lyhyin",
+            "nl": "kortst"
         }
     }
 }

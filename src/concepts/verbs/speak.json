@@ -1,50 +1,48 @@
 {
-    "concepts": {
-        "to speak": {
-            "infinitive": {
-                "en": "to speak",
-                "fi": "puhua",
-                "nl": "spreken"
+    "to speak": {
+        "infinitive": {
+            "en": "to speak",
+            "fi": "puhua",
+            "nl": "spreken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I speak",
+                "fi": "minä puhun",
+                "nl": "ik spreek"
             },
-            "singular": {
-                "first person": {
-                    "en": "I speak",
-                    "fi": "minä puhun",
-                    "nl": "ik spreek"
-                },
-                "second person": {
-                    "en": "you speak;singular",
-                    "fi": "sinä puhut",
-                    "nl": "jij spreekt"
-                },
-                "third person": {
-                    "fi": "hän puhuu",
-                    "female": {
-                        "en": "she speaks",
-                        "nl": "zij spreekt"
-                    },
-                    "male": {
-                        "en": "he speaks",
-                        "nl": "hij spreekt"
-                    }
-                }
+            "second person": {
+                "en": "you speak;singular",
+                "fi": "sinä puhut",
+                "nl": "jij spreekt"
             },
-            "plural": {
-                "first person": {
-                    "en": "we speak",
-                    "fi": "me puhumme",
-                    "nl": "wij spreken"
+            "third person": {
+                "fi": "hän puhuu",
+                "female": {
+                    "en": "she speaks",
+                    "nl": "zij spreekt"
                 },
-                "second person": {
-                    "en": "you speak;plural",
-                    "fi": "te puhutte",
-                    "nl": "jullie spreken"
-                },
-                "third person": {
-                    "en": "they speak",
-                    "fi": "he puhuvat",
-                    "nl": "zij spreken"
+                "male": {
+                    "en": "he speaks",
+                    "nl": "hij spreekt"
                 }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we speak",
+                "fi": "me puhumme",
+                "nl": "wij spreken"
+            },
+            "second person": {
+                "en": "you speak;plural",
+                "fi": "te puhutte",
+                "nl": "jullie spreken"
+            },
+            "third person": {
+                "en": "they speak",
+                "fi": "he puhuvat",
+                "nl": "zij spreken"
             }
         }
     }

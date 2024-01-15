@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "eye": {
-            "holonym": "head",
-            "singular": {
-                "en": "eye",
-                "fi": "silmä",
-                "nl": "het oog"
-            },
-            "plural": {
-                "en": "eyes",
-                "fi": "silmät",
-                "nl": "de ogen"
-            }
+    "eye": {
+        "holonym": "head",
+        "singular": {
+            "en": "eye",
+            "fi": "silmä",
+            "nl": "het oog"
+        },
+        "plural": {
+            "en": "eyes",
+            "fi": "silmät",
+            "nl": "de ogen"
         }
     }
 }

@@ -1,22 +1,20 @@
 {
-    "concepts": {
-        "dark": {
-            "antonym": "bright",
-            "positive degree": {
-                "en": "dark",
-                "fi": "pimeä",
-                "nl": "donker"
-            },
-            "comparative degree": {
-                "en": "darker",
-                "fi": "pimeâmpi",
-                "nl": "donkerder"
-            },
-            "superlative degree": {
-                "en": "darkest",
-                "fi": "pimein",
-                "nl": "donkerst"
-            }
+    "dark": {
+        "antonym": "bright",
+        "positive degree": {
+            "en": "dark",
+            "fi": "pimeä",
+            "nl": "donker"
+        },
+        "comparative degree": {
+            "en": "darker",
+            "fi": "pimeâmpi",
+            "nl": "donkerder"
+        },
+        "superlative degree": {
+            "en": "darkest",
+            "fi": "pimein",
+            "nl": "donkerst"
         }
     }
 }

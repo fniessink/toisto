@@ -35,8 +35,8 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock):
         """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concepts": {"concept_id": {"fi": "label1", "nl": "Label2"}}}\n',
-            '{"concepts": {"concept_id": {"fi": "Label3", "nl": "Label4"}}}\n',
+            '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
+            '{"concept_id": {"fi": "Label3", "nl": "Label4"}}\n',
         ]
         self.assertRaises(SystemExit, self.loader.load, [Path("file1"), Path("file2")])
         self.assertIn(
@@ -50,7 +50,7 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts(self, path_open: Mock):
         """Test that the concepts are read."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concepts": {"concept_id": {"fi": "Label1", "nl": "Label2"}}}\n',
+            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
         ]
         concept = create_concept(ConceptId("concept_id"), cast(ConceptDict, {"fi": "Label1", "nl": "Label2"}))
         self.assertEqual({concept}, self.loader.load([Path("filename")]))

@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "mouse": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "mouse",
-                "fi": "hiiri",
-                "nl": "de muis"
-            },
-            "plural": {
-                "en": "mice",
-                "fi": "hiiret",
-                "nl": "de muizen"
-            }
+    "mouse": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "mouse",
+            "fi": "hiiri",
+            "nl": "de muis"
+        },
+        "plural": {
+            "en": "mice",
+            "fi": "hiiret",
+            "nl": "de muizen"
         }
     }
 }

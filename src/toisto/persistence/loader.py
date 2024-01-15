@@ -33,7 +33,7 @@ class Loader:
 
     def _parse_json(self, json: dict) -> set[Concept]:
         """Parse the domain objects from the JSON loaded from the domain object file."""
-        return self._create_concepts(json.get("concepts", {}))
+        return self._create_concepts(json)
 
     def _create_concepts(self, concept_dict: dict[ConceptId, ConceptDict]) -> set[Concept]:
         """Parse the concepts from the JSON."""

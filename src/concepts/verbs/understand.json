@@ -1,50 +1,48 @@
 {
-    "concepts": {
-        "to understand": {
-            "infinitive": {
-                "en": "to understand",
-                "fi": "ymmärtää",
-                "nl": "begrijpen"
+    "to understand": {
+        "infinitive": {
+            "en": "to understand",
+            "fi": "ymmärtää",
+            "nl": "begrijpen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I understand",
+                "fi": "minä autan",
+                "nl": "ik begrijp"
             },
-            "singular": {
-                "first person": {
-                    "en": "I understand",
-                    "fi": "minä autan",
-                    "nl": "ik begrijp"
-                },
-                "second person": {
-                    "en": "you understand;singular",
-                    "fi": "sinä autat",
-                    "nl": "jij begrijpt"
-                },
-                "third person": {
-                    "fi": "hän auttaa",
-                    "female": {
-                        "en": "she understands",
-                        "nl": "zij begrijpt"
-                    },
-                    "male": {
-                        "en": "he understands",
-                        "nl": "hij begrijpt"
-                    }
-                }
+            "second person": {
+                "en": "you understand;singular",
+                "fi": "sinä autat",
+                "nl": "jij begrijpt"
             },
-            "plural": {
-                "first person": {
-                    "en": "we understand",
-                    "fi": "me autamme",
-                    "nl": "wij begrijpen"
+            "third person": {
+                "fi": "hän auttaa",
+                "female": {
+                    "en": "she understands",
+                    "nl": "zij begrijpt"
                 },
-                "second person": {
-                    "en": "you understand;plural",
-                    "fi": "te autatte",
-                    "nl": "jullie begrijpen"
-                },
-                "third person": {
-                    "en": "they understand",
-                    "fi": "he auttavat",
-                    "nl": "zij begrijpen"
+                "male": {
+                    "en": "he understands",
+                    "nl": "hij begrijpt"
                 }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we understand",
+                "fi": "me autamme",
+                "nl": "wij begrijpen"
+            },
+            "second person": {
+                "en": "you understand;plural",
+                "fi": "te autatte",
+                "nl": "jullie begrijpen"
+            },
+            "third person": {
+                "en": "they understand",
+                "fi": "he auttavat",
+                "nl": "zij begrijpen"
             }
         }
     }

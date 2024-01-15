@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "nose": {
-            "holonym": "head",
-            "singular": {
-                "en": "nose",
-                "fi": "nenä",
-                "nl": "de neus"
-            },
-            "plural": {
-                "en": "noses",
-                "fi": "nenät",
-                "nl": "de neuzen"
-            }
+    "nose": {
+        "holonym": "head",
+        "singular": {
+            "en": "nose",
+            "fi": "nenä",
+            "nl": "de neus"
+        },
+        "plural": {
+            "en": "noses",
+            "fi": "nenät",
+            "nl": "de neuzen"
         }
     }
 }

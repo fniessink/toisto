@@ -1,242 +1,240 @@
 {
-    "concepts": {
-        "table": {
-            "singular": {
-                "en": "table",
-                "fi": "pöytä",
-                "nl": "de tafel"
-            },
-            "plural": {
-                "en": "tables",
-                "fi": "pöydät",
-                "nl": "de tafels"
-            }
+    "table": {
+        "singular": {
+            "en": "table",
+            "fi": "pöytä",
+            "nl": "de tafel"
         },
-        "bed": {
-            "singular": {
-                "en": "bed",
-                "fi": "sänky",
-                "nl": "het bed"
-            },
-            "plural": {
-                "en": "beds",
-                "fi": "sängyt",
-                "nl": "de bedden"
-            }
-        },
-        "double bed": {
-            "hypernym": "bed",
-            "roots": {
-                "en": "bed",
-                "fi": [
-                    "pair",
-                    "bed"
-                ],
-                "nl": [
-                    "2",
-                    "bed"
-                ]
-            },
-            "en": "double bed",
-            "fi": "parisänky",
-            "nl": "het tweepersoonsbed"
-        },
-        "sofa": {
-            "singular": {
-                "en": "sofa",
-                "fi": "sohva",
-                "nl": "de sofa"
-            },
-            "plural": {
-                "en": "sofas",
-                "fi": "sohvat",
-                "nl": "de sofa's"
-            }
-        },
-        "pillow": {
-            "singular": {
-                "en": "pillow",
-                "fi": "tyyny",
-                "nl": "het kussen"
-            },
-            "plural": {
-                "en": "pillows",
-                "fi": "tyynyt",
-                "nl": "de kussens"
-            }
-        },
-        "chair": {
-            "singular": {
-                "en": "chair",
-                "fi": "tuoli",
-                "nl": "de stoel"
-            },
-            "plural": {
-                "en": "chairs",
-                "fi": "tuolit",
-                "nl": "de stoelen"
-            }
-        },
-        "desk": {
-            "roots": {
-                "fi": [
-                    "job",
-                    "to write",
-                    "table"
-                ]
-            },
-            "singular": {
-                "en": "desk",
-                "fi": [
-                    "työpöytä",
-                    "kirjoituspöytä"
-                ],
-                "nl": "het bureau"
-            },
-            "plural": {
-                "en": "desks",
-                "fi": [
-                    "työpöydät",
-                    "kirjoituspöydät"
-                ],
-                "nl": "de bureaus"
-            }
-        },
-        "office chair": {
-            "hypernym": "chair",
-            "roots": {
-                "en": [
-                    "office",
-                    "chair"
-                ],
-                "fi": [
-                    "job",
-                    "chair"
-                ],
-                "nl": [
-                    "desk",
-                    "chair"
-                ]
-            },
-            "en": "office chair",
-            "fi": "työtuoli",
-            "nl": "de bureaustoel"
-        },
-        "lamp": {
-            "singular": {
-                "en": "lamp",
-                "fi": "lamppu",
-                "nl": "de lamp"
-            },
-            "plural": {
-                "en": "lamps",
-                "fi": "lamput",
-                "nl": "de lampen"
-            }
-        },
-        "table lamp": {
-            "hypernym": "lamp",
-            "roots": [
-                "table",
-                "lamp"
-            ],
-            "en": "table lamp",
-            "fi": "pöytälamppu",
-            "nl": "de tafellamp"
-        },
-        "dining table": {
-            "hypernym": "table",
-            "roots": {
-                "en": "table",
-                "fi": [
-                    "food",
-                    "table"
-                ],
-                "nl": [
-                    "to eat",
-                    "table"
-                ]
-            },
-            "en": "dining table",
-            "fi": "ruokapöytä",
-            "nl": "de eettafel"
-        },
-        "curtain": {
-            "singular": {
-                "en": "curtain",
-                "fi": "verho",
-                "nl": "het gordijn"
-            },
-            "plural": {
-                "en": "curtains",
-                "fi": "verhot",
-                "nl": "de gordijnen"
-            }
-        },
-        "roller blind": {
-            "roots": {
-                "fi": "curtain",
-                "nl": "curtain"
-            },
-            "en": "roller blind",
-            "fi": "rullaverho",
-            "nl": "het rolgordijn"
-        },
-        "carpet": {
-            "singular": {
-                "en": "carpet",
-                "fi": "matto",
-                "nl": "het tapijt"
-            },
-            "plural": {
-                "en": "carpets",
-                "fi": "matot",
-                "nl": "de tapijten"
-            }
-        },
-        "shelf": {
-            "singular": {
-                "en": "shelf",
-                "fi": "hylly",
-                "nl": "de plank"
-            },
-            "plural": {
-                "en": "shelves",
-                "fi": "hyllyt",
-                "nl": "de planken"
-            }
-        },
-        "bookcase": {
-            "roots": {
-                "en": "book",
-                "fi": [
-                    "book",
-                    "shelf"
-                ],
-                "nl": "book"
-            },
-            "en": "bookcase",
-            "fi": "kirjahylly",
-            "nl": "de boekenkast"
-        },
-        "the door is locked": {
-            "roots": [
-                "to be",
-                "door"
-            ],
-            "en": "The door is locked.",
-            "fi": "Ovi on lukossa.",
-            "nl": "De deur is op slot."
-        },
-        "the cat is sleeping on the carpet": {
-            "roots": [
-                "cat",
-                "to sleep",
-                "carpet"
-            ],
-            "en": "The cat is sleeping on the carpet.",
-            "fi": "Kissa nukkuu matolla.",
-            "nl": "De kat slaapt op het tapijt."
+        "plural": {
+            "en": "tables",
+            "fi": "pöydät",
+            "nl": "de tafels"
         }
+    },
+    "bed": {
+        "singular": {
+            "en": "bed",
+            "fi": "sänky",
+            "nl": "het bed"
+        },
+        "plural": {
+            "en": "beds",
+            "fi": "sängyt",
+            "nl": "de bedden"
+        }
+    },
+    "double bed": {
+        "hypernym": "bed",
+        "roots": {
+            "en": "bed",
+            "fi": [
+                "pair",
+                "bed"
+            ],
+            "nl": [
+                "2",
+                "bed"
+            ]
+        },
+        "en": "double bed",
+        "fi": "parisänky",
+        "nl": "het tweepersoonsbed"
+    },
+    "sofa": {
+        "singular": {
+            "en": "sofa",
+            "fi": "sohva",
+            "nl": "de sofa"
+        },
+        "plural": {
+            "en": "sofas",
+            "fi": "sohvat",
+            "nl": "de sofa's"
+        }
+    },
+    "pillow": {
+        "singular": {
+            "en": "pillow",
+            "fi": "tyyny",
+            "nl": "het kussen"
+        },
+        "plural": {
+            "en": "pillows",
+            "fi": "tyynyt",
+            "nl": "de kussens"
+        }
+    },
+    "chair": {
+        "singular": {
+            "en": "chair",
+            "fi": "tuoli",
+            "nl": "de stoel"
+        },
+        "plural": {
+            "en": "chairs",
+            "fi": "tuolit",
+            "nl": "de stoelen"
+        }
+    },
+    "desk": {
+        "roots": {
+            "fi": [
+                "job",
+                "to write",
+                "table"
+            ]
+        },
+        "singular": {
+            "en": "desk",
+            "fi": [
+                "työpöytä",
+                "kirjoituspöytä"
+            ],
+            "nl": "het bureau"
+        },
+        "plural": {
+            "en": "desks",
+            "fi": [
+                "työpöydät",
+                "kirjoituspöydät"
+            ],
+            "nl": "de bureaus"
+        }
+    },
+    "office chair": {
+        "hypernym": "chair",
+        "roots": {
+            "en": [
+                "office",
+                "chair"
+            ],
+            "fi": [
+                "job",
+                "chair"
+            ],
+            "nl": [
+                "desk",
+                "chair"
+            ]
+        },
+        "en": "office chair",
+        "fi": "työtuoli",
+        "nl": "de bureaustoel"
+    },
+    "lamp": {
+        "singular": {
+            "en": "lamp",
+            "fi": "lamppu",
+            "nl": "de lamp"
+        },
+        "plural": {
+            "en": "lamps",
+            "fi": "lamput",
+            "nl": "de lampen"
+        }
+    },
+    "table lamp": {
+        "hypernym": "lamp",
+        "roots": [
+            "table",
+            "lamp"
+        ],
+        "en": "table lamp",
+        "fi": "pöytälamppu",
+        "nl": "de tafellamp"
+    },
+    "dining table": {
+        "hypernym": "table",
+        "roots": {
+            "en": "table",
+            "fi": [
+                "food",
+                "table"
+            ],
+            "nl": [
+                "to eat",
+                "table"
+            ]
+        },
+        "en": "dining table",
+        "fi": "ruokapöytä",
+        "nl": "de eettafel"
+    },
+    "curtain": {
+        "singular": {
+            "en": "curtain",
+            "fi": "verho",
+            "nl": "het gordijn"
+        },
+        "plural": {
+            "en": "curtains",
+            "fi": "verhot",
+            "nl": "de gordijnen"
+        }
+    },
+    "roller blind": {
+        "roots": {
+            "fi": "curtain",
+            "nl": "curtain"
+        },
+        "en": "roller blind",
+        "fi": "rullaverho",
+        "nl": "het rolgordijn"
+    },
+    "carpet": {
+        "singular": {
+            "en": "carpet",
+            "fi": "matto",
+            "nl": "het tapijt"
+        },
+        "plural": {
+            "en": "carpets",
+            "fi": "matot",
+            "nl": "de tapijten"
+        }
+    },
+    "shelf": {
+        "singular": {
+            "en": "shelf",
+            "fi": "hylly",
+            "nl": "de plank"
+        },
+        "plural": {
+            "en": "shelves",
+            "fi": "hyllyt",
+            "nl": "de planken"
+        }
+    },
+    "bookcase": {
+        "roots": {
+            "en": "book",
+            "fi": [
+                "book",
+                "shelf"
+            ],
+            "nl": "book"
+        },
+        "en": "bookcase",
+        "fi": "kirjahylly",
+        "nl": "de boekenkast"
+    },
+    "the door is locked": {
+        "roots": [
+            "to be",
+            "door"
+        ],
+        "en": "The door is locked.",
+        "fi": "Ovi on lukossa.",
+        "nl": "De deur is op slot."
+    },
+    "the cat is sleeping on the carpet": {
+        "roots": [
+            "cat",
+            "to sleep",
+            "carpet"
+        ],
+        "en": "The cat is sleeping on the carpet.",
+        "fi": "Kissa nukkuu matolla.",
+        "nl": "De kat slaapt op het tapijt."
     }
 }

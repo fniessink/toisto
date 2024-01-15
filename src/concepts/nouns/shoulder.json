@@ -1,20 +1,18 @@
 {
-    "concepts": {
-        "shoulder": {
-            "holonym": "body",
-            "roots": {
-                "fi": "head"
-            },
-            "singular": {
-                "en": "shoulder",
-                "fi": "olkapää",
-                "nl": "de schouder"
-            },
-            "plural": {
-                "en": "shoulders",
-                "fi": "olkapäät",
-                "nl": "de schouders"
-            }
+    "shoulder": {
+        "holonym": "body",
+        "roots": {
+            "fi": "head"
+        },
+        "singular": {
+            "en": "shoulder",
+            "fi": "olkapää",
+            "nl": "de schouder"
+        },
+        "plural": {
+            "en": "shoulders",
+            "fi": "olkapäät",
+            "nl": "de schouders"
         }
     }
 }

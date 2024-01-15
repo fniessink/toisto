@@ -1,37 +1,35 @@
 {
-    "concepts": {
-        "toe": {
-            "holonym": "foot",
-            "singular": {
-                "en": "toe",
-                "fi": "varvas",
-                "nl": "de teen"
-            },
-            "plural": {
-                "en": "toes",
-                "fi": "varpaat",
-                "nl": "de tenen"
-            }
+    "toe": {
+        "holonym": "foot",
+        "singular": {
+            "en": "toe",
+            "fi": "varvas",
+            "nl": "de teen"
         },
-        "big toe": {
-            "hypernym": "toe",
-            "roots": [
-                "big",
-                "toe"
-            ],
-            "en": "big toe",
-            "fi": "isovarvas",
-            "nl": "de grote teen"
-        },
-        "small toe": {
-            "hypernym": "toe",
-            "roots": [
-                "small",
-                "toe"
-            ],
-            "en": "small toe",
-            "fi": "pikkuvarvas",
-            "nl": "de kleine teen"
+        "plural": {
+            "en": "toes",
+            "fi": "varpaat",
+            "nl": "de tenen"
         }
+    },
+    "big toe": {
+        "hypernym": "toe",
+        "roots": [
+            "big",
+            "toe"
+        ],
+        "en": "big toe",
+        "fi": "isovarvas",
+        "nl": "de grote teen"
+    },
+    "small toe": {
+        "hypernym": "toe",
+        "roots": [
+            "small",
+            "toe"
+        ],
+        "en": "small toe",
+        "fi": "pikkuvarvas",
+        "nl": "de kleine teen"
     }
 }

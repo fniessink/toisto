@@ -1,20 +1,18 @@
 {
-    "concepts": {
-        "month": {
-            "roots": {
-                "fi": "moon",
-                "nl": "moon"
-            },
-            "singular": {
-                "en": "month",
-                "fi": "kuukausi",
-                "nl": "de maand"
-            },
-            "plural": {
-                "en": "months",
-                "fi": "kuukaudet",
-                "nl": "de maanden"
-            }
+    "month": {
+        "roots": {
+            "fi": "moon",
+            "nl": "moon"
+        },
+        "singular": {
+            "en": "month",
+            "fi": "kuukausi",
+            "nl": "de maand"
+        },
+        "plural": {
+            "en": "months",
+            "fi": "kuukaudet",
+            "nl": "de maanden"
         }
     }
 }

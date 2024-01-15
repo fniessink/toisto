@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "18": {
-            "hypernym": "number",
-            "roots": [
-                "8",
-                "10"
-            ],
-            "cardinal": {
-                "en": "eightteen",
-                "fi": "kahdeksantoista",
-                "nl": "achttien"
-            },
-            "ordinal": {
-                "en": "eighteenth",
-                "fi": "kahdeksastoista",
-                "nl": "achttiende"
-            }
+    "18": {
+        "hypernym": "number",
+        "roots": [
+            "8",
+            "10"
+        ],
+        "cardinal": {
+            "en": "eightteen",
+            "fi": "kahdeksantoista",
+            "nl": "achttien"
+        },
+        "ordinal": {
+            "en": "eighteenth",
+            "fi": "kahdeksastoista",
+            "nl": "achttiende"
         }
     }
 }

@@ -1,90 +1,88 @@
 {
-    "concepts": {
-        "money": {
-            "en": "money",
-            "fi": "raha",
-            "nl": "het geld"
-        },
-        "bank card": {
-            "en": [
-                "bank card",
-                "debit card"
-            ],
-            "fi": "kortti",
-            "nl": "de bankpas"
-        },
-        "cash": {
-            "hypernym": "money",
+    "money": {
+        "en": "money",
+        "fi": "raha",
+        "nl": "het geld"
+    },
+    "bank card": {
+        "en": [
+            "bank card",
+            "debit card"
+        ],
+        "fi": "kortti",
+        "nl": "de bankpas"
+    },
+    "cash": {
+        "hypernym": "money",
+        "en": "cash",
+        "fi": "käteinen",
+        "nl": "contant"
+    },
+    "cash or card": {
+        "roots": {
             "en": "cash",
-            "fi": "käteinen",
-            "nl": "contant"
-        },
-        "cash or card": {
-            "roots": {
-                "en": "cash",
-                "fi": [
-                    "cash",
-                    "bank card"
-                ],
-                "nl": "cash"
-            },
-            "en": "Cash or card?",
-            "fi": "Käteisellä vai kortilla?",
-            "nl": "Contant of pinnen?"
-        },
-        "receipt": {
-            "en": "receipt",
-            "fi": "kuitti",
-            "nl": "het bonnetje|de bon"
-        },
-        "account": {
-            "en": "account",
-            "fi": "tili",
-            "nl": "de rekening"
-        },
-        "price": {
-            "singular": {
-                "en": "price",
-                "fi": "hinta",
-                "nl": "de prijs"
-            },
-            "plural": {
-                "en": "prices",
-                "fi": "hinnat",
-                "nl": "de prijzen"
-            }
-        },
-        "cent": {
-            "hypernym": "money",
-            "singular": {
-                "en": "cent",
-                "fi": "sentti",
-                "nl": "de cent"
-            },
-            "plural": {
-                "en": "cents",
-                "fi": "sentit",
-                "nl": "de centen"
-            }
-        },
-        "banknote": {
-            "hypernym": "money",
-            "en": [
-                "banknote|note",
-                "bill"
+            "fi": [
+                "cash",
+                "bank card"
             ],
-            "fi": "seteli",
-            "nl": "het bankbiljet"
+            "nl": "cash"
         },
-        "anything else": {
-            "en": "Anything else?",
-            "fi": "Tuleeks muuta?*",
-            "nl": "Anders nog iets?"
+        "en": "Cash or card?",
+        "fi": "Käteisellä vai kortilla?",
+        "nl": "Contant of pinnen?"
+    },
+    "receipt": {
+        "en": "receipt",
+        "fi": "kuitti",
+        "nl": "het bonnetje|de bon"
+    },
+    "account": {
+        "en": "account",
+        "fi": "tili",
+        "nl": "de rekening"
+    },
+    "price": {
+        "singular": {
+            "en": "price",
+            "fi": "hinta",
+            "nl": "de prijs"
         },
-        "all together": {
-            "en": "All together?",
-            "fi": "Tuleeks nää samasta?*",
-            "nl": "Alles bij elkaar?"
+        "plural": {
+            "en": "prices",
+            "fi": "hinnat",
+            "nl": "de prijzen"
         }
+    },
+    "cent": {
+        "hypernym": "money",
+        "singular": {
+            "en": "cent",
+            "fi": "sentti",
+            "nl": "de cent"
+        },
+        "plural": {
+            "en": "cents",
+            "fi": "sentit",
+            "nl": "de centen"
+        }
+    },
+    "banknote": {
+        "hypernym": "money",
+        "en": [
+            "banknote|note",
+            "bill"
+        ],
+        "fi": "seteli",
+        "nl": "het bankbiljet"
+    },
+    "anything else": {
+        "en": "Anything else?",
+        "fi": "Tuleeks muuta?*",
+        "nl": "Anders nog iets?"
+    },
+    "all together": {
+        "en": "All together?",
+        "fi": "Tuleeks nää samasta?*",
+        "nl": "Alles bij elkaar?"
     }
 }

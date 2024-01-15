@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "23": {
-            "hypernym": "number",
-            "roots": [
-                "3",
-                "20"
-            ],
-            "cardinal": {
-                "en": "twenty-three",
-                "fi": "kaksikymmentäkolme",
-                "nl": "drieëntwintig"
-            },
-            "ordinal": {
-                "en": "twenty-third",
-                "fi": "kahdeskymmeneskolmas",
-                "nl": "drieëntwintigste"
-            }
+    "23": {
+        "hypernym": "number",
+        "roots": [
+            "3",
+            "20"
+        ],
+        "cardinal": {
+            "en": "twenty-three",
+            "fi": "kaksikymmentäkolme",
+            "nl": "drieëntwintig"
+        },
+        "ordinal": {
+            "en": "twenty-third",
+            "fi": "kahdeskymmeneskolmas",
+            "nl": "drieëntwintigste"
         }
     }
 }

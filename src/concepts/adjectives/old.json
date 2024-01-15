@@ -1,25 +1,23 @@
 {
-    "concepts": {
-        "old": {
-            "antonym": [
-                "new",
-                "young"
-            ],
-            "positive degree": {
-                "en": "old",
-                "fi": "vanha",
-                "nl": "oud"
-            },
-            "comparative degree": {
-                "en": "older",
-                "fi": "vanhempi;adjective",
-                "nl": "ouder"
-            },
-            "superlative degree": {
-                "en": "oldest",
-                "fi": "vanhin",
-                "nl": "oudst"
-            }
+    "old": {
+        "antonym": [
+            "new",
+            "young"
+        ],
+        "positive degree": {
+            "en": "old",
+            "fi": "vanha",
+            "nl": "oud"
+        },
+        "comparative degree": {
+            "en": "older",
+            "fi": "vanhempi;adjective",
+            "nl": "ouder"
+        },
+        "superlative degree": {
+            "en": "oldest",
+            "fi": "vanhin",
+            "nl": "oudst"
         }
     }
 }

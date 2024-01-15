@@ -1,13 +1,11 @@
 {
-    "concepts": {
-        "open": {
-            "antonym": "closed",
-            "en": "open",
-            "fi": [
-                "avoinna",
-                "auki"
-            ],
-            "nl": "open"
-        }
+    "open": {
+        "antonym": "closed",
+        "en": "open",
+        "fi": [
+            "avoinna",
+            "auki"
+        ],
+        "nl": "open"
     }
 }

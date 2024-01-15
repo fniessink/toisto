@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "tooth": {
-            "holonym": "head",
-            "singular": {
-                "en": "tooth",
-                "fi": "hammas",
-                "nl": "de tand"
-            },
-            "plural": {
-                "en": "teeth",
-                "fi": "hampaat",
-                "nl": "de tanden"
-            }
+    "tooth": {
+        "holonym": "head",
+        "singular": {
+            "en": "tooth",
+            "fi": "hammas",
+            "nl": "de tand"
+        },
+        "plural": {
+            "en": "teeth",
+            "fi": "hampaat",
+            "nl": "de tanden"
         }
     }
 }

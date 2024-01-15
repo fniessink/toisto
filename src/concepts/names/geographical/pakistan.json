@@ -1,18 +1,16 @@
 {
-    "concepts": {
-        "pakistan": {
-            "hypernym": "country",
-            "en": "Pakistan",
-            "fi": "Pakistan",
-            "nl": "Pakistan"
-        },
-        "pakistani": {
-            "hypernym": "nationality",
-            "involves": "pakistan",
-            "roots": "pakistan",
-            "en": "Pakistani",
-            "fi": "pakistanilainen",
-            "nl": "Pakistaans"
-        }
+    "pakistan": {
+        "hypernym": "country",
+        "en": "Pakistan",
+        "fi": "Pakistan",
+        "nl": "Pakistan"
+    },
+    "pakistani": {
+        "hypernym": "nationality",
+        "involves": "pakistan",
+        "roots": "pakistan",
+        "en": "Pakistani",
+        "fi": "pakistanilainen",
+        "nl": "Pakistaans"
     }
 }

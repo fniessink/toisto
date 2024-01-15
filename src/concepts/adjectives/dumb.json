@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "dumb": {
-            "positive degree": {
-                "en": "dumb",
-                "fi": "tyhmä",
-                "nl": "dom"
-            },
-            "comparative degree": {
-                "en": "dumber",
-                "fi": "tyhmempi",
-                "nl": "dommer"
-            },
-            "superlative degree": {
-                "en": "dumbest",
-                "fi": "tyhmin",
-                "nl": "domst"
-            }
+    "dumb": {
+        "positive degree": {
+            "en": "dumb",
+            "fi": "tyhmä",
+            "nl": "dom"
+        },
+        "comparative degree": {
+            "en": "dumber",
+            "fi": "tyhmempi",
+            "nl": "dommer"
+        },
+        "superlative degree": {
+            "en": "dumbest",
+            "fi": "tyhmin",
+            "nl": "domst"
         }
     }
 }

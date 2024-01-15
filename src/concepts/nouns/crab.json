@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "crab": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "crab",
-                "fi": "rapu",
-                "nl": "de krab"
-            },
-            "plural": {
-                "en": "crabs",
-                "fi": "ravut",
-                "nl": "de krabben"
-            }
+    "crab": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "crab",
+            "fi": "rapu",
+            "nl": "de krab"
+        },
+        "plural": {
+            "en": "crabs",
+            "fi": "ravut",
+            "nl": "de krabben"
         }
     }
 }

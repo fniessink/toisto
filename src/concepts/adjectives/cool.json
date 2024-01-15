@@ -1,22 +1,20 @@
 {
-    "concepts": {
-        "cool": {
-            "antonym": "warm",
-            "positive degree": {
-                "en": "cool",
-                "fi": "viileä",
-                "nl": "koel"
-            },
-            "comparative degree": {
-                "en": "cooler",
-                "fi": "viileämpi",
-                "nl": "koeler"
-            },
-            "superlative degree": {
-                "en": "coolest",
-                "fi": "villein",
-                "nl": "koelst"
-            }
+    "cool": {
+        "antonym": "warm",
+        "positive degree": {
+            "en": "cool",
+            "fi": "viileä",
+            "nl": "koel"
+        },
+        "comparative degree": {
+            "en": "cooler",
+            "fi": "viileämpi",
+            "nl": "koeler"
+        },
+        "superlative degree": {
+            "en": "coolest",
+            "fi": "villein",
+            "nl": "koelst"
         }
     }
 }

@@ -1,45 +1,43 @@
 {
-    "concepts": {
-        "wife": {
-            "hypernym": "spouse",
-            "holonym": "marriage",
-            "singular": {
-                "en": "wife",
-                "fi": "vaimo",
-                "nl": "de echtgenote"
-            },
-            "plural": {
-                "en": "wives",
-                "fi": "vaimot",
-                "nl": "de echtgenotes"
-            }
+    "wife": {
+        "hypernym": "spouse",
+        "holonym": "marriage",
+        "singular": {
+            "en": "wife",
+            "fi": "vaimo",
+            "nl": "de echtgenote"
         },
-        "husband": {
-            "hypernym": "spouse",
-            "holonym": "marriage",
-            "singular": {
-                "en": "husband",
-                "fi": "aviomies|mies",
-                "nl": "de echtgenoot"
-            },
-            "plural": {
-                "en": "husbands",
-                "fi": "aviomiehet|miehet",
-                "nl": "de echtgenoten"
-            }
+        "plural": {
+            "en": "wives",
+            "fi": "vaimot",
+            "nl": "de echtgenotes"
+        }
+    },
+    "husband": {
+        "hypernym": "spouse",
+        "holonym": "marriage",
+        "singular": {
+            "en": "husband",
+            "fi": "aviomies|mies",
+            "nl": "de echtgenoot"
         },
-        "spouse": {
-            "holonym": "family",
-            "singular": {
-                "en": "spouse",
-                "fi": "puoliso",
-                "nl": "de partner"
-            },
-            "plural": {
-                "en": "spouses",
-                "fi": "puolisot",
-                "nl": "de partners"
-            }
+        "plural": {
+            "en": "husbands",
+            "fi": "aviomiehet|miehet",
+            "nl": "de echtgenoten"
+        }
+    },
+    "spouse": {
+        "holonym": "family",
+        "singular": {
+            "en": "spouse",
+            "fi": "puoliso",
+            "nl": "de partner"
+        },
+        "plural": {
+            "en": "spouses",
+            "fi": "puolisot",
+            "nl": "de partners"
         }
     }
 }

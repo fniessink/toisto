@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "sheep": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "sheep",
-                "fi": "lammas",
-                "nl": "het schaap"
-            },
-            "plural": {
-                "en": "sheep",
-                "fi": "lampaat",
-                "nl": "de schapen"
-            }
+    "sheep": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "sheep",
+            "fi": "lammas",
+            "nl": "het schaap"
+        },
+        "plural": {
+            "en": "sheep",
+            "fi": "lampaat",
+            "nl": "de schapen"
         }
     }
 }
