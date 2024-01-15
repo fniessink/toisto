@@ -4,7 +4,6 @@ import logging
 from argparse import Namespace
 from configparser import ConfigParser
 from contextlib import suppress
-from pathlib import Path
 
 with suppress(ImportError):
     import readline  # noqa: F401 `readline` imported but unused
@@ -36,9 +35,7 @@ def init() -> tuple[ConfigParser, Namespace, Quizzes, Progress]:
     argument_parser = create_argument_parser(config, concepts)
     args = parse_arguments(argument_parser)
     load_spelling_alternatives(args.target_language, args.source_language)
-    extra_files = [Path(file_path) for file_path in args.file]
-    extra_concepts = loader.load(extra_files)
-    concepts |= extra_concepts
+    concepts |= loader.load(args.file)
     concepts = filter_concepts(concepts, args.concept, args.target_language, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, argument_parser)
