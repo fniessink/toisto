@@ -1,371 +1,369 @@
 {
-    "concepts": {
-        "engineer": {
-            "singular": {
-                "en": "engineer",
-                "fi": "insinööri",
-                "nl": "de ingenieur"
-            },
-            "plural": {
-                "en": "engineers",
-                "fi": "insinöörit",
-                "nl": "de ingenieurs"
-            }
+    "engineer": {
+        "singular": {
+            "en": "engineer",
+            "fi": "insinööri",
+            "nl": "de ingenieur"
         },
-        "teacher": {
-            "singular": {
-                "en": "teacher",
-                "fi": "opettaja",
-                "nl": [
-                    "de docent",
-                    "de leraar"
-                ]
-            },
-            "plural": {
-                "en": "teachers",
-                "fi": "opettajat",
-                "nl": [
-                    "de docenten",
-                    "de leraren"
-                ]
-            }
-        },
-        "seller": {
-            "en": "seller",
-            "fi": "myyjä",
-            "nl": "de verkoper"
-        },
-        "physician": {
-            "en": [
-                "doctor",
-                "physician"
-            ],
-            "fi": "lääkäri",
+        "plural": {
+            "en": "engineers",
+            "fi": "insinöörit",
+            "nl": "de ingenieurs"
+        }
+    },
+    "teacher": {
+        "singular": {
+            "en": "teacher",
+            "fi": "opettaja",
             "nl": [
-                "de arts",
-                "de dokter"
+                "de docent",
+                "de leraar"
             ]
         },
-        "dentist": {
-            "roots": {
-                "fi": [
-                    "tooth",
-                    "physician"
-                ],
-                "nl": [
-                    "tooth",
-                    "physician"
-                ]
-            },
-            "en": "dentist",
-            "fi": "hammaslääkäri",
-            "nl": "de tandarts"
-        },
-        "nurse": {
-            "en": "nurse",
-            "fi": "sairaanhoitaja",
-            "nl": "de verpleegkundige"
-        },
-        "truck driver": {
-            "hypernym": "driver",
-            "roots": [
-                "lorry",
-                "driver"
-            ],
-            "en": "truck driver",
-            "fi": "rekkakuski",
-            "nl": "de vrachtwagenchauffeur"
-        },
-        "taxi driver": {
-            "hypernym": "driver",
-            "roots": [
-                "taxi",
-                "driver"
-            ],
-            "en": [
-                "taxi driver",
-                "cabdriver"
-            ],
-            "fi": "taksikuski",
-            "nl": "de taxichauffeur"
-        },
-        "car mechanic": {
-            "roots": "car",
-            "en": "car mechanic",
-            "fi": "automekaanikko",
-            "nl": "de automonteur"
-        },
-        "farmer": {
-            "en": "farmer",
-            "fi": "maanviljelijä",
+        "plural": {
+            "en": "teachers",
+            "fi": "opettajat",
             "nl": [
-                "de boer",
-                "de landbouwer"
-            ]
-        },
-        "singer": {
-            "roots": "to sing",
-            "en": "singer",
-            "fi": "laulaja",
-            "nl": "de zanger"
-        },
-        "writer": {
-            "roots": "to write",
-            "en": "writer",
-            "fi": "kirjailija",
-            "nl": "de schrijver"
-        },
-        "actor": {
-            "en": "actor",
-            "fi": "näyttelijä",
-            "nl": "de acteur"
-        },
-        "athlete": {
-            "en": "athlete",
-            "fi": "urheilija",
-            "nl": [
-                "de atleet",
-                "de sporter"
-            ]
-        },
-        "police officer": {
-            "en": "police officer",
-            "fi": "poliisi",
-            "nl": "de politieagent"
-        },
-        "firefighter": {
-            "en": "firefighter",
-            "fi": "palomies",
-            "nl": "de brandweerman"
-        },
-        "priest": {
-            "en": "priest",
-            "fi": "pappi",
-            "nl": "de priester"
-        },
-        "entrepeneur": {
-            "en": "entrepeneur",
-            "fi": "yrittäjä",
-            "nl": "de ondernemer"
-        },
-        "architect": {
-            "en": "architect",
-            "fi": "arkkitehti",
-            "nl": "de architect"
-        },
-        "construction worker": {
-            "roots": {
-                "fi": [
-                    "building",
-                    "man"
-                ]
-            },
-            "en": "construction worker",
-            "fi": "rakennusmies",
-            "nl": "de bouwvakker"
-        },
-        "plumber": {
-            "en": "plumber",
-            "fi": [
-                "putkiasentaja",
-                "putkimies"
-            ],
-            "nl": "de loodgieter"
-        },
-        "electrician": {
-            "en": "electrician",
-            "fi": [
-                "sähköasentaja",
-                "sähkömies"
-            ],
-            "nl": "de elektricien"
-        },
-        "painter": {
-            "roots": "to paint",
-            "en": "painter",
-            "fi": "maalari",
-            "nl": "de schilder"
-        },
-        "mailman": {
-            "en": "mailman",
-            "fi": "postinjakaja",
-            "nl": "de postbode"
-        },
-        "janitor": {
-            "en": "janitor",
-            "fi": "vahtimestari",
-            "nl": "de conciërge"
-        },
-        "security guard": {
-            "en": "security guard",
-            "fi": "vartija",
-            "nl": "de beveiliger"
-        },
-        "broker": {
-            "en": "broker",
-            "fi": "välittäjä",
-            "nl": "de makelaar"
-        },
-        "real estate broker": {
-            "hypernym": "broker",
-            "roots": "broker",
-            "en": "real estate broker",
-            "fi": "kiinteistonvälittäjä",
-            "nl": "de vastgoedmakelaar"
-        },
-        "managing director": {
-            "roots": {
-                "nl": "company"
-            },
-            "en": "managing director",
-            "fi": "toimitusjohtaja",
-            "nl": [
-                "de bedrijfsleider",
-                "de directeur"
-            ]
-        },
-        "staff manager": {
-            "en": [
-                "staff manager",
-                "personnel manager"
-            ],
-            "fi": "henkilöstöpäällikkö",
-            "nl": "de personeelschef"
-        },
-        "assistant": {
-            "en": "assistant",
-            "fi": "assistentti",
-            "nl": "de assistent"
-        },
-        "secretary": {
-            "en": "secretary",
-            "fi": "sihteeri",
-            "female": {
-                "nl": "de secretaresse"
-            },
-            "male": {
-                "nl": "de secretaris"
-            }
-        },
-        "bookkeeper": {
-            "en": "bookkeeper",
-            "fi": "kirjanpitäjä",
-            "nl": "de boekhouder"
-        },
-        "journalist": {
-            "en": [
-                "journalist",
-                "reporter"
-            ],
-            "fi": "toimittaja",
-            "nl": [
-                "de journalist",
-                "de verslaggever"
-            ]
-        },
-        "photographer": {
-            "en": "photographer",
-            "fi": "valokuvaaja",
-            "nl": "de fotograaf"
-        },
-        "cleaner": {
-            "en": "cleaner",
-            "fi": "siivooja",
-            "nl": "de schoonmaker"
-        },
-        "hairdresser": {
-            "en": "hairdresser",
-            "fi": "kampaaja",
-            "nl": "de kapper"
-        },
-        "barber": {
-            "en": "barber",
-            "fi": "parturi",
-            "nl": "de barber"
-        },
-        "cosmetologist": {
-            "en": "cosmetologist",
-            "fi": "kosmetologi",
-            "nl": "de schoonheidsspecialist"
-        },
-        "cook": {
-            "en": "cook",
-            "fi": "kokki",
-            "nl": "de kok"
-        },
-        "server": {
-            "en": "server",
-            "fi": "tarjoilija",
-            "female": {
-                "en": "waitress",
-                "nl": "de serveerster"
-            },
-            "male": {
-                "en": "waiter",
-                "nl": "de ober"
-            }
-        },
-        "kitchenhand": {
-            "roots": {
-                "en": [
-                    "kitchen",
-                    "hand"
-                ],
-                "fi": "kitchen",
-                "nl": "kitchen"
-            },
-            "en": "kitchenhand",
-            "fi": "keittiöapulainen",
-            "nl": "de keukenhulp"
-        },
-        "kindergarten teacher": {
-            "hypernym": "teacher",
-            "en": "kindergarten teacher",
-            "fi": "lastentarhanopettaja",
-            "nl": "de kleuterjuf"
-        },
-        "nanny": {
-            "en": "nanny",
-            "fi": "lastenhoitaja",
-            "female": {
-                "nl": "de kinderverzorgster"
-            },
-            "male": {
-                "nl": "de kinderverzorger"
-            }
-        },
-        "researcher": {
-            "en": "researcher",
-            "fi": "tutkija",
-            "nl": "de onderzoeker"
-        },
-        "housewife": {
-            "en": "housewife",
-            "fi": "kotiäiti",
-            "nl": "de huismoeder"
-        },
-        "sewer": {
-            "en": "sewer",
-            "fi": "ompelija",
-            "nl": "de naaister"
-        },
-        "interpreter": {
-            "en": "interpreter",
-            "fi": "tulkki",
-            "nl": "de tolk"
-        },
-        "politician": {
-            "en": "politician",
-            "fi": "poliitikko",
-            "nl": "de politicus"
-        },
-        "youth worker": {
-            "en": "youth worker",
-            "fi": "nuoriso-ohjaaja",
-            "nl": [
-                "de jongerenwerker",
-                "de jeugdwerker"
+                "de docenten",
+                "de leraren"
             ]
         }
+    },
+    "seller": {
+        "en": "seller",
+        "fi": "myyjä",
+        "nl": "de verkoper"
+    },
+    "physician": {
+        "en": [
+            "doctor",
+            "physician"
+        ],
+        "fi": "lääkäri",
+        "nl": [
+            "de arts",
+            "de dokter"
+        ]
+    },
+    "dentist": {
+        "roots": {
+            "fi": [
+                "tooth",
+                "physician"
+            ],
+            "nl": [
+                "tooth",
+                "physician"
+            ]
+        },
+        "en": "dentist",
+        "fi": "hammaslääkäri",
+        "nl": "de tandarts"
+    },
+    "nurse": {
+        "en": "nurse",
+        "fi": "sairaanhoitaja",
+        "nl": "de verpleegkundige"
+    },
+    "truck driver": {
+        "hypernym": "driver",
+        "roots": [
+            "lorry",
+            "driver"
+        ],
+        "en": "truck driver",
+        "fi": "rekkakuski",
+        "nl": "de vrachtwagenchauffeur"
+    },
+    "taxi driver": {
+        "hypernym": "driver",
+        "roots": [
+            "taxi",
+            "driver"
+        ],
+        "en": [
+            "taxi driver",
+            "cabdriver"
+        ],
+        "fi": "taksikuski",
+        "nl": "de taxichauffeur"
+    },
+    "car mechanic": {
+        "roots": "car",
+        "en": "car mechanic",
+        "fi": "automekaanikko",
+        "nl": "de automonteur"
+    },
+    "farmer": {
+        "en": "farmer",
+        "fi": "maanviljelijä",
+        "nl": [
+            "de boer",
+            "de landbouwer"
+        ]
+    },
+    "singer": {
+        "roots": "to sing",
+        "en": "singer",
+        "fi": "laulaja",
+        "nl": "de zanger"
+    },
+    "writer": {
+        "roots": "to write",
+        "en": "writer",
+        "fi": "kirjailija",
+        "nl": "de schrijver"
+    },
+    "actor": {
+        "en": "actor",
+        "fi": "näyttelijä",
+        "nl": "de acteur"
+    },
+    "athlete": {
+        "en": "athlete",
+        "fi": "urheilija",
+        "nl": [
+            "de atleet",
+            "de sporter"
+        ]
+    },
+    "police officer": {
+        "en": "police officer",
+        "fi": "poliisi",
+        "nl": "de politieagent"
+    },
+    "firefighter": {
+        "en": "firefighter",
+        "fi": "palomies",
+        "nl": "de brandweerman"
+    },
+    "priest": {
+        "en": "priest",
+        "fi": "pappi",
+        "nl": "de priester"
+    },
+    "entrepeneur": {
+        "en": "entrepeneur",
+        "fi": "yrittäjä",
+        "nl": "de ondernemer"
+    },
+    "architect": {
+        "en": "architect",
+        "fi": "arkkitehti",
+        "nl": "de architect"
+    },
+    "construction worker": {
+        "roots": {
+            "fi": [
+                "building",
+                "man"
+            ]
+        },
+        "en": "construction worker",
+        "fi": "rakennusmies",
+        "nl": "de bouwvakker"
+    },
+    "plumber": {
+        "en": "plumber",
+        "fi": [
+            "putkiasentaja",
+            "putkimies"
+        ],
+        "nl": "de loodgieter"
+    },
+    "electrician": {
+        "en": "electrician",
+        "fi": [
+            "sähköasentaja",
+            "sähkömies"
+        ],
+        "nl": "de elektricien"
+    },
+    "painter": {
+        "roots": "to paint",
+        "en": "painter",
+        "fi": "maalari",
+        "nl": "de schilder"
+    },
+    "mailman": {
+        "en": "mailman",
+        "fi": "postinjakaja",
+        "nl": "de postbode"
+    },
+    "janitor": {
+        "en": "janitor",
+        "fi": "vahtimestari",
+        "nl": "de conciërge"
+    },
+    "security guard": {
+        "en": "security guard",
+        "fi": "vartija",
+        "nl": "de beveiliger"
+    },
+    "broker": {
+        "en": "broker",
+        "fi": "välittäjä",
+        "nl": "de makelaar"
+    },
+    "real estate broker": {
+        "hypernym": "broker",
+        "roots": "broker",
+        "en": "real estate broker",
+        "fi": "kiinteistonvälittäjä",
+        "nl": "de vastgoedmakelaar"
+    },
+    "managing director": {
+        "roots": {
+            "nl": "company"
+        },
+        "en": "managing director",
+        "fi": "toimitusjohtaja",
+        "nl": [
+            "de bedrijfsleider",
+            "de directeur"
+        ]
+    },
+    "staff manager": {
+        "en": [
+            "staff manager",
+            "personnel manager"
+        ],
+        "fi": "henkilöstöpäällikkö",
+        "nl": "de personeelschef"
+    },
+    "assistant": {
+        "en": "assistant",
+        "fi": "assistentti",
+        "nl": "de assistent"
+    },
+    "secretary": {
+        "en": "secretary",
+        "fi": "sihteeri",
+        "female": {
+            "nl": "de secretaresse"
+        },
+        "male": {
+            "nl": "de secretaris"
+        }
+    },
+    "bookkeeper": {
+        "en": "bookkeeper",
+        "fi": "kirjanpitäjä",
+        "nl": "de boekhouder"
+    },
+    "journalist": {
+        "en": [
+            "journalist",
+            "reporter"
+        ],
+        "fi": "toimittaja",
+        "nl": [
+            "de journalist",
+            "de verslaggever"
+        ]
+    },
+    "photographer": {
+        "en": "photographer",
+        "fi": "valokuvaaja",
+        "nl": "de fotograaf"
+    },
+    "cleaner": {
+        "en": "cleaner",
+        "fi": "siivooja",
+        "nl": "de schoonmaker"
+    },
+    "hairdresser": {
+        "en": "hairdresser",
+        "fi": "kampaaja",
+        "nl": "de kapper"
+    },
+    "barber": {
+        "en": "barber",
+        "fi": "parturi",
+        "nl": "de barber"
+    },
+    "cosmetologist": {
+        "en": "cosmetologist",
+        "fi": "kosmetologi",
+        "nl": "de schoonheidsspecialist"
+    },
+    "cook": {
+        "en": "cook",
+        "fi": "kokki",
+        "nl": "de kok"
+    },
+    "server": {
+        "en": "server",
+        "fi": "tarjoilija",
+        "female": {
+            "en": "waitress",
+            "nl": "de serveerster"
+        },
+        "male": {
+            "en": "waiter",
+            "nl": "de ober"
+        }
+    },
+    "kitchenhand": {
+        "roots": {
+            "en": [
+                "kitchen",
+                "hand"
+            ],
+            "fi": "kitchen",
+            "nl": "kitchen"
+        },
+        "en": "kitchenhand",
+        "fi": "keittiöapulainen",
+        "nl": "de keukenhulp"
+    },
+    "kindergarten teacher": {
+        "hypernym": "teacher",
+        "en": "kindergarten teacher",
+        "fi": "lastentarhanopettaja",
+        "nl": "de kleuterjuf"
+    },
+    "nanny": {
+        "en": "nanny",
+        "fi": "lastenhoitaja",
+        "female": {
+            "nl": "de kinderverzorgster"
+        },
+        "male": {
+            "nl": "de kinderverzorger"
+        }
+    },
+    "researcher": {
+        "en": "researcher",
+        "fi": "tutkija",
+        "nl": "de onderzoeker"
+    },
+    "housewife": {
+        "en": "housewife",
+        "fi": "kotiäiti",
+        "nl": "de huismoeder"
+    },
+    "sewer": {
+        "en": "sewer",
+        "fi": "ompelija",
+        "nl": "de naaister"
+    },
+    "interpreter": {
+        "en": "interpreter",
+        "fi": "tulkki",
+        "nl": "de tolk"
+    },
+    "politician": {
+        "en": "politician",
+        "fi": "poliitikko",
+        "nl": "de politicus"
+    },
+    "youth worker": {
+        "en": "youth worker",
+        "fi": "nuoriso-ohjaaja",
+        "nl": [
+            "de jongerenwerker",
+            "de jeugdwerker"
+        ]
     }
 }

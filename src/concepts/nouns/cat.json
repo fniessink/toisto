@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "cat": {
-            "hypernym": "pet",
-            "singular": {
-                "en": "cat",
-                "fi": "kissa",
-                "nl": "de kat"
-            },
-            "plural": {
-                "en": "cats",
-                "fi": "kissat",
-                "nl": "de katten"
-            }
+    "cat": {
+        "hypernym": "pet",
+        "singular": {
+            "en": "cat",
+            "fi": "kissa",
+            "nl": "de kat"
+        },
+        "plural": {
+            "en": "cats",
+            "fi": "kissat",
+            "nl": "de katten"
         }
     }
 }

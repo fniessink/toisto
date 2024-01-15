@@ -1,10 +1,8 @@
 {
-    "concepts": {
-        "1000000000": {
-            "hypernym": "number",
-            "en": "billion",
-            "fi": "miljardi",
-            "nl": "miljard"
-        }
+    "1000000000": {
+        "hypernym": "number",
+        "en": "billion",
+        "fi": "miljardi",
+        "nl": "miljard"
     }
 }

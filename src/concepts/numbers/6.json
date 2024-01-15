@@ -1,20 +1,18 @@
 {
-    "concepts": {
-        "6": {
-            "hypernym": "number",
-            "cardinal": {
-                "en": "six",
-                "fi": [
-                    "kuusi",
-                    "kuus*"
-                ],
-                "nl": "zes"
-            },
-            "ordinal": {
-                "en": "sixth",
-                "fi": "kuudes",
-                "nl": "zesde"
-            }
+    "6": {
+        "hypernym": "number",
+        "cardinal": {
+            "en": "six",
+            "fi": [
+                "kuusi",
+                "kuus*"
+            ],
+            "nl": "zes"
+        },
+        "ordinal": {
+            "en": "sixth",
+            "fi": "kuudes",
+            "nl": "zesde"
         }
     }
 }

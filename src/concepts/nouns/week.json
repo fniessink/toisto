@@ -1,46 +1,44 @@
 {
-    "concepts": {
-        "week": {
-            "singular": {
-                "en": "week",
-                "fi": "viikko",
-                "nl": "de week"
-            },
-            "plural": {
-                "en": "weeks",
-                "fi": "viikot",
-                "nl": "de weken"
-            }
+    "week": {
+        "singular": {
+            "en": "week",
+            "fi": "viikko",
+            "nl": "de week"
         },
-        "days of the week": {
-            "roots": [
-                "day",
-                "week"
-            ],
-            "en": "days of the week",
-            "fi": "viikonpäivät",
-            "nl": "de dagen van de week"
-        },
-        "this week": {
-            "roots": [
-                "this",
-                "week"
-            ],
-            "en": "this week",
-            "fi": "tällä viikolla",
-            "nl": "deze week"
-        },
-        "last week": {
-            "roots": "week",
-            "en": "last week",
-            "fi": "viime viikolla",
-            "nl": "vorige week"
-        },
-        "next week": {
-            "roots": "week",
-            "en": "next week",
-            "fi": "ensi viikolla",
-            "nl": "volgende week"
+        "plural": {
+            "en": "weeks",
+            "fi": "viikot",
+            "nl": "de weken"
         }
+    },
+    "days of the week": {
+        "roots": [
+            "day",
+            "week"
+        ],
+        "en": "days of the week",
+        "fi": "viikonpäivät",
+        "nl": "de dagen van de week"
+    },
+    "this week": {
+        "roots": [
+            "this",
+            "week"
+        ],
+        "en": "this week",
+        "fi": "tällä viikolla",
+        "nl": "deze week"
+    },
+    "last week": {
+        "roots": "week",
+        "en": "last week",
+        "fi": "viime viikolla",
+        "nl": "vorige week"
+    },
+    "next week": {
+        "roots": "week",
+        "en": "next week",
+        "fi": "ensi viikolla",
+        "nl": "volgende week"
     }
 }

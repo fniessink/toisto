@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "mouth": {
-            "holonym": "head",
-            "singular": {
-                "en": "mouth",
-                "fi": "suu",
-                "nl": "de mond"
-            },
-            "plural": {
-                "en": "mouths",
-                "fi": "suut",
-                "nl": "de monden"
-            }
+    "mouth": {
+        "holonym": "head",
+        "singular": {
+            "en": "mouth",
+            "fi": "suu",
+            "nl": "de mond"
+        },
+        "plural": {
+            "en": "mouths",
+            "fi": "suut",
+            "nl": "de monden"
         }
     }
 }

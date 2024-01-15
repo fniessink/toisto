@@ -1,23 +1,21 @@
 {
-    "concepts": {
-        "elephant": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "elephant",
-                "fi": [
-                    "elefantti",
-                    "norsu"
-                ],
-                "nl": "de olifant"
-            },
-            "plural": {
-                "en": "elephants",
-                "fi": [
-                    "elefantit",
-                    "norsut"
-                ],
-                "nl": "de olifanten"
-            }
+    "elephant": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "elephant",
+            "fi": [
+                "elefantti",
+                "norsu"
+            ],
+            "nl": "de olifant"
+        },
+        "plural": {
+            "en": "elephants",
+            "fi": [
+                "elefantit",
+                "norsut"
+            ],
+            "nl": "de olifanten"
         }
     }
 }

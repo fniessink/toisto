@@ -1,16 +1,14 @@
 {
-    "concepts": {
-        "color": {
-            "singular": {
-                "en": "color|colour",
-                "fi": "väri",
-                "nl": "de kleur"
-            },
-            "plural": {
-                "en": "colors|colours",
-                "fi": "värit",
-                "nl": "de kleuren"
-            }
+    "color": {
+        "singular": {
+            "en": "color|colour",
+            "fi": "väri",
+            "nl": "de kleur"
+        },
+        "plural": {
+            "en": "colors|colours",
+            "fi": "värit",
+            "nl": "de kleuren"
         }
     }
 }

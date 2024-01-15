@@ -1,294 +1,292 @@
 {
-    "concepts": {
-        "hi": {
-            "en": "Hi!",
-            "fi": [
-                "Hei!",
-                "Moi!",
-                "Moikka!;arriving"
-            ],
-            "nl": "Hoi!"
-        },
-        "hello": {
-            "en": "Hello!",
-            "fi": "Terve!",
-            "nl": "Hallo!"
-        },
-        "bye": {
+    "hi": {
+        "en": "Hi!",
+        "fi": [
+            "Hei!",
+            "Moi!",
+            "Moikka!;arriving"
+        ],
+        "nl": "Hoi!"
+    },
+    "hello": {
+        "en": "Hello!",
+        "fi": "Terve!",
+        "nl": "Hallo!"
+    },
+    "bye": {
+        "en": [
+            "Bye!",
+            "Bye bye!"
+        ],
+        "fi": [
+            "Hei hei!",
+            "Moi moi!",
+            "Heippa!",
+            "Moikka!;leaving"
+        ],
+        "nl": [
+            "Doeg!",
+            "Doei!",
+            "Dag!"
+        ]
+    },
+    "see you": {
+        "en": [
+            "Goodbye",
+            "See you later!See you!"
+        ],
+        "fi": [
+            "Nähdään!",
+            "Näkemiin!"
+        ],
+        "nl": "Tot ziens!"
+    },
+    "see you tomorrow": {
+        "roots": {
             "en": [
-                "Bye!",
-                "Bye bye!"
+                "see you",
+                "tomorrow"
             ],
             "fi": [
-                "Hei hei!",
-                "Moi moi!",
-                "Heippa!",
-                "Moikka!;leaving"
+                "see you",
+                "tomorrow"
+            ],
+            "nl": "tomorrow"
+        },
+        "en": "See you tomorrow!",
+        "fi": "Nähdään huomenna!",
+        "nl": "Tot morgen!"
+    },
+    "welcome": {
+        "en": "Welcome!",
+        "fi": "Tervetuloa!",
+        "nl": "Welkom!"
+    },
+    "who are you": {
+        "roots": [
+            "who",
+            "to be"
+        ],
+        "en": "Who are you?",
+        "fi": "Kuka sinä olet?",
+        "nl": "Wie ben jij?"
+    },
+    "I am alice": {
+        "roots": "to be",
+        "en": "I am Alice.",
+        "fi": "Minä olen Alice.",
+        "nl": "Ik ben Alice."
+    },
+    "how are you": {
+        "roots": [
+            "what",
+            "how",
+            "to be"
+        ],
+        "en": "How are you?",
+        "fi": [
+            "Mitä kuuluu?",
+            "Miten menee?"
+        ],
+        "nl": "Hoe gaat het?"
+    },
+    "i am fine": {
+        "roots": {
+            "en": "to be",
+            "fi": "good",
+            "nl": "good"
+        },
+        "en": "I am fine.",
+        "fi": "Minulle kuuluu hyvää.",
+        "nl": "Met mij gaat het goed."
+    },
+    "excuse me, can you help me": {
+        "roots": [
+            "excuse me",
+            "to help"
+        ],
+        "en": "Excuse me, can you help me?",
+        "fi": "Anteeksi, voitko auttaa minua?",
+        "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
+    },
+    "name": {
+        "singular": {
+            "en": "name",
+            "fi": "nimi",
+            "nl": "de naam"
+        },
+        "plural": {
+            "en": "names",
+            "fi": "nimet",
+            "nl": "de namen"
+        }
+    },
+    "first name": {
+        "roots": [
+            "name"
+        ],
+        "en": "first name",
+        "fi": "etunimi",
+        "nl": "de voornaam"
+    },
+    "given name": {
+        "roots": "name",
+        "en": "given name",
+        "nl": "de roepnaam"
+    },
+    "last name": {
+        "roots": [
+            "name"
+        ],
+        "en": [
+            "last name",
+            "surname"
+        ],
+        "fi": "sukunimi",
+        "nl": "de achternaam"
+    },
+    "what is your name": {
+        "roots": [
+            "what",
+            "to be",
+            "name"
+        ],
+        "en": "What is your name?",
+        "fi": "Mikä sinun nimesi on?",
+        "nl": "Wat is jouw naam?|Wat is je naam?"
+    },
+    "my name is bob": {
+        "roots": [
+            "name",
+            "to be"
+        ],
+        "en": "My name is Bob.",
+        "fi": "Minun nimeni on Bob.",
+        "nl": "Mijn naam is Bob."
+    },
+    "a pleasure to meet you": {
+        "roots": {
+            "en": "to meet",
+            "fi": [
+                "funny",
+                "to meet"
+            ],
+            "nl": "to meet"
+        },
+        "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
+        "fi": "Hauska tutustua!",
+        "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
+    },
+    "how do you spell that": {
+        "roots": {
+            "en": "how",
+            "fi": [
+                "how",
+                "to write"
             ],
             "nl": [
-                "Doeg!",
-                "Doei!",
-                "Dag!"
+                "how",
+                "to write"
             ]
         },
-        "see you": {
+        "en": "How do you spell that?",
+        "fi": "Miten se kirjoitetaan?",
+        "nl": "Hoe schrijf je dat?"
+    },
+    "how old are you": {
+        "roots": [
+            "how",
+            "old",
+            "to be"
+        ],
+        "en": "How old are you?",
+        "fi": "Kuinka vanha sinä olet?",
+        "nl": "Hoe oud ben jij?"
+    },
+    "good morning": {
+        "roots": [
+            "good",
+            "morning"
+        ],
+        "en": "Good morning!|Morning!",
+        "fi": "Hyvää huomenta!|Huomenta!",
+        "nl": "Goedemorgen!|Morgen!"
+    },
+    "good afternoon": {
+        "roots": {
             "en": [
-                "Goodbye",
-                "See you later!See you!"
-            ],
-            "fi": [
-                "Nähdään!",
-                "Näkemiin!"
-            ],
-            "nl": "Tot ziens!"
-        },
-        "see you tomorrow": {
-            "roots": {
-                "en": [
-                    "see you",
-                    "tomorrow"
-                ],
-                "fi": [
-                    "see you",
-                    "tomorrow"
-                ],
-                "nl": "tomorrow"
-            },
-            "en": "See you tomorrow!",
-            "fi": "Nähdään huomenna!",
-            "nl": "Tot morgen!"
-        },
-        "welcome": {
-            "en": "Welcome!",
-            "fi": "Tervetuloa!",
-            "nl": "Welkom!"
-        },
-        "who are you": {
-            "roots": [
-                "who",
-                "to be"
-            ],
-            "en": "Who are you?",
-            "fi": "Kuka sinä olet?",
-            "nl": "Wie ben jij?"
-        },
-        "I am alice": {
-            "roots": "to be",
-            "en": "I am Alice.",
-            "fi": "Minä olen Alice.",
-            "nl": "Ik ben Alice."
-        },
-        "how are you": {
-            "roots": [
-                "what",
-                "how",
-                "to be"
-            ],
-            "en": "How are you?",
-            "fi": [
-                "Mitä kuuluu?",
-                "Miten menee?"
-            ],
-            "nl": "Hoe gaat het?"
-        },
-        "i am fine": {
-            "roots": {
-                "en": "to be",
-                "fi": "good",
-                "nl": "good"
-            },
-            "en": "I am fine.",
-            "fi": "Minulle kuuluu hyvää.",
-            "nl": "Met mij gaat het goed."
-        },
-        "excuse me, can you help me": {
-            "roots": [
-                "excuse me",
-                "to help"
-            ],
-            "en": "Excuse me, can you help me?",
-            "fi": "Anteeksi, voitko auttaa minua?",
-            "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
-        },
-        "name": {
-            "singular": {
-                "en": "name",
-                "fi": "nimi",
-                "nl": "de naam"
-            },
-            "plural": {
-                "en": "names",
-                "fi": "nimet",
-                "nl": "de namen"
-            }
-        },
-        "first name": {
-            "roots": [
-                "name"
-            ],
-            "en": "first name",
-            "fi": "etunimi",
-            "nl": "de voornaam"
-        },
-        "given name": {
-            "roots": "name",
-            "en": "given name",
-            "nl": "de roepnaam"
-        },
-        "last name": {
-            "roots": [
-                "name"
-            ],
-            "en": [
-                "last name",
-                "surname"
-            ],
-            "fi": "sukunimi",
-            "nl": "de achternaam"
-        },
-        "what is your name": {
-            "roots": [
-                "what",
-                "to be",
-                "name"
-            ],
-            "en": "What is your name?",
-            "fi": "Mikä sinun nimesi on?",
-            "nl": "Wat is jouw naam?|Wat is je naam?"
-        },
-        "my name is bob": {
-            "roots": [
-                "name",
-                "to be"
-            ],
-            "en": "My name is Bob.",
-            "fi": "Minun nimeni on Bob.",
-            "nl": "Mijn naam is Bob."
-        },
-        "a pleasure to meet you": {
-            "roots": {
-                "en": "to meet",
-                "fi": [
-                    "funny",
-                    "to meet"
-                ],
-                "nl": "to meet"
-            },
-            "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
-            "fi": "Hauska tutustua!",
-            "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
-        },
-        "how do you spell that": {
-            "roots": {
-                "en": "how",
-                "fi": [
-                    "how",
-                    "to write"
-                ],
-                "nl": [
-                    "how",
-                    "to write"
-                ]
-            },
-            "en": "How do you spell that?",
-            "fi": "Miten se kirjoitetaan?",
-            "nl": "Hoe schrijf je dat?"
-        },
-        "how old are you": {
-            "roots": [
-                "how",
-                "old",
-                "to be"
-            ],
-            "en": "How old are you?",
-            "fi": "Kuinka vanha sinä olet?",
-            "nl": "Hoe oud ben jij?"
-        },
-        "good morning": {
-            "roots": [
                 "good",
-                "morning"
+                "afternoon"
             ],
-            "en": "Good morning!|Morning!",
-            "fi": "Hyvää huomenta!|Huomenta!",
-            "nl": "Goedemorgen!|Morgen!"
-        },
-        "good afternoon": {
-            "roots": {
-                "en": [
-                    "good",
-                    "afternoon"
-                ],
-                "fi": [
-                    "good",
-                    "day"
-                ],
-                "nl": [
-                    "good",
-                    "afternoon"
-                ]
-            },
-            "en": "Good afternoon!",
-            "fi": "Hyvää päivää!;afternoon",
-            "nl": "Goedemiddag!"
-        },
-        "good day": {
-            "roots": [
+            "fi": [
                 "good",
                 "day"
             ],
-            "en": "Good day!",
-            "fi": "Hyvää päivää!|Päivää!",
-            "nl": "Goedendag!"
-        },
-        "good evening": {
-            "roots": [
-                "good",
-                "evening"
-            ],
-            "en": "Good evening!",
-            "fi": "Hyvää iltaa!|Iltaa!",
-            "nl": "Goedenavond!"
-        },
-        "good night": {
-            "roots": [
-                "good",
-                "night"
-            ],
-            "en": "Good night!",
-            "fi": "Hyvää yötä!",
-            "nl": "Goedenacht!"
-        },
-        "sleep well": {
-            "roots": "to sleep",
-            "en": "Sleep well!",
-            "fi": "Nuku hyvin!",
             "nl": [
-                "Slaap lekker!",
-                "Welterusten!"
+                "good",
+                "afternoon"
             ]
         },
-        "have a nice day": {
-            "roots": "day",
-            "en": "Have a nice day!",
-            "fi": "Hauskaa päivää!",
-            "nl": "Prettige dag!"
-        },
-        "nice to see you after such a long time": {
-            "roots": [
-                "nice",
-                "to see",
-                "long",
-                "time"
-            ],
-            "en": "Nice to see you after such a long time!",
-            "fi": "Kiva nähdä pitkästä aikaa!",
-            "nl": "Leuk je na zo lange tijd te zien!|Leuk je te zien na zo lange tijd!"
-        },
-        "you too": {
-            "en": "You too!",
-            "fi": "Niin sinuakin!",
-            "nl": "Jij ook!"
-        }
+        "en": "Good afternoon!",
+        "fi": "Hyvää päivää!;afternoon",
+        "nl": "Goedemiddag!"
+    },
+    "good day": {
+        "roots": [
+            "good",
+            "day"
+        ],
+        "en": "Good day!",
+        "fi": "Hyvää päivää!|Päivää!",
+        "nl": "Goedendag!"
+    },
+    "good evening": {
+        "roots": [
+            "good",
+            "evening"
+        ],
+        "en": "Good evening!",
+        "fi": "Hyvää iltaa!|Iltaa!",
+        "nl": "Goedenavond!"
+    },
+    "good night": {
+        "roots": [
+            "good",
+            "night"
+        ],
+        "en": "Good night!",
+        "fi": "Hyvää yötä!",
+        "nl": "Goedenacht!"
+    },
+    "sleep well": {
+        "roots": "to sleep",
+        "en": "Sleep well!",
+        "fi": "Nuku hyvin!",
+        "nl": [
+            "Slaap lekker!",
+            "Welterusten!"
+        ]
+    },
+    "have a nice day": {
+        "roots": "day",
+        "en": "Have a nice day!",
+        "fi": "Hauskaa päivää!",
+        "nl": "Prettige dag!"
+    },
+    "nice to see you after such a long time": {
+        "roots": [
+            "nice",
+            "to see",
+            "long",
+            "time"
+        ],
+        "en": "Nice to see you after such a long time!",
+        "fi": "Kiva nähdä pitkästä aikaa!",
+        "nl": "Leuk je na zo lange tijd te zien!|Leuk je te zien na zo lange tijd!"
+    },
+    "you too": {
+        "en": "You too!",
+        "fi": "Niin sinuakin!",
+        "nl": "Jij ook!"
     }
 }

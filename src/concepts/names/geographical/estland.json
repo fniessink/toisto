@@ -1,13 +1,11 @@
 {
-    "concepts": {
-        "estland": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            },
-            "en": "Estland",
-            "fi": "Viro",
-            "nl": "Estland"
-        }
+    "estland": {
+        "hypernym": "country",
+        "roots": {
+            "nl": "country"
+        },
+        "en": "Estland",
+        "fi": "Viro",
+        "nl": "Estland"
     }
 }

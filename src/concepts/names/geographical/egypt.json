@@ -1,18 +1,16 @@
 {
-    "concepts": {
-        "egypt": {
-            "hypernym": "country",
-            "en": "Egypt",
-            "fi": "Egypti",
-            "nl": "Egypte"
-        },
-        "egyptian": {
-            "hypernym": "nationality",
-            "involves": "egypt",
-            "roots": "egypt",
-            "en": "Egyptian",
-            "fi": "egyptiläinen",
-            "nl": "Egyptisch"
-        }
+    "egypt": {
+        "hypernym": "country",
+        "en": "Egypt",
+        "fi": "Egypti",
+        "nl": "Egypte"
+    },
+    "egyptian": {
+        "hypernym": "nationality",
+        "involves": "egypt",
+        "roots": "egypt",
+        "en": "Egyptian",
+        "fi": "egyptiläinen",
+        "nl": "Egyptisch"
     }
 }

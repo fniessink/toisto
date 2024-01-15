@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "deer": {
-            "hypernym": "animal",
-            "singular": {
-                "en": "deer",
-                "fi": "peura",
-                "nl": "het hert"
-            },
-            "plural": {
-                "en": "deer",
-                "fi": "peurat",
-                "nl": "de herten"
-            }
+    "deer": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "deer",
+            "fi": "peura",
+            "nl": "het hert"
+        },
+        "plural": {
+            "en": "deer",
+            "fi": "peurat",
+            "nl": "de herten"
         }
     }
 }

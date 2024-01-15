@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "important": {
-            "positive degree": {
-                "en": "important",
-                "fi": "tärkeä",
-                "nl": "belangrijk"
-            },
-            "comparative degree": {
-                "en": "more important",
-                "fi": "tärkeämpi",
-                "nl": "belangrijker"
-            },
-            "superlative degree": {
-                "en": "most important",
-                "fi": "tärkein",
-                "nl": "belangrijkst"
-            }
+    "important": {
+        "positive degree": {
+            "en": "important",
+            "fi": "tärkeä",
+            "nl": "belangrijk"
+        },
+        "comparative degree": {
+            "en": "more important",
+            "fi": "tärkeämpi",
+            "nl": "belangrijker"
+        },
+        "superlative degree": {
+            "en": "most important",
+            "fi": "tärkein",
+            "nl": "belangrijkst"
         }
     }
 }

@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "15": {
-            "hypernym": "number",
-            "roots": [
-                "5",
-                "10"
-            ],
-            "cardinal": {
-                "en": "fifteen",
-                "fi": "viisitoista",
-                "nl": "vijftien"
-            },
-            "ordinal": {
-                "en": "fifteenth",
-                "fi": "viidestoista",
-                "nl": "vijftiende"
-            }
+    "15": {
+        "hypernym": "number",
+        "roots": [
+            "5",
+            "10"
+        ],
+        "cardinal": {
+            "en": "fifteen",
+            "fi": "viisitoista",
+            "nl": "vijftien"
+        },
+        "ordinal": {
+            "en": "fifteenth",
+            "fi": "viidestoista",
+            "nl": "vijftiende"
         }
     }
 }

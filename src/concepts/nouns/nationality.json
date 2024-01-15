@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "nationality": {
-            "involves": "country",
-            "singular": {
-                "en": "nationality",
-                "fi": "kansalaisuus",
-                "nl": "de nationaliteit"
-            },
-            "plural": {
-                "en": "nationalities",
-                "fi": "kansalaisuudet",
-                "nl": "de nationaliteiten"
-            }
+    "nationality": {
+        "involves": "country",
+        "singular": {
+            "en": "nationality",
+            "fi": "kansalaisuus",
+            "nl": "de nationaliteit"
+        },
+        "plural": {
+            "en": "nationalities",
+            "fi": "kansalaisuudet",
+            "nl": "de nationaliteiten"
         }
     }
 }

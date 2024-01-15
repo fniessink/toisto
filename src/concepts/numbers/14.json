@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "14": {
-            "hypernym": "number",
-            "roots": [
-                "4",
-                "10"
-            ],
-            "cardinal": {
-                "en": "fourteen",
-                "fi": "neljätoista",
-                "nl": "veertien"
-            },
-            "ordinal": {
-                "en": "fourteenth",
-                "fi": "neljästoista",
-                "nl": "veertiende"
-            }
+    "14": {
+        "hypernym": "number",
+        "roots": [
+            "4",
+            "10"
+        ],
+        "cardinal": {
+            "en": "fourteen",
+            "fi": "neljätoista",
+            "nl": "veertien"
+        },
+        "ordinal": {
+            "en": "fourteenth",
+            "fi": "neljästoista",
+            "nl": "veertiende"
         }
     }
 }

@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "hand": {
-            "holonym": "body",
-            "singular": {
-                "en": "hand",
-                "fi": "käsi",
-                "nl": "de hand"
-            },
-            "plural": {
-                "en": "hands",
-                "fi": "kädet",
-                "nl": "de handen"
-            }
+    "hand": {
+        "holonym": "body",
+        "singular": {
+            "en": "hand",
+            "fi": "käsi",
+            "nl": "de hand"
+        },
+        "plural": {
+            "en": "hands",
+            "fi": "kädet",
+            "nl": "de handen"
         }
     }
 }

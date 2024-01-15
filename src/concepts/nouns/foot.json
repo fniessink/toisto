@@ -1,17 +1,15 @@
 {
-    "concepts": {
-        "foot": {
-            "holonym": "body",
-            "singular": {
-                "en": "foot",
-                "fi": "jalka;lower part",
-                "nl": "de voet"
-            },
-            "plural": {
-                "en": "feet",
-                "fi": "jalat;lower part",
-                "nl": "de voeten"
-            }
+    "foot": {
+        "holonym": "body",
+        "singular": {
+            "en": "foot",
+            "fi": "jalka;lower part",
+            "nl": "de voet"
+        },
+        "plural": {
+            "en": "feet",
+            "fi": "jalat;lower part",
+            "nl": "de voeten"
         }
     }
 }

@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "round": {
-            "positive degree": {
-                "en": "round",
-                "fi": "pyöreä",
-                "nl": "rond"
-            },
-            "comparative degree": {
-                "en": "rounder",
-                "fi": "pyöreämpi",
-                "nl": "ronder"
-            },
-            "superlative degree": {
-                "en": "roundest",
-                "fi": "pyörein",
-                "nl": "rondst"
-            }
+    "round": {
+        "positive degree": {
+            "en": "round",
+            "fi": "pyöreä",
+            "nl": "rond"
+        },
+        "comparative degree": {
+            "en": "rounder",
+            "fi": "pyöreämpi",
+            "nl": "ronder"
+        },
+        "superlative degree": {
+            "en": "roundest",
+            "fi": "pyörein",
+            "nl": "rondst"
         }
     }
 }

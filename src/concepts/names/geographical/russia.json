@@ -1,21 +1,19 @@
 {
-    "concepts": {
-        "russia": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            },
-            "en": "Russia",
-            "fi": "Venäjä",
-            "nl": "Rusland"
+    "russia": {
+        "hypernym": "country",
+        "roots": {
+            "nl": "country"
         },
-        "russian": {
-            "hypernym": "nationality",
-            "involves": "russia",
-            "roots": "russia",
-            "en": "Russian",
-            "fi": "venäläinen",
-            "nl": "Russisch"
-        }
+        "en": "Russia",
+        "fi": "Venäjä",
+        "nl": "Rusland"
+    },
+    "russian": {
+        "hypernym": "nationality",
+        "involves": "russia",
+        "roots": "russia",
+        "en": "Russian",
+        "fi": "venäläinen",
+        "nl": "Russisch"
     }
 }

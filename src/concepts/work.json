@@ -1,500 +1,498 @@
 {
-    "concepts": {
-        "work": {
-            "en": "work",
-            "fi": "työ",
-            "nl": [
-                "het werk",
-                "de arbeid"
+    "work": {
+        "en": "work",
+        "fi": "työ",
+        "nl": [
+            "het werk",
+            "de arbeid"
+        ]
+    },
+    "job": {
+        "roots": {
+            "fi": [
+                "work",
+                "place"
             ]
         },
-        "job": {
-            "roots": {
-                "fi": [
-                    "work",
-                    "place"
-                ]
-            },
-            "en": "job",
-            "fi": "työpaikka",
-            "nl": "de baan"
-        },
-        "company": {
-            "en": [
-                "company",
-                "firm"
-            ],
+        "en": "job",
+        "fi": "työpaikka",
+        "nl": "de baan"
+    },
+    "company": {
+        "en": [
+            "company",
+            "firm"
+        ],
+        "fi": [
+            "yritys",
+            "firma*"
+        ],
+        "nl": [
+            "de onderneming",
+            "de firma",
+            "het bedrijf"
+        ]
+    },
+    "study": {
+        "hypernym": "room",
+        "involves": "work",
+        "roots": {
             "fi": [
-                "yritys",
-                "firma*"
-            ],
-            "nl": [
-                "de onderneming",
-                "de firma",
-                "het bedrijf"
-            ]
-        },
-        "study": {
-            "hypernym": "room",
-            "involves": "work",
-            "roots": {
-                "fi": [
-                    "work",
-                    "room"
-                ],
-                "nl": [
-                    "work",
-                    "room"
-                ]
-            },
-            "en": "study",
-            "fi": "työhuone",
-            "nl": "de werkkamer"
-        },
-        "workplace": {
-            "hypernym": "place",
-            "involves": "work",
-            "roots": {
-                "en": [
-                    "work",
-                    "place"
-                ],
-                "fi": "work",
-                "nl": [
-                    "work",
-                    "place"
-                ]
-            },
-            "en": "workplace",
-            "fi": "työpiste",
-            "nl": "de werkplek"
-        },
-        "department": {
-            "en": "department",
-            "fi": "osasto",
-            "nl": "de afdeling"
-        },
-        "meeting": {
-            "en": "meeting",
-            "fi": [
-                "kokous",
-                "palaveri",
-                "neuvottelu"
-            ],
-            "nl": "de vergadering"
-        },
-        "meeting room": {
-            "hypernym": "room",
-            "involves": "meeting",
-            "roots": [
-                "meeting",
+                "work",
                 "room"
             ],
-            "en": "meeting room",
-            "fi": [
-                "neuvotteluhuone",
-                "neukkari*"
-            ],
-            "nl": "de vergaderkamer"
-        },
-        "workday": {
-            "hypernym": "day",
-            "roots": [
+            "nl": [
                 "work",
-                "day"
-            ],
-            "en": "workday",
-            "fi": "työpäivä",
-            "nl": "de werkdag"
-        },
-        "working time": {
-            "involves": "work",
-            "roots": {
-                "en": [
-                    "work",
-                    "time",
-                    "hour"
-                ],
-                "fi": [
-                    "work",
-                    "time"
-                ],
-                "nl": [
-                    "work",
-                    "time"
-                ]
-            },
-            "en": [
-                "working time",
-                "working hours"
-            ],
-            "fi": "työaika",
-            "nl": "de werktijd"
-        },
-        "shift": {
-            "roots": {
-                "fi": "work"
-            },
-            "en": "shift",
-            "fi": "työvuoro",
-            "nl": "de dienst"
-        },
-        "overtime": {
-            "roots": {
-                "en": "time",
-                "fi": "work",
-                "nl": "work"
-            },
-            "en": "overtime",
-            "fi": "ylityö",
-            "nl": "het overwerk"
-        },
-        "remote work": {
-            "hypernym": "work",
-            "roots": {
-                "en": "work",
-                "fi": "work",
-                "nl": [
-                    "home",
-                    "work"
-                ]
-            },
-            "en": "remote work",
-            "fi": "etätyö",
-            "nl": "het thuiswerk"
-        },
-        "part-time job": {
-            "hypernym": "job",
-            "roots": {
-                "en": [
-                    "job"
-                ],
-                "fi": [
-                    "work"
-                ],
-                "nl": [
-                    "werk"
-                ]
-            },
-            "en": "part-time job",
-            "fi": "osa-aikatyö",
-            "nl": "het deeltijdwerk"
-        },
-        "vacation": {
-            "en": "vacation",
-            "fi": "loma",
-            "nl": "de vakantie"
-        },
-        "employment contract": {
-            "hypernym": "contract",
-            "roots": {
-                "fi": "work",
-                "nl": "work"
-            },
-            "en": "employment contract",
-            "fi": "työsopimus",
-            "nl": "het arbeidscontract"
-        },
-        "salary": {
-            "hypernym": "money",
-            "en": [
-                "salary",
-                "pay",
-                "wage"
-            ],
-            "fi": "palkka",
-            "nl": [
-                "het salaris",
-                "het loon"
+                "room"
             ]
         },
-        "evening allowance": {
-            "hypernym": "salary",
-            "roots": "evening",
-            "en": "evening allowance",
-            "fi": "iltalisä",
-            "nl": "de avondtoeslag"
-        },
-        "verokortti": {
-            "en": "(card with personal tax data)",
-            "fi": "verokortti",
-            "nl": "(kaart met persoonlijke belastinggegevens)"
-        },
-        "sick leave": {
-            "roots": {
-                "fi": [
-                    "disease",
-                    "vacation"
-                ],
-                "nl": "disease"
-            },
-            "en": "sick leave",
-            "fi": "sairausloma",
-            "nl": "het ziekteverlof"
-        },
-        "employer": {
-            "antonym": "employee",
-            "roots": {
-                "fi": [
-                    "work",
-                    "to give"
-                ],
-                "nl": [
-                    "work",
-                    "to give"
-                ]
-            },
-            "en": "employer",
-            "fi": "työnantaja",
-            "nl": "de werkgever"
-        },
-        "employee": {
-            "antonym": "employer",
-            "roots": {
-                "fi": "work",
-                "nl": [
-                    "work",
-                    "to take"
-                ]
-            },
-            "en": "employee",
-            "fi": "työntekijä",
-            "nl": "de werknemer"
-        },
-        "boss": {
-            "roots": {
-                "fi": "man"
-            },
-            "en": "boss",
-            "fi": [
-                "esimies",
-                "esihenkilö",
-                "pomo*"
+        "en": "study",
+        "fi": "työhuone",
+        "nl": "de werkkamer"
+    },
+    "workplace": {
+        "hypernym": "place",
+        "involves": "work",
+        "roots": {
+            "en": [
+                "work",
+                "place"
             ],
-            "nl": "de baas"
-        },
-        "coworker": {
-            "roots": {
-                "fi": [
-                    "work",
-                    "friend"
-                ]
-            },
-            "en": "coworker",
-            "fi": [
-                "työkaveri",
-                "kollega"
-            ],
-            "nl": "de collega"
-        },
-        "team": {
-            "en": "team",
-            "fi": "tiimi",
-            "nl": "het team"
-        },
-        "information technology": {
-            "en": "information technology",
-            "fi": "informaatioteknologia",
-            "nl": "de informatietechnologie"
-        },
-        "computer": {
-            "en": "computer",
-            "fi": "tietokone",
-            "nl": "de computer"
-        },
-        "laptop": {
-            "hypernym": "computer",
-            "en": "laptop",
-            "fi": [
-                "kannettava tietokone",
-                "läppäri"
-            ],
-            "nl": "de laptop"
-        },
-        "email": {
-            "roots": {
-                "en": "mail",
-                "fi": "mail"
-            },
-            "en": "e-mail|email",
-            "fi": "sähköposti",
-            "nl": "de e-mail"
-        },
-        "username": {
-            "roots": {
-                "en": "name",
-                "nl": "name"
-            },
-            "en": "username",
-            "fi": "käyttäjätunnus",
-            "nl": "de gebruikersnaam"
-        },
-        "password": {
-            "roots": "word",
-            "en": "password",
-            "fi": "salasana",
-            "nl": "het wachtwoord"
-        },
-        "printer": {
-            "en": "printer",
-            "fi": [
-                "tulostin",
-                "printteri*"
-            ],
-            "nl": "de printer"
-        },
-        "to print": {
-            "involves": "printer",
-            "en": "to print",
-            "fi": [
-                "tulostaa",
-                "printata*"
-            ],
-            "nl": "printen"
-        },
-        "photocopier": {
-            "en": "photocopier|copier",
-            "fi": "kopiokone",
+            "fi": "work",
             "nl": [
-                "de kopieermachine",
-                "het kopieerapparaat"
+                "work",
+                "place"
             ]
         },
-        "to copy": {
-            "involves": "photocopier",
-            "en": "to copy",
-            "fi": "kopioida",
-            "nl": "kopiëren"
-        },
-        "to scan": {
-            "en": "to scan",
-            "fi": "skannata",
-            "nl": "scannen"
-        },
-        "telephone": {
-            "en": "telephone|phone",
-            "fi": "puhelin",
-            "nl": "de telefoon"
-        },
-        "mobile telephone": {
-            "hypernym": "telephone",
+        "en": "workplace",
+        "fi": "työpiste",
+        "nl": "de werkplek"
+    },
+    "department": {
+        "en": "department",
+        "fi": "osasto",
+        "nl": "de afdeling"
+    },
+    "meeting": {
+        "en": "meeting",
+        "fi": [
+            "kokous",
+            "palaveri",
+            "neuvottelu"
+        ],
+        "nl": "de vergadering"
+    },
+    "meeting room": {
+        "hypernym": "room",
+        "involves": "meeting",
+        "roots": [
+            "meeting",
+            "room"
+        ],
+        "en": "meeting room",
+        "fi": [
+            "neuvotteluhuone",
+            "neukkari*"
+        ],
+        "nl": "de vergaderkamer"
+    },
+    "workday": {
+        "hypernym": "day",
+        "roots": [
+            "work",
+            "day"
+        ],
+        "en": "workday",
+        "fi": "työpäivä",
+        "nl": "de werkdag"
+    },
+    "working time": {
+        "involves": "work",
+        "roots": {
             "en": [
-                "mobile telephone|mobile phone|mobile",
-                "cellullar telephone|cellular phone|cell phone|cellphone"
+                "work",
+                "time",
+                "hour"
             ],
             "fi": [
-                "matkapuhelin",
-                "kännykkä*"
+                "work",
+                "time"
             ],
-            "nl": "de mobiele telefoon|de mobiel|het mobieltje"
-        },
-        "smartphone": {
-            "hypernym": "mobile telephone",
-            "roots": {
-                "en": "telephone",
-                "fi": "telephone"
-            },
-            "en": "smartphone",
-            "fi": "älypuhelin",
-            "nl": "de smartphone"
-        },
-        "project": {
-            "en": "project",
-            "fi": "projekti",
-            "nl": "het project"
-        },
-        "contract": {
-            "en": "contract",
-            "fi": "sopimus",
-            "nl": "het contract"
-        },
-        "schedule": {
-            "roots": {
-                "fi": "time"
-            },
-            "en": "schedule",
-            "fi": "aikataulu",
-            "nl": "het rooster"
-        },
-        "hurry": {
-            "en": [
-                "hurry",
-                "rush"
-            ],
-            "fi": "kiire",
             "nl": [
-                "de haast",
-                "de druk"
+                "work",
+                "time"
             ]
         },
-        "stress": {
-            "en": "stress",
-            "fi": "stressi",
-            "nl": "de stress"
+        "en": [
+            "working time",
+            "working hours"
+        ],
+        "fi": "työaika",
+        "nl": "de werktijd"
+    },
+    "shift": {
+        "roots": {
+            "fi": "work"
         },
-        "break": {
-            "en": "break",
-            "fi": "tauko",
-            "nl": "de pauze"
+        "en": "shift",
+        "fi": "työvuoro",
+        "nl": "de dienst"
+    },
+    "overtime": {
+        "roots": {
+            "en": "time",
+            "fi": "work",
+            "nl": "work"
         },
-        "lunchbreak": {
-            "hypernym": "break",
-            "involves": "lunch",
-            "roots": [
-                "lunch",
-                "break"
+        "en": "overtime",
+        "fi": "ylityö",
+        "nl": "het overwerk"
+    },
+    "remote work": {
+        "hypernym": "work",
+        "roots": {
+            "en": "work",
+            "fi": "work",
+            "nl": [
+                "home",
+                "work"
+            ]
+        },
+        "en": "remote work",
+        "fi": "etätyö",
+        "nl": "het thuiswerk"
+    },
+    "part-time job": {
+        "hypernym": "job",
+        "roots": {
+            "en": [
+                "job"
             ],
-            "en": "lunchbreak|lunch break",
-            "fi": "lounastauko",
-            "nl": "de lunchpauze"
-        },
-        "coffee break": {
-            "hypernym": "break",
-            "involves": "coffee",
-            "roots": [
-                "coffee",
-                "break"
+            "fi": [
+                "work"
             ],
-            "en": "coffee break",
-            "fi": "kahvitauko",
-            "nl": "de koffiepauze"
+            "nl": [
+                "werk"
+            ]
         },
-        "canteen": {
-            "roots": {
-                "fi": "food"
-            },
-            "en": "canteen",
-            "fi": "ruokala",
-            "nl": "de kantine"
+        "en": "part-time job",
+        "fi": "osa-aikatyö",
+        "nl": "het deeltijdwerk"
+    },
+    "vacation": {
+        "en": "vacation",
+        "fi": "loma",
+        "nl": "de vakantie"
+    },
+    "employment contract": {
+        "hypernym": "contract",
+        "roots": {
+            "fi": "work",
+            "nl": "work"
         },
-        "coffee machine": {
-            "involves": "coffee",
-            "roots": "coffee",
-            "en": "coffee machine",
-            "fi": "kahviautomaatti",
-            "nl": "de koffieautomaat"
+        "en": "employment contract",
+        "fi": "työsopimus",
+        "nl": "het arbeidscontract"
+    },
+    "salary": {
+        "hypernym": "money",
+        "en": [
+            "salary",
+            "pay",
+            "wage"
+        ],
+        "fi": "palkka",
+        "nl": [
+            "het salaris",
+            "het loon"
+        ]
+    },
+    "evening allowance": {
+        "hypernym": "salary",
+        "roots": "evening",
+        "en": "evening allowance",
+        "fi": "iltalisä",
+        "nl": "de avondtoeslag"
+    },
+    "verokortti": {
+        "en": "(card with personal tax data)",
+        "fi": "verokortti",
+        "nl": "(kaart met persoonlijke belastinggegevens)"
+    },
+    "sick leave": {
+        "roots": {
+            "fi": [
+                "disease",
+                "vacation"
+            ],
+            "nl": "disease"
         },
-        "packed lunch": {
-            "roots": {
-                "en": "lunch",
-                "nl": "lunch"
-            },
-            "en": "packed lunch",
-            "fi": "eväät",
-            "nl": "het lunchpakket"
+        "en": "sick leave",
+        "fi": "sairausloma",
+        "nl": "het ziekteverlof"
+    },
+    "employer": {
+        "antonym": "employee",
+        "roots": {
+            "fi": [
+                "work",
+                "to give"
+            ],
+            "nl": [
+                "work",
+                "to give"
+            ]
         },
-        "llc": {
-            "hypernym": "company",
-            "full form": {
-                "en": "limited liability company",
-                "fi": "osakeyhtiö",
-                "nl": "de naamloze vennootschap"
-            },
-            "abbreviation": {
-                "en": "LLC",
-                "fi": "oy",
-                "nl": "de NV"
-            }
+        "en": "employer",
+        "fi": "työnantaja",
+        "nl": "de werkgever"
+    },
+    "employee": {
+        "antonym": "employer",
+        "roots": {
+            "fi": "work",
+            "nl": [
+                "work",
+                "to take"
+            ]
+        },
+        "en": "employee",
+        "fi": "työntekijä",
+        "nl": "de werknemer"
+    },
+    "boss": {
+        "roots": {
+            "fi": "man"
+        },
+        "en": "boss",
+        "fi": [
+            "esimies",
+            "esihenkilö",
+            "pomo*"
+        ],
+        "nl": "de baas"
+    },
+    "coworker": {
+        "roots": {
+            "fi": [
+                "work",
+                "friend"
+            ]
+        },
+        "en": "coworker",
+        "fi": [
+            "työkaveri",
+            "kollega"
+        ],
+        "nl": "de collega"
+    },
+    "team": {
+        "en": "team",
+        "fi": "tiimi",
+        "nl": "het team"
+    },
+    "information technology": {
+        "en": "information technology",
+        "fi": "informaatioteknologia",
+        "nl": "de informatietechnologie"
+    },
+    "computer": {
+        "en": "computer",
+        "fi": "tietokone",
+        "nl": "de computer"
+    },
+    "laptop": {
+        "hypernym": "computer",
+        "en": "laptop",
+        "fi": [
+            "kannettava tietokone",
+            "läppäri"
+        ],
+        "nl": "de laptop"
+    },
+    "email": {
+        "roots": {
+            "en": "mail",
+            "fi": "mail"
+        },
+        "en": "e-mail|email",
+        "fi": "sähköposti",
+        "nl": "de e-mail"
+    },
+    "username": {
+        "roots": {
+            "en": "name",
+            "nl": "name"
+        },
+        "en": "username",
+        "fi": "käyttäjätunnus",
+        "nl": "de gebruikersnaam"
+    },
+    "password": {
+        "roots": "word",
+        "en": "password",
+        "fi": "salasana",
+        "nl": "het wachtwoord"
+    },
+    "printer": {
+        "en": "printer",
+        "fi": [
+            "tulostin",
+            "printteri*"
+        ],
+        "nl": "de printer"
+    },
+    "to print": {
+        "involves": "printer",
+        "en": "to print",
+        "fi": [
+            "tulostaa",
+            "printata*"
+        ],
+        "nl": "printen"
+    },
+    "photocopier": {
+        "en": "photocopier|copier",
+        "fi": "kopiokone",
+        "nl": [
+            "de kopieermachine",
+            "het kopieerapparaat"
+        ]
+    },
+    "to copy": {
+        "involves": "photocopier",
+        "en": "to copy",
+        "fi": "kopioida",
+        "nl": "kopiëren"
+    },
+    "to scan": {
+        "en": "to scan",
+        "fi": "skannata",
+        "nl": "scannen"
+    },
+    "telephone": {
+        "en": "telephone|phone",
+        "fi": "puhelin",
+        "nl": "de telefoon"
+    },
+    "mobile telephone": {
+        "hypernym": "telephone",
+        "en": [
+            "mobile telephone|mobile phone|mobile",
+            "cellullar telephone|cellular phone|cell phone|cellphone"
+        ],
+        "fi": [
+            "matkapuhelin",
+            "kännykkä*"
+        ],
+        "nl": "de mobiele telefoon|de mobiel|het mobieltje"
+    },
+    "smartphone": {
+        "hypernym": "mobile telephone",
+        "roots": {
+            "en": "telephone",
+            "fi": "telephone"
+        },
+        "en": "smartphone",
+        "fi": "älypuhelin",
+        "nl": "de smartphone"
+    },
+    "project": {
+        "en": "project",
+        "fi": "projekti",
+        "nl": "het project"
+    },
+    "contract": {
+        "en": "contract",
+        "fi": "sopimus",
+        "nl": "het contract"
+    },
+    "schedule": {
+        "roots": {
+            "fi": "time"
+        },
+        "en": "schedule",
+        "fi": "aikataulu",
+        "nl": "het rooster"
+    },
+    "hurry": {
+        "en": [
+            "hurry",
+            "rush"
+        ],
+        "fi": "kiire",
+        "nl": [
+            "de haast",
+            "de druk"
+        ]
+    },
+    "stress": {
+        "en": "stress",
+        "fi": "stressi",
+        "nl": "de stress"
+    },
+    "break": {
+        "en": "break",
+        "fi": "tauko",
+        "nl": "de pauze"
+    },
+    "lunchbreak": {
+        "hypernym": "break",
+        "involves": "lunch",
+        "roots": [
+            "lunch",
+            "break"
+        ],
+        "en": "lunchbreak|lunch break",
+        "fi": "lounastauko",
+        "nl": "de lunchpauze"
+    },
+    "coffee break": {
+        "hypernym": "break",
+        "involves": "coffee",
+        "roots": [
+            "coffee",
+            "break"
+        ],
+        "en": "coffee break",
+        "fi": "kahvitauko",
+        "nl": "de koffiepauze"
+    },
+    "canteen": {
+        "roots": {
+            "fi": "food"
+        },
+        "en": "canteen",
+        "fi": "ruokala",
+        "nl": "de kantine"
+    },
+    "coffee machine": {
+        "involves": "coffee",
+        "roots": "coffee",
+        "en": "coffee machine",
+        "fi": "kahviautomaatti",
+        "nl": "de koffieautomaat"
+    },
+    "packed lunch": {
+        "roots": {
+            "en": "lunch",
+            "nl": "lunch"
+        },
+        "en": "packed lunch",
+        "fi": "eväät",
+        "nl": "het lunchpakket"
+    },
+    "llc": {
+        "hypernym": "company",
+        "full form": {
+            "en": "limited liability company",
+            "fi": "osakeyhtiö",
+            "nl": "de naamloze vennootschap"
+        },
+        "abbreviation": {
+            "en": "LLC",
+            "fi": "oy",
+            "nl": "de NV"
         }
     }
 }

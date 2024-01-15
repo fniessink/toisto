@@ -1,60 +1,58 @@
 {
-    "concepts": {
-        "game": {
-            "singular": {
-                "en": "game",
-                "fi": "kisa",
-                "nl": "het spel"
-            },
-            "plural": {
-                "en": "games",
-                "fi": "kisat",
-                "nl": "de spelen"
-            }
+    "game": {
+        "singular": {
+            "en": "game",
+            "fi": "kisa",
+            "nl": "het spel"
         },
-        "ball": {
-            "singular": {
-                "en": "ball",
-                "fi": "pallo",
-                "nl": "de bal"
-            },
-            "plural": {
-                "en": "balls",
-                "fi": "pallot",
-                "nl": "de ballen"
-            }
-        },
-        "football": {
-            "hypernym": "ball",
-            "roots": [
-                "ball",
-                "foot"
-            ],
-            "en": "football",
-            "fi": [
-                "jalkapallo",
-                "futis*"
-            ],
-            "nl": "de voetbal"
-        },
-        "playing field": {
-            "en": "playing field",
-            "fi": "urheilukenttä",
-            "nl": "het sportveld"
-        },
-        "swimming pool": {
-            "roots": {
-                "nl": "bath"
-            },
-            "en": "swimming pool",
-            "fi": "uimahalli",
-            "nl": "het zwembad"
-        },
-        "ice rink": {
-            "roots": "ice",
-            "en": "ice rink",
-            "fi": "jäähalli",
-            "nl": "de ijsbaan"
+        "plural": {
+            "en": "games",
+            "fi": "kisat",
+            "nl": "de spelen"
         }
+    },
+    "ball": {
+        "singular": {
+            "en": "ball",
+            "fi": "pallo",
+            "nl": "de bal"
+        },
+        "plural": {
+            "en": "balls",
+            "fi": "pallot",
+            "nl": "de ballen"
+        }
+    },
+    "football": {
+        "hypernym": "ball",
+        "roots": [
+            "ball",
+            "foot"
+        ],
+        "en": "football",
+        "fi": [
+            "jalkapallo",
+            "futis*"
+        ],
+        "nl": "de voetbal"
+    },
+    "playing field": {
+        "en": "playing field",
+        "fi": "urheilukenttä",
+        "nl": "het sportveld"
+    },
+    "swimming pool": {
+        "roots": {
+            "nl": "bath"
+        },
+        "en": "swimming pool",
+        "fi": "uimahalli",
+        "nl": "het zwembad"
+    },
+    "ice rink": {
+        "roots": "ice",
+        "en": "ice rink",
+        "fi": "jäähalli",
+        "nl": "de ijsbaan"
     }
 }

@@ -1,20 +1,18 @@
 {
-    "concepts": {
-        "chapter": {
-            "holonym": "book",
-            "roots": {
-                "nl": "head"
-            },
-            "singular": {
-                "en": "chapter",
-                "fi": "kappale",
-                "nl": "het hoofdstuk"
-            },
-            "plural": {
-                "en": "chapters",
-                "fi": "kappaleet",
-                "nl": "de hoofdstukken"
-            }
+    "chapter": {
+        "holonym": "book",
+        "roots": {
+            "nl": "head"
+        },
+        "singular": {
+            "en": "chapter",
+            "fi": "kappale",
+            "nl": "het hoofdstuk"
+        },
+        "plural": {
+            "en": "chapters",
+            "fi": "kappaleet",
+            "nl": "de hoofdstukken"
         }
     }
 }

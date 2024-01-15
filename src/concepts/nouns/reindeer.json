@@ -1,24 +1,22 @@
 {
-    "concepts": {
-        "reindeer": {
-            "hypernym": "animal",
-            "roots": {
-                "en": "deer",
-                "nl": [
-                    "to run",
-                    "animal"
-                ]
-            },
-            "singular": {
-                "en": "reindeer;singular",
-                "fi": "poro",
-                "nl": "het rendier"
-            },
-            "plural": {
-                "en": "reindeer;plural",
-                "fi": "porot",
-                "nl": "de rendieren"
-            }
+    "reindeer": {
+        "hypernym": "animal",
+        "roots": {
+            "en": "deer",
+            "nl": [
+                "to run",
+                "animal"
+            ]
+        },
+        "singular": {
+            "en": "reindeer;singular",
+            "fi": "poro",
+            "nl": "het rendier"
+        },
+        "plural": {
+            "en": "reindeer;plural",
+            "fi": "porot",
+            "nl": "de rendieren"
         }
     }
 }

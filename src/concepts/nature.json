@@ -1,440 +1,438 @@
 {
-    "concepts": {
-        "nature": {
-            "en": "nature",
-            "fi": "luonto",
-            "nl": "de natuur"
-        },
-        "forest": {
-            "singular": {
-                "en": [
-                    "forest",
-                    "wood"
-                ],
-                "fi": "metsä",
-                "nl": [
-                    "het bos",
-                    "het woud"
-                ]
-            },
-            "plural": {
-                "en": [
-                    "forests",
-                    "woods"
-                ],
-                "fi": "metsät",
-                "nl": [
-                    "de bossen",
-                    "de wouden"
-                ]
-            }
-        },
-        "flower": {
-            "singular": {
-                "en": "flower",
-                "fi": "kukka",
-                "nl": "de bloem"
-            },
-            "plural": {
-                "en": "flowers",
-                "fi": "kukat",
-                "nl": "de bloemen"
-            }
-        },
-        "lake": {
-            "singular": {
-                "en": "lake",
-                "fi": "järvi",
-                "nl": "het meer"
-            },
-            "plural": {
-                "en": "lakes",
-                "fi": "järvet",
-                "nl": "de meren"
-            }
-        },
-        "sea": {
-            "singular": {
-                "en": "sea",
-                "fi": "meri",
-                "nl": "de zee"
-            },
-            "plural": {
-                "en": "seas",
-                "fi": "meret",
-                "nl": "de zeeën"
-            }
-        },
-        "river": {
-            "singular": {
-                "en": "river",
-                "fi": "joki",
-                "nl": "de rivier"
-            },
-            "plural": {
-                "en": "rivers",
-                "fi": "joet",
-                "nl": "de rivieren"
-            }
-        },
-        "island": {
-            "singular": {
-                "en": "island",
-                "fi": "saari",
-                "nl": "het eiland"
-            },
-            "plural": {
-                "en": "islands",
-                "fi": "saaret",
-                "nl": "de eilanden"
-            }
-        },
-        "coast": {
-            "roots": {
-                "fi": "beach"
-            },
-            "singular": {
-                "en": "coast",
-                "fi": "rannikko",
-                "nl": "de kust"
-            },
-            "plural": {
-                "en": "coasts",
-                "fi": "rannikot",
-                "nl": "de kusten"
-            }
-        },
-        "desert": {
-            "roots": {
-                "fi": "country"
-            },
-            "singular": {
-                "en": "desert",
-                "fi": [
-                    "aavikko",
-                    "autiomaa"
-                ],
-                "nl": "de woestijn"
-            },
-            "plural": {
-                "en": "deserts",
-                "fi": [
-                    "aavikot",
-                    "autiomaat"
-                ],
-                "nl": "de woestijnen"
-            }
-        },
-        "tree": {
-            "singular": {
-                "en": "tree",
-                "fi": "puu",
-                "nl": "de boom"
-            },
-            "plural": {
-                "en": "trees",
-                "fi": "puut",
-                "nl": "de bomen"
-            }
-        },
-        "beach": {
-            "hypernym": "coast",
-            "singular": {
-                "en": "beach",
-                "fi": "ranta",
-                "nl": "het strand"
-            },
-            "plural": {
-                "en": "beaches",
-                "fi": "rannat",
-                "nl": "de stranden"
-            }
-        },
-        "valley": {
-            "singular": {
-                "en": "valley",
-                "fi": "laakso",
-                "nl": "de vallei"
-            },
-            "plural": {
-                "en": "valleys",
-                "fi": "laaksot",
-                "nl": "de valleien"
-            }
-        },
-        "hill": {
-            "singular": {
-                "en": "hill",
-                "fi": [
-                    "mäki",
-                    "kukkula"
-                ],
-                "nl": "de heuvel"
-            },
-            "plural": {
-                "en": "hills",
-                "fi": [
-                    "mäet",
-                    "kukkulat"
-                ],
-                "nl": "de heuvels"
-            }
-        },
-        "mountain": {
-            "singular": {
-                "en": "mountain",
-                "fi": "vuori",
-                "nl": "de berg"
-            },
-            "plural": {
-                "en": "mountains",
-                "fi": "vuoret",
-                "nl": "de bergen"
-            }
-        },
-        "north": {
-            "en": "north|the North",
-            "fi": "pohjoinen",
-            "nl": "het noorden"
-        },
-        "east": {
-            "en": "east|the East",
-            "fi": "itä",
-            "nl": "het oosten"
-        },
-        "south": {
-            "en": "south|the South",
-            "fi": "etelä",
-            "nl": "het zuiden"
-        },
-        "west": {
-            "en": "west|the West",
-            "fi": "länsi",
-            "nl": "het westen"
-        },
-        "world": {
-            "roots": {
-                "fi": "country"
-            },
-            "en": "world",
-            "fi": "maailma",
-            "nl": "de wereld"
-        },
-        "sand": {
-            "singular": {
-                "en": "sand",
-                "fi": "hiekka",
-                "nl": "het zand"
-            },
-            "plural": {
-                "en": "sands",
-                "fi": "hiekat",
-                "nl": "de zanden"
-            }
-        },
-        "ground": {
-            "singular": {
-                "en": "ground",
-                "fi": "maa;solid surface of the earth",
-                "nl": "de grond"
-            },
-            "plural": {
-                "en": "grounds",
-                "fi": "maat;solid surfaces of the earth",
-                "nl": "de gronden"
-            }
-        },
-        "stone": {
-            "singular": {
-                "en": "stone",
-                "fi": "kivi",
-                "nl": "de steen"
-            },
-            "plural": {
-                "en": "stones",
-                "fi": "kivet",
-                "nl": "de stenen"
-            }
-        },
-        "fire": {
-            "singular": {
-                "en": "fire",
-                "fi": "tuli",
-                "nl": "het vuur"
-            },
-            "plural": {
-                "en": "fires",
-                "fi": "tulet",
-                "nl": "de vuren"
-            }
-        },
-        "wave": {
-            "singular": {
-                "en": "wave",
-                "fi": "aalto",
-                "nl": "de golf"
-            },
-            "plural": {
-                "en": "waves",
-                "fi": "aallot",
-                "nl": "de golven"
-            }
-        },
-        "volcano": {
-            "roots": {
-                "fi": [
-                    "fire",
-                    "mountain"
-                ]
-            },
-            "singular": {
-                "en": "volcano",
-                "fi": "tulivuori",
-                "nl": "de vulkaan"
-            },
-            "plural": {
-                "en": "volcanoes|volcanos",
-                "fi": "tulivuoret",
-                "nl": "de vulkanen"
-            }
-        },
-        "cave": {
-            "singular": {
-                "en": "cave",
-                "fi": "luola",
-                "nl": "de grot"
-            },
-            "plural": {
-                "en": "caves",
-                "fi": "luolat",
-                "nl": "de grotten"
-            }
-        },
-        "canyon": {
-            "singular": {
-                "en": "canyon",
-                "fi": "rotko",
-                "nl": "de kloof"
-            },
-            "plural": {
-                "en": "canyons",
-                "fi": "rotkot",
-                "nl": "de kloven"
-            }
-        },
-        "rainforest": {
-            "hypernym": "forest",
-            "roots": [
-                "rain",
-                "forest"
-            ],
-            "singular": {
-                "en": "rainforest|rain forest",
-                "fi": "sademetsä",
-                "nl": "het regenwoud"
-            },
-            "plural": {
-                "en": "rainforests|rain forests",
-                "fi": "sademetsät",
-                "nl": "de regenwouden"
-            }
-        },
-        "glacier": {
-            "roots": {
-                "fi": "ice"
-            },
-            "singular": {
-                "en": "glacier",
-                "fi": "jäätikkö",
-                "nl": "de gletsjer"
-            },
-            "plural": {
-                "en": "glaciers",
-                "fi": "jäätiköt",
-                "nl": "de gletsjers"
-            }
-        },
-        "northern lights": {
-            "roots": {
-                "en": [
-                    "north",
-                    "light"
-                ],
-                "fi": "fire",
-                "nl": [
-                    "north",
-                    "light"
-                ]
-            },
-            "en": "northern lights",
-            "fi": "revontulet",
-            "nl": "het noorderlicht"
-        },
-        "it is cold in the north": {
-            "roots": [
-                "to be",
-                "cold",
-                "north"
-            ],
-            "en": "It is cold in the North.",
-            "fi": "Pohjoisessa on kylmä.",
-            "nl": "Het is koud in het Noorden."
-        },
-        "it is warm in the south": {
-            "roots": [
-                "to be",
-                "warm",
-                "south"
-            ],
-            "en": "It is warm in the South.",
-            "fi": "Etelässä on lämmin.",
-            "nl": "Het is warm in het Zuiden."
-        },
-        "she is from the north": {
-            "roots": [
-                "north",
-                "to come"
-            ],
-            "en": "She is from the North.",
-            "fi": [
-                "Hän tulee pohjoisesta.;female",
-                "Hän on kotoisin pohjoisesta.;female"
-            ],
-            "nl": "Zij komt uit het Noorden."
-        },
-        "they live in the west": {
-            "roots": [
-                "west",
-                "to live"
-            ],
-            "en": "They live in the West.",
-            "fi": "He asuvat lännessä.",
-            "nl": "Zij wonen in het Westen."
-        },
-        "the city is in the east": {
-            "roots": [
-                "city",
-                "to be",
-                "east"
-            ],
-            "en": "The city is in the east.",
-            "fi": [
-                "Kaupunki on idässä.",
-                "Kaupunki sijaitsee idässä."
-            ],
-            "nl": "De stad ligt in het oosten."
-        },
-        "we walk in the forest": {
-            "roots": [
-                "to walk",
-                "forest"
-            ],
+    "nature": {
+        "en": "nature",
+        "fi": "luonto",
+        "nl": "de natuur"
+    },
+    "forest": {
+        "singular": {
             "en": [
-                "We walk in the forest.",
-                "We walk in the wood."
+                "forest",
+                "wood"
             ],
-            "fi": "Me kävelemme metsässä.",
-            "nl": "Wij wandelen in het bos."
+            "fi": "metsä",
+            "nl": [
+                "het bos",
+                "het woud"
+            ]
+        },
+        "plural": {
+            "en": [
+                "forests",
+                "woods"
+            ],
+            "fi": "metsät",
+            "nl": [
+                "de bossen",
+                "de wouden"
+            ]
         }
+    },
+    "flower": {
+        "singular": {
+            "en": "flower",
+            "fi": "kukka",
+            "nl": "de bloem"
+        },
+        "plural": {
+            "en": "flowers",
+            "fi": "kukat",
+            "nl": "de bloemen"
+        }
+    },
+    "lake": {
+        "singular": {
+            "en": "lake",
+            "fi": "järvi",
+            "nl": "het meer"
+        },
+        "plural": {
+            "en": "lakes",
+            "fi": "järvet",
+            "nl": "de meren"
+        }
+    },
+    "sea": {
+        "singular": {
+            "en": "sea",
+            "fi": "meri",
+            "nl": "de zee"
+        },
+        "plural": {
+            "en": "seas",
+            "fi": "meret",
+            "nl": "de zeeën"
+        }
+    },
+    "river": {
+        "singular": {
+            "en": "river",
+            "fi": "joki",
+            "nl": "de rivier"
+        },
+        "plural": {
+            "en": "rivers",
+            "fi": "joet",
+            "nl": "de rivieren"
+        }
+    },
+    "island": {
+        "singular": {
+            "en": "island",
+            "fi": "saari",
+            "nl": "het eiland"
+        },
+        "plural": {
+            "en": "islands",
+            "fi": "saaret",
+            "nl": "de eilanden"
+        }
+    },
+    "coast": {
+        "roots": {
+            "fi": "beach"
+        },
+        "singular": {
+            "en": "coast",
+            "fi": "rannikko",
+            "nl": "de kust"
+        },
+        "plural": {
+            "en": "coasts",
+            "fi": "rannikot",
+            "nl": "de kusten"
+        }
+    },
+    "desert": {
+        "roots": {
+            "fi": "country"
+        },
+        "singular": {
+            "en": "desert",
+            "fi": [
+                "aavikko",
+                "autiomaa"
+            ],
+            "nl": "de woestijn"
+        },
+        "plural": {
+            "en": "deserts",
+            "fi": [
+                "aavikot",
+                "autiomaat"
+            ],
+            "nl": "de woestijnen"
+        }
+    },
+    "tree": {
+        "singular": {
+            "en": "tree",
+            "fi": "puu",
+            "nl": "de boom"
+        },
+        "plural": {
+            "en": "trees",
+            "fi": "puut",
+            "nl": "de bomen"
+        }
+    },
+    "beach": {
+        "hypernym": "coast",
+        "singular": {
+            "en": "beach",
+            "fi": "ranta",
+            "nl": "het strand"
+        },
+        "plural": {
+            "en": "beaches",
+            "fi": "rannat",
+            "nl": "de stranden"
+        }
+    },
+    "valley": {
+        "singular": {
+            "en": "valley",
+            "fi": "laakso",
+            "nl": "de vallei"
+        },
+        "plural": {
+            "en": "valleys",
+            "fi": "laaksot",
+            "nl": "de valleien"
+        }
+    },
+    "hill": {
+        "singular": {
+            "en": "hill",
+            "fi": [
+                "mäki",
+                "kukkula"
+            ],
+            "nl": "de heuvel"
+        },
+        "plural": {
+            "en": "hills",
+            "fi": [
+                "mäet",
+                "kukkulat"
+            ],
+            "nl": "de heuvels"
+        }
+    },
+    "mountain": {
+        "singular": {
+            "en": "mountain",
+            "fi": "vuori",
+            "nl": "de berg"
+        },
+        "plural": {
+            "en": "mountains",
+            "fi": "vuoret",
+            "nl": "de bergen"
+        }
+    },
+    "north": {
+        "en": "north|the North",
+        "fi": "pohjoinen",
+        "nl": "het noorden"
+    },
+    "east": {
+        "en": "east|the East",
+        "fi": "itä",
+        "nl": "het oosten"
+    },
+    "south": {
+        "en": "south|the South",
+        "fi": "etelä",
+        "nl": "het zuiden"
+    },
+    "west": {
+        "en": "west|the West",
+        "fi": "länsi",
+        "nl": "het westen"
+    },
+    "world": {
+        "roots": {
+            "fi": "country"
+        },
+        "en": "world",
+        "fi": "maailma",
+        "nl": "de wereld"
+    },
+    "sand": {
+        "singular": {
+            "en": "sand",
+            "fi": "hiekka",
+            "nl": "het zand"
+        },
+        "plural": {
+            "en": "sands",
+            "fi": "hiekat",
+            "nl": "de zanden"
+        }
+    },
+    "ground": {
+        "singular": {
+            "en": "ground",
+            "fi": "maa;solid surface of the earth",
+            "nl": "de grond"
+        },
+        "plural": {
+            "en": "grounds",
+            "fi": "maat;solid surfaces of the earth",
+            "nl": "de gronden"
+        }
+    },
+    "stone": {
+        "singular": {
+            "en": "stone",
+            "fi": "kivi",
+            "nl": "de steen"
+        },
+        "plural": {
+            "en": "stones",
+            "fi": "kivet",
+            "nl": "de stenen"
+        }
+    },
+    "fire": {
+        "singular": {
+            "en": "fire",
+            "fi": "tuli",
+            "nl": "het vuur"
+        },
+        "plural": {
+            "en": "fires",
+            "fi": "tulet",
+            "nl": "de vuren"
+        }
+    },
+    "wave": {
+        "singular": {
+            "en": "wave",
+            "fi": "aalto",
+            "nl": "de golf"
+        },
+        "plural": {
+            "en": "waves",
+            "fi": "aallot",
+            "nl": "de golven"
+        }
+    },
+    "volcano": {
+        "roots": {
+            "fi": [
+                "fire",
+                "mountain"
+            ]
+        },
+        "singular": {
+            "en": "volcano",
+            "fi": "tulivuori",
+            "nl": "de vulkaan"
+        },
+        "plural": {
+            "en": "volcanoes|volcanos",
+            "fi": "tulivuoret",
+            "nl": "de vulkanen"
+        }
+    },
+    "cave": {
+        "singular": {
+            "en": "cave",
+            "fi": "luola",
+            "nl": "de grot"
+        },
+        "plural": {
+            "en": "caves",
+            "fi": "luolat",
+            "nl": "de grotten"
+        }
+    },
+    "canyon": {
+        "singular": {
+            "en": "canyon",
+            "fi": "rotko",
+            "nl": "de kloof"
+        },
+        "plural": {
+            "en": "canyons",
+            "fi": "rotkot",
+            "nl": "de kloven"
+        }
+    },
+    "rainforest": {
+        "hypernym": "forest",
+        "roots": [
+            "rain",
+            "forest"
+        ],
+        "singular": {
+            "en": "rainforest|rain forest",
+            "fi": "sademetsä",
+            "nl": "het regenwoud"
+        },
+        "plural": {
+            "en": "rainforests|rain forests",
+            "fi": "sademetsät",
+            "nl": "de regenwouden"
+        }
+    },
+    "glacier": {
+        "roots": {
+            "fi": "ice"
+        },
+        "singular": {
+            "en": "glacier",
+            "fi": "jäätikkö",
+            "nl": "de gletsjer"
+        },
+        "plural": {
+            "en": "glaciers",
+            "fi": "jäätiköt",
+            "nl": "de gletsjers"
+        }
+    },
+    "northern lights": {
+        "roots": {
+            "en": [
+                "north",
+                "light"
+            ],
+            "fi": "fire",
+            "nl": [
+                "north",
+                "light"
+            ]
+        },
+        "en": "northern lights",
+        "fi": "revontulet",
+        "nl": "het noorderlicht"
+    },
+    "it is cold in the north": {
+        "roots": [
+            "to be",
+            "cold",
+            "north"
+        ],
+        "en": "It is cold in the North.",
+        "fi": "Pohjoisessa on kylmä.",
+        "nl": "Het is koud in het Noorden."
+    },
+    "it is warm in the south": {
+        "roots": [
+            "to be",
+            "warm",
+            "south"
+        ],
+        "en": "It is warm in the South.",
+        "fi": "Etelässä on lämmin.",
+        "nl": "Het is warm in het Zuiden."
+    },
+    "she is from the north": {
+        "roots": [
+            "north",
+            "to come"
+        ],
+        "en": "She is from the North.",
+        "fi": [
+            "Hän tulee pohjoisesta.;female",
+            "Hän on kotoisin pohjoisesta.;female"
+        ],
+        "nl": "Zij komt uit het Noorden."
+    },
+    "they live in the west": {
+        "roots": [
+            "west",
+            "to live"
+        ],
+        "en": "They live in the West.",
+        "fi": "He asuvat lännessä.",
+        "nl": "Zij wonen in het Westen."
+    },
+    "the city is in the east": {
+        "roots": [
+            "city",
+            "to be",
+            "east"
+        ],
+        "en": "The city is in the east.",
+        "fi": [
+            "Kaupunki on idässä.",
+            "Kaupunki sijaitsee idässä."
+        ],
+        "nl": "De stad ligt in het oosten."
+    },
+    "we walk in the forest": {
+        "roots": [
+            "to walk",
+            "forest"
+        ],
+        "en": [
+            "We walk in the forest.",
+            "We walk in the wood."
+        ],
+        "fi": "Me kävelemme metsässä.",
+        "nl": "Wij wandelen in het bos."
     }
 }

@@ -1,22 +1,20 @@
 {
-    "concepts": {
-        "hard": {
-            "antonym": "easy",
-            "positive degree": {
-                "en": "hard",
-                "fi": "vaikea",
-                "nl": "moeilijk"
-            },
-            "comparative degree": {
-                "en": "harder",
-                "fi": "vaikeampi",
-                "nl": "moeilijker"
-            },
-            "superlative degree": {
-                "en": "hardest",
-                "fi": "vaikein",
-                "nl": "moeilijkst"
-            }
+    "hard": {
+        "antonym": "easy",
+        "positive degree": {
+            "en": "hard",
+            "fi": "vaikea",
+            "nl": "moeilijk"
+        },
+        "comparative degree": {
+            "en": "harder",
+            "fi": "vaikeampi",
+            "nl": "moeilijker"
+        },
+        "superlative degree": {
+            "en": "hardest",
+            "fi": "vaikein",
+            "nl": "moeilijkst"
         }
     }
 }

@@ -1,50 +1,48 @@
 {
-    "concepts": {
-        "to want": {
-            "infinitive": {
-                "en": "to want",
-                "fi": "haluta",
-                "nl": "willen"
+    "to want": {
+        "infinitive": {
+            "en": "to want",
+            "fi": "haluta",
+            "nl": "willen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I want",
+                "fi": "minä haluan",
+                "nl": "ik wil"
             },
-            "singular": {
-                "first person": {
-                    "en": "I want",
-                    "fi": "minä haluan",
-                    "nl": "ik wil"
-                },
-                "second person": {
-                    "en": "you want;singular",
-                    "fi": "sinä haluat",
-                    "nl": "jij wilt|jij wil"
-                },
-                "third person": {
-                    "fi": "hän haluaa",
-                    "female": {
-                        "en": "she wants",
-                        "nl": "zij wil"
-                    },
-                    "male": {
-                        "en": "he wants",
-                        "nl": "hij wil"
-                    }
-                }
+            "second person": {
+                "en": "you want;singular",
+                "fi": "sinä haluat",
+                "nl": "jij wilt|jij wil"
             },
-            "plural": {
-                "first person": {
-                    "en": "we want",
-                    "fi": "me haluamme",
-                    "nl": "wij willen"
+            "third person": {
+                "fi": "hän haluaa",
+                "female": {
+                    "en": "she wants",
+                    "nl": "zij wil"
                 },
-                "second person": {
-                    "en": "you want;plural",
-                    "fi": "te haluatte",
-                    "nl": "jullie willen"
-                },
-                "third person": {
-                    "en": "they want",
-                    "fi": "he haluavat",
-                    "nl": "zij willen"
+                "male": {
+                    "en": "he wants",
+                    "nl": "hij wil"
                 }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we want",
+                "fi": "me haluamme",
+                "nl": "wij willen"
+            },
+            "second person": {
+                "en": "you want;plural",
+                "fi": "te haluatte",
+                "nl": "jullie willen"
+            },
+            "third person": {
+                "en": "they want",
+                "fi": "he haluavat",
+                "nl": "zij willen"
             }
         }
     }
