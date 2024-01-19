@@ -1,0 +1,47 @@
+{
+    "ticket": {
+        "singular": {
+            "en": "ticket",
+            "fi": "lippu",
+            "nl": "het kaartje"
+        },
+        "plural": {
+            "en": "tickets",
+            "fi": "liput",
+            "nl": "de kaartjes"
+        }
+    },
+    "travel ticket": {
+        "hypernym": "ticket",
+        "singular": {
+            "en": "ticket",
+            "fi": "matkalippu",
+            "nl": "het vervoersbewijs"
+        },
+        "plural": {
+            "en": "tickets",
+            "fi": "matkaliput",
+            "nl": "de vervoersbewijzen"
+        }
+    },
+    "plane ticket": {
+        "hypernym": "travel ticket",
+        "en": "plane ticket",
+        "fi": "lentolippu",
+        "nl": "het vliegticket"
+    },
+    "return ticket": {
+        "hypernym": "ticket",
+        "antonym": "one-way ticket",
+        "en": "return ticket",
+        "fi": "menopaluulippu|menopaluu|meno-paluu",
+        "nl": "het retourtje"
+    },
+    "one-way ticket": {
+        "hypernym": "ticket",
+        "antonym": "return ticket",
+        "en": "one-way ticket",
+        "fi": "menolippu|meno",
+        "nl": "het enkeltje"
+    }
+}

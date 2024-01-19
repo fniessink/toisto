@@ -1,0 +1,30 @@
+{
+    "at someone's place": {
+        "en": "at;someone's place",
+        "fi": "luona",
+        "nl": "bij"
+    },
+    "at the immediate vicinity of": {
+        "en": "at;the immediate vicinity of",
+        "fi": "ääressä",
+        "nl": [
+            "aan",
+            "bij"
+        ]
+    },
+    "bob sits at the table": {
+        "roots": "at the immediate vicinity of",
+        "en": "Bob sits at the table.",
+        "fi": "Bob istuu pöydän ääressä.",
+        "nl": [
+            "Bob zit aan de tafel.",
+            "Bob zit bij de tafel."
+        ]
+    },
+    "alice spent the night at bob's place": {
+        "roots": "at someone's place",
+        "en": "Alice spent the night at Bob's place.",
+        "fi": "Alice yöpyi Bobin luona.",
+        "nl": "Alice bleef bij Bob slapen."
+    }
+}

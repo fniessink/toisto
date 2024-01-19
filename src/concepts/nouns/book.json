@@ -24,5 +24,15 @@
                 "nl": "de boekjes"
             }
         }
+    },
+    "audiobook": {
+        "hypernym": "book",
+        "en": "audiobook",
+        "fi": "äänikirja",
+        "nl": [
+            "het gesproken boek",
+            "het luisterboek",
+            "het audioboek"
+        ]
     }
 }

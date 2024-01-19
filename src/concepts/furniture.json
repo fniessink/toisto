@@ -11,35 +11,6 @@
             "nl": "de tafels"
         }
     },
-    "bed": {
-        "singular": {
-            "en": "bed",
-            "fi": "sänky",
-            "nl": "het bed"
-        },
-        "plural": {
-            "en": "beds",
-            "fi": "sängyt",
-            "nl": "de bedden"
-        }
-    },
-    "double bed": {
-        "hypernym": "bed",
-        "roots": {
-            "en": "bed",
-            "fi": [
-                "pair",
-                "bed"
-            ],
-            "nl": [
-                "2",
-                "bed"
-            ]
-        },
-        "en": "double bed",
-        "fi": "parisänky",
-        "nl": "het tweepersoonsbed"
-    },
     "sofa": {
         "singular": {
             "en": "sofa",
@@ -120,28 +91,6 @@
         "en": "office chair",
         "fi": "työtuoli",
         "nl": "de bureaustoel"
-    },
-    "lamp": {
-        "singular": {
-            "en": "lamp",
-            "fi": "lamppu",
-            "nl": "de lamp"
-        },
-        "plural": {
-            "en": "lamps",
-            "fi": "lamput",
-            "nl": "de lampen"
-        }
-    },
-    "table lamp": {
-        "hypernym": "lamp",
-        "roots": [
-            "table",
-            "lamp"
-        ],
-        "en": "table lamp",
-        "fi": "pöytälamppu",
-        "nl": "de tafellamp"
     },
     "dining table": {
         "hypernym": "table",

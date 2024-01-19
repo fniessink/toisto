@@ -1,0 +1,36 @@
+{
+    "bed": {
+        "singular": {
+            "en": "bed",
+            "fi": "sänky",
+            "nl": "het bed"
+        },
+        "plural": {
+            "en": "beds",
+            "fi": "sängyt",
+            "nl": "de bedden"
+        }
+    },
+    "double bed": {
+        "hypernym": "bed",
+        "roots": {
+            "en": "bed",
+            "fi": [
+                "pair",
+                "bed"
+            ],
+            "nl": [
+                "2",
+                "bed"
+            ]
+        },
+        "en": "double bed",
+        "fi": "parisänky",
+        "nl": "het tweepersoonsbed"
+    },
+    "going to bed": {
+        "en": "going to bed",
+        "fi": "nukkumaanmeno",
+        "nl": "het gaan slapen"
+    }
+}

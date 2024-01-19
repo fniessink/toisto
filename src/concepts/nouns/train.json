@@ -1,0 +1,21 @@
+{
+    "train": {
+        "hypernym": "means of transportation",
+        "singular": {
+            "en": "train",
+            "fi": "juna",
+            "nl": "de trein"
+        },
+        "plural": {
+            "en": "trains",
+            "fi": "junat",
+            "nl": "de treinen"
+        }
+    },
+    "long-distance train": {
+        "hypernym":" train",
+        "en": "long-distance train",
+        "fi": "kaukojuna",
+        "nl": "langeafstandstrein"
+    }
+}

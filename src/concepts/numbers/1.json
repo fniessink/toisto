@@ -11,7 +11,10 @@
         },
         "ordinal": {
             "en": "first",
-            "fi": "ensimmäinen",
+            "fi": [
+                "ensimmäinen",
+                "eka*"
+            ],
             "nl": "eerste"
         }
     }

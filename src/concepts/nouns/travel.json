@@ -1,0 +1,36 @@
+{
+    "travel": {
+        "singular": {
+            "en": "travel",
+            "fi": "matka",
+            "nl": "de reis"
+        },
+        "plural": {
+            "en": "travels",
+            "fi": "matkat",
+            "nl": "de reizen"
+        }
+    },
+    "travel program": {
+        "involves": "travel",
+        "en": "travel program",
+        "fi": "matkaohjelma",
+        "nl": "het reisprogramma"
+    },
+    "travel insurance": {
+        "involves": "travel",
+        "en": "travel insurance",
+        "fi": "matkavakuutus",
+        "nl": "de reisverzekering"
+    },
+    "traveler": {
+        "en": "traveler",
+        "fi": "matkustaja",
+        "nl": "de reiziger"
+    },
+    "traveling": {
+        "en": "traveling",
+        "fi": "matkustaminen",
+        "nl": "het reizen"
+    }
+}
