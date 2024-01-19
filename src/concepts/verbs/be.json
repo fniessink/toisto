@@ -34,7 +34,10 @@
                     "plural": {
                         "first person": {
                             "en": "we are",
-                            "fi": "me olemme",
+                            "fi": [
+                                "me olemme",
+                                "me ollaan*"
+                            ],
                             "nl": "wij zijn"
                         },
                         "second person": {
@@ -436,6 +439,13 @@
                     }
                 }
             }
+        }
+    },
+    "to be worthwhile": {
+        "infinitive": {
+            "en": "to be worthwhile",
+            "fi": "kannattaa",
+            "nl": "lonen"
         }
     }
 }

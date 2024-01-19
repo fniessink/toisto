@@ -4,5 +4,11 @@
         "en": "healthy",
         "fi": "terveellinen",
         "nl": "gezond"
+    },
+    "unhealthy": {
+        "antonym": "healthy",
+        "en": "unhealthy",
+        "fi": "epäterveellinen",
+        "nl": "ongezond"
     }
 }

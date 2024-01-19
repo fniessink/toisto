@@ -1,0 +1,35 @@
+{
+    "every": {
+        "en": [
+            "every",
+            "each"
+        ],
+        "fi": "joka",
+        "nl": [
+            "elke",
+            "iedere"
+        ]
+    },
+    "everywhere": {
+        "hypernym": "every",
+        "en": "everywhere",
+        "fi": [
+            "joka paikassa;inessive",
+            "joka paikasta;elative",
+            "joka paikkaan;illative"
+        ],
+        "nl": [
+            "overal",
+            "iedere plek"
+        ]
+    },
+    "in any case": {
+        "hypernym": "every",
+        "en": "in any case",
+        "fi": "joka tapauksessa",
+        "nl": [
+            "in ieder geval",
+            "in elk geval"
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "store": {
+        "singular": {
+            "en": "store",
+            "fi": "kauppa",
+            "nl": "de winkel"
+        },
+        "plural": {
+            "en": "stores",
+            "fi": "kaupat",
+            "nl": "de winkels"
+        }
+    },
+    "department store": {
+        "roots": {
+            "en": "store",
+            "fi": "house",
+            "nl": "house"
+        },
+        "singular": {
+            "en": "department store",
+            "fi": "tavaratalo",
+            "nl": "het warenhuis"
+        },
+        "plural": {
+            "en": "department stores",
+            "fi": "tavaratalot",
+            "nl": "de warenhuizen"
+        }
+    },
+    "home applicance store": {
+        "hypernym": "store",
+        "en": "home appliance store",
+        "fi": "kodinkoneliike",
+        "nl": "de winkel voor huishoudelijke apparaten"
+    }
+}

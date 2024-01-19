@@ -1,15 +1,47 @@
 {
     "deer": {
         "hypernym": "animal",
+        "en": "deer",
         "singular": {
-            "en": "deer",
-            "fi": "peura",
+            "fi": "kauris",
             "nl": "het hert"
         },
         "plural": {
-            "en": "deer",
-            "fi": "peurat",
+            "fi": "kaurit",
             "nl": "de herten"
+        }
+    },
+    "reindeer": {
+        "hypernym": "animal",
+        "singular": {
+            "en": "reindeer",
+            "fi": "peura",
+            "nl": "het rendier"
+        },
+        "plural": {
+            "en": "reindeer",
+            "fi": "peurat",
+            "nl": "de rendieren"
+        }
+    },
+    "mountain reindeer": {
+        "hypernym": "reindeer",
+        "roots": {
+            "en": "deer",
+            "nl": [
+                "to run",
+                "animal"
+            ]
+        },
+        "singular": {
+            "en": "mountain reindeer;singular",
+            "fi": "poro",
+            "nl": "het bergrendier"
+        },
+        "plural": {
+            "en": "mountain reindeer;plural",
+            "fi": "porot",
+            "nl": "de bergrendieren"
         }
     }
 }

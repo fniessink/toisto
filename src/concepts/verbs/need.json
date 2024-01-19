@@ -1,0 +1,111 @@
+{
+    "to need": {
+        "infinitive": {
+            "en": "to need",
+            "fi": "tarvita",
+            "nl": "nodig hebben"
+        },
+        "affirmative": {
+            "singular": {
+                "first person": {
+                    "en": "I need",
+                    "fi": "minä tarvitsen",
+                    "nl": "ik heb nodig"
+                },
+                "second person": {
+                    "en": "you need;singular",
+                    "fi": "sinä tarvitset",
+                    "nl": "jij hebt nodig"
+                },
+                "third person": {
+                    "fi": "hän tarvitsee",
+                    "female": {
+                        "en": "she needs",
+                        "nl": "zij heeft nodig"
+                    },
+                    "male": {
+                        "en": "he needs",
+                        "nl": "hij heeft nodig"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we need",
+                    "fi": "me tarvitsemme",
+                    "nl": "wij hebben nodig"
+                },
+                "second person": {
+                    "en": "you need;plural",
+                    "fi": "te tarvitsette",
+                    "nl": "jullie hebben nodig"
+                },
+                "third person": {
+                    "en": "they need",
+                    "fi": "he tarvitsevat",
+                    "nl": "zij hebben nodig"
+                }
+            }
+        },
+        "negative": {
+            "singular": {
+                "first person": {
+                    "en": "I do not need",
+                    "fi": [
+                        "minä en tarvitse",
+                        "en mä tarvi*"
+                    ],
+                    "nl": "ik heb niet nodig"
+                },
+                "second person": {
+                    "en": "you do not need;singular",
+                    "fi": [
+                        "sinä et tarvitse",
+                        "et sä tarvi*"
+                    ],
+                    "nl": "jij hebt niet nodig"
+                },
+                "third person": {
+                    "fi": [
+                        "hän ei tarvitse",
+                        "ei se tarvi*"
+                    ],
+                    "female": {
+                        "en": "she does not need",
+                        "nl": "zij heeft niet nodig"
+                    },
+                    "male": {
+                        "en": "he does not need",
+                        "nl": "hij heeft niet nodig"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we do not need",
+                    "fi": [
+                        "me emme tarvitse",
+                        "ei me tarvita*;;first person plural is the"
+                    ],
+                    "nl": "wij hebben niet nodig"
+                },
+                "second person": {
+                    "en": "you do not need;plural",
+                    "fi": [
+                        "te ette tarvitse",
+                        "ette te tarvi*"
+                    ],
+                    "nl": "jullie hebben niet nodig"
+                },
+                "third person": {
+                    "en": "they do not need",
+                    "fi": [
+                        "he eivät tarvitse",
+                        "ei ne tarvi*"
+                    ],
+                    "nl": "zij hebben niet nodig"
+                }
+            }
+        }
+    }
+}

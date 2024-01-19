@@ -152,23 +152,6 @@
             "Zij zitten om de tafel."
         ]
     },
-    "at": {
-        "en": "at",
-        "fi": "ääressä",
-        "nl": [
-            "aan",
-            "bij"
-        ]
-    },
-    "bob sits at the table": {
-        "roots": [],
-        "en": "Bob sits at the table.",
-        "fi": "Bob istuu pöydän ääressä.",
-        "nl": [
-            "Bob zit aan de tafel.",
-            "Bob zit bij de tafel."
-        ]
-    },
     "on top of": {
         "en": "on top of",
         "fi": "päällä",
@@ -235,5 +218,19 @@
         "en": "The glass is underneath the table.",
         "fi": "Lasi on pöydän alla.",
         "nl": "Het glas staat onder de tafel."
+    },
+    "after": {
+        "en": [
+            "after",
+            "in"
+        ],
+        "fi": [
+            "kuluttua",
+            "päästä"
+        ],
+        "nl": [
+            "over",
+            "na"
+        ]
     }
 }
