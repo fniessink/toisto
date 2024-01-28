@@ -14,9 +14,16 @@ ProgressDict = dict[str, dict[str, str | int]]
 class Progress:
     """Keep track of progress on quizzes."""
 
-    def __init__(self, progress_dict: ProgressDict, target_language: Language, skip_concepts: int = 5) -> None:
+    def __init__(
+        self,
+        progress_dict: ProgressDict,
+        target_language: Language,
+        quizzes: Quizzes,
+        skip_concepts: int = 5,
+    ) -> None:
         self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
         self.target_language = target_language
+        self.quizzes = quizzes
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
 
     def mark_correct_answer(self, quiz: Quiz) -> None:
@@ -27,15 +34,15 @@ class Progress:
         """Reset the retention of the quiz."""
         self.__progress_dict.setdefault(quiz.key, Retention()).reset()
 
-    def next_quiz(self, quizzes: Quizzes) -> Quiz | None:
+    def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
-        eligible_quizzes = Quizzes(quiz for quiz in quizzes if self.__is_eligible(quiz))
+        eligible_quizzes = Quizzes(quiz for quiz in self.quizzes if self.__is_eligible(quiz))
         quizzes_for_concepts_in_progress = Quizzes(
-            quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz, quizzes)
+            quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz)
         )
         quizzes_in_progress = Quizzes(quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz))
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
-            if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes, quizzes):
+            if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes):
                 quiz = unblocked_quizzes.pop()
                 self.__recent_concepts.append(quiz.concept.base_concept)
                 return quiz
@@ -49,16 +56,16 @@ class Progress:
         """Return whether the quiz is not silenced and not the current quiz."""
         return quiz.concept.base_concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
-    def __has_concept_in_progress(self, quiz: Quiz, quizzes: Quizzes) -> bool:
+    def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz's concept has been presented to the user before."""
-        quizzes_for_same_concept = quizzes.by_concept(quiz.concept)
+        quizzes_for_same_concept = self.quizzes.by_concept(quiz.concept)
         return any(self.__in_progress(quiz_for_same_concept) for quiz_for_same_concept in quizzes_for_same_concept)
 
     def __in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz has been presented to the user before."""
         return quiz.key in self.__progress_dict
 
-    def __unblocked_quizzes(self, potential_quizzes: Quizzes, eligible_quizzes: Quizzes, quizzes: Quizzes) -> Quizzes:
+    def __unblocked_quizzes(self, potential_quizzes: Quizzes, eligible_quizzes: Quizzes) -> Quizzes:
         """Return the quizzes that are not blocked by other quizzes.
 
         Quiz A is blocked by quiz B if the concept of quiz A is a compound with a root that is quizzed by quiz B.
@@ -66,17 +73,17 @@ class Progress:
         return Quizzes(
             quiz
             for quiz in potential_quizzes
-            if not self.__root_concepts_have_quizzes(quiz, eligible_quizzes, quizzes)
+            if not self.__root_concepts_have_quizzes(quiz, eligible_quizzes)
             and not quiz.is_blocked_by(eligible_quizzes)
         )
 
-    def __root_concepts_have_quizzes(self, quiz: Quiz, eligible_quizzes: Quizzes, quizzes: Quizzes) -> bool:
+    def __root_concepts_have_quizzes(self, quiz: Quiz, eligible_quizzes: Quizzes) -> bool:
         """Return whether the quiz's concept has root concepts that have quizzes."""
         target_language = quiz.answer_language if "write" in quiz.quiz_types else quiz.question_language
         return any(
             other_quiz
             for root in quiz.concept.related_concepts.roots(target_language)
-            for other_quiz in quizzes.by_concept(root)
+            for other_quiz in self.quizzes.by_concept(root)
             if other_quiz != quiz and other_quiz in eligible_quizzes
         )
 

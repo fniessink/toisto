@@ -38,7 +38,7 @@ def init() -> tuple[ConfigParser, Namespace, Quizzes, Progress]:
     concepts |= loader.load(args.file)
     concepts = filter_concepts(concepts, args.concept, args.target_language, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
-    progress = load_progress(args.target_language, argument_parser)
+    progress = load_progress(args.target_language, quizzes, argument_parser)
     return config, args, quizzes, progress
 
 
@@ -47,7 +47,7 @@ def main() -> None:
     config, args, quizzes, progress = init()
     match args.command:
         case "progress":
-            show_progress(args.target_language, quizzes, progress, args.sort)
+            show_progress(args.target_language, progress, args.sort)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version())
-            practice(console.print, quizzes, progress, config)
+            practice(console.print, progress, config)
