@@ -28,15 +28,15 @@ class PracticeTest(ToistoTestCase):
         """Set up the test fixtures."""
         self.concept = create_concept(ConceptId("hi"), cast(ConceptDict, dict(fi="Terve", nl="Hoi")))
         self.quizzes = create_quizzes(Language("fi"), Language("nl"), self.concept).by_quiz_type("read")
-        self.progress = Progress({}, Language("fi"))
 
     def practice(self, quizzes: Quizzes) -> Mock:
         """Run the practice command and return the patch print statement."""
         config = ConfigParser()
         config.add_section("commands")
         config.set("commands", "mp3player", "mpg123")
+        progress = Progress({}, Language("fi"), quizzes)
         with patch("rich.console.Console.print") as patched_print:
-            practice(console.print, quizzes, self.progress, config)
+            practice(console.print, progress, config)
         return patched_print
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))

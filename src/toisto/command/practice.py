@@ -7,7 +7,7 @@ from typing import get_args
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import ListenQuizType, Quiz, Quizzes
+from toisto.model.quiz.quiz import ListenQuizType, Quiz
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkify
 from toisto.ui.speech import say
@@ -57,10 +57,10 @@ def do_quiz(write_output: Callable[..., None], quiz: Quiz, progress: Progress, c
             break
 
 
-def practice(write_output: Callable[..., None], quizzes: Quizzes, progress: Progress, config: ConfigParser) -> None:
+def practice(write_output: Callable[..., None], progress: Progress, config: ConfigParser) -> None:
     """Practice a language."""
     try:
-        while quiz := progress.next_quiz(quizzes):
+        while quiz := progress.next_quiz():
             do_quiz(write_output, quiz, progress, config)
         write_output(DONE)
     except (KeyboardInterrupt, EOFError):

@@ -20,7 +20,7 @@ class ProgressTest(ToistoTestCase):
         """Override to set up test fixtures."""
         concept = create_concept(ConceptId("english"), cast(ConceptDict, dict(fi="englanti", nl="Engels")))
         self.quizzes = create_quizzes(Language("fi"), Language("nl"), concept)
-        self.progress = Progress({}, Language("fi"))
+        self.progress = Progress({}, Language("fi"), self.quizzes)
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
@@ -48,35 +48,37 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is not silenced."""
         quiz = first(self.quizzes)
         self.progress.mark_correct_answer(quiz)
-        self.assertNotEqual(quiz, self.progress.next_quiz(self.quizzes))
+        self.assertNotEqual(quiz, self.progress.next_quiz())
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         for quiz in self.quizzes:
             self.progress.mark_correct_answer(quiz)
-        self.assertIsNone(self.progress.next_quiz(self.quizzes))
+        self.assertIsNone(self.progress.next_quiz())
 
     def test_next_quiz_is_different_from_previous(self):
         """Test that the next quiz is different from the previous one."""
-        self.assertNotEqual(self.progress.next_quiz(self.quizzes), self.progress.next_quiz(self.quizzes))
+        self.assertNotEqual(self.progress.next_quiz(), self.progress.next_quiz())
 
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
-        self.assertTrue(self.progress.next_quiz(self.quizzes).quiz_types[0] in get_args(TranslationQuizType))
+        self.assertTrue(self.progress.next_quiz().quiz_types[0] in get_args(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""
         concept1 = create_concept("good day", dict(roots="good", en="good day", nl="goedendag"))
         concept2 = create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes("nl", "en", concept1, concept2)
-        self.assertEqual("good", self.progress.next_quiz(quizzes).concept.concept_id)
+        progress = Progress({}, Language("fi"), quizzes)
+        self.assertEqual("good", progress.next_quiz().concept.concept_id)
 
     def test_roots_block_quizzes_even_if_roots_only_apply_to_target_language(self):
         """Test that quizzes are blocked, even if the roots only apply to the target language."""
         concept1 = create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
         concept2 = create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes("nl", "en", concept1, concept2)
-        self.assertEqual("good", self.progress.next_quiz(quizzes).concept.concept_id)
+        progress = Progress({}, Language("fi"), quizzes)
+        self.assertEqual("good", progress.next_quiz().concept.concept_id)
 
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
@@ -97,9 +99,9 @@ class ProgressTest(ToistoTestCase):
             dict(roots="afternoon", singular=dict(fi="ilta", nl="de avond"), plural=dict(fi="illat", nl="de avonden")),
         )
         quizzes = create_quizzes("fi", "nl", morning, afternoon, evening)
-        progress = Progress({}, Language("fi"), skip_concepts=2)
+        progress = Progress({}, Language("fi"), quizzes, skip_concepts=2)
         for _ in range(9):
-            quiz = progress.next_quiz(quizzes)
+            quiz = progress.next_quiz()
             self.assertTrue("singular" in quiz.concept.concept_id)
             progress.mark_correct_answer(quiz)
 
@@ -107,10 +109,11 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
         quizzes = Quizzes(quiz for quiz in create_quizzes("fi", "nl", *concepts) if quiz.quiz_types == ("dictate",))
+        progress = Progress({}, Language("fi"), quizzes)
         random_quiz = next(iter(quizzes))
         self.progress.mark_correct_answer(random_quiz)
         self.progress.get_retention(random_quiz).skip_until = None
-        self.assertEqual(self.progress.next_quiz(quizzes), random_quiz)
+        self.assertEqual(progress.next_quiz(), random_quiz)
 
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
