@@ -9,6 +9,7 @@ from typing import Final
 optional_datetime = datetime | None
 SKIP_INTERVAL_GROWTH_FACTOR: Final = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
 SKIP_INTERVAL_WHEN_FIRST_ANSWER_IS_CORRECT: Final = timedelta(days=1)
+SKIP_INTERVAL_WHEN_RELATED_QUIZ_IS_ANSWERED_CORRECTLY: Final = timedelta(minutes=5)
 
 
 @dataclass
@@ -32,6 +33,12 @@ class Retention:
             self.skip_until = now + (now - self.start) * SKIP_INTERVAL_GROWTH_FACTOR
         else:
             self.skip_until = None
+
+    def pause(self) -> None:
+        """Pause this quiz for a brief while because a related quiz was answered correctly."""
+        now = datetime.now()
+        current_skip_until = self.skip_until or now
+        self.skip_until = max(current_skip_until, now + SKIP_INTERVAL_WHEN_RELATED_QUIZ_IS_ANSWERED_CORRECTLY)
 
     def reset(self) -> None:
         """Reset the retention of the quiz after an incorrect answer."""

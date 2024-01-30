@@ -28,7 +28,12 @@ class Progress:
 
     def mark_correct_answer(self, quiz: Quiz) -> None:
         """Increase the retention of the quiz."""
-        self.__progress_dict.setdefault(quiz.key, Retention()).increase()
+        for related_quiz in self.quizzes.by_concept(quiz.concept):
+            retention = self.__progress_dict.setdefault(related_quiz.key, Retention())
+            if related_quiz == quiz:
+                retention.increase()
+            else:
+                retention.pause()
 
     def mark_incorrect_answer(self, quiz: Quiz) -> None:
         """Reset the retention of the quiz."""
