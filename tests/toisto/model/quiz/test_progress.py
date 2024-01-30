@@ -100,8 +100,7 @@ class ProgressTest(ToistoTestCase):
         )
         quizzes = create_quizzes("fi", "nl", morning, afternoon, evening)
         progress = Progress({}, Language("fi"), quizzes, skip_concepts=2)
-        for _ in range(9):
-            quiz = progress.next_quiz()
+        while quiz := progress.next_quiz():
             self.assertTrue("singular" in quiz.concept.concept_id)
             progress.mark_correct_answer(quiz)
 
@@ -118,3 +117,20 @@ class ProgressTest(ToistoTestCase):
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
         self.assertEqual({}, self.progress.as_dict())
+
+
+class ProgressOfRelatedQuizzesTest(ToistoTestCase):
+    """Unit tests for the progress class."""
+
+    def setUp(self) -> None:
+        """Override to set up test fixtures."""
+        concept = create_concept(ConceptId("english"), cast(ConceptDict, dict(fi="englanti", nl="Engels")))
+        self.quizzes = create_quizzes(Language("fi"), Language("nl"), concept)
+        self.progress = Progress({}, Language("fi"), self.quizzes)
+
+    def test_update_progress_correct(self):
+        """Test that the progress of a quiz can be updated."""
+        quizzes = list(self.quizzes)
+        self.progress.mark_correct_answer(quizzes[0])
+        for quiz in quizzes[1:]:
+            self.assertIsNotNone(self.progress.get_retention(quiz).skip_until)
