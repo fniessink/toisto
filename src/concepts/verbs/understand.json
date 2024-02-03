@@ -8,16 +8,16 @@
         "singular": {
             "first person": {
                 "en": "I understand",
-                "fi": "minä autan",
+                "fi": "minä ymmärrän",
                 "nl": "ik begrijp"
             },
             "second person": {
                 "en": "you understand;singular",
-                "fi": "sinä autat",
+                "fi": "sinä ymmärrät",
                 "nl": "jij begrijpt"
             },
             "third person": {
-                "fi": "hän auttaa",
+                "fi": "hän ymmärtää",
                 "female": {
                     "en": "she understands",
                     "nl": "zij begrijpt"
@@ -31,17 +31,17 @@
         "plural": {
             "first person": {
                 "en": "we understand",
-                "fi": "me autamme",
+                "fi": "me ymmärrämme",
                 "nl": "wij begrijpen"
             },
             "second person": {
                 "en": "you understand;plural",
-                "fi": "te autatte",
+                "fi": "te ymmärrätte",
                 "nl": "jullie begrijpen"
             },
             "third person": {
                 "en": "they understand",
-                "fi": "he auttavat",
+                "fi": "he ymmärtävät",
                 "nl": "zij begrijpen"
             }
         }
