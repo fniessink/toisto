@@ -11,15 +11,17 @@
                 "head (main part)"
             ]
         },
-        "singular": {
-            "en": "capital",
-            "fi": "pääkaupunki",
-            "nl": "de hoofdstad"
+        "en": {
+            "singular": "capital",
+            "plural": "capitals"
         },
-        "plural": {
-            "en": "capitals",
-            "fi": "pääkaupungit",
-            "nl": "de hoofdsteden"
+        "fi": {
+            "singular": "pääkaupunki",
+            "plural": "pääkaupungit"
+        },
+        "nl": {
+            "singular": "de hoofdstad",
+            "plural": "de hoofdsteden"
         }
     }
 }

@@ -1,20 +1,20 @@
 {
     "weak": {
         "antonym": "strong",
-        "positive degree": {
-            "en": "weak",
-            "fi": "heikko",
-            "nl": "zwak"
+        "en": {
+            "positive degree": "weak",
+            "comparative degree": "weaker",
+            "superlative degree": "weakest"
         },
-        "comparative degree": {
-            "en": "weaker",
-            "fi": "heikompi",
-            "nl": "zwakker"
+        "fi": {
+            "positive degree": "heikko",
+            "comparative degree": "heikompi",
+            "superlative degree": "heikoin"
         },
-        "superlative degree": {
-            "en": "weakest",
-            "fi": "heikoin",
-            "nl": "zwakst"
+        "nl": {
+            "positive degree": "zwak",
+            "comparative degree": "zwakker",
+            "superlative degree": "zwakst"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "bear": {
         "hypernym": "animal",
-        "singular": {
-            "en": "bear",
-            "fi": "karhu",
-            "nl": "de beer"
+        "en": {
+            "singular": "bear",
+            "plural": "bears"
         },
-        "plural": {
-            "en": "bears",
-            "fi": "karhut",
-            "nl": "de beren"
+        "fi": {
+            "singular": "karhu",
+            "plural": "karhut"
+        },
+        "nl": {
+            "singular": "de beer",
+            "plural": "de beren"
         }
     }
 }

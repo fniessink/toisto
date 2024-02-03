@@ -10,15 +10,17 @@
             "en": "music",
             "nl": "music"
         },
-        "singular": {
-            "en": "musical instrument",
-            "fi": "soitin",
-            "nl": "het muziekinstrument"
+        "en": {
+            "singular": "musical instrument",
+            "plural": "musical instruments"
         },
-        "plural": {
-            "en": "musical instruments",
-            "fi": "soittimet",
-            "nl": "de muziekinstrumenten"
+        "fi": {
+            "singular": "soitin",
+            "plural": "soittimet"
+        },
+        "nl": {
+            "singular": "het muziekinstrument",
+            "plural": "de muziekinstrumenten"
         }
     }
 }

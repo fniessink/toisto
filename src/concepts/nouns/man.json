@@ -1,15 +1,17 @@
 {
     "man": {
         "antonym": "woman",
-        "singular": {
-            "en": "man",
-            "fi": "mies",
-            "nl": "de man"
+        "en": {
+            "singular": "man",
+            "plural": "men"
         },
-        "plural": {
-            "en": "men",
-            "fi": "miehet",
-            "nl": "de mannen"
+        "fi": {
+            "singular": "mies",
+            "plural": "miehet"
+        },
+        "nl": {
+            "singular": "de man",
+            "plural": "de mannen"
         }
     },
     "best man": {

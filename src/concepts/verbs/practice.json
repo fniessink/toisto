@@ -1,48 +1,48 @@
 {
     "to practice": {
-        "infinitive": {
-            "en": "to practice",
-            "fi": "harjoitella",
-            "nl": "oefenen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I practice",
-                "fi": "minä harjoittelen",
-                "nl": "ik oefen"
-            },
-            "second person": {
-                "en": "you practice",
-                "fi": "sinä harjoittelet",
-                "nl": "jij oefent"
-            },
-            "third person": {
-                "fi": "hän harjoittelee",
-                "feminine": {
-                    "en": "she practices",
-                    "nl": "zij oefent"
-                },
-                "masculine": {
-                    "en": "he practices",
-                    "nl": "hij oefent"
+        "en": {
+            "infinitive": "to practice",
+            "singular": {
+                "first person": "I practice",
+                "second person": "you practice",
+                "third person": {
+                    "feminine": "she practices",
+                    "masculine": "he practices"
                 }
+            },
+            "plural": {
+                "first person": "we practice",
+                "second person": "you practice",
+                "third person": "they practice"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we practice",
-                "fi": "me harjoittelemme",
-                "nl": "wij oefenen"
+        "fi": {
+            "infinitive": "harjoitella",
+            "singular": {
+                "first person": "minä harjoittelen",
+                "second person": "sinä harjoittelet",
+                "third person": "hän harjoittelee"
             },
-            "second person": {
-                "en": "you practice",
-                "fi": "te harjoittelette",
-                "nl": "jullie oefenen"
+            "plural": {
+                "first person": "me harjoittelemme",
+                "second person": "te harjoittelette",
+                "third person": "he harjoittelevat"
+            }
+        },
+        "nl": {
+            "infinitive": "oefenen",
+            "singular": {
+                "first person": "ik oefen",
+                "second person": "jij oefent",
+                "third person": {
+                    "feminine": "zij oefent",
+                    "masculine": "hij oefent"
+                }
             },
-            "third person": {
-                "en": "they practice",
-                "fi": "he harjoittelevat",
-                "nl": "zij oefenen"
+            "plural": {
+                "first person": "wij oefenen",
+                "second person": "jullie oefenen",
+                "third person": "zij oefenen"
             }
         }
     }

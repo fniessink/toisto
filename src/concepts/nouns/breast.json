@@ -1,15 +1,17 @@
 {
     "breast": {
         "holonym": "body",
-        "singular": {
-            "en": "breast",
-            "fi": "rinta",
-            "nl": "de borst"
+        "en": {
+            "singular": "breast",
+            "plural": "breasts"
         },
-        "plural": {
-            "en": "breasts",
-            "fi": "rinnat",
-            "nl": "de borsten"
+        "fi": {
+            "singular": "rinta",
+            "plural": "rinnat"
+        },
+        "nl": {
+            "singular": "de borst",
+            "plural": "de borsten"
         }
     }
 }

@@ -1,48 +1,48 @@
 {
     "to flee": {
-        "infinitive": {
-            "en": "to flee",
-            "fi": "paeta;;paeta is verbityypi 6",
-            "nl": "vluchten"
-        },
-        "singular": {
-            "first person": {
-                "en": "I flee",
-                "fi": "minä pakenen",
-                "nl": "ik vlucht"
-            },
-            "second person": {
-                "en": "you flee",
-                "fi": "sinä pakenet",
-                "nl": "jij vlucht"
-            },
-            "third person": {
-                "fi": "hän pakenee",
-                "feminine": {
-                    "en": "she flees",
-                    "nl": "zij vlucht"
-                },
-                "masculine": {
-                    "en": "he flees",
-                    "nl": "hij vlucht"
+        "en": {
+            "infinitive": "to flee",
+            "singular": {
+                "first person": "I flee",
+                "second person": "you flee",
+                "third person": {
+                    "feminine": "she flees",
+                    "masculine": "he flees"
                 }
+            },
+            "plural": {
+                "first person": "we flee",
+                "second person": "you flee",
+                "third person": "they flee"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we flee",
-                "fi": "me pakenemme",
-                "nl": "wij vluchten"
+        "fi": {
+            "infinitive": "paeta;;paeta is verbityypi 6",
+            "singular": {
+                "first person": "minä pakenen",
+                "second person": "sinä pakenet",
+                "third person": "hän pakenee"
             },
-            "second person": {
-                "en": "you flee",
-                "fi": "te pakenette",
-                "nl": "jullie vluchten"
+            "plural": {
+                "first person": "me pakenemme",
+                "second person": "te pakenette",
+                "third person": "he pakenevat"
+            }
+        },
+        "nl": {
+            "infinitive": "vluchten",
+            "singular": {
+                "first person": "ik vlucht",
+                "second person": "jij vlucht",
+                "third person": {
+                    "feminine": "zij vlucht",
+                    "masculine": "hij vlucht"
+                }
             },
-            "third person": {
-                "en": "they flee",
-                "fi": "he pakenevat",
-                "nl": "zij vluchten"
+            "plural": {
+                "first person": "wij vluchten",
+                "second person": "jullie vluchten",
+                "third person": "zij vluchten"
             }
         }
     }

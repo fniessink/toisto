@@ -79,15 +79,17 @@
         "nl": "de wind"
     },
     "cloud": {
-        "singular": {
-            "en": "cloud",
-            "fi": "pilvi",
-            "nl": "de wolk"
+        "en": {
+            "singular": "cloud",
+            "plural": "clouds"
         },
-        "plural": {
-            "en": "clouds",
-            "fi": "pilvet",
-            "nl": "de wolken"
+        "fi": {
+            "singular": "pilvi",
+            "plural": "pilvet"
+        },
+        "nl": {
+            "singular": "de wolk",
+            "plural": "de wolken"
         }
     },
     "snow": {

@@ -1,48 +1,48 @@
 {
     "to enjoy": {
-        "infinitive": {
-            "en": "to enjoy",
-            "fi": "nauttia",
-            "nl": "genieten"
-        },
-        "singular": {
-            "first person": {
-                "en": "I enjoy",
-                "fi": "minä nautin",
-                "nl": "ik geniet"
-            },
-            "second person": {
-                "en": "you enjoy",
-                "fi": "sinä nautit",
-                "nl": "jij geniet"
-            },
-            "third person": {
-                "fi": "hän nauttii",
-                "feminine": {
-                    "en": "she enjoys",
-                    "nl": "zij geniet"
-                },
-                "masculine": {
-                    "en": "he enjoys",
-                    "nl": "hij geniet"
+        "en": {
+            "infinitive": "to enjoy",
+            "singular": {
+                "first person": "I enjoy",
+                "second person": "you enjoy",
+                "third person": {
+                    "feminine": "she enjoys",
+                    "masculine": "he enjoys"
                 }
+            },
+            "plural": {
+                "first person": "we enjoy",
+                "second person": "you enjoy",
+                "third person": "they enjoy"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we enjoy",
-                "fi": "me nautimme",
-                "nl": "wij genieten"
+        "fi": {
+            "infinitive": "nauttia",
+            "singular": {
+                "first person": "minä nautin",
+                "second person": "sinä nautit",
+                "third person": "hän nauttii"
             },
-            "second person": {
-                "en": "you enjoy",
-                "fi": "te nautitte",
-                "nl": "jullie genieten"
+            "plural": {
+                "first person": "me nautimme",
+                "second person": "te nautitte",
+                "third person": "he nauttivat"
+            }
+        },
+        "nl": {
+            "infinitive": "genieten",
+            "singular": {
+                "first person": "ik geniet",
+                "second person": "jij geniet",
+                "third person": {
+                    "feminine": "zij geniet",
+                    "masculine": "hij geniet"
+                }
             },
-            "third person": {
-                "en": "they enjoy",
-                "fi": "he nauttivat",
-                "nl": "zij genieten"
+            "plural": {
+                "first person": "wij genieten",
+                "second person": "jullie genieten",
+                "third person": "zij genieten"
             }
         }
     }

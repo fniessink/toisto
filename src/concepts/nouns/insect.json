@@ -1,15 +1,17 @@
 {
     "insect": {
         "hypernym": "animal",
-        "singular": {
-            "en": "insect",
-            "fi": "hyönteinen",
-            "nl": "het insect"
+        "en": {
+            "singular": "insect",
+            "plural": "insects"
         },
-        "plural": {
-            "en": "insects",
-            "fi": "hyönteiset",
-            "nl": "de insecten"
+        "fi": {
+            "singular": "hyönteinen",
+            "plural": "hyönteiset"
+        },
+        "nl": {
+            "singular": "het insect",
+            "plural": "de insecten"
         }
     }
 }

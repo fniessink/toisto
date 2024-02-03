@@ -10,15 +10,17 @@
                 "nose"
             ]
         },
-        "singular": {
-            "en": "rhinoceros|rhino",
-            "fi": "sarvikuono",
-            "nl": "de neushoorn"
+        "en": {
+            "singular": "rhinoceros|rhino",
+            "plural": "rhinoceroses|rhinos"
         },
-        "plural": {
-            "en": "rhinoceroses|rhinos",
-            "fi": "sarvikuonot",
-            "nl": "de neushoorns"
+        "fi": {
+            "singular": "sarvikuono",
+            "plural": "sarvikuonot"
+        },
+        "nl": {
+            "singular": "de neushoorn",
+            "plural": "de neushoorns"
         }
     }
 }

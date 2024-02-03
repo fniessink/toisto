@@ -2,15 +2,17 @@
     "train": {
         "example": "the train departs from platform 4",
         "hypernym": "means of transportation",
-        "singular": {
-            "en": "train",
-            "fi": "juna",
-            "nl": "de trein"
+        "en": {
+            "singular": "train",
+            "plural": "trains"
         },
-        "plural": {
-            "en": "trains",
-            "fi": "junat",
-            "nl": "de treinen"
+        "fi": {
+            "singular": "juna",
+            "plural": "junat"
+        },
+        "nl": {
+            "singular": "de trein",
+            "plural": "de treinen"
         }
     },
     "long-distance train": {

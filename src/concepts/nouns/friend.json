@@ -1,20 +1,22 @@
 {
     "friend": {
-        "singular": {
-            "en": "friend",
-            "fi": [
+        "en": {
+            "singular": "friend",
+            "plural": "friends"
+        },
+        "fi": {
+            "singular": [
                 "kaveri",
                 "ystävä"
             ],
-            "nl": "de vriend"
-        },
-        "plural": {
-            "en": "friends",
-            "fi": [
+            "plural": [
                 "kaverit",
                 "ystävät"
-            ],
-            "nl": "de vrienden"
+            ]
+        },
+        "nl": {
+            "singular": "de vriend",
+            "plural": "de vrienden"
         }
     },
     "female friend": {

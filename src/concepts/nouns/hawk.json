@@ -1,15 +1,17 @@
 {
     "hawk": {
         "hypernym": "bird",
-        "singular": {
-            "en": "hawk",
-            "fi": "haukka",
-            "nl": "de valk"
+        "en": {
+            "singular": "hawk",
+            "plural": "hawks"
         },
-        "plural": {
-            "en": "hawks",
-            "fi": "haukat",
-            "nl": "de valken"
+        "fi": {
+            "singular": "haukka",
+            "plural": "haukat"
+        },
+        "nl": {
+            "singular": "de valk",
+            "plural": "de valken"
         }
     }
 }

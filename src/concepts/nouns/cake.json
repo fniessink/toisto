@@ -1,15 +1,17 @@
 {
     "cake": {
         "hypernym": "food",
-        "singular": {
-            "en": "cake",
-            "fi": "kakku",
-            "nl": "de taart"
+        "en": {
+            "singular": "cake",
+            "plural": "cakes"
         },
-        "plural": {
-            "en": "cakes",
-            "fi": "kakut",
-            "nl": "de taarten"
+        "fi": {
+            "singular": "kakku",
+            "plural": "kakut"
+        },
+        "nl": {
+            "singular": "de taart",
+            "plural": "de taarten"
         }
     }
 }

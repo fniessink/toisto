@@ -1,20 +1,20 @@
 {
     "positive": {
         "antonym": "negative",
-        "positive degree": {
-            "en": "positive",
-            "fi": "positiivinen",
-            "nl": "positief"
+        "en": {
+            "positive degree": "positive",
+            "comparative degree": "more positive",
+            "superlative degree": "most positive"
         },
-        "comparative degree": {
-            "en": "more positive",
-            "fi": "positiivisempi",
-            "nl": "positiever"
+        "fi": {
+            "positive degree": "positiivinen",
+            "comparative degree": "positiivisempi",
+            "superlative degree": "positiivisin"
         },
-        "superlative degree": {
-            "en": "most positive",
-            "fi": "positiivisin",
-            "nl": "positiefst"
+        "nl": {
+            "positive degree": "positief",
+            "comparative degree": "positiever",
+            "superlative degree": "positiefst"
         }
     }
 }

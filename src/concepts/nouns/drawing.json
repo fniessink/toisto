@@ -1,14 +1,16 @@
 {
     "drawing": {
-        "singular": {
-            "en": "drawing",
-            "fi": "piirustus",
-            "nl": "de tekening"
+        "en": {
+            "singular": "drawing",
+            "plural": "drawings"
         },
-        "plural": {
-            "en": "drawings",
-            "fi": "piirustukset",
-            "nl": "de tekeningen"
+        "fi": {
+            "singular": "piirustus",
+            "plural": "piirustukset"
+        },
+        "nl": {
+            "singular": "de tekening",
+            "plural": "de tekeningen"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "horn": {
         "holonym": "animal",
-        "singular": {
-            "en": "horn",
-            "fi": "sarvi",
-            "nl": "de hoorn"
+        "en": {
+            "singular": "horn",
+            "plural": "horns"
         },
-        "plural": {
-            "en": "horns",
-            "fi": "sarvet",
-            "nl": "de hoorns"
+        "fi": {
+            "singular": "sarvi",
+            "plural": "sarvet"
+        },
+        "nl": {
+            "singular": "de hoorn",
+            "plural": "de hoorns"
         }
     }
 }

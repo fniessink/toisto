@@ -1,21 +1,23 @@
 {
     "duck": {
         "hypernym": "bird",
-        "singular": {
-            "en": "duck",
-            "fi": [
+        "en": {
+            "singular": "duck",
+            "plural": "ducks"
+        },
+        "fi": {
+            "singular": [
                 "ankka",
                 "sorsa"
             ],
-            "nl": "de eend"
-        },
-        "plural": {
-            "en": "ducks",
-            "fi": [
+            "plural": [
                 "ankat",
                 "sorsat"
-            ],
-            "nl": "de eenden"
+            ]
+        },
+        "nl": {
+            "singular": "de eend",
+            "plural": "de eenden"
         }
     }
 }

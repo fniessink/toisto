@@ -1,14 +1,16 @@
 {
     "animal": {
-        "singular": {
-            "en": "animal",
-            "fi": "eläin",
-            "nl": "het dier"
+        "en": {
+            "singular": "animal",
+            "plural": "animals"
         },
-        "plural": {
-            "en": "animals",
-            "fi": "eläimet",
-            "nl": "de dieren"
+        "fi": {
+            "singular": "eläin",
+            "plural": "eläimet"
+        },
+        "nl": {
+            "singular": "het dier",
+            "plural": "de dieren"
         }
     }
 }

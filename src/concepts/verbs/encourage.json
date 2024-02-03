@@ -1,48 +1,48 @@
 {
     "to encourage": {
-        "infinitive": {
-            "en": "to encourage",
-            "fi": "kannustaa",
-            "nl": "aanmoedigen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I encourage",
-                "fi": "minä kannustan",
-                "nl": "ik moedig aan"
-            },
-            "second person": {
-                "en": "you encourage",
-                "fi": "sinä kannustat",
-                "nl": "jij moedigt aan"
-            },
-            "third person": {
-                "fi": "hän kannustaa",
-                "feminine": {
-                    "en": "she encourages",
-                    "nl": "zij moedigt aan"
-                },
-                "masculine": {
-                    "en": "he encourages",
-                    "nl": "hij moedigt aan"
+        "en": {
+            "infinitive": "to encourage",
+            "singular": {
+                "first person": "I encourage",
+                "second person": "you encourage",
+                "third person": {
+                    "feminine": "she encourages",
+                    "masculine": "he encourages"
                 }
+            },
+            "plural": {
+                "first person": "we encourage",
+                "second person": "you encourage",
+                "third person": "they encourage"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we encourage",
-                "fi": "me kannustamme",
-                "nl": "wij moedigen aan"
+        "fi": {
+            "infinitive": "kannustaa",
+            "singular": {
+                "first person": "minä kannustan",
+                "second person": "sinä kannustat",
+                "third person": "hän kannustaa"
             },
-            "second person": {
-                "en": "you encourage",
-                "fi": "te kannustatte",
-                "nl": "jullie moedigen aan"
+            "plural": {
+                "first person": "me kannustamme",
+                "second person": "te kannustatte",
+                "third person": "he kannustavat"
+            }
+        },
+        "nl": {
+            "infinitive": "aanmoedigen",
+            "singular": {
+                "first person": "ik moedig aan",
+                "second person": "jij moedigt aan",
+                "third person": {
+                    "feminine": "zij moedigt aan",
+                    "masculine": "hij moedigt aan"
+                }
             },
-            "third person": {
-                "en": "they encourage",
-                "fi": "he kannustavat",
-                "nl": "zij moedigen aan"
+            "plural": {
+                "first person": "wij moedigen aan",
+                "second person": "jullie moedigen aan",
+                "third person": "zij moedigen aan"
             }
         }
     }

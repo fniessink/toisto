@@ -1,14 +1,16 @@
 {
     "dance": {
-        "singular": {
-            "en": "dance",
-            "fi": "tanssi",
-            "nl": "de dans"
+        "en": {
+            "singular": "dance",
+            "plural": "dances"
         },
-        "plural": {
-            "en": "dances",
-            "fi": "tanssit",
-            "nl": "de dansen"
+        "fi": {
+            "singular": "tanssi",
+            "plural": "tanssit"
+        },
+        "nl": {
+            "singular": "de dans",
+            "plural": "de dansen"
         }
     }
 }

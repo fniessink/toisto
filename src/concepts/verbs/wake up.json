@@ -1,118 +1,118 @@
 {
     "to wake up": {
         "hypernym": "intransitive verb",
-        "infinitive": {
-            "en": "to wake up",
-            "fi": "herätä;;herätä is verbityyppi 4",
-            "nl": "wakker worden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I wake up",
-                "fi": "minä herään",
-                "nl": "ik word wakker"
-            },
-            "second person": {
-                "en": "you wake up",
-                "fi": "sinä heräät",
-                "nl": "jij wordt wakker"
-            },
-            "third person": {
-                "fi": "hän herää",
-                "feminine": {
-                    "en": "she wakes up",
-                    "nl": "zij wordt wakker"
-                },
-                "masculine": {
-                    "en": "he wakes up",
-                    "nl": "hij wordt wakker"
+        "en": {
+            "infinitive": "to wake up",
+            "singular": {
+                "first person": "I wake up",
+                "second person": "you wake up",
+                "third person": {
+                    "feminine": "she wakes up",
+                    "masculine": "he wakes up"
                 }
+            },
+            "plural": {
+                "first person": "we wake up",
+                "second person": "you wake up",
+                "third person": "they wake up"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we wake up",
-                "fi": "me heräämme",
-                "nl": "wij worden wakker"
+        "fi": {
+            "infinitive": "herätä;;herätä is verbityyppi 4",
+            "singular": {
+                "first person": "minä herään",
+                "second person": "sinä heräät",
+                "third person": "hän herää"
             },
-            "second person": {
-                "en": "you wake up",
-                "fi": "te heräätte",
-                "nl": "jullie worden wakker"
+            "plural": {
+                "first person": "me heräämme",
+                "second person": "te heräätte",
+                "third person": "he heräävät"
+            }
+        },
+        "nl": {
+            "infinitive": "wakker worden",
+            "singular": {
+                "first person": "ik word wakker",
+                "second person": "jij wordt wakker",
+                "third person": {
+                    "feminine": "zij wordt wakker",
+                    "masculine": "hij wordt wakker"
+                }
             },
-            "third person": {
-                "en": "they wake up",
-                "fi": "he heräävät",
-                "nl": "zij worden wakker"
+            "plural": {
+                "first person": "wij worden wakker",
+                "second person": "jullie worden wakker",
+                "third person": "zij worden wakker"
             }
         }
     },
     "to wake up (transitive)": {
         "hypernym": "transitive verb",
-        "infinitive": {
-            "en": "to wake up",
-            "fi": "herättää",
-            "nl": [
+        "en": {
+            "infinitive": "to wake up",
+            "singular": {
+                "first person": "I wake up",
+                "second person": "you wake up",
+                "third person": {
+                    "feminine": "she wakes up",
+                    "masculine": "he wakes up"
+                }
+            },
+            "plural": {
+                "first person": "we wake up",
+                "second person": "you wake up",
+                "third person": "they wake up"
+            }
+        },
+        "fi": {
+            "infinitive": "herättää",
+            "singular": {
+                "first person": "minä herätän",
+                "second person": "sinä herätät",
+                "third person": "hän herättää"
+            },
+            "plural": {
+                "first person": "me herätäämme",
+                "second person": "te herätäätte",
+                "third person": "he herättävät"
+            }
+        },
+        "nl": {
+            "infinitive": [
                 "wekken",
                 "wakker maken"
-            ]
-        },
-        "singular": {
-            "first person": {
-                "en": "I wake up",
-                "fi": "minä herätän",
-                "nl": [
+            ],
+            "singular": {
+                "first person": [
                     "ik wek",
                     "ik maak wakker"
-                ]
-            },
-            "second person": {
-                "en": "you wake up",
-                "fi": "sinä herätät",
-                "nl": [
+                ],
+                "second person": [
                     "jij wekt",
                     "jij maakt wakker"
-                ]
-            },
-            "third person": {
-                "fi": "hän herättää",
-                "feminine": {
-                    "en": "she wakes up",
-                    "nl": [
+                ],
+                "third person": {
+                    "feminine": [
                         "zij wekt",
                         "zij maakt wakker"
-                    ]
-                },
-                "masculine": {
-                    "en": "he wakes up",
-                    "nl": [
+                    ],
+                    "masculine": [
                         "hij wekt",
                         "hij maakt wakker"
                     ]
                 }
-            }
-        },
-        "plural": {
-            "first person": {
-                "en": "we wake up",
-                "fi": "me herätäämme",
-                "nl": [
+            },
+            "plural": {
+                "first person": [
                     "wij wekken",
                     "wij maken wakker"
-                ]
-            },
-            "second person": {
-                "en": "you wake up",
-                "fi": "te herätäätte",
-                "nl": [
+                ],
+                "second person": [
                     "jullie wekken",
                     "jullie maken wakker"
-                ]
-            },
-            "third person": {
-                "en": "they wake up",
-                "fi": "he herättävät",
-                "nl": [
+                ],
+                "third person": [
                     "zij wekken",
                     "zij maken wakker"
                 ]

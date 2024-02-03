@@ -1,14 +1,16 @@
 {
     "sand": {
-        "singular": {
-            "en": "sand",
-            "fi": "hiekka",
-            "nl": "het zand"
+        "en": {
+            "singular": "sand",
+            "plural": "sands"
         },
-        "plural": {
-            "en": "sands",
-            "fi": "hiekat",
-            "nl": "de zanden"
+        "fi": {
+            "singular": "hiekka",
+            "plural": "hiekat"
+        },
+        "nl": {
+            "singular": "het zand",
+            "plural": "de zanden"
         }
     }
 }

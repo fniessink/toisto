@@ -1,14 +1,16 @@
 {
     "market": {
-        "singular": {
-            "en": "market",
-            "fi": "tori",
-            "nl": "de markt"
+        "en": {
+            "singular": "market",
+            "plural": "markets"
         },
-        "plural": {
-            "en": "markets",
-            "fi": "torit",
-            "nl": "de markten"
+        "fi": {
+            "singular": "tori",
+            "plural": "torit"
+        },
+        "nl": {
+            "singular": "de markt",
+            "plural": "de markten"
         }
     },
     "market hall": {

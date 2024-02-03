@@ -1,14 +1,16 @@
 {
     "vowel": {
-        "singular": {
-            "en": "vowel",
-            "fi": "vokaali",
-            "nl": "de klinker"
+        "en": {
+            "singular": "vowel",
+            "plural": "vowels"
         },
-        "plural": {
-            "en": "vowels",
-            "fi": "vokaalit",
-            "nl": "de klinkers"
+        "fi": {
+            "singular": "vokaali",
+            "plural": "vokaalit"
+        },
+        "nl": {
+            "singular": "de klinker",
+            "plural": "de klinkers"
         }
     },
     "vowel harmony": {

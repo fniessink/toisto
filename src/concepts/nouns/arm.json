@@ -4,15 +4,17 @@
         "roots": {
             "fi": "hand"
         },
-        "singular": {
-            "en": "arm",
-            "fi": "käsivarsi",
-            "nl": "de arm"
+        "en": {
+            "singular": "arm",
+            "plural": "arms"
         },
-        "plural": {
-            "en": "arms",
-            "fi": "käsivarret",
-            "nl": "de armen"
+        "fi": {
+            "singular": "käsivarsi",
+            "plural": "käsivarret"
+        },
+        "nl": {
+            "singular": "de arm",
+            "plural": "de armen"
         }
     }
 }

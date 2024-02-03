@@ -1,14 +1,16 @@
 {
     "jog": {
-        "singular": {
-            "en": "jog",
-            "fi": "lenkki",
-            "nl": "de jog"
+        "en": {
+            "singular": "jog",
+            "plural": "jogs"
         },
-        "plural": {
-            "en": "jogs",
-            "fi": "lenkit",
-            "nl": "de jogs"
+        "fi": {
+            "singular": "lenkki",
+            "plural": "lenkit"
+        },
+        "nl": {
+            "singular": "de jog",
+            "plural": "de jogs"
         }
     }
 }

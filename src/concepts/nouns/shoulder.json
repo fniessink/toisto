@@ -4,21 +4,23 @@
         "roots": {
             "fi": "head"
         },
-        "singular": {
-            "en": "shoulder",
-            "fi": [
+        "en": {
+            "singular": "shoulder",
+            "plural": "shoulders"
+        },
+        "fi": {
+            "singular": [
                 "olkapää",
                 "hartia"
             ],
-            "nl": "de schouder"
-        },
-        "plural": {
-            "en": "shoulders",
-            "fi": [
+            "plural": [
                 "olkapäät",
                 "hartiat"
-            ],
-            "nl": "de schouders"
+            ]
+        },
+        "nl": {
+            "singular": "de schouder",
+            "plural": "de schouders"
         }
     }
 }

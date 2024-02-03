@@ -1,53 +1,51 @@
 {
     "to do": {
-        "infinitive": {
-            "en": "to do",
-            "fi": "tehdä;;tehdä is verbityyppi 2",
-            "nl": "doen"
-        },
-        "verbal noun": {
-            "en": "doing",
-            "fi": "tekeminen",
-            "nl": "het doen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I do",
-                "fi": "minä teen",
-                "nl": "ik doe"
-            },
-            "second person": {
-                "en": "you do",
-                "fi": "sinä teet",
-                "nl": "jij doet"
-            },
-            "third person": {
-                "fi": "hän tekee",
-                "feminine": {
-                    "en": "she does",
-                    "nl": "zij doet"
-                },
-                "masculine": {
-                    "en": "he does",
-                    "nl": "hij doet"
+        "en": {
+            "infinitive": "to do",
+            "verbal noun": "doing",
+            "singular": {
+                "first person": "I do",
+                "second person": "you do",
+                "third person": {
+                    "feminine": "she does",
+                    "masculine": "he does"
                 }
+            },
+            "plural": {
+                "first person": "we do",
+                "second person": "you do",
+                "third person": "they do"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we do",
-                "fi": "me teemme",
-                "nl": "wij doen"
+        "fi": {
+            "infinitive": "tehdä;;tehdä is verbityyppi 2",
+            "verbal noun": "tekeminen",
+            "singular": {
+                "first person": "minä teen",
+                "second person": "sinä teet",
+                "third person": "hän tekee"
             },
-            "second person": {
-                "en": "you do",
-                "fi": "te teette",
-                "nl": "jullie doen"
+            "plural": {
+                "first person": "me teemme",
+                "second person": "te teette",
+                "third person": "he tekevät"
+            }
+        },
+        "nl": {
+            "infinitive": "doen",
+            "verbal noun": "het doen",
+            "singular": {
+                "first person": "ik doe",
+                "second person": "jij doet",
+                "third person": {
+                    "feminine": "zij doet",
+                    "masculine": "hij doet"
+                }
             },
-            "third person": {
-                "fi": "he tekevät",
-                "en": "they do",
-                "nl": "zij doen"
+            "plural": {
+                "first person": "wij doen",
+                "second person": "jullie doen",
+                "third person": "zij doen"
             }
         }
     }

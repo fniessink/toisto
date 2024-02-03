@@ -1,18 +1,20 @@
 {
     "6": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "six",
-            "fi": [
+        "en": {
+            "cardinal": "six",
+            "ordinal": "sixth"
+        },
+        "fi": {
+            "cardinal": [
                 "kuusi",
                 "kuus*"
             ],
-            "nl": "zes"
+            "ordinal": "kuudes"
         },
-        "ordinal": {
-            "en": "sixth",
-            "fi": "kuudes",
-            "nl": "zesde"
+        "nl": {
+            "cardinal": "zes",
+            "ordinal": "zesde"
         }
     }
 }

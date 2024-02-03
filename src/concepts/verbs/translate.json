@@ -1,48 +1,48 @@
 {
     "to translate": {
-        "infinitive": {
-            "en": "to translate",
-            "fi": "kääntää;;kääntää is verbityyppi 1",
-            "nl": "vertalen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I translate",
-                "fi": "minä käännän",
-                "nl": "ik vertaal"
-            },
-            "second person": {
-                "en": "you translate",
-                "fi": "sinä käännät",
-                "nl": "jij vertaalt"
-            },
-            "third person": {
-                "fi": "hän kääntää",
-                "feminine": {
-                    "en": "she translates",
-                    "nl": "zij vertaalt"
-                },
-                "masculine": {
-                    "en": "he translates",
-                    "nl": "hij vertaalt"
+        "en": {
+            "infinitive": "to translate",
+            "singular": {
+                "first person": "I translate",
+                "second person": "you translate",
+                "third person": {
+                    "feminine": "she translates",
+                    "masculine": "he translates"
                 }
+            },
+            "plural": {
+                "first person": "we translate",
+                "second person": "you translate",
+                "third person": "they translate"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we translate",
-                "fi": "me käännämme",
-                "nl": "wij vertalen"
+        "fi": {
+            "infinitive": "kääntää;;kääntää is verbityyppi 1",
+            "singular": {
+                "first person": "minä käännän",
+                "second person": "sinä käännät",
+                "third person": "hän kääntää"
             },
-            "second person": {
-                "en": "you translate",
-                "fi": "te käännätte",
-                "nl": "jullie vertalen"
+            "plural": {
+                "first person": "me käännämme",
+                "second person": "te käännätte",
+                "third person": "he kääntävät"
+            }
+        },
+        "nl": {
+            "infinitive": "vertalen",
+            "singular": {
+                "first person": "ik vertaal",
+                "second person": "jij vertaalt",
+                "third person": {
+                    "feminine": "zij vertaalt",
+                    "masculine": "hij vertaalt"
+                }
             },
-            "third person": {
-                "en": "they translate",
-                "fi": "he kääntävät",
-                "nl": "zij vertalen"
+            "plural": {
+                "first person": "wij vertalen",
+                "second person": "jullie vertalen",
+                "third person": "zij vertalen"
             }
         }
     }

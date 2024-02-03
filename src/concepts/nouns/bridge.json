@@ -1,27 +1,33 @@
 {
     "bridge": {
-        "root": {
-            "singular": {
-                "en": "bridge",
-                "fi": "silta",
-                "nl": "de brug"
+        "en": {
+            "root": {
+                "singular": "bridge",
+                "plural": "bridges"
             },
-            "plural": {
-                "en": "bridges",
-                "fi": "sillat",
-                "nl": "de bruggen"
+            "diminutive": {
+                "singular": "(little bridge)",
+                "plural": "(little bridges)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little bridge)",
-                "fi": "(pieni silta)",
-                "nl": "het bruggetje"
+        "fi": {
+            "root": {
+                "singular": "silta",
+                "plural": "sillat"
             },
-            "plural": {
-                "en": "(little bridges)",
-                "fi": "(pienet sillat)",
-                "nl": "de bruggetjes"
+            "diminutive": {
+                "singular": "(pieni silta)",
+                "plural": "(pienet sillat)"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "de brug",
+                "plural": "de bruggen"
+            },
+            "diminutive": {
+                "singular": "het bruggetje",
+                "plural": "de bruggetjes"
             }
         }
     }

@@ -1,14 +1,16 @@
 {
     "country": {
-        "singular": {
-            "en": "country",
-            "fi": "maa;geography",
-            "nl": "het land"
+        "en": {
+            "singular": "country",
+            "plural": "countries"
         },
-        "plural": {
-            "en": "countries",
-            "fi": "maat;geography",
-            "nl": "de landen"
+        "fi": {
+            "singular": "maa;geography",
+            "plural": "maat;geography"
+        },
+        "nl": {
+            "singular": "het land",
+            "plural": "de landen"
         }
     },
     "neighboring country": {

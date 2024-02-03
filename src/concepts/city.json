@@ -1,64 +1,73 @@
 {
     "village": {
-        "singular": {
-            "en": "village",
-            "fi": "kylä",
-            "nl": "het dorp"
+        "en": {
+            "singular": "village",
+            "plural": "villages"
         },
-        "plural": {
-            "en": "villages",
-            "fi": "kylät",
-            "nl": "de dorpen"
+        "fi": {
+            "singular": "kylä",
+            "plural": "kylät"
+        },
+        "nl": {
+            "singular": "het dorp",
+            "plural": "de dorpen"
         }
     },
     "place": {
-        "singular": {
-            "en": "place",
-            "fi": "paikka",
-            "nl": "de plaats"
+        "en": {
+            "singular": "place",
+            "plural": "places"
         },
-        "plural": {
-            "en": "places",
-            "fi": "paikat",
-            "nl": "de plaatsen"
+        "fi": {
+            "singular": "paikka",
+            "plural": "paikat"
+        },
+        "nl": {
+            "singular": "de plaats",
+            "plural": "de plaatsen"
         }
     },
     "building": {
-        "singular": {
-            "example": "that building is a church",
-            "en": "building",
-            "fi": "rakennus",
-            "nl": "het gebouw"
+        "en": {
+            "singular": "building",
+            "plural": "buildings"
         },
-        "plural": {
-            "en": "buildings",
-            "fi": "rakennukset",
-            "nl": "de gebouwen"
+        "fi": {
+            "singular": "rakennus",
+            "plural": "rakennukset"
+        },
+        "nl": {
+            "singular": "het gebouw",
+            "plural": "de gebouwen"
         }
     },
     "monument": {
-        "singular": {
-            "en": "monument",
-            "fi": "monumentti",
-            "nl": "het monument"
+        "en": {
+            "singular": "monument",
+            "plural": "monuments"
         },
-        "plural": {
-            "en": "monuments",
-            "fi": "monumentit",
-            "nl": "de monumenten"
+        "fi": {
+            "singular": "monumentti",
+            "plural": "monumentit"
+        },
+        "nl": {
+            "singular": "het monument",
+            "plural": "de monumenten"
         }
     },
     "theater": {
         "hypernym": "building",
-        "singular": {
-            "en": "theater",
-            "fi": "teatteri",
-            "nl": "het theater"
+        "en": {
+            "singular": "theater",
+            "plural": "theaters"
         },
-        "plural": {
-            "en": "theaters",
-            "fi": "teatterit",
-            "nl": "de theaters"
+        "fi": {
+            "singular": "teatteri",
+            "plural": "teatterit"
+        },
+        "nl": {
+            "singular": "het theater",
+            "plural": "de theaters"
         }
     },
     "movie theater": {
@@ -73,68 +82,77 @@
                 "theater"
             ]
         },
-        "singular": {
-            "en": "movie theater",
-            "fi": "elokuvateatteri",
-            "nl": "de bioscoop"
+        "en": {
+            "singular": "movie theater",
+            "plural": "movie theaters"
         },
-        "plural": {
-            "en": "movie theaters",
-            "fi": "elokuvateatterit",
-            "nl": "de bioscopen"
+        "fi": {
+            "singular": "elokuvateatteri",
+            "plural": "elokuvateatterit"
+        },
+        "nl": {
+            "singular": "de bioscoop",
+            "plural": "de bioscopen"
         }
     },
     "opera": {
         "hypernym": "building",
-        "singular": {
-            "en": "opera",
-            "fi": "ooppera",
-            "nl": "de opera"
+        "en": {
+            "singular": "opera",
+            "plural": "operas"
         },
-        "plural": {
-            "en": "operas",
-            "fi": "oopperat",
-            "nl": "de opera's"
+        "fi": {
+            "singular": "ooppera",
+            "plural": "oopperat"
+        },
+        "nl": {
+            "singular": "de opera",
+            "plural": "de opera's"
         }
     },
     "museum": {
         "hypernym": "building",
-        "singular": {
-            "en": "museum",
-            "fi": "museo",
-            "nl": "het museum"
+        "en": {
+            "singular": "museum",
+            "plural": "museums"
         },
-        "plural": {
-            "en": "museums",
-            "fi": "museot",
-            "nl": "de musea"
+        "fi": {
+            "singular": "museo",
+            "plural": "museot"
+        },
+        "nl": {
+            "singular": "het museum",
+            "plural": "de musea"
         }
     },
     "church": {
         "hypernym": "building",
-        "singular": {
-            "example": "that building is a church",
-            "en": "church",
-            "fi": "kirkko",
-            "nl": "de kerk"
+        "en": {
+            "singular": "church",
+            "plural": "churches"
         },
-        "plural": {
-            "en": "churches",
-            "fi": "kirkot",
-            "nl": "de kerken"
+        "fi": {
+            "singular": "kirkko",
+            "plural": "kirkot"
+        },
+        "nl": {
+            "singular": "de kerk",
+            "plural": "de kerken"
         }
     },
     "stadium": {
         "hypernym": "building",
-        "singular": {
-            "en": "stadium",
-            "fi": "stadion",
-            "nl": "het stadion"
+        "en": {
+            "singular": "stadium",
+            "plural": "stadiums"
         },
-        "plural": {
-            "en": "stadiums",
-            "fi": "stadionit",
-            "nl": "de stadions"
+        "fi": {
+            "singular": "stadion",
+            "plural": "stadionit"
+        },
+        "nl": {
+            "singular": "het stadion",
+            "plural": "de stadions"
         }
     },
     "library": {
@@ -142,68 +160,76 @@
         "roots": {
             "fi": "book"
         },
-        "singular": {
-            "example": "where is the library",
-            "en": "library",
-            "fi": "kirjasto",
-            "nl": "de bibliotheek"
+        "en": {
+            "singular": "library",
+            "plural": "libraries"
         },
-        "plural": {
-            "en": "libraries",
-            "fi": "kirjastot",
-            "nl": "de bibliotheken"
+        "fi": {
+            "singular": "kirjasto",
+            "plural": "kirjastot"
+        },
+        "nl": {
+            "singular": "de bibliotheek",
+            "plural": "de bibliotheken"
         }
     },
     "café": {
         "roots": {
             "fi": "coffee"
         },
-        "singular": {
-            "en": "café",
-            "fi": "kahvila",
-            "nl": "het café"
+        "en": {
+            "singular": "café",
+            "plural": "cafés"
         },
-        "plural": {
-            "en": "cafés",
-            "fi": "kahvilat",
-            "nl": "de cafés"
+        "fi": {
+            "singular": "kahvila",
+            "plural": "kahvilat"
+        },
+        "nl": {
+            "singular": "het café",
+            "plural": "de cafés"
         }
     },
     "restaurant": {
-        "singular": {
-            "en": "restaurant",
-            "fi": "ravintola",
-            "nl": "het restaurant"
+        "en": {
+            "singular": "restaurant",
+            "plural": "restaurants"
         },
-        "plural": {
-            "en": "restaurants",
-            "fi": "ravintolat",
-            "nl": "de restaurants"
+        "fi": {
+            "singular": "ravintola",
+            "plural": "ravintolat"
+        },
+        "nl": {
+            "singular": "het restaurant",
+            "plural": "de restaurants"
         }
     },
     "office": {
-        "singular": {
-            "example": "I am in the office",
-            "en": "office",
-            "fi": "toimisto",
-            "nl": "het kantoor"
+        "en": {
+            "singular": "office",
+            "plural": "offices"
         },
-        "plural": {
-            "en": "offices",
-            "fi": "toimistot",
-            "nl": "de kantoren"
+        "fi": {
+            "singular": "toimisto",
+            "plural": "toimistot"
+        },
+        "nl": {
+            "singular": "het kantoor",
+            "plural": "de kantoren"
         }
     },
     "park": {
-        "singular": {
-            "en": "park",
-            "fi": "puisto",
-            "nl": "het park"
+        "en": {
+            "singular": "park",
+            "plural": "parks"
         },
-        "plural": {
-            "en": "parks",
-            "fi": "puistot",
-            "nl": "de parken"
+        "fi": {
+            "singular": "puisto",
+            "plural": "puistot"
+        },
+        "nl": {
+            "singular": "het park",
+            "plural": "de parken"
         }
     },
     "amusement park": {
@@ -235,15 +261,17 @@
                 "garden"
             ]
         },
-        "singular": {
-            "en": "zoo",
-            "fi": "eläintarha",
-            "nl": "de dierentuin"
+        "en": {
+            "singular": "zoo",
+            "plural": "zoos"
         },
-        "plural": {
-            "en": "zoos",
-            "fi": "eläintarhat",
-            "nl": "de dierentuinen"
+        "fi": {
+            "singular": "eläintarha",
+            "plural": "eläintarhat"
+        },
+        "nl": {
+            "singular": "de dierentuin",
+            "plural": "de dierentuinen"
         }
     },
     "castle": {
@@ -251,77 +279,89 @@
             "attraction",
             "building"
         ],
-        "singular": {
-            "en": "castle",
-            "fi": "linna",
-            "nl": "het kasteel"
+        "en": {
+            "singular": "castle",
+            "plural": "castles"
         },
-        "plural": {
-            "en": "castles",
-            "fi": "linnat",
-            "nl": "de kastelen"
+        "fi": {
+            "singular": "linna",
+            "plural": "linnat"
+        },
+        "nl": {
+            "singular": "het kasteel",
+            "plural": "de kastelen"
         }
     },
     "hotel": {
         "hypernym": "building",
-        "singular": {
-            "en": "hotel",
-            "fi": "hotelli",
-            "nl": "het hotel"
+        "en": {
+            "singular": "hotel",
+            "plural": "hotels"
         },
-        "plural": {
-            "en": "hotels",
-            "fi": "hotellit",
-            "nl": "de hotels"
+        "fi": {
+            "singular": "hotelli",
+            "plural": "hotellit"
+        },
+        "nl": {
+            "singular": "het hotel",
+            "plural": "de hotels"
         }
     },
     "centre": {
-        "singular": {
-            "en": "centre",
-            "fi": "keskusta",
-            "nl": "het centrum"
+        "en": {
+            "singular": "centre",
+            "plural": "centres"
         },
-        "plural": {
-            "en": "centres",
-            "fi": "keskustat",
-            "nl": "de centra"
+        "fi": {
+            "singular": "keskusta",
+            "plural": "keskustat"
+        },
+        "nl": {
+            "singular": "het centrum",
+            "plural": "de centra"
         }
     },
     "street": {
         "example": "my house is in this street",
-        "singular": {
-            "en": "street",
-            "fi": "katu",
-            "nl": "de straat"
+        "en": {
+            "singular": "street",
+            "plural": "streets"
         },
-        "plural": {
-            "en": "streets",
-            "fi": "kadut",
-            "nl": "de straten"
+        "fi": {
+            "singular": "katu",
+            "plural": "kadut"
+        },
+        "nl": {
+            "singular": "de straat",
+            "plural": "de straten"
         }
     },
     "road": {
-        "singular": {
-            "en": "road",
-            "fi": "tie",
-            "nl": "de weg"
+        "en": {
+            "singular": "road",
+            "plural": "roads"
         },
-        "plural": {
-            "en": "roads",
-            "fi": "tiet",
-            "nl": "de wegen"
+        "fi": {
+            "singular": "tie",
+            "plural": "tiet"
+        },
+        "nl": {
+            "singular": "de weg",
+            "plural": "de wegen"
         }
     },
     "path": {
-        "singular": {
-            "en": "path",
-            "fi": "polku",
-            "nl": "het pad"
+        "en": {
+            "singular": "path",
+            "plural": "paths"
         },
-        "plural": {
-            "en": "paths",
-            "fi": "polut",
-            "nl": "de paden"
+        "fi": {
+            "singular": "polku",
+            "plural": "polut"
+        },
+        "nl": {
+            "singular": "het pad",
+            "plural": "de paden"
         }
     },
     "pedestrian": {
@@ -329,27 +369,31 @@
             "fi": "foot",
             "nl": "foot"
         },
-        "singular": {
-            "en": "pedestrian",
-            "fi": "jalankulkija",
-            "nl": "de voetganger"
+        "en": {
+            "singular": "pedestrian",
+            "plural": "pedestrians"
         },
-        "plural": {
-            "en": "pedestrians",
-            "fi": "jalankulkijat",
-            "nl": "de voetgangers"
+        "fi": {
+            "singular": "jalankulkija",
+            "plural": "jalankulkijat"
+        },
+        "nl": {
+            "singular": "de voetganger",
+            "plural": "de voetgangers"
         }
     },
     "sidewalk": {
-        "singular": {
-            "en": "sidewalk",
-            "fi": "jalkakäytävä",
-            "nl": "de stoep"
+        "en": {
+            "singular": "sidewalk",
+            "plural": "sidewalks"
         },
-        "plural": {
-            "en": "sidewalks",
-            "fi": "jalkakäytävät",
-            "nl": "de stoepen"
+        "fi": {
+            "singular": "jalkakäytävä",
+            "plural": "jalkakäytävät"
+        },
+        "nl": {
+            "singular": "de stoep",
+            "plural": "de stoepen"
         }
     },
     "pedestrian crossing": {
@@ -366,15 +410,17 @@
         "nl": "het zebrapad"
     },
     "cyclist": {
-        "singular": {
-            "en": "cyclist",
-            "fi": "pyöräilijä",
-            "nl": "de fietser"
+        "en": {
+            "singular": "cyclist",
+            "plural": "cyclists"
         },
-        "plural": {
-            "en": "cyclists",
-            "fi": "pyöräilijät",
-            "nl": "de fietsers"
+        "fi": {
+            "singular": "pyöräilijä",
+            "plural": "pyöräilijät"
+        },
+        "nl": {
+            "singular": "de fietser",
+            "plural": "de fietsers"
         }
     },
     "cycle path": {
@@ -397,16 +443,17 @@
         "nl": "het fietspad"
     },
     "square": {
-        "singular": {
-            "example": "there is a christmas tree on the square",
-            "en": "square",
-            "fi": "aukio",
-            "nl": "het plein"
+        "en": {
+            "singular": "square",
+            "plural": "squares"
         },
-        "plural": {
-            "en": "squares",
-            "fi": "aukiot",
-            "nl": "de pleinen"
+        "fi": {
+            "singular": "aukio",
+            "plural": "aukiot"
+        },
+        "nl": {
+            "singular": "het plein",
+            "plural": "de pleinen"
         }
     },
     "post": {
@@ -445,27 +492,29 @@
                 "store"
             ]
         },
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "mall",
                 "shopping center"
             ],
-            "fi": [
+            "plural": [
+                "malls",
+                "shopping centers"
+            ]
+        },
+        "fi": {
+            "singular": [
                 "kauppakeskus",
                 "ostoskeskus"
             ],
-            "nl": "het winkelcentrum"
-        },
-        "plural": {
-            "en": [
-                "malls",
-                "shopping centers"
-            ],
-            "fi": [
+            "plural": [
                 "kauppakeskukset",
                 "ostoskeskukset"
-            ],
-            "nl": "de winkelcentra"
+            ]
+        },
+        "nl": {
+            "singular": "het winkelcentrum",
+            "plural": "de winkelcentra"
         }
     },
     "that building is a church": {

@@ -1,16 +1,18 @@
 {
     "beard": {
-        "hypernym": "hair",
         "holonym": "face",
-        "singular": {
-            "en": "beard",
-            "fi": "parta",
-            "nl": "de baard"
+        "hypernym": "hair",
+        "en": {
+            "singular": "beard",
+            "plural": "beards"
         },
-        "plural": {
-            "en": "beards",
-            "fi": "parrat",
-            "nl": "de baarden"
+        "fi": {
+            "singular": "parta",
+            "plural": "parrat"
+        },
+        "nl": {
+            "singular": "de baard",
+            "plural": "de baarden"
         }
     }
 }

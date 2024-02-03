@@ -1,16 +1,14 @@
 {
     "face": {
         "example": "he has a friendly face",
-        "fi": "kasvot;;'kasvot' is plural only",
-        "singular": {
-            "en": "face",
-            "fi": "naama*",
-            "nl": "het gezicht"
+        "en": {
+            "singular": "face",
+            "plural": "faces"
         },
-        "plural": {
-            "en": "faces",
-            "fi": "naamat*",
-            "nl": "de gezichten"
+        "fi": "kasvot;;'kasvot' is plural only",
+        "nl": {
+            "singular": "het gezicht",
+            "plural": "de gezichten"
         }
     },
     "he has a friendly face": {

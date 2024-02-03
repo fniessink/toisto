@@ -2,31 +2,37 @@
     "child": {
         "antonym": "parent",
         "holonym": "family",
-        "root": {
-            "singular": {
-                "en": "child",
-                "fi": "lapsi",
-                "nl": "het kind"
+        "en": {
+            "root": {
+                "singular": "child",
+                "plural": "children"
             },
-            "plural": {
-                "en": "children",
-                "fi": "lapset",
-                "nl": "de kinderen"
+            "diminutive": {
+                "singular": "(little child)",
+                "plural": "(little children)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little child)",
-                "nl": "het kindje",
-                "fi": "(pieni lapsi)"
+        "fi": {
+            "root": {
+                "singular": "lapsi",
+                "plural": "lapset"
             },
-            "plural": {
-                "en": "(little children)",
-                "nl": [
+            "diminutive": {
+                "singular": "(pieni lapsi)",
+                "plural": "(pienet lapset)"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "het kind",
+                "plural": "de kinderen"
+            },
+            "diminutive": {
+                "singular": "het kindje",
+                "plural": [
                     "de kindjes",
                     "de kindertjes"
-                ],
-                "fi": "(pienet lapset)"
+                ]
             }
         }
     },
@@ -50,28 +56,34 @@
         ],
         "holonym": "family",
         "hypernym": "child",
-        "root": {
-            "singular": {
-                "en": "daughter",
-                "fi": "tytär",
-                "nl": "de dochter"
+        "en": {
+            "root": {
+                "singular": "daughter",
+                "plural": "daughters"
             },
-            "plural": {
-                "en": "daughters",
-                "fi": "tyttäret",
-                "nl": "de dochters"
+            "diminutive": {
+                "singular": "(little  daughter)",
+                "plural": "(little  daughters)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little  daughter)",
-                "nl": "het dochtertje",
-                "fi": "(pieni tytär)"
+        "fi": {
+            "root": {
+                "singular": "tytär",
+                "plural": "tyttäret"
             },
-            "plural": {
-                "en": "(little  daughters)",
-                "nl": "de dochtertjes",
-                "fi": "(pienet tytäret)"
+            "diminutive": {
+                "singular": "(pieni tytär)",
+                "plural": "(pienet tytäret)"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "de dochter",
+                "plural": "de dochters"
+            },
+            "diminutive": {
+                "singular": "het dochtertje",
+                "plural": "de dochtertjes"
             }
         }
     },
@@ -82,28 +94,34 @@
         ],
         "holonym": "family",
         "hypernym": "child",
-        "root": {
-            "singular": {
-                "en": "son",
-                "fi": "poika",
-                "nl": "de zoon"
+        "en": {
+            "root": {
+                "singular": "son",
+                "plural": "sons"
             },
-            "plural": {
-                "en": "sons",
-                "fi": "pojat",
-                "nl": "de zonen"
+            "diminutive": {
+                "singular": "(little son)",
+                "plural": "(little sons)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little son)",
-                "nl": "het zoontje",
-                "fi": "(pieni poika)"
+        "fi": {
+            "root": {
+                "singular": "poika",
+                "plural": "pojat"
             },
-            "plural": {
-                "en": "(little sons)",
-                "nl": "de zoontjes",
-                "fi": "(pienet pojat)"
+            "diminutive": {
+                "singular": "(pieni poika)",
+                "plural": "(pienet pojat)"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "de zoon",
+                "plural": "de zonen"
+            },
+            "diminutive": {
+                "singular": "het zoontje",
+                "plural": "de zoontjes"
             }
         }
     },

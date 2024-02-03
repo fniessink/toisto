@@ -1,14 +1,16 @@
 {
     "river": {
-        "singular": {
-            "en": "river",
-            "fi": "joki",
-            "nl": "de rivier"
+        "en": {
+            "singular": "river",
+            "plural": "rivers"
         },
-        "plural": {
-            "en": "rivers",
-            "fi": "joet",
-            "nl": "de rivieren"
+        "fi": {
+            "singular": "joki",
+            "plural": "joet"
+        },
+        "nl": {
+            "singular": "de rivier",
+            "plural": "de rivieren"
         }
     }
 }

@@ -115,7 +115,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
-        concept = self.create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
+        concept = self.create_concept("house", dict(fi=dict(singular="talo", plural="talot")))
         quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         self.assert_printed(Feedback.TRY_AGAIN, self.practice(quizzes))
 
@@ -151,7 +151,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         concept = self.create_concept(
             "house",
-            dict(singular=dict(fi="talo", nl="huis"), plural=dict(fi="talot", nl="huizen")),
+            dict(fi=dict(singular="talo", plural="talot"), nl=dict(singular="huis", plural="huizen")),
         )
         quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         expected_feedback = (
@@ -165,7 +165,9 @@ class PracticeTest(ToistoTestCase):
         """Test that both the masculine and feminine form are correct."""
         concept = self.create_concept(
             "to ride",
-            {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
+            dict(
+                fi={"third person": "hän ajaa"}, nl={"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}
+            ),
         )
         quizzes = create_quizzes(self.language_pair, (READ,), concept)
         expected_feedback = (
@@ -180,7 +182,9 @@ class PracticeTest(ToistoTestCase):
         """Test that both the masculine and feminine form are correct."""
         concept = self.create_concept(
             "to ride",
-            {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
+            dict(
+                fi={"third person": "hän ajaa"}, nl={"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}
+            ),
         )
         quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept)
         expected_feedback = (

@@ -1,48 +1,48 @@
 {
     "to reach in time": {
-        "infinitive": {
-            "en": "to reach in time",
-            "fi": "ehtiä",
-            "nl": "op tijd komen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I reach in time",
-                "fi": "minä ehdin",
-                "nl": "ik kom op tijd"
-            },
-            "second person": {
-                "en": "you reach in time",
-                "fi": "sinä ehdit",
-                "nl": "jij komt op tijd"
-            },
-            "third person": {
-                "fi": "hän ehtii",
-                "feminine": {
-                    "en": "she reaches in time",
-                    "nl": "zij komt op tijd"
-                },
-                "masculine": {
-                    "en": "he reaches in time",
-                    "nl": "hij komt op tijd"
+        "en": {
+            "infinitive": "to reach in time",
+            "singular": {
+                "first person": "I reach in time",
+                "second person": "you reach in time",
+                "third person": {
+                    "feminine": "she reaches in time",
+                    "masculine": "he reaches in time"
                 }
+            },
+            "plural": {
+                "first person": "we reach in time",
+                "second person": "you reach in time",
+                "third person": "they reach in time"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we reach in time",
-                "fi": "me ehdimme",
-                "nl": "wij komen op tijd"
+        "fi": {
+            "infinitive": "ehtiä",
+            "singular": {
+                "first person": "minä ehdin",
+                "second person": "sinä ehdit",
+                "third person": "hän ehtii"
             },
-            "second person": {
-                "en": "you reach in time",
-                "fi": "te ehditte",
-                "nl": "jullie komen op tijd"
+            "plural": {
+                "first person": "me ehdimme",
+                "second person": "te ehditte",
+                "third person": "he ehtivät"
+            }
+        },
+        "nl": {
+            "infinitive": "op tijd komen",
+            "singular": {
+                "first person": "ik kom op tijd",
+                "second person": "jij komt op tijd",
+                "third person": {
+                    "feminine": "zij komt op tijd",
+                    "masculine": "hij komt op tijd"
+                }
             },
-            "third person": {
-                "en": "they reach in time",
-                "fi": "he ehtivät",
-                "nl": "zij komen op tijd"
+            "plural": {
+                "first person": "wij komen op tijd",
+                "second person": "jullie komen op tijd",
+                "third person": "zij komen op tijd"
             }
         }
     }

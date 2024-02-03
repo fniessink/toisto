@@ -1,48 +1,48 @@
 {
     "to navigate": {
-        "infinitive": {
-            "en": "to navigate",
-            "fi": "suunnistaa",
-            "nl": "navigeren"
-        },
-        "singular": {
-            "first person": {
-                "en": "I navigate",
-                "fi": "minä suunnistan",
-                "nl": "ik navigeer"
-            },
-            "second person": {
-                "en": "you navigate",
-                "fi": "sinä suunnistat",
-                "nl": "jij navigeert"
-            },
-            "third person": {
-                "fi": "hän suunnistaa",
-                "feminine": {
-                    "en": "she navigates",
-                    "nl": "zij navigeert"
-                },
-                "masculine": {
-                    "en": "he navigates",
-                    "nl": "hij navigeert"
+        "en": {
+            "infinitive": "to navigate",
+            "singular": {
+                "first person": "I navigate",
+                "second person": "you navigate",
+                "third person": {
+                    "feminine": "she navigates",
+                    "masculine": "he navigates"
                 }
+            },
+            "plural": {
+                "first person": "we navigate",
+                "second person": "you navigate",
+                "third person": "they navigate"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we navigate",
-                "fi": "me suunnistamme",
-                "nl": "wij navigeren"
+        "fi": {
+            "infinitive": "suunnistaa",
+            "singular": {
+                "first person": "minä suunnistan",
+                "second person": "sinä suunnistat",
+                "third person": "hän suunnistaa"
             },
-            "second person": {
-                "en": "you navigate",
-                "fi": "te suunnistatte",
-                "nl": "jullie navigeren"
+            "plural": {
+                "first person": "me suunnistamme",
+                "second person": "te suunnistatte",
+                "third person": "he suunnistavat"
+            }
+        },
+        "nl": {
+            "infinitive": "navigeren",
+            "singular": {
+                "first person": "ik navigeer",
+                "second person": "jij navigeert",
+                "third person": {
+                    "feminine": "zij navigeert",
+                    "masculine": "hij navigeert"
+                }
             },
-            "third person": {
-                "en": "they navigate",
-                "fi": "he suunnistavat",
-                "nl": "zij navigeren"
+            "plural": {
+                "first person": "wij navigeren",
+                "second person": "jullie navigeren",
+                "third person": "zij navigeren"
             }
         }
     }

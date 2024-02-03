@@ -9,21 +9,23 @@
             "fi": "ice",
             "nl": "ice"
         },
-        "singular": {
-            "en": "ice cream",
-            "fi": [
+        "en": {
+            "singular": "ice cream",
+            "plural": "ice creams"
+        },
+        "fi": {
+            "singular": [
                 "jäätelö",
                 "jätski*"
             ],
-            "nl": "het ijsje|het ijs"
-        },
-        "plural": {
-            "en": "ice creams",
-            "fi": [
+            "plural": [
                 "jäätelöt",
                 "jätskit*"
-            ],
-            "nl": "de ijsjes"
+            ]
+        },
+        "nl": {
+            "singular": "het ijsje|het ijs",
+            "plural": "de ijsjes"
         }
     },
     "ice cream kiosk": {

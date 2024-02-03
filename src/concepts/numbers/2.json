@@ -1,18 +1,20 @@
 {
     "2": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "two",
-            "fi": [
+        "en": {
+            "cardinal": "two",
+            "ordinal": "second"
+        },
+        "fi": {
+            "cardinal": [
                 "kaksi",
                 "kaks*"
             ],
-            "nl": "twee"
+            "ordinal": "toinen"
         },
-        "ordinal": {
-            "en": "second",
-            "fi": "toinen",
-            "nl": "tweede"
+        "nl": {
+            "cardinal": "twee",
+            "ordinal": "tweede"
         }
     }
 }

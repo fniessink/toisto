@@ -1,48 +1,48 @@
 {
     "to learn": {
-        "infinitive": {
-            "en": "to learn",
-            "fi": "oppia",
-            "nl": "leren"
-        },
-        "singular": {
-            "first person": {
-                "en": "I learn",
-                "fi": "minä opin",
-                "nl": "ik leer"
-            },
-            "second person": {
-                "en": "you learn",
-                "fi": "sinä opit",
-                "nl": "jij leert"
-            },
-            "third person": {
-                "fi": "hän oppii",
-                "feminine": {
-                    "en": "she learns",
-                    "nl": "zij leert"
-                },
-                "masculine": {
-                    "en": "he learns",
-                    "nl": "hij leert"
+        "en": {
+            "infinitive": "to learn",
+            "singular": {
+                "first person": "I learn",
+                "second person": "you learn",
+                "third person": {
+                    "feminine": "she learns",
+                    "masculine": "he learns"
                 }
+            },
+            "plural": {
+                "first person": "we learn",
+                "second person": "you learn",
+                "third person": "they learn"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we learn",
-                "fi": "me opimme",
-                "nl": "wij leren"
+        "fi": {
+            "infinitive": "oppia",
+            "singular": {
+                "first person": "minä opin",
+                "second person": "sinä opit",
+                "third person": "hän oppii"
             },
-            "second person": {
-                "en": "you learn",
-                "fi": "te opitte",
-                "nl": "jullie leren"
+            "plural": {
+                "first person": "me opimme",
+                "second person": "te opitte",
+                "third person": "he oppivat"
+            }
+        },
+        "nl": {
+            "infinitive": "leren",
+            "singular": {
+                "first person": "ik leer",
+                "second person": "jij leert",
+                "third person": {
+                    "feminine": "zij leert",
+                    "masculine": "hij leert"
+                }
             },
-            "third person": {
-                "en": "they learn",
-                "fi": "he oppivat",
-                "nl": "zij leren"
+            "plural": {
+                "first person": "wij leren",
+                "second person": "jullie leren",
+                "third person": "zij leren"
             }
         }
     }

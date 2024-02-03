@@ -5,18 +5,20 @@
             "3",
             "20"
         ],
-        "cardinal": {
-            "en": "twenty-three",
-            "fi": [
+        "en": {
+            "cardinal": "twenty-three",
+            "ordinal": "twenty-third"
+        },
+        "fi": {
+            "cardinal": [
                 "kaksikymmentäkolme",
                 "kakskytkolme*"
             ],
-            "nl": "drieëntwintig"
+            "ordinal": "kahdeskymmeneskolmas"
         },
-        "ordinal": {
-            "en": "twenty-third",
-            "fi": "kahdeskymmeneskolmas",
-            "nl": "drieëntwintigste"
+        "nl": {
+            "cardinal": "drieëntwintig",
+            "ordinal": "drieëntwintigste"
         }
     }
 }

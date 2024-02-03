@@ -1,15 +1,17 @@
 {
     "thumb": {
         "hypernym": "finger",
-        "singular": {
-            "en": "thumb",
-            "fi": "peukalo",
-            "nl": "de duim"
+        "en": {
+            "singular": "thumb",
+            "plural": "thumbs"
         },
-        "plural": {
-            "en": "thumbs",
-            "fi": "peukalot",
-            "nl": "de duimen"
+        "fi": {
+            "singular": "peukalo",
+            "plural": "peukalot"
+        },
+        "nl": {
+            "singular": "de duim",
+            "plural": "de duimen"
         }
     }
 }

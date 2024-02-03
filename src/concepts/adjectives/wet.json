@@ -1,24 +1,20 @@
 {
     "wet": {
         "antonym": "dry",
-        "positive degree": {
-            "example": [
-                "the dutch autumn is wet",
-                "dutch springs are wet"
-            ],
-            "en": "wet",
-            "fi": "märkä",
-            "nl": "nat"
+        "en": {
+            "positive degree": "wet",
+            "comparative degree": "wetter",
+            "superlative degree": "wettest"
         },
-        "comparative degree": {
-            "en": "wetter",
-            "fi": "märempi",
-            "nl": "natter"
+        "fi": {
+            "positive degree": "märkä",
+            "comparative degree": "märempi",
+            "superlative degree": "märin"
         },
-        "superlative degree": {
-            "en": "wettest",
-            "fi": "märin",
-            "nl": "natst"
+        "nl": {
+            "positive degree": "nat",
+            "comparative degree": "natter",
+            "superlative degree": "natst"
         }
     }
 }

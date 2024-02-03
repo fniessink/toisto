@@ -1,15 +1,16 @@
 {
     "city": {
-        "singular": {
-            "example": "the city is in the east",
-            "en": "city",
-            "fi": "kaupunki",
-            "nl": "de stad"
+        "en": {
+            "singular": "city",
+            "plural": "cities"
         },
-        "plural": {
-            "en": "cities",
-            "fi": "kaupungit",
-            "nl": "de steden"
+        "fi": {
+            "singular": "kaupunki",
+            "plural": "kaupungit"
+        },
+        "nl": {
+            "singular": "de stad",
+            "plural": "de steden"
         }
     },
     "townsman": {

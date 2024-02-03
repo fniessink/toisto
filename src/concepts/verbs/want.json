@@ -1,54 +1,48 @@
 {
     "to want": {
-        "infinitive": {
-            "en": "to want",
-            "fi": "haluta;;haluta is verityyppi 4",
-            "nl": "willen"
-        },
-        "singular": {
-            "first person": {
-                "example": "i want coffee",
-                "en": "I want",
-                "fi": "minä haluan",
-                "nl": "ik wil"
-            },
-            "second person": {
-                "example": "you want milk",
-                "en": "you want",
-                "fi": "sinä haluat",
-                "nl": "jij wilt|jij wil"
-            },
-            "third person": {
-                "example": "she wants ice cream",
-                "fi": "hän haluaa",
-                "feminine": {
-                    "en": "she wants",
-                    "nl": "zij wil"
-                },
-                "masculine": {
-                    "en": "he wants",
-                    "nl": "hij wil"
+        "en": {
+            "infinitive": "to want",
+            "singular": {
+                "first person": "I want",
+                "second person": "you want",
+                "third person": {
+                    "feminine": "she wants",
+                    "masculine": "he wants"
                 }
+            },
+            "plural": {
+                "first person": "we want",
+                "second person": "you want",
+                "third person": "they want"
             }
         },
-        "plural": {
-            "first person": {
-                "example": "we want cake",
-                "en": "we want",
-                "fi": "me haluamme",
-                "nl": "wij willen"
+        "fi": {
+            "infinitive": "haluta;;haluta is verityyppi 4",
+            "singular": {
+                "first person": "minä haluan",
+                "second person": "sinä haluat",
+                "third person": "hän haluaa"
             },
-            "second person": {
-                "example": "you want sugar",
-                "en": "you want",
-                "fi": "te haluatte",
-                "nl": "jullie willen"
+            "plural": {
+                "first person": "me haluamme",
+                "second person": "te haluatte",
+                "third person": "he haluavat"
+            }
+        },
+        "nl": {
+            "infinitive": "willen",
+            "singular": {
+                "first person": "ik wil",
+                "second person": "jij wilt|jij wil",
+                "third person": {
+                    "feminine": "zij wil",
+                    "masculine": "hij wil"
+                }
             },
-            "third person": {
-                "example": "they want a cookie",
-                "en": "they want",
-                "fi": "he haluavat",
-                "nl": "zij willen"
+            "plural": {
+                "first person": "wij willen",
+                "second person": "jullie willen",
+                "third person": "zij willen"
             }
         }
     },

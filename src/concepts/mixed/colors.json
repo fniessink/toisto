@@ -14,11 +14,11 @@
         "nl": "wit"
     },
     "blue": {
-        "hypernym": "color",
         "example": [
             "the car is blue",
             "the sky is blue"
         ],
+        "hypernym": "color",
         "en": "blue",
         "fi": "sininen",
         "nl": "blauw"
@@ -103,15 +103,17 @@
             "to be",
             "blue"
         ],
-        "singular": {
-            "en": "The car is blue.",
-            "fi": "Auto on sininen.",
-            "nl": "De auto is blauw."
+        "en": {
+            "singular": "The car is blue.",
+            "plural": "The cars are blue."
         },
-        "plural": {
-            "en": "The cars are blue.",
-            "fi": "Autot ovat sinisiä.",
-            "nl": "De auto's zijn blauw."
+        "fi": {
+            "singular": "Auto on sininen.",
+            "plural": "Autot ovat sinisiä."
+        },
+        "nl": {
+            "singular": "De auto is blauw.",
+            "plural": "De auto's zijn blauw."
         }
     },
     "the blue car is old": {
@@ -121,15 +123,17 @@
             "to be",
             "old"
         ],
-        "singular": {
-            "en": "The blue car is old.",
-            "fi": "Sininen auto on vanha.",
-            "nl": "De blauwe auto is oud."
+        "en": {
+            "singular": "The blue car is old.",
+            "plural": "The blue cars are old."
         },
-        "plural": {
-            "en": "The blue cars are old.",
-            "fi": "Siniset autot ovat vanhoja.",
-            "nl": "De blauwe auto's zijn oud."
+        "fi": {
+            "singular": "Sininen auto on vanha.",
+            "plural": "Siniset autot ovat vanhoja."
+        },
+        "nl": {
+            "singular": "De blauwe auto is oud.",
+            "plural": "De blauwe auto's zijn oud."
         }
     },
     "the house is white": {
@@ -138,15 +142,17 @@
             "to be",
             "white"
         ],
-        "singular": {
-            "en": "The house is white.",
-            "fi": "Talo on valkoinen.",
-            "nl": "Het huis is wit."
+        "en": {
+            "singular": "The house is white.",
+            "plural": "The houses are white."
         },
-        "plural": {
-            "en": "The houses are white.",
-            "fi": "Talot ovat valkoisia.",
-            "nl": "De huizen zijn wit."
+        "fi": {
+            "singular": "Talo on valkoinen.",
+            "plural": "Talot ovat valkoisia."
+        },
+        "nl": {
+            "singular": "Het huis is wit.",
+            "plural": "De huizen zijn wit."
         }
     },
     "the white house is big": {
@@ -156,15 +162,17 @@
             "to be",
             "big"
         ],
-        "singular": {
-            "en": "The white house is big.",
-            "fi": "Valkoinen talo on suuri.",
-            "nl": "Het witte huis is groot."
+        "en": {
+            "singular": "The white house is big.",
+            "plural": "The white houses are big."
         },
-        "plural": {
-            "en": "The white houses are big.",
-            "fi": "Valkoiset talot ovat suuria.",
-            "nl": "De witte huizen zijn groot."
+        "fi": {
+            "singular": "Valkoinen talo on suuri.",
+            "plural": "Valkoiset talot ovat suuria."
+        },
+        "nl": {
+            "singular": "Het witte huis is groot.",
+            "plural": "De witte huizen zijn groot."
         }
     },
     "i have a green table": {
@@ -173,15 +181,17 @@
             "to have",
             "table"
         ],
-        "singular": {
-            "en": "I have a green table.",
-            "fi": "Minulla on vihreä pöytä.",
-            "nl": "Ik heb een groene tafel."
+        "en": {
+            "singular": "I have a green table.",
+            "plural": "I have green tables."
         },
-        "plural": {
-            "en": "I have green tables.",
-            "fi": "Minulla on vihreitä pöytiä.",
-            "nl": "Ik heb groene tafels."
+        "fi": {
+            "singular": "Minulla on vihreä pöytä.",
+            "plural": "Minulla on vihreitä pöytiä."
+        },
+        "nl": {
+            "singular": "Ik heb een groene tafel.",
+            "plural": "Ik heb groene tafels."
         }
     },
     "the green table is mine": {
@@ -190,15 +200,17 @@
             "table",
             "to be"
         ],
-        "singular": {
-            "en": "The green table is mine.",
-            "fi": "Vihreä pöytä on minun.",
-            "nl": "De groene tafel is van mij."
+        "en": {
+            "singular": "The green table is mine.",
+            "plural": "The green tables are mine."
         },
-        "plural": {
-            "en": "The green tables are mine.",
-            "fi": "Vihreät pöydät ovat minun.",
-            "nl": "De groene tafels zijn van mij."
+        "fi": {
+            "singular": "Vihreä pöytä on minun.",
+            "plural": "Vihreät pöydät ovat minun."
+        },
+        "nl": {
+            "singular": "De groene tafel is van mij.",
+            "plural": "De groene tafels zijn van mij."
         }
     },
     "i read the red book": {
@@ -207,15 +219,17 @@
             "red",
             "book"
         ],
-        "singular": {
-            "en": "I read the red book.;present tense",
-            "fi": "Minä luen punaisen kirjan.",
-            "nl": "Ik lees het rode boek."
+        "en": {
+            "singular": "I read the red book.;present tense",
+            "plural": "I read the red books.;present tense"
         },
-        "plural": {
-            "en": "I read the red books.;present tense",
-            "fi": "Minä luen punaisia kirjoja.",
-            "nl": "Ik lees de rode boeken."
+        "fi": {
+            "singular": "Minä luen punaisen kirjan.",
+            "plural": "Minä luen punaisia kirjoja."
+        },
+        "nl": {
+            "singular": "Ik lees het rode boek.",
+            "plural": "Ik lees de rode boeken."
         }
     },
     "i live in a purple house": {
@@ -224,15 +238,17 @@
             "purple",
             "house"
         ],
-        "singular": {
-            "en": "I live in a purple house.",
-            "fi": "Minä asun violetissa talossa.",
-            "nl": "Ik woon in een paars huis."
+        "en": {
+            "singular": "I live in a purple house.",
+            "plural": "I live in purple houses."
         },
-        "plural": {
-            "en": "I live in purple houses.",
-            "fi": "Minä asun violeteissa taloissa.",
-            "nl": "Ik woon in paarse huizen."
+        "fi": {
+            "singular": "Minä asun violetissa talossa.",
+            "plural": "Minä asun violeteissa taloissa."
+        },
+        "nl": {
+            "singular": "Ik woon in een paars huis.",
+            "plural": "Ik woon in paarse huizen."
         }
     },
     "i sit on a green sofa": {
@@ -241,15 +257,17 @@
             "green",
             "sofa"
         ],
-        "singular": {
-            "en": "I sit on a green sofa.",
-            "fi": "Minä istun vihreällä sohvalla.",
-            "nl": "Ik zit op een groene sofa."
+        "en": {
+            "singular": "I sit on a green sofa.",
+            "plural": "I sit on green sofas."
         },
-        "plural": {
-            "en": "I sit on green sofas.",
-            "fi": "Minä istun vihreillä sohvilla.",
-            "nl": "Ik zit op groene sofa's."
+        "fi": {
+            "singular": "Minä istun vihreällä sohvalla.",
+            "plural": "Minä istun vihreillä sohvilla."
+        },
+        "nl": {
+            "singular": "Ik zit op een groene sofa.",
+            "plural": "Ik zit op groene sofa's."
         }
     }
 }

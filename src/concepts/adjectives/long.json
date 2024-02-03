@@ -1,20 +1,20 @@
 {
     "long": {
         "antonym": "short",
-        "positive degree": {
-            "en": "long",
-            "fi": "pitkä",
-            "nl": "lang"
+        "en": {
+            "positive degree": "long",
+            "comparative degree": "longer",
+            "superlative degree": "longest"
         },
-        "comparative degree": {
-            "en": "longer",
-            "fi": "pidempi",
-            "nl": "langer"
+        "fi": {
+            "positive degree": "pitkä",
+            "comparative degree": "pidempi",
+            "superlative degree": "pisin"
         },
-        "superlative degree": {
-            "en": "longest",
-            "fi": "pisin",
-            "nl": "langst"
+        "nl": {
+            "positive degree": "lang",
+            "comparative degree": "langer",
+            "superlative degree": "langst"
         }
     }
 }

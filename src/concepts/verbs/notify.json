@@ -1,48 +1,48 @@
 {
     "to notify": {
-        "infinitive": {
-            "en": "to notify",
-            "fi": "ilmoittaa",
-            "nl": "melden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I notify",
-                "fi": "minä ilmoitan",
-                "nl": "ik meld"
-            },
-            "second person": {
-                "en": "you notify",
-                "fi": "sinä ilmoitat",
-                "nl": "jij meldt"
-            },
-            "third person": {
-                "fi": "hän ilmoittaa",
-                "feminine": {
-                    "en": "she notifies",
-                    "nl": "zij meldt"
-                },
-                "masculine": {
-                    "en": "he notifies",
-                    "nl": "hij meldt"
+        "en": {
+            "infinitive": "to notify",
+            "singular": {
+                "first person": "I notify",
+                "second person": "you notify",
+                "third person": {
+                    "feminine": "she notifies",
+                    "masculine": "he notifies"
                 }
+            },
+            "plural": {
+                "first person": "we notify",
+                "second person": "you notify",
+                "third person": "they notify"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we notify",
-                "fi": "me ilmoitamme",
-                "nl": "wij melden"
+        "fi": {
+            "infinitive": "ilmoittaa",
+            "singular": {
+                "first person": "minä ilmoitan",
+                "second person": "sinä ilmoitat",
+                "third person": "hän ilmoittaa"
             },
-            "second person": {
-                "en": "you notify",
-                "fi": "te ilmoitatte",
-                "nl": "jullie melden"
+            "plural": {
+                "first person": "me ilmoitamme",
+                "second person": "te ilmoitatte",
+                "third person": "he ilmoittavat"
+            }
+        },
+        "nl": {
+            "infinitive": "melden",
+            "singular": {
+                "first person": "ik meld",
+                "second person": "jij meldt",
+                "third person": {
+                    "feminine": "zij meldt",
+                    "masculine": "hij meldt"
+                }
             },
-            "third person": {
-                "en": "they notify",
-                "fi": "he ilmoittavat",
-                "nl": "zij melden"
+            "plural": {
+                "first person": "wij melden",
+                "second person": "jullie melden",
+                "third person": "zij melden"
             }
         }
     }

@@ -1,27 +1,33 @@
 {
     "book": {
-        "root": {
-            "singular": {
-                "en": "book",
-                "fi": "kirja",
-                "nl": "het boek"
+        "en": {
+            "root": {
+                "singular": "book",
+                "plural": "books"
             },
-            "plural": {
-                "en": "books",
-                "fi": "kirjat",
-                "nl": "de boeken"
+            "diminutive": {
+                "singular": "booklet",
+                "plural": "booklets"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "booklet",
-                "fi": "kirjanen",
-                "nl": "het boekje"
+        "fi": {
+            "root": {
+                "singular": "kirja",
+                "plural": "kirjat"
             },
-            "plural": {
-                "en": "booklets",
-                "fi": "kirjasia",
-                "nl": "de boekjes"
+            "diminutive": {
+                "singular": "kirjanen",
+                "plural": "kirjasia"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "het boek",
+                "plural": "de boeken"
+            },
+            "diminutive": {
+                "singular": "het boekje",
+                "plural": "de boekjes"
             }
         }
     },

@@ -7,19 +7,21 @@
                 "dog"
             ]
         },
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "hotdog|hot dog"
             ],
-            "fi": "hotdog",
-            "nl": "de hotdog"
-        },
-        "plural": {
-            "en": [
+            "plural": [
                 "hotdogs|hot dogs"
-            ],
-            "fi": "hotdogit",
-            "nl": "de hotdogs"
+            ]
+        },
+        "fi": {
+            "singular": "hotdog",
+            "plural": "hotdogit"
+        },
+        "nl": {
+            "singular": "de hotdog",
+            "plural": "de hotdogs"
         }
     }
 }

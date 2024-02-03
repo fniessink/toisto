@@ -51,7 +51,7 @@ class ConceptTest(ToistoTestCase):
         """Test the meaning of a composite concept."""
         concept = self.create_concept(
             "table",
-            dict(singular=dict(en="table", nl="de tafel"), plural=dict(en="tables", nl="de tafels")),
+            dict(en=dict(singular="table", plural="tables"), nl=dict(singular="de tafel", plural="de tafels")),
         )
         self.assertEqual((Label(EN, "table"), Label(EN, "tables")), concept.meanings(EN))
         self.assertEqual((Label(NL, "de tafel"), Label(NL, "de tafels")), concept.meanings(NL))
@@ -61,7 +61,7 @@ class ConceptTest(ToistoTestCase):
         """Test the meaning of a concept that is leaf in one language and composite in another."""
         concept = self.create_concept(
             "to eat/third person",
-            dict(fi="hän syö", feminine=dict(nl="zij eet"), masculine=dict(nl="hij eet")),
+            dict(fi="hän syö", nl=dict(feminine="zij eet", masculine="hij eet")),
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
         self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))
@@ -110,6 +110,6 @@ class ConceptTest(ToistoTestCase):
         self.assertFalse(self.create_concept("involves only", {"involves": ["other concept"]}).is_complete_sentence)
         composite_concept = self.create_concept(
             "the house is big",
-            {"singular": {"en": "The house is big."}, "plural": {"en": "The houses are big."}},
+            {"en": {"singular": "The house is big.", "plural": "The houses are big."}},
         )
         self.assertTrue(composite_concept.is_complete_sentence)

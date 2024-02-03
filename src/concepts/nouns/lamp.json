@@ -1,20 +1,22 @@
 {
     "lamp": {
-        "singular": {
-            "en": "lamp",
-            "fi": [
+        "en": {
+            "singular": "lamp",
+            "plural": "lamps"
+        },
+        "fi": {
+            "singular": [
                 "lamppu",
                 "valaisin"
             ],
-            "nl": "de lamp"
-        },
-        "plural": {
-            "en": "lamps",
-            "fi": [
+            "plural": [
                 "lamput",
                 "valaisimet"
-            ],
-            "nl": "de lampen"
+            ]
+        },
+        "nl": {
+            "singular": "de lamp",
+            "plural": "de lampen"
         }
     },
     "table lamp": {

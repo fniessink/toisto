@@ -1,54 +1,48 @@
 {
     "to look for": {
-        "infinitive": {
-            "en": "to look for",
-            "fi": "etsiä",
-            "nl": "zoeken"
-        },
-        "singular": {
-            "first person": {
-                "example": "I am looking for a table lamp",
-                "en": "I look for",
-                "fi": "minä etsin",
-                "nl": "ik zoek"
-            },
-            "second person": {
-                "example": "you are looking for a dining table",
-                "en": "you look for",
-                "fi": "sinä etsit",
-                "nl": "jij zoekt"
-            },
-            "third person": {
-                "example": "she is looking for a bookcase",
-                "fi": "hän etsii",
-                "feminine": {
-                    "en": "she looks for",
-                    "nl": "zij zoekt"
-                },
-                "masculine": {
-                    "en": "he looks for",
-                    "nl": "hij zoekt"
+        "en": {
+            "infinitive": "to look for",
+            "singular": {
+                "first person": "I look for",
+                "second person": "you look for",
+                "third person": {
+                    "feminine": "she looks for",
+                    "masculine": "he looks for"
                 }
+            },
+            "plural": {
+                "first person": "we look for",
+                "second person": "you look for",
+                "third person": "they look for"
             }
         },
-        "plural": {
-            "first person": {
-                "example": "we are looking for an office chair",
-                "en": "we look for",
-                "fi": "me etsimme",
-                "nl": "wij zoeken"
+        "fi": {
+            "infinitive": "etsiä",
+            "singular": {
+                "first person": "minä etsin",
+                "second person": "sinä etsit",
+                "third person": "hän etsii"
             },
-            "second person": {
-                "example": "you are looking for a roller blind",
-                "en": "you look for",
-                "fi": "te etsitte",
-                "nl": "jullie zoeken"
+            "plural": {
+                "first person": "me etsimme",
+                "second person": "te etsitte",
+                "third person": "he etsivät"
+            }
+        },
+        "nl": {
+            "infinitive": "zoeken",
+            "singular": {
+                "first person": "ik zoek",
+                "second person": "jij zoekt",
+                "third person": {
+                    "feminine": "zij zoekt",
+                    "masculine": "hij zoekt"
+                }
             },
-            "third person": {
-                "example": "they are looking for a double bed",
-                "en": "they look for",
-                "fi": "he etsivät",
-                "nl": "zij zoeken"
+            "plural": {
+                "first person": "wij zoeken",
+                "second person": "jullie zoeken",
+                "third person": "zij zoeken"
             }
         }
     },

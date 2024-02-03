@@ -2,15 +2,17 @@
     "eye": {
         "example": "you have beautiful eyes",
         "holonym": "face",
-        "singular": {
-            "en": "eye",
-            "fi": "silmä",
-            "nl": "het oog"
+        "en": {
+            "singular": "eye",
+            "plural": "eyes"
         },
-        "plural": {
-            "en": "eyes",
-            "fi": "silmät",
-            "nl": "de ogen"
+        "fi": {
+            "singular": "silmä",
+            "plural": "silmät"
+        },
+        "nl": {
+            "singular": "het oog",
+            "plural": "de ogen"
         }
     },
     "you have beautiful eyes": {

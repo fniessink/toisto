@@ -1,18 +1,20 @@
 {
     "drum": {
         "hypernym": "musical instrument",
-        "singular": {
-            "en": "drum",
-            "fi": "rumpu",
-            "nl": [
+        "en": {
+            "singular": "drum",
+            "plural": "drums"
+        },
+        "fi": {
+            "singular": "rumpu",
+            "plural": "rummut"
+        },
+        "nl": {
+            "singular": [
                 "de drum",
                 "de trommel|de trom"
-            ]
-        },
-        "plural": {
-            "en": "drums",
-            "fi": "rummut",
-            "nl": [
+            ],
+            "plural": [
                 "de drums",
                 "de trommels"
             ]

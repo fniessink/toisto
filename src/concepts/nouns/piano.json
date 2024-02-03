@@ -1,15 +1,17 @@
 {
     "piano": {
         "hypernym": "musical instrument",
-        "singular": {
-            "en": "piano",
-            "fi": "piano",
-            "nl": "de piano"
+        "en": {
+            "singular": "piano",
+            "plural": "pianos"
         },
-        "plural": {
-            "en": "pianos",
-            "fi": "pianot",
-            "nl": "de piano's"
+        "fi": {
+            "singular": "piano",
+            "plural": "pianot"
+        },
+        "nl": {
+            "singular": "de piano",
+            "plural": "de piano's"
         }
     }
 }

@@ -1,14 +1,16 @@
 {
     "lake": {
-        "singular": {
-            "en": "lake",
-            "fi": "järvi",
-            "nl": "het meer"
+        "en": {
+            "singular": "lake",
+            "plural": "lakes"
         },
-        "plural": {
-            "en": "lakes",
-            "fi": "järvet",
-            "nl": "de meren"
+        "fi": {
+            "singular": "järvi",
+            "plural": "järvet"
+        },
+        "nl": {
+            "singular": "het meer",
+            "plural": "de meren"
         }
     }
 }

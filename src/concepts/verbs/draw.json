@@ -1,48 +1,48 @@
 {
     "to draw": {
-        "infinitive": {
-            "en": "to draw",
-            "fi": "piirtää",
-            "nl": "tekenen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I draw",
-                "fi": "minä piirrän",
-                "nl": "ik teken"
-            },
-            "second person": {
-                "en": "you draw",
-                "fi": "sinä piirrät",
-                "nl": "jij tekent"
-            },
-            "third person": {
-                "fi": "hän piirtää",
-                "feminine": {
-                    "en": "she draws",
-                    "nl": "zij tekent"
-                },
-                "masculine": {
-                    "en": "he draws",
-                    "nl": "hij tekent"
+        "en": {
+            "infinitive": "to draw",
+            "singular": {
+                "first person": "I draw",
+                "second person": "you draw",
+                "third person": {
+                    "feminine": "she draws",
+                    "masculine": "he draws"
                 }
+            },
+            "plural": {
+                "first person": "we draw",
+                "second person": "you draw",
+                "third person": "they draw"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we draw",
-                "fi": "me piirrämme",
-                "nl": "wij tekenen"
+        "fi": {
+            "infinitive": "piirtää",
+            "singular": {
+                "first person": "minä piirrän",
+                "second person": "sinä piirrät",
+                "third person": "hän piirtää"
             },
-            "second person": {
-                "en": "you draw",
-                "fi": "te piirrätte",
-                "nl": "jullie tekenen"
+            "plural": {
+                "first person": "me piirrämme",
+                "second person": "te piirrätte",
+                "third person": "he piirtävät"
+            }
+        },
+        "nl": {
+            "infinitive": "tekenen",
+            "singular": {
+                "first person": "ik teken",
+                "second person": "jij tekent",
+                "third person": {
+                    "feminine": "zij tekent",
+                    "masculine": "hij tekent"
+                }
             },
-            "third person": {
-                "en": "they draw",
-                "fi": "he piirtävät",
-                "nl": "zij tekenen"
+            "plural": {
+                "first person": "wij tekenen",
+                "second person": "jullie tekenen",
+                "third person": "zij tekenen"
             }
         }
     }

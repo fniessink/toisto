@@ -1,14 +1,16 @@
 {
     "number": {
-        "singular": {
-            "en": "number",
-            "fi": "numero",
-            "nl": "het getal"
+        "en": {
+            "singular": "number",
+            "plural": "numbers"
         },
-        "plural": {
-            "en": "numbers",
-            "fi": "numerot",
-            "nl": "de getallen"
+        "fi": {
+            "singular": "numero",
+            "plural": "numerot"
+        },
+        "nl": {
+            "singular": "het getal",
+            "plural": "de getallen"
         }
     },
     "emergency number": {

@@ -1,20 +1,22 @@
 {
     "hill": {
-        "singular": {
-            "en": "hill",
-            "fi": [
+        "en": {
+            "singular": "hill",
+            "plural": "hills"
+        },
+        "fi": {
+            "singular": [
                 "mäki",
                 "kukkula"
             ],
-            "nl": "de heuvel"
-        },
-        "plural": {
-            "en": "hills",
-            "fi": [
+            "plural": [
                 "mäet",
                 "kukkulat"
-            ],
-            "nl": "de heuvels"
+            ]
+        },
+        "nl": {
+            "singular": "de heuvel",
+            "plural": "de heuvels"
         }
     }
 }

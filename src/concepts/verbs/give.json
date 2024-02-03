@@ -1,53 +1,51 @@
 {
     "to give": {
-        "infinitive": {
-            "en": "to give",
-            "fi": "antaa;;antaa is verbityypi 1",
-            "nl": "geven"
-        },
-        "verbal noun": {
-            "en": "giving",
-            "fi": "antaminen",
-            "nl": "het geven"
-        },
-        "singular": {
-            "first person": {
-                "en": "I give",
-                "fi": "minä annan",
-                "nl": "ik geef"
-            },
-            "second person": {
-                "en": "you give",
-                "fi": "sinä annat",
-                "nl": "jij geeft"
-            },
-            "third person": {
-                "fi": "hän antaa",
-                "feminine": {
-                    "en": "she gives",
-                    "nl": "zij geeft"
-                },
-                "masculine": {
-                    "en": "he gives",
-                    "nl": "hij geeft"
+        "en": {
+            "infinitive": "to give",
+            "verbal noun": "giving",
+            "singular": {
+                "first person": "I give",
+                "second person": "you give",
+                "third person": {
+                    "feminine": "she gives",
+                    "masculine": "he gives"
                 }
+            },
+            "plural": {
+                "first person": "we give",
+                "second person": "you give",
+                "third person": "they give"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we give",
-                "fi": "me annamme",
-                "nl": "wij geven"
+        "fi": {
+            "infinitive": "antaa;;antaa is verbityypi 1",
+            "verbal noun": "antaminen",
+            "singular": {
+                "first person": "minä annan",
+                "second person": "sinä annat",
+                "third person": "hän antaa"
             },
-            "second person": {
-                "en": "you give",
-                "fi": "te annatte",
-                "nl": "jullie geven"
+            "plural": {
+                "first person": "me annamme",
+                "second person": "te annatte",
+                "third person": "he antavat"
+            }
+        },
+        "nl": {
+            "infinitive": "geven",
+            "verbal noun": "het geven",
+            "singular": {
+                "first person": "ik geef",
+                "second person": "jij geeft",
+                "third person": {
+                    "feminine": "zij geeft",
+                    "masculine": "hij geeft"
+                }
             },
-            "third person": {
-                "en": "they give",
-                "fi": "he antavat",
-                "nl": "zij geven"
+            "plural": {
+                "first person": "wij geven",
+                "second person": "jullie geven",
+                "third person": "zij geven"
             }
         }
     }

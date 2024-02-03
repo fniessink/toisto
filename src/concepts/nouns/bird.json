@@ -1,15 +1,17 @@
 {
     "bird": {
         "hypernym": "animal",
-        "singular": {
-            "en": "bird",
-            "fi": "lintu",
-            "nl": "de vogel"
+        "en": {
+            "singular": "bird",
+            "plural": "birds"
         },
-        "plural": {
-            "en": "birds",
-            "fi": "linnut",
-            "nl": "de vogels"
+        "fi": {
+            "singular": "lintu",
+            "plural": "linnut"
+        },
+        "nl": {
+            "singular": "de vogel",
+            "plural": "de vogels"
         }
     }
 }

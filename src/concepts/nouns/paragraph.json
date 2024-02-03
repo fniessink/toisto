@@ -1,14 +1,16 @@
 {
     "paragraph": {
-        "singular": {
-            "en": "paragraph",
-            "fi": "kappale",
-            "nl": "de alinea"
+        "en": {
+            "singular": "paragraph",
+            "plural": "paragraphs"
         },
-        "plural": {
-            "en": "paragraphs",
-            "fi": "kappaleet",
-            "nl": "de alinea's"
+        "fi": {
+            "singular": "kappale",
+            "plural": "kappaleet"
+        },
+        "nl": {
+            "singular": "de alinea",
+            "plural": "de alinea's"
         }
     }
 }

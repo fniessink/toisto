@@ -1,26 +1,30 @@
 {
     "sofa": {
-        "singular": {
-            "en": "sofa",
-            "fi": "sohva",
-            "nl": "de sofa"
+        "en": {
+            "singular": "sofa",
+            "plural": "sofas"
         },
-        "plural": {
-            "en": "sofas",
-            "fi": "sohvat",
-            "nl": "de sofa's"
+        "fi": {
+            "singular": "sohva",
+            "plural": "sohvat"
+        },
+        "nl": {
+            "singular": "de sofa",
+            "plural": "de sofa's"
         }
     },
     "pillow": {
-        "singular": {
-            "en": "pillow",
-            "fi": "tyyny",
-            "nl": "het kussen"
+        "en": {
+            "singular": "pillow",
+            "plural": "pillows"
         },
-        "plural": {
-            "en": "pillows",
-            "fi": "tyynyt",
-            "nl": "de kussens"
+        "fi": {
+            "singular": "tyyny",
+            "plural": "tyynyt"
+        },
+        "nl": {
+            "singular": "het kussen",
+            "plural": "de kussens"
         }
     },
     "desk": {
@@ -31,34 +35,37 @@
                 "table"
             ]
         },
-        "singular": {
-            "en": "desk",
-            "fi": [
+        "en": {
+            "singular": "desk",
+            "plural": "desks"
+        },
+        "fi": {
+            "singular": [
                 "työpöytä",
                 "kirjoituspöytä"
             ],
-            "nl": "het bureau"
-        },
-        "plural": {
-            "en": "desks",
-            "fi": [
+            "plural": [
                 "työpöydät",
                 "kirjoituspöydät"
-            ],
-            "nl": "de bureaus"
+            ]
+        },
+        "nl": {
+            "singular": "het bureau",
+            "plural": "de bureaus"
         }
     },
     "carpet": {
-        "singular": {
-            "example": "the cat is sleeping on the carpet",
-            "en": "carpet",
-            "fi": "matto",
-            "nl": "het tapijt"
+        "en": {
+            "singular": "carpet",
+            "plural": "carpets"
         },
-        "plural": {
-            "en": "carpets",
-            "fi": "matot",
-            "nl": "de tapijten"
+        "fi": {
+            "singular": "matto",
+            "plural": "matot"
+        },
+        "nl": {
+            "singular": "het tapijt",
+            "plural": "de tapijten"
         }
     },
     "the cat is sleeping on the carpet": {

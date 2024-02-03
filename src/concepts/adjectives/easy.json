@@ -1,20 +1,20 @@
 {
     "easy": {
         "antonym": "hard",
-        "positive degree": {
-            "en": "easy",
-            "fi": "helppo",
-            "nl": "makkelijk"
+        "en": {
+            "positive degree": "easy",
+            "comparative degree": "easier",
+            "superlative degree": "easiest"
         },
-        "comparative degree": {
-            "en": "easier",
-            "fi": "helpompi",
-            "nl": "makkelijker"
+        "fi": {
+            "positive degree": "helppo",
+            "comparative degree": "helpompi",
+            "superlative degree": "helpoin"
         },
-        "superlative degree": {
-            "en": "easiest",
-            "fi": "helpoin",
-            "nl": "makkelijkst"
+        "nl": {
+            "positive degree": "makkelijk",
+            "comparative degree": "makkelijker",
+            "superlative degree": "makkelijkst"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "question": {
         "antonym": "answer",
-        "singular": {
-            "en": "question",
-            "fi": "kysymys",
-            "nl": "de vraag"
+        "en": {
+            "singular": "question",
+            "plural": "questions"
         },
-        "plural": {
-            "en": "questions",
-            "fi": "kysymykset",
-            "nl": "de vragen"
+        "fi": {
+            "singular": "kysymys",
+            "plural": "kysymykset"
+        },
+        "nl": {
+            "singular": "de vraag",
+            "plural": "de vragen"
         }
     }
 }

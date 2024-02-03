@@ -1,6 +1,5 @@
 {
     "CN1.1": {
-        "nl": "(CN1.1)",
         "involves": [
             "also",
             "and",
@@ -40,6 +39,7 @@
             "where from",
             "which",
             "who"
-        ]
+        ],
+        "nl": "(CN1.1)"
     }
 }

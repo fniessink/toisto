@@ -5,18 +5,20 @@
             "6",
             "10"
         ],
-        "cardinal": {
-            "en": "sixty",
-            "fi": [
+        "en": {
+            "cardinal": "sixty",
+            "ordinal": "sixtieth"
+        },
+        "fi": {
+            "cardinal": [
                 "kuusikymmentä",
                 "kuuskyt*"
             ],
-            "nl": "zestig"
+            "ordinal": "kuudeskymmenes"
         },
-        "ordinal": {
-            "en": "sixtieth",
-            "fi": "kuudeskymmenes",
-            "nl": "zestigste"
+        "nl": {
+            "cardinal": "zestig",
+            "ordinal": "zestigste"
         }
     }
 }

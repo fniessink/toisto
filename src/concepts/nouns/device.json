@@ -1,14 +1,16 @@
 {
     "device": {
-        "singular": {
-            "en": "device",
-            "fi": "laite",
-            "nl": "het apparaat"
+        "en": {
+            "singular": "device",
+            "plural": "devices"
         },
-        "plural": {
-            "en": "devices",
-            "fi": "laitteet",
-            "nl": "de apparaten"
+        "fi": {
+            "singular": "laite",
+            "plural": "laitteet"
+        },
+        "nl": {
+            "singular": "het apparaat",
+            "plural": "de apparaten"
         }
     }
 }

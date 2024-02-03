@@ -5,18 +5,20 @@
             "3",
             "10"
         ],
-        "cardinal": {
-            "en": "thirty",
-            "fi": [
+        "en": {
+            "cardinal": "thirty",
+            "ordinal": "thirtieth"
+        },
+        "fi": {
+            "cardinal": [
                 "kolmekymmentä",
                 "kolkyt*"
             ],
-            "nl": "dertig"
+            "ordinal": "kolmaskymmenes"
         },
-        "ordinal": {
-            "en": "thirtieth",
-            "fi": "kolmaskymmenes",
-            "nl": "dertigste"
+        "nl": {
+            "cardinal": "dertig",
+            "ordinal": "dertigste"
         }
     }
 }

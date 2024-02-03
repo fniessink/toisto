@@ -5,44 +5,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I have painted the house.",
-                "fi": "Minulla on maalannut talon.",
-                "nl": "Ik heb het huis geschilderd."
-            },
-            "second person": {
-                "en": "You have painted the house.",
-                "fi": "Sinulla on maalannut talon.",
-                "nl": "Jij hebt het huis geschilderd."
-            },
-            "third person": {
-                "fi": "Hänellä on maalannut talon.",
-                "feminine": {
-                    "en": "She has painted the house.",
-                    "nl": "Zij heeft het huis geschilderd."
-                },
-                "masculine": {
-                    "en": "He has painted the house.",
-                    "nl": "Hij heeft het huis geschilderd."
+        "en": {
+            "singular": {
+                "first person": "I have painted the house.",
+                "second person": "You have painted the house.",
+                "third person": {
+                    "feminine": "She has painted the house.",
+                    "masculine": "He has painted the house."
                 }
+            },
+            "plural": {
+                "first person": "We have painted the house.",
+                "second person": "You have painted the house.",
+                "third person": "They have painted the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We have painted the house.",
-                "fi": "Meillä on maalanneet talon.",
-                "nl": "Wij hebben het huis geschilderd."
+        "fi": {
+            "singular": {
+                "first person": "Minulla on maalannut talon.",
+                "second person": "Sinulla on maalannut talon.",
+                "third person": "Hänellä on maalannut talon."
             },
-            "second person": {
-                "en": "You have painted the house.",
-                "fi": "Teillä on maalanneet talon.",
-                "nl": "Jullie hebben het huis geschilderd."
+            "plural": {
+                "first person": "Meillä on maalanneet talon.",
+                "second person": "Teillä on maalanneet talon.",
+                "third person": "Heillä on maalanneet talon."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik heb het huis geschilderd.",
+                "second person": "Jij hebt het huis geschilderd.",
+                "third person": {
+                    "feminine": "Zij heeft het huis geschilderd.",
+                    "masculine": "Hij heeft het huis geschilderd."
+                }
             },
-            "third person": {
-                "en": "They have painted the house.",
-                "fi": "Heillä on maalanneet talon.",
-                "nl": "Zij hebben het huis geschilderd."
+            "plural": {
+                "first person": "Wij hebben het huis geschilderd.",
+                "second person": "Jullie hebben het huis geschilderd.",
+                "third person": "Zij hebben het huis geschilderd."
             }
         }
     },
@@ -52,44 +54,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I am painting the house.",
-                "fi": "Minä olen maalaamassa taloa.",
-                "nl": "Ik ben het huis aan het schilderen."
-            },
-            "second person": {
-                "en": "You are painting the house.",
-                "fi": "Sinä olet maalaamassa taloa.",
-                "nl": "Jij bent het huis aan het schilderen."
-            },
-            "third person": {
-                "fi": "Hän on maalaamassa taloa.",
-                "feminine": {
-                    "en": "She is painting the house.",
-                    "nl": "Zij is het huis aan het schilderen."
-                },
-                "masculine": {
-                    "en": "He is painting the house.",
-                    "nl": "Hij is het huis aan het schilderen."
+        "en": {
+            "singular": {
+                "first person": "I am painting the house.",
+                "second person": "You are painting the house.",
+                "third person": {
+                    "feminine": "She is painting the house.",
+                    "masculine": "He is painting the house."
                 }
+            },
+            "plural": {
+                "first person": "We are painting the house.",
+                "second person": "You are painting the house.",
+                "third person": "They are painting the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We are painting the house.",
-                "fi": "Me olemme maalaamassa taloa.",
-                "nl": "Wij zijn het huis aan het schilderen."
+        "fi": {
+            "singular": {
+                "first person": "Minä olen maalaamassa taloa.",
+                "second person": "Sinä olet maalaamassa taloa.",
+                "third person": "Hän on maalaamassa taloa."
             },
-            "second person": {
-                "en": "You are painting the house.",
-                "fi": "Te olette maalaamassa taloa.",
-                "nl": "Jullie zijn het huis aan het schilderen."
+            "plural": {
+                "first person": "Me olemme maalaamassa taloa.",
+                "second person": "Te olette maalaamassa taloa.",
+                "third person": "He ovat maalaamassa taloa."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik ben het huis aan het schilderen.",
+                "second person": "Jij bent het huis aan het schilderen.",
+                "third person": {
+                    "feminine": "Zij is het huis aan het schilderen.",
+                    "masculine": "Hij is het huis aan het schilderen."
+                }
             },
-            "third person": {
-                "en": "They are painting the house.",
-                "fi": "He ovat maalaamassa taloa.",
-                "nl": "Zij zijn het huis aan het schilderen."
+            "plural": {
+                "first person": "Wij zijn het huis aan het schilderen.",
+                "second person": "Jullie zijn het huis aan het schilderen.",
+                "third person": "Zij zijn het huis aan het schilderen."
             }
         }
     },
@@ -98,44 +102,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I can paint the house.",
-                "fi": "Minä osaan maalata talon.",
-                "nl": "Ik kan het huis schilderen."
-            },
-            "second person": {
-                "en": "You can paint the house.",
-                "fi": "Sinä osaat maalata talon.",
-                "nl": "Jij kan het huis schilderen."
-            },
-            "third person": {
-                "fi": "Hän osaa maalata talon.",
-                "feminine": {
-                    "en": "She can paint the house.",
-                    "nl": "Zij kan het huis schilderen."
-                },
-                "masculine": {
-                    "en": "He can paint the house.",
-                    "nl": "Hij kan het huis schilderen."
+        "en": {
+            "singular": {
+                "first person": "I can paint the house.",
+                "second person": "You can paint the house.",
+                "third person": {
+                    "feminine": "She can paint the house.",
+                    "masculine": "He can paint the house."
                 }
+            },
+            "plural": {
+                "first person": "We can paint the house.",
+                "second person": "You can paint the house.",
+                "third person": "They can paint the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We can paint the house.",
-                "fi": "Me osaamme maalata talon.",
-                "nl": "Wij kunnen het huis schilderen."
+        "fi": {
+            "singular": {
+                "first person": "Minä osaan maalata talon.",
+                "second person": "Sinä osaat maalata talon.",
+                "third person": "Hän osaa maalata talon."
             },
-            "second person": {
-                "en": "You can paint the house.",
-                "fi": "Te osaatte maalata talon.",
-                "nl": "Jullie kunnen het huis schilderen."
+            "plural": {
+                "first person": "Me osaamme maalata talon.",
+                "second person": "Te osaatte maalata talon.",
+                "third person": "He osaavat maalata talon."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik kan het huis schilderen.",
+                "second person": "Jij kan het huis schilderen.",
+                "third person": {
+                    "feminine": "Zij kan het huis schilderen.",
+                    "masculine": "Hij kan het huis schilderen."
+                }
             },
-            "third person": {
-                "en": "They can paint the house.",
-                "fi": "He osaavat maalata talon.",
-                "nl": "Zij kunnen het huis schilderen."
+            "plural": {
+                "first person": "Wij kunnen het huis schilderen.",
+                "second person": "Jullie kunnen het huis schilderen.",
+                "third person": "Zij kunnen het huis schilderen."
             }
         }
     },
@@ -144,44 +150,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I have to paint the house.",
-                "fi": "Minun täytyy maalata talo.",
-                "nl": "Ik moet het huis schilderen."
-            },
-            "second person": {
-                "en": "You have to paint the house.",
-                "fi": "Sinun täytyy maalata talo.",
-                "nl": "Jij moet het huis schilderen."
-            },
-            "third person": {
-                "fi": "Hänen täytyy maalata talo.",
-                "feminine": {
-                    "en": "She has to paint the house.",
-                    "nl": "Zij moet het huis schilderen."
-                },
-                "masculine": {
-                    "en": "He has to paint the house.",
-                    "nl": "Hij moet het huis schilderen."
+        "en": {
+            "singular": {
+                "first person": "I have to paint the house.",
+                "second person": "You have to paint the house.",
+                "third person": {
+                    "feminine": "She has to paint the house.",
+                    "masculine": "He has to paint the house."
                 }
+            },
+            "plural": {
+                "first person": "We have to paint the house.",
+                "second person": "You have to paint the house.",
+                "third person": "They have to paint the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We have to paint the house.",
-                "fi": "Meidän täytyy maalata talo.",
-                "nl": "Wij moeten het huis schilderen."
+        "fi": {
+            "singular": {
+                "first person": "Minun täytyy maalata talo.",
+                "second person": "Sinun täytyy maalata talo.",
+                "third person": "Hänen täytyy maalata talo."
             },
-            "second person": {
-                "en": "You have to paint the house.",
-                "fi": "Teidän täytyy maalata talo.",
-                "nl": "Jullie moeten het huis schilderen."
+            "plural": {
+                "first person": "Meidän täytyy maalata talo.",
+                "second person": "Teidän täytyy maalata talo.",
+                "third person": "Heidän täytyy maalata talo."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik moet het huis schilderen.",
+                "second person": "Jij moet het huis schilderen.",
+                "third person": {
+                    "feminine": "Zij moet het huis schilderen.",
+                    "masculine": "Hij moet het huis schilderen."
+                }
             },
-            "third person": {
-                "en": "They have to paint the house.",
-                "fi": "Heidän täytyy maalata talo.",
-                "nl": "Zij moeten het huis schilderen."
+            "plural": {
+                "first person": "Wij moeten het huis schilderen.",
+                "second person": "Jullie moeten het huis schilderen.",
+                "third person": "Zij moeten het huis schilderen."
             }
         }
     },
@@ -190,44 +198,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I am allowed to paint the house.",
-                "fi": "Minä saan maalata talon.",
-                "nl": "Ik mag het huis schilderen."
-            },
-            "second person": {
-                "en": "You are allowed to paint the house.",
-                "fi": "Sinä saat maalata talon.",
-                "nl": "Jij mag het huis schilderen."
-            },
-            "third person": {
-                "fi": "Hän saa maalata talon.",
-                "feminine": {
-                    "en": "She is allowed to paint the house.",
-                    "nl": "Zij mag het huis schilderen."
-                },
-                "masculine": {
-                    "en": "He is allowed to paint the house.",
-                    "nl": "Hij mag het huis schilderen."
+        "en": {
+            "singular": {
+                "first person": "I am allowed to paint the house.",
+                "second person": "You are allowed to paint the house.",
+                "third person": {
+                    "feminine": "She is allowed to paint the house.",
+                    "masculine": "He is allowed to paint the house."
                 }
+            },
+            "plural": {
+                "first person": "We are allowed to paint the house.",
+                "second person": "You are allowed to paint the house.",
+                "third person": "They are allowed to paint the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We are allowed to paint the house.",
-                "fi": "Me saamme maalata talon.",
-                "nl": "Wij mogen het huis schilderen."
+        "fi": {
+            "singular": {
+                "first person": "Minä saan maalata talon.",
+                "second person": "Sinä saat maalata talon.",
+                "third person": "Hän saa maalata talon."
             },
-            "second person": {
-                "en": "You are allowed to paint the house.",
-                "fi": "Te saatte maalata talon.",
-                "nl": "Jullie mogen het huis schilderen."
+            "plural": {
+                "first person": "Me saamme maalata talon.",
+                "second person": "Te saatte maalata talon.",
+                "third person": "He saavat maalata talon."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik mag het huis schilderen.",
+                "second person": "Jij mag het huis schilderen.",
+                "third person": {
+                    "feminine": "Zij mag het huis schilderen.",
+                    "masculine": "Hij mag het huis schilderen."
+                }
             },
-            "third person": {
-                "en": "They are allowed to paint the house.",
-                "fi": "He saavat maalata talon.",
-                "nl": "Zij mogen het huis schilderen."
+            "plural": {
+                "first person": "Wij mogen het huis schilderen.",
+                "second person": "Jullie mogen het huis schilderen.",
+                "third person": "Zij mogen het huis schilderen."
             }
         }
     },
@@ -236,44 +246,46 @@
             "to paint",
             "house"
         ],
-        "singular": {
-            "first person": {
-                "en": "I want to paint the house.",
-                "fi": "Minä haluan maalata talon.",
-                "nl": "Ik wil het huis schilderen."
-            },
-            "second person": {
-                "en": "You want to paint the house.",
-                "fi": "Sinä haluat maalata talon.",
-                "nl": "Jij wilt het huis schilderen."
-            },
-            "third person": {
-                "fi": "Hän haluaa maalata talon.",
-                "feminine": {
-                    "en": "She wants to paint the house.",
-                    "nl": "Zij wil het huis schilderen."
-                },
-                "masculine": {
-                    "en": "He wants to paint the house.",
-                    "nl": "Hij wil het huis schilderen."
+        "en": {
+            "singular": {
+                "first person": "I want to paint the house.",
+                "second person": "You want to paint the house.",
+                "third person": {
+                    "feminine": "She wants to paint the house.",
+                    "masculine": "He wants to paint the house."
                 }
+            },
+            "plural": {
+                "first person": "We want to paint the house.",
+                "second person": "You want to paint the house.",
+                "third person": "They want to paint the house."
             }
         },
-        "plural": {
-            "first person": {
-                "en": "We want to paint the house.",
-                "fi": "Me haluamme maalata talon.",
-                "nl": "Wij willen het huis schilderen."
+        "fi": {
+            "singular": {
+                "first person": "Minä haluan maalata talon.",
+                "second person": "Sinä haluat maalata talon.",
+                "third person": "Hän haluaa maalata talon."
             },
-            "second person": {
-                "en": "You want to paint the house.",
-                "fi": "Te haluatte maalata talon.",
-                "nl": "Jullie willen het huis schilderen."
+            "plural": {
+                "first person": "Me haluamme maalata talon.",
+                "second person": "Te haluatte maalata talon.",
+                "third person": "He haluavat maalata talon."
+            }
+        },
+        "nl": {
+            "singular": {
+                "first person": "Ik wil het huis schilderen.",
+                "second person": "Jij wilt het huis schilderen.",
+                "third person": {
+                    "feminine": "Zij wil het huis schilderen.",
+                    "masculine": "Hij wil het huis schilderen."
+                }
             },
-            "third person": {
-                "en": "They want to paint the house.",
-                "fi": "He haluavat maalata talon.",
-                "nl": "Zij willen het huis schilderen."
+            "plural": {
+                "first person": "Wij willen het huis schilderen.",
+                "second person": "Jullie willen het huis schilderen.",
+                "third person": "Zij willen het huis schilderen."
             }
         }
     }

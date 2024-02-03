@@ -1,28 +1,28 @@
 {
     "nice": {
-        "positive degree": {
-            "en": "nice",
-            "fi": [
+        "en": {
+            "positive degree": "nice",
+            "comparative degree": "nicer",
+            "superlative degree": "nicest"
+        },
+        "fi": {
+            "positive degree": [
                 "kiva",
                 "mukava"
             ],
-            "nl": "leuk"
-        },
-        "comparative degree": {
-            "en": "nicer",
-            "fi": [
+            "comparative degree": [
                 "kivampi|kivempt",
                 "mukavampi"
             ],
-            "nl": "leuker"
-        },
-        "superlative degree": {
-            "en": "nicest",
-            "fi": [
+            "superlative degree": [
                 "kivoin",
                 "mukavin"
-            ],
-            "nl": "leukst"
+            ]
+        },
+        "nl": {
+            "positive degree": "leuk",
+            "comparative degree": "leuker",
+            "superlative degree": "leukst"
         }
     }
 }

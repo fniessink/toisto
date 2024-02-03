@@ -1,14 +1,16 @@
 {
     "table": {
-        "singular": {
-            "en": "table",
-            "fi": "pöytä",
-            "nl": "de tafel"
+        "en": {
+            "singular": "table",
+            "plural": "tables"
         },
-        "plural": {
-            "en": "tables",
-            "fi": "pöydät",
-            "nl": "de tafels"
+        "fi": {
+            "singular": "pöytä",
+            "plural": "pöydät"
+        },
+        "nl": {
+            "singular": "de tafel",
+            "plural": "de tafels"
         }
     },
     "dining table": {

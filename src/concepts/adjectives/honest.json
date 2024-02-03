@@ -1,19 +1,19 @@
 {
     "honest": {
-        "positive degree": {
-            "en": "honest",
-            "fi": "rehellinen",
-            "nl": "eerlijk"
+        "en": {
+            "positive degree": "honest",
+            "comparative degree": "more honest",
+            "superlative degree": "most honest"
         },
-        "comparative degree": {
-            "en": "more honest",
-            "fi": "rehellisempi",
-            "nl": "eerlijker"
+        "fi": {
+            "positive degree": "rehellinen",
+            "comparative degree": "rehellisempi",
+            "superlative degree": "rehellisin"
         },
-        "superlative degree": {
-            "en": "most honest",
-            "fi": "rehellisin",
-            "nl": "eerlijkst"
+        "nl": {
+            "positive degree": "eerlijk",
+            "comparative degree": "eerlijker",
+            "superlative degree": "eerlijkst"
         }
     }
 }

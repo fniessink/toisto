@@ -1,14 +1,16 @@
 {
     "life": {
-        "singular": {
-            "en": "life",
-            "fi": "elämä",
-            "nl": "het leven"
+        "en": {
+            "singular": "life",
+            "plural": "lives"
         },
-        "plural": {
-            "en": "lives",
-            "fi": "elämät",
-            "nl": "de levens"
+        "fi": {
+            "singular": "elämä",
+            "plural": "elämät"
+        },
+        "nl": {
+            "singular": "het leven",
+            "plural": "de levens"
         }
     }
 }

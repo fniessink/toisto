@@ -1,14 +1,16 @@
 {
     "wave": {
-        "singular": {
-            "en": "wave",
-            "fi": "aalto",
-            "nl": "de golf"
+        "en": {
+            "singular": "wave",
+            "plural": "waves"
         },
-        "plural": {
-            "en": "waves",
-            "fi": "aallot",
-            "nl": "de golven"
+        "fi": {
+            "singular": "aalto",
+            "plural": "aallot"
+        },
+        "nl": {
+            "singular": "de golf",
+            "plural": "de golven"
         }
     }
 }

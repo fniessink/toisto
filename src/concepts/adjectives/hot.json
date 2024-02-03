@@ -2,20 +2,20 @@
     "hot": {
         "antonym": "cold",
         "example": "the coffee is hot",
-        "positive degree": {
-            "en": "hot",
-            "fi": "kuuma",
-            "nl": "heet"
+        "en": {
+            "positive degree": "hot",
+            "comparative degree": "hotter",
+            "superlative degree": "hottest"
         },
-        "comparative degree": {
-            "en": "hotter",
-            "fi": "kuumempi",
-            "nl": "heter"
+        "fi": {
+            "positive degree": "kuuma",
+            "comparative degree": "kuumempi",
+            "superlative degree": "kuumin"
         },
-        "superlative degree": {
-            "en": "hottest",
-            "fi": "kuumin",
-            "nl": "heetst"
+        "nl": {
+            "positive degree": "heet",
+            "comparative degree": "heter",
+            "superlative degree": "heetst"
         }
     }
 }

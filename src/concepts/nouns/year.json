@@ -1,15 +1,17 @@
 {
     "year": {
         "holonym": "decade",
-        "singular": {
-            "en": "year",
-            "fi": "vuosi",
-            "nl": "het jaar"
+        "en": {
+            "singular": "year",
+            "plural": "years"
         },
-        "plural": {
-            "en": "years",
-            "fi": "vuodet",
-            "nl": "de jaren"
+        "fi": {
+            "singular": "vuosi",
+            "plural": "vuodet"
+        },
+        "nl": {
+            "singular": "het jaar",
+            "plural": "de jaren"
         }
     },
     "once a year": {

@@ -2,15 +2,17 @@
     "galaxy": {
         "example": "The Milky Way Galaxy is a galaxy",
         "holonym": "universe",
-        "singular": {
-            "en": "galaxy",
-            "fi": "galaksi",
-            "nl": "het sterrenstelsel"
+        "en": {
+            "singular": "galaxy",
+            "plural": "galaxies"
         },
-        "plural": {
-            "en": "galaxies",
-            "fi": "galaksit",
-            "nl": "de sterrenstelsels"
+        "fi": {
+            "singular": "galaksi",
+            "plural": "galaksit"
+        },
+        "nl": {
+            "singular": "het sterrenstelsel",
+            "plural": "de sterrenstelsels"
         }
     },
     "Milky Way Galaxy": {

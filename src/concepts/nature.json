@@ -1,47 +1,53 @@
 {
     "flower": {
-        "singular": {
-            "en": "flower",
-            "fi": "kukka",
-            "nl": "de bloem"
+        "en": {
+            "singular": "flower",
+            "plural": "flowers"
         },
-        "plural": {
-            "en": "flowers",
-            "fi": "kukat",
-            "nl": "de bloemen"
+        "fi": {
+            "singular": "kukka",
+            "plural": "kukat"
+        },
+        "nl": {
+            "singular": "de bloem",
+            "plural": "de bloemen"
         }
     },
     "desert": {
         "roots": {
             "fi": "country"
         },
-        "singular": {
-            "en": "desert",
-            "fi": [
+        "en": {
+            "singular": "desert",
+            "plural": "deserts"
+        },
+        "fi": {
+            "singular": [
                 "aavikko",
                 "autiomaa"
             ],
-            "nl": "de woestijn"
-        },
-        "plural": {
-            "en": "deserts",
-            "fi": [
+            "plural": [
                 "aavikot",
                 "autiomaat"
-            ],
-            "nl": "de woestijnen"
+            ]
+        },
+        "nl": {
+            "singular": "de woestijn",
+            "plural": "de woestijnen"
         }
     },
     "valley": {
-        "singular": {
-            "en": "valley",
-            "fi": "laakso",
-            "nl": "de vallei"
+        "en": {
+            "singular": "valley",
+            "plural": "valleys"
         },
-        "plural": {
-            "en": "valleys",
-            "fi": "laaksot",
-            "nl": "de valleien"
+        "fi": {
+            "singular": "laakso",
+            "plural": "laaksot"
+        },
+        "nl": {
+            "singular": "de vallei",
+            "plural": "de valleien"
         }
     },
     "world": {
@@ -53,27 +59,31 @@
         "nl": "de wereld"
     },
     "ground": {
-        "singular": {
-            "en": "ground",
-            "fi": "maa;solid surface of the earth",
-            "nl": "de grond"
+        "en": {
+            "singular": "ground",
+            "plural": "grounds"
         },
-        "plural": {
-            "en": "grounds",
-            "fi": "maat;solid surfaces of the earth",
-            "nl": "de gronden"
+        "fi": {
+            "singular": "maa;solid surface of the earth",
+            "plural": "maat;solid surfaces of the earth"
+        },
+        "nl": {
+            "singular": "de grond",
+            "plural": "de gronden"
         }
     },
     "fire": {
-        "singular": {
-            "en": "fire",
-            "fi": "tuli",
-            "nl": "het vuur"
+        "en": {
+            "singular": "fire",
+            "plural": "fires"
         },
-        "plural": {
-            "en": "fires",
-            "fi": "tulet",
-            "nl": "de vuren"
+        "fi": {
+            "singular": "tuli",
+            "plural": "tulet"
+        },
+        "nl": {
+            "singular": "het vuur",
+            "plural": "de vuren"
         }
     },
     "volcano": {
@@ -84,39 +94,45 @@
                 "mountain"
             ]
         },
-        "singular": {
-            "en": "volcano",
-            "fi": "tulivuori",
-            "nl": "de vulkaan"
+        "en": {
+            "singular": "volcano",
+            "plural": "volcanoes|volcanos"
         },
-        "plural": {
-            "en": "volcanoes|volcanos",
-            "fi": "tulivuoret",
-            "nl": "de vulkanen"
+        "fi": {
+            "singular": "tulivuori",
+            "plural": "tulivuoret"
+        },
+        "nl": {
+            "singular": "de vulkaan",
+            "plural": "de vulkanen"
         }
     },
     "cave": {
-        "singular": {
-            "en": "cave",
-            "fi": "luola",
-            "nl": "de grot"
+        "en": {
+            "singular": "cave",
+            "plural": "caves"
         },
-        "plural": {
-            "en": "caves",
-            "fi": "luolat",
-            "nl": "de grotten"
+        "fi": {
+            "singular": "luola",
+            "plural": "luolat"
+        },
+        "nl": {
+            "singular": "de grot",
+            "plural": "de grotten"
         }
     },
     "canyon": {
-        "singular": {
-            "en": "canyon",
-            "fi": "rotko",
-            "nl": "de kloof"
+        "en": {
+            "singular": "canyon",
+            "plural": "canyons"
         },
-        "plural": {
-            "en": "canyons",
-            "fi": "rotkot",
-            "nl": "de kloven"
+        "fi": {
+            "singular": "rotko",
+            "plural": "rotkot"
+        },
+        "nl": {
+            "singular": "de kloof",
+            "plural": "de kloven"
         }
     },
     "rainforest": {
@@ -125,30 +141,34 @@
             "rain",
             "forest"
         ],
-        "singular": {
-            "en": "rainforest|rain forest",
-            "fi": "sademetsä",
-            "nl": "het regenwoud"
+        "en": {
+            "singular": "rainforest|rain forest",
+            "plural": "rainforests|rain forests"
         },
-        "plural": {
-            "en": "rainforests|rain forests",
-            "fi": "sademetsät",
-            "nl": "de regenwouden"
+        "fi": {
+            "singular": "sademetsä",
+            "plural": "sademetsät"
+        },
+        "nl": {
+            "singular": "het regenwoud",
+            "plural": "de regenwouden"
         }
     },
     "glacier": {
         "roots": {
             "fi": "ice"
         },
-        "singular": {
-            "en": "glacier",
-            "fi": "jäätikkö",
-            "nl": "de gletsjer"
+        "en": {
+            "singular": "glacier",
+            "plural": "glaciers"
         },
-        "plural": {
-            "en": "glaciers",
-            "fi": "jäätiköt",
-            "nl": "de gletsjers"
+        "fi": {
+            "singular": "jäätikkö",
+            "plural": "jäätiköt"
+        },
+        "nl": {
+            "singular": "de gletsjer",
+            "plural": "de gletsjers"
         }
     },
     "northern lights": {

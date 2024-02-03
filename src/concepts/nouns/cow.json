@@ -1,15 +1,17 @@
 {
     "cow": {
         "hypernym": "animal",
-        "singular": {
-            "en": "cow",
-            "fi": "lehmä",
-            "nl": "de koe"
+        "en": {
+            "singular": "cow",
+            "plural": "cows"
         },
-        "plural": {
-            "en": "cows",
-            "fi": "lehmät",
-            "nl": "de koeien"
+        "fi": {
+            "singular": "lehmä",
+            "plural": "lehmät"
+        },
+        "nl": {
+            "singular": "de koe",
+            "plural": "de koeien"
         }
     }
 }

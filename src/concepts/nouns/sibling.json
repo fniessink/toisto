@@ -1,55 +1,67 @@
 {
     "sister": {
         "hypernym": "sibling",
-        "root": {
-            "singular": {
-                "en": "sister",
-                "fi": "sisko",
-                "nl": "de zus"
+        "en": {
+            "root": {
+                "singular": "sister",
+                "plural": "sisters"
             },
-            "plural": {
-                "en": "sisters",
-                "fi": "siskot",
-                "nl": "de zussen"
+            "diminutive": {
+                "singular": "(little sister)",
+                "plural": "(little sisters)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little sister)",
-                "nl": "het zusje",
-                "fi": "pikkusisko"
+        "fi": {
+            "root": {
+                "singular": "sisko",
+                "plural": "siskot"
             },
-            "plural": {
-                "en": "(little sisters)",
-                "nl": "de zusjes",
-                "fi": "pikkusiskot"
+            "diminutive": {
+                "singular": "pikkusisko",
+                "plural": "pikkusiskot"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "de zus",
+                "plural": "de zussen"
+            },
+            "diminutive": {
+                "singular": "het zusje",
+                "plural": "de zusjes"
             }
         }
     },
     "brother": {
         "hypernym": "sibling",
-        "root": {
-            "singular": {
-                "en": "brother",
-                "fi": "veli",
-                "nl": "de broer"
+        "en": {
+            "root": {
+                "singular": "brother",
+                "plural": "brothers"
             },
-            "plural": {
-                "en": "brothers",
-                "fi": "veljet",
-                "nl": "de broers"
+            "diminutive": {
+                "singular": "(little brother)",
+                "plural": "(little brothers)"
             }
         },
-        "diminutive": {
-            "singular": {
-                "en": "(little brother)",
-                "nl": "het broertje",
-                "fi": "pikkuveli"
+        "fi": {
+            "root": {
+                "singular": "veli",
+                "plural": "veljet"
             },
-            "plural": {
-                "en": "(little brothers)",
-                "nl": "de broertjes",
-                "fi": "pikkuveljet"
+            "diminutive": {
+                "singular": "pikkuveli",
+                "plural": "pikkuveljet"
+            }
+        },
+        "nl": {
+            "root": {
+                "singular": "de broer",
+                "plural": "de broers"
+            },
+            "diminutive": {
+                "singular": "het broertje",
+                "plural": "de broertjes"
             }
         }
     },
@@ -61,15 +73,17 @@
                 "sister"
             ]
         },
-        "singular": {
-            "en": "sibling",
-            "fi": "sisarus",
-            "nl": "(de broer of zus)"
+        "en": {
+            "singular": "sibling",
+            "plural": "siblings"
         },
-        "plural": {
-            "en": "siblings",
-            "fi": "sisarukset",
-            "nl": "(de broers en zussen)"
+        "fi": {
+            "singular": "sisarus",
+            "plural": "sisarukset"
+        },
+        "nl": {
+            "singular": "(de broer of zus)",
+            "plural": "(de broers en zussen)"
         }
     },
     "how many brothers and sisters do you have": {

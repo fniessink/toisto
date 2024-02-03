@@ -1,152 +1,152 @@
 {
     "to speak": {
-        "infinitive": {
-            "en": "to speak",
-            "fi": "puhua",
-            "nl": "spreken"
-        },
-        "affirmative": {
-            "present tense": {
+        "en": {
+            "infinitive": "to speak",
+            "affirmative": {
                 "singular": {
-                    "first person": {
-                        "en": "I speak",
-                        "fi": [
-                            "minä puhun",
-                            "mä puhun*"
-                        ],
-                        "nl": "ik spreek"
-                    },
-                    "second person": {
-                        "en": "you speak",
-                        "fi": [
-                            "sinä puhut",
-                            "sä puhut*"
-                        ],
-                        "nl": "jij spreekt"
-                    },
+                    "first person": "I speak",
+                    "second person": "you speak",
                     "third person": {
-                        "fi": [
-                            "hän puhuu",
-                            "se puhuu*"
-                        ],
-                        "feminine": {
-                            "en": "she speaks",
-                            "nl": "zij spreekt"
-                        },
-                        "masculine": {
-                            "en": "he speaks",
-                            "nl": "hij spreekt"
-                        }
+                        "feminine": "she speaks",
+                        "masculine": "he speaks"
                     }
                 },
                 "plural": {
-                    "first person": {
-                        "en": "we speak",
-                        "fi": [
-                            "me puhumme",
-                            "me puhutaan*"
-                        ],
-                        "nl": "wij spreken"
-                    },
-                    "second person": {
-                        "en": "you speak",
-                        "fi": [
-                            "te puhutte",
-                            "te puhutte*"
-                        ],
-                        "nl": "jullie spreken"
-                    },
+                    "first person": "we speak",
+                    "second person": "you speak",
+                    "third person": "they speak"
+                }
+            },
+            "negative": {
+                "singular": {
+                    "first person": "I do not speak",
+                    "second person": "you do not speak",
                     "third person": {
-                        "en": "they speak",
-                        "fi": [
-                            "he puhuvat",
-                            "ne puhuu*"
-                        ],
-                        "nl": "zij spreken"
+                        "feminine": "she does not speak",
+                        "masculine": "he does not speak"
                     }
+                },
+                "plural": {
+                    "first person": "we do not speak",
+                    "second person": "you do not speak",
+                    "third person": "they do not speak"
                 }
             }
         },
-        "negative": {
-            "present tense": {
+        "fi": {
+            "infinitive": "puhua",
+            "affirmative": {
                 "singular": {
-                    "first person": {
-                        "en": "I do not speak",
-                        "fi": [
-                            "minä en puhu",
-                            "mä en puhu*"
-                        ],
-                        "nl": [
-                            "ik spreek geen",
-                            "ik spreek niet"
-                        ]
-                    },
-                    "second person": {
-                        "en": "you do not speak",
-                        "fi": [
-                            "sinä et puhu",
-                            "sä et puhu*"
-                        ],
-                        "nl": [
-                            "jij spreekt geen",
-                            "jij spreekt niet"
-                        ]
-                    },
+                    "first person": [
+                        "minä puhun",
+                        "mä puhun*"
+                    ],
+                    "second person": [
+                        "sinä puhut",
+                        "sä puhut*"
+                    ],
+                    "third person": [
+                        "hän puhuu",
+                        "se puhuu*"
+                    ]
+                },
+                "plural": {
+                    "first person": [
+                        "me puhumme",
+                        "me puhutaan*"
+                    ],
+                    "second person": [
+                        "te puhutte",
+                        "te puhutte*"
+                    ],
+                    "third person": [
+                        "he puhuvat",
+                        "ne puhuu*"
+                    ]
+                }
+            },
+            "negative": {
+                "singular": {
+                    "first person": [
+                        "minä en puhu",
+                        "mä en puhu*"
+                    ],
+                    "second person": [
+                        "sinä et puhu",
+                        "sä et puhu*"
+                    ],
+                    "third person": [
+                        "hän ei puhu",
+                        "se ei puhu*"
+                    ]
+                },
+                "plural": {
+                    "first person": [
+                        "me emme puhu",
+                        "me ei puhuta*"
+                    ],
+                    "second person": [
+                        "te ette puhu",
+                        "te ette puhu*"
+                    ],
+                    "third person": [
+                        "he eivät puhu",
+                        "ne ei puhu*"
+                    ]
+                }
+            }
+        },
+        "nl": {
+            "infinitive": "spreken",
+            "affirmative": {
+                "singular": {
+                    "first person": "ik spreek",
+                    "second person": "jij spreekt",
                     "third person": {
-                        "fi": [
-                            "hän ei puhu",
-                            "se ei puhu*"
-                        ],
-                        "feminine": {
-                            "en": "she does not speak",
-                            "nl": [
-                                "zij spreekt geen",
-                                "zij spreekt niet"
-                            ]
-                        },
-                        "masculine": {
-                            "en": "he does not speak",
-                            "nl": [
-                                "hij spreekt geen",
-                                "zij spreekt niet"
-                            ]
-                        }
+                        "feminine": "zij spreekt",
+                        "masculine": "hij spreekt"
                     }
                 },
                 "plural": {
-                    "first person": {
-                        "en": "we do not speak",
-                        "fi": [
-                            "me emme puhu",
-                            "me ei puhuta*"
-                        ],
-                        "nl": [
-                            "wij spreken geen",
-                            "wij spreken niet"
-                        ]
-                    },
-                    "second person": {
-                        "en": "you do not speak",
-                        "fi": [
-                            "te ette puhu",
-                            "te ette puhu*"
-                        ],
-                        "nl": [
-                            "jullie spreken geen",
-                            "jullie spreken niet"
-                        ]
-                    },
+                    "first person": "wij spreken",
+                    "second person": "jullie spreken",
+                    "third person": "zij spreken"
+                }
+            },
+            "negative": {
+                "singular": {
+                    "first person": [
+                        "ik spreek geen",
+                        "ik spreek niet"
+                    ],
+                    "second person": [
+                        "jij spreekt geen",
+                        "jij spreekt niet"
+                    ],
                     "third person": {
-                        "en": "they do not speak",
-                        "fi": [
-                            "he eivät puhu",
-                            "ne ei puhu*"
+                        "feminine": [
+                            "zij spreekt geen",
+                            "zij spreekt niet"
                         ],
-                        "nl": [
-                            "zij spreken geen",
-                            "zij spreken niet"
+                        "masculine": [
+                            "hij spreekt geen",
+                            "zij spreekt niet"
                         ]
                     }
+                },
+                "plural": {
+                    "first person": [
+                        "wij spreken geen",
+                        "wij spreken niet"
+                    ],
+                    "second person": [
+                        "jullie spreken geen",
+                        "jullie spreken niet"
+                    ],
+                    "third person": [
+                        "zij spreken geen",
+                        "zij spreken niet"
+                    ]
                 }
             }
         }

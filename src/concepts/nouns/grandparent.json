@@ -1,40 +1,44 @@
 {
     "grandma": {
         "hypernym": "grandparent",
-        "singular": {
-            "en": "grandma",
-            "fi": [
+        "en": {
+            "singular": "grandma",
+            "plural": "grandmas"
+        },
+        "fi": {
+            "singular": [
                 "mummo",
                 "mummi"
             ],
-            "nl": "de oma"
-        },
-        "plural": {
-            "en": "grandmas",
-            "fi": [
+            "plural": [
                 "mummot",
                 "mummit"
-            ],
-            "nl": "de oma's"
+            ]
+        },
+        "nl": {
+            "singular": "de oma",
+            "plural": "de oma's"
         }
     },
     "grandpa": {
         "hypernym": "grandparent",
-        "singular": {
-            "en": "grandpa",
-            "fi": [
+        "en": {
+            "singular": "grandpa",
+            "plural": "grandpas"
+        },
+        "fi": {
+            "singular": [
                 "vaari",
                 "ukki"
             ],
-            "nl": "de opa"
-        },
-        "plural": {
-            "en": "grandpas",
-            "fi": [
+            "plural": [
                 "vaarit",
                 "ukit"
-            ],
-            "nl": "de opa's"
+            ]
+        },
+        "nl": {
+            "singular": "de opa",
+            "plural": "de opa's"
         }
     },
     "grandmother": {

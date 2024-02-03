@@ -1,15 +1,17 @@
 {
     "accent": {
         "involves": "language",
-        "singular": {
-            "en": "accent",
-            "fi": "aksentti",
-            "nl": "het accent"
+        "en": {
+            "singular": "accent",
+            "plural": "accents"
         },
-        "plural": {
-            "en": "accents",
-            "fi": "aksentit",
-            "nl": "de accenten"
+        "fi": {
+            "singular": "aksentti",
+            "plural": "aksentit"
+        },
+        "nl": {
+            "singular": "het accent",
+            "plural": "de accenten"
         }
     },
     "I have a dutch accent": {

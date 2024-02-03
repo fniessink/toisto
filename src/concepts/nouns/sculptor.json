@@ -1,15 +1,17 @@
 {
     "sculptor": {
         "hypernym": "profession",
-        "singular": {
-            "en": "sculptor",
-            "fi": "kuvanveistäjä",
-            "nl": "de beeldhouwer"
+        "en": {
+            "singular": "sculptor",
+            "plural": "sculptors"
         },
-        "plural": {
-            "en": "sculptors",
-            "fi": "kuvanveistäjät",
-            "nl": "de beeldhouwers"
+        "fi": {
+            "singular": "kuvanveistäjä",
+            "plural": "kuvanveistäjät"
+        },
+        "nl": {
+            "singular": "de beeldhouwer",
+            "plural": "de beeldhouwers"
         }
     }
 }

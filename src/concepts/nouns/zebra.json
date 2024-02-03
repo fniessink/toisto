@@ -1,15 +1,17 @@
 {
     "zebra": {
         "hypernym": "animal",
-        "singular": {
-            "en": "zebra",
-            "fi": "seepra",
-            "nl": "de zebra"
+        "en": {
+            "singular": "zebra",
+            "plural": "zebras"
         },
-        "plural": {
-            "en": "zebras",
-            "fi": "seeprat",
-            "nl": "de zebra's"
+        "fi": {
+            "singular": "seepra",
+            "plural": "seeprat"
+        },
+        "nl": {
+            "singular": "de zebra",
+            "plural": "de zebra's"
         }
     }
 }

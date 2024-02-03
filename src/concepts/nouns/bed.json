@@ -1,14 +1,16 @@
 {
     "bed": {
-        "singular": {
-            "en": "bed",
-            "fi": "sänky",
-            "nl": "het bed"
+        "en": {
+            "singular": "bed",
+            "plural": "beds"
         },
-        "plural": {
-            "en": "beds",
-            "fi": "sängyt",
-            "nl": "de bedden"
+        "fi": {
+            "singular": "sänky",
+            "plural": "sängyt"
+        },
+        "nl": {
+            "singular": "het bed",
+            "plural": "de bedden"
         }
     },
     "double bed": {

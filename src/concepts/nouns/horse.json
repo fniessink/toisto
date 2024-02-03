@@ -1,15 +1,17 @@
 {
     "horse": {
         "hypernym": "animal",
-        "singular": {
-            "en": "horse",
-            "fi": "hevonen",
-            "nl": "het paard"
+        "en": {
+            "singular": "horse",
+            "plural": "horses"
         },
-        "plural": {
-            "en": "horses",
-            "fi": "hevoset",
-            "nl": "de paarden"
+        "fi": {
+            "singular": "hevonen",
+            "plural": "hevoset"
+        },
+        "nl": {
+            "singular": "het paard",
+            "plural": "de paarden"
         }
     },
     "horseriding": {

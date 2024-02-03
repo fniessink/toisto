@@ -1,139 +1,143 @@
 {
     "to go": {
-        "infinitive": {
-            "en": "to go",
-            "fi": "mennä;;mennä is verbityyppi 3",
-            "nl": "gaan"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I go",
-                    "fi": "minä menen",
-                    "nl": "ik ga"
-                },
-                "second person": {
-                    "en": "you go",
-                    "fi": "sinä menet",
-                    "nl": "jij gaat"
-                },
-                "third person": {
-                    "fi": "hän menee",
-                    "feminine": {
-                        "en": "she goes",
-                        "nl": "zij gaat"
-                    },
-                    "masculine": {
-                        "en": "he goes",
-                        "nl": "hij gaat"
+        "en": {
+            "infinitive": "to go",
+            "present tense": {
+                "singular": {
+                    "first person": "I go",
+                    "second person": "you go",
+                    "third person": {
+                        "feminine": "she goes",
+                        "masculine": "he goes"
                     }
+                },
+                "plural": {
+                    "first person": "we go",
+                    "second person": "you go",
+                    "third person": "they go"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we go",
-                    "fi": "me menemme",
-                    "nl": "wij gaan"
+            "past tense": {
+                "singular": {
+                    "first person": "I went",
+                    "second person": "you went",
+                    "third person": {
+                        "feminine": "she went",
+                        "masculine": "he went"
+                    }
                 },
-                "second person": {
-                    "en": "you go",
-                    "fi": "te menette",
-                    "nl": "jullie gaan"
-                },
-                "third person": {
-                    "en": "they go",
-                    "fi": "he menevät",
-                    "nl": "zij gaan"
+                "plural": {
+                    "first person": "we went",
+                    "second person": "you went",
+                    "third person": "they went"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I went",
-                    "fi": "minä menin",
-                    "nl": "ik ging"
+        "fi": {
+            "infinitive": "mennä;;mennä is verbityyppi 3",
+            "present tense": {
+                "singular": {
+                    "first person": "minä menen",
+                    "second person": "sinä menet",
+                    "third person": "hän menee"
                 },
-                "second person": {
-                    "en": "you went",
-                    "fi": "sinä menit",
-                    "nl": "jij ging"
-                },
-                "third person": {
-                    "fi": "hän meni",
-                    "feminine": {
-                        "en": "she went",
-                        "nl": "zij ging"
-                    },
-                    "masculine": {
-                        "en": "he went",
-                        "nl": "hij ging"
-                    }
+                "plural": {
+                    "first person": "me menemme",
+                    "second person": "te menette",
+                    "third person": "he menevät"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we went",
-                    "fi": "me menimme",
-                    "nl": "wij gingen"
+            "past tense": {
+                "singular": {
+                    "first person": "minä menin",
+                    "second person": "sinä menit",
+                    "third person": "hän meni"
                 },
-                "second person": {
-                    "en": "you went",
-                    "fi": "te menitte",
-                    "nl": "jullie gingen"
+                "plural": {
+                    "first person": "me menimme",
+                    "second person": "te menitte",
+                    "third person": "he menivät"
+                }
+            }
+        },
+        "nl": {
+            "infinitive": "gaan",
+            "present tense": {
+                "singular": {
+                    "first person": "ik ga",
+                    "second person": "jij gaat",
+                    "third person": {
+                        "feminine": "zij gaat",
+                        "masculine": "hij gaat"
+                    }
                 },
-                "third person": {
-                    "en": "they went",
-                    "fi": "he menivät",
-                    "nl": "zij gingen"
+                "plural": {
+                    "first person": "wij gaan",
+                    "second person": "jullie gaan",
+                    "third person": "zij gaan"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "ik ging",
+                    "second person": "jij ging",
+                    "third person": {
+                        "feminine": "zij ging",
+                        "masculine": "hij ging"
+                    }
+                },
+                "plural": {
+                    "first person": "wij gingen",
+                    "second person": "jullie gingen",
+                    "third person": "zij gingen"
                 }
             }
         }
     },
     "to go outside": {
-        "infinitive": {
-            "en": "to go outside",
-            "fi": "ulkoilla",
-            "nl": "naar buiten gaan"
-        },
-        "singular": {
-            "first person": {
-                "en": "I go outside",
-                "fi": "minä ulkoilen",
-                "nl": "ik ga naar buiten"
-            },
-            "second person": {
-                "en": "you go outside",
-                "fi": "sinä ulkoilet",
-                "nl": "jij gaat naar buiten"
-            },
-            "third person": {
-                "fi": "hän ulkoilee",
-                "feminine": {
-                    "en": "she goes outside",
-                    "nl": "zij gaat naar buiten"
-                },
-                "masculine": {
-                    "en": "he goes outside",
-                    "nl": "hij gaat naar buiten"
+        "en": {
+            "infinitive": "to go outside",
+            "singular": {
+                "first person": "I go outside",
+                "second person": "you go outside",
+                "third person": {
+                    "feminine": "she goes outside",
+                    "masculine": "he goes outside"
                 }
+            },
+            "plural": {
+                "first person": "we go outside",
+                "second person": "you go outside",
+                "third person": "they go outside"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we go outside",
-                "fi": "me ulkoilemme",
-                "nl": "wij gaan naar buiten"
+        "fi": {
+            "infinitive": "ulkoilla",
+            "singular": {
+                "first person": "minä ulkoilen",
+                "second person": "sinä ulkoilet",
+                "third person": "hän ulkoilee"
             },
-            "second person": {
-                "en": "you go outside",
-                "fi": "te ulkoilette",
-                "nl": "jullie gaan naar buiten"
+            "plural": {
+                "first person": "me ulkoilemme",
+                "second person": "te ulkoilette",
+                "third person": "he ulkoilevat"
+            }
+        },
+        "nl": {
+            "infinitive": "naar buiten gaan",
+            "singular": {
+                "first person": "ik ga naar buiten",
+                "second person": "jij gaat naar buiten",
+                "third person": {
+                    "feminine": "zij gaat naar buiten",
+                    "masculine": "hij gaat naar buiten"
+                }
             },
-            "third person": {
-                "en": "they go outside",
-                "fi": "he ulkoilevat",
-                "nl": "zij gaan naar buiten"
+            "plural": {
+                "first person": "wij gaan naar buiten",
+                "second person": "jullie gaan naar buiten",
+                "third person": "zij gaan naar buiten"
             }
         }
     }

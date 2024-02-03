@@ -1,91 +1,95 @@
 {
     "to come": {
-        "infinitive": {
-            "en": "to come",
-            "fi": "tulla;;tulla is verbityyppi 3",
-            "nl": "komen"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I come",
-                    "fi": "minä tulen",
-                    "nl": "ik kom"
-                },
-                "second person": {
-                    "en": "you come",
-                    "fi": "sinä tulet",
-                    "nl": "jij komt"
-                },
-                "third person": {
-                    "fi": "hän tulee",
-                    "feminine": {
-                        "en": "she comes",
-                        "nl": "zij komt"
-                    },
-                    "masculine": {
-                        "en": "he comes",
-                        "nl": "hij komt"
+        "en": {
+            "infinitive": "to come",
+            "present tense": {
+                "singular": {
+                    "first person": "I come",
+                    "second person": "you come",
+                    "third person": {
+                        "feminine": "she comes",
+                        "masculine": "he comes"
                     }
+                },
+                "plural": {
+                    "first person": "we come",
+                    "second person": "you come",
+                    "third person": "they come"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we come",
-                    "fi": "me tulemme",
-                    "nl": "wij komen"
+            "past tense": {
+                "singular": {
+                    "first person": "I came",
+                    "second person": "you came",
+                    "third person": {
+                        "feminine": "she came",
+                        "masculine": "he came"
+                    }
                 },
-                "second person": {
-                    "en": "you come",
-                    "fi": "te tulette",
-                    "nl": "jullie komen"
-                },
-                "third person": {
-                    "en": "they come",
-                    "fi": "he tulevat",
-                    "nl": "zij komen"
+                "plural": {
+                    "first person": "we came",
+                    "second person": "you came",
+                    "third person": "they came"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I came",
-                    "fi": "minä tulin",
-                    "nl": "ik kwam"
+        "fi": {
+            "infinitive": "tulla;;tulla is verbityyppi 3",
+            "present tense": {
+                "singular": {
+                    "first person": "minä tulen",
+                    "second person": "sinä tulet",
+                    "third person": "hän tulee"
                 },
-                "second person": {
-                    "en": "you came",
-                    "fi": "sinä tulit",
-                    "nl": "jij kwam"
-                },
-                "third person": {
-                    "fi": "hän tuli",
-                    "feminine": {
-                        "en": "she came",
-                        "nl": "zij kwam"
-                    },
-                    "masculine": {
-                        "en": "he came",
-                        "nl": "hij kwam"
-                    }
+                "plural": {
+                    "first person": "me tulemme",
+                    "second person": "te tulette",
+                    "third person": "he tulevat"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we came",
-                    "fi": "me tulimme",
-                    "nl": "wij kwamen"
+            "past tense": {
+                "singular": {
+                    "first person": "minä tulin",
+                    "second person": "sinä tulit",
+                    "third person": "hän tuli"
                 },
-                "second person": {
-                    "en": "you came",
-                    "fi": "te tulitte",
-                    "nl": "jullie kwamen"
+                "plural": {
+                    "first person": "me tulimme",
+                    "second person": "te tulitte",
+                    "third person": "he tulivat"
+                }
+            }
+        },
+        "nl": {
+            "infinitive": "komen",
+            "present tense": {
+                "singular": {
+                    "first person": "ik kom",
+                    "second person": "jij komt",
+                    "third person": {
+                        "feminine": "zij komt",
+                        "masculine": "hij komt"
+                    }
                 },
-                "third person": {
-                    "en": "they came",
-                    "fi": "he tulivat",
-                    "nl": "zij kwamen"
+                "plural": {
+                    "first person": "wij komen",
+                    "second person": "jullie komen",
+                    "third person": "zij komen"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "ik kwam",
+                    "second person": "jij kwam",
+                    "third person": {
+                        "feminine": "zij kwam",
+                        "masculine": "hij kwam"
+                    }
+                },
+                "plural": {
+                    "first person": "wij kwamen",
+                    "second person": "jullie kwamen",
+                    "third person": "zij kwamen"
                 }
             }
         }

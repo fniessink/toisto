@@ -1,18 +1,20 @@
 {
     "teacher": {
         "hypernym": "profession",
-        "singular": {
-            "en": "teacher",
-            "fi": "opettaja",
-            "nl": [
+        "en": {
+            "singular": "teacher",
+            "plural": "teachers"
+        },
+        "fi": {
+            "singular": "opettaja",
+            "plural": "opettajat"
+        },
+        "nl": {
+            "singular": [
                 "de docent",
                 "de leraar"
-            ]
-        },
-        "plural": {
-            "en": "teachers",
-            "fi": "opettajat",
-            "nl": [
+            ],
+            "plural": [
                 "de docenten",
                 "de leraren"
             ]

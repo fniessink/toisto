@@ -1,21 +1,20 @@
 {
     "warm": {
         "antonym": "cold",
-        "positive degree": {
-            "example": "it is warm in the south",
-            "en": "warm",
-            "fi": "lämmin",
-            "nl": "warm"
+        "en": {
+            "positive degree": "warm",
+            "comparative degree": "warmer",
+            "superlative degree": "warmest"
         },
-        "comparative degree": {
-            "en": "warmer",
-            "fi": "lämpimämpi",
-            "nl": "warmer"
+        "fi": {
+            "positive degree": "lämmin",
+            "comparative degree": "lämpimämpi",
+            "superlative degree": "lämpimin"
         },
-        "superlative degree": {
-            "en": "warmest",
-            "fi": "lämpimin",
-            "nl": "warmst"
+        "nl": {
+            "positive degree": "warm",
+            "comparative degree": "warmer",
+            "superlative degree": "warmst"
         }
     }
 }

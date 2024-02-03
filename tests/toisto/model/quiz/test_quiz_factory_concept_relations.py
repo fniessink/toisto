@@ -26,8 +26,8 @@ class ConceptRootsTest(QuizFactoryTestCase):
             "mall",
             dict(
                 roots=["shop", "centre"],
-                singular=dict(fi="kauppakeskus", nl="het winkelcentrum"),
-                plural=dict(fi="kauppakeskukset", nl="de winkelcentra"),
+                fi=dict(singular="kauppakeskus", plural="kauppakeskukset"),
+                nl=dict(singular="het winkelcentrum", plural="de winkelcentra"),
             ),
         )
         shop = self.create_concept("shop", dict(fi="kauppa"))
@@ -103,11 +103,11 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         self.language_pair = EN_NL
         question = self.create_concept(
             "question",
-            dict(answer="answer", singular=dict(en="How are you?;singular"), plural=dict(en="How are you?;plural")),
+            dict(answer="answer", en=dict(singular="How are you?;singular", plural="How are you?;plural")),
         )
         answer = self.create_concept(
             "answer",
-            dict(singular=dict(en="I'm fine, thank you."), plural=dict(en="We're fine, thank you.")),
+            dict(en=dict(singular="I'm fine, thank you.", plural="We're fine, thank you.")),
         )
         quizzes = create_quizzes(EN_NL, (), question, answer)
         singular_answer_quiz = self.create_quiz(question, "How are you?;singular", ["I'm fine, thank you."], ANSWER)

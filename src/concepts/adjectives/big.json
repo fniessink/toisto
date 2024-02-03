@@ -1,29 +1,29 @@
 {
     "big": {
         "antonym": "small",
-        "positive degree": {
-            "en": "big",
-            "fi": [
+        "en": {
+            "positive degree": "big",
+            "comparative degree": "bigger",
+            "superlative degree": "biggest"
+        },
+        "fi": {
+            "positive degree": [
                 "iso",
                 "suuri"
             ],
-            "nl": "groot"
-        },
-        "comparative degree": {
-            "en": "bigger",
-            "fi": [
+            "comparative degree": [
                 "isompi",
                 "suurempi"
             ],
-            "nl": "groter"
-        },
-        "superlative degree": {
-            "en": "biggest",
-            "fi": [
+            "superlative degree": [
                 "isoin",
                 "suurin"
-            ],
-            "nl": "grootst"
+            ]
+        },
+        "nl": {
+            "positive degree": "groot",
+            "comparative degree": "groter",
+            "superlative degree": "grootst"
         }
     }
 }

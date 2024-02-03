@@ -1,20 +1,22 @@
 {
     "body": {
-        "singular": {
-            "en": "body",
-            "fi": [
+        "en": {
+            "singular": "body",
+            "plural": "bodies"
+        },
+        "fi": {
+            "singular": [
                 "vartalo",
                 "keho"
             ],
-            "nl": "het lichaam"
-        },
-        "plural": {
-            "en": "bodies",
-            "fi": [
+            "plural": [
                 "vartalot",
                 "kehot"
-            ],
-            "nl": "de lichamen"
+            ]
+        },
+        "nl": {
+            "singular": "het lichaam",
+            "plural": "de lichamen"
         }
     }
 }

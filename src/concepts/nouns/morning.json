@@ -1,15 +1,17 @@
 {
     "morning": {
         "hypernym": "time of day",
-        "singular": {
-            "en": "morning",
-            "fi": "aamu|aamupäivä",
-            "nl": "de ochtend"
+        "en": {
+            "singular": "morning",
+            "plural": "mornings"
         },
-        "plural": {
-            "en": "mornings",
-            "fi": "aamut|aamupäivät",
-            "nl": "de ochtenden"
+        "fi": {
+            "singular": "aamu|aamupäivä",
+            "plural": "aamut|aamupäivät"
+        },
+        "nl": {
+            "singular": "de ochtend",
+            "plural": "de ochtenden"
         }
     },
     "at morning": {

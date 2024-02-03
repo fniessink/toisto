@@ -1,25 +1,20 @@
 {
     "cold": {
         "antonym": "hot",
-        "positive degree": {
-            "example": [
-                "it is cold in the north",
-                "the finnish winter is cold",
-                "finnish winters are cold"
-            ],
-            "en": "cold",
-            "fi": "kylmä",
-            "nl": "koud"
+        "en": {
+            "positive degree": "cold",
+            "comparative degree": "colder",
+            "superlative degree": "coldest"
         },
-        "comparative degree": {
-            "en": "colder",
-            "fi": "kylmempi",
-            "nl": "kouder"
+        "fi": {
+            "positive degree": "kylmä",
+            "comparative degree": "kylmempi",
+            "superlative degree": "kylmin"
         },
-        "superlative degree": {
-            "en": "coldest",
-            "fi": "kylmin",
-            "nl": "koudst"
+        "nl": {
+            "positive degree": "koud",
+            "comparative degree": "kouder",
+            "superlative degree": "koudst"
         }
     }
 }

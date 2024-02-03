@@ -54,11 +54,11 @@
         "nl": "Vandaag is het zaterdag."
     },
     "tomorrow it is sunday what day is it today": {
+        "answer": "today it is saturday",
         "roots": [
             "tomorrow it is sunday",
             "what day is it today"
         ],
-        "answer": "today it is saturday",
         "en": "Tomorrow it is Sunday. What day is it today?",
         "fi": "Huomenna on sunnuntai. Mikä päivä tänään on?|Huomenna on sunnuntai. Mikä päivä on tänään?",
         "nl": "Morgen is het zondag. Welke dag is het vandaag?"

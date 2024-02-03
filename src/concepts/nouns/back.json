@@ -1,15 +1,17 @@
 {
     "back": {
         "holonym": "body",
-        "singular": {
-            "en": "back",
-            "fi": "selkä",
-            "nl": "de rug"
+        "en": {
+            "singular": "back",
+            "plural": "backs"
         },
-        "plural": {
-            "en": "backs",
-            "fi": "selät",
-            "nl": "de ruggen"
+        "fi": {
+            "singular": "selkä",
+            "plural": "selät"
+        },
+        "nl": {
+            "singular": "de rug",
+            "plural": "de ruggen"
         }
     },
     "backpack": {
@@ -17,15 +19,17 @@
             "en": "back",
             "nl": "back"
         },
-        "singular": {
-            "en": "backpack",
-            "fi": "reppu",
-            "nl": "de rugzak"
+        "en": {
+            "singular": "backpack",
+            "plural": "backpacks"
         },
-        "plural": {
-            "en": "backpacks",
-            "fi": "reput",
-            "nl": "de rugzakken"
+        "fi": {
+            "singular": "reppu",
+            "plural": "reput"
+        },
+        "nl": {
+            "singular": "de rugzak",
+            "plural": "de rugzakken"
         }
     }
 }

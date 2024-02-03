@@ -1,48 +1,48 @@
 {
     "to lounge": {
-        "infinitive": {
-            "en": "to lounge",
-            "fi": "makoilla",
-            "nl": "luieren"
-        },
-        "singular": {
-            "first person": {
-                "en": "I lounge",
-                "fi": "minä makoilen",
-                "nl": "ik luier"
-            },
-            "second person": {
-                "en": "you lounge",
-                "fi": "sinä makoilet",
-                "nl": "jij luiert"
-            },
-            "third person": {
-                "fi": "hän makoilee",
-                "feminine": {
-                    "en": "she lounges",
-                    "nl": "zij luiert"
-                },
-                "masculine": {
-                    "en": "he lounges",
-                    "nl": "hij luiert"
+        "en": {
+            "infinitive": "to lounge",
+            "singular": {
+                "first person": "I lounge",
+                "second person": "you lounge",
+                "third person": {
+                    "feminine": "she lounges",
+                    "masculine": "he lounges"
                 }
+            },
+            "plural": {
+                "first person": "we lounge",
+                "second person": "you lounge",
+                "third person": "they lounge"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we lounge",
-                "fi": "me makoilemme",
-                "nl": "wij luieren"
+        "fi": {
+            "infinitive": "makoilla",
+            "singular": {
+                "first person": "minä makoilen",
+                "second person": "sinä makoilet",
+                "third person": "hän makoilee"
             },
-            "second person": {
-                "en": "you lounge",
-                "fi": "te makoilette",
-                "nl": "jullie luieren"
+            "plural": {
+                "first person": "me makoilemme",
+                "second person": "te makoilette",
+                "third person": "he makoilevat"
+            }
+        },
+        "nl": {
+            "infinitive": "luieren",
+            "singular": {
+                "first person": "ik luier",
+                "second person": "jij luiert",
+                "third person": {
+                    "feminine": "zij luiert",
+                    "masculine": "hij luiert"
+                }
             },
-            "third person": {
-                "en": "they lounge",
-                "fi": "he makoilevat",
-                "nl": "zij luieren"
+            "plural": {
+                "first person": "wij luieren",
+                "second person": "jullie luieren",
+                "third person": "zij luieren"
             }
         }
     }

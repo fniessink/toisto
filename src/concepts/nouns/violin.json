@@ -1,15 +1,17 @@
 {
     "violin": {
         "hypernym": "musical instrument",
-        "singular": {
-            "en": "violin",
-            "fi": "viulu",
-            "nl": "de viool"
+        "en": {
+            "singular": "violin",
+            "plural": "violins"
         },
-        "plural": {
-            "en": "violins",
-            "fi": "viulut",
-            "nl": "de violen"
+        "fi": {
+            "singular": "viulu",
+            "plural": "viulut"
+        },
+        "nl": {
+            "singular": "de viool",
+            "plural": "de violen"
         }
     }
 }

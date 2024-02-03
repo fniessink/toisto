@@ -209,11 +209,9 @@
         "hypernym": "profession",
         "en": "secretary",
         "fi": "sihteeri",
-        "feminine": {
-            "nl": "de secretaresse"
-        },
-        "masculine": {
-            "nl": "de secretaris"
+        "nl": {
+            "feminine": "de secretaresse",
+            "masculine": "de secretaris"
         }
     },
     "bookkeeper": {
@@ -274,13 +272,9 @@
         "hypernym": "profession",
         "en": "server",
         "fi": "tarjoilija",
-        "feminine": {
-            "en": "waitress",
-            "nl": "de serveerster"
-        },
-        "masculine": {
-            "en": "waiter",
-            "nl": "de ober"
+        "nl": {
+            "feminine": "de serveerster",
+            "masculine": "de ober"
         }
     },
     "kitchenhand": {
@@ -307,11 +301,9 @@
         "hypernym": "profession",
         "en": "nanny",
         "fi": "lastenhoitaja",
-        "feminine": {
-            "nl": "de kinderverzorgster"
-        },
-        "masculine": {
-            "nl": "de kinderverzorger"
+        "nl": {
+            "feminine": "de kinderverzorgster",
+            "masculine": "de kinderverzorger"
         }
     },
     "researcher": {

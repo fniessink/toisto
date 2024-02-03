@@ -1,14 +1,16 @@
 {
     "spectator": {
-        "singular": {
-            "en": "spectator",
-            "fi": "katsjoja",
-            "nl": "de toeschouwer"
+        "en": {
+            "singular": "spectator",
+            "plural": "spectators"
         },
-        "plural": {
-            "en": "spectators",
-            "fi": "katsjojat",
-            "nl": "de toeschouwers"
+        "fi": {
+            "singular": "katsjoja",
+            "plural": "katsjojat"
+        },
+        "nl": {
+            "singular": "de toeschouwer",
+            "plural": "de toeschouwers"
         }
     }
 }

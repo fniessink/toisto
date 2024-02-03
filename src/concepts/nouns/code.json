@@ -1,14 +1,16 @@
 {
     "code": {
-        "singular": {
-            "en": "code",
-            "fi": "koodi",
-            "nl": "de code"
+        "en": {
+            "singular": "code",
+            "plural": "codes"
         },
-        "plural": {
-            "en": "codes",
-            "fi": "koodit",
-            "nl": "de codes"
+        "fi": {
+            "singular": "koodi",
+            "plural": "koodit"
+        },
+        "nl": {
+            "singular": "de code",
+            "plural": "de codes"
         }
     }
 }

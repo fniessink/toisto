@@ -1,14 +1,16 @@
 {
     "exercise, practice": {
-        "singular": {
-            "en": "exercise",
-            "fi": "harjoitus",
-            "nl": "de oefening"
+        "en": {
+            "singular": "exercise",
+            "plural": "exercises"
         },
-        "plural": {
-            "en": "exercises",
-            "fi": "harjoitukset",
-            "nl": "de oefeningen"
+        "fi": {
+            "singular": "harjoitus",
+            "plural": "harjoitukset"
+        },
+        "nl": {
+            "singular": "de oefening",
+            "plural": "de oefeningen"
         }
     },
     "exercise (physical activity)": {

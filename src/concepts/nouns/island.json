@@ -1,14 +1,16 @@
 {
     "island": {
-        "singular": {
-            "en": "island",
-            "fi": "saari",
-            "nl": "het eiland"
+        "en": {
+            "singular": "island",
+            "plural": "islands"
         },
-        "plural": {
-            "en": "islands",
-            "fi": "saaret",
-            "nl": "de eilanden"
+        "fi": {
+            "singular": "saari",
+            "plural": "saaret"
+        },
+        "nl": {
+            "singular": "het eiland",
+            "plural": "de eilanden"
         }
     }
 }

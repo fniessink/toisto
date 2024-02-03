@@ -4,20 +4,20 @@
             "new",
             "young"
         ],
-        "positive degree": {
-            "en": "old",
-            "fi": "vanha",
-            "nl": "oud"
+        "en": {
+            "positive degree": "old",
+            "comparative degree": "older",
+            "superlative degree": "oldest"
         },
-        "comparative degree": {
-            "en": "older",
-            "fi": "vanhempi;adjective",
-            "nl": "ouder"
+        "fi": {
+            "positive degree": "vanha",
+            "comparative degree": "vanhempi;adjective",
+            "superlative degree": "vanhin"
         },
-        "superlative degree": {
-            "en": "oldest",
-            "fi": "vanhin",
-            "nl": "oudst"
+        "nl": {
+            "positive degree": "oud",
+            "comparative degree": "ouder",
+            "superlative degree": "oudst"
         }
     }
 }

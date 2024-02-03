@@ -1,26 +1,28 @@
 {
     "movie": {
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "movie",
                 "film"
             ],
-            "fi": [
+            "plural": [
+                "movies",
+                "films"
+            ]
+        },
+        "fi": {
+            "singular": [
                 "elokuva",
                 "leffa*"
             ],
-            "nl": "de film"
-        },
-        "plural": {
-            "en": [
-                "movies",
-                "films"
-            ],
-            "fi": [
+            "plural": [
                 "elokuvat",
                 "leffat*"
-            ],
-            "nl": "de films"
+            ]
+        },
+        "nl": {
+            "singular": "de film",
+            "plural": "de films"
         }
     }
 }

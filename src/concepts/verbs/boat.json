@@ -1,48 +1,48 @@
 {
     "to boat": {
-        "infinitive": {
-            "en": "to boat",
-            "fi": "veneillä",
-            "nl": "varen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I boat",
-                "fi": "minä veneilen",
-                "nl": "ik vaar"
-            },
-            "second person": {
-                "en": "you boat",
-                "fi": "sinä veneilet",
-                "nl": "jij vaart"
-            },
-            "third person": {
-                "fi": "hän veneilee",
-                "feminine": {
-                    "en": "she boats",
-                    "nl": "zij vaart"
-                },
-                "masculine": {
-                    "en": "he boats",
-                    "nl": "hij vaart"
+        "en": {
+            "infinitive": "to boat",
+            "singular": {
+                "first person": "I boat",
+                "second person": "you boat",
+                "third person": {
+                    "feminine": "she boats",
+                    "masculine": "he boats"
                 }
+            },
+            "plural": {
+                "first person": "we boat",
+                "second person": "you boat",
+                "third person": "they boat"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we boat",
-                "fi": "me veneilemme",
-                "nl": "wij varen"
+        "fi": {
+            "infinitive": "veneillä",
+            "singular": {
+                "first person": "minä veneilen",
+                "second person": "sinä veneilet",
+                "third person": "hän veneilee"
             },
-            "second person": {
-                "en": "you boat",
-                "fi": "te veneilette",
-                "nl": "jullie varen"
+            "plural": {
+                "first person": "me veneilemme",
+                "second person": "te veneilette",
+                "third person": "he veneilevät"
+            }
+        },
+        "nl": {
+            "infinitive": "varen",
+            "singular": {
+                "first person": "ik vaar",
+                "second person": "jij vaart",
+                "third person": {
+                    "feminine": "zij vaart",
+                    "masculine": "hij vaart"
+                }
             },
-            "third person": {
-                "en": "they boat",
-                "fi": "he veneilevät",
-                "nl": "zij varen"
+            "plural": {
+                "first person": "wij varen",
+                "second person": "jullie varen",
+                "third person": "zij varen"
             }
         }
     }

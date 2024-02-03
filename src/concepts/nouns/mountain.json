@@ -1,14 +1,16 @@
 {
     "mountain": {
-        "singular": {
-            "en": "mountain",
-            "fi": "vuori",
-            "nl": "de berg"
+        "en": {
+            "singular": "mountain",
+            "plural": "mountains"
         },
-        "plural": {
-            "en": "mountains",
-            "fi": "vuoret",
-            "nl": "de bergen"
+        "fi": {
+            "singular": "vuori",
+            "plural": "vuoret"
+        },
+        "nl": {
+            "singular": "de berg",
+            "plural": "de bergen"
         }
     }
 }

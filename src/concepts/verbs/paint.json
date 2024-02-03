@@ -5,134 +5,138 @@
             "paint",
             "painter"
         ],
-        "infinitive": {
-            "en": "to paint",
-            "fi": "maalata",
-            "nl": [
+        "en": {
+            "infinitive": "to paint",
+            "present tense": {
+                "singular": {
+                    "first person": "I paint",
+                    "second person": "you paint",
+                    "third person": {
+                        "feminine": "she paints",
+                        "masculine": "he paints"
+                    }
+                },
+                "plural": {
+                    "first person": "we paint",
+                    "second person": "you paint",
+                    "third person": "they paint"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "I painted",
+                    "second person": "you painted",
+                    "third person": {
+                        "feminine": "she painted",
+                        "masculine": "he painted"
+                    }
+                },
+                "plural": {
+                    "first person": "we painted",
+                    "second person": "you painted",
+                    "third person": "they painted"
+                }
+            }
+        },
+        "fi": {
+            "infinitive": "maalata",
+            "present tense": {
+                "singular": {
+                    "first person": "minä maalaan",
+                    "second person": "sinä maalaat",
+                    "third person": "hän maalaa"
+                },
+                "plural": {
+                    "first person": "me maalaamme",
+                    "second person": "te maalaatte",
+                    "third person": "he maalaavat"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "minä maalasin",
+                    "second person": "sinä maalasit",
+                    "third person": "hän maalasi"
+                },
+                "plural": {
+                    "first person": "me maalasimme",
+                    "second person": "te maalasitte",
+                    "third person": "he maalasivat"
+                }
+            }
+        },
+        "nl": {
+            "infinitive": [
                 "schilderen",
                 "verven"
-            ]
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I paint",
-                    "fi": "minä maalaan",
-                    "nl": [
+            ],
+            "present tense": {
+                "singular": {
+                    "first person": [
                         "ik schilder",
                         "ik verf"
-                    ]
-                },
-                "second person": {
-                    "en": "you paint",
-                    "fi": "sinä maalaat",
-                    "nl": [
+                    ],
+                    "second person": [
                         "jij schildert",
                         "jij verft"
-                    ]
-                },
-                "third person": {
-                    "fi": "hän maalaa",
-                    "feminine": {
-                        "en": "she paints",
-                        "nl": [
+                    ],
+                    "third person": {
+                        "feminine": [
                             "zij schildert",
                             "zij verft"
-                        ]
-                    },
-                    "masculine": {
-                        "en": "he paints",
-                        "nl": [
+                        ],
+                        "masculine": [
                             "hij schildert",
                             "hij verft"
                         ]
                     }
-                }
-            },
-            "plural": {
-                "first person": {
-                    "en": "we paint",
-                    "fi": "me maalaamme",
-                    "nl": [
+                },
+                "plural": {
+                    "first person": [
                         "wij schilderen",
                         "wij verven"
-                    ]
-                },
-                "second person": {
-                    "en": "you paint",
-                    "fi": "te maalaatte",
-                    "nl": [
+                    ],
+                    "second person": [
                         "jullie schilderen",
                         "jullie verven"
-                    ]
-                },
-                "third person": {
-                    "en": "they paint",
-                    "fi": "he maalaavat",
-                    "nl": [
+                    ],
+                    "third person": [
                         "zij schilderen",
                         "zij verven"
                     ]
                 }
-            }
-        },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I painted",
-                    "fi": "minä maalasin",
-                    "nl": [
+            },
+            "past tense": {
+                "singular": {
+                    "first person": [
                         "ik schilderde",
                         "ik verfde"
-                    ]
-                },
-                "second person": {
-                    "en": "you painted",
-                    "fi": "sinä maalasit",
-                    "nl": [
+                    ],
+                    "second person": [
                         "jij schilderde",
                         "jij verfde"
-                    ]
-                },
-                "third person": {
-                    "fi": "hän maalasi",
-                    "feminine": {
-                        "en": "she painted",
-                        "nl": [
+                    ],
+                    "third person": {
+                        "feminine": [
                             "zij schilderde",
                             "zij verfde"
-                        ]
-                    },
-                    "masculine": {
-                        "en": "he painted",
-                        "nl": [
+                        ],
+                        "masculine": [
                             "hij schilderde",
                             "hij verfde"
                         ]
                     }
-                }
-            },
-            "plural": {
-                "first person": {
-                    "en": "we painted",
-                    "fi": "me maalasimme",
-                    "nl": [
+                },
+                "plural": {
+                    "first person": [
                         "wij schilderden",
                         "wij verfden"
-                    ]
-                },
-                "second person": {
-                    "en": "you painted",
-                    "fi": "te maalasitte",
-                    "nl": [
+                    ],
+                    "second person": [
                         "jullie schilderden",
                         "jullie verfden"
-                    ]
-                },
-                "third person": {
-                    "en": "they painted",
-                    "fi": "he maalasivat",
-                    "nl": [
+                    ],
+                    "third person": [
                         "zij schilderden",
                         "zij verfden"
                     ]

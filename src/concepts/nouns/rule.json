@@ -1,14 +1,16 @@
 {
     "rule": {
-        "singular": {
-            "en": "rule",
-            "fi": "sääntö",
-            "nl": "de regel"
+        "en": {
+            "singular": "rule",
+            "plural": "rules"
         },
-        "plural": {
-            "en": "rules",
-            "fi": "säännöt",
-            "nl": "de regels"
+        "fi": {
+            "singular": "sääntö",
+            "plural": "säännöt"
+        },
+        "nl": {
+            "singular": "de regel",
+            "plural": "de regels"
         }
     }
 }

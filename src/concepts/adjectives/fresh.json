@@ -1,20 +1,20 @@
 {
     "fresh": {
         "example": "is the fish fresh",
-        "positive degree": {
-            "en": "fresh",
-            "fi": "tuore",
-            "nl": "vers"
+        "en": {
+            "positive degree": "fresh",
+            "comparative degree": "fresher",
+            "superlative degree": "freshest"
         },
-        "comparative degree": {
-            "en": "fresher",
-            "fi": "tuoreempi",
-            "nl": "verser"
+        "fi": {
+            "positive degree": "tuore",
+            "comparative degree": "tuoreempi",
+            "superlative degree": "tuorein"
         },
-        "superlative degree": {
-            "en": "freshest",
-            "fi": "tuorein",
-            "nl": "verst"
+        "nl": {
+            "positive degree": "vers",
+            "comparative degree": "verser",
+            "superlative degree": "verst"
         }
     }
 }

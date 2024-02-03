@@ -1,14 +1,16 @@
 {
     "brush": {
-        "singular": {
-            "en": "brush",
-            "fi": "sivellin",
-            "nl": "het penseel"
+        "en": {
+            "singular": "brush",
+            "plural": "brushes"
         },
-        "plural": {
-            "en": "brushes",
-            "fi": "siveltimet",
-            "nl": "de penselen"
+        "fi": {
+            "singular": "sivellin",
+            "plural": "siveltimet"
+        },
+        "nl": {
+            "singular": "het penseel",
+            "plural": "de penselen"
         }
     }
 }

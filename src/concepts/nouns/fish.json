@@ -1,19 +1,21 @@
 {
     "fish": {
-        "hypernym": "food",
         "example": "is the fish fresh",
-        "singular": {
-            "en": "fish",
-            "fi": "kala",
-            "nl": "de vis"
-        },
-        "plural": {
-            "en": [
+        "hypernym": "food",
+        "en": {
+            "singular": "fish",
+            "plural": [
                 "fish",
                 "fishes"
-            ],
-            "fi": "kalat",
-            "nl": "de vissen"
+            ]
+        },
+        "fi": {
+            "singular": "kala",
+            "plural": "kalat"
+        },
+        "nl": {
+            "singular": "de vis",
+            "plural": "de vissen"
         }
     },
     "is the fish fresh": {

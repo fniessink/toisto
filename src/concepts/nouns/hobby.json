@@ -1,14 +1,16 @@
 {
     "hobby": {
-        "singular": {
-            "en": "hobby",
-            "fi": "harrastus",
-            "nl": "de hobby"
+        "en": {
+            "singular": "hobby",
+            "plural": "hobbies"
         },
-        "plural": {
-            "en": "hobbies",
-            "fi": "harrastukset",
-            "nl": "de hobby's"
+        "fi": {
+            "singular": "harrastus",
+            "plural": "harrastukset"
+        },
+        "nl": {
+            "singular": "de hobby",
+            "plural": "de hobby's"
         }
     }
 }

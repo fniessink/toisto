@@ -1,49 +1,55 @@
 {
     "wife": {
-        "hypernym": "spouse",
         "holonym": "marriage",
-        "singular": {
-            "en": "wife",
-            "fi": "aviovaimo|vaimo",
-            "nl": "de echtgenote"
+        "hypernym": "spouse",
+        "en": {
+            "singular": "wife",
+            "plural": "wives"
         },
-        "plural": {
-            "en": "wives",
-            "fi": "aviovaimot|vaimot",
-            "nl": "de echtgenotes"
+        "fi": {
+            "singular": "aviovaimo|vaimo",
+            "plural": "aviovaimot|vaimot"
+        },
+        "nl": {
+            "singular": "de echtgenote",
+            "plural": "de echtgenotes"
         }
     },
     "husband": {
-        "hypernym": "spouse",
         "holonym": "marriage",
-        "singular": {
-            "en": "husband",
-            "fi": "aviomies|mies",
-            "nl": "de echtgenoot"
+        "hypernym": "spouse",
+        "en": {
+            "singular": "husband",
+            "plural": "husbands"
         },
-        "plural": {
-            "en": "husbands",
-            "fi": "aviomiehet|miehet",
-            "nl": "de echtgenoten"
+        "fi": {
+            "singular": "aviomies|mies",
+            "plural": "aviomiehet|miehet"
+        },
+        "nl": {
+            "singular": "de echtgenoot",
+            "plural": "de echtgenoten"
         }
     },
     "spouse": {
         "holonym": "family",
-        "singular": {
-            "en": "spouse",
-            "fi": [
+        "en": {
+            "singular": "spouse",
+            "plural": "spouses"
+        },
+        "fi": {
+            "singular": [
                 "aviopuoliso|puoliso",
                 "kumppani"
             ],
-            "nl": "de partner"
-        },
-        "plural": {
-            "en": "spouses",
-            "fi": [
+            "plural": [
                 "aviopuolisot|puolisot",
                 "kumppanit"
-            ],
-            "nl": "de partners"
+            ]
+        },
+        "nl": {
+            "singular": "de partner",
+            "plural": "de partners"
         }
     }
 }

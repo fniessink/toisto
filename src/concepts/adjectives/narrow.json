@@ -1,34 +1,34 @@
 {
     "narrow": {
-        "positive degree": {
-            "en": [
+        "en": {
+            "positive degree": [
                 "narrow",
                 "tight"
             ],
-            "fi": "ahdas",
-            "nl": [
-                "nauw",
-                "smal"
-            ]
-        },
-        "comparative degree": {
-            "en": [
+            "comparative degree": [
                 "narrower",
                 "tighter"
             ],
-            "fi": "ahtaampi",
-            "nl": [
-                "nauwer",
-                "smaller"
-            ]
-        },
-        "superlative degree": {
-            "en": [
+            "superlative degree": [
                 "narrowest",
                 "tightest"
+            ]
+        },
+        "fi": {
+            "positive degree": "ahdas",
+            "comparative degree": "ahtaampi",
+            "superlative degree": "ahtain"
+        },
+        "nl": {
+            "positive degree": [
+                "nauw",
+                "smal"
             ],
-            "fi": "ahtain",
-            "nl": [
+            "comparative degree": [
+                "nauwer",
+                "smaller"
+            ],
+            "superlative degree": [
                 "nauwst",
                 "smalst"
             ]

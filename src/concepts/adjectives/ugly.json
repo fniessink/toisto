@@ -1,20 +1,20 @@
 {
     "ugly": {
         "antonym": "beautiful",
-        "positive degree": {
-            "en": "ugly",
-            "fi": "ruma",
-            "nl": "lelijk"
+        "en": {
+            "positive degree": "ugly",
+            "comparative degree": "uglier",
+            "superlative degree": "ugliest"
         },
-        "comparative degree": {
-            "en": "uglier",
-            "fi": "rumempi",
-            "nl": "lelijker"
+        "fi": {
+            "positive degree": "ruma",
+            "comparative degree": "rumempi",
+            "superlative degree": "rumin"
         },
-        "superlative degree": {
-            "en": "ugliest",
-            "fi": "rumin",
-            "nl": "lelijkst"
+        "nl": {
+            "positive degree": "lelijk",
+            "comparative degree": "lelijker",
+            "superlative degree": "lelijkst"
         }
     }
 }

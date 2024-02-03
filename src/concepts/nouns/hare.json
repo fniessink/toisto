@@ -1,15 +1,17 @@
 {
     "hare": {
         "hypernym": "animal",
-        "singular": {
-            "en": "hare",
-            "fi": "jänis",
-            "nl": "de haas"
+        "en": {
+            "singular": "hare",
+            "plural": "hares"
         },
-        "plural": {
-            "en": "hares",
-            "fi": "jänikset",
-            "nl": "de hazen"
+        "fi": {
+            "singular": "jänis",
+            "plural": "jänikset"
+        },
+        "nl": {
+            "singular": "de haas",
+            "plural": "de hazen"
         }
     }
 }

@@ -88,19 +88,23 @@ class ProgressTest(ToistoTestCase):
         """Test that the first quizzes test the singular concept."""
         morning = self.create_concept(
             "morning",
-            dict(singular=dict(fi="Aamu", nl="de ochtend"), plural=dict(fi="aamut", nl="de ochtenden")),
+            dict(fi=dict(singular="aamu", plural="aamut"), nl=dict(singular="de ochtend", plural="de ochtenden")),
         )
         afternoon = self.create_concept(
             "afternoon",
             dict(
                 roots="morning",
-                singular=dict(fi="iltapäivä", nl="de middag"),
-                plural=dict(fi="iltapäivät", nl="de middagen"),
+                fi=dict(singular="iltapäivä", plural="iltapäivät"),
+                nl=dict(singular="de middag", plural="de middagen"),
             ),
         )
         evening = self.create_concept(
             "evening",
-            dict(roots="afternoon", singular=dict(fi="ilta", nl="de avond"), plural=dict(fi="illat", nl="de avonden")),
+            dict(
+                roots="afternoon",
+                fi=dict(singular="ilta", plural="illat"),
+                nl=dict(singular="de avond", plural="de avonden"),
+            ),
         )
         quizzes = create_quizzes(FI_NL, (), morning, afternoon, evening)
         progress = Progress(FI, quizzes, {}, skip_concepts=2)

@@ -4,15 +4,17 @@
         "roots": {
             "nl": "word"
         },
-        "singular": {
-            "en": "answer",
-            "fi": "vastaus",
-            "nl": "het antwoord"
+        "en": {
+            "singular": "answer",
+            "plural": "answers"
         },
-        "plural": {
-            "en": "answers",
-            "fi": "vastaukset",
-            "nl": "de antwoorden"
+        "fi": {
+            "singular": "vastaus",
+            "plural": "vastaukset"
+        },
+        "nl": {
+            "singular": "het antwoord",
+            "plural": "de antwoorden"
         }
     }
 }

@@ -5,18 +5,20 @@
             "2",
             "20"
         ],
-        "cardinal": {
-            "en": "twenty-two",
-            "fi": [
+        "en": {
+            "cardinal": "twenty-two",
+            "ordinal": "twenty-second"
+        },
+        "fi": {
+            "cardinal": [
                 "kaksikymmentäkaksi",
                 "kakskytkaks*"
             ],
-            "nl": "tweeëntwintig"
+            "ordinal": "kahdeskymmenestoinen"
         },
-        "ordinal": {
-            "en": "twenty-second",
-            "fi": "kahdeskymmenestoinen",
-            "nl": "tweeëntwintigste"
+        "nl": {
+            "cardinal": "tweeëntwintig",
+            "ordinal": "tweeëntwintigste"
         }
     }
 }

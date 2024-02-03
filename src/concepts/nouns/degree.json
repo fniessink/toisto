@@ -6,15 +6,17 @@
             "it is four degrees below zero",
             "I have a fever of 39 degrees"
         ],
-        "singular": {
-            "en": "degree",
-            "fi": "aste",
-            "nl": "de graad"
+        "en": {
+            "singular": "degree",
+            "plural": "degrees"
         },
-        "plural": {
-            "en": "degrees",
-            "fi": "asteet",
-            "nl": "de graden"
+        "fi": {
+            "singular": "aste",
+            "plural": "asteet"
+        },
+        "nl": {
+            "singular": "de graad",
+            "plural": "de graden"
         }
     },
     "it is three degrees above zero": {

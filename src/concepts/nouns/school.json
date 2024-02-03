@@ -3,15 +3,17 @@
         "involves": [
             "homework"
         ],
-        "singular": {
-            "en": "school",
-            "fi": "koulu",
-            "nl": "de school"
+        "en": {
+            "singular": "school",
+            "plural": "schools"
         },
-        "plural": {
-            "en": "schools",
-            "fi": "koulut",
-            "nl": "de scholen"
+        "fi": {
+            "singular": "koulu",
+            "plural": "koulut"
+        },
+        "nl": {
+            "singular": "de school",
+            "plural": "de scholen"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "page": {
         "holonym": "chapter",
-        "singular": {
-            "en": "page",
-            "fi": "sivu",
-            "nl": "de pagina"
+        "en": {
+            "singular": "page",
+            "plural": "pages"
         },
-        "plural": {
-            "en": "pages",
-            "fi": "sivut",
-            "nl": "de pagina's"
+        "fi": {
+            "singular": "sivu",
+            "plural": "sivut"
+        },
+        "nl": {
+            "singular": "de pagina",
+            "plural": "de pagina's"
         }
     },
     "web page": {

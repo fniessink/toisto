@@ -4,15 +4,17 @@
             "fi": "moon",
             "nl": "moon"
         },
-        "singular": {
-            "en": "month",
-            "fi": "kuukausi",
-            "nl": "de maand"
+        "en": {
+            "singular": "month",
+            "plural": "months"
         },
-        "plural": {
-            "en": "months",
-            "fi": "kuukaudet",
-            "nl": "de maanden"
+        "fi": {
+            "singular": "kuukausi",
+            "plural": "kuukaudet"
+        },
+        "nl": {
+            "singular": "de maand",
+            "plural": "de maanden"
         }
     },
     "once a month": {

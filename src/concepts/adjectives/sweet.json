@@ -1,20 +1,20 @@
 {
     "sweet": {
         "antonym": "sour",
-        "positive degree": {
-            "en": "sweet",
-            "fi": "makea",
-            "nl": "zoet"
+        "en": {
+            "positive degree": "sweet",
+            "comparative degree": "sweeter",
+            "superlative degree": "sweetest"
         },
-        "comparative degree": {
-            "en": "sweeter",
-            "fi": "makeampi",
-            "nl": "zoeter"
+        "fi": {
+            "positive degree": "makea",
+            "comparative degree": "makeampi",
+            "superlative degree": "makein"
         },
-        "superlative degree": {
-            "en": "sweetest",
-            "fi": "makein",
-            "nl": "zoetst"
+        "nl": {
+            "positive degree": "zoet",
+            "comparative degree": "zoeter",
+            "superlative degree": "zoetst"
         }
     }
 }

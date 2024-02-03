@@ -2,15 +2,17 @@
     "coffee": {
         "example": "the coffee is hot",
         "hypernym": "drink",
-        "singular": {
-            "en": "coffee",
-            "fi": "kahvi",
-            "nl": "de koffie"
+        "en": {
+            "singular": "coffee",
+            "plural": "coffees"
         },
-        "plural": {
-            "en": "coffees",
-            "fi": "kahvit",
-            "nl": "de koffies"
+        "fi": {
+            "singular": "kahvi",
+            "plural": "kahvit"
+        },
+        "nl": {
+            "singular": "de koffie",
+            "plural": "de koffies"
         }
     },
     "the coffee is hot": {

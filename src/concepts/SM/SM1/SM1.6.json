@@ -1,6 +1,5 @@
 {
     "SM1.6": {
-        "fi": "(SM1.6)",
         "involves": [
             "bed",
             "carpet",
@@ -26,6 +25,7 @@
             "tree",
             "wall",
             "window"
-        ]
+        ],
+        "fi": "(SM1.6)"
     }
 }

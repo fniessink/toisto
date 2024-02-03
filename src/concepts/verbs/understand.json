@@ -1,48 +1,48 @@
 {
     "to understand": {
-        "infinitive": {
-            "en": "to understand",
-            "fi": "ymmärtää;;ymmärtää is verbityyppi 1",
-            "nl": "begrijpen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I understand",
-                "fi": "minä ymmärrän",
-                "nl": "ik begrijp"
-            },
-            "second person": {
-                "en": "you understand",
-                "fi": "sinä ymmärrät",
-                "nl": "jij begrijpt"
-            },
-            "third person": {
-                "fi": "hän ymmärtää",
-                "feminine": {
-                    "en": "she understands",
-                    "nl": "zij begrijpt"
-                },
-                "masculine": {
-                    "en": "he understands",
-                    "nl": "hij begrijpt"
+        "en": {
+            "infinitive": "to understand",
+            "singular": {
+                "first person": "I understand",
+                "second person": "you understand",
+                "third person": {
+                    "feminine": "she understands",
+                    "masculine": "he understands"
                 }
+            },
+            "plural": {
+                "first person": "we understand",
+                "second person": "you understand",
+                "third person": "they understand"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we understand",
-                "fi": "me ymmärrämme",
-                "nl": "wij begrijpen"
+        "fi": {
+            "infinitive": "ymmärtää;;ymmärtää is verbityyppi 1",
+            "singular": {
+                "first person": "minä ymmärrän",
+                "second person": "sinä ymmärrät",
+                "third person": "hän ymmärtää"
             },
-            "second person": {
-                "en": "you understand",
-                "fi": "te ymmärrätte",
-                "nl": "jullie begrijpen"
+            "plural": {
+                "first person": "me ymmärrämme",
+                "second person": "te ymmärrätte",
+                "third person": "he ymmärtävät"
+            }
+        },
+        "nl": {
+            "infinitive": "begrijpen",
+            "singular": {
+                "first person": "ik begrijp",
+                "second person": "jij begrijpt",
+                "third person": {
+                    "feminine": "zij begrijpt",
+                    "masculine": "hij begrijpt"
+                }
             },
-            "third person": {
-                "en": "they understand",
-                "fi": "he ymmärtävät",
-                "nl": "zij begrijpen"
+            "plural": {
+                "first person": "wij begrijpen",
+                "second person": "jullie begrijpen",
+                "third person": "zij begrijpen"
             }
         }
     }

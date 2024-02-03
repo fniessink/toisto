@@ -1,23 +1,25 @@
 {
     "pig": {
         "hypernym": "animal",
-        "singular": {
-            "en": "pig",
-            "fi": [
+        "en": {
+            "singular": "pig",
+            "plural": "pigs"
+        },
+        "fi": {
+            "singular": [
                 "porsas",
                 "possu",
                 "sika"
             ],
-            "nl": "het varken"
-        },
-        "plural": {
-            "en": "pigs",
-            "fi": [
+            "plural": [
                 "porsaat",
                 "possut",
                 "siat"
-            ],
-            "nl": "de varkens"
+            ]
+        },
+        "nl": {
+            "singular": "het varken",
+            "plural": "de varkens"
         }
     }
 }

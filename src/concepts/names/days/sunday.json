@@ -1,23 +1,25 @@
 {
     "sunday": {
-        "hypernym": "day",
         "holonym": [
             "days of the week",
             "weekend"
         ],
+        "hypernym": "day",
         "roots": {
             "en": "day",
             "nl": "day"
         },
-        "singular": {
-            "en": "Sunday;;In English, the names of weekdays are capitalized",
-            "fi": "sunnuntai;;In Finnish, the names of weekdays are not capitalized",
-            "nl": "zondag|de zondag;In Dutch, the names of weekdays are not capitalized"
+        "en": {
+            "singular": "Sunday;;In English, the names of weekdays are capitalized",
+            "plural": "Sundays"
         },
-        "plural": {
-            "en": "Sundays",
-            "fi": "sunnuntait",
-            "nl": "de zondagen"
+        "fi": {
+            "singular": "sunnuntai;;In Finnish, the names of weekdays are not capitalized",
+            "plural": "sunnuntait"
+        },
+        "nl": {
+            "singular": "zondag|de zondag;In Dutch, the names of weekdays are not capitalized",
+            "plural": "de zondagen"
         }
     }
 }

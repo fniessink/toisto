@@ -1,14 +1,16 @@
 {
     "curtain": {
-        "singular": {
-            "en": "curtain",
-            "fi": "verho",
-            "nl": "het gordijn"
+        "en": {
+            "singular": "curtain",
+            "plural": "curtains"
         },
-        "plural": {
-            "en": "curtains",
-            "fi": "verhot",
-            "nl": "de gordijnen"
+        "fi": {
+            "singular": "verho",
+            "plural": "verhot"
+        },
+        "nl": {
+            "singular": "het gordijn",
+            "plural": "de gordijnen"
         }
     },
     "roller blind": {

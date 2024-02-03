@@ -1,14 +1,16 @@
 {
     "example": {
-        "singular": {
-            "en": "example",
-            "fi": "esimerkki",
-            "nl": "het voorbeeld"
+        "en": {
+            "singular": "example",
+            "plural": "examples"
         },
-        "plural": {
-            "en": "examples",
-            "fi": "esimerkit",
-            "nl": "de voorbeelden"
+        "fi": {
+            "singular": "esimerkki",
+            "plural": "esimerkit"
+        },
+        "nl": {
+            "singular": "het voorbeeld",
+            "plural": "de voorbeelden"
         }
     },
     "for example": {

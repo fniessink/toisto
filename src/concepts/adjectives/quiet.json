@@ -1,19 +1,19 @@
 {
     "quiet": {
-        "positive degree": {
-            "en": "quiet",
-            "fi": "hiljainen",
-            "nl": "stil"
+        "en": {
+            "positive degree": "quiet",
+            "comparative degree": "quieter",
+            "superlative degree": "quietest"
         },
-        "comparative degree": {
-            "en": "quieter",
-            "fi": "hiljaisempi",
-            "nl": "stiller"
+        "fi": {
+            "positive degree": "hiljainen",
+            "comparative degree": "hiljaisempi",
+            "superlative degree": "hiljaisin"
         },
-        "superlative degree": {
-            "en": "quietest",
-            "fi": "hiljaisin",
-            "nl": "stilst"
+        "nl": {
+            "positive degree": "stil",
+            "comparative degree": "stiller",
+            "superlative degree": "stilst"
         }
     }
 }

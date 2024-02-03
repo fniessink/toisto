@@ -1,15 +1,17 @@
 {
     "head": {
         "holonym": "body",
-        "singular": {
-            "en": "head",
-            "fi": "pää",
-            "nl": "het hoofd"
+        "en": {
+            "singular": "head",
+            "plural": "heads"
         },
-        "plural": {
-            "en": "heads",
-            "fi": "päät",
-            "nl": "de hoofden"
+        "fi": {
+            "singular": "pää",
+            "plural": "päät"
+        },
+        "nl": {
+            "singular": "het hoofd",
+            "plural": "de hoofden"
         }
     },
     "forehead": {
@@ -23,15 +25,17 @@
         "nl": "het voorhoofd"
     },
     "head (main part)": {
-        "singular": {
-            "en": "head",
-            "fi": "pää",
-            "nl": "het hoofd"
+        "en": {
+            "singular": "head",
+            "plural": "heads"
         },
-        "plural": {
-            "en": "heads",
-            "fi": "päät",
-            "nl": "de hoofden"
+        "fi": {
+            "singular": "pää",
+            "plural": "päät"
+        },
+        "nl": {
+            "singular": "het hoofd",
+            "plural": "de hoofden"
         }
     }
 }

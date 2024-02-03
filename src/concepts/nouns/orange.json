@@ -5,15 +5,17 @@
             "en": "orange",
             "nl": "apple"
         },
-        "singular": {
-            "en": "orange",
-            "fi": "appelsiini",
-            "nl": "de sinaasappel"
+        "en": {
+            "singular": "orange",
+            "plural": "oranges"
         },
-        "plural": {
-            "en": "oranges",
-            "fi": "appelsiinit",
-            "nl": "de sinaasappels"
+        "fi": {
+            "singular": "appelsiini",
+            "plural": "appelsiinit"
+        },
+        "nl": {
+            "singular": "de sinaasappel",
+            "plural": "de sinaasappels"
         }
     }
 }

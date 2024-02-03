@@ -1,15 +1,17 @@
 {
     "ear": {
         "holonym": "head",
-        "singular": {
-            "en": "ear",
-            "fi": "korva",
-            "nl": "het oor"
+        "en": {
+            "singular": "ear",
+            "plural": "ears"
         },
-        "plural": {
-            "en": "ears",
-            "fi": "korvat",
-            "nl": "de oren"
+        "fi": {
+            "singular": "korva",
+            "plural": "korvat"
+        },
+        "nl": {
+            "singular": "het oor",
+            "plural": "de oren"
         }
     }
 }

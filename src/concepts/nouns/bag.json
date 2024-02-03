@@ -1,14 +1,16 @@
 {
     "bag": {
-        "singular": {
-            "en": "bag",
-            "fi": "laukku",
-            "nl": "de tas"
+        "en": {
+            "singular": "bag",
+            "plural": "bags"
         },
-        "plural": {
-            "en": "bags",
-            "fi": "laukut",
-            "nl": "de tassen"
+        "fi": {
+            "singular": "laukku",
+            "plural": "laukut"
+        },
+        "nl": {
+            "singular": "de tas",
+            "plural": "de tassen"
         }
     }
 }

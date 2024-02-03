@@ -1,14 +1,16 @@
 {
     "grass": {
-        "singular": {
-            "en": "grass",
-            "fi": "ruoho",
-            "nl": "het gras"
+        "en": {
+            "singular": "grass",
+            "plural": "grasses"
         },
-        "plural": {
-            "en": "grasses",
-            "fi": "ruohot",
-            "nl": "de grassen"
+        "fi": {
+            "singular": "ruoho",
+            "plural": "ruohot"
+        },
+        "nl": {
+            "singular": "het gras",
+            "plural": "de grassen"
         }
     }
 }

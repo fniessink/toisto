@@ -1,38 +1,38 @@
 {
     "hard": {
         "antonym": "easy",
-        "positive degree": {
-            "en": "hard",
-            "fi": "vaikea",
-            "nl": "moeilijk"
+        "en": {
+            "positive degree": "hard",
+            "comparative degree": "harder",
+            "superlative degree": "hardest"
         },
-        "comparative degree": {
-            "en": "harder",
-            "fi": "vaikeampi",
-            "nl": "moeilijker"
+        "fi": {
+            "positive degree": "vaikea",
+            "comparative degree": "vaikeampi",
+            "superlative degree": "vaikein"
         },
-        "superlative degree": {
-            "en": "hardest",
-            "fi": "vaikein",
-            "nl": "moeilijkst"
+        "nl": {
+            "positive degree": "moeilijk",
+            "comparative degree": "moeilijker",
+            "superlative degree": "moeilijkst"
         }
     },
     "hard (of an object, resistant to pressure)": {
         "antonym": "soft",
-        "positive degree": {
-            "en": "hard",
-            "fi": "kova",
-            "nl": "hard"
+        "en": {
+            "positive degree": "hard",
+            "comparative degree": "harder",
+            "superlative degree": "hardest"
         },
-        "comparative degree": {
-            "en": "harder",
-            "fi": "kovempi",
-            "nl": "harder"
+        "fi": {
+            "positive degree": "kova",
+            "comparative degree": "kovempi",
+            "superlative degree": "kovin"
         },
-        "superlative degree": {
-            "en": "hardest",
-            "fi": "kovin",
-            "nl": "hardst"
+        "nl": {
+            "positive degree": "hard",
+            "comparative degree": "harder",
+            "superlative degree": "hardst"
         }
     }
 }

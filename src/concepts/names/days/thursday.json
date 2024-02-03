@@ -1,20 +1,22 @@
 {
     "thursday": {
-        "hypernym": "day",
         "holonym": "days of the week",
+        "hypernym": "day",
         "roots": {
             "en": "day",
             "nl": "day"
         },
-        "singular": {
-            "en": "Thursday;;In English, the names of weekdays are capitalized",
-            "fi": "torstai;;In Finnish, the names of weekdays are not capitalized",
-            "nl": "donderdag|de donderdag;In Dutch, the names of weekdays are not capitalized"
+        "en": {
+            "singular": "Thursday;;In English, the names of weekdays are capitalized",
+            "plural": "Thursdays"
         },
-        "plural": {
-            "en": "Thursdays",
-            "fi": "torstait",
-            "nl": "de donderdagen"
+        "fi": {
+            "singular": "torstai;;In Finnish, the names of weekdays are not capitalized",
+            "plural": "torstait"
+        },
+        "nl": {
+            "singular": "donderdag|de donderdag;In Dutch, the names of weekdays are not capitalized",
+            "plural": "de donderdagen"
         }
     }
 }
