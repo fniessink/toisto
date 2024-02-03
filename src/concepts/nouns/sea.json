@@ -1,14 +1,16 @@
 {
     "sea": {
-        "singular": {
-            "en": "sea",
-            "fi": "meri",
-            "nl": "de zee"
+        "en": {
+            "singular": "sea",
+            "plural": "seas"
         },
-        "plural": {
-            "en": "seas",
-            "fi": "meret",
-            "nl": "de zeeën"
+        "fi": {
+            "singular": "meri",
+            "plural": "meret"
+        },
+        "nl": {
+            "singular": "de zee",
+            "plural": "de zeeën"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "beach": {
         "hypernym": "coast",
-        "singular": {
-            "en": "beach",
-            "fi": "ranta",
-            "nl": "het strand"
+        "en": {
+            "singular": "beach",
+            "plural": "beaches"
         },
-        "plural": {
-            "en": "beaches",
-            "fi": "rannat",
-            "nl": "de stranden"
+        "fi": {
+            "singular": "ranta",
+            "plural": "rannat"
+        },
+        "nl": {
+            "singular": "het strand",
+            "plural": "de stranden"
         }
     }
 }

@@ -1,14 +1,16 @@
 {
     "bar": {
-        "singular": {
-            "en": "bar",
-            "fi": "baari",
-            "nl": "de bar"
+        "en": {
+            "singular": "bar",
+            "plural": "bars"
         },
-        "plural": {
-            "en": "bars",
-            "fi": "baarit",
-            "nl": "de bars"
+        "fi": {
+            "singular": "baari",
+            "plural": "baarit"
+        },
+        "nl": {
+            "singular": "de bar",
+            "plural": "de bars"
         }
     }
 }

@@ -1,48 +1,48 @@
 {
     "to shop": {
-        "infinitive": {
-            "en": "to shop",
-            "fi": "käydä ostoksilla",
-            "nl": "winkelen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I shop",
-                "fi": "minä käyn ostoksilla",
-                "nl": "ik winkel"
-            },
-            "second person": {
-                "en": "you shop",
-                "fi": "sinä käyt ostoksilla",
-                "nl": "jij winkelt"
-            },
-            "third person": {
-                "fi": "hän käy ostoksilla",
-                "feminine": {
-                    "en": "she shops",
-                    "nl": "zij winkelt"
-                },
-                "masculine": {
-                    "en": "he shops",
-                    "nl": "hij winkelt"
+        "en": {
+            "infinitive": "to shop",
+            "singular": {
+                "first person": "I shop",
+                "second person": "you shop",
+                "third person": {
+                    "feminine": "she shops",
+                    "masculine": "he shops"
                 }
+            },
+            "plural": {
+                "first person": "we shop",
+                "second person": "you shop",
+                "third person": "they shop"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we shop",
-                "fi": "me käymme ostoksilla",
-                "nl": "wij winkelen"
+        "fi": {
+            "infinitive": "käydä ostoksilla",
+            "singular": {
+                "first person": "minä käyn ostoksilla",
+                "second person": "sinä käyt ostoksilla",
+                "third person": "hän käy ostoksilla"
             },
-            "second person": {
-                "en": "you shop",
-                "fi": "te käytte ostoksilla",
-                "nl": "jullie winkelen"
+            "plural": {
+                "first person": "me käymme ostoksilla",
+                "second person": "te käytte ostoksilla",
+                "third person": "he käyvät ostoksilla"
+            }
+        },
+        "nl": {
+            "infinitive": "winkelen",
+            "singular": {
+                "first person": "ik winkel",
+                "second person": "jij winkelt",
+                "third person": {
+                    "feminine": "zij winkelt",
+                    "masculine": "hij winkelt"
+                }
             },
-            "third person": {
-                "en": "they shop",
-                "fi": "he käyvät ostoksilla",
-                "nl": "zij winkelen"
+            "plural": {
+                "first person": "wij winkelen",
+                "second person": "jullie winkelen",
+                "third person": "zij winkelen"
             }
         }
     }

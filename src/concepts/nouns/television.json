@@ -1,26 +1,28 @@
 {
     "television": {
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "television",
                 "telly*"
             ],
-            "fi": [
+            "plural": [
+                "televisions",
+                "tellies*"
+            ]
+        },
+        "fi": {
+            "singular": [
                 "televisio",
                 "telkkari*"
             ],
-            "nl": "de televisie"
-        },
-        "plural": {
-            "en": [
-                "televisions",
-                "tellies*"
-            ],
-            "fi": [
+            "plural": [
                 "televisiot",
                 "telkkarit*"
-            ],
-            "nl": "de televisies"
+            ]
+        },
+        "nl": {
+            "singular": "de televisie",
+            "plural": "de televisies"
         }
     }
 }

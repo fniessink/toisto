@@ -1,15 +1,17 @@
 {
     "organ": {
         "holonym": "body",
-        "singular": {
-            "en": "organ",
-            "fi": "elin",
-            "nl": "het orgaan"
+        "en": {
+            "singular": "organ",
+            "plural": "organs"
         },
-        "plural": {
-            "en": "organs",
-            "fi": "elimet",
-            "nl": "de organen"
+        "fi": {
+            "singular": "elin",
+            "plural": "elimet"
+        },
+        "nl": {
+            "singular": "het orgaan",
+            "plural": "de organen"
         }
     }
 }

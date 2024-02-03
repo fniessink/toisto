@@ -331,14 +331,16 @@ class QuizInstructionTest(QuizTestCase):
         concept = self.create_concept(
             "to read",
             {
-                "present tense": dict(
-                    singular={"second person": dict(en="you read", nl="jij leest")},
-                    plural={"second person": dict(en="you read", nl="jullie lezen")},
-                ),
-                "past tense": dict(
-                    singular={"second person": dict(en="you read", nl="jij las")},
-                    plural={"second person": dict(en="you read", nl="jullie lazen")},
-                ),
+                "en": {
+                    "present tense": dict(singular={"second person": "you read"}, plural={"second person": "you read"}),
+                    "past tense": dict(singular={"second person": "you read"}, plural={"second person": "you read"}),
+                },
+                "nl": {
+                    "present tense": dict(
+                        singular={"second person": "jij leest"}, plural={"second person": "jullie lezen"}
+                    ),
+                    "past tense": dict(singular={"second person": "jij las"}, plural={"second person": "jullie lazen"}),
+                },
             },
         )
         second_person_singular = next(
@@ -401,12 +403,8 @@ class QuizInstructionTest(QuizTestCase):
         concept = self.create_concept(
             "to be",
             dict(
-                singular={
-                    "second person": dict(fi="Te olette", nl="u bent"),
-                },
-                plural={
-                    "second person": dict(fi="te olette", nl="jullie zijn"),
-                },
+                fi=dict(singular={"second person": "Te olette"}, plural={"second person": "te olette"}),
+                nl=dict(singular={"second person": "u bent"}, plural={"second person": "jullie zijn"}),
             ),
         )
         second_person_singular = next(

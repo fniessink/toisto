@@ -1,15 +1,17 @@
 {
     "class": {
         "holonym": "school",
-        "singular": {
-            "en": "class",
-            "fi": "luokka",
-            "nl": "de klas"
+        "en": {
+            "singular": "class",
+            "plural": "classes"
         },
-        "plural": {
-            "en": "classes",
-            "fi": "luokat",
-            "nl": "de klassen"
+        "fi": {
+            "singular": "luokka",
+            "plural": "luokat"
+        },
+        "nl": {
+            "singular": "de klas",
+            "plural": "de klassen"
         }
     }
 }

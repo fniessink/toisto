@@ -1,6 +1,5 @@
 {
     "SM2.5": {
-        "fi": "(SM2.5)",
         "involves": [
             "SM2.5-sanasto",
             "SM2.5-teksti",
@@ -35,10 +34,10 @@
             "to train",
             "top guitarist",
             "what is the matter"
-        ]
+        ],
+        "fi": "(SM2.5)"
     },
     "SM2.5-sanasto": {
-        "fi": "(SM2.5-sanasto)",
         "involves": [
             "application",
             "at the latest",
@@ -89,10 +88,10 @@
             "turn",
             "Työ- ja elinkeinotoimisto",
             "work permit"
-        ]
+        ],
+        "fi": "(SM2.5-sanasto)"
     },
     "SM2.5-teksti": {
-        "fi": "(SM2.5-teksti)",
         "involves": [
             "a certain",
             "accurately",
@@ -156,10 +155,10 @@
             "via",
             "wintertyre",
             "worn"
-        ]
+        ],
+        "fi": "(SM2.5-teksti)"
     },
     "SM2.5-luetaan": {
-        "fi": "(SM2.5-luetaan)",
         "involves": [
             "advice",
             "alternative",
@@ -194,10 +193,10 @@
             "two-room apartment",
             "web",
             "you are welcome"
-        ]
+        ],
+        "fi": "(SM2.5-luetaan)"
     },
     "SM2.5-kielioppi": {
-        "fi": "(SM2.5-kielioppi)",
         "involves": [
             "birth",
             "dead",
@@ -223,6 +222,7 @@
             "to request",
             "to teach",
             "track (trail)"
-        ]
+        ],
+        "fi": "(SM2.5-kielioppi)"
     }
 }

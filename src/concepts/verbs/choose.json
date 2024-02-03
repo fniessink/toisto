@@ -1,96 +1,98 @@
 {
     "to choose": {
-        "infinitive": {
-            "en": "to choose",
-            "fi": "valita;;valita is verbityyppi 5",
-            "nl": "kiezen"
-        },
-        "verbal noun": {
-            "en": "choosing",
-            "fi": "valitseminen",
-            "nl": "het kiezen"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I choose",
-                    "fi": "minä valitsen",
-                    "nl": "ik kies"
-                },
-                "second person": {
-                    "en": "you choose",
-                    "fi": "sinä valitset",
-                    "nl": "jij kiest"
-                },
-                "third person": {
-                    "fi": "hän valitsee",
-                    "feminine": {
-                        "en": "she chooses",
-                        "nl": "zij kiest"
-                    },
-                    "masculine": {
-                        "en": "he chooses",
-                        "nl": "hij kiest"
+        "en": {
+            "infinitive": "to choose",
+            "verbal noun": "choosing",
+            "present tense": {
+                "singular": {
+                    "first person": "I choose",
+                    "second person": "you choose",
+                    "third person": {
+                        "feminine": "she chooses",
+                        "masculine": "he chooses"
                     }
+                },
+                "plural": {
+                    "first person": "we choose",
+                    "second person": "you choose",
+                    "third person": "they choose"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we choose",
-                    "fi": "me valitsemme",
-                    "nl": "wij kiezen"
+            "past tense": {
+                "singular": {
+                    "first person": "I chose",
+                    "second person": "you chose",
+                    "third person": {
+                        "feminine": "she chose",
+                        "masculine": "he chose"
+                    }
                 },
-                "second person": {
-                    "en": "you choose",
-                    "fi": "te valitsette",
-                    "nl": "jullie kiezen"
-                },
-                "third person": {
-                    "en": "they choose",
-                    "fi": "he valitsevat",
-                    "nl": "zij kiezen"
+                "plural": {
+                    "first person": "we chose",
+                    "second person": "you chose",
+                    "third person": "they chose"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I chose",
-                    "fi": "minä valitsin",
-                    "nl": "ik koos"
+        "fi": {
+            "infinitive": "valita;;valita is verbityyppi 5",
+            "verbal noun": "valitseminen",
+            "present tense": {
+                "singular": {
+                    "first person": "minä valitsen",
+                    "second person": "sinä valitset",
+                    "third person": "hän valitsee"
                 },
-                "second person": {
-                    "en": "you chose",
-                    "fi": "sinä valitsit",
-                    "nl": "jij koos"
-                },
-                "third person": {
-                    "fi": "hän valitsi",
-                    "feminine": {
-                        "en": "she chose",
-                        "nl": "zij koos"
-                    },
-                    "masculine": {
-                        "en": "he chose",
-                        "nl": "hij koos"
-                    }
+                "plural": {
+                    "first person": "me valitsemme",
+                    "second person": "te valitsette",
+                    "third person": "he valitsevat"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we chose",
-                    "fi": "me valitsimme",
-                    "nl": "wij kozen"
+            "past tense": {
+                "singular": {
+                    "first person": "minä valitsin",
+                    "second person": "sinä valitsit",
+                    "third person": "hän valitsi"
                 },
-                "second person": {
-                    "en": "you chose",
-                    "fi": "te valitsitte",
-                    "nl": "jullie kozen"
+                "plural": {
+                    "first person": "me valitsimme",
+                    "second person": "te valitsitte",
+                    "third person": "he valitsivat"
+                }
+            }
+        },
+        "nl": {
+            "infinitive": "kiezen",
+            "verbal noun": "het kiezen",
+            "present tense": {
+                "singular": {
+                    "first person": "ik kies",
+                    "second person": "jij kiest",
+                    "third person": {
+                        "feminine": "zij kiest",
+                        "masculine": "hij kiest"
+                    }
                 },
-                "third person": {
-                    "en": "they chose",
-                    "fi": "he valitsivat",
-                    "nl": "zij kozen"
+                "plural": {
+                    "first person": "wij kiezen",
+                    "second person": "jullie kiezen",
+                    "third person": "zij kiezen"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "ik koos",
+                    "second person": "jij koos",
+                    "third person": {
+                        "feminine": "zij koos",
+                        "masculine": "hij koos"
+                    }
+                },
+                "plural": {
+                    "first person": "wij kozen",
+                    "second person": "jullie kozen",
+                    "third person": "zij kozen"
                 }
             }
         }

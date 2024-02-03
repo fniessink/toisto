@@ -5,18 +5,20 @@
             "9",
             "10"
         ],
-        "cardinal": {
-            "en": "ninety",
-            "fi": [
+        "en": {
+            "cardinal": "ninety",
+            "ordinal": "ninetieth"
+        },
+        "fi": {
+            "cardinal": [
                 "yhdeksänkymmentä",
                 "yheksänkyt*"
             ],
-            "nl": "negentig"
+            "ordinal": "yhdeksäskymmenes"
         },
-        "ordinal": {
-            "en": "ninetieth",
-            "fi": "yhdeksäskymmenes",
-            "nl": "negentigste"
+        "nl": {
+            "cardinal": "negentig",
+            "ordinal": "negentigste"
         }
     }
 }

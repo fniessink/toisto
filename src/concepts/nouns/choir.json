@@ -3,15 +3,17 @@
         "holonym": [
             "singer"
         ],
-        "singular": {
-            "en": "choir",
-            "fi": "kuoro",
-            "nl": "het koor"
+        "en": {
+            "singular": "choir",
+            "plural": "choirs"
         },
-        "plural": {
-            "en": "choirs",
-            "fi": "kuorot",
-            "nl": "de koren"
+        "fi": {
+            "singular": "kuoro",
+            "plural": "kuorot"
+        },
+        "nl": {
+            "singular": "het koor",
+            "plural": "de koren"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "moss": {
         "hypernym": "plant",
-        "singular": {
-            "en": "moss",
-            "fi": "sammal",
-            "nl": "het mos"
+        "en": {
+            "singular": "moss",
+            "plural": "mosses"
         },
-        "plural": {
-            "en": "mosses",
-            "fi": "sammalet",
-            "nl": "de mossen"
+        "fi": {
+            "singular": "sammal",
+            "plural": "sammalet"
+        },
+        "nl": {
+            "singular": "het mos",
+            "plural": "de mossen"
         }
     }
 }

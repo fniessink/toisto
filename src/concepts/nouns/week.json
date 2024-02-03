@@ -1,14 +1,16 @@
 {
     "week": {
-        "singular": {
-            "en": "week",
-            "fi": "viikko",
-            "nl": "de week"
+        "en": {
+            "singular": "week",
+            "plural": "weeks"
         },
-        "plural": {
-            "en": "weeks",
-            "fi": "viikot",
-            "nl": "de weken"
+        "fi": {
+            "singular": "viikko",
+            "plural": "viikot"
+        },
+        "nl": {
+            "singular": "de week",
+            "plural": "de weken"
         }
     },
     "days of the week": {

@@ -1,6 +1,5 @@
 {
     "SM1.1": {
-        "fi": "(SM1.1)",
         "involves": [
             "SM1.1-fraasit",
             "SM1.1-kielioppi",
@@ -74,10 +73,10 @@
             "what is 3 x 10",
             "which",
             "with"
-        ]
+        ],
+        "fi": "(SM1.1)"
     },
     "SM1.1-fraasit": {
-        "fi": "(SM1.1-fraasit)",
         "involves": [
             "a pleasure to meet you",
             "bye",
@@ -105,10 +104,10 @@
             "welcome",
             "yes",
             "you are welcome"
-        ]
+        ],
+        "fi": "(SM1.1-fraasit)"
     },
     "SM1.1-kielioppi": {
-        "fi": "(SM1.1-kielioppi)",
         "involves": [
             "account",
             "brick",
@@ -139,10 +138,10 @@
             "vowel harmony",
             "wind",
             "word"
-        ]
+        ],
+        "fi": "(SM1.1-kielioppi)"
     },
     "SM1.1-numerot": {
-        "fi": "(SM1.1-numerot)",
         "involves": [
             "0",
             "1",
@@ -229,10 +228,10 @@
             "9",
             "90",
             "how old are you"
-        ]
+        ],
+        "fi": "(SM1.1-numerot)"
     },
     "SM1.1-sanasto": {
-        "fi": "(SM1.1-sanasto)",
         "involves": [
             "a pleasure to meet you",
             "alphabet",
@@ -268,10 +267,10 @@
             "welcome",
             "who",
             "yes"
-        ]
+        ],
+        "fi": "(SM1.1-sanasto)"
     },
     "SM1.1-viikonpäivät": {
-        "fi": "(SM1.1-viikonpäivät)",
         "involves": [
             "days of the week",
             "monday",
@@ -290,6 +289,7 @@
             "what day is it today",
             "when",
             "yesterday"
-        ]
+        ],
+        "fi": "(SM1.1-viikonpäivät)"
     }
 }

@@ -16,15 +16,17 @@
     },
     "llc": {
         "hypernym": "company",
-        "full form": {
-            "en": "limited liability company",
-            "fi": "osakeyhtiö",
-            "nl": "de naamloze vennootschap"
+        "en": {
+            "full form": "limited liability company",
+            "abbreviation": "LLC"
         },
-        "abbreviation": {
-            "en": "LLC",
-            "fi": "oy",
-            "nl": "de NV"
+        "fi": {
+            "full form": "osakeyhtiö",
+            "abbreviation": "oy"
+        },
+        "nl": {
+            "full form": "de naamloze vennootschap",
+            "abbreviation": "de NV"
         }
     }
 }

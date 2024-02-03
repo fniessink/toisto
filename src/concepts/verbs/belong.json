@@ -1,48 +1,48 @@
 {
     "to belong": {
-        "infinitive": {
-            "en": "to belong",
-            "fi": "kuulua",
-            "nl": "behoren"
-        },
-        "singular": {
-            "first person": {
-                "en": "I belong",
-                "fi": "minä kuulun",
-                "nl": "ik behoor"
-            },
-            "second person": {
-                "en": "you belong",
-                "fi": "sinä kuulut",
-                "nl": "jij behoort"
-            },
-            "third person": {
-                "fi": "hän kuuluu",
-                "feminine": {
-                    "en": "she belongs",
-                    "nl": "zij behoort"
-                },
-                "masculine": {
-                    "en": "he belongs",
-                    "nl": "hij behoort"
+        "en": {
+            "infinitive": "to belong",
+            "singular": {
+                "first person": "I belong",
+                "second person": "you belong",
+                "third person": {
+                    "feminine": "she belongs",
+                    "masculine": "he belongs"
                 }
+            },
+            "plural": {
+                "first person": "we belong",
+                "second person": "you belong",
+                "third person": "they belong"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we belong",
-                "fi": "me kuulumme",
-                "nl": "wij behoren"
+        "fi": {
+            "infinitive": "kuulua",
+            "singular": {
+                "first person": "minä kuulun",
+                "second person": "sinä kuulut",
+                "third person": "hän kuuluu"
             },
-            "second person": {
-                "en": "you belong",
-                "fi": "te kuulutte",
-                "nl": "jullie behoren"
+            "plural": {
+                "first person": "me kuulumme",
+                "second person": "te kuulutte",
+                "third person": "he kuuluvat"
+            }
+        },
+        "nl": {
+            "infinitive": "behoren",
+            "singular": {
+                "first person": "ik behoor",
+                "second person": "jij behoort",
+                "third person": {
+                    "feminine": "zij behoort",
+                    "masculine": "hij behoort"
+                }
             },
-            "third person": {
-                "en": "they belong",
-                "fi": "he kuuluvat",
-                "nl": "zij behoren"
+            "plural": {
+                "first person": "wij behoren",
+                "second person": "jullie behoren",
+                "third person": "zij behoren"
             }
         }
     }

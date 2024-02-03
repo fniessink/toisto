@@ -1,15 +1,17 @@
 {
     "toe": {
         "holonym": "foot",
-        "singular": {
-            "en": "toe",
-            "fi": "varvas",
-            "nl": "de teen"
+        "en": {
+            "singular": "toe",
+            "plural": "toes"
         },
-        "plural": {
-            "en": "toes",
-            "fi": "varpaat",
-            "nl": "de tenen"
+        "fi": {
+            "singular": "varvas",
+            "plural": "varpaat"
+        },
+        "nl": {
+            "singular": "de teen",
+            "plural": "de tenen"
         }
     },
     "big toe": {

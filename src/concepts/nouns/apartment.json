@@ -1,14 +1,16 @@
 {
     "apartment": {
-        "singular": {
-            "en": "apartment",
-            "fi": "asunto",
-            "nl": "het appartement"
+        "en": {
+            "singular": "apartment",
+            "plural": "apartments"
         },
-        "plural": {
-            "en": "apartments",
-            "fi": "asunnot",
-            "nl": "de appartementen"
+        "fi": {
+            "singular": "asunto",
+            "plural": "asunnot"
+        },
+        "nl": {
+            "singular": "het appartement",
+            "plural": "de appartementen"
         }
     },
     "single-room apartment": {

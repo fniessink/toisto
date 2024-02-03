@@ -11,21 +11,23 @@
                 "house"
             ]
         },
-        "singular": {
-            "en": "pet",
-            "fi": [
+        "en": {
+            "singular": "pet",
+            "plural": "pets"
+        },
+        "fi": {
+            "singular": [
                 "lemmikkieläin|lemmikki",
                 "kotieläin"
             ],
-            "nl": "het huisdier"
-        },
-        "plural": {
-            "en": "pets",
-            "fi": [
+            "plural": [
                 "lemmikkieläimet|lemmikit",
                 "kotieläimet"
-            ],
-            "nl": "de huisdieren"
+            ]
+        },
+        "nl": {
+            "singular": "het huisdier",
+            "plural": "de huisdieren"
         }
     }
 }

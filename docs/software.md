@@ -52,13 +52,9 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 ```json
 {
     "vegetable": {
-        "singular": {
-            "en": "vegetable",
-            "nl": "de groente"
-        },
-        "plural": {
-            "en": "vegetables",
-            "nl": "de groenten|de groentes"
+        "nl": {
+            "singular": "groente",
+            "plural": "de groenten|de groentes"
         }
     }
 }
@@ -199,21 +195,29 @@ If the homographs share a common base concept, such as with verbs, Toisto will b
 ```json
 {
     "to have": {
-        "singular": {
-            "first person": "...",
-            "second person": {
-                "en": "you have",
-                "nl": "jij hebt"
+        "en": {
+            "singular": {
+                "first person": "...",
+                "second person": "you have",
+                "third person": "..."
             },
-            "third person": "...",
+            "plural":{
+                "first person": "...",
+                "second person": "you have",
+                "third person": "..."
+            }
         },
-        "plural": {
-            "first person": "...",
-            "second person": {
-                "en": "you have",
-                "nl": "jullie hebben"
+        "nl": {
+            "singular": {
+                "first person": "...",
+                "second person": "jij hebt",
+                "third person": "..."
             },
-            "third person": "...",
+            "plural":{
+                "first person": "...",
+                "second person": "jullie hebben",
+                "third person": "..."
+            }
         }
     }
 }
@@ -284,21 +288,35 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
 ```json
 {
     "to be": {
-        "singular": {
-            "first person": "..."
-            "second person": {
-                "fi": ["sinä olet", "Te olette"],
-                "nl": ["jij bent", "u bent"]
+        "fi": {
+            "singular": {
+                "first person": "..."
+                "second person": [
+                    "sinä olet",
+                    "Te olette"
+                ],
+                "third person": "..."
             },
-            "third person": "..."
-        },
-        "plural": {
-            "first person": "..."
-            "second person": {
-                "fi": "te olette",
-                "nl": "jullie zijn"
+            "plural": {
+                "first person": "..."
+                "second person": "te olette",
+                "third person": "..."
+            }
+        }
+        "nl": {
+            "singular": {
+                "first person": "..."
+                "second person": [
+                    "jij bent",
+                    "u bent"
+                ],
+                "third person": "..."
             },
-            "third person": "..."
+            "plural": {
+                "first person": "..."
+                "second person": "jullie zijn",
+                "third person": "..."
+            }
         }
     }
 }
@@ -365,15 +383,13 @@ The format of the JSON files is as follows:
 ```json
 {
     "day": {
-        "singular": {
-            "en": "day",
-            "fi": "päivä",
-            "nl": "de dag"
+        "en": {
+            "singular": "day",
+            "plural": "days"
         },
-        "plural": {
-            "en": "days",
-            "fi": "päivät",
-            "nl": "de dagen"
+        "fi": {
+            "singular": "päivä",
+            "plural": "päivät"
         }
     }
 }
@@ -386,11 +402,9 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
 ```json
 {
     "table": {
-        "root": {
-            "nl": "de tafel"
-        },
-        "diminutive": {
-            "nl": "het tafeltje"
+        "nl": {
+            "root": "de tafel",
+            "diminutive": "het tafeltje"
         }
     }
 }
@@ -403,13 +417,13 @@ Note that in many languages, diminutives can (also) be formed by using multi-wor
 ```json
 {
     "table": {
-        "root": {
-            "en": "table"
-            "nl": "de tafel"
+        "nl": {
+            "root": "de tafel",
+            "diminutive": "het tafeltje"
         },
-        "diminutive": {
-            "en": "(little table)",
-            "nl": "het tafeltje"
+        "en": {
+            "root": "table",
+            "diminutive": "(little table)"
         }
     }
 }
@@ -422,13 +436,13 @@ When concepts have multiple genders, these can be specified as follows:
 ```json
 {
     "parent": {
-        "feminine": {
-            "en": "mother",
-            "nl": "de moeder"
+        "en": {
+            "feminine": "mother",
+            "masculine": "father"
         },
-        "masculine": {
-            "en": "father",
-            "nl": "de vader"
+        "nl": {
+            "feminine": "moeder",
+            "masculine": "vader"
         }
     }
 }
@@ -439,17 +453,15 @@ It is also possible to have a neutral gender:
 ```json
 {
     "parent": {
-        "feminine": {
-            "en": "mother",
-            "nl": "de moeder"
+        "en": {
+            "feminine": "mother",
+            "masculine": "father",
+            "neutral": "parent"
         },
-        "masculine": {
-            "en": "father",
-            "nl": "de vader"
-        },
-        "neuter": {
-            "en": "parent",
-            "nl": "de ouder"
+        "nl":{
+            "feminine": "de moeder",
+            "masculine": "de vader",
+            "neutral": "de ouder"
         }
     }
 }
@@ -466,65 +478,53 @@ The format of the JSON files is as follows:
 ```json
 {
     "to have": {
-        "singular": {
-            "first person": {
-                "en": "I have",
-                "nl": "ik heb"
-            },
-            "second person": {
-                "en": "you have",
-                "nl": "jij hebt"
-            },
-            "third person": {
-                "feminine": {
-                    "en": "she has",
-                    "nl": "zij heeft"
-                },
-                "masculine": {
-                    "en": "he has",
-                    "nl": "hij heeft"
+        "en": {
+            "singular": {
+                "first person": "I have",
+                "second person": "you have",
+                "third person": {
+                    "feminine": "she has",
+                    "masculine": "he has"
                 }
+            },
+            "plural": {
+                "first person": "we have",
+                "second person": "you have",
+                "third person": "they have"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we have",
-                "nl": "wij hebben"
+        "nl": {
+            "singular": {
+                "first person": "ik heb",
+                "second person": "jij hebt",
+                "third person": {
+                    "feminine": "zij heeft",
+                    "masculine": "hij heeft"
+                }
             },
-            "second person": {
-                "en": "you have",
-                "nl": "jullie hebben"
-            },
-            "third person": {
-                "en": "they have",
-                "nl": "zij hebben"
+            "plural": {
+                "first person": "wij hebben",
+                "second person": "jullie hebben",
+                "third person": "zij hebben"
             }
         }
     }
 }
 ```
 
-Because Finnish does not distinguish between mssculine and feminine gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
+Because Finnish does not distinguish between masculine and feminine gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
 
 ```json
 {
     "to have": {
-        "singular": {
-            "first person": "...",
-            "second person": "...",
-            "third person": {
-                "fi": "hänellä on",
-                "feminine": {
-                    "en": "she has",
-                    "nl": "zij heeft"
-                },
-                "masculine": {
-                    "en": "he has",
-                    "nl": "hij heeft"
-                }
-            }
-        },
-        "plural": "..."
+        fi: {
+            "singular": {
+                "first person": "minulla on",
+                "second person": "sinulla on",
+                "third person": "hänellä on"
+            },
+            "plural": "..."
+        }
     }
 }
 ```
@@ -536,18 +536,22 @@ When concepts are verbs, infinitives can be specified as follows:
 ```json
 {
     "to have": {
-        "infinitive": {
-            "en": "to have",
-            "fi": "olla (omistaa)"
-        },
-        "singular": {
-            "first person": {
-                "en": "I have",
-                "fi": "minulla on"
+        "en": {
+            "infinitive": "to have",
+            "singular": {
+                "first person": "I have",
+                "second person": "..."
             },
-            "second person": "..."
+            "plural": "..."
         },
-        "plural": "..."
+        "fi": {
+            "infinitive": "olla (omistaa)",
+            "singular": {
+                "first person": "minulla on",
+                "second person": "..."
+            },
+            "plural": "..."
+        }
     }
 }
 ```
@@ -559,17 +563,18 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
 ```json
 {
     "to ask": {
-        "infinitive": {
-            "en": "to ask",
-            "fi": "kysyä",
-            "nl": "vragen"
+        "en": {
+            "infinitive": "to ask",
+            "verbal noun": "asking"
         },
-        "verbal noun": {
-            "en": "asking",
-            "fi": "kysyminen",
-            "nl": "het vragen"
+        "fi": {
+            "infinitive": "kysyä",
+            "verbal noun": "kysyminen"
         },
-        "singular": "..."
+        "nl": {
+            "infinitive": "vragen",
+            "verbal noun": "het vragen"
+        }
     }
 }
 ```
@@ -581,46 +586,36 @@ When concepts are verbs, the present tense, past tense, present perfect, and pas
 ```json
 {
     "to be": {
-        "infinitive": "...",
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I am",
-                    "fi": "minä olen",
+        "en": {
+            "infinitive": "to be",
+            "present tense": {
+                "singular": {
+                    "first person": "I am",
+                    "second person": "..."
                 },
-                "second person": "..."
+                "plural": "..."
             },
-            "plural": "..."
-        },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I was",
-                    "fi": "minä olin",
+            "past tense": {
+                "singular": {
+                    "first person": "I was",
+                    "second person": "..."
                 },
-                "second person": "..."
+                "plural": "..."
             },
-            "plural": "..."
-        },
-        "present perfect tense": {
-            "singular": {
-                "first person": {
-                    "en": "I have been",
-                    "fi": "minä olen ollut",
+            "present perfect tense": {
+                "singular": {
+                    "first person": "I have been",
+                    "second person": "..."
                 },
-                "second person": "..."
+                "plural": "..."
             },
-            "plural": "..."
-        },
-        "past perfect tense": {
-            "singular": {
-                "first person": {
-                    "en": "I had been",
-                    "fi": "minä olin ollut",
+            "past perfect tense": {
+                "singular": {
+                    "first person": "I had been",
+                    "second person": "..."
                 },
-                "second person": "..."
-            },
-            "plural": "..."
+                "plural": "..."
+            }
         }
     }
 }
@@ -633,38 +628,38 @@ Degrees of comparison are specified as follows:
 ```json
 {
     "small": {
-        "positive degree": {
-            "en": "small",
-            "nl": "klein"
+        "en": {
+            "positive degree": "small",
+            "comparative degree": "smaller",
+            "superlative degree": "smallest"
         },
-        "comparative degree": {
-            "en": "smaller",
-            "nl": "kleiner"
-        },
-        "superlative degree": {
-            "en": "smallest",
-            "nl": "kleinst"
+        "nl": {
+            "positive degree": "klein",
+            "comparative degree": "kleiner",
+            "superlative degree": "kleinst"
         }
     }
 }
 ```
 
-When there are synonyms, they need to be in the same order in every degree. This makes sure Toisto does not consider "suurin" a superlative of "iso".
+When there are synonyms, they need to be in the same order in every degree. This makes sure that Toisto, in the example below, does not consider "suurin" a superlative of "iso".
 
 ```json
 {
     "big": {
-        "positive degree": {
-            "en": "big",
-            "fi": ["iso", "suuri"]
-        },
-        "comparative degree": {
-            "en": "bigger",
-            "fi": ["isompi", "suurempi"]
-        },
-        "superlative degree": {
-            "en": "biggest",
-            "fi": ["isoin", "suurin"]
+        "fi": {
+            "positive degree": [
+                "iso",
+                "suuri"
+            ],
+            "comparative degree": [
+                "isompi",
+                "suurempi"
+            ],
+            "superlative degree": [
+                "isoin",
+                "suurin"
+            ]
         }
     }
 }
@@ -679,17 +674,15 @@ All three moods can be combined as follows:
 ```json
 {
     "you run": {
-        "declarative": {
-            "en": "You run.",
-            "nl": "Jij rent.",
+        "en": {
+            "declarative": "You run.",
+            "interrogative": "Do you run?",
+            "imperative": "Run!"
         },
-        "interrogative": {
-            "en": "Do you run?",
-            "nl": "Ren jij?",
-        },
-        "imperative": {
-            "en": "Run!",
-            "nl": "Ren!",
+        "nl": {
+            "declarative": "Jij rent.",
+            "interrogative": "Ren jij?",
+            "imperative": "Ren!"
         }
     }
 }
@@ -700,13 +693,13 @@ It is also possible to include just two of the three grammatical moods:
 ```json
 {
     "the car is black": {
-        "declarative": {
-            "en": "The car is black.",
-            "nl": "De auto is zwart."
+        "en": {
+            "declarative": "The car is black.",
+            "interrogative": "Is the car black?"
         },
-        "interrogative": {
-            "en": "Is the car black?",
-            "nl": "Is de auto zwart?"
+        "nl": {
+            "declarative": "De auto is zwart.",
+            "interrogative": "Is de auto zwart?"
         }
     }
 }
@@ -719,13 +712,13 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 ```json
 {
     "the car is black": {
-        "affirmative": {
-            "en": "The car is black.",
-            "nl": "De auto is zwart."
+        "en": {
+            "affirmative": "The car is black.",
+            "negative": "The car is not black."
         },
-        "negative": {
-            "en": "The car is not black.",
-            "nl": "De auto is niet zwart."
+        "nl": {
+            "affirmative": "De auto is zwart.",
+            "negative": "De auto is niet zwart."
         }
     }
 }
@@ -738,13 +731,13 @@ Cardinal and ordinal numbers can be specified as follows:
 ```json
 {
     "one": {
-        "cardinal": {
-            "en": "one",
-            "fi": "yksi"
+        "en": {
+            "cardinal": "one",
+            "ordinal": "first"
         },
-        "ordinal": {
-            "en": "first",
-            "fi": "ensimmäinen"
+        "fi": {
+            "cardinal": "yksi",
+            "ordinal": "ensimmäinen"
         }
     }
 }
@@ -757,15 +750,17 @@ Abbreviations can be specified as follows:
 ```json
 {
     "llc": {
-        "full form": {
-            "en": "limited liability company",
-            "fi": "osakeyhtiö",
-            "nl": "de naamloze vennootschap"
+        "en": {
+            "full form": "limited liability company",
+            "abbreviation": "LLC"
         },
-        "abbreviation": {
-            "en": "LLC",
-            "fi": "oy",
-            "nl": "de NV"
+        "fi": {
+            "full form": "osakeyhtiö",
+            "abbreviation": "oy"
+        },
+        "nl": {
+            "full form": "de naamloze vennootschap",
+            "abbreviation": "de NV"
         }
     }
 }
@@ -780,27 +775,30 @@ When a concept is a compound of one or more other concepts, this can be specifie
 ```json
 {
     "day": {
-        "singular": {
-            "en": "day",
-            "nl": "de dag"
+        "en": {
+            "singular": "day",
+            "plural": "days"
         },
-        "plural": {
-            "en": "days",
-            "nl": "de dagen"
+        "nl": {
+            "singular": "de dag",
+            "plural": "de dagen"
         }
     },
     "week": {
-        "singular": {
-            "en": "week",
-            "nl": "de week"
+        "en": {
+            "singular": "week",
+            "plural": "weeks"
         },
-        "plural": {
-            "en": "weeks",
-            "nl": "de weken"
+        "nl": {
+            "singular": "de week",
+            "plural": "de weken"
         }
     },
     "days of the week": {
-        "roots": ["day", "week"],
+        "roots": [
+            "day",
+            "week"
+        ],
         "en": "days of the week",
         "nl": "de dagen van de week"
     }
@@ -972,24 +970,24 @@ Answers are also possible if the concept has multiple grammatical forms, like si
 ```json
 {
     "what do you like": {
-        "singular": {
-            "en": "What do you like?;singular/ice cream",
-            "fi": "Mistä sinä pidät?;jäätelöä"
+        "en": {
+            "singular": "What do you like?;singular/ice cream",
+            "plural": "What do you like?;plural/ice cream"
         },
-        "plural": {
-            "en": "What do you like?;plural/ice cream",
-            "fi": "Mistä te pidätte?;jäätelöä"
+        "fi": {
+            "singular": "Mistä sinä pidät?;jäätelöä",
+            "plural": "Mistä te pidätte?;jäätelöä"
         },
         "answer": "i like ice cream"
     },
     "i like ice cream": {
-        "singular": {
-            "en": "I like ice cream.",
-            "fi": "Minä pidän jäätelöstä.|Pidän jäätelöstä."
+        "en": {
+            "singular": "I like ice cream.",
+            "plural": "We like ice cream."
         },
-        "plural": {
-            "en": "We like ice cream.",
-            "fi": "Me pidämme jäätelöstä.|Pidämme jäätelöstä."
+        "fi": {
+            "singular": "Minä pidän jäätelöstä.",
+            "plural": "Me pidämme jäätelöstä."
         }
     }
 }

@@ -1,14 +1,16 @@
 {
     "pencil": {
-        "singular": {
-            "en": "pencil",
-            "fi": "lyijykynä",
-            "nl": "het potlood"
+        "en": {
+            "singular": "pencil",
+            "plural": "pencils"
         },
-        "plural": {
-            "en": "pencils",
-            "fi": "lyijykynät",
-            "nl": "de potloden"
+        "fi": {
+            "singular": "lyijykynä",
+            "plural": "lyijykynät"
+        },
+        "nl": {
+            "singular": "het potlood",
+            "plural": "de potloden"
         }
     }
 }

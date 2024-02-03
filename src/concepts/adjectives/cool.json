@@ -1,20 +1,20 @@
 {
     "cool": {
         "antonym": "warm",
-        "positive degree": {
-            "en": "cool",
-            "fi": "viileä",
-            "nl": "koel"
+        "en": {
+            "positive degree": "cool",
+            "comparative degree": "cooler",
+            "superlative degree": "coolest"
         },
-        "comparative degree": {
-            "en": "cooler",
-            "fi": "viileämpi",
-            "nl": "koeler"
+        "fi": {
+            "positive degree": "viileä",
+            "comparative degree": "viileämpi",
+            "superlative degree": "villein"
         },
-        "superlative degree": {
-            "en": "coolest",
-            "fi": "villein",
-            "nl": "koelst"
+        "nl": {
+            "positive degree": "koel",
+            "comparative degree": "koeler",
+            "superlative degree": "koelst"
         }
     }
 }

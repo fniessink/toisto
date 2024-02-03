@@ -4,15 +4,17 @@
         "roots": {
             "nl": "chair"
         },
-        "singular": {
-            "en": "mushroom",
-            "fi": "sieni",
-            "nl": "de paddenstoel"
+        "en": {
+            "singular": "mushroom",
+            "plural": "mushrooms"
         },
-        "plural": {
-            "en": "mushrooms",
-            "fi": "sienet",
-            "nl": "de paddenstoelen"
+        "fi": {
+            "singular": "sieni",
+            "plural": "sienet"
+        },
+        "nl": {
+            "singular": "de paddenstoel",
+            "plural": "de paddenstoelen"
         }
     }
 }

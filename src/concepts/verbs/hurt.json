@@ -6,49 +6,49 @@
                 "pain"
             ]
         },
-        "infinitive": {
-            "en": "to hurt",
-            "fi": "sattua",
-            "nl": "pijn doen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I hurt",
-                "fi": "minä satun",
-                "nl": "ik doe pijn"
-            },
-            "second person": {
-                "en": "you hurt",
-                "fi": "sinä satut",
-                "nl": "jij doet pijn"
-            },
-            "third person": {
-                "fi": "hän sattuu",
-                "feminine": {
-                    "en": "she hurts",
-                    "nl": "zij doet pijn"
-                },
-                "masculine": {
-                    "en": "he hurts",
-                    "nl": "hij doet pijn"
+        "en": {
+            "infinitive": "to hurt",
+            "singular": {
+                "first person": "I hurt",
+                "second person": "you hurt",
+                "third person": {
+                    "feminine": "she hurts",
+                    "masculine": "he hurts"
                 }
+            },
+            "plural": {
+                "first person": "we hurt",
+                "second person": "you hurt",
+                "third person": "they hurt"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we hurt",
-                "fi": "me satumme",
-                "nl": "wij doen pijn"
+        "fi": {
+            "infinitive": "sattua",
+            "singular": {
+                "first person": "minä satun",
+                "second person": "sinä satut",
+                "third person": "hän sattuu"
             },
-            "second person": {
-                "en": "you hurt",
-                "fi": "te satutte",
-                "nl": "jullie doen pijn"
+            "plural": {
+                "first person": "me satumme",
+                "second person": "te satutte",
+                "third person": "he sattuvat"
+            }
+        },
+        "nl": {
+            "infinitive": "pijn doen",
+            "singular": {
+                "first person": "ik doe pijn",
+                "second person": "jij doet pijn",
+                "third person": {
+                    "feminine": "zij doet pijn",
+                    "masculine": "hij doet pijn"
+                }
             },
-            "third person": {
-                "en": "they hurt",
-                "fi": "he sattuvat",
-                "nl": "zij doen pijn"
+            "plural": {
+                "first person": "wij doen pijn",
+                "second person": "jullie doen pijn",
+                "third person": "zij doen pijn"
             }
         }
     }

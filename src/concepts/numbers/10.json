@@ -1,15 +1,17 @@
 {
     "10": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "ten",
-            "fi": "kymmenen",
-            "nl": "tien"
+        "en": {
+            "cardinal": "ten",
+            "ordinal": "tenth"
         },
-        "ordinal": {
-            "en": "tenth",
-            "fi": "kymmenes",
-            "nl": "tiende"
+        "fi": {
+            "cardinal": "kymmenen",
+            "ordinal": "kymmenes"
+        },
+        "nl": {
+            "cardinal": "tien",
+            "ordinal": "tiende"
         }
     }
 }

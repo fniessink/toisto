@@ -1,48 +1,48 @@
 {
     "to hate": {
-        "infinitive": {
-            "en": "to hate",
-            "fi": "vihata",
-            "nl": "haten"
-        },
-        "singular": {
-            "first person": {
-                "en": "I hate",
-                "fi": "minä vihaan",
-                "nl": "ik haat"
-            },
-            "second person": {
-                "en": "you hate",
-                "fi": "sinä vihaat",
-                "nl": "jij haat"
-            },
-            "third person": {
-                "fi": "hän vihaa",
-                "feminine": {
-                    "en": "she hates",
-                    "nl": "zij haat"
-                },
-                "masculine": {
-                    "en": "he hates",
-                    "nl": "hij haat"
+        "en": {
+            "infinitive": "to hate",
+            "singular": {
+                "first person": "I hate",
+                "second person": "you hate",
+                "third person": {
+                    "feminine": "she hates",
+                    "masculine": "he hates"
                 }
+            },
+            "plural": {
+                "first person": "we hate",
+                "second person": "you hate",
+                "third person": "they hate"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we hate",
-                "fi": "me vihaamme",
-                "nl": "wij haten"
+        "fi": {
+            "infinitive": "vihata",
+            "singular": {
+                "first person": "minä vihaan",
+                "second person": "sinä vihaat",
+                "third person": "hän vihaa"
             },
-            "second person": {
-                "en": "you hate",
-                "fi": "te vihaatte",
-                "nl": "jullie haten"
+            "plural": {
+                "first person": "me vihaamme",
+                "second person": "te vihaatte",
+                "third person": "he vihaavat"
+            }
+        },
+        "nl": {
+            "infinitive": "haten",
+            "singular": {
+                "first person": "ik haat",
+                "second person": "jij haat",
+                "third person": {
+                    "feminine": "zij haat",
+                    "masculine": "hij haat"
+                }
             },
-            "third person": {
-                "en": "they hate",
-                "fi": "he vihaavat",
-                "nl": "zij haten"
+            "plural": {
+                "first person": "wij haten",
+                "second person": "jullie haten",
+                "third person": "zij haten"
             }
         }
     }

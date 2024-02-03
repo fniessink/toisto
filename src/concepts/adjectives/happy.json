@@ -1,19 +1,19 @@
 {
     "happy": {
-        "positive degree": {
-            "en": "happy",
-            "fi": "onnellinen",
-            "nl": "gelukkig"
+        "en": {
+            "positive degree": "happy",
+            "comparative degree": "happier",
+            "superlative degree": "happiest"
         },
-        "comparative degree": {
-            "en": "happier",
-            "fi": "onnellisempi",
-            "nl": "gelukkiger"
+        "fi": {
+            "positive degree": "onnellinen",
+            "comparative degree": "onnellisempi",
+            "superlative degree": "onnellisin"
         },
-        "superlative degree": {
-            "en": "happiest",
-            "fi": "onnellisin",
-            "nl": "gelukkigst"
+        "nl": {
+            "positive degree": "gelukkig",
+            "comparative degree": "gelukkiger",
+            "superlative degree": "gelukkigst"
         }
     }
 }

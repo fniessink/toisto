@@ -3,15 +3,17 @@
         "roots": {
             "fi": "beach"
         },
-        "singular": {
-            "en": "coast",
-            "fi": "rannikko",
-            "nl": "de kust"
+        "en": {
+            "singular": "coast",
+            "plural": "coasts"
         },
-        "plural": {
-            "en": "coasts",
-            "fi": "rannikot",
-            "nl": "de kusten"
+        "fi": {
+            "singular": "rannikko",
+            "plural": "rannikot"
+        },
+        "nl": {
+            "singular": "de kust",
+            "plural": "de kusten"
         }
     }
 }

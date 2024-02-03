@@ -1,53 +1,51 @@
 {
     "to ask": {
-        "infinitive": {
-            "en": "to ask",
-            "fi": "kysyä",
-            "nl": "vragen"
-        },
-        "verbal noun": {
-            "en": "asking",
-            "fi": "kysyminen",
-            "nl": "het vragen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I ask",
-                "fi": "minä kysyn",
-                "nl": "ik vraag"
-            },
-            "second person": {
-                "en": "you ask",
-                "fi": "sinä kysyt",
-                "nl": "jij vraagt"
-            },
-            "third person": {
-                "fi": "hän kysyy",
-                "feminine": {
-                    "en": "she asks",
-                    "nl": "zij vraagt"
-                },
-                "masculine": {
-                    "en": "he asks",
-                    "nl": "hij vraagt"
+        "en": {
+            "infinitive": "to ask",
+            "verbal noun": "asking",
+            "singular": {
+                "first person": "I ask",
+                "second person": "you ask",
+                "third person": {
+                    "feminine": "she asks",
+                    "masculine": "he asks"
                 }
+            },
+            "plural": {
+                "first person": "we ask",
+                "second person": "you ask",
+                "third person": "they ask"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we ask",
-                "fi": "me kysymme",
-                "nl": "wij vragen"
+        "fi": {
+            "infinitive": "kysyä",
+            "verbal noun": "kysyminen",
+            "singular": {
+                "first person": "minä kysyn",
+                "second person": "sinä kysyt",
+                "third person": "hän kysyy"
             },
-            "second person": {
-                "en": "you ask",
-                "fi": "te kysytte",
-                "nl": "jullie vragen"
+            "plural": {
+                "first person": "me kysymme",
+                "second person": "te kysytte",
+                "third person": "he kysyvät"
+            }
+        },
+        "nl": {
+            "infinitive": "vragen",
+            "verbal noun": "het vragen",
+            "singular": {
+                "first person": "ik vraag",
+                "second person": "jij vraagt",
+                "third person": {
+                    "feminine": "zij vraagt",
+                    "masculine": "hij vraagt"
+                }
             },
-            "third person": {
-                "en": "they ask",
-                "fi": "he kysyvät",
-                "nl": "zij vragen"
+            "plural": {
+                "first person": "wij vragen",
+                "second person": "jullie vragen",
+                "third person": "zij vragen"
             }
         }
     }

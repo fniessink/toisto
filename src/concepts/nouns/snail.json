@@ -1,15 +1,17 @@
 {
     "snail": {
         "hypernym": "animal",
-        "singular": {
-            "en": "snail",
-            "fi": "etana",
-            "nl": "de slak"
+        "en": {
+            "singular": "snail",
+            "plural": "snails"
         },
-        "plural": {
-            "en": "snails",
-            "fi": "etanat",
-            "nl": "de slakken"
+        "fi": {
+            "singular": "etana",
+            "plural": "etanat"
+        },
+        "nl": {
+            "singular": "de slak",
+            "plural": "de slakken"
         }
     }
 }

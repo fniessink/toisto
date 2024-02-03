@@ -1,15 +1,17 @@
 {
     "stomach": {
         "hypernym": "organ",
-        "singular": {
-            "en": "stomach",
-            "fi": "maha",
-            "nl": "de maag"
+        "en": {
+            "singular": "stomach",
+            "plural": "stomachs"
         },
-        "plural": {
-            "en": "stomachs",
-            "fi": "mahat",
-            "nl": "de magen"
+        "fi": {
+            "singular": "maha",
+            "plural": "mahat"
+        },
+        "nl": {
+            "singular": "de maag",
+            "plural": "de magen"
         }
     }
 }

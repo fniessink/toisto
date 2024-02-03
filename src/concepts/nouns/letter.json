@@ -4,15 +4,17 @@
             "alphabet",
             "word"
         ],
-        "singular": {
-            "en": "letter",
-            "fi": "kirjain",
-            "nl": "de letter"
+        "en": {
+            "singular": "letter",
+            "plural": "letters"
         },
-        "plural": {
-            "en": "letters",
-            "fi": "kirjaimet",
-            "nl": "de letters"
+        "fi": {
+            "singular": "kirjain",
+            "plural": "kirjaimet"
+        },
+        "nl": {
+            "singular": "de letter",
+            "plural": "de letters"
         }
     }
 }

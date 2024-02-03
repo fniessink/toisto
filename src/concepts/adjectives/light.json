@@ -1,19 +1,19 @@
 {
     "light (not heavy)": {
-        "positive degree": {
-            "en": "light",
-            "fi": "kevyt",
-            "nl": "licht"
+        "en": {
+            "positive degree": "light",
+            "comparative degree": "lighter",
+            "superlative degree": "lightest"
         },
-        "comparative degree": {
-            "en": "lighter",
-            "fi": "kevyempi",
-            "nl": "lichter"
+        "fi": {
+            "positive degree": "kevyt",
+            "comparative degree": "kevyempi",
+            "superlative degree": "kevyin"
         },
-        "superlative degree": {
-            "en": "lightest",
-            "fi": "kevyin",
-            "nl": "lichtst"
+        "nl": {
+            "positive degree": "licht",
+            "comparative degree": "lichter",
+            "superlative degree": "lichtst"
         }
     }
 }

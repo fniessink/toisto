@@ -1,18 +1,20 @@
 {
     "8": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "eight",
-            "fi": [
+        "en": {
+            "cardinal": "eight",
+            "ordinal": "eighth"
+        },
+        "fi": {
+            "cardinal": [
                 "kahdeksan",
                 "kaheksan*"
             ],
-            "nl": "acht"
+            "ordinal": "kahdeksas"
         },
-        "ordinal": {
-            "en": "eighth",
-            "fi": "kahdeksas",
-            "nl": "achtste"
+        "nl": {
+            "cardinal": "acht",
+            "ordinal": "achtste"
         }
     }
 }

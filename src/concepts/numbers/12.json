@@ -5,18 +5,20 @@
             "2",
             "10"
         ],
-        "cardinal": {
-            "en": "twelve",
-            "fi": [
+        "en": {
+            "cardinal": "twelve",
+            "ordinal": "twelfth"
+        },
+        "fi": {
+            "cardinal": [
                 "kaksitoista",
                 "kakstoist*"
             ],
-            "nl": "twaalf"
+            "ordinal": "kahdestoista"
         },
-        "ordinal": {
-            "en": "twelfth",
-            "fi": "kahdestoista",
-            "nl": "twaalfde"
+        "nl": {
+            "cardinal": "twaalf",
+            "ordinal": "twaalfde"
         }
     }
 }

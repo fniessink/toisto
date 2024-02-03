@@ -1,15 +1,17 @@
 {
     "cousin": {
         "holonym": "family",
-        "singular": {
-            "en": "cousin",
-            "fi": "serkku",
-            "nl": "(de neef of nicht)"
+        "en": {
+            "singular": "cousin",
+            "plural": "cousins"
         },
-        "plural": {
-            "en": "cousins",
-            "fi": "serkut",
-            "nl": "(de neven en nichten)"
+        "fi": {
+            "singular": "serkku",
+            "plural": "serkut"
+        },
+        "nl": {
+            "singular": "(de neef of nicht)",
+            "plural": "(de neven en nichten)"
         }
     }
 }

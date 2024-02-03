@@ -5,18 +5,20 @@
             "5",
             "10"
         ],
-        "cardinal": {
-            "en": "fifteen",
-            "fi": [
+        "en": {
+            "cardinal": "fifteen",
+            "ordinal": "fifteenth"
+        },
+        "fi": {
+            "cardinal": [
                 "viisitoista",
                 "viistoist*"
             ],
-            "nl": "vijftien"
+            "ordinal": "viidestoista"
         },
-        "ordinal": {
-            "en": "fifteenth",
-            "fi": "viidestoista",
-            "nl": "vijftiende"
+        "nl": {
+            "cardinal": "vijftien",
+            "ordinal": "vijftiende"
         }
     }
 }

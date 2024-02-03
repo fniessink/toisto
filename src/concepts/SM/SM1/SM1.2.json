@@ -1,6 +1,5 @@
 {
     "SM1.2": {
-        "fi": "(SM1.2)",
         "involves": [
             "SM1.2-kielioppi",
             "SM1.2-sanasto",
@@ -54,10 +53,10 @@
             "to write",
             "vanilla",
             "which"
-        ]
+        ],
+        "fi": "(SM1.2)"
     },
     "SM1.2-kielioppi": {
-        "fi": "(SM1.2-kielioppi)",
         "involves": [
             "banana",
             "beard",
@@ -123,10 +122,10 @@
             "word order",
             "worm",
             "year"
-        ]
+        ],
+        "fi": "(SM1.2-kielioppi)"
     },
     "SM1.2-sanasto": {
-        "fi": "(SM1.2-sanasto)",
         "involves": [
             "africa",
             "also",
@@ -215,6 +214,7 @@
             "where from",
             "word",
             "world"
-        ]
+        ],
+        "fi": "(SM1.2-sanasto)"
     }
 }

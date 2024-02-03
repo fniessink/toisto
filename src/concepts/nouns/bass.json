@@ -1,14 +1,16 @@
 {
     "bass": {
-        "singular": {
-            "en": "bass",
-            "fi": "basso",
-            "nl": "de bas"
+        "en": {
+            "singular": "bass",
+            "plural": "basses"
         },
-        "plural": {
-            "en": "basses",
-            "fi": "bassot",
-            "nl": "de bassen"
+        "fi": {
+            "singular": "basso",
+            "plural": "bassot"
+        },
+        "nl": {
+            "singular": "de bas",
+            "plural": "de bassen"
         }
     }
 }

@@ -1,133 +1,137 @@
 {
     "to swim": {
-        "infinitive": {
-            "en": "to swim",
-            "fi": "uida",
-            "nl": "zwemmen"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I swim",
-                    "fi": "minä uin",
-                    "nl": "ik zwem"
-                },
-                "second person": {
-                    "en": "you swim",
-                    "fi": "sinä uit",
-                    "nl": "jij zwemt"
-                },
-                "third person": {
-                    "fi": "hän ui",
-                    "feminine": {
-                        "en": "she swims",
-                        "nl": "zij zwemt"
-                    },
-                    "masculine": {
-                        "en": "he swims",
-                        "nl": "hij zwemt"
+        "en": {
+            "infinitive": "to swim",
+            "present tense": {
+                "singular": {
+                    "first person": "I swim",
+                    "second person": "you swim",
+                    "third person": {
+                        "feminine": "she swims",
+                        "masculine": "he swims"
                     }
+                },
+                "plural": {
+                    "first person": "we swim",
+                    "second person": "you swim",
+                    "third person": "they swim"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we swim",
-                    "fi": "me uimme",
-                    "nl": "wij zwemmen"
+            "past tense": {
+                "singular": {
+                    "first person": "I swam",
+                    "second person": "you swam",
+                    "third person": {
+                        "feminine": "she swam",
+                        "masculine": "he swam"
+                    }
                 },
-                "second person": {
-                    "en": "you swim",
-                    "fi": "te uitte",
-                    "nl": "jullie zwemmen"
+                "plural": {
+                    "first person": "we swam",
+                    "second person": "you swam",
+                    "third person": "they swam"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "I have swum",
+                    "second person": "you have swum",
+                    "third person": {
+                        "feminine": "she has swum",
+                        "masculine": "he has swum"
+                    }
                 },
-                "third person": {
-                    "en": "they swim",
-                    "fi": "he uivat",
-                    "nl": "zij zwemmen"
+                "plural": {
+                    "first person": "we have swum",
+                    "second person": "you have swum",
+                    "third person": "they have swum"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I swam",
-                    "fi": "minä uin",
-                    "nl": "ik zwom"
+        "fi": {
+            "infinitive": "uida",
+            "present tense": {
+                "singular": {
+                    "first person": "minä uin",
+                    "second person": "sinä uit",
+                    "third person": "hän ui"
                 },
-                "second person": {
-                    "en": "you swam",
-                    "fi": "sinä uit",
-                    "nl": "jij zwom"
-                },
-                "third person": {
-                    "fi": "hän ui",
-                    "feminine": {
-                        "en": "she swam",
-                        "nl": "zij zwom"
-                    },
-                    "masculine": {
-                        "en": "he swam",
-                        "nl": "hij zwom"
-                    }
+                "plural": {
+                    "first person": "me uimme",
+                    "second person": "te uitte",
+                    "third person": "he uivat"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we swam",
-                    "fi": "me uimme",
-                    "nl": "wij zwommen"
+            "past tense": {
+                "singular": {
+                    "first person": "minä uin",
+                    "second person": "sinä uit",
+                    "third person": "hän ui"
                 },
-                "second person": {
-                    "en": "you swam",
-                    "fi": "te uitte",
-                    "nl": "jullie zwommen"
+                "plural": {
+                    "first person": "me uimme",
+                    "second person": "te uitte",
+                    "third person": "he uivat"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "minä olen uinut",
+                    "second person": "sinä olet uinut",
+                    "third person": "hän on uinut"
                 },
-                "third person": {
-                    "en": "they swam",
-                    "fi": "he uivat",
-                    "nl": "zij zwommen"
+                "plural": {
+                    "first person": "me olemme uineet",
+                    "second person": "te olette uineet",
+                    "third person": "he ovat uineet"
                 }
             }
         },
-        "present perfect tense": {
-            "singular": {
-                "first person": {
-                    "en": "I have swum",
-                    "fi": "minä olen uinut",
-                    "nl": "ik heb gezwommen"
-                },
-                "second person": {
-                    "en": "you have swum",
-                    "fi": "sinä olet uinut",
-                    "nl": "jij hebt gezwommen"
-                },
-                "third person": {
-                    "fi": "hän on uinut",
-                    "feminine": {
-                        "en": "she has swum",
-                        "nl": "zij heeft gezwommen"
-                    },
-                    "masculine": {
-                        "en": "he has swum",
-                        "nl": "hij heeft gezwommen"
+        "nl": {
+            "infinitive": "zwemmen",
+            "present tense": {
+                "singular": {
+                    "first person": "ik zwem",
+                    "second person": "jij zwemt",
+                    "third person": {
+                        "feminine": "zij zwemt",
+                        "masculine": "hij zwemt"
                     }
+                },
+                "plural": {
+                    "first person": "wij zwemmen",
+                    "second person": "jullie zwemmen",
+                    "third person": "zij zwemmen"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we have swum",
-                    "fi": "me olemme uineet",
-                    "nl": "wij hebben gezwommen"
+            "past tense": {
+                "singular": {
+                    "first person": "ik zwom",
+                    "second person": "jij zwom",
+                    "third person": {
+                        "feminine": "zij zwom",
+                        "masculine": "hij zwom"
+                    }
                 },
-                "second person": {
-                    "en": "you have swum",
-                    "fi": "te olette uineet",
-                    "nl": "jullie hebben gezwommen"
+                "plural": {
+                    "first person": "wij zwommen",
+                    "second person": "jullie zwommen",
+                    "third person": "zij zwommen"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "ik heb gezwommen",
+                    "second person": "jij hebt gezwommen",
+                    "third person": {
+                        "feminine": "zij heeft gezwommen",
+                        "masculine": "hij heeft gezwommen"
+                    }
                 },
-                "third person": {
-                    "en": "they have swum",
-                    "fi": "he ovat uineet",
-                    "nl": "zij hebben gezwommen"
+                "plural": {
+                    "first person": "wij hebben gezwommen",
+                    "second person": "jullie hebben gezwommen",
+                    "third person": "zij hebben gezwommen"
                 }
             }
         }

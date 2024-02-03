@@ -2,13 +2,13 @@
     "deer": {
         "hypernym": "animal",
         "en": "deer",
-        "singular": {
-            "fi": "kauris",
-            "nl": "het hert"
+        "fi": {
+            "singular": "kauris",
+            "plural": "kaurit"
         },
-        "plural": {
-            "fi": "kaurit",
-            "nl": "de herten"
+        "nl": {
+            "singular": "het hert",
+            "plural": "de herten"
         }
     },
     "reindeer": {
@@ -20,21 +20,23 @@
                 "animal"
             ]
         },
-        "singular": {
-            "en": "reindeer",
-            "fi": [
+        "en": {
+            "singular": "reindeer",
+            "plural": "reindeer"
+        },
+        "fi": {
+            "singular": [
                 "peura",
                 "poro"
             ],
-            "nl": "het rendier"
-        },
-        "plural": {
-            "en": "reindeer",
-            "fi": [
+            "plural": [
                 "peurat",
                 "porot"
-            ],
-            "nl": "de rendieren"
+            ]
+        },
+        "nl": {
+            "singular": "het rendier",
+            "plural": "de rendieren"
         }
     }
 }

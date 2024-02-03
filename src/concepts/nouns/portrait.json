@@ -1,14 +1,16 @@
 {
     "portrait": {
-        "singular": {
-            "en": "portrait",
-            "fi": "muotokuva",
-            "nl": "het portret"
+        "en": {
+            "singular": "portrait",
+            "plural": "portraits"
         },
-        "plural": {
-            "en": "portraits",
-            "fi": "muotokuvat",
-            "nl": "de portretten"
+        "fi": {
+            "singular": "muotokuva",
+            "plural": "muotokuvat"
+        },
+        "nl": {
+            "singular": "het portret",
+            "plural": "de portretten"
         }
     }
 }

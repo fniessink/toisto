@@ -1,15 +1,17 @@
 {
     "match": {
         "involves": "sport",
-        "singular": {
-            "en": "match",
-            "fi": "ottelu",
-            "nl": "de wedstrijd"
+        "en": {
+            "singular": "match",
+            "plural": "matches"
         },
-        "plural": {
-            "en": "matches",
-            "fi": "ottelut",
-            "nl": "de wedstrijden"
+        "fi": {
+            "singular": "ottelu",
+            "plural": "ottelut"
+        },
+        "nl": {
+            "singular": "de wedstrijd",
+            "plural": "de wedstrijden"
         }
     }
 }

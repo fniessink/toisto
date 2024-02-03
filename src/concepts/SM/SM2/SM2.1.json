@@ -1,6 +1,5 @@
 {
     "SM2.1": {
-        "fi": "(SM2.1)",
         "involves": [
             "SM2.1-matkalla",
             "1",
@@ -169,10 +168,10 @@
             "wise",
             "world",
             "yet"
-        ]
+        ],
+        "fi": "(SM2.1)"
     },
     "SM2.1-matkalla": {
-        "fi": "(SM2.1-matkalla)",
         "involves": [
             "at the destination",
             "one-way ticket",
@@ -212,6 +211,7 @@
             "terminal",
             "deck",
             "hand luggage"
-        ]
+        ],
+        "fi": "(SM2.1-matkalla)"
     }
 }

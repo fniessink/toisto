@@ -1,7 +1,7 @@
 {
     "monday": {
-        "hypernym": "day",
         "holonym": "days of the week",
+        "hypernym": "day",
         "roots": {
             "en": "day",
             "nl": [
@@ -9,28 +9,32 @@
                 "day"
             ]
         },
-        "singular": {
-            "en": "Monday;;In English, the names of weekdays are capitalized",
-            "fi": "maanantai;;In Finnish, the names of weekdays are not capitalized",
-            "nl": "maandag|de maandag;;In Dutch, the names of weekdays are not capitalized"
+        "en": {
+            "singular": "Monday;;In English, the names of weekdays are capitalized",
+            "plural": "Mondays"
         },
-        "plural": {
-            "en": "Mondays",
-            "fi": "maanantait",
-            "nl": "de maandagen"
+        "fi": {
+            "singular": "maanantai;;In Finnish, the names of weekdays are not capitalized",
+            "plural": "maanantait"
+        },
+        "nl": {
+            "singular": "maandag|de maandag;;In Dutch, the names of weekdays are not capitalized",
+            "plural": "de maandagen"
         }
     },
     "on monday": {
         "roots": "monday",
-        "singular": {
-            "en": "on Monday",
-            "fi": "maanantaina",
-            "nl": "op maandag"
+        "en": {
+            "singular": "on Monday",
+            "plural": "on Mondays"
         },
-        "plural": {
-            "en": "on Mondays",
-            "fi": "maanantaisin",
-            "nl": "op maandagen"
+        "fi": {
+            "singular": "maanantaina",
+            "plural": "maanantaisin"
+        },
+        "nl": {
+            "singular": "op maandag",
+            "plural": "op maandagen"
         }
     }
 }

@@ -1,53 +1,51 @@
 {
     "to design": {
-        "infinitive": {
-            "en": "to design",
-            "fi": "suunnitella",
-            "nl": "ontwerpen"
-        },
-        "verbal noun": {
-            "en": "designing",
-            "fi": "suunnitteleminen",
-            "nl": "het ontwerpen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I design",
-                "fi": "minä suunnittelen",
-                "nl": "ik ontwerp"
-            },
-            "second person": {
-                "en": "you design",
-                "fi": "sinä suunnittelet",
-                "nl": "jij ontwerpt"
-            },
-            "third person": {
-                "fi": "hän suunnittelee",
-                "feminine": {
-                    "en": "she designs",
-                    "nl": "zij ontwerpt"
-                },
-                "masculine": {
-                    "en": "he designs",
-                    "nl": "hij ontwerpt"
+        "en": {
+            "infinitive": "to design",
+            "verbal noun": "designing",
+            "singular": {
+                "first person": "I design",
+                "second person": "you design",
+                "third person": {
+                    "feminine": "she designs",
+                    "masculine": "he designs"
                 }
+            },
+            "plural": {
+                "first person": "we design",
+                "second person": "you design",
+                "third person": "they design"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we design",
-                "fi": "me suunnittelemme",
-                "nl": "wij ontwerpen"
+        "fi": {
+            "infinitive": "suunnitella",
+            "verbal noun": "suunnitteleminen",
+            "singular": {
+                "first person": "minä suunnittelen",
+                "second person": "sinä suunnittelet",
+                "third person": "hän suunnittelee"
             },
-            "second person": {
-                "en": "you design",
-                "fi": "te suunnittelette",
-                "nl": "jullie ontwerpen"
+            "plural": {
+                "first person": "me suunnittelemme",
+                "second person": "te suunnittelette",
+                "third person": "he suunnittelevat"
+            }
+        },
+        "nl": {
+            "infinitive": "ontwerpen",
+            "verbal noun": "het ontwerpen",
+            "singular": {
+                "first person": "ik ontwerp",
+                "second person": "jij ontwerpt",
+                "third person": {
+                    "feminine": "zij ontwerpt",
+                    "masculine": "hij ontwerpt"
+                }
             },
-            "third person": {
-                "en": "they design",
-                "fi": "he suunnittelevat",
-                "nl": "zij ontwerpen"
+            "plural": {
+                "first person": "wij ontwerpen",
+                "second person": "jullie ontwerpen",
+                "third person": "zij ontwerpen"
             }
         }
     }

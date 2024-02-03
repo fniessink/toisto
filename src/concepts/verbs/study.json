@@ -1,133 +1,137 @@
 {
     "to study": {
-        "infinitive": {
-            "en": "to study",
-            "fi": "opiskella",
-            "nl": "studeren"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I study",
-                    "fi": "minä opiskelen",
-                    "nl": "ik studeer"
-                },
-                "second person": {
-                    "en": "you study",
-                    "fi": "sinä opiskelet",
-                    "nl": "jij studeert"
-                },
-                "third person": {
-                    "fi": "hän opiskelee",
-                    "feminine": {
-                        "en": "she studies",
-                        "nl": "zij studeert"
-                    },
-                    "masculine": {
-                        "en": "he studies",
-                        "nl": "hij studeert"
+        "en": {
+            "infinitive": "to study",
+            "present tense": {
+                "singular": {
+                    "first person": "I study",
+                    "second person": "you study",
+                    "third person": {
+                        "feminine": "she studies",
+                        "masculine": "he studies"
                     }
+                },
+                "plural": {
+                    "first person": "we study",
+                    "second person": "you study",
+                    "third person": "they study"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we study",
-                    "fi": "me opiskelemme",
-                    "nl": "wij studeren"
+            "past tense": {
+                "singular": {
+                    "first person": "I studied",
+                    "second person": "you studied",
+                    "third person": {
+                        "feminine": "she studied",
+                        "masculine": "he studied"
+                    }
                 },
-                "second person": {
-                    "en": "you study",
-                    "fi": "te opiskelette",
-                    "nl": "jullie studeren"
+                "plural": {
+                    "first person": "we studied",
+                    "second person": "you studied",
+                    "third person": "they studied"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "I have studied",
+                    "second person": "you have studied",
+                    "third person": {
+                        "feminine": "she has studied",
+                        "masculine": "he has studied"
+                    }
                 },
-                "third person": {
-                    "en": "they study",
-                    "fi": "he opiskelevat",
-                    "nl": "zij studeren"
+                "plural": {
+                    "first person": "we have studied",
+                    "second person": "you have studied",
+                    "third person": "they have studied"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I studied",
-                    "fi": "minä opiskelin",
-                    "nl": "ik studeerde"
+        "fi": {
+            "infinitive": "opiskella",
+            "present tense": {
+                "singular": {
+                    "first person": "minä opiskelen",
+                    "second person": "sinä opiskelet",
+                    "third person": "hän opiskelee"
                 },
-                "second person": {
-                    "en": "you studied",
-                    "fi": "sinä opiskelit",
-                    "nl": "jij studeerde"
-                },
-                "third person": {
-                    "fi": "hän opiskeli",
-                    "feminine": {
-                        "en": "she studied",
-                        "nl": "zij studeerde"
-                    },
-                    "masculine": {
-                        "en": "he studied",
-                        "nl": "hij studeerde"
-                    }
+                "plural": {
+                    "first person": "me opiskelemme",
+                    "second person": "te opiskelette",
+                    "third person": "he opiskelevat"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we studied",
-                    "fi": "me opiskelimme",
-                    "nl": "wij studeerden"
+            "past tense": {
+                "singular": {
+                    "first person": "minä opiskelin",
+                    "second person": "sinä opiskelit",
+                    "third person": "hän opiskeli"
                 },
-                "second person": {
-                    "en": "you studied",
-                    "fi": "te opiskelitte",
-                    "nl": "jullie studeerden"
+                "plural": {
+                    "first person": "me opiskelimme",
+                    "second person": "te opiskelitte",
+                    "third person": "he opiskelivat"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "minä olen opiskellut",
+                    "second person": "sinä olet opiskellut",
+                    "third person": "hän on opiskellut"
                 },
-                "third person": {
-                    "en": "they studied",
-                    "fi": "he opiskelivat",
-                    "nl": "zij studeerden"
+                "plural": {
+                    "first person": "me olemme opiskelleet",
+                    "second person": "te olette opiskelleet",
+                    "third person": "he ovat opiskelleet"
                 }
             }
         },
-        "present perfect tense": {
-            "singular": {
-                "first person": {
-                    "en": "I have studied",
-                    "fi": "minä olen opiskellut",
-                    "nl": "ik heb gestudeerd"
-                },
-                "second person": {
-                    "en": "you have studied",
-                    "fi": "sinä olet opiskellut",
-                    "nl": "jij hebt gestudeerd"
-                },
-                "third person": {
-                    "fi": "hän on opiskellut",
-                    "feminine": {
-                        "en": "she has studied",
-                        "nl": "zij heeft gestudeerd"
-                    },
-                    "masculine": {
-                        "en": "he has studied",
-                        "nl": "hij heeft gestudeerd"
+        "nl": {
+            "infinitive": "studeren",
+            "present tense": {
+                "singular": {
+                    "first person": "ik studeer",
+                    "second person": "jij studeert",
+                    "third person": {
+                        "feminine": "zij studeert",
+                        "masculine": "hij studeert"
                     }
+                },
+                "plural": {
+                    "first person": "wij studeren",
+                    "second person": "jullie studeren",
+                    "third person": "zij studeren"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we have studied",
-                    "fi": "me olemme opiskelleet",
-                    "nl": "wij hebben gestudeerd"
+            "past tense": {
+                "singular": {
+                    "first person": "ik studeerde",
+                    "second person": "jij studeerde",
+                    "third person": {
+                        "feminine": "zij studeerde",
+                        "masculine": "hij studeerde"
+                    }
                 },
-                "second person": {
-                    "en": "you have studied",
-                    "fi": "te olette opiskelleet",
-                    "nl": "jullie hebben gestudeerd"
+                "plural": {
+                    "first person": "wij studeerden",
+                    "second person": "jullie studeerden",
+                    "third person": "zij studeerden"
+                }
+            },
+            "present perfect tense": {
+                "singular": {
+                    "first person": "ik heb gestudeerd",
+                    "second person": "jij hebt gestudeerd",
+                    "third person": {
+                        "feminine": "zij heeft gestudeerd",
+                        "masculine": "hij heeft gestudeerd"
+                    }
                 },
-                "third person": {
-                    "en": "they have studied",
-                    "fi": "he ovat opiskelleet",
-                    "nl": "zij hebben gestudeerd"
+                "plural": {
+                    "first person": "wij hebben gestudeerd",
+                    "second person": "jullie hebben gestudeerd",
+                    "third person": "zij hebben gestudeerd"
                 }
             }
         }

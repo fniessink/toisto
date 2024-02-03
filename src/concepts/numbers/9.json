@@ -1,18 +1,20 @@
 {
     "9": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "nine",
-            "fi": [
+        "en": {
+            "cardinal": "nine",
+            "ordinal": "ninth"
+        },
+        "fi": {
+            "cardinal": [
                 "yhdeksän",
                 "yheksän*"
             ],
-            "nl": "negen"
+            "ordinal": "yhdeksäs"
         },
-        "ordinal": {
-            "en": "ninth",
-            "fi": "yhdeksäs",
-            "nl": "negende"
+        "nl": {
+            "cardinal": "negen",
+            "ordinal": "negende"
         }
     }
 }

@@ -1,14 +1,16 @@
 {
     "day": {
-        "singular": {
-            "en": "day",
-            "fi": "päivä",
-            "nl": "de dag"
+        "en": {
+            "singular": "day",
+            "plural": "days"
         },
-        "plural": {
-            "en": "days",
-            "fi": "päivät",
-            "nl": "de dagen"
+        "fi": {
+            "singular": "päivä",
+            "plural": "päivät"
+        },
+        "nl": {
+            "singular": "de dag",
+            "plural": "de dagen"
         }
     },
     "24 hours": {
@@ -53,24 +55,26 @@
         "nl": "Op welke dag?"
     },
     "weekday": {
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "weekday",
                 "working day"
             ],
-            "fi": "arki",
-            "nl": [
-                "de doordeweekse dag",
-                "de werkdag"
-            ]
-        },
-        "plural": {
-            "en": [
+            "plural": [
                 "weekdays",
                 "working days"
+            ]
+        },
+        "fi": {
+            "singular": "arki",
+            "plural": "arjet"
+        },
+        "nl": {
+            "singular": [
+                "de doordeweekse dag",
+                "de werkdag"
             ],
-            "fi": "arjet",
-            "nl": [
+            "plural": [
                 "de doordeweekse dagen",
                 "de werkdagen"
             ]

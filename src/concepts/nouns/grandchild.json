@@ -9,15 +9,17 @@
                 "child"
             ]
         },
-        "singular": {
-            "en": "grandchild",
-            "fi": "lapsenlapsi",
-            "nl": "het kleinkind"
+        "en": {
+            "singular": "grandchild",
+            "plural": "grandchildren"
         },
-        "plural": {
-            "en": "grandchildren",
-            "fi": "lapsenlapset",
-            "nl": "de kleinkinderen"
+        "fi": {
+            "singular": "lapsenlapsi",
+            "plural": "lapsenlapset"
+        },
+        "nl": {
+            "singular": "het kleinkind",
+            "plural": "de kleinkinderen"
         }
     }
 }

@@ -4,15 +4,17 @@
         "roots": {
             "nl": "head (main part)"
         },
-        "singular": {
-            "en": "chapter",
-            "fi": "luku",
-            "nl": "het hoofdstuk"
+        "en": {
+            "singular": "chapter",
+            "plural": "chapters"
         },
-        "plural": {
-            "en": "chapters",
-            "fi": "luvut",
-            "nl": "de hoofdstukken"
+        "fi": {
+            "singular": "luku",
+            "plural": "luvut"
+        },
+        "nl": {
+            "singular": "het hoofdstuk",
+            "plural": "de hoofdstukken"
         }
     }
 }

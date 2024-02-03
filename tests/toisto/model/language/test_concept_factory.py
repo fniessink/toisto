@@ -24,7 +24,7 @@ class ConcepFactoryTest(ToistoTestCase):
         """Test that a composite concept has constituent concepts."""
         concept = self.create_concept(
             "morning",
-            dict(singular=dict(fi="aamu", nl="de ochtend"), plural=dict(fi="aamut", nl="de ochtenden")),
+            dict(fi=dict(singular="aamu", plural="aamut"), nl=dict(singular="de ochtend", plural="de ochtenden")),
         )
         self.assertEqual(2, len(concept.constituents))
 
@@ -79,17 +79,21 @@ class ConcepFactoryTest(ToistoTestCase):
             "big",
             {
                 "antonym": "small",
-                "positive degree": dict(en="big"),
-                "comparative degree": dict(en="bigger"),
-                "superlative degree": dict(en="biggest"),
+                "en": {
+                    "positive degree": "big",
+                    "comparative degree": "bigger",
+                    "superlative degree": "biggest",
+                },
             },
         )
         small = self.create_concept(
             "small",
             {
-                "positive degree": dict(en="small"),
-                "comparative degree": dict(en="smaller"),
-                "superlative degree": dict(en="smallest"),
+                "en": {
+                    "positive degree": "small",
+                    "comparative degree": "smaller",
+                    "superlative degree": "smallest",
+                }
             },
         )
         self.assertEqual((small,), big.get_related_concepts("antonym"))
@@ -145,15 +149,19 @@ class ConcepFactoryTest(ToistoTestCase):
             "question",
             {
                 "answer": "answer",
-                "singular": dict(fi="Puhutko englantia?"),
-                "plural": dict(fi="Puhutteko englantia?"),
+                "fi": {
+                    "singular": "Puhutko englantia?",
+                    "plural": "Puhutteko englantia?",
+                },
             },
         )
         answer = self.create_concept(
             "answer",
             {
-                "singular": dict(fi="Puhun."),
-                "plural": dict(fi="Puhumme."),
+                "fi": {
+                    "singular": "Puhun.",
+                    "plural": "Puhumme.",
+                }
             },
         )
         self.assertEqual((answer,), question.get_related_concepts("answer"))

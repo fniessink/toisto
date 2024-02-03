@@ -1,14 +1,16 @@
 {
     "university": {
-        "singular": {
-            "en": "university",
-            "fi": "yliopisto",
-            "nl": "de universiteit"
+        "en": {
+            "singular": "university",
+            "plural": "universities"
         },
-        "plural": {
-            "en": "universities",
-            "fi": "yliopistot",
-            "nl": "de universiteiten"
+        "fi": {
+            "singular": "yliopisto",
+            "plural": "yliopistot"
+        },
+        "nl": {
+            "singular": "de universiteit",
+            "plural": "de universiteiten"
         }
     }
 }

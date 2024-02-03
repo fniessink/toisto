@@ -1,49 +1,49 @@
 {
     "to grow younger": {
         "antonym": "to age",
-        "infinitive": {
-            "en": "to grow younger",
-            "fi": "nuoreta;;nuoreta is verbityyppi 6",
-            "nl": "jonger worden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I grow younger",
-                "fi": "minä nuorenen",
-                "nl": "ik word jonger"
-            },
-            "second person": {
-                "en": "you grow younger",
-                "fi": "sinä nuorenet",
-                "nl": "jij wordt jonger"
-            },
-            "third person": {
-                "fi": "hän nuorenee",
-                "feminine": {
-                    "en": "she grows younger",
-                    "nl": "zij wordt jonger"
-                },
-                "masculine": {
-                    "en": "he grows younger",
-                    "nl": "hij wordt jonger"
+        "en": {
+            "infinitive": "to grow younger",
+            "singular": {
+                "first person": "I grow younger",
+                "second person": "you grow younger",
+                "third person": {
+                    "feminine": "she grows younger",
+                    "masculine": "he grows younger"
                 }
+            },
+            "plural": {
+                "first person": "we grow younger",
+                "second person": "you grow younger",
+                "third person": "they grow younger"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we grow younger",
-                "fi": "me nuorenemme",
-                "nl": "wij worden jonger"
+        "fi": {
+            "infinitive": "nuoreta;;nuoreta is verbityyppi 6",
+            "singular": {
+                "first person": "minä nuorenen",
+                "second person": "sinä nuorenet",
+                "third person": "hän nuorenee"
             },
-            "second person": {
-                "en": "you grow younger",
-                "fi": "te nuorenette",
-                "nl": "jullie worden jonger"
+            "plural": {
+                "first person": "me nuorenemme",
+                "second person": "te nuorenette",
+                "third person": "he nuorenevat"
+            }
+        },
+        "nl": {
+            "infinitive": "jonger worden",
+            "singular": {
+                "first person": "ik word jonger",
+                "second person": "jij wordt jonger",
+                "third person": {
+                    "feminine": "zij wordt jonger",
+                    "masculine": "hij wordt jonger"
+                }
             },
-            "third person": {
-                "en": "they grow younger",
-                "fi": "he nuorenevat",
-                "nl": "zij worden jonger"
+            "plural": {
+                "first person": "wij worden jonger",
+                "second person": "jullie worden jonger",
+                "third person": "zij worden jonger"
             }
         }
     }

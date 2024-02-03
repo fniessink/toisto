@@ -6,15 +6,17 @@
                 "word"
             ]
         },
-        "singular": {
-            "en": "verb",
-            "fi": "verbi",
-            "nl": "het werkwoord"
+        "en": {
+            "singular": "verb",
+            "plural": "verbs"
         },
-        "plural": {
-            "en": "verbs",
-            "fi": "verbit",
-            "nl": "de werkwoorden"
+        "fi": {
+            "singular": "verbi",
+            "plural": "verbit"
+        },
+        "nl": {
+            "singular": "het werkwoord",
+            "plural": "de werkwoorden"
         }
     },
     "verb type": {

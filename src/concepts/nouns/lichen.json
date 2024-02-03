@@ -3,18 +3,20 @@
         "roots": {
             "nl": "moss"
         },
-        "singular": {
-            "en": "lichen",
-            "fi": "jäkälä",
-            "nl": "het korstmos"
-        },
-        "plural": {
-            "en": [
+        "en": {
+            "singular": "lichen",
+            "plural": [
                 "lichen",
                 "lichens"
-            ],
-            "fi": "jäkälät",
-            "nl": "de korstmossen"
+            ]
+        },
+        "fi": {
+            "singular": "jäkälä",
+            "plural": "jäkälät"
+        },
+        "nl": {
+            "singular": "het korstmos",
+            "plural": "de korstmossen"
         }
     }
 }

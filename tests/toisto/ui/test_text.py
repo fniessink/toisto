@@ -135,7 +135,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
         concept = self.create_concept(
             "eat",
-            {"first person": dict(nl="ik eet"), "third person": dict(feminine=dict(nl="zij eet"))},
+            dict(nl={"first person": "ik eet", "third person": dict(feminine="zij eet")}),
         )
         quiz = create_quizzes(NL_FI, (FEMININE,), concept).pop()
         expected_text = "[quiz]Give the [underline]third person feminine[/underline] in Dutch:[/quiz]"

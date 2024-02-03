@@ -1,20 +1,22 @@
 {
     "team": {
-        "singular": {
-            "en": "team",
-            "fi": [
+        "en": {
+            "singular": "team",
+            "plural": "teams"
+        },
+        "fi": {
+            "singular": [
                 "joukkue",
                 "tiimi*"
             ],
-            "nl": "het team"
-        },
-        "plural": {
-            "en": "teams",
-            "fi": [
+            "plural": [
                 "joukkueet",
                 "tiimit*"
-            ],
-            "nl": "de teams"
+            ]
+        },
+        "nl": {
+            "singular": "het team",
+            "plural": "de teams"
         }
     }
 }

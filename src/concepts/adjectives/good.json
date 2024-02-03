@@ -1,20 +1,20 @@
 {
     "good": {
         "antonym": "bad",
-        "positive degree": {
-            "en": "good",
-            "fi": "hyvä",
-            "nl": "goed"
+        "en": {
+            "positive degree": "good",
+            "comparative degree": "better",
+            "superlative degree": "best"
         },
-        "comparative degree": {
-            "en": "better",
-            "fi": "parempi",
-            "nl": "beter"
+        "fi": {
+            "positive degree": "hyvä",
+            "comparative degree": "parempi",
+            "superlative degree": "paras"
         },
-        "superlative degree": {
-            "en": "best",
-            "fi": "paras",
-            "nl": "best"
+        "nl": {
+            "positive degree": "goed",
+            "comparative degree": "beter",
+            "superlative degree": "best"
         }
     }
 }

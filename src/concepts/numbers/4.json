@@ -1,15 +1,17 @@
 {
     "4": {
         "hypernym": "number",
-        "cardinal": {
-            "en": "four",
-            "fi": "neljä",
-            "nl": "vier"
+        "en": {
+            "cardinal": "four",
+            "ordinal": "fourth"
         },
-        "ordinal": {
-            "en": "fourth",
-            "fi": "neljäs",
-            "nl": "vierde"
+        "fi": {
+            "cardinal": "neljä",
+            "ordinal": "neljäs"
+        },
+        "nl": {
+            "cardinal": "vier",
+            "ordinal": "vierde"
         }
     }
 }

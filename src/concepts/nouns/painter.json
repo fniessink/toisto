@@ -2,15 +2,17 @@
     "painter": {
         "hypernym": "profession",
         "roots": "to paint",
-        "singular": {
-            "en": "painter",
-            "fi": "maalari",
-            "nl": "de schilder"
+        "en": {
+            "singular": "painter",
+            "plural": "painters"
         },
-        "plural": {
-            "en": "painters",
-            "fi": "maalarit",
-            "nl": "de schilders"
+        "fi": {
+            "singular": "maalari",
+            "plural": "maalarit"
+        },
+        "nl": {
+            "singular": "de schilder",
+            "plural": "de schilders"
         }
     }
 }

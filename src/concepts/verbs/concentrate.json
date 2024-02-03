@@ -1,48 +1,48 @@
 {
     "to concentrate": {
-        "infinitive": {
-            "en": "to concentrate",
-            "fi": "keskittyä",
-            "nl": "zich concentreren"
-        },
-        "singular": {
-            "first person": {
-                "en": "I concentrate",
-                "fi": "minä keskityn",
-                "nl": "ik concentreer me"
-            },
-            "second person": {
-                "en": "you concentrate",
-                "fi": "sinä keskityt",
-                "nl": "jij concentreert je"
-            },
-            "third person": {
-                "fi": "hän keskittyy",
-                "feminine": {
-                    "en": "she concentrates",
-                    "nl": "zij concentreert zich"
-                },
-                "masculine": {
-                    "en": "he concentrates",
-                    "nl": "hij concentreert zich"
+        "en": {
+            "infinitive": "to concentrate",
+            "singular": {
+                "first person": "I concentrate",
+                "second person": "you concentrate",
+                "third person": {
+                    "feminine": "she concentrates",
+                    "masculine": "he concentrates"
                 }
+            },
+            "plural": {
+                "first person": "we concentrate",
+                "second person": "you concentrate",
+                "third person": "they concentrate"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we concentrate",
-                "fi": "me keskitymme",
-                "nl": "wij concentreren ons"
+        "fi": {
+            "infinitive": "keskittyä",
+            "singular": {
+                "first person": "minä keskityn",
+                "second person": "sinä keskityt",
+                "third person": "hän keskittyy"
             },
-            "second person": {
-                "en": "you concentrate",
-                "fi": "te keskitytte",
-                "nl": "jullie concentreren je"
+            "plural": {
+                "first person": "me keskitymme",
+                "second person": "te keskitytte",
+                "third person": "he keskittyvät"
+            }
+        },
+        "nl": {
+            "infinitive": "zich concentreren",
+            "singular": {
+                "first person": "ik concentreer me",
+                "second person": "jij concentreert je",
+                "third person": {
+                    "feminine": "zij concentreert zich",
+                    "masculine": "hij concentreert zich"
+                }
             },
-            "third person": {
-                "en": "they concentrate",
-                "fi": "he keskittyvät",
-                "nl": "zij concentreren zich"
+            "plural": {
+                "first person": "wij concentreren ons",
+                "second person": "jullie concentreren je",
+                "third person": "zij concentreren zich"
             }
         }
     }

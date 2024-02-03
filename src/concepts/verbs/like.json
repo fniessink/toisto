@@ -1,69 +1,69 @@
 {
     "to like": {
-        "infinitive": {
-            "en": "to like",
-            "fi": [
+        "en": {
+            "infinitive": "to like",
+            "singular": {
+                "first person": "I like",
+                "second person": "you like",
+                "third person": {
+                    "feminine": "she likes",
+                    "masculine": "he likes"
+                }
+            },
+            "plural": {
+                "first person": "we like",
+                "second person": "you like",
+                "third person": "they like"
+            }
+        },
+        "fi": {
+            "infinitive": [
                 "pitää",
                 "tykätä"
             ],
-            "nl": "leuk vinden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I like",
-                "fi": [
+            "singular": {
+                "first person": [
                     "minä pidän",
                     "minä tykkään"
                 ],
-                "nl": "ik vind leuk"
-            },
-            "second person": {
-                "en": "you like",
-                "fi": [
+                "second person": [
                     "sinä pidät",
                     "sinä tykkäät"
                 ],
-                "nl": "jij vindt leuk"
-            },
-            "third person": {
-                "fi": [
+                "third person": [
                     "hän pitää",
                     "hän tykkää"
-                ],
-                "feminine": {
-                    "en": "she likes",
-                    "nl": "zij vindt leuk"
-                },
-                "masculine": {
-                    "en": "he likes",
-                    "nl": "hij vindt leuk"
-                }
-            }
-        },
-        "plural": {
-            "first person": {
-                "en": "we like",
-                "fi": [
+                ]
+            },
+            "plural": {
+                "first person": [
                     "me pidämme",
                     "me tykkäämme"
                 ],
-                "nl": "wij vinden leuk"
-            },
-            "second person": {
-                "en": "you like",
-                "fi": [
+                "second person": [
                     "te pidätte",
                     "te tykkäätte"
                 ],
-                "nl": "jullie vinden leuk"
-            },
-            "third person": {
-                "en": "they like",
-                "fi": [
+                "third person": [
                     "he pitävät",
                     "he tykkäävät"
-                ],
-                "nl": "zij vinden leuk"
+                ]
+            }
+        },
+        "nl": {
+            "infinitive": "leuk vinden",
+            "singular": {
+                "first person": "ik vind leuk",
+                "second person": "jij vindt leuk",
+                "third person": {
+                    "feminine": "zij vindt leuk",
+                    "masculine": "hij vindt leuk"
+                }
+            },
+            "plural": {
+                "first person": "wij vinden leuk",
+                "second person": "jullie vinden leuk",
+                "third person": "zij vinden leuk"
             }
         }
     }

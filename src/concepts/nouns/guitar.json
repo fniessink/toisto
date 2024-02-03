@@ -1,29 +1,33 @@
 {
     "guitar": {
         "hypernym": "musical instrument",
-        "singular": {
-            "en": "guitar",
-            "fi": "kitara",
-            "nl": "de gitaar"
+        "en": {
+            "singular": "guitar",
+            "plural": "guitars"
         },
-        "plural": {
-            "en": "guitars",
-            "fi": "kitarat",
-            "nl": "de gitaren"
+        "fi": {
+            "singular": "kitara",
+            "plural": "kitarat"
+        },
+        "nl": {
+            "singular": "de gitaar",
+            "plural": "de gitaren"
         }
     },
     "guitarist": {
         "involves": "guitar",
         "roots": "guitar",
-        "singular": {
-            "en": "guitarist",
-            "fi": "kitaristi",
-            "nl": "de gitarist"
+        "en": {
+            "singular": "guitarist",
+            "plural": "guitarists"
         },
-        "plural": {
-            "en": "guitarists",
-            "fi": "kitaristit",
-            "nl": "de gitaristen"
+        "fi": {
+            "singular": "kitaristi",
+            "plural": "kitaristit"
+        },
+        "nl": {
+            "singular": "de gitarist",
+            "plural": "de gitaristen"
         }
     },
     "huippukitaristi": {

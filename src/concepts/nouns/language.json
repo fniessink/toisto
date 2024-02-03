@@ -1,14 +1,16 @@
 {
     "language": {
-        "singular": {
-            "en": "language",
-            "fi": "kieli",
-            "nl": "de taal"
+        "en": {
+            "singular": "language",
+            "plural": "languages"
         },
-        "plural": {
-            "en": "languages",
-            "fi": "kielet",
-            "nl": "de talen"
+        "fi": {
+            "singular": "kieli",
+            "plural": "kielet"
+        },
+        "nl": {
+            "singular": "de taal",
+            "plural": "de talen"
         }
     },
     "spoken language": {

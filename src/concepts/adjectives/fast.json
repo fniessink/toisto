@@ -1,20 +1,20 @@
 {
     "fast": {
         "antonym": "slow",
-        "positive degree": {
-            "en": "fast",
-            "fi": "nopea",
-            "nl": "snel"
+        "en": {
+            "positive degree": "fast",
+            "comparative degree": "faster",
+            "superlative degree": "fastest"
         },
-        "comparative degree": {
-            "en": "faster",
-            "fi": "nopeampi",
-            "nl": "sneller"
+        "fi": {
+            "positive degree": "nopea",
+            "comparative degree": "nopeampi",
+            "superlative degree": "nopein"
         },
-        "superlative degree": {
-            "en": "fastest",
-            "fi": "nopein",
-            "nl": "snelst"
+        "nl": {
+            "positive degree": "snel",
+            "comparative degree": "sneller",
+            "superlative degree": "snelst"
         }
     }
 }

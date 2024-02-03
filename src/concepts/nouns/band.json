@@ -1,15 +1,17 @@
 {
     "band": {
         "involves": "musical instrument",
-        "singular": {
-            "en": "band",
-            "fi": "bändi",
-            "nl": "de band"
+        "en": {
+            "singular": "band",
+            "plural": "bands"
         },
-        "plural": {
-            "en": "bands",
-            "fi": "bändit",
-            "nl": "de bands"
+        "fi": {
+            "singular": "bändi",
+            "plural": "bändit"
+        },
+        "nl": {
+            "singular": "de band",
+            "plural": "de bands"
         }
     }
 }

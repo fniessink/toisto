@@ -1,15 +1,17 @@
 {
     "departure gate": {
         "holonym": "airport",
-        "singular": {
-            "en": "departure gate",
-            "fi": "lähtöportti",
-            "nl": "de vertrekgate"
+        "en": {
+            "singular": "departure gate",
+            "plural": "departure gates"
         },
-        "plural": {
-            "en": "departure gates",
-            "fi": "lähtöportit",
-            "nl": "de vertrekgates"
+        "fi": {
+            "singular": "lähtöportti",
+            "plural": "lähtöportit"
+        },
+        "nl": {
+            "singular": "de vertrekgate",
+            "plural": "de vertrekgates"
         }
     }
 }

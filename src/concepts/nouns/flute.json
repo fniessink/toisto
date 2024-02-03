@@ -1,15 +1,17 @@
 {
     "flute": {
         "hypernym": "musical instrument",
-        "singular": {
-            "en": "flute",
-            "fi": "huilu",
-            "nl": "de fluit"
+        "en": {
+            "singular": "flute",
+            "plural": "flutes"
         },
-        "plural": {
-            "en": "flutes",
-            "fi": "huilut",
-            "nl": "de fluiten"
+        "fi": {
+            "singular": "huilu",
+            "plural": "huilut"
+        },
+        "nl": {
+            "singular": "de fluit",
+            "plural": "de fluiten"
         }
     }
 }

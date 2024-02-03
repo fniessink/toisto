@@ -1,15 +1,17 @@
 {
     "fox": {
         "hypernym": "animal",
-        "singular": {
-            "en": "fox",
-            "fi": "kettu",
-            "nl": "de vos"
+        "en": {
+            "singular": "fox",
+            "plural": "foxes"
         },
-        "plural": {
-            "en": "foxes",
-            "fi": "ketut",
-            "nl": "de vossen"
+        "fi": {
+            "singular": "kettu",
+            "plural": "ketut"
+        },
+        "nl": {
+            "singular": "de vos",
+            "plural": "de vossen"
         }
     }
 }

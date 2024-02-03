@@ -1,14 +1,16 @@
 {
     "en": {
-        "singular": {
-            "en": "bay",
-            "fi": "lahti",
-            "nl": "de baai"
+        "en": {
+            "singular": "bay",
+            "plural": "bays"
         },
-        "plural": {
-            "en": "bays",
-            "fi": "lahdet",
-            "nl": "de baaien"
+        "fi": {
+            "singular": "lahti",
+            "plural": "lahdet"
+        },
+        "nl": {
+            "singular": "de baai",
+            "plural": "de baaien"
         }
     }
 }

@@ -1,15 +1,17 @@
 {
     "lip": {
         "holonym": "face",
-        "singular": {
-            "en": "lip",
-            "fi": "huuli",
-            "nl": "de lip"
+        "en": {
+            "singular": "lip",
+            "plural": "lips"
         },
-        "plural": {
-            "en": "lips",
-            "fi": "huulet",
-            "nl": "de lippen"
+        "fi": {
+            "singular": "huuli",
+            "plural": "huulet"
+        },
+        "nl": {
+            "singular": "de lip",
+            "plural": "de lippen"
         }
     }
 }

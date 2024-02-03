@@ -1,19 +1,19 @@
 {
     "tasty": {
-        "positive degree": {
-            "en": "tasty",
-            "fi": "maukas",
-            "nl": "lekker"
+        "en": {
+            "positive degree": "tasty",
+            "comparative degree": "tastier",
+            "superlative degree": "tastiest"
         },
-        "comparative degree": {
-            "en": "tastier",
-            "fi": "maukkaampi",
-            "nl": "lekkerder"
+        "fi": {
+            "positive degree": "maukas",
+            "comparative degree": "maukkaampi",
+            "superlative degree": "maukkain"
         },
-        "superlative degree": {
-            "en": "tastiest",
-            "fi": "maukkain",
-            "nl": "lekkerst"
+        "nl": {
+            "positive degree": "lekker",
+            "comparative degree": "lekkerder",
+            "superlative degree": "lekkerst"
         }
     }
 }

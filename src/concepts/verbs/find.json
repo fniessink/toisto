@@ -1,48 +1,48 @@
 {
     "to find": {
-        "infinitive": {
-            "en": "to find",
-            "fi": "löytää",
-            "nl": "vinden"
-        },
-        "singular": {
-            "first person": {
-                "en": "I find",
-                "fi": "minä löydän",
-                "nl": "ik vind"
-            },
-            "second person": {
-                "en": "you find",
-                "fi": "sinä löydät",
-                "nl": "jij vindt"
-            },
-            "third person": {
-                "fi": "hän löytää",
-                "feminine": {
-                    "en": "she finds",
-                    "nl": "zij vindt"
-                },
-                "masculine": {
-                    "en": "he finds",
-                    "nl": "hij vindt"
+        "en": {
+            "infinitive": "to find",
+            "singular": {
+                "first person": "I find",
+                "second person": "you find",
+                "third person": {
+                    "feminine": "she finds",
+                    "masculine": "he finds"
                 }
+            },
+            "plural": {
+                "first person": "we find",
+                "second person": "you find",
+                "third person": "they find"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we find",
-                "fi": "me löydämme",
-                "nl": "wij vinden"
+        "fi": {
+            "infinitive": "löytää",
+            "singular": {
+                "first person": "minä löydän",
+                "second person": "sinä löydät",
+                "third person": "hän löytää"
             },
-            "second person": {
-                "en": "you find",
-                "fi": "te löydätte",
-                "nl": "jullie vinden"
+            "plural": {
+                "first person": "me löydämme",
+                "second person": "te löydätte",
+                "third person": "he löytävät"
+            }
+        },
+        "nl": {
+            "infinitive": "vinden",
+            "singular": {
+                "first person": "ik vind",
+                "second person": "jij vindt",
+                "third person": {
+                    "feminine": "zij vindt",
+                    "masculine": "hij vindt"
+                }
             },
-            "third person": {
-                "en": "they find",
-                "fi": "he löytävät",
-                "nl": "zij vinden"
+            "plural": {
+                "first person": "wij vinden",
+                "second person": "jullie vinden",
+                "third person": "zij vinden"
             }
         }
     }

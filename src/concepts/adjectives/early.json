@@ -3,23 +3,23 @@
         "roots": {
             "fi": "time"
         },
-        "positive degree": {
-            "en": "early",
-            "fi": "aikaisin",
-            "nl": "vroeg"
+        "en": {
+            "positive degree": "early",
+            "comparative degree": "earlier",
+            "superlative degree": "earliest"
         },
-        "comparative degree": {
-            "en": "earlier",
-            "fi": [
+        "fi": {
+            "positive degree": "aikaisin",
+            "comparative degree": [
                 "aikaisemmin",
                 "aiemmin"
             ],
-            "nl": "vroeger"
+            "superlative degree": "aikaisimmin"
         },
-        "superlative degree": {
-            "en": "earliest",
-            "fi": "aikaisimmin",
-            "nl": "vroegst"
+        "nl": {
+            "positive degree": "vroeg",
+            "comparative degree": "vroeger",
+            "superlative degree": "vroegst"
         }
     }
 }

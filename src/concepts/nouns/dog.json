@@ -1,15 +1,17 @@
 {
     "dog": {
         "hypernym": "pet",
-        "singular": {
-            "en": "dog",
-            "fi": "koira",
-            "nl": "de hond"
+        "en": {
+            "singular": "dog",
+            "plural": "dogs"
         },
-        "plural": {
-            "en": "dogs",
-            "fi": "koirat",
-            "nl": "de honden"
+        "fi": {
+            "singular": "koira",
+            "plural": "koirat"
+        },
+        "nl": {
+            "singular": "de hond",
+            "plural": "de honden"
         }
     }
 }

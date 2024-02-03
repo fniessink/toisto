@@ -1,56 +1,54 @@
 {
     "to stay": {
-        "infinitive": {
-            "en": "to stay",
-            "fi": "pysyä",
-            "nl": "blijven"
-        }
+        "en": "to stay",
+        "fi": "pysyä",
+        "nl": "blijven"
     },
     "to stay (behind)": {
         "example": "I stayed home yesterday",
-        "infinitive": {
-            "en": "to stay",
-            "fi": "jäädä",
-            "nl": "blijven"
-        },
-        "singular": {
-            "first person": {
-                "en": "I stay",
-                "fi": "minä jään",
-                "nl": "ik blijf"
-            },
-            "second person": {
-                "en": "you stay",
-                "fi": "sinä jäät",
-                "nl": "jij blijft"
-            },
-            "third person": {
-                "fi": "hän jää",
-                "feminine": {
-                    "en": "she stays",
-                    "nl": "zij blijft"
-                },
-                "masculine": {
-                    "en": "he stays",
-                    "nl": "hij blijft"
+        "en": {
+            "infinitive": "to stay",
+            "singular": {
+                "first person": "I stay",
+                "second person": "you stay",
+                "third person": {
+                    "feminine": "she stays",
+                    "masculine": "he stays"
                 }
+            },
+            "plural": {
+                "first person": "we stay",
+                "second person": "you stay",
+                "third person": "they stay"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we stay",
-                "fi": "me jäämme",
-                "nl": "wij blijven"
+        "fi": {
+            "infinitive": "jäädä",
+            "singular": {
+                "first person": "minä jään",
+                "second person": "sinä jäät",
+                "third person": "hän jää"
             },
-            "second person": {
-                "en": "you stay",
-                "fi": "te jäätte",
-                "nl": "jullie blijven"
+            "plural": {
+                "first person": "me jäämme",
+                "second person": "te jäätte",
+                "third person": "he jäävät"
+            }
+        },
+        "nl": {
+            "infinitive": "blijven",
+            "singular": {
+                "first person": "ik blijf",
+                "second person": "jij blijft",
+                "third person": {
+                    "feminine": "zij blijft",
+                    "masculine": "hij blijft"
+                }
             },
-            "third person": {
-                "en": "they stay",
-                "fi": "he jäävät",
-                "nl": "zij blijven"
+            "plural": {
+                "first person": "wij blijven",
+                "second person": "jullie blijven",
+                "third person": "zij blijven"
             }
         }
     },

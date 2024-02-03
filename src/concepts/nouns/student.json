@@ -1,14 +1,16 @@
 {
     "student": {
-        "singular": {
-            "en": "student",
-            "fi": "opiskelija",
-            "nl": "de student"
+        "en": {
+            "singular": "student",
+            "plural": "students"
         },
-        "plural": {
-            "en": "students",
-            "fi": "opiskelijat",
-            "nl": "de studenten"
+        "fi": {
+            "singular": "opiskelija",
+            "plural": "opiskelijat"
+        },
+        "nl": {
+            "singular": "de student",
+            "plural": "de studenten"
         }
     },
     "exchange student": {

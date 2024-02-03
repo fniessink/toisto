@@ -1,14 +1,16 @@
 {
     "tool": {
-        "singular": {
-            "en": "tool",
-            "fi": "väline",
-            "nl": "het gereedschap"
+        "en": {
+            "singular": "tool",
+            "plural": "tools"
         },
-        "plural": {
-            "en": "tools",
-            "fi": "välineet",
-            "nl": "de gereedschappen"
+        "fi": {
+            "singular": "väline",
+            "plural": "välineet"
+        },
+        "nl": {
+            "singular": "het gereedschap",
+            "plural": "de gereedschappen"
         }
     }
 }

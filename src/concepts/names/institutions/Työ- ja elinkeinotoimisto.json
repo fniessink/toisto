@@ -1,15 +1,13 @@
 {
     "Työ- ja elinkeinotoimisto": {
-        "full form": {
-            "en": "(Finnish job centre)",
-            "fi": [
+        "en": "(Finnish job centre)",
+        "fi": {
+            "full form": [
                 "Työ- ja elinkeinotoimisto",
                 "työkkäri*"
             ],
-            "nl": "(Fins arbeidsbureau)"
+            "abbreviation": "TE-toimisto"
         },
-        "abbreviation": {
-            "fi": "TE-toimisto"
-        }
+        "nl": "(Fins arbeidsbureau)"
     }
 }

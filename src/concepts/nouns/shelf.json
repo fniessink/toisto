@@ -1,14 +1,16 @@
 {
     "shelf": {
-        "singular": {
-            "en": "shelf",
-            "fi": "hylly",
-            "nl": "de plank"
+        "en": {
+            "singular": "shelf",
+            "plural": "shelves"
         },
-        "plural": {
-            "en": "shelves",
-            "fi": "hyllyt",
-            "nl": "de planken"
+        "fi": {
+            "singular": "hylly",
+            "plural": "hyllyt"
+        },
+        "nl": {
+            "singular": "de plank",
+            "plural": "de planken"
         }
     }
 }

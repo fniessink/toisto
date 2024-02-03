@@ -2,19 +2,17 @@
     "homework": {
         "example": "do you have a lot of homework",
         "en": "homework",
-        "nl": "het huiswerk",
-        "singular": {
-            "fi": [
+        "fi": {
+            "singular": [
                 "läksy",
                 "kotitehtävä"
-            ]
-        },
-        "plural": {
-            "fi": [
+            ],
+            "plural": [
                 "läksyt",
                 "kotitehtävät"
             ]
-        }
+        },
+        "nl": "het huiswerk"
     },
     "math homework": {
         "hypernym": "homework",

@@ -1,20 +1,20 @@
 {
     "short": {
         "antonym": "long",
-        "positive degree": {
-            "en": "short",
-            "fi": "lyhyt",
-            "nl": "kort"
+        "en": {
+            "positive degree": "short",
+            "comparative degree": "shorter",
+            "superlative degree": "shortest"
         },
-        "comparative degree": {
-            "en": "shorter",
-            "fi": "lyhyempi",
-            "nl": "korter"
+        "fi": {
+            "positive degree": "lyhyt",
+            "comparative degree": "lyhyempi",
+            "superlative degree": "lyhyin"
         },
-        "superlative degree": {
-            "en": "shortest",
-            "fi": "lyhyin",
-            "nl": "kortst"
+        "nl": {
+            "positive degree": "kort",
+            "comparative degree": "korter",
+            "superlative degree": "kortst"
         }
     }
 }

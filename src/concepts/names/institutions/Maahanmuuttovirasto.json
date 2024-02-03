@@ -1,12 +1,10 @@
 {
     "Maahanmuuttovirasto": {
-        "full form": {
-            "en": "Finnish Immigration Service",
-            "fi": "Maahanmuuttovirasto",
-            "nl": "(Finse immigratiedienst)"
+        "en": "Finnish Immigration Service",
+        "fi": {
+            "full form": "Maahanmuuttovirasto",
+            "abbreviation": "Migri"
         },
-        "abbreviation": {
-            "fi": "Migri"
-        }
+        "nl": "(Finse immigratiedienst)"
     }
 }

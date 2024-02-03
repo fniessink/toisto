@@ -1,53 +1,51 @@
 {
     "to see": {
-        "infinitive": {
-            "en": "to see",
-            "fi": "nähdä;;nähdä is verbityyppi 2",
-            "nl": "zien"
-        },
-        "verbal noun": {
-            "en": "seeing",
-            "fi": "näkeminen",
-            "nl": "het zien"
-        },
-        "singular": {
-            "first person": {
-                "en": "I see",
-                "fi": "minä näen",
-                "nl": "ik zie"
-            },
-            "second person": {
-                "en": "you see",
-                "fi": "sinä näet",
-                "nl": "jij ziet"
-            },
-            "third person": {
-                "fi": "hän näkee",
-                "feminine": {
-                    "en": "she sees",
-                    "nl": "zij ziet"
-                },
-                "masculine": {
-                    "en": "he sees",
-                    "nl": "hij ziet"
+        "en": {
+            "infinitive": "to see",
+            "verbal noun": "seeing",
+            "singular": {
+                "first person": "I see",
+                "second person": "you see",
+                "third person": {
+                    "feminine": "she sees",
+                    "masculine": "he sees"
                 }
+            },
+            "plural": {
+                "first person": "we see",
+                "second person": "you see",
+                "third person": "they see"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we see",
-                "fi": "me näemme",
-                "nl": "wij zien"
+        "fi": {
+            "infinitive": "nähdä;;nähdä is verbityyppi 2",
+            "verbal noun": "näkeminen",
+            "singular": {
+                "first person": "minä näen",
+                "second person": "sinä näet",
+                "third person": "hän näkee"
             },
-            "second person": {
-                "en": "you see",
-                "fi": "te näette",
-                "nl": "jullie zien"
+            "plural": {
+                "first person": "me näemme",
+                "second person": "te näette",
+                "third person": "he näkevät"
+            }
+        },
+        "nl": {
+            "infinitive": "zien",
+            "verbal noun": "het zien",
+            "singular": {
+                "first person": "ik zie",
+                "second person": "jij ziet",
+                "third person": {
+                    "feminine": "zij ziet",
+                    "masculine": "hij ziet"
+                }
             },
-            "third person": {
-                "en": "they see",
-                "fi": "he näkevät",
-                "nl": "zij zien"
+            "plural": {
+                "first person": "wij zien",
+                "second person": "jullie zien",
+                "third person": "zij zien"
             }
         }
     }

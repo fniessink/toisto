@@ -1,15 +1,17 @@
 {
     "water": {
         "hypernym": "drink",
-        "singular": {
-            "en": "water",
-            "fi": "vesi",
-            "nl": "het water"
+        "en": {
+            "singular": "water",
+            "plural": "waters"
         },
-        "plural": {
-            "en": "waters",
-            "fi": "vedet",
-            "nl": [
+        "fi": {
+            "singular": "vesi",
+            "plural": "vedet"
+        },
+        "nl": {
+            "singular": "het water",
+            "plural": [
                 "de waters",
                 "de wateren"
             ]

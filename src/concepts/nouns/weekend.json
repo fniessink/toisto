@@ -4,15 +4,17 @@
             "end",
             "week"
         ],
-        "singular": {
-            "en": "weekend",
-            "fi": "viikonloppu",
-            "nl": "het weekend"
+        "en": {
+            "singular": "weekend",
+            "plural": "weekends"
         },
-        "plural": {
-            "en": "weekends",
-            "fi": "viikonloput",
-            "nl": "de weekenden"
+        "fi": {
+            "singular": "viikonloppu",
+            "plural": "viikonloput"
+        },
+        "nl": {
+            "singular": "het weekend",
+            "plural": "de weekenden"
         }
     },
     "at the weekend": {

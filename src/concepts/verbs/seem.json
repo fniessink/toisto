@@ -1,56 +1,54 @@
 {
     "to seem": {
-        "infinitive": {
-            "en": "to seem",
-            "fi": "näyttää",
-            "nl": "lijken"
-        },
-        "singular": {
-            "first person": {
-                "en": "I seem",
-                "fi": "minä näytän",
-                "nl": "ik lijk"
-            },
-            "second person": {
-                "en": "you seem",
-                "fi": "sinä näytät",
-                "nl": "jij lijkt"
-            },
-            "third person": {
-                "fi": "hän näyttää",
-                "feminine": {
-                    "en": "she seems",
-                    "nl": "zij lijkt"
-                },
-                "masculine": {
-                    "en": "he seems",
-                    "nl": "hij lijkt"
+        "en": {
+            "infinitive": "to seem",
+            "singular": {
+                "first person": "I seem",
+                "second person": "you seem",
+                "third person": {
+                    "feminine": "she seems",
+                    "masculine": "he seems"
                 }
+            },
+            "plural": {
+                "first person": "we seem",
+                "second person": "you seem",
+                "third person": "they seem"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we seem",
-                "fi": "me näytämme",
-                "nl": "wij lijken"
+        "fi": {
+            "infinitive": "näyttää",
+            "singular": {
+                "first person": "minä näytän",
+                "second person": "sinä näytät",
+                "third person": "hän näyttää"
             },
-            "second person": {
-                "en": "you seem",
-                "fi": "te näytätte",
-                "nl": "jullie lijken"
+            "plural": {
+                "first person": "me näytämme",
+                "second person": "te näytätte",
+                "third person": "he näyttävät"
+            }
+        },
+        "nl": {
+            "infinitive": "lijken",
+            "singular": {
+                "first person": "ik lijk",
+                "second person": "jij lijkt",
+                "third person": {
+                    "feminine": "zij lijkt",
+                    "masculine": "hij lijkt"
+                }
             },
-            "third person": {
-                "en": "they seem",
-                "fi": "he näyttävät",
-                "nl": "zij lijken"
+            "plural": {
+                "first person": "wij lijken",
+                "second person": "jullie lijken",
+                "third person": "zij lijken"
             }
         }
     },
     "to seem like": {
-        "infinitive": {
-            "en": "to seem like",
-            "fi": "taitaa",
-            "nl": "erop lijken"
-        }
+        "en": "to seem like",
+        "fi": "taitaa",
+        "nl": "erop lijken"
     }
 }

@@ -1,14 +1,16 @@
 {
     "event": {
-        "singular": {
-            "en": "event",
-            "fi": "tapahtuma",
-            "nl": "het evenement"
+        "en": {
+            "singular": "event",
+            "plural": "events"
         },
-        "plural": {
-            "en": "events",
-            "fi": "tapahtumat",
-            "nl": "de evenementen"
+        "fi": {
+            "singular": "tapahtuma",
+            "plural": "tapahtumat"
+        },
+        "nl": {
+            "singular": "het evenement",
+            "plural": "de evenementen"
         }
     },
     "cultural event": {

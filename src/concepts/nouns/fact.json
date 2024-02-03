@@ -1,14 +1,16 @@
 {
     "fact": {
-        "singular": {
-            "en": "fact",
-            "fi": "fakta",
-            "nl": "het feit"
+        "en": {
+            "singular": "fact",
+            "plural": "facts"
         },
-        "plural": {
-            "en": "facts",
-            "fi": "faktat",
-            "nl": "de feiten"
+        "fi": {
+            "singular": "fakta",
+            "plural": "faktat"
+        },
+        "nl": {
+            "singular": "het feit",
+            "plural": "de feiten"
         }
     }
 }

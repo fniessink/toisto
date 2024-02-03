@@ -1,15 +1,17 @@
 {
     "night": {
         "hypernym": "time of day",
-        "singular": {
-            "en": "night",
-            "fi": "yö",
-            "nl": "de nacht"
+        "en": {
+            "singular": "night",
+            "plural": "nights"
         },
-        "plural": {
-            "en": "nights",
-            "fi": "yöt",
-            "nl": "de nachten"
+        "fi": {
+            "singular": "yö",
+            "plural": "yöt"
+        },
+        "nl": {
+            "singular": "de nacht",
+            "plural": "de nachten"
         }
     },
     "at night": {
@@ -43,15 +45,17 @@
     "midnight": {
         "hypernym": "time of day",
         "roots": "night",
-        "singular": {
-            "en": "midnight",
-            "fi": "keskiyö",
-            "nl": "de middernacht"
+        "en": {
+            "singular": "midnight",
+            "plural": "midnights"
         },
-        "plural": {
-            "en": "midnights",
-            "fi": "keskiyöt",
-            "nl": "de middernachten"
+        "fi": {
+            "singular": "keskiyö",
+            "plural": "keskiyöt"
+        },
+        "nl": {
+            "singular": "de middernacht",
+            "plural": "de middernachten"
         }
     },
     "small hours": {

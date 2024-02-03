@@ -1,49 +1,49 @@
 {
     "to begin": {
         "antonym": "to end",
-        "infinitive": {
-            "en": "to begin",
-            "fi": "alkaa",
-            "nl": "beginnen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I begin",
-                "fi": "minä alan",
-                "nl": "ik begin"
-            },
-            "second person": {
-                "en": "you begin",
-                "fi": "sinä alat",
-                "nl": "jij begint"
-            },
-            "third person": {
-                "fi": "hän alkaa",
-                "feminine": {
-                    "en": "she begins",
-                    "nl": "zij begint"
-                },
-                "masculine": {
-                    "en": "he begins",
-                    "nl": "hij begint"
+        "en": {
+            "infinitive": "to begin",
+            "singular": {
+                "first person": "I begin",
+                "second person": "you begin",
+                "third person": {
+                    "feminine": "she begins",
+                    "masculine": "he begins"
                 }
+            },
+            "plural": {
+                "first person": "we begin",
+                "second person": "you begin",
+                "third person": "they begin"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we begin",
-                "fi": "me alamme",
-                "nl": "wij beginnen"
+        "fi": {
+            "infinitive": "alkaa",
+            "singular": {
+                "first person": "minä alan",
+                "second person": "sinä alat",
+                "third person": "hän alkaa"
             },
-            "second person": {
-                "en": "you begin",
-                "fi": "te alatte",
-                "nl": "jullie beginnen"
+            "plural": {
+                "first person": "me alamme",
+                "second person": "te alatte",
+                "third person": "he alkavat"
+            }
+        },
+        "nl": {
+            "infinitive": "beginnen",
+            "singular": {
+                "first person": "ik begin",
+                "second person": "jij begint",
+                "third person": {
+                    "feminine": "zij begint",
+                    "masculine": "hij begint"
+                }
             },
-            "third person": {
-                "en": "they begin",
-                "fi": "he alkavat",
-                "nl": "zij beginnen"
+            "plural": {
+                "first person": "wij beginnen",
+                "second person": "jullie beginnen",
+                "third person": "zij beginnen"
             }
         }
     }

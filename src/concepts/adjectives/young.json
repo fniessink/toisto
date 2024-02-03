@@ -1,20 +1,20 @@
 {
     "young": {
         "antonym": "old",
-        "positive degree": {
-            "en": "young",
-            "fi": "nuori",
-            "nl": "jong"
+        "en": {
+            "positive degree": "young",
+            "comparative degree": "younger",
+            "superlative degree": "youngest"
         },
-        "comparative degree": {
-            "en": "younger",
-            "fi": "nuorempi",
-            "nl": "jonger"
+        "fi": {
+            "positive degree": "nuori",
+            "comparative degree": "nuorempi",
+            "superlative degree": "nuorin"
         },
-        "superlative degree": {
-            "en": "youngest",
-            "fi": "nuorin",
-            "nl": "jongst"
+        "nl": {
+            "positive degree": "jong",
+            "comparative degree": "jonger",
+            "superlative degree": "jongst"
         }
     }
 }

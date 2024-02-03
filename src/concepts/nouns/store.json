@@ -1,14 +1,16 @@
 {
     "store": {
-        "singular": {
-            "en": "store",
-            "fi": "kauppa",
-            "nl": "de winkel"
+        "en": {
+            "singular": "store",
+            "plural": "stores"
         },
-        "plural": {
-            "en": "stores",
-            "fi": "kaupat",
-            "nl": "de winkels"
+        "fi": {
+            "singular": "kauppa",
+            "plural": "kaupat"
+        },
+        "nl": {
+            "singular": "de winkel",
+            "plural": "de winkels"
         }
     },
     "department store": {
@@ -17,15 +19,17 @@
             "fi": "house",
             "nl": "house"
         },
-        "singular": {
-            "en": "department store",
-            "fi": "tavaratalo",
-            "nl": "het warenhuis"
+        "en": {
+            "singular": "department store",
+            "plural": "department stores"
         },
-        "plural": {
-            "en": "department stores",
-            "fi": "tavaratalot",
-            "nl": "de warenhuizen"
+        "fi": {
+            "singular": "tavaratalo",
+            "plural": "tavaratalot"
+        },
+        "nl": {
+            "singular": "het warenhuis",
+            "plural": "de warenhuizen"
         }
     },
     "home appliance store": {

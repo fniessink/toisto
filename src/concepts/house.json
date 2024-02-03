@@ -1,126 +1,143 @@
 {
     "room": {
         "holonym": "house",
-        "singular": {
-            "en": "room",
-            "fi": "huone",
-            "nl": "de kamer"
+        "en": {
+            "singular": "room",
+            "plural": "rooms"
         },
-        "plural": {
-            "en": "rooms",
-            "fi": "huoneet",
-            "nl": "de kamers"
+        "fi": {
+            "singular": "huone",
+            "plural": "huoneet"
+        },
+        "nl": {
+            "singular": "de kamer",
+            "plural": "de kamers"
         }
     },
     "home": {
-        "singular": {
-            "en": "home",
-            "fi": "koti",
-            "nl": "het thuis"
+        "en": {
+            "singular": "home",
+            "plural": "homes"
         },
-        "plural": {
-            "en": "homes",
-            "fi": "kodit"
-        }
+        "fi": {
+            "singular": "koti",
+            "plural": "kodit"
+        },
+        "nl": "het thuis"
     },
     "garden": {
-        "singular": {
-            "en": "garden",
-            "fi": "piha",
-            "nl": "de tuin"
+        "en": {
+            "singular": "garden",
+            "plural": "gardens"
         },
-        "plural": {
-            "en": "gardens",
-            "fi": "pihat",
-            "nl": "de tuinen"
+        "fi": {
+            "singular": "piha",
+            "plural": "pihat"
+        },
+        "nl": {
+            "singular": "de tuin",
+            "plural": "de tuinen"
         }
     },
     "house": {
-        "singular": {
-            "example": "my house is in this street",
-            "en": "house",
-            "fi": "talo",
-            "nl": "het huis"
+        "en": {
+            "singular": "house",
+            "plural": "houses"
         },
-        "plural": {
-            "en": "houses",
-            "fi": "talot",
-            "nl": "de huizen"
+        "fi": {
+            "singular": "talo",
+            "plural": "talot"
+        },
+        "nl": {
+            "singular": "het huis",
+            "plural": "de huizen"
         }
     },
     "veranda": {
         "holonym": "house",
-        "singular": {
-            "en": "veranda",
-            "fi": "veranta",
-            "nl": "de veranda"
+        "en": {
+            "singular": "veranda",
+            "plural": "verandas"
         },
-        "plural": {
-            "en": "verandas",
-            "fi": "verannat",
-            "nl": "de veranda's"
+        "fi": {
+            "singular": "veranta",
+            "plural": "verannat"
+        },
+        "nl": {
+            "singular": "de veranda",
+            "plural": "de veranda's"
         }
     },
     "barbecue": {
-        "singular": {
-            "en": "barbecue",
-            "fi": "grilli",
-            "nl": "de barbecue"
+        "en": {
+            "singular": "barbecue",
+            "plural": "barbecues"
         },
-        "plural": {
-            "en": "barbecues",
-            "fi": "grillit",
-            "nl": "de barbecues"
+        "fi": {
+            "singular": "grilli",
+            "plural": "grillit"
+        },
+        "nl": {
+            "singular": "de barbecue",
+            "plural": "de barbecues"
         }
     },
     "wall": {
-        "singular": {
-            "en": "wall",
-            "fi": "seinä",
-            "nl": "de muur"
+        "en": {
+            "singular": "wall",
+            "plural": "walls"
         },
-        "plural": {
-            "en": "walls",
-            "fi": "seinät",
-            "nl": "de muren"
+        "fi": {
+            "singular": "seinä",
+            "plural": "seinät"
+        },
+        "nl": {
+            "singular": "de muur",
+            "plural": "de muren"
         }
     },
     "floor": {
-        "singular": {
-            "en": "floor",
-            "fi": "lattia",
-            "nl": "de vloer"
+        "en": {
+            "singular": "floor",
+            "plural": "floors"
         },
-        "plural": {
-            "en": "floors",
-            "fi": "lattiat",
-            "nl": "de vloeren"
+        "fi": {
+            "singular": "lattia",
+            "plural": "lattiat"
+        },
+        "nl": {
+            "singular": "de vloer",
+            "plural": "de vloeren"
         }
     },
     "window": {
         "holonym": "wall",
-        "singular": {
-            "en": "window",
-            "fi": "ikkuna",
-            "nl": "het raam"
+        "en": {
+            "singular": "window",
+            "plural": "windows"
         },
-        "plural": {
-            "en": "windows",
-            "fi": "ikkunat",
-            "nl": "de ramen"
+        "fi": {
+            "singular": "ikkuna",
+            "plural": "ikkunat"
+        },
+        "nl": {
+            "singular": "het raam",
+            "plural": "de ramen"
         }
     },
     "brick": {
         "holonym": "wall",
-        "singular": {
-            "en": "brick",
-            "fi": "tiili",
-            "nl": "de baksteen"
+        "en": {
+            "singular": "brick",
+            "plural": "bricks"
         },
-        "plural": {
-            "en": "bricks",
-            "fi": "tiilet",
-            "nl": "de bakstenen"
+        "fi": {
+            "singular": "tiili",
+            "plural": "tiilet"
+        },
+        "nl": {
+            "singular": "de baksteen",
+            "plural": "de bakstenen"
         }
     },
     "step": {
@@ -130,34 +147,34 @@
         "nl": "de trede"
     },
     "stairs": {
-        "singular": {
-            "en": "stairs",
-            "fi": [
-                "portaat",
-                "rappuset"
-            ],
-            "nl": "de trap"
-        },
-        "plural": {
-            "nl": "de trappen"
+        "en": "stairs",
+        "fi": [
+            "portaat",
+            "rappuset"
+        ],
+        "nl": {
+            "singular": "de trap",
+            "plural": "de trappen"
         }
     },
     "elevator": {
-        "singular": {
-            "en": [
+        "en": {
+            "singular": [
                 "elevator",
                 "lift"
             ],
-            "fi": "hissi",
-            "nl": "de lift"
-        },
-        "plural": {
-            "en": [
+            "plural": [
                 "elevators",
                 "lifts"
-            ],
-            "fi": "hissit",
-            "nl": "de liften"
+            ]
+        },
+        "fi": {
+            "singular": "hissi",
+            "plural": "hissit"
+        },
+        "nl": {
+            "singular": "de lift",
+            "plural": "de liften"
         }
     },
     "living room": {
@@ -183,15 +200,17 @@
     },
     "kitchen": {
         "hypernym": "room",
-        "singular": {
-            "en": "kitchen",
-            "fi": "keittiö",
-            "nl": "de keuken"
+        "en": {
+            "singular": "kitchen",
+            "plural": "kitchens"
         },
-        "plural": {
-            "en": "kitchens",
-            "fi": "keittiöt",
-            "nl": "de keukens"
+        "fi": {
+            "singular": "keittiö",
+            "plural": "keittiöt"
+        },
+        "nl": {
+            "singular": "de keuken",
+            "plural": "de keukens"
         }
     },
     "dining room": {
@@ -232,15 +251,17 @@
     },
     "bath": {
         "holonym": "bathroom",
-        "singular": {
-            "en": "bath",
-            "fi": "kylpy",
-            "nl": "het bad"
+        "en": {
+            "singular": "bath",
+            "plural": "baths"
         },
-        "plural": {
-            "en": "baths",
-            "fi": "kylpyjä",
-            "nl": "de baden"
+        "fi": {
+            "singular": "kylpy",
+            "plural": "kylpyjä"
+        },
+        "nl": {
+            "singular": "het bad",
+            "plural": "de baden"
         }
     },
     "bathroom": {

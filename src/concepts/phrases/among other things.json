@@ -1,17 +1,19 @@
 {
     "among other things": {
-        "full form": {
-            "en": [
+        "en": {
+            "full form": [
                 "among other things",
                 "inter alia"
             ],
-            "fi": "muun muassa",
-            "nl": "onder andere"
+            "abbreviation": "i.a."
         },
-        "abbreviation": {
-            "en": "i.a.",
-            "fi": "mm.",
-            "nl": "o.a."
+        "fi": {
+            "full form": "muun muassa",
+            "abbreviation": "mm."
+        },
+        "nl": {
+            "full form": "onder andere",
+            "abbreviation": "o.a."
         }
     }
 }

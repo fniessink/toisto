@@ -1,20 +1,20 @@
 {
     "important": {
         "example": "sleeping is important",
-        "positive degree": {
-            "en": "important",
-            "fi": "tärkeä",
-            "nl": "belangrijk"
+        "en": {
+            "positive degree": "important",
+            "comparative degree": "more important",
+            "superlative degree": "most important"
         },
-        "comparative degree": {
-            "en": "more important",
-            "fi": "tärkeämpi",
-            "nl": "belangrijker"
+        "fi": {
+            "positive degree": "tärkeä",
+            "comparative degree": "tärkeämpi",
+            "superlative degree": "tärkein"
         },
-        "superlative degree": {
-            "en": "most important",
-            "fi": "tärkein",
-            "nl": "belangrijkst"
+        "nl": {
+            "positive degree": "belangrijk",
+            "comparative degree": "belangrijker",
+            "superlative degree": "belangrijkst"
         }
     },
     "more important than": {

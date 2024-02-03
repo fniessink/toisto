@@ -2,15 +2,17 @@
     "boy": {
         "antonym": "girl",
         "hypernym": "man",
-        "singular": {
-            "en": "boy",
-            "fi": "poika",
-            "nl": "de jongen"
+        "en": {
+            "singular": "boy",
+            "plural": "boys"
         },
-        "plural": {
-            "en": "boys",
-            "fi": "pojat",
-            "nl": "de jongens"
+        "fi": {
+            "singular": "poika",
+            "plural": "pojat"
+        },
+        "nl": {
+            "singular": "de jongen",
+            "plural": "de jongens"
         }
     }
 }

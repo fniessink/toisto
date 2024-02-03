@@ -1,14 +1,16 @@
 {
     "outdoor activity": {
-        "singular": {
-            "en": "outdoor activity",
-            "fi": "ulkoilu",
-            "nl": "de buitenactiviteit"
+        "en": {
+            "singular": "outdoor activity",
+            "plural": "outdoor activities"
         },
-        "plural": {
-            "en": "outdoor activities",
-            "fi": "ulkoilut",
-            "nl": "de buitenactiviteiten"
+        "fi": {
+            "singular": "ulkoilu",
+            "plural": "ulkoilut"
+        },
+        "nl": {
+            "singular": "de buitenactiviteit",
+            "plural": "de buitenactiviteiten"
         }
     }
 }

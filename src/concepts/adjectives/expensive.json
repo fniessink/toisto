@@ -1,20 +1,20 @@
 {
     "expensive": {
         "antonym": "cheap",
-        "positive degree": {
-            "en": "expensive",
-            "fi": "kallis",
-            "nl": "duur"
+        "en": {
+            "positive degree": "expensive",
+            "comparative degree": "more expensive",
+            "superlative degree": "most expensive"
         },
-        "comparative degree": {
-            "en": "more expensive",
-            "fi": "kalliimpi",
-            "nl": "duurder"
+        "fi": {
+            "positive degree": "kallis",
+            "comparative degree": "kalliimpi",
+            "superlative degree": "kallein"
         },
-        "superlative degree": {
-            "en": "most expensive",
-            "fi": "kallein",
-            "nl": "duurst"
+        "nl": {
+            "positive degree": "duur",
+            "comparative degree": "duurder",
+            "superlative degree": "duurst"
         }
     }
 }

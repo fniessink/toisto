@@ -1,96 +1,98 @@
 {
     "to read": {
-        "infinitive": {
-            "en": "to read",
-            "fi": "lukea;;lukea is verbityyppi 1",
-            "nl": "lezen"
-        },
-        "verbal noun": {
-            "en": "reading",
-            "fi": "lukeminen",
-            "nl": "het lezen"
-        },
-        "present tense": {
-            "singular": {
-                "first person": {
-                    "en": "I read",
-                    "fi": "minä luen",
-                    "nl": "ik lees"
-                },
-                "second person": {
-                    "en": "you read",
-                    "fi": "sinä luet",
-                    "nl": "jij leest"
-                },
-                "third person": {
-                    "fi": "hän lukee",
-                    "feminine": {
-                        "en": "she reads",
-                        "nl": "zij leest"
-                    },
-                    "masculine": {
-                        "en": "he reads",
-                        "nl": "hij leest"
+        "en": {
+            "infinitive": "to read",
+            "verbal noun": "reading",
+            "present tense": {
+                "singular": {
+                    "first person": "I read",
+                    "second person": "you read",
+                    "third person": {
+                        "feminine": "she reads",
+                        "masculine": "he reads"
                     }
+                },
+                "plural": {
+                    "first person": "we read",
+                    "second person": "you read",
+                    "third person": "they read"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we read",
-                    "fi": "me luemme",
-                    "nl": "wij lezen"
+            "past tense": {
+                "singular": {
+                    "first person": "I read",
+                    "second person": "you read",
+                    "third person": {
+                        "feminine": "she read",
+                        "masculine": "he read"
+                    }
                 },
-                "second person": {
-                    "en": "you read",
-                    "fi": "te luette",
-                    "nl": "jullie lezen"
-                },
-                "third person": {
-                    "en": "they read",
-                    "fi": "he lukevat",
-                    "nl": "zij lezen"
+                "plural": {
+                    "first person": "we read",
+                    "second person": "you read",
+                    "third person": "they read"
                 }
             }
         },
-        "past tense": {
-            "singular": {
-                "first person": {
-                    "en": "I read",
-                    "fi": "minä luin",
-                    "nl": "ik las"
+        "fi": {
+            "infinitive": "lukea;;lukea is verbityyppi 1",
+            "verbal noun": "lukeminen",
+            "present tense": {
+                "singular": {
+                    "first person": "minä luen",
+                    "second person": "sinä luet",
+                    "third person": "hän lukee"
                 },
-                "second person": {
-                    "en": "you read",
-                    "fi": "sinä luit",
-                    "nl": "jij las"
-                },
-                "third person": {
-                    "fi": "hän luki",
-                    "feminine": {
-                        "en": "she read",
-                        "nl": "zij las"
-                    },
-                    "masculine": {
-                        "en": "he read",
-                        "nl": "hij las"
-                    }
+                "plural": {
+                    "first person": "me luemme",
+                    "second person": "te luette",
+                    "third person": "he lukevat"
                 }
             },
-            "plural": {
-                "first person": {
-                    "en": "we read",
-                    "fi": "me luimme",
-                    "nl": "wij lazen"
+            "past tense": {
+                "singular": {
+                    "first person": "minä luin",
+                    "second person": "sinä luit",
+                    "third person": "hän luki"
                 },
-                "second person": {
-                    "en": "you read",
-                    "fi": "te luitte",
-                    "nl": "jullie lazen"
+                "plural": {
+                    "first person": "me luimme",
+                    "second person": "te luitte",
+                    "third person": "he lukivat"
+                }
+            }
+        },
+        "nl": {
+            "infinitive": "lezen",
+            "verbal noun": "het lezen",
+            "present tense": {
+                "singular": {
+                    "first person": "ik lees",
+                    "second person": "jij leest",
+                    "third person": {
+                        "feminine": "zij leest",
+                        "masculine": "hij leest"
+                    }
                 },
-                "third person": {
-                    "en": "they read",
-                    "fi": "he lukivat",
-                    "nl": "zij lazen"
+                "plural": {
+                    "first person": "wij lezen",
+                    "second person": "jullie lezen",
+                    "third person": "zij lezen"
+                }
+            },
+            "past tense": {
+                "singular": {
+                    "first person": "ik las",
+                    "second person": "jij las",
+                    "third person": {
+                        "feminine": "zij las",
+                        "masculine": "hij las"
+                    }
+                },
+                "plural": {
+                    "first person": "wij lazen",
+                    "second person": "jullie lazen",
+                    "third person": "zij lazen"
                 }
             }
         }

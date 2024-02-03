@@ -3,49 +3,49 @@
         "roots": {
             "nl": "to have"
         },
-        "infinitive": {
-            "en": "to dislike",
-            "fi": "inhota",
-            "nl": "een hekel hebben"
-        },
-        "singular": {
-            "first person": {
-                "en": "I dislike",
-                "fi": "minä inhoan",
-                "nl": "ik heb een hekel"
-            },
-            "second person": {
-                "en": "you dislike",
-                "fi": "sinä inhoat",
-                "nl": "jij hebt een hekel"
-            },
-            "third person": {
-                "fi": "hän inhoaa",
-                "feminine": {
-                    "en": "she dislikes",
-                    "nl": "zij heeft een hekel"
-                },
-                "masculine": {
-                    "en": "he dislikes",
-                    "nl": "hij heeft een hekel"
+        "en": {
+            "infinitive": "to dislike",
+            "singular": {
+                "first person": "I dislike",
+                "second person": "you dislike",
+                "third person": {
+                    "feminine": "she dislikes",
+                    "masculine": "he dislikes"
                 }
+            },
+            "plural": {
+                "first person": "we dislike",
+                "second person": "you dislike",
+                "third person": "they dislike"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we dislike",
-                "fi": "me inhoamme",
-                "nl": "wij hebben een hekel"
+        "fi": {
+            "infinitive": "inhota",
+            "singular": {
+                "first person": "minä inhoan",
+                "second person": "sinä inhoat",
+                "third person": "hän inhoaa"
             },
-            "second person": {
-                "en": "you dislike",
-                "fi": "te inhoatte",
-                "nl": "jullie hebben een hekel"
+            "plural": {
+                "first person": "me inhoamme",
+                "second person": "te inhoatte",
+                "third person": "he inhoavat"
+            }
+        },
+        "nl": {
+            "infinitive": "een hekel hebben",
+            "singular": {
+                "first person": "ik heb een hekel",
+                "second person": "jij hebt een hekel",
+                "third person": {
+                    "feminine": "zij heeft een hekel",
+                    "masculine": "hij heeft een hekel"
+                }
             },
-            "third person": {
-                "en": "they dislike",
-                "fi": "he inhoavat",
-                "nl": "zij hebben een hekel"
+            "plural": {
+                "first person": "wij hebben een hekel",
+                "second person": "jullie hebben een hekel",
+                "third person": "zij hebben een hekel"
             }
         }
     }

@@ -1,14 +1,16 @@
 {
     "adult": {
-        "singular": {
-            "en": "adult",
-            "fi": "aikuinen",
-            "nl": "de volwassene"
+        "en": {
+            "singular": "adult",
+            "plural": "adults"
         },
-        "plural": {
-            "en": "adults",
-            "fi": "aikuiset",
-            "nl": "de volwassenen"
+        "fi": {
+            "singular": "aikuinen",
+            "plural": "aikuiset"
+        },
+        "nl": {
+            "singular": "de volwassene",
+            "plural": "de volwassenen"
         }
     }
 }

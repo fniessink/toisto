@@ -1,15 +1,17 @@
 {
     "swan": {
         "hypernym": "bird",
-        "singular": {
-            "en": "swan",
-            "fi": "joutsen",
-            "nl": "de zwaan"
+        "en": {
+            "singular": "swan",
+            "plural": "swans"
         },
-        "plural": {
-            "en": "swans",
-            "fi": "joutsenet",
-            "nl": "de zwanen"
+        "fi": {
+            "singular": "joutsen",
+            "plural": "joutsenet"
+        },
+        "nl": {
+            "singular": "de zwaan",
+            "plural": "de zwanen"
         }
     }
 }

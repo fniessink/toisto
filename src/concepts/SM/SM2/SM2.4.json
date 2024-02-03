@@ -1,6 +1,5 @@
 {
     "SM2.4": {
-        "fi": "(SM2.4)",
         "involves": [
             "SM2.4-sanasto",
             "SM2.4-luetaan",
@@ -34,10 +33,10 @@
             "to train",
             "tool",
             "via"
-        ]
+        ],
+        "fi": "(SM2.4)"
     },
     "SM2.4-sanasto": {
-        "fi": "(SM2.4-sanasto)",
         "involves": [
             "all the time",
             "always",
@@ -129,10 +128,10 @@
             "I play volleyball",
             "Finnish baseball",
             "Nordic walking"
-        ]
+        ],
+        "fi": "(SM2.4-sanasto)"
     },
     "SM2.4-luetaan": {
-        "fi": "(SM2.4-luetaan)",
         "involves": [
             "active",
             "adult education center",
@@ -184,10 +183,10 @@
             "usage",
             "whereas",
             "Tilastokeskus"
-        ]
+        ],
+        "fi": "(SM2.4-luetaan)"
     },
     "SM2.4-kielioppi": {
-        "fi": "(SM2.4-kielioppi)",
         "involves": [
             "cheetah",
             "web page",
@@ -208,10 +207,10 @@
             "to stay (behind)",
             "to suffice",
             "to suit"
-        ]
+        ],
+        "fi": "(SM2.4-kielioppi)"
     },
     "SM2.4-teksti": {
-        "fi": "(SM2.4-teksti)",
         "involves": [
             "active",
             "actually",
@@ -260,10 +259,10 @@
             "very many/much",
             "winter swimming",
             "wow"
-        ]
+        ],
+        "fi": "(SM2.4-teksti)"
     },
     "SM2.4-pikkusanat": {
-        "fi": "(SM2.4-pikkusanat)",
         "involves": [
             "actually",
             "all the time",
@@ -277,6 +276,7 @@
             "not even",
             "not very",
             "simultaneously"
-        ]
+        ],
+        "fi": "(SM2.4-pikkusanat)"
     }
 }

@@ -3,15 +3,17 @@
         "roots": {
             "fi": "country"
         },
-        "singular": {
-            "en": "continent",
-            "fi": "maanosa",
-            "nl": "het continent"
+        "en": {
+            "singular": "continent",
+            "plural": "continents"
         },
-        "plural": {
-            "en": "continents",
-            "fi": "maanosat",
-            "nl": "de continenten"
+        "fi": {
+            "singular": "maanosa",
+            "plural": "maanosat"
+        },
+        "nl": {
+            "singular": "het continent",
+            "plural": "de continenten"
         }
     }
 }

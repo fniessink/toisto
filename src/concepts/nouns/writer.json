@@ -2,15 +2,17 @@
     "writer": {
         "hypernym": "profession",
         "roots": "to write",
-        "singular": {
-            "en": "writer",
-            "fi": "kirjailija",
-            "nl": "de schrijver"
+        "en": {
+            "singular": "writer",
+            "plural": "writers"
         },
-        "plural": {
-            "en": "writers",
-            "fi": "kirjailijat",
-            "nl": "de schrijvers"
+        "fi": {
+            "singular": "kirjailija",
+            "plural": "kirjailijat"
+        },
+        "nl": {
+            "singular": "de schrijver",
+            "plural": "de schrijvers"
         }
     }
 }

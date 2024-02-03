@@ -1,20 +1,20 @@
 {
     "dark": {
         "antonym": "bright",
-        "positive degree": {
-            "en": "dark",
-            "fi": "pimeä",
-            "nl": "donker"
+        "en": {
+            "positive degree": "dark",
+            "comparative degree": "darker",
+            "superlative degree": "darkest"
         },
-        "comparative degree": {
-            "en": "darker",
-            "fi": "pimeâmpi",
-            "nl": "donkerder"
+        "fi": {
+            "positive degree": "pimeä",
+            "comparative degree": "pimeâmpi",
+            "superlative degree": "pimein"
         },
-        "superlative degree": {
-            "en": "darkest",
-            "fi": "pimein",
-            "nl": "donkerst"
+        "nl": {
+            "positive degree": "donker",
+            "comparative degree": "donkerder",
+            "superlative degree": "donkerst"
         }
     }
 }

@@ -1,6 +1,5 @@
 {
     "SM1.9": {
-        "fi": "(SM1.9)",
         "involves": [
             "boss",
             "canteen",
@@ -51,6 +50,7 @@
             "workday",
             "working time",
             "workplace"
-        ]
+        ],
+        "fi": "(SM1.9)"
     }
 }

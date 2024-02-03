@@ -1,48 +1,48 @@
 {
     "to ski": {
-        "infinitive": {
-            "en": "to ski",
-            "fi": "hiihtää",
-            "nl": "skiën"
-        },
-        "singular": {
-            "first person": {
-                "en": "I ski",
-                "fi": "minä hiihdän",
-                "nl": "ik ski"
-            },
-            "second person": {
-                "en": "you ski",
-                "fi": "sinä hiihdät",
-                "nl": "jij skiet"
-            },
-            "third person": {
-                "fi": "hän hiihtää",
-                "feminine": {
-                    "en": "she skis|she skies",
-                    "nl": "zij skiet"
-                },
-                "masculine": {
-                    "en": "he skis|he skies",
-                    "nl": "hij skiet"
+        "en": {
+            "infinitive": "to ski",
+            "singular": {
+                "first person": "I ski",
+                "second person": "you ski",
+                "third person": {
+                    "feminine": "she skis|she skies",
+                    "masculine": "he skis|he skies"
                 }
+            },
+            "plural": {
+                "first person": "we ski",
+                "second person": "you ski",
+                "third person": "they ski"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we ski",
-                "fi": "me hiihdämme",
-                "nl": "wij skiën"
+        "fi": {
+            "infinitive": "hiihtää",
+            "singular": {
+                "first person": "minä hiihdän",
+                "second person": "sinä hiihdät",
+                "third person": "hän hiihtää"
             },
-            "second person": {
-                "en": "you ski",
-                "fi": "te hiihdätte",
-                "nl": "jullie skiën"
+            "plural": {
+                "first person": "me hiihdämme",
+                "second person": "te hiihdätte",
+                "third person": "he hiihtävät"
+            }
+        },
+        "nl": {
+            "infinitive": "skiën",
+            "singular": {
+                "first person": "ik ski",
+                "second person": "jij skiet",
+                "third person": {
+                    "feminine": "zij skiet",
+                    "masculine": "hij skiet"
+                }
             },
-            "third person": {
-                "en": "they ski",
-                "fi": "he hiihtävät",
-                "nl": "zij skiën"
+            "plural": {
+                "first person": "wij skiën",
+                "second person": "jullie skiën",
+                "third person": "zij skiën"
             }
         }
     }

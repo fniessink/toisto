@@ -1,15 +1,17 @@
 {
     "poem": {
         "hypernym": "poetry",
-        "singular": {
-            "en": "poem",
-            "fi": "runo",
-            "nl": "het gedicht"
+        "en": {
+            "singular": "poem",
+            "plural": "poems"
         },
-        "plural": {
-            "en": "poems",
-            "fi": "runot",
-            "nl": "de gedichten"
+        "fi": {
+            "singular": "runo",
+            "plural": "runot"
+        },
+        "nl": {
+            "singular": "het gedicht",
+            "plural": "de gedichten"
         }
     }
 }

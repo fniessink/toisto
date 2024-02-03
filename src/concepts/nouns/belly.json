@@ -1,21 +1,23 @@
 {
     "belly": {
         "holonym": "body",
-        "singular": {
-            "en": "belly",
-            "fi": [
+        "en": {
+            "singular": "belly",
+            "plural": "bellies"
+        },
+        "fi": {
+            "singular": [
                 "vatsa",
                 "masu"
             ],
-            "nl": "de buik"
-        },
-        "plural": {
-            "en": "bellies",
-            "fi": [
+            "plural": [
                 "vatsat",
                 "masut"
-            ],
-            "nl": "de buiken"
+            ]
+        },
+        "nl": {
+            "singular": "de buik",
+            "plural": "de buiken"
         }
     }
 }

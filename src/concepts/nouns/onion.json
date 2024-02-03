@@ -1,16 +1,18 @@
 {
     "onion": {
-        "hypernym": "vegetable",
         "example": "onions make me cry",
-        "singular": {
-            "en": "onion",
-            "fi": "sipuli",
-            "nl": "de ui"
+        "hypernym": "vegetable",
+        "en": {
+            "singular": "onion",
+            "plural": "onions"
         },
-        "plural": {
-            "en": "onions",
-            "fi": "sipulit",
-            "nl": "de uien"
+        "fi": {
+            "singular": "sipuli",
+            "plural": "sipulit"
+        },
+        "nl": {
+            "singular": "de ui",
+            "plural": "de uien"
         }
     },
     "onions make me cry": {

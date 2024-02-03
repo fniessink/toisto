@@ -1,48 +1,48 @@
 {
     "to shout": {
-        "infinitive": {
-            "en": "to shout",
-            "fi": "huutaa",
-            "nl": "schreeuwen"
-        },
-        "singular": {
-            "first person": {
-                "en": "I shout",
-                "fi": "minä huudan",
-                "nl": "ik schreeuw"
-            },
-            "second person": {
-                "en": "you shout",
-                "fi": "sinä huudat",
-                "nl": "jij schreeuwt"
-            },
-            "third person": {
-                "fi": "hän huutaa",
-                "feminine": {
-                    "en": "she shouts",
-                    "nl": "zij schreeuwt"
-                },
-                "masculine": {
-                    "en": "he shouts",
-                    "nl": "hij schreeuwt"
+        "en": {
+            "infinitive": "to shout",
+            "singular": {
+                "first person": "I shout",
+                "second person": "you shout",
+                "third person": {
+                    "feminine": "she shouts",
+                    "masculine": "he shouts"
                 }
+            },
+            "plural": {
+                "first person": "we shout",
+                "second person": "you shout",
+                "third person": "they shout"
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we shout",
-                "fi": "me huudamme",
-                "nl": "wij schreeuwen"
+        "fi": {
+            "infinitive": "huutaa",
+            "singular": {
+                "first person": "minä huudan",
+                "second person": "sinä huudat",
+                "third person": "hän huutaa"
             },
-            "second person": {
-                "en": "you shout",
-                "fi": "te huudatte",
-                "nl": "jullie schreeuwen"
+            "plural": {
+                "first person": "me huudamme",
+                "second person": "te huudatte",
+                "third person": "he huutavat"
+            }
+        },
+        "nl": {
+            "infinitive": "schreeuwen",
+            "singular": {
+                "first person": "ik schreeuw",
+                "second person": "jij schreeuwt",
+                "third person": {
+                    "feminine": "zij schreeuwt",
+                    "masculine": "hij schreeuwt"
+                }
             },
-            "third person": {
-                "en": "they shout",
-                "fi": "he huutavat",
-                "nl": "zij schreeuwen"
+            "plural": {
+                "first person": "wij schreeuwen",
+                "second person": "jullie schreeuwen",
+                "third person": "zij schreeuwen"
             }
         }
     }

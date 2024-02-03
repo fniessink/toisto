@@ -8,38 +8,36 @@
             ],
             "nl": "reservation"
         },
-        "infinitive": {
-            "en": [
+        "en": {
+            "infinitive": [
                 "to reserve",
                 "to make a reservation"
             ],
-            "fi": [
+            "interrogative": [
+                "do we reserve?",
+                "do we make a reservation?"
+            ]
+        },
+        "fi": {
+            "infinitive": [
                 "varata",
                 "tehdä varaus"
             ],
-            "nl": [
-                "reserveren",
-                "een reservering maken"
+            "interrogative": [
+                "varaammeko?",
+                "varataanks me?*",
+                "teemmeko varaus?"
             ]
         },
-        "interrogative": {
-            "plural": {
-                "first person": {
-                    "en": [
-                        "do we reserve?",
-                        "do we make a reservation?"
-                    ],
-                    "fi": [
-                        "varaammeko?",
-                        "varataanks me?*",
-                        "teemmeko varaus?"
-                    ],
-                    "nl": [
-                        "reserveren we?",
-                        "maken we een reservering?"
-                    ]
-                }
-            }
+        "nl": {
+            "infinitive": [
+                "reserveren",
+                "een reservering maken"
+            ],
+            "interrogative": [
+                "reserveren we?",
+                "maken we een reservering?"
+            ]
         }
     }
 }

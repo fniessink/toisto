@@ -1,15 +1,17 @@
 {
     "goose": {
         "hypernym": "bird",
-        "singular": {
-            "en": "goose",
-            "fi": "hanhi",
-            "nl": "de gans"
+        "en": {
+            "singular": "goose",
+            "plural": "geese"
         },
-        "plural": {
-            "en": "geese",
-            "fi": "hanhet",
-            "nl": "de ganzen"
+        "fi": {
+            "singular": "hanhi",
+            "plural": "hanhet"
+        },
+        "nl": {
+            "singular": "de gans",
+            "plural": "de ganzen"
         }
     }
 }

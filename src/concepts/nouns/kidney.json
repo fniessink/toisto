@@ -1,15 +1,17 @@
 {
     "kidney": {
         "hypernym": "organ",
-        "singular": {
-            "en": "kidney",
-            "fi": "munuainen",
-            "nl": "de nier"
+        "en": {
+            "singular": "kidney",
+            "plural": "kidneys"
         },
-        "plural": {
-            "en": "kidneys",
-            "fi": "munuaiset",
-            "nl": "de nieren"
+        "fi": {
+            "singular": "munuainen",
+            "plural": "munuaiset"
+        },
+        "nl": {
+            "singular": "de nier",
+            "plural": "de nieren"
         }
     }
 }

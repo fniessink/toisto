@@ -1,15 +1,15 @@
 {
     "burglar": {
+        "involves": [
+            "to break in",
+            "burglary"
+        ],
         "roots": {
             "fi": [
                 "burglary",
                 "thief"
             ]
         },
-        "involves": [
-            "to break in",
-            "burglary"
-        ],
         "en": "burglar",
         "fi": "murtovaras",
         "nl": "de inbreker"

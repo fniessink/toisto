@@ -1,14 +1,16 @@
 {
     "station": {
-        "singular": {
-            "en": "station",
-            "fi": "asema",
-            "nl": "het station"
+        "en": {
+            "singular": "station",
+            "plural": "stations"
         },
-        "plural": {
-            "en": "stations",
-            "fi": "asemat",
-            "nl": "de stations"
+        "fi": {
+            "singular": "asema",
+            "plural": "asemat"
+        },
+        "nl": {
+            "singular": "het station",
+            "plural": "de stations"
         }
     },
     "bus station": {

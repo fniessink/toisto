@@ -1,18 +1,18 @@
 {
     "food": {
         "holonym": "food and drink",
-        "singular": {
-            "en": "food",
-            "fi": "ruoka",
-            "nl": [
-                "het voedsel",
-                "het eten"
-            ]
+        "en": {
+            "singular": "food",
+            "plural": "foods"
         },
-        "plural": {
-            "en": "foods",
-            "fi": "ruoat"
-        }
+        "fi": {
+            "singular": "ruoka",
+            "plural": "ruoat"
+        },
+        "nl": [
+            "het voedsel",
+            "het eten"
+        ]
     },
     "mealtime": {
         "en": "mealtime",
@@ -21,15 +21,17 @@
     },
     "drink": {
         "holonym": "food and drink",
-        "singular": {
-            "en": "drink",
-            "fi": "juoma",
-            "nl": "de drank"
+        "en": {
+            "singular": "drink",
+            "plural": "drinks"
         },
-        "plural": {
-            "en": "drinks",
-            "fi": "juomat",
-            "nl": "de dranken"
+        "fi": {
+            "singular": "juoma",
+            "plural": "juomat"
+        },
+        "nl": {
+            "singular": "de drank",
+            "plural": "de dranken"
         }
     },
     "food and drink": {
@@ -43,33 +45,37 @@
     },
     "vegetable": {
         "hypernym": "food",
-        "singular": {
-            "en": "vegetable",
-            "fi": "vihannes",
-            "nl": "de groente"
+        "en": {
+            "singular": "vegetable",
+            "plural": "vegetables"
         },
-        "plural": {
-            "en": "vegetables",
-            "fi": [
+        "fi": {
+            "singular": "vihannes",
+            "plural": [
                 "vihannekset",
                 "kasvikset"
-            ],
-            "nl": "de groenten|de groentes"
+            ]
+        },
+        "nl": {
+            "singular": "de groente",
+            "plural": "de groenten|de groentes"
         }
     },
     "meal": {
         "roots": {
             "nl": "time"
         },
-        "singular": {
-            "en": "meal",
-            "fi": "ateria",
-            "nl": "de maaltijd"
+        "en": {
+            "singular": "meal",
+            "plural": "meals"
         },
-        "plural": {
-            "en": "meals",
-            "fi": "ateriat",
-            "nl": "de maaltijden"
+        "fi": {
+            "singular": "ateria",
+            "plural": "ateriat"
+        },
+        "nl": {
+            "singular": "de maaltijd",
+            "plural": "de maaltijden"
         }
     },
     "breakfast": {
@@ -144,8 +150,8 @@
         "nl": "het hoofdgerecht"
     },
     "dessert": {
-        "hypernym": "food",
         "holonym": "meal",
+        "hypernym": "food",
         "roots": {
             "fi": "food"
         },
@@ -205,15 +211,17 @@
     },
     "chicken": {
         "hypernym": "meat",
-        "singular": {
-            "en": "chicken",
-            "fi": "kana",
-            "nl": "de kip"
+        "en": {
+            "singular": "chicken",
+            "plural": "chickens"
         },
-        "plural": {
-            "en": "chickens",
-            "fi": "kanat",
-            "nl": "de kippen"
+        "fi": {
+            "singular": "kana",
+            "plural": "kanat"
+        },
+        "nl": {
+            "singular": "de kip",
+            "plural": "de kippen"
         }
     },
     "beef": {
@@ -244,40 +252,44 @@
     },
     "dressing": {
         "hypernym": "food",
-        "singular": {
-            "en": "dressing",
-            "fi": "kastike",
-            "nl": "de dressing"
+        "en": {
+            "singular": "dressing",
+            "plural": "dressings"
         },
-        "plural": {
-            "en": "dressings",
-            "fi": "kastikkeet",
-            "nl": "de dressings"
+        "fi": {
+            "singular": "kastike",
+            "plural": "kastikkeet"
+        },
+        "nl": {
+            "singular": "de dressing",
+            "plural": "de dressings"
         }
     },
     "ketchup": {
         "hypernym": "food",
-        "singular": {
-            "en": "ketchup",
-            "fi": "ketsuppi",
-            "nl": "de ketchup"
+        "en": {
+            "singular": "ketchup",
+            "plural": "ketchups"
         },
-        "plural": {
-            "en": "ketchups",
-            "fi": "ketsupit"
-        }
+        "fi": {
+            "singular": "ketsuppi",
+            "plural": "ketsupit"
+        },
+        "nl": "de ketchup"
     },
     "bread": {
         "hypernym": "food",
-        "singular": {
-            "en": "bread",
-            "fi": "leipä",
-            "nl": "het brood"
+        "en": {
+            "singular": "bread",
+            "plural": "breads"
         },
-        "plural": {
-            "en": "breads",
-            "fi": "leivät",
-            "nl": "de broden"
+        "fi": {
+            "singular": "leipä",
+            "plural": "leivät"
+        },
+        "nl": {
+            "singular": "het brood",
+            "plural": "de broden"
         }
     },
     "karelian pasty": {
@@ -309,28 +321,30 @@
     },
     "meat": {
         "hypernym": "food",
-        "singular": {
-            "en": "meat",
-            "fi": "liha",
-            "nl": "het vlees"
+        "en": {
+            "singular": "meat",
+            "plural": "meats"
         },
-        "plural": {
-            "en": "meats",
-            "fi": "lihat",
-            "nl": "de vlezen"
+        "fi": {
+            "singular": "liha",
+            "plural": "lihat"
+        },
+        "nl": {
+            "singular": "het vlees",
+            "plural": "de vlezen"
         }
     },
     "milk": {
         "hypernym": "drink",
-        "singular": {
-            "en": "milk",
-            "fi": "maito",
-            "nl": "de melk"
+        "en": {
+            "singular": "milk",
+            "plural": "milks"
         },
-        "plural": {
-            "en": "milks",
-            "fi": "maidot"
-        }
+        "fi": {
+            "singular": "maito",
+            "plural": "maidot"
+        },
+        "nl": "de melk"
     },
     "buttermilk": {
         "hypernym": "drink",
@@ -381,15 +395,17 @@
     },
     "sausage": {
         "hypernym": "meat",
-        "singular": {
-            "en": "sausage",
-            "fi": "makkara",
-            "nl": "de worst"
+        "en": {
+            "singular": "sausage",
+            "plural": "sausages"
         },
-        "plural": {
-            "en": "sausages",
-            "fi": "makkarat",
-            "nl": "de worsten"
+        "fi": {
+            "singular": "makkara",
+            "plural": "makkarat"
+        },
+        "nl": {
+            "singular": "de worst",
+            "plural": "de worsten"
         }
     },
     "ham": {
@@ -400,41 +416,47 @@
     },
     "mämmi": {
         "hypernym": "food",
-        "singular": {
-            "en": "(traditional Finnish Easter dessert)",
-            "fi": "mämmi",
-            "nl": "(traditioneel Fins paasdessert)"
+        "en": {
+            "singular": "(traditional Finnish Easter dessert)",
+            "plural": "(traditional Finnish Easter desserts)"
         },
-        "plural": {
-            "en": "(traditional Finnish Easter desserts)",
-            "fi": "mämmit",
-            "nl": "(traditionele Finse paasdesserts)"
+        "fi": {
+            "singular": "mämmi",
+            "plural": "mämmit"
+        },
+        "nl": {
+            "singular": "(traditioneel Fins paasdessert)",
+            "plural": "(traditionele Finse paasdesserts)"
         }
     },
     "pizza": {
         "hypernym": "food",
-        "singular": {
-            "en": "pizza",
-            "fi": "pizza",
-            "nl": "de pizza"
+        "en": {
+            "singular": "pizza",
+            "plural": "pizzas"
         },
-        "plural": {
-            "en": "pizzas",
-            "fi": "pizzat",
-            "nl": "de pizza's"
+        "fi": {
+            "singular": "pizza",
+            "plural": "pizzat"
+        },
+        "nl": {
+            "singular": "de pizza",
+            "plural": "de pizza's"
         }
     },
     "berry": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "berry",
-            "fi": "marja",
-            "nl": "de bes"
+        "en": {
+            "singular": "berry",
+            "plural": "berries"
         },
-        "plural": {
-            "en": "berries",
-            "fi": "marjat",
-            "nl": "de bessen"
+        "fi": {
+            "singular": "marja",
+            "plural": "marjat"
+        },
+        "nl": {
+            "singular": "de bes",
+            "plural": "de bessen"
         }
     },
     "strawberry": {
@@ -442,15 +464,17 @@
         "roots": {
             "en": "berry"
         },
-        "singular": {
-            "en": "strawberry",
-            "fi": "mansikka",
-            "nl": "de aardbei"
+        "en": {
+            "singular": "strawberry",
+            "plural": "strawberries"
         },
-        "plural": {
-            "en": "strawberries",
-            "fi": "mansikat",
-            "nl": "de aardbeien"
+        "fi": {
+            "singular": "mansikka",
+            "plural": "mansikat"
+        },
+        "nl": {
+            "singular": "de aardbei",
+            "plural": "de aardbeien"
         }
     },
     "cloudberry": {
@@ -503,41 +527,47 @@
     },
     "spice": {
         "hypernym": "food",
-        "singular": {
-            "en": "spice",
-            "fi": "mauste",
-            "nl": "het kruid"
+        "en": {
+            "singular": "spice",
+            "plural": "spices"
         },
-        "plural": {
-            "en": "spices",
-            "fi": "mausteet",
-            "nl": "de kruiden"
+        "fi": {
+            "singular": "mauste",
+            "plural": "mausteet"
+        },
+        "nl": {
+            "singular": "het kruid",
+            "plural": "de kruiden"
         }
     },
     "juice": {
         "hypernym": "drink",
-        "singular": {
-            "en": "juice",
-            "fi": "mehu",
-            "nl": "het sap"
+        "en": {
+            "singular": "juice",
+            "plural": "juices"
         },
-        "plural": {
-            "en": "juices",
-            "fi": "mehut",
-            "nl": "de sappen"
+        "fi": {
+            "singular": "mehu",
+            "plural": "mehut"
+        },
+        "nl": {
+            "singular": "het sap",
+            "plural": "de sappen"
         }
     },
     "apple": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "apple",
-            "fi": "omena",
-            "nl": "de appel"
+        "en": {
+            "singular": "apple",
+            "plural": "apples"
         },
-        "plural": {
-            "en": "apples",
-            "fi": "omenat",
-            "nl": "de appels"
+        "fi": {
+            "singular": "omena",
+            "plural": "omenat"
+        },
+        "nl": {
+            "singular": "de appel",
+            "plural": "de appels"
         }
     },
     "potato": {
@@ -545,31 +575,35 @@
         "roots": {
             "nl": "apple"
         },
-        "singular": {
-            "en": "potato",
-            "fi": "peruna",
-            "nl": "de aardappel"
+        "en": {
+            "singular": "potato",
+            "plural": "potatoes"
         },
-        "plural": {
-            "en": "potatoes",
-            "fi": "perunat",
-            "nl": "de aardappels"
+        "fi": {
+            "singular": "peruna",
+            "plural": "perunat"
+        },
+        "nl": {
+            "singular": "de aardappel",
+            "plural": "de aardappels"
         }
     },
     "steak": {
         "hypernym": "meat",
-        "singular": {
-            "en": "steak",
-            "fi": "pihvi",
-            "nl": [
+        "en": {
+            "singular": "steak",
+            "plural": "steaks"
+        },
+        "fi": {
+            "singular": "pihvi",
+            "plural": "pihvit"
+        },
+        "nl": {
+            "singular": [
                 "de biefstuk",
                 "de steak"
-            ]
-        },
-        "plural": {
-            "en": "steaks",
-            "fi": "pihvit",
-            "nl": [
+            ],
+            "plural": [
                 "de biefstukken",
                 "de steaks"
             ]
@@ -577,132 +611,152 @@
     },
     "pepper": {
         "hypernym": "food",
-        "singular": {
-            "en": "pepper",
-            "fi": "pippuri",
-            "nl": "de peper"
+        "en": {
+            "singular": "pepper",
+            "plural": "peppers"
         },
-        "plural": {
-            "en": "peppers",
-            "fi": "pippurit",
-            "nl": "de pepers"
+        "fi": {
+            "singular": "pippuri",
+            "plural": "pippurit"
+        },
+        "nl": {
+            "singular": "de peper",
+            "plural": "de pepers"
         }
     },
     "salad": {
         "hypernym": "food",
-        "singular": {
-            "en": "salad",
-            "fi": "salaatti",
-            "nl": "de salade"
+        "en": {
+            "singular": "salad",
+            "plural": "salads"
         },
-        "plural": {
-            "en": "salads",
-            "fi": "salaatit",
-            "nl": "de salades"
+        "fi": {
+            "singular": "salaatti",
+            "plural": "salaatit"
+        },
+        "nl": {
+            "singular": "de salade",
+            "plural": "de salades"
         }
     },
     "cabbage": {
         "hypernym": "vegetable",
-        "singular": {
-            "en": "cabbage",
-            "fi": "kaali",
-            "nl": "de kool"
+        "en": {
+            "singular": "cabbage",
+            "plural": "cabbages"
         },
-        "plural": {
-            "en": "cabbages",
-            "fi": "kaalit",
-            "nl": "de kolen"
+        "fi": {
+            "singular": "kaali",
+            "plural": "kaalit"
+        },
+        "nl": {
+            "singular": "de kool",
+            "plural": "de kolen"
         }
     },
     "mustard": {
         "hypernym": "food",
-        "singular": {
-            "en": "mustard",
-            "fi": "sinappi",
-            "nl": "de mosterd"
+        "en": {
+            "singular": "mustard",
+            "plural": "mustards"
         },
-        "plural": {
-            "en": "mustards",
-            "fi": "sinapit",
-            "nl": "de mosterds"
+        "fi": {
+            "singular": "sinappi",
+            "plural": "sinapit"
+        },
+        "nl": {
+            "singular": "de mosterd",
+            "plural": "de mosterds"
         }
     },
     "lemon": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "lemon",
-            "fi": "sitruuna",
-            "nl": "de citroen"
+        "en": {
+            "singular": "lemon",
+            "plural": "lemons"
         },
-        "plural": {
-            "en": "lemons",
-            "fi": "sitruunat",
-            "nl": "de citroenen"
+        "fi": {
+            "singular": "sitruuna",
+            "plural": "sitruunat"
+        },
+        "nl": {
+            "singular": "de citroen",
+            "plural": "de citroenen"
         }
     },
     "plum": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "plum",
-            "fi": "luumu",
-            "nl": "de pruim"
+        "en": {
+            "singular": "plum",
+            "plural": "plums"
         },
-        "plural": {
-            "en": "plums",
-            "fi": "luumut",
-            "nl": "de pruimen"
+        "fi": {
+            "singular": "luumu",
+            "plural": "luumut"
+        },
+        "nl": {
+            "singular": "de pruim",
+            "plural": "de pruimen"
         }
     },
     "peach": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "peach",
-            "fi": "persikka",
-            "nl": "de perzik"
+        "en": {
+            "singular": "peach",
+            "plural": "peaches"
         },
-        "plural": {
-            "en": "peaches",
-            "fi": "persikat",
-            "nl": "de perziken"
+        "fi": {
+            "singular": "persikka",
+            "plural": "persikat"
+        },
+        "nl": {
+            "singular": "de perzik",
+            "plural": "de perziken"
         }
     },
     "grape": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "grape",
-            "fi": "viinirypäle",
-            "nl": "de druif"
+        "en": {
+            "singular": "grape",
+            "plural": "grapes"
         },
-        "plural": {
-            "en": "grapes",
-            "fi": "viinirypäleet",
-            "nl": "de druiven"
+        "fi": {
+            "singular": "viinirypäle",
+            "plural": "viinirypäleet"
+        },
+        "nl": {
+            "singular": "de druif",
+            "plural": "de druiven"
         }
     },
     "sugar": {
         "hypernym": "food",
-        "singular": {
-            "en": "sugar",
-            "fi": "sokeri",
-            "nl": "de suiker"
+        "en": {
+            "singular": "sugar",
+            "plural": "sugars"
         },
-        "plural": {
-            "en": "sugars",
-            "fi": "sokerit",
-            "nl": "de suikers"
+        "fi": {
+            "singular": "sokeri",
+            "plural": "sokerit"
+        },
+        "nl": {
+            "singular": "de suiker",
+            "plural": "de suikers"
         }
     },
     "salt": {
         "hypernym": "food",
-        "singular": {
-            "en": "salt",
-            "fi": "suola",
-            "nl": "het zout"
+        "en": {
+            "singular": "salt",
+            "plural": "salts"
         },
-        "plural": {
-            "en": "salts",
-            "fi": "suolat",
-            "nl": "de zouten"
+        "fi": {
+            "singular": "suola",
+            "plural": "suolat"
+        },
+        "nl": {
+            "singular": "het zout",
+            "plural": "de zouten"
         }
     },
     "cucumber": {
@@ -746,15 +800,17 @@
     },
     "tomato": {
         "hypernym": "vegetable",
-        "singular": {
-            "en": "tomato",
-            "fi": "tomaatti",
-            "nl": "de tomaat"
+        "en": {
+            "singular": "tomato",
+            "plural": "tomatoes"
         },
-        "plural": {
-            "en": "tomatoes",
-            "fi": "tomaatit",
-            "nl": "de tomaten"
+        "fi": {
+            "singular": "tomaatti",
+            "plural": "tomaatit"
+        },
+        "nl": {
+            "singular": "de tomaat",
+            "plural": "de tomaten"
         }
     },
     "sandwich": {
@@ -769,41 +825,47 @@
                 "ham"
             ]
         },
-        "singular": {
-            "en": "sandwich",
-            "fi": "voileipä",
-            "nl": "de boterham"
+        "en": {
+            "singular": "sandwich",
+            "plural": "sandwiches"
         },
-        "plural": {
-            "en": "sandwiches",
-            "fi": "voileivät",
-            "nl": "de boterhammen"
+        "fi": {
+            "singular": "voileipä",
+            "plural": "voileivät"
+        },
+        "nl": {
+            "singular": "de boterham",
+            "plural": "de boterhammen"
         }
     },
     "nut": {
         "hypernym": "food",
-        "singular": {
-            "en": "nut",
-            "fi": "pähkinä",
-            "nl": "de noot"
+        "en": {
+            "singular": "nut",
+            "plural": "nuts"
         },
-        "plural": {
-            "en": "nuts",
-            "fi": "pähkinät",
-            "nl": "de noten"
+        "fi": {
+            "singular": "pähkinä",
+            "plural": "pähkinät"
+        },
+        "nl": {
+            "singular": "de noot",
+            "plural": "de noten"
         }
     },
     "cherry": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "cherry",
-            "fi": "kirsikka",
-            "nl": "de kers"
+        "en": {
+            "singular": "cherry",
+            "plural": "cherries"
         },
-        "plural": {
-            "en": "cherries",
-            "fi": "kirsikat",
-            "nl": "de kersen"
+        "fi": {
+            "singular": "kirsikka",
+            "plural": "kirsikat"
+        },
+        "nl": {
+            "singular": "de kers",
+            "plural": "de kersen"
         }
     },
     "currant": {
@@ -855,15 +917,17 @@
     },
     "pear": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "pear",
-            "fi": "päärynä",
-            "nl": "de peer"
+        "en": {
+            "singular": "pear",
+            "plural": "pears"
         },
-        "plural": {
-            "en": "pears",
-            "fi": "päärynät",
-            "nl": "de peren"
+        "fi": {
+            "singular": "päärynä",
+            "plural": "päärynät"
+        },
+        "nl": {
+            "singular": "de peer",
+            "plural": "de peren"
         }
     },
     "cauliflower": {
@@ -916,15 +980,17 @@
                 "onion"
             ]
         },
-        "singular": {
-            "en": "garlic",
-            "fi": "valkosipuli;;valko- ('white') + sipuli ('onion')",
-            "nl": "de knoflook"
+        "en": {
+            "singular": "garlic",
+            "plural": "garlics"
         },
-        "plural": {
-            "en": "garlics",
-            "fi": "valkosipulit",
-            "nl": "de knofloken"
+        "fi": {
+            "singular": "valkosipuli;;valko- ('white') + sipuli ('onion')",
+            "plural": "valkosipulit"
+        },
+        "nl": {
+            "singular": "de knoflook",
+            "plural": "de knofloken"
         }
     },
     "paprika": {
@@ -941,15 +1007,17 @@
     },
     "bean": {
         "hypernym": "vegetable",
-        "singular": {
-            "en": "bean",
-            "fi": "papu",
-            "nl": "de boon"
+        "en": {
+            "singular": "bean",
+            "plural": "beans"
         },
-        "plural": {
-            "en": "beans",
-            "fi": "pavut",
-            "nl": "de bonen"
+        "fi": {
+            "singular": "papu",
+            "plural": "pavut"
+        },
+        "nl": {
+            "singular": "de boon",
+            "plural": "de bonen"
         }
     },
     "zucchini": {
@@ -963,15 +1031,17 @@
     },
     "cookie": {
         "hypernym": "food",
-        "singular": {
-            "en": "cookie",
-            "fi": "keksi",
-            "nl": "het koekje"
+        "en": {
+            "singular": "cookie",
+            "plural": "cookies"
         },
-        "plural": {
-            "en": "cookies",
-            "fi": "keksit",
-            "nl": "de koekjes"
+        "fi": {
+            "singular": "keksi",
+            "plural": "keksit"
+        },
+        "nl": {
+            "singular": "het koekje",
+            "plural": "de koekjes"
         }
     },
     "pie": {
@@ -1029,15 +1099,17 @@
     },
     "banana": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "banana",
-            "fi": "banaani",
-            "nl": "de banaan"
+        "en": {
+            "singular": "banana",
+            "plural": "bananas"
         },
-        "plural": {
-            "en": "bananas",
-            "fi": "banaanit",
-            "nl": "de bananen"
+        "fi": {
+            "singular": "banaani",
+            "plural": "banaanit"
+        },
+        "nl": {
+            "singular": "de banaan",
+            "plural": "de bananen"
         }
     },
     "pineapple": {
@@ -1045,41 +1117,47 @@
         "roots": {
             "en": "apple"
         },
-        "singular": {
-            "en": "pineapple",
-            "fi": "ananas",
-            "nl": "de ananas"
+        "en": {
+            "singular": "pineapple",
+            "plural": "pineapples"
         },
-        "plural": {
-            "en": "pineapples",
-            "fi": "ananakset",
-            "nl": "de ananassen"
+        "fi": {
+            "singular": "ananas",
+            "plural": "ananakset"
+        },
+        "nl": {
+            "singular": "de ananas",
+            "plural": "de ananassen"
         }
     },
     "melon": {
         "hypernym": "fruit",
-        "singular": {
-            "en": "melon",
-            "fi": "meloni",
-            "nl": "de meloen"
+        "en": {
+            "singular": "melon",
+            "plural": "melons"
         },
-        "plural": {
-            "en": "melons",
-            "fi": "melonit",
-            "nl": "de meloenen"
+        "fi": {
+            "singular": "meloni",
+            "plural": "melonit"
+        },
+        "nl": {
+            "singular": "de meloen",
+            "plural": "de meloenen"
         }
     },
     "cocktail": {
         "hypernym": "drink",
-        "singular": {
-            "en": "cocktail",
-            "fi": "cocktail",
-            "nl": "de cocktail"
+        "en": {
+            "singular": "cocktail",
+            "plural": "cocktails"
         },
-        "plural": {
-            "en": "cocktails",
-            "fi": "cocktailit",
-            "nl": "de cocktails"
+        "fi": {
+            "singular": "cocktail",
+            "plural": "cocktailit"
+        },
+        "nl": {
+            "singular": "de cocktail",
+            "plural": "de cocktails"
         }
     },
     "tray": {
@@ -1088,27 +1166,31 @@
         "nl": "het dienblad"
     },
     "fork": {
-        "singular": {
-            "en": "fork",
-            "fi": "haarukka",
-            "nl": "de vork"
+        "en": {
+            "singular": "fork",
+            "plural": "forks"
         },
-        "plural": {
-            "en": "forks",
-            "fi": "haarukat",
-            "nl": "de vorken"
+        "fi": {
+            "singular": "haarukka",
+            "plural": "haarukat"
+        },
+        "nl": {
+            "singular": "de vork",
+            "plural": "de vorken"
         }
     },
     "knife": {
-        "singular": {
-            "en": "knife",
-            "fi": "veitsi",
-            "nl": "het mes"
+        "en": {
+            "singular": "knife",
+            "plural": "knives"
         },
-        "plural": {
-            "en": "knives",
-            "fi": "veitset",
-            "nl": "de messen"
+        "fi": {
+            "singular": "veitsi",
+            "plural": "veitset"
+        },
+        "nl": {
+            "singular": "het mes",
+            "plural": "de messen"
         }
     },
     "spoon": {
@@ -1117,15 +1199,17 @@
         "nl": "de lepel"
     },
     "glass": {
-        "singular": {
-            "en": "glass",
-            "fi": "lasi",
-            "nl": "het glas"
+        "en": {
+            "singular": "glass",
+            "plural": "glasses"
         },
-        "plural": {
-            "en": "glasses",
-            "fi": "lasit",
-            "nl": "de glazen"
+        "fi": {
+            "singular": "lasi",
+            "plural": "lasit"
+        },
+        "nl": {
+            "singular": "het glas",
+            "plural": "de glazen"
         }
     },
     "mug": {
@@ -1144,15 +1228,17 @@
         "nl": "de fles"
     },
     "plate": {
-        "singular": {
-            "en": "plate",
-            "fi": "lautanen",
-            "nl": "het bord"
+        "en": {
+            "singular": "plate",
+            "plural": "plates"
         },
-        "plural": {
-            "en": "plates",
-            "fi": "lautaset",
-            "nl": "de borden"
+        "fi": {
+            "singular": "lautanen",
+            "plural": "lautaset"
+        },
+        "nl": {
+            "singular": "het bord",
+            "plural": "de borden"
         }
     },
     "jug": {

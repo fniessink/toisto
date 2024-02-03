@@ -1,14 +1,16 @@
 {
     "phrase": {
-        "singular": {
-            "en": "phrase",
-            "fi": "fraasi",
-            "nl": "de frase"
+        "en": {
+            "singular": "phrase",
+            "plural": "phrases"
         },
-        "plural": {
-            "en": "phrases",
-            "fi": "fraasit",
-            "nl": "de frasen|de frases"
+        "fi": {
+            "singular": "fraasi",
+            "plural": "fraasit"
+        },
+        "nl": {
+            "singular": "de frase",
+            "plural": "de frasen|de frases"
         }
     }
 }

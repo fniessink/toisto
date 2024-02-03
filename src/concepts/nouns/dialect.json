@@ -1,15 +1,17 @@
 {
     "dialect": {
         "involves": "language",
-        "singular": {
-            "en": "dialect",
-            "fi": "murre",
-            "nl": "het dialect"
+        "en": {
+            "singular": "dialect",
+            "plural": "dialects"
         },
-        "plural": {
-            "en": "dialects",
-            "fi": "murteet",
-            "nl": "de dialecten"
+        "fi": {
+            "singular": "murre",
+            "plural": "murteet"
+        },
+        "nl": {
+            "singular": "het dialect",
+            "plural": "de dialecten"
         }
     }
 }

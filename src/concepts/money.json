@@ -32,28 +32,32 @@
         "nl": "de rekening"
     },
     "price": {
-        "singular": {
-            "en": "price",
-            "fi": "hinta",
-            "nl": "de prijs"
+        "en": {
+            "singular": "price",
+            "plural": "prices"
         },
-        "plural": {
-            "en": "prices",
-            "fi": "hinnat",
-            "nl": "de prijzen"
+        "fi": {
+            "singular": "hinta",
+            "plural": "hinnat"
+        },
+        "nl": {
+            "singular": "de prijs",
+            "plural": "de prijzen"
         }
     },
     "cent": {
         "hypernym": "money",
-        "singular": {
-            "en": "cent",
-            "fi": "sentti",
-            "nl": "de cent"
+        "en": {
+            "singular": "cent",
+            "plural": "cents"
         },
-        "plural": {
-            "en": "cents",
-            "fi": "sentit",
-            "nl": "de centen"
+        "fi": {
+            "singular": "sentti",
+            "plural": "sentit"
+        },
+        "nl": {
+            "singular": "de cent",
+            "plural": "de centen"
         }
     },
     "banknote": {

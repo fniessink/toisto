@@ -1,18 +1,20 @@
 {
     "gym": {
-        "singular": {
-            "en": "gym",
-            "fi": "sali",
-            "nl": [
+        "en": {
+            "singular": "gym",
+            "plural": "gyms"
+        },
+        "fi": {
+            "singular": "sali",
+            "plural": "salit"
+        },
+        "nl": {
+            "singular": [
                 "de gym",
                 "de sportschool",
                 "de fitnessruimte"
-            ]
-        },
-        "plural": {
-            "en": "gyms",
-            "fi": "salit",
-            "nl": [
+            ],
+            "plural": [
                 "de gyms",
                 "de sportscholen",
                 "de fitnessruimtes"

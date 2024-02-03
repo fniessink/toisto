@@ -1,15 +1,17 @@
 {
     "leg": {
         "holonym": "body",
-        "singular": {
-            "en": "leg",
-            "fi": "jalka;upper part",
-            "nl": "het been"
+        "en": {
+            "singular": "leg",
+            "plural": "legs"
         },
-        "plural": {
-            "en": "legs",
-            "fi": "jalat;upper part",
-            "nl": "de benen"
+        "fi": {
+            "singular": "jalka;upper part",
+            "plural": "jalat;upper part"
+        },
+        "nl": {
+            "singular": "het been",
+            "plural": "de benen"
         }
     }
 }

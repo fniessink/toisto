@@ -1,14 +1,16 @@
 {
     "metre": {
-        "singular": {
-            "en": "metre|meter",
-            "fi": "metri",
-            "nl": "de meter"
+        "en": {
+            "singular": "metre|meter",
+            "plural": "metres|meters"
         },
-        "plural": {
-            "en": "metres|meters",
-            "fi": "metrit",
-            "nl": "de meters"
+        "fi": {
+            "singular": "metri",
+            "plural": "metrit"
+        },
+        "nl": {
+            "singular": "de meter",
+            "plural": "de meters"
         }
     },
     "square metre": {

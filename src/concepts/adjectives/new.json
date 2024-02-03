@@ -1,20 +1,20 @@
 {
     "new": {
         "antonym": "old",
-        "positive degree": {
-            "en": "new",
-            "fi": "uusi",
-            "nl": "nieuw"
+        "en": {
+            "positive degree": "new",
+            "comparative degree": "newer",
+            "superlative degree": "newest"
         },
-        "comparative degree": {
-            "en": "newer",
-            "fi": "uudempi",
-            "nl": "nieuwer"
+        "fi": {
+            "positive degree": "uusi",
+            "comparative degree": "uudempi",
+            "superlative degree": "uusin"
         },
-        "superlative degree": {
-            "en": "newest",
-            "fi": "uusin",
-            "nl": "nieuwst"
+        "nl": {
+            "positive degree": "nieuw",
+            "comparative degree": "nieuwer",
+            "superlative degree": "nieuwst"
         }
     }
 }

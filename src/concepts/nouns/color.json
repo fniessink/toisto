@@ -1,14 +1,16 @@
 {
     "color": {
-        "singular": {
-            "en": "color|colour",
-            "fi": "väri",
-            "nl": "de kleur"
+        "en": {
+            "singular": "color|colour",
+            "plural": "colors|colours"
         },
-        "plural": {
-            "en": "colors|colours",
-            "fi": "värit",
-            "nl": "de kleuren"
+        "fi": {
+            "singular": "väri",
+            "plural": "värit"
+        },
+        "nl": {
+            "singular": "de kleur",
+            "plural": "de kleuren"
         }
     }
 }

@@ -1,14 +1,16 @@
 {
     "customer": {
-        "singular": {
-            "en": "customer",
-            "fi": "asiakas",
-            "nl": "de klant"
+        "en": {
+            "singular": "customer",
+            "plural": "customers"
         },
-        "plural": {
-            "en": "customers",
-            "fi": "asiakkaat",
-            "nl": "de klanten"
+        "fi": {
+            "singular": "asiakas",
+            "plural": "asiakkaat"
+        },
+        "nl": {
+            "singular": "de klant",
+            "plural": "de klanten"
         }
     }
 }

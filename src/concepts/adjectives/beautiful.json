@@ -2,20 +2,20 @@
     "beautiful": {
         "antonym": "ugly",
         "example": "you have beautiful eyes",
-        "positive degree": {
-            "en": "beautiful",
-            "fi": "kaunis",
-            "nl": "mooi"
+        "en": {
+            "positive degree": "beautiful",
+            "comparative degree": "more beautiful",
+            "superlative degree": "most beautiful"
         },
-        "comparative degree": {
-            "en": "more beautiful",
-            "fi": "kauniimpi",
-            "nl": "mooier"
+        "fi": {
+            "positive degree": "kaunis",
+            "comparative degree": "kauniimpi",
+            "superlative degree": "kaunein"
         },
-        "superlative degree": {
-            "en": "most beautiful",
-            "fi": "kaunein",
-            "nl": "mooist"
+        "nl": {
+            "positive degree": "mooi",
+            "comparative degree": "mooier",
+            "superlative degree": "mooist"
         }
     }
 }

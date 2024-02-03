@@ -1,14 +1,16 @@
 {
     "chair": {
-        "singular": {
-            "en": "chair",
-            "fi": "tuoli",
-            "nl": "de stoel"
+        "en": {
+            "singular": "chair",
+            "plural": "chairs"
         },
-        "plural": {
-            "en": "chairs",
-            "fi": "tuolit",
-            "nl": "de stoelen"
+        "fi": {
+            "singular": "tuoli",
+            "plural": "tuolit"
+        },
+        "nl": {
+            "singular": "de stoel",
+            "plural": "de stoelen"
         }
     },
     "office chair": {

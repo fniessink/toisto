@@ -1,15 +1,14 @@
 {
     "SM2.6": {
-        "fi": "(SM2.6)",
         "involves": [
             "SM2.6-sanasto",
             "SM2.6-teksti",
             "SM2.6-puhutaan",
             "SM2.6-kielioppi"
-        ]
+        ],
+        "fi": "(SM2.6)"
     },
     "SM2.6-sanasto": {
-        "fi": "(SM2.6-sanasto)",
         "involves": [
             "birthday",
             "boyfriend",
@@ -62,10 +61,10 @@
             "We spend Easter at home",
             "wedding ring",
             "wife"
-        ]
+        ],
+        "fi": "(SM2.6-sanasto)"
     },
     "SM2.6-teksti": {
-        "fi": "(SM2.6-teksti)",
         "involves": [
             "additionally",
             "best man",
@@ -130,10 +129,10 @@
             "wedding couple",
             "wedding dress",
             "wedding waltz"
-        ]
+        ],
+        "fi": "(SM2.6-teksti)"
     },
     "SM2.6-puhutaan": {
-        "fi": "(SM2.6-puhutaan)",
         "involves": [
             "a great deal",
             "accidentally (by mistake)",
@@ -173,10 +172,10 @@
             "What was it again?",
             "whole",
             "yes"
-        ]
+        ],
+        "fi": "(SM2.6-puhutaan)"
     },
     "SM2.6-kielioppi": {
-        "fi": "(SM2.6-kielioppi)",
         "involves": [
             "ability",
             "beauty",
@@ -210,6 +209,7 @@
             "truth",
             "wealth",
             "youth"
-        ]
+        ],
+        "fi": "(SM2.6-kielioppi)"
     }
 }

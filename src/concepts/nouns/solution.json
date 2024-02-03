@@ -1,14 +1,16 @@
 {
     "solution": {
-        "singular": {
-            "en": "solution",
-            "fi": "ratkaisu",
-            "nl": "de oplossing"
+        "en": {
+            "singular": "solution",
+            "plural": "solutions"
         },
-        "plural": {
-            "en": "solutions",
-            "fi": "ratkaisut",
-            "nl": "de oplossingen"
+        "fi": {
+            "singular": "ratkaisu",
+            "plural": "ratkaisut"
+        },
+        "nl": {
+            "singular": "de oplossing",
+            "plural": "de oplossingen"
         }
     }
 }
