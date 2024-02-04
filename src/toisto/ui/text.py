@@ -8,7 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 
 from ..metadata import CHANGELOG_URL, NAME, VERSION
-from ..model.language.label import Label
+from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
 from ..model.quiz.quiz import Quiz
 from .dictionary import DICTIONARY_URL, linkify_and_enumerate
 from .diff import colored_diff
@@ -58,7 +58,7 @@ INCORRECT: Final = "❌ Incorrect. "
 
 def feedback_correct(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about a correct result."""
-    return CORRECT + meaning(quiz) + other_answers(guess, quiz) + answer_notes(quiz)
+    return CORRECT + meaning(quiz) + other_answers(guess, quiz) + answer_notes(quiz) + examples(quiz)
 
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
@@ -92,6 +92,14 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
     return ""
 
 
+def examples(quiz: Quiz) -> str:
+    """Return the quiz's examples, if any."""
+    examples: list[Label] = []
+    for example in quiz.concept.examples:
+        examples.extend(example.labels(quiz.question_language))
+    return bulleted_list("Example", examples)
+
+
 def answer_notes(quiz: Quiz) -> str:
     """Return the answer notes, if any."""
     return bulleted_list("Note", quiz.answer_notes)
@@ -112,8 +120,9 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None) 
 
 def bulleted_list(label: str, items: Sequence[str], style: str = SECONDARY, bullet: str = "-") -> str:
     """Create a bulleted list of the items."""
+    items = [item if item[-1] in END_OF_SENTENCE_PUNCTUATION else f"{item}." for item in items]
     if len(items) == 0:
         return ""
     if len(items) == 1:
-        return f"[{style}]{label}: {items[0]}.[/{style}]\n"
-    return "\n".join([f"[{SECONDARY}]{label}s:"] + [f"{bullet} {item}." for item in items] + [f"[/{SECONDARY}]\n"])
+        return f"[{style}]{label}: {items[0]}[/{style}]\n"
+    return f"[{style}]{label}s:\n" + "\n".join([f"{bullet} {item}" for item in items]) + f"[/{style}]\n"

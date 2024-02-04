@@ -25,6 +25,7 @@
     },
     "building": {
         "singular": {
+            "example": "that building is a church",
             "en": "building",
             "fi": "rakennus",
             "nl": "het gebouw"
@@ -106,6 +107,7 @@
     "church": {
         "hypernym": "building",
         "singular": {
+            "example": "that building is a church",
             "en": "church",
             "fi": "kirkko",
             "nl": "de kerk"
@@ -135,6 +137,7 @@
             "fi": "book"
         },
         "singular": {
+            "example": "where is the library",
             "en": "library",
             "fi": "kirjasto",
             "nl": "de bibliotheek"
@@ -186,6 +189,7 @@
     },
     "office": {
         "singular": {
+            "example": "I am in the office",
             "en": "office",
             "fi": "toimisto",
             "nl": "het kantoor"
@@ -309,6 +313,7 @@
         }
     },
     "street": {
+        "exaple": "my house is in this street",
         "singular": {
             "en": "street",
             "fi": "katu",
@@ -418,6 +423,7 @@
     },
     "square": {
         "singular": {
+            "example": "there is a christmas tree on the square",
             "en": "square",
             "fi": "aukio",
             "nl": "het plein"

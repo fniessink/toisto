@@ -6,6 +6,7 @@
     },
     "forest": {
         "singular": {
+            "example": "we walk in the forest",
             "en": [
                 "forest",
                 "wood"
@@ -192,21 +193,28 @@
         }
     },
     "north": {
+        "example": [
+            "it is cold in the north",
+            "she is from the north"
+        ],
         "en": "north|the North",
         "fi": "pohjoinen",
         "nl": "het noorden"
     },
     "east": {
+        "example": "the city is in the east",
         "en": "east|the East",
         "fi": "itä",
         "nl": "het oosten"
     },
     "south": {
+        "example": "it is warm in the south",
         "en": "south|the South",
         "fi": "etelä",
         "nl": "het zuiden"
     },
     "west": {
+        "example": "they live in the west",
         "en": "west|the West",
         "fi": "länsi",
         "nl": "het westen"

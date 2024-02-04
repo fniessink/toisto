@@ -27,8 +27,8 @@ class Progress:
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
 
     def mark_correct_answer(self, quiz: Quiz) -> None:
-        """Increase the retention of the quiz."""
-        for related_quiz in self.quizzes.by_concept(quiz.concept):
+        """Increase the retention of the quiz, and pause related quizzes for a little while."""
+        for related_quiz in self.quizzes.related_quizzes(quiz):
             retention = self.__progress_dict.setdefault(related_quiz.key, Retention())
             if related_quiz == quiz:
                 retention.increase()

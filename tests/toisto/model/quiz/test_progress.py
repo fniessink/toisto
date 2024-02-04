@@ -126,13 +126,15 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         super().setUp()
-        concept = self.create_concept("english", dict(fi="englanti", nl="Engels"))
-        self.quizzes = create_quizzes(self.fi, self.nl, concept)
+        example = self.create_concept("example", dict(fi="Puhun englantia"))
+        example_quizzes = create_quizzes(self.fi, self.nl, example)
+        concept = self.create_concept("english", dict(example="example", fi="englanti", nl="Engels"))
+        self.concept_quizzes = create_quizzes(self.fi, self.nl, concept)
+        self.quizzes = Quizzes(example_quizzes | self.concept_quizzes)
         self.progress = Progress({}, self.fi, self.quizzes)
 
     def test_update_progress_correct(self):
-        """Test that the progress of a quiz can be updated."""
-        quizzes = list(self.quizzes)
-        self.progress.mark_correct_answer(quizzes[0])
-        for quiz in quizzes[1:]:
-            self.assertIsNotNone(self.progress.get_retention(quiz).skip_until)
+        """Test that related quizzes are paused, including quizzes for examples."""
+        self.progress.mark_correct_answer(next(iter(self.concept_quizzes)))
+        for quiz in self.quizzes:
+            self.assertIsNotNone(self.progress.get_retention(quiz).skip_until, quiz)

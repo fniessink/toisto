@@ -13,7 +13,7 @@ from .label import Labels, label_factory, meaning_factory
 
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-ConceptRelation = Literal["antonym", "answer", "answer-only", "holonym", "hypernym", "involves", "roots"]
+ConceptRelation = Literal["antonym", "answer", "answer-only", "example", "holonym", "hypernym", "involves", "roots"]
 LeafConceptDict = dict[Language | ConceptRelation, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
 CompositeConceptDict = dict[GrammaticalCategory | ConceptRelation, Union["CompositeConceptDict", LeafConceptDict, bool]]
 ConceptDict = LeafConceptDict | CompositeConceptDict
@@ -64,6 +64,7 @@ class ConceptFactory:
             self._related_concept_ids("holonym"),
             self._related_concept_ids("involves"),
             self._related_concept_ids("answer"),
+            self._related_concept_ids("example"),
         )
 
     def _answer_only(self) -> bool:
