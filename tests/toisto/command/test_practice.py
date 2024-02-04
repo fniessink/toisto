@@ -1,13 +1,10 @@
 """Unit tests for the practice command."""
 
 from configparser import ConfigParser
-from typing import cast
 from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
 from toisto.model.language import Language
-from toisto.model.language.concept import ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -26,8 +23,9 @@ class PracticeTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
-        self.concept = create_concept(ConceptId("hi"), cast(ConceptDict, dict(fi="Terve", nl="Hoi")))
-        self.quizzes = create_quizzes(Language("fi"), Language("nl"), self.concept).by_quiz_type("read")
+        super().setUp()
+        self.concept = self.create_concept("hi", dict(fi="Terve", nl="Hoi"))
+        self.quizzes = create_quizzes(self.fi, self.nl, self.concept).by_quiz_type("read")
 
     def practice(self, quizzes: Quizzes) -> Mock:
         """Run the practice command and return the patch print statement."""
@@ -77,8 +75,8 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
-        concept = create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
-        quizzes = create_quizzes("fi", "fi", concept).by_quiz_type("pluralize")
+        concept = self.create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
+        quizzes = create_quizzes(self.fi, self.fi, concept).by_quiz_type("pluralize")
         patched_print = self.practice(quizzes)
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
 
@@ -98,14 +96,14 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quizzes = create_quizzes("fi", "fi", self.concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.fi, self.fi, self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
         self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.fi, self.nl, self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
         expected_text = f'{CORRECT}[{SECONDARY}]Meaning "{linkify("Hoi")}".[/{SECONDARY}]\n'
         self.assertIn(call(expected_text), patched_print.call_args_list)
@@ -113,11 +111,11 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="talot\n"))
     def test_quiz_with_multiple_meanings(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        concept = create_concept(
+        concept = self.create_concept(
             "house",
             dict(singular=dict(fi="talo", nl="huis"), plural=dict(fi="talot", nl="huizen")),
         )
-        quizzes = create_quizzes("fi", "nl", concept).by_quiz_type("pluralize")
+        quizzes = create_quizzes(self.fi, self.nl, concept).by_quiz_type("pluralize")
         patched_print = self.practice(Quizzes(quizzes))
         expected_call = call(
             f'{CORRECT}[{SECONDARY}]Meaning "{linkify("huis")}", respectively "{linkify("huizen")}".[/{SECONDARY}]\n',

@@ -2,11 +2,8 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
-from typing import cast
 from unittest.mock import Mock, patch
 
-from toisto.model.language.concept import ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.persistence.loader import Loader
 
 from ...base import ToistoTestCase
@@ -17,6 +14,7 @@ class LoadConceptsTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Set up the test fixtures."""
+        super().setUp()
         self.loader = Loader(ArgumentParser())
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
@@ -52,5 +50,5 @@ class LoadConceptsTest(ToistoTestCase):
         path_open.return_value.__enter__.return_value.read.side_effect = [
             '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
         ]
-        concept = create_concept(ConceptId("concept_id"), cast(ConceptDict, {"fi": "Label1", "nl": "Label2"}))
+        concept = self.create_concept("concept_id", {self.fi: "Label1", self.nl: "Label2"})
         self.assertEqual({concept}, self.loader.load([Path("filename")]))
