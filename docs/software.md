@@ -594,9 +594,9 @@ Abbreviations can be specified as follows:
 }
 ```
 
-### Concept relationships
+## Concept relationships
 
-#### Compound concepts
+### Compound concepts
 
 When a concept is a compound of one or more other concepts, this can be specified with the `roots` relation. Toisto will only quiz a *compound* concept when all *root* concepts have been quizzed. The `roots` relationship can be specified by adding a `roots` key to the concept with a list of concept identifiers as value:
 
@@ -652,7 +652,7 @@ If the root concepts differ per language, an object with languages as keys can b
 
 If the plural of a compound word is easily derived from the plural of the last root, built-in JSON files may omit the plural of the compound word.
 
-#### Antonyms
+### Antonyms
 
 When one concept is an antonym (opposite) of another concept, this can be specified with the `antonym` relation. Toisto will add quizzes to ask users for the antonym of concepts in their target language.
 
@@ -673,7 +673,7 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 
 If a concept has more than one antonym (for example, "large" and "big" are both antonyms of "small"), the `antonym` value can be a list of concept identifiers instead of a string.
 
-#### Hypernyms
+### Hypernyms
 
 > [!NOTE]
 > Concept X is a hypernym of concept Y if concept Y is a (kind of) X. For example, red is a color, so the concept "color" is a hypernym of the concept "red". The reverse relation is called hyponym, so "red" is a hyponym of "color".
@@ -696,7 +696,7 @@ When one concept is a hypernym of another concept (and conversely the other conc
 
 If a concept has more than one hypernym (for example, "pet" and "mammal" are both hypernyms of "dog"), the `hypernym` value can be a list of concept identifiers instead of a string.
 
-#### Holonyms
+### Holonyms
 
 > [!NOTE]
 > Concept X is a holonym of concept Y if concept Y is a part of X. For example, cars have wheels, so the concept "car" is a holonym of the concept "wheel". The reverse relation is called meronym, so "wheel" is a meronym of "car".
@@ -719,7 +719,7 @@ When one concept is a holonym of another concept (and conversely the other conce
 
 If a concept has more than one holonym (for example, "chair" and "table" are both holonyms of "leg"), the `holonym` value can be a list of concept identifiers instead of a string.
 
-#### Concept involvement
+### Concept involvement
 
 When one concept involves another concept, this can be specified with the `involves` relation. Toisto will derive the inverse relation automatically. Toisto uses the involvement relations to decide with related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept "to paint"`, would select "to paint", "painter", and "painting" to practice.
 
@@ -746,7 +746,7 @@ When one concept involves another concept, this can be specified with the `invol
 
 If a concept involves just one other concept (for example, "to save" involves only "money"), the `involves` value can be a single concept identifier instead of a list of concept identifiers.
 
-#### Questions/answers
+### Questions/answers
 
 When one concept is a question and the other concept is the answer, this can be specified using the `answer` relation. Toisto will add a quiz, asking the user to answer the question in their target language.
 
