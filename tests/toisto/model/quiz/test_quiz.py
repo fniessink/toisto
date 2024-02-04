@@ -1,9 +1,7 @@
 """Quiz unit tests."""
 
-from typing import cast, get_args
+from typing import get_args
 
-from toisto.model.language.concept import ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import QuizType
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
@@ -16,8 +14,9 @@ class QuizTestCase(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.concept = create_concept(ConceptId("english"), cast(ConceptDict, {}))
-        self.quiz = self.create_quiz(self.concept, "fi", "nl", "Englanti", ["Engels"])
+        super().setUp()
+        self.concept = self.create_concept("english", {})
+        self.quiz = self.create_quiz(self.concept, self.fi, self.nl, "Englanti", ["Engels"])
 
 
 class QuizTest(QuizTestCase):
@@ -44,26 +43,28 @@ class QuizTest(QuizTestCase):
 
     def test_get_answer(self):
         """Test that the answer is returned."""
-        self.assertEqual(Label("nl", "Engels"), self.quiz.answer)
+        self.assertEqual(Label(self.nl, "Engels"), self.quiz.answer)
 
     def test_get_first_answer(self):
         """Test that the first answer is returned when there are multiple."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén"])
-        self.assertEqual(Label("nl", "Een"), quiz.answer)
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén"])
+        self.assertEqual(Label(self.nl, "Een"), quiz.answer)
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"])
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén;note should be ignored"])
         self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the quiz type is dictate."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een", "Eén;note should be ignored"], "dictate")
+        quiz = self.create_quiz(
+            self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén;note should be ignored"], "dictate"
+        )
         self.assertEqual((), quiz.other_answers("Een"))
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers do not include generated spelling alternatives."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "talo", ["het huis"])
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "talo", ["het huis"])
         self.assertEqual((), quiz.other_answers("het huis"))
 
     def test_instructions(self):
@@ -100,7 +101,7 @@ class QuizTest(QuizTestCase):
             "Give the [underline]full form[/underline] in",
         ]
         for expected_instruction, quiz_type in zip(expected_instructions, get_args(QuizType), strict=True):
-            quiz = self.create_quiz(self.concept, "fi", "fi", "Hei", ["Hei hei"], (quiz_type,))
+            quiz = self.create_quiz(self.concept, self.fi, self.fi, "Hei", ["Hei hei"], (quiz_type,))
             self.assertEqual(expected_instruction + " Finnish", quiz.instruction)
 
     def test_note(self):
@@ -111,50 +112,52 @@ class QuizTest(QuizTestCase):
             "You are;;post quiz note",
             "You are;;post quiz note 1;post quiz note 2",
         ):
-            quiz = self.create_quiz(self.concept, "en", "nl", question, ["Jij bent|Je bent"])
+            quiz = self.create_quiz(self.concept, self.en, self.nl, question, ["Jij bent|Je bent"])
             hint = " (singular)" if "singular" in question else ""
             self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
-            self.assertEqual(Label("en", "You are"), quiz.question)
+            self.assertEqual(Label(self.en, "You are"), quiz.question)
 
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown if the question and answer languages are the same."""
-        quiz = self.create_quiz(self.concept, "fi", "fi", "Hän on;female", ["He ovat"], "pluralize")
+        quiz = self.create_quiz(self.concept, self.fi, self.fi, "Hän on;female", ["He ovat"], "pluralize")
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_listen(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
-        quiz = self.create_quiz(self.concept, "fi", "fi", "Suomi;country", ["Finland"], "dictate")
+        quiz = self.create_quiz(self.concept, self.fi, self.fi, "Suomi;country", ["Finland"], "dictate")
         self.assertEqual("Listen and write in Finnish (country)", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is answer."""
-        quiz = self.create_quiz(self.concept, "fi", "fi", "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer")
+        quiz = self.create_quiz(
+            self.concept, self.fi, self.fi, "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer"
+        )
         self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction)
 
     def test_question_note_is_ignored_in_answer(self):
         """Test that a note in the answer is ignored."""
-        quiz = self.create_quiz(self.concept, "nl", "en", "Jij bent", ["You are;singular"])
-        self.assertEqual(Label("en", "You are"), quiz.answer)
+        quiz = self.create_quiz(self.concept, self.nl, self.en, "Jij bent", ["You are;singular"])
+        self.assertEqual(Label(self.en, "You are"), quiz.answer)
 
     def test_all_answer_notes_are_shown(self):
         """Test that all answer notes are shown."""
         answers = ["want;;explain want", "omdat;;explain omdat"]
-        quiz = self.create_quiz(self.concept, "en", "nl", "because", answers, "write")
+        quiz = self.create_quiz(self.concept, self.en, self.nl, "because", answers, "write")
         self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
 
     def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dictate(self):
         """Test that colloquial labels get an automatic note."""
-        quiz = self.create_quiz(self.concept, "fi", "fi", "seittemän*", ["seitsemän"], "dictate")
+        quiz = self.create_quiz(self.concept, self.fi, self.fi, "seittemän*", ["seitsemän"], "dictate")
         self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
 
     def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_interpret(self):
         """Test that colloquial labels get an automatic note."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "seittemän*", ["zeven"], "interpret")
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "seittemän*", ["zeven"], "interpret")
         self.assertEqual("Listen to the colloquial Finnish and write in Dutch", quiz.instruction)
 
     def test_sentences_get_an_automatic_note_when_quiz_type_is_listen(self):
         """Test that sentences get an automatic note when the quiz type is a listen quiz."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Terve!", ["Hallo!"], "interpret")
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Terve!", ["Hallo!"], "interpret")
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
 
@@ -163,46 +166,46 @@ class QuizSpellingAlternativesTests(QuizTestCase):
 
     def test_spelling_alternative_of_answer(self):
         """Test that a quiz can deal with alternative spellings of answers."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén"])
-        self.assertEqual(Label("nl", "Een"), quiz.answer)
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een|Eén"])
+        self.assertEqual(Label(self.nl, "Een"), quiz.answer)
 
     def test_spelling_alternative_of_question(self):
         """Test that a quiz can deal with alternative spellings of the question."""
-        quiz = self.create_quiz(self.concept, "nl", "fi", "Een|Eén", ["Yksi"])
-        self.assertEqual(Label("nl", "Een"), quiz.question)
+        quiz = self.create_quiz(self.concept, self.nl, self.fi, "Een|Eén", ["Yksi"])
+        self.assertEqual(Label(self.nl, "Een"), quiz.question)
 
     def test_spelling_alternative_is_correct(self):
         """Test that an answer that matches a spelling alternative is correct."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een|Eén", "één"])
         for alternative in ("Een", "Eén", "één"):
-            self.assertTrue(quiz.is_correct(Label("nl", alternative)))
+            self.assertTrue(quiz.is_correct(Label(self.nl, alternative)))
 
     def test_other_answers_with_spelling_alternatives(self):
         """Test the spelling alternatives are returned as other answers."""
-        quiz = self.create_quiz(self.concept, "fi", "nl", "Yksi", ["Een|Eén", "één"])
+        quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een|Eén", "één"])
         alternatives = ("Een", "Eén", "één")
         for alternative in alternatives:
             other_answers = list(alternatives)
             other_answers.remove(alternative)
-            self.assertEqual(tuple(Label("nl", answer) for answer in other_answers), quiz.other_answers(alternative))
+            self.assertEqual(tuple(Label(self.nl, answer) for answer in other_answers), quiz.other_answers(alternative))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""
-        load_spelling_alternatives("en", "nl")
-        quiz = self.create_quiz(self.concept, "nl", "en", "Het is waar", ["It is true"])
+        load_spelling_alternatives(self.en, self.nl)
+        quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is waar", ["It is true"])
         self.assertTrue(quiz.is_correct("It's true"))
-        quiz = self.create_quiz(self.concept, "nl", "en", "Het is.", ["It is."])
+        quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is.", ["It is."])
         self.assertTrue(quiz.is_correct("It's."))
-        quiz = self.create_quiz(self.concept, "nl", "en", "Ik ben Alice.", ["I am Alice."])
+        quiz = self.create_quiz(self.concept, self.nl, self.en, "Ik ben Alice.", ["I am Alice."])
         self.assertTrue(quiz.is_correct("I'm Alice."))
-        quiz = self.create_quiz(self.concept, "nl", "en", "Ik overval.", ["I ambush."])
+        quiz = self.create_quiz(self.concept, self.nl, self.en, "Ik overval.", ["I ambush."])
         self.assertFalse(quiz.is_correct("I'mbush."))
-        quiz = self.create_quiz(self.concept, "en", "nl", "house", ["het huis"])
+        quiz = self.create_quiz(self.concept, self.en, self.nl, "house", ["het huis"])
         self.assertTrue(quiz.is_correct("huis"))
-        load_spelling_alternatives("fi", "en")
-        quiz = self.create_quiz(self.concept, "en", "fi", "I am", ["minä olen"])
+        load_spelling_alternatives(self.fi, self.en)
+        quiz = self.create_quiz(self.concept, self.en, self.fi, "I am", ["minä olen"])
         self.assertTrue(quiz.is_correct("olen"))
-        quiz = self.create_quiz(self.concept, "en", "fi", "I am Alice.", ["Minä olen Alice."])
+        quiz = self.create_quiz(self.concept, self.en, self.fi, "I am Alice.", ["Minä olen Alice."])
         self.assertTrue(quiz.is_correct("Olen Alice."))
 
 
@@ -221,8 +224,8 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_with_different_languages(self):
         """Test that quizzes are not equal if only their languages differ."""
-        self.assertNotEqual(self.copy_quiz(self.quiz, question_language="nl"), self.quiz)
-        self.assertNotEqual(self.copy_quiz(self.quiz, answer_language="en"), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, question_language=self.nl), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, answer_language=self.en), self.quiz)
 
     def test_not_equal_with_different_questions(self):
         """Test that quizzes are not equal if only their questions differ."""

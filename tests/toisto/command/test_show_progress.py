@@ -5,7 +5,6 @@ from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_progress import SortColumn, show_progress
 from toisto.model.language import Language
-from toisto.model.language.concept_factory import create_concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -20,8 +19,9 @@ class ShowProgressTest(ToistoTestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.concept = create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
-        self.quizzes = create_quizzes("fi", "nl", self.concept).by_quiz_type("read")
+        super().setUp()
+        self.concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
+        self.quizzes = create_quizzes(self.fi, self.nl, self.concept).by_quiz_type("read")
         self.quiz = first(self.quizzes)
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -33,7 +33,7 @@ class ShowProgressTest(ToistoTestCase):
 
     def test_title(self):
         """Test the table title."""
-        progress = Progress({}, "fi", self.quizzes)
+        progress = Progress({}, self.fi, self.quizzes)
         console_print = self.show_progress(progress)
         self.assertEqual("Progress Finnish", console_print.call_args[0][0].title)
 
@@ -42,7 +42,7 @@ class ShowProgressTest(ToistoTestCase):
         now = datetime.now()
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
-        progress = Progress({self.quiz.key: dict(start=start, end=end)}, "fi", self.quizzes)
+        progress = Progress({self.quiz.key: dict(start=start, end=end)}, self.fi, self.quizzes)
         console_print = self.show_progress(progress)
         for index, value in enumerate(
             ["Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"],
@@ -54,22 +54,22 @@ class ShowProgressTest(ToistoTestCase):
         now = datetime.now()
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
-        progress = Progress({self.quiz.key: dict(start=start, end=end)}, "fi", self.quizzes)
+        progress = Progress({self.quiz.key: dict(start=start, end=end)}, self.fi, self.quizzes)
         console_print = self.show_progress(progress)
-        for index, value in enumerate(["Read", Label("fi", "Terve!"), "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
+        for index, value in enumerate(["Read", Label(self.fi, "Terve!"), "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
 
     def test_quiz_silenced_until_time_in_the_future(self):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
         skip_until = (datetime.now() + timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
-        progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi", self.quizzes)
+        progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, self.fi, self.quizzes)
         console_print = self.show_progress(progress)
         self.assertEqual(skip_until, first(console_print.call_args[0][0].columns[7].cells))
 
     def test_quiz_silenced_until_time_in_the_past(self):
         """Test that if the time until which a quiz is silenced lies in the past, it is not shown."""
         skip_until = (datetime.now() - timedelta(days=1)).isoformat(sep=" ", timespec="minutes")
-        progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, "fi", self.quizzes)
+        progress = Progress({self.quiz.key: dict(skip_until=skip_until)}, self.fi, self.quizzes)
         console_print = self.show_progress(progress)
         self.assertEqual("", first(console_print.call_args[0][0].columns[7].cells))
 
@@ -78,12 +78,12 @@ class ShowProgressTest(ToistoTestCase):
         now = datetime.now()
         start = (now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = now.isoformat(timespec="seconds")
-        another_concept = create_concept("carpet", dict(fi="matto", nl="het tapijt"))
-        another_quiz = create_quizzes("fi", "nl", another_concept).by_quiz_type("read").pop()
+        another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
+        another_quiz = create_quizzes(self.fi, self.nl, another_concept).by_quiz_type("read").pop()
         quizzes = Quizzes({self.quiz, another_quiz})
         progress = Progress(
             {self.quiz.key: dict(count=21, start=start, end=end), another_quiz.key: dict(count=42)},
-            "fi",
+            self.fi,
             quizzes,
         )
         console_print = self.show_progress(progress, sort="retention")

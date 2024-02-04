@@ -1,10 +1,8 @@
 """Integration tests for the concepts."""
 
 from argparse import ArgumentParser
-from typing import cast
 
-from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.language.concept import Concept
 from toisto.persistence.loader import Loader
 
 from ..base import ToistoTestCase
@@ -15,7 +13,8 @@ class ConceptsTest(ToistoTestCase):
 
     def setUp(self) -> None:
         """Override to set up test fixtures."""
-        self.concept = create_concept(ConceptId("welcome"), cast(ConceptDict, {}))
+        super().setUp()
+        self.concept = self.create_concept("welcome", {})
         self.concepts = Loader(ArgumentParser()).load()
 
     def test_load_concepts(self):
@@ -25,5 +24,5 @@ class ConceptsTest(ToistoTestCase):
     def test_uses_exist(self):
         """Test that all roots use existing concept ids."""
         for concept in self.concepts:
-            for root in concept.roots("fi"):
+            for root in concept.roots(self.fi):
                 self.assertIn(root.concept_id, Concept.instances)

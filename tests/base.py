@@ -4,7 +4,8 @@ import unittest
 from typing import cast
 
 from toisto.model.language import Language
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz, QuizType
 
@@ -12,9 +13,17 @@ from toisto.model.quiz.quiz import Quiz, QuizType
 class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
 
-    def setUp(self):
+    def setUp(self) -> None:
         """Override to reset the Concept instances registry."""
         Concept.instances.clear()
+        self.en = Language("en")
+        self.fi = Language("fi")
+        self.nl = Language("nl")
+
+    @staticmethod
+    def create_concept(concept_id: str, concept_dict: dict) -> Concept:
+        """Create a concept."""
+        return create_concept(cast(ConceptId, concept_id), cast(ConceptDict, concept_dict))
 
     @staticmethod
     def create_quiz(  # noqa: PLR0913
