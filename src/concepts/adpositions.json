@@ -1,6 +1,7 @@
 {
     "in front of": {
         "antonym": "behind",
+        "example": "the cat sits in front of the window",
         "en": "in front of",
         "fi": "edessä",
         "nl": "voor"
@@ -18,6 +19,7 @@
     },
     "behind": {
         "antonym": "in front of",
+        "example": "the kitchen is behind that door",
         "en": "behind",
         "fi": "takana",
         "nl": "achter"
@@ -34,6 +36,7 @@
         "nl": "De keuken is achter die deur."
     },
     "next to": {
+        "example": "the museum is next to the church",
         "en": "next to",
         "fi": "vieressä",
         "nl": "naast"
@@ -51,6 +54,7 @@
     },
     "to the right": {
         "antonym": "to the left",
+        "example": "alice sits to the right of bob",
         "en": "to the right",
         "fi": "oikealla puolella",
         "nl": "aan de rechter kant"
@@ -67,6 +71,7 @@
     },
     "to the left": {
         "antonym": "to the right",
+        "example": "alice sits to the left of bob",
         "en": "to the left",
         "fi": "vasemmalla puolella",
         "nl": "aan de linker kant"
@@ -82,6 +87,7 @@
         "nl": "Alice zit aan de linker kant van Bob."
     },
     "between": {
+        "example": "alice sits between bob and carol",
         "en": "between",
         "fi": "välissä",
         "nl": "tussen"
@@ -96,6 +102,7 @@
         "nl": "Alice zit tussen Bob en Carol."
     },
     "in the middle": {
+        "example": "the table is in the middle of the room",
         "en": "in the middle",
         "fi": "keskellä",
         "nl": [
@@ -132,6 +139,7 @@
         ]
     },
     "around": {
+        "example": "they sit around the table",
         "en": "around",
         "fi": "ympärillä",
         "nl": [
@@ -153,6 +161,7 @@
         ]
     },
     "on top of": {
+        "example": "the lamp is on top of the cabinet",
         "en": "on top of",
         "fi": "päällä",
         "nl": "op"
@@ -183,6 +192,7 @@
         "nl": "De lamp staat op de kast."
     },
     "below": {
+        "example": "the glass is underneath the table",
         "en": [
             "below",
             "underneath",

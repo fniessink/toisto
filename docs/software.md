@@ -746,6 +746,26 @@ When one concept involves another concept, this can be specified with the `invol
 
 If a concept involves just one other concept (for example, "to save" involves only "money"), the `involves` value can be a single concept identifier instead of a list of concept identifiers.
 
+### Exanples
+
+When one concept is an example of the usage of another concept, this can be specified using the `example` relation. Toisto will show the example after the user has answered the quiz.
+
+```json
+{
+    "next to": {
+        "en": "next to",
+        "fi": "vieressä",
+        "example": "the museum is next to the church"
+    },
+    "the museum is next to the church": {
+        "en": "The museum is next to the church.",
+        "fi": "Museo on kirkon vieressä."
+    }
+}
+```
+
+If a concept has multiple examples, the `example` value can be a list of concept identifiers instead of a string.
+
 ### Questions/answers
 
 When one concept is a question and the other concept is the answer, this can be specified using the `answer` relation. Toisto will add a quiz, asking the user to answer the question in their target language.

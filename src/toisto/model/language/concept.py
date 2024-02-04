@@ -45,6 +45,8 @@ class RelatedConcepts:
     - The answer relation is used to specify possible answers to questions. Using the answer relation it is possible to
      specify that, for example, 'Do you like ice cream?' has the yes and no concepts as possible answers.
 
+     - The examples relation is used to specify other concepts that exemplify the concept.
+
     NOTE: This class keeps track of the related concepts using their concept identifier (ConceptId) and only when
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
     prevents the need for a second pass after instantiating concepts from the concept files to create the relations.
@@ -59,6 +61,7 @@ class RelatedConcepts:
     _holonyms: ConceptIds
     _involves: ConceptIds
     _answers: ConceptIds
+    _examples: ConceptIds
 
     @property
     def concept(self) -> Concept:
@@ -120,6 +123,11 @@ class RelatedConcepts:
     def answers(self) -> Concepts:
         """Return the answers to the question that this concept poses."""
         return self._get_concepts(*self._answers)
+
+    @property
+    def examples(self) -> Concepts:
+        """Return the examples for this concept."""
+        return self._get_concepts(*self._examples)
 
     def roots(self, language: Language) -> Concepts:
         """Return the root concepts, for the specified language."""

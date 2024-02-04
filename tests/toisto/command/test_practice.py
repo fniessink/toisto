@@ -122,6 +122,34 @@ class PracticeTest(ToistoTestCase):
         )
         self.assertIn(expected_call, patched_print.call_args_list)
 
+    @patch("builtins.input", Mock(return_value="vieressä\n"))
+    def test_quiz_with_example(self):
+        """Test that the example is shown after the quiz."""
+        concept = self.create_concept("next to", dict(example="the museum is next to the church", fi="vieressä"))
+        self.create_concept("the museum is next to the church", dict(fi="Museo on kirkon vieressä."))
+        quizzes = create_quizzes(self.fi, self.fi, concept).by_quiz_type("dictate")
+        patched_print = self.practice(Quizzes(quizzes))
+        expected_call = call(
+            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("vieressä")}".[/{SECONDARY}]\n'
+            f'[{SECONDARY}]Example: Museo on kirkon vieressä.[/{SECONDARY}]\n'
+        )
+        self.assertIn(expected_call, patched_print.call_args_list)
+
+    @patch("builtins.input", Mock(return_value="musta\n"))
+    def test_quiz_with_examples(self):
+        """Test that the examples are shown after the quiz."""
+        examples = ["the car is black", "the cars are black"]
+        concept = self.create_concept("black", dict(example=examples, fi="musta"))
+        self.create_concept("the car is black", dict(fi="Auto on musta."))
+        self.create_concept("the cars are black", dict(fi="Autot ovat mustia."))
+        quizzes = create_quizzes(self.fi, self.fi, concept).by_quiz_type("dictate")
+        patched_print = self.practice(Quizzes(quizzes))
+        expected_call = call(
+            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("musta")}".[/{SECONDARY}]\n'
+            f'[{SECONDARY}]Examples:\n- Auto on musta.\n- Autot ovat mustia.[/{SECONDARY}]\n'
+        )
+        self.assertIn(expected_call, patched_print.call_args_list)
+
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))
     def test_quiz_try_again(self):
         """Test that the user is quizzed."""

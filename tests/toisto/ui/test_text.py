@@ -129,7 +129,7 @@ class FeedbackTestCase(ToistoTestCase):
         concept = self.create_concept("hi", dict(fi="moi;;Moi is an informal greeting;'Moi moi' means goodbye"))
         quiz = create_quizzes(self.fi, self.fi, concept).by_quiz_type("dictate").pop()
         self.assertIn(
-            f"[{SECONDARY}]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.\n[/{SECONDARY}]",
+            f"[{SECONDARY}]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.[/{SECONDARY}]\n",
             feedback_correct(Label(self.fi, "moi"), quiz),
         )
 

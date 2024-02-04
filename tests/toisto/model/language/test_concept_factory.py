@@ -136,6 +136,20 @@ class ConcepFactoryTest(ToistoTestCase):
         for index in range(2):
             self.assertEqual((answer.constituents[index],), question.constituents[index].answers)
 
+    def test_example(self):
+        """Test that a concept can have an example."""
+        concept = self.create_concept("next to", dict(example="the museum is next to the church", fi="vieressä"))
+        example = self.create_concept("the museum is next to the church", dict(fi="Museo on kirkon vieressä."))
+        self.assertEqual((example,), concept.examples)
+
+    def test_multiple_examples(self):
+        """Test that a concept can have multiple examples."""
+        examples = ["the car is black", "the cars are black"]
+        concept = self.create_concept("black", dict(example=examples, fi="musta"))
+        example1 = self.create_concept("the car is black", dict(fi="Auto on musta."))
+        example2 = self.create_concept("the cars are black", dict(fi="Autot ovat mustia."))
+        self.assertEqual((example1, example2), concept.examples)
+
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
         concept = self.create_concept("Finnish Eastern cake", dict(fi="mämmi", nl="(Finse paascake)"))

@@ -222,6 +222,13 @@ class Quizzes(set[Quiz]):
         """Return the quizzes for the concept."""
         return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
 
+    def related_quizzes(self, quiz: Quiz) -> Quizzes:
+        """Return the quizzes related to the quiz, meaning quizzes for the same concept and quizzes for examples."""
+        quizzes = Quizzes(self.by_concept(quiz.concept))
+        for example in quiz.concept.examples:
+            quizzes |= self.by_concept(example)
+        return quizzes
+
     def by_quiz_type(self, quiz_type: QuizType) -> Quizzes:
         """Return the quizzes of the specified type."""
         return self.__class__(quiz for quiz in self if quiz_type in quiz.quiz_types)

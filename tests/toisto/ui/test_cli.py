@@ -76,8 +76,8 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         """Test that the practice help message is displayed."""
         foo = ConceptId("foo")
         bar = ConceptId("bar")
-        related_foo = RelatedConcepts(foo, None, (), {}, (), (), (), (), ())
-        related_bar = RelatedConcepts(bar, None, (), {}, (), (), (), (), ())
+        related_foo = RelatedConcepts(foo, None, (), {}, (), (), (), (), (), ())
+        related_bar = RelatedConcepts(bar, None, (), {}, (), (), (), (), (), ())
         english = Language("en")
         concepts = {
             Concept(foo, {english: (Label(english, "foo"),)}, {}, related_foo, False),

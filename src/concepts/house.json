@@ -79,6 +79,7 @@
     },
     "house": {
         "singular": {
+            "example": "my house is in this street",
             "en": "house",
             "fi": "talo",
             "nl": "het huis"
@@ -141,6 +142,7 @@
     "door": {
         "holonym": "wall",
         "singular": {
+            "example": "the door is locked",
             "en": "door",
             "fi": "ovi",
             "nl": "de deur"
