@@ -1,7 +1,6 @@
 """Filter concepts."""
 
 from argparse import ArgumentParser
-from typing import NoReturn
 
 from .language import Language
 from .language.concept import Concept, ConceptId
@@ -12,7 +11,7 @@ def filter_concepts(
     selected_concepts: list[ConceptId],
     language: Language,
     argument_parser: ArgumentParser,
-) -> set[Concept] | NoReturn:
+) -> set[Concept]:
     """Filter the concepts by selected concepts."""
     if not selected_concepts:
         return concepts

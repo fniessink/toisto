@@ -1,7 +1,6 @@
 """Unit tests for the model filter."""
 
 from argparse import ArgumentParser
-from typing import NoReturn
 from unittest.mock import Mock, patch
 
 from toisto.model.filter import filter_concepts
@@ -26,7 +25,7 @@ class FilterTest(ToistoTestCase):
         *,
         concepts: set[Concept] | None = None,
         selected_concepts: list[ConceptId] | None = None,
-    ) -> set[Concept] | NoReturn:
+    ) -> set[Concept]:
         """Filter the concepts."""
         return filter_concepts(
             self.concepts if concepts is None else concepts,

@@ -2,7 +2,6 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
-from typing import NoReturn
 
 from ..metadata import CONCEPT_JSON_FILES, NAME
 from ..model.language.concept import Concept, ConceptId
@@ -19,7 +18,7 @@ class Loader:
         self.concept_id_registry = IdentifierRegistry[ConceptId]("concept", argument_parser)
         self.builtin_files = CONCEPT_JSON_FILES
 
-    def load(self, files: list[Path] | None = None) -> set[Concept] | NoReturn:
+    def load(self, files: list[Path] | None = None) -> set[Concept]:
         """Load the domain objects from the files."""
         all_concepts = set()
         try:
