@@ -43,19 +43,19 @@ class ConfigSchemaValidator:
         """Report the error and exit."""
         self._argument_parser.error(f"While reading from '{self._config_filename}': {message}")
 
-    def validate(self) -> None | NoReturn:  # type: ignore[return]
+    def validate(self) -> None:  # type: ignore[return]
         """Validate the config file against the schema."""
         for section in self._config_parser.sections():
             self._validate_section(section)
 
-    def _validate_section(self, section: str) -> None | NoReturn:  # type: ignore[return]
+    def _validate_section(self, section: str) -> None:  # type: ignore[return]
         """Validate the section, including its options."""
         if section not in (allowed_sections := CONFIG_SCHEMA.keys()):
             self._error(f"unknown section '{section}'. Allowed sections are: {', '.join(allowed_sections)}.")
         for option in self._config_parser[section]:
             self._validate_option(section, option)
 
-    def _validate_option(self, section: str, option: str) -> None | NoReturn:  # type: ignore[return]
+    def _validate_option(self, section: str, option: str) -> None:  # type: ignore[return]
         """Validate the option, including its value(s)."""
         if option not in (allowed_options := CONFIG_SCHEMA[section].keys()):
             self._error(
@@ -72,7 +72,7 @@ class ConfigSchemaValidator:
             )
 
 
-def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser | NoReturn:
+def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser:
     """Read the config file, validate it, and exit with an error message if it doesn't pass."""
     parser = ConfigParser()
     try:
