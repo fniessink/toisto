@@ -4,12 +4,13 @@ from __future__ import annotations
 
 import re
 from collections.abc import Sequence
-from string import punctuation
 from typing import ClassVar, Final
 
 from . import Language
 
 SpellingAlternatives = dict[Language, dict[re.Pattern, str]]
+
+END_OF_SENTENCE_PUNCTUATION = """?!'"."""
 
 
 class Label(str):
@@ -91,8 +92,8 @@ class Label(str):
 
     @property
     def is_complete_sentence(self) -> bool:
-        """Return whether this is a complete sentence (starts with a capital and has punctuation)."""
-        return self.without_notes[0].isupper() and bool(set(self.without_notes) & set(punctuation))
+        """Return whether this is a complete sentence (starts with a capital and ends with punctuation)."""
+        return self.without_notes[0].isupper() and (self.without_notes[-1] in END_OF_SENTENCE_PUNCTUATION)
 
     @property
     def pronounceable(self) -> str:
