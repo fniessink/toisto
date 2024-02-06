@@ -1,7 +1,7 @@
 """Output for the user."""
 
 import sys
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from typing import Final
 
 from rich.console import Console
@@ -94,12 +94,7 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
 
 def answer_notes(quiz: Quiz) -> str:
     """Return the answer notes, if any."""
-    notes = quiz.answer_notes
-    if len(notes) == 0:
-        return ""
-    if len(notes) == 1:
-        return f"[{SECONDARY}]Note: {notes[0]}.[/{SECONDARY}]\n"
-    return "\n".join([f"[{SECONDARY}]Notes:"] + [f"- {note}." for note in notes] + [f"[/{SECONDARY}]\n"])
+    return bulleted_list("Note", quiz.answer_notes)
 
 
 def instruction(quiz: Quiz) -> str:
@@ -113,3 +108,12 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None) 
     if latest_version and latest_version.strip("v") > VERSION:
         write_output(Panel(NEWS.format(latest_version), expand=False))
         write_output()
+
+
+def bulleted_list(label: str, items: Sequence[str], style: str = SECONDARY, bullet: str = "-") -> str:
+    """Create a bulleted list of the items."""
+    if len(items) == 0:
+        return ""
+    if len(items) == 1:
+        return f"[{style}]{label}: {items[0]}.[/{style}]\n"
+    return "\n".join([f"[{SECONDARY}]{label}s:"] + [f"{bullet} {item}." for item in items] + [f"[/{SECONDARY}]\n"])
