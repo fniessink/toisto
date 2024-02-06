@@ -104,6 +104,11 @@ class QuizTest(QuizTestCase):
             quiz = self.create_quiz(self.concept, self.fi, self.fi, "Hei", ["Hei hei"], (quiz_type,))
             self.assertEqual(expected_instruction + " Finnish", quiz.instruction)
 
+    def test_instuction_complete_sentence(self):
+        """Test the instruction for a complete sentence."""
+        quiz = self.create_quiz(self.concept, self.en, self.en, "Sentence.", ["Sentence."], "dictate")
+        self.assertEqual("Listen and write a complete sentence in English", quiz.instruction)
+
     def test_note(self):
         """Test that the first note is added to the instruction, the second is not, and neither to the question."""
         for question in (
