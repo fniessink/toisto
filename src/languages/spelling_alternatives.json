@@ -47,7 +47,9 @@
     },
     "nl": {
         "\\bjij\\b": "je",
+        "\\bjouw\\b": "je",
         "^Jij\\b": "Je",
+        "^Jouw\\b": "Je",
         "\\bzij\\b": "ze",
         "^Zij\\b": "Ze",
         "\\bwij\\b": "we",
