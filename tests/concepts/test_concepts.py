@@ -21,8 +21,14 @@ class ConceptsTest(ToistoTestCase):
         """Test that the concepts can be loaded."""
         self.assertIn(self.concept.concept_id, [concept.concept_id for concept in self.concepts])
 
-    def test_uses_exist(self):
+    def test_roots_exist(self):
         """Test that all roots use existing concept ids."""
         for concept in self.concepts:
             for root in concept.roots(self.fi):
                 self.assertIn(root.concept_id, Concept.instances)
+
+    def test_examples_exist(self):
+        """Test that all examples use existing concept ids."""
+        for concept in self.concepts:
+            for example in concept.examples:
+                self.assertIn(example.concept_id, Concept.instances)
