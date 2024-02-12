@@ -1,6 +1,6 @@
 """Unit tests for concepts."""
 
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -32,7 +32,7 @@ class ConceptTest(ToistoTestCase):
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
         concept = self.create_concept("thirty", dict(fi="kolmekymmentä", nl="dertig"))
-        self.assertEqual(concept, Concept.instances["thirty"])
+        self.assertEqual(concept, Concept.instances[ConceptId("thirty")])
 
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""

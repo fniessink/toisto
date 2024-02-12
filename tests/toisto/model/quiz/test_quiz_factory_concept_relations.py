@@ -1,5 +1,6 @@
 """Concept relations unit tests."""
 
+from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.tools import first
 
@@ -44,7 +45,7 @@ class ConceptRootsTest(QuizFactoryTestCase):
     def test_generated_concept_ids_for_constituent_concepts(self):
         """Test that constituent concepts get a generated concept id."""
         concept = self.create_noun_with_grammatical_number()
-        expected_concept_ids = {
+        expected_concept_ids: dict[tuple[str, str], str] = {
             ("aamu", "de ochtend"): "morning/singular",
             ("aamu", "aamu"): "morning/singular",
             ("de ochtend", "aamu"): "morning/singular",
@@ -80,7 +81,7 @@ class AntonymConceptsTest(QuizFactoryTestCase):
         for antonym_quiz in antonym_quizzes:
             for other_quiz in other_quizzes:
                 message = f"{antonym_quiz.key} should be blocked by {other_quiz.key}, but isn't"
-                self.assertTrue(antonym_quiz.is_blocked_by({other_quiz}), message)
+                self.assertTrue(antonym_quiz.is_blocked_by(Quizzes({other_quiz})), message)
 
 
 class AnswerConceptsTest(QuizFactoryTestCase):
@@ -142,4 +143,4 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         for answer_quiz in answer_quizzes:
             for other_quiz in other_quizzes:
                 message = f"{answer_quiz.key} should be blocked by {other_quiz.key}, but isn't"
-                self.assertTrue(answer_quiz.is_blocked_by({other_quiz}), message)
+                self.assertTrue(answer_quiz.is_blocked_by(Quizzes({other_quiz})), message)

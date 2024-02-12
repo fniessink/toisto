@@ -1,6 +1,5 @@
 """Unit tests for the persistence module."""
 
-import unittest
 from argparse import ArgumentParser
 from unittest.mock import MagicMock, Mock, patch
 
@@ -11,15 +10,17 @@ from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.retention import Retention
 from toisto.persistence.progress import load_progress, save_progress
 
+from ...base import ToistoTestCase
 
-class LoadProgressTest(unittest.TestCase):
+
+class LoadProgressTest(ToistoTestCase):
     """Unit tests for loading progress."""
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("pathlib.Path.open", MagicMock())
     def test_load_non_existing_progress(self):
         """Test that the default value is returned when the progress cannot be loaded."""
-        self.assertEqual({}, load_progress("fi", Quizzes(), ArgumentParser()).as_dict())
+        self.assertEqual({}, load_progress(self.fi, Quizzes(), ArgumentParser()).as_dict())
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr.write")
@@ -42,7 +43,7 @@ class LoadProgressTest(unittest.TestCase):
         )
 
 
-class SaveProgressTest(unittest.TestCase):
+class SaveProgressTest(ToistoTestCase):
     """Unit tests for saving progress."""
 
     @patch("pathlib.Path.open")

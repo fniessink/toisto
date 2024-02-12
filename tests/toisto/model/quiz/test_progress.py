@@ -1,10 +1,10 @@
 """Progress unit tests."""
 
-from typing import get_args
+from typing import cast, get_args
 
 from toisto.model.language import Language
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quizzes, TranslationQuizType
+from toisto.model.quiz.quiz import Quiz, Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.tools import first
 
@@ -61,7 +61,8 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
-        self.assertTrue(self.progress.next_quiz().quiz_types[0] in get_args(TranslationQuizType))
+        next_quiz = cast(Quiz, self.progress.next_quiz())
+        self.assertTrue(next_quiz.quiz_types[0] in get_args(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""
@@ -69,7 +70,8 @@ class ProgressTest(ToistoTestCase):
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
         progress = Progress({}, self.fi, quizzes)
-        self.assertEqual("good", progress.next_quiz().concept.concept_id)
+        next_quiz = cast(Quiz, progress.next_quiz())
+        self.assertEqual("good", next_quiz.concept.concept_id)
 
     def test_roots_block_quizzes_even_if_roots_only_apply_to_target_language(self):
         """Test that quizzes are blocked, even if the roots only apply to the target language."""
@@ -77,7 +79,8 @@ class ProgressTest(ToistoTestCase):
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
         progress = Progress({}, self.fi, quizzes)
-        self.assertEqual("good", progress.next_quiz().concept.concept_id)
+        next_quiz = cast(Quiz, progress.next_quiz())
+        self.assertEqual("good", next_quiz.concept.concept_id)
 
     def test_quiz_order(self):
         """Test that the first quizzes test the singular concept."""
