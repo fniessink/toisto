@@ -1,5 +1,10 @@
 {
     "to reserve": {
+        "roots": {
+            "en": "reservation",
+            "fi": ["reservation", "to do"],
+            "nl": "reservation"
+        },
         "infinitive": {
             "en": [
                 "to reserve",

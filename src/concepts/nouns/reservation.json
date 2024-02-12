@@ -1,5 +1,11 @@
 {
+    "reservation": {
+        "en": "reservation",
+        "fi": "varaus",
+        "nl": "de reservering"
+    },
     "seat reservation": {
+        "hypernym": "reservation",
         "en": "seat reservation",
         "fi": "paikkavaraus",
         "nl": "de plaatsreservering"

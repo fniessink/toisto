@@ -79,7 +79,10 @@
         "nl": "Waar? Daar!"
     },
     "why are you doing that": {
-        "roots": "why",
+        "roots": [
+            "why",
+            "to do"
+        ],
         "en": "Why are you doing that?",
         "fi": [
             "Miksi teet tuon?",
