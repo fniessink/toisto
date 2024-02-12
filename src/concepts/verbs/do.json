@@ -1,0 +1,49 @@
+{
+    "to do": {
+        "infinitive": {
+            "en": "to do",
+            "fi": "tehdä",
+            "nl": "doen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I do",
+                "fi": "minä teen",
+                "nl": "ik doe"
+            },
+            "second person": {
+                "en": "you do;singular",
+                "fi": "sinä teet",
+                "nl": "jij doet"
+            },
+            "third person": {
+                "fi": "hän tekee",
+                "female": {
+                    "en": "she does",
+                    "nl": "zij doet"
+                },
+                "male": {
+                    "en": "he does",
+                    "nl": "hij doet"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we do",
+                "fi": "me teemme",
+                "nl": "wij doen"
+            },
+            "second person": {
+                "en": "you do;plural",
+                "fi": "te teette",
+                "nl": "jullie doen"
+            },
+            "third person": {
+                "fi": "he tekevät",
+                "en": "they do",
+                "nl": "zij doen"
+            }
+        }
+    }
+}
