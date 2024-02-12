@@ -22,6 +22,13 @@ class QuizTestCase(ToistoTestCase):
 class QuizTest(QuizTestCase):
     """Unit tests for the quiz class."""
 
+    def setUp(self):
+        """Set up fixtures."""
+        super().setUp()
+        self.engels = Label(self.nl, "Engels")
+        self.een = Label(self.nl, "Een")
+        self.huis = Label(self.nl, "het huis")
+
     def test_defaults(self):
         """Test default values of optional attributes."""
         self.assertEqual(("read",), self.quiz.quiz_types)
@@ -35,37 +42,37 @@ class QuizTest(QuizTestCase):
 
     def test_is_correct(self):
         """Test a correct guess."""
-        self.assertTrue(self.quiz.is_correct("Engels"))
+        self.assertTrue(self.quiz.is_correct(self.engels))
 
     def test_is_not_correct(self):
         """Test an incorrect guess."""
-        self.assertFalse(self.quiz.is_correct("engles"))
+        self.assertFalse(self.quiz.is_correct(Label(self.nl, "engles")))
 
     def test_get_answer(self):
         """Test that the answer is returned."""
-        self.assertEqual(Label(self.nl, "Engels"), self.quiz.answer)
+        self.assertEqual(self.engels, self.quiz.answer)
 
     def test_get_first_answer(self):
         """Test that the first answer is returned when there are multiple."""
         quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén"])
-        self.assertEqual(Label(self.nl, "Een"), quiz.answer)
+        self.assertEqual(self.een, quiz.answer)
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
         quiz = self.create_quiz(self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén;note should be ignored"])
-        self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers("Een")])
+        self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers(self.een)])
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the quiz type is dictate."""
         quiz = self.create_quiz(
             self.concept, self.fi, self.nl, "Yksi", ["Een", "Eén;note should be ignored"], "dictate"
         )
-        self.assertEqual((), quiz.other_answers("Een"))
+        self.assertEqual((), quiz.other_answers(self.een))
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers do not include generated spelling alternatives."""
         quiz = self.create_quiz(self.concept, self.fi, self.nl, "talo", ["het huis"])
-        self.assertEqual((), quiz.other_answers("het huis"))
+        self.assertEqual((), quiz.other_answers(self.huis))
 
     def test_instructions(self):
         """Test the instructions."""
@@ -192,26 +199,27 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         for alternative in alternatives:
             other_answers = list(alternatives)
             other_answers.remove(alternative)
-            self.assertEqual(tuple(Label(self.nl, answer) for answer in other_answers), quiz.other_answers(alternative))
+            answer = Label(self.nl, alternative)
+            self.assertEqual(tuple(Label(self.nl, answer) for answer in other_answers), quiz.other_answers(answer))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""
         load_spelling_alternatives(self.en, self.nl)
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is waar", ["It is true"])
-        self.assertTrue(quiz.is_correct("It's true"))
+        self.assertTrue(quiz.is_correct(Label(self.en, "It's true")))
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is.", ["It is."])
-        self.assertTrue(quiz.is_correct("It's."))
+        self.assertTrue(quiz.is_correct(Label(self.en, "It's.")))
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Ik ben Alice.", ["I am Alice."])
-        self.assertTrue(quiz.is_correct("I'm Alice."))
+        self.assertTrue(quiz.is_correct(Label(self.en, "I'm Alice.")))
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Ik overval.", ["I ambush."])
-        self.assertFalse(quiz.is_correct("I'mbush."))
+        self.assertFalse(quiz.is_correct(Label(self.en, "I'mbush.")))
         quiz = self.create_quiz(self.concept, self.en, self.nl, "house", ["het huis"])
-        self.assertTrue(quiz.is_correct("huis"))
+        self.assertTrue(quiz.is_correct(Label(self.nl, "huis")))
         load_spelling_alternatives(self.fi, self.en)
         quiz = self.create_quiz(self.concept, self.en, self.fi, "I am", ["minä olen"])
-        self.assertTrue(quiz.is_correct("olen"))
+        self.assertTrue(quiz.is_correct(Label(self.fi, "olen")))
         quiz = self.create_quiz(self.concept, self.en, self.fi, "I am Alice.", ["Minä olen Alice."])
-        self.assertTrue(quiz.is_correct("Olen Alice."))
+        self.assertTrue(quiz.is_correct(Label(self.fi, "Olen Alice.")))
 
 
 class QuizEqualityTests(QuizTestCase):

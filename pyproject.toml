@@ -66,6 +66,9 @@ skip_covered = true
 [tool.coverage.xml]
 output = "build/coverage.xml"
 
+[tool.mypy]
+check_untyped_defs = true
+
 [[tool.mypy.overrides]]
 module = ["gtts"]
 ignore_missing_imports = true

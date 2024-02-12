@@ -2,6 +2,7 @@
 
 import unittest
 from datetime import datetime, timedelta
+from typing import cast
 
 from toisto.model.quiz.retention import Retention
 
@@ -36,7 +37,7 @@ class RetentionTest(unittest.TestCase):
         now = datetime.now()
         self.guess(True)
         self.assertTrue(self.retention.is_silenced())
-        self.assertTrue(self.retention.skip_until >= now + timedelta(days=1))
+        self.assertGreaterEqual(self.retention.skip_until or datetime.min, now + timedelta(days=1))
 
     def test_is_not_silenced_after_one_correct_guess(self):
         """Test that a retention is not silenced after one correct guess."""
@@ -48,7 +49,7 @@ class RetentionTest(unittest.TestCase):
         """Test that a retention is silenced after two correct guesses."""
         self.guess(False, True, True)
         self.assertTrue(self.retention.is_silenced())
-        self.assertTrue(self.retention.skip_until > datetime.now() + timedelta(minutes=1))
+        self.assertGreater(self.retention.skip_until or datetime.min, datetime.now() + timedelta(minutes=1))
 
     def test_is_reset_after_an_incorrect_guess(self):
         """Test that a retention is reset after an incorrect guess."""
@@ -64,9 +65,9 @@ class RetentionTest(unittest.TestCase):
     def test_one_guess_as_dict(self):
         """Test that the retention can be serialized."""
         self.guess(True)
-        start = self.retention.start.isoformat(timespec="seconds")
-        end = self.retention.end.isoformat(timespec="seconds")
-        skip_until = self.retention.skip_until.isoformat(timespec="seconds")
+        start = cast(datetime, self.retention.start).isoformat(timespec="seconds")
+        end = cast(datetime, self.retention.end).isoformat(timespec="seconds")
+        skip_until = cast(datetime, self.retention.skip_until).isoformat(timespec="seconds")
         self.assertEqual(dict(start=start, end=end, skip_until=skip_until, count=1), self.retention.as_dict())
 
     def test_two_guesses_as_dict(self):
@@ -83,9 +84,9 @@ class RetentionTest(unittest.TestCase):
     def test_one_guess_from_dict(self):
         """Test that a retention can be deserialized."""
         self.guess(True)
-        start = self.retention.start.replace(microsecond=0)
-        end = self.retention.end.replace(microsecond=0)
-        skip_until = self.retention.skip_until.replace(microsecond=0)
+        start = cast(datetime, self.retention.start).replace(microsecond=0)
+        end = cast(datetime, self.retention.end).replace(microsecond=0)
+        skip_until = cast(datetime, self.retention.skip_until).replace(microsecond=0)
         self.assertEqual(
             Retention(start=start, end=end, skip_until=skip_until, count=1),
             Retention.from_dict(self.retention.as_dict()),
