@@ -33,9 +33,9 @@ class ToistoTestCase(unittest.TestCase):
         question: str,
         answers: list[str],
         quiz_type: str | tuple[str, ...] = ("read",),
-        blocked_by: tuple[Quiz, ...] = tuple(),
-        question_meanings: tuple[str, ...] = tuple(),
-        answer_meanings: tuple[str, ...] = tuple(),
+        blocked_by: tuple[Quiz, ...] = (),
+        question_meanings: tuple[str, ...] = (),
+        answer_meanings: tuple[str, ...] = (),
     ) -> Quiz:
         """Create a quiz."""
         quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
