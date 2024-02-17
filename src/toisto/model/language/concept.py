@@ -170,7 +170,7 @@ class Concept:
 
     def __getattr__(self, attribute: str) -> Concepts:
         """Forward properties to related concepts."""
-        return getattr(self.related_concepts, attribute)
+        return cast(Concepts, getattr(self.related_concepts, attribute))
 
     @cached_property
     def base_concept(self) -> Concept:

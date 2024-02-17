@@ -21,7 +21,7 @@ class ToistoTestCase(unittest.TestCase):
         self.nl = Language("nl")
 
     @staticmethod
-    def create_concept(concept_id: str, concept_dict: dict) -> Concept:
+    def create_concept(concept_id: str, concept_dict: dict[str, object]) -> Concept:
         """Create a concept."""
         return create_concept(cast(ConceptId, concept_id), cast(ConceptDict, concept_dict))
 

@@ -19,7 +19,7 @@ class LoadConceptsTest(ToistoTestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")
-    def test_load_non_existing_file(self, stderr_write: Mock):
+    def test_load_non_existing_file(self, stderr_write: Mock) -> None:
         """Test that an error message is given when the concept file does not exist."""
         self.assertRaises(SystemExit, self.loader.load, [Path("file-doesnt-exist")])
         self.assertIn(
@@ -30,7 +30,7 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
     @patch("sys.stderr.write")
-    def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock):
+    def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock) -> None:
         """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
             '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
@@ -45,7 +45,7 @@ class LoadConceptsTest(ToistoTestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
-    def test_load_concepts(self, path_open: Mock):
+    def test_load_concepts(self, path_open: Mock) -> None:
         """Test that the concepts are read."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
             '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',

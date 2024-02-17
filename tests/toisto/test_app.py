@@ -47,7 +47,7 @@ class AppTest(ToistoTestCase):
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
-    def test_practice(self, requests_get: Mock):
+    def test_practice(self, requests_get: Mock) -> None:
         """Test that the practice command can be invoked."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
@@ -55,7 +55,7 @@ class AppTest(ToistoTestCase):
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
-    def test_new_version(self, requests_get: Mock):
+    def test_new_version(self, requests_get: Mock) -> None:
         """Test that the practice command shows a new version."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
@@ -63,7 +63,7 @@ class AppTest(ToistoTestCase):
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
-    def test_current_version(self, requests_get: Mock):
+    def test_current_version(self, requests_get: Mock) -> None:
         """Test that the practice command does not show the current version."""
         requests_get.return_value = Mock(json=Mock(return_value=[dict(name=VERSION)]))
         patched_print = self.run_main()
@@ -71,7 +71,7 @@ class AppTest(ToistoTestCase):
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
-    def test_github_connection_error(self, requests_get: Mock):
+    def test_github_connection_error(self, requests_get: Mock) -> None:
         """Test that the practice command starts even if GitHub cannot be reached to get the latest version."""
         requests_get.side_effect = requests.ConnectionError
         patched_print = self.run_main()
@@ -79,7 +79,7 @@ class AppTest(ToistoTestCase):
 
     @patch.object(sys, "argv", ["toisto", "progress", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
-    def test_progress(self, requests_get: Mock):
+    def test_progress(self, requests_get: Mock) -> None:
         """Test that the progress command can be invoked."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()

@@ -39,6 +39,6 @@ def latest_version() -> str | None:
     try:
         response = requests.get(TAGS_API_URL, timeout=timeout)
         response.raise_for_status()  # We get a 403 if rate limited
-        return response.json()[0]["name"]
+        return str(response.json()[0]["name"])
     except requests.RequestException:
         return None

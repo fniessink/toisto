@@ -72,11 +72,20 @@ output = "build/coverage.xml"
 python-version = "3.10"
 
 [tool.mypy]
-check_untyped_defs = true
+python_version = "3.10"
+strict = true
 
 [[tool.mypy.overrides]]
 module = ["gtts"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "toisto.persistence.json_file"
+disable_error_code = "type-arg"  # Don't complain about JSON types not being completely specified
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+allow_untyped_defs = true  # Allow for not specifying None as return value on every test method
 
 [tool.ruff]
 target-version = "py310"

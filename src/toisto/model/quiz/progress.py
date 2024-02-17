@@ -94,6 +94,6 @@ class Progress:
             if other_quiz != quiz and other_quiz in eligible_quizzes
         )
 
-    def as_dict(self) -> dict[str, dict[str, int | str]]:
+    def as_dict(self) -> ProgressDict:
         """Return the progress as dict."""
         return {key: value.as_dict() for key, value in self.__progress_dict.items()}

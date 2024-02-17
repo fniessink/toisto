@@ -33,7 +33,7 @@ class ParserTest(unittest.TestCase):
 
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")
-    def test_help(self, sys_stdout_write: Mock):
+    def test_help(self, sys_stdout_write: Mock) -> None:
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.maxDiff = None
@@ -59,7 +59,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         )
 
     @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi"])
-    def test_practice_command(self):
+    def test_practice_command(self) -> None:
         """Test that the practice command can be specified."""
         expected_namespace = Namespace(
             command="practice",
@@ -72,7 +72,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
 
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
-    def test_practice_help(self, sys_stdout_write: Mock):
+    def test_practice_help(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
         foo = ConceptId("foo")
         bar = ConceptId("bar")
@@ -104,7 +104,7 @@ Options:
 
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
-    def test_practice_help_with_default_languages_in_config(self, sys_stdout_write: Mock):
+    def test_practice_help_with_default_languages_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
         config_parser = ConfigParser()
         config_parser.add_section("languages")
@@ -130,7 +130,7 @@ Options:
 
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
-    def test_practice_help_with_default_levels_in_config(self, sys_stdout_write: Mock):
+    def test_practice_help_with_default_levels_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
         config_parser = ConfigParser()
         config_parser.add_section("languages")
@@ -156,7 +156,7 @@ Options:
 
     @patch("sys.argv", ["toisto", "progress", "--help"])
     @patch("sys.stdout.write")
-    def test_progress_help(self, sys_stdout_write: Mock):
+    def test_progress_help(self, sys_stdout_write: Mock) -> None:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
@@ -181,7 +181,7 @@ Options:
         )
 
     @patch("sys.argv", ["toisto", "--target", "nl", "--source", "fi"])
-    def test_no_command(self):
+    def test_no_command(self) -> None:
         """Test that the practice command is returned if the user did not specify a command."""
         expected_namespace = Namespace(
             command="practice",
@@ -194,21 +194,21 @@ Options:
 
     @patch("sys.argv", ["toisto", "--version"])
     @patch.object(ArgumentParser, "_print_message")
-    def test_version_long_option(self, print_message: Mock):
+    def test_version_long_option(self, print_message: Mock) -> None:
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
 
     @patch("sys.argv", ["toisto", "-V"])
     @patch.object(ArgumentParser, "_print_message")
-    def test_version_short_option(self, print_message: Mock):
+    def test_version_short_option(self, print_message: Mock) -> None:
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
 
     @patch("sys.argv", ["toisto", "practice", "--target", "42", "--source", "@@"])
     @patch("sys.stderr.write")
-    def test_invalid_language(self, sys_stderr_write: Mock):
+    def test_invalid_language(self, sys_stderr_write: Mock) -> None:
         """Test that an error message is displayed if an invalid language is supplied."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
@@ -218,7 +218,7 @@ Options:
 
     @patch("sys.argv", ["toisto", "practice", "--target", "fi", "--source", "fi"])
     @patch("sys.stderr.write")
-    def test_equal_target_and_source_language(self, sys_stderr_write: Mock):
+    def test_equal_target_and_source_language(self, sys_stderr_write: Mock) -> None:
         """Test that an error message is displayed if the target and source language are equal."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(

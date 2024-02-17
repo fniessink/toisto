@@ -21,7 +21,7 @@ class Quantifier(Enum):
     ONE_OF = "one of"
 
 
-CONFIG_SCHEMA: Final[dict[str, dict[str, tuple[Quantifier, Iterable]]]] = dict(
+CONFIG_SCHEMA: Final[dict[str, dict[str, tuple[Quantifier, Iterable[str]]]]] = dict(
     languages=dict(
         target=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
         source=(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
@@ -43,19 +43,19 @@ class ConfigSchemaValidator:
         """Report the error and exit."""
         self._argument_parser.error(f"While reading from '{self._config_filename}': {message}")
 
-    def validate(self) -> None:  # type: ignore[return]
+    def validate(self) -> None:
         """Validate the config file against the schema."""
         for section in self._config_parser.sections():
             self._validate_section(section)
 
-    def _validate_section(self, section: str) -> None:  # type: ignore[return]
+    def _validate_section(self, section: str) -> None:
         """Validate the section, including its options."""
         if section not in (allowed_sections := CONFIG_SCHEMA.keys()):
             self._error(f"unknown section '{section}'. Allowed sections are: {', '.join(allowed_sections)}.")
         for option in self._config_parser[section]:
             self._validate_option(section, option)
 
-    def _validate_option(self, section: str, option: str) -> None:  # type: ignore[return]
+    def _validate_option(self, section: str, option: str) -> None:
         """Validate the option, including its value(s)."""
         if option not in (allowed_options := CONFIG_SCHEMA[section].keys()):
             self._error(
@@ -63,7 +63,7 @@ class ConfigSchemaValidator:
             )
         specifier, allowed_values = CONFIG_SCHEMA[section][option]
         if specifier == Quantifier.ANY:
-            return  # type: ignore[return-value]
+            return
         value = self._config_parser.get(section, option)
         if value not in allowed_values:
             self._error(
