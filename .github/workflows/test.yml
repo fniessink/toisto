@@ -41,6 +41,7 @@ jobs:
         mypy src tests
         vulture src tests
         fixit lint .
+        bandit -q -r src tests
     - name: SonarCloud scan
       uses: SonarSource/sonarcloud-github-action@master
       env:

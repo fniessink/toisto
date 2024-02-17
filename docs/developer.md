@@ -65,6 +65,12 @@ Run fixit to check for linting issues:
 fixit lint .
 ```
 
+Run bandit to check for security issues:
+
+```console
+bandit -r src tests
+```
+
 ## How to format the source code
 
 Run Ruff to format the code:
