@@ -59,7 +59,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a new version."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertTrue("v9999" in patched_print.call_args_list[3][0][0].renderable)
+        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
@@ -67,7 +67,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command does not show the current version."""
         requests_get.return_value = Mock(json=Mock(return_value=[dict(name=VERSION)]))
         patched_print = self.run_main()
-        self.assertFalse(VERSION in patched_print.call_args_list[3][0][0])
+        self.assertNotIn(VERSION, patched_print.call_args_list[3][0][0])
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")

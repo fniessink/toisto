@@ -61,7 +61,7 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
         next_quiz = cast(Quiz, self.progress.next_quiz())
-        self.assertTrue(next_quiz.quiz_types[0] in get_args(TranslationQuizType))
+        self.assertIn(next_quiz.quiz_types[0], get_args(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""

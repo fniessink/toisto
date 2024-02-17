@@ -60,7 +60,7 @@ class SayTest(unittest.TestCase):
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
         mock_subprocess_popen.assert_called_once()
-        self.assertTrue(mock_subprocess_popen.call_args_list[0][0][0][0] == "afplay")
+        self.assertEqual(mock_subprocess_popen.call_args_list[0][0][0][0], "afplay")
 
     @patch("gtts.gTTS.save", Mock())
     @patch("toisto.ui.speech.playsound")
