@@ -2,7 +2,7 @@
 
 import unittest
 from configparser import ConfigParser
-from subprocess import DEVNULL
+from subprocess import DEVNULL  # nosec import_subprocess
 from unittest.mock import Mock, patch
 
 import gtts
