@@ -36,9 +36,11 @@ jobs:
         python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
     - name: Quality
       run: |
+        ruff check .
+        ruff format --check .
         mypy src tests
-        ruff .
         vulture src tests
+        fixit lint .
     - name: SonarCloud scan
       uses: SonarSource/sonarcloud-github-action@master
       env:
