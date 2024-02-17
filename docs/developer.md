@@ -59,6 +59,12 @@ Run vulture to check for dead code:
 vulture src tests
 ```
 
+Run fixit to check for linting issues:
+
+```console
+fixit lint .
+```
+
 ## How to format the source code
 
 Run Ruff to format the code:

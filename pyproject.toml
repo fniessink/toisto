@@ -36,6 +36,7 @@ dependencies = [
 dev = [
     "build == 1.0.3",
     "coverage == 7.4.1",
+    "fixit == 2.1.0",
     "green == 4.0.0",
     "mypy == 1.8.0",
     "pip == 24.0",
@@ -65,6 +66,9 @@ skip_covered = true
 
 [tool.coverage.xml]
 output = "build/coverage.xml"
+
+[tool.fixit]
+python-version = "3.10"
 
 [tool.mypy]
 check_untyped_defs = true
