@@ -15,7 +15,7 @@ from toisto.ui.format import format_datetime, format_duration
 from toisto.ui.text import console
 
 SortColumn = Literal["attempts", "retention"]
-RETENTION_ATTRIBUTE: Final = dict(attempts="count", retention="length")
+RETENTION_ATTRIBUTE: Final[dict[str, str]] = dict(attempts="count", retention="length")
 
 
 @dataclass(frozen=True)
@@ -27,7 +27,7 @@ class QuizSorter:
 
     def get_sort_key(self, quiz: Quiz) -> str:
         """Return the retention attribute to sort by."""
-        return getattr(self.progress.get_retention(quiz), RETENTION_ATTRIBUTE[self.sort])
+        return str(getattr(self.progress.get_retention(quiz), RETENTION_ATTRIBUTE[self.sort]))
 
 
 def show_progress(language: Language, progress: Progress, sort: SortColumn = "attempts") -> None:

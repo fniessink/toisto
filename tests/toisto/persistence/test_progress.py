@@ -18,14 +18,14 @@ class LoadProgressTest(ToistoTestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=False))
     @patch("pathlib.Path.open", MagicMock())
-    def test_load_non_existing_progress(self):
+    def test_load_non_existing_progress(self) -> None:
         """Test that the default value is returned when the progress cannot be loaded."""
         self.assertEqual({}, load_progress(self.fi, Quizzes(), ArgumentParser()).as_dict())
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr.write")
     @patch("pathlib.Path.open")
-    def test_load_invalid_progress(self, path_open: Mock, stderr_write: Mock):
+    def test_load_invalid_progress(self, path_open: Mock, stderr_write: Mock) -> None:
         """Test that the the program exists if the progress cannot be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = ""
         language = Language("en")
@@ -35,7 +35,7 @@ class LoadProgressTest(ToistoTestCase):
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
-    def test_load_existing_progress(self, path_open: Mock):
+    def test_load_existing_progress(self, path_open: Mock) -> None:
         """Test that the progress can be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {}}'
         self.assertEqual(
@@ -48,7 +48,7 @@ class SaveProgressTest(ToistoTestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_empty_progress(self, dump: Mock, path_open: Mock):
+    def test_save_empty_progress(self, dump: Mock, path_open: Mock) -> None:
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress({}, Language("fi"), Quizzes()))
@@ -56,7 +56,7 @@ class SaveProgressTest(ToistoTestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_incorrect_only_progress(self, dump: Mock, path_open: Mock):
+    def test_save_incorrect_only_progress(self, dump: Mock, path_open: Mock) -> None:
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress(dict(quiz={}), Language("fi"), Quizzes()))
@@ -64,7 +64,7 @@ class SaveProgressTest(ToistoTestCase):
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
-    def test_save_progress(self, dump: Mock, path_open: Mock):
+    def test_save_progress(self, dump: Mock, path_open: Mock) -> None:
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(Progress(dict(quiz=dict(skip_until="3000-01-01")), Language("fi"), Quizzes()))

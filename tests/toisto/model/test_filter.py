@@ -49,7 +49,7 @@ class FilterTest(ToistoTestCase):
         self.assertEqual({self.bar}, self.filter_concepts(selected_concepts=[self.bar_id]))
 
     @patch("sys.stderr.write")
-    def test_selected_concepts_without_concepts(self, sys_stderr_write: Mock):
+    def test_selected_concepts_without_concepts(self, sys_stderr_write: Mock) -> None:
         """Test that an empty selection results in an error message."""
         self.assertRaises(SystemExit, self.filter_concepts, selected_concepts=[self.baz_id])
         self.assertIn("Concept 'baz' not found", sys_stderr_write.call_args_list[1][0][0])

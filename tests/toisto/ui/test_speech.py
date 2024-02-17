@@ -21,7 +21,7 @@ class SayTest(unittest.TestCase):
     @patch("sys.platform", "darwin")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
     @patch("toisto.ui.speech.Popen")
-    def test_google_translate_fails_on_mac_os(self, mock_subprocess_popen: Mock):
+    def test_google_translate_fails_on_mac_os(self, mock_subprocess_popen: Mock) -> None:
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
@@ -35,7 +35,7 @@ class SayTest(unittest.TestCase):
     @patch("sys.platform", "darwin")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
     @patch("toisto.ui.speech.Popen")
-    def test_google_translate_fails_on_mac_os_twice(self, mock_subprocess_popen: Mock):
+    def test_google_translate_fails_on_mac_os_twice(self, mock_subprocess_popen: Mock) -> None:
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config, slow=True)
@@ -48,14 +48,14 @@ class SayTest(unittest.TestCase):
 
     @patch("sys.platform", "windows")
     @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
-    def test_google_translate_fails_on_windows(self):
+    def test_google_translate_fails_on_windows(self) -> None:
         """Test that the exception is not caught when Google Translate fails on Windows, because there is no plan B."""
         self.config.set("commands", "mp3player", "afplay")
         self.assertRaises(RuntimeError, say, "nl", "Hallo", self.config)
 
     @patch("gtts.gTTS.save", Mock())
     @patch("toisto.ui.speech.Popen")
-    def test_system_call_afplay(self, mock_subprocess_popen: Mock):
+    def test_system_call_afplay(self, mock_subprocess_popen: Mock) -> None:
         """Test that the afplay program is called with the correct arguments."""
         self.config.set("commands", "mp3player", "afplay")
         say("nl", "Hallo", self.config)
@@ -64,7 +64,7 @@ class SayTest(unittest.TestCase):
 
     @patch("gtts.gTTS.save", Mock())
     @patch("toisto.ui.speech.playsound")
-    def test_call_playsound(self, mock_playsound: Mock):
+    def test_call_playsound(self, mock_playsound: Mock) -> None:
         """Test that the playsound function is called."""
         self.config.set("commands", "mp3player", "playsound")
         say("nl", "Hallo", self.config)

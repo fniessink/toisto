@@ -1,5 +1,6 @@
 """Concept unit tests."""
 
+from toisto.model.language.concept import Concept
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_types
@@ -10,7 +11,7 @@ from ....base import ToistoTestCase
 class QuizFactoryTestCase(ToistoTestCase):
     """Base class for quiz factory unit tests."""
 
-    def create_verb_with_person(self):
+    def create_verb_with_person(self) -> Concept:
         """Create a verb with grammatical person."""
         return self.create_concept(
             "to eat",
@@ -21,7 +22,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             },
         )
 
-    def create_verb_with_tense_and_person(self):
+    def create_verb_with_tense_and_person(self) -> Concept:
         """Create a verb with grammatical person nested within tense."""
         return self.create_concept(
             "to eat",
@@ -37,7 +38,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             },
         )
 
-    def create_verb_with_number_and_person(self):
+    def create_verb_with_number_and_person(self) -> Concept:
         """Create a verb with grammatical number nested with grammatical person."""
         return self.create_concept(
             "to have",
@@ -55,7 +56,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             ),
         )
 
-    def create_verb_with_infinitive_and_person(self):
+    def create_verb_with_infinitive_and_person(self) -> Concept:
         """Create a verb with infinitive and grammatical person."""
         return self.create_concept(
             "to sleep",
@@ -66,7 +67,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             ),
         )
 
-    def create_verb_with_infinitive_and_number_and_person(self):
+    def create_verb_with_infinitive_and_number_and_person(self) -> Concept:
         """Create a verb with infinitive and grammatical number nested with person."""
         return self.create_concept(
             "to be",
@@ -85,7 +86,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             ),
         )
 
-    def create_adjective_with_degrees_of_comparison(self):
+    def create_adjective_with_degrees_of_comparison(self) -> Concept:
         """Create an adjective with degrees of comparison."""
         return self.create_concept(
             "big",
@@ -96,25 +97,25 @@ class QuizFactoryTestCase(ToistoTestCase):
             },
         )
 
-    def create_noun(self):
+    def create_noun(self) -> Concept:
         """Create a simple noun."""
         return self.create_concept("mall", dict(fi="kauppakeskus", nl="het winkelcentrum"))
 
-    def create_noun_with_grammatical_number(self):
+    def create_noun_with_grammatical_number(self) -> Concept:
         """Create a noun with grammatical number."""
         return self.create_concept(
             "morning",
             dict(singular=dict(fi="aamu", nl="de ochtend"), plural=dict(fi="aamut", nl="de ochtenden")),
         )
 
-    def create_noun_with_grammatical_gender(self):
+    def create_noun_with_grammatical_gender(self) -> Concept:
         """Create a noun with grammatical gender."""
         return self.create_concept(
             "cat",
             dict(female=dict(en="her cat", nl="haar kat"), male=dict(en="his cat", nl="zijn kat")),
         )
 
-    def create_noun_with_grammatical_gender_including_neuter(self):
+    def create_noun_with_grammatical_gender_including_neuter(self) -> Concept:
         """Create a noun with grammatical gender, including neuter."""
         return self.create_concept(
             "bone",
@@ -125,7 +126,7 @@ class QuizFactoryTestCase(ToistoTestCase):
             ),
         )
 
-    def create_noun_with_grammatical_number_and_gender(self):
+    def create_noun_with_grammatical_number_and_gender(self) -> Concept:
         """Create a noun with grammatical number and grammatical gender."""
         return self.create_concept(
             "cat",

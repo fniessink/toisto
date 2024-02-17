@@ -46,13 +46,13 @@ class MissingConfigTest(ConfigTestCase):
 class ReadValidConfigTest(ConfigTestCase):
     """Unit tests for valid configs."""
 
-    def test_valid_commands(self, path_open: Mock):
+    def test_valid_commands(self, path_open: Mock) -> None:
         """Test reading a valid config."""
         config = self.read_config(path_open, "[commands]\n", "mp3player = some mp3 player\n")
         self.assertEqual("some mp3 player", config.get("commands", "mp3player"))
 
     @patch("sys.platform", "darwin")
-    def test_incomplete_config(self, path_open: Mock):
+    def test_incomplete_config(self, path_open: Mock) -> None:
         """Test reading an incomplete config."""
         config = self.read_config(path_open, "[commands]\n")
         self.assertEqual("afplay", config.get("commands", "mp3player"))
@@ -63,18 +63,18 @@ class ReadValidConfigTest(ConfigTestCase):
 class ReadInvalidConfigTest(ConfigTestCase):
     """Unit tests for reading invalid configs."""
 
-    def test_no_section_headers(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_no_section_headers(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (no section headers)."""
         self.assertRaises(SystemExit, self.read_config, path_open, "invalid\n")
         self.assertIn("File contains no section headers", sys_stderr_write.call_args_list[1][0][0])
 
-    def test_repeated_section(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_repeated_section(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (repeated section)."""
         config_file_contents = ["[commands]\n", "mp3player = afplay\n"] * 2
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
         self.assertIn("section 'commands' already exists", sys_stderr_write.call_args_list[1][0][0])
 
-    def test_repeated_option(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_repeated_option(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (repeated option)."""
         config_file_contents = ["[commands]\n", "mp3player = afplay\n", "mp3player = vlc"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
@@ -83,7 +83,7 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
-    def test_invalid_section(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_invalid_section(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (invalid section)."""
         config_file_contents = ["[command]\n", "mp3player = afplay\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
@@ -93,7 +93,7 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
-    def test_invalid_option(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_invalid_option(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (invalid option)."""
         config_file_contents = ["[commands]\n", "mp4player = afplay\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
@@ -103,7 +103,7 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
-    def test_invalid_one_of_option_value(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_invalid_one_of_option_value(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (invalid option value, one of)."""
         config_file_contents = ["[languages]\n", "target = foo\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
@@ -113,7 +113,7 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
-    def test_valid_one_of_option_values(self, path_open: Mock, sys_stderr_write: Mock):
+    def test_valid_one_of_option_values(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an valid config (one of option)."""
         config_file_contents = ["[languages]\n", "target = nl\n"]
         self.read_config(path_open, *config_file_contents)

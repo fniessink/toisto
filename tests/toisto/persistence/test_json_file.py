@@ -34,7 +34,7 @@ class DumpJSONTest(PersistenceTestCase):
     """Unit tests for dumping JSON."""
 
     @patch("json.dump")
-    def test_dump(self, dump: Mock):
+    def test_dump(self, dump: Mock) -> None:
         """Test that the JSON is dumped."""
         self.file_path.open.return_value.__enter__.return_value = json_file = MagicMock()
         dump_json(self.file_path, self.contents)

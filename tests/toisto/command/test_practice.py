@@ -82,7 +82,7 @@ class PracticeTest(ToistoTestCase):
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
-    def test_quiz_empty_answer(self, mock_print: Mock):
+    def test_quiz_empty_answer(self, mock_print: Mock) -> None:
         """Test that the user is quizzed."""
         self.practice(self.quizzes)
         self.assertEqual([call("\x1b[F", end="")], mock_print.call_args_list)
