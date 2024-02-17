@@ -2,7 +2,6 @@
 
 from typing import cast, get_args
 
-from toisto.model.language import Language
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz, Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -112,10 +111,10 @@ class ProgressTest(ToistoTestCase):
         quizzes = Quizzes(
             quiz for quiz in create_quizzes(self.fi, self.nl, *concepts) if quiz.quiz_types == ("dictate",)
         )
-        progress = Progress({}, Language("fi"), quizzes)
+        progress = Progress({}, self.fi, quizzes)
         random_quiz = next(iter(quizzes))
-        self.progress.mark_correct_answer(random_quiz)
-        self.progress.get_retention(random_quiz).skip_until = None
+        progress.mark_correct_answer(random_quiz)
+        progress.get_retention(random_quiz).skip_until = None
         self.assertEqual(progress.next_quiz(), random_quiz)
 
     def test_as_dict(self):
