@@ -21,7 +21,9 @@ class Progress:
         quizzes: Quizzes,
         skip_concepts: int = 5,
     ) -> None:
-        self.__progress_dict = {key: Retention.from_dict(value) for key, value in progress_dict.items()}
+        self.progress_dict = self.__progress_dict = {
+            key: Retention.from_dict(value) for key, value in progress_dict.items()
+        }
         self.target_language = target_language
         self.quizzes = quizzes
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
