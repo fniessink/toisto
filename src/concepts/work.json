@@ -261,9 +261,6 @@
         "nl": "de werknemer"
     },
     "boss": {
-        "roots": {
-            "fi": "man"
-        },
         "en": "boss",
         "fi": [
             "esimies",
@@ -312,8 +309,8 @@
     },
     "email": {
         "roots": {
-            "en": "mail",
-            "fi": "mail"
+            "en": "post",
+            "fi": "post"
         },
         "en": "e-mail|email",
         "fi": "sähköposti",

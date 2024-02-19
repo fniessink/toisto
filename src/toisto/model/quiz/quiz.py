@@ -225,7 +225,7 @@ class Quizzes(set[Quiz]):
     def related_quizzes(self, quiz: Quiz) -> Quizzes:
         """Return the quizzes related to the quiz, meaning quizzes for the same concept and quizzes for examples."""
         quizzes = Quizzes(self.by_concept(quiz.concept))
-        for example in quiz.concept.examples:
+        for example in quiz.concept.get_related_concepts("example"):
             quizzes |= self.by_concept(example)
         return quizzes
 

@@ -1,6 +1,8 @@
 """Unit tests for concepts."""
 
-from toisto.model.language.concept import Concept, ConceptId
+from typing import get_args
+
+from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -13,26 +15,20 @@ class ConceptTest(ToistoTestCase):
         """Test the default attributes of a concept."""
         concept = self.create_concept("concept_id", {})
         self.assertEqual("concept_id", concept.concept_id)
-        self.assertEqual((), concept.labels(self.fi))
-        self.assertEqual((), concept.meanings(self.fi))
-        self.assertEqual((), concept.answers)
-        self.assertFalse(concept.answer_only)
-        self.assertEqual((), concept.roots(self.fi))
-        self.assertEqual((), concept.compounds(self.fi))
         self.assertIsNone(concept.parent)
         self.assertEqual((), concept.constituents)
-        self.assertEqual((), concept.antonyms)
-        self.assertEqual((), concept.hypernyms)
-        self.assertEqual((), concept.hyponyms)
-        self.assertEqual((), concept.holonyms)
-        self.assertEqual((), concept.meronyms)
-        self.assertEqual((), concept.involves)
-        self.assertEqual((), concept.involved_by)
+        self.assertEqual((), concept.labels(self.fi))
+        self.assertEqual((), concept.meanings(self.fi))
+        self.assertEqual((), concept.roots(self.fi))
+        self.assertEqual((), concept.compounds(self.fi))
+        self.assertFalse(concept.answer_only)
+        for relation in get_args(ConceptRelation):
+            self.assertEqual((), concept.get_related_concepts(relation))
 
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
         concept = self.create_concept("thirty", dict(fi="kolmekymmentä", nl="dertig"))
-        self.assertEqual(concept, Concept.instances[ConceptId("thirty")])
+        self.assertEqual(concept, Concept.instances.get_values(ConceptId("thirty"))[0])
 
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""

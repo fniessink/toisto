@@ -22,14 +22,14 @@ def filter_concepts(
             argument_parser.error(f"Concept '{concept_id}' not found\n")
         all_selected_concepts.add(concepts_by_concept_id[concept_id])
     for concept in all_selected_concepts.copy():
-        all_selected_concepts |= set(concept.hyponyms + concept.meronyms)
+        all_selected_concepts |= set(concept.get_related_concepts("hyponym") + concept.get_related_concepts("meronym"))
     for concept in all_selected_concepts.copy():
         all_selected_concepts |= set(
-            concept.antonyms
-            + concept.hyponyms
-            + concept.meronyms
-            + concept.involves
-            + concept.involved_by
+            concept.get_related_concepts("antonym")
+            + concept.get_related_concepts("hyponym")
+            + concept.get_related_concepts("meronym")
+            + concept.get_related_concepts("involves")
+            + concept.get_related_concepts("involved_by")
             + concept.compounds(language)
         )
     return all_selected_concepts

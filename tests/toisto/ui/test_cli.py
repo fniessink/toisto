@@ -8,7 +8,7 @@ from configparser import ConfigParser
 from unittest.mock import Mock, patch
 
 from toisto.model.language import Language
-from toisto.model.language.concept import Concept, ConceptId, RelatedConcepts
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
@@ -76,12 +76,10 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         """Test that the practice help message is displayed."""
         foo = ConceptId("foo")
         bar = ConceptId("bar")
-        related_foo = RelatedConcepts(foo, None, (), {}, (), (), (), (), (), ())
-        related_bar = RelatedConcepts(bar, None, (), {}, (), (), (), (), (), ())
         english = Language("en")
         concepts = {
-            Concept(foo, {english: (Label(english, "foo"),)}, {}, related_foo, False),
-            Concept(bar, {english: (Label(english, "bar"),)}, {}, related_bar, False),
+            Concept(foo, None, (), {english: (Label(english, "foo"),)}, {}, {}, {}, False),
+            Concept(bar, None, (), {english: (Label(english, "bar"),)}, {}, {}, {}, False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(

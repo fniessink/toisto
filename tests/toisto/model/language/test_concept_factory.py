@@ -40,14 +40,14 @@ class ConcepFactoryTest(ToistoTestCase):
         """Test that a concept can have an antonym concept."""
         big = self.create_concept("big", dict(antonym="small", en="big"))
         small = self.create_concept("small", dict(en="small"))
-        self.assertEqual((small,), big.antonyms)
+        self.assertEqual((small,), big.get_related_concepts("antonym"))
 
     def test_multiple_antonyms(self):
         """Test that a concept can have multiple antonyms."""
         big = self.create_concept("big", dict(antonym=["small", "little"], en="big"))
         little = self.create_concept("little", dict(en="little"))
         small = self.create_concept("small", dict(en="small"))
-        self.assertEqual((small, little), big.antonyms)
+        self.assertEqual((small, little), big.get_related_concepts("antonym"))
 
     def test_antonyms_of_composite(self):
         """Test that a composite concept can have an antonym."""
@@ -68,52 +68,52 @@ class ConcepFactoryTest(ToistoTestCase):
                 "superlative degree": dict(en="smallest"),
             },
         )
-        self.assertEqual((small,), big.antonyms)
+        self.assertEqual((small,), big.get_related_concepts("antonym"))
         for index in range(3):
-            self.assertEqual((small.constituents[index],), big.constituents[index].antonyms)
+            self.assertEqual((small.constituents[index],), big.constituents[index].get_related_concepts("antonym"))
 
     def test_hypernym_and_hyponym(self):
         """Test that a concept can have a hypernym concept, and that the hypernym has the concept as hyponym."""
         canine = self.create_concept("canine", dict(en="canine"))
         dog = self.create_concept("dog", dict(hypernym="canine", en="dog"))
-        self.assertEqual((canine,), dog.hypernyms)
-        self.assertEqual((dog,), canine.hyponyms)
+        self.assertEqual((canine,), dog.get_related_concepts("hypernym"))
+        self.assertEqual((dog,), canine.get_related_concepts("hyponym"))
 
     def test_hypernyms_and_hyponyms_are_transitive(self):
         """Test that a concept's hypernyms and hyponyms are transitive."""
         animal = self.create_concept("animal", dict(en="animal"))
         canine = self.create_concept("canine", dict(hypernym="animal", en="canine"))
         dog = self.create_concept("dog", dict(hypernym="canine", en="dog"))
-        self.assertEqual((canine, animal), dog.hypernyms)
-        self.assertEqual((canine, dog), animal.hyponyms)
+        self.assertEqual((canine, animal), dog.get_related_concepts("hypernym"))
+        self.assertEqual((canine, dog), animal.get_related_concepts("hyponym"))
 
     def test_holonym_and_meronym(self):
         """Test that a concept can have a holonym concept, and that the meronym has the concept as holonym."""
         animal = self.create_concept("animal", dict(en="animal"))
         tail = self.create_concept("tail", dict(holonym="animal", en="tail"))
-        self.assertEqual((animal,), tail.holonyms)
-        self.assertEqual((tail,), animal.meronyms)
+        self.assertEqual((animal,), tail.get_related_concepts("holonym"))
+        self.assertEqual((tail,), animal.get_related_concepts("meronym"))
 
     def test_holonyms_and_meronyms_are_transitive(self):
         """Test that a concept's holonyms and meronyms are transitive."""
         animal = self.create_concept("animal", dict(en="animal"))
         head = self.create_concept("head", dict(holonym="animal", en="head"))
         eye = self.create_concept("eye", dict(holonym="head", en="eye"))
-        self.assertEqual((head, animal), eye.holonyms)
-        self.assertEqual((head, eye), animal.meronyms)
+        self.assertEqual((head, animal), eye.get_related_concepts("holonym"))
+        self.assertEqual((head, eye), animal.get_related_concepts("meronym"))
 
     def test_answer(self):
         """Test that a concept can have an answer relation with another concept."""
         question = self.create_concept("ice cream", dict(en=["Do you like ice cream?"], answer="yes"))
         answer = self.create_concept("yes", dict(en="Yes!"))
-        self.assertEqual((answer,), question.answers)
+        self.assertEqual((answer,), question.get_related_concepts("answer"))
 
     def test_multiple_answers(self):
         """Test that a concept can have an answer relation with multiple concepts."""
         question = self.create_concept("ice cream", dict(en=["Do you like ice cream?"], answer=["yes", "no"]))
         yes = self.create_concept("yes", dict(en="Yes!"))
         no = self.create_concept("no", dict(en="No!"))
-        self.assertEqual((yes, no), question.answers)
+        self.assertEqual((yes, no), question.get_related_concepts("answer"))
 
     def test_answer_of_composite(self):
         """Test that a composite concept can have answers."""
@@ -132,15 +132,15 @@ class ConcepFactoryTest(ToistoTestCase):
                 "plural": dict(fi="Puhumme."),
             },
         )
-        self.assertEqual((answer,), question.answers)
+        self.assertEqual((answer,), question.get_related_concepts("answer"))
         for index in range(2):
-            self.assertEqual((answer.constituents[index],), question.constituents[index].answers)
+            self.assertEqual((answer.constituents[index],), question.constituents[index].get_related_concepts("answer"))
 
     def test_example(self):
         """Test that a concept can have an example."""
         concept = self.create_concept("next to", dict(example="the museum is next to the church", fi="vieressä"))
         example = self.create_concept("the museum is next to the church", dict(fi="Museo on kirkon vieressä."))
-        self.assertEqual((example,), concept.examples)
+        self.assertEqual((example,), concept.get_related_concepts("example"))
 
     def test_multiple_examples(self):
         """Test that a concept can have multiple examples."""
@@ -148,7 +148,7 @@ class ConcepFactoryTest(ToistoTestCase):
         concept = self.create_concept("black", dict(example=examples, fi="musta"))
         example1 = self.create_concept("the car is black", dict(fi="Auto on musta."))
         example2 = self.create_concept("the cars are black", dict(fi="Autot ovat mustia."))
-        self.assertEqual((example1, example2), concept.examples)
+        self.assertEqual((example1, example2), concept.get_related_concepts("example"))
 
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
