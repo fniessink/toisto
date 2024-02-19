@@ -103,7 +103,6 @@
         ]
     },
     "singer": {
-        "roots": "to sing",
         "en": "singer",
         "fi": "laulaja",
         "nl": "de zanger"
@@ -154,10 +153,7 @@
     },
     "construction worker": {
         "roots": {
-            "fi": [
-                "building",
-                "man"
-            ]
+            "fi": "building"
         },
         "en": "construction worker",
         "fi": "rakennusmies",

@@ -1,8 +1,5 @@
 {
     "tourism": {
-        "roots": {
-            "fi": "journey"
-        },
         "en": "tourism",
         "fi": "matkailu",
         "nl": "het toerisme"
@@ -70,7 +67,6 @@
         }
     },
     "flight": {
-        "hypernym": "journey",
         "involves": "airplane",
         "singular": {
             "en": "flight",

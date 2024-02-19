@@ -145,12 +145,14 @@ class QuizFactory:
 
     def semantic_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create semantic quizzes for the concept."""
-        answer_quizzes = self.related_concept_quizzes(concept, previous_quizzes, "answer", concept.answers)
+        answer_quizzes = self.related_concept_quizzes(
+            concept, previous_quizzes, "answer", concept.get_related_concepts("answer")
+        )
         antonym_quizzes = self.related_concept_quizzes(
             concept,
             Quizzes(answer_quizzes | previous_quizzes),
             "antonym",
-            concept.antonyms,
+            concept.get_related_concepts("antonym"),
         )
         return Quizzes(answer_quizzes | antonym_quizzes)
 

@@ -6,16 +6,18 @@ from dataclasses import dataclass
 from typing import Literal, Union, cast, get_args
 
 from . import Language
-from .concept import Concept, ConceptId, ConceptIds, RelatedConcepts
+from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds, RootConceptIds
 from .grammar import GrammaticalCategory
 from .iana_language_subtag_registry import ALL_LANGUAGES
 from .label import Labels, label_factory, meaning_factory
 
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-ConceptRelation = Literal["antonym", "answer", "answer-only", "example", "holonym", "hypernym", "involves", "roots"]
-LeafConceptDict = dict[Language | ConceptRelation, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
-CompositeConceptDict = dict[GrammaticalCategory | ConceptRelation, Union["CompositeConceptDict", LeafConceptDict, bool]]
+ConceptAttribute = Literal["antonym", "answer", "answer-only", "example", "holonym", "hypernym", "involves", "roots"]
+LeafConceptDict = dict[Language | ConceptAttribute, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
+CompositeConceptDict = dict[
+    GrammaticalCategory | ConceptAttribute, Union["CompositeConceptDict", LeafConceptDict, bool]
+]
 ConceptDict = LeafConceptDict | CompositeConceptDict
 
 
@@ -30,9 +32,12 @@ class ConceptFactory:
         """Create a concept from the concept_dict."""
         return Concept(
             self.concept_id,
+            parent,
+            self._constituent_concepts(),
             self._labels(),
             self._meanings(),
-            self._related_concepts(parent),
+            self._related_concepts(),
+            self._root_concepts(),
             self._answer_only(),
         )
 
@@ -52,20 +57,9 @@ class ConceptFactory:
             if key in ALL_LANGUAGES
         }
 
-    def _related_concepts(self, parent: ConceptId | None) -> RelatedConcepts:
+    def _related_concepts(self) -> RelatedConceptIds:
         """Create the related concepts."""
-        return RelatedConcepts(
-            self.concept_id,
-            parent,
-            self._constituent_concepts(),
-            self._root_concepts(),
-            self._related_concept_ids("antonym"),
-            self._related_concept_ids("hypernym"),
-            self._related_concept_ids("holonym"),
-            self._related_concept_ids("involves"),
-            self._related_concept_ids("answer"),
-            self._related_concept_ids("example"),
-        )
+        return {relation: self._related_concept_ids(relation) for relation in get_args(ConceptRelation)}
 
     def _answer_only(self) -> bool:
         """Return whether the concept is answer-only."""
@@ -102,7 +96,7 @@ class ConceptFactory:
         keys = self.concept_dict.keys()
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
 
-    def _root_concepts(self) -> dict[Language, ConceptIds] | ConceptIds:
+    def _root_concepts(self) -> RootConceptIds:
         """Retrieve the roots from the concept dict."""
         roots = self._get_roots()
         if isinstance(roots, dict):  # Roots are not the same for all languages
@@ -116,7 +110,7 @@ class ConceptFactory:
         """Get the roots from the concept dict."""
         return cast(ConceptIdDictOrListOrString, self.concept_dict.get("roots", {}))
 
-    def _related_concept_ids(self, relation: ConceptRelation) -> ConceptIds:
+    def _related_concept_ids(self, relation: ConceptAttribute) -> ConceptIds:
         """Return the ids of the related concept(s)."""
         related = cast(ConceptIdListOrString, self.concept_dict.get(relation, []))
         return tuple(related) if isinstance(related, list) else (related,)

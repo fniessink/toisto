@@ -95,7 +95,7 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
 def examples(quiz: Quiz) -> str:
     """Return the quiz's examples, if any."""
     examples: list[Label] = []
-    for example in quiz.concept.examples:
+    for example in quiz.concept.get_related_concepts("example"):
         examples.extend(example.labels(quiz.question_language))
     return bulleted_list("Example", examples)
 
