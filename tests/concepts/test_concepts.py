@@ -1,7 +1,9 @@
 """Integration tests for the concepts."""
 
 from argparse import ArgumentParser
+from typing import ClassVar
 
+from toisto.metadata import CONCEPT_JSON_FILES
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.persistence.loader import Loader
 
@@ -11,10 +13,13 @@ from ..base import ToistoTestCase
 class ConceptsTest(ToistoTestCase):
     """Integration tests for the concepts."""
 
-    def setUp(self) -> None:
-        """Override to set up test fixtures."""
-        super().setUp()
-        self.concepts = Loader(ArgumentParser()).load()
+    concepts: ClassVar[set[Concept]]
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        """Extend to set up test fixtures."""
+        super().setUpClass()
+        cls.concepts = Loader(ArgumentParser()).load(*CONCEPT_JSON_FILES)
 
     def test_load_concepts(self):
         """Test that the concepts can be loaded."""

@@ -18,7 +18,7 @@ class ProgressTest(ToistoTestCase):
         super().setUp()
         concept = self.create_concept("english", dict(fi="englanti", nl="Engels"))
         self.quizzes = create_quizzes(self.fi, self.nl, concept)
-        self.progress = Progress({}, self.fi, self.quizzes)
+        self.progress = Progress({}, self.fi, Quizzes(self.quizzes))
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""

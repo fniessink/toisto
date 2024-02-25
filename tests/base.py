@@ -15,7 +15,6 @@ class ToistoTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         """Override to reset the Concept instances registry."""
-        Concept.instances.clear()
         self.en = Language("en")
         self.fi = Language("fi")
         self.nl = Language("nl")

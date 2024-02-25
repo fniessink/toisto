@@ -5,7 +5,7 @@ from configparser import ConfigParser
 from subprocess import DEVNULL  # nosec import_subprocess
 from unittest.mock import Mock, patch
 
-import gtts
+from gtts import gTTSError
 
 from toisto.ui.speech import say
 
@@ -19,7 +19,7 @@ class SayTest(unittest.TestCase):
         self.config.add_section("commands")
 
     @patch("sys.platform", "darwin")
-    @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
+    @patch("toisto.ui.speech.gTTS", Mock(side_effect=gTTSError))
     @patch("toisto.ui.speech.Popen")
     def test_google_translate_fails_on_mac_os(self, mock_subprocess_popen: Mock) -> None:
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
@@ -33,7 +33,7 @@ class SayTest(unittest.TestCase):
         )
 
     @patch("sys.platform", "darwin")
-    @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
+    @patch("toisto.ui.speech.gTTS", Mock(side_effect=gTTSError))
     @patch("toisto.ui.speech.Popen")
     def test_google_translate_fails_on_mac_os_twice(self, mock_subprocess_popen: Mock) -> None:
         """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
@@ -47,13 +47,13 @@ class SayTest(unittest.TestCase):
         )
 
     @patch("sys.platform", "windows")
-    @patch("gtts.gTTS.save", Mock(side_effect=gtts.tts.gTTSError))
+    @patch("toisto.ui.speech.gTTS", Mock(side_effect=gTTSError))
     def test_google_translate_fails_on_windows(self) -> None:
         """Test that the exception is not caught when Google Translate fails on Windows, because there is no plan B."""
         self.config.set("commands", "mp3player", "afplay")
         self.assertRaises(RuntimeError, say, "nl", "Hallo", self.config)
 
-    @patch("gtts.gTTS.save", Mock())
+    @patch("toisto.ui.speech.gTTS", Mock())
     @patch("toisto.ui.speech.Popen")
     def test_system_call_afplay(self, mock_subprocess_popen: Mock) -> None:
         """Test that the afplay program is called with the correct arguments."""
@@ -62,7 +62,7 @@ class SayTest(unittest.TestCase):
         mock_subprocess_popen.assert_called_once()
         self.assertEqual(mock_subprocess_popen.call_args_list[0][0][0][0], "afplay")
 
-    @patch("gtts.gTTS.save", Mock())
+    @patch("toisto.ui.speech.gTTS", Mock())
     @patch("toisto.ui.speech.playsound")
     def test_call_playsound(self, mock_playsound: Mock) -> None:
         """Test that the playsound function is called."""

@@ -30,6 +30,11 @@ def load_languages() -> dict[Language, str]:
 
 def parse_record(lines: list[str]) -> dict[Language, str]:
     """Parse a language record."""
-    language = first(lines, lambda line: line.startswith("Subtag")).split(": ", maxsplit=1)[1].strip()
-    description = first(lines, lambda line: line.startswith("Description")).split(": ", maxsplit=1)[1].strip()
+    language = parse_attribute(lines, "Subtag")
+    description = parse_attribute(lines, "Description")
     return {Language(language): description}
+
+
+def parse_attribute(lines: list[str], attribute: str) -> str:
+    """Parse an attribute from a language record and return the value."""
+    return first(lines, lambda line: line.startswith(attribute)).split(": ", maxsplit=1)[1].strip()
