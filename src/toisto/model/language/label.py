@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Sequence
+from functools import cached_property
 from typing import ClassVar, Final
 
 from . import Language
@@ -16,7 +17,7 @@ END_OF_SENTENCE_PUNCTUATION = """?!'"."""
 class Label(str):
     """Class representing labels for concepts."""
 
-    __slots__ = ("language",)
+    __slots__ = ("__dict__", "language")  # Without adding __dict__ to slots @cached_property does not work
 
     # Labels can have one question note and multiple answer notes. The question note is shown before a quiz is
     # presented to the user. The answer notes are shown afterwards. The format is:
@@ -54,7 +55,7 @@ class Label(str):
         """Extract the spelling alternatives from the label."""
         return label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
 
-    @property
+    @cached_property
     def spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label and generate additional spelling alternatives."""
         alternatives = self.non_generated_spelling_alternatives

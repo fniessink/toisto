@@ -15,9 +15,9 @@ from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANS
 from ...base import ToistoTestCase
 
 
-@patch("toisto.ui.speech.Popen", Mock())
 @patch("pathlib.Path.open", MagicMock())
-@patch("gtts.gTTS.save", Mock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
 class PracticeTest(ToistoTestCase):
     """Test the practice command."""
 

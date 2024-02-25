@@ -3,7 +3,7 @@
 from argparse import ArgumentParser
 from pathlib import Path
 
-from ..metadata import CONCEPT_JSON_FILES, NAME
+from ..metadata import NAME
 from ..model.language.concept import Concept, ConceptId
 from ..model.language.concept_factory import ConceptDict, create_concept
 from .identifier_registry import IdentifierRegistry
@@ -16,13 +16,12 @@ class Loader:
     def __init__(self, argument_parser: ArgumentParser) -> None:
         self.argument_parser = argument_parser
         self.concept_id_registry = IdentifierRegistry[ConceptId]("concept", argument_parser)
-        self.builtin_files = CONCEPT_JSON_FILES
 
-    def load(self, files: list[Path] | None = None) -> set[Concept]:
+    def load(self, *files: Path) -> set[Concept]:
         """Load the domain objects from the files."""
         all_concepts = set()
         try:
-            for file_path in self.builtin_files if files is None else files:
+            for file_path in files:
                 concepts = self._parse_json(load_json(file_path))
                 self.concept_id_registry.check_and_register_identifiers(self._concept_identifiers(concepts), file_path)
                 all_concepts |= concepts

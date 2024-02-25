@@ -1,5 +1,6 @@
 """Concept factory unit tests."""
 
+from toisto.model.language.concept import Concept
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -7,6 +8,11 @@ from ....base import ToistoTestCase
 
 class ConcepFactoryTest(ToistoTestCase):
     """Unit tests for the concept factory class."""
+
+    def setUp(self) -> None:
+        """Extend to set up test fixtures."""
+        super().setUp()
+        Concept.instances.clear()
 
     def test_leaf_concept(self):
         """Test that a leaf concept has no constituent concepts."""

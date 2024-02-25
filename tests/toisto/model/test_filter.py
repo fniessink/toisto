@@ -15,6 +15,7 @@ class FilterTest(ToistoTestCase):
     def setUp(self) -> None:
         """Set up the unit test fixtures."""
         super().setUp()
+        Concept.instances.clear()
         self.argument_parser = ArgumentParser()
         self.foo = self.create_concept("foo", {})
         self.bar = self.create_concept("bar", {})

@@ -11,6 +11,7 @@ from toisto.metadata import VERSION
 from ..base import ToistoTestCase
 
 
+@patch("toisto.ui.speech.gTTS", Mock())
 class AppTest(ToistoTestCase):
     """Unit tests for the main method."""
 

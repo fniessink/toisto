@@ -129,7 +129,7 @@ class Concept:
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""
         if self.is_composite(language):
-            return tuple(chain.from_iterable([concept.labels(language) for concept in self.constituents]))
+            return tuple(chain.from_iterable(concept.labels(language) for concept in self.constituents))
         return self._labels.get(language, Labels())
 
     def colloquial_labels(self, language: Language) -> Labels:
@@ -143,7 +143,7 @@ class Concept:
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept in the specified language."""
         if self.is_composite(language):
-            return tuple(chain.from_iterable([concept.meanings(language) for concept in self.constituents]))
+            return tuple(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
         return self._meanings.get(language, Labels())
 
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
