@@ -1,5 +1,6 @@
 """Text to speech."""
 
+import contextlib
 import sys
 import tempfile
 from configparser import ConfigParser
@@ -7,7 +8,9 @@ from subprocess import DEVNULL, Popen  # nosec import_subprocess
 from typing import Final
 
 from gtts import gTTS, gTTSError
-from playsound import playsound
+
+with contextlib.redirect_stdout(None):
+    from pygame.mixer import music
 
 MAC_OS_SAY_VOICES: Final = dict(en="Daniel", fi="Satu (Enhanced)", nl="Xander (Enhanced)")
 
@@ -34,15 +37,15 @@ def _say_with_macos_say(language: str, text: str, slow: bool) -> None:
 def _say_with_google_translate(language: str, text: str, config: ConfigParser, slow: bool) -> None:
     """Say the text with Google Translate say command."""
     try:
-        service = gTTS(text=text, lang=language, slow=slow)
+        service = gTTS(text=text, lang=language, lang_check=False, slow=slow)
         with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as mp3_file:
             service.save(mp3_file.name)
     except gTTSError as reason:
         message = f"Can't use Google Translate: {reason}"
         raise RuntimeError(message) from reason
     mp3_play_command = config.get("commands", "mp3player")
-    if mp3_play_command == "playsound":
-        playsound(mp3_file.name)
+    if mp3_play_command == "builtin":
+        music.queue(mp3_file.name)
     else:
         _run_command(mp3_play_command, mp3_file.name)
 
