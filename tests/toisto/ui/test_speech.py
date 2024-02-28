@@ -63,9 +63,9 @@ class SayTest(unittest.TestCase):
         self.assertEqual(mock_subprocess_popen.call_args_list[0][0][0][0], "afplay")
 
     @patch("toisto.ui.speech.gTTS", Mock())
-    @patch("toisto.ui.speech.playsound")
-    def test_call_playsound(self, mock_playsound: Mock) -> None:
-        """Test that the playsound function is called."""
-        self.config.set("commands", "mp3player", "playsound")
+    @patch("toisto.ui.speech.music")
+    def test_call_builtin_player(self, mock_music: Mock) -> None:
+        """Test that the bultin music player (Pygame) is called."""
+        self.config.set("commands", "mp3player", "builtin")
         say("nl", "Hallo", self.config)
-        mock_playsound.assert_called_once()
+        mock_music.queue.assert_called_once()

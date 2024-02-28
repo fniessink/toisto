@@ -100,4 +100,4 @@ def _add_defaults(parser: ConfigParser) -> None:
         if "commands" not in parser.sections():
             parser.add_section("commands")
         defaults = dict(darwin="afplay", linux="mpg123 --quiet")
-        parser["commands"]["mp3player"] = defaults.get(sys.platform, "playsound")
+        parser["commands"]["mp3player"] = defaults.get(sys.platform, "builtin")

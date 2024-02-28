@@ -39,7 +39,7 @@ class MissingConfigTest(ConfigTestCase):
     @patch("sys.platform", "windows")
     def test_default_mp3player_on_windows(self):
         """Test default mp3 player on Windows."""
-        self.assertEqual("playsound", self.read_config().get("commands", "mp3player"))
+        self.assertEqual("builtin", self.read_config().get("commands", "mp3player"))
 
 
 @patch("pathlib.Path.open")

@@ -125,11 +125,11 @@ source = en
 
 #### How to configure a different mp3 player
 
-By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and the PlaySound function on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
+By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
 
 ```ini
 [commands]
-mp3player = name_of_mp3_player
+mp3player = name_of_mp3_player or `builtin`
 ```
 
 Make sure the mp3 player is on the `PATH` or put the complete filepath in the config file.

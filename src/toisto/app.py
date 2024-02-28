@@ -1,15 +1,11 @@
 """Main module for the application."""
 
-import logging
 from argparse import Namespace
 from configparser import ConfigParser
 from contextlib import suppress
 
 with suppress(ImportError):
     import readline  # noqa: F401 `readline` imported but unused
-
-# Suppress warning messages printed by the playsound module.
-logging.getLogger().setLevel(logging.ERROR)
 
 from .command.practice import practice
 from .command.show_progress import show_progress
