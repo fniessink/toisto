@@ -25,6 +25,7 @@
         "nl": "dan"
     },
     "morning": {
+        "hypernym": "time of day",
         "singular": {
             "en": "morning",
             "fi": "aamu|aamupäivä",
@@ -36,7 +37,22 @@
             "nl": "de ochtenden"
         }
     },
+    "at morning": {
+        "hypernym": "time of day",
+        "roots": "morning",
+        "en": "at morning",
+        "fi": "aamulla",
+        "nl": "'s ochtends"
+    },
+    "this morning": {
+        "hypernym": "time of day",
+        "roots": "morning",
+        "en": "this morning",
+        "fi": "tänä aamuna",
+        "nl": "vanochtend"
+    },
     "noon": {
+        "hypernym": "time of day",
         "roots": {
             "fi": "day",
             "nl": [
@@ -55,6 +71,7 @@
         }
     },
     "afternoon": {
+        "hypernym": "time of day",
         "roots": {
             "en": "noon",
             "fi": [
@@ -74,7 +91,18 @@
             "nl": "de middagen"
         }
     },
+    "at day": {
+        "hypernym": "time of day",
+        "roots": "day",
+        "en": [
+            "at day",
+            "in the daytime"
+        ],
+        "fi": "päivällä",
+        "nl": "overdag"
+    },
     "evening": {
+        "hypernym": "time of day",
         "singular": {
             "en": "evening",
             "fi": "ilta",
@@ -86,7 +114,22 @@
             "nl": "de avonden"
         }
     },
+    "in the evening": {
+        "hypernym": "time of day",
+        "roots": "evening",
+        "en": "in the evening",
+        "fi": "illalla",
+        "nl": "'s avonds"
+    },
+    "this evening": {
+        "hypernym": "time of day",
+        "roots": "evening",
+        "en": "this evening",
+        "fi": "tänä iltana",
+        "nl": "vanavond"
+    },
     "night": {
+        "hypernym": "time of day",
         "singular": {
             "en": "night",
             "fi": "yö",
@@ -98,7 +141,36 @@
             "nl": "de nachten"
         }
     },
+    "at night": {
+        "hypernym": "time of day",
+        "roots": "night",
+        "en": "at night",
+        "fi": "yöllä",
+        "nl": "'s nachts"
+    },
+    "this night": {
+        "hypernym": "time of day",
+        "roots": "night",
+        "en": "this night",
+        "fi": "tänä yönä",
+        "nl": "vannacht"
+    },
+    "last night": {
+        "hypernym": "time of day",
+        "roots": {
+            "en": "night",
+            "fi": "evening",
+            "nl": [
+                "yesterday",
+                "evening"
+            ]
+        },
+        "en": "last night",
+        "fi": "viime iltana",
+        "nl": "gisteravond"
+    },
     "midnight": {
+        "hypernym": "time of day",
         "roots": "night",
         "singular": {
             "en": "midnight",
@@ -409,5 +481,21 @@
         "en": "It takes one hour.",
         "fi": "Se kestää tunnin.",
         "nl": "Het duurt één uur.|Het duurt een uur."
+    },
+    "time of day": {
+        "roots": {
+            "en": "time",
+            "fi": [
+                "24 hours",
+                "time"
+            ],
+            "nl": [
+                "time",
+                "day"
+            ]
+        },
+        "en": "time of day",
+        "fi": "vuorokaudenaika",
+        "nl": "tijdstip van de dag"
     }
 }

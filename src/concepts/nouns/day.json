@@ -15,5 +15,31 @@
         "en": "(twenty-four hours)",
         "fi": "vuorokausi",
         "nl": "het etmaal"
+    },
+    "date": {
+        "example": "the date is 2024-11-16",
+        "en": "date",
+        "fi": "päiväys",
+        "nl": "de datum"
+    },
+    "the date is 2024-11-16": {
+        "roots": "date",
+        "en": "The date is 16 November, 2024.|The date is November 16, 2024.",
+        "fi": "Päiväys on 16. marraskuuta 2024.",
+        "nl": "De datum is 16 november 2024."
+    },
+    "one day": {
+        "roots": "day",
+        "en": "one day",
+        "fi": [
+            "eräänä päivänä",
+            "yhtenä päivänä*"
+        ],
+        "nl": "op een dag"
+    },
+    "on which day": {
+        "en": "On which day?",
+        "fi": "Minä päivänä?",
+        "nl": "Op welke dag?"
     }
 }

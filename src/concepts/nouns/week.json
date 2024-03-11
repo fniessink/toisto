@@ -38,7 +38,16 @@
     "next week": {
         "roots": "week",
         "en": "next week",
-        "fi": "ensi viikolla",
+        "fi": [
+            "ensi viikolla",
+            "seuraavalla viikolla"
+        ],
         "nl": "volgende week"
+    },
+    "in which week": {
+        "roots": "week",
+        "en": "In which week?",
+        "fi": "Millä viikolla?",
+        "nl": "In welke week?"
     }
 }
