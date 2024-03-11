@@ -15,6 +15,24 @@
             "nl": "de weekenden"
         }
     },
+    "at the weekend": {
+        "roots": "weekend",
+        "en": "at the weekend",
+        "fi": "viikonloppuna",
+        "nl": "in het weekend"
+    },
+    "last weekend": {
+        "roots": "weekend",
+        "en": "last weekend",
+        "fi": "viime viikonloppuna",
+        "nl": "vorig weekend"
+    },
+    "next weekend": {
+        "roots": "weekend",
+        "en": "next weekend",
+        "fi": "ensi viikonloppuna",
+        "nl": "volgend weekend"
+    },
     "good weekend": {
         "roots": {
             "en": [
