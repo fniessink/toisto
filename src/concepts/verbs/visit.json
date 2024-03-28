@@ -1,0 +1,93 @@
+{
+    "to visit": {
+        "infinitive": {
+            "en": "to visit",
+            "fi": "käydä;;Using käydä instead of mennä (“to go”) implies that the subject will return afterwards.",
+            "nl": "bezoeken"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I visit",
+                    "fi": "minä käyn",
+                    "nl": "ik bezoek"
+                },
+                "second person": {
+                    "en": "you visit;singular",
+                    "fi": "sinä käyt",
+                    "nl": "jij bezoekt"
+                },
+                "third person": {
+                    "fi": "hän käy",
+                    "female": {
+                        "en": "she visits",
+                        "nl": "zij bezoekt"
+                    },
+                    "male": {
+                        "en": "he visits",
+                        "nl": "hij bezoekt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we visit",
+                    "fi": "me käymme",
+                    "nl": "wij bezoeken"
+                },
+                "second person": {
+                    "en": "you visit;plural",
+                    "fi": "te käytte",
+                    "nl": "jullie bezoeken"
+                },
+                "third person": {
+                    "en": "they visit",
+                    "fi": "he käyvät",
+                    "nl": "zij bezoeken"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I visited",
+                    "fi": "minä kävin",
+                    "nl": "ik bezocht"
+                },
+                "second person": {
+                    "en": "you visited;singular",
+                    "fi": "sinä kävit",
+                    "nl": "jij bezocht"
+                },
+                "third person": {
+                    "fi": "hän kävi",
+                    "female": {
+                        "en": "she visited",
+                        "nl": "zij bezocht"
+                    },
+                    "male": {
+                        "en": "he visited",
+                        "nl": "hij bezocht"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we visited",
+                    "fi": "me käyvimme",
+                    "nl": "wij bezochten"
+                },
+                "second person": {
+                    "en": "you visited;plural",
+                    "fi": "te käyvitte",
+                    "nl": "jullie bezochten"
+                },
+                "third person": {
+                    "en": "they visited",
+                    "fi": "he käyvivät",
+                    "nl": "zij bezochten"
+                }
+            }
+        }
+    }
+}
