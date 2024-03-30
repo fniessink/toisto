@@ -1,7 +1,25 @@
 {
     "more": {
+        "example": "i drank more water",
         "en": "more",
-        "fi": "enemmän",
+        "fi": "lisää;;Lisää cannot be used for comparisons, for example 'more than'; for that use 'enemmän kuin'.",
         "nl": "meer"
+    },
+    "more than": {
+        "example": "i love you more than he does",
+        "en": "more than",
+        "fi": "enemmän kuin",
+        "nl": "meer dan"
+    },
+    "i drank more water": {
+        "en": "I drank more water.",
+        "fi": "Minä join lisää vettä.",
+        "nl": "Ik dronk meer water."
+    },
+    "i love you more than he does": {
+        "roots": "more than",
+        "en": "I love you more than he does.|I love you more than he.",
+        "fi": "Minä rakastan sinua enemmän kuin hän.",
+        "nl": "Ik hou meer van jou dan hij.|Ik houd meer van jou dan hij.|Ik hou meer van jou dan hij doet.|Ik houd meer van jou dan hij."
     }
 }

@@ -6,12 +6,18 @@
         },
         "singular": {
             "en": "shoulder",
-            "fi": "olkapää",
+            "fi": [
+                "olkapää",
+                "hartia"
+            ],
             "nl": "de schouder"
         },
         "plural": {
             "en": "shoulders",
-            "fi": "olkapäät",
+            "fi": [
+                "olkapäät",
+                "hartiat"
+            ],
             "nl": "de schouders"
         }
     }

@@ -43,10 +43,14 @@
     "mother tongue": {
         "hypernym": "language",
         "roots": {
-            "en": "mother",
+            "en": [
+                "mother",
+                "tongue"
+            ],
             "fi": [
                 "mother",
-                "language"
+                "language",
+                "tongue"
             ],
             "nl": [
                 "mother",
