@@ -1,0 +1,24 @@
+{
+    "inflammation": {
+        "singular": {
+            "en": "inflammation",
+            "fi": "tulehdus",
+            "nl": "de ontsteking"
+        },
+        "plural": {
+            "en": "inflammations",
+            "fi": "tulehdukset",
+            "nl": "de ontstekingen"
+        }
+    },
+    "bacterial inflammation": {
+        "hypernym": "inflammation",
+        "roots": [
+            "bacterium",
+            "inflammation"
+        ],
+        "en": "bacterial inflammation",
+        "fi": "bakteeritulehdus",
+        "nl": "de bacteriële ontsteking"
+    }
+}

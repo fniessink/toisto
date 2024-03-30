@@ -41,5 +41,29 @@
         "en": "On which day?",
         "fi": "Minä päivänä?",
         "nl": "Op welke dag?"
+    },
+    "weekday": {
+        "singular": {
+            "en": [
+                "weekday",
+                "working day"
+            ],
+            "fi": "arki",
+            "nl": [
+                "de doordeweekse dag",
+                "de werkdag"
+            ]
+        },
+        "plural": {
+            "en": [
+                "weekdays",
+                "working days"
+            ],
+            "fi": "arjet",
+            "nl": [
+                "de doordeweekse dagen",
+                "de werkdagen"
+            ]
+        }
     }
 }

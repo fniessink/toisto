@@ -1,6 +1,6 @@
 {
     "tooth": {
-        "holonym": "head",
+        "holonym": "denture",
         "singular": {
             "en": "tooth",
             "fi": "hammas",
@@ -8,7 +8,7 @@
         },
         "plural": {
             "en": "teeth",
-            "fi": "hampaat",
+            "fi": "hampaat;plural",
             "nl": "de tanden"
         }
     }

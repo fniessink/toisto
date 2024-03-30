@@ -1,10 +1,10 @@
 """Integration tests for the concepts."""
 
 from argparse import ArgumentParser
-from typing import ClassVar
+from typing import ClassVar, get_args
 
 from toisto.metadata import BUILT_IN_LANGUAGES, CONCEPT_JSON_FILES
-from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept import Concept, ConceptId, NonInvertedConceptRelation
 from toisto.persistence.loader import Loader
 
 from ..base import ToistoTestCase
@@ -31,6 +31,13 @@ class ConceptsTest(ToistoTestCase):
             for language in BUILT_IN_LANGUAGES:
                 for root in concept.roots(language):
                     self.assertIn(root, Concept.instances.get_values(root.concept_id))
+
+    def test_holonyms_exist(self):
+        """Test that all holonyms use existing concept ids."""
+        for concept in self.concepts:
+            for relation in get_args(NonInvertedConceptRelation):
+                for related_concept in concept.get_related_concepts(relation):
+                    self.assertIn(related_concept, Concept.instances.get_values(related_concept.concept_id))
 
     def test_examples_exist(self):
         """Test that all examples use existing concept ids."""

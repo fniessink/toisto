@@ -17,7 +17,8 @@ ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
 InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
 RecursiveConceptRelation = Literal["holonym", "hypernym"]
-ConceptRelation = Literal[InvertedConceptRelation, RecursiveConceptRelation, "antonym", "answer", "example", "involves"]
+NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example", "involves"]
+ConceptRelation = Literal[InvertedConceptRelation, NonInvertedConceptRelation]
 RelatedConceptIds = dict[ConceptRelation, ConceptIds]
 RootConceptIds = dict[Language, ConceptIds] | ConceptIds  # Tuple if all languages have the same roots
 
