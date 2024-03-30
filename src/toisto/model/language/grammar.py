@@ -8,7 +8,7 @@ GrammaticalPerson = Literal["first person", "second person", "third person"]
 DegreeOfComparison = Literal["positive degree", "comparative degree", "superlative degree"]
 Diminutive = Literal["root", "diminutive"]
 Tense = Literal["present tense", "past tense"]
-SentenceForm = Literal["declarative", "interrogative"]
+GrammaticalMood = Literal["declarative", "interrogative", "imperative"]
 GrammaticalPolarity = Literal["affirmative", "negative"]
 Number = Literal["cardinal", "ordinal"]
 Abbreviation = Literal["abbreviation", "full form"]
@@ -19,7 +19,7 @@ GrammaticalCategory = Literal[
     DegreeOfComparison,
     Diminutive,
     Tense,
-    SentenceForm,
+    GrammaticalMood,
     GrammaticalPolarity,
     Number,
     Abbreviation,
