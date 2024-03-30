@@ -140,18 +140,47 @@ Toisto quizzes you repeatably on words and phrases in the language you want to p
 
 Toisto supports quiz types such as:
 
-- **Translate** a word or phrase from your target language to your source language or the other way around. For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "vrijdag").
-- **Listen** to a word or phrase from your target language and type what you hear either in your target language or your source language. For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" and then you have to type ether "Tänään on maanantai" or "Today is Monday".
-- Give a **singular** version of a plural, or a **plural** version of a singular. For example, what is the plural of "talo" (meaning house in Finnish, and the answer is "talot") or what is the singular of "de huizen" (meaning the houses in Dutch, and the answer would be "het huis").
-- Give the **diminutive** form of a word. For example, what is the diminutive form of "het huis" in Dutch (meaning house in Dutch and the answer would be "het huisje").
-- Change the **grammatical person** from and to first person, second person, and third person. For example, when asked what the second person of "ik eet" (meaning "I eat") is, the correct answer would be "jij eet" ("you eat").
-- Change the **tense** of verbs from present to past tense or the other way around. For example, what is the past tense of "she walks" or what is the present tense version of "he painted".
-- Change the **comparative degree** of an adjective. For example, what is the superlative degree of "aardig" (which means "nice", and the answer would be "aardigst").
-- Give the **antonym** of adjectives. For example, what is the antonym of "good"? The answer is of course "bad".
-- Change the **sentence type** of declarative sentences into interrogative sentences and vice versa. For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?".
-- **Answer a question**. For example, a question in Finnish could be "Pidätko sinä jäätelöstä?" (meaning "Do you like ice cream?") and correct answers would be "Pidän" (meaning "Yes, I do") and "En" (meaning "No, I don't").
+- **Translate** a word or phrase from your target language to your source language or the other way around.
 
-See [the documentation](docs/software.md#quizzes) for the complete list of quiz types.
+  For example, if your native language is English and you're practicing Dutch, Toisto can ask you to give the English version of "maandag" (which is, you guessed it, "Monday") or ask you to give the Dutch version of "Friday" (which is "vrijdag").
+
+- **Listen** to a word or phrase from your target language and type what you hear either in your target language or your source language.
+
+  For example, if your target language is Finnish, Toisto may say "Tänään on maanantai" and then you have to type ether "Tänään on maanantai" or "Today is Monday".
+
+- Give a **singular** version of a plural, or a **plural** version of a singular.
+
+  For example, what is the plural of "talo" (meaning house in Finnish, and the answer is "talot") or what is the singular of "de huizen" (meaning the houses in Dutch, and the answer would be "het huis").
+
+- Give the **diminutive** form of a word.
+
+  For example, what is the diminutive form of "het huis" in Dutch (meaning house in Dutch and the answer would be "het huisje").
+
+- Change the **grammatical person** from and to first person, second person, and third person.
+
+  For example, when asked what the second person of "ik eet" (meaning "I eat") is, the correct answer would be "jij eet" ("you eat").
+
+- Change the **tense** of verbs from present to past tense or the other way around.
+
+  For example, what is the past tense of "she walks" or what is the present tense version of "he painted".
+
+- Change the **comparative degree** of an adjective.
+
+  For example, what is the superlative degree of "aardig" (which means "nice", and the answer would be "aardigst").
+
+- Give the **antonym** of adjectives.
+
+  For example, what is the antonym of "good"? The answer is of course "bad".
+
+- Change the **grammatical mood** of sentences. Toisto currently supports declarative, interrogative, and imperative sentences.
+
+  For example, what is the interrogative form of "The car is black"? The answer would be "Is the car black?".
+
+- **Answer a question**.
+
+  For example, a question in Finnish could be "Pidätko sinä jäätelöstä?" (meaning "Do you like ice cream?") and correct answers would be "Pidän" (meaning "Yes, I do") and "En" (meaning "No, I don't").
+
+See [the complete list of quiz types](docs/software.md#quizzes).
 
 When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress-{target language}.json` in your home folder, for example `.toisto-progress-fi.json`.
 

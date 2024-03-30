@@ -4,7 +4,7 @@
 
 Toisto allows you to practice on your computer so, assuming you have a decent keyboard and good typing skills, you can practice pretty fast.
 
-Toisto knows about language. It has a simple language model so it can quiz you on aspects like grammatical person, gender, verb tenses, diminutives, and degrees of comparison.
+Toisto knows about language. It has a simple language model so it can quiz you on aspects like grammatical person, mood, gender, verb tenses, diminutives, and degrees of comparison.
 
 Toisto allows practicing from any language to any language that Toisto knows about, not just from and to English.
 
