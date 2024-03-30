@@ -77,12 +77,18 @@
     },
     "anything else": {
         "en": "Anything else?",
-        "fi": "Tuleeks muuta?*",
+        "fi": [
+            "Tuleeko muuta?",
+            "Tuleeks muuta?*"
+        ],
         "nl": "Anders nog iets?"
     },
     "all together": {
         "en": "All together?",
-        "fi": "Tuleeks nää samasta?*",
+        "fi": [
+            "Tuleeko nämä samasta?",
+            "Tuleeks nää samasta?*"
+        ],
         "nl": "Alles bij elkaar?"
     }
 }
