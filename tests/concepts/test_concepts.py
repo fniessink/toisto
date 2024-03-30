@@ -3,7 +3,7 @@
 from argparse import ArgumentParser
 from typing import ClassVar
 
-from toisto.metadata import CONCEPT_JSON_FILES
+from toisto.metadata import BUILT_IN_LANGUAGES, CONCEPT_JSON_FILES
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.persistence.loader import Loader
 
@@ -36,3 +36,12 @@ class ConceptsTest(ToistoTestCase):
         for concept in self.concepts:
             for example in concept.get_related_concepts("example"):
                 self.assertIn(example, Concept.instances.get_values(example.concept_id))
+
+    def test_that_not_all_labels_of_a_concept_are_spoken_language(self):
+        """Test that not all labels of a concept are spoken language."""
+        for concept in self.concepts:
+            for language in BUILT_IN_LANGUAGES:
+                for leaf_concept in concept.leaf_concepts(language):
+                    labels = leaf_concept.labels(language)
+                    if labels and all(label.is_colloquial for label in labels):
+                        self.fail(f"{leaf_concept} has only colloquial labels")
