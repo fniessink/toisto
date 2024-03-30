@@ -1004,11 +1004,11 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         )
 
 
-class SentenceFormTest(ToistoTestCase):
-    """Unit tests for concepts with different sentence forms."""
+class GrammaticalMoodTest(ToistoTestCase):
+    """Unit tests for concepts with different grammatical moods."""
 
-    def test_declarative_and_interrogative_sentence_types(self):
-        """Test that quizzes can be generated for the declarative and interrogative sentence forms."""
+    def test_declarative_and_interrogative_moods(self):
+        """Test that quizzes can be generated for the declarative and interrogative moods."""
         concept = self.create_concept(
             "car",
             {
@@ -1030,7 +1030,7 @@ class SentenceFormTest(ToistoTestCase):
                     interrogative, self.nl, self.nl, "Is de auto zwart?", ["Is de auto zwart?"], "dictate"
                 ),
                 self.create_quiz(
-                    interrogative, self.nl, self.en, "Is de auto zwart?", ["Is the cat black?"], "interpret"
+                    interrogative, self.nl, self.en, "Is de auto zwart?", ["Is the car black?"], "interpret"
                 ),
                 self.create_quiz(interrogative, self.en, self.nl, "Is the car black?", ["Is de auto zwart?"], "write"),
                 self.create_quiz(
@@ -1039,6 +1039,67 @@ class SentenceFormTest(ToistoTestCase):
                 self.create_quiz(
                     concept, self.nl, self.nl, "Is de auto zwart?", ["De auto is zwart."], "make declarative"
                 ),
+            },
+            create_quizzes(self.nl, self.en, concept),
+        )
+
+    def test_declarative_and_imperative_moods(self):
+        """Test that quizzes can be generated for the declarative and imperative moods."""
+        concept = self.create_concept(
+            "you run",
+            {
+                "declarative": dict(en="You run.", nl="Jij rent."),
+                "imperative": dict(en="Run!", nl="Ren!"),
+            },
+        )
+        declarative, imperative = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(declarative, self.nl, self.en, "Jij rent.", ["You run."], "read"),
+                self.create_quiz(declarative, self.nl, self.nl, "Jij rent.", ["Jij rent."], "dictate"),
+                self.create_quiz(declarative, self.nl, self.en, "Jij rent.", ["You run."], "interpret"),
+                self.create_quiz(declarative, self.en, self.nl, "You run.", ["Jij rent."], "write"),
+                self.create_quiz(imperative, self.nl, self.en, "Ren!", ["Run!"], "read"),
+                self.create_quiz(imperative, self.nl, self.nl, "Ren!", ["Ren!"], "dictate"),
+                self.create_quiz(imperative, self.nl, self.en, "Ren!", ["Run!"], "interpret"),
+                self.create_quiz(imperative, self.en, self.nl, "Run!", ["Ren!"], "write"),
+                self.create_quiz(concept, self.nl, self.nl, "Jij rent.", ["Ren!"], "make imperative"),
+                self.create_quiz(concept, self.nl, self.nl, "Ren!", ["Jij rent."], "make declarative"),
+            },
+            create_quizzes(self.nl, self.en, concept),
+        )
+
+    def test_declarative_interrogative_and_imperative_moods(self):
+        """Test that quizzes can be generated for the declarative, interrogative, and imperative moods."""
+        concept = self.create_concept(
+            "you run",
+            {
+                "declarative": dict(en="You run.", nl="Jij rent."),
+                "interrogative": dict(en="Do you run?", nl="Ren jij?"),
+                "imperative": dict(en="Run!", nl="Ren!"),
+            },
+        )
+        declarative, interrogative, imperative = concept.constituents
+        self.assertSetEqual(
+            {
+                self.create_quiz(declarative, self.nl, self.en, "Jij rent.", ["You run."], "read"),
+                self.create_quiz(declarative, self.nl, self.nl, "Jij rent.", ["Jij rent."], "dictate"),
+                self.create_quiz(declarative, self.nl, self.en, "Jij rent.", ["You run."], "interpret"),
+                self.create_quiz(declarative, self.en, self.nl, "You run.", ["Jij rent."], "write"),
+                self.create_quiz(interrogative, self.nl, self.en, "Ren jij?", ["Ren jij?"], "read"),
+                self.create_quiz(interrogative, self.nl, self.nl, "Ren jij?", ["Ren jij?"], "dictate"),
+                self.create_quiz(interrogative, self.nl, self.en, "Ren jij?", ["Do you run?"], "interpret"),
+                self.create_quiz(interrogative, self.en, self.nl, "Do you run?", ["Ren jij?"], "write"),
+                self.create_quiz(imperative, self.nl, self.en, "Ren!", ["Run!"], "read"),
+                self.create_quiz(imperative, self.nl, self.nl, "Ren!", ["Ren!"], "dictate"),
+                self.create_quiz(imperative, self.nl, self.en, "Ren!", ["Run!"], "interpret"),
+                self.create_quiz(imperative, self.en, self.nl, "Run!", ["Ren!"], "write"),
+                self.create_quiz(concept, self.nl, self.nl, "Jij rent.", ["Ren!"], "make imperative"),
+                self.create_quiz(concept, self.nl, self.nl, "Jij rent.", ["Ren jij?"], "make interrogative"),
+                self.create_quiz(concept, self.nl, self.nl, "Ren!", ["Jij rent."], "make declarative"),
+                self.create_quiz(concept, self.nl, self.nl, "Ren!", ["Ren jij?"], "make interrogative"),
+                self.create_quiz(concept, self.nl, self.nl, "Ren jij?", ["Ren!"], "make imperative"),
+                self.create_quiz(concept, self.nl, self.nl, "Ren jij?", ["Jij rent."], "make declarative"),
             },
             create_quizzes(self.nl, self.en, concept),
         )

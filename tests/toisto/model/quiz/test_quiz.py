@@ -100,6 +100,7 @@ class QuizTest(QuizTestCase):
             "Give the [underline]past tense[/underline] in",
             "Give the [underline]declarative[/underline] in",
             "Give the [underline]interrogative[/underline] in",
+            "Give the [underline]imperative[/underline] in",
             "Give the [underline]affirmative[/underline] in",
             "Give the [underline]negative[/underline] in",
             "Give the [underline]cardinal[/underline] in",

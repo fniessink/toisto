@@ -516,9 +516,32 @@ When there are synonyms, they need to be in the same order in every degree. This
 }
 ```
 
-### Sentence forms
+### Grammatical mood
 
-When the concept file contains both the declarative and the interrogative form of a sentence, Toisto can generate quizzes to change one into the other. Sentence forms are specified as follows:
+When the concept file contains different grammatical moods, Toisto can generate quizzes to change one into another. Toisto supports the declarative, interrogative, and imperative mood.
+
+All three moods can be combined as follows:
+
+```json
+{
+    "you run": {
+        "declarative": {
+            "en": "You run.;singular",
+            "nl": "Jij rent.",
+        },
+        "interrogative": {
+            "en": "Do you run?",
+            "nl": "Ren jij?",
+        },
+        "imperative": {
+            "en": "Run!",
+            "nl": "Ren!",
+        }
+    }
+}
+```
+
+It is also possible to include just two of the three grammatical moods:
 
 ```json
 {
@@ -853,7 +876,7 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 9. Change the gender of a concept.
 9. Provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
 10. Change the tense of a concept between infinitive, present tense, and past tense.
-11. Change the sentence form from declarative to interrogative and vice versa.
+11. Change the grammatical mood of a concept between declarative, interrogative, and imperative mood.
 12. Change the polarity from affirmative to negative and vice versa.
 13. Change cardinal numbers into ordinal numbers and vice versa.
 14. Give the antonym.
