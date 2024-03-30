@@ -1,0 +1,37 @@
+{
+    "narrow": {
+        "positive degree": {
+            "en": [
+                "narrow",
+                "tight"
+            ],
+            "fi": "ahdas",
+            "nl": [
+                "nauw",
+                "smal"
+            ]
+        },
+        "comparative degree": {
+            "en": [
+                "narrower",
+                "tighter"
+            ],
+            "fi": "ahtaampi",
+            "nl": [
+                "nauwer",
+                "smaller"
+            ]
+        },
+        "superlative degree": {
+            "en": [
+                "narrowest",
+                "tightest"
+            ],
+            "fi": "ahtain",
+            "nl": [
+                "nauwst",
+                "smalst"
+            ]
+        }
+    }
+}
