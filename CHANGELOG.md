@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Don't show builtin spelling alternatives as other correct answers. For example, Toisto would show "de pijn" as another correct answer when a user with Dutch as source language had entered "pijn" as answer. Fixes [#623](https://github.com/fniessink/toisto/issues/623).
+- The progress command would not sort the quizzes correctly when sorting by retention. Fixes [#625](https://github.com/fniessink/toisto/issues/625).
 - When practicing Dutch, Toisto would crash on certain concepts because they would refer to non-existing root concepts. Fixes [#626](https://github.com/fniessink/toisto/issues/626).
 
 ### Added

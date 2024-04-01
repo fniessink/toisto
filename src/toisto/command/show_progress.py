@@ -1,8 +1,8 @@
 """Command to show progress information."""
 
 from dataclasses import dataclass
-from datetime import datetime
-from typing import Final, Literal
+from datetime import datetime, timedelta
+from typing import Literal
 
 from rich.console import JustifyMethod
 from rich.table import Table
@@ -15,7 +15,6 @@ from toisto.ui.format import format_datetime, format_duration
 from toisto.ui.text import console
 
 SortColumn = Literal["attempts", "retention"]
-RETENTION_ATTRIBUTE: Final[dict[str, str]] = dict(attempts="count", retention="length")
 
 
 @dataclass(frozen=True)
@@ -25,12 +24,15 @@ class QuizSorter:
     progress: Progress
     sort: SortColumn
 
-    def get_sort_key(self, quiz: Quiz) -> str:
+    def get_sort_key(self, quiz: Quiz) -> int | timedelta:
         """Return the retention attribute to sort by."""
-        return str(getattr(self.progress.get_retention(quiz), RETENTION_ATTRIBUTE[self.sort]))
+        retention = self.progress.get_retention(quiz)
+        if self.sort == "attempts":
+            return retention.count
+        return retention.length
 
 
-def show_progress(language: Language, progress: Progress, sort: SortColumn = "attempts") -> None:
+def show_progress(language: Language, progress: Progress, sort: SortColumn) -> None:
     """Show progress."""
     table = Table(title=f"Progress {ALL_LANGUAGES[language]}")
     justify: dict[str, JustifyMethod] = dict(Attempts="right")
