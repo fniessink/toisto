@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Don't show builtin spelling alternatives as other correct answers. For example, Toisto would show "de pijn" as another correct answer when a user with Dutch as source language had entered "pijn" as answer. Closes [#623](https://github.com/fniessink/toisto/issues/623).
+
 ### Added
 
 - Add support for the imperative grammatical mood. Closes [#618](https://github.com/fniessink/toisto/issues/618).

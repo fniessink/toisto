@@ -222,6 +222,14 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         quiz = self.create_quiz(self.concept, self.en, self.fi, "I am Alice.", ["Minä olen Alice."])
         self.assertTrue(quiz.is_correct(Label(self.fi, "Olen Alice.")))
 
+    def test_generated_spelling_alternative_is_no_other_answer(self):
+        """Test that a generated spelling alternative is not an other answer."""
+        load_spelling_alternatives(self.en, self.nl)
+        quiz = self.create_quiz(self.concept, self.en, self.nl, "pain", ["de pijn"])
+        answer = Label(self.nl, "pijn")
+        self.assertTrue(quiz.is_correct(answer))
+        self.assertEqual((), quiz.other_answers(answer))
+
 
 class QuizEqualityTests(QuizTestCase):
     """Unit tests for the equality of quiz instances."""
