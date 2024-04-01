@@ -165,15 +165,9 @@
     "part-time job": {
         "hypernym": "job",
         "roots": {
-            "en": [
-                "job"
-            ],
-            "fi": [
-                "work"
-            ],
-            "nl": [
-                "werk"
-            ]
+            "en": "job",
+            "fi": "work",
+            "nl": "work"
         },
         "en": "part-time job",
         "fi": "osa-aikatyö",
