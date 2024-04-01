@@ -28,8 +28,9 @@ class ConceptsTest(ToistoTestCase):
     def test_roots_exist(self):
         """Test that all roots use existing concept ids."""
         for concept in self.concepts:
-            for root in concept.roots(self.fi):
-                self.assertIn(root, Concept.instances.get_values(root.concept_id))
+            for language in BUILT_IN_LANGUAGES:
+                for root in concept.roots(language):
+                    self.assertIn(root, Concept.instances.get_values(root.concept_id))
 
     def test_examples_exist(self):
         """Test that all examples use existing concept ids."""
