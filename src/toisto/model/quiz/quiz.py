@@ -163,7 +163,11 @@ class Quiz:
         """Return the answers not equal to the guess."""
         if self.quiz_types[0] in get_args(ListenQuizType):
             return Labels()  # Returning other answers doesn't make sense if the user has to type what is spoken
-        return tuple(answer for answer in self.non_generated_answers if not match(guess, answer))
+        return tuple(
+            answer
+            for answer in self.non_generated_answers
+            if not match(guess, answer) and guess not in answer.spelling_alternatives
+        )
 
     @property
     def instruction(self) -> str:
