@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- On the command line, accept concepts as positional arguments, so users don't have to type `--concept` or `-c` before each concept. Closes [#631](https://github.com/fniessink/toisto/issues/631).
+
 ## 0.17.0 - 2024-04-01
 
 ### Fixed

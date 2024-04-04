@@ -701,7 +701,7 @@ If a concept has more than one antonym (for example, "large" and "big" are both 
 > [!NOTE]
 > Concept X is a hypernym of concept Y if concept Y is a (kind of) X. For example, red is a color, so the concept "color" is a hypernym of the concept "red". The reverse relation is called hyponym, so "red" is a hyponym of "color".
 
-When one concept is a hypernym of another concept (and conversely the other concept is a hyponym of the first concept), this can be specified with the `hypernym` relation. Toisto will derive the hyponym relations automatically. Toisto uses the hypernym and hyponym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept color`, would select both color and red to practice.
+When one concept is a hypernym of another concept (and conversely the other concept is a hyponym of the first concept), this can be specified with the `hypernym` relation. Toisto will derive the hyponym relations automatically. Toisto uses the hypernym and hyponym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice color`, would select both color and red to practice.
 
 ```json
 {
@@ -724,7 +724,7 @@ If a concept has more than one hypernym (for example, "pet" and "mammal" are bot
 > [!NOTE]
 > Concept X is a holonym of concept Y if concept Y is a part of X. For example, cars have wheels, so the concept "car" is a holonym of the concept "wheel". The reverse relation is called meronym, so "wheel" is a meronym of "car".
 
-When one concept is a holonym of another concept (and conversely the other concept is a meronym of the first concept), this can be specified with the `holonym` relation. Toisto will derive the meronym relations automatically. Toisto uses the holonym and meronym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept car`, would select both the concept "car" and the concept "wheel" to practice.
+When one concept is a holonym of another concept (and conversely the other concept is a meronym of the first concept), this can be specified with the `holonym` relation. Toisto will derive the meronym relations automatically. Toisto uses the holonym and meronym relations to decide which related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice car`, would select both the concept "car" and the concept "wheel" to practice.
 
 ```json
 {
@@ -744,7 +744,7 @@ If a concept has more than one holonym (for example, "chair" and "table" are bot
 
 ### Concept involvement
 
-When one concept involves another concept, this can be specified with the `involves` relation. Toisto will derive the inverse relation automatically. Toisto uses the involvement relations to decide with related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice --concept "to paint"`, would select "to paint", "painter", and "painting" to practice.
+When one concept involves another concept, this can be specified with the `involves` relation. Toisto will derive the inverse relation automatically. Toisto uses the involvement relations to decide with related concepts to use when a user selects a concept to practice. Given the JSON below, the command `toisto practice "to paint"`, would select "to paint", "painter", and "painting" to practice.
 
 ```json
 {
