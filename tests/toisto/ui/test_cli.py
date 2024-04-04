@@ -36,7 +36,6 @@ class ParserTest(unittest.TestCase):
     def test_help(self, sys_stdout_write: Mock) -> None:
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.maxDiff = None
         self.assertEqual(
             """Usage: toisto [-h] [-V] {practice,progress} ...
 
@@ -65,7 +64,7 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
             command="practice",
             target_language="nl",
             source_language="fi",
-            concept=[],
+            concepts=[],
             file=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
@@ -83,9 +82,12 @@ See https://github.com/fniessink/toisto/blob/main/README.md for more information
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept}] [-f {file}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [{concept} ...]
 
 Practice a language.
+
+Positional Arguments:
+  {concept}             concept to use, can be repeated; default: all; built-in concepts: bar, foo
 
 Options:
   -h, --help            show this help message and exit
@@ -93,8 +95,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -c, --concept {concept}
-                        concept to use, can be repeated; default: all; built-in concepts: bar, foo
   -f, --file {file}     file with extra concepts to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -109,9 +109,12 @@ Options:
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] [-t {language}] -s {language} [-c {concept}] [-f {file}]
+            """Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [{concept} ...]
 
 Practice a language.
+
+Positional Arguments:
+  {concept}             concept to use, can be repeated; default: all; built-in concepts:
 
 Options:
   -h, --help            show this help message and exit
@@ -119,8 +122,6 @@ Options:
                         target language; default: fi; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -c, --concept {concept}
-                        concept to use, can be repeated; default: all; built-in concepts:
   -f, --file {file}     file with extra concepts to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -135,9 +136,12 @@ Options:
         config_parser.set("languages", "levels", "A1 A2")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-c {concept}] [-f {file}]
+            """Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [{concept} ...]
 
 Practice a language.
+
+Positional Arguments:
+  {concept}             concept to use, can be repeated; default: all; built-in concepts:
 
 Options:
   -h, --help            show this help message and exit
@@ -145,8 +149,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -c, --concept {concept}
-                        concept to use, can be repeated; default: all; built-in concepts:
   -f, --file {file}     file with extra concepts to read, can be repeated
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -158,10 +160,12 @@ Options:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto progress [-h] -t {language} -s {language} [-c {concept}] [-f {file}] \
-[-S {option}]
+            """Usage: toisto progress [-h] -t {language} -s {language} [-f {file}] [-S {option}] [{concept} ...]
 
 Show progress.
+
+Positional Arguments:
+  {concept}             concept to use, can be repeated; default: all; built-in concepts:
 
 Options:
   -h, --help            show this help message and exit
@@ -169,8 +173,6 @@ Options:
                         target language; languages available in built-in concepts: en, fi, nl
   -s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl
-  -c, --concept {concept}
-                        concept to use, can be repeated; default: all; built-in concepts:
   -f, --file {file}     file with extra concepts to read, can be repeated
   -S, --sort {option}   how to sort progress information; default: by retention; available options: attempts,
                         retention
@@ -185,7 +187,7 @@ Options:
             command="practice",
             target_language="nl",
             source_language="fi",
-            concept=[],
+            concepts=[],
             file=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))

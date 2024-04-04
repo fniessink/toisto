@@ -31,7 +31,7 @@ def init() -> tuple[ConfigParser, Namespace, Progress]:
     args = parse_arguments(argument_parser)
     load_spelling_alternatives(args.target_language, args.source_language)
     concepts |= loader.load(*args.file)
-    concepts = filter_concepts(concepts, args.concept, args.target_language, argument_parser)
+    concepts = filter_concepts(concepts, args.concepts, args.target_language, argument_parser)
     quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
     progress = load_progress(args.target_language, quizzes, argument_parser)
     return config, args, progress

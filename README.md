@@ -102,7 +102,13 @@ $ toisto practice --target fi --source en
 To practice a specific concept and related concepts, pass it as follows:
 
 ```console
-$ toisto practice --target fi -source en --concept color
+$ toisto practice --target fi --source en color
+```
+
+It's also possible to specify more than one concept to practice:
+
+```console
+$ toisto practice --target fi --source en fruit vegetable
 ```
 
 Add `--help` or `-h` to get more information about the command-line options and arguments:

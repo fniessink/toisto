@@ -40,16 +40,13 @@ def check_language(language: str) -> str:
     raise ArgumentTypeError(message)
 
 
-def add_selection_arguments(parser: ArgumentParser, concepts: set[Concept]) -> None:
-    """Add the selection arguments."""
-    selection_group = parser.add_mutually_exclusive_group()
+def add_concept_argument(parser: ArgumentParser, concepts: set[Concept]) -> None:
+    """Add the concept argument."""
     concept_ids = sorted(concept.concept_id for concept in concepts)
-    selection_group.add_argument(
-        "-c",
-        "--concept",
-        action="append",
-        default=[],
+    parser.add_argument(
+        "concepts",
         metavar="{concept}",
+        nargs="*",
         help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
     )
 
@@ -90,8 +87,8 @@ class CommandBuilder:
             formatter_class=RichHelpFormatter,
         )
         add_language_arguments(parser, self.config)
-        add_selection_arguments(parser, self.concepts)
         add_file_arguments(parser)
+        add_concept_argument(parser, self.concepts)
         return parser
 
     def add_practice_command(self) -> None:
