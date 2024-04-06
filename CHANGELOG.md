@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - On the command line, accept concepts as positional arguments, so users don't have to type `--concept` or `-c` before each concept. Closes [#631](https://github.com/fniessink/toisto/issues/631).
 
+### Added
+
+- Show tip about the config file when users have not configured their language preferences. Closes [#633](https://github.com/fniessink/toisto/issues/633).
+
 ## 0.17.0 - 2024-04-01
 
 ### Fixed

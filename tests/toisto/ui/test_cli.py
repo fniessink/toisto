@@ -7,6 +7,7 @@ from argparse import ArgumentParser, Namespace
 from configparser import ConfigParser
 from unittest.mock import Mock, patch
 
+from toisto.metadata import README_URL
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
@@ -37,7 +38,7 @@ class ParserTest(unittest.TestCase):
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto [-h] [-V] {practice,progress} ...
+            f"""Usage: toisto [-h] [-V] {{practice,progress}} ...
 
 Toisto is a command-line terminal app to practice languages.
 
@@ -46,13 +47,13 @@ Options:
   -V, --version        show program's version number and exit
 
 Commands:
-  {practice,progress}  default: practice; type `toisto {command} --help` for more information on a command
+  {{practice,progress}}  default: practice; type `toisto {{command}} --help` for more information on a command
     practice           practice a language, for example type `toisto practice --target fi --source en` to practice
                        Finnish from English
     progress           show progress, for example `toisto progress --target fi --source en` shows progress on
                        practicing Finnish from English
 
-See https://github.com/fniessink/toisto/blob/main/README.md for more information.
+See {README_URL} for more information.
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )

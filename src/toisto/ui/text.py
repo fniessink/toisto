@@ -2,12 +2,13 @@
 
 import sys
 from collections.abc import Callable, Sequence
+from configparser import ConfigParser
 from typing import Final
 
 from rich.console import Console
 from rich.panel import Panel
 
-from ..metadata import CHANGELOG_URL, NAME, VERSION
+from ..metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
 from ..model.quiz.quiz import Quiz
 from .dictionary import DICTIONARY_URL, linkify_and_enumerate
@@ -40,7 +41,11 @@ How does it work?
 NEWS: Final = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
     f"Upgrade with [code]pipx upgrade {NAME}[/code]."
-    ""
+)
+
+CONFIG_LANGUAGE_TIP = (
+    "️️👉 You may want to use a configuration file to store your language preferences.\n"
+    f"See {README_URL.replace('#toisto', '#how-to-configure-toisto')}."
 )
 
 DONE: Final = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
@@ -110,11 +115,14 @@ def instruction(quiz: Quiz) -> str:
     return f"[{QUIZ}]{quiz.instruction}:[/{QUIZ}]"
 
 
-def show_welcome(write_output: Callable[..., None], latest_version: str | None) -> None:
+def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
     """Show the welcome message."""
     write_output(WELCOME)
     if latest_version and latest_version.strip("v") > VERSION:
         write_output(Panel(NEWS.format(latest_version), expand=False))
+        write_output()
+    elif not config.has_section("languages"):
+        write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
         write_output()
 
 
