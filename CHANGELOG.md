@@ -4,7 +4,7 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## 0.18.0 - 2024-04-06
 
 ### Changed
 
@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Show tip about the config file when users have not configured their language preferences. Closes [#633](https://github.com/fniessink/toisto/issues/633).
+- Add several concepts related to the human body.
 
 ## 0.17.0 - 2024-04-01
 
