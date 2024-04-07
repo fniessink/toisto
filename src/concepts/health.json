@@ -84,29 +84,15 @@
     },
     "flu": {
         "hypernym": "disease",
-        "singular": {
-            "en": "flu",
-            "fi": "flunssa",
-            "nl": "de griep"
-        },
-        "plural": {
-            "en": "flus",
-            "fi": "flunssat",
-            "nl": "de griepen"
-        }
+        "en": "flu",
+        "fi": "flunssa",
+        "nl": "de griep"
     },
     "fever": {
         "involves": "patient",
-        "singular": {
-            "en": "fever",
-            "fi": "kuume",
-            "nl": "de koorts"
-        },
-        "plural": {
-            "en": "fevers",
-            "fi": "kuumeet",
-            "nl": "koortsen"
-        }
+        "en": "fever",
+        "fi": "kuume",
+        "nl": "de koorts"
     },
     "blood": {
         "holonym": "body",
