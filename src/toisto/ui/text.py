@@ -101,7 +101,8 @@ def examples(quiz: Quiz) -> str:
     """Return the quiz's examples, if any."""
     examples: list[Label] = []
     for example in quiz.concept.get_related_concepts("example"):
-        examples.extend(example.labels(quiz.question_language))
+        labels = [label.non_generated_spelling_alternatives[0] for label in example.labels(quiz.question_language)]
+        examples.extend(labels)
     return bulleted_list("Example", examples)
 
 

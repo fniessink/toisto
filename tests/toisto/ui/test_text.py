@@ -151,6 +151,14 @@ class FeedbackTestCase(ToistoTestCase):
             feedback_incorrect(Label(self.fi, "?"), quiz).split("\n")[-2],
         )
 
+    def test_post_quiz_example_with_spelling_alternatives(self):
+        """Test that the post quiz example is formatted correctly when the example has spelling alternatives."""
+        hi = self.create_concept("hi", dict(nl="hoi", fi="terve", example="hi alice"))
+        self.create_concept("hi alice", dict(fi="Moi Alice!|Hei Alice!"))
+        quiz = create_quizzes(self.fi, self.fi, hi).by_quiz_type("read").pop()
+        feedback_text = feedback_correct(self.guess, quiz)
+        self.assertEqual(CORRECT + f"[{SECONDARY}]Example: Moi Alice![/{SECONDARY}]\n", feedback_text)
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""
