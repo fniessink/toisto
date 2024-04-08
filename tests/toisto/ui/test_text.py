@@ -29,6 +29,21 @@ class FeedbackTestCase(ToistoTestCase):
         feedback_text = feedback_correct(self.guess, quiz)
         self.assertEqual(CORRECT, feedback_text)
 
+    def test_show_colloquial_language(self):
+        """Test that the colloquial language, that is only spoken, is shown."""
+        concept = self.create_concept("thanks", dict(nl="dank", fi=["kiitos", "kiitti*"]))
+        colloquial = f'[{SECONDARY}]The colloquial Finnish spoken was "kiitti".[/{SECONDARY}]\n'
+        meaning = f'[{SECONDARY}]Meaning "{linkify("dank")}".[/{SECONDARY}]\n'
+        answer = f'The correct answer is "[{INSERTED}]{linkify("kiitos")}[/{INSERTED}]".\n'
+        expected_feedback_correct = CORRECT + colloquial + meaning
+        expected_feedback_incorrect = INCORRECT + answer + colloquial + meaning
+        expected_feedback_on_skip = f'The correct answer is "{linkify("kiitos")}".\n' + colloquial + meaning
+        for quiz in create_quizzes(self.fi, self.nl, concept).by_quiz_type("dictate"):
+            if quiz.question.is_colloquial:
+                self.assertEqual(expected_feedback_correct, feedback_correct(Label(self.fi, "kiitos"), quiz))
+                self.assertEqual(expected_feedback_incorrect, feedback_incorrect(Label(self.fi, "hei"), quiz))
+                self.assertEqual(expected_feedback_on_skip, feedback_incorrect(Label(self.fi, "?"), quiz))
+
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
         concept = self.create_concept("hi", dict(nl="hoi", fi=["terve", "hei"]))
