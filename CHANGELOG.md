@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - When showing examples, show only one spelling alternative. Fixes [#639](https://github.com/fniessink/toisto/issues/639).
+- When quizzing colloquial language (which is quizzed spoken only), show the colloquial language after the quiz. Fixes [#640](https://github.com/fniessink/toisto/issues/640).
 
 ## 0.18.0 - 2024-04-06
 
