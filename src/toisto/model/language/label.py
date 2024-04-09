@@ -94,7 +94,8 @@ class Label(str):
     @property
     def is_complete_sentence(self) -> bool:
         """Return whether this is a complete sentence (starts with a capital and ends with punctuation)."""
-        return self.without_notes[0].isupper() and (self.without_notes[-1] in END_OF_SENTENCE_PUNCTUATION)
+        label = self.without_notes
+        return label[0].isupper() and (label.strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION)
 
     @property
     def pronounceable(self) -> str:

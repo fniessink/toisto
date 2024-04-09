@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - When showing examples, show only one spelling alternative. Fixes [#639](https://github.com/fniessink/toisto/issues/639).
 - When quizzing colloquial language (which is quizzed spoken only), show the colloquial language after the quiz. Fixes [#640](https://github.com/fniessink/toisto/issues/640).
 - Split the "head" concept into two different concepts: head as in part of a human or animal body and head as in the main part of something. Fixes [#643](https://github.com/fniessink/toisto/issues/643).
+- When quizzing a colloquial sentence, mention that the user is expected to enter a complete sentence. Fixes [#645](https://github.com/fniessink/toisto/issues/645).
 
 ## 0.18.0 - 2024-04-06
 

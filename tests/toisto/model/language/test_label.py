@@ -15,3 +15,8 @@ class LabelTest(ToistoTestCase):
         self.assertFalse(equal_to_object)
         not_equal_to_object = label != object()
         self.assertTrue(not_equal_to_object)
+
+    def test_complete_sentence(self):
+        """Test that a colloquial sentence is recognized."""
+        label = Label(self.fi, "Kiitti!*")
+        self.assertTrue(label.is_complete_sentence)
