@@ -174,6 +174,14 @@ class FeedbackTestCase(ToistoTestCase):
         feedback_text = feedback_correct(self.guess, quiz)
         self.assertEqual(CORRECT + f"[{SECONDARY}]Example: Moi Alice![/{SECONDARY}]\n", feedback_text)
 
+    def test_post_quiz_example_with_write_quiz(self):
+        """Test that the post quiz example is in the right language when the quiz type is write."""
+        hi = self.create_concept("hi", dict(nl="hoi", fi="terve", example="hi alice"))
+        self.create_concept("hi alice", dict(fi="Terve Alice!", nl="Hoi Alice!"))
+        quiz = create_quizzes(self.fi, self.nl, hi).by_quiz_type("write").pop()
+        feedback_text = feedback_correct(self.guess, quiz)
+        self.assertEqual(CORRECT + f"[{SECONDARY}]Example: Terve Alice![/{SECONDARY}]\n", feedback_text)
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""
