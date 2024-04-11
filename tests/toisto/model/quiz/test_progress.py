@@ -17,7 +17,7 @@ class ProgressTest(ToistoTestCase):
         """Override to set up test fixtures."""
         super().setUp()
         concept = self.create_concept("english", dict(fi="englanti", nl="Engels"))
-        self.quizzes = create_quizzes(self.fi, self.nl, concept)
+        self.quizzes = create_quizzes(self.fi_nl, concept)
         self.progress = Progress({}, self.fi, Quizzes(self.quizzes))
 
     def test_progress_new_quiz(self):
@@ -67,7 +67,7 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked if roots have eligible quizzes."""
         concept1 = self.create_concept("good day", dict(roots="good", en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
-        quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
+        quizzes = create_quizzes(self.nl_en, concept1, concept2)
         progress = Progress({}, self.nl, quizzes)
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
@@ -76,7 +76,7 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked, even if the roots only apply to the target language."""
         concept1 = self.create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
-        quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
+        quizzes = create_quizzes(self.nl_en, concept1, concept2)
         progress = Progress({}, self.nl, quizzes)
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
@@ -99,7 +99,7 @@ class ProgressTest(ToistoTestCase):
             "evening",
             dict(roots="afternoon", singular=dict(fi="ilta", nl="de avond"), plural=dict(fi="illat", nl="de avonden")),
         )
-        quizzes = create_quizzes(self.fi, self.nl, morning, afternoon, evening)
+        quizzes = create_quizzes(self.fi_nl, morning, afternoon, evening)
         progress = Progress({}, self.fi, quizzes, skip_concepts=2)
         while quiz := progress.next_quiz():
             self.assertIn("singular", quiz.concept.concept_id)
@@ -108,9 +108,7 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = Quizzes(
-            quiz for quiz in create_quizzes(self.fi, self.nl, *concepts) if quiz.quiz_types == ("dictate",)
-        )
+        quizzes = Quizzes(quiz for quiz in create_quizzes(self.fi_nl, *concepts) if quiz.quiz_types == ("dictate",))
         progress = Progress({}, self.fi, quizzes)
         random_quiz = next(iter(quizzes))
         progress.mark_correct_answer(random_quiz)
@@ -129,9 +127,9 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
         """Override to set up test fixtures."""
         super().setUp()
         example = self.create_concept("example", dict(fi="Puhun englantia"))
-        example_quizzes = create_quizzes(self.fi, self.nl, example)
+        example_quizzes = create_quizzes(self.fi_nl, example)
         concept = self.create_concept("english", dict(example="example", fi="englanti", nl="Engels"))
-        self.concept_quizzes = create_quizzes(self.fi, self.nl, concept)
+        self.concept_quizzes = create_quizzes(self.fi_nl, concept)
         self.quizzes = Quizzes(example_quizzes | self.concept_quizzes)
         self.progress = Progress({}, self.fi, self.quizzes)
 

@@ -4,7 +4,13 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.18.1 - 2024-06-09
+## [Unreleased]
+
+### Added
+
+- When showing examples, also show the meaning of the examples. Closes [#638](https://github.com/fniessink/toisto/issues/638).
+
+## 0.18.1 - 2024-04-09
 
 ### Fixed
 

@@ -9,9 +9,10 @@ from rich.console import Console
 from rich.panel import Panel
 
 from ..metadata import CHANGELOG_URL, NAME, README_URL, VERSION
-from ..model.language import Language
+from ..model.language import Language, LanguagePair
+from ..model.language.concept import Concept
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES
-from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
+from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label, Labels
 from ..model.quiz.quiz import Quiz
 from .dictionary import DICTIONARY_URL, linkify_and_enumerate
 from .diff import colored_diff
@@ -65,7 +66,7 @@ CORRECT: Final[str] = "✅ Correct.\n"
 INCORRECT: Final[str] = "❌ Incorrect. "
 
 
-def feedback_correct(guess: Label, quiz: Quiz, target_language: Language) -> str:
+def feedback_correct(guess: Label, quiz: Quiz, language_pair: LanguagePair) -> str:
     """Return the feedback about a correct result."""
     return (
         CORRECT
@@ -73,7 +74,7 @@ def feedback_correct(guess: Label, quiz: Quiz, target_language: Language) -> str
         + meaning(quiz)
         + other_answers(guess, quiz)
         + answer_notes(quiz)
-        + examples(quiz, target_language)
+        + examples(quiz, language_pair)
     )
 
 
@@ -116,12 +117,18 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
     return ""
 
 
-def examples(quiz: Quiz, target_language: Language) -> str:
+def labels(concept: Concept, language: Language) -> Labels:
+    """Return the first non-generated spelling alternative of the labels of a concept in the given language."""
+    return Labels(label.non_generated_spelling_alternatives[0] for label in concept.labels(language))
+
+
+def examples(quiz: Quiz, language_pair: LanguagePair) -> str:
     """Return the quiz's examples, if any."""
-    examples: list[Label] = []
+    examples: list[str] = []
     for example in quiz.concept.get_related_concepts("example"):
-        labels = [label.non_generated_spelling_alternatives[0] for label in example.labels(target_language)]
-        examples.extend(labels)
+        example_labels, example_meanings = labels(example, language_pair.target), labels(example, language_pair.source)
+        for label, meaning in zip(example_labels, example_meanings, strict=False):
+            examples.append(f'"{label}" meaning "{meaning}"')
     return bulleted_list("Example", examples)
 
 
