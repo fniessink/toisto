@@ -68,7 +68,7 @@ class ProgressTest(ToistoTestCase):
         concept1 = self.create_concept("good day", dict(roots="good", en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
-        progress = Progress({}, self.fi, quizzes)
+        progress = Progress({}, self.nl, quizzes)
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 
@@ -77,7 +77,7 @@ class ProgressTest(ToistoTestCase):
         concept1 = self.create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(self.nl, self.en, concept1, concept2)
-        progress = Progress({}, self.fi, quizzes)
+        progress = Progress({}, self.nl, quizzes)
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 

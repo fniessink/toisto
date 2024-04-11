@@ -9,6 +9,7 @@ from rich.console import Console
 from rich.panel import Panel
 
 from ..metadata import CHANGELOG_URL, NAME, README_URL, VERSION
+from ..model.language import Language
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
 from ..model.quiz.quiz import Quiz
@@ -18,9 +19,9 @@ from .style import QUIZ, SECONDARY
 
 console = Console()
 
-LINK_KEY: Final = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
+LINK_KEY: Final[str] = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
 
-WELCOME: Final = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VERSION}[/white not bold][/underline]!
+WELCOME: Final[str] = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VERSION}[/white not bold][/underline]!
 
 Practice as many words and phrases as you like, for as long as you like.
 
@@ -39,32 +40,41 @@ How does it work?
 ● To quit: type Ctrl-C or Ctrl-D.
 [/{SECONDARY}]"""
 
-NEWS: Final = (
+NEWS: Final[str] = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
     f"Upgrade with [code]pipx upgrade {NAME}[/code]."
 )
 
-CONFIG_LANGUAGE_TIP = (
+CONFIG_LANGUAGE_TIP: Final[str] = (
     "️️👉 You may want to use a configuration file to store your language preferences.\n"
     f"See {README_URL.replace('#toisto', '#how-to-configure-toisto')}."
 )
 
-DONE: Final = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
+DONE: Final[str] = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
 [{SECONDARY}]Type `{NAME.lower()} -h` for more information.[/{SECONDARY}]
 """
 
-TRY_AGAIN: Final = "⚠️  Incorrect. Please try again."
+TRY_AGAIN: Final[str] = "⚠️  Incorrect. Please try again."
 
-TRY_AGAIN_IN_ANSWER_LANGUAGE: Final = "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
+TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
+    "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
+)
 
-CORRECT: Final = "✅ Correct.\n"
+CORRECT: Final[str] = "✅ Correct.\n"
 
-INCORRECT: Final = "❌ Incorrect. "
+INCORRECT: Final[str] = "❌ Incorrect. "
 
 
-def feedback_correct(guess: Label, quiz: Quiz) -> str:
+def feedback_correct(guess: Label, quiz: Quiz, target_language: Language) -> str:
     """Return the feedback about a correct result."""
-    return CORRECT + colloquial(quiz) + meaning(quiz) + other_answers(guess, quiz) + answer_notes(quiz) + examples(quiz)
+    return (
+        CORRECT
+        + colloquial(quiz)
+        + meaning(quiz)
+        + other_answers(guess, quiz)
+        + answer_notes(quiz)
+        + examples(quiz, target_language)
+    )
 
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
@@ -106,12 +116,11 @@ def other_answers(guess: Label, quiz: Quiz) -> str:
     return ""
 
 
-def examples(quiz: Quiz) -> str:
+def examples(quiz: Quiz, target_language: Language) -> str:
     """Return the quiz's examples, if any."""
     examples: list[Label] = []
-    language = quiz.answer_language if "write" in quiz.quiz_types else quiz.question_language
     for example in quiz.concept.get_related_concepts("example"):
-        labels = [label.non_generated_spelling_alternatives[0] for label in example.labels(language)]
+        labels = [label.non_generated_spelling_alternatives[0] for label in example.labels(target_language)]
         examples.extend(labels)
     return bulleted_list("Example", examples)
 

@@ -7,7 +7,6 @@ from typing import Literal
 from rich.console import JustifyMethod
 from rich.table import Table
 
-from toisto.model.language import Language
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
@@ -32,9 +31,9 @@ class QuizSorter:
         return retention.length
 
 
-def show_progress(language: Language, progress: Progress, sort: SortColumn) -> None:
+def show_progress(progress: Progress, sort: SortColumn) -> None:
     """Show progress."""
-    table = Table(title=f"Progress {ALL_LANGUAGES[language]}")
+    table = Table(title=f"Progress {ALL_LANGUAGES[progress.target_language]}")
     justify: dict[str, JustifyMethod] = dict(Attempts="right")
     for column in ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"):
         table.add_column(column, justify=justify.get(column, "left"))

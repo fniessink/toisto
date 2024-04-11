@@ -4,7 +4,6 @@ from datetime import datetime, timedelta
 from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_progress import SortColumn, show_progress
-from toisto.model.language import Language
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -30,7 +29,7 @@ class ShowProgressTestCase(ToistoTestCase):
     def show_progress(self, progress: Progress) -> Mock:
         """Run the show progress command."""
         with patch("rich.console.Console.print") as console_print:
-            show_progress(Language("fi"), progress, sort=self.SORT_COLUMN)
+            show_progress(progress, sort=self.SORT_COLUMN)
         return console_print
 
 

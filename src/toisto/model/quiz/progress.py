@@ -86,10 +86,9 @@ class Progress:
 
     def __root_concepts_have_quizzes(self, quiz: Quiz, eligible_quizzes: Quizzes) -> bool:
         """Return whether the quiz's concept has root concepts that have quizzes."""
-        target_language = quiz.answer_language if "write" in quiz.quiz_types else quiz.question_language
         return any(
             other_quiz
-            for root in quiz.concept.roots(target_language)
+            for root in quiz.concept.roots(self.target_language)
             for other_quiz in self.quizzes.by_concept(root)
             if other_quiz != quiz and other_quiz in eligible_quizzes
         )

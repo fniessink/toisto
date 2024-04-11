@@ -35,7 +35,7 @@ def evaluate_answer(quiz: Quiz, progress: Progress, answer: Label, attempt: int 
     """Evaluate the answer and return the user feedback."""
     if quiz.is_correct(answer):
         progress.mark_correct_answer(quiz)
-        return feedback_correct(answer, quiz)
+        return feedback_correct(answer, quiz, progress.target_language)
     if answer != Label(quiz.answer_language, "?") and attempt == 1:
         if quiz.is_question(answer) and not quiz.is_grammatical:
             return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
