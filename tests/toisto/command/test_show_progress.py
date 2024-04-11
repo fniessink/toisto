@@ -22,7 +22,7 @@ class ShowProgressTestCase(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
-        self.quiz = first(create_quizzes(self.fi, self.nl, concept).by_quiz_type("read"))
+        self.quiz = first(create_quizzes(self.fi_nl, concept).by_quiz_type("read"))
         self.quizzes = Quizzes({self.quiz})
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -84,7 +84,7 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
         """Set up test fixtures."""
         super().setUp()
         another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
-        self.another_quiz = first(create_quizzes(self.fi, self.nl, another_concept).by_quiz_type("read"))
+        self.another_quiz = first(create_quizzes(self.fi_nl, another_concept).by_quiz_type("read"))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
 
 

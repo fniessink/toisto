@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from itertools import permutations, zip_longest
 
-from ..language import Language
+from ..language import LanguagePair
 from ..language.concept import Concept, Concepts
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 
@@ -12,8 +12,7 @@ from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 class QuizFactory:
     """Create quizzes for concepts."""
 
-    target_language: Language
-    source_language: Language
+    language_pair: LanguagePair
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
         """Create quizzes for the concepts."""
@@ -56,7 +55,7 @@ class QuizFactory:
 
     def read_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create read quizzes for the concept."""
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
         target_labels = concept.non_colloquial_labels(target_language)
@@ -71,7 +70,7 @@ class QuizFactory:
 
     def write_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create write quizzes for the concept."""
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
         target_labels = concept.non_colloquial_labels(target_language)
@@ -86,7 +85,7 @@ class QuizFactory:
 
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         target_labels = concept.non_colloquial_labels(target_language)
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
@@ -102,7 +101,7 @@ class QuizFactory:
 
     def interpret_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create interpret (listen and translate) quizzes for the concept."""
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         source_labels = concept.non_colloquial_labels(source_language)
         if not source_labels or concept.is_composite(target_language):
             return Quizzes()
@@ -115,7 +114,7 @@ class QuizFactory:
 
     def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create grammatical quizzes for the concept."""
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
         for question_concept, answer_concept in permutations(concept.leaf_concepts(target_language), r=2):
@@ -166,7 +165,7 @@ class QuizFactory:
         """Create quizzes for the related concepts."""
         if not related_concepts:
             return Quizzes()
-        target_language, source_language = self.target_language, self.source_language
+        target_language, source_language = self.language_pair.target, self.language_pair.source
         meanings = list(concept.meanings(source_language))
         related_concept_labels = []
         for related_concept in related_concepts:
@@ -205,6 +204,6 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
     return tuple(quiz_types) if len(quiz_types) == 1 else ()
 
 
-def create_quizzes(target_language: Language, source_language: Language, *concepts: Concept) -> Quizzes:
+def create_quizzes(language_pair: LanguagePair, *concepts: Concept) -> Quizzes:
     """Create quizzes for the concepts, using the target and source language."""
-    return QuizFactory(target_language, source_language).create_quizzes(*concepts)
+    return QuizFactory(language_pair).create_quizzes(*concepts)

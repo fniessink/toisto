@@ -11,6 +11,7 @@ from .command.practice import practice
 from .command.show_progress import show_progress
 from .metadata import CONCEPT_JSON_FILES, latest_version
 from .model.filter import filter_concepts
+from .model.language import LanguagePair
 from .model.quiz.progress import Progress
 from .model.quiz.quiz_factory import create_quizzes
 from .persistence.config import default_config, read_config
@@ -21,7 +22,7 @@ from .ui.cli import create_argument_parser, parse_arguments
 from .ui.text import console, show_welcome
 
 
-def init() -> tuple[ConfigParser, Namespace, Progress]:
+def init() -> tuple[LanguagePair, ConfigParser, Namespace, Progress]:
     """Initialize the main program."""
     argument_parser = create_argument_parser(default_config())
     config = read_config(argument_parser)
@@ -29,20 +30,21 @@ def init() -> tuple[ConfigParser, Namespace, Progress]:
     concepts = loader.load(*CONCEPT_JSON_FILES)
     argument_parser = create_argument_parser(config, concepts)
     args = parse_arguments(argument_parser)
-    load_spelling_alternatives(args.target_language, args.source_language)
+    language_pair = LanguagePair(args.target_language, args.source_language)
+    load_spelling_alternatives(language_pair)
     concepts |= loader.load(*args.file)
     concepts = filter_concepts(concepts, args.concepts, args.target_language, argument_parser)
-    quizzes = create_quizzes(args.target_language, args.source_language, *concepts)
+    quizzes = create_quizzes(language_pair, *concepts)
     progress = load_progress(args.target_language, quizzes, argument_parser)
-    return config, args, progress
+    return language_pair, config, args, progress
 
 
 def main() -> None:
     """Run the main program."""
-    config, args, progress = init()
+    language_pair, config, args, progress = init()
     match args.command:
         case "progress":
             show_progress(progress, args.sort)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version(), config)
-            practice(console.print, progress, config)
+            practice(console.print, language_pair, progress, config)

@@ -3,7 +3,7 @@
 import unittest
 from typing import cast
 
-from toisto.model.language import Language
+from toisto.model.language import Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label, Labels
@@ -18,6 +18,12 @@ class ToistoTestCase(unittest.TestCase):
         self.en = Language("en")
         self.fi = Language("fi")
         self.nl = Language("nl")
+        self.en_fi = LanguagePair(self.en, self.fi)
+        self.en_nl = LanguagePair(self.en, self.nl)
+        self.fi_en = LanguagePair(self.fi, self.en)
+        self.fi_nl = LanguagePair(self.fi, self.nl)
+        self.nl_en = LanguagePair(self.nl, self.en)
+        self.nl_fi = LanguagePair(self.nl, self.fi)
 
     @staticmethod
     def create_concept(concept_id: str, concept_dict: dict[str, object]) -> Concept:

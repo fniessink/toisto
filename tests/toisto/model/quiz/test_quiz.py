@@ -205,7 +205,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""
-        load_spelling_alternatives(self.en, self.nl)
+        load_spelling_alternatives(self.en_nl)
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is waar", ["It is true"])
         self.assertTrue(quiz.is_correct(Label(self.en, "It's true")))
         quiz = self.create_quiz(self.concept, self.nl, self.en, "Het is.", ["It is."])
@@ -216,7 +216,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         self.assertFalse(quiz.is_correct(Label(self.en, "I'mbush.")))
         quiz = self.create_quiz(self.concept, self.en, self.nl, "house", ["het huis"])
         self.assertTrue(quiz.is_correct(Label(self.nl, "huis")))
-        load_spelling_alternatives(self.fi, self.en)
+        load_spelling_alternatives(self.fi_en)
         quiz = self.create_quiz(self.concept, self.en, self.fi, "I am", ["minä olen"])
         self.assertTrue(quiz.is_correct(Label(self.fi, "olen")))
         quiz = self.create_quiz(self.concept, self.en, self.fi, "I am Alice.", ["Minä olen Alice."])
@@ -224,7 +224,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
 
     def test_generated_spelling_alternative_is_no_other_answer(self):
         """Test that a generated spelling alternative is not an other answer."""
-        load_spelling_alternatives(self.en, self.nl)
+        load_spelling_alternatives(self.en_nl)
         quiz = self.create_quiz(self.concept, self.en, self.nl, "pain", ["de pijn"])
         answer = Label(self.nl, "pijn")
         self.assertTrue(quiz.is_correct(answer))
