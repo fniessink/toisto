@@ -42,7 +42,7 @@ def main() -> None:
     config, args, progress = init()
     match args.command:
         case "progress":
-            show_progress(args.target_language, progress, args.sort)
+            show_progress(progress, args.sort)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version(), config)
             practice(console.print, progress, config)
