@@ -2,6 +2,7 @@
 
 from typing import get_args
 
+from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
 from toisto.model.language.label import Label
 
@@ -17,10 +18,10 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual("concept_id", concept.concept_id)
         self.assertIsNone(concept.parent)
         self.assertEqual((), concept.constituents)
-        self.assertEqual((), concept.labels(self.fi))
-        self.assertEqual((), concept.meanings(self.fi))
-        self.assertEqual((), concept.roots(self.fi))
-        self.assertEqual((), concept.compounds(self.fi))
+        self.assertEqual((), concept.labels(FI))
+        self.assertEqual((), concept.meanings(FI))
+        self.assertEqual((), concept.roots(FI))
+        self.assertEqual((), concept.compounds(FI))
         self.assertFalse(concept.answer_only)
         for relation in get_args(ConceptRelation):
             self.assertEqual((), concept.get_related_concepts(relation))
@@ -33,9 +34,9 @@ class ConceptTest(ToistoTestCase):
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""
         concept = self.create_concept("one", dict(fi="yksi", nl="een"))
-        self.assertEqual((Label(self.fi, "yksi"),), concept.meanings(self.fi))
-        self.assertEqual((Label(self.nl, "een"),), concept.meanings(self.nl))
-        self.assertEqual((), concept.meanings(self.en))
+        self.assertEqual((Label(FI, "yksi"),), concept.meanings(FI))
+        self.assertEqual((Label(NL, "een"),), concept.meanings(NL))
+        self.assertEqual((), concept.meanings(EN))
 
     def test_meaning_composite_concept(self):
         """Test the meaning of a composite concept."""
@@ -43,9 +44,9 @@ class ConceptTest(ToistoTestCase):
             "table",
             dict(singular=dict(en="table", nl="de tafel"), plural=dict(en="tables", nl="de tafels")),
         )
-        self.assertEqual((Label(self.en, "table"), Label(self.en, "tables")), concept.meanings(self.en))
-        self.assertEqual((Label(self.nl, "de tafel"), Label(self.nl, "de tafels")), concept.meanings(self.nl))
-        self.assertEqual((), concept.meanings(self.fi))
+        self.assertEqual((Label(EN, "table"), Label(EN, "tables")), concept.meanings(EN))
+        self.assertEqual((Label(NL, "de tafel"), Label(NL, "de tafels")), concept.meanings(NL))
+        self.assertEqual((), concept.meanings(FI))
 
     def test_meaning_mixed_concept(self):
         """Test the meaning of a concept that is leaf in one language and composite in another."""
@@ -53,6 +54,6 @@ class ConceptTest(ToistoTestCase):
             "to eat/third person",
             dict(fi="hän syö", female=dict(nl="zij eet"), male=dict(nl="hij eet")),
         )
-        self.assertEqual((Label(self.fi, "hän syö"),), concept.meanings(self.fi))
-        self.assertEqual((Label(self.nl, "zij eet"), Label(self.nl, "hij eet")), concept.meanings(self.nl))
-        self.assertEqual((), concept.meanings(self.en))
+        self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
+        self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))
+        self.assertEqual((), concept.meanings(EN))

@@ -45,8 +45,8 @@ def show_progress(progress: Progress, sort: SortColumn) -> None:
         table.add_row(
             quiz_types,
             quiz.question,
-            quiz.question_language,
-            quiz.answer_language,
+            quiz.question.language,
+            quiz.answer.language,
             "\n".join(quiz.answers),
             str(retention.count),
             format_duration(retention.length) if retention.length else "",

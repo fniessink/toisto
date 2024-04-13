@@ -1,5 +1,6 @@
 """Concept factory unit tests."""
 
+from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept
 from toisto.model.language.label import Label
 
@@ -32,15 +33,15 @@ class ConcepFactoryTest(ToistoTestCase):
         concept = self.create_concept("mall", dict(roots=["shop", "centre"], fi="kauppakeskus", nl="het winkelcentrum"))
         shop = self.create_concept("shop", dict(fi="kauppa"))
         centre = self.create_concept("centre", dict(fi="keskusta"))
-        self.assertEqual((shop, centre), concept.roots(self.fi))
-        self.assertEqual((concept,), shop.compounds(self.fi))
+        self.assertEqual((shop, centre), concept.roots(FI))
+        self.assertEqual((concept,), shop.compounds(FI))
 
     def test_language_specific_roots(self):
         """Test that a concept can have a root in one language but not in another."""
         decade = self.create_concept("decade", dict(roots=dict(fi="year"), fi="vuosikymmen", en="decade"))
         year = self.create_concept("year", dict(fi="vuosi"))
-        self.assertEqual((year,), decade.roots(self.fi))
-        self.assertEqual((), decade.roots(self.en))
+        self.assertEqual((year,), decade.roots(FI))
+        self.assertEqual((), decade.roots(EN))
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""
@@ -159,9 +160,9 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_meaning_only_label(self):
         """Test that a label between brackets is used as meaning but not as label."""
         concept = self.create_concept("Finnish Eastern cake", dict(fi="mämmi", nl="(Finse paascake)"))
-        self.assertEqual((Label(self.fi, "mämmi"),), concept.labels(self.fi))
-        self.assertEqual((), concept.labels(self.nl))
-        self.assertEqual((Label(self.nl, "Finse paascake"),), concept.meanings(self.nl))
+        self.assertEqual((Label(FI, "mämmi"),), concept.labels(FI))
+        self.assertEqual((), concept.labels(NL))
+        self.assertEqual((Label(NL, "Finse paascake"),), concept.meanings(NL))
 
     def test_answer_only(self):
         """Test that a concept can be flagged as answer only."""

@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 from unittest.mock import MagicMock, Mock, patch
 
 from toisto.metadata import get_progress_filepath
-from toisto.model.language import Language
+from toisto.model.language import FI, Language
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.retention import Retention
@@ -20,7 +20,7 @@ class LoadProgressTest(ToistoTestCase):
     @patch("pathlib.Path.open", MagicMock())
     def test_load_non_existing_progress(self) -> None:
         """Test that the default value is returned when the progress cannot be loaded."""
-        self.assertEqual({}, load_progress(self.fi, Quizzes(), ArgumentParser()).as_dict())
+        self.assertEqual({}, load_progress(FI, Quizzes(), ArgumentParser()).as_dict())
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("sys.stderr.write")

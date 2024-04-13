@@ -80,7 +80,7 @@ def feedback_correct(guess: Label, quiz: Quiz, language_pair: LanguagePair) -> s
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    if guess == Label(quiz.answer_language, "?"):
+    if guess == Label(quiz.answer.language, "?"):
         answers = quiz.non_generated_answers
         label = "The correct answer is" if len(answers) == 1 else "The correct answers are"
         feedback = f"{label} {linkify_and_enumerate(*answers)}.\n" + colloquial(quiz) + meaning(quiz)
@@ -94,7 +94,7 @@ def colloquial(quiz: Quiz) -> str:
     """Return the feedback about colloquial label, if any."""
     if not quiz.question.is_colloquial:
         return ""
-    feedback = f'The colloquial {ALL_LANGUAGES[quiz.question_language]} spoken was "{quiz.question.strip("*")}".'
+    feedback = f'The colloquial {ALL_LANGUAGES[quiz.question.language]} spoken was "{quiz.question.strip("*")}".'
     return wrap(feedback, SECONDARY)
 
 

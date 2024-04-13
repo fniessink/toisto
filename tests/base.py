@@ -1,55 +1,53 @@
 """Base class for unit tests."""
 
 import unittest
-from typing import cast
+from typing import Final, cast
 
-from toisto.model.language import Language, LanguagePair
+from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz, QuizType
+
+# Language pairs (target, source) used in the unit tests
+EN_FI: Final[LanguagePair] = LanguagePair(EN, FI)
+EN_NL: Final[LanguagePair] = LanguagePair(EN, NL)
+FI_EN: Final[LanguagePair] = LanguagePair(FI, EN)
+FI_NL: Final[LanguagePair] = LanguagePair(FI, NL)
+NL_EN: Final[LanguagePair] = LanguagePair(NL, EN)
+NL_FI: Final[LanguagePair] = LanguagePair(NL, FI)
 
 
 class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
 
     def setUp(self) -> None:
-        """Override to reset the Concept instances registry."""
-        self.en = Language("en")
-        self.fi = Language("fi")
-        self.nl = Language("nl")
-        self.en_fi = LanguagePair(self.en, self.fi)
-        self.en_nl = LanguagePair(self.en, self.nl)
-        self.fi_en = LanguagePair(self.fi, self.en)
-        self.fi_nl = LanguagePair(self.fi, self.nl)
-        self.nl_en = LanguagePair(self.nl, self.en)
-        self.nl_fi = LanguagePair(self.nl, self.fi)
+        """Set up a default language pair."""
+        self.language_pair = EN_FI
 
     @staticmethod
     def create_concept(concept_id: str, concept_dict: dict[str, object]) -> Concept:
         """Create a concept."""
         return create_concept(cast(ConceptId, concept_id), cast(ConceptDict, concept_dict))
 
-    @staticmethod
     def create_quiz(  # noqa: PLR0913
+        self,
         concept: Concept,
-        question_language: str,
-        answer_language: str,
         question: str,
         answers: list[str],
         quiz_type: str | tuple[str, ...] = ("read",),
         blocked_by: tuple[Quiz, ...] = (),
         question_meanings: tuple[str, ...] = (),
         answer_meanings: tuple[str, ...] = (),
+        language_pair: LanguagePair | None = None,
     ) -> Quiz:
         """Create a quiz."""
         quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
-        question_language = cast(Language, question_language)
-        answer_language = cast(Language, answer_language)
+        language_pair = self.language_pair if language_pair is None else language_pair
+        question_language = self.question_language(language_pair, quiz_type)
+        answer_language = self.answer_language(language_pair, quiz_type)
         return Quiz(
             concept,
-            question_language,
-            answer_language,
             Label(question_language, question),
             tuple(Label(answer_language, answer) for answer in answers),
             quiz_type,
@@ -58,25 +56,30 @@ class ToistoTestCase(unittest.TestCase):
             Labels(Label(answer_language, meaning) for meaning in answer_meanings),
         )
 
-    @classmethod
-    def copy_quiz(  # noqa: PLR0913
-        cls,
+    def copy_quiz(
+        self,
         quiz: Quiz,
-        question_language: str = "",
-        answer_language: str = "",
         question: str = "",
         answers: list[str] | None = None,
         quiz_type: str | tuple[str, ...] = "",
     ) -> Quiz:
         """Copy the quiz, overriding some of its parameters."""
-        return cls.create_quiz(
+        return self.create_quiz(
             quiz.concept,
-            question_language or quiz.question_language,
-            answer_language or quiz.answer_language,
-            question or quiz.question,
-            answers or [str(answer) for answer in quiz.answers],
-            quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
-            quiz.blocked_by,
-            quiz.answer_meanings,
-            quiz.question_meanings,
+            question=question or quiz.question,
+            answers=answers or [str(answer) for answer in quiz.answers],
+            quiz_type=quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
+            blocked_by=quiz.blocked_by,
+            question_meanings=quiz.question_meanings,
+            answer_meanings=quiz.answer_meanings,
         )
+
+    @staticmethod
+    def question_language(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> Language:
+        """Return the question language for the quiz types, given the target and source languages."""
+        return language_pair.source if "write" in quiz_types else language_pair.target
+
+    @staticmethod
+    def answer_language(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> Language:
+        """Return the answer language for the quiz types, given the target and source languages."""
+        return language_pair.source if {"interpret", "read"} & set(quiz_types) else language_pair.target
