@@ -64,8 +64,7 @@ class QuizFactory:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         return Quizzes(
-            Quiz(concept, target_language, source_language, target_label, source_labels, ("read",), blocked_by)
-            for target_label in target_labels
+            Quiz(concept, target_label, source_labels, ("read",), blocked_by) for target_label in target_labels
         )
 
     def write_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
@@ -79,8 +78,7 @@ class QuizFactory:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         return Quizzes(
-            Quiz(concept, source_language, target_language, source_label, target_labels, ("write",), blocked_by)
-            for source_label in source_labels
+            Quiz(concept, source_label, target_labels, ("write",), blocked_by) for source_label in source_labels
         )
 
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
@@ -90,11 +88,10 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
         non_colloquial_quizzes = Quizzes(
-            Quiz(concept, target_language, target_language, label, (label,), ("dictate",), blocked_by, meanings)
-            for label in target_labels
+            Quiz(concept, label, (label,), ("dictate",), blocked_by, meanings) for label in target_labels
         )
         colloquial_quizzes = Quizzes(
-            Quiz(concept, target_language, target_language, label, target_labels, ("dictate",), blocked_by, meanings)
+            Quiz(concept, label, target_labels, ("dictate",), blocked_by, meanings)
             for label in concept.colloquial_labels(target_language)
         )
         return Quizzes(non_colloquial_quizzes | colloquial_quizzes)
@@ -108,7 +105,7 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(target_language)
         return Quizzes(
-            Quiz(concept, target_language, source_language, label, source_labels, ("interpret",), blocked_by, meanings)
+            Quiz(concept, label, source_labels, ("interpret",), blocked_by, meanings)
             for label in concept.labels(target_language)
         )
 
@@ -128,8 +125,6 @@ class QuizFactory:
             quizzes |= Quizzes(
                 Quiz(
                     concept,
-                    target_language,
-                    target_language,
                     question_label,
                     (answer_label,),
                     quiz_types,
@@ -175,8 +170,6 @@ class QuizFactory:
         return Quizzes(
             Quiz(
                 concept,
-                target_language,
-                target_language,
                 label,
                 tuple(related_concept_labels),
                 (quiz_type,),

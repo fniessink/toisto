@@ -6,7 +6,7 @@ from typing import Final
 
 import requests
 
-from toisto.model.language import Language
+from toisto.model.language import EN, FI, NL, Language
 from toisto.tools import first
 
 _metadata = metadata("Toisto")
@@ -16,9 +16,8 @@ _homepage_url = _metadata["Project-URL"].split(", ")[1]
 README_URL: Final = f"{_homepage_url}?tab=readme-ov-file#toisto"
 CHANGELOG_URL: Final = first(_metadata.get_all("Project-URL", []), lambda url: "Changelog" in url).split(", ")[1]
 TAGS_API_URL: Final = "https://api.github.com/repos/fniessink/toisto/tags"
-
 VERSION: Final = version(NAME)
-BUILT_IN_LANGUAGES: Final = [Language("en"), Language("fi"), Language("nl")]
+BUILT_IN_LANGUAGES: Final = [EN, FI, NL]
 
 # File locations
 _data_folder = Path(__file__).parent.parent

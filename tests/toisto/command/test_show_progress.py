@@ -4,13 +4,14 @@ from datetime import datetime, timedelta
 from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_progress import SortColumn, show_progress
+from toisto.model.language import FI
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.tools import first
 
-from ...base import ToistoTestCase
+from ...base import FI_NL, ToistoTestCase
 
 
 class ShowProgressTestCase(ToistoTestCase):
@@ -22,7 +23,7 @@ class ShowProgressTestCase(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
-        self.quiz = first(create_quizzes(self.fi_nl, concept).by_quiz_type("read"))
+        self.quiz = first(create_quizzes(FI_NL, concept).by_quiz_type("read"))
         self.quizzes = Quizzes({self.quiz})
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -42,7 +43,7 @@ class ShowProgressTest(ShowProgressTestCase):
         self.now = datetime.now()
         start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
         end = self.now.isoformat(timespec="seconds")
-        self.progress = Progress({self.quiz.key: dict(start=start, end=end)}, self.fi, self.quizzes)
+        self.progress = Progress({self.quiz.key: dict(start=start, end=end)}, FI, self.quizzes)
 
     def test_title(self):
         """Test the table title."""
@@ -60,7 +61,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_quiz(self):
         """Test that quizzes are shown."""
         console_print = self.show_progress(self.progress)
-        for index, value in enumerate(["Read", Label(self.fi, "Terve!"), "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
+        for index, value in enumerate(["Read", Label(FI, "Terve!"), "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
 
     def test_quiz_silenced_until_time_in_the_future(self):
@@ -84,7 +85,7 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
         """Set up test fixtures."""
         super().setUp()
         another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
-        self.another_quiz = first(create_quizzes(self.fi_nl, another_concept).by_quiz_type("read"))
+        self.another_quiz = first(create_quizzes(FI_NL, another_concept).by_quiz_type("read"))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
 
 
@@ -97,7 +98,7 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
         """Test that the quizzes can be sorted by retention length."""
         progress = Progress(
             {self.quiz.key: dict(count=21), self.another_quiz.key: {}},
-            self.fi,
+            FI,
             self.quizzes,
         )
         console_print = self.show_progress(progress)
@@ -107,7 +108,7 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
         """Test that the quizzes are sorted by attempts numerically, not lexically."""
         progress = Progress(
             {self.quiz.key: dict(count=21), self.another_quiz.key: dict(count=4)},
-            self.fi,
+            FI,
             self.quizzes,
         )
         console_print = self.show_progress(progress)
@@ -130,7 +131,7 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
         """Test that the quizzes can be sorted by retention length, even when a quiz has no retention."""
         progress = Progress(
             {self.quiz.key: dict(start=self.start, end=self.end), self.another_quiz.key: {}},
-            self.fi,
+            FI,
             self.quizzes,
         )
         console_print = self.show_progress(progress)
@@ -144,7 +145,7 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
                 self.quiz.key: dict(start=self.start, end=self.end),
                 self.another_quiz.key: dict(start=another_start, end=self.end),
             },
-            self.fi,
+            FI,
             self.quizzes,
         )
         console_print = self.show_progress(progress)

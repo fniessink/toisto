@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 from unittest.mock import Mock, patch
 
 from toisto.model.filter import filter_concepts
+from toisto.model.language import EN
 from toisto.model.language.concept import Concept, ConceptId
 
 from ...base import ToistoTestCase
@@ -33,7 +34,7 @@ class FilterTest(ToistoTestCase):
         return filter_concepts(
             self.concepts if concepts is None else concepts,
             selected_concepts or [],
-            self.en,
+            EN,
             self.argument_parser,
         )
 

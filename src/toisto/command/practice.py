@@ -25,8 +25,8 @@ from toisto.ui.text import (
 def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int = 1) -> Label:
     """Present the question and get the answer from the user."""
     while True:
-        say(quiz.question_language, quiz.question.pronounceable, config, slow=attempt > 1)
-        if answer := Label(quiz.answer_language, input("> ").strip()):
+        say(quiz.question.language, quiz.question.pronounceable, config, slow=attempt > 1)
+        if answer := Label(quiz.answer.language, input("> ").strip()):
             break
         print("\033[F", end="")  # noqa: T201  # Move cursor one line up
     return answer
@@ -43,9 +43,9 @@ def evaluate_answer(
     if quiz.is_correct(answer):
         progress.mark_correct_answer(quiz)
         return feedback_correct(answer, quiz, language_pair)
-    if answer != Label(quiz.answer_language, "?") and attempt == 1:
+    if answer != Label(quiz.answer.language, "?") and attempt == 1:
         if quiz.is_question(answer) and not quiz.is_grammatical:
-            return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer_language])
+            return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer.language])
         return TRY_AGAIN
     progress.mark_incorrect_answer(quiz)
     return feedback_incorrect(answer, quiz)
@@ -66,7 +66,7 @@ def do_quiz(
         answer = do_quiz_attempt(quiz, config, attempt)
         feedback = evaluate_answer(quiz, progress, language_pair, answer, attempt)
         write_output(feedback)
-        if quiz.is_correct(answer) or answer == Label(quiz.answer_language, "?"):
+        if quiz.is_correct(answer) or answer == Label(quiz.answer.language, "?"):
             break
 
 

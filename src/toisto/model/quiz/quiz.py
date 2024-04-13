@@ -8,7 +8,6 @@ from functools import cached_property
 from itertools import chain
 from typing import Final, Literal, cast, get_args
 
-from ..language import Language
 from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
@@ -87,8 +86,6 @@ class Quiz:
     """Class representing a quiz."""
 
     concept: Concept
-    question_language: Language
-    answer_language: Language
     _question: Label
     _answers: Labels
     quiz_types: tuple[QuizType, ...]
@@ -117,7 +114,7 @@ class Quiz:
         """Return a string version of the quiz that can be used as key in the progress dict."""
         concept_id = self.concept.base_concept.concept_id
         quiz_types = "+".join(self.quiz_types)
-        return f"{concept_id}:{self.question_language}:{self.answer_language}:{self.question}:{quiz_types}"
+        return f"{concept_id}:{self.question.language}:{self.answer.language}:{self.question}:{quiz_types}"
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
@@ -180,14 +177,14 @@ class Quiz:
         else:
             quiz_type = cast(Literal[TranslationQuizType, ListenQuizType, SemanticQuizType], self.quiz_types[0])
             if self.question.is_colloquial:
-                instruction_text = f"Listen to the colloquial {ALL_LANGUAGES[self.question_language]} and write in"
+                instruction_text = f"Listen to the colloquial {ALL_LANGUAGES[self.question.language]} and write in"
                 if quiz_type == "dictate":
                     instruction_text += " standard"
             else:
                 instruction_text = INSTRUCTIONS[quiz_type]
             if self.question.is_complete_sentence:
                 instruction_text = instruction_text.replace("write ", "write a complete sentence ")
-        return f"{instruction_text} {ALL_LANGUAGES[self.answer_language]}{self._question_note}"
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer.language]}{self._question_note}"
 
     @property
     def answer_notes(self) -> Sequence[str]:
@@ -203,7 +200,7 @@ class Quiz:
     @property
     def _question_note(self) -> str:
         """Return the note to be shown as part of the question, if applicable."""
-        note_applicable = self.question_language != self.answer_language or {"answer", "dictate"} & set(self.quiz_types)
+        note_applicable = self.question.language != self.answer.language or {"answer", "dictate"} & set(self.quiz_types)
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
         return f" ({question_note})" if (note_applicable and question_note) else ""
 

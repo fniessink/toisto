@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+from toisto.model.language import FI, NL
 from toisto.persistence.loader import Loader
 
 from ...base import ToistoTestCase
@@ -50,5 +51,5 @@ class LoadConceptsTest(ToistoTestCase):
         path_open.return_value.__enter__.return_value.read.side_effect = [
             '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
         ]
-        concept = self.create_concept("concept_id", {self.fi: "Label1", self.nl: "Label2"})
+        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
         self.assertEqual({concept}, self.loader.load(Path("filename")))
