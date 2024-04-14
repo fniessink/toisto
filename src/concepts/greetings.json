@@ -1,67 +1,4 @@
 {
-    "hi": {
-        "en": "Hi!",
-        "fi": [
-            "Hei!",
-            "Moi!",
-            "Moikka!;arriving"
-        ],
-        "nl": "Hoi!"
-    },
-    "hello": {
-        "en": "Hello!",
-        "fi": "Terve!",
-        "nl": "Hallo!"
-    },
-    "bye": {
-        "en": [
-            "Bye!",
-            "Bye bye!"
-        ],
-        "fi": [
-            "Hei hei!",
-            "Moi moi!",
-            "Heippa!",
-            "Moikka!;leaving"
-        ],
-        "nl": [
-            "Doeg!",
-            "Doei!",
-            "Dag!"
-        ]
-    },
-    "see you": {
-        "en": [
-            "Goodbye",
-            "See you later!See you!"
-        ],
-        "fi": [
-            "Nähdään!",
-            "Näkemiin!"
-        ],
-        "nl": "Tot ziens!"
-    },
-    "see you tomorrow": {
-        "roots": {
-            "en": [
-                "see you",
-                "tomorrow"
-            ],
-            "fi": [
-                "see you",
-                "tomorrow"
-            ],
-            "nl": "tomorrow"
-        },
-        "en": "See you tomorrow!",
-        "fi": "Nähdään huomenna!",
-        "nl": "Tot morgen!"
-    },
-    "welcome": {
-        "en": "Welcome!",
-        "fi": "Tervetuloa!",
-        "nl": "Welkom!"
-    },
     "who are you": {
         "roots": [
             "who",
@@ -109,43 +46,6 @@
         "fi": "Anteeksi, voitko auttaa minua?",
         "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
     },
-    "name": {
-        "singular": {
-            "example": "my name is bob",
-            "en": "name",
-            "fi": "nimi",
-            "nl": "de naam"
-        },
-        "plural": {
-            "en": "names",
-            "fi": "nimet",
-            "nl": "de namen"
-        }
-    },
-    "first name": {
-        "roots": [
-            "name"
-        ],
-        "en": "first name",
-        "fi": "etunimi",
-        "nl": "de voornaam"
-    },
-    "given name": {
-        "roots": "name",
-        "en": "given name",
-        "nl": "de roepnaam"
-    },
-    "last name": {
-        "roots": [
-            "name"
-        ],
-        "en": [
-            "last name",
-            "surname"
-        ],
-        "fi": "sukunimi",
-        "nl": "de achternaam"
-    },
     "what is your name": {
         "roots": [
             "what",
@@ -164,19 +64,6 @@
         "en": "My name is Bob.",
         "fi": "Minun nimeni on Bob.",
         "nl": "Mijn naam is Bob."
-    },
-    "a pleasure to meet you": {
-        "roots": {
-            "en": "to meet (someone new)",
-            "fi": [
-                "funny",
-                "to meet (someone new)"
-            ],
-            "nl": "to meet (someone new)"
-        },
-        "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
-        "fi": "Hauska tutustua!",
-        "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
     },
     "how do you spell that": {
         "roots": {
@@ -203,15 +90,6 @@
         "en": "How old are you?",
         "fi": "Kuinka vanha sinä olet?",
         "nl": "Hoe oud ben jij?"
-    },
-    "good morning": {
-        "roots": [
-            "good",
-            "morning"
-        ],
-        "en": "Good morning!|Morning!",
-        "fi": "Hyvää huomenta!|Huomenta!",
-        "nl": "Goedemorgen!|Morgen!"
     },
     "good afternoon": {
         "roots": {
@@ -258,15 +136,6 @@
         "en": "Good night!",
         "fi": "Hyvää yötä!",
         "nl": "Goedenacht!"
-    },
-    "sleep well": {
-        "roots": "to sleep",
-        "en": "Sleep well!",
-        "fi": "Nuku hyvin!",
-        "nl": [
-            "Slaap lekker!",
-            "Welterusten!"
-        ]
     },
     "have a nice day": {
         "roots": "day",

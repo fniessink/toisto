@@ -1,9 +1,4 @@
 {
-    "no": {
-        "en": "No!",
-        "fi": "Ei!",
-        "nl": "Nee!"
-    },
     "yes": {
         "en": "Yes!",
         "fi": [
@@ -28,22 +23,6 @@
         ],
         "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
     },
-    "you are welcome": {
-        "roots": {
-            "en": [
-                "to be",
-                "welcome"
-            ],
-            "nl": "thanks",
-            "fi": "no"
-        },
-        "en": "You are welcome!",
-        "nl": [
-            "Geen dank!",
-            "Graag gedaan!"
-        ],
-        "fi": "Ei kestä!"
-    },
     "sorry": {
         "en": "Sorry!",
         "fi": "Anteeksi!",
@@ -54,28 +33,10 @@
         "fi": "Anteeksi?|Anteeksi!",
         "nl": "Pardon?|Pardon!"
     },
-    "no problem": {
-        "roots": {
-            "en": "no",
-            "fi": "nothing"
-        },
-        "en": "No problem!",
-        "fi": "Ei se mitään!",
-        "nl": [
-            "Geen probleem!",
-            "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
-        ]
-    },
     "ok": {
         "en": "OK!|Okay!",
         "fi": "Okei!",
         "nl": "OK!|Oké!"
-    },
-    "and you": {
-        "roots": "and",
-        "en": "And you?",
-        "fi": "Entä sinulle?",
-        "nl": "En met jou?"
     },
     "help": {
         "en": "Help!",

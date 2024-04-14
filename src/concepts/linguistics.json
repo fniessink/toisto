@@ -55,18 +55,6 @@
         "fi": "yhdyssana",
         "nl": "het samengestelde woord"
     },
-    "phrase": {
-        "singular": {
-            "en": "phrase",
-            "fi": "fraasi",
-            "nl": "de frase"
-        },
-        "plural": {
-            "en": "phrases",
-            "fi": "fraasit",
-            "nl": "de frasen|de frases"
-        }
-    },
     "sentence": {
         "singular": {
             "en": "sentence",
@@ -105,11 +93,6 @@
             "fi": "konsonantit",
             "nl": "de medeklinkers"
         }
-    },
-    "alphabet": {
-        "en": "alphabet",
-        "fi": "aakkoset",
-        "nl": "het alfabet"
     },
     "question word": {
         "hypernym": "word",

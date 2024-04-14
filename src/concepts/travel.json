@@ -40,32 +40,6 @@
         "fi": "aukioloajat",
         "nl": "de openingstijden"
     },
-    "car": {
-        "root": {
-            "singular": {
-                "en": "car",
-                "fi": "auto",
-                "nl": "de auto"
-            },
-            "plural": {
-                "en": "cars",
-                "fi": "autot",
-                "nl": "de auto's"
-            }
-        },
-        "diminutive": {
-            "singular": {
-                "en": "(little car)",
-                "fi": "(pieni auto)",
-                "nl": "het autootje"
-            },
-            "plural": {
-                "en": "(little cars)",
-                "fi": "(pienet autot)",
-                "nl": "de autootjes"
-            }
-        }
-    },
     "flight": {
         "involves": "airplane",
         "singular": {

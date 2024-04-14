@@ -1,7 +1,13 @@
 {
     "well-being": {
+        "roots": {
+            "fi": "well"
+        },
         "en": "well-being",
-        "fi": "hyvinvointi",
+        "fi": [
+            "hyvinvointi",
+            "jaksaminen"
+        ],
         "nl": "het welzijn"
     }
 }
