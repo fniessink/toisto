@@ -1,0 +1,38 @@
+{
+    "name": {
+        "singular": {
+            "example": [
+                "what is your name",
+                "my name is bob"
+            ],
+            "en": "name",
+            "fi": "nimi",
+            "nl": "de naam"
+        },
+        "plural": {
+            "en": "names",
+            "fi": "nimet",
+            "nl": "de namen"
+        }
+    },
+    "first name": {
+        "roots": "name",
+        "en": "first name",
+        "fi": "etunimi",
+        "nl": "de voornaam"
+    },
+    "given name": {
+        "roots": "name",
+        "en": "given name",
+        "nl": "de roepnaam"
+    },
+    "last name": {
+        "roots": "name",
+        "en": [
+            "last name",
+            "surname"
+        ],
+        "fi": "sukunimi",
+        "nl": "de achternaam"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "morning": {
+        "hypernym": "time of day",
+        "singular": {
+            "en": "morning",
+            "fi": "aamu|aamupäivä",
+            "nl": "de ochtend"
+        },
+        "plural": {
+            "en": "mornings",
+            "fi": "aamut|aamupäivät",
+            "nl": "de ochtenden"
+        }
+    },
+    "at morning": {
+        "hypernym": "time of day",
+        "roots": "morning",
+        "en": "at morning",
+        "fi": "aamulla",
+        "nl": "'s ochtends"
+    },
+    "this morning": {
+        "hypernym": "time of day",
+        "roots": "morning",
+        "en": "this morning",
+        "fi": "tänä aamuna",
+        "nl": "vanochtend"
+    }
+}

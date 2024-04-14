@@ -89,10 +89,17 @@
         "nl": "de griep"
     },
     "fever": {
+        "example": "I have a fever",
         "involves": "patient",
         "en": "fever",
         "fi": "kuume",
         "nl": "de koorts"
+    },
+    "I have a fever": {
+        "roots": "fever",
+        "en": "I have a fever.",
+        "fi": "Minulla on kuumetta.",
+        "nl": "Ik heb koorts."
     },
     "blood": {
         "holonym": "body",
@@ -133,6 +140,7 @@
         }
     },
     "headache": {
+        "example": "I have a headache",
         "hypernym": [
             "ache",
             "pain"
@@ -151,6 +159,12 @@
             "fi": "päänsäryt",
             "nl": "de hoofdpijnen"
         }
+    },
+    "I have a headache": {
+        "roots": "headache",
+        "en": "I have a headache.",
+        "fi": "Minulla on pää kipeä",
+        "nl": "Ik heb hoofdpijn."
     },
     "hospital": {
         "hypernym": "building",

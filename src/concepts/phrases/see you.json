@@ -1,0 +1,29 @@
+{
+    "see you": {
+        "en": [
+            "Goodbye",
+            "See you later!See you!"
+        ],
+        "fi": [
+            "Nähdään!",
+            "Näkemiin!"
+        ],
+        "nl": "Tot ziens!"
+    },
+    "see you tomorrow": {
+        "roots": {
+            "en": [
+                "see you",
+                "tomorrow"
+            ],
+            "fi": [
+                "see you",
+                "tomorrow"
+            ],
+            "nl": "tomorrow"
+        },
+        "en": "See you tomorrow!",
+        "fi": "Nähdään huomenna!",
+        "nl": "Tot morgen!"
+    }
+}

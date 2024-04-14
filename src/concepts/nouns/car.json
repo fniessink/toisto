@@ -1,7 +1,46 @@
 {
+    "car": {
+        "root": {
+            "singular": {
+                "en": "car",
+                "fi": "auto",
+                "nl": [
+                    "de auto",
+                    "de wagen"
+                ]
+            },
+            "plural": {
+                "en": "cars",
+                "fi": "autot",
+                "nl": [
+                    "de auto's",
+                    "de wagens"
+                ]
+            }
+        },
+        "diminutive": {
+            "singular": {
+                "en": "(little car)",
+                "fi": "(pieni auto)",
+                "nl": [
+                    "het autootje",
+                    "het wagentje"
+                ]
+            },
+            "plural": {
+                "en": "(little cars)",
+                "fi": "(pienet autot)",
+                "nl": [
+                    "de autootjes",
+                    "de wagentjes"
+                ]
+            }
+        }
+    },
     "dining car": {
         "holonym": "train",
         "roots": {
+            "en": "car",
             "fi": "wagon"
         },
         "en": "dining car",
