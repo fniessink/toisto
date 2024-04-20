@@ -98,6 +98,7 @@ class QuizTest(QuizTestCase):
             "Give the [underline]infinitive[/underline] in Finnish",
             "Give the [underline]present tense[/underline] in Finnish",
             "Give the [underline]past tense[/underline] in Finnish",
+            "Give the [underline]present perfect tense[/underline] in Finnish",
             "Give the [underline]declarative[/underline] in Finnish",
             "Give the [underline]interrogative[/underline] in Finnish",
             "Give the [underline]imperative[/underline] in Finnish",
