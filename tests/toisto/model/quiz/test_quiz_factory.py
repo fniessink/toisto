@@ -2,6 +2,7 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept
+from toisto.model.language.grammar import Tense
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_types
@@ -23,21 +24,25 @@ class QuizFactoryTestCase(ToistoTestCase):
             },
         )
 
-    def create_verb_with_tense_and_person(self) -> Concept:
+    def create_verb_with_tense_and_person(self, *tense: Tense) -> Concept:
         """Create a verb with grammatical person nested within tense."""
-        return self.create_concept(
-            "to eat",
-            {
-                "present tense": {
-                    "singular": dict(en="I eat", nl="ik eet"),
-                    "plural": dict(en="we eat", nl="wij eten"),
-                },
-                "past tense": {
-                    "singular": dict(en="I ate", nl="ik at"),
-                    "plural": dict(en="we ate", nl="wij aten"),
-                },
-            },
-        )
+        concept_dict: dict[str, object] = {}
+        if "present tense" in tense:
+            concept_dict["present tense"] = {
+                "singular": dict(en="I eat", nl="ik eet"),
+                "plural": dict(en="we eat", nl="wij eten"),
+            }
+        if "past tense" in tense:
+            concept_dict["past tense"] = {
+                "singular": dict(en="I ate", nl="ik at"),
+                "plural": dict(en="we ate", nl="wij aten"),
+            }
+        if "present perfect tense" in tense:
+            concept_dict["present perfect tense"] = {
+                "singular": dict(en="I have eaten", nl="ik heb gegeten"),
+                "plural": dict(en="we have eaten", nl="wij hebben gegeten"),
+            }
+        return self.create_concept("to eat", concept_dict)
 
     def create_verb_with_number_and_person(self) -> Concept:
         """Create a verb with grammatical number nested with grammatical person."""
@@ -926,10 +931,10 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 class TenseQuizzesTest(QuizFactoryTestCase):
     """Unit tests for concepts with tenses."""
 
-    def test_tense_nested_with_grammatical_person(self):
-        """Test that quizzes can be generated for tense nested with grammatical person."""
+    def test_present_and_past_tense_nested_with_grammatical_person(self):
+        """Test that quizzes can be generated for present and past tense nested with grammatical person."""
         self.language_pair = NL_EN
-        concept = self.create_verb_with_tense_and_person()
+        concept = self.create_verb_with_tense_and_person("present tense", "past tense")
         present, past = concept.constituents
         present_singular, present_plural, past_singular, past_plural = concept.leaf_concepts(NL)
         self.assertSetEqual(
@@ -958,6 +963,62 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "wij eten", ["wij aten"], "give past tense"),
                 self.create_quiz(concept, "ik at", ["ik eet"], "give present tense"),
                 self.create_quiz(concept, "wij aten", ["wij eten"], "give present tense"),
+            },
+            create_quizzes(NL_EN, concept),
+        )
+
+    def test_present_past_and_perfect_tense_nested_with_grammatical_person(self):
+        """Test that quizzes can be generated for present, past, and perfect tense nested with grammatical person."""
+        self.language_pair = NL_EN
+        concept = self.create_verb_with_tense_and_person("present tense", "past tense", "present perfect tense")
+        present, past, perfect = concept.constituents
+        present_singular, present_plural, past_singular, past_plural, perfect_singular, perfect_plural = (
+            concept.leaf_concepts(NL)
+        )
+        self.assertSetEqual(
+            {
+                self.create_quiz(present_singular, "ik eet", ["I eat"], "read"),
+                self.create_quiz(present_singular, "ik eet", ["ik eet"], "dictate"),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], "interpret"),
+                self.create_quiz(present_singular, "I eat", ["ik eet"], "write"),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], "read"),
+                self.create_quiz(present_plural, "wij eten", ["wij eten"], "dictate"),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], "interpret"),
+                self.create_quiz(present_plural, "we eat", ["wij eten"], "write"),
+                self.create_quiz(present, "ik eet", ["wij eten"], "pluralize"),
+                self.create_quiz(present, "wij eten", ["ik eet"], "singularize"),
+                self.create_quiz(past_singular, "ik at", ["I ate"], "read"),
+                self.create_quiz(past_singular, "ik at", ["ik at"], "dictate"),
+                self.create_quiz(past_singular, "ik at", ["I ate"], "interpret"),
+                self.create_quiz(past_singular, "I ate", ["ik at"], "write"),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], "read"),
+                self.create_quiz(past_plural, "wij aten", ["wij aten"], "dictate"),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], "interpret"),
+                self.create_quiz(past_plural, "we ate", ["wij aten"], "write"),
+                self.create_quiz(past, "ik at", ["wij aten"], "pluralize"),
+                self.create_quiz(past, "wij aten", ["ik at"], "singularize"),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], "read"),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["ik heb gegeten"], "dictate"),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], "interpret"),
+                self.create_quiz(perfect_singular, "I have eaten", ["ik heb gegeten"], "write"),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], "read"),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["wij hebben gegeten"], "dictate"),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], "interpret"),
+                self.create_quiz(perfect_plural, "we have eaten", ["wij hebben gegeten"], "write"),
+                self.create_quiz(perfect, "ik heb gegeten", ["wij hebben gegeten"], "pluralize"),
+                self.create_quiz(perfect, "wij hebben gegeten", ["ik heb gegeten"], "singularize"),
+                self.create_quiz(concept, "ik eet", ["ik at"], "give past tense"),
+                self.create_quiz(concept, "wij eten", ["wij aten"], "give past tense"),
+                self.create_quiz(concept, "ik at", ["ik eet"], "give present tense"),
+                self.create_quiz(concept, "wij aten", ["wij eten"], "give present tense"),
+                self.create_quiz(concept, "ik heb gegeten", ["ik eet"], "give present tense"),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij eten"], "give present tense"),
+                self.create_quiz(concept, "ik heb gegeten", ["ik at"], "give past tense"),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij aten"], "give past tense"),
+                self.create_quiz(concept, "ik eet", ["ik heb gegeten"], "give present perfect tense"),
+                self.create_quiz(concept, "wij eten", ["wij hebben gegeten"], "give present perfect tense"),
+                self.create_quiz(concept, "ik at", ["ik heb gegeten"], "give present perfect tense"),
+                self.create_quiz(concept, "wij aten", ["wij hebben gegeten"], "give present perfect tense"),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1440,7 +1501,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_verb_with_tense_and_person(self):
         """Test the grammatical quiz types for a verb with tense and grammatical person."""
-        verb = self.create_verb_with_tense_and_person()
+        verb = self.create_verb_with_tense_and_person("present tense", "past tense")
         present_singular, present_plural, past_singular, past_plural = verb.leaf_concepts(NL)
         for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
             self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))

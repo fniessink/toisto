@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add support for the present perfect tense. Closes [#632](https://github.com/fniessink/toisto/issues/632).
 - When showing examples, also show the meaning of the examples. Closes [#638](https://github.com/fniessink/toisto/issues/638).
 
 ## 0.18.1 - 2024-04-09

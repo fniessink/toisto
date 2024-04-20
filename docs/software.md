@@ -442,7 +442,7 @@ When concepts are verbs, infinitives can be specified as follows:
 
 ### Tenses
 
-When concepts are verbs, the present tense and the past tense can be specified as follows:
+When concepts are verbs, the present tense, past tense, and present perfect tense can be specified as follows:
 
 ```json
 {
@@ -463,6 +463,16 @@ When concepts are verbs, the present tense and the past tense can be specified a
                 "first person": {
                     "en": "I was",
                     "fi": "minä olin",
+                },
+                "second person": "..."
+            },
+            "plural": "..."
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have been",
+                    "fi": "minä olen ollut",
                 },
                 "second person": "..."
             },
