@@ -80,22 +80,34 @@ def feedback_correct(guess: Label, quiz: Quiz, language_pair: LanguagePair) -> s
 
 def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
     """Return the feedback about an incorrect result."""
-    if guess == Label(quiz.answer.language, "?"):
-        answers = quiz.non_generated_answers
-        label = "The correct answer is" if len(answers) == 1 else "The correct answers are"
-        feedback = f"{label} {linkify_and_enumerate(*answers)}.\n" + colloquial(quiz) + meaning(quiz)
-    else:
-        label = f'{INCORRECT}The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
-        feedback = label + colloquial(quiz) + meaning(quiz) + other_answers(quiz.answer, quiz)
-    return feedback + answer_notes(quiz)
+    return (
+        INCORRECT
+        + correct_answer(guess, quiz)
+        + colloquial(quiz)
+        + meaning(quiz)
+        + other_answers(quiz.answer, quiz)
+        + answer_notes(quiz)
+    )
+
+
+def feedback_try_again(guess: Label, quiz: Quiz) -> str:
+    """Return the feedback when the first attempt is incorrect."""
+    if quiz.is_question(guess) and not quiz.is_grammatical:
+        return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer.language])
+    return TRY_AGAIN
+
+
+def feedback_skip(quiz: Quiz) -> str:
+    """Return the feedback when the user skips to the answer."""
+    return correct_answers(quiz) + colloquial(quiz) + meaning(quiz) + answer_notes(quiz)
 
 
 def colloquial(quiz: Quiz) -> str:
     """Return the feedback about colloquial label, if any."""
-    if not quiz.question.is_colloquial:
-        return ""
-    feedback = f'The colloquial {ALL_LANGUAGES[quiz.question.language]} spoken was "{quiz.question.strip("*")}".'
-    return wrap(feedback, SECONDARY)
+    if quiz.question.is_colloquial:
+        feedback = f'The colloquial {ALL_LANGUAGES[quiz.question.language]} spoken was "{quiz.question.strip("*")}".'
+        return wrap(feedback, SECONDARY)
+    return ""
 
 
 def meaning(quiz: Quiz) -> str:
@@ -107,6 +119,18 @@ def meaning(quiz: Quiz) -> str:
     else:
         meanings = linkify_and_enumerate(*(quiz.question_meanings + quiz.answer_meanings))
     return wrap(f"Meaning {meanings}.", SECONDARY) if meanings else ""
+
+
+def correct_answer(guess: Label, quiz: Quiz) -> str:
+    """Return the quiz's correct answer."""
+    return f'The correct answer is "{colored_diff(guess, quiz.answer)}".\n'
+
+
+def correct_answers(quiz: Quiz) -> str:
+    """Return the quiz's correct answers."""
+    answers = quiz.non_generated_answers
+    label = "The correct answer is" if len(answers) == 1 else "The correct answers are"
+    return f"{label} {linkify_and_enumerate(*answers)}.\n"
 
 
 def other_answers(guess: Label, quiz: Quiz) -> str:

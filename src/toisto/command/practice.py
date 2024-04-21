@@ -5,7 +5,6 @@ from configparser import ConfigParser
 from typing import get_args
 
 from toisto.model.language import LanguagePair
-from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import ListenQuizType, Quiz
@@ -14,10 +13,10 @@ from toisto.ui.dictionary import linkify
 from toisto.ui.speech import say
 from toisto.ui.text import (
     DONE,
-    TRY_AGAIN,
-    TRY_AGAIN_IN_ANSWER_LANGUAGE,
     feedback_correct,
     feedback_incorrect,
+    feedback_skip,
+    feedback_try_again,
     instruction,
 )
 
@@ -43,10 +42,11 @@ def evaluate_answer(
     if quiz.is_correct(answer):
         progress.mark_correct_answer(quiz)
         return feedback_correct(answer, quiz, language_pair)
-    if answer != Label(quiz.answer.language, "?") and attempt == 1:
-        if quiz.is_question(answer) and not quiz.is_grammatical:
-            return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer.language])
-        return TRY_AGAIN
+    if str(answer) == "?":
+        progress.mark_incorrect_answer(quiz)
+        return feedback_skip(quiz)
+    if attempt == 1:
+        return feedback_try_again(answer, quiz)
     progress.mark_incorrect_answer(quiz)
     return feedback_incorrect(answer, quiz)
 

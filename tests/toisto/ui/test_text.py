@@ -8,7 +8,7 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 from toisto.ui.dictionary import DICTIONARY_URL, linkify
 from toisto.ui.style import INSERTED, QUIZ, SECONDARY
-from toisto.ui.text import CORRECT, INCORRECT, feedback_correct, feedback_incorrect, instruction
+from toisto.ui.text import CORRECT, INCORRECT, feedback_correct, feedback_incorrect, feedback_skip, instruction
 
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
@@ -42,7 +42,7 @@ class FeedbackTestCase(ToistoTestCase):
             if quiz.question.is_colloquial:
                 self.assertEqual(expected_feedback_correct, feedback_correct(Label(FI, "kiitos"), quiz, FI_NL))
                 self.assertEqual(expected_feedback_incorrect, feedback_incorrect(Label(FI, "hei"), quiz))
-                self.assertEqual(expected_feedback_on_skip, feedback_incorrect(Label(FI, "?"), quiz))
+                self.assertEqual(expected_feedback_on_skip, feedback_skip(quiz))
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
@@ -92,7 +92,7 @@ class FeedbackTestCase(ToistoTestCase):
         concept = self.create_concept("house", dict(nl="het huis", fi=["talo"]))
         quiz = create_quizzes(FI_NL, concept).by_quiz_type("read").pop()
         expected_text = f'The correct answer is "{linkify("het huis")}".\n'
-        self.assertEqual(expected_text, feedback_incorrect(Label(NL, "?"), quiz))
+        self.assertEqual(expected_text, feedback_skip(quiz))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -101,7 +101,7 @@ class FeedbackTestCase(ToistoTestCase):
         expected_text = (
             f'The correct answer is "{linkify("terve")}".\n[{SECONDARY}]Meaning "{linkify("hoi")}".[/{SECONDARY}]\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect(Label(FI, "?"), quiz))
+        self.assertEqual(expected_text, feedback_skip(quiz))
 
     def test_show_feedback_on_question_mark_with_multiple_answers(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -111,7 +111,7 @@ class FeedbackTestCase(ToistoTestCase):
             'The correct answers are "[link=https://en.wiktionary.org/wiki/terve]terve[/link]", '
             '"[link=https://en.wiktionary.org/wiki/hei]hei[/link]".\n'
         )
-        self.assertEqual(expected_text, feedback_incorrect(Label(FI, "?"), quiz))
+        self.assertEqual(expected_text, feedback_skip(quiz))
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
@@ -163,7 +163,7 @@ class FeedbackTestCase(ToistoTestCase):
         quiz = create_quizzes(FI_NL, concept).by_quiz_type("dictate").pop()
         self.assertEqual(
             f"[{SECONDARY}]Note: Moi is an informal greeting.[/{SECONDARY}]",
-            feedback_incorrect(Label(FI, "?"), quiz).split("\n")[-2],
+            feedback_skip(quiz).split("\n")[-2],
         )
 
     def test_post_quiz_example_with_spelling_alternatives(self):
