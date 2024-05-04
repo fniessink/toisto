@@ -50,6 +50,20 @@ class QuizTest(QuizTestCase):
         """Test an incorrect guess."""
         self.assertFalse(self.quiz.is_correct(Label(NL, "engles")))
 
+    def test_is_not_correct_due_to_upper_case_question(self):
+        """Test that a lower case answer for an upper case question is incorrect."""
+        self.assertFalse(self.quiz.is_correct(Label(NL, "engels")))
+
+    def test_is_not_correct_due_to_upper_case_answer(self):
+        """Test that a lower case answer is incorrect when the answer should be upper case."""
+        quiz = self.create_quiz(self.create_concept("finnish", {}), "suomi", ["Fins"])
+        self.assertFalse(quiz.is_correct(Label(NL, "fins")))
+
+    def test_is_correct_despite_case(self):
+        """Test that an upper case answer for a lower case question is correct."""
+        quiz = self.create_quiz(self.create_concept("house", {}), "talo", ["het huis"])
+        self.assertTrue(quiz.is_correct(Label(NL, "Het huis")))
+
     def test_get_answer(self):
         """Test that the answer is returned."""
         self.assertEqual(self.engels, self.quiz.answer)
@@ -188,24 +202,24 @@ class QuizSpellingAlternativesTests(QuizTestCase):
 
     def test_spelling_alternative_of_answer(self):
         """Test that a quiz can deal with alternative spellings of answers."""
-        quiz = self.create_quiz(self.concept, "Yksi", ["Een|Eén"])
-        self.assertEqual(Label(NL, "Een"), quiz.answer)
+        quiz = self.create_quiz(self.concept, "yksi", ["een|één"])
+        self.assertEqual(Label(NL, "een"), quiz.answer)
 
     def test_spelling_alternative_of_question(self):
         """Test that a quiz can deal with alternative spellings of the question."""
         self.language_pair = NL_FI
-        quiz = self.create_quiz(self.concept, "Een|Eén", ["Yksi"])
-        self.assertEqual(Label(NL, "Een"), quiz.question)
+        quiz = self.create_quiz(self.concept, "een|één", ["yksi"])
+        self.assertEqual(Label(NL, "een"), quiz.question)
 
     def test_spelling_alternative_is_correct(self):
         """Test that an answer that matches a spelling alternative is correct."""
-        quiz = self.create_quiz(self.concept, "Yksi", ["Een|Eén", "één"])
+        quiz = self.create_quiz(self.concept, "Yksi.", ["Een|Eén", "één"])
         for alternative in ("Een", "Eén", "één"):
             self.assertTrue(quiz.is_correct(Label(NL, alternative)))
 
     def test_other_answers_with_spelling_alternatives(self):
         """Test the spelling alternatives are returned as other answers."""
-        quiz = self.create_quiz(self.concept, "Yksi", ["Een|Eén", "één"])
+        quiz = self.create_quiz(self.concept, "Yksi.", ["Een|Eén", "één"])
         alternatives = ("Een", "Eén", "één")
         for alternative in alternatives:
             other_answers = list(alternatives)
@@ -217,7 +231,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         """Test that a generated spelling alternative is accepted as answer."""
         load_spelling_alternatives(EN_NL)
         self.language_pair = NL_EN
-        quiz = self.create_quiz(self.concept, "Het is waar", ["It is true"])
+        quiz = self.create_quiz(self.concept, "Het is waar.", ["It is true."])
         self.assertTrue(quiz.is_correct(Label(EN, "It's true")))
         quiz = self.create_quiz(self.concept, "Het is.", ["It is."])
         self.assertTrue(quiz.is_correct(Label(EN, "It's.")))
