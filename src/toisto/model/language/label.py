@@ -50,6 +50,10 @@ class Label(str):
             return self.language != other.language or self.without_notes != other.without_notes
         return True
 
+    def __hash__(self) -> int:
+        """Return the hash."""
+        return hash(f"{self.language}{self}")
+
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
@@ -63,11 +67,11 @@ class Label(str):
         for alternative in alternatives:
             for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
                 if re.search(pattern, alternative):
-                    generated_alternative = re.sub(pattern, replacement, alternative)
-                    if alternative[0].isupper():
-                        generated_alternative = generated_alternative[0].capitalize() + generated_alternative[1:]
+                    generated_alternative = Label(self.language, re.sub(pattern, replacement, alternative))
+                    if alternative.starts_with_upper_case:
+                        generated_alternative = generated_alternative.with_upper_case_first_letter
                     generated_alternatives.add(generated_alternative)
-        return alternatives + tuple(Label(self.language, alternative) for alternative in generated_alternatives)
+        return alternatives + tuple(generated_alternatives)
 
     @property
     def question_note(self) -> str:
@@ -87,15 +91,34 @@ class Label(str):
         return self.split(self.NOTE_SEP)[0]
 
     @property
+    def with_lower_case_first_letter(self) -> Label:
+        """Return the label with the first letter lower cased."""
+        return Label(self.language, str(self)[0].lower() + str(self)[1:])
+
+    @property
+    def with_upper_case_first_letter(self) -> Label:
+        """Return the label with the first letter upper cased."""
+        return Label(self.language, str(self)[0].upper() + str(self)[1:])
+
+    @property
     def is_colloquial(self) -> bool:
         """Return whether this is a colloquial label."""
         return self.without_notes.endswith(self.COLLOQUIAL_POSTFIX)
 
     @property
     def is_complete_sentence(self) -> bool:
-        """Return whether this is a complete sentence (starts with a capital and ends with punctuation)."""
-        label = self.without_notes
-        return label[0].isupper() and (label.strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION)
+        """Return whether this is a complete sentence (starts with an upper case letter and ends with punctuation)."""
+        return self.starts_with_upper_case and self.ends_with_punctuation
+
+    @property
+    def starts_with_upper_case(self) -> bool:
+        """Return whether the label starts with an upper case letter."""
+        return self[0].isupper()
+
+    @property
+    def ends_with_punctuation(self) -> bool:
+        """Return whether the label ends with punctuation."""
+        return self.without_notes.strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION
 
     @property
     def pronounceable(self) -> str:

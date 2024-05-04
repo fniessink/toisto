@@ -120,7 +120,8 @@ class Quiz:
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
-        return match(guess, *self.answers)
+        ignore_first_upper_case = not self.question.starts_with_upper_case and not self.answer.starts_with_upper_case
+        return match(guess.with_lower_case_first_letter if ignore_first_upper_case else guess, *self.answers)
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
