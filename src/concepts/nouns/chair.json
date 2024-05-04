@@ -1,0 +1,35 @@
+{
+    "chair": {
+        "singular": {
+            "en": "chair",
+            "fi": "tuoli",
+            "nl": "de stoel"
+        },
+        "plural": {
+            "en": "chairs",
+            "fi": "tuolit",
+            "nl": "de stoelen"
+        }
+    },
+    "office chair": {
+        "example": "we are looking for an office chair",
+        "hypernym": "chair",
+        "roots": {
+            "en": [
+                "office",
+                "chair"
+            ],
+            "fi": [
+                "job",
+                "chair"
+            ],
+            "nl": [
+                "desk",
+                "chair"
+            ]
+        },
+        "en": "office chair",
+        "fi": "työtuoli",
+        "nl": "de bureaustoel"
+    }
+}
