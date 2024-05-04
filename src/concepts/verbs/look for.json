@@ -7,16 +7,19 @@
         },
         "singular": {
             "first person": {
+                "example": "I am looking for a table lamp",
                 "en": "I look for",
                 "fi": "minä etsin",
                 "nl": "ik zoek"
             },
             "second person": {
+                "example": "you are looking for a dining table",
                 "en": "you look for;singular",
                 "fi": "sinä etsit",
                 "nl": "jij zoekt"
             },
             "third person": {
+                "example": "she is looking for a bookcase",
                 "fi": "hän etsii",
                 "female": {
                     "en": "she looks for",
@@ -30,29 +33,77 @@
         },
         "plural": {
             "first person": {
+                "example": "we are looking for an office chair",
                 "en": "we look for",
                 "fi": "me etsimme",
                 "nl": "wij zoeken"
             },
             "second person": {
+                "example": "you are looking for a roller blind",
                 "en": "you look for;plural",
                 "fi": "te etsitte",
                 "nl": "jullie zoeken"
             },
             "third person": {
+                "example": "they are looking for a double bed",
                 "en": "they look for",
                 "fi": "he etsivät",
                 "nl": "zij zoeken"
             }
         }
     },
-    "I'm looking for a table lamp": {
+    "I am looking for a table lamp": {
         "roots": [
             "to look for",
             "table lamp"
         ],
-        "en": "I'm looking for a table lamp.",
-        "fi": "Minä etsin pöytälamppua.",
+        "en": "I am looking for a table lamp.",
+        "fi": "Minä etsin pöytälamppua.;;'pöytälamppua' is the partitive case of 'pöytälamppu'",
         "nl": "Ik zoek een tafellamp."
+    },
+    "you are looking for a dining table": {
+        "roots": [
+            "to look for",
+            "dining table"
+        ],
+        "en": "You are looking for a dining table.;singular",
+        "fi": "Sinä etsit ruokapöytää.",
+        "nl": "Jij zoekt een eettafel."
+    },
+    "she is looking for a bookcase": {
+        "roots": [
+            "to look for",
+            "bookcase"
+        ],
+        "en": "She is looking for a bookcase.",
+        "fi": "Hän etsii kirjahyllya.;female;'kirjahyllya' is the partitive case of 'kirjahylly'",
+        "nl": "Zij zoekt een boekenkast."
+    },
+    "we are looking for an office chair": {
+        "roots": [
+            "to look for",
+            "office chair"
+        ],
+        "en": "We are looking for an office chair.",
+        "fi": "Me etsimme työtuolia.;;'työtuolia' is the partitive case of 'työtuoli'",
+        "nl": "Wij zoeken een bureaustoel."
+    },
+    "you are looking for a roller blind": {
+        "roots": [
+            "to look for",
+            "roller blind"
+        ],
+        "en": "You are looking for a roller blind.;plural",
+        "fi": "Te etsitte rullaverhoa.;;'rullaverhoa' is the partitive case of 'rullaverho'",
+        "nl": "Jullie zoeken een rolgordijn."
+    },
+    "they are looking for a double bed": {
+        "roots": [
+            "to look for",
+            "double bed"
+        ],
+        "en": "They are looking for a double bed.",
+        "fi": "He etsivät parisänkyä.;;'parisänkyä' is the partitive case of 'parisänky'",
+        "nl": "Zij zoeken een tweepersoonsbed."
     }
 }
