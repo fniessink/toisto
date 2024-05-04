@@ -11,16 +11,25 @@
                     "singular": {
                         "first person": {
                             "en": "I am",
-                            "fi": "minä olen",
+                            "fi": [
+                                "minä olen",
+                                "mä oon*"
+                            ],
                             "nl": "ik ben"
                         },
                         "second person": {
                             "en": "you are;singular",
-                            "fi": "sinä olet",
+                            "fi": [
+                                "sinä olet",
+                                "sä oot*"
+                            ],
                             "nl": "jij bent"
                         },
                         "third person": {
-                            "fi": "hän on",
+                            "fi": [
+                                "hän on",
+                                "se on*"
+                            ],
                             "female": {
                                 "en": "she is",
                                 "nl": "zij is"
@@ -42,12 +51,18 @@
                         },
                         "second person": {
                             "en": "you are;plural",
-                            "fi": "te olette",
+                            "fi": [
+                                "te olette",
+                                "te ootte*"
+                            ],
                             "nl": "jullie zijn"
                         },
                         "third person": {
                             "en": "they are",
-                            "fi": "he ovat",
+                            "fi": [
+                                "he ovat",
+                                "ne on*"
+                            ],
                             "nl": "zij zijn"
                         }
                     }

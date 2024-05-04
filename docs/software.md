@@ -779,7 +779,7 @@ When one concept involves another concept, this can be specified with the `invol
 
 If a concept involves just one other concept (for example, "to save" involves only "money"), the `involves` value can be a single concept identifier instead of a list of concept identifiers.
 
-### Exanples
+### Examples
 
 When one concept is an example of the usage of another concept, this can be specified using the `example` relation. Toisto will show the example after the user has answered the quiz.
 
