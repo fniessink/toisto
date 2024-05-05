@@ -1,0 +1,29 @@
+{
+    "ice cream": {
+        "hypernym": "food",
+        "roots": {
+            "en": [
+                "ice",
+                "cream"
+            ],
+            "fi": "ice",
+            "nl": "ice"
+        },
+        "singular": {
+            "en": "ice cream",
+            "fi": [
+                "jäätelö",
+                "jätski*"
+            ],
+            "nl": "het ijsje|het ijs"
+        },
+        "plural": {
+            "en": "ice creams",
+            "fi": [
+                "jäätelöt",
+                "jätskit*"
+            ],
+            "nl": "de ijsjes"
+        }
+    }
+}

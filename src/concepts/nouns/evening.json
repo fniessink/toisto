@@ -1,0 +1,29 @@
+{
+    "evening": {
+        "hypernym": "time of day",
+        "singular": {
+            "en": "evening",
+            "fi": "ilta",
+            "nl": "de avond"
+        },
+        "plural": {
+            "en": "evenings",
+            "fi": "illat",
+            "nl": "de avonden"
+        }
+    },
+    "in the evening": {
+        "hypernym": "time of day",
+        "roots": "evening",
+        "en": "in the evening",
+        "fi": "illalla",
+        "nl": "'s avonds"
+    },
+    "this evening": {
+        "hypernym": "time of day",
+        "roots": "evening",
+        "en": "this evening",
+        "fi": "tänä iltana",
+        "nl": "vanavond"
+    }
+}
