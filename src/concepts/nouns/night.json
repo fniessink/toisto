@@ -1,0 +1,57 @@
+{
+    "night": {
+        "hypernym": "time of day",
+        "singular": {
+            "en": "night",
+            "fi": "yö",
+            "nl": "de nacht"
+        },
+        "plural": {
+            "en": "nights",
+            "fi": "yöt",
+            "nl": "de nachten"
+        }
+    },
+    "at night": {
+        "hypernym": "time of day",
+        "roots": "night",
+        "en": "at night",
+        "fi": "yöllä",
+        "nl": "'s nachts"
+    },
+    "this night": {
+        "hypernym": "time of day",
+        "roots": "night",
+        "en": "this night",
+        "fi": "tänä yönä",
+        "nl": "vannacht"
+    },
+    "last night": {
+        "hypernym": "time of day",
+        "roots": {
+            "en": "night",
+            "fi": "evening",
+            "nl": [
+                "yesterday",
+                "evening"
+            ]
+        },
+        "en": "last night",
+        "fi": "viime iltana",
+        "nl": "gisteravond"
+    },
+    "midnight": {
+        "hypernym": "time of day",
+        "roots": "night",
+        "singular": {
+            "en": "midnight",
+            "fi": "keskiyö",
+            "nl": "de middernacht"
+        },
+        "plural": {
+            "en": "midnights",
+            "fi": "keskiyöt",
+            "nl": "de middernachten"
+        }
+    }
+}

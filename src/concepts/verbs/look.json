@@ -1,0 +1,93 @@
+{
+    "to look": {
+        "infinitive": {
+            "en": "to look",
+            "fi": "katsoa",
+            "nl": "kijken"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I look",
+                    "fi": "minä katson",
+                    "nl": "ik kijk"
+                },
+                "second person": {
+                    "en": "you look;singular",
+                    "fi": "sinä katsot",
+                    "nl": "jij kijkt"
+                },
+                "third person": {
+                    "fi": "hän katsoo",
+                    "female": {
+                        "en": "she looks",
+                        "nl": "zij kijkt"
+                    },
+                    "male": {
+                        "en": "he looks",
+                        "nl": "hij kijkt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we look",
+                    "fi": "me katsomme",
+                    "nl": "wij kijken"
+                },
+                "second person": {
+                    "en": "you look;plural",
+                    "fi": "te katsotte",
+                    "nl": "jullie kijken"
+                },
+                "third person": {
+                    "en": "they look",
+                    "fi": "he katsovat",
+                    "nl": "zij kijken"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I looked",
+                    "fi": "minä katsoin",
+                    "nl": "ik keek"
+                },
+                "second person": {
+                    "en": "you looked;singular",
+                    "fi": "sinä katsoit",
+                    "nl": "jij keek"
+                },
+                "third person": {
+                    "fi": "hän katsoi",
+                    "female": {
+                        "en": "she looked",
+                        "nl": "zij keek"
+                    },
+                    "male": {
+                        "en": "he looked",
+                        "nl": "hij keek"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we looked",
+                    "fi": "me katsoimme",
+                    "nl": "wij keken"
+                },
+                "second person": {
+                    "en": "you looked;plural",
+                    "fi": "te katsoitte",
+                    "nl": "jullie keken"
+                },
+                "third person": {
+                    "en": "they looked",
+                    "fi": "he katsoivat",
+                    "nl": "zij keken"
+                }
+            }
+        }
+    }
+}

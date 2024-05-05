@@ -1,0 +1,49 @@
+{
+    "to fear": {
+        "infinitive": {
+            "en": "to fear",
+            "fi": "pelätä",
+            "nl": "bang zijn"
+        },
+        "singular": {
+            "first person": {
+                "en": "I fear",
+                "fi": "minä pelkään",
+                "nl": "ik ben bang"
+            },
+            "second person": {
+                "en": "you fear;singular",
+                "fi": "sinä pelkäät",
+                "nl": "jij bent bang"
+            },
+            "third person": {
+                "fi": "hän pelkää",
+                "female": {
+                    "en": "she fears",
+                    "nl": "zij is bang"
+                },
+                "male": {
+                    "en": "he fears",
+                    "nl": "hij is bang"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we fear",
+                "fi": "me pelkäämme",
+                "nl": "wij zijn bang"
+            },
+            "second person": {
+                "en": "you fear;plural",
+                "fi": "te pelkäätte",
+                "nl": "jullie zijn bang"
+            },
+            "third person": {
+                "en": "they fear",
+                "fi": "he pelkäävät",
+                "nl": "zij zijn bang"
+            }
+        }
+    }
+}
