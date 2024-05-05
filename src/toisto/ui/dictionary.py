@@ -6,12 +6,7 @@ from typing import Final
 DICTIONARY_URL: Final = "https://en.wiktionary.org/wiki"
 
 
-def linkify_and_enumerate(*texts: str, sep: str = ", ") -> str:
-    """Return a linkified and enumerated version of the texts."""
-    return sep.join(f'"{linkify(text)}"' for text in texts)
-
-
-def linkify(text: str) -> str:
+def linkified(text: str) -> str:
     """Return a version of the text where each word is turned into a link to a dictionary."""
     linkified_words = []
     for word in text.split():

@@ -11,7 +11,7 @@ from . import Language
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 
-END_OF_SENTENCE_PUNCTUATION = """?!'"."""
+END_OF_SENTENCE_PUNCTUATION = "?!."
 
 
 class Label(str):

@@ -7,7 +7,7 @@ from toisto.command.practice import practice
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.ui.dictionary import linkify
+from toisto.ui.dictionary import linkified
 from toisto.ui.style import DELETED, SECONDARY
 from toisto.ui.text import CORRECT, DONE, INCORRECT, TRY_AGAIN, TRY_AGAIN_IN_ANSWER_LANGUAGE, console
 
@@ -54,7 +54,7 @@ class PracticeTest(ToistoTestCase):
         patched_print = self.practice(self.quizzes)
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
         self.assertIn(
-            call(f'{INCORRECT}The correct answer is "Ho[{DELETED}]_[/{DELETED}]i!".\n'),
+            call(f"{INCORRECT}The correct answer is 'Ho[{DELETED}]_[/{DELETED}]i!'\n"),
             patched_print.call_args_list,
         )
 
@@ -90,21 +90,21 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_question(self):
         """Test that the question is printed."""
         patched_print = self.practice(self.quizzes)
-        self.assertIn(call(linkify("Terve!")), patched_print.call_args_list)
+        self.assertIn(call(linkified("Terve!")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
         quizzes = create_quizzes(FI_NL, self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
-        self.assertNotIn(call(linkify("Terve")), patched_print.call_args_list)
+        self.assertNotIn(call(linkified("Terve")), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quizzes = create_quizzes(FI_NL, self.concept).by_quiz_type("dictate")
         patched_print = self.practice(quizzes)
-        expected_text = f'{CORRECT}[{SECONDARY}]Meaning "{linkify("Hoi!")}".[/{SECONDARY}]\n'
+        expected_text = f"{CORRECT}[{SECONDARY}]Meaning '{linkified('Hoi!')}'[/{SECONDARY}]\n"
         self.assertIn(call(expected_text), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="talot\n"))
@@ -117,7 +117,8 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes(FI_NL, concept).by_quiz_type("pluralize")
         patched_print = self.practice(Quizzes(quizzes))
         expected_call = call(
-            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("huis")}", respectively "{linkify("huizen")}".[/{SECONDARY}]\n',
+            f"{CORRECT}[{SECONDARY}]Meaning '{linkified('huis')}', "
+            f"respectively '{linkified('huizen')}'.[/{SECONDARY}]\n",
         )
         self.assertIn(expected_call, patched_print.call_args_list)
 
@@ -135,8 +136,8 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes(FI_NL, concept).by_quiz_type("dictate")
         patched_print = self.practice(Quizzes(quizzes))
         expected_call = call(
-            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("naast")}".[/{SECONDARY}]\n'
-            f'[{SECONDARY}]Example: "Museo on kirkon vieressä." meaning "Het museum is naast de kerk."[/{SECONDARY}]\n'
+            f"{CORRECT}[{SECONDARY}]Meaning '{linkified('naast')}'.[/{SECONDARY}]\n"
+            f"[{SECONDARY}]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/{SECONDARY}]\n"
         )
         self.assertIn(expected_call, patched_print.call_args_list)
 
@@ -150,9 +151,9 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes(FI_NL, concept).by_quiz_type("dictate")
         patched_print = self.practice(Quizzes(quizzes))
         expected_call = call(
-            f'{CORRECT}[{SECONDARY}]Meaning "{linkify("zwart")}".[/{SECONDARY}]\n'
-            f'[{SECONDARY}]Examples:\n- "Auto on musta." meaning "De auto is zwart."\n'
-            f'- "Autot ovat mustia." meaning "De auto\'s zijn zwart."[/{SECONDARY}]\n'
+            f"{CORRECT}[{SECONDARY}]Meaning '{linkified('zwart')}'.[/{SECONDARY}]\n"
+            f"[{SECONDARY}]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
+            f"- 'Autot ovat mustia.' meaning 'De auto's zijn zwart.'[/{SECONDARY}]\n"
         )
         self.assertIn(expected_call, patched_print.call_args_list)
 
@@ -168,14 +169,14 @@ class PracticeTest(ToistoTestCase):
         """Test that the user is quizzed."""
         patched_print = self.practice(self.quizzes)
         self.assertNotIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call(f'The correct answer is "{linkify("Hoi!")}".\n'), patched_print.call_args_list)
+        self.assertIn(call(f"The correct answer is '{linkified('Hoi!')}'\n"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["first attempt", "?\n", EOFError]))
     def test_quiz_skip_on_second_attempt(self):
         """Test that the user is quizzed."""
         patched_print = self.practice(self.quizzes)
         self.assertIn(call(TRY_AGAIN), patched_print.call_args_list)
-        self.assertIn(call(f'The correct answer is "{linkify("Hoi!")}".\n'), patched_print.call_args_list)
+        self.assertIn(call(f"The correct answer is '{linkified('Hoi!')}'\n"), patched_print.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):
