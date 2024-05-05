@@ -9,7 +9,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import ListenQuizType, Quiz
 from toisto.persistence.progress import save_progress
-from toisto.ui.dictionary import linkify
+from toisto.ui.dictionary import linkified
 from toisto.ui.speech import say
 from toisto.ui.text import (
     DONE,
@@ -61,7 +61,7 @@ def do_quiz(
     """Do one quiz and update the progress."""
     write_output(instruction(quiz))
     if quiz.quiz_types[0] not in get_args(ListenQuizType):
-        write_output(linkify(quiz.question))
+        write_output(linkified(quiz.question))
     for attempt in range(1, 3):
         answer = do_quiz_attempt(quiz, config, attempt)
         feedback = evaluate_answer(quiz, progress, language_pair, answer, attempt)
