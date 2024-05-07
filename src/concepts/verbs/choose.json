@@ -1,0 +1,93 @@
+{
+    "to choose": {
+        "infinitive": {
+            "en": "to choose",
+            "fi": "valita",
+            "nl": "kiezen"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I choose",
+                    "fi": "minä valitsen",
+                    "nl": "ik kies"
+                },
+                "second person": {
+                    "en": "you choose;singular",
+                    "fi": "sinä valitset",
+                    "nl": "jij kiest"
+                },
+                "third person": {
+                    "fi": "hän valitsee",
+                    "female": {
+                        "en": "she chooses;singular",
+                        "nl": "zij kiest"
+                    },
+                    "male": {
+                        "en": "he chooses;singular",
+                        "nl": "hij kiest"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we choose",
+                    "fi": "me valitsemme",
+                    "nl": "wij kiezen"
+                },
+                "second person": {
+                    "en": "you choose;plural",
+                    "fi": "te valitsette",
+                    "nl": "jullie kiezen"
+                },
+                "third person": {
+                    "en": "they choose",
+                    "fi": "he valitsevat",
+                    "nl": "zij kiezen"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I chose",
+                    "fi": "minä valitsin",
+                    "nl": "ik koos"
+                },
+                "second person": {
+                    "en": "you chose;singular",
+                    "fi": "sinä valitsit",
+                    "nl": "jij koos"
+                },
+                "third person": {
+                    "fi": "hän valitsi",
+                    "female": {
+                        "en": "she chose;singular",
+                        "nl": "zij koos"
+                    },
+                    "male": {
+                        "en": "he chose;singular",
+                        "nl": "hij koos"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we chose",
+                    "fi": "me valitsimme",
+                    "nl": "wij kozen"
+                },
+                "second person": {
+                    "en": "you chose;plural",
+                    "fi": "te valitsitte",
+                    "nl": "jullie kozen"
+                },
+                "third person": {
+                    "en": "they chose",
+                    "fi": "he valitsivat",
+                    "nl": "zij kozen"
+                }
+            }
+        }
+    }
+}

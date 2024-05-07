@@ -15,6 +15,7 @@
         "nl": "Ik ben Alice."
     },
     "how are you": {
+        "hypernym": "greeting",
         "roots": [
             "what",
             "how",
@@ -92,6 +93,7 @@
         "nl": "Hoe oud ben jij?"
     },
     "good afternoon": {
+        "hypernym": "greeting",
         "roots": {
             "en": [
                 "good",
@@ -111,6 +113,7 @@
         "nl": "Goedemiddag!"
     },
     "good day": {
+        "hypernym": "greeting",
         "roots": [
             "good",
             "day"
@@ -120,6 +123,7 @@
         "nl": "Goedendag!"
     },
     "good evening": {
+        "hypernym": "greeting",
         "roots": [
             "good",
             "evening"
@@ -129,6 +133,7 @@
         "nl": "Goedenavond!"
     },
     "good night": {
+        "hypernym": "greeting",
         "roots": [
             "good",
             "night"
