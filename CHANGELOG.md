@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Accept an initial capital letter when both the question and the answer of a quiz are in lower case. Fixes [#671](https://github.com/fniessink/toisto/issues/671).
 - Use single quotes when referring to questions and answers in user feedback. When feedback ends with a quoted question or answer, only add a period if the quoted question or answer does not already end with punctuation. Fixes [#675](https://github.com/fniessink/toisto/issues/675).
+- Allow for omitting the article when the source language is Dutch and the answer has a capital. For example, when the correct answer was "het Engels", answering "Engels" would be marked as incorrect. Fixes [#680](https://github.com/fniessink/toisto/issues/680).
 
 ### Added
 

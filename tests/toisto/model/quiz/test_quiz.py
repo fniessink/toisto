@@ -258,6 +258,13 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         self.assertTrue(quiz.is_correct(answer))
         self.assertEqual((), quiz.other_answers(answer))
 
+    def test_capitalized_answer_without_article(self):
+        """Test that the article can be left out, even though the noun starts with a capital."""
+        load_spelling_alternatives(FI_NL)
+        quiz = self.create_quiz(self.concept, "englanti", ["het Engels"])
+        answer = Label(NL, "Engels")
+        self.assertTrue(quiz.is_correct(answer))
+
 
 class QuizEqualityTests(QuizTestCase):
     """Unit tests for the equality of quiz instances."""
