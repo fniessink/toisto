@@ -27,7 +27,7 @@ class PracticeTest(ToistoTestCase):
         self.quizzes = create_quizzes(FI_NL, self.concept).by_quiz_type("read")
 
     def practice(self, quizzes: Quizzes) -> Mock:
-        """Run the practice command and return the patch print statement."""
+        """Run the practice command and return the patched print statement."""
         config = ConfigParser()
         config.add_section("commands")
         config.set("commands", "mp3player", "mpg123")
