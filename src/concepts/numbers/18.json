@@ -7,7 +7,10 @@
         ],
         "cardinal": {
             "en": "eightteen",
-            "fi": "kahdeksantoista",
+            "fi": [
+                "kahdeksantoista",
+                "kaheksantoist*"
+            ],
             "nl": "achttien"
         },
         "ordinal": {
