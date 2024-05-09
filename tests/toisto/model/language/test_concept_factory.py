@@ -43,6 +43,17 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual((year,), decade.roots(FI))
         self.assertEqual((), decade.roots(EN))
 
+    def test_roots_are_recursive(self):
+        """Test that the roots of a concept are recursive."""
+        diner_table_chair = self.create_concept(
+            "diner table chair",
+            dict(roots=["diner table", "chair"], en="diner table chair", nl="de eettafelstoel"),
+        )
+        diner_table = self.create_concept("diner table", dict(roots="table", en="diner table", nl="de eettafel"))
+        chair = self.create_concept("chair", dict(en="chair", nl="de stoel"))
+        table = self.create_concept("table", dict(en="table", nl="de tafel"))
+        self.assertEqual((diner_table, chair, table), diner_table_chair.roots(EN))
+
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""
         big = self.create_concept("big", dict(antonym="small", en="big"))

@@ -16,8 +16,8 @@ from .label import Labels
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
 InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
-RecursiveConceptRelation = Literal["holonym", "hypernym"]
-NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example", "involves"]
+RecursiveConceptRelation = Literal["holonym", "hypernym", "involves"]
+NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example"]
 ConceptRelation = Literal[InvertedConceptRelation, NonInvertedConceptRelation]
 RelatedConceptIds = dict[ConceptRelation, ConceptIds]
 RootConceptIds = dict[Language, ConceptIds] | ConceptIds  # Tuple if all languages have the same roots
@@ -57,7 +57,7 @@ class Concept:
     - The roots relation is used to capture the relation between compound concepts and their roots. For example,
       the word 'blackboard' contains two roots, 'black' and 'board'. The concept for the compound concept refers to its
       roots with the roots attribute. The roots relation can also be used for sentences, in which case the individual
-      words of a sentence are the roots.
+      words of a sentence are the roots. The roots relation is transitive.
 
       Note that this relationship is different from the other types of concept relations because the roots relationship
       is based on the label of the concept. It also means that the relationships can be different for different
@@ -87,21 +87,23 @@ class Concept:
         """Return the concept hash."""
         return hash(self.concept_id)
 
-    def get_related_concepts(self, relation: ConceptRelation) -> Concepts:
+    def get_related_concepts(self, relation: ConceptRelation, *visited_concepts: Concept) -> Concepts:
         """Return the related concepts."""
+        if self in visited_concepts:
+            return ()  # Prevent recursion error
         if relation in get_args(InvertedConceptRelation):
             inverted_relation = inverted(cast(InvertedConceptRelation, relation))
             return tuple(
                 concept
                 for concept in self.instances.get_all_values()
-                if self in concept.get_related_concepts(inverted_relation)
+                if self in concept.get_related_concepts(inverted_relation, self, *visited_concepts)
             )
         related_concepts = self.instances.get_values(*self._related_concepts[relation])
         if relation not in get_args(RecursiveConceptRelation):
             return related_concepts
         related_concepts_list = list(related_concepts)
         for concept in related_concepts:
-            related_concepts_list.extend(concept.get_related_concepts(relation))
+            related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
         return tuple(related_concepts_list)
 
     @property
@@ -161,9 +163,10 @@ class Concept:
         return tuple(concept for concept in self.instances.get_all_values() if self in concept.roots(language))
 
     def roots(self, language: Language) -> Concepts:
-        """Return the root concepts, for the specified language."""
+        """Return the root concepts recursively, for the specified language."""
         concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
-        return self.instances.get_values(*concept_ids_of_roots)
+        direct_roots = self.instances.get_values(*concept_ids_of_roots)
+        return direct_roots + tuple(chain.from_iterable(root.roots(language) for root in direct_roots))
 
 
 Concepts = tuple[Concept, ...]

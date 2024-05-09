@@ -54,10 +54,6 @@
         }
     },
     "medicine": {
-        "involves": [
-            "hospital",
-            "pharmacy"
-        ],
         "singular": {
             "en": "medicine",
             "fi": "lääke",
