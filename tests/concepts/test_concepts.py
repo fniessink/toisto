@@ -32,18 +32,12 @@ class ConceptsTest(ToistoTestCase):
                 for root in concept.roots(language):
                     self.assertIn(root, Concept.instances.get_values(root.concept_id))
 
-    def test_holonyms_exist(self):
-        """Test that all holonyms use existing concept ids."""
+    def test_related_concepts_exist(self):
+        """Test that all related concepts use existing concept ids."""
         for concept in self.concepts:
             for relation in get_args(NonInvertedConceptRelation):
                 for related_concept in concept.get_related_concepts(relation):
                     self.assertIn(related_concept, Concept.instances.get_values(related_concept.concept_id))
-
-    def test_examples_exist(self):
-        """Test that all examples use existing concept ids."""
-        for concept in self.concepts:
-            for example in concept.get_related_concepts("example"):
-                self.assertIn(example, Concept.instances.get_values(example.concept_id))
 
     def test_that_not_all_labels_of_a_concept_are_spoken_language(self):
         """Test that not all labels of a concept are spoken language."""
