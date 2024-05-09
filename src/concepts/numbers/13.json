@@ -7,7 +7,10 @@
         ],
         "cardinal": {
             "en": "thirteen",
-            "fi": "kolmetoista",
+            "fi": [
+                "kolmetoista",
+                "kolmetoist*"
+            ],
             "nl": "dertien"
         },
         "ordinal": {
