@@ -1,6 +1,11 @@
 {
     "SM1.1": {
         "involves": [
+            "SM1.1-fraasit",
+            "SM1.1-kielioppi",
+            "SM1.1-numerot",
+            "SM1.1-sanasto",
+            "SM1.1-viikonpäivät",
             "adder",
             "appetite",
             "area, field, domain (one's field of expertise or activity)",
@@ -67,12 +72,7 @@
             "what is 20 - 7",
             "what is 3 x 10",
             "which",
-            "with",
-            "SM1.1-fraasit",
-            "SM1.1-kielioppi",
-            "SM1.1-numerot",
-            "SM1.1-sanasto",
-            "SM1.1-viikonpäivät"
+            "with"
         ]
     },
     "SM1.1-fraasit": {

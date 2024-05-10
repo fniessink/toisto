@@ -58,7 +58,10 @@
             "table lamp"
         ],
         "en": "I am looking for a table lamp.",
-        "fi": "Minä etsin pöytälamppua.;;'pöytälamppua' is the partitive case of 'pöytälamppu'",
+        "fi": [
+            "Minä etsin pöytälamppua.;;'pöytälamppua' is the partitive case of 'pöytälamppu'",
+            "Minä etsin pöytävalaisinta.;;'pöytävalaisinta' is the partitive case of 'pöytävalaisin'"
+        ],
         "nl": "Ik zoek een tafellamp."
     },
     "you are looking for a dining table": {

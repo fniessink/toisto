@@ -78,7 +78,10 @@
         "nl": "de schoonouder"
     },
     "mother-in-law": {
-        "hypernym": "parent-in-law",
+        "hypernym": [
+            "parent-in-law",
+            "mother"
+        ],
         "roots": "mother",
         "singular": {
             "en": "mother-in-law",
@@ -92,7 +95,10 @@
         }
     },
     "father-in-law": {
-        "hypernym": "parent-in-law",
+        "hypernym": [
+            "parent-in-law",
+            "father"
+        ],
         "roots": "father",
         "singular": {
             "en": "father-in-law",
@@ -103,6 +109,19 @@
             "en": "fathers-in-law",
             "fi": "appiukot",
             "nl": "de schoonvaders"
+        }
+    },
+    "godparent": {
+        "roots": {
+            "en": "parent"
+        },
+        "en": "godparent",
+        "fi": "kummi",
+        "female": {
+            "nl": "de peettante"
+        },
+        "male": {
+            "nl": "de peetoom"
         }
     }
 }
