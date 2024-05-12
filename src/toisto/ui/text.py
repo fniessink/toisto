@@ -3,6 +3,7 @@
 import sys
 from collections.abc import Callable, Sequence
 from configparser import ConfigParser
+from itertools import zip_longest
 from typing import Final
 
 from rich.console import Console
@@ -154,7 +155,8 @@ def examples(quiz: Quiz, language_pair: LanguagePair) -> str:
     examples: list[str] = []
     for example in quiz.concept.get_related_concepts("example"):
         example_labels, example_meanings = labels(example, language_pair.target), labels(example, language_pair.source)
-        for label, meaning in zip(example_labels, example_meanings, strict=False):
+        shorter = example_labels if len(example_labels) < len(example_meanings) else example_meanings
+        for label, meaning in zip_longest(example_labels, example_meanings, fillvalue=shorter[-1]):
             examples.append(f"{quoted(label)} meaning {quoted(meaning)}")
     return bulleted_list("Example", examples)
 
