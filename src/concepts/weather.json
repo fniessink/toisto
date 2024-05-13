@@ -1,5 +1,9 @@
 {
     "weather": {
+        "example": [
+            "how is the weather",
+            "what is the weather like"
+        ],
         "en": "weather",
         "fi": [
             "ilma",
@@ -8,9 +12,35 @@
         "nl": "het weer"
     },
     "dry weather": {
+        "hypernym": "weather",
+        "roots": {
+            "en": [
+                "dry",
+                "weather"
+            ],
+            "nl": [
+                "dry",
+                "weather"
+            ]
+        },
         "en": "dry weather",
         "fi": "pouta",
         "nl": "het droge weer|droog weer"
+    },
+    "hot weather": {
+        "hypernym": "weather",
+        "roots": {
+            "en": [
+                "hot",
+                "weather"
+            ]
+        },
+        "en": [
+            "hot weather",
+            "heat"
+        ],
+        "fi": "helle",
+        "nl": "de hitte"
     },
     "how is the weather": {
         "roots": {
@@ -38,11 +68,13 @@
         "nl": "Hoe is het weer?"
     },
     "rain": {
+        "example": "it is raining",
         "en": "rain",
         "fi": "sade",
         "nl": "de regen"
     },
     "sun": {
+        "example": "the sun shines",
         "en": "sun",
         "fi": "aurinko",
         "nl": "de zon"
@@ -65,9 +97,16 @@
         }
     },
     "snow": {
+        "example": "it is snowing",
         "en": "snow",
         "fi": "lumi",
         "nl": "de sneeuw"
+    },
+    "sleet": {
+        "example": "sleet is falling",
+        "en": "sleet",
+        "fi": "räntä",
+        "nl": "de natte sneeuw"
     },
     "ice": {
         "en": "ice",
@@ -90,24 +129,31 @@
         "nl": "de mist"
     },
     "rainy": {
+        "example": "it is rainy",
         "roots": "rain",
         "en": "rainy",
         "fi": "sateinen",
         "nl": "regenachtig"
     },
     "sunny": {
+        "example": "it is sunny",
         "roots": "sun",
         "en": "sunny",
         "fi": "aurinkoinen",
         "nl": "zonnig"
     },
     "windy": {
+        "example": "it is windy",
         "roots": "wind",
         "en": "windy",
         "fi": "tuulinen",
         "nl": "winderig"
     },
     "cloudy": {
+        "example": [
+            "it is cloudy",
+            "it is partly cloudy"
+        ],
         "roots": "cloud",
         "en": "cloudy",
         "fi": "pilvinen",
@@ -120,6 +166,7 @@
         "nl": "besneeuwd"
     },
     "stormy": {
+        "example": "it is stormy",
         "roots": "storm",
         "en": "stormy",
         "fi": "myrskyinen",
@@ -147,6 +194,7 @@
         "nl": "Het onweert."
     },
     "foggy": {
+        "example": "it is foggy",
         "roots": "fog",
         "en": "foggy",
         "fi": "sumuinen",
@@ -180,6 +228,12 @@
         "en": "It is snowing.",
         "fi": "Sataa lunta.",
         "nl": "Het sneeuwt."
+    },
+    "sleet is falling": {
+        "roots": "sleet",
+        "en": "Sleet is falling.",
+        "fi": "Sataa räntää.",
+        "nl": "Er valt natte sneeuw."
     },
     "it is freezing": {
         "en": "It is freezing.",

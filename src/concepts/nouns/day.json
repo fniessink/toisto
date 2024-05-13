@@ -65,5 +65,11 @@
                 "de werkdagen"
             ]
         }
+    },
+    "birthday": {
+        "hypernym": "day",
+        "en": "birthday",
+        "fi": "syntymäpäivä",
+        "nl": "de verjaardag"
     }
 }

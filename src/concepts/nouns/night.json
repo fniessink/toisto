@@ -53,5 +53,15 @@
             "fi": "keskiyöt",
             "nl": "de middernachten"
         }
+    },
+    "small hours": {
+        "roots": {
+            "en": ["small", "hour"],
+            "fi": ["morning", "night"],
+            "nl": ["small", "hour"]
+        },
+        "en": "small hours",
+        "fi": "aamuyö",
+        "nl": "de kleine uurtjes"
     }
 }

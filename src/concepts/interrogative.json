@@ -36,12 +36,17 @@
         "nl": "Hoe?"
     },
     "how many": {
+        "example": "how many degrees is it outside",
         "roots": "how",
         "en": "How many?",
         "fi": "Kuinka monta?",
         "nl": "Hoeveel"
     },
     "what kind of": {
+        "example": [
+            "what is the weather like",
+            "what kind of cat do you have"
+        ],
         "en": "What kind of?",
         "fi": "Millainen?",
         "nl": [
@@ -159,5 +164,25 @@
         "en": "What kind of cat do you have?",
         "fi": "Millainen kissa sinulla on?",
         "nl": "Wat voor soort kat heb jij?|Wat voor een kat heb jij?"
+    },
+    "what is the weather like": {
+        "roots": [
+            "what kind of",
+            "to be",
+            "weather"
+        ],
+        "en": "What is the weather like today?",
+        "fi": "Millainen sää tänään on?|Millainen ilma tänään on?",
+        "nl": "Wat voor weer is het vandaag?"
+    },
+    "how many degrees is it outside": {
+        "roots": [
+            "how many",
+            "degree",
+            "to be"
+        ],
+        "en": "How many degrees is it outside?",
+        "fi": "Kuinka monta astetta ulkona on?",
+        "nl": "Hoeveel graden is het buiten?"
     }
 }
