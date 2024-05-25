@@ -56,8 +56,12 @@ class QuizTest(QuizTestCase):
 
     def test_is_not_correct_due_to_upper_case_answer(self):
         """Test that a lower case answer is incorrect when the answer should be upper case."""
-        quiz = self.create_quiz(self.create_concept("finnish", {}), "suomi", ["Fins"])
-        self.assertFalse(quiz.is_correct(Label(NL, "fins")))
+        concept = self.create_concept("finnish", {})
+        for quiz_type in ("read", "listen"):
+            quiz = self.create_quiz(concept, "suomi", ["het Fins"], quiz_type, language_pair=FI_NL)
+            self.assertFalse(quiz.is_correct(Label(NL, "fins")))
+            quiz = self.create_quiz(concept, "het Fins", ["suomi"], quiz_type, language_pair=NL_FI)
+            self.assertFalse(quiz.is_correct(Label(FI, "Suomi")))
 
     def test_is_correct_despite_case(self):
         """Test that an upper case answer for a lower case question is correct."""
