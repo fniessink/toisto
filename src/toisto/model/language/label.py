@@ -116,6 +116,11 @@ class Label(str):
         return self[0].isupper()
 
     @property
+    def has_upper_case(self) -> bool:
+        """Return whether the label has one or more upper case letters."""
+        return any(char.isupper() for char in self)
+
+    @property
     def ends_with_punctuation(self) -> bool:
         """Return whether the label ends with punctuation."""
         return self.without_notes.strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION
