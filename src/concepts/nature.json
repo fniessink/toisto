@@ -377,9 +377,9 @@
             "cold",
             "north"
         ],
-        "en": "It is cold in the North.",
+        "en": "It is cold in the north.",
         "fi": "Pohjoisessa on kylmä.",
-        "nl": "Het is koud in het Noorden."
+        "nl": "Het is koud in het noorden.|In het noorden is het koud."
     },
     "it is warm in the south": {
         "roots": [
@@ -387,9 +387,9 @@
             "warm",
             "south"
         ],
-        "en": "It is warm in the South.",
+        "en": "It is warm in the south.",
         "fi": "Etelässä on lämmin.",
-        "nl": "Het is warm in het Zuiden."
+        "nl": "Het is warm in het zuiden."
     },
     "she is from the north": {
         "roots": [
@@ -397,23 +397,23 @@
             "to come"
         ],
         "en": [
-            "She is from the North.",
-            "She comes from the North."
+            "She is from the north.",
+            "She comes from the north."
         ],
         "fi": [
             "Hän tulee pohjoisesta.;female",
             "Hän on kotoisin pohjoisesta.;female"
         ],
-        "nl": "Zij komt uit het Noorden."
+        "nl": "Zij komt uit het noorden."
     },
     "they live in the west": {
         "roots": [
             "west",
             "to live"
         ],
-        "en": "They live in the West.",
+        "en": "They live in the west.",
         "fi": "He asuvat lännessä.",
-        "nl": "Zij wonen in het Westen."
+        "nl": "Zij wonen in het westen."
     },
     "the city is in the east": {
         "roots": [

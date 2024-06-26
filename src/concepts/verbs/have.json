@@ -11,16 +11,25 @@
                     "singular": {
                         "first person": {
                             "en": "I have",
-                            "fi": "minulla on",
+                            "fi": [
+                                "minulla on",
+                                "mulla on*"
+                            ],
                             "nl": "ik heb"
                         },
                         "second person": {
                             "en": "you have",
-                            "fi": "sinulla on",
+                            "fi": [
+                                "sinulla on",
+                                "sulla on*"
+                            ],
                             "nl": "jij hebt"
                         },
                         "third person": {
-                            "fi": "hänellä on",
+                            "fi": [
+                                "hänellä on",
+                                "sillä on*"
+                            ],
                             "female": {
                                 "en": "she has",
                                 "nl": "zij heeft"
@@ -34,17 +43,26 @@
                     "plural": {
                         "first person": {
                             "en": "we have",
-                            "fi": "meillä on",
+                            "fi": [
+                                "meillä on",
+                                "meillä on*"
+                            ],
                             "nl": "wij hebben"
                         },
                         "second person": {
                             "en": "you have",
-                            "fi": "teillä on",
+                            "fi": [
+                                "teillä on",
+                                "teillä on*"
+                            ],
                             "nl": "jullie hebben"
                         },
                         "third person": {
                             "en": "they have",
-                            "fi": "heillä on",
+                            "fi": [
+                                "heillä on",
+                                "niillä on"
+                            ],
                             "nl": "zij hebben"
                         }
                     }
@@ -97,7 +115,10 @@
                     "singular": {
                         "first person": {
                             "en": "I have not",
-                            "fi": "minulla ei ole",
+                            "fi": [
+                                "minulla ei ole",
+                                "mulla ei oo*"
+                            ],
                             "nl": [
                                 "ik heb niet",
                                 "ik heb geen"
@@ -105,14 +126,20 @@
                         },
                         "second person": {
                             "en": "you have not",
-                            "fi": "sinulla ei ole",
+                            "fi": [
+                                "sinulla ei ole",
+                                "sulla ei oo*"
+                            ],
                             "nl": [
                                 "jij hebt niet",
                                 "jij hebt geen"
                             ]
                         },
                         "third person": {
-                            "fi": "hänellä ei ole",
+                            "fi": [
+                                "hänellä ei ole",
+                                "sillä ei oo*"
+                            ],
                             "female": {
                                 "en": "she has not",
                                 "nl": [
@@ -132,7 +159,10 @@
                     "plural": {
                         "first person": {
                             "en": "we have not",
-                            "fi": "meillä ei ole",
+                            "fi": [
+                                "meillä ei ole",
+                                "meillä ei oo*"
+                            ],
                             "nl": [
                                 "wij hebben niet",
                                 "wij hebben geen"
@@ -140,7 +170,10 @@
                         },
                         "second person": {
                             "en": "you have not",
-                            "fi": "teillä ei ole",
+                            "fi": [
+                                "teillä ei ole",
+                                "teillä ei oo*"
+                            ],
                             "nl": [
                                 "jullie hebben niet",
                                 "jullie hebben geen"
@@ -148,7 +181,10 @@
                         },
                         "third person": {
                             "en": "they have not",
-                            "fi": "heillä ei ole",
+                            "fi": [
+                                "heillä ei ole",
+                                "niillä ei oo*"
+                            ],
                             "nl": [
                                 "zij hebben niet",
                                 "zij hebben geen"

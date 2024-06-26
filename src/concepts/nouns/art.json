@@ -1,0 +1,54 @@
+{
+    "art": {
+        "en": "art",
+        "fi": "taide",
+        "nl": "de kunst"
+    },
+    "artist": {
+        "roots": "art",
+        "involves": "art",
+        "singular": {
+            "en": "artist",
+            "fi": "taiteilija",
+            "female": {
+                "nl": "de kunstenares"
+            },
+            "male": {
+                "nl": "de kunstenaar"
+            }
+        },
+        "plural": {
+            "en": "artists",
+            "fi": "taiteilijat",
+            "female": {
+                "nl": "de kunstenaars"
+            },
+            "male": {
+                "nl": "de kunstenaressen"
+            }
+        }
+    },
+    "art exhibition": {
+        "roots": {
+            "en": "art",
+            "fi": "art"
+        },
+        "involves": "art",
+        "singular": {
+            "en": "art exhibition",
+            "fi": "taidenäyttely",
+            "nl": "de tentoonstelling"
+        },
+        "plural": {
+            "en": "art exhibitions",
+            "fi": "taidenäyttelyt",
+            "nl": "de tentoonstellingen"
+        }
+    },
+    "art form": {
+        "roots": "art",
+        "en": "art form",
+        "fi": "taidemuoto",
+        "nl": "de kunstvorm"
+    }
+}
