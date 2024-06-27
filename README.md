@@ -129,6 +129,15 @@ target = nl
 source = en
 ```
 
+#### How to configure progress updates
+
+To prevent having to pass the desired progress update frequency as command-line argument each time you run Toisto, put it in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `practice` section if it doesn't exist, and add the desired progress update frequency:
+
+```ini
+[practice]
+progress_update = 20  # While practicing, give a progress update every 20 quizzes.
+```
+
 #### How to configure a different mp3 player
 
 By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:

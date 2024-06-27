@@ -5,6 +5,7 @@ from collections import deque
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 
+from .evaluation import Evaluation
 from .quiz import Quiz, Quizzes
 from .retention import Retention
 
@@ -27,23 +28,34 @@ class Progress:
         self.target_language = target_language
         self.quizzes = quizzes
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
+        self.answers = {evaluation: 0 for evaluation in Evaluation}
 
-    def mark_correct_answer(self, quiz: Quiz) -> None:
-        """Increase the retention of the quiz, and pause related quizzes for a little while."""
+    def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> None:
+        """Mark the evaluation.
+
+        If the answer was correct, increase the retention of the quiz, and pause related quizzes for a little while.
+        If the answer was incorrect or skipped, reset the retention of the quiz.
+        """
+        self.answers[evaluation] += 1
+        match evaluation:
+            case Evaluation.CORRECT:
+                self.__progress_dict.setdefault(quiz.key, Retention()).increase()
+                self.__pause_related_quizzes(quiz)
+            case Evaluation.INCORRECT | Evaluation.SKIPPED:
+                self.__progress_dict.setdefault(quiz.key, Retention()).reset()
+            case _:
+                return
+
+    def __pause_related_quizzes(self, quiz: Quiz) -> None:
+        """Pause related quizzes for a little while."""
         for related_quiz in self.quizzes.related_quizzes(quiz):
-            retention = self.__progress_dict.setdefault(related_quiz.key, Retention())
             if related_quiz == quiz:
-                retention.increase()
-            else:
-                retention.pause()
-
-    def mark_incorrect_answer(self, quiz: Quiz) -> None:
-        """Reset the retention of the quiz."""
-        self.__progress_dict.setdefault(quiz.key, Retention()).reset()
+                continue
+            self.__progress_dict.setdefault(related_quiz.key, Retention()).pause()
 
     def next_quiz(self) -> Quiz | None:
         """Return the next quiz."""
-        eligible_quizzes = Quizzes(quiz for quiz in self.quizzes if self.__is_eligible(quiz))
+        eligible_quizzes = self.eligible_quizzes()
         quizzes_for_concepts_in_progress = Quizzes(
             quiz for quiz in eligible_quizzes if self.__has_concept_in_progress(quiz)
         )
@@ -58,6 +70,10 @@ class Progress:
     def get_retention(self, quiz: Quiz) -> Retention:
         """Return the quiz retention."""
         return self.__progress_dict.get(quiz.key, Retention())
+
+    def eligible_quizzes(self) -> Quizzes:
+        """Return the eligible quizzes."""
+        return Quizzes(quiz for quiz in self.quizzes if self.__is_eligible(quiz))
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""

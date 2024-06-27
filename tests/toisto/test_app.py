@@ -104,7 +104,6 @@ class AppTest(ToistoTestCase):
     def test_no_language_configuration_tip(self, requests_get: Mock) -> None:
         """Test that the practice command does not show a tip when the user has configured their languages."""
         requests_get.return_value = self.current_version
-        self.config.add_section("languages")
         self.config.set("languages", "target", "fi")
         self.config.set("languages", "source", "nl")
         patched_print = self.run_main()

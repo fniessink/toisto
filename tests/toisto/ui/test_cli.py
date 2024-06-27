@@ -11,7 +11,23 @@ from toisto.metadata import README_URL
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
+from toisto.persistence.config import default_config
 from toisto.ui.cli import create_argument_parser, parse_arguments
+
+PRACTICE_USAGE = (
+    "Usage: toisto practice [-h] %s-t {language}%s -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
+)
+PRACTICE_DESCRIPTION = "Practice a language."
+POSITIONAL_ARGUMENTS = """Positional Arguments:
+  {concept}             concept to use, can be repeated; default: all; built-in concepts:%s"""
+HELP_OPTION = "-h, --help            show this help message and exit"
+TARGET_OPTION = """-t, --target {language}
+                        target language; %slanguages available in built-in concepts: en, fi, nl"""
+SOURCE_OPTION = """-s, --source {language}
+                        source language; languages available in built-in concepts: en, fi, nl"""
+FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated"
+PROGRESS_OPTION = """-p, --progress-update {frequency}
+                        show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
 
 
 class ParserTest(unittest.TestCase):
@@ -30,7 +46,7 @@ class ParserTest(unittest.TestCase):
     ) -> ArgumentParser:
         """Create the argument parser."""
         with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[dict(name="v9999")])))):
-            return create_argument_parser(config_parser or ConfigParser(), concepts)
+            return create_argument_parser(config_parser or default_config(), concepts)
 
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")
@@ -67,6 +83,7 @@ See {README_URL} for more information.
             source_language="fi",
             concepts=[],
             file=[],
+            progress_update=0,
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
@@ -83,20 +100,18 @@ See {README_URL} for more information.
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [{concept} ...]
+            f"""{PRACTICE_USAGE % ("", "")}
 
-Practice a language.
+{PRACTICE_DESCRIPTION}
 
-Positional Arguments:
-  {concept}             concept to use, can be repeated; default: all; built-in concepts: bar, foo
+{POSITIONAL_ARGUMENTS % " bar, foo"}
 
 Options:
-  -h, --help            show this help message and exit
-  -t, --target {language}
-                        target language; languages available in built-in concepts: en, fi, nl
-  -s, --source {language}
-                        source language; languages available in built-in concepts: en, fi, nl
-  -f, --file {file}     file with extra concepts to read, can be repeated
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION}
+  {FILE_OPTION}
+  {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -105,25 +120,22 @@ Options:
     @patch("sys.stdout.write")
     def test_practice_help_with_default_languages_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
-        config_parser = ConfigParser()
-        config_parser.add_section("languages")
+        config_parser = default_config()
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [{concept} ...]
+            f"""{PRACTICE_USAGE % ("[", "]")}
 
-Practice a language.
+{PRACTICE_DESCRIPTION}
 
-Positional Arguments:
-  {concept}             concept to use, can be repeated; default: all; built-in concepts:
+{POSITIONAL_ARGUMENTS % ""}
 
 Options:
-  -h, --help            show this help message and exit
-  -t, --target {language}
-                        target language; default: fi; languages available in built-in concepts: en, fi, nl
-  -s, --source {language}
-                        source language; languages available in built-in concepts: en, fi, nl
-  -f, --file {file}     file with extra concepts to read, can be repeated
+  {HELP_OPTION}
+  {TARGET_OPTION % "default: fi; "}
+  {SOURCE_OPTION}
+  {FILE_OPTION}
+  {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -132,25 +144,23 @@ Options:
     @patch("sys.stdout.write")
     def test_practice_help_with_default_levels_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
-        config_parser = ConfigParser()
-        config_parser.add_section("languages")
+        config_parser = default_config()
         config_parser.set("languages", "levels", "A1 A2")
+        config_parser.set("practice", "progress_update", "42")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            """Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [{concept} ...]
+            f"""{PRACTICE_USAGE % ("", "")}
 
-Practice a language.
+{PRACTICE_DESCRIPTION}
 
-Positional Arguments:
-  {concept}             concept to use, can be repeated; default: all; built-in concepts:
+{POSITIONAL_ARGUMENTS % ""}
 
 Options:
-  -h, --help            show this help message and exit
-  -t, --target {language}
-                        target language; languages available in built-in concepts: en, fi, nl
-  -s, --source {language}
-                        source language; languages available in built-in concepts: en, fi, nl
-  -f, --file {file}     file with extra concepts to read, can be repeated
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION}
+  {FILE_OPTION}
+  {PROGRESS_OPTION % 42}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -161,21 +171,19 @@ Options:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            """Usage: toisto progress [-h] -t {language} -s {language} [-f {file}] [-S {option}] [{concept} ...]
+            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-f {{file}}] [-S {{option}}] \
+[{{concept}} ...]
 
 Show progress.
 
-Positional Arguments:
-  {concept}             concept to use, can be repeated; default: all; built-in concepts:
+{POSITIONAL_ARGUMENTS % ""}
 
 Options:
-  -h, --help            show this help message and exit
-  -t, --target {language}
-                        target language; languages available in built-in concepts: en, fi, nl
-  -s, --source {language}
-                        source language; languages available in built-in concepts: en, fi, nl
-  -f, --file {file}     file with extra concepts to read, can be repeated
-  -S, --sort {option}   how to sort progress information; default: by retention; available options: attempts,
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION}
+  {FILE_OPTION}
+  -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -190,6 +198,7 @@ Options:
             source_language="fi",
             concepts=[],
             file=[],
+            progress_update=0,
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 

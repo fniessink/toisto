@@ -41,6 +41,10 @@ class MissingConfigTest(ConfigTestCase):
         """Test default mp3 player on Windows."""
         self.assertEqual("builtin", self.read_config().get("commands", "mp3player"))
 
+    def test_default_practice_progress_update(self):
+        """Test the default practice progress frequency value."""
+        self.assertEqual("0", self.read_config().get("practice", "progress_update"))
+
 
 @patch("pathlib.Path.open")
 class ReadValidConfigTest(ConfigTestCase):
@@ -51,11 +55,17 @@ class ReadValidConfigTest(ConfigTestCase):
         config = self.read_config(path_open, "[commands]\n", "mp3player = some mp3 player\n")
         self.assertEqual("some mp3 player", config.get("commands", "mp3player"))
 
+    def test_valid_progress_update(self, path_open: Mock) -> None:
+        """Test reading a valid config."""
+        config = self.read_config(path_open, "[practice]\n", "progress_update = 42\n")
+        self.assertEqual("42", config.get("practice", "progress_update"))
+
     @patch("sys.platform", "darwin")
     def test_incomplete_config(self, path_open: Mock) -> None:
         """Test reading an incomplete config."""
-        config = self.read_config(path_open, "[commands]\n")
+        config = self.read_config(path_open, "[commands]\n\n[practice]\n")
         self.assertEqual("afplay", config.get("commands", "mp3player"))
+        self.assertEqual("0", config.get("practice", "progress_update"))
 
 
 @patch("sys.stderr.write")
@@ -108,8 +118,8 @@ class ReadInvalidConfigTest(ConfigTestCase):
         config_file_contents = ["[languages]\n", "target = foo\n"]
         self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
         self.assertIn(
-            f"While reading from '{CONFIG_FILENAME}': unknown value 'foo' for option 'target' in section 'languages'. "
-            "Allowed values are one of: aa, ab",
+            f"While reading from '{CONFIG_FILENAME}': "
+            "incorrect value 'foo' for option 'target' in section 'languages'. Allowed values are one of: aa, ab",
             sys_stderr_write.call_args_list[1][0][0],
         )
 
@@ -118,3 +128,14 @@ class ReadInvalidConfigTest(ConfigTestCase):
         config_file_contents = ["[languages]\n", "target = nl\n"]
         self.read_config(path_open, *config_file_contents)
         sys_stderr_write.assert_not_called()
+
+    def test_invalid_progress_update(self, path_open: Mock, sys_stderr_write: Mock) -> None:
+        """Test reading an invalid progress frequency."""
+        config_file_contents = ["[practice]\n", "progress_update = foo\n"]
+        self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
+        self.assertIn(
+            f"While reading from '{CONFIG_FILENAME}': "
+            "incorrect value 'foo' for option 'progress_update' in section 'practice'. "
+            "Allowed values are whole numbers: 0, 1, 2, 3, ...",
+            sys_stderr_write.call_args_list[1][0][0],
+        )

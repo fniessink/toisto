@@ -12,6 +12,7 @@ from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
+from .evaluation import Evaluation
 from .match import match
 
 TranslationQuizType = Literal["read", "write"]
@@ -117,6 +118,16 @@ class Quiz:
         concept_id = self.concept.base_concept.concept_id
         quiz_types = "+".join(self.quiz_types)
         return f"{concept_id}:{self.question.language}:{self.answer.language}:{self.question}:{quiz_types}"
+
+    def evaluate(self, guess: Label, attempt: int) -> Evaluation:
+        """Evaluate the user's guess."""
+        if self.is_correct(guess):
+            return Evaluation.CORRECT
+        if str(guess) == "?":
+            return Evaluation.SKIPPED
+        if attempt == 1:
+            return Evaluation.TRY_AGAIN
+        return Evaluation.INCORRECT
 
     def is_correct(self, guess: Label) -> bool:
         """Return whether the guess is correct."""
