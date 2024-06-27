@@ -3,6 +3,7 @@
 from typing import cast, get_args
 
 from toisto.model.language import FI, NL
+from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz, Quizzes, TranslationQuizType
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -31,14 +32,14 @@ class ProgressTest(ToistoTestCase):
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.mark_correct_answer(quiz)
+        self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
         self.assertIsNotNone(self.progress.get_retention(quiz).start)
         self.assertIsNotNone(self.progress.get_retention(quiz).end)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.mark_incorrect_answer(quiz)
+        self.progress.mark_evaluation(quiz, Evaluation.INCORRECT)
         self.assertIsNone(self.progress.get_retention(quiz).start)
         self.assertIsNone(self.progress.get_retention(quiz).end)
         self.assertIsNone(self.progress.get_retention(quiz).skip_until)
@@ -46,13 +47,13 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
         quiz = first(self.quizzes)
-        self.progress.mark_correct_answer(quiz)
+        self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
         self.assertNotEqual(quiz, self.progress.next_quiz())
 
     def test_no_next_quiz(self):
         """Test that there are no next quizzes when they are all silenced."""
         for quiz in self.quizzes:
-            self.progress.mark_correct_answer(quiz)
+            self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
         self.assertIsNone(self.progress.next_quiz())
 
     def test_next_quiz_is_different_from_previous(self):
@@ -104,7 +105,7 @@ class ProgressTest(ToistoTestCase):
         progress = Progress({}, FI, quizzes, skip_concepts=2)
         while quiz := progress.next_quiz():
             self.assertIn("singular", quiz.concept.concept_id)
-            progress.mark_correct_answer(quiz)
+            progress.mark_evaluation(quiz, Evaluation.CORRECT)
 
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has seen before if possible."""
@@ -112,7 +113,7 @@ class ProgressTest(ToistoTestCase):
         quizzes = Quizzes(quiz for quiz in create_quizzes(FI_NL, *concepts) if quiz.quiz_types == ("dictate",))
         progress = Progress({}, FI, quizzes)
         random_quiz = next(iter(quizzes))
-        progress.mark_correct_answer(random_quiz)
+        progress.mark_evaluation(random_quiz, Evaluation.CORRECT)
         progress.get_retention(random_quiz).skip_until = None
         self.assertEqual(progress.next_quiz(), random_quiz)
 
@@ -136,6 +137,6 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
 
     def test_update_progress_correct(self):
         """Test that related quizzes are paused, including quizzes for examples."""
-        self.progress.mark_correct_answer(next(iter(self.concept_quizzes)))
+        self.progress.mark_evaluation(next(iter(self.concept_quizzes)), Evaluation.CORRECT)
         for quiz in self.quizzes:
             self.assertIsNotNone(self.progress.get_retention(quiz).skip_until, quiz)

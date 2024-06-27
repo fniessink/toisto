@@ -1,12 +1,12 @@
 """Unit tests for the text to speech."""
 
 import unittest
-from configparser import ConfigParser
 from subprocess import DEVNULL  # nosec import_subprocess
 from unittest.mock import Mock, patch
 
 from gtts import gTTSError
 
+from toisto.persistence.config import default_config
 from toisto.ui.speech import say
 
 
@@ -15,8 +15,7 @@ class SayTest(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.config = ConfigParser()
-        self.config.add_section("commands")
+        self.config = default_config()
 
     @patch("sys.platform", "darwin")
     @patch("toisto.ui.speech.gTTS", Mock(side_effect=gTTSError))

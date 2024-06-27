@@ -4,7 +4,7 @@ import sys
 from collections.abc import Callable, Sequence
 from configparser import ConfigParser
 from itertools import zip_longest
-from typing import Final
+from typing import Final, cast
 
 from rich.console import Console
 from rich.panel import Panel
@@ -14,6 +14,8 @@ from ..model.language import Language, LanguagePair
 from ..model.language.concept import Concept
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label, Labels
+from ..model.quiz.evaluation import Evaluation
+from ..model.quiz.progress import Progress
 from ..model.quiz.quiz import Quiz
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
@@ -56,114 +58,134 @@ DONE: Final[str] = f"""👍 Good job. You're done for now. Please come back late
 [{SECONDARY}]Type `{NAME.lower()} -h` for more information.[/{SECONDARY}]
 """
 
-TRY_AGAIN: Final[str] = "⚠️  Incorrect. Please try again."
 
-TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
-    "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
-)
+class Feedback:
+    """Return feedback on answers to a quiz."""
 
-CORRECT: Final[str] = "✅ Correct.\n"
-
-INCORRECT: Final[str] = "❌ Incorrect. "
-
-
-def feedback_correct(guess: Label, quiz: Quiz, language_pair: LanguagePair) -> str:
-    """Return the feedback about a correct result."""
-    return (
-        CORRECT
-        + colloquial(quiz)
-        + meaning(quiz)
-        + other_answers(guess, quiz)
-        + answer_notes(quiz)
-        + examples(quiz, language_pair)
+    CORRECT: Final[str] = "✅ Correct.\n"
+    INCORRECT: Final[str] = "❌ Incorrect. "
+    TRY_AGAIN: Final[str] = "⚠️  Incorrect. Please try again."
+    TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
+        "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
     )
 
+    def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
+        self.quiz = quiz
+        self.language_pair = language_pair
 
-def feedback_incorrect(guess: Label, quiz: Quiz) -> str:
-    """Return the feedback about an incorrect result."""
-    return (
-        INCORRECT
-        + correct_answer(guess, quiz)
-        + colloquial(quiz)
-        + meaning(quiz)
-        + other_answers(quiz.answer, quiz)
-        + answer_notes(quiz)
-    )
+    def __call__(self, evaluation: Evaluation, guess: Label | None = None) -> str:
+        """Return the feedback about the user's guess."""
+        if evaluation == Evaluation.TRY_AGAIN:
+            return self._try_again(cast(Label, guess))
+        feedback = ""
+        if evaluation == Evaluation.CORRECT:
+            feedback += self.CORRECT
+        elif evaluation == Evaluation.INCORRECT:
+            feedback += self.INCORRECT + self._correct_answer(cast(Label, guess))
+        else:
+            feedback += self._correct_answers()
+        feedback += self._colloquial() + self._meaning()
+        if evaluation == Evaluation.CORRECT:
+            feedback += self._other_answers(cast(Label, guess))
+        elif evaluation == Evaluation.INCORRECT:
+            feedback += self._other_answers(self.quiz.answer)
+        feedback += self._answer_notes()
+        if evaluation == Evaluation.CORRECT:
+            feedback += self._examples()
+        return feedback
+
+    def _try_again(self, guess: Label) -> str:
+        """Return the feedback when the first attempt is incorrect."""
+        if self.quiz.is_question(guess) and not self.quiz.is_grammatical:
+            return self.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[self.quiz.answer.language])
+        return self.TRY_AGAIN
+
+    def _correct_answer(self, guess: Label) -> str:
+        """Return the quiz's correct answer."""
+        answer = quoted(colored_diff(guess, self.quiz.answer))
+        return punctuated(f"The correct answer is {answer}") + "\n"
+
+    def _correct_answers(self) -> str:
+        """Return the quiz's correct answers."""
+        label = "The correct answer is" if len(self.quiz.non_generated_answers) == 1 else "The correct answers are"
+        answers = linkified_and_enumerated(*self.quiz.non_generated_answers)
+        return punctuated(f"{label} {answers}") + "\n"
+
+    def _other_answers(self, guess: Label) -> str:
+        """Return the quiz's other answers, if any."""
+        if other_answers := self.quiz.other_answers(guess):
+            label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
+            answers = linkified_and_enumerated(*other_answers)
+            return wrapped(punctuated(f"{label} {answers}"), SECONDARY)
+        return ""
+
+    def _colloquial(self) -> str:
+        """Return the feedback about the colloquial label, if any."""
+        if self.quiz.question.is_colloquial:
+            language = ALL_LANGUAGES[self.quiz.question.language]
+            question = quoted(self.quiz.question.strip("*"))
+            return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), SECONDARY)
+        return ""
+
+    def _meaning(self) -> str:
+        """Return the quiz's meaning, if any."""
+        if self.quiz.question_meanings and self.quiz.answer_meanings:
+            question_meanings = linkified_and_enumerated(*self.quiz.question_meanings)
+            answer_meanings = linkified_and_enumerated(*self.quiz.answer_meanings)
+            meanings = f"{question_meanings}, respectively {answer_meanings}"
+        else:
+            meanings = linkified_and_enumerated(*(self.quiz.question_meanings + self.quiz.answer_meanings))
+        return wrapped(punctuated(f"Meaning {meanings}"), SECONDARY) if meanings else ""
+
+    def _answer_notes(self) -> str:
+        """Return the answer notes, if any."""
+        return bulleted_list("Note", self.quiz.answer_notes)
+
+    def _examples(self) -> str:
+        """Return the quiz's examples, if any."""
+        examples: list[str] = []
+        for example in self.quiz.concept.get_related_concepts("example"):
+            example_labels = labels(example, self.language_pair.target)
+            example_meanings = labels(example, self.language_pair.source)
+            shorter = example_labels if len(example_labels) < len(example_meanings) else example_meanings
+            for label, meaning in zip_longest(example_labels, example_meanings, fillvalue=shorter[-1]):
+                examples.append(f"{quoted(label)} meaning {quoted(meaning)}")
+        return bulleted_list("Example", examples)
 
 
-def feedback_try_again(guess: Label, quiz: Quiz) -> str:
-    """Return the feedback when the first attempt is incorrect."""
-    if quiz.is_question(guess) and not quiz.is_grammatical:
-        return TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[quiz.answer.language])
-    return TRY_AGAIN
+class ProgressUpdate:
+    """Return feedback about the user's progress in the current session."""
 
+    def __init__(self, progress: Progress, frequency: int) -> None:
+        self.progress = progress
+        self.frequency = frequency
+        self.count = 0
 
-def feedback_skip(quiz: Quiz) -> str:
-    """Return the feedback when the user skips to the answer."""
-    return correct_answers(quiz) + colloquial(quiz) + meaning(quiz) + answer_notes(quiz)
-
-
-def colloquial(quiz: Quiz) -> str:
-    """Return the feedback about colloquial label, if any."""
-    if quiz.question.is_colloquial:
-        language = ALL_LANGUAGES[quiz.question.language]
-        question = quoted(quiz.question.strip("*"))
-        return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), SECONDARY)
-    return ""
-
-
-def meaning(quiz: Quiz) -> str:
-    """Return the quiz's meaning, if any."""
-    if quiz.question_meanings and quiz.answer_meanings:
-        question_meanings = linkified_and_enumerated(*quiz.question_meanings)
-        answer_meanings = linkified_and_enumerated(*quiz.answer_meanings)
-        meanings = f"{question_meanings}, respectively {answer_meanings}"
-    else:
-        meanings = linkified_and_enumerated(*(quiz.question_meanings + quiz.answer_meanings))
-    return wrapped(punctuated(f"Meaning {meanings}"), SECONDARY) if meanings else ""
-
-
-def correct_answer(guess: Label, quiz: Quiz) -> str:
-    """Return the quiz's correct answer."""
-    answer = quoted(colored_diff(guess, quiz.answer))
-    return punctuated(f"The correct answer is {answer}") + "\n"
-
-
-def correct_answers(quiz: Quiz) -> str:
-    """Return the quiz's correct answers."""
-    label = "The correct answer is" if len(quiz.non_generated_answers) == 1 else "The correct answers are"
-    answers = linkified_and_enumerated(*quiz.non_generated_answers)
-    return punctuated(f"{label} {answers}") + "\n"
-
-
-def other_answers(guess: Label, quiz: Quiz) -> str:
-    """Return the quiz's other answers, if any."""
-    if other_answers := quiz.other_answers(guess):
-        label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
-        answers = linkified_and_enumerated(*other_answers)
-        return wrapped(punctuated(f"{label} {answers}"), SECONDARY)
-    return ""
+    def __call__(self) -> str:
+        """Return feedback about the user's progress with the given frequency."""
+        self.count += 1
+        if self.frequency == 0 or self.count % self.frequency != 0:
+            return ""
+        correct = self.progress.answers[Evaluation.CORRECT]
+        incorrect = self.progress.answers[Evaluation.INCORRECT]
+        skipped = self.progress.answers[Evaluation.SKIPPED]
+        total = correct + incorrect + skipped
+        feedback = []
+        if correct:
+            feedback.append(f"answered {correct} ({correct/total:.0%}) correctly")
+        if incorrect:
+            feedback.append(f"answered {incorrect} ({incorrect/total:.0%}) incorrectly")
+        if skipped:
+            feedback.append(f"skipped {skipped} ({skipped/total:.0%})")
+        return wrapped(
+            f"🚧 Progress update: of {total} quiz{'zes' if total > 1 else ''}, you {enumerated(*feedback)}.",
+            "gold1",
+        )
 
 
 def labels(concept: Concept, language: Language) -> Labels:
     """Return the first non-generated spelling alternative of the labels of a concept in the given language."""
     return Labels(label.non_generated_spelling_alternatives[0] for label in concept.labels(language))
-
-
-def examples(quiz: Quiz, language_pair: LanguagePair) -> str:
-    """Return the quiz's examples, if any."""
-    examples: list[str] = []
-    for example in quiz.concept.get_related_concepts("example"):
-        example_labels, example_meanings = labels(example, language_pair.target), labels(example, language_pair.source)
-        shorter = example_labels if len(example_labels) < len(example_meanings) else example_meanings
-        for label, meaning in zip_longest(example_labels, example_meanings, fillvalue=shorter[-1]):
-            examples.append(f"{quoted(label)} meaning {quoted(meaning)}")
-    return bulleted_list("Example", examples)
-
-
-def answer_notes(quiz: Quiz) -> str:
-    """Return the answer notes, if any."""
-    return bulleted_list("Note", quiz.answer_notes)
 
 
 def instruction(quiz: Quiz) -> str:
@@ -177,7 +199,7 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None, 
     if latest_version and latest_version.strip("v") > VERSION:
         write_output(Panel(NEWS.format(latest_version), expand=False))
         write_output()
-    elif not config.has_section("languages"):
+    elif "target" not in config["languages"] or "source" not in config["languages"]:
         write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
         write_output()
 
@@ -192,9 +214,9 @@ def bulleted_list(label: str, items: Sequence[str], style: str = SECONDARY, bull
     return wrapped(f"{label}s:\n" + "\n".join([f"{bullet} {item}" for item in items]), style)
 
 
-def linkified_and_enumerated(*texts: str, sep: str = ", ") -> str:
+def linkified_and_enumerated(*texts: str) -> str:
     """Return a linkified and enumerated version of the texts."""
-    return sep.join(f"{quoted(linkified(text))}" for text in texts)
+    return enumerated(*(f"{quoted(linkified(text))}" for text in texts))
 
 
 def wrapped(text: str, style: str, postfix: str = "\n") -> str:
@@ -210,3 +232,17 @@ def punctuated(text: str) -> str:
 def quoted(text: str, quote: str = "'") -> str:
     """Return a quoted version of the text."""
     return f"{quote}{text}{quote}"
+
+
+def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:
+    """Return an enumerated version of the text."""
+    match len(texts):
+        case length if length > min_enumeration_length:
+            comma_separated_texts = ", ".join(texts[:-1]) + ","
+            return enumerated(comma_separated_texts, texts[-1])
+        case length if length == min_enumeration_length:
+            return " and ".join(texts)
+        case length if length == 1:
+            return texts[0]
+        case _:
+            return ""

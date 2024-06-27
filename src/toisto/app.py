@@ -47,4 +47,4 @@ def main() -> None:
             show_progress(progress, args.sort)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version(), config)
-            practice(console.print, language_pair, progress, config)
+            practice(console.print, language_pair, progress, config, args.progress_update)

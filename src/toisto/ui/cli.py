@@ -97,7 +97,16 @@ class CommandBuilder:
             "practice a language, for example type `%(prog)s practice --target fi --source en` to "
             "practice Finnish from English"
         )
-        self.add_command("practice", "Practice a language.", command_help)
+        parser = self.add_command("practice", "Practice a language.", command_help)
+        default = self.config.get("practice", "progress_update")
+        parser.add_argument(
+            "-p",
+            "--progress-update",
+            metavar="{frequency}",
+            type=int,
+            default=default,
+            help=f"show a progress update after each {{frequency}} quizzes; default: {default} (0 means never)",
+        )
 
     def add_progress_command(self) -> None:
         """Add a command to show progress."""
