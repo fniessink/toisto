@@ -16,7 +16,7 @@ def load_languages() -> dict[Language, str]:
     languages: dict[Language, str] = {}
     record_lines: list[str] = []
     with Path(LANGUAGES_FILE).open(encoding="utf-8") as language_registry:
-        for line in language_registry.readlines():
+        for line in language_registry:
             if line.startswith("%%"):
                 if "Type: language\n" in record_lines:
                     languages.update(parse_record(record_lines))
