@@ -180,6 +180,7 @@ class ProgressUpdate:
         return wrapped(
             f"🚧 Progress update: of {total} quiz{'zes' if total > 1 else ''}, you {enumerated(*feedback)}.",
             "gold1",
+            postfix="\n\n",
         )
 
 
@@ -196,11 +197,11 @@ def instruction(quiz: Quiz) -> str:
 def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
     """Show the welcome message."""
     write_output(WELCOME)
-    if latest_version and latest_version.strip("v") > VERSION:
+    if new_version_available := latest_version and latest_version.strip("v") > VERSION:
         write_output(Panel(NEWS.format(latest_version), expand=False))
-        write_output()
-    elif "target" not in config["languages"] or "source" not in config["languages"]:
+    elif languages_not_configured := "target" not in config["languages"] or "source" not in config["languages"]:
         write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
+    if new_version_available or languages_not_configured:
         write_output()
 
 
