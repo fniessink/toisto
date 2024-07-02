@@ -58,7 +58,7 @@ def practice(
     try:
         while quiz := progress.next_quiz():
             do_quiz(write_output, language_pair, quiz, progress, config)
-            write_output(progress_update())
+            write_output(progress_update(), end="")
         write_output(DONE)
     except (KeyboardInterrupt, EOFError):
         write_output()  # Make sure the shell prompt is displayed on a new line
