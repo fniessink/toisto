@@ -66,7 +66,7 @@ class Feedback:
     INCORRECT: Final[str] = "❌ Incorrect. "
     TRY_AGAIN: Final[str] = "⚠️  Incorrect. Please try again."
     TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
-        "⚠️  Incorrect. Please try again, in [yellow][bold]%(language)s[/bold][/yellow]."
+        "⚠️  Incorrect. Please try again, in [light_goldenrod2][bold]%(language)s[/bold][/light_goldenrod2]."
     )
 
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
@@ -178,8 +178,8 @@ class ProgressUpdate:
         if skipped:
             feedback.append(f"skipped {skipped} ({skipped/total:.0%})")
         return wrapped(
-            f"🚧 Progress update: of {total} quiz{'zes' if total > 1 else ''}, you {enumerated(*feedback)}.",
-            "gold1",
+            f"Progress update after {total} quiz{'zes' if total > 1 else ''}: you {enumerated(*feedback)}.",
+            "light_sky_blue3",
             postfix="\n\n",
         )
 
