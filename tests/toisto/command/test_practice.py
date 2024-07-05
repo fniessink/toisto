@@ -73,6 +73,19 @@ class PracticeTest(ToistoTestCase):
             patched_print,
         )
 
+    @patch("builtins.input", Mock(return_value="hoi!\n"))
+    def test_answer_quiz_in_lowercase_source_language(self):
+        """Test that a lower case answer is accepted when the answer language is the user's source language."""
+        patched_print = self.practice(self.quizzes)
+        self.assert_printed(Feedback.CORRECT, patched_print)
+
+    @patch("builtins.input", Mock(return_value="terve!\n"))
+    def test_answer_quiz_in_lowercase_target_language(self):
+        """Test that a lower case answer is not accepted when the answer language is the user's target language."""
+        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("write")
+        patched_print = self.practice(quizzes)
+        self.assert_printed(f"{Feedback.INCORRECT}The correct answer is 'Terve!'\n", patched_print)
+
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_answer_with_question(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""

@@ -44,29 +44,32 @@ class QuizTest(QuizTestCase):
 
     def test_is_correct(self):
         """Test a correct guess."""
-        self.assertTrue(self.quiz.is_correct(self.engels))
+        self.assertTrue(self.quiz.is_correct(self.engels, self.language_pair))
 
     def test_is_not_correct(self):
         """Test an incorrect guess."""
-        self.assertFalse(self.quiz.is_correct(Label(NL, "engles")))
+        self.assertFalse(self.quiz.is_correct(Label(NL, "engles"), self.language_pair))
 
-    def test_is_not_correct_due_to_upper_case_question(self):
-        """Test that a lower case answer for an upper case question is incorrect."""
-        self.assertFalse(self.quiz.is_correct(Label(NL, "engels")))
+    def test_upper_case_answer_is_correct(self):
+        """Test that an upper case answer for a lower case question is correct."""
+        quiz = self.create_quiz(self.create_concept("house", {}), "talo", ["het huis"])
+        self.assertTrue(quiz.is_correct(Label(NL, "Het huis"), self.language_pair))
+
+    def test_lower_case_answer_is_correct(self):
+        """Test that a lower case answer to an upper case question is correct, if source language == answer language."""
+        self.assertTrue(self.quiz.is_correct(Label(NL, "engels"), self.language_pair))
 
     def test_is_not_correct_due_to_upper_case_answer(self):
         """Test that a lower case answer is incorrect when the answer should be upper case."""
         concept = self.create_concept("finnish", {})
-        for quiz_type in ("read", "listen"):
-            quiz = self.create_quiz(concept, "suomi", ["het Fins"], quiz_type, language_pair=FI_NL)
-            self.assertFalse(quiz.is_correct(Label(NL, "fins")))
-            quiz = self.create_quiz(concept, "het Fins", ["suomi"], quiz_type, language_pair=NL_FI)
-            self.assertFalse(quiz.is_correct(Label(FI, "Suomi")))
-
-    def test_is_correct_despite_case(self):
-        """Test that an upper case answer for a lower case question is correct."""
-        quiz = self.create_quiz(self.create_concept("house", {}), "talo", ["het huis"])
-        self.assertTrue(quiz.is_correct(Label(NL, "Het huis")))
+        quiz = self.create_quiz(concept, "suomi", ["het Fins"], "read", language_pair=FI_NL)
+        self.assertTrue(quiz.is_correct(Label(NL, "fins"), FI_NL), quiz)
+        quiz = self.create_quiz(concept, "het Fins", ["suomi"], "read", language_pair=NL_FI)
+        self.assertTrue(quiz.is_correct(Label(FI, "Suomi"), NL_FI))
+        quiz = self.create_quiz(concept, "suomi", ["het Fins"], "listen", language_pair=FI_NL)
+        self.assertFalse(quiz.is_correct(Label(NL, "Suomi"), FI_NL))
+        quiz = self.create_quiz(concept, "het Fins", ["suomi"], "listen", language_pair=NL_FI)
+        self.assertTrue(quiz.is_correct(Label(FI, "Suomi"), NL_FI))
 
     def test_get_answer(self):
         """Test that the answer is returned."""
@@ -219,7 +222,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         """Test that an answer that matches a spelling alternative is correct."""
         quiz = self.create_quiz(self.concept, "Yksi.", ["Een|Eén", "één"])
         for alternative in ("Een", "Eén", "één"):
-            self.assertTrue(quiz.is_correct(Label(NL, alternative)))
+            self.assertTrue(quiz.is_correct(Label(NL, alternative), FI_NL))
 
     def test_other_answers_with_spelling_alternatives(self):
         """Test the spelling alternatives are returned as other answers."""
@@ -236,22 +239,22 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         load_spelling_alternatives(EN_NL)
         self.language_pair = NL_EN
         quiz = self.create_quiz(self.concept, "Het is waar.", ["It is true."])
-        self.assertTrue(quiz.is_correct(Label(EN, "It's true")))
+        self.assertTrue(quiz.is_correct(Label(EN, "It's true"), self.language_pair))
         quiz = self.create_quiz(self.concept, "Het is.", ["It is."])
-        self.assertTrue(quiz.is_correct(Label(EN, "It's.")))
+        self.assertTrue(quiz.is_correct(Label(EN, "It's."), self.language_pair))
         quiz = self.create_quiz(self.concept, "Ik ben Alice.", ["I am Alice."])
-        self.assertTrue(quiz.is_correct(Label(EN, "I'm Alice.")))
+        self.assertTrue(quiz.is_correct(Label(EN, "I'm Alice."), self.language_pair))
         quiz = self.create_quiz(self.concept, "Ik overval.", ["I ambush."])
-        self.assertFalse(quiz.is_correct(Label(EN, "I'mbush.")))
+        self.assertFalse(quiz.is_correct(Label(EN, "I'mbush."), self.language_pair))
         self.language_pair = EN_NL
         quiz = self.create_quiz(self.concept, "house", ["het huis"])
-        self.assertTrue(quiz.is_correct(Label(NL, "huis")))
+        self.assertTrue(quiz.is_correct(Label(NL, "huis"), self.language_pair))
         load_spelling_alternatives(FI_EN)
         self.language_pair = EN_FI
         quiz = self.create_quiz(self.concept, "I am", ["minä olen"])
-        self.assertTrue(quiz.is_correct(Label(FI, "olen")))
+        self.assertTrue(quiz.is_correct(Label(FI, "olen"), self.language_pair))
         quiz = self.create_quiz(self.concept, "I am Alice.", ["Minä olen Alice."])
-        self.assertTrue(quiz.is_correct(Label(FI, "Olen Alice.")))
+        self.assertTrue(quiz.is_correct(Label(FI, "Olen Alice."), self.language_pair))
 
     def test_generated_spelling_alternative_is_no_other_answer(self):
         """Test that a generated spelling alternative is not an other answer."""
@@ -259,7 +262,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         load_spelling_alternatives(EN_NL)
         quiz = self.create_quiz(self.concept, "pain", ["de pijn"])
         answer = Label(NL, "pijn")
-        self.assertTrue(quiz.is_correct(answer))
+        self.assertTrue(quiz.is_correct(answer, self.language_pair))
         self.assertEqual((), quiz.other_answers(answer))
 
     def test_capitalized_answer_without_article(self):
@@ -267,7 +270,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         load_spelling_alternatives(FI_NL)
         quiz = self.create_quiz(self.concept, "englanti", ["het Engels"])
         answer = Label(NL, "Engels")
-        self.assertTrue(quiz.is_correct(answer))
+        self.assertTrue(quiz.is_correct(answer, self.language_pair))
 
 
 class QuizEqualityTests(QuizTestCase):

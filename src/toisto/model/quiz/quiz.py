@@ -8,6 +8,7 @@ from functools import cached_property
 from itertools import chain
 from typing import Final, Literal, cast, get_args
 
+from ..language import LanguagePair
 from ..language.concept import Concept
 from ..language.grammar import GrammaticalCategory
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
@@ -119,9 +120,9 @@ class Quiz:
         quiz_types = "+".join(self.quiz_types)
         return f"{concept_id}:{self.question.language}:{self.answer.language}:{self.question}:{quiz_types}"
 
-    def evaluate(self, guess: Label, attempt: int) -> Evaluation:
+    def evaluate(self, guess: Label, language_pair: LanguagePair, attempt: int) -> Evaluation:
         """Evaluate the user's guess."""
-        if self.is_correct(guess):
+        if self.is_correct(guess, language_pair):
             return Evaluation.CORRECT
         if str(guess) == "?":
             return Evaluation.SKIPPED
@@ -129,10 +130,15 @@ class Quiz:
             return Evaluation.TRY_AGAIN
         return Evaluation.INCORRECT
 
-    def is_correct(self, guess: Label) -> bool:
+    def is_correct(self, guess: Label, language_pair: LanguagePair) -> bool:
         """Return whether the guess is correct."""
-        ignore_first_upper_case = all(not label.has_upper_case for label in (*self.answers, self.question))
-        return match(guess.with_lower_case_first_letter if ignore_first_upper_case else guess, *self.answers)
+        answers = self.answers
+        if all(not label.has_upper_case for label in (*answers, self.question)):
+            guess = guess.with_lower_case_first_letter
+        if guess.language == language_pair.source:
+            guess = guess.lower_case
+            answers = tuple(answer.lower_case for answer in answers)
+        return match(guess, *answers)
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
@@ -177,7 +183,7 @@ class Quiz:
         return tuple(
             answer
             for answer in self.non_generated_answers
-            if not match(guess, answer) and guess not in answer.spelling_alternatives
+            if not match(guess.lower_case, answer.lower_case) and guess not in answer.spelling_alternatives
         )
 
     @property
