@@ -39,7 +39,7 @@ def do_quiz(
         write_output(linkified(quiz.question))
     for attempt in range(1, 3):
         guess = do_quiz_attempt(quiz, config, attempt)
-        evaluation = quiz.evaluate(guess, attempt)
+        evaluation = quiz.evaluate(guess, language_pair, attempt)
         progress.mark_evaluation(quiz, evaluation)
         write_output(feedback(evaluation, guess))
         if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):

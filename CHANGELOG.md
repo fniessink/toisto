@@ -4,12 +4,16 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-[Unreleased]
+## [Unreleased]
 
 ### Fixed
 
 - Don't print an extra empty line between quizzes. Fixes [#719](https://github.com/fniessink/toisto/issues/719).
 - Use colors with better contrast in black on white terminals. Fixes [#720](https://github.com/fniessink/toisto/issues/720).
+
+### Changed
+
+- Don't check capitalisation for answers in the source language. Fixes [#721](https://github.com/fniessink/toisto/issues/721).
 
 ## 0.20.0 - 2024-07-02
 

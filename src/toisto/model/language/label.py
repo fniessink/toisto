@@ -101,6 +101,11 @@ class Label(str):
         return Label(self.language, str(self)[0].upper() + str(self)[1:])
 
     @property
+    def lower_case(self) -> Label:
+        """Return the label in lower case."""
+        return Label(self.language, str(self).lower())
+
+    @property
     def is_colloquial(self) -> bool:
         """Return whether this is a colloquial label."""
         return self.without_notes.endswith(self.COLLOQUIAL_POSTFIX)
