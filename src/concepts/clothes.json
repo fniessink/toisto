@@ -188,12 +188,12 @@
                 "nl": "jij kleedt je aan"
             },
             "third person": {
+                "fi": "hän pukeutuu",
                 "female": {
                     "en": [
                         "she dresses",
                         "she gets dressed"
                     ],
-                    "fi": "hän pukeutuu;female",
                     "nl": "zij kleedt zich aan"
                 },
                 "male": {
@@ -201,7 +201,6 @@
                         "he dresses",
                         "he gets dressed"
                     ],
-                    "fi": "hän pukeutuu;male",
                     "nl": "hij kleedt zich aan"
                 }
             }
