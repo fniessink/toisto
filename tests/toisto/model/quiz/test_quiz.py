@@ -207,6 +207,60 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "Terve!", ["Hallo!"], "interpret")
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
+    def test_homonyms_get_an_automatic_note_based_on_the_hypernym(self):
+        """Test that homonyms get an automatic note based on the hypernym."""
+        self.language_pair = NL_FI
+        financial_institution = Label(NL, "de bank")  # Create a homonym
+        self.create_concept("furniture", {})  # Create the hypernym of bank
+        concept = self.create_concept("bank", {"hypernym": "furniture"})
+        quiz = self.create_quiz(concept, "de bank", ["sohva"], "dictate")
+        self.assertTrue(financial_institution.has_homonym)
+        self.assertEqual("Listen and write in Dutch (furniture)", quiz.instruction)
+
+    def test_non_homonyms_do_not_get_an_automatic_note_based_on_the_hypernym(self):
+        """Test that labels that are not homonym get an automatic note based on the hypernym."""
+        self.language_pair = NL_EN
+        self.create_concept("insect", {})  # Create the hypernym of fly
+        concept = self.create_concept("fly", {"hypernym": "insect"})
+        quiz = self.create_quiz(concept, "de vlieg", ["de vlieg"], "dictate")
+        self.assertEqual("Listen and write in Dutch", quiz.instruction)
+
+    def test_homonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
+        """Test that homonyms get an automatic note based on the first hypernym if there are multiple."""
+        self.language_pair = NL_FI
+        Label(NL, "de bank")  # Create a homonym
+        self.create_concept("furniture", {})  # Create the hypernym of seating
+        self.create_concept("seating", {"hypernym": "furniture"})  # Create the hypernym of sofa
+        concept = self.create_concept("sofa", {"hypernym": "seating"})
+        quiz = self.create_quiz(concept, "de bank", ["sohva"], "dictate")
+        self.assertEqual("Listen and write in Dutch (seating)", quiz.instruction)
+
+    def test_homonyms_get_an_automatic_note_based_on_the_common_base_concept(self):
+        """Test that homonyms get an automatic note based on the common base concept."""
+        self.language_pair = EN_NL
+        concept = self.create_concept(
+            "to have",
+            dict(
+                singular={
+                    "first person": dict(en="I have", nl="ik heb"),
+                    "second person": dict(en="you have", nl="jij hebt"),
+                    "third person": dict(en="she has", nl="zij heeft"),
+                },
+                plural={
+                    "first person": dict(en="we have", nl="wij hebben"),
+                    "second person": dict(en="you have", nl="jullie hebben"),
+                    "third person": dict(en="they have", nl="zij hebben"),
+                },
+            ),
+        )
+        second_person_singular = next(
+            leaf_concept
+            for leaf_concept in concept.leaf_concepts(EN)
+            if leaf_concept.concept_id == "to have/singular/second person"
+        )
+        quiz = self.create_quiz(second_person_singular, "you have", ["jij hebt"], "interpret")
+        self.assertEqual("Listen and write in Dutch (singular; second person)", quiz.instruction)
+
 
 class QuizSpellingAlternativesTests(QuizTestCase):
     """Unit tests for checking spelling alternatives."""

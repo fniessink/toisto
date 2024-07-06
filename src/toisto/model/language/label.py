@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from collections.abc import Sequence
 from functools import cached_property
 from typing import ClassVar, Final
@@ -30,10 +31,13 @@ class Label:
     SPELLING_ALTERNATIVES_SEP: Final = "|"
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
+    counter: ClassVar[Counter[str]] = Counter()
+
     def __init__(self, language: Language, value: str) -> None:
         """Initialize the label."""
         self.language = language
         self._value = value
+        self.counter[self.without_notes] += 1
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -129,6 +133,11 @@ class Label:
     def has_upper_case(self) -> bool:
         """Return whether the label has one or more upper case letters."""
         return any(char.isupper() for char in self._value)
+
+    @property
+    def has_homonym(self) -> bool:
+        """Return whether the label has one ore more homonyms."""
+        return self.counter[self.without_notes] > 1
 
     @property
     def ends_with_punctuation(self) -> bool:

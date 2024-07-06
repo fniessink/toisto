@@ -221,10 +221,20 @@ class Quiz:
 
     @property
     def _question_note(self) -> str:
-        """Return the note to be shown as part of the question, if applicable."""
+        """Return the note(s) to be shown as part of the question, if applicable."""
+        question_notes = []
         note_applicable = self.question.language != self.answer.language or {"answer", "dictate"} & set(self.quiz_types)
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
-        return f" ({question_note})" if (note_applicable and question_note) else ""
+        if note_applicable and question_note:
+            question_notes.append(question_note)
+        if self._question.has_homonym:
+            if self.concept.base_concept.labels(self.question.language).count(self.question) > 1:
+                question_notes.append("singular")
+                question_notes.append("second person")
+            else:
+                hypernyms = self.concept.get_related_concepts("hypernym")
+                question_notes.extend([hypernym.concept_id for hypernym in hypernyms[:1]])
+        return f" ({'; '.join(question_notes)})" if (question_notes) else ""
 
     @property
     def is_grammatical(self) -> bool:

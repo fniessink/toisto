@@ -1,6 +1,6 @@
 """Unit tests for labels."""
 
-from toisto.model.language import EN, FI
+from toisto.model.language import EN, FI, NL
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -21,3 +21,18 @@ class LabelTest(ToistoTestCase):
         """Test that a colloquial sentence is recognized."""
         label = Label(FI, "Kiitti!*")
         self.assertTrue(label.is_complete_sentence)
+
+    def test_homonym(self):
+        """Test that labels that are the same are homonyms."""
+        financial_institution = Label(NL, "de bank")
+        self.assertFalse(financial_institution.has_homonym)
+        furniture = Label(NL, "de bank")
+        self.assertTrue(financial_institution.has_homonym)
+        self.assertTrue(furniture.has_homonym)
+
+    def test_homonym_with_different_notes(self):
+        """Test that labels that are the same and have different notes are homonyms."""
+        financial_institution = Label(NL, "de bank;note")
+        furniture = Label(NL, "de bank")
+        self.assertTrue(financial_institution.has_homonym)
+        self.assertTrue(furniture.has_homonym)
