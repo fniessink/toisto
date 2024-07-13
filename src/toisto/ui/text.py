@@ -102,20 +102,20 @@ class Feedback:
 
     def _correct_answer(self, guess: Label) -> str:
         """Return the quiz's correct answer."""
-        answer = quoted(colored_diff(guess, self.quiz.answer))
+        answer = quoted(colored_diff(str(guess), str(self.quiz.answer)))
         return punctuated(f"The correct answer is {answer}") + "\n"
 
     def _correct_answers(self) -> str:
         """Return the quiz's correct answers."""
         label = "The correct answer is" if len(self.quiz.non_generated_answers) == 1 else "The correct answers are"
-        answers = linkified_and_enumerated(*self.quiz.non_generated_answers)
+        answers = linkified_and_enumerated(*(str(answer) for answer in self.quiz.non_generated_answers))
         return punctuated(f"{label} {answers}") + "\n"
 
     def _other_answers(self, guess: Label) -> str:
         """Return the quiz's other answers, if any."""
         if other_answers := self.quiz.other_answers(guess):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
-            answers = linkified_and_enumerated(*other_answers)
+            answers = linkified_and_enumerated(*(str(answer) for answer in other_answers))
             return wrapped(punctuated(f"{label} {answers}"), SECONDARY)
         return ""
 
@@ -123,18 +123,18 @@ class Feedback:
         """Return the feedback about the colloquial label, if any."""
         if self.quiz.question.is_colloquial:
             language = ALL_LANGUAGES[self.quiz.question.language]
-            question = quoted(self.quiz.question.strip("*"))
+            question = quoted(str(self.quiz.question).strip("*"))
             return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), SECONDARY)
         return ""
 
     def _meaning(self) -> str:
         """Return the quiz's meaning, if any."""
-        if self.quiz.question_meanings and self.quiz.answer_meanings:
-            question_meanings = linkified_and_enumerated(*self.quiz.question_meanings)
-            answer_meanings = linkified_and_enumerated(*self.quiz.answer_meanings)
+        question_meanings = linkified_and_enumerated(*(str(meaning) for meaning in self.quiz.question_meanings))
+        answer_meanings = linkified_and_enumerated(*(str(meaning) for meaning in self.quiz.answer_meanings))
+        if question_meanings and answer_meanings:
             meanings = f"{question_meanings}, respectively {answer_meanings}"
         else:
-            meanings = linkified_and_enumerated(*(self.quiz.question_meanings + self.quiz.answer_meanings))
+            meanings = question_meanings or answer_meanings
         return wrapped(punctuated(f"Meaning {meanings}"), SECONDARY) if meanings else ""
 
     def _answer_notes(self) -> str:
@@ -149,7 +149,7 @@ class Feedback:
             example_meanings = labels(example, self.language_pair.source)
             shorter = example_labels if len(example_labels) < len(example_meanings) else example_meanings
             for label, meaning in zip_longest(example_labels, example_meanings, fillvalue=shorter[-1]):
-                examples.append(f"{quoted(label)} meaning {quoted(meaning)}")
+                examples.append(f"{quoted(str(label))} meaning {quoted(str(meaning))}")
         return bulleted_list("Example", examples)
 
 

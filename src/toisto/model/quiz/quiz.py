@@ -138,11 +138,13 @@ class Quiz:
         if guess.language == language_pair.source:
             guess = guess.lower_case
             answers = tuple(answer.lower_case for answer in answers)
-        return match(guess, *answers)
+        return match(str(guess), *(str(answer) for answer in answers))
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
-        return any(match(guess, *label.spelling_alternatives) for label in (self._question, *self._question_meanings))
+        questions = (self._question, *self._question_meanings)
+        spelling_alternatives = (str(alternative) for label in questions for alternative in label.spelling_alternatives)
+        return match(str(guess), *spelling_alternatives)
 
     @cached_property
     def question(self) -> Label:
@@ -183,7 +185,7 @@ class Quiz:
         return tuple(
             answer
             for answer in self.non_generated_answers
-            if not match(guess.lower_case, answer.lower_case) and guess not in answer.spelling_alternatives
+            if not match(str(guess.lower_case), str(answer.lower_case)) and guess not in answer.spelling_alternatives
         )
 
     @property

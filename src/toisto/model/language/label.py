@@ -14,10 +14,10 @@ SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 END_OF_SENTENCE_PUNCTUATION = "?!."
 
 
-class Label(str):
+class Label:
     """Class representing labels for concepts."""
 
-    __slots__ = ("__dict__", "language")  # Without adding __dict__ to slots @cached_property does not work
+    __slots__ = ("__dict__", "language", "_value")  # Without adding __dict__ to slots @cached_property does not work
 
     # Labels can have one question note and multiple answer notes. The question note is shown before a quiz is
     # presented to the user. The answer notes are shown afterwards. The format is:
@@ -30,13 +30,10 @@ class Label(str):
     SPELLING_ALTERNATIVES_SEP: Final = "|"
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
-    def __new__(cls, _language: Language, value: str) -> Label:  # noqa: PYI034
-        """Create an instance of the label."""
-        return super().__new__(cls, value)  # This is needed because we overwrite an immutable type (str)
-
-    def __init__(self, language: Language, _value: str) -> None:
+    def __init__(self, language: Language, value: str) -> None:
         """Initialize the label."""
         self.language = language
+        self._value = value
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -50,9 +47,17 @@ class Label(str):
             return self.language != other.language or self.without_notes != other.without_notes
         return True
 
+    def __bool__(self) -> bool:
+        """Return whether the label is empty or not."""
+        return bool(self._value)
+
     def __hash__(self) -> int:
         """Return the hash."""
         return hash(f"{self.language}{self}")
+
+    def __str__(self) -> str:
+        """Return the label string value."""
+        return self._value
 
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
@@ -66,8 +71,8 @@ class Label(str):
         generated_alternatives = set()
         for alternative in alternatives:
             for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
-                if re.search(pattern, alternative):
-                    generated_alternative = Label(self.language, re.sub(pattern, replacement, alternative))
+                if re.search(pattern, str(alternative)):
+                    generated_alternative = Label(self.language, re.sub(pattern, replacement, str(alternative)))
                     if alternative.starts_with_upper_case:
                         generated_alternative = generated_alternative.with_upper_case_first_letter
                     generated_alternatives.add(generated_alternative)
@@ -76,34 +81,34 @@ class Label(str):
     @property
     def question_note(self) -> str:
         """Return the label question note."""
-        has_question_note = self.count(self.NOTE_SEP) >= self.QUESTION_NOTE_INDEX
-        return self.split(self.NOTE_SEP)[self.QUESTION_NOTE_INDEX] if has_question_note else ""
+        has_question_note = self._value.count(self.NOTE_SEP) >= self.QUESTION_NOTE_INDEX
+        return self._value.split(self.NOTE_SEP)[self.QUESTION_NOTE_INDEX] if has_question_note else ""
 
     @property
     def answer_notes(self) -> Sequence[str]:
         """Return the label answer notes."""
-        has_answer_notes = self.count(self.NOTE_SEP) >= self.ANSWER_NOTE_INDEX
-        return self.split(self.NOTE_SEP)[self.ANSWER_NOTE_INDEX :] if has_answer_notes else ()
+        has_answer_notes = self._value.count(self.NOTE_SEP) >= self.ANSWER_NOTE_INDEX
+        return self._value.split(self.NOTE_SEP)[self.ANSWER_NOTE_INDEX :] if has_answer_notes else ()
 
     @property
     def without_notes(self) -> str:
         """Return the label without the notes."""
-        return self.split(self.NOTE_SEP)[0]
+        return self._value.split(self.NOTE_SEP)[0]
 
     @property
     def with_lower_case_first_letter(self) -> Label:
         """Return the label with the first letter lower cased."""
-        return Label(self.language, str(self)[0].lower() + str(self)[1:])
+        return Label(self.language, self._value[0].lower() + self._value[1:])
 
     @property
     def with_upper_case_first_letter(self) -> Label:
         """Return the label with the first letter upper cased."""
-        return Label(self.language, str(self)[0].upper() + str(self)[1:])
+        return Label(self.language, self._value[0].upper() + self._value[1:])
 
     @property
     def lower_case(self) -> Label:
         """Return the label in lower case."""
-        return Label(self.language, str(self).lower())
+        return Label(self.language, self._value.lower())
 
     @property
     def is_colloquial(self) -> bool:
@@ -118,12 +123,12 @@ class Label(str):
     @property
     def starts_with_upper_case(self) -> bool:
         """Return whether the label starts with an upper case letter."""
-        return self[0].isupper()
+        return self._value[0].isupper()
 
     @property
     def has_upper_case(self) -> bool:
         """Return whether the label has one or more upper case letters."""
-        return any(char.isupper() for char in self)
+        return any(char.isupper() for char in self._value)
 
     @property
     def ends_with_punctuation(self) -> bool:

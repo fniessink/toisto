@@ -50,7 +50,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that alternative answers are shown."""
         concept = self.create_concept("hi", dict(nl="hoi", fi=["terve", "hei"]))
         quiz = create_quizzes(NL_FI, concept).by_quiz_type("read").pop()
-        expected_other_answer = linkified(quiz.other_answers(self.guess)[0])
+        expected_other_answer = linkified(str(quiz.other_answers(self.guess)[0]))
         expected_text = (
             f"{Feedback.CORRECT}[{SECONDARY}]Another correct answer is '{expected_other_answer}'.[/{SECONDARY}]\n"
         )
@@ -61,7 +61,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that alternative answers are shown."""
         concept = self.create_concept("hi", dict(nl="hoi", fi=["terve", "hei", "hei hei"]))
         quiz = create_quizzes(NL_FI, concept).by_quiz_type("read").pop()
-        other_answers = enumerated(*[f"'{linkified(answer)}'" for answer in quiz.other_answers(self.guess)])
+        other_answers = enumerated(*[f"'{linkified(str(answer))}'" for answer in quiz.other_answers(self.guess)])
         expected_text = f"{Feedback.CORRECT}[{SECONDARY}]Other correct answers are {other_answers}.[/{SECONDARY}]\n"
         feedback = Feedback(quiz, NL_FI)
         self.assertEqual(expected_text, feedback(Evaluation.CORRECT, self.guess))

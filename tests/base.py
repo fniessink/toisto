@@ -66,12 +66,12 @@ class ToistoTestCase(unittest.TestCase):
         """Copy the quiz, overriding some of its parameters."""
         return self.create_quiz(
             quiz.concept,
-            question=question or quiz.question,
+            question=question or str(quiz.question),
             answers=answers or [str(answer) for answer in quiz.answers],
             quiz_type=quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
             blocked_by=quiz.blocked_by,
-            question_meanings=quiz.question_meanings,
-            answer_meanings=quiz.answer_meanings,
+            question_meanings=tuple(str(meaning) for meaning in quiz.question_meanings),
+            answer_meanings=tuple(str(meaning) for meaning in quiz.answer_meanings),
         )
 
     @staticmethod
