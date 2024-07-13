@@ -44,10 +44,10 @@ def show_progress(progress: Progress, sort: SortColumn) -> None:
         quiz_types = " and ".join(quiz.quiz_types).capitalize()
         table.add_row(
             quiz_types,
-            quiz.question,
+            str(quiz.question),
             quiz.question.language,
             quiz.answer.language,
-            "\n".join(quiz.answers),
+            "\n".join(str(answer) for answer in quiz.answers),
             str(retention.count),
             format_duration(retention.length) if retention.length else "",
             format_datetime(skip) if skip and skip > datetime.now() else "",

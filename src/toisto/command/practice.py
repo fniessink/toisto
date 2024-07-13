@@ -36,7 +36,7 @@ def do_quiz(
     feedback = Feedback(quiz, language_pair)
     write_output(instruction(quiz))
     if quiz.quiz_types[0] not in get_args(ListenQuizType):
-        write_output(linkified(quiz.question))
+        write_output(linkified(str(quiz.question)))
     for attempt in range(1, 3):
         guess = do_quiz_attempt(quiz, config, attempt)
         evaluation = quiz.evaluate(guess, language_pair, attempt)

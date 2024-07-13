@@ -57,3 +57,23 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
         self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))
         self.assertEqual((), concept.meanings(EN))
+
+    def test_labels(self):
+        """Test that the labels are returned, recursively."""
+        concept = self.create_concept(
+            "to have",
+            dict(
+                singular={
+                    "first person": dict(en="I have"),
+                    "second person": dict(en="you have"),
+                    "third person": dict(en="she has"),
+                },
+                plural={
+                    "first person": dict(en="we have"),
+                    "second person": dict(en="you have"),
+                    "third person": dict(en="they have"),
+                },
+            ),
+        )
+        expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
+        self.assertEqual(tuple(Label(EN, label) for label in expected_labels), concept.labels(EN))

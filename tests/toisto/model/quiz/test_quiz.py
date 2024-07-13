@@ -95,6 +95,37 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "talo", ["het huis"])
         self.assertEqual((), quiz.other_answers(self.huis))
 
+    def test_note(self):
+        """Test that the first note is added to the instruction, the second is not, and neither to the question."""
+        self.language_pair = EN_NL
+        for question in (
+            "You are;singular",
+            "You are;singular;post quiz note",
+            "You are;;post quiz note",
+            "You are;;post quiz note 1;post quiz note 2",
+        ):
+            quiz = self.create_quiz(self.concept, question, ["Jij bent|Je bent"])
+            hint = " (singular)" if "singular" in question else ""
+            self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
+            self.assertEqual(Label(EN, "You are"), quiz.question)
+
+    def test_question_note_is_ignored_in_answer(self):
+        """Test that a note in the answer is ignored."""
+        self.language_pair = NL_EN
+        quiz = self.create_quiz(self.concept, "Jij bent", ["You are;singular"])
+        self.assertEqual(Label(EN, "You are"), quiz.answer)
+
+    def test_all_answer_notes_are_shown(self):
+        """Test that all answer notes are shown."""
+        self.language_pair = EN_NL
+        answers = ["want;;explain want", "omdat;;explain omdat"]
+        quiz = self.create_quiz(self.concept, "because", answers, "write")
+        self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
+
+
+class QuizInstructionTest(QuizTestCase):
+    """Unit tests for quiz instructions."""
+
     def test_instructions(self):
         """Test the instructions."""
         expected_instructions = [
@@ -140,27 +171,13 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "Sentence.", ["Sentence."], "dictate")
         self.assertEqual("Listen and write a complete sentence in English", quiz.instruction)
 
-    def test_note(self):
-        """Test that the first note is added to the instruction, the second is not, and neither to the question."""
-        self.language_pair = EN_NL
-        for question in (
-            "You are;singular",
-            "You are;singular;post quiz note",
-            "You are;;post quiz note",
-            "You are;;post quiz note 1;post quiz note 2",
-        ):
-            quiz = self.create_quiz(self.concept, question, ["Jij bent|Je bent"])
-            hint = " (singular)" if "singular" in question else ""
-            self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
-            self.assertEqual(Label(EN, "You are"), quiz.question)
-
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown if the question and answer languages are the same."""
         self.language_pair = FI_NL
         quiz = self.create_quiz(self.concept, "Hän on;female", ["He ovat"], "pluralize")
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
-    def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_listen(self):
+    def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
         self.language_pair = FI_NL
         quiz = self.create_quiz(self.concept, "Suomi;country", ["Finland"], "dictate")
@@ -171,19 +188,6 @@ class QuizTest(QuizTestCase):
         self.language_pair = FI_NL
         quiz = self.create_quiz(self.concept, "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer")
         self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction)
-
-    def test_question_note_is_ignored_in_answer(self):
-        """Test that a note in the answer is ignored."""
-        self.language_pair = NL_EN
-        quiz = self.create_quiz(self.concept, "Jij bent", ["You are;singular"])
-        self.assertEqual(Label(EN, "You are"), quiz.answer)
-
-    def test_all_answer_notes_are_shown(self):
-        """Test that all answer notes are shown."""
-        self.language_pair = EN_NL
-        answers = ["want;;explain want", "omdat;;explain omdat"]
-        quiz = self.create_quiz(self.concept, "because", answers, "write")
-        self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
 
     def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dictate(self):
         """Test that colloquial labels get an automatic note."""
@@ -300,8 +304,9 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_when_questions_have_different_case(self):
         """Test that quizzes are different if only the case of the question differs."""
-        self.assertNotEqual(self.copy_quiz(self.quiz, question=self.quiz.question.lower()), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, question=str(self.quiz.question).lower()), self.quiz)
 
     def test_equal_when_answers_have_different_case(self):
         """Test that quizzes are equal if only the case of the answers differs."""
-        self.assertEqual(self.copy_quiz(self.quiz, answers=[answer.lower() for answer in self.quiz.answers]), self.quiz)
+        answers = [str(answer).lower() for answer in self.quiz.answers]
+        self.assertEqual(self.copy_quiz(self.quiz, answers=answers), self.quiz)

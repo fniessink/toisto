@@ -5,7 +5,6 @@ from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_progress import SortColumn, show_progress
 from toisto.model.language import FI
-from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -61,7 +60,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_quiz(self):
         """Test that quizzes are shown."""
         console_print = self.show_progress(self.progress)
-        for index, value in enumerate(["Read", Label(FI, "Terve!"), "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
+        for index, value in enumerate(["Read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
 
     def test_quiz_silenced_until_time_in_the_future(self):
