@@ -21,6 +21,15 @@ class ConceptsTest(ToistoTestCase):
         super().setUpClass()
         cls.concepts = Loader(ArgumentParser()).load(*CONCEPT_JSON_FILES)
 
+    @classmethod
+    def tearDownClass(cls) -> None:
+        """Extend to clear the concept instances."""
+        super().tearDownClass()
+        Concept.instances.clear()
+
+    def tearDown(self):
+        """Override to not clear the concept instances after each test."""
+
     def test_load_concepts(self):
         """Test that the concepts can be loaded."""
         self.assertEqual(1, len(Concept.instances.get_values(ConceptId("welcome"))))

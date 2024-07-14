@@ -11,7 +11,7 @@ from typing import ClassVar, Literal, NewType, cast, get_args
 from ...tools import Registry
 from . import Language
 from .grammar import GrammaticalCategory
-from .label import Labels
+from .label import Label, Labels
 
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
@@ -78,10 +78,13 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
+    homonyms: ClassVar[Registry[Label, Concept]] = Registry[Label, "Concept"]()
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
+        for label in self._labels:
+            self.homonyms.add_item(label, self)
 
     def __hash__(self) -> int:
         """Return the concept hash."""
@@ -105,6 +108,12 @@ class Concept:
         for concept in related_concepts:
             related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
         return tuple(related_concepts_list)
+
+    def get_homonyms(self, label: Label) -> Concepts:
+        """Return the homonyms for the label, provided it is a label of this concept."""
+        if label not in self._labels:
+            return ()
+        return tuple(concept for concept in self.homonyms.get_values(label) if concept != self)
 
     @property
     def parent(self) -> Concept | None:
@@ -141,6 +150,7 @@ class Concept:
             return Labels(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
         return self._meanings.with_language(language)
 
+    @property
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")

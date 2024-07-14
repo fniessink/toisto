@@ -190,7 +190,7 @@ def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizTy
     complex ("Give the affirmative past tense plural third person...") we limit the number of quiz types.
     """
     quiz_types = []
-    for category1, category2 in zip_longest(concept1.grammatical_categories(), concept2.grammatical_categories()):
+    for category1, category2 in zip_longest(concept1.grammatical_categories, concept2.grammatical_categories):
         if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
             quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
     if set(quiz_types) <= {"feminize", "masculinize", "neuterize", "give third person"}:

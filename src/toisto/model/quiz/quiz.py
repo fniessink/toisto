@@ -9,7 +9,7 @@ from itertools import chain
 from typing import Final, Literal, cast, get_args
 
 from ..language import LanguagePair
-from ..language.concept import Concept
+from ..language.concept import Concept, Concepts
 from ..language.grammar import GrammaticalCategory
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
@@ -218,10 +218,28 @@ class Quiz:
 
     @property
     def _question_note(self) -> str:
-        """Return the note to be shown as part of the question, if applicable."""
+        """Return the note(s) to be shown as part of the question, if applicable."""
+        question_notes = []
         note_applicable = self.question.language != self.answer.language or {"answer", "dictate"} & set(self.quiz_types)
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
-        return f" ({question_note})" if (note_applicable and question_note) else ""
+        if note_applicable and question_note:
+            question_notes.append(question_note)
+        if homonyms := self.concept.get_homonyms(self._question):
+            question_notes.extend(self._homonym_notes(homonyms))
+        return f" ({'; '.join(question_notes)})" if (question_notes) else ""
+
+    def _homonym_notes(self, homonyms: Concepts) -> list[str]:
+        """Return the note(s) to be shown as part of the question, if the question has one or more homonyms."""
+        if all(homonym.base_concept == self.concept.base_concept for homonym in homonyms):
+            grammar_hints = set()
+            for index, grammatical_category in enumerate(self.concept.grammatical_categories):
+                for homonym in homonyms:
+                    homonym_grammatical_category = homonym.grammatical_categories[index]
+                    if homonym_grammatical_category != grammatical_category:
+                        grammar_hints.add(grammatical_category)
+            return sorted(grammar_hints)
+        hypernyms = self.concept.get_related_concepts("hypernym")
+        return [hypernym.concept_id for hypernym in hypernyms[:1]]
 
     @property
     def is_grammatical(self) -> bool:
