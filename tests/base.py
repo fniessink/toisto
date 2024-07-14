@@ -26,6 +26,11 @@ class ToistoTestCase(unittest.TestCase):
         """Set up a default language pair."""
         self.language_pair = EN_FI
 
+    def tearDown(self) -> None:
+        """Clear the registries."""
+        Concept.instances.clear()
+        Concept.homonyms.clear()
+
     @staticmethod
     def create_concept(concept_id: str, concept_dict: dict[str, object]) -> Concept:
         """Create a concept."""

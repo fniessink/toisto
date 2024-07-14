@@ -15,7 +15,7 @@
                             "nl": "ik heb"
                         },
                         "second person": {
-                            "en": "you have;singular",
+                            "en": "you have",
                             "fi": "sinulla on",
                             "nl": "jij hebt"
                         },
@@ -38,7 +38,7 @@
                             "nl": "wij hebben"
                         },
                         "second person": {
-                            "en": "you have;plural",
+                            "en": "you have",
                             "fi": "teillä on",
                             "nl": "jullie hebben"
                         },
@@ -57,7 +57,7 @@
                             "nl": "ik had"
                         },
                         "second person": {
-                            "en": "you had;singular",
+                            "en": "you had",
                             "fi": "sinulla oli",
                             "nl": "jij had"
                         },
@@ -80,7 +80,7 @@
                             "nl": "wij hadden"
                         },
                         "second person": {
-                            "en": "you had;plural",
+                            "en": "you had",
                             "fi": "teillä oli",
                             "nl": "jullie hadden"
                         },
@@ -104,7 +104,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you have not;singular",
+                            "en": "you have not",
                             "fi": "sinulla ei ole",
                             "nl": [
                                 "jij hebt niet",
@@ -139,7 +139,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you have not;plural",
+                            "en": "you have not",
                             "fi": "teillä ei ole",
                             "nl": [
                                 "jullie hebben niet",
@@ -167,7 +167,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you had not;singular",
+                            "en": "you had not",
                             "fi": "sinulla ei ollut",
                             "nl": [
                                 "jij had niet",
@@ -202,7 +202,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you had not;plural",
+                            "en": "you had not",
                             "fi": "teillä ei ollut",
                             "nl": [
                                 "jullie hadden niet",
@@ -235,8 +235,8 @@
                         },
                         "second person": {
                             "en": [
-                                "have you got?;singular",
-                                "do you have?;singular"
+                                "have you got?",
+                                "do you have?"
                             ],
                             "fi": "onko sinulla?",
                             "nl": "heb jij?"
@@ -270,8 +270,8 @@
                         },
                         "second person": {
                             "en": [
-                                "have you got?;plural",
-                                "do you have?;plural"
+                                "have you got?",
+                                "do you have?"
                             ],
                             "fi": "onko teillä?",
                             "nl": "hebben jullie?"
@@ -294,7 +294,7 @@
                             "nl": "had ik?"
                         },
                         "second person": {
-                            "en": "did you have?;singular",
+                            "en": "did you have?",
                             "fi": "oliko sinulla?",
                             "nl": "had jij?"
                         },
@@ -317,7 +317,7 @@
                             "nl": "hadden wij?"
                         },
                         "second person": {
-                            "en": "did you have?;plural",
+                            "en": "did you have?",
                             "fi": "oliko teillä?",
                             "nl": "hadden jullie?"
                         },
@@ -345,8 +345,8 @@
                         },
                         "second person": {
                             "en": [
-                                "have you not got?|haven't you got;singular",
-                                "do you not have?|don't you have?;singular"
+                                "have you not got?|haven't you got",
+                                "do you not have?|don't you have?"
                             ],
                             "fi": "eikö sinulla ole?",
                             "nl": [
@@ -392,8 +392,8 @@
                         },
                         "second person": {
                             "en": [
-                                "have you not got?|haven't you got;plural",
-                                "do you not have?|don't you have?;plural"
+                                "have you not got?|haven't you got",
+                                "do you not have?|don't you have?"
                             ],
                             "fi": "eikö teillä ole?",
                             "nl": [
@@ -425,7 +425,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "did you not have?|didn't you have?;singular",
+                            "en": "did you not have?|didn't you have?",
                             "fi": "eikö sinulla ollut?",
                             "nl": [
                                 "had jij niet?",
@@ -460,7 +460,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "did you not have?|didn't you have?;plural",
+                            "en": "did you not have?|didn't you have?",
                             "fi": "eikö teillä ollut?",
                             "nl": [
                                 "hadden jullie niet?",

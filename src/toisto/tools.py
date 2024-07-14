@@ -1,6 +1,7 @@
 """Utitity functions."""
 
 from collections.abc import Callable, Iterable
+from itertools import chain
 from typing import Generic, TypeVar
 
 T = TypeVar("T")
@@ -19,19 +20,20 @@ class Registry(Generic[Key, Value]):
     """Registry for looking up values by their key."""
 
     def __init__(self) -> None:
-        self.__items: dict[Key, Value] = {}
+        self.__items: dict[Key, list[Value]] = {}
+        self.items = self.__items
 
     def add_item(self, key: Key, value: Value) -> None:
         """Register the item."""
-        self.__items[key] = value
+        self.__items.setdefault(key, []).append(value)
 
     def get_values(self, *keys: Key) -> tuple[Value, ...]:
         """Return the values with the given keys."""
-        return tuple(self.__items[key] for key in keys)
+        return tuple(value for key in keys for value in self.__items[key])
 
     def get_all_values(self) -> tuple[Value, ...]:
         """Return all values."""
-        return tuple(self.__items.values())
+        return tuple(chain(*self.__items.values()))
 
     def clear(self) -> None:
         """Clear the registry."""

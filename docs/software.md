@@ -122,54 +122,26 @@ To indicate that a label is only used in spoken language, add an asterisk (`*`) 
 
 ### Labels with notes
 
-Sometimes labels are ambiguous. For example, "you" in English can mean both one or multiple persons. To help the user understand which meaning is intended, a note can be added to the label. The note is the part after the semicolon (`;`):
+Sometimes labels are ambiguous. For example, "hän" in Finnish can mean both he or she. To help the user understand which meaning is intended, a note can be added to the label. The note is the part after the semicolon (`;`):
 
 ```json
 {
-    "to live": {
-        "singular": {
-            "first person": "...",
-            "second person": {
-                "en": "you live;singular",
-                "nl": "jij woont"
-            },
-            "third person": "..."
-        },
-        "plural": {
-            "first person": "...",
-            "second person": {
-                "en": "you live;plural",
-                "nl": "jullie wonen"
-            },
-            "third person": "..."
-        }
+    "she wants ice cream": {
+        "en": "She wants ice cream.",
+        "fi": "Hän haluaa jäätelöä.;female",
     }
 }
 ```
 
-In the above example, Toisto will show the note to the user when asking for the Dutch translation of "you live".
+In the above example, Toisto will show the note 'female' to the user when asking for the English translation of "Hän haluaa jäätelöä".
 
 It's also possible to add two notes. The first note will be shown as part of the quiz instruction. The second note will be shown after the user has answered. This can be used to point out extra information, for example:
 
 ```json
 {
-    "to live": {
-        "singular": {
-            "first person": "...",
-            "second person": {
-                "en": "you live;singular;the second-person pronoun you is used for both the singular and the plural",
-                "nl": "jij woont"
-            },
-            "third person": "..."
-        },
-        "plural": {
-            "first person": "...",
-            "second person": {
-                "en": "you live;plural;the second-person pronoun you is used for both the singular and the plural",
-                "nl": "jullie wonen"
-            },
-            "third person": "..."
-        }
+    "she wants ice cream": {
+        "en": "She wants ice cream.",
+        "fi": "Hän haluaa jäätelöä.;female;'jäätelöä is the partitive case of 'jäätelö'",
     }
 }
 ```
@@ -213,7 +185,59 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 }
 ```
 
-### Multiple concepts with the same label
+### Different concepts with the same label (homonyms)
+
+If different concepts have the same label (meaning they are homonyms) and Toisto presents the label in a quiz, it's impossible for the user to know which concept Toisto is looking for. For example, the Dutch word "bank" can mean both "couch" and "bank". A quiz asking the user to translate the Dutch word "bank" to English could be looking for either "bank" or "couch". English verbs have the same problem, as the second person singular and the second person plural are indistinguishable without context.
+
+Toisto recognizes homonyms and automatically provides a hint when quizzing a label that has homonyms. It does so by looking at the relation between the different concepts that share the homonym.
+
+If the concepts share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example:
+
+```json
+{
+    "to have": {
+        "singular": {
+            "first person": "...",
+            "second person": {
+                "en": "you have",
+                "nl": "jij hebt"
+            },
+            "third person": "...",
+        },
+        "plural": {
+            "first person": "...",
+            "second person": {
+                "en": "you have",
+                "nl": "jullie hebben"
+            },
+            "third person": "...",
+        }
+    }
+}
+```
+
+When quizzing the translation of "you have", Toisto will provide a hint based on the grammar, for example: "Listen and write in Dutch (singular)".
+
+If the concept have different hypernyms, Toisto will provide a hint based on the hypernym. For example, in the case of the Dutch word bank, there are two concepts that share that label: bank with hypernym "financial institution" and bank with hypernym "furniture":
+
+```json
+{
+    "bank (finance)": {
+        "hypernym": "financial institution",
+        "en": "bank",
+        "nl": "de bank"
+    },
+    "bank (furniture)": {
+        "hypernym": "furniture",
+        "en": "couch",
+        "nl": "de bank"
+    }
+}
+```
+
+When quizzing the translation of "bank", Toisto provides the hypernym as hint, for example: "Listen and write in Dutch (furniture)".
+
+### Concepts with different meanings per language
 
 Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 

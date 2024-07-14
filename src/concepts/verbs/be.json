@@ -18,7 +18,7 @@
                             "nl": "ik ben"
                         },
                         "second person": {
-                            "en": "you are;singular",
+                            "en": "you are",
                             "fi": [
                                 "sinä olet",
                                 "sä oot*"
@@ -50,7 +50,7 @@
                             "nl": "wij zijn"
                         },
                         "second person": {
-                            "en": "you are;plural",
+                            "en": "you are",
                             "fi": [
                                 "te olette",
                                 "te ootte*"
@@ -75,7 +75,7 @@
                             "nl": "ik was"
                         },
                         "second person": {
-                            "en": "you were;singular",
+                            "en": "you were",
                             "fi": "sinä olit",
                             "nl": "jij was"
                         },
@@ -98,7 +98,7 @@
                             "nl": "wij waren"
                         },
                         "second person": {
-                            "en": "you were;plural",
+                            "en": "you were",
                             "fi": "te olitte",
                             "nl": "jullie waren"
                         },
@@ -117,7 +117,7 @@
                             "nl": "ik ben geweest"
                         },
                         "second person": {
-                            "en": "you have been;singular",
+                            "en": "you have been",
                             "fi": "sinä olet ollut",
                             "nl": "jij bent geweest"
                         },
@@ -140,7 +140,7 @@
                             "nl": "wij zijn geweest"
                         },
                         "second person": {
-                            "en": "you have been;plural",
+                            "en": "you have been",
                             "fi": "te olette olleet",
                             "nl": "jullie zijn geweest"
                         },
@@ -164,7 +164,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you are not;singular",
+                            "en": "you are not",
                             "fi": "sinä et ole",
                             "nl": [
                                 "jij bent niet",
@@ -199,7 +199,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you are not;plural",
+                            "en": "you are not",
                             "fi": "te ette ole",
                             "nl": [
                                 "jullie zijn niet",
@@ -227,7 +227,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you were not;singular",
+                            "en": "you were not",
                             "fi": "sinä et ollut",
                             "nl": [
                                 "jij was niet",
@@ -262,7 +262,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you were not;plural",
+                            "en": "you were not",
                             "fi": "te ette olleet",
                             "nl": [
                                 "jullie waren niet",
@@ -290,7 +290,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you have not been;singular",
+                            "en": "you have not been",
                             "fi": "sinä et ole ollut",
                             "nl": [
                                 "jij bent niet geweest",
@@ -325,7 +325,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "you have not been;plural",
+                            "en": "you have not been",
                             "fi": "te ette ole olleet",
                             "nl": [
                                 "jullie zijn niet geweest",
@@ -354,7 +354,7 @@
                             "nl": "ben ik?"
                         },
                         "second person": {
-                            "en": "are you?;singular",
+                            "en": "are you?",
                             "fi": "oletko sinä?",
                             "nl": "ben jij?"
                         },
@@ -377,7 +377,7 @@
                             "nl": "zijn wij?"
                         },
                         "second person": {
-                            "en": "are you?;plural",
+                            "en": "are you?",
                             "fi": "oletteko te?",
                             "nl": "zijn jullie?"
                         },
@@ -396,7 +396,7 @@
                             "nl": "was ik?"
                         },
                         "second person": {
-                            "en": "were you?;singular",
+                            "en": "were you?",
                             "fi": "olitko sinä?",
                             "nl": "was jij?"
                         },
@@ -419,7 +419,7 @@
                             "nl": "waren wij?"
                         },
                         "second person": {
-                            "en": "were you?;plural",
+                            "en": "were you?",
                             "fi": "olitteko te?",
                             "nl": "waren jullie?"
                         },
@@ -438,7 +438,7 @@
                             "nl": "ben ik geweest?"
                         },
                         "second person": {
-                            "en": "have you been?;singular",
+                            "en": "have you been?",
                             "fi": "oletko sinä ollut?",
                             "nl": "ben jij geweest?"
                         },
@@ -461,7 +461,7 @@
                             "nl": "zijn wij geweest?"
                         },
                         "second person": {
-                            "en": "have you been?;plural",
+                            "en": "have you been?",
                             "fi": "oletteko te olleet?",
                             "nl": "zijn jullie geweest?"
                         },
@@ -485,7 +485,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "are you not?;singular",
+                            "en": "are you not?",
                             "fi": "etkö sinä ole?",
                             "nl": [
                                 "ben jij niet?",
@@ -520,7 +520,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "are you not?;plural",
+                            "en": "are you not?",
                             "fi": "ettekö te ole?",
                             "nl": [
                                 "zijn jullie niet?",
@@ -548,7 +548,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "were you not?|weren't you?;singular",
+                            "en": "were you not?|weren't you?",
                             "fi": "etkö sinä ollut?",
                             "nl": [
                                 "was jij niet?",
@@ -583,7 +583,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "were you not?|weren't you?;plural",
+                            "en": "were you not?|weren't you?",
                             "fi": "ettekö te olleet?",
                             "nl": [
                                 "waren jullie niet?",
@@ -611,7 +611,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "are you not?;singular",
+                            "en": "are you not?",
                             "fi": "etkö sinä ole ollut?",
                             "nl": [
                                 "ben jij niet geweest?",
@@ -646,7 +646,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "have you not been?;plural",
+                            "en": "have you not been?",
                             "fi": "ettekö te ole olleet?",
                             "nl": [
                                 "zijn jullie niet geweest?",

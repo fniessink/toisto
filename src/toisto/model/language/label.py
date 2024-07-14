@@ -60,6 +60,8 @@ class Label:
         """Return the label string value."""
         return self._value
 
+    __repr__ = __str__
+
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
