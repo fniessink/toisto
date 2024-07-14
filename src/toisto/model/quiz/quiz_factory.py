@@ -5,6 +5,7 @@ from itertools import permutations, zip_longest
 
 from ..language import LanguagePair
 from ..language.concept import Concept, Concepts
+from ..language.label import Labels
 from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
 
 
@@ -58,8 +59,8 @@ class QuizFactory:
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels = concept.non_colloquial_labels(target_language)
-        source_labels = concept.non_colloquial_labels(source_language)
+        target_labels = concept.labels(target_language).non_colloquial
+        source_labels = concept.labels(source_language).non_colloquial
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
@@ -72,8 +73,8 @@ class QuizFactory:
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels = concept.non_colloquial_labels(target_language)
-        source_labels = concept.non_colloquial_labels(source_language)
+        target_labels = concept.labels(target_language).non_colloquial
+        source_labels = concept.labels(source_language).non_colloquial
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
@@ -84,22 +85,22 @@ class QuizFactory:
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
         target_language, source_language = self.language_pair.target, self.language_pair.source
-        target_labels = concept.non_colloquial_labels(target_language)
+        target_labels = concept.labels(target_language).non_colloquial
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
         non_colloquial_quizzes = Quizzes(
-            Quiz(concept, label, (label,), ("dictate",), blocked_by, meanings) for label in target_labels
+            Quiz(concept, label, Labels((label,)), ("dictate",), blocked_by, meanings) for label in target_labels
         )
         colloquial_quizzes = Quizzes(
             Quiz(concept, label, target_labels, ("dictate",), blocked_by, meanings)
-            for label in concept.colloquial_labels(target_language)
+            for label in concept.labels(target_language).colloquial
         )
         return Quizzes(non_colloquial_quizzes | colloquial_quizzes)
 
     def interpret_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create interpret (listen and translate) quizzes for the concept."""
         target_language, source_language = self.language_pair.target, self.language_pair.source
-        source_labels = concept.non_colloquial_labels(source_language)
+        source_labels = concept.labels(source_language).non_colloquial
         if not source_labels or concept.is_composite(target_language):
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
@@ -118,15 +119,15 @@ class QuizFactory:
             quiz_types = grammatical_quiz_types(question_concept, answer_concept)
             if not quiz_types:
                 continue
-            question_labels = question_concept.non_colloquial_labels(target_language)
-            answer_labels = answer_concept.non_colloquial_labels(target_language)
+            question_labels = question_concept.labels(target_language).non_colloquial
+            answer_labels = answer_concept.labels(target_language).non_colloquial
             question_meanings = question_concept.meanings(source_language)
             answer_meanings = answer_concept.meanings(source_language)
             quizzes |= Quizzes(
                 Quiz(
                     concept,
                     question_label,
-                    (answer_label,),
+                    Labels((answer_label,)),
                     quiz_types,
                     blocked_by,
                     question_meanings,
@@ -171,13 +172,13 @@ class QuizFactory:
             Quiz(
                 concept,
                 label,
-                tuple(related_concept_labels),
+                Labels(related_concept_labels),
                 (quiz_type,),
                 tuple(previous_quizzes),
-                (),
-                tuple(meanings),
+                Labels(),
+                Labels(meanings),
             )
-            for label in concept.non_colloquial_labels(target_language)
+            for label in concept.labels(target_language).non_colloquial
         )
 
 

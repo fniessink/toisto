@@ -236,8 +236,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             quizzes,
         )
         for quiz in quizzes:
-            self.assertNotIn("", (str(meaning) for meaning in quiz.question_meanings))
-            self.assertNotIn("", (str(meaning) for meaning in quiz.answer_meanings))
+            self.assertNotIn("", quiz.question_meanings.as_strings)
+            self.assertNotIn("", quiz.answer_meanings.as_strings)
 
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the target language only."""
@@ -255,8 +255,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             quizzes,
         )
         for quiz in quizzes:
-            self.assertNotIn("", (str(meaning) for meaning in quiz.question_meanings))
-            self.assertNotIn("", (str(meaning) for meaning in quiz.answer_meanings))
+            self.assertNotIn("", quiz.question_meanings.as_strings)
+            self.assertNotIn("", quiz.answer_meanings.as_strings)
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes are generated from a noun concept with labels in the native language."""

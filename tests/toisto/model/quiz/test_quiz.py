@@ -3,7 +3,7 @@
 from typing import get_args
 
 from toisto.model.language import EN, FI, NL
-from toisto.model.language.label import Label
+from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import QuizType
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 
@@ -83,7 +83,7 @@ class QuizTest(QuizTestCase):
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
         quiz = self.create_quiz(self.concept, "Yksi", ["Een", "Eén;note should be ignored"])
-        self.assertEqual(["Eén"], [str(answer) for answer in quiz.other_answers(self.een)])
+        self.assertEqual(("Eén",), quiz.other_answers(self.een).as_strings)
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the quiz type is dictate."""
@@ -236,7 +236,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
             other_answers = list(alternatives)
             other_answers.remove(alternative)
             answer = Label(NL, alternative)
-            self.assertEqual(tuple(Label(NL, answer) for answer in other_answers), quiz.other_answers(answer))
+            self.assertEqual(Labels(Label(NL, answer) for answer in other_answers), quiz.other_answers(answer))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""

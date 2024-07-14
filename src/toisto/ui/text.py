@@ -10,10 +10,9 @@ from rich.console import Console
 from rich.panel import Panel
 
 from ..metadata import CHANGELOG_URL, NAME, README_URL, VERSION
-from ..model.language import Language, LanguagePair
-from ..model.language.concept import Concept
+from ..model.language import LanguagePair
 from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES
-from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label, Labels
+from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
 from ..model.quiz.evaluation import Evaluation
 from ..model.quiz.progress import Progress
 from ..model.quiz.quiz import Quiz
@@ -108,14 +107,14 @@ class Feedback:
     def _correct_answers(self) -> str:
         """Return the quiz's correct answers."""
         label = "The correct answer is" if len(self.quiz.non_generated_answers) == 1 else "The correct answers are"
-        answers = linkified_and_enumerated(*(str(answer) for answer in self.quiz.non_generated_answers))
+        answers = linkified_and_enumerated(*self.quiz.non_generated_answers.as_strings)
         return punctuated(f"{label} {answers}") + "\n"
 
     def _other_answers(self, guess: Label) -> str:
         """Return the quiz's other answers, if any."""
         if other_answers := self.quiz.other_answers(guess):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
-            answers = linkified_and_enumerated(*(str(answer) for answer in other_answers))
+            answers = linkified_and_enumerated(*other_answers.as_strings)
             return wrapped(punctuated(f"{label} {answers}"), SECONDARY)
         return ""
 
@@ -129,8 +128,8 @@ class Feedback:
 
     def _meaning(self) -> str:
         """Return the quiz's meaning, if any."""
-        question_meanings = linkified_and_enumerated(*(str(meaning) for meaning in self.quiz.question_meanings))
-        answer_meanings = linkified_and_enumerated(*(str(meaning) for meaning in self.quiz.answer_meanings))
+        question_meanings = linkified_and_enumerated(*self.quiz.question_meanings.as_strings)
+        answer_meanings = linkified_and_enumerated(*self.quiz.answer_meanings.as_strings)
         if question_meanings and answer_meanings:
             meanings = f"{question_meanings}, respectively {answer_meanings}"
         else:
@@ -145,8 +144,8 @@ class Feedback:
         """Return the quiz's examples, if any."""
         examples: list[str] = []
         for example in self.quiz.concept.get_related_concepts("example"):
-            example_labels = labels(example, self.language_pair.target)
-            example_meanings = labels(example, self.language_pair.source)
+            example_labels = example.labels(self.language_pair.target).first_non_generated_spelling_alternatives
+            example_meanings = example.labels(self.language_pair.source).first_non_generated_spelling_alternatives
             shorter = example_labels if len(example_labels) < len(example_meanings) else example_meanings
             for label, meaning in zip_longest(example_labels, example_meanings, fillvalue=shorter[-1]):
                 examples.append(f"{quoted(str(label))} meaning {quoted(str(meaning))}")
@@ -182,11 +181,6 @@ class ProgressUpdate:
             "light_sky_blue3",
             postfix="\n\n",
         )
-
-
-def labels(concept: Concept, language: Language) -> Labels:
-    """Return the first non-generated spelling alternative of the labels of a concept in the given language."""
-    return Labels(label.non_generated_spelling_alternatives[0] for label in concept.labels(language))
 
 
 def instruction(quiz: Quiz) -> str:

@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 import re
-from collections.abc import Sequence
+from collections.abc import Callable, Iterable, Iterator, Sequence
 from functools import cached_property
+from itertools import chain
 from typing import ClassVar, Final
 
 from . import Language
@@ -76,7 +77,12 @@ class Label:
                     if alternative.starts_with_upper_case:
                         generated_alternative = generated_alternative.with_upper_case_first_letter
                     generated_alternatives.add(generated_alternative)
-        return alternatives + tuple(generated_alternatives)
+        return alternatives + Labels(generated_alternatives)
+
+    @property
+    def first_spelling_alternative(self) -> Label:
+        """Return the first spelling alternative for the label."""
+        return self.spelling_alternatives[0]
 
     @property
     def question_note(self) -> str:
@@ -141,19 +147,94 @@ class Label:
         return self.without_notes.rstrip(self.COLLOQUIAL_POSTFIX).replace("'", "").replace("-", " ")
 
 
-Labels = tuple[Label, ...]
+class Labels:
+    """Labels collection."""
+
+    def __init__(self, labels: Iterable[Label] = ()) -> None:
+        self._labels = tuple(labels)
+
+    def __eq__(self, other: object) -> bool:
+        """Return whether the labels are equal."""
+        if isinstance(other, Labels):
+            return self._labels == other._labels
+        return self._labels == other
+
+    def __iter__(self) -> Iterator[Label]:
+        """Return an iterator over the labels."""
+        return iter(self._labels)
+
+    def __add__(self, other: Labels) -> Labels:
+        """Return the addition of the labels."""
+        return Labels(self._labels + other._labels)
+
+    def __getitem__(self, index: int) -> Label:
+        """Return the Label at the specified position."""
+        return self._labels[index]
+
+    def __len__(self) -> int:
+        """Return the number of labels."""
+        return len(self._labels)
+
+    def with_language(self, language: Language) -> Labels:
+        """Return the labels with the specified language."""
+        return Labels(label for label in self._labels if label.language == language)
+
+    @property
+    def colloquial(self) -> Labels:
+        """Return the colloquial labels."""
+        return Labels(label for label in self._labels if label.is_colloquial)
+
+    @property
+    def non_colloquial(self) -> Labels:
+        """Return the non-colloquial labels."""
+        return Labels(label for label in self._labels if not label.is_colloquial)
+
+    @property
+    def lower_case(self) -> Labels:
+        """Return the labels in lower case."""
+        return Labels(label.lower_case for label in self._labels)
+
+    @property
+    def spelling_alternatives(self) -> Labels:
+        """Return the spelling alternatives for each label."""
+        spelling_alternatives = [label.spelling_alternatives for label in self._labels]
+        return Labels(chain(*spelling_alternatives))
+
+    @property
+    def first_spelling_alternatives(self) -> Labels:
+        """Return the first spelling alternatives for each label."""
+        return Labels(label.first_spelling_alternative for label in self._labels)
+
+    @property
+    def non_generated_spelling_alternatives(self) -> Labels:
+        """Return the non-generated spelling alternatives for each label."""
+        non_generated_spelling_alternatives = [label.non_generated_spelling_alternatives for label in self._labels]
+        return Labels(chain(*non_generated_spelling_alternatives))
+
+    @property
+    def first_non_generated_spelling_alternatives(self) -> Labels:
+        """Return the first non-generated spelling alternative for each label."""
+        return Labels(label.non_generated_spelling_alternatives[0] for label in self._labels)
+
+    @property
+    def as_strings(self) -> tuple[str, ...]:
+        """Return the labels as strings."""
+        return tuple(str(label) for label in self._labels)
+
+
+LabelFactory = Callable[[Language, str | list[str]], Labels]
 
 
 def label_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the labels from a string or list of strings."""
     labels = string if isinstance(string, list) else [string]
-    return tuple(Label(language, label) for label in labels if not label.startswith("("))
+    return Labels(Label(language, label) for label in labels if not label.startswith("("))
 
 
 def meaning_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the meanings from a string or list of strings."""
     meanings = string if isinstance(string, list) else [string]
-    return tuple(
+    return Labels(
         Label(language, meaning.removeprefix("(").removesuffix(")"))
         for meaning in meanings
         if not meaning.endswith(Label.COLLOQUIAL_POSTFIX)
