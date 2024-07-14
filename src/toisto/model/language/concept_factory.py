@@ -9,7 +9,7 @@ from . import Language
 from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds, RootConceptIds
 from .grammar import GrammaticalCategory
 from .iana_language_subtag_registry import ALL_LANGUAGES
-from .label import Labels, label_factory, meaning_factory
+from .label import LabelFactory, Labels, label_factory, meaning_factory
 
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
@@ -34,28 +34,23 @@ class ConceptFactory:
             self.concept_id,
             parent,
             self._constituent_concepts(),
-            self._labels(),
-            self._meanings(),
+            self._labels(label_factory),
+            self._labels(meaning_factory),
             self._related_concepts(),
             self._root_concepts(),
             self._answer_only(),
         )
 
-    def _labels(self) -> dict[Language, Labels]:
-        """Return the concept labels."""
-        return {
-            cast(Language, key): label_factory(cast(Language, key), cast(str | list[str], value))
-            for key, value in self.concept_dict.items()
-            if key in ALL_LANGUAGES
-        }
-
-    def _meanings(self) -> dict[Language, Labels]:
-        """Return the concept meanings."""
-        return {
-            cast(Language, key): meaning_factory(cast(Language, key), cast(str | list[str], value))
-            for key, value in self.concept_dict.items()
-            if key in ALL_LANGUAGES
-        }
+    def _labels(self, factory: LabelFactory) -> Labels:
+        """Create the labels from the concept dict, using the label factory passed."""
+        return Labels(
+            [
+                label
+                for key, value in self.concept_dict.items()
+                if key in ALL_LANGUAGES
+                for label in factory(cast(Language, key), cast(str | list[str], value))
+            ]
+        )
 
     def _related_concepts(self) -> RelatedConceptIds:
         """Create the related concepts."""

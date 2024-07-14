@@ -10,7 +10,7 @@ from unittest.mock import Mock, patch
 from toisto.metadata import README_URL
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.label import Label
+from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
@@ -95,8 +95,8 @@ See {README_URL} for more information.
         bar = ConceptId("bar")
         english = Language("en")
         concepts = {
-            Concept(foo, None, (), {english: (Label(english, "foo"),)}, {}, {}, {}, False),
-            Concept(bar, None, (), {english: (Label(english, "bar"),)}, {}, {}, {}, False),
+            Concept(foo, None, (), Labels((Label(english, "foo"),)), Labels(), {}, {}, False),
+            Concept(bar, None, (), Labels((Label(english, "bar"),)), Labels(), {}, {}, False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(

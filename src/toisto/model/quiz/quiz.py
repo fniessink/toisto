@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from functools import cached_property
 from itertools import chain
 from typing import Final, Literal, cast, get_args
@@ -94,8 +94,8 @@ class Quiz:
     _answers: Labels
     quiz_types: tuple[QuizType, ...]
     blocked_by: tuple[Quiz, ...]
-    _question_meanings: Labels = ()
-    _answer_meanings: Labels = ()
+    _question_meanings: Labels = field(default_factory=Labels)
+    _answer_meanings: Labels = field(default_factory=Labels)
 
     def __repr__(self) -> str:
         """Return a representation of the quiz for test purposes."""
@@ -137,52 +137,49 @@ class Quiz:
             guess = guess.with_lower_case_first_letter
         if guess.language == language_pair.source:
             guess = guess.lower_case
-            answers = tuple(answer.lower_case for answer in answers)
-        return match(str(guess), *(str(answer) for answer in answers))
+            answers = answers.lower_case
+        return match(str(guess), *answers.as_strings)
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
-        questions = (self._question, *self._question_meanings)
-        spelling_alternatives = (str(alternative) for label in questions for alternative in label.spelling_alternatives)
-        return match(str(guess), *spelling_alternatives)
+        questions = Labels((self._question,)) + self._question_meanings
+        return match(str(guess), *questions.spelling_alternatives.as_strings)
 
     @cached_property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""
-        return self._question.spelling_alternatives[0]
+        return self._question.first_spelling_alternative
 
     @property
     def answer(self) -> Label:
         """Return the first spelling alternative of the first answer."""
-        return self._answers[0].spelling_alternatives[0]
+        return self._answers[0].first_spelling_alternative
 
     @property
     def answers(self) -> Labels:
         """Return all answers."""
-        answers = [answer.spelling_alternatives for answer in self._answers]
-        return cast(Labels, tuple(chain(*answers)))
+        return self._answers.spelling_alternatives
 
     @property
     def non_generated_answers(self) -> Labels:
         """Return all non-generated answers."""
-        answers = [answer.non_generated_spelling_alternatives for answer in self._answers]
-        return cast(Labels, tuple(chain(*answers)))
+        return self._answers.non_generated_spelling_alternatives
 
     @property
     def question_meanings(self) -> Labels:
         """Return the first spelling alternative of the question meanings."""
-        return Labels(meaning.spelling_alternatives[0] for meaning in self._question_meanings)
+        return self._question_meanings.first_spelling_alternatives
 
     @property
     def answer_meanings(self) -> Labels:
         """Return the first spelling alternative of the answer meanings."""
-        return Labels(meaning.spelling_alternatives[0] for meaning in self._answer_meanings)
+        return self._answer_meanings.first_spelling_alternatives
 
     def other_answers(self, guess: Label) -> Labels:
         """Return the answers not equal to the guess."""
         if self.quiz_types[0] in get_args(ListenQuizType):
             return Labels()  # Returning other answers doesn't make sense if the user has to type what is spoken
-        return tuple(
+        return Labels(
             answer
             for answer in self.non_generated_answers
             if not match(str(guess.lower_case), str(answer.lower_case)) and guess not in answer.spelling_alternatives

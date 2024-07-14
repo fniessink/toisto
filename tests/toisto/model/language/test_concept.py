@@ -4,7 +4,7 @@ from typing import get_args
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
-from toisto.model.language.label import Label
+from toisto.model.language.label import Label, Labels
 
 from ....base import ToistoTestCase
 
@@ -76,4 +76,4 @@ class ConceptTest(ToistoTestCase):
             ),
         )
         expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
-        self.assertEqual(tuple(Label(EN, label) for label in expected_labels), concept.labels(EN))
+        self.assertEqual(Labels(Label(EN, label) for label in expected_labels), concept.labels(EN))

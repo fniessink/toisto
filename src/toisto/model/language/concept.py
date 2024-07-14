@@ -71,8 +71,8 @@ class Concept:
     concept_id: ConceptId
     _parent: ConceptId | None
     _constituents: ConceptIds
-    _labels: dict[Language, Labels]
-    _meanings: dict[Language, Labels]
+    _labels: Labels
+    _meanings: Labels
     _related_concepts: RelatedConceptIds
     _roots: RootConceptIds
     answer_only: bool
@@ -132,22 +132,14 @@ class Concept:
     def labels(self, language: Language) -> Labels:
         """Return the labels for the language."""
         if self.is_composite(language):
-            return tuple(chain.from_iterable(concept.labels(language) for concept in self.constituents))
-        return self._labels.get(language, Labels())
-
-    def colloquial_labels(self, language: Language) -> Labels:
-        """Return the colloquial labels for the language."""
-        return Labels(label for label in self.labels(language) if label.is_colloquial)
-
-    def non_colloquial_labels(self, language: Language) -> Labels:
-        """Return the non-colloquial labels for the language."""
-        return Labels(label for label in self.labels(language) if not label.is_colloquial)
+            return Labels(chain.from_iterable(concept.labels(language) for concept in self.constituents))
+        return self._labels.with_language(language)
 
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept in the specified language."""
         if self.is_composite(language):
-            return tuple(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
-        return self._meanings.get(language, Labels())
+            return Labels(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
+        return self._meanings.with_language(language)
 
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
@@ -156,7 +148,7 @@ class Concept:
 
     def is_composite(self, language: Language) -> bool:
         """Return whether this concept is composite."""
-        return self._labels.get(language) is None
+        return not any((self._labels + self._meanings).with_language(language))
 
     def compounds(self, language: Language) -> Concepts:
         """Return the compounds of the concept."""

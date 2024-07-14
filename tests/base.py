@@ -1,6 +1,7 @@
 """Base class for unit tests."""
 
 import unittest
+from collections.abc import Sequence
 from typing import Final, cast
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
@@ -34,7 +35,7 @@ class ToistoTestCase(unittest.TestCase):
         self,
         concept: Concept,
         question: str,
-        answers: list[str],
+        answers: Sequence[str],
         quiz_type: str | tuple[str, ...] = ("read",),
         blocked_by: tuple[Quiz, ...] = (),
         question_meanings: tuple[str, ...] = (),
@@ -49,7 +50,7 @@ class ToistoTestCase(unittest.TestCase):
         return Quiz(
             concept,
             Label(question_language, question),
-            tuple(Label(answer_language, answer) for answer in answers),
+            Labels(Label(answer_language, answer) for answer in answers),
             quiz_type,
             blocked_by,
             Labels(Label(question_language, meaning) for meaning in question_meanings),
@@ -67,11 +68,11 @@ class ToistoTestCase(unittest.TestCase):
         return self.create_quiz(
             quiz.concept,
             question=question or str(quiz.question),
-            answers=answers or [str(answer) for answer in quiz.answers],
+            answers=answers or quiz.answers.as_strings,
             quiz_type=quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
             blocked_by=quiz.blocked_by,
-            question_meanings=tuple(str(meaning) for meaning in quiz.question_meanings),
-            answer_meanings=tuple(str(meaning) for meaning in quiz.answer_meanings),
+            question_meanings=quiz.question_meanings.as_strings,
+            answer_meanings=quiz.answer_meanings.as_strings,
         )
 
     @staticmethod
