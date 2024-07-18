@@ -71,12 +71,48 @@ Run bandit to check for security issues:
 bandit -r src tests
 ```
 
-## How to format the source code
+Run `tools/format_json.py` to check the formatting of the JSON files:
+
+```console
+python tools/format_json.py --check-only
+```
+
+To run all tests consecutively:
+
+```console
+tools/test.sh
+```
+
+## How to format and fix the source code
 
 Run Ruff to format the code:
 
 ```console
 ruff format .
+```
+
+Run Ruff to fix the code:
+
+```console
+ruff check --fix .
+```
+
+Run fixit to fix linting issues:
+
+```console
+fixit fix .
+```
+
+Run `tools/format_json.py` to format the JSON files:
+
+```console
+python tools/format_json.py
+```
+
+To apply all automated formatting and fixes, run `tools/fix.sh`:
+
+```console
+tools/fix.sh
 ```
 
 ## How to release
