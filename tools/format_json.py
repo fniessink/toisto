@@ -14,22 +14,19 @@ def format_json_file(json_file: Path, check_only: bool) -> int:  # noqa: FBT001
     formatted_content = json.dumps(json.loads(unformatted_content), ensure_ascii=False, indent=4)
     if unformatted_content == formatted_content:
         return 0
-    sys.stdout.write(f"{json_file} incorrectly formatted\n" if check_only else f"{json_file} formatted\n")
     if check_only:
+        sys.stdout.write(f"{json_file} incorrectly formatted\n")
         return 1
     json_file.write_text(formatted_content)
+    sys.stdout.write(f"{json_file} formatted\n")
     return 0
 
 
 def format_json_files(check_only: bool) -> int:  # noqa: FBT001
     """Format the JSON files."""
-    exit_code = 0
     list_files_command = "git ls-files -z -- *.json"
-    json_files = check_output(list_files_command, shell=True).decode()  # nosec # noqa: S602
-    for json_filename in json_files.split("\0"):
-        json_file = Path(json_filename)
-        exit_code = max(exit_code, format_json_file(json_file, check_only))
-    return exit_code
+    json_filenames = check_output(list_files_command, shell=True).decode().split("\0")  # nosec # noqa: S602
+    return max([format_json_file(Path(json_filename), check_only) for json_filename in json_filenames], default=0)
 
 
 if __name__ == "__main__":
