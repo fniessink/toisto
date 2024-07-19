@@ -19,100 +19,18 @@ python3 -m venv venv
 pip install -e .[dev]
 ```
 
-## How to test
+## How to test and check the quality
 
-Run the unit tests as follows:
-
-```console
-green
-```
-
-To run the unit tests and get a coverage report, use:
-
-```console
-green -r
-```
-
-## How to check quality
-
-Run mypy to check for typing issues:
-
-```console
-mypy src tests
-```
-
-Run Ruff to check for linting issues:
-
-```console
-ruff check .
-```
-
-Run Ruff to check for formatting issues:
-
-```console
-ruff format --check .
-```
-
-Run vulture to check for dead code:
-
-```console
-vulture src tests
-```
-
-Run fixit to check for linting issues:
-
-```console
-fixit lint .
-```
-
-Run bandit to check for security issues:
-
-```console
-bandit -r src tests
-```
-
-Run `tools/format_json.py` to check the formatting of the JSON files:
-
-```console
-python tools/format_json.py --check-only
-```
-
-To run all tests consecutively:
+Run all tests and quality checks as follows:
 
 ```console
 tools/test.sh
 ```
 
-## How to format and fix the source code
-
-Run Ruff to format the code:
+To also apply automated fixes where possible:
 
 ```console
-ruff format .
-```
-
-Run Ruff to fix the code:
-
-```console
-ruff check --fix .
-```
-
-Run fixit to fix linting issues:
-
-```console
-fixit fix .
-```
-
-Run `tools/format_json.py` to format the JSON files:
-
-```console
-python tools/format_json.py
-```
-
-To apply all automated formatting and fixes, run `tools/fix.sh`:
-
-```console
-tools/fix.sh
+tools/test.sh --fix
 ```
 
 ## How to release
