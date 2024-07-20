@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Don't check capitalisation for answers in the source language. Fixes [#721](https://github.com/fniessink/toisto/issues/721).
 
+### Added
+
+- Automatically generate hints for homonyms. Closes [#725](https://github.com/fniessink/toisto/issues/725).
+
 ## 0.20.0 - 2024-07-02
 
 ### Added
