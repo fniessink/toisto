@@ -67,6 +67,9 @@ class Feedback:
     TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
         "⚠️  Incorrect. Please try again, in [light_goldenrod2][bold]%(language)s[/bold][/light_goldenrod2]."
     )
+    TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = (
+        "⚠️  Incorrect. Please try again, in [light_goldenrod2][bold] standard %(language)s[/bold][/light_goldenrod2]."
+    )
 
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
         self.quiz = quiz
@@ -96,7 +99,9 @@ class Feedback:
     def _try_again(self, guess: Label) -> str:
         """Return the feedback when the first attempt is incorrect."""
         if self.quiz.is_question(guess) and not self.quiz.is_grammatical:
-            return self.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language=ALL_LANGUAGES[self.quiz.answer.language])
+            colloquial = self.quiz.question.is_colloquial
+            try_again = self.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE if colloquial else self.TRY_AGAIN_IN_ANSWER_LANGUAGE
+            return try_again % dict(language=ALL_LANGUAGES[self.quiz.answer.language])
         return self.TRY_AGAIN
 
     def _correct_answer(self, guess: Label) -> str:

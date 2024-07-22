@@ -97,6 +97,17 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("dictate")
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish"), self.practice(quizzes))
 
+    @patch("builtins.input", Mock(return_value="jätski\n"))
+    def test_answer_with_question_colloquial(self):
+        """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
+        concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
+        dictate_quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        colloquial_dictate_quizzes = Quizzes(quiz for quiz in dictate_quizzes if quiz.question == Label(FI, "jätski*"))
+        self.assert_printed(
+            Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
+            self.practice(colloquial_dictate_quizzes),
+        )
+
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
