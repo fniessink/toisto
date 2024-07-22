@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Don't print an extra empty line between quizzes. Fixes [#719](https://github.com/fniessink/toisto/issues/719).
 - Use colors with better contrast in black on white terminals. Fixes [#720](https://github.com/fniessink/toisto/issues/720).
+- While quizzing colloquial language, when the user answers in the colloquial language instead of the standard language, add "standard" to the warning message. Fixes [#743](https://github.com/fniessink/toisto/issues/743).
 
 ### Changed
 
