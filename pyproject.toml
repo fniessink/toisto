@@ -4,10 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.20.0"
-authors = [
-  { name="Frank Niessink", email="frank@niessink.com" },
-]
+version = "0.21.0"
+authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -80,11 +78,11 @@ ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = "toisto.persistence.json_file"
-disable_error_code = "type-arg"  # Don't complain about JSON types not being completely specified
+disable_error_code = "type-arg"         # Don't complain about JSON types not being completely specified
 
 [[tool.mypy.overrides]]
 module = ["tests.*"]
-allow_untyped_defs = true  # Allow for not specifying None as return value on every test method
+allow_untyped_defs = true # Allow for not specifying None as return value on every test method
 
 [tool.ruff]
 target-version = "py310"
@@ -93,25 +91,32 @@ line-length = 120
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-    "ANN101",  # Prevent 'Missing type annotation for `self` in method' errors
-    "ANN102",  # Prevent 'Missing type annotation for `cls` in classmethod' errors
-    "C408",    # Prevent 'Unnecessary `dict` call (rewrite as a literal)' errors
-    "COM812",  # This rule may cause conflicts when used with the ruff formatter
-    "D107",    # Prevent 'Missing docstring in `__init__`' errors
-    "D203",    # Prevent warning about incompatible rules
-    "D213",    # Prevent warning about incompatible rules
-    "DTZ005",  # Prevent 'The use of `datetime.datetime.now()` without `tz` argument is not allowed' errors
-    "FBT003",  # Prevent 'Boolean positional value in function call' errors
-    "ISC001",  # This rule may cause conflicts when used with the ruff formatter
-    "PT",      # We don't use Pytest
-    "TCH001",  # Prevent 'Move application import `...` into a type-checking block' errors
-    "TCH002",  # Prevent 'Move third-party import `...` into a type-checking block' errors
-    "TCH003",  # Prevent 'Move standard library import `...` into a type-checking block' errors
-    "TID252",  # Prevent 'Relative imports from parent modules are banned' errors
+    "ANN101", # Prevent 'Missing type annotation for `self` in method' errors
+    "ANN102", # Prevent 'Missing type annotation for `cls` in classmethod' errors
+    "C408",   # Prevent 'Unnecessary `dict` call (rewrite as a literal)' errors
+    "COM812", # This rule may cause conflicts when used with the ruff formatter
+    "D107",   # Prevent 'Missing docstring in `__init__`' errors
+    "D203",   # Prevent warning about incompatible rules
+    "D213",   # Prevent warning about incompatible rules
+    "DTZ005", # Prevent 'The use of `datetime.datetime.now()` without `tz` argument is not allowed' errors
+    "FBT003", # Prevent 'Boolean positional value in function call' errors
+    "ISC001", # This rule may cause conflicts when used with the ruff formatter
+    "PT",     # We don't use Pytest
+    "TCH001", # Prevent 'Move application import `...` into a type-checking block' errors
+    "TCH002", # Prevent 'Move third-party import `...` into a type-checking block' errors
+    "TCH003", # Prevent 'Move standard library import `...` into a type-checking block' errors
+    "TID252", # Prevent 'Relative imports from parent modules are banned' errors
 ]
 
 [tool.ruff.lint.isort]
-section-order = ["future", "standard-library", "third-party", "second-party", "first-party", "local-folder"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "second-party",
+    "first-party",
+    "local-folder",
+]
 
 [tool.ruff.lint.isort.sections]
 "second-party" = ["toisto"]
