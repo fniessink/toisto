@@ -78,13 +78,13 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
-    homonyms: ClassVar[Registry[Label, Concept]] = Registry[Label, "Concept"]()
+    homographs: ClassVar[Registry[Label, Concept]] = Registry[Label, "Concept"]()
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
         for label in self._labels:
-            self.homonyms.add_item(label, self)
+            self.homographs.add_item(label, self)
 
     def __hash__(self) -> int:
         """Return the concept hash."""
@@ -109,11 +109,11 @@ class Concept:
             related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
         return tuple(related_concepts_list)
 
-    def get_homonyms(self, label: Label) -> Concepts:
-        """Return the homonyms for the label, provided it is a label of this concept."""
+    def get_homographs(self, label: Label) -> Concepts:
+        """Return the homographs for the label, provided it is a label of this concept."""
         if label not in self._labels:
             return ()
-        return tuple(concept for concept in self.homonyms.get_values(label) if concept != self)
+        return tuple(concept for concept in self.homographs.get_values(label) if concept != self)
 
     @property
     def parent(self) -> Concept | None:

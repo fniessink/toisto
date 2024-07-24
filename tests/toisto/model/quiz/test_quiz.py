@@ -207,36 +207,36 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, "Terve!", ["Hallo!"], "interpret")
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
-    def test_homonyms_get_an_automatic_note_based_on_the_hypernym(self):
-        """Test that homonyms get an automatic note based on the hypernym."""
+    def test_homographs_get_an_automatic_note_based_on_the_hypernym(self):
+        """Test that homographs get an automatic note based on the hypernym."""
         self.language_pair = NL_FI
-        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homonym of sofa
+        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
         self.create_concept("furniture", {})  # Create the hypernym of sofa
         sofa = self.create_concept("bank", {"hypernym": "furniture", "fi": "sohva", "nl": "de bank"})
         quiz = self.create_quiz(sofa, "de bank", ["sohva"], "dictate")
         self.assertEqual("Listen and write in Dutch (furniture)", quiz.instruction)
 
-    def test_non_homonyms_do_not_get_an_automatic_note_based_on_the_hypernym(self):
-        """Test that concepts that are not homonym do not get an automatic note based on the hypernym."""
+    def test_non_homographs_do_not_get_an_automatic_note_based_on_the_hypernym(self):
+        """Test that concepts that are not homograph do not get an automatic note based on the hypernym."""
         self.language_pair = NL_EN
-        self.create_concept("to fly", {"en": "fly", "nl": "vliegen"})  # Create the homonym of fly
+        self.create_concept("to fly", {"en": "fly", "nl": "vliegen"})  # Create the homograph of fly
         self.create_concept("insect", {})  # Create the hypernym of fly
         fly = self.create_concept("fly", {"hypernym": "insect", "en": "fly", "nl": "de vlieg"})
         quiz = self.create_quiz(fly, "de vlieg", ["de vlieg"], "dictate")
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
 
-    def test_homonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
-        """Test that homonyms get an automatic note based on the first hypernym if there are multiple."""
+    def test_homographs_get_an_automatic_note_based_on_only_the_first_hypernym(self):
+        """Test that homographs get an automatic note based on the first hypernym if there are multiple."""
         self.language_pair = NL_FI
-        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homonym of sofa
+        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
         self.create_concept("furniture", {})  # Create the hypernym of seating
         self.create_concept("seating", {"hypernym": "furniture"})  # Create the hypernym of sofa
         sofa = self.create_concept("sofa", {"hypernym": "seating", "fi": "sohva", "nl": "de bank"})
         quiz = self.create_quiz(sofa, "de bank", ["sohva"], "dictate")
         self.assertEqual("Listen and write in Dutch (seating)", quiz.instruction)
 
-    def test_homonyms_get_an_automatic_note_based_on_the_common_base_concept(self):
-        """Test that homonyms get an automatic note based on the common base concept."""
+    def test_homographs_get_an_automatic_note_based_on_the_common_base_concept(self):
+        """Test that homographs get an automatic note based on the common base concept."""
         self.language_pair = EN_NL
         concept = self.create_concept(
             "to have",
@@ -257,8 +257,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, "you have", ["jij hebt"], "interpret")
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
-    def test_homonyms_get_an_automatic_note_based_on_the_common_base_concept_when_more_than_two_homonyms(self):
-        """Test that homonyms get an automatic note based on the common base concept."""
+    def test_homographs_get_an_automatic_note_based_on_the_common_base_concept_when_more_than_two_homographs(self):
+        """Test that homographs get an automatic note based on the common base concept."""
         self.language_pair = EN_NL
         concept = self.create_concept(
             "to read",
