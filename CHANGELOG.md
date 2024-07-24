@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - What were called homonyms previously, are actually homographs: labels that are spelled the same.
+- Languages in Finnish should be lower case, but Toisto did not enforce this. Fixes [#736](https://github.com/fniessink/toisto/issues/736).
 
 ### Added
 
