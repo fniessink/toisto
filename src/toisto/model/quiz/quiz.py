@@ -133,8 +133,6 @@ class Quiz:
     def is_correct(self, guess: Label, language_pair: LanguagePair) -> bool:
         """Return whether the guess is correct."""
         answers = self.answers
-        if all(not label.has_upper_case for label in (*answers, self.question)):
-            guess = guess.with_lower_case_first_letter
         if guess.language == language_pair.source:
             guess = guess.lower_case
             answers = answers.lower_case

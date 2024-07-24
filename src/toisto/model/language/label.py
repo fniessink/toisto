@@ -104,11 +104,6 @@ class Label:
         return Label(self.language, self._value.split(self.NOTE_SEP)[0])
 
     @property
-    def with_lower_case_first_letter(self) -> Label:
-        """Return the label with the first letter lower cased."""
-        return Label(self.language, self._value[0].lower() + self._value[1:])
-
-    @property
     def with_upper_case_first_letter(self) -> Label:
         """Return the label with the first letter upper cased."""
         return Label(self.language, self._value[0].upper() + self._value[1:])
@@ -132,11 +127,6 @@ class Label:
     def starts_with_upper_case(self) -> bool:
         """Return whether the label starts with an upper case letter."""
         return self._value[0].isupper()
-
-    @property
-    def has_upper_case(self) -> bool:
-        """Return whether the label has one or more upper case letters."""
-        return any(char.isupper() for char in self._value)
 
     @property
     def ends_with_punctuation(self) -> bool:

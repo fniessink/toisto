@@ -59,17 +59,30 @@ class QuizTest(QuizTestCase):
         """Test that a lower case answer to an upper case question is correct, if source language == answer language."""
         self.assertTrue(self.quiz.is_correct(Label(NL, "engels"), self.language_pair))
 
-    def test_is_not_correct_due_to_upper_case_answer(self):
-        """Test that a lower case answer is incorrect when the answer should be upper case."""
+    def test_case_matches_for_read_and_intepret_quizzes(self):
+        """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
-        quiz = self.create_quiz(concept, "suomi", ["het Fins"], "read", language_pair=FI_NL)
-        self.assertTrue(quiz.is_correct(Label(NL, "fins"), FI_NL), quiz)
-        quiz = self.create_quiz(concept, "het Fins", ["suomi"], "read", language_pair=NL_FI)
-        self.assertTrue(quiz.is_correct(Label(FI, "Suomi"), NL_FI))
-        quiz = self.create_quiz(concept, "suomi", ["het Fins"], "listen", language_pair=FI_NL)
-        self.assertFalse(quiz.is_correct(Label(NL, "Suomi"), FI_NL))
-        quiz = self.create_quiz(concept, "het Fins", ["suomi"], "listen", language_pair=NL_FI)
-        self.assertTrue(quiz.is_correct(Label(FI, "Suomi"), NL_FI))
+
+        for quiz_type in ("read", "interpret"):
+            quiz = self.create_quiz(concept, "suomi", ["het Fins"], quiz_type, language_pair=FI_NL)
+            self.assertTrue(quiz.is_correct(Label(NL, "Fins"), FI_NL), quiz)
+            self.assertTrue(quiz.is_correct(Label(NL, "fins"), FI_NL), quiz)
+
+            quiz = self.create_quiz(concept, "het Fins", ["suomi"], quiz_type, language_pair=NL_FI)
+            self.assertTrue(quiz.is_correct(Label(FI, "Suomi"), NL_FI))
+            self.assertTrue(quiz.is_correct(Label(FI, "suomi"), NL_FI))
+
+    def test_case_matches_for_listen_quizzes(self):
+        """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
+        concept = self.create_concept("finnish", {})
+
+        quiz = self.create_quiz(concept, "suomi", ["suomi"], "listen", language_pair=FI_NL)
+        self.assertFalse(quiz.is_correct(Label(FI, "Suomi"), FI_NL))
+        self.assertTrue(quiz.is_correct(Label(FI, "suomi"), FI_NL))
+
+        quiz = self.create_quiz(concept, "het Fins", ["het Fins"], "listen", language_pair=NL_FI)
+        self.assertFalse(quiz.is_correct(Label(NL, "fins"), NL_FI))
+        self.assertTrue(quiz.is_correct(Label(NL, "Fins"), NL_FI))
 
     def test_get_answer(self):
         """Test that the answer is returned."""
