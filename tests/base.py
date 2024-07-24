@@ -29,7 +29,7 @@ class ToistoTestCase(unittest.TestCase):
     def tearDown(self) -> None:
         """Clear the registries."""
         Concept.instances.clear()
-        Concept.homonyms.clear()
+        Concept.homographs.clear()
 
     @staticmethod
     def create_concept(concept_id: str, concept_dict: dict[str, object]) -> Concept:

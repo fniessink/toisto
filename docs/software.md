@@ -185,11 +185,11 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 }
 ```
 
-### Different concepts with the same label (homonyms)
+### Different concepts with the same label (homographs)
 
-If different concepts have the same label (meaning they are homonyms) and Toisto presents the label in a quiz, it's impossible for the user to know which concept Toisto is looking for. For example, the Dutch word "bank" can mean both "couch" and "bank". A quiz asking the user to translate the Dutch word "bank" to English could be looking for either "bank" or "couch". English verbs have the same problem, as the second person singular and the second person plural are indistinguishable without context.
+If different concepts have the same label (meaning they are homographs) and Toisto presents the label in a quiz, it's impossible for the user to know which concept Toisto is looking for. For example, the Dutch word "bank" can mean both "couch" and "bank". A quiz asking the user to translate the Dutch word "bank" to English could be looking for either "bank" or "couch". English verbs have the same problem, as the second person singular and the second person plural are indistinguishable without context.
 
-Toisto recognizes homonyms and automatically provides a hint when quizzing a label that has homonyms. It does so by looking at the relation between the different concepts that share the homonym.
+Toisto recognizes homographs and automatically provides a hint when quizzing a label that has homographs. It does so by looking at the relation between the different concepts that share the same label.
 
 If the concepts share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example:
 

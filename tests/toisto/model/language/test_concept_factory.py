@@ -54,11 +54,11 @@ class ConcepFactoryTest(ToistoTestCase):
         table = self.create_concept("table", dict(en="table", nl="de tafel"))
         self.assertEqual((diner_table, chair, table), diner_table_chair.roots(EN))
 
-    def test_homonym(self):
-        """Test that a concept can have a homonym concept."""
+    def test_homograph(self):
+        """Test that a concept can have a homograph concept."""
         wind_weather = self.create_concept("wind (weather)", dict(en="wind"))
         wind_verb = self.create_concept("wind (verb)", dict(en="wind"))
-        self.assertEqual((wind_weather,), wind_verb.get_homonyms(Label(EN, "wind")))
+        self.assertEqual((wind_weather,), wind_verb.get_homographs(Label(EN, "wind")))
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""
