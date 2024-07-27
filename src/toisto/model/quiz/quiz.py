@@ -224,20 +224,17 @@ class Quiz:
         question_note = self._answers[0].question_note if "write" in self.quiz_types else self._question.question_note
         if note_applicable and question_note:
             question_notes.append(question_note)
-        if homographs := self.concept.get_homographs(self._question):
-            question_notes.extend(self._homograph_notes(homographs))
+        if {"dictate", "interpret"} & set(self.quiz_types):
+            if homographs := self.concept.get_homographs(self._question):
+                question_notes.extend(self._homonym_notes(homographs))
+            elif capitonyms := self.concept.get_capitonyms(self._question):
+                question_notes.extend(self._homonym_notes(capitonyms))
         return f" ({'; '.join(question_notes)})" if (question_notes) else ""
 
-    def _homograph_notes(self, homographs: Concepts) -> list[str]:
-        """Return the note(s) to be shown as part of the question, if the question has one or more homographs."""
-        if all(homograph.base_concept == self.concept.base_concept for homograph in homographs):
-            grammar_hints = set()
-            for index, grammatical_category in enumerate(self.concept.grammatical_categories):
-                for homograph in homographs:
-                    homograph_grammatical_category = homograph.grammatical_categories[index]
-                    if homograph_grammatical_category != grammatical_category:
-                        grammar_hints.add(grammatical_category)
-            return sorted(grammar_hints)
+    def _homonym_notes(self, homonyms: Concepts) -> Sequence[str]:
+        """Return the note(s) to be shown as part of the question, if the question has one or more homonyms."""
+        if self.concept.same_base_concept(*homonyms):
+            return self.concept.grammatical_differences(*homonyms)
         hypernyms = self.concept.get_related_concepts("hypernym")
         return [hypernym.concept_id for hypernym in hypernyms[:1]]
 
