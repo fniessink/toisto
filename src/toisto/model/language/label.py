@@ -39,13 +39,13 @@ class Label:
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
         if isinstance(other, Label):
-            return self.language == other.language and self.without_notes == other.without_notes
+            return self.language == other.language and str(self.without_notes) == str(other.without_notes)
         return False
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
         if isinstance(other, Label):
-            return self.language != other.language or self.without_notes != other.without_notes
+            return self.language != other.language or str(self.without_notes) != str(other.without_notes)
         return True
 
     def __bool__(self) -> bool:
@@ -65,7 +65,7 @@ class Label:
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
-        return label_factory(self.language, self.without_notes.split(self.SPELLING_ALTERNATIVES_SEP))
+        return label_factory(self.language, str(self.without_notes).split(self.SPELLING_ALTERNATIVES_SEP))
 
     @cached_property
     def spelling_alternatives(self) -> Labels:
@@ -99,9 +99,9 @@ class Label:
         return self._value.split(self.NOTE_SEP)[self.ANSWER_NOTE_INDEX :] if has_answer_notes else ()
 
     @property
-    def without_notes(self) -> str:
+    def without_notes(self) -> Label:
         """Return the label without the notes."""
-        return self._value.split(self.NOTE_SEP)[0]
+        return Label(self.language, self._value.split(self.NOTE_SEP)[0])
 
     @property
     def with_lower_case_first_letter(self) -> Label:
@@ -121,7 +121,7 @@ class Label:
     @property
     def is_colloquial(self) -> bool:
         """Return whether this is a colloquial label."""
-        return self.without_notes.endswith(self.COLLOQUIAL_POSTFIX)
+        return str(self.without_notes).endswith(self.COLLOQUIAL_POSTFIX)
 
     @property
     def is_complete_sentence(self) -> bool:
@@ -141,12 +141,12 @@ class Label:
     @property
     def ends_with_punctuation(self) -> bool:
         """Return whether the label ends with punctuation."""
-        return self.without_notes.strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION
+        return str(self.without_notes).strip(self.COLLOQUIAL_POSTFIX)[-1] in END_OF_SENTENCE_PUNCTUATION
 
     @property
     def pronounceable(self) -> str:
         """Return the label as text that can be sent to a speech synthesizer."""
-        return self.without_notes.rstrip(self.COLLOQUIAL_POSTFIX).replace("'", "").replace("-", " ")
+        return str(self.without_notes).rstrip(self.COLLOQUIAL_POSTFIX).replace("'", "").replace("-", " ")
 
 
 class Labels:
