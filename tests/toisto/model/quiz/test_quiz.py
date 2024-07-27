@@ -281,6 +281,49 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, "you read", ["jij leest"], "interpret")
         self.assertEqual("Listen and write in Dutch (present tense; singular)", quiz.instruction)
 
+    def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
+        """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
+        self.language_pair = FI_NL
+        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})  # Create the capitonym of greek
+        self.create_concept("language", {})  # Create the hypernym of Indo-Wuropean language
+        greek = self.create_concept("greek", {"hypernym": "language", "fi": "kreikka", "nl": "Grieks"})
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "dictate")
+        self.assertEqual("Listen and write in Finnish (language)", quiz.instruction)
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "read")
+        self.assertEqual("Translate into Dutch", quiz.instruction)
+
+    def test_capitonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
+        """Test that capitonyms get an automatic note based on the first hypernym if there are multiple."""
+        self.language_pair = FI_NL
+        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})  # Create the capitonym of greek
+        self.create_concept("language", {})  # Create the hypernym of Indo-European language
+        self.create_concept("Indo-European language", {"hypernym": "language"})  # Create the hypernym of greek
+        greek = self.create_concept("greek", {"hypernym": "Indo-European language", "fi": "kreikka", "nl": "Grieks"})
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "dictate")
+        self.assertEqual("Listen and write in Finnish (Indo-European language)", quiz.instruction)
+
+    def test_capitonyms_get_an_automatic_note_based_on_the_common_base_concept(self):
+        """Test that capitonyms get an automatic note based on the common base concept."""
+        self.language_pair = FI_NL
+        concept = self.create_concept(
+            "to be",
+            dict(
+                singular={
+                    "second person": dict(fi="Te olette", nl="u bent"),
+                },
+                plural={
+                    "second person": dict(fi="te olette", nl="jullie zijn"),
+                },
+            ),
+        )
+        second_person_singular = next(
+            leaf_concept
+            for leaf_concept in concept.leaf_concepts(FI)
+            if leaf_concept.concept_id == "to be/singular/second person"
+        )
+        quiz = self.create_quiz(second_person_singular, "Te olette", ["u bent"], "interpret")
+        self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
+
 
 class QuizSpellingAlternativesTests(QuizTestCase):
     """Unit tests for checking spelling alternatives."""

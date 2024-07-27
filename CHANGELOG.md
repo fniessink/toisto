@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - What were called homonyms previously, are actually homographs: labels that are spelled the same.
 
+### Added
+
+- Automatically generate hints for capitonyms. For example, "Kreikka" (Greece) and "kreikka" (Greek) in Finnish. Closes [#730](https://github.com/fniessink/toisto/issues/730).
+
 ## 0.21.0 - 2024-07-23
 
 ### Fixed
@@ -25,7 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
-- Automatically generate hints for homonyms. Closes [#725](https://github.com/fniessink/toisto/issues/725).
+- Automatically generate hints for homographs. Closes [#725](https://github.com/fniessink/toisto/issues/725).
 - Add Finnish puhekieli for olla (omistaa).
 - Add some art related concepts.
 

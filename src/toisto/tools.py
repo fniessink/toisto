@@ -19,17 +19,18 @@ Value = TypeVar("Value")
 class Registry(Generic[Key, Value]):
     """Registry for looking up values by their key."""
 
-    def __init__(self) -> None:
+    def __init__(self, key_transformer: Callable[[Key], Key] = lambda key: key) -> None:
         self.__items: dict[Key, list[Value]] = {}
+        self.__transform = key_transformer
         self.items = self.__items
 
     def add_item(self, key: Key, value: Value) -> None:
         """Register the item."""
-        self.__items.setdefault(key, []).append(value)
+        self.__items.setdefault(self.__transform(key), []).append(value)
 
     def get_values(self, *keys: Key) -> tuple[Value, ...]:
         """Return the values with the given keys."""
-        return tuple(value for key in keys for value in self.__items[key])
+        return tuple(value for key in keys for value in self.__items[self.__transform(key)])
 
     def get_all_values(self) -> tuple[Value, ...]:
         """Return all values."""

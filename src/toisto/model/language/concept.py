@@ -28,15 +28,20 @@ def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
     return cast(ConceptRelation, {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
 
 
+HomonymRegistry = Registry[Label, "Concept"]
+
+
 @dataclass(frozen=True)
 class Concept:
     """Class representing language concepts.
 
-    A concept is either a composite or a leaf concept. Composite concepts have two or more constituent concepts,
+    A concept can be a composite and/or a leaf concept. Composite concepts have two or more constituent concepts,
     representing different grammatical categories, for example singular and plural forms. Leaf concepts have labels
-    in different languages.
+    in different languages. Concepts can be constituent in one language and leaf in another concepts. For example, the
+    third person singular form of English verbs has both a female ("she walks") and a male form ("he walks"), but
+    Finnish does not ("hän kävelee").
 
-    Concepts can have following types of relations to other concepts:
+    Concepts can have the following types of relations to other concepts:
 
     - The antonym relation is used to capture opposites. For example 'bad' has 'good' as antonym and 'good' has 'bad'
       as antonym.
@@ -54,18 +59,22 @@ class Concept:
 
     - The examples relation is used to specify other concepts that exemplify the concept.
 
-    - The roots relation is used to capture the relation between compound concepts and their roots. For example,
-      the word 'blackboard' contains two roots, 'black' and 'board'. The concept for the compound concept refers to its
-      roots with the roots attribute. The roots relation can also be used for sentences, in which case the individual
-      words of a sentence are the roots. The roots relation is transitive.
-
-      Note that this relationship is different from the other types of concept relations because the roots relationship
-      is based on the label of the concept. It also means that the relationships can be different for different
-      languages. For example, the Dutch label 'schoolbord' has different roots than the English equivalent 'blackboard'.
-
     NOTE: This class keeps track of the related concepts using their concept identifier (ConceptId) and only when
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
     prevents the need for a second pass after instantiating concepts from the concept files to create the relations.
+
+    Next to the relations that are based on the meaning of the concepts, concepts can also be related via their labels:
+
+    - The roots relation is used to capture the relation between compound labels and their roots. For example, the
+      word 'blackboard' contains two roots, 'black' and 'board'. The concept with the compound label refers to its
+      roots with the roots attribute. The roots relation can also be used for sentences, in which case the individual
+      words of a sentence are the roots. The roots relation is transitive. The relationships can be different for
+      different languages. For example, the Dutch label 'schoolbord' has different roots than the English equivalent
+      'blackboard'.
+
+    - Toisto automatically keeps track of two types of homonyms: capitonyms and homographs. Concept labels are
+      capitonyms when they only differ in capitalization. Concept labels are homographs when they are written exactly
+      the same.
     """
 
     concept_id: ConceptId
@@ -78,12 +87,14 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
-    homographs: ClassVar[Registry[Label, Concept]] = Registry[Label, "Concept"]()
+    capitonyms: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.without_notes.lower_case)
+    homographs: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.without_notes)
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
         for label in self._labels:
+            self.capitonyms.add_item(label, self)
             self.homographs.add_item(label, self)
 
     def __hash__(self) -> int:
@@ -111,9 +122,17 @@ class Concept:
 
     def get_homographs(self, label: Label) -> Concepts:
         """Return the homographs for the label, provided it is a label of this concept."""
+        return self._get_homonyms(label, self.homographs)
+
+    def get_capitonyms(self, label: Label) -> Concepts:
+        """Return the capitonyms for the label, provided it is a label of this concept."""
+        return self._get_homonyms(label, self.capitonyms)
+
+    def _get_homonyms(self, label: Label, homonym_registry: HomonymRegistry) -> Concepts:
+        """Return the homonyms for the label as registered in the given homonym registry."""
         if label not in self._labels:
             return ()
-        return tuple(concept for concept in self.homographs.get_values(label) if concept != self)
+        return tuple(homonym for homonym in homonym_registry.get_values(label) if homonym != self)
 
     @property
     def parent(self) -> Concept | None:
@@ -124,6 +143,10 @@ class Concept:
     def base_concept(self) -> Concept:
         """Return the base concept of this concept."""
         return self.parent.base_concept if self.parent else self
+
+    def same_base_concept(self, *concepts: Concept) -> bool:
+        """Return whether the concepts have the same base concept as this concept."""
+        return all(self.base_concept == concept.base_concept for concept in concepts)
 
     @property
     def constituents(self) -> Concepts:
@@ -155,6 +178,18 @@ class Concept:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")
         return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
+
+    def grammatical_differences(self, *concepts: Concept) -> list[GrammaticalCategory]:
+        """Return the grammatical differences between this concept and the concepts.
+
+        Precondition is that this concept and the specified concepts share the same base concept.
+        """
+        grammatical_differences = set()
+        for index, grammatical_category in enumerate(self.grammatical_categories):
+            for concept in concepts:
+                if concept.grammatical_categories[index] != grammatical_category:
+                    grammatical_differences.add(grammatical_category)
+        return sorted(grammatical_differences)
 
     def is_composite(self, language: Language) -> bool:
         """Return whether this concept is composite."""

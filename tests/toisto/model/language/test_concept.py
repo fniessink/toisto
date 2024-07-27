@@ -77,3 +77,15 @@ class ConceptTest(ToistoTestCase):
         )
         expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
         self.assertEqual(Labels(Label(EN, label) for label in expected_labels), concept.labels(EN))
+
+    def test_homographs(self):
+        """Test that notes are ignored when determining homographs."""
+        bank = self.create_concept("bank", {"nl": "de bank;;some note"})
+        sofa = self.create_concept("sofa", {"nl": "de bank"})
+        self.assertEqual((bank,), sofa.get_homographs(Label(NL, "de bank")))
+
+    def test_capitonyms(self):
+        """Test that notes are ignored when determining capitonyms."""
+        greece = self.create_concept("greece", {"fi": "Kreikki"})
+        greek = self.create_concept("greek", {"fi": "kreikki;;In Finnish, the names of languages are not capitalized"})
+        self.assertEqual((greece,), greek.get_capitonyms(Label(FI, "kreikki")))
