@@ -71,5 +71,21 @@
         "en": "birthday",
         "fi": "syntymäpäivä",
         "nl": "de verjaardag"
+    },
+    "day care centre": {
+        "roots": {
+            "en": [
+                "day",
+                "care"
+            ],
+            "fi": [
+                "day",
+                "home"
+            ],
+            "nl": "child"
+        },
+        "en": "day care centre|day care center",
+        "fi": "päiväkoti",
+        "nl": "de kinderopvang"
     }
 }

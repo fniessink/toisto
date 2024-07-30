@@ -1,0 +1,21 @@
+{
+    "vowel": {
+        "singular": {
+            "en": "vowel",
+            "fi": "vokaali",
+            "nl": "de klinker"
+        },
+        "plural": {
+            "en": "vowels",
+            "fi": "vokaalit",
+            "nl": "de klinkers"
+        }
+    },
+    "vowel harmony": {
+        "involves": "finnish",
+        "roots": "vowel",
+        "en": "vowel harmony",
+        "fi": "vokaaliharmonia",
+        "nl": "de klinkerharmonie"
+    }
+}

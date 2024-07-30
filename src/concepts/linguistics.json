@@ -37,7 +37,7 @@
         "roots": "word",
         "en": "word order",
         "fi": "sanajärjestys",
-        "nl": "woordvolgorde"
+        "nl": "de woordvolgorde"
     },
     "vocabulary": {
         "roots": {
@@ -65,18 +65,6 @@
             "en": "sentences",
             "fi": "lauseet",
             "nl": "de zinnen"
-        }
-    },
-    "vowel": {
-        "singular": {
-            "en": "vowel",
-            "fi": "vokaali",
-            "nl": "de klinker"
-        },
-        "plural": {
-            "en": "vowels",
-            "fi": "vokaalit",
-            "nl": "de klinkers"
         }
     },
     "consonant": {

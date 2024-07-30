@@ -1,8 +1,22 @@
 {
     "throat": {
         "holonym": "body",
+        "example": "my throat hurts",
         "en": "throat",
-        "fi": "kurkku;anatomy",
+        "fi": "kurkku",
         "nl": "de keel"
+    },
+    "my throat hurts": {
+        "roots": {
+            "en": "throat",
+            "fi": "throat",
+            "nl": [
+                "throat",
+                "pain"
+            ]
+        },
+        "en": "My throat hurts.",
+        "fi": "Kurkkuni sattuu.",
+        "nl": "Mijn keel doet pijn."
     }
 }

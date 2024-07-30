@@ -1,5 +1,6 @@
 {
     "face": {
+        "example": "he has a friendly face",
         "singular": {
             "en": "face",
             "fi": [
@@ -16,5 +17,14 @@
             ],
             "nl": "de gezichten"
         }
+    },
+    "he has a friendly face": {
+        "roots": [
+            "friendly",
+            "face"
+        ],
+        "en": "He has a friendly face.",
+        "fi": "Hänellä on ystävälliset kasvot.;male",
+        "nl": "Hij heeft een vriendelijk gezicht."
     }
 }

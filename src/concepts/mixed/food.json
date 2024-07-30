@@ -203,19 +203,6 @@
             "nl": "de hotdogs"
         }
     },
-    "cheese": {
-        "hypernym": "food",
-        "singular": {
-            "en": "cheese",
-            "fi": "juusto",
-            "nl": "de kaas"
-        },
-        "plural": {
-            "en": "cheeses",
-            "fi": "juustot",
-            "nl": "de kazen"
-        }
-    },
     "fish": {
         "hypernym": "food",
         "singular": {
@@ -255,12 +242,6 @@
         "en": "pasta",
         "fi": "pasta",
         "nl": "de pasta"
-    },
-    "soup": {
-        "hypernym": "food",
-        "en": "soup",
-        "fi": "keitto",
-        "nl": "de soep"
     },
     "hamburger": {
         "hypernym": "meat",
@@ -808,7 +789,7 @@
     "cucumber": {
         "hypernym": "vegetable",
         "en": "cucumber",
-        "fi": "kurkku;vegetable",
+        "fi": "kurkku",
         "nl": "de komkommer"
     },
     "carrot": {

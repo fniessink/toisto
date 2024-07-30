@@ -1,0 +1,46 @@
+{
+    "thunder": {
+        "en": "thunder",
+        "fi": "ukkonen",
+        "nl": "de donder"
+    },
+    "thunderstorm": {
+        "roots": {
+            "en": [
+                "thunder",
+                "storm"
+            ],
+            "fi": [
+                "thunder",
+                "storm"
+            ],
+            "nl": "weather"
+        },
+        "en": "thunderstorm",
+        "fi": "ukkosmyrsky",
+        "nl": "het onweer"
+    },
+    "there is a thunderstorm": {
+        "roots": {
+            "en": [
+                "to be",
+                "thunderstorm"
+            ],
+            "fi": [
+                "to be",
+                "thunder"
+            ],
+            "nl": [
+                "to be",
+                "thunder"
+            ]
+        },
+        "en": "There is a thunderstorm.|There's a thunderstorm.",
+        "fi": [
+            "Ukkostaa.",
+            "On ukkonen.",
+            "On ukonilma."
+        ],
+        "nl": "Het onweert."
+    }
+}
