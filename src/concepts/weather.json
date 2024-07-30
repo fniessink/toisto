@@ -118,11 +118,6 @@
         "fi": "myrsky",
         "nl": "de storm"
     },
-    "thunder": {
-        "en": "thunder",
-        "fi": "ukkonen",
-        "nl": "de donder"
-    },
     "fog": {
         "en": "fog",
         "fi": "sumu",
@@ -171,27 +166,6 @@
         "en": "stormy",
         "fi": "myrskyinen",
         "nl": "stormachtig"
-    },
-    "there is a thunderstorm": {
-        "roots": {
-            "en": [
-                "to be",
-                "storm",
-                "thunder"
-            ],
-            "fi": [
-                "to be",
-                "thunder"
-            ],
-            "nl": "to be"
-        },
-        "en": "There is a thunderstorm.|There's a thunderstorm.",
-        "fi": [
-            "Ukkostaa.",
-            "On ukkonen.",
-            "On ukonilma."
-        ],
-        "nl": "Het onweert."
     },
     "foggy": {
         "example": "it is foggy",

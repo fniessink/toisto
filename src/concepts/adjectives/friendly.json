@@ -1,5 +1,13 @@
 {
+    "friendly": {
+        "roots": "friend",
+        "example": "he has a friendly face",
+        "en": "friendly",
+        "fi": "ystävällinen",
+        "nl": "vriendelijk"
+    },
     "environmentally friendly": {
+        "roots": "friendly",
         "en": "environmentally friendly",
         "fi": "ympäristöystävällinen",
         "nl": "milieuvriendelijk"

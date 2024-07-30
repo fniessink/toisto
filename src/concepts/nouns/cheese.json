@@ -1,0 +1,37 @@
+{
+    "cheese": {
+        "hypernym": "food",
+        "singular": {
+            "en": "cheese",
+            "fi": "juusto",
+            "nl": "de kaas"
+        },
+        "plural": {
+            "en": "cheeses",
+            "fi": "juustot",
+            "nl": "de kazen"
+        }
+    },
+    "cheesecake": {
+        "example": "I would like a slice of cheesecake",
+        "hypernym": "food",
+        "roots": {
+            "en": [
+                "cheese",
+                "cake"
+            ],
+            "fi": [
+                "cheese",
+                "cake"
+            ]
+        },
+        "en": "cheesecake",
+        "fi": "juustokakku",
+        "nl": "de cheesecake"
+    },
+    "I would like a slice of cheesecake": {
+        "en": "I would like a piece of cheesecake.",
+        "fi": "Minä haluaisin palan juustokakkua.",
+        "nl": "Ik wil graag een stuk cheesecake."
+    }
+}
