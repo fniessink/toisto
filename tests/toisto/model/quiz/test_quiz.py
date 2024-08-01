@@ -251,17 +251,7 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_common_base_concept(self):
         """Test that homographs get an automatic note based on the common base concept."""
         self.language_pair = EN_NL
-        concept = self.create_concept(
-            "to have",
-            dict(
-                singular={
-                    "second person": dict(en="you have", nl="jij hebt"),
-                },
-                plural={
-                    "second person": dict(en="you have", nl="jullie hebben"),
-                },
-            ),
-        )
+        concept = self.create_verb_with_grammatical_number_and_person()
         second_person_singular = next(
             leaf_concept
             for leaf_concept in concept.leaf_concepts(EN)

@@ -90,3 +90,32 @@ class ToistoTestCase(unittest.TestCase):
     def answer_language(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> Language:
         """Return the answer language for the quiz types, given the target and source languages."""
         return language_pair.source if {"interpret", "read"} & set(quiz_types) else language_pair.target
+
+    def create_noun_invariant_in_english(self) -> Concept:
+        """Return a concept that is composite in Dutch and not composite in English."""
+        return self.create_concept(
+            "means of transportation",
+            dict(
+                en="means of transportation",
+                singular=dict(nl="het vervoersmiddel"),
+                plural=dict(nl="de vervoersmiddelen"),
+            ),
+        )
+
+    def create_verb_with_grammatical_number_and_person(self) -> Concept:
+        """Create a verb with grammatical number nested with grammatical person."""
+        return self.create_concept(
+            "to have",
+            dict(
+                singular={
+                    "first person": dict(en="I have", fi="minulla on", nl="ik heb"),
+                    "second person": dict(en="you have", fi="sinulla on", nl="jij hebt"),
+                    "third person": dict(en="she has", fi="hänellä on", nl="zij heeft"),
+                },
+                plural={
+                    "first person": dict(en="we have", fi="meillä on", nl="wij hebben"),
+                    "second person": dict(en="you have", fi="teillä on", nl="jullie hebben"),
+                    "third person": dict(en="they have", fi="heillä on", nl="zij hebben"),
+                },
+            ),
+        )
