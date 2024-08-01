@@ -33,14 +33,7 @@ class ConceptTest(ToistoTestCase):
 
     def test_is_composite(self):
         """Test that a composite concept is composite, and a leaf concept is not."""
-        concept = self.create_concept(
-            "means of transportation",
-            dict(
-                en="means of transportation",
-                singular=dict(nl="het vervoersmiddel"),
-                plural=dict(nl="de vervoersmiddelen"),
-            ),
-        )
+        concept = self.create_noun_invariant_in_english()
         self.assertTrue(concept.is_composite(NL))
         self.assertFalse(concept.is_composite(EN))
         for constituent in concept.constituents:
@@ -76,23 +69,25 @@ class ConceptTest(ToistoTestCase):
 
     def test_labels(self):
         """Test that the labels are returned, recursively."""
-        concept = self.create_concept(
-            "to have",
-            dict(
-                singular={
-                    "first person": dict(en="I have"),
-                    "second person": dict(en="you have"),
-                    "third person": dict(en="she has"),
-                },
-                plural={
-                    "first person": dict(en="we have"),
-                    "second person": dict(en="you have"),
-                    "third person": dict(en="they have"),
-                },
-            ),
-        )
+        concept = self.create_verb_with_grammatical_number_and_person()
         expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
         self.assertEqual(Labels(Label(EN, label) for label in expected_labels), concept.labels(EN))
+
+    def test_labels_when_not_all_languages_have_the_same_grammatical_categories(self):
+        """Test that the labels are returned, recursively."""
+        concept = self.create_noun_invariant_in_english()
+        singular, plural = concept.constituents
+        for each_concept in concept, singular, plural:
+            self.assertEqual((Label(EN, "means of transportation"),), each_concept.labels(EN))
+        self.assertEqual((Label(NL, "het vervoersmiddel"),), singular.labels(NL))
+        self.assertEqual((Label(NL, "de vervoersmiddelen"),), plural.labels(NL))
+        self.assertEqual(
+            (
+                Label(NL, "het vervoersmiddel"),
+                Label(NL, "de vervoersmiddelen"),
+            ),
+            concept.labels(NL),
+        )
 
     def test_homographs(self):
         """Test that notes are ignored when determining homographs."""

@@ -44,24 +44,6 @@ class QuizFactoryTestCase(ToistoTestCase):
             }
         return self.create_concept("to eat", concept_dict)
 
-    def create_verb_with_number_and_person(self) -> Concept:
-        """Create a verb with grammatical number nested with grammatical person."""
-        return self.create_concept(
-            "to have",
-            dict(
-                singular={
-                    "first person": dict(fi="minulla on", nl="ik heb"),
-                    "second person": dict(fi="sinulla on", nl="jij hebt"),
-                    "third person": dict(fi="hänellä on", nl="zij heeft"),
-                },
-                plural={
-                    "first person": dict(fi="meillä on", nl="wij hebben"),
-                    "second person": dict(fi="teillä on", nl="jullie hebben"),
-                    "third person": dict(fi="heillä on", nl="zij hebben"),
-                },
-            ),
-        )
-
     def create_verb_with_infinitive_and_person(self) -> Concept:
         """Create a verb with infinitive and grammatical person."""
         return self.create_concept(
@@ -242,14 +224,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_in_target_language_not_in_source_language(self):
         """Test that quizzes can be generated even if one language has no grammatical number for the concept."""
         self.language_pair = NL_EN
-        concept = self.create_concept(
-            "means of transportation",
-            dict(
-                en="means of transportation",
-                singular=dict(nl="het vervoersmiddel"),
-                plural=dict(nl="de vervoersmiddelen"),
-            ),
-        )
+        concept = self.create_noun_invariant_in_english()
         singular, plural = concept.leaf_concepts(NL)
         quizzes = create_quizzes(NL_EN, concept)
         self.assertSetEqual(
@@ -273,14 +248,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_in_source_language_not_in_target_language(self):
         """Test that quizzes can be generated even if one language has no grammatical number for the concept."""
         self.language_pair = EN_NL
-        concept = self.create_concept(
-            "means of transportation",
-            dict(
-                en="means of transportation",
-                singular=dict(nl="het vervoersmiddel"),
-                plural=dict(nl="de vervoersmiddelen"),
-            ),
-        )
+        concept = self.create_noun_invariant_in_english()
         quizzes = create_quizzes(EN_NL, concept)
         self.assertSetEqual(
             {
@@ -639,7 +607,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for grammatical number, nested with grammatical person."""
         self.language_pair = NL_FI
-        concept = self.create_verb_with_number_and_person()
+        concept = self.create_verb_with_grammatical_number_and_person()
         singular, plural = concept.constituents
         first_person_singular, second_person_singular, third_person_singular = singular.constituents
         first_person_plural, second_person_plural, third_person_plural = plural.constituents
@@ -1584,7 +1552,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_verb_with_person_and_number(self):
         """Test the grammatical quiz types for a verb with grammatical person and number."""
-        verb = self.create_verb_with_number_and_person()
+        verb = self.create_verb_with_grammatical_number_and_person()
         (
             first_singular,
             second_singular,

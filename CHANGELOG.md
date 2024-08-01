@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Some quizzes would not be created if nouns are invariant in one language, but not in another (like "sheep" or "means of transportation"). Fixes [#438](https://github.com/fniessink/toisto/issues/438).
+
 ## 0.22.0 - 2024-07-29
 
 ### Fixed
