@@ -7,7 +7,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_types
 
-from ....base import EN_FI, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
+from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
 
 
 class QuizFactoryTestCase(ToistoTestCase):
@@ -232,6 +232,67 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(plural, "ketsupit", ["ketsupit"], "dictate"),
                 self.create_quiz(concept, "ketsuppi", ["ketsupit"], "pluralize"),
                 self.create_quiz(concept, "ketsupit", ["ketsuppi"], "singularize"),
+            },
+            quizzes,
+        )
+        for quiz in quizzes:
+            self.assertNotIn("", quiz.question_meanings.as_strings)
+            self.assertNotIn("", quiz.answer_meanings.as_strings)
+
+    def test_grammatical_number_in_target_language_not_in_source_language(self):
+        """Test that quizzes can be generated even if one language has no grammatical number for the concept."""
+        self.language_pair = NL_EN
+        concept = self.create_concept(
+            "means of transportation",
+            dict(
+                en="means of transportation",
+                singular=dict(nl="het vervoersmiddel"),
+                plural=dict(nl="de vervoersmiddelen"),
+            ),
+        )
+        singular, plural = concept.leaf_concepts(NL)
+        quizzes = create_quizzes(NL_EN, concept)
+        self.assertSetEqual(
+            {
+                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], "interpret"),
+                self.create_quiz(singular, "het vervoersmiddel", ["het vervoersmiddel"], "dictate"),
+                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], "read"),
+                self.create_quiz(singular, "het vervoersmiddel", ["de vervoersmiddelen"], "pluralize"),
+                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], "interpret"),
+                self.create_quiz(plural, "de vervoersmiddelen", ["de vervoersmiddelen"], "dictate"),
+                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], "read"),
+                self.create_quiz(plural, "de vervoersmiddelen", ["het vervoersmiddel"], "singularize"),
+                self.create_quiz(concept, "means of transportation", ["means of transportation"], "write"),
+            },
+            quizzes,
+        )
+        for quiz in quizzes:
+            self.assertNotIn("", quiz.question_meanings.as_strings)
+            self.assertNotIn("", quiz.answer_meanings.as_strings)
+
+    def test_grammatical_number_in_source_language_not_in_target_language(self):
+        """Test that quizzes can be generated even if one language has no grammatical number for the concept."""
+        self.language_pair = EN_NL
+        concept = self.create_concept(
+            "means of transportation",
+            dict(
+                en="means of transportation",
+                singular=dict(nl="het vervoersmiddel"),
+                plural=dict(nl="de vervoersmiddelen"),
+            ),
+        )
+        quizzes = create_quizzes(EN_NL, concept)
+        self.assertSetEqual(
+            {
+                self.create_quiz(
+                    concept, "means of transportation", ["het vervoersmiddel", "de vervoersmiddelen"], "interpret"
+                ),
+                self.create_quiz(
+                    concept, "means of transportation", ["het vervoersmiddel", "de vervoersmiddelen"], "read"
+                ),
+                self.create_quiz(concept, "het vervoersmiddel", ["means of transportation"], "write"),
+                self.create_quiz(concept, "de vervoersmiddelen", ["means of transportation"], "write"),
+                self.create_quiz(concept, "means of transportation", ["means of transportation"], "dictate"),
             },
             quizzes,
         )

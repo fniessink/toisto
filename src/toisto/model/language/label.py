@@ -145,6 +145,10 @@ class Labels:
     def __init__(self, labels: Iterable[Label] = ()) -> None:
         self._labels = tuple(labels)
 
+    def __repr__(self) -> str:
+        """Return the string representation of the labels."""
+        return repr(tuple(repr(label) for label in self._labels))
+
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
         if isinstance(other, Labels):

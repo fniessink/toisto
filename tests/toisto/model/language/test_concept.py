@@ -31,6 +31,22 @@ class ConceptTest(ToistoTestCase):
         concept = self.create_concept("thirty", dict(fi="kolmekymmentä", nl="dertig"))
         self.assertEqual(concept, Concept.instances.get_values(ConceptId("thirty"))[0])
 
+    def test_is_composite(self):
+        """Test that a composite concept is composite, and a leaf concept is not."""
+        concept = self.create_concept(
+            "means of transportation",
+            dict(
+                en="means of transportation",
+                singular=dict(nl="het vervoersmiddel"),
+                plural=dict(nl="de vervoersmiddelen"),
+            ),
+        )
+        self.assertTrue(concept.is_composite(NL))
+        self.assertFalse(concept.is_composite(EN))
+        for constituent in concept.constituents:
+            for language in EN, NL:
+                self.assertFalse(constituent.is_composite(language))
+
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""
         concept = self.create_concept("one", dict(fi="yksi", nl="een"))
