@@ -35,11 +35,12 @@ HomonymRegistry = Registry[Label, "Concept"]
 class Concept:
     """Class representing language concepts.
 
-    A concept can be a composite and/or a leaf concept. Composite concepts have two or more constituent concepts,
-    representing different grammatical categories, for example singular and plural forms. Leaf concepts have labels
-    in different languages. Concepts can be constituent in one language and leaf in another concepts. For example, the
-    third person singular form of English verbs has both a female ("she walks") and a male form ("he walks"), but
-    Finnish does not ("hän kävelee").
+    A concept can be a composite and/or a leaf concept, or neither. Composite concepts have two or more constituent
+    concepts, representing different grammatical categories, for example singular and plural forms. Leaf concepts have
+    labels in one or more languages. Concepts can be constituent in one language and leaf in another concepts. For
+    example, the third person singular form of English verbs has both a female ("she walks") and a male form ("he
+    walks"), but Finnish does not ("hän kävelee"). This means that the third person singular female form "she walks" is
+    leaf in English, but neiter leaf nor composite in Finnish, since no such label exists in Finnish.
 
     Concepts can have the following types of relations to other concepts:
 
@@ -165,7 +166,14 @@ class Concept:
         """Return the labels for the language."""
         if self.is_composite(language):
             return Labels(chain.from_iterable(concept.labels(language) for concept in self.constituents))
-        return self._labels.with_language(language)
+        if labels := self._labels.with_language(language):
+            return labels
+        parent = self.parent
+        while parent is not None:
+            if parent.has_labels_or_meanings(language):
+                return parent.labels(language)
+            parent = parent.parent
+        return Labels()
 
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept in the specified language."""
@@ -192,8 +200,23 @@ class Concept:
         return sorted(grammatical_differences)
 
     def is_composite(self, language: Language) -> bool:
-        """Return whether this concept is composite."""
-        return not any((self._labels + self._meanings).with_language(language))
+        """Return whether this concept is composite.
+
+        It is composite if it has no labels in the specified language and none of its ancestors has labels in the
+        specified language.
+        """
+        if self.has_labels_or_meanings(language):
+            return False
+        parent = self.parent
+        while parent is not None:
+            if parent.has_labels_or_meanings(language):
+                return False
+            parent = parent.parent
+        return True
+
+    def has_labels_or_meanings(self, language: Language) -> bool:
+        """Return whether the concept has labels or meanings in the specified language."""
+        return any((self._labels + self._meanings).with_language(language))
 
     def compounds(self, language: Language) -> Concepts:
         """Return the compounds of the concept."""

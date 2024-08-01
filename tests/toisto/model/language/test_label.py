@@ -1,7 +1,7 @@
 """Unit tests for labels."""
 
-from toisto.model.language import EN, FI
-from toisto.model.language.label import Label
+from toisto.model.language import EN, FI, NL
+from toisto.model.language.label import Label, Labels
 
 from ....base import ToistoTestCase
 
@@ -21,3 +21,15 @@ class LabelTest(ToistoTestCase):
         """Test that a colloquial sentence is recognized."""
         label = Label(FI, "Kiitti!*")
         self.assertTrue(label.is_complete_sentence)
+
+    def test_repr(self):
+        """Test the representation of a label."""
+        self.assertEqual("English", repr(Label(EN, "English")))
+
+
+class LabelsTest(ToistoTestCase):
+    """Unit tests for the Labels class."""
+
+    def test_repr(self):
+        """Test the representation of multiple labels."""
+        self.assertEqual("('English', 'Nederlands')", repr(Labels([Label(EN, "English"), Label(NL, "Nederlands")])))
