@@ -73,7 +73,7 @@ class ConceptTest(ToistoTestCase):
         expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
         self.assertEqual(Labels(Label(EN, label) for label in expected_labels), concept.labels(EN))
 
-    def test_labels_when_not_all_languages_have_the_same_grammatical_categories(self):
+    def test_labels_for_invariant_noun(self):
         """Test that the labels are returned, recursively."""
         concept = self.create_noun_invariant_in_english()
         singular, plural = concept.constituents

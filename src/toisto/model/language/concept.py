@@ -163,23 +163,40 @@ class Concept:
             yield self
 
     def labels(self, language: Language) -> Labels:
-        """Return the labels for the language."""
-        if self.is_composite(language):
-            return Labels(chain.from_iterable(concept.labels(language) for concept in self.constituents))
-        if labels := self._labels.with_language(language):
-            return labels
-        parent = self.parent
-        while parent is not None:
-            if parent.has_labels_or_meanings(language):
-                return parent.labels(language)
-            parent = parent.parent
+        """Return the labels of the concept for the specified language."""
+        return self.own_labels(language) or self.ancestor_labels(language) or self._constituent_labels(language)
+
+    def own_labels(self, language: Language) -> Labels:
+        """Return the labels of this concept for the specified language."""
+        return self._labels.with_language(language) if self._has_own_labels_or_meanings(language) else Labels()
+
+    def ancestor_labels(self, language: Language) -> Labels:
+        """Return the labels of the first ancestor concept that has labels for the specified language."""
+        if parent := self.parent:
+            return parent.own_labels(language) or parent.ancestor_labels(language)
         return Labels()
 
+    def _constituent_labels(self, language: Language) -> Labels:
+        """Return the labels of the constituent concepts for the specified language."""
+        return Labels(chain.from_iterable(concept.labels(language) for concept in self.constituents))
+
     def meanings(self, language: Language) -> Labels:
-        """Return the meanings of the concept in the specified language."""
-        if self.is_composite(language):
-            return Labels(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
-        return self._meanings.with_language(language)
+        """Return the meanings of the concept for the specified language."""
+        return self.own_meanings(language) or self.ancestor_meanings(language) or self._constituent_meanings(language)
+
+    def own_meanings(self, language: Language) -> Labels:
+        """Return the meanings of this concept for the specified language."""
+        return self._meanings.with_language(language) if self._has_own_labels_or_meanings(language) else Labels()
+
+    def ancestor_meanings(self, language: Language) -> Labels:
+        """Return the meanings of the first ancestor concept that has meanings for the specified language."""
+        if parent := self.parent:
+            return parent.own_meanings(language) or parent.ancestor_meanings(language)
+        return Labels()
+
+    def _constituent_meanings(self, language: Language) -> Labels:
+        """Return the meanings of the constituent concepts for the specified language."""
+        return Labels(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
 
     @property
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
@@ -200,22 +217,19 @@ class Concept:
         return sorted(grammatical_differences)
 
     def is_composite(self, language: Language) -> bool:
-        """Return whether this concept is composite.
+        """Return whether this concept is a composite concept.
 
-        It is composite if it has no labels in the specified language and none of its ancestors has labels in the
-        specified language.
+        A concept is composite if it has no labels or meanings and none of its ancestors has either, for the specified
+        language.
         """
-        if self.has_labels_or_meanings(language):
-            return False
-        parent = self.parent
-        while parent is not None:
-            if parent.has_labels_or_meanings(language):
-                return False
-            parent = parent.parent
-        return True
+        return not (
+            self._has_own_labels_or_meanings(language)
+            or self.ancestor_labels(language)
+            or self.ancestor_meanings(language)
+        )
 
-    def has_labels_or_meanings(self, language: Language) -> bool:
-        """Return whether the concept has labels or meanings in the specified language."""
+    def _has_own_labels_or_meanings(self, language: Language) -> bool:
+        """Return whether this concept has its own labels or meanings for the specified language."""
         return any((self._labels + self._meanings).with_language(language))
 
     def compounds(self, language: Language) -> Concepts:
