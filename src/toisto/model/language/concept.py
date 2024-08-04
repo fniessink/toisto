@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from collections.abc import Generator
 from dataclasses import dataclass
 from functools import cached_property
 from itertools import chain
@@ -102,24 +101,32 @@ class Concept:
         """Return the concept hash."""
         return hash(self.concept_id)
 
+    def get_concepts(self, *concept_ids: ConceptId) -> Concepts:
+        """Return the concepts with the given concept ids."""
+        return Concepts(self.instances.get_values(*concept_ids))
+
+    def get_all_concepts(self) -> Concepts:
+        """Return all concepts."""
+        return Concepts(self.instances.get_all_values())
+
     def get_related_concepts(self, relation: ConceptRelation, *visited_concepts: Concept) -> Concepts:
         """Return the related concepts."""
         if self in visited_concepts:
-            return ()  # Prevent recursion error
+            return Concepts()  # Prevent recursion error
         if relation in get_args(InvertedConceptRelation):
             inverted_relation = inverted(cast(InvertedConceptRelation, relation))
-            return tuple(
+            return Concepts(
                 concept
-                for concept in self.instances.get_all_values()
+                for concept in self.get_all_concepts()
                 if self in concept.get_related_concepts(inverted_relation, self, *visited_concepts)
             )
-        related_concepts = self.instances.get_values(*self._related_concepts[relation])
+        related_concepts = self.get_concepts(*self._related_concepts[relation])
         if relation not in get_args(RecursiveConceptRelation):
             return related_concepts
         related_concepts_list = list(related_concepts)
         for concept in related_concepts:
             related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
-        return tuple(related_concepts_list)
+        return Concepts(related_concepts_list)
 
     def get_homographs(self, label: Label) -> Concepts:
         """Return the homographs for the label, provided it is a label of this concept."""
@@ -132,13 +139,13 @@ class Concept:
     def _get_homonyms(self, label: Label, homonym_registry: HomonymRegistry) -> Concepts:
         """Return the homonyms for the label as registered in the given homonym registry."""
         if label not in self._labels:
-            return ()
-        return tuple(homonym for homonym in homonym_registry.get_values(label) if homonym != self)
+            return Concepts()
+        return Concepts(homonym for homonym in homonym_registry.get_values(label) if homonym != self)
 
     @property
     def parent(self) -> Concept | None:
         """Return the parent concept."""
-        return self.instances.get_values(self._parent)[0] if self._parent else None
+        return self.get_concepts(self._parent)[0] if self._parent else None
 
     @cached_property
     def base_concept(self) -> Concept:
@@ -152,19 +159,17 @@ class Concept:
     @property
     def constituents(self) -> Concepts:
         """Return the constituent concepts."""
-        return self.instances.get_values(*self._constituents)
+        return self.get_concepts(*self._constituents)
 
-    def leaf_concepts(self, language: Language) -> Generator[Concept, None, None]:
+    def leaf_concepts(self, language: Language) -> Concepts:
         """Return this concept's leaf concepts, or self if this concept is a leaf concept."""
         if self.is_composite(language):
-            for concept in self.constituents:
-                yield from concept.leaf_concepts(language)
-        else:
-            yield self
+            return self.constituents.leaf_concepts(language)
+        return Concepts((self,))
 
     def labels(self, language: Language) -> Labels:
         """Return the labels of the concept for the specified language."""
-        return self.own_labels(language) or self.ancestor_labels(language) or self._constituent_labels(language)
+        return self.own_labels(language) or self.ancestor_labels(language) or self.constituents.labels(language)
 
     def own_labels(self, language: Language) -> Labels:
         """Return the labels of this concept for the specified language."""
@@ -176,13 +181,9 @@ class Concept:
             return parent.own_labels(language) or parent.ancestor_labels(language)
         return Labels()
 
-    def _constituent_labels(self, language: Language) -> Labels:
-        """Return the labels of the constituent concepts for the specified language."""
-        return Labels(chain.from_iterable(concept.labels(language) for concept in self.constituents))
-
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept for the specified language."""
-        return self.own_meanings(language) or self.ancestor_meanings(language) or self._constituent_meanings(language)
+        return self.own_meanings(language) or self.ancestor_meanings(language) or self.constituents.meanings(language)
 
     def own_meanings(self, language: Language) -> Labels:
         """Return the meanings of this concept for the specified language."""
@@ -193,10 +194,6 @@ class Concept:
         if parent := self.parent:
             return parent.own_meanings(language) or parent.ancestor_meanings(language)
         return Labels()
-
-    def _constituent_meanings(self, language: Language) -> Labels:
-        """Return the meanings of the constituent concepts for the specified language."""
-        return Labels(chain.from_iterable(concept.meanings(language) for concept in self.constituents))
 
     @property
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
@@ -234,13 +231,36 @@ class Concept:
 
     def compounds(self, language: Language) -> Concepts:
         """Return the compounds of the concept."""
-        return tuple(concept for concept in self.instances.get_all_values() if self in concept.roots(language))
+        return self.get_all_concepts().compounds(self, language)
 
     def roots(self, language: Language) -> Concepts:
         """Return the root concepts recursively, for the specified language."""
         concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
-        direct_roots = self.instances.get_values(*concept_ids_of_roots)
-        return direct_roots + tuple(chain.from_iterable(root.roots(language) for root in direct_roots))
+        direct_roots = self.get_concepts(*concept_ids_of_roots)
+        return Concepts(direct_roots + direct_roots.roots(language))
 
 
-Concepts = tuple[Concept, ...]
+class Concepts(tuple[Concept, ...]):
+    """Tuple of concepts."""
+
+    __slots__ = ()
+
+    def leaf_concepts(self, language: Language) -> Concepts:
+        """Return the concepts' leaf concepts."""
+        return Concepts(chain.from_iterable(concept.leaf_concepts(language) for concept in self))
+
+    def labels(self, language: Language) -> Labels:
+        """Return the labels of the concepts for the specified language."""
+        return Labels(chain.from_iterable(concept.labels(language) for concept in self))
+
+    def meanings(self, language: Language) -> Labels:
+        """Return the meanings of the concepts for the specified language."""
+        return Labels(chain.from_iterable(concept.meanings(language) for concept in self))
+
+    def roots(self, language: Language) -> Concepts:
+        """Return the roots of the concepts for the specified language."""
+        return Concepts(chain.from_iterable(concept.roots(language) for concept in self))
+
+    def compounds(self, root: Concept, language: Language) -> Concepts:
+        """Return the compounds of the root for the specified language."""
+        return Concepts(concept for concept in self if root in concept.roots(language))
