@@ -34,7 +34,7 @@ dependencies = [
 dev = [
     "bandit == 1.7.9",
     "build == 1.2.1",
-    "coverage == 7.6.0",
+    "coverage == 7.6.1",
     "fixit == 2.1.0",
     "green == 4.0.2",
     "mypy == 1.11.1",
