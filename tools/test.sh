@@ -12,7 +12,7 @@ fi
 
 mypy src tests tools
 
-vulture src tests tools
+vulture --exclude venv .
 
 if [[ "$1" == "--fix" ]]; then
     fixit fix .

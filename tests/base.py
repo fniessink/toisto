@@ -2,13 +2,24 @@
 
 import unittest
 from collections.abc import Sequence
+from io import StringIO
 from typing import Final, cast
+
+from green.output import GreenStream
+from xmlrunner.result import _DuplicateWriter as DuplicateWriter
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz, QuizType
+
+# The DramaticTextIOWrapper of the dramatic package expects the stdout stream to have a buffer attribute,
+# but the GreenStream created by green and the DuplicateWriter created by xmlrunner do not have one, causing an
+# AttributeError: 'GreenStream' object has no attribute 'buffer'. Adding a StringIO buffer attribute to the
+# GreenStream class and DuplicateWriter class works around this:
+GreenStream.buffer = StringIO()
+DuplicateWriter.buffer = StringIO()
 
 # Language pairs (target, source) used in the unit tests
 EN_FI: Final[LanguagePair] = LanguagePair(EN, FI)

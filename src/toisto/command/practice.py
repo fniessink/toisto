@@ -4,6 +4,8 @@ from collections.abc import Callable
 from configparser import ConfigParser
 from typing import get_args
 
+import dramatic
+
 from toisto.model.language import LanguagePair
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
@@ -58,7 +60,9 @@ def practice(
     try:
         while quiz := progress.next_quiz():
             do_quiz(write_output, language_pair, quiz, progress, config)
-            write_output(progress_update(), end="")
+            with dramatic.output.at_speed(120):
+                # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:
+                write_output(progress_update(), end="", highlight=False)
         write_output(DONE)
     except (KeyboardInterrupt, EOFError):
         write_output()  # Make sure the shell prompt is displayed on a new line

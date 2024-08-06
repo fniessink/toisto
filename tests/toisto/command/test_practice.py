@@ -43,11 +43,11 @@ class PracticeTest(ToistoTestCase):
             practice(console.print, self.language_pair, progress, config, progress_update)
         return patched_print
 
-    def assert_printed(self, output: str, patched_print: Mock, **kwargs: str) -> None:
+    def assert_printed(self, output: str, patched_print: Mock, **kwargs: str | bool) -> None:
         """Assert that the argument is in the call arguments list of the patched print method."""
         self.assertIn(call(output, **kwargs), patched_print.call_args_list)
 
-    def assert_not_printed(self, argument: str, patched_print: Mock, **kwargs: str) -> None:
+    def assert_not_printed(self, argument: str, patched_print: Mock, **kwargs: str | bool) -> None:
         """Assert that the argument is not in the call arguments list of the patched print method."""
         self.assertNotIn(call(argument, **kwargs), patched_print.call_args_list)
 
@@ -255,7 +255,7 @@ class PracticeTest(ToistoTestCase):
         progress = self.progress(self.quizzes)
         patched_print = self.practice(self.quizzes, progress, progress_update=1)
         progress_update = ProgressUpdate(progress, 1)
-        self.assert_printed(progress_update(), patched_print, end="")
+        self.assert_printed(progress_update(), patched_print, end="", highlight=False)
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_skip_progress(self):
@@ -263,7 +263,7 @@ class PracticeTest(ToistoTestCase):
         progress = self.progress(self.quizzes)
         patched_print = self.practice(self.quizzes, progress, progress_update=2)
         progress_update = ProgressUpdate(progress, 1)
-        self.assert_not_printed(progress_update(), patched_print, end="")
+        self.assert_not_printed(progress_update(), patched_print, end="", highlight=False)
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_no_progress(self):
@@ -271,7 +271,7 @@ class PracticeTest(ToistoTestCase):
         progress = self.progress(self.quizzes)
         patched_print = self.practice(self.quizzes, progress, progress_update=0)
         progress_update = ProgressUpdate(progress, 1)
-        self.assert_not_printed(progress_update(), patched_print, end="")
+        self.assert_not_printed(progress_update(), patched_print, end="", highlight=False)
 
     @patch("builtins.input", Mock(return_value="?\n"))
     def test_progress_after_skipped_quiz(self):
@@ -279,7 +279,7 @@ class PracticeTest(ToistoTestCase):
         progress = self.progress(self.quizzes)
         patched_print = self.practice(self.quizzes, progress, progress_update=1)
         progress_update = ProgressUpdate(progress, 1)
-        self.assert_printed(progress_update(), patched_print, end="")
+        self.assert_printed(progress_update(), patched_print, end="", highlight=False)
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n"]))
     def test_progress_after_incorrect_answer(self):
@@ -287,7 +287,7 @@ class PracticeTest(ToistoTestCase):
         progress = self.progress(self.quizzes)
         patched_print = self.practice(self.quizzes, progress, progress_update=1)
         progress_update = ProgressUpdate(progress, 1)
-        self.assert_printed(progress_update(), patched_print, end="")
+        self.assert_printed(progress_update(), patched_print, end="", highlight=False)
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):

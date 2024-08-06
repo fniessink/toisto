@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Some quizzes would not be created if nouns are invariant in one language, but not in another (like "sheep" or "means of transportation"). Fixes [#438](https://github.com/fniessink/toisto/issues/438).
 
+### Added
+
+- Print the progress report dramatically (character by character) to make it stand out more.
+
 ## 0.22.0 - 2024-07-29
 
 ### Fixed
