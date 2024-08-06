@@ -36,7 +36,8 @@ Concepts are represented in the JSON files as JSON objects. The key is an identi
 
 If you add new languages to the built-in files, or create your own JSON files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
-When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
+> [!NOTE]
+> When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
 
 ### Letter case and punctuation in labels
 
@@ -434,7 +435,7 @@ The format of the JSON files is as follows:
                 "nl": "ik heb"
             },
             "second person": {
-                "en": "you have;singular",
+                "en": "you have",
                 "nl": "jij hebt"
             },
             "third person": {
@@ -454,7 +455,7 @@ The format of the JSON files is as follows:
                 "nl": "wij hebben"
             },
             "second person": {
-                "en": "you have;plural",
+                "en": "you have",
                 "nl": "jullie hebben"
             },
             "third person": {
@@ -465,8 +466,6 @@ The format of the JSON files is as follows:
     }
 }
 ```
-
-Note that because the second person singular and plural are the same in English, Toisto needs to tell the user whether it is asking for a translation of the singular version or the plural version of "You are". The note is the part after the semicolon (`;`).
 
 Because Finnish does not distinguish between male and female gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
 
@@ -612,7 +611,7 @@ All three moods can be combined as follows:
 {
     "you run": {
         "declarative": {
-            "en": "You run.;singular",
+            "en": "You run.",
             "nl": "Jij rent.",
         },
         "interrogative": {
