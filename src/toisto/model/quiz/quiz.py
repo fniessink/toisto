@@ -18,7 +18,7 @@ from .match import match
 
 TranslationQuizType = Literal["read", "write"]
 ListenQuizType = Literal["dictate", "interpret"]
-SemanticQuizType = Literal["answer", "antonym"]
+SemanticQuizType = Literal["answer", "antonym", "order"]
 GrammaticalQuizType = Literal[
     "pluralize",
     "singularize",
@@ -82,6 +82,7 @@ INSTRUCTIONS: Final[dict[Literal[TranslationQuizType, ListenQuizType, SemanticQu
     "interpret": "Listen and write in",
     "answer": "Answer the question in",
     "antonym": "Give the [underline]antonym[/underline] in",
+    "order": "Give the [underline]right order[/underline] of the words in",
 }
 
 
@@ -118,7 +119,8 @@ class Quiz:
         """Return a string version of the quiz that can be used as key in the progress dict."""
         concept_id = self.concept.base_concept.concept_id
         quiz_types = "+".join(self.quiz_types)
-        return f"{concept_id}:{self.question.language}:{self.answer.language}:{self.question}:{quiz_types}"
+        question = self._question.first_spelling_alternative
+        return f"{concept_id}:{self.question.language}:{self.answer.language}:{question}:{quiz_types}"
 
     def evaluate(self, guess: Label, language_pair: LanguagePair, attempt: int) -> Evaluation:
         """Evaluate the user's guess."""
@@ -143,10 +145,11 @@ class Quiz:
         questions = Labels((self._question,)) + self._question_meanings
         return match(str(guess), *questions.spelling_alternatives.as_strings)
 
-    @cached_property
+    @property
     def question(self) -> Label:
         """Return the first spelling alternative of the question."""
-        return self._question.first_spelling_alternative
+        question = self._question.first_spelling_alternative
+        return question.random_order if "order" in self.quiz_types else question
 
     @property
     def answer(self) -> Label:

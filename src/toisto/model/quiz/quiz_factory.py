@@ -149,7 +149,8 @@ class QuizFactory:
             "antonym",
             concept.get_related_concepts("antonym"),
         )
-        return Quizzes(answer_quizzes | antonym_quizzes)
+        order_quizzes = self.order_quizzes(concept, Quizzes(antonym_quizzes | answer_quizzes | previous_quizzes))
+        return Quizzes(answer_quizzes | antonym_quizzes | order_quizzes)
 
     def related_concept_quizzes(
         self,
@@ -179,6 +180,23 @@ class QuizFactory:
                 Labels(meanings),
             )
             for label in concept.labels(target_language).non_colloquial
+        )
+
+    def order_quizzes(self, concept: Concept, previous_quizzes: Quizzes, min_word_count: int = 5) -> Quizzes:
+        """Create word order quizzes for the concept."""
+        labels = concept.labels(self.language_pair.target).non_colloquial
+        return Quizzes(
+            Quiz(
+                concept,
+                label,
+                labels,
+                ("order",),
+                tuple(previous_quizzes),
+                Labels(),
+                concept.meanings(self.language_pair.source),
+            )
+            for label in labels
+            if label.word_count >= min_word_count
         )
 
 

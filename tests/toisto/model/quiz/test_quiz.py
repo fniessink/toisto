@@ -59,7 +59,7 @@ class QuizTest(QuizTestCase):
         """Test that a lower case answer to an upper case question is correct, if source language == answer language."""
         self.assertTrue(self.quiz.is_correct(Label(NL, "engels"), self.language_pair))
 
-    def test_case_matches_for_read_and_intepret_quizzes(self):
+    def test_case_matches_for_read_and_interpret_quizzes(self):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
 
@@ -136,6 +136,30 @@ class QuizTest(QuizTestCase):
         self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
 
 
+class OrderQuizTest(QuizTestCase):
+    """Unit tests for word order quizzes."""
+
+    def test_order_question(self):
+        """Test that the order of the words in the question is random."""
+        self.language_pair = EN_NL
+        label = "We eat breakfast in the kitchen."
+        quiz = self.create_quiz(self.concept, label, [label], "order")
+        questions: set[str] = set()
+        while len(questions) <= 1:  # Continue until we have two questions with different word order
+            questions.add(str(quiz.question))
+        for question in questions:
+            # Check that the questions have the correct words
+            self.assertEqual(set(label.split(" ")), set(question.split(" ")))
+
+    def test_order_answer(self):
+        """Test that all spelling alternatives are correct answers."""
+        self.language_pair = EN_NL
+        labels = ["We eat breakfast in the kitchen.", "In the kitchen we eat breakfast."]
+        quiz = self.create_quiz(self.concept, labels[0], ["|".join(labels)], "order")
+        for label in labels:
+            self.assertTrue(quiz.is_correct(Label(EN, label), self.language_pair))
+
+
 class QuizInstructionTest(QuizTestCase):
     """Unit tests for quiz instructions."""
 
@@ -148,6 +172,7 @@ class QuizInstructionTest(QuizTestCase):
             "Listen and write in Dutch",
             "Answer the question in Finnish",
             "Give the [underline]antonym[/underline] in Finnish",
+            "Give the [underline]right order[/underline] of the words in Finnish",
             "Give the [underline]plural[/underline] in Finnish",
             "Give the [underline]singular[/underline] in Finnish",
             "Give the [underline]diminutive[/underline] in Finnish",
@@ -178,7 +203,7 @@ class QuizInstructionTest(QuizTestCase):
             quiz = self.create_quiz(self.concept, "Hei", ["Hei hei"], (quiz_type,))
             self.assertEqual(expected_instruction, quiz.instruction)
 
-    def test_instuction_complete_sentence(self):
+    def test_instruction_complete_sentence(self):
         """Test the instruction for a complete sentence."""
         self.language_pair = EN_NL
         quiz = self.create_quiz(self.concept, "Sentence.", ["Sentence."], "dictate")
