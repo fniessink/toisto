@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Print the progress report dramatically (character by character) to make it stand out more.
+- Add word order quizzes for sentences with five or more words. Closes [#757](https://github.com/fniessink/toisto/issues/757).
 
 ## 0.22.0 - 2024-07-29
 

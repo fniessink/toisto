@@ -1225,6 +1225,7 @@ class GrammaticalPolarityTest(ToistoTestCase):
                 self.create_quiz(negative, "The car is not black.", ["De auto is niet zwart."], "write"),
                 self.create_quiz(concept, "De auto is zwart.", ["De auto is niet zwart."], "negate"),
                 self.create_quiz(concept, "De auto is niet zwart.", ["De auto is zwart."], "affirm"),
+                self.create_quiz(concept, "De auto is niet zwart.", ["De auto is niet zwart."], "order"),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1608,3 +1609,14 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
         for second, third in ((second_singular, third_singular), (second_plural, third_plural)):
             self.assertEqual(("give third person",), grammatical_quiz_types(second, third))
             self.assertEqual(("give second person",), grammatical_quiz_types(third, second))
+
+
+class OrderQuizTest(QuizFactoryTestCase):
+    """Unit tests for generating order quizzes."""
+
+    def test_generate_order_quiz_for_long_enough_sentences(self):
+        """Test that order quizzes are generated for long enough sentences."""
+        concept = self.create_concept("breakfast", dict(en="We eat breakfast in the kitchen."))
+        quizzes = create_quizzes(EN_NL, concept)
+        quiz = next(quiz for quiz in quizzes if "order" in quiz.quiz_types)
+        self.assertEqual(("order",), quiz.quiz_types)

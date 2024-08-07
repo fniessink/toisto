@@ -957,10 +957,15 @@ The answer concepts in the previous example have the key `answer-only` set to `t
 
 Toisto uses the concepts to generate quizzes. Currently, the following types of quizzes are generated:
 
+Translation quizzes:
+
 1. Translate a concept from the target language to the source language.
 2. Listen to a concept in the target language and then type in what was said.
 3. Translate a concept from the source language to the target language.
 4. Listen to a concept in the target language and then translate what was said in the source language.
+
+Grammatical quizzes:
+
 5. Singularize a plural concept or pluralize a singular concept.
 6. Diminutize a concept.
 7. Change the person of a concept.
@@ -970,9 +975,13 @@ Toisto uses the concepts to generate quizzes. Currently, the following types of 
 11. Change the grammatical mood of a concept between declarative, interrogative, and imperative mood.
 12. Change the polarity from affirmative to negative and vice versa.
 13. Change cardinal numbers into ordinal numbers and vice versa.
+
+Semantic quizzes:
+
 14. Give the antonym.
 15. Answer a question.
 16. Abbreviate a concept or give the full-form of the abbreviation.
+17. Put the words of a shuffled sentence in the right order.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 
