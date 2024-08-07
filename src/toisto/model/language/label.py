@@ -84,7 +84,7 @@ class Label:
     @property
     def first_spelling_alternative(self) -> Label:
         """Return the first spelling alternative for the label."""
-        return self.spelling_alternatives[0]
+        return self.non_generated_spelling_alternatives[0]
 
     @property
     def question_note(self) -> str:
