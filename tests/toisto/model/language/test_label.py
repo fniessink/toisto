@@ -26,6 +26,18 @@ class LabelTest(ToistoTestCase):
         """Test the representation of a label."""
         self.assertEqual("English", repr(Label(EN, "English")))
 
+    def test_word_count(self):
+        """Test the label word count."""
+        self.assertEqual(1, Label(EN, "English").word_count)
+        self.assertEqual(2, Label(EN, "English language").word_count)
+        self.assertEqual(5, Label(EN, "The English language is beautiful.").word_count)
+        self.assertEqual(4, Label(EN, "North-America is one word.").word_count)
+
+    def test_random_order(self):
+        """Test that the label can be returned in random word order."""
+        label = Label(EN, "The English language is beautiful.")
+        self.assertEqual(sorted(str(label).split(" ")), sorted(str(label.random_order).split(" ")))
+
 
 class LabelsTest(ToistoTestCase):
     """Unit tests for the Labels class."""

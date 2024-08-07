@@ -6,6 +6,7 @@ import re
 from collections.abc import Callable, Iterable, Iterator, Sequence
 from functools import cached_property
 from itertools import chain
+from random import shuffle
 from typing import ClassVar, Final
 
 from . import Language
@@ -87,6 +88,13 @@ class Label:
         return self.non_generated_spelling_alternatives[0]
 
     @property
+    def random_order(self) -> Label:
+        """Return the first spelling alternative of the label in random word order."""
+        words = str(self.first_spelling_alternative).split(" ")
+        shuffle(words)
+        return Label(self.language, " ".join(words))
+
+    @property
     def question_note(self) -> str:
         """Return the label question note."""
         has_question_note = self._value.count(self.NOTE_SEP) >= self.QUESTION_NOTE_INDEX
@@ -137,6 +145,11 @@ class Label:
     def pronounceable(self) -> str:
         """Return the label as text that can be sent to a speech synthesizer."""
         return str(self.without_notes).rstrip(self.COLLOQUIAL_POSTFIX).replace("'", "").replace("-", " ")
+
+    @property
+    def word_count(self) -> int:
+        """Return the label word count."""
+        return len(str(self.first_spelling_alternative).split(" "))
 
 
 class Labels:
