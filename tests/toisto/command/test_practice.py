@@ -8,6 +8,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.quiz.quiz_type import DICTATE, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
 from toisto.ui.style import DELETED, SECONDARY
@@ -27,7 +28,7 @@ class PracticeTest(ToistoTestCase):
         super().setUp()
         self.language_pair = FI_NL
         self.concept = self.create_concept("hi", dict(fi="Terve!", nl="Hoi!"))
-        self.quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("read")
+        self.quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(READ)
 
     def progress(self, quizzes: Quizzes) -> Progress:
         """Create the progress tracker."""
@@ -82,7 +83,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="terve!\n"))
     def test_answer_quiz_in_lowercase_target_language(self):
         """Test that a lower case answer is not accepted when the answer language is the user's target language."""
-        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("write")
+        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(WRITE)
         patched_print = self.practice(quizzes)
         self.assert_printed(f"{Feedback.INCORRECT}The correct answer is 'Terve!'\n", patched_print)
 
@@ -94,14 +95,14 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_answer_with_question_listen_quiz(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
-        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(DICTATE)
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="jätski\n"))
     def test_answer_with_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
         concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
-        dictate_quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        dictate_quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         colloquial_dictate_quizzes = Quizzes(quiz for quiz in dictate_quizzes if quiz.question == Label(FI, "jätski*"))
         self.assert_printed(
             Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
@@ -112,7 +113,7 @@ class PracticeTest(ToistoTestCase):
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
         concept = self.create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("pluralize")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(PLURAL)
         self.assert_printed(Feedback.TRY_AGAIN, self.practice(quizzes))
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
@@ -130,13 +131,13 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(DICTATE)
         self.assert_not_printed(linkified("Terve"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(DICTATE)
         expected_text = f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('Hoi!')}'[/{SECONDARY}]\n"
         self.assert_printed(expected_text, self.practice(quizzes))
 
@@ -147,7 +148,7 @@ class PracticeTest(ToistoTestCase):
             "house",
             dict(singular=dict(fi="talo", nl="huis"), plural=dict(fi="talot", nl="huizen")),
         )
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("pluralize")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(PLURAL)
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('huis')}', "
             f"respectively '{linkified('huizen')}'.[/{SECONDARY}]\n"
@@ -165,7 +166,7 @@ class PracticeTest(ToistoTestCase):
             "the museum is next to the church",
             dict(fi="Museo on kirkon vieressä.", nl="Het museum is naast de kerk."),
         )
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('naast')}'.[/{SECONDARY}]\n"
             f"[{SECONDARY}]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/{SECONDARY}]\n"
@@ -179,7 +180,7 @@ class PracticeTest(ToistoTestCase):
         concept = self.create_concept("black", dict(example=examples, fi="musta", nl="zwart"))
         self.create_concept("the car is black", dict(fi="Auto on musta.", nl="De auto is zwart."))
         self.create_concept("the cars are black", dict(fi="Autot ovat mustia.", nl="De auto's zijn zwart."))
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('zwart')}'.[/{SECONDARY}]\n"
             f"[{SECONDARY}]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
@@ -198,7 +199,7 @@ class PracticeTest(ToistoTestCase):
             "I am looking for a table lamp",
             dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
         )
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('de tafellamp')}'.[/{SECONDARY}]\n"
@@ -219,7 +220,7 @@ class PracticeTest(ToistoTestCase):
             "I am looking for a table lamp",
             dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
         )
-        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type("dictate")
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('pöytälamppu')}' and "
             f"'{linkified('pöytävalaisin')}'.[/{SECONDARY}]\n"

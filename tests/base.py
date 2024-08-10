@@ -12,7 +12,8 @@ from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptDict, create_concept
 from toisto.model.language.label import Label, Labels
-from toisto.model.quiz.quiz import Quiz, QuizType
+from toisto.model.quiz.quiz import Quiz
+from toisto.model.quiz.quiz_type import INTERPRET, READ, WRITE, QuizType
 
 # The DramaticTextIOWrapper of the dramatic package expects the stdout stream to have a buffer attribute,
 # but the GreenStream created by green and the DuplicateWriter created by xmlrunner do not have one, causing an
@@ -53,14 +54,13 @@ class ToistoTestCase(unittest.TestCase):
         concept: Concept,
         question: str,
         answers: Sequence[str],
-        quiz_type: str | tuple[str, ...] = ("read",),
+        quiz_type: QuizType = READ,
         blocked_by: tuple[Quiz, ...] = (),
         question_meanings: tuple[str, ...] = (),
         answer_meanings: tuple[str, ...] = (),
         language_pair: LanguagePair | None = None,
     ) -> Quiz:
         """Create a quiz."""
-        quiz_type = cast(tuple[QuizType], (quiz_type,) if isinstance(quiz_type, str) else quiz_type)
         language_pair = self.language_pair if language_pair is None else language_pair
         question_language = self.question_language(language_pair, quiz_type)
         answer_language = self.answer_language(language_pair, quiz_type)
@@ -79,28 +79,28 @@ class ToistoTestCase(unittest.TestCase):
         quiz: Quiz,
         question: str = "",
         answers: list[str] | None = None,
-        quiz_type: str | tuple[str, ...] = "",
+        quiz_type: QuizType | None = None,
     ) -> Quiz:
         """Copy the quiz, overriding some of its parameters."""
         return self.create_quiz(
             quiz.concept,
             question=question or str(quiz.question),
             answers=answers or quiz.answers.as_strings,
-            quiz_type=quiz_type or tuple(str(quiz_type) for quiz_type in quiz.quiz_types),
             blocked_by=quiz.blocked_by,
             question_meanings=quiz.question_meanings.as_strings,
             answer_meanings=quiz.answer_meanings.as_strings,
+            quiz_type=quiz_type or quiz.quiz_type,
         )
 
     @staticmethod
-    def question_language(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> Language:
+    def question_language(language_pair: LanguagePair, quiz_type: QuizType) -> Language:
         """Return the question language for the quiz types, given the target and source languages."""
-        return language_pair.source if "write" in quiz_types else language_pair.target
+        return language_pair.source if quiz_type == WRITE else language_pair.target
 
     @staticmethod
-    def answer_language(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> Language:
+    def answer_language(language_pair: LanguagePair, quiz_type: QuizType) -> Language:
         """Return the answer language for the quiz types, given the target and source languages."""
-        return language_pair.source if {"interpret", "read"} & set(quiz_types) else language_pair.target
+        return language_pair.source if quiz_type in (INTERPRET, READ) else language_pair.target
 
     def create_noun_invariant_in_english(self) -> Concept:
         """Return a concept that is composite in Dutch and not composite in English."""

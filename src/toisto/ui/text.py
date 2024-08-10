@@ -9,13 +9,15 @@ from typing import Final, cast
 from rich.console import Console
 from rich.panel import Panel
 
-from ..metadata import CHANGELOG_URL, NAME, README_URL, VERSION
-from ..model.language import LanguagePair
-from ..model.language.iana_language_subtag_registry import ALL_LANGUAGES
-from ..model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
-from ..model.quiz.evaluation import Evaluation
-from ..model.quiz.progress import Progress
-from ..model.quiz.quiz import Quiz
+from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
+from toisto.model.language import LanguagePair
+from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
+from toisto.model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
+from toisto.model.quiz.evaluation import Evaluation
+from toisto.model.quiz.progress import Progress
+from toisto.model.quiz.quiz import Quiz
+from toisto.model.quiz.quiz_type import GrammaticalQuizType
+
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
 from .style import QUIZ, SECONDARY
@@ -98,7 +100,7 @@ class Feedback:
 
     def _try_again(self, guess: Label) -> str:
         """Return the feedback when the first attempt is incorrect."""
-        if self.quiz.is_question(guess) and not self.quiz.is_grammatical:
+        if self.quiz.is_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
             colloquial = self.quiz.question.is_colloquial
             try_again = self.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE if colloquial else self.TRY_AGAIN_IN_ANSWER_LANGUAGE
             return try_again % dict(language=ALL_LANGUAGES[self.quiz.answer.language])

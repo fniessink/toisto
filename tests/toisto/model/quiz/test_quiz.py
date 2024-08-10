@@ -1,10 +1,41 @@
 """Quiz unit tests."""
 
-from typing import get_args
-
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.label import Label, Labels
-from toisto.model.quiz.quiz import QuizType
+from toisto.model.quiz.quiz_type import (
+    ABBREVIATION,
+    AFFIRMATIVE,
+    ANSWER,
+    ANTONYM,
+    CARDINAL,
+    COMPARATIVE_DEGREE,
+    DECLARATIVE,
+    DICTATE,
+    DIMINUTIVE,
+    FEMALE,
+    FIRST_PERSON,
+    FULL_FORM,
+    IMPERATIVE,
+    INFINITIVE,
+    INTERPRET,
+    INTERROGATIVE,
+    MALE,
+    NEGATIVE,
+    NEUTER,
+    ORDER,
+    ORDINAL,
+    PAST_TENSE,
+    PLURAL,
+    POSITIVE_DEGREE,
+    PRESENT_PERFECT_TENSE,
+    PRESENT_TENSE,
+    READ,
+    SECOND_PERSON,
+    SINGULAR,
+    SUPERLATIVE_DEGREE,
+    THIRD_PERSON,
+    WRITE,
+)
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 
 from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
@@ -33,7 +64,7 @@ class QuizTest(QuizTestCase):
 
     def test_defaults(self):
         """Test default values of optional attributes."""
-        self.assertEqual(("read",), self.quiz.quiz_types)
+        self.assertEqual(READ, self.quiz.quiz_type)
         self.assertEqual((), self.quiz.blocked_by)
         self.assertEqual((), self.quiz.question_meanings)
         self.assertEqual((), self.quiz.answer_meanings)
@@ -63,7 +94,7 @@ class QuizTest(QuizTestCase):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
 
-        for quiz_type in ("read", "interpret"):
+        for quiz_type in (READ, INTERPRET):
             quiz = self.create_quiz(concept, "suomi", ["het Fins"], quiz_type, language_pair=FI_NL)
             self.assertTrue(quiz.is_correct(Label(NL, "Fins"), FI_NL), quiz)
             self.assertTrue(quiz.is_correct(Label(NL, "fins"), FI_NL), quiz)
@@ -76,11 +107,11 @@ class QuizTest(QuizTestCase):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
 
-        quiz = self.create_quiz(concept, "suomi", ["suomi"], "listen", language_pair=FI_NL)
+        quiz = self.create_quiz(concept, "suomi", ["suomi"], language_pair=FI_NL)
         self.assertFalse(quiz.is_correct(Label(FI, "Suomi"), FI_NL))
         self.assertTrue(quiz.is_correct(Label(FI, "suomi"), FI_NL))
 
-        quiz = self.create_quiz(concept, "het Fins", ["het Fins"], "listen", language_pair=NL_FI)
+        quiz = self.create_quiz(concept, "het Fins", ["het Fins"], WRITE, language_pair=NL_FI)
         self.assertFalse(quiz.is_correct(Label(NL, "fins"), NL_FI))
         self.assertTrue(quiz.is_correct(Label(NL, "Fins"), NL_FI))
 
@@ -100,7 +131,7 @@ class QuizTest(QuizTestCase):
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the quiz type is dictate."""
-        quiz = self.create_quiz(self.concept, "Yksi", ["Een", "Eén;note should be ignored"], "dictate")
+        quiz = self.create_quiz(self.concept, "Yksi", ["Een", "Eén;note should be ignored"], DICTATE)
         self.assertEqual((), quiz.other_answers(self.een))
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
@@ -132,7 +163,7 @@ class QuizTest(QuizTestCase):
         """Test that all answer notes are shown."""
         self.language_pair = EN_NL
         answers = ["want;;explain want", "omdat;;explain omdat"]
-        quiz = self.create_quiz(self.concept, "because", answers, "write")
+        quiz = self.create_quiz(self.concept, "because", answers, WRITE)
         self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
 
 
@@ -143,7 +174,7 @@ class OrderQuizTest(QuizTestCase):
         """Test that the order of the words in the question is random."""
         self.language_pair = EN_NL
         label = "We eat breakfast in the kitchen."
-        quiz = self.create_quiz(self.concept, label, [label], "order")
+        quiz = self.create_quiz(self.concept, label, [label], ORDER)
         questions: set[str] = set()
         while len(questions) <= 1:  # Continue until we have two questions with different word order
             questions.add(str(quiz.question))
@@ -155,7 +186,7 @@ class OrderQuizTest(QuizTestCase):
         """Test that all spelling alternatives are correct answers."""
         self.language_pair = EN_NL
         labels = ["We eat breakfast in the kitchen.", "In the kitchen we eat breakfast."]
-        quiz = self.create_quiz(self.concept, labels[0], ["|".join(labels)], "order")
+        quiz = self.create_quiz(self.concept, labels[0], ["|".join(labels)], ORDER)
         for label in labels:
             self.assertTrue(quiz.is_correct(Label(EN, label), self.language_pair))
 
@@ -165,84 +196,84 @@ class QuizInstructionTest(QuizTestCase):
 
     def test_instructions(self):
         """Test the instructions."""
-        expected_instructions = [
-            "Translate into Dutch",
-            "Translate into Finnish",
-            "Listen and write in Finnish",
-            "Listen and write in Dutch",
-            "Answer the question in Finnish",
-            "Give the [underline]antonym[/underline] in Finnish",
-            "Give the [underline]right order[/underline] of the words in Finnish",
-            "Give the [underline]plural[/underline] in Finnish",
-            "Give the [underline]singular[/underline] in Finnish",
-            "Give the [underline]diminutive[/underline] in Finnish",
-            "Give the [underline]male[/underline] in Finnish",
-            "Give the [underline]female[/underline] in Finnish",
-            "Give the [underline]neuter[/underline] in Finnish",
-            "Give the [underline]positive degree[/underline] in Finnish",
-            "Give the [underline]comparative degree[/underline] in Finnish",
-            "Give the [underline]superlative degree[/underline] in Finnish",
-            "Give the [underline]first person[/underline] in Finnish",
-            "Give the [underline]second person[/underline] in Finnish",
-            "Give the [underline]third person[/underline] in Finnish",
-            "Give the [underline]infinitive[/underline] in Finnish",
-            "Give the [underline]present tense[/underline] in Finnish",
-            "Give the [underline]past tense[/underline] in Finnish",
-            "Give the [underline]present perfect tense[/underline] in Finnish",
-            "Give the [underline]declarative[/underline] in Finnish",
-            "Give the [underline]interrogative[/underline] in Finnish",
-            "Give the [underline]imperative[/underline] in Finnish",
-            "Give the [underline]affirmative[/underline] in Finnish",
-            "Give the [underline]negative[/underline] in Finnish",
-            "Give the [underline]cardinal[/underline] in Finnish",
-            "Give the [underline]ordinal[/underline] in Finnish",
-            "Give the [underline]abbreviation[/underline] in Finnish",
-            "Give the [underline]full form[/underline] in Finnish",
-        ]
-        for expected_instruction, quiz_type in zip(expected_instructions, get_args(QuizType), strict=True):
-            quiz = self.create_quiz(self.concept, "Hei", ["Hei hei"], (quiz_type,))
+        expected_instructions = {
+            READ: "Translate into Dutch",
+            WRITE: "Translate into Finnish",
+            DICTATE: "Listen and write in Finnish",
+            INTERPRET: "Listen and write in Dutch",
+            ANSWER: "Give the [underline]answer[/underline] in Finnish",
+            ANTONYM: "Give the [underline]antonym[/underline] in Finnish",
+            ORDER: "Give the [underline]right order[/underline] of the words in Finnish",
+            PLURAL: "Give the [underline]plural[/underline] in Finnish",
+            SINGULAR: "Give the [underline]singular[/underline] in Finnish",
+            DIMINUTIVE: "Give the [underline]diminutive[/underline] in Finnish",
+            MALE: "Give the [underline]male[/underline] in Finnish",
+            FEMALE: "Give the [underline]female[/underline] in Finnish",
+            NEUTER: "Give the [underline]neuter[/underline] in Finnish",
+            POSITIVE_DEGREE: "Give the [underline]positive degree[/underline] in Finnish",
+            COMPARATIVE_DEGREE: "Give the [underline]comparative degree[/underline] in Finnish",
+            SUPERLATIVE_DEGREE: "Give the [underline]superlative degree[/underline] in Finnish",
+            FIRST_PERSON: "Give the [underline]first person[/underline] in Finnish",
+            SECOND_PERSON: "Give the [underline]second person[/underline] in Finnish",
+            THIRD_PERSON: "Give the [underline]third person[/underline] in Finnish",
+            INFINITIVE: "Give the [underline]infinitive[/underline] in Finnish",
+            PRESENT_TENSE: "Give the [underline]present tense[/underline] in Finnish",
+            PAST_TENSE: "Give the [underline]past tense[/underline] in Finnish",
+            PRESENT_PERFECT_TENSE: "Give the [underline]present perfect tense[/underline] in Finnish",
+            DECLARATIVE: "Give the [underline]declarative[/underline] in Finnish",
+            INTERROGATIVE: "Give the [underline]interrogative[/underline] in Finnish",
+            IMPERATIVE: "Give the [underline]imperative[/underline] in Finnish",
+            AFFIRMATIVE: "Give the [underline]affirmative[/underline] in Finnish",
+            NEGATIVE: "Give the [underline]negative[/underline] in Finnish",
+            CARDINAL: "Give the [underline]cardinal[/underline] in Finnish",
+            ORDINAL: "Give the [underline]ordinal[/underline] in Finnish",
+            ABBREVIATION: "Give the [underline]abbreviation[/underline] in Finnish",
+            FULL_FORM: "Give the [underline]full form[/underline] in Finnish",
+        }
+        for quiz_type, expected_instruction in expected_instructions.items():
+            quiz = self.create_quiz(self.concept, "Hei", ["Hei hei"], quiz_type)
             self.assertEqual(expected_instruction, quiz.instruction)
 
     def test_instruction_complete_sentence(self):
         """Test the instruction for a complete sentence."""
         self.language_pair = EN_NL
-        quiz = self.create_quiz(self.concept, "Sentence.", ["Sentence."], "dictate")
+        quiz = self.create_quiz(self.concept, "Sentence.", ["Sentence."], DICTATE)
         self.assertEqual("Listen and write a complete sentence in English", quiz.instruction)
 
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown if the question and answer languages are the same."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "Hän on;female", ["He ovat"], "pluralize")
+        quiz = self.create_quiz(self.concept, "Hän on;female", ["He ovat"], PLURAL)
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "Suomi;country", ["Finland"], "dictate")
+        quiz = self.create_quiz(self.concept, "Suomi;country", ["Finland"], DICTATE)
         self.assertEqual("Listen and write in Finnish (country)", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
         """Test that a note is shown if the question and answer languages are the same and the quiz type is answer."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "Onko hän Bob?;positive or negative", ["On", "Ei"], "answer")
-        self.assertEqual("Answer the question in Finnish (positive or negative)", quiz.instruction)
+        quiz = self.create_quiz(self.concept, "Onko hän Bob?;positive or negative", ["On", "Ei"], ANSWER)
+        self.assertEqual("Give the [underline]answer[/underline] in Finnish (positive or negative)", quiz.instruction)
 
     def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dictate(self):
         """Test that colloquial labels get an automatic note."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "seittemän*", ["seitsemän"], "dictate")
+        quiz = self.create_quiz(self.concept, "seittemän*", ["seitsemän"], DICTATE)
         self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
 
     def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_interpret(self):
         """Test that colloquial labels get an automatic note."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "seittemän*", ["zeven"], "interpret")
+        quiz = self.create_quiz(self.concept, "seittemän*", ["zeven"], INTERPRET)
         self.assertEqual("Listen to the colloquial Finnish and write in Dutch", quiz.instruction)
 
     def test_sentences_get_an_automatic_note_when_quiz_type_is_listen(self):
         """Test that sentences get an automatic note when the quiz type is a listen quiz."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "Terve!", ["Hallo!"], "interpret")
+        quiz = self.create_quiz(self.concept, "Terve!", ["Hallo!"], INTERPRET)
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
     def test_homographs_get_an_automatic_note_based_on_the_hypernym(self):
@@ -251,7 +282,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
         self.create_concept("furniture", {})  # Create the hypernym of sofa
         sofa = self.create_concept("bank", {"hypernym": "furniture", "fi": "sohva", "nl": "de bank"})
-        quiz = self.create_quiz(sofa, "de bank", ["sohva"], "dictate")
+        quiz = self.create_quiz(sofa, "de bank", ["sohva"], DICTATE)
         self.assertEqual("Listen and write in Dutch (furniture)", quiz.instruction)
 
     def test_non_homographs_do_not_get_an_automatic_note_based_on_the_hypernym(self):
@@ -260,7 +291,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("to fly", {"en": "fly", "nl": "vliegen"})  # Create the homograph of fly
         self.create_concept("insect", {})  # Create the hypernym of fly
         fly = self.create_concept("fly", {"hypernym": "insect", "en": "fly", "nl": "de vlieg"})
-        quiz = self.create_quiz(fly, "de vlieg", ["de vlieg"], "dictate")
+        quiz = self.create_quiz(fly, "de vlieg", ["de vlieg"], DICTATE)
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
 
     def test_homographs_get_an_automatic_note_based_on_only_the_first_hypernym(self):
@@ -270,7 +301,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("furniture", {})  # Create the hypernym of seating
         self.create_concept("seating", {"hypernym": "furniture"})  # Create the hypernym of sofa
         sofa = self.create_concept("sofa", {"hypernym": "seating", "fi": "sohva", "nl": "de bank"})
-        quiz = self.create_quiz(sofa, "de bank", ["sohva"], "dictate")
+        quiz = self.create_quiz(sofa, "de bank", ["sohva"], DICTATE)
         self.assertEqual("Listen and write in Dutch (seating)", quiz.instruction)
 
     def test_homographs_get_an_automatic_note_based_on_the_common_base_concept(self):
@@ -282,7 +313,7 @@ class QuizInstructionTest(QuizTestCase):
             for leaf_concept in concept.leaf_concepts(EN)
             if leaf_concept.concept_id == "to have/singular/second person"
         )
-        quiz = self.create_quiz(second_person_singular, "you have", ["jij hebt"], "interpret")
+        quiz = self.create_quiz(second_person_singular, "you have", ["jij hebt"], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
     def test_homographs_get_an_automatic_note_based_on_the_common_base_concept_when_more_than_two_homographs(self):
@@ -306,7 +337,7 @@ class QuizInstructionTest(QuizTestCase):
             for leaf_concept in concept.leaf_concepts(EN)
             if leaf_concept.concept_id == "to read/present tense/singular/second person"
         )
-        quiz = self.create_quiz(second_person_singular, "you read", ["jij leest"], "interpret")
+        quiz = self.create_quiz(second_person_singular, "you read", ["jij leest"], INTERPRET)
         self.assertEqual("Listen and write in Dutch (present tense; singular)", quiz.instruction)
 
     def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
@@ -315,9 +346,9 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})  # Create the capitonym of greek
         self.create_concept("language", {})  # Create the hypernym of Indo-Wuropean language
         greek = self.create_concept("greek", {"hypernym": "language", "fi": "kreikka", "nl": "Grieks"})
-        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "dictate")
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], DICTATE)
         self.assertEqual("Listen and write in Finnish (language)", quiz.instruction)
-        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "read")
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"])
         self.assertEqual("Translate into Dutch", quiz.instruction)
 
     def test_capitonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
@@ -327,7 +358,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("language", {})  # Create the hypernym of Indo-European language
         self.create_concept("Indo-European language", {"hypernym": "language"})  # Create the hypernym of greek
         greek = self.create_concept("greek", {"hypernym": "Indo-European language", "fi": "kreikka", "nl": "Grieks"})
-        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], "dictate")
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], DICTATE)
         self.assertEqual("Listen and write in Finnish (Indo-European language)", quiz.instruction)
 
     def test_capitonyms_get_an_automatic_note_based_on_the_common_base_concept(self):
@@ -349,7 +380,7 @@ class QuizInstructionTest(QuizTestCase):
             for leaf_concept in concept.leaf_concepts(FI)
             if leaf_concept.concept_id == "to be/singular/second person"
         )
-        quiz = self.create_quiz(second_person_singular, "Te olette", ["u bent"], "interpret")
+        quiz = self.create_quiz(second_person_singular, "Te olette", ["u bent"], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
 
@@ -445,7 +476,7 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_with_different_quiz_types(self):
         """Test that quizzes are not equal if only their quiz types differ."""
-        self.assertNotEqual(self.copy_quiz(self.quiz, quiz_type="dictate"), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, quiz_type=DICTATE), self.quiz)
 
     def test_not_equal_when_questions_have_different_case(self):
         """Test that quizzes are different if only the case of the question differs."""

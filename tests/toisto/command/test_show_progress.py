@@ -8,6 +8,7 @@ from toisto.model.language import FI
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.quiz.quiz_type import READ
 from toisto.tools import first
 
 from ...base import FI_NL, ToistoTestCase
@@ -22,7 +23,7 @@ class ShowProgressTestCase(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
-        self.quiz = first(create_quizzes(FI_NL, concept).by_quiz_type("read"))
+        self.quiz = first(create_quizzes(FI_NL, concept).by_quiz_type(READ))
         self.quizzes = Quizzes({self.quiz})
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -60,7 +61,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_quiz(self):
         """Test that quizzes are shown."""
         console_print = self.show_progress(self.progress)
-        for index, value in enumerate(["Read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
+        for index, value in enumerate(["read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
 
     def test_quiz_silenced_until_time_in_the_future(self):
@@ -84,7 +85,7 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
         """Set up test fixtures."""
         super().setUp()
         another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
-        self.another_quiz = first(create_quizzes(FI_NL, another_concept).by_quiz_type("read"))
+        self.another_quiz = first(create_quizzes(FI_NL, another_concept).by_quiz_type(READ))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
 
 
