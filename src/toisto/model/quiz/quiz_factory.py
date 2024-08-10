@@ -6,7 +6,22 @@ from itertools import permutations, zip_longest
 from ..language import LanguagePair
 from ..language.concept import Concept, Concepts
 from ..language.label import Labels
-from .quiz import GRAMMATICAL_QUIZ_TYPES, Quiz, QuizType, Quizzes
+from .quiz import Quiz, Quizzes
+from .quiz_type import (
+    ANSWER,
+    ANTONYM,
+    DICTATE,
+    FEMALE,
+    INTERPRET,
+    MALE,
+    NEUTER,
+    ORDER,
+    READ,
+    THIRD_PERSON,
+    WRITE,
+    GrammaticalQuizType,
+    QuizType,
+)
 
 
 @dataclass(frozen=True)
@@ -64,9 +79,7 @@ class QuizFactory:
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
-        return Quizzes(
-            Quiz(concept, target_label, source_labels, ("read",), blocked_by) for target_label in target_labels
-        )
+        return Quizzes(Quiz(concept, target_label, source_labels, READ, blocked_by) for target_label in target_labels)
 
     def write_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create write quizzes for the concept."""
@@ -78,9 +91,7 @@ class QuizFactory:
         if not target_labels or not source_labels:
             return Quizzes()
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
-        return Quizzes(
-            Quiz(concept, source_label, target_labels, ("write",), blocked_by) for source_label in source_labels
-        )
+        return Quizzes(Quiz(concept, source_label, target_labels, WRITE, blocked_by) for source_label in source_labels)
 
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
@@ -89,10 +100,10 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
         non_colloquial_quizzes = Quizzes(
-            Quiz(concept, label, Labels((label,)), ("dictate",), blocked_by, meanings) for label in target_labels
+            Quiz(concept, label, Labels((label,)), DICTATE, blocked_by, meanings) for label in target_labels
         )
         colloquial_quizzes = Quizzes(
-            Quiz(concept, label, target_labels, ("dictate",), blocked_by, meanings)
+            Quiz(concept, label, target_labels, DICTATE, blocked_by, meanings)
             for label in concept.labels(target_language).colloquial
         )
         return Quizzes(non_colloquial_quizzes | colloquial_quizzes)
@@ -106,7 +117,7 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(target_language)
         return Quizzes(
-            Quiz(concept, label, source_labels, ("interpret",), blocked_by, meanings)
+            Quiz(concept, label, source_labels, INTERPRET, blocked_by, meanings)
             for label in concept.labels(target_language)
         )
 
@@ -116,8 +127,8 @@ class QuizFactory:
         blocked_by = tuple(previous_quizzes)
         quizzes = Quizzes()
         for question_concept, answer_concept in permutations(concept.leaf_concepts(target_language), r=2):
-            quiz_types = grammatical_quiz_types(question_concept, answer_concept)
-            if not quiz_types:
+            quiz_type = grammatical_quiz_type(question_concept, answer_concept)
+            if quiz_type is None:
                 continue
             question_labels = question_concept.labels(target_language).non_colloquial
             answer_labels = answer_concept.labels(target_language).non_colloquial
@@ -128,7 +139,7 @@ class QuizFactory:
                     concept,
                     question_label,
                     Labels((answer_label,)),
-                    quiz_types,
+                    quiz_type,
                     blocked_by,
                     question_meanings,
                     answer_meanings,
@@ -141,13 +152,16 @@ class QuizFactory:
     def semantic_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create semantic quizzes for the concept."""
         answer_quizzes = self.related_concept_quizzes(
-            concept, previous_quizzes, "answer", concept.get_related_concepts("answer")
+            concept,
+            previous_quizzes,
+            concept.get_related_concepts("answer"),
+            ANSWER,
         )
         antonym_quizzes = self.related_concept_quizzes(
             concept,
             Quizzes(answer_quizzes | previous_quizzes),
-            "antonym",
             concept.get_related_concepts("antonym"),
+            ANTONYM,
         )
         order_quizzes = self.order_quizzes(concept, Quizzes(antonym_quizzes | answer_quizzes | previous_quizzes))
         return Quizzes(answer_quizzes | antonym_quizzes | order_quizzes)
@@ -156,8 +170,8 @@ class QuizFactory:
         self,
         concept: Concept,
         previous_quizzes: Quizzes,
-        quiz_type: QuizType,
         related_concepts: Concepts,
+        quiz_type: QuizType,
     ) -> Quizzes:
         """Create quizzes for the related concepts."""
         if not related_concepts:
@@ -174,7 +188,7 @@ class QuizFactory:
                 concept,
                 label,
                 Labels(related_concept_labels),
-                (quiz_type,),
+                quiz_type,
                 tuple(previous_quizzes),
                 Labels(),
                 Labels(meanings),
@@ -190,7 +204,7 @@ class QuizFactory:
                 concept,
                 label,
                 labels,
-                ("order",),
+                ORDER,
                 tuple(previous_quizzes),
                 Labels(),
                 concept.meanings(self.language_pair.source),
@@ -200,20 +214,20 @@ class QuizFactory:
         )
 
 
-def grammatical_quiz_types(concept1: Concept, concept2: Concept) -> tuple[QuizType, ...]:
-    """Return the quiz types to change the grammatical category of concept1 into that of concept2.
+def grammatical_quiz_type(concept1: Concept, concept2: Concept) -> QuizType | None:
+    """Return the quiz type to change the grammatical category of concept1 into that of concept2.
 
     For example, to change "I am" into "they are" would mean changing the grammatical number from singular to plural
     and changing the grammatical person from first person to third person. To prevent the quiz from becoming too
     complex ("Give the affirmative past tense plural third person...") we limit the number of quiz types.
     """
-    quiz_types = []
+    quiz_types: list[GrammaticalQuizType] = []
     for category1, category2 in zip_longest(concept1.grammatical_categories, concept2.grammatical_categories):
-        if category1 != category2 and category2 in GRAMMATICAL_QUIZ_TYPES:
-            quiz_types.append(GRAMMATICAL_QUIZ_TYPES[category2])
-    if set(quiz_types) <= {"feminize", "masculinize", "neuterize", "give third person"}:
-        return tuple(quiz_types)
-    return tuple(quiz_types) if len(quiz_types) == 1 else ()
+        if category1 != category2:
+            quiz_types.extend(GrammaticalQuizType.instances.get_values(category2))
+    if set(quiz_types) <= {FEMALE, MALE, NEUTER, THIRD_PERSON} and len(quiz_types) > 1:
+        return GrammaticalQuizType(quiz_types=tuple(quiz_types))
+    return quiz_types[0] if len(quiz_types) == 1 else None
 
 
 def create_quizzes(language_pair: LanguagePair, *concepts: Concept) -> Quizzes:

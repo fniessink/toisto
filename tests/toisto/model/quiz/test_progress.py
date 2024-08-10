@@ -1,12 +1,13 @@
 """Progress unit tests."""
 
-from typing import cast, get_args
+from typing import cast
 
 from toisto.model.language import FI, NL
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quiz, Quizzes, TranslationQuizType
+from toisto.model.quiz.quiz import Quiz, Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.quiz.quiz_type import DICTATE, TranslationQuizType
 from toisto.tools import first
 
 from ....base import FI_NL, NL_EN, ToistoTestCase
@@ -63,7 +64,7 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
         next_quiz = cast(Quiz, self.progress.next_quiz())
-        self.assertIn(next_quiz.quiz_types[0], get_args(TranslationQuizType))
+        self.assertTrue(next_quiz.has_quiz_type(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
         """Test that quizzes are blocked if roots have eligible quizzes."""
@@ -108,9 +109,9 @@ class ProgressTest(ToistoTestCase):
             progress.mark_evaluation(quiz, Evaluation.CORRECT)
 
     def test_next_quiz_is_quiz_with_progress(self):
-        """Test that the next quiz is one the user has seen before if possible."""
+        """Test that the next quiz is one the user has see before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = Quizzes(quiz for quiz in create_quizzes(FI_NL, *concepts) if quiz.quiz_types == ("dictate",))
+        quizzes = create_quizzes(FI_NL, *concepts).by_quiz_type(DICTATE)
         progress = Progress({}, FI, quizzes)
         random_quiz = next(iter(quizzes))
         progress.mark_evaluation(random_quiz, Evaluation.CORRECT)

@@ -3,6 +3,7 @@
 from toisto.model.language import EN, FI
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
+from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
 from ....base import EN_NL, FI_NL
@@ -72,12 +73,12 @@ class AntonymConceptsTest(QuizFactoryTestCase):
     def test_antonym_leaf_concepts(self):
         """Test that quizzes are generated for concepts with antonym concepts."""
         for concept, question, answer in [(self.big, "big", "small"), (self.small, "small", "big")]:
-            antonym = self.create_quiz(concept, question, [answer], "antonym")
+            antonym = self.create_quiz(concept, question, [answer], ANTONYM)
             self.assertIn(antonym, self.quizzes)
 
     def test_antonym_quiz_order(self):
         """Test that before quizzing for an antonym, the anytonym itself has been quizzed."""
-        antonym_quizzes = {quiz for quiz in self.quizzes if "antonym" in quiz.quiz_types}
+        antonym_quizzes = self.quizzes.by_quiz_type(ANTONYM)
         other_quizzes = self.quizzes - antonym_quizzes
         for antonym_quiz in antonym_quizzes:
             for other_quiz in other_quizzes:
@@ -94,7 +95,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = self.create_concept("question", dict(answer="answer", en="How are you?"))
         answer = self.create_concept("answer", dict(en="I'm fine, thank you."))
         quizzes = create_quizzes(EN_NL, question, answer)
-        answer_quiz = self.create_quiz(question, "How are you?", ["I'm fine, thank you."], "answer")
+        answer_quiz = self.create_quiz(question, "How are you?", ["I'm fine, thank you."], ANSWER)
         self.assertIn(answer_quiz, quizzes)
 
     def test_answer_composite_concepts(self):
@@ -109,8 +110,8 @@ class AnswerConceptsTest(QuizFactoryTestCase):
             dict(singular=dict(en="I'm fine, thank you."), plural=dict(en="We're fine, thank you.")),
         )
         quizzes = create_quizzes(EN_NL, question, answer)
-        singular_answer_quiz = self.create_quiz(question, "How are you?;singular", ["I'm fine, thank you."], "answer")
-        plural_answer_quiz = self.create_quiz(question, "How are you?;plural", ["We're fine, thank you."], "answer")
+        singular_answer_quiz = self.create_quiz(question, "How are you?;singular", ["I'm fine, thank you."], ANSWER)
+        plural_answer_quiz = self.create_quiz(question, "How are you?;plural", ["We're fine, thank you."], ANSWER)
         self.assertIn(singular_answer_quiz, quizzes)
         self.assertIn(plural_answer_quiz, quizzes)
 
@@ -119,7 +120,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = self.create_concept("question", dict(answer=["fine", "good"], en="How are you?"))
         fine = self.create_concept("fine", dict(en="I'm fine, thank you."))
         good = self.create_concept("good", dict(en="I'm doing good, thank you."))
-        quiz = first(create_quizzes(EN_NL, question, fine, good), lambda quiz: "answer" in quiz.quiz_types)
+        quiz = first(create_quizzes(EN_NL, question, fine, good).by_quiz_type(ANSWER))
         self.assertEqual((fine.labels(EN)[0], good.labels(EN)[0]), quiz.answers)
 
     def test_answer_quiz_order(self):
@@ -127,7 +128,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = self.create_concept("question", dict(answer="answer", en="How are you?"))
         answer = self.create_concept("answer", dict(en="I'm fine, thank you."))
         quizzes = create_quizzes(EN_NL, question, answer)
-        answer_quizzes = {quiz for quiz in quizzes if "answer" in quiz.quiz_types}
+        answer_quizzes = quizzes.by_quiz_type(ANSWER)
         other_quizzes = quizzes - answer_quizzes
         for answer_quiz in answer_quizzes:
             for other_quiz in other_quizzes:

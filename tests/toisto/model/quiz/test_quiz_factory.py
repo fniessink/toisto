@@ -5,7 +5,42 @@ from toisto.model.language.concept import Concept
 from toisto.model.language.grammar import Tense
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
-from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_types
+from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_type
+from toisto.model.quiz.quiz_type import (
+    ABBREVIATION,
+    AFFIRMATIVE,
+    ANTONYM,
+    CARDINAL,
+    COMPARATIVE_DEGREE,
+    DECLARATIVE,
+    DICTATE,
+    DIMINUTIVE,
+    FEMALE,
+    FIRST_PERSON,
+    FULL_FORM,
+    IMPERATIVE,
+    INFINITIVE,
+    INTERPRET,
+    INTERROGATIVE,
+    MALE,
+    NEGATIVE,
+    NEUTER,
+    ORDER,
+    ORDINAL,
+    PAST_TENSE,
+    PLURAL,
+    POSITIVE_DEGREE,
+    PRESENT_PERFECT_TENSE,
+    PRESENT_TENSE,
+    READ,
+    SECOND_PERSON,
+    SINGULAR,
+    SUPERLATIVE_DEGREE,
+    THIRD_PERSON,
+    WRITE,
+    GrammaticalQuizType,
+)
+from toisto.tools import first
 
 from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
 
@@ -134,10 +169,10 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept("english", dict(en="English", nl="Engels"))
         self.assertSetEqual(
             {
-                self.create_quiz(concept, "Engels", ["English"], "read"),
-                self.create_quiz(concept, "Engels", ["Engels"], "dictate"),
-                self.create_quiz(concept, "Engels", ["English"], "interpret"),
-                self.create_quiz(concept, "English", ["Engels"], "write"),
+                self.create_quiz(concept, "Engels", ["English"], READ),
+                self.create_quiz(concept, "Engels", ["Engels"], DICTATE),
+                self.create_quiz(concept, "Engels", ["English"], INTERPRET),
+                self.create_quiz(concept, "English", ["Engels"], WRITE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -146,7 +181,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         """Test that only listening quizzes are generated for a concept with one language."""
         concept = self.create_concept("english", dict(nl="Engels"))
         self.assertSetEqual(
-            {self.create_quiz(concept, "Engels", ["Engels"], "dictate", language_pair=NL_EN)},
+            {self.create_quiz(concept, "Engels", ["Engels"], DICTATE, language_pair=NL_EN)},
             create_quizzes(NL_EN, concept),
         )
 
@@ -161,11 +196,11 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept("couch", dict(nl=["bank"], en=["couch", "bank"]))
         self.assertSetEqual(
             {
-                self.create_quiz(concept, "bank", ["couch", "bank"], "read"),
-                self.create_quiz(concept, "bank", ["bank"], "dictate"),
-                self.create_quiz(concept, "bank", ["couch", "bank"], "interpret"),
-                self.create_quiz(concept, "couch", ["bank"], "write"),
-                self.create_quiz(concept, "bank", ["bank"], "write"),
+                self.create_quiz(concept, "bank", ["couch", "bank"], READ),
+                self.create_quiz(concept, "bank", ["bank"], DICTATE),
+                self.create_quiz(concept, "bank", ["couch", "bank"], INTERPRET),
+                self.create_quiz(concept, "couch", ["bank"], WRITE),
+                self.create_quiz(concept, "bank", ["bank"], WRITE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -182,16 +217,16 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         singular, plural = concept.leaf_concepts(FI)
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "aamu", ["de ochtend"], "read"),
-                self.create_quiz(singular, "aamu", ["aamu"], "dictate"),
-                self.create_quiz(singular, "aamu", ["de ochtend"], "interpret"),
-                self.create_quiz(singular, "de ochtend", ["aamu"], "write"),
-                self.create_quiz(plural, "aamut", ["de ochtenden"], "read"),
-                self.create_quiz(plural, "aamut", ["aamut"], "dictate"),
-                self.create_quiz(plural, "aamut", ["de ochtenden"], "interpret"),
-                self.create_quiz(plural, "de ochtenden", ["aamut"], "write"),
-                self.create_quiz(concept, "aamu", ["aamut"], "pluralize"),
-                self.create_quiz(concept, "aamut", ["aamu"], "singularize"),
+                self.create_quiz(singular, "aamu", ["de ochtend"], READ),
+                self.create_quiz(singular, "aamu", ["aamu"], DICTATE),
+                self.create_quiz(singular, "aamu", ["de ochtend"], INTERPRET),
+                self.create_quiz(singular, "de ochtend", ["aamu"], WRITE),
+                self.create_quiz(plural, "aamut", ["de ochtenden"], READ),
+                self.create_quiz(plural, "aamut", ["aamut"], DICTATE),
+                self.create_quiz(plural, "aamut", ["de ochtenden"], INTERPRET),
+                self.create_quiz(plural, "de ochtenden", ["aamut"], WRITE),
+                self.create_quiz(concept, "aamu", ["aamut"], PLURAL),
+                self.create_quiz(concept, "aamut", ["aamu"], SINGULAR),
             },
             create_quizzes(FI_NL, concept),
         )
@@ -207,13 +242,13 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         quizzes = create_quizzes(FI_NL, concept)
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "ketsuppi", ["de ketchup"], "read"),
-                self.create_quiz(singular, "ketsuppi", ["ketsuppi"], "dictate"),
-                self.create_quiz(singular, "ketsuppi", ["de ketchup"], "interpret"),
-                self.create_quiz(singular, "de ketchup", ["ketsuppi"], "write"),
-                self.create_quiz(plural, "ketsupit", ["ketsupit"], "dictate"),
-                self.create_quiz(concept, "ketsuppi", ["ketsupit"], "pluralize"),
-                self.create_quiz(concept, "ketsupit", ["ketsuppi"], "singularize"),
+                self.create_quiz(singular, "ketsuppi", ["de ketchup"], READ),
+                self.create_quiz(singular, "ketsuppi", ["ketsuppi"], DICTATE),
+                self.create_quiz(singular, "ketsuppi", ["de ketchup"], INTERPRET),
+                self.create_quiz(singular, "de ketchup", ["ketsuppi"], WRITE),
+                self.create_quiz(plural, "ketsupit", ["ketsupit"], DICTATE),
+                self.create_quiz(concept, "ketsuppi", ["ketsupit"], PLURAL),
+                self.create_quiz(concept, "ketsupit", ["ketsuppi"], SINGULAR),
             },
             quizzes,
         )
@@ -229,15 +264,15 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         quizzes = create_quizzes(NL_EN, concept)
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], "interpret"),
-                self.create_quiz(singular, "het vervoersmiddel", ["het vervoersmiddel"], "dictate"),
-                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], "read"),
-                self.create_quiz(singular, "het vervoersmiddel", ["de vervoersmiddelen"], "pluralize"),
-                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], "interpret"),
-                self.create_quiz(plural, "de vervoersmiddelen", ["de vervoersmiddelen"], "dictate"),
-                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], "read"),
-                self.create_quiz(plural, "de vervoersmiddelen", ["het vervoersmiddel"], "singularize"),
-                self.create_quiz(concept, "means of transportation", ["means of transportation"], "write"),
+                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], INTERPRET),
+                self.create_quiz(singular, "het vervoersmiddel", ["het vervoersmiddel"], DICTATE),
+                self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], READ),
+                self.create_quiz(singular, "het vervoersmiddel", ["de vervoersmiddelen"], PLURAL),
+                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], INTERPRET),
+                self.create_quiz(plural, "de vervoersmiddelen", ["de vervoersmiddelen"], DICTATE),
+                self.create_quiz(plural, "de vervoersmiddelen", ["means of transportation"], READ),
+                self.create_quiz(plural, "de vervoersmiddelen", ["het vervoersmiddel"], SINGULAR),
+                self.create_quiz(concept, "means of transportation", ["means of transportation"], WRITE),
             },
             quizzes,
         )
@@ -253,14 +288,20 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.assertSetEqual(
             {
                 self.create_quiz(
-                    concept, "means of transportation", ["het vervoersmiddel", "de vervoersmiddelen"], "interpret"
+                    concept,
+                    "means of transportation",
+                    ["het vervoersmiddel", "de vervoersmiddelen"],
+                    INTERPRET,
                 ),
                 self.create_quiz(
-                    concept, "means of transportation", ["het vervoersmiddel", "de vervoersmiddelen"], "read"
+                    concept,
+                    "means of transportation",
+                    ["het vervoersmiddel", "de vervoersmiddelen"],
+                    READ,
                 ),
-                self.create_quiz(concept, "het vervoersmiddel", ["means of transportation"], "write"),
-                self.create_quiz(concept, "de vervoersmiddelen", ["means of transportation"], "write"),
-                self.create_quiz(concept, "means of transportation", ["means of transportation"], "dictate"),
+                self.create_quiz(concept, "het vervoersmiddel", ["means of transportation"], WRITE),
+                self.create_quiz(concept, "de vervoersmiddelen", ["means of transportation"], WRITE),
+                self.create_quiz(concept, "means of transportation", ["means of transportation"], DICTATE),
             },
             quizzes,
         )
@@ -276,10 +317,10 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         quizzes = create_quizzes(FI_NL, concept)
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "mämmi", ["mämmi"], "dictate"),
-                self.create_quiz(plural, "mämmit", ["mämmit"], "dictate"),
-                self.create_quiz(concept, "mämmi", ["mämmit"], "pluralize"),
-                self.create_quiz(concept, "mämmit", ["mämmi"], "singularize"),
+                self.create_quiz(singular, "mämmi", ["mämmi"], DICTATE),
+                self.create_quiz(plural, "mämmit", ["mämmit"], DICTATE),
+                self.create_quiz(concept, "mämmi", ["mämmit"], PLURAL),
+                self.create_quiz(concept, "mämmit", ["mämmi"], SINGULAR),
             },
             quizzes,
         )
@@ -305,24 +346,24 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         singular, plural = concept.leaf_concepts(FI)
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "kauppakeskus", ["het winkelcentrum"], "read"),
-                self.create_quiz(singular, "ostoskeskus", ["het winkelcentrum"], "read"),
-                self.create_quiz(singular, "kauppakeskus", ["kauppakeskus"], "dictate"),
-                self.create_quiz(singular, "kauppakeskus", ["het winkelcentrum"], "interpret"),
-                self.create_quiz(singular, "ostoskeskus", ["ostoskeskus"], "dictate"),
-                self.create_quiz(singular, "ostoskeskus", ["het winkelcentrum"], "interpret"),
-                self.create_quiz(singular, "het winkelcentrum", ["kauppakeskus", "ostoskeskus"], "write"),
-                self.create_quiz(plural, "kauppakeskukset", ["de winkelcentra"], "read"),
-                self.create_quiz(plural, "ostoskeskukset", ["de winkelcentra"], "read"),
-                self.create_quiz(plural, "kauppakeskukset", ["kauppakeskukset"], "dictate"),
-                self.create_quiz(plural, "kauppakeskukset", ["de winkelcentra"], "interpret"),
-                self.create_quiz(plural, "ostoskeskukset", ["ostoskeskukset"], "dictate"),
-                self.create_quiz(plural, "ostoskeskukset", ["de winkelcentra"], "interpret"),
-                self.create_quiz(plural, "de winkelcentra", ["kauppakeskukset", "ostoskeskukset"], "write"),
-                self.create_quiz(concept, "kauppakeskus", ["kauppakeskukset"], "pluralize"),
-                self.create_quiz(concept, "ostoskeskus", ["ostoskeskukset"], "pluralize"),
-                self.create_quiz(concept, "kauppakeskukset", ["kauppakeskus"], "singularize"),
-                self.create_quiz(concept, "ostoskeskukset", ["ostoskeskus"], "singularize"),
+                self.create_quiz(singular, "kauppakeskus", ["het winkelcentrum"], READ),
+                self.create_quiz(singular, "ostoskeskus", ["het winkelcentrum"], READ),
+                self.create_quiz(singular, "kauppakeskus", ["kauppakeskus"], DICTATE),
+                self.create_quiz(singular, "kauppakeskus", ["het winkelcentrum"], INTERPRET),
+                self.create_quiz(singular, "ostoskeskus", ["ostoskeskus"], DICTATE),
+                self.create_quiz(singular, "ostoskeskus", ["het winkelcentrum"], INTERPRET),
+                self.create_quiz(singular, "het winkelcentrum", ["kauppakeskus", "ostoskeskus"], WRITE),
+                self.create_quiz(plural, "kauppakeskukset", ["de winkelcentra"], READ),
+                self.create_quiz(plural, "ostoskeskukset", ["de winkelcentra"], READ),
+                self.create_quiz(plural, "kauppakeskukset", ["kauppakeskukset"], DICTATE),
+                self.create_quiz(plural, "kauppakeskukset", ["de winkelcentra"], INTERPRET),
+                self.create_quiz(plural, "ostoskeskukset", ["ostoskeskukset"], DICTATE),
+                self.create_quiz(plural, "ostoskeskukset", ["de winkelcentra"], INTERPRET),
+                self.create_quiz(plural, "de winkelcentra", ["kauppakeskukset", "ostoskeskukset"], WRITE),
+                self.create_quiz(concept, "kauppakeskus", ["kauppakeskukset"], PLURAL),
+                self.create_quiz(concept, "ostoskeskus", ["ostoskeskukset"], PLURAL),
+                self.create_quiz(concept, "kauppakeskukset", ["kauppakeskus"], SINGULAR),
+                self.create_quiz(concept, "ostoskeskukset", ["ostoskeskus"], SINGULAR),
             },
             create_quizzes(FI_NL, concept),
         )
@@ -334,16 +375,16 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         female, male = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female, "haar kat", ["her cat"], "read"),
-                self.create_quiz(female, "haar kat", ["haar kat"], "dictate"),
-                self.create_quiz(female, "haar kat", ["her cat"], "interpret"),
-                self.create_quiz(female, "her cat", ["haar kat"], "write"),
-                self.create_quiz(male, "zijn kat", ["his cat"], "read"),
-                self.create_quiz(male, "zijn kat", ["zijn kat"], "dictate"),
-                self.create_quiz(male, "zijn kat", ["his cat"], "interpret"),
-                self.create_quiz(male, "his cat", ["zijn kat"], "write"),
-                self.create_quiz(concept, "haar kat", ["zijn kat"], "masculinize"),
-                self.create_quiz(concept, "zijn kat", ["haar kat"], "feminize"),
+                self.create_quiz(female, "haar kat", ["her cat"], READ),
+                self.create_quiz(female, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(female, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(female, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(male, "zijn kat", ["his cat"], READ),
+                self.create_quiz(male, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(male, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(male, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(concept, "haar kat", ["zijn kat"], MALE),
+                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMALE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -355,22 +396,21 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         female, male, neuter = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female, "haar bot", ["her bone"], "read"),
-                self.create_quiz(female, "haar bot", ["haar bot"], "dictate"),
-                self.create_quiz(female, "haar bot", ["her bone"], "interpret"),
-                self.create_quiz(female, "her bone", ["haar bot"], "write"),
-                self.create_quiz(male, "zijn bot", ["his bone"], "read"),
-                self.create_quiz(male, "zijn bot", ["zijn bot"], "dictate"),
-                self.create_quiz(male, "zijn bot", ["his bone"], "interpret"),
-                self.create_quiz(male, "his bone", ["zijn bot"], "write"),
-                self.create_quiz(neuter, "zijn bot", ["its bone"], "read"),
-                self.create_quiz(neuter, "zijn bot", ["zijn bot"], "dictate"),
-                self.create_quiz(neuter, "zijn bot", ["its bone"], "interpret"),
-                self.create_quiz(neuter, "its bone", ["zijn bot"], "write"),
-                self.create_quiz(concept, "haar bot", ["zijn bot"], "masculinize"),
-                self.create_quiz(concept, "haar bot", ["zijn bot"], "neuterize"),
-                self.create_quiz(concept, "zijn bot", ["haar bot"], "feminize"),
-                self.create_quiz(concept, "zijn bot", ["haar bot"], "feminize"),
+                self.create_quiz(female, "haar bot", ["her bone"], READ),
+                self.create_quiz(female, "haar bot", ["haar bot"], DICTATE),
+                self.create_quiz(female, "haar bot", ["her bone"], INTERPRET),
+                self.create_quiz(female, "her bone", ["haar bot"], WRITE),
+                self.create_quiz(male, "zijn bot", ["his bone"], READ),
+                self.create_quiz(male, "zijn bot", ["zijn bot"], DICTATE),
+                self.create_quiz(male, "zijn bot", ["his bone"], INTERPRET),
+                self.create_quiz(male, "his bone", ["zijn bot"], WRITE),
+                self.create_quiz(neuter, "zijn bot", ["its bone"], READ),
+                self.create_quiz(neuter, "zijn bot", ["zijn bot"], DICTATE),
+                self.create_quiz(neuter, "zijn bot", ["its bone"], INTERPRET),
+                self.create_quiz(neuter, "its bone", ["zijn bot"], WRITE),
+                self.create_quiz(concept, "haar bot", ["zijn bot"], MALE),
+                self.create_quiz(concept, "haar bot", ["zijn bot"], NEUTER),
+                self.create_quiz(concept, "zijn bot", ["haar bot"], FEMALE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -383,30 +423,30 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         singular_female, singular_male, plural_female, plural_male = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(singular_female, "haar kat", ["her cat"], "read"),
-                self.create_quiz(singular_female, "haar kat", ["haar kat"], "dictate"),
-                self.create_quiz(singular_female, "haar kat", ["her cat"], "interpret"),
-                self.create_quiz(singular_female, "her cat", ["haar kat"], "write"),
-                self.create_quiz(singular_male, "zijn kat", ["his cat"], "read"),
-                self.create_quiz(singular_male, "zijn kat", ["zijn kat"], "dictate"),
-                self.create_quiz(singular_male, "zijn kat", ["his cat"], "interpret"),
-                self.create_quiz(singular_male, "his cat", ["zijn kat"], "write"),
-                self.create_quiz(singular, "haar kat", ["zijn kat"], "masculinize"),
-                self.create_quiz(singular, "zijn kat", ["haar kat"], "feminize"),
-                self.create_quiz(plural_female, "haar katten", ["her cats"], "read"),
-                self.create_quiz(plural_female, "haar katten", ["haar katten"], "dictate"),
-                self.create_quiz(plural_female, "haar katten", ["her cats"], "interpret"),
-                self.create_quiz(plural_female, "her cats", ["haar katten"], "write"),
-                self.create_quiz(plural_male, "zijn katten", ["his cats"], "read"),
-                self.create_quiz(plural_male, "zijn katten", ["zijn katten"], "dictate"),
-                self.create_quiz(plural_male, "zijn katten", ["his cats"], "interpret"),
-                self.create_quiz(plural_male, "his cats", ["zijn katten"], "write"),
-                self.create_quiz(plural, "haar katten", ["zijn katten"], "masculinize"),
-                self.create_quiz(plural, "zijn katten", ["haar katten"], "feminize"),
-                self.create_quiz(concept, "haar kat", ["haar katten"], "pluralize"),
-                self.create_quiz(concept, "haar katten", ["haar kat"], "singularize"),
-                self.create_quiz(concept, "zijn kat", ["zijn katten"], "pluralize"),
-                self.create_quiz(concept, "zijn katten", ["zijn kat"], "singularize"),
+                self.create_quiz(singular_female, "haar kat", ["her cat"], READ),
+                self.create_quiz(singular_female, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(singular_female, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(singular_female, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(singular_male, "zijn kat", ["his cat"], READ),
+                self.create_quiz(singular_male, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(singular_male, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(singular_male, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(singular, "haar kat", ["zijn kat"], MALE),
+                self.create_quiz(singular, "zijn kat", ["haar kat"], FEMALE),
+                self.create_quiz(plural_female, "haar katten", ["her cats"], READ),
+                self.create_quiz(plural_female, "haar katten", ["haar katten"], DICTATE),
+                self.create_quiz(plural_female, "haar katten", ["her cats"], INTERPRET),
+                self.create_quiz(plural_female, "her cats", ["haar katten"], WRITE),
+                self.create_quiz(plural_male, "zijn katten", ["his cats"], READ),
+                self.create_quiz(plural_male, "zijn katten", ["zijn katten"], DICTATE),
+                self.create_quiz(plural_male, "zijn katten", ["his cats"], INTERPRET),
+                self.create_quiz(plural_male, "his cats", ["zijn katten"], WRITE),
+                self.create_quiz(plural, "haar katten", ["zijn katten"], MALE),
+                self.create_quiz(plural, "zijn katten", ["haar katten"], FEMALE),
+                self.create_quiz(concept, "haar kat", ["haar katten"], PLURAL),
+                self.create_quiz(concept, "haar katten", ["haar kat"], SINGULAR),
+                self.create_quiz(concept, "zijn kat", ["zijn katten"], PLURAL),
+                self.create_quiz(concept, "zijn katten", ["zijn kat"], SINGULAR),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -418,24 +458,24 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(positive_degree, "groot", ["big"], "read"),
-                self.create_quiz(positive_degree, "groot", ["groot"], "dictate"),
-                self.create_quiz(positive_degree, "groot", ["big"], "interpret"),
-                self.create_quiz(positive_degree, "big", ["groot"], "write"),
-                self.create_quiz(comparative_degree, "groter", ["bigger"], "read"),
-                self.create_quiz(comparative_degree, "groter", ["groter"], "dictate"),
-                self.create_quiz(comparative_degree, "groter", ["bigger"], "interpret"),
-                self.create_quiz(comparative_degree, "bigger", ["groter"], "write"),
-                self.create_quiz(superlative_degree, "grootst", ["biggest"], "read"),
-                self.create_quiz(superlative_degree, "grootst", ["grootst"], "dictate"),
-                self.create_quiz(superlative_degree, "grootst", ["biggest"], "interpret"),
-                self.create_quiz(superlative_degree, "biggest", ["grootst"], "write"),
-                self.create_quiz(concept, "groot", ["groter"], "give comparative degree"),
-                self.create_quiz(concept, "groot", ["grootst"], "give superlative degree"),
-                self.create_quiz(concept, "groter", ["groot"], "give positive degree"),
-                self.create_quiz(concept, "groter", ["grootst"], "give superlative degree"),
-                self.create_quiz(concept, "grootst", ["groot"], "give positive degree"),
-                self.create_quiz(concept, "grootst", ["groter"], "give comparative degree"),
+                self.create_quiz(positive_degree, "groot", ["big"], READ),
+                self.create_quiz(positive_degree, "groot", ["groot"], DICTATE),
+                self.create_quiz(positive_degree, "groot", ["big"], INTERPRET),
+                self.create_quiz(positive_degree, "big", ["groot"], WRITE),
+                self.create_quiz(comparative_degree, "groter", ["bigger"], READ),
+                self.create_quiz(comparative_degree, "groter", ["groter"], DICTATE),
+                self.create_quiz(comparative_degree, "groter", ["bigger"], INTERPRET),
+                self.create_quiz(comparative_degree, "bigger", ["groter"], WRITE),
+                self.create_quiz(superlative_degree, "grootst", ["biggest"], READ),
+                self.create_quiz(superlative_degree, "grootst", ["grootst"], DICTATE),
+                self.create_quiz(superlative_degree, "grootst", ["biggest"], INTERPRET),
+                self.create_quiz(superlative_degree, "biggest", ["grootst"], WRITE),
+                self.create_quiz(concept, "groot", ["groter"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "groot", ["grootst"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "groter", ["groot"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "groter", ["grootst"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "grootst", ["groot"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "grootst", ["groter"], COMPARATIVE_DEGREE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -454,39 +494,39 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts(FI)
         self.assertSetEqual(
             {
-                self.create_quiz(positive_degree, "iso", ["big"], "read"),
-                self.create_quiz(positive_degree, "suuri", ["big"], "read"),
-                self.create_quiz(positive_degree, "iso", ["iso"], "dictate"),
-                self.create_quiz(positive_degree, "iso", ["big"], "interpret"),
-                self.create_quiz(positive_degree, "suuri", ["suuri"], "dictate"),
-                self.create_quiz(positive_degree, "suuri", ["big"], "interpret"),
-                self.create_quiz(positive_degree, "big", ["iso", "suuri"], "write"),
-                self.create_quiz(comparative_degree, "isompi", ["bigger"], "read"),
-                self.create_quiz(comparative_degree, "suurempi", ["bigger"], "read"),
-                self.create_quiz(comparative_degree, "isompi", ["isompi"], "dictate"),
-                self.create_quiz(comparative_degree, "isompi", ["bigger"], "interpret"),
-                self.create_quiz(comparative_degree, "suurempi", ["suurempi"], "dictate"),
-                self.create_quiz(comparative_degree, "suurempi", ["bigger"], "interpret"),
-                self.create_quiz(comparative_degree, "bigger", ["isompi", "suurempi"], "write"),
-                self.create_quiz(superlative_degree, "isoin", ["biggest"], "read"),
-                self.create_quiz(superlative_degree, "suurin", ["biggest"], "read"),
-                self.create_quiz(superlative_degree, "isoin", ["isoin"], "dictate"),
-                self.create_quiz(superlative_degree, "isoin", ["biggest"], "interpret"),
-                self.create_quiz(superlative_degree, "suurin", ["suurin"], "dictate"),
-                self.create_quiz(superlative_degree, "suurin", ["biggest"], "interpret"),
-                self.create_quiz(superlative_degree, "biggest", ["isoin", "suurin"], "write"),
-                self.create_quiz(concept, "iso", ["isompi"], "give comparative degree"),
-                self.create_quiz(concept, "suuri", ["suurempi"], "give comparative degree"),
-                self.create_quiz(concept, "iso", ["isoin"], "give superlative degree"),
-                self.create_quiz(concept, "suuri", ["suurin"], "give superlative degree"),
-                self.create_quiz(concept, "isompi", ["iso"], "give positive degree"),
-                self.create_quiz(concept, "suurempi", ["suuri"], "give positive degree"),
-                self.create_quiz(concept, "isompi", ["isoin"], "give superlative degree"),
-                self.create_quiz(concept, "suurempi", ["suurin"], "give superlative degree"),
-                self.create_quiz(concept, "isoin", ["iso"], "give positive degree"),
-                self.create_quiz(concept, "suurin", ["suuri"], "give positive degree"),
-                self.create_quiz(concept, "isoin", ["isompi"], "give comparative degree"),
-                self.create_quiz(concept, "suurin", ["suurempi"], "give comparative degree"),
+                self.create_quiz(positive_degree, "iso", ["big"], READ),
+                self.create_quiz(positive_degree, "suuri", ["big"], READ),
+                self.create_quiz(positive_degree, "iso", ["iso"], DICTATE),
+                self.create_quiz(positive_degree, "iso", ["big"], INTERPRET),
+                self.create_quiz(positive_degree, "suuri", ["suuri"], DICTATE),
+                self.create_quiz(positive_degree, "suuri", ["big"], INTERPRET),
+                self.create_quiz(positive_degree, "big", ["iso", "suuri"], WRITE),
+                self.create_quiz(comparative_degree, "isompi", ["bigger"], READ),
+                self.create_quiz(comparative_degree, "suurempi", ["bigger"], READ),
+                self.create_quiz(comparative_degree, "isompi", ["isompi"], DICTATE),
+                self.create_quiz(comparative_degree, "isompi", ["bigger"], INTERPRET),
+                self.create_quiz(comparative_degree, "suurempi", ["suurempi"], DICTATE),
+                self.create_quiz(comparative_degree, "suurempi", ["bigger"], INTERPRET),
+                self.create_quiz(comparative_degree, "bigger", ["isompi", "suurempi"], WRITE),
+                self.create_quiz(superlative_degree, "isoin", ["biggest"], READ),
+                self.create_quiz(superlative_degree, "suurin", ["biggest"], READ),
+                self.create_quiz(superlative_degree, "isoin", ["isoin"], DICTATE),
+                self.create_quiz(superlative_degree, "isoin", ["biggest"], INTERPRET),
+                self.create_quiz(superlative_degree, "suurin", ["suurin"], DICTATE),
+                self.create_quiz(superlative_degree, "suurin", ["biggest"], INTERPRET),
+                self.create_quiz(superlative_degree, "biggest", ["isoin", "suurin"], WRITE),
+                self.create_quiz(concept, "iso", ["isompi"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "suuri", ["suurempi"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "iso", ["isoin"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "suuri", ["suurin"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "isompi", ["iso"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "suurempi", ["suuri"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "isompi", ["isoin"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "suurempi", ["suurin"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "isoin", ["iso"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "suurin", ["suuri"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "isoin", ["isompi"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "suurin", ["suurempi"], COMPARATIVE_DEGREE),
             },
             create_quizzes(FI_EN, concept),
         )
@@ -498,24 +538,24 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         first_person, second_person, third_person = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(first_person, "ik eet", ["I eat"], "read"),
-                self.create_quiz(first_person, "ik eet", ["ik eet"], "dictate"),
-                self.create_quiz(first_person, "ik eet", ["I eat"], "interpret"),
-                self.create_quiz(first_person, "I eat", ["ik eet"], "write"),
-                self.create_quiz(second_person, "jij eet", ["you eat"], "read"),
-                self.create_quiz(second_person, "jij eet", ["jij eet"], "dictate"),
-                self.create_quiz(second_person, "jij eet", ["you eat"], "interpret"),
-                self.create_quiz(second_person, "you eat", ["jij eet"], "write"),
-                self.create_quiz(third_person, "zij eet", ["she eats"], "read"),
-                self.create_quiz(third_person, "zij eet", ["zij eet"], "dictate"),
-                self.create_quiz(third_person, "zij eet", ["she eats"], "interpret"),
-                self.create_quiz(third_person, "she eats", ["zij eet"], "write"),
-                self.create_quiz(concept, "ik eet", ["jij eet"], "give second person"),
-                self.create_quiz(concept, "ik eet", ["zij eet"], "give third person"),
-                self.create_quiz(concept, "jij eet", ["ik eet"], "give first person"),
-                self.create_quiz(concept, "jij eet", ["zij eet"], "give third person"),
-                self.create_quiz(concept, "zij eet", ["ik eet"], "give first person"),
-                self.create_quiz(concept, "zij eet", ["jij eet"], "give second person"),
+                self.create_quiz(first_person, "ik eet", ["I eat"], READ),
+                self.create_quiz(first_person, "ik eet", ["ik eet"], DICTATE),
+                self.create_quiz(first_person, "ik eet", ["I eat"], INTERPRET),
+                self.create_quiz(first_person, "I eat", ["ik eet"], WRITE),
+                self.create_quiz(second_person, "jij eet", ["you eat"], READ),
+                self.create_quiz(second_person, "jij eet", ["jij eet"], DICTATE),
+                self.create_quiz(second_person, "jij eet", ["you eat"], INTERPRET),
+                self.create_quiz(second_person, "you eat", ["jij eet"], WRITE),
+                self.create_quiz(third_person, "zij eet", ["she eats"], READ),
+                self.create_quiz(third_person, "zij eet", ["zij eet"], DICTATE),
+                self.create_quiz(third_person, "zij eet", ["she eats"], INTERPRET),
+                self.create_quiz(third_person, "she eats", ["zij eet"], WRITE),
+                self.create_quiz(concept, "ik eet", ["jij eet"], SECOND_PERSON),
+                self.create_quiz(concept, "ik eet", ["zij eet"], THIRD_PERSON),
+                self.create_quiz(concept, "jij eet", ["ik eet"], FIRST_PERSON),
+                self.create_quiz(concept, "jij eet", ["zij eet"], THIRD_PERSON),
+                self.create_quiz(concept, "zij eet", ["ik eet"], FIRST_PERSON),
+                self.create_quiz(concept, "zij eet", ["jij eet"], SECOND_PERSON),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -535,34 +575,38 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         third_person_female, third_person_male = third_person.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(first_person, "ik eet", ["I eat"], "read"),
-                self.create_quiz(first_person, "ik eet", ["ik eet"], "dictate"),
-                self.create_quiz(first_person, "ik eet", ["I eat"], "interpret"),
-                self.create_quiz(first_person, "I eat", ["ik eet"], "write"),
-                self.create_quiz(second_person, "jij eet", ["you eat"], "read"),
-                self.create_quiz(second_person, "jij eet", ["jij eet"], "dictate"),
-                self.create_quiz(second_person, "jij eet", ["you eat"], "interpret"),
-                self.create_quiz(second_person, "you eat", ["jij eet"], "write"),
-                self.create_quiz(third_person_female, "zij eet", ["she eats"], "read"),
-                self.create_quiz(third_person_female, "zij eet", ["zij eet"], "dictate"),
-                self.create_quiz(third_person_female, "zij eet", ["she eats"], "interpret"),
-                self.create_quiz(third_person_female, "she eats", ["zij eet"], "write"),
-                self.create_quiz(third_person_male, "hij eet", ["he eats"], "read"),
-                self.create_quiz(third_person_male, "hij eet", ["hij eet"], "dictate"),
-                self.create_quiz(third_person_male, "hij eet", ["he eats"], "interpret"),
-                self.create_quiz(third_person_male, "he eats", ["hij eet"], "write"),
-                self.create_quiz(third_person, "zij eet", ["hij eet"], "masculinize"),
-                self.create_quiz(third_person, "hij eet", ["zij eet"], "feminize"),
-                self.create_quiz(concept, "ik eet", ["jij eet"], "give second person"),
-                self.create_quiz(concept, "ik eet", ["zij eet"], ("give third person", "feminize")),
-                self.create_quiz(concept, "ik eet", ["hij eet"], ("give third person", "masculinize")),
-                self.create_quiz(concept, "jij eet", ["ik eet"], "give first person"),
-                self.create_quiz(concept, "jij eet", ["zij eet"], ("give third person", "feminize")),
-                self.create_quiz(concept, "jij eet", ["hij eet"], ("give third person", "masculinize")),
-                self.create_quiz(concept, "zij eet", ["ik eet"], "give first person"),
-                self.create_quiz(concept, "zij eet", ["jij eet"], "give second person"),
-                self.create_quiz(concept, "hij eet", ["ik eet"], "give first person"),
-                self.create_quiz(concept, "hij eet", ["jij eet"], "give second person"),
+                self.create_quiz(first_person, "ik eet", ["I eat"], READ),
+                self.create_quiz(first_person, "ik eet", ["ik eet"], DICTATE),
+                self.create_quiz(first_person, "ik eet", ["I eat"], INTERPRET),
+                self.create_quiz(first_person, "I eat", ["ik eet"], WRITE),
+                self.create_quiz(second_person, "jij eet", ["you eat"], READ),
+                self.create_quiz(second_person, "jij eet", ["jij eet"], DICTATE),
+                self.create_quiz(second_person, "jij eet", ["you eat"], INTERPRET),
+                self.create_quiz(second_person, "you eat", ["jij eet"], WRITE),
+                self.create_quiz(third_person_female, "zij eet", ["she eats"], READ),
+                self.create_quiz(third_person_female, "zij eet", ["zij eet"], DICTATE),
+                self.create_quiz(third_person_female, "zij eet", ["she eats"], INTERPRET),
+                self.create_quiz(third_person_female, "she eats", ["zij eet"], WRITE),
+                self.create_quiz(third_person_male, "hij eet", ["he eats"], READ),
+                self.create_quiz(third_person_male, "hij eet", ["hij eet"], DICTATE),
+                self.create_quiz(third_person_male, "hij eet", ["he eats"], INTERPRET),
+                self.create_quiz(third_person_male, "he eats", ["hij eet"], WRITE),
+                self.create_quiz(third_person, "zij eet", ["hij eet"], MALE),
+                self.create_quiz(third_person, "hij eet", ["zij eet"], FEMALE),
+                self.create_quiz(concept, "ik eet", ["jij eet"], SECOND_PERSON),
+                self.create_quiz(
+                    concept, "ik eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMALE))
+                ),
+                self.create_quiz(concept, "ik eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MALE))),
+                self.create_quiz(concept, "jij eet", ["ik eet"], FIRST_PERSON),
+                self.create_quiz(
+                    concept, "jij eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMALE))
+                ),
+                self.create_quiz(concept, "jij eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MALE))),
+                self.create_quiz(concept, "zij eet", ["ik eet"], FIRST_PERSON),
+                self.create_quiz(concept, "zij eet", ["jij eet"], SECOND_PERSON),
+                self.create_quiz(concept, "hij eet", ["ik eet"], FIRST_PERSON),
+                self.create_quiz(concept, "hij eet", ["jij eet"], SECOND_PERSON),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -581,25 +625,25 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         first_person, second_person, third_person = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(first_person, "minä syön", ["I eat"], "read"),
-                self.create_quiz(first_person, "minä syön", ["minä syön"], "dictate"),
-                self.create_quiz(first_person, "minä syön", ["I eat"], "interpret"),
-                self.create_quiz(first_person, "I eat", ["minä syön"], "write"),
-                self.create_quiz(second_person, "sinä syöt", ["you eat"], "read"),
-                self.create_quiz(second_person, "sinä syöt", ["sinä syöt"], "dictate"),
-                self.create_quiz(second_person, "sinä syöt", ["you eat"], "interpret"),
-                self.create_quiz(second_person, "you eat", ["sinä syöt"], "write"),
-                self.create_quiz(third_person, "hän syö", ["she eats", "he eats"], "read"),
-                self.create_quiz(third_person, "hän syö", ["hän syö"], "dictate"),
-                self.create_quiz(third_person, "hän syö", ["she eats", "he eats"], "interpret"),
-                self.create_quiz(third_person, "she eats", ["hän syö"], "write"),
-                self.create_quiz(third_person, "he eats", ["hän syö"], "write"),
-                self.create_quiz(concept, "minä syön", ["sinä syöt"], "give second person"),
-                self.create_quiz(concept, "minä syön", ["hän syö"], "give third person"),
-                self.create_quiz(concept, "sinä syöt", ["minä syön"], "give first person"),
-                self.create_quiz(concept, "sinä syöt", ["hän syö"], "give third person"),
-                self.create_quiz(concept, "hän syö", ["minä syön"], "give first person"),
-                self.create_quiz(concept, "hän syö", ["sinä syöt"], "give second person"),
+                self.create_quiz(first_person, "minä syön", ["I eat"], READ),
+                self.create_quiz(first_person, "minä syön", ["minä syön"], DICTATE),
+                self.create_quiz(first_person, "minä syön", ["I eat"], INTERPRET),
+                self.create_quiz(first_person, "I eat", ["minä syön"], WRITE),
+                self.create_quiz(second_person, "sinä syöt", ["you eat"], READ),
+                self.create_quiz(second_person, "sinä syöt", ["sinä syöt"], DICTATE),
+                self.create_quiz(second_person, "sinä syöt", ["you eat"], INTERPRET),
+                self.create_quiz(second_person, "you eat", ["sinä syöt"], WRITE),
+                self.create_quiz(third_person, "hän syö", ["she eats", "he eats"], READ),
+                self.create_quiz(third_person, "hän syö", ["hän syö"], DICTATE),
+                self.create_quiz(third_person, "hän syö", ["she eats", "he eats"], INTERPRET),
+                self.create_quiz(third_person, "she eats", ["hän syö"], WRITE),
+                self.create_quiz(third_person, "he eats", ["hän syö"], WRITE),
+                self.create_quiz(concept, "minä syön", ["sinä syöt"], SECOND_PERSON),
+                self.create_quiz(concept, "minä syön", ["hän syö"], THIRD_PERSON),
+                self.create_quiz(concept, "sinä syöt", ["minä syön"], FIRST_PERSON),
+                self.create_quiz(concept, "sinä syöt", ["hän syö"], THIRD_PERSON),
+                self.create_quiz(concept, "hän syö", ["minä syön"], FIRST_PERSON),
+                self.create_quiz(concept, "hän syö", ["sinä syöt"], SECOND_PERSON),
             },
             create_quizzes(FI_EN, concept),
         )
@@ -613,48 +657,48 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         first_person_plural, second_person_plural, third_person_plural = plural.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(first_person_singular, "ik heb", ["minulla on"], "read"),
-                self.create_quiz(first_person_singular, "minulla on", ["ik heb"], "write"),
-                self.create_quiz(first_person_singular, "ik heb", ["ik heb"], "dictate"),
-                self.create_quiz(first_person_singular, "ik heb", ["minulla on"], "interpret"),
-                self.create_quiz(second_person_singular, "jij hebt", ["sinulla on"], "read"),
-                self.create_quiz(second_person_singular, "sinulla on", ["jij hebt"], "write"),
-                self.create_quiz(second_person_singular, "jij hebt", ["jij hebt"], "dictate"),
-                self.create_quiz(second_person_singular, "jij hebt", ["sinulla on"], "interpret"),
-                self.create_quiz(third_person_singular, "zij heeft", ["hänellä on"], "read"),
-                self.create_quiz(third_person_singular, "hänellä on", ["zij heeft"], "write"),
-                self.create_quiz(third_person_singular, "zij heeft", ["zij heeft"], "dictate"),
-                self.create_quiz(third_person_singular, "zij heeft", ["hänellä on"], "interpret"),
-                self.create_quiz(singular, "ik heb", ["jij hebt"], "give second person"),
-                self.create_quiz(singular, "ik heb", ["zij heeft"], "give third person"),
-                self.create_quiz(singular, "jij hebt", ["ik heb"], "give first person"),
-                self.create_quiz(singular, "jij hebt", ["zij heeft"], "give third person"),
-                self.create_quiz(singular, "zij heeft", ["ik heb"], "give first person"),
-                self.create_quiz(singular, "zij heeft", ["jij hebt"], "give second person"),
-                self.create_quiz(first_person_plural, "wij hebben", ["meillä on"], "read"),
-                self.create_quiz(first_person_plural, "meillä on", ["wij hebben"], "write"),
-                self.create_quiz(first_person_plural, "wij hebben", ["wij hebben"], "dictate"),
-                self.create_quiz(first_person_plural, "wij hebben", ["meillä on"], "interpret"),
-                self.create_quiz(second_person_plural, "jullie hebben", ["teillä on"], "read"),
-                self.create_quiz(second_person_plural, "teillä on", ["jullie hebben"], "write"),
-                self.create_quiz(second_person_plural, "jullie hebben", ["jullie hebben"], "dictate"),
-                self.create_quiz(second_person_plural, "jullie hebben", ["teillä on"], "interpret"),
-                self.create_quiz(third_person_plural, "zij hebben", ["heillä on"], "read"),
-                self.create_quiz(third_person_plural, "heillä on", ["zij hebben"], "write"),
-                self.create_quiz(third_person_plural, "zij hebben", ["zij hebben"], "dictate"),
-                self.create_quiz(third_person_plural, "zij hebben", ["heillä on"], "interpret"),
-                self.create_quiz(plural, "wij hebben", ["jullie hebben"], "give second person"),
-                self.create_quiz(plural, "wij hebben", ["zij hebben"], "give third person"),
-                self.create_quiz(plural, "jullie hebben", ["wij hebben"], "give first person"),
-                self.create_quiz(plural, "jullie hebben", ["zij hebben"], "give third person"),
-                self.create_quiz(plural, "zij hebben", ["wij hebben"], "give first person"),
-                self.create_quiz(plural, "zij hebben", ["jullie hebben"], "give second person"),
-                self.create_quiz(concept, "ik heb", ["wij hebben"], "pluralize"),
-                self.create_quiz(concept, "wij hebben", ["ik heb"], "singularize"),
-                self.create_quiz(concept, "jij hebt", ["jullie hebben"], "pluralize"),
-                self.create_quiz(concept, "jullie hebben", ["jij hebt"], "singularize"),
-                self.create_quiz(concept, "zij heeft", ["zij hebben"], "pluralize"),
-                self.create_quiz(concept, "zij hebben", ["zij heeft"], "singularize"),
+                self.create_quiz(first_person_singular, "ik heb", ["minulla on"], READ),
+                self.create_quiz(first_person_singular, "minulla on", ["ik heb"], WRITE),
+                self.create_quiz(first_person_singular, "ik heb", ["ik heb"], DICTATE),
+                self.create_quiz(first_person_singular, "ik heb", ["minulla on"], INTERPRET),
+                self.create_quiz(second_person_singular, "jij hebt", ["sinulla on"], READ),
+                self.create_quiz(second_person_singular, "sinulla on", ["jij hebt"], WRITE),
+                self.create_quiz(second_person_singular, "jij hebt", ["jij hebt"], DICTATE),
+                self.create_quiz(second_person_singular, "jij hebt", ["sinulla on"], INTERPRET),
+                self.create_quiz(third_person_singular, "zij heeft", ["hänellä on"], READ),
+                self.create_quiz(third_person_singular, "hänellä on", ["zij heeft"], WRITE),
+                self.create_quiz(third_person_singular, "zij heeft", ["zij heeft"], DICTATE),
+                self.create_quiz(third_person_singular, "zij heeft", ["hänellä on"], INTERPRET),
+                self.create_quiz(singular, "ik heb", ["jij hebt"], SECOND_PERSON),
+                self.create_quiz(singular, "ik heb", ["zij heeft"], THIRD_PERSON),
+                self.create_quiz(singular, "jij hebt", ["ik heb"], FIRST_PERSON),
+                self.create_quiz(singular, "jij hebt", ["zij heeft"], THIRD_PERSON),
+                self.create_quiz(singular, "zij heeft", ["ik heb"], FIRST_PERSON),
+                self.create_quiz(singular, "zij heeft", ["jij hebt"], SECOND_PERSON),
+                self.create_quiz(first_person_plural, "wij hebben", ["meillä on"], READ),
+                self.create_quiz(first_person_plural, "meillä on", ["wij hebben"], WRITE),
+                self.create_quiz(first_person_plural, "wij hebben", ["wij hebben"], DICTATE),
+                self.create_quiz(first_person_plural, "wij hebben", ["meillä on"], INTERPRET),
+                self.create_quiz(second_person_plural, "jullie hebben", ["teillä on"], READ),
+                self.create_quiz(second_person_plural, "teillä on", ["jullie hebben"], WRITE),
+                self.create_quiz(second_person_plural, "jullie hebben", ["jullie hebben"], DICTATE),
+                self.create_quiz(second_person_plural, "jullie hebben", ["teillä on"], INTERPRET),
+                self.create_quiz(third_person_plural, "zij hebben", ["heillä on"], READ),
+                self.create_quiz(third_person_plural, "heillä on", ["zij hebben"], WRITE),
+                self.create_quiz(third_person_plural, "zij hebben", ["zij hebben"], DICTATE),
+                self.create_quiz(third_person_plural, "zij hebben", ["heillä on"], INTERPRET),
+                self.create_quiz(plural, "wij hebben", ["jullie hebben"], SECOND_PERSON),
+                self.create_quiz(plural, "wij hebben", ["zij hebben"], THIRD_PERSON),
+                self.create_quiz(plural, "jullie hebben", ["wij hebben"], FIRST_PERSON),
+                self.create_quiz(plural, "jullie hebben", ["zij hebben"], THIRD_PERSON),
+                self.create_quiz(plural, "zij hebben", ["wij hebben"], FIRST_PERSON),
+                self.create_quiz(plural, "zij hebben", ["jullie hebben"], SECOND_PERSON),
+                self.create_quiz(concept, "ik heb", ["wij hebben"], PLURAL),
+                self.create_quiz(concept, "wij hebben", ["ik heb"], SINGULAR),
+                self.create_quiz(concept, "jij hebt", ["jullie hebben"], PLURAL),
+                self.create_quiz(concept, "jullie hebben", ["jij hebt"], SINGULAR),
+                self.create_quiz(concept, "zij heeft", ["zij hebben"], PLURAL),
+                self.create_quiz(concept, "zij hebben", ["zij heeft"], SINGULAR),
             },
             create_quizzes(NL_FI, concept),
         )
@@ -673,30 +717,30 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         female_singular, female_plural, male_singular, male_plural = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female_singular, "haar kat", ["her cat"], "read"),
-                self.create_quiz(female_singular, "haar kat", ["haar kat"], "dictate"),
-                self.create_quiz(female_singular, "haar kat", ["her cat"], "interpret"),
-                self.create_quiz(female_singular, "her cat", ["haar kat"], "write"),
-                self.create_quiz(female_plural, "haar katten", ["her cats"], "read"),
-                self.create_quiz(female_plural, "haar katten", ["haar katten"], "dictate"),
-                self.create_quiz(female_plural, "haar katten", ["her cats"], "interpret"),
-                self.create_quiz(female_plural, "her cats", ["haar katten"], "write"),
-                self.create_quiz(female, "haar kat", ["haar katten"], "pluralize"),
-                self.create_quiz(female, "haar katten", ["haar kat"], "singularize"),
-                self.create_quiz(male_singular, "zijn kat", ["his cat"], "read"),
-                self.create_quiz(male_singular, "zijn kat", ["zijn kat"], "dictate"),
-                self.create_quiz(male_singular, "zijn kat", ["his cat"], "interpret"),
-                self.create_quiz(male_singular, "his cat", ["zijn kat"], "write"),
-                self.create_quiz(male_plural, "zijn katten", ["his cats"], "read"),
-                self.create_quiz(male_plural, "zijn katten", ["zijn katten"], "dictate"),
-                self.create_quiz(male_plural, "zijn katten", ["his cats"], "interpret"),
-                self.create_quiz(male_plural, "his cats", ["zijn katten"], "write"),
-                self.create_quiz(male, "zijn kat", ["zijn katten"], "pluralize"),
-                self.create_quiz(male, "zijn katten", ["zijn kat"], "singularize"),
-                self.create_quiz(concept, "haar kat", ["zijn kat"], "masculinize"),
-                self.create_quiz(concept, "zijn kat", ["haar kat"], "feminize"),
-                self.create_quiz(concept, "haar katten", ["zijn katten"], "masculinize"),
-                self.create_quiz(concept, "zijn katten", ["haar katten"], "feminize"),
+                self.create_quiz(female_singular, "haar kat", ["her cat"], READ),
+                self.create_quiz(female_singular, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(female_singular, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(female_singular, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(female_plural, "haar katten", ["her cats"], READ),
+                self.create_quiz(female_plural, "haar katten", ["haar katten"], DICTATE),
+                self.create_quiz(female_plural, "haar katten", ["her cats"], INTERPRET),
+                self.create_quiz(female_plural, "her cats", ["haar katten"], WRITE),
+                self.create_quiz(female, "haar kat", ["haar katten"], PLURAL),
+                self.create_quiz(female, "haar katten", ["haar kat"], SINGULAR),
+                self.create_quiz(male_singular, "zijn kat", ["his cat"], READ),
+                self.create_quiz(male_singular, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(male_singular, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(male_singular, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(male_plural, "zijn katten", ["his cats"], READ),
+                self.create_quiz(male_plural, "zijn katten", ["zijn katten"], DICTATE),
+                self.create_quiz(male_plural, "zijn katten", ["his cats"], INTERPRET),
+                self.create_quiz(male_plural, "his cats", ["zijn katten"], WRITE),
+                self.create_quiz(male, "zijn kat", ["zijn katten"], PLURAL),
+                self.create_quiz(male, "zijn katten", ["zijn kat"], SINGULAR),
+                self.create_quiz(concept, "haar kat", ["zijn kat"], MALE),
+                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMALE),
+                self.create_quiz(concept, "haar katten", ["zijn katten"], MALE),
+                self.create_quiz(concept, "zijn katten", ["haar katten"], FEMALE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -711,12 +755,12 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         female, male = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(female, "hän on;female", ["she is|she's"], "read"),
-                self.create_quiz(female, "hän on;female", ["hän on;female"], "dictate"),
-                self.create_quiz(female, "hän on;female", ["she is|she's"], "interpret"),
-                self.create_quiz(female, "she is|she's", ["hän on;female"], "write"),
-                self.create_quiz(male, "hän on;male", ["he is|he's"], "read"),
-                self.create_quiz(male, "he is|he's", ["hän on;male"], "write"),
+                self.create_quiz(female, "hän on;female", ["she is|she's"], READ),
+                self.create_quiz(female, "hän on;female", ["hän on;female"], DICTATE),
+                self.create_quiz(female, "hän on;female", ["she is|she's"], INTERPRET),
+                self.create_quiz(female, "she is|she's", ["hän on;female"], WRITE),
+                self.create_quiz(male, "hän on;male", ["he is|he's"], READ),
+                self.create_quiz(male, "he is|he's", ["hän on;male"], WRITE),
             },
             create_quizzes(FI_EN, concept),
         )
@@ -728,24 +772,24 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         infinitive, singular, plural = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(infinitive, "slapen", ["to sleep"], "read"),
-                self.create_quiz(infinitive, "slapen", ["slapen"], "dictate"),
-                self.create_quiz(infinitive, "slapen", ["to sleep"], "interpret"),
-                self.create_quiz(infinitive, "to sleep", ["slapen"], "write"),
-                self.create_quiz(singular, "ik slaap", ["I sleep"], "read"),
-                self.create_quiz(singular, "ik slaap", ["ik slaap"], "dictate"),
-                self.create_quiz(singular, "ik slaap", ["I sleep"], "interpret"),
-                self.create_quiz(singular, "I sleep", ["ik slaap"], "write"),
-                self.create_quiz(plural, "wij slapen", ["we sleep"], "read"),
-                self.create_quiz(plural, "wij slapen", ["wij slapen"], "dictate"),
-                self.create_quiz(plural, "wij slapen", ["we sleep"], "interpret"),
-                self.create_quiz(plural, "we sleep", ["wij slapen"], "write"),
-                self.create_quiz(concept, "wij slapen", ["slapen"], "give infinitive"),
-                self.create_quiz(concept, "ik slaap", ["slapen"], "give infinitive"),
-                self.create_quiz(concept, "slapen", ["wij slapen"], "pluralize"),
-                self.create_quiz(concept, "ik slaap", ["wij slapen"], "pluralize"),
-                self.create_quiz(concept, "slapen", ["ik slaap"], "singularize"),
-                self.create_quiz(concept, "wij slapen", ["ik slaap"], "singularize"),
+                self.create_quiz(infinitive, "slapen", ["to sleep"], READ),
+                self.create_quiz(infinitive, "slapen", ["slapen"], DICTATE),
+                self.create_quiz(infinitive, "slapen", ["to sleep"], INTERPRET),
+                self.create_quiz(infinitive, "to sleep", ["slapen"], WRITE),
+                self.create_quiz(singular, "ik slaap", ["I sleep"], READ),
+                self.create_quiz(singular, "ik slaap", ["ik slaap"], DICTATE),
+                self.create_quiz(singular, "ik slaap", ["I sleep"], INTERPRET),
+                self.create_quiz(singular, "I sleep", ["ik slaap"], WRITE),
+                self.create_quiz(plural, "wij slapen", ["we sleep"], READ),
+                self.create_quiz(plural, "wij slapen", ["wij slapen"], DICTATE),
+                self.create_quiz(plural, "wij slapen", ["we sleep"], INTERPRET),
+                self.create_quiz(plural, "we sleep", ["wij slapen"], WRITE),
+                self.create_quiz(concept, "wij slapen", ["slapen"], INFINITIVE),
+                self.create_quiz(concept, "ik slaap", ["slapen"], INFINITIVE),
+                self.create_quiz(concept, "slapen", ["wij slapen"], PLURAL),
+                self.create_quiz(concept, "ik slaap", ["wij slapen"], PLURAL),
+                self.create_quiz(concept, "slapen", ["ik slaap"], SINGULAR),
+                self.create_quiz(concept, "wij slapen", ["ik slaap"], SINGULAR),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -759,58 +803,58 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         first_person_plural, second_person_plural, third_person_plural = plural.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(first_person_singular, "ik ben", ["minä olen"], "read"),
-                self.create_quiz(first_person_singular, "ik ben", ["ik ben"], "dictate"),
-                self.create_quiz(first_person_singular, "ik ben", ["minä olen"], "interpret"),
-                self.create_quiz(first_person_singular, "minä olen", ["ik ben"], "write"),
-                self.create_quiz(concept, "ik ben", ["zijn"], "give infinitive"),
-                self.create_quiz(second_person_singular, "jij bent", ["sinä olet"], "read"),
-                self.create_quiz(second_person_singular, "jij bent", ["jij bent"], "dictate"),
-                self.create_quiz(second_person_singular, "jij bent", ["sinä olet"], "interpret"),
-                self.create_quiz(second_person_singular, "sinä olet", ["jij bent"], "write"),
-                self.create_quiz(concept, "jij bent", ["zijn"], "give infinitive"),
-                self.create_quiz(third_person_singular, "zij is", ["hän on"], "read"),
-                self.create_quiz(third_person_singular, "zij is", ["zij is"], "dictate"),
-                self.create_quiz(third_person_singular, "zij is", ["hän on"], "interpret"),
-                self.create_quiz(third_person_singular, "hän on", ["zij is"], "write"),
-                self.create_quiz(concept, "zij is", ["zijn"], "give infinitive"),
-                self.create_quiz(singular, "ik ben", ["jij bent"], "give second person"),
-                self.create_quiz(singular, "ik ben", ["zij is"], "give third person"),
-                self.create_quiz(singular, "jij bent", ["ik ben"], "give first person"),
-                self.create_quiz(singular, "jij bent", ["zij is"], "give third person"),
-                self.create_quiz(singular, "zij is", ["ik ben"], "give first person"),
-                self.create_quiz(singular, "zij is", ["jij bent"], "give second person"),
-                self.create_quiz(first_person_plural, "wij zijn", ["me olemme"], "read"),
-                self.create_quiz(first_person_plural, "wij zijn", ["wij zijn"], "dictate"),
-                self.create_quiz(first_person_plural, "wij zijn", ["me olemme"], "interpret"),
-                self.create_quiz(first_person_plural, "me olemme", ["wij zijn"], "write"),
-                self.create_quiz(concept, "wij zijn", ["zijn"], "give infinitive"),
-                self.create_quiz(second_person_plural, "jullie zijn", ["te olette"], "read"),
-                self.create_quiz(second_person_plural, "jullie zijn", ["jullie zijn"], "dictate"),
-                self.create_quiz(second_person_plural, "jullie zijn", ["te olette"], "interpret"),
-                self.create_quiz(second_person_plural, "te olette", ["jullie zijn"], "write"),
-                self.create_quiz(concept, "jullie zijn", ["zijn"], "give infinitive"),
-                self.create_quiz(third_person_plural, "zij zijn", ["he ovat"], "read"),
-                self.create_quiz(third_person_plural, "zij zijn", ["zij zijn"], "dictate"),
-                self.create_quiz(third_person_plural, "zij zijn", ["he ovat"], "interpret"),
-                self.create_quiz(third_person_plural, "he ovat", ["zij zijn"], "write"),
-                self.create_quiz(concept, "zij zijn", ["zijn"], "give infinitive"),
-                self.create_quiz(plural, "wij zijn", ["jullie zijn"], "give second person"),
-                self.create_quiz(plural, "wij zijn", ["zij zijn"], "give third person"),
-                self.create_quiz(plural, "jullie zijn", ["wij zijn"], "give first person"),
-                self.create_quiz(plural, "jullie zijn", ["zij zijn"], "give third person"),
-                self.create_quiz(plural, "zij zijn", ["wij zijn"], "give first person"),
-                self.create_quiz(plural, "zij zijn", ["jullie zijn"], "give second person"),
-                self.create_quiz(concept, "ik ben", ["wij zijn"], "pluralize"),
-                self.create_quiz(concept, "wij zijn", ["ik ben"], "singularize"),
-                self.create_quiz(concept, "jij bent", ["jullie zijn"], "pluralize"),
-                self.create_quiz(concept, "jullie zijn", ["jij bent"], "singularize"),
-                self.create_quiz(concept, "zij is", ["zij zijn"], "pluralize"),
-                self.create_quiz(concept, "zij zijn", ["zij is"], "singularize"),
-                self.create_quiz(infinitive, "zijn", ["olla"], "read"),
-                self.create_quiz(infinitive, "zijn", ["zijn"], "dictate"),
-                self.create_quiz(infinitive, "zijn", ["olla"], "interpret"),
-                self.create_quiz(infinitive, "olla", ["zijn"], "write"),
+                self.create_quiz(first_person_singular, "ik ben", ["minä olen"], READ),
+                self.create_quiz(first_person_singular, "ik ben", ["ik ben"], DICTATE),
+                self.create_quiz(first_person_singular, "ik ben", ["minä olen"], INTERPRET),
+                self.create_quiz(first_person_singular, "minä olen", ["ik ben"], WRITE),
+                self.create_quiz(concept, "ik ben", ["zijn"], INFINITIVE),
+                self.create_quiz(second_person_singular, "jij bent", ["sinä olet"], READ),
+                self.create_quiz(second_person_singular, "jij bent", ["jij bent"], DICTATE),
+                self.create_quiz(second_person_singular, "jij bent", ["sinä olet"], INTERPRET),
+                self.create_quiz(second_person_singular, "sinä olet", ["jij bent"], WRITE),
+                self.create_quiz(concept, "jij bent", ["zijn"], INFINITIVE),
+                self.create_quiz(third_person_singular, "zij is", ["hän on"], READ),
+                self.create_quiz(third_person_singular, "zij is", ["zij is"], DICTATE),
+                self.create_quiz(third_person_singular, "zij is", ["hän on"], INTERPRET),
+                self.create_quiz(third_person_singular, "hän on", ["zij is"], WRITE),
+                self.create_quiz(concept, "zij is", ["zijn"], INFINITIVE),
+                self.create_quiz(singular, "ik ben", ["jij bent"], SECOND_PERSON),
+                self.create_quiz(singular, "ik ben", ["zij is"], THIRD_PERSON),
+                self.create_quiz(singular, "jij bent", ["ik ben"], FIRST_PERSON),
+                self.create_quiz(singular, "jij bent", ["zij is"], THIRD_PERSON),
+                self.create_quiz(singular, "zij is", ["ik ben"], FIRST_PERSON),
+                self.create_quiz(singular, "zij is", ["jij bent"], SECOND_PERSON),
+                self.create_quiz(first_person_plural, "wij zijn", ["me olemme"], READ),
+                self.create_quiz(first_person_plural, "wij zijn", ["wij zijn"], DICTATE),
+                self.create_quiz(first_person_plural, "wij zijn", ["me olemme"], INTERPRET),
+                self.create_quiz(first_person_plural, "me olemme", ["wij zijn"], WRITE),
+                self.create_quiz(concept, "wij zijn", ["zijn"], INFINITIVE),
+                self.create_quiz(second_person_plural, "jullie zijn", ["te olette"], READ),
+                self.create_quiz(second_person_plural, "jullie zijn", ["jullie zijn"], DICTATE),
+                self.create_quiz(second_person_plural, "jullie zijn", ["te olette"], INTERPRET),
+                self.create_quiz(second_person_plural, "te olette", ["jullie zijn"], WRITE),
+                self.create_quiz(concept, "jullie zijn", ["zijn"], INFINITIVE),
+                self.create_quiz(third_person_plural, "zij zijn", ["he ovat"], READ),
+                self.create_quiz(third_person_plural, "zij zijn", ["zij zijn"], DICTATE),
+                self.create_quiz(third_person_plural, "zij zijn", ["he ovat"], INTERPRET),
+                self.create_quiz(third_person_plural, "he ovat", ["zij zijn"], WRITE),
+                self.create_quiz(concept, "zij zijn", ["zijn"], INFINITIVE),
+                self.create_quiz(plural, "wij zijn", ["jullie zijn"], SECOND_PERSON),
+                self.create_quiz(plural, "wij zijn", ["zij zijn"], THIRD_PERSON),
+                self.create_quiz(plural, "jullie zijn", ["wij zijn"], FIRST_PERSON),
+                self.create_quiz(plural, "jullie zijn", ["zij zijn"], THIRD_PERSON),
+                self.create_quiz(plural, "zij zijn", ["wij zijn"], FIRST_PERSON),
+                self.create_quiz(plural, "zij zijn", ["jullie zijn"], SECOND_PERSON),
+                self.create_quiz(concept, "ik ben", ["wij zijn"], PLURAL),
+                self.create_quiz(concept, "wij zijn", ["ik ben"], SINGULAR),
+                self.create_quiz(concept, "jij bent", ["jullie zijn"], PLURAL),
+                self.create_quiz(concept, "jullie zijn", ["jij bent"], SINGULAR),
+                self.create_quiz(concept, "zij is", ["zij zijn"], PLURAL),
+                self.create_quiz(concept, "zij zijn", ["zij is"], SINGULAR),
+                self.create_quiz(infinitive, "zijn", ["olla"], READ),
+                self.create_quiz(infinitive, "zijn", ["zijn"], DICTATE),
+                self.create_quiz(infinitive, "zijn", ["olla"], INTERPRET),
+                self.create_quiz(infinitive, "olla", ["zijn"], WRITE),
             },
             create_quizzes(NL_FI, concept),
         )
@@ -856,102 +900,102 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         first_plural_present, second_plural_present, third_plural_present = plural_present.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(first_singular_present, "ik ben", ["minä olen"], "read"),
-                self.create_quiz(first_singular_present, "ik ben", ["ik ben"], "dictate"),
-                self.create_quiz(first_singular_present, "ik ben", ["minä olen"], "interpret"),
-                self.create_quiz(first_singular_present, "minä olen", ["ik ben"], "write"),
-                self.create_quiz(second_singular_present, "jij bent", ["sinä olet"], "read"),
-                self.create_quiz(second_singular_present, "jij bent", ["jij bent"], "dictate"),
-                self.create_quiz(second_singular_present, "jij bent", ["sinä olet"], "interpret"),
-                self.create_quiz(second_singular_present, "sinä olet", ["jij bent"], "write"),
-                self.create_quiz(third_singular_present, "zij is", ["hän on"], "read"),
-                self.create_quiz(third_singular_present, "zij is", ["zij is"], "dictate"),
-                self.create_quiz(third_singular_present, "zij is", ["hän on"], "interpret"),
-                self.create_quiz(third_singular_present, "hän on", ["zij is"], "write"),
-                self.create_quiz(singular_present, "ik ben", ["jij bent"], "give second person"),
-                self.create_quiz(singular_present, "ik ben", ["zij is"], "give third person"),
-                self.create_quiz(singular_present, "jij bent", ["ik ben"], "give first person"),
-                self.create_quiz(singular_present, "jij bent", ["zij is"], "give third person"),
-                self.create_quiz(singular_present, "zij is", ["ik ben"], "give first person"),
-                self.create_quiz(singular_present, "zij is", ["jij bent"], "give second person"),
-                self.create_quiz(first_plural_present, "wij zijn", ["me olemme"], "read"),
-                self.create_quiz(first_plural_present, "wij zijn", ["wij zijn"], "dictate"),
-                self.create_quiz(first_plural_present, "wij zijn", ["me olemme"], "interpret"),
-                self.create_quiz(first_plural_present, "me olemme", ["wij zijn"], "write"),
-                self.create_quiz(second_plural_present, "jullie zijn", ["te olette"], "read"),
-                self.create_quiz(second_plural_present, "jullie zijn", ["jullie zijn"], "dictate"),
-                self.create_quiz(second_plural_present, "jullie zijn", ["te olette"], "interpret"),
-                self.create_quiz(second_plural_present, "te olette", ["jullie zijn"], "write"),
-                self.create_quiz(third_plural_present, "zij zijn", ["he ovat"], "read"),
-                self.create_quiz(third_plural_present, "zij zijn", ["zij zijn"], "dictate"),
-                self.create_quiz(third_plural_present, "zij zijn", ["he ovat"], "interpret"),
-                self.create_quiz(third_plural_present, "he ovat", ["zij zijn"], "write"),
-                self.create_quiz(plural_present, "wij zijn", ["jullie zijn"], "give second person"),
-                self.create_quiz(plural_present, "wij zijn", ["zij zijn"], "give third person"),
-                self.create_quiz(plural_present, "jullie zijn", ["wij zijn"], "give first person"),
-                self.create_quiz(plural_present, "jullie zijn", ["zij zijn"], "give third person"),
-                self.create_quiz(plural_present, "zij zijn", ["wij zijn"], "give first person"),
-                self.create_quiz(plural_present, "zij zijn", ["jullie zijn"], "give second person"),
-                self.create_quiz(present, "ik ben", ["wij zijn"], "pluralize"),
-                self.create_quiz(present, "jij bent", ["jullie zijn"], "pluralize"),
-                self.create_quiz(present, "zij is", ["zij zijn"], "pluralize"),
-                self.create_quiz(present, "wij zijn", ["ik ben"], "singularize"),
-                self.create_quiz(present, "jullie zijn", ["jij bent"], "singularize"),
-                self.create_quiz(present, "zij zijn", ["zij is"], "singularize"),
-                self.create_quiz(first_singular_past, "ik was", ["minä olin"], "read"),
-                self.create_quiz(first_singular_past, "ik was", ["ik was"], "dictate"),
-                self.create_quiz(first_singular_past, "ik was", ["minä olin"], "interpret"),
-                self.create_quiz(first_singular_past, "minä olin", ["ik was"], "write"),
-                self.create_quiz(second_singular_past, "jij was", ["sinä olot"], "read"),
-                self.create_quiz(second_singular_past, "jij was", ["jij was"], "dictate"),
-                self.create_quiz(second_singular_past, "jij was", ["sinä olit"], "interpret"),
-                self.create_quiz(second_singular_past, "sinä olit", ["jij was"], "write"),
-                self.create_quiz(third_singular_past, "zij was", ["hän oli"], "read"),
-                self.create_quiz(third_singular_past, "zij was", ["zij was"], "dictate"),
-                self.create_quiz(third_singular_past, "zij was", ["hän oli"], "interpret"),
-                self.create_quiz(third_singular_past, "hän oli", ["zij was"], "write"),
-                self.create_quiz(singular_past, "ik was", ["jij was"], "give second person"),
-                self.create_quiz(singular_past, "ik was", ["zij was"], "give third person"),
-                self.create_quiz(singular_past, "jij was", ["ik was"], "give first person"),
-                self.create_quiz(singular_past, "jij was", ["zij was"], "give third person"),
-                self.create_quiz(singular_past, "zij was", ["ik was"], "give first person"),
-                self.create_quiz(singular_past, "zij was", ["jij was"], "give second person"),
-                self.create_quiz(first_plural_past, "wij waren", ["me olimme"], "read"),
-                self.create_quiz(first_plural_past, "wij waren", ["wij waren"], "dictate"),
-                self.create_quiz(first_plural_past, "wij waren", ["me olimme"], "interpret"),
-                self.create_quiz(first_plural_past, "me olimme", ["wij waren"], "write"),
-                self.create_quiz(second_plural_past, "jullie waren", ["te olitte"], "read"),
-                self.create_quiz(second_plural_past, "jullie waren", ["jullie waren"], "dictate"),
-                self.create_quiz(second_plural_past, "jullie waren", ["te olitte"], "interpret"),
-                self.create_quiz(second_plural_past, "te olitte", ["jullie waren"], "write"),
-                self.create_quiz(third_plural_past, "zij waren", ["he olivat"], "read"),
-                self.create_quiz(third_plural_past, "zij waren", ["zij waren"], "dictate"),
-                self.create_quiz(third_plural_past, "zij waren", ["he olivät"], "interpret"),
-                self.create_quiz(third_plural_past, "he olivat", ["zij waren"], "write"),
-                self.create_quiz(plural_past, "wij waren", ["jullie waren"], "give second person"),
-                self.create_quiz(plural_past, "wij waren", ["zij waren"], "give third person"),
-                self.create_quiz(plural_past, "jullie waren", ["wij waren"], "give first person"),
-                self.create_quiz(plural_past, "jullie waren", ["zij waren"], "give third person"),
-                self.create_quiz(plural_past, "zij waren", ["wij waren"], "give first person"),
-                self.create_quiz(plural_past, "zij waren", ["jullie waren"], "give second person"),
-                self.create_quiz(past, "ik was", ["wij waren"], "pluralize"),
-                self.create_quiz(past, "jij was", ["jullie waren"], "pluralize"),
-                self.create_quiz(past, "zij was", ["zij waren"], "pluralize"),
-                self.create_quiz(past, "wij waren", ["ik was"], "singularize"),
-                self.create_quiz(past, "jullie waren", ["jij was"], "singularize"),
-                self.create_quiz(past, "zij waren", ["zij was"], "singularize"),
-                self.create_quiz(concept, "ik ben", ["ik was"], "give past tense"),
-                self.create_quiz(concept, "jij bent", ["jij was"], "give past tense"),
-                self.create_quiz(concept, "zij is", ["zij was"], "give past tense"),
-                self.create_quiz(concept, "wij zijn", ["wij waren"], "give past tense"),
-                self.create_quiz(concept, "jullie zijn", ["jullie waren"], "give past tense"),
-                self.create_quiz(concept, "zij zijn", ["zij waren"], "give past tense"),
-                self.create_quiz(concept, "ik was", ["ik ben"], "give present tense"),
-                self.create_quiz(concept, "jij was", ["jij bent"], "give present tense"),
-                self.create_quiz(concept, "zij was", ["zij is"], "give present tense"),
-                self.create_quiz(concept, "wij waren", ["wij zijn"], "give present tense"),
-                self.create_quiz(concept, "jullie waren", ["jullie zijn"], "give present tense"),
-                self.create_quiz(concept, "zij waren", ["zij zijn"], "give present tense"),
+                self.create_quiz(first_singular_present, "ik ben", ["minä olen"], READ),
+                self.create_quiz(first_singular_present, "ik ben", ["ik ben"], DICTATE),
+                self.create_quiz(first_singular_present, "ik ben", ["minä olen"], INTERPRET),
+                self.create_quiz(first_singular_present, "minä olen", ["ik ben"], WRITE),
+                self.create_quiz(second_singular_present, "jij bent", ["sinä olet"], READ),
+                self.create_quiz(second_singular_present, "jij bent", ["jij bent"], DICTATE),
+                self.create_quiz(second_singular_present, "jij bent", ["sinä olet"], INTERPRET),
+                self.create_quiz(second_singular_present, "sinä olet", ["jij bent"], WRITE),
+                self.create_quiz(third_singular_present, "zij is", ["hän on"], READ),
+                self.create_quiz(third_singular_present, "zij is", ["zij is"], DICTATE),
+                self.create_quiz(third_singular_present, "zij is", ["hän on"], INTERPRET),
+                self.create_quiz(third_singular_present, "hän on", ["zij is"], WRITE),
+                self.create_quiz(singular_present, "ik ben", ["jij bent"], SECOND_PERSON),
+                self.create_quiz(singular_present, "ik ben", ["zij is"], THIRD_PERSON),
+                self.create_quiz(singular_present, "jij bent", ["ik ben"], FIRST_PERSON),
+                self.create_quiz(singular_present, "jij bent", ["zij is"], THIRD_PERSON),
+                self.create_quiz(singular_present, "zij is", ["ik ben"], FIRST_PERSON),
+                self.create_quiz(singular_present, "zij is", ["jij bent"], SECOND_PERSON),
+                self.create_quiz(first_plural_present, "wij zijn", ["me olemme"], READ),
+                self.create_quiz(first_plural_present, "wij zijn", ["wij zijn"], DICTATE),
+                self.create_quiz(first_plural_present, "wij zijn", ["me olemme"], INTERPRET),
+                self.create_quiz(first_plural_present, "me olemme", ["wij zijn"], WRITE),
+                self.create_quiz(second_plural_present, "jullie zijn", ["te olette"], READ),
+                self.create_quiz(second_plural_present, "jullie zijn", ["jullie zijn"], DICTATE),
+                self.create_quiz(second_plural_present, "jullie zijn", ["te olette"], INTERPRET),
+                self.create_quiz(second_plural_present, "te olette", ["jullie zijn"], WRITE),
+                self.create_quiz(third_plural_present, "zij zijn", ["he ovat"], READ),
+                self.create_quiz(third_plural_present, "zij zijn", ["zij zijn"], DICTATE),
+                self.create_quiz(third_plural_present, "zij zijn", ["he ovat"], INTERPRET),
+                self.create_quiz(third_plural_present, "he ovat", ["zij zijn"], WRITE),
+                self.create_quiz(plural_present, "wij zijn", ["jullie zijn"], SECOND_PERSON),
+                self.create_quiz(plural_present, "wij zijn", ["zij zijn"], THIRD_PERSON),
+                self.create_quiz(plural_present, "jullie zijn", ["wij zijn"], FIRST_PERSON),
+                self.create_quiz(plural_present, "jullie zijn", ["zij zijn"], THIRD_PERSON),
+                self.create_quiz(plural_present, "zij zijn", ["wij zijn"], FIRST_PERSON),
+                self.create_quiz(plural_present, "zij zijn", ["jullie zijn"], SECOND_PERSON),
+                self.create_quiz(present, "ik ben", ["wij zijn"], PLURAL),
+                self.create_quiz(present, "jij bent", ["jullie zijn"], PLURAL),
+                self.create_quiz(present, "zij is", ["zij zijn"], PLURAL),
+                self.create_quiz(present, "wij zijn", ["ik ben"], SINGULAR),
+                self.create_quiz(present, "jullie zijn", ["jij bent"], SINGULAR),
+                self.create_quiz(present, "zij zijn", ["zij is"], SINGULAR),
+                self.create_quiz(first_singular_past, "ik was", ["minä olin"], READ),
+                self.create_quiz(first_singular_past, "ik was", ["ik was"], DICTATE),
+                self.create_quiz(first_singular_past, "ik was", ["minä olin"], INTERPRET),
+                self.create_quiz(first_singular_past, "minä olin", ["ik was"], WRITE),
+                self.create_quiz(second_singular_past, "jij was", ["sinä olot"], READ),
+                self.create_quiz(second_singular_past, "jij was", ["jij was"], DICTATE),
+                self.create_quiz(second_singular_past, "jij was", ["sinä olit"], INTERPRET),
+                self.create_quiz(second_singular_past, "sinä olit", ["jij was"], WRITE),
+                self.create_quiz(third_singular_past, "zij was", ["hän oli"], READ),
+                self.create_quiz(third_singular_past, "zij was", ["zij was"], DICTATE),
+                self.create_quiz(third_singular_past, "zij was", ["hän oli"], INTERPRET),
+                self.create_quiz(third_singular_past, "hän oli", ["zij was"], WRITE),
+                self.create_quiz(singular_past, "ik was", ["jij was"], SECOND_PERSON),
+                self.create_quiz(singular_past, "ik was", ["zij was"], THIRD_PERSON),
+                self.create_quiz(singular_past, "jij was", ["ik was"], FIRST_PERSON),
+                self.create_quiz(singular_past, "jij was", ["zij was"], THIRD_PERSON),
+                self.create_quiz(singular_past, "zij was", ["ik was"], FIRST_PERSON),
+                self.create_quiz(singular_past, "zij was", ["jij was"], SECOND_PERSON),
+                self.create_quiz(first_plural_past, "wij waren", ["me olimme"], READ),
+                self.create_quiz(first_plural_past, "wij waren", ["wij waren"], DICTATE),
+                self.create_quiz(first_plural_past, "wij waren", ["me olimme"], INTERPRET),
+                self.create_quiz(first_plural_past, "me olimme", ["wij waren"], WRITE),
+                self.create_quiz(second_plural_past, "jullie waren", ["te olitte"], READ),
+                self.create_quiz(second_plural_past, "jullie waren", ["jullie waren"], DICTATE),
+                self.create_quiz(second_plural_past, "jullie waren", ["te olitte"], INTERPRET),
+                self.create_quiz(second_plural_past, "te olitte", ["jullie waren"], WRITE),
+                self.create_quiz(third_plural_past, "zij waren", ["he olivat"], READ),
+                self.create_quiz(third_plural_past, "zij waren", ["zij waren"], DICTATE),
+                self.create_quiz(third_plural_past, "zij waren", ["he olivät"], INTERPRET),
+                self.create_quiz(third_plural_past, "he olivat", ["zij waren"], WRITE),
+                self.create_quiz(plural_past, "wij waren", ["jullie waren"], SECOND_PERSON),
+                self.create_quiz(plural_past, "wij waren", ["zij waren"], THIRD_PERSON),
+                self.create_quiz(plural_past, "jullie waren", ["wij waren"], FIRST_PERSON),
+                self.create_quiz(plural_past, "jullie waren", ["zij waren"], THIRD_PERSON),
+                self.create_quiz(plural_past, "zij waren", ["wij waren"], FIRST_PERSON),
+                self.create_quiz(plural_past, "zij waren", ["jullie waren"], SECOND_PERSON),
+                self.create_quiz(past, "ik was", ["wij waren"], PLURAL),
+                self.create_quiz(past, "jij was", ["jullie waren"], PLURAL),
+                self.create_quiz(past, "zij was", ["zij waren"], PLURAL),
+                self.create_quiz(past, "wij waren", ["ik was"], SINGULAR),
+                self.create_quiz(past, "jullie waren", ["jij was"], SINGULAR),
+                self.create_quiz(past, "zij waren", ["zij was"], SINGULAR),
+                self.create_quiz(concept, "ik ben", ["ik was"], PAST_TENSE),
+                self.create_quiz(concept, "jij bent", ["jij was"], PAST_TENSE),
+                self.create_quiz(concept, "zij is", ["zij was"], PAST_TENSE),
+                self.create_quiz(concept, "wij zijn", ["wij waren"], PAST_TENSE),
+                self.create_quiz(concept, "jullie zijn", ["jullie waren"], PAST_TENSE),
+                self.create_quiz(concept, "zij zijn", ["zij waren"], PAST_TENSE),
+                self.create_quiz(concept, "ik was", ["ik ben"], PRESENT_TENSE),
+                self.create_quiz(concept, "jij was", ["jij bent"], PRESENT_TENSE),
+                self.create_quiz(concept, "zij was", ["zij is"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij waren", ["wij zijn"], PRESENT_TENSE),
+                self.create_quiz(concept, "jullie waren", ["jullie zijn"], PRESENT_TENSE),
+                self.create_quiz(concept, "zij waren", ["zij zijn"], PRESENT_TENSE),
             },
             create_quizzes(NL_FI, concept),
         )
@@ -968,30 +1012,30 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         present_singular, present_plural, past_singular, past_plural = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "read"),
-                self.create_quiz(present_singular, "ik eet", ["ik eet"], "dictate"),
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "interpret"),
-                self.create_quiz(present_singular, "I eat", ["ik eet"], "write"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "read"),
-                self.create_quiz(present_plural, "wij eten", ["wij eten"], "dictate"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "interpret"),
-                self.create_quiz(present_plural, "we eat", ["wij eten"], "write"),
-                self.create_quiz(present, "ik eet", ["wij eten"], "pluralize"),
-                self.create_quiz(present, "wij eten", ["ik eet"], "singularize"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "read"),
-                self.create_quiz(past_singular, "ik at", ["ik at"], "dictate"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "interpret"),
-                self.create_quiz(past_singular, "I ate", ["ik at"], "write"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "read"),
-                self.create_quiz(past_plural, "wij aten", ["wij aten"], "dictate"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "interpret"),
-                self.create_quiz(past_plural, "we ate", ["wij aten"], "write"),
-                self.create_quiz(past, "ik at", ["wij aten"], "pluralize"),
-                self.create_quiz(past, "wij aten", ["ik at"], "singularize"),
-                self.create_quiz(concept, "ik eet", ["ik at"], "give past tense"),
-                self.create_quiz(concept, "wij eten", ["wij aten"], "give past tense"),
-                self.create_quiz(concept, "ik at", ["ik eet"], "give present tense"),
-                self.create_quiz(concept, "wij aten", ["wij eten"], "give present tense"),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], READ),
+                self.create_quiz(present_singular, "ik eet", ["ik eet"], DICTATE),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], INTERPRET),
+                self.create_quiz(present_singular, "I eat", ["ik eet"], WRITE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], READ),
+                self.create_quiz(present_plural, "wij eten", ["wij eten"], DICTATE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], INTERPRET),
+                self.create_quiz(present_plural, "we eat", ["wij eten"], WRITE),
+                self.create_quiz(present, "ik eet", ["wij eten"], PLURAL),
+                self.create_quiz(present, "wij eten", ["ik eet"], SINGULAR),
+                self.create_quiz(past_singular, "ik at", ["I ate"], READ),
+                self.create_quiz(past_singular, "ik at", ["ik at"], DICTATE),
+                self.create_quiz(past_singular, "ik at", ["I ate"], INTERPRET),
+                self.create_quiz(past_singular, "I ate", ["ik at"], WRITE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], READ),
+                self.create_quiz(past_plural, "wij aten", ["wij aten"], DICTATE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], INTERPRET),
+                self.create_quiz(past_plural, "we ate", ["wij aten"], WRITE),
+                self.create_quiz(past, "ik at", ["wij aten"], PLURAL),
+                self.create_quiz(past, "wij aten", ["ik at"], SINGULAR),
+                self.create_quiz(concept, "ik eet", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1006,48 +1050,48 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         )
         self.assertSetEqual(
             {
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "read"),
-                self.create_quiz(present_singular, "ik eet", ["ik eet"], "dictate"),
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "interpret"),
-                self.create_quiz(present_singular, "I eat", ["ik eet"], "write"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "read"),
-                self.create_quiz(present_plural, "wij eten", ["wij eten"], "dictate"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "interpret"),
-                self.create_quiz(present_plural, "we eat", ["wij eten"], "write"),
-                self.create_quiz(present, "ik eet", ["wij eten"], "pluralize"),
-                self.create_quiz(present, "wij eten", ["ik eet"], "singularize"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "read"),
-                self.create_quiz(past_singular, "ik at", ["ik at"], "dictate"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "interpret"),
-                self.create_quiz(past_singular, "I ate", ["ik at"], "write"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "read"),
-                self.create_quiz(past_plural, "wij aten", ["wij aten"], "dictate"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "interpret"),
-                self.create_quiz(past_plural, "we ate", ["wij aten"], "write"),
-                self.create_quiz(past, "ik at", ["wij aten"], "pluralize"),
-                self.create_quiz(past, "wij aten", ["ik at"], "singularize"),
-                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], "read"),
-                self.create_quiz(perfect_singular, "ik heb gegeten", ["ik heb gegeten"], "dictate"),
-                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], "interpret"),
-                self.create_quiz(perfect_singular, "I have eaten", ["ik heb gegeten"], "write"),
-                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], "read"),
-                self.create_quiz(perfect_plural, "wij hebben gegeten", ["wij hebben gegeten"], "dictate"),
-                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], "interpret"),
-                self.create_quiz(perfect_plural, "we have eaten", ["wij hebben gegeten"], "write"),
-                self.create_quiz(perfect, "ik heb gegeten", ["wij hebben gegeten"], "pluralize"),
-                self.create_quiz(perfect, "wij hebben gegeten", ["ik heb gegeten"], "singularize"),
-                self.create_quiz(concept, "ik eet", ["ik at"], "give past tense"),
-                self.create_quiz(concept, "wij eten", ["wij aten"], "give past tense"),
-                self.create_quiz(concept, "ik at", ["ik eet"], "give present tense"),
-                self.create_quiz(concept, "wij aten", ["wij eten"], "give present tense"),
-                self.create_quiz(concept, "ik heb gegeten", ["ik eet"], "give present tense"),
-                self.create_quiz(concept, "wij hebben gegeten", ["wij eten"], "give present tense"),
-                self.create_quiz(concept, "ik heb gegeten", ["ik at"], "give past tense"),
-                self.create_quiz(concept, "wij hebben gegeten", ["wij aten"], "give past tense"),
-                self.create_quiz(concept, "ik eet", ["ik heb gegeten"], "give present perfect tense"),
-                self.create_quiz(concept, "wij eten", ["wij hebben gegeten"], "give present perfect tense"),
-                self.create_quiz(concept, "ik at", ["ik heb gegeten"], "give present perfect tense"),
-                self.create_quiz(concept, "wij aten", ["wij hebben gegeten"], "give present perfect tense"),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], READ),
+                self.create_quiz(present_singular, "ik eet", ["ik eet"], DICTATE),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], INTERPRET),
+                self.create_quiz(present_singular, "I eat", ["ik eet"], WRITE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], READ),
+                self.create_quiz(present_plural, "wij eten", ["wij eten"], DICTATE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], INTERPRET),
+                self.create_quiz(present_plural, "we eat", ["wij eten"], WRITE),
+                self.create_quiz(present, "ik eet", ["wij eten"], PLURAL),
+                self.create_quiz(present, "wij eten", ["ik eet"], SINGULAR),
+                self.create_quiz(past_singular, "ik at", ["I ate"], READ),
+                self.create_quiz(past_singular, "ik at", ["ik at"], DICTATE),
+                self.create_quiz(past_singular, "ik at", ["I ate"], INTERPRET),
+                self.create_quiz(past_singular, "I ate", ["ik at"], WRITE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], READ),
+                self.create_quiz(past_plural, "wij aten", ["wij aten"], DICTATE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], INTERPRET),
+                self.create_quiz(past_plural, "we ate", ["wij aten"], WRITE),
+                self.create_quiz(past, "ik at", ["wij aten"], PLURAL),
+                self.create_quiz(past, "wij aten", ["ik at"], SINGULAR),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], READ),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["ik heb gegeten"], DICTATE),
+                self.create_quiz(perfect_singular, "ik heb gegeten", ["I have eaten"], INTERPRET),
+                self.create_quiz(perfect_singular, "I have eaten", ["ik heb gegeten"], WRITE),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], READ),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["wij hebben gegeten"], DICTATE),
+                self.create_quiz(perfect_plural, "wij hebben gegeten", ["we have eaten"], INTERPRET),
+                self.create_quiz(perfect_plural, "we have eaten", ["wij hebben gegeten"], WRITE),
+                self.create_quiz(perfect, "ik heb gegeten", ["wij hebben gegeten"], PLURAL),
+                self.create_quiz(perfect, "wij hebben gegeten", ["ik heb gegeten"], SINGULAR),
+                self.create_quiz(concept, "ik eet", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
+                self.create_quiz(concept, "ik heb gegeten", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij eten"], PRESENT_TENSE),
+                self.create_quiz(concept, "ik heb gegeten", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "ik eet", ["ik heb gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "ik at", ["ik heb gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1068,38 +1112,38 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         past_singular, past_plural = past.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "read"),
-                self.create_quiz(present_singular, "ik eet", ["ik eet"], "dictate"),
-                self.create_quiz(present_singular, "ik eet", ["I eat"], "interpret"),
-                self.create_quiz(present_singular, "I eat", ["ik eet"], "write"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "read"),
-                self.create_quiz(present_plural, "wij eten", ["wij eten"], "dictate"),
-                self.create_quiz(present_plural, "wij eten", ["we eat"], "interpret"),
-                self.create_quiz(present_plural, "we eat", ["wij eten"], "write"),
-                self.create_quiz(present, "ik eet", ["wij eten"], "pluralize"),
-                self.create_quiz(present, "wij eten", ["ik eet"], "singularize"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "read"),
-                self.create_quiz(past_singular, "ik at", ["ik at"], "dictate"),
-                self.create_quiz(past_singular, "ik at", ["I ate"], "interpret"),
-                self.create_quiz(past_singular, "I ate", ["ik at"], "write"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "read"),
-                self.create_quiz(past_plural, "wij aten", ["wij aten"], "dictate"),
-                self.create_quiz(past_plural, "wij aten", ["we ate"], "interpret"),
-                self.create_quiz(past_plural, "we ate", ["wij aten"], "write"),
-                self.create_quiz(past, "ik at", ["wij aten"], "pluralize"),
-                self.create_quiz(past, "wij aten", ["ik at"], "singularize"),
-                self.create_quiz(concept, "ik eet", ["ik at"], "give past tense"),
-                self.create_quiz(concept, "wij eten", ["wij aten"], "give past tense"),
-                self.create_quiz(concept, "ik at", ["ik eet"], "give present tense"),
-                self.create_quiz(concept, "wij aten", ["wij eten"], "give present tense"),
-                self.create_quiz(infinitive, "eten", ["to eat"], "read"),
-                self.create_quiz(infinitive, "eten", ["eten"], "dictate"),
-                self.create_quiz(infinitive, "eten", ["to eat"], "interpret"),
-                self.create_quiz(infinitive, "to eat", ["eten"], "write"),
-                self.create_quiz(concept, "ik eet", ["eten"], "give infinitive"),
-                self.create_quiz(concept, "wij eten", ["eten"], "give infinitive"),
-                self.create_quiz(concept, "ik at", ["eten"], "give infinitive"),
-                self.create_quiz(concept, "wij aten", ["eten"], "give infinitive"),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], READ),
+                self.create_quiz(present_singular, "ik eet", ["ik eet"], DICTATE),
+                self.create_quiz(present_singular, "ik eet", ["I eat"], INTERPRET),
+                self.create_quiz(present_singular, "I eat", ["ik eet"], WRITE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], READ),
+                self.create_quiz(present_plural, "wij eten", ["wij eten"], DICTATE),
+                self.create_quiz(present_plural, "wij eten", ["we eat"], INTERPRET),
+                self.create_quiz(present_plural, "we eat", ["wij eten"], WRITE),
+                self.create_quiz(present, "ik eet", ["wij eten"], PLURAL),
+                self.create_quiz(present, "wij eten", ["ik eet"], SINGULAR),
+                self.create_quiz(past_singular, "ik at", ["I ate"], READ),
+                self.create_quiz(past_singular, "ik at", ["ik at"], DICTATE),
+                self.create_quiz(past_singular, "ik at", ["I ate"], INTERPRET),
+                self.create_quiz(past_singular, "I ate", ["ik at"], WRITE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], READ),
+                self.create_quiz(past_plural, "wij aten", ["wij aten"], DICTATE),
+                self.create_quiz(past_plural, "wij aten", ["we ate"], INTERPRET),
+                self.create_quiz(past_plural, "we ate", ["wij aten"], WRITE),
+                self.create_quiz(past, "ik at", ["wij aten"], PLURAL),
+                self.create_quiz(past, "wij aten", ["ik at"], SINGULAR),
+                self.create_quiz(concept, "ik eet", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
+                self.create_quiz(infinitive, "eten", ["to eat"], READ),
+                self.create_quiz(infinitive, "eten", ["eten"], DICTATE),
+                self.create_quiz(infinitive, "eten", ["to eat"], INTERPRET),
+                self.create_quiz(infinitive, "to eat", ["eten"], WRITE),
+                self.create_quiz(concept, "ik eet", ["eten"], INFINITIVE),
+                self.create_quiz(concept, "wij eten", ["eten"], INFINITIVE),
+                self.create_quiz(concept, "ik at", ["eten"], INFINITIVE),
+                self.create_quiz(concept, "wij aten", ["eten"], INFINITIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1121,16 +1165,16 @@ class GrammaticalMoodTest(ToistoTestCase):
         declarative, interrogative = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(declarative, "De auto is zwart.", ["The car is black."], "read"),
-                self.create_quiz(declarative, "De auto is zwart.", ["De auto is zwart."], "dictate"),
-                self.create_quiz(declarative, "De auto is zwart.", ["The car is black."], "interpret"),
-                self.create_quiz(declarative, "The car is black.", ["De auto is zwart."], "write"),
-                self.create_quiz(interrogative, "Is de auto zwart?", ["Is the car black?"], "read"),
-                self.create_quiz(interrogative, "Is de auto zwart?", ["Is de auto zwart?"], "dictate"),
-                self.create_quiz(interrogative, "Is de auto zwart?", ["Is the car black?"], "interpret"),
-                self.create_quiz(interrogative, "Is the car black?", ["Is de auto zwart?"], "write"),
-                self.create_quiz(concept, "De auto is zwart.", ["Is de auto zwart"], "make interrogative"),
-                self.create_quiz(concept, "Is de auto zwart?", ["De auto is zwart."], "make declarative"),
+                self.create_quiz(declarative, "De auto is zwart.", ["The car is black."], READ),
+                self.create_quiz(declarative, "De auto is zwart.", ["De auto is zwart."], DICTATE),
+                self.create_quiz(declarative, "De auto is zwart.", ["The car is black."], INTERPRET),
+                self.create_quiz(declarative, "The car is black.", ["De auto is zwart."], WRITE),
+                self.create_quiz(interrogative, "Is de auto zwart?", ["Is the car black?"], READ),
+                self.create_quiz(interrogative, "Is de auto zwart?", ["Is de auto zwart?"], DICTATE),
+                self.create_quiz(interrogative, "Is de auto zwart?", ["Is the car black?"], INTERPRET),
+                self.create_quiz(interrogative, "Is the car black?", ["Is de auto zwart?"], WRITE),
+                self.create_quiz(concept, "De auto is zwart.", ["Is de auto zwart"], INTERROGATIVE),
+                self.create_quiz(concept, "Is de auto zwart?", ["De auto is zwart."], DECLARATIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1148,16 +1192,16 @@ class GrammaticalMoodTest(ToistoTestCase):
         declarative, imperative = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(declarative, "Jij rent.", ["You run."], "read"),
-                self.create_quiz(declarative, "Jij rent.", ["Jij rent."], "dictate"),
-                self.create_quiz(declarative, "Jij rent.", ["You run."], "interpret"),
-                self.create_quiz(declarative, "You run.", ["Jij rent."], "write"),
-                self.create_quiz(imperative, "Ren!", ["Run!"], "read"),
-                self.create_quiz(imperative, "Ren!", ["Ren!"], "dictate"),
-                self.create_quiz(imperative, "Ren!", ["Run!"], "interpret"),
-                self.create_quiz(imperative, "Run!", ["Ren!"], "write"),
-                self.create_quiz(concept, "Jij rent.", ["Ren!"], "make imperative"),
-                self.create_quiz(concept, "Ren!", ["Jij rent."], "make declarative"),
+                self.create_quiz(declarative, "Jij rent.", ["You run."], READ),
+                self.create_quiz(declarative, "Jij rent.", ["Jij rent."], DICTATE),
+                self.create_quiz(declarative, "Jij rent.", ["You run."], INTERPRET),
+                self.create_quiz(declarative, "You run.", ["Jij rent."], WRITE),
+                self.create_quiz(imperative, "Ren!", ["Run!"], READ),
+                self.create_quiz(imperative, "Ren!", ["Ren!"], DICTATE),
+                self.create_quiz(imperative, "Ren!", ["Run!"], INTERPRET),
+                self.create_quiz(imperative, "Run!", ["Ren!"], WRITE),
+                self.create_quiz(concept, "Jij rent.", ["Ren!"], IMPERATIVE),
+                self.create_quiz(concept, "Ren!", ["Jij rent."], DECLARATIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1176,24 +1220,24 @@ class GrammaticalMoodTest(ToistoTestCase):
         declarative, interrogative, imperative = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(declarative, "Jij rent.", ["You run."], "read"),
-                self.create_quiz(declarative, "Jij rent.", ["Jij rent."], "dictate"),
-                self.create_quiz(declarative, "Jij rent.", ["You run."], "interpret"),
-                self.create_quiz(declarative, "You run.", ["Jij rent."], "write"),
-                self.create_quiz(interrogative, "Ren jij?", ["Ren jij?"], "read"),
-                self.create_quiz(interrogative, "Ren jij?", ["Ren jij?"], "dictate"),
-                self.create_quiz(interrogative, "Ren jij?", ["Do you run?"], "interpret"),
-                self.create_quiz(interrogative, "Do you run?", ["Ren jij?"], "write"),
-                self.create_quiz(imperative, "Ren!", ["Run!"], "read"),
-                self.create_quiz(imperative, "Ren!", ["Ren!"], "dictate"),
-                self.create_quiz(imperative, "Ren!", ["Run!"], "interpret"),
-                self.create_quiz(imperative, "Run!", ["Ren!"], "write"),
-                self.create_quiz(concept, "Jij rent.", ["Ren!"], "make imperative"),
-                self.create_quiz(concept, "Jij rent.", ["Ren jij?"], "make interrogative"),
-                self.create_quiz(concept, "Ren!", ["Jij rent."], "make declarative"),
-                self.create_quiz(concept, "Ren!", ["Ren jij?"], "make interrogative"),
-                self.create_quiz(concept, "Ren jij?", ["Ren!"], "make imperative"),
-                self.create_quiz(concept, "Ren jij?", ["Jij rent."], "make declarative"),
+                self.create_quiz(declarative, "Jij rent.", ["You run."], READ),
+                self.create_quiz(declarative, "Jij rent.", ["Jij rent."], DICTATE),
+                self.create_quiz(declarative, "Jij rent.", ["You run."], INTERPRET),
+                self.create_quiz(declarative, "You run.", ["Jij rent."], WRITE),
+                self.create_quiz(interrogative, "Ren jij?", ["Ren jij?"], READ),
+                self.create_quiz(interrogative, "Ren jij?", ["Ren jij?"], DICTATE),
+                self.create_quiz(interrogative, "Ren jij?", ["Do you run?"], INTERPRET),
+                self.create_quiz(interrogative, "Do you run?", ["Ren jij?"], WRITE),
+                self.create_quiz(imperative, "Ren!", ["Run!"], READ),
+                self.create_quiz(imperative, "Ren!", ["Ren!"], DICTATE),
+                self.create_quiz(imperative, "Ren!", ["Run!"], INTERPRET),
+                self.create_quiz(imperative, "Run!", ["Ren!"], WRITE),
+                self.create_quiz(concept, "Jij rent.", ["Ren!"], IMPERATIVE),
+                self.create_quiz(concept, "Jij rent.", ["Ren jij?"], INTERROGATIVE),
+                self.create_quiz(concept, "Ren!", ["Jij rent."], DECLARATIVE),
+                self.create_quiz(concept, "Ren!", ["Ren jij?"], INTERROGATIVE),
+                self.create_quiz(concept, "Ren jij?", ["Ren!"], IMPERATIVE),
+                self.create_quiz(concept, "Ren jij?", ["Jij rent."], DECLARATIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1215,17 +1259,17 @@ class GrammaticalPolarityTest(ToistoTestCase):
         affirmative, negative = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(affirmative, "De auto is zwart.", ["The car is black."], "read"),
-                self.create_quiz(affirmative, "De auto is zwart.", ["De auto is zwart."], "dictate"),
-                self.create_quiz(affirmative, "De auto is zwart.", ["The cat is black."], "interpret"),
-                self.create_quiz(affirmative, "The car is black.", ["De auto is zwart."], "write"),
-                self.create_quiz(negative, "De auto is niet zwart.", ["The car is not black."], "read"),
-                self.create_quiz(negative, "De auto is niet zwart.", ["De auto is niet zwart."], "dictate"),
-                self.create_quiz(negative, "De auto is niet zwart.", ["The car is not black."], "interpret"),
-                self.create_quiz(negative, "The car is not black.", ["De auto is niet zwart."], "write"),
-                self.create_quiz(concept, "De auto is zwart.", ["De auto is niet zwart."], "negate"),
-                self.create_quiz(concept, "De auto is niet zwart.", ["De auto is zwart."], "affirm"),
-                self.create_quiz(concept, "De auto is niet zwart.", ["De auto is niet zwart."], "order"),
+                self.create_quiz(affirmative, "De auto is zwart.", ["The car is black."], READ),
+                self.create_quiz(affirmative, "De auto is zwart.", ["De auto is zwart."], DICTATE),
+                self.create_quiz(affirmative, "De auto is zwart.", ["The cat is black."], INTERPRET),
+                self.create_quiz(affirmative, "The car is black.", ["De auto is zwart."], WRITE),
+                self.create_quiz(negative, "De auto is niet zwart.", ["The car is not black."], READ),
+                self.create_quiz(negative, "De auto is niet zwart.", ["De auto is niet zwart."], DICTATE),
+                self.create_quiz(negative, "De auto is niet zwart.", ["The car is not black."], INTERPRET),
+                self.create_quiz(negative, "The car is not black.", ["De auto is niet zwart."], WRITE),
+                self.create_quiz(concept, "De auto is zwart.", ["De auto is niet zwart."], NEGATIVE),
+                self.create_quiz(concept, "De auto is niet zwart.", ["De auto is zwart."], AFFIRMATIVE),
+                self.create_quiz(concept, "De auto is niet zwart.", ["De auto is niet zwart."], ORDER),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1241,9 +1285,9 @@ class DiminutiveTest(ToistoTestCase):
         root, diminutive = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(root, "de auto", ["de auto"], "dictate"),
-                self.create_quiz(diminutive, "het autootje", ["het autootje"], "dictate"),
-                self.create_quiz(concept, "de auto", ["het autootje"], "diminutize"),
+                self.create_quiz(root, "de auto", ["de auto"], DICTATE),
+                self.create_quiz(diminutive, "het autootje", ["het autootje"], DICTATE),
+                self.create_quiz(concept, "de auto", ["het autootje"], DIMINUTIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1261,12 +1305,12 @@ class DiminutiveTest(ToistoTestCase):
         root, diminutive = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(root, "de auto", ["car"], "read"),
-                self.create_quiz(root, "de auto", ["de auto"], "dictate"),
-                self.create_quiz(root, "de auto", ["car"], "interpret"),
-                self.create_quiz(root, "car", ["de auto"], "write"),
-                self.create_quiz(diminutive, "het autootje", ["het autootje"], "dictate"),
-                self.create_quiz(concept, "de auto", ["het autootje"], "diminutize"),
+                self.create_quiz(root, "de auto", ["car"], READ),
+                self.create_quiz(root, "de auto", ["de auto"], DICTATE),
+                self.create_quiz(root, "de auto", ["car"], INTERPRET),
+                self.create_quiz(root, "car", ["de auto"], WRITE),
+                self.create_quiz(diminutive, "het autootje", ["het autootje"], DICTATE),
+                self.create_quiz(concept, "de auto", ["het autootje"], DIMINUTIVE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1282,10 +1326,10 @@ class NumberTest(ToistoTestCase):
         cardinal, ordinal = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(cardinal, "een", ["een"], "dictate"),
-                self.create_quiz(ordinal, "eerste", ["eerste"], "dictate"),
-                self.create_quiz(concept, "een", ["eerste"], "make ordinal"),
-                self.create_quiz(concept, "eerste", ["een"], "make cardinal"),
+                self.create_quiz(cardinal, "een", ["een"], DICTATE),
+                self.create_quiz(ordinal, "eerste", ["eerste"], DICTATE),
+                self.create_quiz(concept, "een", ["eerste"], ORDINAL),
+                self.create_quiz(concept, "eerste", ["een"], CARDINAL),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1299,16 +1343,16 @@ class NumberTest(ToistoTestCase):
         cardinal, ordinal = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(cardinal, "een", ["one"], "read"),
-                self.create_quiz(cardinal, "een", ["een"], "dictate"),
-                self.create_quiz(cardinal, "een", ["one"], "interpret"),
-                self.create_quiz(cardinal, "one", ["een"], "write"),
-                self.create_quiz(ordinal, "eerste", ["first"], "read"),
-                self.create_quiz(ordinal, "eerste", ["eerste"], "dictate"),
-                self.create_quiz(ordinal, "eerste", ["eerste"], "interpret"),
-                self.create_quiz(ordinal, "first", ["eerste"], "write"),
-                self.create_quiz(concept, "eerste", ["een"], "make cardinal"),
-                self.create_quiz(concept, "een", ["eerste"], "make ordinal"),
+                self.create_quiz(cardinal, "een", ["one"], READ),
+                self.create_quiz(cardinal, "een", ["een"], DICTATE),
+                self.create_quiz(cardinal, "een", ["one"], INTERPRET),
+                self.create_quiz(cardinal, "one", ["een"], WRITE),
+                self.create_quiz(ordinal, "eerste", ["first"], READ),
+                self.create_quiz(ordinal, "eerste", ["eerste"], DICTATE),
+                self.create_quiz(ordinal, "eerste", ["eerste"], INTERPRET),
+                self.create_quiz(ordinal, "first", ["eerste"], WRITE),
+                self.create_quiz(concept, "eerste", ["een"], CARDINAL),
+                self.create_quiz(concept, "een", ["eerste"], ORDINAL),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1326,10 +1370,10 @@ class AbbreviationTest(ToistoTestCase):
         full_form, abbreviation = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(full_form, "naamloze vennootschap", ["naamloze vennootschap"], "dictate"),
-                self.create_quiz(abbreviation, "NV", ["NV"], "dictate"),
-                self.create_quiz(concept, "naamloze vennootschap", ["NV"], "abbreviate"),
-                self.create_quiz(concept, "NV", ["naamloze vennootschap"], "give full form"),
+                self.create_quiz(full_form, "naamloze vennootschap", ["naamloze vennootschap"], DICTATE),
+                self.create_quiz(abbreviation, "NV", ["NV"], DICTATE),
+                self.create_quiz(concept, "naamloze vennootschap", ["NV"], ABBREVIATION),
+                self.create_quiz(concept, "NV", ["naamloze vennootschap"], FULL_FORM),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -1361,22 +1405,22 @@ class ColloquialTest(ToistoTestCase):
         self.language_pair = FI_NL
         self.assertSetEqual(
             {
-                self.create_quiz(concept, "seitsemän", ["zeven"], "read"),
-                self.create_quiz(concept, "seitsemän", ["seitsemän"], "dictate"),
-                self.create_quiz(concept, "zeven", ["seitsemän"], "write"),
-                self.create_quiz(concept, "seitsemän", ["zeven"], "interpret"),
-                self.create_quiz(concept, "seittemän*", ["seitsemän"], "dictate"),
-                self.create_quiz(concept, "seittemän*", ["zeven"], "interpret"),
+                self.create_quiz(concept, "seitsemän", ["zeven"], READ),
+                self.create_quiz(concept, "seitsemän", ["seitsemän"], DICTATE),
+                self.create_quiz(concept, "zeven", ["seitsemän"], WRITE),
+                self.create_quiz(concept, "seitsemän", ["zeven"], INTERPRET),
+                self.create_quiz(concept, "seittemän*", ["seitsemän"], DICTATE),
+                self.create_quiz(concept, "seittemän*", ["zeven"], INTERPRET),
             },
             create_quizzes(FI_NL, concept),
         )
         self.language_pair = NL_FI
         self.assertSetEqual(
             {
-                self.create_quiz(concept, "zeven", ["seitsemän"], "read"),
-                self.create_quiz(concept, "zeven", ["zeven"], "dictate"),
-                self.create_quiz(concept, "seitsemän", ["zeven"], "write"),
-                self.create_quiz(concept, "zeven", ["seitsemän"], "interpret"),
+                self.create_quiz(concept, "zeven", ["seitsemän"], READ),
+                self.create_quiz(concept, "zeven", ["zeven"], DICTATE),
+                self.create_quiz(concept, "seitsemän", ["zeven"], WRITE),
+                self.create_quiz(concept, "zeven", ["seitsemän"], INTERPRET),
             },
             create_quizzes(NL_FI, concept),
         )
@@ -1394,36 +1438,36 @@ class ColloquialTest(ToistoTestCase):
         self.language_pair = FI_EN
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "kioski", ["kiosk"], "read"),
-                self.create_quiz(singular, "kioski", ["kioski"], "dictate"),
-                self.create_quiz(singular, "kiosk", ["kioski"], "write"),
-                self.create_quiz(singular, "kioski", ["kiosk"], "interpret"),
-                self.create_quiz(singular, "kiska*", ["kiosk"], "interpret"),
-                self.create_quiz(singular, "kiska*", ["kioski"], "dictate"),
-                self.create_quiz(plural, "kioskit", ["kiosks"], "read"),
-                self.create_quiz(plural, "kioskit", ["kioskit"], "dictate"),
-                self.create_quiz(plural, "kiosks", ["kioskit"], "write"),
-                self.create_quiz(plural, "kioskit", ["kiosks"], "interpret"),
-                self.create_quiz(plural, "kiskat*", ["kiosks"], "interpret"),
-                self.create_quiz(plural, "kiskat*", ["kioskit"], "dictate"),
-                self.create_quiz(concept, "kioski", ["kioskit"], "pluralize"),
-                self.create_quiz(concept, "kioskit", ["kioski"], "singularize"),
+                self.create_quiz(singular, "kioski", ["kiosk"], READ),
+                self.create_quiz(singular, "kioski", ["kioski"], DICTATE),
+                self.create_quiz(singular, "kiosk", ["kioski"], WRITE),
+                self.create_quiz(singular, "kioski", ["kiosk"], INTERPRET),
+                self.create_quiz(singular, "kiska*", ["kiosk"], INTERPRET),
+                self.create_quiz(singular, "kiska*", ["kioski"], DICTATE),
+                self.create_quiz(plural, "kioskit", ["kiosks"], READ),
+                self.create_quiz(plural, "kioskit", ["kioskit"], DICTATE),
+                self.create_quiz(plural, "kiosks", ["kioskit"], WRITE),
+                self.create_quiz(plural, "kioskit", ["kiosks"], INTERPRET),
+                self.create_quiz(plural, "kiskat*", ["kiosks"], INTERPRET),
+                self.create_quiz(plural, "kiskat*", ["kioskit"], DICTATE),
+                self.create_quiz(concept, "kioski", ["kioskit"], PLURAL),
+                self.create_quiz(concept, "kioskit", ["kioski"], SINGULAR),
             },
             create_quizzes(FI_EN, concept),
         )
         self.language_pair = EN_FI
         self.assertSetEqual(
             {
-                self.create_quiz(singular, "kiosk", ["kioski"], "read"),
-                self.create_quiz(singular, "kiosk", ["kiosk"], "dictate"),
-                self.create_quiz(singular, "kioski", ["kiosk"], "write"),
-                self.create_quiz(singular, "kiosk", ["kioski"], "interpret"),
-                self.create_quiz(plural, "kiosks", ["kioskit"], "read"),
-                self.create_quiz(plural, "kiosks", ["kiosks"], "dictate"),
-                self.create_quiz(plural, "kioskit", ["kiosks"], "write"),
-                self.create_quiz(plural, "kiosks", ["kioskit"], "interpret"),
-                self.create_quiz(concept, "kiosk", ["kiosks"], "pluralize"),
-                self.create_quiz(concept, "kiosks", ["kiosk"], "singularize"),
+                self.create_quiz(singular, "kiosk", ["kioski"], READ),
+                self.create_quiz(singular, "kiosk", ["kiosk"], DICTATE),
+                self.create_quiz(singular, "kioski", ["kiosk"], WRITE),
+                self.create_quiz(singular, "kiosk", ["kioski"], INTERPRET),
+                self.create_quiz(plural, "kiosks", ["kioskit"], READ),
+                self.create_quiz(plural, "kiosks", ["kiosks"], DICTATE),
+                self.create_quiz(plural, "kioskit", ["kiosks"], WRITE),
+                self.create_quiz(plural, "kiosks", ["kioskit"], INTERPRET),
+                self.create_quiz(concept, "kiosk", ["kiosks"], PLURAL),
+                self.create_quiz(concept, "kiosks", ["kiosk"], SINGULAR),
             },
             create_quizzes(EN_FI, concept),
         )
@@ -1435,16 +1479,16 @@ class ColloquialTest(ToistoTestCase):
         no = self.create_concept("no", dict(antonym="yes", fi="ei"))
         self.assertSetEqual(
             {
-                self.create_quiz(yes, "kylla", ["kylla"], "dictate"),
-                self.create_quiz(yes, "kyl*", ["kylla"], "dictate"),
-                self.create_quiz(yes, "kylla", ["ei"], "antonym"),
+                self.create_quiz(yes, "kylla", ["kylla"], DICTATE),
+                self.create_quiz(yes, "kyl*", ["kylla"], DICTATE),
+                self.create_quiz(yes, "kylla", ["ei"], ANTONYM),
             },
             create_quizzes(FI_EN, yes),
         )
         self.assertSetEqual(
             {
-                self.create_quiz(no, "ei", ["ei"], "dictate"),
-                self.create_quiz(no, "ei", ["kylla"], "antonym"),
+                self.create_quiz(no, "ei", ["ei"], DICTATE),
+                self.create_quiz(no, "ei", ["kylla"], ANTONYM),
             },
             create_quizzes(FI_EN, no),
         )
@@ -1457,7 +1501,7 @@ class MeaningsTest(ToistoTestCase):
         """Test that interpret quizzes show all synonyms as meaning."""
         concept = self.create_concept("yes", dict(fi=["kylla", "joo"], en="yes"))
         quizzes = create_quizzes(FI_EN, concept)
-        interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
+        interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kylla"), Label(FI, "joo")), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
@@ -1466,7 +1510,7 @@ class MeaningsTest(ToistoTestCase):
         """Test that interpret quizzes don't show colloquial labels as meaning."""
         concept = self.create_concept("20", dict(fi=["kaksikymmentä", "kakskyt*"], nl="twintig"))
         quizzes = create_quizzes(FI_NL, concept)
-        interpret_quizzes = [quiz for quiz in quizzes if "interpret" in quiz.quiz_types]
+        interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kaksikymmentä"),), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
@@ -1479,77 +1523,77 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
         """Test the grammatical quiz types for an adjective with degrees of comparison."""
         positive, comparative, superlative = self.create_adjective_with_degrees_of_comparison().leaf_concepts(EN)
         for concept in (positive, comparative):
-            self.assertEqual(("give superlative degree",), grammatical_quiz_types(concept, superlative))
+            self.assertEqual(SUPERLATIVE_DEGREE, grammatical_quiz_type(concept, superlative))
         for concept in (positive, superlative):
-            self.assertEqual(("give comparative degree",), grammatical_quiz_types(concept, comparative))
+            self.assertEqual(COMPARATIVE_DEGREE, grammatical_quiz_type(concept, comparative))
         for concept in (comparative, superlative):
-            self.assertEqual(("give positive degree",), grammatical_quiz_types(concept, positive))
+            self.assertEqual(POSITIVE_DEGREE, grammatical_quiz_type(concept, positive))
 
     def test_noun_with_grammatical_number(self):
         """Test the grammatical quiz types for a noun with singular and plural form."""
         singular, plural = self.create_noun_with_grammatical_number().leaf_concepts(FI)
-        self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
-        self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+        self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
+        self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
 
     def test_noun_with_grammatical_gender(self):
         """Test the grammatical quiz types for a noun with grammatical gender."""
         female, male = self.create_noun_with_grammatical_gender().leaf_concepts(EN)
-        self.assertEqual(("masculinize",), grammatical_quiz_types(female, male))
-        self.assertEqual(("feminize",), grammatical_quiz_types(male, female))
+        self.assertEqual(MALE, grammatical_quiz_type(female, male))
+        self.assertEqual(FEMALE, grammatical_quiz_type(male, female))
 
     def test_noun_with_grammatical_gender_including_neuter(self):
         """Test the grammatical quiz types for a noun with grammatical gender including neuter."""
         female, male, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts(NL)
         for concept in (female, neuter):
-            self.assertEqual(("masculinize",), grammatical_quiz_types(concept, male))
+            self.assertEqual(MALE, grammatical_quiz_type(concept, male))
         for concept in (female, male):
-            self.assertEqual(("neuterize",), grammatical_quiz_types(concept, neuter))
+            self.assertEqual(NEUTER, grammatical_quiz_type(concept, neuter))
         for concept in (male, neuter):
-            self.assertEqual(("feminize",), grammatical_quiz_types(concept, female))
+            self.assertEqual(FEMALE, grammatical_quiz_type(concept, female))
 
     def test_noun_with_grammatical_number_and_gender(self):
         """Test the grammatical quiz types for a noun with grammatical number and gender."""
         noun = self.create_noun_with_grammatical_number_and_gender()
         singular_female, singular_male, plural_female, plural_male = noun.leaf_concepts(EN)
         for female, male in ((singular_female, singular_male), (plural_female, plural_male)):
-            self.assertEqual(("masculinize",), grammatical_quiz_types(female, male))
-            self.assertEqual(("feminize",), grammatical_quiz_types(male, female))
+            self.assertEqual(MALE, grammatical_quiz_type(female, male))
+            self.assertEqual(FEMALE, grammatical_quiz_type(male, female))
         for singular, plural in ((singular_female, plural_female), (singular_male, plural_male)):
-            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
-            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
 
     def test_verb_with_person(self):
         """Test the grammatical quiz types for a verb with grammatical person."""
         verb = self.create_verb_with_person()
         first, second, third = verb.leaf_concepts(EN)
         for concept in (first, second):
-            self.assertEqual(("give third person",), grammatical_quiz_types(concept, third))
+            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(concept, third))
         for concept in (first, third):
-            self.assertEqual(("give second person",), grammatical_quiz_types(concept, second))
+            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(concept, second))
         for concept in (second, third):
-            self.assertEqual(("give first person",), grammatical_quiz_types(concept, first))
+            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(concept, first))
 
     def test_verb_with_tense_and_person(self):
         """Test the grammatical quiz types for a verb with tense and grammatical person."""
         verb = self.create_verb_with_tense_and_person("present tense", "past tense")
         present_singular, present_plural, past_singular, past_plural = verb.leaf_concepts(NL)
         for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
-            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
-            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
+            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
         for present, past in ((present_singular, past_singular), (present_plural, past_plural)):
-            self.assertEqual(("give past tense",), grammatical_quiz_types(present, past))
-            self.assertEqual(("give present tense",), grammatical_quiz_types(past, present))
+            self.assertEqual(PAST_TENSE, grammatical_quiz_type(present, past))
+            self.assertEqual(PRESENT_TENSE, grammatical_quiz_type(past, present))
 
     def test_verb_with_infinitive_and_person(self):
         """Test the grammatical quiz types for a verb with infinitive and grammatical person."""
         verb = self.create_verb_with_infinitive_and_person()
         infinitive, singular, plural = verb.leaf_concepts(EN)
         for concept in (infinitive, singular):
-            self.assertEqual(("pluralize",), grammatical_quiz_types(concept, plural))
+            self.assertEqual(PLURAL, grammatical_quiz_type(concept, plural))
         for concept in (infinitive, plural):
-            self.assertEqual(("singularize",), grammatical_quiz_types(concept, singular))
+            self.assertEqual(SINGULAR, grammatical_quiz_type(concept, singular))
         for concept in (singular, plural):
-            self.assertEqual(("give infinitive",), grammatical_quiz_types(concept, infinitive))
+            self.assertEqual(INFINITIVE, grammatical_quiz_type(concept, infinitive))
 
     def test_verb_with_person_and_number(self):
         """Test the grammatical quiz types for a verb with grammatical person and number."""
@@ -1567,17 +1611,17 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             (second_singular, second_plural),
             (third_singular, third_plural),
         ):
-            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
-            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
-        for first, second in ((first_singular, second_singular), (first_plural, second_plural)):
-            self.assertEqual(("give second person",), grammatical_quiz_types(first, second))
-            self.assertEqual(("give first person",), grammatical_quiz_types(second, first))
-        for first, third in ((first_singular, third_singular), (first_plural, third_plural)):
-            self.assertEqual(("give third person",), grammatical_quiz_types(first, third))
-            self.assertEqual(("give first person",), grammatical_quiz_types(third, first))
-        for second, third in ((second_singular, third_singular), (second_plural, third_plural)):
-            self.assertEqual(("give third person",), grammatical_quiz_types(second, third))
-            self.assertEqual(("give second person",), grammatical_quiz_types(third, second))
+            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+        for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
+            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(first_person, second_person))
+            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(second_person, first_person))
+        for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
+            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(first_person, third_person))
+            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(third_person, first_person))
+        for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
+            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(second_person, third_person))
+            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(third_person, second_person))
 
     def test_verb_with_infinitive_and_person_and_number(self):
         """Test the grammatical quiz types for a verb with infinitive, grammatical person and number."""
@@ -1596,19 +1640,19 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             (second_singular, second_plural),
             (third_singular, third_plural),
         ):
-            self.assertEqual(("pluralize",), grammatical_quiz_types(singular, plural))
-            self.assertEqual(("singularize",), grammatical_quiz_types(plural, singular))
-            self.assertEqual((), grammatical_quiz_types(infinitive, singular))
-            self.assertEqual((), grammatical_quiz_types(infinitive, plural))
-        for first, second in ((first_singular, second_singular), (first_plural, second_plural)):
-            self.assertEqual(("give second person",), grammatical_quiz_types(first, second))
-            self.assertEqual(("give first person",), grammatical_quiz_types(second, first))
-        for first, third in ((first_singular, third_singular), (first_plural, third_plural)):
-            self.assertEqual(("give third person",), grammatical_quiz_types(first, third))
-            self.assertEqual(("give first person",), grammatical_quiz_types(third, first))
-        for second, third in ((second_singular, third_singular), (second_plural, third_plural)):
-            self.assertEqual(("give third person",), grammatical_quiz_types(second, third))
-            self.assertEqual(("give second person",), grammatical_quiz_types(third, second))
+            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+            self.assertIsNone(grammatical_quiz_type(infinitive, singular))
+            self.assertIsNone(grammatical_quiz_type(infinitive, plural))
+        for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
+            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(first_person, second_person))
+            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(second_person, first_person))
+        for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
+            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(first_person, third_person))
+            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(third_person, first_person))
+        for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
+            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(second_person, third_person))
+            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(third_person, second_person))
 
 
 class OrderQuizTest(QuizFactoryTestCase):
@@ -1618,5 +1662,5 @@ class OrderQuizTest(QuizFactoryTestCase):
         """Test that order quizzes are generated for long enough sentences."""
         concept = self.create_concept("breakfast", dict(en="We eat breakfast in the kitchen."))
         quizzes = create_quizzes(EN_NL, concept)
-        quiz = next(quiz for quiz in quizzes if "order" in quiz.quiz_types)
-        self.assertEqual(("order",), quiz.quiz_types)
+        quiz = first(quizzes.by_quiz_type(ORDER))
+        self.assertEqual(ORDER, quiz.quiz_type)

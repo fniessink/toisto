@@ -2,7 +2,6 @@
 
 from collections.abc import Callable
 from configparser import ConfigParser
-from typing import get_args
 
 import dramatic
 
@@ -10,7 +9,8 @@ from toisto.model.language import LanguagePair
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import ListenQuizType, Quiz
+from toisto.model.quiz.quiz import Quiz
+from toisto.model.quiz.quiz_type import ListenOnlyQuizType
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkified
 from toisto.ui.speech import say
@@ -37,7 +37,7 @@ def do_quiz(
     """Do one quiz and update the progress."""
     feedback = Feedback(quiz, language_pair)
     write_output(instruction(quiz))
-    if quiz.quiz_types[0] not in get_args(ListenQuizType):
+    if not quiz.has_quiz_type(ListenOnlyQuizType):
         write_output(linkified(str(quiz.question)))
     for attempt in range(1, 3):
         guess = do_quiz_attempt(quiz, config, attempt)
