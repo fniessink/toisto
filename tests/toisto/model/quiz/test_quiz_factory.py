@@ -27,6 +27,7 @@ from toisto.model.quiz.quiz_type import (
     NEUTER,
     ORDER,
     ORDINAL,
+    PAST_PERFECT_TENSE,
     PAST_TENSE,
     PLURAL,
     POSITIVE_DEGREE,
@@ -76,6 +77,11 @@ class QuizFactoryTestCase(ToistoTestCase):
             concept_dict["present perfect tense"] = {
                 "singular": dict(en="I have eaten", nl="ik heb gegeten"),
                 "plural": dict(en="we have eaten", nl="wij hebben gegeten"),
+            }
+        if "past perfect tense" in tense:
+            concept_dict["past perfect tense"] = {
+                "singular": dict(en="I had eaten", nl="ik had gegeten"),
+                "plural": dict(en="we had eaten", nl="wij hadden gegeten"),
             }
         return self.create_concept("to eat", concept_dict)
 
@@ -1040,14 +1046,23 @@ class TenseQuizzesTest(QuizFactoryTestCase):
             create_quizzes(NL_EN, concept),
         )
 
-    def test_present_past_and_perfect_tense_nested_with_grammatical_person(self):
-        """Test that quizzes can be generated for present, past, and perfect tense nested with grammatical person."""
+    def test_all_tenses_nested_with_grammatical_person(self):
+        """Test that quizzes can be generated for all tenses nested with grammatical person."""
         self.language_pair = NL_EN
-        concept = self.create_verb_with_tense_and_person("present tense", "past tense", "present perfect tense")
-        present, past, perfect = concept.constituents
-        present_singular, present_plural, past_singular, past_plural, perfect_singular, perfect_plural = (
-            concept.leaf_concepts(NL)
+        concept = self.create_verb_with_tense_and_person(
+            "present tense", "past tense", "present perfect tense", "past perfect tense"
         )
+        present, past, perfect, past_perfect = concept.constituents
+        (
+            present_singular,
+            present_plural,
+            past_singular,
+            past_plural,
+            perfect_singular,
+            perfect_plural,
+            past_perfect_singular,
+            past_perfect_plural,
+        ) = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
                 self.create_quiz(present_singular, "ik eet", ["I eat"], READ),
@@ -1080,18 +1095,40 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(perfect_plural, "we have eaten", ["wij hebben gegeten"], WRITE),
                 self.create_quiz(perfect, "ik heb gegeten", ["wij hebben gegeten"], PLURAL),
                 self.create_quiz(perfect, "wij hebben gegeten", ["ik heb gegeten"], SINGULAR),
+                self.create_quiz(past_perfect_singular, "ik had gegeten", ["I had eaten"], READ),
+                self.create_quiz(past_perfect_singular, "ik had gegeten", ["ik had gegeten"], DICTATE),
+                self.create_quiz(past_perfect_singular, "ik had gegeten", ["I had eaten"], INTERPRET),
+                self.create_quiz(past_perfect_singular, "I had eaten", ["ik had gegeten"], WRITE),
+                self.create_quiz(past_perfect_plural, "wij hadden gegeten", ["we had eaten"], READ),
+                self.create_quiz(past_perfect_plural, "wij hadden gegeten", ["wij hadden gegeten"], DICTATE),
+                self.create_quiz(past_perfect_plural, "wij hadden gegeten", ["we had eaten"], INTERPRET),
+                self.create_quiz(past_perfect_plural, "we had eaten", ["wij hadden gegeten"], WRITE),
+                self.create_quiz(past_perfect, "ik had gegeten", ["wij hadden gegeten"], PLURAL),
+                self.create_quiz(past_perfect, "wij hadden gegeten", ["ik had gegeten"], SINGULAR),
                 self.create_quiz(concept, "ik eet", ["ik at"], PAST_TENSE),
-                self.create_quiz(concept, "wij eten", ["wij aten"], PAST_TENSE),
-                self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
-                self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
-                self.create_quiz(concept, "ik heb gegeten", ["ik eet"], PRESENT_TENSE),
-                self.create_quiz(concept, "wij hebben gegeten", ["wij eten"], PRESENT_TENSE),
-                self.create_quiz(concept, "ik heb gegeten", ["ik at"], PAST_TENSE),
-                self.create_quiz(concept, "wij hebben gegeten", ["wij aten"], PAST_TENSE),
                 self.create_quiz(concept, "ik eet", ["ik heb gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "ik eet", ["ik had gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij aten"], PAST_TENSE),
                 self.create_quiz(concept, "wij eten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "wij eten", ["wij hadden gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
                 self.create_quiz(concept, "ik at", ["ik heb gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "ik at", ["ik had gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
                 self.create_quiz(concept, "wij aten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "wij aten", ["wij hadden gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "ik heb gegeten", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "ik heb gegeten", ["ik had gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "ik heb gegeten", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij eten"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "wij hebben gegeten", ["wij hadden gegeten"], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, "ik had gegeten", ["ik eet"], PRESENT_TENSE),
+                self.create_quiz(concept, "ik had gegeten", ["ik at"], PAST_TENSE),
+                self.create_quiz(concept, "ik had gegeten", ["ik heb gegeten"], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, "wij hadden gegeten", ["wij eten"], PRESENT_TENSE),
+                self.create_quiz(concept, "wij hadden gegeten", ["wij aten"], PAST_TENSE),
+                self.create_quiz(concept, "wij hadden gegeten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
             },
             create_quizzes(NL_EN, concept),
         )

@@ -150,6 +150,48 @@
                             "nl": "zij zijn geweest"
                         }
                     }
+                },
+                "past perfect tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I had been",
+                            "fi": "minä olin ollut",
+                            "nl": "ik was geweest"
+                        },
+                        "second person": {
+                            "en": "you had been",
+                            "fi": "sinä olit ollut",
+                            "nl": "jij was geweest"
+                        },
+                        "third person": {
+                            "fi": "hän oli ollut",
+                            "female": {
+                                "en": "she had been",
+                                "nl": "zij was geweest"
+                            },
+                            "male": {
+                                "en": "he had been",
+                                "nl": "hij was geweest"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "we had been",
+                            "fi": "me olimme olleet",
+                            "nl": "wij waren geweest"
+                        },
+                        "second person": {
+                            "en": "you had been",
+                            "fi": "te olitte olleet",
+                            "nl": "jullie waren geweest"
+                        },
+                        "third person": {
+                            "en": "they had been",
+                            "fi": "he olivat olleet",
+                            "nl": "zij waren geweest"
+                        }
+                    }
                 }
             },
             "negative": {
@@ -341,6 +383,69 @@
                             ]
                         }
                     }
+                },
+                "past perfect tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "I had not been",
+                            "fi": "minä en ollut ollut",
+                            "nl": [
+                                "ik was niet geweest",
+                                "ik was geen geweest"
+                            ]
+                        },
+                        "second person": {
+                            "en": "you had not been",
+                            "fi": "sinä et ollut ollut",
+                            "nl": [
+                                "jij was niet geweest",
+                                "jij was geen geweest"
+                            ]
+                        },
+                        "third person": {
+                            "fi": "hän ei ollut ollut",
+                            "female": {
+                                "en": "she had not been",
+                                "nl": [
+                                    "zij was niet geweest",
+                                    "zij was geen geweest"
+                                ]
+                            },
+                            "male": {
+                                "en": "he had not been",
+                                "nl": [
+                                    "hij was niet geweest",
+                                    "hij was geen geweest"
+                                ]
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "we had not been",
+                            "fi": "me emme olleet olleet",
+                            "nl": [
+                                "wij waren niet geweest",
+                                "wij waren geen geweest"
+                            ]
+                        },
+                        "second person": {
+                            "en": "you had not been",
+                            "fi": "te ette olleet olleet",
+                            "nl": [
+                                "jullie waren niet geweest",
+                                "jullie waren geen geweest"
+                            ]
+                        },
+                        "third person": {
+                            "en": "they had not been",
+                            "fi": "he eivät olleet olleet",
+                            "nl": [
+                                "zij waren niet geweest",
+                                "zij waren geen geweest"
+                            ]
+                        }
+                    }
                 }
             }
         },
@@ -469,6 +574,48 @@
                             "en": "have they been?",
                             "fi": "ovatko he olleet?",
                             "nl": "zijn zij geweest?"
+                        }
+                    }
+                },
+                "past perfect tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "had I been?",
+                            "fi": "olinko minä ollut?",
+                            "nl": "was ik geweest?"
+                        },
+                        "second person": {
+                            "en": "had you been?",
+                            "fi": "olitko sinä ollut?",
+                            "nl": "was jij geweest?"
+                        },
+                        "third person": {
+                            "fi": "oliko hän ollut?",
+                            "female": {
+                                "en": "had she been?",
+                                "nl": "was zij geweest?"
+                            },
+                            "male": {
+                                "en": "had he been?",
+                                "nl": "was hij geweest?"
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "had we been?",
+                            "fi": "olimmeko me olleet?",
+                            "nl": "waren wij geweest?"
+                        },
+                        "second person": {
+                            "en": "had you been?",
+                            "fi": "olitteko te olleet?",
+                            "nl": "waren jullie geweest?"
+                        },
+                        "third person": {
+                            "en": "had they been?",
+                            "fi": "olivatko he olleet?",
+                            "nl": "waren zij geweest?"
                         }
                     }
                 }
@@ -611,7 +758,7 @@
                             ]
                         },
                         "second person": {
-                            "en": "are you not?",
+                            "en": "have you not been?",
                             "fi": "etkö sinä ole ollut?",
                             "nl": [
                                 "ben jij niet geweest?",
@@ -659,6 +806,69 @@
                             "nl": [
                                 "zijn zij niet geweest?",
                                 "zijn zij geen geweest?"
+                            ]
+                        }
+                    }
+                },
+                "past perfect tense": {
+                    "singular": {
+                        "first person": {
+                            "en": "had I not been?",
+                            "fi": "enkö minä ollut ollut?",
+                            "nl": [
+                                "was ik niet geweest?",
+                                "was ik geen geweest?"
+                            ]
+                        },
+                        "second person": {
+                            "en": "had you not been?",
+                            "fi": "etkö sinä ollut ollut?",
+                            "nl": [
+                                "was jij niet geweest?",
+                                "was jij geen geweest?"
+                            ]
+                        },
+                        "third person": {
+                            "fi": "eikö hän ollut ollut?",
+                            "female": {
+                                "en": "had she not been?",
+                                "nl": [
+                                    "was zij niet geweest?",
+                                    "was zij geen geweest?"
+                                ]
+                            },
+                            "male": {
+                                "en": "had he not been?",
+                                "nl": [
+                                    "was hij niet geweest?",
+                                    "was hij geen geweest?"
+                                ]
+                            }
+                        }
+                    },
+                    "plural": {
+                        "first person": {
+                            "en": "had we not been?",
+                            "fi": "emmekö me olleet olleet?",
+                            "nl": [
+                                "waren wij niet geweest?",
+                                "waren we geen geweest?"
+                            ]
+                        },
+                        "second person": {
+                            "en": "had you not been?",
+                            "fi": "ettekö te olleet olleet?",
+                            "nl": [
+                                "waren jullie niet geweest?",
+                                "waren jullie geen geweest?"
+                            ]
+                        },
+                        "third person": {
+                            "en": "had they not been?",
+                            "fi": "eivätkö he olleet olleet?",
+                            "nl": [
+                                "waren zij niet geweest?",
+                                "waren zij geen geweest?"
                             ]
                         }
                     }
