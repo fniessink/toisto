@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Some quizzes would not be created if nouns are invariant in one language, but not in another (like "sheep" or "means of transportation"). Fixes [#438](https://github.com/fniessink/toisto/issues/438).
+- There would be two spaces between ⚠️ and "Incorrect...". Fixes [#775](https://github.com/fniessink/toisto/issues/775).
 
 ### Added
 

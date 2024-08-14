@@ -65,12 +65,12 @@ class Feedback:
 
     CORRECT: Final[str] = "✅ Correct.\n"
     INCORRECT: Final[str] = "❌ Incorrect. "
-    TRY_AGAIN: Final[str] = "⚠️  Incorrect. Please try again."
+    TRY_AGAIN: Final[str] = "⚠️ Incorrect. Please try again."
     TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
-        "⚠️  Incorrect. Please try again, in [light_goldenrod2][bold]%(language)s[/bold][/light_goldenrod2]."
+        "⚠️ Incorrect. Please try again, in [light_goldenrod2][bold]%(language)s[/bold][/light_goldenrod2]."
     )
     TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = (
-        "⚠️  Incorrect. Please try again, in [light_goldenrod2][bold] standard %(language)s[/bold][/light_goldenrod2]."
+        "⚠️ Incorrect. Please try again, in [light_goldenrod2][bold] standard %(language)s[/bold][/light_goldenrod2]."
     )
 
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
