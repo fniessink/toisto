@@ -207,6 +207,18 @@ class FeedbackTestCase(ToistoTestCase):
             feedback(Evaluation.CORRECT, self.guess),
         )
 
+    def test_post_quiz_example_with_multiple_meanings(self):
+        """Test that the post quiz example is not repeated if an examples has multiple meanings."""
+        hi = self.create_concept("hi", dict(nl="hoi", fi="terve", example="hi alice"))
+        self.create_concept("hi alice", dict(fi="Terve Alice!", nl=["Hoi Alice!", "Hallo Alice!"]))
+        quiz = create_quizzes(FI_NL, hi).by_quiz_type(WRITE).pop()
+        feedback = Feedback(quiz, FI_NL)
+        self.assertEqual(
+            Feedback.CORRECT
+            + f"[{SECONDARY}]Example: 'Terve Alice!' meaning 'Hoi Alice!' and 'Hallo Alice!'[/{SECONDARY}]\n",
+            feedback(Evaluation.CORRECT, self.guess),
+        )
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""

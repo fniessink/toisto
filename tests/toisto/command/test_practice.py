@@ -224,8 +224,8 @@ class PracticeTest(ToistoTestCase):
         expected_argument = (
             f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('pöytälamppu')}' and "
             f"'{linkified('pöytävalaisin')}'.[/{SECONDARY}]\n"
-            f"[{SECONDARY}]Examples:\n- 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.'\n"
-            f"- 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytävalaisinta.'[/{SECONDARY}]\n"
+            f"[{SECONDARY}]Example: 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.' and "
+            f"'Minä etsin pöytävalaisinta.'[/{SECONDARY}]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 
