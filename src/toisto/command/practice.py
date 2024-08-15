@@ -19,10 +19,12 @@ from toisto.ui.text import DONE, Feedback, ProgressUpdate, instruction
 
 def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int) -> Label:
     """Present the question and get the answer from the user."""
+    repeat_speech = False
     while True:
-        say(quiz.question.language, quiz.question.pronounceable, config, slow=attempt > 1)
+        say(quiz.question.language, quiz.question.pronounceable, config, slow=repeat_speech or attempt > 1)
         if answer := Label(quiz.answer.language, input("> ").strip()):
             break
+        repeat_speech = True
         print("\033[F", end="")  # noqa: T201  # Move cursor one line up
     return answer
 
