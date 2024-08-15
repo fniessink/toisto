@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Print the progress report dramatically (character by character) to make it stand out more.
 - Add support for the past perfect tense. Closes [#660](https://github.com/fniessink/toisto/issues/660).
 - Add word order quizzes for sentences with five or more words. Closes [#757](https://github.com/fniessink/toisto/issues/757).
+- When hitting enter at an empty prompt to have Toisto repeat the word or sentence, say it more slowly. Closes [#779](https://github.com/fniessink/toisto/issues/779).
 
 ## 0.22.0 - 2024-07-29
 

@@ -118,9 +118,11 @@ class PracticeTest(ToistoTestCase):
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
     @patch("builtins.print")
-    def test_quiz_empty_answer(self, mock_print: Mock) -> None:
-        """Test that the user is quizzed."""
+    @patch("toisto.command.practice.say")
+    def test_quiz_empty_answer(self, mock_say: Mock, mock_print: Mock) -> None:
+        """Test that the speech is repeated more slowly when the user hits enter without answer."""
         self.practice(self.quizzes)
+        self.assertEqual({"slow": True}, mock_say.call_args_list[-1][-1])
         self.assertEqual([call("\x1b[F", end="")], mock_print.call_args_list)
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
