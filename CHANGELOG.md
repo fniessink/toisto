@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Some quizzes would not be created if nouns are invariant in one language, but not in another (like "sheep" or "means of transportation"). Fixes [#438](https://github.com/fniessink/toisto/issues/438).
 - Don't show an example multiple times if it has multiple meanings. Fixes [#774](https://github.com/fniessink/toisto/issues/774).
 - There would be two spaces between ⚠️ and "Incorrect...". Fixes [#775](https://github.com/fniessink/toisto/issues/775).
+- Finnish "entä" is not a synonym of "ja". Fixes [#778](https://github.com/fniessink/toisto/issues/778).
 
 ### Added
 

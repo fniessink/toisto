@@ -1,6 +1,9 @@
 {
     "and you": {
-        "roots": "and",
+        "roots": {
+            "en": "and",
+            "nl": "and"
+        },
         "en": "And you?",
         "fi": "Entä sinulle?",
         "nl": "En met jou?"
