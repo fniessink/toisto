@@ -24,7 +24,7 @@ classifiers = [
 ]
 dependencies = [
     "dramatic == 0.4.1.post1",
-    "gTTS == 2.5.2",
+    "gTTS == 2.5.3",
     "pygame == 2.6.0",
     "requests >= 2.28.0",
     "rich == 13.7.1",
@@ -40,7 +40,7 @@ dev = [
     "green == 4.0.2",
     "mypy == 1.11.1",
     "pip == 24.2",
-    "ruff == 0.5.7",
+    "ruff == 0.6.1",
     "twine == 5.1.1",
     "types-requests == 2.32.0.20240712",
     "unittest-xml-reporting == 3.2.0",
