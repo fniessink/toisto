@@ -14,7 +14,7 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 <details>
 
-<summary>Another example in text format</summary>
+<summary>Another example session in text format</summary>
 
 ```console
 $ toisto practice --target fi --source nl
@@ -67,31 +67,53 @@ oranje
 
 ### Prerequisites
 
-Make sure you have these prequisities installed:
+On Linux, you need to have an mp3 player installed. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
 
-- [Python 3.10 or newer](https://python.org).
-- [pipx](https://pypa.github.io/pipx/).
-- On Linux: the `mpg123` mp3 player.
+On MacOS, Toisto needs a more modern terminal than the default one that MacOS offers to be fully functional. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default MacOS terminal app, though.
 
-If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
+### How to install Toisto
 
-For some features, Toisto needs a more modern terminal than the default one that MacOS offers. We test with [iTerm2](https://iterm2.com). But this is optional, Toisto should work fine with the default MacOS terminal app.
+There are two ways to install Toisto:
 
-### How to install
+1. The first way is using `uv`, a tool that can install tools developed in Python, such as Toisto. Advantage of `uv` is that it also installs Python, if needed. Disadvantage is that installing Python tools with `uv` is officialy 'experimental and may change without warning'.
 
-Install Toisto as follows:
+2. The second way is using `pipx`, a tool that can install tools developed in Python. Disadvantage is that it does not install Python for you. You need to do that yourself.
+
+#### How to install and update Toisto using `uv`
+
+1. Install [uv](https://docs.astral.sh/uv/#getting-started).
+
+2. Install Toisto:
 
 ```console
-$ pipx install Toisto
+$ uv tool install toisto
 ```
 
 If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
 
 ```console
-$ pipx upgrade Toisto
+$ uv tool upgrade toisto
 ```
 
-### How to use
+#### How to install and update Toisto using `pipx`
+
+1. Install [Python 3.10 or newer](https://python.org).
+
+2. Install [pipx](https://pypa.github.io/pipx/).
+
+3. Install Toisto:
+
+```console
+$ pipx install toisto
+```
+
+If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
+
+```console
+$ pipx upgrade toisto
+```
+
+### How to use Toisto
 
 Start Toisto as follows, giving the language you want to practice (the target language) and your language (the source language) as arguments:
 
