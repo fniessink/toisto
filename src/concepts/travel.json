@@ -401,14 +401,20 @@
         "roots": "near",
         "en": "It is near.",
         "fi": "Se on lähellä.",
-        "nl": "Het is dichtbij."
+        "nl": [
+            "Het is dichtbij.",
+            "Het is in de buurt."
+        ]
     },
     "it is far": {
         "antonym": "it is near",
         "roots": "far",
         "en": "It is far.",
         "fi": "Se on kaukana.",
-        "nl": "Het is ver."
+        "nl": [
+            "Het is ver.",
+            "Het is ver weg."
+        ]
     },
     "straight ahead": {
         "en": "straight ahead",
