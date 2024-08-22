@@ -8,7 +8,7 @@ from typing import Final, cast
 from rich.console import Console
 from rich.panel import Panel
 
-from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
+from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION, installation_tool
 from toisto.model.language import LanguagePair
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
@@ -46,7 +46,7 @@ How does it work?
 
 NEWS: Final[str] = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
-    f"Upgrade with [code]pipx upgrade {NAME}[/code]."
+    f"Upgrade with [code]{{1}} upgrade {NAME}[/code]."
 )
 
 CONFIG_LANGUAGE_TIP: Final[str] = (
@@ -197,7 +197,8 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None, 
     """Show the welcome message."""
     write_output(WELCOME)
     if new_version_available := latest_version and latest_version.strip("v") > VERSION:
-        write_output(Panel(NEWS.format(latest_version), expand=False))
+        news = NEWS.format(latest_version, installation_tool())
+        write_output(Panel(news, expand=False))
     elif languages_not_configured := "target" not in config["languages"] or "source" not in config["languages"]:
         write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
     if new_version_available or languages_not_configured:

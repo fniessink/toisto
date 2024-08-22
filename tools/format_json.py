@@ -3,7 +3,7 @@
 import json
 import sys
 from pathlib import Path
-from subprocess import check_output  # nosec
+from subprocess import check_output  # nosec import_subprocess
 
 
 def format_json_file(json_file: Path, check_only: bool) -> int:  # noqa: FBT001

@@ -1,7 +1,9 @@
 """Meta data about this application."""
 
+from contextlib import suppress
 from importlib.metadata import metadata, version
 from pathlib import Path
+from subprocess import DEVNULL, SubprocessError, check_output  # nosec import_subprocess
 from typing import Final
 
 import requests
@@ -41,3 +43,11 @@ def latest_version() -> str | None:
         return str(response.json()[0]["name"])
     except requests.RequestException:
         return None
+
+
+def installation_tool() -> str:
+    """Return how the app was installed: 'uv tool' or 'pipx'."""
+    with suppress(OSError, SubprocessError):
+        if "toisto" in check_output("uv tool list".split(), stderr=DEVNULL, text=True):  # noqa: S603, # nosec
+            return "uv tool"
+    return "pipx"
