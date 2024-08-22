@@ -1,17 +1,19 @@
 """Unit tests for the show progress command."""
 
+import re
 from datetime import datetime, timedelta
 from unittest.mock import MagicMock, Mock, patch
 
 from toisto.command.show_progress import SortColumn, show_progress
-from toisto.model.language import FI
+from toisto.model.language import EN, FI, NL
+from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import READ
 from toisto.tools import first
 
-from ...base import FI_NL, ToistoTestCase
+from ...base import EN_NL, FI_NL, ToistoTestCase
 
 
 class ShowProgressTestCase(ToistoTestCase):
@@ -41,9 +43,9 @@ class ShowProgressTest(ShowProgressTestCase):
         """Extend to set up retention."""
         super().setUp()
         self.now = datetime.now()
-        start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
-        end = self.now.isoformat(timespec="seconds")
-        self.progress = Progress({self.quiz.key: dict(start=start, end=end)}, FI, self.quizzes)
+        self.start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
+        self.end = self.now.isoformat(timespec="seconds")
+        self.progress = Progress({self.quiz.key: dict(start=self.start, end=self.end)}, FI, self.quizzes)
 
     def test_title(self):
         """Test the table title."""
@@ -76,6 +78,16 @@ class ShowProgressTest(ShowProgressTestCase):
         self.progress.get_retention(self.quiz).skip_until = self.now - timedelta(days=1)
         console_print = self.show_progress(self.progress)
         self.assertEqual("", first(console_print.call_args[0][0].columns[7].cells))
+
+    def test_that_generated_spelling_alternatives_are_not_shown(self):
+        """Test that generated spelling alternatives are not included in the progress table."""
+        concept = self.create_concept("", dict(en="vegetable", nl="de groente"))
+        quiz = first(create_quizzes(EN_NL, concept).by_quiz_type(READ))
+        quizzes = Quizzes({quiz})
+        progress = Progress({quiz.key: dict(start=self.start, end=self.end)}, EN, quizzes)
+        Label.ALTERNATIVES_TO_GENERATE[NL] = {re.compile("de groente"): "de groentes"}
+        console_print = self.show_progress(progress)
+        self.assertEqual("de groente", next(console_print.call_args[0][0].columns[4].cells))
 
 
 class ShowProgressSortTestCase(ShowProgressTestCase):
