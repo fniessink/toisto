@@ -1,5 +1,6 @@
 {
     "parent": {
+        "antonym": "child",
         "holonym": "family",
         "roots": {
             "fi": "old",
@@ -17,6 +18,10 @@
         }
     },
     "mother": {
+        "antonym": [
+            "daughter",
+            "father"
+        ],
         "hypernym": "parent",
         "singular": {
             "en": "mother",
@@ -30,6 +35,10 @@
         }
     },
     "father": {
+        "antonym": [
+            "mother",
+            "son"
+        ],
         "hypernym": "parent",
         "singular": {
             "en": "father",
