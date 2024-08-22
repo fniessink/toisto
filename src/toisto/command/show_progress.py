@@ -46,7 +46,7 @@ def show_progress(progress: Progress, sort: SortColumn) -> None:
             str(quiz.question),
             quiz.question.language,
             quiz.answer.language,
-            "\n".join(quiz.answers.as_strings),
+            " - ".join(quiz.non_generated_answers.as_strings),
             str(retention.count),
             format_duration(retention.length) if retention.length else "",
             format_datetime(skip) if skip and skip > datetime.now() else "",
