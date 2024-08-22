@@ -30,11 +30,11 @@
                                 "hänellä on",
                                 "sillä on*"
                             ],
-                            "female": {
+                            "feminine": {
                                 "en": "she has",
                                 "nl": "zij heeft"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he has",
                                 "nl": "hij heeft"
                             }
@@ -81,11 +81,11 @@
                         },
                         "third person": {
                             "fi": "hänellä oli",
-                            "female": {
+                            "feminine": {
                                 "en": "she had",
                                 "nl": "zij had"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he had",
                                 "nl": "hij had"
                             }
@@ -140,14 +140,14 @@
                                 "hänellä ei ole",
                                 "sillä ei oo*"
                             ],
-                            "female": {
+                            "feminine": {
                                 "en": "she has not",
                                 "nl": [
                                     "zij heeft niet",
                                     "zij heeft geen"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he has not",
                                 "nl": [
                                     "hij heeft niet",
@@ -212,14 +212,14 @@
                         },
                         "third person": {
                             "fi": "hänellä ei ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she had not",
                                 "nl": [
                                     "zij had niet",
                                     "zij had geen"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he had not",
                                 "nl": [
                                     "hij had niet",
@@ -279,14 +279,14 @@
                         },
                         "third person": {
                             "fi": "onko hänellä?",
-                            "female": {
+                            "feminine": {
                                 "en": [
                                     "has she got?",
                                     "does she have?"
                                 ],
                                 "nl": "heeft zij?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": [
                                     "has he got?",
                                     "does he have?"
@@ -336,11 +336,11 @@
                         },
                         "third person": {
                             "fi": "oliko hänellä?",
-                            "female": {
+                            "feminine": {
                                 "en": "did she have?",
                                 "nl": "had zij?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "did he have?",
                                 "nl": "had hij?"
                             }
@@ -392,7 +392,7 @@
                         },
                         "third person": {
                             "fi": "eikö hänellä ole",
-                            "female": {
+                            "feminine": {
                                 "en": [
                                     "has she not got?|hasn't she got?",
                                     "does she not have?|doesn't she have?"
@@ -402,7 +402,7 @@
                                     "heeft zij geen?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": [
                                     "has he not got?|hasn't he got?",
                                     "does he not have?|doesn't he have?"
@@ -470,14 +470,14 @@
                         },
                         "third person": {
                             "fi": "eikö hänellä ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "did she not have?|didn't she have?",
                                 "nl": [
                                     "had zij niet?",
                                     "had zij geen?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "did he not have?|didn't he have?",
                                 "nl": [
                                     "had hij niet?",

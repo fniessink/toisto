@@ -30,11 +30,11 @@
                                 "hän on",
                                 "se on*"
                             ],
-                            "female": {
+                            "feminine": {
                                 "en": "she is",
                                 "nl": "zij is"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he is",
                                 "nl": "hij is"
                             }
@@ -81,11 +81,11 @@
                         },
                         "third person": {
                             "fi": "hän oli",
-                            "female": {
+                            "feminine": {
                                 "en": "she was",
                                 "nl": "zij was"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he was",
                                 "nl": "hij was"
                             }
@@ -123,11 +123,11 @@
                         },
                         "third person": {
                             "fi": "hän on ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she has been",
                                 "nl": "zij is geweest"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he has been",
                                 "nl": "hij is geweest"
                             }
@@ -165,11 +165,11 @@
                         },
                         "third person": {
                             "fi": "hän oli ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she had been",
                                 "nl": "zij was geweest"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he had been",
                                 "nl": "hij was geweest"
                             }
@@ -215,14 +215,14 @@
                         },
                         "third person": {
                             "fi": "hän ei ole",
-                            "female": {
+                            "feminine": {
                                 "en": "she is not",
                                 "nl": [
                                     "zij is niet",
                                     "zij is geen"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he is not",
                                 "nl": [
                                     "hij is niet",
@@ -278,14 +278,14 @@
                         },
                         "third person": {
                             "fi": "hän ei ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she was not",
                                 "nl": [
                                     "zij was niet",
                                     "zij was geen"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he was not",
                                 "nl": [
                                     "hij was niet",
@@ -341,14 +341,14 @@
                         },
                         "third person": {
                             "fi": "hän ei ole ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she has not been",
                                 "nl": [
                                     "zij is niet geweest",
                                     "zij is geen geweest"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he has not been",
                                 "nl": [
                                     "hij is niet geweest",
@@ -404,14 +404,14 @@
                         },
                         "third person": {
                             "fi": "hän ei ollut ollut",
-                            "female": {
+                            "feminine": {
                                 "en": "she had not been",
                                 "nl": [
                                     "zij was niet geweest",
                                     "zij was geen geweest"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "he had not been",
                                 "nl": [
                                     "hij was niet geweest",
@@ -465,11 +465,11 @@
                         },
                         "third person": {
                             "fi": "onko hän?",
-                            "female": {
+                            "feminine": {
                                 "en": "is she?",
                                 "nl": "is zij?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "is he?",
                                 "nl": "is hij?"
                             }
@@ -507,11 +507,11 @@
                         },
                         "third person": {
                             "fi": "oliko hän?",
-                            "female": {
+                            "feminine": {
                                 "en": "was she?",
                                 "nl": "was zij?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "was he?",
                                 "nl": "was hij?"
                             }
@@ -549,11 +549,11 @@
                         },
                         "third person": {
                             "fi": "onko hän ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "has she been?",
                                 "nl": "is zij geweest?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "has he been?",
                                 "nl": "is hij geweest?"
                             }
@@ -591,11 +591,11 @@
                         },
                         "third person": {
                             "fi": "oliko hän ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "had she been?",
                                 "nl": "was zij geweest?"
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "had he been?",
                                 "nl": "was hij geweest?"
                             }
@@ -641,14 +641,14 @@
                         },
                         "third person": {
                             "fi": "eikö hän ole?",
-                            "female": {
+                            "feminine": {
                                 "en": "is she not?",
                                 "nl": [
                                     "is zij niet?",
                                     "is zij geen?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "is he not?",
                                 "nl": [
                                     "is hij niet?",
@@ -704,14 +704,14 @@
                         },
                         "third person": {
                             "fi": "eikö hän ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "was she not?|wasn't she?",
                                 "nl": [
                                     "was zij niet?",
                                     "was zij geen?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "was he not?",
                                 "nl": [
                                     "was hij niet?",
@@ -767,14 +767,14 @@
                         },
                         "third person": {
                             "fi": "eikö hän ole ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "has she not been?",
                                 "nl": [
                                     "is zij niet geweest?",
                                     "is zij geen geweest?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "has he not been?",
                                 "nl": [
                                     "is hij niet geweest?",
@@ -830,14 +830,14 @@
                         },
                         "third person": {
                             "fi": "eikö hän ollut ollut?",
-                            "female": {
+                            "feminine": {
                                 "en": "had she not been?",
                                 "nl": [
                                     "was zij niet geweest?",
                                     "was zij geen geweest?"
                                 ]
                             },
-                            "male": {
+                            "masculine": {
                                 "en": "had he not been?",
                                 "nl": [
                                     "was hij niet geweest?",

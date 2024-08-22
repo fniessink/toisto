@@ -6,7 +6,7 @@ from toisto.model.language import FI, NL
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import DICTATE, FEMALE, READ, WRITE
+from toisto.model.quiz.quiz_type import DICTATE, FEMININE, READ, WRITE
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 from toisto.ui.dictionary import DICTIONARY_URL, linkified
 from toisto.ui.style import INSERTED, QUIZ, SECONDARY
@@ -138,11 +138,11 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the quiz instruction is correctly formatted for multiple quiz types."""
         concept = self.create_concept(
             "eat",
-            {"first person": dict(nl="ik eet"), "third person": dict(female=dict(nl="zij eet"))},
+            {"first person": dict(nl="ik eet"), "third person": dict(feminine=dict(nl="zij eet"))},
         )
         quizzes = create_quizzes(NL_FI, concept)
-        quiz = quizzes.by_quiz_type(FEMALE).pop()
-        expected_text = f"[{QUIZ}]Give the [underline]third person female[/underline] in Dutch:[/{QUIZ}]"
+        quiz = quizzes.by_quiz_type(FEMININE).pop()
+        expected_text = f"[{QUIZ}]Give the [underline]third person feminine[/underline] in Dutch:[/{QUIZ}]"
         self.assertEqual(expected_text, instruction(quiz))
 
     def test_post_quiz_note(self):

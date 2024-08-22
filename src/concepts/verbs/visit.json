@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän käy",
-                    "female": {
+                    "feminine": {
                         "en": "she visits",
                         "nl": "zij bezoekt"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he visits",
                         "nl": "hij bezoekt"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän kävi",
-                    "female": {
+                    "feminine": {
                         "en": "she visited",
                         "nl": "zij bezocht"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he visited",
                         "nl": "hij bezocht"
                     }

@@ -15,14 +15,14 @@ from toisto.model.quiz.quiz_type import (
     DECLARATIVE,
     DICTATE,
     DIMINUTIVE,
-    FEMALE,
+    FEMININE,
     FIRST_PERSON,
     FULL_FORM,
     IMPERATIVE,
     INFINITIVE,
     INTERPRET,
     INTERROGATIVE,
-    MALE,
+    MASCULINE,
     NEGATIVE,
     NEUTER,
     ORDER,
@@ -141,7 +141,7 @@ class QuizFactoryTestCase(ToistoTestCase):
         """Create a noun with grammatical gender."""
         return self.create_concept(
             "cat",
-            dict(female=dict(en="her cat", nl="haar kat"), male=dict(en="his cat", nl="zijn kat")),
+            dict(feminine=dict(en="her cat", nl="haar kat"), masculine=dict(en="his cat", nl="zijn kat")),
         )
 
     def create_noun_with_grammatical_gender_including_neuter(self) -> Concept:
@@ -149,8 +149,8 @@ class QuizFactoryTestCase(ToistoTestCase):
         return self.create_concept(
             "bone",
             dict(
-                female=dict(en="her bone", nl="haar bot"),
-                male=dict(en="his bone", nl="zijn bot;male"),
+                feminine=dict(en="her bone", nl="haar bot"),
+                masculine=dict(en="his bone", nl="zijn bot;masculine"),
                 neuter=dict(en="its bone", nl="zijn bot;neuter"),
             ),
         )
@@ -160,8 +160,10 @@ class QuizFactoryTestCase(ToistoTestCase):
         return self.create_concept(
             "cat",
             dict(
-                singular=dict(female=dict(en="her cat", nl="haar kat"), male=dict(en="his cat", nl="zijn kat")),
-                plural=dict(female=dict(en="her cats", nl="haar katten"), male=dict(en="his cats", nl="zijn katten")),
+                singular=dict(feminine=dict(en="her cat", nl="haar kat"), masculine=dict(en="his cat", nl="zijn kat")),
+                plural=dict(
+                    feminine=dict(en="her cats", nl="haar katten"), masculine=dict(en="his cats", nl="zijn katten")
+                ),
             ),
         )
 
@@ -375,48 +377,48 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         )
 
     def test_grammatical_gender(self):
-        """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
+        """Test that quizzes can be generated for feminine and masculine grammatical genders."""
         self.language_pair = NL_EN
         concept = self.create_noun_with_grammatical_gender()
-        female, male = concept.leaf_concepts(NL)
+        feminine, masculine = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female, "haar kat", ["her cat"], READ),
-                self.create_quiz(female, "haar kat", ["haar kat"], DICTATE),
-                self.create_quiz(female, "haar kat", ["her cat"], INTERPRET),
-                self.create_quiz(female, "her cat", ["haar kat"], WRITE),
-                self.create_quiz(male, "zijn kat", ["his cat"], READ),
-                self.create_quiz(male, "zijn kat", ["zijn kat"], DICTATE),
-                self.create_quiz(male, "zijn kat", ["his cat"], INTERPRET),
-                self.create_quiz(male, "his cat", ["zijn kat"], WRITE),
-                self.create_quiz(concept, "haar kat", ["zijn kat"], MALE),
-                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMALE),
+                self.create_quiz(feminine, "haar kat", ["her cat"], READ),
+                self.create_quiz(feminine, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(feminine, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(feminine, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(masculine, "zijn kat", ["his cat"], READ),
+                self.create_quiz(masculine, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(masculine, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(masculine, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(concept, "haar kat", ["zijn kat"], MASCULINE),
+                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMININE),
             },
             create_quizzes(NL_EN, concept),
         )
 
     def test_grammatical_gender_with_neuter(self):
-        """Test that quizzes can be generated for different grammatical genders, i.e. female and male."""
+        """Test that quizzes can be generated for different feminine, masculine, and neuter grammatical genders."""
         self.language_pair = NL_EN
         concept = self.create_noun_with_grammatical_gender_including_neuter()
-        female, male, neuter = concept.leaf_concepts(NL)
+        feminine, masculine, neuter = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female, "haar bot", ["her bone"], READ),
-                self.create_quiz(female, "haar bot", ["haar bot"], DICTATE),
-                self.create_quiz(female, "haar bot", ["her bone"], INTERPRET),
-                self.create_quiz(female, "her bone", ["haar bot"], WRITE),
-                self.create_quiz(male, "zijn bot", ["his bone"], READ),
-                self.create_quiz(male, "zijn bot", ["zijn bot"], DICTATE),
-                self.create_quiz(male, "zijn bot", ["his bone"], INTERPRET),
-                self.create_quiz(male, "his bone", ["zijn bot"], WRITE),
+                self.create_quiz(feminine, "haar bot", ["her bone"], READ),
+                self.create_quiz(feminine, "haar bot", ["haar bot"], DICTATE),
+                self.create_quiz(feminine, "haar bot", ["her bone"], INTERPRET),
+                self.create_quiz(feminine, "her bone", ["haar bot"], WRITE),
+                self.create_quiz(masculine, "zijn bot", ["his bone"], READ),
+                self.create_quiz(masculine, "zijn bot", ["zijn bot"], DICTATE),
+                self.create_quiz(masculine, "zijn bot", ["his bone"], INTERPRET),
+                self.create_quiz(masculine, "his bone", ["zijn bot"], WRITE),
                 self.create_quiz(neuter, "zijn bot", ["its bone"], READ),
                 self.create_quiz(neuter, "zijn bot", ["zijn bot"], DICTATE),
                 self.create_quiz(neuter, "zijn bot", ["its bone"], INTERPRET),
                 self.create_quiz(neuter, "its bone", ["zijn bot"], WRITE),
-                self.create_quiz(concept, "haar bot", ["zijn bot"], MALE),
+                self.create_quiz(concept, "haar bot", ["zijn bot"], MASCULINE),
                 self.create_quiz(concept, "haar bot", ["zijn bot"], NEUTER),
-                self.create_quiz(concept, "zijn bot", ["haar bot"], FEMALE),
+                self.create_quiz(concept, "zijn bot", ["haar bot"], FEMININE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -426,29 +428,29 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_EN
         concept = self.create_noun_with_grammatical_number_and_gender()
         singular, plural = concept.constituents
-        singular_female, singular_male, plural_female, plural_male = concept.leaf_concepts(NL)
+        singular_feminine, singular_masculine, plural_feminine, plural_masculine = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(singular_female, "haar kat", ["her cat"], READ),
-                self.create_quiz(singular_female, "haar kat", ["haar kat"], DICTATE),
-                self.create_quiz(singular_female, "haar kat", ["her cat"], INTERPRET),
-                self.create_quiz(singular_female, "her cat", ["haar kat"], WRITE),
-                self.create_quiz(singular_male, "zijn kat", ["his cat"], READ),
-                self.create_quiz(singular_male, "zijn kat", ["zijn kat"], DICTATE),
-                self.create_quiz(singular_male, "zijn kat", ["his cat"], INTERPRET),
-                self.create_quiz(singular_male, "his cat", ["zijn kat"], WRITE),
-                self.create_quiz(singular, "haar kat", ["zijn kat"], MALE),
-                self.create_quiz(singular, "zijn kat", ["haar kat"], FEMALE),
-                self.create_quiz(plural_female, "haar katten", ["her cats"], READ),
-                self.create_quiz(plural_female, "haar katten", ["haar katten"], DICTATE),
-                self.create_quiz(plural_female, "haar katten", ["her cats"], INTERPRET),
-                self.create_quiz(plural_female, "her cats", ["haar katten"], WRITE),
-                self.create_quiz(plural_male, "zijn katten", ["his cats"], READ),
-                self.create_quiz(plural_male, "zijn katten", ["zijn katten"], DICTATE),
-                self.create_quiz(plural_male, "zijn katten", ["his cats"], INTERPRET),
-                self.create_quiz(plural_male, "his cats", ["zijn katten"], WRITE),
-                self.create_quiz(plural, "haar katten", ["zijn katten"], MALE),
-                self.create_quiz(plural, "zijn katten", ["haar katten"], FEMALE),
+                self.create_quiz(singular_feminine, "haar kat", ["her cat"], READ),
+                self.create_quiz(singular_feminine, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(singular_feminine, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(singular_feminine, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(singular_masculine, "zijn kat", ["his cat"], READ),
+                self.create_quiz(singular_masculine, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(singular_masculine, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(singular_masculine, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(singular, "haar kat", ["zijn kat"], MASCULINE),
+                self.create_quiz(singular, "zijn kat", ["haar kat"], FEMININE),
+                self.create_quiz(plural_feminine, "haar katten", ["her cats"], READ),
+                self.create_quiz(plural_feminine, "haar katten", ["haar katten"], DICTATE),
+                self.create_quiz(plural_feminine, "haar katten", ["her cats"], INTERPRET),
+                self.create_quiz(plural_feminine, "her cats", ["haar katten"], WRITE),
+                self.create_quiz(plural_masculine, "zijn katten", ["his cats"], READ),
+                self.create_quiz(plural_masculine, "zijn katten", ["zijn katten"], DICTATE),
+                self.create_quiz(plural_masculine, "zijn katten", ["his cats"], INTERPRET),
+                self.create_quiz(plural_masculine, "his cats", ["zijn katten"], WRITE),
+                self.create_quiz(plural, "haar katten", ["zijn katten"], MASCULINE),
+                self.create_quiz(plural, "zijn katten", ["haar katten"], FEMININE),
                 self.create_quiz(concept, "haar kat", ["haar katten"], PLURAL),
                 self.create_quiz(concept, "haar katten", ["haar kat"], SINGULAR),
                 self.create_quiz(concept, "zijn kat", ["zijn katten"], PLURAL),
@@ -574,11 +576,13 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             {
                 "first person": dict(en="I eat", nl="ik eet"),
                 "second person": dict(en="you eat", nl="jij eet"),
-                "third person": dict(female=dict(en="she eats", nl="zij eet"), male=dict(en="he eats", nl="hij eet")),
+                "third person": dict(
+                    feminine=dict(en="she eats", nl="zij eet"), masculine=dict(en="he eats", nl="hij eet")
+                ),
             },
         )
         first_person, second_person, third_person = concept.constituents
-        third_person_female, third_person_male = third_person.constituents
+        third_person_feminine, third_person_masculine = third_person.constituents
         self.assertSetEqual(
             {
                 self.create_quiz(first_person, "ik eet", ["I eat"], READ),
@@ -589,26 +593,30 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(second_person, "jij eet", ["jij eet"], DICTATE),
                 self.create_quiz(second_person, "jij eet", ["you eat"], INTERPRET),
                 self.create_quiz(second_person, "you eat", ["jij eet"], WRITE),
-                self.create_quiz(third_person_female, "zij eet", ["she eats"], READ),
-                self.create_quiz(third_person_female, "zij eet", ["zij eet"], DICTATE),
-                self.create_quiz(third_person_female, "zij eet", ["she eats"], INTERPRET),
-                self.create_quiz(third_person_female, "she eats", ["zij eet"], WRITE),
-                self.create_quiz(third_person_male, "hij eet", ["he eats"], READ),
-                self.create_quiz(third_person_male, "hij eet", ["hij eet"], DICTATE),
-                self.create_quiz(third_person_male, "hij eet", ["he eats"], INTERPRET),
-                self.create_quiz(third_person_male, "he eats", ["hij eet"], WRITE),
-                self.create_quiz(third_person, "zij eet", ["hij eet"], MALE),
-                self.create_quiz(third_person, "hij eet", ["zij eet"], FEMALE),
+                self.create_quiz(third_person_feminine, "zij eet", ["she eats"], READ),
+                self.create_quiz(third_person_feminine, "zij eet", ["zij eet"], DICTATE),
+                self.create_quiz(third_person_feminine, "zij eet", ["she eats"], INTERPRET),
+                self.create_quiz(third_person_feminine, "she eats", ["zij eet"], WRITE),
+                self.create_quiz(third_person_masculine, "hij eet", ["he eats"], READ),
+                self.create_quiz(third_person_masculine, "hij eet", ["hij eet"], DICTATE),
+                self.create_quiz(third_person_masculine, "hij eet", ["he eats"], INTERPRET),
+                self.create_quiz(third_person_masculine, "he eats", ["hij eet"], WRITE),
+                self.create_quiz(third_person, "zij eet", ["hij eet"], MASCULINE),
+                self.create_quiz(third_person, "hij eet", ["zij eet"], FEMININE),
                 self.create_quiz(concept, "ik eet", ["jij eet"], SECOND_PERSON),
                 self.create_quiz(
-                    concept, "ik eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMALE))
+                    concept, "ik eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMININE))
                 ),
-                self.create_quiz(concept, "ik eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MALE))),
+                self.create_quiz(
+                    concept, "ik eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MASCULINE))
+                ),
                 self.create_quiz(concept, "jij eet", ["ik eet"], FIRST_PERSON),
                 self.create_quiz(
-                    concept, "jij eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMALE))
+                    concept, "jij eet", ["zij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, FEMININE))
                 ),
-                self.create_quiz(concept, "jij eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MALE))),
+                self.create_quiz(
+                    concept, "jij eet", ["hij eet"], GrammaticalQuizType(quiz_types=(THIRD_PERSON, MASCULINE))
+                ),
                 self.create_quiz(concept, "zij eet", ["ik eet"], FIRST_PERSON),
                 self.create_quiz(concept, "zij eet", ["jij eet"], SECOND_PERSON),
                 self.create_quiz(concept, "hij eet", ["ik eet"], FIRST_PERSON),
@@ -625,7 +633,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             {
                 "first person": dict(en="I eat", fi="minä syön"),
                 "second person": dict(en="you eat", fi="sinä syöt"),
-                "third person": dict(female=dict(en="she eats"), male=dict(en="he eats"), fi="hän syö"),
+                "third person": dict(feminine=dict(en="she eats"), masculine=dict(en="he eats"), fi="hän syö"),
             },
         )
         first_person, second_person, third_person = concept.constituents
@@ -715,38 +723,40 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "cat",
             dict(
-                female=dict(singular=dict(en="her cat", nl="haar kat"), plural=dict(en="her cats", nl="haar katten")),
-                male=dict(singular=dict(en="his cat", nl="zijn kat"), plural=dict(en="his cats", nl="zijn katten")),
+                feminine=dict(singular=dict(en="her cat", nl="haar kat"), plural=dict(en="her cats", nl="haar katten")),
+                masculine=dict(
+                    singular=dict(en="his cat", nl="zijn kat"), plural=dict(en="his cats", nl="zijn katten")
+                ),
             ),
         )
-        female, male = concept.constituents
-        female_singular, female_plural, male_singular, male_plural = concept.leaf_concepts(NL)
+        feminine, masculine = concept.constituents
+        feminine_singular, feminine_plural, masculine_singular, masculine_plural = concept.leaf_concepts(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(female_singular, "haar kat", ["her cat"], READ),
-                self.create_quiz(female_singular, "haar kat", ["haar kat"], DICTATE),
-                self.create_quiz(female_singular, "haar kat", ["her cat"], INTERPRET),
-                self.create_quiz(female_singular, "her cat", ["haar kat"], WRITE),
-                self.create_quiz(female_plural, "haar katten", ["her cats"], READ),
-                self.create_quiz(female_plural, "haar katten", ["haar katten"], DICTATE),
-                self.create_quiz(female_plural, "haar katten", ["her cats"], INTERPRET),
-                self.create_quiz(female_plural, "her cats", ["haar katten"], WRITE),
-                self.create_quiz(female, "haar kat", ["haar katten"], PLURAL),
-                self.create_quiz(female, "haar katten", ["haar kat"], SINGULAR),
-                self.create_quiz(male_singular, "zijn kat", ["his cat"], READ),
-                self.create_quiz(male_singular, "zijn kat", ["zijn kat"], DICTATE),
-                self.create_quiz(male_singular, "zijn kat", ["his cat"], INTERPRET),
-                self.create_quiz(male_singular, "his cat", ["zijn kat"], WRITE),
-                self.create_quiz(male_plural, "zijn katten", ["his cats"], READ),
-                self.create_quiz(male_plural, "zijn katten", ["zijn katten"], DICTATE),
-                self.create_quiz(male_plural, "zijn katten", ["his cats"], INTERPRET),
-                self.create_quiz(male_plural, "his cats", ["zijn katten"], WRITE),
-                self.create_quiz(male, "zijn kat", ["zijn katten"], PLURAL),
-                self.create_quiz(male, "zijn katten", ["zijn kat"], SINGULAR),
-                self.create_quiz(concept, "haar kat", ["zijn kat"], MALE),
-                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMALE),
-                self.create_quiz(concept, "haar katten", ["zijn katten"], MALE),
-                self.create_quiz(concept, "zijn katten", ["haar katten"], FEMALE),
+                self.create_quiz(feminine_singular, "haar kat", ["her cat"], READ),
+                self.create_quiz(feminine_singular, "haar kat", ["haar kat"], DICTATE),
+                self.create_quiz(feminine_singular, "haar kat", ["her cat"], INTERPRET),
+                self.create_quiz(feminine_singular, "her cat", ["haar kat"], WRITE),
+                self.create_quiz(feminine_plural, "haar katten", ["her cats"], READ),
+                self.create_quiz(feminine_plural, "haar katten", ["haar katten"], DICTATE),
+                self.create_quiz(feminine_plural, "haar katten", ["her cats"], INTERPRET),
+                self.create_quiz(feminine_plural, "her cats", ["haar katten"], WRITE),
+                self.create_quiz(feminine, "haar kat", ["haar katten"], PLURAL),
+                self.create_quiz(feminine, "haar katten", ["haar kat"], SINGULAR),
+                self.create_quiz(masculine_singular, "zijn kat", ["his cat"], READ),
+                self.create_quiz(masculine_singular, "zijn kat", ["zijn kat"], DICTATE),
+                self.create_quiz(masculine_singular, "zijn kat", ["his cat"], INTERPRET),
+                self.create_quiz(masculine_singular, "his cat", ["zijn kat"], WRITE),
+                self.create_quiz(masculine_plural, "zijn katten", ["his cats"], READ),
+                self.create_quiz(masculine_plural, "zijn katten", ["zijn katten"], DICTATE),
+                self.create_quiz(masculine_plural, "zijn katten", ["his cats"], INTERPRET),
+                self.create_quiz(masculine_plural, "his cats", ["zijn katten"], WRITE),
+                self.create_quiz(masculine, "zijn kat", ["zijn katten"], PLURAL),
+                self.create_quiz(masculine, "zijn katten", ["zijn kat"], SINGULAR),
+                self.create_quiz(concept, "haar kat", ["zijn kat"], MASCULINE),
+                self.create_quiz(concept, "zijn kat", ["haar kat"], FEMININE),
+                self.create_quiz(concept, "haar katten", ["zijn katten"], MASCULINE),
+                self.create_quiz(concept, "zijn katten", ["haar katten"], FEMININE),
             },
             create_quizzes(NL_EN, concept),
         )
@@ -756,17 +766,20 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_EN
         concept = self.create_concept(
             "to be",
-            dict(female=dict(en="she is|she's", fi="hän on;female"), male=dict(en="he is|he's", fi="hän on;male")),
+            dict(
+                feminine=dict(en="she is|she's", fi="hän on"),
+                masculine=dict(en="he is|he's", fi="hän on"),
+            ),
         )
-        female, male = concept.constituents
+        feminine, masculine = concept.constituents
         self.assertSetEqual(
             {
-                self.create_quiz(female, "hän on;female", ["she is|she's"], READ),
-                self.create_quiz(female, "hän on;female", ["hän on;female"], DICTATE),
-                self.create_quiz(female, "hän on;female", ["she is|she's"], INTERPRET),
-                self.create_quiz(female, "she is|she's", ["hän on;female"], WRITE),
-                self.create_quiz(male, "hän on;male", ["he is|he's"], READ),
-                self.create_quiz(male, "he is|he's", ["hän on;male"], WRITE),
+                self.create_quiz(feminine, "hän on", ["she is|she's"], READ),
+                self.create_quiz(feminine, "hän on", ["hän on"], DICTATE),
+                self.create_quiz(feminine, "hän on", ["she is|she's"], INTERPRET),
+                self.create_quiz(feminine, "she is|she's", ["hän on"], WRITE),
+                self.create_quiz(masculine, "hän on", ["he is|he's"], READ),
+                self.create_quiz(masculine, "he is|he's", ["hän on"], WRITE),
             },
             create_quizzes(FI_EN, concept),
         )
@@ -1574,28 +1587,28 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_noun_with_grammatical_gender(self):
         """Test the grammatical quiz types for a noun with grammatical gender."""
-        female, male = self.create_noun_with_grammatical_gender().leaf_concepts(EN)
-        self.assertEqual(MALE, grammatical_quiz_type(female, male))
-        self.assertEqual(FEMALE, grammatical_quiz_type(male, female))
+        feminine, maasculine = self.create_noun_with_grammatical_gender().leaf_concepts(EN)
+        self.assertEqual(MASCULINE, grammatical_quiz_type(feminine, maasculine))
+        self.assertEqual(FEMININE, grammatical_quiz_type(maasculine, feminine))
 
     def test_noun_with_grammatical_gender_including_neuter(self):
         """Test the grammatical quiz types for a noun with grammatical gender including neuter."""
-        female, male, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts(NL)
-        for concept in (female, neuter):
-            self.assertEqual(MALE, grammatical_quiz_type(concept, male))
-        for concept in (female, male):
+        feminine, masculine, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts(NL)
+        for concept in (feminine, neuter):
+            self.assertEqual(MASCULINE, grammatical_quiz_type(concept, masculine))
+        for concept in (feminine, masculine):
             self.assertEqual(NEUTER, grammatical_quiz_type(concept, neuter))
-        for concept in (male, neuter):
-            self.assertEqual(FEMALE, grammatical_quiz_type(concept, female))
+        for concept in (masculine, neuter):
+            self.assertEqual(FEMININE, grammatical_quiz_type(concept, feminine))
 
     def test_noun_with_grammatical_number_and_gender(self):
         """Test the grammatical quiz types for a noun with grammatical number and gender."""
         noun = self.create_noun_with_grammatical_number_and_gender()
-        singular_female, singular_male, plural_female, plural_male = noun.leaf_concepts(EN)
-        for female, male in ((singular_female, singular_male), (plural_female, plural_male)):
-            self.assertEqual(MALE, grammatical_quiz_type(female, male))
-            self.assertEqual(FEMALE, grammatical_quiz_type(male, female))
-        for singular, plural in ((singular_female, plural_female), (singular_male, plural_male)):
+        singular_feminine, singular_masculine, plural_feminine, plural_masculine = noun.leaf_concepts(EN)
+        for feminine, masculine in ((singular_feminine, singular_masculine), (plural_feminine, plural_masculine)):
+            self.assertEqual(MASCULINE, grammatical_quiz_type(feminine, masculine))
+            self.assertEqual(FEMININE, grammatical_quiz_type(masculine, feminine))
+        for singular, plural in ((singular_feminine, plural_feminine), (singular_masculine, plural_masculine)):
             self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
             self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
 

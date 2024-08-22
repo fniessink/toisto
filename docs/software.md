@@ -129,12 +129,12 @@ Sometimes labels are ambiguous. For example, "hän" in Finnish can mean both he 
 {
     "she wants ice cream": {
         "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;female",
+        "fi": "Hän haluaa jäätelöä.;feminine",
     }
 }
 ```
 
-In the above example, Toisto will show the note 'female' to the user when asking for the English translation of "Hän haluaa jäätelöä".
+In the above example, Toisto will show the note 'feminine' to the user when asking for the English translation of "Hän haluaa jäätelöä".
 
 It's also possible to add two notes. The first note will be shown as part of the quiz instruction. The second note will be shown after the user has answered. This can be used to point out extra information, for example:
 
@@ -142,7 +142,7 @@ It's also possible to add two notes. The first note will be shown as part of the
 {
     "she wants ice cream": {
         "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;female;'jäätelöä is the partitive case of 'jäätelö'",
+        "fi": "Hän haluaa jäätelöä.;feminine;'jäätelöä is the partitive case of 'jäätelö'",
     }
 }
 ```
@@ -385,11 +385,11 @@ When concepts have multiple genders, these can be specified as follows:
 ```json
 {
     "parent": {
-        "female": {
+        "feminine": {
             "en": "mother",
             "nl": "de moeder"
         },
-        "male": {
+        "masculine": {
             "en": "father",
             "nl": "de vader"
         }
@@ -402,11 +402,11 @@ It is also possible to have a neutral gender:
 ```json
 {
     "parent": {
-        "female": {
+        "feminine": {
             "en": "mother",
             "nl": "de moeder"
         },
-        "male": {
+        "masculine": {
             "en": "father",
             "nl": "de vader"
         },
@@ -439,11 +439,11 @@ The format of the JSON files is as follows:
                 "nl": "jij hebt"
             },
             "third person": {
-                "female": {
+                "feminine": {
                     "en": "she has",
                     "nl": "zij heeft"
                 },
-                "male": {
+                "masculine": {
                     "en": "he has",
                     "nl": "hij heeft"
                 }
@@ -467,7 +467,7 @@ The format of the JSON files is as follows:
 }
 ```
 
-Because Finnish does not distinguish between male and female gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
+Because Finnish does not distinguish between mssculine and feminine gender, the third person singular of verbs in Finnish is included directly under the `third person` key:
 
 ```json
 {
@@ -477,11 +477,11 @@ Because Finnish does not distinguish between male and female gender, the third p
             "second person": "...",
             "third person": {
                 "fi": "hänellä on",
-                "female": {
+                "feminine": {
                     "en": "she has",
                     "nl": "zij heeft"
                 },
-                "male": {
+                "masculine": {
                     "en": "he has",
                     "nl": "hij heeft"
                 }

@@ -31,11 +31,11 @@
                     },
                     "third person": {
                         "fi": "hän juoksee",
-                        "female": {
+                        "feminine": {
                             "en": "she runs",
                             "nl": "zij rent"
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he runs",
                             "nl": "hij rent"
                         }
@@ -73,11 +73,11 @@
                     },
                     "third person": {
                         "fi": "hän juoksi",
-                        "female": {
+                        "feminine": {
                             "en": "she ran",
                             "nl": "zij rende"
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he ran",
                             "nl": "hij rende"
                         }

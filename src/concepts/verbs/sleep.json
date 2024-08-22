@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän nukkuu",
-                    "female": {
+                    "feminine": {
                         "en": "she sleeps",
                         "nl": "zij slaapt"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he sleeps",
                         "nl": "hij slaapt"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän nukkui",
-                    "female": {
+                    "feminine": {
                         "en": "she slept",
                         "nl": "zij sliep"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he slept",
                         "nl": "hij sliep"
                     }

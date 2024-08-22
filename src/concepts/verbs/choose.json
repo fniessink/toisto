@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän valitsee",
-                    "female": {
+                    "feminine": {
                         "en": "she chooses",
                         "nl": "zij kiest"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he chooses",
                         "nl": "hij kiest"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän valitsi",
-                    "female": {
+                    "feminine": {
                         "en": "she chose",
                         "nl": "zij koos"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he chose",
                         "nl": "hij koos"
                     }

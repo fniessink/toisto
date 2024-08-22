@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän kävelee",
-                    "female": {
+                    "feminine": {
                         "en": "she walks",
                         "nl": "zij loopt"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he walks",
                         "nl": "hij loopt"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän käveli",
-                    "female": {
+                    "feminine": {
                         "en": "she walked",
                         "nl": "zij liep"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he walked",
                         "nl": "hij liep"
                     }

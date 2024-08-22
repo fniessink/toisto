@@ -21,11 +21,11 @@
             "third person": {
                 "example": "she wants ice cream",
                 "fi": "hän haluaa",
-                "female": {
+                "feminine": {
                     "en": "she wants",
                     "nl": "zij wil"
                 },
-                "male": {
+                "masculine": {
                     "en": "he wants",
                     "nl": "hij wil"
                 }
@@ -76,7 +76,7 @@
             "ice cream"
         ],
         "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;female;'jäätelöä is the partitive case of 'jäätelö'",
+        "fi": "Hän haluaa jäätelöä.;feminine;'jäätelöä is the partitive case of 'jäätelö'",
         "nl": "Zij wil ijs."
     },
     "we want cake": {

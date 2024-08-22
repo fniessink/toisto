@@ -193,10 +193,10 @@
     "secretary": {
         "en": "secretary",
         "fi": "sihteeri",
-        "female": {
+        "feminine": {
             "nl": "de secretaresse"
         },
-        "male": {
+        "masculine": {
             "nl": "de secretaris"
         }
     },
@@ -249,11 +249,11 @@
     "server": {
         "en": "server",
         "fi": "tarjoilija",
-        "female": {
+        "feminine": {
             "en": "waitress",
             "nl": "de serveerster"
         },
-        "male": {
+        "masculine": {
             "en": "waiter",
             "nl": "de ober"
         }
@@ -280,10 +280,10 @@
     "nanny": {
         "en": "nanny",
         "fi": "lastenhoitaja",
-        "female": {
+        "feminine": {
             "nl": "de kinderverzorgster"
         },
-        "male": {
+        "masculine": {
             "nl": "de kinderverzorger"
         }
     },

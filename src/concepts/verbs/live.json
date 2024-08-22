@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän asuu",
-                    "female": {
+                    "feminine": {
                         "en": "she lives",
                         "nl": "zij woont"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he lives",
                         "nl": "hij woont"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän asui",
-                    "female": {
+                    "feminine": {
                         "en": "she lived",
                         "nl": "zij woonde"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he lived",
                         "nl": "hij woonde"
                     }
