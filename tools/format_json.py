@@ -12,7 +12,7 @@ def format_json_file(json_file: Path, check_only: bool) -> int:  # noqa: FBT001
         return 0
     unformatted_content = json_file.read_text()
     formatted_content = json.dumps(json.loads(unformatted_content), ensure_ascii=False, indent=4)
-    if unformatted_content == formatted_content:
+    if unformatted_content.rstrip("\n") == formatted_content.rstrip("\n"):  # Ignore final newline
         return 0
     if check_only:
         sys.stdout.write(f"{json_file} incorrectly formatted\n")
