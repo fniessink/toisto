@@ -29,11 +29,11 @@
                             "hän puhuu",
                             "se puhuu*"
                         ],
-                        "female": {
+                        "feminine": {
                             "en": "she speaks",
                             "nl": "zij spreekt"
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he speaks",
                             "nl": "hij spreekt"
                         }
@@ -97,14 +97,14 @@
                             "hän ei puhu",
                             "se ei puhu*"
                         ],
-                        "female": {
+                        "feminine": {
                             "en": "she does not speak",
                             "nl": [
                                 "zij spreekt geen",
                                 "zij spreekt niet"
                             ]
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he does not speak",
                             "nl": [
                                 "hij spreekt geen",

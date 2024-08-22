@@ -10,20 +10,20 @@
         "singular": {
             "en": "artist",
             "fi": "taiteilija",
-            "female": {
+            "feminine": {
                 "nl": "de kunstenares"
             },
-            "male": {
+            "masculine": {
                 "nl": "de kunstenaar"
             }
         },
         "plural": {
             "en": "artists",
             "fi": "taiteilijat",
-            "female": {
+            "feminine": {
                 "nl": "de kunstenaars"
             },
-            "male": {
+            "masculine": {
                 "nl": "de kunstenaressen"
             }
         }

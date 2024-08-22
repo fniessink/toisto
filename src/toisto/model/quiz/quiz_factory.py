@@ -11,9 +11,9 @@ from .quiz_type import (
     ANSWER,
     ANTONYM,
     DICTATE,
-    FEMALE,
+    FEMININE,
     INTERPRET,
-    MALE,
+    MASCULINE,
     NEUTER,
     ORDER,
     READ,
@@ -225,7 +225,7 @@ def grammatical_quiz_type(concept1: Concept, concept2: Concept) -> QuizType | No
     for category1, category2 in zip_longest(concept1.grammatical_categories, concept2.grammatical_categories):
         if category1 != category2:
             quiz_types.extend(GrammaticalQuizType.instances.get_values(category2))
-    if set(quiz_types) <= {FEMALE, MALE, NEUTER, THIRD_PERSON} and len(quiz_types) > 1:
+    if set(quiz_types) <= {FEMININE, MASCULINE, NEUTER, THIRD_PERSON} and len(quiz_types) > 1:
         return GrammaticalQuizType(quiz_types=tuple(quiz_types))
     return quiz_types[0] if len(quiz_types) == 1 else None
 

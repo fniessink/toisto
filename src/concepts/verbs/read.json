@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän lukee",
-                    "female": {
+                    "feminine": {
                         "en": "she reads",
                         "nl": "zij leest"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he reads",
                         "nl": "hij leest"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän luki",
-                    "female": {
+                    "feminine": {
                         "en": "she read",
                         "nl": "zij las"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he read",
                         "nl": "hij las"
                     }

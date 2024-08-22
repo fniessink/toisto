@@ -33,14 +33,14 @@
                 },
                 "third person": {
                     "fi": "hän maalaa",
-                    "female": {
+                    "feminine": {
                         "en": "she paints",
                         "nl": [
                             "zij schildert",
                             "zij verft"
                         ]
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he paints",
                         "nl": [
                             "hij schildert",
@@ -96,14 +96,14 @@
                 },
                 "third person": {
                     "fi": "hän maalasi",
-                    "female": {
+                    "feminine": {
                         "en": "she painted",
                         "nl": [
                             "zij schilderde",
                             "zij verfde"
                         ]
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he painted",
                         "nl": [
                             "hij schilderde",

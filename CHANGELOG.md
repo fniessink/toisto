@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Don't show an example multiple times if it has multiple meanings. Fixes [#774](https://github.com/fniessink/toisto/issues/774).
 - There would be two spaces between ⚠️ and "Incorrect...". Fixes [#775](https://github.com/fniessink/toisto/issues/775).
 - Finnish "entä" is not a synonym of "ja". Fixes [#778](https://github.com/fniessink/toisto/issues/778).
+- Use the terms 'feminine' and 'masculine' instead of 'female' and 'male' for grammatical gender. Fixes [#789](https://github.com/fniessink/toisto/issues/789).
 
 ### Added
 

@@ -12,14 +12,14 @@ from toisto.model.quiz.quiz_type import (
     DECLARATIVE,
     DICTATE,
     DIMINUTIVE,
-    FEMALE,
+    FEMININE,
     FIRST_PERSON,
     FULL_FORM,
     IMPERATIVE,
     INFINITIVE,
     INTERPRET,
     INTERROGATIVE,
-    MALE,
+    MASCULINE,
     NEGATIVE,
     NEUTER,
     ORDER,
@@ -208,8 +208,8 @@ class QuizInstructionTest(QuizTestCase):
             PLURAL: "Give the [underline]plural[/underline] in Finnish",
             SINGULAR: "Give the [underline]singular[/underline] in Finnish",
             DIMINUTIVE: "Give the [underline]diminutive[/underline] in Finnish",
-            MALE: "Give the [underline]male[/underline] in Finnish",
-            FEMALE: "Give the [underline]female[/underline] in Finnish",
+            MASCULINE: "Give the [underline]masculine[/underline] in Finnish",
+            FEMININE: "Give the [underline]feminine[/underline] in Finnish",
             NEUTER: "Give the [underline]neuter[/underline] in Finnish",
             POSITIVE_DEGREE: "Give the [underline]positive degree[/underline] in Finnish",
             COMPARATIVE_DEGREE: "Give the [underline]comparative degree[/underline] in Finnish",
@@ -245,7 +245,7 @@ class QuizInstructionTest(QuizTestCase):
     def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a note is not shown if the question and answer languages are the same."""
         self.language_pair = FI_NL
-        quiz = self.create_quiz(self.concept, "Hän on;female", ["He ovat"], PLURAL)
+        quiz = self.create_quiz(self.concept, "Hän on;some note", ["He ovat"], PLURAL)
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
     def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):

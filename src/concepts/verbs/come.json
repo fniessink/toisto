@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän tulee",
-                    "female": {
+                    "feminine": {
                         "en": "she comes",
                         "nl": "zij komt"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he comes",
                         "nl": "hij komt"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän tuli",
-                    "female": {
+                    "feminine": {
                         "en": "she came",
                         "nl": "zij kwam"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he came",
                         "nl": "hij kwam"
                     }

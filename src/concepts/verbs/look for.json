@@ -21,11 +21,11 @@
             "third person": {
                 "example": "she is looking for a bookcase",
                 "fi": "hän etsii",
-                "female": {
+                "feminine": {
                     "en": "she looks for",
                     "nl": "zij zoekt"
                 },
-                "male": {
+                "masculine": {
                     "en": "he looks for",
                     "nl": "hij zoekt"
                 }
@@ -79,7 +79,7 @@
             "bookcase"
         ],
         "en": "She is looking for a bookcase.",
-        "fi": "Hän etsii kirjahyllya.;female;'kirjahyllya' is the partitive case of 'kirjahylly'",
+        "fi": "Hän etsii kirjahyllya.;feminine;'kirjahyllya' is the partitive case of 'kirjahylly'",
         "nl": "Zij zoekt een boekenkast."
     },
     "we are looking for an office chair": {

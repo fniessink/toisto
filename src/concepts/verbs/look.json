@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän katsoo",
-                    "female": {
+                    "feminine": {
                         "en": "she looks",
                         "nl": "zij kijkt"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he looks",
                         "nl": "hij kijkt"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän katsoi",
-                    "female": {
+                    "feminine": {
                         "en": "she looked",
                         "nl": "zij keek"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he looked",
                         "nl": "hij keek"
                     }

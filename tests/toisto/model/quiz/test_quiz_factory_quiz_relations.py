@@ -46,7 +46,7 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_nested_constituent_concept_quizzes_block_composite_concept_quizzes(self):
         """Test that nested quizzes for constituent quizzes block quizzes for their composite concepts."""
         quizzes = create_quizzes(EN_NL, self.create_noun_with_grammatical_number_and_gender())
-        female_quizzes = {quiz for quiz in quizzes if "female" in quiz.concept.concept_id}
-        male_quizzes = {quiz for quiz in quizzes if "cat/plural/male" in quiz.concept.concept_id}
-        for quiz in male_quizzes:
-            self.assertTrue(quiz.is_blocked_by(Quizzes(female_quizzes)))
+        feminine_quizzes = {quiz for quiz in quizzes if "feminine" in quiz.concept.concept_id}
+        masculine_quizzes = {quiz for quiz in quizzes if "cat/plural/masculine" in quiz.concept.concept_id}
+        for quiz in masculine_quizzes:
+            self.assertTrue(quiz.is_blocked_by(Quizzes(feminine_quizzes)))

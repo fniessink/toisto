@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän syö",
-                    "female": {
+                    "feminine": {
                         "en": "she eats",
                         "nl": "zij eet"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he eats",
                         "nl": "hij eet"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän söi",
-                    "female": {
+                    "feminine": {
                         "en": "she ate",
                         "nl": "zij at"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he ate",
                         "nl": "hij at"
                     }

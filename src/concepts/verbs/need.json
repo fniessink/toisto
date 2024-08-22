@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän tarvitsee",
-                    "female": {
+                    "feminine": {
                         "en": "she needs",
                         "nl": "zij heeft nodig"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he needs",
                         "nl": "hij heeft nodig"
                     }
@@ -70,11 +70,11 @@
                         "hän ei tarvitse",
                         "ei se tarvi*"
                     ],
-                    "female": {
+                    "feminine": {
                         "en": "she does not need",
                         "nl": "zij heeft niet nodig"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he does not need",
                         "nl": "hij heeft niet nodig"
                     }

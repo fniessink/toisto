@@ -37,9 +37,9 @@ class Concept:
     A concept can be a composite and/or a leaf concept, or neither. Composite concepts have two or more constituent
     concepts, representing different grammatical categories, for example singular and plural forms. Leaf concepts have
     labels in one or more languages. Concepts can be constituent in one language and leaf in another concepts. For
-    example, the third person singular form of English verbs has both a female ("she walks") and a male form ("he
-    walks"), but Finnish does not ("hän kävelee"). This means that the third person singular female form "she walks" is
-    leaf in English, but neiter leaf nor composite in Finnish, since no such label exists in Finnish.
+    example, the third person singular form of English verbs has both a feminine ("she walks") and a masculine form
+    ("he walks"), but Finnish does not ("hän kävelee"). This means that the third person singular feminine form
+    "she walks" is leaf in English, but neiter leaf nor composite in Finnish, since no such label exists in Finnish.
 
     Concepts can have the following types of relations to other concepts:
 

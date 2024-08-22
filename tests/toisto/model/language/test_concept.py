@@ -61,7 +61,7 @@ class ConceptTest(ToistoTestCase):
         """Test the meaning of a concept that is leaf in one language and composite in another."""
         concept = self.create_concept(
             "to eat/third person",
-            dict(fi="hän syö", female=dict(nl="zij eet"), male=dict(nl="hij eet")),
+            dict(fi="hän syö", feminine=dict(nl="zij eet"), masculine=dict(nl="hij eet")),
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
         self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))

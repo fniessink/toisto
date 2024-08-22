@@ -31,11 +31,11 @@
                     },
                     "third person": {
                         "fi": "hän kirjoittaa",
-                        "female": {
+                        "feminine": {
                             "en": "she writes",
                             "nl": "zij schrijft"
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he writes",
                             "nl": "hij schrijft"
                         }
@@ -73,11 +73,11 @@
                     },
                     "third person": {
                         "fi": "hän kirjoitti",
-                        "female": {
+                        "feminine": {
                             "en": "she wrote",
                             "nl": "zij schreef"
                         },
-                        "male": {
+                        "masculine": {
                             "en": "he wrote",
                             "nl": "hij schreef"
                         }

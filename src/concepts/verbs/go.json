@@ -19,11 +19,11 @@
                 },
                 "third person": {
                     "fi": "hän menee",
-                    "female": {
+                    "feminine": {
                         "en": "she goes",
                         "nl": "zij gaat"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he goes",
                         "nl": "hij gaat"
                     }
@@ -61,11 +61,11 @@
                 },
                 "third person": {
                     "fi": "hän meni",
-                    "female": {
+                    "feminine": {
                         "en": "she went",
                         "nl": "zij ging"
                     },
-                    "male": {
+                    "masculine": {
                         "en": "he went",
                         "nl": "hij ging"
                     }
