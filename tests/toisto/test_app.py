@@ -60,12 +60,34 @@ class AppTest(ToistoTestCase):
         self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
     @patch("requests.get")
-    def test_new_version(self, requests_get: Mock) -> None:
-        """Test that the practice command shows a new version."""
+    def test_new_version_when_current_version_was_installed_with_uv(self, requests_get: Mock) -> None:
+        """Test that the practice command shows a new version and an upgrade instruction."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
         self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
+        self.assertIn("uv tool upgrade", patched_print.call_args_list[3][0][0].renderable)
+
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch("toisto.metadata.check_output", Mock(return_value=""))
+    @patch("requests.get")
+    def test_new_version_when_current_version_was_installed_with_pipx(self, requests_get: Mock) -> None:
+        """Test that the practice command shows a new version and an upgrade instruction."""
+        requests_get.return_value = self.latest_version
+        patched_print = self.run_main()
+        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
+        self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
+
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch("toisto.metadata.check_output", Mock(side_effect=OSError))
+    @patch("requests.get")
+    def test_new_version_when_checking_for_installation_tool_fails(self, requests_get: Mock) -> None:
+        """Test that the practice command shows a new version and an upgrade instruction."""
+        requests_get.return_value = self.latest_version
+        patched_print = self.run_main()
+        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
+        self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
     @patch("requests.get")
