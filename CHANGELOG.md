@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add support for the past perfect tense. Closes [#660](https://github.com/fniessink/toisto/issues/660).
 - Add word order quizzes for sentences with five or more words. Closes [#757](https://github.com/fniessink/toisto/issues/757).
 - When hitting enter at an empty prompt to have Toisto repeat the word or sentence, say it more slowly. Closes [#779](https://github.com/fniessink/toisto/issues/779).
+- In addition to coloring erroneous characters red, also underline them so it's easier to distinguish them for users with red/green color blindness. Closes [#796](https://github.com/fniessink/toisto/issues/796).
 
 ## 0.22.0 - 2024-07-29
 

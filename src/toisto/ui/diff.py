@@ -3,7 +3,6 @@
 from difflib import SequenceMatcher
 
 from .dictionary import linkified
-from .style import DELETED, INSERTED
 
 
 def show_whitespace(text: str) -> str:
@@ -13,12 +12,12 @@ def show_whitespace(text: str) -> str:
 
 def inserted(new_text: str) -> str:
     """Return the annotated text."""
-    return f"[{INSERTED}]{new_text}[/{INSERTED}]"
+    return f"[inserted]{new_text}[/inserted]"
 
 
 def deleted(old_text: str) -> str:
     """Return the annotated text."""
-    return f"[{DELETED}]{show_whitespace(old_text)}[/{DELETED}]"
+    return f"[deleted]{show_whitespace(old_text)}[/deleted]"
 
 
 def colored_diff(old_text: str, new_text: str, min_ratio_for_diff: float = 0.6) -> str:
@@ -35,7 +34,7 @@ def colored_diff(old_text: str, new_text: str, min_ratio_for_diff: float = 0.6) 
             result += inserted(new_fragment)
         elif operator == "replace":
             if len(old_fragment) == len(new_fragment) == 1:
-                result += deleted(old_fragment) + inserted(new_fragment)
+                result += f"{deleted(old_fragment)}{inserted(new_fragment)}"
             else:
                 result += inserted(new_fragment)
         else:
