@@ -11,7 +11,6 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
-from toisto.ui.style import DELETED, SECONDARY
 from toisto.ui.text import DONE, Feedback, ProgressUpdate, console
 
 from ...base import FI_NL, NL_FI, ToistoTestCase
@@ -69,10 +68,7 @@ class PracticeTest(ToistoTestCase):
         """Test that answers with spaces inside are not considered correct."""
         patched_print = self.practice(self.quizzes)
         self.assert_printed(Feedback.TRY_AGAIN, patched_print)
-        self.assert_printed(
-            f"{Feedback.INCORRECT}The correct answer is 'Ho[{DELETED}]_[/{DELETED}]i!'\n",
-            patched_print,
-        )
+        self.assert_printed(f"{Feedback.INCORRECT}The correct answer is 'Ho[deleted]_[/deleted]i!'\n", patched_print)
 
     @patch("builtins.input", Mock(return_value="hoi!\n"))
     def test_answer_quiz_in_lowercase_source_language(self):
@@ -140,7 +136,7 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(DICTATE)
-        expected_text = f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('Hoi!')}'[/{SECONDARY}]\n"
+        expected_text = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n"
         self.assert_printed(expected_text, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talot\n"))
@@ -152,8 +148,8 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(PLURAL)
         expected_argument = (
-            f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('huis')}', "
-            f"respectively '{linkified('huizen')}'.[/{SECONDARY}]\n"
+            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('huis')}', "
+            f"respectively '{linkified('huizen')}'.[/secondary]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 
@@ -170,8 +166,8 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
-            f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('naast')}'.[/{SECONDARY}]\n"
-            f"[{SECONDARY}]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/{SECONDARY}]\n"
+            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('naast')}'.[/secondary]\n"
+            "[secondary]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/secondary]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 
@@ -184,9 +180,9 @@ class PracticeTest(ToistoTestCase):
         self.create_concept("the cars are black", dict(fi="Autot ovat mustia.", nl="De auto's zijn zwart."))
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
-            f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('zwart')}'.[/{SECONDARY}]\n"
-            f"[{SECONDARY}]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
-            f"- 'Autot ovat mustia.' meaning 'De auto's zijn zwart.'[/{SECONDARY}]\n"
+            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('zwart')}'.[/secondary]\n"
+            "[secondary]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
+            "- 'Autot ovat mustia.' meaning 'De auto's zijn zwart.'[/secondary]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 
@@ -204,9 +200,9 @@ class PracticeTest(ToistoTestCase):
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
         expected_argument = (
-            f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('de tafellamp')}'.[/{SECONDARY}]\n"
-            f"[{SECONDARY}]Examples:\n- 'Minä etsin pöytälamppua.' meaning 'Ik zoek een tafellamp.'\n"
-            f"- 'Minä etsin pöytävalaisinta.' meaning 'Ik zoek een tafellamp.'[/{SECONDARY}]\n"
+            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('de tafellamp')}'.[/secondary]\n"
+            "[secondary]Examples:\n- 'Minä etsin pöytälamppua.' meaning 'Ik zoek een tafellamp.'\n"
+            "- 'Minä etsin pöytävalaisinta.' meaning 'Ik zoek een tafellamp.'[/secondary]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 
@@ -224,10 +220,10 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         expected_argument = (
-            f"{Feedback.CORRECT}[{SECONDARY}]Meaning '{linkified('pöytälamppu')}' and "
-            f"'{linkified('pöytävalaisin')}'.[/{SECONDARY}]\n"
-            f"[{SECONDARY}]Example: 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.' and "
-            f"'Minä etsin pöytävalaisinta.'[/{SECONDARY}]\n"
+            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('pöytälamppu')}' and "
+            f"'{linkified('pöytävalaisin')}'.[/secondary]\n"
+            "[secondary]Example: 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.' and "
+            "'Minä etsin pöytävalaisinta.'[/secondary]\n"
         )
         self.assert_printed(expected_argument, self.practice(quizzes))
 

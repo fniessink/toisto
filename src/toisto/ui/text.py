@@ -19,9 +19,9 @@ from toisto.model.quiz.quiz_type import GrammaticalQuizType
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
-from .style import QUIZ, SECONDARY
+from .style import theme
 
-console = Console()
+console = Console(theme=theme)
 
 LINK_KEY: Final[str] = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
 
@@ -29,7 +29,7 @@ WELCOME: Final[str] = f"""👋 Welcome to [underline]{NAME} [white not bold]v{VE
 
 Practice as many words and phrases as you like, for as long as you like.
 
-[{SECONDARY}]{NAME} quizzes you on words and phrases repeatedly. Each time you answer
+[secondary]{NAME} quizzes you on words and phrases repeatedly. Each time you answer
 a quiz correctly, {NAME} will wait longer before repeating it. If you
 answer incorrectly, you get one additional attempt to give the correct
 answer. If the second attempt is not correct either, {NAME} will reset
@@ -42,7 +42,7 @@ How does it work?
 ● To read more about an [link={DICTIONARY_URL}/underlined]underlined[/link] word: keep {LINK_KEY} pressed
   while clicking the word. Not all terminals may support this.
 ● To quit: type Ctrl-C or Ctrl-D.
-[/{SECONDARY}]"""
+[/secondary]"""
 
 NEWS: Final[str] = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
@@ -55,7 +55,7 @@ CONFIG_LANGUAGE_TIP: Final[str] = (
 )
 
 DONE: Final[str] = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
-[{SECONDARY}]Type `{NAME.lower()} -h` for more information.[/{SECONDARY}]
+[secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
 """
 
 
@@ -64,13 +64,10 @@ class Feedback:
 
     CORRECT: Final[str] = "✅ Correct.\n"
     INCORRECT: Final[str] = "❌ Incorrect. "
-    TRY_AGAIN: Final[str] = "⚠️ Incorrect. Please try again."
-    TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = (
-        "⚠️ Incorrect. Please try again, in [light_goldenrod2][bold]%(language)s[/bold][/light_goldenrod2]."
-    )
-    TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = (
-        "⚠️ Incorrect. Please try again, in [light_goldenrod2][bold] standard %(language)s[/bold][/light_goldenrod2]."
-    )
+    _TRY_AGAIN: Final[str] = "⚠️ Incorrect. Please try again"
+    TRY_AGAIN: Final[str] = _TRY_AGAIN + "."
+    TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = _TRY_AGAIN + "️, in [language]%(language)s[/language]."
+    TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = _TRY_AGAIN + ", in [language]standard %(language)s[/language]."
 
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
         self.quiz = quiz
@@ -121,7 +118,7 @@ class Feedback:
         if other_answers := self.quiz.other_answers(guess):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
             answers = linkified_and_enumerated(*other_answers.as_strings)
-            return wrapped(punctuated(f"{label} {answers}"), SECONDARY)
+            return wrapped(punctuated(f"{label} {answers}"), "secondary")
         return ""
 
     def _colloquial(self) -> str:
@@ -129,7 +126,7 @@ class Feedback:
         if self.quiz.question.is_colloquial:
             language = ALL_LANGUAGES[self.quiz.question.language]
             question = quoted(str(self.quiz.question).strip("*"))
-            return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), SECONDARY)
+            return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), "secondary")
         return ""
 
     def _meaning(self) -> str:
@@ -140,7 +137,7 @@ class Feedback:
             meanings = f"{question_meanings}, respectively {answer_meanings}"
         else:
             meanings = question_meanings or answer_meanings
-        return wrapped(punctuated(f"Meaning {meanings}"), SECONDARY) if meanings else ""
+        return wrapped(punctuated(f"Meaning {meanings}"), "secondary") if meanings else ""
 
     def _answer_notes(self) -> str:
         """Return the answer notes, if any."""
@@ -190,7 +187,7 @@ class ProgressUpdate:
 
 def instruction(quiz: Quiz) -> str:
     """Return the instruction for the quiz."""
-    return wrapped(f"{quiz.instruction}:", QUIZ, postfix="")
+    return wrapped(f"{quiz.instruction}:", "quiz", postfix="")
 
 
 def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
@@ -205,7 +202,7 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None, 
         write_output()
 
 
-def bulleted_list(label: str, items: Sequence[str], style: str = SECONDARY, bullet: str = "-") -> str:
+def bulleted_list(label: str, items: Sequence[str], style: str = "secondary", bullet: str = "-") -> str:
     """Create a bulleted list of the items."""
     if len(items) == 0:
         return ""
