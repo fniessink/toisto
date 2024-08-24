@@ -1,8 +1,19 @@
 {
     "heart": {
+        "example": "she has a big heart",
         "holonym": "body",
         "en": "heart",
         "fi": "sydän",
         "nl": "het hart"
+    },
+    "she has a big heart": {
+        "roots": [
+            "to have",
+            "big",
+            "heart"
+        ],
+        "en": "She has a big heart.",
+        "fi": "Hänellä on suuri sydän;feminine.",
+        "nl": "Zij heeft een groot hart."
     }
 }

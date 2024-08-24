@@ -1,0 +1,24 @@
+{
+    "actor": {
+        "singular": {
+            "en": "actor",
+            "fi": "näyttelijä",
+            "feminine": {
+                "nl": "de actrice"
+            },
+            "masculine": {
+                "nl": "de acteur"
+            }
+        },
+        "plural": {
+            "en": "actors",
+            "fi": "näyttelijät",
+            "feminine:": {
+                "nl": "de actrices"
+            },
+            "masculine": {
+                "nl": "de acteurs"
+            }
+        }
+    }
+}
