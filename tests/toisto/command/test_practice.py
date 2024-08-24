@@ -8,7 +8,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import DICTATE, PLURAL, READ, WRITE
+from toisto.model.quiz.quiz_type import DICTATE, INTERPRET, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
 from toisto.ui.text import DONE, Feedback, ProgressUpdate, console
@@ -95,15 +95,21 @@ class PracticeTest(ToistoTestCase):
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="jätski\n"))
-    def test_answer_with_question_colloquial(self):
+    def test_colloquial_answer_when_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
         concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
-        dictate_quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
-        colloquial_dictate_quizzes = Quizzes(quiz for quiz in dictate_quizzes if quiz.question == Label(FI, "jätski*"))
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE).colloquial
         self.assert_printed(
             Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
-            self.practice(colloquial_dictate_quizzes),
+            self.practice(quizzes),
         )
+
+    @patch("builtins.input", Mock(return_value="jäätelö\n"))
+    def test_standard_language_answer_when_question_colloquial(self):
+        """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
+        concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(INTERPRET).colloquial
+        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):

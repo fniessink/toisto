@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Finnish "entä" is not a synonym of "ja". Fixes [#778](https://github.com/fniessink/toisto/issues/778).
 - Use the terms 'feminine' and 'masculine' instead of 'female' and 'male' for grammatical gender. Fixes [#789](https://github.com/fniessink/toisto/issues/789).
 - Don't include generated spelling alternatives (for example, "it's" for "it is") in the progress table. Fixes [#794](https://github.com/fniessink/toisto/issues/794).
+- Don't say "Please try again, in standard (answer language)." when it is the question language that is colloquial. Fixes [#799](https://github.com/fniessink/toisto/issues/799).
 
 ### Added
 

@@ -165,6 +165,11 @@ class Quizzes(set[Quiz]):
             quizzes |= self.by_concept(example)
         return quizzes
 
+    @property
+    def colloquial(self) -> Quizzes:
+        """Return the colloquial quizzes."""
+        return self.__class__(quiz for quiz in self if quiz.question.is_colloquial)
+
     def by_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> Quizzes:
         """Return the quizzes of the specified type."""
         return self.__class__(quiz for quiz in self if quiz.has_quiz_type(quiz_type))
