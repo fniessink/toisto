@@ -1,5 +1,6 @@
 {
     "eye": {
+        "example": "you have beautiful eyes",
         "holonym": "face",
         "singular": {
             "en": "eye",
@@ -11,5 +12,15 @@
             "fi": "silmät",
             "nl": "de ogen"
         }
+    },
+    "you have beautiful eyes": {
+        "roots": [
+            "to have",
+            "beautiful",
+            "eye"
+        ],
+        "en": "You have beautiful eyes.",
+        "fi": "Sinulla on kauniit silmät.",
+        "nl": "Jij hebt mooie ogen."
     }
 }

@@ -1,5 +1,6 @@
 {
     "coffee": {
+        "example": "the coffee is hot",
         "hypernym": "drink",
         "singular": {
             "en": "coffee",
@@ -11,5 +12,15 @@
             "fi": "kahvit",
             "nl": "de koffies"
         }
+    },
+    "the coffee is hot": {
+        "roots": [
+            "coffee",
+            "to be",
+            "hot"
+        ],
+        "en": "The coffee is hot.",
+        "fi": "Kahvi on kuumaa.",
+        "nl": "De koffie is heet."
     }
 }
