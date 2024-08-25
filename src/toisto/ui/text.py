@@ -64,10 +64,12 @@ class Feedback:
 
     CORRECT: Final[str] = "✅ Correct.\n"
     INCORRECT: Final[str] = "❌ Incorrect. "
-    _TRY_AGAIN: Final[str] = "⚠️ Incorrect. Please try again"
-    TRY_AGAIN: Final[str] = _TRY_AGAIN + "."
-    TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = _TRY_AGAIN + "️, in [language]%(language)s[/language]."
-    TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = _TRY_AGAIN + ", in [language]standard %(language)s[/language]."
+    TRY_AGAIN_FRAGMENT: Final[str] = "⚠️ Incorrect. Please try again"
+    TRY_AGAIN: Final[str] = TRY_AGAIN_FRAGMENT + "."
+    TRY_AGAIN_IN_ANSWER_LANGUAGE: Final[str] = TRY_AGAIN_FRAGMENT + "️, in [language]%(language)s[/language]."
+    TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE: Final[str] = (
+        TRY_AGAIN_FRAGMENT + ", in [language]standard %(language)s[/language]."
+    )
 
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
         self.quiz = quiz
