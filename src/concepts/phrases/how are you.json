@@ -1,0 +1,42 @@
+{
+    "how are you": {
+        "hypernym": "greeting",
+        "roots": [
+            "what",
+            "how",
+            "to be"
+        ],
+        "en": "How are you?",
+        "fi": [
+            "Mitä kuuluu?",
+            "Miten menee?"
+        ],
+        "nl": "Hoe gaat het?"
+    },
+    "how are you feeling": {
+        "en": [
+            "How are you feeling?",
+            "Are you ok?"
+        ],
+        "fi": [
+            "Miten sinä voit?",
+            "Mikä sinulla on?",
+            "Oletko kunossa?"
+        ],
+        "nl": [
+            "Hoe gaat het?",
+            "Hoe voel je je?",
+            "Ben je in order?"
+        ]
+    },
+    "i am fine": {
+        "roots": {
+            "en": "to be",
+            "fi": "good",
+            "nl": "good"
+        },
+        "en": "I am fine.",
+        "fi": "Minulle kuuluu hyvää.",
+        "nl": "Met mij gaat het goed."
+    }
+}

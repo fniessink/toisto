@@ -75,7 +75,7 @@ On MacOS, Toisto needs a more modern terminal than the default one that MacOS of
 
 There are two ways to install Toisto:
 
-1. The first way is using `uv`, a tool that can install tools developed in Python, such as Toisto. Advantage of `uv` is that it also installs Python, if needed. Disadvantage is that installing Python tools with `uv` is officialy 'experimental and may change without warning'.
+1. The first way is using `uv`, a tool that can install tools developed in Python, such as Toisto. Advantage of `uv` is that it also installs Python, if needed. Disadvantage is that installing Python tools with `uv` is officially 'experimental and may change without warning'.
 
 2. The second way is using `pipx`, a tool that can install tools developed in Python. Disadvantage is that it does not install Python for you. You need to do that yourself.
 

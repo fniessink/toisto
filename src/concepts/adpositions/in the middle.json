@@ -1,0 +1,38 @@
+{
+    "in the middle": {
+        "example": "the table is in the middle of the room",
+        "en": "in the middle",
+        "fi": "keskellä",
+        "nl": [
+            "in het midden",
+            "middenin|midden in;;Write 'midden in' if it is followed by a noun or personal pronoun, otherwise write 'middenin'."
+        ]
+    },
+    "the table is in the middle of the room": {
+        "roots": {
+            "en": [
+                "table",
+                "to be",
+                "in the middle",
+                "room"
+            ],
+            "nl": [
+                "table",
+                "in the middle",
+                "room"
+            ],
+            "fi": [
+                "table",
+                "to be",
+                "in the middle",
+                "room"
+            ]
+        },
+        "en": "The table is in the middle of the room.",
+        "fi": "Pöytä on huoneen keskellä.",
+        "nl": [
+            "De tafel staat in het midden van de kamer.",
+            "De tafel staat midden in de kamer."
+        ]
+    }
+}

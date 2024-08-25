@@ -1,0 +1,33 @@
+{
+    "thanks": {
+        "en": "Thank you!|Thanks!",
+        "fi": [
+            "Kiitos!",
+            "Kiitti!*"
+        ],
+        "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
+    },
+    "thanks, same to you": {
+        "en": "Thank you, same to you!|Thanks, same to you!",
+        "fi": "Kiitos samoin!",
+        "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
+    },
+    "thank you for the meal": {
+        "roots": {
+            "en": [
+                "thanks"
+            ],
+            "fi": [
+                "thanks",
+                "food"
+            ],
+            "nl": [
+                "thanks",
+                "to eat"
+            ]
+        },
+        "en": "Thank you for the meal!|Thanks for the meal!",
+        "fi": "Kiitos ruoasta!",
+        "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
+    }
+}
