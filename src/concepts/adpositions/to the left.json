@@ -1,0 +1,19 @@
+{
+    "to the left": {
+        "antonym": "to the right",
+        "example": "alice sits to the left of bob",
+        "en": "to the left",
+        "fi": "vasemmalla puolella",
+        "nl": "aan de linker kant"
+    },
+    "alice sits to the left of bob": {
+        "antonym": "alice sits to the right of bob",
+        "roots": [
+            "to sit",
+            "to the left"
+        ],
+        "en": "Alice sits to the left of Bob.",
+        "fi": "Alice istuu Bobin vasemmalla puolella.",
+        "nl": "Alice zit aan de linker kant van Bob."
+    }
+}

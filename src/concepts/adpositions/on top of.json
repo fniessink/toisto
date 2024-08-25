@@ -1,0 +1,29 @@
+{
+    "on top of": {
+        "example": "the lamp is on top of the cabinet",
+        "en": "on top of",
+        "fi": "päällä",
+        "nl": "op"
+    },
+    "the lamp is on top of the cabinet": {
+        "roots": {
+            "en": [
+                "lamp",
+                "to be",
+                "on top of"
+            ],
+            "nl": [
+                "lamp",
+                "on top of"
+            ],
+            "fi": [
+                "lamp",
+                "to be",
+                "on top of"
+            ]
+        },
+        "en": "The lamp is on top of the cabinet.",
+        "fi": "Lamppu on kaapin päällä.",
+        "nl": "De lamp staat op de kast."
+    }
+}

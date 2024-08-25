@@ -1,0 +1,21 @@
+{
+    "what is your name": {
+        "roots": [
+            "what",
+            "to be",
+            "name"
+        ],
+        "en": "What is your name?",
+        "fi": "Mikä sinun nimesi on?",
+        "nl": "Wat is jouw naam?"
+    },
+    "my name is bob": {
+        "roots": [
+            "name",
+            "to be"
+        ],
+        "en": "My name is Bob.",
+        "fi": "Minun nimeni on Bob.",
+        "nl": "Mijn naam is Bob."
+    }
+}

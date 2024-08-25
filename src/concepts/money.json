@@ -18,19 +18,6 @@
         "fi": "käteinen",
         "nl": "contant"
     },
-    "cash or card": {
-        "roots": {
-            "en": "cash",
-            "fi": [
-                "cash",
-                "bank card"
-            ],
-            "nl": "cash"
-        },
-        "en": "Cash or card?",
-        "fi": "Käteisellä vai kortilla?",
-        "nl": "Contant of pinnen?"
-    },
     "receipt": {
         "en": "receipt",
         "fi": "kuitti",
@@ -74,21 +61,5 @@
         ],
         "fi": "seteli",
         "nl": "het bankbiljet"
-    },
-    "anything else": {
-        "en": "Anything else?",
-        "fi": [
-            "Tuleeko muuta?",
-            "Tuleeks muuta?*"
-        ],
-        "nl": "Anders nog iets?"
-    },
-    "all together": {
-        "en": "All together?",
-        "fi": [
-            "Tuleeko nämä samasta?",
-            "Tuleeks nää samasta?*"
-        ],
-        "nl": "Alles bij elkaar?"
     }
 }

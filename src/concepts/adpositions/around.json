@@ -1,0 +1,24 @@
+{
+    "around": {
+        "example": "they sit around the table",
+        "en": "around",
+        "fi": "ympärillä",
+        "nl": [
+            "rond",
+            "om"
+        ]
+    },
+    "they sit around the table": {
+        "roots": [
+            "to sit",
+            "around",
+            "table"
+        ],
+        "en": "They sit around the table.",
+        "fi": "He istuvat pöydän ympärillä.",
+        "nl": [
+            "Zij zitten rond de tafel.",
+            "Zij zitten om de tafel."
+        ]
+    }
+}

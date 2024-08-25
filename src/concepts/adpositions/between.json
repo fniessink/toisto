@@ -1,0 +1,17 @@
+{
+    "between": {
+        "example": "alice sits between bob and carol",
+        "en": "between",
+        "fi": "välissä",
+        "nl": "tussen"
+    },
+    "alice sits between bob and carol": {
+        "roots": [
+            "to sit",
+            "between"
+        ],
+        "en": "Alice sits between Bob and Carol.",
+        "fi": "Alice istuu Bobin ja Carolin välissä.",
+        "nl": "Alice zit tussen Bob en Carol."
+    }
+}
