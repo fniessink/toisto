@@ -82,7 +82,7 @@ class Label:
                     generated_alternatives.add(generated_alternative)
         return alternatives + Labels(generated_alternatives)
 
-    @property
+    @cached_property
     def first_spelling_alternative(self) -> Label:
         """Return the first spelling alternative for the label."""
         return self.non_generated_spelling_alternatives[0]
