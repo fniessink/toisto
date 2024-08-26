@@ -195,7 +195,7 @@ class Concept:
             return parent.own_meanings(language) or parent.ancestor_meanings(language)
         return Labels()
 
-    @property
+    @cached_property
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")

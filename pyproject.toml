@@ -37,6 +37,7 @@ dev = [
     "build == 1.2.1",
     "coverage == 7.6.1",
     "fixit == 2.1.0",
+    "gprof2dot == 2024.6.6",
     "green == 4.0.2",
     "mypy == 1.11.2",
     "pip == 24.2",

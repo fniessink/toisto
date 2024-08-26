@@ -33,6 +33,16 @@ To also apply automated fixes where possible:
 tools/test.sh --fix
 ```
 
+## How to profile
+
+Make sure you have [Graphviz](https://graphviz.org) installed.
+
+To invoke Toisto with the profiler, create the dot file, convert it to a PNG image, and open it, run:
+
+```console
+tools/profile.sh
+```
+
 ## How to release
 
 Create a branch.
