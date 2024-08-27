@@ -61,10 +61,17 @@ class SayTest(unittest.TestCase):
         mock_subprocess_popen.assert_called_once()
         self.assertEqual(mock_subprocess_popen.call_args_list[0][0][0][0], "afplay")
 
-    @patch("toisto.ui.speech.gTTS", Mock())
     @patch("toisto.ui.speech.music")
     def test_call_builtin_player(self, mock_music: Mock) -> None:
         """Test that the bultin music player (Pygame) is called."""
         self.config.set("commands", "mp3player", "builtin")
         say("nl", "Hallo", self.config)
         mock_music.queue.assert_called_once()
+
+    @patch("sys.platform", "windows")
+    @patch("toisto.ui.speech.music")
+    def test_fail_to_import_pygame(self, mock_music: Mock) -> None:
+        """Test that an error is thrown if the builtin music player (Pygame) can't be used."""
+        mock_music.queue.side_effect = NameError
+        self.config.set("commands", "mp3player", "builtin")
+        self.assertRaises(RuntimeError, say, "nl", "Hallo", self.config)
