@@ -1,15 +1,15 @@
 """Text to speech."""
 
-import contextlib
 import sys
 import tempfile
 from configparser import ConfigParser
+from contextlib import redirect_stdout, suppress
 from subprocess import DEVNULL, Popen  # nosec import_subprocess
 from typing import Final
 
 from gtts import gTTS, gTTSError
 
-with contextlib.redirect_stdout(None):
+with suppress(ModuleNotFoundError), redirect_stdout(None):
     from pygame.mixer import music
 
 MAC_OS_SAY_VOICES: Final = dict(en="Daniel", fi="Satu (Enhanced)", nl="Xander (Enhanced)")
@@ -45,7 +45,11 @@ def _say_with_google_translate(language: str, text: str, config: ConfigParser, s
         raise RuntimeError(message) from reason
     mp3_play_command = config.get("commands", "mp3player")
     if mp3_play_command == "builtin":
-        music.queue(mp3_file.name)
+        try:
+            music.queue(mp3_file.name)
+        except NameError as error:
+            message = "Can't use builtin (Pygame) music player on this platform"
+            raise RuntimeError(message) from error
     else:
         _run_command(mp3_play_command, mp3_file.name)
 
