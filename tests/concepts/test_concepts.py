@@ -3,9 +3,9 @@
 from argparse import ArgumentParser
 from typing import ClassVar, get_args
 
-from toisto.metadata import BUILT_IN_LANGUAGES, CONCEPT_JSON_FILES
+from toisto.metadata import BUILT_IN_CONCEPT_JSON_FILES, BUILT_IN_LANGUAGES
 from toisto.model.language.concept import Concept, ConceptId, NonInvertedConceptRelation
-from toisto.persistence.loader import Loader
+from toisto.persistence.concept_loader import ConceptLoader
 
 from ..base import ToistoTestCase
 
@@ -19,7 +19,7 @@ class ConceptsTest(ToistoTestCase):
     def setUpClass(cls) -> None:
         """Extend to set up test fixtures."""
         super().setUpClass()
-        cls.concepts = Loader(ArgumentParser()).load(*CONCEPT_JSON_FILES)
+        cls.concepts = ConceptLoader(ArgumentParser()).load_concepts(*BUILT_IN_CONCEPT_JSON_FILES)
 
     @classmethod
     def tearDownClass(cls) -> None:
