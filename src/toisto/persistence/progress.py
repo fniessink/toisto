@@ -1,12 +1,19 @@
 """Store and load progress data."""
 
 from argparse import ArgumentParser
+from pathlib import Path
 
-from ..metadata import NAME, get_progress_filepath
+from ..metadata import NAME
 from ..model.language import Language
 from ..model.quiz.progress import Progress
 from ..model.quiz.quiz import Quizzes
+from .folder import home
 from .json_file import dump_json, load_json
+
+
+def get_progress_filepath(target_language: Language) -> Path:
+    """Return the filename of the progress file for the specified target language."""
+    return home() / f".{NAME.lower()}-progress-{target_language}.json"
 
 
 def load_progress(target_language: Language, quizzes: Quizzes, argument_parser: ArgumentParser) -> Progress:

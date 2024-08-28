@@ -11,6 +11,8 @@ from typing import Final, NoReturn
 
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 
+from .folder import home
+
 # The schema for the config file. Top-level keys are sections, values are a dict per option with the key being the
 # option name and the value being an option consisting of the option quantifier, the allowed option values, and a
 # function evaluating the validity of the option value.
@@ -49,7 +51,7 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, Option]]] = dict(
         progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
     ),
 )
-CONFIG_FILENAME = Path("~/.toisto.cfg").expanduser()
+CONFIG_FILENAME = home() / ".toisto.cfg"
 
 
 class ConfigSchemaValidator:

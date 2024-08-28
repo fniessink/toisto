@@ -3,12 +3,11 @@
 from argparse import ArgumentParser
 from unittest.mock import MagicMock, Mock, patch
 
-from toisto.metadata import get_progress_filepath
 from toisto.model.language import FI, Language
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.retention import Retention
-from toisto.persistence.progress import load_progress, save_progress
+from toisto.persistence.progress import get_progress_filepath, load_progress, save_progress
 
 from ...base import ToistoTestCase
 

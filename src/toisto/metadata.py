@@ -8,7 +8,7 @@ from typing import Final
 
 import requests
 
-from toisto.model.language import EN, FI, NL, Language
+from toisto.model.language import EN, FI, NL
 from toisto.tools import first
 
 _metadata = metadata("Toisto")
@@ -27,11 +27,6 @@ BUILT_IN_CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("**
 _languages_folder = _data_folder / "languages"
 LANGUAGES_FILE: Final = _languages_folder / "iana-language-subtag-registry.txt"
 SPELLING_ALTERNATIVES_FILE: Final = _languages_folder / "spelling_alternatives.json"
-
-
-def get_progress_filepath(target_language: Language) -> Path:
-    """Return the filename of the progress file for the specified target language."""
-    return Path.home() / f".{NAME.lower()}-progress-{target_language}.json"
 
 
 def latest_version() -> str | None:
