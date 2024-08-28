@@ -1,4 +1,4 @@
-"""Loader."""
+"""Concept loader."""
 
 from argparse import ArgumentParser
 from pathlib import Path
@@ -10,15 +10,15 @@ from .identifier_registry import IdentifierRegistry
 from .json_file import load_json
 
 
-class Loader:
-    """Domain object loader."""
+class ConceptLoader:
+    """Class to load concepts from concept JSON files."""
 
     def __init__(self, argument_parser: ArgumentParser) -> None:
         self.argument_parser = argument_parser
         self.concept_id_registry = IdentifierRegistry[ConceptId]("concept", argument_parser)
 
-    def load(self, *files: Path) -> set[Concept]:
-        """Load the domain objects from the files."""
+    def load_concepts(self, *files: Path) -> set[Concept]:
+        """Load the concept from the concept JSON files."""
         all_concepts = set()
         try:
             for file_path in files:

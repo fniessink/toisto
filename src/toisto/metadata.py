@@ -23,7 +23,7 @@ BUILT_IN_LANGUAGES: Final = [EN, FI, NL]
 
 # File locations
 _data_folder = Path(__file__).parent.parent
-CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("**/*.json"))
+BUILT_IN_CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("**/*.json"))
 _languages_folder = _data_folder / "languages"
 LANGUAGES_FILE: Final = _languages_folder / "iana-language-subtag-registry.txt"
 SPELLING_ALTERNATIVES_FILE: Final = _languages_folder / "spelling_alternatives.json"
