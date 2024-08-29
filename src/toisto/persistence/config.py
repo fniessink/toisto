@@ -1,6 +1,5 @@
 """Config file parser."""
 
-import sys
 from argparse import ArgumentParser
 from collections.abc import Callable, Iterable
 from configparser import ConfigParser, Error
@@ -10,6 +9,7 @@ from pathlib import Path
 from typing import Final, NoReturn
 
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
+from toisto.tools import platform
 
 from .folder import home
 
@@ -36,16 +36,14 @@ class Option:
     default_value: Callable[[], str] | str = ""
 
 
+DEFAULT_MP3PLAYERS = dict(darwin="afplay", linux="mpg123 --quiet")
 CONFIG_SCHEMA: Final[dict[str, dict[str, Option]]] = dict(
     languages=dict(
         target=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
         source=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
     ),
     commands=dict(
-        mp3player=Option(
-            Quantifier.ANY,
-            default_value=lambda: dict(darwin="afplay", linux="mpg123 --quiet").get(sys.platform, "builtin"),
-        ),
+        mp3player=Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "builtin")),
     ),
     practice=dict(
         progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),

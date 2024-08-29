@@ -1,6 +1,8 @@
 # Toisto
 
-Command-line app to practice languages. *Toisto* is Finnish and means *reiteration, playback, repetition, reproduction*.
+Toisto is an app to practice languages that runs in the [terminal](https://en.wikipedia.org/wiki/Terminal_emulator). It is developed in Python and available for Windows, Linux, MacOS, and iOS (iPhone and iPad).
+
+*Toisto* is Finnish and means *reiteration, playback, repetition, reproduction*.
 
 Toisto is beta software at the moment. It comes with a limited set of words and phrases in Dutch, English, and Finnish.
 
@@ -9,12 +11,14 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 ## Example sessions
 
+<details>
+<summary>Example session as GIF</summary>
 <video src="https://github.com/fniessink/toisto/assets/3530545/8598dc4d-09ad-4057-9793-cee2fe54e420" controls="controls" style="max-width: 730px;">
 </video>
+</details>
 
 <details>
-
-<summary>Another example session in text format</summary>
+<summary>Example session in text format</summary>
 
 ```console
 $ toisto practice --target fi --source nl
@@ -60,28 +64,14 @@ oranje
 > oransie
 ❌ Incorrect. The correct answer is "oranssi".
 ```
-
 </details>
 
-## User guide
+## How to install Toisto
 
-### Prerequisites
+<details>
+<summary>How to install Toisto on Windows</summary>
 
-On Linux, you need to have an mp3 player installed. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
-
-On MacOS, Toisto needs a more modern terminal than the default one that MacOS offers to be fully functional. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default MacOS terminal app, though.
-
-### How to install Toisto
-
-There are two ways to install Toisto:
-
-1. The first way is using `uv`, a tool that can install tools developed in Python, such as Toisto. Advantage of `uv` is that it also installs Python, if needed. Disadvantage is that installing Python tools with `uv` is officially 'experimental and may change without warning'.
-
-2. The second way is using `pipx`, a tool that can install tools developed in Python. Disadvantage is that it does not install Python for you. You need to do that yourself.
-
-#### How to install and update Toisto using `uv`
-
-1. Install [uv](https://docs.astral.sh/uv/#getting-started).
+1. Install [uv](https://docs.astral.sh/uv/#getting-started). <details><summary>What is uv?</summary>uv is a tool that can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.</details>
 
 2. Install Toisto:
 
@@ -94,26 +84,67 @@ If you have already installed Toisto and a newer version is available, upgrade T
 ```console
 $ uv tool upgrade toisto
 ```
+</details>
 
-#### How to install and update Toisto using `pipx`
+<details>
+<summary>How to install Toisto on Linux</summary>
 
-1. Install [Python 3.10 or newer](https://python.org).
+1. On Linux, you must have an mp3 player installed so Toisto can speak. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
 
-2. Install [pipx](https://pypa.github.io/pipx/).
+2. Install [uv](https://docs.astral.sh/uv/#getting-started). <details><summary>What is uv?</summary>uv is a tool that can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.</details>
 
 3. Install Toisto:
 
 ```console
-$ pipx install toisto
+$ uv tool install toisto
 ```
 
 If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
 
 ```console
-$ pipx upgrade toisto
+$ uv tool upgrade toisto
+```
+</details>
+
+<details>
+<summary>How to install Toisto on MacOS</summary>
+
+1. (Optional) On MacOS, Toisto works best in a more modern terminal than the default one that MacOS offers. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default MacOS terminal app, though.
+
+2. Install [uv](https://docs.astral.sh/uv/#getting-started). <details><summary>What is uv?</summary>uv is a tool that can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.</details>
+
+3. Install Toisto:
+
+```console
+$ uv tool install toisto
 ```
 
-### How to use Toisto
+If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
+
+```console
+$ uv tool upgrade toisto
+```
+</details>
+
+<details>
+<summary>How to install Toisto on iOS (iPhone or iPad)</summary>
+
+1. Install the free [a-Shell app](https://holzschu.github.io/a-Shell_iOS/). <details><summary>What is a-Shell?</summary>a-Shell provides a Unix-like terminal for Toisto to run in. It has Python pre-installed.</details>
+
+2. Install Toisto using pip. <details><summary>What is pip?</summary>pip is a tool that can install packages developed in Python. It comes bundled with Python. a-Shell has Python pre-installed, and thus pip as well.</details>
+
+   ```console
+   $ pip install toisto
+   ```
+
+If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
+
+```console
+$ pip upgrade toisto
+```
+</details>
+
+## How to use Toisto
 
 Start Toisto as follows, giving the language you want to practice (the target language) and your language (the source language) as arguments:
 
@@ -139,9 +170,9 @@ Add `--help` or `-h` to get more information about the command-line options and 
 $ toisto --help
 ```
 
-### How to configure Toisto
+## How to configure Toisto
 
-#### How to configure your language
+### How to configure your language
 
 To prevent having to pass your target and source language as command-line arguments each time you run Toisto, put them in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the target and source language:
 
@@ -151,7 +182,7 @@ target = nl
 source = en
 ```
 
-#### How to configure progress updates
+### How to configure progress updates
 
 To prevent having to pass the desired progress update frequency as command-line argument each time you run Toisto, put it in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `practice` section if it doesn't exist, and add the desired progress update frequency:
 
@@ -160,9 +191,13 @@ To prevent having to pass the desired progress update frequency as command-line 
 progress_update = 20  # While practicing, give a progress update every 20 quizzes.
 ```
 
-#### How to configure a different mp3 player
+### How to configure a different mp3 player
 
-By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play mp3 files. You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
+On Windows, Linux, and MacOS, Toisto uses Google Translate's text-to-speech API to convert text to speech and then plays the resulting mp3 file using an mp3 player. On iOS, Toisto uses the `say` command to convert text to speech and an mp3 player is not used.
+
+By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play the mp3 files.
+
+You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
 
 ```ini
 [commands]
