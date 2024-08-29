@@ -2,7 +2,9 @@
 
 from pathlib import Path
 
+from ..tools import platform
+
 
 def home() -> Path:
     """Return the home folder."""
-    return Path.home()
+    return Path("~/Documents").expanduser() if platform() == "ashell" else Path.home()

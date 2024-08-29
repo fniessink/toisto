@@ -1,8 +1,16 @@
-"""Utitity functions."""
+"""Utility functions."""
 
+import os
+import sys
 from collections.abc import Callable, Iterable
 from itertools import chain
 from typing import Generic, TypeVar
+
+
+def platform() -> str:
+    """Return the current platform."""
+    return "ashell" if os.environ.get("TERM_PROGRAM") == "a-Shell" else sys.platform
+
 
 T = TypeVar("T")
 

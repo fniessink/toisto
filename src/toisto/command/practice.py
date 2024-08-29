@@ -13,15 +13,15 @@ from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import ListenOnlyQuizType
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkified
-from toisto.ui.speech import say
+from toisto.ui.speech import Speech
 from toisto.ui.text import DONE, Feedback, ProgressUpdate, instruction
 
 
-def do_quiz_attempt(quiz: Quiz, config: ConfigParser, attempt: int) -> Label:
+def do_quiz_attempt(quiz: Quiz, speech: Speech, attempt: int) -> Label:
     """Present the question and get the answer from the user."""
     repeat_speech = False
     while True:
-        say(quiz.question.language, quiz.question.pronounceable, config, slow=repeat_speech or attempt > 1)
+        speech.say(quiz.question.language, quiz.question.pronounceable, slow=repeat_speech or attempt > 1)
         if answer := Label(quiz.answer.language, input("> ").strip()):
             break
         repeat_speech = True
@@ -34,7 +34,7 @@ def do_quiz(
     language_pair: LanguagePair,
     quiz: Quiz,
     progress: Progress,
-    config: ConfigParser,
+    speech: Speech,
 ) -> None:
     """Do one quiz and update the progress."""
     feedback = Feedback(quiz, language_pair)
@@ -42,7 +42,7 @@ def do_quiz(
     if not quiz.has_quiz_type(ListenOnlyQuizType):
         write_output(linkified(str(quiz.question)))
     for attempt in range(1, 3):
-        guess = do_quiz_attempt(quiz, config, attempt)
+        guess = do_quiz_attempt(quiz, speech, attempt)
         evaluation = quiz.evaluate(guess, language_pair, attempt)
         progress.mark_evaluation(quiz, evaluation)
         write_output(feedback(evaluation, guess))
@@ -59,9 +59,10 @@ def practice(
 ) -> None:
     """Practice a language."""
     progress_update = ProgressUpdate(progress, progress_update_frequency)
+    speech = Speech(config)
     try:
         while quiz := progress.next_quiz():
-            do_quiz(write_output, language_pair, quiz, progress, config)
+            do_quiz(write_output, language_pair, quiz, progress, speech)
             with dramatic.output.at_speed(120):
                 # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:
                 write_output(progress_update(), end="", highlight=False)
