@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.23.0"
+version = "0.24.0"
 authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
