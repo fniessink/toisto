@@ -1,0 +1,28 @@
+{
+    "onion": {
+        "hypernym": "vegetable",
+        "example": "onions make me cry",
+        "singular": {
+            "en": "onion",
+            "fi": "sipuli",
+            "nl": "de ui"
+        },
+        "plural": {
+            "en": "onions",
+            "fi": "sipulit",
+            "nl": "de uien"
+        }
+    },
+    "onions make me cry": {
+        "roots": [
+            "onion",
+            "to cry"
+        ],
+        "en": "Onions make me cry.",
+        "fi": "Sipulit saavat minut itkemään.",
+        "nl": [
+            "Uien laten me huilen.",
+            "Ik moet huilen van uien."
+        ]
+    }
+}

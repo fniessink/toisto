@@ -1,5 +1,6 @@
 {
     "however": {
+        "example": "I am busy, however, I am here",
         "en": [
             "however",
             "still",
@@ -11,5 +12,24 @@
         ],
         "fi": "silti",
         "nl": "toch"
+    },
+    "I am busy, however, I am here": {
+        "roots": [
+            "to be",
+            "budy",
+            "however",
+            "here"
+        ],
+        "en": [
+            "I am busy, however, I am here.",
+            "I am busy, still I am here.",
+            "I am busy, yet I am here.",
+            "I am busy, nevertheless I am here.",
+            "I am busy, nonetheless I am here.",
+            "I am busy, but I am here anyway.",
+            "I am busy, but I am here regardless."
+        ],
+        "fi": "Minulla on kiire, silti olen tässä.",
+        "nl": "Ik heb het druk, toch ben ik hier."
     }
 }

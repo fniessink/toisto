@@ -17,17 +17,21 @@
     },
     "first name": {
         "roots": "name",
+        "hypernym": "name",
         "en": "first name",
         "fi": "etunimi",
         "nl": "de voornaam"
     },
     "given name": {
         "roots": "name",
+        "hypernym": "name",
         "en": "given name",
+        "fi": "kutsumanimi",
         "nl": "de roepnaam"
     },
     "last name": {
         "roots": "name",
+        "hypernym": "name",
         "en": [
             "last name",
             "surname"

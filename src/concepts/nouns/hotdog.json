@@ -1,0 +1,25 @@
+{
+    "hotdog": {
+        "hypernym": "meat",
+        "roots": {
+            "en": [
+                "hot",
+                "dog"
+            ]
+        },
+        "singular": {
+            "en": [
+                "hotdog|hot dog"
+            ],
+            "fi": "hotdog",
+            "nl": "de hotdog"
+        },
+        "plural": {
+            "en": [
+                "hotdogs|hot dogs"
+            ],
+            "fi": "hotdogit",
+            "nl": "de hotdogs"
+        }
+    }
+}

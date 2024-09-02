@@ -15,7 +15,10 @@
     },
     "blue": {
         "hypernym": "color",
-        "example": "the car is blue",
+        "example": [
+            "the car is blue",
+            "the sky is blue"
+        ],
         "en": "blue",
         "fi": "sininen",
         "nl": "blauw"

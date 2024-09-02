@@ -1,7 +1,18 @@
 {
     "sky": {
+        "example": "the sky is blue",
         "en": "sky",
         "fi": "taivas",
-        "nl": "de lucht"
+        "nl": "de lucht;is blue"
+    },
+    "the sky is blue": {
+        "roots": [
+            "sky",
+            "to be",
+            "blue"
+        ],
+        "en": "The sky is blue.",
+        "fi": "Taivas on sininen.",
+        "nl": "De lucht is blauw."
     }
 }

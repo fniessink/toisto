@@ -1,0 +1,29 @@
+{
+    "fish": {
+        "hypernym": "food",
+        "example": "is the fish fresh",
+        "singular": {
+            "en": "fish",
+            "fi": "kala",
+            "nl": "de vis"
+        },
+        "plural": {
+            "en": [
+                "fish",
+                "fishes"
+            ],
+            "fi": "kalat",
+            "nl": "de vissen"
+        }
+    },
+    "is the fish fresh": {
+        "roots": [
+            "to be",
+            "fish",
+            "fresh"
+        ],
+        "en": "Is the fish fresh?",
+        "fi": "Onko kala tuoretta?",
+        "nl": "Is de vis vers?"
+    }
+}

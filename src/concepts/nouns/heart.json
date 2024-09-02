@@ -1,7 +1,7 @@
 {
     "heart": {
         "example": "she has a big heart",
-        "holonym": "body",
+        "hypernym": "organ",
         "en": "heart",
         "fi": "sydän",
         "nl": "het hart"
@@ -13,7 +13,7 @@
             "heart"
         ],
         "en": "She has a big heart.",
-        "fi": "Hänellä on suuri sydän;feminine.",
+        "fi": "Hänellä on suuri sydän.;feminine",
         "nl": "Zij heeft een groot hart."
     }
 }

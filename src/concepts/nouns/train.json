@@ -1,5 +1,6 @@
 {
     "train": {
+        "example": "the train departs from platform 4",
         "hypernym": "means of transportation",
         "singular": {
             "en": "train",
@@ -17,5 +18,16 @@
         "en": "long-distance train",
         "fi": "kaukojuna",
         "nl": "langeafstandstrein"
+    },
+    "the train departs from platform 4": {
+        "roots": [
+            "train",
+            "to leave",
+            "platform",
+            "4"
+        ],
+        "en": "The train departs from platform four.",
+        "fi": "Juna lähtee laiturilta neljä.",
+        "nl": "De trein vertrekt van perron vier."
     }
 }
