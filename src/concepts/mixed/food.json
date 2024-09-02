@@ -36,12 +36,6 @@
         "fi": "ruoka ja juoma",
         "nl": "het eten en drinken"
     },
-    "fruit": {
-        "hypernym": "food",
-        "en": "fruit",
-        "fi": "hedelmä",
-        "nl": "het fruit"
-    },
     "vegetable": {
         "hypernym": "food",
         "singular": {
@@ -162,62 +156,6 @@
             "het toetje",
             "het nagerecht"
         ]
-    },
-    "orange (fruit)": {
-        "hypernym": "fruit",
-        "roots": {
-            "en": "orange",
-            "nl": "apple"
-        },
-        "singular": {
-            "en": "orange",
-            "fi": "appelsiini",
-            "nl": "de sinaasappel"
-        },
-        "plural": {
-            "en": "oranges",
-            "fi": "appelsiinit",
-            "nl": "de sinaasappels"
-        }
-    },
-    "hotdog": {
-        "hypernym": "meat",
-        "roots": {
-            "en": [
-                "hot",
-                "dog"
-            ]
-        },
-        "singular": {
-            "en": [
-                "hotdog|hot dog"
-            ],
-            "fi": "hotdog",
-            "nl": "de hotdog"
-        },
-        "plural": {
-            "en": [
-                "hotdogs|hot dogs"
-            ],
-            "fi": "hotdogit",
-            "nl": "de hotdogs"
-        }
-    },
-    "fish": {
-        "hypernym": "food",
-        "singular": {
-            "en": "fish",
-            "fi": "kala",
-            "nl": "de vis"
-        },
-        "plural": {
-            "en": [
-                "fish",
-                "fishes"
-            ],
-            "fi": "kalat",
-            "nl": "de vissen"
-        }
     },
     "macaroni casserole": {
         "hypernym": "food",
@@ -693,19 +631,6 @@
             "en": "mustards",
             "fi": "sinapit",
             "nl": "de mosterds"
-        }
-    },
-    "onion": {
-        "hypernym": "vegetable",
-        "singular": {
-            "en": "onion",
-            "fi": "sipuli",
-            "nl": "de ui"
-        },
-        "plural": {
-            "en": "onions",
-            "fi": "sipulit",
-            "nl": "de uien"
         }
     },
     "lemon": {

@@ -1,10 +1,12 @@
 {
     "seller": {
+        "hypernym": "profession",
         "en": "seller",
         "fi": "myyjä",
         "nl": "de verkoper"
     },
     "physician": {
+        "hypernym": "profession",
         "en": [
             "doctor",
             "physician"
@@ -16,6 +18,7 @@
         ]
     },
     "dentist": {
+        "hypernym": "profession",
         "roots": {
             "fi": [
                 "tooth",
@@ -31,12 +34,16 @@
         "nl": "de tandarts"
     },
     "nurse": {
+        "hypernym": "profession",
         "en": "nurse",
         "fi": "sairaanhoitaja",
         "nl": "de verpleegkundige"
     },
     "truck driver": {
-        "hypernym": "driver",
+        "hypernym": [
+            "profession",
+            "driver"
+        ],
         "roots": [
             "lorry",
             "driver"
@@ -46,7 +53,10 @@
         "nl": "de vrachtwagenchauffeur"
     },
     "taxi driver": {
-        "hypernym": "driver",
+        "hypernym": [
+            "profession",
+            "driver"
+        ],
         "roots": [
             "taxi",
             "driver"
@@ -59,12 +69,14 @@
         "nl": "de taxichauffeur"
     },
     "car mechanic": {
+        "hypernym": "profession",
         "roots": "car",
         "en": "car mechanic",
         "fi": "automekaanikko",
         "nl": "de automonteur"
     },
     "farmer": {
+        "hypernym": "profession",
         "en": "farmer",
         "fi": "maanviljelijä",
         "nl": [
@@ -73,11 +85,13 @@
         ]
     },
     "singer": {
+        "hypernym": "profession",
         "en": "singer",
         "fi": "laulaja",
         "nl": "de zanger"
     },
     "athlete": {
+        "hypernym": "profession",
         "en": "athlete",
         "fi": "urheilija",
         "nl": [
@@ -86,31 +100,37 @@
         ]
     },
     "police officer": {
+        "hypernym": "profession",
         "en": "police officer",
         "fi": "poliisi",
         "nl": "de politieagent"
     },
     "firefighter": {
+        "hypernym": "profession",
         "en": "firefighter",
         "fi": "palomies",
         "nl": "de brandweerman"
     },
     "priest": {
+        "hypernym": "profession",
         "en": "priest",
         "fi": "pappi",
         "nl": "de priester"
     },
     "entrepeneur": {
+        "hypernym": "profession",
         "en": "entrepeneur",
         "fi": "yrittäjä",
         "nl": "de ondernemer"
     },
     "architect": {
+        "hypernym": "profession",
         "en": "architect",
         "fi": "arkkitehti",
         "nl": "de architect"
     },
     "construction worker": {
+        "hypernym": "profession",
         "roots": {
             "fi": "building"
         },
@@ -119,6 +139,7 @@
         "nl": "de bouwvakker"
     },
     "plumber": {
+        "hypernym": "profession",
         "en": "plumber",
         "fi": [
             "putkiasentaja",
@@ -127,6 +148,7 @@
         "nl": "de loodgieter"
     },
     "electrician": {
+        "hypernym": "profession",
         "en": "electrician",
         "fi": [
             "sähköasentaja",
@@ -135,21 +157,25 @@
         "nl": "de elektricien"
     },
     "mailman": {
+        "hypernym": "profession",
         "en": "mailman",
         "fi": "postinjakaja",
         "nl": "de postbode"
     },
     "janitor": {
+        "hypernym": "profession",
         "en": "janitor",
         "fi": "vahtimestari",
         "nl": "de conciërge"
     },
     "security guard": {
+        "hypernym": "profession",
         "en": "security guard",
         "fi": "vartija",
         "nl": "de beveiliger"
     },
     "broker": {
+        "hypernym": "profession",
         "en": "broker",
         "fi": "välittäjä",
         "nl": "de makelaar"
@@ -162,6 +188,7 @@
         "nl": "de vastgoedmakelaar"
     },
     "managing director": {
+        "hypernym": "profession",
         "roots": {
             "nl": "company"
         },
@@ -173,6 +200,7 @@
         ]
     },
     "staff manager": {
+        "hypernym": "profession",
         "en": [
             "staff manager",
             "personnel manager"
@@ -181,11 +209,13 @@
         "nl": "de personeelschef"
     },
     "assistant": {
+        "hypernym": "profession",
         "en": "assistant",
         "fi": "assistentti",
         "nl": "de assistent"
     },
     "secretary": {
+        "hypernym": "profession",
         "en": "secretary",
         "fi": "sihteeri",
         "feminine": {
@@ -196,11 +226,13 @@
         }
     },
     "bookkeeper": {
+        "hypernym": "profession",
         "en": "bookkeeper",
         "fi": "kirjanpitäjä",
         "nl": "de boekhouder"
     },
     "journalist": {
+        "hypernym": "profession",
         "en": [
             "journalist",
             "reporter"
@@ -212,36 +244,43 @@
         ]
     },
     "photographer": {
+        "hypernym": "profession",
         "en": "photographer",
         "fi": "valokuvaaja",
         "nl": "de fotograaf"
     },
     "cleaner": {
+        "hypernym": "profession",
         "en": "cleaner",
         "fi": "siivooja",
         "nl": "de schoonmaker"
     },
     "hairdresser": {
+        "hypernym": "profession",
         "en": "hairdresser",
         "fi": "kampaaja",
         "nl": "de kapper"
     },
     "barber": {
+        "hypernym": "profession",
         "en": "barber",
         "fi": "parturi",
         "nl": "de barber"
     },
     "cosmetologist": {
+        "hypernym": "profession",
         "en": "cosmetologist",
         "fi": "kosmetologi",
         "nl": "de schoonheidsspecialist"
     },
     "cook": {
+        "hypernym": "profession",
         "en": "cook",
         "fi": "kokki",
         "nl": "de kok"
     },
     "server": {
+        "hypernym": "profession",
         "en": "server",
         "fi": "tarjoilija",
         "feminine": {
@@ -254,6 +293,7 @@
         }
     },
     "kitchenhand": {
+        "hypernym": "profession",
         "roots": {
             "en": [
                 "kitchen",
@@ -273,6 +313,7 @@
         "nl": "de kleuterjuf"
     },
     "nanny": {
+        "hypernym": "profession",
         "en": "nanny",
         "fi": "lastenhoitaja",
         "feminine": {
@@ -283,6 +324,7 @@
         }
     },
     "researcher": {
+        "hypernym": "profession",
         "en": "researcher",
         "fi": "tutkija",
         "nl": "de onderzoeker"
@@ -293,21 +335,25 @@
         "nl": "de huismoeder"
     },
     "sewer": {
+        "hypernym": "profession",
         "en": "sewer",
         "fi": "ompelija",
         "nl": "de naaister"
     },
     "interpreter": {
+        "hypernym": "profession",
         "en": "interpreter",
         "fi": "tulkki",
         "nl": "de tolk"
     },
     "politician": {
+        "hypernym": "profession",
         "en": "politician",
         "fi": "poliitikko",
         "nl": "de politicus"
     },
     "youth worker": {
+        "hypernym": "profession",
         "en": "youth worker",
         "fi": "nuoriso-ohjaaja",
         "nl": [

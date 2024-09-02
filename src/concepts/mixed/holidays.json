@@ -26,6 +26,7 @@
         "nl": "kerstavond;;In Dutch, the names of holidays are capitalized, but derived words are not"
     },
     "christmas day": {
+        "hypernym": "day",
         "holonym": "christmas",
         "roots": [
             "christmas",
@@ -36,6 +37,7 @@
         "nl": "eerste kerstdag;;In Dutch, the names of holidays are capitalized, but derived words are not"
     },
     "boxing day": {
+        "hypernym": "day",
         "holonym": "christmas",
         "roots": {
             "en": "day",

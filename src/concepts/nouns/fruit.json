@@ -1,0 +1,18 @@
+{
+    "fruit": {
+        "hypernym": "food",
+        "example": "fruit is healthy",
+        "en": "fruit",
+        "fi": "hedelmä",
+        "nl": "het fruit"
+    },
+    "fruit is healthy": {
+        "roots": [
+            "fruit",
+            "healthy"
+        ],
+        "en": "Fruit is healthy.",
+        "fi": "Hedelmä on terveellinen.",
+        "nl": "Fruit is gezond."
+    }
+}
