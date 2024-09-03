@@ -120,7 +120,7 @@ class Concept:
                 for concept in self.get_all_concepts()
                 if self in concept.get_related_concepts(inverted_relation, self, *visited_concepts)
             )
-        related_concepts = self.get_concepts(*self._related_concepts[relation])
+        related_concepts = self.get_concepts(*self._related_concepts.get(relation, []))
         if relation not in get_args(RecursiveConceptRelation):
             return related_concepts
         related_concepts_list = list(related_concepts)
@@ -238,6 +238,17 @@ class Concept:
         concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
         direct_roots = self.get_concepts(*concept_ids_of_roots)
         return Concepts(direct_roots + direct_roots.roots(language))
+
+    @property
+    def is_complete_sentence(self) -> bool:
+        """Return whether this concept is a complete sentence."""
+        if self._labels:
+            return self._labels[0].is_complete_sentence
+        if self._meanings:
+            return self._meanings[0].is_complete_sentence
+        if self._constituents:
+            return self.get_concepts(self._constituents[0])[0].is_complete_sentence
+        return False
 
 
 class Concepts(tuple[Concept, ...]):
