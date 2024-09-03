@@ -100,3 +100,16 @@ class ConceptTest(ToistoTestCase):
         greece = self.create_concept("greece", {"fi": "Kreikki"})
         greek = self.create_concept("greek", {"fi": "kreikki;;In Finnish, the names of languages are not capitalized"})
         self.assertEqual((greece,), greek.get_capitonyms(Label(FI, "kreikki")))
+
+    def test_is_sentence(self):
+        """Test the is-sentence property."""
+        self.assertFalse(self.create_concept("sea", {"en": "sea"}).is_complete_sentence)
+        self.assertFalse(self.create_concept("greece", {"en": "Greece"}).is_complete_sentence)
+        self.assertTrue(self.create_concept("hi", {"fi": "Hei!"}).is_complete_sentence)
+        self.assertTrue(self.create_concept("meaning only", {"fi": "(Hei!)"}).is_complete_sentence)
+        self.assertFalse(self.create_concept("involves only", {"involves": ["other concept"]}).is_complete_sentence)
+        composite_concept = self.create_concept(
+            "the house is big",
+            {"singular": {"en": "The house is big."}, "plural": {"en": "The houses are big."}},
+        )
+        self.assertTrue(composite_concept.is_complete_sentence)

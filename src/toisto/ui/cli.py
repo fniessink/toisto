@@ -42,7 +42,10 @@ def check_language(language: str) -> str:
 
 def add_concept_argument(parser: ArgumentParser, concepts: set[Concept]) -> None:
     """Add the concept argument."""
-    concept_ids = sorted(concept.concept_id for concept in concepts)
+    concept_ids = sorted(
+        concept.concept_id for concept in concepts
+        if not concept.is_complete_sentence and not concept.get_related_concepts("hypernym")
+    )
     parser.add_argument(
         "concepts",
         metavar="{concept}",
