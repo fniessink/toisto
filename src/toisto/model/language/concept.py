@@ -101,13 +101,15 @@ class Concept:
         """Return the concept hash."""
         return hash(self.concept_id)
 
-    def get_concepts(self, *concept_ids: ConceptId) -> Concepts:
+    @classmethod
+    def get_concepts(cls, *concept_ids: ConceptId) -> Concepts:
         """Return the concepts with the given concept ids."""
-        return Concepts(self.instances.get_values(*concept_ids))
+        return Concepts(cls.instances.get_values(*concept_ids))
 
-    def get_all_concepts(self) -> Concepts:
+    @classmethod
+    def get_all_concepts(cls) -> Concepts:
         """Return all concepts."""
-        return Concepts(self.instances.get_all_values())
+        return Concepts(cls.instances.get_all_values())
 
     def get_related_concepts(self, relation: ConceptRelation, *visited_concepts: Concept) -> Concepts:
         """Return the related concepts."""
