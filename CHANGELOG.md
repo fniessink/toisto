@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Accept both the masculine and the feminine third person singular when asking for the translation of the third person singular of a Finnish verb. Fixes [#826](https://github.com/fniessink/toisto/issues/826).
+
 ### Changed
 
 - When showing the help information for the practice command (`toisto practice --help`), don't show concepts that are sentences and don't show concepts that have a hypernym. Closes [#811](https://github.com/fniessink/toisto/issues/811).

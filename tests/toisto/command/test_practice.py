@@ -142,8 +142,8 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
         quizzes = create_quizzes(self.language_pair, self.concept).by_quiz_type(DICTATE)
-        expected_text = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n"
-        self.assert_printed(expected_text, self.practice(quizzes))
+        expected_feedback = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n"
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talot\n"))
     def test_quiz_with_multiple_meanings(self):
@@ -153,11 +153,40 @@ class PracticeTest(ToistoTestCase):
             dict(singular=dict(fi="talo", nl="huis"), plural=dict(fi="talot", nl="huizen")),
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(PLURAL)
-        expected_argument = (
+        expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('huis')}', "
             f"respectively '{linkified('huizen')}'.[/secondary]\n"
         )
-        self.assert_printed(expected_argument, self.practice(quizzes))
+        self.assert_printed(expected_feedback, self.practice(quizzes))
+
+    @patch("builtins.input", Mock(return_value="hij rijdt\n"))
+    def test_quiz_third_person_read_quiz(self):
+        """Test that both the masculine and feminine form are correct."""
+        concept = self.create_concept(
+            "to ride",
+            {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
+        )
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(READ)
+        expected_feedback = (
+            f"{Feedback.CORRECT}[secondary]Another correct answer is "
+            "'[link=https://en.wiktionary.org/wiki/zij]zij[/link] "
+            "[link=https://en.wiktionary.org/wiki/rijdt]rijdt[/link]'.[/secondary]\n"
+        )
+        self.assert_printed(expected_feedback, self.practice(quizzes))
+
+    @patch("builtins.input", Mock(return_value="hij rijdt\n"))
+    def test_quiz_third_person_interpret_quiz(self):
+        """Test that both the masculine and feminine form are correct."""
+        concept = self.create_concept(
+            "to ride",
+            {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
+        )
+        quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(INTERPRET)
+        expected_feedback = (
+            f"{Feedback.CORRECT}[secondary]Meaning '[link=https://en.wiktionary.org/wiki/hän]hän[/link] "
+            "[link=https://en.wiktionary.org/wiki/ajaa]ajaa[/link]'.[/secondary]\n"
+        )
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="vieressä\n"))
     def test_quiz_with_example(self):
@@ -171,11 +200,11 @@ class PracticeTest(ToistoTestCase):
             dict(fi="Museo on kirkon vieressä.", nl="Het museum is naast de kerk."),
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
-        expected_argument = (
+        expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('naast')}'.[/secondary]\n"
             "[secondary]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/secondary]\n"
         )
-        self.assert_printed(expected_argument, self.practice(quizzes))
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="musta\n"))
     def test_quiz_with_multiple_examples(self):
@@ -185,12 +214,12 @@ class PracticeTest(ToistoTestCase):
         self.create_concept("the car is black", dict(fi="Auto on musta.", nl="De auto is zwart."))
         self.create_concept("the cars are black", dict(fi="Autot ovat mustia.", nl="De auto's zijn zwart."))
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
-        expected_argument = (
+        expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('zwart')}'.[/secondary]\n"
             "[secondary]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
             "- 'Autot ovat mustia.' meaning 'De auto's zijn zwart.'[/secondary]\n"
         )
-        self.assert_printed(expected_argument, self.practice(quizzes))
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="pöytävalaisin\n"))
     def test_quiz_with_example_with_synonyms_in_the_target_language(self):
@@ -205,12 +234,12 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
-        expected_argument = (
+        expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('de tafellamp')}'.[/secondary]\n"
             "[secondary]Examples:\n- 'Minä etsin pöytälamppua.' meaning 'Ik zoek een tafellamp.'\n"
             "- 'Minä etsin pöytävalaisinta.' meaning 'Ik zoek een tafellamp.'[/secondary]\n"
         )
-        self.assert_printed(expected_argument, self.practice(quizzes))
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="de tafellamp\n"))
     def test_quiz_with_example_with_synonyms_in_the_source_language(self):
@@ -225,13 +254,13 @@ class PracticeTest(ToistoTestCase):
             dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
         )
         quizzes = create_quizzes(self.language_pair, concept).by_quiz_type(DICTATE)
-        expected_argument = (
+        expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('pöytälamppu')}' and "
             f"'{linkified('pöytävalaisin')}'.[/secondary]\n"
             "[secondary]Example: 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.' and "
             "'Minä etsin pöytävalaisinta.'[/secondary]\n"
         )
-        self.assert_printed(expected_argument, self.practice(quizzes))
+        self.assert_printed(expected_feedback, self.practice(quizzes))
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))
     def test_quiz_try_again(self):

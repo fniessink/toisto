@@ -74,7 +74,7 @@ class QuizFactory:
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
-        target_labels = concept.labels(target_language).non_colloquial
+        target_labels = concept.own_labels(target_language).non_colloquial
         source_labels = concept.labels(source_language).non_colloquial
         if not target_labels or not source_labels:
             return Quizzes()
@@ -118,7 +118,7 @@ class QuizFactory:
         meanings = concept.meanings(target_language)
         return Quizzes(
             Quiz(concept, label, source_labels, INTERPRET, blocked_by, meanings)
-            for label in concept.labels(target_language)
+            for label in concept.own_labels(target_language)
         )
 
     def grammatical_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
