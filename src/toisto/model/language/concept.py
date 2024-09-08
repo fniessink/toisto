@@ -7,7 +7,7 @@ from functools import cached_property
 from itertools import chain
 from typing import ClassVar, Literal, NewType, cast, get_args
 
-from ...tools import Registry
+from ...tools import Registry, first
 from . import Language
 from .grammar import GrammaticalCategory
 from .label import Label, Labels
@@ -147,7 +147,7 @@ class Concept:
     @property
     def parent(self) -> Concept | None:
         """Return the parent concept."""
-        return self.get_concepts(self._parent)[0] if self._parent else None
+        return first(self.get_concepts(self._parent)) if self._parent else None
 
     @cached_property
     def base_concept(self) -> Concept:
@@ -245,11 +245,11 @@ class Concept:
     def is_complete_sentence(self) -> bool:
         """Return whether this concept is a complete sentence."""
         if self._labels:
-            return self._labels[0].is_complete_sentence
+            return first(self._labels).is_complete_sentence
         if self._meanings:
-            return self._meanings[0].is_complete_sentence
+            return first(self._meanings).is_complete_sentence
         if self._constituents:
-            return self.get_concepts(self._constituents[0])[0].is_complete_sentence
+            return first(self.get_concepts(first(self._constituents))).is_complete_sentence
         return False
 
 

@@ -9,6 +9,8 @@ from itertools import chain
 from random import shuffle
 from typing import ClassVar, Final
 
+from toisto.tools import first, first_upper
+
 from . import Language
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
@@ -85,7 +87,7 @@ class Label:
     @cached_property
     def first_spelling_alternative(self) -> Label:
         """Return the first spelling alternative for the label."""
-        return self.non_generated_spelling_alternatives[0]
+        return first(self.non_generated_spelling_alternatives)
 
     @property
     def random_order(self) -> Label:
@@ -109,12 +111,12 @@ class Label:
     @property
     def without_notes(self) -> Label:
         """Return the label without the notes."""
-        return Label(self.language, self._value.split(self.NOTE_SEP)[0])
+        return Label(self.language, first(self._value.split(self.NOTE_SEP)))
 
     @property
     def with_upper_case_first_letter(self) -> Label:
         """Return the label with the first letter upper cased."""
-        return Label(self.language, self._value[0].upper() + self._value[1:])
+        return Label(self.language, first_upper(self._value))
 
     @property
     def lower_case(self) -> Label:
@@ -223,7 +225,7 @@ class Labels:
     @property
     def first_non_generated_spelling_alternatives(self) -> Labels:
         """Return the first non-generated spelling alternative for each label."""
-        return Labels(label.non_generated_spelling_alternatives[0] for label in self._labels)
+        return Labels(first(label.non_generated_spelling_alternatives) for label in self._labels)
 
     @property
     def as_strings(self) -> tuple[str, ...]:

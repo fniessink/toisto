@@ -6,6 +6,8 @@ from collections.abc import Sequence
 from dataclasses import dataclass, field
 from functools import cached_property
 
+from toisto.tools import first
+
 from ..language import LanguagePair
 from ..language.concept import Concept, Concepts
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
@@ -85,7 +87,7 @@ class Quiz:
     @property
     def answer(self) -> Label:
         """Return the first spelling alternative of the first answer."""
-        return self._answers[0].first_spelling_alternative
+        return first(self._answers).first_spelling_alternative
 
     @property
     def answers(self) -> Labels:

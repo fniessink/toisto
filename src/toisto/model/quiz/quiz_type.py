@@ -9,7 +9,7 @@ from typing import ClassVar, final
 
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
-from toisto.tools import Registry
+from toisto.tools import Registry, first
 
 from .match import match
 
@@ -38,7 +38,7 @@ class QuizType:
         """Return the notes to be shown before the quiz has been answered."""
         return (
             [question.question_note]
-            if question.question_note and self.question_notes_applicable(question, answers[0])
+            if question.question_note and self.question_notes_applicable(question, first(answers))
             else []
         )
 
@@ -135,7 +135,7 @@ class WriteQuizType(TranslationQuizType):
 
     def question_notes(self, question: Label, answers: Labels, *homonym_notes: str) -> list[str]:  # noqa: ARG002
         """Return the note to be shown before the quiz has been answered."""
-        return [answers[0].question_note] if answers[0].question_note else []
+        return [question_note] if (question_note := first(answers).question_note) else []
 
     def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:  # noqa: ARG002
         """Return the notes to be shown after the quiz has been answered."""
