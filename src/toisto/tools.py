@@ -20,6 +20,11 @@ def first(sequence: Iterable[T], where: Callable[[T], bool] = lambda _item: True
     return next(item for item in sequence if where(item))
 
 
+def first_upper(string: str) -> str:
+    """Return a copy of the string with the first letter capitalized and the rest unchanged."""
+    return string[0].upper() + string[1:] if string else ""
+
+
 Key = TypeVar("Key")
 Value = TypeVar("Value")
 
