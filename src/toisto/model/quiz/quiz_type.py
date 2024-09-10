@@ -18,8 +18,14 @@ from .match import match
 class QuizType:
     """Base quiz type."""
 
+    actions: ClassVar[Registry[str, QuizType]] = Registry[str, "QuizType"]()
+
     _action: str = ""
     _instruction: str = ""  # Instruction telling the user what action(s) they need to perform to answer the quiz
+
+    def __post_init__(self) -> None:
+        """Add the concept to the concept registry."""
+        self.actions.add_item(self._action, self)
 
     @property
     def action(self) -> str:

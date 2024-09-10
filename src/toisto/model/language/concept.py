@@ -7,7 +7,8 @@ from functools import cached_property
 from itertools import chain
 from typing import ClassVar, Literal, NewType, cast, get_args
 
-from ...tools import Registry, first
+from toisto.tools import Registry, first
+
 from . import Language
 from .grammar import GrammaticalCategory
 from .label import Label, Labels

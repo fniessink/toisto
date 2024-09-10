@@ -7,6 +7,7 @@ from toisto.model.language.concept import Concept
 
 from .evaluation import Evaluation
 from .quiz import Quiz, Quizzes
+from .quiz_type import QuizType
 from .retention import Retention
 
 ProgressDict = dict[str, dict[str, str | int]]
@@ -22,13 +23,18 @@ class Progress:
         quizzes: Quizzes,
         skip_concepts: int = 5,
     ) -> None:
-        self.progress_dict = self.__progress_dict = {
-            key: Retention.from_dict(value) for key, value in progress_dict.items()
+        self.__progress_dict = {
+            key: Retention.from_dict(value) for key, value in progress_dict.items() if self.valid(key)
         }
         self.target_language = target_language
         self.quizzes = quizzes
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
         self.answers = {evaluation: 0 for evaluation in Evaluation}
+
+    def valid(self, key: str) -> bool:
+        """Return whether the key is valid."""
+        quiz_type = key.rsplit(":", maxsplit=1)[-1]
+        return bool(QuizType.actions.get_values(quiz_type))
 
     def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> None:
         """Mark the evaluation.
