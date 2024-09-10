@@ -1,34 +1,4 @@
 {
-    "nature": {
-        "en": "nature",
-        "fi": "luonto",
-        "nl": "de natuur"
-    },
-    "forest": {
-        "singular": {
-            "example": "we walk in the forest",
-            "en": [
-                "forest",
-                "wood"
-            ],
-            "fi": "metsä",
-            "nl": [
-                "het bos",
-                "het woud"
-            ]
-        },
-        "plural": {
-            "en": [
-                "forests",
-                "woods"
-            ],
-            "fi": "metsät",
-            "nl": [
-                "de bossen",
-                "de wouden"
-            ]
-        }
-    },
     "flower": {
         "singular": {
             "en": "flower",
@@ -39,69 +9,6 @@
             "en": "flowers",
             "fi": "kukat",
             "nl": "de bloemen"
-        }
-    },
-    "lake": {
-        "singular": {
-            "en": "lake",
-            "fi": "järvi",
-            "nl": "het meer"
-        },
-        "plural": {
-            "en": "lakes",
-            "fi": "järvet",
-            "nl": "de meren"
-        }
-    },
-    "sea": {
-        "singular": {
-            "en": "sea",
-            "fi": "meri",
-            "nl": "de zee"
-        },
-        "plural": {
-            "en": "seas",
-            "fi": "meret",
-            "nl": "de zeeën"
-        }
-    },
-    "river": {
-        "singular": {
-            "en": "river",
-            "fi": "joki",
-            "nl": "de rivier"
-        },
-        "plural": {
-            "en": "rivers",
-            "fi": "joet",
-            "nl": "de rivieren"
-        }
-    },
-    "island": {
-        "singular": {
-            "en": "island",
-            "fi": "saari",
-            "nl": "het eiland"
-        },
-        "plural": {
-            "en": "islands",
-            "fi": "saaret",
-            "nl": "de eilanden"
-        }
-    },
-    "coast": {
-        "roots": {
-            "fi": "beach"
-        },
-        "singular": {
-            "en": "coast",
-            "fi": "rannikko",
-            "nl": "de kust"
-        },
-        "plural": {
-            "en": "coasts",
-            "fi": "rannikot",
-            "nl": "de kusten"
         }
     },
     "desert": {
@@ -125,31 +32,6 @@
             "nl": "de woestijnen"
         }
     },
-    "tree": {
-        "singular": {
-            "en": "tree",
-            "fi": "puu",
-            "nl": "de boom"
-        },
-        "plural": {
-            "en": "trees",
-            "fi": "puut",
-            "nl": "de bomen"
-        }
-    },
-    "beach": {
-        "hypernym": "coast",
-        "singular": {
-            "en": "beach",
-            "fi": "ranta",
-            "nl": "het strand"
-        },
-        "plural": {
-            "en": "beaches",
-            "fi": "rannat",
-            "nl": "de stranden"
-        }
-    },
     "valley": {
         "singular": {
             "en": "valley",
@@ -160,36 +42,6 @@
             "en": "valleys",
             "fi": "laaksot",
             "nl": "de valleien"
-        }
-    },
-    "hill": {
-        "singular": {
-            "en": "hill",
-            "fi": [
-                "mäki",
-                "kukkula"
-            ],
-            "nl": "de heuvel"
-        },
-        "plural": {
-            "en": "hills",
-            "fi": [
-                "mäet",
-                "kukkulat"
-            ],
-            "nl": "de heuvels"
-        }
-    },
-    "mountain": {
-        "singular": {
-            "en": "mountain",
-            "fi": "vuori",
-            "nl": "de berg"
-        },
-        "plural": {
-            "en": "mountains",
-            "fi": "vuoret",
-            "nl": "de bergen"
         }
     },
     "world": {
@@ -224,18 +76,6 @@
             "nl": "de gronden"
         }
     },
-    "stone": {
-        "singular": {
-            "en": "stone",
-            "fi": "kivi",
-            "nl": "de steen"
-        },
-        "plural": {
-            "en": "stones",
-            "fi": "kivet",
-            "nl": "de stenen"
-        }
-    },
     "fire": {
         "singular": {
             "en": "fire",
@@ -246,18 +86,6 @@
             "en": "fires",
             "fi": "tulet",
             "nl": "de vuren"
-        }
-    },
-    "wave": {
-        "singular": {
-            "en": "wave",
-            "fi": "aalto",
-            "nl": "de golf"
-        },
-        "plural": {
-            "en": "waves",
-            "fi": "aallot",
-            "nl": "de golven"
         }
     },
     "volcano": {

@@ -163,12 +163,6 @@
         "fi": "makaronilaatikko",
         "nl": "de macaronischotel"
     },
-    "salmon": {
-        "hypernym": "fish",
-        "en": "salmon",
-        "fi": "lohi",
-        "nl": "de zalm"
-    },
     "rice": {
         "hypernym": "food",
         "en": "rice",
@@ -932,22 +926,6 @@
         ],
         "fi": "munakoiso",
         "nl": "de aubergine"
-    },
-    "mushroom": {
-        "hypernym": "food",
-        "roots": {
-            "nl": "chair"
-        },
-        "singular": {
-            "en": "mushroom",
-            "fi": "sieni",
-            "nl": "de paddenstoel"
-        },
-        "plural": {
-            "en": "mushrooms",
-            "fi": "sienet",
-            "nl": "de paddenstoelen"
-        }
     },
     "corn": {
         "hypernym": "vegetable",

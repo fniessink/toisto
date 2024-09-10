@@ -1,0 +1,23 @@
+{
+    "user": {
+        "en": "user",
+        "fi": "käyttäjä",
+        "nl": "de gebruiker"
+    },
+    "username": {
+        "roots": {
+            "en": [
+                "user",
+                "name"
+            ],
+            "fi": "user",
+            "nl": [
+                "user",
+                "name"
+            ]
+        },
+        "en": "username",
+        "fi": "käyttäjätunnus",
+        "nl": "de gebruikersnaam"
+    }
+}

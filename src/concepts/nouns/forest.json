@@ -1,0 +1,27 @@
+{
+    "forest": {
+        "singular": {
+            "example": "we walk in the forest",
+            "en": [
+                "forest",
+                "wood"
+            ],
+            "fi": "metsä",
+            "nl": [
+                "het bos",
+                "het woud"
+            ]
+        },
+        "plural": {
+            "en": [
+                "forests",
+                "woods"
+            ],
+            "fi": "metsät",
+            "nl": [
+                "de bossen",
+                "de wouden"
+            ]
+        }
+    }
+}

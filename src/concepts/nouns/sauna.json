@@ -1,0 +1,47 @@
+{
+    "sauna": {
+        "en": "sauna",
+        "fi": "sauna",
+        "nl": "de sauna"
+    },
+    "sauna stove": {
+        "roots": {
+            "en": "sauna",
+            "nl": "sauna"
+        },
+        "en": [
+            "sauna stove",
+            "sauna heater"
+        ],
+        "fi": "kiuas",
+        "nl": "de saunakachel"
+    },
+    "sauna bench": {
+        "roots": {
+            "en": "sauna",
+            "nl": "sauna"
+        },
+        "en": "sauna bench",
+        "fi": "lauteet",
+        "nl": "de saunabank"
+    },
+    "puusauna": {
+        "roots": {
+            "fi": [
+                "wood",
+                "sauna"
+            ]
+        },
+        "en": "(a wood-heated sauna)",
+        "fi": "puusauna",
+        "nl": "(een houtgestookte sauna)"
+    },
+    "sähkösauna": {
+        "roots": {
+            "fi": "sauna"
+        },
+        "en": "(an electric sauna)",
+        "fi": "sähkösauna",
+        "nl": "(een electrische sauna)"
+    }
+}
