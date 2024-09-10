@@ -3,12 +3,18 @@
         "hypernym": "bird",
         "singular": {
             "en": "duck",
-            "fi": "ankka",
+            "fi": [
+                "ankka",
+                "sorsa"
+            ],
             "nl": "de eend"
         },
         "plural": {
             "en": "ducks",
-            "fi": "ankat",
+            "fi": [
+                "ankat",
+                "sorsat"
+            ],
             "nl": "de eenden"
         }
     }
