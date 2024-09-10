@@ -36,9 +36,18 @@ class LoadProgressTest(ToistoTestCase):
     @patch("pathlib.Path.open")
     def test_load_existing_progress(self, path_open: Mock) -> None:
         """Test that the progress can be loaded."""
-        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz": {}}'
+        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz:read": {}}'
         self.assertEqual(
-            dict(quiz=Retention().as_dict()), load_progress(Language("nl"), Quizzes(), ArgumentParser()).as_dict()
+            {"quiz:read": Retention().as_dict()}, load_progress(Language("nl"), Quizzes(), ArgumentParser()).as_dict()
+        )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    def test_invalid_actions_are_ignored(self, path_open: Mock) -> None:
+        """Test that keys in the progress file with invalid actions are ignored."""
+        path_open.return_value.__enter__.return_value.read.return_value = '{"quiz:read": {}, "quiz:invalid action": {}}'
+        self.assertEqual(
+            {"quiz:read": Retention().as_dict()}, load_progress(Language("nl"), Quizzes(), ArgumentParser()).as_dict()
         )
 
 
@@ -58,13 +67,13 @@ class SaveProgressTest(ToistoTestCase):
     def test_save_incorrect_only_progress(self, dump: Mock, path_open: Mock) -> None:
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
-        save_progress(Progress(dict(quiz={}), Language("fi"), Quizzes()))
-        dump.assert_called_once_with(dict(quiz={}), json_file)
+        save_progress(Progress({"quiz:read": {}}, Language("fi"), Quizzes()))
+        dump.assert_called_once_with({"quiz:read": {}}, json_file)
 
     @patch("pathlib.Path.open")
     @patch("json.dump")
     def test_save_progress(self, dump: Mock, path_open: Mock) -> None:
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
-        save_progress(Progress(dict(quiz=dict(skip_until="3000-01-01")), Language("fi"), Quizzes()))
-        dump.assert_called_once_with(dict(quiz=dict(skip_until="3000-01-01T00:00:00")), json_file)
+        save_progress(Progress({"quiz:read": dict(skip_until="3000-01-01")}, Language("fi"), Quizzes()))
+        dump.assert_called_once_with({"quiz:read": dict(skip_until="3000-01-01T00:00:00")}, json_file)
