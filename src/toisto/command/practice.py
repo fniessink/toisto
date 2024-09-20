@@ -63,11 +63,10 @@ def practice(
     try:
         while quiz := progress.next_quiz():
             do_quiz(write_output, language_pair, quiz, progress, speech)
+            save_progress(progress)
             with dramatic.output.at_speed(120):
                 # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:
                 write_output(progress_update(), end="", highlight=False)
         write_output(DONE)
     except (KeyboardInterrupt, EOFError):
         write_output()  # Make sure the shell prompt is displayed on a new line
-    finally:
-        save_progress(progress)

@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Accept both the masculine and the feminine third person singular when asking for the translation of the third person singular of a Finnish verb. Fixes [#826](https://github.com/fniessink/toisto/issues/826).
+- On the iPhone, iOS may kill a-Shell and thus Toisto, causing progress to be lost. Save progress after every quiz to prevent the loss of progress. Fixes [#834](https://github.com/fniessink/toisto/issues/834).
 
 ### Changed
 
