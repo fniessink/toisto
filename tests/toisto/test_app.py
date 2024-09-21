@@ -136,7 +136,19 @@ class AppTest(ToistoTestCase):
     def test_no_language_configuration_tip(self, requests_get: Mock) -> None:
         """Test that the practice command does not show a tip when the user has configured their languages."""
         requests_get.return_value = self.current_version
+        self.config.add_section("languages")
         self.config.set("languages", "target", "fi")
         self.config.set("languages", "source", "nl")
         patched_print = self.run_main()
         self.assertNotIn(CONFIG_LANGUAGE_TIP, patched_print.call_args_list[3][0][0])
+
+    @patch.object(sys, "argv", ["toisto", "configure", "--target", "fi", "--source", "nl"])
+    @patch("requests.get")
+    def test_configure(self, requests_get: Mock) -> None:
+        """Test that the configure command can be invoked."""
+        requests_get.return_value = self.latest_version
+        self.assertFalse(self.config.has_option("languages", "target"))
+        self.assertFalse(self.config.has_option("languages", "source"))
+        self.run_main()
+        self.assertEqual("fi", self.config["languages"]["target"])
+        self.assertEqual("nl", self.config["languages"]["source"])

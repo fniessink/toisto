@@ -1,17 +1,17 @@
 """Unit tests for the config module."""
 
 import argparse
-import configparser
 import unittest
-from unittest.mock import Mock, patch
+from configparser import ConfigParser
+from unittest.mock import MagicMock, Mock, call, patch
 
-from toisto.persistence.config import CONFIG_FILENAME, default_config, read_config
+from toisto.persistence.config import CONFIG_FILENAME, default_config, read_config, write_config
 
 
 class ConfigTestCase(unittest.TestCase):
     """Base class for config unit tests."""
 
-    def read_config(self, path_open: Mock | None = None, *contents: str) -> configparser.ConfigParser:
+    def read_config(self, path_open: Mock | None = None, *contents: str) -> ConfigParser:
         """Read the config file."""
         if path_open:
             path_open.return_value.__enter__.return_value.__iter__.return_value = iter(contents)
@@ -59,6 +59,21 @@ class ReadValidConfigTest(ConfigTestCase):
         """Test reading a valid config."""
         config = self.read_config(path_open, "[practice]\n", "progress_update = 42\n")
         self.assertEqual("42", config.get("practice", "progress_update"))
+
+    def test_empty_file_section(self, path_open: Mock) -> None:
+        """Test reading a valid config with an empty file section."""
+        config = self.read_config(path_open, "[files]\n")
+        self.assertEqual([], list(config["files"].keys()))
+
+    def test_file_section_with_one_file(self, path_open: Mock) -> None:
+        """Test reading a valid config with a file section with one file."""
+        config = self.read_config(path_open, "[files]\n", "/home/user/toisto/extra.json\n")
+        self.assertEqual(["/home/user/toisto/extra.json"], list(config["files"].keys()))
+
+    def test_file_section_with_multiple_files(self, path_open: Mock) -> None:
+        """Test reading a valid config with a file section with multiple files."""
+        config = self.read_config(path_open, "[files]\n", "extra1.json\n", "extra2.json\n")
+        self.assertEqual(["extra1.json", "extra2.json"], list(config["files"].keys()))
 
     @patch("sys.platform", "darwin")
     def test_incomplete_config(self, path_open: Mock) -> None:
@@ -139,3 +154,50 @@ class ReadInvalidConfigTest(ConfigTestCase):
             "Allowed values are whole numbers: 0, 1, 2, 3, ...",
             sys_stderr_write.call_args_list[1][0][0],
         )
+
+
+class WriteConfigTest(ConfigTestCase):
+    """Unit tests for writing a config."""
+
+    def config_file(self, side_effect: OSError | None = None) -> MagicMock:
+        """Create a mock config file."""
+        config_file = MagicMock()
+        config_file.open.return_value.__enter__.return_value = config_file
+        config_file.open.return_value.__enter__.side_effect = side_effect
+        return config_file
+
+    def test_write_empty_config(self) -> None:
+        """Test writing an empty config."""
+        config_parser = ConfigParser()
+        config_file = self.config_file()
+        write_config(argparse.ArgumentParser(), config_parser, config_file)
+        self.assertEqual([call("")], config_file.write.call_args_list)
+
+    def test_write_config(self) -> None:
+        """Test writing a config."""
+        config_parser = ConfigParser()
+        config_parser.add_section("languages")
+        config_parser.set("languages", "target", "fi")
+        config_parser.set("languages", "source", "en")
+        config_file = self.config_file()
+        write_config(argparse.ArgumentParser(), config_parser, config_file)
+        self.assertEqual([call("[languages]\ntarget=fi\nsource=en\n")], config_file.write.call_args_list)
+
+    def test_write_config_with_files(self) -> None:
+        """Test writing a config with files."""
+        config_parser = ConfigParser()
+        config_parser.add_section("files")
+        config_parser.set("files", "extra1", "")
+        config_parser.set("files", "extra2", "")
+        config_file = self.config_file()
+        write_config(argparse.ArgumentParser(), config_parser, config_file)
+        self.assertEqual([call("[files]\nextra1\nextra2\n")], config_file.write.call_args_list)
+
+    @patch("sys.stderr.write")
+    def test_write_failure(self, sys_stderr_write: Mock) -> None:
+        """Test error message on write failure."""
+        config_parser = ConfigParser()
+        error_message = "Could not write file"
+        config_file = self.config_file(PermissionError(error_message))
+        self.assertRaises(SystemExit, write_config, argparse.ArgumentParser(), config_parser, config_file)
+        self.assertIn(error_message, sys_stderr_write.call_args_list[1][0][0])

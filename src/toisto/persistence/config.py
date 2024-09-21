@@ -5,6 +5,7 @@ from collections.abc import Callable, Iterable
 from configparser import ConfigParser, Error
 from dataclasses import dataclass, field
 from enum import Enum
+from io import StringIO
 from pathlib import Path
 from typing import Final, NoReturn
 
@@ -37,7 +38,7 @@ class Option:
 
 
 DEFAULT_MP3PLAYERS = dict(darwin="afplay", linux="mpg123 --quiet")
-CONFIG_SCHEMA: Final[dict[str, dict[str, Option]]] = dict(
+CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = dict(
     languages=dict(
         target=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
         source=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
@@ -48,6 +49,7 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, Option]]] = dict(
     practice=dict(
         progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
     ),
+    files=[],
 )
 CONFIG_FILENAME = home() / ".toisto.cfg"
 
@@ -73,17 +75,20 @@ class ConfigSchemaValidator:
         """Validate the section, including its options."""
         if section not in (allowed_sections := CONFIG_SCHEMA.keys()):
             self._error(f"unknown section '{section}'. Allowed sections are: {', '.join(allowed_sections)}.")
-        for option in self._config_parser[section]:
-            self._validate_option(section, option)
+        section_schema = CONFIG_SCHEMA[section]
+        if isinstance(section_schema, dict):
+            for option in self._config_parser[section]:
+                self._validate_option(section, option, list(section_schema.keys()), section_schema.get(option))
 
-    def _validate_option(self, section: str, option_name: str) -> None:
+    def _validate_option(
+        self, section: str, option_name: str, allowed_options: list[str], option: Option | None
+    ) -> None:
         """Validate the option, including its value(s)."""
-        if option_name not in (allowed_options := CONFIG_SCHEMA[section].keys()):
+        if option is None:
             self._error(
                 f"unknown option '{option_name}' in section '{section}'. "
                 f"Allowed options are: {', '.join(allowed_options)}.",
             )
-        option = CONFIG_SCHEMA[section][option_name]
         value = self._config_parser.get(section, option_name)
         if not option.is_valid(value):
             self._error(
@@ -94,7 +99,7 @@ class ConfigSchemaValidator:
 
 def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser:
     """Read the config file, validate it, and exit with an error message if it doesn't pass."""
-    parser = ConfigParser()
+    parser = ConfigParser(allow_no_value=True)
     try:
         with config_filename.open("r", encoding="utf-8") as config_file:
             parser.read_file(config_file)
@@ -107,9 +112,24 @@ def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_
     return parser
 
 
+def write_config(
+    argument_parser: ArgumentParser, config_parser: ConfigParser, config_filename: Path = CONFIG_FILENAME
+) -> None:
+    """Write the config file, and exit with an error message if writing it fails."""
+    try:
+        config_file_text = StringIO()
+        config_parser.write(config_file_text, space_around_delimiters=False)
+        # Remove the equal sign from lines that only have keys, such as in the files section:
+        stripped_config_file_text = "\n".join([line.rstrip("=") for line in config_file_text.getvalue().splitlines()])
+        with config_filename.open("w", encoding="utf-8") as config_file:
+            config_file.write(stripped_config_file_text)
+    except OSError as reason:
+        argument_parser.error(str(reason))
+
+
 def default_config() -> ConfigParser:
     """Return the default configuration."""
-    parser = ConfigParser()
+    parser = ConfigParser(allow_no_value=True)
     _add_defaults(parser)
     return parser
 
@@ -117,9 +137,11 @@ def default_config() -> ConfigParser:
 def _add_defaults(parser: ConfigParser) -> None:
     """Add the default configuration to the parser."""
     for section in CONFIG_SCHEMA:
-        if section not in parser.sections():
-            parser.add_section(section)
-        for option_name, option in CONFIG_SCHEMA[section].items():
-            default = option.default_value
-            if default and option_name not in parser[section]:
-                parser[section][option_name] = default if isinstance(default, str) else default()
+        section_schema = CONFIG_SCHEMA[section]
+        if isinstance(section_schema, dict):  # list sections don't have defaults'
+            for option_name, option in section_schema.items():
+                default = option.default_value
+                if default and (section not in parser.sections() or option_name not in parser[section]):
+                    if section not in parser.sections():
+                        parser.add_section(section)
+                    parser[section][option_name] = default if isinstance(default, str) else default()

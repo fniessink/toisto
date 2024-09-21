@@ -174,7 +174,13 @@ $ toisto --help
 
 ### How to configure your language
 
-To prevent having to pass your target and source language as command-line arguments each time you run Toisto, put them in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `languages` section if it doesn't exist, and add the target and source language:
+To prevent having to pass your target and source language as command-line arguments each time you run Toisto, you can save these to Toisto's configuration file:
+
+```console
+$ toisto configure --target nl --source en
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `languages` section if it doesn't exist, and adds or changes the target and source language:
 
 ```ini
 [languages]
@@ -182,13 +188,38 @@ target = nl
 source = en
 ```
 
+### How to configure extra concept files
+
+To prevent having to pass extra concept files as command-line arguments each time you run Toisto, you can save these to Toisto's configuration file:
+
+```console
+$ toisto configure --file my_concepts1.json --file my_concepts2.json
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `files` section if it doesn't exist, and adds the files to the list:
+
+```ini
+[files]
+my_concepts1.json
+my_concepts2.json
+```
+
+> [!NOTE]
+> See the [software documentation](docs/software.md) on how to create extra concept files.
+
 ### How to configure progress updates
 
-To prevent having to pass the desired progress update frequency as command-line argument each time you run Toisto, put it in Toisto's configuration file. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `practice` section if it doesn't exist, and add the desired progress update frequency:
+To prevent having to pass the desired progress update frequency as command-line argument each time you run Toisto, you can save the progress update frequency to Toisto's configuration file:
+
+```console
+$ toisto configure --progress-update 20
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `practice` section if it doesn't exist, and adds the desired progress update frequency:
 
 ```ini
 [practice]
-progress_update = 20  # While practicing, give a progress update every 20 quizzes.
+progress_update = 20
 ```
 
 ### How to configure a different mp3 player
@@ -197,14 +228,20 @@ On Windows, Linux, and MacOS, Toisto uses Google Translate's text-to-speech API 
 
 By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play the mp3 files.
 
-You can configure Toisto to use a different mp3 player. Create a file `.toisto.cfg` in your home directory if it doesn't exist, add the `commands` section if it doesn't exist, and add the mp3 player:
+You can configure Toisto to use a different mp3 player:
+
+```console
+$ toisto configure --mp3player name_of_mp3_player
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `commands` section if it doesn't exist, and adds the mp3 player:
 
 ```ini
 [commands]
 mp3player = name_of_mp3_player or `builtin`
 ```
 
-Make sure the mp3 player is on the `PATH` or put the complete filepath in the config file.
+Make sure the mp3 player is on the `PATH` or include the complete filepath of the mp3 player.
 
 ## How it works
 

@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add a `configure` command to save options in the `~/.toisto.cfg` configuration file. See `toisto configure --help` for more information. Closes [#817](https://github.com/fniessink/toisto/issues/817).
 - Automatically generate a hint if one concept is a holonym of another concept with the same label, meaning they are homographs. An example is 'puu' in Finnish, which can mean both 'wood' and' 'tree' in English. Closes [#843](https://github.com/fniessink/toisto/issues/843).
 
 ## 0.25.0 - 2024-09-24

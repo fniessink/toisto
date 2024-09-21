@@ -14,8 +14,17 @@ from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
+CONFIGURE_USAGE = (
+    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-f {file}] [-p {frequency}] [-m {mp3player}]"
+)
+CONFIGURE_DESCRIPTION = "Configure options and save them in ~/.toisto.cfg."
 PRACTICE_USAGE = (
-    "Usage: toisto practice [-h] %s-t {language}%s -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
+    "Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [-p {frequency}] [-m {mp3player}] "
+    "[{concept} ...]"
+)
+PRACTICE_USAGE_OPTIONAL_TARGET = (
+    "Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [-p {frequency}] [-m {mp3player}]\n"
+    "                       [{concept} ...]"
 )
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
@@ -28,6 +37,8 @@ SOURCE_OPTION = """-s, --source {language}
 FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated"
 PROGRESS_OPTION = """-p, --progress-update {frequency}
                         show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
+MP3PLAYER_OPTION = """-m, --mp3player {mp3player}
+                        mp3 player to play sounds; default: afplay"""
 
 
 class ParserTest(unittest.TestCase):
@@ -54,26 +65,66 @@ class ParserTest(unittest.TestCase):
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(
-            f"""Usage: toisto [-h] [-V] {{practice,progress}} ...
+            f"""Usage: toisto [-h] [-V] {{configure,practice,progress}} ...
 
 Toisto is a command-line terminal app to practice languages.
 
 Options:
-  -h, --help           show this help message and exit
-  -V, --version        show program's version number and exit
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
 
 Commands:
-  {{practice,progress}}  default: practice; type `toisto {{command}} --help` for more information on a command
-    practice           practice a language, for example type `toisto practice --target fi --source en` to practice
-                       Finnish from English
-    progress           show progress, for example `toisto progress --target fi --source en` shows progress on
-                       practicing Finnish from English
+  {{configure,practice,progress}}
+                        default: practice; type `toisto {{command}} --help` for more information on a command
+    configure           configure options, for example `toisto configure --target fi --source en` to make practicing
+                        Finnish from English the default
+    practice            practice a language, for example `toisto practice --target fi --source en` to practice Finnish
+                        from English
+    progress            show progress, for example `toisto progress --target fi --source en` to show progress on
+                        practicing Finnish from English
 
 See {README_URL} for more information.
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
 
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--target", "nl", "--source", "fi"])
+    def test_configure_command(self) -> None:
+        """Test that the configure command can be specified."""
+        expected_namespace = Namespace(
+            command="configure",
+            file=[],
+            mp3player="afplay",
+            progress_update=0,
+            source_language="fi",
+            target_language="nl",
+        )
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--help"])
+    @patch("sys.stdout.write")
+    def test_configure_help(self, sys_stdout_write: Mock) -> None:
+        """Test that the configure help message is displayed."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertEqual(
+            f"""{CONFIGURE_USAGE}
+
+{CONFIGURE_DESCRIPTION}
+
+Options:
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION}
+  {FILE_OPTION}
+  {PROGRESS_OPTION % "0"}
+  {MP3PLAYER_OPTION}
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+        )
+
+    @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi"])
     def test_practice_command(self) -> None:
         """Test that the practice command can be specified."""
@@ -84,9 +135,11 @@ See {README_URL} for more information.
             concepts=[],
             file=[],
             progress_update=0,
+            mp3player="afplay",
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
+    @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
     def test_practice_help(self, sys_stdout_write: Mock) -> None:
@@ -100,7 +153,7 @@ See {README_URL} for more information.
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
-            f"""{PRACTICE_USAGE % ("", "")}
+            f"""{PRACTICE_USAGE}
 
 {PRACTICE_DESCRIPTION}
 
@@ -112,19 +165,22 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % "0"}
+  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
 
+    @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
-    def test_practice_help_with_default_languages_in_config(self, sys_stdout_write: Mock) -> None:
+    def test_practice_help_with_languages_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
         config_parser = default_config()
+        config_parser.add_section("languages")
         config_parser.set("languages", "target", "fi")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            f"""{PRACTICE_USAGE % ("[", "]")}
+            f"""{PRACTICE_USAGE_OPTIONAL_TARGET}
 
 {PRACTICE_DESCRIPTION}
 
@@ -136,20 +192,21 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % "0"}
+  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
 
+    @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--help"])
     @patch("sys.stdout.write")
-    def test_practice_help_with_default_levels_in_config(self, sys_stdout_write: Mock) -> None:
+    def test_practice_help_with_progress_update_in_config(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
         config_parser = default_config()
-        config_parser.set("languages", "levels", "A1 A2")
         config_parser.set("practice", "progress_update", "42")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
         self.assertEqual(
-            f"""{PRACTICE_USAGE % ("", "")}
+            f"""{PRACTICE_USAGE}
 
 {PRACTICE_DESCRIPTION}
 
@@ -161,6 +218,7 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % 42}
+  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -189,6 +247,7 @@ Options:
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
 
+    @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "--target", "nl", "--source", "fi"])
     def test_no_command(self) -> None:
         """Test that the practice command is returned if the user did not specify a command."""
@@ -199,6 +258,7 @@ Options:
             concepts=[],
             file=[],
             progress_update=0,
+            mp3player="afplay",
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 

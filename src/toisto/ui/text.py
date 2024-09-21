@@ -195,12 +195,14 @@ def instruction(quiz: Quiz) -> str:
 def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
     """Show the welcome message."""
     write_output(WELCOME)
-    if new_version_available := latest_version and latest_version.strip("v") > VERSION:
+    new_version_available = latest_version and latest_version.strip("v") > VERSION
+    languages_configured = config.has_option("languages", "target") and config.has_option("languages", "source")
+    if new_version_available:
         news = NEWS.format(latest_version, installation_tool())
         write_output(Panel(news, expand=False))
-    elif languages_not_configured := "target" not in config["languages"] or "source" not in config["languages"]:
+    elif not languages_configured:
         write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
-    if new_version_available or languages_not_configured:
+    if new_version_available or not languages_configured:
         write_output()
 
 
