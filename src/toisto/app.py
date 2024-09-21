@@ -1,12 +1,11 @@
 """Main module for the application."""
 
-from argparse import Namespace
-from configparser import ConfigParser
 from contextlib import suppress
 
 with suppress(ImportError):
     import readline  # noqa: F401 `readline` imported but unused
 
+from .command.configure import configure
 from .command.practice import practice
 from .command.show_progress import show_progress
 from .metadata import BUILT_IN_CONCEPT_JSON_FILES, latest_version
@@ -22,29 +21,37 @@ from .ui.cli import create_argument_parser, parse_arguments
 from .ui.text import console, show_welcome
 
 
-def init() -> tuple[LanguagePair, ConfigParser, Namespace, Progress]:
-    """Initialize the main program."""
-    argument_parser = create_argument_parser(default_config())
-    config = read_config(argument_parser)
-    loader = ConceptLoader(argument_parser)
-    concepts = loader.load_concepts(*BUILT_IN_CONCEPT_JSON_FILES)
-    argument_parser = create_argument_parser(config, concepts)
-    args = parse_arguments(argument_parser)
-    language_pair = LanguagePair(args.target_language, args.source_language)
-    load_spelling_alternatives(language_pair)
-    concepts |= loader.load_concepts(*args.file)
-    concepts = filter_concepts(concepts, args.concepts, args.target_language, argument_parser)
-    quizzes = create_quizzes(language_pair, *concepts)
-    progress = load_progress(args.target_language, quizzes, argument_parser)
-    return language_pair, config, args, progress
+class CLI:
+    """Command-line interface commands, arguments, and options."""
+
+    def __init__(self) -> None:
+        argument_parser = create_argument_parser(default_config())
+        self.config = read_config(argument_parser)
+        self.loader = ConceptLoader(argument_parser)
+        self.build_in_concepts = self.loader.load_concepts(*BUILT_IN_CONCEPT_JSON_FILES)
+        self.argument_parser = create_argument_parser(self.config, self.build_in_concepts)
+        self.args = parse_arguments(self.argument_parser)
+        self.language_pair = LanguagePair(self.args.target_language, self.args.source_language)
+
+    @property
+    def progress(self) -> Progress:
+        """Return the current progress."""
+        load_spelling_alternatives(self.language_pair)
+        target_language = self.args.target_language
+        concepts = self.build_in_concepts | self.loader.load_concepts(*self.args.file)
+        filtered_concepts = filter_concepts(concepts, self.args.concepts, target_language, self.argument_parser)
+        quizzes = create_quizzes(self.language_pair, *filtered_concepts)
+        return load_progress(target_language, quizzes, self.argument_parser)
 
 
 def main() -> None:
     """Run the main program."""
-    language_pair, config, args, progress = init()
-    match args.command:
+    cli = CLI()
+    match cli.args.command:
+        case "configure":
+            configure(cli.argument_parser, cli.config, cli.args)
         case "progress":
-            show_progress(progress, args.sort)
+            show_progress(cli.progress, cli.args.sort)
         case _:  # Default command is "practice"
-            show_welcome(console.print, latest_version(), config)
-            practice(console.print, language_pair, progress, config, args.progress_update)
+            show_welcome(console.print, latest_version(), cli.config)
+            practice(console.print, cli.language_pair, cli.progress, cli.config, cli.args.progress_update)

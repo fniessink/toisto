@@ -61,6 +61,9 @@ branch = true
 relative_files = true
 
 [tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+]
 fail_under = 100
 skip_covered = true
 
@@ -136,3 +139,6 @@ where = ["src"]
 [tool.setuptools.package-data]
 "*" = ["*.json"]
 languages = ["*.txt"]
+
+[tool.vulture]
+ignore_names = ["_SubParsersAction"]
