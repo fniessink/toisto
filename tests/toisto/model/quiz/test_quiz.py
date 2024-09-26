@@ -342,11 +342,22 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, "you read", ["jij leest"], INTERPRET)
         self.assertEqual("Listen and write in Dutch (present tense; singular)", quiz.instruction)
 
+    def test_homographs_get_an_automatic_note_based_on_the_holonym(self):
+        """Test that homographs get an automatic note based on the holonym."""
+        self.language_pair = NL_FI
+        self.create_concept("tree", {"fi": "puu", "nl": "de boom"})
+        wood = self.create_concept("wood", {"holonym": "tree", "fi": "puu", "nl": "het hout"})
+        write_quiz = self.create_quiz(wood, "puu", ["het hout"], WRITE)
+        self.assertEqual("Translate into Dutch (part of tree)", write_quiz.instruction)
+        self.language_pair = FI_NL
+        dictate_quiz = self.create_quiz(wood, "puu", ["het hout"], INTERPRET)
+        self.assertEqual("Listen and write in Dutch (part of tree)", dictate_quiz.instruction)
+
     def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
         self.language_pair = FI_NL
-        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})  # Create the capitonym of greek
-        self.create_concept("language", {})  # Create the hypernym of Indo-Wuropean language
+        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})
+        self.create_concept("language", {})
         greek = self.create_concept("greek", {"hypernym": "language", "fi": "kreikka", "nl": "Grieks"})
         quiz = self.create_quiz(greek, "kreikka", ["Grieks"], DICTATE)
         self.assertEqual("Listen and write in Finnish (language)", quiz.instruction)
