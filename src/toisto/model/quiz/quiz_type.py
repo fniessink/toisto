@@ -141,7 +141,8 @@ class WriteQuizType(TranslationQuizType):
 
     def question_notes(self, question: Label, answers: Labels, *homonym_notes: str) -> list[str]:  # noqa: ARG002
         """Return the note to be shown before the quiz has been answered."""
-        return [question_note] if (question_note := first(answers).question_note) else []
+        notes = [question_note] if (question_note := first(answers).question_note) else []
+        return notes + list(homonym_notes)
 
     def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:  # noqa: ARG002
         """Return the notes to be shown after the quiz has been answered."""

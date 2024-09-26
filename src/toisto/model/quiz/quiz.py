@@ -149,8 +149,10 @@ class Quiz:
         """Return the note(s) to be shown as part of the question, if the question has one or more homonyms."""
         if self.concept.same_base_concept(*homonyms):
             return self.concept.grammatical_differences(*homonyms)
-        hypernyms = self.concept.get_related_concepts("hypernym")
-        return [hypernym.concept_id for hypernym in hypernyms[:1]]
+        if hypernyms := self.concept.get_related_concepts("hypernym"):
+            return [hypernym.concept_id for hypernym in hypernyms[:1]]
+        holonyms = self.concept.get_related_concepts("holonym")
+        return [f"part of {holonym.concept_id}" for holonym in holonyms]
 
 
 class Quizzes(set[Quiz]):
