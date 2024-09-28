@@ -352,6 +352,8 @@ class QuizInstructionTest(QuizTestCase):
         self.language_pair = FI_NL
         dictate_quiz = self.create_quiz(wood, "puu", ["het hout"], INTERPRET)
         self.assertEqual("Listen and write in Dutch (part of tree)", dictate_quiz.instruction)
+        read_quiz = self.create_quiz(wood, "puu", ["het hout"], READ)
+        self.assertEqual("Translate into Dutch (part of tree)", read_quiz.instruction)
 
     def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
@@ -361,7 +363,7 @@ class QuizInstructionTest(QuizTestCase):
         greek = self.create_concept("greek", {"hypernym": "language", "fi": "kreikka", "nl": "Grieks"})
         quiz = self.create_quiz(greek, "kreikka", ["Grieks"], DICTATE)
         self.assertEqual("Listen and write in Finnish (language)", quiz.instruction)
-        quiz = self.create_quiz(greek, "kreikka", ["Grieks"])
+        quiz = self.create_quiz(greek, "kreikka", ["Grieks"], READ)
         self.assertEqual("Translate into Dutch", quiz.instruction)
 
     def test_capitonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):

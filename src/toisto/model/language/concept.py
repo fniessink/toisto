@@ -137,7 +137,9 @@ class Concept:
 
     def get_capitonyms(self, label: Label) -> Concepts:
         """Return the capitonyms for the label, provided it is a label of this concept."""
-        return self._get_homonyms(label, self.capitonyms)
+        capitonyms = self._get_homonyms(label, self.capitonyms)
+        # Weed out the homographs:
+        return Concepts(concept for concept in capitonyms if label not in concept.own_labels(label.language))
 
     def _get_homonyms(self, label: Label, homonym_registry: HomonymRegistry) -> Concepts:
         """Return the homonyms for the label as registered in the given homonym registry."""

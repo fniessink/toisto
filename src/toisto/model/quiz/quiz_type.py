@@ -40,7 +40,7 @@ class QuizType:
         """Return the question for the quiz type. Can be overridden for quiz types that transform questions."""
         return question
 
-    def question_notes(self, question: Label, answers: Labels, *homonym_notes: str) -> list[str]:  # noqa: ARG002
+    def question_notes(self, question: Label, answers: Labels) -> list[str]:
         """Return the notes to be shown before the quiz has been answered."""
         return (
             [question.question_note]
@@ -77,10 +77,6 @@ class ListenOnlyQuizType(QuizType):
         """Override to return the quiz type instruction for listen-only quizzes."""
         colloquial_note = f"to the colloquial {ALL_LANGUAGES[question.language]} "
         return f"Listen {colloquial_note if question.is_colloquial else ''}and write in"
-
-    def question_notes(self, question: Label, answers: Labels, *homonym_notes: str) -> list[str]:
-        """Return the notes to be shown before the quiz has been answered."""
-        return super().question_notes(question, answers) + list(homonym_notes)
 
     def other_answers(self, guess: Label, answers: Labels) -> Labels:  # noqa: ARG002
         """Override because returning other answers doesn't make sense if the user has to type what is spoken."""
@@ -139,10 +135,9 @@ class WriteQuizType(TranslationQuizType):
 
     _action: str = "write"
 
-    def question_notes(self, question: Label, answers: Labels, *homonym_notes: str) -> list[str]:  # noqa: ARG002
+    def question_notes(self, question: Label, answers: Labels) -> list[str]:  # noqa: ARG002
         """Return the note to be shown before the quiz has been answered."""
-        notes = [question_note] if (question_note := first(answers).question_note) else []
-        return notes + list(homonym_notes)
+        return [question_note] if (question_note := first(answers).question_note) else []
 
     def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:  # noqa: ARG002
         """Return the notes to be shown after the quiz has been answered."""
