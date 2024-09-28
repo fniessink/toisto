@@ -14,7 +14,7 @@ from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .evaluation import Evaluation
 from .match import match
-from .quiz_type import QuizType
+from .quiz_type import ListenOnlyQuizType, QuizType
 
 
 @dataclass(frozen=True)
@@ -133,17 +133,13 @@ class Quiz:
     @property
     def _question_note(self) -> str:
         """Return the note(s) to be shown as part of the question, if applicable."""
-        notes = self.quiz_type.question_notes(self._question, self._answers, *self._homograph_or_capitonym_notes())
+        question = self._question
+        notes = self.quiz_type.question_notes(question, self._answers)
+        if homographs := self.concept.get_homographs(question):
+            notes.extend(self._homonym_notes(homographs))
+        if isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
+            notes.extend(self._homonym_notes(capitonyms))
         return f" ({'; '.join(notes)})" if notes else ""
-
-    def _homograph_or_capitonym_notes(self) -> Sequence[str]:
-        """Return the note(s) to be shown as part of the question, if the question has homographs or capitonyms."""
-        question_notes: list[str] = []
-        if homographs := self.concept.get_homographs(self._question):
-            question_notes.extend(self._homonym_notes(homographs))
-        elif capitonyms := self.concept.get_capitonyms(self._question):
-            question_notes.extend(self._homonym_notes(capitonyms))
-        return question_notes
 
     def _homonym_notes(self, homonyms: Concepts) -> Sequence[str]:
         """Return the note(s) to be shown as part of the question, if the question has one or more homonyms."""
