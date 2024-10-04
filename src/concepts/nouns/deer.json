@@ -13,19 +13,6 @@
     },
     "reindeer": {
         "hypernym": "animal",
-        "singular": {
-            "en": "reindeer",
-            "fi": "peura",
-            "nl": "het rendier"
-        },
-        "plural": {
-            "en": "reindeer",
-            "fi": "peurat",
-            "nl": "de rendieren"
-        }
-    },
-    "mountain reindeer": {
-        "hypernym": "reindeer",
         "roots": {
             "en": "deer",
             "nl": [
@@ -33,14 +20,21 @@
                 "animal"
             ]
         },
-        "en": "mountain reindeer",
         "singular": {
-            "fi": "poro",
-            "nl": "het bergrendier"
+            "en": "reindeer",
+            "fi": [
+                "peura",
+                "poro"
+            ],
+            "nl": "het rendier"
         },
         "plural": {
-            "fi": "porot",
-            "nl": "de bergrendieren"
+            "en": "reindeer",
+            "fi": [
+                "peurat",
+                "porot"
+            ],
+            "nl": "de rendieren"
         }
     }
 }
