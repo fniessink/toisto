@@ -50,7 +50,7 @@ NEWS: Final[str] = (
 )
 
 CONFIG_LANGUAGE_TIP: Final[str] = (
-    "️️👉 You may want to use a configuration file to store your language preferences.\n"
+    "️️👉 You may want to use `toisto configure` to store your language preferences.\n"
     f"See {README_URL.replace('#toisto', '#how-to-configure-toisto')}."
 )
 
