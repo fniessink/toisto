@@ -50,7 +50,10 @@ class Speech:
         voice_arg = ["-v", self.apple_say_voices[language]]
         # On iOS the argument for --rate/-r is not words per minute like on the Mac, but something else:
         ashell = self.platform == "ashell"
-        rate_arg = (["-r", "30000"] if ashell else ["-r", "100"]) if slow else ([] if ashell else ["-r", "150"])
+        if slow:  # noqa: SIM108
+            rate_arg = ["-r", "30000"] if ashell else ["-r", "100"]
+        else:
+            rate_arg = [] if ashell else ["-r", "150"]
         args = voice_arg + rate_arg + [text.replace("'", r"\'")]
         _run_command("say", *args)
 
