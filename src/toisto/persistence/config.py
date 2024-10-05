@@ -136,12 +136,16 @@ def default_config() -> ConfigParser:
 
 def _add_defaults(parser: ConfigParser) -> None:
     """Add the default configuration to the parser."""
-    for section in CONFIG_SCHEMA:
-        section_schema = CONFIG_SCHEMA[section]
-        if isinstance(section_schema, dict):  # list sections don't have defaults'
-            for option_name, option in section_schema.items():
-                default = option.default_value
-                if default and (section not in parser.sections() or option_name not in parser[section]):
-                    if section not in parser.sections():
-                        parser.add_section(section)
-                    parser[section][option_name] = default if isinstance(default, str) else default()
+    for section, section_schema in CONFIG_SCHEMA.items():
+        if isinstance(section_schema, dict):  # only dict sections have defaults
+            _add_defaults_to_section(parser, section, section_schema)
+
+
+def _add_defaults_to_section(parser: ConfigParser, section: str, section_schema: dict[str, Option]) -> None:
+    """Add the default configuration for the section to the parser."""
+    for option_name, option in section_schema.items():
+        default = option.default_value
+        if default and (section not in parser.sections() or option_name not in parser[section]):
+            if section not in parser.sections():
+                parser.add_section(section)
+            parser[section][option_name] = default if isinstance(default, str) else default()
