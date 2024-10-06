@@ -18,13 +18,9 @@ CONFIGURE_USAGE = (
     "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-f {file}] [-p {frequency}] [-m {mp3player}]"
 )
 CONFIGURE_DESCRIPTION = "Configure options and save them in ~/.toisto.cfg."
-PRACTICE_USAGE = (
-    "Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [-p {frequency}] [-m {mp3player}] "
-    "[{concept} ...]"
-)
+PRACTICE_USAGE = "Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
 PRACTICE_USAGE_OPTIONAL_TARGET = (
-    "Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [-p {frequency}] [-m {mp3player}]\n"
-    "                       [{concept} ...]"
+    "Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
 )
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
@@ -135,7 +131,6 @@ Options:
             concepts=[],
             file=[],
             progress_update=0,
-            mp3player="afplay",
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
@@ -165,7 +160,6 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % "0"}
-  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -192,7 +186,6 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % "0"}
-  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -218,7 +211,6 @@ Options:
   {SOURCE_OPTION}
   {FILE_OPTION}
   {PROGRESS_OPTION % 42}
-  {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
         )
@@ -258,7 +250,6 @@ Options:
             concepts=[],
             file=[],
             progress_update=0,
-            mp3player="afplay",
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
