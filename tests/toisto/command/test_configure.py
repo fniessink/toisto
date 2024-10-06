@@ -59,3 +59,9 @@ class ConfigureTest(ToistoTestCase):
         config = ConfigParser()
         configure(self.argument_parser, config, Namespace(file=[Path("/home/user/extra.json")]))
         self.assert_configured(write_config, config, ("files", "/home/user/extra.json", ""))
+
+    def test_progress_folder(self, write_config: Mock) -> None:
+        """Test changing the progress folder."""
+        config = ConfigParser()
+        configure(self.argument_parser, config, Namespace(progress_folder="/home/user/toisto"))
+        self.assert_configured(write_config, config, ("progress", "folder", "/home/user/toisto"))
