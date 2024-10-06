@@ -8,6 +8,7 @@ from enum import Enum
 from io import StringIO
 from pathlib import Path
 from typing import Final, NoReturn
+from uuid import uuid1
 
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.tools import platform
@@ -49,6 +50,7 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = dict(
     practice=dict(
         progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
     ),
+    identity=dict(uuid=Option(Quantifier.ANY, default_value=str(uuid1()))),
     files=[],
 )
 CONFIG_FILENAME = home() / ".toisto.cfg"

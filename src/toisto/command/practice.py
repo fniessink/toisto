@@ -60,10 +60,11 @@ def practice(
     """Practice a language."""
     progress_update = ProgressUpdate(progress, progress_update_frequency)
     speech = Speech(config)
+    uuid = config["identity"]["uuid"]
     try:
         while quiz := progress.next_quiz():
             do_quiz(write_output, language_pair, quiz, progress, speech)
-            save_progress(progress)
+            save_progress(progress, uuid)
             with dramatic.output.at_speed(120):
                 # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:
                 write_output(progress_update(), end="", highlight=False)
