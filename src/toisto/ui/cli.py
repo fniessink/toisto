@@ -139,7 +139,6 @@ class PracticeCommandBuilder(CommandBuilder):
         self.add_concept_argument(parser, concepts)
         self.add_file_arguments(parser)
         self.add_progress_update_argument(parser)
-        self.add_mp3player_argument(parser)
 
 
 class ProgressCommandBuilder(CommandBuilder):
