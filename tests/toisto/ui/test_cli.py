@@ -12,13 +12,16 @@ from toisto.model.language import Language
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
+from toisto.persistence.folder import home
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
 CONFIGURE_USAGE = (
-    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-f {file}] [-p {frequency}] [-m {mp3player}]"
+    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-f {file}] [--progress-folder {folder}] "
+    "[-p {frequency}]\n"
+    "                        [-m {mp3player}]"
 )
-CONFIGURE_DESCRIPTION = "Configure options and save them in ~/.toisto.cfg."
 PRACTICE_USAGE = "Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
+CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
 PRACTICE_USAGE_OPTIONAL_TARGET = (
     "Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
 )
@@ -31,6 +34,8 @@ TARGET_OPTION = """-t, --target {language}
 SOURCE_OPTION = """-s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl"""
 FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated"
+PROGRESS_FOLDER = f"""--progress-folder {{folder}}
+                        folder where to save progress; default: {home()!s}"""
 PROGRESS_OPTION = """-p, --progress-update {frequency}
                         show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
 MP3PLAYER_OPTION = """-m, --mp3player {mp3player}
@@ -92,11 +97,40 @@ See {README_URL} for more information.
             command="configure",
             file=[],
             mp3player="afplay",
+            progress_folder=str(home()),
             progress_update=0,
             source_language="fi",
             target_language="nl",
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
+    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=True))
+    def test_configure_progress_folder(self) -> None:
+        """Test that the progress folder can be configured."""
+        expected_namespace = Namespace(
+            command="configure",
+            file=[],
+            mp3player="afplay",
+            progress_folder="/home/user/toisto",
+            progress_update=0,
+            source_language=None,
+            target_language=None,
+        )
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
+    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=False))
+    @patch("sys.stderr.write")
+    def test_configure_non_existing_progress_folder(self, sys_stderr_write: Mock) -> None:
+        """Test that the progress folder is checked for existence."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "error: argument --progress-folder: folder '/home/user/toisto' does not exist or is not a folder",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--help"])
@@ -114,6 +148,7 @@ Options:
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
   {FILE_OPTION}
+  {PROGRESS_FOLDER}
   {PROGRESS_OPTION % "0"}
   {MP3PLAYER_OPTION}
 """,

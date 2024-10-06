@@ -12,6 +12,7 @@ from toisto.command.show_progress import SortColumn
 from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
+from toisto.persistence.folder import home
 
 if TYPE_CHECKING:
     from argparse import _SubParsersAction
@@ -22,6 +23,14 @@ def check_language(language: str) -> str:
     if language in ALL_LANGUAGES:
         return language
     message = f"invalid choice: '{language}' (see {IANA_LANGUAGE_SUBTAG_REGISTRY_URL} for valid choices)"
+    raise ArgumentTypeError(message)
+
+
+def check_folder(folder: str) -> str:
+    """Check that the folder exists."""
+    if Path(folder).is_dir():
+        return folder
+    message = f"folder '{folder}' does not exist or is not a folder"
     raise ArgumentTypeError(message)
 
 
@@ -83,6 +92,17 @@ class CommandBuilder:
             type=Path,
         )
 
+    def add_progress_folder_argument(self, parser: ArgumentParser) -> None:
+        """Add the progress folder argument to the command."""
+        default = self.config.get("progress", "folder")
+        parser.add_argument(
+            "--progress-folder",
+            metavar="{folder}",
+            type=check_folder,
+            default=default,
+            help=f"folder where to save progress; default: {default}",
+        )
+
     def add_progress_update_argument(self, parser: ArgumentParser) -> None:
         """Add the progress update argument to the command."""
         default = self.config.get("practice", "progress_update")
@@ -118,9 +138,14 @@ class ConfigureCommandBuilder(CommandBuilder):
             "configure options, for example `%(prog)s configure --target fi --source en` to make "
             "practicing Finnish from English the default"
         )
-        parser = self._add_command("configure", "Configure options and save them in ~/.toisto.cfg.", command_help)
+        parser = self._add_command(
+            "configure",
+            f"Configure options and save them in {home()!s}/.toisto.cfg.",
+            command_help,
+        )
         self.add_language_arguments(parser)
         self.add_file_arguments(parser)
+        self.add_progress_folder_argument(parser)
         self.add_progress_update_argument(parser)
         self.add_mp3player_argument(parser)
 

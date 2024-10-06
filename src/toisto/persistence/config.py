@@ -50,6 +50,9 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = dict(
     practice=dict(
         progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
     ),
+    progress=dict(
+        folder=Option(Quantifier.ANY, default_value=str(home())),
+    ),
     identity=dict(uuid=Option(Quantifier.ANY, default_value=str(uuid1()))),
     files=[],
 )

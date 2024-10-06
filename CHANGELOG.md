@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Make the folder configurable where Toisto saves progress. Use `toisto configure --progress-folder {folder}` to change the folder. Note that Toisto does not copy or move your existing progress save files for you.
+
 ## 0.26.0 - 2024-10-05
 
 ### Added

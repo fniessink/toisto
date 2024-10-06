@@ -207,6 +207,21 @@ my_concepts2.json
 > [!NOTE]
 > See the [software documentation](docs/software.md) on how to create extra concept files.
 
+### How to configure the folder where to save progress
+
+By default, Toisto saves progress to your home folder. To save progress to a different folder, for example a cloud drive, configure the progress folder as follows:
+
+```console
+$ toisto configure --progress-folder /home/user/drive
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `progress` section if it doesn't exist, and adds the folder:
+
+```ini
+[progress]
+folder=/home/user/drive
+```
+
 ### How to configure progress updates
 
 To prevent having to pass the desired progress update frequency as command-line argument each time you run Toisto, you can save the progress update frequency to Toisto's configuration file:

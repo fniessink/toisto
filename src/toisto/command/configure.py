@@ -16,6 +16,9 @@ def configure(argument_parser: ArgumentParser, config: ConfigParser, args: Names
         if language in args and getattr(args, language):
             ensure_section(config, "languages")
             config.set("languages", language.split("_")[0], getattr(args, language))
+    if "progress_folder" in args:
+        ensure_section(config, "progress")
+        config.set("progress", "folder", str(args.progress_folder))
     if "progress_update" in args:
         ensure_section(config, "practice")
         config.set("practice", "progress_update", str(args.progress_update))
