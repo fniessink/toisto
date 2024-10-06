@@ -291,7 +291,7 @@ Toisto supports quiz types such as:
 
 See [the complete list of quiz types](docs/software.md#quizzes).
 
-When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-progress-{target language}.json` in your home folder, for example `.toisto-progress-fi.json`.
+When you stop the program (hit Ctrl-C or Ctrl-D), progress is saved in a file named `.toisto-{uuid}-progress-{target language}.json` in your home folder, for example `.toisto-221b69f2-83ef-11ef-abc8-2642a2aed6c5-progress-fi.json`.
 
 ## Further documentation
 
