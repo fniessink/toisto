@@ -41,7 +41,7 @@ dev = [
     "green == 4.0.2",
     "mypy == 1.11.2",
     "pip == 24.2",
-    "ruff == 0.6.8",
+    "ruff == 0.6.9",
     "twine == 5.1.1",
     "types-requests == 2.32.0.20240914",
     "unittest-xml-reporting == 3.2.0",
