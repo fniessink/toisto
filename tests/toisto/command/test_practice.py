@@ -31,7 +31,7 @@ class PracticeTest(ToistoTestCase):
 
     def progress(self, quizzes: Quizzes) -> Progress:
         """Create the progress tracker."""
-        return Progress({}, self.language_pair.target, quizzes)
+        return Progress(self.language_pair.target, quizzes, {})
 
     def practice(self, quizzes: Quizzes, progress: Progress | None = None, progress_update: int = 0) -> Mock:
         """Run the practice command and return the patched print statement."""

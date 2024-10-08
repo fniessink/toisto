@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass, fields
+from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Final
+
+from toisto.persistence.progress_format import RetentionDict
 
 optional_datetime = datetime | None
 SKIP_INTERVAL_GROWTH_FACTOR: Final = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
@@ -54,17 +56,21 @@ class Retention:
         """Return whether the quiz is silenced."""
         return self.skip_until > datetime.now() if self.skip_until else False
 
-    def as_dict(self) -> dict[str, str | int]:
+    def as_dict(self) -> RetentionDict:
         """Return the retention as dict."""
-        result = {}
-        for field in fields(self):
-            key = field.name
-            if value := getattr(self, key):
-                result[key] = value.isoformat(timespec="seconds") if str(field.type) == "optional_datetime" else value
+        result = RetentionDict()
+        if self.count:
+            result["count"] = self.count
+        if self.start:
+            result["start"] = self.start.isoformat(timespec="seconds")
+        if self.end:
+            result["end"] = self.end.isoformat(timespec="seconds")
+        if self.skip_until:
+            result["skip_until"] = self.skip_until.isoformat(timespec="seconds")
         return result
 
     @classmethod
-    def from_dict(cls, retention_dict: dict[str, str | int]) -> Retention:
+    def from_dict(cls, retention_dict: RetentionDict) -> Retention:
         """Instantiate a retention from a dict."""
         start = cls.__get_datetime(retention_dict, "start")
         end = cls.__get_datetime(retention_dict, "end")
@@ -73,7 +79,7 @@ class Retention:
         return cls(start, end, skip_until, count)
 
     @staticmethod
-    def __get_datetime(retention_dict: dict[str, str | int], key: str) -> optional_datetime:
+    def __get_datetime(retention_dict: RetentionDict, key: str) -> optional_datetime:
         """Get a datetime from the retention dict."""
         value = retention_dict.get(key)
         return datetime.fromisoformat(str(value)) if value else None
