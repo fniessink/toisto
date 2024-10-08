@@ -45,7 +45,7 @@ class ShowProgressTest(ShowProgressTestCase):
         self.now = datetime.now()
         self.start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
         self.end = self.now.isoformat(timespec="seconds")
-        self.progress = Progress({self.quiz.key: dict(start=self.start, end=self.end)}, FI, self.quizzes)
+        self.progress = Progress(FI, self.quizzes, {self.quiz.key: dict(start=self.start, end=self.end)})
 
     def test_title(self):
         """Test the table title."""
@@ -84,7 +84,7 @@ class ShowProgressTest(ShowProgressTestCase):
         concept = self.create_concept("", dict(en="vegetable", nl="de groente"))
         quiz = first(create_quizzes(EN_NL, concept).by_quiz_type(READ))
         quizzes = Quizzes({quiz})
-        progress = Progress({quiz.key: dict(start=self.start, end=self.end)}, EN, quizzes)
+        progress = Progress(EN, quizzes, {quiz.key: dict(start=self.start, end=self.end)})
         Label.ALTERNATIVES_TO_GENERATE[NL] = {re.compile("de groente"): "de groentes"}
         console_print = self.show_progress(progress)
         self.assertEqual("de groente", next(console_print.call_args[0][0].columns[4].cells))
@@ -109,9 +109,9 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
     def test_sort_by_attempts_when_one_quiz_has_no_attempts(self):
         """Test that the quizzes can be sorted by retention length."""
         progress = Progress(
-            {self.quiz.key: dict(count=21), self.another_quiz.key: {}},
             FI,
             self.quizzes,
+            {self.quiz.key: dict(count=21), self.another_quiz.key: {}},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["21", "0"], list(console_print.call_args[0][0].columns[5].cells))
@@ -119,9 +119,9 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
     def test_sort_by_attempts_numerically(self):
         """Test that the quizzes are sorted by attempts numerically, not lexically."""
         progress = Progress(
-            {self.quiz.key: dict(count=21), self.another_quiz.key: dict(count=4)},
             FI,
             self.quizzes,
+            {self.quiz.key: dict(count=21), self.another_quiz.key: dict(count=4)},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["21", "4"], list(console_print.call_args[0][0].columns[5].cells))
@@ -142,9 +142,9 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
     def test_sort_by_retention_when_one_quiz_has_no_retention(self):
         """Test that the quizzes can be sorted by retention length, even when a quiz has no retention."""
         progress = Progress(
-            {self.quiz.key: dict(start=self.start, end=self.end), self.another_quiz.key: {}},
             FI,
             self.quizzes,
+            {self.quiz.key: dict(start=self.start, end=self.end), self.another_quiz.key: {}},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["88 days", ""], list(console_print.call_args[0][0].columns[6].cells))
@@ -153,12 +153,12 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
         """Test that the quizzes are sorted by retention length numerically, not lexically."""
         another_start = (self.now - timedelta(days=9)).isoformat(timespec="seconds")
         progress = Progress(
+            FI,
+            self.quizzes,
             {
                 self.quiz.key: dict(start=self.start, end=self.end),
                 self.another_quiz.key: dict(start=another_start, end=self.end),
             },
-            FI,
-            self.quizzes,
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["88 days", "9 days"], list(console_print.call_args[0][0].columns[6].cells))
