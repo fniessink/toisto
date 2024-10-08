@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
-- Make the folder configurable where Toisto saves progress. Use `toisto configure --progress-folder {folder}` to change the folder. Note that Toisto does not copy or move your existing progress save files for you.
+- Make the folder configurable where Toisto saves progress. Use `toisto configure --progress-folder {folder}` to change the folder. Note that Toisto does not copy or move your existing progress save files for you. After configuring the same (cloud drive) folder on multiple devices, Toisto will take progress made on one device into account when practicing on another device.
 
 ## 0.26.0 - 2024-10-05
 

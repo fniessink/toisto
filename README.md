@@ -146,6 +146,8 @@ $ pip upgrade toisto
 
 ## How to use Toisto
 
+### How to practice
+
 Start Toisto as follows, giving the language you want to practice (the target language) and your language (the source language) as arguments:
 
 ```console
@@ -164,11 +166,35 @@ It's also possible to specify more than one concept to practice:
 $ toisto practice --target fi --source en fruit vegetable
 ```
 
-Add `--help` or `-h` to get more information about the command-line options and arguments:
+Add `--help` or `-h` to get more information about the `practice` command:
 
 ```console
-$ toisto --help
+$ toisto practice --help
 ```
+
+### How to track progress
+
+Use the `progress` command to see which quizzes you've answered correctly and when they will be presented next.
+
+```console
+$ toisto progress
+```
+
+Add `--help` or `-h` to get more information about the `progress` command:
+
+```console
+$ toisto progress --help
+```
+
+### How to share progress between devices
+
+If you use Toisto on multiple devices, you probably want to share progress bwtween devices. Toisto can take progress made on other devices into account if it has access to the progress made on the other devices. To give Toisto access to those progress files, we need to make sure Toisto saves its progress to one shared folder from all devices. For example, on a cloud drive. Use the configure command on each device where you use Toisto to set the save folder:
+
+```console
+$ toisto configure --progress-folder /home/user/shared-drive/toisto  # Run this command on every device
+```
+
+See [How to configure the folder where to save progress](#How-to-configure-the-folder-where-to-save-progress) for more information on the `configure --progress-folder` command.
 
 ## How to configure Toisto
 
@@ -212,14 +238,14 @@ my_concepts2.json
 By default, Toisto saves progress to your home folder. To save progress to a different folder, for example a cloud drive, configure the progress folder as follows:
 
 ```console
-$ toisto configure --progress-folder /home/user/drive
+$ toisto configure --progress-folder /home/user/toisto
 ```
 
 When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `progress` section if it doesn't exist, and adds the folder:
 
 ```ini
 [progress]
-folder=/home/user/drive
+folder=/home/user/toisto
 ```
 
 ### How to configure progress updates

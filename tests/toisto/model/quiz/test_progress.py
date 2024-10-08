@@ -21,7 +21,7 @@ class ProgressTest(ToistoTestCase):
         super().setUp()
         concept = self.create_concept("english", dict(fi="englanti", nl="Engels"))
         self.quizzes = create_quizzes(FI_NL, concept)
-        self.progress = Progress({}, FI, Quizzes(self.quizzes))
+        self.progress = Progress(FI, Quizzes(self.quizzes), {})
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
@@ -71,7 +71,7 @@ class ProgressTest(ToistoTestCase):
         concept1 = self.create_concept("good day", dict(roots="good", en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(NL_EN, concept1, concept2)
-        progress = Progress({}, NL, quizzes)
+        progress = Progress(NL, quizzes, {})
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 
@@ -80,7 +80,7 @@ class ProgressTest(ToistoTestCase):
         concept1 = self.create_concept("good day", dict(roots=dict(nl="good"), en="good day", nl="goedendag"))
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(NL_EN, concept1, concept2)
-        progress = Progress({}, NL, quizzes)
+        progress = Progress(NL, quizzes, {})
         next_quiz = cast(Quiz, progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 
@@ -103,7 +103,7 @@ class ProgressTest(ToistoTestCase):
             dict(roots="afternoon", singular=dict(fi="ilta", nl="de avond"), plural=dict(fi="illat", nl="de avonden")),
         )
         quizzes = create_quizzes(FI_NL, morning, afternoon, evening)
-        progress = Progress({}, FI, quizzes, skip_concepts=2)
+        progress = Progress(FI, quizzes, {}, skip_concepts=2)
         while quiz := progress.next_quiz():
             self.assertIn("singular", quiz.concept.concept_id)
             progress.mark_evaluation(quiz, Evaluation.CORRECT)
@@ -112,7 +112,7 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is one the user has see before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
         quizzes = create_quizzes(FI_NL, *concepts).by_quiz_type(DICTATE)
-        progress = Progress({}, FI, quizzes)
+        progress = Progress(FI, quizzes, {})
         random_quiz = next(iter(quizzes))
         progress.mark_evaluation(random_quiz, Evaluation.CORRECT)
         progress.get_retention(random_quiz).skip_until = None
@@ -134,7 +134,7 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
         concept = self.create_concept("english", dict(example="example", fi="englanti", nl="Engels"))
         self.concept_quizzes = create_quizzes(FI_NL, concept)
         self.quizzes = Quizzes(example_quizzes | self.concept_quizzes)
-        self.progress = Progress({}, FI, self.quizzes)
+        self.progress = Progress(FI, self.quizzes, {})
 
     def test_update_progress_correct(self):
         """Test that related quizzes are paused, including quizzes for examples."""

@@ -4,13 +4,12 @@ from collections import deque
 
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
+from toisto.persistence.progress_format import ProgressDict
 
 from .evaluation import Evaluation
 from .quiz import Quiz, Quizzes
 from .quiz_type import QuizType
 from .retention import Retention
-
-ProgressDict = dict[str, dict[str, str | int]]
 
 
 class Progress:
@@ -18,9 +17,9 @@ class Progress:
 
     def __init__(
         self,
-        progress_dict: ProgressDict,
         target_language: Language,
         quizzes: Quizzes,
+        progress_dict: ProgressDict,
         skip_concepts: int = 5,
     ) -> None:
         self.__progress_dict = {
