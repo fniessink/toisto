@@ -1,0 +1,49 @@
+{
+    "to flee": {
+        "infinitive": {
+            "en": "to flee",
+            "fi": "paeta;;paeta is verbityypi 6",
+            "nl": "vluchten"
+        },
+        "singular": {
+            "first person": {
+                "en": "I flee",
+                "fi": "minä pakenen",
+                "nl": "ik vlucht"
+            },
+            "second person": {
+                "en": "you flee",
+                "fi": "sinä pakenet",
+                "nl": "jij vlucht"
+            },
+            "third person": {
+                "fi": "hän pakenee",
+                "feminine": {
+                    "en": "she flees",
+                    "nl": "zij vlucht"
+                },
+                "masculine": {
+                    "en": "he flees",
+                    "nl": "hij vlucht"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we flee",
+                "fi": "me pakenemme",
+                "nl": "wij vluchten"
+            },
+            "second person": {
+                "en": "you flee",
+                "fi": "te pakenette",
+                "nl": "jullie vluchten"
+            },
+            "third person": {
+                "en": "they flee",
+                "fi": "he pakenevat",
+                "nl": "zij vluchten"
+            }
+        }
+    }
+}

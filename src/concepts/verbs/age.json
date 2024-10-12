@@ -1,0 +1,49 @@
+{
+    "to age": {
+        "infinitive": {
+            "en": "to age",
+            "fi": "vanheta;;vanheta is verbityypi 6",
+            "nl": "ouder worden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I age",
+                "fi": "minä vanhenen",
+                "nl": "ik word ouder"
+            },
+            "second person": {
+                "en": "you age",
+                "fi": "sinä vanhenet",
+                "nl": "jij wordt ouder"
+            },
+            "third person": {
+                "fi": "hän vanhenee",
+                "feminine": {
+                    "en": "she ages",
+                    "nl": "zij wordt ouder"
+                },
+                "masculine": {
+                    "en": "he ages",
+                    "nl": "hij wordt ouder"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we age",
+                "fi": "me vanhenemme",
+                "nl": "wij worden ouder"
+            },
+            "second person": {
+                "en": "you age",
+                "fi": "te vanhenette",
+                "nl": "jullie worden ouder"
+            },
+            "third person": {
+                "en": "they age",
+                "fi": "he vanhenevat",
+                "nl": "zij worden ouder"
+            }
+        }
+    }
+}
