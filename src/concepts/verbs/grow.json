@@ -1,0 +1,50 @@
+{
+    "to grow younger": {
+        "antonym": "to age",
+        "infinitive": {
+            "en": "to grow younger",
+            "fi": "nuoreta;;nuoreta is verbityyppi 6",
+            "nl": "jonger worden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I grow younger",
+                "fi": "minä nuorenen",
+                "nl": "ik word jonger"
+            },
+            "second person": {
+                "en": "you grow younger",
+                "fi": "sinä nuorenet",
+                "nl": "jij wordt jonger"
+            },
+            "third person": {
+                "fi": "hän nuorenee",
+                "feminine": {
+                    "en": "she grows younger",
+                    "nl": "zij wordt jonger"
+                },
+                "masculine": {
+                    "en": "he grows younger",
+                    "nl": "hij wordt jonger"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we grow younger",
+                "fi": "me nuorenemme",
+                "nl": "wij worden jonger"
+            },
+            "second person": {
+                "en": "you grow younger",
+                "fi": "te nuorenette",
+                "nl": "jullie worden jonger"
+            },
+            "third person": {
+                "en": "they grow younger",
+                "fi": "he nuorenevat",
+                "nl": "zij worden jonger"
+            }
+        }
+    }
+}
