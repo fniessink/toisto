@@ -882,5 +882,52 @@
             "fi": "kannattaa",
             "nl": "lonen"
         }
+    },
+    "to be silent": {
+        "infinitive": {
+            "en": "to be silent",
+            "fi": "vaieta;;vaieta is verbityyppi 6",
+            "nl": "zwijgen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I am silent",
+                "fi": "minä vaikenen",
+                "nl": "ik zwijg"
+            },
+            "second person": {
+                "en": "you are silent",
+                "fi": "sinä vaikenet",
+                "nl": "jij zwijgt"
+            },
+            "third person": {
+                "fi": "hän vaikenee",
+                "feminine": {
+                    "en": "she is silent",
+                    "nl": "zij zwijgt"
+                },
+                "masculine": {
+                    "en": "he is silent",
+                    "nl": "hij zwijgt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we are silent",
+                "fi": "me vaikenemme",
+                "nl": "wij zwijgen"
+            },
+            "second person": {
+                "en": "you are silent",
+                "fi": "te vaikenette",
+                "nl": "jullie zwijgen"
+            },
+            "third person": {
+                "en": "they are silent",
+                "fi": "he vaikenevat",
+                "nl": "zij zwijgen"
+            }
+        }
     }
 }
