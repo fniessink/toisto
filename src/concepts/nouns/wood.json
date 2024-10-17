@@ -4,5 +4,11 @@
         "en": "wood",
         "fi": "puu",
         "nl": "het hout"
+    },
+    "firewood": {
+        "hypernym": "wood",
+        "en": "firewood",
+        "fi": "polttopuut",
+        "nl": "het brandhout"
     }
 }

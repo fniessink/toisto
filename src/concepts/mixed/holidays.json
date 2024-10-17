@@ -69,10 +69,20 @@
     },
     "christmas tree": {
         "hypernym": "tree",
-        "roots": [
-            "christmas",
-            "tree"
-        ],
+        "roots": {
+            "en": [
+                "christmas",
+                "tree"
+            ],
+            "fi": [
+                "christmas",
+                "spruce"
+            ],
+            "nl": [
+                "christmas",
+                "tree"
+            ]
+        },
         "en": "Christmas tree",
         "fi": "joulukuusi",
         "nl": "de kerstboom"

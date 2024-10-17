@@ -1,0 +1,18 @@
+{
+    "without": {
+        "example": "coffee without milk",
+        "en": "without",
+        "fi": "ilman",
+        "nl": "zonder"
+    },
+    "coffee without milk": {
+        "roots": [
+            "coffee",
+            "without",
+            "milk"
+        ],
+        "en": "coffee without milk",
+        "fi": "kahvi ilman maitoa",
+        "nl": "koffie zonder melk"
+    }
+}

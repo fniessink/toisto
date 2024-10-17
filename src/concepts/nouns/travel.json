@@ -1,34 +1,45 @@
 {
     "travel": {
+        "example": "to continue the journey",
         "singular": {
-            "en": "travel",
+            "en": [
+                "travel",
+                "journey"
+            ],
             "fi": "matka",
             "nl": "de reis"
         },
         "plural": {
-            "en": "travels",
+            "en": [
+                "travels",
+                "journeys"
+            ],
             "fi": "matkat",
             "nl": "de reizen"
         }
     },
     "travel program": {
         "involves": "travel",
+        "roots": "travel",
         "en": "travel program",
         "fi": "matkaohjelma",
         "nl": "het reisprogramma"
     },
     "travel insurance": {
         "involves": "travel",
+        "roots": "travel",
         "en": "travel insurance",
         "fi": "matkavakuutus",
         "nl": "de reisverzekering"
     },
     "traveler": {
+        "roots": "travel",
         "en": "traveler",
         "fi": "matkustaja",
         "nl": "de reiziger"
     },
     "traveling": {
+        "roots": "travel",
         "en": "traveling",
         "fi": "matkustaminen",
         "nl": "het reizen"

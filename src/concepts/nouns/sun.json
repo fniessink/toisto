@@ -1,0 +1,23 @@
+{
+    "sun": {
+        "example": "the sun shines",
+        "en": "sun",
+        "fi": "aurinko",
+        "nl": "de zon"
+    },
+    "sunset": {
+        "roots": "sun",
+        "en": [
+            "sunset",
+            "sundown"
+        ],
+        "fi": "auringonlasku",
+        "nl": "de zonsondergang"
+    },
+    "the sun shines": {
+        "roots": "sun",
+        "en": "The sun shines.",
+        "fi": "Aurinko paistaa.",
+        "nl": "De zon schijnt."
+    }
+}

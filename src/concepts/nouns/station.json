@@ -58,6 +58,13 @@
         },
         "en": "terminal",
         "fi": "pääteasema",
-        "nl": "eindstation"
+        "nl": "het eindstation"
+    },
+    "gas station": {
+        "hypernym": "station",
+        "roots": "station",
+        "en": "gas station",
+        "fi": "huoltoasema",
+        "nl": "het tankstation"
     }
 }

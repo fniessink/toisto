@@ -1,7 +1,10 @@
 {
     "nothing": {
         "en": "nothing",
-        "fi": "ei mitään",
+        "fi": [
+            "ei mitään",
+            "ei mikään"
+        ],
         "nl": "niets"
     }
 }

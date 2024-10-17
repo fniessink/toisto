@@ -104,47 +104,6 @@
             "nl": "de onderwerpen"
         }
     },
-    "verb": {
-        "roots": {
-            "nl": [
-                "job",
-                "word"
-            ]
-        },
-        "singular": {
-            "en": "verb",
-            "fi": "verbi",
-            "nl": "het werkwoord"
-        },
-        "plural": {
-            "en": "verbs",
-            "fi": "verbit",
-            "nl": "de werkwoorden"
-        }
-    },
-    "verb type": {
-        "roots": "verb",
-        "en": "verb type",
-        "fi": "verbityyppi",
-        "nl": "het werkwoordtype"
-    },
-    "main verb": {
-        "hypernym": "verb",
-        "roots": {
-            "en": "verb",
-            "fi": [
-                "head (main part)",
-                "verb"
-            ],
-            "nl": [
-                "head (main part)",
-                "verb"
-            ]
-        },
-        "en": "main verb",
-        "fi": "pääverbi",
-        "nl": "het hoofdwerkwoord"
-    },
     "infinitive": {
         "en": "infinitive",
         "fi": "infinitiivi",
