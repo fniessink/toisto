@@ -1,0 +1,57 @@
+{
+    "verb": {
+        "roots": {
+            "nl": [
+                "job",
+                "word"
+            ]
+        },
+        "singular": {
+            "en": "verb",
+            "fi": "verbi",
+            "nl": "het werkwoord"
+        },
+        "plural": {
+            "en": "verbs",
+            "fi": "verbit",
+            "nl": "de werkwoorden"
+        }
+    },
+    "verb type": {
+        "roots": "verb",
+        "en": "verb type",
+        "fi": "verbityyppi",
+        "nl": "het werkwoordtype"
+    },
+    "main verb": {
+        "hypernym": "verb",
+        "roots": {
+            "en": "verb",
+            "fi": [
+                "head (main part)",
+                "verb"
+            ],
+            "nl": [
+                "head (main part)",
+                "verb"
+            ]
+        },
+        "en": "main verb",
+        "fi": "pääverbi",
+        "nl": "het hoofdwerkwoord"
+    },
+    "transitive verb": {
+        "antonym": "intransitive verb",
+        "hypernym": "verb",
+        "en": "transitive verb",
+        "fi": "transitiiviverbi",
+        "nl": "het transitieve werkwoord|transitief werkwoord"
+    },
+    "intransitive verb": {
+        "antonym": "transitive verb",
+        "hypernym": "verb",
+        "en": "intransitive verb",
+        "fi": "intransitiiviverbi",
+        "nl": "het intransitieve werkwoord|intransitief werkwoord"
+    }
+}

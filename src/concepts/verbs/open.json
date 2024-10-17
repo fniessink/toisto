@@ -45,5 +45,52 @@
                 "nl": "zij openen"
             }
         }
+    },
+    "to open (intransitive)": {
+        "infinitive": {
+            "en": "to open;intransitive",
+            "fi": "aueta",
+            "nl": "open gaan"
+        },
+        "singular": {
+            "first person": {
+                "en": "I open;intransitive",
+                "fi": "minä aukean",
+                "nl": "ik ga open"
+            },
+            "second person": {
+                "en": "you open;intransitive",
+                "fi": "sinä aukeat",
+                "nl": "jij gaat open"
+            },
+            "third person": {
+                "fi": "hän aukeaa",
+                "feminine": {
+                    "en": "she opens;intransitive",
+                    "nl": "zij gaat open"
+                },
+                "masculine": {
+                    "en": "he opens;intransitive",
+                    "nl": "hij gaat open"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we open;intransitive",
+                "fi": "me aukeamme",
+                "nl": "wij gaan open"
+            },
+            "second person": {
+                "en": "you open;intransitive",
+                "fi": "te aukeatte",
+                "nl": "jullie gaan open"
+            },
+            "third person": {
+                "en": "they open;intransitive",
+                "fi": "he aukeavat",
+                "nl": "zij gaan open"
+            }
+        }
     }
 }

@@ -1,7 +1,10 @@
 {
     "work": {
         "en": "work",
-        "fi": "työ",
+        "fi": [
+            "työ",
+            "homma"
+        ],
         "nl": [
             "het werk",
             "de arbeid"

@@ -73,12 +73,6 @@
         "fi": "sade",
         "nl": "de regen"
     },
-    "sun": {
-        "example": "the sun shines",
-        "en": "sun",
-        "fi": "aurinko",
-        "nl": "de zon"
-    },
     "wind": {
         "en": "wind",
         "fi": "tuuli",
@@ -288,11 +282,5 @@
         "en": "It is foggy.",
         "fi": "On sumuista.",
         "nl": "Het is mistig."
-    },
-    "the sun shines": {
-        "roots": "sun",
-        "en": "The sun shines.",
-        "fi": "Aurinko paistaa.",
-        "nl": "De zon schijnt."
     }
 }
