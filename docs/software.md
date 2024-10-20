@@ -1013,6 +1013,22 @@ Each entry in the file is the progress of one specific quiz. The key denotes the
 
 ```json
 {
+    "nl:fi:lezen:lukea:translate": {
+        "count": 2
+    },
+    "nl:fi:het oog:silmä:translate": {
+        "start": "2023-02-25T17:34:37",
+        "end": "2023-02-25T17:35:37",
+        "skip_until": "2023-02-26T17:40:37",
+        "count": 3
+    }
+}
+```
+
+The key format was changed in Toisto v0.28 to not include the concept identifier. This allows for changing the concept identifier without invalidating the user's progress on quizzes for that concept. Whenever Toisto reads a progress file with keys in the old format, it converts the keys the new format, where possible (it can only do so for concepts the user wants to practice). The old format looks as follows:
+
+```json
+{
     "to read:nl:fi:lezen:translate": {
         "count": 2
     },
