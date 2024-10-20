@@ -1399,7 +1399,7 @@ class NumberTest(ToistoTestCase):
                 self.create_quiz(cardinal, "one", ["een"], WRITE),
                 self.create_quiz(ordinal, "eerste", ["first"], READ),
                 self.create_quiz(ordinal, "eerste", ["eerste"], DICTATE),
-                self.create_quiz(ordinal, "eerste", ["eerste"], INTERPRET),
+                self.create_quiz(ordinal, "eerste", ["first"], INTERPRET),
                 self.create_quiz(ordinal, "first", ["eerste"], WRITE),
                 self.create_quiz(concept, "eerste", ["een"], CARDINAL),
                 self.create_quiz(concept, "een", ["eerste"], ORDINAL),
