@@ -780,6 +780,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(feminine, "hän on", ["she is|she's"], INTERPRET),
                 self.create_quiz(feminine, "she is|she's", ["hän on"], WRITE),
                 self.create_quiz(masculine, "hän on", ["he is|he's"], READ),
+                self.create_quiz(masculine, "hän on", ["hän on"], DICTATE),
+                self.create_quiz(masculine, "hän on", ["he is|he's"], INTERPRET),
                 self.create_quiz(masculine, "he is|he's", ["hän on"], WRITE),
             },
             create_quizzes(FI_EN, concept),
