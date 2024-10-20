@@ -203,7 +203,7 @@ class QuizFactory:
             Quiz(
                 concept,
                 label,
-                labels,
+                Labels([label]),  # Question and answer are equal, the question is shuffled when the quiz is presented
                 ORDER,
                 tuple(previous_quizzes),
                 Labels(),
