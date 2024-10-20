@@ -39,6 +39,7 @@ def load_progress(
         if other_progress_filepath != progress_filepath
     ]
     update_progress_dict(progress_dict, *other_progress_dicts)
+    update_quiz_keys(progress_dict, quizzes)
     return Progress(target_language, quizzes, progress_dict)
 
 
@@ -77,3 +78,11 @@ def update_progress_dict(progress_dict: ProgressDict, *progress_dicts: ProgressD
                     progress_dict[key]["skip_until"] = max(current_skip_until, other_skip_until)
                 else:
                     progress_dict[key] = {"skip_until": other_skip_until}
+
+
+def update_quiz_keys(progress_dict: ProgressDict, quizzes: Quizzes) -> None:
+    """Replace old quiz keys with new keys in the progress dict."""
+    for quiz in quizzes:
+        if quiz.old_key in progress_dict:
+            progress_dict[quiz.key] = progress_dict[quiz.old_key]
+            del progress_dict[quiz.old_key]

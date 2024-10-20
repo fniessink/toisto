@@ -9,7 +9,7 @@ from toisto.model.language import FI, Language
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.retention import Retention
-from toisto.persistence.progress import load_progress, save_progress, update_progress_dict
+from toisto.persistence.progress import load_progress, save_progress, update_progress_dict, update_quiz_keys
 from toisto.persistence.progress_format import ProgressDict
 
 from ...base import ToistoTestCase
@@ -101,7 +101,8 @@ class UpdateProgressTest(ToistoTestCase):
     """Unit tests for the update progress method."""
 
     def setUp(self) -> None:
-        """Override to set up test fixtures."""
+        """Extend to set up test fixtures."""
+        super().setUp()
         self.grey: ProgressDict = {
             "grey:nl:fi:grijs:write": {
                 "start": "2023-03-06T22:29:25",
@@ -219,3 +220,60 @@ class UpdateProgressTest(ToistoTestCase):
         }
         update_progress_dict(self.friday_paused2, self.friday2)
         self.assertEqual(expected, self.friday_paused2)
+
+
+class UpdateQuizKeysTest(ToistoTestCase):
+    """Unit tests for the update quiz keys method."""
+
+    def setUp(self) -> None:
+        """Extend to set up test fixtures."""
+        super().setUp()
+        self.concept = self.create_concept("english", {})
+        self.quiz = self.create_quiz(self.concept, "englanti", ["Engels"])
+
+    def test_updating_an_empty_progress_dict_with_no_quizzes(self):
+        """Test that updating an empty progress without quizzes leaves the progress dict unchanged."""
+        empty: ProgressDict = {}
+        update_quiz_keys(empty, Quizzes())
+        self.assertEqual({}, empty)
+
+    def test_updating_an_empty_progress_dict_with_quizzes(self):
+        """Test that updating an empty progress with quizzes leaves the progress dict unchanged."""
+        empty: ProgressDict = {}
+        update_quiz_keys(empty, Quizzes([self.quiz]))
+        self.assertEqual({}, empty)
+
+    def test_updating_an_progress_dict_with_new_key(self):
+        """Test that updating a progress with the new key leaves the progress dict unchanged."""
+        progress_dict: ProgressDict = {
+            self.quiz.key: {
+                "start": "2023-03-06T22:29:47",
+                "end": "2023-12-03T13:53:57",
+                "skip_until": "2027-08-22T18:54:49",
+                "count": 5,
+            }
+        }
+        expected_progress_dict = progress_dict.copy()
+        update_quiz_keys(progress_dict, Quizzes([self.quiz]))
+        self.assertEqual(expected_progress_dict, progress_dict)
+
+    def test_updating_an_progress_dict_with_old_key(self):
+        """Test that updating a progress with the old key updates the key."""
+        progress_dict: ProgressDict = {
+            self.quiz.old_key: {
+                "start": "2023-03-06T22:29:47",
+                "end": "2023-12-03T13:53:57",
+                "skip_until": "2027-08-22T18:54:49",
+                "count": 5,
+            }
+        }
+        expected_progress_dict: ProgressDict = {
+            self.quiz.key: {
+                "start": "2023-03-06T22:29:47",
+                "end": "2023-12-03T13:53:57",
+                "skip_until": "2027-08-22T18:54:49",
+                "count": 5,
+            }
+        }
+        update_quiz_keys(progress_dict, Quizzes([self.quiz]))
+        self.assertEqual(expected_progress_dict, progress_dict)
