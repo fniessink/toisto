@@ -96,6 +96,8 @@ class QuizFactory:
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
         target_language, source_language = self.language_pair.target, self.language_pair.source
+        if concept.is_composite(target_language):
+            return Quizzes()
         target_labels = concept.labels(target_language).non_colloquial
         blocked_by = tuple(previous_quizzes) if previous_quizzes else ()
         meanings = concept.meanings(source_language)
@@ -203,7 +205,7 @@ class QuizFactory:
             Quiz(
                 concept,
                 label,
-                Labels([label]),  # Question and answer are equal, the question is shuffled when the quiz is presented
+                Labels((label,)),  # Question and answer are equal, the question is shuffled when the quiz is presented
                 ORDER,
                 tuple(previous_quizzes),
                 Labels(),
