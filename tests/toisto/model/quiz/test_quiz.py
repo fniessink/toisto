@@ -50,7 +50,7 @@ class QuizTestCase(ToistoTestCase):
         super().setUp()
         self.concept = self.create_concept("english", {})
         self.language_pair = FI_NL
-        self.quiz = self.create_quiz(self.concept, "Englanti", ["Engels"])
+        self.quiz = self.create_quiz(self.concept, "englanti", ["Engels"])
 
 
 class QuizTest(QuizTestCase):
@@ -72,7 +72,7 @@ class QuizTest(QuizTestCase):
 
     def test_repr(self):
         """Test the repr() function."""
-        self.assertEqual("english:fi:nl:Englanti:read", repr(self.quiz))
+        self.assertEqual("english:fi:nl:englanti:read", repr(self.quiz))
 
     def test_is_correct(self):
         """Test a correct guess."""
@@ -478,7 +478,7 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_equal_with_different_notes(self):
         """Test that quizzes are equal if only their notes differ."""
-        self.assertEqual(self.copy_quiz(self.quiz, question="Englanti;note"), self.quiz)
+        self.assertEqual(self.copy_quiz(self.quiz, question="englanti;note"), self.quiz)
         self.assertEqual(self.copy_quiz(self.quiz, answers=["Engels;note"]), self.quiz)
 
     def test_not_equal_with_different_questions(self):
@@ -495,7 +495,7 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_when_questions_have_different_case(self):
         """Test that quizzes are different if only the case of the question differs."""
-        self.assertNotEqual(self.copy_quiz(self.quiz, question=str(self.quiz.question).lower()), self.quiz)
+        self.assertNotEqual(self.copy_quiz(self.quiz, question=str(self.quiz.question).upper()), self.quiz)
 
     def test_equal_when_answers_have_different_case(self):
         """Test that quizzes are equal if only the case of the answers differs."""
