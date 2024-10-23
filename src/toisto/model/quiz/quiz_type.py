@@ -109,6 +109,7 @@ class GrammaticalQuizType(QuizType):
 
     def __post_init__(self) -> None:
         """Add the quiz type to the grammatical quiz type registry."""
+        self.actions.add_item(self._action, self)
         self.instances.add_item(self._action, self)
 
     @property
