@@ -31,22 +31,21 @@ def load_progress(
     folder = Path(config["progress"]["folder"])
     uuid = config["identity"]["uuid"]
     progress_filepath = get_progress_filepath(target_language, folder, uuid)
-    progress_dict = load_progress_file(progress_filepath, argument_parser)
+    progress_dict = load_progress_file(progress_filepath, quizzes, argument_parser)
     progress_filepaths = get_progress_filepaths(target_language, folder)
     other_progress_dicts = [
-        load_progress_file(other_progress_filepath, argument_parser)
+        load_progress_file(other_progress_filepath, quizzes, argument_parser)
         for other_progress_filepath in progress_filepaths
         if other_progress_filepath != progress_filepath
     ]
     update_progress_dict(progress_dict, *other_progress_dicts)
-    update_quiz_keys(progress_dict, quizzes)
     return Progress(target_language, quizzes, progress_dict)
 
 
-def load_progress_file(progress_filepath: Path, argument_parser: ArgumentParser) -> ProgressDict:
+def load_progress_file(progress_filepath: Path, quizzes: Quizzes, argument_parser: ArgumentParser) -> ProgressDict:
     """Load progress from one progress file."""
     try:
-        return load_json(progress_filepath, default={})
+        progress_dict = load_json(progress_filepath, default={})
     except Exception as reason:  # noqa: BLE001
         return argument_parser.error(
             f"""{NAME} cannot parse the progress information in {progress_filepath}: {reason}.
@@ -55,6 +54,8 @@ progress. Please consider opening a bug report at https://github.com/fniessink/{
 the invalid progress file to the issue.
 """,
         )
+    update_quiz_keys(progress_dict, quizzes)
+    return progress_dict
 
 
 def save_progress(progress: Progress, config: ConfigParser) -> None:
