@@ -152,9 +152,9 @@ class Quiz:
         if self.concept.same_base_concept(*homonyms):
             return self.concept.grammatical_differences(*homonyms)
         if hypernyms := self.concept.get_related_concepts("hypernym"):
-            return [hypernym.concept_id for hypernym in hypernyms[:1]]
+            return [str(hypernym.labels(self.question.language)[0]) for hypernym in hypernyms[:1]]
         holonyms = self.concept.get_related_concepts("holonym")
-        return [f"part of {holonym.concept_id}" for holonym in holonyms]
+        return [f"part of '{holonym.labels(self.question.language)[0]}'" for holonym in holonyms]
 
 
 class Quizzes(set[Quiz]):
