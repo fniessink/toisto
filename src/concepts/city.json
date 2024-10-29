@@ -64,8 +64,14 @@
     "movie theater": {
         "hypernym": "building",
         "roots": {
-            "en": "theater",
-            "fi": "theater"
+            "en": [
+                "movie",
+                "theater"
+            ],
+            "fi": [
+                "movie",
+                "theater"
+            ]
         },
         "singular": {
             "en": "movie theater",
@@ -161,18 +167,6 @@
             "en": "cafés",
             "fi": "kahvilat",
             "nl": "de cafés"
-        }
-    },
-    "bar": {
-        "singular": {
-            "en": "bar",
-            "fi": "baari",
-            "nl": "de bar"
-        },
-        "plural": {
-            "en": "bars",
-            "fi": "baarit",
-            "nl": "de bars"
         }
     },
     "restaurant": {
