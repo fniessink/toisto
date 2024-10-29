@@ -1,0 +1,20 @@
+{
+    "movie": {
+        "singular": {
+            "en": [
+                "movie",
+                "film"
+            ],
+            "fi": "elokuva",
+            "nl": "de film"
+        },
+        "plural": {
+            "en": [
+                "movies",
+                "films"
+            ],
+            "fi": "elokuvat",
+            "nl": "de films"
+        }
+    }
+}

@@ -66,6 +66,14 @@
             ]
         }
     },
+    "on weekdays": {
+        "en": "on weekdays",
+        "fi": "arkisin",
+        "nl": [
+            "op werkdagen",
+            "door de week"
+        ]
+    },
     "birthday": {
         "hypernym": "day",
         "en": "birthday",
