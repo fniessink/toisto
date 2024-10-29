@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Don't add an empty files section to the config file when the user has not configured any extra concept files to load. Fixes [#856](https://github.com/fniessink/toisto/issues/856).
+- Complain when an extra concept file does not exist. Fixes [#856](https://github.com/fniessink/toisto/issues/856).
+
 ### Changed
 
 - Use labels instead of concept identifiers when generating hints based on homonym relations between concepts.

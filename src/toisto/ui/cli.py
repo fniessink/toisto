@@ -34,6 +34,14 @@ def check_folder(folder: str) -> str:
     raise ArgumentTypeError(message)
 
 
+def check_file(path: str) -> Path:
+    """Check that the path is a file and exists."""
+    if Path(path).is_file():
+        return Path(path)
+    message = f"file '{path}' does not exist or is not a file"
+    raise ArgumentTypeError(message)
+
+
 class CommandBuilder:
     """Command builder."""
 
@@ -82,14 +90,16 @@ class CommandBuilder:
 
     def add_file_arguments(self, parser: ArgumentParser) -> None:
         """Add the file arguments."""
+        default = [Path(filename) for filename in self.config["files"]] if self.config.has_section("files") else []
+        default_help = ", ".join(str(path) for path in default) if default else "none"
         parser.add_argument(
             "-f",
             "--file",
             action="append",
-            default=[],
+            default=default,
             metavar="{file}",
-            help="file with extra concepts to read, can be repeated",
-            type=Path,
+            help=f"file with extra concepts to read, can be repeated; default: {default_help}",
+            type=check_file,
         )
 
     def add_progress_folder_argument(self, parser: ArgumentParser) -> None:

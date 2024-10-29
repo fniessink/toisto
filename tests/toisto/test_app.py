@@ -51,7 +51,7 @@ class AppTest(ToistoTestCase):
         }}
         """
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_practice(self, requests_get: Mock) -> None:
         """Test that the practice command can be invoked."""
@@ -59,7 +59,7 @@ class AppTest(ToistoTestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
     @patch("requests.get")
     def test_new_version_when_current_version_was_installed_with_uv(self, requests_get: Mock) -> None:
@@ -69,7 +69,7 @@ class AppTest(ToistoTestCase):
         self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
         self.assertIn("uv tool upgrade", patched_print.call_args_list[3][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=["", "toisto"]))
     @patch("requests.get")
     def test_new_version_when_current_version_was_installed_with_pipx(self, requests_get: Mock) -> None:
@@ -79,7 +79,7 @@ class AppTest(ToistoTestCase):
         self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
         self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=["", ""]))
     @patch("requests.get")
     def test_new_version_when_current_version_was_installed_with_pip(self, requests_get: Mock) -> None:
@@ -89,7 +89,7 @@ class AppTest(ToistoTestCase):
         self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
         self.assertIn("pip upgrade", patched_print.call_args_list[3][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=[OSError, "toisto"]))
     @patch("requests.get")
     def test_new_version_when_checking_for_installation_tool_fails(self, requests_get: Mock) -> None:
@@ -99,7 +99,7 @@ class AppTest(ToistoTestCase):
         self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
         self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_current_version(self, requests_get: Mock) -> None:
         """Test that the practice command does not show the current version."""
@@ -107,7 +107,7 @@ class AppTest(ToistoTestCase):
         patched_print = self.run_main()
         self.assertNotEqual(VERSION, patched_print.call_args_list[3][0][0].renderable)
 
-    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_github_connection_error(self, requests_get: Mock) -> None:
         """Test that the practice command starts even if GitHub cannot be reached to get the latest version."""
@@ -115,7 +115,7 @@ class AppTest(ToistoTestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
-    @patch.object(sys, "argv", ["toisto", "progress", "--target", "fi", "--source", "nl", "--file", "test"])
+    @patch.object(sys, "argv", ["toisto", "progress", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_progress(self, requests_get: Mock) -> None:
         """Test that the progress command can be invoked."""

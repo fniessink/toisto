@@ -5,6 +5,7 @@ import re
 import unittest
 from argparse import ArgumentParser, Namespace
 from configparser import ConfigParser
+from pathlib import Path
 from unittest.mock import Mock, patch
 
 from toisto.metadata import README_URL
@@ -33,7 +34,7 @@ TARGET_OPTION = """-t, --target {language}
                         target language; %slanguages available in built-in concepts: en, fi, nl"""
 SOURCE_OPTION = """-s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl"""
-FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated"
+FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated; default: none"
 PROGRESS_FOLDER = f"""--progress-folder {{folder}}
                         folder where to save progress; default: {home()!s}"""
 PROGRESS_OPTION = """-p, --progress-update {frequency}
@@ -129,6 +130,34 @@ See {README_URL} for more information.
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
             "error: argument --progress-folder: folder '/home/user/toisto' does not exist or is not a folder",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--file", "/home/user/extra.json"])
+    @patch("toisto.ui.cli.Path.is_file", Mock(return_value=True))
+    def test_configure_concept_file(self) -> None:
+        """Test that a concept file folder can be configured."""
+        expected_namespace = Namespace(
+            command="configure",
+            file=[Path("/home/user/extra.json")],
+            mp3player="afplay",
+            progress_folder=str(home()),
+            progress_update=0,
+            source_language=None,
+            target_language=None,
+        )
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--file", "/home/user/extra.json"])
+    @patch("toisto.ui.cli.Path.is_file", Mock(return_value=False))
+    @patch("sys.stderr.write")
+    def test_configure_non_existing_concept_file(self, sys_stderr_write: Mock) -> None:
+        """Test that the concept file is checked for existence."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "error: argument -f/--file: file '/home/user/extra.json' does not exist or is not a file",
             sys_stderr_write.call_args_list[1][0][0],
         )
 
