@@ -1,8 +1,9 @@
 """Command-line interface."""
 
 import sys
-from argparse import ArgumentParser, ArgumentTypeError, Namespace
+from argparse import ArgumentError, ArgumentParser, ArgumentTypeError, Namespace
 from configparser import ConfigParser
+from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING, get_args
 
@@ -10,6 +11,8 @@ from rich_argparse import RichHelpFormatter
 
 from toisto.command.show_progress import SortColumn
 from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
+from toisto.model.filter import map_concepts_by_label
+from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 from toisto.persistence.folder import home
@@ -53,6 +56,20 @@ def check_folder_or_file(path_name: str) -> Path:
     return path.resolve()
 
 
+@dataclass(frozen=True)
+class LabelChecker:
+    """Class to check whether the given label is present in the list of labels."""
+
+    labels: tuple[str, ...]
+
+    def __call__(self, label: str) -> str:
+        """Check whether the given label is present in the list of labels."""
+        if label not in self.labels:
+            message = f"invalid choice '{label}' (run `toisto practice -h` to see the valid choices)"
+            raise ArgumentTypeError(message)
+        return label
+
+
 class CommandBuilder:
     """Command builder."""
 
@@ -68,8 +85,9 @@ class CommandBuilder:
             command, description=description, help=command_help, formatter_class=RichHelpFormatter
         )
 
-    def add_language_arguments(self, parser: ArgumentParser) -> None:
+    def add_language_arguments(self, parser: ArgumentParser, required: bool | None = None) -> None:
         """Add the language arguments to the parser."""
+        required = self.LANGUAGE_ARGUMENT_REQUIRED if required is None else required
         languages = ", ".join(sorted(BUILT_IN_LANGUAGES))
         for argument in ("target", "source"):
             default = self.config.get("languages", argument, fallback=None)
@@ -81,23 +99,40 @@ class CommandBuilder:
                 dest=f"{argument}_language",
                 help=f"{argument} language; {default_help}languages available in built-in concepts: {languages}",
                 metavar="{language}",
-                required=not default if self.LANGUAGE_ARGUMENT_REQUIRED else False,
+                required=not default if required else False,
                 type=check_language,
             )
 
     def add_concept_argument(self, parser: ArgumentParser, concepts: set[Concept]) -> None:
         """Add the concept argument."""
-        concept_ids = sorted(
-            concept.concept_id
-            for concept in concepts
-            if not concept.is_complete_sentence and not concept.get_related_concepts("hypernym")
+        concepts_by_label = map_concepts_by_label(concepts, self.get_target_language())
+        labels = sorted(
+            label
+            for (label, concepts) in concepts_by_label.items()
+            if not concepts.copy().pop().is_complete_sentence
+            and not concepts.copy().pop().get_related_concepts("hypernym")
         )
         parser.add_argument(
             "concepts",
             metavar="{concept}",
             nargs="*",
-            help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
+            help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(labels)}",
+            type=LabelChecker(tuple(labels)),
         )
+
+    def get_target_language(self) -> Language:
+        """Return the target language as specified on the command-line or in the config file. Fallback to English."""
+        language_parser = ArgumentParser(add_help=False, exit_on_error=False)
+        self.add_language_arguments(language_parser, required=False)
+        try:
+            namespace = language_parser.parse_known_args()[0]
+        except ArgumentError:
+            namespace = Namespace()  # Don't fail on invalid languages here, but let the main parser handle that
+        if "target_language" in namespace and namespace.target_language is not None:
+            language_str = namespace.target_language
+        else:
+            language_str = self.config.get("languages", "target", fallback="en")
+        return Language(language_str)
 
     def add_extra_concepts_arguments(self, parser: ArgumentParser) -> None:
         """Add the extra concepts argument."""

@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 
 from toisto.model.filter import filter_concepts
 from toisto.model.language import EN
-from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept import Concept
 
 from ...base import ToistoTestCase
 
@@ -18,17 +18,16 @@ class FilterTest(ToistoTestCase):
         super().setUp()
         Concept.instances.clear()
         self.argument_parser = ArgumentParser()
-        self.foo = self.create_concept("foo", {})
-        self.bar = self.create_concept("bar", {})
+        self.foo = self.create_concept("foo", {"en": "foo"})
+        self.bar = self.create_concept("bar", {"en": "bar"})
         self.bar_id = self.bar.concept_id
-        self.baz_id = ConceptId("baz")
         self.concepts = {self.foo, self.bar}
 
     def filter_concepts(
         self,
         *,
         concepts: set[Concept] | None = None,
-        selected_concepts: list[ConceptId] | None = None,
+        selected_concepts: list[str] | None = None,
     ) -> set[Concept]:
         """Filter the concepts."""
         return filter_concepts(
@@ -48,13 +47,13 @@ class FilterTest(ToistoTestCase):
 
     def test_selected_concepts(self):
         """Test that the selected concepts are returned."""
-        self.assertEqual({self.bar}, self.filter_concepts(selected_concepts=[self.bar_id]))
+        self.assertEqual({self.bar}, self.filter_concepts(selected_concepts=["bar"]))
 
     @patch("sys.stderr.write")
     def test_selected_concepts_without_concepts(self, sys_stderr_write: Mock) -> None:
         """Test that an empty selection results in an error message."""
-        self.assertRaises(SystemExit, self.filter_concepts, selected_concepts=[self.baz_id])
-        self.assertIn("Concept 'baz' not found", sys_stderr_write.call_args_list[1][0][0])
+        self.assertRaises(SystemExit, self.filter_concepts, selected_concepts=["baz"])
+        self.assertIn("'baz' not found", sys_stderr_write.call_args_list[1][0][0])
 
     def test_add_hyponyms_of_selected_concepts_recursively(self):
         """Test that the hyponyms of selected concepts are added, recursively."""
@@ -62,19 +61,19 @@ class FilterTest(ToistoTestCase):
         little_beer_bar = self.create_concept("little beer bar", dict(hypernym=little_bar.concept_id))
         self.assertEqual(
             {self.bar, little_bar, little_beer_bar},
-            self.filter_concepts(
-                concepts=self.concepts | {little_bar, little_beer_bar}, selected_concepts=[self.bar_id]
-            ),
+            self.filter_concepts(concepts=self.concepts | {little_bar, little_beer_bar}, selected_concepts=["bar"]),
         )
 
     def test_do_not_add_hypernyms_of_selected_concepts(self):
         """Test that the hypernyms of selected concepts are not added."""
         little_bar = self.create_concept("little bar", dict(hypernym=self.bar_id))
-        little_beer_bar = self.create_concept("little beer bar", dict(hypernym=little_bar.concept_id))
+        little_beer_bar = self.create_concept(
+            "little beer bar", dict(hypernym=little_bar.concept_id, en="little beer bar")
+        )
         self.assertEqual(
             {little_beer_bar},
             self.filter_concepts(
-                concepts=self.concepts | {little_bar, little_beer_bar}, selected_concepts=[little_beer_bar.concept_id]
+                concepts=self.concepts | {little_bar, little_beer_bar}, selected_concepts=["little beer bar"]
             ),
         )
 
@@ -84,17 +83,17 @@ class FilterTest(ToistoTestCase):
         bar_part_part = self.create_concept("bar part part", dict(holonym=bar_part.concept_id))
         self.assertEqual(
             {self.bar, bar_part, bar_part_part},
-            self.filter_concepts(concepts=self.concepts | {bar_part, bar_part_part}, selected_concepts=[self.bar_id]),
+            self.filter_concepts(concepts=self.concepts | {bar_part, bar_part_part}, selected_concepts=["bar"]),
         )
 
     def test_do_not_add_holonyms_of_selected_concepts(self):
         """Test that the holonyms of selected concepts are not added."""
         bar_part = self.create_concept("bar part", dict(holonym=self.bar_id))
-        bar_part_part = self.create_concept("bar part part", dict(holonym=bar_part.concept_id))
+        bar_part_part = self.create_concept("bar part part", dict(holonym=bar_part.concept_id, en="bar part part"))
         self.assertEqual(
             {bar_part_part},
             self.filter_concepts(
-                concepts=self.concepts | {bar_part, bar_part_part}, selected_concepts=[bar_part_part.concept_id]
+                concepts=self.concepts | {bar_part, bar_part_part}, selected_concepts=["bar part part"]
             ),
         )
 
@@ -104,7 +103,7 @@ class FilterTest(ToistoTestCase):
         little_bar_part = self.create_concept("little bar part", dict(hypernym=bar_part.concept_id))
         self.assertEqual(
             {self.bar, bar_part, little_bar_part},
-            self.filter_concepts(concepts=self.concepts | {bar_part, little_bar_part}, selected_concepts=[self.bar_id]),
+            self.filter_concepts(concepts=self.concepts | {bar_part, little_bar_part}, selected_concepts=["bar"]),
         )
 
     def test_add_meronyms_of_hyponyms_of_selected_concepts(self):
@@ -113,17 +112,15 @@ class FilterTest(ToistoTestCase):
         little_bar_part = self.create_concept("little bar part", dict(holonym=little_bar.concept_id))
         self.assertEqual(
             {self.bar, little_bar, little_bar_part},
-            self.filter_concepts(
-                concepts=self.concepts | {little_bar, little_bar_part}, selected_concepts=[self.bar_id]
-            ),
+            self.filter_concepts(concepts=self.concepts | {little_bar, little_bar_part}, selected_concepts=["bar"]),
         )
 
     def test_add_antonyms_of_selected_concepts(self):
         """Test that antonyms of selected concepts are added."""
-        anti_foo = self.create_concept("anti foo", dict(antonym=self.foo.concept_id))
+        anti_foo = self.create_concept("anti foo", dict(antonym=self.foo.concept_id, en="anti foo"))
         self.assertEqual(
             {self.foo, anti_foo},
-            self.filter_concepts(concepts=self.concepts | {anti_foo}, selected_concepts=[anti_foo.concept_id]),
+            self.filter_concepts(concepts=self.concepts | {anti_foo}, selected_concepts=["anti foo"]),
         )
 
     def test_add_concepts_that_have_selected_concepts_as_root(self):
@@ -131,14 +128,14 @@ class FilterTest(ToistoTestCase):
         little_bar = self.create_concept("little bar", dict(roots=self.bar_id))
         self.assertEqual(
             {self.bar, little_bar},
-            self.filter_concepts(concepts=self.concepts | {little_bar}, selected_concepts=[self.bar_id]),
+            self.filter_concepts(concepts=self.concepts | {little_bar}, selected_concepts=["bar"]),
         )
 
     def test_add_concepts_involved_by_selected_concepts_recursively(self):
         """Test that concepts involved by selected concepts are added, recursively."""
         zoo = self.create_concept("zoo", dict(involves=self.bar_id))
-        baz = self.create_concept("baz", dict(involves=zoo.concept_id))
+        baz = self.create_concept("baz", dict(involves=zoo.concept_id, en="baz"))
         self.assertEqual(
             {self.bar, baz, zoo},
-            self.filter_concepts(concepts=self.concepts | {baz, zoo}, selected_concepts=[baz.concept_id]),
+            self.filter_concepts(concepts=self.concepts | {baz, zoo}, selected_concepts=["baz"]),
         )

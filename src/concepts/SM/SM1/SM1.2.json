@@ -1,5 +1,6 @@
 {
     "SM1.2": {
+        "fi": "(SM1.2)",
         "involves": [
             "SM1.2-kielioppi",
             "SM1.2-sanasto",
@@ -56,6 +57,7 @@
         ]
     },
     "SM1.2-kielioppi": {
+        "fi": "(SM1.2-kielioppi)",
         "involves": [
             "banana",
             "beard",
@@ -124,6 +126,7 @@
         ]
     },
     "SM1.2-sanasto": {
+        "fi": "(SM1.2-sanasto)",
         "involves": [
             "africa",
             "also",

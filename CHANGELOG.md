@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Allow for selecting concepts to practice using labels in the target language instead of English. See `toisto practice --help`. Closes [#897](https://github.com/fniessink/toisto/issues/897).
+
 ## 0.30.0 - 2024-11-07
 
 ### Added
