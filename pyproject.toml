@@ -142,4 +142,4 @@ where = ["src"]
 languages = ["*.txt"]
 
 [tool.vulture]
-ignore_names = ["_SubParsersAction"]
+ignore_names = ["_SubParsersAction", "optionxform"]
