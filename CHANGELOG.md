@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
-- Progress on grammatical quizzes was not loaded correctly, causing grammatical quizzes to be presented too often.
+- Progress on grammatical quizzes was not loaded correctly, causing grammatical quizzes to be presented too often.  Fixes [#825](https://github.com/fniessink/toisto/issues/825).
 
 ## 0.27.0 - 2024-10-14
 
