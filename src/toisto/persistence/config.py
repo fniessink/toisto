@@ -104,7 +104,7 @@ class ConfigSchemaValidator:
 
 def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser:
     """Read the config file, validate it, and exit with an error message if it doesn't pass."""
-    parser = ConfigParser(allow_no_value=True)
+    parser = _create_config_parser()
     try:
         with config_filename.open("r", encoding="utf-8") as config_file:
             parser.read_file(config_file)
@@ -134,15 +134,23 @@ def write_config(
 
 def default_config() -> ConfigParser:
     """Return the default configuration."""
-    parser = ConfigParser(allow_no_value=True)
+    parser = _create_config_parser()
     _add_defaults(parser)
+    return parser
+
+
+def _create_config_parser() -> ConfigParser:
+    """Return a config parser without configuration."""
+    parser = ConfigParser(allow_no_value=True)
+    # The files section has options that are file names, we don't want those to be lower cased:
+    parser.optionxform = lambda optionstr: optionstr  # type: ignore[method-assign]
     return parser
 
 
 def _add_defaults(parser: ConfigParser) -> None:
     """Add the default configuration to the parser."""
     for section, section_schema in CONFIG_SCHEMA.items():
-        if isinstance(section_schema, dict):  # only dict sections have defaults
+        if isinstance(section_schema, dict):  # Only dict sections have defaults
             _add_defaults_to_section(parser, section, section_schema)
 
 

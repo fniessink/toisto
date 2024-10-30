@@ -75,6 +75,11 @@ class ReadValidConfigTest(ConfigTestCase):
         config = self.read_config(path_open, "[files]\n", "extra1.json\n", "extra2.json\n")
         self.assertEqual(["extra1.json", "extra2.json"], list(config["files"].keys()))
 
+    def test_file_section_with_upper_case_characters_in_file_name(self, path_open: Mock) -> None:
+        """Test reading a valid config with a file section with a file with uppercase characters."""
+        config = self.read_config(path_open, "[files]\n", "/User/toisto/extra.json\n")
+        self.assertEqual(["/User/toisto/extra.json"], list(config["files"].keys()))
+
     @patch("sys.platform", "darwin")
     def test_incomplete_config(self, path_open: Mock) -> None:
         """Test reading an incomplete config."""

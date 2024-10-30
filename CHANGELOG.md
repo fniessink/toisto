@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Use labels instead of concept identifiers when generating hints based on homonym relations between concepts.
 
+### Fixed
+
+- Don't convert file names in the configuration file to lower case.
+
 ## 0.27.1 - 2024-10-29
 
 ### Fixed
