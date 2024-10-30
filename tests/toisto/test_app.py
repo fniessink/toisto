@@ -59,6 +59,14 @@ class AppTest(ToistoTestCase):
         patched_print = self.run_main()
         self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
 
+    @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "concept-1 in fi"])
+    @patch("requests.get")
+    def test_practice_concept(self, requests_get: Mock) -> None:
+        """Test that the practice command can be invoked with a specific concept."""
+        requests_get.return_value = self.latest_version
+        patched_print = self.run_main()
+        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
+
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
     @patch("requests.get")

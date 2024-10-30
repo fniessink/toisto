@@ -154,19 +154,19 @@ Start Toisto as follows, giving the language you want to practice (the target la
 $ toisto practice --target fi --source en
 ```
 
-To practice a specific concept and related concepts, pass it as follows:
+To practice a specific concept and related concepts, pass it as follows (väri means color):
 
 ```console
-$ toisto practice --target fi --source en color
+$ toisto practice --target fi --source en väri
 ```
 
-It's also possible to specify more than one concept to practice:
+It's also possible to specify more than one concept to practice (hedelmä means fruit and vihannes means vegetable):
 
 ```console
-$ toisto practice --target fi --source en fruit vegetable
+$ toisto practice --target fi --source en hedelmä vihannes
 ```
 
-Add `--help` or `-h` to get more information about the `practice` command:
+Add `--help` or `-h` to get more information about the `practice` command, including the available concepts:
 
 ```console
 $ toisto practice --help

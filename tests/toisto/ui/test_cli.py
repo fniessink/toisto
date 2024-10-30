@@ -9,7 +9,7 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 from toisto.metadata import README_URL
-from toisto.model.language import Language
+from toisto.model.language import EN
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
@@ -272,12 +272,12 @@ Options:
         """Test that the practice help message is displayed."""
         foo = ConceptId("foo")
         bar = ConceptId("bar")
-        english = Language("en")
         concepts = {
-            Concept(foo, None, (), Labels((Label(english, "foo"),)), Labels(), {}, {}, False),
-            Concept(bar, None, (), Labels((Label(english, "bar"),)), Labels(), {}, {}, False),
+            Concept(foo, None, (), Labels((Label(EN, "foo"),)), Labels(), {}, {}, False),
+            Concept(bar, None, (), Labels((Label(EN, "bar"),)), Labels(), {}, {}, False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
+        self.maxDiff = None
         self.assertEqual(
             f"""{PRACTICE_USAGE}
 
@@ -416,5 +416,15 @@ Options:
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
             "toisto: error: target and source language are the same: 'fi' \n",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("sys.argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "foo"])
+    @patch("sys.stderr.write")
+    def test_invalid_concept(self, sys_stderr_write: Mock) -> None:
+        """Test that an error message is displayed if an invalid concept is supplied."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "invalid choice 'foo' (run `toisto practice -h` to see the valid choices)",
             sys_stderr_write.call_args_list[1][0][0],
         )
