@@ -135,12 +135,30 @@ See {README_URL} for more information.
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--file", "/home/user/extra.json"])
+    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/extra.json")))
     @patch("toisto.ui.cli.Path.is_file", Mock(return_value=True))
     def test_configure_concept_file(self) -> None:
         """Test that a concept file folder can be configured."""
         expected_namespace = Namespace(
             command="configure",
             file=[Path("/home/user/extra.json")],
+            mp3player="afplay",
+            progress_folder=str(home()),
+            progress_update=0,
+            source_language=None,
+            target_language=None,
+        )
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--file", "~/toisto/extra.json"])
+    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto/extra.json")))
+    @patch("toisto.ui.cli.Path.is_file", Mock(return_value=True))
+    def test_configure_concept_file_with_relative_path(self) -> None:
+        """Test that a concept file with a relative path can be configured."""
+        expected_namespace = Namespace(
+            command="configure",
+            file=[Path("/home/user/toisto/extra.json")],
             mp3player="afplay",
             progress_folder=str(home()),
             progress_update=0,
