@@ -37,7 +37,7 @@ def check_folder(folder: str) -> str:
 def check_file(path: str) -> Path:
     """Check that the path is a file and exists."""
     if Path(path).is_file():
-        return Path(path)
+        return Path(path).resolve()
     message = f"file '{path}' does not exist or is not a file"
     raise ArgumentTypeError(message)
 
