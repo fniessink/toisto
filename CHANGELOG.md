@@ -4,6 +4,16 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Allow for specifying folders from which to (recursively) read extra concept files using the `--extra` command line option. Closes [#899](https://github.com/fniessink/toisto/issues/900).
+
+### Changed
+
+- Rename the command line option to add extra concept files from `-f/--file` to `-e/--extra`.
+
 ## 0.28.1 - 2024-11-01
 
 ### Fixed

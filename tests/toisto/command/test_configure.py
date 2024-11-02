@@ -54,14 +54,14 @@ class ConfigureTest(ToistoTestCase):
         configure(self.argument_parser, config, Namespace(mp3player="/bin/mp3player"))
         self.assert_configured(write_config, config, ("commands", "mp3player", "/bin/mp3player"))
 
-    def test_change_files(self, write_config: Mock) -> None:
-        """Test changing the files."""
+    def test_change_extra_paths(self, write_config: Mock) -> None:
+        """Test changing the extra paths."""
         config = ConfigParser()
-        configure(self.argument_parser, config, Namespace(file=[Path("/home/user/extra.json")]))
+        configure(self.argument_parser, config, Namespace(extra=[Path("/home/user/extra.json")]))
         self.assert_configured(write_config, config, ("files", "/home/user/extra.json", ""))
 
     def test_progress_folder(self, write_config: Mock) -> None:
         """Test changing the progress folder."""
         config = ConfigParser()
-        configure(self.argument_parser, config, Namespace(progress_folder="/home/user/toisto"))
+        configure(self.argument_parser, config, Namespace(progress_folder=Path("/home/user/toisto")))
         self.assert_configured(write_config, config, ("progress", "folder", "/home/user/toisto"))

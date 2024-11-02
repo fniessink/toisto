@@ -17,14 +17,13 @@ from toisto.persistence.folder import home
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
 CONFIGURE_USAGE = (
-    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-f {file}] [--progress-folder {folder}] "
-    "[-p {frequency}]\n"
-    "                        [-m {mp3player}]"
+    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-e {path}] [-p {path}] [-u {frequency}] "
+    "[-m {mp3player}]"
 )
-PRACTICE_USAGE = "Usage: toisto practice [-h] -t {language} -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
+PRACTICE_USAGE = "Usage: toisto practice [-h] -t {language} -s {language} [-e {path}] [-u {frequency}] [{concept} ...]"
 CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
 PRACTICE_USAGE_OPTIONAL_TARGET = (
-    "Usage: toisto practice [-h] [-t {language}] -s {language} [-f {file}] [-p {frequency}] [{concept} ...]"
+    "Usage: toisto practice [-h] [-t {language}] -s {language} [-e {path}] [-u {frequency}] [{concept} ...]"
 )
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
@@ -34,10 +33,10 @@ TARGET_OPTION = """-t, --target {language}
                         target language; %slanguages available in built-in concepts: en, fi, nl"""
 SOURCE_OPTION = """-s, --source {language}
                         source language; languages available in built-in concepts: en, fi, nl"""
-FILE_OPTION = "-f, --file {file}     file with extra concepts to read, can be repeated; default: none"
-PROGRESS_FOLDER = f"""--progress-folder {{folder}}
+EXTRA_OPTION = "-e, --extra {path}    file or folder with extra concepts to read, can be repeated; default: none"
+PROGRESS_FOLDER = f"""-p, --progress-folder {{path}}
                         folder where to save progress; default: {home()!s}"""
-PROGRESS_OPTION = """-p, --progress-update {frequency}
+PROGRESS_OPTION = """-u, --progress-update {frequency}
                         show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
 MP3PLAYER_OPTION = """-m, --mp3player {mp3player}
                         mp3 player to play sounds; default: afplay"""
@@ -96,9 +95,9 @@ See {README_URL} for more information.
         """Test that the configure command can be specified."""
         expected_namespace = Namespace(
             command="configure",
-            file=[],
+            extra=[],
             mp3player="afplay",
-            progress_folder=str(home()),
+            progress_folder=home(),
             progress_update=0,
             source_language="fi",
             target_language="nl",
@@ -108,13 +107,14 @@ See {README_URL} for more information.
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
     @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
     def test_configure_progress_folder(self) -> None:
         """Test that the progress folder can be configured."""
         expected_namespace = Namespace(
             command="configure",
-            file=[],
+            extra=[],
             mp3player="afplay",
-            progress_folder="/home/user/toisto",
+            progress_folder=Path("/home/user/toisto"),
             progress_update=0,
             source_language=None,
             target_language=None,
@@ -123,27 +123,41 @@ See {README_URL} for more information.
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
-    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=False))
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=False))
     @patch("sys.stderr.write")
     def test_configure_non_existing_progress_folder(self, sys_stderr_write: Mock) -> None:
         """Test that the progress folder is checked for existence."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
-            "error: argument --progress-folder: folder '/home/user/toisto' does not exist or is not a folder",
+            "error: argument -p/--progress-folder: path '/home/user/toisto' does not exist",
             sys_stderr_write.call_args_list[1][0][0],
         )
 
     @patch("sys.platform", "darwin")
-    @patch("sys.argv", ["toisto", "configure", "--file", "/home/user/extra.json"])
-    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/extra.json")))
+    @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=False))
+    @patch("sys.stderr.write")
+    def test_configure_progress_folder_that_is_not_a_folder(self, sys_stderr_write: Mock) -> None:
+        """Test that the progress folder is checked to be a folder."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "error: argument -p/--progress-folder: path '/home/user/toisto' is not a folder",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/extra.json"])
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
     @patch("toisto.ui.cli.Path.is_file", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/extra.json")))
     def test_configure_concept_file(self) -> None:
-        """Test that a concept file folder can be configured."""
+        """Test that a concept file can be configured."""
         expected_namespace = Namespace(
             command="configure",
-            file=[Path("/home/user/extra.json")],
+            extra=[Path("/home/user/extra.json")],
             mp3player="afplay",
-            progress_folder=str(home()),
+            progress_folder=home(),
             progress_update=0,
             source_language=None,
             target_language=None,
@@ -151,16 +165,36 @@ See {README_URL} for more information.
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
-    @patch("sys.argv", ["toisto", "configure", "--file", "~/toisto/extra.json"])
-    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto/extra.json")))
+    @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/toisto"])
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.is_file", Mock(return_value=False))
+    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto")))
+    def test_configure_concept_folder(self) -> None:
+        """Test that a concept folder can be configured."""
+        expected_namespace = Namespace(
+            command="configure",
+            extra=[Path("/home/user/toisto")],
+            mp3player="afplay",
+            progress_folder=home(),
+            progress_update=0,
+            source_language=None,
+            target_language=None,
+        )
+        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--extra", "~/toisto/extra.json"])
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
     @patch("toisto.ui.cli.Path.is_file", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto/extra.json")))
     def test_configure_concept_file_with_relative_path(self) -> None:
         """Test that a concept file with a relative path can be configured."""
         expected_namespace = Namespace(
             command="configure",
-            file=[Path("/home/user/toisto/extra.json")],
+            extra=[Path("/home/user/toisto/extra.json")],
             mp3player="afplay",
-            progress_folder=str(home()),
+            progress_folder=home(),
             progress_update=0,
             source_language=None,
             target_language=None,
@@ -168,14 +202,28 @@ See {README_URL} for more information.
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
-    @patch("sys.argv", ["toisto", "configure", "--file", "/home/user/extra.json"])
+    @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/extra.json"])
     @patch("toisto.ui.cli.Path.is_file", Mock(return_value=False))
     @patch("sys.stderr.write")
     def test_configure_non_existing_concept_file(self, sys_stderr_write: Mock) -> None:
         """Test that the concept file is checked for existence."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertIn(
-            "error: argument -f/--file: file '/home/user/extra.json' does not exist or is not a file",
+            "error: argument -e/--extra: path '/home/user/extra.json' does not exist",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/extra.json"])
+    @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
+    @patch("toisto.ui.cli.Path.is_dir", Mock(return_value=False))
+    @patch("toisto.ui.cli.Path.is_file", Mock(return_value=False))
+    @patch("sys.stderr.write")
+    def test_configure_not_a_file_or_a_folder(self, sys_stderr_write: Mock) -> None:
+        """Test that the concept file is checked for being a file or folder."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "error: argument -e/--extra: path '/home/user/extra.json' is not a file or folder",
             sys_stderr_write.call_args_list[1][0][0],
         )
 
@@ -185,6 +233,7 @@ See {README_URL} for more information.
     def test_configure_help(self, sys_stdout_write: Mock) -> None:
         """Test that the configure help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.maxDiff = None
         self.assertEqual(
             f"""{CONFIGURE_USAGE}
 
@@ -194,7 +243,7 @@ Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
-  {FILE_OPTION}
+  {EXTRA_OPTION}
   {PROGRESS_FOLDER}
   {PROGRESS_OPTION % "0"}
   {MP3PLAYER_OPTION}
@@ -211,7 +260,7 @@ Options:
             target_language="nl",
             source_language="fi",
             concepts=[],
-            file=[],
+            extra=[],
             progress_update=0,
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
@@ -240,7 +289,7 @@ Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
-  {FILE_OPTION}
+  {EXTRA_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -266,7 +315,7 @@ Options:
   {HELP_OPTION}
   {TARGET_OPTION % "default: fi; "}
   {SOURCE_OPTION}
-  {FILE_OPTION}
+  {EXTRA_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -291,7 +340,7 @@ Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
-  {FILE_OPTION}
+  {EXTRA_OPTION}
   {PROGRESS_OPTION % 42}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -302,8 +351,9 @@ Options:
     def test_progress_help(self, sys_stdout_write: Mock) -> None:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.maxDiff = None
         self.assertEqual(
-            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-f {{file}}] [-S {{option}}] \
+            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-S {{option}}] \
 [{{concept}} ...]
 
 Show progress.
@@ -314,7 +364,7 @@ Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
-  {FILE_OPTION}
+  {EXTRA_OPTION}
   -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
@@ -330,7 +380,7 @@ Options:
             target_language="nl",
             source_language="fi",
             concepts=[],
-            file=[],
+            extra=[],
             progress_update=0,
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
