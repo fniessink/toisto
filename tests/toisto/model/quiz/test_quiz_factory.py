@@ -115,16 +115,16 @@ class QuizFactoryTestCase(ToistoTestCase):
             ),
         )
 
-    def create_adjective_with_degrees_of_comparison(self) -> Concept:
+    def create_adjective_with_degrees_of_comparison(self, antonym: str = "") -> Concept:
         """Create an adjective with degrees of comparison."""
-        return self.create_concept(
-            "big",
-            {
-                "positive degree": dict(en="big", nl="groot"),
-                "comparative degree": dict(en="bigger", nl="groter"),
-                "superlative degree": dict(en="biggest", nl="grootst"),
-            },
-        )
+        big: dict[str, object] = {
+            "positive degree": dict(en="big", nl="groot"),
+            "comparative degree": dict(en="bigger", nl="groter"),
+            "superlative degree": dict(en="biggest", nl="grootst"),
+        }
+        if antonym:
+            big["antonym"] = antonym
+        return self.create_concept("big", big)
 
     def create_noun(self) -> Concept:
         """Create a simple noun."""
@@ -538,6 +538,47 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "suurin", ["suurempi"], COMPARATIVE_DEGREE),
             },
             create_quizzes(FI_EN, concept),
+        )
+
+    def test_degrees_of_comparison_with_antonym(self):
+        """Test that quizzes can be generated for degrees of comparison with antonym."""
+        self.language_pair = NL_EN
+        concept = self.create_adjective_with_degrees_of_comparison(antonym="small")
+        self.create_concept(
+            "small",
+            {
+                "antonym": "big",
+                "positive degree": dict(en="small", nl="klein"),
+                "comparative degree": dict(en="smaller", nl="kleiner"),
+                "superlative degree": dict(en="smallest", nl="kleinst"),
+            },
+        )
+        positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts(NL)
+        self.assertSetEqual(
+            {
+                self.create_quiz(positive_degree, "groot", ["big"], READ),
+                self.create_quiz(positive_degree, "groot", ["groot"], DICTATE),
+                self.create_quiz(positive_degree, "groot", ["big"], INTERPRET),
+                self.create_quiz(positive_degree, "big", ["groot"], WRITE),
+                self.create_quiz(comparative_degree, "groter", ["bigger"], READ),
+                self.create_quiz(comparative_degree, "groter", ["groter"], DICTATE),
+                self.create_quiz(comparative_degree, "groter", ["bigger"], INTERPRET),
+                self.create_quiz(comparative_degree, "bigger", ["groter"], WRITE),
+                self.create_quiz(superlative_degree, "grootst", ["biggest"], READ),
+                self.create_quiz(superlative_degree, "grootst", ["grootst"], DICTATE),
+                self.create_quiz(superlative_degree, "grootst", ["biggest"], INTERPRET),
+                self.create_quiz(superlative_degree, "biggest", ["grootst"], WRITE),
+                self.create_quiz(concept, "groot", ["groter"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "groot", ["grootst"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "groot", ["klein"], ANTONYM),
+                self.create_quiz(concept, "groter", ["groot"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "groter", ["grootst"], SUPERLATIVE_DEGREE),
+                self.create_quiz(concept, "groter", ["kleiner"], ANTONYM),
+                self.create_quiz(concept, "grootst", ["groot"], POSITIVE_DEGREE),
+                self.create_quiz(concept, "grootst", ["groter"], COMPARATIVE_DEGREE),
+                self.create_quiz(concept, "grootst", ["kleinst"], ANTONYM),
+            },
+            create_quizzes(NL_EN, concept),
         )
 
     def test_grammatical_person(self):
