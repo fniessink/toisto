@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- When quizzing the antonym of one grammatical form of a concept with multiple grammatical forms, Toisto would accept all grammatical forms of the antonym concept. For example, when quizzing the antonym of halvempi in Finnish (cheaper), Toisto would accept kallis (expensive), kalliimpi (more expensive), and kallein (most expensive) as answer. Fixed to only accept the same grammatical form of the antonym concept, kalliimpi (more expensive) in the example. Fixes [#893](https://github.com/fniessink/toisto/issues/893).
+
 ## 0.29.0 - 2024-11-02
 
 ### Added

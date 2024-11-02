@@ -195,7 +195,7 @@ class QuizFactory:
                 Labels(),
                 Labels(meanings),
             )
-            for label in concept.labels(target_language).non_colloquial
+            for label in concept.own_labels(target_language).non_colloquial
         )
 
     def order_quizzes(self, concept: Concept, previous_quizzes: Quizzes, min_word_count: int = 5) -> Quizzes:
