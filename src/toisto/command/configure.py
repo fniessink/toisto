@@ -25,10 +25,10 @@ def configure(argument_parser: ArgumentParser, config: ConfigParser, args: Names
     if "mp3player" in args:
         ensure_section(config, "commands")
         config.set("commands", "mp3player", args.mp3player)
-    if "file" in args and args.file:
+    if "extra" in args and args.extra:
         ensure_section(config, "files")
-        for file_path in args.file:
-            config.set("files", str(file_path), "")
+        for path in args.extra:
+            config.set("files", str(path), "")
     write_config(argument_parser, config, CONFIG_FILENAME)
     show_config_file()
 

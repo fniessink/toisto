@@ -53,3 +53,15 @@ class LoadConceptsTest(ToistoTestCase):
         ]
         concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
         self.assertEqual({concept}, self.loader.load_concepts(Path("filename")))
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.is_dir", Mock(side_effect=[True, False]))
+    @patch("pathlib.Path.rglob", Mock(return_value=[Path("filename")]))
+    @patch("pathlib.Path.open")
+    def test_load_concepts_from_folder(self, path_open: Mock) -> None:
+        """Test that the concepts are read from folders."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [
+            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
+        ]
+        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
+        self.assertEqual({concept}, self.loader.load_concepts(Path("folder")))

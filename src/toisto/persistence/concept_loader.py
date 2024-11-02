@@ -17,17 +17,23 @@ class ConceptLoader:
         self.argument_parser = argument_parser
         self.concept_id_registry = IdentifierRegistry[ConceptId]("concept", argument_parser)
 
-    def load_concepts(self, *files: Path) -> set[Concept]:
+    def load_concepts(self, *paths: Path) -> set[Concept]:
         """Load the concept from the concept JSON files."""
         all_concepts = set()
+        for path in paths:
+            file_paths = path.rglob("*.json") if path.is_dir() else [path]
+            for file_path in file_paths:
+                all_concepts |= self._load_file(file_path)
+        return all_concepts
+
+    def _load_file(self, file_path: Path) -> set[Concept]:
+        """Load the concept from the concept JSON file."""
         try:
-            for file_path in files:
-                concepts = self._parse_json(load_json(file_path))
-                self.concept_id_registry.check_and_register_identifiers(self._concept_identifiers(concepts), file_path)
-                all_concepts |= concepts
+            concepts = self._parse_json(load_json(file_path))
+            self.concept_id_registry.check_and_register_identifiers(self._concept_identifiers(concepts), file_path)
         except Exception as reason:  # noqa: BLE001
             self.argument_parser.error(f"{NAME} cannot read file {file_path}: {reason}.\n")
-        return all_concepts
+        return concepts
 
     def _parse_json(self, json: dict[ConceptId, ConceptDict]) -> set[Concept]:
         """Parse the domain objects from the JSON loaded from the domain object file."""

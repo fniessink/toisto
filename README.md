@@ -219,16 +219,18 @@ source = en
 To prevent having to pass extra concept files as command-line arguments each time you run Toisto, you can save these to Toisto's configuration file:
 
 ```console
-$ toisto configure --file my_concepts1.json --file my_concepts2.json
+$ toisto configure --extra my_concepts1.json --extra my_concepts2.json
 ```
 
 When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `files` section if it doesn't exist, and adds the files to the list:
 
 ```ini
 [files]
-my_concepts1.json
-my_concepts2.json
+/home/user/my_concepts1.json
+/home/user/my_concepts2.json
 ```
+
+In addition to adding individual files, it is also possible to add folders to read extra concept files from. Toisto searches for concept files from the specified folders recursively.
 
 > [!NOTE]
 > See the [software documentation](docs/software.md) on how to create extra concept files.

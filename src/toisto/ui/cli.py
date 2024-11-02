@@ -26,20 +26,31 @@ def check_language(language: str) -> str:
     raise ArgumentTypeError(message)
 
 
-def check_folder(folder: str) -> str:
-    """Check that the folder exists."""
-    if Path(folder).is_dir():
-        return folder
-    message = f"folder '{folder}' does not exist or is not a folder"
-    raise ArgumentTypeError(message)
+def check_path_exists(path_name: str) -> Path:
+    """Check that the path exists."""
+    path = Path(path_name)
+    if not path.exists():
+        message = f"path '{path}' does not exist"
+        raise ArgumentTypeError(message)
+    return path
 
 
-def check_file(path: str) -> Path:
-    """Check that the path is a file and exists."""
-    if Path(path).is_file():
-        return Path(path).resolve()
-    message = f"file '{path}' does not exist or is not a file"
-    raise ArgumentTypeError(message)
+def check_folder(path_name: str) -> Path:
+    """Check that the path is a folder and exists."""
+    path = check_path_exists(path_name)
+    if not path.is_dir():
+        message = f"path '{path}' is not a folder"
+        raise ArgumentTypeError(message)
+    return path
+
+
+def check_folder_or_file(path_name: str) -> Path:
+    """Check that the path is a file or folder and exists."""
+    path = check_path_exists(path_name)
+    if not path.is_file() and not path.is_dir():
+        message = f"path '{path}' is not a file or folder"
+        raise ArgumentTypeError(message)
+    return path.resolve()
 
 
 class CommandBuilder:
@@ -88,26 +99,27 @@ class CommandBuilder:
             help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(concept_ids)}",
         )
 
-    def add_file_arguments(self, parser: ArgumentParser) -> None:
-        """Add the file arguments."""
-        default = [Path(filename) for filename in self.config["files"]] if self.config.has_section("files") else []
+    def add_extra_concepts_arguments(self, parser: ArgumentParser) -> None:
+        """Add the extra concepts argument."""
+        default = [Path(path) for path in self.config["files"]] if self.config.has_section("files") else []
         default_help = ", ".join(str(path) for path in default) if default else "none"
         parser.add_argument(
-            "-f",
-            "--file",
+            "-e",
+            "--extra",
             action="append",
             default=default,
-            metavar="{file}",
-            help=f"file with extra concepts to read, can be repeated; default: {default_help}",
-            type=check_file,
+            metavar="{path}",
+            help=f"file or folder with extra concepts to read, can be repeated; default: {default_help}",
+            type=check_folder_or_file,
         )
 
     def add_progress_folder_argument(self, parser: ArgumentParser) -> None:
         """Add the progress folder argument to the command."""
-        default = self.config.get("progress", "folder")
+        default = Path(self.config.get("progress", "folder"))
         parser.add_argument(
+            "-p",
             "--progress-folder",
-            metavar="{folder}",
+            metavar="{path}",
             type=check_folder,
             default=default,
             help=f"folder where to save progress; default: {default}",
@@ -117,7 +129,7 @@ class CommandBuilder:
         """Add the progress update argument to the command."""
         default = self.config.get("practice", "progress_update")
         parser.add_argument(
-            "-p",
+            "-u",
             "--progress-update",
             metavar="{frequency}",
             type=int,
@@ -154,7 +166,7 @@ class ConfigureCommandBuilder(CommandBuilder):
             command_help,
         )
         self.add_language_arguments(parser)
-        self.add_file_arguments(parser)
+        self.add_extra_concepts_arguments(parser)
         self.add_progress_folder_argument(parser)
         self.add_progress_update_argument(parser)
         self.add_mp3player_argument(parser)
@@ -172,7 +184,7 @@ class PracticeCommandBuilder(CommandBuilder):
         parser = self._add_command("practice", "Practice a language.", command_help)
         self.add_language_arguments(parser)
         self.add_concept_argument(parser, concepts)
-        self.add_file_arguments(parser)
+        self.add_extra_concepts_arguments(parser)
         self.add_progress_update_argument(parser)
 
 
@@ -188,7 +200,7 @@ class ProgressCommandBuilder(CommandBuilder):
         parser = self._add_command("progress", "Show progress.", command_help)
         self.add_language_arguments(parser)
         self.add_concept_argument(parser, concepts)
-        self.add_file_arguments(parser)
+        self.add_extra_concepts_arguments(parser)
         self.add_sort_argument(parser)
 
     def add_sort_argument(self, parser: ArgumentParser) -> None:
