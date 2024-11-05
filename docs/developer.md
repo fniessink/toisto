@@ -14,9 +14,9 @@ Create a virtual environment, activate it, and install Toisto in development mod
 
 ```console
 cd toisto
-python3 -m venv venv
+uv venv
 . venv/bin/activate
-pip install -e .[dev]
+uv pip install -e .[dev]
 ```
 
 ## How to test and check the quality
@@ -64,17 +64,14 @@ rm -rf build dist
 Create the distribution files by running:
 
 ```console
-python -m build
+uv build
 ```
 
 Upload the distribution files to PyPI by running:
 
 ```console
-twine upload dist/*
+uv publish
 ```
-
-> [!IMPORTANT]
-> If twine fails with `ImportError: cannot import name 'appengine' from 'requests.packages.urllib3.contrib'`, this can be fixed by running `pip install --upgrade twine requests-toolbelt`.
 
 Tag the commit and push it:
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.29.0"
+version = "0.29.1"
 authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
@@ -41,9 +41,7 @@ dev = [
     "gprof2dot == 2024.6.6",
     "green == 4.0.2",
     "mypy == 1.13.0",
-    "pip == 24.3.1",
     "ruff == 0.7.2",
-    "twine == 5.1.1",
     "types-requests == 2.32.0.20241016",
     "unittest-xml-reporting == 3.2.0",
     "vulture == 2.13",
