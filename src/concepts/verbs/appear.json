@@ -1,0 +1,49 @@
+{
+    "to appear": {
+        "infinitive": {
+            "en": "to appear",
+            "fi": "käydä ilmi",
+            "nl": "blijken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I appear",
+                "fi": "minä käyn ilmi",
+                "nl": "ik blijk"
+            },
+            "second person": {
+                "en": "you appear",
+                "fi": "sinä käyt ilmi",
+                "nl": "jij blijkt"
+            },
+            "third person": {
+                "fi": "hän käy ilmi",
+                "feminine": {
+                    "en": "she appears",
+                    "nl": "zij blijkt"
+                },
+                "masculine": {
+                    "en": "he appears",
+                    "nl": "hij blijkt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we appear",
+                "fi": "me käymme ilmi",
+                "nl": "wij blijken"
+            },
+            "second person": {
+                "en": "you appear",
+                "fi": "te käytte ilmi",
+                "nl": "jullie blijken"
+            },
+            "third person": {
+                "en": "they appear",
+                "fi": "he käyvät ilmi",
+                "nl": "zij blijken"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to go berry-picking": {
+        "infinitive": {
+            "en": "to go berry-picking",
+            "fi": "käydä marjassa",
+            "nl": "bessen plukken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go berry-picking",
+                "fi": "minä käyn marjassa",
+                "nl": "ik pluk bessen"
+            },
+            "second person": {
+                "en": "you go berry-picking",
+                "fi": "sinä käyt marjassa",
+                "nl": "jij plukt bessen"
+            },
+            "third person": {
+                "fi": "hän käy marjassa",
+                "feminine": {
+                    "en": "she goes berry-picking",
+                    "nl": "zij plukt bessen"
+                },
+                "masculine": {
+                    "en": "he goes berry-picking",
+                    "nl": "hij plukt bessen"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we go berry-picking",
+                "fi": "me käymme marjassa",
+                "nl": "wij plukken bessen"
+            },
+            "second person": {
+                "en": "you go berry-picking",
+                "fi": "te käytte marjassa",
+                "nl": "jullie plukken bessen"
+            },
+            "third person": {
+                "en": "they go berry-picking",
+                "fi": "he käyvät marjassa",
+                "nl": "zij plukken bessen"
+            }
+        }
+    }
+}

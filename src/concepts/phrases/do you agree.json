@@ -1,0 +1,20 @@
+{
+    "do you agree": {
+        "antonym": "do you disagree",
+        "en": "Do you agree?",
+        "fi": [
+            "Oletko samaa mieltä?",
+            "Ooks sä samaa mieltä?*"
+        ],
+        "nl": "Ben je het eens?"
+    },
+    "do you disagree": {
+        "antonym": "do you agree",
+        "en": "Do you disagree?",
+        "fi": [
+            "Oletko eri mieltä?",
+            "Ooks sä eri mieltä?*"
+        ],
+        "nl": "Ben je het oneens?"
+    }
+}

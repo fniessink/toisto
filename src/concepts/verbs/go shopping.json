@@ -1,0 +1,49 @@
+{
+    "to go shopping": {
+        "infinitive": {
+            "en": "to go shopping",
+            "fi": "käydä ostoksilla",
+            "nl": "winkelen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go shopping",
+                "fi": "minä käyn ostoksilla",
+                "nl": "ik winkel"
+            },
+            "second person": {
+                "en": "you go shopping",
+                "fi": "sinä käyt ostoksilla",
+                "nl": "jij winkelt"
+            },
+            "third person": {
+                "fi": "hän käy ostoksilla",
+                "feminine": {
+                    "en": "she goes shopping",
+                    "nl": "zij winkelt"
+                },
+                "masculine": {
+                    "en": "he goes shopping",
+                    "nl": "hij winkelt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we go shopping",
+                "fi": "me käymme ostoksilla",
+                "nl": "wij winkelen"
+            },
+            "second person": {
+                "en": "you go shopping",
+                "fi": "te käytte ostoksilla",
+                "nl": "jullie winkelen"
+            },
+            "third person": {
+                "en": "they go shopping",
+                "fi": "he käyvät ostoksilla",
+                "nl": "zij winkelen"
+            }
+        }
+    }
+}

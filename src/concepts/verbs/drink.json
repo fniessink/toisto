@@ -1,0 +1,49 @@
+{
+    "to drink coffee": {
+        "infinitive": {
+            "en": "to drink coffee",
+            "fi": "käydä kahvi",
+            "nl": "koffie drinken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I drink coffee",
+                "fi": "minä käyn kahvi",
+                "nl": "ik drink koffie"
+            },
+            "second person": {
+                "en": "you drink coffee",
+                "fi": "sinä käyt kahvi",
+                "nl": "jij drinkt koffie"
+            },
+            "third person": {
+                "fi": "hän käy kahvi",
+                "feminine": {
+                    "en": "she drinks coffee",
+                    "nl": "zij drinkt koffie"
+                },
+                "masculine": {
+                    "en": "he drinks coffee",
+                    "nl": "hij drinkt koffie"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we drink coffee",
+                "fi": "me käymme kahvi",
+                "nl": "wij drinken koffie"
+            },
+            "second person": {
+                "en": "you drink coffee",
+                "fi": "te käytte kahvi",
+                "nl": "jullie drinken koffie"
+            },
+            "third person": {
+                "en": "they drink coffee",
+                "fi": "he käyvät kahvi",
+                "nl": "zij drinken koffie"
+            }
+        }
+    }
+}

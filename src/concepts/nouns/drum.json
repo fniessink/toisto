@@ -1,7 +1,20 @@
 {
     "drum": {
-        "en": "drum",
-        "fi": "rumpu",
-        "nl": "de trommel"
+        "singular": {
+            "en": "drum",
+            "fi": "rumpu",
+            "nl": [
+                "de drum",
+                "de trommel|de trom"
+            ]
+        },
+        "plural": {
+            "en": "drums",
+            "fi": "rummut",
+            "nl": [
+                "de drums",
+                "de trommels"
+            ]
+        }
     }
 }

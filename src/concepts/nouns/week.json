@@ -49,5 +49,27 @@
         "en": "In which week?",
         "fi": "Millä viikolla?",
         "nl": "In welke week?"
+    },
+    "once a week": {
+        "roots": "week",
+        "en": "once a week",
+        "fi": "kerran viikossa",
+        "nl": "één keer per week|een keer per week"
+    },
+    "twice a week": {
+        "roots": {
+            "en": "week",
+            "fi": [
+                "2",
+                "week"
+            ],
+            "nl": [
+                "2",
+                "week"
+            ]
+        },
+        "en": "twice a week",
+        "fi": "kaksi kertaa viikossa",
+        "nl": "twee keer per week"
     }
 }

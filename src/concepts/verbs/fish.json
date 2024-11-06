@@ -1,0 +1,49 @@
+{
+    "to fish": {
+        "infinitive": {
+            "en": "to fish",
+            "fi": "kalastaa",
+            "nl": "vissen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I fish",
+                "fi": "minä kalastan",
+                "nl": "ik vis"
+            },
+            "second person": {
+                "en": "you fish",
+                "fi": "sinä kalastat",
+                "nl": "jij vist"
+            },
+            "third person": {
+                "fi": "hän kalastaa",
+                "feminine": {
+                    "en": "she fishes",
+                    "nl": "zij vist"
+                },
+                "masculine": {
+                    "en": "he fishes",
+                    "nl": "hij vist"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we fish",
+                "fi": "me kalastamme",
+                "nl": "wij vissen"
+            },
+            "second person": {
+                "en": "you fish",
+                "fi": "te kalastatte",
+                "nl": "jullie vissen"
+            },
+            "third person": {
+                "en": "they fish",
+                "fi": "he kalastavat",
+                "nl": "zij vissen"
+            }
+        }
+    }
+}
