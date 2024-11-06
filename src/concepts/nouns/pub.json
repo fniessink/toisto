@@ -1,7 +1,14 @@
 {
     "pub": {
-        "en": "pub",
-        "fi": "pubi",
-        "nl": "de pub"
+        "singular": {
+            "en": "pub",
+            "fi": "pubi",
+            "nl": "de kroeg"
+        },
+        "plural": {
+            "en": "pubs",
+            "fi": "pubit",
+            "nl": "de kroegen"
+        }
     }
 }

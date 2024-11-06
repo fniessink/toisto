@@ -1,0 +1,49 @@
+{
+    "to go mushroom-picking": {
+        "infinitive": {
+            "en": "to go mushroom-picking",
+            "fi": "käydä sienessä",
+            "nl": "paddenstoelen plukken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go mushroom-picking",
+                "fi": "minä käyn sienessä",
+                "nl": "ik pluk paddenstoelen"
+            },
+            "second person": {
+                "en": "you go mushroom-picking",
+                "fi": "sinä käyt sienessä",
+                "nl": "jij plukt paddenstoelen"
+            },
+            "third person": {
+                "fi": "hän käy sienessä",
+                "feminine": {
+                    "en": "she goes mushroom-picking",
+                    "nl": "zij plukt paddenstoelen"
+                },
+                "masculine": {
+                    "en": "he goes mushroom-picking",
+                    "nl": "hij plukt paddenstoelen"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we go mushroom-picking",
+                "fi": "me käymme sienessä",
+                "nl": "wij plukken paddenstoelen"
+            },
+            "second person": {
+                "en": "you go mushroom-picking",
+                "fi": "te käytte sienessä",
+                "nl": "jullie plukken paddenstoelen"
+            },
+            "third person": {
+                "en": "they go mushroom-picking",
+                "fi": "he käyvät sienessä",
+                "nl": "zij plukken paddenstoelen"
+            }
+        }
+    }
+}

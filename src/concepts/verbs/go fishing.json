@@ -1,0 +1,49 @@
+{
+    "to go fishing": {
+        "infinitive": {
+            "en": "to go fishing",
+            "fi": "käydä kalassa",
+            "nl": "vissen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go fishing",
+                "fi": "minä käyn kalassa",
+                "nl": "ik vis"
+            },
+            "second person": {
+                "en": "you go fishing",
+                "fi": "sinä käyt kalassa",
+                "nl": "jij vist"
+            },
+            "third person": {
+                "fi": "hän käy kalassa",
+                "feminine": {
+                    "en": "she goes fishing",
+                    "nl": "zij vist"
+                },
+                "masculine": {
+                    "en": "he goes fishing",
+                    "nl": "hij vist"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we go fishing",
+                "fi": "me käymme kalassa",
+                "nl": "wij vissen"
+            },
+            "second person": {
+                "en": "you go fishing",
+                "fi": "te käytte kalassa",
+                "nl": "jullie vissen"
+            },
+            "third person": {
+                "en": "they go fishing",
+                "fi": "he käyvät kalassa",
+                "nl": "zij vissen"
+            }
+        }
+    }
+}

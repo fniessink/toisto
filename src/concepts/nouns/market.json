@@ -1,0 +1,37 @@
+{
+    "market": {
+        "singular": {
+            "en": "market",
+            "fi": "tori",
+            "nl": "de markt"
+        },
+        "plural": {
+            "en": "markets",
+            "fi": "torit",
+            "nl": "de markten"
+        }
+    },
+    "market hall": {
+        "roots": {
+            "en": "market",
+            "fi": "store",
+            "nl": "market"
+        },
+        "en": "market hall",
+        "fi": "kauppahalli",
+        "nl": "de markthal"
+    },
+    "flea market": {
+        "roots": "market",
+        "en": "flea market",
+        "fi": [
+            "kirpputori",
+            "kirppari*",
+            "kirppis*"
+        ],
+        "nl": [
+            "de rommelmarkt",
+            "de vlooienmarkt"
+        ]
+    }
+}

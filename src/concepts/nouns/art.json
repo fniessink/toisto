@@ -29,20 +29,17 @@
         }
     },
     "art exhibition": {
-        "roots": {
-            "en": "art",
-            "fi": "art"
-        },
+        "roots": "art",
         "involves": "art",
         "singular": {
             "en": "art exhibition",
             "fi": "taidenäyttely",
-            "nl": "de tentoonstelling"
+            "nl": "de kunsttentoonstelling"
         },
         "plural": {
             "en": "art exhibitions",
             "fi": "taidenäyttelyt",
-            "nl": "de tentoonstellingen"
+            "nl": "de kunsttentoonstellingen"
         }
     },
     "art form": {

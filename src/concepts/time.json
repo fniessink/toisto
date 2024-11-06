@@ -11,6 +11,22 @@
             "nl": "de tijden"
         }
     },
+    "all the time": {
+        "roots": "time",
+        "en": "all the time",
+        "fi": "koko ajan",
+        "nl": "de hele tijd"
+    },
+    "free time": {
+        "hypernym": "time",
+        "roots": "time",
+        "en": [
+            "free time",
+            "spare time"
+        ],
+        "fi": "vapaa-aika",
+        "nl": "de vrije tijd"
+    },
     "now": {
         "en": "now",
         "fi": "nyt",
@@ -73,19 +89,6 @@
         ],
         "fi": "päivällä",
         "nl": "overdag"
-    },
-    "year": {
-        "holonym": "decade",
-        "singular": {
-            "en": "year",
-            "fi": "vuosi",
-            "nl": "het jaar"
-        },
-        "plural": {
-            "en": "years",
-            "fi": "vuodet",
-            "nl": "de jaren"
-        }
     },
     "decade": {
         "holonym": "century",
@@ -388,5 +391,37 @@
         "en": "time of day",
         "fi": "vuorokaudenaika",
         "nl": "tijdstip van de dag"
+    },
+    "from 3-5": {
+        "roots": {
+            "en": [
+                "3",
+                "5",
+                "clock"
+            ],
+            "fi": [
+                "3",
+                "5",
+                "clock"
+            ],
+            "nl": [
+                "3",
+                "5",
+                "hour"
+            ]
+        },
+        "en": "from three o'clock to five o'clock|from three to five",
+        "fi": "kello kolmesta kello viiteen|kolmesta viiteen",
+        "nl": "van drie uur tot vijf uur|van drie tot vijf"
+    },
+    "from June to August": {
+        "en": "from June to August",
+        "fi": "kesäkuusta elokuun",
+        "nl": "van juni tot augustus"
+    },
+    "from Monday to Friday": {
+        "en": "from Monday to Friday",
+        "fi": "maanantaista perjantaihin",
+        "nl": "van maandag tot vrijdag"
     }
 }

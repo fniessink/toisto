@@ -1,23 +1,23 @@
 {
-    "to play": {
+    "to play an instrument": {
         "infinitive": {
             "en": "to play",
-            "fi": "pelata",
+            "fi": "soittaa",
             "nl": "spelen"
         },
         "singular": {
             "first person": {
                 "en": "I play",
-                "fi": "minä pelaan",
+                "fi": "minä soitan",
                 "nl": "ik speel"
             },
             "second person": {
                 "en": "you play",
-                "fi": "sinä pelaat",
+                "fi": "sinä soitat",
                 "nl": "jij speelt"
             },
             "third person": {
-                "fi": "hän pelaa",
+                "fi": "hän soittaa",
                 "feminine": {
                     "en": "she plays",
                     "nl": "zij speelt"
@@ -31,17 +31,17 @@
         "plural": {
             "first person": {
                 "en": "we play",
-                "fi": "me pelaamme",
+                "fi": "me soitamme",
                 "nl": "wij spelen"
             },
             "second person": {
                 "en": "you play",
-                "fi": "te pelaatte",
+                "fi": "te soitatte",
                 "nl": "jullie spelen"
             },
             "third person": {
                 "en": "they play",
-                "fi": "he pelaavat",
+                "fi": "he soittavat",
                 "nl": "zij spelen"
             }
         }

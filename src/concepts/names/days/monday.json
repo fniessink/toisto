@@ -22,8 +22,15 @@
     },
     "on monday": {
         "roots": "monday",
-        "en": "on Monday",
-        "fi": "maanantaina",
-        "nl": "op maandag"
+        "singular": {
+            "en": "on Monday",
+            "fi": "maanantaina",
+            "nl": "op maandag"
+        },
+        "plural": {
+            "en": "on Mondays",
+            "fi": "maanantaisin",
+            "nl": "op maandagen"
+        }
     }
 }

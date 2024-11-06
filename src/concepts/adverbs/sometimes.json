@@ -1,10 +1,18 @@
 {
     "sometimes": {
-        "en": "sometimes",
-        "fi": "joskus",
+        "en": [
+            "sometimes",
+            "occasionally"
+        ],
+        "fi": [
+            "joskus",
+            "silloin tällöin"
+        ],
         "nl": [
             "soms",
-            "wel eens"
+            "wel eens",
+            "zo nu en dan",
+            "af en toe"
         ]
     }
 }

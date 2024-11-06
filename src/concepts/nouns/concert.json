@@ -1,0 +1,32 @@
+{
+    "concert": {
+        "singular": {
+            "en": [
+                "concert",
+                "gig*"
+            ],
+            "fi": [
+                "konsertti",
+                "keikka*"
+            ],
+            "nl": [
+                "het concert",
+                "het optreden"
+            ]
+        },
+        "plural": {
+            "en": [
+                "concerts",
+                "gigs*"
+            ],
+            "fi": [
+                "konsertit",
+                "keikat*"
+            ],
+            "nl": [
+                "de concerten",
+                "de optredens"
+            ]
+        }
+    }
+}

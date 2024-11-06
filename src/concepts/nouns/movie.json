@@ -5,7 +5,10 @@
                 "movie",
                 "film"
             ],
-            "fi": "elokuva",
+            "fi": [
+                "elokuva",
+                "leffa*"
+            ],
             "nl": "de film"
         },
         "plural": {
@@ -13,7 +16,10 @@
                 "movies",
                 "films"
             ],
-            "fi": "elokuvat",
+            "fi": [
+                "elokuvat",
+                "leffat*"
+            ],
             "nl": "de films"
         }
     }
