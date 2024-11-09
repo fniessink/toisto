@@ -11,5 +11,21 @@
             "fi": "kädet",
             "nl": "de handen"
         }
+    },
+    "handwork": {
+        "roots": [
+            "hand",
+            "work"
+        ],
+        "singular": {
+            "en": "handwork",
+            "fi": "käsityö",
+            "nl": "het handwerk"
+        },
+        "plural": {
+            "en": "handworks",
+            "fi": "käsityöt",
+            "nl": "de handwerken"
+        }
     }
 }

@@ -1,10 +1,12 @@
 {
     "skiing": {
+        "hypernym": "sport",
         "en": "skiing",
         "fi": "hiihto",
         "nl": "het skiën"
     },
     "downhill skiing": {
+        "hypernym": "skiing",
         "roots": {
             "en": "skiing",
             "nl": "skiing"

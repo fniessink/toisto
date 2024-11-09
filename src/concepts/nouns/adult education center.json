@@ -1,7 +1,10 @@
 {
     "adult education center": {
         "en": "adult education center",
-        "fi": "työväenopisto",
+        "fi": [
+            "kansalaisopisto",
+            "työväenopisto"
+        ],
         "nl": "de volksuniversiteit"
     }
 }

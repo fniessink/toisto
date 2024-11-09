@@ -144,8 +144,14 @@
     "overtime": {
         "roots": {
             "en": "time",
-            "fi": "work",
-            "nl": "work"
+            "fi": [
+                "after",
+                "work"
+            ],
+            "nl": [
+                "after",
+                "work"
+            ]
         },
         "en": "overtime",
         "fi": "ylityö",

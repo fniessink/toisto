@@ -1,0 +1,49 @@
+{
+    "to appreciate": {
+        "infinitive": {
+            "en": "to appreciate",
+            "fi": "arvostaa",
+            "nl": "waarderen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I appreciate",
+                "fi": "minä arvostan",
+                "nl": "ik waardeer"
+            },
+            "second person": {
+                "en": "you appreciate",
+                "fi": "sinä arvostat",
+                "nl": "jij waardeert"
+            },
+            "third person": {
+                "fi": "hän arvostaa",
+                "feminine": {
+                    "en": "she appreciates",
+                    "nl": "zij waardeert"
+                },
+                "masculine": {
+                    "en": "he appreciates",
+                    "nl": "hij waardeert"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we appreciate",
+                "fi": "me arvostamme",
+                "nl": "wij waarderen"
+            },
+            "second person": {
+                "en": "you appreciate",
+                "fi": "te arvostatte",
+                "nl": "jullie waarderen"
+            },
+            "third person": {
+                "en": "they appreciate",
+                "fi": "he arvostavat",
+                "nl": "zij waarderen"
+            }
+        }
+    }
+}

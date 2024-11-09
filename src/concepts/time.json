@@ -248,19 +248,25 @@
         "roots": {
             "en": [
                 "to be",
+                "after",
                 "3"
             ],
             "fi": [
                 "to be",
+                "after",
                 "3",
                 "clock"
             ],
             "nl": [
                 "to be",
+                "after",
                 "3"
             ]
         },
-        "en": "It is a quarter past three.",
+        "en": [
+            "It is a quarter past three.",
+            "It is a quarter after three."
+        ],
         "fi": "Kello on vartin yli kolme.",
         "nl": "Het is kwart over drie."
     },
@@ -288,11 +294,13 @@
         "roots": {
             "en": [
                 "to be",
+                "after",
                 "6",
                 "20"
             ],
             "fi": [
                 "to be",
+                "after",
                 "6",
                 "20",
                 "clock"
@@ -303,7 +311,10 @@
                 "7"
             ]
         },
-        "en": "It is twenty past six.",
+        "en": [
+            "It is twenty past six.",
+            "It is twenty after six."
+        ],
         "fi": [
             "Kello on kuusi kaksikymmentä.",
             "Kello on kaksikymmentä yli kuusi."

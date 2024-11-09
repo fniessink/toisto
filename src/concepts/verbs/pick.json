@@ -1,0 +1,152 @@
+{
+    "to pick berries": {
+        "infinitive": {
+            "en": "to pick berries",
+            "fi": [
+                "poimia marjoja",
+                "marjastaa",
+                "käydä marjassa"
+            ],
+            "nl": "bessen plukken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I pick berries",
+                "fi": [
+                    "minä poimin marjoja",
+                    "minä marjastan",
+                    "minä käyn marjassa"
+                ],
+                "nl": "ik pluk bessen"
+            },
+            "second person": {
+                "en": "you pick berries",
+                "fi": [
+                    "sinä poimit marjoja",
+                    "sinä marjastat",
+                    "sinä käyt marjassa"
+                ],
+                "nl": "jij plukt bessen"
+            },
+            "third person": {
+                "fi": [
+                    "hän poimii marjoja",
+                    "hän marjastaa",
+                    "hän käy marjassa"
+                ],
+                "feminine": {
+                    "en": "she picks berries",
+                    "nl": "zij plukt bessen"
+                },
+                "masculine": {
+                    "en": "he picks berries",
+                    "nl": "hij plukt bessen"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we pick berries",
+                "fi": [
+                    "me poimimme marjoja",
+                    "me marjastamme",
+                    "me käymme marjassa"
+                ],
+                "nl": "wij plukken bessen"
+            },
+            "second person": {
+                "en": "you pick berries",
+                "fi": [
+                    "te poimitte marjoja",
+                    "te marjastatte",
+                    "te käytte marjassa"
+                ],
+                "nl": "jullie plukken bessen"
+            },
+            "third person": {
+                "en": "they pick berries",
+                "fi": [
+                    "he poimivat marjoja",
+                    "he marjastavat",
+                    "he käyvät marjassa"
+                ],
+                "nl": "zij plukken bessen"
+            }
+        }
+    },
+    "to pick mushrooms": {
+        "infinitive": {
+            "en": "to pick mushrooms",
+            "fi": [
+                "poimia sieniä",
+                "sienestä",
+                "käydä sienessä"
+            ],
+            "nl": "paddenstoelen plukken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I pick mushrooms",
+                "fi": [
+                    "minä poimin sieniä",
+                    "minä sienestän",
+                    "minä käyn sienessä"
+                ],
+                "nl": "ik pluk paddenstoelen"
+            },
+            "second person": {
+                "en": "you pick mushrooms",
+                "fi": [
+                    "sinä poimit sieniä",
+                    "sinä sienestät",
+                    "sinä käyt sienessä"
+                ],
+                "nl": "jij plukt paddenstoelen"
+            },
+            "third person": {
+                "fi": [
+                    "hän poimii sieniä",
+                    "hän sienestää",
+                    "hän käy sienessä"
+                ],
+                "feminine": {
+                    "en": "she picks mushrooms",
+                    "nl": "zij plukt paddenstoelen"
+                },
+                "masculine": {
+                    "en": "he picks mushrooms",
+                    "nl": "hij plukt paddenstoelen"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we pick mushrooms",
+                "fi": [
+                    "me poimimme sieniä",
+                    "me sienestämme",
+                    "me käymme sienessä"
+                ],
+                "nl": "wij plukken paddenstoelen"
+            },
+            "second person": {
+                "en": "you pick mushrooms",
+                "fi": [
+                    "te poimitte sieniä",
+                    "te sienestätte",
+                    "te käytte sienessä"
+                ],
+                "nl": "jullie plukken paddenstoelen"
+            },
+            "third person": {
+                "en": "they pick mushrooms",
+                "fi": [
+                    "he poimivat sieniä",
+                    "he sienestävät",
+                    "he käyvät sienessä"
+                ],
+                "nl": "zij plukken paddenstoelen"
+            }
+        }
+    }
+}

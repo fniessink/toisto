@@ -10,10 +10,17 @@
         "roots": {
             "en": [
                 "day",
+                "after",
                 "tomorrow"
             ],
-            "fi": "tomorrow",
-            "nl": "tomorrow"
+            "fi": [
+                "after",
+                "tomorrow"
+            ],
+            "nl": [
+                "after",
+                "tomorrow"
+            ]
         },
         "en": "the day after tomorrow",
         "fi": "ylihuomenna",

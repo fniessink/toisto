@@ -757,31 +757,6 @@
             "nl": "de tomaten"
         }
     },
-    "water": {
-        "hypernym": "drink",
-        "singular": {
-            "en": "water",
-            "fi": "vesi",
-            "nl": "het water"
-        },
-        "plural": {
-            "en": "waters",
-            "fi": "vedet",
-            "nl": [
-                "de waters",
-                "de wateren"
-            ]
-        }
-    },
-    "mineral water": {
-        "hypernym": "water",
-        "en": "mineral water",
-        "fi": [
-            "kivennäisvesi",
-            "vissy"
-        ],
-        "nl": "het mineraalwater"
-    },
     "sandwich": {
         "hypernym": "bread",
         "roots": {

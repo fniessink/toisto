@@ -1,7 +1,26 @@
 {
+    "sport": {
+        "en": "sport",
+        "fi": [
+            "urheilu",
+            "urheilulaji"
+        ],
+        "nl": [
+            "de sport",
+            "de tak van sport"
+        ]
+    },
     "spectator sport": {
+        "hypernym": "sport",
         "en": "spectator sport",
         "fi": "penkkiurheilu",
         "nl": "de kijksport"
+    },
+    "sports club": {
+        "roots": "sport",
+        "involves": "sport",
+        "en": "sports club",
+        "fi": "urheiluseura",
+        "nl": "de sportclub"
     }
 }

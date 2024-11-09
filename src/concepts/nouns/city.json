@@ -11,5 +11,17 @@
             "fi": "kaupungit",
             "nl": "de steden"
         }
+    },
+    "townsman": {
+        "roots": {
+            "fi": "city",
+            "nl": "city"
+        },
+        "en": [
+            "townsman",
+            "townswoman"
+        ],
+        "fi": "kaupunkilainen",
+        "nl": "de stadsbewoner|de stadbewoner"
     }
 }
