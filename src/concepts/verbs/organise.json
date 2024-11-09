@@ -1,0 +1,49 @@
+{
+    "to organise": {
+        "infinitive": {
+            "en": "to organise|to organize",
+            "fi": "järjestää",
+            "nl": "organiseren"
+        },
+        "singular": {
+            "first person": {
+                "en": "I organise|I organize",
+                "fi": "minä järjestän",
+                "nl": "ik organiseer"
+            },
+            "second person": {
+                "en": "you organise|you organize",
+                "fi": "sinä järjestät",
+                "nl": "jij organiseert"
+            },
+            "third person": {
+                "fi": "hän järjestää",
+                "feminine": {
+                    "en": "she organises|she organizes",
+                    "nl": "zij organiseert"
+                },
+                "masculine": {
+                    "en": "he organises|he organizes",
+                    "nl": "hij organiseert"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we organise|we organize",
+                "fi": "me järjestämme",
+                "nl": "wij organiseren"
+            },
+            "second person": {
+                "en": "you organise|you organize",
+                "fi": "te järjestätte",
+                "nl": "jullie organiseren"
+            },
+            "third person": {
+                "en": "they organise|they organize",
+                "fi": "he järjestävät",
+                "nl": "zij organiseren"
+            }
+        }
+    }
+}

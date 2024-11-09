@@ -1,0 +1,49 @@
+{
+    "to notify": {
+        "infinitive": {
+            "en": "to notify",
+            "fi": "ilmoittaa",
+            "nl": "melden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I notify",
+                "fi": "minä ilmoitan",
+                "nl": "ik meld"
+            },
+            "second person": {
+                "en": "you notify",
+                "fi": "sinä ilmoitat",
+                "nl": "jij meldt"
+            },
+            "third person": {
+                "fi": "hän ilmoittaa",
+                "feminine": {
+                    "en": "she notifies",
+                    "nl": "zij meldt"
+                },
+                "masculine": {
+                    "en": "he notifies",
+                    "nl": "hij meldt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we notify",
+                "fi": "me ilmoitamme",
+                "nl": "wij melden"
+            },
+            "second person": {
+                "en": "you notify",
+                "fi": "te ilmoitatte",
+                "nl": "jullie melden"
+            },
+            "third person": {
+                "en": "they notify",
+                "fi": "he ilmoittavat",
+                "nl": "zij melden"
+            }
+        }
+    }
+}
