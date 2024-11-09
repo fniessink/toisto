@@ -5,6 +5,7 @@
         "nl": "de sauna"
     },
     "sauna stove": {
+        "holonym": "sauna",
         "roots": {
             "en": "sauna",
             "nl": "sauna"
@@ -17,6 +18,7 @@
         "nl": "de saunakachel"
     },
     "sauna bench": {
+        "holonym": "sauna",
         "roots": {
             "en": "sauna",
             "nl": "sauna"
@@ -26,6 +28,7 @@
         "nl": "de saunabank"
     },
     "puusauna": {
+        "hypernym": "sauna",
         "roots": {
             "fi": [
                 "wood",
@@ -37,6 +40,7 @@
         "nl": "(een houtgestookte sauna)"
     },
     "sähkösauna": {
+        "hypernym": "sauna",
         "roots": {
             "fi": "sauna"
         },
