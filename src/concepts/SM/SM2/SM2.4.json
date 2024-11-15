@@ -1,4 +1,11 @@
 {
+    "SM2.4": {
+        "fi": "(SM2.4)",
+        "involves": [
+            "SM2.4-sanasta",
+            "SM2.4-luetaan"
+        ]
+    },
     "SM2.4-sanasto": {
         "fi": "(SM2.4-sanasto)",
         "involves": [
