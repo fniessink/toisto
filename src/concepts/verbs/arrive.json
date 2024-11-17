@@ -4,6 +4,46 @@
             "en": "to arrive",
             "fi": "saapua",
             "nl": "aankomen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I arrive",
+                "fi": "minä saavun",
+                "nl": "ik kom aan"
+            },
+            "second person": {
+                "en": "you arrive",
+                "fi": "sinä saavut",
+                "nl": "jij komt aan"
+            },
+            "third person": {
+                "fi": "hän saapuu",
+                "feminine": {
+                    "en": "she arrives",
+                    "nl": "zij komt aan"
+                },
+                "masculine": {
+                    "en": "he arrives",
+                    "nl": "hij komt aan"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we arrive",
+                "fi": "me saavumme",
+                "nl": "wij komen aan"
+            },
+            "second person": {
+                "en": "you arrive",
+                "fi": "te saavutte",
+                "nl": "jullie komen aan"
+            },
+            "third person": {
+                "en": "they arrive",
+                "fi": "he saapuvat",
+                "nl": "zij komen aan"
+            }
         }
     }
 }

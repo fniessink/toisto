@@ -1,5 +1,5 @@
 {
-    "suffice": {
+    "to suffice": {
         "infinitive": {
             "en": [
                 "to suffice",
@@ -7,9 +7,91 @@
             ],
             "fi": "kelvata",
             "nl": [
-                "goed genoeg zijn",
-                "volstaan"
+                "volstaan",
+                "goed genoeg zijn"
             ]
+        },
+        "singular": {
+            "first person": {
+                "en": [
+                    "I suffice",
+                    "I am good enough"
+                ],
+                "fi": "minä kelpaan",
+                "nl": [
+                    "ik volsta",
+                    "ik ben goed genoeg"
+                ]
+            },
+            "second person": {
+                "en": [
+                    "you suffice",
+                    "you are good enough"
+                ],
+                "fi": "sinä kelpaat",
+                "nl": [
+                    "jij volstaat",
+                    "jij bent goed genoeg"
+                ]
+            },
+            "third person": {
+                "fi": "hän kelpaa",
+                "feminine": {
+                    "en": [
+                        "she suffices",
+                        "she is good enough"
+                    ],
+                    "nl": [
+                        "zij volstaat",
+                        "zij is goed genoeg"
+                    ]
+                },
+                "masculine": {
+                    "en": [
+                        "he suffices",
+                        "he is good enough"
+                    ],
+                    "nl": [
+                        "hij volstaat",
+                        "hij is goed genoeg"
+                    ]
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": [
+                    "we suffice",
+                    "we are good enough"
+                ],
+                "fi": "me kelpaamme",
+                "nl": [
+                    "wij volstaan",
+                    "wij zijn goed genoeg"
+                ]
+            },
+            "second person": {
+                "en": [
+                    "you suffice",
+                    "you are good enough"
+                ],
+                "fi": "te kelpaatte",
+                "nl": [
+                    "jullie volstaan",
+                    "jullie zijn goed genoeg"
+                ]
+            },
+            "third person": {
+                "en": [
+                    "they suffice",
+                    "they are good enough"
+                ],
+                "fi": "he kelpaavat",
+                "nl": [
+                    "zij volstaan",
+                    "zij zijn goed genoeg"
+                ]
+            }
         }
     }
 }

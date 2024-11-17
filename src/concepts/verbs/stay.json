@@ -12,6 +12,46 @@
             "en": "to stay",
             "fi": "jäädä",
             "nl": "blijven"
+        },
+        "singular": {
+            "first person": {
+                "en": "I stay",
+                "fi": "minä jään",
+                "nl": "ik blijf"
+            },
+            "second person": {
+                "en": "you stay",
+                "fi": "sinä jäät",
+                "nl": "jij blijft"
+            },
+            "third person": {
+                "fi": "hän jää",
+                "feminine": {
+                    "en": "she stays",
+                    "nl": "zij blijft"
+                },
+                "masculine": {
+                    "en": "he stays",
+                    "nl": "hij blijft"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we stay",
+                "fi": "me jäämme",
+                "nl": "wij blijven"
+            },
+            "second person": {
+                "en": "you stay",
+                "fi": "te jäätte",
+                "nl": "jullie blijven"
+            },
+            "third person": {
+                "en": "they stay",
+                "fi": "he jäävät",
+                "nl": "zij blijven"
+            }
         }
     },
     "I stayed home yesterday": {

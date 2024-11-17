@@ -1,0 +1,49 @@
+{
+    "to seem": {
+        "infinitive": {
+            "en": "to seem",
+            "fi": "näyttää",
+            "nl": "lijken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I seem",
+                "fi": "minä näytän",
+                "nl": "ik lijk"
+            },
+            "second person": {
+                "en": "you seem",
+                "fi": "sinä näytät",
+                "nl": "jij lijkt"
+            },
+            "third person": {
+                "fi": "hän näyttää",
+                "feminine": {
+                    "en": "she seems",
+                    "nl": "zij lijkt"
+                },
+                "masculine": {
+                    "en": "he seems",
+                    "nl": "hij lijkt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we seem",
+                "fi": "me näytämme",
+                "nl": "wij lijken"
+            },
+            "second person": {
+                "en": "you seem",
+                "fi": "te näytätte",
+                "nl": "jullie lijken"
+            },
+            "third person": {
+                "en": "they seem",
+                "fi": "he näyttävät",
+                "nl": "zij lijken"
+            }
+        }
+    }
+}

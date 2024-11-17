@@ -1,0 +1,55 @@
+{
+    "to hurt": {
+        "roots": {
+            "nl": [
+                "to do",
+                "pain"
+            ]
+        },
+        "infinitive": {
+            "en": "to hurt",
+            "fi": "sattua",
+            "nl": "pijn doen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I hurt",
+                "fi": "minä satun",
+                "nl": "ik doe pijn"
+            },
+            "second person": {
+                "en": "you hurt",
+                "fi": "sinä satut",
+                "nl": "jij doet pijn"
+            },
+            "third person": {
+                "fi": "hän sattuu",
+                "feminine": {
+                    "en": "she hurts",
+                    "nl": "zij doet pijn"
+                },
+                "masculine": {
+                    "en": "he hurts",
+                    "nl": "hij doet pijn"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we hurt",
+                "fi": "me satumme",
+                "nl": "wij doen pijn"
+            },
+            "second person": {
+                "en": "you hurt",
+                "fi": "te satutte",
+                "nl": "jullie doen pijn"
+            },
+            "third person": {
+                "en": "they hurt",
+                "fi": "he sattuvat",
+                "nl": "zij doen pijn"
+            }
+        }
+    }
+}

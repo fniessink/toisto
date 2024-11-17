@@ -1,0 +1,49 @@
+{
+    "to search": {
+        "infinitive": {
+            "en": "to search",
+            "fi": "etsiä",
+            "nl": "zoeken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I search",
+                "fi": "minä etsin",
+                "nl": "ik zoek"
+            },
+            "second person": {
+                "en": "you search",
+                "fi": "sinä etsit",
+                "nl": "jij zoekt"
+            },
+            "third person": {
+                "fi": "hän etsii",
+                "feminine": {
+                    "en": "she searches",
+                    "nl": "zij zoekt"
+                },
+                "masculine": {
+                    "en": "he searches",
+                    "nl": "hij zoekt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we search",
+                "fi": "me etsimme",
+                "nl": "wij zoeken"
+            },
+            "second person": {
+                "en": "you search",
+                "fi": "te etsitte",
+                "nl": "jullie zoeken"
+            },
+            "third person": {
+                "en": "they search",
+                "fi": "he etsivät",
+                "nl": "zij zoeken"
+            }
+        }
+    }
+}
