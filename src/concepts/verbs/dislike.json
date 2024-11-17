@@ -1,0 +1,52 @@
+{
+    "to dislike": {
+        "roots": {
+            "nl": "to have"
+        },
+        "infinitive": {
+            "en": "to dislike",
+            "fi": "inhota",
+            "nl": "een hekel hebben"
+        },
+        "singular": {
+            "first person": {
+                "en": "I dislike",
+                "fi": "minä inhoan",
+                "nl": "ik heb een hekel"
+            },
+            "second person": {
+                "en": "you dislike",
+                "fi": "sinä inhoat",
+                "nl": "jij hebt een hekel"
+            },
+            "third person": {
+                "fi": "hän inhoaa",
+                "feminine": {
+                    "en": "she dislikes",
+                    "nl": "zij heeft een hekel"
+                },
+                "masculine": {
+                    "en": "he dislikes",
+                    "nl": "hij heeft een hekel"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we dislike",
+                "fi": "me inhoamme",
+                "nl": "wij hebben een hekel"
+            },
+            "second person": {
+                "en": "you dislike",
+                "fi": "te inhoatte",
+                "nl": "jullie hebben een hekel"
+            },
+            "third person": {
+                "en": "they dislike",
+                "fi": "he inhoavat",
+                "nl": "zij hebben een hekel"
+            }
+        }
+    }
+}

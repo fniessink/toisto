@@ -24,6 +24,88 @@
                 "bereiken",
                 "komen;to get to"
             ]
+        },
+        "singular": {
+            "first person": {
+                "en": [
+                    "I get to",
+                    "I reach"
+                ],
+                "fi": "minä pääsen",
+                "nl": [
+                    "ik bereik",
+                    "ik kom"
+                ]
+            },
+            "second person": {
+                "en": [
+                    "you get to",
+                    "you reach"
+                ],
+                "fi": "sinä pääset",
+                "nl": [
+                    "jij bereikt",
+                    "jij komt"
+                ]
+            },
+            "third person": {
+                "fi": "hän pääsee",
+                "feminine": {
+                    "en": [
+                        "she gets to",
+                        "she reaches"
+                    ],
+                    "nl": [
+                        "zij bereikt",
+                        "zij komt"
+                    ]
+                },
+                "masculine": {
+                    "en": [
+                        "he gets to",
+                        "he reaches"
+                    ],
+                    "nl": [
+                        "hij bereikt",
+                        "hij komt"
+                    ]
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": [
+                    "we get to",
+                    "we reach"
+                ],
+                "fi": "me pääsemme",
+                "nl": [
+                    "wij bereiken",
+                    "wij komen"
+                ]
+            },
+            "second person": {
+                "en": [
+                    "you get to",
+                    "you reach"
+                ],
+                "fi": "te pääsette",
+                "nl": [
+                    "jullie bereiken",
+                    "jullie komen"
+                ]
+            },
+            "third person": {
+                "en": [
+                    "they get to",
+                    "they reach"
+                ],
+                "fi": "he pääsevät",
+                "nl": [
+                    "zij bereiken",
+                    "zij komen"
+                ]
+            }
         }
     }
 }

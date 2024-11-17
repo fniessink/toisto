@@ -1,0 +1,49 @@
+{
+    "to reach in time": {
+        "infinitive": {
+            "en": "to reach in time",
+            "fi": "ehtiä",
+            "nl": "op tijd komen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I reach in time",
+                "fi": "minä ehdin",
+                "nl": "ik kom op tijd"
+            },
+            "second person": {
+                "en": "you reach in time",
+                "fi": "sinä ehdit",
+                "nl": "jij komt op tijd"
+            },
+            "third person": {
+                "fi": "hän ehtii",
+                "feminine": {
+                    "en": "she reaches in time",
+                    "nl": "zij komt op tijd"
+                },
+                "masculine": {
+                    "en": "he reaches in time",
+                    "nl": "hij komt op tijd"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we reach in time",
+                "fi": "me ehdimme",
+                "nl": "wij komen op tijd"
+            },
+            "second person": {
+                "en": "you reach in time",
+                "fi": "te ehditte",
+                "nl": "jullie komen op tijd"
+            },
+            "third person": {
+                "en": "they reach in time",
+                "fi": "he ehtivät",
+                "nl": "zij komen op tijd"
+            }
+        }
+    }
+}

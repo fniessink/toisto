@@ -14,8 +14,14 @@
     },
     "web page": {
         "roots": "page",
-        "en": "web page",
-        "fi": "verkkosivu",
-        "nl": "de webpagina"
+        "en": "web page|webpage",
+        "fi": [
+            "verkkosivu",
+            "nettisivu"
+        ],
+        "nl": [
+            "de webpagina",
+            "de internetpagina"
+        ]
     }
 }
