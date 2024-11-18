@@ -3,7 +3,9 @@
         "fi": "(SM2.4)",
         "involves": [
             "SM2.4-sanasta",
-            "SM2.4-luetaan"
+            "SM2.4-luetaan",
+            "SM2.4-kielioppi",
+            "SM2.4-teksti"
         ]
     },
     "SM2.4-sanasto": {
@@ -174,6 +176,58 @@
             "to stay (behind)",
             "to suffice",
             "to suit"
+        ]
+    },
+    "SM2.4-teksti": {
+        "fi": "(SM2.4-teksti)",
+        "involves": [
+            "active",
+            "actually",
+            "all kinds of",
+            "although",
+            "basketball",
+            "brave",
+            "choir",
+            "currently",
+            "early",
+            "enthusiastic",
+            "especially",
+            "first",
+            "floorball",
+            "free time",
+            "hobby",
+            "however",
+            "in my opinion",
+            "local",
+            "many/much",
+            "nearby (adjective)",
+            "no more",
+            "not even",
+            "non-fiction book",
+            "relaxed",
+            "simultaneously",
+            "solution",
+            "sport",
+            "sports fan",
+            "suitable",
+            "team",
+            "television",
+            "to be interested",
+            "to concentrate",
+            "to encourage",
+            "to enjoy",
+            "to found",
+            "to go outside",
+            "to have as hobby",
+            "to learn",
+            "to lounge",
+            "to move (intransitive)",
+            "to practice",
+            "to shout",
+            "to try",
+            "very many/much",
+            "winter swimming",
+            "wow"
         ]
     }
 }

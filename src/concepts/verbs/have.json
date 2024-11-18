@@ -522,5 +522,52 @@
             "fi": "ehtiä",
             "nl": "tijd hebben"
         }
+    },
+    "to have as hobby": {
+        "infinitive": {
+            "en": "to have as hobby",
+            "fi": "harrastaa",
+            "nl": "beoefenen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I have as hobby",
+                "fi": "minä harrastan",
+                "nl": "ik beoefen"
+            },
+            "second person": {
+                "en": "you have as hobby",
+                "fi": "sinä harrastat",
+                "nl": "jij beoefent"
+            },
+            "third person": {
+                "fi": "hän harrastaa",
+                "feminine": {
+                    "en": "she has as hobby",
+                    "nl": "zij beoefent"
+                },
+                "masculine": {
+                    "en": "he has as hobby",
+                    "nl": "hij beoefent"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we have as hobby",
+                "fi": "me harrastamme",
+                "nl": "wij beoefenen"
+            },
+            "second person": {
+                "en": "you have as hobby",
+                "fi": "te harrastatte",
+                "nl": "jullie beoefenen"
+            },
+            "third person": {
+                "en": "they have as hobby",
+                "fi": "he harrastavat",
+                "nl": "zij beoefenen"
+            }
+        }
     }
 }

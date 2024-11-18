@@ -1,9 +1,58 @@
 {
-    "to move": {
+    "to move (transitive)": {
+        "hypernym": "transitive verb",
         "infinitive": {
             "en": "to move",
             "fi": "siirtää",
             "nl": "verplaatsen"
+        }
+    },
+    "to move (intransitive)": {
+        "hypernym": "intransitive verb",
+        "infinitive": {
+            "en": "to move",
+            "fi": "liikkua",
+            "nl": "bewegen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I move",
+                "fi": "minä liikun",
+                "nl": "ik beweeg"
+            },
+            "second person": {
+                "en": "you move",
+                "fi": "sinä liikut",
+                "nl": "jij beweegt"
+            },
+            "third person": {
+                "fi": "hän liikkuu",
+                "feminine": {
+                    "en": "she moves",
+                    "nl": "zij beweegt"
+                },
+                "masculine": {
+                    "en": "he moves",
+                    "nl": "hij beweegt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we move",
+                "fi": "me liikumme",
+                "nl": "wij bewegen"
+            },
+            "second person": {
+                "en": "you move",
+                "fi": "te liikutte",
+                "nl": "jullie bewegen"
+            },
+            "third person": {
+                "en": "they move",
+                "fi": "he liikkuvat",
+                "nl": "zij bewegen"
+            }
         }
     }
 }

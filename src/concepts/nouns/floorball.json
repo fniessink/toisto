@@ -2,7 +2,11 @@
     "floorball": {
         "hypernym": "sport",
         "en": "floorball",
-        "fi": "sähly",
-        "nl": "floorball"
+        "fi": [
+            "salibandy",
+            "sähly",
+            "sali*"
+        ],
+        "nl": "het floorball"
     }
 }

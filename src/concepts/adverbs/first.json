@@ -1,7 +1,10 @@
 {
     "first": {
         "en": "first",
-        "fi": "ensin",
+        "fi": [
+            "ensin",
+            "aluksi"
+        ],
         "nl": "eerst"
     }
 }
