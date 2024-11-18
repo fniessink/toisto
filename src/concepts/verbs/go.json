@@ -89,5 +89,52 @@
                 }
             }
         }
+    },
+    "to go outside": {
+        "infinitive": {
+            "en": "to go outside",
+            "fi": "ulkoilla",
+            "nl": "naar buiten gaan"
+        },
+        "singular": {
+            "first person": {
+                "en": "I go outside",
+                "fi": "minä ulkoilen",
+                "nl": "ik ga naar buiten"
+            },
+            "second person": {
+                "en": "you go outside",
+                "fi": "sinä ulkoilet",
+                "nl": "jij gaat naar buiten"
+            },
+            "third person": {
+                "fi": "hän ulkoilee",
+                "feminine": {
+                    "en": "she goes outside",
+                    "nl": "zij gaat naar buiten"
+                },
+                "masculine": {
+                    "en": "he goes outside",
+                    "nl": "hij gaat naar buiten"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we go outside",
+                "fi": "me ulkoilemme",
+                "nl": "wij gaan naar buiten"
+            },
+            "second person": {
+                "en": "you go outside",
+                "fi": "te ulkoilette",
+                "nl": "jullie gaan naar buiten"
+            },
+            "third person": {
+                "en": "they go outside",
+                "fi": "he ulkoilevat",
+                "nl": "zij gaan naar buiten"
+            }
+        }
     }
 }

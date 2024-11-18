@@ -53,11 +53,18 @@
             "nl": "uittrekken"
         }
     },
-    "to take time": {
+    "to take (time)": {
         "infinitive": {
             "en": "to take",
             "fi": "kestää",
             "nl": "duren"
+        }
+    },
+    "to take time": {
+        "infinitive": {
+            "en": "to take time",
+            "fi": "viedä aikaa",
+            "nl": "tijd kosten"
         }
     }
 }

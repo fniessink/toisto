@@ -4,6 +4,46 @@
             "en": "to shout",
             "fi": "huutaa",
             "nl": "schreeuwen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I shout",
+                "fi": "minä huudan",
+                "nl": "ik schreeuw"
+            },
+            "second person": {
+                "en": "you shout",
+                "fi": "sinä huudat",
+                "nl": "jij schreeuwt"
+            },
+            "third person": {
+                "fi": "hän huutaa",
+                "feminine": {
+                    "en": "she shouts",
+                    "nl": "zij schreeuwt"
+                },
+                "masculine": {
+                    "en": "he shouts",
+                    "nl": "hij schreeuwt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we shout",
+                "fi": "me huudamme",
+                "nl": "wij schreeuwen"
+            },
+            "second person": {
+                "en": "you shout",
+                "fi": "te huudatte",
+                "nl": "jullie schreeuwen"
+            },
+            "third person": {
+                "en": "they shout",
+                "fi": "he huutavat",
+                "nl": "zij schreeuwen"
+            }
         }
     }
 }

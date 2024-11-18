@@ -1,0 +1,49 @@
+{
+    "to try": {
+        "infinitive": {
+            "en": "to try",
+            "fi": "kokeilla",
+            "nl": "proberen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I try",
+                "fi": "minä kokeilen",
+                "nl": "ik probeer"
+            },
+            "second person": {
+                "en": "you try",
+                "fi": "sinä kokeilet",
+                "nl": "jij probeert"
+            },
+            "third person": {
+                "fi": "hän kokeilee",
+                "feminine": {
+                    "en": "she tries",
+                    "nl": "zij probeert"
+                },
+                "masculine": {
+                    "en": "he tries",
+                    "nl": "hij probeert"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we try",
+                "fi": "me kokeilemme",
+                "nl": "wij proberen"
+            },
+            "second person": {
+                "en": "you try",
+                "fi": "te kokeilette",
+                "nl": "jullie proberen"
+            },
+            "third person": {
+                "en": "they try",
+                "fi": "he kokeilevat",
+                "nl": "zij proberen"
+            }
+        }
+    }
+}

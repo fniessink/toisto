@@ -1,0 +1,25 @@
+{
+    "early": {
+        "roots": {
+            "fi": "time"
+        },
+        "positive degree": {
+            "en": "early",
+            "fi": "aikaisin",
+            "nl": "vroeg"
+        },
+        "comparative degree": {
+            "en": "earlier",
+            "fi": [
+                "aikaisemmin",
+                "aiemmin"
+            ],
+            "nl": "vroeger"
+        },
+        "superlative degree": {
+            "en": "earliest",
+            "fi": "aikaisimmin",
+            "nl": "vroegst"
+        }
+    }
+}

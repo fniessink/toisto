@@ -34,5 +34,11 @@
             "het luisterboek",
             "het audioboek"
         ]
+    },
+    "non-fiction book": {
+        "hypernym": "book",
+        "en": "non-fiction book",
+        "fi": "tietokirja",
+        "nl": "het non-fictieboek"
     }
 }

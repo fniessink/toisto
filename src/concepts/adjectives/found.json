@@ -1,0 +1,49 @@
+{
+    "to found": {
+        "infinitive": {
+            "en": "to found",
+            "fi": "perustaa",
+            "nl": "oprichten"
+        },
+        "singular": {
+            "first person": {
+                "en": "I found",
+                "fi": "minä perustan",
+                "nl": "ik richt op"
+            },
+            "second person": {
+                "en": "you found",
+                "fi": "sinä perustat",
+                "nl": "jij richt op"
+            },
+            "third person": {
+                "fi": "hän perustaa",
+                "feminine": {
+                    "en": "she founds",
+                    "nl": "zij richt op"
+                },
+                "masculine": {
+                    "en": "he founds",
+                    "nl": "hij richt op"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we found",
+                "fi": "me perustamme",
+                "nl": "wij richten op"
+            },
+            "second person": {
+                "en": "you found",
+                "fi": "te perustatte",
+                "nl": "jullie richten op"
+            },
+            "third person": {
+                "en": "they found",
+                "fi": "he perustavat",
+                "nl": "zij richten op"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "to invent": {
+        "infinitive": {
+            "en": "to invent",
+            "fi": "keksiä",
+            "nl": "uitvinden"
+        },
+        "singular": {
+            "first person": {
+                "en": "I invent",
+                "fi": "minä keksin",
+                "nl": "ik vind uit"
+            },
+            "second person": {
+                "en": "you invent",
+                "fi": "sinä keksit",
+                "nl": "jij vindt uit"
+            },
+            "third person": {
+                "fi": "hän keksii",
+                "feminine": {
+                    "en": "she invents",
+                    "nl": "zij vindt uit"
+                },
+                "masculine": {
+                    "en": "he invents",
+                    "nl": "hij vindt uit"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we invent",
+                "fi": "me keksimme",
+                "nl": "wij vinden uit"
+            },
+            "second person": {
+                "en": "you invent",
+                "fi": "te keksitte",
+                "nl": "jullie vinden uit"
+            },
+            "third person": {
+                "en": "they invent",
+                "fi": "he keksivät",
+                "nl": "zij vinden uit"
+            }
+        }
+    }
+}
