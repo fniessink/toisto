@@ -21,7 +21,7 @@ END_OF_SENTENCE_PUNCTUATION = "?!."
 class Label:
     """Class representing labels for concepts."""
 
-    __slots__ = ("__dict__", "language", "_value")  # Without adding __dict__ to slots @cached_property does not work
+    __slots__ = ("__dict__", "_value", "language")  # Without adding __dict__ to slots @cached_property does not work
 
     # Labels can have one question note and multiple answer notes. The question note is shown before a quiz is
     # presented to the user. The answer notes are shown afterwards. The format is:
