@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.31.0"
+version = "0.32.0"
 authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
@@ -41,7 +41,7 @@ dev = [
     "gprof2dot == 2024.6.6",
     "green == 4.0.2",
     "mypy == 1.13.0",
-    "ruff == 0.7.4",
+    "ruff == 0.8.0",
     "types-requests == 2.32.0.20241016",
     "unittest-xml-reporting == 3.2.0",
     "vulture == 2.13",
@@ -95,8 +95,6 @@ line-length = 120
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-    "ANN101", # Prevent 'Missing type annotation for `self` in method' errors
-    "ANN102", # Prevent 'Missing type annotation for `cls` in classmethod' errors
     "C408",   # Prevent 'Unnecessary `dict` call (rewrite as a literal)' errors
     "COM812", # This rule may cause conflicts when used with the ruff formatter
     "D107",   # Prevent 'Missing docstring in `__init__`' errors
@@ -106,9 +104,9 @@ ignore = [
     "FBT003", # Prevent 'Boolean positional value in function call' errors
     "ISC001", # This rule may cause conflicts when used with the ruff formatter
     "PT",     # We don't use Pytest
-    "TCH001", # Prevent 'Move application import `...` into a type-checking block' errors
-    "TCH002", # Prevent 'Move third-party import `...` into a type-checking block' errors
-    "TCH003", # Prevent 'Move standard library import `...` into a type-checking block' errors
+    "TC001",  # Prevent 'Move application import `...` into a type-checking block' errors
+    "TC002",  # Prevent 'Move third-party import `...` into a type-checking block' errors
+    "TC003",  # Prevent 'Move standard library import `...` into a type-checking block' errors
     "TID252", # Prevent 'Relative imports from parent modules are banned' errors
 ]
 
