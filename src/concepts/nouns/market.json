@@ -22,7 +22,10 @@
         "nl": "de markthal"
     },
     "flea market": {
-        "roots": "market",
+        "roots": [
+            "flea",
+            "market"
+        ],
         "en": "flea market",
         "fi": [
             "kirpputori",

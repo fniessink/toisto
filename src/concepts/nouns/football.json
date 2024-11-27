@@ -1,0 +1,31 @@
+{
+    "football": {
+        "hypernym": "team sport",
+        "example": "I play football",
+        "roots": [
+            "ball",
+            "foot"
+        ],
+        "en": "football",
+        "fi": [
+            "jalkapallo",
+            "futis*"
+        ],
+        "nl": "de voetbal"
+    },
+    "I play football": {
+        "roots": [
+            "to play a sport",
+            "football"
+        ],
+        "en": "I play football.",
+        "fi": [
+            "Minä pelaan jalkopalloa.",
+            "Minä pelaan futista.*"
+        ],
+        "nl": [
+            "Ik speel voetbal.",
+            "Ik voetbal."
+        ]
+    }
+}

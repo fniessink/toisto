@@ -1,5 +1,6 @@
 {
-    "to play an instrument": {
+    "to play a musical instrument": {
+        "involves": "musical instrument",
         "infinitive": {
             "en": "to play",
             "fi": "soittaa",
@@ -46,9 +47,57 @@
             }
         }
     },
+    "to play a sport": {
+        "involves": "sport",
+        "infinitive": {
+            "en": "to play",
+            "fi": "pelata",
+            "nl": "spelen"
+        },
+        "singular": {
+            "first person": {
+                "en": "I play",
+                "fi": "minä pelaan",
+                "nl": "ik speel"
+            },
+            "second person": {
+                "en": "you play",
+                "fi": "sinä pelaat",
+                "nl": "jij speelt"
+            },
+            "third person": {
+                "fi": "hän pelaa",
+                "feminine": {
+                    "en": "she plays",
+                    "nl": "zij speelt"
+                },
+                "masculine": {
+                    "en": "he plays",
+                    "nl": "hij speelt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we play",
+                "fi": "me pelaamme",
+                "nl": "wij spelen"
+            },
+            "second person": {
+                "en": "you play",
+                "fi": "te pelaatte",
+                "nl": "jullie spelen"
+            },
+            "third person": {
+                "en": "they play",
+                "fi": "he pelaavat",
+                "nl": "zij spelen"
+            }
+        }
+    },
     "to play darts": {
         "roots": {
-            "en": "to play",
+            "en": "to play a sport",
             "fi": "to throw"
         },
         "en": "to play darts",

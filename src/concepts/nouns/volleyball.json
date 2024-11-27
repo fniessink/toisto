@@ -1,11 +1,24 @@
 {
     "volleyball": {
-        "hypernym": "sport",
+        "hypernym": "team sport",
+        "example": "I play volleyball",
         "en": "volleyball",
         "fi": [
             "lentopallo",
             "lentis*"
         ],
         "nl": "het volleybal"
+    },
+    "I play volleyball": {
+        "roots": [
+            "to play a sport",
+            "volleyball"
+        ],
+        "en": "I play volleyball.",
+        "fi": [
+            "Minä pelaan lentopalloa.",
+            "Minä pelaan lentista.*"
+        ],
+        "nl": "Ik speel volleybal."
     }
 }

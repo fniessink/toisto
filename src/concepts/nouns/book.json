@@ -37,6 +37,14 @@
     },
     "non-fiction book": {
         "hypernym": "book",
+        "roots": {
+            "en": "book",
+            "fi": [
+                "knowledge",
+                "book"
+            ],
+            "nl": "book"
+        },
         "en": "non-fiction book",
         "fi": "tietokirja",
         "nl": "het non-fictieboek"

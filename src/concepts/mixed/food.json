@@ -1195,11 +1195,16 @@
         "fi": "puuro",
         "nl": "de pap"
     },
-    "hungry": {
+    "hunger": {
         "involves": "food",
-        "en": "hungry",
+        "en": "hunger",
         "fi": "nälkä",
-        "nl": "honger"
+        "nl": "de honger"
+    },
+    "hungry": {
+        "en": "hungry",
+        "fi": "nälkäinen",
+        "nl": "hongerig"
     },
     "i am hungry": {
         "involves": "food",
@@ -1210,11 +1215,11 @@
             ],
             "fi": [
                 "to have",
-                "hungry"
+                "hunger"
             ],
             "nl": [
                 "to have",
-                "hungry"
+                "hunger"
             ]
         },
         "en": "I am hungry.",

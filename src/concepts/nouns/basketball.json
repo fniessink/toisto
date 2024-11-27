@@ -1,6 +1,7 @@
 {
     "basketball": {
-        "hypernym": "sport",
+        "hypernym": "team sport",
+        "example": "I play basketball",
         "roots": "ball",
         "en": "basketball",
         "fi": [
@@ -8,5 +9,17 @@
             "koris*"
         ],
         "nl": "het basketbal"
+    },
+    "I play basketball": {
+        "roots": [
+            "to play a sport",
+            "basketball"
+        ],
+        "en": "I play basketball.",
+        "fi": [
+            "Minä pelaan koripalloa.",
+            "Minä pelaan korista.*"
+        ],
+        "nl": "Ik speel basketbal."
     }
 }
