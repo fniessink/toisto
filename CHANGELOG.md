@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add more words and phrases. Closes [#911](https://github.com/fniessink/toisto/issues/911).
 - Use the "involves" relation between concepts to automatically generate hints for homonyms. Closes [#931](https://github.com/fniessink/toisto/issues/931).
 
 ## 0.32.1 - 2024-11-23

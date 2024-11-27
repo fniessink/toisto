@@ -1,11 +1,24 @@
 {
     "Finnish baseball": {
-        "hypernym": "sport",
+        "hypernym": "team sport",
+        "example": "I play Finnish baseball",
         "en": "Finnish baseball",
         "fi": [
             "pesäpallo",
             "pesis*"
         ],
         "nl": "het Fins honkbal"
+    },
+    "I play Finnish baseball": {
+        "roots": [
+            "to play a sport",
+            "Finnish baseball"
+        ],
+        "en": "I play Finnish baseball.",
+        "fi": [
+            "Minä pelaan pesäpalloa.",
+            "Minä pelaan pesistä.*"
+        ],
+        "nl": "Ik speel Fins honkbal."
     }
 }

@@ -234,35 +234,6 @@
         "fi": "sairausloma",
         "nl": "het ziekteverlof"
     },
-    "employer": {
-        "antonym": "employee",
-        "roots": {
-            "fi": [
-                "work",
-                "to give"
-            ],
-            "nl": [
-                "work",
-                "to give"
-            ]
-        },
-        "en": "employer",
-        "fi": "työnantaja",
-        "nl": "de werkgever"
-    },
-    "employee": {
-        "antonym": "employer",
-        "roots": {
-            "fi": "work",
-            "nl": [
-                "work",
-                "to take"
-            ]
-        },
-        "en": "employee",
-        "fi": "työntekijä",
-        "nl": "de werknemer"
-    },
     "boss": {
         "en": "boss",
         "fi": [
@@ -291,13 +262,11 @@
         "fi": "informaatioteknologia",
         "nl": "de informatietechnologie"
     },
-    "computer": {
-        "en": "computer",
-        "fi": "tietokone",
-        "nl": "de computer"
-    },
     "laptop": {
         "hypernym": "computer",
+        "roots": {
+            "fi": "computer"
+        },
         "en": "laptop",
         "fi": [
             "kannettava tietokone",

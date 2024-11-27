@@ -1,6 +1,7 @@
 {
     "badminton": {
         "hypernym": "sport",
+        "example": "I play badminton",
         "roots": {
             "fi": "ball"
         },
@@ -10,5 +11,17 @@
             "sulkis*"
         ],
         "nl": "het badminton"
+    },
+    "I play badminton": {
+        "roots": [
+            "to play a sport",
+            "badminton"
+        ],
+        "en": "I play badminton.",
+        "fi": [
+            "Minä pelaan sulkapalloa.",
+            "Minä pelaan sulkista.*"
+        ],
+        "nl": "Ik speel badminton."
     }
 }
