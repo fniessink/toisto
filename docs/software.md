@@ -192,7 +192,9 @@ If different concepts have identical labels (meaning they are homographs) and To
 
 Toisto recognizes homographs and automatically provides a hint when quizzing a label that has homographs. It does so by looking at the relation between the different concepts that share the same label.
 
-If the concepts share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example:
+#### Hints based on grammar
+
+If the homographs share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example:
 
 ```json
 {
@@ -219,7 +221,9 @@ If the concepts share a common base concept, such as with verbs, Toisto will bas
 
 When quizzing the translation of "you have", Toisto will provide a hint based on the grammar, for example: "Listen and write in Dutch (singular)".
 
-If the concepts have different hypernyms, Toisto will provide a hint based on the hypernym. For example, in the case of the Dutch word "bank", there are two concepts that share that label: "bank" with hypernym "financial institution" and "bank" with hypernym "furniture":
+#### Hints based on hypernyms
+
+If the homographs have different hypernyms, Toisto will provide a hint based on the hypernym. For example, in the case of the Dutch word "bank", there are two concepts that share that label: "bank" with hypernym "financial institution" and "bank" with hypernym "furniture":
 
 ```json
 {
@@ -238,13 +242,44 @@ If the concepts have different hypernyms, Toisto will provide a hint based on th
 
 When quizzing the translation of "bank", Toisto provides the hypernym as hint, for example: "Listen and write in Dutch (furniture)".
 
+#### Hints based on invoved concepts
+
+If the homographs involve other concepts, Toisto will provide a hint based on the involved concepts. For example, in the case of the English verb "to play", there are two different verbs in Finnish: "pelata" for playing a sport and "soittaa" for playing a musical instrument:
+
+```json
+{
+    "to play a sport": {
+        "involves": "sport",
+        "en": "to play",
+        "fi": "pelata"
+    },
+    "sport": {
+        "en": "sport",
+        "fi": "urheilu"
+    },
+    "to play a musical instrument": {
+        "involves": "musical instrument",
+        "en": "to play",
+        "fi": "soittaa"
+    },
+    "musical instrument": {
+        "en": "musical instrument",
+        "fi": "soitin"
+    }
+}
+```
+
+When quizzing the translation of "to play", Toisto provides the involved concept as hint, for example: "Translate into Finnish (involves 'sport')".
+
 ### Concepts with labels that only differ in capitalization (capitonyms)
 
 If different concepts have labels that only differ in capitalization (meaning they are capitonyms) and Toisto presents the label in a listen quiz, it's impossible for the user to hear which concept Toisto is looking for. For example, the Finnish word "Kreikka" means "Greece" (the country) but the word "kreikka" means "Greek" (the language). A quiz asking the user to write the Finnish word "Kreikka" in Finnish could be looking for either "Kreikka" or "kreikka".
 
 Toisto recognizes capitonyms and automatically provides a hint when quizzing a label that has capitonyms. It does so by looking at the relation between the different concepts that share the same label except for capitalization.
 
-If the concepts share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example, when the second person singular includes the polite form of "you are" that is the same as the second person plural, except for capitalization:
+#### Hints based on grammar
+
+If the capitonyms share a common base concept, such as with verbs, Toisto will base the hint on the grammar of the concepts. For example, when the second person singular includes the polite form of "you are" that is the same as the second person plural, except for capitalization:
 
 ```json
 {
@@ -271,7 +306,9 @@ If the concepts share a common base concept, such as with verbs, Toisto will bas
 
 When quizzing the translation of "te olette", Toisto will provide a hint based on the grammar, for example: "Listen and write in Finnish (plural)".
 
-If the concepts have different hypernyms, Toisto will provide a hint based on the hypernym. For example, in the case of the Finnish words "Kreikka" and "kreikka", "Kreikka" has hypernym "country" and "kreikka" has hypernym "language":
+#### Hints based on hypernyms
+
+If the capitonyms have different hypernyms, Toisto will provide a hint based on the hypernym. For example, in the case of the Finnish words "Kreikka" and "kreikka", "Kreikka" has hypernym "country" and "kreikka" has hypernym "language":
 
 ```json
 {
@@ -288,7 +325,7 @@ If the concepts have different hypernyms, Toisto will provide a hint based on th
 }
 ```
 
-When quizzing the written version of "Kreikka", Toisto provides the hypernym as hint: "Listen and write in Finnish (country)".
+When quizzing the spoken version of "Kreikka", Toisto provides the hypernym as hint: "Listen and write in Finnish (country)".
 
 ### Concepts with different meanings per language
 
