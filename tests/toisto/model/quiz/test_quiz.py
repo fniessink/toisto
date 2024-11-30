@@ -359,6 +359,17 @@ class QuizInstructionTest(QuizTestCase):
         read_quiz = self.create_quiz(wood, "puu", ["het hout"], READ)
         self.assertEqual("Translate into Dutch (part of 'puu')", read_quiz.instruction)
 
+    def test_homographs_get_an_automatic_note_based_on_the_involved_concept(self):
+        """Test that homographs get an automatic note based on the involved concept."""
+        self.language_pair = FI_EN
+        self.create_concept("sport", {"en": "sport"})
+        play_instrument = self.create_concept("to play a musical instrument", {"en": "to play"})
+        play_sport = self.create_concept("to play a sport", {"en": "to play", "fi": "pelata", "involves": "sport"})
+        write_quiz = self.create_quiz(play_sport, "to play", ["pelata"], WRITE)
+        self.assertEqual("Translate into Finnish (involves 'sport')", write_quiz.instruction)
+        write_quiz = self.create_quiz(play_instrument, "to play", ["soittaa"], WRITE)
+        self.assertEqual("Translate into Finnish", write_quiz.instruction)
+
     def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
         self.language_pair = FI_NL
