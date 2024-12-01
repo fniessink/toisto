@@ -151,9 +151,14 @@ class Feedback:
         for example in self.quiz.concept.get_related_concepts("example"):
             example_labels = example.labels(self.language_pair.target).first_non_generated_spelling_alternatives
             example_meanings = example.labels(self.language_pair.source).first_non_generated_spelling_alternatives
-            enumerated_meanings = enumerated(*[quoted(str(meaning)) for meaning in example_meanings])
-            examples.extend(f"{quoted(str(label))} meaning {enumerated_meanings}" for label in example_labels)
+            enumerated_meanings = enumerated(*[self._example_label(meaning) for meaning in example_meanings])
+            examples.extend(f"{self._example_label(label)} meaning {enumerated_meanings}" for label in example_labels)
         return bulleted_list("Example", examples)
+
+    def _example_label(self, label: Label) -> str:
+        """Format the label as example."""
+        label_str = quoted(str(label.without_notes).strip(Label.COLLOQUIAL_POSTFIX))
+        return f"{label_str} (colloquial)" if label.is_colloquial else label_str
 
 
 class ProgressUpdate:
