@@ -216,6 +216,20 @@ class FeedbackTestCase(ToistoTestCase):
             feedback(Evaluation.CORRECT, self.guess),
         )
 
+    def test_post_quiz_example_with_colloquial_labels(self):
+        """Test that the star is removed from colloquial labels."""
+        hi = self.create_concept("hi", dict(nl="hoi", fi="terve", example="hi alice"))
+        self.create_concept("hi alice", dict(fi=["Terve Alice!", "Moi Alice!*"], nl=["Hallo Alice!", "Hoi Alice!*"]))
+        quiz = create_quizzes(FI_NL, hi).by_quiz_type(WRITE).pop()
+        feedback = Feedback(quiz, FI_NL)
+        self.assertEqual(
+            Feedback.CORRECT
+            + "[secondary]Examples:\n"
+            + "- 'Terve Alice!' meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).\n"
+            + "- 'Moi Alice!' (colloquial) meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).[/secondary]\n",
+            feedback(Evaluation.CORRECT, self.guess),
+        )
+
 
 class LinkifyTest(TestCase):
     """Unit tests for the linkify method."""
