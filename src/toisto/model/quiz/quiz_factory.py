@@ -29,10 +29,15 @@ class QuizFactory:
     """Create quizzes for concepts."""
 
     language_pair: LanguagePair
+    quiz_types: tuple[str, ...]
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
         """Create quizzes for the concepts."""
         return Quizzes(Quizzes().union(*(self.concept_quizzes(concept, Quizzes()) for concept in concepts)))
+
+    def should_create(self, quiz_type: QuizType) -> bool:
+        """Return whether quizzes of the given quiz type should be created."""
+        return not self.quiz_types or quiz_type.action in self.quiz_types
 
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
@@ -71,6 +76,8 @@ class QuizFactory:
 
     def read_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create read quizzes for the concept."""
+        if not self.should_create(READ):
+            return Quizzes()
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
@@ -83,6 +90,8 @@ class QuizFactory:
 
     def write_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create write quizzes for the concept."""
+        if not self.should_create(WRITE):
+            return Quizzes()
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
@@ -95,6 +104,8 @@ class QuizFactory:
 
     def dictate_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create dictation quizzes for the concept."""
+        if not self.should_create(DICTATE):
+            return Quizzes()
         target_language, source_language = self.language_pair.target, self.language_pair.source
         if concept.is_composite(target_language):
             return Quizzes()
@@ -112,6 +123,8 @@ class QuizFactory:
 
     def interpret_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create interpret (listen and translate) quizzes for the concept."""
+        if not self.should_create(INTERPRET):
+            return Quizzes()
         target_language, source_language = self.language_pair.target, self.language_pair.source
         source_labels = concept.labels(source_language).non_colloquial
         if not source_labels or concept.is_composite(target_language):
@@ -130,7 +143,7 @@ class QuizFactory:
         quizzes = Quizzes()
         for question_concept, answer_concept in permutations(concept.leaf_concepts(target_language), r=2):
             quiz_type = grammatical_quiz_type(question_concept, answer_concept)
-            if quiz_type is None:
+            if quiz_type is None or not self.should_create(quiz_type):
                 continue
             question_labels = question_concept.labels(target_language).non_colloquial
             answer_labels = answer_concept.labels(target_language).non_colloquial
@@ -153,20 +166,24 @@ class QuizFactory:
 
     def semantic_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create semantic quizzes for the concept."""
-        answer_quizzes = self.related_concept_quizzes(
-            concept,
-            previous_quizzes,
-            concept.get_related_concepts("answer"),
-            ANSWER,
-        )
-        antonym_quizzes = self.related_concept_quizzes(
-            concept,
-            Quizzes(answer_quizzes | previous_quizzes),
-            concept.get_related_concepts("antonym"),
-            ANTONYM,
-        )
-        order_quizzes = self.order_quizzes(concept, Quizzes(antonym_quizzes | answer_quizzes | previous_quizzes))
-        return Quizzes(answer_quizzes | antonym_quizzes | order_quizzes)
+        semantic_quizzes = Quizzes()
+        if self.should_create(ANSWER):
+            semantic_quizzes |= self.related_concept_quizzes(
+                concept,
+                previous_quizzes,
+                concept.get_related_concepts("answer"),
+                ANSWER,
+            )
+        if self.should_create(ANTONYM):
+            semantic_quizzes |= self.related_concept_quizzes(
+                concept,
+                Quizzes(semantic_quizzes | previous_quizzes),
+                concept.get_related_concepts("antonym"),
+                ANTONYM,
+            )
+        if self.should_create(ORDER):
+            semantic_quizzes |= self.order_quizzes(concept, Quizzes(semantic_quizzes | previous_quizzes))
+        return semantic_quizzes
 
     def related_concept_quizzes(
         self,
@@ -232,6 +249,6 @@ def grammatical_quiz_type(concept1: Concept, concept2: Concept) -> QuizType | No
     return quiz_types[0] if len(quiz_types) == 1 else None
 
 
-def create_quizzes(language_pair: LanguagePair, *concepts: Concept) -> Quizzes:
+def create_quizzes(language_pair: LanguagePair, quiz_types: tuple[str, ...], *concepts: Concept) -> Quizzes:
     """Create quizzes for the concepts, using the target and source language."""
-    return QuizFactory(language_pair).create_quizzes(*concepts)
+    return QuizFactory(language_pair, quiz_types).create_quizzes(*concepts)

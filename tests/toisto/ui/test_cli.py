@@ -20,11 +20,14 @@ CONFIGURE_USAGE = (
     "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-e {path}] [-p {path}] [-u {frequency}] "
     "[-m {mp3player}]"
 )
-PRACTICE_USAGE = "Usage: toisto practice [-h] -t {language} -s {language} [-e {path}] [-u {frequency}] [{concept} ...]"
-CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
-PRACTICE_USAGE_OPTIONAL_TARGET = (
-    "Usage: toisto practice [-h] [-t {language}] -s {language} [-e {path}] [-u {frequency}] [{concept} ...]"
+PRACTICE_USAGE = (
+    "Usage: toisto practice [-h] -t {language} -s {language} [-e {path}] [-q {quiz type}] [-u {frequency}] "
+    "[{concept} ...]"
 )
+CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
+PRACTICE_USAGE_OPTIONAL_TARGET = """Usage: toisto practice [-h] [-t {language}] -s {language} [-e {path}] \
+[-q {quiz type}] [-u {frequency}]
+                       [{concept} ...]"""
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
   {concept}             concept to use, can be repeated; default: all; built-in concepts:%s"""
@@ -40,6 +43,13 @@ PROGRESS_OPTION = """-u, --progress-update {frequency}
                         show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
 MP3PLAYER_OPTION = """-m, --mp3player {mp3player}
                         mp3 player to play sounds; default: afplay"""
+QUIZ_TYPE_OPTION = """-q, --quiz-type {quiz type}
+                        quiz types to use, can be repeated; default: all; available quiz types: abbreviation,
+                        affirmative, answer, antonym, cardinal, comparative degree, declarative, dictate, diminutive,
+                        feminine, first person, full form, imperative, infinitive, interpret, interrogative,
+                        masculine, negative, neuter, order, ordinal, past perfect tense, past tense, plural, positive
+                        degree, present perfect tense, present tense, read, second person, singular, superlative
+                        degree, third person, write"""
 
 
 class ParserTest(unittest.TestCase):
@@ -233,7 +243,6 @@ See {README_URL} for more information.
     def test_configure_help(self, sys_stdout_write: Mock) -> None:
         """Test that the configure help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.maxDiff = None
         self.assertEqual(
             f"""{CONFIGURE_USAGE}
 
@@ -262,6 +271,7 @@ Options:
             concepts=[],
             extra=[],
             progress_update=0,
+            quiz_type=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 
@@ -277,7 +287,6 @@ Options:
             Concept(bar, None, (), Labels((Label(EN, "bar"),)), Labels(), {}, {}, False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
-        self.maxDiff = None
         self.assertEqual(
             f"""{PRACTICE_USAGE}
 
@@ -290,6 +299,7 @@ Options:
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
   {EXTRA_OPTION}
+  {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -316,6 +326,7 @@ Options:
   {TARGET_OPTION % "default: fi; "}
   {SOURCE_OPTION}
   {EXTRA_OPTION}
+  {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -329,6 +340,7 @@ Options:
         config_parser = default_config()
         config_parser.set("practice", "progress_update", "42")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
+        self.maxDiff = None
         self.assertEqual(
             f"""{PRACTICE_USAGE}
 
@@ -341,6 +353,7 @@ Options:
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
   {EXTRA_OPTION}
+  {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % 42}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
@@ -351,10 +364,9 @@ Options:
     def test_progress_help(self, sys_stdout_write: Mock) -> None:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.maxDiff = None
         self.assertEqual(
-            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-S {{option}}] \
-[{{concept}} ...]
+            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-q {{quiz type}}] \
+[-S {{option}}] [{{concept}} ...]
 
 Show progress.
 
@@ -365,6 +377,7 @@ Options:
   {TARGET_OPTION % ""}
   {SOURCE_OPTION}
   {EXTRA_OPTION}
+  {QUIZ_TYPE_OPTION}
   -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
@@ -382,6 +395,7 @@ Options:
             concepts=[],
             extra=[],
             progress_update=0,
+            quiz_type=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
 

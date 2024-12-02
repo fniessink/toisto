@@ -45,6 +45,10 @@ class Registry(Generic[Key, Value]):
         keys = tuple(self.__transform(key) for key in keys)
         return tuple(value for key in keys if key in self.__items for value in self.__items[key])
 
+    def get_all_keys(self) -> tuple[Key, ...]:
+        """Return all keys."""
+        return tuple(self.__items.keys())
+
     def get_all_values(self) -> tuple[Value, ...]:
         """Return all values."""
         return tuple(chain(*self.__items.values()))

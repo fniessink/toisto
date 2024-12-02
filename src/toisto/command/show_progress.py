@@ -27,9 +27,7 @@ class QuizSorter:
     def get_sort_key(self, quiz: Quiz) -> int | timedelta:
         """Return the retention attribute to sort by."""
         retention = self.progress.get_retention(quiz)
-        if self.sort == "attempts":
-            return retention.count
-        return retention.length
+        return retention.count if self.sort == "attempts" else retention.length
 
 
 def show_progress(progress: Progress, args: Namespace) -> None:

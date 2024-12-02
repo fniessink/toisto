@@ -4,7 +4,15 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.34.0 - unreleased
+
+### Added
+
+- Allow for selecting quiz types to use via the command-line interface. Closes [#318](https://github.com/fniessink/toisto/issues/318).
+
 ## 0.33.2 - 2024-12-04
+
+### Fixed
 
 - Fix a typo in "Minä pelaan jalkapalloa".
 

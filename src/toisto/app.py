@@ -40,7 +40,7 @@ class CLI:
         target_language = self.args.target_language
         concepts = self.build_in_concepts | self.loader.load_concepts(*self.args.extra)
         filtered_concepts = filter_concepts(concepts, self.args.concepts, target_language, self.argument_parser)
-        quizzes = create_quizzes(self.language_pair, *filtered_concepts)
+        quizzes = create_quizzes(self.language_pair, self.args.quiz_type, *filtered_concepts)
         return load_progress(target_language, quizzes, self.argument_parser, self.config)
 
 
