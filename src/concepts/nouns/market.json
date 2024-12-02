@@ -12,6 +12,7 @@
         }
     },
     "market hall": {
+        "hypernym": "building",
         "roots": {
             "en": "market",
             "fi": "store",
@@ -22,6 +23,7 @@
         "nl": "de markthal"
     },
     "flea market": {
+        "hypernym": "market",
         "roots": [
             "flea",
             "market"
