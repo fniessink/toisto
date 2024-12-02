@@ -207,6 +207,7 @@
         }
     },
     "amusement park": {
+        "hypernym": "attraction",
         "roots": "park",
         "en": "amusement park",
         "fi": "huvipuisto",
@@ -226,6 +227,7 @@
         "nl": "de speeltuin"
     },
     "zoo": {
+        "hypernym": "attraction",
         "roots": {
             "fi": "animal",
             "nl": [
@@ -245,7 +247,10 @@
         }
     },
     "castle": {
-        "hypernym": "building",
+        "hypernym": [
+            "attraction",
+            "building"
+        ],
         "singular": {
             "en": "castle",
             "fi": "linna",

@@ -54,6 +54,7 @@
         }
     },
     "helicopter": {
+        "hypernym": "means of transportation",
         "en": "helicopter",
         "fi": "helikopteri",
         "nl": "de helikopter"
@@ -98,6 +99,7 @@
         "nl": "het vliegveld"
     },
     "airplane": {
+        "hypernym": "means of transportation",
         "singular": {
             "en": "airplane|plane",
             "fi": "lentokone",
@@ -110,6 +112,7 @@
         }
     },
     "boat": {
+        "hypernym": "means of transportation",
         "singular": {
             "en": "boat",
             "fi": "vene",
@@ -122,6 +125,7 @@
         }
     },
     "ship": {
+        "hypernym": "means of transportation",
         "singular": {
             "en": "ship",
             "fi": "laiva",
@@ -272,6 +276,7 @@
         "nl": "de bushalte"
     },
     "public transportation": {
+        "hypernym": "means of transportation",
         "en": "public transportation|public transport",
         "fi": [
             "joukkoliikenne",
