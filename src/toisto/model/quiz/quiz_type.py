@@ -24,8 +24,9 @@ class QuizType:
     _instruction: str = ""  # Instruction telling the user what action(s) they need to perform to answer the quiz
 
     def __post_init__(self) -> None:
-        """Add the concept to the concept registry."""
-        self.actions.add_item(self._action, self)
+        """Add the quiz type to the quiz type registry."""
+        if self._action:
+            self.actions.add_item(self._action, self)
 
     @property
     def action(self) -> str:
@@ -109,8 +110,9 @@ class GrammaticalQuizType(QuizType):
 
     def __post_init__(self) -> None:
         """Add the quiz type to the grammatical quiz type registry."""
-        self.actions.add_item(self._action, self)
-        self.instances.add_item(self._action, self)
+        if self._action:
+            self.instances.add_item(self._action, self)
+            self.actions.add_item(self._action, self)
 
     @property
     def action(self) -> str:

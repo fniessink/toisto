@@ -182,7 +182,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "Engels", ["English"], INTERPRET),
                 self.create_quiz(concept, "English", ["Engels"], WRITE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_only_listening_quizzes_for_one_language(self):
@@ -190,13 +190,13 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept("english", dict(nl="Engels"))
         self.assertSetEqual(
             {self.create_quiz(concept, "Engels", ["Engels"], DICTATE, language_pair=NL_EN)},
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_answer_only_concept(self):
         """Test that no quizzes are generated for an answer-only concept."""
         concept = self.create_concept("yes, i do like something", {"answer-only": True, EN: "Yes, I do.", FI: "Pidän"})
-        self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, concept))
+        self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, (), concept))
 
     def test_multiple_labels(self):
         """Test that quizzes can be generated from a concept with a language with multiple labels."""
@@ -210,13 +210,13 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "couch", ["bank"], WRITE),
                 self.create_quiz(concept, "bank", ["bank"], WRITE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_missing_language(self):
         """Test that no quizzes are generated from a concept if it's missing one of the languages."""
         concept = self.create_concept("english", dict(en=["English"], nl=["Engels"]))
-        self.assertSetEqual(Quizzes(), create_quizzes(FI_EN, concept))
+        self.assertSetEqual(Quizzes(), create_quizzes(FI_EN, (), concept))
 
     def test_grammatical_number(self):
         """Test that quizzes can be generated for different grammatical numbers, i.e. singular and plural."""
@@ -236,7 +236,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "aamu", ["aamut"], PLURAL),
                 self.create_quiz(concept, "aamut", ["aamu"], SINGULAR),
             },
-            create_quizzes(FI_NL, concept),
+            create_quizzes(FI_NL, (), concept),
         )
 
     def test_grammatical_number_without_plural(self):
@@ -247,7 +247,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             dict(singular=dict(fi="ketsuppi", nl="de ketchup"), plural=dict(fi="ketsupit")),
         )
         singular, plural = concept.leaf_concepts(FI)
-        quizzes = create_quizzes(FI_NL, concept)
+        quizzes = create_quizzes(FI_NL, (), concept)
         self.assertSetEqual(
             {
                 self.create_quiz(singular, "ketsuppi", ["de ketchup"], READ),
@@ -269,7 +269,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_EN
         concept = self.create_noun_invariant_in_english()
         singular, plural = concept.leaf_concepts(NL)
-        quizzes = create_quizzes(NL_EN, concept)
+        quizzes = create_quizzes(NL_EN, (), concept)
         self.assertSetEqual(
             {
                 self.create_quiz(singular, "het vervoersmiddel", ["means of transportation"], INTERPRET),
@@ -293,7 +293,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         """Test that quizzes can be generated even if one language has no grammatical number for the concept."""
         self.language_pair = EN_NL
         concept = self.create_noun_invariant_in_english()
-        quizzes = create_quizzes(EN_NL, concept)
+        quizzes = create_quizzes(EN_NL, (), concept)
         self.assertSetEqual(
             {
                 self.create_quiz(
@@ -323,7 +323,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_NL
         concept = self.create_concept("mämmi", dict(singular=dict(fi="mämmi"), plural=dict(fi="mämmit")))
         singular, plural = concept.leaf_concepts(FI)
-        quizzes = create_quizzes(FI_NL, concept)
+        quizzes = create_quizzes(FI_NL, (), concept)
         self.assertSetEqual(
             {
                 self.create_quiz(singular, "mämmi", ["mämmi"], DICTATE),
@@ -340,7 +340,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes are generated from a noun concept with labels in the native language."""
         concept = self.create_concept("mämmi", dict(singular=dict(fi="mämmi"), plural=dict(fi="mämmit")))
-        self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, concept))
+        self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, (), concept))
 
     def test_grammatical_number_with_synonyms(self):
         """Test that in case of synonyms the plural of one synonym isn't the correct answer for the other synonym."""
@@ -374,7 +374,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "kauppakeskukset", ["kauppakeskus"], SINGULAR),
                 self.create_quiz(concept, "ostoskeskukset", ["ostoskeskus"], SINGULAR),
             },
-            create_quizzes(FI_NL, concept),
+            create_quizzes(FI_NL, (), concept),
         )
 
     def test_grammatical_gender(self):
@@ -395,7 +395,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "haar kat", ["zijn kat"], MASCULINE),
                 self.create_quiz(concept, "zijn kat", ["haar kat"], FEMININE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_gender_with_neuter(self):
@@ -421,7 +421,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "haar bot", ["zijn bot"], NEUTER),
                 self.create_quiz(concept, "zijn bot", ["haar bot"], FEMININE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_number_with_grammatical_gender(self):
@@ -457,7 +457,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "zijn kat", ["zijn katten"], PLURAL),
                 self.create_quiz(concept, "zijn katten", ["zijn kat"], SINGULAR),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_degrees_of_comparison(self):
@@ -486,7 +486,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "grootst", ["groot"], POSITIVE_DEGREE),
                 self.create_quiz(concept, "grootst", ["groter"], COMPARATIVE_DEGREE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_degrees_of_comparison_with_synonyms(self):
@@ -537,7 +537,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "isoin", ["isompi"], COMPARATIVE_DEGREE),
                 self.create_quiz(concept, "suurin", ["suurempi"], COMPARATIVE_DEGREE),
             },
-            create_quizzes(FI_EN, concept),
+            create_quizzes(FI_EN, (), concept),
         )
 
     def test_degrees_of_comparison_with_antonym(self):
@@ -578,7 +578,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "grootst", ["groter"], COMPARATIVE_DEGREE),
                 self.create_quiz(concept, "grootst", ["kleinst"], ANTONYM),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_person(self):
@@ -607,7 +607,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "zij eet", ["ik eet"], FIRST_PERSON),
                 self.create_quiz(concept, "zij eet", ["jij eet"], SECOND_PERSON),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_person_nested_with_grammatical_gender(self):
@@ -664,7 +664,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "hij eet", ["ik eet"], FIRST_PERSON),
                 self.create_quiz(concept, "hij eet", ["jij eet"], SECOND_PERSON),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_person_nested_with_grammatical_gender_in_one_language_but_not_the_other(self):
@@ -701,7 +701,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "hän syö", ["minä syön"], FIRST_PERSON),
                 self.create_quiz(concept, "hän syö", ["sinä syöt"], SECOND_PERSON),
             },
-            create_quizzes(FI_EN, concept),
+            create_quizzes(FI_EN, (), concept),
         )
 
     def test_grammatical_number_nested_with_grammatical_person(self):
@@ -756,7 +756,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "zij heeft", ["zij hebben"], PLURAL),
                 self.create_quiz(concept, "zij hebben", ["zij heeft"], SINGULAR),
             },
-            create_quizzes(NL_FI, concept),
+            create_quizzes(NL_FI, (), concept),
         )
 
     def test_grammatical_gender_nested_with_grammatical_number(self):
@@ -800,7 +800,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "haar katten", ["zijn katten"], MASCULINE),
                 self.create_quiz(concept, "zijn katten", ["haar katten"], FEMININE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_same_label_in_different_composite_concepts(self):
@@ -826,7 +826,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(masculine, "he is|he's", ["hän on"], WRITE),
                 self.create_quiz(masculine, "hän on", ["he is|he's"], INTERPRET),
             },
-            create_quizzes(FI_EN, concept),
+            create_quizzes(FI_EN, (), concept),
         )
 
     def test_infinitive_verb_form(self):
@@ -855,7 +855,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "slapen", ["ik slaap"], SINGULAR),
                 self.create_quiz(concept, "wij slapen", ["ik slaap"], SINGULAR),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_grammatical_number_nested_with_grammatical_person_and_infinitive(self):
@@ -920,7 +920,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(infinitive, "zijn", ["olla"], INTERPRET),
                 self.create_quiz(infinitive, "olla", ["zijn"], WRITE),
             },
-            create_quizzes(NL_FI, concept),
+            create_quizzes(NL_FI, (), concept),
         )
 
     def test_tense_nested_with_grammatical_number_nested_and_grammatical_person(self):
@@ -1061,7 +1061,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "jullie waren", ["jullie zijn"], PRESENT_TENSE),
                 self.create_quiz(concept, "zij waren", ["zij zijn"], PRESENT_TENSE),
             },
-            create_quizzes(NL_FI, concept),
+            create_quizzes(NL_FI, (), concept),
         )
 
 
@@ -1101,7 +1101,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "ik at", ["ik eet"], PRESENT_TENSE),
                 self.create_quiz(concept, "wij aten", ["wij eten"], PRESENT_TENSE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_all_tenses_nested_with_grammatical_person(self):
@@ -1188,7 +1188,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "wij hadden gegeten", ["wij aten"], PAST_TENSE),
                 self.create_quiz(concept, "wij hadden gegeten", ["wij hebben gegeten"], PRESENT_PERFECT_TENSE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_tense_nested_with_grammatical_person_and_infinitive(self):
@@ -1240,7 +1240,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "ik at", ["eten"], INFINITIVE),
                 self.create_quiz(concept, "wij aten", ["eten"], INFINITIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1271,7 +1271,7 @@ class GrammaticalMoodTest(ToistoTestCase):
                 self.create_quiz(concept, "De auto is zwart.", ["Is de auto zwart?"], INTERROGATIVE),
                 self.create_quiz(concept, "Is de auto zwart?", ["De auto is zwart."], DECLARATIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_declarative_and_imperative_moods(self):
@@ -1298,7 +1298,7 @@ class GrammaticalMoodTest(ToistoTestCase):
                 self.create_quiz(concept, "Jij rent.", ["Ren!"], IMPERATIVE),
                 self.create_quiz(concept, "Ren!", ["Jij rent."], DECLARATIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_declarative_interrogative_and_imperative_moods(self):
@@ -1334,7 +1334,7 @@ class GrammaticalMoodTest(ToistoTestCase):
                 self.create_quiz(concept, "Ren jij?", ["Ren!"], IMPERATIVE),
                 self.create_quiz(concept, "Ren jij?", ["Jij rent."], DECLARATIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1366,7 +1366,7 @@ class GrammaticalPolarityTest(ToistoTestCase):
                 self.create_quiz(concept, "De auto is niet zwart.", ["De auto is zwart."], AFFIRMATIVE),
                 self.create_quiz(concept, "De auto is niet zwart.", ["De auto is niet zwart."], ORDER),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1384,7 +1384,7 @@ class DiminutiveTest(ToistoTestCase):
                 self.create_quiz(diminutive, "het autootje", ["het autootje"], DICTATE),
                 self.create_quiz(concept, "de auto", ["het autootje"], DIMINUTIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_diminutive_and_translation(self):
@@ -1407,7 +1407,7 @@ class DiminutiveTest(ToistoTestCase):
                 self.create_quiz(diminutive, "het autootje", ["het autootje"], DICTATE),
                 self.create_quiz(concept, "de auto", ["het autootje"], DIMINUTIVE),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1426,7 +1426,7 @@ class NumberTest(ToistoTestCase):
                 self.create_quiz(concept, "een", ["eerste"], ORDINAL),
                 self.create_quiz(concept, "eerste", ["een"], CARDINAL),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
     def test_numbers_and_translations(self):
@@ -1449,7 +1449,7 @@ class NumberTest(ToistoTestCase):
                 self.create_quiz(concept, "eerste", ["een"], CARDINAL),
                 self.create_quiz(concept, "een", ["eerste"], ORDINAL),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1470,7 +1470,7 @@ class AbbreviationTest(ToistoTestCase):
                 self.create_quiz(concept, "naamloze vennootschap", ["NV"], ABBREVIATION),
                 self.create_quiz(concept, "NV", ["naamloze vennootschap"], FULL_FORM),
             },
-            create_quizzes(NL_EN, concept),
+            create_quizzes(NL_EN, (), concept),
         )
 
 
@@ -1487,7 +1487,7 @@ class QuizNoteTest(ToistoTestCase):
                 nl="Fins;;In Dutch, the names of languages are capitalized",
             ),
         )
-        for quiz in create_quizzes(FI_NL, concept):
+        for quiz in create_quizzes(FI_NL, (), concept):
             self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.answer_notes[0])
 
 
@@ -1507,7 +1507,7 @@ class ColloquialTest(ToistoTestCase):
                 self.create_quiz(concept, "seittemän*", ["seitsemän"], DICTATE),
                 self.create_quiz(concept, "seittemän*", ["zeven"], INTERPRET),
             },
-            create_quizzes(FI_NL, concept),
+            create_quizzes(FI_NL, (), concept),
         )
         self.language_pair = NL_FI
         self.assertSetEqual(
@@ -1517,7 +1517,7 @@ class ColloquialTest(ToistoTestCase):
                 self.create_quiz(concept, "seitsemän", ["zeven"], WRITE),
                 self.create_quiz(concept, "zeven", ["seitsemän"], INTERPRET),
             },
-            create_quizzes(NL_FI, concept),
+            create_quizzes(NL_FI, (), concept),
         )
 
     def test_grammar_and_colloquial(self):
@@ -1548,7 +1548,7 @@ class ColloquialTest(ToistoTestCase):
                 self.create_quiz(concept, "kioski", ["kioskit"], PLURAL),
                 self.create_quiz(concept, "kioskit", ["kioski"], SINGULAR),
             },
-            create_quizzes(FI_EN, concept),
+            create_quizzes(FI_EN, (), concept),
         )
         self.language_pair = EN_FI
         self.assertSetEqual(
@@ -1564,7 +1564,7 @@ class ColloquialTest(ToistoTestCase):
                 self.create_quiz(concept, "kiosk", ["kiosks"], PLURAL),
                 self.create_quiz(concept, "kiosks", ["kiosk"], SINGULAR),
             },
-            create_quizzes(EN_FI, concept),
+            create_quizzes(EN_FI, (), concept),
         )
 
     def test_related_concepts_and_colloquial(self):
@@ -1578,14 +1578,14 @@ class ColloquialTest(ToistoTestCase):
                 self.create_quiz(yes, "kyl*", ["kylla"], DICTATE),
                 self.create_quiz(yes, "kylla", ["ei"], ANTONYM),
             },
-            create_quizzes(FI_EN, yes),
+            create_quizzes(FI_EN, (), yes),
         )
         self.assertSetEqual(
             {
                 self.create_quiz(no, "ei", ["ei"], DICTATE),
                 self.create_quiz(no, "ei", ["kylla"], ANTONYM),
             },
-            create_quizzes(FI_EN, no),
+            create_quizzes(FI_EN, (), no),
         )
 
 
@@ -1595,7 +1595,7 @@ class MeaningsTest(ToistoTestCase):
     def test_interpret_with_synonym(self):
         """Test that interpret quizzes show all synonyms as meaning."""
         concept = self.create_concept("yes", dict(fi=["kylla", "joo"], en="yes"))
-        quizzes = create_quizzes(FI_EN, concept)
+        quizzes = create_quizzes(FI_EN, (), concept)
         interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kylla"), Label(FI, "joo")), quiz.question_meanings)
@@ -1604,7 +1604,7 @@ class MeaningsTest(ToistoTestCase):
     def test_interpret_with_colloquial(self):
         """Test that interpret quizzes don't show colloquial labels as meaning."""
         concept = self.create_concept("20", dict(fi=["kaksikymmentä", "kakskyt*"], nl="twintig"))
-        quizzes = create_quizzes(FI_NL, concept)
+        quizzes = create_quizzes(FI_NL, (), concept)
         interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kaksikymmentä"),), quiz.question_meanings)
@@ -1756,6 +1756,55 @@ class OrderQuizTest(QuizFactoryTestCase):
     def test_generate_order_quiz_for_long_enough_sentences(self):
         """Test that order quizzes are generated for long enough sentences."""
         concept = self.create_concept("breakfast", dict(en="We eat breakfast in the kitchen."))
-        quizzes = create_quizzes(EN_NL, concept)
-        quiz = first(quizzes.by_quiz_type(ORDER))
+        quizzes = create_quizzes(EN_NL, (ORDER.action,), concept)
+        quiz = first(quizzes)
         self.assertEqual(ORDER, quiz.quiz_type)
+
+
+class FilterByQuizTypeTest(QuizFactoryTestCase):
+    """Unit tests for limiting the quiz types created."""
+
+    def test_filter_quizzes(self):
+        """Test that quizzes can be limited to certain quiz types."""
+        self.language_pair = NL_EN
+        concept = self.create_concept("english", dict(en="English", nl="Engels"))
+        self.assertSetEqual(
+            {
+                self.create_quiz(concept, "Engels", ["English"], READ),
+                self.create_quiz(concept, "English", ["Engels"], WRITE),
+            },
+            create_quizzes(NL_EN, (READ.action, WRITE.action), concept),
+        )
+        self.assertSetEqual(
+            {
+                self.create_quiz(concept, "Engels", ["Engels"], DICTATE),
+                self.create_quiz(concept, "Engels", ["English"], INTERPRET),
+            },
+            create_quizzes(NL_EN, (DICTATE.action, INTERPRET.action), concept),
+        )
+
+    def test_filter_grammatical_number(self):
+        """Test that quizzes can be filtered for plural and singular quiz types."""
+        self.language_pair = FI_NL
+        concept = self.create_noun_with_grammatical_number()
+        self.assertSetEqual(
+            {self.create_quiz(concept, "aamut", ["aamu"], SINGULAR)},
+            create_quizzes(FI_NL, (SINGULAR.action,), concept),
+        )
+        self.assertSetEqual(
+            {self.create_quiz(concept, "aamu", ["aamut"], PLURAL)},
+            create_quizzes(FI_NL, (PLURAL.action,), concept),
+        )
+
+    def test_filter_grammatical_gender(self):
+        """Test that quizzes can be generated for feminine and masculine grammatical genders."""
+        self.language_pair = NL_EN
+        concept = self.create_noun_with_grammatical_gender()
+        self.assertSetEqual(
+            {self.create_quiz(concept, "haar kat", ["zijn kat"], MASCULINE)},
+            create_quizzes(NL_EN, (MASCULINE.action,), concept),
+        )
+        self.assertSetEqual(
+            {self.create_quiz(concept, "zijn kat", ["haar kat"], FEMININE)},
+            create_quizzes(NL_EN, (FEMININE.action,), concept),
+        )

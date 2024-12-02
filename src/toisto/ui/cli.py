@@ -15,6 +15,7 @@ from toisto.model.filter import map_concepts_by_label
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
+from toisto.model.quiz.quiz_type import QuizType
 from toisto.persistence.folder import home
 
 if TYPE_CHECKING:
@@ -57,17 +58,17 @@ def check_folder_or_file(path_name: str) -> Path:
 
 
 @dataclass(frozen=True)
-class LabelChecker:
-    """Class to check whether the given label is present in the list of labels."""
+class OptionChecker:
+    """Class to check whether the given option is present in the list of options."""
 
-    labels: tuple[str, ...]
+    options: tuple[str, ...]
 
-    def __call__(self, label: str) -> str:
-        """Check whether the given label is present in the list of labels."""
-        if label not in self.labels:
-            message = f"invalid choice '{label}' (run `toisto practice -h` to see the valid choices)"
+    def __call__(self, option: str) -> str:
+        """Check whether the given option is present in the list of options."""
+        if option not in self.options:
+            message = f"invalid choice '{option}' (run `toisto practice -h` to see the valid choices)"
             raise ArgumentTypeError(message)
-        return label
+        return option
 
 
 class CommandBuilder:
@@ -117,7 +118,7 @@ class CommandBuilder:
             metavar="{concept}",
             nargs="*",
             help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(labels)}",
-            type=LabelChecker(tuple(labels)),
+            type=OptionChecker(tuple(labels)),
         )
 
     def get_target_language(self) -> Language:
@@ -183,6 +184,19 @@ class CommandBuilder:
             help=f"mp3 player to play sounds; default: {default}",
         )
 
+    def add_quiz_type_argument(self, parser: ArgumentParser) -> None:
+        """Add the quiz type argument to the command."""
+        quiz_types = sorted(QuizType.actions.get_all_keys())
+        parser.add_argument(
+            "-q",
+            "--quiz-type",
+            action="append",
+            default=[],
+            metavar="{quiz type}",
+            help=f"quiz types to use, can be repeated; default: all; available quiz types: {', '.join(quiz_types)}",
+            type=OptionChecker(tuple(quiz_types)),
+        )
+
 
 class ConfigureCommandBuilder(CommandBuilder):
     """Configure command builder."""
@@ -220,6 +234,7 @@ class PracticeCommandBuilder(CommandBuilder):
         self.add_language_arguments(parser)
         self.add_concept_argument(parser, concepts)
         self.add_extra_concepts_arguments(parser)
+        self.add_quiz_type_argument(parser)
         self.add_progress_update_argument(parser)
 
 
@@ -236,6 +251,7 @@ class ProgressCommandBuilder(CommandBuilder):
         self.add_language_arguments(parser)
         self.add_concept_argument(parser, concepts)
         self.add_extra_concepts_arguments(parser)
+        self.add_quiz_type_argument(parser)
         self.add_sort_argument(parser)
 
     def add_sort_argument(self, parser: ArgumentParser) -> None:
