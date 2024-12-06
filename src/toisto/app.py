@@ -51,7 +51,7 @@ def main() -> None:
         case "configure":
             configure(cli.argument_parser, cli.config, cli.args)
         case "progress":
-            show_progress(cli.progress, cli.args.sort)
+            show_progress(cli.progress, cli.args)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version(), cli.config)
-            practice(console.print, cli.language_pair, cli.progress, cli.config, cli.args.progress_update)
+            practice(console.print, cli.language_pair, cli.progress, cli.config, cli.args)

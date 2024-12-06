@@ -1,5 +1,6 @@
 """Unit tests for the practice command."""
 
+from argparse import Namespace
 from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
@@ -40,7 +41,7 @@ class PracticeTest(ToistoTestCase):
         if progress is None:
             progress = self.progress(quizzes)
         with patch("rich.console.Console.print") as patched_print:
-            practice(console.print, self.language_pair, progress, config, progress_update)
+            practice(console.print, self.language_pair, progress, config, Namespace(progress_update=progress_update))
         return patched_print
 
     def assert_printed(self, output: str, patched_print: Mock, **kwargs: str | bool) -> None:

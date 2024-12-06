@@ -1,5 +1,6 @@
 """Practice command."""
 
+from argparse import Namespace
 from collections.abc import Callable
 from configparser import ConfigParser
 
@@ -55,10 +56,10 @@ def practice(
     language_pair: LanguagePair,
     progress: Progress,
     config: ConfigParser,
-    progress_update_frequency: int,
+    args: Namespace,
 ) -> None:
     """Practice a language."""
-    progress_update = ProgressUpdate(progress, progress_update_frequency)
+    progress_update = ProgressUpdate(progress, args.progress_update)
     speech = Speech(config)
     try:
         while quiz := progress.next_quiz():
