@@ -1,5 +1,6 @@
 """Command to show progress information."""
 
+from argparse import Namespace
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Literal
@@ -31,13 +32,13 @@ class QuizSorter:
         return retention.length
 
 
-def show_progress(progress: Progress, sort: SortColumn) -> None:
+def show_progress(progress: Progress, args: Namespace) -> None:
     """Show progress."""
     table = Table(title=f"Progress {ALL_LANGUAGES[progress.target_language]}")
     justify: dict[str, JustifyMethod] = dict(Attempts="right")
     for column in ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"):
         table.add_column(column, justify=justify.get(column, "left"))
-    sorted_quizzes = sorted(progress.quizzes, key=QuizSorter(progress, sort).get_sort_key, reverse=True)
+    sorted_quizzes = sorted(progress.quizzes, key=QuizSorter(progress, args.sort).get_sort_key, reverse=True)
     for quiz in sorted_quizzes:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until

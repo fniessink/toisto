@@ -1,6 +1,7 @@
 """Unit tests for the show progress command."""
 
 import re
+from argparse import Namespace
 from datetime import datetime, timedelta
 from unittest.mock import MagicMock, Mock, patch
 
@@ -32,7 +33,7 @@ class ShowProgressTestCase(ToistoTestCase):
     def show_progress(self, progress: Progress) -> Mock:
         """Run the show progress command."""
         with patch("rich.console.Console.print") as console_print:
-            show_progress(progress, sort=self.SORT_COLUMN)
+            show_progress(progress, Namespace(sort=self.SORT_COLUMN))
         return console_print
 
 
