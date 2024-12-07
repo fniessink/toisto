@@ -191,11 +191,6 @@ class Labels:
         return Labels(label for label in self._labels if label.language == language)
 
     @property
-    def colloquial(self) -> Labels:
-        """Return the colloquial labels."""
-        return Labels(label for label in self._labels if label.is_colloquial)
-
-    @property
     def non_colloquial(self) -> Labels:
         """Return the non-colloquial labels."""
         return Labels(label for label in self._labels if not label.is_colloquial)

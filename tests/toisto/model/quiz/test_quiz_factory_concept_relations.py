@@ -78,7 +78,7 @@ class AntonymConceptsTest(QuizFactoryTestCase):
 
     def test_antonym_quiz_order(self):
         """Test that before quizzing for an antonym, the anytonym itself has been quizzed."""
-        antonym_quizzes = self.quizzes.by_quiz_type(ANTONYM)
+        antonym_quizzes = Quizzes(quiz for quiz in self.quizzes if quiz.has_quiz_type(ANTONYM))
         other_quizzes = self.quizzes - antonym_quizzes
         for antonym_quiz in antonym_quizzes:
             for other_quiz in other_quizzes:
@@ -120,7 +120,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = self.create_concept("question", dict(answer=["fine", "good"], en="How are you?"))
         fine = self.create_concept("fine", dict(en="I'm fine, thank you."))
         good = self.create_concept("good", dict(en="I'm doing good, thank you."))
-        quiz = first(create_quizzes(EN_NL, (), question, fine, good).by_quiz_type(ANSWER))
+        quiz = first(create_quizzes(EN_NL, (ANSWER,), question, fine, good))
         self.assertEqual((fine.labels(EN)[0], good.labels(EN)[0]), quiz.answers)
 
     def test_answer_quiz_order(self):
@@ -128,7 +128,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         question = self.create_concept("question", dict(answer="answer", en="How are you?"))
         answer = self.create_concept("answer", dict(en="I'm fine, thank you."))
         quizzes = create_quizzes(EN_NL, (), question, answer)
-        answer_quizzes = quizzes.by_quiz_type(ANSWER)
+        answer_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(ANSWER))
         other_quizzes = quizzes - answer_quizzes
         for answer_quiz in answer_quizzes:
             for other_quiz in other_quizzes:

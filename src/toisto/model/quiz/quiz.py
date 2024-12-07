@@ -180,10 +180,6 @@ class Quizzes(set[Quiz]):
         """Return the colloquial quizzes."""
         return self.__class__(quiz for quiz in self if quiz.question.is_colloquial)
 
-    def by_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> Quizzes:
-        """Return the quizzes of the specified type."""
-        return self.__class__(quiz for quiz in self if quiz.has_quiz_type(quiz_type))
-
     @cached_property
     def _quizzes_by_concept(self) -> dict[Concept, Quizzes]:
         """Return the quizzes by concept cache.

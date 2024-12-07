@@ -5,8 +5,9 @@ from __future__ import annotations
 from collections.abc import Sequence
 from dataclasses import dataclass
 from itertools import chain
-from typing import ClassVar, final
+from typing import ClassVar, cast, final
 
+from toisto.model.language.concept import ConceptRelation
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
 from toisto.tools import Registry, first
@@ -33,7 +34,7 @@ class QuizType:
         """Return the quiz type action."""
         return self._action
 
-    def instruction(self, question: Label) -> str:  # noqa: ARG002
+    def instruction(self, question: Label) -> str:
         """Return the quiz type instruction."""
         return self._instruction if self._instruction else f"Give the [underline]{self.action}[/underline] in"
 
@@ -53,7 +54,7 @@ class QuizType:
         """Return whether the question should get question notes."""
         return question.language != answer.language
 
-    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:  # noqa: ARG002
+    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
         return question.answer_notes
 
@@ -79,7 +80,7 @@ class ListenOnlyQuizType(QuizType):
         colloquial_note = f"to the colloquial {ALL_LANGUAGES[question.language]} "
         return f"Listen {colloquial_note if question.is_colloquial else ''}and write in"
 
-    def other_answers(self, guess: Label, answers: Labels) -> Labels:  # noqa: ARG002
+    def other_answers(self, guess: Label, answers: Labels) -> Labels:
         """Override because returning other answers doesn't make sense if the user has to type what is spoken."""
         return Labels()
 
@@ -95,9 +96,14 @@ class TranslationQuizType(QuizType):
 class SemanticQuizType(QuizType):
     """Semantic quiz type."""
 
-    def question_notes_applicable(self, question: Label, answer: Label) -> bool:  # noqa: ARG002
+    def question_notes_applicable(self, question: Label, answer: Label) -> bool:
         """Override to return True because semantic quizzes should always get a question note."""
         return True
+
+    @property
+    def concept_relation(self) -> ConceptRelation:
+        """Return the concept relation that the quiz type is quizzing."""
+        return cast(ConceptRelation, self.action)
 
 
 @dataclass(frozen=True)
@@ -119,7 +125,7 @@ class GrammaticalQuizType(QuizType):
         """Return the quiz type action."""
         return "+".join(quiz_type.action for quiz_type in self.quiz_types) if self.quiz_types else super().action
 
-    def instruction(self, question: Label) -> str:  # noqa: ARG002
+    def instruction(self, question: Label) -> str:
         """Return the quiz type instruction."""
         actions = " ".join(quiz_type.action for quiz_type in self.quiz_types) if self.quiz_types else super().action
         return f"Give the [underline]{actions}[/underline] in"
@@ -138,11 +144,11 @@ class WriteQuizType(TranslationQuizType):
 
     _action: str = "write"
 
-    def question_notes(self, question: Label, answers: Labels) -> list[str]:  # noqa: ARG002
+    def question_notes(self, question: Label, answers: Labels) -> list[str]:
         """Return the note to be shown before the quiz has been answered."""
         return [question_note] if (question_note := first(answers).question_note) else []
 
-    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:  # noqa: ARG002
+    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
         return tuple(chain.from_iterable(answer.answer_notes for answer in answers))
 
@@ -172,7 +178,7 @@ class DictateQuizType(ListenOnlyQuizType):
         instruction = super().instruction(question)
         return instruction + " standard" if question.is_colloquial else instruction
 
-    def question_notes_applicable(self, question: Label, answer: Label) -> bool:  # noqa: ARG002
+    def question_notes_applicable(self, question: Label, answer: Label) -> bool:
         """Override to return True because dictate quizzes should always get a question note."""
         return True
 
