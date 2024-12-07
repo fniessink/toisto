@@ -14,15 +14,15 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_translation_quizzes_block_listening_quizzes(self):
         """Test that translation quizzes block listening quizzes."""
         quizzes = create_quizzes(FI_NL, (), self.create_noun())
-        translation_quizzes = quizzes.by_quiz_type(TranslationQuizType)
-        listening_quizzes = quizzes.by_quiz_type(ListenOnlyQuizType)
+        translation_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(TranslationQuizType))
+        listening_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(ListenOnlyQuizType))
         for quiz in listening_quizzes:
             self.assertTrue(quiz.is_blocked_by(Quizzes(translation_quizzes)))
 
     def test_non_grammatical_quizzes_block_grammatical_quizzes(self):
         """Test that listening and translation quizzes block grammatical quizzes."""
         quizzes = create_quizzes(FI_NL, (), self.create_noun_with_grammatical_number())
-        grammatical_quizzes = quizzes.by_quiz_type(GrammaticalQuizType)
+        grammatical_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(GrammaticalQuizType))
         non_grammatical_quizzes = quizzes - grammatical_quizzes
         for quiz in grammatical_quizzes:
             self.assertTrue(quiz.is_blocked_by(Quizzes(non_grammatical_quizzes)))

@@ -26,7 +26,7 @@ class ShowProgressTestCase(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
-        self.quiz = first(create_quizzes(FI_NL, (), concept).by_quiz_type(READ))
+        self.quiz = first(create_quizzes(FI_NL, (READ,), concept))
         self.quizzes = Quizzes({self.quiz})
 
     @patch("rich.console.Console.pager", MagicMock())
@@ -83,7 +83,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_that_generated_spelling_alternatives_are_not_shown(self):
         """Test that generated spelling alternatives are not included in the progress table."""
         concept = self.create_concept("", dict(en="vegetable", nl="de groente"))
-        quiz = first(create_quizzes(EN_NL, (), concept).by_quiz_type(READ))
+        quiz = first(create_quizzes(EN_NL, (READ,), concept))
         quizzes = Quizzes({quiz})
         progress = Progress(EN, quizzes, {quiz.key: dict(start=self.start, end=self.end)})
         Label.ALTERNATIVES_TO_GENERATE[NL] = {re.compile("de groente"): "de groentes"}
@@ -98,7 +98,7 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
         """Set up test fixtures."""
         super().setUp()
         another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
-        self.another_quiz = first(create_quizzes(FI_NL, (), another_concept).by_quiz_type(READ))
+        self.another_quiz = first(create_quizzes(FI_NL, (READ,), another_concept))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
 
 

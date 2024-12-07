@@ -111,7 +111,7 @@ class ProgressTest(ToistoTestCase):
     def test_next_quiz_is_quiz_with_progress(self):
         """Test that the next quiz is one the user has see before if possible."""
         concepts = [self.create_concept(f"id{index}", dict(fi=f"fi{index}", nl=f"nl{index}")) for index in range(5)]
-        quizzes = create_quizzes(FI_NL, (), *concepts).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(FI_NL, (DICTATE,), *concepts)
         progress = Progress(FI, quizzes, {})
         random_quiz = next(iter(quizzes))
         progress.mark_evaluation(random_quiz, Evaluation.CORRECT)

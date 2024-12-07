@@ -28,7 +28,7 @@ class PracticeTest(ToistoTestCase):
         super().setUp()
         self.language_pair = FI_NL
         self.concept = self.create_concept("hi", dict(fi="Terve!", nl="Hoi!"))
-        self.quizzes = create_quizzes(self.language_pair, (), self.concept).by_quiz_type(READ)
+        self.quizzes = create_quizzes(self.language_pair, (READ,), self.concept)
 
     def progress(self, quizzes: Quizzes) -> Progress:
         """Create the progress tracker."""
@@ -80,7 +80,7 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="terve!\n"))
     def test_answer_quiz_in_lowercase_target_language(self):
         """Test that a lower case answer is not accepted when the answer language is the user's target language."""
-        quizzes = create_quizzes(self.language_pair, (), self.concept).by_quiz_type(WRITE)
+        quizzes = create_quizzes(self.language_pair, (WRITE,), self.concept)
         patched_print = self.practice(quizzes)
         self.assert_printed(f"{Feedback.INCORRECT}The correct answer is 'Terve!'\n", patched_print)
 
@@ -92,14 +92,14 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_answer_with_question_listen_quiz(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
-        quizzes = create_quizzes(self.language_pair, (), self.concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), self.concept)
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="jätski\n"))
     def test_colloquial_answer_when_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
         concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(DICTATE).colloquial
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), concept).colloquial
         self.assert_printed(
             Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
             self.practice(quizzes),
@@ -109,14 +109,14 @@ class PracticeTest(ToistoTestCase):
     def test_standard_language_answer_when_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
         concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(INTERPRET).colloquial
+        quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept).colloquial
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
         concept = self.create_concept("house", dict(singular=dict(fi="talo"), plural=dict(fi="talot")))
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(PLURAL)
+        quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         self.assert_printed(Feedback.TRY_AGAIN, self.practice(quizzes))
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
@@ -136,13 +136,13 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_listen(self):
         """Test that the question is not printed on a listening quiz."""
-        quizzes = create_quizzes(self.language_pair, (), self.concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), self.concept)
         self.assert_not_printed(linkified("Terve"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_quiz_non_translate(self):
         """Test that the translation is not printed on a non-translate quiz."""
-        quizzes = create_quizzes(self.language_pair, (), self.concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), self.concept)
         expected_feedback = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n"
         self.assert_printed(expected_feedback, self.practice(quizzes))
 
@@ -153,7 +153,7 @@ class PracticeTest(ToistoTestCase):
             "house",
             dict(singular=dict(fi="talo", nl="huis"), plural=dict(fi="talot", nl="huizen")),
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(PLURAL)
+        quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('huis')}', "
             f"respectively '{linkified('huizen')}'.[/secondary]\n"
@@ -167,7 +167,7 @@ class PracticeTest(ToistoTestCase):
             "to ride",
             {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(READ)
+        quizzes = create_quizzes(self.language_pair, (READ,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Another correct answer is "
             "'[link=https://en.wiktionary.org/wiki/zij]zij[/link] "
@@ -182,7 +182,7 @@ class PracticeTest(ToistoTestCase):
             "to ride",
             {"third person": dict(fi="hän ajaa", feminine=dict(nl="zij rijdt"), masculine=dict(nl="hij rijdt"))},
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(INTERPRET)
+        quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '[link=https://en.wiktionary.org/wiki/hän]hän[/link] "
             "[link=https://en.wiktionary.org/wiki/ajaa]ajaa[/link]'.[/secondary]\n"
@@ -200,7 +200,7 @@ class PracticeTest(ToistoTestCase):
             "the museum is next to the church",
             dict(fi="Museo on kirkon vieressä.", nl="Het museum is naast de kerk."),
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('naast')}'.[/secondary]\n"
             "[secondary]Example: 'Museo on kirkon vieressä.' meaning 'Het museum is naast de kerk.'[/secondary]\n"
@@ -214,7 +214,7 @@ class PracticeTest(ToistoTestCase):
         concept = self.create_concept("black", dict(example=examples, fi="musta", nl="zwart"))
         self.create_concept("the car is black", dict(fi="Auto on musta.", nl="De auto is zwart."))
         self.create_concept("the cars are black", dict(fi="Autot ovat mustia.", nl="De auto's zijn zwart."))
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('zwart')}'.[/secondary]\n"
             "[secondary]Examples:\n- 'Auto on musta.' meaning 'De auto is zwart.'\n"
@@ -233,7 +233,7 @@ class PracticeTest(ToistoTestCase):
             "I am looking for a table lamp",
             dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('de tafellamp')}'.[/secondary]\n"
@@ -254,7 +254,7 @@ class PracticeTest(ToistoTestCase):
             "I am looking for a table lamp",
             dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
         )
-        quizzes = create_quizzes(self.language_pair, (), concept).by_quiz_type(DICTATE)
+        quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('pöytälamppu')}' and "
             f"'{linkified('pöytävalaisin')}'.[/secondary]\n"

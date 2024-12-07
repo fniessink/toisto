@@ -5,7 +5,7 @@ from toisto.model.language.concept import Concept
 from toisto.model.language.grammar import Tense
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
-from toisto.model.quiz.quiz_factory import create_quizzes, grammatical_quiz_type
+from toisto.model.quiz.quiz_factory import GrammaticalQuizFactory, create_quizzes
 from toisto.model.quiz.quiz_type import (
     ABBREVIATION,
     AFFIRMATIVE,
@@ -1595,8 +1595,7 @@ class MeaningsTest(ToistoTestCase):
     def test_interpret_with_synonym(self):
         """Test that interpret quizzes show all synonyms as meaning."""
         concept = self.create_concept("yes", dict(fi=["kylla", "joo"], en="yes"))
-        quizzes = create_quizzes(FI_EN, (), concept)
-        interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
+        interpret_quizzes = create_quizzes(FI_EN, (INTERPRET,), concept)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kylla"), Label(FI, "joo")), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
@@ -1604,8 +1603,7 @@ class MeaningsTest(ToistoTestCase):
     def test_interpret_with_colloquial(self):
         """Test that interpret quizzes don't show colloquial labels as meaning."""
         concept = self.create_concept("20", dict(fi=["kaksikymmentä", "kakskyt*"], nl="twintig"))
-        quizzes = create_quizzes(FI_NL, (), concept)
-        interpret_quizzes = quizzes.by_quiz_type(INTERPRET)
+        interpret_quizzes = create_quizzes(FI_NL, (INTERPRET,), concept)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kaksikymmentä"),), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
@@ -1618,77 +1616,77 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
         """Test the grammatical quiz types for an adjective with degrees of comparison."""
         positive, comparative, superlative = self.create_adjective_with_degrees_of_comparison().leaf_concepts(EN)
         for concept in (positive, comparative):
-            self.assertEqual(SUPERLATIVE_DEGREE, grammatical_quiz_type(concept, superlative))
+            self.assertEqual(SUPERLATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, superlative))
         for concept in (positive, superlative):
-            self.assertEqual(COMPARATIVE_DEGREE, grammatical_quiz_type(concept, comparative))
+            self.assertEqual(COMPARATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, comparative))
         for concept in (comparative, superlative):
-            self.assertEqual(POSITIVE_DEGREE, grammatical_quiz_type(concept, positive))
+            self.assertEqual(POSITIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, positive))
 
     def test_noun_with_grammatical_number(self):
         """Test the grammatical quiz types for a noun with singular and plural form."""
         singular, plural = self.create_noun_with_grammatical_number().leaf_concepts(FI)
-        self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
-        self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+        self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
+        self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
 
     def test_noun_with_grammatical_gender(self):
         """Test the grammatical quiz types for a noun with grammatical gender."""
         feminine, maasculine = self.create_noun_with_grammatical_gender().leaf_concepts(EN)
-        self.assertEqual(MASCULINE, grammatical_quiz_type(feminine, maasculine))
-        self.assertEqual(FEMININE, grammatical_quiz_type(maasculine, feminine))
+        self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(feminine, maasculine))
+        self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(maasculine, feminine))
 
     def test_noun_with_grammatical_gender_including_neuter(self):
         """Test the grammatical quiz types for a noun with grammatical gender including neuter."""
         feminine, masculine, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts(NL)
         for concept in (feminine, neuter):
-            self.assertEqual(MASCULINE, grammatical_quiz_type(concept, masculine))
+            self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(concept, masculine))
         for concept in (feminine, masculine):
-            self.assertEqual(NEUTER, grammatical_quiz_type(concept, neuter))
+            self.assertEqual(NEUTER, GrammaticalQuizFactory.grammatical_quiz_type(concept, neuter))
         for concept in (masculine, neuter):
-            self.assertEqual(FEMININE, grammatical_quiz_type(concept, feminine))
+            self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(concept, feminine))
 
     def test_noun_with_grammatical_number_and_gender(self):
         """Test the grammatical quiz types for a noun with grammatical number and gender."""
         noun = self.create_noun_with_grammatical_number_and_gender()
         singular_feminine, singular_masculine, plural_feminine, plural_masculine = noun.leaf_concepts(EN)
         for feminine, masculine in ((singular_feminine, singular_masculine), (plural_feminine, plural_masculine)):
-            self.assertEqual(MASCULINE, grammatical_quiz_type(feminine, masculine))
-            self.assertEqual(FEMININE, grammatical_quiz_type(masculine, feminine))
+            self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(feminine, masculine))
+            self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(masculine, feminine))
         for singular, plural in ((singular_feminine, plural_feminine), (singular_masculine, plural_masculine)):
-            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
-            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+            self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
 
     def test_verb_with_person(self):
         """Test the grammatical quiz types for a verb with grammatical person."""
         verb = self.create_verb_with_person()
         first, second, third = verb.leaf_concepts(EN)
         for concept in (first, second):
-            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(concept, third))
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, third))
         for concept in (first, third):
-            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(concept, second))
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, second))
         for concept in (second, third):
-            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(concept, first))
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, first))
 
     def test_verb_with_tense_and_person(self):
         """Test the grammatical quiz types for a verb with tense and grammatical person."""
         verb = self.create_verb_with_tense_and_person("present tense", "past tense")
         present_singular, present_plural, past_singular, past_plural = verb.leaf_concepts(NL)
         for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
-            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
-            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+            self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
         for present, past in ((present_singular, past_singular), (present_plural, past_plural)):
-            self.assertEqual(PAST_TENSE, grammatical_quiz_type(present, past))
-            self.assertEqual(PRESENT_TENSE, grammatical_quiz_type(past, present))
+            self.assertEqual(PAST_TENSE, GrammaticalQuizFactory.grammatical_quiz_type(present, past))
+            self.assertEqual(PRESENT_TENSE, GrammaticalQuizFactory.grammatical_quiz_type(past, present))
 
     def test_verb_with_infinitive_and_person(self):
         """Test the grammatical quiz types for a verb with infinitive and grammatical person."""
         verb = self.create_verb_with_infinitive_and_person()
         infinitive, singular, plural = verb.leaf_concepts(EN)
         for concept in (infinitive, singular):
-            self.assertEqual(PLURAL, grammatical_quiz_type(concept, plural))
+            self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(concept, plural))
         for concept in (infinitive, plural):
-            self.assertEqual(SINGULAR, grammatical_quiz_type(concept, singular))
+            self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(concept, singular))
         for concept in (singular, plural):
-            self.assertEqual(INFINITIVE, grammatical_quiz_type(concept, infinitive))
+            self.assertEqual(INFINITIVE, GrammaticalQuizFactory.grammatical_quiz_type(concept, infinitive))
 
     def test_verb_with_person_and_number(self):
         """Test the grammatical quiz types for a verb with grammatical person and number."""
@@ -1706,17 +1704,17 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             (second_singular, second_plural),
             (third_singular, third_plural),
         ):
-            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
-            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
+            self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
         for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
-            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(first_person, second_person))
-            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(second_person, first_person))
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, second_person))
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, first_person))
         for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
-            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(first_person, third_person))
-            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(third_person, first_person))
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, third_person))
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, first_person))
         for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
-            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(second_person, third_person))
-            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(third_person, second_person))
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, third_person))
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, second_person))
 
     def test_verb_with_infinitive_and_person_and_number(self):
         """Test the grammatical quiz types for a verb with infinitive, grammatical person and number."""
@@ -1735,19 +1733,19 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             (second_singular, second_plural),
             (third_singular, third_plural),
         ):
-            self.assertEqual(PLURAL, grammatical_quiz_type(singular, plural))
-            self.assertEqual(SINGULAR, grammatical_quiz_type(plural, singular))
-            self.assertIsNone(grammatical_quiz_type(infinitive, singular))
-            self.assertIsNone(grammatical_quiz_type(infinitive, plural))
+            self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
+            self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
+            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(infinitive, singular))
+            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(infinitive, plural))
         for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
-            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(first_person, second_person))
-            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(second_person, first_person))
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, second_person))
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, first_person))
         for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
-            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(first_person, third_person))
-            self.assertEqual(FIRST_PERSON, grammatical_quiz_type(third_person, first_person))
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, third_person))
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, first_person))
         for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
-            self.assertEqual(THIRD_PERSON, grammatical_quiz_type(second_person, third_person))
-            self.assertEqual(SECOND_PERSON, grammatical_quiz_type(third_person, second_person))
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, third_person))
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, second_person))
 
 
 class OrderQuizTest(QuizFactoryTestCase):
@@ -1756,7 +1754,7 @@ class OrderQuizTest(QuizFactoryTestCase):
     def test_generate_order_quiz_for_long_enough_sentences(self):
         """Test that order quizzes are generated for long enough sentences."""
         concept = self.create_concept("breakfast", dict(en="We eat breakfast in the kitchen."))
-        quizzes = create_quizzes(EN_NL, (ORDER.action,), concept)
+        quizzes = create_quizzes(EN_NL, (ORDER,), concept)
         quiz = first(quizzes)
         self.assertEqual(ORDER, quiz.quiz_type)
 
@@ -1773,14 +1771,14 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
                 self.create_quiz(concept, "Engels", ["English"], READ),
                 self.create_quiz(concept, "English", ["Engels"], WRITE),
             },
-            create_quizzes(NL_EN, (READ.action, WRITE.action), concept),
+            create_quizzes(NL_EN, (READ, WRITE), concept),
         )
         self.assertSetEqual(
             {
                 self.create_quiz(concept, "Engels", ["Engels"], DICTATE),
                 self.create_quiz(concept, "Engels", ["English"], INTERPRET),
             },
-            create_quizzes(NL_EN, (DICTATE.action, INTERPRET.action), concept),
+            create_quizzes(NL_EN, (DICTATE, INTERPRET), concept),
         )
 
     def test_filter_grammatical_number(self):
@@ -1789,11 +1787,11 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_number()
         self.assertSetEqual(
             {self.create_quiz(concept, "aamut", ["aamu"], SINGULAR)},
-            create_quizzes(FI_NL, (SINGULAR.action,), concept),
+            create_quizzes(FI_NL, (SINGULAR,), concept),
         )
         self.assertSetEqual(
             {self.create_quiz(concept, "aamu", ["aamut"], PLURAL)},
-            create_quizzes(FI_NL, (PLURAL.action,), concept),
+            create_quizzes(FI_NL, (PLURAL,), concept),
         )
 
     def test_filter_grammatical_gender(self):
@@ -1802,9 +1800,9 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_gender()
         self.assertSetEqual(
             {self.create_quiz(concept, "haar kat", ["zijn kat"], MASCULINE)},
-            create_quizzes(NL_EN, (MASCULINE.action,), concept),
+            create_quizzes(NL_EN, (MASCULINE,), concept),
         )
         self.assertSetEqual(
             {self.create_quiz(concept, "zijn kat", ["haar kat"], FEMININE)},
-            create_quizzes(NL_EN, (FEMININE.action,), concept),
+            create_quizzes(NL_EN, (FEMININE,), concept),
         )

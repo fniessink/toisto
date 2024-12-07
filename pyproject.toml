@@ -95,6 +95,7 @@ line-length = 120
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
+    "ARG002", # Prevent 'Unused method argument: `concept`' errors
     "C408",   # Prevent 'Unnecessary `dict` call (rewrite as a literal)' errors
     "COM812", # This rule may cause conflicts when used with the ruff formatter
     "D107",   # Prevent 'Missing docstring in `__init__`' errors
