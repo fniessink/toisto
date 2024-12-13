@@ -552,6 +552,28 @@ When concepts are verbs, infinitives can be specified as follows:
 }
 ```
 
+### Verbal nouns
+
+When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be specified as follows:
+
+```json
+{
+    "to ask": {
+        "infinitive": {
+            "en": "to ask",
+            "fi": "kysyä",
+            "nl": "vragen"
+        },
+        "verbal noun": {
+            "en": "asking",
+            "fi": "kysyminen",
+            "nl": "het vragen"
+        },
+        "singular": "..."
+    }
+}
+```
+
 ### Tenses
 
 When concepts are verbs, the present tense, past tense, present perfect, and past perfect tense can be specified as follows:

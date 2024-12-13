@@ -49,7 +49,7 @@ QUIZ_TYPE_OPTION = """-q, --quiz-type {quiz type}
                         feminine, first person, full form, imperative, infinitive, interpret, interrogative,
                         masculine, negative, neuter, order, ordinal, past perfect tense, past tense, plural, positive
                         degree, present perfect tense, present tense, read, second person, singular, superlative
-                        degree, third person, write"""
+                        degree, third person, verbal noun, write"""
 
 
 class ParserTest(unittest.TestCase):

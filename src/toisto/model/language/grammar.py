@@ -3,7 +3,7 @@
 from typing import Literal
 
 GrammaticalGender = Literal["feminine", "masculine", "neuter"]
-GrammaticalNumber = Literal["infinitive", "singular", "plural"]
+GrammaticalNumber = Literal["infinitive", "verbal noun", "singular", "plural"]
 GrammaticalPerson = Literal["first person", "second person", "third person"]
 DegreeOfComparison = Literal["positive degree", "comparative degree", "superlative degree"]
 Diminutive = Literal["root", "diminutive"]

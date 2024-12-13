@@ -1,9 +1,15 @@
 {
     "to sleep": {
+        "example": "sleeping is important",
         "infinitive": {
             "en": "to sleep",
             "fi": "nukkua;;nukkua is verbityypi 1",
             "nl": "slapen"
+        },
+        "verbal noun": {
+            "en": "sleeping",
+            "fi": "nukkuminen",
+            "nl": "het slapen"
         },
         "present tense": {
             "singular": {
@@ -89,5 +95,15 @@
                 }
             }
         }
+    },
+    "sleeping is important": {
+        "roots": [
+            "to sleep",
+            "to be",
+            "important"
+        ],
+        "en": "Sleeping is important.",
+        "fi": "Nukkuminen on tärkeää.",
+        "nl": "Slapen is belangrijk."
     }
 }
