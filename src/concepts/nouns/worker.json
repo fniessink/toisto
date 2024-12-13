@@ -1,0 +1,34 @@
+{
+    "coworker": {
+        "roots": {
+            "fi": [
+                "work",
+                "friend"
+            ]
+        },
+        "en": "coworker",
+        "fi": [
+            "työkaveri",
+            "kollega"
+        ],
+        "nl": "de collega"
+    },
+    "construction worker": {
+        "hypernym": "profession",
+        "roots": {
+            "fi": "building"
+        },
+        "en": "construction worker",
+        "fi": "rakennusmies",
+        "nl": "de bouwvakker"
+    },
+    "youth worker": {
+        "hypernym": "profession",
+        "en": "youth worker",
+        "fi": "nuoriso-ohjaaja",
+        "nl": [
+            "de jongerenwerker",
+            "de jeugdwerker"
+        ]
+    }
+}

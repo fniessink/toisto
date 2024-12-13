@@ -1,0 +1,29 @@
+{
+    "break": {
+        "en": "break",
+        "fi": "tauko",
+        "nl": "de pauze"
+    },
+    "lunchbreak": {
+        "hypernym": "break",
+        "involves": "lunch",
+        "roots": [
+            "lunch",
+            "break"
+        ],
+        "en": "lunchbreak|lunch break",
+        "fi": "lounastauko",
+        "nl": "de lunchpauze"
+    },
+    "coffee break": {
+        "hypernym": "break",
+        "involves": "coffee",
+        "roots": [
+            "coffee",
+            "break"
+        ],
+        "en": "coffee break",
+        "fi": "kahvitauko",
+        "nl": "de koffiepauze"
+    }
+}

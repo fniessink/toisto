@@ -129,15 +129,6 @@
         "fi": "arkkitehti",
         "nl": "de architect"
     },
-    "construction worker": {
-        "hypernym": "profession",
-        "roots": {
-            "fi": "building"
-        },
-        "en": "construction worker",
-        "fi": "rakennusmies",
-        "nl": "de bouwvakker"
-    },
     "plumber": {
         "hypernym": "profession",
         "en": "plumber",
@@ -351,14 +342,5 @@
         "en": "politician",
         "fi": "poliitikko",
         "nl": "de politicus"
-    },
-    "youth worker": {
-        "hypernym": "profession",
-        "en": "youth worker",
-        "fi": "nuoriso-ohjaaja",
-        "nl": [
-            "de jongerenwerker",
-            "de jeugdwerker"
-        ]
     }
 }

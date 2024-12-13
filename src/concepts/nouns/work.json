@@ -1,0 +1,79 @@
+{
+    "work": {
+        "en": "work",
+        "fi": [
+            "työ",
+            "homma"
+        ],
+        "nl": [
+            "het werk",
+            "de arbeid"
+        ]
+    },
+    "workday": {
+        "hypernym": "day",
+        "roots": [
+            "work",
+            "day"
+        ],
+        "en": "workday",
+        "fi": "työpäivä",
+        "nl": "de werkdag"
+    },
+    "workplace": {
+        "hypernym": "place",
+        "involves": "work",
+        "roots": {
+            "en": [
+                "work",
+                "place"
+            ],
+            "fi": "work",
+            "nl": [
+                "work",
+                "place"
+            ]
+        },
+        "en": "workplace",
+        "fi": "työpiste",
+        "nl": "de werkplek"
+    },
+    "working time": {
+        "involves": "work",
+        "roots": {
+            "en": [
+                "work",
+                "time",
+                "hour"
+            ],
+            "fi": [
+                "work",
+                "time"
+            ],
+            "nl": [
+                "work",
+                "time"
+            ]
+        },
+        "en": [
+            "working time",
+            "working hours"
+        ],
+        "fi": "työaika",
+        "nl": "de werktijd"
+    },
+    "remote work": {
+        "hypernym": "work",
+        "roots": {
+            "en": "work",
+            "fi": "work",
+            "nl": [
+                "home",
+                "work"
+            ]
+        },
+        "en": "remote work",
+        "fi": "etätyö",
+        "nl": "het thuiswerk"
+    }
+}

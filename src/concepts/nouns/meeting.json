@@ -1,0 +1,25 @@
+{
+    "meeting": {
+        "en": "meeting",
+        "fi": [
+            "kokous",
+            "palaveri",
+            "neuvottelu"
+        ],
+        "nl": "de vergadering"
+    },
+    "meeting room": {
+        "hypernym": "room",
+        "involves": "meeting",
+        "roots": [
+            "meeting",
+            "room"
+        ],
+        "en": "meeting room",
+        "fi": [
+            "neuvotteluhuone",
+            "neukkari*"
+        ],
+        "nl": "de vergaderkamer"
+    }
+}
