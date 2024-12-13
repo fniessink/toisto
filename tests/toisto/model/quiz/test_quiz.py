@@ -35,6 +35,7 @@ from toisto.model.quiz.quiz_type import (
     SINGULAR,
     SUPERLATIVE_DEGREE,
     THIRD_PERSON,
+    VERBAL_NOUN,
     WRITE,
 )
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
@@ -222,6 +223,7 @@ class QuizInstructionTest(QuizTestCase):
             SECOND_PERSON: "Give the [underline]second person[/underline] in Finnish",
             THIRD_PERSON: "Give the [underline]third person[/underline] in Finnish",
             INFINITIVE: "Give the [underline]infinitive[/underline] in Finnish",
+            VERBAL_NOUN: "Give the [underline]verbal noun[/underline] in Finnish",
             PRESENT_TENSE: "Give the [underline]present tense[/underline] in Finnish",
             PAST_TENSE: "Give the [underline]past tense[/underline] in Finnish",
             PRESENT_PERFECT_TENSE: "Give the [underline]present perfect tense[/underline] in Finnish",

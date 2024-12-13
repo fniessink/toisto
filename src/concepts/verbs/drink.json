@@ -1,5 +1,68 @@
 {
+    "to dtink": {
+        "infinitive": {
+            "en": "to drink",
+            "fi": "juoda",
+            "nl": "drinken"
+        },
+        "verbal noun": {
+            "en": "drinking",
+            "fi": "juominen",
+            "nl": "het drinken"
+        },
+        "singular": {
+            "first person": {
+                "en": "I drink",
+                "fi": "minä juon",
+                "nl": "ik drink"
+            },
+            "second person": {
+                "en": "you drink",
+                "fi": "sinä juot",
+                "nl": "jij drinkt"
+            },
+            "third person": {
+                "fi": "hän juo",
+                "feminine": {
+                    "en": "she drinks",
+                    "nl": "zij drinkt"
+                },
+                "masculine": {
+                    "en": "he drinks",
+                    "nl": "hij drinkt"
+                }
+            }
+        },
+        "plural": {
+            "first person": {
+                "en": "we drink",
+                "fi": "me juomme",
+                "nl": "wij drinken"
+            },
+            "second person": {
+                "en": "you drink",
+                "fi": "te juotte",
+                "nl": "jullie drinken"
+            },
+            "third person": {
+                "en": "they drink",
+                "fi": "he juovat",
+                "nl": "zij drinken"
+            }
+        }
+    },
     "to drink coffee": {
+        "roots": {
+            "en": [
+                "to drink",
+                "coffee"
+            ],
+            "fi": "coffee",
+            "nl": [
+                "to drink",
+                "coffee"
+            ]
+        },
         "infinitive": {
             "en": "to drink coffee",
             "fi": "käydä kahvi",
