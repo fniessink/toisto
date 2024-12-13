@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 
+- Add more words and phrases.
 - Allow for selecting quiz types to use via the command-line interface. Closes [#318](https://github.com/fniessink/toisto/issues/318).
 - Add support for verbal nouns (fourth infinitive in Finnish).
 

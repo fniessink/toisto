@@ -1,0 +1,30 @@
+{
+    "company": {
+        "en": [
+            "company",
+            "firm"
+        ],
+        "fi": [
+            "yritys",
+            "firma*"
+        ],
+        "nl": [
+            "de onderneming",
+            "de firma",
+            "het bedrijf"
+        ]
+    },
+    "llc": {
+        "hypernym": "company",
+        "full form": {
+            "en": "limited liability company",
+            "fi": "osakeyhtiö",
+            "nl": "de naamloze vennootschap"
+        },
+        "abbreviation": {
+            "en": "LLC",
+            "fi": "oy",
+            "nl": "de NV"
+        }
+    }
+}

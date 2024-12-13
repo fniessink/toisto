@@ -1,0 +1,15 @@
+{
+    "match": {
+        "involves": "sport",
+        "singular": {
+            "en": "match",
+            "fi": "ottelu",
+            "nl": "de wedstrijd"
+        },
+        "plural": {
+            "en": "matches",
+            "fi": "ottelut",
+            "nl": "de wedstrijden"
+        }
+    }
+}

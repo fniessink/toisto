@@ -1,0 +1,29 @@
+{
+    "telephone": {
+        "en": "telephone|phone",
+        "fi": "puhelin",
+        "nl": "de telefoon"
+    },
+    "mobile telephone": {
+        "hypernym": "telephone",
+        "en": [
+            "mobile telephone|mobile phone|mobile",
+            "cellullar telephone|cellular phone|cell phone|cellphone"
+        ],
+        "fi": [
+            "matkapuhelin",
+            "kännykkä*"
+        ],
+        "nl": "de mobiele telefoon|de mobiel|het mobieltje"
+    },
+    "smartphone": {
+        "hypernym": "mobile telephone",
+        "roots": {
+            "en": "telephone",
+            "fi": "telephone"
+        },
+        "en": "smartphone",
+        "fi": "älypuhelin",
+        "nl": "de smartphone"
+    }
+}

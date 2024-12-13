@@ -1,0 +1,24 @@
+{
+    "job": {
+        "roots": {
+            "fi": [
+                "work",
+                "place"
+            ]
+        },
+        "en": "job",
+        "fi": "työpaikka",
+        "nl": "de baan"
+    },
+    "part-time job": {
+        "hypernym": "job",
+        "roots": {
+            "en": "job",
+            "fi": "work",
+            "nl": "work"
+        },
+        "en": "part-time job",
+        "fi": "osa-aikatyö",
+        "nl": "het deeltijdwerk"
+    }
+}
