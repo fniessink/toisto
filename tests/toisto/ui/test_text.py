@@ -204,7 +204,7 @@ class FeedbackTestCase(ToistoTestCase):
         )
 
     def test_post_quiz_example_with_multiple_meanings(self):
-        """Test that the post quiz example is not repeated if an examples has multiple meanings."""
+        """Test that the post quiz example is not repeated if an example has multiple meanings."""
         hi = self.create_concept("hi", dict(nl="hoi", fi="terve", example="hi alice"))
         self.create_concept("hi alice", dict(fi="Terve Alice!", nl=["Hoi Alice!", "Hallo Alice!"]))
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
@@ -227,6 +227,19 @@ class FeedbackTestCase(ToistoTestCase):
             + "- 'Terve Alice!' meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).\n"
             + "- 'Moi Alice!' (colloquial) meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).[/secondary]\n",
             feedback(Evaluation.CORRECT, self.guess),
+        )
+
+    def test_post_quiz_example_with_synonyms(self):
+        """Test that the post quiz example is for the correct synonym."""
+        near = self.create_concept("near", dict(fi="lähellä", nl=["dichtbij", "in de buurt"], example="is is near"))
+        self.create_concept("is is near", dict(fi="Se on lähellä.", nl=["Het is dichtbij.", "Het is in de buurt."]))
+        quiz = create_quizzes(FI_NL, (READ,), near).pop()
+        feedback = Feedback(quiz, FI_NL)
+        self.assertEqual(
+            Feedback.CORRECT + "[secondary]Another correct answer is "
+            "'[link=https://en.wiktionary.org/wiki/dichtbij]dichtbij[/link]'.[/secondary]\n"
+            "[secondary]Example: 'Se on lähellä.' meaning 'Het is dichtbij.' and 'Het is in de buurt.'[/secondary]\n",
+            feedback(Evaluation.CORRECT, Label(NL, "in de buurt")),
         )
 
 
