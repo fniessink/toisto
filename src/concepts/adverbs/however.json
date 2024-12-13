@@ -20,7 +20,6 @@
     "I am busy, however, I am here": {
         "roots": [
             "to be",
-            "budy",
             "however",
             "here"
         ],
@@ -33,7 +32,11 @@
             "I am busy, but I am here anyway.",
             "I am busy, but I am here regardless."
         ],
-        "fi": "Minulla on kiire, silti olen tässä.",
+        "fi": [
+            "Minulla on kiire, silti olen tässä.",
+            "Minulla on kiire, kuitenkaan olen tässä.",
+            "Minulla on kiire, kuitenkin olen tässä."
+        ],
         "nl": "Ik heb het druk, toch ben ik hier."
     }
 }
