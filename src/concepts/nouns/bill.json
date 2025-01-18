@@ -1,0 +1,20 @@
+{
+    "bill": {
+        "en": "bill",
+        "fi": "lasku",
+        "nl": "de rekening"
+    },
+    "to pay the bill": {
+        "roots": {
+            "en": "bill",
+            "fi": [
+                "to cost",
+                "bill"
+            ],
+            "nl": "bill"
+        },
+        "en": "to pay the bill",
+        "fi": "maksaa lasku",
+        "nl": "de rekening betalen"
+    }
+}

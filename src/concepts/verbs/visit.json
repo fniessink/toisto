@@ -88,6 +88,48 @@
                     "nl": "zij bezochten"
                 }
             }
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have visited",
+                    "fi": "minä olen käynyt",
+                    "nl": "ik heb bezocht"
+                },
+                "second person": {
+                    "en": "you have visited",
+                    "fi": "sinä olet käynyt",
+                    "nl": "jij hebt bezocht"
+                },
+                "third person": {
+                    "fi": "hän on käynyt",
+                    "feminine": {
+                        "en": "she has visited",
+                        "nl": "zij heeft bezocht"
+                    },
+                    "masculine": {
+                        "en": "he has visited",
+                        "nl": "hij heeft bezocht"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we have visited",
+                    "fi": "me olemme käyneet",
+                    "nl": "wij hebben bezocht"
+                },
+                "second person": {
+                    "en": "you have visited",
+                    "fi": "te olette käyneet",
+                    "nl": "jullie hebben bezocht"
+                },
+                "third person": {
+                    "en": "they have visited",
+                    "fi": "he ovat käyneet",
+                    "nl": "zij hebben bezocht"
+                }
+            }
         }
     }
 }

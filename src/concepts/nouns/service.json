@@ -6,5 +6,20 @@
             "service",
             "faciliteit"
         ]
+    },
+    "customer service": {
+        "roots": "service",
+        "en": "customer service",
+        "fi": "asiakaspalvelu",
+        "nl": "de klantenservice"
+    },
+    "service point": {
+        "roots": "service",
+        "en": "service point",
+        "fi": [
+            "palvelupiste",
+            "tiski*"
+        ],
+        "nl": "de servicebalie"
     }
 }

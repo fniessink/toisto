@@ -1,0 +1,135 @@
+{
+    "to study": {
+        "infinitive": {
+            "en": "to study",
+            "fi": "opiskella",
+            "nl": "studeren"
+        },
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I study",
+                    "fi": "minä opiskelen",
+                    "nl": "ik studeer"
+                },
+                "second person": {
+                    "en": "you study",
+                    "fi": "sinä opiskelet",
+                    "nl": "jij studeert"
+                },
+                "third person": {
+                    "fi": "hän opiskelee",
+                    "feminine": {
+                        "en": "she studies",
+                        "nl": "zij studeert"
+                    },
+                    "masculine": {
+                        "en": "he studies",
+                        "nl": "hij studeert"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we study",
+                    "fi": "me opiskelemme",
+                    "nl": "wij studeren"
+                },
+                "second person": {
+                    "en": "you study",
+                    "fi": "te opiskelette",
+                    "nl": "jullie studeren"
+                },
+                "third person": {
+                    "en": "they study",
+                    "fi": "he opiskelevat",
+                    "nl": "zij studeren"
+                }
+            }
+        },
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I studied",
+                    "fi": "minä opiskelin",
+                    "nl": "ik studeerde"
+                },
+                "second person": {
+                    "en": "you studied",
+                    "fi": "sinä opiskelit",
+                    "nl": "jij studeerde"
+                },
+                "third person": {
+                    "fi": "hän opiskeli",
+                    "feminine": {
+                        "en": "she studied",
+                        "nl": "zij studeerde"
+                    },
+                    "masculine": {
+                        "en": "he studied",
+                        "nl": "hij studeerde"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we studied",
+                    "fi": "me opiskelimme",
+                    "nl": "wij studeerden"
+                },
+                "second person": {
+                    "en": "you studied",
+                    "fi": "te opiskelitte",
+                    "nl": "jullie studeerden"
+                },
+                "third person": {
+                    "en": "they studied",
+                    "fi": "he opiskelivat",
+                    "nl": "zij studeerden"
+                }
+            }
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have studied",
+                    "fi": "minä olen opiskellut",
+                    "nl": "ik heb gestudeerd"
+                },
+                "second person": {
+                    "en": "you have studied",
+                    "fi": "sinä olet opiskellut",
+                    "nl": "jij hebt gestudeerd"
+                },
+                "third person": {
+                    "fi": "hän on opiskellut",
+                    "feminine": {
+                        "en": "she has studied",
+                        "nl": "zij heeft gestudeerd"
+                    },
+                    "masculine": {
+                        "en": "he has studied",
+                        "nl": "hij heeft gestudeerd"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we have studied",
+                    "fi": "me olemme opiskelleet",
+                    "nl": "wij hebben gestudeerd"
+                },
+                "second person": {
+                    "en": "you have studied",
+                    "fi": "te olette opiskelleet",
+                    "nl": "jullie hebben gestudeerd"
+                },
+                "third person": {
+                    "en": "they have studied",
+                    "fi": "he ovat opiskelleet",
+                    "nl": "zij hebben gestudeerd"
+                }
+            }
+        }
+    }
+}

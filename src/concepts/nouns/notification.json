@@ -2,6 +2,18 @@
     "notification": {
         "en": "notification",
         "fi": "ilmoitus",
-        "nl": "de mededeling"
+        "nl": [
+            "de mededeling",
+            "het bericht"
+        ]
+    },
+    "moving notice": {
+        "roots": {
+            "fi": "notification",
+            "nl": "notification"
+        },
+        "en": "moving notice",
+        "fi": "muuttoilmoitus",
+        "nl": "het verhuisbericht"
     }
 }

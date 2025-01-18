@@ -1,0 +1,22 @@
+{
+    "permit": {
+        "en": "permit",
+        "fi": "lupa",
+        "nl": "de vergunning"
+    },
+    "residence permit": {
+        "roots": "permit",
+        "en": "residence permit",
+        "fi": "oleskelulupa",
+        "nl": "de verblijfsvergunning"
+    },
+    "work permit": {
+        "roots": [
+            "work",
+            "permit"
+        ],
+        "en": "work permit",
+        "fi": "työlupa",
+        "nl": "de werkvergunning"
+    }
+}

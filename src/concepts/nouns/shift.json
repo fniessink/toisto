@@ -1,7 +1,10 @@
 {
     "shift": {
         "roots": {
-            "fi": "work"
+            "fi": [
+                "work",
+                "turn"
+            ]
         },
         "en": "shift",
         "fi": "työvuoro",

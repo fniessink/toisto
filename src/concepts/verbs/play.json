@@ -54,44 +54,130 @@
             "fi": "pelata",
             "nl": "spelen"
         },
-        "singular": {
-            "first person": {
-                "en": "I play",
-                "fi": "minä pelaan",
-                "nl": "ik speel"
-            },
-            "second person": {
-                "en": "you play",
-                "fi": "sinä pelaat",
-                "nl": "jij speelt"
-            },
-            "third person": {
-                "fi": "hän pelaa",
-                "feminine": {
-                    "en": "she plays",
-                    "nl": "zij speelt"
+        "present tense": {
+            "singular": {
+                "first person": {
+                    "en": "I play",
+                    "fi": "minä pelaan",
+                    "nl": "ik speel"
                 },
-                "masculine": {
-                    "en": "he plays",
-                    "nl": "hij speelt"
+                "second person": {
+                    "en": "you play",
+                    "fi": "sinä pelaat",
+                    "nl": "jij speelt"
+                },
+                "third person": {
+                    "fi": "hän pelaa",
+                    "feminine": {
+                        "en": "she plays",
+                        "nl": "zij speelt"
+                    },
+                    "masculine": {
+                        "en": "he plays",
+                        "nl": "hij speelt"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we play",
+                    "fi": "me pelaamme",
+                    "nl": "wij spelen"
+                },
+                "second person": {
+                    "en": "you play",
+                    "fi": "te pelaatte",
+                    "nl": "jullie spelen"
+                },
+                "third person": {
+                    "en": "they play",
+                    "fi": "he pelaavat",
+                    "nl": "zij spelen"
                 }
             }
         },
-        "plural": {
-            "first person": {
-                "en": "we play",
-                "fi": "me pelaamme",
-                "nl": "wij spelen"
+        "past tense": {
+            "singular": {
+                "first person": {
+                    "en": "I played",
+                    "fi": "minä pelasin",
+                    "nl": "ik speelde"
+                },
+                "second person": {
+                    "en": "you played",
+                    "fi": "sinä pelasit",
+                    "nl": "jij speelde"
+                },
+                "third person": {
+                    "fi": "hän pelasi",
+                    "feminine": {
+                        "en": "she played",
+                        "nl": "zij speelde"
+                    },
+                    "masculine": {
+                        "en": "he played",
+                        "nl": "hij speelde"
+                    }
+                }
             },
-            "second person": {
-                "en": "you play",
-                "fi": "te pelaatte",
-                "nl": "jullie spelen"
+            "plural": {
+                "first person": {
+                    "en": "we played",
+                    "fi": "me pelasimme",
+                    "nl": "wij speelden"
+                },
+                "second person": {
+                    "en": "you played",
+                    "fi": "te pelasitte",
+                    "nl": "jullie speelden"
+                },
+                "third person": {
+                    "en": "they played",
+                    "fi": "he pelasivat",
+                    "nl": "zij speelden"
+                }
+            }
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have played",
+                    "fi": "minä olen pelannut",
+                    "nl": "ik heb gespeeld"
+                },
+                "second person": {
+                    "en": "you have played",
+                    "fi": "sinä olet pelannut",
+                    "nl": "jij hebt gespeeld"
+                },
+                "third person": {
+                    "fi": "hän on pelannut",
+                    "feminine": {
+                        "en": "she has played",
+                        "nl": "zij heeft gespeeld"
+                    },
+                    "masculine": {
+                        "en": "he has played",
+                        "nl": "hij heeft gespeeld"
+                    }
+                }
             },
-            "third person": {
-                "en": "they play",
-                "fi": "he pelaavat",
-                "nl": "zij spelen"
+            "plural": {
+                "first person": {
+                    "en": "we have played",
+                    "fi": "me olemme pelanneet",
+                    "nl": "wij hebben gespeeld"
+                },
+                "second person": {
+                    "en": "you have played",
+                    "fi": "te olette pelanneet",
+                    "nl": "jullie hebben gespeeld"
+                },
+                "third person": {
+                    "en": "they have played",
+                    "fi": "he ovat pelanneet",
+                    "nl": "zij hebben gespeeld"
+                }
             }
         }
     },
