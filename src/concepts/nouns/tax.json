@@ -1,0 +1,29 @@
+{
+    "tax": {
+        "en": "tax",
+        "fi": "vero",
+        "nl": "de belasting"
+    },
+    "tax office": {
+        "roots": [
+            "tax",
+            "office"
+        ],
+        "en": "tax office",
+        "fi": "verotoimisto",
+        "nl": "het belastingkantoor"
+    },
+    "tax return": {
+        "roots": {
+            "en": "tax",
+            "fi": [
+                "tax",
+                "notification"
+            ],
+            "nl": "tax"
+        },
+        "en": "tax return",
+        "fi": "veroilmoitus",
+        "nl": "de belastingaangifte"
+    }
+}

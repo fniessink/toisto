@@ -22,6 +22,16 @@
         "fi": "päiväys",
         "nl": "de datum"
     },
+    "due date": {
+        "roots": {
+            "en": "date",
+            "fi": "day",
+            "nl": "date"
+        },
+        "en": "due date",
+        "fi": "eräpäivä",
+        "nl": "de vervaldatum"
+    },
     "the date is 2024-11-16": {
         "roots": "date",
         "en": "The date is 16 November, 2024.|The date is November 16, 2024.",

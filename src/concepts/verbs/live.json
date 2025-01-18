@@ -88,6 +88,48 @@
                     "nl": "zij woonden"
                 }
             }
+        },
+        "present perfect tense": {
+            "singular": {
+                "first person": {
+                    "en": "I have lived",
+                    "fi": "minä olen asunut",
+                    "nl": "ik heb gewoond"
+                },
+                "second person": {
+                    "en": "you have lived",
+                    "fi": "sinä olet asunut",
+                    "nl": "jij hebt gewoond"
+                },
+                "third person": {
+                    "fi": "hän on asunut",
+                    "feminine": {
+                        "en": "she has lived",
+                        "nl": "zij heeft gewoond"
+                    },
+                    "masculine": {
+                        "en": "he has lived",
+                        "nl": "hij heeft gewoond"
+                    }
+                }
+            },
+            "plural": {
+                "first person": {
+                    "en": "we have lived",
+                    "fi": "me olemme asuneet",
+                    "nl": "wij hebben gewoond"
+                },
+                "second person": {
+                    "en": "you have lived",
+                    "fi": "te olette asuneet",
+                    "nl": "jullie hebben gewoond"
+                },
+                "third person": {
+                    "en": "they have lived",
+                    "fi": "he ovat asuneet",
+                    "nl": "zij hebben gewoond"
+                }
+            }
         }
     }
 }

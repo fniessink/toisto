@@ -21,7 +21,10 @@
     "receipt": {
         "en": "receipt",
         "fi": "kuitti",
-        "nl": "het bonnetje|de bon"
+        "nl": [
+            "de bon|het bonnetje",
+            "de kwitantie"
+        ]
     },
     "account": {
         "en": "account",

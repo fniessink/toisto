@@ -1,0 +1,62 @@
+{
+    "SM2.5": {
+        "fi": "(SM2.5)",
+        "involves": [
+            "SM2.5-sanasto"
+        ]
+    },
+    "SM2.5-sanasto": {
+        "fi": "(SM2.5-sanasto)",
+        "involves": [
+            "application",
+            "at the latest",
+            "attachment",
+            "bill",
+            "branch",
+            "bureau",
+            "certificate",
+            "clerk",
+            "complaint",
+            "customer service",
+            "date",
+            "digital signature",
+            "document",
+            "Digi- ja väestötietovirasto",
+            "driver's license",
+            "due date",
+            "form",
+            "helpdesk",
+            "identification",
+            "identity card",
+            "insurance",
+            "insurance company",
+            "Kansaneläkelaitos",
+            "Kela-kortti",
+            "line (straight sequence of people or items)",
+            "Maahanmuuttovirasto",
+            "moving notice",
+            "notification",
+            "passport",
+            "payment",
+            "police station",
+            "queueing number",
+            "receipt",
+            "reimburse",
+            "residence permit",
+            "service point",
+            "signature",
+            "tax office",
+            "tax return",
+            "to apply for compensation",
+            "to fill out a form",
+            "to identify with bank information",
+            "to pay the bill",
+            "to queue",
+            "to return a form",
+            "to run errands",
+            "turn",
+            "Työ- ja elinkeinotoimisto",
+            "work permit"
+        ]
+    }
+}

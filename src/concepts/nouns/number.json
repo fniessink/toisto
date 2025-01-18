@@ -19,5 +19,14 @@
         "en": "emergency number",
         "fi": "hätänumero",
         "nl": "het alarmnummer"
+    },
+    "queueing number": {
+        "roots": {
+            "en": "number",
+            "fi": "number"
+        },
+        "en": "queueing number",
+        "fi": "vuoronumero",
+        "nl": "het volgnummer"
     }
 }
