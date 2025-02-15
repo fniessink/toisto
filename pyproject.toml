@@ -131,6 +131,9 @@ section-order = [
 "tests/*" = ["ANN201"]
 ".vulture-whitelist.py" = ["ALL"]
 
+[tool.setuptools]
+license-files = [] # Work-around for https://github.com/astral-sh/uv/issues/9513
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
