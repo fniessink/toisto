@@ -3,9 +3,7 @@
 from abc import abstractmethod
 from dataclasses import dataclass
 from itertools import permutations, zip_longest
-from typing import ClassVar
-
-from green.output import Iterable
+from typing import ClassVar, Iterable
 
 from ..language import LanguagePair
 from ..language.concept import Concept, ConceptRelation
