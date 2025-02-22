@@ -5,8 +5,16 @@
         "nl": "de verzekering"
     },
     "insurance company": {
+        "roots": "insurance",
         "en": "insurance company",
         "fi": "vakuutusyhtiö",
         "nl": "de verzekeringsmaatschappij"
+    },
+    "home insurance": {
+        "roots": "insurance",
+        "hypernym": "insurance",
+        "en": "home insurance",
+        "fi": "kotivakuutus",
+        "nl": "de woonverzekering"
     }
 }

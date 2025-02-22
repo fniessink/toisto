@@ -1,0 +1,22 @@
+{
+    "basement": {
+        "holonym": "house",
+        "singular": {
+            "en": "basement",
+            "fi": "kellari",
+            "nl": "de kelder"
+        },
+        "plural": {
+            "en": "basements",
+            "fi": "kellarit",
+            "nl": "de kelders"
+        }
+    },
+    "basement storage unit": {
+        "roots": "basement",
+        "holonym": "basement",
+        "en": "basement storage unit",
+        "fi": "kellarikomero",
+        "nl": "de kelderbox"
+    }
+}

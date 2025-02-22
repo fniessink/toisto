@@ -357,19 +357,6 @@
         "fi": "rekka-auto",
         "nl": "de vrachtwagen"
     },
-    "bicycle": {
-        "hypernym": "means of transportation",
-        "singular": {
-            "en": "bicycle",
-            "fi": "polkypyörä|pyörä",
-            "nl": "de fiets"
-        },
-        "plural": {
-            "en": "bicycles",
-            "fi": "polkypyörät|pyörät",
-            "nl": "de fietsen"
-        }
-    },
     "motorcycle": {
         "hypernym": "means of transportation",
         "roots": {
