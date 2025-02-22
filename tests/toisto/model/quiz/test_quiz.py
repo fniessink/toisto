@@ -288,7 +288,8 @@ class QuizInstructionTest(QuizTestCase):
         """Test that homographs get an automatic note based on the hypernym."""
         self.language_pair = NL_FI
         self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
-        self.create_concept("furniture", {"nl": "het meubilair"})  # Create the hypernym of sofa
+        # Create the hypernym of sofa:
+        self.create_concept("furniture", {"nl": "het meubilair;;this should not be shown as part of the note"})
         sofa = self.create_concept("bank", {"hypernym": "furniture", "fi": "sohva", "nl": "de bank"})
         quiz = self.create_quiz(sofa, "de bank", ["sohva"], DICTATE)
         self.assertEqual("Listen and write in Dutch (het meubilair)", quiz.instruction)
@@ -351,7 +352,7 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_holonym(self):
         """Test that homographs get an automatic note based on the holonym."""
         self.language_pair = NL_FI
-        self.create_concept("tree", {"fi": "puu", "nl": "de boom"})
+        self.create_concept("tree", {"fi": "puu;;this should not be shown as part of the note", "nl": "de boom"})
         wood = self.create_concept("wood", {"holonym": "tree", "fi": "puu", "nl": "het hout"})
         write_quiz = self.create_quiz(wood, "puu", ["het hout"], WRITE)
         self.assertEqual("Translate into Dutch (part of 'puu')", write_quiz.instruction)
@@ -364,7 +365,7 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_involved_concept(self):
         """Test that homographs get an automatic note based on the involved concept."""
         self.language_pair = FI_EN
-        self.create_concept("sport", {"en": "sport"})
+        self.create_concept("sport", {"en": "sport;;this should not be shown as part of the note"})
         play_instrument = self.create_concept("to play a musical instrument", {"en": "to play"})
         play_sport = self.create_concept("to play a sport", {"en": "to play", "fi": "pelata", "involves": "sport"})
         write_quiz = self.create_quiz(play_sport, "to play", ["pelata"], WRITE)
