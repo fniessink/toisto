@@ -1,0 +1,23 @@
+{
+    "metre": {
+        "singular": {
+            "en": "metre|meter",
+            "fi": "metri",
+            "nl": "de meter"
+        },
+        "plural": {
+            "en": "metres|meters",
+            "fi": "metrit",
+            "nl": "de meters"
+        }
+    },
+    "square metre": {
+        "roots": "metre",
+        "en": "square metre|square meter",
+        "fi": [
+            "neliömetri",
+            "neliö*"
+        ],
+        "nl": "de vierkante meter"
+    }
+}
