@@ -8,7 +8,10 @@
         ]
     },
     "customer service": {
-        "roots": "service",
+        "roots": [
+            "customer",
+            "service"
+        ],
         "en": "customer service",
         "fi": "asiakaspalvelu",
         "nl": "de klantenservice"

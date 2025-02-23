@@ -1,7 +1,10 @@
 {
     "document": {
         "roots": {
-            "fi": "book"
+            "fi": [
+                "thing",
+                "book"
+            ]
         },
         "en": "document",
         "fi": "asiakirja",

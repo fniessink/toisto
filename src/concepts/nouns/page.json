@@ -13,7 +13,10 @@
         }
     },
     "web page": {
-        "roots": "page",
+        "roots": [
+            "web",
+            "page"
+        ],
         "en": "web page|webpage",
         "fi": [
             "verkkosivu",

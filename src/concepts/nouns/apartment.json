@@ -1,0 +1,50 @@
+{
+    "apartment": {
+        "singular": {
+            "en": "apartment",
+            "fi": "asunto",
+            "nl": "het appartement"
+        },
+        "plural": {
+            "en": "apartments",
+            "fi": "asunnot",
+            "nl": "de appartementen"
+        }
+    },
+    "single-room apartment": {
+        "hypernym": "apartment",
+        "roots": {
+            "en": "apartment",
+            "fi": "1",
+            "nl": "apartment"
+        },
+        "en": [
+            "studio apartment",
+            "studio"
+        ],
+        "fi": "yksiö",
+        "nl": [
+            "het eenkamerappartement",
+            "de studio"
+        ]
+    },
+    "two-room apartment": {
+        "hypernym": "apartment",
+        "roots": {
+            "en": [
+                "2",
+                "room",
+                "apartment"
+            ],
+            "fi": "2",
+            "nl": [
+                "2",
+                "room",
+                "apartment"
+            ]
+        },
+        "en": "two-room apartment",
+        "fi": "kaksiö",
+        "nl": "het tweekamerappartement"
+    }
+}

@@ -1,13 +1,29 @@
 {
     "at the latest": {
+        "example": "friday at the latest",
         "en": [
             "at the latest",
             "no later than"
         ],
         "fi": [
-            "viimeistään;;for example, viimestään perjantaina",
-            "mennessä;;for example, perjantaihin mennessä"
+            "viimeistään",
+            "mennessä"
         ],
         "nl": "uiterlijk"
+    },
+    "friday at the latest": {
+        "roots": [
+            "at the latest",
+            "friday"
+        ],
+        "en": [
+            "friday at the latest",
+            "no later than friday"
+        ],
+        "fi": [
+            "perjantaina viimeistään",
+            "perjantaihin mennessä"
+        ],
+        "nl": "uiterlijk vrijdag"
     }
 }

@@ -1,0 +1,17 @@
+{
+    "tyre": {
+        "en": "tyre|tire",
+        "fi": "rengas",
+        "nl": "de band"
+    },
+    "wintertyre": {
+        "hypernym": "tyre",
+        "roots": [
+            "winter",
+            "tyre"
+        ],
+        "en": "winter tyre|winter tire",
+        "fi": "talvirengas",
+        "nl": "de winterband"
+    }
+}

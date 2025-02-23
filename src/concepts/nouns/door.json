@@ -1,0 +1,37 @@
+{
+    "door": {
+        "holonym": "wall",
+        "singular": {
+            "example": "the door is locked",
+            "en": "door",
+            "fi": "ovi",
+            "nl": "de deur"
+        },
+        "plural": {
+            "en": "doors",
+            "fi": "ovet",
+            "nl": "de deuren"
+        }
+    },
+    "the door is locked": {
+        "roots": {
+            "en": [
+                "to be",
+                "door"
+            ],
+            "fi": [
+                "to be",
+                "door",
+                "lock"
+            ],
+            "nl": [
+                "to be",
+                "door",
+                "lock"
+            ]
+        },
+        "en": "The door is locked.",
+        "fi": "Ovi on lukossa.",
+        "nl": "De deur is op slot."
+    }
+}
