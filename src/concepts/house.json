@@ -1,33 +1,4 @@
 {
-    "apartment": {
-        "singular": {
-            "en": "apartment",
-            "fi": "asunto",
-            "nl": "het appartement"
-        },
-        "plural": {
-            "en": "apartments",
-            "fi": "asunnot",
-            "nl": "de appartementen"
-        }
-    },
-    "single-room apartment": {
-        "hypernym": "apartment",
-        "roots": {
-            "en": "apartment",
-            "fi": "1",
-            "nl": "apartment"
-        },
-        "en": [
-            "studio apartment",
-            "studio"
-        ],
-        "fi": "yksiö",
-        "nl": [
-            "het eenkamerappartement",
-            "de studio"
-        ]
-    },
     "room": {
         "holonym": "house",
         "singular": {
@@ -124,20 +95,6 @@
             "en": "floors",
             "fi": "lattiat",
             "nl": "de vloeren"
-        }
-    },
-    "door": {
-        "holonym": "wall",
-        "singular": {
-            "example": "the door is locked",
-            "en": "door",
-            "fi": "ovi",
-            "nl": "de deur"
-        },
-        "plural": {
-            "en": "doors",
-            "fi": "ovet",
-            "nl": "de deuren"
         }
     },
     "window": {
