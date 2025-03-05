@@ -1,7 +1,33 @@
 {
     "track": {
-        "en": "track",
-        "fi": "raide",
-        "nl": "het spoor"
+        "involves": "train",
+        "singular": {
+            "en": "track",
+            "fi": "raide",
+            "nl": "het spoor"
+        },
+        "plural": {
+            "en": "tracks",
+            "fi": "raiteet",
+            "nl": "de sporen"
+        }
+    },
+    "track (trail)": {
+        "singular": {
+            "en": [
+                "track",
+                "trail"
+            ],
+            "fi": "jälki",
+            "nl": "het spoor"
+        },
+        "plural": {
+            "en": [
+                "tracks",
+                "trails"
+            ],
+            "fi": "jäljet",
+            "nl": "de sporen"
+        }
     }
 }

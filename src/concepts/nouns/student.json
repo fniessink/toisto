@@ -10,5 +10,19 @@
             "fi": "opiskelijat",
             "nl": "de studenten"
         }
+    },
+    "exchange student": {
+        "hypernym": "student",
+        "roots": {
+            "en": "student",
+            "fi": [
+                "transfer",
+                "student"
+            ],
+            "nl": "student"
+        },
+        "en": "exchange student",
+        "fi": "vaihto-opiskelija",
+        "nl": "de uitwisselingsstudent"
     }
 }
