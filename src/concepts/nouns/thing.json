@@ -1,13 +1,25 @@
 {
     "thing": {
         "en": [
-            "thing",
+            "thing;that is abstract",
             "business"
         ],
         "fi": "asia",
         "nl": [
-            "het ding",
+            "het ding;that is abstract",
             "de zaak"
+        ]
+    },
+    "thing (concrete)": {
+        "en": [
+            "object",
+            "item",
+            "thing;that is physical, concrete, tangible"
+        ],
+        "fi": "esine",
+        "nl": [
+            "het ding;that is physical, concrete, tangible",
+            "het voorwerp"
         ]
     }
 }

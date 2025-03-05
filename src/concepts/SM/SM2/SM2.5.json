@@ -4,7 +4,36 @@
         "involves": [
             "SM2.5-sanasto",
             "SM2.5-teksti",
-            "SM2.5-luetaan"
+            "SM2.5-luetaan",
+            "amount (countable)",
+            "backpack",
+            "beforehand",
+            "burglary",
+            "collection",
+            "dirt",
+            "distant",
+            "dream",
+            "exchange student",
+            "famous",
+            "hole",
+            "housemate",
+            "instruction",
+            "one after another",
+            "parachute",
+            "pavement",
+            "personal identification number",
+            "pet",
+            "sand",
+            "situation",
+            "special",
+            "standing lamp",
+            "to dive",
+            "to hurt",
+            "to interview",
+            "to propose",
+            "to train",
+            "top guitarist",
+            "what is the matter"
         ]
     },
     "SM2.5-sanasto": {
@@ -164,6 +193,35 @@
             "two-room apartment",
             "web",
             "you are welcome"
+        ]
+    },
+    "SM2.5-kielioppi": {
+        "fi": "(SM2.5-kielioppi)",
+        "involves": [
+            "birth",
+            "dead",
+            "event",
+            "experience",
+            "fed up",
+            "future",
+            "injured",
+            "joke",
+            "life",
+            "light",
+            "lost",
+            "nobody",
+            "nothing",
+            "past (period of time)",
+            "polluted",
+            "result",
+            "successful",
+            "thin",
+            "thing (concrete)",
+            "to help",
+            "to learn",
+            "to request",
+            "to teach",
+            "track (trail)"
         ]
     }
 }
