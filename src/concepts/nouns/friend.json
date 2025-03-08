@@ -36,5 +36,33 @@
         "en": "girlfriend",
         "fi": "tyttöystävä",
         "nl": "de vriendin"
+    },
+    "boyfriend": {
+        "en": "boyfriend",
+        "fi": [
+            "miesystävä",
+            "poikaystävä"
+        ],
+        "nl": [
+            "de vriend",
+            "het vriendje"
+        ]
+    },
+    "girlfriend": {
+        "en": "girlfriend",
+        "fi": [
+            "naisystävä",
+            "tyttöystävä"
+        ],
+        "nl": [
+            "de vriendin",
+            "het vriendinnetje"
+        ]
+    },
+    "friendship": {
+        "roots": "friend",
+        "en": "friendship",
+        "fi": "ystävyys",
+        "nl": "vriendschap"
     }
 }

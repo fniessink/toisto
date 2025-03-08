@@ -1,7 +1,10 @@
 {
     "but": {
         "en": "but",
-        "fi": "mutta",
+        "fi": [
+            "mutta",
+            "mut*"
+        ],
         "nl": "maar"
     }
 }

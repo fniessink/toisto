@@ -1,16 +1,24 @@
 {
-    "to move (transitive)": {
+    "to move something (transitive)": {
         "hypernym": "transitive verb",
         "infinitive": {
-            "en": "to move",
+            "en": "to move;something",
             "fi": "siirtää",
             "nl": "verplaatsen"
+        }
+    },
+    "to move oneself (intransitive)": {
+        "hypernym": "intransitive verb",
+        "infinitive": {
+            "en": "to move;oneself",
+            "fi": "siirtyä",
+            "nl": "bewegen"
         }
     },
     "to move (intransitive)": {
         "hypernym": "intransitive verb",
         "infinitive": {
-            "en": "to move",
+            "en": "to move;be in motion",
             "fi": "liikkua",
             "nl": "bewegen"
         },

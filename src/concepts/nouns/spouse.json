@@ -4,12 +4,12 @@
         "holonym": "marriage",
         "singular": {
             "en": "wife",
-            "fi": "vaimo",
+            "fi": "aviovaimo|vaimo",
             "nl": "de echtgenote"
         },
         "plural": {
             "en": "wives",
-            "fi": "vaimot",
+            "fi": "aviovaimot|vaimot",
             "nl": "de echtgenotes"
         }
     },
@@ -31,12 +31,18 @@
         "holonym": "family",
         "singular": {
             "en": "spouse",
-            "fi": "puoliso",
+            "fi": [
+                "aviopuoliso|puoliso",
+                "kumppani"
+            ],
             "nl": "de partner"
         },
         "plural": {
             "en": "spouses",
-            "fi": "puolisot",
+            "fi": [
+                "aviopuolisot|puolisot",
+                "kumppanit"
+            ],
             "nl": "de partners"
         }
     }

@@ -67,6 +67,11 @@
         "fi": "Hyvää joulua!",
         "nl": "Vrolijk kerstfeest!"
     },
+    "pikkujoulu": {
+        "en": "(pre-Christmas party)",
+        "fi": "pikkujoulu",
+        "nl": "(pre-kerstmisfeest)"
+    },
     "christmas tree": {
         "hypernym": "tree",
         "roots": {
@@ -160,6 +165,12 @@
         "en": "Epiphany;;In English, the names of holidays are capitalized",
         "fi": "loppiainen;;In Finnish, the names of holidays are not capitalized",
         "nl": "Driekoningen;;In Dutch, the names of holidays are capitalized"
+    },
+    "shrovetide": {
+        "hypernym": "holiday",
+        "en": "Shrovetide;;In English, the names of holidays are capitalized",
+        "fi": "laskiainen;;In Finnish, the names of holidays are not capitalized",
+        "nl": "Vastenavond;;In Dutch, the names of holidays are capitalized"
     },
     "easter": {
         "hypernym": "holiday",

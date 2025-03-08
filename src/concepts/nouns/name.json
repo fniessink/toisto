@@ -38,5 +38,18 @@
         ],
         "fi": "sukunimi",
         "nl": "de achternaam"
+    },
+    "naming": {
+        "roots": {
+            "en": "name",
+            "fi": "name",
+            "nl": [
+                "name",
+                "to give"
+            ]
+        },
+        "en": "naming",
+        "fi": "nimiäiset",
+        "nl": "de naamgeving"
     }
 }

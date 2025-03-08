@@ -1,0 +1,29 @@
+{
+    "some": {
+        "en": [
+            "some",
+            "a few"
+        ],
+        "fi": "muutama",
+        "nl": "een paar"
+    },
+    "somebody": {
+        "roots": {
+            "en": "some"
+        },
+        "en": [
+            "somebody",
+            "someone"
+        ],
+        "fi": "joku",
+        "nl": "iemand"
+    },
+    "something": {
+        "roots": {
+            "en": "some"
+        },
+        "en": "something",
+        "fi": "jokin",
+        "nl": "iets"
+    }
+}

@@ -16,5 +16,23 @@
             "fi": "vaikein",
             "nl": "moeilijkst"
         }
+    },
+    "hard (of an object, resistant to pressure)": {
+        "antonym": "soft",
+        "positive degree": {
+            "en": "hard",
+            "fi": "kova",
+            "nl": "hard"
+        },
+        "comparative degree": {
+            "en": "harder",
+            "fi": "kovempi",
+            "nl": "harder"
+        },
+        "superlative degree": {
+            "en": "hardest",
+            "fi": "kovin",
+            "nl": "hardst"
+        }
     }
 }

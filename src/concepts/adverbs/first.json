@@ -1,9 +1,13 @@
 {
     "first": {
-        "en": "first",
+        "en": [
+            "first",
+            "firstly"
+        ],
         "fi": [
             "ensin",
-            "aluksi"
+            "aluksi",
+            "ensimmäiseksi"
         ],
         "nl": "eerst"
     }

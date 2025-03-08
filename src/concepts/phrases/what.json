@@ -1,0 +1,39 @@
+{
+    "what do you think": {
+        "en": "What do you think?",
+        "fi": [
+            "Mitä mieltä sinä olet?",
+            "Mitä mieltä sä oot?*"
+        ],
+        "nl": "Wat denk jij?"
+    },
+    "what is the matter": {
+        "en": "What is the matter?",
+        "fi": "Mikä hätänä?",
+        "nl": "Wat is er aan de hand?"
+    },
+    "what is your name": {
+        "roots": [
+            "what",
+            "to be",
+            "name"
+        ],
+        "en": "What is your name?",
+        "fi": "Mikä sinun nimesi on?",
+        "nl": "Wat is jouw naam?"
+    },
+    "my name is bob": {
+        "roots": [
+            "name",
+            "to be"
+        ],
+        "en": "My name is Bob.",
+        "fi": "Minun nimeni on Bob.",
+        "nl": "Mijn naam is Bob."
+    },
+    "What was it again?": {
+        "en": "What was it again?",
+        "fi": "Mikä se nyt olikaan?",
+        "nl": "Wat was het ook alweer?"
+    }
+}

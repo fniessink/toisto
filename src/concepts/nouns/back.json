@@ -11,5 +11,21 @@
             "fi": "selät",
             "nl": "de ruggen"
         }
+    },
+    "backpack": {
+        "roots": {
+            "en": "back",
+            "nl": "back"
+        },
+        "singular": {
+            "en": "backpack",
+            "fi": "reppu",
+            "nl": "de rugzak"
+        },
+        "plural": {
+            "en": "backpacks",
+            "fi": "reput",
+            "nl": "de rugzakken"
+        }
     }
 }

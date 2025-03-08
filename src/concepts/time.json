@@ -12,7 +12,17 @@
         }
     },
     "all the time": {
-        "roots": "time",
+        "roots": {
+            "en": "time",
+            "fi": [
+                "whole",
+                "time"
+            ],
+            "nl": [
+                "whole",
+                "time"
+            ]
+        },
         "en": "all the time",
         "fi": "koko ajan",
         "nl": "de hele tijd"

@@ -1,0 +1,18 @@
+{
+    "to turn (a certain age)": {
+        "example": "Liisa turns 40 in June",
+        "en": "to turn;a certain age",
+        "fi": "täyttää;a certain age",
+        "nl": "worden;a certain age"
+    },
+    "Liisa turns 40 in June": {
+        "roots": [
+            "to turn (a certain age)",
+            "year",
+            "june"
+        ],
+        "en": "Liisa turns 40 years old in June.|Liisa turns 40 in June.",
+        "fi": "Liisa täyttää 40 vuotta kesäkuussa.",
+        "nl": "Liisa wordt 40 jaar in juni.|Liisa wordt 40 in juni."
+    }
+}

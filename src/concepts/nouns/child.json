@@ -30,6 +30,19 @@
             }
         }
     },
+    "childhood": {
+        "roots": {
+            "en": "child",
+            "fi": "child",
+            "nl": [
+                "child",
+                "time"
+            ]
+        },
+        "en": "childhood",
+        "fi": "lapsuus",
+        "nl": "de kindertijd"
+    },
     "daughter": {
         "antonym": [
             "mother",
