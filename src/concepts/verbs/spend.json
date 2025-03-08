@@ -1,9 +1,19 @@
 {
     "to spend (time)": {
+        "example": "We spend Easter at home",
         "infinitive": {
             "en": "to spend",
             "fi": "viettää",
             "nl": "doorbrengen"
         }
+    },
+    "We spend Easter at home": {
+        "roots": [
+            "to spend (time)",
+            "easter"
+        ],
+        "en": "We spend Easter at home.",
+        "fi": "Me vietämme pääsiäistä kotona.",
+        "nl": "We brengen Pasen thuis door."
     }
 }

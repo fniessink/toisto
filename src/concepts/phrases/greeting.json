@@ -1,0 +1,92 @@
+{
+    "a pleasure to meet you": {
+        "hypernym": "greeting",
+        "roots": {
+            "en": "to meet (someone new)",
+            "fi": [
+                "funny",
+                "to meet (someone new)"
+            ],
+            "nl": "to meet (someone new)"
+        },
+        "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
+        "fi": "Hauska tutustua!",
+        "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
+    },
+    "good afternoon": {
+        "hypernym": "greeting",
+        "roots": {
+            "en": [
+                "good",
+                "afternoon"
+            ],
+            "fi": [
+                "good",
+                "day"
+            ],
+            "nl": [
+                "good",
+                "afternoon"
+            ]
+        },
+        "en": "Good afternoon!",
+        "fi": "Hyvää päivää!;afternoon",
+        "nl": "Goedemiddag!"
+    },
+    "good day": {
+        "hypernym": "greeting",
+        "roots": [
+            "good",
+            "day"
+        ],
+        "en": "Good day!",
+        "fi": "Hyvää päivää!|Päivää!",
+        "nl": "Goedendag!"
+    },
+    "good evening": {
+        "hypernym": "greeting",
+        "roots": [
+            "good",
+            "evening"
+        ],
+        "en": "Good evening!",
+        "fi": "Hyvää iltaa!|Iltaa!",
+        "nl": "Goedenavond!"
+    },
+    "good morning": {
+        "hypernym": "greeting",
+        "roots": [
+            "good",
+            "morning"
+        ],
+        "en": "Good morning!|Morning!",
+        "fi": "Hyvää huomenta!|Huomenta!",
+        "nl": "Goedemorgen!|Morgen!"
+    },
+    "good night": {
+        "hypernym": "greeting",
+        "roots": [
+            "good",
+            "night"
+        ],
+        "en": "Good night!",
+        "fi": "Hyvää yötä!",
+        "nl": "Goedenacht!"
+    },
+    "hello": {
+        "hypernym": "greeting",
+        "en": "Hello!",
+        "fi": "Terve!",
+        "nl": "Hallo!"
+    },
+    "hi": {
+        "hypernym": "greeting",
+        "en": "Hi!",
+        "fi": [
+            "Hei!",
+            "Moi!",
+            "Moikka!;arriving"
+        ],
+        "nl": "Hoi!"
+    }
+}

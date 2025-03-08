@@ -2,47 +2,54 @@
     "to try": {
         "infinitive": {
             "en": "to try",
-            "fi": "kokeilla",
+            "fi": "yrittää",
             "nl": "proberen"
+        }
+    },
+    "to try out": {
+        "infinitive": {
+            "en": "to try out",
+            "fi": "kokeilla",
+            "nl": "uitproberen"
         },
         "singular": {
             "first person": {
-                "en": "I try",
+                "en": "I try out",
                 "fi": "minä kokeilen",
-                "nl": "ik probeer"
+                "nl": "ik probeer uit"
             },
             "second person": {
-                "en": "you try",
+                "en": "you try out",
                 "fi": "sinä kokeilet",
-                "nl": "jij probeert"
+                "nl": "jij probeert uit"
             },
             "third person": {
                 "fi": "hän kokeilee",
                 "feminine": {
-                    "en": "she tries",
-                    "nl": "zij probeert"
+                    "en": "she tries out",
+                    "nl": "zij probeert uit"
                 },
                 "masculine": {
-                    "en": "he tries",
-                    "nl": "hij probeert"
+                    "en": "he tries out",
+                    "nl": "hij probeert uit"
                 }
             }
         },
         "plural": {
             "first person": {
-                "en": "we try",
+                "en": "we try out",
                 "fi": "me kokeilemme",
-                "nl": "wij proberen"
+                "nl": "wij proberen uit"
             },
             "second person": {
-                "en": "you try",
+                "en": "you try out",
                 "fi": "te kokeilette",
-                "nl": "jullie proberen"
+                "nl": "jullie proberen uit"
             },
             "third person": {
-                "en": "they try",
+                "en": "they try out",
                 "fi": "he kokeilevat",
-                "nl": "zij proberen"
+                "nl": "zij proberen uit"
             }
         }
     }

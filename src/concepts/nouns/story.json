@@ -1,7 +1,13 @@
 {
-    "story": {
+    "story (formal)": {
+        "hypernym": "literature",
         "en": "story",
         "fi": "tarina",
+        "nl": "het verhaal"
+    },
+    "story (informal)": {
+        "en": "story",
+        "fi": "juttu",
         "nl": "het verhaal"
     }
 }

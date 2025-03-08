@@ -87,7 +87,10 @@
     "birthday": {
         "hypernym": "day",
         "en": "birthday",
-        "fi": "syntymäpäivä",
+        "fi": [
+            "syntymäpäivä",
+            "synttäri*"
+        ],
         "nl": "de verjaardag"
     },
     "day care centre": {
