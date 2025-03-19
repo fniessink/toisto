@@ -41,7 +41,7 @@ dev = [
     "gprof2dot == 2024.6.6",
     "green == 4.0.2",
     "mypy == 1.15.0",
-    "ruff == 0.9.10",
+    "ruff == 0.11.0",
     "types-requests == 2.32.0.20250306",
     "unittest-xml-reporting == 3.2.0",
     "vulture == 2.14",
