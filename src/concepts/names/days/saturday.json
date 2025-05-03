@@ -1,25 +1,41 @@
 {
-    "saturday": {
-        "holonym": [
-            "days of the week",
-            "weekend"
-        ],
-        "hypernym": "day",
-        "roots": {
-            "en": "day",
-            "nl": "day"
-        },
-        "en": {
-            "singular": "Saturday;;In English, the names of weekdays are capitalized",
-            "plural": "Saturdays"
-        },
-        "fi": {
-            "singular": "lauantai;;In Finnish, the names of weekdays are not capitalized",
-            "plural": "lauantait"
-        },
-        "nl": {
-            "singular": "zaterdag|de zaterdag;In Dutch, the names of weekdays are not capitalized",
-            "plural": "de zaterdagen"
+    "concepts": {
+        "saturday": {
+            "holonym": [
+                "days of the week",
+                "weekend"
+            ],
+            "hypernym": "day",
+            "roots": {
+                "en": "day",
+                "nl": "day"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "saturday",
+            "label": {
+                "singular": "Saturday;;In English, the names of weekdays are capitalized",
+                "plural": "Saturdays"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "saturday",
+            "label": {
+                "singular": "lauantai;;In Finnish, the names of weekdays are not capitalized",
+                "plural": "lauantait"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "saturday",
+            "label": {
+                "singular": "zaterdag|de zaterdag;In Dutch, the names of weekdays are not capitalized",
+                "plural": "de zaterdagen"
+            },
+            "language": "nl"
+        }
+    ]
 }

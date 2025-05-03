@@ -1,16 +1,31 @@
 {
-    "situation": {
-        "en": {
-            "singular": "situation",
-            "plural": "situations"
+    "concepts": {
+        "situation": {}
+    },
+    "labels": [
+        {
+            "concept": "situation",
+            "label": {
+                "singular": "situation",
+                "plural": "situations"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "tilanne",
-            "plural": "tilanteet"
+        {
+            "concept": "situation",
+            "label": {
+                "singular": "tilanne",
+                "plural": "tilanteet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de situatie",
-            "plural": "de situaties"
+        {
+            "concept": "situation",
+            "label": {
+                "singular": "de situatie",
+                "plural": "de situaties"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

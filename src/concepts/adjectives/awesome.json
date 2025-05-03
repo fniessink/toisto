@@ -1,7 +1,22 @@
 {
-    "awesome": {
-        "en": "awesome",
-        "fi": "mahtava",
-        "nl": "geweldig"
-    }
+    "concepts": {
+        "awesome": {}
+    },
+    "labels": [
+        {
+            "concept": "awesome",
+            "label": "awesome",
+            "language": "en"
+        },
+        {
+            "concept": "awesome",
+            "label": "mahtava",
+            "language": "fi"
+        },
+        {
+            "concept": "awesome",
+            "label": "geweldig",
+            "language": "nl"
+        }
+    ]
 }

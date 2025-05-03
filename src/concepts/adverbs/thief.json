@@ -1,8 +1,24 @@
 {
-    "thief": {
-        "involves": "theft",
-        "en": "thief",
-        "fi": "varas",
-        "nl": "de dief"
-    }
+    "concepts": {
+        "thief": {
+            "involves": "theft"
+        }
+    },
+    "labels": [
+        {
+            "concept": "thief",
+            "label": "thief",
+            "language": "en"
+        },
+        {
+            "concept": "thief",
+            "label": "varas",
+            "language": "fi"
+        },
+        {
+            "concept": "thief",
+            "label": "de dief",
+            "language": "nl"
+        }
+    ]
 }

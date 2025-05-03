@@ -1,7 +1,22 @@
 {
-    "to supervise": {
-        "en": "to supervise",
-        "fi": "valvoa",
-        "nl": "toezicht houden"
-    }
+    "concepts": {
+        "to supervise": {}
+    },
+    "labels": [
+        {
+            "concept": "to supervise",
+            "label": "to supervise",
+            "language": "en"
+        },
+        {
+            "concept": "to supervise",
+            "label": "valvoa",
+            "language": "fi"
+        },
+        {
+            "concept": "to supervise",
+            "label": "toezicht houden",
+            "language": "nl"
+        }
+    ]
 }

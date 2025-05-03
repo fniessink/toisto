@@ -1,32 +1,64 @@
 {
-    "page": {
-        "holonym": "chapter",
-        "en": {
-            "singular": "page",
-            "plural": "pages"
+    "concepts": {
+        "page": {
+            "holonym": "chapter"
         },
-        "fi": {
-            "singular": "sivu",
-            "plural": "sivut"
-        },
-        "nl": {
-            "singular": "de pagina",
-            "plural": "de pagina's"
+        "web page": {
+            "roots": [
+                "web",
+                "page"
+            ]
         }
     },
-    "web page": {
-        "roots": [
-            "web",
-            "page"
-        ],
-        "en": "web page|webpage",
-        "fi": [
-            "verkkosivu",
-            "nettisivu"
-        ],
-        "nl": [
-            "de webpagina",
-            "de internetpagina"
-        ]
-    }
+    "labels": [
+        {
+            "concept": "page",
+            "label": {
+                "singular": "page",
+                "plural": "pages"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "page",
+            "label": {
+                "singular": "sivu",
+                "plural": "sivut"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "page",
+            "label": {
+                "singular": "de pagina",
+                "plural": "de pagina's"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "web page",
+            "label": "web page|webpage",
+            "language": "en"
+        },
+        {
+            "concept": "web page",
+            "label": "verkkosivu",
+            "language": "fi"
+        },
+        {
+            "concept": "web page",
+            "label": "nettisivu",
+            "language": "fi"
+        },
+        {
+            "concept": "web page",
+            "label": "de webpagina",
+            "language": "nl"
+        },
+        {
+            "concept": "web page",
+            "label": "de internetpagina",
+            "language": "nl"
+        }
+    ]
 }

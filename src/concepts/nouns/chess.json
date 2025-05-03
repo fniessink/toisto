@@ -1,8 +1,24 @@
 {
-    "chess": {
-        "hypernym": "board game",
-        "en": "chess",
-        "fi": "shakki",
-        "nl": "het schaken"
-    }
+    "concepts": {
+        "chess": {
+            "hypernym": "board game"
+        }
+    },
+    "labels": [
+        {
+            "concept": "chess",
+            "label": "chess",
+            "language": "en"
+        },
+        {
+            "concept": "chess",
+            "label": "shakki",
+            "language": "fi"
+        },
+        {
+            "concept": "chess",
+            "label": "het schaken",
+            "language": "nl"
+        }
+    ]
 }

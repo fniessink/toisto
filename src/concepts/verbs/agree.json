@@ -1,10 +1,27 @@
 {
-    "to agree": {
-        "en": "to agree",
-        "fi": "suostua",
-        "nl": [
-            "toestemmen",
-            "instemmen"
-        ]
-    }
+    "concepts": {
+        "to agree": {}
+    },
+    "labels": [
+        {
+            "concept": "to agree",
+            "label": "to agree",
+            "language": "en"
+        },
+        {
+            "concept": "to agree",
+            "label": "suostua",
+            "language": "fi"
+        },
+        {
+            "concept": "to agree",
+            "label": "toestemmen",
+            "language": "nl"
+        },
+        {
+            "concept": "to agree",
+            "label": "instemmen",
+            "language": "nl"
+        }
+    ]
 }

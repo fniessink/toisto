@@ -1,7 +1,22 @@
 {
-    "christening": {
-        "en": "christening",
-        "fi": "ristiäiset",
-        "nl": "de doop"
-    }
+    "concepts": {
+        "christening": {}
+    },
+    "labels": [
+        {
+            "concept": "christening",
+            "label": "christening",
+            "language": "en"
+        },
+        {
+            "concept": "christening",
+            "label": "ristiäiset",
+            "language": "fi"
+        },
+        {
+            "concept": "christening",
+            "label": "de doop",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "to taste": {
-        "en": "to taste",
-        "fi": "maistua",
-        "nl": "smaken"
-    }
+    "concepts": {
+        "to taste": {}
+    },
+    "labels": [
+        {
+            "concept": "to taste",
+            "label": "to taste",
+            "language": "en"
+        },
+        {
+            "concept": "to taste",
+            "label": "maistua",
+            "language": "fi"
+        },
+        {
+            "concept": "to taste",
+            "label": "smaken",
+            "language": "nl"
+        }
+    ]
 }

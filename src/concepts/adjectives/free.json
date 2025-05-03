@@ -1,19 +1,34 @@
 {
-    "free": {
-        "en": {
-            "positive degree": "free",
-            "comparative degree": "freer",
-            "superlative degree": "freest"
+    "concepts": {
+        "free": {}
+    },
+    "labels": [
+        {
+            "concept": "free",
+            "label": {
+                "positive degree": "free",
+                "comparative degree": "freer",
+                "superlative degree": "freest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "vapaa",
-            "comparative degree": "vapaampi",
-            "superlative degree": "vapain"
+        {
+            "concept": "free",
+            "label": {
+                "positive degree": "vapaa",
+                "comparative degree": "vapaampi",
+                "superlative degree": "vapain"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "vrij",
-            "comparative degree": "vrijer",
-            "superlative degree": "vrijst"
+        {
+            "concept": "free",
+            "label": {
+                "positive degree": "vrij",
+                "comparative degree": "vrijer",
+                "superlative degree": "vrijst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

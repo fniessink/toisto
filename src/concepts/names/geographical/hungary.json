@@ -1,8 +1,24 @@
 {
-    "hungary": {
-        "hypernym": "country",
-        "en": "Hungary",
-        "fi": "Unkari",
-        "nl": "Hongarije"
-    }
+    "concepts": {
+        "hungary": {
+            "hypernym": "country"
+        }
+    },
+    "labels": [
+        {
+            "concept": "hungary",
+            "label": "Hungary",
+            "language": "en"
+        },
+        {
+            "concept": "hungary",
+            "label": "Unkari",
+            "language": "fi"
+        },
+        {
+            "concept": "hungary",
+            "label": "Hongarije",
+            "language": "nl"
+        }
+    ]
 }

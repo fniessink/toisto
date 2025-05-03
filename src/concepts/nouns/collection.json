@@ -1,7 +1,22 @@
 {
-    "collection": {
-        "en": "collection",
-        "fi": "keräily",
-        "nl": "de verzameling"
-    }
+    "concepts": {
+        "collection": {}
+    },
+    "labels": [
+        {
+            "concept": "collection",
+            "label": "collection",
+            "language": "en"
+        },
+        {
+            "concept": "collection",
+            "label": "keräily",
+            "language": "fi"
+        },
+        {
+            "concept": "collection",
+            "label": "de verzameling",
+            "language": "nl"
+        }
+    ]
 }

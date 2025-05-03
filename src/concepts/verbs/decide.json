@@ -1,11 +1,32 @@
 {
-    "to decide": {
-        "en": "to decide",
-        "fi": "päättää",
-        "nl": [
-            "beslissen",
-            "besluiten",
-            "bepalen"
-        ]
-    }
+    "concepts": {
+        "to decide": {}
+    },
+    "labels": [
+        {
+            "concept": "to decide",
+            "label": "to decide",
+            "language": "en"
+        },
+        {
+            "concept": "to decide",
+            "label": "päättää",
+            "language": "fi"
+        },
+        {
+            "concept": "to decide",
+            "label": "beslissen",
+            "language": "nl"
+        },
+        {
+            "concept": "to decide",
+            "label": "besluiten",
+            "language": "nl"
+        },
+        {
+            "concept": "to decide",
+            "label": "bepalen",
+            "language": "nl"
+        }
+    ]
 }

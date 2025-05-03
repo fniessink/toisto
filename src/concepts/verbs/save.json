@@ -1,49 +1,64 @@
 {
-    "to save": {
-        "en": {
-            "infinitive": "to save",
-            "singular": {
-                "first person": "I save",
-                "second person": "you save",
-                "third person": {
-                    "feminine": "she saves",
-                    "masculine": "he saves"
+    "concepts": {
+        "to save": {}
+    },
+    "labels": [
+        {
+            "concept": "to save",
+            "label": {
+                "infinitive": "to save",
+                "singular": {
+                    "first person": "I save",
+                    "second person": "you save",
+                    "third person": {
+                        "feminine": "she saves",
+                        "masculine": "he saves"
+                    }
+                },
+                "plural": {
+                    "first person": "we save",
+                    "second person": "you save",
+                    "third person": "they save"
                 }
             },
-            "plural": {
-                "first person": "we save",
-                "second person": "you save",
-                "third person": "they save"
-            }
+            "language": "en"
         },
-        "fi": {
-            "infinitive": "säästää",
-            "singular": {
-                "first person": "minä säästän",
-                "second person": "sinä säästät",
-                "third person": "hän säästää"
-            },
-            "plural": {
-                "first person": "me säästämme",
-                "second person": "te säästätte",
-                "third person": "he säästävät"
-            }
-        },
-        "nl": {
-            "infinitive": "sparen",
-            "singular": {
-                "first person": "ik spaar",
-                "second person": "jij spaart",
-                "third person": {
-                    "feminine": "zij spaart",
-                    "masculine": "hij spaart"
+        {
+            "concept": "to save",
+            "label": {
+                "infinitive": "säästää",
+                "singular": {
+                    "first person": "minä säästän",
+                    "second person": "sinä säästät",
+                    "third person": "hän säästää"
+                },
+                "plural": {
+                    "first person": "me säästämme",
+                    "second person": "te säästätte",
+                    "third person": "he säästävät"
                 }
             },
-            "plural": {
-                "first person": "wij sparen",
-                "second person": "jullie sparen",
-                "third person": "zij sparen"
-            }
+            "language": "fi"
+        },
+        {
+            "concept": "to save",
+            "label": {
+                "infinitive": "sparen",
+                "singular": {
+                    "first person": "ik spaar",
+                    "second person": "jij spaart",
+                    "third person": {
+                        "feminine": "zij spaart",
+                        "masculine": "hij spaart"
+                    }
+                },
+                "plural": {
+                    "first person": "wij sparen",
+                    "second person": "jullie sparen",
+                    "third person": "zij sparen"
+                }
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

@@ -1,11 +1,27 @@
 {
-    "shank": {
-        "holonym": "leg",
-        "roots": {
-            "nl": "leg"
+    "concepts": {
+        "shank": {
+            "holonym": "leg",
+            "roots": {
+                "nl": "leg"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "shank",
+            "label": "shank",
+            "language": "en"
         },
-        "en": "shank",
-        "fi": "sääri",
-        "nl": "het onderbeen"
-    }
+        {
+            "concept": "shank",
+            "label": "sääri",
+            "language": "fi"
+        },
+        {
+            "concept": "shank",
+            "label": "het onderbeen",
+            "language": "nl"
+        }
+    ]
 }

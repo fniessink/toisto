@@ -1,7 +1,22 @@
 {
-    "whole": {
-        "en": "whole",
-        "fi": "koko",
-        "nl": "heel"
-    }
+    "concepts": {
+        "whole": {}
+    },
+    "labels": [
+        {
+            "concept": "whole",
+            "label": "whole",
+            "language": "en"
+        },
+        {
+            "concept": "whole",
+            "label": "koko",
+            "language": "fi"
+        },
+        {
+            "concept": "whole",
+            "label": "heel",
+            "language": "nl"
+        }
+    ]
 }

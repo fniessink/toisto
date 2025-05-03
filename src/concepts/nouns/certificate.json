@@ -1,7 +1,22 @@
 {
-    "certificate": {
-        "en": "certificate",
-        "fi": "todistus",
-        "nl": "het certificaat"
-    }
+    "concepts": {
+        "certificate": {}
+    },
+    "labels": [
+        {
+            "concept": "certificate",
+            "label": "certificate",
+            "language": "en"
+        },
+        {
+            "concept": "certificate",
+            "label": "todistus",
+            "language": "fi"
+        },
+        {
+            "concept": "certificate",
+            "label": "het certificaat",
+            "language": "nl"
+        }
+    ]
 }

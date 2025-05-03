@@ -1,41 +1,65 @@
 {
-    "head": {
-        "holonym": "body",
-        "en": {
-            "singular": "head",
-            "plural": "heads"
+    "concepts": {
+        "head": {
+            "holonym": "body"
         },
-        "fi": {
-            "singular": "pää",
-            "plural": "päät"
+        "forehead": {
+            "holonym": "head",
+            "roots": {
+                "en": "head",
+                "nl": "head"
+            }
         },
-        "nl": {
-            "singular": "het hoofd",
-            "plural": "de hoofden"
-        }
+        "head (main part)": {}
     },
-    "forehead": {
-        "holonym": "head",
-        "roots": {
-            "en": "head",
-            "nl": "head"
+    "labels": [
+        {
+            "concept": [
+                "head",
+                "head (main part)"
+            ],
+            "label": {
+                "singular": "head",
+                "plural": "heads"
+            },
+            "language": "en"
         },
-        "en": "forehead",
-        "fi": "otsa",
-        "nl": "het voorhoofd"
-    },
-    "head (main part)": {
-        "en": {
-            "singular": "head",
-            "plural": "heads"
+        {
+            "concept": [
+                "head",
+                "head (main part)"
+            ],
+            "label": {
+                "singular": "pää",
+                "plural": "päät"
+            },
+            "language": "fi"
         },
-        "fi": {
-            "singular": "pää",
-            "plural": "päät"
+        {
+            "concept": [
+                "head",
+                "head (main part)"
+            ],
+            "label": {
+                "singular": "het hoofd",
+                "plural": "de hoofden"
+            },
+            "language": "nl"
         },
-        "nl": {
-            "singular": "het hoofd",
-            "plural": "de hoofden"
+        {
+            "concept": "forehead",
+            "label": "forehead",
+            "language": "en"
+        },
+        {
+            "concept": "forehead",
+            "label": "otsa",
+            "language": "fi"
+        },
+        {
+            "concept": "forehead",
+            "label": "het voorhoofd",
+            "language": "nl"
         }
-    }
+    ]
 }

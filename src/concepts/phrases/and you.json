@@ -1,11 +1,27 @@
 {
-    "and you": {
-        "roots": {
-            "en": "and",
-            "nl": "and"
+    "concepts": {
+        "and you": {
+            "roots": {
+                "en": "and",
+                "nl": "and"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "and you",
+            "label": "And you?",
+            "language": "en"
         },
-        "en": "And you?",
-        "fi": "Entä sinulle?",
-        "nl": "En met jou?"
-    }
+        {
+            "concept": "and you",
+            "label": "Entä sinulle?",
+            "language": "fi"
+        },
+        {
+            "concept": "and you",
+            "label": "En met jou?",
+            "language": "nl"
+        }
+    ]
 }

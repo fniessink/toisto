@@ -1,8 +1,24 @@
 {
-    "linden": {
-        "hypernym": "tree",
-        "en": "linden",
-        "fi": "lehmus",
-        "nl": "de linde"
-    }
+    "concepts": {
+        "linden": {
+            "hypernym": "tree"
+        }
+    },
+    "labels": [
+        {
+            "concept": "linden",
+            "label": "linden",
+            "language": "en"
+        },
+        {
+            "concept": "linden",
+            "label": "lehmus",
+            "language": "fi"
+        },
+        {
+            "concept": "linden",
+            "label": "de linde",
+            "language": "nl"
+        }
+    ]
 }

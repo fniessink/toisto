@@ -1,7 +1,22 @@
 {
-    "to cut": {
-        "en": "to cut",
-        "fi": "leikata",
-        "nl": "snijden"
-    }
+    "concepts": {
+        "to cut": {}
+    },
+    "labels": [
+        {
+            "concept": "to cut",
+            "label": "to cut",
+            "language": "en"
+        },
+        {
+            "concept": "to cut",
+            "label": "leikata",
+            "language": "fi"
+        },
+        {
+            "concept": "to cut",
+            "label": "snijden",
+            "language": "nl"
+        }
+    ]
 }

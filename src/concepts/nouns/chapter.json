@@ -1,20 +1,36 @@
 {
-    "chapter": {
-        "holonym": "book",
-        "roots": {
-            "nl": "head (main part)"
-        },
-        "en": {
-            "singular": "chapter",
-            "plural": "chapters"
-        },
-        "fi": {
-            "singular": "luku",
-            "plural": "luvut"
-        },
-        "nl": {
-            "singular": "het hoofdstuk",
-            "plural": "de hoofdstukken"
+    "concepts": {
+        "chapter": {
+            "holonym": "book",
+            "roots": {
+                "nl": "head (main part)"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "chapter",
+            "label": {
+                "singular": "chapter",
+                "plural": "chapters"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "chapter",
+            "label": {
+                "singular": "luku",
+                "plural": "luvut"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "chapter",
+            "label": {
+                "singular": "het hoofdstuk",
+                "plural": "de hoofdstukken"
+            },
+            "language": "nl"
+        }
+    ]
 }

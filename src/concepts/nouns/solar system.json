@@ -1,8 +1,24 @@
 {
-    "solar system": {
-        "holonym": "Milky Way Galaxy",
-        "en": "Solar System|Solar system|solar system",
-        "fi": "Aurinkokunta",
-        "nl": "het zonnestelsel"
-    }
+    "concepts": {
+        "solar system": {
+            "holonym": "Milky Way Galaxy"
+        }
+    },
+    "labels": [
+        {
+            "concept": "solar system",
+            "label": "Solar System|Solar system|solar system",
+            "language": "en"
+        },
+        {
+            "concept": "solar system",
+            "label": "Aurinkokunta",
+            "language": "fi"
+        },
+        {
+            "concept": "solar system",
+            "label": "het zonnestelsel",
+            "language": "nl"
+        }
+    ]
 }

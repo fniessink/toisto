@@ -1,8 +1,24 @@
 {
-    "theft": {
-        "involves": "thief",
-        "en": "theft",
-        "fi": "varkaus",
-        "nl": "de diefstal"
-    }
+    "concepts": {
+        "theft": {
+            "involves": "thief"
+        }
+    },
+    "labels": [
+        {
+            "concept": "theft",
+            "label": "theft",
+            "language": "en"
+        },
+        {
+            "concept": "theft",
+            "label": "varkaus",
+            "language": "fi"
+        },
+        {
+            "concept": "theft",
+            "label": "de diefstal",
+            "language": "nl"
+        }
+    ]
 }

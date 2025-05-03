@@ -1,7 +1,22 @@
 {
-    "sorry": {
-        "en": "Sorry!",
-        "fi": "Anteeksi!",
-        "nl": "Sorry!"
-    }
+    "concepts": {
+        "sorry": {}
+    },
+    "labels": [
+        {
+            "concept": "sorry",
+            "label": "Sorry!",
+            "language": "en"
+        },
+        {
+            "concept": "sorry",
+            "label": "Anteeksi!",
+            "language": "fi"
+        },
+        {
+            "concept": "sorry",
+            "label": "Sorry!",
+            "language": "nl"
+        }
+    ]
 }

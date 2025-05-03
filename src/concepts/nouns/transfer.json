@@ -1,7 +1,22 @@
 {
-    "transfer": {
-        "en": "transfer",
-        "fi": "vaihto",
-        "nl": "de overstap"
-    }
+    "concepts": {
+        "transfer": {}
+    },
+    "labels": [
+        {
+            "concept": "transfer",
+            "label": "transfer",
+            "language": "en"
+        },
+        {
+            "concept": "transfer",
+            "label": "vaihto",
+            "language": "fi"
+        },
+        {
+            "concept": "transfer",
+            "label": "de overstap",
+            "language": "nl"
+        }
+    ]
 }

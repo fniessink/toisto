@@ -1,7 +1,22 @@
 {
-    "trash": {
-        "en": "trash",
-        "fi": "roska",
-        "nl": "het afval"
-    }
+    "concepts": {
+        "trash": {}
+    },
+    "labels": [
+        {
+            "concept": "trash",
+            "label": "trash",
+            "language": "en"
+        },
+        {
+            "concept": "trash",
+            "label": "roska",
+            "language": "fi"
+        },
+        {
+            "concept": "trash",
+            "label": "het afval",
+            "language": "nl"
+        }
+    ]
 }

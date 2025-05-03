@@ -1,35 +1,63 @@
 {
-    "hand": {
-        "holonym": "body",
-        "en": {
-            "singular": "hand",
-            "plural": "hands"
+    "concepts": {
+        "hand": {
+            "holonym": "body"
         },
-        "fi": {
-            "singular": "käsi",
-            "plural": "kädet"
-        },
-        "nl": {
-            "singular": "de hand",
-            "plural": "de handen"
+        "handwork": {
+            "roots": [
+                "hand",
+                "work"
+            ]
         }
     },
-    "handwork": {
-        "roots": [
-            "hand",
-            "work"
-        ],
-        "en": {
-            "singular": "handwork",
-            "plural": "handworks"
+    "labels": [
+        {
+            "concept": "hand",
+            "label": {
+                "singular": "hand",
+                "plural": "hands"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "käsityö",
-            "plural": "käsityöt"
+        {
+            "concept": "hand",
+            "label": {
+                "singular": "käsi",
+                "plural": "kädet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het handwerk",
-            "plural": "de handwerken"
+        {
+            "concept": "hand",
+            "label": {
+                "singular": "de hand",
+                "plural": "de handen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "handwork",
+            "label": {
+                "singular": "handwork",
+                "plural": "handworks"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "handwork",
+            "label": {
+                "singular": "käsityö",
+                "plural": "käsityöt"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "handwork",
+            "label": {
+                "singular": "het handwerk",
+                "plural": "de handwerken"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

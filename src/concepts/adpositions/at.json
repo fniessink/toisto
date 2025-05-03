@@ -1,30 +1,82 @@
 {
-    "at someone's place": {
-        "en": "at;someone's place",
-        "fi": "luona",
-        "nl": "bij"
+    "concepts": {
+        "at someone's place": {},
+        "at the immediate vicinity of": {},
+        "bob sits at the table": {
+            "roots": "at the immediate vicinity of"
+        },
+        "alice spent the night at bob's place": {
+            "roots": "at someone's place"
+        }
     },
-    "at the immediate vicinity of": {
-        "en": "at;the immediate vicinity of",
-        "fi": "ääressä",
-        "nl": [
-            "aan",
-            "bij"
-        ]
-    },
-    "bob sits at the table": {
-        "roots": "at the immediate vicinity of",
-        "en": "Bob sits at the table.",
-        "fi": "Bob istuu pöydän ääressä.",
-        "nl": [
-            "Bob zit aan de tafel.",
-            "Bob zit bij de tafel."
-        ]
-    },
-    "alice spent the night at bob's place": {
-        "roots": "at someone's place",
-        "en": "Alice spent the night at Bob's place.",
-        "fi": "Alice yöpyi Bobin luona.",
-        "nl": "Alice bleef bij Bob slapen.|Alice bleef slapen bij Bob."
-    }
+    "labels": [
+        {
+            "concept": "at someone's place",
+            "label": "at;someone's place",
+            "language": "en"
+        },
+        {
+            "concept": "at someone's place",
+            "label": "luona",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "at someone's place",
+                "at the immediate vicinity of"
+            ],
+            "label": "bij",
+            "language": "nl"
+        },
+        {
+            "concept": "at the immediate vicinity of",
+            "label": "at;the immediate vicinity of",
+            "language": "en"
+        },
+        {
+            "concept": "at the immediate vicinity of",
+            "label": "ääressä",
+            "language": "fi"
+        },
+        {
+            "concept": "at the immediate vicinity of",
+            "label": "aan",
+            "language": "nl"
+        },
+        {
+            "concept": "bob sits at the table",
+            "label": "Bob sits at the table.",
+            "language": "en"
+        },
+        {
+            "concept": "bob sits at the table",
+            "label": "Bob istuu pöydän ääressä.",
+            "language": "fi"
+        },
+        {
+            "concept": "bob sits at the table",
+            "label": "Bob zit aan de tafel.",
+            "language": "nl"
+        },
+        {
+            "concept": "bob sits at the table",
+            "label": "Bob zit bij de tafel.",
+            "language": "nl"
+        },
+        {
+            "concept": "alice spent the night at bob's place",
+            "label": "Alice spent the night at Bob's place.",
+            "language": "en"
+        },
+        {
+            "concept": "alice spent the night at bob's place",
+            "label": "Alice yöpyi Bobin luona.",
+            "language": "fi"
+        },
+        {
+            "concept": "alice spent the night at bob's place",
+            "label": "Alice bleef bij Bob slapen.|Alice bleef slapen bij Bob.",
+            "language": "nl"
+        }
+    ]
 }

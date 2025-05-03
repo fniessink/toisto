@@ -1,17 +1,33 @@
 {
-    "fox": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "fox",
-            "plural": "foxes"
-        },
-        "fi": {
-            "singular": "kettu",
-            "plural": "ketut"
-        },
-        "nl": {
-            "singular": "de vos",
-            "plural": "de vossen"
+    "concepts": {
+        "fox": {
+            "hypernym": "animal"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "fox",
+            "label": {
+                "singular": "fox",
+                "plural": "foxes"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "fox",
+            "label": {
+                "singular": "kettu",
+                "plural": "ketut"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "fox",
+            "label": {
+                "singular": "de vos",
+                "plural": "de vossen"
+            },
+            "language": "nl"
+        }
+    ]
 }

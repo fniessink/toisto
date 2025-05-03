@@ -1,7 +1,22 @@
 {
-    "adder": {
-        "en": "adder",
-        "fi": "kyy",
-        "nl": "de adder"
-    }
+    "concepts": {
+        "adder": {}
+    },
+    "labels": [
+        {
+            "concept": "adder",
+            "label": "adder",
+            "language": "en"
+        },
+        {
+            "concept": "adder",
+            "label": "kyy",
+            "language": "fi"
+        },
+        {
+            "concept": "adder",
+            "label": "de adder",
+            "language": "nl"
+        }
+    ]
 }

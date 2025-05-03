@@ -1,16 +1,31 @@
 {
-    "plant": {
-        "en": {
-            "singular": "plant",
-            "plural": "plants"
+    "concepts": {
+        "plant": {}
+    },
+    "labels": [
+        {
+            "concept": "plant",
+            "label": {
+                "singular": "plant",
+                "plural": "plants"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "kasvi",
-            "plural": "kasvit"
+        {
+            "concept": "plant",
+            "label": {
+                "singular": "kasvi",
+                "plural": "kasvit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de plant",
-            "plural": "de planten"
+        {
+            "concept": "plant",
+            "label": {
+                "singular": "de plant",
+                "plural": "de planten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

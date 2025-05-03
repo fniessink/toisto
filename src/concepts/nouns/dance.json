@@ -1,16 +1,31 @@
 {
-    "dance": {
-        "en": {
-            "singular": "dance",
-            "plural": "dances"
+    "concepts": {
+        "dance": {}
+    },
+    "labels": [
+        {
+            "concept": "dance",
+            "label": {
+                "singular": "dance",
+                "plural": "dances"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "tanssi",
-            "plural": "tanssit"
+        {
+            "concept": "dance",
+            "label": {
+                "singular": "tanssi",
+                "plural": "tanssit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de dans",
-            "plural": "de dansen"
+        {
+            "concept": "dance",
+            "label": {
+                "singular": "de dans",
+                "plural": "de dansen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

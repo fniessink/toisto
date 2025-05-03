@@ -1,16 +1,31 @@
 {
-    "code": {
-        "en": {
-            "singular": "code",
-            "plural": "codes"
+    "concepts": {
+        "code": {}
+    },
+    "labels": [
+        {
+            "concept": "code",
+            "label": {
+                "singular": "code",
+                "plural": "codes"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "koodi",
-            "plural": "koodit"
+        {
+            "concept": "code",
+            "label": {
+                "singular": "koodi",
+                "plural": "koodit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de code",
-            "plural": "de codes"
+        {
+            "concept": "code",
+            "label": {
+                "singular": "de code",
+                "plural": "de codes"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

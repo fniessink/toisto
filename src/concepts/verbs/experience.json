@@ -1,7 +1,22 @@
 {
-    "to experience": {
-        "en": "to experience",
-        "fi": "kokea",
-        "nl": "beleven"
-    }
+    "concepts": {
+        "to experience": {}
+    },
+    "labels": [
+        {
+            "concept": "to experience",
+            "label": "to experience",
+            "language": "en"
+        },
+        {
+            "concept": "to experience",
+            "label": "kokea",
+            "language": "fi"
+        },
+        {
+            "concept": "to experience",
+            "label": "beleven",
+            "language": "nl"
+        }
+    ]
 }

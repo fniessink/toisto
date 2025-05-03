@@ -1,7 +1,22 @@
 {
-    "end": {
-        "en": "end",
-        "fi": "loppu",
-        "nl": "het einde"
-    }
+    "concepts": {
+        "end": {}
+    },
+    "labels": [
+        {
+            "concept": "end",
+            "label": "end",
+            "language": "en"
+        },
+        {
+            "concept": "end",
+            "label": "loppu",
+            "language": "fi"
+        },
+        {
+            "concept": "end",
+            "label": "het einde",
+            "language": "nl"
+        }
+    ]
 }

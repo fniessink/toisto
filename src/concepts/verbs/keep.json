@@ -1,7 +1,22 @@
 {
-    "to keep": {
-        "en": "to keep",
-        "fi": "säilyttää",
-        "nl": "bewaren"
-    }
+    "concepts": {
+        "to keep": {}
+    },
+    "labels": [
+        {
+            "concept": "to keep",
+            "label": "to keep",
+            "language": "en"
+        },
+        {
+            "concept": "to keep",
+            "label": "säilyttää",
+            "language": "fi"
+        },
+        {
+            "concept": "to keep",
+            "label": "bewaren",
+            "language": "nl"
+        }
+    ]
 }

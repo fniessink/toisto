@@ -1,7 +1,22 @@
 {
-    "knowledge": {
-        "en": "knowledge",
-        "fi": "tieto",
-        "nl": "de kennis"
-    }
+    "concepts": {
+        "knowledge": {}
+    },
+    "labels": [
+        {
+            "concept": "knowledge",
+            "label": "knowledge",
+            "language": "en"
+        },
+        {
+            "concept": "knowledge",
+            "label": "tieto",
+            "language": "fi"
+        },
+        {
+            "concept": "knowledge",
+            "label": "de kennis",
+            "language": "nl"
+        }
+    ]
 }

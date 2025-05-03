@@ -1,10 +1,27 @@
 {
-    "each other": {
-        "en": [
-            "each other",
-            "one another"
-        ],
-        "fi": "toisiaan",
-        "nl": "elkaar"
-    }
+    "concepts": {
+        "each other": {}
+    },
+    "labels": [
+        {
+            "concept": "each other",
+            "label": "each other",
+            "language": "en"
+        },
+        {
+            "concept": "each other",
+            "label": "one another",
+            "language": "en"
+        },
+        {
+            "concept": "each other",
+            "label": "toisiaan",
+            "language": "fi"
+        },
+        {
+            "concept": "each other",
+            "label": "elkaar",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,19 +1,47 @@
 {
-    "to the left": {
-        "antonym": "to the right",
-        "example": "alice sits to the left of bob",
-        "en": "to the left",
-        "fi": "vasemmalla puolella",
-        "nl": "aan de linkerkant"
+    "concepts": {
+        "to the left": {
+            "antonym": "to the right",
+            "example": "alice sits to the left of bob"
+        },
+        "alice sits to the left of bob": {
+            "antonym": "alice sits to the right of bob",
+            "roots": [
+                "to sit",
+                "to the left"
+            ]
+        }
     },
-    "alice sits to the left of bob": {
-        "antonym": "alice sits to the right of bob",
-        "roots": [
-            "to sit",
-            "to the left"
-        ],
-        "en": "Alice sits to the left of Bob.",
-        "fi": "Alice istuu Bobin vasemmalla puolella.",
-        "nl": "Alice zit aan de linkerkant van Bob."
-    }
+    "labels": [
+        {
+            "concept": "to the left",
+            "label": "to the left",
+            "language": "en"
+        },
+        {
+            "concept": "to the left",
+            "label": "vasemmalla puolella",
+            "language": "fi"
+        },
+        {
+            "concept": "to the left",
+            "label": "aan de linkerkant",
+            "language": "nl"
+        },
+        {
+            "concept": "alice sits to the left of bob",
+            "label": "Alice sits to the left of Bob.",
+            "language": "en"
+        },
+        {
+            "concept": "alice sits to the left of bob",
+            "label": "Alice istuu Bobin vasemmalla puolella.",
+            "language": "fi"
+        },
+        {
+            "concept": "alice sits to the left of bob",
+            "label": "Alice zit aan de linkerkant van Bob.",
+            "language": "nl"
+        }
+    ]
 }

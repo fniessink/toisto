@@ -1,19 +1,47 @@
 {
-    "iceland": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "iceland": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
         },
-        "en": "Iceland",
-        "fi": "Islanti",
-        "nl": "IJsland"
+        "icelandic (nationality)": {
+            "hypernym": "nationality",
+            "involves": "iceland",
+            "roots": "iceland"
+        }
     },
-    "icelandic (nationality)": {
-        "hypernym": "nationality",
-        "involves": "iceland",
-        "roots": "iceland",
-        "en": "Icelandic",
-        "fi": "islantilainen",
-        "nl": "IJslands"
-    }
+    "labels": [
+        {
+            "concept": "iceland",
+            "label": "Iceland",
+            "language": "en"
+        },
+        {
+            "concept": "iceland",
+            "label": "Islanti",
+            "language": "fi"
+        },
+        {
+            "concept": "iceland",
+            "label": "IJsland",
+            "language": "nl"
+        },
+        {
+            "concept": "icelandic (nationality)",
+            "label": "Icelandic",
+            "language": "en"
+        },
+        {
+            "concept": "icelandic (nationality)",
+            "label": "islantilainen",
+            "language": "fi"
+        },
+        {
+            "concept": "icelandic (nationality)",
+            "label": "IJslands",
+            "language": "nl"
+        }
+    ]
 }

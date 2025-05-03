@@ -1,10 +1,27 @@
 {
-    "mess": {
-        "en": "mess",
-        "fi": "sotku",
-        "nl": [
-            "de troep",
-            "de rommel"
-        ]
-    }
+    "concepts": {
+        "mess": {}
+    },
+    "labels": [
+        {
+            "concept": "mess",
+            "label": "mess",
+            "language": "en"
+        },
+        {
+            "concept": "mess",
+            "label": "sotku",
+            "language": "fi"
+        },
+        {
+            "concept": "mess",
+            "label": "de troep",
+            "language": "nl"
+        },
+        {
+            "concept": "mess",
+            "label": "de rommel",
+            "language": "nl"
+        }
+    ]
 }

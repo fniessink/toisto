@@ -1,10 +1,27 @@
 {
-    "suitable": {
-        "en": "suitable",
-        "fi": "sopiva",
-        "nl": [
-            "geschikt",
-            "passend"
-        ]
-    }
+    "concepts": {
+        "suitable": {}
+    },
+    "labels": [
+        {
+            "concept": "suitable",
+            "label": "suitable",
+            "language": "en"
+        },
+        {
+            "concept": "suitable",
+            "label": "sopiva",
+            "language": "fi"
+        },
+        {
+            "concept": "suitable",
+            "label": "geschikt",
+            "language": "nl"
+        },
+        {
+            "concept": "suitable",
+            "label": "passend",
+            "language": "nl"
+        }
+    ]
 }

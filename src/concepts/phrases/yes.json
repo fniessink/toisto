@@ -1,11 +1,32 @@
 {
-    "yes": {
-        "en": "Yes!",
-        "fi": [
-            "Joo!",
-            "Kyllä!",
-            "Jep!*"
-        ],
-        "nl": "Ja!"
-    }
+    "concepts": {
+        "yes": {}
+    },
+    "labels": [
+        {
+            "concept": "yes",
+            "label": "Yes!",
+            "language": "en"
+        },
+        {
+            "concept": "yes",
+            "label": "Joo!",
+            "language": "fi"
+        },
+        {
+            "concept": "yes",
+            "label": "Kyllä!",
+            "language": "fi"
+        },
+        {
+            "concept": "yes",
+            "label": "Jep!*",
+            "language": "fi"
+        },
+        {
+            "concept": "yes",
+            "label": "Ja!",
+            "language": "nl"
+        }
+    ]
 }

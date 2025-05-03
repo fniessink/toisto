@@ -1,15 +1,36 @@
 {
-    "line": {
-        "en": "line",
-        "fi": "rivi",
-        "nl": "de regel"
+    "concepts": {
+        "line": {},
+        "line (straight sequence of people or items)": {}
     },
-    "line (straight sequence of people or items)": {
-        "en": [
-            "line",
-            "queue"
-        ],
-        "fi": "jono",
-        "nl": "de rij"
-    }
+    "labels": [
+        {
+            "concept": [
+                "line",
+                "line (straight sequence of people or items)"
+            ],
+            "label": "line",
+            "language": "en"
+        },
+        {
+            "concept": "line",
+            "label": "rivi",
+            "language": "fi"
+        },
+        {
+            "concept": "line",
+            "label": "de regel",
+            "language": "nl"
+        },
+        {
+            "concept": "line (straight sequence of people or items)",
+            "label": "jono",
+            "language": "fi"
+        },
+        {
+            "concept": "line (straight sequence of people or items)",
+            "label": "de rij",
+            "language": "nl"
+        }
+    ]
 }

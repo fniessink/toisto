@@ -1,7 +1,22 @@
 {
-    "to contain": {
-        "en": "to contain",
-        "fi": "sisältää",
-        "nl": "inhouden"
-    }
+    "concepts": {
+        "to contain": {}
+    },
+    "labels": [
+        {
+            "concept": "to contain",
+            "label": "to contain",
+            "language": "en"
+        },
+        {
+            "concept": "to contain",
+            "label": "sisältää",
+            "language": "fi"
+        },
+        {
+            "concept": "to contain",
+            "label": "inhouden",
+            "language": "nl"
+        }
+    ]
 }

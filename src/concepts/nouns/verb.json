@@ -1,65 +1,141 @@
 {
-    "verb": {
-        "roots": {
-            "nl": [
-                "job",
-                "word"
-            ]
+    "concepts": {
+        "verb": {
+            "roots": {
+                "nl": [
+                    "job",
+                    "word"
+                ]
+            }
         },
-        "en": {
-            "singular": "verb",
-            "plural": "verbs"
+        "verb type": {
+            "roots": "verb"
         },
-        "fi": {
-            "singular": "verbi",
-            "plural": "verbit"
+        "main verb": {
+            "hypernym": "verb",
+            "roots": {
+                "en": "verb",
+                "fi": [
+                    "head (main part)",
+                    "verb"
+                ],
+                "nl": [
+                    "head (main part)",
+                    "verb"
+                ]
+            }
         },
-        "nl": {
-            "singular": "het werkwoord",
-            "plural": "de werkwoorden"
+        "transitive verb": {
+            "antonym": "intransitive verb",
+            "hypernym": "verb"
+        },
+        "intransitive verb": {
+            "antonym": "transitive verb",
+            "hypernym": "verb"
+        },
+        "perceptional verb": {
+            "hypernym": "verb"
         }
     },
-    "verb type": {
-        "roots": "verb",
-        "en": "verb type",
-        "fi": "verbityyppi",
-        "nl": "het werkwoordtype"
-    },
-    "main verb": {
-        "hypernym": "verb",
-        "roots": {
-            "en": "verb",
-            "fi": [
-                "head (main part)",
-                "verb"
-            ],
-            "nl": [
-                "head (main part)",
-                "verb"
-            ]
+    "labels": [
+        {
+            "concept": "verb",
+            "label": {
+                "singular": "verb",
+                "plural": "verbs"
+            },
+            "language": "en"
         },
-        "en": "main verb",
-        "fi": "pääverbi",
-        "nl": "het hoofdwerkwoord"
-    },
-    "transitive verb": {
-        "antonym": "intransitive verb",
-        "hypernym": "verb",
-        "en": "transitive verb",
-        "fi": "transitiiviverbi",
-        "nl": "het transitieve werkwoord|transitief werkwoord"
-    },
-    "intransitive verb": {
-        "antonym": "transitive verb",
-        "hypernym": "verb",
-        "en": "intransitive verb",
-        "fi": "intransitiiviverbi",
-        "nl": "het intransitieve werkwoord|intransitief werkwoord"
-    },
-    "perceptional verb": {
-        "hypernym": "verb",
-        "en": "perceptional verb",
-        "fi": "astiverbi",
-        "nl": "het perceptieve werkwoord|perceptief werkwoord"
-    }
+        {
+            "concept": "verb",
+            "label": {
+                "singular": "verbi",
+                "plural": "verbit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "verb",
+            "label": {
+                "singular": "het werkwoord",
+                "plural": "de werkwoorden"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "verb type",
+            "label": "verb type",
+            "language": "en"
+        },
+        {
+            "concept": "verb type",
+            "label": "verbityyppi",
+            "language": "fi"
+        },
+        {
+            "concept": "verb type",
+            "label": "het werkwoordtype",
+            "language": "nl"
+        },
+        {
+            "concept": "main verb",
+            "label": "main verb",
+            "language": "en"
+        },
+        {
+            "concept": "main verb",
+            "label": "pääverbi",
+            "language": "fi"
+        },
+        {
+            "concept": "main verb",
+            "label": "het hoofdwerkwoord",
+            "language": "nl"
+        },
+        {
+            "concept": "transitive verb",
+            "label": "transitive verb",
+            "language": "en"
+        },
+        {
+            "concept": "transitive verb",
+            "label": "transitiiviverbi",
+            "language": "fi"
+        },
+        {
+            "concept": "transitive verb",
+            "label": "het transitieve werkwoord|transitief werkwoord",
+            "language": "nl"
+        },
+        {
+            "concept": "intransitive verb",
+            "label": "intransitive verb",
+            "language": "en"
+        },
+        {
+            "concept": "intransitive verb",
+            "label": "intransitiiviverbi",
+            "language": "fi"
+        },
+        {
+            "concept": "intransitive verb",
+            "label": "het intransitieve werkwoord|intransitief werkwoord",
+            "language": "nl"
+        },
+        {
+            "concept": "perceptional verb",
+            "label": "perceptional verb",
+            "language": "en"
+        },
+        {
+            "concept": "perceptional verb",
+            "label": "astiverbi",
+            "language": "fi"
+        },
+        {
+            "concept": "perceptional verb",
+            "label": "het perceptieve werkwoord|perceptief werkwoord",
+            "language": "nl"
+        }
+    ]
 }

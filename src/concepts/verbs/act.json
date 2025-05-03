@@ -1,8 +1,24 @@
 {
-    "to act": {
-        "involves": "actor",
-        "en": "to act",
-        "fi": "näytellä",
-        "nl": "acteren"
-    }
+    "concepts": {
+        "to act": {
+            "involves": "actor"
+        }
+    },
+    "labels": [
+        {
+            "concept": "to act",
+            "label": "to act",
+            "language": "en"
+        },
+        {
+            "concept": "to act",
+            "label": "näytellä",
+            "language": "fi"
+        },
+        {
+            "concept": "to act",
+            "label": "acteren",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,18 +1,34 @@
 {
-    "platform": {
-        "example": "the train departs from platform 4",
-        "holonym": "station",
-        "en": {
-            "singular": "platform",
-            "plural": "platforms"
-        },
-        "fi": {
-            "singular": "laituri",
-            "plural": "laiturit"
-        },
-        "nl": {
-            "singular": "het perron",
-            "plural": "de perrons"
+    "concepts": {
+        "platform": {
+            "example": "the train departs from platform 4",
+            "holonym": "station"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "platform",
+            "label": {
+                "singular": "platform",
+                "plural": "platforms"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "platform",
+            "label": {
+                "singular": "laituri",
+                "plural": "laiturit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "platform",
+            "label": {
+                "singular": "het perron",
+                "plural": "de perrons"
+            },
+            "language": "nl"
+        }
+    ]
 }

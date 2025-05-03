@@ -1,11 +1,27 @@
 {
-    "england": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "england": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "england",
+            "label": "England",
+            "language": "en"
         },
-        "en": "England",
-        "fi": "Englanti",
-        "nl": "Engeland"
-    }
+        {
+            "concept": "england",
+            "label": "Englanti",
+            "language": "fi"
+        },
+        {
+            "concept": "england",
+            "label": "Engeland",
+            "language": "nl"
+        }
+    ]
 }

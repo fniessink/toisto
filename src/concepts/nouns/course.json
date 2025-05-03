@@ -1,26 +1,65 @@
 {
-    "course": {
-        "en": "course",
-        "fi": "kurssi",
-        "nl": "de cursus"
+    "concepts": {
+        "course": {},
+        "finnish course": {
+            "hypernym": "course",
+            "roots": [
+                "finnish",
+                "course"
+            ]
+        },
+        "course day": {
+            "roots": [
+                "course",
+                "day"
+            ]
+        }
     },
-    "finnish course": {
-        "hypernym": "course",
-        "roots": [
-            "finnish",
-            "course"
-        ],
-        "en": "Finnish course",
-        "fi": "suomen kurssi",
-        "nl": "de cursus Fins"
-    },
-    "course day": {
-        "roots": [
-            "course",
-            "day"
-        ],
-        "en": "course day",
-        "fi": "kurssipäivä",
-        "nl": "de cursusdag"
-    }
+    "labels": [
+        {
+            "concept": "course",
+            "label": "course",
+            "language": "en"
+        },
+        {
+            "concept": "course",
+            "label": "kurssi",
+            "language": "fi"
+        },
+        {
+            "concept": "course",
+            "label": "de cursus",
+            "language": "nl"
+        },
+        {
+            "concept": "finnish course",
+            "label": "Finnish course",
+            "language": "en"
+        },
+        {
+            "concept": "finnish course",
+            "label": "suomen kurssi",
+            "language": "fi"
+        },
+        {
+            "concept": "finnish course",
+            "label": "de cursus Fins",
+            "language": "nl"
+        },
+        {
+            "concept": "course day",
+            "label": "course day",
+            "language": "en"
+        },
+        {
+            "concept": "course day",
+            "label": "kurssipäivä",
+            "language": "fi"
+        },
+        {
+            "concept": "course day",
+            "label": "de cursusdag",
+            "language": "nl"
+        }
+    ]
 }

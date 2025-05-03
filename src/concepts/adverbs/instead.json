@@ -1,7 +1,22 @@
 {
-    "instead": {
-        "en": "instead",
-        "fi": "sen sijaan",
-        "nl": "daarentegen"
-    }
+    "concepts": {
+        "instead": {}
+    },
+    "labels": [
+        {
+            "concept": "instead",
+            "label": "instead",
+            "language": "en"
+        },
+        {
+            "concept": "instead",
+            "label": "sen sijaan",
+            "language": "fi"
+        },
+        {
+            "concept": "instead",
+            "label": "daarentegen",
+            "language": "nl"
+        }
+    ]
 }

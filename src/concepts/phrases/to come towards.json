@@ -1,7 +1,22 @@
 {
-    "to come towards": {
-        "en": "to come towards",
-        "fi": "tulla vastaan",
-        "nl": "tegemoetkomen"
-    }
+    "concepts": {
+        "to come towards": {}
+    },
+    "labels": [
+        {
+            "concept": "to come towards",
+            "label": "to come towards",
+            "language": "en"
+        },
+        {
+            "concept": "to come towards",
+            "label": "tulla vastaan",
+            "language": "fi"
+        },
+        {
+            "concept": "to come towards",
+            "label": "tegemoetkomen",
+            "language": "nl"
+        }
+    ]
 }

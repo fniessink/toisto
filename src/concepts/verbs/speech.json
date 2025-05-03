@@ -1,15 +1,39 @@
 {
-    "to speech": {
-        "involves": "speech",
-        "en": [
-            "to speech",
-            "to give a speech",
-            "to make a speech"
-        ],
-        "fi": "pitää puhe",
-        "nl": [
-            "een toespraak geven",
-            "een toespraak houden"
-        ]
-    }
+    "concepts": {
+        "to speech": {
+            "involves": "speech"
+        }
+    },
+    "labels": [
+        {
+            "concept": "to speech",
+            "label": "to speech",
+            "language": "en"
+        },
+        {
+            "concept": "to speech",
+            "label": "to give a speech",
+            "language": "en"
+        },
+        {
+            "concept": "to speech",
+            "label": "to make a speech",
+            "language": "en"
+        },
+        {
+            "concept": "to speech",
+            "label": "pitää puhe",
+            "language": "fi"
+        },
+        {
+            "concept": "to speech",
+            "label": "een toespraak geven",
+            "language": "nl"
+        },
+        {
+            "concept": "to speech",
+            "label": "een toespraak houden",
+            "language": "nl"
+        }
+    ]
 }

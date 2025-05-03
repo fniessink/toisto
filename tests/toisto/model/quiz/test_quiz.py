@@ -287,29 +287,43 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that homographs get an automatic note based on the hypernym."""
         self.language_pair = NL_FI
-        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
+        bank_nl = dict(label="de bank", language=NL)
+        # Create the homograph of sofa:
+        self.create_concept("bank (finance)", labels=[dict(label="pankki", language=FI), bank_nl])
         # Create the hypernym of sofa:
-        self.create_concept("furniture", {"nl": "het meubilair;;this should not be shown as part of the note"})
-        sofa = self.create_concept("bank", {"hypernym": "furniture", "fi": "sohva", "nl": "de bank"})
+        self.create_concept(
+            "furniture", labels=[dict(label="het meubilair;;this should not be shown as part of the note", language=NL)]
+        )
+        sofa = self.create_concept(
+            "bank",
+            {"hypernym": "furniture"},
+            labels=[dict(label="sohva", language=FI), bank_nl],
+        )
         quiz = self.create_quiz(sofa, "de bank", ["sohva"], DICTATE)
         self.assertEqual("Listen and write in Dutch (het meubilair)", quiz.instruction)
 
     def test_non_homographs_do_not_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that concepts that are not homograph do not get an automatic note based on the hypernym."""
         self.language_pair = NL_EN
-        self.create_concept("to fly", {"en": "fly", "nl": "vliegen"})  # Create the homograph of fly
+        fly_en = dict(label="fly", language=EN)
+        # Create the homograph of fly:
+        self.create_concept("to fly", labels=[fly_en, dict(label="vliegen", language=NL)])
         self.create_concept("insect", {})  # Create the hypernym of fly
-        fly = self.create_concept("fly", {"hypernym": "insect", "en": "fly", "nl": "de vlieg"})
+        fly = self.create_concept("fly", {"hypernym": "insect"}, labels=[fly_en, dict(label="de vlieg", language=NL)])
         quiz = self.create_quiz(fly, "de vlieg", ["de vlieg"], DICTATE)
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
 
     def test_homographs_get_an_automatic_note_based_on_only_the_first_hypernym(self):
         """Test that homographs get an automatic note based on the first hypernym if there are multiple."""
         self.language_pair = NL_FI
-        self.create_concept("bank (finance)", {"fi": "pankki", "nl": "de bank"})  # Create the homograph of sofa
-        self.create_concept("furniture", {})  # Create the hypernym of seating
-        self.create_concept("seating", {"hypernym": "furniture", "nl": "het zitmeubel"})  # Create the hypernym of sofa
-        sofa = self.create_concept("sofa", {"hypernym": "seating", "fi": "sohva", "nl": "de bank"})
+        bank_nl = dict(label="de bank", language=NL)
+        # Create the homograph of sofa:
+        self.create_concept("bank (finance)", labels=[dict(label="pankki", language=FI), bank_nl])
+        # Create the hypernym of seating:
+        self.create_concept("furniture", {})
+        # Create the hypernym of sofa:
+        self.create_concept("seating", {"hypernym": "furniture"}, labels=[dict(label="het zitmeubel", language=NL)])
+        sofa = self.create_concept("sofa", {"hypernym": "seating"}, labels=[dict(label="sohva", language=FI), bank_nl])
         quiz = self.create_quiz(sofa, "de bank", ["de bank"], DICTATE)
         self.assertEqual("Listen and write in Dutch (het zitmeubel)", quiz.instruction)
 
@@ -330,18 +344,30 @@ class QuizInstructionTest(QuizTestCase):
         self.language_pair = EN_NL
         concept = self.create_concept(
             "to read",
-            {
-                "en": {
-                    "present tense": dict(singular={"second person": "you read"}, plural={"second person": "you read"}),
-                    "past tense": dict(singular={"second person": "you read"}, plural={"second person": "you read"}),
-                },
-                "nl": {
-                    "present tense": dict(
-                        singular={"second person": "jij leest"}, plural={"second person": "jullie lezen"}
-                    ),
-                    "past tense": dict(singular={"second person": "jij las"}, plural={"second person": "jullie lazen"}),
-                },
-            },
+            labels=[
+                dict(
+                    label={
+                        "present tense": dict(
+                            singular={"second person": "you read"}, plural={"second person": "you read"}
+                        ),
+                        "past tense": dict(
+                            singular={"second person": "you read"}, plural={"second person": "you read"}
+                        ),
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={
+                        "present tense": dict(
+                            singular={"second person": "jij leest"}, plural={"second person": "jullie lezen"}
+                        ),
+                        "past tense": dict(
+                            singular={"second person": "jij las"}, plural={"second person": "jullie lazen"}
+                        ),
+                    },
+                    language=NL,
+                ),
+            ],
         )
         second_person_singular = next(
             leaf_concept
@@ -354,8 +380,16 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_holonym(self):
         """Test that homographs get an automatic note based on the holonym."""
         self.language_pair = NL_FI
-        self.create_concept("tree", {"fi": "puu;;this should not be shown as part of the note", "nl": "de boom"})
-        wood = self.create_concept("wood", {"holonym": "tree", "fi": "puu", "nl": "het hout"})
+        self.create_concept(
+            "tree",
+            labels=[
+                dict(label="puu;;this should not be shown as part of the note", language=FI),
+                dict(label="de boom", language=NL),
+            ],
+        )
+        wood = self.create_concept(
+            "wood", {"holonym": "tree"}, labels=[dict(label="puu", language=FI), dict(label="het hout", language=NL)]
+        )
         write_quiz = self.create_quiz(wood, "puu", ["het hout"], WRITE)
         self.assertEqual("Translate into Dutch (part of 'puu')", write_quiz.instruction)
         self.language_pair = FI_NL
@@ -367,9 +401,16 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_note_based_on_the_involved_concept(self):
         """Test that homographs get an automatic note based on the involved concept."""
         self.language_pair = FI_EN
-        self.create_concept("sport", {"en": "sport;;this should not be shown as part of the note"})
-        play_instrument = self.create_concept("to play a musical instrument", {"en": "to play"})
-        play_sport = self.create_concept("to play a sport", {"en": "to play", "fi": "pelata", "involves": "sport"})
+        play_en = dict(label="to play", language=EN)
+        self.create_concept(
+            "sport", labels=[dict(label="sport;;this should not be shown as part of the note", language=EN)]
+        )
+        play_instrument = self.create_concept("to play a musical instrument", labels=[play_en])
+        play_sport = self.create_concept(
+            "to play a sport",
+            {"involves": "sport"},
+            labels=[play_en, dict(label="pelata", language=FI)],
+        )
         write_quiz = self.create_quiz(play_sport, "to play", ["pelata"], WRITE)
         self.assertEqual("Translate into Finnish (involves 'sport')", write_quiz.instruction)
         write_quiz = self.create_quiz(play_instrument, "to play", ["soittaa"], WRITE)
@@ -378,9 +419,15 @@ class QuizInstructionTest(QuizTestCase):
     def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
         """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
         self.language_pair = FI_NL
-        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})
-        self.create_concept("language", {"fi": "kieli"})
-        greek = self.create_concept("greek", {"hypernym": "language", "fi": "kreikka", "nl": "Grieks"})
+        self.create_concept(
+            "greece", labels=[dict(label="Kreikka", language=FI), dict(label="Griekenland", language=NL)]
+        )
+        self.create_concept("language", labels=[dict(label="kieli", language=FI)])
+        greek = self.create_concept(
+            "greek",
+            {"hypernym": "language"},
+            labels=[dict(label="kreikka", language=FI), dict(label="Grieks", language=NL)],
+        )
         quiz = self.create_quiz(greek, "kreikka", ["kreikka"], DICTATE)
         self.assertEqual("Listen and write in Finnish (kieli)", quiz.instruction)
         quiz = self.create_quiz(greek, "kreikka", ["Grieks"], READ)
@@ -389,11 +436,22 @@ class QuizInstructionTest(QuizTestCase):
     def test_capitonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
         """Test that capitonyms get an automatic note based on the first hypernym if there are multiple."""
         self.language_pair = FI_NL
-        self.create_concept("greece", {"fi": "Kreikka", "nl": "Griekenland"})  # Create the capitonym of greek
+        # Create the capitonym of greek:
+        self.create_concept(
+            "greece", labels=[dict(label="Kreikka", language=FI), dict(label="Griekenland", language=NL)]
+        )
         self.create_concept("language", {})  # Create the hypernym of Indo-European language
         # Create the hypernym of greek:
-        self.create_concept("Indo-European language", {"hypernym": "language", "fi": "indoeurooppalainen kieli"})
-        greek = self.create_concept("greek", {"hypernym": "Indo-European language", "fi": "kreikka", "nl": "Grieks"})
+        self.create_concept(
+            "Indo-European language",
+            {"hypernym": "language"},
+            labels=[dict(label="indoeurooppalainen kieli", language=FI)],
+        )
+        greek = self.create_concept(
+            "greek",
+            {"hypernym": "Indo-European language"},
+            labels=[dict(label="kreikka", language=FI), dict(label="Grieks", language=NL)],
+        )
         quiz = self.create_quiz(greek, "kreikka", ["Grieks"], DICTATE)
         self.assertEqual("Listen and write in Finnish (indoeurooppalainen kieli)", quiz.instruction)
 
@@ -402,10 +460,16 @@ class QuizInstructionTest(QuizTestCase):
         self.language_pair = FI_NL
         concept = self.create_concept(
             "to be",
-            dict(
-                fi=dict(singular={"second person": "Te olette"}, plural={"second person": "te olette"}),
-                nl=dict(singular={"second person": "u bent"}, plural={"second person": "jullie zijn"}),
-            ),
+            labels=[
+                dict(
+                    label=dict(singular={"second person": "Te olette"}, plural={"second person": "te olette"}),
+                    language=FI,
+                ),
+                dict(
+                    label=dict(singular={"second person": "u bent"}, plural={"second person": "jullie zijn"}),
+                    language=NL,
+                ),
+            ],
         )
         second_person_singular = next(
             leaf_concept

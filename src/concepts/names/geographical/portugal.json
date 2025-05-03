@@ -1,8 +1,24 @@
 {
-    "portugal": {
-        "hypernym": "country",
-        "en": "Portugal",
-        "fi": "Portugali",
-        "nl": "Portugal"
-    }
+    "concepts": {
+        "portugal": {
+            "hypernym": "country"
+        }
+    },
+    "labels": [
+        {
+            "concept": "portugal",
+            "label": "Portugal",
+            "language": "en"
+        },
+        {
+            "concept": "portugal",
+            "label": "Portugali",
+            "language": "fi"
+        },
+        {
+            "concept": "portugal",
+            "label": "Portugal",
+            "language": "nl"
+        }
+    ]
 }

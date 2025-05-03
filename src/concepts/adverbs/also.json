@@ -1,7 +1,22 @@
 {
-    "also": {
-        "en": "also",
-        "fi": "myös",
-        "nl": "ook"
-    }
+    "concepts": {
+        "also": {}
+    },
+    "labels": [
+        {
+            "concept": "also",
+            "label": "also",
+            "language": "en"
+        },
+        {
+            "concept": "also",
+            "label": "myös",
+            "language": "fi"
+        },
+        {
+            "concept": "also",
+            "label": "ook",
+            "language": "nl"
+        }
+    ]
 }

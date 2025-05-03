@@ -10,7 +10,7 @@ from xmlrunner.result import _DuplicateWriter as DuplicateWriter
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.language.concept_factory import ConceptJSON, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import INTERPRET, READ, WRITE, QuizType
@@ -45,9 +45,14 @@ class ToistoTestCase(unittest.TestCase):
         Concept.homographs.clear()
 
     @staticmethod
-    def create_concept(concept_id: str, concept_dict: dict) -> Concept:
+    def create_concept(concept_id: str, concept_dict: dict | None = None, labels: list | None = None) -> Concept:
         """Create a concept."""
-        return create_concept(cast("ConceptId", concept_id), cast("ConceptDict", concept_dict))
+        concept_dict = concept_dict or {}
+        labels = labels or []
+        for label in labels:
+            if "concept" not in label:
+                label["concept"] = concept_id
+        return create_concept(cast("ConceptId", concept_id), cast("ConceptJSON", concept_dict), labels)
 
     def create_quiz(  # noqa: PLR0913
         self,
@@ -106,39 +111,45 @@ class ToistoTestCase(unittest.TestCase):
         """Return a concept that is composite in Dutch and not composite in English."""
         return self.create_concept(
             "means of transportation",
-            dict(
-                en="means of transportation",
-                nl=dict(
-                    singular="het vervoersmiddel",
-                    plural="de vervoersmiddelen",
-                ),
-            ),
+            labels=[
+                dict(label="means of transportation", language="en"),
+                dict(label=dict(singular="het vervoersmiddel", plural="de vervoersmiddelen"), language="nl"),
+            ],
         )
 
     def create_verb_with_grammatical_number_and_person(self) -> Concept:
         """Create a verb with grammatical number nested with grammatical person."""
         return self.create_concept(
             "to have",
-            dict(
-                en=dict(
-                    singular={"first person": "I have", "second person": "you have", "third person": "she has"},
-                    plural={"first person": "we have", "second person": "you have", "third person": "they have"},
+            labels=[
+                dict(
+                    label=dict(
+                        singular={"first person": "I have", "second person": "you have", "third person": "she has"},
+                        plural={"first person": "we have", "second person": "you have", "third person": "they have"},
+                    ),
+                    language=EN,
                 ),
-                fi=dict(
-                    singular={
-                        "first person": "minulla on",
-                        "second person": "sinulla on",
-                        "third person": "hänellä on",
-                    },
-                    plural={"first person": "meillä on", "second person": "teillä on", "third person": "heillä on"},
+                dict(
+                    label=dict(
+                        singular={
+                            "first person": "minulla on",
+                            "second person": "sinulla on",
+                            "third person": "hänellä on",
+                        },
+                        plural={"first person": "meillä on", "second person": "teillä on", "third person": "heillä on"},
+                    ),
+                    language=FI,
                 ),
-                nl=dict(
-                    singular={"first person": "ik heb", "second person": "jij hebt", "third person": "zij heeft"},
-                    plural={
-                        "first person": "wij hebben",
-                        "second person": "jullie hebben",
-                        "third person": "zij hebben",
-                    },
+                dict(
+                    label=dict(
+                        singular={"first person": "ik heb", "second person": "jij hebt", "third person": "zij heeft"},
+                        plural={
+                            "first person": "wij hebben",
+                            "second person": "jullie hebben",
+                            "third person": "zij hebben",
+                        },
+                    ),
+                    language=NL,
                 ),
-            ),
+            ],
         )

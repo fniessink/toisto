@@ -1,7 +1,22 @@
 {
-    "to insure": {
-        "en": "to insure",
-        "fi": "vakuuttaa",
-        "nl": "verzekeren"
-    }
+    "concepts": {
+        "to insure": {}
+    },
+    "labels": [
+        {
+            "concept": "to insure",
+            "label": "to insure",
+            "language": "en"
+        },
+        {
+            "concept": "to insure",
+            "label": "vakuuttaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to insure",
+            "label": "verzekeren",
+            "language": "nl"
+        }
+    ]
 }

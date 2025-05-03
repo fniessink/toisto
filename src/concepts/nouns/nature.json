@@ -1,7 +1,22 @@
 {
-    "nature": {
-        "en": "nature",
-        "fi": "luonto",
-        "nl": "de natuur"
-    }
+    "concepts": {
+        "nature": {}
+    },
+    "labels": [
+        {
+            "concept": "nature",
+            "label": "nature",
+            "language": "en"
+        },
+        {
+            "concept": "nature",
+            "label": "luonto",
+            "language": "fi"
+        },
+        {
+            "concept": "nature",
+            "label": "de natuur",
+            "language": "nl"
+        }
+    ]
 }

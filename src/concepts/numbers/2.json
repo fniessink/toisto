@@ -1,20 +1,41 @@
 {
-    "2": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "two",
-            "ordinal": "second"
-        },
-        "fi": {
-            "cardinal": [
-                "kaksi",
-                "kaks*"
-            ],
-            "ordinal": "toinen"
-        },
-        "nl": {
-            "cardinal": "twee",
-            "ordinal": "tweede"
+    "concepts": {
+        "2": {
+            "hypernym": "number"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "2",
+            "label": {
+                "cardinal": "two",
+                "ordinal": "second"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "2",
+            "label": {
+                "cardinal": "kaksi",
+                "ordinal": "toinen"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "2",
+            "label": {
+                "cardinal": "kaks*",
+                "ordinal": "toinen"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "2",
+            "label": {
+                "cardinal": "twee",
+                "ordinal": "tweede"
+            },
+            "language": "nl"
+        }
+    ]
 }

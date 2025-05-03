@@ -1,7 +1,22 @@
 {
-    "to push": {
-        "en": "to push",
-        "fi": "työntää",
-        "nl": "duwen"
-    }
+    "concepts": {
+        "to push": {}
+    },
+    "labels": [
+        {
+            "concept": "to push",
+            "label": "to push",
+            "language": "en"
+        },
+        {
+            "concept": "to push",
+            "label": "työntää",
+            "language": "fi"
+        },
+        {
+            "concept": "to push",
+            "label": "duwen",
+            "language": "nl"
+        }
+    ]
 }

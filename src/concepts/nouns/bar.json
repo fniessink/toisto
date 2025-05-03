@@ -1,16 +1,31 @@
 {
-    "bar": {
-        "en": {
-            "singular": "bar",
-            "plural": "bars"
+    "concepts": {
+        "bar": {}
+    },
+    "labels": [
+        {
+            "concept": "bar",
+            "label": {
+                "singular": "bar",
+                "plural": "bars"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "baari",
-            "plural": "baarit"
+        {
+            "concept": "bar",
+            "label": {
+                "singular": "baari",
+                "plural": "baarit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de bar",
-            "plural": "de bars"
+        {
+            "concept": "bar",
+            "label": {
+                "singular": "de bar",
+                "plural": "de bars"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

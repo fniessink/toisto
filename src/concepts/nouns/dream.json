@@ -1,7 +1,22 @@
 {
-    "dream": {
-        "en": "dream",
-        "fi": "unelma",
-        "nl": "de droom"
-    }
+    "concepts": {
+        "dream": {}
+    },
+    "labels": [
+        {
+            "concept": "dream",
+            "label": "dream",
+            "language": "en"
+        },
+        {
+            "concept": "dream",
+            "label": "unelma",
+            "language": "fi"
+        },
+        {
+            "concept": "dream",
+            "label": "de droom",
+            "language": "nl"
+        }
+    ]
 }

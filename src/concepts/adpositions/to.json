@@ -1,10 +1,27 @@
 {
-    "to (of movement)": {
-        "en": "to",
-        "fi": "luokse",
-        "nl": [
-            "naar",
-            "bij"
-        ]
-    }
+    "concepts": {
+        "to (of movement)": {}
+    },
+    "labels": [
+        {
+            "concept": "to (of movement)",
+            "label": "to",
+            "language": "en"
+        },
+        {
+            "concept": "to (of movement)",
+            "label": "luokse",
+            "language": "fi"
+        },
+        {
+            "concept": "to (of movement)",
+            "label": "naar;movement",
+            "language": "nl"
+        },
+        {
+            "concept": "to (of movement)",
+            "label": "bij;movement",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "opportunity": {
-        "en": "opportunity",
-        "fi": "mahdollisuus",
-        "nl": "de mogelijkheid"
-    }
+    "concepts": {
+        "opportunity": {}
+    },
+    "labels": [
+        {
+            "concept": "opportunity",
+            "label": "opportunity",
+            "language": "en"
+        },
+        {
+            "concept": "opportunity",
+            "label": "mahdollisuus",
+            "language": "fi"
+        },
+        {
+            "concept": "opportunity",
+            "label": "de mogelijkheid",
+            "language": "nl"
+        }
+    ]
 }

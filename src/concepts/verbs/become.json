@@ -1,7 +1,22 @@
 {
-    "to become clear": {
-        "en": "to become clear",
-        "fi": "selvitä",
-        "nl": "duidelijk worden"
-    }
+    "concepts": {
+        "to become clear": {}
+    },
+    "labels": [
+        {
+            "concept": "to become clear",
+            "label": "to become clear",
+            "language": "en"
+        },
+        {
+            "concept": "to become clear",
+            "label": "selvitä",
+            "language": "fi"
+        },
+        {
+            "concept": "to become clear",
+            "label": "duidelijk worden",
+            "language": "nl"
+        }
+    ]
 }

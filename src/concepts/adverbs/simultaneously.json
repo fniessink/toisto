@@ -1,14 +1,32 @@
 {
-    "simultaneously": {
-        "en": [
-            "simultaneously",
-            "at the same time"
-        ],
-        "fi": "samalla",
-        "nl": [
-            "tegelijkertijd",
-            "tegelijk",
-            "gelijk"
-        ]
-    }
+    "concepts": {
+        "simultaneously": {}
+    },
+    "labels": [
+        {
+            "concept": "simultaneously",
+            "label": "simultaneously",
+            "language": "en"
+        },
+        {
+            "concept": "simultaneously",
+            "label": "samalla",
+            "language": "fi"
+        },
+        {
+            "concept": "simultaneously",
+            "label": "tegelijkertijd",
+            "language": "nl"
+        },
+        {
+            "concept": "simultaneously",
+            "label": "tegelijk",
+            "language": "nl"
+        },
+        {
+            "concept": "simultaneously",
+            "label": "gelijk",
+            "language": "nl"
+        }
+    ]
 }

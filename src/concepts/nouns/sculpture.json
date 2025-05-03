@@ -1,16 +1,31 @@
 {
-    "sculpture": {
-        "en": {
-            "singular": "sculpture",
-            "plural": "sculptures"
+    "concepts": {
+        "sculpture": {}
+    },
+    "labels": [
+        {
+            "concept": "sculpture",
+            "label": {
+                "singular": "sculpture",
+                "plural": "sculptures"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "veistos",
-            "plural": "veistokset"
+        {
+            "concept": "sculpture",
+            "label": {
+                "singular": "veistos",
+                "plural": "veistokset"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het beeld",
-            "plural": "de beelden"
+        {
+            "concept": "sculpture",
+            "label": {
+                "singular": "het beeld",
+                "plural": "de beelden"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

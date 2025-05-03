@@ -1,7 +1,22 @@
 {
-    "to hear": {
-        "en": "to hear",
-        "fi": "kuulla",
-        "nl": "horen"
-    }
+    "concepts": {
+        "to hear": {}
+    },
+    "labels": [
+        {
+            "concept": "to hear",
+            "label": "to hear",
+            "language": "en"
+        },
+        {
+            "concept": "to hear",
+            "label": "kuulla",
+            "language": "fi"
+        },
+        {
+            "concept": "to hear",
+            "label": "horen",
+            "language": "nl"
+        }
+    ]
 }

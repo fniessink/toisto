@@ -1,7 +1,22 @@
 {
-    "excursion": {
-        "en": "excursion",
-        "fi": "retki",
-        "nl": "de excursie"
-    }
+    "concepts": {
+        "excursion": {}
+    },
+    "labels": [
+        {
+            "concept": "excursion",
+            "label": "excursion",
+            "language": "en"
+        },
+        {
+            "concept": "excursion",
+            "label": "retki",
+            "language": "fi"
+        },
+        {
+            "concept": "excursion",
+            "label": "de excursie",
+            "language": "nl"
+        }
+    ]
 }

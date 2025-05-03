@@ -1,7 +1,22 @@
 {
-    "reflector": {
-        "en": "reflector",
-        "fi": "heijastin",
-        "nl": "de reflector"
-    }
+    "concepts": {
+        "reflector": {}
+    },
+    "labels": [
+        {
+            "concept": "reflector",
+            "label": "reflector",
+            "language": "en"
+        },
+        {
+            "concept": "reflector",
+            "label": "heijastin",
+            "language": "fi"
+        },
+        {
+            "concept": "reflector",
+            "label": "de reflector",
+            "language": "nl"
+        }
+    ]
 }

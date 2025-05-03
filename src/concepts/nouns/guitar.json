@@ -1,39 +1,79 @@
 {
-    "guitar": {
-        "hypernym": "musical instrument",
-        "en": {
-            "singular": "guitar",
-            "plural": "guitars"
+    "concepts": {
+        "guitar": {
+            "hypernym": "musical instrument"
         },
-        "fi": {
-            "singular": "kitara",
-            "plural": "kitarat"
+        "guitarist": {
+            "involves": "guitar",
+            "roots": "guitar"
         },
-        "nl": {
-            "singular": "de gitaar",
-            "plural": "de gitaren"
+        "huippukitaristi": {
+            "hypernym": "guiterist"
         }
     },
-    "guitarist": {
-        "involves": "guitar",
-        "roots": "guitar",
-        "en": {
-            "singular": "guitarist",
-            "plural": "guitarists"
+    "labels": [
+        {
+            "concept": "guitar",
+            "label": {
+                "singular": "guitar",
+                "plural": "guitars"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "kitaristi",
-            "plural": "kitaristit"
+        {
+            "concept": "guitar",
+            "label": {
+                "singular": "kitara",
+                "plural": "kitarat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de gitarist",
-            "plural": "de gitaristen"
+        {
+            "concept": "guitar",
+            "label": {
+                "singular": "de gitaar",
+                "plural": "de gitaren"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "guitarist",
+            "label": {
+                "singular": "guitarist",
+                "plural": "guitarists"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "guitarist",
+            "label": {
+                "singular": "kitaristi",
+                "plural": "kitaristit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "guitarist",
+            "label": {
+                "singular": "de gitarist",
+                "plural": "de gitaristen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "huippukitaristi",
+            "label": "top guitarist",
+            "language": "en"
+        },
+        {
+            "concept": "huippukitaristi",
+            "label": "huippukitaristi",
+            "language": "fi"
+        },
+        {
+            "concept": "huippukitaristi",
+            "label": "de topgitarist",
+            "language": "nl"
         }
-    },
-    "huippukitaristi": {
-        "hypernym": "guiterist",
-        "en": "top guitarist",
-        "fi": "huippukitaristi",
-        "nl": "de topgitarist"
-    }
+    ]
 }

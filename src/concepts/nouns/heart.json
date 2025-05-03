@@ -1,19 +1,47 @@
 {
-    "heart": {
-        "example": "she has a big heart",
-        "hypernym": "organ",
-        "en": "heart",
-        "fi": "sydän",
-        "nl": "het hart"
+    "concepts": {
+        "heart": {
+            "example": "she has a big heart",
+            "hypernym": "organ"
+        },
+        "she has a big heart": {
+            "roots": [
+                "to have",
+                "big",
+                "heart"
+            ]
+        }
     },
-    "she has a big heart": {
-        "roots": [
-            "to have",
-            "big",
-            "heart"
-        ],
-        "en": "She has a big heart.",
-        "fi": "Hänellä on suuri sydän.;feminine",
-        "nl": "Zij heeft een groot hart."
-    }
+    "labels": [
+        {
+            "concept": "heart",
+            "label": "heart",
+            "language": "en"
+        },
+        {
+            "concept": "heart",
+            "label": "sydän",
+            "language": "fi"
+        },
+        {
+            "concept": "heart",
+            "label": "het hart",
+            "language": "nl"
+        },
+        {
+            "concept": "she has a big heart",
+            "label": "She has a big heart.",
+            "language": "en"
+        },
+        {
+            "concept": "she has a big heart",
+            "label": "Hänellä on suuri sydän.;feminine",
+            "language": "fi"
+        },
+        {
+            "concept": "she has a big heart",
+            "label": "Zij heeft een groot hart.",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,17 +1,33 @@
 {
-    "dialect": {
-        "involves": "language",
-        "en": {
-            "singular": "dialect",
-            "plural": "dialects"
-        },
-        "fi": {
-            "singular": "murre",
-            "plural": "murteet"
-        },
-        "nl": {
-            "singular": "het dialect",
-            "plural": "de dialecten"
+    "concepts": {
+        "dialect": {
+            "involves": "language"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "dialect",
+            "label": {
+                "singular": "dialect",
+                "plural": "dialects"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "dialect",
+            "label": {
+                "singular": "murre",
+                "plural": "murteet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "dialect",
+            "label": {
+                "singular": "het dialect",
+                "plural": "de dialecten"
+            },
+            "language": "nl"
+        }
+    ]
 }

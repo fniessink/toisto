@@ -1,17 +1,33 @@
 {
-    "zebra": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "zebra",
-            "plural": "zebras"
-        },
-        "fi": {
-            "singular": "seepra",
-            "plural": "seeprat"
-        },
-        "nl": {
-            "singular": "de zebra",
-            "plural": "de zebra's"
+    "concepts": {
+        "zebra": {
+            "hypernym": "animal"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "zebra",
+            "label": {
+                "singular": "zebra",
+                "plural": "zebras"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "zebra",
+            "label": {
+                "singular": "seepra",
+                "plural": "seeprat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "zebra",
+            "label": {
+                "singular": "de zebra",
+                "plural": "de zebra's"
+            },
+            "language": "nl"
+        }
+    ]
 }

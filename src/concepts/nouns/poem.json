@@ -1,17 +1,33 @@
 {
-    "poem": {
-        "hypernym": "poetry",
-        "en": {
-            "singular": "poem",
-            "plural": "poems"
-        },
-        "fi": {
-            "singular": "runo",
-            "plural": "runot"
-        },
-        "nl": {
-            "singular": "het gedicht",
-            "plural": "de gedichten"
+    "concepts": {
+        "poem": {
+            "hypernym": "poetry"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "poem",
+            "label": {
+                "singular": "poem",
+                "plural": "poems"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "poem",
+            "label": {
+                "singular": "runo",
+                "plural": "runot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "poem",
+            "label": {
+                "singular": "het gedicht",
+                "plural": "de gedichten"
+            },
+            "language": "nl"
+        }
+    ]
 }

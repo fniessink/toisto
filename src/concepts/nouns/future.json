@@ -1,8 +1,24 @@
 {
-    "future": {
-        "antonym": "past (period of time)",
-        "en": "future",
-        "fi": "tulevaisuus",
-        "nl": "de toekomst"
-    }
+    "concepts": {
+        "future": {
+            "antonym": "past (period of time)"
+        }
+    },
+    "labels": [
+        {
+            "concept": "future",
+            "label": "future",
+            "language": "en"
+        },
+        {
+            "concept": "future",
+            "label": "tulevaisuus",
+            "language": "fi"
+        },
+        {
+            "concept": "future",
+            "label": "de toekomst",
+            "language": "nl"
+        }
+    ]
 }

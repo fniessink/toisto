@@ -1,49 +1,64 @@
 {
-    "to grill": {
-        "en": {
-            "infinitive": "to grill",
-            "singular": {
-                "first person": "I grill",
-                "second person": "you grill",
-                "third person": {
-                    "feminine": "she grills",
-                    "masculine": "he grills"
+    "concepts": {
+        "to grill": {}
+    },
+    "labels": [
+        {
+            "concept": "to grill",
+            "label": {
+                "infinitive": "to grill",
+                "singular": {
+                    "first person": "I grill",
+                    "second person": "you grill",
+                    "third person": {
+                        "feminine": "she grills",
+                        "masculine": "he grills"
+                    }
+                },
+                "plural": {
+                    "first person": "we grill",
+                    "second person": "you grill",
+                    "third person": "they grill"
                 }
             },
-            "plural": {
-                "first person": "we grill",
-                "second person": "you grill",
-                "third person": "they grill"
-            }
+            "language": "en"
         },
-        "fi": {
-            "infinitive": "grillata",
-            "singular": {
-                "first person": "minä grillaan",
-                "second person": "sinä grillaat",
-                "third person": "hän grillaa"
-            },
-            "plural": {
-                "first person": "me grillaamme",
-                "second person": "te grillaatte",
-                "third person": "he grillaavat"
-            }
-        },
-        "nl": {
-            "infinitive": "grillen",
-            "singular": {
-                "first person": "ik gril",
-                "second person": "jij grilt",
-                "third person": {
-                    "feminine": "zij grilt",
-                    "masculine": "hij grilt"
+        {
+            "concept": "to grill",
+            "label": {
+                "infinitive": "grillata",
+                "singular": {
+                    "first person": "minä grillaan",
+                    "second person": "sinä grillaat",
+                    "third person": "hän grillaa"
+                },
+                "plural": {
+                    "first person": "me grillaamme",
+                    "second person": "te grillaatte",
+                    "third person": "he grillaavat"
                 }
             },
-            "plural": {
-                "first person": "wij grillen",
-                "second person": "jullie grillen",
-                "third person": "zij grillen"
-            }
+            "language": "fi"
+        },
+        {
+            "concept": "to grill",
+            "label": {
+                "infinitive": "grillen",
+                "singular": {
+                    "first person": "ik gril",
+                    "second person": "jij grilt",
+                    "third person": {
+                        "feminine": "zij grilt",
+                        "masculine": "hij grilt"
+                    }
+                },
+                "plural": {
+                    "first person": "wij grillen",
+                    "second person": "jullie grillen",
+                    "third person": "zij grillen"
+                }
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

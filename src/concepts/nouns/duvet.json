@@ -1,10 +1,26 @@
 {
-    "duvet": {
-        "roots": {
-            "nl": "bed"
+    "concepts": {
+        "duvet": {
+            "roots": {
+                "nl": "bed"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "duvet",
+            "label": "duvet",
+            "language": "en"
         },
-        "en": "duvet",
-        "fi": "täkki",
-        "nl": "het dekbed"
-    }
+        {
+            "concept": "duvet",
+            "label": "täkki",
+            "language": "fi"
+        },
+        {
+            "concept": "duvet",
+            "label": "het dekbed",
+            "language": "nl"
+        }
+    ]
 }

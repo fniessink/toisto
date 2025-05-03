@@ -1,7 +1,22 @@
 {
-    "possessive suffix": {
-        "en": "possessive suffix",
-        "fi": "possessiivisuffiksi",
-        "nl": "het bezittelijke achtervoegsel|bezittelijk achtervoegsel"
-    }
+    "concepts": {
+        "possessive suffix": {}
+    },
+    "labels": [
+        {
+            "concept": "possessive suffix",
+            "label": "possessive suffix",
+            "language": "en"
+        },
+        {
+            "concept": "possessive suffix",
+            "label": "possessiivisuffiksi",
+            "language": "fi"
+        },
+        {
+            "concept": "possessive suffix",
+            "label": "het bezittelijke achtervoegsel|bezittelijk achtervoegsel",
+            "language": "nl"
+        }
+    ]
 }

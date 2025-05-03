@@ -1,8 +1,24 @@
 {
-    "hunting": {
-        "hypernym": "outdoor activity",
-        "en": "hunting",
-        "fi": "metsästys",
-        "nl": "de jacht"
-    }
+    "concepts": {
+        "hunting": {
+            "hypernym": "outdoor activity"
+        }
+    },
+    "labels": [
+        {
+            "concept": "hunting",
+            "label": "hunting",
+            "language": "en"
+        },
+        {
+            "concept": "hunting",
+            "label": "metsästys",
+            "language": "fi"
+        },
+        {
+            "concept": "hunting",
+            "label": "de jacht",
+            "language": "nl"
+        }
+    ]
 }

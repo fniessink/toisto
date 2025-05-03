@@ -1,19 +1,39 @@
 {
-    "among other things": {
-        "en": {
-            "full form": [
-                "among other things",
-                "inter alia"
-            ],
-            "abbreviation": "i.a."
+    "concepts": {
+        "among other things": {}
+    },
+    "labels": [
+        {
+            "concept": "among other things",
+            "label": {
+                "full form": "among other things",
+                "abbreviation": "i.a."
+            },
+            "language": "en"
         },
-        "fi": {
-            "full form": "muun muassa",
-            "abbreviation": "mm."
+        {
+            "concept": "among other things",
+            "label": {
+                "full form": "inter alia",
+                "abbreviation": "i.a."
+            },
+            "language": "en"
         },
-        "nl": {
-            "full form": "onder andere",
-            "abbreviation": "o.a."
+        {
+            "concept": "among other things",
+            "label": {
+                "full form": "muun muassa",
+                "abbreviation": "mm."
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "among other things",
+            "label": {
+                "full form": "onder andere",
+                "abbreviation": "o.a."
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

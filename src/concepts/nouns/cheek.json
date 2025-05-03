@@ -1,8 +1,24 @@
 {
-    "cheek": {
-        "holonym": "face",
-        "en": "cheek",
-        "fi": "poski",
-        "nl": "de wang"
-    }
+    "concepts": {
+        "cheek": {
+            "holonym": "face"
+        }
+    },
+    "labels": [
+        {
+            "concept": "cheek",
+            "label": "cheek",
+            "language": "en"
+        },
+        {
+            "concept": "cheek",
+            "label": "poski",
+            "language": "fi"
+        },
+        {
+            "concept": "cheek",
+            "label": "de wang",
+            "language": "nl"
+        }
+    ]
 }

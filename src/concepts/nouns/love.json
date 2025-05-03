@@ -1,21 +1,59 @@
 {
-    "love": {
-        "example": [
-            "a toast to love",
-            "all is fair in love and war"
-        ],
-        "en": "love",
-        "fi": "rakkaus",
-        "nl": "de liefde"
+    "concepts": {
+        "love": {
+            "example": [
+                "a toast to love",
+                "all is fair in love and war"
+            ]
+        },
+        "a toast to love": {},
+        "all is fair in love and war": {}
     },
-    "a toast to love": {
-        "en": "A toast to love!",
-        "fi": "Malja rakkaudelle!",
-        "nl": "Een toast op de liefde!"
-    },
-    "all is fair in love and war": {
-        "en": "All is fair in love and war.",
-        "fi": "Sodassa ja rakkaudessa kaikki on sallittua.",
-        "nl": "Alles is geoorloofd in liefde en oorlog."
-    }
+    "labels": [
+        {
+            "concept": "love",
+            "label": "love",
+            "language": "en"
+        },
+        {
+            "concept": "love",
+            "label": "rakkaus",
+            "language": "fi"
+        },
+        {
+            "concept": "love",
+            "label": "de liefde",
+            "language": "nl"
+        },
+        {
+            "concept": "a toast to love",
+            "label": "A toast to love!",
+            "language": "en"
+        },
+        {
+            "concept": "a toast to love",
+            "label": "Malja rakkaudelle!",
+            "language": "fi"
+        },
+        {
+            "concept": "a toast to love",
+            "label": "Een toast op de liefde!",
+            "language": "nl"
+        },
+        {
+            "concept": "all is fair in love and war",
+            "label": "All is fair in love and war.",
+            "language": "en"
+        },
+        {
+            "concept": "all is fair in love and war",
+            "label": "Sodassa ja rakkaudessa kaikki on sallittua.",
+            "language": "fi"
+        },
+        {
+            "concept": "all is fair in love and war",
+            "label": "Alles is geoorloofd in liefde en oorlog.",
+            "language": "nl"
+        }
+    ]
 }

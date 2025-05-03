@@ -1,16 +1,43 @@
 {
-    "excuse me": {
-        "en": "Excuse me?|Excuse me!",
-        "fi": "Anteeksi?|Anteeksi!",
-        "nl": "Pardon?|Pardon!"
+    "concepts": {
+        "excuse me": {},
+        "excuse me, can you help me": {
+            "roots": [
+                "excuse me",
+                "to help"
+            ]
+        }
     },
-    "excuse me, can you help me": {
-        "roots": [
-            "excuse me",
-            "to help"
-        ],
-        "en": "Excuse me, can you help me?",
-        "fi": "Anteeksi, voitko auttaa minua?",
-        "nl": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?"
-    }
+    "labels": [
+        {
+            "concept": "excuse me",
+            "label": "Excuse me?|Excuse me!",
+            "language": "en"
+        },
+        {
+            "concept": "excuse me",
+            "label": "Anteeksi?|Anteeksi!",
+            "language": "fi"
+        },
+        {
+            "concept": "excuse me",
+            "label": "Pardon?|Pardon!",
+            "language": "nl"
+        },
+        {
+            "concept": "excuse me, can you help me",
+            "label": "Excuse me, can you help me?",
+            "language": "en"
+        },
+        {
+            "concept": "excuse me, can you help me",
+            "label": "Anteeksi, voitko auttaa minua?",
+            "language": "fi"
+        },
+        {
+            "concept": "excuse me, can you help me",
+            "label": "Pardon, kan je me helpen?|Pardon, kunt u me helpen?",
+            "language": "nl"
+        }
+    ]
 }

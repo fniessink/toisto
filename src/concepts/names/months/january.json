@@ -1,17 +1,45 @@
 {
-    "january": {
-        "hypernym": "month",
-        "roots": {
-            "fi": "moon"
+    "concepts": {
+        "january": {
+            "hypernym": "month",
+            "roots": {
+                "fi": "moon"
+            }
         },
-        "en": "January;;In English, names of months are capitalized",
-        "fi": "tammikuu;;In Finnish, names of months are not capitalized",
-        "nl": "januari;;In Dutch, names of months are not capitalized"
+        "in january": {
+            "roots": "january"
+        }
     },
-    "in january": {
-        "roots": "january",
-        "en": "In January.",
-        "fi": "Tammikuussa.",
-        "nl": "In januari."
-    }
+    "labels": [
+        {
+            "concept": "january",
+            "label": "January;;In English, names of months are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "january",
+            "label": "tammikuu;;In Finnish, names of months are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "january",
+            "label": "januari;;In Dutch, names of months are not capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "in january",
+            "label": "In January.",
+            "language": "en"
+        },
+        {
+            "concept": "in january",
+            "label": "Tammikuussa.",
+            "language": "fi"
+        },
+        {
+            "concept": "in january",
+            "label": "In januari.",
+            "language": "nl"
+        }
+    ]
 }

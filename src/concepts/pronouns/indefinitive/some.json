@@ -1,29 +1,72 @@
 {
-    "some": {
-        "en": [
-            "some",
-            "a few"
-        ],
-        "fi": "muutama",
-        "nl": "een paar"
-    },
-    "somebody": {
-        "roots": {
-            "en": "some"
+    "concepts": {
+        "some": {},
+        "somebody": {
+            "roots": {
+                "en": "some"
+            }
         },
-        "en": [
-            "somebody",
-            "someone"
-        ],
-        "fi": "joku",
-        "nl": "iemand"
+        "something": {
+            "roots": {
+                "en": "some"
+            }
+        }
     },
-    "something": {
-        "roots": {
-            "en": "some"
+    "labels": [
+        {
+            "concept": "some",
+            "label": "some",
+            "language": "en"
         },
-        "en": "something",
-        "fi": "jokin",
-        "nl": "iets"
-    }
+        {
+            "concept": "some",
+            "label": "a few",
+            "language": "en"
+        },
+        {
+            "concept": "some",
+            "label": "muutama",
+            "language": "fi"
+        },
+        {
+            "concept": "some",
+            "label": "een paar",
+            "language": "nl"
+        },
+        {
+            "concept": "somebody",
+            "label": "somebody",
+            "language": "en"
+        },
+        {
+            "concept": "somebody",
+            "label": "someone",
+            "language": "en"
+        },
+        {
+            "concept": "somebody",
+            "label": "joku",
+            "language": "fi"
+        },
+        {
+            "concept": "somebody",
+            "label": "iemand",
+            "language": "nl"
+        },
+        {
+            "concept": "something",
+            "label": "something",
+            "language": "en"
+        },
+        {
+            "concept": "something",
+            "label": "jokin",
+            "language": "fi"
+        },
+        {
+            "concept": "something",
+            "label": "iets",
+            "language": "nl"
+        }
+    ]
 }

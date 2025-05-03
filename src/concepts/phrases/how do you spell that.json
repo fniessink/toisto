@@ -1,18 +1,34 @@
 {
-    "how do you spell that": {
-        "roots": {
-            "en": "how",
-            "fi": [
-                "how",
-                "to write"
-            ],
-            "nl": [
-                "how",
-                "to write"
-            ]
+    "concepts": {
+        "how do you spell that": {
+            "roots": {
+                "en": "how",
+                "fi": [
+                    "how",
+                    "to write"
+                ],
+                "nl": [
+                    "how",
+                    "to write"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "how do you spell that",
+            "label": "How do you spell that?",
+            "language": "en"
         },
-        "en": "How do you spell that?",
-        "fi": "Miten se kirjoitetaan?",
-        "nl": "Hoe schrijf je dat?"
-    }
+        {
+            "concept": "how do you spell that",
+            "label": "Miten se kirjoitetaan?",
+            "language": "fi"
+        },
+        {
+            "concept": "how do you spell that",
+            "label": "Hoe schrijf je dat?",
+            "language": "nl"
+        }
+    ]
 }

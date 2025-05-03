@@ -1,13 +1,40 @@
 {
-    "damage": {
-        "en": "damage",
-        "fi": "vahinko",
-        "nl": "de schade"
+    "concepts": {
+        "damage": {},
+        "damage to personal property": {
+            "roots": "damage"
+        }
     },
-    "damage to personal property": {
-        "roots": "damage",
-        "en": "damage to personal property",
-        "fi": "irtaimistovahinko",
-        "nl": "de schade aan persoonlijke eigendommen"
-    }
+    "labels": [
+        {
+            "concept": "damage",
+            "label": "damage",
+            "language": "en"
+        },
+        {
+            "concept": "damage",
+            "label": "vahinko",
+            "language": "fi"
+        },
+        {
+            "concept": "damage",
+            "label": "de schade",
+            "language": "nl"
+        },
+        {
+            "concept": "damage to personal property",
+            "label": "damage to personal property",
+            "language": "en"
+        },
+        {
+            "concept": "damage to personal property",
+            "label": "irtaimistovahinko",
+            "language": "fi"
+        },
+        {
+            "concept": "damage to personal property",
+            "label": "de schade aan persoonlijke eigendommen",
+            "language": "nl"
+        }
+    ]
 }

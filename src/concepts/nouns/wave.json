@@ -1,16 +1,31 @@
 {
-    "wave": {
-        "en": {
-            "singular": "wave",
-            "plural": "waves"
+    "concepts": {
+        "wave": {}
+    },
+    "labels": [
+        {
+            "concept": "wave",
+            "label": {
+                "singular": "wave",
+                "plural": "waves"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "aalto",
-            "plural": "aallot"
+        {
+            "concept": "wave",
+            "label": {
+                "singular": "aalto",
+                "plural": "aallot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de golf",
-            "plural": "de golven"
+        {
+            "concept": "wave",
+            "label": {
+                "singular": "de golf",
+                "plural": "de golven"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

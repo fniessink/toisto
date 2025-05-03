@@ -1,7 +1,22 @@
 {
-    "birth": {
-        "en": "birth",
-        "fi": "synty",
-        "nl": "de geboorte"
-    }
+    "concepts": {
+        "birth": {}
+    },
+    "labels": [
+        {
+            "concept": "birth",
+            "label": "birth",
+            "language": "en"
+        },
+        {
+            "concept": "birth",
+            "label": "synty",
+            "language": "fi"
+        },
+        {
+            "concept": "birth",
+            "label": "de geboorte",
+            "language": "nl"
+        }
+    ]
 }

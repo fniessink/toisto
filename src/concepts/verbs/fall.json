@@ -1,15 +1,33 @@
 {
-    "to fall in love": {
-        "roots": {
-            "en": "in love",
-            "fi": "to love",
-            "nl": "in love"
+    "concepts": {
+        "to fall in love": {
+            "roots": {
+                "en": "in love",
+                "fi": "to love",
+                "nl": "in love"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "to fall in love",
+            "label": "to fall in love",
+            "language": "en"
         },
-        "en": "to fall in love",
-        "fi": [
-            "ihastua",
-            "rakastua"
-        ],
-        "nl": "verliefd worden"
-    }
+        {
+            "concept": "to fall in love",
+            "label": "ihastua",
+            "language": "fi"
+        },
+        {
+            "concept": "to fall in love",
+            "label": "rakastua",
+            "language": "fi"
+        },
+        {
+            "concept": "to fall in love",
+            "label": "verliefd worden",
+            "language": "nl"
+        }
+    ]
 }

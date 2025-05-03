@@ -1,19 +1,34 @@
 {
-    "dumb": {
-        "en": {
-            "positive degree": "dumb",
-            "comparative degree": "dumber",
-            "superlative degree": "dumbest"
+    "concepts": {
+        "dumb": {}
+    },
+    "labels": [
+        {
+            "concept": "dumb",
+            "label": {
+                "positive degree": "dumb",
+                "comparative degree": "dumber",
+                "superlative degree": "dumbest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "tyhmä",
-            "comparative degree": "tyhmempi",
-            "superlative degree": "tyhmin"
+        {
+            "concept": "dumb",
+            "label": {
+                "positive degree": "tyhmä",
+                "comparative degree": "tyhmempi",
+                "superlative degree": "tyhmin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "dom",
-            "comparative degree": "dommer",
-            "superlative degree": "domst"
+        {
+            "concept": "dumb",
+            "label": {
+                "positive degree": "dom",
+                "comparative degree": "dommer",
+                "superlative degree": "domst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

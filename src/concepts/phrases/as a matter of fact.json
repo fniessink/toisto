@@ -1,10 +1,22 @@
 {
-    "as a matter of fact": {
-        "en": "as a matter of fact",
-        "fi": "itse asiassa",
-        "nl": [
-            "in feite",
-            "eigenlijk"
-        ]
-    }
+    "concepts": {
+        "as a matter of fact": {}
+    },
+    "labels": [
+        {
+            "concept": "as a matter of fact",
+            "label": "as a matter of fact",
+            "language": "en"
+        },
+        {
+            "concept": "as a matter of fact",
+            "label": "itse asiassa",
+            "language": "fi"
+        },
+        {
+            "concept": "as a matter of fact",
+            "label": "in feite",
+            "language": "nl"
+        }
+    ]
 }

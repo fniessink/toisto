@@ -1,28 +1,56 @@
 {
-    "coffee": {
-        "example": "the coffee is hot",
-        "hypernym": "drink",
-        "en": {
-            "singular": "coffee",
-            "plural": "coffees"
+    "concepts": {
+        "coffee": {
+            "example": "the coffee is hot",
+            "hypernym": "drink"
         },
-        "fi": {
-            "singular": "kahvi",
-            "plural": "kahvit"
-        },
-        "nl": {
-            "singular": "de koffie",
-            "plural": "de koffies"
+        "the coffee is hot": {
+            "roots": [
+                "coffee",
+                "to be",
+                "hot"
+            ]
         }
     },
-    "the coffee is hot": {
-        "roots": [
-            "coffee",
-            "to be",
-            "hot"
-        ],
-        "en": "The coffee is hot.",
-        "fi": "Kahvi on kuumaa.",
-        "nl": "De koffie is heet."
-    }
+    "labels": [
+        {
+            "concept": "coffee",
+            "label": {
+                "singular": "coffee",
+                "plural": "coffees"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "coffee",
+            "label": {
+                "singular": "kahvi",
+                "plural": "kahvit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "coffee",
+            "label": {
+                "singular": "de koffie",
+                "plural": "de koffies"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "the coffee is hot",
+            "label": "The coffee is hot.",
+            "language": "en"
+        },
+        {
+            "concept": "the coffee is hot",
+            "label": "Kahvi on kuumaa.",
+            "language": "fi"
+        },
+        {
+            "concept": "the coffee is hot",
+            "label": "De koffie is heet.",
+            "language": "nl"
+        }
+    ]
 }

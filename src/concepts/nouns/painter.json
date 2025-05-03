@@ -1,18 +1,34 @@
 {
-    "painter": {
-        "hypernym": "profession",
-        "roots": "to paint",
-        "en": {
-            "singular": "painter",
-            "plural": "painters"
-        },
-        "fi": {
-            "singular": "maalari",
-            "plural": "maalarit"
-        },
-        "nl": {
-            "singular": "de schilder",
-            "plural": "de schilders"
+    "concepts": {
+        "painter": {
+            "hypernym": "profession",
+            "roots": "to paint"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "painter",
+            "label": {
+                "singular": "painter",
+                "plural": "painters"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "painter",
+            "label": {
+                "singular": "maalari",
+                "plural": "maalarit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "painter",
+            "label": {
+                "singular": "de schilder",
+                "plural": "de schilders"
+            },
+            "language": "nl"
+        }
+    ]
 }

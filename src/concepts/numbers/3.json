@@ -1,17 +1,33 @@
 {
-    "3": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "three",
-            "ordinal": "third"
-        },
-        "fi": {
-            "cardinal": "kolme",
-            "ordinal": "kolmas"
-        },
-        "nl": {
-            "cardinal": "drie",
-            "ordinal": "derde"
+    "concepts": {
+        "3": {
+            "hypernym": "number"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "3",
+            "label": {
+                "cardinal": "three",
+                "ordinal": "third"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "3",
+            "label": {
+                "cardinal": "kolme",
+                "ordinal": "kolmas"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "3",
+            "label": {
+                "cardinal": "drie",
+                "ordinal": "derde"
+            },
+            "language": "nl"
+        }
+    ]
 }

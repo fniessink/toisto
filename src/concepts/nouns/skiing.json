@@ -1,18 +1,46 @@
 {
-    "skiing": {
-        "hypernym": "sport",
-        "en": "skiing",
-        "fi": "hiihto",
-        "nl": "het skiën"
-    },
-    "downhill skiing": {
-        "hypernym": "skiing",
-        "roots": {
-            "en": "skiing",
-            "nl": "skiing"
+    "concepts": {
+        "skiing": {
+            "hypernym": "sport"
         },
-        "en": "downhill skiing",
-        "fi": "laskettelu",
-        "nl": "het alpine skiën"
-    }
+        "downhill skiing": {
+            "hypernym": "skiing",
+            "roots": {
+                "en": "skiing",
+                "nl": "skiing"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "skiing",
+            "label": "skiing",
+            "language": "en"
+        },
+        {
+            "concept": "skiing",
+            "label": "hiihto",
+            "language": "fi"
+        },
+        {
+            "concept": "skiing",
+            "label": "het skiën",
+            "language": "nl"
+        },
+        {
+            "concept": "downhill skiing",
+            "label": "downhill skiing",
+            "language": "en"
+        },
+        {
+            "concept": "downhill skiing",
+            "label": "laskettelu",
+            "language": "fi"
+        },
+        {
+            "concept": "downhill skiing",
+            "label": "het alpine skiën",
+            "language": "nl"
+        }
+    ]
 }

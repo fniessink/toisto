@@ -1,13 +1,32 @@
 {
-    "everyman's right": {
-        "en": [
-            "everyman's right",
-            "freedom to roam"
-        ],
-        "fi": [
-            "jokaisenoikeus",
-            "jokamiehenoikeus"
-        ],
-        "nl": "het allemansrecht"
-    }
+    "concepts": {
+        "everyman's right": {}
+    },
+    "labels": [
+        {
+            "concept": "everyman's right",
+            "label": "everyman's right",
+            "language": "en"
+        },
+        {
+            "concept": "everyman's right",
+            "label": "freedom to roam",
+            "language": "en"
+        },
+        {
+            "concept": "everyman's right",
+            "label": "jokaisenoikeus",
+            "language": "fi"
+        },
+        {
+            "concept": "everyman's right",
+            "label": "jokamiehenoikeus",
+            "language": "fi"
+        },
+        {
+            "concept": "everyman's right",
+            "label": "het allemansrecht",
+            "language": "nl"
+        }
+    ]
 }

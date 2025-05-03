@@ -1,8 +1,24 @@
 {
-    "butterfly": {
-        "hypernym": "insect",
-        "en": "butterfly",
-        "fi": "perhonen",
-        "nl": "de vlinder"
-    }
+    "concepts": {
+        "butterfly": {
+            "hypernym": "insect"
+        }
+    },
+    "labels": [
+        {
+            "concept": "butterfly",
+            "label": "butterfly",
+            "language": "en"
+        },
+        {
+            "concept": "butterfly",
+            "label": "perhonen",
+            "language": "fi"
+        },
+        {
+            "concept": "butterfly",
+            "label": "de vlinder",
+            "language": "nl"
+        }
+    ]
 }

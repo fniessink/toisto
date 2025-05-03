@@ -1,7 +1,22 @@
 {
-    "alphabet": {
-        "en": "alphabet",
-        "fi": "aakkoset",
-        "nl": "het alfabet"
-    }
+    "concepts": {
+        "alphabet": {}
+    },
+    "labels": [
+        {
+            "concept": "alphabet",
+            "label": "alphabet",
+            "language": "en"
+        },
+        {
+            "concept": "alphabet",
+            "label": "aakkoset",
+            "language": "fi"
+        },
+        {
+            "concept": "alphabet",
+            "label": "het alfabet",
+            "language": "nl"
+        }
+    ]
 }

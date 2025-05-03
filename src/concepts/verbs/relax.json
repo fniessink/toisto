@@ -1,7 +1,22 @@
 {
-    "to relax": {
-        "en": "to relax",
-        "fi": "rentoutua",
-        "nl": "zich ontspannen"
-    }
+    "concepts": {
+        "to relax": {}
+    },
+    "labels": [
+        {
+            "concept": "to relax",
+            "label": "to relax",
+            "language": "en"
+        },
+        {
+            "concept": "to relax",
+            "label": "rentoutua",
+            "language": "fi"
+        },
+        {
+            "concept": "to relax",
+            "label": "zich ontspannen",
+            "language": "nl"
+        }
+    ]
 }

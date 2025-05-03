@@ -1,21 +1,60 @@
 {
-    "engagement": {
-        "en": "engagement",
-        "fi": "kihlaus",
-        "nl": "de verloving"
+    "concepts": {
+        "engagement": {},
+        "engagement ring": {
+            "involves": "engagement",
+            "roots": "engagement"
+        },
+        "engagement party": {
+            "involves": "engagement",
+            "roots": "engagement"
+        }
     },
-    "engagement ring": {
-        "involves": "engagement",
-        "roots": "engagement",
-        "en": "engagement ring",
-        "fi": "kihlasormus",
-        "nl": "de verlovingsring"
-    },
-    "engagement party": {
-        "involves": "engagement",
-        "roots": "engagement",
-        "en": "engagement party",
-        "fi": "kihlajaiset",
-        "nl": "het verlovingsfeest"
-    }
+    "labels": [
+        {
+            "concept": "engagement",
+            "label": "engagement",
+            "language": "en"
+        },
+        {
+            "concept": "engagement",
+            "label": "kihlaus",
+            "language": "fi"
+        },
+        {
+            "concept": "engagement",
+            "label": "de verloving",
+            "language": "nl"
+        },
+        {
+            "concept": "engagement ring",
+            "label": "engagement ring",
+            "language": "en"
+        },
+        {
+            "concept": "engagement ring",
+            "label": "kihlasormus",
+            "language": "fi"
+        },
+        {
+            "concept": "engagement ring",
+            "label": "de verlovingsring",
+            "language": "nl"
+        },
+        {
+            "concept": "engagement party",
+            "label": "engagement party",
+            "language": "en"
+        },
+        {
+            "concept": "engagement party",
+            "label": "kihlajaiset",
+            "language": "fi"
+        },
+        {
+            "concept": "engagement party",
+            "label": "het verlovingsfeest",
+            "language": "nl"
+        }
+    ]
 }

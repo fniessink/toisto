@@ -1,11 +1,29 @@
 {
-    "gymnastics": {
-        "hypernym": "sport",
-        "en": "gymnastics",
-        "fi": "jumppa",
-        "nl": [
-            "de gymnastiek",
-            "aerobics"
-        ]
-    }
+    "concepts": {
+        "gymnastics": {
+            "hypernym": "sport"
+        }
+    },
+    "labels": [
+        {
+            "concept": "gymnastics",
+            "label": "gymnastics",
+            "language": "en"
+        },
+        {
+            "concept": "gymnastics",
+            "label": "jumppa",
+            "language": "fi"
+        },
+        {
+            "concept": "gymnastics",
+            "label": "de gymnastiek",
+            "language": "nl"
+        },
+        {
+            "concept": "gymnastics",
+            "label": "aerobics",
+            "language": "nl"
+        }
+    ]
 }

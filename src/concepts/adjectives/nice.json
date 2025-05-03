@@ -1,28 +1,43 @@
 {
-    "nice": {
-        "en": {
-            "positive degree": "nice",
-            "comparative degree": "nicer",
-            "superlative degree": "nicest"
+    "concepts": {
+        "nice": {}
+    },
+    "labels": [
+        {
+            "concept": "nice",
+            "label": {
+                "positive degree": "nice",
+                "comparative degree": "nicer",
+                "superlative degree": "nicest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": [
-                "kiva",
-                "mukava"
-            ],
-            "comparative degree": [
-                "kivampi|kivempt",
-                "mukavampi"
-            ],
-            "superlative degree": [
-                "kivoin",
-                "mukavin"
-            ]
+        {
+            "concept": "nice",
+            "label": {
+                "positive degree": "kiva",
+                "comparative degree": "kivampi|kivempt",
+                "superlative degree": "kivoin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "leuk",
-            "comparative degree": "leuker",
-            "superlative degree": "leukst"
+        {
+            "concept": "nice",
+            "label": {
+                "positive degree": "mukava",
+                "comparative degree": "mukavampi",
+                "superlative degree": "mukavin"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "nice",
+            "label": {
+                "positive degree": "leuk",
+                "comparative degree": "leuker",
+                "superlative degree": "leukst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

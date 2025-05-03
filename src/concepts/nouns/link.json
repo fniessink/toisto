@@ -1,7 +1,22 @@
 {
-    "link": {
-        "en": "link",
-        "fi": "linkki",
-        "nl": "de link"
-    }
+    "concepts": {
+        "link": {}
+    },
+    "labels": [
+        {
+            "concept": "link",
+            "label": "link",
+            "language": "en"
+        },
+        {
+            "concept": "link",
+            "label": "linkki",
+            "language": "fi"
+        },
+        {
+            "concept": "link",
+            "label": "de link",
+            "language": "nl"
+        }
+    ]
 }

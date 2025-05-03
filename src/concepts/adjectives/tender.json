@@ -1,7 +1,22 @@
 {
-    "tender": {
-        "en": "tender",
-        "fi": "hellä",
-        "nl": "teder"
-    }
+    "concepts": {
+        "tender": {}
+    },
+    "labels": [
+        {
+            "concept": "tender",
+            "label": "tender",
+            "language": "en"
+        },
+        {
+            "concept": "tender",
+            "label": "hellä",
+            "language": "fi"
+        },
+        {
+            "concept": "tender",
+            "label": "teder",
+            "language": "nl"
+        }
+    ]
 }

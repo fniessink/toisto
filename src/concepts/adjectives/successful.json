@@ -1,7 +1,22 @@
 {
-    "successful": {
-        "en": "successful",
-        "fi": "onnistunut",
-        "nl": "succesvol"
-    }
+    "concepts": {
+        "successful": {}
+    },
+    "labels": [
+        {
+            "concept": "successful",
+            "label": "successful",
+            "language": "en"
+        },
+        {
+            "concept": "successful",
+            "label": "onnistunut",
+            "language": "fi"
+        },
+        {
+            "concept": "successful",
+            "label": "succesvol",
+            "language": "nl"
+        }
+    ]
 }

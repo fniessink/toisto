@@ -1,466 +1,833 @@
 {
-    "time": {
-        "en": {
-            "singular": "time",
-            "plural": "times"
+    "concepts": {
+        "time": {},
+        "all the time": {
+            "roots": {
+                "en": "time",
+                "fi": [
+                    "whole",
+                    "time"
+                ],
+                "nl": [
+                    "whole",
+                    "time"
+                ]
+            }
         },
-        "fi": {
-            "singular": "aika",
-            "plural": "ajat"
+        "at the same time": {
+            "roots": "time"
         },
-        "nl": {
-            "singular": "de tijd",
-            "plural": "de tijden"
+        "free time": {
+            "hypernym": "time",
+            "roots": "time"
+        },
+        "now": {},
+        "then": {},
+        "noon": {
+            "hypernym": "time of day",
+            "roots": {
+                "fi": "day",
+                "nl": [
+                    "12",
+                    "hour",
+                    "afternoon"
+                ]
+            }
+        },
+        "afternoon": {
+            "hypernym": "time of day",
+            "roots": {
+                "en": "noon",
+                "fi": [
+                    "evening",
+                    "day"
+                ],
+                "nl": "day"
+            }
+        },
+        "at day": {
+            "hypernym": "time of day",
+            "roots": "day"
+        },
+        "decade": {
+            "holonym": "century",
+            "roots": {
+                "fi": [
+                    "10",
+                    "year"
+                ]
+            }
+        },
+        "century": {
+            "roots": {
+                "fi": [
+                    "100",
+                    "year"
+                ]
+            }
+        },
+        "hour": {
+            "holonym": "day"
+        },
+        "minute": {
+            "holonym": "hour"
+        },
+        "clock": {},
+        "alarm clock": {
+            "hypernym": "clock",
+            "roots": {
+                "en": "clock",
+                "fi": "clock"
+            }
+        },
+        "what time is it": {
+            "roots": {
+                "en": [
+                    "what",
+                    "time",
+                    "to be"
+                ],
+                "fi": [
+                    "what",
+                    "how",
+                    "time",
+                    "clock",
+                    "to be"
+                ],
+                "nl": [
+                    "how",
+                    "to be"
+                ]
+            }
+        },
+        "it is 10:00": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "10",
+                    "clock"
+                ],
+                "fi": [
+                    "to be",
+                    "10",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "hour"
+                ]
+            }
+        },
+        "it is 2:30": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "2",
+                    "10"
+                ],
+                "fi": [
+                    "to be",
+                    "3",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "3"
+                ]
+            }
+        },
+        "it is 3:15": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "after",
+                    "3"
+                ],
+                "fi": [
+                    "to be",
+                    "after",
+                    "3",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "after",
+                    "3"
+                ]
+            }
+        },
+        "it is 3:45": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "4"
+                ],
+                "fi": [
+                    "to be",
+                    "4",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "4"
+                ]
+            }
+        },
+        "it is 6:20": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "after",
+                    "6",
+                    "20"
+                ],
+                "fi": [
+                    "to be",
+                    "after",
+                    "6",
+                    "20",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "7"
+                ]
+            }
+        },
+        "it is 6:40": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "7",
+                    "20"
+                ],
+                "fi": [
+                    "to be",
+                    "6",
+                    "7",
+                    "20",
+                    "40",
+                    "clock"
+                ],
+                "nl": [
+                    "to be",
+                    "10",
+                    "7"
+                ]
+            }
+        },
+        "what time": {
+            "roots": {
+                "en": [
+                    "what",
+                    "time"
+                ],
+                "fi": "time",
+                "nl": "how"
+            }
+        },
+        "how long does it take": {
+            "roots": "how"
+        },
+        "it takes one hour": {
+            "roots": {
+                "en": [
+                    "1",
+                    "hour"
+                ],
+                "fi": "hour",
+                "nl": [
+                    "1",
+                    "hour"
+                ]
+            }
+        },
+        "time of day": {
+            "roots": {
+                "en": "time",
+                "fi": [
+                    "24 hours",
+                    "time"
+                ],
+                "nl": [
+                    "time",
+                    "day"
+                ]
+            }
+        },
+        "from 3-5": {
+            "roots": {
+                "en": [
+                    "3",
+                    "5",
+                    "clock"
+                ],
+                "fi": [
+                    "3",
+                    "5",
+                    "clock"
+                ],
+                "nl": [
+                    "3",
+                    "5",
+                    "hour"
+                ]
+            }
+        },
+        "from June to August": {},
+        "from Monday to Friday": {}
+    },
+    "labels": [
+        {
+            "concept": "time",
+            "label": {
+                "singular": "time",
+                "plural": "times"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "time",
+            "label": {
+                "singular": "aika",
+                "plural": "ajat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "time",
+            "label": {
+                "singular": "de tijd",
+                "plural": "de tijden"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "all the time",
+            "label": "all the time",
+            "language": "en"
+        },
+        {
+            "concept": "all the time",
+            "label": "koko ajan",
+            "language": "fi"
+        },
+        {
+            "concept": "all the time",
+            "label": "de hele tijd",
+            "language": "nl"
+        },
+        {
+            "concept": [
+                "at the same time",
+                "simultaneously"
+            ],
+            "label": "at the same time",
+            "language": "en"
+        },
+        {
+            "concept": "at the same time",
+            "label": "samaan aikaan",
+            "language": "fi"
+        },
+        {
+            "concept": "at the same time",
+            "label": "op dezelfde tijd",
+            "language": "nl"
+        },
+        {
+            "concept": "free time",
+            "label": "free time",
+            "language": "en"
+        },
+        {
+            "concept": "free time",
+            "label": "spare time",
+            "language": "en"
+        },
+        {
+            "concept": "free time",
+            "label": "vapaa-aika",
+            "language": "fi"
+        },
+        {
+            "concept": "free time",
+            "label": "de vrije tijd",
+            "language": "nl"
+        },
+        {
+            "concept": "now",
+            "label": "now",
+            "language": "en"
+        },
+        {
+            "concept": "now",
+            "label": "nyt",
+            "language": "fi"
+        },
+        {
+            "concept": "now",
+            "label": "nu",
+            "language": "nl"
+        },
+        {
+            "concept": "then",
+            "label": "then",
+            "language": "en"
+        },
+        {
+            "concept": "then",
+            "label": "sitten",
+            "language": "fi"
+        },
+        {
+            "concept": "then",
+            "label": "sit*",
+            "language": "fi"
+        },
+        {
+            "concept": "then",
+            "label": "dan",
+            "language": "nl"
+        },
+        {
+            "concept": "noon",
+            "label": "noon",
+            "language": "en"
+        },
+        {
+            "concept": "noon",
+            "label": {
+                "singular": "keskipäivä",
+                "plural": "keskipäivät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "noon",
+            "label": "twaalf uur 's middags",
+            "language": "nl"
+        },
+        {
+            "concept": "afternoon",
+            "label": {
+                "singular": "afternoon",
+                "plural": "afternoons"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "afternoon",
+            "label": {
+                "singular": "iltapäivä",
+                "plural": "iltapäivät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "afternoon",
+            "label": {
+                "singular": "de middag",
+                "plural": "de middagen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "at day",
+            "label": "at day",
+            "language": "en"
+        },
+        {
+            "concept": "at day",
+            "label": "in the daytime",
+            "language": "en"
+        },
+        {
+            "concept": "at day",
+            "label": "päivällä",
+            "language": "fi"
+        },
+        {
+            "concept": "at day",
+            "label": "overdag",
+            "language": "nl"
+        },
+        {
+            "concept": "decade",
+            "label": {
+                "singular": "decade",
+                "plural": "decades"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "decade",
+            "label": {
+                "singular": "vuosikymmen",
+                "plural": "vuosikymmenet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "decade",
+            "label": {
+                "singular": "het decennium",
+                "plural": "de decennia"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "century",
+            "label": {
+                "singular": "century",
+                "plural": "centuries"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "century",
+            "label": {
+                "singular": "vuosisata",
+                "plural": "vuosisadat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "century",
+            "label": {
+                "singular": "de eeuw",
+                "plural": "de eeuwen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "hour",
+            "label": {
+                "singular": "hour",
+                "plural": "hours"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "hour",
+            "label": {
+                "singular": "tunti",
+                "plural": "tunnit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "hour",
+            "label": {
+                "singular": "het uur",
+                "plural": "de uren"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "minute",
+            "label": {
+                "singular": "minute",
+                "plural": "minutes"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "minute",
+            "label": {
+                "singular": "minuutti",
+                "plural": "minuutit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "minute",
+            "label": {
+                "singular": "de minuut",
+                "plural": "de minuten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "clock",
+            "label": {
+                "singular": "clock",
+                "plural": "clocks"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "clock",
+            "label": {
+                "singular": "kello",
+                "plural": "kellot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "clock",
+            "label": {
+                "singular": "de klok",
+                "plural": "de klokken"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "alarm clock",
+            "label": "alarm clock",
+            "language": "en"
+        },
+        {
+            "concept": "alarm clock",
+            "label": "herätyskello",
+            "language": "fi"
+        },
+        {
+            "concept": "alarm clock",
+            "label": "de wekker",
+            "language": "nl"
+        },
+        {
+            "concept": "what time is it",
+            "label": "What time is it?",
+            "language": "en"
+        },
+        {
+            "concept": "what time is it",
+            "label": "Paljonko kello on?",
+            "language": "fi"
+        },
+        {
+            "concept": "what time is it",
+            "label": "Mitä kello on?",
+            "language": "fi"
+        },
+        {
+            "concept": "what time is it",
+            "label": "Hoe laat is het?",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 10:00",
+            "label": "It is ten o'clock.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 10:00",
+            "label": "Kello on kymmenen.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 10:00",
+            "label": "Het is tien uur.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 2:30",
+            "label": "It is half past two.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 2:30",
+            "label": "Kello on puoli kolme.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 2:30",
+            "label": "Het is half drie.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 3:15",
+            "label": "It is a quarter past three.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 3:15",
+            "label": "It is a quarter after three.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 3:15",
+            "label": "Kello on vartin yli kolme.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 3:15",
+            "label": "Het is kwart over drie.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 3:45",
+            "label": "It is a quarter to four.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 3:45",
+            "label": "Kello on varttia vaille neljä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 3:45",
+            "label": "Het is kwart voor vier.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 6:20",
+            "label": "It is twenty past six.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 6:20",
+            "label": "It is twenty after six.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 6:20",
+            "label": "Kello on kuusi kaksikymmentä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 6:20",
+            "label": "Kello on kaksikymmentä yli kuusi.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 6:20",
+            "label": "Het is tien voor half zeven.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is 6:40",
+            "label": "It is twenty to seven.",
+            "language": "en"
+        },
+        {
+            "concept": "it is 6:40",
+            "label": "Kello on kuusi neljäkymmentä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 6:40",
+            "label": "Kello on kahtakymmentä vaille seitsemän.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is 6:40",
+            "label": "Het is tien over half zeven.",
+            "language": "nl"
+        },
+        {
+            "concept": "what time",
+            "label": "What time?",
+            "language": "en"
+        },
+        {
+            "concept": "what time",
+            "label": "Mihin aikaan?",
+            "language": "fi"
+        },
+        {
+            "concept": "what time",
+            "label": "Hoe laat?",
+            "language": "nl"
+        },
+        {
+            "concept": "how long does it take",
+            "label": "How long does it take?",
+            "language": "en"
+        },
+        {
+            "concept": "how long does it take",
+            "label": "Kauanko se kestää?",
+            "language": "fi"
+        },
+        {
+            "concept": "how long does it take",
+            "label": "Kuinka kauan se kestää?",
+            "language": "fi"
+        },
+        {
+            "concept": "how long does it take",
+            "label": "Hoe lang duurt het?",
+            "language": "nl"
+        },
+        {
+            "concept": "it takes one hour",
+            "label": "It takes one hour.",
+            "language": "en"
+        },
+        {
+            "concept": "it takes one hour",
+            "label": "Se kestää tunnin.",
+            "language": "fi"
+        },
+        {
+            "concept": "it takes one hour",
+            "label": "Het duurt één uur.|Het duurt een uur.",
+            "language": "nl"
+        },
+        {
+            "concept": "time of day",
+            "label": "time of day",
+            "language": "en"
+        },
+        {
+            "concept": "time of day",
+            "label": "vuorokaudenaika",
+            "language": "fi"
+        },
+        {
+            "concept": "time of day",
+            "label": "tijdstip van de dag",
+            "language": "nl"
+        },
+        {
+            "concept": "from 3-5",
+            "label": "from three o'clock to five o'clock|from three to five",
+            "language": "en"
+        },
+        {
+            "concept": "from 3-5",
+            "label": "kello kolmesta kello viiteen|kolmesta viiteen",
+            "language": "fi"
+        },
+        {
+            "concept": "from 3-5",
+            "label": "van drie uur tot vijf uur|van drie tot vijf",
+            "language": "nl"
+        },
+        {
+            "concept": "from June to August",
+            "label": "from June to August",
+            "language": "en"
+        },
+        {
+            "concept": "from June to August",
+            "label": "kesäkuusta elokuun",
+            "language": "fi"
+        },
+        {
+            "concept": "from June to August",
+            "label": "van juni tot augustus",
+            "language": "nl"
+        },
+        {
+            "concept": "from Monday to Friday",
+            "label": "from Monday to Friday",
+            "language": "en"
+        },
+        {
+            "concept": "from Monday to Friday",
+            "label": "maanantaista perjantaihin",
+            "language": "fi"
+        },
+        {
+            "concept": "from Monday to Friday",
+            "label": "van maandag tot vrijdag",
+            "language": "nl"
         }
-    },
-    "all the time": {
-        "roots": {
-            "en": "time",
-            "fi": [
-                "whole",
-                "time"
-            ],
-            "nl": [
-                "whole",
-                "time"
-            ]
-        },
-        "en": "all the time",
-        "fi": "koko ajan",
-        "nl": "de hele tijd"
-    },
-    "at the same time": {
-        "roots": "time",
-        "en": "at the same time",
-        "fi": "samaan aikaan",
-        "nl": "op dezelfde tijd"
-    },
-    "free time": {
-        "hypernym": "time",
-        "roots": "time",
-        "en": [
-            "free time",
-            "spare time"
-        ],
-        "fi": "vapaa-aika",
-        "nl": "de vrije tijd"
-    },
-    "now": {
-        "en": "now",
-        "fi": "nyt",
-        "nl": "nu"
-    },
-    "then": {
-        "en": "then",
-        "fi": [
-            "sitten",
-            "sit*"
-        ],
-        "nl": "dan"
-    },
-    "noon": {
-        "hypernym": "time of day",
-        "roots": {
-            "fi": "day",
-            "nl": [
-                "12",
-                "hour",
-                "afternoon"
-            ]
-        },
-        "en": "noon",
-        "fi": {
-            "singular": "keskipäivä",
-            "plural": "keskipäivät"
-        },
-        "nl": "twaalf uur 's middags"
-    },
-    "afternoon": {
-        "hypernym": "time of day",
-        "roots": {
-            "en": "noon",
-            "fi": [
-                "evening",
-                "day"
-            ],
-            "nl": "day"
-        },
-        "en": {
-            "singular": "afternoon",
-            "plural": "afternoons"
-        },
-        "fi": {
-            "singular": "iltapäivä",
-            "plural": "iltapäivät"
-        },
-        "nl": {
-            "singular": "de middag",
-            "plural": "de middagen"
-        }
-    },
-    "at day": {
-        "hypernym": "time of day",
-        "roots": "day",
-        "en": [
-            "at day",
-            "in the daytime"
-        ],
-        "fi": "päivällä",
-        "nl": "overdag"
-    },
-    "decade": {
-        "holonym": "century",
-        "roots": {
-            "fi": [
-                "10",
-                "year"
-            ]
-        },
-        "en": {
-            "singular": "decade",
-            "plural": "decades"
-        },
-        "fi": {
-            "singular": "vuosikymmen",
-            "plural": "vuosikymmenet"
-        },
-        "nl": {
-            "singular": "het decennium",
-            "plural": "de decennia"
-        }
-    },
-    "century": {
-        "roots": {
-            "fi": [
-                "100",
-                "year"
-            ]
-        },
-        "en": {
-            "singular": "century",
-            "plural": "centuries"
-        },
-        "fi": {
-            "singular": "vuosisata",
-            "plural": "vuosisadat"
-        },
-        "nl": {
-            "singular": "de eeuw",
-            "plural": "de eeuwen"
-        }
-    },
-    "hour": {
-        "holonym": "day",
-        "en": {
-            "singular": "hour",
-            "plural": "hours"
-        },
-        "fi": {
-            "singular": "tunti",
-            "plural": "tunnit"
-        },
-        "nl": {
-            "singular": "het uur",
-            "plural": "de uren"
-        }
-    },
-    "minute": {
-        "holonym": "hour",
-        "en": {
-            "singular": "minute",
-            "plural": "minutes"
-        },
-        "fi": {
-            "singular": "minuutti",
-            "plural": "minuutit"
-        },
-        "nl": {
-            "singular": "de minuut",
-            "plural": "de minuten"
-        }
-    },
-    "clock": {
-        "en": {
-            "singular": "clock",
-            "plural": "clocks"
-        },
-        "fi": {
-            "singular": "kello",
-            "plural": "kellot"
-        },
-        "nl": {
-            "singular": "de klok",
-            "plural": "de klokken"
-        }
-    },
-    "alarm clock": {
-        "hypernym": "clock",
-        "roots": {
-            "en": "clock",
-            "fi": "clock"
-        },
-        "en": "alarm clock",
-        "fi": "herätyskello",
-        "nl": "de wekker"
-    },
-    "what time is it": {
-        "roots": {
-            "en": [
-                "what",
-                "time",
-                "to be"
-            ],
-            "fi": [
-                "what",
-                "how",
-                "time",
-                "clock",
-                "to be"
-            ],
-            "nl": [
-                "how",
-                "to be"
-            ]
-        },
-        "en": "What time is it?",
-        "fi": [
-            "Paljonko kello on?",
-            "Mitä kello on?"
-        ],
-        "nl": "Hoe laat is het?"
-    },
-    "it is 10:00": {
-        "roots": {
-            "en": [
-                "to be",
-                "10",
-                "clock"
-            ],
-            "fi": [
-                "to be",
-                "10",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "hour"
-            ]
-        },
-        "en": "It is ten o'clock.",
-        "fi": "Kello on kymmenen.",
-        "nl": "Het is tien uur."
-    },
-    "it is 2:30": {
-        "roots": {
-            "en": [
-                "to be",
-                "2",
-                "10"
-            ],
-            "fi": [
-                "to be",
-                "3",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "3"
-            ]
-        },
-        "en": "It is half past two.",
-        "fi": "Kello on puoli kolme.",
-        "nl": "Het is half drie."
-    },
-    "it is 3:15": {
-        "roots": {
-            "en": [
-                "to be",
-                "after",
-                "3"
-            ],
-            "fi": [
-                "to be",
-                "after",
-                "3",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "after",
-                "3"
-            ]
-        },
-        "en": [
-            "It is a quarter past three.",
-            "It is a quarter after three."
-        ],
-        "fi": "Kello on vartin yli kolme.",
-        "nl": "Het is kwart over drie."
-    },
-    "it is 3:45": {
-        "roots": {
-            "en": [
-                "to be",
-                "4"
-            ],
-            "fi": [
-                "to be",
-                "4",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "4"
-            ]
-        },
-        "en": "It is a quarter to four.",
-        "fi": "Kello on varttia vaille neljä.",
-        "nl": "Het is kwart voor vier."
-    },
-    "it is 6:20": {
-        "roots": {
-            "en": [
-                "to be",
-                "after",
-                "6",
-                "20"
-            ],
-            "fi": [
-                "to be",
-                "after",
-                "6",
-                "20",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "7"
-            ]
-        },
-        "en": [
-            "It is twenty past six.",
-            "It is twenty after six."
-        ],
-        "fi": [
-            "Kello on kuusi kaksikymmentä.",
-            "Kello on kaksikymmentä yli kuusi."
-        ],
-        "nl": "Het is tien voor half zeven."
-    },
-    "it is 6:40": {
-        "roots": {
-            "en": [
-                "to be",
-                "7",
-                "20"
-            ],
-            "fi": [
-                "to be",
-                "6",
-                "7",
-                "20",
-                "40",
-                "clock"
-            ],
-            "nl": [
-                "to be",
-                "10",
-                "7"
-            ]
-        },
-        "en": "It is twenty to seven.",
-        "fi": [
-            "Kello on kuusi neljäkymmentä.",
-            "Kello on kahtakymmentä vaille seitsemän."
-        ],
-        "nl": "Het is tien over half zeven."
-    },
-    "what time": {
-        "roots": {
-            "en": [
-                "what",
-                "time"
-            ],
-            "fi": "time",
-            "nl": "how"
-        },
-        "en": "What time?",
-        "fi": "Mihin aikaan?",
-        "nl": "Hoe laat?"
-    },
-    "how long does it take": {
-        "roots": "how",
-        "en": "How long does it take?",
-        "fi": [
-            "Kauanko se kestää?",
-            "Kuinka kauan se kestää?"
-        ],
-        "nl": "Hoe lang duurt het?"
-    },
-    "it takes one hour": {
-        "roots": {
-            "en": [
-                "1",
-                "hour"
-            ],
-            "fi": "hour",
-            "nl": [
-                "1",
-                "hour"
-            ]
-        },
-        "en": "It takes one hour.",
-        "fi": "Se kestää tunnin.",
-        "nl": "Het duurt één uur.|Het duurt een uur."
-    },
-    "time of day": {
-        "roots": {
-            "en": "time",
-            "fi": [
-                "24 hours",
-                "time"
-            ],
-            "nl": [
-                "time",
-                "day"
-            ]
-        },
-        "en": "time of day",
-        "fi": "vuorokaudenaika",
-        "nl": "tijdstip van de dag"
-    },
-    "from 3-5": {
-        "roots": {
-            "en": [
-                "3",
-                "5",
-                "clock"
-            ],
-            "fi": [
-                "3",
-                "5",
-                "clock"
-            ],
-            "nl": [
-                "3",
-                "5",
-                "hour"
-            ]
-        },
-        "en": "from three o'clock to five o'clock|from three to five",
-        "fi": "kello kolmesta kello viiteen|kolmesta viiteen",
-        "nl": "van drie uur tot vijf uur|van drie tot vijf"
-    },
-    "from June to August": {
-        "en": "from June to August",
-        "fi": "kesäkuusta elokuun",
-        "nl": "van juni tot augustus"
-    },
-    "from Monday to Friday": {
-        "en": "from Monday to Friday",
-        "fi": "maanantaista perjantaihin",
-        "nl": "van maandag tot vrijdag"
-    }
+    ]
 }
