@@ -1,8 +1,27 @@
 {
-    "married": {
-        "involves": "marriage",
-        "en": "married",
-        "fi": "naimisissa",
-        "nl": "getrouwd"
+    "concepts": {
+        "married": {
+            "involves": "marriage"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "married",
+                "label": "married"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "married",
+                "label": "naimisissa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "married",
+                "label": "getrouwd"
+            }
+        ]
     }
 }

@@ -1,10 +1,29 @@
 {
-    "this": {
-        "en": "this",
-        "fi": "tämä",
+    "concepts": {
+        "this": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "this",
+                "label": "this"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "this",
+                "label": "tämä"
+            }
+        ],
         "nl": [
-            "dit",
-            "deze"
+            {
+                "concept": "this",
+                "label": "dit"
+            },
+            {
+                "concept": "this",
+                "label": "deze"
+            }
         ]
     }
 }

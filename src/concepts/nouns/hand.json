@@ -1,35 +1,63 @@
 {
-    "hand": {
-        "holonym": "body",
-        "en": {
-            "singular": "hand",
-            "plural": "hands"
+    "concepts": {
+        "hand": {
+            "holonym": "body"
         },
-        "fi": {
-            "singular": "käsi",
-            "plural": "kädet"
-        },
-        "nl": {
-            "singular": "de hand",
-            "plural": "de handen"
+        "handwork": {
+            "roots": [
+                "hand",
+                "work"
+            ]
         }
     },
-    "handwork": {
-        "roots": [
-            "hand",
-            "work"
+    "labels": {
+        "en": [
+            {
+                "concept": "hand",
+                "label": {
+                    "singular": "hand",
+                    "plural": "hands"
+                }
+            },
+            {
+                "concept": "handwork",
+                "label": {
+                    "singular": "handwork",
+                    "plural": "handworks"
+                }
+            }
         ],
-        "en": {
-            "singular": "handwork",
-            "plural": "handworks"
-        },
-        "fi": {
-            "singular": "käsityö",
-            "plural": "käsityöt"
-        },
-        "nl": {
-            "singular": "het handwerk",
-            "plural": "de handwerken"
-        }
+        "fi": [
+            {
+                "concept": "hand",
+                "label": {
+                    "singular": "käsi",
+                    "plural": "kädet"
+                }
+            },
+            {
+                "concept": "handwork",
+                "label": {
+                    "singular": "käsityö",
+                    "plural": "käsityöt"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hand",
+                "label": {
+                    "singular": "de hand",
+                    "plural": "de handen"
+                }
+            },
+            {
+                "concept": "handwork",
+                "label": {
+                    "singular": "het handwerk",
+                    "plural": "de handwerken"
+                }
+            }
+        ]
     }
 }

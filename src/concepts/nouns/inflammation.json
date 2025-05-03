@@ -1,26 +1,53 @@
 {
-    "inflammation": {
-        "en": {
-            "singular": "inflammation",
-            "plural": "inflammations"
-        },
-        "fi": {
-            "singular": "tulehdus",
-            "plural": "tulehdukset"
-        },
-        "nl": {
-            "singular": "de ontsteking",
-            "plural": "de ontstekingen"
+    "concepts": {
+        "inflammation": {},
+        "bacterial inflammation": {
+            "hypernym": "inflammation",
+            "roots": [
+                "bacterium",
+                "inflammation"
+            ]
         }
     },
-    "bacterial inflammation": {
-        "hypernym": "inflammation",
-        "roots": [
-            "bacterium",
-            "inflammation"
+    "labels": {
+        "en": [
+            {
+                "concept": "inflammation",
+                "label": {
+                    "singular": "inflammation",
+                    "plural": "inflammations"
+                }
+            },
+            {
+                "concept": "bacterial inflammation",
+                "label": "bacterial inflammation"
+            }
         ],
-        "en": "bacterial inflammation",
-        "fi": "bakteeritulehdus",
-        "nl": "de bacteriële ontsteking"
+        "fi": [
+            {
+                "concept": "inflammation",
+                "label": {
+                    "singular": "tulehdus",
+                    "plural": "tulehdukset"
+                }
+            },
+            {
+                "concept": "bacterial inflammation",
+                "label": "bakteeritulehdus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "inflammation",
+                "label": {
+                    "singular": "de ontsteking",
+                    "plural": "de ontstekingen"
+                }
+            },
+            {
+                "concept": "bacterial inflammation",
+                "label": "de bacteriële ontsteking"
+            }
+        ]
     }
 }

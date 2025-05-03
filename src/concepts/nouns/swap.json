@@ -1,7 +1,25 @@
 {
-    "swap": {
-        "en": "swap",
-        "fi": "vaihtelu",
-        "nl": "de wisseling"
+    "concepts": {
+        "swap": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "swap",
+                "label": "swap"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "swap",
+                "label": "vaihtelu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "swap",
+                "label": "de wisseling"
+            }
+        ]
     }
 }

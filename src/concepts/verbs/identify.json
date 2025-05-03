@@ -1,18 +1,47 @@
 {
-    "to identify (oneself)": {
-        "en": "to identify",
-        "fi": "tunnistautua",
-        "nl": "identificeren"
+    "concepts": {
+        "to identify (oneself)": {},
+        "to identify with bank information": {
+            "roots": {
+                "fi": [
+                    "to identify (oneself)",
+                    "bank information"
+                ]
+            }
+        }
     },
-    "to identify with bank information": {
-        "roots": {
-            "fi": [
-                "to identify (oneself)",
-                "bank information"
-            ]
-        },
-        "en": "(to identify with bank information)",
-        "fi": "tunnistautua pankkitunnuksilla",
-        "nl": "(identificeren met bankgegevens)"
+    "labels": {
+        "en": [
+            {
+                "concept": "to identify (oneself)",
+                "label": "to identify"
+            },
+            {
+                "concept": "to identify with bank information",
+                "label": "to identify with bank information",
+                "meaning-only": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to identify (oneself)",
+                "label": "tunnistautua"
+            },
+            {
+                "concept": "to identify with bank information",
+                "label": "tunnistautua pankkitunnuksilla"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to identify (oneself)",
+                "label": "identificeren"
+            },
+            {
+                "concept": "to identify with bank information",
+                "label": "identificeren met bankgegevens",
+                "meaning-only": true
+            }
+        ]
     }
 }

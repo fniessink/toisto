@@ -1,28 +1,48 @@
 {
-    "forest": {
-        "en": {
-            "singular": [
-                "forest",
-                "wood"
-            ],
-            "plural": [
-                "forests",
-                "woods"
-            ]
-        },
-        "fi": {
-            "singular": "metsä",
-            "plural": "metsät"
-        },
-        "nl": {
-            "singular": [
-                "het bos",
-                "het woud"
-            ],
-            "plural": [
-                "de bossen",
-                "de wouden"
-            ]
-        }
+    "concepts": {
+        "forest": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "forest",
+                    "plural": "forests"
+                }
+            },
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "wood",
+                    "plural": "woods"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "metsä",
+                    "plural": "metsät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "het bos",
+                    "plural": "de bossen"
+                }
+            },
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "het woud",
+                    "plural": "de wouden"
+                }
+            }
+        ]
     }
 }

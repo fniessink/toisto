@@ -1,17 +1,36 @@
 {
-    "dog": {
-        "hypernym": "pet",
-        "en": {
-            "singular": "dog",
-            "plural": "dogs"
-        },
-        "fi": {
-            "singular": "koira",
-            "plural": "koirat"
-        },
-        "nl": {
-            "singular": "de hond",
-            "plural": "de honden"
+    "concepts": {
+        "dog": {
+            "hypernym": "pet"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dog",
+                "label": {
+                    "singular": "dog",
+                    "plural": "dogs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dog",
+                "label": {
+                    "singular": "koira",
+                    "plural": "koirat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dog",
+                "label": {
+                    "singular": "de hond",
+                    "plural": "de honden"
+                }
+            }
+        ]
     }
 }

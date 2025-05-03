@@ -1,72 +1,138 @@
 {
-    "station": {
-        "en": {
-            "singular": "station",
-            "plural": "stations"
-        },
-        "fi": {
-            "singular": "asema",
-            "plural": "asemat"
-        },
-        "nl": {
-            "singular": "het station",
-            "plural": "de stations"
-        }
-    },
-    "bus station": {
-        "hypernym": "station",
-        "involves": "bus",
-        "roots": [
-            "bus",
-            "station"
-        ],
-        "en": "bus station",
-        "fi": "linja-autoasema",
-        "nl": "het busstation"
-    },
-    "train station": {
-        "hypernym": "station",
-        "involves": "train",
-        "roots": [
-            "train",
-            "station"
-        ],
-        "en": "train station",
-        "fi": "rautatieasema",
-        "nl": "het treinstation"
-    },
-    "metro station": {
-        "hypernym": "station",
-        "involves": "metro",
-        "roots": [
-            "metro",
-            "station"
-        ],
-        "en": "metro station",
-        "fi": "metroasema",
-        "nl": "het metrostation"
-    },
-    "terminal station": {
-        "hypernym": "train station",
-        "roots": {
-            "fi": [
-                "head (main part)",
-                "station"
-            ],
-            "nl": [
-                "end",
+    "concepts": {
+        "station": {},
+        "bus station": {
+            "hypernym": "station",
+            "involves": "bus",
+            "roots": [
+                "bus",
                 "station"
             ]
         },
-        "en": "terminal",
-        "fi": "pääteasema",
-        "nl": "het eindstation"
+        "train station": {
+            "hypernym": "station",
+            "involves": "train",
+            "roots": [
+                "train",
+                "station"
+            ]
+        },
+        "metro station": {
+            "hypernym": "station",
+            "involves": "metro",
+            "roots": [
+                "metro",
+                "station"
+            ]
+        },
+        "terminal station": {
+            "hypernym": "train station",
+            "roots": {
+                "fi": [
+                    "head (main part)",
+                    "station"
+                ],
+                "nl": [
+                    "end",
+                    "station"
+                ]
+            }
+        },
+        "gas station": {
+            "hypernym": "station",
+            "roots": "station"
+        }
     },
-    "gas station": {
-        "hypernym": "station",
-        "roots": "station",
-        "en": "gas station",
-        "fi": "huoltoasema",
-        "nl": "het tankstation"
+    "labels": {
+        "en": [
+            {
+                "concept": "station",
+                "label": {
+                    "singular": "station",
+                    "plural": "stations"
+                }
+            },
+            {
+                "concept": "bus station",
+                "label": "bus station"
+            },
+            {
+                "concept": "train station",
+                "label": "train station"
+            },
+            {
+                "concept": "metro station",
+                "label": "metro station"
+            },
+            {
+                "concept": "terminal station",
+                "label": [
+                    "terminal station",
+                    "terminal"
+                ]
+            },
+            {
+                "concept": "gas station",
+                "label": "gas station"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "station",
+                "label": {
+                    "singular": "asema",
+                    "plural": "asemat"
+                }
+            },
+            {
+                "concept": "bus station",
+                "label": "linja-autoasema"
+            },
+            {
+                "concept": "train station",
+                "label": "rautatieasema"
+            },
+            {
+                "concept": "metro station",
+                "label": "metroasema"
+            },
+            {
+                "concept": "terminal station",
+                "label": "pääteasema"
+            },
+            {
+                "concept": "gas station",
+                "label": "huoltoasema"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "station",
+                "label": {
+                    "singular": "het station",
+                    "plural": "de stations"
+                }
+            },
+            {
+                "concept": "bus station",
+                "label": "het busstation"
+            },
+            {
+                "concept": "train station",
+                "label": "het treinstation"
+            },
+            {
+                "concept": "metro station",
+                "label": "het metrostation"
+            },
+            {
+                "concept": "terminal station",
+                "label": "het eindstation"
+            },
+            {
+                "concept": "gas station",
+                "label": "het tankstation"
+            }
+        ]
     }
 }

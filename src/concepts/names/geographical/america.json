@@ -1,35 +1,81 @@
 {
-    "america": {
-        "hypernym": "continent",
-        "en": "America",
-        "fi": "Amerikka",
-        "nl": "Amerika"
+    "concepts": {
+        "america": {
+            "hypernym": "continent"
+        },
+        "north america": {
+            "holonym": "america",
+            "roots": [
+                "north",
+                "america"
+            ]
+        },
+        "south america": {
+            "holonym": "america",
+            "roots": [
+                "south",
+                "america"
+            ]
+        },
+        "middle america": {
+            "holonym": "america",
+            "roots": "america"
+        }
     },
-    "north america": {
-        "holonym": "america",
-        "roots": [
-            "north",
-            "america"
+    "labels": {
+        "en": [
+            {
+                "concept": "america",
+                "label": "America"
+            },
+            {
+                "concept": "north america",
+                "label": "North America"
+            },
+            {
+                "concept": "south america",
+                "label": "South America"
+            },
+            {
+                "concept": "middle america",
+                "label": "Middle America"
+            }
         ],
-        "en": "North America",
-        "fi": "Pohjois-Amerikka",
-        "nl": "Noord-Amerika"
-    },
-    "south america": {
-        "holonym": "america",
-        "roots": [
-            "south",
-            "america"
+        "fi": [
+            {
+                "concept": "america",
+                "label": "Amerikka"
+            },
+            {
+                "concept": "north america",
+                "label": "Pohjois-Amerikka"
+            },
+            {
+                "concept": "south america",
+                "label": "Etelä-Amerikka"
+            },
+            {
+                "concept": "middle america",
+                "label": "Väli-Amerikka"
+            }
         ],
-        "en": "South America",
-        "fi": "Etelä-Amerikka",
-        "nl": "Zuid-Amerika"
-    },
-    "middle america": {
-        "holonym": "america",
-        "roots": "america",
-        "en": "Middle America",
-        "fi": "Väli-Amerikka",
-        "nl": "Midden-Amerika"
+        "nl": [
+            {
+                "concept": "america",
+                "label": "Amerika"
+            },
+            {
+                "concept": "north america",
+                "label": "Noord-Amerika"
+            },
+            {
+                "concept": "south america",
+                "label": "Zuid-Amerika"
+            },
+            {
+                "concept": "middle america",
+                "label": "Midden-Amerika"
+            }
+        ]
     }
 }

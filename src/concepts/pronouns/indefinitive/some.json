@@ -1,29 +1,67 @@
 {
-    "some": {
-        "en": [
-            "some",
-            "a few"
-        ],
-        "fi": "muutama",
-        "nl": "een paar"
-    },
-    "somebody": {
-        "roots": {
-            "en": "some"
+    "concepts": {
+        "some": {},
+        "somebody": {
+            "roots": {
+                "en": "some"
+            }
         },
-        "en": [
-            "somebody",
-            "someone"
-        ],
-        "fi": "joku",
-        "nl": "iemand"
+        "something": {
+            "roots": {
+                "en": "some"
+            }
+        }
     },
-    "something": {
-        "roots": {
-            "en": "some"
-        },
-        "en": "something",
-        "fi": "jokin",
-        "nl": "iets"
+    "labels": {
+        "en": [
+            {
+                "concept": "some",
+                "label": "some"
+            },
+            {
+                "concept": "some",
+                "label": "a few"
+            },
+            {
+                "concept": "somebody",
+                "label": "somebody"
+            },
+            {
+                "concept": "somebody",
+                "label": "someone"
+            },
+            {
+                "concept": "something",
+                "label": "something"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "some",
+                "label": "muutama"
+            },
+            {
+                "concept": "somebody",
+                "label": "joku"
+            },
+            {
+                "concept": "something",
+                "label": "jokin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "some",
+                "label": "een paar"
+            },
+            {
+                "concept": "somebody",
+                "label": "iemand"
+            },
+            {
+                "concept": "something",
+                "label": "iets"
+            }
+        ]
     }
 }

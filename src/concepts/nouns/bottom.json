@@ -1,14 +1,36 @@
 {
-    "bottom": {
-        "holonym": "body",
+    "concepts": {
+        "bottom": {
+            "holonym": "body"
+        }
+    },
+    "labels": {
         "en": [
-            "bottom",
-            "behind"
+            {
+                "concept": "bottom",
+                "label": "bottom"
+            },
+            {
+                "concept": "bottom",
+                "label": "behind",
+                "tip": "body part"
+            }
         ],
-        "fi": "takapuoli",
+        "fi": [
+            {
+                "concept": "bottom",
+                "label": "takapuoli"
+            }
+        ],
         "nl": [
-            "het achterwerk",
-            "het zitvlak"
+            {
+                "concept": "bottom",
+                "label": "het achterwerk"
+            },
+            {
+                "concept": "bottom",
+                "label": "het zitvlak"
+            }
         ]
     }
 }

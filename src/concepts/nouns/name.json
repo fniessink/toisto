@@ -1,53 +1,108 @@
 {
-    "name": {
-        "en": {
-            "singular": "name",
-            "plural": "names"
+    "concepts": {
+        "name": {},
+        "first name": {
+            "hypernym": "name",
+            "roots": "name"
         },
-        "fi": {
-            "singular": "nimi",
-            "plural": "nimet"
+        "given name": {
+            "hypernym": "name",
+            "roots": "name"
         },
-        "nl": {
-            "singular": "de naam",
-            "plural": "de namen"
+        "last name": {
+            "hypernym": "name",
+            "roots": "name"
+        },
+        "naming": {
+            "roots": {
+                "en": "name",
+                "fi": "name",
+                "nl": [
+                    "name",
+                    "to give"
+                ]
+            }
         }
     },
-    "first name": {
-        "hypernym": "name",
-        "roots": "name",
-        "en": "first name",
-        "fi": "etunimi",
-        "nl": "de voornaam"
-    },
-    "given name": {
-        "hypernym": "name",
-        "roots": "name",
-        "en": "given name",
-        "fi": "kutsumanimi",
-        "nl": "de roepnaam"
-    },
-    "last name": {
-        "hypernym": "name",
-        "roots": "name",
+    "labels": {
         "en": [
-            "last name",
-            "surname"
+            {
+                "concept": "name",
+                "label": {
+                    "singular": "name",
+                    "plural": "names"
+                }
+            },
+            {
+                "concept": "first name",
+                "label": "first name"
+            },
+            {
+                "concept": "given name",
+                "label": "given name"
+            },
+            {
+                "concept": "last name",
+                "label": "last name"
+            },
+            {
+                "concept": "last name",
+                "label": "surname"
+            },
+            {
+                "concept": "naming",
+                "label": "naming"
+            }
         ],
-        "fi": "sukunimi",
-        "nl": "de achternaam"
-    },
-    "naming": {
-        "roots": {
-            "en": "name",
-            "fi": "name",
-            "nl": [
-                "name",
-                "to give"
-            ]
-        },
-        "en": "naming",
-        "fi": "nimiäiset",
-        "nl": "de naamgeving"
+        "fi": [
+            {
+                "concept": "name",
+                "label": {
+                    "singular": "nimi",
+                    "plural": "nimet"
+                }
+            },
+            {
+                "concept": "first name",
+                "label": "etunimi"
+            },
+            {
+                "concept": "given name",
+                "label": "kutsumanimi"
+            },
+            {
+                "concept": "last name",
+                "label": "sukunimi"
+            },
+            {
+                "concept": "naming",
+                "label": "nimiäiset"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "name",
+                "label": {
+                    "singular": "de naam",
+                    "plural": "de namen"
+                }
+            },
+            {
+                "concept": "first name",
+                "label": "de voornaam"
+            },
+            {
+                "concept": "given name",
+                "label": "de roepnaam"
+            },
+            {
+                "concept": "last name",
+                "label": "de achternaam"
+            },
+            {
+                "concept": "naming",
+                "label": "de naamgeving"
+            }
+        ]
     }
 }

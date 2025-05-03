@@ -1,7 +1,25 @@
 {
-    "currently": {
-        "en": "currently",
-        "fi": "nykyään",
-        "nl": "tegenwoordig"
+    "concepts": {
+        "currently": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "currently",
+                "label": "currently"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "currently",
+                "label": "nykyään"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "currently",
+                "label": "tegenwoordig"
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "to influence": {
-        "en": "to influence",
-        "fi": "vaikuttaa",
-        "nl": "beïnvloeden"
+    "concepts": {
+        "to influence": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to influence",
+                "label": "to influence"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to influence",
+                "label": "vaikuttaa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to influence",
+                "label": "beïnvloeden"
+            }
+        ]
     }
 }

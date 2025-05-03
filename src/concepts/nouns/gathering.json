@@ -1,7 +1,25 @@
 {
-    "gathering": {
-        "en": "gathering",
-        "fi": "kokoontuminen",
-        "nl": "de bijeenkomst"
+    "concepts": {
+        "gathering": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "gathering",
+                "label": "gathering"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gathering",
+                "label": "kokoontuminen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gathering",
+                "label": "de bijeenkomst"
+            }
+        ]
     }
 }

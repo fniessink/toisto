@@ -78,7 +78,7 @@ class ListenOnlyQuizType(QuizType):
     def instruction(self, question: Label) -> str:
         """Override to return the quiz type instruction for listen-only quizzes."""
         colloquial_note = f"to the colloquial {ALL_LANGUAGES[question.language]} "
-        return f"Listen {colloquial_note if question.is_colloquial else ''}and write in"
+        return f"Listen {colloquial_note if question.colloquial else ''}and write in"
 
     def other_answers(self, guess: Label, answers: Labels) -> Labels:
         """Override because returning other answers doesn't make sense if the user has to type what is spoken."""
@@ -176,7 +176,7 @@ class DictateQuizType(ListenOnlyQuizType):
     def instruction(self, question: Label) -> str:
         """Extend to add "standard" for dictate quizzes."""
         instruction = super().instruction(question)
-        return instruction + " standard" if question.is_colloquial else instruction
+        return instruction + " standard" if question.colloquial else instruction
 
     def question_notes_applicable(self, question: Label, answer: Label) -> bool:
         """Override to return True because dictate quizzes should always get a question note."""

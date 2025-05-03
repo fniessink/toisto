@@ -1,77 +1,162 @@
 {
-    "week": {
-        "en": {
-            "singular": "week",
-            "plural": "weeks"
-        },
-        "fi": {
-            "singular": "viikko",
-            "plural": "viikot"
-        },
-        "nl": {
-            "singular": "de week",
-            "plural": "de weken"
-        }
-    },
-    "days of the week": {
-        "roots": [
-            "day",
-            "week"
-        ],
-        "en": "days of the week",
-        "fi": "viikonpäivät",
-        "nl": "de dagen van de week"
-    },
-    "this week": {
-        "roots": [
-            "this",
-            "week"
-        ],
-        "en": "this week",
-        "fi": "tällä viikolla",
-        "nl": "deze week"
-    },
-    "last week": {
-        "roots": "week",
-        "en": "last week",
-        "fi": "viime viikolla",
-        "nl": "vorige week"
-    },
-    "next week": {
-        "roots": "week",
-        "en": "next week",
-        "fi": [
-            "ensi viikolla",
-            "seuraavalla viikolla"
-        ],
-        "nl": "volgende week"
-    },
-    "in which week": {
-        "roots": "week",
-        "en": "In which week?",
-        "fi": "Millä viikolla?",
-        "nl": "In welke week?"
-    },
-    "once a week": {
-        "roots": "week",
-        "en": "once a week",
-        "fi": "kerran viikossa",
-        "nl": "één keer per week|een keer per week"
-    },
-    "twice a week": {
-        "roots": {
-            "en": "week",
-            "fi": [
-                "2",
-                "week"
-            ],
-            "nl": [
-                "2",
+    "concepts": {
+        "week": {},
+        "days of the week": {
+            "roots": [
+                "day",
                 "week"
             ]
         },
-        "en": "twice a week",
-        "fi": "kaksi kertaa viikossa",
-        "nl": "twee keer per week"
+        "this week": {
+            "roots": [
+                "this",
+                "week"
+            ]
+        },
+        "last week": {
+            "roots": "week"
+        },
+        "next week": {
+            "roots": "week"
+        },
+        "in which week": {
+            "roots": "week"
+        },
+        "once a week": {
+            "roots": "week"
+        },
+        "twice a week": {
+            "roots": {
+                "en": "week",
+                "fi": [
+                    "2",
+                    "week"
+                ],
+                "nl": [
+                    "2",
+                    "week"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "week",
+                "label": {
+                    "singular": "week",
+                    "plural": "weeks"
+                }
+            },
+            {
+                "concept": "days of the week",
+                "label": "days of the week"
+            },
+            {
+                "concept": "this week",
+                "label": "this week"
+            },
+            {
+                "concept": "last week",
+                "label": "last week"
+            },
+            {
+                "concept": "next week",
+                "label": "next week"
+            },
+            {
+                "concept": "in which week",
+                "label": "In which week?"
+            },
+            {
+                "concept": "once a week",
+                "label": "once a week"
+            },
+            {
+                "concept": "twice a week",
+                "label": "twice a week"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "week",
+                "label": {
+                    "singular": "viikko",
+                    "plural": "viikot"
+                }
+            },
+            {
+                "concept": "days of the week",
+                "label": "viikonpäivät"
+            },
+            {
+                "concept": "this week",
+                "label": "tällä viikolla"
+            },
+            {
+                "concept": "last week",
+                "label": "viime viikolla"
+            },
+            {
+                "concept": "next week",
+                "label": "ensi viikolla"
+            },
+            {
+                "concept": "next week",
+                "label": "seuraavalla viikolla"
+            },
+            {
+                "concept": "in which week",
+                "label": "Millä viikolla?"
+            },
+            {
+                "concept": "once a week",
+                "label": "kerran viikossa"
+            },
+            {
+                "concept": "twice a week",
+                "label": "kaksi kertaa viikossa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "week",
+                "label": {
+                    "singular": "de week",
+                    "plural": "de weken"
+                }
+            },
+            {
+                "concept": "days of the week",
+                "label": "de dagen van de week"
+            },
+            {
+                "concept": "this week",
+                "label": "deze week"
+            },
+            {
+                "concept": "last week",
+                "label": "vorige week"
+            },
+            {
+                "concept": "next week",
+                "label": "volgende week"
+            },
+            {
+                "concept": "in which week",
+                "label": "In welke week?"
+            },
+            {
+                "concept": "once a week",
+                "label": [
+                    "één keer per week",
+                    "een keer per week"
+                ]
+            },
+            {
+                "concept": "twice a week",
+                "label": "twee keer per week"
+            }
+        ]
     }
 }

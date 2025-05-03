@@ -1,29 +1,57 @@
 {
-    "on top of": {
-        "example": "the lamp is on top of the cabinet",
-        "en": "on top of",
-        "fi": "päällä",
-        "nl": "op"
-    },
-    "the lamp is on top of the cabinet": {
-        "roots": {
-            "en": [
-                "lamp",
-                "to be",
-                "on top of"
-            ],
-            "nl": [
-                "lamp",
-                "on top of"
-            ],
-            "fi": [
-                "lamp",
-                "to be",
-                "on top of"
-            ]
+    "concepts": {
+        "on top of": {
+            "example": "the lamp is on top of the cabinet"
         },
-        "en": "The lamp is on top of the cabinet.",
-        "fi": "Lamppu on kaapin päällä.",
-        "nl": "De lamp staat op de kast."
+        "the lamp is on top of the cabinet": {
+            "roots": {
+                "en": [
+                    "lamp",
+                    "to be",
+                    "on top of"
+                ],
+                "nl": [
+                    "lamp",
+                    "on top of"
+                ],
+                "fi": [
+                    "lamp",
+                    "to be",
+                    "on top of"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "on top of",
+                "label": "on top of"
+            },
+            {
+                "concept": "the lamp is on top of the cabinet",
+                "label": "The lamp is on top of the cabinet."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "on top of",
+                "label": "päällä"
+            },
+            {
+                "concept": "the lamp is on top of the cabinet",
+                "label": "Lamppu on kaapin päällä."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "on top of",
+                "label": "op"
+            },
+            {
+                "concept": "the lamp is on top of the cabinet",
+                "label": "De lamp staat op de kast."
+            }
+        ]
     }
 }

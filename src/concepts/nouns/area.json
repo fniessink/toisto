@@ -1,19 +1,44 @@
 {
-    "area": {
-        "en": "area",
-        "fi": "alue",
-        "nl": "het gebied"
+    "concepts": {
+        "area": {},
+        "area, field, domain (one's field of expertise or activity)": {}
     },
-    "area, field, domain (one's field of expertise or activity)": {
-        "en": [
-            "area",
-            "field",
-            "domain"
+    "labels": {
+        "fi": [
+            {
+                "concept": "area",
+                "label": "alue"
+            },
+            {
+                "concept": "area, field, domain (one's field of expertise or activity)",
+                "label": "ale"
+            }
         ],
-        "fi": "ale",
+        "en": [
+            {
+                "concept": [
+                    "area",
+                    "area, field, domain (one's field of expertise or activity)"
+                ],
+                "label": "area"
+            },
+            {
+                "concept": "area, field, domain (one's field of expertise or activity)",
+                "label": "domain"
+            }
+        ],
         "nl": [
-            "het gebied",
-            "het terrein"
+            {
+                "concept": [
+                    "area",
+                    "area, field, domain (one's field of expertise or activity)"
+                ],
+                "label": "het gebied"
+            },
+            {
+                "concept": "area, field, domain (one's field of expertise or activity)",
+                "label": "het terrein"
+            }
         ]
     }
 }

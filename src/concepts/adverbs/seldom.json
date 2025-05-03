@@ -1,10 +1,29 @@
 {
-    "seldom": {
+    "concepts": {
+        "seldom": {}
+    },
+    "labels": {
         "en": [
-            "seldom",
-            "rarely"
+            {
+                "concept": "seldom",
+                "label": "seldom"
+            },
+            {
+                "concept": "seldom",
+                "label": "rarely"
+            }
         ],
-        "fi": "harvoin",
-        "nl": "zelden"
+        "fi": [
+            {
+                "concept": "seldom",
+                "label": "harvoin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "seldom",
+                "label": "zelden"
+            }
+        ]
     }
 }

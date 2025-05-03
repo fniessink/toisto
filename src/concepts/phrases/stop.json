@@ -1,13 +1,33 @@
 {
-    "stop (interjection)": {
+    "concepts": {
+        "stop (interjection)": {}
+    },
+    "labels": {
         "en": [
-            "Stop!",
-            "Don't!"
+            {
+                "concept": "stop (interjection)",
+                "label": "Stop!"
+            },
+            {
+                "concept": "stop (interjection)",
+                "label": "Don't!"
+            }
         ],
-        "fi": "Älä!",
+        "fi": [
+            {
+                "concept": "stop (interjection)",
+                "label": "Älä!"
+            }
+        ],
         "nl": [
-            "Stop!",
-            "Niet doen!"
+            {
+                "concept": "stop (interjection)",
+                "label": "Stop!"
+            },
+            {
+                "concept": "stop (interjection)",
+                "label": "Niet doen!"
+            }
         ]
     }
 }

@@ -1,117 +1,158 @@
 {
-    "to get excited": {
-        "en": "to get excited",
-        "fi": "innostua",
-        "nl": "enthousiast worden"
+    "concepts": {
+        "to get excited": {},
+        "to get lost": {},
+        "to get to": {},
+        "to get caught": {},
+        "to get along": {}
     },
-    "to get lost": {
-        "en": "to get lost",
-        "fi": "eksyä",
-        "nl": "verdwalen"
-    },
-    "to get to": {
-        "en": {
-            "infinitive": [
-                "to get to",
-                "to reach"
-            ],
-            "singular": {
-                "first person": [
-                    "I get to",
-                    "I reach"
-                ],
-                "second person": [
-                    "you get to",
-                    "you reach"
-                ],
-                "third person": {
-                    "feminine": [
-                        "she gets to",
-                        "she reaches"
-                    ],
-                    "masculine": [
-                        "he gets to",
-                        "he reaches"
-                    ]
+    "labels": {
+        "en": [
+            {
+                "concept": "to get excited",
+                "label": "to get excited"
+            },
+            {
+                "concept": "to get lost",
+                "label": "to get lost"
+            },
+            {
+                "concept": "to get to",
+                "label": {
+                    "infinitive": "to get to",
+                    "singular": {
+                        "first person": "I get to",
+                        "second person": "you get to",
+                        "third person": {
+                            "feminine": "she gets to",
+                            "masculine": "he gets to"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we get to",
+                        "second person": "you get to",
+                        "third person": "they get to"
+                    }
                 }
             },
-            "plural": {
-                "first person": [
-                    "we get to",
-                    "we reach"
-                ],
-                "second person": [
-                    "you get to",
-                    "you reach"
-                ],
-                "third person": [
-                    "they get to",
-                    "they reach"
-                ]
-            }
-        },
-        "fi": {
-            "infinitive": "päästä",
-            "singular": {
-                "first person": "minä pääsen",
-                "second person": "sinä pääset",
-                "third person": "hän pääsee"
-            },
-            "plural": {
-                "first person": "me pääsemme",
-                "second person": "te pääsette",
-                "third person": "he pääsevät"
-            }
-        },
-        "nl": {
-            "infinitive": [
-                "bereiken",
-                "komen;to get to"
-            ],
-            "singular": {
-                "first person": [
-                    "ik bereik",
-                    "ik kom"
-                ],
-                "second person": [
-                    "jij bereikt",
-                    "jij komt"
-                ],
-                "third person": {
-                    "feminine": [
-                        "zij bereikt",
-                        "zij komt"
-                    ],
-                    "masculine": [
-                        "hij bereikt",
-                        "hij komt"
-                    ]
+            {
+                "concept": "to get to",
+                "label": {
+                    "infinitive": "to reach",
+                    "singular": {
+                        "first person": "I reach",
+                        "second person": "you reach",
+                        "third person": {
+                            "feminine": "she reaches",
+                            "masculine": "he reaches"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we reach",
+                        "second person": "you reach",
+                        "third person": "they reach"
+                    }
                 }
             },
-            "plural": {
-                "first person": [
-                    "wij bereiken",
-                    "wij komen"
-                ],
-                "second person": [
-                    "jullie bereiken",
-                    "jullie komen"
-                ],
-                "third person": [
-                    "zij bereiken",
-                    "zij komen"
-                ]
+            {
+                "concept": "to get caught",
+                "label": "to get caught"
+            },
+            {
+                "concept": "to get along",
+                "label": "to get along"
             }
-        }
-    },
-    "to get caught": {
-        "en": "to get caught",
-        "fi": "jäädä kiinni",
-        "nl": "gepakt worden"
-    },
-    "to get along": {
-        "en": "to get along",
-        "fi": "tulla toimeen",
-        "nl": "overweg kunnen"
+        ],
+        "fi": [
+            {
+                "concept": "to get excited",
+                "label": "innostua"
+            },
+            {
+                "concept": "to get lost",
+                "label": "eksyä"
+            },
+            {
+                "concept": "to get to",
+                "label": {
+                    "infinitive": "päästä",
+                    "singular": {
+                        "first person": "minä pääsen",
+                        "second person": "sinä pääset",
+                        "third person": "hän pääsee"
+                    },
+                    "plural": {
+                        "first person": "me pääsemme",
+                        "second person": "te pääsette",
+                        "third person": "he pääsevät"
+                    }
+                }
+            },
+            {
+                "concept": "to get caught",
+                "label": "jäädä kiinni"
+            },
+            {
+                "concept": "to get along",
+                "label": "tulla toimeen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to get excited",
+                "label": "enthousiast worden"
+            },
+            {
+                "concept": "to get lost",
+                "label": "verdwalen"
+            },
+            {
+                "concept": "to get to",
+                "label": {
+                    "infinitive": "bereiken",
+                    "singular": {
+                        "first person": "ik bereik",
+                        "second person": "jij bereikt",
+                        "third person": {
+                            "feminine": "zij bereikt",
+                            "masculine": "hij bereikt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij bereiken",
+                        "second person": "jullie bereiken",
+                        "third person": "zij bereiken"
+                    }
+                }
+            },
+            {
+                "concept": "to get to",
+                "label": {
+                    "infinitive": "komen",
+                    "singular": {
+                        "first person": "ik kom",
+                        "second person": "jij komt",
+                        "third person": {
+                            "feminine": "zij komt",
+                            "masculine": "hij komt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij komen",
+                        "second person": "jullie komen",
+                        "third person": "zij komen"
+                    }
+                },
+                "tip": "to get to"
+            },
+            {
+                "concept": "to get caught",
+                "label": "gepakt worden"
+            },
+            {
+                "concept": "to get along",
+                "label": "overweg kunnen"
+            }
+        ]
     }
 }

@@ -1,16 +1,34 @@
 {
-    "drawing": {
-        "en": {
-            "singular": "drawing",
-            "plural": "drawings"
-        },
-        "fi": {
-            "singular": "piirustus",
-            "plural": "piirustukset"
-        },
-        "nl": {
-            "singular": "de tekening",
-            "plural": "de tekeningen"
-        }
+    "concepts": {
+        "drawing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "drawing",
+                "label": {
+                    "singular": "drawing",
+                    "plural": "drawings"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "drawing",
+                "label": {
+                    "singular": "piirustus",
+                    "plural": "piirustukset"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "drawing",
+                "label": {
+                    "singular": "de tekening",
+                    "plural": "de tekeningen"
+                }
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "timing": {
-        "en": "timing",
-        "fi": "ajoitus",
-        "nl": "de timing"
+    "concepts": {
+        "timing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "timing",
+                "label": "timing"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "timing",
+                "label": "ajoitus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "timing",
+                "label": "de timing"
+            }
+        ]
     }
 }

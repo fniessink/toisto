@@ -1,16 +1,34 @@
 {
-    "episode": {
-        "en": {
-            "singular": "episode",
-            "plural": "episodes"
-        },
-        "fi": {
-            "singular": "jaksoa",
-            "plural": "jaksoat"
-        },
-        "nl": {
-            "singular": "de aflevering",
-            "plural": "de afleveringen"
-        }
+    "concepts": {
+        "episode": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "episode",
+                "label": {
+                    "singular": "episode",
+                    "plural": "episodes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "episode",
+                "label": {
+                    "singular": "jaksoa",
+                    "plural": "jaksoat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "episode",
+                "label": {
+                    "singular": "de aflevering",
+                    "plural": "de afleveringen"
+                }
+            }
+        ]
     }
 }

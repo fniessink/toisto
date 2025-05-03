@@ -1,7 +1,26 @@
 {
-    "to rent": {
-        "en": "to rent",
-        "fi": "vuokrata;what the user does",
-        "nl": "huren"
+    "concepts": {
+        "to rent": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to rent",
+                "label": "to rent"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to rent",
+                "label": "vuokrata",
+                "tip": "what the user does"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to rent",
+                "label": "huren"
+            }
+        ]
     }
 }

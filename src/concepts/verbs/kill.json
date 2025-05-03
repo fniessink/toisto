@@ -1,49 +1,67 @@
 {
-    "to kill": {
-        "en": {
-            "infinitive": "to kill",
-            "singular": {
-                "first person": "I kill",
-                "second person": "you kill",
-                "third person": {
-                    "feminine": "she kills",
-                    "masculine": "he kills"
+    "concepts": {
+        "to kill": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to kill",
+                "label": {
+                    "infinitive": "to kill",
+                    "singular": {
+                        "first person": "I kill",
+                        "second person": "you kill",
+                        "third person": {
+                            "feminine": "she kills",
+                            "masculine": "he kills"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we kill",
+                        "second person": "you kill",
+                        "third person": "they kill"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we kill",
-                "second person": "you kill",
-                "third person": "they kill"
             }
-        },
-        "fi": {
-            "infinitive": "tappaa",
-            "singular": {
-                "first person": "minä tapan",
-                "second person": "sinä tapat",
-                "third person": "hän tappaa"
-            },
-            "plural": {
-                "first person": "me tapamme",
-                "second person": "te tapatte",
-                "third person": "he tappavat"
-            }
-        },
-        "nl": {
-            "infinitive": "doden",
-            "singular": {
-                "first person": "ik dood",
-                "second person": "jij doodt",
-                "third person": {
-                    "feminine": "zij doodt",
-                    "masculine": "hij doodt"
+        ],
+        "fi": [
+            {
+                "concept": "to kill",
+                "label": {
+                    "infinitive": "tappaa",
+                    "singular": {
+                        "first person": "minä tapan",
+                        "second person": "sinä tapat",
+                        "third person": "hän tappaa"
+                    },
+                    "plural": {
+                        "first person": "me tapamme",
+                        "second person": "te tapatte",
+                        "third person": "he tappavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij doden",
-                "second person": "jullie doden",
-                "third person": "zij doden"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to kill",
+                "label": {
+                    "infinitive": "doden",
+                    "singular": {
+                        "first person": "ik dood",
+                        "second person": "jij doodt",
+                        "third person": {
+                            "feminine": "zij doodt",
+                            "masculine": "hij doodt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij doden",
+                        "second person": "jullie doden",
+                        "third person": "zij doden"
+                    }
+                }
+            }
+        ]
     }
 }

@@ -18,8 +18,8 @@ class FilterTest(ToistoTestCase):
         super().setUp()
         Concept.instances.clear()
         self.argument_parser = ArgumentParser()
-        self.foo = self.create_concept("foo", {"en": "foo"})
-        self.bar = self.create_concept("bar", {"en": "bar"})
+        self.foo = self.create_concept("foo", labels=[dict(label="foo", language=EN)])
+        self.bar = self.create_concept("bar", labels=[dict(label="bar", language=EN)])
         self.bar_id = self.bar.concept_id
         self.concepts = {self.foo, self.bar}
 
@@ -68,7 +68,7 @@ class FilterTest(ToistoTestCase):
         """Test that the hypernyms of selected concepts are not added."""
         little_bar = self.create_concept("little bar", dict(hypernym=self.bar_id))
         little_beer_bar = self.create_concept(
-            "little beer bar", dict(hypernym=little_bar.concept_id, en="little beer bar")
+            "little beer bar", dict(hypernym=little_bar.concept_id), labels=[dict(label="little beer bar", language=EN)]
         )
         self.assertEqual(
             {little_beer_bar},
@@ -89,7 +89,9 @@ class FilterTest(ToistoTestCase):
     def test_do_not_add_holonyms_of_selected_concepts(self):
         """Test that the holonyms of selected concepts are not added."""
         bar_part = self.create_concept("bar part", dict(holonym=self.bar_id))
-        bar_part_part = self.create_concept("bar part part", dict(holonym=bar_part.concept_id, en="bar part part"))
+        bar_part_part = self.create_concept(
+            "bar part part", dict(holonym=bar_part.concept_id), labels=[dict(label="bar part part", language=EN)]
+        )
         self.assertEqual(
             {bar_part_part},
             self.filter_concepts(
@@ -117,7 +119,9 @@ class FilterTest(ToistoTestCase):
 
     def test_add_antonyms_of_selected_concepts(self):
         """Test that antonyms of selected concepts are added."""
-        anti_foo = self.create_concept("anti foo", dict(antonym=self.foo.concept_id, en="anti foo"))
+        anti_foo = self.create_concept(
+            "anti foo", dict(antonym=self.foo.concept_id), labels=[dict(label="anti foo", language=EN)]
+        )
         self.assertEqual(
             {self.foo, anti_foo},
             self.filter_concepts(concepts=self.concepts | {anti_foo}, selected_concepts=["anti foo"]),
@@ -134,7 +138,7 @@ class FilterTest(ToistoTestCase):
     def test_add_concepts_involved_by_selected_concepts_recursively(self):
         """Test that concepts involved by selected concepts are added, recursively."""
         zoo = self.create_concept("zoo", dict(involves=self.bar_id))
-        baz = self.create_concept("baz", dict(involves=zoo.concept_id, en="baz"))
+        baz = self.create_concept("baz", dict(involves=zoo.concept_id), labels=[dict(label="baz", language=EN)])
         self.assertEqual(
             {self.bar, baz, zoo},
             self.filter_concepts(concepts=self.concepts | {baz, zoo}, selected_concepts=["baz"]),

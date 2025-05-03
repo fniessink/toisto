@@ -1,7 +1,25 @@
 {
-    "wealth": {
-        "en": "wealth",
-        "fi": "rikkaus",
-        "nl": "de rijkdom"
+    "concepts": {
+        "wealth": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wealth",
+                "label": "wealth"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wealth",
+                "label": "rikkaus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wealth",
+                "label": "de rijkdom"
+            }
+        ]
     }
 }

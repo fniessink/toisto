@@ -52,7 +52,6 @@ class ConceptsTest(ToistoTestCase):
         """Test that not all labels of a concept are spoken language."""
         for concept in self.concepts:
             for language in BUILT_IN_LANGUAGES:
-                for leaf_concept in concept.leaf_concepts(language):
-                    labels = leaf_concept.labels(language)
-                    if labels and all(label.is_colloquial for label in labels):
-                        self.fail(f"{leaf_concept} has only colloquial labels")
+                labels = concept.labels(language)
+                if labels and all(label.colloquial for label in labels):
+                    self.fail(f"{concept} has only colloquial labels in {language}")

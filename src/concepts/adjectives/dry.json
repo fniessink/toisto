@@ -1,20 +1,39 @@
 {
-    "dry": {
-        "antonym": "wet",
-        "en": {
-            "positive degree": "dry",
-            "comparative degree": "dryer",
-            "superlative degree": "dryest"
-        },
-        "fi": {
-            "positive degree": "kuiva",
-            "comparative degree": "kuivempi",
-            "superlative degree": "kuivin"
-        },
-        "nl": {
-            "positive degree": "droog",
-            "comparative degree": "droger",
-            "superlative degree": "droogst"
+    "concepts": {
+        "dry": {
+            "antonym": "wet"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dry",
+                "label": {
+                    "positive degree": "dry",
+                    "comparative degree": "dryer",
+                    "superlative degree": "dryest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dry",
+                "label": {
+                    "positive degree": "kuiva",
+                    "comparative degree": "kuivempi",
+                    "superlative degree": "kuivin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dry",
+                "label": {
+                    "positive degree": "droog",
+                    "comparative degree": "droger",
+                    "superlative degree": "droogst"
+                }
+            }
+        ]
     }
 }

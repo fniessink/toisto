@@ -1,49 +1,67 @@
 {
-    "to love": {
-        "en": {
-            "infinitive": "to love",
-            "singular": {
-                "first person": "I love",
-                "second person": "you love",
-                "third person": {
-                    "feminine": "she loves",
-                    "masculine": "he loves"
+    "concepts": {
+        "to love": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to love",
+                "label": {
+                    "infinitive": "to love",
+                    "singular": {
+                        "first person": "I love",
+                        "second person": "you love",
+                        "third person": {
+                            "feminine": "she loves",
+                            "masculine": "he loves"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we love",
+                        "second person": "you love",
+                        "third person": "they love"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we love",
-                "second person": "you love",
-                "third person": "they love"
             }
-        },
-        "fi": {
-            "infinitive": "rakastaa",
-            "singular": {
-                "first person": "minä rakastan",
-                "second person": "sinä rakastat",
-                "third person": "hän rakastaa"
-            },
-            "plural": {
-                "first person": "me rakastamme",
-                "second person": "te rakastatte",
-                "third person": "he rakastavat"
-            }
-        },
-        "nl": {
-            "infinitive": "houden van",
-            "singular": {
-                "first person": "ik hou van",
-                "second person": "jij houdt van",
-                "third person": {
-                    "feminine": "zij houdt van",
-                    "masculine": "hij houdt van"
+        ],
+        "fi": [
+            {
+                "concept": "to love",
+                "label": {
+                    "infinitive": "rakastaa",
+                    "singular": {
+                        "first person": "minä rakastan",
+                        "second person": "sinä rakastat",
+                        "third person": "hän rakastaa"
+                    },
+                    "plural": {
+                        "first person": "me rakastamme",
+                        "second person": "te rakastatte",
+                        "third person": "he rakastavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij houden van",
-                "second person": "jullie houden van",
-                "third person": "zij houden van"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to love",
+                "label": {
+                    "infinitive": "houden van",
+                    "singular": {
+                        "first person": "ik hou van",
+                        "second person": "jij houdt van",
+                        "third person": {
+                            "feminine": "zij houdt van",
+                            "masculine": "hij houdt van"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij houden van",
+                        "second person": "jullie houden van",
+                        "third person": "zij houden van"
+                    }
+                }
+            }
+        ]
     }
 }

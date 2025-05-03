@@ -1,22 +1,41 @@
 {
-    "hill": {
-        "en": {
-            "singular": "hill",
-            "plural": "hills"
-        },
-        "fi": {
-            "singular": [
-                "mäki",
-                "kukkula"
-            ],
-            "plural": [
-                "mäet",
-                "kukkulat"
-            ]
-        },
-        "nl": {
-            "singular": "de heuvel",
-            "plural": "de heuvels"
-        }
+    "concepts": {
+        "hill": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hill",
+                "label": {
+                    "singular": "hill",
+                    "plural": "hills"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hill",
+                "label": {
+                    "singular": "mäki",
+                    "plural": "mäet"
+                }
+            },
+            {
+                "concept": "hill",
+                "label": {
+                    "singular": "kukkula",
+                    "plural": "kukkulat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hill",
+                "label": {
+                    "singular": "de heuvel",
+                    "plural": "de heuvels"
+                }
+            }
+        ]
     }
 }

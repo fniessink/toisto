@@ -1,49 +1,70 @@
 {
-    "to drive": {
-        "en": {
-            "infinitive": "to drive",
-            "singular": {
-                "first person": "I drive",
-                "second person": "you drive",
-                "third person": {
-                    "feminine": "she drives",
-                    "masculine": "he drives"
+    "concepts": {
+        "to drive": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to drive",
+                "label": {
+                    "infinitive": "to drive",
+                    "singular": {
+                        "first person": "I drive",
+                        "second person": "you drive",
+                        "third person": {
+                            "feminine": "she drives",
+                            "masculine": "he drives"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we drive",
+                        "second person": "you drive",
+                        "third person": "they drive"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we drive",
-                "second person": "you drive",
-                "third person": "they drive"
             }
-        },
-        "fi": {
-            "infinitive": "ajaa",
-            "singular": {
-                "first person": "minä ajan",
-                "second person": "sinä ajat",
-                "third person": "hän ajaa"
-            },
-            "plural": {
-                "first person": "me ajamme",
-                "second person": "te ajatte",
-                "third person": "he ajavat"
-            }
-        },
-        "nl": {
-            "infinitive": "rijden",
-            "singular": {
-                "first person": "ik rijd|ik rij",
-                "second person": "jij rijdt",
-                "third person": {
-                    "feminine": "zij rijdt",
-                    "masculine": "hij rijdt"
+        ],
+        "fi": [
+            {
+                "concept": "to drive",
+                "label": {
+                    "infinitive": "ajaa",
+                    "singular": {
+                        "first person": "minä ajan",
+                        "second person": "sinä ajat",
+                        "third person": "hän ajaa"
+                    },
+                    "plural": {
+                        "first person": "me ajamme",
+                        "second person": "te ajatte",
+                        "third person": "he ajavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij rijden",
-                "second person": "jullie rijden",
-                "third person": "zij rijden"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to drive",
+                "label": {
+                    "infinitive": "rijden",
+                    "singular": {
+                        "first person": [
+                            "ik rijd",
+                            "ik rij"
+                        ],
+                        "second person": "jij rijdt",
+                        "third person": {
+                            "feminine": "zij rijdt",
+                            "masculine": "hij rijdt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij rijden",
+                        "second person": "jullie rijden",
+                        "third person": "zij rijden"
+                    }
+                }
+            }
+        ]
     }
 }

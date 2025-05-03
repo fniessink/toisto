@@ -1,11 +1,30 @@
 {
-    "from afar": {
-        "roots": {
-            "en": "far",
-            "nl": "far"
-        },
-        "en": "from afar",
-        "fi": "kaukaa",
-        "nl": "van ver"
+    "concepts": {
+        "from afar": {
+            "roots": {
+                "en": "far",
+                "nl": "far"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "from afar",
+                "label": "from afar"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "from afar",
+                "label": "kaukaa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "from afar",
+                "label": "van ver"
+            }
+        ]
     }
 }

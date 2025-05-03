@@ -1,20 +1,39 @@
 {
-    "strong": {
-        "antonym": "weak",
-        "en": {
-            "positive degree": "strong",
-            "comparative degree": "stronger",
-            "superlative degree": "strongest"
-        },
-        "fi": {
-            "positive degree": "vahva",
-            "comparative degree": "vahvempi",
-            "superlative degree": "vahvin"
-        },
-        "nl": {
-            "positive degree": "sterk",
-            "comparative degree": "sterker",
-            "superlative degree": "sterkst"
+    "concepts": {
+        "strong": {
+            "antonym": "weak"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "strong",
+                "label": {
+                    "positive degree": "strong",
+                    "comparative degree": "stronger",
+                    "superlative degree": "strongest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "strong",
+                "label": {
+                    "positive degree": "vahva",
+                    "comparative degree": "vahvempi",
+                    "superlative degree": "vahvin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "strong",
+                "label": {
+                    "positive degree": "sterk",
+                    "comparative degree": "sterker",
+                    "superlative degree": "sterkst"
+                }
+            }
+        ]
     }
 }

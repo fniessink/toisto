@@ -1,49 +1,68 @@
 {
-    "to translate": {
-        "en": {
-            "infinitive": "to translate",
-            "singular": {
-                "first person": "I translate",
-                "second person": "you translate",
-                "third person": {
-                    "feminine": "she translates",
-                    "masculine": "he translates"
+    "concepts": {
+        "to translate": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to translate",
+                "label": {
+                    "infinitive": "to translate",
+                    "singular": {
+                        "first person": "I translate",
+                        "second person": "you translate",
+                        "third person": {
+                            "feminine": "she translates",
+                            "masculine": "he translates"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we translate",
+                        "second person": "you translate",
+                        "third person": "they translate"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we translate",
-                "second person": "you translate",
-                "third person": "they translate"
             }
-        },
-        "fi": {
-            "infinitive": "kääntää;;kääntää is verbityyppi 1",
-            "singular": {
-                "first person": "minä käännän",
-                "second person": "sinä käännät",
-                "third person": "hän kääntää"
-            },
-            "plural": {
-                "first person": "me käännämme",
-                "second person": "te käännätte",
-                "third person": "he kääntävät"
+        ],
+        "fi": [
+            {
+                "concept": "to translate",
+                "label": {
+                    "infinitive": "kääntää",
+                    "singular": {
+                        "first person": "minä käännän",
+                        "second person": "sinä käännät",
+                        "third person": "hän kääntää"
+                    },
+                    "plural": {
+                        "first person": "me käännämme",
+                        "second person": "te käännätte",
+                        "third person": "he kääntävät"
+                    }
+                },
+                "note": "kääntää is verbityyppi 1"
             }
-        },
-        "nl": {
-            "infinitive": "vertalen",
-            "singular": {
-                "first person": "ik vertaal",
-                "second person": "jij vertaalt",
-                "third person": {
-                    "feminine": "zij vertaalt",
-                    "masculine": "hij vertaalt"
+        ],
+        "nl": [
+            {
+                "concept": "to translate",
+                "label": {
+                    "infinitive": "vertalen",
+                    "singular": {
+                        "first person": "ik vertaal",
+                        "second person": "jij vertaalt",
+                        "third person": {
+                            "feminine": "zij vertaalt",
+                            "masculine": "hij vertaalt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij vertalen",
+                        "second person": "jullie vertalen",
+                        "third person": "zij vertalen"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij vertalen",
-                "second person": "jullie vertalen",
-                "third person": "zij vertalen"
             }
-        }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "greasy": {
-        "en": "greasy",
-        "fi": "rasvainen",
-        "nl": "vet"
+    "concepts": {
+        "greasy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "greasy",
+                "label": "greasy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "greasy",
+                "label": "rasvainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "greasy",
+                "label": "vet"
+            }
+        ]
     }
 }

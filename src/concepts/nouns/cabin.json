@@ -1,8 +1,27 @@
 {
-    "cabin": {
-        "holonym": "ship",
-        "en": "cabin",
-        "fi": "hytti",
-        "nl": "de hut"
+    "concepts": {
+        "cabin": {
+            "holonym": "ship"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cabin",
+                "label": "cabin"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cabin",
+                "label": "hytti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cabin",
+                "label": "de hut"
+            }
+        ]
     }
 }

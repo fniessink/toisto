@@ -1,10 +1,30 @@
 {
-    "atmosphere (mood or feeling in a situation)": {
-        "en": "atmosphere",
-        "fi": [
-            "tunnelma",
-            "meininki*"
+    "concepts": {
+        "atmosphere (mood or feeling in a situation)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "atmosphere (mood or feeling in a situation)",
+                "label": "atmosphere"
+            }
         ],
-        "nl": "de sfeer"
+        "fi": [
+            {
+                "concept": "atmosphere (mood or feeling in a situation)",
+                "label": "tunnelma"
+            },
+            {
+                "concept": "atmosphere (mood or feeling in a situation)",
+                "label": "meininki",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "atmosphere (mood or feeling in a situation)",
+                "label": "de sfeer"
+            }
+        ]
     }
 }

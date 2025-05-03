@@ -1,292 +1,480 @@
 {
-    "room": {
-        "holonym": "house",
-        "en": {
-            "singular": "room",
-            "plural": "rooms"
+    "concepts": {
+        "room": {
+            "holonym": "house"
         },
-        "fi": {
-            "singular": "huone",
-            "plural": "huoneet"
+        "home": {},
+        "garden": {},
+        "house": {},
+        "veranda": {
+            "holonym": "house"
         },
-        "nl": {
-            "singular": "de kamer",
-            "plural": "de kamers"
-        }
-    },
-    "home": {
-        "en": {
-            "singular": "home",
-            "plural": "homes"
+        "barbecue": {},
+        "wall": {},
+        "floor": {},
+        "window": {
+            "holonym": "wall"
         },
-        "fi": {
-            "singular": "koti",
-            "plural": "kodit"
+        "brick": {
+            "holonym": "wall"
         },
-        "nl": "het thuis"
-    },
-    "garden": {
-        "en": {
-            "singular": "garden",
-            "plural": "gardens"
+        "step": {
+            "holonym": "stairs"
         },
-        "fi": {
-            "singular": "piha",
-            "plural": "pihat"
+        "stairs": {},
+        "elevator": {},
+        "living room": {
+            "hypernym": "room",
+            "roots": {
+                "en": [
+                    "room",
+                    "to live"
+                ],
+                "fi": "room",
+                "nl": [
+                    "house",
+                    "room",
+                    "to live"
+                ]
+            }
         },
-        "nl": {
-            "singular": "de tuin",
-            "plural": "de tuinen"
-        }
-    },
-    "house": {
-        "en": {
-            "singular": "house",
-            "plural": "houses"
+        "kitchen": {
+            "hypernym": "room"
         },
-        "fi": {
-            "singular": "talo",
-            "plural": "talot"
+        "dining room": {
+            "hypernym": "room",
+            "roots": {
+                "en": [
+                    "room"
+                ],
+                "fi": [
+                    "food",
+                    "room"
+                ],
+                "nl": [
+                    "to eat",
+                    "room"
+                ]
+            }
         },
-        "nl": {
-            "singular": "het huis",
-            "plural": "de huizen"
-        }
-    },
-    "veranda": {
-        "holonym": "house",
-        "en": {
-            "singular": "veranda",
-            "plural": "verandas"
+        "bedroom": {
+            "hypernym": "room",
+            "roots": {
+                "en": [
+                    "room",
+                    "bed"
+                ],
+                "fi": "room",
+                "nl": [
+                    "room",
+                    "to sleep"
+                ]
+            }
         },
-        "fi": {
-            "singular": "veranta",
-            "plural": "verannat"
+        "bath": {
+            "holonym": "bathroom"
         },
-        "nl": {
-            "singular": "de veranda",
-            "plural": "de veranda's"
-        }
-    },
-    "barbecue": {
-        "en": {
-            "singular": "barbecue",
-            "plural": "barbecues"
-        },
-        "fi": {
-            "singular": "grilli",
-            "plural": "grillit"
-        },
-        "nl": {
-            "singular": "de barbecue",
-            "plural": "de barbecues"
-        }
-    },
-    "wall": {
-        "en": {
-            "singular": "wall",
-            "plural": "walls"
-        },
-        "fi": {
-            "singular": "seinä",
-            "plural": "seinät"
-        },
-        "nl": {
-            "singular": "de muur",
-            "plural": "de muren"
-        }
-    },
-    "floor": {
-        "en": {
-            "singular": "floor",
-            "plural": "floors"
-        },
-        "fi": {
-            "singular": "lattia",
-            "plural": "lattiat"
-        },
-        "nl": {
-            "singular": "de vloer",
-            "plural": "de vloeren"
-        }
-    },
-    "window": {
-        "holonym": "wall",
-        "en": {
-            "singular": "window",
-            "plural": "windows"
-        },
-        "fi": {
-            "singular": "ikkuna",
-            "plural": "ikkunat"
-        },
-        "nl": {
-            "singular": "het raam",
-            "plural": "de ramen"
-        }
-    },
-    "brick": {
-        "holonym": "wall",
-        "en": {
-            "singular": "brick",
-            "plural": "bricks"
-        },
-        "fi": {
-            "singular": "tiili",
-            "plural": "tiilet"
-        },
-        "nl": {
-            "singular": "de baksteen",
-            "plural": "de bakstenen"
-        }
-    },
-    "step": {
-        "holonym": "stairs",
-        "en": "step",
-        "fi": "porras",
-        "nl": "de trede"
-    },
-    "stairs": {
-        "en": "stairs",
-        "fi": [
-            "portaat",
-            "rappuset"
-        ],
-        "nl": {
-            "singular": "de trap",
-            "plural": "de trappen"
-        }
-    },
-    "elevator": {
-        "en": {
-            "singular": [
-                "elevator",
-                "lift"
-            ],
-            "plural": [
-                "elevators",
-                "lifts"
-            ]
-        },
-        "fi": {
-            "singular": "hissi",
-            "plural": "hissit"
-        },
-        "nl": {
-            "singular": "de lift",
-            "plural": "de liften"
-        }
-    },
-    "living room": {
-        "hypernym": "room",
-        "roots": {
-            "en": [
-                "room",
-                "to live"
-            ],
-            "fi": "room",
-            "nl": [
-                "house",
-                "room",
-                "to live"
-            ]
-        },
-        "en": "living room",
-        "fi": "olohuone",
-        "nl": [
-            "de huiskamer",
-            "de woonkamer"
-        ]
-    },
-    "kitchen": {
-        "hypernym": "room",
-        "en": {
-            "singular": "kitchen",
-            "plural": "kitchens"
-        },
-        "fi": {
-            "singular": "keittiö",
-            "plural": "keittiöt"
-        },
-        "nl": {
-            "singular": "de keuken",
-            "plural": "de keukens"
-        }
-    },
-    "dining room": {
-        "hypernym": "room",
-        "roots": {
-            "en": [
-                "room"
-            ],
-            "fi": [
-                "food",
-                "room"
-            ],
-            "nl": [
-                "to eat",
+        "bathroom": {
+            "hypernym": "room",
+            "roots": [
+                "bath",
                 "room"
             ]
         },
-        "en": "dining room",
-        "fi": "ruokahuone",
-        "nl": "de eetkamer"
-    },
-    "bedroom": {
-        "hypernym": "room",
-        "roots": {
-            "en": [
-                "room",
-                "bed"
-            ],
-            "fi": "room",
-            "nl": [
-                "room",
-                "to sleep"
-            ]
-        },
-        "en": "bedroom",
-        "fi": "makuuhuone",
-        "nl": "de slaapkamer"
-    },
-    "bath": {
-        "holonym": "bathroom",
-        "en": {
-            "singular": "bath",
-            "plural": "baths"
-        },
-        "fi": {
-            "singular": "kylpy",
-            "plural": "kylpyjä"
-        },
-        "nl": {
-            "singular": "het bad",
-            "plural": "de baden"
+        "toilet": {
+            "hypernym": "room"
         }
     },
-    "bathroom": {
-        "hypernym": "room",
-        "roots": [
-            "bath",
-            "room"
-        ],
-        "en": "bathroom",
-        "fi": "kylpyhuone",
-        "nl": "de badkamer"
-    },
-    "toilet": {
-        "hypernym": "room",
+    "labels": {
         "en": [
-            "restroom",
-            "toilet"
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "room",
+                    "plural": "rooms"
+                }
+            },
+            {
+                "concept": "home",
+                "label": {
+                    "singular": "home",
+                    "plural": "homes"
+                }
+            },
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "garden",
+                    "plural": "gardens"
+                }
+            },
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "house",
+                    "plural": "houses"
+                }
+            },
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "veranda",
+                    "plural": "verandas"
+                }
+            },
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "barbecue",
+                    "plural": "barbecues"
+                }
+            },
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "wall",
+                    "plural": "walls"
+                }
+            },
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "floor",
+                    "plural": "floors"
+                }
+            },
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "window",
+                    "plural": "windows"
+                }
+            },
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "brick",
+                    "plural": "bricks"
+                }
+            },
+            {
+                "concept": "step",
+                "label": "step"
+            },
+            {
+                "concept": "stairs",
+                "label": "stairs"
+            },
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "elevator",
+                    "plural": "elevators"
+                }
+            },
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "lift",
+                    "plural": "lifts"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "living room"
+            },
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "kitchen",
+                    "plural": "kitchens"
+                }
+            },
+            {
+                "concept": "dining room",
+                "label": "dining room"
+            },
+            {
+                "concept": "bedroom",
+                "label": "bedroom"
+            },
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "bath",
+                    "plural": "baths"
+                }
+            },
+            {
+                "concept": "bathroom",
+                "label": "bathroom"
+            },
+            {
+                "concept": "toilet",
+                "label": "restroom"
+            },
+            {
+                "concept": "toilet",
+                "label": "toilet"
+            }
         ],
         "fi": [
-            "wc",
-            "vessa"
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "huone",
+                    "plural": "huoneet"
+                }
+            },
+            {
+                "concept": "home",
+                "label": {
+                    "singular": "koti",
+                    "plural": "kodit"
+                }
+            },
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "piha",
+                    "plural": "pihat"
+                }
+            },
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "talo",
+                    "plural": "talot"
+                }
+            },
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "veranta",
+                    "plural": "verannat"
+                }
+            },
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "grilli",
+                    "plural": "grillit"
+                }
+            },
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "seinä",
+                    "plural": "seinät"
+                }
+            },
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "lattia",
+                    "plural": "lattiat"
+                }
+            },
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "ikkuna",
+                    "plural": "ikkunat"
+                }
+            },
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "tiili",
+                    "plural": "tiilet"
+                }
+            },
+            {
+                "concept": "step",
+                "label": "porras"
+            },
+            {
+                "concept": "stairs",
+                "label": "portaat"
+            },
+            {
+                "concept": "stairs",
+                "label": "rappuset"
+            },
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "hissi",
+                    "plural": "hissit"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "olohuone"
+            },
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "keittiö",
+                    "plural": "keittiöt"
+                }
+            },
+            {
+                "concept": "dining room",
+                "label": "ruokahuone"
+            },
+            {
+                "concept": "bedroom",
+                "label": "makuuhuone"
+            },
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "kylpy",
+                    "plural": "kylpyjä"
+                }
+            },
+            {
+                "concept": "bathroom",
+                "label": "kylpyhuone"
+            },
+            {
+                "concept": "toilet",
+                "label": "wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "vessa"
+            }
         ],
         "nl": [
-            "de wc",
-            "het toilet"
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "de kamer",
+                    "plural": "de kamers"
+                }
+            },
+            {
+                "concept": "home",
+                "label": "het thuis"
+            },
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "de tuin",
+                    "plural": "de tuinen"
+                }
+            },
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "het huis",
+                    "plural": "de huizen"
+                }
+            },
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "de veranda",
+                    "plural": "de veranda's"
+                }
+            },
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "de barbecue",
+                    "plural": "de barbecues"
+                }
+            },
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "de muur",
+                    "plural": "de muren"
+                }
+            },
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "de vloer",
+                    "plural": "de vloeren"
+                }
+            },
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "het raam",
+                    "plural": "de ramen"
+                }
+            },
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "de baksteen",
+                    "plural": "de bakstenen"
+                }
+            },
+            {
+                "concept": "step",
+                "label": "de trede"
+            },
+            {
+                "concept": "stairs",
+                "label": {
+                    "singular": "de trap",
+                    "plural": "de trappen"
+                }
+            },
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "de lift",
+                    "plural": "de liften"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "de huiskamer"
+            },
+            {
+                "concept": "living room",
+                "label": "de woonkamer"
+            },
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "de keuken",
+                    "plural": "de keukens"
+                }
+            },
+            {
+                "concept": "dining room",
+                "label": "de eetkamer"
+            },
+            {
+                "concept": "bedroom",
+                "label": "de slaapkamer"
+            },
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "het bad",
+                    "plural": "de baden"
+                }
+            },
+            {
+                "concept": "bathroom",
+                "label": "de badkamer"
+            },
+            {
+                "concept": "toilet",
+                "label": "de wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "het toilet"
+            }
         ]
     }
 }

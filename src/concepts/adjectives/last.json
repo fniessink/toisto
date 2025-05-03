@@ -1,27 +1,65 @@
 {
-    "last": {
-        "en": [
-            "last",
-            "past"
-        ],
-        "fi": "viime",
-        "nl": [
-            "afgelopen",
-            "vorig"
-        ]
-    },
-    "the last time": {
-        "roots": "last",
-        "en": "the last time",
-        "fi": "viimeksi",
-        "nl": "voor het laatst"
-    },
-    "last (in a row)": {
-        "roots": {
-            "fi": "last"
+    "concepts": {
+        "last": {},
+        "the last time": {
+            "roots": "last"
         },
-        "en": "last",
-        "fi": "viimeinen",
-        "nl": "laatste"
+        "last (in a row)": {
+            "roots": {
+                "fi": "last"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "last",
+                    "last (in a row)"
+                ],
+                "label": "last"
+            },
+            {
+                "concept": "last",
+                "label": "past",
+                "tip": "last"
+            },
+            {
+                "concept": "the last time",
+                "label": "the last time"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "last",
+                "label": "viime"
+            },
+            {
+                "concept": "the last time",
+                "label": "viimeksi"
+            },
+            {
+                "concept": "last (in a row)",
+                "label": "viimeinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "last",
+                "label": "afgelopen"
+            },
+            {
+                "concept": "last",
+                "label": "vorig"
+            },
+            {
+                "concept": "the last time",
+                "label": "voor het laatst"
+            },
+            {
+                "concept": "last (in a row)",
+                "label": "laatste"
+            }
+        ]
     }
 }

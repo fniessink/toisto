@@ -1,24 +1,48 @@
 {
-    "12": {
-        "hypernym": "number",
-        "roots": [
-            "2",
-            "10"
-        ],
-        "en": {
-            "cardinal": "twelve",
-            "ordinal": "twelfth"
-        },
-        "fi": {
-            "cardinal": [
-                "kaksitoista",
-                "kakstoist*"
-            ],
-            "ordinal": "kahdestoista"
-        },
-        "nl": {
-            "cardinal": "twaalf",
-            "ordinal": "twaalfde"
+    "concepts": {
+        "12": {
+            "hypernym": "number",
+            "roots": [
+                "2",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "12",
+                "label": {
+                    "cardinal": "twelve",
+                    "ordinal": "twelfth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "12",
+                "label": {
+                    "cardinal": "kaksitoista",
+                    "ordinal": "kahdestoista"
+                }
+            },
+            {
+                "concept": "12",
+                "label": {
+                    "cardinal": "kakstoist",
+                    "ordinal": "kahdestoista"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "12",
+                "label": {
+                    "cardinal": "twaalf",
+                    "ordinal": "twaalfde"
+                }
+            }
+        ]
     }
 }

@@ -1,9 +1,31 @@
 {
-    "west": {
-        "example": "they live in the west",
-        "hypernym": "compass point",
-        "en": "west|the West",
-        "fi": "länsi",
-        "nl": "het westen"
+    "concepts": {
+        "west": {
+            "example": "they live in the west",
+            "hypernym": "compass point"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "west",
+                "label": [
+                    "west",
+                    "the West"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "west",
+                "label": "länsi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "west",
+                "label": "het westen"
+            }
+        ]
     }
 }

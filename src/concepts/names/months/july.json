@@ -1,24 +1,56 @@
 {
-    "july": {
-        "hypernym": "month",
-        "roots": {
-            "fi": "moon"
+    "concepts": {
+        "july": {
+            "hypernym": "month",
+            "roots": {
+                "fi": "moon"
+            }
         },
-        "en": "July;;In English, names of months are capitalized",
-        "fi": "heinäkuu;;In Finnish, names of months are not capitalized",
-        "nl": "juli;;In Dutch, names of months are not capitalized"
+        "it is july": {
+            "roots": [
+                "july",
+                "to be",
+                "now"
+            ]
+        }
     },
-    "it is july": {
-        "roots": [
-            "july",
-            "to be",
-            "now"
+    "labels": {
+        "en": [
+            {
+                "concept": "july",
+                "label": "July",
+                "note": "In English, names of months are capitalized"
+            },
+            {
+                "concept": "it is july",
+                "label": "It is July."
+            }
         ],
-        "en": "It is July.",
         "fi": [
-            "Nyt on heinäkuu.",
-            "On heinäkuu."
+            {
+                "concept": "july",
+                "label": "heinäkuu",
+                "note": "In Finnish, names of months are not capitalized"
+            },
+            {
+                "concept": "it is july",
+                "label": "Nyt on heinäkuu."
+            },
+            {
+                "concept": "it is july",
+                "label": "On heinäkuu."
+            }
         ],
-        "nl": "Het is juli."
+        "nl": [
+            {
+                "concept": "july",
+                "label": "juli",
+                "note": "In Dutch, names of months are not capitalized"
+            },
+            {
+                "concept": "it is july",
+                "label": "Het is juli."
+            }
+        ]
     }
 }

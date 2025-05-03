@@ -1,19 +1,37 @@
 {
-    "tasty": {
-        "en": {
-            "positive degree": "tasty",
-            "comparative degree": "tastier",
-            "superlative degree": "tastiest"
-        },
-        "fi": {
-            "positive degree": "maukas",
-            "comparative degree": "maukkaampi",
-            "superlative degree": "maukkain"
-        },
-        "nl": {
-            "positive degree": "lekker",
-            "comparative degree": "lekkerder",
-            "superlative degree": "lekkerst"
-        }
+    "concepts": {
+        "tasty": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "tasty",
+                "label": {
+                    "positive degree": "tasty",
+                    "comparative degree": "tastier",
+                    "superlative degree": "tastiest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "tasty",
+                "label": {
+                    "positive degree": "maukas",
+                    "comparative degree": "maukkaampi",
+                    "superlative degree": "maukkain"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "tasty",
+                "label": {
+                    "positive degree": "lekker",
+                    "comparative degree": "lekkerder",
+                    "superlative degree": "lekkerst"
+                }
+            }
+        ]
     }
 }

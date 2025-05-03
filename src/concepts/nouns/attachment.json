@@ -1,7 +1,25 @@
 {
-    "attachment": {
-        "en": "attachment",
-        "fi": "liite",
-        "nl": "de bijlage"
+    "concepts": {
+        "attachment": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "attachment",
+                "label": "attachment"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "attachment",
+                "label": "liite"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "attachment",
+                "label": "de bijlage"
+            }
+        ]
     }
 }

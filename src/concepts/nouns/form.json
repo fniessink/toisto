@@ -1,7 +1,25 @@
 {
-    "form": {
-        "en": "form",
-        "fi": "lomake",
-        "nl": "het formulier"
+    "concepts": {
+        "form": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "form",
+                "label": "form"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "form",
+                "label": "lomake"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "form",
+                "label": "het formulier"
+            }
+        ]
     }
 }

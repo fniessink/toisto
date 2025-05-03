@@ -1,103 +1,194 @@
 {
-    "to want": {
-        "en": {
-            "infinitive": "to want",
-            "singular": {
-                "first person": "I want",
-                "second person": "you want",
-                "third person": {
-                    "feminine": "she wants",
-                    "masculine": "he wants"
-                }
-            },
-            "plural": {
-                "first person": "we want",
-                "second person": "you want",
-                "third person": "they want"
-            }
+    "concepts": {
+        "to want": {},
+        "i want coffee": {
+            "roots": [
+                "to want",
+                "coffee"
+            ]
         },
-        "fi": {
-            "infinitive": "haluta;;haluta is verityyppi 4",
-            "singular": {
-                "first person": "minä haluan",
-                "second person": "sinä haluat",
-                "third person": "hän haluaa"
-            },
-            "plural": {
-                "first person": "me haluamme",
-                "second person": "te haluatte",
-                "third person": "he haluavat"
-            }
+        "you want milk": {
+            "roots": [
+                "to want",
+                "milk"
+            ]
         },
-        "nl": {
-            "infinitive": "willen",
-            "singular": {
-                "first person": "ik wil",
-                "second person": "jij wilt|jij wil",
-                "third person": {
-                    "feminine": "zij wil",
-                    "masculine": "hij wil"
-                }
-            },
-            "plural": {
-                "first person": "wij willen",
-                "second person": "jullie willen",
-                "third person": "zij willen"
-            }
+        "she wants ice cream": {
+            "roots": [
+                "to want",
+                "ice cream"
+            ]
+        },
+        "we want cake": {
+            "roots": [
+                "to want",
+                "cake"
+            ]
+        },
+        "you want sugar": {
+            "roots": [
+                "to want",
+                "sugar"
+            ]
+        },
+        "they want a cookie": {
+            "roots": [
+                "to want",
+                "cookie"
+            ]
         }
     },
-    "i want coffee": {
-        "roots": [
-            "to want",
-            "coffee"
+    "labels": {
+        "en": [
+            {
+                "concept": "to want",
+                "label": {
+                    "infinitive": "to want",
+                    "singular": {
+                        "first person": "I want",
+                        "second person": "you want",
+                        "third person": {
+                            "feminine": "she wants",
+                            "masculine": "he wants"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we want",
+                        "second person": "you want",
+                        "third person": "they want"
+                    }
+                }
+            },
+            {
+                "concept": "i want coffee",
+                "label": "I want coffee."
+            },
+            {
+                "concept": "you want milk",
+                "label": "You want milk.",
+                "tip": "singular"
+            },
+            {
+                "concept": "she wants ice cream",
+                "label": "She wants ice cream."
+            },
+            {
+                "concept": "we want cake",
+                "label": "We want cake."
+            },
+            {
+                "concept": "you want sugar",
+                "label": "You want sugar.",
+                "tip": "plural"
+            },
+            {
+                "concept": "they want a cookie",
+                "label": "They want a cookie."
+            }
         ],
-        "en": "I want coffee.",
-        "fi": "Minä haluan kahvia.|Haluan kahvia.;;'kahvia' is the partitive case of 'kahvi'",
-        "nl": "Ik wil koffie."
-    },
-    "you want milk": {
-        "roots": [
-            "to want",
-            "milk"
+        "fi": [
+            {
+                "concept": "to want",
+                "label": {
+                    "infinitive": "haluta",
+                    "singular": {
+                        "first person": "minä haluan",
+                        "second person": "sinä haluat",
+                        "third person": "hän haluaa"
+                    },
+                    "plural": {
+                        "first person": "me haluamme",
+                        "second person": "te haluatte",
+                        "third person": "he haluavat"
+                    }
+                },
+                "note": "haluta is verityyppi 4"
+            },
+            {
+                "concept": "i want coffee",
+                "label": [
+                    "Minä haluan kahvia.",
+                    "Haluan kahvia."
+                ],
+                "note": "'kahvia' is the partitive case of 'kahvi'"
+            },
+            {
+                "concept": "you want milk",
+                "label": "Sinä haluat maitoa.",
+                "note": "'maitoa' is the partitive case of 'maito'"
+            },
+            {
+                "concept": "she wants ice cream",
+                "label": "Hän haluaa jäätelöä.",
+                "note": "'jäätelöä is the partitive case of 'jäätelö'",
+                "tip": "feminine"
+            },
+            {
+                "concept": "we want cake",
+                "label": "Me haluamme kakkua.",
+                "note": "'kakkua' is the partitive case of 'kakku'"
+            },
+            {
+                "concept": "you want sugar",
+                "label": "Te haluatte sokeria.",
+                "note": "'sokeria' is the partitive case of 'sokeri'"
+            },
+            {
+                "concept": "they want a cookie",
+                "label": "He haluavat keksiä.",
+                "note": "'keksiä' is the partitive case of 'keksi'"
+            }
         ],
-        "en": "You want milk.;singular",
-        "fi": "Sinä haluat maitoa.;;'maitoa' is the partitive case of 'maito'",
-        "nl": "Jij wilt melk.|Jij wil melk."
-    },
-    "she wants ice cream": {
-        "roots": [
-            "to want",
-            "ice cream"
-        ],
-        "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;feminine;'jäätelöä is the partitive case of 'jäätelö'",
-        "nl": "Zij wil ijs."
-    },
-    "we want cake": {
-        "roots": [
-            "to want",
-            "cake"
-        ],
-        "en": "We want cake.",
-        "fi": "Me haluamme kakkua.;;'kakkua' is the partitive case of 'kakku'",
-        "nl": "Wij willen taart."
-    },
-    "you want sugar": {
-        "roots": [
-            "to want",
-            "sugar"
-        ],
-        "en": "You want sugar.;plural",
-        "fi": "Te haluatte sokeria.;;'sokeria' is the partitive case of 'sokeri'",
-        "nl": "Jullie willen suiker."
-    },
-    "they want a cookie": {
-        "roots": [
-            "to want",
-            "cookie"
-        ],
-        "en": "They want a cookie.",
-        "fi": "He haluavat keksiä.;;'keksiä' is the partitive case of 'keksi'",
-        "nl": "Zij willen een koekje."
+        "nl": [
+            {
+                "concept": "to want",
+                "label": {
+                    "infinitive": "willen",
+                    "singular": {
+                        "first person": "ik wil",
+                        "second person": [
+                            "jij wilt",
+                            "jij wil"
+                        ],
+                        "third person": {
+                            "feminine": "zij wil",
+                            "masculine": "hij wil"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij willen",
+                        "second person": "jullie willen",
+                        "third person": "zij willen"
+                    }
+                }
+            },
+            {
+                "concept": "i want coffee",
+                "label": "Ik wil koffie."
+            },
+            {
+                "concept": "you want milk",
+                "label": [
+                    "Jij wilt melk.",
+                    "Jij wil melk."
+                ]
+            },
+            {
+                "concept": "she wants ice cream",
+                "label": "Zij wil ijs."
+            },
+            {
+                "concept": "we want cake",
+                "label": "Wij willen taart."
+            },
+            {
+                "concept": "you want sugar",
+                "label": "Jullie willen suiker."
+            },
+            {
+                "concept": "they want a cookie",
+                "label": "Zij willen een koekje."
+            }
+        ]
     }
 }

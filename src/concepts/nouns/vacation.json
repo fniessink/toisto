@@ -1,7 +1,25 @@
 {
-    "vacation": {
-        "en": "vacation",
-        "fi": "loma",
-        "nl": "de vakantie"
+    "concepts": {
+        "vacation": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "vacation",
+                "label": "vacation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "vacation",
+                "label": "loma"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "vacation",
+                "label": "de vakantie"
+            }
+        ]
     }
 }

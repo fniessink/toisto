@@ -1,17 +1,36 @@
 {
-    "hawk": {
-        "hypernym": "bird",
-        "en": {
-            "singular": "hawk",
-            "plural": "hawks"
-        },
-        "fi": {
-            "singular": "haukka",
-            "plural": "haukat"
-        },
-        "nl": {
-            "singular": "de valk",
-            "plural": "de valken"
+    "concepts": {
+        "hawk": {
+            "hypernym": "bird"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hawk",
+                "label": {
+                    "singular": "hawk",
+                    "plural": "hawks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hawk",
+                "label": {
+                    "singular": "haukka",
+                    "plural": "haukat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hawk",
+                "label": {
+                    "singular": "de valk",
+                    "plural": "de valken"
+                }
+            }
+        ]
     }
 }

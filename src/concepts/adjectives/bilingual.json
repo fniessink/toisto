@@ -1,18 +1,37 @@
 {
-    "bilingual": {
-        "involves": "language",
-        "roots": {
-            "fi": [
-                "2",
-                "language"
-            ],
-            "nl": [
-                "2",
-                "language"
-            ]
-        },
-        "en": "bilingual",
-        "fi": "kaksikielinen",
-        "nl": "tweetalig"
+    "concepts": {
+        "bilingual": {
+            "involves": "language",
+            "roots": {
+                "fi": [
+                    "2",
+                    "language"
+                ],
+                "nl": [
+                    "2",
+                    "language"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bilingual",
+                "label": "bilingual"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bilingual",
+                "label": "kaksikielinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bilingual",
+                "label": "tweetalig"
+            }
+        ]
     }
 }

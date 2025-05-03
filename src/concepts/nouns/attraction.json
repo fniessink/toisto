@@ -1,10 +1,29 @@
 {
-    "attraction": {
-        "en": "attraction",
-        "fi": "nähtävyys",
+    "concepts": {
+        "attraction": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "attraction",
+                "label": "attraction"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "attraction",
+                "label": "nähtävyys"
+            }
+        ],
         "nl": [
-            "de attractie",
-            "de bezienswaardigheid"
+            {
+                "concept": "attraction",
+                "label": "de attractie"
+            },
+            {
+                "concept": "attraction",
+                "label": "de bezienswaardigheid"
+            }
         ]
     }
 }

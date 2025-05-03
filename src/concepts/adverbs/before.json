@@ -1,7 +1,28 @@
 {
-    "before": {
-        "en": "before",
-        "fi": "ennen kuin",
-        "nl": "voordat"
+    "concepts": {
+        "before": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "before",
+                    "prior to"
+                ],
+                "label": "before"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "before",
+                "label": "ennen kuin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "before",
+                "label": "voordat"
+            }
+        ]
     }
 }

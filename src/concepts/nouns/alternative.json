@@ -1,7 +1,25 @@
 {
-    "alternative": {
-        "en": "alternative",
-        "fi": "vaihtoehto",
-        "nl": "het alternatief"
+    "concepts": {
+        "alternative": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "alternative",
+                "label": "alternative"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "alternative",
+                "label": "vaihtoehto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "alternative",
+                "label": "het alternatief"
+            }
+        ]
     }
 }

@@ -1,12 +1,36 @@
 {
-    "floorball": {
-        "hypernym": "sport",
-        "en": "floorball",
-        "fi": [
-            "salibandy",
-            "sähly",
-            "sali*"
+    "concepts": {
+        "floorball": {
+            "hypernym": "sport"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "floorball",
+                "label": "floorball"
+            }
         ],
-        "nl": "het floorball"
+        "fi": [
+            {
+                "concept": "floorball",
+                "label": "salibandy"
+            },
+            {
+                "concept": "floorball",
+                "label": "sähly"
+            },
+            {
+                "concept": "floorball",
+                "label": "sali",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "floorball",
+                "label": "het floorball"
+            }
+        ]
     }
 }

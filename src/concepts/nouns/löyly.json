@@ -1,23 +1,65 @@
 {
-    "löyly": {
-        "en": "(the steam that rises from the sauna stove)",
-        "fi": "löyly",
-        "nl": "(de waterdamp in de sauna)"
-    },
-    "löylykauha": {
-        "roots": {
-            "fi": "löyly"
+    "concepts": {
+        "löyly": {},
+        "löylykauha": {
+            "roots": {
+                "fi": "löyly"
+            }
         },
-        "en": "(a scoop for throwing water on the sauna stove)",
-        "fi": "löylykauha",
-        "nl": "(een schep om water op de saunakachel te gooien)"
+        "lölykiulu": {
+            "roots": {
+                "fi": "löyly"
+            }
+        }
     },
-    "lölykiulu": {
-        "roots": {
-            "fi": "löyly"
-        },
-        "en": "(a wooden bucket with one longer slat as a handle, used for water in a sauna)",
-        "fi": "löylykiulu",
-        "nl": "(een houten teil met één rechtopstaand handvat voor water in de sauna)"
+    "labels": {
+        "en": [
+            {
+                "concept": "löyly",
+                "label": "the steam that rises from the sauna stove",
+                "meaning-only": true
+            },
+            {
+                "concept": "löylykauha",
+                "label": "a scoop for throwing water on the sauna stove",
+                "meaning-only": true
+            },
+            {
+                "concept": "lölykiulu",
+                "label": "a wooden bucket with one longer slat as a handle, used for water in a sauna",
+                "meaning-only": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "löyly",
+                "label": "löyly"
+            },
+            {
+                "concept": "löylykauha",
+                "label": "löylykauha"
+            },
+            {
+                "concept": "lölykiulu",
+                "label": "löylykiulu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "löyly",
+                "label": "de waterdamp in de sauna",
+                "meaning-only": true
+            },
+            {
+                "concept": "löylykauha",
+                "label": "een schep om water op de saunakachel te gooien",
+                "meaning-only": true
+            },
+            {
+                "concept": "lölykiulu",
+                "label": "een houten teil met één rechtopstaand handvat voor water in de sauna",
+                "meaning-only": true
+            }
+        ]
     }
 }

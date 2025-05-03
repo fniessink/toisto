@@ -1,8 +1,27 @@
 {
-    "to count": {
-        "involves": "number",
-        "en": "to count",
-        "fi": "laskea",
-        "nl": "tellen"
+    "concepts": {
+        "to count": {
+            "involves": "number"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to count",
+                "label": "to count"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to count",
+                "label": "laskea"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to count",
+                "label": "tellen"
+            }
+        ]
     }
 }

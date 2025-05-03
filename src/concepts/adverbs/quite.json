@@ -1,11 +1,34 @@
 {
-    "quite": {
-        "en": "quite",
-        "fi": "melko",
+    "concepts": {
+        "quite": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "quite",
+                "label": "quite"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "quite",
+                "label": "melko"
+            }
+        ],
         "nl": [
-            "tamelijk",
-            "nogal",
-            "vrij;tamelijk, nogal"
+            {
+                "concept": "quite",
+                "label": "tamelijk"
+            },
+            {
+                "concept": "quite",
+                "label": "nogal"
+            },
+            {
+                "concept": "quite",
+                "label": "vrij",
+                "tip": "tamelijk, nogal"
+            }
         ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "personal identification number": {
-        "en": "personal identification number",
-        "fi": "tunnusluku",
-        "nl": "de pincode"
+    "concepts": {
+        "personal identification number": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "personal identification number",
+                "label": "personal identification number"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "personal identification number",
+                "label": "tunnusluku"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "personal identification number",
+                "label": "de pincode"
+            }
+        ]
     }
 }

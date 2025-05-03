@@ -1,7 +1,25 @@
 {
-    "next": {
-        "en": "next",
-        "fi": "seuraavaksi",
-        "nl": "vervolgens"
+    "concepts": {
+        "next": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "next",
+                "label": "next"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "next",
+                "label": "seuraavaksi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "next",
+                "label": "vervolgens"
+            }
+        ]
     }
 }

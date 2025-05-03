@@ -1,8 +1,27 @@
 {
-    "and": {
-        "example": "food and drink",
-        "en": "and",
-        "fi": "ja",
-        "nl": "en"
+    "concepts": {
+        "and": {
+            "example": "food and drink"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "and",
+                "label": "and"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "and",
+                "label": "ja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "and",
+                "label": "en"
+            }
+        ]
     }
 }

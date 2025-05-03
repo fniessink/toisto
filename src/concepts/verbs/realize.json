@@ -1,7 +1,25 @@
 {
-    "to realize (become aware of something)": {
-        "en": "to realize",
-        "fi": "tajuta",
-        "nl": "beseffen"
+    "concepts": {
+        "to realize (become aware of something)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to realize (become aware of something)",
+                "label": "to realize"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to realize (become aware of something)",
+                "label": "tajuta"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to realize (become aware of something)",
+                "label": "beseffen"
+            }
+        ]
     }
 }

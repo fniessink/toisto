@@ -1,10 +1,29 @@
 {
-    "helpdesk": {
-        "en": "helpdesk",
-        "fi": "neuvonta",
+    "concepts": {
+        "helpdesk": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "helpdesk",
+                "label": "helpdesk"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "helpdesk",
+                "label": "neuvonta"
+            }
+        ],
         "nl": [
-            "de informatiebalie",
-            "de helpdesk"
+            {
+                "concept": "helpdesk",
+                "label": "de informatiebalie"
+            },
+            {
+                "concept": "helpdesk",
+                "label": "de helpdesk"
+            }
         ]
     }
 }

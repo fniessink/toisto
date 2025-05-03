@@ -1,17 +1,36 @@
 {
-    "moss": {
-        "hypernym": "plant",
-        "en": {
-            "singular": "moss",
-            "plural": "mosses"
-        },
-        "fi": {
-            "singular": "sammal",
-            "plural": "sammalet"
-        },
-        "nl": {
-            "singular": "het mos",
-            "plural": "de mossen"
+    "concepts": {
+        "moss": {
+            "hypernym": "plant"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "moss",
+                "label": {
+                    "singular": "moss",
+                    "plural": "mosses"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "moss",
+                "label": {
+                    "singular": "sammal",
+                    "plural": "sammalet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "moss",
+                "label": {
+                    "singular": "het mos",
+                    "plural": "de mossen"
+                }
+            }
+        ]
     }
 }

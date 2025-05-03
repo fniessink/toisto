@@ -1,16 +1,34 @@
 {
-    "university": {
-        "en": {
-            "singular": "university",
-            "plural": "universities"
-        },
-        "fi": {
-            "singular": "yliopisto",
-            "plural": "yliopistot"
-        },
-        "nl": {
-            "singular": "de universiteit",
-            "plural": "de universiteiten"
-        }
+    "concepts": {
+        "university": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "university",
+                "label": {
+                    "singular": "university",
+                    "plural": "universities"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "university",
+                "label": {
+                    "singular": "yliopisto",
+                    "plural": "yliopistot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "university",
+                "label": {
+                    "singular": "de universiteit",
+                    "plural": "de universiteiten"
+                }
+            }
+        ]
     }
 }

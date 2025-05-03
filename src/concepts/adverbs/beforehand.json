@@ -1,16 +1,48 @@
 {
-    "beforehand": {
+    "concepts": {
+        "beforehand": {}
+    },
+    "labels": {
         "en": [
-            "beforehand",
-            "in advance"
+            {
+                "concept": "beforehand",
+                "label": "beforehand"
+            },
+            {
+                "concept": "beforehand",
+                "label": "in advance"
+            }
         ],
-        "fi": "etukäteen",
+        "fi": [
+            {
+                "concept": "beforehand",
+                "label": "etukäteen"
+            }
+        ],
         "nl": [
-            "van tevoren|tevoren",
-            "vooruit",
-            "bij voorbaat",
-            "vooraf",
-            "op voorhand"
+            {
+                "concept": "beforehand",
+                "label": [
+                    "van tevoren",
+                    "tevoren"
+                ]
+            },
+            {
+                "concept": "beforehand",
+                "label": "vooruit"
+            },
+            {
+                "concept": "beforehand",
+                "label": "bij voorbaat"
+            },
+            {
+                "concept": "beforehand",
+                "label": "vooraf"
+            },
+            {
+                "concept": "beforehand",
+                "label": "op voorhand"
+            }
         ]
     }
 }

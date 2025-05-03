@@ -1,28 +1,56 @@
 {
-    "horse": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "horse",
-            "plural": "horses"
+    "concepts": {
+        "horse": {
+            "hypernym": "animal"
         },
-        "fi": {
-            "singular": "hevonen",
-            "plural": "hevoset"
-        },
-        "nl": {
-            "singular": "het paard",
-            "plural": "de paarden"
+        "horseriding": {
+            "hypernym": "outdoor activity",
+            "involves": "horse",
+            "roots": {
+                "en": "horse",
+                "nl": "horse"
+            }
         }
     },
-    "horseriding": {
-        "hypernym": "outdoor activity",
-        "involves": "horse",
-        "roots": {
-            "en": "horse",
-            "nl": "horse"
-        },
-        "en": "horseriding",
-        "fi": "ratsastus",
-        "nl": "het paardrijden"
+    "labels": {
+        "en": [
+            {
+                "concept": "horse",
+                "label": {
+                    "singular": "horse",
+                    "plural": "horses"
+                }
+            },
+            {
+                "concept": "horseriding",
+                "label": "horseriding"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "horse",
+                "label": {
+                    "singular": "hevonen",
+                    "plural": "hevoset"
+                }
+            },
+            {
+                "concept": "horseriding",
+                "label": "ratsastus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "horse",
+                "label": {
+                    "singular": "het paard",
+                    "plural": "de paarden"
+                }
+            },
+            {
+                "concept": "horseriding",
+                "label": "het paardrijden"
+            }
+        ]
     }
 }

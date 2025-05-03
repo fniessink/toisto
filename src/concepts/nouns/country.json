@@ -1,29 +1,66 @@
 {
-    "country": {
-        "en": {
-            "singular": "country",
-            "plural": "countries"
+    "concepts": {
+        "country": {},
+        "neighboring country": {
+            "hypernym": "country",
+            "roots": "country"
         },
-        "fi": {
-            "singular": "maa;geography",
-            "plural": "maat;geography"
-        },
-        "nl": {
-            "singular": "het land",
-            "plural": "de landen"
+        "countryside": {
+            "roots": "country"
         }
     },
-    "neighboring country": {
-        "hypernym": "country",
-        "roots": "country",
-        "en": "neighboring country",
-        "fi": "naapurimaa",
-        "nl": "het buurland"
-    },
-    "countryside": {
-        "roots": "country",
-        "en": "countryside",
-        "fi": "maaseutu",
-        "nl": "het platteland"
+    "labels": {
+        "en": [
+            {
+                "concept": "country",
+                "label": {
+                    "singular": "country",
+                    "plural": "countries"
+                }
+            },
+            {
+                "concept": "neighboring country",
+                "label": "neighboring country"
+            },
+            {
+                "concept": "countryside",
+                "label": "countryside"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "country",
+                "label": {
+                    "singular": "maa",
+                    "plural": "maat"
+                },
+                "tip": "geography"
+            },
+            {
+                "concept": "neighboring country",
+                "label": "naapurimaa"
+            },
+            {
+                "concept": "countryside",
+                "label": "maaseutu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "country",
+                "label": {
+                    "singular": "het land",
+                    "plural": "de landen"
+                }
+            },
+            {
+                "concept": "neighboring country",
+                "label": "het buurland"
+            },
+            {
+                "concept": "countryside",
+                "label": "het platteland"
+            }
+        ]
     }
 }

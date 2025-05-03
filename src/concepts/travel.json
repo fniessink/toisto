@@ -1,468 +1,861 @@
 {
-    "tourism": {
-        "en": "tourism",
-        "fi": "matkailu",
-        "nl": "het toerisme"
-    },
-    "entry fee": {
-        "hypernym": "price",
-        "roots": {
-            "nl": "price"
+    "concepts": {
+        "tourism": {},
+        "entry fee": {
+            "hypernym": "price",
+            "roots": {
+                "nl": "price"
+            }
         },
+        "free (no payment)": {},
+        "opening hours": {
+            "roots": {
+                "en": "hour",
+                "fi": "time",
+                "nl": "time"
+            }
+        },
+        "flight": {
+            "involves": "airplane"
+        },
+        "helicopter": {
+            "hypernym": "means of transportation"
+        },
+        "port": {},
+        "airport": {
+            "roots": {
+                "en": "port",
+                "fi": [
+                    "flight",
+                    "station"
+                ]
+            }
+        },
+        "airplane": {
+            "hypernym": "means of transportation"
+        },
+        "boat": {
+            "hypernym": "means of transportation"
+        },
+        "ship": {
+            "hypernym": "means of transportation"
+        },
+        "metro": {
+            "hypernym": "means of transportation"
+        },
+        "tram": {
+            "hypernym": "means of transportation",
+            "roots": {
+                "en": "street"
+            }
+        },
+        "bus": {
+            "hypernym": "means of transportation",
+            "roots": {
+                "fi": "car"
+            }
+        },
+        "driver": {
+            "roots": {
+                "en": "to drive"
+            }
+        },
+        "motorist": {
+            "hypernym": "driver",
+            "involves": "car",
+            "roots": {
+                "fi": "car",
+                "nl": "car"
+            }
+        },
+        "bus driver": {
+            "hypernym": "driver",
+            "involves": "bus",
+            "roots": [
+                "bus",
+                "driver"
+            ]
+        },
+        "stop": {},
+        "bus stop": {
+            "hypernym": "stop",
+            "involves": "bus",
+            "roots": [
+                "bus",
+                "stop"
+            ]
+        },
+        "public transportation": {
+            "hypernym": "means of transportation"
+        },
+        "customs": {},
+        "parking garage": {
+            "hypernym": [
+                "parking",
+                "building"
+            ],
+            "roots": {
+                "en": "parking"
+            }
+        },
+        "parking spot": {
+            "hypernym": "parking",
+            "roots": {
+                "en": "parking",
+                "fi": "place",
+                "nl": "place"
+            }
+        },
+        "parking": {
+            "involves": "car"
+        },
+        "taxi": {
+            "hypernym": "car"
+        },
+        "means of transportation": {},
+        "delivery van": {
+            "hypernym": "means of transportation",
+            "roots": {
+                "fi": "car"
+            }
+        },
+        "lorry": {
+            "hypernym": "means of transportation",
+            "roots": {
+                "fi": "car"
+            }
+        },
+        "motorcycle": {
+            "hypernym": "means of transportation",
+            "roots": {
+                "fi": "bicycle",
+                "nl": "bicycle"
+            }
+        },
+        "giving directions": {
+            "roots": {
+                "fi": "road",
+                "nl": "road"
+            }
+        },
+        "it is near": {
+            "antonym": "it is far",
+            "roots": "near"
+        },
+        "it is far": {
+            "antonym": "it is near",
+            "roots": "far"
+        },
+        "straight ahead": {},
+        "go straight ahead on Mariankatu": {
+            "roots": [
+                "to go",
+                "straight ahead"
+            ]
+        },
+        "turn left": {},
+        "turn right": {},
+        "go to Mariankatu": {},
+        "crossroads": {},
+        "turn left at the crossroads": {
+            "roots": [
+                "turn left",
+                "crossroads"
+            ]
+        },
+        "street corner": {
+            "roots": [
+                "street",
+                "corner"
+            ]
+        }
+    },
+    "labels": {
         "en": [
-            "entry fee",
-            "entrance fee"
+            {
+                "concept": "tourism",
+                "label": "tourism"
+            },
+            {
+                "concept": "entry fee",
+                "label": "entry fee"
+            },
+            {
+                "concept": "entry fee",
+                "label": "entrance fee"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "free"
+            },
+            {
+                "concept": "opening hours",
+                "label": "opening hours"
+            },
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "flight",
+                    "plural": "flights"
+                }
+            },
+            {
+                "concept": "helicopter",
+                "label": "helicopter"
+            },
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "port",
+                    "plural": "ports"
+                }
+            },
+            {
+                "concept": "airport",
+                "label": "airport"
+            },
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": [
+                        "airplane",
+                        "plane"
+                    ],
+                    "plural": [
+                        "airplanes",
+                        "planes"
+                    ]
+                }
+            },
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "boat",
+                    "plural": "boats"
+                }
+            },
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "ship",
+                    "plural": "ships"
+                }
+            },
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "metro",
+                    "plural": "metros"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "tram",
+                    "plural": "trams"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "streetcar",
+                    "plural": "streetcars"
+                }
+            },
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "bus",
+                    "plural": "buses"
+                }
+            },
+            {
+                "concept": "driver",
+                "label": "driver"
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "motorist",
+                    "plural": "motorists"
+                }
+            },
+            {
+                "concept": "bus driver",
+                "label": "bus driver"
+            },
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "stop",
+                    "plural": "stops"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "bus stop"
+            },
+            {
+                "concept": "public transportation",
+                "label": [
+                    "public transportation",
+                    "public transport"
+                ]
+            },
+            {
+                "concept": "customs",
+                "label": "customs"
+            },
+            {
+                "concept": "parking garage",
+                "label": "parking garage"
+            },
+            {
+                "concept": "parking spot",
+                "label": "parking spot"
+            },
+            {
+                "concept": "parking",
+                "label": "parking"
+            },
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "taxi",
+                    "plural": "taxis"
+                }
+            },
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "cab",
+                    "plural": "cabs"
+                }
+            },
+            {
+                "concept": "means of transportation",
+                "label": "means of transportation"
+            },
+            {
+                "concept": "delivery van",
+                "label": "delivery van"
+            },
+            {
+                "concept": "lorry",
+                "label": "lorry"
+            },
+            {
+                "concept": "lorry",
+                "label": "truck"
+            },
+            {
+                "concept": "motorcycle",
+                "label": "motorcycle"
+            },
+            {
+                "concept": "giving directions",
+                "label": "giving directions"
+            },
+            {
+                "concept": "it is near",
+                "label": "It is near."
+            },
+            {
+                "concept": "it is far",
+                "label": "It is far."
+            },
+            {
+                "concept": "straight ahead",
+                "label": "straight ahead"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Go straight ahead on Mariankatu."
+            },
+            {
+                "concept": "turn left",
+                "label": "Turn left."
+            },
+            {
+                "concept": "turn right",
+                "label": "Turn right."
+            },
+            {
+                "concept": "go to Mariankatu",
+                "label": "Go to Mariankatu."
+            },
+            {
+                "concept": "crossroads",
+                "label": "crossroads"
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Turn left at the crossroads."
+            },
+            {
+                "concept": "street corner",
+                "label": "street corner"
+            }
         ],
-        "fi": "pääsymaksu",
-        "nl": "de toegangsprijs"
-    },
-    "free (no payment)": {
-        "en": "free",
         "fi": [
-            "ilmainen",
-            "vapaa pääsy",
-            "maksuton"
+            {
+                "concept": "tourism",
+                "label": "matkailu"
+            },
+            {
+                "concept": "entry fee",
+                "label": "pääsymaksu"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "ilmainen"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "vapaa pääsy"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "maksuton"
+            },
+            {
+                "concept": "opening hours",
+                "label": "aukioloajat"
+            },
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "lento",
+                    "plural": "lennot"
+                }
+            },
+            {
+                "concept": "helicopter",
+                "label": "helikopteri"
+            },
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "satama",
+                    "plural": "satamat"
+                }
+            },
+            {
+                "concept": "airport",
+                "label": "lentoasema"
+            },
+            {
+                "concept": "airport",
+                "label": "lentokenttä"
+            },
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": "lentokone",
+                    "plural": "lentokoneet"
+                }
+            },
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "vene",
+                    "plural": "veneet"
+                }
+            },
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "laiva",
+                    "plural": "laivat"
+                }
+            },
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "metro",
+                    "plural": "metrot"
+                }
+            },
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "maanalainen",
+                    "plural": "maanalaiset"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "raitiovaunu",
+                    "plural": "raitiovaunut"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "ratikka",
+                    "plural": "ratikat"
+                },
+                "colloquial": true
+            },
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "bussi",
+                    "plural": "bussit"
+                }
+            },
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "linja-auto",
+                    "plural": "linja-autot"
+                }
+            },
+            {
+                "concept": "driver",
+                "label": "kuljettaja"
+            },
+            {
+                "concept": "driver",
+                "label": "kuski"
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "autoilija",
+                    "plural": "autoilijat"
+                }
+            },
+            {
+                "concept": "bus driver",
+                "label": "linja-autonkuljettaja"
+            },
+            {
+                "concept": "bus driver",
+                "label": "bussikuski"
+            },
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "pysäkki",
+                    "plural": "pysäkit"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "linja-autopysäkki"
+            },
+            {
+                "concept": "bus stop",
+                "label": "bussipysäkki"
+            },
+            {
+                "concept": "public transportation",
+                "label": "joukkoliikenne"
+            },
+            {
+                "concept": "public transportation",
+                "label": "julkinen liikenne"
+            },
+            {
+                "concept": "customs",
+                "label": "tulli"
+            },
+            {
+                "concept": "parking garage",
+                "label": "parkkihalli"
+            },
+            {
+                "concept": "parking spot",
+                "label": "parkkipaikka"
+            },
+            {
+                "concept": "parking",
+                "label": "pysäköinti"
+            },
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "taksi",
+                    "plural": "taksit"
+                }
+            },
+            {
+                "concept": "means of transportation",
+                "label": {
+                    "singular": "kulkuväline",
+                    "plural": "kulkuvälineet"
+                }
+            },
+            {
+                "concept": "delivery van",
+                "label": "pakettiauto"
+            },
+            {
+                "concept": "lorry",
+                "label": "rekka-auto"
+            },
+            {
+                "concept": "motorcycle",
+                "label": [
+                    "moottoripyörä",
+                    "pyörä"
+                ]
+            },
+            {
+                "concept": "giving directions",
+                "label": "tien neuvominen"
+            },
+            {
+                "concept": "it is near",
+                "label": "Se on lähellä."
+            },
+            {
+                "concept": "it is far",
+                "label": "Se on kaukana."
+            },
+            {
+                "concept": "straight ahead",
+                "label": "suoraan eteenpäin"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Mene Mariankatua suoraan eteenpäin."
+            },
+            {
+                "concept": "turn left",
+                "label": "Käänny vasemmalle."
+            },
+            {
+                "concept": "turn right",
+                "label": "Käänny oikealle."
+            },
+            {
+                "concept": "go to Mariankatu",
+                "label": "Käänny Mariankadulle."
+            },
+            {
+                "concept": "crossroads",
+                "label": "risteys"
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Käänny risteyksestä vasemmalle."
+            },
+            {
+                "concept": "street corner",
+                "label": "kadunkulma"
+            }
         ],
-        "nl": "gratis"
-    },
-    "opening hours": {
-        "roots": {
-            "en": "hour",
-            "fi": "time",
-            "nl": "time"
-        },
-        "en": "opening hours",
-        "fi": "aukioloajat",
-        "nl": "de openingstijden"
-    },
-    "flight": {
-        "involves": "airplane",
-        "en": {
-            "singular": "flight",
-            "plural": "flights"
-        },
-        "fi": {
-            "singular": "lento",
-            "plural": "lennot"
-        },
-        "nl": {
-            "singular": "de vlucht",
-            "plural": "de vluchten"
-        }
-    },
-    "helicopter": {
-        "hypernym": "means of transportation",
-        "en": "helicopter",
-        "fi": "helikopteri",
-        "nl": "de helikopter"
-    },
-    "port": {
-        "en": {
-            "singular": "port",
-            "plural": "ports"
-        },
-        "fi": {
-            "singular": "satama",
-            "plural": "satamat"
-        },
-        "nl": {
-            "singular": "de haven",
-            "plural": "de havens"
-        }
-    },
-    "airport": {
-        "roots": {
-            "en": "port",
-            "fi": [
-                "flight",
-                "station"
-            ]
-        },
-        "en": "airport",
-        "fi": [
-            "lentoasema",
-            "lentokenttä"
-        ],
-        "nl": "het vliegveld"
-    },
-    "airplane": {
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "airplane|plane",
-            "plural": "airplanes|planes"
-        },
-        "fi": {
-            "singular": "lentokone",
-            "plural": "lentokoneet"
-        },
-        "nl": {
-            "singular": "het vliegtuig",
-            "plural": "de vliegtuigen"
-        }
-    },
-    "boat": {
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "boat",
-            "plural": "boats"
-        },
-        "fi": {
-            "singular": "vene",
-            "plural": "veneet"
-        },
-        "nl": {
-            "singular": "de boot",
-            "plural": "de boten"
-        }
-    },
-    "ship": {
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "ship",
-            "plural": "ships"
-        },
-        "fi": {
-            "singular": "laiva",
-            "plural": "laivat"
-        },
-        "nl": {
-            "singular": "het schip",
-            "plural": "de schepen"
-        }
-    },
-    "metro": {
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "metro",
-            "plural": "metros"
-        },
-        "fi": {
-            "singular": [
-                "metro",
-                "maanalainen"
-            ],
-            "plural": [
-                "metrot",
-                "maanalaiset"
-            ]
-        },
-        "nl": {
-            "singular": "de metro",
-            "plural": "de metro's"
-        }
-    },
-    "tram": {
-        "hypernym": "means of transportation",
-        "roots": {
-            "en": "street"
-        },
-        "en": {
-            "singular": [
-                "tram",
-                "streetcar"
-            ],
-            "plural": [
-                "trams",
-                "streetcars"
-            ]
-        },
-        "fi": {
-            "singular": [
-                "raitiovaunu",
-                "ratikka*"
-            ],
-            "plural": [
-                "raitiovaunut",
-                "ratikat*"
-            ]
-        },
-        "nl": {
-            "singular": "de tram",
-            "plural": "de trams"
-        }
-    },
-    "bus": {
-        "hypernym": "means of transportation",
-        "roots": {
-            "fi": "car"
-        },
-        "en": {
-            "singular": "bus",
-            "plural": "buses"
-        },
-        "fi": {
-            "singular": [
-                "bussi",
-                "linja-auto"
-            ],
-            "plural": [
-                "bussit",
-                "linja-autot"
-            ]
-        },
-        "nl": {
-            "singular": "de bus",
-            "plural": "de bussen"
-        }
-    },
-    "driver": {
-        "roots": {
-            "en": "to drive"
-        },
-        "en": "driver",
-        "fi": [
-            "kuljettaja",
-            "kuski"
-        ],
-        "nl": "de chauffeur"
-    },
-    "motorist": {
-        "hypernym": "driver",
-        "involves": "car",
-        "roots": {
-            "fi": "car",
-            "nl": "car"
-        },
-        "en": {
-            "singular": "motorist",
-            "plural": "motorists"
-        },
-        "fi": {
-            "singular": "autoilija",
-            "plural": "autoilijat"
-        },
-        "nl": {
-            "singular": "de automobilist",
-            "plural": "de automobilisten"
-        }
-    },
-    "bus driver": {
-        "hypernym": "driver",
-        "involves": "bus",
-        "roots": [
-            "bus",
-            "driver"
-        ],
-        "en": "bus driver",
-        "fi": [
-            "linja-autonkuljettaja",
-            "bussikuski"
-        ],
-        "nl": "de buschauffeur"
-    },
-    "stop": {
-        "en": {
-            "singular": "stop",
-            "plural": "stops"
-        },
-        "fi": {
-            "singular": "pysäkki",
-            "plural": "pysäkit"
-        },
-        "nl": {
-            "singular": "de halte",
-            "plural": "de haltes"
-        }
-    },
-    "bus stop": {
-        "hypernym": "stop",
-        "involves": "bus",
-        "roots": [
-            "bus",
-            "stop"
-        ],
-        "en": "bus stop",
-        "fi": [
-            "linja-autopysäkki",
-            "bussipysäkki"
-        ],
-        "nl": "de bushalte"
-    },
-    "public transportation": {
-        "hypernym": "means of transportation",
-        "en": "public transportation|public transport",
-        "fi": [
-            "joukkoliikenne",
-            "julkinen liikenne"
-        ],
-        "nl": "het openbaar vervoer"
-    },
-    "customs": {
-        "en": "customs",
-        "fi": "tulli",
-        "nl": "de douane"
-    },
-    "parking garage": {
-        "hypernym": [
-            "parking",
-            "building"
-        ],
-        "roots": {
-            "en": "parking"
-        },
-        "en": "parking garage",
-        "fi": "parkkihalli",
-        "nl": "de parkeergarage"
-    },
-    "parking spot": {
-        "hypernym": "parking",
-        "roots": {
-            "en": "parking",
-            "fi": "place",
-            "nl": "place"
-        },
-        "en": "parking spot",
-        "fi": "parkkipaikka",
-        "nl": "de parkeerplaats"
-    },
-    "parking": {
-        "involves": "car",
-        "en": "parking",
-        "fi": "pysäköinti",
-        "nl": "de parkeergelegenheid"
-    },
-    "taxi": {
-        "hypernym": "car",
-        "en": {
-            "singular": [
-                "taxi",
-                "cab"
-            ],
-            "plural": [
-                "taxis",
-                "cabs"
-            ]
-        },
-        "fi": {
-            "singular": "taksi",
-            "plural": "taksit"
-        },
-        "nl": {
-            "singular": "de taxi",
-            "plural": "de taxi's"
-        }
-    },
-    "means of transportation": {
-        "en": "means of transportation",
-        "fi": {
-            "singular": "kulkuväline",
-            "plural": "kulkuvälineet"
-        },
-        "nl": {
-            "singular": "het vervoersmiddel",
-            "plural": "de vervoersmiddelen"
-        }
-    },
-    "delivery van": {
-        "hypernym": "means of transportation",
-        "roots": {
-            "fi": "car"
-        },
-        "en": "delivery van",
-        "fi": "pakettiauto",
-        "nl": "de bestelwagen"
-    },
-    "lorry": {
-        "hypernym": "means of transportation",
-        "roots": {
-            "fi": "car"
-        },
-        "en": [
-            "lorry",
-            "truck"
-        ],
-        "fi": "rekka-auto",
-        "nl": "de vrachtwagen"
-    },
-    "motorcycle": {
-        "hypernym": "means of transportation",
-        "roots": {
-            "fi": "bicycle",
-            "nl": "bicycle"
-        },
-        "en": "motorcycle",
-        "fi": "moottoripyörä|pyörä",
-        "nl": "de motorfiets|de motor"
-    },
-    "giving directions": {
-        "roots": {
-            "fi": "road",
-            "nl": "road"
-        },
-        "en": "giving directions",
-        "fi": "tien neuvominen",
-        "nl": "de weg wijzen"
-    },
-    "it is near": {
-        "antonym": "it is far",
-        "roots": "near",
-        "en": "It is near.",
-        "fi": "Se on lähellä.",
         "nl": [
-            "Het is dichtbij.",
-            "Het is in de buurt."
+            {
+                "concept": "tourism",
+                "label": "het toerisme"
+            },
+            {
+                "concept": "entry fee",
+                "label": "de toegangsprijs"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "gratis"
+            },
+            {
+                "concept": "opening hours",
+                "label": "de openingstijden"
+            },
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "de vlucht",
+                    "plural": "de vluchten"
+                }
+            },
+            {
+                "concept": "helicopter",
+                "label": "de helikopter"
+            },
+            {
+                "concept": "port",
+                "label": {
+                    "singular": "de haven",
+                    "plural": "de havens"
+                }
+            },
+            {
+                "concept": "airport",
+                "label": "het vliegveld"
+            },
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": "het vliegtuig",
+                    "plural": "de vliegtuigen"
+                }
+            },
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "de boot",
+                    "plural": "de boten"
+                }
+            },
+            {
+                "concept": "ship",
+                "label": {
+                    "singular": "het schip",
+                    "plural": "de schepen"
+                }
+            },
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "de metro",
+                    "plural": "de metro's"
+                }
+            },
+            {
+                "concept": "tram",
+                "label": {
+                    "singular": "de tram",
+                    "plural": "de trams"
+                }
+            },
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "de bus",
+                    "plural": "de bussen"
+                }
+            },
+            {
+                "concept": "driver",
+                "label": "de chauffeur"
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "de automobilist",
+                    "plural": "de automobilisten"
+                }
+            },
+            {
+                "concept": "bus driver",
+                "label": "de buschauffeur"
+            },
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "de halte",
+                    "plural": "de haltes"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "de bushalte"
+            },
+            {
+                "concept": "public transportation",
+                "label": "het openbaar vervoer"
+            },
+            {
+                "concept": "customs",
+                "label": "de douane"
+            },
+            {
+                "concept": "parking garage",
+                "label": "de parkeergarage"
+            },
+            {
+                "concept": "parking spot",
+                "label": "de parkeerplaats"
+            },
+            {
+                "concept": "parking",
+                "label": "de parkeergelegenheid"
+            },
+            {
+                "concept": "taxi",
+                "label": {
+                    "singular": "de taxi",
+                    "plural": "de taxi's"
+                }
+            },
+            {
+                "concept": "means of transportation",
+                "label": {
+                    "singular": "het vervoersmiddel",
+                    "plural": "de vervoersmiddelen"
+                }
+            },
+            {
+                "concept": "delivery van",
+                "label": "de bestelwagen"
+            },
+            {
+                "concept": "lorry",
+                "label": "de vrachtwagen"
+            },
+            {
+                "concept": "motorcycle",
+                "label": [
+                    "de motorfiets",
+                    "de motor"
+                ]
+            },
+            {
+                "concept": "giving directions",
+                "label": "de weg wijzen"
+            },
+            {
+                "concept": "it is near",
+                "label": "Het is dichtbij."
+            },
+            {
+                "concept": "it is near",
+                "label": "Het is in de buurt."
+            },
+            {
+                "concept": "it is far",
+                "label": "Het is ver."
+            },
+            {
+                "concept": "it is far",
+                "label": "Het is ver weg."
+            },
+            {
+                "concept": "straight ahead",
+                "label": "rechtdoor"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Ga rechtdoor op de Mariankatu."
+            },
+            {
+                "concept": "turn left",
+                "label": "Sla links af."
+            },
+            {
+                "concept": "turn right",
+                "label": "Sla rechts af."
+            },
+            {
+                "concept": "go to Mariankatu",
+                "label": "Ga naar de Mariankatu."
+            },
+            {
+                "concept": "crossroads",
+                "label": "het kruispunt"
+            },
+            {
+                "concept": "turn left at the crossroads",
+                "label": "Sla links af bij het kruispunt."
+            },
+            {
+                "concept": "street corner",
+                "label": "de straathoek"
+            }
         ]
-    },
-    "it is far": {
-        "antonym": "it is near",
-        "roots": "far",
-        "en": "It is far.",
-        "fi": "Se on kaukana.",
-        "nl": [
-            "Het is ver.",
-            "Het is ver weg."
-        ]
-    },
-    "straight ahead": {
-        "en": "straight ahead",
-        "fi": "suoraan eteenpäin",
-        "nl": "rechtdoor"
-    },
-    "go straight ahead on Mariankatu": {
-        "roots": [
-            "to go",
-            "straight ahead"
-        ],
-        "en": "Go straight ahead on Mariankatu.",
-        "fi": "Mene Mariankatua suoraan eteenpäin.",
-        "nl": "Ga rechtdoor op de Mariankatu."
-    },
-    "turn left": {
-        "en": "Turn left.",
-        "fi": "Käänny vasemmalle.",
-        "nl": "Sla links af."
-    },
-    "turn right": {
-        "en": "Turn right.",
-        "fi": "Käänny oikealle.",
-        "nl": "Sla rechts af."
-    },
-    "go to Mariankatu": {
-        "en": "Go to Mariankatu.",
-        "fi": "Käänny Mariankadulle.",
-        "nl": "Ga naar de Mariankatu."
-    },
-    "crossroads": {
-        "en": "crossroads",
-        "fi": "risteys",
-        "nl": "het kruispunt"
-    },
-    "turn left at the crossroads": {
-        "roots": [
-            "turn left",
-            "crossroads"
-        ],
-        "en": "Turn left at the crossroads.",
-        "fi": "Käänny risteyksestä vasemmalle.",
-        "nl": "Sla links af bij het kruispunt."
-    },
-    "street corner": {
-        "roots": [
-            "street",
-            "corner"
-        ],
-        "en": "street corner",
-        "fi": "kadunkulma",
-        "nl": "de straathoek"
     }
 }

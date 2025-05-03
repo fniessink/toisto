@@ -1,7 +1,25 @@
 {
-    "police station": {
-        "en": "police station",
-        "fi": "poliisiasema",
-        "nl": "het politiebureau"
+    "concepts": {
+        "police station": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "police station",
+                "label": "police station"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "police station",
+                "label": "poliisiasema"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "police station",
+                "label": "het politiebureau"
+            }
+        ]
     }
 }

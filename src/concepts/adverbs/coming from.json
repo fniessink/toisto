@@ -1,8 +1,27 @@
 {
-    "coming from": {
-        "example": "she is from the north",
-        "en": "coming from",
-        "fi": "kotoisin",
-        "nl": "komen uit"
+    "concepts": {
+        "coming from": {
+            "example": "she is from the north"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "coming from",
+                "label": "coming from"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "coming from",
+                "label": "kotoisin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "coming from",
+                "label": "komen uit"
+            }
+        ]
     }
 }

@@ -1,20 +1,39 @@
 {
-    "soft": {
-        "antonym": "hard (of an object, resistant to pressure)",
-        "en": {
-            "positive degree": "soft",
-            "comparative degree": "softer",
-            "superlative degree": "softest"
-        },
-        "fi": {
-            "positive degree": "pehmeä",
-            "comparative degree": "pehmeämpi",
-            "superlative degree": "pehmein"
-        },
-        "nl": {
-            "positive degree": "zacht",
-            "comparative degree": "zachter",
-            "superlative degree": "zachtst"
+    "concepts": {
+        "soft": {
+            "antonym": "hard (of an object, resistant to pressure)"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "soft",
+                "label": {
+                    "positive degree": "soft",
+                    "comparative degree": "softer",
+                    "superlative degree": "softest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "soft",
+                "label": {
+                    "positive degree": "pehmeä",
+                    "comparative degree": "pehmeämpi",
+                    "superlative degree": "pehmein"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "soft",
+                "label": {
+                    "positive degree": "zacht",
+                    "comparative degree": "zachter",
+                    "superlative degree": "zachtst"
+                }
+            }
+        ]
     }
 }

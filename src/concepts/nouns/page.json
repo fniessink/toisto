@@ -1,32 +1,65 @@
 {
-    "page": {
-        "holonym": "chapter",
-        "en": {
-            "singular": "page",
-            "plural": "pages"
+    "concepts": {
+        "page": {
+            "holonym": "chapter"
         },
-        "fi": {
-            "singular": "sivu",
-            "plural": "sivut"
-        },
-        "nl": {
-            "singular": "de pagina",
-            "plural": "de pagina's"
+        "web page": {
+            "roots": [
+                "web",
+                "page"
+            ]
         }
     },
-    "web page": {
-        "roots": [
-            "web",
-            "page"
+    "labels": {
+        "en": [
+            {
+                "concept": "page",
+                "label": {
+                    "singular": "page",
+                    "plural": "pages"
+                }
+            },
+            {
+                "concept": "web page",
+                "label": [
+                    "web page",
+                    "webpage"
+                ]
+            }
         ],
-        "en": "web page|webpage",
         "fi": [
-            "verkkosivu",
-            "nettisivu"
+            {
+                "concept": "page",
+                "label": {
+                    "singular": "sivu",
+                    "plural": "sivut"
+                }
+            },
+            {
+                "concept": "web page",
+                "label": "verkkosivu"
+            },
+            {
+                "concept": "web page",
+                "label": "nettisivu"
+            }
         ],
         "nl": [
-            "de webpagina",
-            "de internetpagina"
+            {
+                "concept": "page",
+                "label": {
+                    "singular": "de pagina",
+                    "plural": "de pagina's"
+                }
+            },
+            {
+                "concept": "web page",
+                "label": "de webpagina"
+            },
+            {
+                "concept": "web page",
+                "label": "de internetpagina"
+            }
         ]
     }
 }

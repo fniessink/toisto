@@ -1,57 +1,74 @@
 {
-    "car": {
-        "hypernym": "means of transportation",
-        "en": {
-            "root": {
-                "singular": "car",
-                "plural": "cars"
-            },
-            "diminutive": {
-                "singular": "(little car)",
-                "plural": "(little cars)"
-            }
+    "concepts": {
+        "car": {
+            "hypernym": "means of transportation"
         },
-        "fi": {
-            "root": {
-                "singular": "auto",
-                "plural": "autot"
-            },
-            "diminutive": {
-                "singular": "(pieni auto)",
-                "plural": "(pienet autot)"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": [
-                    "de auto",
-                    "de wagen"
-                ],
-                "plural": [
-                    "de auto's",
-                    "de wagens"
-                ]
-            },
-            "diminutive": {
-                "singular": [
-                    "het autootje",
-                    "het wagentje"
-                ],
-                "plural": [
-                    "de autootjes",
-                    "de wagentjes"
-                ]
+        "dining car": {
+            "holonym": "train",
+            "roots": {
+                "en": "car",
+                "fi": "wagon"
             }
         }
     },
-    "dining car": {
-        "holonym": "train",
-        "roots": {
-            "en": "car",
-            "fi": "wagon"
-        },
-        "en": "dining car",
-        "fi": "ravintolavaunu",
-        "nl": "restauratiewagen"
+    "labels": {
+        "en": [
+            {
+                "concept": "car",
+                "label": {
+                    "singular": "car",
+                    "plural": "cars"
+                }
+            },
+            {
+                "concept": "dining car",
+                "label": "dining car"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "car",
+                "label": {
+                    "singular": "auto",
+                    "plural": "autot"
+                }
+            },
+            {
+                "concept": "dining car",
+                "label": "ravintolavaunu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "car",
+                "label": {
+                    "root": {
+                        "singular": "de auto",
+                        "plural": "de auto's"
+                    },
+                    "diminutive": {
+                        "singular": "het autootje",
+                        "plural": "de autootjes"
+                    }
+                }
+            },
+            {
+                "concept": "car",
+                "label": {
+                    "root": {
+                        "singular": "de wagen",
+                        "plural": "de wagens"
+                    },
+                    "diminutive": {
+                        "singular": "het wagentje",
+                        "plural": "de wagentjes"
+                    }
+                }
+            },
+            {
+                "concept": "dining car",
+                "label": "restauratiewagen"
+            }
+        ]
     }
 }

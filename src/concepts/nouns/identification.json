@@ -1,13 +1,34 @@
 {
-    "identification": {
-        "en": "identification",
+    "concepts": {
+        "identification": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "identification",
+                "label": "identification"
+            }
+        ],
         "fi": [
-            "henkilöllisyystodistus",
-            "henkkari*"
+            {
+                "concept": "identification",
+                "label": "henkilöllisyystodistus"
+            },
+            {
+                "concept": "identification",
+                "label": "henkkari",
+                "colloquial": true
+            }
         ],
         "nl": [
-            "het identiteitsbewijs",
-            "het legitimatiebewijs"
+            {
+                "concept": "identification",
+                "label": "het identiteitsbewijs"
+            },
+            {
+                "concept": "identification",
+                "label": "het legitimatiebewijs"
+            }
         ]
     }
 }

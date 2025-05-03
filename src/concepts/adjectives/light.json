@@ -1,19 +1,40 @@
 {
-    "light (not heavy)": {
-        "en": {
-            "positive degree": "light",
-            "comparative degree": "lighter",
-            "superlative degree": "lightest"
-        },
-        "fi": {
-            "positive degree": "kevyt",
-            "comparative degree": "kevyempi",
-            "superlative degree": "kevyin"
-        },
-        "nl": {
-            "positive degree": "licht",
-            "comparative degree": "lichter",
-            "superlative degree": "lichtst"
-        }
+    "concepts": {
+        "light (not heavy)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "light (not heavy)",
+                "label": {
+                    "positive degree": "light",
+                    "comparative degree": "lighter",
+                    "superlative degree": "lightest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "light (not heavy)",
+                "label": {
+                    "positive degree": "kevyt",
+                    "comparative degree": "kevyempi",
+                    "superlative degree": "kevyin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": [
+                    "bright",
+                    "light (not heavy)"
+                ],
+                "label": {
+                    "positive degree": "licht",
+                    "comparative degree": "lichter",
+                    "superlative degree": "lichtst"
+                }
+            }
+        ]
     }
 }

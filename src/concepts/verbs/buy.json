@@ -1,49 +1,67 @@
 {
-    "to buy": {
-        "en": {
-            "infinitive": "to buy",
-            "singular": {
-                "first person": "I buy",
-                "second person": "you buy",
-                "third person": {
-                    "feminine": "she buys",
-                    "masculine": "he buys"
+    "concepts": {
+        "to buy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to buy",
+                "label": {
+                    "infinitive": "to buy",
+                    "singular": {
+                        "first person": "I buy",
+                        "second person": "you buy",
+                        "third person": {
+                            "feminine": "she buys",
+                            "masculine": "he buys"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we buy",
+                        "second person": "you buy",
+                        "third person": "they buy"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we buy",
-                "second person": "you buy",
-                "third person": "they buy"
             }
-        },
-        "fi": {
-            "infinitive": "ostaa",
-            "singular": {
-                "first person": "minä ostan",
-                "second person": "sinä ostat",
-                "third person": "hän ostaa"
-            },
-            "plural": {
-                "first person": "me ostamme",
-                "second person": "te ostatte",
-                "third person": "he ostavat"
-            }
-        },
-        "nl": {
-            "infinitive": "kopen",
-            "singular": {
-                "first person": "ik koop",
-                "second person": "jij koopt",
-                "third person": {
-                    "feminine": "zij koopt",
-                    "masculine": "hij koopt"
+        ],
+        "fi": [
+            {
+                "concept": "to buy",
+                "label": {
+                    "infinitive": "ostaa",
+                    "singular": {
+                        "first person": "minä ostan",
+                        "second person": "sinä ostat",
+                        "third person": "hän ostaa"
+                    },
+                    "plural": {
+                        "first person": "me ostamme",
+                        "second person": "te ostatte",
+                        "third person": "he ostavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij kopen",
-                "second person": "jullie kopen",
-                "third person": "zij kopen"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to buy",
+                "label": {
+                    "infinitive": "kopen",
+                    "singular": {
+                        "first person": "ik koop",
+                        "second person": "jij koopt",
+                        "third person": {
+                            "feminine": "zij koopt",
+                            "masculine": "hij koopt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij kopen",
+                        "second person": "jullie kopen",
+                        "third person": "zij kopen"
+                    }
+                }
+            }
+        ]
     }
 }

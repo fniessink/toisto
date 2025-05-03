@@ -1,17 +1,44 @@
 {
-    "cup": {
-        "en": "cup",
-        "fi": "kuppi",
-        "nl": "het kopje"
+    "concepts": {
+        "cup": {},
+        "coffee cup": {
+            "hypernym": "cup",
+            "roots": [
+                "coffee",
+                "cup"
+            ]
+        }
     },
-    "coffee cup": {
-        "hypernym": "cup",
-        "roots": [
-            "coffee",
-            "cup"
+    "labels": {
+        "en": [
+            {
+                "concept": "cup",
+                "label": "cup"
+            },
+            {
+                "concept": "coffee cup",
+                "label": "coffee cup"
+            }
         ],
-        "en": "coffee cup",
-        "fi": "kahvikuppi",
-        "nl": "het koffiekopje"
+        "fi": [
+            {
+                "concept": "cup",
+                "label": "kuppi"
+            },
+            {
+                "concept": "coffee cup",
+                "label": "kahvikuppi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cup",
+                "label": "het kopje"
+            },
+            {
+                "concept": "coffee cup",
+                "label": "het koffiekopje"
+            }
+        ]
     }
 }

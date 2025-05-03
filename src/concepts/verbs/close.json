@@ -1,7 +1,25 @@
 {
-    "to close": {
-        "en": "to close",
-        "fi": "sulkea",
-        "nl": "sluiten"
+    "concepts": {
+        "to close": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to close",
+                "label": "to close"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to close",
+                "label": "sulkea"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to close",
+                "label": "sluiten"
+            }
+        ]
     }
 }

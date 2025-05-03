@@ -1,14 +1,33 @@
 {
-    "simultaneously": {
+    "concepts": {
+        "simultaneously": {}
+    },
+    "labels": {
         "en": [
-            "simultaneously",
-            "at the same time"
+            {
+                "concept": "simultaneously",
+                "label": "simultaneously"
+            }
         ],
-        "fi": "samalla",
+        "fi": [
+            {
+                "concept": "simultaneously",
+                "label": "samalla"
+            }
+        ],
         "nl": [
-            "tegelijkertijd",
-            "tegelijk",
-            "gelijk"
+            {
+                "concept": "simultaneously",
+                "label": "tegelijkertijd"
+            },
+            {
+                "concept": "simultaneously",
+                "label": "tegelijk"
+            },
+            {
+                "concept": "simultaneously",
+                "label": "gelijk"
+            }
         ]
     }
 }

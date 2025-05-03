@@ -1,7 +1,25 @@
 {
-    "relaxed": {
-        "en": "relaxed",
-        "fi": "rento",
-        "nl": "ontspannen"
+    "concepts": {
+        "relaxed": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "relaxed",
+                "label": "relaxed"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "relaxed",
+                "label": "rento"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "relaxed",
+                "label": "ontspannen"
+            }
+        ]
     }
 }

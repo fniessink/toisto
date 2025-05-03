@@ -1,7 +1,25 @@
 {
-    "profession": {
-        "en": "profession",
-        "fi": "ammatti",
-        "nl": "het beroep"
+    "concepts": {
+        "profession": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "profession",
+                "label": "profession"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "profession",
+                "label": "ammatti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "profession",
+                "label": "het beroep"
+            }
+        ]
     }
 }

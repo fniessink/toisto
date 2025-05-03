@@ -99,7 +99,7 @@ class Feedback:
     def _try_again(self, guess: Label) -> str:
         """Return the feedback when the first attempt is incorrect."""
         if self.quiz.is_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
-            standard = self.quiz.question.is_colloquial and self.quiz.question.language == self.quiz.answer.language
+            standard = self.quiz.question.colloquial and self.quiz.question.language == self.quiz.answer.language
             try_again = self.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE if standard else self.TRY_AGAIN_IN_ANSWER_LANGUAGE
             return try_again % dict(language=ALL_LANGUAGES[self.quiz.answer.language])
         return self.TRY_AGAIN
@@ -125,7 +125,7 @@ class Feedback:
 
     def _colloquial(self) -> str:
         """Return the feedback about the colloquial label, if any."""
-        if self.quiz.question.is_colloquial:
+        if self.quiz.question.colloquial:
             language = ALL_LANGUAGES[self.quiz.question.language]
             question = quoted(str(self.quiz.question).strip("*"))
             return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), "secondary")
@@ -157,8 +157,8 @@ class Feedback:
 
     def _example_label(self, label: Label) -> str:
         """Format the label as example."""
-        label_str = quoted(str(label.without_notes).strip(Label.COLLOQUIAL_POSTFIX))
-        return f"{label_str} (colloquial)" if label.is_colloquial else label_str
+        label_str = quoted(str(label))
+        return f"{label_str} (colloquial)" if label.colloquial else label_str
 
 
 class ProgressUpdate:

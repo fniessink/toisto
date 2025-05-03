@@ -1,12 +1,35 @@
 {
-    "driver's license": {
-        "roots": {
-            "en": "driver",
-            "fi": "to drive",
-            "nl": "to drive"
-        },
-        "en": "driver's license|driver's license|driving license",
-        "fi": "ajokortti",
-        "nl": "het rijbewijs"
+    "concepts": {
+        "driver's license": {
+            "roots": {
+                "en": "driver",
+                "fi": "to drive",
+                "nl": "to drive"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "driver's license",
+                "label": [
+                    "driver's license",
+                    "driver's license",
+                    "driving license"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "driver's license",
+                "label": "ajokortti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "driver's license",
+                "label": "het rijbewijs"
+            }
+        ]
     }
 }

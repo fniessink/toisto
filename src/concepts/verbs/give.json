@@ -1,52 +1,71 @@
 {
-    "to give": {
-        "en": {
-            "infinitive": "to give",
-            "verbal noun": "giving",
-            "singular": {
-                "first person": "I give",
-                "second person": "you give",
-                "third person": {
-                    "feminine": "she gives",
-                    "masculine": "he gives"
+    "concepts": {
+        "to give": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to give",
+                "label": {
+                    "infinitive": "to give",
+                    "verbal noun": "giving",
+                    "singular": {
+                        "first person": "I give",
+                        "second person": "you give",
+                        "third person": {
+                            "feminine": "she gives",
+                            "masculine": "he gives"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we give",
+                        "second person": "you give",
+                        "third person": "they give"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we give",
-                "second person": "you give",
-                "third person": "they give"
             }
-        },
-        "fi": {
-            "infinitive": "antaa;;antaa is verbityypi 1",
-            "verbal noun": "antaminen",
-            "singular": {
-                "first person": "minä annan",
-                "second person": "sinä annat",
-                "third person": "hän antaa"
-            },
-            "plural": {
-                "first person": "me annamme",
-                "second person": "te annatte",
-                "third person": "he antavat"
+        ],
+        "fi": [
+            {
+                "concept": "to give",
+                "label": {
+                    "infinitive": "antaa",
+                    "verbal noun": "antaminen",
+                    "singular": {
+                        "first person": "minä annan",
+                        "second person": "sinä annat",
+                        "third person": "hän antaa"
+                    },
+                    "plural": {
+                        "first person": "me annamme",
+                        "second person": "te annatte",
+                        "third person": "he antavat"
+                    }
+                },
+                "note": "antaa is verbityypi 1"
             }
-        },
-        "nl": {
-            "infinitive": "geven",
-            "verbal noun": "het geven",
-            "singular": {
-                "first person": "ik geef",
-                "second person": "jij geeft",
-                "third person": {
-                    "feminine": "zij geeft",
-                    "masculine": "hij geeft"
+        ],
+        "nl": [
+            {
+                "concept": "to give",
+                "label": {
+                    "infinitive": "geven",
+                    "verbal noun": "het geven",
+                    "singular": {
+                        "first person": "ik geef",
+                        "second person": "jij geeft",
+                        "third person": {
+                            "feminine": "zij geeft",
+                            "masculine": "hij geeft"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij geven",
+                        "second person": "jullie geven",
+                        "third person": "zij geven"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij geven",
-                "second person": "jullie geven",
-                "third person": "zij geven"
             }
-        }
+        ]
     }
 }

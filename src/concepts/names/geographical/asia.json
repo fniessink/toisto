@@ -1,8 +1,27 @@
 {
-    "asia": {
-        "hypernym": "continent",
-        "en": "Asia",
-        "fi": "Aasia",
-        "nl": "Azië"
+    "concepts": {
+        "asia": {
+            "hypernym": "continent"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "asia",
+                "label": "Asia"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "asia",
+                "label": "Aasia"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "asia",
+                "label": "Azië"
+            }
+        ]
     }
 }

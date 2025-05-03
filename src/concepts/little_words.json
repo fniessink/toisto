@@ -1,63 +1,138 @@
 {
-    "all": {
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
+    "concepts": {
+        "all": {},
+        "at least": {},
+        "by the way": {},
+        "in the mean time": {},
+        "always": {},
+        "therefore": {},
+        "too": {},
+        "exactly": {},
+        "hopefully": {},
+        "already": {}
     },
-    "at least": {
+    "labels": {
         "en": [
-            "at least",
-            "in any case"
+            {
+                "concept": "all",
+                "label": "all"
+            },
+            {
+                "concept": "at least",
+                "label": "at least"
+            },
+            {
+                "concept": "by the way",
+                "label": "by the way"
+            },
+            {
+                "concept": "in the mean time",
+                "label": "in the mean time"
+            },
+            {
+                "concept": "always",
+                "label": "always"
+            },
+            {
+                "concept": "therefore",
+                "label": "therefore"
+            },
+            {
+                "concept": "too",
+                "label": "too"
+            },
+            {
+                "concept": "exactly",
+                "label": "exactly"
+            },
+            {
+                "concept": "hopefully",
+                "label": "hopefully"
+            },
+            {
+                "concept": "already",
+                "label": "already"
+            }
         ],
-        "fi": "ainakin",
-        "nl": [
-            "in ieder geval",
-            "in elk geval",
-            "tenminste",
-            "althans"
-        ]
-    },
-    "by the way": {
-        "en": "by the way",
-        "fi": "muuten",
-        "nl": "overigens"
-    },
-    "in the mean time": {
-        "en": "in the mean time",
-        "fi": "sillä aikaa",
-        "nl": "ondertussen"
-    },
-    "always": {
-        "en": "always",
-        "fi": "aina",
-        "nl": "altijd"
-    },
-    "therefore": {
-        "en": "therefore",
-        "fi": "siksi",
-        "nl": "daarom"
-    },
-    "too": {
-        "en": "too",
-        "fi": "liian",
-        "nl": "te"
-    },
-    "exactly": {
-        "en": "exactly",
         "fi": [
-            "juuri",
-            "just*"
+            {
+                "concept": "all",
+                "label": "kaikki"
+            },
+            {
+                "concept": "at least",
+                "label": "ainakin"
+            },
+            {
+                "concept": "by the way",
+                "label": "muuten"
+            },
+            {
+                "concept": "in the mean time",
+                "label": "sillä aikaa"
+            },
+            {
+                "concept": "always",
+                "label": "aina"
+            },
+            {
+                "concept": "therefore",
+                "label": "siksi"
+            },
+            {
+                "concept": "too",
+                "label": "liian"
+            },
+            {
+                "concept": "hopefully",
+                "label": "toivottavasti"
+            },
+            {
+                "concept": "already",
+                "label": "jo"
+            }
         ],
-        "nl": "precies"
-    },
-    "hopefully": {
-        "en": "hopefully",
-        "fi": "toivottavasti",
-        "nl": "hopelijk"
-    },
-    "already": {
-        "en": "already",
-        "fi": "jo",
-        "nl": "al"
+        "nl": [
+            {
+                "concept": "all",
+                "label": "alle"
+            },
+            {
+                "concept": "at least",
+                "label": "tenminste"
+            },
+            {
+                "concept": "at least",
+                "label": "althans"
+            },
+            {
+                "concept": "by the way",
+                "label": "overigens"
+            },
+            {
+                "concept": "in the mean time",
+                "label": "ondertussen"
+            },
+            {
+                "concept": "always",
+                "label": "altijd"
+            },
+            {
+                "concept": "therefore",
+                "label": "daarom"
+            },
+            {
+                "concept": "too",
+                "label": "te"
+            },
+            {
+                "concept": "hopefully",
+                "label": "hopelijk"
+            },
+            {
+                "concept": "already",
+                "label": "al"
+            }
+        ]
     }
 }

@@ -1,10 +1,29 @@
 {
-    "decision": {
-        "en": "decision",
-        "fi": "päätös",
+    "concepts": {
+        "decision": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "decision",
+                "label": "decision"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "decision",
+                "label": "päätös"
+            }
+        ],
         "nl": [
-            "de beslissing",
-            "het besluit"
+            {
+                "concept": "decision",
+                "label": "de beslissing"
+            },
+            {
+                "concept": "decision",
+                "label": "het besluit"
+            }
         ]
     }
 }

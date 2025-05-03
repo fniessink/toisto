@@ -1,7 +1,25 @@
 {
-    "a certain": {
-        "en": "a certain",
-        "fi": "eräs",
-        "nl": "een zekere"
+    "concepts": {
+        "a certain": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "a certain",
+                "label": "a certain"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "a certain",
+                "label": "eräs"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "a certain",
+                "label": "een zekere"
+            }
+        ]
     }
 }

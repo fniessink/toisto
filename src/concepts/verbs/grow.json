@@ -1,50 +1,70 @@
 {
-    "to grow younger": {
-        "antonym": "to age",
-        "en": {
-            "infinitive": "to grow younger",
-            "singular": {
-                "first person": "I grow younger",
-                "second person": "you grow younger",
-                "third person": {
-                    "feminine": "she grows younger",
-                    "masculine": "he grows younger"
-                }
-            },
-            "plural": {
-                "first person": "we grow younger",
-                "second person": "you grow younger",
-                "third person": "they grow younger"
-            }
-        },
-        "fi": {
-            "infinitive": "nuoreta;;nuoreta is verbityyppi 6",
-            "singular": {
-                "first person": "minä nuorenen",
-                "second person": "sinä nuorenet",
-                "third person": "hän nuorenee"
-            },
-            "plural": {
-                "first person": "me nuorenemme",
-                "second person": "te nuorenette",
-                "third person": "he nuorenevat"
-            }
-        },
-        "nl": {
-            "infinitive": "jonger worden",
-            "singular": {
-                "first person": "ik word jonger",
-                "second person": "jij wordt jonger",
-                "third person": {
-                    "feminine": "zij wordt jonger",
-                    "masculine": "hij wordt jonger"
-                }
-            },
-            "plural": {
-                "first person": "wij worden jonger",
-                "second person": "jullie worden jonger",
-                "third person": "zij worden jonger"
-            }
+    "concepts": {
+        "to grow younger": {
+            "antonym": "to age"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to grow younger",
+                "label": {
+                    "infinitive": "to grow younger",
+                    "singular": {
+                        "first person": "I grow younger",
+                        "second person": "you grow younger",
+                        "third person": {
+                            "feminine": "she grows younger",
+                            "masculine": "he grows younger"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we grow younger",
+                        "second person": "you grow younger",
+                        "third person": "they grow younger"
+                    }
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to grow younger",
+                "label": {
+                    "infinitive": "nuoreta",
+                    "singular": {
+                        "first person": "minä nuorenen",
+                        "second person": "sinä nuorenet",
+                        "third person": "hän nuorenee"
+                    },
+                    "plural": {
+                        "first person": "me nuorenemme",
+                        "second person": "te nuorenette",
+                        "third person": "he nuorenevat"
+                    }
+                },
+                "note": "nuoreta is verbityyppi 6"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to grow younger",
+                "label": {
+                    "infinitive": "jonger worden",
+                    "singular": {
+                        "first person": "ik word jonger",
+                        "second person": "jij wordt jonger",
+                        "third person": {
+                            "feminine": "zij wordt jonger",
+                            "masculine": "hij wordt jonger"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij worden jonger",
+                        "second person": "jullie worden jonger",
+                        "third person": "zij worden jonger"
+                    }
+                }
+            }
+        ]
     }
 }

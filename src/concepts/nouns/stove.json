@@ -1,8 +1,27 @@
 {
-    "stove": {
-        "holonym": "kitchen",
-        "en": "stove",
-        "fi": "hella",
-        "nl": "het fornuis"
+    "concepts": {
+        "stove": {
+            "holonym": "kitchen"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "stove",
+                "label": "stove"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "stove",
+                "label": "hella"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "stove",
+                "label": "het fornuis"
+            }
+        ]
     }
 }

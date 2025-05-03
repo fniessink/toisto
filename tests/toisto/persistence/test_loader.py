@@ -9,6 +9,19 @@ from toisto.persistence.concept_loader import ConceptLoader
 
 from ...base import ToistoTestCase
 
+CONCEPT_FILE = """
+{
+    "concepts": {
+        "concept_id1": {},
+        "concept_id2": {}
+    },
+    "labels": {
+        "fi": [{"concept": "concept_id1", "label": "Label1"}],
+        "nl": [{"concept": ["concept_id1", "concept_id2"], "label": "Label2"}]
+    }
+}
+"""
+
 
 class LoadConceptsTest(ToistoTestCase):
     """Unit tests for loading the concepts."""
@@ -34,8 +47,8 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock) -> None:
         """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
-            '{"concept_id": {"fi": "Label3", "nl": "Label4"}}\n',
+            '{"concepts": {"concept_id": {}}}\n',
+            '{"concepts": {"concept_id": {}}}\n',
         ]
         self.assertRaises(SystemExit, self.loader.load_concepts, Path("file1"), Path("file2"))
         self.assertIn(
@@ -48,11 +61,12 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.open")
     def test_load_concepts(self, path_open: Mock) -> None:
         """Test that the concepts are read."""
-        path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
-        ]
-        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
-        self.assertEqual({concept}, self.loader.load_concepts(Path("filename")))
+        path_open.return_value.__enter__.return_value.read.side_effect = [CONCEPT_FILE]
+        concept1 = self.create_concept(
+            "concept_id1", labels=[{"label": "Label1", "language": FI}, {"label": "Label2", "language": NL}]
+        )
+        concept2 = self.create_concept("concept_id2", labels=[{"label": "Label2", "language": NL}])
+        self.assertEqual({concept1, concept2}, self.loader.load_concepts(Path("filename")))
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.is_dir", Mock(side_effect=[True, False]))
@@ -60,8 +74,9 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.open")
     def test_load_concepts_from_folder(self, path_open: Mock) -> None:
         """Test that the concepts are read from folders."""
-        path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
-        ]
-        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
-        self.assertEqual({concept}, self.loader.load_concepts(Path("folder")))
+        path_open.return_value.__enter__.return_value.read.side_effect = [CONCEPT_FILE]
+        concept1 = self.create_concept(
+            "concept_id1", labels=[{"label": "Label1", "language": FI}, {"label": "Label2", "language": NL}]
+        )
+        concept2 = self.create_concept("concept_id2", labels=[{"label": "Label2", "language": NL}])
+        self.assertEqual({concept1, concept2}, self.loader.load_concepts(Path("folder")))

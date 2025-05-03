@@ -1,8 +1,27 @@
 {
-    "japan": {
-        "hypernym": "country",
-        "en": "Japan",
-        "fi": "Japani",
-        "nl": "Japan"
+    "concepts": {
+        "japan": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "japan",
+                "label": "Japan"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "japan",
+                "label": "Japani"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "japan",
+                "label": "Japan"
+            }
+        ]
     }
 }

@@ -1,35 +1,67 @@
 {
-    "the netherlands": {
-        "hypernym": "country",
-        "roots": {
-            "fi": "country",
-            "nl": "country"
+    "concepts": {
+        "the netherlands": {
+            "hypernym": "country",
+            "roots": {
+                "fi": "country",
+                "nl": "country"
+            }
         },
+        "dutch (nationality)": {
+            "hypernym": "nationality",
+            "involves": "the netherlands",
+            "roots": {
+                "fi": "the netherlands",
+                "nl": "the netherlands"
+            }
+        }
+    },
+    "labels": {
         "en": [
-            "The Netherlands",
-            "Holland"
+            {
+                "concept": "the netherlands",
+                "label": "The Netherlands"
+            },
+            {
+                "concept": "the netherlands",
+                "label": "Holland"
+            },
+            {
+                "concept": "dutch (nationality)",
+                "label": "Dutch"
+            }
         ],
         "fi": [
-            "Alankomaat",
-            "Hollanti"
+            {
+                "concept": "the netherlands",
+                "label": "Alankomaat"
+            },
+            {
+                "concept": "the netherlands",
+                "label": "Hollanti"
+            },
+            {
+                "concept": "dutch (nationality)",
+                "label": "alankomaalainen"
+            },
+            {
+                "concept": "dutch (nationality)",
+                "label": "hollantilainen"
+            }
         ],
         "nl": [
-            "Nederland",
-            "Holland"
+            {
+                "concept": "the netherlands",
+                "label": "Nederland"
+            },
+            {
+                "concept": "the netherlands",
+                "label": "Holland"
+            },
+            {
+                "concept": "dutch (nationality)",
+                "label": "Nederlands"
+            }
         ]
-    },
-    "dutch (nationality)": {
-        "hypernym": "nationality",
-        "involves": "the netherlands",
-        "roots": {
-            "fi": "the netherlands",
-            "nl": "the netherlands"
-        },
-        "en": "Dutch",
-        "fi": [
-            "alankomaalainen",
-            "hollantilainen"
-        ],
-        "nl": "Nederlands"
     }
 }

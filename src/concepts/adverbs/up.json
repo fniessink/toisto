@@ -1,22 +1,54 @@
 {
-    "up": {
-        "en": [
-            "up",
-            "upward",
-            "upwards"
-        ],
-        "fi": "ylös",
-        "nl": [
-            "naar boven",
-            "omhoog"
-        ]
+    "concepts": {
+        "up": {},
+        "up to": {}
     },
-    "up to": {
-        "en": "up to",
-        "fi": "asti",
+    "labels": {
+        "en": [
+            {
+                "concept": "up",
+                "label": "up"
+            },
+            {
+                "concept": "up",
+                "label": "upward"
+            },
+            {
+                "concept": "up",
+                "label": "upwards"
+            },
+            {
+                "concept": "up to",
+                "label": "up to"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "up",
+                "label": "ylös"
+            },
+            {
+                "concept": "up to",
+                "label": "asti"
+            }
+        ],
         "nl": [
-            "tot",
-            "tot en met"
+            {
+                "concept": "up",
+                "label": "naar boven"
+            },
+            {
+                "concept": "up",
+                "label": "omhoog"
+            },
+            {
+                "concept": "up to",
+                "label": "tot"
+            },
+            {
+                "concept": "up to",
+                "label": "tot en met"
+            }
         ]
     }
 }

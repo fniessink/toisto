@@ -1,49 +1,67 @@
 {
-    "to cost": {
-        "en": {
-            "infinitive": "to cost",
-            "singular": {
-                "first person": "I cost",
-                "second person": "you cost",
-                "third person": {
-                    "feminine": "she costs",
-                    "masculine": "he costs"
+    "concepts": {
+        "to cost": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to cost",
+                "label": {
+                    "infinitive": "to cost",
+                    "singular": {
+                        "first person": "I cost",
+                        "second person": "you cost",
+                        "third person": {
+                            "feminine": "she costs",
+                            "masculine": "he costs"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we cost",
+                        "second person": "you cost",
+                        "third person": "they cost"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we cost",
-                "second person": "you cost",
-                "third person": "they cost"
             }
-        },
-        "fi": {
-            "infinitive": "maksaa",
-            "singular": {
-                "first person": "minä maksan",
-                "second person": "sinä maksat",
-                "third person": "hän maksaa"
-            },
-            "plural": {
-                "first person": "me maksamme",
-                "second person": "te maksatte",
-                "third person": "he maksavat"
-            }
-        },
-        "nl": {
-            "infinitive": "kosten",
-            "singular": {
-                "first person": "ik kost",
-                "second person": "jij kost",
-                "third person": {
-                    "feminine": "zij kost",
-                    "masculine": "hij kost"
+        ],
+        "fi": [
+            {
+                "concept": "to cost",
+                "label": {
+                    "infinitive": "maksaa",
+                    "singular": {
+                        "first person": "minä maksan",
+                        "second person": "sinä maksat",
+                        "third person": "hän maksaa"
+                    },
+                    "plural": {
+                        "first person": "me maksamme",
+                        "second person": "te maksatte",
+                        "third person": "he maksavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij kosten",
-                "second person": "jullie kosten",
-                "third person": "zij kosten"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to cost",
+                "label": {
+                    "infinitive": "kosten",
+                    "singular": {
+                        "first person": "ik kost",
+                        "second person": "jij kost",
+                        "third person": {
+                            "feminine": "zij kost",
+                            "masculine": "hij kost"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij kosten",
+                        "second person": "jullie kosten",
+                        "third person": "zij kosten"
+                    }
+                }
+            }
+        ]
     }
 }

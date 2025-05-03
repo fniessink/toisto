@@ -1,16 +1,34 @@
 {
-    "rule": {
-        "en": {
-            "singular": "rule",
-            "plural": "rules"
-        },
-        "fi": {
-            "singular": "sääntö",
-            "plural": "säännöt"
-        },
-        "nl": {
-            "singular": "de regel",
-            "plural": "de regels"
-        }
+    "concepts": {
+        "rule": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rule",
+                "label": {
+                    "singular": "rule",
+                    "plural": "rules"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rule",
+                "label": {
+                    "singular": "sääntö",
+                    "plural": "säännöt"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rule",
+                "label": {
+                    "singular": "de regel",
+                    "plural": "de regels"
+                }
+            }
+        ]
     }
 }

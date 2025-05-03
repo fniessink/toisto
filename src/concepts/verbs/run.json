@@ -1,116 +1,143 @@
 {
-    "to run": {
-        "en": {
-            "infinitive": "to run",
-            "imperative": "Run!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "I run",
-                        "second person": "you run",
-                        "third person": {
-                            "feminine": "she runs",
-                            "masculine": "he runs"
-                        }
-                    },
-                    "plural": {
-                        "first person": "we run",
-                        "second person": "you run",
-                        "third person": "they run"
-                    }
-                },
-                "past tense": {
-                    "singular": {
-                        "first person": "I ran",
-                        "second person": "you ran",
-                        "third person": {
-                            "feminine": "she ran",
-                            "masculine": "he ran"
-                        }
-                    },
-                    "plural": {
-                        "first person": "we ran",
-                        "second person": "you ran",
-                        "third person": "they ran"
-                    }
-                }
-            }
-        },
-        "fi": {
-            "infinitive": "juosta",
-            "imperative": "Juokse!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "minä juoksen",
-                        "second person": "sinä juokset",
-                        "third person": "hän juoksee"
-                    },
-                    "plural": {
-                        "first person": "me juoksemme",
-                        "second person": "te juoksette",
-                        "third person": "he juoksevat"
-                    }
-                },
-                "past tense": {
-                    "singular": {
-                        "first person": "minä juoksin",
-                        "second person": "sinä juoksit",
-                        "third person": "hän juoksi"
-                    },
-                    "plural": {
-                        "first person": "me juoksimme",
-                        "second person": "te juoksitte",
-                        "third person": "he juoksivat"
-                    }
-                }
-            }
-        },
-        "nl": {
-            "infinitive": "rennen",
-            "imperative": "Ren!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "ik ren",
-                        "second person": "jij rent",
-                        "third person": {
-                            "feminine": "zij rent",
-                            "masculine": "hij rent"
-                        }
-                    },
-                    "plural": {
-                        "first person": "wij rennen",
-                        "second person": "jullie rennen",
-                        "third person": "zij rennen"
-                    }
-                },
-                "past tense": {
-                    "singular": {
-                        "first person": "ik rende",
-                        "second person": "jij rende",
-                        "third person": {
-                            "feminine": "zij rende",
-                            "masculine": "hij rende"
-                        }
-                    },
-                    "plural": {
-                        "first person": "wij renden",
-                        "second person": "jullie renden",
-                        "third person": "zij renden"
-                    }
-                }
+    "concepts": {
+        "to run": {},
+        "to run errands": {
+            "roots": {
+                "en": "to run",
+                "fi": "thing",
+                "nl": "thing"
             }
         }
     },
-    "to run errands": {
-        "roots": {
-            "en": "to run",
-            "fi": "thing",
-            "nl": "thing"
-        },
-        "en": "to run errands",
-        "fi": "asiointi",
-        "nl": "zaken regelen"
+    "labels": {
+        "en": [
+            {
+                "concept": "to run",
+                "label": {
+                    "infinitive": "to run",
+                    "imperative": "Run!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "I run",
+                                "second person": "you run",
+                                "third person": {
+                                    "feminine": "she runs",
+                                    "masculine": "he runs"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we run",
+                                "second person": "you run",
+                                "third person": "they run"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "I ran",
+                                "second person": "you ran",
+                                "third person": {
+                                    "feminine": "she ran",
+                                    "masculine": "he ran"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we ran",
+                                "second person": "you ran",
+                                "third person": "they ran"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "concept": "to run errands",
+                "label": "to run errands"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to run",
+                "label": {
+                    "infinitive": "juosta",
+                    "imperative": "Juokse!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä juoksen",
+                                "second person": "sinä juokset",
+                                "third person": "hän juoksee"
+                            },
+                            "plural": {
+                                "first person": "me juoksemme",
+                                "second person": "te juoksette",
+                                "third person": "he juoksevat"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "minä juoksin",
+                                "second person": "sinä juoksit",
+                                "third person": "hän juoksi"
+                            },
+                            "plural": {
+                                "first person": "me juoksimme",
+                                "second person": "te juoksitte",
+                                "third person": "he juoksivat"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "concept": "to run errands",
+                "label": "asiointi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to run",
+                "label": {
+                    "infinitive": "rennen",
+                    "imperative": "Ren!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik ren",
+                                "second person": "jij rent",
+                                "third person": {
+                                    "feminine": "zij rent",
+                                    "masculine": "hij rent"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij rennen",
+                                "second person": "jullie rennen",
+                                "third person": "zij rennen"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik rende",
+                                "second person": "jij rende",
+                                "third person": {
+                                    "feminine": "zij rende",
+                                    "masculine": "hij rende"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij renden",
+                                "second person": "jullie renden",
+                                "third person": "zij renden"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "concept": "to run errands",
+                "label": "zaken regelen"
+            }
+        ]
     }
 }

@@ -1,188 +1,407 @@
 {
-    "what": {
-        "en": "What?",
-        "fi": [
-            "Mitä?;;'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'",
-            "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs"
-        ],
-        "nl": "Wat?"
+    "concepts": {
+        "what": {},
+        "why": {},
+        "where": {},
+        "where from": {},
+        "when": {},
+        "how": {},
+        "how many": {
+            "example": "how many degrees is it outside",
+            "roots": "how"
+        },
+        "what kind of": {
+            "example": [
+                "what is the weather like",
+                "what kind of cat do you have"
+            ]
+        },
+        "to where": {},
+        "from which country": {},
+        "where is the water": {
+            "roots": [
+                "where",
+                "to be",
+                "water"
+            ]
+        },
+        "where there": {
+            "roots": [
+                "where",
+                "there"
+            ]
+        },
+        "why are you doing that": {
+            "roots": [
+                "why",
+                "to do"
+            ]
+        },
+        "why is that the case": {
+            "roots": [
+                "why",
+                "to be"
+            ]
+        },
+        "why are you too late": {
+            "roots": [
+                "why",
+                "to be"
+            ]
+        },
+        "why are bananas bent": {
+            "roots": [
+                "why",
+                "banana",
+                "to be"
+            ]
+        },
+        "where is the toilet": {
+            "roots": [
+                "where",
+                "to be",
+                "toilet"
+            ]
+        },
+        "when will you arrive at the airport": {
+            "roots": [
+                "when",
+                "to arrive",
+                "airport"
+            ]
+        },
+        "what kind of cat do you have": {
+            "roots": [
+                "what kind of",
+                "cat",
+                "to have"
+            ]
+        },
+        "what is the weather like": {
+            "roots": [
+                "what kind of",
+                "to be",
+                "weather"
+            ]
+        },
+        "how many degrees is it outside": {
+            "roots": [
+                "how many",
+                "degree",
+                "to be"
+            ]
+        }
     },
-    "why": {
-        "en": "Why?",
-        "fi": "Miksi?",
-        "nl": "Waarom?"
-    },
-    "where": {
-        "en": "Where?",
-        "fi": "Missä?",
-        "nl": "Waar?"
-    },
-    "where from": {
-        "en": "Where from?",
-        "fi": "Mistä?",
-        "nl": "Waar vandaan?"
-    },
-    "when": {
-        "en": "When?",
-        "fi": "Milloin?",
-        "nl": "Wanneer?"
-    },
-    "how": {
-        "en": "How?",
-        "fi": [
-            "Miten?",
-            "Kuinka?"
-        ],
-        "nl": "Hoe?"
-    },
-    "how many": {
-        "example": "how many degrees is it outside",
-        "roots": "how",
-        "en": "How many?",
-        "fi": "Kuinka monta?",
-        "nl": "Hoeveel"
-    },
-    "what kind of": {
-        "example": [
-            "what is the weather like",
-            "what kind of cat do you have"
-        ],
-        "en": "What kind of?",
-        "fi": "Millainen?",
-        "nl": [
-            "Wat voor soort?",
-            "Wat voor een?"
-        ]
-    },
-    "to where": {
-        "en": "to where",
-        "fi": "mihin",
-        "nl": "waarheen"
-    },
-    "from which country": {
-        "en": "(from which country)",
-        "fi": "minkämaalainen",
-        "nl": "(uit welk land)"
-    },
-    "where is the water": {
-        "roots": [
-            "where",
-            "to be",
-            "water"
-        ],
-        "en": "Where is the water?",
-        "fi": "Missä vesi on?|Missä on vesi?",
-        "nl": "Waar is het water?"
-    },
-    "where there": {
-        "roots": [
-            "where",
-            "there"
-        ],
-        "en": "Where? There!",
-        "fi": "Missä? Tuossa!",
-        "nl": "Waar? Daar!"
-    },
-    "why are you doing that": {
-        "roots": [
-            "why",
-            "to do"
-        ],
-        "en": "Why are you doing that?",
-        "fi": [
-            "Miksi teet tuon?",
-            "Miksi teet noin?"
-        ],
-        "nl": "Waarom doe je dat?"
-    },
-    "why is that the case": {
-        "roots": [
-            "why",
-            "to be"
-        ],
-        "en": "Why is that the case?",
-        "fi": [
-            "Miksi se on noin?",
-            "Miksi se on niin?"
-        ],
-        "nl": "Waarom is dat zo?"
-    },
-    "why are you too late": {
-        "roots": [
-            "why",
-            "to be"
-        ],
-        "en": "Why are you too late?",
-        "fi": "Miksi sinä olet myöhässä?",
-        "nl": "Waarom ben je te laat?"
-    },
-    "why are bananas bent": {
-        "roots": [
-            "why",
-            "banana",
-            "to be"
-        ],
-        "en": "Why are banasas bent?",
-        "fi": "Miksi banaanit ovat käyriä?",
-        "nl": "Waarom zijn bananen krom?|Waarom zijn de bananen krom?"
-    },
-    "where is the toilet": {
-        "roots": [
-            "where",
-            "to be",
-            "toilet"
-        ],
+    "labels": {
         "en": [
-            "Where is the toilet?",
-            "Where is the restroom?"
+            {
+                "concept": "what",
+                "label": "What?"
+            },
+            {
+                "concept": "why",
+                "label": "Why?"
+            },
+            {
+                "concept": "where",
+                "label": "Where?"
+            },
+            {
+                "concept": "where from",
+                "label": "Where from?"
+            },
+            {
+                "concept": "when",
+                "label": "When?"
+            },
+            {
+                "concept": "how",
+                "label": "How?"
+            },
+            {
+                "concept": "how many",
+                "label": "How many?"
+            },
+            {
+                "concept": "what kind of",
+                "label": "What kind of?"
+            },
+            {
+                "concept": "to where",
+                "label": "to where"
+            },
+            {
+                "concept": "from which country",
+                "label": "from which country",
+                "meaning-only": true
+            },
+            {
+                "concept": "where is the water",
+                "label": "Where is the water?"
+            },
+            {
+                "concept": "where there",
+                "label": "Where? There!"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Why are you doing that?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Why is that the case?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Why are you too late?"
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": "Why are banasas bent?"
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Where is the toilet?"
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Where is the restroom?"
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": "When will you arrive at the airport?"
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": "What kind of cat do you have?"
+            },
+            {
+                "concept": "what is the weather like",
+                "label": "What is the weather like today?"
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "How many degrees is it outside?"
+            }
         ],
         "fi": [
-            "Missä on wc?|Missä wc on?",
-            "Missä on vessa?|Missä vessa on?"
+            {
+                "concept": "what",
+                "label": "Mitä?",
+                "note": "'mitä' is used with all verbs except 'olla' ('to be'), use 'mikä' with 'olla'"
+            },
+            {
+                "concept": "why",
+                "label": "Miksi?"
+            },
+            {
+                "concept": "where",
+                "label": "Missä?"
+            },
+            {
+                "concept": "where from",
+                "label": "Mistä?"
+            },
+            {
+                "concept": "when",
+                "label": "Milloin?"
+            },
+            {
+                "concept": "how",
+                "label": "Miten?"
+            },
+            {
+                "concept": "how",
+                "label": "Kuinka?"
+            },
+            {
+                "concept": "how many",
+                "label": "Kuinka monta?"
+            },
+            {
+                "concept": "what kind of",
+                "label": "Millainen?"
+            },
+            {
+                "concept": "to where",
+                "label": "mihin"
+            },
+            {
+                "concept": "from which country",
+                "label": "minkämaalainen"
+            },
+            {
+                "concept": "where is the water",
+                "label": [
+                    "Missä vesi on?",
+                    "Missä on vesi?"
+                ]
+            },
+            {
+                "concept": "where there",
+                "label": "Missä? Tuossa!"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Miksi teet tuon?"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Miksi teet noin?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Miksi se on noin?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Miksi se on niin?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Miksi sinä olet myöhässä?"
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": "Miksi banaanit ovat käyriä?"
+            },
+            {
+                "concept": "where is the toilet",
+                "label": [
+                    "Missä on wc?",
+                    "Missä wc on?"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": [
+                    "Missä on vessa?",
+                    "Missä vessa on?"
+                ]
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": "Milloin saavut lentokentälle?"
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": "Millainen kissa sinulla on?"
+            },
+            {
+                "concept": "what is the weather like",
+                "label": [
+                    "Millainen sää tänään on?",
+                    "Millainen ilma tänään on?"
+                ]
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "Kuinka monta astetta ulkona on?"
+            }
         ],
         "nl": [
-            "Waar is de wc?",
-            "Waar is het toilet?"
+            {
+                "concept": "what",
+                "label": "Wat?"
+            },
+            {
+                "concept": "why",
+                "label": "Waarom?"
+            },
+            {
+                "concept": "where",
+                "label": "Waar?"
+            },
+            {
+                "concept": "where from",
+                "label": "Waar vandaan?"
+            },
+            {
+                "concept": "when",
+                "label": "Wanneer?"
+            },
+            {
+                "concept": "how",
+                "label": "Hoe?"
+            },
+            {
+                "concept": "how many",
+                "label": "Hoeveel"
+            },
+            {
+                "concept": "what kind of",
+                "label": "Wat voor soort?"
+            },
+            {
+                "concept": "what kind of",
+                "label": "Wat voor een?"
+            },
+            {
+                "concept": "to where",
+                "label": "waarheen"
+            },
+            {
+                "concept": "from which country",
+                "label": "uit welk land",
+                "meaning-only": true
+            },
+            {
+                "concept": "where is the water",
+                "label": "Waar is het water?"
+            },
+            {
+                "concept": "where there",
+                "label": "Waar? Daar!"
+            },
+            {
+                "concept": "why are you doing that",
+                "label": "Waarom doe je dat?"
+            },
+            {
+                "concept": "why is that the case",
+                "label": "Waarom is dat zo?"
+            },
+            {
+                "concept": "why are you too late",
+                "label": "Waarom ben je te laat?"
+            },
+            {
+                "concept": "why are bananas bent",
+                "label": [
+                    "Waarom zijn bananen krom?",
+                    "Waarom zijn de bananen krom?"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Waar is de wc?"
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Waar is het toilet?"
+            },
+            {
+                "concept": "when will you arrive at the airport",
+                "label": [
+                    "Wanneer kom je aan op het vliegveld?",
+                    "Wanneer kom je op het vliegveld aan?"
+                ]
+            },
+            {
+                "concept": "what kind of cat do you have",
+                "label": [
+                    "Wat voor soort kat heb jij?",
+                    "Wat voor een kat heb jij?"
+                ]
+            },
+            {
+                "concept": "what is the weather like",
+                "label": "Wat voor weer is het vandaag?"
+            },
+            {
+                "concept": "how many degrees is it outside",
+                "label": "Hoeveel graden is het buiten?"
+            }
         ]
-    },
-    "when will you arrive at the airport": {
-        "roots": [
-            "when",
-            "to arrive",
-            "airport"
-        ],
-        "en": "When will you arrive at the airport?",
-        "fi": "Milloin saavut lentokentälle?",
-        "nl": "Wanneer kom je aan op het vliegveld?|Wanneer kom je op het vliegveld aan?"
-    },
-    "what kind of cat do you have": {
-        "roots": [
-            "what kind of",
-            "cat",
-            "to have"
-        ],
-        "en": "What kind of cat do you have?",
-        "fi": "Millainen kissa sinulla on?",
-        "nl": "Wat voor soort kat heb jij?|Wat voor een kat heb jij?"
-    },
-    "what is the weather like": {
-        "roots": [
-            "what kind of",
-            "to be",
-            "weather"
-        ],
-        "en": "What is the weather like today?",
-        "fi": "Millainen sää tänään on?|Millainen ilma tänään on?",
-        "nl": "Wat voor weer is het vandaag?"
-    },
-    "how many degrees is it outside": {
-        "roots": [
-            "how many",
-            "degree",
-            "to be"
-        ],
-        "en": "How many degrees is it outside?",
-        "fi": "Kuinka monta astetta ulkona on?",
-        "nl": "Hoeveel graden is het buiten?"
     }
 }

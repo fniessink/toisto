@@ -1,53 +1,73 @@
 {
-    "to age": {
-        "antonym": "to grow younger",
-        "en": {
-            "infinitive": "to age",
-            "verbal noun": "aging",
-            "singular": {
-                "first person": "I age",
-                "second person": "you age",
-                "third person": {
-                    "feminine": "she ages",
-                    "masculine": "he ages"
-                }
-            },
-            "plural": {
-                "first person": "we age",
-                "second person": "you age",
-                "third person": "they age"
-            }
-        },
-        "fi": {
-            "infinitive": "vanheta;;vanheta is verbityypi 6",
-            "verbal noun": "vanheneminen",
-            "singular": {
-                "first person": "minä vanhenen",
-                "second person": "sinä vanhenet",
-                "third person": "hän vanhenee"
-            },
-            "plural": {
-                "first person": "me vanhenemme",
-                "second person": "te vanhenette",
-                "third person": "he vanhenevat"
-            }
-        },
-        "nl": {
-            "infinitive": "ouder worden",
-            "verbal noun": "het ouder worden",
-            "singular": {
-                "first person": "ik word ouder",
-                "second person": "jij wordt ouder",
-                "third person": {
-                    "feminine": "zij wordt ouder",
-                    "masculine": "hij wordt ouder"
-                }
-            },
-            "plural": {
-                "first person": "wij worden ouder",
-                "second person": "jullie worden ouder",
-                "third person": "zij worden ouder"
-            }
+    "concepts": {
+        "to age": {
+            "antonym": "to grow younger"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to age",
+                "label": {
+                    "infinitive": "to age",
+                    "verbal noun": "aging",
+                    "singular": {
+                        "first person": "I age",
+                        "second person": "you age",
+                        "third person": {
+                            "feminine": "she ages",
+                            "masculine": "he ages"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we age",
+                        "second person": "you age",
+                        "third person": "they age"
+                    }
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to age",
+                "label": {
+                    "infinitive": "vanheta",
+                    "verbal noun": "vanheneminen",
+                    "singular": {
+                        "first person": "minä vanhenen",
+                        "second person": "sinä vanhenet",
+                        "third person": "hän vanhenee"
+                    },
+                    "plural": {
+                        "first person": "me vanhenemme",
+                        "second person": "te vanhenette",
+                        "third person": "he vanhenevat"
+                    }
+                },
+                "note": "vanheta is verbityypi 6"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to age",
+                "label": {
+                    "infinitive": "ouder worden",
+                    "verbal noun": "het ouder worden",
+                    "singular": {
+                        "first person": "ik word ouder",
+                        "second person": "jij wordt ouder",
+                        "third person": {
+                            "feminine": "zij wordt ouder",
+                            "masculine": "hij wordt ouder"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij worden ouder",
+                        "second person": "jullie worden ouder",
+                        "third person": "zij worden ouder"
+                    }
+                }
+            }
+        ]
     }
 }

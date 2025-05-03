@@ -1,8 +1,27 @@
 {
-    "syllable": {
-        "holonym": "word",
-        "en": "syllable",
-        "fi": "tavu",
-        "nl": "de lettergreep"
+    "concepts": {
+        "syllable": {
+            "holonym": "word"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "syllable",
+                "label": "syllable"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "syllable",
+                "label": "tavu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "syllable",
+                "label": "de lettergreep"
+            }
+        ]
     }
 }

@@ -1,10 +1,29 @@
 {
-    "pavement": {
+    "concepts": {
+        "pavement": {}
+    },
+    "labels": {
         "en": [
-            "pavement",
-            "sidewalk"
+            {
+                "concept": "pavement",
+                "label": "pavement"
+            },
+            {
+                "concept": "pavement",
+                "label": "sidewalk"
+            }
         ],
-        "fi": "jalkakäytävä",
-        "nl": "de stoep"
+        "fi": [
+            {
+                "concept": "pavement",
+                "label": "jalkakäytävä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pavement",
+                "label": "de stoep"
+            }
+        ]
     }
 }

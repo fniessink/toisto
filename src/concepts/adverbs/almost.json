@@ -1,7 +1,25 @@
 {
-    "almost": {
-        "en": "almost",
-        "fi": "lähes",
-        "nl": "bijna"
+    "concepts": {
+        "almost": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "almost",
+                "label": "almost"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "almost",
+                "label": "lähes"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "almost",
+                "label": "bijna"
+            }
+        ]
     }
 }

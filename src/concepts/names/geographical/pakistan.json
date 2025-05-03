@@ -1,16 +1,44 @@
 {
-    "pakistan": {
-        "hypernym": "country",
-        "en": "Pakistan",
-        "fi": "Pakistan",
-        "nl": "Pakistan"
+    "concepts": {
+        "pakistan": {
+            "hypernym": "country"
+        },
+        "pakistani": {
+            "hypernym": "nationality",
+            "involves": "pakistan",
+            "roots": "pakistan"
+        }
     },
-    "pakistani": {
-        "hypernym": "nationality",
-        "involves": "pakistan",
-        "roots": "pakistan",
-        "en": "Pakistani",
-        "fi": "pakistanilainen",
-        "nl": "Pakistaans"
+    "labels": {
+        "en": [
+            {
+                "concept": "pakistan",
+                "label": "Pakistan"
+            },
+            {
+                "concept": "pakistani",
+                "label": "Pakistani"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pakistan",
+                "label": "Pakistan"
+            },
+            {
+                "concept": "pakistani",
+                "label": "pakistanilainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pakistan",
+                "label": "Pakistan"
+            },
+            {
+                "concept": "pakistani",
+                "label": "Pakistaans"
+            }
+        ]
     }
 }

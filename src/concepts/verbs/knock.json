@@ -1,7 +1,25 @@
 {
-    "to knock over": {
-        "en": "to knock over",
-        "fi": "kaataa",
-        "nl": "omgooien"
+    "concepts": {
+        "to knock over": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to knock over",
+                "label": "to knock over"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to knock over",
+                "label": "kaataa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to knock over",
+                "label": "omgooien"
+            }
+        ]
     }
 }

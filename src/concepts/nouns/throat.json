@@ -1,22 +1,53 @@
 {
-    "throat": {
-        "example": "my throat hurts",
-        "holonym": "body",
-        "en": "throat",
-        "fi": "kurkku",
-        "nl": "de keel"
-    },
-    "my throat hurts": {
-        "roots": {
-            "en": "throat",
-            "fi": "throat",
-            "nl": [
-                "throat",
-                "pain"
-            ]
+    "concepts": {
+        "throat": {
+            "example": "my throat hurts",
+            "holonym": "body"
         },
-        "en": "My throat hurts.",
-        "fi": "Kurkkuni sattuu.",
-        "nl": "Mijn keel doet pijn."
+        "my throat hurts": {
+            "roots": {
+                "en": "throat",
+                "fi": "throat",
+                "nl": [
+                    "throat",
+                    "pain"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "throat",
+                "label": "throat"
+            },
+            {
+                "concept": "my throat hurts",
+                "label": "My throat hurts."
+            }
+        ],
+        "fi": [
+            {
+                "concept": [
+                    "cucumber",
+                    "throat"
+                ],
+                "label": "kurkku"
+            },
+            {
+                "concept": "my throat hurts",
+                "label": "Kurkkuni sattuu."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "throat",
+                "label": "de keel"
+            },
+            {
+                "concept": "my throat hurts",
+                "label": "Mijn keel doet pijn."
+            }
+        ]
     }
 }

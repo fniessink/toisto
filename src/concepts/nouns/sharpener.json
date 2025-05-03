@@ -1,7 +1,25 @@
 {
-    "pencil sharpener": {
-        "en": "pencil sharpener",
-        "fi": "teroitin",
-        "nl": "de puntenslijper"
+    "concepts": {
+        "pencil sharpener": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pencil sharpener",
+                "label": "pencil sharpener"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pencil sharpener",
+                "label": "teroitin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pencil sharpener",
+                "label": "de puntenslijper"
+            }
+        ]
     }
 }

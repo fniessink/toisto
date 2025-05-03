@@ -1,10 +1,29 @@
 {
-    "does not concern me": {
-        "en": "does not concern me",
-        "fi": "ei koske minua",
+    "concepts": {
+        "does not concern me": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "does not concern me",
+                "label": "does not concern me"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "does not concern me",
+                "label": "ei koske minua"
+            }
+        ],
         "nl": [
-            "gaat mij niet aan",
-            "is niet op mij van toepassing"
+            {
+                "concept": "does not concern me",
+                "label": "gaat mij niet aan"
+            },
+            {
+                "concept": "does not concern me",
+                "label": "is niet op mij van toepassing"
+            }
         ]
     }
 }

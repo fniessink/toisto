@@ -1,49 +1,67 @@
 {
-    "to hinder": {
-        "en": {
-            "infinitive": "to hinder",
-            "singular": {
-                "first person": "I hinder",
-                "second person": "you hinder",
-                "third person": {
-                    "feminine": "she hinders",
-                    "masculine": "he hinders"
+    "concepts": {
+        "to hinder": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to hinder",
+                "label": {
+                    "infinitive": "to hinder",
+                    "singular": {
+                        "first person": "I hinder",
+                        "second person": "you hinder",
+                        "third person": {
+                            "feminine": "she hinders",
+                            "masculine": "he hinders"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we hinder",
+                        "second person": "you hinder",
+                        "third person": "they hinder"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we hinder",
-                "second person": "you hinder",
-                "third person": "they hinder"
             }
-        },
-        "fi": {
-            "infinitive": "haitata",
-            "singular": {
-                "first person": "minä haittaan",
-                "second person": "sinä haittaat",
-                "third person": "hän haittaa"
-            },
-            "plural": {
-                "first person": "me haittaamme",
-                "second person": "te haittaatte",
-                "third person": "he haittaavat"
-            }
-        },
-        "nl": {
-            "infinitive": "hinderen",
-            "singular": {
-                "first person": "ik hinder",
-                "second person": "jij hindert",
-                "third person": {
-                    "feminine": "zij hindert",
-                    "masculine": "hij hindert"
+        ],
+        "fi": [
+            {
+                "concept": "to hinder",
+                "label": {
+                    "infinitive": "haitata",
+                    "singular": {
+                        "first person": "minä haittaan",
+                        "second person": "sinä haittaat",
+                        "third person": "hän haittaa"
+                    },
+                    "plural": {
+                        "first person": "me haittaamme",
+                        "second person": "te haittaatte",
+                        "third person": "he haittaavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij hinderen",
-                "second person": "jullie hinderen",
-                "third person": "zij hinderen"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to hinder",
+                "label": {
+                    "infinitive": "hinderen",
+                    "singular": {
+                        "first person": "ik hinder",
+                        "second person": "jij hindert",
+                        "third person": {
+                            "feminine": "zij hindert",
+                            "masculine": "hij hindert"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij hinderen",
+                        "second person": "jullie hinderen",
+                        "third person": "zij hinderen"
+                    }
+                }
+            }
+        ]
     }
 }

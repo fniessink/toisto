@@ -1,19 +1,19 @@
 """Base class for unit tests."""
 
 import unittest
-from collections.abc import Sequence
+from collections.abc import Collection, Sequence
 from io import StringIO
-from typing import Final, cast
+from typing import Final, Required, TypedDict, cast
 
 from green.output import GreenStream
 from xmlrunner.result import _DuplicateWriter as DuplicateWriter
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptDict, create_concept
+from toisto.model.language.concept_factory import ConceptJSON, LabelJSON, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz
-from toisto.model.quiz.quiz_type import INTERPRET, READ, WRITE, QuizType
+from toisto.model.quiz.quiz_type import READ, QuizType
 
 # The DramaticTextIOWrapper of the dramatic package expects the stdout stream to have a buffer attribute,
 # but the GreenStream created by green and the DuplicateWriter created by xmlrunner do not have one, causing an
@@ -30,13 +30,52 @@ FI_NL: Final[LanguagePair] = LanguagePair(FI, NL)
 NL_EN: Final[LanguagePair] = LanguagePair(NL, EN)
 NL_FI: Final[LanguagePair] = LanguagePair(NL, FI)
 
+ConceptIdListOrString = str | list[str]
+ConceptIdDictOrListOrString = dict[str, ConceptIdListOrString] | ConceptIdListOrString
+
+ConceptDict = TypedDict(
+    "ConceptDict",
+    {
+        "antonym": ConceptIdListOrString,
+        "answer": ConceptIdListOrString,
+        "answer-only": bool,
+        "example": ConceptIdListOrString,
+        "holonym": ConceptIdListOrString,
+        "hypernym": ConceptIdListOrString,
+        "involves": ConceptIdListOrString,
+        "roots": ConceptIdDictOrListOrString,
+    },
+    total=False,
+)
+
+LabelDict = TypedDict(
+    "LabelDict",
+    {
+        "colloquial": bool,
+        "concept": ConceptIdListOrString,
+        "label": (
+            Required[
+                str
+                | list[str]
+                | dict[str, Collection[str]]
+                | dict[str, list[str]]
+                | dict[str, str]
+                | dict[str, dict[str, str]]
+                | dict[str, str | dict[str, str]]
+                | dict[str, dict[str, dict[str, str]]]
+            ]
+        ),
+        "language": Required[Language],
+        "meaning-only": bool,
+        "note": str | list[str],
+        "tip": str,
+    },
+    total=False,
+)
+
 
 class ToistoTestCase(unittest.TestCase):
     """Base class for Toisto unit tests."""
-
-    def setUp(self) -> None:
-        """Set up a default language pair."""
-        self.language_pair = EN_FI
 
     def tearDown(self) -> None:
         """Clear the registries."""
@@ -45,100 +84,97 @@ class ToistoTestCase(unittest.TestCase):
         Concept.homographs.clear()
 
     @staticmethod
-    def create_concept(concept_id: str, concept_dict: dict) -> Concept:
+    def create_concept(
+        concept_id: str, concept_dict: ConceptDict | None = None, labels: list[LabelDict] | None = None
+    ) -> Concept:
         """Create a concept."""
-        return create_concept(cast("ConceptId", concept_id), cast("ConceptDict", concept_dict))
+        concept_dict = concept_dict or {}
+        labels = labels or []
+        for label in labels:
+            if "concept" not in label:
+                label["concept"] = concept_id
+        return create_concept(
+            cast("ConceptId", concept_id), cast("ConceptJSON", concept_dict), cast("list[LabelJSON]", labels)
+        )
 
-    def create_quiz(  # noqa: PLR0913
+    def create_quiz(
         self,
         concept: Concept,
-        question: str,
-        answers: Sequence[str],
+        question: Label,
+        answers: Sequence[Label],
         quiz_type: QuizType = READ,
         blocked_by: tuple[Quiz, ...] = (),
-        question_meanings: tuple[str, ...] = (),
-        answer_meanings: tuple[str, ...] = (),
-        language_pair: LanguagePair | None = None,
     ) -> Quiz:
         """Create a quiz."""
-        language_pair = self.language_pair if language_pair is None else language_pair
-        question_language = self.question_language(language_pair, quiz_type)
-        answer_language = self.answer_language(language_pair, quiz_type)
-        return Quiz(
-            concept,
-            Label(question_language, question),
-            Labels(Label(answer_language, answer) for answer in answers),
-            quiz_type,
-            blocked_by,
-            Labels(Label(question_language, meaning) for meaning in question_meanings),
-            Labels(Label(answer_language, meaning) for meaning in answer_meanings),
-        )
+        return Quiz(concept, question, Labels(answers), quiz_type, blocked_by)
 
     def copy_quiz(
         self,
         quiz: Quiz,
-        question: str = "",
-        answers: list[str] | None = None,
+        question: Label | None = None,
+        answers: Sequence[Label] | None = None,
         quiz_type: QuizType | None = None,
     ) -> Quiz:
         """Copy the quiz, overriding some of its parameters."""
         return self.create_quiz(
             quiz.concept,
-            question=question or str(quiz.question),
-            answers=answers or quiz.answers.as_strings,
-            blocked_by=quiz.blocked_by,
-            question_meanings=quiz.question_meanings.as_strings,
-            answer_meanings=quiz.answer_meanings.as_strings,
+            question=question or quiz.question,
+            answers=answers or list(quiz.answers),
             quiz_type=quiz_type or quiz.quiz_type,
+            blocked_by=quiz.blocked_by,
         )
-
-    @staticmethod
-    def question_language(language_pair: LanguagePair, quiz_type: QuizType) -> Language:
-        """Return the question language for the quiz types, given the target and source languages."""
-        return language_pair.source if quiz_type == WRITE else language_pair.target
-
-    @staticmethod
-    def answer_language(language_pair: LanguagePair, quiz_type: QuizType) -> Language:
-        """Return the answer language for the quiz types, given the target and source languages."""
-        return language_pair.source if quiz_type in (INTERPRET, READ) else language_pair.target
 
     def create_noun_invariant_in_english(self) -> Concept:
         """Return a concept that is composite in Dutch and not composite in English."""
         return self.create_concept(
             "means of transportation",
-            dict(
-                en="means of transportation",
-                nl=dict(
-                    singular="het vervoersmiddel",
-                    plural="de vervoersmiddelen",
-                ),
-            ),
+            labels=[
+                {"label": "means of transportation", "language": EN},
+                {"label": dict(singular="het vervoersmiddel", plural="de vervoersmiddelen"), "language": NL},
+            ],
         )
 
     def create_verb_with_grammatical_number_and_person(self) -> Concept:
         """Create a verb with grammatical number nested with grammatical person."""
         return self.create_concept(
             "to have",
-            dict(
-                en=dict(
-                    singular={"first person": "I have", "second person": "you have", "third person": "she has"},
-                    plural={"first person": "we have", "second person": "you have", "third person": "they have"},
-                ),
-                fi=dict(
-                    singular={
-                        "first person": "minulla on",
-                        "second person": "sinulla on",
-                        "third person": "hänellä on",
+            labels=[
+                {
+                    "label": {
+                        "singular": {"first person": "I have", "second person": "you have", "third person": "she has"},
+                        "plural": {"first person": "we have", "second person": "you have", "third person": "they have"},
                     },
-                    plural={"first person": "meillä on", "second person": "teillä on", "third person": "heillä on"},
-                ),
-                nl=dict(
-                    singular={"first person": "ik heb", "second person": "jij hebt", "third person": "zij heeft"},
-                    plural={
-                        "first person": "wij hebben",
-                        "second person": "jullie hebben",
-                        "third person": "zij hebben",
+                    "language": EN,
+                },
+                {
+                    "label": {
+                        "singular": {
+                            "first person": "minulla on",
+                            "second person": "sinulla on",
+                            "third person": "hänellä on",
+                        },
+                        "plural": {
+                            "first person": "meillä on",
+                            "second person": "teillä on",
+                            "third person": "heillä on",
+                        },
                     },
-                ),
-            ),
+                    "language": FI,
+                },
+                {
+                    "label": {
+                        "singular": {
+                            "first person": "ik heb",
+                            "second person": "jij hebt",
+                            "third person": "zij heeft",
+                        },
+                        "plural": {
+                            "first person": "wij hebben",
+                            "second person": "jullie hebben",
+                            "third person": "zij hebben",
+                        },
+                    },
+                    "language": NL,
+                },
+            ],
         )

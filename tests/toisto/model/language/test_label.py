@@ -19,7 +19,7 @@ class LabelTest(ToistoTestCase):
 
     def test_complete_sentence(self):
         """Test that a colloquial sentence is recognized."""
-        label = Label(FI, "Kiitti!*")
+        label = Label(FI, "Kiitti!", colloquial=True)
         self.assertTrue(label.is_complete_sentence)
 
     def test_repr(self):
@@ -37,6 +37,17 @@ class LabelTest(ToistoTestCase):
         """Test that the label can be returned in random word order."""
         label = Label(EN, "The English language is beautiful.")
         self.assertEqual(sorted(str(label).split(" ")), sorted(str(label.random_order).split(" ")))
+
+    def test_note(self):
+        """Test that the label can have a note."""
+        note = "In English, the names of holidays are capitalized"
+        label = Label(EN, "Christmas", (note,))
+        self.assertEqual((note,), label.answer_notes)
+
+    def test_spelling_alternatives(self):
+        """Test that the label can have spelling alternatives."""
+        label = Label(EN, ["Christmas", "Xmas"])
+        self.assertEqual((Label(EN, "Christmas"), Label(EN, "Xmas")), label.spelling_alternatives)
 
 
 class LabelsTest(ToistoTestCase):

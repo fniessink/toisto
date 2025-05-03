@@ -1,8 +1,27 @@
 {
-    "italy": {
-        "hypernym": "country",
-        "en": "Italy",
-        "fi": "Italia",
-        "nl": "Italië"
+    "concepts": {
+        "italy": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "italy",
+                "label": "Italy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "italy",
+                "label": "Italia"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "italy",
+                "label": "Italië"
+            }
+        ]
     }
 }

@@ -1,52 +1,70 @@
 {
-    "to design": {
-        "en": {
-            "infinitive": "to design",
-            "verbal noun": "designing",
-            "singular": {
-                "first person": "I design",
-                "second person": "you design",
-                "third person": {
-                    "feminine": "she designs",
-                    "masculine": "he designs"
+    "concepts": {
+        "to design": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to design",
+                "label": {
+                    "infinitive": "to design",
+                    "verbal noun": "designing",
+                    "singular": {
+                        "first person": "I design",
+                        "second person": "you design",
+                        "third person": {
+                            "feminine": "she designs",
+                            "masculine": "he designs"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we design",
+                        "second person": "you design",
+                        "third person": "they design"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we design",
-                "second person": "you design",
-                "third person": "they design"
             }
-        },
-        "fi": {
-            "infinitive": "suunnitella",
-            "verbal noun": "suunnitteleminen",
-            "singular": {
-                "first person": "minä suunnittelen",
-                "second person": "sinä suunnittelet",
-                "third person": "hän suunnittelee"
-            },
-            "plural": {
-                "first person": "me suunnittelemme",
-                "second person": "te suunnittelette",
-                "third person": "he suunnittelevat"
-            }
-        },
-        "nl": {
-            "infinitive": "ontwerpen",
-            "verbal noun": "het ontwerpen",
-            "singular": {
-                "first person": "ik ontwerp",
-                "second person": "jij ontwerpt",
-                "third person": {
-                    "feminine": "zij ontwerpt",
-                    "masculine": "hij ontwerpt"
+        ],
+        "fi": [
+            {
+                "concept": "to design",
+                "label": {
+                    "infinitive": "suunnitella",
+                    "verbal noun": "suunnitteleminen",
+                    "singular": {
+                        "first person": "minä suunnittelen",
+                        "second person": "sinä suunnittelet",
+                        "third person": "hän suunnittelee"
+                    },
+                    "plural": {
+                        "first person": "me suunnittelemme",
+                        "second person": "te suunnittelette",
+                        "third person": "he suunnittelevat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij ontwerpen",
-                "second person": "jullie ontwerpen",
-                "third person": "zij ontwerpen"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to design",
+                "label": {
+                    "infinitive": "ontwerpen",
+                    "verbal noun": "het ontwerpen",
+                    "singular": {
+                        "first person": "ik ontwerp",
+                        "second person": "jij ontwerpt",
+                        "third person": {
+                            "feminine": "zij ontwerpt",
+                            "masculine": "hij ontwerpt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij ontwerpen",
+                        "second person": "jullie ontwerpen",
+                        "third person": "zij ontwerpen"
+                    }
+                }
+            }
+        ]
     }
 }

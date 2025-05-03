@@ -1,31 +1,68 @@
 {
-    "evening": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "evening",
-            "plural": "evenings"
+    "concepts": {
+        "evening": {
+            "hypernym": "time of day"
         },
-        "fi": {
-            "singular": "ilta",
-            "plural": "illat"
+        "in the evening": {
+            "hypernym": "time of day",
+            "roots": "evening"
         },
-        "nl": {
-            "singular": "de avond",
-            "plural": "de avonden"
+        "this evening": {
+            "hypernym": "time of day",
+            "roots": "evening"
         }
     },
-    "in the evening": {
-        "hypernym": "time of day",
-        "roots": "evening",
-        "en": "in the evening",
-        "fi": "illalla",
-        "nl": "'s avonds"
-    },
-    "this evening": {
-        "hypernym": "time of day",
-        "roots": "evening",
-        "en": "this evening",
-        "fi": "tänä iltana",
-        "nl": "vanavond"
+    "labels": {
+        "en": [
+            {
+                "concept": "evening",
+                "label": {
+                    "singular": "evening",
+                    "plural": "evenings"
+                }
+            },
+            {
+                "concept": "in the evening",
+                "label": "in the evening"
+            },
+            {
+                "concept": "this evening",
+                "label": "this evening"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "evening",
+                "label": {
+                    "singular": "ilta",
+                    "plural": "illat"
+                }
+            },
+            {
+                "concept": "in the evening",
+                "label": "illalla"
+            },
+            {
+                "concept": "this evening",
+                "label": "tänä iltana"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "evening",
+                "label": {
+                    "singular": "de avond",
+                    "plural": "de avonden"
+                }
+            },
+            {
+                "concept": "in the evening",
+                "label": "'s avonds"
+            },
+            {
+                "concept": "this evening",
+                "label": "vanavond"
+            }
+        ]
     }
 }

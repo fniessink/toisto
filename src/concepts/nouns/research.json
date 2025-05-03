@@ -1,7 +1,25 @@
 {
-    "research": {
-        "en": "research",
-        "fi": "tutkimus",
-        "nl": "het onderzoek"
+    "concepts": {
+        "research": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "research",
+                "label": "research"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "research",
+                "label": "tutkimus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "research",
+                "label": "het onderzoek"
+            }
+        ]
     }
 }

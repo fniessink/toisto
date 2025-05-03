@@ -1,23 +1,51 @@
 {
-    "yesterday": {
-        "example": "I stayed home yesterday",
-        "hypernym": "day",
-        "roots": {
-            "en": "day"
+    "concepts": {
+        "yesterday": {
+            "example": "I stayed home yesterday",
+            "hypernym": "day",
+            "roots": {
+                "en": "day"
+            }
         },
-        "en": "yesterday",
-        "fi": "eilen",
-        "nl": "gisteren"
+        "the day before yesterday": {
+            "hypernym": "day",
+            "roots": {
+                "en": "yesterday",
+                "fi": "day",
+                "nl": "yesterday"
+            }
+        }
     },
-    "the day before yesterday": {
-        "hypernym": "day",
-        "roots": {
-            "en": "yesterday",
-            "fi": "day",
-            "nl": "yesterday"
-        },
-        "en": "the day before yesterday",
-        "fi": "toissapäivänä",
-        "nl": "eergisteren"
+    "labels": {
+        "en": [
+            {
+                "concept": "yesterday",
+                "label": "yesterday"
+            },
+            {
+                "concept": "the day before yesterday",
+                "label": "the day before yesterday"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "yesterday",
+                "label": "eilen"
+            },
+            {
+                "concept": "the day before yesterday",
+                "label": "toissapäivänä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "yesterday",
+                "label": "gisteren"
+            },
+            {
+                "concept": "the day before yesterday",
+                "label": "eergisteren"
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "paint": {
-        "en": "paint",
-        "fi": "maali",
-        "nl": "de verf"
+    "concepts": {
+        "paint": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "paint",
+                "label": "paint"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "paint",
+                "label": "maali"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "paint",
+                "label": "de verf"
+            }
+        ]
     }
 }

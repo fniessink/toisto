@@ -1,17 +1,36 @@
 {
-    "class": {
-        "holonym": "school",
-        "en": {
-            "singular": "class",
-            "plural": "classes"
-        },
-        "fi": {
-            "singular": "luokka",
-            "plural": "luokat"
-        },
-        "nl": {
-            "singular": "de klas",
-            "plural": "de klassen"
+    "concepts": {
+        "class": {
+            "holonym": "school"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "class",
+                "label": {
+                    "singular": "class",
+                    "plural": "classes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "class",
+                "label": {
+                    "singular": "luokka",
+                    "plural": "luokat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "class",
+                "label": {
+                    "singular": "de klas",
+                    "plural": "de klassen"
+                }
+            }
+        ]
     }
 }

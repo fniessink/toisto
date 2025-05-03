@@ -1,12 +1,34 @@
 {
-    "north": {
-        "example": [
-            "it is cold in the north",
-            "she is from the north"
+    "concepts": {
+        "north": {
+            "example": [
+                "it is cold in the north",
+                "she is from the north"
+            ],
+            "hypernym": "compass point"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "north",
+                "label": [
+                    "north",
+                    "the North"
+                ]
+            }
         ],
-        "hypernym": "compass point",
-        "en": "north|the North",
-        "fi": "pohjoinen",
-        "nl": "het noorden"
+        "fi": [
+            {
+                "concept": "north",
+                "label": "pohjoinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "north",
+                "label": "het noorden"
+            }
+        ]
     }
 }

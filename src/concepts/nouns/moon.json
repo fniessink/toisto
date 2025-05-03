@@ -1,17 +1,36 @@
 {
-    "moon": {
-        "holonym": "solar system",
-        "en": {
-            "singular": "moon",
-            "plural": "moons"
-        },
-        "fi": {
-            "singular": "kuu",
-            "plural": "kuut"
-        },
-        "nl": {
-            "singular": "de maan",
-            "plural": "de manen"
+    "concepts": {
+        "moon": {
+            "holonym": "solar system"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "moon",
+                "label": {
+                    "singular": "moon",
+                    "plural": "moons"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "moon",
+                "label": {
+                    "singular": "kuu",
+                    "plural": "kuut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "moon",
+                "label": {
+                    "singular": "de maan",
+                    "plural": "de manen"
+                }
+            }
+        ]
     }
 }

@@ -1,31 +1,64 @@
 {
-    "football": {
-        "example": "I play football",
-        "hypernym": "team sport",
-        "roots": [
-            "ball",
-            "foot"
-        ],
-        "en": "football",
-        "fi": [
-            "jalkapallo",
-            "futis*"
-        ],
-        "nl": "de voetbal"
+    "concepts": {
+        "football": {
+            "example": "I play football",
+            "hypernym": "team sport",
+            "roots": [
+                "ball",
+                "foot"
+            ]
+        },
+        "I play football": {
+            "roots": [
+                "to play a sport",
+                "football"
+            ]
+        }
     },
-    "I play football": {
-        "roots": [
-            "to play a sport",
-            "football"
+    "labels": {
+        "en": [
+            {
+                "concept": "football",
+                "label": "football"
+            },
+            {
+                "concept": "I play football",
+                "label": "I play football."
+            }
         ],
-        "en": "I play football.",
         "fi": [
-            "Minä pelaan jalkapalloa.",
-            "Mä pelaan futista.*"
+            {
+                "concept": "football",
+                "label": "jalkapallo"
+            },
+            {
+                "concept": "football",
+                "label": "futis",
+                "colloquial": true
+            },
+            {
+                "concept": "I play football",
+                "label": "Minä pelaan jalkapalloa."
+            },
+            {
+                "concept": "I play football",
+                "label": "Mä pelaan futista.",
+                "colloquial": true
+            }
         ],
         "nl": [
-            "Ik speel voetbal.",
-            "Ik voetbal."
+            {
+                "concept": "football",
+                "label": "de voetbal"
+            },
+            {
+                "concept": "I play football",
+                "label": "Ik speel voetbal."
+            },
+            {
+                "concept": "I play football",
+                "label": "Ik voetbal."
+            }
         ]
     }
 }

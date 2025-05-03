@@ -1,16 +1,45 @@
 {
-    "only": {
+    "concepts": {
+        "only": {}
+    },
+    "labels": {
         "en": [
-            "only",
-            "merely",
-            "exclusively",
-            "solely",
-            "just"
+            {
+                "concept": [
+                    "only",
+                    "sole"
+                ],
+                "label": "only"
+            },
+            {
+                "concept": "only",
+                "label": "merely"
+            },
+            {
+                "concept": "only",
+                "label": "exclusively"
+            },
+            {
+                "concept": "only",
+                "label": "solely"
+            }
         ],
         "fi": [
-            "vain",
-            "vaan*"
+            {
+                "concept": "only",
+                "label": "vain"
+            },
+            {
+                "concept": "only",
+                "label": "vaan",
+                "colloquial": true
+            }
         ],
-        "nl": "alleen maar"
+        "nl": [
+            {
+                "concept": "only",
+                "label": "alleen maar"
+            }
+        ]
     }
 }

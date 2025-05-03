@@ -1,15 +1,44 @@
 {
-    "confirmation (Christianity)": {
-        "en": "confirmation",
-        "fi": "konfirmaatio",
-        "nl": [
-            "de confirmatie",
-            "de belijdenis"
-        ]
+    "concepts": {
+        "confirmation (Christianity)": {},
+        "rippijuhla": {}
     },
-    "rippijuhla": {
-        "en": "(post-confirmation party)",
-        "fi": "rippijuhla",
-        "nl": "(feest na een confirmatie)"
+    "labels": {
+        "en": [
+            {
+                "concept": "confirmation (Christianity)",
+                "label": "confirmation"
+            },
+            {
+                "concept": "rippijuhla",
+                "label": "post-confirmation party",
+                "meaning-only": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "confirmation (Christianity)",
+                "label": "konfirmaatio"
+            },
+            {
+                "concept": "rippijuhla",
+                "label": "rippijuhla"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "confirmation (Christianity)",
+                "label": "de confirmatie"
+            },
+            {
+                "concept": "confirmation (Christianity)",
+                "label": "de belijdenis"
+            },
+            {
+                "concept": "rippijuhla",
+                "label": "feest na een confirmatie",
+                "meaning-only": true
+            }
+        ]
     }
 }

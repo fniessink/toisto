@@ -4,7 +4,7 @@ from argparse import Namespace
 from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
-from toisto.model.language import FI
+from toisto.model.language import FI, NL
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -27,7 +27,9 @@ class PracticeTest(ToistoTestCase):
         """Set up the test fixtures."""
         super().setUp()
         self.language_pair = FI_NL
-        self.concept = self.create_concept("hi", dict(fi="Terve!", nl="Hoi!"))
+        self.concept = self.create_concept(
+            "hi", labels=[{"label": "Terve!", "language": FI}, {"label": "Hoi!", "language": NL}]
+        )
         self.quizzes = create_quizzes(self.language_pair, (READ,), self.concept)
 
     def progress(self, quizzes: Quizzes) -> Progress:
@@ -98,7 +100,14 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="jätski\n"))
     def test_colloquial_answer_when_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
-        concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
+        concept = self.create_concept(
+            "ice cream",
+            labels=[
+                {"label": "jäätelö", "language": FI},
+                {"label": "jätski", "language": FI, "colloquial": True},
+                {"label": "het ijsje", "language": NL},
+            ],
+        )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept).colloquial
         self.assert_printed(
             Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
@@ -108,14 +117,23 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="jäätelö\n"))
     def test_standard_language_answer_when_question_colloquial(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
-        concept = self.create_concept("ice cream", dict(fi=["jäätelö", "jätski*"], nl="het ijsje"))
+        concept = self.create_concept(
+            "ice cream",
+            labels=[
+                {"label": "jäätelö", "language": FI},
+                {"label": "jätski", "language": FI, "colloquial": True},
+                {"label": "het ijsje", "language": NL},
+            ],
+        )
         quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept).colloquial
         self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch"), self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
-        concept = self.create_concept("house", dict(fi=dict(singular="talo", plural="talot")))
+        concept = self.create_concept(
+            "house", labels=[{"label": dict(singular="talo", plural="talot"), "language": FI}]
+        )
         quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         self.assert_printed(Feedback.TRY_AGAIN, self.practice(quizzes))
 
@@ -151,7 +169,10 @@ class PracticeTest(ToistoTestCase):
         """Test that the translation is not printed on a non-translate quiz."""
         concept = self.create_concept(
             "house",
-            dict(fi=dict(singular="talo", plural="talot"), nl=dict(singular="huis", plural="huizen")),
+            labels=[
+                {"label": {"singular": "talo", "plural": "talot"}, "language": FI},
+                {"label": {"singular": "huis", "plural": "huizen"}, "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         expected_feedback = (
@@ -165,9 +186,10 @@ class PracticeTest(ToistoTestCase):
         """Test that both the masculine and feminine form are correct."""
         concept = self.create_concept(
             "to ride",
-            dict(
-                fi={"third person": "hän ajaa"}, nl={"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}
-            ),
+            labels=[
+                {"label": {"third person": "hän ajaa"}, "language": FI},
+                {"label": {"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}, "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (READ,), concept)
         expected_feedback = (
@@ -182,9 +204,10 @@ class PracticeTest(ToistoTestCase):
         """Test that both the masculine and feminine form are correct."""
         concept = self.create_concept(
             "to ride",
-            dict(
-                fi={"third person": "hän ajaa"}, nl={"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}
-            ),
+            labels=[
+                {"label": {"third person": "hän ajaa"}, "language": FI},
+                {"label": {"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}, "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept)
         expected_feedback = (
@@ -198,11 +221,15 @@ class PracticeTest(ToistoTestCase):
         """Test that the example is shown after the quiz."""
         concept = self.create_concept(
             "next to",
-            dict(example="the museum is next to the church", fi="vieressä", nl="naast"),
+            {"example": "the museum is next to the church"},
+            labels=[{"label": "vieressä", "language": FI}, {"label": "naast", "language": NL}],
         )
         self.create_concept(
             "the museum is next to the church",
-            dict(fi="Museo on kirkon vieressä.", nl="Het museum is naast de kerk."),
+            labels=[
+                {"label": "Museo on kirkon vieressä.", "language": FI},
+                {"label": "Het museum is naast de kerk.", "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (
@@ -215,9 +242,22 @@ class PracticeTest(ToistoTestCase):
     def test_quiz_with_multiple_examples(self):
         """Test that the examples are shown after the quiz."""
         examples = ["the car is black", "the cars are black"]
-        concept = self.create_concept("black", dict(example=examples, fi="musta", nl="zwart"))
-        self.create_concept("the car is black", dict(fi="Auto on musta.", nl="De auto is zwart."))
-        self.create_concept("the cars are black", dict(fi="Autot ovat mustia.", nl="De auto's zijn zwart."))
+        concept = self.create_concept(
+            "black",
+            {"example": examples},
+            labels=[{"label": "musta", "language": FI}, {"label": "zwart", "language": NL}],
+        )
+        self.create_concept(
+            "the car is black",
+            labels=[{"label": "Auto on musta.", "language": FI}, {"label": "De auto is zwart.", "language": NL}],
+        )
+        self.create_concept(
+            "the cars are black",
+            labels=[
+                {"label": "Autot ovat mustia.", "language": FI},
+                {"label": "De auto's zijn zwart.", "language": NL},
+            ],
+        )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (
             f"{Feedback.CORRECT}[secondary]Meaning '{linkified('zwart')}'.[/secondary]\n"
@@ -231,11 +271,20 @@ class PracticeTest(ToistoTestCase):
         """Test that all synonyms of the example are shown after the quiz."""
         concept = self.create_concept(
             "table lamp",
-            dict(example="I am looking for a table lamp", fi=["pöytälamppu", "pöytävalaisin"], nl="de tafellamp"),
+            {"example": "I am looking for a table lamp"},
+            labels=[
+                {"label": "pöytälamppu", "language": FI},
+                {"label": "pöytävalaisin", "language": FI},
+                {"label": "de tafellamp", "language": NL},
+            ],
         )
         self.create_concept(
             "I am looking for a table lamp",
-            dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
+            labels=[
+                {"label": "Minä etsin pöytälamppua.", "language": FI},
+                {"label": "Minä etsin pöytävalaisinta.", "language": FI},
+                {"label": "Ik zoek een tafellamp.", "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
@@ -252,11 +301,20 @@ class PracticeTest(ToistoTestCase):
         self.language_pair = NL_FI
         concept = self.create_concept(
             "table lamp",
-            dict(example="I am looking for a table lamp", fi=["pöytälamppu", "pöytävalaisin"], nl="de tafellamp"),
+            {"example": "I am looking for a table lamp"},
+            labels=[
+                {"label": "pöytälamppu", "language": FI},
+                {"label": "pöytävalaisin", "language": FI},
+                {"label": "de tafellamp", "language": NL},
+            ],
         )
         self.create_concept(
             "I am looking for a table lamp",
-            dict(fi=["Minä etsin pöytälamppua.", "Minä etsin pöytävalaisinta."], nl="Ik zoek een tafellamp."),
+            labels=[
+                {"label": "Minä etsin pöytälamppua.", "language": FI},
+                {"label": "Minä etsin pöytävalaisinta.", "language": FI},
+                {"label": "Ik zoek een tafellamp.", "language": NL},
+            ],
         )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept)
         expected_feedback = (

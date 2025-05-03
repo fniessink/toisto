@@ -1,52 +1,70 @@
 {
-    "to appreciate": {
-        "en": {
-            "infinitive": "to appreciate",
-            "verbal noun": "appreciating",
-            "singular": {
-                "first person": "I appreciate",
-                "second person": "you appreciate",
-                "third person": {
-                    "feminine": "she appreciates",
-                    "masculine": "he appreciates"
+    "concepts": {
+        "to appreciate": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to appreciate",
+                "label": {
+                    "infinitive": "to appreciate",
+                    "verbal noun": "appreciating",
+                    "singular": {
+                        "first person": "I appreciate",
+                        "second person": "you appreciate",
+                        "third person": {
+                            "feminine": "she appreciates",
+                            "masculine": "he appreciates"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we appreciate",
+                        "second person": "you appreciate",
+                        "third person": "they appreciate"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we appreciate",
-                "second person": "you appreciate",
-                "third person": "they appreciate"
             }
-        },
-        "fi": {
-            "infinitive": "arvostaa",
-            "verbal noun": "arvostaminen",
-            "singular": {
-                "first person": "minä arvostan",
-                "second person": "sinä arvostat",
-                "third person": "hän arvostaa"
-            },
-            "plural": {
-                "first person": "me arvostamme",
-                "second person": "te arvostatte",
-                "third person": "he arvostavat"
-            }
-        },
-        "nl": {
-            "infinitive": "waarderen",
-            "verbal noun": "het waarderen",
-            "singular": {
-                "first person": "ik waardeer",
-                "second person": "jij waardeert",
-                "third person": {
-                    "feminine": "zij waardeert",
-                    "masculine": "hij waardeert"
+        ],
+        "fi": [
+            {
+                "concept": "to appreciate",
+                "label": {
+                    "infinitive": "arvostaa",
+                    "verbal noun": "arvostaminen",
+                    "singular": {
+                        "first person": "minä arvostan",
+                        "second person": "sinä arvostat",
+                        "third person": "hän arvostaa"
+                    },
+                    "plural": {
+                        "first person": "me arvostamme",
+                        "second person": "te arvostatte",
+                        "third person": "he arvostavat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij waarderen",
-                "second person": "jullie waarderen",
-                "third person": "zij waarderen"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to appreciate",
+                "label": {
+                    "infinitive": "waarderen",
+                    "verbal noun": "het waarderen",
+                    "singular": {
+                        "first person": "ik waardeer",
+                        "second person": "jij waardeert",
+                        "third person": {
+                            "feminine": "zij waardeert",
+                            "masculine": "hij waardeert"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij waarderen",
+                        "second person": "jullie waarderen",
+                        "third person": "zij waarderen"
+                    }
+                }
+            }
+        ]
     }
 }

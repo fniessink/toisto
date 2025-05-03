@@ -1,8 +1,27 @@
 {
-    "Baltic herring": {
-        "hypernym": "fish",
-        "en": "Baltic herring",
-        "fi": "silakka",
-        "nl": "de oostzeeharing"
+    "concepts": {
+        "Baltic herring": {
+            "hypernym": "fish"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "Baltic herring",
+                "label": "Baltic herring"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "Baltic herring",
+                "label": "silakka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "Baltic herring",
+                "label": "de oostzeeharing"
+            }
+        ]
     }
 }

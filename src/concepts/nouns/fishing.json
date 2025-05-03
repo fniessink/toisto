@@ -1,8 +1,27 @@
 {
-    "fishing": {
-        "involves": "fish",
-        "en": "fishing",
-        "fi": "kalastus",
-        "nl": "het vissen"
+    "concepts": {
+        "fishing": {
+            "involves": "fish"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "fishing",
+                "label": "fishing"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "fishing",
+                "label": "kalastus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fishing",
+                "label": "het vissen"
+            }
+        ]
     }
 }

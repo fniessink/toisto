@@ -1,45 +1,55 @@
 {
-    "CN1.1": {
-        "involves": [
-            "also",
-            "and",
-            "but",
-            "bye",
-            "city",
-            "country",
-            "dutch",
-            "dutch (nationality)",
-            "example",
-            "first name",
-            "given name",
-            "good",
-            "good afternoon",
-            "good evening",
-            "good morning",
-            "hello",
-            "hi",
-            "how",
-            "language",
-            "last name",
-            "mother tongue",
-            "name",
-            "nationality",
-            "nice",
-            "now",
-            "see you",
-            "somebody",
-            "thanks",
-            "the netherlands",
-            "to be",
-            "to have",
-            "to live",
-            "tomorrow",
-            "what",
-            "where",
-            "where from",
-            "which",
-            "who"
-        ],
-        "nl": "(CN1.1)"
+    "concepts": {
+        "CN1.1": {
+            "involves": [
+                "also",
+                "and",
+                "but",
+                "bye",
+                "city",
+                "country",
+                "dutch",
+                "dutch (nationality)",
+                "example",
+                "first name",
+                "given name",
+                "good",
+                "good afternoon",
+                "good evening",
+                "good morning",
+                "hello",
+                "hi",
+                "how",
+                "language",
+                "last name",
+                "mother tongue",
+                "name",
+                "nationality",
+                "nice",
+                "now",
+                "see you",
+                "somebody",
+                "thanks",
+                "the netherlands",
+                "to be",
+                "to have",
+                "to live",
+                "tomorrow",
+                "what",
+                "where",
+                "where from",
+                "which",
+                "who"
+            ]
+        }
+    },
+    "labels": {
+        "nl": [
+            {
+                "concept": "CN1.1",
+                "label": "CN1.1",
+                "meaning-only": true
+            }
+        ]
     }
 }

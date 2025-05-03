@@ -1,13 +1,33 @@
 {
-    "to preserve": {
+    "concepts": {
+        "to preserve": {}
+    },
+    "labels": {
         "en": [
-            "to preserve",
-            "to can"
+            {
+                "concept": "to preserve",
+                "label": "to preserve"
+            },
+            {
+                "concept": "to preserve",
+                "label": "to can"
+            }
         ],
-        "fi": "säilöä",
+        "fi": [
+            {
+                "concept": "to preserve",
+                "label": "säilöä"
+            }
+        ],
         "nl": [
-            "conserveren",
-            "inmaken"
+            {
+                "concept": "to preserve",
+                "label": "conserveren"
+            },
+            {
+                "concept": "to preserve",
+                "label": "inmaken"
+            }
         ]
     }
 }

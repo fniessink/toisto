@@ -1,20 +1,39 @@
 {
-    "answer": {
-        "antonym": "question",
-        "roots": {
-            "nl": "word"
-        },
-        "en": {
-            "singular": "answer",
-            "plural": "answers"
-        },
-        "fi": {
-            "singular": "vastaus",
-            "plural": "vastaukset"
-        },
-        "nl": {
-            "singular": "het antwoord",
-            "plural": "de antwoorden"
+    "concepts": {
+        "answer": {
+            "antonym": "question",
+            "roots": {
+                "nl": "word"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "answer",
+                "label": {
+                    "singular": "answer",
+                    "plural": "answers"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "answer",
+                "label": {
+                    "singular": "vastaus",
+                    "plural": "vastaukset"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "answer",
+                "label": {
+                    "singular": "het antwoord",
+                    "plural": "de antwoorden"
+                }
+            }
+        ]
     }
 }

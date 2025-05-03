@@ -1,7 +1,25 @@
 {
-    "sprout": {
-        "en": "sprout",
-        "fi": "vesa",
-        "nl": "spruit"
+    "concepts": {
+        "sprout": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sprout",
+                "label": "sprout"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sprout",
+                "label": "vesa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sprout",
+                "label": "spruit"
+            }
+        ]
     }
 }

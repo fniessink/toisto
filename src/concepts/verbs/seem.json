@@ -1,54 +1,83 @@
 {
-    "to seem": {
-        "en": {
-            "infinitive": "to seem",
-            "singular": {
-                "first person": "I seem",
-                "second person": "you seem",
-                "third person": {
-                    "feminine": "she seems",
-                    "masculine": "he seems"
-                }
-            },
-            "plural": {
-                "first person": "we seem",
-                "second person": "you seem",
-                "third person": "they seem"
-            }
-        },
-        "fi": {
-            "infinitive": "näyttää",
-            "singular": {
-                "first person": "minä näytän",
-                "second person": "sinä näytät",
-                "third person": "hän näyttää"
-            },
-            "plural": {
-                "first person": "me näytämme",
-                "second person": "te näytätte",
-                "third person": "he näyttävät"
-            }
-        },
-        "nl": {
-            "infinitive": "lijken",
-            "singular": {
-                "first person": "ik lijk",
-                "second person": "jij lijkt",
-                "third person": {
-                    "feminine": "zij lijkt",
-                    "masculine": "hij lijkt"
-                }
-            },
-            "plural": {
-                "first person": "wij lijken",
-                "second person": "jullie lijken",
-                "third person": "zij lijken"
-            }
-        }
+    "concepts": {
+        "to seem": {},
+        "to seem like": {}
     },
-    "to seem like": {
-        "en": "to seem like",
-        "fi": "taitaa",
-        "nl": "erop lijken"
+    "labels": {
+        "en": [
+            {
+                "concept": "to seem",
+                "label": {
+                    "infinitive": "to seem",
+                    "singular": {
+                        "first person": "I seem",
+                        "second person": "you seem",
+                        "third person": {
+                            "feminine": "she seems",
+                            "masculine": "he seems"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we seem",
+                        "second person": "you seem",
+                        "third person": "they seem"
+                    }
+                }
+            },
+            {
+                "concept": "to seem like",
+                "label": "to seem like"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to seem",
+                "label": {
+                    "infinitive": "näyttää",
+                    "singular": {
+                        "first person": "minä näytän",
+                        "second person": "sinä näytät",
+                        "third person": "hän näyttää"
+                    },
+                    "plural": {
+                        "first person": "me näytämme",
+                        "second person": "te näytätte",
+                        "third person": "he näyttävät"
+                    }
+                }
+            },
+            {
+                "concept": [
+                    "to seem like",
+                    "to command"
+                ],
+                "label": "taitaa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to seem",
+                "label": {
+                    "infinitive": "lijken",
+                    "singular": {
+                        "first person": "ik lijk",
+                        "second person": "jij lijkt",
+                        "third person": {
+                            "feminine": "zij lijkt",
+                            "masculine": "hij lijkt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij lijken",
+                        "second person": "jullie lijken",
+                        "third person": "zij lijken"
+                    }
+                }
+            },
+            {
+                "concept": "to seem like",
+                "label": "erop lijken"
+            }
+        ]
     }
 }

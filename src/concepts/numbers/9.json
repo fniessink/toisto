@@ -1,20 +1,44 @@
 {
-    "9": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "nine",
-            "ordinal": "ninth"
-        },
-        "fi": {
-            "cardinal": [
-                "yhdeksän",
-                "yheksän*"
-            ],
-            "ordinal": "yhdeksäs"
-        },
-        "nl": {
-            "cardinal": "negen",
-            "ordinal": "negende"
+    "concepts": {
+        "9": {
+            "hypernym": "number"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "9",
+                "label": {
+                    "cardinal": "nine",
+                    "ordinal": "ninth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "9",
+                "label": {
+                    "cardinal": "yhdeksän",
+                    "ordinal": "yhdeksäs"
+                }
+            },
+            {
+                "concept": "9",
+                "label": {
+                    "cardinal": "yheksän",
+                    "ordinal": "yhdeksäs"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "9",
+                "label": {
+                    "cardinal": "negen",
+                    "ordinal": "negende"
+                }
+            }
+        ]
     }
 }

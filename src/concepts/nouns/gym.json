@@ -1,29 +1,61 @@
 {
-    "gym": {
-        "en": {
-            "singular": "gym",
-            "plural": "gyms"
-        },
-        "fi": {
-            "singular": "sali",
-            "plural": "salit"
-        },
-        "nl": {
-            "singular": [
-                "de gym",
-                "de sportschool",
-                "de fitnessruimte"
-            ],
-            "plural": [
-                "de gyms",
-                "de sportscholen",
-                "de fitnessruimtes"
-            ]
-        }
+    "concepts": {
+        "gym": {},
+        "gymnasium": {}
     },
-    "gymnasium": {
-        "en": "gymnasium",
-        "fi": "liikuntasali",
-        "nl": "het gymnastieklokaal"
+    "labels": {
+        "en": [
+            {
+                "concept": "gym",
+                "label": {
+                    "singular": "gym",
+                    "plural": "gyms"
+                }
+            },
+            {
+                "concept": "gymnasium",
+                "label": "gymnasium"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gym",
+                "label": {
+                    "singular": "sali",
+                    "plural": "salit"
+                }
+            },
+            {
+                "concept": "gymnasium",
+                "label": "liikuntasali"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gym",
+                "label": {
+                    "singular": "de gym",
+                    "plural": "de gyms"
+                }
+            },
+            {
+                "concept": "gym",
+                "label": {
+                    "singular": "de sportschool",
+                    "plural": "de sportscholen"
+                }
+            },
+            {
+                "concept": "gym",
+                "label": {
+                    "singular": "de fitnessruimte",
+                    "plural": "de fitnessruimtes"
+                }
+            },
+            {
+                "concept": "gymnasium",
+                "label": "het gymnastieklokaal"
+            }
+        ]
     }
 }

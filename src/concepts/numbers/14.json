@@ -1,24 +1,48 @@
 {
-    "14": {
-        "hypernym": "number",
-        "roots": [
-            "4",
-            "10"
-        ],
-        "en": {
-            "cardinal": "fourteen",
-            "ordinal": "fourteenth"
-        },
-        "fi": {
-            "cardinal": [
-                "neljätoista",
-                "neljätoist*"
-            ],
-            "ordinal": "neljästoista"
-        },
-        "nl": {
-            "cardinal": "veertien",
-            "ordinal": "veertiende"
+    "concepts": {
+        "14": {
+            "hypernym": "number",
+            "roots": [
+                "4",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "14",
+                "label": {
+                    "cardinal": "fourteen",
+                    "ordinal": "fourteenth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "14",
+                "label": {
+                    "cardinal": "neljätoista",
+                    "ordinal": "neljästoista"
+                }
+            },
+            {
+                "concept": "14",
+                "label": {
+                    "cardinal": "neljätoist",
+                    "ordinal": "neljästoista"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "14",
+                "label": {
+                    "cardinal": "veertien",
+                    "ordinal": "veertiende"
+                }
+            }
+        ]
     }
 }

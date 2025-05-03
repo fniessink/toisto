@@ -1,21 +1,43 @@
 {
-    "you are welcome": {
-        "roots": {
-            "en": [
-                "to be",
-                "welcome"
-            ],
-            "nl": "thanks",
-            "fi": "no"
-        },
-        "en": "You are welcome!",
+    "concepts": {
+        "you are welcome": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "welcome"
+                ],
+                "nl": "thanks",
+                "fi": "no"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "you are welcome",
+                "label": "You are welcome!"
+            }
+        ],
         "fi": [
-            "Ei kestä!",
-            "Eipä mitään!*"
+            {
+                "concept": "you are welcome",
+                "label": "Ei kestä!"
+            },
+            {
+                "concept": "you are welcome",
+                "label": "Eipä mitään!",
+                "colloquial": true
+            }
         ],
         "nl": [
-            "Geen dank!",
-            "Graag gedaan!"
+            {
+                "concept": "you are welcome",
+                "label": "Geen dank!"
+            },
+            {
+                "concept": "you are welcome",
+                "label": "Graag gedaan!"
+            }
         ]
     }
 }

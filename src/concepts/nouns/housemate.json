@@ -1,12 +1,31 @@
 {
-    "housemate": {
-        "roots": {
-            "en": "house",
-            "fi": "friend",
-            "nl": "house"
-        },
-        "en": "housemate",
-        "fi": "kämppäkaveri",
-        "nl": "de huisgenoot"
+    "concepts": {
+        "housemate": {
+            "roots": {
+                "en": "house",
+                "fi": "friend",
+                "nl": "house"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "housemate",
+                "label": "housemate"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "housemate",
+                "label": "kämppäkaveri"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "housemate",
+                "label": "de huisgenoot"
+            }
+        ]
     }
 }

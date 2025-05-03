@@ -1,10 +1,29 @@
 {
-    "program": {
+    "concepts": {
+        "program": {}
+    },
+    "labels": {
         "en": [
-            "program",
-            "programme"
+            {
+                "concept": "program",
+                "label": "program"
+            },
+            {
+                "concept": "program",
+                "label": "programme"
+            }
         ],
-        "fi": "ohjelma",
-        "nl": "het programma"
+        "fi": [
+            {
+                "concept": "program",
+                "label": "ohjelma"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "program",
+                "label": "het programma"
+            }
+        ]
     }
 }

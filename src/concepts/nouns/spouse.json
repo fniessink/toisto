@@ -1,55 +1,111 @@
 {
-    "wife": {
-        "holonym": "marriage",
-        "hypernym": "spouse",
-        "en": {
-            "singular": "wife",
-            "plural": "wives"
+    "concepts": {
+        "wife": {
+            "holonym": "marriage",
+            "hypernym": "spouse"
         },
-        "fi": {
-            "singular": "aviovaimo|vaimo",
-            "plural": "aviovaimot|vaimot"
+        "husband": {
+            "holonym": "marriage",
+            "hypernym": "spouse"
         },
-        "nl": {
-            "singular": "de echtgenote",
-            "plural": "de echtgenotes"
+        "spouse": {
+            "holonym": "family"
         }
     },
-    "husband": {
-        "holonym": "marriage",
-        "hypernym": "spouse",
-        "en": {
-            "singular": "husband",
-            "plural": "husbands"
-        },
-        "fi": {
-            "singular": "aviomies|mies",
-            "plural": "aviomiehet|miehet"
-        },
-        "nl": {
-            "singular": "de echtgenoot",
-            "plural": "de echtgenoten"
-        }
-    },
-    "spouse": {
-        "holonym": "family",
-        "en": {
-            "singular": "spouse",
-            "plural": "spouses"
-        },
-        "fi": {
-            "singular": [
-                "aviopuoliso|puoliso",
-                "kumppani"
-            ],
-            "plural": [
-                "aviopuolisot|puolisot",
-                "kumppanit"
-            ]
-        },
-        "nl": {
-            "singular": "de partner",
-            "plural": "de partners"
-        }
+    "labels": {
+        "en": [
+            {
+                "concept": "wife",
+                "label": {
+                    "singular": "wife",
+                    "plural": "wives"
+                }
+            },
+            {
+                "concept": "husband",
+                "label": {
+                    "singular": "husband",
+                    "plural": "husbands"
+                }
+            },
+            {
+                "concept": "spouse",
+                "label": {
+                    "singular": "spouse",
+                    "plural": "spouses"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wife",
+                "label": {
+                    "singular": [
+                        "aviovaimo",
+                        "vaimo"
+                    ],
+                    "plural": [
+                        "aviovaimot",
+                        "vaimot"
+                    ]
+                }
+            },
+            {
+                "concept": "husband",
+                "label": {
+                    "singular": [
+                        "aviomies",
+                        "mies"
+                    ],
+                    "plural": [
+                        "aviomiehet",
+                        "miehet"
+                    ]
+                }
+            },
+            {
+                "concept": "spouse",
+                "label": {
+                    "singular": [
+                        "aviopuoliso",
+                        "puoliso"
+                    ],
+                    "plural": [
+                        "aviopuolisot",
+                        "puolisot"
+                    ]
+                }
+            },
+            {
+                "concept": "spouse",
+                "label": {
+                    "singular": "kumppani",
+                    "plural": "kumppanit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wife",
+                "label": {
+                    "singular": "de echtgenote",
+                    "plural": "de echtgenotes"
+                }
+            },
+            {
+                "concept": "husband",
+                "label": {
+                    "singular": "de echtgenoot",
+                    "plural": "de echtgenoten"
+                }
+            },
+            {
+                "concept": "spouse",
+                "label": {
+                    "singular": "de partner",
+                    "plural": "de partners"
+                }
+            }
+        ]
     }
 }

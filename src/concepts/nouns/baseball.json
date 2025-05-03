@@ -1,24 +1,56 @@
 {
-    "Finnish baseball": {
-        "example": "I play Finnish baseball",
-        "hypernym": "team sport",
-        "en": "Finnish baseball",
-        "fi": [
-            "pesäpallo",
-            "pesis*"
-        ],
-        "nl": "het Fins honkbal"
+    "concepts": {
+        "Finnish baseball": {
+            "example": "I play Finnish baseball",
+            "hypernym": "team sport"
+        },
+        "I play Finnish baseball": {
+            "roots": [
+                "to play a sport",
+                "Finnish baseball"
+            ]
+        }
     },
-    "I play Finnish baseball": {
-        "roots": [
-            "to play a sport",
-            "Finnish baseball"
+    "labels": {
+        "en": [
+            {
+                "concept": "Finnish baseball",
+                "label": "Finnish baseball"
+            },
+            {
+                "concept": "I play Finnish baseball",
+                "label": "I play Finnish baseball."
+            }
         ],
-        "en": "I play Finnish baseball.",
         "fi": [
-            "Minä pelaan pesäpalloa.",
-            "Mä pelaan pesistä.*"
+            {
+                "concept": "Finnish baseball",
+                "label": "pesäpallo"
+            },
+            {
+                "concept": "Finnish baseball",
+                "label": "pesis",
+                "colloquial": true
+            },
+            {
+                "concept": "I play Finnish baseball",
+                "label": "Minä pelaan pesäpalloa."
+            },
+            {
+                "concept": "I play Finnish baseball",
+                "label": "Mä pelaan pesistä.",
+                "colloquial": true
+            }
         ],
-        "nl": "Ik speel Fins honkbal."
+        "nl": [
+            {
+                "concept": "Finnish baseball",
+                "label": "het Fins honkbal"
+            },
+            {
+                "concept": "I play Finnish baseball",
+                "label": "Ik speel Fins honkbal."
+            }
+        ]
     }
 }

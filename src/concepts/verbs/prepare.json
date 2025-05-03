@@ -1,12 +1,39 @@
 {
-    "to prepare": {
-        "en": "to prepare",
-        "fi": "laittaa",
-        "nl": "in orde brengen"
+    "concepts": {
+        "to prepare": {},
+        "to prepare (in advance)": {}
     },
-    "to prepare (in advance)": {
-        "en": "to prepare;in advance",
-        "fi": "valmistella",
-        "nl": "voorbereiden"
+    "labels": {
+        "en": [
+            {
+                "concept": "to prepare",
+                "label": "to prepare"
+            },
+            {
+                "concept": "to prepare (in advance)",
+                "label": "to prepare",
+                "tip": "in advance"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to prepare",
+                "label": "laittaa"
+            },
+            {
+                "concept": "to prepare (in advance)",
+                "label": "valmistella"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to prepare",
+                "label": "in orde brengen"
+            },
+            {
+                "concept": "to prepare (in advance)",
+                "label": "voorbereiden"
+            }
+        ]
     }
 }

@@ -1,20 +1,29 @@
 {
-    "bright": {
-        "antonym": "dark",
-        "en": {
-            "positive degree": "bright",
-            "comparative degree": "brighter",
-            "superlative degree": "brightest"
-        },
-        "fi": {
-            "positive degree": "valoisa",
-            "comparative degree": "valoisampi",
-            "superlative degree": "valoisin"
-        },
-        "nl": {
-            "positive degree": "licht",
-            "comparative degree": "lichter",
-            "superlative degree": "lichtst"
+    "concepts": {
+        "bright": {
+            "antonym": "dark"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bright",
+                "label": {
+                    "positive degree": "bright",
+                    "comparative degree": "brighter",
+                    "superlative degree": "brightest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bright",
+                "label": {
+                    "positive degree": "valoisa",
+                    "comparative degree": "valoisampi",
+                    "superlative degree": "valoisin"
+                }
+            }
+        ]
     }
 }

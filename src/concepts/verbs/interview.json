@@ -1,7 +1,25 @@
 {
-    "to interview": {
-        "en": "to interview",
-        "fi": "haastatella",
-        "nl": "interviewen"
+    "concepts": {
+        "to interview": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to interview",
+                "label": "to interview"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to interview",
+                "label": "haastatella"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to interview",
+                "label": "interviewen"
+            }
+        ]
     }
 }

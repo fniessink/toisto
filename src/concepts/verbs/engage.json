@@ -1,7 +1,25 @@
 {
-    "to get engaged": {
-        "en": "to get engaged",
-        "fi": "mennä kihloihin",
-        "nl": "zich verloven"
+    "concepts": {
+        "to get engaged": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to get engaged",
+                "label": "to get engaged"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to get engaged",
+                "label": "mennä kihloihin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to get engaged",
+                "label": "zich verloven"
+            }
+        ]
     }
 }

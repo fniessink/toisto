@@ -1,42 +1,71 @@
 {
-    "deer": {
-        "hypernym": "animal",
-        "en": "deer",
-        "fi": {
-            "singular": "kauris",
-            "plural": "kaurit"
+    "concepts": {
+        "deer": {
+            "hypernym": "animal"
         },
-        "nl": {
-            "singular": "het hert",
-            "plural": "de herten"
+        "reindeer": {
+            "hypernym": "animal",
+            "roots": {
+                "en": "deer",
+                "nl": [
+                    "to run",
+                    "animal"
+                ]
+            }
         }
     },
-    "reindeer": {
-        "hypernym": "animal",
-        "roots": {
-            "en": "deer",
-            "nl": [
-                "to run",
-                "animal"
-            ]
-        },
-        "en": {
-            "singular": "reindeer",
-            "plural": "reindeer"
-        },
-        "fi": {
-            "singular": [
-                "peura",
-                "poro"
-            ],
-            "plural": [
-                "peurat",
-                "porot"
-            ]
-        },
-        "nl": {
-            "singular": "het rendier",
-            "plural": "de rendieren"
-        }
+    "labels": {
+        "en": [
+            {
+                "concept": "deer",
+                "label": "deer"
+            },
+            {
+                "concept": "reindeer",
+                "label": {
+                    "singular": "reindeer",
+                    "plural": "reindeer"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "deer",
+                "label": {
+                    "singular": "kauris",
+                    "plural": "kaurit"
+                }
+            },
+            {
+                "concept": "reindeer",
+                "label": {
+                    "singular": "peura",
+                    "plural": "peurat"
+                }
+            },
+            {
+                "concept": "reindeer",
+                "label": {
+                    "singular": "poro",
+                    "plural": "porot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "deer",
+                "label": {
+                    "singular": "het hert",
+                    "plural": "de herten"
+                }
+            },
+            {
+                "concept": "reindeer",
+                "label": {
+                    "singular": "het rendier",
+                    "plural": "de rendieren"
+                }
+            }
+        ]
     }
 }

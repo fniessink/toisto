@@ -1,16 +1,34 @@
 {
-    "hobby": {
-        "en": {
-            "singular": "hobby",
-            "plural": "hobbies"
-        },
-        "fi": {
-            "singular": "harrastus",
-            "plural": "harrastukset"
-        },
-        "nl": {
-            "singular": "de hobby",
-            "plural": "de hobby's"
-        }
+    "concepts": {
+        "hobby": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hobby",
+                "label": {
+                    "singular": "hobby",
+                    "plural": "hobbies"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hobby",
+                "label": {
+                    "singular": "harrastus",
+                    "plural": "harrastukset"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hobby",
+                "label": {
+                    "singular": "de hobby",
+                    "plural": "de hobby's"
+                }
+            }
+        ]
     }
 }

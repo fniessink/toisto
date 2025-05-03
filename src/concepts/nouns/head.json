@@ -1,41 +1,65 @@
 {
-    "head": {
-        "holonym": "body",
-        "en": {
-            "singular": "head",
-            "plural": "heads"
+    "concepts": {
+        "head": {
+            "holonym": "body"
         },
-        "fi": {
-            "singular": "pää",
-            "plural": "päät"
+        "forehead": {
+            "holonym": "head",
+            "roots": {
+                "en": "head",
+                "nl": "head"
+            }
         },
-        "nl": {
-            "singular": "het hoofd",
-            "plural": "de hoofden"
-        }
+        "head (main part)": {}
     },
-    "forehead": {
-        "holonym": "head",
-        "roots": {
-            "en": "head",
-            "nl": "head"
-        },
-        "en": "forehead",
-        "fi": "otsa",
-        "nl": "het voorhoofd"
-    },
-    "head (main part)": {
-        "en": {
-            "singular": "head",
-            "plural": "heads"
-        },
-        "fi": {
-            "singular": "pää",
-            "plural": "päät"
-        },
-        "nl": {
-            "singular": "het hoofd",
-            "plural": "de hoofden"
-        }
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "head",
+                    "head (main part)"
+                ],
+                "label": {
+                    "singular": "head",
+                    "plural": "heads"
+                }
+            },
+            {
+                "concept": "forehead",
+                "label": "forehead"
+            }
+        ],
+        "fi": [
+            {
+                "concept": [
+                    "head",
+                    "head (main part)"
+                ],
+                "label": {
+                    "singular": "pää",
+                    "plural": "päät"
+                }
+            },
+            {
+                "concept": "forehead",
+                "label": "otsa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": [
+                    "head",
+                    "head (main part)"
+                ],
+                "label": {
+                    "singular": "het hoofd",
+                    "plural": "de hoofden"
+                }
+            },
+            {
+                "concept": "forehead",
+                "label": "het voorhoofd"
+            }
+        ]
     }
 }

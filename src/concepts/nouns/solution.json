@@ -1,16 +1,34 @@
 {
-    "solution": {
-        "en": {
-            "singular": "solution",
-            "plural": "solutions"
-        },
-        "fi": {
-            "singular": "ratkaisu",
-            "plural": "ratkaisut"
-        },
-        "nl": {
-            "singular": "de oplossing",
-            "plural": "de oplossingen"
-        }
+    "concepts": {
+        "solution": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "solution",
+                "label": {
+                    "singular": "solution",
+                    "plural": "solutions"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "solution",
+                "label": {
+                    "singular": "ratkaisu",
+                    "plural": "ratkaisut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "solution",
+                "label": {
+                    "singular": "de oplossing",
+                    "plural": "de oplossingen"
+                }
+            }
+        ]
     }
 }

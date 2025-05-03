@@ -1,16 +1,45 @@
 {
-    "flu": {
-        "hypernym": "disease",
-        "en": "flu",
-        "fi": "flunssa",
-        "nl": "de griep"
+    "concepts": {
+        "flu": {
+            "hypernym": "disease"
+        },
+        "affected by flu": {}
     },
-    "affected by flu": {
-        "en": "(affected by common cold, flu)",
-        "fi": "flunssainen",
+    "labels": {
+        "en": [
+            {
+                "concept": "flu",
+                "label": "flu"
+            },
+            {
+                "concept": "affected by flu",
+                "label": "affected by common cold, flu",
+                "meaning-only": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "flu",
+                "label": "flunssa"
+            },
+            {
+                "concept": "affected by flu",
+                "label": "flunssainen"
+            }
+        ],
         "nl": [
-            "grieperig",
-            "verkouden"
+            {
+                "concept": "flu",
+                "label": "de griep"
+            },
+            {
+                "concept": "affected by flu",
+                "label": "grieperig"
+            },
+            {
+                "concept": "affected by flu",
+                "label": "verkouden"
+            }
         ]
     }
 }

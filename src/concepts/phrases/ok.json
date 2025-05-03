@@ -1,7 +1,31 @@
 {
-    "ok": {
-        "en": "OK!|Okay!",
-        "fi": "Okei!",
-        "nl": "OK!|Oké!"
+    "concepts": {
+        "ok": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ok",
+                "label": [
+                    "OK!",
+                    "Okay!"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ok",
+                "label": "Okei!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ok",
+                "label": [
+                    "OK!",
+                    "Oké!"
+                ]
+            }
+        ]
     }
 }

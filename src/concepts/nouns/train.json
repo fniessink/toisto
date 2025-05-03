@@ -1,35 +1,72 @@
 {
-    "train": {
-        "example": "the train departs from platform 4",
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "train",
-            "plural": "trains"
+    "concepts": {
+        "train": {
+            "example": "the train departs from platform 4",
+            "hypernym": "means of transportation"
         },
-        "fi": {
-            "singular": "juna",
-            "plural": "junat"
+        "long-distance train": {
+            "hypernym": "train"
         },
-        "nl": {
-            "singular": "de trein",
-            "plural": "de treinen"
+        "the train departs from platform 4": {
+            "roots": [
+                "train",
+                "to leave",
+                "platform",
+                "4"
+            ]
         }
     },
-    "long-distance train": {
-        "hypernym": "train",
-        "en": "long-distance train",
-        "fi": "kaukojuna",
-        "nl": "langeafstandstrein"
-    },
-    "the train departs from platform 4": {
-        "roots": [
-            "train",
-            "to leave",
-            "platform",
-            "4"
+    "labels": {
+        "en": [
+            {
+                "concept": "train",
+                "label": {
+                    "singular": "train",
+                    "plural": "trains"
+                }
+            },
+            {
+                "concept": "long-distance train",
+                "label": "long-distance train"
+            },
+            {
+                "concept": "the train departs from platform 4",
+                "label": "The train departs from platform four."
+            }
         ],
-        "en": "The train departs from platform four.",
-        "fi": "Juna lähtee laiturilta neljä.",
-        "nl": "De trein vertrekt van perron vier."
+        "fi": [
+            {
+                "concept": "train",
+                "label": {
+                    "singular": "juna",
+                    "plural": "junat"
+                }
+            },
+            {
+                "concept": "long-distance train",
+                "label": "kaukojuna"
+            },
+            {
+                "concept": "the train departs from platform 4",
+                "label": "Juna lähtee laiturilta neljä."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "train",
+                "label": {
+                    "singular": "de trein",
+                    "plural": "de treinen"
+                }
+            },
+            {
+                "concept": "long-distance train",
+                "label": "langeafstandstrein"
+            },
+            {
+                "concept": "the train departs from platform 4",
+                "label": "De trein vertrekt van perron vier."
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "additionally": {
-        "en": "additionally",
-        "fi": "lisäksi",
-        "nl": "bovendien"
+    "concepts": {
+        "additionally": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "additionally",
+                "label": "additionally"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "additionally",
+                "label": "lisäksi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "additionally",
+                "label": "bovendien"
+            }
+        ]
     }
 }

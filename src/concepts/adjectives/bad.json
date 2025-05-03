@@ -1,41 +1,75 @@
 {
-    "bad": {
-        "antonym": "good",
-        "en": {
-            "positive degree": "bad",
-            "comparative degree": "badder",
-            "superlative degree": "baddest"
+    "concepts": {
+        "bad": {
+            "antonym": "good"
         },
-        "fi": {
-            "positive degree": [
-                "huono",
-                "paha"
-            ],
-            "comparative degree": [
-                "huonompi",
-                "pahempi"
-            ],
-            "superlative degree": [
-                "huonoin",
-                "pahin"
-            ]
-        },
-        "nl": {
-            "positive degree": "slecht",
-            "comparative degree": "slechter",
-            "superlative degree": "slechtst"
-        }
+        "bad (sad)": {}
     },
-    "bad (sad)": {
+    "labels": {
         "en": [
-            "bad",
-            "sad",
-            "nasty"
+            {
+                "concept": "bad",
+                "label": {
+                    "positive degree": "bad",
+                    "comparative degree": "badder",
+                    "superlative degree": "baddest"
+                }
+            },
+            {
+                "concept": "bad (sad)",
+                "label": "bad"
+            },
+            {
+                "concept": "bad (sad)",
+                "label": "sad"
+            },
+            {
+                "concept": "bad (sad)",
+                "label": "nasty"
+            }
         ],
-        "fi": "ikävä",
+        "fi": [
+            {
+                "concept": "bad",
+                "label": {
+                    "positive degree": "huono",
+                    "comparative degree": "huonompi",
+                    "superlative degree": "huonoin"
+                }
+            },
+            {
+                "concept": "bad",
+                "label": {
+                    "positive degree": "paha",
+                    "comparative degree": "pahempi",
+                    "superlative degree": "pahin"
+                }
+            },
+            {
+                "concept": [
+                    "bad (sad)",
+                    "boring"
+                ],
+                "label": "ikävä"
+            }
+        ],
         "nl": [
-            "vervelend",
-            "naar"
+            {
+                "concept": "bad",
+                "label": {
+                    "positive degree": "slecht",
+                    "comparative degree": "slechter",
+                    "superlative degree": "slechtst"
+                }
+            },
+            {
+                "concept": "bad (sad)",
+                "label": "vervelend"
+            },
+            {
+                "concept": "bad (sad)",
+                "label": "naar"
+            }
         ]
     }
 }

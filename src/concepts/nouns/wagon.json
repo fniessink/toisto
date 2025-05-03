@@ -1,7 +1,25 @@
 {
-    "wagon": {
-        "en": "wagon",
-        "fi": "vaunu",
-        "nl": "de wagon"
+    "concepts": {
+        "wagon": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wagon",
+                "label": "wagon"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wagon",
+                "label": "vaunu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wagon",
+                "label": "de wagon"
+            }
+        ]
     }
 }

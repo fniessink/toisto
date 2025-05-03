@@ -1,33 +1,93 @@
 {
-    "thanks": {
-        "en": "Thank you!|Thanks!",
-        "fi": [
-            "Kiitos!",
-            "Kiitti!*"
+    "concepts": {
+        "thanks": {},
+        "thanks, same to you": {},
+        "thank you for the meal": {
+            "roots": {
+                "en": [
+                    "thanks"
+                ],
+                "fi": [
+                    "thanks",
+                    "food"
+                ],
+                "nl": [
+                    "thanks",
+                    "to eat"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "thanks",
+                "label": [
+                    "Thank you!",
+                    "Thanks!"
+                ]
+            },
+            {
+                "concept": "thanks, same to you",
+                "label": [
+                    "Thank you, same to you!",
+                    "Thanks, same to you!"
+                ]
+            },
+            {
+                "concept": "thank you for the meal",
+                "label": [
+                    "Thank you for the meal!",
+                    "Thanks for the meal!"
+                ]
+            }
         ],
-        "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
-    },
-    "thanks, same to you": {
-        "en": "Thank you, same to you!|Thanks, same to you!",
-        "fi": "Kiitos samoin!",
-        "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
-    },
-    "thank you for the meal": {
-        "roots": {
-            "en": [
-                "thanks"
-            ],
-            "fi": [
-                "thanks",
-                "food"
-            ],
-            "nl": [
-                "thanks",
-                "to eat"
-            ]
-        },
-        "en": "Thank you for the meal!|Thanks for the meal!",
-        "fi": "Kiitos ruoasta!",
-        "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
+        "fi": [
+            {
+                "concept": "thanks",
+                "label": "Kiitos!"
+            },
+            {
+                "concept": "thanks",
+                "label": "Kiitti!",
+                "colloquial": true
+            },
+            {
+                "concept": "thanks, same to you",
+                "label": "Kiitos samoin!"
+            },
+            {
+                "concept": "thank you for the meal",
+                "label": "Kiitos ruoasta!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "thanks",
+                "label": [
+                    "Dank je!",
+                    "Dank je wel!",
+                    "Dank u!",
+                    "Dank u wel!",
+                    "Bedankt!"
+                ]
+            },
+            {
+                "concept": "thanks, same to you",
+                "label": [
+                    "Dank je, van hetzelfde!",
+                    "Dank u, van hetzelfde!",
+                    "Bedankt, van hetzelfde!"
+                ]
+            },
+            {
+                "concept": "thank you for the meal",
+                "label": [
+                    "Dank je voor het eten!",
+                    "Dank u voor het eten!",
+                    "Bedankt voor het eten!"
+                ]
+            }
+        ]
     }
 }

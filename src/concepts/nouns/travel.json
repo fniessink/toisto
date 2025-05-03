@@ -1,53 +1,109 @@
 {
-    "travel": {
-        "example": "to continue the journey",
-        "en": {
-            "singular": [
+    "concepts": {
+        "travel": {
+            "example": "to continue the journey"
+        },
+        "travel program": {
+            "hypernym": "program",
+            "involves": "travel",
+            "roots": "travel"
+        },
+        "travel insurance": {
+            "involves": "travel",
+            "roots": [
                 "travel",
-                "journey"
-            ],
-            "plural": [
-                "travels",
-                "journeys"
+                "insurance"
             ]
         },
-        "fi": {
-            "singular": "matka",
-            "plural": "matkat"
+        "traveler": {
+            "roots": "travel"
         },
-        "nl": {
-            "singular": "de reis",
-            "plural": "de reizen"
+        "traveling": {
+            "roots": "travel"
         }
     },
-    "travel program": {
-        "hypernym": "program",
-        "involves": "travel",
-        "roots": "travel",
-        "en": "travel program",
-        "fi": "matkaohjelma",
-        "nl": "het reisprogramma"
-    },
-    "travel insurance": {
-        "involves": "travel",
-        "roots": [
-            "travel",
-            "insurance"
+    "labels": {
+        "en": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "travel",
+                    "plural": "travels"
+                }
+            },
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "journey",
+                    "plural": "journeys"
+                }
+            },
+            {
+                "concept": "travel program",
+                "label": "travel program"
+            },
+            {
+                "concept": "travel insurance",
+                "label": "travel insurance"
+            },
+            {
+                "concept": "traveler",
+                "label": "traveler"
+            },
+            {
+                "concept": "traveling",
+                "label": "traveling"
+            }
         ],
-        "en": "travel insurance",
-        "fi": "matkavakuutus",
-        "nl": "de reisverzekering"
-    },
-    "traveler": {
-        "roots": "travel",
-        "en": "traveler",
-        "fi": "matkustaja",
-        "nl": "de reiziger"
-    },
-    "traveling": {
-        "roots": "travel",
-        "en": "traveling",
-        "fi": "matkustaminen",
-        "nl": "het reizen"
+        "fi": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "matka",
+                    "plural": "matkat"
+                }
+            },
+            {
+                "concept": "travel program",
+                "label": "matkaohjelma"
+            },
+            {
+                "concept": "travel insurance",
+                "label": "matkavakuutus"
+            },
+            {
+                "concept": "traveler",
+                "label": "matkustaja"
+            },
+            {
+                "concept": "traveling",
+                "label": "matkustaminen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "travel",
+                "label": {
+                    "singular": "de reis",
+                    "plural": "de reizen"
+                }
+            },
+            {
+                "concept": "travel program",
+                "label": "het reisprogramma"
+            },
+            {
+                "concept": "travel insurance",
+                "label": "de reisverzekering"
+            },
+            {
+                "concept": "traveler",
+                "label": "de reiziger"
+            },
+            {
+                "concept": "traveling",
+                "label": "het reizen"
+            }
+        ]
     }
 }

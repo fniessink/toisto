@@ -1,16 +1,43 @@
 {
-    "to chop": {
-        "en": "to chop",
-        "fi": "hakata",
-        "nl": "hakken"
+    "concepts": {
+        "to chop": {},
+        "to chop firewood": {
+            "roots": [
+                "to chop",
+                "firewood"
+            ]
+        }
     },
-    "to chop firewood": {
-        "roots": [
-            "to chop",
-            "firewood"
+    "labels": {
+        "en": [
+            {
+                "concept": "to chop",
+                "label": "to chop"
+            },
+            {
+                "concept": "to chop firewood",
+                "label": "to chop firewood"
+            }
         ],
-        "en": "to chop firewood",
-        "fi": "hakata polttopuut",
-        "nl": "brandhout hakken"
+        "fi": [
+            {
+                "concept": "to chop",
+                "label": "hakata"
+            },
+            {
+                "concept": "to chop firewood",
+                "label": "hakata polttopuut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to chop",
+                "label": "hakken"
+            },
+            {
+                "concept": "to chop firewood",
+                "label": "brandhout hakken"
+            }
+        ]
     }
 }

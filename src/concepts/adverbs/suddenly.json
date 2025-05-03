@@ -1,11 +1,33 @@
 {
-    "suddenly": {
-        "en": "suddenly",
-        "fi": "yhtäkkiä",
+    "concepts": {
+        "suddenly": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "suddenly",
+                "label": "suddenly"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "suddenly",
+                "label": "yhtäkkiä"
+            }
+        ],
         "nl": [
-            "plotseling",
-            "ineens",
-            "opeens"
+            {
+                "concept": "suddenly",
+                "label": "plotseling"
+            },
+            {
+                "concept": "suddenly",
+                "label": "ineens"
+            },
+            {
+                "concept": "suddenly",
+                "label": "opeens"
+            }
         ]
     }
 }

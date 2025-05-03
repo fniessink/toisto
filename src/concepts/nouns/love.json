@@ -1,21 +1,56 @@
 {
-    "love": {
-        "example": [
-            "a toast to love",
-            "all is fair in love and war"
+    "concepts": {
+        "love": {
+            "example": [
+                "a toast to love",
+                "all is fair in love and war"
+            ]
+        },
+        "a toast to love": {},
+        "all is fair in love and war": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "love",
+                "label": "love"
+            },
+            {
+                "concept": "a toast to love",
+                "label": "A toast to love!"
+            },
+            {
+                "concept": "all is fair in love and war",
+                "label": "All is fair in love and war."
+            }
         ],
-        "en": "love",
-        "fi": "rakkaus",
-        "nl": "de liefde"
-    },
-    "a toast to love": {
-        "en": "A toast to love!",
-        "fi": "Malja rakkaudelle!",
-        "nl": "Een toast op de liefde!"
-    },
-    "all is fair in love and war": {
-        "en": "All is fair in love and war.",
-        "fi": "Sodassa ja rakkaudessa kaikki on sallittua.",
-        "nl": "Alles is geoorloofd in liefde en oorlog."
+        "fi": [
+            {
+                "concept": "love",
+                "label": "rakkaus"
+            },
+            {
+                "concept": "a toast to love",
+                "label": "Malja rakkaudelle!"
+            },
+            {
+                "concept": "all is fair in love and war",
+                "label": "Sodassa ja rakkaudessa kaikki on sallittua."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "love",
+                "label": "de liefde"
+            },
+            {
+                "concept": "a toast to love",
+                "label": "Een toast op de liefde!"
+            },
+            {
+                "concept": "all is fair in love and war",
+                "label": "Alles is geoorloofd in liefde en oorlog."
+            }
+        ]
     }
 }

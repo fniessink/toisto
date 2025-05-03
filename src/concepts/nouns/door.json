@@ -1,38 +1,66 @@
 {
-    "door": {
-        "holonym": "wall",
-        "en": {
-            "singular": "door",
-            "plural": "doors"
+    "concepts": {
+        "door": {
+            "holonym": "wall"
         },
-        "fi": {
-            "singular": "ovi",
-            "plural": "ovet"
-        },
-        "nl": {
-            "singular": "de deur",
-            "plural": "de deuren"
+        "the door is locked": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "door"
+                ],
+                "fi": [
+                    "to be",
+                    "door",
+                    "lock"
+                ],
+                "nl": [
+                    "to be",
+                    "door",
+                    "lock"
+                ]
+            }
         }
     },
-    "the door is locked": {
-        "roots": {
-            "en": [
-                "to be",
-                "door"
-            ],
-            "fi": [
-                "to be",
-                "door",
-                "lock"
-            ],
-            "nl": [
-                "to be",
-                "door",
-                "lock"
-            ]
-        },
-        "en": "The door is locked.",
-        "fi": "Ovi on lukossa.",
-        "nl": "De deur is op slot."
+    "labels": {
+        "en": [
+            {
+                "concept": "door",
+                "label": {
+                    "singular": "door",
+                    "plural": "doors"
+                }
+            },
+            {
+                "concept": "the door is locked",
+                "label": "The door is locked."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "door",
+                "label": {
+                    "singular": "ovi",
+                    "plural": "ovet"
+                }
+            },
+            {
+                "concept": "the door is locked",
+                "label": "Ovi on lukossa."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "door",
+                "label": {
+                    "singular": "de deur",
+                    "plural": "de deuren"
+                }
+            },
+            {
+                "concept": "the door is locked",
+                "label": "De deur is op slot."
+            }
+        ]
     }
 }

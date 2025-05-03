@@ -1,28 +1,58 @@
 {
-    "example": {
-        "en": {
-            "singular": "example",
-            "plural": "examples"
-        },
-        "fi": {
-            "singular": "esimerkki",
-            "plural": "esimerkit"
-        },
-        "nl": {
-            "singular": "het voorbeeld",
-            "plural": "de voorbeelden"
-        }
+    "concepts": {
+        "example": {},
+        "for example": {}
     },
-    "for example": {
+    "labels": {
         "en": [
-            "for example",
-            "for instance"
+            {
+                "concept": "example",
+                "label": {
+                    "singular": "example",
+                    "plural": "examples"
+                }
+            },
+            {
+                "concept": "for example",
+                "label": "for example"
+            },
+            {
+                "concept": "for example",
+                "label": "for instance"
+            }
         ],
         "fi": [
-            "esimerkiksi",
-            "vaikka",
-            "vaikkapa"
+            {
+                "concept": "example",
+                "label": {
+                    "singular": "esimerkki",
+                    "plural": "esimerkit"
+                }
+            },
+            {
+                "concept": "for example",
+                "label": "esimerkiksi"
+            },
+            {
+                "concept": "for example",
+                "label": [
+                    "vaikka",
+                    "vaikkapa"
+                ]
+            }
         ],
-        "nl": "bijvoorbeeld"
+        "nl": [
+            {
+                "concept": "example",
+                "label": {
+                    "singular": "het voorbeeld",
+                    "plural": "de voorbeelden"
+                }
+            },
+            {
+                "concept": "for example",
+                "label": "bijvoorbeeld"
+            }
+        ]
     }
 }

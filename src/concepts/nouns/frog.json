@@ -1,8 +1,27 @@
 {
-    "frog": {
-        "hypernym": "animal",
-        "en": "frog",
-        "fi": "sammakko",
-        "nl": "de kikker"
+    "concepts": {
+        "frog": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "frog",
+                "label": "frog"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "frog",
+                "label": "sammakko"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "frog",
+                "label": "de kikker"
+            }
+        ]
     }
 }

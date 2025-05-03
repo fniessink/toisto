@@ -1,8 +1,27 @@
 {
-    "history": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "history",
-        "fi": "historia",
-        "nl": "de geschiedenis"
+    "concepts": {
+        "history": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "history",
+                "label": "history"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "history",
+                "label": "historia"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "history",
+                "label": "de geschiedenis"
+            }
+        ]
     }
 }

@@ -1,7 +1,27 @@
 {
-    "verokortti": {
-        "en": "(card with personal tax data)",
-        "fi": "verokortti",
-        "nl": "(kaart met persoonlijke belastinggegevens)"
+    "concepts": {
+        "verokortti": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "verokortti",
+                "label": "card with personal tax data",
+                "meaning-only": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "verokortti",
+                "label": "verokortti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "verokortti",
+                "label": "kaart met persoonlijke belastinggegevens",
+                "meaning-only": true
+            }
+        ]
     }
 }

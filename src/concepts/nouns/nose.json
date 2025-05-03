@@ -1,17 +1,36 @@
 {
-    "nose": {
-        "holonym": "face",
-        "en": {
-            "singular": "nose",
-            "plural": "noses"
-        },
-        "fi": {
-            "singular": "nenä",
-            "plural": "nenät"
-        },
-        "nl": {
-            "singular": "de neus",
-            "plural": "de neuzen"
+    "concepts": {
+        "nose": {
+            "holonym": "face"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "nose",
+                "label": {
+                    "singular": "nose",
+                    "plural": "noses"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "nose",
+                "label": {
+                    "singular": "nenä",
+                    "plural": "nenät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nose",
+                "label": {
+                    "singular": "de neus",
+                    "plural": "de neuzen"
+                }
+            }
+        ]
     }
 }

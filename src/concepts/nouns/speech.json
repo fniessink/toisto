@@ -1,7 +1,25 @@
 {
-    "speech": {
-        "en": "speech",
-        "fi": "puhe",
-        "nl": "de toespraak"
+    "concepts": {
+        "speech": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "speech",
+                "label": "speech"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "speech",
+                "label": "puhe"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "speech",
+                "label": "de toespraak"
+            }
+        ]
     }
 }

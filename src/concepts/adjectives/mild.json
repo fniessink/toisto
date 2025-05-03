@@ -1,7 +1,25 @@
 {
-    "mild": {
-        "en": "mild",
-        "fi": "mieto",
-        "nl": "mild"
+    "concepts": {
+        "mild": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mild",
+                "label": "mild"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mild",
+                "label": "mieto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mild",
+                "label": "mild"
+            }
+        ]
     }
 }

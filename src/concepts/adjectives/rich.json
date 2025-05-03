@@ -1,7 +1,25 @@
 {
-    "rich": {
-        "en": "rich",
-        "fi": "rikas",
-        "nl": "rijk"
+    "concepts": {
+        "rich": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rich",
+                "label": "rich"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rich",
+                "label": "rikas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rich",
+                "label": "rijk"
+            }
+        ]
     }
 }

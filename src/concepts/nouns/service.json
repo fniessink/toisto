@@ -1,28 +1,67 @@
 {
-    "service": {
-        "en": "service",
-        "fi": "palvelu",
-        "nl": [
-            "service",
-            "faciliteit"
-        ]
+    "concepts": {
+        "service": {},
+        "customer service": {
+            "roots": [
+                "customer",
+                "service"
+            ]
+        },
+        "service point": {
+            "roots": "service"
+        }
     },
-    "customer service": {
-        "roots": [
-            "customer",
-            "service"
+    "labels": {
+        "en": [
+            {
+                "concept": "service",
+                "label": "service"
+            },
+            {
+                "concept": "customer service",
+                "label": "customer service"
+            },
+            {
+                "concept": "service point",
+                "label": "service point"
+            }
         ],
-        "en": "customer service",
-        "fi": "asiakaspalvelu",
-        "nl": "de klantenservice"
-    },
-    "service point": {
-        "roots": "service",
-        "en": "service point",
         "fi": [
-            "palvelupiste",
-            "tiski*"
+            {
+                "concept": "service",
+                "label": "palvelu"
+            },
+            {
+                "concept": "customer service",
+                "label": "asiakaspalvelu"
+            },
+            {
+                "concept": "service point",
+                "label": "palvelupiste"
+            },
+            {
+                "concept": "service point",
+                "label": "tiski",
+                "colloquial": true
+            }
         ],
-        "nl": "de servicebalie"
+        "nl": [
+            {
+                "concept": "service",
+                "label": "service"
+            },
+            {
+                "concept": "service",
+                "label": "faciliteit"
+            },
+            {
+                "concept": "customer service",
+                "label": "de klantenservice"
+            },
+            {
+                "concept": "service point",
+                "label": "de servicebalie"
+            }
+        ]
     }
 }

@@ -1,24 +1,48 @@
 {
-    "17": {
-        "hypernym": "number",
-        "roots": [
-            "7",
-            "10"
-        ],
-        "en": {
-            "cardinal": "seventeen",
-            "ordinal": "seventeenth"
-        },
-        "fi": {
-            "cardinal": [
-                "seitsemäntoista",
-                "seittemäntoist*"
-            ],
-            "ordinal": "seitsemästoista"
-        },
-        "nl": {
-            "cardinal": "zeventien",
-            "ordinal": "zeventiende"
+    "concepts": {
+        "17": {
+            "hypernym": "number",
+            "roots": [
+                "7",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "17",
+                "label": {
+                    "cardinal": "seventeen",
+                    "ordinal": "seventeenth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "17",
+                "label": {
+                    "cardinal": "seitsemäntoista",
+                    "ordinal": "seitsemästoista"
+                }
+            },
+            {
+                "concept": "17",
+                "label": {
+                    "cardinal": "seittemäntoist",
+                    "ordinal": "seitsemästoista"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "17",
+                "label": {
+                    "cardinal": "zeventien",
+                    "ordinal": "zeventiende"
+                }
+            }
+        ]
     }
 }

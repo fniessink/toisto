@@ -1,13 +1,33 @@
 {
-    "ew": {
+    "concepts": {
+        "ew": {}
+    },
+    "labels": {
         "en": [
-            "Ew!",
-            "Yuck!"
+            {
+                "concept": "ew",
+                "label": "Ew!"
+            },
+            {
+                "concept": "ew",
+                "label": "Yuck!"
+            }
         ],
-        "fi": "Hyi!",
+        "fi": [
+            {
+                "concept": "ew",
+                "label": "Hyi!"
+            }
+        ],
         "nl": [
-            "Bah!",
-            "Jakkes!"
+            {
+                "concept": "ew",
+                "label": "Bah!"
+            },
+            {
+                "concept": "ew",
+                "label": "Jakkes!"
+            }
         ]
     }
 }

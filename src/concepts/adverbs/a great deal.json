@@ -1,7 +1,25 @@
 {
-    "a great deal": {
-        "en": "a great deal",
-        "fi": "kovasti",
-        "nl": "erg"
+    "concepts": {
+        "a great deal": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "a great deal",
+                "label": "a great deal"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "a great deal",
+                "label": "kovasti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "a great deal",
+                "label": "erg"
+            }
+        ]
     }
 }

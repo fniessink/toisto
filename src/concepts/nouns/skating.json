@@ -1,8 +1,27 @@
 {
-    "skating": {
-        "hypernym": "sport",
-        "en": "skating",
-        "fi": "luistelu",
-        "nl": "het schaatsen"
+    "concepts": {
+        "skating": {
+            "hypernym": "sport"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "skating",
+                "label": "skating"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "skating",
+                "label": "luistelu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "skating",
+                "label": "het schaatsen"
+            }
+        ]
     }
 }

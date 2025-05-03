@@ -1,17 +1,36 @@
 {
-    "gorilla": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "gorilla",
-            "plural": "gorillas"
-        },
-        "fi": {
-            "singular": "gorilla",
-            "plural": "gorillat"
-        },
-        "nl": {
-            "singular": "de gorilla",
-            "plural": "de gorilla's"
+    "concepts": {
+        "gorilla": {
+            "hypernym": "animal"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "gorilla",
+                "label": {
+                    "singular": "gorilla",
+                    "plural": "gorillas"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gorilla",
+                "label": {
+                    "singular": "gorilla",
+                    "plural": "gorillat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gorilla",
+                "label": {
+                    "singular": "de gorilla",
+                    "plural": "de gorilla's"
+                }
+            }
+        ]
     }
 }

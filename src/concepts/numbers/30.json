@@ -1,24 +1,48 @@
 {
-    "30": {
-        "hypernym": "number",
-        "roots": [
-            "3",
-            "10"
-        ],
-        "en": {
-            "cardinal": "thirty",
-            "ordinal": "thirtieth"
-        },
-        "fi": {
-            "cardinal": [
-                "kolmekymmentä",
-                "kolkyt*"
-            ],
-            "ordinal": "kolmaskymmenes"
-        },
-        "nl": {
-            "cardinal": "dertig",
-            "ordinal": "dertigste"
+    "concepts": {
+        "30": {
+            "hypernym": "number",
+            "roots": [
+                "3",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "30",
+                "label": {
+                    "cardinal": "thirty",
+                    "ordinal": "thirtieth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "30",
+                "label": {
+                    "cardinal": "kolmekymmentä",
+                    "ordinal": "kolmaskymmenes"
+                }
+            },
+            {
+                "concept": "30",
+                "label": {
+                    "cardinal": "kolkyt",
+                    "ordinal": "kolmaskymmenes"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "30",
+                "label": {
+                    "cardinal": "dertig",
+                    "ordinal": "dertigste"
+                }
+            }
+        ]
     }
 }

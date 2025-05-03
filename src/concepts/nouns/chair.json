@@ -1,37 +1,64 @@
 {
-    "chair": {
-        "en": {
-            "singular": "chair",
-            "plural": "chairs"
-        },
-        "fi": {
-            "singular": "tuoli",
-            "plural": "tuolit"
-        },
-        "nl": {
-            "singular": "de stoel",
-            "plural": "de stoelen"
+    "concepts": {
+        "chair": {},
+        "office chair": {
+            "example": "we are looking for an office chair",
+            "hypernym": "chair",
+            "roots": {
+                "en": [
+                    "office",
+                    "chair"
+                ],
+                "fi": [
+                    "job",
+                    "chair"
+                ],
+                "nl": [
+                    "desk",
+                    "chair"
+                ]
+            }
         }
     },
-    "office chair": {
-        "example": "we are looking for an office chair",
-        "hypernym": "chair",
-        "roots": {
-            "en": [
-                "office",
-                "chair"
-            ],
-            "fi": [
-                "job",
-                "chair"
-            ],
-            "nl": [
-                "desk",
-                "chair"
-            ]
-        },
-        "en": "office chair",
-        "fi": "työtuoli",
-        "nl": "de bureaustoel"
+    "labels": {
+        "en": [
+            {
+                "concept": "chair",
+                "label": {
+                    "singular": "chair",
+                    "plural": "chairs"
+                }
+            },
+            {
+                "concept": "office chair",
+                "label": "office chair"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "chair",
+                "label": {
+                    "singular": "tuoli",
+                    "plural": "tuolit"
+                }
+            },
+            {
+                "concept": "office chair",
+                "label": "työtuoli"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "chair",
+                "label": {
+                    "singular": "de stoel",
+                    "plural": "de stoelen"
+                }
+            },
+            {
+                "concept": "office chair",
+                "label": "de bureaustoel"
+            }
+        ]
     }
 }

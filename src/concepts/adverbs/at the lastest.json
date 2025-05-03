@@ -1,29 +1,61 @@
 {
-    "at the latest": {
-        "example": "friday at the latest",
-        "en": [
-            "at the latest",
-            "no later than"
-        ],
-        "fi": [
-            "viimeistään",
-            "mennessä"
-        ],
-        "nl": "uiterlijk"
+    "concepts": {
+        "at the latest": {
+            "example": "friday at the latest"
+        },
+        "friday at the latest": {
+            "roots": [
+                "at the latest",
+                "friday"
+            ]
+        }
     },
-    "friday at the latest": {
-        "roots": [
-            "at the latest",
-            "friday"
-        ],
+    "labels": {
         "en": [
-            "friday at the latest",
-            "no later than friday"
+            {
+                "concept": "at the latest",
+                "label": "at the latest"
+            },
+            {
+                "concept": "at the latest",
+                "label": "no later than"
+            },
+            {
+                "concept": "friday at the latest",
+                "label": "friday at the latest"
+            },
+            {
+                "concept": "friday at the latest",
+                "label": "no later than friday"
+            }
         ],
         "fi": [
-            "perjantaina viimeistään",
-            "perjantaihin mennessä"
+            {
+                "concept": "at the latest",
+                "label": "viimeistään"
+            },
+            {
+                "concept": "at the latest",
+                "label": "mennessä"
+            },
+            {
+                "concept": "friday at the latest",
+                "label": "perjantaina viimeistään"
+            },
+            {
+                "concept": "friday at the latest",
+                "label": "perjantaihin mennessä"
+            }
         ],
-        "nl": "uiterlijk vrijdag"
+        "nl": [
+            {
+                "concept": "at the latest",
+                "label": "uiterlijk"
+            },
+            {
+                "concept": "friday at the latest",
+                "label": "uiterlijk vrijdag"
+            }
+        ]
     }
 }

@@ -1,100 +1,119 @@
 {
-    "to eat": {
-        "en": {
-            "infinitive": "to eat",
-            "verbal noun": "eating",
-            "present tense": {
-                "singular": {
-                    "first person": "I eat",
-                    "second person": "you eat",
-                    "third person": {
-                        "feminine": "she eats",
-                        "masculine": "he eats"
+    "concepts": {
+        "to eat": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to eat",
+                "label": {
+                    "infinitive": "to eat",
+                    "verbal noun": "eating",
+                    "present tense": {
+                        "singular": {
+                            "first person": "I eat",
+                            "second person": "you eat",
+                            "third person": {
+                                "feminine": "she eats",
+                                "masculine": "he eats"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we eat",
+                            "second person": "you eat",
+                            "third person": "they eat"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "I ate",
+                            "second person": "you ate",
+                            "third person": {
+                                "feminine": "she ate",
+                                "masculine": "he ate"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we ate",
+                            "second person": "you ate",
+                            "third person": "they ate"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we eat",
-                    "second person": "you eat",
-                    "third person": "they eat"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "I ate",
-                    "second person": "you ate",
-                    "third person": {
-                        "feminine": "she ate",
-                        "masculine": "he ate"
-                    }
-                },
-                "plural": {
-                    "first person": "we ate",
-                    "second person": "you ate",
-                    "third person": "they ate"
                 }
             }
-        },
-        "fi": {
-            "infinitive": "syödä;;syödä is verbityyppi 2",
-            "verbal noun": "syöminen",
-            "present tense": {
-                "singular": {
-                    "first person": "minä syön",
-                    "second person": "sinä syöt",
-                    "third person": "hän syö"
-                },
-                "plural": {
-                    "first person": "me syömme",
-                    "second person": "te syötte",
-                    "third person": "he syövät"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "minä söin",
-                    "second person": "sinä söit",
-                    "third person": "hän söi"
-                },
-                "plural": {
-                    "first person": "me söimme",
-                    "second person": "te söitte",
-                    "third person": "he söivät"
-                }
-            }
-        },
-        "nl": {
-            "infinitive": "eten",
-            "verbal noun": "het eten",
-            "present tense": {
-                "singular": {
-                    "first person": "ik eet",
-                    "second person": "jij eet",
-                    "third person": {
-                        "feminine": "zij eet",
-                        "masculine": "hij eet"
+        ],
+        "fi": [
+            {
+                "concept": "to eat",
+                "label": {
+                    "infinitive": "syödä",
+                    "verbal noun": "syöminen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minä syön",
+                            "second person": "sinä syöt",
+                            "third person": "hän syö"
+                        },
+                        "plural": {
+                            "first person": "me syömme",
+                            "second person": "te syötte",
+                            "third person": "he syövät"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "minä söin",
+                            "second person": "sinä söit",
+                            "third person": "hän söi"
+                        },
+                        "plural": {
+                            "first person": "me söimme",
+                            "second person": "te söitte",
+                            "third person": "he söivät"
+                        }
                     }
                 },
-                "plural": {
-                    "first person": "wij eten",
-                    "second person": "jullie eten",
-                    "third person": "zij eten"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "ik at",
-                    "second person": "jij at",
-                    "third person": {
-                        "feminine": "zij at",
-                        "masculine": "hij at"
+                "note": "syödä is verbityyppi 2"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to eat",
+                "label": {
+                    "infinitive": "eten",
+                    "verbal noun": "het eten",
+                    "present tense": {
+                        "singular": {
+                            "first person": "ik eet",
+                            "second person": "jij eet",
+                            "third person": {
+                                "feminine": "zij eet",
+                                "masculine": "hij eet"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij eten",
+                            "second person": "jullie eten",
+                            "third person": "zij eten"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "ik at",
+                            "second person": "jij at",
+                            "third person": {
+                                "feminine": "zij at",
+                                "masculine": "hij at"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij aten",
+                            "second person": "jullie aten",
+                            "third person": "zij aten"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij aten",
-                    "second person": "jullie aten",
-                    "third person": "zij aten"
                 }
             }
-        }
+        ]
     }
 }

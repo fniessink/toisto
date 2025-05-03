@@ -1,31 +1,56 @@
 {
-    "fish": {
-        "example": "is the fish fresh",
-        "hypernym": "food",
-        "en": {
-            "singular": "fish",
-            "plural": [
+    "concepts": {
+        "fish": {
+            "example": "is the fish fresh",
+            "hypernym": "food"
+        },
+        "is the fish fresh": {
+            "roots": [
+                "to be",
                 "fish",
-                "fishes"
+                "fresh"
             ]
-        },
-        "fi": {
-            "singular": "kala",
-            "plural": "kalat"
-        },
-        "nl": {
-            "singular": "de vis",
-            "plural": "de vissen"
         }
     },
-    "is the fish fresh": {
-        "roots": [
-            "to be",
-            "fish",
-            "fresh"
+    "labels": {
+        "en": [
+            {
+                "concept": "fish",
+                "label": {
+                    "singular": "fish",
+                    "plural": "fish"
+                }
+            },
+            {
+                "concept": "is the fish fresh",
+                "label": "Is the fish fresh?"
+            }
         ],
-        "en": "Is the fish fresh?",
-        "fi": "Onko kala tuoretta?",
-        "nl": "Is de vis vers?"
+        "fi": [
+            {
+                "concept": "fish",
+                "label": {
+                    "singular": "kala",
+                    "plural": "kalat"
+                }
+            },
+            {
+                "concept": "is the fish fresh",
+                "label": "Onko kala tuoretta?"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fish",
+                "label": {
+                    "singular": "de vis",
+                    "plural": "de vissen"
+                }
+            },
+            {
+                "concept": "is the fish fresh",
+                "label": "Is de vis vers?"
+            }
+        ]
     }
 }

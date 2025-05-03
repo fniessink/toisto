@@ -1,7 +1,25 @@
 {
-    "length": {
-        "en": "length",
-        "fi": "pituus",
-        "nl": "de lengte"
+    "concepts": {
+        "length": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "length",
+                "label": "length"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "length",
+                "label": "pituus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "length",
+                "label": "de lengte"
+            }
+        ]
     }
 }

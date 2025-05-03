@@ -1,16 +1,34 @@
 {
-    "rock": {
-        "en": {
-            "singular": "rock",
-            "plural": "rocks"
-        },
-        "fi": {
-            "singular": "kallio",
-            "plural": "kalliot"
-        },
-        "nl": {
-            "singular": "de rots",
-            "plural": "de rotsen"
-        }
+    "concepts": {
+        "rock": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rock",
+                "label": {
+                    "singular": "rock",
+                    "plural": "rocks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rock",
+                "label": {
+                    "singular": "kallio",
+                    "plural": "kalliot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rock",
+                "label": {
+                    "singular": "de rots",
+                    "plural": "de rotsen"
+                }
+            }
+        ]
     }
 }

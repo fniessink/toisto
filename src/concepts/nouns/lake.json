@@ -1,16 +1,34 @@
 {
-    "lake": {
-        "en": {
-            "singular": "lake",
-            "plural": "lakes"
-        },
-        "fi": {
-            "singular": "järvi",
-            "plural": "järvet"
-        },
-        "nl": {
-            "singular": "het meer",
-            "plural": "de meren"
-        }
+    "concepts": {
+        "lake": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lake",
+                "label": {
+                    "singular": "lake",
+                    "plural": "lakes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lake",
+                "label": {
+                    "singular": "järvi",
+                    "plural": "järvet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lake",
+                "label": {
+                    "singular": "het meer",
+                    "plural": "de meren"
+                }
+            }
+        ]
     }
 }

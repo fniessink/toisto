@@ -1,7 +1,25 @@
 {
-    "fair": {
-        "en": "fair",
-        "fi": "messut",
-        "nl": "de beurs"
+    "concepts": {
+        "fair": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "fair",
+                "label": "fair"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "fair",
+                "label": "messut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fair",
+                "label": "de beurs"
+            }
+        ]
     }
 }

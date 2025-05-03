@@ -1,7 +1,25 @@
 {
-    "cough": {
-        "en": "cough",
-        "fi": "yskä",
-        "nl": "de hoest"
+    "concepts": {
+        "cough": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cough",
+                "label": "cough"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cough",
+                "label": "yskä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cough",
+                "label": "de hoest"
+            }
+        ]
     }
 }

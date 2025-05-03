@@ -1,25 +1,62 @@
 {
-    "thing": {
-        "en": [
-            "thing;that is abstract",
-            "business"
-        ],
-        "fi": "asia",
-        "nl": [
-            "het ding;that is abstract",
-            "de zaak"
-        ]
+    "concepts": {
+        "thing": {},
+        "thing (concrete)": {}
     },
-    "thing (concrete)": {
+    "labels": {
         "en": [
-            "object",
-            "item",
-            "thing;that is physical, concrete, tangible"
+            {
+                "concept": "thing",
+                "label": "thing",
+                "tip": "that is abstract"
+            },
+            {
+                "concept": "thing",
+                "label": "business"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "object"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "item"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "thing",
+                "tip": "that is physical, concrete, tangible"
+            }
         ],
-        "fi": "esine",
+        "fi": [
+            {
+                "concept": "thing",
+                "label": "asia"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "esine"
+            }
+        ],
         "nl": [
-            "het ding;that is physical, concrete, tangible",
-            "het voorwerp"
+            {
+                "concept": "thing",
+                "label": "het ding",
+                "tip": "that is abstract"
+            },
+            {
+                "concept": "thing",
+                "label": "de zaak"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "het ding",
+                "tip": "that is physical, concrete, tangible"
+            },
+            {
+                "concept": "thing (concrete)",
+                "label": "het voorwerp"
+            }
         ]
     }
 }

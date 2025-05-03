@@ -1,10 +1,29 @@
 {
-    "nothing": {
-        "en": "nothing",
-        "fi": [
-            "ei mitään",
-            "ei mikään"
+    "concepts": {
+        "nothing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "nothing",
+                "label": "nothing"
+            }
         ],
-        "nl": "niets"
+        "fi": [
+            {
+                "concept": "nothing",
+                "label": "ei mitään"
+            },
+            {
+                "concept": "nothing",
+                "label": "ei mikään"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nothing",
+                "label": "niets"
+            }
+        ]
     }
 }

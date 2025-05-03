@@ -1,72 +1,150 @@
 {
-    "money": {
-        "en": "money",
-        "fi": "raha",
-        "nl": "het geld"
+    "concepts": {
+        "money": {},
+        "bank card": {},
+        "cash": {
+            "hypernym": "money"
+        },
+        "receipt": {},
+        "account": {},
+        "price": {},
+        "cent": {
+            "hypernym": "money"
+        },
+        "banknote": {
+            "hypernym": "money"
+        }
     },
-    "bank card": {
+    "labels": {
         "en": [
-            "bank card",
-            "debit card"
+            {
+                "concept": "money",
+                "label": "money"
+            },
+            {
+                "concept": "bank card",
+                "label": "bank card"
+            },
+            {
+                "concept": "bank card",
+                "label": "debit card"
+            },
+            {
+                "concept": "cash",
+                "label": "cash"
+            },
+            {
+                "concept": "receipt",
+                "label": "receipt"
+            },
+            {
+                "concept": "account",
+                "label": "account"
+            },
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "price",
+                    "plural": "prices"
+                }
+            },
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "cent",
+                    "plural": "cents"
+                }
+            },
+            {
+                "concept": "banknote",
+                "label": [
+                    "banknote",
+                    "note"
+                ]
+            }
         ],
-        "fi": "kortti",
-        "nl": "de bankpas"
-    },
-    "cash": {
-        "hypernym": "money",
-        "en": "cash",
-        "fi": "käteinen",
-        "nl": "contant"
-    },
-    "receipt": {
-        "en": "receipt",
-        "fi": "kuitti",
+        "fi": [
+            {
+                "concept": "money",
+                "label": "raha"
+            },
+            {
+                "concept": "bank card",
+                "label": "kortti"
+            },
+            {
+                "concept": "cash",
+                "label": "käteinen"
+            },
+            {
+                "concept": "receipt",
+                "label": "kuitti"
+            },
+            {
+                "concept": "account",
+                "label": "tili"
+            },
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "hinta",
+                    "plural": "hinnat"
+                }
+            },
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "sentti",
+                    "plural": "sentit"
+                }
+            },
+            {
+                "concept": "banknote",
+                "label": "seteli"
+            }
+        ],
         "nl": [
-            "de bon|het bonnetje",
-            "de kwitantie"
+            {
+                "concept": "money",
+                "label": "het geld"
+            },
+            {
+                "concept": "bank card",
+                "label": "de bankpas"
+            },
+            {
+                "concept": "cash",
+                "label": "contant"
+            },
+            {
+                "concept": "receipt",
+                "label": [
+                    "de bon",
+                    "het bonnetje"
+                ]
+            },
+            {
+                "concept": "receipt",
+                "label": "de kwitantie"
+            },
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "de prijs",
+                    "plural": "de prijzen"
+                }
+            },
+            {
+                "concept": "cent",
+                "label": {
+                    "singular": "de cent",
+                    "plural": "de centen"
+                }
+            },
+            {
+                "concept": "banknote",
+                "label": "het bankbiljet"
+            }
         ]
-    },
-    "account": {
-        "en": "account",
-        "fi": "tili",
-        "nl": "de rekening"
-    },
-    "price": {
-        "en": {
-            "singular": "price",
-            "plural": "prices"
-        },
-        "fi": {
-            "singular": "hinta",
-            "plural": "hinnat"
-        },
-        "nl": {
-            "singular": "de prijs",
-            "plural": "de prijzen"
-        }
-    },
-    "cent": {
-        "hypernym": "money",
-        "en": {
-            "singular": "cent",
-            "plural": "cents"
-        },
-        "fi": {
-            "singular": "sentti",
-            "plural": "sentit"
-        },
-        "nl": {
-            "singular": "de cent",
-            "plural": "de centen"
-        }
-    },
-    "banknote": {
-        "hypernym": "money",
-        "en": [
-            "banknote|note",
-            "bill"
-        ],
-        "fi": "seteli",
-        "nl": "het bankbiljet"
     }
 }

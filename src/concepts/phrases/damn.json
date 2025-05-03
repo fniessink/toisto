@@ -1,7 +1,25 @@
 {
-    "damn": {
-        "en": "Damn!",
-        "fi": "Hitto!",
-        "nl": "Verdomme!"
+    "concepts": {
+        "damn": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "damn",
+                "label": "Damn!"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "damn",
+                "label": "Hitto!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "damn",
+                "label": "Verdomme!"
+            }
+        ]
     }
 }

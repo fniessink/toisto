@@ -1,17 +1,36 @@
 {
-    "beach": {
-        "hypernym": "coast",
-        "en": {
-            "singular": "beach",
-            "plural": "beaches"
-        },
-        "fi": {
-            "singular": "ranta",
-            "plural": "rannat"
-        },
-        "nl": {
-            "singular": "het strand",
-            "plural": "de stranden"
+    "concepts": {
+        "beach": {
+            "hypernym": "coast"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "beach",
+                "label": {
+                    "singular": "beach",
+                    "plural": "beaches"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "beach",
+                "label": {
+                    "singular": "ranta",
+                    "plural": "rannat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "beach",
+                "label": {
+                    "singular": "het strand",
+                    "plural": "de stranden"
+                }
+            }
+        ]
     }
 }

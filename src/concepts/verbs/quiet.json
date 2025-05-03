@@ -1,7 +1,25 @@
 {
-    "to quiet": {
-        "en": "to quiet",
-        "fi": "hiljentyä",
-        "nl": "stil worden"
+    "concepts": {
+        "to quiet": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to quiet",
+                "label": "to quiet"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to quiet",
+                "label": "hiljentyä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to quiet",
+                "label": "stil worden"
+            }
+        ]
     }
 }

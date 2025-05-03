@@ -1,7 +1,25 @@
 {
-    "to have to rush": {
-        "en": "to have to rush",
-        "fi": "tulla kiire",
-        "nl": "zich moeten haasten"
+    "concepts": {
+        "to have to rush": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to have to rush",
+                "label": "to have to rush"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to have to rush",
+                "label": "tulla kiire"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to have to rush",
+                "label": "zich moeten haasten"
+            }
+        ]
     }
 }

@@ -1,13 +1,43 @@
 {
-    "field": {
-        "en": "field",
-        "fi": "pelto",
-        "nl": "het veld"
+    "concepts": {
+        "field": {},
+        "playing field": {
+            "involves": "sport"
+        }
     },
-    "playing field": {
-        "involves": "sport",
-        "en": "playing field",
-        "fi": "urheilukenttä",
-        "nl": "het sportveld"
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "field",
+                    "area, field, domain (one's field of expertise or activity)"
+                ],
+                "label": "field"
+            },
+            {
+                "concept": "playing field",
+                "label": "playing field"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "field",
+                "label": "pelto"
+            },
+            {
+                "concept": "playing field",
+                "label": "urheilukenttä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "field",
+                "label": "het veld"
+            },
+            {
+                "concept": "playing field",
+                "label": "het sportveld"
+            }
+        ]
     }
 }

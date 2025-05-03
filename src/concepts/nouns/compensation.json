@@ -1,15 +1,45 @@
 {
-    "compensation": {
-        "en": "compensation",
-        "fi": "korvaus",
-        "nl": "de vergoeding"
+    "concepts": {
+        "compensation": {},
+        "application for compensation": {}
     },
-    "application for compensation": {
-        "en": "application for compensation",
-        "fi": "korvaushakemus",
+    "labels": {
+        "en": [
+            {
+                "concept": "compensation",
+                "label": "compensation"
+            },
+            {
+                "concept": "application for compensation",
+                "label": "application for compensation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "compensation",
+                "label": "korvaus"
+            },
+            {
+                "concept": "application for compensation",
+                "label": "korvaushakemus"
+            }
+        ],
         "nl": [
-            "de aanvraag tot schadevergoeding",
-            "de schadeclaim|de claim"
+            {
+                "concept": "compensation",
+                "label": "de vergoeding"
+            },
+            {
+                "concept": "application for compensation",
+                "label": "de aanvraag tot schadevergoeding"
+            },
+            {
+                "concept": "application for compensation",
+                "label": [
+                    "de schadeclaim",
+                    "de claim"
+                ]
+            }
         ]
     }
 }

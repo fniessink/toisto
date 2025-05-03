@@ -4,13 +4,13 @@ from __future__ import annotations
 
 import tempfile
 from configparser import ConfigParser
-from contextlib import redirect_stdout, suppress
+from contextlib import redirect_stderr, redirect_stdout, suppress
 from functools import cached_property
 from subprocess import DEVNULL, Popen, run  # nosec import_subprocess
 
 from gtts import gTTS, gTTSError
 
-with suppress(ModuleNotFoundError), redirect_stdout(None):
+with suppress(ModuleNotFoundError), redirect_stderr(None), redirect_stdout(None):
     from pygame.mixer import music
 
 from toisto.model.language import EN, FI, NL, Language
@@ -83,7 +83,7 @@ class Speech:
     @cached_property
     def apple_say_voices(self) -> dict[Language, str]:
         """Return the best available voices."""
-        available_voices = run(["say", "-v", "?"], capture_output=True, check=False, text=True).stdout  # noqa: S603, S607, # nosec subprocess_without_shell_equals_true, start_process_with_partial_path
+        available_voices = run(["say", "-v", "?"], capture_output=True, check=False, text=True).stdout  # noqa: S607, # nosec subprocess_without_shell_equals_true, start_process_with_partial_path
         voices = {}
         for language, voice in {EN: "Daniel", FI: "Satu", NL: "Xander"}.items():
             enhanced_voice = f"{voice} (Enhanced)"

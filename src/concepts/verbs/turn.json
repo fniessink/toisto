@@ -1,18 +1,55 @@
 {
-    "to turn (a certain age)": {
-        "example": "Liisa turns 40 in June",
-        "en": "to turn;a certain age",
-        "fi": "täyttää;a certain age",
-        "nl": "worden;a certain age"
+    "concepts": {
+        "to turn (a certain age)": {
+            "example": "Liisa turns 40 in June"
+        },
+        "Liisa turns 40 in June": {
+            "roots": [
+                "to turn (a certain age)",
+                "year",
+                "june"
+            ]
+        }
     },
-    "Liisa turns 40 in June": {
-        "roots": [
-            "to turn (a certain age)",
-            "year",
-            "june"
+    "labels": {
+        "en": [
+            {
+                "concept": "to turn (a certain age)",
+                "label": "to turn",
+                "tip": "a certain age"
+            },
+            {
+                "concept": "Liisa turns 40 in June",
+                "label": [
+                    "Liisa turns 40 years old in June.",
+                    "Liisa turns 40 in June."
+                ]
+            }
         ],
-        "en": "Liisa turns 40 years old in June.|Liisa turns 40 in June.",
-        "fi": "Liisa täyttää 40 vuotta kesäkuussa.",
-        "nl": "Liisa wordt 40 jaar in juni.|Liisa wordt 40 in juni."
+        "fi": [
+            {
+                "concept": "to turn (a certain age)",
+                "label": "täyttää",
+                "tip": "a certain age"
+            },
+            {
+                "concept": "Liisa turns 40 in June",
+                "label": "Liisa täyttää 40 vuotta kesäkuussa."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to turn (a certain age)",
+                "label": "worden",
+                "tip": "a certain age"
+            },
+            {
+                "concept": "Liisa turns 40 in June",
+                "label": [
+                    "Liisa wordt 40 jaar in juni.",
+                    "Liisa wordt 40 in juni."
+                ]
+            }
+        ]
     }
 }

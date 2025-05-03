@@ -1,49 +1,68 @@
 {
-    "to understand": {
-        "en": {
-            "infinitive": "to understand",
-            "singular": {
-                "first person": "I understand",
-                "second person": "you understand",
-                "third person": {
-                    "feminine": "she understands",
-                    "masculine": "he understands"
+    "concepts": {
+        "to understand": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to understand",
+                "label": {
+                    "infinitive": "to understand",
+                    "singular": {
+                        "first person": "I understand",
+                        "second person": "you understand",
+                        "third person": {
+                            "feminine": "she understands",
+                            "masculine": "he understands"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we understand",
+                        "second person": "you understand",
+                        "third person": "they understand"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we understand",
-                "second person": "you understand",
-                "third person": "they understand"
             }
-        },
-        "fi": {
-            "infinitive": "ymmärtää;;ymmärtää is verbityyppi 1",
-            "singular": {
-                "first person": "minä ymmärrän",
-                "second person": "sinä ymmärrät",
-                "third person": "hän ymmärtää"
-            },
-            "plural": {
-                "first person": "me ymmärrämme",
-                "second person": "te ymmärrätte",
-                "third person": "he ymmärtävät"
+        ],
+        "fi": [
+            {
+                "concept": "to understand",
+                "label": {
+                    "infinitive": "ymmärtää",
+                    "singular": {
+                        "first person": "minä ymmärrän",
+                        "second person": "sinä ymmärrät",
+                        "third person": "hän ymmärtää"
+                    },
+                    "plural": {
+                        "first person": "me ymmärrämme",
+                        "second person": "te ymmärrätte",
+                        "third person": "he ymmärtävät"
+                    }
+                },
+                "note": "ymmärtää is verbityyppi 1"
             }
-        },
-        "nl": {
-            "infinitive": "begrijpen",
-            "singular": {
-                "first person": "ik begrijp",
-                "second person": "jij begrijpt",
-                "third person": {
-                    "feminine": "zij begrijpt",
-                    "masculine": "hij begrijpt"
+        ],
+        "nl": [
+            {
+                "concept": "to understand",
+                "label": {
+                    "infinitive": "begrijpen",
+                    "singular": {
+                        "first person": "ik begrijp",
+                        "second person": "jij begrijpt",
+                        "third person": {
+                            "feminine": "zij begrijpt",
+                            "masculine": "hij begrijpt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij begrijpen",
+                        "second person": "jullie begrijpen",
+                        "third person": "zij begrijpen"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij begrijpen",
-                "second person": "jullie begrijpen",
-                "third person": "zij begrijpen"
             }
-        }
+        ]
     }
 }

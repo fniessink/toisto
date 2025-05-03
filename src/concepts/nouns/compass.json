@@ -1,17 +1,44 @@
 {
-    "compass": {
-        "en": "compass",
-        "fi": "kompassi",
-        "nl": "het kompas"
+    "concepts": {
+        "compass": {},
+        "compass point": {
+            "roots": {
+                "en": "compass",
+                "fi": "air",
+                "nl": "wind"
+            }
+        }
     },
-    "compass point": {
-        "roots": {
-            "en": "compass",
-            "fi": "air",
-            "nl": "wind"
-        },
-        "en": "compass point",
-        "fi": "ilmansuunta",
-        "nl": "de windstreek"
+    "labels": {
+        "en": [
+            {
+                "concept": "compass",
+                "label": "compass"
+            },
+            {
+                "concept": "compass point",
+                "label": "compass point"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "compass",
+                "label": "kompassi"
+            },
+            {
+                "concept": "compass point",
+                "label": "ilmansuunta"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "compass",
+                "label": "het kompas"
+            },
+            {
+                "concept": "compass point",
+                "label": "de windstreek"
+            }
+        ]
     }
 }

@@ -1,29 +1,49 @@
 {
-    "few/a little": {
-        "antonym": "many/much",
-        "en": {
-            "positive degree": [
-                "few;;Use 'few' with countable nouns and 'little' with uncountable nouns",
-                "little;;Use 'little' with uncountable nouns and 'few' with countable nouns"
-            ],
-            "comparative degree": [
-                "fewer;;Use 'fewer' with countable nouns and 'less' with uncountable nouns",
-                "less;;Use 'less' with uncountable nouns and 'fewer' with countable nouns"
-            ],
-            "superlative degree": [
-                "fewest;;Use 'fewest' with countable nouns and 'least' with uncountable nouns",
-                "least;;Use 'least' with uncountable nouns and 'fewest' with countable nouns"
-            ]
-        },
-        "fi": {
-            "positive degree": "vähän",
-            "comparative degree": "vähemmän",
-            "superlative degree": "vähiten"
-        },
-        "nl": {
-            "positive degree": "weinig",
-            "comparative degree": "minder",
-            "superlative degree": "minst"
+    "concepts": {
+        "few/a little": {
+            "antonym": "many/much"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "few/a little",
+                "label": {
+                    "positive degree": "few",
+                    "comparative degree": "fewer",
+                    "superlative degree": "fewest"
+                },
+                "note": "Use 'few, fewer, fewest' with countable nouns and 'little, less, least' with uncountable nouns"
+            },
+            {
+                "concept": "few/a little",
+                "label": {
+                    "positive degree": "little",
+                    "comparative degree": "less",
+                    "superlative degree": "least"
+                },
+                "note": "Use 'little, less, least' with uncountable nouns and 'few, fewer, fewest' with countable nouns"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "few/a little",
+                "label": {
+                    "positive degree": "vähän",
+                    "comparative degree": "vähemmän",
+                    "superlative degree": "vähiten"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "few/a little",
+                "label": {
+                    "positive degree": "weinig",
+                    "comparative degree": "minder",
+                    "superlative degree": "minst"
+                }
+            }
+        ]
     }
 }

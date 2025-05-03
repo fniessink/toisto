@@ -1,25 +1,63 @@
 {
-    "sun": {
-        "example": "the sun shines",
-        "holonym": "solar system",
-        "hypernym": "star",
-        "en": "sun",
-        "fi": "aurinko",
-        "nl": "de zon"
+    "concepts": {
+        "sun": {
+            "example": "the sun shines",
+            "holonym": "solar system",
+            "hypernym": "star"
+        },
+        "sunset": {
+            "roots": "sun"
+        },
+        "the sun shines": {
+            "roots": "sun"
+        }
     },
-    "sunset": {
-        "roots": "sun",
+    "labels": {
         "en": [
-            "sunset",
-            "sundown"
+            {
+                "concept": "sun",
+                "label": "sun"
+            },
+            {
+                "concept": "sunset",
+                "label": "sunset"
+            },
+            {
+                "concept": "sunset",
+                "label": "sundown"
+            },
+            {
+                "concept": "the sun shines",
+                "label": "The sun shines."
+            }
         ],
-        "fi": "auringonlasku",
-        "nl": "de zonsondergang"
-    },
-    "the sun shines": {
-        "roots": "sun",
-        "en": "The sun shines.",
-        "fi": "Aurinko paistaa.",
-        "nl": "De zon schijnt."
+        "fi": [
+            {
+                "concept": "sun",
+                "label": "aurinko"
+            },
+            {
+                "concept": "sunset",
+                "label": "auringonlasku"
+            },
+            {
+                "concept": "the sun shines",
+                "label": "Aurinko paistaa."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sun",
+                "label": "de zon"
+            },
+            {
+                "concept": "sunset",
+                "label": "de zonsondergang"
+            },
+            {
+                "concept": "the sun shines",
+                "label": "De zon schijnt."
+            }
+        ]
     }
 }

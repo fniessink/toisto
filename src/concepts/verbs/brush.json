@@ -1,7 +1,25 @@
 {
-    "to brush": {
-        "en": "to brush",
-        "fi": "harjata",
-        "nl": "borstelen"
+    "concepts": {
+        "to brush": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to brush",
+                "label": "to brush"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to brush",
+                "label": "harjata"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to brush",
+                "label": "borstelen"
+            }
+        ]
     }
 }

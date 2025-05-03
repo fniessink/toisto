@@ -1,20 +1,56 @@
 {
-    "in my opinion": {
-        "en": "in my opinion",
+    "concepts": {
+        "in my opinion": {},
+        "in everyone's opinion": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "in my opinion",
+                "label": "in my opinion"
+            },
+            {
+                "concept": "in everyone's opinion",
+                "label": "in everyone's opinion"
+            }
+        ],
         "fi": [
-            "minun mielestäni",
-            "minusta",
-            "mun mielestä*",
-            "musta*"
+            {
+                "concept": "in my opinion",
+                "label": "minun mielestäni"
+            },
+            {
+                "concept": "in my opinion",
+                "label": "minusta"
+            },
+            {
+                "concept": "in my opinion",
+                "label": "mun mielestä",
+                "colloquial": true
+            },
+            {
+                "concept": "in my opinion",
+                "label": "musta",
+                "colloquial": true
+            },
+            {
+                "concept": "in everyone's opinion",
+                "label": "kaikkien mielestä"
+            }
         ],
         "nl": [
-            "naar mijn mening",
-            "volgens mij"
+            {
+                "concept": "in my opinion",
+                "label": "naar mijn mening"
+            },
+            {
+                "concept": "in my opinion",
+                "label": "volgens mij"
+            },
+            {
+                "concept": "in everyone's opinion",
+                "label": "volgens iedereen"
+            }
         ]
-    },
-    "in everyone's opinion": {
-        "en": "in everyone's opinion",
-        "fi": "kaikkien mielestä",
-        "nl": "volgens iedereen"
     }
 }

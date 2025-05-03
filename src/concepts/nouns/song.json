@@ -1,10 +1,30 @@
 {
-    "song": {
-        "en": "song",
-        "fi": [
-            "laulu",
-            "biisi*"
+    "concepts": {
+        "song": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "song",
+                "label": "song"
+            }
         ],
-        "nl": "het nummer"
+        "fi": [
+            {
+                "concept": "song",
+                "label": "laulu"
+            },
+            {
+                "concept": "song",
+                "label": "biisi",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "song",
+                "label": "het nummer"
+            }
+        ]
     }
 }

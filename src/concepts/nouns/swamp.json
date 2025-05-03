@@ -1,7 +1,25 @@
 {
-    "swamp": {
-        "en": "swamp",
-        "fi": "suo",
-        "nl": "het moeras"
+    "concepts": {
+        "swamp": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "swamp",
+                "label": "swamp"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "swamp",
+                "label": "suo"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "swamp",
+                "label": "het moeras"
+            }
+        ]
     }
 }

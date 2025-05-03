@@ -1,29 +1,58 @@
 {
-    "see you": {
+    "concepts": {
+        "see you": {},
+        "see you tomorrow": {
+            "roots": {
+                "en": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "fi": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "nl": "tomorrow"
+            }
+        }
+    },
+    "labels": {
         "en": [
-            "Goodbye!",
-            "See you later!See you!"
+            {
+                "concept": "see you",
+                "label": "Goodbye!"
+            },
+            {
+                "concept": "see you",
+                "label": "See you later!See you!"
+            },
+            {
+                "concept": "see you tomorrow",
+                "label": "See you tomorrow!"
+            }
         ],
         "fi": [
-            "Nähdään!",
-            "Näkemiin!"
+            {
+                "concept": "see you",
+                "label": "Nähdään!"
+            },
+            {
+                "concept": "see you",
+                "label": "Näkemiin!"
+            },
+            {
+                "concept": "see you tomorrow",
+                "label": "Nähdään huomenna!"
+            }
         ],
-        "nl": "Tot ziens!"
-    },
-    "see you tomorrow": {
-        "roots": {
-            "en": [
-                "see you",
-                "tomorrow"
-            ],
-            "fi": [
-                "see you",
-                "tomorrow"
-            ],
-            "nl": "tomorrow"
-        },
-        "en": "See you tomorrow!",
-        "fi": "Nähdään huomenna!",
-        "nl": "Tot morgen!"
+        "nl": [
+            {
+                "concept": "see you",
+                "label": "Tot ziens!"
+            },
+            {
+                "concept": "see you tomorrow",
+                "label": "Tot morgen!"
+            }
+        ]
     }
 }

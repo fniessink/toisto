@@ -1,7 +1,25 @@
 {
-    "all kinds of": {
-        "en": "all kinds of",
-        "fi": "kaikenlainen",
-        "nl": "allerlei"
+    "concepts": {
+        "all kinds of": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "all kinds of",
+                "label": "all kinds of"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "all kinds of",
+                "label": "kaikenlainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "all kinds of",
+                "label": "allerlei"
+            }
+        ]
     }
 }

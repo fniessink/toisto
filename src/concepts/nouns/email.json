@@ -1,11 +1,33 @@
 {
-    "email": {
-        "roots": {
-            "en": "post",
-            "fi": "post"
-        },
-        "en": "e-mail|email",
-        "fi": "sähköposti",
-        "nl": "de e-mail"
+    "concepts": {
+        "email": {
+            "roots": {
+                "en": "post",
+                "fi": "post"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "email",
+                "label": [
+                    "e-mail",
+                    "email"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "email",
+                "label": "sähköposti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "email",
+                "label": "de e-mail"
+            }
+        ]
     }
 }

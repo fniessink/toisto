@@ -1,17 +1,36 @@
 {
-    "lung": {
-        "hypernym": "organ",
-        "en": {
-            "singular": "lung",
-            "plural": "lungs"
-        },
-        "fi": {
-            "singular": "keuhko",
-            "plural": "keuhkot"
-        },
-        "nl": {
-            "singular": "de long",
-            "plural": "de longen"
+    "concepts": {
+        "lung": {
+            "hypernym": "organ"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lung",
+                "label": {
+                    "singular": "lung",
+                    "plural": "lungs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lung",
+                "label": {
+                    "singular": "keuhko",
+                    "plural": "keuhkot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lung",
+                "label": {
+                    "singular": "de long",
+                    "plural": "de longen"
+                }
+            }
+        ]
     }
 }

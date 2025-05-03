@@ -1,30 +1,59 @@
 {
-    "onion": {
-        "example": "onions make me cry",
-        "hypernym": "vegetable",
-        "en": {
-            "singular": "onion",
-            "plural": "onions"
+    "concepts": {
+        "onion": {
+            "example": "onions make me cry",
+            "hypernym": "vegetable"
         },
-        "fi": {
-            "singular": "sipuli",
-            "plural": "sipulit"
-        },
-        "nl": {
-            "singular": "de ui",
-            "plural": "de uien"
+        "onions make me cry": {
+            "roots": [
+                "onion",
+                "to cry"
+            ]
         }
     },
-    "onions make me cry": {
-        "roots": [
-            "onion",
-            "to cry"
+    "labels": {
+        "en": [
+            {
+                "concept": "onion",
+                "label": {
+                    "singular": "onion",
+                    "plural": "onions"
+                }
+            },
+            {
+                "concept": "onions make me cry",
+                "label": "Onions make me cry."
+            }
         ],
-        "en": "Onions make me cry.",
-        "fi": "Sipulit saavat minut itkemään.",
+        "fi": [
+            {
+                "concept": "onion",
+                "label": {
+                    "singular": "sipuli",
+                    "plural": "sipulit"
+                }
+            },
+            {
+                "concept": "onions make me cry",
+                "label": "Sipulit saavat minut itkemään."
+            }
+        ],
         "nl": [
-            "Uien laten me huilen.",
-            "Ik moet huilen van uien."
+            {
+                "concept": "onion",
+                "label": {
+                    "singular": "de ui",
+                    "plural": "de uien"
+                }
+            },
+            {
+                "concept": "onions make me cry",
+                "label": "Uien laten me huilen."
+            },
+            {
+                "concept": "onions make me cry",
+                "label": "Ik moet huilen van uien."
+            }
         ]
     }
 }

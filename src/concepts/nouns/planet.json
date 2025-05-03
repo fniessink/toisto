@@ -1,16 +1,34 @@
 {
-    "planet": {
-        "en": {
-            "singular": "planet",
-            "plural": "planets"
-        },
-        "fi": {
-            "singular": "planeetta",
-            "plural": "planeetat"
-        },
-        "nl": {
-            "singular": "de planeet",
-            "plural": "de planeten"
-        }
+    "concepts": {
+        "planet": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "planet",
+                "label": {
+                    "singular": "planet",
+                    "plural": "planets"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "planet",
+                "label": {
+                    "singular": "planeetta",
+                    "plural": "planeetat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "planet",
+                "label": {
+                    "singular": "de planeet",
+                    "plural": "de planeten"
+                }
+            }
+        ]
     }
 }

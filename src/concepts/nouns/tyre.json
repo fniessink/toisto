@@ -1,17 +1,50 @@
 {
-    "tyre": {
-        "en": "tyre|tire",
-        "fi": "rengas",
-        "nl": "de band"
+    "concepts": {
+        "tyre": {},
+        "wintertyre": {
+            "hypernym": "tyre",
+            "roots": [
+                "winter",
+                "tyre"
+            ]
+        }
     },
-    "wintertyre": {
-        "hypernym": "tyre",
-        "roots": [
-            "winter",
-            "tyre"
+    "labels": {
+        "en": [
+            {
+                "concept": "tyre",
+                "label": [
+                    "tyre",
+                    "tire"
+                ]
+            },
+            {
+                "concept": "wintertyre",
+                "label": [
+                    "winter tyre",
+                    "winter tire"
+                ]
+            }
         ],
-        "en": "winter tyre|winter tire",
-        "fi": "talvirengas",
-        "nl": "de winterband"
+        "fi": [
+            {
+                "concept": "tyre",
+                "label": "rengas"
+            },
+            {
+                "concept": "wintertyre",
+                "label": "talvirengas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "tyre",
+                "label": "de band"
+            },
+            {
+                "concept": "wintertyre",
+                "label": "de winterband"
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "advice": {
-        "en": "advice",
-        "fi": "neuvo",
-        "nl": "het advies"
+    "concepts": {
+        "advice": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "advice",
+                "label": "advice"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "advice",
+                "label": "neuvo"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "advice",
+                "label": "het advies"
+            }
+        ]
     }
 }

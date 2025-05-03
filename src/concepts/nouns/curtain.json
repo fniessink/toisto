@@ -1,26 +1,53 @@
 {
-    "curtain": {
-        "en": {
-            "singular": "curtain",
-            "plural": "curtains"
-        },
-        "fi": {
-            "singular": "verho",
-            "plural": "verhot"
-        },
-        "nl": {
-            "singular": "het gordijn",
-            "plural": "de gordijnen"
+    "concepts": {
+        "curtain": {},
+        "roller blind": {
+            "example": "you are looking for a roller blind",
+            "roots": {
+                "fi": "curtain",
+                "nl": "curtain"
+            }
         }
     },
-    "roller blind": {
-        "example": "you are looking for a roller blind",
-        "roots": {
-            "fi": "curtain",
-            "nl": "curtain"
-        },
-        "en": "roller blind",
-        "fi": "rullaverho",
-        "nl": "het rolgordijn"
+    "labels": {
+        "en": [
+            {
+                "concept": "curtain",
+                "label": {
+                    "singular": "curtain",
+                    "plural": "curtains"
+                }
+            },
+            {
+                "concept": "roller blind",
+                "label": "roller blind"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "curtain",
+                "label": {
+                    "singular": "verho",
+                    "plural": "verhot"
+                }
+            },
+            {
+                "concept": "roller blind",
+                "label": "rullaverho"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "curtain",
+                "label": {
+                    "singular": "het gordijn",
+                    "plural": "de gordijnen"
+                }
+            },
+            {
+                "concept": "roller blind",
+                "label": "het rolgordijn"
+            }
+        ]
     }
 }

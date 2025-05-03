@@ -1,17 +1,36 @@
 {
-    "mouth": {
-        "holonym": "face",
-        "en": {
-            "singular": "mouth",
-            "plural": "mouths"
-        },
-        "fi": {
-            "singular": "suu",
-            "plural": "suut"
-        },
-        "nl": {
-            "singular": "de mond",
-            "plural": "de monden"
+    "concepts": {
+        "mouth": {
+            "holonym": "face"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mouth",
+                "label": {
+                    "singular": "mouth",
+                    "plural": "mouths"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mouth",
+                "label": {
+                    "singular": "suu",
+                    "plural": "suut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mouth",
+                "label": {
+                    "singular": "de mond",
+                    "plural": "de monden"
+                }
+            }
+        ]
     }
 }

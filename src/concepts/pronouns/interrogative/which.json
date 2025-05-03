@@ -1,10 +1,33 @@
 {
-    "which": {
-        "en": "Which?",
-        "fi": "Mikä?;;'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs",
+    "concepts": {
+        "which": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "which",
+                "label": "Which?"
+            }
+        ],
+        "fi": [
+            {
+                "concept": [
+                    "which",
+                    "what"
+                ],
+                "label": "Mikä?",
+                "note": "'mikä' is only used with 'olla' ('to be'), use 'mitä' with other verbs"
+            }
+        ],
         "nl": [
-            "Welke?",
-            "Welk?"
+            {
+                "concept": "which",
+                "label": "Welke?"
+            },
+            {
+                "concept": "which",
+                "label": "Welk?"
+            }
         ]
     }
 }

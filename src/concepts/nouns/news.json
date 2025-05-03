@@ -1,7 +1,25 @@
 {
-    "news": {
-        "en": "news",
-        "fi": "uutiset",
-        "nl": "het nieuws"
+    "concepts": {
+        "news": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "news",
+                "label": "news"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "news",
+                "label": "uutiset"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "news",
+                "label": "het nieuws"
+            }
+        ]
     }
 }

@@ -1,10 +1,29 @@
 {
-    "to participate": {
-        "en": "to participate",
-        "fi": "osallistua",
+    "concepts": {
+        "to participate": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to participate",
+                "label": "to participate"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to participate",
+                "label": "osallistua"
+            }
+        ],
         "nl": [
-            "deelnemen",
-            "meedoen"
+            {
+                "concept": "to participate",
+                "label": "deelnemen"
+            },
+            {
+                "concept": "to participate",
+                "label": "meedoen"
+            }
         ]
     }
 }

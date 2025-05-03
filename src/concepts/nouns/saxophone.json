@@ -1,8 +1,27 @@
 {
-    "saxophone": {
-        "hypernym": "musical instrument",
-        "en": "saxophone",
-        "fi": "saksofoni",
-        "nl": "de saxofoon"
+    "concepts": {
+        "saxophone": {
+            "hypernym": "musical instrument"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "saxophone",
+                "label": "saxophone"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "saxophone",
+                "label": "saksofoni"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "saxophone",
+                "label": "de saxofoon"
+            }
+        ]
     }
 }

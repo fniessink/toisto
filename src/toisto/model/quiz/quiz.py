@@ -153,11 +153,11 @@ class Quiz:
             return self.concept.grammatical_differences(*homonyms)
         language = self.question.language
         if hypernyms := self.concept.get_related_concepts("hypernym"):
-            return [str(hypernym.labels(language)[0].without_notes) for hypernym in hypernyms[:1]]
+            return [str(hypernym.labels(language)[0]) for hypernym in hypernyms[:1]]
         if holonyms := self.concept.get_related_concepts("holonym"):
-            return [f"part of '{holonym.labels(language)[0].without_notes}'" for holonym in holonyms]
+            return [f"part of '{holonym.labels(language)[0]}'" for holonym in holonyms]
         if involved_concepts := self.concept.get_related_concepts("involves"):
-            return [f"involves '{concept.labels(language)[0].without_notes}'" for concept in involved_concepts]
+            return [f"involves '{concept.labels(language)[0]}'" for concept in involved_concepts]
         return []
 
 
@@ -178,7 +178,7 @@ class Quizzes(set[Quiz]):
     @property
     def colloquial(self) -> Quizzes:
         """Return the colloquial quizzes."""
-        return self.__class__(quiz for quiz in self if quiz.question.is_colloquial)
+        return self.__class__(quiz for quiz in self if quiz.question.colloquial)
 
     @cached_property
     def _quizzes_by_concept(self) -> dict[Concept, Quizzes]:

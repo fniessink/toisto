@@ -1,30 +1,78 @@
 {
-    "just": {
-        "en": "just",
-        "fi": [
-            "juuri",
-            "just*",
-            "vasta"
-        ],
-        "nl": [
-            "juist",
-            "net",
-            "pas"
-        ]
+    "concepts": {
+        "just": {},
+        "just now": {
+            "roots": "just"
+        }
     },
-    "just now": {
-        "roots": "just",
+    "labels": {
         "en": [
-            "just now",
-            "a moment ago"
+            {
+                "concept": [
+                    "just",
+                    "only"
+                ],
+                "label": "just"
+            },
+            {
+                "concept": "just now",
+                "label": "just now"
+            },
+            {
+                "concept": "just now",
+                "label": "a moment ago"
+            }
         ],
         "fi": [
-            "äsken",
-            "juuri nyt"
+            {
+                "concept": [
+                    "exactly",
+                    "just"
+                ],
+                "label": "juuri"
+            },
+            {
+                "concept": [
+                    "exactly",
+                    "just"
+                ],
+                "label": "just",
+                "colloquial": true
+            },
+            {
+                "concept": "just",
+                "label": "vasta"
+            },
+            {
+                "concept": "just now",
+                "label": "äsken"
+            },
+            {
+                "concept": "just now",
+                "label": "juuri nyt"
+            }
         ],
         "nl": [
-            "daarnet",
-            "zojuist"
+            {
+                "concept": "just",
+                "label": "juist"
+            },
+            {
+                "concept": "just",
+                "label": "net"
+            },
+            {
+                "concept": "just",
+                "label": "pas"
+            },
+            {
+                "concept": "just now",
+                "label": "daarnet"
+            },
+            {
+                "concept": "just now",
+                "label": "zojuist"
+            }
         ]
     }
 }

@@ -1,54 +1,80 @@
 {
-    "to try": {
-        "en": "to try",
-        "fi": "yrittää",
-        "nl": "proberen"
+    "concepts": {
+        "to try": {},
+        "to try out": {}
     },
-    "to try out": {
-        "en": {
-            "infinitive": "to try out",
-            "singular": {
-                "first person": "I try out",
-                "second person": "you try out",
-                "third person": {
-                    "feminine": "she tries out",
-                    "masculine": "he tries out"
+    "labels": {
+        "en": [
+            {
+                "concept": "to try",
+                "label": "to try"
+            },
+            {
+                "concept": "to try out",
+                "label": {
+                    "infinitive": "to try out",
+                    "singular": {
+                        "first person": "I try out",
+                        "second person": "you try out",
+                        "third person": {
+                            "feminine": "she tries out",
+                            "masculine": "he tries out"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we try out",
+                        "second person": "you try out",
+                        "third person": "they try out"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we try out",
-                "second person": "you try out",
-                "third person": "they try out"
             }
-        },
-        "fi": {
-            "infinitive": "kokeilla",
-            "singular": {
-                "first person": "minä kokeilen",
-                "second person": "sinä kokeilet",
-                "third person": "hän kokeilee"
+        ],
+        "fi": [
+            {
+                "concept": "to try",
+                "label": "yrittää"
             },
-            "plural": {
-                "first person": "me kokeilemme",
-                "second person": "te kokeilette",
-                "third person": "he kokeilevat"
-            }
-        },
-        "nl": {
-            "infinitive": "uitproberen",
-            "singular": {
-                "first person": "ik probeer uit",
-                "second person": "jij probeert uit",
-                "third person": {
-                    "feminine": "zij probeert uit",
-                    "masculine": "hij probeert uit"
+            {
+                "concept": "to try out",
+                "label": {
+                    "infinitive": "kokeilla",
+                    "singular": {
+                        "first person": "minä kokeilen",
+                        "second person": "sinä kokeilet",
+                        "third person": "hän kokeilee"
+                    },
+                    "plural": {
+                        "first person": "me kokeilemme",
+                        "second person": "te kokeilette",
+                        "third person": "he kokeilevat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij proberen uit",
-                "second person": "jullie proberen uit",
-                "third person": "zij proberen uit"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to try",
+                "label": "proberen"
+            },
+            {
+                "concept": "to try out",
+                "label": {
+                    "infinitive": "uitproberen",
+                    "singular": {
+                        "first person": "ik probeer uit",
+                        "second person": "jij probeert uit",
+                        "third person": {
+                            "feminine": "zij probeert uit",
+                            "masculine": "hij probeert uit"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij proberen uit",
+                        "second person": "jullie proberen uit",
+                        "third person": "zij proberen uit"
+                    }
+                }
+            }
+        ]
     }
 }
