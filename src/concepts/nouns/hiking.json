@@ -1,8 +1,27 @@
 {
-    "hiking": {
-        "hypernym": "outdoor activity",
-        "en": "hiking",
-        "fi": "retkeily",
-        "nl": "het trekken"
+    "concepts": {
+        "hiking": {
+            "hypernym": "outdoor activity"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hiking",
+                "label": "hiking"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hiking",
+                "label": "retkeily"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hiking",
+                "label": "het trekken"
+            }
+        ]
     }
 }

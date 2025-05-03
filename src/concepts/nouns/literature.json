@@ -1,10 +1,29 @@
 {
-    "literature": {
-        "roots": {
-            "fi": "book"
-        },
-        "en": "literature",
-        "fi": "kirjallisuus",
-        "nl": "de literatuur"
+    "concepts": {
+        "literature": {
+            "roots": {
+                "fi": "book"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "literature",
+                "label": "literature"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "literature",
+                "label": "kirjallisuus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "literature",
+                "label": "de literatuur"
+            }
+        ]
     }
 }

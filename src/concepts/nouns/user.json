@@ -1,23 +1,50 @@
 {
-    "user": {
-        "en": "user",
-        "fi": "käyttäjä",
-        "nl": "de gebruiker"
+    "concepts": {
+        "user": {},
+        "username": {
+            "roots": {
+                "en": [
+                    "user",
+                    "name"
+                ],
+                "fi": "user",
+                "nl": [
+                    "user",
+                    "name"
+                ]
+            }
+        }
     },
-    "username": {
-        "roots": {
-            "en": [
-                "user",
-                "name"
-            ],
-            "fi": "user",
-            "nl": [
-                "user",
-                "name"
-            ]
-        },
-        "en": "username",
-        "fi": "käyttäjätunnus",
-        "nl": "de gebruikersnaam"
+    "labels": {
+        "en": [
+            {
+                "concept": "user",
+                "label": "user"
+            },
+            {
+                "concept": "username",
+                "label": "username"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "user",
+                "label": "käyttäjä"
+            },
+            {
+                "concept": "username",
+                "label": "käyttäjätunnus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "user",
+                "label": "de gebruiker"
+            },
+            {
+                "concept": "username",
+                "label": "de gebruikersnaam"
+            }
+        ]
     }
 }

@@ -1,18 +1,50 @@
 {
-    "sky": {
-        "example": "the sky is blue",
-        "en": "sky",
-        "fi": "taivas",
-        "nl": "de lucht;is blue"
+    "concepts": {
+        "sky": {
+            "example": "the sky is blue"
+        },
+        "the sky is blue": {
+            "roots": [
+                "sky",
+                "to be",
+                "blue"
+            ]
+        }
     },
-    "the sky is blue": {
-        "roots": [
-            "sky",
-            "to be",
-            "blue"
+    "labels": {
+        "en": [
+            {
+                "concept": "sky",
+                "label": "sky"
+            },
+            {
+                "concept": "the sky is blue",
+                "label": "The sky is blue."
+            }
         ],
-        "en": "The sky is blue.",
-        "fi": "Taivas on sininen.",
-        "nl": "De lucht is blauw."
+        "fi": [
+            {
+                "concept": [
+                    "heaven",
+                    "sky"
+                ],
+                "label": "taivas"
+            },
+            {
+                "concept": "the sky is blue",
+                "label": "Taivas on sininen."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sky",
+                "label": "de lucht",
+                "tip": "is blue"
+            },
+            {
+                "concept": "the sky is blue",
+                "label": "De lucht is blauw."
+            }
+        ]
     }
 }

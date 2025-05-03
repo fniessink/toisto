@@ -1,12 +1,31 @@
 {
-    "how old are you": {
-        "roots": [
-            "how",
-            "old",
-            "to be"
+    "concepts": {
+        "how old are you": {
+            "roots": [
+                "how",
+                "old",
+                "to be"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "how old are you",
+                "label": "How old are you?"
+            }
         ],
-        "en": "How old are you?",
-        "fi": "Kuinka vanha sinä olet?",
-        "nl": "Hoe oud ben jij?"
+        "fi": [
+            {
+                "concept": "how old are you",
+                "label": "Kuinka vanha sinä olet?"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "how old are you",
+                "label": "Hoe oud ben jij?"
+            }
+        ]
     }
 }

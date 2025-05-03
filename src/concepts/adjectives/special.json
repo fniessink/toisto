@@ -1,11 +1,33 @@
 {
-    "special": {
-        "en": "special",
-        "fi": "erikoinen",
+    "concepts": {
+        "special": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "special",
+                "label": "special"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "special",
+                "label": "erikoinen"
+            }
+        ],
         "nl": [
-            "speciaal",
-            "bijzonder",
-            "apart"
+            {
+                "concept": "special",
+                "label": "speciaal"
+            },
+            {
+                "concept": "special",
+                "label": "bijzonder"
+            },
+            {
+                "concept": "special",
+                "label": "apart"
+            }
         ]
     }
 }

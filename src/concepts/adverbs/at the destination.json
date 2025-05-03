@@ -1,7 +1,25 @@
 {
-    "at the destination": {
-        "en": "at the destination",
-        "fi": "perillä",
-        "nl": "op de bestemming"
+    "concepts": {
+        "at the destination": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "at the destination",
+                "label": "at the destination"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "at the destination",
+                "label": "perillä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "at the destination",
+                "label": "op de bestemming"
+            }
+        ]
     }
 }

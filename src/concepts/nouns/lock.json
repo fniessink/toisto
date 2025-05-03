@@ -1,7 +1,25 @@
 {
-    "lock": {
-        "en": "lock",
-        "fi": "lukko",
-        "nl": "het slot"
+    "concepts": {
+        "lock": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lock",
+                "label": "lock"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lock",
+                "label": "lukko"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lock",
+                "label": "het slot"
+            }
+        ]
     }
 }

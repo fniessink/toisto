@@ -1,27 +1,48 @@
 {
-    "hotdog": {
-        "hypernym": "meat",
-        "roots": {
-            "en": [
-                "hot",
-                "dog"
-            ]
-        },
-        "en": {
-            "singular": [
-                "hotdog|hot dog"
-            ],
-            "plural": [
-                "hotdogs|hot dogs"
-            ]
-        },
-        "fi": {
-            "singular": "hotdog",
-            "plural": "hotdogit"
-        },
-        "nl": {
-            "singular": "de hotdog",
-            "plural": "de hotdogs"
+    "concepts": {
+        "hotdog": {
+            "hypernym": "meat",
+            "roots": {
+                "en": [
+                    "hot",
+                    "dog"
+                ]
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hotdog",
+                "label": {
+                    "singular": [
+                        "hotdog",
+                        "hot dog"
+                    ],
+                    "plural": [
+                        "hotdogs",
+                        "hot dogs"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hotdog",
+                "label": {
+                    "singular": "hotdog",
+                    "plural": "hotdogit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hotdog",
+                "label": {
+                    "singular": "de hotdog",
+                    "plural": "de hotdogs"
+                }
+            }
+        ]
     }
 }

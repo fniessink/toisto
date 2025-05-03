@@ -1,13 +1,33 @@
 {
-    "cohabitant": {
-        "roots": {
-            "fi": [
-                "man",
-                "woman"
-            ]
-        },
-        "en": "cohabitant",
-        "fi": "avopuoliso",
-        "nl": "(de samenwonende partner)"
+    "concepts": {
+        "cohabitant": {
+            "roots": {
+                "fi": [
+                    "man",
+                    "woman"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cohabitant",
+                "label": "cohabitant"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cohabitant",
+                "label": "avopuoliso"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cohabitant",
+                "label": "de samenwonende partner",
+                "meaning-only": true
+            }
+        ]
     }
 }

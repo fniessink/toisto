@@ -1,16 +1,34 @@
 {
-    "en": {
-        "en": {
-            "singular": "bay",
-            "plural": "bays"
-        },
-        "fi": {
-            "singular": "lahti",
-            "plural": "lahdet"
-        },
-        "nl": {
-            "singular": "de baai",
-            "plural": "de baaien"
-        }
+    "concepts": {
+        "en": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "en",
+                "label": {
+                    "singular": "bay",
+                    "plural": "bays"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "en",
+                "label": {
+                    "singular": "lahti",
+                    "plural": "lahdet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "en",
+                "label": {
+                    "singular": "de baai",
+                    "plural": "de baaien"
+                }
+            }
+        ]
     }
 }

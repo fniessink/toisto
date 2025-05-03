@@ -1,7 +1,25 @@
 {
-    "comprehensive": {
-        "en": "comprehensive",
-        "fi": "laaja",
-        "nl": "uitgebreid"
+    "concepts": {
+        "comprehensive": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "comprehensive",
+                "label": "comprehensive"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "comprehensive",
+                "label": "laaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "comprehensive",
+                "label": "uitgebreid"
+            }
+        ]
     }
 }

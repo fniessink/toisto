@@ -1,8 +1,27 @@
 {
-    "chemistry": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "chemistry",
-        "fi": "kemia",
-        "nl": "de scheikunde"
+    "concepts": {
+        "chemistry": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "chemistry",
+                "label": "chemistry"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "chemistry",
+                "label": "kemia"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "chemistry",
+                "label": "de scheikunde"
+            }
+        ]
     }
 }

@@ -1,18 +1,46 @@
 {
-    "soup": {
-        "example": "I am eating soup",
-        "hypernym": "food",
-        "en": "soup",
-        "fi": "keitto",
-        "nl": "de soep"
+    "concepts": {
+        "soup": {
+            "example": "I am eating soup",
+            "hypernym": "food"
+        },
+        "I am eating soup": {
+            "roots": [
+                "to eat",
+                "soup"
+            ]
+        }
     },
-    "I am eating soup": {
-        "roots": [
-            "to eat",
-            "soup"
+    "labels": {
+        "en": [
+            {
+                "concept": "soup",
+                "label": "soup"
+            },
+            {
+                "concept": "I am eating soup",
+                "label": "I am eating soup."
+            }
         ],
-        "en": "I am eating soup.",
-        "fi": "Minä syön keittoa.",
-        "nl": "Ik eet soep."
+        "fi": [
+            {
+                "concept": "soup",
+                "label": "keitto"
+            },
+            {
+                "concept": "I am eating soup",
+                "label": "Minä syön keittoa."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "soup",
+                "label": "de soep"
+            },
+            {
+                "concept": "I am eating soup",
+                "label": "Ik eet soep."
+            }
+        ]
     }
 }

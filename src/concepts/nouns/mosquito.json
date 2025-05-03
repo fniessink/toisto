@@ -1,17 +1,39 @@
 {
-    "mosquito": {
-        "hypernym": "insect",
-        "en": {
-            "singular": "mosquito",
-            "plural": "mosquitos|mosquitoes"
-        },
-        "fi": {
-            "singular": "hyttynen",
-            "plural": "hyttyset"
-        },
-        "nl": {
-            "singular": "de mug",
-            "plural": "de muggen"
+    "concepts": {
+        "mosquito": {
+            "hypernym": "insect"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mosquito",
+                "label": {
+                    "singular": "mosquito",
+                    "plural": [
+                        "mosquitos",
+                        "mosquitoes"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mosquito",
+                "label": {
+                    "singular": "hyttynen",
+                    "plural": "hyttyset"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mosquito",
+                "label": {
+                    "singular": "de mug",
+                    "plural": "de muggen"
+                }
+            }
+        ]
     }
 }

@@ -1,23 +1,42 @@
 {
-    "actor": {
-        "hypernym": "profession",
-        "en": {
-            "singular": "actor",
-            "plural": "actors"
-        },
-        "fi": {
-            "singular": "näyttelijä",
-            "plural": "näyttelijät"
-        },
-        "nl": {
-            "singular": {
-                "feminine": "de actrice",
-                "masculine": "de acteur"
-            },
-            "plural": {
-                "feminine:": "de actrices",
-                "masculine": "de acteurs"
-            }
+    "concepts": {
+        "actor": {
+            "hypernym": "profession"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "actor",
+                "label": {
+                    "singular": "actor",
+                    "plural": "actors"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "actor",
+                "label": {
+                    "singular": "näyttelijä",
+                    "plural": "näyttelijät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "actor",
+                "label": {
+                    "singular": {
+                        "feminine": "de actrice",
+                        "masculine": "de acteur"
+                    },
+                    "plural": {
+                        "feminine:": "de actrices",
+                        "masculine": "de acteurs"
+                    }
+                }
+            }
+        ]
     }
 }

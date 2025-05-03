@@ -1,10 +1,29 @@
 {
-    "of course": {
+    "concepts": {
+        "of course": {}
+    },
+    "labels": {
         "en": [
-            "of course",
-            "naturally"
+            {
+                "concept": "of course",
+                "label": "of course"
+            },
+            {
+                "concept": "of course",
+                "label": "naturally"
+            }
         ],
-        "fi": "tietysti",
-        "nl": "natuurlijk"
+        "fi": [
+            {
+                "concept": "of course",
+                "label": "tietysti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "of course",
+                "label": "natuurlijk"
+            }
+        ]
     }
 }

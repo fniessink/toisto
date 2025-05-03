@@ -1,100 +1,119 @@
 {
-    "to read": {
-        "en": {
-            "infinitive": "to read",
-            "verbal noun": "reading",
-            "present tense": {
-                "singular": {
-                    "first person": "I read",
-                    "second person": "you read",
-                    "third person": {
-                        "feminine": "she reads",
-                        "masculine": "he reads"
+    "concepts": {
+        "to read": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to read",
+                "label": {
+                    "infinitive": "to read",
+                    "verbal noun": "reading",
+                    "present tense": {
+                        "singular": {
+                            "first person": "I read",
+                            "second person": "you read",
+                            "third person": {
+                                "feminine": "she reads",
+                                "masculine": "he reads"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we read",
+                            "second person": "you read",
+                            "third person": "they read"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "I read",
+                            "second person": "you read",
+                            "third person": {
+                                "feminine": "she read",
+                                "masculine": "he read"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we read",
+                            "second person": "you read",
+                            "third person": "they read"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we read",
-                    "second person": "you read",
-                    "third person": "they read"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "I read",
-                    "second person": "you read",
-                    "third person": {
-                        "feminine": "she read",
-                        "masculine": "he read"
-                    }
-                },
-                "plural": {
-                    "first person": "we read",
-                    "second person": "you read",
-                    "third person": "they read"
                 }
             }
-        },
-        "fi": {
-            "infinitive": "lukea;;lukea is verbityyppi 1",
-            "verbal noun": "lukeminen",
-            "present tense": {
-                "singular": {
-                    "first person": "minä luen",
-                    "second person": "sinä luet",
-                    "third person": "hän lukee"
-                },
-                "plural": {
-                    "first person": "me luemme",
-                    "second person": "te luette",
-                    "third person": "he lukevat"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "minä luin",
-                    "second person": "sinä luit",
-                    "third person": "hän luki"
-                },
-                "plural": {
-                    "first person": "me luimme",
-                    "second person": "te luitte",
-                    "third person": "he lukivat"
-                }
-            }
-        },
-        "nl": {
-            "infinitive": "lezen",
-            "verbal noun": "het lezen",
-            "present tense": {
-                "singular": {
-                    "first person": "ik lees",
-                    "second person": "jij leest",
-                    "third person": {
-                        "feminine": "zij leest",
-                        "masculine": "hij leest"
+        ],
+        "fi": [
+            {
+                "concept": "to read",
+                "label": {
+                    "infinitive": "lukea",
+                    "verbal noun": "lukeminen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minä luen",
+                            "second person": "sinä luet",
+                            "third person": "hän lukee"
+                        },
+                        "plural": {
+                            "first person": "me luemme",
+                            "second person": "te luette",
+                            "third person": "he lukevat"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "minä luin",
+                            "second person": "sinä luit",
+                            "third person": "hän luki"
+                        },
+                        "plural": {
+                            "first person": "me luimme",
+                            "second person": "te luitte",
+                            "third person": "he lukivat"
+                        }
                     }
                 },
-                "plural": {
-                    "first person": "wij lezen",
-                    "second person": "jullie lezen",
-                    "third person": "zij lezen"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "ik las",
-                    "second person": "jij las",
-                    "third person": {
-                        "feminine": "zij las",
-                        "masculine": "hij las"
+                "note": "lukea is verbityyppi 1"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to read",
+                "label": {
+                    "infinitive": "lezen",
+                    "verbal noun": "het lezen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "ik lees",
+                            "second person": "jij leest",
+                            "third person": {
+                                "feminine": "zij leest",
+                                "masculine": "hij leest"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij lezen",
+                            "second person": "jullie lezen",
+                            "third person": "zij lezen"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "ik las",
+                            "second person": "jij las",
+                            "third person": {
+                                "feminine": "zij las",
+                                "masculine": "hij las"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij lazen",
+                            "second person": "jullie lazen",
+                            "third person": "zij lazen"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij lazen",
-                    "second person": "jullie lazen",
-                    "third person": "zij lazen"
                 }
             }
-        }
+        ]
     }
 }

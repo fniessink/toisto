@@ -1,110 +1,137 @@
 {
-    "to dtink": {
-        "en": {
-            "infinitive": "to drink",
-            "verbal noun": "drinking",
-            "singular": {
-                "first person": "I drink",
-                "second person": "you drink",
-                "third person": {
-                    "feminine": "she drinks",
-                    "masculine": "he drinks"
-                }
-            },
-            "plural": {
-                "first person": "we drink",
-                "second person": "you drink",
-                "third person": "they drink"
-            }
-        },
-        "fi": {
-            "infinitive": "juoda",
-            "verbal noun": "juominen",
-            "singular": {
-                "first person": "minä juon",
-                "second person": "sinä juot",
-                "third person": "hän juo"
-            },
-            "plural": {
-                "first person": "me juomme",
-                "second person": "te juotte",
-                "third person": "he juovat"
-            }
-        },
-        "nl": {
-            "infinitive": "drinken",
-            "verbal noun": "het drinken",
-            "singular": {
-                "first person": "ik drink",
-                "second person": "jij drinkt",
-                "third person": {
-                    "feminine": "zij drinkt",
-                    "masculine": "hij drinkt"
-                }
-            },
-            "plural": {
-                "first person": "wij drinken",
-                "second person": "jullie drinken",
-                "third person": "zij drinken"
+    "concepts": {
+        "to dtink": {},
+        "to drink coffee": {
+            "roots": {
+                "en": [
+                    "to drink",
+                    "coffee"
+                ],
+                "fi": "coffee",
+                "nl": [
+                    "to drink",
+                    "coffee"
+                ]
             }
         }
     },
-    "to drink coffee": {
-        "roots": {
-            "en": [
-                "to drink",
-                "coffee"
-            ],
-            "fi": "coffee",
-            "nl": [
-                "to drink",
-                "coffee"
-            ]
-        },
-        "en": {
-            "infinitive": "to drink coffee",
-            "singular": {
-                "first person": "I drink coffee",
-                "second person": "you drink coffee",
-                "third person": {
-                    "feminine": "she drinks coffee",
-                    "masculine": "he drinks coffee"
+    "labels": {
+        "en": [
+            {
+                "concept": "to dtink",
+                "label": {
+                    "infinitive": "to drink",
+                    "verbal noun": "drinking",
+                    "singular": {
+                        "first person": "I drink",
+                        "second person": "you drink",
+                        "third person": {
+                            "feminine": "she drinks",
+                            "masculine": "he drinks"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we drink",
+                        "second person": "you drink",
+                        "third person": "they drink"
+                    }
                 }
             },
-            "plural": {
-                "first person": "we drink coffee",
-                "second person": "you drink coffee",
-                "third person": "they drink coffee"
+            {
+                "concept": "to drink coffee",
+                "label": {
+                    "infinitive": "to drink coffee",
+                    "singular": {
+                        "first person": "I drink coffee",
+                        "second person": "you drink coffee",
+                        "third person": {
+                            "feminine": "she drinks coffee",
+                            "masculine": "he drinks coffee"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we drink coffee",
+                        "second person": "you drink coffee",
+                        "third person": "they drink coffee"
+                    }
+                }
             }
-        },
-        "fi": {
-            "infinitive": "käydä kahvi",
-            "singular": {
-                "first person": "minä käyn kahvi",
-                "second person": "sinä käyt kahvi",
-                "third person": "hän käy kahvi"
-            },
-            "plural": {
-                "first person": "me käymme kahvi",
-                "second person": "te käytte kahvi",
-                "third person": "he käyvät kahvi"
-            }
-        },
-        "nl": {
-            "infinitive": "koffie drinken",
-            "singular": {
-                "first person": "ik drink koffie",
-                "second person": "jij drinkt koffie",
-                "third person": {
-                    "feminine": "zij drinkt koffie",
-                    "masculine": "hij drinkt koffie"
+        ],
+        "fi": [
+            {
+                "concept": "to dtink",
+                "label": {
+                    "infinitive": "juoda",
+                    "verbal noun": "juominen",
+                    "singular": {
+                        "first person": "minä juon",
+                        "second person": "sinä juot",
+                        "third person": "hän juo"
+                    },
+                    "plural": {
+                        "first person": "me juomme",
+                        "second person": "te juotte",
+                        "third person": "he juovat"
+                    }
                 }
             },
-            "plural": {
-                "first person": "wij drinken koffie",
-                "second person": "jullie drinken koffie",
-                "third person": "zij drinken koffie"
+            {
+                "concept": "to drink coffee",
+                "label": {
+                    "infinitive": "käydä kahvi",
+                    "singular": {
+                        "first person": "minä käyn kahvi",
+                        "second person": "sinä käyt kahvi",
+                        "third person": "hän käy kahvi"
+                    },
+                    "plural": {
+                        "first person": "me käymme kahvi",
+                        "second person": "te käytte kahvi",
+                        "third person": "he käyvät kahvi"
+                    }
+                }
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to dtink",
+                "label": {
+                    "infinitive": "drinken",
+                    "verbal noun": "het drinken",
+                    "singular": {
+                        "first person": "ik drink",
+                        "second person": "jij drinkt",
+                        "third person": {
+                            "feminine": "zij drinkt",
+                            "masculine": "hij drinkt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij drinken",
+                        "second person": "jullie drinken",
+                        "third person": "zij drinken"
+                    }
+                }
+            },
+            {
+                "concept": "to drink coffee",
+                "label": {
+                    "infinitive": "koffie drinken",
+                    "singular": {
+                        "first person": "ik drink koffie",
+                        "second person": "jij drinkt koffie",
+                        "third person": {
+                            "feminine": "zij drinkt koffie",
+                            "masculine": "hij drinkt koffie"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij drinken koffie",
+                        "second person": "jullie drinken koffie",
+                        "third person": "zij drinken koffie"
+                    }
+                }
+            }
+        ]
     }
 }

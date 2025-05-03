@@ -1,96 +1,123 @@
 {
-    "to open": {
-        "en": {
-            "infinitive": "to open",
-            "singular": {
-                "first person": "I open",
-                "second person": "you open",
-                "third person": {
-                    "feminine": "she opens",
-                    "masculine": "he opens"
-                }
-            },
-            "plural": {
-                "first person": "we open",
-                "second person": "you open",
-                "third person": "they open"
-            }
-        },
-        "fi": {
-            "infinitive": "avata",
-            "singular": {
-                "first person": "minä avaan",
-                "second person": "sinä avaat",
-                "third person": "hän avaa"
-            },
-            "plural": {
-                "first person": "me avaamme",
-                "second person": "te avaatte",
-                "third person": "he avaavat"
-            }
-        },
-        "nl": {
-            "infinitive": "openen",
-            "singular": {
-                "first person": "ik open",
-                "second person": "jij opent",
-                "third person": {
-                    "feminine": "zij opent",
-                    "masculine": "hij opent"
-                }
-            },
-            "plural": {
-                "first person": "wij openen",
-                "second person": "jullie openen",
-                "third person": "zij openen"
-            }
-        }
+    "concepts": {
+        "to open": {},
+        "to open (intransitive)": {}
     },
-    "to open (intransitive)": {
-        "en": {
-            "infinitive": "to open;intransitive",
-            "singular": {
-                "first person": "I open;intransitive",
-                "second person": "you open;intransitive",
-                "third person": {
-                    "feminine": "she opens;intransitive",
-                    "masculine": "he opens;intransitive"
+    "labels": {
+        "en": [
+            {
+                "concept": "to open",
+                "label": {
+                    "infinitive": "to open",
+                    "singular": {
+                        "first person": "I open",
+                        "second person": "you open",
+                        "third person": {
+                            "feminine": "she opens",
+                            "masculine": "he opens"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we open",
+                        "second person": "you open",
+                        "third person": "they open"
+                    }
                 }
             },
-            "plural": {
-                "first person": "we open;intransitive",
-                "second person": "you open;intransitive",
-                "third person": "they open;intransitive"
+            {
+                "concept": "to open (intransitive)",
+                "label": {
+                    "infinitive": "to open",
+                    "singular": {
+                        "first person": "I open;intransitive",
+                        "second person": "you open;intransitive",
+                        "third person": {
+                            "feminine": "she opens;intransitive",
+                            "masculine": "he opens;intransitive"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we open;intransitive",
+                        "second person": "you open;intransitive",
+                        "third person": "they open;intransitive"
+                    }
+                },
+                "tip": "intransitive"
             }
-        },
-        "fi": {
-            "infinitive": "aueta",
-            "singular": {
-                "first person": "minä aukean",
-                "second person": "sinä aukeat",
-                "third person": "hän aukeaa"
-            },
-            "plural": {
-                "first person": "me aukeamme",
-                "second person": "te aukeatte",
-                "third person": "he aukeavat"
-            }
-        },
-        "nl": {
-            "infinitive": "open gaan",
-            "singular": {
-                "first person": "ik ga open",
-                "second person": "jij gaat open",
-                "third person": {
-                    "feminine": "zij gaat open",
-                    "masculine": "hij gaat open"
+        ],
+        "fi": [
+            {
+                "concept": "to open",
+                "label": {
+                    "infinitive": "avata",
+                    "singular": {
+                        "first person": "minä avaan",
+                        "second person": "sinä avaat",
+                        "third person": "hän avaa"
+                    },
+                    "plural": {
+                        "first person": "me avaamme",
+                        "second person": "te avaatte",
+                        "third person": "he avaavat"
+                    }
                 }
             },
-            "plural": {
-                "first person": "wij gaan open",
-                "second person": "jullie gaan open",
-                "third person": "zij gaan open"
+            {
+                "concept": "to open (intransitive)",
+                "label": {
+                    "infinitive": "aueta",
+                    "singular": {
+                        "first person": "minä aukean",
+                        "second person": "sinä aukeat",
+                        "third person": "hän aukeaa"
+                    },
+                    "plural": {
+                        "first person": "me aukeamme",
+                        "second person": "te aukeatte",
+                        "third person": "he aukeavat"
+                    }
+                }
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to open",
+                "label": {
+                    "infinitive": "openen",
+                    "singular": {
+                        "first person": "ik open",
+                        "second person": "jij opent",
+                        "third person": {
+                            "feminine": "zij opent",
+                            "masculine": "hij opent"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij openen",
+                        "second person": "jullie openen",
+                        "third person": "zij openen"
+                    }
+                }
+            },
+            {
+                "concept": "to open (intransitive)",
+                "label": {
+                    "infinitive": "open gaan",
+                    "singular": {
+                        "first person": "ik ga open",
+                        "second person": "jij gaat open",
+                        "third person": {
+                            "feminine": "zij gaat open",
+                            "masculine": "hij gaat open"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij gaan open",
+                        "second person": "jullie gaan open",
+                        "third person": "zij gaan open"
+                    }
+                }
+            }
+        ]
     }
 }

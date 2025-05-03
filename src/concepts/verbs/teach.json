@@ -1,7 +1,25 @@
 {
-    "to teach": {
-        "en": "to teach",
-        "fi": "opettaa",
-        "nl": "onderwijzen"
+    "concepts": {
+        "to teach": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to teach",
+                "label": "to teach"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to teach",
+                "label": "opettaa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to teach",
+                "label": "onderwijzen"
+            }
+        ]
     }
 }

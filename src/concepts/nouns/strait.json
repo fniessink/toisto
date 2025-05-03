@@ -1,10 +1,29 @@
 {
-    "strait": {
-        "en": "strait",
-        "fi": "salmi",
+    "concepts": {
+        "strait": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "strait",
+                "label": "strait"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "strait",
+                "label": "salmi"
+            }
+        ],
         "nl": [
-            "de zeestraat",
-            "de zee-engte"
+            {
+                "concept": "strait",
+                "label": "de zeestraat"
+            },
+            {
+                "concept": "strait",
+                "label": "de zee-engte"
+            }
         ]
     }
 }

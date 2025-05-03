@@ -1,7 +1,25 @@
 {
-    "to advise": {
-        "en": "to advise",
-        "fi": "neuvoa",
-        "nl": "adviseren"
+    "concepts": {
+        "to advise": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to advise",
+                "label": "to advise"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to advise",
+                "label": "neuvoa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to advise",
+                "label": "adviseren"
+            }
+        ]
     }
 }

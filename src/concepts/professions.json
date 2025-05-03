@@ -1,338 +1,745 @@
 {
-    "seller": {
-        "hypernym": "profession",
-        "en": "seller",
-        "fi": "myyjä",
-        "nl": "de verkoper"
-    },
-    "physician": {
-        "hypernym": "profession",
-        "en": [
-            "doctor",
-            "physician"
-        ],
-        "fi": "lääkäri",
-        "nl": [
-            "de arts",
-            "de dokter"
-        ]
-    },
-    "dentist": {
-        "hypernym": "profession",
-        "roots": {
-            "fi": [
-                "tooth",
-                "physician"
+    "concepts": {
+        "seller": {
+            "hypernym": "profession"
+        },
+        "physician": {
+            "hypernym": "profession"
+        },
+        "dentist": {
+            "hypernym": "profession",
+            "roots": {
+                "fi": [
+                    "tooth",
+                    "physician"
+                ],
+                "nl": [
+                    "tooth",
+                    "physician"
+                ]
+            }
+        },
+        "nurse": {
+            "hypernym": "profession"
+        },
+        "truck driver": {
+            "hypernym": [
+                "profession",
+                "driver"
             ],
-            "nl": [
-                "tooth",
-                "physician"
+            "roots": [
+                "lorry",
+                "driver"
             ]
         },
-        "en": "dentist",
-        "fi": "hammaslääkäri",
-        "nl": "de tandarts"
-    },
-    "nurse": {
-        "hypernym": "profession",
-        "en": "nurse",
-        "fi": "sairaanhoitaja",
-        "nl": "de verpleegkundige"
-    },
-    "truck driver": {
-        "hypernym": [
-            "profession",
-            "driver"
-        ],
-        "roots": [
-            "lorry",
-            "driver"
-        ],
-        "en": "truck driver",
-        "fi": "rekkakuski",
-        "nl": "de vrachtwagenchauffeur"
-    },
-    "taxi driver": {
-        "hypernym": [
-            "profession",
-            "driver"
-        ],
-        "roots": [
-            "taxi",
-            "driver"
-        ],
-        "en": [
-            "taxi driver",
-            "cabdriver"
-        ],
-        "fi": "taksikuski",
-        "nl": "de taxichauffeur"
-    },
-    "car mechanic": {
-        "hypernym": "profession",
-        "roots": "car",
-        "en": "car mechanic",
-        "fi": "automekaanikko",
-        "nl": "de automonteur"
-    },
-    "farmer": {
-        "hypernym": "profession",
-        "en": "farmer",
-        "fi": "maanviljelijä",
-        "nl": [
-            "de boer",
-            "de landbouwer"
-        ]
-    },
-    "singer": {
-        "hypernym": "profession",
-        "en": "singer",
-        "fi": "laulaja",
-        "nl": "de zanger"
-    },
-    "athlete": {
-        "hypernym": "profession",
-        "en": "athlete",
-        "fi": "urheilija",
-        "nl": [
-            "de atleet",
-            "de sporter"
-        ]
-    },
-    "police officer": {
-        "hypernym": "profession",
-        "en": "police officer",
-        "fi": "poliisi",
-        "nl": "de politieagent"
-    },
-    "firefighter": {
-        "hypernym": "profession",
-        "en": "firefighter",
-        "fi": "palomies",
-        "nl": "de brandweerman"
-    },
-    "priest": {
-        "hypernym": "profession",
-        "en": "priest",
-        "fi": "pappi",
-        "nl": "de priester"
-    },
-    "entrepeneur": {
-        "hypernym": "profession",
-        "en": "entrepeneur",
-        "fi": "yrittäjä",
-        "nl": "de ondernemer"
-    },
-    "architect": {
-        "hypernym": "profession",
-        "en": "architect",
-        "fi": "arkkitehti",
-        "nl": "de architect"
-    },
-    "plumber": {
-        "hypernym": "profession",
-        "en": "plumber",
-        "fi": [
-            "putkiasentaja",
-            "putkimies"
-        ],
-        "nl": "de loodgieter"
-    },
-    "electrician": {
-        "hypernym": "profession",
-        "en": "electrician",
-        "fi": [
-            "sähköasentaja",
-            "sähkömies"
-        ],
-        "nl": "de elektricien"
-    },
-    "mailman": {
-        "hypernym": "profession",
-        "en": "mailman",
-        "fi": "postinjakaja",
-        "nl": "de postbode"
-    },
-    "janitor": {
-        "hypernym": "profession",
-        "en": "janitor",
-        "fi": "vahtimestari",
-        "nl": "de conciërge"
-    },
-    "security guard": {
-        "hypernym": "profession",
-        "en": "security guard",
-        "fi": "vartija",
-        "nl": "de beveiliger"
-    },
-    "broker": {
-        "hypernym": "profession",
-        "en": "broker",
-        "fi": "välittäjä",
-        "nl": "de makelaar"
-    },
-    "real estate broker": {
-        "hypernym": "broker",
-        "roots": "broker",
-        "en": "real estate broker",
-        "fi": "kiinteistonvälittäjä",
-        "nl": "de vastgoedmakelaar"
-    },
-    "managing director": {
-        "hypernym": "profession",
-        "roots": {
-            "nl": "company"
-        },
-        "en": "managing director",
-        "fi": "toimitusjohtaja",
-        "nl": [
-            "de bedrijfsleider",
-            "de directeur"
-        ]
-    },
-    "staff manager": {
-        "hypernym": "profession",
-        "en": [
-            "staff manager",
-            "personnel manager"
-        ],
-        "fi": "henkilöstöpäällikkö",
-        "nl": "de personeelschef"
-    },
-    "assistant": {
-        "hypernym": "profession",
-        "en": "assistant",
-        "fi": "assistentti",
-        "nl": "de assistent"
-    },
-    "secretary": {
-        "hypernym": "profession",
-        "en": "secretary",
-        "fi": "sihteeri",
-        "nl": {
-            "feminine": "de secretaresse",
-            "masculine": "de secretaris"
-        }
-    },
-    "bookkeeper": {
-        "hypernym": "profession",
-        "en": "bookkeeper",
-        "fi": "kirjanpitäjä",
-        "nl": "de boekhouder"
-    },
-    "journalist": {
-        "hypernym": "profession",
-        "en": [
-            "journalist",
-            "reporter"
-        ],
-        "fi": "toimittaja",
-        "nl": [
-            "de journalist",
-            "de verslaggever"
-        ]
-    },
-    "photographer": {
-        "hypernym": "profession",
-        "en": "photographer",
-        "fi": "valokuvaaja",
-        "nl": "de fotograaf"
-    },
-    "cleaner": {
-        "hypernym": "profession",
-        "en": "cleaner",
-        "fi": "siivooja",
-        "nl": "de schoonmaker"
-    },
-    "hairdresser": {
-        "hypernym": "profession",
-        "en": "hairdresser",
-        "fi": "kampaaja",
-        "nl": "de kapper"
-    },
-    "barber": {
-        "hypernym": "profession",
-        "en": "barber",
-        "fi": "parturi",
-        "nl": "de barber"
-    },
-    "cosmetologist": {
-        "hypernym": "profession",
-        "en": "cosmetologist",
-        "fi": "kosmetologi",
-        "nl": "de schoonheidsspecialist"
-    },
-    "cook": {
-        "hypernym": "profession",
-        "en": "cook",
-        "fi": "kokki",
-        "nl": "de kok"
-    },
-    "server": {
-        "hypernym": "profession",
-        "en": "server",
-        "fi": "tarjoilija",
-        "nl": {
-            "feminine": "de serveerster",
-            "masculine": "de ober"
-        }
-    },
-    "kitchenhand": {
-        "hypernym": "profession",
-        "roots": {
-            "en": [
-                "kitchen",
-                "hand"
+        "taxi driver": {
+            "hypernym": [
+                "profession",
+                "driver"
             ],
-            "fi": "kitchen",
-            "nl": "kitchen"
+            "roots": [
+                "taxi",
+                "driver"
+            ]
         },
-        "en": "kitchenhand",
-        "fi": "keittiöapulainen",
-        "nl": "de keukenhulp"
-    },
-    "kindergarten teacher": {
-        "hypernym": "teacher",
-        "en": "kindergarten teacher",
-        "fi": "lastentarhanopettaja",
-        "nl": "de kleuterjuf"
-    },
-    "nanny": {
-        "hypernym": "profession",
-        "en": "nanny",
-        "fi": "lastenhoitaja",
-        "nl": {
-            "feminine": "de kinderverzorgster",
-            "masculine": "de kinderverzorger"
+        "car mechanic": {
+            "hypernym": "profession",
+            "roots": "car"
+        },
+        "farmer": {
+            "hypernym": "profession"
+        },
+        "singer": {
+            "hypernym": "profession"
+        },
+        "athlete": {
+            "hypernym": "profession"
+        },
+        "police officer": {
+            "hypernym": "profession"
+        },
+        "firefighter": {
+            "hypernym": "profession"
+        },
+        "priest": {
+            "hypernym": "profession"
+        },
+        "entrepeneur": {
+            "hypernym": "profession"
+        },
+        "architect": {
+            "hypernym": "profession"
+        },
+        "plumber": {
+            "hypernym": "profession"
+        },
+        "electrician": {
+            "hypernym": "profession"
+        },
+        "mailman": {
+            "hypernym": "profession"
+        },
+        "janitor": {
+            "hypernym": "profession"
+        },
+        "security guard": {
+            "hypernym": "profession"
+        },
+        "broker": {
+            "hypernym": "profession"
+        },
+        "real estate broker": {
+            "hypernym": "broker",
+            "roots": "broker"
+        },
+        "managing director": {
+            "hypernym": "profession",
+            "roots": {
+                "nl": "company"
+            }
+        },
+        "staff manager": {
+            "hypernym": "profession"
+        },
+        "assistant": {
+            "hypernym": "profession"
+        },
+        "secretary": {
+            "hypernym": "profession"
+        },
+        "bookkeeper": {
+            "hypernym": "profession"
+        },
+        "journalist": {
+            "hypernym": "profession"
+        },
+        "photographer": {
+            "hypernym": "profession"
+        },
+        "cleaner": {
+            "hypernym": "profession"
+        },
+        "hairdresser": {
+            "hypernym": "profession"
+        },
+        "barber": {
+            "hypernym": "profession"
+        },
+        "cosmetologist": {
+            "hypernym": "profession"
+        },
+        "cook": {
+            "hypernym": "profession"
+        },
+        "server": {
+            "hypernym": "profession"
+        },
+        "kitchenhand": {
+            "hypernym": "profession",
+            "roots": {
+                "en": [
+                    "kitchen",
+                    "hand"
+                ],
+                "fi": "kitchen",
+                "nl": "kitchen"
+            }
+        },
+        "kindergarten teacher": {
+            "hypernym": "teacher"
+        },
+        "nanny": {
+            "hypernym": "profession"
+        },
+        "researcher": {
+            "hypernym": "profession"
+        },
+        "housewife": {},
+        "sewer": {
+            "hypernym": "profession"
+        },
+        "interpreter": {
+            "hypernym": "profession"
+        },
+        "politician": {
+            "hypernym": "profession"
         }
     },
-    "researcher": {
-        "hypernym": "profession",
-        "en": "researcher",
-        "fi": "tutkija",
-        "nl": "de onderzoeker"
-    },
-    "housewife": {
-        "en": "housewife",
-        "fi": "kotiäiti",
-        "nl": "de huismoeder"
-    },
-    "sewer": {
-        "hypernym": "profession",
-        "en": "sewer",
-        "fi": "ompelija",
-        "nl": "de naaister"
-    },
-    "interpreter": {
-        "hypernym": "profession",
-        "en": "interpreter",
-        "fi": "tulkki",
-        "nl": "de tolk"
-    },
-    "politician": {
-        "hypernym": "profession",
-        "en": "politician",
-        "fi": "poliitikko",
-        "nl": "de politicus"
+    "labels": {
+        "en": [
+            {
+                "concept": "seller",
+                "label": "seller"
+            },
+            {
+                "concept": "physician",
+                "label": "doctor"
+            },
+            {
+                "concept": "physician",
+                "label": "physician"
+            },
+            {
+                "concept": "dentist",
+                "label": "dentist"
+            },
+            {
+                "concept": "nurse",
+                "label": "nurse"
+            },
+            {
+                "concept": "truck driver",
+                "label": "truck driver"
+            },
+            {
+                "concept": "taxi driver",
+                "label": "taxi driver"
+            },
+            {
+                "concept": "taxi driver",
+                "label": "cabdriver"
+            },
+            {
+                "concept": "car mechanic",
+                "label": "car mechanic"
+            },
+            {
+                "concept": "farmer",
+                "label": "farmer"
+            },
+            {
+                "concept": "singer",
+                "label": "singer"
+            },
+            {
+                "concept": "athlete",
+                "label": "athlete"
+            },
+            {
+                "concept": "police officer",
+                "label": "police officer"
+            },
+            {
+                "concept": "firefighter",
+                "label": "firefighter"
+            },
+            {
+                "concept": "priest",
+                "label": "priest"
+            },
+            {
+                "concept": "entrepeneur",
+                "label": "entrepeneur"
+            },
+            {
+                "concept": "architect",
+                "label": "architect"
+            },
+            {
+                "concept": "plumber",
+                "label": "plumber"
+            },
+            {
+                "concept": "electrician",
+                "label": "electrician"
+            },
+            {
+                "concept": "mailman",
+                "label": "mailman"
+            },
+            {
+                "concept": "janitor",
+                "label": "janitor"
+            },
+            {
+                "concept": "security guard",
+                "label": "security guard"
+            },
+            {
+                "concept": "broker",
+                "label": "broker"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "real estate broker"
+            },
+            {
+                "concept": "managing director",
+                "label": "managing director"
+            },
+            {
+                "concept": "staff manager",
+                "label": "staff manager"
+            },
+            {
+                "concept": "staff manager",
+                "label": "personnel manager"
+            },
+            {
+                "concept": "assistant",
+                "label": "assistant"
+            },
+            {
+                "concept": "secretary",
+                "label": "secretary"
+            },
+            {
+                "concept": "bookkeeper",
+                "label": "bookkeeper"
+            },
+            {
+                "concept": "journalist",
+                "label": "journalist"
+            },
+            {
+                "concept": "journalist",
+                "label": "reporter"
+            },
+            {
+                "concept": "photographer",
+                "label": "photographer"
+            },
+            {
+                "concept": "cleaner",
+                "label": "cleaner"
+            },
+            {
+                "concept": "hairdresser",
+                "label": "hairdresser"
+            },
+            {
+                "concept": "barber",
+                "label": "barber"
+            },
+            {
+                "concept": "cosmetologist",
+                "label": "cosmetologist"
+            },
+            {
+                "concept": "cook",
+                "label": "cook"
+            },
+            {
+                "concept": "server",
+                "label": "server"
+            },
+            {
+                "concept": "kitchenhand",
+                "label": "kitchenhand"
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "kindergarten teacher"
+            },
+            {
+                "concept": "nanny",
+                "label": "nanny"
+            },
+            {
+                "concept": "researcher",
+                "label": "researcher"
+            },
+            {
+                "concept": "housewife",
+                "label": "housewife"
+            },
+            {
+                "concept": "sewer",
+                "label": "sewer"
+            },
+            {
+                "concept": "interpreter",
+                "label": "interpreter"
+            },
+            {
+                "concept": "politician",
+                "label": "politician"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "seller",
+                "label": "myyjä"
+            },
+            {
+                "concept": "physician",
+                "label": "lääkäri"
+            },
+            {
+                "concept": "dentist",
+                "label": "hammaslääkäri"
+            },
+            {
+                "concept": "nurse",
+                "label": "sairaanhoitaja"
+            },
+            {
+                "concept": "truck driver",
+                "label": "rekkakuski"
+            },
+            {
+                "concept": "taxi driver",
+                "label": "taksikuski"
+            },
+            {
+                "concept": "car mechanic",
+                "label": "automekaanikko"
+            },
+            {
+                "concept": "farmer",
+                "label": "maanviljelijä"
+            },
+            {
+                "concept": "singer",
+                "label": "laulaja"
+            },
+            {
+                "concept": "athlete",
+                "label": "urheilija"
+            },
+            {
+                "concept": "police officer",
+                "label": "poliisi"
+            },
+            {
+                "concept": "firefighter",
+                "label": "palomies"
+            },
+            {
+                "concept": "priest",
+                "label": "pappi"
+            },
+            {
+                "concept": "entrepeneur",
+                "label": "yrittäjä"
+            },
+            {
+                "concept": "architect",
+                "label": "arkkitehti"
+            },
+            {
+                "concept": "plumber",
+                "label": "putkiasentaja"
+            },
+            {
+                "concept": "plumber",
+                "label": "putkimies"
+            },
+            {
+                "concept": "electrician",
+                "label": "sähköasentaja"
+            },
+            {
+                "concept": "electrician",
+                "label": "sähkömies"
+            },
+            {
+                "concept": "mailman",
+                "label": "postinjakaja"
+            },
+            {
+                "concept": "janitor",
+                "label": "vahtimestari"
+            },
+            {
+                "concept": "security guard",
+                "label": "vartija"
+            },
+            {
+                "concept": "broker",
+                "label": "välittäjä"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "kiinteistonvälittäjä"
+            },
+            {
+                "concept": "managing director",
+                "label": "toimitusjohtaja"
+            },
+            {
+                "concept": "staff manager",
+                "label": "henkilöstöpäällikkö"
+            },
+            {
+                "concept": "assistant",
+                "label": "assistentti"
+            },
+            {
+                "concept": "secretary",
+                "label": "sihteeri"
+            },
+            {
+                "concept": "bookkeeper",
+                "label": "kirjanpitäjä"
+            },
+            {
+                "concept": "journalist",
+                "label": "toimittaja"
+            },
+            {
+                "concept": "photographer",
+                "label": "valokuvaaja"
+            },
+            {
+                "concept": "cleaner",
+                "label": "siivooja"
+            },
+            {
+                "concept": "hairdresser",
+                "label": "kampaaja"
+            },
+            {
+                "concept": "barber",
+                "label": "parturi"
+            },
+            {
+                "concept": "cosmetologist",
+                "label": "kosmetologi"
+            },
+            {
+                "concept": "cook",
+                "label": "kokki"
+            },
+            {
+                "concept": "server",
+                "label": "tarjoilija"
+            },
+            {
+                "concept": "kitchenhand",
+                "label": "keittiöapulainen"
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "lastentarhanopettaja"
+            },
+            {
+                "concept": "nanny",
+                "label": "lastenhoitaja"
+            },
+            {
+                "concept": "researcher",
+                "label": "tutkija"
+            },
+            {
+                "concept": "housewife",
+                "label": "kotiäiti"
+            },
+            {
+                "concept": "sewer",
+                "label": "ompelija"
+            },
+            {
+                "concept": "interpreter",
+                "label": "tulkki"
+            },
+            {
+                "concept": "politician",
+                "label": "poliitikko"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "seller",
+                "label": "de verkoper"
+            },
+            {
+                "concept": "physician",
+                "label": "de arts"
+            },
+            {
+                "concept": "physician",
+                "label": "de dokter"
+            },
+            {
+                "concept": "dentist",
+                "label": "de tandarts"
+            },
+            {
+                "concept": "nurse",
+                "label": "de verpleegkundige"
+            },
+            {
+                "concept": "truck driver",
+                "label": "de vrachtwagenchauffeur"
+            },
+            {
+                "concept": "taxi driver",
+                "label": "de taxichauffeur"
+            },
+            {
+                "concept": "car mechanic",
+                "label": "de automonteur"
+            },
+            {
+                "concept": "farmer",
+                "label": "de boer"
+            },
+            {
+                "concept": "farmer",
+                "label": "de landbouwer"
+            },
+            {
+                "concept": "singer",
+                "label": "de zanger"
+            },
+            {
+                "concept": "athlete",
+                "label": "de atleet"
+            },
+            {
+                "concept": "athlete",
+                "label": "de sporter"
+            },
+            {
+                "concept": "police officer",
+                "label": "de politieagent"
+            },
+            {
+                "concept": "firefighter",
+                "label": "de brandweerman"
+            },
+            {
+                "concept": "priest",
+                "label": "de priester"
+            },
+            {
+                "concept": "entrepeneur",
+                "label": "de ondernemer"
+            },
+            {
+                "concept": "architect",
+                "label": "de architect"
+            },
+            {
+                "concept": "plumber",
+                "label": "de loodgieter"
+            },
+            {
+                "concept": "electrician",
+                "label": "de elektricien"
+            },
+            {
+                "concept": "mailman",
+                "label": "de postbode"
+            },
+            {
+                "concept": "janitor",
+                "label": "de conciërge"
+            },
+            {
+                "concept": "security guard",
+                "label": "de beveiliger"
+            },
+            {
+                "concept": "broker",
+                "label": "de makelaar"
+            },
+            {
+                "concept": "real estate broker",
+                "label": "de vastgoedmakelaar"
+            },
+            {
+                "concept": "managing director",
+                "label": "de bedrijfsleider"
+            },
+            {
+                "concept": "managing director",
+                "label": "de directeur"
+            },
+            {
+                "concept": "staff manager",
+                "label": "de personeelschef"
+            },
+            {
+                "concept": "assistant",
+                "label": "de assistent"
+            },
+            {
+                "concept": "secretary",
+                "label": {
+                    "feminine": "de secretaresse",
+                    "masculine": "de secretaris"
+                }
+            },
+            {
+                "concept": "bookkeeper",
+                "label": "de boekhouder"
+            },
+            {
+                "concept": "journalist",
+                "label": "de journalist"
+            },
+            {
+                "concept": "journalist",
+                "label": "de verslaggever"
+            },
+            {
+                "concept": "photographer",
+                "label": "de fotograaf"
+            },
+            {
+                "concept": "cleaner",
+                "label": "de schoonmaker"
+            },
+            {
+                "concept": "hairdresser",
+                "label": "de kapper"
+            },
+            {
+                "concept": "barber",
+                "label": "de barber"
+            },
+            {
+                "concept": "cosmetologist",
+                "label": "de schoonheidsspecialist"
+            },
+            {
+                "concept": "cook",
+                "label": "de kok"
+            },
+            {
+                "concept": "server",
+                "label": {
+                    "feminine": "de serveerster",
+                    "masculine": "de ober"
+                }
+            },
+            {
+                "concept": "kitchenhand",
+                "label": "de keukenhulp"
+            },
+            {
+                "concept": "kindergarten teacher",
+                "label": "de kleuterjuf"
+            },
+            {
+                "concept": "nanny",
+                "label": {
+                    "feminine": "de kinderverzorgster",
+                    "masculine": "de kinderverzorger"
+                }
+            },
+            {
+                "concept": "researcher",
+                "label": "de onderzoeker"
+            },
+            {
+                "concept": "housewife",
+                "label": "de huismoeder"
+            },
+            {
+                "concept": "sewer",
+                "label": "de naaister"
+            },
+            {
+                "concept": "interpreter",
+                "label": "de tolk"
+            },
+            {
+                "concept": "politician",
+                "label": "de politicus"
+            }
+        ]
     }
 }

@@ -1,7 +1,26 @@
 {
-    "invitation": {
-        "en": "invitation",
-        "fi": "kutsu;document or verbal message",
-        "nl": "de uitnodiging"
+    "concepts": {
+        "invitation": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "invitation",
+                "label": "invitation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "invitation",
+                "label": "kutsu",
+                "tip": "document or verbal message"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "invitation",
+                "label": "de uitnodiging"
+            }
+        ]
     }
 }

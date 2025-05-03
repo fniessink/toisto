@@ -1,10 +1,29 @@
 {
-    "pupil": {
-        "en": "pupil",
-        "fi": "oppilas",
+    "concepts": {
+        "pupil": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pupil",
+                "label": "pupil"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pupil",
+                "label": "oppilas"
+            }
+        ],
         "nl": [
-            "de leerling",
-            "de scholier"
+            {
+                "concept": "pupil",
+                "label": "de leerling"
+            },
+            {
+                "concept": "pupil",
+                "label": "de scholier"
+            }
         ]
     }
 }

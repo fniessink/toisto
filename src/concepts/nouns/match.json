@@ -1,17 +1,36 @@
 {
-    "match": {
-        "involves": "sport",
-        "en": {
-            "singular": "match",
-            "plural": "matches"
-        },
-        "fi": {
-            "singular": "ottelu",
-            "plural": "ottelut"
-        },
-        "nl": {
-            "singular": "de wedstrijd",
-            "plural": "de wedstrijden"
+    "concepts": {
+        "match": {
+            "involves": "sport"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "match",
+                    "plural": "matches"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "ottelu",
+                    "plural": "ottelut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "match",
+                "label": {
+                    "singular": "de wedstrijd",
+                    "plural": "de wedstrijden"
+                }
+            }
+        ]
     }
 }

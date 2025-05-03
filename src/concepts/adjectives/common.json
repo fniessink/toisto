@@ -1,7 +1,25 @@
 {
-    "common": {
-        "en": "common",
-        "fi": "yhteinen",
-        "nl": "gemeenschappelijk"
+    "concepts": {
+        "common": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "common",
+                "label": "common"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "common",
+                "label": "yhteinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "common",
+                "label": "gemeenschappelijk"
+            }
+        ]
     }
 }

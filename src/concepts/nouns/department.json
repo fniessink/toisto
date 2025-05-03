@@ -1,7 +1,25 @@
 {
-    "department": {
-        "en": "department",
-        "fi": "osasto",
-        "nl": "de afdeling"
+    "concepts": {
+        "department": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "department",
+                "label": "department"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "department",
+                "label": "osasto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "department",
+                "label": "de afdeling"
+            }
+        ]
     }
 }

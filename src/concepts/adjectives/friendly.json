@@ -1,15 +1,43 @@
 {
-    "friendly": {
-        "example": "he has a friendly face",
-        "roots": "friend",
-        "en": "friendly",
-        "fi": "ystävällinen",
-        "nl": "vriendelijk"
+    "concepts": {
+        "friendly": {
+            "example": "he has a friendly face",
+            "roots": "friend"
+        },
+        "environmentally friendly": {
+            "roots": "friendly"
+        }
     },
-    "environmentally friendly": {
-        "roots": "friendly",
-        "en": "environmentally friendly",
-        "fi": "ympäristöystävällinen",
-        "nl": "milieuvriendelijk"
+    "labels": {
+        "en": [
+            {
+                "concept": "friendly",
+                "label": "friendly"
+            },
+            {
+                "concept": "environmentally friendly",
+                "label": "environmentally friendly"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "friendly",
+                "label": "ystävällinen"
+            },
+            {
+                "concept": "environmentally friendly",
+                "label": "ympäristöystävällinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "friendly",
+                "label": "vriendelijk"
+            },
+            {
+                "concept": "environmentally friendly",
+                "label": "milieuvriendelijk"
+            }
+        ]
     }
 }

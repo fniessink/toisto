@@ -1,92 +1,202 @@
 {
-    "a pleasure to meet you": {
-        "hypernym": "greeting",
-        "roots": {
-            "en": "to meet (someone new)",
-            "fi": [
-                "funny",
-                "to meet (someone new)"
-            ],
-            "nl": "to meet (someone new)"
+    "concepts": {
+        "a pleasure to meet you": {
+            "hypernym": "greeting",
+            "roots": {
+                "en": "to meet (someone new)",
+                "fi": [
+                    "funny",
+                    "to meet (someone new)"
+                ],
+                "nl": "to meet (someone new)"
+            }
         },
-        "en": "A pleasure to meet you!|Pleasure to meet you!|Nice to meet you!",
-        "fi": "Hauska tutustua!",
-        "nl": "Aangenaam kennis te maken!|Prettig kennis te maken!"
-    },
-    "good afternoon": {
-        "hypernym": "greeting",
-        "roots": {
-            "en": [
-                "good",
-                "afternoon"
-            ],
-            "fi": [
+        "good afternoon": {
+            "hypernym": "greeting",
+            "roots": {
+                "en": [
+                    "good",
+                    "afternoon"
+                ],
+                "fi": [
+                    "good",
+                    "day"
+                ],
+                "nl": [
+                    "good",
+                    "afternoon"
+                ]
+            }
+        },
+        "good day": {
+            "hypernym": "greeting",
+            "roots": [
                 "good",
                 "day"
-            ],
-            "nl": [
-                "good",
-                "afternoon"
             ]
         },
-        "en": "Good afternoon!",
-        "fi": "Hyvää päivää!;afternoon",
-        "nl": "Goedemiddag!"
+        "good evening": {
+            "hypernym": "greeting",
+            "roots": [
+                "good",
+                "evening"
+            ]
+        },
+        "good morning": {
+            "hypernym": "greeting",
+            "roots": [
+                "good",
+                "morning"
+            ]
+        },
+        "good night": {
+            "hypernym": "greeting",
+            "roots": [
+                "good",
+                "night"
+            ]
+        },
+        "hello": {
+            "hypernym": "greeting"
+        },
+        "hi": {
+            "hypernym": "greeting"
+        }
     },
-    "good day": {
-        "hypernym": "greeting",
-        "roots": [
-            "good",
-            "day"
+    "labels": {
+        "en": [
+            {
+                "concept": "a pleasure to meet you",
+                "label": [
+                    "A pleasure to meet you!",
+                    "Pleasure to meet you!",
+                    "Nice to meet you!"
+                ]
+            },
+            {
+                "concept": "good afternoon",
+                "label": "Good afternoon!"
+            },
+            {
+                "concept": "good day",
+                "label": "Good day!"
+            },
+            {
+                "concept": "good evening",
+                "label": "Good evening!"
+            },
+            {
+                "concept": "good morning",
+                "label": [
+                    "Good morning!",
+                    "Morning!"
+                ]
+            },
+            {
+                "concept": "good night",
+                "label": "Good night!"
+            },
+            {
+                "concept": "hello",
+                "label": "Hello!"
+            },
+            {
+                "concept": "hi",
+                "label": "Hi!"
+            }
         ],
-        "en": "Good day!",
-        "fi": "Hyvää päivää!|Päivää!",
-        "nl": "Goedendag!"
-    },
-    "good evening": {
-        "hypernym": "greeting",
-        "roots": [
-            "good",
-            "evening"
-        ],
-        "en": "Good evening!",
-        "fi": "Hyvää iltaa!|Iltaa!",
-        "nl": "Goedenavond!"
-    },
-    "good morning": {
-        "hypernym": "greeting",
-        "roots": [
-            "good",
-            "morning"
-        ],
-        "en": "Good morning!|Morning!",
-        "fi": "Hyvää huomenta!|Huomenta!",
-        "nl": "Goedemorgen!|Morgen!"
-    },
-    "good night": {
-        "hypernym": "greeting",
-        "roots": [
-            "good",
-            "night"
-        ],
-        "en": "Good night!",
-        "fi": "Hyvää yötä!",
-        "nl": "Goedenacht!"
-    },
-    "hello": {
-        "hypernym": "greeting",
-        "en": "Hello!",
-        "fi": "Terve!",
-        "nl": "Hallo!"
-    },
-    "hi": {
-        "hypernym": "greeting",
-        "en": "Hi!",
         "fi": [
-            "Hei!",
-            "Moi!",
-            "Moikka!;arriving"
+            {
+                "concept": "a pleasure to meet you",
+                "label": "Hauska tutustua!"
+            },
+            {
+                "concept": "good afternoon",
+                "label": "Hyvää päivää!",
+                "tip": "afternoon"
+            },
+            {
+                "concept": "good day",
+                "label": [
+                    "Hyvää päivää!",
+                    "Päivää!"
+                ]
+            },
+            {
+                "concept": "good evening",
+                "label": [
+                    "Hyvää iltaa!",
+                    "Iltaa!"
+                ]
+            },
+            {
+                "concept": "good morning",
+                "label": [
+                    "Hyvää huomenta!",
+                    "Huomenta!"
+                ]
+            },
+            {
+                "concept": "good night",
+                "label": "Hyvää yötä!"
+            },
+            {
+                "concept": "hello",
+                "label": "Terve!"
+            },
+            {
+                "concept": "hi",
+                "label": "Hei!"
+            },
+            {
+                "concept": "hi",
+                "label": "Moi!"
+            },
+            {
+                "concept": "hi",
+                "label": "Moikka!",
+                "tip": "arriving"
+            }
         ],
-        "nl": "Hoi!"
+        "nl": [
+            {
+                "concept": "a pleasure to meet you",
+                "label": [
+                    "Aangenaam kennis te maken!",
+                    "Prettig kennis te maken!"
+                ]
+            },
+            {
+                "concept": "good afternoon",
+                "label": "Goedemiddag!"
+            },
+            {
+                "concept": "good day",
+                "label": "Goedendag!"
+            },
+            {
+                "concept": "good evening",
+                "label": "Goedenavond!"
+            },
+            {
+                "concept": "good morning",
+                "label": [
+                    "Goedemorgen!",
+                    "Morgen!"
+                ]
+            },
+            {
+                "concept": "good night",
+                "label": "Goedenacht!"
+            },
+            {
+                "concept": "hello",
+                "label": "Hallo!"
+            },
+            {
+                "concept": "hi",
+                "label": "Hoi!"
+            }
+        ]
     }
 }

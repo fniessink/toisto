@@ -1,35 +1,45 @@
 {
-    "SM1.5": {
-        "involves": [
-            "alarm clock",
-            "apartment",
-            "book",
-            "bread",
-            "breakfast",
-            "coffee",
-            "football",
-            "for example",
-            "infinitive",
-            "minute",
-            "nothing",
-            "often",
-            "pharmacy",
-            "shoe",
-            "something",
-            "to drive",
-            "to give",
-            "to go",
-            "to live",
-            "to open",
-            "to read",
-            "to ski",
-            "to wake up",
-            "to walk",
-            "to want",
-            "to write",
-            "verb",
-            "what time is it"
-        ],
-        "fi": "(SM1.5)"
+    "concepts": {
+        "SM1.5": {
+            "involves": [
+                "alarm clock",
+                "apartment",
+                "book",
+                "bread",
+                "breakfast",
+                "coffee",
+                "football",
+                "for example",
+                "infinitive",
+                "minute",
+                "nothing",
+                "often",
+                "pharmacy",
+                "shoe",
+                "something",
+                "to drive",
+                "to give",
+                "to go",
+                "to live",
+                "to open",
+                "to read",
+                "to ski",
+                "to wake up",
+                "to walk",
+                "to want",
+                "to write",
+                "verb",
+                "what time is it"
+            ]
+        }
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "SM1.5",
+                "label": "SM1.5",
+                "meaning-only": true
+            }
+        ]
     }
 }

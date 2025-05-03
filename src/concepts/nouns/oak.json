@@ -1,8 +1,27 @@
 {
-    "oak": {
-        "hypernym": "tree",
-        "en": "oak",
-        "fi": "tammi",
-        "nl": "de eik"
+    "concepts": {
+        "oak": {
+            "hypernym": "tree"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "oak",
+                "label": "oak"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "oak",
+                "label": "tammi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "oak",
+                "label": "de eik"
+            }
+        ]
     }
 }

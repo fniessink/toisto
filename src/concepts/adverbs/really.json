@@ -1,13 +1,33 @@
 {
-    "really": {
+    "concepts": {
+        "really": {}
+    },
+    "labels": {
         "en": [
-            "really",
-            "for real"
+            {
+                "concept": "really",
+                "label": "really"
+            },
+            {
+                "concept": "really",
+                "label": "for real"
+            }
         ],
-        "fi": "todella",
+        "fi": [
+            {
+                "concept": "really",
+                "label": "todella"
+            }
+        ],
         "nl": [
-            "echt",
-            "werkelijk"
+            {
+                "concept": "really",
+                "label": "echt"
+            },
+            {
+                "concept": "really",
+                "label": "werkelijk"
+            }
         ]
     }
 }

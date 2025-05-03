@@ -22,7 +22,7 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 ```console
 $ toisto practice --target fi --source nl
-👋 Welcome to Toisto v0.10.0!
+👋 Welcome to Toisto v0.35.0!
 
 Practice as many words and phrases as you like, for as long as you like.
 

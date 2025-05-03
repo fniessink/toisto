@@ -1,8 +1,27 @@
 {
-    "movables": {
-        "holonym": "house",
-        "en": "movables",
-        "fi": "irtaimisto",
-        "nl": "de inboedel"
+    "concepts": {
+        "movables": {
+            "holonym": "house"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "movables",
+                "label": "movables"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "movables",
+                "label": "irtaimisto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "movables",
+                "label": "de inboedel"
+            }
+        ]
     }
 }

@@ -1,7 +1,25 @@
 {
-    "amount (countable)": {
-        "en": "amount",
-        "fi": "määrä",
-        "nl": "het aantal"
+    "concepts": {
+        "amount (countable)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "amount (countable)",
+                "label": "amount"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "amount (countable)",
+                "label": "määrä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "amount (countable)",
+                "label": "het aantal"
+            }
+        ]
     }
 }

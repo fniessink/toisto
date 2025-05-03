@@ -1,197 +1,234 @@
 {
-    "to play a musical instrument": {
-        "involves": "musical instrument",
-        "en": {
-            "infinitive": "to play",
-            "singular": {
-                "first person": "I play",
-                "second person": "you play",
-                "third person": {
-                    "feminine": "she plays",
-                    "masculine": "he plays"
-                }
-            },
-            "plural": {
-                "first person": "we play",
-                "second person": "you play",
-                "third person": "they play"
-            }
+    "concepts": {
+        "to play a musical instrument": {
+            "involves": "musical instrument"
         },
-        "fi": {
-            "infinitive": "soittaa",
-            "singular": {
-                "first person": "minä soitan",
-                "second person": "sinä soitat",
-                "third person": "hän soittaa"
-            },
-            "plural": {
-                "first person": "me soitamme",
-                "second person": "te soitatte",
-                "third person": "he soittavat"
-            }
+        "to play a sport": {
+            "involves": "sport"
         },
-        "nl": {
-            "infinitive": "spelen",
-            "singular": {
-                "first person": "ik speel",
-                "second person": "jij speelt",
-                "third person": {
-                    "feminine": "zij speelt",
-                    "masculine": "hij speelt"
-                }
-            },
-            "plural": {
-                "first person": "wij spelen",
-                "second person": "jullie spelen",
-                "third person": "zij spelen"
+        "to play darts": {
+            "roots": {
+                "en": "to play a sport",
+                "fi": "to throw"
             }
         }
     },
-    "to play a sport": {
-        "involves": "sport",
-        "en": {
-            "infinitive": "to play",
-            "present tense": {
-                "singular": {
-                    "first person": "I play",
-                    "second person": "you play",
-                    "third person": {
-                        "feminine": "she plays",
-                        "masculine": "he plays"
+    "labels": {
+        "en": [
+            {
+                "concept": "to play a musical instrument",
+                "label": {
+                    "infinitive": "to play",
+                    "singular": {
+                        "first person": "I play",
+                        "second person": "you play",
+                        "third person": {
+                            "feminine": "she plays",
+                            "masculine": "he plays"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we play",
+                        "second person": "you play",
+                        "third person": "they play"
                     }
-                },
-                "plural": {
-                    "first person": "we play",
-                    "second person": "you play",
-                    "third person": "they play"
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": "I played",
-                    "second person": "you played",
-                    "third person": {
-                        "feminine": "she played",
-                        "masculine": "he played"
+            {
+                "concept": "to play a sport",
+                "label": {
+                    "infinitive": "to play",
+                    "present tense": {
+                        "singular": {
+                            "first person": "I play",
+                            "second person": "you play",
+                            "third person": {
+                                "feminine": "she plays",
+                                "masculine": "he plays"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we play",
+                            "second person": "you play",
+                            "third person": "they play"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "I played",
+                            "second person": "you played",
+                            "third person": {
+                                "feminine": "she played",
+                                "masculine": "he played"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we played",
+                            "second person": "you played",
+                            "third person": "they played"
+                        }
+                    },
+                    "present perfect tense": {
+                        "singular": {
+                            "first person": "I have played",
+                            "second person": "you have played",
+                            "third person": {
+                                "feminine": "she has played",
+                                "masculine": "he has played"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we have played",
+                            "second person": "you have played",
+                            "third person": "they have played"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we played",
-                    "second person": "you played",
-                    "third person": "they played"
                 }
             },
-            "present perfect tense": {
-                "singular": {
-                    "first person": "I have played",
-                    "second person": "you have played",
-                    "third person": {
-                        "feminine": "she has played",
-                        "masculine": "he has played"
-                    }
-                },
-                "plural": {
-                    "first person": "we have played",
-                    "second person": "you have played",
-                    "third person": "they have played"
-                }
+            {
+                "concept": "to play darts",
+                "label": "to play darts"
             }
-        },
-        "fi": {
-            "infinitive": "pelata",
-            "present tense": {
-                "singular": {
-                    "first person": "minä pelaan",
-                    "second person": "sinä pelaat",
-                    "third person": "hän pelaa"
-                },
-                "plural": {
-                    "first person": "me pelaamme",
-                    "second person": "te pelaatte",
-                    "third person": "he pelaavat"
+        ],
+        "fi": [
+            {
+                "concept": "to play a musical instrument",
+                "label": {
+                    "infinitive": "soittaa",
+                    "singular": {
+                        "first person": "minä soitan",
+                        "second person": "sinä soitat",
+                        "third person": "hän soittaa"
+                    },
+                    "plural": {
+                        "first person": "me soitamme",
+                        "second person": "te soitatte",
+                        "third person": "he soittavat"
+                    }
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": "minä pelasin",
-                    "second person": "sinä pelasit",
-                    "third person": "hän pelasi"
-                },
-                "plural": {
-                    "first person": "me pelasimme",
-                    "second person": "te pelasitte",
-                    "third person": "he pelasivat"
+            {
+                "concept": "to play a sport",
+                "label": {
+                    "infinitive": "pelata",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minä pelaan",
+                            "second person": "sinä pelaat",
+                            "third person": "hän pelaa"
+                        },
+                        "plural": {
+                            "first person": "me pelaamme",
+                            "second person": "te pelaatte",
+                            "third person": "he pelaavat"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "minä pelasin",
+                            "second person": "sinä pelasit",
+                            "third person": "hän pelasi"
+                        },
+                        "plural": {
+                            "first person": "me pelasimme",
+                            "second person": "te pelasitte",
+                            "third person": "he pelasivat"
+                        }
+                    },
+                    "present perfect tense": {
+                        "singular": {
+                            "first person": "minä olen pelannut",
+                            "second person": "sinä olet pelannut",
+                            "third person": "hän on pelannut"
+                        },
+                        "plural": {
+                            "first person": "me olemme pelanneet",
+                            "second person": "te olette pelanneet",
+                            "third person": "he ovat pelanneet"
+                        }
+                    }
                 }
             },
-            "present perfect tense": {
-                "singular": {
-                    "first person": "minä olen pelannut",
-                    "second person": "sinä olet pelannut",
-                    "third person": "hän on pelannut"
-                },
-                "plural": {
-                    "first person": "me olemme pelanneet",
-                    "second person": "te olette pelanneet",
-                    "third person": "he ovat pelanneet"
-                }
+            {
+                "concept": "to play darts",
+                "label": "heittää tikkaa"
             }
-        },
-        "nl": {
-            "infinitive": "spelen",
-            "present tense": {
-                "singular": {
-                    "first person": "ik speel",
-                    "second person": "jij speelt",
-                    "third person": {
-                        "feminine": "zij speelt",
-                        "masculine": "hij speelt"
+        ],
+        "nl": [
+            {
+                "concept": "to play a musical instrument",
+                "label": {
+                    "infinitive": "spelen",
+                    "singular": {
+                        "first person": "ik speel",
+                        "second person": "jij speelt",
+                        "third person": {
+                            "feminine": "zij speelt",
+                            "masculine": "hij speelt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij spelen",
+                        "second person": "jullie spelen",
+                        "third person": "zij spelen"
                     }
-                },
-                "plural": {
-                    "first person": "wij spelen",
-                    "second person": "jullie spelen",
-                    "third person": "zij spelen"
                 }
             },
-            "past tense": {
-                "singular": {
-                    "first person": "ik speelde",
-                    "second person": "jij speelde",
-                    "third person": {
-                        "feminine": "zij speelde",
-                        "masculine": "hij speelde"
+            {
+                "concept": "to play a sport",
+                "label": {
+                    "infinitive": "spelen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "ik speel",
+                            "second person": "jij speelt",
+                            "third person": {
+                                "feminine": "zij speelt",
+                                "masculine": "hij speelt"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij spelen",
+                            "second person": "jullie spelen",
+                            "third person": "zij spelen"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "ik speelde",
+                            "second person": "jij speelde",
+                            "third person": {
+                                "feminine": "zij speelde",
+                                "masculine": "hij speelde"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij speelden",
+                            "second person": "jullie speelden",
+                            "third person": "zij speelden"
+                        }
+                    },
+                    "present perfect tense": {
+                        "singular": {
+                            "first person": "ik heb gespeeld",
+                            "second person": "jij hebt gespeeld",
+                            "third person": {
+                                "feminine": "zij heeft gespeeld",
+                                "masculine": "hij heeft gespeeld"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij hebben gespeeld",
+                            "second person": "jullie hebben gespeeld",
+                            "third person": "zij hebben gespeeld"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij speelden",
-                    "second person": "jullie speelden",
-                    "third person": "zij speelden"
                 }
             },
-            "present perfect tense": {
-                "singular": {
-                    "first person": "ik heb gespeeld",
-                    "second person": "jij hebt gespeeld",
-                    "third person": {
-                        "feminine": "zij heeft gespeeld",
-                        "masculine": "hij heeft gespeeld"
-                    }
-                },
-                "plural": {
-                    "first person": "wij hebben gespeeld",
-                    "second person": "jullie hebben gespeeld",
-                    "third person": "zij hebben gespeeld"
-                }
+            {
+                "concept": "to play darts",
+                "label": "darten"
             }
-        }
-    },
-    "to play darts": {
-        "roots": {
-            "en": "to play a sport",
-            "fi": "to throw"
-        },
-        "en": "to play darts",
-        "fi": "heittää tikkaa",
-        "nl": "darten"
+        ]
     }
 }

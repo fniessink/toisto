@@ -1,13 +1,29 @@
 {
-    "boring": {
+    "concepts": {
+        "boring": {}
+    },
+    "labels": {
         "en": [
-            "boring",
-            "tedious"
+            {
+                "concept": "boring",
+                "label": "boring"
+            },
+            {
+                "concept": "boring",
+                "label": "tedious"
+            }
         ],
         "fi": [
-            "ikävä",
-            "tylsä"
+            {
+                "concept": "boring",
+                "label": "tylsä"
+            }
         ],
-        "nl": "saai"
+        "nl": [
+            {
+                "concept": "boring",
+                "label": "saai"
+            }
+        ]
     }
 }

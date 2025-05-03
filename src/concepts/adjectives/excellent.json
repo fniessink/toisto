@@ -1,7 +1,25 @@
 {
-    "excellent": {
-        "en": "excellent",
-        "fi": "erinomainen",
-        "nl": "uitstekend"
+    "concepts": {
+        "excellent": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "excellent",
+                "label": "excellent"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "excellent",
+                "label": "erinomainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "excellent",
+                "label": "uitstekend"
+            }
+        ]
     }
 }

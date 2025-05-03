@@ -1,7 +1,25 @@
 {
-    "greeting": {
-        "en": "greeting",
-        "fi": "tervehdys",
-        "nl": "de begroeting"
+    "concepts": {
+        "greeting": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "greeting",
+                "label": "greeting"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "greeting",
+                "label": "tervehdys"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "greeting",
+                "label": "de begroeting"
+            }
+        ]
     }
 }

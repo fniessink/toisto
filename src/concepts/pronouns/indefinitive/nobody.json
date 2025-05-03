@@ -1,11 +1,33 @@
 {
-    "nobody": {
+    "concepts": {
+        "nobody": {}
+    },
+    "labels": {
         "en": [
-            "nobody",
-            "no-one",
-            "none"
+            {
+                "concept": "nobody",
+                "label": "nobody"
+            },
+            {
+                "concept": "nobody",
+                "label": "no-one"
+            },
+            {
+                "concept": "nobody",
+                "label": "none"
+            }
         ],
-        "fi": "ei kukaan",
-        "nl": "niemand"
+        "fi": [
+            {
+                "concept": "nobody",
+                "label": "ei kukaan"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nobody",
+                "label": "niemand"
+            }
+        ]
     }
 }

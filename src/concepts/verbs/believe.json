@@ -1,7 +1,25 @@
 {
-    "to believe": {
-        "en": "to believe",
-        "fi": "uskoa",
-        "nl": "geloven"
+    "concepts": {
+        "to believe": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to believe",
+                "label": "to believe"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to believe",
+                "label": "uskoa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to believe",
+                "label": "geloven"
+            }
+        ]
     }
 }

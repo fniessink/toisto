@@ -1,15 +1,43 @@
 {
-    "coffee machine": {
-        "involves": "coffee",
-        "roots": "coffee",
-        "en": "coffee machine",
-        "fi": "kahviautomaatti",
-        "nl": "de koffieautomaat"
+    "concepts": {
+        "coffee machine": {
+            "involves": "coffee",
+            "roots": "coffee"
+        },
+        "sewing machine": {
+            "involves": "to sew"
+        }
     },
-    "sewing machine": {
-        "involves": "to sew",
-        "en": "sewing machine",
-        "fi": "ompelukone",
-        "nl": "de naaimachine"
+    "labels": {
+        "en": [
+            {
+                "concept": "coffee machine",
+                "label": "coffee machine"
+            },
+            {
+                "concept": "sewing machine",
+                "label": "sewing machine"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "coffee machine",
+                "label": "kahviautomaatti"
+            },
+            {
+                "concept": "sewing machine",
+                "label": "ompelukone"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "coffee machine",
+                "label": "de koffieautomaat"
+            },
+            {
+                "concept": "sewing machine",
+                "label": "de naaimachine"
+            }
+        ]
     }
 }

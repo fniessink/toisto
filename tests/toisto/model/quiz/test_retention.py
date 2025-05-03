@@ -1,7 +1,7 @@
 """Retention unit tests."""
 
 import unittest
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from typing import cast
 
 from toisto.model.quiz.retention import Retention
@@ -37,7 +37,7 @@ class RetentionTest(unittest.TestCase):
         self.guess(True)
         self.assertTrue(self.retention.is_silenced())
         self.assertGreaterEqual(
-            (self.retention.skip_until or datetime.min.replace(tzinfo=timezone.utc)).replace(microsecond=0),
+            (self.retention.skip_until or datetime.min.replace(tzinfo=UTC)).replace(microsecond=0),
             (datetime.now().astimezone() + timedelta(days=1)).replace(microsecond=0),
         )
 
@@ -52,7 +52,7 @@ class RetentionTest(unittest.TestCase):
         self.guess(False, True, True)
         self.assertTrue(self.retention.is_silenced())
         self.assertGreater(
-            self.retention.skip_until or datetime.min.replace(tzinfo=timezone.utc),
+            self.retention.skip_until or datetime.min.replace(tzinfo=UTC),
             datetime.now().astimezone() + timedelta(minutes=1),
         )
 

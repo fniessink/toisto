@@ -1,23 +1,43 @@
 {
-    "duck": {
-        "hypernym": "bird",
-        "en": {
-            "singular": "duck",
-            "plural": "ducks"
-        },
-        "fi": {
-            "singular": [
-                "ankka",
-                "sorsa"
-            ],
-            "plural": [
-                "ankat",
-                "sorsat"
-            ]
-        },
-        "nl": {
-            "singular": "de eend",
-            "plural": "de eenden"
+    "concepts": {
+        "duck": {
+            "hypernym": "bird"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "duck",
+                "label": {
+                    "singular": "duck",
+                    "plural": "ducks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "duck",
+                "label": {
+                    "singular": "ankka",
+                    "plural": "ankat"
+                }
+            },
+            {
+                "concept": "duck",
+                "label": {
+                    "singular": "sorsa",
+                    "plural": "sorsat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "duck",
+                "label": {
+                    "singular": "de eend",
+                    "plural": "de eenden"
+                }
+            }
+        ]
     }
 }

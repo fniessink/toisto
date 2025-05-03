@@ -1,11 +1,37 @@
 {
-    "very well, thank you": {
-        "roots": [
-            "good",
-            "thanks"
+    "concepts": {
+        "very well, thank you": {
+            "roots": [
+                "good",
+                "thanks"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "very well, thank you",
+                "label": [
+                    "Very well, thank you!",
+                    "Very well, thanks!"
+                ]
+            }
         ],
-        "en": "Very well, thank you!|Very well, thanks!",
-        "fi": "Ihan hyvää, kiitos!",
-        "nl": "Heel goed, dank je!|Heel goed, dank u!|Heel goed, bedankt!"
+        "fi": [
+            {
+                "concept": "very well, thank you",
+                "label": "Ihan hyvää, kiitos!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "very well, thank you",
+                "label": [
+                    "Heel goed, dank je!",
+                    "Heel goed, dank u!",
+                    "Heel goed, bedankt!"
+                ]
+            }
+        ]
     }
 }

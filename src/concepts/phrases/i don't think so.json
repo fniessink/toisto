@@ -1,13 +1,34 @@
 {
-    "I don't think so": {
-        "en": "I don't think so!",
+    "concepts": {
+        "I don't think so": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "I don't think so",
+                "label": "I don't think so!"
+            }
+        ],
         "fi": [
-            "Ei minun mielestäni!",
-            "Ei mun mielestä!*"
+            {
+                "concept": "I don't think so",
+                "label": "Ei minun mielestäni!"
+            },
+            {
+                "concept": "I don't think so",
+                "label": "Ei mun mielestä!",
+                "colloquial": true
+            }
         ],
         "nl": [
-            "Volgens mij niet!",
-            "Ik denk het niet!"
+            {
+                "concept": "I don't think so",
+                "label": "Volgens mij niet!"
+            },
+            {
+                "concept": "I don't think so",
+                "label": "Ik denk het niet!"
+            }
         ]
     }
 }

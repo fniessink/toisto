@@ -1,17 +1,36 @@
 {
-    "swan": {
-        "hypernym": "bird",
-        "en": {
-            "singular": "swan",
-            "plural": "swans"
-        },
-        "fi": {
-            "singular": "joutsen",
-            "plural": "joutsenet"
-        },
-        "nl": {
-            "singular": "de zwaan",
-            "plural": "de zwanen"
+    "concepts": {
+        "swan": {
+            "hypernym": "bird"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "swan",
+                "label": {
+                    "singular": "swan",
+                    "plural": "swans"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "swan",
+                "label": {
+                    "singular": "joutsen",
+                    "plural": "joutsenet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "swan",
+                "label": {
+                    "singular": "de zwaan",
+                    "plural": "de zwanen"
+                }
+            }
+        ]
     }
 }

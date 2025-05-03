@@ -1,14 +1,37 @@
 {
-    "first": {
+    "concepts": {
+        "first": {}
+    },
+    "labels": {
         "en": [
-            "first",
-            "firstly"
+            {
+                "concept": "first",
+                "label": "first"
+            },
+            {
+                "concept": "first",
+                "label": "firstly"
+            }
         ],
         "fi": [
-            "ensin",
-            "aluksi",
-            "ensimmäiseksi"
+            {
+                "concept": "first",
+                "label": "ensin"
+            },
+            {
+                "concept": "first",
+                "label": "aluksi"
+            },
+            {
+                "concept": "first",
+                "label": "ensimmäiseksi"
+            }
         ],
-        "nl": "eerst"
+        "nl": [
+            {
+                "concept": "first",
+                "label": "eerst"
+            }
+        ]
     }
 }

@@ -1,24 +1,48 @@
 {
-    "24": {
-        "hypernym": "number",
-        "roots": [
-            "4",
-            "20"
-        ],
-        "en": {
-            "cardinal": "twenty-four",
-            "ordinal": "twenty-fourth"
-        },
-        "fi": {
-            "cardinal": [
-                "kaksikymmentäneljä",
-                "kakskytneljä*"
-            ],
-            "ordinal": "kahdeskymmenesneljäs"
-        },
-        "nl": {
-            "cardinal": "vierentwintig",
-            "ordinal": "vierentwintigste"
+    "concepts": {
+        "24": {
+            "hypernym": "number",
+            "roots": [
+                "4",
+                "20"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "24",
+                "label": {
+                    "cardinal": "twenty-four",
+                    "ordinal": "twenty-fourth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "24",
+                "label": {
+                    "cardinal": "kaksikymmentäneljä",
+                    "ordinal": "kahdeskymmenesneljäs"
+                }
+            },
+            {
+                "concept": "24",
+                "label": {
+                    "cardinal": "kakskytneljä",
+                    "ordinal": "kahdeskymmenesneljäs"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "24",
+                "label": {
+                    "cardinal": "vierentwintig",
+                    "ordinal": "vierentwintigste"
+                }
+            }
+        ]
     }
 }

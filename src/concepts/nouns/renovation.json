@@ -1,10 +1,29 @@
 {
-    "renovation": {
-        "en": "renovation",
-        "fi": "remontti",
+    "concepts": {
+        "renovation": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "renovation",
+                "label": "renovation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "renovation",
+                "label": "remontti"
+            }
+        ],
         "nl": [
-            "de renovatie",
-            "de verbouwing"
+            {
+                "concept": "renovation",
+                "label": "de renovatie"
+            },
+            {
+                "concept": "renovation",
+                "label": "de verbouwing"
+            }
         ]
     }
 }

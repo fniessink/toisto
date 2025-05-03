@@ -1,14 +1,41 @@
 {
-    "protection": {
-        "en": "protection",
-        "fi": "turva",
-        "nl": "de bescherming"
+    "concepts": {
+        "protection": {},
+        "basic protection": {
+            "hypernym": "protection",
+            "roots": "protection"
+        }
     },
-    "basic protection": {
-        "hypernym": "protection",
-        "roots": "protection",
-        "en": "basic protection",
-        "fi": "perusturva",
-        "nl": "de basisbescherming"
+    "labels": {
+        "en": [
+            {
+                "concept": "protection",
+                "label": "protection"
+            },
+            {
+                "concept": "basic protection",
+                "label": "basic protection"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "protection",
+                "label": "turva"
+            },
+            {
+                "concept": "basic protection",
+                "label": "perusturva"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "protection",
+                "label": "de bescherming"
+            },
+            {
+                "concept": "basic protection",
+                "label": "de basisbescherming"
+            }
+        ]
     }
 }

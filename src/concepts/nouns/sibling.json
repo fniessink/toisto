@@ -1,137 +1,204 @@
 {
-    "sister": {
-        "hypernym": "sibling",
-        "en": {
-            "root": {
-                "singular": "sister",
-                "plural": "sisters"
-            },
-            "diminutive": {
-                "singular": "(little sister)",
-                "plural": "(little sisters)"
+    "concepts": {
+        "sister": {
+            "hypernym": "sibling"
+        },
+        "brother": {
+            "hypernym": "sibling"
+        },
+        "sibling": {
+            "holonym": "family",
+            "roots": {
+                "nl": [
+                    "brother",
+                    "sister"
+                ]
             }
         },
-        "fi": {
-            "root": {
-                "singular": "sisko",
-                "plural": "siskot"
-            },
-            "diminutive": {
-                "singular": "pikkusisko",
-                "plural": "pikkusiskot"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "de zus",
-                "plural": "de zussen"
-            },
-            "diminutive": {
-                "singular": "het zusje",
-                "plural": "de zusjes"
-            }
-        }
-    },
-    "brother": {
-        "hypernym": "sibling",
-        "en": {
-            "root": {
-                "singular": "brother",
-                "plural": "brothers"
-            },
-            "diminutive": {
-                "singular": "(little brother)",
-                "plural": "(little brothers)"
-            }
-        },
-        "fi": {
-            "root": {
-                "singular": "veli",
-                "plural": "veljet"
-            },
-            "diminutive": {
-                "singular": "pikkuveli",
-                "plural": "pikkuveljet"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "de broer",
-                "plural": "de broers"
-            },
-            "diminutive": {
-                "singular": "het broertje",
-                "plural": "de broertjes"
-            }
-        }
-    },
-    "sibling": {
-        "holonym": "family",
-        "roots": {
-            "nl": [
+        "how many brothers and sisters do you have": {
+            "roots": [
+                "how many",
+                "to have",
                 "brother",
                 "sister"
             ]
         },
-        "en": {
-            "singular": "sibling",
-            "plural": "siblings"
+        "I have x brothers and y sisters": {
+            "roots": [
+                "to have",
+                "2",
+                "brother",
+                "1",
+                "sister"
+            ]
         },
-        "fi": {
-            "singular": "sisarus",
-            "plural": "sisarukset"
+        "I have no siblings": {
+            "roots": [
+                "to have",
+                "sibling"
+            ]
         },
-        "nl": {
-            "singular": "(de broer of zus)",
-            "plural": "(de broers en zussen)"
+        "I am an only child": {
+            "roots": [
+                "to be",
+                "sole",
+                "child"
+            ]
         }
     },
-    "how many brothers and sisters do you have": {
-        "roots": [
-            "how many",
-            "to have",
-            "brother",
-            "sister"
-        ],
-        "en": "How many brothers and sisters do you have?",
-        "fi": "Kuinka monta veljeä ja siskoa sinulla on?",
-        "nl": "Hoeveel broers en zussen heb jij?"
-    },
-    "I have x brothers and y sisters": {
-        "roots": [
-            "to have",
-            "2",
-            "brother",
-            "1",
-            "sister"
-        ],
-        "en": "I have two brothers and one sister.",
-        "fi": "Minulla on kaksi veljeä ja yksi sisko.",
-        "nl": "Ik heb twee broers en één zus|Ik heb twee broers en een zus."
-    },
-    "I have no siblings": {
-        "roots": [
-            "to have",
-            "sibling"
-        ],
+    "labels": {
         "en": [
-            "I have no siblings.",
-            "I have no brothers and sisters."
+            {
+                "concept": "sister",
+                "label": {
+                    "singular": "sister",
+                    "plural": "sisters"
+                }
+            },
+            {
+                "concept": "brother",
+                "label": {
+                    "singular": "brother",
+                    "plural": "brothers"
+                }
+            },
+            {
+                "concept": "sibling",
+                "label": {
+                    "singular": "sibling",
+                    "plural": "siblings"
+                }
+            },
+            {
+                "concept": "how many brothers and sisters do you have",
+                "label": "How many brothers and sisters do you have?"
+            },
+            {
+                "concept": "I have x brothers and y sisters",
+                "label": "I have two brothers and one sister."
+            },
+            {
+                "concept": "I have no siblings",
+                "label": "I have no siblings."
+            },
+            {
+                "concept": "I have no siblings",
+                "label": "I have no brothers and sisters."
+            },
+            {
+                "concept": "I am an only child",
+                "label": "I am an only child."
+            }
         ],
         "fi": [
-            "Minulla ei ole sisaruksia.",
-            "Minulla ei ole veljiä tai siskoja."
+            {
+                "concept": "sister",
+                "label": {
+                    "root": {
+                        "singular": "sisko",
+                        "plural": "siskot"
+                    },
+                    "diminutive": {
+                        "singular": "pikkusisko",
+                        "plural": "pikkusiskot"
+                    }
+                }
+            },
+            {
+                "concept": "brother",
+                "label": {
+                    "root": {
+                        "singular": "veli",
+                        "plural": "veljet"
+                    },
+                    "diminutive": {
+                        "singular": "pikkuveli",
+                        "plural": "pikkuveljet"
+                    }
+                }
+            },
+            {
+                "concept": "sibling",
+                "label": {
+                    "singular": "sisarus",
+                    "plural": "sisarukset"
+                }
+            },
+            {
+                "concept": "how many brothers and sisters do you have",
+                "label": "Kuinka monta veljeä ja siskoa sinulla on?"
+            },
+            {
+                "concept": "I have x brothers and y sisters",
+                "label": "Minulla on kaksi veljeä ja yksi sisko."
+            },
+            {
+                "concept": "I have no siblings",
+                "label": "Minulla ei ole sisaruksia."
+            },
+            {
+                "concept": "I have no siblings",
+                "label": "Minulla ei ole veljiä tai siskoja."
+            },
+            {
+                "concept": "I am an only child",
+                "label": "Minä olen ainoa lapsi."
+            }
         ],
-        "nl": "Ik heb geen broers en zussen."
-    },
-    "I am an only child": {
-        "roots": [
-            "to be",
-            "sole",
-            "child"
-        ],
-        "en": "I am an only child.",
-        "fi": "Minä olen ainoa lapsi.",
-        "nl": "Ik ben enig kind."
+        "nl": [
+            {
+                "concept": "sister",
+                "label": {
+                    "root": {
+                        "singular": "de zus",
+                        "plural": "de zussen"
+                    },
+                    "diminutive": {
+                        "singular": "het zusje",
+                        "plural": "de zusjes"
+                    }
+                }
+            },
+            {
+                "concept": "brother",
+                "label": {
+                    "root": {
+                        "singular": "de broer",
+                        "plural": "de broers"
+                    },
+                    "diminutive": {
+                        "singular": "het broertje",
+                        "plural": "de broertjes"
+                    }
+                }
+            },
+            {
+                "concept": "sibling",
+                "label": {
+                    "singular": "de broer of zus",
+                    "plural": "de broers en zussen"
+                },
+                "meaning-only": true
+            },
+            {
+                "concept": "how many brothers and sisters do you have",
+                "label": "Hoeveel broers en zussen heb jij?"
+            },
+            {
+                "concept": "I have x brothers and y sisters",
+                "label": [
+                    "Ik heb twee broers en één zus",
+                    "Ik heb twee broers en een zus."
+                ]
+            },
+            {
+                "concept": "I have no siblings",
+                "label": "Ik heb geen broers en zussen."
+            },
+            {
+                "concept": "I am an only child",
+                "label": "Ik ben enig kind."
+            }
+        ]
     }
 }

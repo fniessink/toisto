@@ -1,32 +1,66 @@
 {
-    "company": {
+    "concepts": {
+        "company": {},
+        "llc": {
+            "hypernym": "company"
+        }
+    },
+    "labels": {
         "en": [
-            "company",
-            "firm"
+            {
+                "concept": "company",
+                "label": "company"
+            },
+            {
+                "concept": "company",
+                "label": "firm"
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "limited liability company",
+                    "abbreviation": "LLC"
+                }
+            }
         ],
         "fi": [
-            "yritys",
-            "firma*"
+            {
+                "concept": "company",
+                "label": "yritys"
+            },
+            {
+                "concept": "company",
+                "label": "firma",
+                "colloquial": true
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "osakeyhtiö",
+                    "abbreviation": "oy"
+                }
+            }
         ],
         "nl": [
-            "de onderneming",
-            "de firma",
-            "het bedrijf"
+            {
+                "concept": "company",
+                "label": "de onderneming"
+            },
+            {
+                "concept": "company",
+                "label": "de firma"
+            },
+            {
+                "concept": "company",
+                "label": "het bedrijf"
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "de naamloze vennootschap",
+                    "abbreviation": "de NV"
+                }
+            }
         ]
-    },
-    "llc": {
-        "hypernym": "company",
-        "en": {
-            "full form": "limited liability company",
-            "abbreviation": "LLC"
-        },
-        "fi": {
-            "full form": "osakeyhtiö",
-            "abbreviation": "oy"
-        },
-        "nl": {
-            "full form": "de naamloze vennootschap",
-            "abbreviation": "de NV"
-        }
     }
 }

@@ -1,7 +1,25 @@
 {
-    "insane": {
-        "en": "insane",
-        "fi": "mieletön",
-        "nl": "waanzinnig"
+    "concepts": {
+        "insane": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "insane",
+                "label": "insane"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "insane",
+                "label": "mieletön"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "insane",
+                "label": "waanzinnig"
+            }
+        ]
     }
 }

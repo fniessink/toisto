@@ -1,10 +1,30 @@
 {
-    "all together": {
-        "en": "All together?",
-        "fi": [
-            "Tuleeko nämä samasta?",
-            "Tuleeks nää samasta?*"
+    "concepts": {
+        "all together": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "all together",
+                "label": "All together?"
+            }
         ],
-        "nl": "Alles bij elkaar?"
+        "fi": [
+            {
+                "concept": "all together",
+                "label": "Tuleeko nämä samasta?"
+            },
+            {
+                "concept": "all together",
+                "label": "Tuleeks nää samasta?",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "all together",
+                "label": "Alles bij elkaar?"
+            }
+        ]
     }
 }

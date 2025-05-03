@@ -1,8 +1,27 @@
 {
-    "hedgehog": {
-        "hypernym": "animal",
-        "en": "hedgehog",
-        "fi": "siili",
-        "nl": "de egel"
+    "concepts": {
+        "hedgehog": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hedgehog",
+                "label": "hedgehog"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hedgehog",
+                "label": "siili"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hedgehog",
+                "label": "de egel"
+            }
+        ]
     }
 }

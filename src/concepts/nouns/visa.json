@@ -1,7 +1,25 @@
 {
-    "visa": {
-        "en": "visa",
-        "fi": "viisumi",
-        "nl": "het visum"
+    "concepts": {
+        "visa": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "visa",
+                "label": "visa"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "visa",
+                "label": "viisumi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "visa",
+                "label": "het visum"
+            }
+        ]
     }
 }

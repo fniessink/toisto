@@ -1,13 +1,40 @@
 {
-    "bank": {
-        "en": "bank",
-        "fi": "pankki",
-        "nl": "de bank"
+    "concepts": {
+        "bank": {},
+        "bank information": {
+            "roots": "bank"
+        }
     },
-    "bank information": {
-        "roots": "bank",
-        "en": "bank information",
-        "fi": "pankkitunnekset",
-        "nl": "de bankgegevens"
+    "labels": {
+        "en": [
+            {
+                "concept": "bank",
+                "label": "bank"
+            },
+            {
+                "concept": "bank information",
+                "label": "bank information"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bank",
+                "label": "pankki"
+            },
+            {
+                "concept": "bank information",
+                "label": "pankkitunnekset"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bank",
+                "label": "de bank"
+            },
+            {
+                "concept": "bank information",
+                "label": "de bankgegevens"
+            }
+        ]
     }
 }

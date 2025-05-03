@@ -1,37 +1,53 @@
 {
-    "narrow": {
-        "en": {
-            "positive degree": [
-                "narrow",
-                "tight"
-            ],
-            "comparative degree": [
-                "narrower",
-                "tighter"
-            ],
-            "superlative degree": [
-                "narrowest",
-                "tightest"
-            ]
-        },
-        "fi": {
-            "positive degree": "ahdas",
-            "comparative degree": "ahtaampi",
-            "superlative degree": "ahtain"
-        },
-        "nl": {
-            "positive degree": [
-                "nauw",
-                "smal"
-            ],
-            "comparative degree": [
-                "nauwer",
-                "smaller"
-            ],
-            "superlative degree": [
-                "nauwst",
-                "smalst"
-            ]
-        }
+    "concepts": {
+        "narrow": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "narrow",
+                "label": {
+                    "positive degree": "narrow",
+                    "comparative degree": "narrower",
+                    "superlative degree": "narrowest"
+                }
+            },
+            {
+                "concept": "narrow",
+                "label": {
+                    "positive degree": "tight",
+                    "comparative degree": "tighter",
+                    "superlative degree": "tightest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "narrow",
+                "label": {
+                    "positive degree": "ahdas",
+                    "comparative degree": "ahtaampi",
+                    "superlative degree": "ahtain"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "narrow",
+                "label": {
+                    "positive degree": "nauw",
+                    "comparative degree": "nauwer",
+                    "superlative degree": "nauwst"
+                }
+            },
+            {
+                "concept": "narrow",
+                "label": {
+                    "positive degree": "smal",
+                    "comparative degree": "smaller",
+                    "superlative degree": "smalst"
+                }
+            }
+        ]
     }
 }

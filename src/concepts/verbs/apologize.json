@@ -1,7 +1,25 @@
 {
-    "to apologize": {
-        "en": "to apologize",
-        "fi": "pyytää anteeksi",
-        "nl": "zich verontschuldigen"
+    "concepts": {
+        "to apologize": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to apologize",
+                "label": "to apologize"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to apologize",
+                "label": "pyytää anteeksi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to apologize",
+                "label": "zich verontschuldigen"
+            }
+        ]
     }
 }

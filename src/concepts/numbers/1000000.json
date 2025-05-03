@@ -1,8 +1,27 @@
 {
-    "1000000": {
-        "hypernym": "number",
-        "en": "million",
-        "fi": "miljoona",
-        "nl": "miljoen"
+    "concepts": {
+        "1000000": {
+            "hypernym": "number"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "1000000",
+                "label": "million"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "1000000",
+                "label": "miljoona"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "1000000",
+                "label": "miljoen"
+            }
+        ]
     }
 }

@@ -161,7 +161,7 @@ class DictateQuizFactory(TranslationQuizFactory):
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        return answers if question.is_colloquial else Labels((question,))
+        return answers if question.colloquial else Labels((question,))
 
 
 @dataclass

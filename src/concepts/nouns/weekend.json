@@ -1,57 +1,121 @@
 {
-    "weekend": {
-        "roots": [
-            "end",
-            "week"
-        ],
-        "en": {
-            "singular": "weekend",
-            "plural": "weekends"
+    "concepts": {
+        "weekend": {
+            "roots": [
+                "end",
+                "week"
+            ]
         },
-        "fi": {
-            "singular": "viikonloppu",
-            "plural": "viikonloput"
+        "at the weekend": {
+            "roots": "weekend"
         },
-        "nl": {
-            "singular": "het weekend",
-            "plural": "de weekenden"
+        "last weekend": {
+            "roots": "weekend"
+        },
+        "next weekend": {
+            "roots": "weekend"
+        },
+        "good weekend": {
+            "roots": {
+                "en": [
+                    "good",
+                    "weekend"
+                ],
+                "fi": "weekend",
+                "nl": "weekend"
+            }
+        },
+        "before the weekend": {
+            "roots": "weekend"
         }
     },
-    "at the weekend": {
-        "roots": "weekend",
-        "en": "at the weekend",
-        "fi": "viikonloppuna",
-        "nl": "in het weekend"
-    },
-    "last weekend": {
-        "roots": "weekend",
-        "en": "last weekend",
-        "fi": "viime viikonloppuna",
-        "nl": "vorig weekend"
-    },
-    "next weekend": {
-        "roots": "weekend",
-        "en": "next weekend",
-        "fi": "ensi viikonloppuna",
-        "nl": "volgend weekend"
-    },
-    "good weekend": {
-        "roots": {
-            "en": [
-                "good",
-                "weekend"
-            ],
-            "fi": "weekend",
-            "nl": "weekend"
-        },
-        "en": "Good weekend!",
-        "fi": "Hauskaa viikonloppua!",
-        "nl": "Prettig weekend!"
-    },
-    "before the weekend": {
-        "roots": "weekend",
-        "en": "before the weekend",
-        "fi": "viikonlopuksi",
-        "nl": "voor het weekend"
+    "labels": {
+        "en": [
+            {
+                "concept": "weekend",
+                "label": {
+                    "singular": "weekend",
+                    "plural": "weekends"
+                }
+            },
+            {
+                "concept": "at the weekend",
+                "label": "at the weekend"
+            },
+            {
+                "concept": "last weekend",
+                "label": "last weekend"
+            },
+            {
+                "concept": "next weekend",
+                "label": "next weekend"
+            },
+            {
+                "concept": "good weekend",
+                "label": "Good weekend!"
+            },
+            {
+                "concept": "before the weekend",
+                "label": "before the weekend"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "weekend",
+                "label": {
+                    "singular": "viikonloppu",
+                    "plural": "viikonloput"
+                }
+            },
+            {
+                "concept": "at the weekend",
+                "label": "viikonloppuna"
+            },
+            {
+                "concept": "last weekend",
+                "label": "viime viikonloppuna"
+            },
+            {
+                "concept": "next weekend",
+                "label": "ensi viikonloppuna"
+            },
+            {
+                "concept": "good weekend",
+                "label": "Hauskaa viikonloppua!"
+            },
+            {
+                "concept": "before the weekend",
+                "label": "viikonlopuksi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "weekend",
+                "label": {
+                    "singular": "het weekend",
+                    "plural": "de weekenden"
+                }
+            },
+            {
+                "concept": "at the weekend",
+                "label": "in het weekend"
+            },
+            {
+                "concept": "last weekend",
+                "label": "vorig weekend"
+            },
+            {
+                "concept": "next weekend",
+                "label": "volgend weekend"
+            },
+            {
+                "concept": "good weekend",
+                "label": "Prettig weekend!"
+            },
+            {
+                "concept": "before the weekend",
+                "label": "voor het weekend"
+            }
+        ]
     }
 }

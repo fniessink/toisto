@@ -1,8 +1,27 @@
 {
-    "china": {
-        "hypernym": "country",
-        "en": "China",
-        "fi": "Kiina",
-        "nl": "China"
+    "concepts": {
+        "china": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "china",
+                "label": "China"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "china",
+                "label": "Kiina"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "china",
+                "label": "China"
+            }
+        ]
     }
 }

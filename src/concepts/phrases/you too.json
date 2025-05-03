@@ -1,7 +1,25 @@
 {
-    "you too": {
-        "en": "You too!",
-        "fi": "Niin sinuakin!",
-        "nl": "Jij ook!"
+    "concepts": {
+        "you too": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "you too",
+                "label": "You too!"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "you too",
+                "label": "Niin sinuakin!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "you too",
+                "label": "Jij ook!"
+            }
+        ]
     }
 }

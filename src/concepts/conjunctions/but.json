@@ -1,10 +1,30 @@
 {
-    "but": {
-        "en": "but",
-        "fi": [
-            "mutta",
-            "mut*"
+    "concepts": {
+        "but": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "but",
+                "label": "but"
+            }
         ],
-        "nl": "maar"
+        "fi": [
+            {
+                "concept": "but",
+                "label": "mutta"
+            },
+            {
+                "concept": "but",
+                "label": "mut",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "but",
+                "label": "maar"
+            }
+        ]
     }
 }

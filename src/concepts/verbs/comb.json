@@ -1,8 +1,27 @@
 {
-    "to comb": {
-        "involves": "hair",
-        "en": "to comb",
-        "fi": "kammata",
-        "nl": "kammen"
+    "concepts": {
+        "to comb": {
+            "involves": "hair"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to comb",
+                "label": "to comb"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to comb",
+                "label": "kammata"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to comb",
+                "label": "kammen"
+            }
+        ]
     }
 }

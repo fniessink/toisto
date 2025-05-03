@@ -1,33 +1,59 @@
 {
-    "pet": {
-        "hypernym": "animal",
-        "roots": {
-            "fi": [
-                "animal",
-                "home"
-            ],
-            "nl": [
-                "animal",
-                "house"
-            ]
-        },
-        "en": {
-            "singular": "pet",
-            "plural": "pets"
-        },
-        "fi": {
-            "singular": [
-                "lemmikkieläin|lemmikki",
-                "kotieläin"
-            ],
-            "plural": [
-                "lemmikkieläimet|lemmikit",
-                "kotieläimet"
-            ]
-        },
-        "nl": {
-            "singular": "het huisdier",
-            "plural": "de huisdieren"
+    "concepts": {
+        "pet": {
+            "hypernym": "animal",
+            "roots": {
+                "fi": [
+                    "animal",
+                    "home"
+                ],
+                "nl": [
+                    "animal",
+                    "house"
+                ]
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pet",
+                "label": {
+                    "singular": "pet",
+                    "plural": "pets"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pet",
+                "label": {
+                    "singular": [
+                        "lemmikkieläin",
+                        "lemmikki"
+                    ],
+                    "plural": [
+                        "lemmikkieläimet",
+                        "lemmikit"
+                    ]
+                }
+            },
+            {
+                "concept": "pet",
+                "label": {
+                    "singular": "kotieläin",
+                    "plural": "kotieläimet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pet",
+                "label": {
+                    "singular": "het huisdier",
+                    "plural": "de huisdieren"
+                }
+            }
+        ]
     }
 }

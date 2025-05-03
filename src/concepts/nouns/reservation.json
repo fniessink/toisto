@@ -1,13 +1,40 @@
 {
-    "reservation": {
-        "en": "reservation",
-        "fi": "varaus",
-        "nl": "de reservering"
+    "concepts": {
+        "reservation": {},
+        "seat reservation": {
+            "hypernym": "reservation"
+        }
     },
-    "seat reservation": {
-        "hypernym": "reservation",
-        "en": "seat reservation",
-        "fi": "paikkavaraus",
-        "nl": "de plaatsreservering"
+    "labels": {
+        "en": [
+            {
+                "concept": "reservation",
+                "label": "reservation"
+            },
+            {
+                "concept": "seat reservation",
+                "label": "seat reservation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "reservation",
+                "label": "varaus"
+            },
+            {
+                "concept": "seat reservation",
+                "label": "paikkavaraus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "reservation",
+                "label": "de reservering"
+            },
+            {
+                "concept": "seat reservation",
+                "label": "de plaatsreservering"
+            }
+        ]
     }
 }

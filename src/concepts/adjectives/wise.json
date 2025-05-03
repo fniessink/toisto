@@ -1,7 +1,25 @@
 {
-    "wise": {
-        "en": "wise",
-        "fi": "viisas",
-        "nl": "wijs"
+    "concepts": {
+        "wise": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wise",
+                "label": "wise"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wise",
+                "label": "viisas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wise",
+                "label": "wijs"
+            }
+        ]
     }
 }

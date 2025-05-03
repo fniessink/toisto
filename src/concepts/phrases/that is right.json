@@ -1,13 +1,33 @@
 {
-    "that is right": {
-        "en": "That is right!",
+    "concepts": {
+        "that is right": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "that is right",
+                "label": "That is right!"
+            }
+        ],
         "fi": [
-            "Niin onkin!",
-            "Aivan!"
+            {
+                "concept": "that is right",
+                "label": "Niin onkin!"
+            },
+            {
+                "concept": "that is right",
+                "label": "Aivan!"
+            }
         ],
         "nl": [
-            "Dat is zo!",
-            "Dat klopt!"
+            {
+                "concept": "that is right",
+                "label": "Dat is zo!"
+            },
+            {
+                "concept": "that is right",
+                "label": "Dat klopt!"
+            }
         ]
     }
 }

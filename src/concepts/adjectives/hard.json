@@ -1,38 +1,61 @@
 {
-    "hard": {
-        "antonym": "easy",
-        "en": {
-            "positive degree": "hard",
-            "comparative degree": "harder",
-            "superlative degree": "hardest"
+    "concepts": {
+        "hard": {
+            "antonym": "easy"
         },
-        "fi": {
-            "positive degree": "vaikea",
-            "comparative degree": "vaikeampi",
-            "superlative degree": "vaikein"
-        },
-        "nl": {
-            "positive degree": "moeilijk",
-            "comparative degree": "moeilijker",
-            "superlative degree": "moeilijkst"
+        "hard (of an object, resistant to pressure)": {
+            "antonym": "soft"
         }
     },
-    "hard (of an object, resistant to pressure)": {
-        "antonym": "soft",
-        "en": {
-            "positive degree": "hard",
-            "comparative degree": "harder",
-            "superlative degree": "hardest"
-        },
-        "fi": {
-            "positive degree": "kova",
-            "comparative degree": "kovempi",
-            "superlative degree": "kovin"
-        },
-        "nl": {
-            "positive degree": "hard",
-            "comparative degree": "harder",
-            "superlative degree": "hardst"
-        }
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "hard",
+                    "hard (of an object, resistant to pressure)"
+                ],
+                "label": {
+                    "positive degree": "hard",
+                    "comparative degree": "harder",
+                    "superlative degree": "hardest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hard",
+                "label": {
+                    "positive degree": "vaikea",
+                    "comparative degree": "vaikeampi",
+                    "superlative degree": "vaikein"
+                }
+            },
+            {
+                "concept": "hard (of an object, resistant to pressure)",
+                "label": {
+                    "positive degree": "kova",
+                    "comparative degree": "kovempi",
+                    "superlative degree": "kovin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hard",
+                "label": {
+                    "positive degree": "moeilijk",
+                    "comparative degree": "moeilijker",
+                    "superlative degree": "moeilijkst"
+                }
+            },
+            {
+                "concept": "hard (of an object, resistant to pressure)",
+                "label": {
+                    "positive degree": "hard",
+                    "comparative degree": "harder",
+                    "superlative degree": "hardst"
+                }
+            }
+        ]
     }
 }

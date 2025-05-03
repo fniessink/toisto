@@ -1,7 +1,25 @@
 {
-    "conversation": {
-        "en": "conversation",
-        "fi": "puhelu",
-        "nl": "het gesprek"
+    "concepts": {
+        "conversation": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "conversation",
+                "label": "conversation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "conversation",
+                "label": "puhelu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "conversation",
+                "label": "het gesprek"
+            }
+        ]
     }
 }

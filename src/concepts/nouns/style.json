@@ -1,10 +1,29 @@
 {
-    "style": {
-        "en": "style",
-        "fi": "tyyli",
+    "concepts": {
+        "style": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "style",
+                "label": "style"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "style",
+                "label": "tyyli"
+            }
+        ],
         "nl": [
-            "de stijl",
-            "het genre"
+            {
+                "concept": "style",
+                "label": "de stijl"
+            },
+            {
+                "concept": "style",
+                "label": "het genre"
+            }
         ]
     }
 }

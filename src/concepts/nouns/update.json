@@ -1,10 +1,29 @@
 {
-    "update": {
-        "en": "update",
-        "fi": "päivitys",
+    "concepts": {
+        "update": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "update",
+                "label": "update"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "update",
+                "label": "päivitys"
+            }
+        ],
         "nl": [
-            "actualisering",
-            "update"
+            {
+                "concept": "update",
+                "label": "actualisering"
+            },
+            {
+                "concept": "update",
+                "label": "update"
+            }
         ]
     }
 }

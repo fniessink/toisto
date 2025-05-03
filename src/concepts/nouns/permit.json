@@ -1,22 +1,58 @@
 {
-    "permit": {
-        "en": "permit",
-        "fi": "lupa",
-        "nl": "de vergunning"
+    "concepts": {
+        "permit": {},
+        "residence permit": {
+            "roots": "permit"
+        },
+        "work permit": {
+            "roots": [
+                "work",
+                "permit"
+            ]
+        }
     },
-    "residence permit": {
-        "roots": "permit",
-        "en": "residence permit",
-        "fi": "oleskelulupa",
-        "nl": "de verblijfsvergunning"
-    },
-    "work permit": {
-        "roots": [
-            "work",
-            "permit"
+    "labels": {
+        "en": [
+            {
+                "concept": "permit",
+                "label": "permit"
+            },
+            {
+                "concept": "residence permit",
+                "label": "residence permit"
+            },
+            {
+                "concept": "work permit",
+                "label": "work permit"
+            }
         ],
-        "en": "work permit",
-        "fi": "työlupa",
-        "nl": "de werkvergunning"
+        "fi": [
+            {
+                "concept": "permit",
+                "label": "lupa"
+            },
+            {
+                "concept": "residence permit",
+                "label": "oleskelulupa"
+            },
+            {
+                "concept": "work permit",
+                "label": "työlupa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "permit",
+                "label": "de vergunning"
+            },
+            {
+                "concept": "residence permit",
+                "label": "de verblijfsvergunning"
+            },
+            {
+                "concept": "work permit",
+                "label": "de werkvergunning"
+            }
+        ]
     }
 }

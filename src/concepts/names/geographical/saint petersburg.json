@@ -1,9 +1,28 @@
 {
-    "saint petersburg": {
-        "holonym": "russia",
-        "hypernym": "city",
-        "en": "Saint Petersburg",
-        "fi": "Pietari",
-        "nl": "Sint-Petersburg"
+    "concepts": {
+        "saint petersburg": {
+            "holonym": "russia",
+            "hypernym": "city"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "saint petersburg",
+                "label": "Saint Petersburg"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "saint petersburg",
+                "label": "Pietari"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "saint petersburg",
+                "label": "Sint-Petersburg"
+            }
+        ]
     }
 }

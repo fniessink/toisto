@@ -1,20 +1,39 @@
 {
-    "good": {
-        "antonym": "bad",
-        "en": {
-            "positive degree": "good",
-            "comparative degree": "better",
-            "superlative degree": "best"
-        },
-        "fi": {
-            "positive degree": "hyvä",
-            "comparative degree": "parempi",
-            "superlative degree": "paras"
-        },
-        "nl": {
-            "positive degree": "goed",
-            "comparative degree": "beter",
-            "superlative degree": "best"
+    "concepts": {
+        "good": {
+            "antonym": "bad"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "good",
+                "label": {
+                    "positive degree": "good",
+                    "comparative degree": "better",
+                    "superlative degree": "best"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "good",
+                "label": {
+                    "positive degree": "hyvä",
+                    "comparative degree": "parempi",
+                    "superlative degree": "paras"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "good",
+                "label": {
+                    "positive degree": "goed",
+                    "comparative degree": "beter",
+                    "superlative degree": "best"
+                }
+            }
+        ]
     }
 }

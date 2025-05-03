@@ -1,26 +1,62 @@
 {
-    "course": {
-        "en": "course",
-        "fi": "kurssi",
-        "nl": "de cursus"
+    "concepts": {
+        "course": {},
+        "finnish course": {
+            "hypernym": "course",
+            "roots": [
+                "finnish",
+                "course"
+            ]
+        },
+        "course day": {
+            "roots": [
+                "course",
+                "day"
+            ]
+        }
     },
-    "finnish course": {
-        "hypernym": "course",
-        "roots": [
-            "finnish",
-            "course"
+    "labels": {
+        "en": [
+            {
+                "concept": "course",
+                "label": "course"
+            },
+            {
+                "concept": "finnish course",
+                "label": "Finnish course"
+            },
+            {
+                "concept": "course day",
+                "label": "course day"
+            }
         ],
-        "en": "Finnish course",
-        "fi": "suomen kurssi",
-        "nl": "de cursus Fins"
-    },
-    "course day": {
-        "roots": [
-            "course",
-            "day"
+        "fi": [
+            {
+                "concept": "course",
+                "label": "kurssi"
+            },
+            {
+                "concept": "finnish course",
+                "label": "suomen kurssi"
+            },
+            {
+                "concept": "course day",
+                "label": "kurssipäivä"
+            }
         ],
-        "en": "course day",
-        "fi": "kurssipäivä",
-        "nl": "de cursusdag"
+        "nl": [
+            {
+                "concept": "course",
+                "label": "de cursus"
+            },
+            {
+                "concept": "finnish course",
+                "label": "de cursus Fins"
+            },
+            {
+                "concept": "course day",
+                "label": "de cursusdag"
+            }
+        ]
     }
 }

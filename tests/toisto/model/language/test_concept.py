@@ -28,7 +28,9 @@ class ConceptTest(ToistoTestCase):
 
     def test_instance_registry(self):
         """Test that concepts register themselves with the Concept class instance registry."""
-        concept = self.create_concept("thirty", dict(fi="kolmekymmentä", nl="dertig"))
+        concept = self.create_concept(
+            "thirty", labels=[{"label": "kolmekymmentä", "language": FI}, {"label": "dertig", "language": NL}]
+        )
         self.assertEqual(concept, Concept.instances.get_values(ConceptId("thirty"))[0])
 
     def test_is_composite(self):
@@ -42,7 +44,9 @@ class ConceptTest(ToistoTestCase):
 
     def test_meaning_leaf_concept(self):
         """Test the meaning of a leaf concept."""
-        concept = self.create_concept("one", dict(fi="yksi", nl="een"))
+        concept = self.create_concept(
+            "one", labels=[{"label": "yksi", "language": FI}, {"label": "een", "language": NL}]
+        )
         self.assertEqual((Label(FI, "yksi"),), concept.meanings(FI))
         self.assertEqual((Label(NL, "een"),), concept.meanings(NL))
         self.assertEqual((), concept.meanings(EN))
@@ -51,7 +55,10 @@ class ConceptTest(ToistoTestCase):
         """Test the meaning of a composite concept."""
         concept = self.create_concept(
             "table",
-            dict(en=dict(singular="table", plural="tables"), nl=dict(singular="de tafel", plural="de tafels")),
+            labels=[
+                {"label": {"singular": "table", "plural": "tables"}, "language": EN},
+                {"label": {"singular": "de tafel", "plural": "de tafels"}, "language": NL},
+            ],
         )
         self.assertEqual((Label(EN, "table"), Label(EN, "tables")), concept.meanings(EN))
         self.assertEqual((Label(NL, "de tafel"), Label(NL, "de tafels")), concept.meanings(NL))
@@ -61,7 +68,10 @@ class ConceptTest(ToistoTestCase):
         """Test the meaning of a concept that is leaf in one language and composite in another."""
         concept = self.create_concept(
             "to eat/third person",
-            dict(fi="hän syö", nl=dict(feminine="zij eet", masculine="hij eet")),
+            labels=[
+                {"label": "hän syö", "language": FI},
+                {"label": dict(feminine="zij eet", masculine="hij eet"), "language": NL},
+            ],
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
         self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))
@@ -81,35 +91,40 @@ class ConceptTest(ToistoTestCase):
             self.assertEqual((Label(EN, "means of transportation"),), each_concept.labels(EN))
         self.assertEqual((Label(NL, "het vervoersmiddel"),), singular.labels(NL))
         self.assertEqual((Label(NL, "de vervoersmiddelen"),), plural.labels(NL))
-        self.assertEqual(
-            (
-                Label(NL, "het vervoersmiddel"),
-                Label(NL, "de vervoersmiddelen"),
-            ),
-            concept.labels(NL),
-        )
+        self.assertEqual((Label(NL, "het vervoersmiddel"), Label(NL, "de vervoersmiddelen")), concept.labels(NL))
 
     def test_homographs(self):
         """Test that notes are ignored when determining homographs."""
-        bank = self.create_concept("bank", {"nl": "de bank;;some note"})
-        sofa = self.create_concept("sofa", {"nl": "de bank"})
+        bank = self.create_concept("bank", labels=[{"label": "de bank", "language": NL, "note": "some note"}])
+        sofa = self.create_concept("sofa", labels=[{"label": "de bank", "language": NL}])
         self.assertEqual((bank,), sofa.get_homographs(Label(NL, "de bank")))
 
     def test_capitonyms(self):
         """Test that notes are ignored when determining capitonyms."""
-        greece = self.create_concept("greece", {"fi": "Kreikki"})
-        greek = self.create_concept("greek", {"fi": "kreikki;;In Finnish, the names of languages are not capitalized"})
+        greece = self.create_concept("greece", labels=[{"label": "Kreikki", "language": FI}])
+        greek = self.create_concept(
+            "greek",
+            labels=[
+                {"label": "kreikki", "language": FI, "note": "In Finnish, the names of languages are not capitalized"}
+            ],
+        )
         self.assertEqual((greece,), greek.get_capitonyms(Label(FI, "kreikki")))
 
     def test_is_sentence(self):
         """Test the is-sentence property."""
-        self.assertFalse(self.create_concept("sea", {"en": "sea"}).is_complete_sentence)
-        self.assertFalse(self.create_concept("greece", {"en": "Greece"}).is_complete_sentence)
-        self.assertTrue(self.create_concept("hi", {"fi": "Hei!"}).is_complete_sentence)
-        self.assertTrue(self.create_concept("meaning only", {"fi": "(Hei!)"}).is_complete_sentence)
+        self.assertFalse(self.create_concept("sea", labels=[{"label": "sea", "language": EN}]).is_complete_sentence)
+        self.assertFalse(
+            self.create_concept("greece", labels=[{"label": "Greece", "language": EN}]).is_complete_sentence
+        )
+        self.assertTrue(self.create_concept("hi", labels=[{"label": "Hei!", "language": FI}]).is_complete_sentence)
+        self.assertTrue(
+            self.create_concept(
+                "meaning only", labels=[{"label": "Hei!", "language": FI, "meaning-only": True}]
+            ).is_complete_sentence
+        )
         self.assertFalse(self.create_concept("involves only", {"involves": ["other concept"]}).is_complete_sentence)
         composite_concept = self.create_concept(
             "the house is big",
-            {"en": {"singular": "The house is big.", "plural": "The houses are big."}},
+            labels=[{"label": {"singular": "The house is big.", "plural": "The houses are big."}, "language": EN}],
         )
         self.assertTrue(composite_concept.is_complete_sentence)

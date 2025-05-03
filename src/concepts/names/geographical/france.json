@@ -1,16 +1,44 @@
 {
-    "france": {
-        "hypernym": "country",
-        "en": "France",
-        "fi": "Ranska",
-        "nl": "Frankrijk"
+    "concepts": {
+        "france": {
+            "hypernym": "country"
+        },
+        "french (nationality)": {
+            "hypernym": "nationality",
+            "involves": "france",
+            "roots": "france"
+        }
     },
-    "french (nationality)": {
-        "hypernym": "nationality",
-        "involves": "france",
-        "roots": "france",
-        "en": "French",
-        "fi": "ranskalainen",
-        "nl": "Frans"
+    "labels": {
+        "en": [
+            {
+                "concept": "france",
+                "label": "France"
+            },
+            {
+                "concept": "french (nationality)",
+                "label": "French"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "france",
+                "label": "Ranska"
+            },
+            {
+                "concept": "french (nationality)",
+                "label": "ranskalainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "france",
+                "label": "Frankrijk"
+            },
+            {
+                "concept": "french (nationality)",
+                "label": "Frans"
+            }
+        ]
     }
 }

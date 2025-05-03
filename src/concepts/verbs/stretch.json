@@ -1,7 +1,25 @@
 {
-    "to stretch one's legs": {
-        "en": "to stretch one's legs",
-        "fi": "jaloitella",
-        "nl": "de benen strekken"
+    "concepts": {
+        "to stretch one's legs": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to stretch one's legs",
+                "label": "to stretch one's legs"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to stretch one's legs",
+                "label": "jaloitella"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to stretch one's legs",
+                "label": "de benen strekken"
+            }
+        ]
     }
 }

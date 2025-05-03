@@ -1,10 +1,29 @@
 {
-    "adult education center": {
-        "en": "adult education center",
-        "fi": [
-            "kansalaisopisto",
-            "työväenopisto"
+    "concepts": {
+        "adult education center": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "adult education center",
+                "label": "adult education center"
+            }
         ],
-        "nl": "de volksuniversiteit"
+        "fi": [
+            {
+                "concept": "adult education center",
+                "label": "kansalaisopisto"
+            },
+            {
+                "concept": "adult education center",
+                "label": "työväenopisto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "adult education center",
+                "label": "de volksuniversiteit"
+            }
+        ]
     }
 }

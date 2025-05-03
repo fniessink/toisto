@@ -1,44 +1,87 @@
 {
-    "bed": {
-        "en": {
-            "singular": "bed",
-            "plural": "beds"
+    "concepts": {
+        "bed": {},
+        "double bed": {
+            "example": "they are looking for a double bed",
+            "hypernym": "bed",
+            "roots": {
+                "en": "bed",
+                "fi": [
+                    "pair",
+                    "bed"
+                ],
+                "nl": [
+                    "2",
+                    "bed"
+                ]
+            }
         },
-        "fi": {
-            "singular": "sänky",
-            "plural": "sängyt"
-        },
-        "nl": {
-            "singular": "het bed",
-            "plural": "de bedden"
-        }
+        "going to bed": {},
+        "bedspread": {}
     },
-    "double bed": {
-        "example": "they are looking for a double bed",
-        "hypernym": "bed",
-        "roots": {
-            "en": "bed",
-            "fi": [
-                "pair",
-                "bed"
-            ],
-            "nl": [
-                "2",
-                "bed"
-            ]
-        },
-        "en": "double bed",
-        "fi": "parisänky",
-        "nl": "het tweepersoonsbed"
-    },
-    "going to bed": {
-        "en": "going to bed",
-        "fi": "nukkumaanmeno",
-        "nl": "het gaan slapen"
-    },
-    "bedspread": {
-        "en": "bedspread",
-        "fi": "päiväpeitto",
-        "nl": "de sprei"
+    "labels": {
+        "en": [
+            {
+                "concept": "bed",
+                "label": {
+                    "singular": "bed",
+                    "plural": "beds"
+                }
+            },
+            {
+                "concept": "double bed",
+                "label": "double bed"
+            },
+            {
+                "concept": "going to bed",
+                "label": "going to bed"
+            },
+            {
+                "concept": "bedspread",
+                "label": "bedspread"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bed",
+                "label": {
+                    "singular": "sänky",
+                    "plural": "sängyt"
+                }
+            },
+            {
+                "concept": "double bed",
+                "label": "parisänky"
+            },
+            {
+                "concept": "going to bed",
+                "label": "nukkumaanmeno"
+            },
+            {
+                "concept": "bedspread",
+                "label": "päiväpeitto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bed",
+                "label": {
+                    "singular": "het bed",
+                    "plural": "de bedden"
+                }
+            },
+            {
+                "concept": "double bed",
+                "label": "het tweepersoonsbed"
+            },
+            {
+                "concept": "going to bed",
+                "label": "het gaan slapen"
+            },
+            {
+                "concept": "bedspread",
+                "label": "de sprei"
+            }
+        ]
     }
 }

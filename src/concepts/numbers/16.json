@@ -1,24 +1,48 @@
 {
-    "16": {
-        "hypernym": "number",
-        "roots": [
-            "6",
-            "10"
-        ],
-        "en": {
-            "cardinal": "sixteen",
-            "ordinal": "sixteenth"
-        },
-        "fi": {
-            "cardinal": [
-                "kuusitoista",
-                "kuustoist*"
-            ],
-            "ordinal": "kuudestoista"
-        },
-        "nl": {
-            "cardinal": "zestien",
-            "ordinal": "zestiende"
+    "concepts": {
+        "16": {
+            "hypernym": "number",
+            "roots": [
+                "6",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "16",
+                "label": {
+                    "cardinal": "sixteen",
+                    "ordinal": "sixteenth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "16",
+                "label": {
+                    "cardinal": "kuusitoista",
+                    "ordinal": "kuudestoista"
+                }
+            },
+            {
+                "concept": "16",
+                "label": {
+                    "cardinal": "kuustoist",
+                    "ordinal": "kuudestoista"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "16",
+                "label": {
+                    "cardinal": "zestien",
+                    "ordinal": "zestiende"
+                }
+            }
+        ]
     }
 }

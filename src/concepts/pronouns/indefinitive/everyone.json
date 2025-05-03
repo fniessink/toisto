@@ -1,11 +1,31 @@
 {
-    "everyone": {
-        "roots": "every",
+    "concepts": {
+        "everyone": {
+            "roots": "every"
+        }
+    },
+    "labels": {
         "en": [
-            "everyone",
-            "everybody"
+            {
+                "concept": "everyone",
+                "label": "everyone"
+            },
+            {
+                "concept": "everyone",
+                "label": "everybody"
+            }
         ],
-        "fi": "jokainen",
-        "nl": "iedereen"
+        "fi": [
+            {
+                "concept": "everyone",
+                "label": "jokainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "everyone",
+                "label": "iedereen"
+            }
+        ]
     }
 }

@@ -1,8 +1,27 @@
 {
-    "crow": {
-        "hypernym": "bird",
-        "en": "crow",
-        "fi": "varis",
-        "nl": "de kraai"
+    "concepts": {
+        "crow": {
+            "hypernym": "bird"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "crow",
+                "label": "crow"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "crow",
+                "label": "varis"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "crow",
+                "label": "de kraai"
+            }
+        ]
     }
 }

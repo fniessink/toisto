@@ -1,26 +1,71 @@
 {
-    "insurance": {
-        "en": "insurance",
-        "fi": "vakuutus",
-        "nl": "de verzekering"
+    "concepts": {
+        "insurance": {},
+        "insurance company": {
+            "roots": "insurance"
+        },
+        "home insurance": {
+            "hypernym": "insurance",
+            "roots": "insurance"
+        },
+        "insurance premium": {
+            "roots": "insurance"
+        }
     },
-    "insurance company": {
-        "roots": "insurance",
-        "en": "insurance company",
-        "fi": "vakuutusyhtiö",
-        "nl": "de verzekeringsmaatschappij"
-    },
-    "home insurance": {
-        "hypernym": "insurance",
-        "roots": "insurance",
-        "en": "home insurance",
-        "fi": "kotivakuutus",
-        "nl": "de woonverzekering"
-    },
-    "insurance premium": {
-        "roots": "insurance",
-        "en": "insurance premium",
-        "fi": "vakuutusmaksu",
-        "nl": "de verzekeringspremie"
+    "labels": {
+        "en": [
+            {
+                "concept": "insurance",
+                "label": "insurance"
+            },
+            {
+                "concept": "insurance company",
+                "label": "insurance company"
+            },
+            {
+                "concept": "home insurance",
+                "label": "home insurance"
+            },
+            {
+                "concept": "insurance premium",
+                "label": "insurance premium"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "insurance",
+                "label": "vakuutus"
+            },
+            {
+                "concept": "insurance company",
+                "label": "vakuutusyhtiö"
+            },
+            {
+                "concept": "home insurance",
+                "label": "kotivakuutus"
+            },
+            {
+                "concept": "insurance premium",
+                "label": "vakuutusmaksu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "insurance",
+                "label": "de verzekering"
+            },
+            {
+                "concept": "insurance company",
+                "label": "de verzekeringsmaatschappij"
+            },
+            {
+                "concept": "home insurance",
+                "label": "de woonverzekering"
+            },
+            {
+                "concept": "insurance premium",
+                "label": "de verzekeringspremie"
+            }
+        ]
     }
 }

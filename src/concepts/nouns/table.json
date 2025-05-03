@@ -1,34 +1,61 @@
 {
-    "table": {
-        "en": {
-            "singular": "table",
-            "plural": "tables"
-        },
-        "fi": {
-            "singular": "pöytä",
-            "plural": "pöydät"
-        },
-        "nl": {
-            "singular": "de tafel",
-            "plural": "de tafels"
+    "concepts": {
+        "table": {},
+        "dining table": {
+            "example": "you are looking for a dining table",
+            "hypernym": "table",
+            "roots": {
+                "en": "table",
+                "fi": [
+                    "food",
+                    "table"
+                ],
+                "nl": [
+                    "to eat",
+                    "table"
+                ]
+            }
         }
     },
-    "dining table": {
-        "example": "you are looking for a dining table",
-        "hypernym": "table",
-        "roots": {
-            "en": "table",
-            "fi": [
-                "food",
-                "table"
-            ],
-            "nl": [
-                "to eat",
-                "table"
-            ]
-        },
-        "en": "dining table",
-        "fi": "ruokapöytä",
-        "nl": "de eettafel"
+    "labels": {
+        "en": [
+            {
+                "concept": "table",
+                "label": {
+                    "singular": "table",
+                    "plural": "tables"
+                }
+            },
+            {
+                "concept": "dining table",
+                "label": "dining table"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "table",
+                "label": {
+                    "singular": "pöytä",
+                    "plural": "pöydät"
+                }
+            },
+            {
+                "concept": "dining table",
+                "label": "ruokapöytä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "table",
+                "label": {
+                    "singular": "de tafel",
+                    "plural": "de tafels"
+                }
+            },
+            {
+                "concept": "dining table",
+                "label": "de eettafel"
+            }
+        ]
     }
 }

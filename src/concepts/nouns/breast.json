@@ -1,17 +1,36 @@
 {
-    "breast": {
-        "holonym": "body",
-        "en": {
-            "singular": "breast",
-            "plural": "breasts"
-        },
-        "fi": {
-            "singular": "rinta",
-            "plural": "rinnat"
-        },
-        "nl": {
-            "singular": "de borst",
-            "plural": "de borsten"
+    "concepts": {
+        "breast": {
+            "holonym": "body"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "breast",
+                "label": {
+                    "singular": "breast",
+                    "plural": "breasts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "breast",
+                "label": {
+                    "singular": "rinta",
+                    "plural": "rinnat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "breast",
+                "label": {
+                    "singular": "de borst",
+                    "plural": "de borsten"
+                }
+            }
+        ]
     }
 }

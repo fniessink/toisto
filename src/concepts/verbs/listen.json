@@ -1,58 +1,76 @@
 {
-    "to listen": {
-        "en": {
-            "infinitive": "to listen",
-            "imperative": "Listen!",
-            "declarative": {
-                "singular": {
-                    "first person": "I listen",
-                    "second person": "you listen",
-                    "third person": {
-                        "feminine": "she listens",
-                        "masculine": "he listens"
+    "concepts": {
+        "to listen": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to listen",
+                "label": {
+                    "infinitive": "to listen",
+                    "imperative": "Listen!",
+                    "declarative": {
+                        "singular": {
+                            "first person": "I listen",
+                            "second person": "you listen",
+                            "third person": {
+                                "feminine": "she listens",
+                                "masculine": "he listens"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we listen",
+                            "second person": "you listen",
+                            "third person": "they listen"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we listen",
-                    "second person": "you listen",
-                    "third person": "they listen"
                 }
             }
-        },
-        "fi": {
-            "infinitive": "kuunnella",
-            "imperative": "Kuuntele!",
-            "declarative": {
-                "singular": {
-                    "first person": "minä kuuntelen",
-                    "second person": "sinä kuuntelet",
-                    "third person": "hän kuuntelee"
-                },
-                "plural": {
-                    "first person": "me kuuntelemme",
-                    "second person": "te kuuntelette",
-                    "third person": "he kuuntelevat"
-                }
-            }
-        },
-        "nl": {
-            "infinitive": "luisteren",
-            "imperative": "Luister!",
-            "declarative": {
-                "singular": {
-                    "first person": "ik luister",
-                    "second person": "jij luistert",
-                    "third person": {
-                        "feminine": "zij luistert",
-                        "masculine": "hij luistert"
+        ],
+        "fi": [
+            {
+                "concept": "to listen",
+                "label": {
+                    "infinitive": "kuunnella",
+                    "imperative": "Kuuntele!",
+                    "declarative": {
+                        "singular": {
+                            "first person": "minä kuuntelen",
+                            "second person": "sinä kuuntelet",
+                            "third person": "hän kuuntelee"
+                        },
+                        "plural": {
+                            "first person": "me kuuntelemme",
+                            "second person": "te kuuntelette",
+                            "third person": "he kuuntelevat"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij luisteren",
-                    "second person": "jullie luisteren",
-                    "third person": "zij luisteren"
                 }
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to listen",
+                "label": {
+                    "infinitive": "luisteren",
+                    "imperative": "Luister!",
+                    "declarative": {
+                        "singular": {
+                            "first person": "ik luister",
+                            "second person": "jij luistert",
+                            "third person": {
+                                "feminine": "zij luistert",
+                                "masculine": "hij luistert"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij luisteren",
+                            "second person": "jullie luisteren",
+                            "third person": "zij luisteren"
+                        }
+                    }
+                }
+            }
+        ]
     }
 }

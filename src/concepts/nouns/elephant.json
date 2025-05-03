@@ -1,23 +1,43 @@
 {
-    "elephant": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "elephant",
-            "plural": "elephants"
-        },
-        "fi": {
-            "singular": [
-                "elefantti",
-                "norsu"
-            ],
-            "plural": [
-                "elefantit",
-                "norsut"
-            ]
-        },
-        "nl": {
-            "singular": "de olifant",
-            "plural": "de olifanten"
+    "concepts": {
+        "elephant": {
+            "hypernym": "animal"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "elephant",
+                "label": {
+                    "singular": "elephant",
+                    "plural": "elephants"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "elephant",
+                "label": {
+                    "singular": "elefantti",
+                    "plural": "elefantit"
+                }
+            },
+            {
+                "concept": "elephant",
+                "label": {
+                    "singular": "norsu",
+                    "plural": "norsut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "elephant",
+                "label": {
+                    "singular": "de olifant",
+                    "plural": "de olifanten"
+                }
+            }
+        ]
     }
 }

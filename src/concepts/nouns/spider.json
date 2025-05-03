@@ -1,17 +1,36 @@
 {
-    "spider": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "spider",
-            "plural": "spiders"
-        },
-        "fi": {
-            "singular": "hämähäkki",
-            "plural": "hämähäkit"
-        },
-        "nl": {
-            "singular": "de spin",
-            "plural": "de spinnen"
+    "concepts": {
+        "spider": {
+            "hypernym": "animal"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "spider",
+                "label": {
+                    "singular": "spider",
+                    "plural": "spiders"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "spider",
+                "label": {
+                    "singular": "hämähäkki",
+                    "plural": "hämähäkit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "spider",
+                "label": {
+                    "singular": "de spin",
+                    "plural": "de spinnen"
+                }
+            }
+        ]
     }
 }

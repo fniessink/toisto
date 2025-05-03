@@ -1,57 +1,111 @@
 {
-    "degree": {
-        "example": [
-            "how many degrees is it outside",
-            "it is three degrees above zero",
-            "it is four degrees below zero",
-            "I have a fever of 39 degrees"
-        ],
-        "en": {
-            "singular": "degree",
-            "plural": "degrees"
+    "concepts": {
+        "degree": {
+            "example": [
+                "how many degrees is it outside",
+                "it is three degrees above zero",
+                "it is four degrees below zero",
+                "I have a fever of 39 degrees"
+            ]
         },
-        "fi": {
-            "singular": "aste",
-            "plural": "asteet"
+        "it is three degrees above zero": {
+            "roots": [
+                "degree",
+                "0",
+                "3"
+            ]
         },
-        "nl": {
-            "singular": "de graad",
-            "plural": "de graden"
+        "it is four degrees below zero": {
+            "roots": [
+                "degree",
+                "0",
+                "4"
+            ]
+        },
+        "I have a fever of 39 degrees": {
+            "roots": [
+                "fever",
+                "degree"
+            ]
         }
     },
-    "it is three degrees above zero": {
-        "roots": [
-            "degree",
-            "0",
-            "3"
-        ],
-        "en": "It is three degrees above zero.|It is three degrees.",
-        "fi": "On kolme astetta lämmintä.",
-        "nl": "Het is drie graden boven nul.|Het is drie graden."
-    },
-    "it is four degrees below zero": {
-        "roots": [
-            "degree",
-            "0",
-            "4"
-        ],
+    "labels": {
         "en": [
-            "It is four degrees below zero.",
-            "It is freezing four degrees."
+            {
+                "concept": "degree",
+                "label": {
+                    "singular": "degree",
+                    "plural": "degrees"
+                }
+            },
+            {
+                "concept": "it is three degrees above zero",
+                "label": [
+                    "It is three degrees above zero.",
+                    "It is three degrees."
+                ]
+            },
+            {
+                "concept": "it is four degrees below zero",
+                "label": "It is four degrees below zero."
+            },
+            {
+                "concept": "it is four degrees below zero",
+                "label": "It is freezing four degrees."
+            },
+            {
+                "concept": "I have a fever of 39 degrees",
+                "label": "I have a fever of 39 degrees."
+            }
         ],
-        "fi": "On neljä astetta pakkasta.",
+        "fi": [
+            {
+                "concept": "degree",
+                "label": {
+                    "singular": "aste",
+                    "plural": "asteet"
+                }
+            },
+            {
+                "concept": "it is three degrees above zero",
+                "label": "On kolme astetta lämmintä."
+            },
+            {
+                "concept": "it is four degrees below zero",
+                "label": "On neljä astetta pakkasta."
+            },
+            {
+                "concept": "I have a fever of 39 degrees",
+                "label": "Minulla on 39 astetta kuumetta."
+            }
+        ],
         "nl": [
-            "Het is vier graden onder nul.",
-            "Het vriest vier graden."
+            {
+                "concept": "degree",
+                "label": {
+                    "singular": "de graad",
+                    "plural": "de graden"
+                }
+            },
+            {
+                "concept": "it is three degrees above zero",
+                "label": [
+                    "Het is drie graden boven nul.",
+                    "Het is drie graden."
+                ]
+            },
+            {
+                "concept": "it is four degrees below zero",
+                "label": "Het is vier graden onder nul."
+            },
+            {
+                "concept": "it is four degrees below zero",
+                "label": "Het vriest vier graden."
+            },
+            {
+                "concept": "I have a fever of 39 degrees",
+                "label": "Ik heb 39 graden koorts."
+            }
         ]
-    },
-    "I have a fever of 39 degrees": {
-        "roots": [
-            "fever",
-            "degree"
-        ],
-        "en": "I have a fever of 39 degrees.",
-        "fi": "Minulla on 39 astetta kuumetta.",
-        "nl": "Ik heb 39 graden koorts."
     }
 }

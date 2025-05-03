@@ -1,49 +1,95 @@
 {
-    "tomorrow": {
-        "hypernym": "day",
-        "en": "tomorrow",
-        "fi": "huomenna",
-        "nl": "morgen"
-    },
-    "the day after tomorrow": {
-        "hypernym": "day",
-        "roots": {
-            "en": [
-                "day",
-                "after",
-                "tomorrow"
-            ],
-            "fi": [
-                "after",
-                "tomorrow"
-            ],
-            "nl": [
-                "after",
-                "tomorrow"
+    "concepts": {
+        "tomorrow": {
+            "hypernym": "day"
+        },
+        "the day after tomorrow": {
+            "hypernym": "day",
+            "roots": {
+                "en": [
+                    "day",
+                    "after",
+                    "tomorrow"
+                ],
+                "fi": [
+                    "after",
+                    "tomorrow"
+                ],
+                "nl": [
+                    "after",
+                    "tomorrow"
+                ]
+            }
+        },
+        "tomorrow it is tuesday": {
+            "roots": [
+                "tomorrow",
+                "to be",
+                "tuesday"
             ]
         },
-        "en": "the day after tomorrow",
-        "fi": "ylihuomenna",
-        "nl": "overmorgen"
+        "tomorrow it is sunday": {
+            "roots": [
+                "tomorrow",
+                "to be",
+                "sunday"
+            ]
+        }
     },
-    "tomorrow it is tuesday": {
-        "roots": [
-            "tomorrow",
-            "to be",
-            "tuesday"
+    "labels": {
+        "en": [
+            {
+                "concept": "tomorrow",
+                "label": "tomorrow"
+            },
+            {
+                "concept": "the day after tomorrow",
+                "label": "the day after tomorrow"
+            },
+            {
+                "concept": "tomorrow it is tuesday",
+                "label": "Tomorrow it is Tuesday."
+            },
+            {
+                "concept": "tomorrow it is sunday",
+                "label": "Tomorrow it is sunday."
+            }
         ],
-        "en": "Tomorrow it is Tuesday.",
-        "fi": "Huomenna on tiistai.",
-        "nl": "Morgen is het dinsdag."
-    },
-    "tomorrow it is sunday": {
-        "roots": [
-            "tomorrow",
-            "to be",
-            "sunday"
+        "fi": [
+            {
+                "concept": "tomorrow",
+                "label": "huomenna"
+            },
+            {
+                "concept": "the day after tomorrow",
+                "label": "ylihuomenna"
+            },
+            {
+                "concept": "tomorrow it is tuesday",
+                "label": "Huomenna on tiistai."
+            },
+            {
+                "concept": "tomorrow it is sunday",
+                "label": "Huomenna on sunnuntai."
+            }
         ],
-        "en": "Tomorrow it is sunday.",
-        "fi": "Huomenna on sunnuntai.",
-        "nl": "Morgen is het zondag."
+        "nl": [
+            {
+                "concept": "tomorrow",
+                "label": "morgen"
+            },
+            {
+                "concept": "the day after tomorrow",
+                "label": "overmorgen"
+            },
+            {
+                "concept": "tomorrow it is tuesday",
+                "label": "Morgen is het dinsdag."
+            },
+            {
+                "concept": "tomorrow it is sunday",
+                "label": "Morgen is het zondag."
+            }
+        ]
     }
 }

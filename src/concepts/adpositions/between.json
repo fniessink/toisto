@@ -1,17 +1,48 @@
 {
-    "between": {
-        "example": "alice sits between bob and carol",
-        "en": "between",
-        "fi": "välissä",
-        "nl": "tussen"
+    "concepts": {
+        "between": {
+            "example": "alice sits between bob and carol"
+        },
+        "alice sits between bob and carol": {
+            "roots": [
+                "to sit",
+                "between"
+            ]
+        }
     },
-    "alice sits between bob and carol": {
-        "roots": [
-            "to sit",
-            "between"
+    "labels": {
+        "en": [
+            {
+                "concept": "between",
+                "label": "between"
+            },
+            {
+                "concept": "alice sits between bob and carol",
+                "label": "Alice sits between Bob and Carol."
+            }
         ],
-        "en": "Alice sits between Bob and Carol.",
-        "fi": "Alice istuu Bobin ja Carolin välissä.",
-        "nl": "Alice zit tussen Bob en Carol."
+        "fi": [
+            {
+                "concept": [
+                    "between",
+                    "occasionally"
+                ],
+                "label": "välissä"
+            },
+            {
+                "concept": "alice sits between bob and carol",
+                "label": "Alice istuu Bobin ja Carolin välissä."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "between",
+                "label": "tussen"
+            },
+            {
+                "concept": "alice sits between bob and carol",
+                "label": "Alice zit tussen Bob en Carol."
+            }
+        ]
     }
 }

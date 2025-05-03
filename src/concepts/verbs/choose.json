@@ -1,100 +1,119 @@
 {
-    "to choose": {
-        "en": {
-            "infinitive": "to choose",
-            "verbal noun": "choosing",
-            "present tense": {
-                "singular": {
-                    "first person": "I choose",
-                    "second person": "you choose",
-                    "third person": {
-                        "feminine": "she chooses",
-                        "masculine": "he chooses"
+    "concepts": {
+        "to choose": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to choose",
+                "label": {
+                    "infinitive": "to choose",
+                    "verbal noun": "choosing",
+                    "present tense": {
+                        "singular": {
+                            "first person": "I choose",
+                            "second person": "you choose",
+                            "third person": {
+                                "feminine": "she chooses",
+                                "masculine": "he chooses"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we choose",
+                            "second person": "you choose",
+                            "third person": "they choose"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "I chose",
+                            "second person": "you chose",
+                            "third person": {
+                                "feminine": "she chose",
+                                "masculine": "he chose"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we chose",
+                            "second person": "you chose",
+                            "third person": "they chose"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we choose",
-                    "second person": "you choose",
-                    "third person": "they choose"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "I chose",
-                    "second person": "you chose",
-                    "third person": {
-                        "feminine": "she chose",
-                        "masculine": "he chose"
-                    }
-                },
-                "plural": {
-                    "first person": "we chose",
-                    "second person": "you chose",
-                    "third person": "they chose"
                 }
             }
-        },
-        "fi": {
-            "infinitive": "valita;;valita is verbityyppi 5",
-            "verbal noun": "valitseminen",
-            "present tense": {
-                "singular": {
-                    "first person": "minä valitsen",
-                    "second person": "sinä valitset",
-                    "third person": "hän valitsee"
-                },
-                "plural": {
-                    "first person": "me valitsemme",
-                    "second person": "te valitsette",
-                    "third person": "he valitsevat"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "minä valitsin",
-                    "second person": "sinä valitsit",
-                    "third person": "hän valitsi"
-                },
-                "plural": {
-                    "first person": "me valitsimme",
-                    "second person": "te valitsitte",
-                    "third person": "he valitsivat"
-                }
-            }
-        },
-        "nl": {
-            "infinitive": "kiezen",
-            "verbal noun": "het kiezen",
-            "present tense": {
-                "singular": {
-                    "first person": "ik kies",
-                    "second person": "jij kiest",
-                    "third person": {
-                        "feminine": "zij kiest",
-                        "masculine": "hij kiest"
+        ],
+        "fi": [
+            {
+                "concept": "to choose",
+                "label": {
+                    "infinitive": "valita",
+                    "verbal noun": "valitseminen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minä valitsen",
+                            "second person": "sinä valitset",
+                            "third person": "hän valitsee"
+                        },
+                        "plural": {
+                            "first person": "me valitsemme",
+                            "second person": "te valitsette",
+                            "third person": "he valitsevat"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "minä valitsin",
+                            "second person": "sinä valitsit",
+                            "third person": "hän valitsi"
+                        },
+                        "plural": {
+                            "first person": "me valitsimme",
+                            "second person": "te valitsitte",
+                            "third person": "he valitsivat"
+                        }
                     }
                 },
-                "plural": {
-                    "first person": "wij kiezen",
-                    "second person": "jullie kiezen",
-                    "third person": "zij kiezen"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "ik koos",
-                    "second person": "jij koos",
-                    "third person": {
-                        "feminine": "zij koos",
-                        "masculine": "hij koos"
+                "note": "valita is verbityyppi 5"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to choose",
+                "label": {
+                    "infinitive": "kiezen",
+                    "verbal noun": "het kiezen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "ik kies",
+                            "second person": "jij kiest",
+                            "third person": {
+                                "feminine": "zij kiest",
+                                "masculine": "hij kiest"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij kiezen",
+                            "second person": "jullie kiezen",
+                            "third person": "zij kiezen"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "ik koos",
+                            "second person": "jij koos",
+                            "third person": {
+                                "feminine": "zij koos",
+                                "masculine": "hij koos"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij kozen",
+                            "second person": "jullie kozen",
+                            "third person": "zij kozen"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij kozen",
-                    "second person": "jullie kozen",
-                    "third person": "zij kozen"
                 }
             }
-        }
+        ]
     }
 }

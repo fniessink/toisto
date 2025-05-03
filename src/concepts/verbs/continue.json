@@ -1,25 +1,61 @@
 {
-    "to continue": {
-        "example": "to continue the journey",
-        "en": [
-            "to continue",
-            "to go on",
-            "to last"
-        ],
-        "fi": "jatkua",
-        "nl": [
-            "voortgaan",
-            "voortduren",
-            "aanhouden"
-        ]
+    "concepts": {
+        "to continue": {
+            "example": "to continue the journey"
+        },
+        "to continue the journey": {
+            "roots": [
+                "to continue",
+                "journey"
+            ]
+        }
     },
-    "to continue the journey": {
-        "roots": [
-            "to continue",
-            "journey"
+    "labels": {
+        "en": [
+            {
+                "concept": "to continue",
+                "label": "to continue"
+            },
+            {
+                "concept": "to continue",
+                "label": "to go on"
+            },
+            {
+                "concept": "to continue",
+                "label": "to last"
+            },
+            {
+                "concept": "to continue the journey",
+                "label": "to continue the journey"
+            }
         ],
-        "en": "to continue the journey",
-        "fi": "jatkaa matkaa",
-        "nl": "de reis voortzetten"
+        "fi": [
+            {
+                "concept": "to continue",
+                "label": "jatkua"
+            },
+            {
+                "concept": "to continue the journey",
+                "label": "jatkaa matkaa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to continue",
+                "label": "voortgaan"
+            },
+            {
+                "concept": "to continue",
+                "label": "voortduren"
+            },
+            {
+                "concept": "to continue",
+                "label": "aanhouden"
+            },
+            {
+                "concept": "to continue the journey",
+                "label": "de reis voortzetten"
+            }
+        ]
     }
 }

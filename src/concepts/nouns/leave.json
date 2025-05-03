@@ -1,14 +1,33 @@
 {
-    "sick leave": {
-        "roots": {
-            "fi": [
-                "disease",
-                "vacation"
-            ],
-            "nl": "disease"
-        },
-        "en": "sick leave",
-        "fi": "sairausloma",
-        "nl": "het ziekteverlof"
+    "concepts": {
+        "sick leave": {
+            "roots": {
+                "fi": [
+                    "disease",
+                    "vacation"
+                ],
+                "nl": "disease"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sick leave",
+                "label": "sick leave"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sick leave",
+                "label": "sairausloma"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sick leave",
+                "label": "het ziekteverlof"
+            }
+        ]
     }
 }

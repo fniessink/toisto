@@ -1,16 +1,37 @@
 {
-    "after": {
+    "concepts": {
+        "after": {}
+    },
+    "labels": {
         "en": [
-            "after",
-            "in"
+            {
+                "concept": "after",
+                "label": "after"
+            },
+            {
+                "concept": "after",
+                "label": "in"
+            }
         ],
         "fi": [
-            "kuluttua",
-            "päästä"
+            {
+                "concept": "after",
+                "label": "kuluttua"
+            },
+            {
+                "concept": "after",
+                "label": "päästä"
+            }
         ],
         "nl": [
-            "over",
-            "na"
+            {
+                "concept": "after",
+                "label": "over"
+            },
+            {
+                "concept": "after",
+                "label": "na"
+            }
         ]
     }
 }

@@ -1,17 +1,37 @@
 {
-    "leg": {
-        "holonym": "body",
-        "en": {
-            "singular": "leg",
-            "plural": "legs"
-        },
-        "fi": {
-            "singular": "jalka;upper part",
-            "plural": "jalat;upper part"
-        },
-        "nl": {
-            "singular": "het been",
-            "plural": "de benen"
+    "concepts": {
+        "leg": {
+            "holonym": "body"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "leg",
+                "label": {
+                    "singular": "leg",
+                    "plural": "legs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "leg",
+                "label": {
+                    "singular": "jalka",
+                    "plural": "jalat"
+                },
+                "tip": "upper part"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "leg",
+                "label": {
+                    "singular": "het been",
+                    "plural": "de benen"
+                }
+            }
+        ]
     }
 }

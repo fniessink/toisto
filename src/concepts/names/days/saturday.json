@@ -1,25 +1,50 @@
 {
-    "saturday": {
-        "holonym": [
-            "days of the week",
-            "weekend"
-        ],
-        "hypernym": "day",
-        "roots": {
-            "en": "day",
-            "nl": "day"
-        },
-        "en": {
-            "singular": "Saturday;;In English, the names of weekdays are capitalized",
-            "plural": "Saturdays"
-        },
-        "fi": {
-            "singular": "lauantai;;In Finnish, the names of weekdays are not capitalized",
-            "plural": "lauantait"
-        },
-        "nl": {
-            "singular": "zaterdag|de zaterdag;In Dutch, the names of weekdays are not capitalized",
-            "plural": "de zaterdagen"
+    "concepts": {
+        "saturday": {
+            "holonym": [
+                "days of the week",
+                "weekend"
+            ],
+            "hypernym": "day",
+            "roots": {
+                "en": "day",
+                "nl": "day"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "saturday",
+                "label": {
+                    "singular": "Saturday",
+                    "plural": "Saturdays"
+                },
+                "note": "In English, the names of weekdays are capitalized"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "saturday",
+                "label": {
+                    "singular": "lauantai",
+                    "plural": "lauantait"
+                },
+                "note": "In Finnish, the names of weekdays are not capitalized"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "saturday",
+                "label": {
+                    "singular": [
+                        "zaterdag",
+                        "de zaterdag"
+                    ],
+                    "plural": "de zaterdagen"
+                },
+                "note": "In Dutch, the names of weekdays are not capitalized"
+            }
+        ]
     }
 }

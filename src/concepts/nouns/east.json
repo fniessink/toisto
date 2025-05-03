@@ -1,9 +1,31 @@
 {
-    "east": {
-        "example": "the city is in the east",
-        "hypernym": "compass point",
-        "en": "east|the East",
-        "fi": "itä",
-        "nl": "het oosten"
+    "concepts": {
+        "east": {
+            "example": "the city is in the east",
+            "hypernym": "compass point"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "east",
+                "label": [
+                    "east",
+                    "the East"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "east",
+                "label": "itä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "east",
+                "label": "het oosten"
+            }
+        ]
     }
 }

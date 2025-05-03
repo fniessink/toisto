@@ -1,7 +1,25 @@
 {
-    "group": {
-        "en": "group",
-        "fi": "ryhmä",
-        "nl": "de groep"
+    "concepts": {
+        "group": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "group",
+                "label": "group"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "group",
+                "label": "ryhmä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "group",
+                "label": "de groep"
+            }
+        ]
     }
 }

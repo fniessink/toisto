@@ -3,22 +3,47 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal, Union, cast, get_args
+from typing import Required, TypedDict, cast, get_args
 
 from . import Language
 from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds, RootConceptIds
 from .grammar import GrammaticalCategory
-from .iana_language_subtag_registry import ALL_LANGUAGES
-from .label import LabelFactory, Labels, label_factory, meaning_factory
+from .label import Label, Labels
 
 ConceptIdListOrString = ConceptId | list[ConceptId]
 ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-ConceptAttribute = Literal["antonym", "answer", "answer-only", "example", "holonym", "hypernym", "involves", "roots"]
-LeafConceptDict = dict[Language | ConceptAttribute, ConceptId | list[ConceptId] | ConceptIdDictOrListOrString | bool]
-CompositeConceptDict = dict[
-    Language | GrammaticalCategory | ConceptAttribute, Union["CompositeConceptDict", LeafConceptDict, bool]
-]
-ConceptDict = LeafConceptDict | CompositeConceptDict
+
+JSONGrammar = dict[GrammaticalCategory, str]
+JSONRecursiveGrammar = dict[GrammaticalCategory, JSONGrammar]
+
+LabelJSON = TypedDict(
+    "LabelJSON",
+    {
+        "colloquial": bool,
+        "concept": Required[ConceptIdListOrString],
+        "label": Required[str | JSONGrammar | JSONRecursiveGrammar],
+        "language": Required[Language],
+        "meaning-only": bool,
+        "note": str | list[str],
+        "tip": str,
+    },
+    total=False,
+)
+
+ConceptJSON = TypedDict(
+    "ConceptJSON",
+    {
+        "antonym": ConceptIdListOrString,
+        "answer": ConceptIdListOrString,
+        "answer-only": bool,
+        "example": ConceptIdListOrString,
+        "holonym": ConceptIdListOrString,
+        "hypernym": ConceptIdListOrString,
+        "involves": ConceptIdListOrString,
+        "roots": ConceptIdDictOrListOrString,
+    },
+    total=False,
+)
 
 
 @dataclass(frozen=True)
@@ -26,7 +51,8 @@ class ConceptFactory:
     """Create concepts from the concept dict."""
 
     concept_id: ConceptId
-    concept_dict: ConceptDict
+    concept_dict: ConceptJSON
+    labels: list[LabelJSON]
 
     def create_concept(self, parent: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
@@ -34,8 +60,8 @@ class ConceptFactory:
             self.concept_id,
             parent,
             self._constituent_concepts(),
-            self._labels(label_factory),
-            self._labels(meaning_factory),
+            self._labels(),
+            self._meanings(),
             self._related_concepts(),
             self._root_concepts(),
             self._answer_only(),
@@ -45,14 +71,27 @@ class ConceptFactory:
         """Create a constituent concept for each grammatical category."""
         return tuple(self._constituent_concept(category) for category in self._grammatical_categories())
 
-    def _labels(self, factory: LabelFactory) -> Labels:
-        """Create the labels from the concept dict, using the label factory passed."""
+    def _labels(self) -> Labels:
+        """Create the labels from the concept dict."""
+        labels = []
+        for label in self.labels:
+            if (isinstance(label["label"], str) and not label.get("meaning-only", False)) or isinstance(
+                label["label"], list
+            ):
+                note = label.get("note", [])
+                notes = [note] if isinstance(note, str) else note
+                tip = label.get("tip", "")
+                colloquial = label.get("colloquial", False)
+                labels.append(Label(label["language"], label["label"], tuple(notes), tip, colloquial=colloquial))
+        return Labels(labels)
+
+    def _meanings(self) -> Labels:
+        """Create the meanings from the concept dict."""
         return Labels(
             [
-                label
-                for key, value in self.concept_dict.items()
-                if key in ALL_LANGUAGES and not isinstance(value, dict)
-                for label in factory(cast("Language", key), cast("str | list[str]", value))
+                Label(label["language"], label["label"])
+                for label in self.labels
+                if isinstance(label["label"], str) and not label.get("colloquial", False)
             ]
         )
 
@@ -77,52 +116,56 @@ class ConceptFactory:
     def _constituent_concept(self, category: GrammaticalCategory) -> ConceptId:
         """Create a constituent concept for the specified grammatical category."""
         constituent_concept_id = ConceptId(f"{self.concept_id}/{category}")
-        concept_factory = self.__class__(constituent_concept_id, self._constituent_concept_dict(category))
+        constituent_concept_dict = self._constituent_concept_dict(category)
+        constituent_concept_labels = self._constituent_concept_labels(category)
+        concept_factory = self.__class__(constituent_concept_id, constituent_concept_dict, constituent_concept_labels)
         concept_factory.create_concept(self.concept_id)
         return constituent_concept_id
 
-    def _constituent_concept_dict(self, category: GrammaticalCategory) -> ConceptDict:
+    def _constituent_concept_dict(self, category: GrammaticalCategory) -> ConceptJSON:
         """Create a constituent concept dict that can be used to create a constituent concept."""
         antonym_concept_ids = self._related_concept_ids("antonym")
         antonyms_dict = dict(antonym=[ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids])
         answer_concept_ids = self._related_concept_ids("answer")
         answers_dict = dict(answer=[ConceptId(f"{answer}/{category}") for answer in answer_concept_ids])
-        roots_dict = cast("CompositeConceptDict", dict(roots=self._get_roots()))
-        constituent_concept_dict = (
-            slice_concept_dict(self.concept_dict, category) | roots_dict | antonyms_dict | answers_dict
-        )
-        return cast("ConceptDict", constituent_concept_dict)
+        roots_dict = dict(roots=self._get_roots())
+        constituent_concept_dict = roots_dict | antonyms_dict | answers_dict
+        return cast("ConceptJSON", constituent_concept_dict)
+
+    def _constituent_concept_labels(self, category: GrammaticalCategory) -> list[LabelJSON]:
+        """Filter the labels by grammatical category."""
+        labels: list[LabelJSON] = []
+        for label in self.labels:
+            if isinstance(label["label"], dict) and category in label["label"]:
+                sliced = LabelJSON(
+                    concept=label["concept"],
+                    language=label["language"],
+                    label=label["label"][category],
+                    note=label.get("note", []),
+                    tip=label.get("tip", ""),
+                    colloquial=label.get("colloquial", False),
+                )
+                labels.append(sliced)
+        return labels
 
     def _grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
         grammatical_categories = set()
-        for _, concept_dict in [
-            (k, v) for k, v in self.concept_dict.items() if k in ALL_LANGUAGES and isinstance(v, dict)
-        ]:
-            grammatical_categories |= {key for key in concept_dict if key in get_args(GrammaticalCategory)}
+        for label in self.labels:
+            if isinstance(label["label"], dict):
+                grammatical_categories |= {key for key in label["label"] if key in get_args(GrammaticalCategory)}
         return tuple(category for category in get_args(GrammaticalCategory) if category in grammatical_categories)
 
     def _get_roots(self) -> ConceptIdDictOrListOrString:
         """Get the roots from the concept dict."""
-        return cast("ConceptIdDictOrListOrString", self.concept_dict.get("roots", {}))
+        return self.concept_dict.get("roots", {})
 
-    def _related_concept_ids(self, relation: ConceptAttribute) -> ConceptIds:
+    def _related_concept_ids(self, relation: ConceptRelation) -> ConceptIds:
         """Return the ids of the related concept(s)."""
         related = cast("ConceptIdListOrString", self.concept_dict.get(relation, []))
         return tuple(related) if isinstance(related, list) else (related,)
 
 
-def slice_concept_dict(concept_dict: ConceptDict, category: GrammaticalCategory) -> ConceptDict:
-    """Slice the concept dict."""
-    result: ConceptDict = {}
-    for key in concept_dict:
-        if key not in ALL_LANGUAGES:
-            continue
-        if isinstance(concept_dict[key], dict) and category in concept_dict[key]:
-            result[key] = concept_dict[key][category]
-    return result
-
-
-def create_concept(concept_id: ConceptId, concept_dict: ConceptDict) -> Concept:
+def create_concept(concept_id: ConceptId, concept_dict: ConceptJSON, labels: list[LabelJSON]) -> Concept:
     """Create a concept from the concept dict."""
-    return ConceptFactory(concept_id, concept_dict or cast("ConceptDict", {})).create_concept()
+    return ConceptFactory(concept_id, concept_dict, labels).create_concept()

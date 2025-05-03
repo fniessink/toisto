@@ -1,83 +1,179 @@
 {
-    "every": {
+    "concepts": {
+        "every": {},
+        "everywhere": {
+            "hypernym": "every"
+        },
+        "in any case": {
+            "hypernym": "every"
+        },
+        "every morning": {
+            "roots": [
+                "every",
+                "morning"
+            ]
+        },
+        "every day": {
+            "roots": [
+                "every",
+                "day"
+            ]
+        },
+        "every week": {
+            "roots": [
+                "every",
+                "week"
+            ]
+        },
+        "every year": {
+            "roots": [
+                "every",
+                "year"
+            ]
+        }
+    },
+    "labels": {
         "en": [
-            "every",
-            "each"
+            {
+                "concept": "every",
+                "label": "every"
+            },
+            {
+                "concept": "every",
+                "label": "each"
+            },
+            {
+                "concept": "everywhere",
+                "label": "everywhere"
+            },
+            {
+                "concept": [
+                    "in any case",
+                    "at least"
+                ],
+                "label": "in any case"
+            },
+            {
+                "concept": "every morning",
+                "label": "every morning"
+            },
+            {
+                "concept": "every day",
+                "label": "every day"
+            },
+            {
+                "concept": "every week",
+                "label": "every week"
+            },
+            {
+                "concept": "every year",
+                "label": "every year"
+            }
         ],
-        "fi": "joka",
-        "nl": [
-            "elk",
-            "ieder"
-        ]
-    },
-    "everywhere": {
-        "hypernym": "every",
-        "en": "everywhere",
         "fi": [
-            "joka paikassa;inessive",
-            "joka paikasta;elative",
-            "joka paikkaan;illative"
+            {
+                "concept": "every",
+                "label": "joka"
+            },
+            {
+                "concept": "everywhere",
+                "label": "joka paikassa",
+                "tip": "inessive"
+            },
+            {
+                "concept": "everywhere",
+                "label": "joka paikasta",
+                "tip": "elative"
+            },
+            {
+                "concept": "everywhere",
+                "label": "joka paikkaan",
+                "tip": "illative"
+            },
+            {
+                "concept": "in any case",
+                "label": "joka tapauksessa"
+            },
+            {
+                "concept": "every morning",
+                "label": "joka aamu"
+            },
+            {
+                "concept": "every day",
+                "label": "joka päivä"
+            },
+            {
+                "concept": "every week",
+                "label": "joka viikko"
+            },
+            {
+                "concept": "every year",
+                "label": "joka vuosi"
+            }
         ],
         "nl": [
-            "overal",
-            "iedere plek"
-        ]
-    },
-    "in any case": {
-        "hypernym": "every",
-        "en": "in any case",
-        "fi": "joka tapauksessa",
-        "nl": [
-            "in ieder geval",
-            "in elk geval"
-        ]
-    },
-    "every morning": {
-        "roots": [
-            "every",
-            "morning"
-        ],
-        "en": "every morning",
-        "fi": "joka aamu",
-        "nl": [
-            "iedere ochtend",
-            "elke ochtend"
-        ]
-    },
-    "every day": {
-        "roots": [
-            "every",
-            "day"
-        ],
-        "en": "every day",
-        "fi": "joka päivä",
-        "nl": [
-            "iedere dag",
-            "elke dag"
-        ]
-    },
-    "every week": {
-        "roots": [
-            "every",
-            "week"
-        ],
-        "en": "every week",
-        "fi": "joka viikko",
-        "nl": [
-            "iedere week",
-            "elke week"
-        ]
-    },
-    "every year": {
-        "roots": [
-            "every",
-            "year"
-        ],
-        "en": "every year",
-        "fi": "joka vuosi",
-        "nl": [
-            "ieder jaar",
-            "elk jaar"
+            {
+                "concept": "every",
+                "label": "elk"
+            },
+            {
+                "concept": "every",
+                "label": "ieder"
+            },
+            {
+                "concept": "everywhere",
+                "label": "overal"
+            },
+            {
+                "concept": "everywhere",
+                "label": "iedere plek"
+            },
+            {
+                "concept": [
+                    "in any case",
+                    "at least"
+                ],
+                "label": "in ieder geval"
+            },
+            {
+                "concept": [
+                    "at least",
+                    "in any case"
+                ],
+                "label": "in elk geval"
+            },
+            {
+                "concept": "every morning",
+                "label": "iedere ochtend"
+            },
+            {
+                "concept": "every morning",
+                "label": "elke ochtend"
+            },
+            {
+                "concept": "every day",
+                "label": "iedere dag"
+            },
+            {
+                "concept": "every day",
+                "label": "elke dag"
+            },
+            {
+                "concept": "every week",
+                "label": "iedere week"
+            },
+            {
+                "concept": "every week",
+                "label": "elke week"
+            },
+            {
+                "concept": "every year",
+                "label": "ieder jaar"
+            },
+            {
+                "concept": "every year",
+                "label": "elk jaar"
+            }
         ]
     }
 }

@@ -1,51 +1,108 @@
 {
-    "ticket": {
-        "en": {
-            "singular": "ticket",
-            "plural": "tickets"
+    "concepts": {
+        "ticket": {},
+        "travel ticket": {
+            "hypernym": "ticket"
         },
-        "fi": {
-            "singular": "lippu",
-            "plural": "liput"
+        "plane ticket": {
+            "hypernym": "travel ticket"
         },
-        "nl": {
-            "singular": "het kaartje",
-            "plural": "de kaartjes"
+        "return ticket": {
+            "antonym": "one-way ticket",
+            "hypernym": "ticket"
+        },
+        "one-way ticket": {
+            "antonym": "return ticket",
+            "hypernym": "ticket"
         }
     },
-    "travel ticket": {
-        "hypernym": "ticket",
-        "en": {
-            "singular": "ticket",
-            "plural": "tickets"
-        },
-        "fi": {
-            "singular": "matkalippu",
-            "plural": "matkaliput"
-        },
-        "nl": {
-            "singular": "het vervoersbewijs",
-            "plural": "de vervoersbewijzen"
-        }
-    },
-    "plane ticket": {
-        "hypernym": "travel ticket",
-        "en": "plane ticket",
-        "fi": "lentolippu",
-        "nl": "het vliegticket"
-    },
-    "return ticket": {
-        "antonym": "one-way ticket",
-        "hypernym": "ticket",
-        "en": "return ticket",
-        "fi": "menopaluulippu|menopaluu|meno-paluu",
-        "nl": "het retourtje"
-    },
-    "one-way ticket": {
-        "antonym": "return ticket",
-        "hypernym": "ticket",
-        "en": "one-way ticket",
-        "fi": "menolippu|meno",
-        "nl": "het enkeltje"
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "ticket",
+                    "travel ticket"
+                ],
+                "label": {
+                    "singular": "ticket",
+                    "plural": "tickets"
+                }
+            },
+            {
+                "concept": "plane ticket",
+                "label": "plane ticket"
+            },
+            {
+                "concept": "return ticket",
+                "label": "return ticket"
+            },
+            {
+                "concept": "one-way ticket",
+                "label": "one-way ticket"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ticket",
+                "label": {
+                    "singular": "lippu",
+                    "plural": "liput"
+                }
+            },
+            {
+                "concept": "travel ticket",
+                "label": {
+                    "singular": "matkalippu",
+                    "plural": "matkaliput"
+                }
+            },
+            {
+                "concept": "plane ticket",
+                "label": "lentolippu"
+            },
+            {
+                "concept": "return ticket",
+                "label": [
+                    "menopaluulippu",
+                    "menopaluu",
+                    "meno-paluu"
+                ]
+            },
+            {
+                "concept": "one-way ticket",
+                "label": [
+                    "menolippu",
+                    "meno"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ticket",
+                "label": {
+                    "singular": "het kaartje",
+                    "plural": "de kaartjes"
+                }
+            },
+            {
+                "concept": "travel ticket",
+                "label": {
+                    "singular": "het vervoersbewijs",
+                    "plural": "de vervoersbewijzen"
+                }
+            },
+            {
+                "concept": "plane ticket",
+                "label": "het vliegticket"
+            },
+            {
+                "concept": "return ticket",
+                "label": "het retourtje"
+            },
+            {
+                "concept": "one-way ticket",
+                "label": "het enkeltje"
+            }
+        ]
     }
 }

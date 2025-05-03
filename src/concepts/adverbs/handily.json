@@ -1,8 +1,27 @@
 {
-    "handily": {
-        "roots": "hand",
-        "en": "handily",
-        "fi": "kätevästi",
-        "nl": "handig"
+    "concepts": {
+        "handily": {
+            "roots": "hand"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "handily",
+                "label": "handily"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "handily",
+                "label": "kätevästi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "handily",
+                "label": "handig"
+            }
+        ]
     }
 }

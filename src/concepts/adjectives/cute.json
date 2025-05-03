@@ -1,19 +1,37 @@
 {
-    "cute": {
-        "en": {
-            "positive degree": "cute",
-            "comparative degree": "cuter",
-            "superlative degree": "cutest"
-        },
-        "fi": {
-            "positive degree": "söpö",
-            "comparative degree": "söpömpi",
-            "superlative degree": "söpöin"
-        },
-        "nl": {
-            "positive degree": "schattig",
-            "comparative degree": "schattiger",
-            "superlative degree": "schattigst"
-        }
+    "concepts": {
+        "cute": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cute",
+                "label": {
+                    "positive degree": "cute",
+                    "comparative degree": "cuter",
+                    "superlative degree": "cutest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cute",
+                "label": {
+                    "positive degree": "söpö",
+                    "comparative degree": "söpömpi",
+                    "superlative degree": "söpöin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cute",
+                "label": {
+                    "positive degree": "schattig",
+                    "comparative degree": "schattiger",
+                    "superlative degree": "schattigst"
+                }
+            }
+        ]
     }
 }

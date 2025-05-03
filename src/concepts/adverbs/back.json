@@ -1,7 +1,25 @@
 {
-    "back (adverb)": {
-        "en": "back",
-        "fi": "takaisin",
-        "nl": "terug"
+    "concepts": {
+        "back (adverb)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "back (adverb)",
+                "label": "back"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "back (adverb)",
+                "label": "takaisin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "back (adverb)",
+                "label": "terug"
+            }
+        ]
     }
 }

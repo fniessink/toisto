@@ -1,7 +1,25 @@
 {
-    "to connect": {
-        "en": "to connect",
-        "fi": "yhdistää",
-        "nl": "verbinden"
+    "concepts": {
+        "to connect": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to connect",
+                "label": "to connect"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to connect",
+                "label": "yhdistää"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to connect",
+                "label": "verbinden"
+            }
+        ]
     }
 }

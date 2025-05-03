@@ -1,7 +1,25 @@
 {
-    "accomodation": {
-        "en": "accomodation",
-        "fi": "majoitus",
-        "nl": "de accomodatie"
+    "concepts": {
+        "accomodation": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "accomodation",
+                "label": "accomodation"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "accomodation",
+                "label": "majoitus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "accomodation",
+                "label": "de accomodatie"
+            }
+        ]
     }
 }

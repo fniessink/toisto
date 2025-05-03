@@ -1,9 +1,28 @@
 {
-    "holiday": {
-        "hypernym": "day",
-        "roots": "day",
-        "en": "holiday",
-        "fi": "juhlapäivä",
-        "nl": "de feestdag"
+    "concepts": {
+        "holiday": {
+            "hypernym": "day",
+            "roots": "day"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "holiday",
+                "label": "holiday"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "holiday",
+                "label": "juhlapäivä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "holiday",
+                "label": "de feestdag"
+            }
+        ]
     }
 }

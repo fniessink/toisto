@@ -4,38 +4,38 @@
 name: Python application
 
 on:
-    push:
-        branches: ["main"]
-    pull_request:
-        branches: ["main"]
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 permissions:
-    contents: read
+  contents: read
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of SonarCloud analysis
-            - name: Set up Python
-              uses: actions/setup-python@v4
-              with:
-                  python-version: "3.10"
-            - name: Install dependencies
-              run: |
-                  python -m pip install --upgrade pip wheel
-                  pip install .[dev]
-            - name: Test
-              run: |
-                  tools/test.sh
-                  coverage xml  # SonarCloud needs a Cobertura compatible XML coverage report
-                  python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
-            - name: SonarCloud scan
-              uses: SonarSource/sonarcloud-github-action@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-                  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-              if: env.SONAR_TOKEN != null
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of SonarCloud analysis
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip wheel
+          pip install .[dev]
+      - name: Test
+        run: |
+          tools/test.sh
+          coverage xml  # SonarCloud needs a Cobertura compatible XML coverage report
+          python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
+      - name: SonarCloud scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        if: env.SONAR_TOKEN != null

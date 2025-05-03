@@ -1,7 +1,25 @@
 {
-    "spicy": {
-        "en": "spicy",
-        "fi": "tulinen",
-        "nl": "pittig"
+    "concepts": {
+        "spicy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "spicy",
+                "label": "spicy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "spicy",
+                "label": "tulinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "spicy",
+                "label": "pittig"
+            }
+        ]
     }
 }

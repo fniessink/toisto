@@ -1,8 +1,28 @@
 {
-    "denture": {
-        "holonym": "mouth",
-        "en": "denture",
-        "fi": "hampaat;singular",
-        "nl": "het gebit"
+    "concepts": {
+        "denture": {
+            "holonym": "mouth"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "denture",
+                "label": "denture"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "denture",
+                "label": "hampaat",
+                "tip": "singular"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "denture",
+                "label": "het gebit"
+            }
+        ]
     }
 }

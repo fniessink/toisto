@@ -1,32 +1,68 @@
 {
-    "many/much": {
-        "antonym": "few/a little",
-        "en": {
-            "positive degree": [
-                "many;;Use 'many' with countable nouns and 'much' with uncountable nouns",
-                "much;;Use 'much' with uncountable noins and 'many' with countable nouns"
-            ],
-            "comparative degree": "more",
-            "superlative degree": "most"
+    "concepts": {
+        "many/much": {
+            "antonym": "few/a little"
         },
-        "fi": {
-            "positive degree": "paljon",
-            "comparative degree": "enemmän",
-            "superlative degree": "eniten"
-        },
-        "nl": {
-            "positive degree": "veel",
-            "comparative degree": "meer",
-            "superlative degree": "meest"
+        "very many/much": {
+            "roots": "many/much"
         }
     },
-    "very many/much": {
-        "roots": "many/much",
+    "labels": {
         "en": [
-            "very much",
-            "very much"
+            {
+                "concept": "many/much",
+                "label": {
+                    "positive degree": "many",
+                    "comparative degree": "more",
+                    "superlative degree": "most"
+                },
+                "note": "Use 'many' with countable nouns and 'much' with uncountable nouns"
+            },
+            {
+                "concept": "many/much",
+                "label": {
+                    "positive degree": "much",
+                    "comparative degree": "more",
+                    "superlative degree": "most"
+                },
+                "note": "Use 'much' with uncountable noins and 'many' with countable nouns"
+            },
+            {
+                "concept": "very many/much",
+                "label": "very much"
+            },
+            {
+                "concept": "very many/much",
+                "label": "very much"
+            }
         ],
-        "fi": "kovin paljon",
-        "nl": "erg veel"
+        "fi": [
+            {
+                "concept": "many/much",
+                "label": {
+                    "positive degree": "paljon",
+                    "comparative degree": "enemmän",
+                    "superlative degree": "eniten"
+                }
+            },
+            {
+                "concept": "very many/much",
+                "label": "kovin paljon"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "many/much",
+                "label": {
+                    "positive degree": "veel",
+                    "comparative degree": "meer",
+                    "superlative degree": "meest"
+                }
+            },
+            {
+                "concept": "very many/much",
+                "label": "erg veel"
+            }
+        ]
     }
 }

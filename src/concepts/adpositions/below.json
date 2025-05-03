@@ -1,39 +1,72 @@
 {
-    "below": {
-        "example": "the glass is underneath the table",
-        "en": [
-            "below",
-            "underneath",
-            "beneath"
-        ],
-        "fi": "alla",
-        "nl": [
-            "beneden",
-            "onder"
-        ]
-    },
-    "the glass is underneath the table": {
-        "roots": {
-            "en": [
-                "glass",
-                "to be",
-                "below",
-                "table"
-            ],
-            "nl": [
-                "glass",
-                "below",
-                "table"
-            ],
-            "fi": [
-                "glass",
-                "to be",
-                "below",
-                "table"
-            ]
+    "concepts": {
+        "below": {
+            "example": "the glass is underneath the table"
         },
-        "en": "The glass is underneath the table.",
-        "fi": "Lasi on pöydän alla.",
-        "nl": "Het glas staat onder de tafel."
+        "the glass is underneath the table": {
+            "roots": {
+                "en": [
+                    "glass",
+                    "to be",
+                    "below",
+                    "table"
+                ],
+                "nl": [
+                    "glass",
+                    "below",
+                    "table"
+                ],
+                "fi": [
+                    "glass",
+                    "to be",
+                    "below",
+                    "table"
+                ]
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "below",
+                "label": "below"
+            },
+            {
+                "concept": "below",
+                "label": "underneath"
+            },
+            {
+                "concept": "below",
+                "label": "beneath"
+            },
+            {
+                "concept": "the glass is underneath the table",
+                "label": "The glass is underneath the table."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "below",
+                "label": "alla"
+            },
+            {
+                "concept": "the glass is underneath the table",
+                "label": "Lasi on pöydän alla."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "below",
+                "label": "beneden"
+            },
+            {
+                "concept": "below",
+                "label": "onder"
+            },
+            {
+                "concept": "the glass is underneath the table",
+                "label": "Het glas staat onder de tafel."
+            }
+        ]
     }
 }

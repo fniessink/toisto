@@ -59,7 +59,7 @@ LANGUAGES = ["en", "fi", "nl"]
 LOGGER = logging.getLogger(__name__)
 
 
-def slice_concept(concept: dict, language: str) -> dict | str:
+def slice_concept(concept: dict, language: str) -> dict[str, str] | str:
     """Return the concept, but only for the specified language."""
     if language in concept:
         return concept[language]

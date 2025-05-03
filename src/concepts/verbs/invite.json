@@ -1,17 +1,44 @@
 {
-    "to invite": {
-        "en": "to invite",
-        "fi": "kutsua",
-        "nl": "uitnodigen"
+    "concepts": {
+        "to invite": {},
+        "to invite along": {
+            "roots": {
+                "en": "to invite",
+                "fi": "to request",
+                "nl": "to ask"
+            }
+        }
     },
-    "to invite along": {
-        "roots": {
-            "en": "to invite",
-            "fi": "to request",
-            "nl": "to ask"
-        },
-        "en": "to invite along",
-        "fi": "pyytää mukaan",
-        "nl": "meevragen"
+    "labels": {
+        "en": [
+            {
+                "concept": "to invite",
+                "label": "to invite"
+            },
+            {
+                "concept": "to invite along",
+                "label": "to invite along"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to invite",
+                "label": "kutsua"
+            },
+            {
+                "concept": "to invite along",
+                "label": "pyytää mukaan"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to invite",
+                "label": "uitnodigen"
+            },
+            {
+                "concept": "to invite along",
+                "label": "meevragen"
+            }
+        ]
     }
 }

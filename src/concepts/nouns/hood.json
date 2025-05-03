@@ -1,7 +1,25 @@
 {
-    "hood": {
-        "en": "hood",
-        "fi": "huppu",
-        "nl": "de capuchon"
+    "concepts": {
+        "hood": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hood",
+                "label": "hood"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hood",
+                "label": "huppu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hood",
+                "label": "de capuchon"
+            }
+        ]
     }
 }

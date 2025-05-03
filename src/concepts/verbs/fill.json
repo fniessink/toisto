@@ -1,21 +1,55 @@
 {
-    "to fill": {
-        "en": "to fill",
-        "fi": "täyttää",
-        "nl": "vullen"
+    "concepts": {
+        "to fill": {},
+        "to fill out": {},
+        "to fill out a form": {
+            "roots": [
+                "to fill out",
+                "form"
+            ]
+        }
     },
-    "to fill out": {
-        "en": "to fill out",
-        "fi": "täyttää",
-        "nl": "invullen"
-    },
-    "to fill out a form": {
-        "roots": [
-            "to fill out",
-            "form"
+    "labels": {
+        "en": [
+            {
+                "concept": "to fill",
+                "label": "to fill"
+            },
+            {
+                "concept": "to fill out",
+                "label": "to fill out"
+            },
+            {
+                "concept": "to fill out a form",
+                "label": "to fill out a form"
+            }
         ],
-        "en": "to fill out a form",
-        "fi": "täyttää lomake",
-        "nl": "een formulier invullen"
+        "fi": [
+            {
+                "concept": [
+                    "to fill",
+                    "to fill out"
+                ],
+                "label": "täyttää"
+            },
+            {
+                "concept": "to fill out a form",
+                "label": "täyttää lomake"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to fill",
+                "label": "vullen"
+            },
+            {
+                "concept": "to fill out",
+                "label": "invullen"
+            },
+            {
+                "concept": "to fill out a form",
+                "label": "een formulier invullen"
+            }
+        ]
     }
 }

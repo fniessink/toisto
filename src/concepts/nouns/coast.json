@@ -1,19 +1,38 @@
 {
-    "coast": {
-        "roots": {
-            "fi": "beach"
-        },
-        "en": {
-            "singular": "coast",
-            "plural": "coasts"
-        },
-        "fi": {
-            "singular": "rannikko",
-            "plural": "rannikot"
-        },
-        "nl": {
-            "singular": "de kust",
-            "plural": "de kusten"
+    "concepts": {
+        "coast": {
+            "roots": {
+                "fi": "beach"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "coast",
+                "label": {
+                    "singular": "coast",
+                    "plural": "coasts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "coast",
+                "label": {
+                    "singular": "rannikko",
+                    "plural": "rannikot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "coast",
+                "label": {
+                    "singular": "de kust",
+                    "plural": "de kusten"
+                }
+            }
+        ]
     }
 }

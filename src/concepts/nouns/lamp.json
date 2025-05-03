@@ -1,42 +1,80 @@
 {
-    "lamp": {
-        "en": {
-            "singular": "lamp",
-            "plural": "lamps"
-        },
-        "fi": {
-            "singular": [
-                "lamppu",
-                "valaisin"
-            ],
-            "plural": [
-                "lamput",
-                "valaisimet"
+    "concepts": {
+        "lamp": {},
+        "table lamp": {
+            "example": "I am looking for a table lamp",
+            "hypernym": "lamp",
+            "roots": [
+                "table",
+                "lamp"
             ]
         },
-        "nl": {
-            "singular": "de lamp",
-            "plural": "de lampen"
+        "standing lamp": {
+            "hypernym": "lamp"
         }
     },
-    "table lamp": {
-        "example": "I am looking for a table lamp",
-        "hypernym": "lamp",
-        "roots": [
-            "table",
-            "lamp"
+    "labels": {
+        "en": [
+            {
+                "concept": "lamp",
+                "label": {
+                    "singular": "lamp",
+                    "plural": "lamps"
+                }
+            },
+            {
+                "concept": "table lamp",
+                "label": "table lamp"
+            },
+            {
+                "concept": "standing lamp",
+                "label": "standing lamp"
+            }
         ],
-        "en": "table lamp",
         "fi": [
-            "pöytälamppu",
-            "pöytävalaisin"
+            {
+                "concept": "lamp",
+                "label": {
+                    "singular": "lamppu",
+                    "plural": "lamput"
+                }
+            },
+            {
+                "concept": "lamp",
+                "label": {
+                    "singular": "valaisin",
+                    "plural": "valaisimet"
+                }
+            },
+            {
+                "concept": "table lamp",
+                "label": "pöytälamppu"
+            },
+            {
+                "concept": "table lamp",
+                "label": "pöytävalaisin"
+            },
+            {
+                "concept": "standing lamp",
+                "label": "jalkalamppu"
+            }
         ],
-        "nl": "de tafellamp"
-    },
-    "standing lamp": {
-        "hypernym": "lamp",
-        "en": "standing lamp",
-        "fi": "jalkalamppu",
-        "nl": "de staande lamp"
+        "nl": [
+            {
+                "concept": "lamp",
+                "label": {
+                    "singular": "de lamp",
+                    "plural": "de lampen"
+                }
+            },
+            {
+                "concept": "table lamp",
+                "label": "de tafellamp"
+            },
+            {
+                "concept": "standing lamp",
+                "label": "de staande lamp"
+            }
+        ]
     }
 }

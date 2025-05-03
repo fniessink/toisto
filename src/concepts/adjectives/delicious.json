@@ -1,7 +1,25 @@
 {
-    "delicious": {
-        "en": "delicious",
-        "fi": "herkullinen",
-        "nl": "lekker"
+    "concepts": {
+        "delicious": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "delicious",
+                "label": "delicious"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "delicious",
+                "label": "herkullinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "delicious",
+                "label": "lekker"
+            }
+        ]
     }
 }

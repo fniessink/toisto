@@ -1,29 +1,68 @@
 {
-    "break": {
-        "en": "break",
-        "fi": "tauko",
-        "nl": "de pauze"
+    "concepts": {
+        "break": {},
+        "lunchbreak": {
+            "hypernym": "break",
+            "involves": "lunch",
+            "roots": [
+                "lunch",
+                "break"
+            ]
+        },
+        "coffee break": {
+            "hypernym": "break",
+            "involves": "coffee",
+            "roots": [
+                "coffee",
+                "break"
+            ]
+        }
     },
-    "lunchbreak": {
-        "hypernym": "break",
-        "involves": "lunch",
-        "roots": [
-            "lunch",
-            "break"
+    "labels": {
+        "en": [
+            {
+                "concept": "break",
+                "label": "break"
+            },
+            {
+                "concept": "lunchbreak",
+                "label": [
+                    "lunchbreak",
+                    "lunch break"
+                ]
+            },
+            {
+                "concept": "coffee break",
+                "label": "coffee break"
+            }
         ],
-        "en": "lunchbreak|lunch break",
-        "fi": "lounastauko",
-        "nl": "de lunchpauze"
-    },
-    "coffee break": {
-        "hypernym": "break",
-        "involves": "coffee",
-        "roots": [
-            "coffee",
-            "break"
+        "fi": [
+            {
+                "concept": "break",
+                "label": "tauko"
+            },
+            {
+                "concept": "lunchbreak",
+                "label": "lounastauko"
+            },
+            {
+                "concept": "coffee break",
+                "label": "kahvitauko"
+            }
         ],
-        "en": "coffee break",
-        "fi": "kahvitauko",
-        "nl": "de koffiepauze"
+        "nl": [
+            {
+                "concept": "break",
+                "label": "de pauze"
+            },
+            {
+                "concept": "lunchbreak",
+                "label": "de lunchpauze"
+            },
+            {
+                "concept": "coffee break",
+                "label": "de koffiepauze"
+            }
+        ]
     }
 }

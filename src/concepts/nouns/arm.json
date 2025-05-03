@@ -1,20 +1,39 @@
 {
-    "arm": {
-        "holonym": "body",
-        "roots": {
-            "fi": "hand"
-        },
-        "en": {
-            "singular": "arm",
-            "plural": "arms"
-        },
-        "fi": {
-            "singular": "käsivarsi",
-            "plural": "käsivarret"
-        },
-        "nl": {
-            "singular": "de arm",
-            "plural": "de armen"
+    "concepts": {
+        "arm": {
+            "holonym": "body",
+            "roots": {
+                "fi": "hand"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "arm",
+                "label": {
+                    "singular": "arm",
+                    "plural": "arms"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "arm",
+                "label": {
+                    "singular": "käsivarsi",
+                    "plural": "käsivarret"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "arm",
+                "label": {
+                    "singular": "de arm",
+                    "plural": "de armen"
+                }
+            }
+        ]
     }
 }

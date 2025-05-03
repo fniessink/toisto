@@ -1,7 +1,25 @@
 {
-    "thin": {
-        "en": "thin",
-        "fi": "ohut",
-        "nl": "dun"
+    "concepts": {
+        "thin": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "thin",
+                "label": "thin"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "thin",
+                "label": "ohut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "thin",
+                "label": "dun"
+            }
+        ]
     }
 }

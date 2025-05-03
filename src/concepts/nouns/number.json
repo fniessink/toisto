@@ -1,34 +1,70 @@
 {
-    "number": {
-        "en": {
-            "singular": "number",
-            "plural": "numbers"
+    "concepts": {
+        "number": {},
+        "emergency number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            }
         },
-        "fi": {
-            "singular": "numero",
-            "plural": "numerot"
-        },
-        "nl": {
-            "singular": "het getal",
-            "plural": "de getallen"
+        "queueing number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            }
         }
     },
-    "emergency number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
-        },
-        "en": "emergency number",
-        "fi": "hätänumero",
-        "nl": "het alarmnummer"
-    },
-    "queueing number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
-        },
-        "en": "queueing number",
-        "fi": "vuoronumero",
-        "nl": "het volgnummer"
+    "labels": {
+        "en": [
+            {
+                "concept": "number",
+                "label": {
+                    "singular": "number",
+                    "plural": "numbers"
+                }
+            },
+            {
+                "concept": "emergency number",
+                "label": "emergency number"
+            },
+            {
+                "concept": "queueing number",
+                "label": "queueing number"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "number",
+                "label": {
+                    "singular": "numero",
+                    "plural": "numerot"
+                }
+            },
+            {
+                "concept": "emergency number",
+                "label": "hätänumero"
+            },
+            {
+                "concept": "queueing number",
+                "label": "vuoronumero"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "number",
+                "label": {
+                    "singular": "het getal",
+                    "plural": "de getallen"
+                }
+            },
+            {
+                "concept": "emergency number",
+                "label": "het alarmnummer"
+            },
+            {
+                "concept": "queueing number",
+                "label": "het volgnummer"
+            }
+        ]
     }
 }

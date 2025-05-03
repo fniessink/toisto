@@ -3,24 +3,24 @@
 green -r
 
 if [[ "$1" == "--fix" ]]; then
-    ruff check --fix .
-    ruff format .
+    uvx ruff check --fix .
+    uvx ruff format .
 else
-    ruff check .
-    ruff format --check .
+    uvx ruff check .
+    uvx ruff format --check .
 fi
 
-mypy src tests tools
+uvx mypy --python-executable=.venv/bin/python src tests tools
 
-vulture --exclude venv .
+uvx vulture --exclude .venv .
 
 if [[ "$1" == "--fix" ]]; then
-    fixit fix .
+    uvx fixit fix .
 else
-    fixit lint .
+    uvx fixit lint .
 fi
 
-bandit --quiet -r src tests tools
+uvx bandit --quiet -r src tests tools
 
 if [[ "$1" == "--fix" ]]; then
     python tools/format_json.py

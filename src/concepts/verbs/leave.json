@@ -1,17 +1,47 @@
 {
-    "to leave": {
-        "example": "the train departs from platform 4",
-        "en": [
-            "to leave",
-            "to depart"
-        ],
-        "fi": "lähteä;;lähteä is verbityyppi 1",
-        "nl": "vertrekken"
+    "concepts": {
+        "to leave": {
+            "example": "the train departs from platform 4"
+        },
+        "to leave behind": {
+            "hypernym": "transitive verb"
+        }
     },
-    "to leave behind": {
-        "hypernym": "transitive verb",
-        "en": "to leave behind",
-        "fi": "jättää",
-        "nl": "achterlaten"
+    "labels": {
+        "en": [
+            {
+                "concept": "to leave",
+                "label": "to leave"
+            },
+            {
+                "concept": "to leave",
+                "label": "to depart"
+            },
+            {
+                "concept": "to leave behind",
+                "label": "to leave behind"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to leave",
+                "label": "lähteä",
+                "note": "lähteä is verbityyppi 1"
+            },
+            {
+                "concept": "to leave behind",
+                "label": "jättää"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to leave",
+                "label": "vertrekken"
+            },
+            {
+                "concept": "to leave behind",
+                "label": "achterlaten"
+            }
+        ]
     }
 }

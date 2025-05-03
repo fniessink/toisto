@@ -1,17 +1,36 @@
 {
-    "bear": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "bear",
-            "plural": "bears"
-        },
-        "fi": {
-            "singular": "karhu",
-            "plural": "karhut"
-        },
-        "nl": {
-            "singular": "de beer",
-            "plural": "de beren"
+    "concepts": {
+        "bear": {
+            "hypernym": "animal"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bear",
+                "label": {
+                    "singular": "bear",
+                    "plural": "bears"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bear",
+                "label": {
+                    "singular": "karhu",
+                    "plural": "karhut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bear",
+                "label": {
+                    "singular": "de beer",
+                    "plural": "de beren"
+                }
+            }
+        ]
     }
 }

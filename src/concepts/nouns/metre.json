@@ -1,25 +1,63 @@
 {
-    "metre": {
-        "en": {
-            "singular": "metre|meter",
-            "plural": "metres|meters"
-        },
-        "fi": {
-            "singular": "metri",
-            "plural": "metrit"
-        },
-        "nl": {
-            "singular": "de meter",
-            "plural": "de meters"
+    "concepts": {
+        "metre": {},
+        "square metre": {
+            "roots": "metre"
         }
     },
-    "square metre": {
-        "roots": "metre",
-        "en": "square metre|square meter",
-        "fi": [
-            "neliömetri",
-            "neliö*"
+    "labels": {
+        "en": [
+            {
+                "concept": "metre",
+                "label": {
+                    "singular": [
+                        "metre",
+                        "meter"
+                    ],
+                    "plural": [
+                        "metres",
+                        "meters"
+                    ]
+                }
+            },
+            {
+                "concept": "square metre",
+                "label": [
+                    "square metre",
+                    "square meter"
+                ]
+            }
         ],
-        "nl": "de vierkante meter"
+        "fi": [
+            {
+                "concept": "metre",
+                "label": {
+                    "singular": "metri",
+                    "plural": "metrit"
+                }
+            },
+            {
+                "concept": "square metre",
+                "label": "neliömetri"
+            },
+            {
+                "concept": "square metre",
+                "label": "neliö",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "metre",
+                "label": {
+                    "singular": "de meter",
+                    "plural": "de meters"
+                }
+            },
+            {
+                "concept": "square metre",
+                "label": "de vierkante meter"
+            }
+        ]
     }
 }

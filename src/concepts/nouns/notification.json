@@ -1,19 +1,47 @@
 {
-    "notification": {
-        "en": "notification",
-        "fi": "ilmoitus",
-        "nl": [
-            "de mededeling",
-            "het bericht"
-        ]
+    "concepts": {
+        "notification": {},
+        "moving notice": {
+            "roots": {
+                "fi": "notification",
+                "nl": "notification"
+            }
+        }
     },
-    "moving notice": {
-        "roots": {
-            "fi": "notification",
-            "nl": "notification"
-        },
-        "en": "moving notice",
-        "fi": "muuttoilmoitus",
-        "nl": "het verhuisbericht"
+    "labels": {
+        "en": [
+            {
+                "concept": "notification",
+                "label": "notification"
+            },
+            {
+                "concept": "moving notice",
+                "label": "moving notice"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "notification",
+                "label": "ilmoitus"
+            },
+            {
+                "concept": "moving notice",
+                "label": "muuttoilmoitus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "notification",
+                "label": "de mededeling"
+            },
+            {
+                "concept": "notification",
+                "label": "het bericht"
+            },
+            {
+                "concept": "moving notice",
+                "label": "het verhuisbericht"
+            }
+        ]
     }
 }

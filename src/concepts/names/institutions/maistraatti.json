@@ -1,7 +1,26 @@
 {
-    "maistraatti": {
-        "en": "local register office",
-        "fi": "maistraatti",
-        "nl": "(bureau van de burgerlijke stand)"
+    "concepts": {
+        "maistraatti": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "maistraatti",
+                "label": "local register office"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "maistraatti",
+                "label": "maistraatti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "maistraatti",
+                "label": "bureau van de burgerlijke stand",
+                "meaning-only": true
+            }
+        ]
     }
 }

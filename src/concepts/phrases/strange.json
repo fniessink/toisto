@@ -1,10 +1,29 @@
 {
-    "Strange!": {
+    "concepts": {
+        "Strange!": {}
+    },
+    "labels": {
         "en": [
-            "Strange!",
-            "Weird!"
+            {
+                "concept": "Strange!",
+                "label": "Strange!"
+            },
+            {
+                "concept": "Strange!",
+                "label": "Weird!"
+            }
         ],
-        "fi": "Ihme juttu!",
-        "nl": "Vreemd!"
+        "fi": [
+            {
+                "concept": "Strange!",
+                "label": "Ihme juttu!"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "Strange!",
+                "label": "Vreemd!"
+            }
+        ]
     }
 }

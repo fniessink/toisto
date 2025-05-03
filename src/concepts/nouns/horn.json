@@ -1,17 +1,36 @@
 {
-    "horn": {
-        "holonym": "animal",
-        "en": {
-            "singular": "horn",
-            "plural": "horns"
-        },
-        "fi": {
-            "singular": "sarvi",
-            "plural": "sarvet"
-        },
-        "nl": {
-            "singular": "de hoorn",
-            "plural": "de hoorns"
+    "concepts": {
+        "horn": {
+            "holonym": "animal"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "horn",
+                "label": {
+                    "singular": "horn",
+                    "plural": "horns"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "horn",
+                "label": {
+                    "singular": "sarvi",
+                    "plural": "sarvet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "horn",
+                "label": {
+                    "singular": "de hoorn",
+                    "plural": "de hoorns"
+                }
+            }
+        ]
     }
 }

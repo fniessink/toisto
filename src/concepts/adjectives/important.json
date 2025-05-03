@@ -1,26 +1,54 @@
 {
-    "important": {
-        "example": "sleeping is important",
-        "en": {
-            "positive degree": "important",
-            "comparative degree": "more important",
-            "superlative degree": "most important"
+    "concepts": {
+        "important": {
+            "example": "sleeping is important"
         },
-        "fi": {
-            "positive degree": "tärkeä",
-            "comparative degree": "tärkeämpi",
-            "superlative degree": "tärkein"
-        },
-        "nl": {
-            "positive degree": "belangrijk",
-            "comparative degree": "belangrijker",
-            "superlative degree": "belangrijkst"
+        "more important than": {
+            "roots": "important"
         }
     },
-    "more important than": {
-        "roots": "important",
-        "en": "more important than",
-        "fi": "tärkeämpi kuin",
-        "nl": "belangrijker dan"
+    "labels": {
+        "en": [
+            {
+                "concept": "important",
+                "label": {
+                    "positive degree": "important",
+                    "comparative degree": "more important",
+                    "superlative degree": "most important"
+                }
+            },
+            {
+                "concept": "more important than",
+                "label": "more important than"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "important",
+                "label": {
+                    "positive degree": "tärkeä",
+                    "comparative degree": "tärkeämpi",
+                    "superlative degree": "tärkein"
+                }
+            },
+            {
+                "concept": "more important than",
+                "label": "tärkeämpi kuin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "important",
+                "label": {
+                    "positive degree": "belangrijk",
+                    "comparative degree": "belangrijker",
+                    "superlative degree": "belangrijkst"
+                }
+            },
+            {
+                "concept": "more important than",
+                "label": "belangrijker dan"
+            }
+        ]
     }
 }

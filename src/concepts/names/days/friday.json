@@ -1,22 +1,47 @@
 {
-    "friday": {
-        "holonym": "days of the week",
-        "hypernym": "day",
-        "roots": {
-            "en": "day",
-            "nl": "day"
-        },
-        "en": {
-            "singular": "Friday;;In English, the names of weekdays are capitalized",
-            "plural": "Fridays"
-        },
-        "fi": {
-            "singular": "perjantai;;In Finnish, the names of weekdays are not capitalized",
-            "plural": "perjantait"
-        },
-        "nl": {
-            "singular": "vrijdag|de vrijdag;In Dutch, the names of weekdays are not capitalized",
-            "plural": "de vrijdagen"
+    "concepts": {
+        "friday": {
+            "holonym": "days of the week",
+            "hypernym": "day",
+            "roots": {
+                "en": "day",
+                "nl": "day"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "friday",
+                "label": {
+                    "singular": "Friday",
+                    "plural": "Fridays"
+                },
+                "note": "In English, the names of weekdays are capitalized"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "friday",
+                "label": {
+                    "singular": "perjantai",
+                    "plural": "perjantait"
+                },
+                "note": "In Finnish, the names of weekdays are not capitalized"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "friday",
+                "label": {
+                    "singular": [
+                        "vrijdag",
+                        "de vrijdag"
+                    ],
+                    "plural": "de vrijdagen"
+                },
+                "note": "In Dutch, the names of weekdays are not capitalized"
+            }
+        ]
     }
 }

@@ -1,49 +1,67 @@
 {
-    "to suit": {
-        "en": {
-            "infinitive": "to suit",
-            "singular": {
-                "first person": "I suit",
-                "second person": "you suit",
-                "third person": {
-                    "feminine": "she suits",
-                    "masculine": "he suits"
+    "concepts": {
+        "to suit": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to suit",
+                "label": {
+                    "infinitive": "to suit",
+                    "singular": {
+                        "first person": "I suit",
+                        "second person": "you suit",
+                        "third person": {
+                            "feminine": "she suits",
+                            "masculine": "he suits"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we suit",
+                        "second person": "you suit",
+                        "third person": "they suit"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we suit",
-                "second person": "you suit",
-                "third person": "they suit"
             }
-        },
-        "fi": {
-            "infinitive": "sopia",
-            "singular": {
-                "first person": "minä sovin",
-                "second person": "sinä sovit",
-                "third person": "hän sopii"
-            },
-            "plural": {
-                "first person": "me sovimme",
-                "second person": "te sovitte",
-                "third person": "he sopivat"
-            }
-        },
-        "nl": {
-            "infinitive": "schikken",
-            "singular": {
-                "first person": "ik schik",
-                "second person": "jij schikt",
-                "third person": {
-                    "feminine": "zij schikt",
-                    "masculine": "hij schikt"
+        ],
+        "fi": [
+            {
+                "concept": "to suit",
+                "label": {
+                    "infinitive": "sopia",
+                    "singular": {
+                        "first person": "minä sovin",
+                        "second person": "sinä sovit",
+                        "third person": "hän sopii"
+                    },
+                    "plural": {
+                        "first person": "me sovimme",
+                        "second person": "te sovitte",
+                        "third person": "he sopivat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij schikken",
-                "second person": "jullie schikken",
-                "third person": "zij schikken"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to suit",
+                "label": {
+                    "infinitive": "schikken",
+                    "singular": {
+                        "first person": "ik schik",
+                        "second person": "jij schikt",
+                        "third person": {
+                            "feminine": "zij schikt",
+                            "masculine": "hij schikt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij schikken",
+                        "second person": "jullie schikken",
+                        "third person": "zij schikken"
+                    }
+                }
+            }
+        ]
     }
 }

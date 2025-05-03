@@ -1,31 +1,41 @@
 {
-    "SM1.6": {
-        "involves": [
-            "bed",
-            "carpet",
-            "centre",
-            "chair",
-            "curtain",
-            "desk",
-            "door",
-            "floor",
-            "house",
-            "kitchen",
-            "lamp",
-            "office chair",
-            "road",
-            "room",
-            "sofa",
-            "store",
-            "street",
-            "sugar",
-            "table",
-            "this week",
-            "train",
-            "tree",
-            "wall",
-            "window"
-        ],
-        "fi": "(SM1.6)"
+    "concepts": {
+        "SM1.6": {
+            "involves": [
+                "bed",
+                "carpet",
+                "centre",
+                "chair",
+                "curtain",
+                "desk",
+                "door",
+                "floor",
+                "house",
+                "kitchen",
+                "lamp",
+                "office chair",
+                "road",
+                "room",
+                "sofa",
+                "store",
+                "street",
+                "sugar",
+                "table",
+                "this week",
+                "train",
+                "tree",
+                "wall",
+                "window"
+            ]
+        }
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "SM1.6",
+                "label": "SM1.6",
+                "meaning-only": true
+            }
+        ]
     }
 }

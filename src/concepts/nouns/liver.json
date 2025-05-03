@@ -1,8 +1,27 @@
 {
-    "liver": {
-        "hypernym": "organ",
-        "en": "liver",
-        "fi": "maksa",
-        "nl": "de lever"
+    "concepts": {
+        "liver": {
+            "hypernym": "organ"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "liver",
+                "label": "liver"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "liver",
+                "label": "maksa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "liver",
+                "label": "de lever"
+            }
+        ]
     }
 }

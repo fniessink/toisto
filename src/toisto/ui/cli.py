@@ -86,7 +86,7 @@ class CommandBuilder:
             command, description=description, help=command_help, formatter_class=RichHelpFormatter
         )
 
-    def add_language_arguments(self, parser: ArgumentParser, required: bool | None = None) -> None:
+    def add_language_arguments(self, parser: ArgumentParser, required: bool | None = None) -> None:  # noqa: FBT001
         """Add the language arguments to the parser."""
         required = self.LANGUAGE_ARGUMENT_REQUIRED if required is None else required
         languages = ", ".join(sorted(BUILT_IN_LANGUAGES))

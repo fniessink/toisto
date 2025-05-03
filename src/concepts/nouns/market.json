@@ -1,44 +1,87 @@
 {
-    "market": {
-        "en": {
-            "singular": "market",
-            "plural": "markets"
+    "concepts": {
+        "market": {},
+        "market hall": {
+            "hypernym": "building",
+            "roots": {
+                "en": "market",
+                "fi": "store",
+                "nl": "market"
+            }
         },
-        "fi": {
-            "singular": "tori",
-            "plural": "torit"
-        },
-        "nl": {
-            "singular": "de markt",
-            "plural": "de markten"
+        "flea market": {
+            "hypernym": "market",
+            "roots": [
+                "flea",
+                "market"
+            ]
         }
     },
-    "market hall": {
-        "hypernym": "building",
-        "roots": {
-            "en": "market",
-            "fi": "store",
-            "nl": "market"
-        },
-        "en": "market hall",
-        "fi": "kauppahalli",
-        "nl": "de markthal"
-    },
-    "flea market": {
-        "hypernym": "market",
-        "roots": [
-            "flea",
-            "market"
+    "labels": {
+        "en": [
+            {
+                "concept": "market",
+                "label": {
+                    "singular": "market",
+                    "plural": "markets"
+                }
+            },
+            {
+                "concept": "market hall",
+                "label": "market hall"
+            },
+            {
+                "concept": "flea market",
+                "label": "flea market"
+            }
         ],
-        "en": "flea market",
         "fi": [
-            "kirpputori",
-            "kirppari*",
-            "kirppis*"
+            {
+                "concept": "market",
+                "label": {
+                    "singular": "tori",
+                    "plural": "torit"
+                }
+            },
+            {
+                "concept": "market hall",
+                "label": "kauppahalli"
+            },
+            {
+                "concept": "flea market",
+                "label": "kirpputori"
+            },
+            {
+                "concept": "flea market",
+                "label": "kirppari",
+                "colloquial": true
+            },
+            {
+                "concept": "flea market",
+                "label": "kirppis",
+                "colloquial": true
+            }
         ],
         "nl": [
-            "de rommelmarkt",
-            "de vlooienmarkt"
+            {
+                "concept": "market",
+                "label": {
+                    "singular": "de markt",
+                    "plural": "de markten"
+                }
+            },
+            {
+                "concept": "market hall",
+                "label": "de markthal"
+            },
+            {
+                "concept": "flea market",
+                "label": "de rommelmarkt"
+            },
+            {
+                "concept": "flea market",
+                "label": "de vlooienmarkt"
+            }
         ]
     }
 }

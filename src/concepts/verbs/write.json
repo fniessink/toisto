@@ -1,106 +1,125 @@
 {
-    "to write": {
-        "en": {
-            "infinitive": "to write",
-            "imperative": "Write!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "I write",
-                        "second person": "you write",
-                        "third person": {
-                            "feminine": "she writes",
-                            "masculine": "he writes"
+    "concepts": {
+        "to write": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to write",
+                "label": {
+                    "infinitive": "to write",
+                    "imperative": "Write!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "I write",
+                                "second person": "you write",
+                                "third person": {
+                                    "feminine": "she writes",
+                                    "masculine": "he writes"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we write",
+                                "second person": "you write",
+                                "third person": "they write"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "I wrote",
+                                "second person": "you wrote",
+                                "third person": {
+                                    "feminine": "she wrote",
+                                    "masculine": "he wrote"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we wrote",
+                                "second person": "you wrote",
+                                "third person": "they wrote"
+                            }
                         }
-                    },
-                    "plural": {
-                        "first person": "we write",
-                        "second person": "you write",
-                        "third person": "they write"
-                    }
-                },
-                "past tense": {
-                    "singular": {
-                        "first person": "I wrote",
-                        "second person": "you wrote",
-                        "third person": {
-                            "feminine": "she wrote",
-                            "masculine": "he wrote"
-                        }
-                    },
-                    "plural": {
-                        "first person": "we wrote",
-                        "second person": "you wrote",
-                        "third person": "they wrote"
                     }
                 }
             }
-        },
-        "fi": {
-            "infinitive": "kirjoittaa;;kirjoittaa is verbityypi 1",
-            "imperative": "Kirjoita!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "minä kirjoitan",
-                        "second person": "sinä kirjoitat",
-                        "third person": "hän kirjoittaa"
-                    },
-                    "plural": {
-                        "first person": "me kirjoitamme",
-                        "second person": "te kirjoitatte",
-                        "third person": "he kirjoittavat"
+        ],
+        "fi": [
+            {
+                "concept": "to write",
+                "label": {
+                    "infinitive": "kirjoittaa",
+                    "imperative": "Kirjoita!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä kirjoitan",
+                                "second person": "sinä kirjoitat",
+                                "third person": "hän kirjoittaa"
+                            },
+                            "plural": {
+                                "first person": "me kirjoitamme",
+                                "second person": "te kirjoitatte",
+                                "third person": "he kirjoittavat"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "minä kirjoitin",
+                                "second person": "sinä kirjoitit",
+                                "third person": "hän kirjoitti"
+                            },
+                            "plural": {
+                                "first person": "me kirjoitimme",
+                                "second person": "te kirjoititte",
+                                "third person": "he kirjoittivat"
+                            }
+                        }
                     }
                 },
-                "past tense": {
-                    "singular": {
-                        "first person": "minä kirjoitin",
-                        "second person": "sinä kirjoitit",
-                        "third person": "hän kirjoitti"
-                    },
-                    "plural": {
-                        "first person": "me kirjoitimme",
-                        "second person": "te kirjoititte",
-                        "third person": "he kirjoittivat"
+                "note": "kirjoittaa is verbityypi 1"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to write",
+                "label": {
+                    "infinitive": "schrijven",
+                    "imperative": "Schrijf!",
+                    "declarative": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik schrijf",
+                                "second person": "jij schrijft",
+                                "third person": {
+                                    "feminine": "zij schrijft",
+                                    "masculine": "hij schrijft"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij schrijven",
+                                "second person": "jullie schrijven",
+                                "third person": "zij schrijven"
+                            }
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik schreef",
+                                "second person": "jij schreef",
+                                "third person": {
+                                    "feminine": "zij schreef",
+                                    "masculine": "hij schreef"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij schreven",
+                                "second person": "jullie schreven",
+                                "third person": "zij schreven"
+                            }
+                        }
                     }
                 }
             }
-        },
-        "nl": {
-            "infinitive": "schrijven",
-            "imperative": "Schrijf!",
-            "declarative": {
-                "present tense": {
-                    "singular": {
-                        "first person": "ik schrijf",
-                        "second person": "jij schrijft",
-                        "third person": {
-                            "feminine": "zij schrijft",
-                            "masculine": "hij schrijft"
-                        }
-                    },
-                    "plural": {
-                        "first person": "wij schrijven",
-                        "second person": "jullie schrijven",
-                        "third person": "zij schrijven"
-                    }
-                },
-                "past tense": {
-                    "singular": {
-                        "first person": "ik schreef",
-                        "second person": "jij schreef",
-                        "third person": {
-                            "feminine": "zij schreef",
-                            "masculine": "hij schreef"
-                        }
-                    },
-                    "plural": {
-                        "first person": "wij schreven",
-                        "second person": "jullie schreven",
-                        "third person": "zij schreven"
-                    }
-                }
-            }
-        }
+        ]
     }
 }

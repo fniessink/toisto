@@ -1,8 +1,30 @@
 {
-    "steering wheel": {
-        "holonym": "car",
-        "en": "steering wheel",
-        "fi": "ratti",
-        "nl": "het stuurwiel|het stuur"
+    "concepts": {
+        "steering wheel": {
+            "holonym": "car"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "steering wheel",
+                "label": "steering wheel"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "steering wheel",
+                "label": "ratti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "steering wheel",
+                "label": [
+                    "het stuurwiel",
+                    "het stuur"
+                ]
+            }
+        ]
     }
 }

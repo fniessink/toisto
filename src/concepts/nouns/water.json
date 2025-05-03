@@ -1,35 +1,70 @@
 {
-    "water": {
-        "hypernym": "drink",
-        "en": {
-            "singular": "water",
-            "plural": "waters"
+    "concepts": {
+        "water": {
+            "hypernym": "drink"
         },
-        "fi": {
-            "singular": "vesi",
-            "plural": "vedet"
+        "mineral water": {
+            "hypernym": "water"
         },
-        "nl": {
-            "singular": "het water",
-            "plural": [
-                "de waters",
-                "de wateren"
-            ]
+        "on the water": {
+            "roots": "water"
         }
     },
-    "mineral water": {
-        "hypernym": "water",
-        "en": "mineral water",
-        "fi": [
-            "kivennäisvesi",
-            "vissy"
+    "labels": {
+        "en": [
+            {
+                "concept": "water",
+                "label": {
+                    "singular": "water",
+                    "plural": "waters"
+                }
+            },
+            {
+                "concept": "mineral water",
+                "label": "mineral water"
+            },
+            {
+                "concept": "on the water",
+                "label": "on the water"
+            }
         ],
-        "nl": "het mineraalwater"
-    },
-    "on the water": {
-        "roots": "water",
-        "en": "on the water",
-        "fi": "vesillä",
-        "nl": "op het water"
+        "fi": [
+            {
+                "concept": "water",
+                "label": {
+                    "singular": "vesi",
+                    "plural": "vedet"
+                }
+            },
+            {
+                "concept": "mineral water",
+                "label": "kivennäisvesi"
+            },
+            {
+                "concept": "mineral water",
+                "label": "vissy"
+            },
+            {
+                "concept": "on the water",
+                "label": "vesillä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "water",
+                "label": {
+                    "singular": "het water",
+                    "plural": "de waters"
+                }
+            },
+            {
+                "concept": "mineral water",
+                "label": "het mineraalwater"
+            },
+            {
+                "concept": "on the water",
+                "label": "op het water"
+            }
+        ]
     }
 }

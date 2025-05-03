@@ -1,253 +1,439 @@
 {
-    "flower": {
-        "en": {
-            "singular": "flower",
-            "plural": "flowers"
+    "concepts": {
+        "flower": {},
+        "desert": {
+            "roots": {
+                "fi": "country"
+            }
         },
-        "fi": {
-            "singular": "kukka",
-            "plural": "kukat"
+        "valley": {},
+        "world": {
+            "roots": {
+                "fi": "country"
+            }
         },
-        "nl": {
-            "singular": "de bloem",
-            "plural": "de bloemen"
-        }
-    },
-    "desert": {
-        "roots": {
-            "fi": "country"
+        "ground": {},
+        "fire": {},
+        "volcano": {
+            "hypernym": "mountain",
+            "roots": {
+                "fi": [
+                    "fire",
+                    "mountain"
+                ]
+            }
         },
-        "en": {
-            "singular": "desert",
-            "plural": "deserts"
-        },
-        "fi": {
-            "singular": [
-                "aavikko",
-                "autiomaa"
-            ],
-            "plural": [
-                "aavikot",
-                "autiomaat"
+        "cave": {},
+        "canyon": {},
+        "rainforest": {
+            "hypernym": "forest",
+            "roots": [
+                "rain",
+                "forest"
             ]
         },
-        "nl": {
-            "singular": "de woestijn",
-            "plural": "de woestijnen"
-        }
-    },
-    "valley": {
-        "en": {
-            "singular": "valley",
-            "plural": "valleys"
+        "glacier": {
+            "roots": {
+                "fi": "ice"
+            }
         },
-        "fi": {
-            "singular": "laakso",
-            "plural": "laaksot"
+        "northern lights": {
+            "roots": {
+                "en": "north",
+                "fi": "fire",
+                "nl": "north"
+            }
         },
-        "nl": {
-            "singular": "de vallei",
-            "plural": "de valleien"
-        }
-    },
-    "world": {
-        "roots": {
-            "fi": "country"
-        },
-        "en": "world",
-        "fi": "maailma",
-        "nl": "de wereld"
-    },
-    "ground": {
-        "en": {
-            "singular": "ground",
-            "plural": "grounds"
-        },
-        "fi": {
-            "singular": "maa;solid surface of the earth",
-            "plural": "maat;solid surfaces of the earth"
-        },
-        "nl": {
-            "singular": "de grond",
-            "plural": "de gronden"
-        }
-    },
-    "fire": {
-        "en": {
-            "singular": "fire",
-            "plural": "fires"
-        },
-        "fi": {
-            "singular": "tuli",
-            "plural": "tulet"
-        },
-        "nl": {
-            "singular": "het vuur",
-            "plural": "de vuren"
-        }
-    },
-    "volcano": {
-        "hypernym": "mountain",
-        "roots": {
-            "fi": [
-                "fire",
-                "mountain"
+        "it is cold in the north": {
+            "roots": [
+                "to be",
+                "cold",
+                "north"
             ]
         },
-        "en": {
-            "singular": "volcano",
-            "plural": "volcanoes|volcanos"
+        "it is warm in the south": {
+            "roots": [
+                "to be",
+                "warm",
+                "south"
+            ]
         },
-        "fi": {
-            "singular": "tulivuori",
-            "plural": "tulivuoret"
+        "she is from the north": {
+            "roots": [
+                "north",
+                "to come"
+            ]
         },
-        "nl": {
-            "singular": "de vulkaan",
-            "plural": "de vulkanen"
+        "they live in the west": {
+            "roots": [
+                "west",
+                "to live"
+            ]
+        },
+        "the city is in the east": {
+            "roots": [
+                "city",
+                "to be",
+                "east"
+            ]
+        },
+        "we walk in the forest": {
+            "roots": [
+                "to walk",
+                "forest"
+            ]
         }
     },
-    "cave": {
-        "en": {
-            "singular": "cave",
-            "plural": "caves"
-        },
-        "fi": {
-            "singular": "luola",
-            "plural": "luolat"
-        },
-        "nl": {
-            "singular": "de grot",
-            "plural": "de grotten"
-        }
-    },
-    "canyon": {
-        "en": {
-            "singular": "canyon",
-            "plural": "canyons"
-        },
-        "fi": {
-            "singular": "rotko",
-            "plural": "rotkot"
-        },
-        "nl": {
-            "singular": "de kloof",
-            "plural": "de kloven"
-        }
-    },
-    "rainforest": {
-        "hypernym": "forest",
-        "roots": [
-            "rain",
-            "forest"
-        ],
-        "en": {
-            "singular": "rainforest|rain forest",
-            "plural": "rainforests|rain forests"
-        },
-        "fi": {
-            "singular": "sademetsä",
-            "plural": "sademetsät"
-        },
-        "nl": {
-            "singular": "het regenwoud",
-            "plural": "de regenwouden"
-        }
-    },
-    "glacier": {
-        "roots": {
-            "fi": "ice"
-        },
-        "en": {
-            "singular": "glacier",
-            "plural": "glaciers"
-        },
-        "fi": {
-            "singular": "jäätikkö",
-            "plural": "jäätiköt"
-        },
-        "nl": {
-            "singular": "de gletsjer",
-            "plural": "de gletsjers"
-        }
-    },
-    "northern lights": {
-        "roots": {
-            "en": "north",
-            "fi": "fire",
-            "nl": "north"
-        },
-        "en": "northern lights",
-        "fi": "revontulet",
-        "nl": "het noorderlicht"
-    },
-    "it is cold in the north": {
-        "roots": [
-            "to be",
-            "cold",
-            "north"
-        ],
-        "en": "It is cold in the north.",
-        "fi": "Pohjoisessa on kylmä.",
-        "nl": "Het is koud in het noorden.|In het noorden is het koud."
-    },
-    "it is warm in the south": {
-        "roots": [
-            "to be",
-            "warm",
-            "south"
-        ],
-        "en": "It is warm in the south.",
-        "fi": "Etelässä on lämmin.",
-        "nl": "Het is warm in het zuiden."
-    },
-    "she is from the north": {
-        "roots": [
-            "north",
-            "to come"
-        ],
+    "labels": {
         "en": [
-            "She is from the north.",
-            "She comes from the north."
+            {
+                "concept": "flower",
+                "label": {
+                    "singular": "flower",
+                    "plural": "flowers"
+                }
+            },
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "desert",
+                    "plural": "deserts"
+                }
+            },
+            {
+                "concept": "valley",
+                "label": {
+                    "singular": "valley",
+                    "plural": "valleys"
+                }
+            },
+            {
+                "concept": "world",
+                "label": "world"
+            },
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "ground",
+                    "plural": "grounds"
+                }
+            },
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "fire",
+                    "plural": "fires"
+                }
+            },
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "volcano",
+                    "plural": [
+                        "volcanoes",
+                        "volcanos"
+                    ]
+                }
+            },
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "cave",
+                    "plural": "caves"
+                }
+            },
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "canyon",
+                    "plural": "canyons"
+                }
+            },
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": [
+                        "rainforest",
+                        "rain forest"
+                    ],
+                    "plural": [
+                        "rainforests",
+                        "rain forests"
+                    ]
+                }
+            },
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "glacier",
+                    "plural": "glaciers"
+                }
+            },
+            {
+                "concept": "northern lights",
+                "label": "northern lights"
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": "It is cold in the north."
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": "It is warm in the south."
+            },
+            {
+                "concept": "she is from the north",
+                "label": "She is from the north."
+            },
+            {
+                "concept": "she is from the north",
+                "label": "She comes from the north."
+            },
+            {
+                "concept": "they live in the west",
+                "label": "They live in the west."
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "The city is in the east."
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "We walk in the forest."
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "We walk in the wood."
+            }
         ],
         "fi": [
-            "Hän tulee pohjoisesta.;feminine",
-            "Hän on kotoisin pohjoisesta.;feminine"
+            {
+                "concept": "flower",
+                "label": {
+                    "singular": "kukka",
+                    "plural": "kukat"
+                }
+            },
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "aavikko",
+                    "plural": "aavikot"
+                }
+            },
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "autiomaa",
+                    "plural": "autiomaat"
+                }
+            },
+            {
+                "concept": "valley",
+                "label": {
+                    "singular": "laakso",
+                    "plural": "laaksot"
+                }
+            },
+            {
+                "concept": "world",
+                "label": "maailma"
+            },
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "maa",
+                    "plural": "maat"
+                },
+                "tip": "solid surface of the earth"
+            },
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "tuli",
+                    "plural": "tulet"
+                }
+            },
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "tulivuori",
+                    "plural": "tulivuoret"
+                }
+            },
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "luola",
+                    "plural": "luolat"
+                }
+            },
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "rotko",
+                    "plural": "rotkot"
+                }
+            },
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": "sademetsä",
+                    "plural": "sademetsät"
+                }
+            },
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "jäätikkö",
+                    "plural": "jäätiköt"
+                }
+            },
+            {
+                "concept": "northern lights",
+                "label": "revontulet"
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": "Pohjoisessa on kylmä."
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": "Etelässä on lämmin."
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Hän tulee pohjoisesta.",
+                "tip": "feminine"
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Hän on kotoisin pohjoisesta.",
+                "tip": "feminine"
+            },
+            {
+                "concept": "they live in the west",
+                "label": "He asuvat lännessä."
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "Kaupunki on idässä."
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "Kaupunki sijaitsee idässä."
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "Me kävelemme metsässä."
+            }
         ],
-        "nl": "Zij komt uit het noorden."
-    },
-    "they live in the west": {
-        "roots": [
-            "west",
-            "to live"
-        ],
-        "en": "They live in the west.",
-        "fi": "He asuvat lännessä.",
-        "nl": "Zij wonen in het westen."
-    },
-    "the city is in the east": {
-        "roots": [
-            "city",
-            "to be",
-            "east"
-        ],
-        "en": "The city is in the east.",
-        "fi": [
-            "Kaupunki on idässä.",
-            "Kaupunki sijaitsee idässä."
-        ],
-        "nl": "De stad ligt in het oosten."
-    },
-    "we walk in the forest": {
-        "roots": [
-            "to walk",
-            "forest"
-        ],
-        "en": [
-            "We walk in the forest.",
-            "We walk in the wood."
-        ],
-        "fi": "Me kävelemme metsässä.",
-        "nl": "Wij wandelen in het bos."
+        "nl": [
+            {
+                "concept": "flower",
+                "label": {
+                    "singular": "de bloem",
+                    "plural": "de bloemen"
+                }
+            },
+            {
+                "concept": "desert",
+                "label": {
+                    "singular": "de woestijn",
+                    "plural": "de woestijnen"
+                }
+            },
+            {
+                "concept": "valley",
+                "label": {
+                    "singular": "de vallei",
+                    "plural": "de valleien"
+                }
+            },
+            {
+                "concept": "world",
+                "label": "de wereld"
+            },
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "de grond",
+                    "plural": "de gronden"
+                }
+            },
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "het vuur",
+                    "plural": "de vuren"
+                }
+            },
+            {
+                "concept": "volcano",
+                "label": {
+                    "singular": "de vulkaan",
+                    "plural": "de vulkanen"
+                }
+            },
+            {
+                "concept": "cave",
+                "label": {
+                    "singular": "de grot",
+                    "plural": "de grotten"
+                }
+            },
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "de kloof",
+                    "plural": "de kloven"
+                }
+            },
+            {
+                "concept": "rainforest",
+                "label": {
+                    "singular": "het regenwoud",
+                    "plural": "de regenwouden"
+                }
+            },
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "de gletsjer",
+                    "plural": "de gletsjers"
+                }
+            },
+            {
+                "concept": "northern lights",
+                "label": "het noorderlicht"
+            },
+            {
+                "concept": "it is cold in the north",
+                "label": [
+                    "Het is koud in het noorden.",
+                    "In het noorden is het koud."
+                ]
+            },
+            {
+                "concept": "it is warm in the south",
+                "label": "Het is warm in het zuiden."
+            },
+            {
+                "concept": "she is from the north",
+                "label": "Zij komt uit het noorden."
+            },
+            {
+                "concept": "they live in the west",
+                "label": "Zij wonen in het westen."
+            },
+            {
+                "concept": "the city is in the east",
+                "label": "De stad ligt in het oosten."
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "Wij wandelen in het bos."
+            }
+        ]
     }
 }

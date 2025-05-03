@@ -1,100 +1,118 @@
 {
-    "to look": {
-        "en": {
-            "infinitive": "to look",
-            "verbal noun": "looking",
-            "present tense": {
-                "singular": {
-                    "first person": "I look",
-                    "second person": "you look",
-                    "third person": {
-                        "feminine": "she looks",
-                        "masculine": "he looks"
+    "concepts": {
+        "to look": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to look",
+                "label": {
+                    "infinitive": "to look",
+                    "verbal noun": "looking",
+                    "present tense": {
+                        "singular": {
+                            "first person": "I look",
+                            "second person": "you look",
+                            "third person": {
+                                "feminine": "she looks",
+                                "masculine": "he looks"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we look",
+                            "second person": "you look",
+                            "third person": "they look"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "I looked",
+                            "second person": "you looked",
+                            "third person": {
+                                "feminine": "she looked",
+                                "masculine": "he looked"
+                            }
+                        },
+                        "plural": {
+                            "first person": "we looked",
+                            "second person": "you looked",
+                            "third person": "they looked"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "we look",
-                    "second person": "you look",
-                    "third person": "they look"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "I looked",
-                    "second person": "you looked",
-                    "third person": {
-                        "feminine": "she looked",
-                        "masculine": "he looked"
-                    }
-                },
-                "plural": {
-                    "first person": "we looked",
-                    "second person": "you looked",
-                    "third person": "they looked"
                 }
             }
-        },
-        "fi": {
-            "infinitive": "katsoa",
-            "verbal noun": "katsominen",
-            "present tense": {
-                "singular": {
-                    "first person": "minä katson",
-                    "second person": "sinä katsot",
-                    "third person": "hän katsoo"
-                },
-                "plural": {
-                    "first person": "me katsomme",
-                    "second person": "te katsotte",
-                    "third person": "he katsovat"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "minä katsoin",
-                    "second person": "sinä katsoit",
-                    "third person": "hän katsoi"
-                },
-                "plural": {
-                    "first person": "me katsoimme",
-                    "second person": "te katsoitte",
-                    "third person": "he katsoivat"
+        ],
+        "fi": [
+            {
+                "concept": "to look",
+                "label": {
+                    "infinitive": "katsoa",
+                    "verbal noun": "katsominen",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minä katson",
+                            "second person": "sinä katsot",
+                            "third person": "hän katsoo"
+                        },
+                        "plural": {
+                            "first person": "me katsomme",
+                            "second person": "te katsotte",
+                            "third person": "he katsovat"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "minä katsoin",
+                            "second person": "sinä katsoit",
+                            "third person": "hän katsoi"
+                        },
+                        "plural": {
+                            "first person": "me katsoimme",
+                            "second person": "te katsoitte",
+                            "third person": "he katsoivat"
+                        }
+                    }
                 }
             }
-        },
-        "nl": {
-            "infinitive": "kijken",
-            "verbal noun": "het kijken",
-            "present tense": {
-                "singular": {
-                    "first person": "ik kijk",
-                    "second person": "jij kijkt",
-                    "third person": {
-                        "feminine": "zij kijkt",
-                        "masculine": "hij kijkt"
+        ],
+        "nl": [
+            {
+                "concept": "to look",
+                "label": {
+                    "infinitive": "kijken",
+                    "verbal noun": "het kijken",
+                    "present tense": {
+                        "singular": {
+                            "first person": "ik kijk",
+                            "second person": "jij kijkt",
+                            "third person": {
+                                "feminine": "zij kijkt",
+                                "masculine": "hij kijkt"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij kijken",
+                            "second person": "jullie kijken",
+                            "third person": "zij kijken"
+                        }
+                    },
+                    "past tense": {
+                        "singular": {
+                            "first person": "ik keek",
+                            "second person": "jij keek",
+                            "third person": {
+                                "feminine": "zij keek",
+                                "masculine": "hij keek"
+                            }
+                        },
+                        "plural": {
+                            "first person": "wij keken",
+                            "second person": "jullie keken",
+                            "third person": "zij keken"
+                        }
                     }
-                },
-                "plural": {
-                    "first person": "wij kijken",
-                    "second person": "jullie kijken",
-                    "third person": "zij kijken"
-                }
-            },
-            "past tense": {
-                "singular": {
-                    "first person": "ik keek",
-                    "second person": "jij keek",
-                    "third person": {
-                        "feminine": "zij keek",
-                        "masculine": "hij keek"
-                    }
-                },
-                "plural": {
-                    "first person": "wij keken",
-                    "second person": "jullie keken",
-                    "third person": "zij keken"
                 }
             }
-        }
+        ]
     }
 }

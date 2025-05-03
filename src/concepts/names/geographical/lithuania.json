@@ -1,8 +1,27 @@
 {
-    "lithuania": {
-        "hypernym": "country",
-        "en": "Lithuania",
-        "fi": "Liettua",
-        "nl": "Litouwen"
+    "concepts": {
+        "lithuania": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lithuania",
+                "label": "Lithuania"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lithuania",
+                "label": "Liettua"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lithuania",
+                "label": "Litouwen"
+            }
+        ]
     }
 }

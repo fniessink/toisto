@@ -1,73 +1,87 @@
 {
-    "to know": {
-        "en": {
-            "infinitive": "to know",
-            "singular": {
-                "first person": "I know",
-                "second person": "you know",
-                "third person": {
-                    "feminine": "she knows",
-                    "masculine": "he knows"
+    "concepts": {
+        "to know": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to know",
+                "label": {
+                    "infinitive": "to know",
+                    "singular": {
+                        "first person": "I know",
+                        "second person": "you know",
+                        "third person": {
+                            "feminine": "she knows",
+                            "masculine": "he knows"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we know",
+                        "second person": "you know",
+                        "third person": "they know"
+                    }
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to know",
+                "label": {
+                    "infinitive": "tietää",
+                    "singular": {
+                        "first person": "minä tiedän",
+                        "second person": "sinä tiedät",
+                        "third person": "hän tietää"
+                    },
+                    "plural": {
+                        "first person": "me tiedämme",
+                        "second person": "te tiedätte",
+                        "third person": "he tietävät"
+                    }
+                },
+                "note": "tietää is verbityyppi 1"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to know",
+                "label": {
+                    "infinitive": "weten",
+                    "singular": {
+                        "first person": "ik weet",
+                        "second person": "jij weet",
+                        "third person": {
+                            "feminine": "zij weet",
+                            "masculine": "hij weet"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij weten",
+                        "second person": "jullie weten",
+                        "third person": "zij weten"
+                    }
                 }
             },
-            "plural": {
-                "first person": "we know",
-                "second person": "you know",
-                "third person": "they know"
-            }
-        },
-        "fi": {
-            "infinitive": "tietää;;tietää is verbityyppi 1",
-            "singular": {
-                "first person": "minä tiedän",
-                "second person": "sinä tiedät",
-                "third person": "hän tietää"
-            },
-            "plural": {
-                "first person": "me tiedämme",
-                "second person": "te tiedätte",
-                "third person": "he tietävät"
-            }
-        },
-        "nl": {
-            "infinitive": [
-                "weten",
-                "kennen"
-            ],
-            "singular": {
-                "first person": [
-                    "ik weet",
-                    "ik ken"
-                ],
-                "second person": [
-                    "jij weet",
-                    "jij kent"
-                ],
-                "third person": {
-                    "feminine": [
-                        "zij weet",
-                        "zij kent"
-                    ],
-                    "masculine": [
-                        "hij weet",
-                        "hij kent"
-                    ]
+            {
+                "concept": "to know",
+                "label": {
+                    "infinitive": "kennen",
+                    "singular": {
+                        "first person": "ik ken",
+                        "second person": "jij kent",
+                        "third person": {
+                            "feminine": "zij kent",
+                            "masculine": "hij kent"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij kennen",
+                        "second person": "jullie kennen",
+                        "third person": "zij kennen"
+                    }
                 }
-            },
-            "plural": {
-                "first person": [
-                    "wij weten",
-                    "wij kennen"
-                ],
-                "second person": [
-                    "jullie weten",
-                    "jullie kennen"
-                ],
-                "third person": [
-                    "zij weten",
-                    "zij kennen"
-                ]
             }
-        }
+        ]
     }
 }

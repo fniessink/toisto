@@ -1,52 +1,71 @@
 {
-    "to do": {
-        "en": {
-            "infinitive": "to do",
-            "verbal noun": "doing",
-            "singular": {
-                "first person": "I do",
-                "second person": "you do",
-                "third person": {
-                    "feminine": "she does",
-                    "masculine": "he does"
+    "concepts": {
+        "to do": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to do",
+                "label": {
+                    "infinitive": "to do",
+                    "verbal noun": "doing",
+                    "singular": {
+                        "first person": "I do",
+                        "second person": "you do",
+                        "third person": {
+                            "feminine": "she does",
+                            "masculine": "he does"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we do",
+                        "second person": "you do",
+                        "third person": "they do"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we do",
-                "second person": "you do",
-                "third person": "they do"
             }
-        },
-        "fi": {
-            "infinitive": "tehdä;;tehdä is verbityyppi 2",
-            "verbal noun": "tekeminen",
-            "singular": {
-                "first person": "minä teen",
-                "second person": "sinä teet",
-                "third person": "hän tekee"
-            },
-            "plural": {
-                "first person": "me teemme",
-                "second person": "te teette",
-                "third person": "he tekevät"
+        ],
+        "fi": [
+            {
+                "concept": "to do",
+                "label": {
+                    "infinitive": "tehdä",
+                    "verbal noun": "tekeminen",
+                    "singular": {
+                        "first person": "minä teen",
+                        "second person": "sinä teet",
+                        "third person": "hän tekee"
+                    },
+                    "plural": {
+                        "first person": "me teemme",
+                        "second person": "te teette",
+                        "third person": "he tekevät"
+                    }
+                },
+                "note": "tehdä is verbityyppi 2"
             }
-        },
-        "nl": {
-            "infinitive": "doen",
-            "verbal noun": "het doen",
-            "singular": {
-                "first person": "ik doe",
-                "second person": "jij doet",
-                "third person": {
-                    "feminine": "zij doet",
-                    "masculine": "hij doet"
+        ],
+        "nl": [
+            {
+                "concept": "to do",
+                "label": {
+                    "infinitive": "doen",
+                    "verbal noun": "het doen",
+                    "singular": {
+                        "first person": "ik doe",
+                        "second person": "jij doet",
+                        "third person": {
+                            "feminine": "zij doet",
+                            "masculine": "hij doet"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij doen",
+                        "second person": "jullie doen",
+                        "third person": "zij doen"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij doen",
-                "second person": "jullie doen",
-                "third person": "zij doen"
             }
-        }
+        ]
     }
 }

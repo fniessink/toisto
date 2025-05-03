@@ -1,7 +1,25 @@
 {
-    "tourist": {
-        "en": "tourist",
-        "fi": "turisti",
-        "nl": "de toerist"
+    "concepts": {
+        "tourist": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "tourist",
+                "label": "tourist"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "tourist",
+                "label": "turisti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "tourist",
+                "label": "de toerist"
+            }
+        ]
     }
 }

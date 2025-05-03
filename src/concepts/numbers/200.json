@@ -1,12 +1,31 @@
 {
-    "200": {
-        "hypernym": "number",
-        "roots": [
-            "2",
-            "100"
+    "concepts": {
+        "200": {
+            "hypernym": "number",
+            "roots": [
+                "2",
+                "100"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "200",
+                "label": "two hundred"
+            }
         ],
-        "en": "two hundred",
-        "fi": "kaksisataa",
-        "nl": "tweehonderd"
+        "fi": [
+            {
+                "concept": "200",
+                "label": "kaksisataa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "200",
+                "label": "tweehonderd"
+            }
+        ]
     }
 }

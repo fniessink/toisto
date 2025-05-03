@@ -1,7 +1,25 @@
 {
-    "valuable": {
-        "en": "valuable",
-        "fi": "arvokas",
-        "nl": "waardevol"
+    "concepts": {
+        "valuable": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "valuable",
+                "label": "valuable"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "valuable",
+                "label": "arvokas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "valuable",
+                "label": "waardevol"
+            }
+        ]
     }
 }

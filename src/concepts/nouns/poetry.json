@@ -1,8 +1,27 @@
 {
-    "poetry": {
-        "hypernym": "literature",
-        "en": "poetry",
-        "fi": "runous",
-        "nl": "de poëzie"
+    "concepts": {
+        "poetry": {
+            "hypernym": "literature"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "poetry",
+                "label": "poetry"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "poetry",
+                "label": "runous"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "poetry",
+                "label": "de poëzie"
+            }
+        ]
     }
 }

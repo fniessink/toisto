@@ -1,8 +1,27 @@
 {
-    "minus": {
-        "antonym": "plus",
-        "en": "minus",
-        "fi": "miinus",
-        "nl": "de min"
+    "concepts": {
+        "minus": {
+            "antonym": "plus"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "minus",
+                "label": "minus"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "minus",
+                "label": "miinus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "minus",
+                "label": "de min"
+            }
+        ]
     }
 }

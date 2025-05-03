@@ -1,10 +1,29 @@
 {
-    "physical": {
-        "en": "physical",
-        "fi": "fyysinen",
+    "concepts": {
+        "physical": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "physical",
+                "label": "physical"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "physical",
+                "label": "fyysinen"
+            }
+        ],
         "nl": [
-            "lichamelijk",
-            "fysiek"
+            {
+                "concept": "physical",
+                "label": "lichamelijk"
+            },
+            {
+                "concept": "physical",
+                "label": "fysiek"
+            }
         ]
     }
 }

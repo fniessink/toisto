@@ -1,39 +1,93 @@
 {
-    "what do you think": {
-        "en": "What do you think?",
+    "concepts": {
+        "what do you think": {},
+        "what is the matter": {},
+        "what is your name": {
+            "roots": [
+                "what",
+                "to be",
+                "name"
+            ]
+        },
+        "my name is bob": {
+            "roots": [
+                "name",
+                "to be"
+            ]
+        },
+        "What was it again?": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "what do you think",
+                "label": "What do you think?"
+            },
+            {
+                "concept": "what is the matter",
+                "label": "What is the matter?"
+            },
+            {
+                "concept": "what is your name",
+                "label": "What is your name?"
+            },
+            {
+                "concept": "my name is bob",
+                "label": "My name is Bob."
+            },
+            {
+                "concept": "What was it again?",
+                "label": "What was it again?"
+            }
+        ],
         "fi": [
-            "Mitä mieltä sinä olet?",
-            "Mitä mieltä sä oot?*"
+            {
+                "concept": "what do you think",
+                "label": "Mitä mieltä sinä olet?"
+            },
+            {
+                "concept": "what do you think",
+                "label": "Mitä mieltä sä oot?",
+                "colloquial": true
+            },
+            {
+                "concept": "what is the matter",
+                "label": "Mikä hätänä?"
+            },
+            {
+                "concept": "what is your name",
+                "label": "Mikä sinun nimesi on?"
+            },
+            {
+                "concept": "my name is bob",
+                "label": "Minun nimeni on Bob."
+            },
+            {
+                "concept": "What was it again?",
+                "label": "Mikä se nyt olikaan?"
+            }
         ],
-        "nl": "Wat denk jij?"
-    },
-    "what is the matter": {
-        "en": "What is the matter?",
-        "fi": "Mikä hätänä?",
-        "nl": "Wat is er aan de hand?"
-    },
-    "what is your name": {
-        "roots": [
-            "what",
-            "to be",
-            "name"
-        ],
-        "en": "What is your name?",
-        "fi": "Mikä sinun nimesi on?",
-        "nl": "Wat is jouw naam?"
-    },
-    "my name is bob": {
-        "roots": [
-            "name",
-            "to be"
-        ],
-        "en": "My name is Bob.",
-        "fi": "Minun nimeni on Bob.",
-        "nl": "Mijn naam is Bob."
-    },
-    "What was it again?": {
-        "en": "What was it again?",
-        "fi": "Mikä se nyt olikaan?",
-        "nl": "Wat was het ook alweer?"
+        "nl": [
+            {
+                "concept": "what do you think",
+                "label": "Wat denk jij?"
+            },
+            {
+                "concept": "what is the matter",
+                "label": "Wat is er aan de hand?"
+            },
+            {
+                "concept": "what is your name",
+                "label": "Wat is jouw naam?"
+            },
+            {
+                "concept": "my name is bob",
+                "label": "Mijn naam is Bob."
+            },
+            {
+                "concept": "What was it again?",
+                "label": "Wat was het ook alweer?"
+            }
+        ]
     }
 }

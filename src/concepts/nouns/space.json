@@ -1,7 +1,25 @@
 {
-    "space": {
-        "en": "space",
-        "fi": "avaruus",
-        "nl": "de ruimte"
+    "concepts": {
+        "space": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "space",
+                "label": "space"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "space",
+                "label": "avaruus"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "space",
+                "label": "de ruimte"
+            }
+        ]
     }
 }

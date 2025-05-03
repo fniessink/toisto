@@ -1,20 +1,36 @@
 {
-    "genital": {
-        "holonym": "body",
-        "en": {
-            "singular": "genital",
-            "plural": "genitals"
-        },
-        "fi": {
-            "singular": "sukuelin",
-            "plural": [
-                "sukuelimet",
-                "alapää"
-            ]
-        },
-        "nl": {
-            "singular": "het geslachtsdeel",
-            "plural": "de geslachtsdelen"
+    "concepts": {
+        "genital": {
+            "holonym": "body"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "genital",
+                "label": {
+                    "singular": "genital",
+                    "plural": "genitals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "genital",
+                "label": {
+                    "singular": "sukuelin",
+                    "plural": "sukuelimet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "genital",
+                "label": {
+                    "singular": "het geslachtsdeel",
+                    "plural": "de geslachtsdelen"
+                }
+            }
+        ]
     }
 }

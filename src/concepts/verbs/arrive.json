@@ -1,52 +1,70 @@
 {
-    "to arrive": {
-        "en": {
-            "infinitive": "to arrive",
-            "verbal noun": "arriving",
-            "singular": {
-                "first person": "I arrive",
-                "second person": "you arrive",
-                "third person": {
-                    "feminine": "she arrives",
-                    "masculine": "he arrives"
+    "concepts": {
+        "to arrive": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to arrive",
+                "label": {
+                    "infinitive": "to arrive",
+                    "verbal noun": "arriving",
+                    "singular": {
+                        "first person": "I arrive",
+                        "second person": "you arrive",
+                        "third person": {
+                            "feminine": "she arrives",
+                            "masculine": "he arrives"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we arrive",
+                        "second person": "you arrive",
+                        "third person": "they arrive"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we arrive",
-                "second person": "you arrive",
-                "third person": "they arrive"
             }
-        },
-        "fi": {
-            "infinitive": "saapua",
-            "verbal noun": "saapuminen",
-            "singular": {
-                "first person": "minä saavun",
-                "second person": "sinä saavut",
-                "third person": "hän saapuu"
-            },
-            "plural": {
-                "first person": "me saavumme",
-                "second person": "te saavutte",
-                "third person": "he saapuvat"
-            }
-        },
-        "nl": {
-            "infinitive": "aankomen",
-            "verbal noun": "het aankomen",
-            "singular": {
-                "first person": "ik kom aan",
-                "second person": "jij komt aan",
-                "third person": {
-                    "feminine": "zij komt aan",
-                    "masculine": "hij komt aan"
+        ],
+        "fi": [
+            {
+                "concept": "to arrive",
+                "label": {
+                    "infinitive": "saapua",
+                    "verbal noun": "saapuminen",
+                    "singular": {
+                        "first person": "minä saavun",
+                        "second person": "sinä saavut",
+                        "third person": "hän saapuu"
+                    },
+                    "plural": {
+                        "first person": "me saavumme",
+                        "second person": "te saavutte",
+                        "third person": "he saapuvat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij komen aan",
-                "second person": "jullie komen aan",
-                "third person": "zij komen aan"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to arrive",
+                "label": {
+                    "infinitive": "aankomen",
+                    "verbal noun": "het aankomen",
+                    "singular": {
+                        "first person": "ik kom aan",
+                        "second person": "jij komt aan",
+                        "third person": {
+                            "feminine": "zij komt aan",
+                            "masculine": "hij komt aan"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij komen aan",
+                        "second person": "jullie komen aan",
+                        "third person": "zij komen aan"
+                    }
+                }
+            }
+        ]
     }
 }

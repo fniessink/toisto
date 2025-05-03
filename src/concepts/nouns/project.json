@@ -1,7 +1,25 @@
 {
-    "project": {
-        "en": "project",
-        "fi": "projekti",
-        "nl": "het project"
+    "concepts": {
+        "project": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "project",
+                "label": "project"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "project",
+                "label": "projekti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "project",
+                "label": "het project"
+            }
+        ]
     }
 }

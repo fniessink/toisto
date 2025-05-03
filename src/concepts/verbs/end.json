@@ -1,50 +1,69 @@
 {
-    "to end": {
-        "antonym": "to begin",
-        "en": {
-            "infinitive": "to end",
-            "singular": {
-                "first person": "I end",
-                "second person": "you end",
-                "third person": {
-                    "feminine": "she ends",
-                    "masculine": "he ends"
-                }
-            },
-            "plural": {
-                "first person": "we ask",
-                "second person": "you end",
-                "third person": "they end"
-            }
-        },
-        "fi": {
-            "infinitive": "loppua",
-            "singular": {
-                "first person": "minä lopun",
-                "second person": "sinä loput",
-                "third person": "hän loppuu"
-            },
-            "plural": {
-                "first person": "me lopumme",
-                "second person": "te loputte",
-                "third person": "he loppuvat"
-            }
-        },
-        "nl": {
-            "infinitive": "eindigen",
-            "singular": {
-                "first person": "ik eindig",
-                "second person": "jij eindigt",
-                "third person": {
-                    "feminine": "zij eindigt",
-                    "masculine": "hij eindigt"
-                }
-            },
-            "plural": {
-                "first person": "wij eindigen",
-                "second person": "jullie eindigen",
-                "third person": "zij eindigen"
-            }
+    "concepts": {
+        "to end": {
+            "antonym": "to begin"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to end",
+                "label": {
+                    "infinitive": "to end",
+                    "singular": {
+                        "first person": "I end",
+                        "second person": "you end",
+                        "third person": {
+                            "feminine": "she ends",
+                            "masculine": "he ends"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we ask",
+                        "second person": "you end",
+                        "third person": "they end"
+                    }
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to end",
+                "label": {
+                    "infinitive": "loppua",
+                    "singular": {
+                        "first person": "minä lopun",
+                        "second person": "sinä loput",
+                        "third person": "hän loppuu"
+                    },
+                    "plural": {
+                        "first person": "me lopumme",
+                        "second person": "te loputte",
+                        "third person": "he loppuvat"
+                    }
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to end",
+                "label": {
+                    "infinitive": "eindigen",
+                    "singular": {
+                        "first person": "ik eindig",
+                        "second person": "jij eindigt",
+                        "third person": {
+                            "feminine": "zij eindigt",
+                            "masculine": "hij eindigt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij eindigen",
+                        "second person": "jullie eindigen",
+                        "third person": "zij eindigen"
+                    }
+                }
+            }
+        ]
     }
 }

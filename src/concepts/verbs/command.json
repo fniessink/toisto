@@ -1,13 +1,27 @@
 {
-    "to command": {
+    "concepts": {
+        "to command": {}
+    },
+    "labels": {
         "en": [
-            "to command",
-            "to know"
+            {
+                "concept": "to command",
+                "label": "to command"
+            },
+            {
+                "concept": "to command",
+                "label": "to know"
+            }
         ],
-        "fi": "taitaa",
         "nl": [
-            "beheersen",
-            "kunnen"
+            {
+                "concept": "to command",
+                "label": "beheersen"
+            },
+            {
+                "concept": "to command",
+                "label": "kunnen"
+            }
         ]
     }
 }

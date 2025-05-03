@@ -1,72 +1,121 @@
 {
-    "book": {
-        "en": {
-            "root": {
-                "singular": "book",
-                "plural": "books"
-            },
-            "diminutive": {
-                "singular": "booklet",
-                "plural": "booklets"
+    "concepts": {
+        "book": {},
+        "audiobook": {
+            "hypernym": "book"
+        },
+        "non-fiction book": {
+            "hypernym": "book",
+            "roots": {
+                "en": "book",
+                "fi": [
+                    "knowledge",
+                    "book"
+                ],
+                "nl": "book"
             }
         },
-        "fi": {
-            "root": {
-                "singular": "kirja",
-                "plural": "kirjat"
-            },
-            "diminutive": {
-                "singular": "kirjanen",
-                "plural": "kirjasia"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "het boek",
-                "plural": "de boeken"
-            },
-            "diminutive": {
-                "singular": "het boekje",
-                "plural": "de boekjes"
+        "bookcase": {
+            "example": "she is looking for a bookcase",
+            "roots": {
+                "en": "book",
+                "fi": [
+                    "book",
+                    "shelf"
+                ],
+                "nl": "book"
             }
         }
     },
-    "audiobook": {
-        "hypernym": "book",
-        "en": "audiobook",
-        "fi": "äänikirja",
+    "labels": {
+        "en": [
+            {
+                "concept": "book",
+                "label": {
+                    "root": {
+                        "singular": "book",
+                        "plural": "books"
+                    },
+                    "diminutive": {
+                        "singular": "booklet",
+                        "plural": "booklets"
+                    }
+                }
+            },
+            {
+                "concept": "audiobook",
+                "label": "audiobook"
+            },
+            {
+                "concept": "non-fiction book",
+                "label": "non-fiction book"
+            },
+            {
+                "concept": "bookcase",
+                "label": "bookcase"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "book",
+                "label": {
+                    "root": {
+                        "singular": "kirja",
+                        "plural": "kirjat"
+                    },
+                    "diminutive": {
+                        "singular": "kirjanen",
+                        "plural": "kirjasia"
+                    }
+                }
+            },
+            {
+                "concept": "audiobook",
+                "label": "äänikirja"
+            },
+            {
+                "concept": "non-fiction book",
+                "label": "tietokirja"
+            },
+            {
+                "concept": "bookcase",
+                "label": "kirjahylly"
+            }
+        ],
         "nl": [
-            "het gesproken boek",
-            "het luisterboek",
-            "het audioboek"
+            {
+                "concept": "book",
+                "label": {
+                    "root": {
+                        "singular": "het boek",
+                        "plural": "de boeken"
+                    },
+                    "diminutive": {
+                        "singular": "het boekje",
+                        "plural": "de boekjes"
+                    }
+                }
+            },
+            {
+                "concept": "audiobook",
+                "label": "het gesproken boek"
+            },
+            {
+                "concept": "audiobook",
+                "label": "het luisterboek"
+            },
+            {
+                "concept": "audiobook",
+                "label": "het audioboek"
+            },
+            {
+                "concept": "non-fiction book",
+                "label": "het non-fictieboek"
+            },
+            {
+                "concept": "bookcase",
+                "label": "de boekenkast"
+            }
         ]
-    },
-    "non-fiction book": {
-        "hypernym": "book",
-        "roots": {
-            "en": "book",
-            "fi": [
-                "knowledge",
-                "book"
-            ],
-            "nl": "book"
-        },
-        "en": "non-fiction book",
-        "fi": "tietokirja",
-        "nl": "het non-fictieboek"
-    },
-    "bookcase": {
-        "example": "she is looking for a bookcase",
-        "roots": {
-            "en": "book",
-            "fi": [
-                "book",
-                "shelf"
-            ],
-            "nl": "book"
-        },
-        "en": "bookcase",
-        "fi": "kirjahylly",
-        "nl": "de boekenkast"
     }
 }

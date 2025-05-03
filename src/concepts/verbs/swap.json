@@ -1,7 +1,25 @@
 {
-    "to swap": {
-        "en": "to swap",
-        "fi": "vaihtua",
-        "nl": "wisselen"
+    "concepts": {
+        "to swap": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to swap",
+                "label": "to swap"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to swap",
+                "label": "vaihtua"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to swap",
+                "label": "wisselen"
+            }
+        ]
     }
 }

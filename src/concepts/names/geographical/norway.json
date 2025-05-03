@@ -1,8 +1,27 @@
 {
-    "norway": {
-        "hypernym": "country",
-        "en": "Norway",
-        "fi": "Norja",
-        "nl": "Noorwegen"
+    "concepts": {
+        "norway": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "norway",
+                "label": "Norway"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "norway",
+                "label": "Norja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "norway",
+                "label": "Noorwegen"
+            }
+        ]
     }
 }

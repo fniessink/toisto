@@ -1,39 +1,75 @@
 {
-    "cheese": {
-        "hypernym": "food",
-        "en": {
-            "singular": "cheese",
-            "plural": "cheeses"
+    "concepts": {
+        "cheese": {
+            "hypernym": "food"
         },
-        "fi": {
-            "singular": "juusto",
-            "plural": "juustot"
+        "cheesecake": {
+            "example": "I would like a slice of cheesecake",
+            "hypernym": "food",
+            "roots": {
+                "en": [
+                    "cheese",
+                    "cake"
+                ],
+                "fi": [
+                    "cheese",
+                    "cake"
+                ]
+            }
         },
-        "nl": {
-            "singular": "de kaas",
-            "plural": "de kazen"
-        }
+        "I would like a slice of cheesecake": {}
     },
-    "cheesecake": {
-        "example": "I would like a slice of cheesecake",
-        "hypernym": "food",
-        "roots": {
-            "en": [
-                "cheese",
-                "cake"
-            ],
-            "fi": [
-                "cheese",
-                "cake"
-            ]
-        },
-        "en": "cheesecake",
-        "fi": "juustokakku",
-        "nl": "de cheesecake"
-    },
-    "I would like a slice of cheesecake": {
-        "en": "I would like a piece of cheesecake.",
-        "fi": "Minä haluaisin palan juustokakkua.",
-        "nl": "Ik wil graag een stuk cheesecake."
+    "labels": {
+        "en": [
+            {
+                "concept": "cheese",
+                "label": {
+                    "singular": "cheese",
+                    "plural": "cheeses"
+                }
+            },
+            {
+                "concept": "cheesecake",
+                "label": "cheesecake"
+            },
+            {
+                "concept": "I would like a slice of cheesecake",
+                "label": "I would like a piece of cheesecake."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cheese",
+                "label": {
+                    "singular": "juusto",
+                    "plural": "juustot"
+                }
+            },
+            {
+                "concept": "cheesecake",
+                "label": "juustokakku"
+            },
+            {
+                "concept": "I would like a slice of cheesecake",
+                "label": "Minä haluaisin palan juustokakkua."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cheese",
+                "label": {
+                    "singular": "de kaas",
+                    "plural": "de kazen"
+                }
+            },
+            {
+                "concept": "cheesecake",
+                "label": "de cheesecake"
+            },
+            {
+                "concept": "I would like a slice of cheesecake",
+                "label": "Ik wil graag een stuk cheesecake."
+            }
+        ]
     }
 }

@@ -1,10 +1,25 @@
 {
-    "sole": {
+    "concepts": {
+        "sole": {}
+    },
+    "labels": {
         "en": [
-            "sole",
-            "only"
+            {
+                "concept": "sole",
+                "label": "sole"
+            }
         ],
-        "fi": "ainoa",
-        "nl": "enig"
+        "fi": [
+            {
+                "concept": "sole",
+                "label": "ainoa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sole",
+                "label": "enig"
+            }
+        ]
     }
 }

@@ -1,13 +1,33 @@
 {
-    "rash": {
-        "roots": {
-            "fi": "skin"
-        },
-        "en": "rash",
-        "fi": "ihottuma",
+    "concepts": {
+        "rash": {
+            "roots": {
+                "fi": "skin"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rash",
+                "label": "rash"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rash",
+                "label": "ihottuma"
+            }
+        ],
         "nl": [
-            "de uitslag",
-            "het eczeem"
+            {
+                "concept": "rash",
+                "label": "de uitslag"
+            },
+            {
+                "concept": "rash",
+                "label": "het eczeem"
+            }
         ]
     }
 }

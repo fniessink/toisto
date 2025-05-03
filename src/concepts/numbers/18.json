@@ -1,24 +1,48 @@
 {
-    "18": {
-        "hypernym": "number",
-        "roots": [
-            "8",
-            "10"
-        ],
-        "en": {
-            "cardinal": "eightteen",
-            "ordinal": "eighteenth"
-        },
-        "fi": {
-            "cardinal": [
-                "kahdeksantoista",
-                "kaheksantoist*"
-            ],
-            "ordinal": "kahdeksastoista"
-        },
-        "nl": {
-            "cardinal": "achttien",
-            "ordinal": "achttiende"
+    "concepts": {
+        "18": {
+            "hypernym": "number",
+            "roots": [
+                "8",
+                "10"
+            ]
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "18",
+                "label": {
+                    "cardinal": "eightteen",
+                    "ordinal": "eighteenth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "18",
+                "label": {
+                    "cardinal": "kahdeksantoista",
+                    "ordinal": "kahdeksastoista"
+                }
+            },
+            {
+                "concept": "18",
+                "label": {
+                    "cardinal": "kaheksantoist",
+                    "ordinal": "kahdeksastoista"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "18",
+                "label": {
+                    "cardinal": "achttien",
+                    "ordinal": "achttiende"
+                }
+            }
+        ]
     }
 }

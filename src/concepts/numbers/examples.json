@@ -1,50 +1,114 @@
 {
-    "what is 15 + 4": {
-        "answer": "that is 19",
-        "roots": [
-            "15",
-            "4"
+    "concepts": {
+        "what is 15 + 4": {
+            "answer": "that is 19",
+            "roots": [
+                "15",
+                "4"
+            ]
+        },
+        "that is 19": {
+            "answer-only": true
+        },
+        "what is 3 x 10": {
+            "answer": "that is 30",
+            "roots": [
+                "3",
+                "10"
+            ]
+        },
+        "that is 30": {
+            "answer-only": true
+        },
+        "what is 20 - 7": {
+            "answer": "that is 13",
+            "roots": [
+                "20",
+                "7"
+            ]
+        },
+        "that is 13": {
+            "answer-only": true
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "what is 15 + 4",
+                "label": "What is fifteen plus four?"
+            },
+            {
+                "concept": "that is 19",
+                "label": "That is nineteen."
+            },
+            {
+                "concept": "what is 3 x 10",
+                "label": "What is three times ten?"
+            },
+            {
+                "concept": "that is 30",
+                "label": "That is thirty."
+            },
+            {
+                "concept": "what is 20 - 7",
+                "label": "What is twenty minus seven?"
+            },
+            {
+                "concept": "that is 13",
+                "label": "That is thirteen."
+            }
         ],
-        "en": "What is fifteen plus four?",
-        "fi": "Mitä on viisitoista plus neljä?",
-        "nl": "Wat is vijftien plus vier?"
-    },
-    "that is 19": {
-        "answer-only": true,
-        "en": "That is nineteen.",
-        "fi": "Se on yhdeksäntoista.",
-        "nl": "Dat is negentien."
-    },
-    "what is 3 x 10": {
-        "answer": "that is 30",
-        "roots": [
-            "3",
-            "10"
+        "fi": [
+            {
+                "concept": "what is 15 + 4",
+                "label": "Mitä on viisitoista plus neljä?"
+            },
+            {
+                "concept": "that is 19",
+                "label": "Se on yhdeksäntoista."
+            },
+            {
+                "concept": "what is 3 x 10",
+                "label": "Mitä on kolme kertaa kymmenen?"
+            },
+            {
+                "concept": "that is 30",
+                "label": "Se on kolmekymmentä."
+            },
+            {
+                "concept": "what is 20 - 7",
+                "label": "Mitä on kaksikymmentä minus seitsemän?"
+            },
+            {
+                "concept": "that is 13",
+                "label": "Se on kolmetoista."
+            }
         ],
-        "en": "What is three times ten?",
-        "fi": "Mitä on kolme kertaa kymmenen?",
-        "nl": "Wat is drie keer tien?"
-    },
-    "that is 30": {
-        "answer-only": true,
-        "en": "That is thirty.",
-        "fi": "Se on kolmekymmentä.",
-        "nl": "Dat is dertig."
-    },
-    "what is 20 - 7": {
-        "answer": "that is 13",
-        "roots": [
-            "20",
-            "7"
-        ],
-        "en": "What is twenty minus seven?",
-        "fi": "Mitä on kaksikymmentä minus seitsemän?",
-        "nl": "Wat is twintig min zeven?"
-    },
-    "that is 13": {
-        "answer-only": true,
-        "en": "That is thirteen.",
-        "fi": "Se on kolmetoista.",
-        "nl": "Dat is dertien."
+        "nl": [
+            {
+                "concept": "what is 15 + 4",
+                "label": "Wat is vijftien plus vier?"
+            },
+            {
+                "concept": "that is 19",
+                "label": "Dat is negentien."
+            },
+            {
+                "concept": "what is 3 x 10",
+                "label": "Wat is drie keer tien?"
+            },
+            {
+                "concept": "that is 30",
+                "label": "Dat is dertig."
+            },
+            {
+                "concept": "what is 20 - 7",
+                "label": "Wat is twintig min zeven?"
+            },
+            {
+                "concept": "that is 13",
+                "label": "Dat is dertien."
+            }
+        ]
     }
 }

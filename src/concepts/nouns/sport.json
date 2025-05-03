@@ -1,43 +1,100 @@
 {
-    "sport": {
-        "en": "sport",
+    "concepts": {
+        "sport": {},
+        "spectator sport": {
+            "hypernym": "sport"
+        },
+        "team sport": {
+            "hypernym": "sport",
+            "involves": "team"
+        },
+        "sports club": {
+            "involves": "sport",
+            "roots": "sport"
+        },
+        "sports fan": {
+            "involves": "sport",
+            "roots": "sport"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sport",
+                "label": "sport"
+            },
+            {
+                "concept": "spectator sport",
+                "label": "spectator sport"
+            },
+            {
+                "concept": "team sport",
+                "label": "team sport"
+            },
+            {
+                "concept": "sports club",
+                "label": "sports club"
+            },
+            {
+                "concept": "sports fan",
+                "label": "sports fan"
+            }
+        ],
         "fi": [
-            "urheilu",
-            "urheilulaji"
+            {
+                "concept": "sport",
+                "label": "urheilu"
+            },
+            {
+                "concept": "sport",
+                "label": "urheilulaji"
+            },
+            {
+                "concept": "spectator sport",
+                "label": "penkkiurheilu"
+            },
+            {
+                "concept": "team sport",
+                "label": "joukkuelaji"
+            },
+            {
+                "concept": "team sport",
+                "label": "joukkueurheilu"
+            },
+            {
+                "concept": "sports club",
+                "label": "urheiluseura"
+            },
+            {
+                "concept": "sports fan",
+                "label": "penkkiurheilija"
+            }
         ],
         "nl": [
-            "de sport",
-            "de tak van sport"
+            {
+                "concept": "sport",
+                "label": "de sport"
+            },
+            {
+                "concept": "sport",
+                "label": "de tak van sport"
+            },
+            {
+                "concept": "spectator sport",
+                "label": "de kijksport"
+            },
+            {
+                "concept": "team sport",
+                "label": "de teamsport"
+            },
+            {
+                "concept": "sports club",
+                "label": "de sportclub"
+            },
+            {
+                "concept": "sports fan",
+                "label": "de sportfan"
+            }
         ]
-    },
-    "spectator sport": {
-        "hypernym": "sport",
-        "en": "spectator sport",
-        "fi": "penkkiurheilu",
-        "nl": "de kijksport"
-    },
-    "team sport": {
-        "hypernym": "sport",
-        "involves": "team",
-        "en": "team sport",
-        "fi": [
-            "joukkuelaji",
-            "joukkueurheilu"
-        ],
-        "nl": "de teamsport"
-    },
-    "sports club": {
-        "involves": "sport",
-        "roots": "sport",
-        "en": "sports club",
-        "fi": "urheiluseura",
-        "nl": "de sportclub"
-    },
-    "sports fan": {
-        "involves": "sport",
-        "roots": "sport",
-        "en": "sports fan",
-        "fi": "penkkiurheilija",
-        "nl": "de sportfan"
     }
 }

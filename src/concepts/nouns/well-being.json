@@ -1,13 +1,33 @@
 {
-    "well-being": {
-        "roots": {
-            "fi": "well"
-        },
-        "en": "well-being",
-        "fi": [
-            "hyvinvointi",
-            "jaksaminen"
+    "concepts": {
+        "well-being": {
+            "roots": {
+                "fi": "well"
+            }
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "well-being",
+                "label": "well-being"
+            }
         ],
-        "nl": "het welzijn"
+        "fi": [
+            {
+                "concept": "well-being",
+                "label": "hyvinvointi"
+            },
+            {
+                "concept": "well-being",
+                "label": "jaksaminen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "well-being",
+                "label": "het welzijn"
+            }
+        ]
     }
 }

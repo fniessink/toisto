@@ -1,33 +1,71 @@
 {
-    "homework": {
-        "example": "do you have a lot of homework",
-        "en": "homework",
-        "fi": {
-            "singular": [
-                "läksy",
-                "kotitehtävä"
-            ],
-            "plural": [
-                "läksyt",
-                "kotitehtävät"
+    "concepts": {
+        "homework": {
+            "example": "do you have a lot of homework"
+        },
+        "math homework": {
+            "hypernym": "homework",
+            "roots": [
+                "math",
+                "homework"
             ]
         },
-        "nl": "het huiswerk"
+        "do you have a lot of homework": {
+            "roots": "homework"
+        }
     },
-    "math homework": {
-        "hypernym": "homework",
-        "roots": [
-            "math",
-            "homework"
+    "labels": {
+        "en": [
+            {
+                "concept": "homework",
+                "label": "homework"
+            },
+            {
+                "concept": "math homework",
+                "label": "math homework"
+            },
+            {
+                "concept": "do you have a lot of homework",
+                "label": "Do you have a lot of homework?"
+            }
         ],
-        "en": "math homework",
-        "fi": "matematiikan läksy",
-        "nl": "het wiskundehuiswerk"
-    },
-    "do you have a lot of homework": {
-        "roots": "homework",
-        "en": "Do you have a lot of homework?",
-        "fi": "Onko sinulla paljon läksyjä?",
-        "nl": "Heb je veel huiswerk?"
+        "fi": [
+            {
+                "concept": "homework",
+                "label": {
+                    "singular": "läksy",
+                    "plural": "läksyt"
+                }
+            },
+            {
+                "concept": "homework",
+                "label": {
+                    "singular": "kotitehtävä",
+                    "plural": "kotitehtävät"
+                }
+            },
+            {
+                "concept": "math homework",
+                "label": "matematiikan läksy"
+            },
+            {
+                "concept": "do you have a lot of homework",
+                "label": "Onko sinulla paljon läksyjä?"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "homework",
+                "label": "het huiswerk"
+            },
+            {
+                "concept": "math homework",
+                "label": "het wiskundehuiswerk"
+            },
+            {
+                "concept": "do you have a lot of homework",
+                "label": "Heb je veel huiswerk?"
+            }
+        ]
     }
 }

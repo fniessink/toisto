@@ -1,52 +1,71 @@
 {
-    "to see": {
-        "en": {
-            "infinitive": "to see",
-            "verbal noun": "seeing",
-            "singular": {
-                "first person": "I see",
-                "second person": "you see",
-                "third person": {
-                    "feminine": "she sees",
-                    "masculine": "he sees"
+    "concepts": {
+        "to see": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to see",
+                "label": {
+                    "infinitive": "to see",
+                    "verbal noun": "seeing",
+                    "singular": {
+                        "first person": "I see",
+                        "second person": "you see",
+                        "third person": {
+                            "feminine": "she sees",
+                            "masculine": "he sees"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we see",
+                        "second person": "you see",
+                        "third person": "they see"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we see",
-                "second person": "you see",
-                "third person": "they see"
             }
-        },
-        "fi": {
-            "infinitive": "nähdä;;nähdä is verbityyppi 2",
-            "verbal noun": "näkeminen",
-            "singular": {
-                "first person": "minä näen",
-                "second person": "sinä näet",
-                "third person": "hän näkee"
-            },
-            "plural": {
-                "first person": "me näemme",
-                "second person": "te näette",
-                "third person": "he näkevät"
+        ],
+        "fi": [
+            {
+                "concept": "to see",
+                "label": {
+                    "infinitive": "nähdä",
+                    "verbal noun": "näkeminen",
+                    "singular": {
+                        "first person": "minä näen",
+                        "second person": "sinä näet",
+                        "third person": "hän näkee"
+                    },
+                    "plural": {
+                        "first person": "me näemme",
+                        "second person": "te näette",
+                        "third person": "he näkevät"
+                    }
+                },
+                "note": "nähdä is verbityyppi 2"
             }
-        },
-        "nl": {
-            "infinitive": "zien",
-            "verbal noun": "het zien",
-            "singular": {
-                "first person": "ik zie",
-                "second person": "jij ziet",
-                "third person": {
-                    "feminine": "zij ziet",
-                    "masculine": "hij ziet"
+        ],
+        "nl": [
+            {
+                "concept": "to see",
+                "label": {
+                    "infinitive": "zien",
+                    "verbal noun": "het zien",
+                    "singular": {
+                        "first person": "ik zie",
+                        "second person": "jij ziet",
+                        "third person": {
+                            "feminine": "zij ziet",
+                            "masculine": "hij ziet"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij zien",
+                        "second person": "jullie zien",
+                        "third person": "zij zien"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij zien",
-                "second person": "jullie zien",
-                "third person": "zij zien"
             }
-        }
+        ]
     }
 }

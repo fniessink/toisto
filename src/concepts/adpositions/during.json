@@ -1,7 +1,25 @@
 {
-    "during": {
-        "en": "during",
-        "fi": "aikana",
-        "nl": "gedurende"
+    "concepts": {
+        "during": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "during",
+                "label": "during"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "during",
+                "label": "aikana"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "during",
+                "label": "gedurende"
+            }
+        ]
     }
 }

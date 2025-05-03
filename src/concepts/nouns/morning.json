@@ -1,31 +1,74 @@
 {
-    "morning": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "morning",
-            "plural": "mornings"
+    "concepts": {
+        "morning": {
+            "hypernym": "time of day"
         },
-        "fi": {
-            "singular": "aamu|aamupäivä",
-            "plural": "aamut|aamupäivät"
+        "at morning": {
+            "hypernym": "time of day",
+            "roots": "morning"
         },
-        "nl": {
-            "singular": "de ochtend",
-            "plural": "de ochtenden"
+        "this morning": {
+            "hypernym": "time of day",
+            "roots": "morning"
         }
     },
-    "at morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "at morning",
-        "fi": "aamulla",
-        "nl": "'s ochtends"
-    },
-    "this morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "this morning",
-        "fi": "tänä aamuna",
-        "nl": "vanochtend"
+    "labels": {
+        "en": [
+            {
+                "concept": "morning",
+                "label": {
+                    "singular": "morning",
+                    "plural": "mornings"
+                }
+            },
+            {
+                "concept": "at morning",
+                "label": "at morning"
+            },
+            {
+                "concept": "this morning",
+                "label": "this morning"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "morning",
+                "label": {
+                    "singular": [
+                        "aamu",
+                        "aamupäivä"
+                    ],
+                    "plural": [
+                        "aamut",
+                        "aamupäivät"
+                    ]
+                }
+            },
+            {
+                "concept": "at morning",
+                "label": "aamulla"
+            },
+            {
+                "concept": "this morning",
+                "label": "tänä aamuna"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "morning",
+                "label": {
+                    "singular": "de ochtend",
+                    "plural": "de ochtenden"
+                }
+            },
+            {
+                "concept": "at morning",
+                "label": "'s ochtends"
+            },
+            {
+                "concept": "this morning",
+                "label": "vanochtend"
+            }
+        ]
     }
 }

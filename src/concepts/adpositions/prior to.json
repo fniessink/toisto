@@ -1,10 +1,19 @@
 {
-    "prior to": {
+    "concepts": {
+        "prior to": {}
+    },
+    "labels": {
         "en": [
-            "prior to",
-            "before"
+            {
+                "concept": "prior to",
+                "label": "prior to"
+            }
         ],
-        "fi": "ennen",
-        "nl": "voor"
+        "fi": [
+            {
+                "concept": "prior to",
+                "label": "ennen"
+            }
+        ]
     }
 }

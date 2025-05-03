@@ -1,8 +1,27 @@
 {
-    "poland": {
-        "hypernym": "country",
-        "en": "Poland",
-        "fi": "Puola",
-        "nl": "Polen"
+    "concepts": {
+        "poland": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "poland",
+                "label": "Poland"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "poland",
+                "label": "Puola"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "poland",
+                "label": "Polen"
+            }
+        ]
     }
 }

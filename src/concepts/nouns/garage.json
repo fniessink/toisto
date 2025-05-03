@@ -1,7 +1,25 @@
 {
-    "garage": {
-        "en": "garage",
-        "fi": "korjaamo",
-        "nl": "de garage"
+    "concepts": {
+        "garage": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "garage",
+                "label": "garage"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "garage",
+                "label": "korjaamo"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "garage",
+                "label": "de garage"
+            }
+        ]
     }
 }

@@ -1,22 +1,38 @@
 {
-    "lichen": {
-        "roots": {
-            "nl": "moss"
-        },
-        "en": {
-            "singular": "lichen",
-            "plural": [
-                "lichen",
-                "lichens"
-            ]
-        },
-        "fi": {
-            "singular": "jäkälä",
-            "plural": "jäkälät"
-        },
-        "nl": {
-            "singular": "het korstmos",
-            "plural": "de korstmossen"
+    "concepts": {
+        "lichen": {
+            "roots": {
+                "nl": "moss"
+            }
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lichen",
+                "label": {
+                    "singular": "lichen",
+                    "plural": "lichen"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lichen",
+                "label": {
+                    "singular": "jäkälä",
+                    "plural": "jäkälät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lichen",
+                "label": {
+                    "singular": "het korstmos",
+                    "plural": "de korstmossen"
+                }
+            }
+        ]
     }
 }

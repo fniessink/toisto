@@ -1,7 +1,25 @@
 {
-    "floorcloth": {
-        "en": "floorcloth",
-        "fi": "rätti",
-        "nl": "de dweil"
+    "concepts": {
+        "floorcloth": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "floorcloth",
+                "label": "floorcloth"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "floorcloth",
+                "label": "rätti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "floorcloth",
+                "label": "de dweil"
+            }
+        ]
     }
 }

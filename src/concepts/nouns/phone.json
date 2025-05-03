@@ -1,29 +1,84 @@
 {
-    "telephone": {
-        "en": "telephone|phone",
-        "fi": "puhelin",
-        "nl": "de telefoon"
+    "concepts": {
+        "telephone": {},
+        "mobile telephone": {
+            "hypernym": "telephone"
+        },
+        "smartphone": {
+            "hypernym": "mobile telephone",
+            "roots": {
+                "en": "telephone",
+                "fi": "telephone"
+            }
+        }
     },
-    "mobile telephone": {
-        "hypernym": "telephone",
+    "labels": {
         "en": [
-            "mobile telephone|mobile phone|mobile",
-            "cellullar telephone|cellular phone|cell phone|cellphone"
+            {
+                "concept": "telephone",
+                "label": [
+                    "telephone",
+                    "phone"
+                ]
+            },
+            {
+                "concept": "mobile telephone",
+                "label": [
+                    "mobile telephone",
+                    "mobile phone",
+                    "mobile"
+                ]
+            },
+            {
+                "concept": "mobile telephone",
+                "label": [
+                    "cellullar telephone",
+                    "cellular phone",
+                    "cell phone",
+                    "cellphone"
+                ]
+            },
+            {
+                "concept": "smartphone",
+                "label": "smartphone"
+            }
         ],
         "fi": [
-            "matkapuhelin",
-            "kännykkä*"
+            {
+                "concept": "telephone",
+                "label": "puhelin"
+            },
+            {
+                "concept": "mobile telephone",
+                "label": "matkapuhelin"
+            },
+            {
+                "concept": "mobile telephone",
+                "label": "kännykkä",
+                "colloquial": true
+            },
+            {
+                "concept": "smartphone",
+                "label": "älypuhelin"
+            }
         ],
-        "nl": "de mobiele telefoon|de mobiel|het mobieltje"
-    },
-    "smartphone": {
-        "hypernym": "mobile telephone",
-        "roots": {
-            "en": "telephone",
-            "fi": "telephone"
-        },
-        "en": "smartphone",
-        "fi": "älypuhelin",
-        "nl": "de smartphone"
+        "nl": [
+            {
+                "concept": "telephone",
+                "label": "de telefoon"
+            },
+            {
+                "concept": "mobile telephone",
+                "label": [
+                    "de mobiele telefoon",
+                    "de mobiel",
+                    "het mobieltje"
+                ]
+            },
+            {
+                "concept": "smartphone",
+                "label": "de smartphone"
+            }
+        ]
     }
 }

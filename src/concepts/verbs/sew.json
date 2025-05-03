@@ -1,49 +1,67 @@
 {
-    "to sew": {
-        "en": {
-            "infinitive": "to sew",
-            "singular": {
-                "first person": "I sew",
-                "second person": "you sew",
-                "third person": {
-                    "feminine": "she sews",
-                    "masculine": "he sews"
+    "concepts": {
+        "to sew": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to sew",
+                "label": {
+                    "infinitive": "to sew",
+                    "singular": {
+                        "first person": "I sew",
+                        "second person": "you sew",
+                        "third person": {
+                            "feminine": "she sews",
+                            "masculine": "he sews"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we sew",
+                        "second person": "you sew",
+                        "third person": "they sew"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we sew",
-                "second person": "you sew",
-                "third person": "they sew"
             }
-        },
-        "fi": {
-            "infinitive": "ommella",
-            "singular": {
-                "first person": "minä ompelen",
-                "second person": "sinä ompelet",
-                "third person": "hän ompelee"
-            },
-            "plural": {
-                "first person": "me ompelemme",
-                "second person": "te ompelette",
-                "third person": "he ompelevat"
-            }
-        },
-        "nl": {
-            "infinitive": "naaien",
-            "singular": {
-                "first person": "ik naai",
-                "second person": "jij naait",
-                "third person": {
-                    "feminine": "zij naait",
-                    "masculine": "hij naait"
+        ],
+        "fi": [
+            {
+                "concept": "to sew",
+                "label": {
+                    "infinitive": "ommella",
+                    "singular": {
+                        "first person": "minä ompelen",
+                        "second person": "sinä ompelet",
+                        "third person": "hän ompelee"
+                    },
+                    "plural": {
+                        "first person": "me ompelemme",
+                        "second person": "te ompelette",
+                        "third person": "he ompelevat"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij naaien",
-                "second person": "jullie naaien",
-                "third person": "zij naaien"
             }
-        }
+        ],
+        "nl": [
+            {
+                "concept": "to sew",
+                "label": {
+                    "infinitive": "naaien",
+                    "singular": {
+                        "first person": "ik naai",
+                        "second person": "jij naait",
+                        "third person": {
+                            "feminine": "zij naait",
+                            "masculine": "hij naait"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij naaien",
+                        "second person": "jullie naaien",
+                        "third person": "zij naaien"
+                    }
+                }
+            }
+        ]
     }
 }

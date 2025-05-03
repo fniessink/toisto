@@ -1,13 +1,38 @@
 {
-    "story (formal)": {
-        "hypernym": "literature",
-        "en": "story",
-        "fi": "tarina",
-        "nl": "het verhaal"
+    "concepts": {
+        "story (formal)": {
+            "hypernym": "literature"
+        },
+        "story (informal)": {}
     },
-    "story (informal)": {
-        "en": "story",
-        "fi": "juttu",
-        "nl": "het verhaal"
+    "labels": {
+        "en": [
+            {
+                "concept": [
+                    "story (informal)",
+                    "story (formal)"
+                ],
+                "label": "story"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "story (formal)",
+                "label": "tarina"
+            },
+            {
+                "concept": "story (informal)",
+                "label": "juttu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": [
+                    "story (formal)",
+                    "story (informal)"
+                ],
+                "label": "het verhaal"
+            }
+        ]
     }
 }

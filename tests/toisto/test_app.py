@@ -37,7 +37,7 @@ class AppTest(ToistoTestCase):
         read_config.return_value = self.config
         path_open.return_value.__enter__.return_value.read.side_effect = self.read_concept_file
         with patch("rich.console.Console.print") as patched_print, suppress(SystemExit):
-            from toisto.app import main
+            from toisto.app import main  # noqa: PLC0415
 
             main()
         return patched_print
@@ -47,7 +47,13 @@ class AppTest(ToistoTestCase):
         count = self.concept_file_count
         self.concept_file_count += 1
         return f"""{{
-            "concept-{count}": {{"fi": "concept-{count} in fi", "nl": "concept-{count} in nl"}}
+            "concepts": {{
+                "concept-{count}": {{}}
+            }},
+            "labels": {{
+                "fi": [{{"concept": "concept-{count}", "label": "concept-{count} in fi"}}],
+                "nl": [{{"concept": "concept-{count}", "label": "concept-{count} in nl"}}]
+            }}
         }}
         """
 

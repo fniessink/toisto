@@ -1,17 +1,36 @@
 {
-    "sculptor": {
-        "hypernym": "profession",
-        "en": {
-            "singular": "sculptor",
-            "plural": "sculptors"
-        },
-        "fi": {
-            "singular": "kuvanveistäjä",
-            "plural": "kuvanveistäjät"
-        },
-        "nl": {
-            "singular": "de beeldhouwer",
-            "plural": "de beeldhouwers"
+    "concepts": {
+        "sculptor": {
+            "hypernym": "profession"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sculptor",
+                "label": {
+                    "singular": "sculptor",
+                    "plural": "sculptors"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sculptor",
+                "label": {
+                    "singular": "kuvanveistäjä",
+                    "plural": "kuvanveistäjät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sculptor",
+                "label": {
+                    "singular": "de beeldhouwer",
+                    "plural": "de beeldhouwers"
+                }
+            }
+        ]
     }
 }

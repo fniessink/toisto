@@ -1,18 +1,37 @@
 {
-    "beard": {
-        "holonym": "face",
-        "hypernym": "hair",
-        "en": {
-            "singular": "beard",
-            "plural": "beards"
-        },
-        "fi": {
-            "singular": "parta",
-            "plural": "parrat"
-        },
-        "nl": {
-            "singular": "de baard",
-            "plural": "de baarden"
+    "concepts": {
+        "beard": {
+            "holonym": "face",
+            "hypernym": "hair"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "beard",
+                "label": {
+                    "singular": "beard",
+                    "plural": "beards"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "beard",
+                "label": {
+                    "singular": "parta",
+                    "plural": "parrat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "beard",
+                "label": {
+                    "singular": "de baard",
+                    "plural": "de baarden"
+                }
+            }
+        ]
     }
 }

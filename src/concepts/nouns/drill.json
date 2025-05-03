@@ -1,7 +1,25 @@
 {
-    "drill": {
-        "en": "drill",
-        "fi": "pora",
-        "nl": "de boor"
+    "concepts": {
+        "drill": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "drill",
+                "label": "drill"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "drill",
+                "label": "pora"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "drill",
+                "label": "de boor"
+            }
+        ]
     }
 }

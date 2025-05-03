@@ -1,28 +1,59 @@
 {
-    "city": {
-        "en": {
-            "singular": "city",
-            "plural": "cities"
-        },
-        "fi": {
-            "singular": "kaupunki",
-            "plural": "kaupungit"
-        },
-        "nl": {
-            "singular": "de stad",
-            "plural": "de steden"
+    "concepts": {
+        "city": {},
+        "townsman": {
+            "roots": {
+                "fi": "city",
+                "nl": "city"
+            }
         }
     },
-    "townsman": {
-        "roots": {
-            "fi": "city",
-            "nl": "city"
-        },
+    "labels": {
         "en": [
-            "townsman",
-            "townswoman"
+            {
+                "concept": "city",
+                "label": {
+                    "singular": "city",
+                    "plural": "cities"
+                }
+            },
+            {
+                "concept": "townsman",
+                "label": "townsman"
+            },
+            {
+                "concept": "townsman",
+                "label": "townswoman"
+            }
         ],
-        "fi": "kaupunkilainen",
-        "nl": "de stadsbewoner|de stadbewoner"
+        "fi": [
+            {
+                "concept": "city",
+                "label": {
+                    "singular": "kaupunki",
+                    "plural": "kaupungit"
+                }
+            },
+            {
+                "concept": "townsman",
+                "label": "kaupunkilainen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "city",
+                "label": {
+                    "singular": "de stad",
+                    "plural": "de steden"
+                }
+            },
+            {
+                "concept": "townsman",
+                "label": [
+                    "de stadsbewoner",
+                    "de stadbewoner"
+                ]
+            }
+        ]
     }
 }

@@ -1,42 +1,87 @@
 {
-    "how are you": {
-        "hypernym": "greeting",
-        "roots": [
-            "what",
-            "how",
-            "to be"
-        ],
-        "en": "How are you?",
-        "fi": [
-            "Mitä kuuluu?",
-            "Miten menee?"
-        ],
-        "nl": "Hoe gaat het?"
+    "concepts": {
+        "how are you": {
+            "hypernym": "greeting",
+            "roots": [
+                "what",
+                "how",
+                "to be"
+            ]
+        },
+        "how are you feeling": {},
+        "i am fine": {
+            "roots": {
+                "en": "to be",
+                "fi": "good",
+                "nl": "good"
+            }
+        }
     },
-    "how are you feeling": {
+    "labels": {
         "en": [
-            "How are you feeling?",
-            "Are you ok?"
+            {
+                "concept": "how are you",
+                "label": "How are you?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "How are you feeling?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Are you ok?"
+            },
+            {
+                "concept": "i am fine",
+                "label": "I am fine."
+            }
         ],
         "fi": [
-            "Miten sinä voit?",
-            "Mikä sinulla on?",
-            "Oletko kunossa?"
+            {
+                "concept": "how are you",
+                "label": "Mitä kuuluu?"
+            },
+            {
+                "concept": "how are you",
+                "label": "Miten menee?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Miten sinä voit?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Mikä sinulla on?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Oletko kunossa?"
+            },
+            {
+                "concept": "i am fine",
+                "label": "Minulle kuuluu hyvää."
+            }
         ],
         "nl": [
-            "Hoe gaat het?",
-            "Hoe voel je je?",
-            "Ben je in order?"
+            {
+                "concept": [
+                    "how are you",
+                    "how are you feeling"
+                ],
+                "label": "Hoe gaat het?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Hoe voel je je?"
+            },
+            {
+                "concept": "how are you feeling",
+                "label": "Ben je in order?"
+            },
+            {
+                "concept": "i am fine",
+                "label": "Met mij gaat het goed."
+            }
         ]
-    },
-    "i am fine": {
-        "roots": {
-            "en": "to be",
-            "fi": "good",
-            "nl": "good"
-        },
-        "en": "I am fine.",
-        "fi": "Minulle kuuluu hyvää.",
-        "nl": "Met mij gaat het goed."
     }
 }

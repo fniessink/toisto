@@ -1,9 +1,28 @@
 {
-    "earth": {
-        "holonym": "solar system",
-        "hypernym": "planet",
-        "en": "earth",
-        "fi": "maa",
-        "nl": "de aarde"
+    "concepts": {
+        "earth": {
+            "holonym": "solar system",
+            "hypernym": "planet"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "earth",
+                "label": "earth"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "earth",
+                "label": "maa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "earth",
+                "label": "de aarde"
+            }
+        ]
     }
 }

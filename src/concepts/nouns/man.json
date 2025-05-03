@@ -1,27 +1,51 @@
 {
-    "man": {
-        "antonym": "woman",
-        "en": {
-            "singular": "man",
-            "plural": "men"
+    "concepts": {
+        "man": {
+            "antonym": "woman"
         },
-        "fi": {
-            "singular": "mies",
-            "plural": "miehet"
-        },
-        "nl": {
-            "singular": "de man",
-            "plural": "de mannen"
+        "best man": {
+            "hypernym": "man",
+            "roots": {
+                "en": "man",
+                "fi": "man"
+            }
         }
     },
-    "best man": {
-        "hypernym": "man",
-        "roots": {
-            "en": "man",
-            "fi": "man"
-        },
-        "en": "best man",
-        "fi": "bestman",
-        "nl": "de getuige"
+    "labels": {
+        "en": [
+            {
+                "concept": "man",
+                "label": {
+                    "singular": "man",
+                    "plural": "men"
+                }
+            },
+            {
+                "concept": "best man",
+                "label": "best man"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "man",
+                "label": {
+                    "singular": "mies",
+                    "plural": "miehet"
+                }
+            },
+            {
+                "concept": "best man",
+                "label": "bestman"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "man",
+                "label": {
+                    "singular": "de man",
+                    "plural": "de mannen"
+                }
+            }
+        ]
     }
 }

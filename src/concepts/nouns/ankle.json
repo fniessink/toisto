@@ -1,8 +1,27 @@
 {
-    "ankle": {
-        "holonym": "leg",
-        "en": "ankle",
-        "fi": "nilkka",
-        "nl": "de enkel"
+    "concepts": {
+        "ankle": {
+            "holonym": "leg"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ankle",
+                "label": "ankle"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ankle",
+                "label": "nilkka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ankle",
+                "label": "de enkel"
+            }
+        ]
     }
 }

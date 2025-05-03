@@ -1,7 +1,25 @@
 {
-    "worn": {
-        "en": "worn",
-        "fi": "kulunut",
-        "nl": "versleten"
+    "concepts": {
+        "worn": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "worn",
+                "label": "worn"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "worn",
+                "label": "kulunut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "worn",
+                "label": "versleten"
+            }
+        ]
     }
 }

@@ -1,8 +1,27 @@
 {
-    "sweden": {
-        "hypernym": "country",
-        "en": "Sweden",
-        "fi": "Ruotsi",
-        "nl": "Zweden"
+    "concepts": {
+        "sweden": {
+            "hypernym": "country"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sweden",
+                "label": "Sweden"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sweden",
+                "label": "Ruotsi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sweden",
+                "label": "Zweden"
+            }
+        ]
     }
 }

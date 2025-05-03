@@ -1,13 +1,43 @@
 {
-    "relationship": {
-        "en": "relationship",
-        "fi": "parisuhde",
-        "nl": "de relatie"
+    "concepts": {
+        "relationship": {},
+        "civil partnership": {
+            "hypernym": "relationship"
+        }
     },
-    "civil partnership": {
-        "hypernym": "relationship",
-        "en": "civil partnership",
-        "fi": "rekisteröity parisuhde",
-        "nl": "het geregistreerde partnerschap|geregistreerd partnerschap"
+    "labels": {
+        "en": [
+            {
+                "concept": "relationship",
+                "label": "relationship"
+            },
+            {
+                "concept": "civil partnership",
+                "label": "civil partnership"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "relationship",
+                "label": "parisuhde"
+            },
+            {
+                "concept": "civil partnership",
+                "label": "rekisteröity parisuhde"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "relationship",
+                "label": "de relatie"
+            },
+            {
+                "concept": "civil partnership",
+                "label": [
+                    "het geregistreerde partnerschap",
+                    "geregistreerd partnerschap"
+                ]
+            }
+        ]
     }
 }

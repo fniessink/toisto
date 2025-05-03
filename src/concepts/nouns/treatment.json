@@ -1,7 +1,25 @@
 {
-    "antibiotic treatment": {
-        "en": "antibiotic treatment",
-        "fi": "antibioottikuuri",
-        "nl": "de antibioticakuur"
+    "concepts": {
+        "antibiotic treatment": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "antibiotic treatment",
+                "label": "antibiotic treatment"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "antibiotic treatment",
+                "label": "antibioottikuuri"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "antibiotic treatment",
+                "label": "de antibioticakuur"
+            }
+        ]
     }
 }

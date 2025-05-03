@@ -1,16 +1,34 @@
 {
-    "animal": {
-        "en": {
-            "singular": "animal",
-            "plural": "animals"
-        },
-        "fi": {
-            "singular": "eläin",
-            "plural": "eläimet"
-        },
-        "nl": {
-            "singular": "het dier",
-            "plural": "de dieren"
-        }
+    "concepts": {
+        "animal": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "animal",
+                "label": {
+                    "singular": "animal",
+                    "plural": "animals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "animal",
+                "label": {
+                    "singular": "eläin",
+                    "plural": "eläimet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "animal",
+                "label": {
+                    "singular": "het dier",
+                    "plural": "de dieren"
+                }
+            }
+        ]
     }
 }

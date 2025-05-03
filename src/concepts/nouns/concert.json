@@ -1,35 +1,59 @@
 {
-    "concert": {
-        "involves": "musical instrument",
-        "en": {
-            "singular": [
-                "concert",
-                "gig*"
-            ],
-            "plural": [
-                "concerts",
-                "gigs*"
-            ]
-        },
-        "fi": {
-            "singular": [
-                "konsertti",
-                "keikka*"
-            ],
-            "plural": [
-                "konsertit",
-                "keikat*"
-            ]
-        },
-        "nl": {
-            "singular": [
-                "het concert",
-                "het optreden"
-            ],
-            "plural": [
-                "de concerten",
-                "de optredens"
-            ]
+    "concepts": {
+        "concert": {
+            "involves": "musical instrument"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "concert",
+                    "plural": "concerts"
+                }
+            },
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "gig",
+                    "plural": "gigs"
+                },
+                "colloquial": true
+            }
+        ],
+        "fi": [
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "konsertti",
+                    "plural": "konsertit"
+                }
+            },
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "keikka",
+                    "plural": "keikat"
+                },
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "het concert",
+                    "plural": "de concerten"
+                }
+            },
+            {
+                "concept": "concert",
+                "label": {
+                    "singular": "het optreden",
+                    "plural": "de optredens"
+                }
+            }
+        ]
     }
 }

@@ -1,17 +1,36 @@
 {
-    "10": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "ten",
-            "ordinal": "tenth"
-        },
-        "fi": {
-            "cardinal": "kymmenen",
-            "ordinal": "kymmenes"
-        },
-        "nl": {
-            "cardinal": "tien",
-            "ordinal": "tiende"
+    "concepts": {
+        "10": {
+            "hypernym": "number"
         }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "10",
+                "label": {
+                    "cardinal": "ten",
+                    "ordinal": "tenth"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "10",
+                "label": {
+                    "cardinal": "kymmenen",
+                    "ordinal": "kymmenes"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "10",
+                "label": {
+                    "cardinal": "tien",
+                    "ordinal": "tiende"
+                }
+            }
+        ]
     }
 }
