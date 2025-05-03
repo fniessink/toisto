@@ -1,7 +1,22 @@
 {
-    "to notice": {
-        "en": "to notice",
-        "fi": "huomata",
-        "nl": "opmerken"
-    }
+    "concepts": {
+        "to notice": {}
+    },
+    "labels": [
+        {
+            "concept": "to notice",
+            "label": "to notice",
+            "language": "en"
+        },
+        {
+            "concept": "to notice",
+            "label": "huomata",
+            "language": "fi"
+        },
+        {
+            "concept": "to notice",
+            "label": "opmerken",
+            "language": "nl"
+        }
+    ]
 }

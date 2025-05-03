@@ -1,8 +1,24 @@
 {
-    "spain": {
-        "hypernym": "country",
-        "en": "Spain",
-        "fi": "Espanja",
-        "nl": "Spanje"
-    }
+    "concepts": {
+        "spain": {
+            "hypernym": "country"
+        }
+    },
+    "labels": [
+        {
+            "concept": "spain",
+            "label": "Spain",
+            "language": "en"
+        },
+        {
+            "concept": "spain",
+            "label": "Espanja",
+            "language": "fi"
+        },
+        {
+            "concept": "spain",
+            "label": "Spanje",
+            "language": "nl"
+        }
+    ]
 }

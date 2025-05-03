@@ -1,20 +1,36 @@
 {
-    "new": {
-        "antonym": "old",
-        "en": {
-            "positive degree": "new",
-            "comparative degree": "newer",
-            "superlative degree": "newest"
-        },
-        "fi": {
-            "positive degree": "uusi",
-            "comparative degree": "uudempi",
-            "superlative degree": "uusin"
-        },
-        "nl": {
-            "positive degree": "nieuw",
-            "comparative degree": "nieuwer",
-            "superlative degree": "nieuwst"
+    "concepts": {
+        "new": {
+            "antonym": "old"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "new",
+            "label": {
+                "positive degree": "new",
+                "comparative degree": "newer",
+                "superlative degree": "newest"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "new",
+            "label": {
+                "positive degree": "uusi",
+                "comparative degree": "uudempi",
+                "superlative degree": "uusin"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "new",
+            "label": {
+                "positive degree": "nieuw",
+                "comparative degree": "nieuwer",
+                "superlative degree": "nieuwst"
+            },
+            "language": "nl"
+        }
+    ]
 }

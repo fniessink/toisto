@@ -1,24 +1,46 @@
 {
-    "60": {
-        "hypernym": "number",
-        "roots": [
-            "6",
-            "10"
-        ],
-        "en": {
-            "cardinal": "sixty",
-            "ordinal": "sixtieth"
-        },
-        "fi": {
-            "cardinal": [
-                "kuusikymmentä",
-                "kuuskyt*"
-            ],
-            "ordinal": "kuudeskymmenes"
-        },
-        "nl": {
-            "cardinal": "zestig",
-            "ordinal": "zestigste"
+    "concepts": {
+        "60": {
+            "hypernym": "number",
+            "roots": [
+                "6",
+                "10"
+            ]
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "60",
+            "label": {
+                "cardinal": "sixty",
+                "ordinal": "sixtieth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "60",
+            "label": {
+                "cardinal": "kuusikymmentä",
+                "ordinal": "kuudeskymmenes"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "60",
+            "label": {
+                "cardinal": "kuuskyt",
+                "ordinal": "kuudeskymmenes"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "60",
+            "label": {
+                "cardinal": "zestig",
+                "ordinal": "zestigste"
+            },
+            "language": "nl"
+        }
+    ]
 }

@@ -1,37 +1,64 @@
 {
-    "chair": {
-        "en": {
-            "singular": "chair",
-            "plural": "chairs"
-        },
-        "fi": {
-            "singular": "tuoli",
-            "plural": "tuolit"
-        },
-        "nl": {
-            "singular": "de stoel",
-            "plural": "de stoelen"
+    "concepts": {
+        "chair": {},
+        "office chair": {
+            "example": "we are looking for an office chair",
+            "hypernym": "chair",
+            "roots": {
+                "en": [
+                    "office",
+                    "chair"
+                ],
+                "fi": [
+                    "job",
+                    "chair"
+                ],
+                "nl": [
+                    "desk",
+                    "chair"
+                ]
+            }
         }
     },
-    "office chair": {
-        "example": "we are looking for an office chair",
-        "hypernym": "chair",
-        "roots": {
-            "en": [
-                "office",
-                "chair"
-            ],
-            "fi": [
-                "job",
-                "chair"
-            ],
-            "nl": [
-                "desk",
-                "chair"
-            ]
+    "labels": [
+        {
+            "concept": "chair",
+            "label": {
+                "singular": "chair",
+                "plural": "chairs"
+            },
+            "language": "en"
         },
-        "en": "office chair",
-        "fi": "työtuoli",
-        "nl": "de bureaustoel"
-    }
+        {
+            "concept": "chair",
+            "label": {
+                "singular": "tuoli",
+                "plural": "tuolit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "chair",
+            "label": {
+                "singular": "de stoel",
+                "plural": "de stoelen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "office chair",
+            "label": "office chair",
+            "language": "en"
+        },
+        {
+            "concept": "office chair",
+            "label": "työtuoli",
+            "language": "fi"
+        },
+        {
+            "concept": "office chair",
+            "label": "de bureaustoel",
+            "language": "nl"
+        }
+    ]
 }

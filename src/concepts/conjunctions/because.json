@@ -1,10 +1,29 @@
 {
-    "because": {
-        "en": "because",
-        "fi": "koska",
-        "nl": [
-            "omdat;;'omdat' is a subordinating conjunction, followed by a clause in inverted order: subject-object-verb. For example, 'Ik ga naar huis omdat ik moe ben'",
-            "want;;'want' is a coordinating conjunction, followed by a clause in normal subject-verb-object order. For example, 'Ik ga naar huis want ik ben moe'"
-        ]
-    }
+    "concepts": {
+        "because": {}
+    },
+    "labels": [
+        {
+            "concept": "because",
+            "label": "because",
+            "language": "en"
+        },
+        {
+            "concept": "because",
+            "label": "koska",
+            "language": "fi"
+        },
+        {
+            "concept": "because",
+            "label": "omdat",
+            "language": "nl",
+            "note": "'omdat' is a subordinating conjunction, followed by a clause in inverted order: subject-object-verb. For example, 'Ik ga naar huis omdat ik moe ben'"
+        },
+        {
+            "concept": "because",
+            "label": "want",
+            "language": "nl",
+            "note": "'want' is a coordinating conjunction, followed by a clause in normal subject-verb-object order. For example, 'Ik ga naar huis want ik ben moe'"
+        }
+    ]
 }

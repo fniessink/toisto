@@ -1,17 +1,33 @@
 {
-    "wolf": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "wolf",
-            "plural": "wolves"
-        },
-        "fi": {
-            "singular": "susi",
-            "plural": "sudet"
-        },
-        "nl": {
-            "singular": "de wolf",
-            "plural": "de wolven"
+    "concepts": {
+        "wolf": {
+            "hypernym": "animal"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "wolf",
+            "label": {
+                "singular": "wolf",
+                "plural": "wolves"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "wolf",
+            "label": {
+                "singular": "susi",
+                "plural": "sudet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "wolf",
+            "label": {
+                "singular": "de wolf",
+                "plural": "de wolven"
+            },
+            "language": "nl"
+        }
+    ]
 }

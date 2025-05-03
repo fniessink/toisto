@@ -1,7 +1,22 @@
 {
-    "sailing": {
-        "en": "sailing",
-        "fi": "purjehdus",
-        "nl": "het zeilen"
-    }
+    "concepts": {
+        "sailing": {}
+    },
+    "labels": [
+        {
+            "concept": "sailing",
+            "label": "sailing",
+            "language": "en"
+        },
+        {
+            "concept": "sailing",
+            "label": "purjehdus",
+            "language": "fi"
+        },
+        {
+            "concept": "sailing",
+            "label": "het zeilen",
+            "language": "nl"
+        }
+    ]
 }

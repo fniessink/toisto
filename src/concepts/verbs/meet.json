@@ -1,21 +1,49 @@
 {
-    "to meet (someone new)": {
-        "en": "to meet;someone new",
-        "fi": "tutustua",
-        "nl": "kennismaken"
+    "concepts": {
+        "to meet (someone new)": {},
+        "to meet (come face to face with)": {}
     },
-    "to meet (come face to face with)": {
-        "en": {
-            "infinitive": "to meet;come face to face with",
-            "verbal noun": "meeting"
+    "labels": [
+        {
+            "concept": "to meet (someone new)",
+            "label": "to meet",
+            "language": "en",
+            "tip": "someone new"
         },
-        "fi": {
-            "infinitive": "tavata",
-            "verbal noun": "tapaaminen"
+        {
+            "concept": "to meet (someone new)",
+            "label": "tutustua",
+            "language": "fi"
         },
-        "nl": {
-            "infinitive": "ontmoeten",
-            "verbal noun": "het ontmoeten"
+        {
+            "concept": "to meet (someone new)",
+            "label": "kennismaken",
+            "language": "nl"
+        },
+        {
+            "concept": "to meet (come face to face with)",
+            "label": {
+                "infinitive": "to meet",
+                "verbal noun": "meeting"
+            },
+            "language": "en",
+            "tip": "come face to face with"
+        },
+        {
+            "concept": "to meet (come face to face with)",
+            "label": {
+                "infinitive": "tavata",
+                "verbal noun": "tapaaminen"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "to meet (come face to face with)",
+            "label": {
+                "infinitive": "ontmoeten",
+                "verbal noun": "het ontmoeten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

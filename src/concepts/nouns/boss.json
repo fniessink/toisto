@@ -1,11 +1,33 @@
 {
-    "boss": {
-        "en": "boss",
-        "fi": [
-            "esimies",
-            "esihenkilö",
-            "pomo*"
-        ],
-        "nl": "de baas"
-    }
+    "concepts": {
+        "boss": {}
+    },
+    "labels": [
+        {
+            "concept": "boss",
+            "label": "boss",
+            "language": "en"
+        },
+        {
+            "concept": "boss",
+            "label": "esimies",
+            "language": "fi"
+        },
+        {
+            "concept": "boss",
+            "label": "esihenkilö",
+            "language": "fi"
+        },
+        {
+            "concept": "boss",
+            "label": "pomo",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "boss",
+            "label": "de baas",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,17 +1,33 @@
 {
-    "stomach": {
-        "hypernym": "organ",
-        "en": {
-            "singular": "stomach",
-            "plural": "stomachs"
-        },
-        "fi": {
-            "singular": "maha",
-            "plural": "mahat"
-        },
-        "nl": {
-            "singular": "de maag",
-            "plural": "de magen"
+    "concepts": {
+        "stomach": {
+            "hypernym": "organ"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "stomach",
+            "label": {
+                "singular": "stomach",
+                "plural": "stomachs"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "stomach",
+            "label": {
+                "singular": "maha",
+                "plural": "mahat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "stomach",
+            "label": {
+                "singular": "de maag",
+                "plural": "de magen"
+            },
+            "language": "nl"
+        }
+    ]
 }

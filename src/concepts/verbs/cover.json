@@ -1,7 +1,22 @@
 {
-    "to cover": {
-        "en": "to cover",
-        "fi": "kattaa",
-        "nl": "dekken"
-    }
+    "concepts": {
+        "to cover": {}
+    },
+    "labels": [
+        {
+            "concept": "to cover",
+            "label": "to cover",
+            "language": "en"
+        },
+        {
+            "concept": "to cover",
+            "label": "kattaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to cover",
+            "label": "dekken",
+            "language": "nl"
+        }
+    ]
 }

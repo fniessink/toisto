@@ -1,21 +1,47 @@
 {
-    "exercise, practice": {
-        "en": {
-            "singular": "exercise",
-            "plural": "exercises"
-        },
-        "fi": {
-            "singular": "harjoitus",
-            "plural": "harjoitukset"
-        },
-        "nl": {
-            "singular": "de oefening",
-            "plural": "de oefeningen"
-        }
+    "concepts": {
+        "exercise, practice": {},
+        "exercise (physical activity)": {}
     },
-    "exercise (physical activity)": {
-        "en": "exercise",
-        "fi": "liikunta",
-        "nl": "de lichaamsbeweging"
-    }
+    "labels": [
+        {
+            "concept": "exercise, practice",
+            "label": {
+                "singular": "exercise",
+                "plural": "exercises"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "exercise, practice",
+            "label": {
+                "singular": "harjoitus",
+                "plural": "harjoitukset"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "exercise, practice",
+            "label": {
+                "singular": "de oefening",
+                "plural": "de oefeningen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "exercise (physical activity)",
+            "label": "exercise",
+            "language": "en"
+        },
+        {
+            "concept": "exercise (physical activity)",
+            "label": "liikunta",
+            "language": "fi"
+        },
+        {
+            "concept": "exercise (physical activity)",
+            "label": "de lichaamsbeweging",
+            "language": "nl"
+        }
+    ]
 }

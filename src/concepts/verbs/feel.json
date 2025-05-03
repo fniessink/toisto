@@ -1,12 +1,38 @@
 {
-    "to feel": {
-        "en": "to feel",
-        "fi": "tuntua",
-        "nl": "voelen"
+    "concepts": {
+        "to feel": {},
+        "to feel nervous": {}
     },
-    "to feel nervous": {
-        "en": "to feel nervous",
-        "fi": "jännittää",
-        "nl": "zenuwachtig zijn"
-    }
+    "labels": [
+        {
+            "concept": "to feel",
+            "label": "to feel",
+            "language": "en"
+        },
+        {
+            "concept": "to feel",
+            "label": "tuntua",
+            "language": "fi"
+        },
+        {
+            "concept": "to feel",
+            "label": "voelen",
+            "language": "nl"
+        },
+        {
+            "concept": "to feel nervous",
+            "label": "to feel nervous",
+            "language": "en"
+        },
+        {
+            "concept": "to feel nervous",
+            "label": "jännittää",
+            "language": "fi"
+        },
+        {
+            "concept": "to feel nervous",
+            "label": "zenuwachtig zijn",
+            "language": "nl"
+        }
+    ]
 }

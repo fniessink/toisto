@@ -1,10 +1,28 @@
 {
-    "printer": {
-        "en": "printer",
-        "fi": [
-            "tulostin",
-            "printteri*"
-        ],
-        "nl": "de printer"
-    }
+    "concepts": {
+        "printer": {}
+    },
+    "labels": [
+        {
+            "concept": "printer",
+            "label": "printer",
+            "language": "en"
+        },
+        {
+            "concept": "printer",
+            "label": "tulostin",
+            "language": "fi"
+        },
+        {
+            "concept": "printer",
+            "label": "printteri",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "printer",
+            "label": "de printer",
+            "language": "nl"
+        }
+    ]
 }

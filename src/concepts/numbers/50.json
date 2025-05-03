@@ -1,24 +1,46 @@
 {
-    "50": {
-        "hypernym": "number",
-        "roots": [
-            "5",
-            "10"
-        ],
-        "en": {
-            "cardinal": "fifty",
-            "ordinal": "fiftieth"
-        },
-        "fi": {
-            "cardinal": [
-                "viisikymmentä",
-                "viiskyt*"
-            ],
-            "ordinal": "viideskymmenes"
-        },
-        "nl": {
-            "cardinal": "vijftig",
-            "ordinal": "vijftigste"
+    "concepts": {
+        "50": {
+            "hypernym": "number",
+            "roots": [
+                "5",
+                "10"
+            ]
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "50",
+            "label": {
+                "cardinal": "fifty",
+                "ordinal": "fiftieth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "50",
+            "label": {
+                "cardinal": "viisikymmentä",
+                "ordinal": "viideskymmenes"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "50",
+            "label": {
+                "cardinal": "viiskyt",
+                "ordinal": "viideskymmenes"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "50",
+            "label": {
+                "cardinal": "vijftig",
+                "ordinal": "vijftigste"
+            },
+            "language": "nl"
+        }
+    ]
 }

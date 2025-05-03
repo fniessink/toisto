@@ -1,10 +1,27 @@
 {
-    "same": {
-        "en": "same",
-        "fi": "sama",
-        "nl": [
-            "dezelfde",
-            "hetzelfde"
-        ]
-    }
+    "concepts": {
+        "same": {}
+    },
+    "labels": [
+        {
+            "concept": "same",
+            "label": "same",
+            "language": "en"
+        },
+        {
+            "concept": "same",
+            "label": "sama",
+            "language": "fi"
+        },
+        {
+            "concept": "same",
+            "label": "dezelfde",
+            "language": "nl"
+        },
+        {
+            "concept": "same",
+            "label": "hetzelfde",
+            "language": "nl"
+        }
+    ]
 }

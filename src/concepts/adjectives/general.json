@@ -1,7 +1,22 @@
 {
-    "general": {
-        "en": "general",
-        "fi": "yleinen",
-        "nl": "algemeen"
-    }
+    "concepts": {
+        "general": {}
+    },
+    "labels": [
+        {
+            "concept": "general",
+            "label": "general",
+            "language": "en"
+        },
+        {
+            "concept": "general",
+            "label": "yleinen",
+            "language": "fi"
+        },
+        {
+            "concept": "general",
+            "label": "algemeen",
+            "language": "nl"
+        }
+    ]
 }

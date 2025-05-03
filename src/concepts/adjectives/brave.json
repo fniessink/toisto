@@ -1,10 +1,27 @@
 {
-    "brave": {
-        "en": "brave",
-        "fi": "rohkea",
-        "nl": [
-            "moedig",
-            "dapper"
-        ]
-    }
+    "concepts": {
+        "brave": {}
+    },
+    "labels": [
+        {
+            "concept": "brave",
+            "label": "brave",
+            "language": "en"
+        },
+        {
+            "concept": "brave",
+            "label": "rohkea",
+            "language": "fi"
+        },
+        {
+            "concept": "brave",
+            "label": "moedig",
+            "language": "nl"
+        },
+        {
+            "concept": "brave",
+            "label": "dapper",
+            "language": "nl"
+        }
+    ]
 }

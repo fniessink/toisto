@@ -1,8 +1,24 @@
 {
-    "plus": {
-        "antonym": "minus",
-        "en": "plus",
-        "fi": "plus",
-        "nl": "de plus"
-    }
+    "concepts": {
+        "plus": {
+            "antonym": "minus"
+        }
+    },
+    "labels": [
+        {
+            "concept": "plus",
+            "label": "plus",
+            "language": "en"
+        },
+        {
+            "concept": "plus",
+            "label": "plus",
+            "language": "fi"
+        },
+        {
+            "concept": "plus",
+            "label": "de plus",
+            "language": "nl"
+        }
+    ]
 }

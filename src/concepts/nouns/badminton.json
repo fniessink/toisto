@@ -1,27 +1,61 @@
 {
-    "badminton": {
-        "example": "I play badminton",
-        "hypernym": "sport",
-        "roots": {
-            "fi": "ball"
+    "concepts": {
+        "badminton": {
+            "example": "I play badminton",
+            "hypernym": "sport",
+            "roots": {
+                "fi": "ball"
+            }
         },
-        "en": "badminton",
-        "fi": [
-            "sulkapallo",
-            "sulkis*"
-        ],
-        "nl": "het badminton"
+        "I play badminton": {
+            "roots": [
+                "to play a sport",
+                "badminton"
+            ]
+        }
     },
-    "I play badminton": {
-        "roots": [
-            "to play a sport",
-            "badminton"
-        ],
-        "en": "I play badminton.",
-        "fi": [
-            "Minä pelaan sulkapalloa.",
-            "Mä pelaan sulkista.*"
-        ],
-        "nl": "Ik speel badminton."
-    }
+    "labels": [
+        {
+            "concept": "badminton",
+            "label": "badminton",
+            "language": "en"
+        },
+        {
+            "concept": "badminton",
+            "label": "sulkapallo",
+            "language": "fi"
+        },
+        {
+            "concept": "badminton",
+            "label": "sulkis",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "badminton",
+            "label": "het badminton",
+            "language": "nl"
+        },
+        {
+            "concept": "I play badminton",
+            "label": "I play badminton.",
+            "language": "en"
+        },
+        {
+            "concept": "I play badminton",
+            "label": "Minä pelaan sulkapalloa.",
+            "language": "fi"
+        },
+        {
+            "concept": "I play badminton",
+            "label": "Mä pelaan sulkista.",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "I play badminton",
+            "label": "Ik speel badminton.",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,10 +1,27 @@
 {
-    "joy": {
-        "en": "joy",
-        "fi": "ilo",
-        "nl": [
-            "de vreugde",
-            "het plezier"
-        ]
-    }
+    "concepts": {
+        "joy": {}
+    },
+    "labels": [
+        {
+            "concept": "joy",
+            "label": "joy",
+            "language": "en"
+        },
+        {
+            "concept": "joy",
+            "label": "ilo",
+            "language": "fi"
+        },
+        {
+            "concept": "joy",
+            "label": "de vreugde",
+            "language": "nl"
+        },
+        {
+            "concept": "joy",
+            "label": "het plezier",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "often": {
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
-    }
+    "concepts": {
+        "often": {}
+    },
+    "labels": [
+        {
+            "concept": "often",
+            "label": "often",
+            "language": "en"
+        },
+        {
+            "concept": "often",
+            "label": "usein",
+            "language": "fi"
+        },
+        {
+            "concept": "often",
+            "label": "vaak",
+            "language": "nl"
+        }
+    ]
 }

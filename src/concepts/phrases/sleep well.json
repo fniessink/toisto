@@ -1,21 +1,39 @@
 {
-    "sleep well": {
-        "roots": {
-            "en": [
-                "to sleep",
-                "well"
-            ],
-            "fi": [
-                "to sleep",
-                "well"
-            ],
-            "nl": "to sleep"
+    "concepts": {
+        "sleep well": {
+            "roots": {
+                "en": [
+                    "to sleep",
+                    "well"
+                ],
+                "fi": [
+                    "to sleep",
+                    "well"
+                ],
+                "nl": "to sleep"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "sleep well",
+            "label": "Sleep well!",
+            "language": "en"
         },
-        "en": "Sleep well!",
-        "fi": "Nuku hyvin!",
-        "nl": [
-            "Slaap lekker!",
-            "Welterusten!"
-        ]
-    }
+        {
+            "concept": "sleep well",
+            "label": "Nuku hyvin!",
+            "language": "fi"
+        },
+        {
+            "concept": "sleep well",
+            "label": "Slaap lekker!",
+            "language": "nl"
+        },
+        {
+            "concept": "sleep well",
+            "label": "Welterusten!",
+            "language": "nl"
+        }
+    ]
 }

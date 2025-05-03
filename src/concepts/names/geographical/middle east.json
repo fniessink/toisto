@@ -1,13 +1,29 @@
 {
-    "middle east": {
-        "holonym": [
-            "africa",
-            "asia",
-            "europe"
-        ],
-        "roots": "east",
-        "en": "Middle East",
-        "fi": "Lähi-itä",
-        "nl": "het Midden-Oosten"
-    }
+    "concepts": {
+        "middle east": {
+            "holonym": [
+                "africa",
+                "asia",
+                "europe"
+            ],
+            "roots": "east"
+        }
+    },
+    "labels": [
+        {
+            "concept": "middle east",
+            "label": "Middle East",
+            "language": "en"
+        },
+        {
+            "concept": "middle east",
+            "label": "Lähi-itä",
+            "language": "fi"
+        },
+        {
+            "concept": "middle east",
+            "label": "het Midden-Oosten",
+            "language": "nl"
+        }
+    ]
 }

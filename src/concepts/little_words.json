@@ -1,63 +1,161 @@
 {
-    "all": {
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
+    "concepts": {
+        "all": {},
+        "at least": {},
+        "by the way": {},
+        "in the mean time": {},
+        "always": {},
+        "therefore": {},
+        "too": {},
+        "exactly": {},
+        "hopefully": {},
+        "already": {}
     },
-    "at least": {
-        "en": [
-            "at least",
-            "in any case"
-        ],
-        "fi": "ainakin",
-        "nl": [
-            "in ieder geval",
-            "in elk geval",
-            "tenminste",
-            "althans"
-        ]
-    },
-    "by the way": {
-        "en": "by the way",
-        "fi": "muuten",
-        "nl": "overigens"
-    },
-    "in the mean time": {
-        "en": "in the mean time",
-        "fi": "sillä aikaa",
-        "nl": "ondertussen"
-    },
-    "always": {
-        "en": "always",
-        "fi": "aina",
-        "nl": "altijd"
-    },
-    "therefore": {
-        "en": "therefore",
-        "fi": "siksi",
-        "nl": "daarom"
-    },
-    "too": {
-        "en": "too",
-        "fi": "liian",
-        "nl": "te"
-    },
-    "exactly": {
-        "en": "exactly",
-        "fi": [
-            "juuri",
-            "just*"
-        ],
-        "nl": "precies"
-    },
-    "hopefully": {
-        "en": "hopefully",
-        "fi": "toivottavasti",
-        "nl": "hopelijk"
-    },
-    "already": {
-        "en": "already",
-        "fi": "jo",
-        "nl": "al"
-    }
+    "labels": [
+        {
+            "concept": "all",
+            "label": "all",
+            "language": "en"
+        },
+        {
+            "concept": "all",
+            "label": "kaikki",
+            "language": "fi"
+        },
+        {
+            "concept": "all",
+            "label": "alle",
+            "language": "nl"
+        },
+        {
+            "concept": "at least",
+            "label": "at least",
+            "language": "en"
+        },
+        {
+            "concept": "at least",
+            "label": "ainakin",
+            "language": "fi"
+        },
+        {
+            "concept": "at least",
+            "label": "tenminste",
+            "language": "nl"
+        },
+        {
+            "concept": "at least",
+            "label": "althans",
+            "language": "nl"
+        },
+        {
+            "concept": "by the way",
+            "label": "by the way",
+            "language": "en"
+        },
+        {
+            "concept": "by the way",
+            "label": "muuten",
+            "language": "fi"
+        },
+        {
+            "concept": "by the way",
+            "label": "overigens",
+            "language": "nl"
+        },
+        {
+            "concept": "in the mean time",
+            "label": "in the mean time",
+            "language": "en"
+        },
+        {
+            "concept": "in the mean time",
+            "label": "sillä aikaa",
+            "language": "fi"
+        },
+        {
+            "concept": "in the mean time",
+            "label": "ondertussen",
+            "language": "nl"
+        },
+        {
+            "concept": "always",
+            "label": "always",
+            "language": "en"
+        },
+        {
+            "concept": "always",
+            "label": "aina",
+            "language": "fi"
+        },
+        {
+            "concept": "always",
+            "label": "altijd",
+            "language": "nl"
+        },
+        {
+            "concept": "therefore",
+            "label": "therefore",
+            "language": "en"
+        },
+        {
+            "concept": "therefore",
+            "label": "siksi",
+            "language": "fi"
+        },
+        {
+            "concept": "therefore",
+            "label": "daarom",
+            "language": "nl"
+        },
+        {
+            "concept": "too",
+            "label": "too",
+            "language": "en"
+        },
+        {
+            "concept": "too",
+            "label": "liian",
+            "language": "fi"
+        },
+        {
+            "concept": "too",
+            "label": "te",
+            "language": "nl"
+        },
+        {
+            "concept": "exactly",
+            "label": "exactly",
+            "language": "en"
+        },
+        {
+            "concept": "hopefully",
+            "label": "hopefully",
+            "language": "en"
+        },
+        {
+            "concept": "hopefully",
+            "label": "toivottavasti",
+            "language": "fi"
+        },
+        {
+            "concept": "hopefully",
+            "label": "hopelijk",
+            "language": "nl"
+        },
+        {
+            "concept": "already",
+            "label": "already",
+            "language": "en"
+        },
+        {
+            "concept": "already",
+            "label": "jo",
+            "language": "fi"
+        },
+        {
+            "concept": "already",
+            "label": "al",
+            "language": "nl"
+        }
+    ]
 }

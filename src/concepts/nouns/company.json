@@ -1,32 +1,70 @@
 {
-    "company": {
-        "en": [
-            "company",
-            "firm"
-        ],
-        "fi": [
-            "yritys",
-            "firma*"
-        ],
-        "nl": [
-            "de onderneming",
-            "de firma",
-            "het bedrijf"
-        ]
-    },
-    "llc": {
-        "hypernym": "company",
-        "en": {
-            "full form": "limited liability company",
-            "abbreviation": "LLC"
-        },
-        "fi": {
-            "full form": "osakeyhtiö",
-            "abbreviation": "oy"
-        },
-        "nl": {
-            "full form": "de naamloze vennootschap",
-            "abbreviation": "de NV"
+    "concepts": {
+        "company": {},
+        "llc": {
+            "hypernym": "company"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "company",
+            "label": "company",
+            "language": "en"
+        },
+        {
+            "concept": "company",
+            "label": "firm",
+            "language": "en"
+        },
+        {
+            "concept": "company",
+            "label": "yritys",
+            "language": "fi"
+        },
+        {
+            "concept": "company",
+            "label": "firma",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "company",
+            "label": "de onderneming",
+            "language": "nl"
+        },
+        {
+            "concept": "company",
+            "label": "de firma",
+            "language": "nl"
+        },
+        {
+            "concept": "company",
+            "label": "het bedrijf",
+            "language": "nl"
+        },
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "limited liability company",
+                "abbreviation": "LLC"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "osakeyhtiö",
+                "abbreviation": "oy"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "de naamloze vennootschap",
+                "abbreviation": "de NV"
+            },
+            "language": "nl"
+        }
+    ]
 }

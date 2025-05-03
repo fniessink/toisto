@@ -1,7 +1,22 @@
 {
-    "to reimburse": {
-        "en": "to reimburse",
-        "fi": "korvata",
-        "nl": "vergoeden"
-    }
+    "concepts": {
+        "to reimburse": {}
+    },
+    "labels": [
+        {
+            "concept": "to reimburse",
+            "label": "to reimburse",
+            "language": "en"
+        },
+        {
+            "concept": "to reimburse",
+            "label": "korvata",
+            "language": "fi"
+        },
+        {
+            "concept": "to reimburse",
+            "label": "vergoeden",
+            "language": "nl"
+        }
+    ]
 }

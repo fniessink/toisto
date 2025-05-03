@@ -1,7 +1,22 @@
 {
-    "future tense": {
-        "en": "future tense",
-        "fi": "futuuri",
-        "nl": "de toekomstige tijd"
-    }
+    "concepts": {
+        "future tense": {}
+    },
+    "labels": [
+        {
+            "concept": "future tense",
+            "label": "future tense",
+            "language": "en"
+        },
+        {
+            "concept": "future tense",
+            "label": "futuuri",
+            "language": "fi"
+        },
+        {
+            "concept": "future tense",
+            "label": "de toekomstige tijd",
+            "language": "nl"
+        }
+    ]
 }

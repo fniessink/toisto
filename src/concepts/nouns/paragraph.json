@@ -1,16 +1,31 @@
 {
-    "paragraph": {
-        "en": {
-            "singular": "paragraph",
-            "plural": "paragraphs"
+    "concepts": {
+        "paragraph": {}
+    },
+    "labels": [
+        {
+            "concept": "paragraph",
+            "label": {
+                "singular": "paragraph",
+                "plural": "paragraphs"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "kappale",
-            "plural": "kappaleet"
+        {
+            "concept": "paragraph",
+            "label": {
+                "singular": "kappale",
+                "plural": "kappaleet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de alinea",
-            "plural": "de alinea's"
+        {
+            "concept": "paragraph",
+            "label": {
+                "singular": "de alinea",
+                "plural": "de alinea's"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

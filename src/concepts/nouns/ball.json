@@ -1,16 +1,31 @@
 {
-    "ball": {
-        "en": {
-            "singular": "ball",
-            "plural": "balls"
+    "concepts": {
+        "ball": {}
+    },
+    "labels": [
+        {
+            "concept": "ball",
+            "label": {
+                "singular": "ball",
+                "plural": "balls"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "pallo",
-            "plural": "pallot"
+        {
+            "concept": "ball",
+            "label": {
+                "singular": "pallo",
+                "plural": "pallot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de bal",
-            "plural": "de ballen"
+        {
+            "concept": "ball",
+            "label": {
+                "singular": "de bal",
+                "plural": "de ballen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

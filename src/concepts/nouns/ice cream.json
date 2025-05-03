@@ -1,47 +1,78 @@
 {
-    "ice cream": {
-        "hypernym": "food",
-        "roots": {
-            "en": [
-                "ice",
-                "cream"
-            ],
-            "fi": "ice",
-            "nl": "ice"
+    "concepts": {
+        "ice cream": {
+            "hypernym": "food",
+            "roots": {
+                "en": [
+                    "ice",
+                    "cream"
+                ],
+                "fi": "ice",
+                "nl": "ice"
+            }
         },
-        "en": {
-            "singular": "ice cream",
-            "plural": "ice creams"
-        },
-        "fi": {
-            "singular": [
-                "jäätelö",
-                "jätski*"
-            ],
-            "plural": [
-                "jäätelöt",
-                "jätskit*"
-            ]
-        },
-        "nl": {
-            "singular": "het ijsje|het ijs",
-            "plural": "de ijsjes"
+        "ice cream kiosk": {
+            "roots": {
+                "en": [
+                    "kiosk",
+                    "ice cream"
+                ],
+                "fi": [
+                    "kiosk",
+                    "ice cream"
+                ],
+                "nl": "ice cream"
+            }
         }
     },
-    "ice cream kiosk": {
-        "roots": {
-            "en": [
-                "kiosk",
-                "ice cream"
-            ],
-            "fi": [
-                "kiosk",
-                "ice cream"
-            ],
-            "nl": "ice cream"
+    "labels": [
+        {
+            "concept": "ice cream",
+            "label": {
+                "singular": "ice cream",
+                "plural": "ice creams"
+            },
+            "language": "en"
         },
-        "en": "ice cream kiosk",
-        "fi": "jäätelökioski",
-        "nl": "de ijskraam"
-    }
+        {
+            "concept": "ice cream",
+            "label": {
+                "singular": "jäätelö",
+                "plural": "jäätelöt"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "ice cream",
+            "label": {
+                "singular": "jätski",
+                "plural": "jätskit"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "ice cream",
+            "label": {
+                "singular": "het ijsje|het ijs",
+                "plural": "de ijsjes"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "ice cream kiosk",
+            "label": "ice cream kiosk",
+            "language": "en"
+        },
+        {
+            "concept": "ice cream kiosk",
+            "label": "jäätelökioski",
+            "language": "fi"
+        },
+        {
+            "concept": "ice cream kiosk",
+            "label": "de ijskraam",
+            "language": "nl"
+        }
+    ]
 }

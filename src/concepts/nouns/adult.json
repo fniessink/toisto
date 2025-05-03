@@ -1,16 +1,31 @@
 {
-    "adult": {
-        "en": {
-            "singular": "adult",
-            "plural": "adults"
+    "concepts": {
+        "adult": {}
+    },
+    "labels": [
+        {
+            "concept": "adult",
+            "label": {
+                "singular": "adult",
+                "plural": "adults"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "aikuinen",
-            "plural": "aikuiset"
+        {
+            "concept": "adult",
+            "label": {
+                "singular": "aikuinen",
+                "plural": "aikuiset"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de volwassene",
-            "plural": "de volwassenen"
+        {
+            "concept": "adult",
+            "label": {
+                "singular": "de volwassene",
+                "plural": "de volwassenen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

@@ -1,24 +1,52 @@
 {
-    "job": {
-        "roots": {
-            "fi": [
-                "work",
-                "place"
-            ]
+    "concepts": {
+        "job": {
+            "roots": {
+                "fi": [
+                    "work",
+                    "place"
+                ]
+            }
         },
-        "en": "job",
-        "fi": "työpaikka",
-        "nl": "de baan"
+        "part-time job": {
+            "hypernym": "job",
+            "roots": {
+                "en": "job",
+                "fi": "work",
+                "nl": "work"
+            }
+        }
     },
-    "part-time job": {
-        "hypernym": "job",
-        "roots": {
-            "en": "job",
-            "fi": "work",
-            "nl": "work"
+    "labels": [
+        {
+            "concept": "job",
+            "label": "job",
+            "language": "en"
         },
-        "en": "part-time job",
-        "fi": "osa-aikatyö",
-        "nl": "het deeltijdwerk"
-    }
+        {
+            "concept": "job",
+            "label": "työpaikka",
+            "language": "fi"
+        },
+        {
+            "concept": "job",
+            "label": "de baan",
+            "language": "nl"
+        },
+        {
+            "concept": "part-time job",
+            "label": "part-time job",
+            "language": "en"
+        },
+        {
+            "concept": "part-time job",
+            "label": "osa-aikatyö",
+            "language": "fi"
+        },
+        {
+            "concept": "part-time job",
+            "label": "het deeltijdwerk",
+            "language": "nl"
+        }
+    ]
 }

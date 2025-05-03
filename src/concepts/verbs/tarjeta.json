@@ -1,7 +1,22 @@
 {
-    "tarjeta": {
-        "en": "(to be warm enough)",
-        "fi": "tarjeta",
-        "nl": "(het niet koud hebben)"
-    }
+    "concepts": {
+        "tarjeta": {}
+    },
+    "labels": [
+        {
+            "concept": "tarjeta",
+            "label": "(to be warm enough)",
+            "language": "en"
+        },
+        {
+            "concept": "tarjeta",
+            "label": "tarjeta",
+            "language": "fi"
+        },
+        {
+            "concept": "tarjeta",
+            "label": "(het niet koud hebben)",
+            "language": "nl"
+        }
+    ]
 }

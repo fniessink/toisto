@@ -1,7 +1,22 @@
 {
-    "to think over": {
-        "en": "to think over",
-        "fi": "miettiä",
-        "nl": "overdenken"
-    }
+    "concepts": {
+        "to think over": {}
+    },
+    "labels": [
+        {
+            "concept": "to think over",
+            "label": "to think over",
+            "language": "en"
+        },
+        {
+            "concept": "to think over",
+            "label": "miettiä",
+            "language": "fi"
+        },
+        {
+            "concept": "to think over",
+            "label": "overdenken",
+            "language": "nl"
+        }
+    ]
 }

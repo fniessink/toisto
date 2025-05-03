@@ -1,16 +1,31 @@
 {
-    "device": {
-        "en": {
-            "singular": "device",
-            "plural": "devices"
+    "concepts": {
+        "device": {}
+    },
+    "labels": [
+        {
+            "concept": "device",
+            "label": {
+                "singular": "device",
+                "plural": "devices"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "laite",
-            "plural": "laitteet"
+        {
+            "concept": "device",
+            "label": {
+                "singular": "laite",
+                "plural": "laitteet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het apparaat",
-            "plural": "de apparaten"
+        {
+            "concept": "device",
+            "label": {
+                "singular": "het apparaat",
+                "plural": "de apparaten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

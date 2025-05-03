@@ -1,25 +1,44 @@
 {
-    "sunday": {
-        "holonym": [
-            "days of the week",
-            "weekend"
-        ],
-        "hypernym": "day",
-        "roots": {
-            "en": "day",
-            "nl": "day"
-        },
-        "en": {
-            "singular": "Sunday;;In English, the names of weekdays are capitalized",
-            "plural": "Sundays"
-        },
-        "fi": {
-            "singular": "sunnuntai;;In Finnish, the names of weekdays are not capitalized",
-            "plural": "sunnuntait"
-        },
-        "nl": {
-            "singular": "zondag|de zondag;In Dutch, the names of weekdays are not capitalized",
-            "plural": "de zondagen"
+    "concepts": {
+        "sunday": {
+            "holonym": [
+                "days of the week",
+                "weekend"
+            ],
+            "hypernym": "day",
+            "roots": {
+                "en": "day",
+                "nl": "day"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "sunday",
+            "label": {
+                "singular": "Sunday",
+                "plural": "Sundays"
+            },
+            "language": "en",
+            "note": "In English, the names of weekdays are capitalized"
+        },
+        {
+            "concept": "sunday",
+            "label": {
+                "singular": "sunnuntai",
+                "plural": "sunnuntait"
+            },
+            "language": "fi",
+            "note": "In Finnish, the names of weekdays are not capitalized"
+        },
+        {
+            "concept": "sunday",
+            "label": {
+                "singular": "zondag|de zondag",
+                "plural": "de zondagen"
+            },
+            "language": "nl",
+            "note": "In Dutch, the names of weekdays are not capitalized"
+        }
+    ]
 }

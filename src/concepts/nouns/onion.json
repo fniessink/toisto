@@ -1,30 +1,60 @@
 {
-    "onion": {
-        "example": "onions make me cry",
-        "hypernym": "vegetable",
-        "en": {
-            "singular": "onion",
-            "plural": "onions"
+    "concepts": {
+        "onion": {
+            "example": "onions make me cry",
+            "hypernym": "vegetable"
         },
-        "fi": {
-            "singular": "sipuli",
-            "plural": "sipulit"
-        },
-        "nl": {
-            "singular": "de ui",
-            "plural": "de uien"
+        "onions make me cry": {
+            "roots": [
+                "onion",
+                "to cry"
+            ]
         }
     },
-    "onions make me cry": {
-        "roots": [
-            "onion",
-            "to cry"
-        ],
-        "en": "Onions make me cry.",
-        "fi": "Sipulit saavat minut itkemään.",
-        "nl": [
-            "Uien laten me huilen.",
-            "Ik moet huilen van uien."
-        ]
-    }
+    "labels": [
+        {
+            "concept": "onion",
+            "label": {
+                "singular": "onion",
+                "plural": "onions"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "onion",
+            "label": {
+                "singular": "sipuli",
+                "plural": "sipulit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "onion",
+            "label": {
+                "singular": "de ui",
+                "plural": "de uien"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "onions make me cry",
+            "label": "Onions make me cry.",
+            "language": "en"
+        },
+        {
+            "concept": "onions make me cry",
+            "label": "Sipulit saavat minut itkemään.",
+            "language": "fi"
+        },
+        {
+            "concept": "onions make me cry",
+            "label": "Uien laten me huilen.",
+            "language": "nl"
+        },
+        {
+            "concept": "onions make me cry",
+            "label": "Ik moet huilen van uien.",
+            "language": "nl"
+        }
+    ]
 }

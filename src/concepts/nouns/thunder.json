@@ -1,46 +1,91 @@
 {
-    "thunder": {
-        "en": "thunder",
-        "fi": "ukkonen",
-        "nl": "de donder"
-    },
-    "thunderstorm": {
-        "roots": {
-            "en": [
-                "thunder",
-                "storm"
-            ],
-            "fi": [
-                "thunder",
-                "storm"
-            ],
-            "nl": "weather"
+    "concepts": {
+        "thunder": {},
+        "thunderstorm": {
+            "roots": {
+                "en": [
+                    "thunder",
+                    "storm"
+                ],
+                "fi": [
+                    "thunder",
+                    "storm"
+                ],
+                "nl": "weather"
+            }
         },
-        "en": "thunderstorm",
-        "fi": "ukkosmyrsky",
-        "nl": "het onweer"
+        "there is a thunderstorm": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "thunderstorm"
+                ],
+                "fi": [
+                    "to be",
+                    "thunder"
+                ],
+                "nl": [
+                    "to be",
+                    "thunder"
+                ]
+            }
+        }
     },
-    "there is a thunderstorm": {
-        "roots": {
-            "en": [
-                "to be",
-                "thunderstorm"
-            ],
-            "fi": [
-                "to be",
-                "thunder"
-            ],
-            "nl": [
-                "to be",
-                "thunder"
-            ]
+    "labels": [
+        {
+            "concept": "thunder",
+            "label": "thunder",
+            "language": "en"
         },
-        "en": "There is a thunderstorm.|There's a thunderstorm.",
-        "fi": [
-            "Ukkostaa.",
-            "On ukkonen.",
-            "On ukonilma."
-        ],
-        "nl": "Het onweert."
-    }
+        {
+            "concept": "thunder",
+            "label": "ukkonen",
+            "language": "fi"
+        },
+        {
+            "concept": "thunder",
+            "label": "de donder",
+            "language": "nl"
+        },
+        {
+            "concept": "thunderstorm",
+            "label": "thunderstorm",
+            "language": "en"
+        },
+        {
+            "concept": "thunderstorm",
+            "label": "ukkosmyrsky",
+            "language": "fi"
+        },
+        {
+            "concept": "thunderstorm",
+            "label": "het onweer",
+            "language": "nl"
+        },
+        {
+            "concept": "there is a thunderstorm",
+            "label": "There is a thunderstorm.|There's a thunderstorm.",
+            "language": "en"
+        },
+        {
+            "concept": "there is a thunderstorm",
+            "label": "Ukkostaa.",
+            "language": "fi"
+        },
+        {
+            "concept": "there is a thunderstorm",
+            "label": "On ukkonen.",
+            "language": "fi"
+        },
+        {
+            "concept": "there is a thunderstorm",
+            "label": "On ukonilma.",
+            "language": "fi"
+        },
+        {
+            "concept": "there is a thunderstorm",
+            "label": "Het onweert.",
+            "language": "nl"
+        }
+    ]
 }

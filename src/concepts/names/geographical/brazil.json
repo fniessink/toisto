@@ -1,16 +1,44 @@
 {
-    "brazil": {
-        "hypernym": "country",
-        "en": "Brazil",
-        "fi": "Brasilia",
-        "nl": "Brazilië"
+    "concepts": {
+        "brazil": {
+            "hypernym": "country"
+        },
+        "brazilian": {
+            "hypernym": "nationality",
+            "involves": "brazil",
+            "roots": "brazil"
+        }
     },
-    "brazilian": {
-        "hypernym": "nationality",
-        "involves": "brazil",
-        "roots": "brazil",
-        "en": "Brazilian",
-        "fi": "brasilialainen",
-        "nl": "Braziliaans"
-    }
+    "labels": [
+        {
+            "concept": "brazil",
+            "label": "Brazil",
+            "language": "en"
+        },
+        {
+            "concept": "brazil",
+            "label": "Brasilia",
+            "language": "fi"
+        },
+        {
+            "concept": "brazil",
+            "label": "Brazilië",
+            "language": "nl"
+        },
+        {
+            "concept": "brazilian",
+            "label": "Brazilian",
+            "language": "en"
+        },
+        {
+            "concept": "brazilian",
+            "label": "brasilialainen",
+            "language": "fi"
+        },
+        {
+            "concept": "brazilian",
+            "label": "Braziliaans",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,8 +1,24 @@
 {
-    "cycling": {
-        "hypernym": "outdoor activity",
-        "en": "cycling",
-        "fi": "pyöräily",
-        "nl": "het fietsen"
-    }
+    "concepts": {
+        "cycling": {
+            "hypernym": "outdoor activity"
+        }
+    },
+    "labels": [
+        {
+            "concept": "cycling",
+            "label": "cycling",
+            "language": "en"
+        },
+        {
+            "concept": "cycling",
+            "label": "pyöräily",
+            "language": "fi"
+        },
+        {
+            "concept": "cycling",
+            "label": "het fietsen",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "one after another": {
-        "en": "one after another",
-        "fi": "peräkkäin",
-        "nl": "achter elkaar"
-    }
+    "concepts": {
+        "one after another": {}
+    },
+    "labels": [
+        {
+            "concept": "one after another",
+            "label": "one after another",
+            "language": "en"
+        },
+        {
+            "concept": "one after another",
+            "label": "peräkkäin",
+            "language": "fi"
+        },
+        {
+            "concept": "one after another",
+            "label": "achter elkaar",
+            "language": "nl"
+        }
+    ]
 }

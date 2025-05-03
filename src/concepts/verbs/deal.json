@@ -1,7 +1,12 @@
 {
-    "to deal with": {
-        "en": "to deal with",
-        "fi": "hoitaa",
-        "nl": "regelen"
-    }
+    "concepts": {
+        "to deal with": {}
+    },
+    "labels": [
+        {
+            "concept": "to deal with",
+            "label": "to deal with",
+            "language": "en"
+        }
+    ]
 }

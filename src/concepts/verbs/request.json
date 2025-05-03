@@ -1,7 +1,22 @@
 {
-    "to request": {
-        "en": "to request",
-        "fi": "pyytää",
-        "nl": "verzoeken"
-    }
+    "concepts": {
+        "to request": {}
+    },
+    "labels": [
+        {
+            "concept": "to request",
+            "label": "to request",
+            "language": "en"
+        },
+        {
+            "concept": "to request",
+            "label": "pyytää",
+            "language": "fi"
+        },
+        {
+            "concept": "to request",
+            "label": "verzoeken",
+            "language": "nl"
+        }
+    ]
 }

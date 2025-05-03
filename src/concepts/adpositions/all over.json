@@ -1,7 +1,22 @@
 {
-    "all over": {
-        "en": "all over",
-        "fi": "ympäri",
-        "nl": "rond"
-    }
+    "concepts": {
+        "all over": {}
+    },
+    "labels": [
+        {
+            "concept": "all over",
+            "label": "all over",
+            "language": "en"
+        },
+        {
+            "concept": "all over",
+            "label": "ympäri",
+            "language": "fi"
+        },
+        {
+            "concept": "all over",
+            "label": "overal in",
+            "language": "nl"
+        }
+    ]
 }

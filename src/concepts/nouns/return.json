@@ -1,7 +1,22 @@
 {
-    "return": {
-        "en": "return",
-        "fi": "paluu",
-        "nl": "de terugreis"
-    }
+    "concepts": {
+        "return": {}
+    },
+    "labels": [
+        {
+            "concept": "return",
+            "label": "return",
+            "language": "en"
+        },
+        {
+            "concept": "return",
+            "label": "paluu",
+            "language": "fi"
+        },
+        {
+            "concept": "return",
+            "label": "de terugreis",
+            "language": "nl"
+        }
+    ]
 }

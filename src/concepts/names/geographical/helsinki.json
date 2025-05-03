@@ -1,19 +1,47 @@
 {
-    "helsinki": {
-        "holonym": "finland",
-        "hypernym": "capital",
-        "en": "Helsinki",
-        "fi": "Helsinki",
-        "nl": "Helsinki"
+    "concepts": {
+        "helsinki": {
+            "holonym": "finland",
+            "hypernym": "capital"
+        },
+        "north helsinki": {
+            "holonym": "helsinki",
+            "roots": [
+                "north",
+                "helsinki"
+            ]
+        }
     },
-    "north helsinki": {
-        "holonym": "helsinki",
-        "roots": [
-            "north",
-            "helsinki"
-        ],
-        "en": "North Helsinki",
-        "fi": "Pohjois-Helsinki",
-        "nl": "Helsinki-Noord"
-    }
+    "labels": [
+        {
+            "concept": "helsinki",
+            "label": "Helsinki",
+            "language": "en"
+        },
+        {
+            "concept": "helsinki",
+            "label": "Helsinki",
+            "language": "fi"
+        },
+        {
+            "concept": "helsinki",
+            "label": "Helsinki",
+            "language": "nl"
+        },
+        {
+            "concept": "north helsinki",
+            "label": "North Helsinki",
+            "language": "en"
+        },
+        {
+            "concept": "north helsinki",
+            "label": "Pohjois-Helsinki",
+            "language": "fi"
+        },
+        {
+            "concept": "north helsinki",
+            "label": "Helsinki-Noord",
+            "language": "nl"
+        }
+    ]
 }

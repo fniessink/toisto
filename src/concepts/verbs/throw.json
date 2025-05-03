@@ -1,18 +1,47 @@
 {
-    "to throw": {
-        "en": "to throw",
-        "fi": "heittää",
-        "nl": [
-            "gooien",
-            "werpen"
-        ]
+    "concepts": {
+        "to throw": {},
+        "heittää löylyä": {
+            "roots": {
+                "fi": "to throw"
+            }
+        }
     },
-    "heittää löylyä": {
-        "roots": {
-            "fi": "to throw"
+    "labels": [
+        {
+            "concept": "to throw",
+            "label": "to throw",
+            "language": "en"
         },
-        "en": "(to throw water on the rocks in the sauna stove)",
-        "fi": "heittää löylyä",
-        "nl": "(water op de stenen in de saunakachel gooien)"
-    }
+        {
+            "concept": "to throw",
+            "label": "heittää",
+            "language": "fi"
+        },
+        {
+            "concept": "to throw",
+            "label": "gooien",
+            "language": "nl"
+        },
+        {
+            "concept": "to throw",
+            "label": "werpen",
+            "language": "nl"
+        },
+        {
+            "concept": "heittää löylyä",
+            "label": "(to throw water on the rocks in the sauna stove)",
+            "language": "en"
+        },
+        {
+            "concept": "heittää löylyä",
+            "label": "heittää löylyä",
+            "language": "fi"
+        },
+        {
+            "concept": "heittää löylyä",
+            "label": "(water op de stenen in de saunakachel gooien)",
+            "language": "nl"
+        }
+    ]
 }

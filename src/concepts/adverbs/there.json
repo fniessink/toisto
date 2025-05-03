@@ -1,11 +1,32 @@
 {
-    "there": {
-        "en": "there",
-        "fi": [
-            "tuolla",
-            "tuossa",
-            "siellä"
-        ],
-        "nl": "daar"
-    }
+    "concepts": {
+        "there": {}
+    },
+    "labels": [
+        {
+            "concept": "there",
+            "label": "there",
+            "language": "en"
+        },
+        {
+            "concept": "there",
+            "label": "tuolla",
+            "language": "fi"
+        },
+        {
+            "concept": "there",
+            "label": "tuossa",
+            "language": "fi"
+        },
+        {
+            "concept": "there",
+            "label": "siellä",
+            "language": "fi"
+        },
+        {
+            "concept": "there",
+            "label": "daar",
+            "language": "nl"
+        }
+    ]
 }

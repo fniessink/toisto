@@ -1,11 +1,29 @@
 {
-    "kick": {
-        "involves": "leg",
-        "en": "kick",
-        "fi": "potku",
-        "nl": [
-            "de trap",
-            "de schop"
-        ]
-    }
+    "concepts": {
+        "kick": {
+            "involves": "leg"
+        }
+    },
+    "labels": [
+        {
+            "concept": "kick",
+            "label": "kick",
+            "language": "en"
+        },
+        {
+            "concept": "kick",
+            "label": "potku",
+            "language": "fi"
+        },
+        {
+            "concept": "kick",
+            "label": "de trap",
+            "language": "nl"
+        },
+        {
+            "concept": "kick",
+            "label": "de schop",
+            "language": "nl"
+        }
+    ]
 }

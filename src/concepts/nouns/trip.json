@@ -1,10 +1,27 @@
 {
-    "trip": {
-        "en": "trip",
-        "fi": "reissu",
-        "nl": [
-            "de trip",
-            "het uitstapje"
-        ]
-    }
+    "concepts": {
+        "trip": {}
+    },
+    "labels": [
+        {
+            "concept": "trip",
+            "label": "trip",
+            "language": "en"
+        },
+        {
+            "concept": "trip",
+            "label": "reissu",
+            "language": "fi"
+        },
+        {
+            "concept": "trip",
+            "label": "de trip",
+            "language": "nl"
+        },
+        {
+            "concept": "trip",
+            "label": "het uitstapje",
+            "language": "nl"
+        }
+    ]
 }

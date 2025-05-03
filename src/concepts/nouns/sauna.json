@@ -1,51 +1,116 @@
 {
-    "sauna": {
-        "en": "sauna",
-        "fi": "sauna",
-        "nl": "de sauna"
-    },
-    "sauna stove": {
-        "holonym": "sauna",
-        "roots": {
-            "en": "sauna",
-            "nl": "sauna"
+    "concepts": {
+        "sauna": {},
+        "sauna stove": {
+            "holonym": "sauna",
+            "roots": {
+                "en": "sauna",
+                "nl": "sauna"
+            }
         },
-        "en": [
-            "sauna stove",
-            "sauna heater"
-        ],
-        "fi": "kiuas",
-        "nl": "de saunakachel"
-    },
-    "sauna bench": {
-        "holonym": "sauna",
-        "roots": {
-            "en": "sauna",
-            "nl": "sauna"
+        "sauna bench": {
+            "holonym": "sauna",
+            "roots": {
+                "en": "sauna",
+                "nl": "sauna"
+            }
         },
-        "en": "sauna bench",
-        "fi": "lauteet",
-        "nl": "de saunabank"
-    },
-    "puusauna": {
-        "hypernym": "sauna",
-        "roots": {
-            "fi": [
-                "wood",
-                "sauna"
-            ]
+        "puusauna": {
+            "hypernym": "sauna",
+            "roots": {
+                "fi": [
+                    "wood",
+                    "sauna"
+                ]
+            }
         },
-        "en": "(a wood-heated sauna)",
-        "fi": "puusauna",
-        "nl": "(een houtgestookte sauna)"
+        "sähkösauna": {
+            "hypernym": "sauna",
+            "roots": {
+                "fi": "sauna"
+            }
+        }
     },
-    "sähkösauna": {
-        "hypernym": "sauna",
-        "roots": {
-            "fi": "sauna"
+    "labels": [
+        {
+            "concept": "sauna",
+            "label": "sauna",
+            "language": "en"
         },
-        "en": "(an electric sauna)",
-        "fi": "sähkösauna",
-        "nl": "(een electrische sauna)"
-    }
+        {
+            "concept": "sauna",
+            "label": "sauna",
+            "language": "fi"
+        },
+        {
+            "concept": "sauna",
+            "label": "de sauna",
+            "language": "nl"
+        },
+        {
+            "concept": "sauna stove",
+            "label": "sauna stove",
+            "language": "en"
+        },
+        {
+            "concept": "sauna stove",
+            "label": "sauna heater",
+            "language": "en"
+        },
+        {
+            "concept": "sauna stove",
+            "label": "kiuas",
+            "language": "fi"
+        },
+        {
+            "concept": "sauna stove",
+            "label": "de saunakachel",
+            "language": "nl"
+        },
+        {
+            "concept": "sauna bench",
+            "label": "sauna bench",
+            "language": "en"
+        },
+        {
+            "concept": "sauna bench",
+            "label": "lauteet",
+            "language": "fi"
+        },
+        {
+            "concept": "sauna bench",
+            "label": "de saunabank",
+            "language": "nl"
+        },
+        {
+            "concept": "puusauna",
+            "label": "(a wood-heated sauna)",
+            "language": "en"
+        },
+        {
+            "concept": "puusauna",
+            "label": "puusauna",
+            "language": "fi"
+        },
+        {
+            "concept": "puusauna",
+            "label": "(een houtgestookte sauna)",
+            "language": "nl"
+        },
+        {
+            "concept": "sähkösauna",
+            "label": "(an electric sauna)",
+            "language": "en"
+        },
+        {
+            "concept": "sähkösauna",
+            "label": "sähkösauna",
+            "language": "fi"
+        },
+        {
+            "concept": "sähkösauna",
+            "label": "(een electrische sauna)",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "gladly": {
-        "en": "gladly",
-        "fi": "mielellään",
-        "nl": "graag"
-    }
+    "concepts": {
+        "gladly": {}
+    },
+    "labels": [
+        {
+            "concept": "gladly",
+            "label": "gladly",
+            "language": "en"
+        },
+        {
+            "concept": "gladly",
+            "label": "mielellään",
+            "language": "fi"
+        },
+        {
+            "concept": "gladly",
+            "label": "graag",
+            "language": "nl"
+        }
+    ]
 }

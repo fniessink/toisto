@@ -1,20 +1,36 @@
 {
-    "sweet": {
-        "antonym": "sour",
-        "en": {
-            "positive degree": "sweet",
-            "comparative degree": "sweeter",
-            "superlative degree": "sweetest"
-        },
-        "fi": {
-            "positive degree": "makea",
-            "comparative degree": "makeampi",
-            "superlative degree": "makein"
-        },
-        "nl": {
-            "positive degree": "zoet",
-            "comparative degree": "zoeter",
-            "superlative degree": "zoetst"
+    "concepts": {
+        "sweet": {
+            "antonym": "sour"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "sweet",
+            "label": {
+                "positive degree": "sweet",
+                "comparative degree": "sweeter",
+                "superlative degree": "sweetest"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "sweet",
+            "label": {
+                "positive degree": "makea",
+                "comparative degree": "makeampi",
+                "superlative degree": "makein"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "sweet",
+            "label": {
+                "positive degree": "zoet",
+                "comparative degree": "zoeter",
+                "superlative degree": "zoetst"
+            },
+            "language": "nl"
+        }
+    ]
 }

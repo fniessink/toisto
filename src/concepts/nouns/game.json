@@ -1,58 +1,97 @@
 {
-    "game": {
-        "en": {
-            "singular": "game",
-            "plural": "games"
+    "concepts": {
+        "game": {},
+        "board game": {
+            "hypernym": "game"
         },
-        "fi": {
-            "singular": "peli",
-            "plural": "pelit"
-        },
-        "nl": {
-            "singular": "het spel",
-            "plural": "de spellen"
+        "computer game": {
+            "hypernym": "game",
+            "involves": "computer",
+            "roots": {
+                "en": [
+                    "computer",
+                    "game"
+                ],
+                "fi": "computer",
+                "nl": [
+                    "computer",
+                    "game"
+                ]
+            }
         }
     },
-    "board game": {
-        "hypernym": "game",
-        "en": {
-            "singular": "board game",
-            "plural": "board games"
+    "labels": [
+        {
+            "concept": "game",
+            "label": {
+                "singular": "game",
+                "plural": "games"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "lautapeli",
-            "plural": "lautapelit"
+        {
+            "concept": "game",
+            "label": {
+                "singular": "peli",
+                "plural": "pelit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het bordspel",
-            "plural": "de bordspellen|de bordspelen"
+        {
+            "concept": "game",
+            "label": {
+                "singular": "het spel",
+                "plural": "de spellen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "board game",
+            "label": {
+                "singular": "board game",
+                "plural": "board games"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "board game",
+            "label": {
+                "singular": "lautapeli",
+                "plural": "lautapelit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "board game",
+            "label": {
+                "singular": "het bordspel",
+                "plural": "de bordspellen|de bordspelen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "computer game",
+            "label": {
+                "singular": "computer game",
+                "plural": "computer games"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "computer game",
+            "label": {
+                "singular": "tietokonepeli",
+                "plural": "tietokonepelit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "computer game",
+            "label": {
+                "singular": "het computerspel",
+                "plural": "de computerspellen"
+            },
+            "language": "nl"
         }
-    },
-    "computer game": {
-        "hypernym": "game",
-        "involves": "computer",
-        "roots": {
-            "en": [
-                "computer",
-                "game"
-            ],
-            "fi": "computer",
-            "nl": [
-                "computer",
-                "game"
-            ]
-        },
-        "en": {
-            "singular": "computer game",
-            "plural": "computer games"
-        },
-        "fi": {
-            "singular": "tietokonepeli",
-            "plural": "tietokonepelit"
-        },
-        "nl": {
-            "singular": "het computerspel",
-            "plural": "de computerspellen"
-        }
-    }
+    ]
 }

@@ -1,18 +1,34 @@
 {
-    "boy": {
-        "antonym": "girl",
-        "hypernym": "man",
-        "en": {
-            "singular": "boy",
-            "plural": "boys"
-        },
-        "fi": {
-            "singular": "poika",
-            "plural": "pojat"
-        },
-        "nl": {
-            "singular": "de jongen",
-            "plural": "de jongens"
+    "concepts": {
+        "boy": {
+            "antonym": "girl",
+            "hypernym": "man"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "boy",
+            "label": {
+                "singular": "boy",
+                "plural": "boys"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "boy",
+            "label": {
+                "singular": "poika",
+                "plural": "pojat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "boy",
+            "label": {
+                "singular": "de jongen",
+                "plural": "de jongens"
+            },
+            "language": "nl"
+        }
+    ]
 }

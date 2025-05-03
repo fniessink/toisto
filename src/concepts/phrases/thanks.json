@@ -1,33 +1,74 @@
 {
-    "thanks": {
-        "en": "Thank you!|Thanks!",
-        "fi": [
-            "Kiitos!",
-            "Kiitti!*"
-        ],
-        "nl": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!"
+    "concepts": {
+        "thanks": {},
+        "thanks, same to you": {},
+        "thank you for the meal": {
+            "roots": {
+                "en": [
+                    "thanks"
+                ],
+                "fi": [
+                    "thanks",
+                    "food"
+                ],
+                "nl": [
+                    "thanks",
+                    "to eat"
+                ]
+            }
+        }
     },
-    "thanks, same to you": {
-        "en": "Thank you, same to you!|Thanks, same to you!",
-        "fi": "Kiitos samoin!",
-        "nl": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!"
-    },
-    "thank you for the meal": {
-        "roots": {
-            "en": [
-                "thanks"
-            ],
-            "fi": [
-                "thanks",
-                "food"
-            ],
-            "nl": [
-                "thanks",
-                "to eat"
-            ]
+    "labels": [
+        {
+            "concept": "thanks",
+            "label": "Thank you!|Thanks!",
+            "language": "en"
         },
-        "en": "Thank you for the meal!|Thanks for the meal!",
-        "fi": "Kiitos ruoasta!",
-        "nl": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!"
-    }
+        {
+            "concept": "thanks",
+            "label": "Kiitos!",
+            "language": "fi"
+        },
+        {
+            "concept": "thanks",
+            "label": "Kiitti!",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "thanks",
+            "label": "Dank je!|Dank je wel!|Dank u!|Dank u wel!|Bedankt!",
+            "language": "nl"
+        },
+        {
+            "concept": "thanks, same to you",
+            "label": "Thank you, same to you!|Thanks, same to you!",
+            "language": "en"
+        },
+        {
+            "concept": "thanks, same to you",
+            "label": "Kiitos samoin!",
+            "language": "fi"
+        },
+        {
+            "concept": "thanks, same to you",
+            "label": "Dank je, van hetzelfde!|Dank u, van hetzelfde!|Bedankt, van hetzelfde!",
+            "language": "nl"
+        },
+        {
+            "concept": "thank you for the meal",
+            "label": "Thank you for the meal!|Thanks for the meal!",
+            "language": "en"
+        },
+        {
+            "concept": "thank you for the meal",
+            "label": "Kiitos ruoasta!",
+            "language": "fi"
+        },
+        {
+            "concept": "thank you for the meal",
+            "label": "Dank je voor het eten!|Dank u voor het eten!|Bedankt voor het eten!",
+            "language": "nl"
+        }
+    ]
 }

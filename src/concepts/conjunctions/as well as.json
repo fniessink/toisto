@@ -1,7 +1,22 @@
 {
-    "as well as": {
-        "en": "as well as",
-        "fi": "sekä",
-        "nl": "alsook"
-    }
+    "concepts": {
+        "as well as": {}
+    },
+    "labels": [
+        {
+            "concept": "as well as",
+            "label": "as well as",
+            "language": "en"
+        },
+        {
+            "concept": "as well as",
+            "label": "sekä",
+            "language": "fi"
+        },
+        {
+            "concept": "as well as",
+            "label": "alsook",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,16 +1,31 @@
 {
-    "customer": {
-        "en": {
-            "singular": "customer",
-            "plural": "customers"
+    "concepts": {
+        "customer": {}
+    },
+    "labels": [
+        {
+            "concept": "customer",
+            "label": {
+                "singular": "customer",
+                "plural": "customers"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "asiakas",
-            "plural": "asiakkaat"
+        {
+            "concept": "customer",
+            "label": {
+                "singular": "asiakas",
+                "plural": "asiakkaat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de klant",
-            "plural": "de klanten"
+        {
+            "concept": "customer",
+            "label": {
+                "singular": "de klant",
+                "plural": "de klanten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

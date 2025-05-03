@@ -1,7 +1,22 @@
 {
-    "inside": {
-        "en": "inside",
-        "fi": "sisällä",
-        "nl": "binnen"
-    }
+    "concepts": {
+        "inside": {}
+    },
+    "labels": [
+        {
+            "concept": "inside",
+            "label": "inside",
+            "language": "en"
+        },
+        {
+            "concept": "inside",
+            "label": "sisällä",
+            "language": "fi"
+        },
+        {
+            "concept": "inside",
+            "label": "binnen",
+            "language": "nl"
+        }
+    ]
 }

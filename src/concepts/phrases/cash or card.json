@@ -1,15 +1,31 @@
 {
-    "cash or card": {
-        "roots": {
-            "en": "cash",
-            "fi": [
-                "cash",
-                "bank card"
-            ],
-            "nl": "cash"
+    "concepts": {
+        "cash or card": {
+            "roots": {
+                "en": "cash",
+                "fi": [
+                    "cash",
+                    "bank card"
+                ],
+                "nl": "cash"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "cash or card",
+            "label": "Cash or card?",
+            "language": "en"
         },
-        "en": "Cash or card?",
-        "fi": "Käteisellä vai kortilla?",
-        "nl": "Contant of pinnen?"
-    }
+        {
+            "concept": "cash or card",
+            "label": "Käteisellä vai kortilla?",
+            "language": "fi"
+        },
+        {
+            "concept": "cash or card",
+            "label": "Contant of pinnen?",
+            "language": "nl"
+        }
+    ]
 }

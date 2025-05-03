@@ -1,288 +1,665 @@
 {
-    "weather": {
-        "example": [
-            "how is the weather",
-            "what is the weather like"
-        ],
-        "en": "weather",
-        "fi": [
-            "ilma",
-            "sää"
-        ],
-        "nl": "het weer"
-    },
-    "dry weather": {
-        "hypernym": "weather",
-        "roots": {
-            "en": [
-                "dry",
-                "weather"
-            ],
-            "nl": [
-                "dry",
-                "weather"
+    "concepts": {
+        "weather": {
+            "example": [
+                "how is the weather",
+                "what is the weather like"
             ]
         },
-        "en": "dry weather",
-        "fi": "pouta",
-        "nl": "het droge weer|droog weer"
-    },
-    "hot weather": {
-        "hypernym": "weather",
-        "roots": {
-            "en": [
-                "hot",
-                "weather"
+        "dry weather": {
+            "hypernym": "weather",
+            "roots": {
+                "en": [
+                    "dry",
+                    "weather"
+                ],
+                "nl": [
+                    "dry",
+                    "weather"
+                ]
+            }
+        },
+        "hot weather": {
+            "hypernym": "weather",
+            "roots": {
+                "en": [
+                    "hot",
+                    "weather"
+                ]
+            }
+        },
+        "how is the weather": {
+            "roots": {
+                "en": [
+                    "how",
+                    "to be",
+                    "weather"
+                ],
+                "fi": [
+                    "what kind of",
+                    "to be",
+                    "weather"
+                ],
+                "nl": [
+                    "how",
+                    "to be",
+                    "weather"
+                ]
+            }
+        },
+        "rain": {
+            "example": "it is raining"
+        },
+        "wind": {},
+        "cloud": {},
+        "snow": {
+            "example": "it is snowing"
+        },
+        "sleet": {
+            "example": "sleet is falling"
+        },
+        "ice": {},
+        "storm": {},
+        "fog": {},
+        "rainy": {
+            "example": "it is rainy",
+            "roots": "rain"
+        },
+        "sunny": {
+            "example": "it is sunny",
+            "roots": "sun"
+        },
+        "windy": {
+            "example": "it is windy",
+            "roots": "wind"
+        },
+        "cloudy": {
+            "example": [
+                "it is cloudy",
+                "it is partly cloudy"
+            ],
+            "roots": "cloud"
+        },
+        "snowy": {
+            "roots": "snow"
+        },
+        "stormy": {
+            "example": "it is stormy",
+            "roots": "storm"
+        },
+        "foggy": {
+            "example": "it is foggy",
+            "roots": "fog"
+        },
+        "it is raining": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "rain"
+                ],
+                "fi": "rain",
+                "nl": "rain"
+            }
+        },
+        "it is snowing": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "snow"
+                ],
+                "fi": "snow",
+                "nl": "snow"
+            }
+        },
+        "sleet is falling": {
+            "roots": "sleet"
+        },
+        "it is freezing": {},
+        "it is rainy": {
+            "roots": [
+                "to be",
+                "rainy"
             ]
         },
-        "en": [
-            "hot weather",
-            "heat"
-        ],
-        "fi": "helle",
-        "nl": "de hitte"
-    },
-    "how is the weather": {
-        "roots": {
-            "en": [
-                "how",
+        "it is sunny": {
+            "roots": [
                 "to be",
-                "weather"
-            ],
-            "fi": [
-                "what kind of",
-                "to be",
-                "weather"
-            ],
-            "nl": [
-                "how",
-                "to be",
-                "weather"
+                "sunny"
             ]
         },
-        "en": "How is the weather?|How's the weather?",
-        "fi": [
-            "Millainen sää on?",
-            "Minkälainen sää on?"
-        ],
-        "nl": "Hoe is het weer?"
-    },
-    "rain": {
-        "example": "it is raining",
-        "en": "rain",
-        "fi": "sade",
-        "nl": "de regen"
-    },
-    "wind": {
-        "en": "wind",
-        "fi": "tuuli",
-        "nl": "de wind"
-    },
-    "cloud": {
-        "en": {
-            "singular": "cloud",
-            "plural": "clouds"
+        "it is windy": {
+            "roots": [
+                "to be",
+                "windy"
+            ]
         },
-        "fi": {
-            "singular": "pilvi",
-            "plural": "pilvet"
+        "it is cloudy": {
+            "roots": [
+                "to be",
+                "cloudy"
+            ]
         },
-        "nl": {
-            "singular": "de wolk",
-            "plural": "de wolken"
+        "it is partly cloudy": {
+            "roots": "it is cloudy"
+        },
+        "it is storming": {
+            "roots": [
+                "to be",
+                "stormy"
+            ]
+        },
+        "it is stormy": {
+            "roots": [
+                "to be",
+                "stormy"
+            ]
+        },
+        "it is foggy": {
+            "roots": [
+                "to be",
+                "foggy"
+            ]
         }
     },
-    "snow": {
-        "example": "it is snowing",
-        "en": "snow",
-        "fi": "lumi",
-        "nl": "de sneeuw"
-    },
-    "sleet": {
-        "example": "sleet is falling",
-        "en": "sleet",
-        "fi": "räntä",
-        "nl": "de natte sneeuw"
-    },
-    "ice": {
-        "en": "ice",
-        "fi": "jää",
-        "nl": "het ijs"
-    },
-    "storm": {
-        "en": "storm",
-        "fi": "myrsky",
-        "nl": "de storm"
-    },
-    "fog": {
-        "en": "fog",
-        "fi": "sumu",
-        "nl": "de mist"
-    },
-    "rainy": {
-        "example": "it is rainy",
-        "roots": "rain",
-        "en": "rainy",
-        "fi": "sateinen",
-        "nl": "regenachtig"
-    },
-    "sunny": {
-        "example": "it is sunny",
-        "roots": "sun",
-        "en": "sunny",
-        "fi": "aurinkoinen",
-        "nl": "zonnig"
-    },
-    "windy": {
-        "example": "it is windy",
-        "roots": "wind",
-        "en": "windy",
-        "fi": "tuulinen",
-        "nl": "winderig"
-    },
-    "cloudy": {
-        "example": [
-            "it is cloudy",
-            "it is partly cloudy"
-        ],
-        "roots": "cloud",
-        "en": "cloudy",
-        "fi": "pilvinen",
-        "nl": "bewolkt"
-    },
-    "snowy": {
-        "roots": "snow",
-        "en": "snowy",
-        "fi": "luminen",
-        "nl": "besneeuwd"
-    },
-    "stormy": {
-        "example": "it is stormy",
-        "roots": "storm",
-        "en": "stormy",
-        "fi": "myrskyinen",
-        "nl": "stormachtig"
-    },
-    "foggy": {
-        "example": "it is foggy",
-        "roots": "fog",
-        "en": "foggy",
-        "fi": "sumuinen",
-        "nl": "mistig"
-    },
-    "it is raining": {
-        "roots": {
-            "en": [
-                "to be",
-                "rain"
-            ],
-            "fi": "rain",
-            "nl": "rain"
+    "labels": [
+        {
+            "concept": "weather",
+            "label": "weather",
+            "language": "en"
         },
-        "en": "It is raining.",
-        "fi": [
-            "Sataa vettä.",
-            "Sataa."
-        ],
-        "nl": "Het regent."
-    },
-    "it is snowing": {
-        "roots": {
-            "en": [
-                "to be",
-                "snow"
-            ],
-            "fi": "snow",
-            "nl": "snow"
+        {
+            "concept": "weather",
+            "label": "sää",
+            "language": "fi"
         },
-        "en": "It is snowing.",
-        "fi": "Sataa lunta.",
-        "nl": "Het sneeuwt."
-    },
-    "sleet is falling": {
-        "roots": "sleet",
-        "en": "Sleet is falling.",
-        "fi": "Sataa räntää.",
-        "nl": "Er valt natte sneeuw."
-    },
-    "it is freezing": {
-        "en": "It is freezing.",
-        "fi": "On pakkasta.",
-        "nl": "Het vriest."
-    },
-    "it is rainy": {
-        "roots": [
-            "to be",
-            "rainy"
-        ],
-        "en": "It is rainy.",
-        "fi": "On sateista.",
-        "nl": "Het is regenachtig."
-    },
-    "it is sunny": {
-        "roots": [
-            "to be",
-            "sunny"
-        ],
-        "en": "It is sunny.",
-        "fi": "On aurinkoista.",
-        "nl": "Het is zonnig."
-    },
-    "it is windy": {
-        "roots": [
-            "to be",
-            "windy"
-        ],
-        "en": "It is windy.",
-        "fi": [
-            "On tuulista.",
-            "Tuulee."
-        ],
-        "nl": [
-            "Het is winderig.",
-            "Het waait."
-        ]
-    },
-    "it is cloudy": {
-        "roots": [
-            "to be",
-            "cloudy"
-        ],
-        "en": "It is cloudy.",
-        "fi": "On pilvistä.",
-        "nl": "Het is bewolkt."
-    },
-    "it is partly cloudy": {
-        "roots": "it is cloudy",
-        "en": "It is partly cloudy.",
-        "fi": "On puolipilvistä.",
-        "nl": "Het is half bewolkt."
-    },
-    "it is storming": {
-        "roots": [
-            "to be",
-            "stormy"
-        ],
-        "en": "It is storming.",
-        "fi": "On myrsky.",
-        "nl": "Het stormt."
-    },
-    "it is stormy": {
-        "roots": [
-            "to be",
-            "stormy"
-        ],
-        "en": "It is stormy.",
-        "fi": "On myrskyistä.",
-        "nl": "Het is stormachtig."
-    },
-    "it is foggy": {
-        "roots": [
-            "to be",
-            "foggy"
-        ],
-        "en": "It is foggy.",
-        "fi": "On sumuista.",
-        "nl": "Het is mistig."
-    }
+        {
+            "concept": "weather",
+            "label": "het weer",
+            "language": "nl"
+        },
+        {
+            "concept": "dry weather",
+            "label": "dry weather",
+            "language": "en"
+        },
+        {
+            "concept": "dry weather",
+            "label": "pouta",
+            "language": "fi"
+        },
+        {
+            "concept": "dry weather",
+            "label": "het droge weer|droog weer",
+            "language": "nl"
+        },
+        {
+            "concept": "hot weather",
+            "label": "hot weather",
+            "language": "en"
+        },
+        {
+            "concept": "hot weather",
+            "label": "heat",
+            "language": "en"
+        },
+        {
+            "concept": "hot weather",
+            "label": "helle",
+            "language": "fi"
+        },
+        {
+            "concept": "hot weather",
+            "label": "de hitte",
+            "language": "nl"
+        },
+        {
+            "concept": "how is the weather",
+            "label": "How is the weather?|How's the weather?",
+            "language": "en"
+        },
+        {
+            "concept": "how is the weather",
+            "label": "Millainen sää on?",
+            "language": "fi"
+        },
+        {
+            "concept": "how is the weather",
+            "label": "Minkälainen sää on?",
+            "language": "fi"
+        },
+        {
+            "concept": "how is the weather",
+            "label": "Hoe is het weer?",
+            "language": "nl"
+        },
+        {
+            "concept": "rain",
+            "label": "rain",
+            "language": "en"
+        },
+        {
+            "concept": "rain",
+            "label": "sade",
+            "language": "fi"
+        },
+        {
+            "concept": "rain",
+            "label": "de regen",
+            "language": "nl"
+        },
+        {
+            "concept": "wind",
+            "label": "wind",
+            "language": "en"
+        },
+        {
+            "concept": "wind",
+            "label": "tuuli",
+            "language": "fi"
+        },
+        {
+            "concept": "wind",
+            "label": "de wind",
+            "language": "nl"
+        },
+        {
+            "concept": "cloud",
+            "label": {
+                "singular": "cloud",
+                "plural": "clouds"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "cloud",
+            "label": {
+                "singular": "pilvi",
+                "plural": "pilvet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "cloud",
+            "label": {
+                "singular": "de wolk",
+                "plural": "de wolken"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "snow",
+            "label": "snow",
+            "language": "en"
+        },
+        {
+            "concept": "snow",
+            "label": "lumi",
+            "language": "fi"
+        },
+        {
+            "concept": "snow",
+            "label": "de sneeuw",
+            "language": "nl"
+        },
+        {
+            "concept": "sleet",
+            "label": "sleet",
+            "language": "en"
+        },
+        {
+            "concept": "sleet",
+            "label": "räntä",
+            "language": "fi"
+        },
+        {
+            "concept": "sleet",
+            "label": "de natte sneeuw",
+            "language": "nl"
+        },
+        {
+            "concept": "ice",
+            "label": "ice",
+            "language": "en"
+        },
+        {
+            "concept": "ice",
+            "label": "jää",
+            "language": "fi"
+        },
+        {
+            "concept": "ice",
+            "label": "het ijs",
+            "language": "nl"
+        },
+        {
+            "concept": "storm",
+            "label": "storm",
+            "language": "en"
+        },
+        {
+            "concept": "storm",
+            "label": "myrsky",
+            "language": "fi"
+        },
+        {
+            "concept": "storm",
+            "label": "de storm",
+            "language": "nl"
+        },
+        {
+            "concept": "fog",
+            "label": "fog",
+            "language": "en"
+        },
+        {
+            "concept": "fog",
+            "label": "sumu",
+            "language": "fi"
+        },
+        {
+            "concept": "fog",
+            "label": "de mist",
+            "language": "nl"
+        },
+        {
+            "concept": "rainy",
+            "label": "rainy",
+            "language": "en"
+        },
+        {
+            "concept": "rainy",
+            "label": "sateinen",
+            "language": "fi"
+        },
+        {
+            "concept": "rainy",
+            "label": "regenachtig",
+            "language": "nl"
+        },
+        {
+            "concept": "sunny",
+            "label": "sunny",
+            "language": "en"
+        },
+        {
+            "concept": "sunny",
+            "label": "aurinkoinen",
+            "language": "fi"
+        },
+        {
+            "concept": "sunny",
+            "label": "zonnig",
+            "language": "nl"
+        },
+        {
+            "concept": "windy",
+            "label": "windy",
+            "language": "en"
+        },
+        {
+            "concept": "windy",
+            "label": "tuulinen",
+            "language": "fi"
+        },
+        {
+            "concept": "windy",
+            "label": "winderig",
+            "language": "nl"
+        },
+        {
+            "concept": "cloudy",
+            "label": "cloudy",
+            "language": "en"
+        },
+        {
+            "concept": "cloudy",
+            "label": "pilvinen",
+            "language": "fi"
+        },
+        {
+            "concept": "cloudy",
+            "label": "bewolkt",
+            "language": "nl"
+        },
+        {
+            "concept": "snowy",
+            "label": "snowy",
+            "language": "en"
+        },
+        {
+            "concept": "snowy",
+            "label": "luminen",
+            "language": "fi"
+        },
+        {
+            "concept": "snowy",
+            "label": "besneeuwd",
+            "language": "nl"
+        },
+        {
+            "concept": "stormy",
+            "label": "stormy",
+            "language": "en"
+        },
+        {
+            "concept": "stormy",
+            "label": "myrskyinen",
+            "language": "fi"
+        },
+        {
+            "concept": "stormy",
+            "label": "stormachtig",
+            "language": "nl"
+        },
+        {
+            "concept": "foggy",
+            "label": "foggy",
+            "language": "en"
+        },
+        {
+            "concept": "foggy",
+            "label": "sumuinen",
+            "language": "fi"
+        },
+        {
+            "concept": "foggy",
+            "label": "mistig",
+            "language": "nl"
+        },
+        {
+            "concept": "it is raining",
+            "label": "It is raining.",
+            "language": "en"
+        },
+        {
+            "concept": "it is raining",
+            "label": "Sataa vettä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is raining",
+            "label": "Sataa.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is raining",
+            "label": "Het regent.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is snowing",
+            "label": "It is snowing.",
+            "language": "en"
+        },
+        {
+            "concept": "it is snowing",
+            "label": "Sataa lunta.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is snowing",
+            "label": "Het sneeuwt.",
+            "language": "nl"
+        },
+        {
+            "concept": "sleet is falling",
+            "label": "Sleet is falling.",
+            "language": "en"
+        },
+        {
+            "concept": "sleet is falling",
+            "label": "Sataa räntää.",
+            "language": "fi"
+        },
+        {
+            "concept": "sleet is falling",
+            "label": "Er valt natte sneeuw.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is freezing",
+            "label": "It is freezing.",
+            "language": "en"
+        },
+        {
+            "concept": "it is freezing",
+            "label": "On pakkasta.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is freezing",
+            "label": "Het vriest.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is rainy",
+            "label": "It is rainy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is rainy",
+            "label": "On sateista.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is rainy",
+            "label": "Het is regenachtig.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is sunny",
+            "label": "It is sunny.",
+            "language": "en"
+        },
+        {
+            "concept": "it is sunny",
+            "label": "On aurinkoista.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is sunny",
+            "label": "Het is zonnig.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is windy",
+            "label": "It is windy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is windy",
+            "label": "On tuulista.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is windy",
+            "label": "Tuulee.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is windy",
+            "label": "Het is winderig.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is windy",
+            "label": "Het waait.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is cloudy",
+            "label": "It is cloudy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is cloudy",
+            "label": "On pilvistä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is cloudy",
+            "label": "Het is bewolkt.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is partly cloudy",
+            "label": "It is partly cloudy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is partly cloudy",
+            "label": "On puolipilvistä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is partly cloudy",
+            "label": "Het is half bewolkt.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is storming",
+            "label": "It is storming.",
+            "language": "en"
+        },
+        {
+            "concept": "it is storming",
+            "label": "On myrsky.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is storming",
+            "label": "Het stormt.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is stormy",
+            "label": "It is stormy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is stormy",
+            "label": "On myrskyistä.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is stormy",
+            "label": "Het is stormachtig.",
+            "language": "nl"
+        },
+        {
+            "concept": "it is foggy",
+            "label": "It is foggy.",
+            "language": "en"
+        },
+        {
+            "concept": "it is foggy",
+            "label": "On sumuista.",
+            "language": "fi"
+        },
+        {
+            "concept": "it is foggy",
+            "label": "Het is mistig.",
+            "language": "nl"
+        }
+    ]
 }

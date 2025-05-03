@@ -1,7 +1,22 @@
 {
-    "landlord": {
-        "en": "landlord",
-        "fi": "vuokranantaja",
-        "nl": "de verhuurder"
-    }
+    "concepts": {
+        "landlord": {}
+    },
+    "labels": [
+        {
+            "concept": "landlord",
+            "label": "landlord",
+            "language": "en"
+        },
+        {
+            "concept": "landlord",
+            "label": "vuokranantaja",
+            "language": "fi"
+        },
+        {
+            "concept": "landlord",
+            "label": "de verhuurder",
+            "language": "nl"
+        }
+    ]
 }

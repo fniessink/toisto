@@ -1,18 +1,34 @@
 {
-    "employer": {
-        "antonym": "employee",
-        "roots": {
-            "fi": [
-                "work",
-                "to give"
-            ],
-            "nl": [
-                "work",
-                "to give"
-            ]
+    "concepts": {
+        "employer": {
+            "antonym": "employee",
+            "roots": {
+                "fi": [
+                    "work",
+                    "to give"
+                ],
+                "nl": [
+                    "work",
+                    "to give"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "employer",
+            "label": "employer",
+            "language": "en"
         },
-        "en": "employer",
-        "fi": "työnantaja",
-        "nl": "de werkgever"
-    }
+        {
+            "concept": "employer",
+            "label": "työnantaja",
+            "language": "fi"
+        },
+        {
+            "concept": "employer",
+            "label": "de werkgever",
+            "language": "nl"
+        }
+    ]
 }

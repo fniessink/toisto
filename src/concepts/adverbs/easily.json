@@ -1,7 +1,22 @@
 {
-    "easily": {
-        "en": "easily",
-        "fi": "helposti",
-        "nl": "gemakkelijk|makkelijk"
-    }
+    "concepts": {
+        "easily": {}
+    },
+    "labels": [
+        {
+            "concept": "easily",
+            "label": "easily",
+            "language": "en"
+        },
+        {
+            "concept": "easily",
+            "label": "helposti",
+            "language": "fi"
+        },
+        {
+            "concept": "easily",
+            "label": "gemakkelijk|makkelijk",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,8 +1,24 @@
 {
-    "marriage": {
-        "involves": "family",
-        "en": "marriage",
-        "fi": "avioliitto",
-        "nl": "het huwelijk"
-    }
+    "concepts": {
+        "marriage": {
+            "involves": "family"
+        }
+    },
+    "labels": [
+        {
+            "concept": "marriage",
+            "label": "marriage",
+            "language": "en"
+        },
+        {
+            "concept": "marriage",
+            "label": "avioliitto",
+            "language": "fi"
+        },
+        {
+            "concept": "marriage",
+            "label": "het huwelijk",
+            "language": "nl"
+        }
+    ]
 }

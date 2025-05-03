@@ -1,19 +1,35 @@
 {
-    "study": {
-        "hypernym": "room",
-        "involves": "work",
-        "roots": {
-            "fi": [
-                "work",
-                "room"
-            ],
-            "nl": [
-                "work",
-                "room"
-            ]
+    "concepts": {
+        "study": {
+            "hypernym": "room",
+            "involves": "work",
+            "roots": {
+                "fi": [
+                    "work",
+                    "room"
+                ],
+                "nl": [
+                    "work",
+                    "room"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "study",
+            "label": "study",
+            "language": "en"
         },
-        "en": "study",
-        "fi": "työhuone",
-        "nl": "de werkkamer"
-    }
+        {
+            "concept": "study",
+            "label": "työhuone",
+            "language": "fi"
+        },
+        {
+            "concept": "study",
+            "label": "de werkkamer",
+            "language": "nl"
+        }
+    ]
 }

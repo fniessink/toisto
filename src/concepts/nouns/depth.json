@@ -1,7 +1,22 @@
 {
-    "depth": {
-        "en": "depth",
-        "fi": "syvyys",
-        "nl": "de diepte"
-    }
+    "concepts": {
+        "depth": {}
+    },
+    "labels": [
+        {
+            "concept": "depth",
+            "label": "depth",
+            "language": "en"
+        },
+        {
+            "concept": "depth",
+            "label": "syvyys",
+            "language": "fi"
+        },
+        {
+            "concept": "depth",
+            "label": "de diepte",
+            "language": "nl"
+        }
+    ]
 }

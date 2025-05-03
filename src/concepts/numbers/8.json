@@ -1,20 +1,42 @@
 {
-    "8": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "eight",
-            "ordinal": "eighth"
-        },
-        "fi": {
-            "cardinal": [
-                "kahdeksan",
-                "kaheksan*"
-            ],
-            "ordinal": "kahdeksas"
-        },
-        "nl": {
-            "cardinal": "acht",
-            "ordinal": "achtste"
+    "concepts": {
+        "8": {
+            "hypernym": "number"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "8",
+            "label": {
+                "cardinal": "eight",
+                "ordinal": "eighth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "8",
+            "label": {
+                "cardinal": "kahdeksan",
+                "ordinal": "kahdeksas"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "8",
+            "label": {
+                "cardinal": "kaheksan",
+                "ordinal": "kahdeksas"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "8",
+            "label": {
+                "cardinal": "acht",
+                "ordinal": "achtste"
+            },
+            "language": "nl"
+        }
+    ]
 }

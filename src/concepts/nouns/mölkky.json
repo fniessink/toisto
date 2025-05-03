@@ -1,7 +1,22 @@
 {
-    "mölkky": {
-        "en": "(Finnish variant of jeu de boules)",
-        "fi": "mölkky",
-        "nl": "(Finse variant van jeu de boules)"
-    }
+    "concepts": {
+        "mölkky": {}
+    },
+    "labels": [
+        {
+            "concept": "mölkky",
+            "label": "(Finnish variant of jeu de boules)",
+            "language": "en"
+        },
+        {
+            "concept": "mölkky",
+            "label": "mölkky",
+            "language": "fi"
+        },
+        {
+            "concept": "mölkky",
+            "label": "(Finse variant van jeu de boules)",
+            "language": "nl"
+        }
+    ]
 }

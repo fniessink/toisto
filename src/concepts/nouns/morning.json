@@ -1,31 +1,71 @@
 {
-    "morning": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "morning",
-            "plural": "mornings"
+    "concepts": {
+        "morning": {
+            "hypernym": "time of day"
         },
-        "fi": {
-            "singular": "aamu|aamupäivä",
-            "plural": "aamut|aamupäivät"
+        "at morning": {
+            "hypernym": "time of day",
+            "roots": "morning"
         },
-        "nl": {
-            "singular": "de ochtend",
-            "plural": "de ochtenden"
+        "this morning": {
+            "hypernym": "time of day",
+            "roots": "morning"
         }
     },
-    "at morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "at morning",
-        "fi": "aamulla",
-        "nl": "'s ochtends"
-    },
-    "this morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "this morning",
-        "fi": "tänä aamuna",
-        "nl": "vanochtend"
-    }
+    "labels": [
+        {
+            "concept": "morning",
+            "label": {
+                "singular": "morning",
+                "plural": "mornings"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "morning",
+            "label": {
+                "singular": "aamu|aamupäivä",
+                "plural": "aamut|aamupäivät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "morning",
+            "label": {
+                "singular": "de ochtend",
+                "plural": "de ochtenden"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "at morning",
+            "label": "at morning",
+            "language": "en"
+        },
+        {
+            "concept": "at morning",
+            "label": "aamulla",
+            "language": "fi"
+        },
+        {
+            "concept": "at morning",
+            "label": "'s ochtends",
+            "language": "nl"
+        },
+        {
+            "concept": "this morning",
+            "label": "this morning",
+            "language": "en"
+        },
+        {
+            "concept": "this morning",
+            "label": "tänä aamuna",
+            "language": "fi"
+        },
+        {
+            "concept": "this morning",
+            "label": "vanochtend",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,15 +1,43 @@
 {
-    "healthy": {
-        "antonym": "unhealthy",
-        "example": "fruit is healthy",
-        "en": "healthy",
-        "fi": "terveellinen",
-        "nl": "gezond"
+    "concepts": {
+        "healthy": {
+            "antonym": "unhealthy",
+            "example": "fruit is healthy"
+        },
+        "unhealthy": {
+            "antonym": "healthy"
+        }
     },
-    "unhealthy": {
-        "antonym": "healthy",
-        "en": "unhealthy",
-        "fi": "epäterveellinen",
-        "nl": "ongezond"
-    }
+    "labels": [
+        {
+            "concept": "healthy",
+            "label": "healthy",
+            "language": "en"
+        },
+        {
+            "concept": "healthy",
+            "label": "terveellinen",
+            "language": "fi"
+        },
+        {
+            "concept": "healthy",
+            "label": "gezond",
+            "language": "nl"
+        },
+        {
+            "concept": "unhealthy",
+            "label": "unhealthy",
+            "language": "en"
+        },
+        {
+            "concept": "unhealthy",
+            "label": "epäterveellinen",
+            "language": "fi"
+        },
+        {
+            "concept": "unhealthy",
+            "label": "ongezond",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,17 +1,34 @@
 {
-    "foot": {
-        "holonym": "body",
-        "en": {
-            "singular": "foot",
-            "plural": "feet"
-        },
-        "fi": {
-            "singular": "jalka;lower part",
-            "plural": "jalat;lower part"
-        },
-        "nl": {
-            "singular": "de voet",
-            "plural": "de voeten"
+    "concepts": {
+        "foot": {
+            "holonym": "body"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "foot",
+            "label": {
+                "singular": "foot",
+                "plural": "feet"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "foot",
+            "label": {
+                "singular": "jalka",
+                "plural": "jalat"
+            },
+            "language": "fi",
+            "tip": "lower part"
+        },
+        {
+            "concept": "foot",
+            "label": {
+                "singular": "de voet",
+                "plural": "de voeten"
+            },
+            "language": "nl"
+        }
+    ]
 }

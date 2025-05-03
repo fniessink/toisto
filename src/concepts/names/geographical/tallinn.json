@@ -1,9 +1,25 @@
 {
-    "tallinn": {
-        "holonym": "estonia",
-        "hypernym": "capital",
-        "en": "Tallinn",
-        "fi": "Tallinna",
-        "nl": "Tallinn"
-    }
+    "concepts": {
+        "tallinn": {
+            "holonym": "estonia",
+            "hypernym": "capital"
+        }
+    },
+    "labels": [
+        {
+            "concept": "tallinn",
+            "label": "Tallinn",
+            "language": "en"
+        },
+        {
+            "concept": "tallinn",
+            "label": "Tallinna",
+            "language": "fi"
+        },
+        {
+            "concept": "tallinn",
+            "label": "Tallinn",
+            "language": "nl"
+        }
+    ]
 }

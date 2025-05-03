@@ -1,14 +1,33 @@
 {
-    "june": {
-        "hypernym": "month",
-        "roots": {
-            "fi": [
-                "summer",
-                "moon"
-            ]
+    "concepts": {
+        "june": {
+            "hypernym": "month",
+            "roots": {
+                "fi": [
+                    "summer",
+                    "moon"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "june",
+            "label": "June",
+            "language": "en",
+            "note": "In English, names of months are capitalized"
         },
-        "en": "June;;In English, names of months are capitalized",
-        "fi": "kesäkuu;;In Finnish, names of months are not capitalized",
-        "nl": "juni;;In Dutch, names of months are not capitalized"
-    }
+        {
+            "concept": "june",
+            "label": "kesäkuu",
+            "language": "fi",
+            "note": "In Finnish, names of months are not capitalized"
+        },
+        {
+            "concept": "june",
+            "label": "juni",
+            "language": "nl",
+            "note": "In Dutch, names of months are not capitalized"
+        }
+    ]
 }

@@ -1,12 +1,40 @@
 {
-    "accidentally (by chance)": {
-        "en": "accidentally;by chance",
-        "fi": "sattumalta",
-        "nl": "toevallig"
+    "concepts": {
+        "accidentally (by chance)": {},
+        "accidentally (by mistake)": {}
     },
-    "accidentally (by mistake)": {
-        "en": "accidentally;by mistake",
-        "fi": "vahingossa",
-        "nl": "per ongeluk"
-    }
+    "labels": [
+        {
+            "concept": "accidentally (by chance)",
+            "label": "accidentally",
+            "language": "en",
+            "tip": "by chance"
+        },
+        {
+            "concept": "accidentally (by chance)",
+            "label": "sattumalta",
+            "language": "fi"
+        },
+        {
+            "concept": "accidentally (by chance)",
+            "label": "toevallig",
+            "language": "nl"
+        },
+        {
+            "concept": "accidentally (by mistake)",
+            "label": "accidentally",
+            "language": "en",
+            "tip": "by mistake"
+        },
+        {
+            "concept": "accidentally (by mistake)",
+            "label": "vahingossa",
+            "language": "fi"
+        },
+        {
+            "concept": "accidentally (by mistake)",
+            "label": "per ongeluk",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "to demand": {
-        "en": "to demand",
-        "fi": "vaatia",
-        "nl": "eisen"
-    }
+    "concepts": {
+        "to demand": {}
+    },
+    "labels": [
+        {
+            "concept": "to demand",
+            "label": "to demand",
+            "language": "en"
+        },
+        {
+            "concept": "to demand",
+            "label": "vaatia",
+            "language": "fi"
+        },
+        {
+            "concept": "to demand",
+            "label": "eisen",
+            "language": "nl"
+        }
+    ]
 }

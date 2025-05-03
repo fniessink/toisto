@@ -1,11 +1,27 @@
 {
-    "rowan": {
-        "hypernym": "tree",
-        "roots": {
-            "nl": "berry"
+    "concepts": {
+        "rowan": {
+            "hypernym": "tree",
+            "roots": {
+                "nl": "berry"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "rowan",
+            "label": "rowan",
+            "language": "en"
         },
-        "en": "rowan",
-        "fi": "pihlaja",
-        "nl": "de lijsterbes"
-    }
+        {
+            "concept": "rowan",
+            "label": "pihlaja",
+            "language": "fi"
+        },
+        {
+            "concept": "rowan",
+            "label": "de lijsterbes",
+            "language": "nl"
+        }
+    ]
 }

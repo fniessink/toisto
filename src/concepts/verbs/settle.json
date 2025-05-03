@@ -1,7 +1,25 @@
 {
-    "to settle": {
-        "en": "to settle",
-        "fi": "selvittää",
-        "nl": "regelen"
-    }
+    "concepts": {
+        "to settle": {}
+    },
+    "labels": [
+        {
+            "concept": "to settle",
+            "label": "to settle",
+            "language": "en"
+        },
+        {
+            "concept": "to settle",
+            "label": "selvittää",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "to settle",
+                "to deal with"
+            ],
+            "label": "regelen",
+            "language": "nl"
+        }
+    ]
 }

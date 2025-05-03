@@ -1,80 +1,156 @@
 {
-    "night": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "night",
-            "plural": "nights"
+    "concepts": {
+        "night": {
+            "hypernym": "time of day"
         },
-        "fi": {
-            "singular": "yö",
-            "plural": "yöt"
+        "at night": {
+            "hypernym": "time of day",
+            "roots": "night"
         },
-        "nl": {
-            "singular": "de nacht",
-            "plural": "de nachten"
+        "this night": {
+            "hypernym": "time of day",
+            "roots": "night"
+        },
+        "last night": {
+            "hypernym": "time of day",
+            "roots": {
+                "en": "night",
+                "fi": "evening",
+                "nl": [
+                    "yesterday",
+                    "evening"
+                ]
+            }
+        },
+        "midnight": {
+            "hypernym": "time of day",
+            "roots": "night"
+        },
+        "small hours": {
+            "roots": {
+                "en": [
+                    "small",
+                    "hour"
+                ],
+                "fi": [
+                    "morning",
+                    "night"
+                ],
+                "nl": [
+                    "small",
+                    "hour"
+                ]
+            }
         }
     },
-    "at night": {
-        "hypernym": "time of day",
-        "roots": "night",
-        "en": "at night",
-        "fi": "yöllä",
-        "nl": "'s nachts"
-    },
-    "this night": {
-        "hypernym": "time of day",
-        "roots": "night",
-        "en": "this night",
-        "fi": "tänä yönä",
-        "nl": "vannacht"
-    },
-    "last night": {
-        "hypernym": "time of day",
-        "roots": {
-            "en": "night",
-            "fi": "evening",
-            "nl": [
-                "yesterday",
-                "evening"
-            ]
+    "labels": [
+        {
+            "concept": "night",
+            "label": {
+                "singular": "night",
+                "plural": "nights"
+            },
+            "language": "en"
         },
-        "en": "last night",
-        "fi": "viime iltana",
-        "nl": "gisteravond"
-    },
-    "midnight": {
-        "hypernym": "time of day",
-        "roots": "night",
-        "en": {
-            "singular": "midnight",
-            "plural": "midnights"
+        {
+            "concept": "night",
+            "label": {
+                "singular": "yö",
+                "plural": "yöt"
+            },
+            "language": "fi"
         },
-        "fi": {
-            "singular": "keskiyö",
-            "plural": "keskiyöt"
+        {
+            "concept": "night",
+            "label": {
+                "singular": "de nacht",
+                "plural": "de nachten"
+            },
+            "language": "nl"
         },
-        "nl": {
-            "singular": "de middernacht",
-            "plural": "de middernachten"
+        {
+            "concept": "at night",
+            "label": "at night",
+            "language": "en"
+        },
+        {
+            "concept": "at night",
+            "label": "yöllä",
+            "language": "fi"
+        },
+        {
+            "concept": "at night",
+            "label": "'s nachts",
+            "language": "nl"
+        },
+        {
+            "concept": "this night",
+            "label": "this night",
+            "language": "en"
+        },
+        {
+            "concept": "this night",
+            "label": "tänä yönä",
+            "language": "fi"
+        },
+        {
+            "concept": "this night",
+            "label": "vannacht",
+            "language": "nl"
+        },
+        {
+            "concept": "last night",
+            "label": "last night",
+            "language": "en"
+        },
+        {
+            "concept": "last night",
+            "label": "viime iltana",
+            "language": "fi"
+        },
+        {
+            "concept": "last night",
+            "label": "gisteravond",
+            "language": "nl"
+        },
+        {
+            "concept": "midnight",
+            "label": {
+                "singular": "midnight",
+                "plural": "midnights"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "midnight",
+            "label": {
+                "singular": "keskiyö",
+                "plural": "keskiyöt"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "midnight",
+            "label": {
+                "singular": "de middernacht",
+                "plural": "de middernachten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "small hours",
+            "label": "small hours",
+            "language": "en"
+        },
+        {
+            "concept": "small hours",
+            "label": "aamuyö",
+            "language": "fi"
+        },
+        {
+            "concept": "small hours",
+            "label": "de kleine uurtjes",
+            "language": "nl"
         }
-    },
-    "small hours": {
-        "roots": {
-            "en": [
-                "small",
-                "hour"
-            ],
-            "fi": [
-                "morning",
-                "night"
-            ],
-            "nl": [
-                "small",
-                "hour"
-            ]
-        },
-        "en": "small hours",
-        "fi": "aamuyö",
-        "nl": "de kleine uurtjes"
-    }
+    ]
 }

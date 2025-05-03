@@ -1,7 +1,22 @@
 {
-    "cooking": {
-        "en": "cooking",
-        "fi": "ruoanlaitto",
-        "nl": "het koken"
-    }
+    "concepts": {
+        "cooking": {}
+    },
+    "labels": [
+        {
+            "concept": "cooking",
+            "label": "cooking",
+            "language": "en"
+        },
+        {
+            "concept": "cooking",
+            "label": "ruoanlaitto",
+            "language": "fi"
+        },
+        {
+            "concept": "cooking",
+            "label": "het koken",
+            "language": "nl"
+        }
+    ]
 }

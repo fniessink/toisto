@@ -1,34 +1,49 @@
 {
-    "bridge": {
-        "en": {
-            "root": {
-                "singular": "bridge",
-                "plural": "bridges"
+    "concepts": {
+        "bridge": {}
+    },
+    "labels": [
+        {
+            "concept": "bridge",
+            "label": {
+                "root": {
+                    "singular": "bridge",
+                    "plural": "bridges"
+                },
+                "diminutive": {
+                    "singular": "(little bridge)",
+                    "plural": "(little bridges)"
+                }
             },
-            "diminutive": {
-                "singular": "(little bridge)",
-                "plural": "(little bridges)"
-            }
+            "language": "en"
         },
-        "fi": {
-            "root": {
-                "singular": "silta",
-                "plural": "sillat"
+        {
+            "concept": "bridge",
+            "label": {
+                "root": {
+                    "singular": "silta",
+                    "plural": "sillat"
+                },
+                "diminutive": {
+                    "singular": "(pieni silta)",
+                    "plural": "(pienet sillat)"
+                }
             },
-            "diminutive": {
-                "singular": "(pieni silta)",
-                "plural": "(pienet sillat)"
-            }
+            "language": "fi"
         },
-        "nl": {
-            "root": {
-                "singular": "de brug",
-                "plural": "de bruggen"
+        {
+            "concept": "bridge",
+            "label": {
+                "root": {
+                    "singular": "de brug",
+                    "plural": "de bruggen"
+                },
+                "diminutive": {
+                    "singular": "het bruggetje",
+                    "plural": "de bruggetjes"
+                }
             },
-            "diminutive": {
-                "singular": "het bruggetje",
-                "plural": "de bruggetjes"
-            }
+            "language": "nl"
         }
-    }
+    ]
 }

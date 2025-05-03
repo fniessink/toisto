@@ -1,7 +1,22 @@
 {
-    "jump": {
-        "en": "jump",
-        "fi": "hyppy",
-        "nl": "de sprong"
-    }
+    "concepts": {
+        "jump": {}
+    },
+    "labels": [
+        {
+            "concept": "jump",
+            "label": "jump",
+            "language": "en"
+        },
+        {
+            "concept": "jump",
+            "label": "hyppy",
+            "language": "fi"
+        },
+        {
+            "concept": "jump",
+            "label": "de sprong",
+            "language": "nl"
+        }
+    ]
 }

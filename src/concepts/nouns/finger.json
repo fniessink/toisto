@@ -1,53 +1,105 @@
 {
-    "finger": {
-        "holonym": "hand",
-        "en": {
-            "singular": "finger",
-            "plural": "fingers"
+    "concepts": {
+        "finger": {
+            "holonym": "hand"
         },
-        "fi": {
-            "singular": "sormi",
-            "plural": "sormet"
+        "middle finger": {
+            "hypernym": "finger"
         },
-        "nl": {
-            "singular": "de vinger",
-            "plural": "de vingers"
+        "ring finger": {
+            "hypernym": "finger"
+        },
+        "little finger": {
+            "hypernym": "finger"
         }
     },
-    "middle finger": {
-        "hypernym": "finger",
-        "en": "middle finger",
-        "fi": "keskisormi",
-        "nl": "de middelvinger"
-    },
-    "ring finger": {
-        "hypernym": "finger",
-        "en": {
-            "singular": "ring finger",
-            "plural": "ring fingers"
+    "labels": [
+        {
+            "concept": "finger",
+            "label": {
+                "singular": "finger",
+                "plural": "fingers"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "nimetön",
-            "plural": "nimettömät"
+        {
+            "concept": "finger",
+            "label": {
+                "singular": "sormi",
+                "plural": "sormet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de ringvinger",
-            "plural": "de ringvingers"
+        {
+            "concept": "finger",
+            "label": {
+                "singular": "de vinger",
+                "plural": "de vingers"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "middle finger",
+            "label": "middle finger",
+            "language": "en"
+        },
+        {
+            "concept": "middle finger",
+            "label": "keskisormi",
+            "language": "fi"
+        },
+        {
+            "concept": "middle finger",
+            "label": "de middelvinger",
+            "language": "nl"
+        },
+        {
+            "concept": "ring finger",
+            "label": {
+                "singular": "ring finger",
+                "plural": "ring fingers"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "ring finger",
+            "label": {
+                "singular": "nimetön",
+                "plural": "nimettömät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "ring finger",
+            "label": {
+                "singular": "de ringvinger",
+                "plural": "de ringvingers"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "little finger",
+            "label": {
+                "singular": "little finger",
+                "plural": "little fingers"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "little finger",
+            "label": {
+                "singular": "pikkusormi",
+                "plural": "pikkusormet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "little finger",
+            "label": {
+                "singular": "de pink",
+                "plural": "de pinken"
+            },
+            "language": "nl"
         }
-    },
-    "little finger": {
-        "hypernym": "finger",
-        "en": {
-            "singular": "little finger",
-            "plural": "little fingers"
-        },
-        "fi": {
-            "singular": "pikkusormi",
-            "plural": "pikkusormet"
-        },
-        "nl": {
-            "singular": "de pink",
-            "plural": "de pinken"
-        }
-    }
+    ]
 }

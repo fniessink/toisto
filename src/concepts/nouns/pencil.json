@@ -1,16 +1,31 @@
 {
-    "pencil": {
-        "en": {
-            "singular": "pencil",
-            "plural": "pencils"
+    "concepts": {
+        "pencil": {}
+    },
+    "labels": [
+        {
+            "concept": "pencil",
+            "label": {
+                "singular": "pencil",
+                "plural": "pencils"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "lyijykynä",
-            "plural": "lyijykynät"
+        {
+            "concept": "pencil",
+            "label": {
+                "singular": "lyijykynä",
+                "plural": "lyijykynät"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het potlood",
-            "plural": "de potloden"
+        {
+            "concept": "pencil",
+            "label": {
+                "singular": "het potlood",
+                "plural": "de potloden"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

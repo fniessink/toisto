@@ -1,17 +1,34 @@
 {
-    "tooth": {
-        "holonym": "denture",
-        "en": {
-            "singular": "tooth",
-            "plural": "teeth"
-        },
-        "fi": {
-            "singular": "hammas",
-            "plural": "hampaat;plural"
-        },
-        "nl": {
-            "singular": "de tand",
-            "plural": "de tanden"
+    "concepts": {
+        "tooth": {
+            "holonym": "denture"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "tooth",
+            "label": {
+                "singular": "tooth",
+                "plural": "teeth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "tooth",
+            "label": {
+                "singular": "hammas",
+                "plural": "hampaat"
+            },
+            "language": "fi",
+            "tip": "plural"
+        },
+        {
+            "concept": "tooth",
+            "label": {
+                "singular": "de tand",
+                "plural": "de tanden"
+            },
+            "language": "nl"
+        }
+    ]
 }

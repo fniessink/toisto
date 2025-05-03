@@ -1,7 +1,22 @@
 {
-    "to mean": {
-        "en": "to mean",
-        "fi": "tarkoittaa",
-        "nl": "betekenen"
-    }
+    "concepts": {
+        "to mean": {}
+    },
+    "labels": [
+        {
+            "concept": "to mean",
+            "label": "to mean",
+            "language": "en"
+        },
+        {
+            "concept": "to mean",
+            "label": "tarkoittaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to mean",
+            "label": "betekenen",
+            "language": "nl"
+        }
+    ]
 }

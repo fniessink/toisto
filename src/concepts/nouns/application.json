@@ -1,7 +1,22 @@
 {
-    "application": {
-        "en": "application",
-        "fi": "hakemus",
-        "nl": "de aanvraag"
-    }
+    "concepts": {
+        "application": {}
+    },
+    "labels": [
+        {
+            "concept": "application",
+            "label": "application",
+            "language": "en"
+        },
+        {
+            "concept": "application",
+            "label": "hakemus",
+            "language": "fi"
+        },
+        {
+            "concept": "application",
+            "label": "de aanvraag",
+            "language": "nl"
+        }
+    ]
 }

@@ -88,8 +88,8 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
-    capitonyms: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.without_notes.lower_case)
-    homographs: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.without_notes)
+    capitonyms: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.lower_case)
+    homographs: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label)
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""

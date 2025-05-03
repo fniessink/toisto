@@ -1,10 +1,28 @@
 {
-    "kiosk": {
-        "en": "kiosk",
-        "fi": [
-            "kioski",
-            "kiska*"
-        ],
-        "nl": "de kiosk"
-    }
+    "concepts": {
+        "kiosk": {}
+    },
+    "labels": [
+        {
+            "concept": "kiosk",
+            "label": "kiosk",
+            "language": "en"
+        },
+        {
+            "concept": "kiosk",
+            "label": "kioski",
+            "language": "fi"
+        },
+        {
+            "concept": "kiosk",
+            "label": "kiska",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "kiosk",
+            "label": "de kiosk",
+            "language": "nl"
+        }
+    ]
 }

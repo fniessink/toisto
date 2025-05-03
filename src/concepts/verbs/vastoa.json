@@ -1,10 +1,27 @@
 {
-    "vastoa": {
-        "en": "(to whip with a vasta, a birchen bath broom (typically in a sauna)",
-        "fi": [
-            "vastoa",
-            "vihtoa"
-        ],
-        "nl": "(met bosje berkentwijgen op lichaam slaan in de sauna)"
-    }
+    "concepts": {
+        "vastoa": {}
+    },
+    "labels": [
+        {
+            "concept": "vastoa",
+            "label": "(to whip with a vasta, a birchen bath broom (typically in a sauna)",
+            "language": "en"
+        },
+        {
+            "concept": "vastoa",
+            "label": "vastoa",
+            "language": "fi"
+        },
+        {
+            "concept": "vastoa",
+            "label": "vihtoa",
+            "language": "fi"
+        },
+        {
+            "concept": "vastoa",
+            "label": "(met bosje berkentwijgen op lichaam slaan in de sauna)",
+            "language": "nl"
+        }
+    ]
 }

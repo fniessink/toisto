@@ -1,18 +1,34 @@
 {
-    "writer": {
-        "hypernym": "profession",
-        "roots": "to write",
-        "en": {
-            "singular": "writer",
-            "plural": "writers"
-        },
-        "fi": {
-            "singular": "kirjailija",
-            "plural": "kirjailijat"
-        },
-        "nl": {
-            "singular": "de schrijver",
-            "plural": "de schrijvers"
+    "concepts": {
+        "writer": {
+            "hypernym": "profession",
+            "roots": "to write"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "writer",
+            "label": {
+                "singular": "writer",
+                "plural": "writers"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "writer",
+            "label": {
+                "singular": "kirjailija",
+                "plural": "kirjailijat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "writer",
+            "label": {
+                "singular": "de schrijver",
+                "plural": "de schrijvers"
+            },
+            "language": "nl"
+        }
+    ]
 }

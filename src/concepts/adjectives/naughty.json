@@ -1,7 +1,22 @@
 {
-    "naughty": {
-        "en": "naughty",
-        "fi": "tuhma",
-        "nl": "stout"
-    }
+    "concepts": {
+        "naughty": {}
+    },
+    "labels": [
+        {
+            "concept": "naughty",
+            "label": "naughty",
+            "language": "en"
+        },
+        {
+            "concept": "naughty",
+            "label": "tuhma",
+            "language": "fi"
+        },
+        {
+            "concept": "naughty",
+            "label": "stout",
+            "language": "nl"
+        }
+    ]
 }

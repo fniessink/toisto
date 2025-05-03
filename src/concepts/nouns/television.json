@@ -1,28 +1,49 @@
 {
-    "television": {
-        "en": {
-            "singular": [
-                "television",
-                "telly*"
-            ],
-            "plural": [
-                "televisions",
-                "tellies*"
-            ]
+    "concepts": {
+        "television": {}
+    },
+    "labels": [
+        {
+            "concept": "television",
+            "label": {
+                "singular": "television",
+                "plural": "televisions"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": [
-                "televisio",
-                "telkkari*"
-            ],
-            "plural": [
-                "televisiot",
-                "telkkarit*"
-            ]
+        {
+            "concept": "television",
+            "label": {
+                "singular": "telly",
+                "plural": "tellies"
+            },
+            "language": "en",
+            "colloquial": true
         },
-        "nl": {
-            "singular": "de televisie",
-            "plural": "de televisies"
+        {
+            "concept": "television",
+            "label": {
+                "singular": "televisio",
+                "plural": "televisiot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "television",
+            "label": {
+                "singular": "telkkari",
+                "plural": "telkkarit"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "television",
+            "label": {
+                "singular": "de televisie",
+                "plural": "de televisies"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

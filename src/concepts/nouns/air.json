@@ -1,7 +1,26 @@
 {
-    "air": {
-        "en": "air",
-        "fi": "ilma",
-        "nl": "de lucht;atmosphere of Earth"
-    }
+    "concepts": {
+        "air": {}
+    },
+    "labels": [
+        {
+            "concept": "air",
+            "label": "air",
+            "language": "en"
+        },
+        {
+            "concept": [
+                "air",
+                "weather"
+            ],
+            "label": "ilma",
+            "language": "fi"
+        },
+        {
+            "concept": "air",
+            "label": "de lucht",
+            "language": "nl",
+            "tip": "atmosphere of Earth"
+        }
+    ]
 }

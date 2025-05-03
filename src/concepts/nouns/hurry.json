@@ -1,13 +1,32 @@
 {
-    "hurry": {
-        "en": [
-            "hurry",
-            "rush"
-        ],
-        "fi": "kiire",
-        "nl": [
-            "de haast",
-            "de druk"
-        ]
-    }
+    "concepts": {
+        "hurry": {}
+    },
+    "labels": [
+        {
+            "concept": "hurry",
+            "label": "hurry",
+            "language": "en"
+        },
+        {
+            "concept": "hurry",
+            "label": "rush",
+            "language": "en"
+        },
+        {
+            "concept": "hurry",
+            "label": "kiire",
+            "language": "fi"
+        },
+        {
+            "concept": "hurry",
+            "label": "de haast",
+            "language": "nl"
+        },
+        {
+            "concept": "hurry",
+            "label": "de druk",
+            "language": "nl"
+        }
+    ]
 }

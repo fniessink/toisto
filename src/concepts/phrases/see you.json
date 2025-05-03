@@ -1,29 +1,60 @@
 {
-    "see you": {
-        "en": [
-            "Goodbye!",
-            "See you later!See you!"
-        ],
-        "fi": [
-            "Nähdään!",
-            "Näkemiin!"
-        ],
-        "nl": "Tot ziens!"
+    "concepts": {
+        "see you": {},
+        "see you tomorrow": {
+            "roots": {
+                "en": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "fi": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "nl": "tomorrow"
+            }
+        }
     },
-    "see you tomorrow": {
-        "roots": {
-            "en": [
-                "see you",
-                "tomorrow"
-            ],
-            "fi": [
-                "see you",
-                "tomorrow"
-            ],
-            "nl": "tomorrow"
+    "labels": [
+        {
+            "concept": "see you",
+            "label": "Goodbye!",
+            "language": "en"
         },
-        "en": "See you tomorrow!",
-        "fi": "Nähdään huomenna!",
-        "nl": "Tot morgen!"
-    }
+        {
+            "concept": "see you",
+            "label": "See you later!See you!",
+            "language": "en"
+        },
+        {
+            "concept": "see you",
+            "label": "Nähdään!",
+            "language": "fi"
+        },
+        {
+            "concept": "see you",
+            "label": "Näkemiin!",
+            "language": "fi"
+        },
+        {
+            "concept": "see you",
+            "label": "Tot ziens!",
+            "language": "nl"
+        },
+        {
+            "concept": "see you tomorrow",
+            "label": "See you tomorrow!",
+            "language": "en"
+        },
+        {
+            "concept": "see you tomorrow",
+            "label": "Nähdään huomenna!",
+            "language": "fi"
+        },
+        {
+            "concept": "see you tomorrow",
+            "label": "Tot morgen!",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,11 +1,27 @@
 {
-    "appetite": {
-        "roots": {
-            "fi": "food",
-            "nl": "to eat"
+    "concepts": {
+        "appetite": {
+            "roots": {
+                "fi": "food",
+                "nl": "to eat"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "appetite",
+            "label": "appetite",
+            "language": "en"
         },
-        "en": "appetite",
-        "fi": "ruokahalu",
-        "nl": "de eetlust"
-    }
+        {
+            "concept": "appetite",
+            "label": "ruokahalu",
+            "language": "fi"
+        },
+        {
+            "concept": "appetite",
+            "label": "de eetlust",
+            "language": "nl"
+        }
+    ]
 }

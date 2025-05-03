@@ -157,7 +157,7 @@ class Feedback:
 
     def _example_label(self, label: Label) -> str:
         """Format the label as example."""
-        label_str = quoted(str(label.without_notes).strip(Label.COLLOQUIAL_POSTFIX))
+        label_str = quoted(str(label).strip(Label.COLLOQUIAL_POSTFIX))
         return f"{label_str} (colloquial)" if label.is_colloquial else label_str
 
 

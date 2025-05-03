@@ -1,7 +1,22 @@
 {
-    "test": {
-        "en": "test",
-        "fi": "koe",
-        "nl": "de test"
-    }
+    "concepts": {
+        "test": {}
+    },
+    "labels": [
+        {
+            "concept": "test",
+            "label": "test",
+            "language": "en"
+        },
+        {
+            "concept": "test",
+            "label": "koe",
+            "language": "fi"
+        },
+        {
+            "concept": "test",
+            "label": "de test",
+            "language": "nl"
+        }
+    ]
 }

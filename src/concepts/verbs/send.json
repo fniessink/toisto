@@ -1,7 +1,22 @@
 {
-    "to send": {
-        "en": "to send",
-        "fi": "lähettää",
-        "nl": "sturen"
-    }
+    "concepts": {
+        "to send": {}
+    },
+    "labels": [
+        {
+            "concept": "to send",
+            "label": "to send",
+            "language": "en"
+        },
+        {
+            "concept": "to send",
+            "label": "lähettää",
+            "language": "fi"
+        },
+        {
+            "concept": "to send",
+            "label": "sturen",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,8 +1,24 @@
 {
-    "deductible": {
-        "involves": "insurance",
-        "en": "deductible",
-        "fi": "omavastuu",
-        "nl": "het eigen risico"
-    }
+    "concepts": {
+        "deductible": {
+            "involves": "insurance"
+        }
+    },
+    "labels": [
+        {
+            "concept": "deductible",
+            "label": "deductible",
+            "language": "en"
+        },
+        {
+            "concept": "deductible",
+            "label": "omavastuu",
+            "language": "fi"
+        },
+        {
+            "concept": "deductible",
+            "label": "het eigen risico",
+            "language": "nl"
+        }
+    ]
 }

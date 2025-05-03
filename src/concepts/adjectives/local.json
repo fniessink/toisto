@@ -1,10 +1,27 @@
 {
-    "local": {
-        "en": "local",
-        "fi": "paikallinen",
-        "nl": [
-            "lokaal",
-            "plaatselijk"
-        ]
-    }
+    "concepts": {
+        "local": {}
+    },
+    "labels": [
+        {
+            "concept": "local",
+            "label": "local",
+            "language": "en"
+        },
+        {
+            "concept": "local",
+            "label": "paikallinen",
+            "language": "fi"
+        },
+        {
+            "concept": "local",
+            "label": "lokaal",
+            "language": "nl"
+        },
+        {
+            "concept": "local",
+            "label": "plaatselijk",
+            "language": "nl"
+        }
+    ]
 }

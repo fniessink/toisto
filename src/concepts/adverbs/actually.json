@@ -1,7 +1,25 @@
 {
-    "actually": {
-        "en": "actually",
-        "fi": "oikeastaan",
-        "nl": "eigenlijk"
-    }
+    "concepts": {
+        "actually": {}
+    },
+    "labels": [
+        {
+            "concept": "actually",
+            "label": "actually",
+            "language": "en"
+        },
+        {
+            "concept": "actually",
+            "label": "oikeastaan",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "actually",
+                "as a matter of fact"
+            ],
+            "label": "eigenlijk",
+            "language": "nl"
+        }
+    ]
 }

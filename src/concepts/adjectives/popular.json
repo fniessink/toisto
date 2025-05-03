@@ -1,7 +1,22 @@
 {
-    "popular": {
-        "en": "popular",
-        "fi": "suosittu",
-        "nl": "populair"
-    }
+    "concepts": {
+        "popular": {}
+    },
+    "labels": [
+        {
+            "concept": "popular",
+            "label": "popular",
+            "language": "en"
+        },
+        {
+            "concept": "popular",
+            "label": "suosittu",
+            "language": "fi"
+        },
+        {
+            "concept": "popular",
+            "label": "populair",
+            "language": "nl"
+        }
+    ]
 }

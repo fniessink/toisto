@@ -1,49 +1,64 @@
 {
-    "to help": {
-        "en": {
-            "infinitive": "to help",
-            "singular": {
-                "first person": "I help",
-                "second person": "you help",
-                "third person": {
-                    "feminine": "she helps",
-                    "masculine": "he helps"
+    "concepts": {
+        "to help": {}
+    },
+    "labels": [
+        {
+            "concept": "to help",
+            "label": {
+                "infinitive": "to help",
+                "singular": {
+                    "first person": "I help",
+                    "second person": "you help",
+                    "third person": {
+                        "feminine": "she helps",
+                        "masculine": "he helps"
+                    }
+                },
+                "plural": {
+                    "first person": "we help",
+                    "second person": "you help",
+                    "third person": "they help"
                 }
             },
-            "plural": {
-                "first person": "we help",
-                "second person": "you help",
-                "third person": "they help"
-            }
+            "language": "en"
         },
-        "fi": {
-            "infinitive": "auttaa",
-            "singular": {
-                "first person": "minä autan",
-                "second person": "sinä autat",
-                "third person": "hän auttaa"
-            },
-            "plural": {
-                "first person": "me autamme",
-                "second person": "te autatte",
-                "third person": "he auttavat"
-            }
-        },
-        "nl": {
-            "infinitive": "helpen",
-            "singular": {
-                "first person": "ik help",
-                "second person": "jij helpt",
-                "third person": {
-                    "feminine": "zij helpt",
-                    "masculine": "hij helpt"
+        {
+            "concept": "to help",
+            "label": {
+                "infinitive": "auttaa",
+                "singular": {
+                    "first person": "minä autan",
+                    "second person": "sinä autat",
+                    "third person": "hän auttaa"
+                },
+                "plural": {
+                    "first person": "me autamme",
+                    "second person": "te autatte",
+                    "third person": "he auttavat"
                 }
             },
-            "plural": {
-                "first person": "wij helpen",
-                "second person": "jullie helpen",
-                "third person": "zij helpen"
-            }
+            "language": "fi"
+        },
+        {
+            "concept": "to help",
+            "label": {
+                "infinitive": "helpen",
+                "singular": {
+                    "first person": "ik help",
+                    "second person": "jij helpt",
+                    "third person": {
+                        "feminine": "zij helpt",
+                        "masculine": "hij helpt"
+                    }
+                },
+                "plural": {
+                    "first person": "wij helpen",
+                    "second person": "jullie helpen",
+                    "third person": "zij helpen"
+                }
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

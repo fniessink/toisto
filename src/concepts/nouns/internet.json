@@ -1,10 +1,28 @@
 {
-    "internet": {
-        "en": "internet",
-        "fi": [
-            "internet",
-            "netti*"
-        ],
-        "nl": "het internet"
-    }
+    "concepts": {
+        "internet": {}
+    },
+    "labels": [
+        {
+            "concept": "internet",
+            "label": "internet",
+            "language": "en"
+        },
+        {
+            "concept": "internet",
+            "label": "internet",
+            "language": "fi"
+        },
+        {
+            "concept": "internet",
+            "label": "netti",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "internet",
+            "label": "het internet",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,95 +1,163 @@
 {
-    "grandma": {
-        "hypernym": "grandparent",
-        "en": {
-            "singular": "grandma",
-            "plural": "grandmas"
+    "concepts": {
+        "grandma": {
+            "hypernym": "grandparent"
         },
-        "fi": {
-            "singular": [
-                "mummo",
-                "mummi"
-            ],
-            "plural": [
-                "mummot",
-                "mummit"
-            ]
+        "grandpa": {
+            "hypernym": "grandparent"
         },
-        "nl": {
-            "singular": "de oma",
-            "plural": "de oma's"
+        "grandmother": {
+            "hypernym": "grandparent",
+            "roots": {
+                "en": "mother",
+                "fi": [
+                    "big",
+                    "mother"
+                ],
+                "nl": [
+                    "big",
+                    "mother"
+                ]
+            }
+        },
+        "grandfather": {
+            "hypernym": "grandparent",
+            "roots": {
+                "en": "father",
+                "fi": [
+                    "big",
+                    "father"
+                ],
+                "nl": [
+                    "big",
+                    "father"
+                ]
+            }
+        },
+        "grandparent": {
+            "holonym": "family",
+            "roots": {
+                "en": "parent",
+                "fi": [
+                    "big",
+                    "parent"
+                ],
+                "nl": [
+                    "big",
+                    "parent"
+                ]
+            }
         }
     },
-    "grandpa": {
-        "hypernym": "grandparent",
-        "en": {
-            "singular": "grandpa",
-            "plural": "grandpas"
+    "labels": [
+        {
+            "concept": "grandma",
+            "label": {
+                "singular": "grandma",
+                "plural": "grandmas"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": [
-                "vaari",
-                "ukki"
-            ],
-            "plural": [
-                "vaarit",
-                "ukit"
-            ]
+        {
+            "concept": "grandma",
+            "label": {
+                "singular": "mummo",
+                "plural": "mummot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de opa",
-            "plural": "de opa's"
+        {
+            "concept": "grandma",
+            "label": {
+                "singular": "mummi",
+                "plural": "mummit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "grandma",
+            "label": {
+                "singular": "de oma",
+                "plural": "de oma's"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "grandpa",
+            "label": {
+                "singular": "grandpa",
+                "plural": "grandpas"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "grandpa",
+            "label": {
+                "singular": "vaari",
+                "plural": "vaarit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "grandpa",
+            "label": {
+                "singular": "ukki",
+                "plural": "ukit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "grandpa",
+            "label": {
+                "singular": "de opa",
+                "plural": "de opa's"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "grandmother",
+            "label": "grandmother",
+            "language": "en"
+        },
+        {
+            "concept": "grandmother",
+            "label": "isoäiti",
+            "language": "fi"
+        },
+        {
+            "concept": "grandmother",
+            "label": "de grootmoeder",
+            "language": "nl"
+        },
+        {
+            "concept": "grandfather",
+            "label": "grandfather",
+            "language": "en"
+        },
+        {
+            "concept": "grandfather",
+            "label": "isoisä",
+            "language": "fi"
+        },
+        {
+            "concept": "grandfather",
+            "label": "de grootvader",
+            "language": "nl"
+        },
+        {
+            "concept": "grandparent",
+            "label": "grandparent",
+            "language": "en"
+        },
+        {
+            "concept": "grandparent",
+            "label": "isovanhempi",
+            "language": "fi"
+        },
+        {
+            "concept": "grandparent",
+            "label": "de grootouder",
+            "language": "nl"
         }
-    },
-    "grandmother": {
-        "hypernym": "grandparent",
-        "roots": {
-            "en": "mother",
-            "fi": [
-                "big",
-                "mother"
-            ],
-            "nl": [
-                "big",
-                "mother"
-            ]
-        },
-        "en": "grandmother",
-        "fi": "isoäiti",
-        "nl": "de grootmoeder"
-    },
-    "grandfather": {
-        "hypernym": "grandparent",
-        "roots": {
-            "en": "father",
-            "fi": [
-                "big",
-                "father"
-            ],
-            "nl": [
-                "big",
-                "father"
-            ]
-        },
-        "en": "grandfather",
-        "fi": "isoisä",
-        "nl": "de grootvader"
-    },
-    "grandparent": {
-        "holonym": "family",
-        "roots": {
-            "en": "parent",
-            "fi": [
-                "big",
-                "parent"
-            ],
-            "nl": [
-                "big",
-                "parent"
-            ]
-        },
-        "en": "grandparent",
-        "fi": "isovanhempi",
-        "nl": "de grootouder"
-    }
+    ]
 }

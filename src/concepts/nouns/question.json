@@ -1,17 +1,33 @@
 {
-    "question": {
-        "antonym": "answer",
-        "en": {
-            "singular": "question",
-            "plural": "questions"
-        },
-        "fi": {
-            "singular": "kysymys",
-            "plural": "kysymykset"
-        },
-        "nl": {
-            "singular": "de vraag",
-            "plural": "de vragen"
+    "concepts": {
+        "question": {
+            "antonym": "answer"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "question",
+            "label": {
+                "singular": "question",
+                "plural": "questions"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "question",
+            "label": {
+                "singular": "kysymys",
+                "plural": "kysymykset"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "question",
+            "label": {
+                "singular": "de vraag",
+                "plural": "de vragen"
+            },
+            "language": "nl"
+        }
+    ]
 }

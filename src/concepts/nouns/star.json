@@ -1,17 +1,33 @@
 {
-    "star": {
-        "holonym": "galaxy",
-        "en": {
-            "singular": "star",
-            "plural": "stars"
-        },
-        "fi": {
-            "singular": "tähti",
-            "plural": "tähdet"
-        },
-        "nl": {
-            "singular": "de ster",
-            "plural": "de sterren"
+    "concepts": {
+        "star": {
+            "holonym": "galaxy"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "star",
+            "label": {
+                "singular": "star",
+                "plural": "stars"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "star",
+            "label": {
+                "singular": "tähti",
+                "plural": "tähdet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "star",
+            "label": {
+                "singular": "de ster",
+                "plural": "de sterren"
+            },
+            "language": "nl"
+        }
+    ]
 }

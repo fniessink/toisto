@@ -1,7 +1,22 @@
 {
-    "to cause": {
-        "en": "to cause",
-        "fi": "aiheuttaa",
-        "nl": "veroorzaken"
-    }
+    "concepts": {
+        "to cause": {}
+    },
+    "labels": [
+        {
+            "concept": "to cause",
+            "label": "to cause",
+            "language": "en"
+        },
+        {
+            "concept": "to cause",
+            "label": "aiheuttaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to cause",
+            "label": "veroorzaken",
+            "language": "nl"
+        }
+    ]
 }

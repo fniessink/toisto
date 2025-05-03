@@ -1,7 +1,22 @@
 {
-    "relative": {
-        "en": "relative",
-        "fi": "sukulainen",
-        "nl": "het familielid"
-    }
+    "concepts": {
+        "relative": {}
+    },
+    "labels": [
+        {
+            "concept": "relative",
+            "label": "relative",
+            "language": "en"
+        },
+        {
+            "concept": "relative",
+            "label": "sukulainen",
+            "language": "fi"
+        },
+        {
+            "concept": "relative",
+            "label": "het familielid",
+            "language": "nl"
+        }
+    ]
 }

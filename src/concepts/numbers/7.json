@@ -1,20 +1,42 @@
 {
-    "7": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "seven",
-            "ordinal": "seventh"
-        },
-        "fi": {
-            "cardinal": [
-                "seitsemän",
-                "seittemän*"
-            ],
-            "ordinal": "seitsemäs"
-        },
-        "nl": {
-            "cardinal": "zeven",
-            "ordinal": "zevende"
+    "concepts": {
+        "7": {
+            "hypernym": "number"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "7",
+            "label": {
+                "cardinal": "seven",
+                "ordinal": "seventh"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "7",
+            "label": {
+                "cardinal": "seitsemän",
+                "ordinal": "seitsemäs"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "7",
+            "label": {
+                "cardinal": "seittemän",
+                "ordinal": "seitsemäs"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "7",
+            "label": {
+                "cardinal": "zeven",
+                "ordinal": "zevende"
+            },
+            "language": "nl"
+        }
+    ]
 }

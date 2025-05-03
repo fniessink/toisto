@@ -1,7 +1,22 @@
 {
-    "to decorate": {
-        "en": "to decorate",
-        "fi": "koristella",
-        "nl": "versieren"
-    }
+    "concepts": {
+        "to decorate": {}
+    },
+    "labels": [
+        {
+            "concept": "to decorate",
+            "label": "to decorate",
+            "language": "en"
+        },
+        {
+            "concept": "to decorate",
+            "label": "koristella",
+            "language": "fi"
+        },
+        {
+            "concept": "to decorate",
+            "label": "versieren",
+            "language": "nl"
+        }
+    ]
 }
