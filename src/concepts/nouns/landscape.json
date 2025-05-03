@@ -1,7 +1,11 @@
 {
-    "landscape": {
-        "en": "landscape",
-        "fi": "maisema",
-        "nl": "het landschap"
+    "concepts": {
+        "landscape": {
+            "labels": {
+                "en": "landscape",
+                "fi": "maisema",
+                "nl": "het landschap"
+            }
+        }
     }
 }

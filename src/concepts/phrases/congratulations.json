@@ -1,10 +1,14 @@
 {
-    "congratulations": {
-        "en": "Congratulations!",
-        "fi": [
-            "Onnea!",
-            "Onnittelut!"
-        ],
-        "nl": "Gefeliciteerd!"
+    "concepts": {
+        "congratulations": {
+            "labels": {
+                "en": "Congratulations!",
+                "fi": [
+                    "Onnea!",
+                    "Onnittelut!"
+                ],
+                "nl": "Gefeliciteerd!"
+            }
+        }
     }
 }

@@ -1,10 +1,14 @@
 {
-    "but": {
-        "en": "but",
-        "fi": [
-            "mutta",
-            "mut*"
-        ],
-        "nl": "maar"
+    "concepts": {
+        "but": {
+            "labels": {
+                "en": "but",
+                "fi": [
+                    "mutta",
+                    "mut*"
+                ],
+                "nl": "maar"
+            }
+        }
     }
 }

@@ -1,70 +1,82 @@
 {
-    "friend": {
-        "en": {
-            "singular": "friend",
-            "plural": "friends"
+    "concepts": {
+        "friend": {
+            "labels": {
+                "en": {
+                    "singular": "friend",
+                    "plural": "friends"
+                },
+                "fi": {
+                    "singular": [
+                        "kaveri",
+                        "ystävä"
+                    ],
+                    "plural": [
+                        "kaverit",
+                        "ystävät"
+                    ]
+                },
+                "nl": {
+                    "singular": "de vriend",
+                    "plural": "de vrienden"
+                }
+            }
         },
-        "fi": {
-            "singular": [
-                "kaveri",
-                "ystävä"
+        "female friend": {
+            "hypernym": [
+                "friend",
+                "girl"
             ],
-            "plural": [
-                "kaverit",
-                "ystävät"
-            ]
+            "roots": {
+                "en": [
+                    "girl",
+                    "friend"
+                ],
+                "fi": [
+                    "girl",
+                    "friend"
+                ],
+                "nl": "friend"
+            },
+            "labels": {
+                "en": "girlfriend",
+                "fi": "tyttöystävä",
+                "nl": "de vriendin"
+            }
         },
-        "nl": {
-            "singular": "de vriend",
-            "plural": "de vrienden"
+        "boyfriend": {
+            "labels": {
+                "en": "boyfriend",
+                "fi": [
+                    "miesystävä",
+                    "poikaystävä"
+                ],
+                "nl": [
+                    "de vriend",
+                    "het vriendje"
+                ]
+            }
+        },
+        "girlfriend": {
+            "labels": {
+                "en": "girlfriend",
+                "fi": [
+                    "naisystävä",
+                    "tyttöystävä"
+                ],
+                "nl": [
+                    "de vriendin",
+                    "het vriendinnetje"
+                ]
+            }
+        },
+        "friendship": {
+            "roots": "friend",
+            "labels": {
+                "en": "friendship",
+                "fi": "ystävyys",
+                "nl": "vriendschap"
+            }
         }
-    },
-    "female friend": {
-        "hypernym": [
-            "friend",
-            "girl"
-        ],
-        "roots": {
-            "en": [
-                "girl",
-                "friend"
-            ],
-            "fi": [
-                "girl",
-                "friend"
-            ],
-            "nl": "friend"
-        },
-        "en": "girlfriend",
-        "fi": "tyttöystävä",
-        "nl": "de vriendin"
-    },
-    "boyfriend": {
-        "en": "boyfriend",
-        "fi": [
-            "miesystävä",
-            "poikaystävä"
-        ],
-        "nl": [
-            "de vriend",
-            "het vriendje"
-        ]
-    },
-    "girlfriend": {
-        "en": "girlfriend",
-        "fi": [
-            "naisystävä",
-            "tyttöystävä"
-        ],
-        "nl": [
-            "de vriendin",
-            "het vriendinnetje"
-        ]
-    },
-    "friendship": {
-        "roots": "friend",
-        "en": "friendship",
-        "fi": "ystävyys",
-        "nl": "vriendschap"
     }
 }

@@ -1,7 +1,11 @@
 {
-    "economy": {
-        "en": "economy",
-        "fi": "talous",
-        "nl": "de economie"
+    "concepts": {
+        "economy": {
+            "labels": {
+                "en": "economy",
+                "fi": "talous",
+                "nl": "de economie"
+            }
+        }
     }
 }

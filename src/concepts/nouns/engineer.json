@@ -1,17 +1,21 @@
 {
-    "engineer": {
-        "hypernym": "profession",
-        "en": {
-            "singular": "engineer",
-            "plural": "engineers"
-        },
-        "fi": {
-            "singular": "insinööri",
-            "plural": "insinöörit"
-        },
-        "nl": {
-            "singular": "de ingenieur",
-            "plural": "de ingenieurs"
+    "concepts": {
+        "engineer": {
+            "hypernym": "profession",
+            "labels": {
+                "en": {
+                    "singular": "engineer",
+                    "plural": "engineers"
+                },
+                "fi": {
+                    "singular": "insinööri",
+                    "plural": "insinöörit"
+                },
+                "nl": {
+                    "singular": "de ingenieur",
+                    "plural": "de ingenieurs"
+                }
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "dead": {
-        "en": "dead",
-        "fi": "kuollut",
-        "nl": "dood"
+    "concepts": {
+        "dead": {
+            "labels": {
+                "en": "dead",
+                "fi": "kuollut",
+                "nl": "dood"
+            }
+        }
     }
 }

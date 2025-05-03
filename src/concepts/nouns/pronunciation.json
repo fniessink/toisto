@@ -1,8 +1,12 @@
 {
-    "pronunciation": {
-        "involves": "language",
-        "en": "pronunciation",
-        "fi": "ääntäminen",
-        "nl": "de uitspraak"
+    "concepts": {
+        "pronunciation": {
+            "involves": "language",
+            "labels": {
+                "en": "pronunciation",
+                "fi": "ääntäminen",
+                "nl": "de uitspraak"
+            }
+        }
     }
 }

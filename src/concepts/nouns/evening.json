@@ -1,31 +1,39 @@
 {
-    "evening": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "evening",
-            "plural": "evenings"
+    "concepts": {
+        "evening": {
+            "hypernym": "time of day",
+            "labels": {
+                "en": {
+                    "singular": "evening",
+                    "plural": "evenings"
+                },
+                "fi": {
+                    "singular": "ilta",
+                    "plural": "illat"
+                },
+                "nl": {
+                    "singular": "de avond",
+                    "plural": "de avonden"
+                }
+            }
         },
-        "fi": {
-            "singular": "ilta",
-            "plural": "illat"
+        "in the evening": {
+            "hypernym": "time of day",
+            "roots": "evening",
+            "labels": {
+                "en": "in the evening",
+                "fi": "illalla",
+                "nl": "'s avonds"
+            }
         },
-        "nl": {
-            "singular": "de avond",
-            "plural": "de avonden"
+        "this evening": {
+            "hypernym": "time of day",
+            "roots": "evening",
+            "labels": {
+                "en": "this evening",
+                "fi": "tänä iltana",
+                "nl": "vanavond"
+            }
         }
-    },
-    "in the evening": {
-        "hypernym": "time of day",
-        "roots": "evening",
-        "en": "in the evening",
-        "fi": "illalla",
-        "nl": "'s avonds"
-    },
-    "this evening": {
-        "hypernym": "time of day",
-        "roots": "evening",
-        "en": "this evening",
-        "fi": "tänä iltana",
-        "nl": "vanavond"
     }
 }

@@ -1,16 +1,20 @@
 {
-    "jog": {
-        "en": {
-            "singular": "jog",
-            "plural": "jogs"
-        },
-        "fi": {
-            "singular": "lenkki",
-            "plural": "lenkit"
-        },
-        "nl": {
-            "singular": "de jog",
-            "plural": "de jogs"
+    "concepts": {
+        "jog": {
+            "labels": {
+                "en": {
+                    "singular": "jog",
+                    "plural": "jogs"
+                },
+                "fi": {
+                    "singular": "lenkki",
+                    "plural": "lenkit"
+                },
+                "nl": {
+                    "singular": "de jog",
+                    "plural": "de jogs"
+                }
+            }
         }
     }
 }

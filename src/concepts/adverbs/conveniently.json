@@ -1,10 +1,14 @@
 {
-    "conveniently": {
-        "en": "conveniently",
-        "fi": "mukavasti",
-        "nl": [
-            "comfortabel",
-            "gemakkelijk"
-        ]
+    "concepts": {
+        "conveniently": {
+            "labels": {
+                "en": "conveniently",
+                "fi": "mukavasti",
+                "nl": [
+                    "comfortabel",
+                    "gemakkelijk"
+                ]
+            }
+        }
     }
 }

@@ -1,26 +1,32 @@
 {
-    "month": {
-        "roots": {
-            "fi": "moon",
-            "nl": "moon"
+    "concepts": {
+        "month": {
+            "roots": {
+                "fi": "moon",
+                "nl": "moon"
+            },
+            "labels": {
+                "en": {
+                    "singular": "month",
+                    "plural": "months"
+                },
+                "fi": {
+                    "singular": "kuukausi",
+                    "plural": "kuukaudet"
+                },
+                "nl": {
+                    "singular": "de maand",
+                    "plural": "de maanden"
+                }
+            }
         },
-        "en": {
-            "singular": "month",
-            "plural": "months"
-        },
-        "fi": {
-            "singular": "kuukausi",
-            "plural": "kuukaudet"
-        },
-        "nl": {
-            "singular": "de maand",
-            "plural": "de maanden"
+        "once a month": {
+            "roots": "month",
+            "labels": {
+                "en": "once a month",
+                "fi": "kerran kuussa",
+                "nl": "één keer per maand|een keer per maand"
+            }
         }
-    },
-    "once a month": {
-        "roots": "month",
-        "en": "once a month",
-        "fi": "kerran kuussa",
-        "nl": "één keer per maand|een keer per maand"
     }
 }

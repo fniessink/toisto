@@ -1,25 +1,33 @@
 {
-    "sun": {
-        "example": "the sun shines",
-        "holonym": "solar system",
-        "hypernym": "star",
-        "en": "sun",
-        "fi": "aurinko",
-        "nl": "de zon"
-    },
-    "sunset": {
-        "roots": "sun",
-        "en": [
-            "sunset",
-            "sundown"
-        ],
-        "fi": "auringonlasku",
-        "nl": "de zonsondergang"
-    },
-    "the sun shines": {
-        "roots": "sun",
-        "en": "The sun shines.",
-        "fi": "Aurinko paistaa.",
-        "nl": "De zon schijnt."
+    "concepts": {
+        "sun": {
+            "example": "the sun shines",
+            "holonym": "solar system",
+            "hypernym": "star",
+            "labels": {
+                "en": "sun",
+                "fi": "aurinko",
+                "nl": "de zon"
+            }
+        },
+        "sunset": {
+            "roots": "sun",
+            "labels": {
+                "en": [
+                    "sunset",
+                    "sundown"
+                ],
+                "fi": "auringonlasku",
+                "nl": "de zonsondergang"
+            }
+        },
+        "the sun shines": {
+            "roots": "sun",
+            "labels": {
+                "en": "The sun shines.",
+                "fi": "Aurinko paistaa.",
+                "nl": "De zon schijnt."
+            }
+        }
     }
 }

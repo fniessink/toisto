@@ -1,23 +1,27 @@
 {
-    "private compartment": {
-        "roots": {
-            "fi": [
-                "to sleep",
-                "cabin"
-            ],
-            "nl": "to sleep"
-        },
-        "en": {
-            "singular": "private compartment",
-            "plural": "private compartments"
-        },
-        "fi": {
-            "singular": "makuuhytti",
-            "plural": "makuuhytit"
-        },
-        "nl": {
-            "singular": "de slaapcoupé",
-            "plural": "de slaapcoupés"
+    "concepts": {
+        "private compartment": {
+            "roots": {
+                "fi": [
+                    "to sleep",
+                    "cabin"
+                ],
+                "nl": "to sleep"
+            },
+            "labels": {
+                "en": {
+                    "singular": "private compartment",
+                    "plural": "private compartments"
+                },
+                "fi": {
+                    "singular": "makuuhytti",
+                    "plural": "makuuhytit"
+                },
+                "nl": {
+                    "singular": "de slaapcoupé",
+                    "plural": "de slaapcoupés"
+                }
+            }
         }
     }
 }

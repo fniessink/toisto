@@ -1,10 +1,14 @@
 {
-    "sole": {
-        "en": [
-            "sole",
-            "only"
-        ],
-        "fi": "ainoa",
-        "nl": "enig"
+    "concepts": {
+        "sole": {
+            "labels": {
+                "en": [
+                    "sole",
+                    "only"
+                ],
+                "fi": "ainoa",
+                "nl": "enig"
+            }
+        }
     }
 }

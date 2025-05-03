@@ -1,37 +1,41 @@
 {
-    "narrow": {
-        "en": {
-            "positive degree": [
-                "narrow",
-                "tight"
-            ],
-            "comparative degree": [
-                "narrower",
-                "tighter"
-            ],
-            "superlative degree": [
-                "narrowest",
-                "tightest"
-            ]
-        },
-        "fi": {
-            "positive degree": "ahdas",
-            "comparative degree": "ahtaampi",
-            "superlative degree": "ahtain"
-        },
-        "nl": {
-            "positive degree": [
-                "nauw",
-                "smal"
-            ],
-            "comparative degree": [
-                "nauwer",
-                "smaller"
-            ],
-            "superlative degree": [
-                "nauwst",
-                "smalst"
-            ]
+    "concepts": {
+        "narrow": {
+            "labels": {
+                "en": {
+                    "positive degree": [
+                        "narrow",
+                        "tight"
+                    ],
+                    "comparative degree": [
+                        "narrower",
+                        "tighter"
+                    ],
+                    "superlative degree": [
+                        "narrowest",
+                        "tightest"
+                    ]
+                },
+                "fi": {
+                    "positive degree": "ahdas",
+                    "comparative degree": "ahtaampi",
+                    "superlative degree": "ahtain"
+                },
+                "nl": {
+                    "positive degree": [
+                        "nauw",
+                        "smal"
+                    ],
+                    "comparative degree": [
+                        "nauwer",
+                        "smaller"
+                    ],
+                    "superlative degree": [
+                        "nauwst",
+                        "smalst"
+                    ]
+                }
+            }
         }
     }
 }

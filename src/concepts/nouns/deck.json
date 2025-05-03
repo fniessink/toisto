@@ -1,8 +1,12 @@
 {
-    "deck": {
-        "holonym": "ship",
-        "en": "deck",
-        "fi": "kansi",
-        "nl": "het dek"
+    "concepts": {
+        "deck": {
+            "holonym": "ship",
+            "labels": {
+                "en": "deck",
+                "fi": "kansi",
+                "nl": "het dek"
+            }
+        }
     }
 }

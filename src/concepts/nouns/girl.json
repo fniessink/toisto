@@ -1,18 +1,22 @@
 {
-    "girl": {
-        "antonym": "boy",
-        "hypernym": "woman",
-        "en": {
-            "singular": "girl",
-            "plural": "girls"
-        },
-        "fi": {
-            "singular": "tyttö",
-            "plural": "tytöt"
-        },
-        "nl": {
-            "singular": "het meisje",
-            "plural": "de meisjes"
+    "concepts": {
+        "girl": {
+            "antonym": "boy",
+            "hypernym": "woman",
+            "labels": {
+                "en": {
+                    "singular": "girl",
+                    "plural": "girls"
+                },
+                "fi": {
+                    "singular": "tyttö",
+                    "plural": "tytöt"
+                },
+                "nl": {
+                    "singular": "het meisje",
+                    "plural": "de meisjes"
+                }
+            }
         }
     }
 }

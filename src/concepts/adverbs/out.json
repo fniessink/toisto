@@ -1,13 +1,17 @@
 {
-    "out": {
-        "en": [
-            "out",
-            "outside"
-        ],
-        "fi": "ulos",
-        "nl": [
-            "eruit",
-            "naar buiten"
-        ]
+    "concepts": {
+        "out": {
+            "labels": {
+                "en": [
+                    "out",
+                    "outside"
+                ],
+                "fi": "ulos",
+                "nl": [
+                    "eruit",
+                    "naar buiten"
+                ]
+            }
+        }
     }
 }

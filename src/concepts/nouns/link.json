@@ -1,7 +1,11 @@
 {
-    "link": {
-        "en": "link",
-        "fi": "linkki",
-        "nl": "de link"
+    "concepts": {
+        "link": {
+            "labels": {
+                "en": "link",
+                "fi": "linkki",
+                "nl": "de link"
+            }
+        }
     }
 }

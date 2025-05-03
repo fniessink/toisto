@@ -1,7 +1,11 @@
 {
-    "ability": {
-        "en": "ability",
-        "fi": "kyky",
-        "nl": "het vermogen"
+    "concepts": {
+        "ability": {
+            "labels": {
+                "en": "ability",
+                "fi": "kyky",
+                "nl": "het vermogen"
+            }
+        }
     }
 }

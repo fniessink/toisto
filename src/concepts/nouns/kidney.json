@@ -1,17 +1,21 @@
 {
-    "kidney": {
-        "hypernym": "organ",
-        "en": {
-            "singular": "kidney",
-            "plural": "kidneys"
-        },
-        "fi": {
-            "singular": "munuainen",
-            "plural": "munuaiset"
-        },
-        "nl": {
-            "singular": "de nier",
-            "plural": "de nieren"
+    "concepts": {
+        "kidney": {
+            "hypernym": "organ",
+            "labels": {
+                "en": {
+                    "singular": "kidney",
+                    "plural": "kidneys"
+                },
+                "fi": {
+                    "singular": "munuainen",
+                    "plural": "munuaiset"
+                },
+                "nl": {
+                    "singular": "de nier",
+                    "plural": "de nieren"
+                }
+            }
         }
     }
 }

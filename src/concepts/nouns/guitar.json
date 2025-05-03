@@ -1,39 +1,47 @@
 {
-    "guitar": {
-        "hypernym": "musical instrument",
-        "en": {
-            "singular": "guitar",
-            "plural": "guitars"
+    "concepts": {
+        "guitar": {
+            "hypernym": "musical instrument",
+            "labels": {
+                "en": {
+                    "singular": "guitar",
+                    "plural": "guitars"
+                },
+                "fi": {
+                    "singular": "kitara",
+                    "plural": "kitarat"
+                },
+                "nl": {
+                    "singular": "de gitaar",
+                    "plural": "de gitaren"
+                }
+            }
         },
-        "fi": {
-            "singular": "kitara",
-            "plural": "kitarat"
+        "guitarist": {
+            "involves": "guitar",
+            "roots": "guitar",
+            "labels": {
+                "en": {
+                    "singular": "guitarist",
+                    "plural": "guitarists"
+                },
+                "fi": {
+                    "singular": "kitaristi",
+                    "plural": "kitaristit"
+                },
+                "nl": {
+                    "singular": "de gitarist",
+                    "plural": "de gitaristen"
+                }
+            }
         },
-        "nl": {
-            "singular": "de gitaar",
-            "plural": "de gitaren"
+        "huippukitaristi": {
+            "hypernym": "guiterist",
+            "labels": {
+                "en": "top guitarist",
+                "fi": "huippukitaristi",
+                "nl": "de topgitarist"
+            }
         }
-    },
-    "guitarist": {
-        "involves": "guitar",
-        "roots": "guitar",
-        "en": {
-            "singular": "guitarist",
-            "plural": "guitarists"
-        },
-        "fi": {
-            "singular": "kitaristi",
-            "plural": "kitaristit"
-        },
-        "nl": {
-            "singular": "de gitarist",
-            "plural": "de gitaristen"
-        }
-    },
-    "huippukitaristi": {
-        "hypernym": "guiterist",
-        "en": "top guitarist",
-        "fi": "huippukitaristi",
-        "nl": "de topgitarist"
     }
 }

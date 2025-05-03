@@ -1,13 +1,17 @@
 {
-    "ew": {
-        "en": [
-            "Ew!",
-            "Yuck!"
-        ],
-        "fi": "Hyi!",
-        "nl": [
-            "Bah!",
-            "Jakkes!"
-        ]
+    "concepts": {
+        "ew": {
+            "labels": {
+                "en": [
+                    "Ew!",
+                    "Yuck!"
+                ],
+                "fi": "Hyi!",
+                "nl": [
+                    "Bah!",
+                    "Jakkes!"
+                ]
+            }
+        }
     }
 }

@@ -1,10 +1,14 @@
 {
-    "swimming pool": {
-        "roots": {
-            "nl": "bath"
-        },
-        "en": "swimming pool",
-        "fi": "uimahalli",
-        "nl": "het zwembad"
+    "concepts": {
+        "swimming pool": {
+            "roots": {
+                "nl": "bath"
+            },
+            "labels": {
+                "en": "swimming pool",
+                "fi": "uimahalli",
+                "nl": "het zwembad"
+            }
+        }
     }
 }

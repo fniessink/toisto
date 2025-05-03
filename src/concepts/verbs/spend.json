@@ -1,17 +1,23 @@
 {
-    "to spend (time)": {
-        "example": "We spend Easter at home",
-        "en": "to spend",
-        "fi": "viettää",
-        "nl": "doorbrengen"
-    },
-    "We spend Easter at home": {
-        "roots": [
-            "to spend (time)",
-            "easter"
-        ],
-        "en": "We spend Easter at home.",
-        "fi": "Me vietämme pääsiäistä kotona.",
-        "nl": "We brengen Pasen thuis door."
+    "concepts": {
+        "to spend (time)": {
+            "example": "We spend Easter at home",
+            "labels": {
+                "en": "to spend",
+                "fi": "viettää",
+                "nl": "doorbrengen"
+            }
+        },
+        "We spend Easter at home": {
+            "roots": [
+                "to spend (time)",
+                "easter"
+            ],
+            "labels": {
+                "en": "We spend Easter at home.",
+                "fi": "Me vietämme pääsiäistä kotona.",
+                "nl": "We brengen Pasen thuis door."
+            }
+        }
     }
 }

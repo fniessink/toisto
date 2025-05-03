@@ -1,14 +1,20 @@
 {
-    "to smell": {
-        "involves": "nose",
-        "en": "to smell",
-        "fi": "haistaa",
-        "nl": "ruiken"
-    },
-    "to smell (pleasant": {
-        "involves": "nose",
-        "en": "to smell;pleasant",
-        "fi": "tuoksua",
-        "nl": "ruiken"
+    "concepts": {
+        "to smell": {
+            "involves": "nose",
+            "labels": {
+                "en": "to smell",
+                "fi": "haistaa",
+                "nl": "ruiken"
+            }
+        },
+        "to smell (pleasant": {
+            "involves": "nose",
+            "labels": {
+                "en": "to smell;pleasant",
+                "fi": "tuoksua",
+                "nl": "ruiken"
+            }
+        }
     }
 }

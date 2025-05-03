@@ -1,8 +1,12 @@
 {
-    "running": {
-        "hypernym": "sport",
-        "en": "running",
-        "fi": "juoksu",
-        "nl": "het hardlopen"
+    "concepts": {
+        "running": {
+            "hypernym": "sport",
+            "labels": {
+                "en": "running",
+                "fi": "juoksu",
+                "nl": "het hardlopen"
+            }
+        }
     }
 }

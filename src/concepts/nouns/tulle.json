@@ -1,7 +1,11 @@
 {
-    "tulle": {
-        "en": "tulle",
-        "fi": "tylli",
-        "nl": "de tule"
+    "concepts": {
+        "tulle": {
+            "labels": {
+                "en": "tulle",
+                "fi": "tylli",
+                "nl": "de tule"
+            }
+        }
     }
 }

@@ -1,20 +1,24 @@
 {
-    "mushroom": {
-        "hypernym": "food",
-        "roots": {
-            "nl": "chair"
-        },
-        "en": {
-            "singular": "mushroom",
-            "plural": "mushrooms"
-        },
-        "fi": {
-            "singular": "sieni",
-            "plural": "sienet"
-        },
-        "nl": {
-            "singular": "de paddenstoel",
-            "plural": "de paddenstoelen"
+    "concepts": {
+        "mushroom": {
+            "hypernym": "food",
+            "roots": {
+                "nl": "chair"
+            },
+            "labels": {
+                "en": {
+                    "singular": "mushroom",
+                    "plural": "mushrooms"
+                },
+                "fi": {
+                    "singular": "sieni",
+                    "plural": "sienet"
+                },
+                "nl": {
+                    "singular": "de paddenstoel",
+                    "plural": "de paddenstoelen"
+                }
+            }
         }
     }
 }

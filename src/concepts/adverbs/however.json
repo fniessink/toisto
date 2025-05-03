@@ -1,42 +1,48 @@
 {
-    "however": {
-        "example": "I am busy, however, I am here",
-        "en": [
-            "however",
-            "still",
-            "yet",
-            "nevertheless",
-            "nonetheless",
-            "anyway",
-            "regardless"
-        ],
-        "fi": [
-            "silti",
-            "kuitenkaan;;kuitenkaan is used chiefly in the negative",
-            "kuitenkin;;kuitenkin is used chiefly in the positive"
-        ],
-        "nl": "toch"
-    },
-    "I am busy, however, I am here": {
-        "roots": [
-            "to be",
-            "however",
-            "here"
-        ],
-        "en": [
-            "I am busy, however, I am here.",
-            "I am busy, still I am here.",
-            "I am busy, yet I am here.",
-            "I am busy, nevertheless I am here.",
-            "I am busy, nonetheless I am here.",
-            "I am busy, but I am here anyway.",
-            "I am busy, but I am here regardless."
-        ],
-        "fi": [
-            "Minulla on kiire, silti olen tässä.",
-            "Minulla on kiire, kuitenkaan olen tässä.",
-            "Minulla on kiire, kuitenkin olen tässä."
-        ],
-        "nl": "Ik heb het druk, toch ben ik hier."
+    "concepts": {
+        "however": {
+            "example": "I am busy, however, I am here",
+            "labels": {
+                "en": [
+                    "however",
+                    "still",
+                    "yet",
+                    "nevertheless",
+                    "nonetheless",
+                    "anyway",
+                    "regardless"
+                ],
+                "fi": [
+                    "silti",
+                    "kuitenkaan;;kuitenkaan is used chiefly in the negative",
+                    "kuitenkin;;kuitenkin is used chiefly in the positive"
+                ],
+                "nl": "toch"
+            }
+        },
+        "I am busy, however, I am here": {
+            "roots": [
+                "to be",
+                "however",
+                "here"
+            ],
+            "labels": {
+                "en": [
+                    "I am busy, however, I am here.",
+                    "I am busy, still I am here.",
+                    "I am busy, yet I am here.",
+                    "I am busy, nevertheless I am here.",
+                    "I am busy, nonetheless I am here.",
+                    "I am busy, but I am here anyway.",
+                    "I am busy, but I am here regardless."
+                ],
+                "fi": [
+                    "Minulla on kiire, silti olen tässä.",
+                    "Minulla on kiire, kuitenkaan olen tässä.",
+                    "Minulla on kiire, kuitenkin olen tässä."
+                ],
+                "nl": "Ik heb het druk, toch ben ik hier."
+            }
+        }
     }
 }

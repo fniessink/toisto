@@ -1,20 +1,26 @@
 {
-    "rhinitus": {
-        "example": "I have a cold",
-        "en": [
-            "rhinitus",
-            "cold"
-        ],
-        "fi": "nuha",
-        "nl": "de verkoudheid"
-    },
-    "I have a cold": {
-        "roots": "rhinitus",
-        "en": "I have a cold.",
-        "fi": [
-            "Minulla on nuha.",
-            "Minä on vilustunut."
-        ],
-        "nl": "Ik ben verkouden."
+    "concepts": {
+        "rhinitus": {
+            "example": "I have a cold",
+            "labels": {
+                "en": [
+                    "rhinitus",
+                    "cold"
+                ],
+                "fi": "nuha",
+                "nl": "de verkoudheid"
+            }
+        },
+        "I have a cold": {
+            "roots": "rhinitus",
+            "labels": {
+                "en": "I have a cold.",
+                "fi": [
+                    "Minulla on nuha.",
+                    "Minä on vilustunut."
+                ],
+                "nl": "Ik ben verkouden."
+            }
+        }
     }
 }

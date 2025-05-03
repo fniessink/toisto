@@ -1,7 +1,11 @@
 {
-    "half": {
-        "en": "half",
-        "fi": "puoli",
-        "nl": "half"
+    "concepts": {
+        "half": {
+            "labels": {
+                "en": "half",
+                "fi": "puoli",
+                "nl": "half"
+            }
+        }
     }
 }

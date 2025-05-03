@@ -1,23 +1,29 @@
 {
-    "sheep": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "sheep",
-            "plural": "sheep"
+    "concepts": {
+        "sheep": {
+            "hypernym": "animal",
+            "labels": {
+                "en": {
+                    "singular": "sheep",
+                    "plural": "sheep"
+                },
+                "fi": {
+                    "singular": "lammas",
+                    "plural": "lampaat"
+                },
+                "nl": {
+                    "singular": "het schaap",
+                    "plural": "de schapen"
+                }
+            }
         },
-        "fi": {
-            "singular": "lammas",
-            "plural": "lampaat"
-        },
-        "nl": {
-            "singular": "het schaap",
-            "plural": "de schapen"
+        "ram": {
+            "hypernym": "sheep",
+            "labels": {
+                "en": "ram",
+                "fi": "pässi",
+                "nl": "de ram"
+            }
         }
-    },
-    "ram": {
-        "hypernym": "sheep",
-        "en": "ram",
-        "fi": "pässi",
-        "nl": "de ram"
     }
 }

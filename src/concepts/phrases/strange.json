@@ -1,10 +1,14 @@
 {
-    "Strange!": {
-        "en": [
-            "Strange!",
-            "Weird!"
-        ],
-        "fi": "Ihme juttu!",
-        "nl": "Vreemd!"
+    "concepts": {
+        "Strange!": {
+            "labels": {
+                "en": [
+                    "Strange!",
+                    "Weird!"
+                ],
+                "fi": "Ihme juttu!",
+                "nl": "Vreemd!"
+            }
+        }
     }
 }

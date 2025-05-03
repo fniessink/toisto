@@ -1,10 +1,14 @@
 {
-    "ride": {
-        "en": [
-            "ride",
-            "lift"
-        ],
-        "fi": "kyyti",
-        "nl": "de lift"
+    "concepts": {
+        "ride": {
+            "labels": {
+                "en": [
+                    "ride",
+                    "lift"
+                ],
+                "fi": "kyyti",
+                "nl": "de lift"
+            }
+        }
     }
 }

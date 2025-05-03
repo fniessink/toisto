@@ -1,35 +1,43 @@
 {
-    "train": {
-        "example": "the train departs from platform 4",
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "train",
-            "plural": "trains"
+    "concepts": {
+        "train": {
+            "example": "the train departs from platform 4",
+            "hypernym": "means of transportation",
+            "labels": {
+                "en": {
+                    "singular": "train",
+                    "plural": "trains"
+                },
+                "fi": {
+                    "singular": "juna",
+                    "plural": "junat"
+                },
+                "nl": {
+                    "singular": "de trein",
+                    "plural": "de treinen"
+                }
+            }
         },
-        "fi": {
-            "singular": "juna",
-            "plural": "junat"
+        "long-distance train": {
+            "hypernym": "train",
+            "labels": {
+                "en": "long-distance train",
+                "fi": "kaukojuna",
+                "nl": "langeafstandstrein"
+            }
         },
-        "nl": {
-            "singular": "de trein",
-            "plural": "de treinen"
+        "the train departs from platform 4": {
+            "roots": [
+                "train",
+                "to leave",
+                "platform",
+                "4"
+            ],
+            "labels": {
+                "en": "The train departs from platform four.",
+                "fi": "Juna lähtee laiturilta neljä.",
+                "nl": "De trein vertrekt van perron vier."
+            }
         }
-    },
-    "long-distance train": {
-        "hypernym": "train",
-        "en": "long-distance train",
-        "fi": "kaukojuna",
-        "nl": "langeafstandstrein"
-    },
-    "the train departs from platform 4": {
-        "roots": [
-            "train",
-            "to leave",
-            "platform",
-            "4"
-        ],
-        "en": "The train departs from platform four.",
-        "fi": "Juna lähtee laiturilta neljä.",
-        "nl": "De trein vertrekt van perron vier."
     }
 }

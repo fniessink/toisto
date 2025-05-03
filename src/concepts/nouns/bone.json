@@ -1,8 +1,12 @@
 {
-    "bone": {
-        "holonym": "body",
-        "en": "bone",
-        "fi": "luu",
-        "nl": "het bot"
+    "concepts": {
+        "bone": {
+            "holonym": "body",
+            "labels": {
+                "en": "bone",
+                "fi": "luu",
+                "nl": "het bot"
+            }
+        }
     }
 }

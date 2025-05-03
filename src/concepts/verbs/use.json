@@ -1,8 +1,12 @@
 {
-    "to use": {
-        "involves": "user",
-        "en": "to use",
-        "fi": "käyttää",
-        "nl": "gebruiken"
+    "concepts": {
+        "to use": {
+            "involves": "user",
+            "labels": {
+                "en": "to use",
+                "fi": "käyttää",
+                "nl": "gebruiken"
+            }
+        }
     }
 }

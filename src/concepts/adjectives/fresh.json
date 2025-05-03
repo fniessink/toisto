@@ -1,20 +1,24 @@
 {
-    "fresh": {
-        "example": "is the fish fresh",
-        "en": {
-            "positive degree": "fresh",
-            "comparative degree": "fresher",
-            "superlative degree": "freshest"
-        },
-        "fi": {
-            "positive degree": "tuore",
-            "comparative degree": "tuoreempi",
-            "superlative degree": "tuorein"
-        },
-        "nl": {
-            "positive degree": "vers",
-            "comparative degree": "verser",
-            "superlative degree": "verst"
+    "concepts": {
+        "fresh": {
+            "example": "is the fish fresh",
+            "labels": {
+                "en": {
+                    "positive degree": "fresh",
+                    "comparative degree": "fresher",
+                    "superlative degree": "freshest"
+                },
+                "fi": {
+                    "positive degree": "tuore",
+                    "comparative degree": "tuoreempi",
+                    "superlative degree": "tuorein"
+                },
+                "nl": {
+                    "positive degree": "vers",
+                    "comparative degree": "verser",
+                    "superlative degree": "verst"
+                }
+            }
         }
     }
 }

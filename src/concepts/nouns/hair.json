@@ -1,20 +1,24 @@
 {
-    "hair": {
-        "holonym": "body",
-        "en": {
-            "singular": "hair",
-            "plural": "hairs"
-        },
-        "fi": {
-            "singular": "hius",
-            "plural": "hiukset"
-        },
-        "nl": {
-            "singular": [
-                "de haar",
-                "het haar"
-            ],
-            "plural": "de haren"
+    "concepts": {
+        "hair": {
+            "holonym": "body",
+            "labels": {
+                "en": {
+                    "singular": "hair",
+                    "plural": "hairs"
+                },
+                "fi": {
+                    "singular": "hius",
+                    "plural": "hiukset"
+                },
+                "nl": {
+                    "singular": [
+                        "de haar",
+                        "het haar"
+                    ],
+                    "plural": "de haren"
+                }
+            }
         }
     }
 }

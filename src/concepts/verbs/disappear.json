@@ -1,10 +1,14 @@
 {
-    "to disappear": {
-        "en": "to disappear",
-        "fi": [
-            "hävitä",
-            "kadota"
-        ],
-        "nl": "verdwijnen"
+    "concepts": {
+        "to disappear": {
+            "labels": {
+                "en": "to disappear",
+                "fi": [
+                    "hävitä",
+                    "kadota"
+                ],
+                "nl": "verdwijnen"
+            }
+        }
     }
 }

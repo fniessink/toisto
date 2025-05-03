@@ -1,17 +1,21 @@
 {
-    "knee": {
-        "holonym": "leg",
-        "en": {
-            "singular": "knee",
-            "plural": "knees"
-        },
-        "fi": {
-            "singular": "polvi",
-            "plural": "polvet"
-        },
-        "nl": {
-            "singular": "de knie",
-            "plural": "de knieën"
+    "concepts": {
+        "knee": {
+            "holonym": "leg",
+            "labels": {
+                "en": {
+                    "singular": "knee",
+                    "plural": "knees"
+                },
+                "fi": {
+                    "singular": "polvi",
+                    "plural": "polvet"
+                },
+                "nl": {
+                    "singular": "de knie",
+                    "plural": "de knieën"
+                }
+            }
         }
     }
 }

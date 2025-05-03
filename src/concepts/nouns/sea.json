@@ -1,16 +1,20 @@
 {
-    "sea": {
-        "en": {
-            "singular": "sea",
-            "plural": "seas"
-        },
-        "fi": {
-            "singular": "meri",
-            "plural": "meret"
-        },
-        "nl": {
-            "singular": "de zee",
-            "plural": "de zeeën"
+    "concepts": {
+        "sea": {
+            "labels": {
+                "en": {
+                    "singular": "sea",
+                    "plural": "seas"
+                },
+                "fi": {
+                    "singular": "meri",
+                    "plural": "meret"
+                },
+                "nl": {
+                    "singular": "de zee",
+                    "plural": "de zeeën"
+                }
+            }
         }
     }
 }

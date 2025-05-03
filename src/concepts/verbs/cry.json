@@ -1,7 +1,11 @@
 {
-    "to cry": {
-        "en": "to cry",
-        "fi": "itkea",
-        "nl": "huilen"
+    "concepts": {
+        "to cry": {
+            "labels": {
+                "en": "to cry",
+                "fi": "itkea",
+                "nl": "huilen"
+            }
+        }
     }
 }

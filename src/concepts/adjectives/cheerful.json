@@ -1,19 +1,23 @@
 {
-    "cheerful": {
-        "en": {
-            "positive degree": "cheerful",
-            "comparative degree": "cheerfuller",
-            "superlative degree": "cheerfullest"
-        },
-        "fi": {
-            "positive degree": "iloinen",
-            "comparative degree": "iloisempi",
-            "superlative degree": "iloisin"
-        },
-        "nl": {
-            "positive degree": "vrolijk",
-            "comparative degree": "vrolijker",
-            "superlative degree": "vrolijkst"
+    "concepts": {
+        "cheerful": {
+            "labels": {
+                "en": {
+                    "positive degree": "cheerful",
+                    "comparative degree": "cheerfuller",
+                    "superlative degree": "cheerfullest"
+                },
+                "fi": {
+                    "positive degree": "iloinen",
+                    "comparative degree": "iloisempi",
+                    "superlative degree": "iloisin"
+                },
+                "nl": {
+                    "positive degree": "vrolijk",
+                    "comparative degree": "vrolijker",
+                    "superlative degree": "vrolijkst"
+                }
+            }
         }
     }
 }

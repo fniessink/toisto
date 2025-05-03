@@ -1,8 +1,12 @@
 {
-    "eagle": {
-        "hypernym": "bird",
-        "en": "eagle",
-        "fi": "kotka",
-        "nl": "de arend"
+    "concepts": {
+        "eagle": {
+            "hypernym": "bird",
+            "labels": {
+                "en": "eagle",
+                "fi": "kotka",
+                "nl": "de arend"
+            }
+        }
     }
 }

@@ -1,14 +1,18 @@
 {
-    "laptop": {
-        "hypernym": "computer",
-        "roots": {
-            "fi": "computer"
-        },
-        "en": "laptop",
-        "fi": [
-            "kannettava tietokone",
-            "läppäri"
-        ],
-        "nl": "de laptop"
+    "concepts": {
+        "laptop": {
+            "hypernym": "computer",
+            "roots": {
+                "fi": "computer"
+            },
+            "labels": {
+                "en": "laptop",
+                "fi": [
+                    "kannettava tietokone",
+                    "läppäri"
+                ],
+                "nl": "de laptop"
+            }
+        }
     }
 }

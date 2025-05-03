@@ -1,7 +1,11 @@
 {
-    "actually": {
-        "en": "actually",
-        "fi": "oikeastaan",
-        "nl": "eigenlijk"
+    "concepts": {
+        "actually": {
+            "labels": {
+                "en": "actually",
+                "fi": "oikeastaan",
+                "nl": "eigenlijk"
+            }
+        }
     }
 }

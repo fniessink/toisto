@@ -1,8 +1,12 @@
 {
-    "belgium": {
-        "hypernym": "country",
-        "en": "Belgium",
-        "fi": "Belgia",
-        "nl": "België"
+    "concepts": {
+        "belgium": {
+            "hypernym": "country",
+            "labels": {
+                "en": "Belgium",
+                "fi": "Belgia",
+                "nl": "België"
+            }
+        }
     }
 }

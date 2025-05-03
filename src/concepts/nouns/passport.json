@@ -1,16 +1,20 @@
 {
-    "passport": {
-        "en": {
-            "singular": "passport",
-            "plural": "passports"
-        },
-        "fi": {
-            "singular": "passi",
-            "plural": "passit"
-        },
-        "nl": {
-            "singular": "het paspoort",
-            "plural": "de paspoorten"
+    "concepts": {
+        "passport": {
+            "labels": {
+                "en": {
+                    "singular": "passport",
+                    "plural": "passports"
+                },
+                "fi": {
+                    "singular": "passi",
+                    "plural": "passit"
+                },
+                "nl": {
+                    "singular": "het paspoort",
+                    "plural": "de paspoorten"
+                }
+            }
         }
     }
 }

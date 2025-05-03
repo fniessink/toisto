@@ -1,7 +1,11 @@
 {
-    "past": {
-        "en": "past",
-        "fi": "yli",
-        "nl": "over"
+    "concepts": {
+        "past": {
+            "labels": {
+                "en": "past",
+                "fi": "yli",
+                "nl": "over"
+            }
+        }
     }
 }

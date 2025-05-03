@@ -1,7 +1,11 @@
 {
-    "wow": {
-        "en": "Wow!",
-        "fi": "Vau!",
-        "nl": "Wauw!"
+    "concepts": {
+        "wow": {
+            "labels": {
+                "en": "Wow!",
+                "fi": "Vau!",
+                "nl": "Wauw!"
+            }
+        }
     }
 }

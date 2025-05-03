@@ -1,14 +1,18 @@
 {
-    "glove": {
-        "hypernym": "clothes",
-        "roots": {
-            "nl": [
-                "hand",
-                "shoe"
-            ]
-        },
-        "en": "glove",
-        "fi": "hanska",
-        "nl": "de handschoen"
+    "concepts": {
+        "glove": {
+            "hypernym": "clothes",
+            "roots": {
+                "nl": [
+                    "hand",
+                    "shoe"
+                ]
+            },
+            "labels": {
+                "en": "glove",
+                "fi": "hanska",
+                "nl": "de handschoen"
+            }
+        }
     }
 }

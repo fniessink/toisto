@@ -1,7 +1,11 @@
 {
-    "universe": {
-        "en": "universe",
-        "fi": "universumi",
-        "nl": "het universum"
+    "concepts": {
+        "universe": {
+            "labels": {
+                "en": "universe",
+                "fi": "universumi",
+                "nl": "het universum"
+            }
+        }
     }
 }

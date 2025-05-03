@@ -1,7 +1,11 @@
 {
-    "police report": {
-        "en": "police report",
-        "fi": "rikosilmoitus",
-        "nl": "de aangifte"
+    "concepts": {
+        "police report": {
+            "labels": {
+                "en": "police report",
+                "fi": "rikosilmoitus",
+                "nl": "de aangifte"
+            }
+        }
     }
 }

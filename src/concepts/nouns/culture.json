@@ -1,7 +1,11 @@
 {
-    "culture": {
-        "en": "culture",
-        "fi": "kulttuuri",
-        "nl": "de cultuur"
+    "concepts": {
+        "culture": {
+            "labels": {
+                "en": "culture",
+                "fi": "kulttuuri",
+                "nl": "de cultuur"
+            }
+        }
     }
 }

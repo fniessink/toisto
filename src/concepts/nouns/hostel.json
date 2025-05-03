@@ -1,7 +1,11 @@
 {
-    "hostel": {
-        "en": "hostel",
-        "fi": "hostelli",
-        "nl": "het hostel"
+    "concepts": {
+        "hostel": {
+            "labels": {
+                "en": "hostel",
+                "fi": "hostelli",
+                "nl": "het hostel"
+            }
+        }
     }
 }

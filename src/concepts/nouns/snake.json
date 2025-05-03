@@ -1,8 +1,12 @@
 {
-    "snake": {
-        "hypernym": "animal",
-        "en": "snake",
-        "fi": "käärme",
-        "nl": "de slang"
+    "concepts": {
+        "snake": {
+            "hypernym": "animal",
+            "labels": {
+                "en": "snake",
+                "fi": "käärme",
+                "nl": "de slang"
+            }
+        }
     }
 }

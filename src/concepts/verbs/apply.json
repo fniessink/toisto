@@ -1,7 +1,11 @@
 {
-    "to apply for compensation": {
-        "en": "to apply for compensation",
-        "fi": "hakea korvausta",
-        "nl": "schadevergoeding aanvragen"
+    "concepts": {
+        "to apply for compensation": {
+            "labels": {
+                "en": "to apply for compensation",
+                "fi": "hakea korvausta",
+                "nl": "schadevergoeding aanvragen"
+            }
+        }
     }
 }

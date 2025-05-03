@@ -1,17 +1,21 @@
 {
-    "cake": {
-        "hypernym": "food",
-        "en": {
-            "singular": "cake",
-            "plural": "cakes"
-        },
-        "fi": {
-            "singular": "kakku",
-            "plural": "kakut"
-        },
-        "nl": {
-            "singular": "de taart",
-            "plural": "de taarten"
+    "concepts": {
+        "cake": {
+            "hypernym": "food",
+            "labels": {
+                "en": {
+                    "singular": "cake",
+                    "plural": "cakes"
+                },
+                "fi": {
+                    "singular": "kakku",
+                    "plural": "kakut"
+                },
+                "nl": {
+                    "singular": "de taart",
+                    "plural": "de taarten"
+                }
+            }
         }
     }
 }

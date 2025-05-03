@@ -1,7 +1,11 @@
 {
-    "importance": {
-        "en": "importance",
-        "fi": "tärkeys",
-        "nl": "het belang"
+    "concepts": {
+        "importance": {
+            "labels": {
+                "en": "importance",
+                "fi": "tärkeys",
+                "nl": "het belang"
+            }
+        }
     }
 }

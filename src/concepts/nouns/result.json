@@ -1,7 +1,11 @@
 {
-    "result": {
-        "en": "result",
-        "fi": "tulos",
-        "nl": "het resultaat"
+    "concepts": {
+        "result": {
+            "labels": {
+                "en": "result",
+                "fi": "tulos",
+                "nl": "het resultaat"
+            }
+        }
     }
 }

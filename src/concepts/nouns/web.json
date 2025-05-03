@@ -1,7 +1,11 @@
 {
-    "web": {
-        "en": "web",
-        "fi": "verkko",
-        "nl": "het web"
+    "concepts": {
+        "web": {
+            "labels": {
+                "en": "web",
+                "fi": "verkko",
+                "nl": "het web"
+            }
+        }
     }
 }

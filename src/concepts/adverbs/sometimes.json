@@ -1,18 +1,22 @@
 {
-    "sometimes": {
-        "en": [
-            "sometimes",
-            "occasionally"
-        ],
-        "fi": [
-            "joskus",
-            "silloin tällöin"
-        ],
-        "nl": [
-            "soms",
-            "wel eens",
-            "zo nu en dan",
-            "af en toe"
-        ]
+    "concepts": {
+        "sometimes": {
+            "labels": {
+                "en": [
+                    "sometimes",
+                    "occasionally"
+                ],
+                "fi": [
+                    "joskus",
+                    "silloin tällöin"
+                ],
+                "nl": [
+                    "soms",
+                    "wel eens",
+                    "zo nu en dan",
+                    "af en toe"
+                ]
+            }
+        }
     }
 }

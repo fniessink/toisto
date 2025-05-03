@@ -1,17 +1,21 @@
 {
-    "thumb": {
-        "hypernym": "finger",
-        "en": {
-            "singular": "thumb",
-            "plural": "thumbs"
-        },
-        "fi": {
-            "singular": "peukalo",
-            "plural": "peukalot"
-        },
-        "nl": {
-            "singular": "de duim",
-            "plural": "de duimen"
+    "concepts": {
+        "thumb": {
+            "hypernym": "finger",
+            "labels": {
+                "en": {
+                    "singular": "thumb",
+                    "plural": "thumbs"
+                },
+                "fi": {
+                    "singular": "peukalo",
+                    "plural": "peukalot"
+                },
+                "nl": {
+                    "singular": "de duim",
+                    "plural": "de duimen"
+                }
+            }
         }
     }
 }

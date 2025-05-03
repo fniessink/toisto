@@ -1,23 +1,27 @@
 {
-    "belly": {
-        "holonym": "body",
-        "en": {
-            "singular": "belly",
-            "plural": "bellies"
-        },
-        "fi": {
-            "singular": [
-                "vatsa",
-                "masu"
-            ],
-            "plural": [
-                "vatsat",
-                "masut"
-            ]
-        },
-        "nl": {
-            "singular": "de buik",
-            "plural": "de buiken"
+    "concepts": {
+        "belly": {
+            "holonym": "body",
+            "labels": {
+                "en": {
+                    "singular": "belly",
+                    "plural": "bellies"
+                },
+                "fi": {
+                    "singular": [
+                        "vatsa",
+                        "masu"
+                    ],
+                    "plural": [
+                        "vatsat",
+                        "masut"
+                    ]
+                },
+                "nl": {
+                    "singular": "de buik",
+                    "plural": "de buiken"
+                }
+            }
         }
     }
 }

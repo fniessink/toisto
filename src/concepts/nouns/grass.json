@@ -1,16 +1,20 @@
 {
-    "grass": {
-        "en": {
-            "singular": "grass",
-            "plural": "grasses"
-        },
-        "fi": {
-            "singular": "ruoho",
-            "plural": "ruohot"
-        },
-        "nl": {
-            "singular": "het gras",
-            "plural": "de grassen"
+    "concepts": {
+        "grass": {
+            "labels": {
+                "en": {
+                    "singular": "grass",
+                    "plural": "grasses"
+                },
+                "fi": {
+                    "singular": "ruoho",
+                    "plural": "ruohot"
+                },
+                "nl": {
+                    "singular": "het gras",
+                    "plural": "de grassen"
+                }
+            }
         }
     }
 }

@@ -1,11 +1,15 @@
 {
-    "special": {
-        "en": "special",
-        "fi": "erikoinen",
-        "nl": [
-            "speciaal",
-            "bijzonder",
-            "apart"
-        ]
+    "concepts": {
+        "special": {
+            "labels": {
+                "en": "special",
+                "fi": "erikoinen",
+                "nl": [
+                    "speciaal",
+                    "bijzonder",
+                    "apart"
+                ]
+            }
+        }
     }
 }

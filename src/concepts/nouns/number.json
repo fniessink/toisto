@@ -1,34 +1,42 @@
 {
-    "number": {
-        "en": {
-            "singular": "number",
-            "plural": "numbers"
+    "concepts": {
+        "number": {
+            "labels": {
+                "en": {
+                    "singular": "number",
+                    "plural": "numbers"
+                },
+                "fi": {
+                    "singular": "numero",
+                    "plural": "numerot"
+                },
+                "nl": {
+                    "singular": "het getal",
+                    "plural": "de getallen"
+                }
+            }
         },
-        "fi": {
-            "singular": "numero",
-            "plural": "numerot"
+        "emergency number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            },
+            "labels": {
+                "en": "emergency number",
+                "fi": "hätänumero",
+                "nl": "het alarmnummer"
+            }
         },
-        "nl": {
-            "singular": "het getal",
-            "plural": "de getallen"
+        "queueing number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            },
+            "labels": {
+                "en": "queueing number",
+                "fi": "vuoronumero",
+                "nl": "het volgnummer"
+            }
         }
-    },
-    "emergency number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
-        },
-        "en": "emergency number",
-        "fi": "hätänumero",
-        "nl": "het alarmnummer"
-    },
-    "queueing number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
-        },
-        "en": "queueing number",
-        "fi": "vuoronumero",
-        "nl": "het volgnummer"
     }
 }

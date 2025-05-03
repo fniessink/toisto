@@ -1,16 +1,20 @@
 {
-    "brush": {
-        "en": {
-            "singular": "brush",
-            "plural": "brushes"
-        },
-        "fi": {
-            "singular": "sivellin",
-            "plural": "siveltimet"
-        },
-        "nl": {
-            "singular": "het penseel",
-            "plural": "de penselen"
+    "concepts": {
+        "brush": {
+            "labels": {
+                "en": {
+                    "singular": "brush",
+                    "plural": "brushes"
+                },
+                "fi": {
+                    "singular": "sivellin",
+                    "plural": "siveltimet"
+                },
+                "nl": {
+                    "singular": "het penseel",
+                    "plural": "de penselen"
+                }
+            }
         }
     }
 }

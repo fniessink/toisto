@@ -1,39 +1,45 @@
 {
-    "below": {
-        "example": "the glass is underneath the table",
-        "en": [
-            "below",
-            "underneath",
-            "beneath"
-        ],
-        "fi": "alla",
-        "nl": [
-            "beneden",
-            "onder"
-        ]
-    },
-    "the glass is underneath the table": {
-        "roots": {
-            "en": [
-                "glass",
-                "to be",
-                "below",
-                "table"
-            ],
-            "nl": [
-                "glass",
-                "below",
-                "table"
-            ],
-            "fi": [
-                "glass",
-                "to be",
-                "below",
-                "table"
-            ]
+    "concepts": {
+        "below": {
+            "example": "the glass is underneath the table",
+            "labels": {
+                "en": [
+                    "below",
+                    "underneath",
+                    "beneath"
+                ],
+                "fi": "alla",
+                "nl": [
+                    "beneden",
+                    "onder"
+                ]
+            }
         },
-        "en": "The glass is underneath the table.",
-        "fi": "Lasi on pöydän alla.",
-        "nl": "Het glas staat onder de tafel."
+        "the glass is underneath the table": {
+            "roots": {
+                "en": [
+                    "glass",
+                    "to be",
+                    "below",
+                    "table"
+                ],
+                "nl": [
+                    "glass",
+                    "below",
+                    "table"
+                ],
+                "fi": [
+                    "glass",
+                    "to be",
+                    "below",
+                    "table"
+                ]
+            },
+            "labels": {
+                "en": "The glass is underneath the table.",
+                "fi": "Lasi on pöydän alla.",
+                "nl": "Het glas staat onder de tafel."
+            }
+        }
     }
 }

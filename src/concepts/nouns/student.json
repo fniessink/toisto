@@ -1,35 +1,43 @@
 {
-    "student": {
-        "en": {
-            "singular": "student",
-            "plural": "students"
+    "concepts": {
+        "student": {
+            "labels": {
+                "en": {
+                    "singular": "student",
+                    "plural": "students"
+                },
+                "fi": {
+                    "singular": "opiskelija",
+                    "plural": "opiskelijat"
+                },
+                "nl": {
+                    "singular": "de student",
+                    "plural": "de studenten"
+                }
+            }
         },
-        "fi": {
-            "singular": "opiskelija",
-            "plural": "opiskelijat"
+        "exchange student": {
+            "hypernym": "student",
+            "roots": {
+                "en": "student",
+                "fi": [
+                    "transfer",
+                    "student"
+                ],
+                "nl": "student"
+            },
+            "labels": {
+                "en": "exchange student",
+                "fi": "vaihto-opiskelija",
+                "nl": "de uitwisselingsstudent"
+            }
         },
-        "nl": {
-            "singular": "de student",
-            "plural": "de studenten"
+        "student cap": {
+            "labels": {
+                "en": "student cap",
+                "fi": "ylioppilaslakki",
+                "nl": "( traditionele witte studentenpet die men krijgt bij het behalen van het diploma middelbaar onderwijs)"
+            }
         }
-    },
-    "exchange student": {
-        "hypernym": "student",
-        "roots": {
-            "en": "student",
-            "fi": [
-                "transfer",
-                "student"
-            ],
-            "nl": "student"
-        },
-        "en": "exchange student",
-        "fi": "vaihto-opiskelija",
-        "nl": "de uitwisselingsstudent"
-    },
-    "student cap": {
-        "en": "student cap",
-        "fi": "ylioppilaslakki",
-        "nl": "( traditionele witte studentenpet die men krijgt bij het behalen van het diploma middelbaar onderwijs)"
     }
 }

@@ -1,7 +1,11 @@
 {
-    "call": {
-        "en": "call",
-        "fi": "kutsu",
-        "nl": "de oproep"
+    "concepts": {
+        "call": {
+            "labels": {
+                "en": "call",
+                "fi": "kutsu",
+                "nl": "de oproep"
+            }
+        }
     }
 }

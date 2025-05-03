@@ -1,8 +1,12 @@
 {
-    "100": {
-        "hypernym": "number",
-        "en": "hundred",
-        "fi": "sata",
-        "nl": "honderd"
+    "concepts": {
+        "100": {
+            "hypernym": "number",
+            "labels": {
+                "en": "hundred",
+                "fi": "sata",
+                "nl": "honderd"
+            }
+        }
     }
 }

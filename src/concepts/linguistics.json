@@ -1,181 +1,221 @@
 {
-    "grammar": {
-        "roots": {
-            "fi": "language"
-        },
-        "en": "grammar",
-        "fi": "kielioppi",
-        "nl": "de grammatica"
-    },
-    "word": {
-        "en": {
-            "root": {
-                "singular": "word",
-                "plural": "words"
+    "concepts": {
+        "grammar": {
+            "roots": {
+                "fi": "language"
             },
-            "diminutive": {
-                "singular": "(little word)",
-                "plural": "(little words)"
+            "labels": {
+                "en": "grammar",
+                "fi": "kielioppi",
+                "nl": "de grammatica"
             }
         },
-        "fi": {
-            "root": {
-                "singular": "sana",
-                "plural": "sanat"
-            },
-            "diminutive": {
-                "singular": "pikkusana",
-                "plural": "pikkusanat"
+        "word": {
+            "labels": {
+                "en": {
+                    "root": {
+                        "singular": "word",
+                        "plural": "words"
+                    },
+                    "diminutive": {
+                        "singular": "(little word)",
+                        "plural": "(little words)"
+                    }
+                },
+                "fi": {
+                    "root": {
+                        "singular": "sana",
+                        "plural": "sanat"
+                    },
+                    "diminutive": {
+                        "singular": "pikkusana",
+                        "plural": "pikkusanat"
+                    }
+                },
+                "nl": {
+                    "root": {
+                        "singular": "het woord",
+                        "plural": "de woorden"
+                    },
+                    "diminutive": {
+                        "singular": "het woordje",
+                        "plural": "de woordjes"
+                    }
+                }
             }
         },
-        "nl": {
-            "root": {
-                "singular": "het woord",
-                "plural": "de woorden"
+        "word order": {
+            "roots": "word",
+            "labels": {
+                "en": "word order",
+                "fi": "sanajärjestys",
+                "nl": "de woordvolgorde"
+            }
+        },
+        "vocabulary": {
+            "roots": {
+                "fi": "word",
+                "nl": "word"
             },
-            "diminutive": {
-                "singular": "het woordje",
-                "plural": "de woordjes"
+            "labels": {
+                "en": "vocabulary",
+                "fi": "sanasto",
+                "nl": "de woordenschat"
+            }
+        },
+        "compound word": {
+            "hypernym": "word",
+            "roots": "word",
+            "labels": {
+                "en": "compound word",
+                "fi": "yhdyssana",
+                "nl": "het samengestelde woord|samengesteld woord"
+            }
+        },
+        "sentence": {
+            "labels": {
+                "en": {
+                    "singular": "sentence",
+                    "plural": "sentences"
+                },
+                "fi": {
+                    "singular": "lause",
+                    "plural": "lauseet"
+                },
+                "nl": {
+                    "singular": "de zin",
+                    "plural": "de zinnen"
+                }
+            }
+        },
+        "consonant": {
+            "roots": {
+                "nl": "vowel"
+            },
+            "labels": {
+                "en": {
+                    "singular": "consonant",
+                    "plural": "consonants"
+                },
+                "fi": {
+                    "singular": "konsonantti",
+                    "plural": "konsonantit"
+                },
+                "nl": {
+                    "singular": "de medeklinker",
+                    "plural": "de medeklinkers"
+                }
+            }
+        },
+        "question word": {
+            "hypernym": "word",
+            "roots": [
+                "question",
+                "word"
+            ],
+            "labels": {
+                "en": "question word",
+                "fi": "kysymyssana",
+                "nl": "het vraagwoord"
+            }
+        },
+        "subject": {
+            "labels": {
+                "en": {
+                    "singular": "subject",
+                    "plural": "subjects"
+                },
+                "fi": {
+                    "singular": "subjekti",
+                    "plural": "subjektit"
+                },
+                "nl": {
+                    "singular": "het onderwerp",
+                    "plural": "de onderwerpen"
+                }
+            }
+        },
+        "infinitive": {
+            "labels": {
+                "en": "infinitive",
+                "fi": "infinitiivi",
+                "nl": "de infinitief"
+            }
+        },
+        "adjective": {
+            "labels": {
+                "en": "adjective",
+                "fi": "adjektiivi",
+                "nl": "het bijvoegelijk naamwoord"
+            }
+        },
+        "pronoun": {
+            "labels": {
+                "en": "pronoun",
+                "fi": "pronomini",
+                "nl": "het voornaamwoord"
+            }
+        },
+        "personal pronoun": {
+            "hypernym": "pronoun",
+            "roots": [
+                "pronoun"
+            ],
+            "labels": {
+                "en": "personal pronoun",
+                "fi": "persoonapronomini",
+                "nl": "het persoonlijk voornaamwoord"
+            }
+        },
+        "ending": {
+            "labels": {
+                "en": "ending",
+                "fi": "pääte",
+                "nl": "de uitgang"
+            }
+        },
+        "personal ending": {
+            "hypernym": "ending",
+            "roots": {
+                "en": "ending",
+                "nl": "ending"
+            },
+            "labels": {
+                "en": "personal ending",
+                "fi": "persoonataivutus",
+                "nl": "de persoonsuitgang"
+            }
+        },
+        "intonation": {
+            "labels": {
+                "en": "intonation",
+                "fi": "intonaatio",
+                "nl": "de intonatie"
+            }
+        },
+        "genitive": {
+            "labels": {
+                "en": "genitive",
+                "fi": "genetiivi",
+                "nl": "de genitief"
+            }
+        },
+        "singular": {
+            "roots": {
+                "fi": "1"
+            },
+            "labels": {
+                "en": "singular",
+                "fi": "yksikkö",
+                "nl": "het enkelvoud"
+            }
+        },
+        "imperfect": {
+            "labels": {
+                "en": "imperfect tense",
+                "fi": "imperfekti",
+                "nl": "het imperfectum"
             }
         }
-    },
-    "word order": {
-        "roots": "word",
-        "en": "word order",
-        "fi": "sanajärjestys",
-        "nl": "de woordvolgorde"
-    },
-    "vocabulary": {
-        "roots": {
-            "fi": "word",
-            "nl": "word"
-        },
-        "en": "vocabulary",
-        "fi": "sanasto",
-        "nl": "de woordenschat"
-    },
-    "compound word": {
-        "hypernym": "word",
-        "roots": "word",
-        "en": "compound word",
-        "fi": "yhdyssana",
-        "nl": "het samengestelde woord|samengesteld woord"
-    },
-    "sentence": {
-        "en": {
-            "singular": "sentence",
-            "plural": "sentences"
-        },
-        "fi": {
-            "singular": "lause",
-            "plural": "lauseet"
-        },
-        "nl": {
-            "singular": "de zin",
-            "plural": "de zinnen"
-        }
-    },
-    "consonant": {
-        "roots": {
-            "nl": "vowel"
-        },
-        "en": {
-            "singular": "consonant",
-            "plural": "consonants"
-        },
-        "fi": {
-            "singular": "konsonantti",
-            "plural": "konsonantit"
-        },
-        "nl": {
-            "singular": "de medeklinker",
-            "plural": "de medeklinkers"
-        }
-    },
-    "question word": {
-        "hypernym": "word",
-        "roots": [
-            "question",
-            "word"
-        ],
-        "en": "question word",
-        "fi": "kysymyssana",
-        "nl": "het vraagwoord"
-    },
-    "subject": {
-        "en": {
-            "singular": "subject",
-            "plural": "subjects"
-        },
-        "fi": {
-            "singular": "subjekti",
-            "plural": "subjektit"
-        },
-        "nl": {
-            "singular": "het onderwerp",
-            "plural": "de onderwerpen"
-        }
-    },
-    "infinitive": {
-        "en": "infinitive",
-        "fi": "infinitiivi",
-        "nl": "de infinitief"
-    },
-    "adjective": {
-        "en": "adjective",
-        "fi": "adjektiivi",
-        "nl": "het bijvoegelijk naamwoord"
-    },
-    "pronoun": {
-        "en": "pronoun",
-        "fi": "pronomini",
-        "nl": "het voornaamwoord"
-    },
-    "personal pronoun": {
-        "hypernym": "pronoun",
-        "roots": [
-            "pronoun"
-        ],
-        "en": "personal pronoun",
-        "fi": "persoonapronomini",
-        "nl": "het persoonlijk voornaamwoord"
-    },
-    "ending": {
-        "en": "ending",
-        "fi": "pääte",
-        "nl": "de uitgang"
-    },
-    "personal ending": {
-        "hypernym": "ending",
-        "roots": {
-            "en": "ending",
-            "nl": "ending"
-        },
-        "en": "personal ending",
-        "fi": "persoonataivutus",
-        "nl": "de persoonsuitgang"
-    },
-    "intonation": {
-        "en": "intonation",
-        "fi": "intonaatio",
-        "nl": "de intonatie"
-    },
-    "genitive": {
-        "en": "genitive",
-        "fi": "genetiivi",
-        "nl": "de genitief"
-    },
-    "singular": {
-        "roots": {
-            "fi": "1"
-        },
-        "en": "singular",
-        "fi": "yksikkö",
-        "nl": "het enkelvoud"
-    },
-    "imperfect": {
-        "en": "imperfect tense",
-        "fi": "imperfekti",
-        "nl": "het imperfectum"
     }
 }

@@ -1,7 +1,11 @@
 {
-    "leaving homewards": {
-        "en": "leaving homewards|leaving homeward",
-        "fi": "kotiinlähtö",
-        "nl": "het vertrek naar huis"
+    "concepts": {
+        "leaving homewards": {
+            "labels": {
+                "en": "leaving homewards|leaving homeward",
+                "fi": "kotiinlähtö",
+                "nl": "het vertrek naar huis"
+            }
+        }
     }
 }

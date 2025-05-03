@@ -1,7 +1,11 @@
 {
-    "greeting": {
-        "en": "greeting",
-        "fi": "tervehdys",
-        "nl": "de begroeting"
+    "concepts": {
+        "greeting": {
+            "labels": {
+                "en": "greeting",
+                "fi": "tervehdys",
+                "nl": "de begroeting"
+            }
+        }
     }
 }

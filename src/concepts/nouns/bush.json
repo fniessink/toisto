@@ -1,8 +1,12 @@
 {
-    "bush": {
-        "hypernym": "plant",
-        "en": "bush",
-        "fi": "pensas",
-        "nl": "de struik"
+    "concepts": {
+        "bush": {
+            "hypernym": "plant",
+            "labels": {
+                "en": "bush",
+                "fi": "pensas",
+                "nl": "de struik"
+            }
+        }
     }
 }

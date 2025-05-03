@@ -1,7 +1,11 @@
 {
-    "manner": {
-        "en": "manner",
-        "fi": "tapa",
-        "nl": "de manier"
+    "concepts": {
+        "manner": {
+            "labels": {
+                "en": "manner",
+                "fi": "tapa",
+                "nl": "de manier"
+            }
+        }
     }
 }

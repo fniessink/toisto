@@ -1,19 +1,25 @@
 {
-    "anxiety": {
-        "en": "anxiety",
-        "fi": "ahdistus",
-        "nl": [
-            "angst",
-            "neerslachtigheid"
-        ]
-    },
-    "anxious": {
-        "en": "anxious",
-        "fi": "ahdistunut",
-        "nl": [
-            "angstig",
-            "neerslachtig",
-            "bedrukt"
-        ]
+    "concepts": {
+        "anxiety": {
+            "labels": {
+                "en": "anxiety",
+                "fi": "ahdistus",
+                "nl": [
+                    "angst",
+                    "neerslachtigheid"
+                ]
+            }
+        },
+        "anxious": {
+            "labels": {
+                "en": "anxious",
+                "fi": "ahdistunut",
+                "nl": [
+                    "angstig",
+                    "neerslachtig",
+                    "bedrukt"
+                ]
+            }
+        }
     }
 }

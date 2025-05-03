@@ -1,7 +1,11 @@
 {
-    "who": {
-        "en": "Who?",
-        "fi": "Kuka?",
-        "nl": "Wie?"
+    "concepts": {
+        "who": {
+            "labels": {
+                "en": "Who?",
+                "fi": "Kuka?",
+                "nl": "Wie?"
+            }
+        }
     }
 }

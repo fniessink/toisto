@@ -1,20 +1,24 @@
 {
-    "slow": {
-        "antonym": "fast",
-        "en": {
-            "positive degree": "slow",
-            "comparative degree": "slower",
-            "superlative degree": "slowest"
-        },
-        "fi": {
-            "positive degree": "hidas",
-            "comparative degree": "hitaampi",
-            "superlative degree": "hitain"
-        },
-        "nl": {
-            "positive degree": "langzaam",
-            "comparative degree": "langzamer",
-            "superlative degree": "langzaamst"
+    "concepts": {
+        "slow": {
+            "antonym": "fast",
+            "labels": {
+                "en": {
+                    "positive degree": "slow",
+                    "comparative degree": "slower",
+                    "superlative degree": "slowest"
+                },
+                "fi": {
+                    "positive degree": "hidas",
+                    "comparative degree": "hitaampi",
+                    "superlative degree": "hitain"
+                },
+                "nl": {
+                    "positive degree": "langzaam",
+                    "comparative degree": "langzamer",
+                    "superlative degree": "langzaamst"
+                }
+            }
         }
     }
 }

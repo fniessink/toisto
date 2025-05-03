@@ -1,24 +1,28 @@
 {
-    "70": {
-        "hypernym": "number",
-        "roots": [
-            "7",
-            "10"
-        ],
-        "en": {
-            "cardinal": "seventy",
-            "ordinal": "seventieth"
-        },
-        "fi": {
-            "cardinal": [
-                "seitsemänkymmentä",
-                "seiskyt*"
+    "concepts": {
+        "70": {
+            "hypernym": "number",
+            "roots": [
+                "7",
+                "10"
             ],
-            "ordinal": "seitsemäskymmenes"
-        },
-        "nl": {
-            "cardinal": "zeventig",
-            "ordinal": "zeventigste"
+            "labels": {
+                "en": {
+                    "cardinal": "seventy",
+                    "ordinal": "seventieth"
+                },
+                "fi": {
+                    "cardinal": [
+                        "seitsemänkymmentä",
+                        "seiskyt*"
+                    ],
+                    "ordinal": "seitsemäskymmenes"
+                },
+                "nl": {
+                    "cardinal": "zeventig",
+                    "ordinal": "zeventigste"
+                }
+            }
         }
     }
 }

@@ -1,32 +1,38 @@
 {
-    "page": {
-        "holonym": "chapter",
-        "en": {
-            "singular": "page",
-            "plural": "pages"
+    "concepts": {
+        "page": {
+            "holonym": "chapter",
+            "labels": {
+                "en": {
+                    "singular": "page",
+                    "plural": "pages"
+                },
+                "fi": {
+                    "singular": "sivu",
+                    "plural": "sivut"
+                },
+                "nl": {
+                    "singular": "de pagina",
+                    "plural": "de pagina's"
+                }
+            }
         },
-        "fi": {
-            "singular": "sivu",
-            "plural": "sivut"
-        },
-        "nl": {
-            "singular": "de pagina",
-            "plural": "de pagina's"
+        "web page": {
+            "roots": [
+                "web",
+                "page"
+            ],
+            "labels": {
+                "en": "web page|webpage",
+                "fi": [
+                    "verkkosivu",
+                    "nettisivu"
+                ],
+                "nl": [
+                    "de webpagina",
+                    "de internetpagina"
+                ]
+            }
         }
-    },
-    "web page": {
-        "roots": [
-            "web",
-            "page"
-        ],
-        "en": "web page|webpage",
-        "fi": [
-            "verkkosivu",
-            "nettisivu"
-        ],
-        "nl": [
-            "de webpagina",
-            "de internetpagina"
-        ]
     }
 }

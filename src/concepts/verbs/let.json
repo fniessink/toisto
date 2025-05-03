@@ -1,7 +1,11 @@
 {
-    "to let": {
-        "en": "to let",
-        "fi": "vuokrata;what the owner does",
-        "nl": "verhuren"
+    "concepts": {
+        "to let": {
+            "labels": {
+                "en": "to let",
+                "fi": "vuokrata;what the owner does",
+                "nl": "verhuren"
+            }
+        }
     }
 }

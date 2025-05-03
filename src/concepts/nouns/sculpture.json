@@ -1,16 +1,20 @@
 {
-    "sculpture": {
-        "en": {
-            "singular": "sculpture",
-            "plural": "sculptures"
-        },
-        "fi": {
-            "singular": "veistos",
-            "plural": "veistokset"
-        },
-        "nl": {
-            "singular": "het beeld",
-            "plural": "de beelden"
+    "concepts": {
+        "sculpture": {
+            "labels": {
+                "en": {
+                    "singular": "sculpture",
+                    "plural": "sculptures"
+                },
+                "fi": {
+                    "singular": "veistos",
+                    "plural": "veistokset"
+                },
+                "nl": {
+                    "singular": "het beeld",
+                    "plural": "de beelden"
+                }
+            }
         }
     }
 }

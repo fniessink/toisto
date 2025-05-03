@@ -1,7 +1,11 @@
 {
-    "family": {
-        "en": "family",
-        "fi": "perhe",
-        "nl": "de familie"
+    "concepts": {
+        "family": {
+            "labels": {
+                "en": "family",
+                "fi": "perhe",
+                "nl": "de familie"
+            }
+        }
     }
 }

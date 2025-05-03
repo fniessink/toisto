@@ -1,7 +1,11 @@
 {
-    "to explain": {
-        "en": "to explain",
-        "fi": "selittää",
-        "nl": "uitleggen"
+    "concepts": {
+        "to explain": {
+            "labels": {
+                "en": "to explain",
+                "fi": "selittää",
+                "nl": "uitleggen"
+            }
+        }
     }
 }

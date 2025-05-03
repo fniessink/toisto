@@ -1,11 +1,15 @@
 {
-    "to print": {
-        "involves": "printer",
-        "en": "to print",
-        "fi": [
-            "tulostaa",
-            "printata*"
-        ],
-        "nl": "printen"
+    "concepts": {
+        "to print": {
+            "involves": "printer",
+            "labels": {
+                "en": "to print",
+                "fi": [
+                    "tulostaa",
+                    "printata*"
+                ],
+                "nl": "printen"
+            }
+        }
     }
 }

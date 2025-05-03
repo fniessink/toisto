@@ -1,10 +1,14 @@
 {
-    "somehwere": {
-        "en": "somewhere",
-        "fi": [
-            "jossain",
-            "jossakin"
-        ],
-        "nl": "ergens"
+    "concepts": {
+        "somehwere": {
+            "labels": {
+                "en": "somewhere",
+                "fi": [
+                    "jossain",
+                    "jossakin"
+                ],
+                "nl": "ergens"
+            }
+        }
     }
 }

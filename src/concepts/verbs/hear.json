@@ -1,7 +1,11 @@
 {
-    "to hear": {
-        "en": "to hear",
-        "fi": "kuulla",
-        "nl": "horen"
+    "concepts": {
+        "to hear": {
+            "labels": {
+                "en": "to hear",
+                "fi": "kuulla",
+                "nl": "horen"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "provisions": {
-        "en": "provisions",
-        "fi": "eväs",
-        "nl": "de proviand"
+    "concepts": {
+        "provisions": {
+            "labels": {
+                "en": "provisions",
+                "fi": "eväs",
+                "nl": "de proviand"
+            }
+        }
     }
 }

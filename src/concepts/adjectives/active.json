@@ -1,7 +1,11 @@
 {
-    "active": {
-        "en": "active",
-        "fi": "aktiivinen",
-        "nl": "actief"
+    "concepts": {
+        "active": {
+            "labels": {
+                "en": "active",
+                "fi": "aktiivinen",
+                "nl": "actief"
+            }
+        }
     }
 }

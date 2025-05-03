@@ -1,7 +1,11 @@
 {
-    "to laugh": {
-        "en": "to laugh",
-        "fi": "nauraa",
-        "nl": "lachen"
+    "concepts": {
+        "to laugh": {
+            "labels": {
+                "en": "to laugh",
+                "fi": "nauraa",
+                "nl": "lachen"
+            }
+        }
     }
 }

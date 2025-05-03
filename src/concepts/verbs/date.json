@@ -1,7 +1,11 @@
 {
-    "to date": {
-        "en": "to date",
-        "fi": "seurustella",
-        "nl": "daten"
+    "concepts": {
+        "to date": {
+            "labels": {
+                "en": "to date",
+                "fi": "seurustella",
+                "nl": "daten"
+            }
+        }
     }
 }

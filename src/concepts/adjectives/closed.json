@@ -1,14 +1,18 @@
 {
-    "closed": {
-        "antonym": "open",
-        "en": "closed",
-        "fi": [
-            "suljettu",
-            "kiini"
-        ],
-        "nl": [
-            "dicht",
-            "gesloten"
-        ]
+    "concepts": {
+        "closed": {
+            "antonym": "open",
+            "labels": {
+                "en": "closed",
+                "fi": [
+                    "suljettu",
+                    "kiini"
+                ],
+                "nl": [
+                    "dicht",
+                    "gesloten"
+                ]
+            }
+        }
     }
 }

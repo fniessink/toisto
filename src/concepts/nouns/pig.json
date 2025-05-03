@@ -1,25 +1,29 @@
 {
-    "pig": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "pig",
-            "plural": "pigs"
-        },
-        "fi": {
-            "singular": [
-                "porsas",
-                "possu",
-                "sika"
-            ],
-            "plural": [
-                "porsaat",
-                "possut",
-                "siat"
-            ]
-        },
-        "nl": {
-            "singular": "het varken",
-            "plural": "de varkens"
+    "concepts": {
+        "pig": {
+            "hypernym": "animal",
+            "labels": {
+                "en": {
+                    "singular": "pig",
+                    "plural": "pigs"
+                },
+                "fi": {
+                    "singular": [
+                        "porsas",
+                        "possu",
+                        "sika"
+                    ],
+                    "plural": [
+                        "porsaat",
+                        "possut",
+                        "siat"
+                    ]
+                },
+                "nl": {
+                    "singular": "het varken",
+                    "plural": "de varkens"
+                }
+            }
         }
     }
 }

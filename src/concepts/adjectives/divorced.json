@@ -1,8 +1,12 @@
 {
-    "divorced": {
-        "involves": "marriage",
-        "en": "divorced",
-        "fi": "eronnut",
-        "nl": "gescheiden"
+    "concepts": {
+        "divorced": {
+            "involves": "marriage",
+            "labels": {
+                "en": "divorced",
+                "fi": "eronnut",
+                "nl": "gescheiden"
+            }
+        }
     }
 }

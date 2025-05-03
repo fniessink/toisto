@@ -1,41 +1,49 @@
 {
-    "store": {
-        "en": {
-            "singular": "store",
-            "plural": "stores"
+    "concepts": {
+        "store": {
+            "labels": {
+                "en": {
+                    "singular": "store",
+                    "plural": "stores"
+                },
+                "fi": {
+                    "singular": "kauppa",
+                    "plural": "kaupat"
+                },
+                "nl": {
+                    "singular": "de winkel",
+                    "plural": "de winkels"
+                }
+            }
         },
-        "fi": {
-            "singular": "kauppa",
-            "plural": "kaupat"
+        "department store": {
+            "roots": {
+                "en": "store",
+                "fi": "house",
+                "nl": "house"
+            },
+            "labels": {
+                "en": {
+                    "singular": "department store",
+                    "plural": "department stores"
+                },
+                "fi": {
+                    "singular": "tavaratalo",
+                    "plural": "tavaratalot"
+                },
+                "nl": {
+                    "singular": "het warenhuis",
+                    "plural": "de warenhuizen"
+                }
+            }
         },
-        "nl": {
-            "singular": "de winkel",
-            "plural": "de winkels"
+        "home appliance store": {
+            "hypernym": "store",
+            "labels": {
+                "en": "home appliance store",
+                "fi": "kodinkoneliike",
+                "nl": "de winkel voor huishoudelijke apparaten"
+            }
         }
-    },
-    "department store": {
-        "roots": {
-            "en": "store",
-            "fi": "house",
-            "nl": "house"
-        },
-        "en": {
-            "singular": "department store",
-            "plural": "department stores"
-        },
-        "fi": {
-            "singular": "tavaratalo",
-            "plural": "tavaratalot"
-        },
-        "nl": {
-            "singular": "het warenhuis",
-            "plural": "de warenhuizen"
-        }
-    },
-    "home appliance store": {
-        "hypernym": "store",
-        "en": "home appliance store",
-        "fi": "kodinkoneliike",
-        "nl": "de winkel voor huishoudelijke apparaten"
     }
 }

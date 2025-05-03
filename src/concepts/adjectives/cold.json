@@ -1,20 +1,24 @@
 {
-    "cold": {
-        "antonym": "hot",
-        "en": {
-            "positive degree": "cold",
-            "comparative degree": "colder",
-            "superlative degree": "coldest"
-        },
-        "fi": {
-            "positive degree": "kylmä",
-            "comparative degree": "kylmempi",
-            "superlative degree": "kylmin"
-        },
-        "nl": {
-            "positive degree": "koud",
-            "comparative degree": "kouder",
-            "superlative degree": "koudst"
+    "concepts": {
+        "cold": {
+            "antonym": "hot",
+            "labels": {
+                "en": {
+                    "positive degree": "cold",
+                    "comparative degree": "colder",
+                    "superlative degree": "coldest"
+                },
+                "fi": {
+                    "positive degree": "kylmä",
+                    "comparative degree": "kylmempi",
+                    "superlative degree": "kylmin"
+                },
+                "nl": {
+                    "positive degree": "koud",
+                    "comparative degree": "kouder",
+                    "superlative degree": "koudst"
+                }
+            }
         }
     }
 }

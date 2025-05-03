@@ -1,7 +1,11 @@
 {
-    "terminal": {
-        "en": "terminal",
-        "fi": "terminaali",
-        "nl": "de terminal"
+    "concepts": {
+        "terminal": {
+            "labels": {
+                "en": "terminal",
+                "fi": "terminaali",
+                "nl": "de terminal"
+            }
+        }
     }
 }

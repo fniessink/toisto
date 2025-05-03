@@ -1,10 +1,14 @@
 {
-    "laudeliina": {
-        "en": "(a seat cover used in a sauna)",
-        "fi": [
-            "laudeliina",
-            "pefletti"
-        ],
-        "nl": "(een doek om op te zitten in de sauna)"
+    "concepts": {
+        "laudeliina": {
+            "labels": {
+                "en": "(a seat cover used in a sauna)",
+                "fi": [
+                    "laudeliina",
+                    "pefletti"
+                ],
+                "nl": "(een doek om op te zitten in de sauna)"
+            }
+        }
     }
 }

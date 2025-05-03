@@ -1,7 +1,11 @@
 {
-    "experience": {
-        "en": "experience",
-        "fi": "kokemus",
-        "nl": "de ervaring"
+    "concepts": {
+        "experience": {
+            "labels": {
+                "en": "experience",
+                "fi": "kokemus",
+                "nl": "de ervaring"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "whereas": {
-        "en": "whereas",
-        "fi": "kun taas",
-        "nl": "terwijl"
+    "concepts": {
+        "whereas": {
+            "labels": {
+                "en": "whereas",
+                "fi": "kun taas",
+                "nl": "terwijl"
+            }
+        }
     }
 }

@@ -1,41 +1,47 @@
 {
-    "bad": {
-        "antonym": "good",
-        "en": {
-            "positive degree": "bad",
-            "comparative degree": "badder",
-            "superlative degree": "baddest"
+    "concepts": {
+        "bad": {
+            "antonym": "good",
+            "labels": {
+                "en": {
+                    "positive degree": "bad",
+                    "comparative degree": "badder",
+                    "superlative degree": "baddest"
+                },
+                "fi": {
+                    "positive degree": [
+                        "huono",
+                        "paha"
+                    ],
+                    "comparative degree": [
+                        "huonompi",
+                        "pahempi"
+                    ],
+                    "superlative degree": [
+                        "huonoin",
+                        "pahin"
+                    ]
+                },
+                "nl": {
+                    "positive degree": "slecht",
+                    "comparative degree": "slechter",
+                    "superlative degree": "slechtst"
+                }
+            }
         },
-        "fi": {
-            "positive degree": [
-                "huono",
-                "paha"
-            ],
-            "comparative degree": [
-                "huonompi",
-                "pahempi"
-            ],
-            "superlative degree": [
-                "huonoin",
-                "pahin"
-            ]
-        },
-        "nl": {
-            "positive degree": "slecht",
-            "comparative degree": "slechter",
-            "superlative degree": "slechtst"
+        "bad (sad)": {
+            "labels": {
+                "en": [
+                    "bad",
+                    "sad",
+                    "nasty"
+                ],
+                "fi": "ikävä",
+                "nl": [
+                    "vervelend",
+                    "naar"
+                ]
+            }
         }
-    },
-    "bad (sad)": {
-        "en": [
-            "bad",
-            "sad",
-            "nasty"
-        ],
-        "fi": "ikävä",
-        "nl": [
-            "vervelend",
-            "naar"
-        ]
     }
 }

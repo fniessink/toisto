@@ -1,7 +1,11 @@
 {
-    "help": {
-        "en": "Help!",
-        "fi": "Apua!",
-        "nl": "Help!"
+    "concepts": {
+        "help": {
+            "labels": {
+                "en": "Help!",
+                "fi": "Apua!",
+                "nl": "Help!"
+            }
+        }
     }
 }

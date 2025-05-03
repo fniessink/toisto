@@ -1,42 +1,48 @@
 {
-    "deer": {
-        "hypernym": "animal",
-        "en": "deer",
-        "fi": {
-            "singular": "kauris",
-            "plural": "kaurit"
+    "concepts": {
+        "deer": {
+            "hypernym": "animal",
+            "labels": {
+                "en": "deer",
+                "fi": {
+                    "singular": "kauris",
+                    "plural": "kaurit"
+                },
+                "nl": {
+                    "singular": "het hert",
+                    "plural": "de herten"
+                }
+            }
         },
-        "nl": {
-            "singular": "het hert",
-            "plural": "de herten"
-        }
-    },
-    "reindeer": {
-        "hypernym": "animal",
-        "roots": {
-            "en": "deer",
-            "nl": [
-                "to run",
-                "animal"
-            ]
-        },
-        "en": {
-            "singular": "reindeer",
-            "plural": "reindeer"
-        },
-        "fi": {
-            "singular": [
-                "peura",
-                "poro"
-            ],
-            "plural": [
-                "peurat",
-                "porot"
-            ]
-        },
-        "nl": {
-            "singular": "het rendier",
-            "plural": "de rendieren"
+        "reindeer": {
+            "hypernym": "animal",
+            "roots": {
+                "en": "deer",
+                "nl": [
+                    "to run",
+                    "animal"
+                ]
+            },
+            "labels": {
+                "en": {
+                    "singular": "reindeer",
+                    "plural": "reindeer"
+                },
+                "fi": {
+                    "singular": [
+                        "peura",
+                        "poro"
+                    ],
+                    "plural": [
+                        "peurat",
+                        "porot"
+                    ]
+                },
+                "nl": {
+                    "singular": "het rendier",
+                    "plural": "de rendieren"
+                }
+            }
         }
     }
 }

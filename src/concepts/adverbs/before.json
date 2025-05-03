@@ -1,7 +1,11 @@
 {
-    "before": {
-        "en": "before",
-        "fi": "ennen kuin",
-        "nl": "voordat"
+    "concepts": {
+        "before": {
+            "labels": {
+                "en": "before",
+                "fi": "ennen kuin",
+                "nl": "voordat"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "to estimate": {
-        "en": "to estimate",
-        "fi": "arvioida",
-        "nl": "schatten"
+    "concepts": {
+        "to estimate": {
+            "labels": {
+                "en": "to estimate",
+                "fi": "arvioida",
+                "nl": "schatten"
+            }
+        }
     }
 }

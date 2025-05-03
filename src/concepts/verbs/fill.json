@@ -1,21 +1,29 @@
 {
-    "to fill": {
-        "en": "to fill",
-        "fi": "täyttää",
-        "nl": "vullen"
-    },
-    "to fill out": {
-        "en": "to fill out",
-        "fi": "täyttää",
-        "nl": "invullen"
-    },
-    "to fill out a form": {
-        "roots": [
-            "to fill out",
-            "form"
-        ],
-        "en": "to fill out a form",
-        "fi": "täyttää lomake",
-        "nl": "een formulier invullen"
+    "concepts": {
+        "to fill": {
+            "labels": {
+                "en": "to fill",
+                "fi": "täyttää",
+                "nl": "vullen"
+            }
+        },
+        "to fill out": {
+            "labels": {
+                "en": "to fill out",
+                "fi": "täyttää",
+                "nl": "invullen"
+            }
+        },
+        "to fill out a form": {
+            "roots": [
+                "to fill out",
+                "form"
+            ],
+            "labels": {
+                "en": "to fill out a form",
+                "fi": "täyttää lomake",
+                "nl": "een formulier invullen"
+            }
+        }
     }
 }

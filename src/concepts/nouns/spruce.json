@@ -1,17 +1,21 @@
 {
-    "spruce": {
-        "hypernym": "tree",
-        "en": {
-            "singular": "spruce",
-            "plural": "spruces"
-        },
-        "fi": {
-            "singular": "kuusi",
-            "plural": "kuuset"
-        },
-        "nl": {
-            "singular": "de spar",
-            "plural": "de sparren"
+    "concepts": {
+        "spruce": {
+            "hypernym": "tree",
+            "labels": {
+                "en": {
+                    "singular": "spruce",
+                    "plural": "spruces"
+                },
+                "fi": {
+                    "singular": "kuusi",
+                    "plural": "kuuset"
+                },
+                "nl": {
+                    "singular": "de spar",
+                    "plural": "de sparren"
+                }
+            }
         }
     }
 }

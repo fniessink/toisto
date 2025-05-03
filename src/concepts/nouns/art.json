@@ -1,51 +1,61 @@
 {
-    "art": {
-        "en": "art",
-        "fi": "taide",
-        "nl": "de kunst"
-    },
-    "artist": {
-        "involves": "art",
-        "roots": "art",
-        "en": {
-            "singular": "artist",
-            "plural": "artists"
+    "concepts": {
+        "art": {
+            "labels": {
+                "en": "art",
+                "fi": "taide",
+                "nl": "de kunst"
+            }
         },
-        "fi": {
-            "singular": "taiteilija",
-            "plural": "taiteilijat"
+        "artist": {
+            "involves": "art",
+            "roots": "art",
+            "labels": {
+                "en": {
+                    "singular": "artist",
+                    "plural": "artists"
+                },
+                "fi": {
+                    "singular": "taiteilija",
+                    "plural": "taiteilijat"
+                },
+                "nl": {
+                    "singular": {
+                        "feminine": "de kunstenares",
+                        "masculine": "de kunstenaar"
+                    },
+                    "plural": {
+                        "feminine": "de kunstenaars",
+                        "masculine": "de kunstenaressen"
+                    }
+                }
+            }
         },
-        "nl": {
-            "singular": {
-                "feminine": "de kunstenares",
-                "masculine": "de kunstenaar"
-            },
-            "plural": {
-                "feminine": "de kunstenaars",
-                "masculine": "de kunstenaressen"
+        "art exhibition": {
+            "involves": "art",
+            "roots": "art",
+            "labels": {
+                "en": {
+                    "singular": "art exhibition",
+                    "plural": "art exhibitions"
+                },
+                "fi": {
+                    "singular": "taidenäyttely",
+                    "plural": "taidenäyttelyt"
+                },
+                "nl": {
+                    "singular": "de kunsttentoonstelling",
+                    "plural": "de kunsttentoonstellingen"
+                }
+            }
+        },
+        "art form": {
+            "roots": "art",
+            "labels": {
+                "en": "art form",
+                "fi": "taidemuoto",
+                "nl": "de kunstvorm"
             }
         }
-    },
-    "art exhibition": {
-        "involves": "art",
-        "roots": "art",
-        "en": {
-            "singular": "art exhibition",
-            "plural": "art exhibitions"
-        },
-        "fi": {
-            "singular": "taidenäyttely",
-            "plural": "taidenäyttelyt"
-        },
-        "nl": {
-            "singular": "de kunsttentoonstelling",
-            "plural": "de kunsttentoonstellingen"
-        }
-    },
-    "art form": {
-        "roots": "art",
-        "en": "art form",
-        "fi": "taidemuoto",
-        "nl": "de kunstvorm"
     }
 }

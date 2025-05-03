@@ -1,19 +1,25 @@
 {
-    "finland": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "finland": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            },
+            "labels": {
+                "en": "Finland",
+                "fi": "Suomi;country",
+                "nl": "Finland"
+            }
         },
-        "en": "Finland",
-        "fi": "Suomi;country",
-        "nl": "Finland"
-    },
-    "finnish": {
-        "hypernym": "nationality",
-        "involves": "finland",
-        "roots": "finland",
-        "en": "Finnish",
-        "fi": "suomalainen",
-        "nl": "Fins"
+        "finnish": {
+            "hypernym": "nationality",
+            "involves": "finland",
+            "roots": "finland",
+            "labels": {
+                "en": "Finnish",
+                "fi": "suomalainen",
+                "nl": "Fins"
+            }
+        }
     }
 }

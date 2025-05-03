@@ -1,35 +1,43 @@
 {
-    "coworker": {
-        "roots": {
-            "fi": [
-                "work",
-                "friend"
-            ]
+    "concepts": {
+        "coworker": {
+            "roots": {
+                "fi": [
+                    "work",
+                    "friend"
+                ]
+            },
+            "labels": {
+                "en": "coworker",
+                "fi": [
+                    "työkaveri",
+                    "kollega"
+                ],
+                "nl": "de collega"
+            }
         },
-        "en": "coworker",
-        "fi": [
-            "työkaveri",
-            "kollega"
-        ],
-        "nl": "de collega"
-    },
-    "construction worker": {
-        "hypernym": "profession",
-        "roots": {
-            "fi": "building"
+        "construction worker": {
+            "hypernym": "profession",
+            "roots": {
+                "fi": "building"
+            },
+            "labels": {
+                "en": "construction worker",
+                "fi": "rakennusmies",
+                "nl": "de bouwvakker"
+            }
         },
-        "en": "construction worker",
-        "fi": "rakennusmies",
-        "nl": "de bouwvakker"
-    },
-    "youth worker": {
-        "hypernym": "profession",
-        "roots": "youth",
-        "en": "youth worker",
-        "fi": "nuoriso-ohjaaja",
-        "nl": [
-            "de jongerenwerker",
-            "de jeugdwerker"
-        ]
+        "youth worker": {
+            "hypernym": "profession",
+            "roots": "youth",
+            "labels": {
+                "en": "youth worker",
+                "fi": "nuoriso-ohjaaja",
+                "nl": [
+                    "de jongerenwerker",
+                    "de jeugdwerker"
+                ]
+            }
+        }
     }
 }

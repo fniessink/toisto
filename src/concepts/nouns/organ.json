@@ -1,17 +1,21 @@
 {
-    "organ": {
-        "holonym": "body",
-        "en": {
-            "singular": "organ",
-            "plural": "organs"
-        },
-        "fi": {
-            "singular": "elin",
-            "plural": "elimet"
-        },
-        "nl": {
-            "singular": "het orgaan",
-            "plural": "de organen"
+    "concepts": {
+        "organ": {
+            "holonym": "body",
+            "labels": {
+                "en": {
+                    "singular": "organ",
+                    "plural": "organs"
+                },
+                "fi": {
+                    "singular": "elin",
+                    "plural": "elimet"
+                },
+                "nl": {
+                    "singular": "het orgaan",
+                    "plural": "de organen"
+                }
+            }
         }
     }
 }

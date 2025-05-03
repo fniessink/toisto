@@ -1,16 +1,20 @@
 {
-    "situation": {
-        "en": {
-            "singular": "situation",
-            "plural": "situations"
-        },
-        "fi": {
-            "singular": "tilanne",
-            "plural": "tilanteet"
-        },
-        "nl": {
-            "singular": "de situatie",
-            "plural": "de situaties"
+    "concepts": {
+        "situation": {
+            "labels": {
+                "en": {
+                    "singular": "situation",
+                    "plural": "situations"
+                },
+                "fi": {
+                    "singular": "tilanne",
+                    "plural": "tilanteet"
+                },
+                "nl": {
+                    "singular": "de situatie",
+                    "plural": "de situaties"
+                }
+            }
         }
     }
 }

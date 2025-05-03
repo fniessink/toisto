@@ -1,13 +1,19 @@
 {
-    "to make up": {
-        "en": "to make up",
-        "fi": "keksiä",
-        "nl": "verzinnen"
-    },
-    "to make someone laugh": {
-        "involves": "make",
-        "en": "to make someone laugh",
-        "fi": "naurattaa",
-        "nl": "iemand laten lachen"
+    "concepts": {
+        "to make up": {
+            "labels": {
+                "en": "to make up",
+                "fi": "keksiä",
+                "nl": "verzinnen"
+            }
+        },
+        "to make someone laugh": {
+            "involves": "make",
+            "labels": {
+                "en": "to make someone laugh",
+                "fi": "naurattaa",
+                "nl": "iemand laten lachen"
+            }
+        }
     }
 }

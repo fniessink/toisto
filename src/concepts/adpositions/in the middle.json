@@ -1,49 +1,57 @@
 {
-    "in the middle": {
-        "example": [
-            "the table is in the middle of the room",
-            "the man got up in the middle of the conversation and left"
-        ],
-        "en": "in the middle",
-        "fi": [
-            "keskellä",
-            "kesken"
-        ],
-        "nl": [
-            "in het midden",
-            "middenin|midden in;;Write 'midden in' if it is followed by a noun or personal pronoun, otherwise write 'middenin'."
-        ]
-    },
-    "the table is in the middle of the room": {
-        "roots": {
-            "en": [
-                "table",
-                "to be",
-                "in the middle",
-                "room"
+    "concepts": {
+        "in the middle": {
+            "example": [
+                "the table is in the middle of the room",
+                "the man got up in the middle of the conversation and left"
             ],
-            "nl": [
-                "table",
-                "in the middle",
-                "room"
-            ],
-            "fi": [
-                "table",
-                "to be",
-                "in the middle",
-                "room"
-            ]
+            "labels": {
+                "en": "in the middle",
+                "fi": [
+                    "keskellä",
+                    "kesken"
+                ],
+                "nl": [
+                    "in het midden",
+                    "middenin|midden in;;Write 'midden in' if it is followed by a noun or personal pronoun, otherwise write 'middenin'."
+                ]
+            }
         },
-        "en": "The table is in the middle of the room.",
-        "fi": "Pöytä on huoneen keskellä.",
-        "nl": [
-            "De tafel staat in het midden van de kamer.",
-            "De tafel staat midden in de kamer."
-        ]
-    },
-    "the man got up in the middle of the conversation and left": {
-        "en": "The man got up in the middle of the conversation and left.",
-        "fi": "Mies nousi kesken keskustelun ja lähti pois.",
-        "nl": "De man stond op midden in het gesprek en vertrok."
+        "the table is in the middle of the room": {
+            "roots": {
+                "en": [
+                    "table",
+                    "to be",
+                    "in the middle",
+                    "room"
+                ],
+                "nl": [
+                    "table",
+                    "in the middle",
+                    "room"
+                ],
+                "fi": [
+                    "table",
+                    "to be",
+                    "in the middle",
+                    "room"
+                ]
+            },
+            "labels": {
+                "en": "The table is in the middle of the room.",
+                "fi": "Pöytä on huoneen keskellä.",
+                "nl": [
+                    "De tafel staat in het midden van de kamer.",
+                    "De tafel staat midden in de kamer."
+                ]
+            }
+        },
+        "the man got up in the middle of the conversation and left": {
+            "labels": {
+                "en": "The man got up in the middle of the conversation and left.",
+                "fi": "Mies nousi kesken keskustelun ja lähti pois.",
+                "nl": "De man stond op midden in het gesprek en vertrok."
+            }
+        }
     }
 }

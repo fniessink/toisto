@@ -1,31 +1,39 @@
 {
-    "morning": {
-        "hypernym": "time of day",
-        "en": {
-            "singular": "morning",
-            "plural": "mornings"
+    "concepts": {
+        "morning": {
+            "hypernym": "time of day",
+            "labels": {
+                "en": {
+                    "singular": "morning",
+                    "plural": "mornings"
+                },
+                "fi": {
+                    "singular": "aamu|aamupäivä",
+                    "plural": "aamut|aamupäivät"
+                },
+                "nl": {
+                    "singular": "de ochtend",
+                    "plural": "de ochtenden"
+                }
+            }
         },
-        "fi": {
-            "singular": "aamu|aamupäivä",
-            "plural": "aamut|aamupäivät"
+        "at morning": {
+            "hypernym": "time of day",
+            "roots": "morning",
+            "labels": {
+                "en": "at morning",
+                "fi": "aamulla",
+                "nl": "'s ochtends"
+            }
         },
-        "nl": {
-            "singular": "de ochtend",
-            "plural": "de ochtenden"
+        "this morning": {
+            "hypernym": "time of day",
+            "roots": "morning",
+            "labels": {
+                "en": "this morning",
+                "fi": "tänä aamuna",
+                "nl": "vanochtend"
+            }
         }
-    },
-    "at morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "at morning",
-        "fi": "aamulla",
-        "nl": "'s ochtends"
-    },
-    "this morning": {
-        "hypernym": "time of day",
-        "roots": "morning",
-        "en": "this morning",
-        "fi": "tänä aamuna",
-        "nl": "vanochtend"
     }
 }

@@ -1,16 +1,20 @@
 {
-    "river": {
-        "en": {
-            "singular": "river",
-            "plural": "rivers"
-        },
-        "fi": {
-            "singular": "joki",
-            "plural": "joet"
-        },
-        "nl": {
-            "singular": "de rivier",
-            "plural": "de rivieren"
+    "concepts": {
+        "river": {
+            "labels": {
+                "en": {
+                    "singular": "river",
+                    "plural": "rivers"
+                },
+                "fi": {
+                    "singular": "joki",
+                    "plural": "joet"
+                },
+                "nl": {
+                    "singular": "de rivier",
+                    "plural": "de rivieren"
+                }
+            }
         }
     }
 }

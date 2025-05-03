@@ -1,8 +1,12 @@
 {
-    "squirrel": {
-        "hypernym": "animal",
-        "en": "squirrel",
-        "fi": "orava",
-        "nl": "de eekhoorn"
+    "concepts": {
+        "squirrel": {
+            "hypernym": "animal",
+            "labels": {
+                "en": "squirrel",
+                "fi": "orava",
+                "nl": "de eekhoorn"
+            }
+        }
     }
 }

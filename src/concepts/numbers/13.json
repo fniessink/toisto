@@ -1,24 +1,28 @@
 {
-    "13": {
-        "hypernym": "number",
-        "roots": [
-            "3",
-            "10"
-        ],
-        "en": {
-            "cardinal": "thirteen",
-            "ordinal": "thirteenth"
-        },
-        "fi": {
-            "cardinal": [
-                "kolmetoista",
-                "kolmetoist*"
+    "concepts": {
+        "13": {
+            "hypernym": "number",
+            "roots": [
+                "3",
+                "10"
             ],
-            "ordinal": "kolmastoista"
-        },
-        "nl": {
-            "cardinal": "dertien",
-            "ordinal": "dertiende"
+            "labels": {
+                "en": {
+                    "cardinal": "thirteen",
+                    "ordinal": "thirteenth"
+                },
+                "fi": {
+                    "cardinal": [
+                        "kolmetoista",
+                        "kolmetoist*"
+                    ],
+                    "ordinal": "kolmastoista"
+                },
+                "nl": {
+                    "cardinal": "dertien",
+                    "ordinal": "dertiende"
+                }
+            }
         }
     }
 }

@@ -1,28 +1,34 @@
 {
-    "eye": {
-        "example": "you have beautiful eyes",
-        "holonym": "face",
-        "en": {
-            "singular": "eye",
-            "plural": "eyes"
+    "concepts": {
+        "eye": {
+            "example": "you have beautiful eyes",
+            "holonym": "face",
+            "labels": {
+                "en": {
+                    "singular": "eye",
+                    "plural": "eyes"
+                },
+                "fi": {
+                    "singular": "silmä",
+                    "plural": "silmät"
+                },
+                "nl": {
+                    "singular": "het oog",
+                    "plural": "de ogen"
+                }
+            }
         },
-        "fi": {
-            "singular": "silmä",
-            "plural": "silmät"
-        },
-        "nl": {
-            "singular": "het oog",
-            "plural": "de ogen"
+        "you have beautiful eyes": {
+            "roots": [
+                "to have",
+                "beautiful",
+                "eye"
+            ],
+            "labels": {
+                "en": "You have beautiful eyes.",
+                "fi": "Sinulla on kauniit silmät.",
+                "nl": "Jij hebt mooie ogen."
+            }
         }
-    },
-    "you have beautiful eyes": {
-        "roots": [
-            "to have",
-            "beautiful",
-            "eye"
-        ],
-        "en": "You have beautiful eyes.",
-        "fi": "Sinulla on kauniit silmät.",
-        "nl": "Jij hebt mooie ogen."
     }
 }

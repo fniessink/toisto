@@ -1,17 +1,21 @@
 {
-    "trumpet": {
-        "hypernym": "musical instrument",
-        "en": {
-            "singular": "trumpet",
-            "plural": "trumpets"
-        },
-        "fi": {
-            "singular": "trumpetti",
-            "plural": "trumpetit"
-        },
-        "nl": {
-            "singular": "de trompet",
-            "plural": "de trompetten"
+    "concepts": {
+        "trumpet": {
+            "hypernym": "musical instrument",
+            "labels": {
+                "en": {
+                    "singular": "trumpet",
+                    "plural": "trumpets"
+                },
+                "fi": {
+                    "singular": "trumpetti",
+                    "plural": "trumpetit"
+                },
+                "nl": {
+                    "singular": "de trompet",
+                    "plural": "de trompetten"
+                }
+            }
         }
     }
 }

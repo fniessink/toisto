@@ -1,13 +1,17 @@
 {
-    "accurately": {
-        "en": [
-            "accurately",
-            "precisely"
-        ],
-        "fi": "tarkasti",
-        "nl": [
-            "nauwkeurig",
-            "precies"
-        ]
+    "concepts": {
+        "accurately": {
+            "labels": {
+                "en": [
+                    "accurately",
+                    "precisely"
+                ],
+                "fi": "tarkasti",
+                "nl": [
+                    "nauwkeurig",
+                    "precies"
+                ]
+            }
+        }
     }
 }

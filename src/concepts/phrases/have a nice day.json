@@ -1,8 +1,12 @@
 {
-    "have a nice day": {
-        "roots": "day",
-        "en": "Have a nice day!",
-        "fi": "Hauskaa päivää!",
-        "nl": "Prettige dag!"
+    "concepts": {
+        "have a nice day": {
+            "roots": "day",
+            "labels": {
+                "en": "Have a nice day!",
+                "fi": "Hauskaa päivää!",
+                "nl": "Prettige dag!"
+            }
+        }
     }
 }

@@ -1,27 +1,33 @@
 {
-    "badminton": {
-        "example": "I play badminton",
-        "hypernym": "sport",
-        "roots": {
-            "fi": "ball"
+    "concepts": {
+        "badminton": {
+            "example": "I play badminton",
+            "hypernym": "sport",
+            "roots": {
+                "fi": "ball"
+            },
+            "labels": {
+                "en": "badminton",
+                "fi": [
+                    "sulkapallo",
+                    "sulkis*"
+                ],
+                "nl": "het badminton"
+            }
         },
-        "en": "badminton",
-        "fi": [
-            "sulkapallo",
-            "sulkis*"
-        ],
-        "nl": "het badminton"
-    },
-    "I play badminton": {
-        "roots": [
-            "to play a sport",
-            "badminton"
-        ],
-        "en": "I play badminton.",
-        "fi": [
-            "Minä pelaan sulkapalloa.",
-            "Mä pelaan sulkista.*"
-        ],
-        "nl": "Ik speel badminton."
+        "I play badminton": {
+            "roots": [
+                "to play a sport",
+                "badminton"
+            ],
+            "labels": {
+                "en": "I play badminton.",
+                "fi": [
+                    "Minä pelaan sulkapalloa.",
+                    "Mä pelaan sulkista.*"
+                ],
+                "nl": "Ik speel badminton."
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "marathon": {
-        "en": "marathon",
-        "fi": "maraton",
-        "nl": "de marathon"
+    "concepts": {
+        "marathon": {
+            "labels": {
+                "en": "marathon",
+                "fi": "maraton",
+                "nl": "de marathon"
+            }
+        }
     }
 }

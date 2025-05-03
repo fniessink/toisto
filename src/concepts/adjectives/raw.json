@@ -1,7 +1,11 @@
 {
-    "raw": {
-        "en": "raw",
-        "fi": "raaka",
-        "nl": "rauw"
+    "concepts": {
+        "raw": {
+            "labels": {
+                "en": "raw",
+                "fi": "raaka",
+                "nl": "rauw"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "current": {
-        "en": "current",
-        "fi": "nykyinen",
-        "nl": "huidig"
+    "concepts": {
+        "current": {
+            "labels": {
+                "en": "current",
+                "fi": "nykyinen",
+                "nl": "huidig"
+            }
+        }
     }
 }

@@ -1,20 +1,26 @@
 {
-    "ice hockey": {
-        "hypernym": "sport",
-        "roots": "ice",
-        "en": "ice hockey",
-        "fi": [
-            "jääkiekko",
-            "lätkä*"
-        ],
-        "nl": "het ijshockey"
-    },
-    "ice hockey match": {
-        "hypernym": "match",
-        "involves": "ice hockey",
-        "roots": "ice hockey",
-        "en": "ice hockey match",
-        "fi": "jääkiekko-ottelu",
-        "nl": "de ijshockeywedstrijd"
+    "concepts": {
+        "ice hockey": {
+            "hypernym": "sport",
+            "roots": "ice",
+            "labels": {
+                "en": "ice hockey",
+                "fi": [
+                    "jääkiekko",
+                    "lätkä*"
+                ],
+                "nl": "het ijshockey"
+            }
+        },
+        "ice hockey match": {
+            "hypernym": "match",
+            "involves": "ice hockey",
+            "roots": "ice hockey",
+            "labels": {
+                "en": "ice hockey match",
+                "fi": "jääkiekko-ottelu",
+                "nl": "de ijshockeywedstrijd"
+            }
+        }
     }
 }

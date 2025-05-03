@@ -1,7 +1,11 @@
 {
-    "in vain": {
-        "en": "in vain",
-        "fi": "turhaan",
-        "nl": "tevergeefs|vergeefs"
+    "concepts": {
+        "in vain": {
+            "labels": {
+                "en": "in vain",
+                "fi": "turhaan",
+                "nl": "tevergeefs|vergeefs"
+            }
+        }
     }
 }

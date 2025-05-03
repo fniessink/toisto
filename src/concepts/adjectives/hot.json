@@ -1,21 +1,25 @@
 {
-    "hot": {
-        "antonym": "cold",
-        "example": "the coffee is hot",
-        "en": {
-            "positive degree": "hot",
-            "comparative degree": "hotter",
-            "superlative degree": "hottest"
-        },
-        "fi": {
-            "positive degree": "kuuma",
-            "comparative degree": "kuumempi",
-            "superlative degree": "kuumin"
-        },
-        "nl": {
-            "positive degree": "heet",
-            "comparative degree": "heter",
-            "superlative degree": "heetst"
+    "concepts": {
+        "hot": {
+            "antonym": "cold",
+            "example": "the coffee is hot",
+            "labels": {
+                "en": {
+                    "positive degree": "hot",
+                    "comparative degree": "hotter",
+                    "superlative degree": "hottest"
+                },
+                "fi": {
+                    "positive degree": "kuuma",
+                    "comparative degree": "kuumempi",
+                    "superlative degree": "kuumin"
+                },
+                "nl": {
+                    "positive degree": "heet",
+                    "comparative degree": "heter",
+                    "superlative degree": "heetst"
+                }
+            }
         }
     }
 }

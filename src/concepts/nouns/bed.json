@@ -1,44 +1,54 @@
 {
-    "bed": {
-        "en": {
-            "singular": "bed",
-            "plural": "beds"
+    "concepts": {
+        "bed": {
+            "labels": {
+                "en": {
+                    "singular": "bed",
+                    "plural": "beds"
+                },
+                "fi": {
+                    "singular": "sänky",
+                    "plural": "sängyt"
+                },
+                "nl": {
+                    "singular": "het bed",
+                    "plural": "de bedden"
+                }
+            }
         },
-        "fi": {
-            "singular": "sänky",
-            "plural": "sängyt"
+        "double bed": {
+            "example": "they are looking for a double bed",
+            "hypernym": "bed",
+            "roots": {
+                "en": "bed",
+                "fi": [
+                    "pair",
+                    "bed"
+                ],
+                "nl": [
+                    "2",
+                    "bed"
+                ]
+            },
+            "labels": {
+                "en": "double bed",
+                "fi": "parisänky",
+                "nl": "het tweepersoonsbed"
+            }
         },
-        "nl": {
-            "singular": "het bed",
-            "plural": "de bedden"
+        "going to bed": {
+            "labels": {
+                "en": "going to bed",
+                "fi": "nukkumaanmeno",
+                "nl": "het gaan slapen"
+            }
+        },
+        "bedspread": {
+            "labels": {
+                "en": "bedspread",
+                "fi": "päiväpeitto",
+                "nl": "de sprei"
+            }
         }
-    },
-    "double bed": {
-        "example": "they are looking for a double bed",
-        "hypernym": "bed",
-        "roots": {
-            "en": "bed",
-            "fi": [
-                "pair",
-                "bed"
-            ],
-            "nl": [
-                "2",
-                "bed"
-            ]
-        },
-        "en": "double bed",
-        "fi": "parisänky",
-        "nl": "het tweepersoonsbed"
-    },
-    "going to bed": {
-        "en": "going to bed",
-        "fi": "nukkumaanmeno",
-        "nl": "het gaan slapen"
-    },
-    "bedspread": {
-        "en": "bedspread",
-        "fi": "päiväpeitto",
-        "nl": "de sprei"
     }
 }

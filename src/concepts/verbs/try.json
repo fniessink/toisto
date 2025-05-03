@@ -1,53 +1,59 @@
 {
-    "to try": {
-        "en": "to try",
-        "fi": "yrittää",
-        "nl": "proberen"
-    },
-    "to try out": {
-        "en": {
-            "infinitive": "to try out",
-            "singular": {
-                "first person": "I try out",
-                "second person": "you try out",
-                "third person": {
-                    "feminine": "she tries out",
-                    "masculine": "he tries out"
-                }
-            },
-            "plural": {
-                "first person": "we try out",
-                "second person": "you try out",
-                "third person": "they try out"
+    "concepts": {
+        "to try": {
+            "labels": {
+                "en": "to try",
+                "fi": "yrittää",
+                "nl": "proberen"
             }
         },
-        "fi": {
-            "infinitive": "kokeilla",
-            "singular": {
-                "first person": "minä kokeilen",
-                "second person": "sinä kokeilet",
-                "third person": "hän kokeilee"
-            },
-            "plural": {
-                "first person": "me kokeilemme",
-                "second person": "te kokeilette",
-                "third person": "he kokeilevat"
-            }
-        },
-        "nl": {
-            "infinitive": "uitproberen",
-            "singular": {
-                "first person": "ik probeer uit",
-                "second person": "jij probeert uit",
-                "third person": {
-                    "feminine": "zij probeert uit",
-                    "masculine": "hij probeert uit"
+        "to try out": {
+            "labels": {
+                "en": {
+                    "infinitive": "to try out",
+                    "singular": {
+                        "first person": "I try out",
+                        "second person": "you try out",
+                        "third person": {
+                            "feminine": "she tries out",
+                            "masculine": "he tries out"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we try out",
+                        "second person": "you try out",
+                        "third person": "they try out"
+                    }
+                },
+                "fi": {
+                    "infinitive": "kokeilla",
+                    "singular": {
+                        "first person": "minä kokeilen",
+                        "second person": "sinä kokeilet",
+                        "third person": "hän kokeilee"
+                    },
+                    "plural": {
+                        "first person": "me kokeilemme",
+                        "second person": "te kokeilette",
+                        "third person": "he kokeilevat"
+                    }
+                },
+                "nl": {
+                    "infinitive": "uitproberen",
+                    "singular": {
+                        "first person": "ik probeer uit",
+                        "second person": "jij probeert uit",
+                        "third person": {
+                            "feminine": "zij probeert uit",
+                            "masculine": "hij probeert uit"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij proberen uit",
+                        "second person": "jullie proberen uit",
+                        "third person": "zij proberen uit"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "wij proberen uit",
-                "second person": "jullie proberen uit",
-                "third person": "zij proberen uit"
             }
         }
     }

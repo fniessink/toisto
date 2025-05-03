@@ -1,7 +1,11 @@
 {
-    "fat-free": {
-        "en": "fat-free",
-        "fi": "rasvaton",
-        "nl": "mager"
+    "concepts": {
+        "fat-free": {
+            "labels": {
+                "en": "fat-free",
+                "fi": "rasvaton",
+                "nl": "mager"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "nearby (adjective)": {
-        "en": "nearby;adjective",
-        "fi": "läheinen",
-        "nl": "nabijgelegen"
+    "concepts": {
+        "nearby (adjective)": {
+            "labels": {
+                "en": "nearby;adjective",
+                "fi": "läheinen",
+                "nl": "nabijgelegen"
+            }
+        }
     }
 }

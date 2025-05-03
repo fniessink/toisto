@@ -1,7 +1,11 @@
 {
-    "to reduce": {
-        "en": "to reduce",
-        "fi": "pienentää",
-        "nl": "verminderen"
+    "concepts": {
+        "to reduce": {
+            "labels": {
+                "en": "to reduce",
+                "fi": "pienentää",
+                "nl": "verminderen"
+            }
+        }
     }
 }

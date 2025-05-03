@@ -1,7 +1,11 @@
 {
-    "source": {
-        "en": "source",
-        "fi": "lähde",
-        "nl": "de bron"
+    "concepts": {
+        "source": {
+            "labels": {
+                "en": "source",
+                "fi": "lähde",
+                "nl": "de bron"
+            }
+        }
     }
 }

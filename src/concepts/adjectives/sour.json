@@ -1,23 +1,27 @@
 {
-    "sour": {
-        "antonym": "sweet",
-        "en": {
-            "positive degree": "sour",
-            "comparative degree": "sourer",
-            "superlative degree": "sourest"
-        },
-        "fi": {
-            "positive degree": "hapan",
-            "comparative degree": [
-                "happamampi",
-                "happamempi"
-            ],
-            "superlative degree": "happamin"
-        },
-        "nl": {
-            "positive degree": "zuur",
-            "comparative degree": "zuurder",
-            "superlative degree": "zuurst"
+    "concepts": {
+        "sour": {
+            "antonym": "sweet",
+            "labels": {
+                "en": {
+                    "positive degree": "sour",
+                    "comparative degree": "sourer",
+                    "superlative degree": "sourest"
+                },
+                "fi": {
+                    "positive degree": "hapan",
+                    "comparative degree": [
+                        "happamampi",
+                        "happamempi"
+                    ],
+                    "superlative degree": "happamin"
+                },
+                "nl": {
+                    "positive degree": "zuur",
+                    "comparative degree": "zuurder",
+                    "superlative degree": "zuurst"
+                }
+            }
         }
     }
 }

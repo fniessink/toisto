@@ -1,7 +1,11 @@
 {
-    "even": {
-        "en": "even",
-        "fi": "jopa",
-        "nl": "zelfs"
+    "concepts": {
+        "even": {
+            "labels": {
+                "en": "even",
+                "fi": "jopa",
+                "nl": "zelfs"
+            }
+        }
     }
 }

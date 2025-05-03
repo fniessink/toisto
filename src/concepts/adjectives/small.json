@@ -1,20 +1,24 @@
 {
-    "small": {
-        "antonym": "big",
-        "en": {
-            "positive degree": "small",
-            "comparative degree": "smaller",
-            "superlative degree": "smallest"
-        },
-        "fi": {
-            "positive degree": "pieni",
-            "comparative degree": "pienempi",
-            "superlative degree": "pienin"
-        },
-        "nl": {
-            "positive degree": "klein",
-            "comparative degree": "kleiner",
-            "superlative degree": "kleinst"
+    "concepts": {
+        "small": {
+            "antonym": "big",
+            "labels": {
+                "en": {
+                    "positive degree": "small",
+                    "comparative degree": "smaller",
+                    "superlative degree": "smallest"
+                },
+                "fi": {
+                    "positive degree": "pieni",
+                    "comparative degree": "pienempi",
+                    "superlative degree": "pienin"
+                },
+                "nl": {
+                    "positive degree": "klein",
+                    "comparative degree": "kleiner",
+                    "superlative degree": "kleinst"
+                }
+            }
         }
     }
 }

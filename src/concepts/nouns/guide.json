@@ -1,8 +1,12 @@
 {
-    "guide": {
-        "hypernym": "profession",
-        "en": "guide",
-        "fi": "opas",
-        "nl": "de gids"
+    "concepts": {
+        "guide": {
+            "hypernym": "profession",
+            "labels": {
+                "en": "guide",
+                "fi": "opas",
+                "nl": "de gids"
+            }
+        }
     }
 }

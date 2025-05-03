@@ -1,13 +1,17 @@
 {
-    "ordinary": {
-        "en": [
-            "ordinary",
-            "normal"
-        ],
-        "fi": "tavallinen",
-        "nl": [
-            "gewoon",
-            "normaal"
-        ]
+    "concepts": {
+        "ordinary": {
+            "labels": {
+                "en": [
+                    "ordinary",
+                    "normal"
+                ],
+                "fi": "tavallinen",
+                "nl": [
+                    "gewoon",
+                    "normaal"
+                ]
+            }
+        }
     }
 }

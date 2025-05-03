@@ -1,43 +1,55 @@
 {
-    "no": {
-        "en": "No!",
-        "fi": "Ei!",
-        "nl": "Nee!"
-    },
-    "no but": {
-        "roots": "no",
-        "en": "no, but",
-        "fi": [
-            "ei, vaan",
-            "eiku*"
-        ],
-        "nl": "nee, maar"
-    },
-    "no more": {
-        "en": "no more",
-        "fi": "ei enää",
-        "nl": "niet meer"
-    },
-    "no problem": {
-        "roots": {
-            "en": "no",
-            "fi": "nothing",
-            "nl": "nothing"
+    "concepts": {
+        "no": {
+            "labels": {
+                "en": "No!",
+                "fi": "Ei!",
+                "nl": "Nee!"
+            }
         },
-        "en": "No problem!",
-        "fi": "Ei se mitään!",
-        "nl": [
-            "Geen probleem!",
-            "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
-        ]
-    },
-    "no rush": {
-        "roots": "hurry",
-        "en": "No rush.",
-        "fi": "Ei mitään kiirettä.",
-        "nl": [
-            "Er is geen haast bij.",
-            "Geen haast."
-        ]
+        "no but": {
+            "roots": "no",
+            "labels": {
+                "en": "no, but",
+                "fi": [
+                    "ei, vaan",
+                    "eiku*"
+                ],
+                "nl": "nee, maar"
+            }
+        },
+        "no more": {
+            "labels": {
+                "en": "no more",
+                "fi": "ei enää",
+                "nl": "niet meer"
+            }
+        },
+        "no problem": {
+            "roots": {
+                "en": "no",
+                "fi": "nothing",
+                "nl": "nothing"
+            },
+            "labels": {
+                "en": "No problem!",
+                "fi": "Ei se mitään!",
+                "nl": [
+                    "Geen probleem!",
+                    "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
+                ]
+            }
+        },
+        "no rush": {
+            "roots": "hurry",
+            "labels": {
+                "en": "No rush.",
+                "fi": "Ei mitään kiirettä.",
+                "nl": [
+                    "Er is geen haast bij.",
+                    "Geen haast."
+                ]
+            }
+        }
     }
 }

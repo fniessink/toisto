@@ -1,13 +1,19 @@
 {
-    "with": {
-        "example": "Bob eats with Alice",
-        "en": "with",
-        "fi": "kanssa",
-        "nl": "met"
-    },
-    "Bob eats with Alice": {
-        "en": "Bob eats with Alice.",
-        "fi": "Bob syö Alicen kanssa.",
-        "nl": "Bob eet met Alice."
+    "concepts": {
+        "with": {
+            "example": "Bob eats with Alice",
+            "labels": {
+                "en": "with",
+                "fi": "kanssa",
+                "nl": "met"
+            }
+        },
+        "Bob eats with Alice": {
+            "labels": {
+                "en": "Bob eats with Alice.",
+                "fi": "Bob syö Alicen kanssa.",
+                "nl": "Bob eet met Alice."
+            }
+        }
     }
 }

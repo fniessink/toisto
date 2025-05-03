@@ -1,7 +1,11 @@
 {
-    "long (time)": {
-        "en": "long",
-        "fi": "kauan",
-        "nl": "lang"
+    "concepts": {
+        "long (time)": {
+            "labels": {
+                "en": "long",
+                "fi": "kauan",
+                "nl": "lang"
+            }
+        }
     }
 }

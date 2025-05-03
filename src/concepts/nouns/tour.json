@@ -1,13 +1,19 @@
 {
-    "tour": {
-        "en": "tour",
-        "fi": "kierros",
-        "nl": "de tour"
-    },
-    "sightseeing tour": {
-        "hypernym": "tour",
-        "en": "sightseeing tour",
-        "fi": "kiertoajelu",
-        "nl": "de rondrit"
+    "concepts": {
+        "tour": {
+            "labels": {
+                "en": "tour",
+                "fi": "kierros",
+                "nl": "de tour"
+            }
+        },
+        "sightseeing tour": {
+            "hypernym": "tour",
+            "labels": {
+                "en": "sightseeing tour",
+                "fi": "kiertoajelu",
+                "nl": "de rondrit"
+            }
+        }
     }
 }

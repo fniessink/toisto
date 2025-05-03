@@ -1,8 +1,12 @@
 {
-    "engaged": {
-        "involves": "engagement",
-        "en": "engaged",
-        "fi": "kihloissa",
-        "nl": "verloofd"
+    "concepts": {
+        "engaged": {
+            "involves": "engagement",
+            "labels": {
+                "en": "engaged",
+                "fi": "kihloissa",
+                "nl": "verloofd"
+            }
+        }
     }
 }

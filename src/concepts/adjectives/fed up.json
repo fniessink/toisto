@@ -1,7 +1,11 @@
 {
-    "fed up": {
-        "en": "fed up",
-        "fi": "kyllästynyt",
-        "nl": "beu"
+    "concepts": {
+        "fed up": {
+            "labels": {
+                "en": "fed up",
+                "fi": "kyllästynyt",
+                "nl": "beu"
+            }
+        }
     }
 }

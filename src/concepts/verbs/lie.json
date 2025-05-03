@@ -1,7 +1,11 @@
 {
-    "to lie around": {
-        "en": "to lie around",
-        "fi": "lojua",
-        "nl": "rondslingeren"
+    "concepts": {
+        "to lie around": {
+            "labels": {
+                "en": "to lie around",
+                "fi": "lojua",
+                "nl": "rondslingeren"
+            }
+        }
     }
 }

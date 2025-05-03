@@ -1,8 +1,12 @@
 {
-    "owl": {
-        "hypernym": "bird",
-        "en": "owl",
-        "fi": "pöllö",
-        "nl": "de uil"
+    "concepts": {
+        "owl": {
+            "hypernym": "bird",
+            "labels": {
+                "en": "owl",
+                "fi": "pöllö",
+                "nl": "de uil"
+            }
+        }
     }
 }

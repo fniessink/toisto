@@ -1,25 +1,31 @@
 {
-    "basketball": {
-        "example": "I play basketball",
-        "hypernym": "team sport",
-        "roots": "ball",
-        "en": "basketball",
-        "fi": [
-            "koripallo",
-            "koris*"
-        ],
-        "nl": "het basketbal"
-    },
-    "I play basketball": {
-        "roots": [
-            "to play a sport",
-            "basketball"
-        ],
-        "en": "I play basketball.",
-        "fi": [
-            "Minä pelaan koripalloa.",
-            "Mä pelaan korista.*"
-        ],
-        "nl": "Ik speel basketbal."
+    "concepts": {
+        "basketball": {
+            "example": "I play basketball",
+            "hypernym": "team sport",
+            "roots": "ball",
+            "labels": {
+                "en": "basketball",
+                "fi": [
+                    "koripallo",
+                    "koris*"
+                ],
+                "nl": "het basketbal"
+            }
+        },
+        "I play basketball": {
+            "roots": [
+                "to play a sport",
+                "basketball"
+            ],
+            "labels": {
+                "en": "I play basketball.",
+                "fi": [
+                    "Minä pelaan koripalloa.",
+                    "Mä pelaan korista.*"
+                ],
+                "nl": "Ik speel basketbal."
+            }
+        }
     }
 }

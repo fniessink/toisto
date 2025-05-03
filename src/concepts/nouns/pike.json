@@ -1,8 +1,12 @@
 {
-    "pike": {
-        "hypernym": "fish",
-        "en": "pike",
-        "fi": "hauki",
-        "nl": "de snoek"
+    "concepts": {
+        "pike": {
+            "hypernym": "fish",
+            "labels": {
+                "en": "pike",
+                "fi": "hauki",
+                "nl": "de snoek"
+            }
+        }
     }
 }

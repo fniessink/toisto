@@ -1,7 +1,11 @@
 {
-    "loop": {
-        "en": "loop",
-        "fi": "lenkki",
-        "nl": "de lus"
+    "concepts": {
+        "loop": {
+            "labels": {
+                "en": "loop",
+                "fi": "lenkki",
+                "nl": "de lus"
+            }
+        }
     }
 }

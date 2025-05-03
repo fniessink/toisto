@@ -1,7 +1,11 @@
 {
-    "municipality": {
-        "en": "municipality",
-        "fi": "paikkakunta",
-        "nl": "de gemeente"
+    "concepts": {
+        "municipality": {
+            "labels": {
+                "en": "municipality",
+                "fi": "paikkakunta",
+                "nl": "de gemeente"
+            }
+        }
     }
 }

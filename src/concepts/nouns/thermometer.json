@@ -1,7 +1,11 @@
 {
-    "thermometer": {
-        "en": "thermometer",
-        "fi": "lämpömittari",
-        "nl": "de thermometer"
+    "concepts": {
+        "thermometer": {
+            "labels": {
+                "en": "thermometer",
+                "fi": "lämpömittari",
+                "nl": "de thermometer"
+            }
+        }
     }
 }

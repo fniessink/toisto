@@ -1,24 +1,30 @@
 {
-    "basement": {
-        "holonym": "house",
-        "en": {
-            "singular": "basement",
-            "plural": "basements"
+    "concepts": {
+        "basement": {
+            "holonym": "house",
+            "labels": {
+                "en": {
+                    "singular": "basement",
+                    "plural": "basements"
+                },
+                "fi": {
+                    "singular": "kellari",
+                    "plural": "kellarit"
+                },
+                "nl": {
+                    "singular": "de kelder",
+                    "plural": "de kelders"
+                }
+            }
         },
-        "fi": {
-            "singular": "kellari",
-            "plural": "kellarit"
-        },
-        "nl": {
-            "singular": "de kelder",
-            "plural": "de kelders"
+        "basement storage unit": {
+            "holonym": "basement",
+            "roots": "basement",
+            "labels": {
+                "en": "basement storage unit",
+                "fi": "kellarikomero",
+                "nl": "de kelderbox"
+            }
         }
-    },
-    "basement storage unit": {
-        "holonym": "basement",
-        "roots": "basement",
-        "en": "basement storage unit",
-        "fi": "kellarikomero",
-        "nl": "de kelderbox"
     }
 }

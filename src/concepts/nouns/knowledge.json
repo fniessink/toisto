@@ -1,7 +1,11 @@
 {
-    "knowledge": {
-        "en": "knowledge",
-        "fi": "tieto",
-        "nl": "de kennis"
+    "concepts": {
+        "knowledge": {
+            "labels": {
+                "en": "knowledge",
+                "fi": "tieto",
+                "nl": "de kennis"
+            }
+        }
     }
 }

@@ -1,24 +1,28 @@
 {
-    "21": {
-        "hypernym": "number",
-        "roots": [
-            "1",
-            "20"
-        ],
-        "en": {
-            "cardinal": "twenty-one",
-            "ordinal": "twenty-first"
-        },
-        "fi": {
-            "cardinal": [
-                "kaksikymmentäyksi",
-                "kakskytyks*"
+    "concepts": {
+        "21": {
+            "hypernym": "number",
+            "roots": [
+                "1",
+                "20"
             ],
-            "ordinal": "kahdeskymmenesensimmäinen"
-        },
-        "nl": {
-            "cardinal": "eenentwintig",
-            "ordinal": "eenentwintigste"
+            "labels": {
+                "en": {
+                    "cardinal": "twenty-one",
+                    "ordinal": "twenty-first"
+                },
+                "fi": {
+                    "cardinal": [
+                        "kaksikymmentäyksi",
+                        "kakskytyks*"
+                    ],
+                    "ordinal": "kahdeskymmenesensimmäinen"
+                },
+                "nl": {
+                    "cardinal": "eenentwintig",
+                    "ordinal": "eenentwintigste"
+                }
+            }
         }
     }
 }

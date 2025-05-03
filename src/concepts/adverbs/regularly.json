@@ -1,10 +1,14 @@
 {
-    "regularly": {
-        "en": "regularly",
-        "fi": "säännöllisesti",
-        "nl": [
-            "regelmatig",
-            "geregeld"
-        ]
+    "concepts": {
+        "regularly": {
+            "labels": {
+                "en": "regularly",
+                "fi": "säännöllisesti",
+                "nl": [
+                    "regelmatig",
+                    "geregeld"
+                ]
+            }
+        }
     }
 }

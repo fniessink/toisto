@@ -1,16 +1,20 @@
 {
-    "sketch": {
-        "en": {
-            "singular": "sketch",
-            "plural": "sketches"
-        },
-        "fi": {
-            "singular": "luonnos",
-            "plural": "luonnokset"
-        },
-        "nl": {
-            "singular": "de schets",
-            "plural": "de schetsen"
+    "concepts": {
+        "sketch": {
+            "labels": {
+                "en": {
+                    "singular": "sketch",
+                    "plural": "sketches"
+                },
+                "fi": {
+                    "singular": "luonnos",
+                    "plural": "luonnokset"
+                },
+                "nl": {
+                    "singular": "de schets",
+                    "plural": "de schetsen"
+                }
+            }
         }
     }
 }

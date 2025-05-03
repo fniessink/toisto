@@ -1,13 +1,17 @@
 {
-    "shift": {
-        "roots": {
-            "fi": [
-                "work",
-                "turn"
-            ]
-        },
-        "en": "shift",
-        "fi": "työvuoro",
-        "nl": "de dienst"
+    "concepts": {
+        "shift": {
+            "roots": {
+                "fi": [
+                    "work",
+                    "turn"
+                ]
+            },
+            "labels": {
+                "en": "shift",
+                "fi": "työvuoro",
+                "nl": "de dienst"
+            }
+        }
     }
 }

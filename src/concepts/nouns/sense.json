@@ -1,7 +1,11 @@
 {
-    "sense (sound practical judgment)": {
-        "en": "sense",
-        "fi": "järki",
-        "nl": "het verstand"
+    "concepts": {
+        "sense (sound practical judgment)": {
+            "labels": {
+                "en": "sense",
+                "fi": "järki",
+                "nl": "het verstand"
+            }
+        }
     }
 }

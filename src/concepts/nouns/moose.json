@@ -1,14 +1,18 @@
 {
-    "moose": {
-        "hypernym": "animal",
-        "en": "moose",
-        "fi": {
-            "singular": "hirvi",
-            "plural": "hirvet"
-        },
-        "nl": {
-            "singular": "de eland",
-            "plural": "de elanden"
+    "concepts": {
+        "moose": {
+            "hypernym": "animal",
+            "labels": {
+                "en": "moose",
+                "fi": {
+                    "singular": "hirvi",
+                    "plural": "hirvet"
+                },
+                "nl": {
+                    "singular": "de eland",
+                    "plural": "de elanden"
+                }
+            }
         }
     }
 }

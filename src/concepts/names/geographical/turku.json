@@ -1,9 +1,13 @@
 {
-    "turku": {
-        "holonym": "finland",
-        "hypernym": "city",
-        "en": "Turku",
-        "fi": "Turku",
-        "nl": "Turku"
+    "concepts": {
+        "turku": {
+            "holonym": "finland",
+            "hypernym": "city",
+            "labels": {
+                "en": "Turku",
+                "fi": "Turku",
+                "nl": "Turku"
+            }
+        }
     }
 }

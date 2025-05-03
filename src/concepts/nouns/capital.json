@@ -1,27 +1,31 @@
 {
-    "capital": {
-        "hypernym": "city",
-        "roots": {
-            "fi": [
-                "city",
-                "head (main part)"
-            ],
-            "nl": [
-                "city",
-                "head (main part)"
-            ]
-        },
-        "en": {
-            "singular": "capital",
-            "plural": "capitals"
-        },
-        "fi": {
-            "singular": "pääkaupunki",
-            "plural": "pääkaupungit"
-        },
-        "nl": {
-            "singular": "de hoofdstad",
-            "plural": "de hoofdsteden"
+    "concepts": {
+        "capital": {
+            "hypernym": "city",
+            "roots": {
+                "fi": [
+                    "city",
+                    "head (main part)"
+                ],
+                "nl": [
+                    "city",
+                    "head (main part)"
+                ]
+            },
+            "labels": {
+                "en": {
+                    "singular": "capital",
+                    "plural": "capitals"
+                },
+                "fi": {
+                    "singular": "pääkaupunki",
+                    "plural": "pääkaupungit"
+                },
+                "nl": {
+                    "singular": "de hoofdstad",
+                    "plural": "de hoofdsteden"
+                }
+            }
         }
     }
 }
