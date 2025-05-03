@@ -8,11 +8,13 @@ version = "0.35.0"
 authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["language learning", "finnish", "dutch", "english"]
 requires-python = ">=3.10"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: Apache Software License",
     "Natural Language :: English",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
@@ -51,9 +53,9 @@ dev = [
 toisto = "toisto.app:main"
 
 [project.urls]
-"Homepage" = "https://github.com/fniessink/toisto"
-"Issue tracker" = "https://github.com/fniessink/toisto/issues"
-"Changelog" = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
+Repository = "https://github.com/fniessink/toisto"
+Issues = "https://github.com/fniessink/toisto/issues"
+Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
 
 [tool.coverage.run]
 branch = true
@@ -130,9 +132,6 @@ section-order = [
 "__init__.py" = ["D104"]
 "tests/*" = ["ANN201"]
 ".vulture-whitelist.py" = ["ALL"]
-
-[tool.setuptools]
-license-files = [] # Work-around for https://github.com/astral-sh/uv/issues/9513
 
 [tool.setuptools.packages.find]
 where = ["src"]
