@@ -1,7 +1,11 @@
 {
-    "dirt": {
-        "en": "dirt",
-        "fi": "lika",
-        "nl": "het vuil"
+    "concepts": {
+        "dirt": {
+            "labels": {
+                "en": "dirt",
+                "fi": "lika",
+                "nl": "het vuil"
+            }
+        }
     }
 }

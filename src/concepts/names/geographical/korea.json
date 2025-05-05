@@ -1,8 +1,12 @@
 {
-    "korea": {
-        "hypernym": "country",
-        "en": "Korea",
-        "fi": "Korea",
-        "nl": "Korea"
+    "concepts": {
+        "korea": {
+            "hypernym": "country",
+            "labels": {
+                "en": "Korea",
+                "fi": "Korea",
+                "nl": "Korea"
+            }
+        }
     }
 }

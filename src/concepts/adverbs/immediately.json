@@ -1,10 +1,14 @@
 {
-    "immediately": {
-        "en": [
-            "immediately",
-            "right away"
-        ],
-        "fi": "heti",
-        "nl": "meteen"
+    "concepts": {
+        "immediately": {
+            "labels": {
+                "en": [
+                    "immediately",
+                    "right away"
+                ],
+                "fi": "heti",
+                "nl": "meteen"
+            }
+        }
     }
 }

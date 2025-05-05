@@ -1,19 +1,23 @@
 {
-    "bye": {
-        "en": [
-            "Bye!",
-            "Bye bye!"
-        ],
-        "fi": [
-            "Hei hei!",
-            "Moi moi!",
-            "Heippa!",
-            "Moikka!;leaving"
-        ],
-        "nl": [
-            "Doeg!",
-            "Doei!",
-            "Dag!"
-        ]
+    "concepts": {
+        "bye": {
+            "labels": {
+                "en": [
+                    "Bye!",
+                    "Bye bye!"
+                ],
+                "fi": [
+                    "Hei hei!",
+                    "Moi moi!",
+                    "Heippa!",
+                    "Moikka!;leaving"
+                ],
+                "nl": [
+                    "Doeg!",
+                    "Doei!",
+                    "Dag!"
+                ]
+            }
+        }
     }
 }

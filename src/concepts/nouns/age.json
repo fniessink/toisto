@@ -1,7 +1,11 @@
 {
-    "old age": {
-        "en": "old age",
-        "fi": "vanhuus",
-        "nl": "de ouderdom"
+    "concepts": {
+        "old age": {
+            "labels": {
+                "en": "old age",
+                "fi": "vanhuus",
+                "nl": "de ouderdom"
+            }
+        }
     }
 }

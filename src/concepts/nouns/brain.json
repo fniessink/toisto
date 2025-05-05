@@ -1,9 +1,13 @@
 {
-    "brain": {
-        "holonym": "head",
-        "hypernym": "organ",
-        "en": "brain",
-        "fi": "aivot",
-        "nl": "de hersenen"
+    "concepts": {
+        "brain": {
+            "holonym": "head",
+            "hypernym": "organ",
+            "labels": {
+                "en": "brain",
+                "fi": "aivot",
+                "nl": "de hersenen"
+            }
+        }
     }
 }

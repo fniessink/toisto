@@ -1,10 +1,14 @@
 {
-    "to mourn": {
-        "en": [
-            "to mourn",
-            "to grieve"
-        ],
-        "fi": "surra",
-        "nl": "rouwen"
+    "concepts": {
+        "to mourn": {
+            "labels": {
+                "en": [
+                    "to mourn",
+                    "to grieve"
+                ],
+                "fi": "surra",
+                "nl": "rouwen"
+            }
+        }
     }
 }

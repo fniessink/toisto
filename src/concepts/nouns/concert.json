@@ -1,35 +1,39 @@
 {
-    "concert": {
-        "involves": "musical instrument",
-        "en": {
-            "singular": [
-                "concert",
-                "gig*"
-            ],
-            "plural": [
-                "concerts",
-                "gigs*"
-            ]
-        },
-        "fi": {
-            "singular": [
-                "konsertti",
-                "keikka*"
-            ],
-            "plural": [
-                "konsertit",
-                "keikat*"
-            ]
-        },
-        "nl": {
-            "singular": [
-                "het concert",
-                "het optreden"
-            ],
-            "plural": [
-                "de concerten",
-                "de optredens"
-            ]
+    "concepts": {
+        "concert": {
+            "involves": "musical instrument",
+            "labels": {
+                "en": {
+                    "singular": [
+                        "concert",
+                        "gig*"
+                    ],
+                    "plural": [
+                        "concerts",
+                        "gigs*"
+                    ]
+                },
+                "fi": {
+                    "singular": [
+                        "konsertti",
+                        "keikka*"
+                    ],
+                    "plural": [
+                        "konsertit",
+                        "keikat*"
+                    ]
+                },
+                "nl": {
+                    "singular": [
+                        "het concert",
+                        "het optreden"
+                    ],
+                    "plural": [
+                        "de concerten",
+                        "de optredens"
+                    ]
+                }
+            }
         }
     }
 }

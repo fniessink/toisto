@@ -1,7 +1,11 @@
 {
-    "present": {
-        "en": "present",
-        "fi": "tuliainen",
-        "nl": "het cadeautje|het kadootje"
+    "concepts": {
+        "present": {
+            "labels": {
+                "en": "present",
+                "fi": "tuliainen",
+                "nl": "het cadeautje|het kadootje"
+            }
+        }
     }
 }

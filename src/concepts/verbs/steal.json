@@ -1,10 +1,14 @@
 {
-    "to steal": {
-        "en": "to steal",
-        "fi": [
-            "varastaa",
-            "viedä*"
-        ],
-        "nl": "stelen"
+    "concepts": {
+        "to steal": {
+            "labels": {
+                "en": "to steal",
+                "fi": [
+                    "varastaa",
+                    "viedä*"
+                ],
+                "nl": "stelen"
+            }
+        }
     }
 }

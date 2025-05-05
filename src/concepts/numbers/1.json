@@ -1,23 +1,27 @@
 {
-    "1": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "one",
-            "ordinal": "first"
-        },
-        "fi": {
-            "cardinal": [
-                "yksi",
-                "yks*"
-            ],
-            "ordinal": [
-                "ensimmäinen",
-                "eka*"
-            ]
-        },
-        "nl": {
-            "cardinal": "één|een",
-            "ordinal": "eerste"
+    "concepts": {
+        "1": {
+            "hypernym": "number",
+            "labels": {
+                "en": {
+                    "cardinal": "one",
+                    "ordinal": "first"
+                },
+                "fi": {
+                    "cardinal": [
+                        "yksi",
+                        "yks*"
+                    ],
+                    "ordinal": [
+                        "ensimmäinen",
+                        "eka*"
+                    ]
+                },
+                "nl": {
+                    "cardinal": "één|een",
+                    "ordinal": "eerste"
+                }
+            }
         }
     }
 }

@@ -1,16 +1,20 @@
 {
-    "portrait": {
-        "en": {
-            "singular": "portrait",
-            "plural": "portraits"
-        },
-        "fi": {
-            "singular": "muotokuva",
-            "plural": "muotokuvat"
-        },
-        "nl": {
-            "singular": "het portret",
-            "plural": "de portretten"
+    "concepts": {
+        "portrait": {
+            "labels": {
+                "en": {
+                    "singular": "portrait",
+                    "plural": "portraits"
+                },
+                "fi": {
+                    "singular": "muotokuva",
+                    "plural": "muotokuvat"
+                },
+                "nl": {
+                    "singular": "het portret",
+                    "plural": "de portretten"
+                }
+            }
         }
     }
 }

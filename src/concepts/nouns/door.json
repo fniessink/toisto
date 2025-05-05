@@ -1,38 +1,44 @@
 {
-    "door": {
-        "holonym": "wall",
-        "en": {
-            "singular": "door",
-            "plural": "doors"
+    "concepts": {
+        "door": {
+            "holonym": "wall",
+            "labels": {
+                "en": {
+                    "singular": "door",
+                    "plural": "doors"
+                },
+                "fi": {
+                    "singular": "ovi",
+                    "plural": "ovet"
+                },
+                "nl": {
+                    "singular": "de deur",
+                    "plural": "de deuren"
+                }
+            }
         },
-        "fi": {
-            "singular": "ovi",
-            "plural": "ovet"
-        },
-        "nl": {
-            "singular": "de deur",
-            "plural": "de deuren"
+        "the door is locked": {
+            "roots": {
+                "en": [
+                    "to be",
+                    "door"
+                ],
+                "fi": [
+                    "to be",
+                    "door",
+                    "lock"
+                ],
+                "nl": [
+                    "to be",
+                    "door",
+                    "lock"
+                ]
+            },
+            "labels": {
+                "en": "The door is locked.",
+                "fi": "Ovi on lukossa.",
+                "nl": "De deur is op slot."
+            }
         }
-    },
-    "the door is locked": {
-        "roots": {
-            "en": [
-                "to be",
-                "door"
-            ],
-            "fi": [
-                "to be",
-                "door",
-                "lock"
-            ],
-            "nl": [
-                "to be",
-                "door",
-                "lock"
-            ]
-        },
-        "en": "The door is locked.",
-        "fi": "Ovi on lukossa.",
-        "nl": "De deur is op slot."
     }
 }

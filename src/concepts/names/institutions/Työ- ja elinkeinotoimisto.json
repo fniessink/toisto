@@ -1,13 +1,17 @@
 {
-    "Työ- ja elinkeinotoimisto": {
-        "en": "(Finnish job centre)",
-        "fi": {
-            "full form": [
-                "Työ- ja elinkeinotoimisto",
-                "työkkäri*"
-            ],
-            "abbreviation": "TE-toimisto"
-        },
-        "nl": "(Fins arbeidsbureau)"
+    "concepts": {
+        "Työ- ja elinkeinotoimisto": {
+            "labels": {
+                "en": "(Finnish job centre)",
+                "fi": {
+                    "full form": [
+                        "Työ- ja elinkeinotoimisto",
+                        "työkkäri*"
+                    ],
+                    "abbreviation": "TE-toimisto"
+                },
+                "nl": "(Fins arbeidsbureau)"
+            }
+        }
     }
 }

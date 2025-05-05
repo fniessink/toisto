@@ -1,8 +1,12 @@
 {
-    "perch": {
-        "hypernym": "fish",
-        "en": "perch",
-        "fi": "ahven",
-        "nl": "de baars"
+    "concepts": {
+        "perch": {
+            "hypernym": "fish",
+            "labels": {
+                "en": "perch",
+                "fi": "ahven",
+                "nl": "de baars"
+            }
+        }
     }
 }

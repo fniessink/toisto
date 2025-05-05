@@ -1,24 +1,28 @@
 {
-    "80": {
-        "hypernym": "number",
-        "roots": [
-            "8",
-            "10"
-        ],
-        "en": {
-            "cardinal": "eighty",
-            "ordinal": "eightieth"
-        },
-        "fi": {
-            "cardinal": [
-                "kahdeksankymmentä",
-                "kaheksankyt*"
+    "concepts": {
+        "80": {
+            "hypernym": "number",
+            "roots": [
+                "8",
+                "10"
             ],
-            "ordinal": "kahdeksaskymmenes"
-        },
-        "nl": {
-            "cardinal": "tachtig",
-            "ordinal": "tachtigste"
+            "labels": {
+                "en": {
+                    "cardinal": "eighty",
+                    "ordinal": "eightieth"
+                },
+                "fi": {
+                    "cardinal": [
+                        "kahdeksankymmentä",
+                        "kaheksankyt*"
+                    ],
+                    "ordinal": "kahdeksaskymmenes"
+                },
+                "nl": {
+                    "cardinal": "tachtig",
+                    "ordinal": "tachtigste"
+                }
+            }
         }
     }
 }

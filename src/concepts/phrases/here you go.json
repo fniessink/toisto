@@ -1,10 +1,14 @@
 {
-    "here you go": {
-        "roots": {
-            "fi": "good"
-        },
-        "en": "Here you go!",
-        "fi": "Ole hyvä!",
-        "nl": "Alsjeblieft!|Alstublieft!"
+    "concepts": {
+        "here you go": {
+            "roots": {
+                "fi": "good"
+            },
+            "labels": {
+                "en": "Here you go!",
+                "fi": "Ole hyvä!",
+                "nl": "Alsjeblieft!|Alstublieft!"
+            }
+        }
     }
 }

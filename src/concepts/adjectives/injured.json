@@ -1,7 +1,11 @@
 {
-    "injured": {
-        "en": "injured",
-        "fi": "loukkaantunut",
-        "nl": "gewond"
+    "concepts": {
+        "injured": {
+            "labels": {
+                "en": "injured",
+                "fi": "loukkaantunut",
+                "nl": "gewond"
+            }
+        }
     }
 }

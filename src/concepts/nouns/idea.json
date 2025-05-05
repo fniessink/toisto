@@ -1,16 +1,20 @@
 {
-    "idea": {
-        "en": {
-            "singular": "idea",
-            "plural": "ideas"
-        },
-        "fi": {
-            "singular": "idea",
-            "plural": "ideat"
-        },
-        "nl": {
-            "singular": "het idee|de idee;;'idee' is normally a neuter noun (het idee), but it can be considered feminine (de idee) for a philosophical or abstract idea",
-            "plural": "de ideeën"
+    "concepts": {
+        "idea": {
+            "labels": {
+                "en": {
+                    "singular": "idea",
+                    "plural": "ideas"
+                },
+                "fi": {
+                    "singular": "idea",
+                    "plural": "ideat"
+                },
+                "nl": {
+                    "singular": "het idee|de idee;;'idee' is normally a neuter noun (het idee), but it can be considered feminine (de idee) for a philosophical or abstract idea",
+                    "plural": "de ideeën"
+                }
+            }
         }
     }
 }

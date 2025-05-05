@@ -1,26 +1,32 @@
 {
-    "event": {
-        "en": {
-            "singular": "event",
-            "plural": "events"
+    "concepts": {
+        "event": {
+            "labels": {
+                "en": {
+                    "singular": "event",
+                    "plural": "events"
+                },
+                "fi": {
+                    "singular": "tapahtuma",
+                    "plural": "tapahtumat"
+                },
+                "nl": {
+                    "singular": "het evenement",
+                    "plural": "de evenementen"
+                }
+            }
         },
-        "fi": {
-            "singular": "tapahtuma",
-            "plural": "tapahtumat"
-        },
-        "nl": {
-            "singular": "het evenement",
-            "plural": "de evenementen"
+        "cultural event": {
+            "hypernym": "event",
+            "roots": [
+                "culture",
+                "event"
+            ],
+            "labels": {
+                "en": "cultural event",
+                "fi": "kulttuuritapahtuma",
+                "nl": "het culturele evenement"
+            }
         }
-    },
-    "cultural event": {
-        "hypernym": "event",
-        "roots": [
-            "culture",
-            "event"
-        ],
-        "en": "cultural event",
-        "fi": "kulttuuritapahtuma",
-        "nl": "het culturele evenement"
     }
 }

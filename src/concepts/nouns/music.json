@@ -1,26 +1,32 @@
 {
-    "music": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "music",
-        "fi": "musiikki",
-        "nl": "de muziek"
-    },
-    "musical instrument": {
-        "roots": {
-            "en": "music",
-            "nl": "music"
+    "concepts": {
+        "music": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)",
+            "labels": {
+                "en": "music",
+                "fi": "musiikki",
+                "nl": "de muziek"
+            }
         },
-        "en": {
-            "singular": "musical instrument",
-            "plural": "musical instruments"
-        },
-        "fi": {
-            "singular": "soitin",
-            "plural": "soittimet"
-        },
-        "nl": {
-            "singular": "het muziekinstrument",
-            "plural": "de muziekinstrumenten"
+        "musical instrument": {
+            "roots": {
+                "en": "music",
+                "nl": "music"
+            },
+            "labels": {
+                "en": {
+                    "singular": "musical instrument",
+                    "plural": "musical instruments"
+                },
+                "fi": {
+                    "singular": "soitin",
+                    "plural": "soittimet"
+                },
+                "nl": {
+                    "singular": "het muziekinstrument",
+                    "plural": "de muziekinstrumenten"
+                }
+            }
         }
     }
 }

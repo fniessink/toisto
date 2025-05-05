@@ -1,140 +1,152 @@
 {
-    "child": {
-        "antonym": "parent",
-        "holonym": "family",
-        "en": {
-            "root": {
-                "singular": "child",
-                "plural": "children"
-            },
-            "diminutive": {
-                "singular": "(little child)",
-                "plural": "(little children)"
+    "concepts": {
+        "child": {
+            "antonym": "parent",
+            "holonym": "family",
+            "labels": {
+                "en": {
+                    "root": {
+                        "singular": "child",
+                        "plural": "children"
+                    },
+                    "diminutive": {
+                        "singular": "(little child)",
+                        "plural": "(little children)"
+                    }
+                },
+                "fi": {
+                    "root": {
+                        "singular": "lapsi",
+                        "plural": "lapset"
+                    },
+                    "diminutive": {
+                        "singular": "(pieni lapsi)",
+                        "plural": "(pienet lapset)"
+                    }
+                },
+                "nl": {
+                    "root": {
+                        "singular": "het kind",
+                        "plural": "de kinderen"
+                    },
+                    "diminutive": {
+                        "singular": "het kindje",
+                        "plural": [
+                            "de kindjes",
+                            "de kindertjes"
+                        ]
+                    }
+                }
             }
         },
-        "fi": {
-            "root": {
-                "singular": "lapsi",
-                "plural": "lapset"
-            },
-            "diminutive": {
-                "singular": "(pieni lapsi)",
-                "plural": "(pienet lapset)"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "het kind",
-                "plural": "de kinderen"
-            },
-            "diminutive": {
-                "singular": "het kindje",
-                "plural": [
-                    "de kindjes",
-                    "de kindertjes"
+        "childhood": {
+            "roots": {
+                "en": "child",
+                "fi": "child",
+                "nl": [
+                    "child",
+                    "time"
                 ]
+            },
+            "labels": {
+                "en": "childhood",
+                "fi": "lapsuus",
+                "nl": "de kindertijd"
             }
-        }
-    },
-    "childhood": {
-        "roots": {
-            "en": "child",
-            "fi": "child",
-            "nl": [
+        },
+        "daughter": {
+            "antonym": [
+                "mother",
+                "son"
+            ],
+            "holonym": "family",
+            "hypernym": "child",
+            "labels": {
+                "en": {
+                    "root": {
+                        "singular": "daughter",
+                        "plural": "daughters"
+                    },
+                    "diminutive": {
+                        "singular": "(little  daughter)",
+                        "plural": "(little  daughters)"
+                    }
+                },
+                "fi": {
+                    "root": {
+                        "singular": "tytär",
+                        "plural": "tyttäret"
+                    },
+                    "diminutive": {
+                        "singular": "(pieni tytär)",
+                        "plural": "(pienet tytäret)"
+                    }
+                },
+                "nl": {
+                    "root": {
+                        "singular": "de dochter",
+                        "plural": "de dochters"
+                    },
+                    "diminutive": {
+                        "singular": "het dochtertje",
+                        "plural": "de dochtertjes"
+                    }
+                }
+            }
+        },
+        "son": {
+            "antonym": [
+                "daughter",
+                "father"
+            ],
+            "holonym": "family",
+            "hypernym": "child",
+            "labels": {
+                "en": {
+                    "root": {
+                        "singular": "son",
+                        "plural": "sons"
+                    },
+                    "diminutive": {
+                        "singular": "(little son)",
+                        "plural": "(little sons)"
+                    }
+                },
+                "fi": {
+                    "root": {
+                        "singular": "poika",
+                        "plural": "pojat"
+                    },
+                    "diminutive": {
+                        "singular": "(pieni poika)",
+                        "plural": "(pienet pojat)"
+                    }
+                },
+                "nl": {
+                    "root": {
+                        "singular": "de zoon",
+                        "plural": "de zonen"
+                    },
+                    "diminutive": {
+                        "singular": "het zoontje",
+                        "plural": "de zoontjes"
+                    }
+                }
+            }
+        },
+        "they have x children and y grandchildren": {
+            "roots": [
+                "to have",
+                "3",
                 "child",
-                "time"
-            ]
-        },
-        "en": "childhood",
-        "fi": "lapsuus",
-        "nl": "de kindertijd"
-    },
-    "daughter": {
-        "antonym": [
-            "mother",
-            "son"
-        ],
-        "holonym": "family",
-        "hypernym": "child",
-        "en": {
-            "root": {
-                "singular": "daughter",
-                "plural": "daughters"
-            },
-            "diminutive": {
-                "singular": "(little  daughter)",
-                "plural": "(little  daughters)"
-            }
-        },
-        "fi": {
-            "root": {
-                "singular": "tytär",
-                "plural": "tyttäret"
-            },
-            "diminutive": {
-                "singular": "(pieni tytär)",
-                "plural": "(pienet tytäret)"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "de dochter",
-                "plural": "de dochters"
-            },
-            "diminutive": {
-                "singular": "het dochtertje",
-                "plural": "de dochtertjes"
+                "6",
+                "grandchild"
+            ],
+            "labels": {
+                "en": "They have three children and six grandchildren.",
+                "fi": "Heillä on kolme lasta ja kuusi lastenlasta.",
+                "nl": "Zij hebben drie kinderen en zes kleinkinderen."
             }
         }
-    },
-    "son": {
-        "antonym": [
-            "daughter",
-            "father"
-        ],
-        "holonym": "family",
-        "hypernym": "child",
-        "en": {
-            "root": {
-                "singular": "son",
-                "plural": "sons"
-            },
-            "diminutive": {
-                "singular": "(little son)",
-                "plural": "(little sons)"
-            }
-        },
-        "fi": {
-            "root": {
-                "singular": "poika",
-                "plural": "pojat"
-            },
-            "diminutive": {
-                "singular": "(pieni poika)",
-                "plural": "(pienet pojat)"
-            }
-        },
-        "nl": {
-            "root": {
-                "singular": "de zoon",
-                "plural": "de zonen"
-            },
-            "diminutive": {
-                "singular": "het zoontje",
-                "plural": "de zoontjes"
-            }
-        }
-    },
-    "they have x children and y grandchildren": {
-        "roots": [
-            "to have",
-            "3",
-            "child",
-            "6",
-            "grandchild"
-        ],
-        "en": "They have three children and six grandchildren.",
-        "fi": "Heillä on kolme lasta ja kuusi lastenlasta.",
-        "nl": "Zij hebben drie kinderen en zes kleinkinderen."
     }
 }

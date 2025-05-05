@@ -1,7 +1,11 @@
 {
-    "to ride": {
-        "en": "to ride",
-        "fi": "ratsastaa",
-        "nl": "paardrijden"
+    "concepts": {
+        "to ride": {
+            "labels": {
+                "en": "to ride",
+                "fi": "ratsastaa",
+                "nl": "paardrijden"
+            }
+        }
     }
 }

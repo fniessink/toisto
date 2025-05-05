@@ -1,8 +1,12 @@
 {
-    "to stop": {
-        "antonym": "to start",
-        "en": "to stop",
-        "fi": "pysähtyä",
-        "nl": "stoppen"
+    "concepts": {
+        "to stop": {
+            "antonym": "to start",
+            "labels": {
+                "en": "to stop",
+                "fi": "pysähtyä",
+                "nl": "stoppen"
+            }
+        }
     }
 }

@@ -1,8 +1,12 @@
 {
-    "latvia": {
-        "hypernym": "country",
-        "en": "Latvia",
-        "fi": "Latvia",
-        "nl": "Letland"
+    "concepts": {
+        "latvia": {
+            "hypernym": "country",
+            "labels": {
+                "en": "Latvia",
+                "fi": "Latvia",
+                "nl": "Letland"
+            }
+        }
     }
 }

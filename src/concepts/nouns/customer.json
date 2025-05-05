@@ -1,16 +1,20 @@
 {
-    "customer": {
-        "en": {
-            "singular": "customer",
-            "plural": "customers"
-        },
-        "fi": {
-            "singular": "asiakas",
-            "plural": "asiakkaat"
-        },
-        "nl": {
-            "singular": "de klant",
-            "plural": "de klanten"
+    "concepts": {
+        "customer": {
+            "labels": {
+                "en": {
+                    "singular": "customer",
+                    "plural": "customers"
+                },
+                "fi": {
+                    "singular": "asiakas",
+                    "plural": "asiakkaat"
+                },
+                "nl": {
+                    "singular": "de klant",
+                    "plural": "de klanten"
+                }
+            }
         }
     }
 }

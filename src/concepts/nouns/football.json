@@ -1,31 +1,37 @@
 {
-    "football": {
-        "example": "I play football",
-        "hypernym": "team sport",
-        "roots": [
-            "ball",
-            "foot"
-        ],
-        "en": "football",
-        "fi": [
-            "jalkapallo",
-            "futis*"
-        ],
-        "nl": "de voetbal"
-    },
-    "I play football": {
-        "roots": [
-            "to play a sport",
-            "football"
-        ],
-        "en": "I play football.",
-        "fi": [
-            "Minä pelaan jalkapalloa.",
-            "Mä pelaan futista.*"
-        ],
-        "nl": [
-            "Ik speel voetbal.",
-            "Ik voetbal."
-        ]
+    "concepts": {
+        "football": {
+            "example": "I play football",
+            "hypernym": "team sport",
+            "roots": [
+                "ball",
+                "foot"
+            ],
+            "labels": {
+                "en": "football",
+                "fi": [
+                    "jalkapallo",
+                    "futis*"
+                ],
+                "nl": "de voetbal"
+            }
+        },
+        "I play football": {
+            "roots": [
+                "to play a sport",
+                "football"
+            ],
+            "labels": {
+                "en": "I play football.",
+                "fi": [
+                    "Minä pelaan jalkapalloa.",
+                    "Mä pelaan futista.*"
+                ],
+                "nl": [
+                    "Ik speel voetbal.",
+                    "Ik voetbal."
+                ]
+            }
+        }
     }
 }

@@ -107,11 +107,13 @@ class ToistoTestCase(unittest.TestCase):
         return self.create_concept(
             "means of transportation",
             dict(
-                en="means of transportation",
-                nl=dict(
-                    singular="het vervoersmiddel",
-                    plural="de vervoersmiddelen",
-                ),
+                labels=dict(
+                    en="means of transportation",
+                    nl=dict(
+                        singular="het vervoersmiddel",
+                        plural="de vervoersmiddelen",
+                    ),
+                )
             ),
         )
 
@@ -120,25 +122,27 @@ class ToistoTestCase(unittest.TestCase):
         return self.create_concept(
             "to have",
             dict(
-                en=dict(
-                    singular={"first person": "I have", "second person": "you have", "third person": "she has"},
-                    plural={"first person": "we have", "second person": "you have", "third person": "they have"},
-                ),
-                fi=dict(
-                    singular={
-                        "first person": "minulla on",
-                        "second person": "sinulla on",
-                        "third person": "hänellä on",
-                    },
-                    plural={"first person": "meillä on", "second person": "teillä on", "third person": "heillä on"},
-                ),
-                nl=dict(
-                    singular={"first person": "ik heb", "second person": "jij hebt", "third person": "zij heeft"},
-                    plural={
-                        "first person": "wij hebben",
-                        "second person": "jullie hebben",
-                        "third person": "zij hebben",
-                    },
-                ),
+                labels=dict(
+                    en=dict(
+                        singular={"first person": "I have", "second person": "you have", "third person": "she has"},
+                        plural={"first person": "we have", "second person": "you have", "third person": "they have"},
+                    ),
+                    fi=dict(
+                        singular={
+                            "first person": "minulla on",
+                            "second person": "sinulla on",
+                            "third person": "hänellä on",
+                        },
+                        plural={"first person": "meillä on", "second person": "teillä on", "third person": "heillä on"},
+                    ),
+                    nl=dict(
+                        singular={"first person": "ik heb", "second person": "jij hebt", "third person": "zij heeft"},
+                        plural={
+                            "first person": "wij hebben",
+                            "second person": "jullie hebben",
+                            "third person": "zij hebben",
+                        },
+                    ),
+                )
             ),
         )

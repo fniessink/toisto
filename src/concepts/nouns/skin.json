@@ -1,8 +1,12 @@
 {
-    "skin": {
-        "holonym": "body",
-        "en": "skin",
-        "fi": "iho",
-        "nl": "de huid"
+    "concepts": {
+        "skin": {
+            "holonym": "body",
+            "labels": {
+                "en": "skin",
+                "fi": "iho",
+                "nl": "de huid"
+            }
+        }
     }
 }

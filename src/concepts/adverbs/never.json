@@ -1,7 +1,11 @@
 {
-    "never": {
-        "en": "never",
-        "fi": "ei koskaan",
-        "nl": "nooit"
+    "concepts": {
+        "never": {
+            "labels": {
+                "en": "never",
+                "fi": "ei koskaan",
+                "nl": "nooit"
+            }
+        }
     }
 }

@@ -1,10 +1,14 @@
 {
-    "song": {
-        "en": "song",
-        "fi": [
-            "laulu",
-            "biisi*"
-        ],
-        "nl": "het nummer"
+    "concepts": {
+        "song": {
+            "labels": {
+                "en": "song",
+                "fi": [
+                    "laulu",
+                    "biisi*"
+                ],
+                "nl": "het nummer"
+            }
+        }
     }
 }

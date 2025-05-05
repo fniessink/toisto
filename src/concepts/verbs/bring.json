@@ -1,10 +1,14 @@
 {
-    "to bring": {
-        "en": "to bring",
-        "fi": [
-            "viedä",
-            "heittää*"
-        ],
-        "nl": "brengen"
+    "concepts": {
+        "to bring": {
+            "labels": {
+                "en": "to bring",
+                "fi": [
+                    "viedä",
+                    "heittää*"
+                ],
+                "nl": "brengen"
+            }
+        }
     }
 }

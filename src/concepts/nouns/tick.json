@@ -1,8 +1,12 @@
 {
-    "tick": {
-        "hypernym": "insect",
-        "en": "tick",
-        "fi": "punkki",
-        "nl": "de teek"
+    "concepts": {
+        "tick": {
+            "hypernym": "insect",
+            "labels": {
+                "en": "tick",
+                "fi": "punkki",
+                "nl": "de teek"
+            }
+        }
     }
 }

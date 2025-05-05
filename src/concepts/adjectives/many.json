@@ -1,32 +1,38 @@
 {
-    "many/much": {
-        "antonym": "few/a little",
-        "en": {
-            "positive degree": [
-                "many;;Use 'many' with countable nouns and 'much' with uncountable nouns",
-                "much;;Use 'much' with uncountable noins and 'many' with countable nouns"
-            ],
-            "comparative degree": "more",
-            "superlative degree": "most"
+    "concepts": {
+        "many/much": {
+            "antonym": "few/a little",
+            "labels": {
+                "en": {
+                    "positive degree": [
+                        "many;;Use 'many' with countable nouns and 'much' with uncountable nouns",
+                        "much;;Use 'much' with uncountable noins and 'many' with countable nouns"
+                    ],
+                    "comparative degree": "more",
+                    "superlative degree": "most"
+                },
+                "fi": {
+                    "positive degree": "paljon",
+                    "comparative degree": "enemmän",
+                    "superlative degree": "eniten"
+                },
+                "nl": {
+                    "positive degree": "veel",
+                    "comparative degree": "meer",
+                    "superlative degree": "meest"
+                }
+            }
         },
-        "fi": {
-            "positive degree": "paljon",
-            "comparative degree": "enemmän",
-            "superlative degree": "eniten"
-        },
-        "nl": {
-            "positive degree": "veel",
-            "comparative degree": "meer",
-            "superlative degree": "meest"
+        "very many/much": {
+            "roots": "many/much",
+            "labels": {
+                "en": [
+                    "very much",
+                    "very much"
+                ],
+                "fi": "kovin paljon",
+                "nl": "erg veel"
+            }
         }
-    },
-    "very many/much": {
-        "roots": "many/much",
-        "en": [
-            "very much",
-            "very much"
-        ],
-        "fi": "kovin paljon",
-        "nl": "erg veel"
     }
 }

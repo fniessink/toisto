@@ -34,8 +34,8 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock) -> None:
         """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "label1", "nl": "Label2"}}\n',
-            '{"concept_id": {"fi": "Label3", "nl": "Label4"}}\n',
+            '{"concepts": {"concept_id": {"labels": {"fi": "label1", "nl": "Label2"}}}}\n',
+            '{"concepts": {"concept_id": {"labels": {"fi": "Label3", "nl": "Label4"}}}}\n',
         ]
         self.assertRaises(SystemExit, self.loader.load_concepts, Path("file1"), Path("file2"))
         self.assertIn(
@@ -49,9 +49,9 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts(self, path_open: Mock) -> None:
         """Test that the concepts are read."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
+            '{"concepts": {"concept_id": {"labels": {"fi": "Label1", "nl": "Label2"}}}}\n',
         ]
-        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
+        concept = self.create_concept("concept_id", dict(labels={FI: "Label1", NL: "Label2"}))
         self.assertEqual({concept}, self.loader.load_concepts(Path("filename")))
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
@@ -61,7 +61,7 @@ class LoadConceptsTest(ToistoTestCase):
     def test_load_concepts_from_folder(self, path_open: Mock) -> None:
         """Test that the concepts are read from folders."""
         path_open.return_value.__enter__.return_value.read.side_effect = [
-            '{"concept_id": {"fi": "Label1", "nl": "Label2"}}\n',
+            '{"concepts": {"concept_id": {"labels": {"fi": "Label1", "nl": "Label2"}}}}\n',
         ]
-        concept = self.create_concept("concept_id", {FI: "Label1", NL: "Label2"})
+        concept = self.create_concept("concept_id", dict(labels={FI: "Label1", NL: "Label2"}))
         self.assertEqual({concept}, self.loader.load_concepts(Path("folder")))

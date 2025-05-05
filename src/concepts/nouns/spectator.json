@@ -1,16 +1,20 @@
 {
-    "spectator": {
-        "en": {
-            "singular": "spectator",
-            "plural": "spectators"
-        },
-        "fi": {
-            "singular": "katsjoja",
-            "plural": "katsjojat"
-        },
-        "nl": {
-            "singular": "de toeschouwer",
-            "plural": "de toeschouwers"
+    "concepts": {
+        "spectator": {
+            "labels": {
+                "en": {
+                    "singular": "spectator",
+                    "plural": "spectators"
+                },
+                "fi": {
+                    "singular": "katsjoja",
+                    "plural": "katsjojat"
+                },
+                "nl": {
+                    "singular": "de toeschouwer",
+                    "plural": "de toeschouwers"
+                }
+            }
         }
     }
 }

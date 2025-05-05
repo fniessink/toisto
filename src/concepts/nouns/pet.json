@@ -1,33 +1,37 @@
 {
-    "pet": {
-        "hypernym": "animal",
-        "roots": {
-            "fi": [
-                "animal",
-                "home"
-            ],
-            "nl": [
-                "animal",
-                "house"
-            ]
-        },
-        "en": {
-            "singular": "pet",
-            "plural": "pets"
-        },
-        "fi": {
-            "singular": [
-                "lemmikkieläin|lemmikki",
-                "kotieläin"
-            ],
-            "plural": [
-                "lemmikkieläimet|lemmikit",
-                "kotieläimet"
-            ]
-        },
-        "nl": {
-            "singular": "het huisdier",
-            "plural": "de huisdieren"
+    "concepts": {
+        "pet": {
+            "hypernym": "animal",
+            "roots": {
+                "fi": [
+                    "animal",
+                    "home"
+                ],
+                "nl": [
+                    "animal",
+                    "house"
+                ]
+            },
+            "labels": {
+                "en": {
+                    "singular": "pet",
+                    "plural": "pets"
+                },
+                "fi": {
+                    "singular": [
+                        "lemmikkieläin|lemmikki",
+                        "kotieläin"
+                    ],
+                    "plural": [
+                        "lemmikkieläimet|lemmikit",
+                        "kotieläimet"
+                    ]
+                },
+                "nl": {
+                    "singular": "het huisdier",
+                    "plural": "de huisdieren"
+                }
+            }
         }
     }
 }

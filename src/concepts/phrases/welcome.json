@@ -1,8 +1,12 @@
 {
-    "welcome": {
-        "hypernym": "greeting",
-        "en": "Welcome!",
-        "fi": "Tervetuloa!",
-        "nl": "Welkom!"
+    "concepts": {
+        "welcome": {
+            "hypernym": "greeting",
+            "labels": {
+                "en": "Welcome!",
+                "fi": "Tervetuloa!",
+                "nl": "Welkom!"
+            }
+        }
     }
 }

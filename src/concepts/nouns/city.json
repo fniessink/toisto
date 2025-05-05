@@ -1,28 +1,34 @@
 {
-    "city": {
-        "en": {
-            "singular": "city",
-            "plural": "cities"
+    "concepts": {
+        "city": {
+            "labels": {
+                "en": {
+                    "singular": "city",
+                    "plural": "cities"
+                },
+                "fi": {
+                    "singular": "kaupunki",
+                    "plural": "kaupungit"
+                },
+                "nl": {
+                    "singular": "de stad",
+                    "plural": "de steden"
+                }
+            }
         },
-        "fi": {
-            "singular": "kaupunki",
-            "plural": "kaupungit"
-        },
-        "nl": {
-            "singular": "de stad",
-            "plural": "de steden"
+        "townsman": {
+            "roots": {
+                "fi": "city",
+                "nl": "city"
+            },
+            "labels": {
+                "en": [
+                    "townsman",
+                    "townswoman"
+                ],
+                "fi": "kaupunkilainen",
+                "nl": "de stadsbewoner|de stadbewoner"
+            }
         }
-    },
-    "townsman": {
-        "roots": {
-            "fi": "city",
-            "nl": "city"
-        },
-        "en": [
-            "townsman",
-            "townswoman"
-        ],
-        "fi": "kaupunkilainen",
-        "nl": "de stadsbewoner|de stadbewoner"
     }
 }

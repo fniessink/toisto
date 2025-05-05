@@ -1,7 +1,11 @@
 {
-    "to lower": {
-        "en": "to lower",
-        "fi": "alentaa",
-        "nl": "verlagen"
+    "concepts": {
+        "to lower": {
+            "labels": {
+                "en": "to lower",
+                "fi": "alentaa",
+                "nl": "verlagen"
+            }
+        }
     }
 }

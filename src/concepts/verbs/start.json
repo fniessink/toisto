@@ -1,13 +1,19 @@
 {
-    "to start": {
-        "antonym": "to stop",
-        "en": "to start",
-        "fi": "aloittaa",
-        "nl": "starten"
-    },
-    "to start (doing)": {
-        "en": "to start",
-        "fi": "ruveta",
-        "nl": "starten"
+    "concepts": {
+        "to start": {
+            "antonym": "to stop",
+            "labels": {
+                "en": "to start",
+                "fi": "aloittaa",
+                "nl": "starten"
+            }
+        },
+        "to start (doing)": {
+            "labels": {
+                "en": "to start",
+                "fi": "ruveta",
+                "nl": "starten"
+            }
+        }
     }
 }

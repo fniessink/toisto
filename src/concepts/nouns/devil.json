@@ -1,7 +1,11 @@
 {
-    "devil": {
-        "en": "devil",
-        "fi": "paholainen",
-        "nl": "de duivel"
+    "concepts": {
+        "devil": {
+            "labels": {
+                "en": "devil",
+                "fi": "paholainen",
+                "nl": "de duivel"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "to miss": {
-        "en": "to miss",
-        "fi": "olla ikävä",
-        "nl": "missen"
+    "concepts": {
+        "to miss": {
+            "labels": {
+                "en": "to miss",
+                "fi": "olla ikävä",
+                "nl": "missen"
+            }
+        }
     }
 }

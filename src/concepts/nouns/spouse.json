@@ -1,55 +1,63 @@
 {
-    "wife": {
-        "holonym": "marriage",
-        "hypernym": "spouse",
-        "en": {
-            "singular": "wife",
-            "plural": "wives"
+    "concepts": {
+        "wife": {
+            "holonym": "marriage",
+            "hypernym": "spouse",
+            "labels": {
+                "en": {
+                    "singular": "wife",
+                    "plural": "wives"
+                },
+                "fi": {
+                    "singular": "aviovaimo|vaimo",
+                    "plural": "aviovaimot|vaimot"
+                },
+                "nl": {
+                    "singular": "de echtgenote",
+                    "plural": "de echtgenotes"
+                }
+            }
         },
-        "fi": {
-            "singular": "aviovaimo|vaimo",
-            "plural": "aviovaimot|vaimot"
+        "husband": {
+            "holonym": "marriage",
+            "hypernym": "spouse",
+            "labels": {
+                "en": {
+                    "singular": "husband",
+                    "plural": "husbands"
+                },
+                "fi": {
+                    "singular": "aviomies|mies",
+                    "plural": "aviomiehet|miehet"
+                },
+                "nl": {
+                    "singular": "de echtgenoot",
+                    "plural": "de echtgenoten"
+                }
+            }
         },
-        "nl": {
-            "singular": "de echtgenote",
-            "plural": "de echtgenotes"
-        }
-    },
-    "husband": {
-        "holonym": "marriage",
-        "hypernym": "spouse",
-        "en": {
-            "singular": "husband",
-            "plural": "husbands"
-        },
-        "fi": {
-            "singular": "aviomies|mies",
-            "plural": "aviomiehet|miehet"
-        },
-        "nl": {
-            "singular": "de echtgenoot",
-            "plural": "de echtgenoten"
-        }
-    },
-    "spouse": {
-        "holonym": "family",
-        "en": {
-            "singular": "spouse",
-            "plural": "spouses"
-        },
-        "fi": {
-            "singular": [
-                "aviopuoliso|puoliso",
-                "kumppani"
-            ],
-            "plural": [
-                "aviopuolisot|puolisot",
-                "kumppanit"
-            ]
-        },
-        "nl": {
-            "singular": "de partner",
-            "plural": "de partners"
+        "spouse": {
+            "holonym": "family",
+            "labels": {
+                "en": {
+                    "singular": "spouse",
+                    "plural": "spouses"
+                },
+                "fi": {
+                    "singular": [
+                        "aviopuoliso|puoliso",
+                        "kumppani"
+                    ],
+                    "plural": [
+                        "aviopuolisot|puolisot",
+                        "kumppanit"
+                    ]
+                },
+                "nl": {
+                    "singular": "de partner",
+                    "plural": "de partners"
+                }
+            }
         }
     }
 }

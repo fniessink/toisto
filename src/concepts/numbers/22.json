@@ -1,24 +1,28 @@
 {
-    "22": {
-        "hypernym": "number",
-        "roots": [
-            "2",
-            "20"
-        ],
-        "en": {
-            "cardinal": "twenty-two",
-            "ordinal": "twenty-second"
-        },
-        "fi": {
-            "cardinal": [
-                "kaksikymmentäkaksi",
-                "kakskytkaks*"
+    "concepts": {
+        "22": {
+            "hypernym": "number",
+            "roots": [
+                "2",
+                "20"
             ],
-            "ordinal": "kahdeskymmenestoinen"
-        },
-        "nl": {
-            "cardinal": "tweeëntwintig",
-            "ordinal": "tweeëntwintigste"
+            "labels": {
+                "en": {
+                    "cardinal": "twenty-two",
+                    "ordinal": "twenty-second"
+                },
+                "fi": {
+                    "cardinal": [
+                        "kaksikymmentäkaksi",
+                        "kakskytkaks*"
+                    ],
+                    "ordinal": "kahdeskymmenestoinen"
+                },
+                "nl": {
+                    "cardinal": "tweeëntwintig",
+                    "ordinal": "tweeëntwintigste"
+                }
+            }
         }
     }
 }

@@ -1,12 +1,18 @@
 {
-    "to propose": {
-        "en": "to propose",
-        "fi": "ehdottaa",
-        "nl": "voorstellen"
-    },
-    "to propose (marriage)": {
-        "en": "to propose;marriage",
-        "fi": "kosia",
-        "nl": "ten huwelijk vragen"
+    "concepts": {
+        "to propose": {
+            "labels": {
+                "en": "to propose",
+                "fi": "ehdottaa",
+                "nl": "voorstellen"
+            }
+        },
+        "to propose (marriage)": {
+            "labels": {
+                "en": "to propose;marriage",
+                "fi": "kosia",
+                "nl": "ten huwelijk vragen"
+            }
+        }
     }
 }

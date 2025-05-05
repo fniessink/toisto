@@ -1,24 +1,30 @@
 {
-    "volleyball": {
-        "example": "I play volleyball",
-        "hypernym": "team sport",
-        "en": "volleyball",
-        "fi": [
-            "lentopallo",
-            "lentis*"
-        ],
-        "nl": "het volleybal"
-    },
-    "I play volleyball": {
-        "roots": [
-            "to play a sport",
-            "volleyball"
-        ],
-        "en": "I play volleyball.",
-        "fi": [
-            "Minä pelaan lentopalloa.",
-            "Mä pelaan lentista.*"
-        ],
-        "nl": "Ik speel volleybal."
+    "concepts": {
+        "volleyball": {
+            "example": "I play volleyball",
+            "hypernym": "team sport",
+            "labels": {
+                "en": "volleyball",
+                "fi": [
+                    "lentopallo",
+                    "lentis*"
+                ],
+                "nl": "het volleybal"
+            }
+        },
+        "I play volleyball": {
+            "roots": [
+                "to play a sport",
+                "volleyball"
+            ],
+            "labels": {
+                "en": "I play volleyball.",
+                "fi": [
+                    "Minä pelaan lentopalloa.",
+                    "Mä pelaan lentista.*"
+                ],
+                "nl": "Ik speel volleybal."
+            }
+        }
     }
 }

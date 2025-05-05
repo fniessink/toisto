@@ -1,16 +1,20 @@
 {
-    "painting": {
-        "en": {
-            "singular": "painting",
-            "plural": "paintings"
-        },
-        "fi": {
-            "singular": "maalaus",
-            "plural": "maalaukset"
-        },
-        "nl": {
-            "singular": "het schilderij",
-            "plural": "de schilderijen"
+    "concepts": {
+        "painting": {
+            "labels": {
+                "en": {
+                    "singular": "painting",
+                    "plural": "paintings"
+                },
+                "fi": {
+                    "singular": "maalaus",
+                    "plural": "maalaukset"
+                },
+                "nl": {
+                    "singular": "het schilderij",
+                    "plural": "de schilderijen"
+                }
+            }
         }
     }
 }

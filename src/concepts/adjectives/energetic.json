@@ -1,7 +1,11 @@
 {
-    "energetic": {
-        "en": "energetic",
-        "fi": "energinen",
-        "nl": "energiek"
+    "concepts": {
+        "energetic": {
+            "labels": {
+                "en": "energetic",
+                "fi": "energinen",
+                "nl": "energiek"
+            }
+        }
     }
 }

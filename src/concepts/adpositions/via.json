@@ -1,10 +1,14 @@
 {
-    "via": {
-        "en": "via",
-        "fi": [
-            "välityksellä",
-            "kautta"
-        ],
-        "nl": "via"
+    "concepts": {
+        "via": {
+            "labels": {
+                "en": "via",
+                "fi": [
+                    "välityksellä",
+                    "kautta"
+                ],
+                "nl": "via"
+            }
+        }
     }
 }

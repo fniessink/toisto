@@ -1,7 +1,11 @@
 {
-    "calculator": {
-        "en": "calculator",
-        "fi": "laskin",
-        "nl": "de rekenmachine"
+    "concepts": {
+        "calculator": {
+            "labels": {
+                "en": "calculator",
+                "fi": "laskin",
+                "nl": "de rekenmachine"
+            }
+        }
     }
 }

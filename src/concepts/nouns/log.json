@@ -1,10 +1,14 @@
 {
-    "log": {
-        "en": "log",
-        "fi": "tukki",
-        "nl": [
-            "de boomstam",
-            "het blok"
-        ]
+    "concepts": {
+        "log": {
+            "labels": {
+                "en": "log",
+                "fi": "tukki",
+                "nl": [
+                    "de boomstam",
+                    "het blok"
+                ]
+            }
+        }
     }
 }

@@ -1,19 +1,23 @@
 {
-    "cute": {
-        "en": {
-            "positive degree": "cute",
-            "comparative degree": "cuter",
-            "superlative degree": "cutest"
-        },
-        "fi": {
-            "positive degree": "söpö",
-            "comparative degree": "söpömpi",
-            "superlative degree": "söpöin"
-        },
-        "nl": {
-            "positive degree": "schattig",
-            "comparative degree": "schattiger",
-            "superlative degree": "schattigst"
+    "concepts": {
+        "cute": {
+            "labels": {
+                "en": {
+                    "positive degree": "cute",
+                    "comparative degree": "cuter",
+                    "superlative degree": "cutest"
+                },
+                "fi": {
+                    "positive degree": "söpö",
+                    "comparative degree": "söpömpi",
+                    "superlative degree": "söpöin"
+                },
+                "nl": {
+                    "positive degree": "schattig",
+                    "comparative degree": "schattiger",
+                    "superlative degree": "schattigst"
+                }
+            }
         }
     }
 }

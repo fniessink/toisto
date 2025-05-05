@@ -1,29 +1,35 @@
 {
-    "at the latest": {
-        "example": "friday at the latest",
-        "en": [
-            "at the latest",
-            "no later than"
-        ],
-        "fi": [
-            "viimeistään",
-            "mennessä"
-        ],
-        "nl": "uiterlijk"
-    },
-    "friday at the latest": {
-        "roots": [
-            "at the latest",
-            "friday"
-        ],
-        "en": [
-            "friday at the latest",
-            "no later than friday"
-        ],
-        "fi": [
-            "perjantaina viimeistään",
-            "perjantaihin mennessä"
-        ],
-        "nl": "uiterlijk vrijdag"
+    "concepts": {
+        "at the latest": {
+            "example": "friday at the latest",
+            "labels": {
+                "en": [
+                    "at the latest",
+                    "no later than"
+                ],
+                "fi": [
+                    "viimeistään",
+                    "mennessä"
+                ],
+                "nl": "uiterlijk"
+            }
+        },
+        "friday at the latest": {
+            "roots": [
+                "at the latest",
+                "friday"
+            ],
+            "labels": {
+                "en": [
+                    "friday at the latest",
+                    "no later than friday"
+                ],
+                "fi": [
+                    "perjantaina viimeistään",
+                    "perjantaihin mennessä"
+                ],
+                "nl": "uiterlijk vrijdag"
+            }
+        }
     }
 }

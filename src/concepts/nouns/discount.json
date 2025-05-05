@@ -1,7 +1,11 @@
 {
-    "discount": {
-        "en": "discount",
-        "fi": "alennus",
-        "nl": "de korting"
+    "concepts": {
+        "discount": {
+            "labels": {
+                "en": "discount",
+                "fi": "alennus",
+                "nl": "de korting"
+            }
+        }
     }
 }

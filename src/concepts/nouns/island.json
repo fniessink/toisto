@@ -1,16 +1,20 @@
 {
-    "island": {
-        "en": {
-            "singular": "island",
-            "plural": "islands"
-        },
-        "fi": {
-            "singular": "saari",
-            "plural": "saaret"
-        },
-        "nl": {
-            "singular": "het eiland",
-            "plural": "de eilanden"
+    "concepts": {
+        "island": {
+            "labels": {
+                "en": {
+                    "singular": "island",
+                    "plural": "islands"
+                },
+                "fi": {
+                    "singular": "saari",
+                    "plural": "saaret"
+                },
+                "nl": {
+                    "singular": "het eiland",
+                    "plural": "de eilanden"
+                }
+            }
         }
     }
 }

@@ -1,17 +1,21 @@
 {
-    "woman": {
-        "antonym": "man",
-        "en": {
-            "singular": "woman",
-            "plural": "women"
-        },
-        "fi": {
-            "singular": "nainen",
-            "plural": "naiset"
-        },
-        "nl": {
-            "singular": "de vrouw",
-            "plural": "de vrouwen"
+    "concepts": {
+        "woman": {
+            "antonym": "man",
+            "labels": {
+                "en": {
+                    "singular": "woman",
+                    "plural": "women"
+                },
+                "fi": {
+                    "singular": "nainen",
+                    "plural": "naiset"
+                },
+                "nl": {
+                    "singular": "de vrouw",
+                    "plural": "de vrouwen"
+                }
+            }
         }
     }
 }

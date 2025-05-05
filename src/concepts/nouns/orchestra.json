@@ -1,8 +1,12 @@
 {
-    "orchestra": {
-        "involves": "musical instrument",
-        "en": "orchestra",
-        "fi": "orkesteri",
-        "nl": "het orkest"
+    "concepts": {
+        "orchestra": {
+            "involves": "musical instrument",
+            "labels": {
+                "en": "orchestra",
+                "fi": "orkesteri",
+                "nl": "het orkest"
+            }
+        }
     }
 }

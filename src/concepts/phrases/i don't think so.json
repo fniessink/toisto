@@ -1,13 +1,17 @@
 {
-    "I don't think so": {
-        "en": "I don't think so!",
-        "fi": [
-            "Ei minun mielestäni!",
-            "Ei mun mielestä!*"
-        ],
-        "nl": [
-            "Volgens mij niet!",
-            "Ik denk het niet!"
-        ]
+    "concepts": {
+        "I don't think so": {
+            "labels": {
+                "en": "I don't think so!",
+                "fi": [
+                    "Ei minun mielestäni!",
+                    "Ei mun mielestä!*"
+                ],
+                "nl": [
+                    "Volgens mij niet!",
+                    "Ik denk het niet!"
+                ]
+            }
+        }
     }
 }

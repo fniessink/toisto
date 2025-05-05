@@ -1,10 +1,14 @@
 {
-    "different": {
-        "en": "different",
-        "fi": "erilainen",
-        "nl": [
-            "anders",
-            "verschillend"
-        ]
+    "concepts": {
+        "different": {
+            "labels": {
+                "en": "different",
+                "fi": "erilainen",
+                "nl": [
+                    "anders",
+                    "verschillend"
+                ]
+            }
+        }
     }
 }

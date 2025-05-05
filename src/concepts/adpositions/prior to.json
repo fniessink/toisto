@@ -1,10 +1,14 @@
 {
-    "prior to": {
-        "en": [
-            "prior to",
-            "before"
-        ],
-        "fi": "ennen",
-        "nl": "voor"
+    "concepts": {
+        "prior to": {
+            "labels": {
+                "en": [
+                    "prior to",
+                    "before"
+                ],
+                "fi": "ennen",
+                "nl": "voor"
+            }
+        }
     }
 }

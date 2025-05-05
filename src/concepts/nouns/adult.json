@@ -1,16 +1,20 @@
 {
-    "adult": {
-        "en": {
-            "singular": "adult",
-            "plural": "adults"
-        },
-        "fi": {
-            "singular": "aikuinen",
-            "plural": "aikuiset"
-        },
-        "nl": {
-            "singular": "de volwassene",
-            "plural": "de volwassenen"
+    "concepts": {
+        "adult": {
+            "labels": {
+                "en": {
+                    "singular": "adult",
+                    "plural": "adults"
+                },
+                "fi": {
+                    "singular": "aikuinen",
+                    "plural": "aikuiset"
+                },
+                "nl": {
+                    "singular": "de volwassene",
+                    "plural": "de volwassenen"
+                }
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "distant": {
-        "en": "distant",
-        "fi": "kaukainen",
-        "nl": "ver"
+    "concepts": {
+        "distant": {
+            "labels": {
+                "en": "distant",
+                "fi": "kaukainen",
+                "nl": "ver"
+            }
+        }
     }
 }

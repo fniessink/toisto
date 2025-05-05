@@ -1,15 +1,19 @@
 {
-    "salary": {
-        "hypernym": "money",
-        "en": [
-            "salary",
-            "pay",
-            "wage"
-        ],
-        "fi": "palkka",
-        "nl": [
-            "het salaris",
-            "het loon"
-        ]
+    "concepts": {
+        "salary": {
+            "hypernym": "money",
+            "labels": {
+                "en": [
+                    "salary",
+                    "pay",
+                    "wage"
+                ],
+                "fi": "palkka",
+                "nl": [
+                    "het salaris",
+                    "het loon"
+                ]
+            }
+        }
     }
 }

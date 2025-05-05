@@ -1,7 +1,11 @@
 {
-    "festival": {
-        "en": "festival",
-        "fi": "festivaali",
-        "nl": "het festival"
+    "concepts": {
+        "festival": {
+            "labels": {
+                "en": "festival",
+                "fi": "festivaali",
+                "nl": "het festival"
+            }
+        }
     }
 }

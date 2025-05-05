@@ -1,16 +1,20 @@
 {
-    "dance": {
-        "en": {
-            "singular": "dance",
-            "plural": "dances"
-        },
-        "fi": {
-            "singular": "tanssi",
-            "plural": "tanssit"
-        },
-        "nl": {
-            "singular": "de dans",
-            "plural": "de dansen"
+    "concepts": {
+        "dance": {
+            "labels": {
+                "en": {
+                    "singular": "dance",
+                    "plural": "dances"
+                },
+                "fi": {
+                    "singular": "tanssi",
+                    "plural": "tanssit"
+                },
+                "nl": {
+                    "singular": "de dans",
+                    "plural": "de dansen"
+                }
+            }
         }
     }
 }

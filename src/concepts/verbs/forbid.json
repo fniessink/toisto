@@ -1,7 +1,11 @@
 {
-    "to forbid": {
-        "en": "to forbid",
-        "fi": "kieltää",
-        "nl": "verbieden"
+    "concepts": {
+        "to forbid": {
+            "labels": {
+                "en": "to forbid",
+                "fi": "kieltää",
+                "nl": "verbieden"
+            }
+        }
     }
 }

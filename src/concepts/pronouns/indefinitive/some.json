@@ -1,29 +1,37 @@
 {
-    "some": {
-        "en": [
-            "some",
-            "a few"
-        ],
-        "fi": "muutama",
-        "nl": "een paar"
-    },
-    "somebody": {
-        "roots": {
-            "en": "some"
+    "concepts": {
+        "some": {
+            "labels": {
+                "en": [
+                    "some",
+                    "a few"
+                ],
+                "fi": "muutama",
+                "nl": "een paar"
+            }
         },
-        "en": [
-            "somebody",
-            "someone"
-        ],
-        "fi": "joku",
-        "nl": "iemand"
-    },
-    "something": {
-        "roots": {
-            "en": "some"
+        "somebody": {
+            "roots": {
+                "en": "some"
+            },
+            "labels": {
+                "en": [
+                    "somebody",
+                    "someone"
+                ],
+                "fi": "joku",
+                "nl": "iemand"
+            }
         },
-        "en": "something",
-        "fi": "jokin",
-        "nl": "iets"
+        "something": {
+            "roots": {
+                "en": "some"
+            },
+            "labels": {
+                "en": "something",
+                "fi": "jokin",
+                "nl": "iets"
+            }
+        }
     }
 }

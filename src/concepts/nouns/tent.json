@@ -1,7 +1,11 @@
 {
-    "tent": {
-        "en": "tent",
-        "fi": "teltta",
-        "nl": "de tent"
+    "concepts": {
+        "tent": {
+            "labels": {
+                "en": "tent",
+                "fi": "teltta",
+                "nl": "de tent"
+            }
+        }
     }
 }

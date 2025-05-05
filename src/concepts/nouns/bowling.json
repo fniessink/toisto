@@ -1,7 +1,11 @@
 {
-    "bowling": {
-        "en": "bowling",
-        "fi": "keilaus",
-        "nl": "het bowlen"
+    "concepts": {
+        "bowling": {
+            "labels": {
+                "en": "bowling",
+                "fi": "keilaus",
+                "nl": "het bowlen"
+            }
+        }
     }
 }

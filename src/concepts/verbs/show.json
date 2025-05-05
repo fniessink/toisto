@@ -1,10 +1,14 @@
 {
-    "to show": {
-        "en": "to show",
-        "fi": "näyttää",
-        "nl": [
-            "tonen",
-            "laten zien"
-        ]
+    "concepts": {
+        "to show": {
+            "labels": {
+                "en": "to show",
+                "fi": "näyttää",
+                "nl": [
+                    "tonen",
+                    "laten zien"
+                ]
+            }
+        }
     }
 }

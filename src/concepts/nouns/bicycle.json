@@ -1,24 +1,30 @@
 {
-    "bicycle": {
-        "hypernym": "means of transportation",
-        "en": {
-            "singular": "bicycle",
-            "plural": "bicycles"
+    "concepts": {
+        "bicycle": {
+            "hypernym": "means of transportation",
+            "labels": {
+                "en": {
+                    "singular": "bicycle",
+                    "plural": "bicycles"
+                },
+                "fi": {
+                    "singular": "polkypyörä|pyörä",
+                    "plural": "polkypyörät|pyörät"
+                },
+                "nl": {
+                    "singular": "de fiets",
+                    "plural": "de fietsen"
+                }
+            }
         },
-        "fi": {
-            "singular": "polkypyörä|pyörä",
-            "plural": "polkypyörät|pyörät"
-        },
-        "nl": {
-            "singular": "de fiets",
-            "plural": "de fietsen"
+        "racing bicycle": {
+            "hypernym": "bicycle",
+            "roots": "bicycle",
+            "labels": {
+                "en": "racing bicycle",
+                "fi": "kilpapyörä",
+                "nl": "de racefiets"
+            }
         }
-    },
-    "racing bicycle": {
-        "hypernym": "bicycle",
-        "roots": "bicycle",
-        "en": "racing bicycle",
-        "fi": "kilpapyörä",
-        "nl": "de racefiets"
     }
 }

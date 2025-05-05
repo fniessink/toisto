@@ -1,10 +1,14 @@
 {
-    "canteen": {
-        "roots": {
-            "fi": "food"
-        },
-        "en": "canteen",
-        "fi": "ruokala",
-        "nl": "de kantine"
+    "concepts": {
+        "canteen": {
+            "roots": {
+                "fi": "food"
+            },
+            "labels": {
+                "en": "canteen",
+                "fi": "ruokala",
+                "nl": "de kantine"
+            }
+        }
     }
 }

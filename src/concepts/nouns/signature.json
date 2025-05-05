@@ -1,14 +1,20 @@
 {
-    "signature": {
-        "en": "signature",
-        "fi": "allekirjoitus",
-        "nl": "de handtekening"
-    },
-    "digital signature": {
-        "hypernym": "signature",
-        "roots": "signature",
-        "en": "digital signature",
-        "fi": "sähköinen allekirjoitus",
-        "nl": "de digitale handtekening"
+    "concepts": {
+        "signature": {
+            "labels": {
+                "en": "signature",
+                "fi": "allekirjoitus",
+                "nl": "de handtekening"
+            }
+        },
+        "digital signature": {
+            "hypernym": "signature",
+            "roots": "signature",
+            "labels": {
+                "en": "digital signature",
+                "fi": "sähköinen allekirjoitus",
+                "nl": "de digitale handtekening"
+            }
+        }
     }
 }

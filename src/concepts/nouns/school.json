@@ -1,19 +1,23 @@
 {
-    "school": {
-        "involves": [
-            "homework"
-        ],
-        "en": {
-            "singular": "school",
-            "plural": "schools"
-        },
-        "fi": {
-            "singular": "koulu",
-            "plural": "koulut"
-        },
-        "nl": {
-            "singular": "de school",
-            "plural": "de scholen"
+    "concepts": {
+        "school": {
+            "involves": [
+                "homework"
+            ],
+            "labels": {
+                "en": {
+                    "singular": "school",
+                    "plural": "schools"
+                },
+                "fi": {
+                    "singular": "koulu",
+                    "plural": "koulut"
+                },
+                "nl": {
+                    "singular": "de school",
+                    "plural": "de scholen"
+                }
+            }
         }
     }
 }

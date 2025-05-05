@@ -1,20 +1,24 @@
 {
-    "warm": {
-        "antonym": "cold",
-        "en": {
-            "positive degree": "warm",
-            "comparative degree": "warmer",
-            "superlative degree": "warmest"
-        },
-        "fi": {
-            "positive degree": "lämmin",
-            "comparative degree": "lämpimämpi",
-            "superlative degree": "lämpimin"
-        },
-        "nl": {
-            "positive degree": "warm",
-            "comparative degree": "warmer",
-            "superlative degree": "warmst"
+    "concepts": {
+        "warm": {
+            "antonym": "cold",
+            "labels": {
+                "en": {
+                    "positive degree": "warm",
+                    "comparative degree": "warmer",
+                    "superlative degree": "warmest"
+                },
+                "fi": {
+                    "positive degree": "lämmin",
+                    "comparative degree": "lämpimämpi",
+                    "superlative degree": "lämpimin"
+                },
+                "nl": {
+                    "positive degree": "warm",
+                    "comparative degree": "warmer",
+                    "superlative degree": "warmst"
+                }
+            }
         }
     }
 }

@@ -1,9 +1,13 @@
 {
-    "first aid": {
-        "holonym": "health care",
-        "roots": "first",
-        "en": "first aid",
-        "fi": "ensiapu",
-        "nl": "de eerste hulp"
+    "concepts": {
+        "first aid": {
+            "holonym": "health care",
+            "roots": "first",
+            "labels": {
+                "en": "first aid",
+                "fi": "ensiapu",
+                "nl": "de eerste hulp"
+            }
+        }
     }
 }

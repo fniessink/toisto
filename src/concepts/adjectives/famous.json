@@ -1,7 +1,11 @@
 {
-    "famous": {
-        "en": "famous",
-        "fi": "kuuluisa",
-        "nl": "beroemd"
+    "concepts": {
+        "famous": {
+            "labels": {
+                "en": "famous",
+                "fi": "kuuluisa",
+                "nl": "beroemd"
+            }
+        }
     }
 }

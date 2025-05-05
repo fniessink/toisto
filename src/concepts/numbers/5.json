@@ -1,20 +1,24 @@
 {
-    "5": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "five",
-            "ordinal": "fifth"
-        },
-        "fi": {
-            "cardinal": [
-                "viisi",
-                "viis*"
-            ],
-            "ordinal": "viides"
-        },
-        "nl": {
-            "cardinal": "vijf",
-            "ordinal": "vijfde"
+    "concepts": {
+        "5": {
+            "hypernym": "number",
+            "labels": {
+                "en": {
+                    "cardinal": "five",
+                    "ordinal": "fifth"
+                },
+                "fi": {
+                    "cardinal": [
+                        "viisi",
+                        "viis*"
+                    ],
+                    "ordinal": "viides"
+                },
+                "nl": {
+                    "cardinal": "vijf",
+                    "ordinal": "vijfde"
+                }
+            }
         }
     }
 }

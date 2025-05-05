@@ -1,24 +1,28 @@
 {
-    "40": {
-        "hypernym": "number",
-        "roots": [
-            "4",
-            "10"
-        ],
-        "en": {
-            "cardinal": "forty",
-            "ordinal": "fortieth"
-        },
-        "fi": {
-            "cardinal": [
-                "neljäkymmentä",
-                "nelkyt*"
+    "concepts": {
+        "40": {
+            "hypernym": "number",
+            "roots": [
+                "4",
+                "10"
             ],
-            "ordinal": "neljäskymmenes"
-        },
-        "nl": {
-            "cardinal": "veertig",
-            "ordinal": "veertigste"
+            "labels": {
+                "en": {
+                    "cardinal": "forty",
+                    "ordinal": "fortieth"
+                },
+                "fi": {
+                    "cardinal": [
+                        "neljäkymmentä",
+                        "nelkyt*"
+                    ],
+                    "ordinal": "neljäskymmenes"
+                },
+                "nl": {
+                    "cardinal": "veertig",
+                    "ordinal": "veertigste"
+                }
+            }
         }
     }
 }

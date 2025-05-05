@@ -1,11 +1,15 @@
 {
-    "to decide": {
-        "en": "to decide",
-        "fi": "päättää",
-        "nl": [
-            "beslissen",
-            "besluiten",
-            "bepalen"
-        ]
+    "concepts": {
+        "to decide": {
+            "labels": {
+                "en": "to decide",
+                "fi": "päättää",
+                "nl": [
+                    "beslissen",
+                    "besluiten",
+                    "bepalen"
+                ]
+            }
+        }
     }
 }

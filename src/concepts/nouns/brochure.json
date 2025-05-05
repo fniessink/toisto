@@ -1,7 +1,11 @@
 {
-    "brochure": {
-        "en": "brochure",
-        "fi": "esite",
-        "nl": "de brochure"
+    "concepts": {
+        "brochure": {
+            "labels": {
+                "en": "brochure",
+                "fi": "esite",
+                "nl": "de brochure"
+            }
+        }
     }
 }

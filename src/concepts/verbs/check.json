@@ -1,7 +1,11 @@
 {
-    "to check": {
-        "en": "to check",
-        "fi": "tarkistaa",
-        "nl": "controleren"
+    "concepts": {
+        "to check": {
+            "labels": {
+                "en": "to check",
+                "fi": "tarkistaa",
+                "nl": "controleren"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "limited": {
-        "en": "limited",
-        "fi": "suppea",
-        "nl": "beperkt"
+    "concepts": {
+        "limited": {
+            "labels": {
+                "en": "limited",
+                "fi": "suppea",
+                "nl": "beperkt"
+            }
+        }
     }
 }

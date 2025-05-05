@@ -1,7 +1,11 @@
 {
-    "ripe": {
-        "en": "ripe",
-        "fi": "kypsä",
-        "nl": "rijp"
+    "concepts": {
+        "ripe": {
+            "labels": {
+                "en": "ripe",
+                "fi": "kypsä",
+                "nl": "rijp"
+            }
+        }
     }
 }

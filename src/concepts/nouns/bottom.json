@@ -1,14 +1,18 @@
 {
-    "bottom": {
-        "holonym": "body",
-        "en": [
-            "bottom",
-            "behind"
-        ],
-        "fi": "takapuoli",
-        "nl": [
-            "het achterwerk",
-            "het zitvlak"
-        ]
+    "concepts": {
+        "bottom": {
+            "holonym": "body",
+            "labels": {
+                "en": [
+                    "bottom",
+                    "behind"
+                ],
+                "fi": "takapuoli",
+                "nl": [
+                    "het achterwerk",
+                    "het zitvlak"
+                ]
+            }
+        }
     }
 }

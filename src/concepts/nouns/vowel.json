@@ -1,23 +1,29 @@
 {
-    "vowel": {
-        "en": {
-            "singular": "vowel",
-            "plural": "vowels"
+    "concepts": {
+        "vowel": {
+            "labels": {
+                "en": {
+                    "singular": "vowel",
+                    "plural": "vowels"
+                },
+                "fi": {
+                    "singular": "vokaali",
+                    "plural": "vokaalit"
+                },
+                "nl": {
+                    "singular": "de klinker",
+                    "plural": "de klinkers"
+                }
+            }
         },
-        "fi": {
-            "singular": "vokaali",
-            "plural": "vokaalit"
-        },
-        "nl": {
-            "singular": "de klinker",
-            "plural": "de klinkers"
+        "vowel harmony": {
+            "involves": "finnish",
+            "roots": "vowel",
+            "labels": {
+                "en": "vowel harmony",
+                "fi": "vokaaliharmonia",
+                "nl": "de klinkerharmonie"
+            }
         }
-    },
-    "vowel harmony": {
-        "involves": "finnish",
-        "roots": "vowel",
-        "en": "vowel harmony",
-        "fi": "vokaaliharmonia",
-        "nl": "de klinkerharmonie"
     }
 }

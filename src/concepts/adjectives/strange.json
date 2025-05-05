@@ -1,19 +1,23 @@
 {
-    "strange": {
-        "en": {
-            "positive degree": "strange",
-            "comparative degree": "stranger",
-            "superlative degree": "strangest"
-        },
-        "fi": {
-            "positive degree": "outo",
-            "comparative degree": "oudompi",
-            "superlative degree": "oudoin"
-        },
-        "nl": {
-            "positive degree": "vreemd",
-            "comparative degree": "vreemder",
-            "superlative degree": "vreemdst"
+    "concepts": {
+        "strange": {
+            "labels": {
+                "en": {
+                    "positive degree": "strange",
+                    "comparative degree": "stranger",
+                    "superlative degree": "strangest"
+                },
+                "fi": {
+                    "positive degree": "outo",
+                    "comparative degree": "oudompi",
+                    "superlative degree": "oudoin"
+                },
+                "nl": {
+                    "positive degree": "vreemd",
+                    "comparative degree": "vreemder",
+                    "superlative degree": "vreemdst"
+                }
+            }
         }
     }
 }

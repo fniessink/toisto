@@ -1,15 +1,21 @@
 {
-    "to marry": {
-        "en": [
-            "to marry",
-            "to get married"
-        ],
-        "fi": "mennä naimisiin",
-        "nl": "trouwen"
-    },
-    "to marry (transitive)": {
-        "en": "to marry;transitive",
-        "fi": "vihkiä;transitive",
-        "nl": "trouwen;transitive"
+    "concepts": {
+        "to marry": {
+            "labels": {
+                "en": [
+                    "to marry",
+                    "to get married"
+                ],
+                "fi": "mennä naimisiin",
+                "nl": "trouwen"
+            }
+        },
+        "to marry (transitive)": {
+            "labels": {
+                "en": "to marry;transitive",
+                "fi": "vihkiä;transitive",
+                "nl": "trouwen;transitive"
+            }
+        }
     }
 }

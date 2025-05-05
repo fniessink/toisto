@@ -1,29 +1,33 @@
 {
-    "cheap": {
-        "antonym": "expensive",
-        "en": {
-            "positive degree": "cheap",
-            "comparative degree": "cheaper",
-            "superlative degree": "cheapest"
-        },
-        "fi": {
-            "positive degree": [
-                "halpa",
-                "edullinen"
-            ],
-            "comparative degree": [
-                "halvempi",
-                "edullisempi"
-            ],
-            "superlative degree": [
-                "halvin",
-                "edullisin"
-            ]
-        },
-        "nl": {
-            "positive degree": "goedkoop",
-            "comparative degree": "goedkoper",
-            "superlative degree": "goedkoopst"
+    "concepts": {
+        "cheap": {
+            "antonym": "expensive",
+            "labels": {
+                "en": {
+                    "positive degree": "cheap",
+                    "comparative degree": "cheaper",
+                    "superlative degree": "cheapest"
+                },
+                "fi": {
+                    "positive degree": [
+                        "halpa",
+                        "edullinen"
+                    ],
+                    "comparative degree": [
+                        "halvempi",
+                        "edullisempi"
+                    ],
+                    "superlative degree": [
+                        "halvin",
+                        "edullisin"
+                    ]
+                },
+                "nl": {
+                    "positive degree": "goedkoop",
+                    "comparative degree": "goedkoper",
+                    "superlative degree": "goedkoopst"
+                }
+            }
         }
     }
 }

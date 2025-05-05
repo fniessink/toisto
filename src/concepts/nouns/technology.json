@@ -1,7 +1,11 @@
 {
-    "information technology": {
-        "en": "information technology",
-        "fi": "informaatioteknologia",
-        "nl": "de informatietechnologie"
+    "concepts": {
+        "information technology": {
+            "labels": {
+                "en": "information technology",
+                "fi": "informaatioteknologia",
+                "nl": "de informatietechnologie"
+            }
+        }
     }
 }

@@ -1,29 +1,37 @@
 {
-    "country": {
-        "en": {
-            "singular": "country",
-            "plural": "countries"
+    "concepts": {
+        "country": {
+            "labels": {
+                "en": {
+                    "singular": "country",
+                    "plural": "countries"
+                },
+                "fi": {
+                    "singular": "maa;geography",
+                    "plural": "maat;geography"
+                },
+                "nl": {
+                    "singular": "het land",
+                    "plural": "de landen"
+                }
+            }
         },
-        "fi": {
-            "singular": "maa;geography",
-            "plural": "maat;geography"
+        "neighboring country": {
+            "hypernym": "country",
+            "roots": "country",
+            "labels": {
+                "en": "neighboring country",
+                "fi": "naapurimaa",
+                "nl": "het buurland"
+            }
         },
-        "nl": {
-            "singular": "het land",
-            "plural": "de landen"
+        "countryside": {
+            "roots": "country",
+            "labels": {
+                "en": "countryside",
+                "fi": "maaseutu",
+                "nl": "het platteland"
+            }
         }
-    },
-    "neighboring country": {
-        "hypernym": "country",
-        "roots": "country",
-        "en": "neighboring country",
-        "fi": "naapurimaa",
-        "nl": "het buurland"
-    },
-    "countryside": {
-        "roots": "country",
-        "en": "countryside",
-        "fi": "maaseutu",
-        "nl": "het platteland"
     }
 }

@@ -1,7 +1,11 @@
 {
-    "occasionally": {
-        "en": "occasionally",
-        "fi": "välissä",
-        "nl": "soms"
+    "concepts": {
+        "occasionally": {
+            "labels": {
+                "en": "occasionally",
+                "fi": "välissä",
+                "nl": "soms"
+            }
+        }
     }
 }

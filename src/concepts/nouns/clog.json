@@ -1,17 +1,21 @@
 {
-    "clog": {
-        "hypernym": "clothes",
-        "en": {
-            "singular": "clog",
-            "plural": "clogs"
-        },
-        "fi": {
-            "singular": "puukenkä",
-            "plural": "puukengät"
-        },
-        "nl": {
-            "singular": "de klomp",
-            "plural": "de klompen"
+    "concepts": {
+        "clog": {
+            "hypernym": "clothes",
+            "labels": {
+                "en": {
+                    "singular": "clog",
+                    "plural": "clogs"
+                },
+                "fi": {
+                    "singular": "puukenkä",
+                    "plural": "puukengät"
+                },
+                "nl": {
+                    "singular": "de klomp",
+                    "plural": "de klompen"
+                }
+            }
         }
     }
 }

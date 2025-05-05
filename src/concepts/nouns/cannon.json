@@ -1,7 +1,11 @@
 {
-    "cannon": {
-        "en": "cannon",
-        "fi": "tykki",
-        "nl": "het kanon"
+    "concepts": {
+        "cannon": {
+            "labels": {
+                "en": "cannon",
+                "fi": "tykki",
+                "nl": "het kanon"
+            }
+        }
     }
 }

@@ -1,17 +1,23 @@
 {
-    "to celebrate": {
-        "example": "We celebrated Liisa's birthday at the cottage.",
-        "en": "to celebrate",
-        "fi": "juhlia",
-        "nl": "vieren"
-    },
-    "We celebrated Liisa's birthday at the cottage": {
-        "roots": [
-            "to celebrate",
-            "birthday"
-        ],
-        "en": "We celebrated Liisa's birthday at the cottage.",
-        "fi": "Me juhlimme Liisan syntymäpäivää mökillä.",
-        "nl": "We vierden Liisa's verjaardag in het huisje."
+    "concepts": {
+        "to celebrate": {
+            "example": "We celebrated Liisa's birthday at the cottage.",
+            "labels": {
+                "en": "to celebrate",
+                "fi": "juhlia",
+                "nl": "vieren"
+            }
+        },
+        "We celebrated Liisa's birthday at the cottage": {
+            "roots": [
+                "to celebrate",
+                "birthday"
+            ],
+            "labels": {
+                "en": "We celebrated Liisa's birthday at the cottage.",
+                "fi": "Me juhlimme Liisan syntymäpäivää mökillä.",
+                "nl": "We vierden Liisa's verjaardag in het huisje."
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "complaint": {
-        "en": "complaint",
-        "fi": "valitus",
-        "nl": "de klacht"
+    "concepts": {
+        "complaint": {
+            "labels": {
+                "en": "complaint",
+                "fi": "valitus",
+                "nl": "de klacht"
+            }
+        }
     }
 }

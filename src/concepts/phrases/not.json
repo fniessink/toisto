@@ -1,22 +1,32 @@
 {
-    "not at all": {
-        "en": "not at all",
-        "fi": "ei lainkaan",
-        "nl": "helemaal niet"
-    },
-    "not even": {
-        "en": "not even",
-        "fi": "ei edes",
-        "nl": "niet eens"
-    },
-    "not quite": {
-        "en": "not quite",
-        "fi": "ei ihan",
-        "nl": "niet helemaal"
-    },
-    "not very": {
-        "en": "not very",
-        "fi": "ei kovin",
-        "nl": "niet erg"
+    "concepts": {
+        "not at all": {
+            "labels": {
+                "en": "not at all",
+                "fi": "ei lainkaan",
+                "nl": "helemaal niet"
+            }
+        },
+        "not even": {
+            "labels": {
+                "en": "not even",
+                "fi": "ei edes",
+                "nl": "niet eens"
+            }
+        },
+        "not quite": {
+            "labels": {
+                "en": "not quite",
+                "fi": "ei ihan",
+                "nl": "niet helemaal"
+            }
+        },
+        "not very": {
+            "labels": {
+                "en": "not very",
+                "fi": "ei kovin",
+                "nl": "niet erg"
+            }
+        }
     }
 }

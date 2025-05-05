@@ -1,7 +1,11 @@
 {
-    "damn": {
-        "en": "Damn!",
-        "fi": "Hitto!",
-        "nl": "Verdomme!"
+    "concepts": {
+        "damn": {
+            "labels": {
+                "en": "Damn!",
+                "fi": "Hitto!",
+                "nl": "Verdomme!"
+            }
+        }
     }
 }

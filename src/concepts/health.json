@@ -1,214 +1,250 @@
 {
-    "health": {
-        "en": "health",
-        "fi": "terveys",
-        "nl": "de gezondheid"
-    },
-    "health centre": {
-        "hypernym": "building",
-        "involves": "health care",
-        "roots": "health",
-        "en": "health centre|health center",
-        "fi": "terveysasema",
-        "nl": "het gezondheidscentrum"
-    },
-    "care": {
-        "en": "care",
-        "fi": "hoito",
-        "nl": "de zorg"
-    },
-    "health care": {
-        "hypernym": "care",
-        "roots": [
-            "health",
-            "care"
-        ],
-        "en": "health care",
-        "fi": "terveydenhoito",
-        "nl": "de gezondheidszorg"
-    },
-    "disease": {
-        "involves": "patient",
-        "en": {
-            "singular": "disease",
-            "plural": "diseases"
+    "concepts": {
+        "health": {
+            "labels": {
+                "en": "health",
+                "fi": "terveys",
+                "nl": "de gezondheid"
+            }
         },
-        "fi": {
-            "singular": "sairaus",
-            "plural": "sairaudet"
+        "health centre": {
+            "hypernym": "building",
+            "involves": "health care",
+            "roots": "health",
+            "labels": {
+                "en": "health centre|health center",
+                "fi": "terveysasema",
+                "nl": "het gezondheidscentrum"
+            }
         },
-        "nl": {
-            "singular": "de ziekte",
-            "plural": "de ziektes|de ziekten"
-        }
-    },
-    "patient": {
-        "involves": "hospital",
-        "en": {
-            "singular": "patient",
-            "plural": "patients"
+        "care": {
+            "labels": {
+                "en": "care",
+                "fi": "hoito",
+                "nl": "de zorg"
+            }
         },
-        "fi": {
-            "singular": "potilas",
-            "plural": "potilaat"
+        "health care": {
+            "hypernym": "care",
+            "roots": [
+                "health",
+                "care"
+            ],
+            "labels": {
+                "en": "health care",
+                "fi": "terveydenhoito",
+                "nl": "de gezondheidszorg"
+            }
         },
-        "nl": {
-            "singular": "de patiënt",
-            "plural": "de patiënten"
-        }
-    },
-    "medicine": {
-        "en": {
-            "singular": "medicine",
-            "plural": "medicines"
+        "disease": {
+            "involves": "patient",
+            "labels": {
+                "en": {
+                    "singular": "disease",
+                    "plural": "diseases"
+                },
+                "fi": {
+                    "singular": "sairaus",
+                    "plural": "sairaudet"
+                },
+                "nl": {
+                    "singular": "de ziekte",
+                    "plural": "de ziektes|de ziekten"
+                }
+            }
         },
-        "fi": {
-            "singular": "lääke",
-            "plural": "lääkkeet"
+        "patient": {
+            "involves": "hospital",
+            "labels": {
+                "en": {
+                    "singular": "patient",
+                    "plural": "patients"
+                },
+                "fi": {
+                    "singular": "potilas",
+                    "plural": "potilaat"
+                },
+                "nl": {
+                    "singular": "de patiënt",
+                    "plural": "de patiënten"
+                }
+            }
         },
-        "nl": {
-            "singular": "het medicijn",
-            "plural": "de medicijnen"
-        }
-    },
-    "wound": {
-        "involves": "patient",
-        "en": {
-            "singular": "wound",
-            "plural": "wounds"
+        "medicine": {
+            "labels": {
+                "en": {
+                    "singular": "medicine",
+                    "plural": "medicines"
+                },
+                "fi": {
+                    "singular": "lääke",
+                    "plural": "lääkkeet"
+                },
+                "nl": {
+                    "singular": "het medicijn",
+                    "plural": "de medicijnen"
+                }
+            }
         },
-        "fi": {
-            "singular": "haava",
-            "plural": "haavat"
+        "wound": {
+            "involves": "patient",
+            "labels": {
+                "en": {
+                    "singular": "wound",
+                    "plural": "wounds"
+                },
+                "fi": {
+                    "singular": "haava",
+                    "plural": "haavat"
+                },
+                "nl": {
+                    "singular": "de wond",
+                    "plural": "de wonden"
+                }
+            }
         },
-        "nl": {
-            "singular": "de wond",
-            "plural": "de wonden"
-        }
-    },
-    "fever": {
-        "example": "I have a fever",
-        "involves": "patient",
-        "en": "fever",
-        "fi": "kuume",
-        "nl": "de koorts"
-    },
-    "I have a fever": {
-        "roots": "fever",
-        "en": "I have a fever.",
-        "fi": "Minulla on kuumetta.",
-        "nl": "Ik heb koorts."
-    },
-    "blood": {
-        "holonym": "body",
-        "en": {
-            "singular": "blood",
-            "plural": "bloods"
+        "fever": {
+            "example": "I have a fever",
+            "involves": "patient",
+            "labels": {
+                "en": "fever",
+                "fi": "kuume",
+                "nl": "de koorts"
+            }
         },
-        "fi": {
-            "singular": "veri",
-            "plural": "veret"
+        "I have a fever": {
+            "roots": "fever",
+            "labels": {
+                "en": "I have a fever.",
+                "fi": "Minulla on kuumetta.",
+                "nl": "Ik heb koorts."
+            }
         },
-        "nl": "het bloed"
-    },
-    "ache": {
-        "involves": "patient",
-        "en": {
-            "singular": "ache",
-            "plural": "aches"
+        "blood": {
+            "holonym": "body",
+            "labels": {
+                "en": {
+                    "singular": "blood",
+                    "plural": "bloods"
+                },
+                "fi": {
+                    "singular": "veri",
+                    "plural": "veret"
+                },
+                "nl": "het bloed"
+            }
         },
-        "fi": {
-            "singular": "särky",
-            "plural": "säryt"
+        "ache": {
+            "involves": "patient",
+            "labels": {
+                "en": {
+                    "singular": "ache",
+                    "plural": "aches"
+                },
+                "fi": {
+                    "singular": "särky",
+                    "plural": "säryt"
+                },
+                "nl": {
+                    "singular": "de pijn;dull",
+                    "plural": "de pijnen;dull"
+                }
+            }
         },
-        "nl": {
-            "singular": "de pijn;dull",
-            "plural": "de pijnen;dull"
-        }
-    },
-    "pain": {
-        "involves": "patient",
-        "en": {
-            "singular": "pain",
-            "plural": "pains"
+        "pain": {
+            "involves": "patient",
+            "labels": {
+                "en": {
+                    "singular": "pain",
+                    "plural": "pains"
+                },
+                "fi": {
+                    "singular": "kipu",
+                    "plural": "kivut"
+                },
+                "nl": {
+                    "singular": "de pijn;sharp",
+                    "plural": "de pijnen;sharp"
+                }
+            }
         },
-        "fi": {
-            "singular": "kipu",
-            "plural": "kivut"
+        "headache": {
+            "example": "I have a headache",
+            "hypernym": [
+                "ache",
+                "pain"
+            ],
+            "roots": [
+                "head",
+                "ache"
+            ],
+            "labels": {
+                "en": {
+                    "singular": "headache",
+                    "plural": "headaches"
+                },
+                "fi": {
+                    "singular": "päänsärky",
+                    "plural": "päänsäryt"
+                },
+                "nl": {
+                    "singular": "de hoofdpijn",
+                    "plural": "de hoofdpijnen"
+                }
+            }
         },
-        "nl": {
-            "singular": "de pijn;sharp",
-            "plural": "de pijnen;sharp"
-        }
-    },
-    "headache": {
-        "example": "I have a headache",
-        "hypernym": [
-            "ache",
-            "pain"
-        ],
-        "roots": [
-            "head",
-            "ache"
-        ],
-        "en": {
-            "singular": "headache",
-            "plural": "headaches"
+        "I have a headache": {
+            "roots": "headache",
+            "labels": {
+                "en": "I have a headache.",
+                "fi": "Minulla on pää kipeä",
+                "nl": "Ik heb hoofdpijn."
+            }
         },
-        "fi": {
-            "singular": "päänsärky",
-            "plural": "päänsäryt"
+        "hospital": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ],
+            "roots": {
+                "nl": "house"
+            },
+            "labels": {
+                "en": {
+                    "singular": "hospital",
+                    "plural": "hospitals"
+                },
+                "fi": {
+                    "singular": "sairaala",
+                    "plural": "sairaalat"
+                },
+                "nl": {
+                    "singular": "het ziekenhuis",
+                    "plural": "de ziekenhuizen"
+                }
+            }
         },
-        "nl": {
-            "singular": "de hoofdpijn",
-            "plural": "de hoofdpijnen"
-        }
-    },
-    "I have a headache": {
-        "roots": "headache",
-        "en": "I have a headache.",
-        "fi": "Minulla on pää kipeä",
-        "nl": "Ik heb hoofdpijn."
-    },
-    "hospital": {
-        "hypernym": "building",
-        "involves": [
-            "health care",
-            "medicine"
-        ],
-        "roots": {
-            "nl": "house"
-        },
-        "en": {
-            "singular": "hospital",
-            "plural": "hospitals"
-        },
-        "fi": {
-            "singular": "sairaala",
-            "plural": "sairaalat"
-        },
-        "nl": {
-            "singular": "het ziekenhuis",
-            "plural": "de ziekenhuizen"
-        }
-    },
-    "pharmacy": {
-        "hypernym": "building",
-        "involves": [
-            "health care",
-            "medicine"
-        ],
-        "en": {
-            "singular": "pharmacy",
-            "plural": "pharmacies"
-        },
-        "fi": {
-            "singular": "apteekki",
-            "plural": "apteekit"
-        },
-        "nl": {
-            "singular": "de apotheek",
-            "plural": "de apotheken"
+        "pharmacy": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ],
+            "labels": {
+                "en": {
+                    "singular": "pharmacy",
+                    "plural": "pharmacies"
+                },
+                "fi": {
+                    "singular": "apteekki",
+                    "plural": "apteekit"
+                },
+                "nl": {
+                    "singular": "de apotheek",
+                    "plural": "de apotheken"
+                }
+            }
         }
     }
 }

@@ -1,39 +1,47 @@
 {
-    "cheese": {
-        "hypernym": "food",
-        "en": {
-            "singular": "cheese",
-            "plural": "cheeses"
+    "concepts": {
+        "cheese": {
+            "hypernym": "food",
+            "labels": {
+                "en": {
+                    "singular": "cheese",
+                    "plural": "cheeses"
+                },
+                "fi": {
+                    "singular": "juusto",
+                    "plural": "juustot"
+                },
+                "nl": {
+                    "singular": "de kaas",
+                    "plural": "de kazen"
+                }
+            }
         },
-        "fi": {
-            "singular": "juusto",
-            "plural": "juustot"
+        "cheesecake": {
+            "example": "I would like a slice of cheesecake",
+            "hypernym": "food",
+            "roots": {
+                "en": [
+                    "cheese",
+                    "cake"
+                ],
+                "fi": [
+                    "cheese",
+                    "cake"
+                ]
+            },
+            "labels": {
+                "en": "cheesecake",
+                "fi": "juustokakku",
+                "nl": "de cheesecake"
+            }
         },
-        "nl": {
-            "singular": "de kaas",
-            "plural": "de kazen"
+        "I would like a slice of cheesecake": {
+            "labels": {
+                "en": "I would like a piece of cheesecake.",
+                "fi": "Minä haluaisin palan juustokakkua.",
+                "nl": "Ik wil graag een stuk cheesecake."
+            }
         }
-    },
-    "cheesecake": {
-        "example": "I would like a slice of cheesecake",
-        "hypernym": "food",
-        "roots": {
-            "en": [
-                "cheese",
-                "cake"
-            ],
-            "fi": [
-                "cheese",
-                "cake"
-            ]
-        },
-        "en": "cheesecake",
-        "fi": "juustokakku",
-        "nl": "de cheesecake"
-    },
-    "I would like a slice of cheesecake": {
-        "en": "I would like a piece of cheesecake.",
-        "fi": "Minä haluaisin palan juustokakkua.",
-        "nl": "Ik wil graag een stuk cheesecake."
     }
 }

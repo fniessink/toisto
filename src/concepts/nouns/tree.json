@@ -1,17 +1,21 @@
 {
-    "tree": {
-        "hypernym": "plant",
-        "en": {
-            "singular": "tree",
-            "plural": "trees"
-        },
-        "fi": {
-            "singular": "puu",
-            "plural": "puut"
-        },
-        "nl": {
-            "singular": "de boom",
-            "plural": "de bomen"
+    "concepts": {
+        "tree": {
+            "hypernym": "plant",
+            "labels": {
+                "en": {
+                    "singular": "tree",
+                    "plural": "trees"
+                },
+                "fi": {
+                    "singular": "puu",
+                    "plural": "puut"
+                },
+                "nl": {
+                    "singular": "de boom",
+                    "plural": "de bomen"
+                }
+            }
         }
     }
 }

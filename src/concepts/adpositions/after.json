@@ -1,16 +1,20 @@
 {
-    "after": {
-        "en": [
-            "after",
-            "in"
-        ],
-        "fi": [
-            "kuluttua",
-            "päästä"
-        ],
-        "nl": [
-            "over",
-            "na"
-        ]
+    "concepts": {
+        "after": {
+            "labels": {
+                "en": [
+                    "after",
+                    "in"
+                ],
+                "fi": [
+                    "kuluttua",
+                    "päästä"
+                ],
+                "nl": [
+                    "over",
+                    "na"
+                ]
+            }
+        }
     }
 }

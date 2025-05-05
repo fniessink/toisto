@@ -1,8 +1,12 @@
 {
-    "golf": {
-        "hypernym": "sport",
-        "en": "golf",
-        "fi": "golf",
-        "nl": "het golf"
+    "concepts": {
+        "golf": {
+            "hypernym": "sport",
+            "labels": {
+                "en": "golf",
+                "fi": "golf",
+                "nl": "het golf"
+            }
+        }
     }
 }

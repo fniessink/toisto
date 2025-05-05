@@ -1,13 +1,17 @@
 {
-    "to cook": {
-        "en": "to cook",
-        "fi": [
-            "laittaa ruokaa",
-            "kokata*"
-        ],
-        "nl": [
-            "koken",
-            "kokkerellen*"
-        ]
+    "concepts": {
+        "to cook": {
+            "labels": {
+                "en": "to cook",
+                "fi": [
+                    "laittaa ruokaa",
+                    "kokata*"
+                ],
+                "nl": [
+                    "koken",
+                    "kokkerellen*"
+                ]
+            }
+        }
     }
 }

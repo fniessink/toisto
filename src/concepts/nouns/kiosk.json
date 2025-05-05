@@ -1,10 +1,14 @@
 {
-    "kiosk": {
-        "en": "kiosk",
-        "fi": [
-            "kioski",
-            "kiska*"
-        ],
-        "nl": "de kiosk"
+    "concepts": {
+        "kiosk": {
+            "labels": {
+                "en": "kiosk",
+                "fi": [
+                    "kioski",
+                    "kiska*"
+                ],
+                "nl": "de kiosk"
+            }
+        }
     }
 }

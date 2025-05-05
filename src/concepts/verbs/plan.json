@@ -1,10 +1,14 @@
 {
-    "to plan": {
-        "en": "to plan",
-        "fi": "suunnitella",
-        "nl": [
-            "plannen",
-            "uitstippelen"
-        ]
+    "concepts": {
+        "to plan": {
+            "labels": {
+                "en": "to plan",
+                "fi": "suunnitella",
+                "nl": [
+                    "plannen",
+                    "uitstippelen"
+                ]
+            }
+        }
     }
 }

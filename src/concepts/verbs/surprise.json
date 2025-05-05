@@ -1,7 +1,11 @@
 {
-    "to surprise": {
-        "en": "to surprise",
-        "fi": "yllättää",
-        "nl": "verrassen"
+    "concepts": {
+        "to surprise": {
+            "labels": {
+                "en": "to surprise",
+                "fi": "yllättää",
+                "nl": "verrassen"
+            }
+        }
     }
 }

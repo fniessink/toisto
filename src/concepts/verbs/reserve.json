@@ -1,43 +1,47 @@
 {
-    "to reserve": {
-        "roots": {
-            "en": "reservation",
-            "fi": [
-                "reservation",
-                "to do"
-            ],
-            "nl": "reservation"
-        },
-        "en": {
-            "infinitive": [
-                "to reserve",
-                "to make a reservation"
-            ],
-            "interrogative": [
-                "do we reserve?",
-                "do we make a reservation?"
-            ]
-        },
-        "fi": {
-            "infinitive": [
-                "varata",
-                "tehdä varaus"
-            ],
-            "interrogative": [
-                "varaammeko?",
-                "varataanks me?*",
-                "teemmeko varaus?"
-            ]
-        },
-        "nl": {
-            "infinitive": [
-                "reserveren",
-                "een reservering maken"
-            ],
-            "interrogative": [
-                "reserveren we?",
-                "maken we een reservering?"
-            ]
+    "concepts": {
+        "to reserve": {
+            "roots": {
+                "en": "reservation",
+                "fi": [
+                    "reservation",
+                    "to do"
+                ],
+                "nl": "reservation"
+            },
+            "labels": {
+                "en": {
+                    "infinitive": [
+                        "to reserve",
+                        "to make a reservation"
+                    ],
+                    "interrogative": [
+                        "do we reserve?",
+                        "do we make a reservation?"
+                    ]
+                },
+                "fi": {
+                    "infinitive": [
+                        "varata",
+                        "tehdä varaus"
+                    ],
+                    "interrogative": [
+                        "varaammeko?",
+                        "varataanks me?*",
+                        "teemmeko varaus?"
+                    ]
+                },
+                "nl": {
+                    "infinitive": [
+                        "reserveren",
+                        "een reservering maken"
+                    ],
+                    "interrogative": [
+                        "reserveren we?",
+                        "maken we een reservering?"
+                    ]
+                }
+            }
         }
     }
 }

@@ -1,43 +1,51 @@
 {
-    "galaxy": {
-        "example": "The Milky Way Galaxy is a galaxy",
-        "holonym": "universe",
-        "en": {
-            "singular": "galaxy",
-            "plural": "galaxies"
+    "concepts": {
+        "galaxy": {
+            "example": "The Milky Way Galaxy is a galaxy",
+            "holonym": "universe",
+            "labels": {
+                "en": {
+                    "singular": "galaxy",
+                    "plural": "galaxies"
+                },
+                "fi": {
+                    "singular": "galaksi",
+                    "plural": "galaksit"
+                },
+                "nl": {
+                    "singular": "het sterrenstelsel",
+                    "plural": "de sterrenstelsels"
+                }
+            }
         },
-        "fi": {
-            "singular": "galaksi",
-            "plural": "galaksit"
+        "Milky Way Galaxy": {
+            "example": "The Milky Way Galaxy is a galaxy",
+            "hypernym": "galaxy",
+            "roots": {
+                "en": [
+                    "milk",
+                    "galaxy"
+                ],
+                "nl": "milk",
+                "fi": "bird"
+            },
+            "labels": {
+                "en": "Milky Way Galaxy",
+                "fi": "linnunrata",
+                "nl": "de Melkweg"
+            }
         },
-        "nl": {
-            "singular": "het sterrenstelsel",
-            "plural": "de sterrenstelsels"
-        }
-    },
-    "Milky Way Galaxy": {
-        "example": "The Milky Way Galaxy is a galaxy",
-        "hypernym": "galaxy",
-        "roots": {
-            "en": [
-                "milk",
+        "The Milky Way Galaxy is a galaxy": {
+            "roots": [
+                "Milky Way Galaxy",
+                "to be",
                 "galaxy"
             ],
-            "nl": "milk",
-            "fi": "bird"
-        },
-        "en": "Milky Way Galaxy",
-        "fi": "linnunrata",
-        "nl": "de Melkweg"
-    },
-    "The Milky Way Galaxy is a galaxy": {
-        "roots": [
-            "Milky Way Galaxy",
-            "to be",
-            "galaxy"
-        ],
-        "en": "The Milky Way Galaxy is a galaxy.",
-        "fi": "Linnunrata on galaksi.",
-        "nl": "De Melkweg is een sterrenstelsel."
+            "labels": {
+                "en": "The Milky Way Galaxy is a galaxy.",
+                "fi": "Linnunrata on galaksi.",
+                "nl": "De Melkweg is een sterrenstelsel."
+            }
+        }
     }
 }

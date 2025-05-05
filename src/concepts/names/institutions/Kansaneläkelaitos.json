@@ -1,16 +1,22 @@
 {
-    "Kansaneläkelaitos": {
-        "en": "Social Insurance Institution of Finland",
-        "fi": {
-            "full form": "Kansaneläkelaitos",
-            "abbreviation": "Kela"
+    "concepts": {
+        "Kansaneläkelaitos": {
+            "labels": {
+                "en": "Social Insurance Institution of Finland",
+                "fi": {
+                    "full form": "Kansaneläkelaitos",
+                    "abbreviation": "Kela"
+                },
+                "nl": "(Finse sociale verzekeringsinstelling)"
+            }
         },
-        "nl": "(Finse sociale verzekeringsinstelling)"
-    },
-    "Kela-kortti": {
-        "roots": {
-            "fi": "Kansaneläkelaitos"
-        },
-        "fi": "Kela-kortti"
+        "Kela-kortti": {
+            "roots": {
+                "fi": "Kansaneläkelaitos"
+            },
+            "labels": {
+                "fi": "Kela-kortti"
+            }
+        }
     }
 }

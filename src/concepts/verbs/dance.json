@@ -1,51 +1,55 @@
 {
-    "to dance": {
-        "en": {
-            "infinitive": "to dance",
-            "verbal noun": "dancing",
-            "singular": {
-                "first person": "I dance",
-                "second person": "you dance",
-                "third person": {
-                    "feminine": "she dances",
-                    "masculine": "he dances"
+    "concepts": {
+        "to dance": {
+            "labels": {
+                "en": {
+                    "infinitive": "to dance",
+                    "verbal noun": "dancing",
+                    "singular": {
+                        "first person": "I dance",
+                        "second person": "you dance",
+                        "third person": {
+                            "feminine": "she dances",
+                            "masculine": "he dances"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we dance",
+                        "second person": "you dance",
+                        "third person": "they dance"
+                    }
+                },
+                "fi": {
+                    "infinitive": "tanssia",
+                    "verbal noun": "tanssiminen",
+                    "singular": {
+                        "first person": "minä tanssin",
+                        "second person": "sinä tanssit",
+                        "third person": "hän tanssii"
+                    },
+                    "plural": {
+                        "first person": "me tanssimme",
+                        "second person": "te tanssitte",
+                        "third person": "he tanssivat"
+                    }
+                },
+                "nl": {
+                    "infinitive": "dansen",
+                    "verbal noun": "het dansen",
+                    "singular": {
+                        "first person": "ik dans",
+                        "second person": "jij danst",
+                        "third person": {
+                            "feminine": "zij danst",
+                            "masculine": "hij danst"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij dansen",
+                        "second person": "jullie dansen",
+                        "third person": "zij dansen"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we dance",
-                "second person": "you dance",
-                "third person": "they dance"
-            }
-        },
-        "fi": {
-            "infinitive": "tanssia",
-            "verbal noun": "tanssiminen",
-            "singular": {
-                "first person": "minä tanssin",
-                "second person": "sinä tanssit",
-                "third person": "hän tanssii"
-            },
-            "plural": {
-                "first person": "me tanssimme",
-                "second person": "te tanssitte",
-                "third person": "he tanssivat"
-            }
-        },
-        "nl": {
-            "infinitive": "dansen",
-            "verbal noun": "het dansen",
-            "singular": {
-                "first person": "ik dans",
-                "second person": "jij danst",
-                "third person": {
-                    "feminine": "zij danst",
-                    "masculine": "hij danst"
-                }
-            },
-            "plural": {
-                "first person": "wij dansen",
-                "second person": "jullie dansen",
-                "third person": "zij dansen"
             }
         }
     }

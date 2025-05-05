@@ -1,16 +1,20 @@
 {
-    "sand": {
-        "en": {
-            "singular": "sand",
-            "plural": "sands"
-        },
-        "fi": {
-            "singular": "hiekka",
-            "plural": "hiekat"
-        },
-        "nl": {
-            "singular": "het zand",
-            "plural": "de zanden"
+    "concepts": {
+        "sand": {
+            "labels": {
+                "en": {
+                    "singular": "sand",
+                    "plural": "sands"
+                },
+                "fi": {
+                    "singular": "hiekka",
+                    "plural": "hiekat"
+                },
+                "nl": {
+                    "singular": "het zand",
+                    "plural": "de zanden"
+                }
+            }
         }
     }
 }

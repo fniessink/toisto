@@ -1,7 +1,11 @@
 {
-    "full": {
-        "en": "full",
-        "fi": "täynnä",
-        "nl": "vol"
+    "concepts": {
+        "full": {
+            "labels": {
+                "en": "full",
+                "fi": "täynnä",
+                "nl": "vol"
+            }
+        }
     }
 }

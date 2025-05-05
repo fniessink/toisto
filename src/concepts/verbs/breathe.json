@@ -1,7 +1,11 @@
 {
-    "to breathe": {
-        "en": "to breathe",
-        "fi": "hengittää",
-        "nl": "ademen"
+    "concepts": {
+        "to breathe": {
+            "labels": {
+                "en": "to breathe",
+                "fi": "hengittää",
+                "nl": "ademen"
+            }
+        }
     }
 }

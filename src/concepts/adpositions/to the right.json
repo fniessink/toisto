@@ -1,19 +1,25 @@
 {
-    "to the right": {
-        "antonym": "to the left",
-        "example": "alice sits to the right of bob",
-        "en": "to the right",
-        "fi": "oikealla puolella",
-        "nl": "aan de rechterkant"
-    },
-    "alice sits to the right of bob": {
-        "antonym": "alice sits to the left of bob",
-        "roots": [
-            "to sit",
-            "to the right"
-        ],
-        "en": "Alice sits to the right of Bob.",
-        "fi": "Alice istuu Bobin oikealla puolella.",
-        "nl": "Alice zit aan de rechterkant van Bob."
+    "concepts": {
+        "to the right": {
+            "antonym": "to the left",
+            "example": "alice sits to the right of bob",
+            "labels": {
+                "en": "to the right",
+                "fi": "oikealla puolella",
+                "nl": "aan de rechterkant"
+            }
+        },
+        "alice sits to the right of bob": {
+            "antonym": "alice sits to the left of bob",
+            "roots": [
+                "to sit",
+                "to the right"
+            ],
+            "labels": {
+                "en": "Alice sits to the right of Bob.",
+                "fi": "Alice istuu Bobin oikealla puolella.",
+                "nl": "Alice zit aan de rechterkant van Bob."
+            }
+        }
     }
 }

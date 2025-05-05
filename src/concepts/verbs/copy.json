@@ -1,8 +1,12 @@
 {
-    "to copy": {
-        "involves": "photocopier",
-        "en": "to copy",
-        "fi": "kopioida",
-        "nl": "kopiëren"
+    "concepts": {
+        "to copy": {
+            "involves": "photocopier",
+            "labels": {
+                "en": "to copy",
+                "fi": "kopioida",
+                "nl": "kopiëren"
+            }
+        }
     }
 }

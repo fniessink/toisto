@@ -1,7 +1,11 @@
 {
-    "heaven": {
-        "en": "heaven",
-        "fi": "taivas",
-        "nl": "de hemel"
+    "concepts": {
+        "heaven": {
+            "labels": {
+                "en": "heaven",
+                "fi": "taivas",
+                "nl": "de hemel"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "to care for": {
-        "en": "to care for",
-        "fi": "hoitaa",
-        "nl": "zorgen voor"
+    "concepts": {
+        "to care for": {
+            "labels": {
+                "en": "to care for",
+                "fi": "hoitaa",
+                "nl": "zorgen voor"
+            }
+        }
     }
 }

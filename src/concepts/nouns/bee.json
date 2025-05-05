@@ -1,8 +1,12 @@
 {
-    "bee": {
-        "hypernym": "insect",
-        "en": "bee",
-        "fi": "mehiläinen",
-        "nl": "de bij"
+    "concepts": {
+        "bee": {
+            "hypernym": "insect",
+            "labels": {
+                "en": "bee",
+                "fi": "mehiläinen",
+                "nl": "de bij"
+            }
+        }
     }
 }

@@ -1,20 +1,26 @@
 {
-    "in my opinion": {
-        "en": "in my opinion",
-        "fi": [
-            "minun mielestäni",
-            "minusta",
-            "mun mielestä*",
-            "musta*"
-        ],
-        "nl": [
-            "naar mijn mening",
-            "volgens mij"
-        ]
-    },
-    "in everyone's opinion": {
-        "en": "in everyone's opinion",
-        "fi": "kaikkien mielestä",
-        "nl": "volgens iedereen"
+    "concepts": {
+        "in my opinion": {
+            "labels": {
+                "en": "in my opinion",
+                "fi": [
+                    "minun mielestäni",
+                    "minusta",
+                    "mun mielestä*",
+                    "musta*"
+                ],
+                "nl": [
+                    "naar mijn mening",
+                    "volgens mij"
+                ]
+            }
+        },
+        "in everyone's opinion": {
+            "labels": {
+                "en": "in everyone's opinion",
+                "fi": "kaikkien mielestä",
+                "nl": "volgens iedereen"
+            }
+        }
     }
 }

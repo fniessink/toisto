@@ -1,11 +1,15 @@
 {
-    "maid/matron of honor": {
-        "involves": "wedding",
-        "en": {
-            "female": "maid of honor",
-            "male": "matron of honor"
-        },
-        "fi": "kaaso",
-        "nl": "de getuige"
+    "concepts": {
+        "maid/matron of honor": {
+            "involves": "wedding",
+            "labels": {
+                "en": {
+                    "female": "maid of honor",
+                    "male": "matron of honor"
+                },
+                "fi": "kaaso",
+                "nl": "de getuige"
+            }
+        }
     }
 }

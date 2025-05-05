@@ -1,16 +1,20 @@
 {
-    "audience": {
-        "en": {
-            "singular": "audience",
-            "plural": "audiences"
-        },
-        "fi": {
-            "singular": "yleisö",
-            "plural": "yleisöt"
-        },
-        "nl": {
-            "singular": "het publiek",
-            "plural": "de publieken"
+    "concepts": {
+        "audience": {
+            "labels": {
+                "en": {
+                    "singular": "audience",
+                    "plural": "audiences"
+                },
+                "fi": {
+                    "singular": "yleisö",
+                    "plural": "yleisöt"
+                },
+                "nl": {
+                    "singular": "het publiek",
+                    "plural": "de publieken"
+                }
+            }
         }
     }
 }

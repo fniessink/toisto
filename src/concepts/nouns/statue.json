@@ -1,19 +1,23 @@
 {
-    "statue": {
-        "roots": {
-            "nl": "sculpture"
-        },
-        "en": {
-            "singular": "statue",
-            "plural": "statues"
-        },
-        "fi": {
-            "singular": "patsas",
-            "plural": "patsaat"
-        },
-        "nl": {
-            "singular": "het standbeeld",
-            "plural": "de standbeelden"
+    "concepts": {
+        "statue": {
+            "roots": {
+                "nl": "sculpture"
+            },
+            "labels": {
+                "en": {
+                    "singular": "statue",
+                    "plural": "statues"
+                },
+                "fi": {
+                    "singular": "patsas",
+                    "plural": "patsaat"
+                },
+                "nl": {
+                    "singular": "het standbeeld",
+                    "plural": "de standbeelden"
+                }
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "lost": {
-        "en": "lost",
-        "fi": "kadonnut",
-        "nl": "verloren"
+    "concepts": {
+        "lost": {
+            "labels": {
+                "en": "lost",
+                "fi": "kadonnut",
+                "nl": "verloren"
+            }
+        }
     }
 }

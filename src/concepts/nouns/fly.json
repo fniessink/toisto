@@ -1,8 +1,12 @@
 {
-    "fly": {
-        "hypernym": "insect",
-        "en": "fly",
-        "fi": "kärpänen",
-        "nl": "de vlieg"
+    "concepts": {
+        "fly": {
+            "hypernym": "insect",
+            "labels": {
+                "en": "fly",
+                "fi": "kärpänen",
+                "nl": "de vlieg"
+            }
+        }
     }
 }

@@ -1,25 +1,29 @@
 {
-    "grandchild": {
-        "holonym": "family",
-        "roots": {
-            "en": "child",
-            "fi": "child",
-            "nl": [
-                "small",
-                "child"
-            ]
-        },
-        "en": {
-            "singular": "grandchild",
-            "plural": "grandchildren"
-        },
-        "fi": {
-            "singular": "lapsenlapsi",
-            "plural": "lapsenlapset"
-        },
-        "nl": {
-            "singular": "het kleinkind",
-            "plural": "de kleinkinderen"
+    "concepts": {
+        "grandchild": {
+            "holonym": "family",
+            "roots": {
+                "en": "child",
+                "fi": "child",
+                "nl": [
+                    "small",
+                    "child"
+                ]
+            },
+            "labels": {
+                "en": {
+                    "singular": "grandchild",
+                    "plural": "grandchildren"
+                },
+                "fi": {
+                    "singular": "lapsenlapsi",
+                    "plural": "lapsenlapset"
+                },
+                "nl": {
+                    "singular": "het kleinkind",
+                    "plural": "de kleinkinderen"
+                }
+            }
         }
     }
 }

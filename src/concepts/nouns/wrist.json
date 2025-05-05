@@ -1,17 +1,21 @@
 {
-    "wrist": {
-        "holonym": "arm",
-        "en": {
-            "singular": "wrist",
-            "plural": "wrists"
-        },
-        "fi": {
-            "singular": "ranne",
-            "plural": "ranteet"
-        },
-        "nl": {
-            "singular": "de pols",
-            "plural": "de polsen"
+    "concepts": {
+        "wrist": {
+            "holonym": "arm",
+            "labels": {
+                "en": {
+                    "singular": "wrist",
+                    "plural": "wrists"
+                },
+                "fi": {
+                    "singular": "ranne",
+                    "plural": "ranteet"
+                },
+                "nl": {
+                    "singular": "de pols",
+                    "plural": "de polsen"
+                }
+            }
         }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "model": {
-        "en": "model",
-        "fi": "malli",
-        "nl": "het voorbeeld"
+    "concepts": {
+        "model": {
+            "labels": {
+                "en": "model",
+                "fi": "malli",
+                "nl": "het voorbeeld"
+            }
+        }
     }
 }

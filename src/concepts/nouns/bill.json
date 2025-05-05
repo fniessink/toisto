@@ -1,20 +1,26 @@
 {
-    "bill": {
-        "en": "bill",
-        "fi": "lasku",
-        "nl": "de rekening"
-    },
-    "to pay the bill": {
-        "roots": {
-            "en": "bill",
-            "fi": [
-                "to cost",
-                "bill"
-            ],
-            "nl": "bill"
+    "concepts": {
+        "bill": {
+            "labels": {
+                "en": "bill",
+                "fi": "lasku",
+                "nl": "de rekening"
+            }
         },
-        "en": "to pay the bill",
-        "fi": "maksaa lasku",
-        "nl": "de rekening betalen"
+        "to pay the bill": {
+            "roots": {
+                "en": "bill",
+                "fi": [
+                    "to cost",
+                    "bill"
+                ],
+                "nl": "bill"
+            },
+            "labels": {
+                "en": "to pay the bill",
+                "fi": "maksaa lasku",
+                "nl": "de rekening betalen"
+            }
+        }
     }
 }

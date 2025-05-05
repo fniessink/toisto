@@ -1,29 +1,35 @@
 {
-    "see you": {
-        "en": [
-            "Goodbye!",
-            "See you later!See you!"
-        ],
-        "fi": [
-            "Nähdään!",
-            "Näkemiin!"
-        ],
-        "nl": "Tot ziens!"
-    },
-    "see you tomorrow": {
-        "roots": {
-            "en": [
-                "see you",
-                "tomorrow"
-            ],
-            "fi": [
-                "see you",
-                "tomorrow"
-            ],
-            "nl": "tomorrow"
+    "concepts": {
+        "see you": {
+            "labels": {
+                "en": [
+                    "Goodbye!",
+                    "See you later!See you!"
+                ],
+                "fi": [
+                    "Nähdään!",
+                    "Näkemiin!"
+                ],
+                "nl": "Tot ziens!"
+            }
         },
-        "en": "See you tomorrow!",
-        "fi": "Nähdään huomenna!",
-        "nl": "Tot morgen!"
+        "see you tomorrow": {
+            "roots": {
+                "en": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "fi": [
+                    "see you",
+                    "tomorrow"
+                ],
+                "nl": "tomorrow"
+            },
+            "labels": {
+                "en": "See you tomorrow!",
+                "fi": "Nähdään huomenna!",
+                "nl": "Tot morgen!"
+            }
+        }
     }
 }

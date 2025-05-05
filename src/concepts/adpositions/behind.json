@@ -1,20 +1,26 @@
 {
-    "behind": {
-        "antonym": "in front of",
-        "example": "the kitchen is behind that door",
-        "en": "behind",
-        "fi": "takana",
-        "nl": "achter"
-    },
-    "the kitchen is behind that door": {
-        "roots": [
-            "kitchen",
-            "to be",
-            "behind",
-            "door"
-        ],
-        "en": "The kitchen is behind that door.",
-        "fi": "Keittiö on tuon oven takana.",
-        "nl": "De keuken is achter die deur."
+    "concepts": {
+        "behind": {
+            "antonym": "in front of",
+            "example": "the kitchen is behind that door",
+            "labels": {
+                "en": "behind",
+                "fi": "takana",
+                "nl": "achter"
+            }
+        },
+        "the kitchen is behind that door": {
+            "roots": [
+                "kitchen",
+                "to be",
+                "behind",
+                "door"
+            ],
+            "labels": {
+                "en": "The kitchen is behind that door.",
+                "fi": "Keittiö on tuon oven takana.",
+                "nl": "De keuken is achter die deur."
+            }
+        }
     }
 }

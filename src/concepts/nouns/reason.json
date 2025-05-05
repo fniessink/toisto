@@ -1,7 +1,11 @@
 {
-    "reason": {
-        "en": "reason",
-        "fi": "syy",
-        "nl": "de reden"
+    "concepts": {
+        "reason": {
+            "labels": {
+                "en": "reason",
+                "fi": "syy",
+                "nl": "de reden"
+            }
+        }
     }
 }

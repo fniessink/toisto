@@ -1,25 +1,29 @@
 {
-    "early": {
-        "roots": {
-            "fi": "time"
-        },
-        "en": {
-            "positive degree": "early",
-            "comparative degree": "earlier",
-            "superlative degree": "earliest"
-        },
-        "fi": {
-            "positive degree": "aikaisin",
-            "comparative degree": [
-                "aikaisemmin",
-                "aiemmin"
-            ],
-            "superlative degree": "aikaisimmin"
-        },
-        "nl": {
-            "positive degree": "vroeg",
-            "comparative degree": "vroeger",
-            "superlative degree": "vroegst"
+    "concepts": {
+        "early": {
+            "roots": {
+                "fi": "time"
+            },
+            "labels": {
+                "en": {
+                    "positive degree": "early",
+                    "comparative degree": "earlier",
+                    "superlative degree": "earliest"
+                },
+                "fi": {
+                    "positive degree": "aikaisin",
+                    "comparative degree": [
+                        "aikaisemmin",
+                        "aiemmin"
+                    ],
+                    "superlative degree": "aikaisimmin"
+                },
+                "nl": {
+                    "positive degree": "vroeg",
+                    "comparative degree": "vroeger",
+                    "superlative degree": "vroegst"
+                }
+            }
         }
     }
 }

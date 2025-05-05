@@ -1,12 +1,18 @@
 {
-    "to cancel a reservation": {
-        "en": "to cancel a reservation",
-        "fi": "perua varaus",
-        "nl": "een reservering annuleren"
-    },
-    "canceled": {
-        "en": "canceled",
-        "fi": "peruttu",
-        "nl": "geannuleerd"
+    "concepts": {
+        "to cancel a reservation": {
+            "labels": {
+                "en": "to cancel a reservation",
+                "fi": "perua varaus",
+                "nl": "een reservering annuleren"
+            }
+        },
+        "canceled": {
+            "labels": {
+                "en": "canceled",
+                "fi": "peruttu",
+                "nl": "geannuleerd"
+            }
+        }
     }
 }

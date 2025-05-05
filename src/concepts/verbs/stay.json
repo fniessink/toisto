@@ -1,60 +1,68 @@
 {
-    "to stay": {
-        "en": "to stay",
-        "fi": "pysyä",
-        "nl": "blijven"
-    },
-    "to stay (behind)": {
-        "example": "I stayed home yesterday",
-        "en": {
-            "infinitive": "to stay",
-            "singular": {
-                "first person": "I stay",
-                "second person": "you stay",
-                "third person": {
-                    "feminine": "she stays",
-                    "masculine": "he stays"
-                }
-            },
-            "plural": {
-                "first person": "we stay",
-                "second person": "you stay",
-                "third person": "they stay"
+    "concepts": {
+        "to stay": {
+            "labels": {
+                "en": "to stay",
+                "fi": "pysyä",
+                "nl": "blijven"
             }
         },
-        "fi": {
-            "infinitive": "jäädä",
-            "singular": {
-                "first person": "minä jään",
-                "second person": "sinä jäät",
-                "third person": "hän jää"
-            },
-            "plural": {
-                "first person": "me jäämme",
-                "second person": "te jäätte",
-                "third person": "he jäävät"
+        "to stay (behind)": {
+            "example": "I stayed home yesterday",
+            "labels": {
+                "en": {
+                    "infinitive": "to stay",
+                    "singular": {
+                        "first person": "I stay",
+                        "second person": "you stay",
+                        "third person": {
+                            "feminine": "she stays",
+                            "masculine": "he stays"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we stay",
+                        "second person": "you stay",
+                        "third person": "they stay"
+                    }
+                },
+                "fi": {
+                    "infinitive": "jäädä",
+                    "singular": {
+                        "first person": "minä jään",
+                        "second person": "sinä jäät",
+                        "third person": "hän jää"
+                    },
+                    "plural": {
+                        "first person": "me jäämme",
+                        "second person": "te jäätte",
+                        "third person": "he jäävät"
+                    }
+                },
+                "nl": {
+                    "infinitive": "blijven",
+                    "singular": {
+                        "first person": "ik blijf",
+                        "second person": "jij blijft",
+                        "third person": {
+                            "feminine": "zij blijft",
+                            "masculine": "hij blijft"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij blijven",
+                        "second person": "jullie blijven",
+                        "third person": "zij blijven"
+                    }
+                }
             }
         },
-        "nl": {
-            "infinitive": "blijven",
-            "singular": {
-                "first person": "ik blijf",
-                "second person": "jij blijft",
-                "third person": {
-                    "feminine": "zij blijft",
-                    "masculine": "hij blijft"
-                }
-            },
-            "plural": {
-                "first person": "wij blijven",
-                "second person": "jullie blijven",
-                "third person": "zij blijven"
+        "I stayed home yesterday": {
+            "labels": {
+                "en": "I stayed home yesterday.",
+                "fi": "Jäin eilen kotiin.",
+                "nl": "Ik bleef gisteren thuis."
             }
         }
-    },
-    "I stayed home yesterday": {
-        "en": "I stayed home yesterday.",
-        "fi": "Jäin eilen kotiin.",
-        "nl": "Ik bleef gisteren thuis."
     }
 }

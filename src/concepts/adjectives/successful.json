@@ -1,7 +1,11 @@
 {
-    "successful": {
-        "en": "successful",
-        "fi": "onnistunut",
-        "nl": "succesvol"
+    "concepts": {
+        "successful": {
+            "labels": {
+                "en": "successful",
+                "fi": "onnistunut",
+                "nl": "succesvol"
+            }
+        }
     }
 }

@@ -1,7 +1,11 @@
 {
-    "broken": {
-        "en": "broken",
-        "fi": "rikki",
-        "nl": "kapot"
+    "concepts": {
+        "broken": {
+            "labels": {
+                "en": "broken",
+                "fi": "rikki",
+                "nl": "kapot"
+            }
+        }
     }
 }

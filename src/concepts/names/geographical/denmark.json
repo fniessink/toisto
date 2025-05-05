@@ -1,8 +1,12 @@
 {
-    "denmark": {
-        "hypernym": "country",
-        "en": "Denmark",
-        "fi": "Tanska",
-        "nl": "Denemarken"
+    "concepts": {
+        "denmark": {
+            "hypernym": "country",
+            "labels": {
+                "en": "Denmark",
+                "fi": "Tanska",
+                "nl": "Denemarken"
+            }
+        }
     }
 }

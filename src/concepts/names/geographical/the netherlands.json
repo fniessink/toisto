@@ -1,35 +1,41 @@
 {
-    "the netherlands": {
-        "hypernym": "country",
-        "roots": {
-            "fi": "country",
-            "nl": "country"
+    "concepts": {
+        "the netherlands": {
+            "hypernym": "country",
+            "roots": {
+                "fi": "country",
+                "nl": "country"
+            },
+            "labels": {
+                "en": [
+                    "The Netherlands",
+                    "Holland"
+                ],
+                "fi": [
+                    "Alankomaat",
+                    "Hollanti"
+                ],
+                "nl": [
+                    "Nederland",
+                    "Holland"
+                ]
+            }
         },
-        "en": [
-            "The Netherlands",
-            "Holland"
-        ],
-        "fi": [
-            "Alankomaat",
-            "Hollanti"
-        ],
-        "nl": [
-            "Nederland",
-            "Holland"
-        ]
-    },
-    "dutch (nationality)": {
-        "hypernym": "nationality",
-        "involves": "the netherlands",
-        "roots": {
-            "fi": "the netherlands",
-            "nl": "the netherlands"
-        },
-        "en": "Dutch",
-        "fi": [
-            "alankomaalainen",
-            "hollantilainen"
-        ],
-        "nl": "Nederlands"
+        "dutch (nationality)": {
+            "hypernym": "nationality",
+            "involves": "the netherlands",
+            "roots": {
+                "fi": "the netherlands",
+                "nl": "the netherlands"
+            },
+            "labels": {
+                "en": "Dutch",
+                "fi": [
+                    "alankomaalainen",
+                    "hollantilainen"
+                ],
+                "nl": "Nederlands"
+            }
+        }
     }
 }

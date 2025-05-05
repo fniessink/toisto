@@ -1,25 +1,31 @@
 {
-    "metre": {
-        "en": {
-            "singular": "metre|meter",
-            "plural": "metres|meters"
+    "concepts": {
+        "metre": {
+            "labels": {
+                "en": {
+                    "singular": "metre|meter",
+                    "plural": "metres|meters"
+                },
+                "fi": {
+                    "singular": "metri",
+                    "plural": "metrit"
+                },
+                "nl": {
+                    "singular": "de meter",
+                    "plural": "de meters"
+                }
+            }
         },
-        "fi": {
-            "singular": "metri",
-            "plural": "metrit"
-        },
-        "nl": {
-            "singular": "de meter",
-            "plural": "de meters"
+        "square metre": {
+            "roots": "metre",
+            "labels": {
+                "en": "square metre|square meter",
+                "fi": [
+                    "neliömetri",
+                    "neliö*"
+                ],
+                "nl": "de vierkante meter"
+            }
         }
-    },
-    "square metre": {
-        "roots": "metre",
-        "en": "square metre|square meter",
-        "fi": [
-            "neliömetri",
-            "neliö*"
-        ],
-        "nl": "de vierkante meter"
     }
 }

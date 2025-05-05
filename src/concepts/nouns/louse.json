@@ -1,8 +1,12 @@
 {
-    "louse": {
-        "hypernym": "insect",
-        "en": "louse",
-        "fi": "täi",
-        "nl": "de luis"
+    "concepts": {
+        "louse": {
+            "hypernym": "insect",
+            "labels": {
+                "en": "louse",
+                "fi": "täi",
+                "nl": "de luis"
+            }
+        }
     }
 }

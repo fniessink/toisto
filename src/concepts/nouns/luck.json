@@ -1,24 +1,30 @@
 {
-    "luck": {
-        "antonym": "bad luck",
-        "en": "luck",
-        "fi": "onni",
-        "nl": "het geluk"
-    },
-    "bad luck": {
-        "antonym": "luck",
-        "roots": {
-            "en": [
-                "bad",
-                "luck"
-            ],
-            "fi": [
-                "bad",
-                "luck"
-            ]
+    "concepts": {
+        "luck": {
+            "antonym": "bad luck",
+            "labels": {
+                "en": "luck",
+                "fi": "onni",
+                "nl": "het geluk"
+            }
         },
-        "en": "bad luck",
-        "fi": "huono onni",
-        "nl": "de pech"
+        "bad luck": {
+            "antonym": "luck",
+            "roots": {
+                "en": [
+                    "bad",
+                    "luck"
+                ],
+                "fi": [
+                    "bad",
+                    "luck"
+                ]
+            },
+            "labels": {
+                "en": "bad luck",
+                "fi": "huono onni",
+                "nl": "de pech"
+            }
+        }
     }
 }

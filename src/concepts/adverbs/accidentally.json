@@ -1,12 +1,18 @@
 {
-    "accidentally (by chance)": {
-        "en": "accidentally;by chance",
-        "fi": "sattumalta",
-        "nl": "toevallig"
-    },
-    "accidentally (by mistake)": {
-        "en": "accidentally;by mistake",
-        "fi": "vahingossa",
-        "nl": "per ongeluk"
+    "concepts": {
+        "accidentally (by chance)": {
+            "labels": {
+                "en": "accidentally;by chance",
+                "fi": "sattumalta",
+                "nl": "toevallig"
+            }
+        },
+        "accidentally (by mistake)": {
+            "labels": {
+                "en": "accidentally;by mistake",
+                "fi": "vahingossa",
+                "nl": "per ongeluk"
+            }
+        }
     }
 }

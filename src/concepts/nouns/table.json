@@ -1,34 +1,40 @@
 {
-    "table": {
-        "en": {
-            "singular": "table",
-            "plural": "tables"
+    "concepts": {
+        "table": {
+            "labels": {
+                "en": {
+                    "singular": "table",
+                    "plural": "tables"
+                },
+                "fi": {
+                    "singular": "pöytä",
+                    "plural": "pöydät"
+                },
+                "nl": {
+                    "singular": "de tafel",
+                    "plural": "de tafels"
+                }
+            }
         },
-        "fi": {
-            "singular": "pöytä",
-            "plural": "pöydät"
-        },
-        "nl": {
-            "singular": "de tafel",
-            "plural": "de tafels"
+        "dining table": {
+            "example": "you are looking for a dining table",
+            "hypernym": "table",
+            "roots": {
+                "en": "table",
+                "fi": [
+                    "food",
+                    "table"
+                ],
+                "nl": [
+                    "to eat",
+                    "table"
+                ]
+            },
+            "labels": {
+                "en": "dining table",
+                "fi": "ruokapöytä",
+                "nl": "de eettafel"
+            }
         }
-    },
-    "dining table": {
-        "example": "you are looking for a dining table",
-        "hypernym": "table",
-        "roots": {
-            "en": "table",
-            "fi": [
-                "food",
-                "table"
-            ],
-            "nl": [
-                "to eat",
-                "table"
-            ]
-        },
-        "en": "dining table",
-        "fi": "ruokapöytä",
-        "nl": "de eettafel"
     }
 }

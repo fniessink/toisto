@@ -1,28 +1,36 @@
 {
-    "service": {
-        "en": "service",
-        "fi": "palvelu",
-        "nl": [
-            "service",
-            "faciliteit"
-        ]
-    },
-    "customer service": {
-        "roots": [
-            "customer",
-            "service"
-        ],
-        "en": "customer service",
-        "fi": "asiakaspalvelu",
-        "nl": "de klantenservice"
-    },
-    "service point": {
-        "roots": "service",
-        "en": "service point",
-        "fi": [
-            "palvelupiste",
-            "tiski*"
-        ],
-        "nl": "de servicebalie"
+    "concepts": {
+        "service": {
+            "labels": {
+                "en": "service",
+                "fi": "palvelu",
+                "nl": [
+                    "service",
+                    "faciliteit"
+                ]
+            }
+        },
+        "customer service": {
+            "roots": [
+                "customer",
+                "service"
+            ],
+            "labels": {
+                "en": "customer service",
+                "fi": "asiakaspalvelu",
+                "nl": "de klantenservice"
+            }
+        },
+        "service point": {
+            "roots": "service",
+            "labels": {
+                "en": "service point",
+                "fi": [
+                    "palvelupiste",
+                    "tiski*"
+                ],
+                "nl": "de servicebalie"
+            }
+        }
     }
 }

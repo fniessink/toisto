@@ -1,7 +1,11 @@
 {
-    "novelty": {
-        "en": "novelty",
-        "fi": "uutuus",
-        "nl": "de nieuwigheid"
+    "concepts": {
+        "novelty": {
+            "labels": {
+                "en": "novelty",
+                "fi": "uutuus",
+                "nl": "de nieuwigheid"
+            }
+        }
     }
 }

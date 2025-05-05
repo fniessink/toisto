@@ -1,16 +1,20 @@
 {
-    "pub": {
-        "en": {
-            "singular": "pub",
-            "plural": "pubs"
-        },
-        "fi": {
-            "singular": "pubi",
-            "plural": "pubit"
-        },
-        "nl": {
-            "singular": "de kroeg",
-            "plural": "de kroegen"
+    "concepts": {
+        "pub": {
+            "labels": {
+                "en": {
+                    "singular": "pub",
+                    "plural": "pubs"
+                },
+                "fi": {
+                    "singular": "pubi",
+                    "plural": "pubit"
+                },
+                "nl": {
+                    "singular": "de kroeg",
+                    "plural": "de kroegen"
+                }
+            }
         }
     }
 }

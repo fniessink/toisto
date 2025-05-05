@@ -1,8 +1,12 @@
 {
-    "africa": {
-        "hypernym": "continent",
-        "en": "Africa",
-        "fi": "Afrikka",
-        "nl": "Afrika"
+    "concepts": {
+        "africa": {
+            "hypernym": "continent",
+            "labels": {
+                "en": "Africa",
+                "fi": "Afrikka",
+                "nl": "Afrika"
+            }
+        }
     }
 }

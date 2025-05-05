@@ -1,26 +1,36 @@
 {
-    "insurance": {
-        "en": "insurance",
-        "fi": "vakuutus",
-        "nl": "de verzekering"
-    },
-    "insurance company": {
-        "roots": "insurance",
-        "en": "insurance company",
-        "fi": "vakuutusyhtiö",
-        "nl": "de verzekeringsmaatschappij"
-    },
-    "home insurance": {
-        "hypernym": "insurance",
-        "roots": "insurance",
-        "en": "home insurance",
-        "fi": "kotivakuutus",
-        "nl": "de woonverzekering"
-    },
-    "insurance premium": {
-        "roots": "insurance",
-        "en": "insurance premium",
-        "fi": "vakuutusmaksu",
-        "nl": "de verzekeringspremie"
+    "concepts": {
+        "insurance": {
+            "labels": {
+                "en": "insurance",
+                "fi": "vakuutus",
+                "nl": "de verzekering"
+            }
+        },
+        "insurance company": {
+            "roots": "insurance",
+            "labels": {
+                "en": "insurance company",
+                "fi": "vakuutusyhtiö",
+                "nl": "de verzekeringsmaatschappij"
+            }
+        },
+        "home insurance": {
+            "hypernym": "insurance",
+            "roots": "insurance",
+            "labels": {
+                "en": "home insurance",
+                "fi": "kotivakuutus",
+                "nl": "de woonverzekering"
+            }
+        },
+        "insurance premium": {
+            "roots": "insurance",
+            "labels": {
+                "en": "insurance premium",
+                "fi": "vakuutusmaksu",
+                "nl": "de verzekeringspremie"
+            }
+        }
     }
 }

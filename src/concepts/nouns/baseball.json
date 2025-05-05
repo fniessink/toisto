@@ -1,24 +1,30 @@
 {
-    "Finnish baseball": {
-        "example": "I play Finnish baseball",
-        "hypernym": "team sport",
-        "en": "Finnish baseball",
-        "fi": [
-            "pesäpallo",
-            "pesis*"
-        ],
-        "nl": "het Fins honkbal"
-    },
-    "I play Finnish baseball": {
-        "roots": [
-            "to play a sport",
-            "Finnish baseball"
-        ],
-        "en": "I play Finnish baseball.",
-        "fi": [
-            "Minä pelaan pesäpalloa.",
-            "Mä pelaan pesistä.*"
-        ],
-        "nl": "Ik speel Fins honkbal."
+    "concepts": {
+        "Finnish baseball": {
+            "example": "I play Finnish baseball",
+            "hypernym": "team sport",
+            "labels": {
+                "en": "Finnish baseball",
+                "fi": [
+                    "pesäpallo",
+                    "pesis*"
+                ],
+                "nl": "het Fins honkbal"
+            }
+        },
+        "I play Finnish baseball": {
+            "roots": [
+                "to play a sport",
+                "Finnish baseball"
+            ],
+            "labels": {
+                "en": "I play Finnish baseball.",
+                "fi": [
+                    "Minä pelaan pesäpalloa.",
+                    "Mä pelaan pesistä.*"
+                ],
+                "nl": "Ik speel Fins honkbal."
+            }
+        }
     }
 }

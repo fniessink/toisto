@@ -1,16 +1,20 @@
 {
-    "mountain": {
-        "en": {
-            "singular": "mountain",
-            "plural": "mountains"
-        },
-        "fi": {
-            "singular": "vuori",
-            "plural": "vuoret"
-        },
-        "nl": {
-            "singular": "de berg",
-            "plural": "de bergen"
+    "concepts": {
+        "mountain": {
+            "labels": {
+                "en": {
+                    "singular": "mountain",
+                    "plural": "mountains"
+                },
+                "fi": {
+                    "singular": "vuori",
+                    "plural": "vuoret"
+                },
+                "nl": {
+                    "singular": "de berg",
+                    "plural": "de bergen"
+                }
+            }
         }
     }
 }

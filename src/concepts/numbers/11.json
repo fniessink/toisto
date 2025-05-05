@@ -1,24 +1,28 @@
 {
-    "11": {
-        "hypernym": "number",
-        "roots": [
-            "1",
-            "10"
-        ],
-        "en": {
-            "cardinal": "eleven",
-            "ordinal": "eleventh"
-        },
-        "fi": {
-            "cardinal": [
-                "yksitoista",
-                "ykstoist*"
+    "concepts": {
+        "11": {
+            "hypernym": "number",
+            "roots": [
+                "1",
+                "10"
             ],
-            "ordinal": "yhdestoista"
-        },
-        "nl": {
-            "cardinal": "elf",
-            "ordinal": "elfde"
+            "labels": {
+                "en": {
+                    "cardinal": "eleven",
+                    "ordinal": "eleventh"
+                },
+                "fi": {
+                    "cardinal": [
+                        "yksitoista",
+                        "ykstoist*"
+                    ],
+                    "ordinal": "yhdestoista"
+                },
+                "nl": {
+                    "cardinal": "elf",
+                    "ordinal": "elfde"
+                }
+            }
         }
     }
 }

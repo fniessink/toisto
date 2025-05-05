@@ -1,17 +1,21 @@
 {
-    "cheetah": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "cheetah",
-            "plural": "cheetahs"
-        },
-        "fi": {
-            "singular": "gepardi",
-            "plural": "gepardit"
-        },
-        "nl": {
-            "singular": "het jachtluipaard ",
-            "plural": "de jachtluipaarden"
+    "concepts": {
+        "cheetah": {
+            "hypernym": "animal",
+            "labels": {
+                "en": {
+                    "singular": "cheetah",
+                    "plural": "cheetahs"
+                },
+                "fi": {
+                    "singular": "gepardi",
+                    "plural": "gepardit"
+                },
+                "nl": {
+                    "singular": "het jachtluipaard ",
+                    "plural": "de jachtluipaarden"
+                }
+            }
         }
     }
 }

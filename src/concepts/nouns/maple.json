@@ -1,8 +1,12 @@
 {
-    "maple": {
-        "hypernym": "tree",
-        "en": "maple",
-        "fi": "vaahtera",
-        "nl": "de esdoorn"
+    "concepts": {
+        "maple": {
+            "hypernym": "tree",
+            "labels": {
+                "en": "maple",
+                "fi": "vaahtera",
+                "nl": "de esdoorn"
+            }
+        }
     }
 }

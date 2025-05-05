@@ -1,63 +1,85 @@
 {
-    "all": {
-        "en": "often",
-        "fi": "usein",
-        "nl": "vaak"
-    },
-    "at least": {
-        "en": [
-            "at least",
-            "in any case"
-        ],
-        "fi": "ainakin",
-        "nl": [
-            "in ieder geval",
-            "in elk geval",
-            "tenminste",
-            "althans"
-        ]
-    },
-    "by the way": {
-        "en": "by the way",
-        "fi": "muuten",
-        "nl": "overigens"
-    },
-    "in the mean time": {
-        "en": "in the mean time",
-        "fi": "sillä aikaa",
-        "nl": "ondertussen"
-    },
-    "always": {
-        "en": "always",
-        "fi": "aina",
-        "nl": "altijd"
-    },
-    "therefore": {
-        "en": "therefore",
-        "fi": "siksi",
-        "nl": "daarom"
-    },
-    "too": {
-        "en": "too",
-        "fi": "liian",
-        "nl": "te"
-    },
-    "exactly": {
-        "en": "exactly",
-        "fi": [
-            "juuri",
-            "just*"
-        ],
-        "nl": "precies"
-    },
-    "hopefully": {
-        "en": "hopefully",
-        "fi": "toivottavasti",
-        "nl": "hopelijk"
-    },
-    "already": {
-        "en": "already",
-        "fi": "jo",
-        "nl": "al"
+    "concepts": {
+        "all": {
+            "labels": {
+                "en": "often",
+                "fi": "usein",
+                "nl": "vaak"
+            }
+        },
+        "at least": {
+            "labels": {
+                "en": [
+                    "at least",
+                    "in any case"
+                ],
+                "fi": "ainakin",
+                "nl": [
+                    "in ieder geval",
+                    "in elk geval",
+                    "tenminste",
+                    "althans"
+                ]
+            }
+        },
+        "by the way": {
+            "labels": {
+                "en": "by the way",
+                "fi": "muuten",
+                "nl": "overigens"
+            }
+        },
+        "in the mean time": {
+            "labels": {
+                "en": "in the mean time",
+                "fi": "sillä aikaa",
+                "nl": "ondertussen"
+            }
+        },
+        "always": {
+            "labels": {
+                "en": "always",
+                "fi": "aina",
+                "nl": "altijd"
+            }
+        },
+        "therefore": {
+            "labels": {
+                "en": "therefore",
+                "fi": "siksi",
+                "nl": "daarom"
+            }
+        },
+        "too": {
+            "labels": {
+                "en": "too",
+                "fi": "liian",
+                "nl": "te"
+            }
+        },
+        "exactly": {
+            "labels": {
+                "en": "exactly",
+                "fi": [
+                    "juuri",
+                    "just*"
+                ],
+                "nl": "precies"
+            }
+        },
+        "hopefully": {
+            "labels": {
+                "en": "hopefully",
+                "fi": "toivottavasti",
+                "nl": "hopelijk"
+            }
+        },
+        "already": {
+            "labels": {
+                "en": "already",
+                "fi": "jo",
+                "nl": "al"
+            }
+        }
     }
 }

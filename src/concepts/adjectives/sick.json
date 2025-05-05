@@ -1,10 +1,14 @@
 {
-    "sick": {
-        "en": [
-            "ill",
-            "sick"
-        ],
-        "fi": "sairas",
-        "nl": "ziek"
+    "concepts": {
+        "sick": {
+            "labels": {
+                "en": [
+                    "ill",
+                    "sick"
+                ],
+                "fi": "sairas",
+                "nl": "ziek"
+            }
+        }
     }
 }

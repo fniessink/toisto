@@ -1,8 +1,12 @@
 {
-    "1000": {
-        "hypernym": "number",
-        "en": "thousand",
-        "fi": "tuhat",
-        "nl": "duizend"
+    "concepts": {
+        "1000": {
+            "hypernym": "number",
+            "labels": {
+                "en": "thousand",
+                "fi": "tuhat",
+                "nl": "duizend"
+            }
+        }
     }
 }

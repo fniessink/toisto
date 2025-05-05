@@ -1,7 +1,11 @@
 {
-    "instruction": {
-        "en": "instruction",
-        "fi": "ohje",
-        "nl": "de instructie"
+    "concepts": {
+        "instruction": {
+            "labels": {
+                "en": "instruction",
+                "fi": "ohje",
+                "nl": "de instructie"
+            }
+        }
     }
 }

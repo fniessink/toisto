@@ -1,22 +1,26 @@
 {
-    "body": {
-        "en": {
-            "singular": "body",
-            "plural": "bodies"
-        },
-        "fi": {
-            "singular": [
-                "vartalo",
-                "keho"
-            ],
-            "plural": [
-                "vartalot",
-                "kehot"
-            ]
-        },
-        "nl": {
-            "singular": "het lichaam",
-            "plural": "de lichamen"
+    "concepts": {
+        "body": {
+            "labels": {
+                "en": {
+                    "singular": "body",
+                    "plural": "bodies"
+                },
+                "fi": {
+                    "singular": [
+                        "vartalo",
+                        "keho"
+                    ],
+                    "plural": [
+                        "vartalot",
+                        "kehot"
+                    ]
+                },
+                "nl": {
+                    "singular": "het lichaam",
+                    "plural": "de lichamen"
+                }
+            }
         }
     }
 }

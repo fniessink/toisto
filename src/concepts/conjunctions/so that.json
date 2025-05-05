@@ -1,13 +1,17 @@
 {
-    "so that": {
-        "en": [
-            "so that",
-            "in order that"
-        ],
-        "fi": [
-            "että",
-            "jotta"
-        ],
-        "nl": "zodat"
+    "concepts": {
+        "so that": {
+            "labels": {
+                "en": [
+                    "so that",
+                    "in order that"
+                ],
+                "fi": [
+                    "että",
+                    "jotta"
+                ],
+                "nl": "zodat"
+            }
+        }
     }
 }

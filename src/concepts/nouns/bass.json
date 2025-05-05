@@ -1,16 +1,20 @@
 {
-    "bass": {
-        "en": {
-            "singular": "bass",
-            "plural": "basses"
-        },
-        "fi": {
-            "singular": "basso",
-            "plural": "bassot"
-        },
-        "nl": {
-            "singular": "de bas",
-            "plural": "de bassen"
+    "concepts": {
+        "bass": {
+            "labels": {
+                "en": {
+                    "singular": "bass",
+                    "plural": "basses"
+                },
+                "fi": {
+                    "singular": "basso",
+                    "plural": "bassot"
+                },
+                "nl": {
+                    "singular": "de bas",
+                    "plural": "de bassen"
+                }
+            }
         }
     }
 }

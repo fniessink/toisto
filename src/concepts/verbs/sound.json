@@ -1,48 +1,52 @@
 {
-    "to sound": {
-        "en": {
-            "infinitive": "to sound",
-            "singular": {
-                "first person": "I sound",
-                "second person": "you sound",
-                "third person": {
-                    "feminine": "she sounds",
-                    "masculine": "he sounds"
+    "concepts": {
+        "to sound": {
+            "labels": {
+                "en": {
+                    "infinitive": "to sound",
+                    "singular": {
+                        "first person": "I sound",
+                        "second person": "you sound",
+                        "third person": {
+                            "feminine": "she sounds",
+                            "masculine": "he sounds"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we sound",
+                        "second person": "you sound",
+                        "third person": "they sound"
+                    }
+                },
+                "fi": {
+                    "infinitive": "kuulostaa",
+                    "singular": {
+                        "first person": "minä kuulostan",
+                        "second person": "sinä kuulostat",
+                        "third person": "hän kuulostaa"
+                    },
+                    "plural": {
+                        "first person": "me kuulostamme",
+                        "second person": "te kuulostatte",
+                        "third person": "he kuulostavat"
+                    }
+                },
+                "nl": {
+                    "infinitive": "klinken",
+                    "singular": {
+                        "first person": "ik klink",
+                        "second person": "jij klinkt",
+                        "third person": {
+                            "feminine": "zij klinkt",
+                            "masculine": "hij klinkt"
+                        }
+                    },
+                    "plural": {
+                        "first person": "wij klinken",
+                        "second person": "jullie klinken",
+                        "third person": "zij klinken"
+                    }
                 }
-            },
-            "plural": {
-                "first person": "we sound",
-                "second person": "you sound",
-                "third person": "they sound"
-            }
-        },
-        "fi": {
-            "infinitive": "kuulostaa",
-            "singular": {
-                "first person": "minä kuulostan",
-                "second person": "sinä kuulostat",
-                "third person": "hän kuulostaa"
-            },
-            "plural": {
-                "first person": "me kuulostamme",
-                "second person": "te kuulostatte",
-                "third person": "he kuulostavat"
-            }
-        },
-        "nl": {
-            "infinitive": "klinken",
-            "singular": {
-                "first person": "ik klink",
-                "second person": "jij klinkt",
-                "third person": {
-                    "feminine": "zij klinkt",
-                    "masculine": "hij klinkt"
-                }
-            },
-            "plural": {
-                "first person": "wij klinken",
-                "second person": "jullie klinken",
-                "third person": "zij klinken"
             }
         }
     }

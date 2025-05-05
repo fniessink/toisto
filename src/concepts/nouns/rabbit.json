@@ -1,29 +1,33 @@
 {
-    "rabbit": {
-        "hypernym": "pet",
-        "en": {
-            "singular": [
-                "rabbit",
-                "bunny"
-            ],
-            "plural": [
-                "rabbits",
-                "bunnies"
-            ]
-        },
-        "fi": {
-            "singular": [
-                "kaniini",
-                "pupu"
-            ],
-            "plural": [
-                "kaniinit",
-                "puput"
-            ]
-        },
-        "nl": {
-            "singular": "het konijn",
-            "plural": "de konijnen"
+    "concepts": {
+        "rabbit": {
+            "hypernym": "pet",
+            "labels": {
+                "en": {
+                    "singular": [
+                        "rabbit",
+                        "bunny"
+                    ],
+                    "plural": [
+                        "rabbits",
+                        "bunnies"
+                    ]
+                },
+                "fi": {
+                    "singular": [
+                        "kaniini",
+                        "pupu"
+                    ],
+                    "plural": [
+                        "kaniinit",
+                        "puput"
+                    ]
+                },
+                "nl": {
+                    "singular": "het konijn",
+                    "plural": "de konijnen"
+                }
+            }
         }
     }
 }

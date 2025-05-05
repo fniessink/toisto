@@ -1,7 +1,11 @@
 {
-    "bureau": {
-        "en": "bureau",
-        "fi": "virasto",
-        "nl": "de dienst"
+    "concepts": {
+        "bureau": {
+            "labels": {
+                "en": "bureau",
+                "fi": "virasto",
+                "nl": "de dienst"
+            }
+        }
     }
 }

@@ -1,148 +1,168 @@
 {
-    "parent": {
-        "antonym": "child",
-        "holonym": "family",
-        "roots": {
-            "fi": "old",
-            "nl": "old"
+    "concepts": {
+        "parent": {
+            "antonym": "child",
+            "holonym": "family",
+            "roots": {
+                "fi": "old",
+                "nl": "old"
+            },
+            "labels": {
+                "en": {
+                    "singular": "parent",
+                    "plural": "parents"
+                },
+                "fi": {
+                    "singular": "vanhempi;noun",
+                    "plural": "vanhemmat"
+                },
+                "nl": {
+                    "singular": "de ouder",
+                    "plural": "de ouders"
+                }
+            }
         },
-        "en": {
-            "singular": "parent",
-            "plural": "parents"
+        "mother": {
+            "antonym": [
+                "daughter",
+                "father"
+            ],
+            "hypernym": "parent",
+            "labels": {
+                "en": {
+                    "singular": "mother",
+                    "plural": "mothers"
+                },
+                "fi": {
+                    "singular": "äiti",
+                    "plural": "äidit"
+                },
+                "nl": {
+                    "singular": "de moeder",
+                    "plural": "de moeders"
+                }
+            }
         },
-        "fi": {
-            "singular": "vanhempi;noun",
-            "plural": "vanhemmat"
+        "father": {
+            "antonym": [
+                "mother",
+                "son"
+            ],
+            "hypernym": "parent",
+            "labels": {
+                "en": {
+                    "singular": "father",
+                    "plural": "fathers"
+                },
+                "fi": {
+                    "singular": "isä",
+                    "plural": "isät"
+                },
+                "nl": {
+                    "singular": "de vader",
+                    "plural": "de vaders"
+                }
+            }
         },
-        "nl": {
-            "singular": "de ouder",
-            "plural": "de ouders"
-        }
-    },
-    "mother": {
-        "antonym": [
-            "daughter",
-            "father"
-        ],
-        "hypernym": "parent",
-        "en": {
-            "singular": "mother",
-            "plural": "mothers"
+        "stepfather": {
+            "hypernym": "father",
+            "roots": "father",
+            "labels": {
+                "en": {
+                    "singular": "stepfather",
+                    "plural": "stepfathers"
+                },
+                "fi": {
+                    "singular": "isäpuoli",
+                    "plural": "isäpuolet"
+                },
+                "nl": {
+                    "singular": "de stiefvader",
+                    "plural": "de stiefvaders"
+                }
+            }
         },
-        "fi": {
-            "singular": "äiti",
-            "plural": "äidit"
+        "stepmother": {
+            "hypernym": "mother",
+            "roots": "mother",
+            "labels": {
+                "en": {
+                    "singular": "stepmother",
+                    "plural": "stepmothers"
+                },
+                "fi": {
+                    "singular": "äitipuoli",
+                    "plural": "äitipuolet"
+                },
+                "nl": {
+                    "singular": "de stiefmoeder",
+                    "plural": "de stiefmoeders"
+                }
+            }
         },
-        "nl": {
-            "singular": "de moeder",
-            "plural": "de moeders"
-        }
-    },
-    "father": {
-        "antonym": [
-            "mother",
-            "son"
-        ],
-        "hypernym": "parent",
-        "en": {
-            "singular": "father",
-            "plural": "fathers"
+        "parent-in-law": {
+            "hypernym": "parent",
+            "roots": "parent",
+            "labels": {
+                "en": "parent-in-law",
+                "fi": "appivanhempi",
+                "nl": "de schoonouder"
+            }
         },
-        "fi": {
-            "singular": "isä",
-            "plural": "isät"
+        "mother-in-law": {
+            "hypernym": [
+                "parent-in-law",
+                "mother"
+            ],
+            "roots": "mother",
+            "labels": {
+                "en": {
+                    "singular": "mother-in-law",
+                    "plural": "mothers-in-law"
+                },
+                "fi": {
+                    "singular": "anoppi",
+                    "plural": "anopit"
+                },
+                "nl": {
+                    "singular": "de schoonmoeder",
+                    "plural": "de schoonmoeders"
+                }
+            }
         },
-        "nl": {
-            "singular": "de vader",
-            "plural": "de vaders"
-        }
-    },
-    "stepfather": {
-        "hypernym": "father",
-        "roots": "father",
-        "en": {
-            "singular": "stepfather",
-            "plural": "stepfathers"
+        "father-in-law": {
+            "hypernym": [
+                "parent-in-law",
+                "father"
+            ],
+            "roots": "father",
+            "labels": {
+                "en": {
+                    "singular": "father-in-law",
+                    "plural": "fathers-in-law"
+                },
+                "fi": {
+                    "singular": "appiukko",
+                    "plural": "appiukot"
+                },
+                "nl": {
+                    "singular": "de schoonvader",
+                    "plural": "de schoonvaders"
+                }
+            }
         },
-        "fi": {
-            "singular": "isäpuoli",
-            "plural": "isäpuolet"
-        },
-        "nl": {
-            "singular": "de stiefvader",
-            "plural": "de stiefvaders"
-        }
-    },
-    "stepmother": {
-        "hypernym": "mother",
-        "roots": "mother",
-        "en": {
-            "singular": "stepmother",
-            "plural": "stepmothers"
-        },
-        "fi": {
-            "singular": "äitipuoli",
-            "plural": "äitipuolet"
-        },
-        "nl": {
-            "singular": "de stiefmoeder",
-            "plural": "de stiefmoeders"
-        }
-    },
-    "parent-in-law": {
-        "hypernym": "parent",
-        "roots": "parent",
-        "en": "parent-in-law",
-        "fi": "appivanhempi",
-        "nl": "de schoonouder"
-    },
-    "mother-in-law": {
-        "hypernym": [
-            "parent-in-law",
-            "mother"
-        ],
-        "roots": "mother",
-        "en": {
-            "singular": "mother-in-law",
-            "plural": "mothers-in-law"
-        },
-        "fi": {
-            "singular": "anoppi",
-            "plural": "anopit"
-        },
-        "nl": {
-            "singular": "de schoonmoeder",
-            "plural": "de schoonmoeders"
-        }
-    },
-    "father-in-law": {
-        "hypernym": [
-            "parent-in-law",
-            "father"
-        ],
-        "roots": "father",
-        "en": {
-            "singular": "father-in-law",
-            "plural": "fathers-in-law"
-        },
-        "fi": {
-            "singular": "appiukko",
-            "plural": "appiukot"
-        },
-        "nl": {
-            "singular": "de schoonvader",
-            "plural": "de schoonvaders"
-        }
-    },
-    "godparent": {
-        "roots": {
-            "en": "parent"
-        },
-        "en": "godparent",
-        "fi": "kummi",
-        "nl": {
-            "feminine": "de peettante",
-            "masculine": "de peetoom"
+        "godparent": {
+            "roots": {
+                "en": "parent"
+            },
+            "labels": {
+                "en": "godparent",
+                "fi": "kummi",
+                "nl": {
+                    "feminine": "de peettante",
+                    "masculine": "de peetoom"
+                }
+            }
         }
     }
 }

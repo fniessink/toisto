@@ -1,10 +1,14 @@
 {
-    "photocopier": {
-        "en": "photocopier|copier",
-        "fi": "kopiokone",
-        "nl": [
-            "de kopieermachine",
-            "het kopieerapparaat"
-        ]
+    "concepts": {
+        "photocopier": {
+            "labels": {
+                "en": "photocopier|copier",
+                "fi": "kopiokone",
+                "nl": [
+                    "de kopieermachine",
+                    "het kopieerapparaat"
+                ]
+            }
+        }
     }
 }

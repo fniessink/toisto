@@ -1,50 +1,62 @@
 {
-    "wedding": {
-        "en": "wedding",
-        "fi": "häät",
-        "nl": [
-            "de bruiloft",
-            "de trouwerij"
-        ]
-    },
-    "wedding couple": {
-        "roots": {
-            "en": "wedding",
-            "fi": "wedding"
+    "concepts": {
+        "wedding": {
+            "labels": {
+                "en": "wedding",
+                "fi": "häät",
+                "nl": [
+                    "de bruiloft",
+                    "de trouwerij"
+                ]
+            }
         },
-        "en": "wedding couple",
-        "fi": "hääpari",
-        "nl": "het bruidspaar"
-    },
-    "wedding dress": {
-        "hypernym": "dress",
-        "roots": {
-            "en": [
-                "wedding",
-                "dress"
-            ],
-            "fi": [
-                "wedding",
-                "suit"
-            ],
-            "nl": "dress"
+        "wedding couple": {
+            "roots": {
+                "en": "wedding",
+                "fi": "wedding"
+            },
+            "labels": {
+                "en": "wedding couple",
+                "fi": "hääpari",
+                "nl": "het bruidspaar"
+            }
         },
-        "en": "wedding dress",
-        "fi": "hääpuku",
-        "nl": "de bruidsjurk"
-    },
-    "wedding ring": {
-        "roots": {
-            "en": "wedding"
+        "wedding dress": {
+            "hypernym": "dress",
+            "roots": {
+                "en": [
+                    "wedding",
+                    "dress"
+                ],
+                "fi": [
+                    "wedding",
+                    "suit"
+                ],
+                "nl": "dress"
+            },
+            "labels": {
+                "en": "wedding dress",
+                "fi": "hääpuku",
+                "nl": "de bruidsjurk"
+            }
         },
-        "en": "wedding ring",
-        "fi": "vihkisormus",
-        "nl": "de trouwring"
-    },
-    "wedding waltz": {
-        "roots": "wedding",
-        "en": "wedding waltz",
-        "fi": "häävalssi",
-        "nl": "de bruiloftswals"
+        "wedding ring": {
+            "roots": {
+                "en": "wedding"
+            },
+            "labels": {
+                "en": "wedding ring",
+                "fi": "vihkisormus",
+                "nl": "de trouwring"
+            }
+        },
+        "wedding waltz": {
+            "roots": "wedding",
+            "labels": {
+                "en": "wedding waltz",
+                "fi": "häävalssi",
+                "nl": "de bruiloftswals"
+            }
+        }
     }
 }

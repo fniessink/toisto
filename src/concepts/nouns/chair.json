@@ -1,37 +1,43 @@
 {
-    "chair": {
-        "en": {
-            "singular": "chair",
-            "plural": "chairs"
+    "concepts": {
+        "chair": {
+            "labels": {
+                "en": {
+                    "singular": "chair",
+                    "plural": "chairs"
+                },
+                "fi": {
+                    "singular": "tuoli",
+                    "plural": "tuolit"
+                },
+                "nl": {
+                    "singular": "de stoel",
+                    "plural": "de stoelen"
+                }
+            }
         },
-        "fi": {
-            "singular": "tuoli",
-            "plural": "tuolit"
-        },
-        "nl": {
-            "singular": "de stoel",
-            "plural": "de stoelen"
+        "office chair": {
+            "example": "we are looking for an office chair",
+            "hypernym": "chair",
+            "roots": {
+                "en": [
+                    "office",
+                    "chair"
+                ],
+                "fi": [
+                    "job",
+                    "chair"
+                ],
+                "nl": [
+                    "desk",
+                    "chair"
+                ]
+            },
+            "labels": {
+                "en": "office chair",
+                "fi": "työtuoli",
+                "nl": "de bureaustoel"
+            }
         }
-    },
-    "office chair": {
-        "example": "we are looking for an office chair",
-        "hypernym": "chair",
-        "roots": {
-            "en": [
-                "office",
-                "chair"
-            ],
-            "fi": [
-                "job",
-                "chair"
-            ],
-            "nl": [
-                "desk",
-                "chair"
-            ]
-        },
-        "en": "office chair",
-        "fi": "työtuoli",
-        "nl": "de bureaustoel"
     }
 }

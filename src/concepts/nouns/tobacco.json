@@ -1,7 +1,11 @@
 {
-    "tobacco": {
-        "en": "tobacco",
-        "fi": "tupakka",
-        "nl": "de tabak"
+    "concepts": {
+        "tobacco": {
+            "labels": {
+                "en": "tobacco",
+                "fi": "tupakka",
+                "nl": "de tabak"
+            }
+        }
     }
 }

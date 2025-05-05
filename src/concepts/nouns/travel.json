@@ -1,53 +1,65 @@
 {
-    "travel": {
-        "example": "to continue the journey",
-        "en": {
-            "singular": [
+    "concepts": {
+        "travel": {
+            "example": "to continue the journey",
+            "labels": {
+                "en": {
+                    "singular": [
+                        "travel",
+                        "journey"
+                    ],
+                    "plural": [
+                        "travels",
+                        "journeys"
+                    ]
+                },
+                "fi": {
+                    "singular": "matka",
+                    "plural": "matkat"
+                },
+                "nl": {
+                    "singular": "de reis",
+                    "plural": "de reizen"
+                }
+            }
+        },
+        "travel program": {
+            "hypernym": "program",
+            "involves": "travel",
+            "roots": "travel",
+            "labels": {
+                "en": "travel program",
+                "fi": "matkaohjelma",
+                "nl": "het reisprogramma"
+            }
+        },
+        "travel insurance": {
+            "involves": "travel",
+            "roots": [
                 "travel",
-                "journey"
+                "insurance"
             ],
-            "plural": [
-                "travels",
-                "journeys"
-            ]
+            "labels": {
+                "en": "travel insurance",
+                "fi": "matkavakuutus",
+                "nl": "de reisverzekering"
+            }
         },
-        "fi": {
-            "singular": "matka",
-            "plural": "matkat"
+        "traveler": {
+            "roots": "travel",
+            "labels": {
+                "en": "traveler",
+                "fi": "matkustaja",
+                "nl": "de reiziger"
+            }
         },
-        "nl": {
-            "singular": "de reis",
-            "plural": "de reizen"
+        "traveling": {
+            "roots": "travel",
+            "labels": {
+                "en": "traveling",
+                "fi": "matkustaminen",
+                "nl": "het reizen"
+            }
         }
-    },
-    "travel program": {
-        "hypernym": "program",
-        "involves": "travel",
-        "roots": "travel",
-        "en": "travel program",
-        "fi": "matkaohjelma",
-        "nl": "het reisprogramma"
-    },
-    "travel insurance": {
-        "involves": "travel",
-        "roots": [
-            "travel",
-            "insurance"
-        ],
-        "en": "travel insurance",
-        "fi": "matkavakuutus",
-        "nl": "de reisverzekering"
-    },
-    "traveler": {
-        "roots": "travel",
-        "en": "traveler",
-        "fi": "matkustaja",
-        "nl": "de reiziger"
-    },
-    "traveling": {
-        "roots": "travel",
-        "en": "traveling",
-        "fi": "matkustaminen",
-        "nl": "het reizen"
     }
 }

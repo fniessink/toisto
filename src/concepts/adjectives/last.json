@@ -1,27 +1,35 @@
 {
-    "last": {
-        "en": [
-            "last",
-            "past"
-        ],
-        "fi": "viime",
-        "nl": [
-            "afgelopen",
-            "vorig"
-        ]
-    },
-    "the last time": {
-        "roots": "last",
-        "en": "the last time",
-        "fi": "viimeksi",
-        "nl": "voor het laatst"
-    },
-    "last (in a row)": {
-        "roots": {
-            "fi": "last"
+    "concepts": {
+        "last": {
+            "labels": {
+                "en": [
+                    "last",
+                    "past"
+                ],
+                "fi": "viime",
+                "nl": [
+                    "afgelopen",
+                    "vorig"
+                ]
+            }
         },
-        "en": "last",
-        "fi": "viimeinen",
-        "nl": "laatste"
+        "the last time": {
+            "roots": "last",
+            "labels": {
+                "en": "the last time",
+                "fi": "viimeksi",
+                "nl": "voor het laatst"
+            }
+        },
+        "last (in a row)": {
+            "roots": {
+                "fi": "last"
+            },
+            "labels": {
+                "en": "last",
+                "fi": "viimeinen",
+                "nl": "laatste"
+            }
+        }
     }
 }

@@ -1,29 +1,35 @@
 {
-    "gym": {
-        "en": {
-            "singular": "gym",
-            "plural": "gyms"
+    "concepts": {
+        "gym": {
+            "labels": {
+                "en": {
+                    "singular": "gym",
+                    "plural": "gyms"
+                },
+                "fi": {
+                    "singular": "sali",
+                    "plural": "salit"
+                },
+                "nl": {
+                    "singular": [
+                        "de gym",
+                        "de sportschool",
+                        "de fitnessruimte"
+                    ],
+                    "plural": [
+                        "de gyms",
+                        "de sportscholen",
+                        "de fitnessruimtes"
+                    ]
+                }
+            }
         },
-        "fi": {
-            "singular": "sali",
-            "plural": "salit"
-        },
-        "nl": {
-            "singular": [
-                "de gym",
-                "de sportschool",
-                "de fitnessruimte"
-            ],
-            "plural": [
-                "de gyms",
-                "de sportscholen",
-                "de fitnessruimtes"
-            ]
+        "gymnasium": {
+            "labels": {
+                "en": "gymnasium",
+                "fi": "liikuntasali",
+                "nl": "het gymnastieklokaal"
+            }
         }
-    },
-    "gymnasium": {
-        "en": "gymnasium",
-        "fi": "liikuntasali",
-        "nl": "het gymnastieklokaal"
     }
 }

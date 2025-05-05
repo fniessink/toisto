@@ -1,8 +1,12 @@
 {
-    "to dive": {
-        "involves": "water",
-        "en": "to dive",
-        "fi": "sukeltaa",
-        "nl": "duiken"
+    "concepts": {
+        "to dive": {
+            "involves": "water",
+            "labels": {
+                "en": "to dive",
+                "fi": "sukeltaa",
+                "nl": "duiken"
+            }
+        }
     }
 }

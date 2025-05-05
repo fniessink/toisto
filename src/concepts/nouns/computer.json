@@ -1,10 +1,14 @@
 {
-    "computer": {
-        "roots": {
-            "fi": "knowledge"
-        },
-        "en": "computer",
-        "fi": "tietokone",
-        "nl": "de computer"
+    "concepts": {
+        "computer": {
+            "roots": {
+                "fi": "knowledge"
+            },
+            "labels": {
+                "en": "computer",
+                "fi": "tietokone",
+                "nl": "de computer"
+            }
+        }
     }
 }

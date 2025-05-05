@@ -1,14 +1,18 @@
 {
-    "first": {
-        "en": [
-            "first",
-            "firstly"
-        ],
-        "fi": [
-            "ensin",
-            "aluksi",
-            "ensimmäiseksi"
-        ],
-        "nl": "eerst"
+    "concepts": {
+        "first": {
+            "labels": {
+                "en": [
+                    "first",
+                    "firstly"
+                ],
+                "fi": [
+                    "ensin",
+                    "aluksi",
+                    "ensimmäiseksi"
+                ],
+                "nl": "eerst"
+            }
+        }
     }
 }

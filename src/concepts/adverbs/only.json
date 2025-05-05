@@ -1,16 +1,20 @@
 {
-    "only": {
-        "en": [
-            "only",
-            "merely",
-            "exclusively",
-            "solely",
-            "just"
-        ],
-        "fi": [
-            "vain",
-            "vaan*"
-        ],
-        "nl": "alleen maar"
+    "concepts": {
+        "only": {
+            "labels": {
+                "en": [
+                    "only",
+                    "merely",
+                    "exclusively",
+                    "solely",
+                    "just"
+                ],
+                "fi": [
+                    "vain",
+                    "vaan*"
+                ],
+                "nl": "alleen maar"
+            }
+        }
     }
 }

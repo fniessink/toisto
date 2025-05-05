@@ -35,9 +35,9 @@ class ConceptLoader:
             self.argument_parser.error(f"{NAME} cannot read file {file_path}: {reason}.\n")
         return concepts
 
-    def _parse_json(self, json: dict[ConceptId, ConceptDict]) -> set[Concept]:
+    def _parse_json(self, json: dict[str, dict[ConceptId, ConceptDict]]) -> set[Concept]:
         """Parse the domain objects from the JSON loaded from the domain object file."""
-        return self._create_concepts(json)
+        return self._create_concepts(json["concepts"])
 
     def _create_concepts(self, concept_dict: dict[ConceptId, ConceptDict]) -> set[Concept]:
         """Parse the concepts from the JSON."""

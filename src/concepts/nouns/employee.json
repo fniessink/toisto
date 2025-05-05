@@ -1,15 +1,19 @@
 {
-    "employee": {
-        "antonym": "employer",
-        "roots": {
-            "fi": "work",
-            "nl": [
-                "work",
-                "to take"
-            ]
-        },
-        "en": "employee",
-        "fi": "työntekijä",
-        "nl": "de werknemer"
+    "concepts": {
+        "employee": {
+            "antonym": "employer",
+            "roots": {
+                "fi": "work",
+                "nl": [
+                    "work",
+                    "to take"
+                ]
+            },
+            "labels": {
+                "en": "employee",
+                "fi": "työntekijä",
+                "nl": "de werknemer"
+            }
+        }
     }
 }

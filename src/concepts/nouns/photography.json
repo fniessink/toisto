@@ -1,7 +1,11 @@
 {
-    "photography": {
-        "en": "photography",
-        "fi": "valokuvaus",
-        "nl": "de fotografie"
+    "concepts": {
+        "photography": {
+            "labels": {
+                "en": "photography",
+                "fi": "valokuvaus",
+                "nl": "de fotografie"
+            }
+        }
     }
 }

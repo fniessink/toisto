@@ -1,27 +1,33 @@
 {
-    "accent": {
-        "involves": "language",
-        "en": {
-            "singular": "accent",
-            "plural": "accents"
+    "concepts": {
+        "accent": {
+            "involves": "language",
+            "labels": {
+                "en": {
+                    "singular": "accent",
+                    "plural": "accents"
+                },
+                "fi": {
+                    "singular": "aksentti",
+                    "plural": "aksentit"
+                },
+                "nl": {
+                    "singular": "het accent",
+                    "plural": "de accenten"
+                }
+            }
         },
-        "fi": {
-            "singular": "aksentti",
-            "plural": "aksentit"
-        },
-        "nl": {
-            "singular": "het accent",
-            "plural": "de accenten"
+        "I have a dutch accent": {
+            "roots": [
+                "to have",
+                "dutch",
+                "accent"
+            ],
+            "labels": {
+                "en": "I have a Dutch accent.",
+                "fi": "Minulla on hollantilainen aksentti.",
+                "nl": "Ik heb een Nederlands accent."
+            }
         }
-    },
-    "I have a dutch accent": {
-        "roots": [
-            "to have",
-            "dutch",
-            "accent"
-        ],
-        "en": "I have a Dutch accent.",
-        "fi": "Minulla on hollantilainen aksentti.",
-        "nl": "Ik heb een Nederlands accent."
     }
 }

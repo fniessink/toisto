@@ -1,11 +1,15 @@
 {
-    "especially": {
-        "en": "especially",
-        "fi": [
-            "varsinkin",
-            "erityisesti",
-            "etenkin"
-        ],
-        "nl": "vooral"
+    "concepts": {
+        "especially": {
+            "labels": {
+                "en": "especially",
+                "fi": [
+                    "varsinkin",
+                    "erityisesti",
+                    "etenkin"
+                ],
+                "nl": "vooral"
+            }
+        }
     }
 }

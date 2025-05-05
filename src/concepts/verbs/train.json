@@ -1,7 +1,11 @@
 {
-    "to train": {
-        "en": "to train",
-        "fi": "treenata",
-        "nl": "trainen"
+    "concepts": {
+        "to train": {
+            "labels": {
+                "en": "to train",
+                "fi": "treenata",
+                "nl": "trainen"
+            }
+        }
     }
 }

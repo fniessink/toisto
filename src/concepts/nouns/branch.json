@@ -1,7 +1,11 @@
 {
-    "branch": {
-        "en": "branch",
-        "fi": "toimipiste",
-        "nl": "de vestiging"
+    "concepts": {
+        "branch": {
+            "labels": {
+                "en": "branch",
+                "fi": "toimipiste",
+                "nl": "de vestiging"
+            }
+        }
     }
 }
