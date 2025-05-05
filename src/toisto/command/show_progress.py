@@ -48,7 +48,7 @@ def show_progress(progress: Progress, args: Namespace) -> None:
             " - ".join(quiz.non_generated_answers.as_strings),
             str(retention.count),
             format_duration(retention.length) if retention.length else "",
-            format_datetime(skip) if skip and skip > datetime.now() else "",
+            format_datetime(skip) if skip and skip > datetime.now().astimezone() else "",
         )
     with console.pager():
         console.print(table)
