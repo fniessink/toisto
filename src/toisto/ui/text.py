@@ -78,17 +78,17 @@ class Feedback:
     def __call__(self, evaluation: Evaluation, guess: Label | None = None) -> str:
         """Return the feedback about the user's guess."""
         if evaluation == Evaluation.TRY_AGAIN:
-            return self._try_again(cast(Label, guess))
+            return self._try_again(cast("Label", guess))
         feedback = ""
         if evaluation == Evaluation.CORRECT:
             feedback += self.CORRECT
         elif evaluation == Evaluation.INCORRECT:
-            feedback += self.INCORRECT + self._correct_answer(cast(Label, guess))
+            feedback += self.INCORRECT + self._correct_answer(cast("Label", guess))
         else:
             feedback += self._correct_answers()
         feedback += self._colloquial() + self._meaning()
         if evaluation == Evaluation.CORRECT:
-            feedback += self._other_answers(cast(Label, guess))
+            feedback += self._other_answers(cast("Label", guess))
         elif evaluation == Evaluation.INCORRECT:
             feedback += self._other_answers(self.quiz.answer)
         feedback += self._answer_notes()
@@ -180,11 +180,11 @@ class ProgressUpdate:
         total = correct + incorrect + skipped
         feedback = []
         if correct:
-            feedback.append(f"answered {correct} ({correct/total:.0%}) correctly")
+            feedback.append(f"answered {correct} ({correct / total:.0%}) correctly")
         if incorrect:
-            feedback.append(f"answered {incorrect} ({incorrect/total:.0%}) incorrectly")
+            feedback.append(f"answered {incorrect} ({incorrect / total:.0%}) incorrectly")
         if skipped:
-            feedback.append(f"skipped {skipped} ({skipped/total:.0%})")
+            feedback.append(f"skipped {skipped} ({skipped / total:.0%})")
         return wrapped(
             f"Progress update after {total} quiz{'zes' if total > 1 else ''}: you {enumerated(*feedback)}.",
             "light_sky_blue3",

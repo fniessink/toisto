@@ -63,7 +63,7 @@ class ProgressTest(ToistoTestCase):
 
     def test_next_quiz_is_not_blocked(self):
         """Test that the next quiz is a translation quiz and not a listening quiz if both are eligible."""
-        next_quiz = cast(Quiz, self.progress.next_quiz())
+        next_quiz = cast("Quiz", self.progress.next_quiz())
         self.assertTrue(next_quiz.has_quiz_type(TranslationQuizType))
 
     def test_roots_block_quizzes(self):
@@ -72,7 +72,7 @@ class ProgressTest(ToistoTestCase):
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(NL_EN, (), concept1, concept2)
         progress = Progress(NL, quizzes, {})
-        next_quiz = cast(Quiz, progress.next_quiz())
+        next_quiz = cast("Quiz", progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 
     def test_roots_block_quizzes_even_if_roots_only_apply_to_target_language(self):
@@ -81,7 +81,7 @@ class ProgressTest(ToistoTestCase):
         concept2 = self.create_concept("good", dict(en="good", nl="goed"))
         quizzes = create_quizzes(NL_EN, (), concept1, concept2)
         progress = Progress(NL, quizzes, {})
-        next_quiz = cast(Quiz, progress.next_quiz())
+        next_quiz = cast("Quiz", progress.next_quiz())
         self.assertEqual("good", next_quiz.concept.concept_id)
 
     def test_quiz_order(self):

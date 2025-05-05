@@ -28,7 +28,7 @@ class Progress:
         self.target_language = target_language
         self.quizzes = quizzes
         self.__recent_concepts: deque[Concept] = deque(maxlen=skip_concepts)
-        self.answers = {evaluation: 0 for evaluation in Evaluation}
+        self.answers = dict.fromkeys(Evaluation, 0)
 
     def valid(self, key: str) -> bool:
         """Return whether the key is valid."""

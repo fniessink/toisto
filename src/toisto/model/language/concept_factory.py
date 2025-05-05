@@ -52,7 +52,7 @@ class ConceptFactory:
                 label
                 for key, value in self.concept_dict.items()
                 if key in ALL_LANGUAGES and not isinstance(value, dict)
-                for label in factory(cast(Language, key), cast(str | list[str], value))
+                for label in factory(cast("Language", key), cast("str | list[str]", value))
             ]
         )
 
@@ -87,11 +87,11 @@ class ConceptFactory:
         antonyms_dict = dict(antonym=[ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids])
         answer_concept_ids = self._related_concept_ids("answer")
         answers_dict = dict(answer=[ConceptId(f"{answer}/{category}") for answer in answer_concept_ids])
-        roots_dict = cast(CompositeConceptDict, dict(roots=self._get_roots()))
+        roots_dict = cast("CompositeConceptDict", dict(roots=self._get_roots()))
         constituent_concept_dict = (
             slice_concept_dict(self.concept_dict, category) | roots_dict | antonyms_dict | answers_dict
         )
-        return cast(ConceptDict, constituent_concept_dict)
+        return cast("ConceptDict", constituent_concept_dict)
 
     def _grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Retrieve the grammatical categories from the concept dict."""
@@ -104,11 +104,11 @@ class ConceptFactory:
 
     def _get_roots(self) -> ConceptIdDictOrListOrString:
         """Get the roots from the concept dict."""
-        return cast(ConceptIdDictOrListOrString, self.concept_dict.get("roots", {}))
+        return cast("ConceptIdDictOrListOrString", self.concept_dict.get("roots", {}))
 
     def _related_concept_ids(self, relation: ConceptAttribute) -> ConceptIds:
         """Return the ids of the related concept(s)."""
-        related = cast(ConceptIdListOrString, self.concept_dict.get(relation, []))
+        related = cast("ConceptIdListOrString", self.concept_dict.get(relation, []))
         return tuple(related) if isinstance(related, list) else (related,)
 
 
@@ -125,4 +125,4 @@ def slice_concept_dict(concept_dict: ConceptDict, category: GrammaticalCategory)
 
 def create_concept(concept_id: ConceptId, concept_dict: ConceptDict) -> Concept:
     """Create a concept from the concept dict."""
-    return ConceptFactory(concept_id, concept_dict or cast(ConceptDict, {})).create_concept()
+    return ConceptFactory(concept_id, concept_dict or cast("ConceptDict", {})).create_concept()

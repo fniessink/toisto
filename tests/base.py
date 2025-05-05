@@ -47,7 +47,7 @@ class ToistoTestCase(unittest.TestCase):
     @staticmethod
     def create_concept(concept_id: str, concept_dict: dict) -> Concept:
         """Create a concept."""
-        return create_concept(cast(ConceptId, concept_id), cast(ConceptDict, concept_dict))
+        return create_concept(cast("ConceptId", concept_id), cast("ConceptDict", concept_dict))
 
     def create_quiz(  # noqa: PLR0913
         self,
