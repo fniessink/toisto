@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 from configparser import ConfigParser
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from toisto.metadata import NAME
@@ -69,7 +69,7 @@ def save_progress(progress: Progress, config: ConfigParser) -> None:
 
 def update_progress_dict(progress_dict: ProgressDict, *progress_dicts: ProgressDict) -> None:
     """Update the progress dict with the pauses from the other progress dicts."""
-    min_date = datetime.min.isoformat()
+    min_date = datetime.min.replace(tzinfo=timezone.utc).isoformat()
     for other_progress_dict in progress_dicts:
         for key in other_progress_dict:
             if "skip_until" in other_progress_dict[key]:

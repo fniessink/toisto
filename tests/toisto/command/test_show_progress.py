@@ -43,7 +43,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def setUp(self) -> None:
         """Extend to set up retention."""
         super().setUp()
-        self.now = datetime.now()
+        self.now = datetime.now().astimezone()
         self.start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
         self.end = self.now.isoformat(timespec="seconds")
         self.progress = Progress(FI, self.quizzes, {self.quiz.key: dict(start=self.start, end=self.end)})
@@ -70,7 +70,7 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_quiz_silenced_until_time_in_the_future(self):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
         skip_until = self.progress.get_retention(self.quiz).skip_until = self.now + timedelta(days=1)
-        formatted_skip_until = skip_until.isoformat(sep=" ", timespec="minutes")
+        formatted_skip_until = skip_until.replace(tzinfo=None).isoformat(sep=" ", timespec="minutes")
         console_print = self.show_progress(self.progress)
         self.assertEqual(formatted_skip_until, first(console_print.call_args[0][0].columns[7].cells))
 
@@ -136,7 +136,7 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
     def setUp(self) -> None:
         """Extend to set up retentions."""
         super().setUp()
-        self.now = datetime.now()
+        self.now = datetime.now().astimezone()
         self.start = (self.now - timedelta(days=88)).isoformat(timespec="seconds")
         self.end = self.now.isoformat(timespec="seconds")
 

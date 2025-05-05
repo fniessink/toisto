@@ -26,7 +26,7 @@ class Retention:
     def increase(self) -> None:
         """Increase the retention of the quiz after a correct answer."""
         self.count += 1
-        self.end = now = datetime.now()
+        self.end = now = datetime.now().astimezone()
         if self.start is None:
             self.start = now
         if self.count == 1:
@@ -38,7 +38,7 @@ class Retention:
 
     def pause(self) -> None:
         """Pause this quiz for a brief while because a related quiz was answered correctly."""
-        now = datetime.now()
+        now = datetime.now().astimezone()
         current_skip_until = self.skip_until or now
         self.skip_until = max(current_skip_until, now + SKIP_INTERVAL_WHEN_RELATED_QUIZ_IS_ANSWERED_CORRECTLY)
 
@@ -54,7 +54,7 @@ class Retention:
 
     def is_silenced(self) -> bool:
         """Return whether the quiz is silenced."""
-        return self.skip_until > datetime.now() if self.skip_until else False
+        return self.skip_until > datetime.now().astimezone() if self.skip_until else False
 
     def as_dict(self) -> RetentionDict:
         """Return the retention as dict."""
@@ -81,5 +81,8 @@ class Retention:
     @staticmethod
     def __get_datetime(retention_dict: RetentionDict, key: str) -> optional_datetime:
         """Get a datetime from the retention dict."""
-        value = retention_dict.get(key)
-        return datetime.fromisoformat(str(value)) if value else None
+        if value := retention_dict.get(key):
+            dt = datetime.fromisoformat(str(value))
+            # Progress used to be saved using naive datetimes (Toisto <= 0.35.0). Apply local timezone if needed:
+            return dt.astimezone() if dt.tzinfo is None else dt
+        return None

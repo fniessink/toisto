@@ -103,7 +103,6 @@ ignore = [
     "D107",   # Prevent 'Missing docstring in `__init__`' errors
     "D203",   # Prevent warning about incompatible rules
     "D213",   # Prevent warning about incompatible rules
-    "DTZ005", # Prevent 'The use of `datetime.datetime.now()` without `tz` argument is not allowed' errors
     "FBT003", # Prevent 'Boolean positional value in function call' errors
     "ISC001", # This rule may cause conflicts when used with the ruff formatter
     "PT",     # We don't use Pytest

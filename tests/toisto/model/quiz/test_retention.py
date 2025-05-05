@@ -1,7 +1,7 @@
 """Retention unit tests."""
 
 import unittest
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import cast
 
 from toisto.model.quiz.retention import Retention
@@ -19,7 +19,7 @@ class RetentionTest(unittest.TestCase):
         for guess in guesses:
             if guess:
                 self.retention.increase()
-                self.retention.start = (self.retention.start or datetime.now()) - timedelta(minutes=30)
+                self.retention.start = (self.retention.start or datetime.now().astimezone()) - timedelta(minutes=30)
             else:
                 self.retention.reset()
 
@@ -34,10 +34,12 @@ class RetentionTest(unittest.TestCase):
 
     def test_is_silenced_if_initial_answer_is_correct(self):
         """Test that a retention is silenced if the initial guess is correct."""
-        now = datetime.now()
         self.guess(True)
         self.assertTrue(self.retention.is_silenced())
-        self.assertGreaterEqual(self.retention.skip_until or datetime.min, now + timedelta(days=1))
+        self.assertGreaterEqual(
+            (self.retention.skip_until or datetime.min.replace(tzinfo=timezone.utc)).replace(microsecond=0),
+            (datetime.now().astimezone() + timedelta(days=1)).replace(microsecond=0)
+        )
 
     def test_is_not_silenced_after_one_correct_guess(self):
         """Test that a retention is not silenced after one correct guess."""
@@ -49,7 +51,10 @@ class RetentionTest(unittest.TestCase):
         """Test that a retention is silenced after two correct guesses."""
         self.guess(False, True, True)
         self.assertTrue(self.retention.is_silenced())
-        self.assertGreater(self.retention.skip_until or datetime.min, datetime.now() + timedelta(minutes=1))
+        self.assertGreater(
+            self.retention.skip_until or datetime.min.replace(tzinfo=timezone.utc),
+            datetime.now().astimezone() + timedelta(minutes=1)
+        )
 
     def test_is_reset_after_an_incorrect_guess(self):
         """Test that a retention is reset after an incorrect guess."""
