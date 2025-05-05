@@ -43,9 +43,9 @@ def latest_version() -> str | None:
 def installation_tool() -> str:
     """Return how the app was installed: 'uv tool', 'pipx' or 'pip'."""
     with suppress(OSError, SubprocessError):
-        if "toisto" in check_output("uv tool list".split(), stderr=DEVNULL, text=True).lower():  # noqa: S603, # nosec
+        if "toisto" in check_output(["uv", "tool", "list"], stderr=DEVNULL, text=True).lower():  # noqa: S603, S607 # nosec
             return "uv tool"
     with suppress(OSError, SubprocessError):
-        if "toisto" in check_output("pipx list".split(), stderr=DEVNULL, text=True).lower():  # noqa: S603, # nosec
+        if "toisto" in check_output(["pipx", "list"], stderr=DEVNULL, text=True).lower():  # noqa: S603, S607# nosec
             return "pipx"
     return "pip"

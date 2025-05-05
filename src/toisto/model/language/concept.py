@@ -25,7 +25,7 @@ RootConceptIds = dict[Language, ConceptIds] | ConceptIds  # Tuple if all languag
 
 def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
     """Return the inverted relation."""
-    return cast(ConceptRelation, {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
+    return cast("ConceptRelation", {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
 
 
 HomonymRegistry = Registry[Label, "Concept"]
@@ -117,7 +117,7 @@ class Concept:
         if self in visited_concepts:
             return Concepts()  # Prevent recursion error
         if relation in get_args(InvertedConceptRelation):
-            inverted_relation = inverted(cast(InvertedConceptRelation, relation))
+            inverted_relation = inverted(cast("InvertedConceptRelation", relation))
             return Concepts(
                 concept
                 for concept in self.get_all_concepts()
@@ -204,7 +204,7 @@ class Concept:
     def grammatical_categories(self) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical categories of this concept."""
         keys = self.concept_id.split("/")
-        return tuple(cast(GrammaticalCategory, key) for key in keys if key in get_args(GrammaticalCategory))
+        return tuple(cast("GrammaticalCategory", key) for key in keys if key in get_args(GrammaticalCategory))
 
     def grammatical_differences(self, *concepts: Concept) -> list[GrammaticalCategory]:
         """Return the grammatical differences between this concept and the concepts.

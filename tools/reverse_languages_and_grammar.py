@@ -56,6 +56,7 @@ CONCEPT_RELATIONS = [
     "roots",
 ]
 LANGUAGES = ["en", "fi", "nl"]
+LOGGER = logging.getLogger(__name__)
 
 
 def slice_concept(concept: dict, language: str) -> dict | str:
@@ -72,7 +73,7 @@ def slice_concept(concept: dict, language: str) -> dict | str:
             if concept_slice := slice_concept(value, language):
                 sliced[key] = concept_slice
     except AttributeError:
-        logging.exception("Can't slice concept %s", concept)
+        LOGGER.exception("Can't slice concept %s", concept)
         raise
     if len(sliced.values()) == 1:
         return next(iter(sliced.values()))

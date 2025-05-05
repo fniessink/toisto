@@ -103,7 +103,7 @@ class SemanticQuizType(QuizType):
     @property
     def concept_relation(self) -> ConceptRelation:
         """Return the concept relation that the quiz type is quizzing."""
-        return cast(ConceptRelation, self.action)
+        return cast("ConceptRelation", self.action)
 
 
 @dataclass(frozen=True)
