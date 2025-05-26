@@ -31,7 +31,7 @@ dependencies = [
     "pygame == 2.6.1",
     "requests >= 2.28.0",
     "rich == 14.0.0",
-    "rich-argparse == 1.7.0",
+    "rich-argparse == 1.7.1",
 ]
 
 [project.optional-dependencies]
