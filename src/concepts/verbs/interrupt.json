@@ -1,7 +1,22 @@
 {
-    "to interrupt": {
-        "en": "to interrupt",
-        "fi": "keskeyttää",
-        "nl": "onderbreken"
-    }
+    "concepts": {
+        "to interrupt": {}
+    },
+    "labels": [
+        {
+            "concept": "to interrupt",
+            "label": "to interrupt",
+            "language": "en"
+        },
+        {
+            "concept": "to interrupt",
+            "label": "keskeyttää",
+            "language": "fi"
+        },
+        {
+            "concept": "to interrupt",
+            "label": "onderbreken",
+            "language": "nl"
+        }
+    ]
 }

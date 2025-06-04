@@ -1,35 +1,71 @@
 {
-    "the netherlands": {
-        "hypernym": "country",
-        "roots": {
-            "fi": "country",
-            "nl": "country"
+    "concepts": {
+        "the netherlands": {
+            "hypernym": "country",
+            "roots": {
+                "fi": "country",
+                "nl": "country"
+            }
         },
-        "en": [
-            "The Netherlands",
-            "Holland"
-        ],
-        "fi": [
-            "Alankomaat",
-            "Hollanti"
-        ],
-        "nl": [
-            "Nederland",
-            "Holland"
-        ]
+        "dutch (nationality)": {
+            "hypernym": "nationality",
+            "involves": "the netherlands",
+            "roots": {
+                "fi": "the netherlands",
+                "nl": "the netherlands"
+            }
+        }
     },
-    "dutch (nationality)": {
-        "hypernym": "nationality",
-        "involves": "the netherlands",
-        "roots": {
-            "fi": "the netherlands",
-            "nl": "the netherlands"
+    "labels": [
+        {
+            "concept": "the netherlands",
+            "label": "The Netherlands",
+            "language": "en"
         },
-        "en": "Dutch",
-        "fi": [
-            "alankomaalainen",
-            "hollantilainen"
-        ],
-        "nl": "Nederlands"
-    }
+        {
+            "concept": "the netherlands",
+            "label": "Holland",
+            "language": "en"
+        },
+        {
+            "concept": "the netherlands",
+            "label": "Alankomaat",
+            "language": "fi"
+        },
+        {
+            "concept": "the netherlands",
+            "label": "Hollanti",
+            "language": "fi"
+        },
+        {
+            "concept": "the netherlands",
+            "label": "Nederland",
+            "language": "nl"
+        },
+        {
+            "concept": "the netherlands",
+            "label": "Holland",
+            "language": "nl"
+        },
+        {
+            "concept": "dutch (nationality)",
+            "label": "Dutch",
+            "language": "en"
+        },
+        {
+            "concept": "dutch (nationality)",
+            "label": "alankomaalainen",
+            "language": "fi"
+        },
+        {
+            "concept": "dutch (nationality)",
+            "label": "hollantilainen",
+            "language": "fi"
+        },
+        {
+            "concept": "dutch (nationality)",
+            "label": "Nederlands",
+            "language": "nl"
+        }
+    ]
 }

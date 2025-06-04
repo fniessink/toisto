@@ -1,11 +1,29 @@
 {
-    "neck": {
-        "holonym": "body",
-        "en": "neck",
-        "fi": [
-            "niska",
-            "kaula"
-        ],
-        "nl": "de nek"
-    }
+    "concepts": {
+        "neck": {
+            "holonym": "body"
+        }
+    },
+    "labels": [
+        {
+            "concept": "neck",
+            "label": "neck",
+            "language": "en"
+        },
+        {
+            "concept": "neck",
+            "label": "niska",
+            "language": "fi"
+        },
+        {
+            "concept": "neck",
+            "label": "kaula",
+            "language": "fi"
+        },
+        {
+            "concept": "neck",
+            "label": "de nek",
+            "language": "nl"
+        }
+    ]
 }

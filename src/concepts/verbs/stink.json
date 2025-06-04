@@ -1,7 +1,22 @@
 {
-    "to stink": {
-        "en": "to stink",
-        "fi": "haista",
-        "nl": "stinken"
-    }
+    "concepts": {
+        "to stink": {}
+    },
+    "labels": [
+        {
+            "concept": "to stink",
+            "label": "to stink",
+            "language": "en"
+        },
+        {
+            "concept": "to stink",
+            "label": "haista",
+            "language": "fi"
+        },
+        {
+            "concept": "to stink",
+            "label": "stinken",
+            "language": "nl"
+        }
+    ]
 }

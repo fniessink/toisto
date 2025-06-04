@@ -1,28 +1,57 @@
 {
-    "example": {
-        "en": {
-            "singular": "example",
-            "plural": "examples"
-        },
-        "fi": {
-            "singular": "esimerkki",
-            "plural": "esimerkit"
-        },
-        "nl": {
-            "singular": "het voorbeeld",
-            "plural": "de voorbeelden"
-        }
+    "concepts": {
+        "example": {},
+        "for example": {}
     },
-    "for example": {
-        "en": [
-            "for example",
-            "for instance"
-        ],
-        "fi": [
-            "esimerkiksi",
-            "vaikka",
-            "vaikkapa"
-        ],
-        "nl": "bijvoorbeeld"
-    }
+    "labels": [
+        {
+            "concept": "example",
+            "label": {
+                "singular": "example",
+                "plural": "examples"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "example",
+            "label": {
+                "singular": "esimerkki",
+                "plural": "esimerkit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "example",
+            "label": {
+                "singular": "het voorbeeld",
+                "plural": "de voorbeelden"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "for example",
+            "label": "for example",
+            "language": "en"
+        },
+        {
+            "concept": "for example",
+            "label": "for instance",
+            "language": "en"
+        },
+        {
+            "concept": "for example",
+            "label": "esimerkiksi",
+            "language": "fi"
+        },
+        {
+            "concept": "for example",
+            "label": "vaikka|vaikkapa",
+            "language": "fi"
+        },
+        {
+            "concept": "for example",
+            "label": "bijvoorbeeld",
+            "language": "nl"
+        }
+    ]
 }

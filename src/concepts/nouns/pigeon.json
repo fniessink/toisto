@@ -1,8 +1,24 @@
 {
-    "pigeon": {
-        "hypernym": "bird",
-        "en": "pigeon",
-        "fi": "pulu",
-        "nl": "de duif"
-    }
+    "concepts": {
+        "pigeon": {
+            "hypernym": "bird"
+        }
+    },
+    "labels": [
+        {
+            "concept": "pigeon",
+            "label": "pigeon",
+            "language": "en"
+        },
+        {
+            "concept": "pigeon",
+            "label": "pulu",
+            "language": "fi"
+        },
+        {
+            "concept": "pigeon",
+            "label": "de duif",
+            "language": "nl"
+        }
+    ]
 }

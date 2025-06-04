@@ -1,8 +1,24 @@
 {
-    "biology": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "biology",
-        "fi": "biologia",
-        "nl": "de biologie"
-    }
+    "concepts": {
+        "biology": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)"
+        }
+    },
+    "labels": [
+        {
+            "concept": "biology",
+            "label": "biology",
+            "language": "en"
+        },
+        {
+            "concept": "biology",
+            "label": "biologia",
+            "language": "fi"
+        },
+        {
+            "concept": "biology",
+            "label": "de biologie",
+            "language": "nl"
+        }
+    ]
 }

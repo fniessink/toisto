@@ -1,7 +1,22 @@
 {
-    "bacterium": {
-        "en": "bacterium",
-        "fi": "bakteeri",
-        "nl": "de bacterie"
-    }
+    "concepts": {
+        "bacterium": {}
+    },
+    "labels": [
+        {
+            "concept": "bacterium",
+            "label": "bacterium",
+            "language": "en"
+        },
+        {
+            "concept": "bacterium",
+            "label": "bakteeri",
+            "language": "fi"
+        },
+        {
+            "concept": "bacterium",
+            "label": "de bacterie",
+            "language": "nl"
+        }
+    ]
 }

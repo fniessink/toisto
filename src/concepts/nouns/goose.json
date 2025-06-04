@@ -1,17 +1,33 @@
 {
-    "goose": {
-        "hypernym": "bird",
-        "en": {
-            "singular": "goose",
-            "plural": "geese"
-        },
-        "fi": {
-            "singular": "hanhi",
-            "plural": "hanhet"
-        },
-        "nl": {
-            "singular": "de gans",
-            "plural": "de ganzen"
+    "concepts": {
+        "goose": {
+            "hypernym": "bird"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "goose",
+            "label": {
+                "singular": "goose",
+                "plural": "geese"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "goose",
+            "label": {
+                "singular": "hanhi",
+                "plural": "hanhet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "goose",
+            "label": {
+                "singular": "de gans",
+                "plural": "de ganzen"
+            },
+            "language": "nl"
+        }
+    ]
 }

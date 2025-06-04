@@ -1,7 +1,22 @@
 {
-    "many": {
-        "en": "many",
-        "fi": "moni",
-        "nl": "veel"
-    }
+    "concepts": {
+        "many": {}
+    },
+    "labels": [
+        {
+            "concept": "many",
+            "label": "many",
+            "language": "en"
+        },
+        {
+            "concept": "many",
+            "label": "moni",
+            "language": "fi"
+        },
+        {
+            "concept": "many",
+            "label": "veel",
+            "language": "nl"
+        }
+    ]
 }

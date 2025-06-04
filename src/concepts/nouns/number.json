@@ -1,34 +1,73 @@
 {
-    "number": {
-        "en": {
-            "singular": "number",
-            "plural": "numbers"
+    "concepts": {
+        "number": {},
+        "emergency number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            }
         },
-        "fi": {
-            "singular": "numero",
-            "plural": "numerot"
-        },
-        "nl": {
-            "singular": "het getal",
-            "plural": "de getallen"
+        "queueing number": {
+            "roots": {
+                "en": "number",
+                "fi": "number"
+            }
         }
     },
-    "emergency number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
+    "labels": [
+        {
+            "concept": "number",
+            "label": {
+                "singular": "number",
+                "plural": "numbers"
+            },
+            "language": "en"
         },
-        "en": "emergency number",
-        "fi": "hätänumero",
-        "nl": "het alarmnummer"
-    },
-    "queueing number": {
-        "roots": {
-            "en": "number",
-            "fi": "number"
+        {
+            "concept": "number",
+            "label": {
+                "singular": "numero",
+                "plural": "numerot"
+            },
+            "language": "fi"
         },
-        "en": "queueing number",
-        "fi": "vuoronumero",
-        "nl": "het volgnummer"
-    }
+        {
+            "concept": "number",
+            "label": {
+                "singular": "het getal",
+                "plural": "de getallen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "emergency number",
+            "label": "emergency number",
+            "language": "en"
+        },
+        {
+            "concept": "emergency number",
+            "label": "hätänumero",
+            "language": "fi"
+        },
+        {
+            "concept": "emergency number",
+            "label": "het alarmnummer",
+            "language": "nl"
+        },
+        {
+            "concept": "queueing number",
+            "label": "queueing number",
+            "language": "en"
+        },
+        {
+            "concept": "queueing number",
+            "label": "vuoronumero",
+            "language": "fi"
+        },
+        {
+            "concept": "queueing number",
+            "label": "het volgnummer",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "active": {
-        "en": "active",
-        "fi": "aktiivinen",
-        "nl": "actief"
-    }
+    "concepts": {
+        "active": {}
+    },
+    "labels": [
+        {
+            "concept": "active",
+            "label": "active",
+            "language": "en"
+        },
+        {
+            "concept": "active",
+            "label": "aktiivinen",
+            "language": "fi"
+        },
+        {
+            "concept": "active",
+            "label": "actief",
+            "language": "nl"
+        }
+    ]
 }

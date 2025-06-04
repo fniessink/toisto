@@ -1,8 +1,24 @@
 {
-    "physics": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "physics",
-        "fi": "fysiikka",
-        "nl": "natuurkunde"
-    }
+    "concepts": {
+        "physics": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)"
+        }
+    },
+    "labels": [
+        {
+            "concept": "physics",
+            "label": "physics",
+            "language": "en"
+        },
+        {
+            "concept": "physics",
+            "label": "fysiikka",
+            "language": "fi"
+        },
+        {
+            "concept": "physics",
+            "label": "natuurkunde",
+            "language": "nl"
+        }
+    ]
 }

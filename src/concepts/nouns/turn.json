@@ -1,7 +1,22 @@
 {
-    "turn": {
-        "en": "turn",
-        "fi": "vuoro",
-        "nl": "de beurt"
-    }
+    "concepts": {
+        "turn": {}
+    },
+    "labels": [
+        {
+            "concept": "turn",
+            "label": "turn",
+            "language": "en"
+        },
+        {
+            "concept": "turn",
+            "label": "vuoro",
+            "language": "fi"
+        },
+        {
+            "concept": "turn",
+            "label": "de beurt",
+            "language": "nl"
+        }
+    ]
 }

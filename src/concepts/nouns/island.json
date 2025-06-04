@@ -1,16 +1,31 @@
 {
-    "island": {
-        "en": {
-            "singular": "island",
-            "plural": "islands"
+    "concepts": {
+        "island": {}
+    },
+    "labels": [
+        {
+            "concept": "island",
+            "label": {
+                "singular": "island",
+                "plural": "islands"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "saari",
-            "plural": "saaret"
+        {
+            "concept": "island",
+            "label": {
+                "singular": "saari",
+                "plural": "saaret"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het eiland",
-            "plural": "de eilanden"
+        {
+            "concept": "island",
+            "label": {
+                "singular": "het eiland",
+                "plural": "de eilanden"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

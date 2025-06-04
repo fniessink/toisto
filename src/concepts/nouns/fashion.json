@@ -1,7 +1,22 @@
 {
-    "fashion": {
-        "en": "fashion",
-        "fi": "muoti",
-        "nl": "de mode"
-    }
+    "concepts": {
+        "fashion": {}
+    },
+    "labels": [
+        {
+            "concept": "fashion",
+            "label": "fashion",
+            "language": "en"
+        },
+        {
+            "concept": "fashion",
+            "label": "muoti",
+            "language": "fi"
+        },
+        {
+            "concept": "fashion",
+            "label": "de mode",
+            "language": "nl"
+        }
+    ]
 }

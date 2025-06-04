@@ -1,8 +1,24 @@
 {
-    "flea": {
-        "hypernym": "insect",
-        "en": "flea",
-        "fi": "kirppu",
-        "nl": "de vlooi"
-    }
+    "concepts": {
+        "flea": {
+            "hypernym": "insect"
+        }
+    },
+    "labels": [
+        {
+            "concept": "flea",
+            "label": "flea",
+            "language": "en"
+        },
+        {
+            "concept": "flea",
+            "label": "kirppu",
+            "language": "fi"
+        },
+        {
+            "concept": "flea",
+            "label": "de vlooi",
+            "language": "nl"
+        }
+    ]
 }

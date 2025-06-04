@@ -1,12 +1,28 @@
 {
-    "cape": {
-        "roots": {
-            "nl": [
-                "tongue"
-            ]
+    "concepts": {
+        "cape": {
+            "roots": {
+                "nl": [
+                    "tongue"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "cape",
+            "label": "cape",
+            "language": "en"
         },
-        "en": "cape",
-        "fi": "niemi",
-        "nl": "de landtong"
-    }
+        {
+            "concept": "cape",
+            "label": "niemi",
+            "language": "fi"
+        },
+        {
+            "concept": "cape",
+            "label": "de landtong",
+            "language": "nl"
+        }
+    ]
 }

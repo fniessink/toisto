@@ -1,25 +1,65 @@
 {
-    "to continue": {
-        "example": "to continue the journey",
-        "en": [
-            "to continue",
-            "to go on",
-            "to last"
-        ],
-        "fi": "jatkua",
-        "nl": [
-            "voortgaan",
-            "voortduren",
-            "aanhouden"
-        ]
+    "concepts": {
+        "to continue": {
+            "example": "to continue the journey"
+        },
+        "to continue the journey": {
+            "roots": [
+                "to continue",
+                "journey"
+            ]
+        }
     },
-    "to continue the journey": {
-        "roots": [
-            "to continue",
-            "journey"
-        ],
-        "en": "to continue the journey",
-        "fi": "jatkaa matkaa",
-        "nl": "de reis voortzetten"
-    }
+    "labels": [
+        {
+            "concept": "to continue",
+            "label": "to continue",
+            "language": "en"
+        },
+        {
+            "concept": "to continue",
+            "label": "to go on",
+            "language": "en"
+        },
+        {
+            "concept": "to continue",
+            "label": "to last",
+            "language": "en"
+        },
+        {
+            "concept": "to continue",
+            "label": "jatkua",
+            "language": "fi"
+        },
+        {
+            "concept": "to continue",
+            "label": "voortgaan",
+            "language": "nl"
+        },
+        {
+            "concept": "to continue",
+            "label": "voortduren",
+            "language": "nl"
+        },
+        {
+            "concept": "to continue",
+            "label": "aanhouden",
+            "language": "nl"
+        },
+        {
+            "concept": "to continue the journey",
+            "label": "to continue the journey",
+            "language": "en"
+        },
+        {
+            "concept": "to continue the journey",
+            "label": "jatkaa matkaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to continue the journey",
+            "label": "de reis voortzetten",
+            "language": "nl"
+        }
+    ]
 }

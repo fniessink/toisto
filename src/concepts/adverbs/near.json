@@ -1,16 +1,40 @@
 {
-    "near": {
-        "antonym": "far",
-        "example": "it is near",
-        "en": [
-            "close",
-            "near",
-            "nearby"
-        ],
-        "fi": "lähellä",
-        "nl": [
-            "dichtbij",
-            "in de buurt"
-        ]
-    }
+    "concepts": {
+        "near": {
+            "antonym": "far",
+            "example": "it is near"
+        }
+    },
+    "labels": [
+        {
+            "concept": "near",
+            "label": "close",
+            "language": "en"
+        },
+        {
+            "concept": "near",
+            "label": "near",
+            "language": "en"
+        },
+        {
+            "concept": "near",
+            "label": "nearby",
+            "language": "en"
+        },
+        {
+            "concept": "near",
+            "label": "lähellä",
+            "language": "fi"
+        },
+        {
+            "concept": "near",
+            "label": "dichtbij",
+            "language": "nl"
+        },
+        {
+            "concept": "near",
+            "label": "in de buurt",
+            "language": "nl"
+        }
+    ]
 }

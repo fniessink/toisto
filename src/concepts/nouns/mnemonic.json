@@ -1,17 +1,33 @@
 {
-    "mnemonic": {
-        "roots": {
-            "fi": [
-                "memory",
-                "rule"
-            ],
-            "nl": [
-                "donkey",
-                "bridge"
-            ]
+    "concepts": {
+        "mnemonic": {
+            "roots": {
+                "fi": [
+                    "memory",
+                    "rule"
+                ],
+                "nl": [
+                    "donkey",
+                    "bridge"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "mnemonic",
+            "label": "mnemonic",
+            "language": "en"
         },
-        "en": "mnemonic",
-        "fi": "muistisääntö",
-        "nl": "het ezelsbruggetje"
-    }
+        {
+            "concept": "mnemonic",
+            "label": "muistisääntö",
+            "language": "fi"
+        },
+        {
+            "concept": "mnemonic",
+            "label": "het ezelsbruggetje",
+            "language": "nl"
+        }
+    ]
 }

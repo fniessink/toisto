@@ -231,7 +231,7 @@ class UpdateQuizKeysTest(ToistoTestCase):
     def setUp(self) -> None:
         """Extend to set up test fixtures."""
         super().setUp()
-        self.concept = self.create_concept("english", {})
+        self.concept = self.create_concept("english", {}, [])
         self.quiz = self.create_quiz(self.concept, "englanti", ["Engels"])
 
     def test_updating_an_empty_progress_dict_with_no_quizzes(self):

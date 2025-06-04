@@ -1,16 +1,31 @@
 {
-    "audience": {
-        "en": {
-            "singular": "audience",
-            "plural": "audiences"
+    "concepts": {
+        "audience": {}
+    },
+    "labels": [
+        {
+            "concept": "audience",
+            "label": {
+                "singular": "audience",
+                "plural": "audiences"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "yleisö",
-            "plural": "yleisöt"
+        {
+            "concept": "audience",
+            "label": {
+                "singular": "yleisö",
+                "plural": "yleisöt"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het publiek",
-            "plural": "de publieken"
+        {
+            "concept": "audience",
+            "label": {
+                "singular": "het publiek",
+                "plural": "de publieken"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

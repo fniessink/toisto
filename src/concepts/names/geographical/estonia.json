@@ -1,11 +1,27 @@
 {
-    "estonia": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "estonia": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "estonia",
+            "label": "Estonia",
+            "language": "en"
         },
-        "en": "Estonia",
-        "fi": "Viro",
-        "nl": "Estland"
-    }
+        {
+            "concept": "estonia",
+            "label": "Viro",
+            "language": "fi"
+        },
+        {
+            "concept": "estonia",
+            "label": "Estland",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "divorce": {
-        "en": "divorce",
-        "fi": "avioero|ero",
-        "nl": "de scheiding"
-    }
+    "concepts": {
+        "divorce": {}
+    },
+    "labels": [
+        {
+            "concept": "divorce",
+            "label": "divorce",
+            "language": "en"
+        },
+        {
+            "concept": "divorce",
+            "label": "avioero|ero",
+            "language": "fi"
+        },
+        {
+            "concept": "divorce",
+            "label": "de scheiding",
+            "language": "nl"
+        }
+    ]
 }

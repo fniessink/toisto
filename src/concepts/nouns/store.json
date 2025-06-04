@@ -1,41 +1,80 @@
 {
-    "store": {
-        "en": {
-            "singular": "store",
-            "plural": "stores"
+    "concepts": {
+        "store": {},
+        "department store": {
+            "roots": {
+                "en": "store",
+                "fi": "house",
+                "nl": "house"
+            }
         },
-        "fi": {
-            "singular": "kauppa",
-            "plural": "kaupat"
-        },
-        "nl": {
-            "singular": "de winkel",
-            "plural": "de winkels"
+        "home appliance store": {
+            "hypernym": "store"
         }
     },
-    "department store": {
-        "roots": {
-            "en": "store",
-            "fi": "house",
-            "nl": "house"
+    "labels": [
+        {
+            "concept": "store",
+            "label": {
+                "singular": "store",
+                "plural": "stores"
+            },
+            "language": "en"
         },
-        "en": {
-            "singular": "department store",
-            "plural": "department stores"
+        {
+            "concept": "store",
+            "label": {
+                "singular": "kauppa",
+                "plural": "kaupat"
+            },
+            "language": "fi"
         },
-        "fi": {
-            "singular": "tavaratalo",
-            "plural": "tavaratalot"
+        {
+            "concept": "store",
+            "label": {
+                "singular": "de winkel",
+                "plural": "de winkels"
+            },
+            "language": "nl"
         },
-        "nl": {
-            "singular": "het warenhuis",
-            "plural": "de warenhuizen"
+        {
+            "concept": "department store",
+            "label": {
+                "singular": "department store",
+                "plural": "department stores"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "department store",
+            "label": {
+                "singular": "tavaratalo",
+                "plural": "tavaratalot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "department store",
+            "label": {
+                "singular": "het warenhuis",
+                "plural": "de warenhuizen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "home appliance store",
+            "label": "home appliance store",
+            "language": "en"
+        },
+        {
+            "concept": "home appliance store",
+            "label": "kodinkoneliike",
+            "language": "fi"
+        },
+        {
+            "concept": "home appliance store",
+            "label": "de winkel voor huishoudelijke apparaten",
+            "language": "nl"
         }
-    },
-    "home appliance store": {
-        "hypernym": "store",
-        "en": "home appliance store",
-        "fi": "kodinkoneliike",
-        "nl": "de winkel voor huishoudelijke apparaten"
-    }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "sickness": {
-        "en": "sickness",
-        "fi": "sairaus",
-        "nl": "de ziekte"
-    }
+    "concepts": {
+        "sickness": {}
+    },
+    "labels": [
+        {
+            "concept": "sickness",
+            "label": "sickness",
+            "language": "en"
+        },
+        {
+            "concept": "sickness",
+            "label": "sairaus",
+            "language": "fi"
+        },
+        {
+            "concept": "sickness",
+            "label": "de ziekte",
+            "language": "nl"
+        }
+    ]
 }

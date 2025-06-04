@@ -1,7 +1,22 @@
 {
-    "joke": {
-        "en": "joke",
-        "fi": "vitsi",
-        "nl": "de grap"
-    }
+    "concepts": {
+        "joke": {}
+    },
+    "labels": [
+        {
+            "concept": "joke",
+            "label": "joke",
+            "language": "en"
+        },
+        {
+            "concept": "joke",
+            "label": "vitsi",
+            "language": "fi"
+        },
+        {
+            "concept": "joke",
+            "label": "de grap",
+            "language": "nl"
+        }
+    ]
 }

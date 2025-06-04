@@ -1,8 +1,24 @@
 {
-    "austrialia": {
-        "hypernym": "country",
-        "en": "Australia",
-        "fi": "Australia",
-        "nl": "Australië"
-    }
+    "concepts": {
+        "austrialia": {
+            "hypernym": "country"
+        }
+    },
+    "labels": [
+        {
+            "concept": "austrialia",
+            "label": "Australia",
+            "language": "en"
+        },
+        {
+            "concept": "austrialia",
+            "label": "Australia",
+            "language": "fi"
+        },
+        {
+            "concept": "austrialia",
+            "label": "Australië",
+            "language": "nl"
+        }
+    ]
 }

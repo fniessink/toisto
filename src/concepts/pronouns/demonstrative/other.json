@@ -1,7 +1,22 @@
 {
-    "other": {
-        "en": "other",
-        "fi": "muu",
-        "nl": "ander"
-    }
+    "concepts": {
+        "other": {}
+    },
+    "labels": [
+        {
+            "concept": "other",
+            "label": "other",
+            "language": "en"
+        },
+        {
+            "concept": "other",
+            "label": "muu",
+            "language": "fi"
+        },
+        {
+            "concept": "other",
+            "label": "ander",
+            "language": "nl"
+        }
+    ]
 }

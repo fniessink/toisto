@@ -1,43 +1,111 @@
 {
-    "no": {
-        "en": "No!",
-        "fi": "Ei!",
-        "nl": "Nee!"
-    },
-    "no but": {
-        "roots": "no",
-        "en": "no, but",
-        "fi": [
-            "ei, vaan",
-            "eiku*"
-        ],
-        "nl": "nee, maar"
-    },
-    "no more": {
-        "en": "no more",
-        "fi": "ei enää",
-        "nl": "niet meer"
-    },
-    "no problem": {
-        "roots": {
-            "en": "no",
-            "fi": "nothing",
-            "nl": "nothing"
+    "concepts": {
+        "no": {},
+        "no but": {
+            "roots": "no"
         },
-        "en": "No problem!",
-        "fi": "Ei se mitään!",
-        "nl": [
-            "Geen probleem!",
-            "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!"
-        ]
+        "no more": {},
+        "no problem": {
+            "roots": {
+                "en": "no",
+                "fi": "nothing",
+                "nl": "nothing"
+            }
+        },
+        "no rush": {
+            "roots": "hurry"
+        }
     },
-    "no rush": {
-        "roots": "hurry",
-        "en": "No rush.",
-        "fi": "Ei mitään kiirettä.",
-        "nl": [
-            "Er is geen haast bij.",
-            "Geen haast."
-        ]
-    }
+    "labels": [
+        {
+            "concept": "no",
+            "label": "No!",
+            "language": "en"
+        },
+        {
+            "concept": "no",
+            "label": "Ei!",
+            "language": "fi"
+        },
+        {
+            "concept": "no",
+            "label": "Nee!",
+            "language": "nl"
+        },
+        {
+            "concept": "no but",
+            "label": "no, but",
+            "language": "en"
+        },
+        {
+            "concept": "no but",
+            "label": "ei, vaan",
+            "language": "fi"
+        },
+        {
+            "concept": "no but",
+            "label": "eiku*",
+            "language": "fi"
+        },
+        {
+            "concept": "no but",
+            "label": "nee, maar",
+            "language": "nl"
+        },
+        {
+            "concept": "no more",
+            "label": "no more",
+            "language": "en"
+        },
+        {
+            "concept": "no more",
+            "label": "ei enää",
+            "language": "fi"
+        },
+        {
+            "concept": "no more",
+            "label": "niet meer",
+            "language": "nl"
+        },
+        {
+            "concept": "no problem",
+            "label": "No problem!",
+            "language": "en"
+        },
+        {
+            "concept": "no problem",
+            "label": "Ei se mitään!",
+            "language": "fi"
+        },
+        {
+            "concept": "no problem",
+            "label": "Geen probleem!",
+            "language": "nl"
+        },
+        {
+            "concept": "no problem",
+            "label": "Het geeft niets!|Geeft niets!|Het geeft niet!|Geeft niet!|Het geeft niks!|Geeft niks!",
+            "language": "nl"
+        },
+        {
+            "concept": "no rush",
+            "label": "No rush.",
+            "language": "en"
+        },
+        {
+            "concept": "no rush",
+            "label": "Ei mitään kiirettä.",
+            "language": "fi"
+        },
+        {
+            "concept": "no rush",
+            "label": "Er is geen haast bij.",
+            "language": "nl"
+        },
+        {
+            "concept": "no rush",
+            "label": "Geen haast.",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,122 +1,275 @@
 {
-    "day": {
-        "en": {
-            "singular": "day",
-            "plural": "days"
+    "concepts": {
+        "day": {},
+        "24 hours": {},
+        "date": {
+            "example": "the date is 2024-11-16"
         },
-        "fi": {
-            "singular": "päivä",
-            "plural": "päivät"
+        "due date": {
+            "roots": {
+                "en": "date",
+                "fi": "day",
+                "nl": "date"
+            }
         },
-        "nl": {
-            "singular": "de dag",
-            "plural": "de dagen"
+        "the date is 2024-11-16": {
+            "roots": "date"
+        },
+        "one day": {
+            "roots": "day"
+        },
+        "on which day": {},
+        "weekday": {},
+        "on weekdays": {},
+        "birthday": {
+            "hypernym": "day"
+        },
+        "day care centre": {
+            "roots": {
+                "en": [
+                    "day",
+                    "care"
+                ],
+                "fi": [
+                    "day",
+                    "home"
+                ],
+                "nl": "child"
+            }
+        },
+        "once a day": {
+            "roots": "day"
         }
     },
-    "24 hours": {
-        "en": "(twenty-four hours)",
-        "fi": "vuorokausi",
-        "nl": "het etmaal"
-    },
-    "date": {
-        "example": "the date is 2024-11-16",
-        "en": "date",
-        "fi": "päiväys",
-        "nl": "de datum"
-    },
-    "due date": {
-        "roots": {
-            "en": "date",
-            "fi": "day",
-            "nl": "date"
+    "labels": [
+        {
+            "concept": "day",
+            "label": {
+                "singular": "day",
+                "plural": "days"
+            },
+            "language": "en"
         },
-        "en": "due date",
-        "fi": "eräpäivä",
-        "nl": "de vervaldatum"
-    },
-    "the date is 2024-11-16": {
-        "roots": "date",
-        "en": "The date is 16 November, 2024.|The date is November 16, 2024.",
-        "fi": "Päiväys on 16. marraskuuta 2024.",
-        "nl": "De datum is 16 november 2024."
-    },
-    "one day": {
-        "roots": "day",
-        "en": "one day",
-        "fi": [
-            "eräänä päivänä",
-            "yhtenä päivänä*"
-        ],
-        "nl": "op een dag"
-    },
-    "on which day": {
-        "en": "On which day?",
-        "fi": "Minä päivänä?",
-        "nl": "Op welke dag?"
-    },
-    "weekday": {
-        "en": {
-            "singular": [
-                "weekday",
-                "working day"
-            ],
-            "plural": [
-                "weekdays",
-                "working days"
-            ]
+        {
+            "concept": "day",
+            "label": {
+                "singular": "päivä",
+                "plural": "päivät"
+            },
+            "language": "fi"
         },
-        "fi": {
-            "singular": "arki",
-            "plural": "arjet"
+        {
+            "concept": "day",
+            "label": {
+                "singular": "de dag",
+                "plural": "de dagen"
+            },
+            "language": "nl"
         },
-        "nl": {
-            "singular": [
-                "de doordeweekse dag",
-                "de werkdag"
-            ],
-            "plural": [
-                "de doordeweekse dagen",
-                "de werkdagen"
-            ]
+        {
+            "concept": "24 hours",
+            "label": "(twenty-four hours)",
+            "language": "en"
+        },
+        {
+            "concept": "24 hours",
+            "label": "vuorokausi",
+            "language": "fi"
+        },
+        {
+            "concept": "24 hours",
+            "label": "het etmaal",
+            "language": "nl"
+        },
+        {
+            "concept": "date",
+            "label": "date",
+            "language": "en"
+        },
+        {
+            "concept": "date",
+            "label": "päiväys",
+            "language": "fi"
+        },
+        {
+            "concept": "date",
+            "label": "de datum",
+            "language": "nl"
+        },
+        {
+            "concept": "due date",
+            "label": "due date",
+            "language": "en"
+        },
+        {
+            "concept": "due date",
+            "label": "eräpäivä",
+            "language": "fi"
+        },
+        {
+            "concept": "due date",
+            "label": "de vervaldatum",
+            "language": "nl"
+        },
+        {
+            "concept": "the date is 2024-11-16",
+            "label": "The date is 16 November, 2024.|The date is November 16, 2024.",
+            "language": "en"
+        },
+        {
+            "concept": "the date is 2024-11-16",
+            "label": "Päiväys on 16. marraskuuta 2024.",
+            "language": "fi"
+        },
+        {
+            "concept": "the date is 2024-11-16",
+            "label": "De datum is 16 november 2024.",
+            "language": "nl"
+        },
+        {
+            "concept": "one day",
+            "label": "one day",
+            "language": "en"
+        },
+        {
+            "concept": "one day",
+            "label": "eräänä päivänä",
+            "language": "fi"
+        },
+        {
+            "concept": "one day",
+            "label": "yhtenä päivänä*",
+            "language": "fi"
+        },
+        {
+            "concept": "one day",
+            "label": "op een dag",
+            "language": "nl"
+        },
+        {
+            "concept": "on which day",
+            "label": "On which day?",
+            "language": "en"
+        },
+        {
+            "concept": "on which day",
+            "label": "Minä päivänä?",
+            "language": "fi"
+        },
+        {
+            "concept": "on which day",
+            "label": "Op welke dag?",
+            "language": "nl"
+        },
+        {
+            "concept": "weekday",
+            "label": {
+                "singular": "weekday",
+                "plural": "weekdays"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "weekday",
+            "label": {
+                "singular": "working day",
+                "plural": "working days"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "weekday",
+            "label": {
+                "singular": "arki",
+                "plural": "arjet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "weekday",
+            "label": {
+                "singular": "de doordeweekse dag",
+                "plural": "de doordeweekse dagen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "weekday",
+            "label": {
+                "singular": "de werkdag",
+                "plural": "de werkdagen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "on weekdays",
+            "label": "on weekdays",
+            "language": "en"
+        },
+        {
+            "concept": "on weekdays",
+            "label": "arkisin",
+            "language": "fi"
+        },
+        {
+            "concept": "on weekdays",
+            "label": "op werkdagen",
+            "language": "nl"
+        },
+        {
+            "concept": "on weekdays",
+            "label": "door de week",
+            "language": "nl"
+        },
+        {
+            "concept": "birthday",
+            "label": "birthday",
+            "language": "en"
+        },
+        {
+            "concept": "birthday",
+            "label": "syntymäpäivä",
+            "language": "fi"
+        },
+        {
+            "concept": "birthday",
+            "label": "synttäri*",
+            "language": "fi"
+        },
+        {
+            "concept": "birthday",
+            "label": "de verjaardag",
+            "language": "nl"
+        },
+        {
+            "concept": "day care centre",
+            "label": "day care centre|day care center",
+            "language": "en"
+        },
+        {
+            "concept": "day care centre",
+            "label": "päiväkoti",
+            "language": "fi"
+        },
+        {
+            "concept": "day care centre",
+            "label": "de kinderopvang",
+            "language": "nl"
+        },
+        {
+            "concept": "once a day",
+            "label": "once a day",
+            "language": "en"
+        },
+        {
+            "concept": "once a day",
+            "label": "kerran päivässä",
+            "language": "fi"
+        },
+        {
+            "concept": "once a day",
+            "label": "één keer per dag|een keer per dag",
+            "language": "nl"
         }
-    },
-    "on weekdays": {
-        "en": "on weekdays",
-        "fi": "arkisin",
-        "nl": [
-            "op werkdagen",
-            "door de week"
-        ]
-    },
-    "birthday": {
-        "hypernym": "day",
-        "en": "birthday",
-        "fi": [
-            "syntymäpäivä",
-            "synttäri*"
-        ],
-        "nl": "de verjaardag"
-    },
-    "day care centre": {
-        "roots": {
-            "en": [
-                "day",
-                "care"
-            ],
-            "fi": [
-                "day",
-                "home"
-            ],
-            "nl": "child"
-        },
-        "en": "day care centre|day care center",
-        "fi": "päiväkoti",
-        "nl": "de kinderopvang"
-    },
-    "once a day": {
-        "roots": "day",
-        "en": "once a day",
-        "fi": "kerran päivässä",
-        "nl": "één keer per dag|een keer per dag"
-    }
+    ]
 }

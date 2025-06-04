@@ -1,19 +1,34 @@
 {
-    "happy": {
-        "en": {
-            "positive degree": "happy",
-            "comparative degree": "happier",
-            "superlative degree": "happiest"
+    "concepts": {
+        "happy": {}
+    },
+    "labels": [
+        {
+            "concept": "happy",
+            "label": {
+                "positive degree": "happy",
+                "comparative degree": "happier",
+                "superlative degree": "happiest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "onnellinen",
-            "comparative degree": "onnellisempi",
-            "superlative degree": "onnellisin"
+        {
+            "concept": "happy",
+            "label": {
+                "positive degree": "onnellinen",
+                "comparative degree": "onnellisempi",
+                "superlative degree": "onnellisin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "gelukkig",
-            "comparative degree": "gelukkiger",
-            "superlative degree": "gelukkigst"
+        {
+            "concept": "happy",
+            "label": {
+                "positive degree": "gelukkig",
+                "comparative degree": "gelukkiger",
+                "superlative degree": "gelukkigst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

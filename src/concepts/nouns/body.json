@@ -1,22 +1,39 @@
 {
-    "body": {
-        "en": {
-            "singular": "body",
-            "plural": "bodies"
+    "concepts": {
+        "body": {}
+    },
+    "labels": [
+        {
+            "concept": "body",
+            "label": {
+                "singular": "body",
+                "plural": "bodies"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": [
-                "vartalo",
-                "keho"
-            ],
-            "plural": [
-                "vartalot",
-                "kehot"
-            ]
+        {
+            "concept": "body",
+            "label": {
+                "singular": "vartalo",
+                "plural": "vartalot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het lichaam",
-            "plural": "de lichamen"
+        {
+            "concept": "body",
+            "label": {
+                "singular": "keho",
+                "plural": "kehot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "body",
+            "label": {
+                "singular": "het lichaam",
+                "plural": "de lichamen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

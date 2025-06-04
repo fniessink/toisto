@@ -1,19 +1,34 @@
 {
-    "crazy": {
-        "en": {
-            "positive degree": "crazy",
-            "comparative degree": "crazier",
-            "superlative degree": "craziest"
+    "concepts": {
+        "crazy": {}
+    },
+    "labels": [
+        {
+            "concept": "crazy",
+            "label": {
+                "positive degree": "crazy",
+                "comparative degree": "crazier",
+                "superlative degree": "craziest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "hullu",
-            "comparative degree": "hullumpi",
-            "superlative degree": "hulluin"
+        {
+            "concept": "crazy",
+            "label": {
+                "positive degree": "hullu",
+                "comparative degree": "hullumpi",
+                "superlative degree": "hulluin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "gek",
-            "comparative degree": "gekker",
-            "superlative degree": "gekst"
+        {
+            "concept": "crazy",
+            "label": {
+                "positive degree": "gek",
+                "comparative degree": "gekker",
+                "superlative degree": "gekst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

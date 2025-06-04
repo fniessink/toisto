@@ -1,22 +1,70 @@
 {
-    "not at all": {
-        "en": "not at all",
-        "fi": "ei lainkaan",
-        "nl": "helemaal niet"
+    "concepts": {
+        "not at all": {},
+        "not even": {},
+        "not quite": {},
+        "not very": {}
     },
-    "not even": {
-        "en": "not even",
-        "fi": "ei edes",
-        "nl": "niet eens"
-    },
-    "not quite": {
-        "en": "not quite",
-        "fi": "ei ihan",
-        "nl": "niet helemaal"
-    },
-    "not very": {
-        "en": "not very",
-        "fi": "ei kovin",
-        "nl": "niet erg"
-    }
+    "labels": [
+        {
+            "concept": "not at all",
+            "label": "not at all",
+            "language": "en"
+        },
+        {
+            "concept": "not at all",
+            "label": "ei lainkaan",
+            "language": "fi"
+        },
+        {
+            "concept": "not at all",
+            "label": "helemaal niet",
+            "language": "nl"
+        },
+        {
+            "concept": "not even",
+            "label": "not even",
+            "language": "en"
+        },
+        {
+            "concept": "not even",
+            "label": "ei edes",
+            "language": "fi"
+        },
+        {
+            "concept": "not even",
+            "label": "niet eens",
+            "language": "nl"
+        },
+        {
+            "concept": "not quite",
+            "label": "not quite",
+            "language": "en"
+        },
+        {
+            "concept": "not quite",
+            "label": "ei ihan",
+            "language": "fi"
+        },
+        {
+            "concept": "not quite",
+            "label": "niet helemaal",
+            "language": "nl"
+        },
+        {
+            "concept": "not very",
+            "label": "not very",
+            "language": "en"
+        },
+        {
+            "concept": "not very",
+            "label": "ei kovin",
+            "language": "fi"
+        },
+        {
+            "concept": "not very",
+            "label": "niet erg",
+            "language": "nl"
+        }
+    ]
 }

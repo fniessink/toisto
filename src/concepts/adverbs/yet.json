@@ -1,7 +1,25 @@
 {
-    "yet": {
-        "en": "yet",
-        "fi": "vielä",
-        "nl": "nog"
-    }
+    "concepts": {
+        "yet": {}
+    },
+    "labels": [
+        {
+            "concept": [
+                "however",
+                "yet"
+            ],
+            "label": "yet",
+            "language": "en"
+        },
+        {
+            "concept": "yet",
+            "label": "vielä",
+            "language": "fi"
+        },
+        {
+            "concept": "yet",
+            "label": "nog",
+            "language": "nl"
+        }
+    ]
 }

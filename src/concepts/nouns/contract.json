@@ -1,17 +1,44 @@
 {
-    "contract": {
-        "en": "contract",
-        "fi": "sopimus",
-        "nl": "het contract"
+    "concepts": {
+        "contract": {},
+        "employment contract": {
+            "hypernym": "contract",
+            "roots": {
+                "fi": "work",
+                "nl": "work"
+            }
+        }
     },
-    "employment contract": {
-        "hypernym": "contract",
-        "roots": {
-            "fi": "work",
-            "nl": "work"
+    "labels": [
+        {
+            "concept": "contract",
+            "label": "contract",
+            "language": "en"
         },
-        "en": "employment contract",
-        "fi": "työsopimus",
-        "nl": "het arbeidscontract"
-    }
+        {
+            "concept": "contract",
+            "label": "sopimus",
+            "language": "fi"
+        },
+        {
+            "concept": "contract",
+            "label": "het contract",
+            "language": "nl"
+        },
+        {
+            "concept": "employment contract",
+            "label": "employment contract",
+            "language": "en"
+        },
+        {
+            "concept": "employment contract",
+            "label": "työsopimus",
+            "language": "fi"
+        },
+        {
+            "concept": "employment contract",
+            "label": "het arbeidscontract",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,11 +1,27 @@
 {
-    "may": {
-        "hypernym": "month",
-        "roots": {
-            "fi": "moon"
+    "concepts": {
+        "may": {
+            "hypernym": "month",
+            "roots": {
+                "fi": "moon"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "may",
+            "label": "May;;In English, names of months are capitalized",
+            "language": "en"
         },
-        "en": "May;;In English, names of months are capitalized",
-        "fi": "toukokuu;;In Finnish, names of months are not capitalized",
-        "nl": "mei;;In Dutch, names of months are not capitalized"
-    }
+        {
+            "concept": "may",
+            "label": "toukokuu;;In Finnish, names of months are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "may",
+            "label": "mei;;In Dutch, names of months are not capitalized",
+            "language": "nl"
+        }
+    ]
 }

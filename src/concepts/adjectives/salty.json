@@ -1,14 +1,42 @@
 {
-    "salty": {
-        "antonym": "saltless",
-        "en": "salty",
-        "fi": "suolainen",
-        "nl": "zout"
+    "concepts": {
+        "salty": {
+            "antonym": "saltless"
+        },
+        "saltless": {
+            "antonym": "salty"
+        }
     },
-    "saltless": {
-        "antonym": "salty",
-        "en": "saltless",
-        "fi": "suolaton",
-        "nl": "flauw"
-    }
+    "labels": [
+        {
+            "concept": "salty",
+            "label": "salty",
+            "language": "en"
+        },
+        {
+            "concept": "salty",
+            "label": "suolainen",
+            "language": "fi"
+        },
+        {
+            "concept": "salty",
+            "label": "zout",
+            "language": "nl"
+        },
+        {
+            "concept": "saltless",
+            "label": "saltless",
+            "language": "en"
+        },
+        {
+            "concept": "saltless",
+            "label": "suolaton",
+            "language": "fi"
+        },
+        {
+            "concept": "saltless",
+            "label": "flauw",
+            "language": "nl"
+        }
+    ]
 }

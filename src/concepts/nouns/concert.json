@@ -1,35 +1,57 @@
 {
-    "concert": {
-        "involves": "musical instrument",
-        "en": {
-            "singular": [
-                "concert",
-                "gig*"
-            ],
-            "plural": [
-                "concerts",
-                "gigs*"
-            ]
-        },
-        "fi": {
-            "singular": [
-                "konsertti",
-                "keikka*"
-            ],
-            "plural": [
-                "konsertit",
-                "keikat*"
-            ]
-        },
-        "nl": {
-            "singular": [
-                "het concert",
-                "het optreden"
-            ],
-            "plural": [
-                "de concerten",
-                "de optredens"
-            ]
+    "concepts": {
+        "concert": {
+            "involves": "musical instrument"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "concert",
+                "plural": "concerts"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "gig*",
+                "plural": "gigs*"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "konsertti",
+                "plural": "konsertit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "keikka*",
+                "plural": "keikat*"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "het concert",
+                "plural": "de concerten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "concert",
+            "label": {
+                "singular": "het optreden",
+                "plural": "de optredens"
+            },
+            "language": "nl"
+        }
+    ]
 }

@@ -1,10 +1,27 @@
 {
-    "here": {
-        "en": "here",
-        "fi": [
-            "täällä",
-            "tässä"
-        ],
-        "nl": "hier"
-    }
+    "concepts": {
+        "here": {}
+    },
+    "labels": [
+        {
+            "concept": "here",
+            "label": "here",
+            "language": "en"
+        },
+        {
+            "concept": "here",
+            "label": "täällä",
+            "language": "fi"
+        },
+        {
+            "concept": "here",
+            "label": "tässä",
+            "language": "fi"
+        },
+        {
+            "concept": "here",
+            "label": "hier",
+            "language": "nl"
+        }
+    ]
 }

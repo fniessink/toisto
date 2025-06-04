@@ -1,18 +1,46 @@
 {
-    "greece": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "greece": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
         },
-        "en": "Greece",
-        "fi": "Kreikka",
-        "nl": "Griekenland"
+        "greek": {
+            "hypernym": "nationality",
+            "involves": "greece"
+        }
     },
-    "greek": {
-        "hypernym": "nationality",
-        "involves": "greece",
-        "en": "Greek",
-        "fi": "kreikkalainen",
-        "nl": "Grieks"
-    }
+    "labels": [
+        {
+            "concept": "greece",
+            "label": "Greece",
+            "language": "en"
+        },
+        {
+            "concept": "greece",
+            "label": "Kreikka",
+            "language": "fi"
+        },
+        {
+            "concept": "greece",
+            "label": "Griekenland",
+            "language": "nl"
+        },
+        {
+            "concept": "greek",
+            "label": "Greek",
+            "language": "en"
+        },
+        {
+            "concept": "greek",
+            "label": "kreikkalainen",
+            "language": "fi"
+        },
+        {
+            "concept": "greek",
+            "label": "Grieks",
+            "language": "nl"
+        }
+    ]
 }

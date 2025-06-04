@@ -1,8 +1,24 @@
 {
-    "mathematics": {
-        "hypernym": "area, field, domain (one's field of expertise or activity)",
-        "en": "mathematics|maths|math",
-        "fi": "matematiikka",
-        "nl": "de wiskunde"
-    }
+    "concepts": {
+        "mathematics": {
+            "hypernym": "area, field, domain (one's field of expertise or activity)"
+        }
+    },
+    "labels": [
+        {
+            "concept": "mathematics",
+            "label": "mathematics|maths|math",
+            "language": "en"
+        },
+        {
+            "concept": "mathematics",
+            "label": "matematiikka",
+            "language": "fi"
+        },
+        {
+            "concept": "mathematics",
+            "label": "de wiskunde",
+            "language": "nl"
+        }
+    ]
 }

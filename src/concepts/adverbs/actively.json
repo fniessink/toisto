@@ -1,7 +1,22 @@
 {
-    "actively": {
-        "en": "actively",
-        "fi": "aktiivisesti",
-        "nl": "actief"
-    }
+    "concepts": {
+        "actively": {}
+    },
+    "labels": [
+        {
+            "concept": "actively",
+            "label": "actively",
+            "language": "en"
+        },
+        {
+            "concept": "actively",
+            "label": "aktiivisesti",
+            "language": "fi"
+        },
+        {
+            "concept": "actively",
+            "label": "actief;adverb",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "feeling": {
-        "en": "feeling",
-        "fi": "tunne",
-        "nl": "het gevoel"
-    }
+    "concepts": {
+        "feeling": {}
+    },
+    "labels": [
+        {
+            "concept": "feeling",
+            "label": "feeling",
+            "language": "en"
+        },
+        {
+            "concept": "feeling",
+            "label": "tunne",
+            "language": "fi"
+        },
+        {
+            "concept": "feeling",
+            "label": "het gevoel",
+            "language": "nl"
+        }
+    ]
 }

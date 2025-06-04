@@ -1,13 +1,29 @@
 {
-    "document": {
-        "roots": {
-            "fi": [
-                "thing",
-                "book"
-            ]
+    "concepts": {
+        "document": {
+            "roots": {
+                "fi": [
+                    "thing",
+                    "book"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "document",
+            "label": "document",
+            "language": "en"
         },
-        "en": "document",
-        "fi": "asiakirja",
-        "nl": "het document"
-    }
+        {
+            "concept": "document",
+            "label": "asiakirja",
+            "language": "fi"
+        },
+        {
+            "concept": "document",
+            "label": "het document",
+            "language": "nl"
+        }
+    ]
 }

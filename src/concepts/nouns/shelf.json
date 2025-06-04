@@ -1,16 +1,31 @@
 {
-    "shelf": {
-        "en": {
-            "singular": "shelf",
-            "plural": "shelves"
+    "concepts": {
+        "shelf": {}
+    },
+    "labels": [
+        {
+            "concept": "shelf",
+            "label": {
+                "singular": "shelf",
+                "plural": "shelves"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "hylly",
-            "plural": "hyllyt"
+        {
+            "concept": "shelf",
+            "label": {
+                "singular": "hylly",
+                "plural": "hyllyt"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de plank",
-            "plural": "de planken"
+        {
+            "concept": "shelf",
+            "label": {
+                "singular": "de plank",
+                "plural": "de planken"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

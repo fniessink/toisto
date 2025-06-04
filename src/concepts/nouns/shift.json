@@ -1,13 +1,32 @@
 {
-    "shift": {
-        "roots": {
-            "fi": [
-                "work",
-                "turn"
-            ]
+    "concepts": {
+        "shift": {
+            "roots": {
+                "fi": [
+                    "work",
+                    "turn"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "shift",
+            "label": "shift",
+            "language": "en"
         },
-        "en": "shift",
-        "fi": "työvuoro",
-        "nl": "de dienst"
-    }
+        {
+            "concept": "shift",
+            "label": "työvuoro",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "bureau",
+                "shift"
+            ],
+            "label": "de dienst",
+            "language": "nl"
+        }
+    ]
 }

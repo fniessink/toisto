@@ -47,7 +47,13 @@ class AppTest(ToistoTestCase):
         count = self.concept_file_count
         self.concept_file_count += 1
         return f"""{{
-            "concept-{count}": {{"fi": "concept-{count} in fi", "nl": "concept-{count} in nl"}}
+            "concepts": {{
+                "concept-{count}": {{}}
+            }},
+            "labels": [
+                {{"concept": "concept-{count}", "label": "concept-{count} in fi", "language": "fi"}},
+                {{"concept": "concept-{count}", "label": "concept-{count} in nl", "language": "nl"}}
+            ]
         }}
         """
 

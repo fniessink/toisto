@@ -1,16 +1,31 @@
 {
-    "stone": {
-        "en": {
-            "singular": "stone",
-            "plural": "stones"
+    "concepts": {
+        "stone": {}
+    },
+    "labels": [
+        {
+            "concept": "stone",
+            "label": {
+                "singular": "stone",
+                "plural": "stones"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "kivi",
-            "plural": "kivet"
+        {
+            "concept": "stone",
+            "label": {
+                "singular": "kivi",
+                "plural": "kivet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de steen",
-            "plural": "de stenen"
+        {
+            "concept": "stone",
+            "label": {
+                "singular": "de steen",
+                "plural": "de stenen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

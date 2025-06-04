@@ -1,21 +1,37 @@
 {
-    "orange (fruit)": {
-        "hypernym": "fruit",
-        "roots": {
-            "en": "orange",
-            "nl": "apple"
-        },
-        "en": {
-            "singular": "orange",
-            "plural": "oranges"
-        },
-        "fi": {
-            "singular": "appelsiini",
-            "plural": "appelsiinit"
-        },
-        "nl": {
-            "singular": "de sinaasappel",
-            "plural": "de sinaasappels"
+    "concepts": {
+        "orange (fruit)": {
+            "hypernym": "fruit",
+            "roots": {
+                "en": "orange",
+                "nl": "apple"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "orange (fruit)",
+            "label": {
+                "singular": "orange",
+                "plural": "oranges"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "orange (fruit)",
+            "label": {
+                "singular": "appelsiini",
+                "plural": "appelsiinit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "orange (fruit)",
+            "label": {
+                "singular": "de sinaasappel",
+                "plural": "de sinaasappels"
+            },
+            "language": "nl"
+        }
+    ]
 }

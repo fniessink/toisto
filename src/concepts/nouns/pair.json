@@ -1,16 +1,31 @@
 {
-    "pair": {
-        "en": {
-            "singular": "pair",
-            "plural": "pairs"
+    "concepts": {
+        "pair": {}
+    },
+    "labels": [
+        {
+            "concept": "pair",
+            "label": {
+                "singular": "pair",
+                "plural": "pairs"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "pari",
-            "plural": "parit"
+        {
+            "concept": "pair",
+            "label": {
+                "singular": "pari",
+                "plural": "parit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het paar",
-            "plural": "de paren"
+        {
+            "concept": "pair",
+            "label": {
+                "singular": "het paar",
+                "plural": "de paren"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

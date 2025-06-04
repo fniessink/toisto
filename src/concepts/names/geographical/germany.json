@@ -1,11 +1,27 @@
 {
-    "germany": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "germany": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "germany",
+            "label": "Germany",
+            "language": "en"
         },
-        "en": "Germany",
-        "fi": "Saksa",
-        "nl": "Duitsland"
-    }
+        {
+            "concept": "germany",
+            "label": "Saksa",
+            "language": "fi"
+        },
+        {
+            "concept": "germany",
+            "label": "Duitsland",
+            "language": "nl"
+        }
+    ]
 }

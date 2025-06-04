@@ -233,15 +233,15 @@ LabelFactory = Callable[[Language, str | list[str]], Labels]
 
 def label_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the labels from a string or list of strings."""
-    labels = string if isinstance(string, list) else [string]
-    return Labels(Label(language, label) for label in labels if not label.startswith("("))
+    strings = string if isinstance(string, list) else [string]
+    return Labels(Label(language, string) for string in strings if not string.startswith("("))
 
 
 def meaning_factory(language: Language, string: str | list[str]) -> Labels:
     """Instantiate the meanings from a string or list of strings."""
-    meanings = string if isinstance(string, list) else [string]
+    strings = string if isinstance(string, list) else [string]
     return Labels(
-        Label(language, meaning.removeprefix("(").removesuffix(")"))
-        for meaning in meanings
-        if not meaning.endswith(Label.COLLOQUIAL_POSTFIX)
+        Label(language, string.removeprefix("(").removesuffix(")"))
+        for string in strings
+        if not string.endswith(Label.COLLOQUIAL_POSTFIX)
     )

@@ -1,7 +1,22 @@
 {
-    "polluted": {
-        "en": "polluted",
-        "fi": "saastunut",
-        "nl": "verontreinigd"
-    }
+    "concepts": {
+        "polluted": {}
+    },
+    "labels": [
+        {
+            "concept": "polluted",
+            "label": "polluted",
+            "language": "en"
+        },
+        {
+            "concept": "polluted",
+            "label": "saastunut",
+            "language": "fi"
+        },
+        {
+            "concept": "polluted",
+            "label": "verontreinigd",
+            "language": "nl"
+        }
+    ]
 }

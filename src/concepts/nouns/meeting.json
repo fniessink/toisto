@@ -1,25 +1,60 @@
 {
-    "meeting": {
-        "en": "meeting",
-        "fi": [
-            "kokous",
-            "palaveri",
-            "neuvottelu"
-        ],
-        "nl": "de vergadering"
+    "concepts": {
+        "meeting": {},
+        "meeting room": {
+            "hypernym": "room",
+            "involves": "meeting",
+            "roots": [
+                "meeting",
+                "room"
+            ]
+        }
     },
-    "meeting room": {
-        "hypernym": "room",
-        "involves": "meeting",
-        "roots": [
-            "meeting",
-            "room"
-        ],
-        "en": "meeting room",
-        "fi": [
-            "neuvotteluhuone",
-            "neukkari*"
-        ],
-        "nl": "de vergaderkamer"
-    }
+    "labels": [
+        {
+            "concept": "meeting",
+            "label": "meeting",
+            "language": "en"
+        },
+        {
+            "concept": "meeting",
+            "label": "kokous",
+            "language": "fi"
+        },
+        {
+            "concept": "meeting",
+            "label": "palaveri",
+            "language": "fi"
+        },
+        {
+            "concept": "meeting",
+            "label": "neuvottelu",
+            "language": "fi"
+        },
+        {
+            "concept": "meeting",
+            "label": "de vergadering",
+            "language": "nl"
+        },
+        {
+            "concept": "meeting room",
+            "label": "meeting room",
+            "language": "en"
+        },
+        {
+            "concept": "meeting room",
+            "label": "neuvotteluhuone",
+            "language": "fi"
+        },
+        {
+            "concept": "meeting room",
+            "label": "neukkari*",
+            "language": "fi"
+        },
+        {
+            "concept": "meeting room",
+            "label": "de vergaderkamer",
+            "language": "nl"
+        }
+    ]
 }

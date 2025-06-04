@@ -1,14 +1,41 @@
 {
-    "check": {
-        "en": "check",
-        "fi": "tarkastus",
-        "nl": "de controle"
+    "concepts": {
+        "check": {},
+        "security check": {
+            "hypernym": "check",
+            "roots": "check"
+        }
     },
-    "security check": {
-        "hypernym": "check",
-        "roots": "check",
-        "en": "security check",
-        "fi": "turvatarkastus",
-        "nl": "de veiligheidscontrole"
-    }
+    "labels": [
+        {
+            "concept": "check",
+            "label": "check",
+            "language": "en"
+        },
+        {
+            "concept": "check",
+            "label": "tarkastus",
+            "language": "fi"
+        },
+        {
+            "concept": "check",
+            "label": "de controle",
+            "language": "nl"
+        },
+        {
+            "concept": "security check",
+            "label": "security check",
+            "language": "en"
+        },
+        {
+            "concept": "security check",
+            "label": "turvatarkastus",
+            "language": "fi"
+        },
+        {
+            "concept": "security check",
+            "label": "de veiligheidscontrole",
+            "language": "nl"
+        }
+    ]
 }

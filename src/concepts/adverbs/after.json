@@ -1,7 +1,22 @@
 {
-    "past": {
-        "en": "past",
-        "fi": "yli",
-        "nl": "over"
-    }
+    "concepts": {
+        "past": {}
+    },
+    "labels": [
+        {
+            "concept": "past",
+            "label": "past",
+            "language": "en"
+        },
+        {
+            "concept": "past",
+            "label": "yli",
+            "language": "fi"
+        },
+        {
+            "concept": "past",
+            "label": "over;time",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "memory": {
-        "en": "memory",
-        "fi": "muisti",
-        "nl": "het geheugen"
-    }
+    "concepts": {
+        "memory": {}
+    },
+    "labels": [
+        {
+            "concept": "memory",
+            "label": "memory",
+            "language": "en"
+        },
+        {
+            "concept": "memory",
+            "label": "muisti",
+            "language": "fi"
+        },
+        {
+            "concept": "memory",
+            "label": "het geheugen",
+            "language": "nl"
+        }
+    ]
 }

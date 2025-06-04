@@ -1,14 +1,30 @@
 {
-    "enjoy your meal": {
-        "roots": {
-            "fi": [
-                "good",
-                "food"
-            ],
-            "nl": "to eat"
+    "concepts": {
+        "enjoy your meal": {
+            "roots": {
+                "fi": [
+                    "good",
+                    "food"
+                ],
+                "nl": "to eat"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "enjoy your meal",
+            "label": "Enjoy your meal!",
+            "language": "en"
         },
-        "en": "Enjoy your meal!",
-        "fi": "Hyvää ruokahalua!",
-        "nl": "Eet smakelijk!"
-    }
+        {
+            "concept": "enjoy your meal",
+            "label": "Hyvää ruokahalua!",
+            "language": "fi"
+        },
+        {
+            "concept": "enjoy your meal",
+            "label": "Eet smakelijk!",
+            "language": "nl"
+        }
+    ]
 }

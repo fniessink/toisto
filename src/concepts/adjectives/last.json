@@ -1,27 +1,68 @@
 {
-    "last": {
-        "en": [
-            "last",
-            "past"
-        ],
-        "fi": "viime",
-        "nl": [
-            "afgelopen",
-            "vorig"
-        ]
-    },
-    "the last time": {
-        "roots": "last",
-        "en": "the last time",
-        "fi": "viimeksi",
-        "nl": "voor het laatst"
-    },
-    "last (in a row)": {
-        "roots": {
-            "fi": "last"
+    "concepts": {
+        "last": {},
+        "the last time": {
+            "roots": "last"
         },
-        "en": "last",
-        "fi": "viimeinen",
-        "nl": "laatste"
-    }
+        "last (in a row)": {
+            "roots": {
+                "fi": "last"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": [
+                "last",
+                "last (in a row)"
+            ],
+            "label": "last",
+            "language": "en"
+        },
+        {
+            "concept": "last",
+            "label": "past;last",
+            "language": "en"
+        },
+        {
+            "concept": "last",
+            "label": "viime",
+            "language": "fi"
+        },
+        {
+            "concept": "last",
+            "label": "afgelopen",
+            "language": "nl"
+        },
+        {
+            "concept": "last",
+            "label": "vorig",
+            "language": "nl"
+        },
+        {
+            "concept": "the last time",
+            "label": "the last time",
+            "language": "en"
+        },
+        {
+            "concept": "the last time",
+            "label": "viimeksi",
+            "language": "fi"
+        },
+        {
+            "concept": "the last time",
+            "label": "voor het laatst",
+            "language": "nl"
+        },
+        {
+            "concept": "last (in a row)",
+            "label": "viimeinen",
+            "language": "fi"
+        },
+        {
+            "concept": "last (in a row)",
+            "label": "laatste",
+            "language": "nl"
+        }
+    ]
 }

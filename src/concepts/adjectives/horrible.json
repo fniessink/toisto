@@ -1,17 +1,42 @@
 {
-    "horrible": {
-        "en": [
-            "horrible",
-            "terrible"
-        ],
-        "fi": [
-            "hirveä",
-            "hirvee*",
-            "kamala"
-        ],
-        "nl": [
-            "verschrikkelijk",
-            "vreselijk"
-        ]
-    }
+    "concepts": {
+        "horrible": {}
+    },
+    "labels": [
+        {
+            "concept": "horrible",
+            "label": "horrible",
+            "language": "en"
+        },
+        {
+            "concept": "horrible",
+            "label": "terrible",
+            "language": "en"
+        },
+        {
+            "concept": "horrible",
+            "label": "hirveä",
+            "language": "fi"
+        },
+        {
+            "concept": "horrible",
+            "label": "hirvee*",
+            "language": "fi"
+        },
+        {
+            "concept": "horrible",
+            "label": "kamala",
+            "language": "fi"
+        },
+        {
+            "concept": "horrible",
+            "label": "verschrikkelijk",
+            "language": "nl"
+        },
+        {
+            "concept": "horrible",
+            "label": "vreselijk",
+            "language": "nl"
+        }
+    ]
 }

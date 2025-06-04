@@ -1,7 +1,22 @@
 {
-    "corner": {
-        "en": "corner",
-        "fi": "kulma",
-        "nl": "de hoek"
-    }
+    "concepts": {
+        "corner": {}
+    },
+    "labels": [
+        {
+            "concept": "corner",
+            "label": "corner",
+            "language": "en"
+        },
+        {
+            "concept": "corner",
+            "label": "kulma",
+            "language": "fi"
+        },
+        {
+            "concept": "corner",
+            "label": "de hoek",
+            "language": "nl"
+        }
+    ]
 }

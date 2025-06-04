@@ -1,8 +1,24 @@
 {
-    "elbow": {
-        "holonym": "arm",
-        "en": "elbow",
-        "fi": "kyynärpää",
-        "nl": "de elboog"
-    }
+    "concepts": {
+        "elbow": {
+            "holonym": "arm"
+        }
+    },
+    "labels": [
+        {
+            "concept": "elbow",
+            "label": "elbow",
+            "language": "en"
+        },
+        {
+            "concept": "elbow",
+            "label": "kyynärpää",
+            "language": "fi"
+        },
+        {
+            "concept": "elbow",
+            "label": "de elboog",
+            "language": "nl"
+        }
+    ]
 }

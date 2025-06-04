@@ -1,53 +1,119 @@
 {
-    "travel": {
-        "example": "to continue the journey",
-        "en": {
-            "singular": [
+    "concepts": {
+        "travel": {
+            "example": "to continue the journey"
+        },
+        "travel program": {
+            "hypernym": "program",
+            "involves": "travel",
+            "roots": "travel"
+        },
+        "travel insurance": {
+            "involves": "travel",
+            "roots": [
                 "travel",
-                "journey"
-            ],
-            "plural": [
-                "travels",
-                "journeys"
+                "insurance"
             ]
         },
-        "fi": {
-            "singular": "matka",
-            "plural": "matkat"
+        "traveler": {
+            "roots": "travel"
         },
-        "nl": {
-            "singular": "de reis",
-            "plural": "de reizen"
+        "traveling": {
+            "roots": "travel"
         }
     },
-    "travel program": {
-        "hypernym": "program",
-        "involves": "travel",
-        "roots": "travel",
-        "en": "travel program",
-        "fi": "matkaohjelma",
-        "nl": "het reisprogramma"
-    },
-    "travel insurance": {
-        "involves": "travel",
-        "roots": [
-            "travel",
-            "insurance"
-        ],
-        "en": "travel insurance",
-        "fi": "matkavakuutus",
-        "nl": "de reisverzekering"
-    },
-    "traveler": {
-        "roots": "travel",
-        "en": "traveler",
-        "fi": "matkustaja",
-        "nl": "de reiziger"
-    },
-    "traveling": {
-        "roots": "travel",
-        "en": "traveling",
-        "fi": "matkustaminen",
-        "nl": "het reizen"
-    }
+    "labels": [
+        {
+            "concept": "travel",
+            "label": {
+                "singular": "travel",
+                "plural": "travels"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "travel",
+            "label": {
+                "singular": "journey",
+                "plural": "journeys"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "travel",
+            "label": {
+                "singular": "matka",
+                "plural": "matkat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "travel",
+            "label": {
+                "singular": "de reis",
+                "plural": "de reizen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "travel program",
+            "label": "travel program",
+            "language": "en"
+        },
+        {
+            "concept": "travel program",
+            "label": "matkaohjelma",
+            "language": "fi"
+        },
+        {
+            "concept": "travel program",
+            "label": "het reisprogramma",
+            "language": "nl"
+        },
+        {
+            "concept": "travel insurance",
+            "label": "travel insurance",
+            "language": "en"
+        },
+        {
+            "concept": "travel insurance",
+            "label": "matkavakuutus",
+            "language": "fi"
+        },
+        {
+            "concept": "travel insurance",
+            "label": "de reisverzekering",
+            "language": "nl"
+        },
+        {
+            "concept": "traveler",
+            "label": "traveler",
+            "language": "en"
+        },
+        {
+            "concept": "traveler",
+            "label": "matkustaja",
+            "language": "fi"
+        },
+        {
+            "concept": "traveler",
+            "label": "de reiziger",
+            "language": "nl"
+        },
+        {
+            "concept": "traveling",
+            "label": "traveling",
+            "language": "en"
+        },
+        {
+            "concept": "traveling",
+            "label": "matkustaminen",
+            "language": "fi"
+        },
+        {
+            "concept": "traveling",
+            "label": "het reizen",
+            "language": "nl"
+        }
+    ]
 }

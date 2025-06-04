@@ -1,8 +1,24 @@
 {
-    "0": {
-        "hypernym": "number",
-        "en": "zero",
-        "fi": "nolla",
-        "nl": "nul"
-    }
+    "concepts": {
+        "0": {
+            "hypernym": "number"
+        }
+    },
+    "labels": [
+        {
+            "concept": "0",
+            "label": "zero",
+            "language": "en"
+        },
+        {
+            "concept": "0",
+            "label": "nolla",
+            "language": "fi"
+        },
+        {
+            "concept": "0",
+            "label": "nul",
+            "language": "nl"
+        }
+    ]
 }

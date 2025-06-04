@@ -1,20 +1,36 @@
 {
-    "letter": {
-        "holonym": [
-            "alphabet",
-            "word"
-        ],
-        "en": {
-            "singular": "letter",
-            "plural": "letters"
-        },
-        "fi": {
-            "singular": "kirjain",
-            "plural": "kirjaimet"
-        },
-        "nl": {
-            "singular": "de letter",
-            "plural": "de letters"
+    "concepts": {
+        "letter": {
+            "holonym": [
+                "alphabet",
+                "word"
+            ]
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "letter",
+            "label": {
+                "singular": "letter",
+                "plural": "letters"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "letter",
+            "label": {
+                "singular": "kirjain",
+                "plural": "kirjaimet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "letter",
+            "label": {
+                "singular": "de letter",
+                "plural": "de letters"
+            },
+            "language": "nl"
+        }
+    ]
 }

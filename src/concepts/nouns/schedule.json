@@ -1,10 +1,21 @@
 {
-    "schedule": {
-        "roots": {
-            "fi": "time"
+    "concepts": {
+        "schedule": {
+            "roots": {
+                "fi": "time"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "schedule",
+            "label": "schedule",
+            "language": "en"
         },
-        "en": "schedule",
-        "fi": "aikataulu",
-        "nl": "het rooster"
-    }
+        {
+            "concept": "schedule",
+            "label": "het rooster",
+            "language": "nl"
+        }
+    ]
 }

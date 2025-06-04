@@ -1,220 +1,571 @@
 {
-    "language": {
-        "en": {
-            "singular": "language",
-            "plural": "languages"
+    "concepts": {
+        "language": {},
+        "spoken language": {
+            "hypernym": "language",
+            "roots": [
+                "language"
+            ]
         },
-        "fi": {
-            "singular": "kieli",
-            "plural": "kielet"
+        "written language": {
+            "hypernym": "language",
+            "roots": {
+                "en": [
+                    "to write",
+                    "language"
+                ],
+                "fi": [
+                    "book",
+                    "language"
+                ],
+                "nl": [
+                    "to write",
+                    "language"
+                ]
+            }
         },
-        "nl": {
-            "singular": "de taal",
-            "plural": "de talen"
+        "mother tongue": {
+            "hypernym": "language",
+            "roots": {
+                "en": [
+                    "mother",
+                    "tongue"
+                ],
+                "fi": [
+                    "mother",
+                    "language",
+                    "tongue"
+                ],
+                "nl": [
+                    "mother",
+                    "language"
+                ]
+            }
+        },
+        "english": {
+            "hypernym": "language"
+        },
+        "arabic": {
+            "hypernym": "language"
+        },
+        "chinese": {
+            "hypernym": "language"
+        },
+        "german": {
+            "hypernym": "language"
+        },
+        "estonian": {
+            "hypernym": "language"
+        },
+        "finnish language": {
+            "hypernym": "language"
+        },
+        "french language": {
+            "hypernym": "language"
+        },
+        "hungarian": {
+            "hypernym": "language"
+        },
+        "japanese": {
+            "hypernym": "language"
+        },
+        "korean": {
+            "hypernym": "language"
+        },
+        "spanish": {
+            "hypernym": "language"
+        },
+        "italian": {
+            "hypernym": "language"
+        },
+        "dutch": {
+            "hypernym": "language"
+        },
+        "danish": {
+            "hypernym": "language"
+        },
+        "norwegian": {
+            "hypernym": "language"
+        },
+        "swedish": {
+            "hypernym": "language"
+        },
+        "russian language": {
+            "hypernym": "language"
+        },
+        "icelandic": {
+            "hypernym": "language"
+        },
+        "greek language": {
+            "hypernym": "language"
+        },
+        "south african": {
+            "hypernym": "language",
+            "roots": [
+                "south",
+                "africa"
+            ]
+        },
+        "portuguese": {
+            "hypernym": "language"
+        },
+        "urdu": {
+            "hypernym": "language"
+        },
+        "frisian": {
+            "hypernym": "language"
+        },
+        "hebrew": {
+            "hypernym": "language"
+        },
+        "polish": {
+            "hypernym": "language"
         }
     },
-    "spoken language": {
-        "hypernym": "language",
-        "roots": [
-            "language"
-        ],
-        "en": "spoken language",
-        "fi": "puhekieli",
-        "nl": "de spreektaal"
-    },
-    "written language": {
-        "hypernym": "language",
-        "roots": {
-            "en": [
-                "to write",
-                "language"
-            ],
-            "fi": [
-                "book",
-                "language"
-            ],
-            "nl": [
-                "to write",
-                "language"
-            ]
+    "labels": [
+        {
+            "concept": "language",
+            "label": {
+                "singular": "language",
+                "plural": "languages"
+            },
+            "language": "en"
         },
-        "en": "written language",
-        "fi": "kirjakieli",
-        "nl": "de schrijftaal"
-    },
-    "mother tongue": {
-        "hypernym": "language",
-        "roots": {
-            "en": [
-                "mother",
-                "tongue"
-            ],
-            "fi": [
-                "mother",
-                "language",
-                "tongue"
-            ],
-            "nl": [
-                "mother",
-                "language"
-            ]
+        {
+            "concept": "language",
+            "label": {
+                "singular": "kieli",
+                "plural": "kielet"
+            },
+            "language": "fi"
         },
-        "en": "mother tongue",
-        "fi": "äidinkieli",
-        "nl": "de moedertaal"
-    },
-    "english": {
-        "hypernym": "language",
-        "en": "English;;In English, the names of languages are capitalized",
-        "fi": "englanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Engels;;In Dutch, the names of languages are capitalized"
-    },
-    "arabic": {
-        "hypernym": "language",
-        "en": "Arabic;;In English, the names of languages are capitalized",
-        "fi": "arabia;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Arabisch;;In Dutch, the names of languages are capitalized"
-    },
-    "chinese": {
-        "hypernym": "language",
-        "en": "Chinese;;In English, the names of languages are capitalized",
-        "fi": "kiina;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Chinees;;In Dutch, the names of languages are capitalized"
-    },
-    "german": {
-        "hypernym": "language",
-        "en": "German;;In English, the names of languages are capitalized",
-        "fi": "saksa;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Duits;;In Dutch, the names of languages are capitalized"
-    },
-    "estonian": {
-        "hypernym": "language",
-        "en": "Estonian;;In English, the names of languages are capitalized",
-        "fi": "viro;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Estisch;;In Dutch, the names of languages are capitalized"
-    },
-    "finnish language": {
-        "hypernym": "language",
-        "en": "Finnish;;In English, the names of languages are capitalized",
-        "fi": "suomi;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Fins;;In Dutch, the names of languages are capitalized"
-    },
-    "french language": {
-        "hypernym": "language",
-        "en": "French;;In English, the names of languages are capitalized",
-        "fi": "ranska;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Frans;;In Dutch, the names of languages are capitalized"
-    },
-    "hungarian": {
-        "hypernym": "language",
-        "en": "Hungarian;;In English, the names of languages are capitalized",
-        "fi": "unkari;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Hongaars;;In Dutch, the names of languages are capitalized"
-    },
-    "japanese": {
-        "hypernym": "language",
-        "en": "Japanese;;In English, the names of languages are capitalized",
-        "fi": "japani;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Japans;;In Dutch, the names of languages are capitalized"
-    },
-    "korean": {
-        "hypernym": "language",
-        "en": "Korean;;In English, the names of languages are capitalized",
-        "fi": "korea;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Koreaans;;In Dutch, the names of languages are capitalized"
-    },
-    "spanish": {
-        "hypernym": "language",
-        "en": "Spanish;;In English, the names of languages are capitalized",
-        "fi": "espanja;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Spaans;;In Dutch, the names of languages are capitalized"
-    },
-    "italian": {
-        "hypernym": "language",
-        "en": "Italian;;In English, the names of languages are capitalized",
-        "fi": "italia;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Italiaans;;In Dutch, the names of languages are capitalized"
-    },
-    "dutch": {
-        "hypernym": "language",
-        "en": "Dutch;;In English, the names of languages are capitalized",
-        "fi": "hollanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Nederlands;;In Dutch, the names of languages are capitalized"
-    },
-    "danish": {
-        "hypernym": "language",
-        "en": "Danish;;In English, the names of languages are capitalized",
-        "fi": "tanska;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Deens;;In Dutch, the names of languages are capitalized"
-    },
-    "norwegian": {
-        "hypernym": "language",
-        "en": "Norwegian;;In English, the names of languages are capitalized",
-        "fi": "norja;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Noors;;In Dutch, the names of languages are capitalized"
-    },
-    "swedish": {
-        "hypernym": "language",
-        "en": "Swedish;;In English, the names of languages are capitalized",
-        "fi": "ruotsi;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Zweeds;;In Dutch, the names of languages are capitalized"
-    },
-    "russian language": {
-        "hypernym": "language",
-        "en": "Russian;;In English, the names of languages are capitalized",
-        "fi": "venäjä;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Russisch;;In Dutch, the names of languages are capitalized"
-    },
-    "icelandic": {
-        "hypernym": "language",
-        "en": "Icelandic;;In English, the names of languages are capitalized",
-        "fi": "islanti;;In Finnish, the names of languages are not capitalized",
-        "nl": "het IJslands;;In Dutch, the names of languages are capitalized"
-    },
-    "greek language": {
-        "hypernym": "language",
-        "en": "Greek;;In English, the names of languages are capitalized",
-        "fi": "kreikka;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Grieks;;In Dutch, the names of languages are capitalized"
-    },
-    "south african": {
-        "hypernym": "language",
-        "roots": [
-            "south",
-            "africa"
-        ],
-        "en": "South African;;In English, the names of languages are capitalized",
-        "fi": "eteläafrikkalainen;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Zuid-Afrikaans;;In Dutch, the names of languages are capitalized"
-    },
-    "portuguese": {
-        "hypernym": "language",
-        "en": "Portuguese;;In English, the names of languages are capitalized",
-        "fi": "portugali;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Portugees;;In Dutch, the names of languages are capitalized"
-    },
-    "urdu": {
-        "hypernym": "language",
-        "en": "Urdu;;In English, the names of languages are capitalized",
-        "fi": "urdu;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Urdu;;In Dutch, the names of languages are capitalized"
-    },
-    "frisian": {
-        "hypernym": "language",
-        "en": "Frisian;;In English, the names of languages are capitalized",
-        "fi": "friisi;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Fries;;In Dutch, the names of languages are capitalized"
-    },
-    "hebrew": {
-        "hypernym": "language",
-        "en": "Hebrew;;In English, the names of languages are capitalized",
-        "fi": "heprea;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Hebreeuws;;In Dutch, the names of languages are capitalized"
-    },
-    "polish": {
-        "hypernym": "language",
-        "en": "Polish;;In English, the names of languages are capitalized",
-        "fi": "puola;;In Finnish, the names of languages are not capitalized",
-        "nl": "het Pools;;In Dutch, the names of languages are capitalized"
-    }
+        {
+            "concept": "language",
+            "label": {
+                "singular": "de taal",
+                "plural": "de talen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "spoken language",
+            "label": "spoken language",
+            "language": "en"
+        },
+        {
+            "concept": "spoken language",
+            "label": "puhekieli",
+            "language": "fi"
+        },
+        {
+            "concept": "spoken language",
+            "label": "de spreektaal",
+            "language": "nl"
+        },
+        {
+            "concept": "written language",
+            "label": "written language",
+            "language": "en"
+        },
+        {
+            "concept": "written language",
+            "label": "kirjakieli",
+            "language": "fi"
+        },
+        {
+            "concept": "written language",
+            "label": "de schrijftaal",
+            "language": "nl"
+        },
+        {
+            "concept": "mother tongue",
+            "label": "mother tongue",
+            "language": "en"
+        },
+        {
+            "concept": "mother tongue",
+            "label": "äidinkieli",
+            "language": "fi"
+        },
+        {
+            "concept": "mother tongue",
+            "label": "de moedertaal",
+            "language": "nl"
+        },
+        {
+            "concept": "english",
+            "label": "English;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "english",
+            "label": "englanti;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "english",
+            "label": "het Engels;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "arabic",
+            "label": "Arabic;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "arabic",
+            "label": "arabia;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "arabic",
+            "label": "het Arabisch;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "chinese",
+            "label": "Chinese;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "chinese",
+            "label": "kiina;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "chinese",
+            "label": "het Chinees;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "german",
+            "label": "German;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "german",
+            "label": "saksa;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "german",
+            "label": "het Duits;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "estonian",
+            "label": "Estonian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "estonian",
+            "label": "viro;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "estonian",
+            "label": "het Estisch;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "finnish language",
+            "label": "Finnish;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "finnish language",
+            "label": "suomi;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "finnish language",
+            "label": "het Fins;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "french language",
+            "label": "French;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "french language",
+            "label": "ranska;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "french language",
+            "label": "het Frans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "hungarian",
+            "label": "Hungarian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "hungarian",
+            "label": "unkari;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "hungarian",
+            "label": "het Hongaars;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "japanese",
+            "label": "Japanese;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "japanese",
+            "label": "japani;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "japanese",
+            "label": "het Japans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "korean",
+            "label": "Korean;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "korean",
+            "label": "korea;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "korean",
+            "label": "het Koreaans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "spanish",
+            "label": "Spanish;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "spanish",
+            "label": "espanja;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "spanish",
+            "label": "het Spaans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "italian",
+            "label": "Italian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "italian",
+            "label": "italia;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "italian",
+            "label": "het Italiaans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "dutch",
+            "label": "Dutch;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "dutch",
+            "label": "hollanti;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "dutch",
+            "label": "het Nederlands;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "danish",
+            "label": "Danish;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "danish",
+            "label": "tanska;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "danish",
+            "label": "het Deens;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "norwegian",
+            "label": "Norwegian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "norwegian",
+            "label": "norja;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "norwegian",
+            "label": "het Noors;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "swedish",
+            "label": "Swedish;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "swedish",
+            "label": "ruotsi;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "swedish",
+            "label": "het Zweeds;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "russian language",
+            "label": "Russian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "russian language",
+            "label": "venäjä;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "russian language",
+            "label": "het Russisch;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "icelandic",
+            "label": "Icelandic;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "icelandic",
+            "label": "islanti;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "icelandic",
+            "label": "het IJslands;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "greek language",
+            "label": "Greek;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "greek language",
+            "label": "kreikka;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "greek language",
+            "label": "het Grieks;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "south african",
+            "label": "South African;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "south african",
+            "label": "eteläafrikkalainen;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "south african",
+            "label": "het Zuid-Afrikaans;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "portuguese",
+            "label": "Portuguese;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "portuguese",
+            "label": "portugali;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "portuguese",
+            "label": "het Portugees;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "urdu",
+            "label": "Urdu;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "urdu",
+            "label": "urdu;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "urdu",
+            "label": "het Urdu;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "frisian",
+            "label": "Frisian;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "frisian",
+            "label": "friisi;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "frisian",
+            "label": "het Fries;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "hebrew",
+            "label": "Hebrew;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "hebrew",
+            "label": "heprea;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "hebrew",
+            "label": "het Hebreeuws;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        },
+        {
+            "concept": "polish",
+            "label": "Polish;;In English, the names of languages are capitalized",
+            "language": "en"
+        },
+        {
+            "concept": "polish",
+            "label": "puola;;In Finnish, the names of languages are not capitalized",
+            "language": "fi"
+        },
+        {
+            "concept": "polish",
+            "label": "het Pools;;In Dutch, the names of languages are capitalized",
+            "language": "nl"
+        }
+    ]
 }

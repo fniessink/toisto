@@ -1,25 +1,63 @@
 {
-    "thing": {
-        "en": [
-            "thing;that is abstract",
-            "business"
-        ],
-        "fi": "asia",
-        "nl": [
-            "het ding;that is abstract",
-            "de zaak"
-        ]
+    "concepts": {
+        "thing": {},
+        "thing (concrete)": {}
     },
-    "thing (concrete)": {
-        "en": [
-            "object",
-            "item",
-            "thing;that is physical, concrete, tangible"
-        ],
-        "fi": "esine",
-        "nl": [
-            "het ding;that is physical, concrete, tangible",
-            "het voorwerp"
-        ]
-    }
+    "labels": [
+        {
+            "concept": "thing",
+            "label": "thing;that is abstract",
+            "language": "en"
+        },
+        {
+            "concept": "thing",
+            "label": "business",
+            "language": "en"
+        },
+        {
+            "concept": "thing",
+            "label": "asia",
+            "language": "fi"
+        },
+        {
+            "concept": "thing",
+            "label": "het ding;that is abstract",
+            "language": "nl"
+        },
+        {
+            "concept": "thing",
+            "label": "de zaak",
+            "language": "nl"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "object",
+            "language": "en"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "item",
+            "language": "en"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "thing;that is physical, concrete, tangible",
+            "language": "en"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "esine",
+            "language": "fi"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "het ding;that is physical, concrete, tangible",
+            "language": "nl"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "het voorwerp",
+            "language": "nl"
+        }
+    ]
 }

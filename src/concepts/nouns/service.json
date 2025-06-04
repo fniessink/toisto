@@ -1,28 +1,71 @@
 {
-    "service": {
-        "en": "service",
-        "fi": "palvelu",
-        "nl": [
-            "service",
-            "faciliteit"
-        ]
+    "concepts": {
+        "service": {},
+        "customer service": {
+            "roots": [
+                "customer",
+                "service"
+            ]
+        },
+        "service point": {
+            "roots": "service"
+        }
     },
-    "customer service": {
-        "roots": [
-            "customer",
-            "service"
-        ],
-        "en": "customer service",
-        "fi": "asiakaspalvelu",
-        "nl": "de klantenservice"
-    },
-    "service point": {
-        "roots": "service",
-        "en": "service point",
-        "fi": [
-            "palvelupiste",
-            "tiski*"
-        ],
-        "nl": "de servicebalie"
-    }
+    "labels": [
+        {
+            "concept": "service",
+            "label": "service",
+            "language": "en"
+        },
+        {
+            "concept": "service",
+            "label": "palvelu",
+            "language": "fi"
+        },
+        {
+            "concept": "service",
+            "label": "service",
+            "language": "nl"
+        },
+        {
+            "concept": "service",
+            "label": "faciliteit",
+            "language": "nl"
+        },
+        {
+            "concept": "customer service",
+            "label": "customer service",
+            "language": "en"
+        },
+        {
+            "concept": "customer service",
+            "label": "asiakaspalvelu",
+            "language": "fi"
+        },
+        {
+            "concept": "customer service",
+            "label": "de klantenservice",
+            "language": "nl"
+        },
+        {
+            "concept": "service point",
+            "label": "service point",
+            "language": "en"
+        },
+        {
+            "concept": "service point",
+            "label": "palvelupiste",
+            "language": "fi"
+        },
+        {
+            "concept": "service point",
+            "label": "tiski*",
+            "language": "fi"
+        },
+        {
+            "concept": "service point",
+            "label": "de servicebalie",
+            "language": "nl"
+        }
+    ]
 }

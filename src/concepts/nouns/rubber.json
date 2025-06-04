@@ -1,7 +1,22 @@
 {
-    "rubber": {
-        "en": "rubber",
-        "fi": "kumi",
-        "nl": "het rubber"
-    }
+    "concepts": {
+        "rubber": {}
+    },
+    "labels": [
+        {
+            "concept": "rubber",
+            "label": "rubber",
+            "language": "en"
+        },
+        {
+            "concept": "rubber",
+            "label": "kumi",
+            "language": "fi"
+        },
+        {
+            "concept": "rubber",
+            "label": "het rubber",
+            "language": "nl"
+        }
+    ]
 }

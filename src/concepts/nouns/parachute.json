@@ -1,16 +1,31 @@
 {
-    "parachute": {
-        "en": {
-            "singular": "parachute",
-            "plural": "parachutes"
+    "concepts": {
+        "parachute": {}
+    },
+    "labels": [
+        {
+            "concept": "parachute",
+            "label": {
+                "singular": "parachute",
+                "plural": "parachutes"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "laskuvarjo",
-            "plural": "laskuvarjot"
+        {
+            "concept": "parachute",
+            "label": {
+                "singular": "laskuvarjo",
+                "plural": "laskuvarjot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de parachute",
-            "plural": "de parachutes"
+        {
+            "concept": "parachute",
+            "label": {
+                "singular": "de parachute",
+                "plural": "de parachutes"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

@@ -1,8 +1,24 @@
 {
-    "birch": {
-        "hypernym": "tree",
-        "en": "birch",
-        "fi": "koivu",
-        "nl": "de berk"
-    }
+    "concepts": {
+        "birch": {
+            "hypernym": "tree"
+        }
+    },
+    "labels": [
+        {
+            "concept": "birch",
+            "label": "birch",
+            "language": "en"
+        },
+        {
+            "concept": "birch",
+            "label": "koivu",
+            "language": "fi"
+        },
+        {
+            "concept": "birch",
+            "label": "de berk",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,81 +1,144 @@
 {
-    "sofa": {
-        "en": {
-            "singular": "sofa",
-            "plural": "sofas"
+    "concepts": {
+        "sofa": {},
+        "pillow": {},
+        "desk": {
+            "roots": {
+                "fi": [
+                    "job",
+                    "to write",
+                    "table"
+                ]
+            }
         },
-        "fi": {
-            "singular": "sohva",
-            "plural": "sohvat"
-        },
-        "nl": {
-            "singular": "de sofa",
-            "plural": "de sofa's"
-        }
-    },
-    "pillow": {
-        "en": {
-            "singular": "pillow",
-            "plural": "pillows"
-        },
-        "fi": {
-            "singular": "tyyny",
-            "plural": "tyynyt"
-        },
-        "nl": {
-            "singular": "het kussen",
-            "plural": "de kussens"
-        }
-    },
-    "desk": {
-        "roots": {
-            "fi": [
-                "job",
-                "to write",
-                "table"
+        "carpet": {},
+        "the cat is sleeping on the carpet": {
+            "roots": [
+                "cat",
+                "to sleep",
+                "carpet"
             ]
-        },
-        "en": {
-            "singular": "desk",
-            "plural": "desks"
-        },
-        "fi": {
-            "singular": [
-                "työpöytä",
-                "kirjoituspöytä"
-            ],
-            "plural": [
-                "työpöydät",
-                "kirjoituspöydät"
-            ]
-        },
-        "nl": {
-            "singular": "het bureau",
-            "plural": "de bureaus"
         }
     },
-    "carpet": {
-        "en": {
-            "singular": "carpet",
-            "plural": "carpets"
+    "labels": [
+        {
+            "concept": "sofa",
+            "label": {
+                "singular": "sofa",
+                "plural": "sofas"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "matto",
-            "plural": "matot"
+        {
+            "concept": "sofa",
+            "label": {
+                "singular": "sohva",
+                "plural": "sohvat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het tapijt",
-            "plural": "de tapijten"
+        {
+            "concept": "sofa",
+            "label": {
+                "singular": "de sofa",
+                "plural": "de sofa's"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "pillow",
+            "label": {
+                "singular": "pillow",
+                "plural": "pillows"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "pillow",
+            "label": {
+                "singular": "tyyny",
+                "plural": "tyynyt"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "pillow",
+            "label": {
+                "singular": "het kussen",
+                "plural": "de kussens"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "desk",
+            "label": {
+                "singular": "desk",
+                "plural": "desks"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "desk",
+            "label": {
+                "singular": "työpöytä",
+                "plural": "työpöydät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "desk",
+            "label": {
+                "singular": "kirjoituspöytä",
+                "plural": "kirjoituspöydät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "desk",
+            "label": {
+                "singular": "het bureau",
+                "plural": "de bureaus"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "carpet",
+            "label": {
+                "singular": "carpet",
+                "plural": "carpets"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "carpet",
+            "label": {
+                "singular": "matto",
+                "plural": "matot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "carpet",
+            "label": {
+                "singular": "het tapijt",
+                "plural": "de tapijten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "the cat is sleeping on the carpet",
+            "label": "The cat is sleeping on the carpet.",
+            "language": "en"
+        },
+        {
+            "concept": "the cat is sleeping on the carpet",
+            "label": "Kissa nukkuu matolla.",
+            "language": "fi"
+        },
+        {
+            "concept": "the cat is sleeping on the carpet",
+            "label": "De kat slaapt op het tapijt.",
+            "language": "nl"
         }
-    },
-    "the cat is sleeping on the carpet": {
-        "roots": [
-            "cat",
-            "to sleep",
-            "carpet"
-        ],
-        "en": "The cat is sleeping on the carpet.",
-        "fi": "Kissa nukkuu matolla.",
-        "nl": "De kat slaapt op het tapijt."
-    }
+    ]
 }

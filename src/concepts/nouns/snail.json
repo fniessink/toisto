@@ -1,17 +1,33 @@
 {
-    "snail": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "snail",
-            "plural": "snails"
-        },
-        "fi": {
-            "singular": "etana",
-            "plural": "etanat"
-        },
-        "nl": {
-            "singular": "de slak",
-            "plural": "de slakken"
+    "concepts": {
+        "snail": {
+            "hypernym": "animal"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "snail",
+            "label": {
+                "singular": "snail",
+                "plural": "snails"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "snail",
+            "label": {
+                "singular": "etana",
+                "plural": "etanat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "snail",
+            "label": {
+                "singular": "de slak",
+                "plural": "de slakken"
+            },
+            "language": "nl"
+        }
+    ]
 }

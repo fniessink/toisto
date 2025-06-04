@@ -1,7 +1,22 @@
 {
-    "club": {
-        "en": "club",
-        "fi": "kerho",
-        "nl": "de club"
-    }
+    "concepts": {
+        "club": {}
+    },
+    "labels": [
+        {
+            "concept": "club",
+            "label": "club",
+            "language": "en"
+        },
+        {
+            "concept": "club",
+            "label": "kerho",
+            "language": "fi"
+        },
+        {
+            "concept": "club",
+            "label": "de club",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,16 +1,31 @@
 {
-    "life": {
-        "en": {
-            "singular": "life",
-            "plural": "lives"
+    "concepts": {
+        "life": {}
+    },
+    "labels": [
+        {
+            "concept": "life",
+            "label": {
+                "singular": "life",
+                "plural": "lives"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "elämä",
-            "plural": "elämät"
+        {
+            "concept": "life",
+            "label": {
+                "singular": "elämä",
+                "plural": "elämät"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het leven",
-            "plural": "de levens"
+        {
+            "concept": "life",
+            "label": {
+                "singular": "het leven",
+                "plural": "de levens"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

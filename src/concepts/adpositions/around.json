@@ -1,24 +1,56 @@
 {
-    "around": {
-        "example": "they sit around the table",
-        "en": "around",
-        "fi": "ympärillä",
-        "nl": [
-            "rond",
-            "om"
-        ]
+    "concepts": {
+        "around": {
+            "example": "they sit around the table"
+        },
+        "they sit around the table": {
+            "roots": [
+                "to sit",
+                "around",
+                "table"
+            ]
+        }
     },
-    "they sit around the table": {
-        "roots": [
-            "to sit",
-            "around",
-            "table"
-        ],
-        "en": "They sit around the table.",
-        "fi": "He istuvat pöydän ympärillä.",
-        "nl": [
-            "Zij zitten rond de tafel.",
-            "Zij zitten om de tafel."
-        ]
-    }
+    "labels": [
+        {
+            "concept": "around",
+            "label": "around",
+            "language": "en"
+        },
+        {
+            "concept": "around",
+            "label": "ympärillä",
+            "language": "fi"
+        },
+        {
+            "concept": "around",
+            "label": "rond",
+            "language": "nl"
+        },
+        {
+            "concept": "around",
+            "label": "om",
+            "language": "nl"
+        },
+        {
+            "concept": "they sit around the table",
+            "label": "They sit around the table.",
+            "language": "en"
+        },
+        {
+            "concept": "they sit around the table",
+            "label": "He istuvat pöydän ympärillä.",
+            "language": "fi"
+        },
+        {
+            "concept": "they sit around the table",
+            "label": "Zij zitten rond de tafel.",
+            "language": "nl"
+        },
+        {
+            "concept": "they sit around the table",
+            "label": "Zij zitten om de tafel.",
+            "language": "nl"
+        }
+    ]
 }

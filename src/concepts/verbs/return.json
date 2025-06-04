@@ -1,21 +1,62 @@
 {
-    "to return": {
-        "en": [
-            "to return",
-            "to come back",
-            "to get back"
-        ],
-        "fi": "palata",
-        "nl": "terugkomen"
+    "concepts": {
+        "to return": {},
+        "to return (something)": {},
+        "to return a form": {}
     },
-    "to return (something)": {
-        "en": "to return",
-        "fi": "palauttaa",
-        "nl": "terugsturen"
-    },
-    "to return a form": {
-        "en": "to return a form",
-        "fi": "palauttaa lomake",
-        "nl": "een formulier terugsturen"
-    }
+    "labels": [
+        {
+            "concept": [
+                "to return",
+                "to return (something)"
+            ],
+            "label": "to return",
+            "language": "en"
+        },
+        {
+            "concept": "to return",
+            "label": "to come back",
+            "language": "en"
+        },
+        {
+            "concept": "to return",
+            "label": "to get back",
+            "language": "en"
+        },
+        {
+            "concept": "to return",
+            "label": "palata",
+            "language": "fi"
+        },
+        {
+            "concept": "to return",
+            "label": "terugkomen",
+            "language": "nl"
+        },
+        {
+            "concept": "to return (something)",
+            "label": "palauttaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to return (something)",
+            "label": "terugsturen",
+            "language": "nl"
+        },
+        {
+            "concept": "to return a form",
+            "label": "to return a form",
+            "language": "en"
+        },
+        {
+            "concept": "to return a form",
+            "label": "palauttaa lomake",
+            "language": "fi"
+        },
+        {
+            "concept": "to return a form",
+            "label": "een formulier terugsturen",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,19 +1,34 @@
 {
-    "funny": {
-        "en": {
-            "positive degree": "funny",
-            "comparative degree": "funnier",
-            "superlative degree": "funniest"
+    "concepts": {
+        "funny": {}
+    },
+    "labels": [
+        {
+            "concept": "funny",
+            "label": {
+                "positive degree": "funny",
+                "comparative degree": "funnier",
+                "superlative degree": "funniest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "hauska",
-            "comparative degree": "hauskempi",
-            "superlative degree": "hauskin"
+        {
+            "concept": "funny",
+            "label": {
+                "positive degree": "hauska",
+                "comparative degree": "hauskempi",
+                "superlative degree": "hauskin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "grappig",
-            "comparative degree": "grappiger",
-            "superlative degree": "grappigst"
+        {
+            "concept": "funny",
+            "label": {
+                "positive degree": "grappig",
+                "comparative degree": "grappiger",
+                "superlative degree": "grappigst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

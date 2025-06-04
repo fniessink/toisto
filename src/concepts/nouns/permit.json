@@ -1,22 +1,61 @@
 {
-    "permit": {
-        "en": "permit",
-        "fi": "lupa",
-        "nl": "de vergunning"
+    "concepts": {
+        "permit": {},
+        "residence permit": {
+            "roots": "permit"
+        },
+        "work permit": {
+            "roots": [
+                "work",
+                "permit"
+            ]
+        }
     },
-    "residence permit": {
-        "roots": "permit",
-        "en": "residence permit",
-        "fi": "oleskelulupa",
-        "nl": "de verblijfsvergunning"
-    },
-    "work permit": {
-        "roots": [
-            "work",
-            "permit"
-        ],
-        "en": "work permit",
-        "fi": "työlupa",
-        "nl": "de werkvergunning"
-    }
+    "labels": [
+        {
+            "concept": "permit",
+            "label": "permit",
+            "language": "en"
+        },
+        {
+            "concept": "permit",
+            "label": "lupa",
+            "language": "fi"
+        },
+        {
+            "concept": "permit",
+            "label": "de vergunning",
+            "language": "nl"
+        },
+        {
+            "concept": "residence permit",
+            "label": "residence permit",
+            "language": "en"
+        },
+        {
+            "concept": "residence permit",
+            "label": "oleskelulupa",
+            "language": "fi"
+        },
+        {
+            "concept": "residence permit",
+            "label": "de verblijfsvergunning",
+            "language": "nl"
+        },
+        {
+            "concept": "work permit",
+            "label": "work permit",
+            "language": "en"
+        },
+        {
+            "concept": "work permit",
+            "label": "työlupa",
+            "language": "fi"
+        },
+        {
+            "concept": "work permit",
+            "label": "de werkvergunning",
+            "language": "nl"
+        }
+    ]
 }

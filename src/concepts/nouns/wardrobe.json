@@ -1,12 +1,28 @@
 {
-    "wardrobe": {
-        "holonym": "bedroom",
-        "roots": {
-            "fi": "clothes",
-            "nl": "clothes"
+    "concepts": {
+        "wardrobe": {
+            "holonym": "bedroom",
+            "roots": {
+                "fi": "clothes",
+                "nl": "clothes"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "wardrobe",
+            "label": "wardrobe",
+            "language": "en"
         },
-        "en": "wardrobe",
-        "fi": "vaatekaappi",
-        "nl": "de klerenkast"
-    }
+        {
+            "concept": "wardrobe",
+            "label": "vaatekaappi",
+            "language": "fi"
+        },
+        {
+            "concept": "wardrobe",
+            "label": "de klerenkast",
+            "language": "nl"
+        }
+    ]
 }

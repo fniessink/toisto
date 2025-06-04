@@ -1,19 +1,34 @@
 {
-    "honest": {
-        "en": {
-            "positive degree": "honest",
-            "comparative degree": "more honest",
-            "superlative degree": "most honest"
+    "concepts": {
+        "honest": {}
+    },
+    "labels": [
+        {
+            "concept": "honest",
+            "label": {
+                "positive degree": "honest",
+                "comparative degree": "more honest",
+                "superlative degree": "most honest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "rehellinen",
-            "comparative degree": "rehellisempi",
-            "superlative degree": "rehellisin"
+        {
+            "concept": "honest",
+            "label": {
+                "positive degree": "rehellinen",
+                "comparative degree": "rehellisempi",
+                "superlative degree": "rehellisin"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "eerlijk",
-            "comparative degree": "eerlijker",
-            "superlative degree": "eerlijkst"
+        {
+            "concept": "honest",
+            "label": {
+                "positive degree": "eerlijk",
+                "comparative degree": "eerlijker",
+                "superlative degree": "eerlijkst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

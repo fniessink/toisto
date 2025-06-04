@@ -25,7 +25,9 @@ class ShowProgressTestCase(ToistoTestCase):
     def setUp(self) -> None:
         """Set up test fixtures."""
         super().setUp()
-        concept = self.create_concept("hello", dict(fi="Terve!", nl="Hoi!"))
+        concept = self.create_concept(
+            "hello", labels=[dict(label="Terve!", language=FI), dict(label="Hoi!", language=NL)]
+        )
         self.quiz = first(create_quizzes(FI_NL, (READ,), concept))
         self.quizzes = Quizzes({self.quiz})
 
@@ -82,7 +84,9 @@ class ShowProgressTest(ShowProgressTestCase):
 
     def test_that_generated_spelling_alternatives_are_not_shown(self):
         """Test that generated spelling alternatives are not included in the progress table."""
-        concept = self.create_concept("", dict(en="vegetable", nl="de groente"))
+        concept = self.create_concept(
+            "veggie", labels=[dict(label="vegetable", language=EN), dict(label="de groente", language=NL)]
+        )
         quiz = first(create_quizzes(EN_NL, (READ,), concept))
         quizzes = Quizzes({quiz})
         progress = Progress(EN, quizzes, {quiz.key: dict(start=self.start, end=self.end)})
@@ -97,7 +101,9 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
     def setUp(self) -> None:
         """Set up test fixtures."""
         super().setUp()
-        another_concept = self.create_concept("carpet", dict(fi="matto", nl="het tapijt"))
+        another_concept = self.create_concept(
+            "carpet", labels=[dict(label="matto", language=FI), dict(label="het tapijt", language=NL)]
+        )
         self.another_quiz = first(create_quizzes(FI_NL, (READ,), another_concept))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
 

@@ -1,7 +1,22 @@
 {
-    "laundry": {
-        "en": "laundry",
-        "fi": "pyykki",
-        "nl": "de was"
-    }
+    "concepts": {
+        "laundry": {}
+    },
+    "labels": [
+        {
+            "concept": "laundry",
+            "label": "laundry",
+            "language": "en"
+        },
+        {
+            "concept": "laundry",
+            "label": "pyykki",
+            "language": "fi"
+        },
+        {
+            "concept": "laundry",
+            "label": "de was",
+            "language": "nl"
+        }
+    ]
 }

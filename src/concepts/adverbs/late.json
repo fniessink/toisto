@@ -1,10 +1,27 @@
 {
-    "late": {
-        "en": "late",
-        "fi": [
-            "myöhään",
-            "myöhässä"
-        ],
-        "nl": "laat"
-    }
+    "concepts": {
+        "late": {}
+    },
+    "labels": [
+        {
+            "concept": "late",
+            "label": "late",
+            "language": "en"
+        },
+        {
+            "concept": "late",
+            "label": "myöhään",
+            "language": "fi"
+        },
+        {
+            "concept": "late",
+            "label": "myöhässä",
+            "language": "fi"
+        },
+        {
+            "concept": "late",
+            "label": "laat",
+            "language": "nl"
+        }
+    ]
 }

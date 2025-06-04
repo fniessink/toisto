@@ -1,7 +1,22 @@
 {
-    "clerk": {
-        "en": "clerk",
-        "fi": "virkailija",
-        "nl": "de functionaris"
-    }
+    "concepts": {
+        "clerk": {}
+    },
+    "labels": [
+        {
+            "concept": "clerk",
+            "label": "clerk",
+            "language": "en"
+        },
+        {
+            "concept": "clerk",
+            "label": "virkailija",
+            "language": "fi"
+        },
+        {
+            "concept": "clerk",
+            "label": "de functionaris",
+            "language": "nl"
+        }
+    ]
 }

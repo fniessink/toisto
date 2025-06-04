@@ -1,23 +1,51 @@
 {
-    "face": {
-        "example": "he has a friendly face",
-        "en": {
-            "singular": "face",
-            "plural": "faces"
+    "concepts": {
+        "face": {
+            "example": "he has a friendly face"
         },
-        "fi": "kasvot;;'kasvot' is plural only",
-        "nl": {
-            "singular": "het gezicht",
-            "plural": "de gezichten"
+        "he has a friendly face": {
+            "roots": [
+                "friendly",
+                "face"
+            ]
         }
     },
-    "he has a friendly face": {
-        "roots": [
-            "friendly",
-            "face"
-        ],
-        "en": "He has a friendly face.",
-        "fi": "Hänellä on ystävälliset kasvot.;masculine",
-        "nl": "Hij heeft een vriendelijk gezicht."
-    }
+    "labels": [
+        {
+            "concept": "face",
+            "label": {
+                "singular": "face",
+                "plural": "faces"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "face",
+            "label": "kasvot;;'kasvot' is plural only",
+            "language": "fi"
+        },
+        {
+            "concept": "face",
+            "label": {
+                "singular": "het gezicht",
+                "plural": "de gezichten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "he has a friendly face",
+            "label": "He has a friendly face.",
+            "language": "en"
+        },
+        {
+            "concept": "he has a friendly face",
+            "label": "Hänellä on ystävälliset kasvot.;masculine",
+            "language": "fi"
+        },
+        {
+            "concept": "he has a friendly face",
+            "label": "Hij heeft een vriendelijk gezicht.",
+            "language": "nl"
+        }
+    ]
 }

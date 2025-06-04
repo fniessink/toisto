@@ -1,7 +1,22 @@
 {
-    "oneself": {
-        "en": "oneself",
-        "fi": "itse",
-        "nl": "zelf"
-    }
+    "concepts": {
+        "oneself": {}
+    },
+    "labels": [
+        {
+            "concept": "oneself",
+            "label": "oneself",
+            "language": "en"
+        },
+        {
+            "concept": "oneself",
+            "label": "itse",
+            "language": "fi"
+        },
+        {
+            "concept": "oneself",
+            "label": "zelf",
+            "language": "nl"
+        }
+    ]
 }

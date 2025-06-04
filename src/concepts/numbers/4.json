@@ -1,17 +1,33 @@
 {
-    "4": {
-        "hypernym": "number",
-        "en": {
-            "cardinal": "four",
-            "ordinal": "fourth"
-        },
-        "fi": {
-            "cardinal": "neljä",
-            "ordinal": "neljäs"
-        },
-        "nl": {
-            "cardinal": "vier",
-            "ordinal": "vierde"
+    "concepts": {
+        "4": {
+            "hypernym": "number"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "4",
+            "label": {
+                "cardinal": "four",
+                "ordinal": "fourth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "4",
+            "label": {
+                "cardinal": "neljä",
+                "ordinal": "neljäs"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "4",
+            "label": {
+                "cardinal": "vier",
+                "ordinal": "vierde"
+            },
+            "language": "nl"
+        }
+    ]
 }

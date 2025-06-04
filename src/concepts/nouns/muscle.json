@@ -1,8 +1,24 @@
 {
-    "muscle": {
-        "holonym": "body",
-        "en": "muscle",
-        "fi": "lihas",
-        "nl": "de spier"
-    }
+    "concepts": {
+        "muscle": {
+            "holonym": "body"
+        }
+    },
+    "labels": [
+        {
+            "concept": "muscle",
+            "label": "muscle",
+            "language": "en"
+        },
+        {
+            "concept": "muscle",
+            "label": "lihas",
+            "language": "fi"
+        },
+        {
+            "concept": "muscle",
+            "label": "de spier",
+            "language": "nl"
+        }
+    ]
 }

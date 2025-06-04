@@ -1,8 +1,24 @@
 {
-    "past (period of time)": {
-        "antonym": "future",
-        "en": "past",
-        "fi": "menneisyys",
-        "nl": "het verleden"
-    }
+    "concepts": {
+        "past (period of time)": {
+            "antonym": "future"
+        }
+    },
+    "labels": [
+        {
+            "concept": "past (period of time)",
+            "label": "past;noun",
+            "language": "en"
+        },
+        {
+            "concept": "past (period of time)",
+            "label": "menneisyys",
+            "language": "fi"
+        },
+        {
+            "concept": "past (period of time)",
+            "label": "het verleden",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,7 +1,22 @@
 {
-    "association": {
-        "en": "association",
-        "fi": "yhdistys",
-        "nl": "de vereniging"
-    }
+    "concepts": {
+        "association": {}
+    },
+    "labels": [
+        {
+            "concept": "association",
+            "label": "association",
+            "language": "en"
+        },
+        {
+            "concept": "association",
+            "label": "yhdistys",
+            "language": "fi"
+        },
+        {
+            "concept": "association",
+            "label": "de vereniging",
+            "language": "nl"
+        }
+    ]
 }

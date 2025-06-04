@@ -1,22 +1,39 @@
 {
-    "team": {
-        "en": {
-            "singular": "team",
-            "plural": "teams"
+    "concepts": {
+        "team": {}
+    },
+    "labels": [
+        {
+            "concept": "team",
+            "label": {
+                "singular": "team",
+                "plural": "teams"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": [
-                "joukkue",
-                "tiimi*"
-            ],
-            "plural": [
-                "joukkueet",
-                "tiimit*"
-            ]
+        {
+            "concept": "team",
+            "label": {
+                "singular": "joukkue",
+                "plural": "joukkueet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het team",
-            "plural": "de teams"
+        {
+            "concept": "team",
+            "label": {
+                "singular": "tiimi*",
+                "plural": "tiimit*"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "team",
+            "label": {
+                "singular": "het team",
+                "plural": "de teams"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

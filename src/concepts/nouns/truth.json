@@ -1,7 +1,22 @@
 {
-    "truth": {
-        "en": "truth",
-        "fi": "totuus",
-        "nl": "de waarheid"
-    }
+    "concepts": {
+        "truth": {}
+    },
+    "labels": [
+        {
+            "concept": "truth",
+            "label": "truth",
+            "language": "en"
+        },
+        {
+            "concept": "truth",
+            "label": "totuus",
+            "language": "fi"
+        },
+        {
+            "concept": "truth",
+            "label": "de waarheid",
+            "language": "nl"
+        }
+    ]
 }

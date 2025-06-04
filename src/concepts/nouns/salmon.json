@@ -1,8 +1,24 @@
 {
-    "salmon": {
-        "hypernym": "fish",
-        "en": "salmon",
-        "fi": "lohi",
-        "nl": "de zalm"
-    }
+    "concepts": {
+        "salmon": {
+            "hypernym": "fish"
+        }
+    },
+    "labels": [
+        {
+            "concept": "salmon",
+            "label": "salmon",
+            "language": "en"
+        },
+        {
+            "concept": "salmon",
+            "label": "lohi",
+            "language": "fi"
+        },
+        {
+            "concept": "salmon",
+            "label": "de zalm",
+            "language": "nl"
+        }
+    ]
 }

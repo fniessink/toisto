@@ -1,7 +1,22 @@
 {
-    "to descend": {
-        "en": "to descend",
-        "fi": "laskeutua",
-        "nl": "dalen"
-    }
+    "concepts": {
+        "to descend": {}
+    },
+    "labels": [
+        {
+            "concept": "to descend",
+            "label": "to descend",
+            "language": "en"
+        },
+        {
+            "concept": "to descend",
+            "label": "laskeutua",
+            "language": "fi"
+        },
+        {
+            "concept": "to descend",
+            "label": "dalen",
+            "language": "nl"
+        }
+    ]
 }

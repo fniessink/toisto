@@ -1,13 +1,32 @@
 {
-    "ordinary": {
-        "en": [
-            "ordinary",
-            "normal"
-        ],
-        "fi": "tavallinen",
-        "nl": [
-            "gewoon",
-            "normaal"
-        ]
-    }
+    "concepts": {
+        "ordinary": {}
+    },
+    "labels": [
+        {
+            "concept": "ordinary",
+            "label": "ordinary",
+            "language": "en"
+        },
+        {
+            "concept": "ordinary",
+            "label": "normal",
+            "language": "en"
+        },
+        {
+            "concept": "ordinary",
+            "label": "tavallinen",
+            "language": "fi"
+        },
+        {
+            "concept": "ordinary",
+            "label": "gewoon",
+            "language": "nl"
+        },
+        {
+            "concept": "ordinary",
+            "label": "normaal",
+            "language": "nl"
+        }
+    ]
 }

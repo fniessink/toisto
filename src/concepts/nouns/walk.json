@@ -1,19 +1,56 @@
 {
-    "walk": {
-        "en": "walk",
-        "fi": "kävely",
-        "nl": "de wandeling"
+    "concepts": {
+        "walk": {},
+        "walking": {
+            "hypernym": "outdoor activity"
+        },
+        "Nordic walking": {
+            "hypernym": "walking"
+        }
     },
-    "walking": {
-        "hypernym": "outdoor activity",
-        "en": "walking",
-        "fi": "kävely",
-        "nl": "wandelen"
-    },
-    "Nordic walking": {
-        "hypernym": "walking",
-        "en": "Nordic walking",
-        "fi": "sauvakävely",
-        "nl": "Nordic walking"
-    }
+    "labels": [
+        {
+            "concept": "walk",
+            "label": "walk",
+            "language": "en"
+        },
+        {
+            "concept": [
+                "walk",
+                "walking"
+            ],
+            "label": "kävely",
+            "language": "fi"
+        },
+        {
+            "concept": "walk",
+            "label": "de wandeling",
+            "language": "nl"
+        },
+        {
+            "concept": "walking",
+            "label": "walking",
+            "language": "en"
+        },
+        {
+            "concept": "walking",
+            "label": "wandelen",
+            "language": "nl"
+        },
+        {
+            "concept": "Nordic walking",
+            "label": "Nordic walking",
+            "language": "en"
+        },
+        {
+            "concept": "Nordic walking",
+            "label": "sauvakävely",
+            "language": "fi"
+        },
+        {
+            "concept": "Nordic walking",
+            "label": "Nordic walking",
+            "language": "nl"
+        }
+    ]
 }

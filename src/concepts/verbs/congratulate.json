@@ -1,7 +1,22 @@
 {
-    "to congratulate": {
-        "en": "to congratulate",
-        "fi": "onnitella",
-        "nl": "feliciteren"
-    }
+    "concepts": {
+        "to congratulate": {}
+    },
+    "labels": [
+        {
+            "concept": "to congratulate",
+            "label": "to congratulate",
+            "language": "en"
+        },
+        {
+            "concept": "to congratulate",
+            "label": "onnitella",
+            "language": "fi"
+        },
+        {
+            "concept": "to congratulate",
+            "label": "feliciteren",
+            "language": "nl"
+        }
+    ]
 }

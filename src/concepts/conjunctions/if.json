@@ -1,7 +1,22 @@
 {
-    "if": {
-        "en": "if",
-        "fi": "jos",
-        "nl": "als"
-    }
+    "concepts": {
+        "if": {}
+    },
+    "labels": [
+        {
+            "concept": "if",
+            "label": "if",
+            "language": "en"
+        },
+        {
+            "concept": "if",
+            "label": "jos",
+            "language": "fi"
+        },
+        {
+            "concept": "if",
+            "label": "als",
+            "language": "nl"
+        }
+    ]
 }

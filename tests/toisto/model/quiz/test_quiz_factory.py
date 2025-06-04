@@ -53,117 +53,163 @@ class QuizFactoryTestCase(ToistoTestCase):
         """Create a verb with grammatical person."""
         return self.create_concept(
             "to eat",
-            {
-                "en": {
-                    "first person": "I eat",
-                    "second person": "you eat",
-                    "third person": "she eats",
-                },
-                "nl": {
-                    "first person": "ik eet",
-                    "second person": "jij eet",
-                    "third person": "zij eet",
-                },
-            },
+            labels=[
+                dict(
+                    label={
+                        "first person": "I eat",
+                        "second person": "you eat",
+                        "third person": "she eats",
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={
+                        "first person": "ik eet",
+                        "second person": "jij eet",
+                        "third person": "zij eet",
+                    },
+                    language=NL,
+                ),
+            ],
         )
 
     def create_verb_with_tense_and_person(self, *tense: Tense) -> Concept:
         """Create a verb with grammatical person nested within tense."""
-        concept_dict: dict[str, dict[str, dict[str, str]]] = {"en": {}, "nl": {}}
+        label_en = {}
+        label_nl = {}
         if "present tense" in tense:
-            concept_dict["en"]["present tense"] = dict(singular="I eat", plural="we eat")
-            concept_dict["nl"]["present tense"] = dict(singular="ik eet", plural="wij eten")
+            label_en["present tense"] = dict(singular="I eat", plural="we eat")
+            label_nl["present tense"] = dict(singular="ik eet", plural="wij eten")
         if "past tense" in tense:
-            concept_dict["en"]["past tense"] = dict(singular="I ate", plural="we ate")
-            concept_dict["nl"]["past tense"] = dict(singular="ik at", plural="wij aten")
+            label_en["past tense"] = dict(singular="I ate", plural="we ate")
+            label_nl["past tense"] = dict(singular="ik at", plural="wij aten")
         if "present perfect tense" in tense:
-            concept_dict["en"]["present perfect tense"] = dict(singular="I have eaten", plural="we have eaten")
-            concept_dict["nl"]["present perfect tense"] = dict(singular="ik heb gegeten", plural="wij hebben gegeten")
+            label_en["present perfect tense"] = dict(singular="I have eaten", plural="we have eaten")
+            label_nl["present perfect tense"] = dict(singular="ik heb gegeten", plural="wij hebben gegeten")
         if "past perfect tense" in tense:
-            concept_dict["en"]["past perfect tense"] = dict(singular="I had eaten", plural="we had eaten")
-            concept_dict["nl"]["past perfect tense"] = dict(singular="ik had gegeten", plural="wij hadden gegeten")
-        return self.create_concept("to eat", concept_dict)
+            label_en["past perfect tense"] = dict(singular="I had eaten", plural="we had eaten")
+            label_nl["past perfect tense"] = dict(singular="ik had gegeten", plural="wij hadden gegeten")
+        return self.create_concept(
+            "to eat", labels=[dict(label=label_en, language=EN), dict(label=label_nl, language=NL)]
+        )
 
     def create_verb_with_infinitive_and_person(self) -> Concept:
         """Create a verb with infinitive and grammatical person."""
         return self.create_concept(
             "to sleep",
-            dict(
-                en=dict(infinitive="to sleep", singular="I sleep", plural="we sleep"),
-                nl=dict(infinitive="slapen", singular="ik slaap", plural="wij slapen"),
-            ),
+            labels=[
+                dict(label=dict(infinitive="to sleep", singular="I sleep", plural="we sleep"), language=EN),
+                dict(label=dict(infinitive="slapen", singular="ik slaap", plural="wij slapen"), language=NL),
+            ],
         )
 
     def create_verb_with_infinitive_and_number_and_person(self) -> Concept:
         """Create a verb with infinitive and grammatical number nested with person."""
         return self.create_concept(
             "to be",
-            dict(
-                fi=dict(
-                    infinitive="olla",
-                    singular={"first person": "minä olen", "second person": "sinä olet", "third person": "hän on"},
-                    plural={"first person": "me olemme", "second person": "te olette", "third person": "he ovat"},
+            labels=[
+                dict(
+                    label=dict(
+                        infinitive="olla",
+                        singular={
+                            "first person": "minä olen",
+                            "second person": "sinä olet",
+                            "third person": "hän on",
+                        },
+                        plural={
+                            "first person": "me olemme",
+                            "second person": "te olette",
+                            "third person": "he ovat",
+                        },
+                    ),
+                    language=FI,
                 ),
-                nl=dict(
-                    infinitive="zijn",
-                    singular={"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
-                    plural={"first person": "wij zijn", "second person": "jullie zijn", "third person": "zij zijn"},
+                dict(
+                    label=dict(
+                        infinitive="zijn",
+                        singular={"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
+                        plural={
+                            "first person": "wij zijn",
+                            "second person": "jullie zijn",
+                            "third person": "zij zijn",
+                        },
+                    ),
+                    language=NL,
                 ),
-            ),
+            ],
         )
 
     def create_adjective_with_degrees_of_comparison(self, antonym: str = "") -> Concept:
         """Create an adjective with degrees of comparison."""
-        big: dict[str, object] = {
-            "en": {"positive degree": "big", "comparative degree": "bigger", "superlative degree": "biggest"},
-            "nl": {"positive degree": "groot", "comparative degree": "groter", "superlative degree": "grootst"},
-        }
-        if antonym:
-            big["antonym"] = antonym
-        return self.create_concept("big", big)
+        labels = [
+            dict(
+                label={"positive degree": "big", "comparative degree": "bigger", "superlative degree": "biggest"},
+                language=EN,
+            ),
+            dict(
+                label={"positive degree": "groot", "comparative degree": "groter", "superlative degree": "grootst"},
+                language=NL,
+            ),
+        ]
+        big = dict(antonym=antonym) if antonym else {}
+        return self.create_concept("big", big, labels=labels)
 
     def create_noun(self) -> Concept:
         """Create a simple noun."""
-        return self.create_concept("mall", dict(fi="kauppakeskus", nl="het winkelcentrum"))
+        return self.create_concept(
+            "mall", labels=[dict(label="kauppakeskus", language=FI), dict(label="het winkelcentrum", language=NL)]
+        )
 
     def create_noun_with_grammatical_number(self) -> Concept:
         """Create a noun with grammatical number."""
         return self.create_concept(
             "morning",
-            dict(fi=dict(singular="aamu", plural="aamut"), nl=dict(singular="de ochtend", plural="de ochtenden")),
+            labels=[
+                dict(label=dict(singular="aamu", plural="aamut"), language=FI),
+                dict(label=dict(singular="de ochtend", plural="de ochtenden"), language=NL),
+            ],
         )
 
     def create_noun_with_grammatical_gender(self) -> Concept:
         """Create a noun with grammatical gender."""
         return self.create_concept(
             "cat",
-            dict(en=dict(feminine="her cat", masculine="his cat"), nl=dict(feminine="haar kat", masculine="zijn kat")),
+            labels=[
+                dict(label=dict(feminine="her cat", masculine="his cat"), language=EN),
+                dict(label=dict(feminine="haar kat", masculine="zijn kat"), language=NL),
+            ],
         )
 
     def create_noun_with_grammatical_gender_including_neuter(self) -> Concept:
         """Create a noun with grammatical gender, including neuter."""
         return self.create_concept(
             "bone",
-            dict(
-                en=dict(feminine="her bone", masculine="his bone", neuter="its bone"),
-                nl=dict(feminine="haar bot", masculine="zijn bot", neuter="zijn bot"),
-            ),
+            labels=[
+                dict(label=dict(feminine="her bone", masculine="his bone", neuter="its bone"), language=EN),
+                dict(label=dict(feminine="haar bot", masculine="zijn bot", neuter="zijn bot"), language=NL),
+            ],
         )
 
     def create_noun_with_grammatical_number_and_gender(self) -> Concept:
         """Create a noun with grammatical number and grammatical gender."""
         return self.create_concept(
             "cat",
-            dict(
-                en=dict(
-                    singular=dict(feminine="her cat", masculine="his cat"),
-                    plural=dict(feminine="her cats", masculine="his cats"),
+            labels=[
+                dict(
+                    label=dict(
+                        singular=dict(feminine="her cat", masculine="his cat"),
+                        plural=dict(feminine="her cats", masculine="his cats"),
+                    ),
+                    language=EN,
                 ),
-                nl=dict(
-                    singular=dict(feminine="haar kat", masculine="zijn kat"),
-                    plural=dict(feminine="haar katten", masculine="zijn katten"),
+                dict(
+                    label=dict(
+                        singular=dict(feminine="haar kat", masculine="zijn kat"),
+                        plural=dict(feminine="haar katten", masculine="zijn katten"),
+                    ),
+                    language=NL,
                 ),
-            ),
+            ],
         )
 
 
@@ -173,7 +219,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_quizzes(self):
         """Test that quizzes can be generated from a concept."""
         self.language_pair = NL_EN
-        concept = self.create_concept("english", dict(en="English", nl="Engels"))
+        concept = self.create_concept(
+            "english", labels=[dict(label="English", language=EN), dict(label="Engels", language=NL)]
+        )
         self.assertSetEqual(
             {
                 self.create_quiz(concept, "Engels", ["English"], READ),
@@ -186,7 +234,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_only_listening_quizzes_for_one_language(self):
         """Test that only listening quizzes are generated for a concept with one language."""
-        concept = self.create_concept("english", dict(nl="Engels"))
+        concept = self.create_concept("english", labels=[dict(label="Engels", language=NL)])
         self.assertSetEqual(
             {self.create_quiz(concept, "Engels", ["Engels"], DICTATE, language_pair=NL_EN)},
             create_quizzes(NL_EN, (), concept),
@@ -194,13 +242,20 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_answer_only_concept(self):
         """Test that no quizzes are generated for an answer-only concept."""
-        concept = self.create_concept("yes, i do like something", {"answer-only": True, EN: "Yes, I do.", FI: "Pidän"})
+        concept = self.create_concept(
+            "yes, i do like something",
+            {"answer-only": True},
+            labels=[dict(label="Yes, I do.", language=EN), dict(label="Pidän", language=FI)],
+        )
         self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, (), concept))
 
     def test_multiple_labels(self):
         """Test that quizzes can be generated from a concept with a language with multiple labels."""
         self.language_pair = NL_EN
-        concept = self.create_concept("couch", dict(nl=["bank"], en=["couch", "bank"]))
+        concept = self.create_concept(
+            "couch",
+            labels=[dict(label="bank", language=NL), dict(label="couch", language=EN), dict(label="bank", language=EN)],
+        )
         self.assertSetEqual(
             {
                 self.create_quiz(concept, "bank", ["couch", "bank"], READ),
@@ -214,7 +269,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_missing_language(self):
         """Test that no quizzes are generated from a concept if it's missing one of the languages."""
-        concept = self.create_concept("english", dict(en=["English"], nl=["Engels"]))
+        concept = self.create_concept(
+            "english", labels=[dict(label="English", language=EN), dict(label="Engels", language=NL)]
+        )
         self.assertSetEqual(Quizzes(), create_quizzes(FI_EN, (), concept))
 
     def test_grammatical_number(self):
@@ -243,7 +300,10 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_NL
         concept = self.create_concept(
             "ketchup",
-            dict(fi=dict(singular="ketsuppi", plural="ketsupit"), nl=dict(singular="de ketchup")),
+            labels=[
+                dict(label=dict(singular="ketsuppi", plural="ketsupit"), language=FI),
+                dict(label=dict(singular="de ketchup"), language=NL),
+            ],
         )
         singular, plural = concept.leaf_concepts(FI)
         quizzes = create_quizzes(FI_NL, (), concept)
@@ -320,7 +380,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the target language only."""
         self.language_pair = FI_NL
-        concept = self.create_concept("mämmi", dict(fi=dict(singular="mämmi", plural="mämmit")))
+        concept = self.create_concept(
+            "mämmi", labels=[dict(label=dict(singular="mämmi", plural="mämmit"), language=FI)]
+        )
         singular, plural = concept.leaf_concepts(FI)
         quizzes = create_quizzes(FI_NL, (), concept)
         self.assertSetEqual(
@@ -338,7 +400,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
 
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes are generated from a noun concept with labels in the native language."""
-        concept = self.create_concept("mämmi", dict(fi=dict(singular="mämmi", plural="mämmit")))
+        concept = self.create_concept(
+            "mämmi", labels=[dict(label=dict(singular="mämmi", plural="mämmit"), language=FI)]
+        )
         self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, (), concept))
 
     def test_grammatical_number_with_synonyms(self):
@@ -346,10 +410,11 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_NL
         concept = self.create_concept(
             "mall",
-            dict(
-                fi=dict(singular=["kauppakeskus", "ostoskeskus"], plural=["kauppakeskukset", "ostoskeskukset"]),
-                nl=dict(singular="het winkelcentrum", plural="de winkelcentra"),
-            ),
+            labels=[
+                dict(label=dict(singular="kauppakeskus", plural="kauppakeskukset"), language=FI),
+                dict(label=dict(singular="ostoskeskus", plural="ostoskeskukset"), language=FI),
+                dict(label=dict(singular="het winkelcentrum", plural="de winkelcentra"), language=NL),
+            ],
         )
         singular, plural = concept.leaf_concepts(FI)
         self.assertSetEqual(
@@ -493,14 +558,27 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_EN
         concept = self.create_concept(
             "big",
-            dict(
-                en={"positive degree": "big", "comparative degree": "bigger", "superlative degree": "biggest"},
-                fi={
-                    "positive degree": ["iso", "suuri"],
-                    "comparative degree": ["isompi", "suurempi"],
-                    "superlative degree": ["isoin", "suurin"],
-                },
-            ),
+            labels=[
+                dict(
+                    concept="big",
+                    label={"positive degree": "big", "comparative degree": "bigger", "superlative degree": "biggest"},
+                    language=EN,
+                ),
+                dict(
+                    concept="big",
+                    label={"positive degree": "iso", "comparative degree": "isompi", "superlative degree": "isoin"},
+                    language=FI,
+                ),
+                dict(
+                    concept="big",
+                    label={
+                        "positive degree": "suuri",
+                        "comparative degree": "suurempi",
+                        "superlative degree": "suurin",
+                    },
+                    language=FI,
+                ),
+            ],
         )
         positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts(FI)
         self.assertSetEqual(
@@ -548,11 +626,25 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_adjective_with_degrees_of_comparison(antonym="small")
         self.create_concept(
             "small",
-            {
-                "antonym": "big",
-                "en": {"positive degree": "small", "comparative degree": "smaller", "superlative degree": "smallest"},
-                "nl": {"positive degree": "klein", "comparative degree": "kleiner", "superlative degree": "kleinst"},
-            },
+            {"antonym": "big"},
+            labels=[
+                dict(
+                    label={
+                        "positive degree": "small",
+                        "comparative degree": "smaller",
+                        "superlative degree": "smallest",
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={
+                        "positive degree": "klein",
+                        "comparative degree": "kleiner",
+                        "superlative degree": "kleinst",
+                    },
+                    language=NL,
+                ),
+            ],
         )
         positive_degree, comparative_degree, superlative_degree = concept.leaf_concepts(NL)
         self.assertSetEqual(
@@ -616,18 +708,24 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "to eat",
-            {
-                "en": {
-                    "first person": "I eat",
-                    "second person": "you eat",
-                    "third person": dict(feminine="she eats", masculine="he eats"),
-                },
-                "nl": {
-                    "first person": "ik eet",
-                    "second person": "jij eet",
-                    "third person": dict(feminine="zij eet", masculine="hij eet"),
-                },
-            },
+            labels=[
+                dict(
+                    label={
+                        "first person": "I eat",
+                        "second person": "you eat",
+                        "third person": dict(feminine="she eats", masculine="he eats"),
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={
+                        "first person": "ik eet",
+                        "second person": "jij eet",
+                        "third person": dict(feminine="zij eet", masculine="hij eet"),
+                    },
+                    language=NL,
+                ),
+            ],
         )
         first_person, second_person, third_person = concept.constituents
         third_person_feminine, third_person_masculine = third_person.constituents
@@ -678,14 +776,20 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_EN
         concept = self.create_concept(
             "to eat",
-            {
-                "en": {
-                    "first person": "I eat",
-                    "second person": "you eat",
-                    "third person": dict(feminine="she eats", masculine="he eats"),
-                },
-                "fi": {"first person": "minä syön", "second person": "sinä syöt", "third person": "hän syö"},
-            },
+            labels=[
+                dict(
+                    label={
+                        "first person": "I eat",
+                        "second person": "you eat",
+                        "third person": dict(feminine="she eats", masculine="he eats"),
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={"first person": "minä syön", "second person": "sinä syöt", "third person": "hän syö"},
+                    language=FI,
+                ),
+            ],
         )
         first_person, second_person, third_person = concept.constituents
         self.assertSetEqual(
@@ -773,16 +877,22 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "cat",
-            dict(
-                en=dict(
-                    feminine=dict(singular="her cat", plural="her cats"),
-                    masculine=dict(singular="his cat", plural="his cats"),
+            labels=[
+                dict(
+                    label=dict(
+                        feminine=dict(singular="her cat", plural="her cats"),
+                        masculine=dict(singular="his cat", plural="his cats"),
+                    ),
+                    language=EN,
                 ),
-                nl=dict(
-                    feminine=dict(singular="haar kat", plural="haar katten"),
-                    masculine=dict(singular="zijn kat", plural="zijn katten"),
+                dict(
+                    label=dict(
+                        feminine=dict(singular="haar kat", plural="haar katten"),
+                        masculine=dict(singular="zijn kat", plural="zijn katten"),
+                    ),
+                    language=NL,
                 ),
-            ),
+            ],
         )
         feminine, masculine = concept.constituents
         feminine_singular, feminine_plural, masculine_singular, masculine_plural = concept.leaf_concepts(NL)
@@ -821,10 +931,10 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = FI_EN
         concept = self.create_concept(
             "to be",
-            dict(
-                en=dict(feminine="she is|she's", masculine="he is|he's"),
-                fi=dict(feminine="hän on", masculine="hän on"),
-            ),
+            labels=[
+                dict(label=dict(feminine="she is|she's", masculine="he is|he's"), language=EN),
+                dict(label=dict(feminine="hän on", masculine="hän on"), language=FI),
+            ],
         )
         feminine, masculine = concept.constituents
         self.assertSetEqual(
@@ -941,32 +1051,58 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_FI
         concept = self.create_concept(
             "to be",
-            dict(
-                fi={
-                    "past tense": dict(
-                        singular={"first person": "minä olin", "second person": "sinä olit", "third person": "hän oli"},
-                        plural={"first person": "me olimme", "second person": "te olitte", "third person": "he olivat"},
-                    ),
-                    "present tense": dict(
-                        singular={"first person": "minä olen", "second person": "sinä olet", "third person": "hän on"},
-                        plural={"first person": "me olemme", "second person": "te olette", "third person": "he ovat"},
-                    ),
-                },
-                nl={
-                    "past tense": dict(
-                        singular={"first person": "ik was", "second person": "jij was", "third person": "zij was"},
-                        plural={
-                            "first person": "wij waren",
-                            "second person": "jullie waren",
-                            "third person": "zij waren",
-                        },
-                    ),
-                    "present tense": dict(
-                        singular={"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
-                        plural={"first person": "wij zijn", "second person": "jullie zijn", "third person": "zij zijn"},
-                    ),
-                },
-            ),
+            labels=[
+                dict(
+                    label={
+                        "past tense": dict(
+                            singular={
+                                "first person": "minä olin",
+                                "second person": "sinä olit",
+                                "third person": "hän oli",
+                            },
+                            plural={
+                                "first person": "me olimme",
+                                "second person": "te olitte",
+                                "third person": "he olivat",
+                            },
+                        ),
+                        "present tense": dict(
+                            singular={
+                                "first person": "minä olen",
+                                "second person": "sinä olet",
+                                "third person": "hän on",
+                            },
+                            plural={
+                                "first person": "me olemme",
+                                "second person": "te olette",
+                                "third person": "he ovat",
+                            },
+                        ),
+                    },
+                    language=FI,
+                ),
+                dict(
+                    label={
+                        "past tense": dict(
+                            singular={"first person": "ik was", "second person": "jij was", "third person": "zij was"},
+                            plural={
+                                "first person": "wij waren",
+                                "second person": "jullie waren",
+                                "third person": "zij waren",
+                            },
+                        ),
+                        "present tense": dict(
+                            singular={"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
+                            plural={
+                                "first person": "wij zijn",
+                                "second person": "jullie zijn",
+                                "third person": "zij zijn",
+                            },
+                        ),
+                    },
+                    language=NL,
+                ),
+            ],
         )
         past, present = concept.constituents
         singular_past, plural_past = past.constituents
@@ -1209,18 +1345,24 @@ class TenseQuizzesTest(QuizFactoryTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "to eat",
-            {
-                "en": {
-                    "infinitive": "to eat",
-                    "present tense": dict(singular="I eat", plural="we eat"),
-                    "past tense": dict(singular="I ate", plural="we ate"),
-                },
-                "nl": {
-                    "infinitive": "eten",
-                    "present tense": dict(singular="ik eet", plural="wij eten"),
-                    "past tense": dict(singular="ik at", plural="wij aten"),
-                },
-            },
+            labels=[
+                dict(
+                    label={
+                        "infinitive": "to eat",
+                        "present tense": dict(singular="I eat", plural="we eat"),
+                        "past tense": dict(singular="I ate", plural="we ate"),
+                    },
+                    language=EN,
+                ),
+                dict(
+                    label={
+                        "infinitive": "eten",
+                        "present tense": dict(singular="ik eet", plural="wij eten"),
+                        "past tense": dict(singular="ik at", plural="wij aten"),
+                    },
+                    language=NL,
+                ),
+            ],
         )
         infinitive, present, past = concept.constituents
         present_singular, present_plural = present.constituents
@@ -1272,10 +1414,10 @@ class GrammaticalMoodTest(ToistoTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "car",
-            {
-                "en": {"declarative": "The car is black.", "interrogative": "Is the car black?"},
-                "nl": {"declarative": "De auto is zwart.", "interrogative": "Is de auto zwart?"},
-            },
+            labels=[
+                dict(label={"declarative": "The car is black.", "interrogative": "Is the car black?"}, language=EN),
+                dict(label={"declarative": "De auto is zwart.", "interrogative": "Is de auto zwart?"}, language=NL),
+            ],
         )
         declarative, interrogative = concept.constituents
         self.assertSetEqual(
@@ -1299,10 +1441,10 @@ class GrammaticalMoodTest(ToistoTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "you run",
-            {
-                "en": {"declarative": "You run.", "imperative": "Run!"},
-                "nl": {"declarative": "Jij rent.", "imperative": "Ren!"},
-            },
+            labels=[
+                dict(label={"declarative": "You run.", "imperative": "Run!"}, language=EN),
+                dict(label={"declarative": "Jij rent.", "imperative": "Ren!"}, language=NL),
+            ],
         )
         declarative, imperative = concept.constituents
         self.assertSetEqual(
@@ -1326,10 +1468,14 @@ class GrammaticalMoodTest(ToistoTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "you run",
-            {
-                "en": {"declarative": "You run.", "interrogative": "Do you run?", "imperative": "Run!"},
-                "nl": {"declarative": "Jij rent.", "interrogative": "Ren jij?", "imperative": "Ren!"},
-            },
+            labels=[
+                dict(
+                    label={"declarative": "You run.", "interrogative": "Do you run?", "imperative": "Run!"}, language=EN
+                ),
+                dict(
+                    label={"declarative": "Jij rent.", "interrogative": "Ren jij?", "imperative": "Ren!"}, language=NL
+                ),
+            ],
         )
         declarative, interrogative, imperative = concept.constituents
         self.assertSetEqual(
@@ -1365,10 +1511,10 @@ class GrammaticalPolarityTest(ToistoTestCase):
         self.language_pair = NL_EN
         concept = self.create_concept(
             "car",
-            {
-                "en": {"affirmative": "The car is black.", "negative": "The car is not black."},
-                "nl": {"affirmative": "De auto is zwart.", "negative": "De auto is niet zwart."},
-            },
+            labels=[
+                dict(label={"affirmative": "The car is black.", "negative": "The car is not black."}, language=EN),
+                dict(label={"affirmative": "De auto is zwart.", "negative": "De auto is niet zwart."}, language=NL),
+            ],
         )
         affirmative, negative = concept.constituents
         self.assertSetEqual(
@@ -1395,7 +1541,9 @@ class DiminutiveTest(ToistoTestCase):
     def test_diminutive(self):
         """Test that quizzes can be generated for diminutive forms."""
         self.language_pair = NL_EN
-        concept = self.create_concept("car", dict(nl=dict(root="de auto", diminutive="het autootje")))
+        concept = self.create_concept(
+            "car", labels=[dict(label=dict(root="de auto", diminutive="het autootje"), language=NL)]
+        )
         root, diminutive = concept.constituents
         self.assertSetEqual(
             {
@@ -1410,7 +1558,11 @@ class DiminutiveTest(ToistoTestCase):
         """Test that quizzes can be generated for diminutive forms."""
         self.language_pair = NL_EN
         concept = self.create_concept(
-            "car", dict(en=dict(root="car"), nl=dict(root="de auto", diminutive="het autootje"))
+            "car",
+            labels=[
+                dict(label=dict(root="car"), language=EN),
+                dict(label=dict(root="de auto", diminutive="het autootje"), language=NL),
+            ],
         )
         root, diminutive = concept.constituents
         self.assertSetEqual(
@@ -1432,7 +1584,7 @@ class NumberTest(ToistoTestCase):
     def test_numbers(self):
         """Test that quizzes can be generated for numbers."""
         self.language_pair = NL_EN
-        concept = self.create_concept("one", dict(nl=dict(cardinal="een", ordinal="eerste")))
+        concept = self.create_concept("one", labels=[dict(label=dict(cardinal="een", ordinal="eerste"), language=NL)])
         cardinal, ordinal = concept.constituents
         self.assertSetEqual(
             {
@@ -1448,7 +1600,11 @@ class NumberTest(ToistoTestCase):
         """Test that quizzes can be generated for numbers."""
         self.language_pair = NL_EN
         concept = self.create_concept(
-            "one", dict(en=dict(cardinal="one", ordinal="first"), nl=dict(cardinal="een", ordinal="eerste"))
+            "one",
+            labels=[
+                dict(label=dict(cardinal="one", ordinal="first"), language=EN),
+                dict(label=dict(cardinal="een", ordinal="eerste"), language=NL),
+            ],
         )
         cardinal, ordinal = concept.constituents
         self.assertSetEqual(
@@ -1474,7 +1630,9 @@ class AbbreviationTest(ToistoTestCase):
     def test_abbreviations(self):
         """Test that quizzes can be generated for abbreviations."""
         self.language_pair = NL_EN
-        concept = self.create_concept("llc", dict(nl={"full form": "naamloze vennootschap", "abbreviation": "NV"}))
+        concept = self.create_concept(
+            "llc", labels=[dict(label={"full form": "naamloze vennootschap", "abbreviation": "NV"}, language=NL)]
+        )
         full_form, abbreviation = concept.constituents
         self.assertSetEqual(
             {
@@ -1495,10 +1653,10 @@ class QuizNoteTest(ToistoTestCase):
         self.language_pair = FI_NL
         concept = self.create_concept(
             "finnish",
-            dict(
-                fi="suomi;;In Finnish, the names of languages are not capitalized",
-                nl="Fins;;In Dutch, the names of languages are capitalized",
-            ),
+            labels=[
+                dict(label="suomi;;In Finnish, the names of languages are not capitalized", language=FI),
+                dict(label="Fins;;In Dutch, the names of languages are capitalized", language=NL),
+            ],
         )
         for quiz in create_quizzes(FI_NL, (), concept):
             self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.answer_notes[0])
@@ -1509,7 +1667,14 @@ class ColloquialTest(ToistoTestCase):
 
     def test_colloquial_and_regular_label(self):
         """Test the generated quizzes when one language has both a colloquial and a regular label."""
-        concept = self.create_concept("seven", dict(fi=["seittemän*", "seitsemän"], nl="zeven"))
+        concept = self.create_concept(
+            "seven",
+            labels=[
+                dict(label="seittemän*", language=FI),
+                dict(label="seitsemän", language=FI),
+                dict(label="zeven", language=NL),
+            ],
+        )
         self.language_pair = FI_NL
         self.assertSetEqual(
             {
@@ -1537,10 +1702,11 @@ class ColloquialTest(ToistoTestCase):
         """Test the generated quizzes when colloquial labels and grammar are combined."""
         concept = self.create_concept(
             "kiosk",
-            dict(
-                fi=dict(singular=["kioski", "kiska*"], plural=["kioskit", "kiskat*"]),
-                en=dict(singular="kiosk", plural="kiosks"),
-            ),
+            labels=[
+                dict(label=dict(singular="kioski", plural="kioskit"), language=FI),
+                dict(label=dict(singular="kiska*", plural="kiskat*"), language=FI),
+                dict(label=dict(singular="kiosk", plural="kiosks"), language=EN),
+            ],
         )
         singular, plural = concept.leaf_concepts(FI)
         self.language_pair = FI_EN
@@ -1583,8 +1749,10 @@ class ColloquialTest(ToistoTestCase):
     def test_related_concepts_and_colloquial(self):
         """Test the generated quizzes when colloquial labels and related concepts are combined."""
         self.language_pair = FI_EN
-        yes = self.create_concept("yes", dict(antonym="no", fi=["kylla", "kyl*"]))
-        no = self.create_concept("no", dict(antonym="yes", fi="ei"))
+        yes = self.create_concept(
+            "yes", dict(antonym="no"), labels=[dict(label="kylla", language=FI), dict(label="kyl*", language=FI)]
+        )
+        no = self.create_concept("no", dict(antonym="yes"), labels=[dict(label="ei", language=FI)])
         self.assertSetEqual(
             {
                 self.create_quiz(yes, "kylla", ["kylla"], DICTATE),
@@ -1607,7 +1775,10 @@ class MeaningsTest(ToistoTestCase):
 
     def test_interpret_with_synonym(self):
         """Test that interpret quizzes show all synonyms as meaning."""
-        concept = self.create_concept("yes", dict(fi=["kylla", "joo"], en="yes"))
+        concept = self.create_concept(
+            "yes",
+            labels=[dict(label="kylla", language=FI), dict(label="joo", language=FI), dict(label="yes", language=EN)],
+        )
         interpret_quizzes = create_quizzes(FI_EN, (INTERPRET,), concept)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kylla"), Label(FI, "joo")), quiz.question_meanings)
@@ -1615,7 +1786,14 @@ class MeaningsTest(ToistoTestCase):
 
     def test_interpret_with_colloquial(self):
         """Test that interpret quizzes don't show colloquial labels as meaning."""
-        concept = self.create_concept("20", dict(fi=["kaksikymmentä", "kakskyt*"], nl="twintig"))
+        concept = self.create_concept(
+            "20",
+            labels=[
+                dict(label="kaksikymmentä", language=FI),
+                dict(label="kakskyt*", language=FI),
+                dict(label="twintig", language=NL),
+            ],
+        )
         interpret_quizzes = create_quizzes(FI_NL, (INTERPRET,), concept)
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kaksikymmentä"),), quiz.question_meanings)
@@ -1766,7 +1944,7 @@ class OrderQuizTest(QuizFactoryTestCase):
 
     def test_generate_order_quiz_for_long_enough_sentences(self):
         """Test that order quizzes are generated for long enough sentences."""
-        concept = self.create_concept("breakfast", dict(en="We eat breakfast in the kitchen."))
+        concept = self.create_concept("breakfast", labels=[dict(label="We eat breakfast in the kitchen.", language=EN)])
         quizzes = create_quizzes(EN_NL, (ORDER,), concept)
         quiz = first(quizzes)
         self.assertEqual(ORDER, quiz.quiz_type)
@@ -1778,7 +1956,9 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
     def test_filter_quizzes(self):
         """Test that quizzes can be limited to certain quiz types."""
         self.language_pair = NL_EN
-        concept = self.create_concept("english", dict(en="English", nl="Engels"))
+        concept = self.create_concept(
+            "english", labels=[dict(label="English", language=EN), dict(label="Engels", language=NL)]
+        )
         self.assertSetEqual(
             {
                 self.create_quiz(concept, "Engels", ["English"], READ),

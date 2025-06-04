@@ -1,8 +1,24 @@
 {
-    "tennis": {
-        "hypernym": "sport",
-        "en": "tennis",
-        "fi": "tennis",
-        "nl": "het tennis"
-    }
+    "concepts": {
+        "tennis": {
+            "hypernym": "sport"
+        }
+    },
+    "labels": [
+        {
+            "concept": "tennis",
+            "label": "tennis",
+            "language": "en"
+        },
+        {
+            "concept": "tennis",
+            "label": "tennis",
+            "language": "fi"
+        },
+        {
+            "concept": "tennis",
+            "label": "het tennis",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,17 +1,33 @@
 {
-    "band": {
-        "involves": "musical instrument",
-        "en": {
-            "singular": "band",
-            "plural": "bands"
-        },
-        "fi": {
-            "singular": "bändi",
-            "plural": "bändit"
-        },
-        "nl": {
-            "singular": "de band",
-            "plural": "de bands"
+    "concepts": {
+        "band": {
+            "involves": "musical instrument"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "band",
+            "label": {
+                "singular": "band",
+                "plural": "bands"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "band",
+            "label": {
+                "singular": "bändi",
+                "plural": "bändit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "band",
+            "label": {
+                "singular": "de band",
+                "plural": "de bands"
+            },
+            "language": "nl"
+        }
+    ]
 }

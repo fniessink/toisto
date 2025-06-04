@@ -1,11 +1,29 @@
 {
-    "pine": {
-        "hypernym": "tree",
-        "en": "pine tree|pine",
-        "fi": "mänty",
-        "nl": [
-            "de dennenboom|de den",
-            "de pijnboom"
-        ]
-    }
+    "concepts": {
+        "pine": {
+            "hypernym": "tree"
+        }
+    },
+    "labels": [
+        {
+            "concept": "pine",
+            "label": "pine tree|pine",
+            "language": "en"
+        },
+        {
+            "concept": "pine",
+            "label": "mänty",
+            "language": "fi"
+        },
+        {
+            "concept": "pine",
+            "label": "de dennenboom|de den",
+            "language": "nl"
+        },
+        {
+            "concept": "pine",
+            "label": "de pijnboom",
+            "language": "nl"
+        }
+    ]
 }

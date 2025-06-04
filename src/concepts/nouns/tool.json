@@ -1,16 +1,31 @@
 {
-    "tool": {
-        "en": {
-            "singular": "tool",
-            "plural": "tools"
+    "concepts": {
+        "tool": {}
+    },
+    "labels": [
+        {
+            "concept": "tool",
+            "label": {
+                "singular": "tool",
+                "plural": "tools"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "väline",
-            "plural": "välineet"
+        {
+            "concept": "tool",
+            "label": {
+                "singular": "väline",
+                "plural": "välineet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het gereedschap",
-            "plural": "de gereedschappen"
+        {
+            "concept": "tool",
+            "label": {
+                "singular": "het gereedschap",
+                "plural": "de gereedschappen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

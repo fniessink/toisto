@@ -1,26 +1,44 @@
 {
-    "shoulder": {
-        "holonym": "body",
-        "roots": {
-            "fi": "head"
-        },
-        "en": {
-            "singular": "shoulder",
-            "plural": "shoulders"
-        },
-        "fi": {
-            "singular": [
-                "olkapää",
-                "hartia"
-            ],
-            "plural": [
-                "olkapäät",
-                "hartiat"
-            ]
-        },
-        "nl": {
-            "singular": "de schouder",
-            "plural": "de schouders"
+    "concepts": {
+        "shoulder": {
+            "holonym": "body",
+            "roots": {
+                "fi": "head"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "shoulder",
+            "label": {
+                "singular": "shoulder",
+                "plural": "shoulders"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "shoulder",
+            "label": {
+                "singular": "olkapää",
+                "plural": "olkapäät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "shoulder",
+            "label": {
+                "singular": "hartia",
+                "plural": "hartiat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "shoulder",
+            "label": {
+                "singular": "de schouder",
+                "plural": "de schouders"
+            },
+            "language": "nl"
+        }
+    ]
 }

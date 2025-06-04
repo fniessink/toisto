@@ -1,17 +1,33 @@
 {
-    "violin": {
-        "hypernym": "musical instrument",
-        "en": {
-            "singular": "violin",
-            "plural": "violins"
-        },
-        "fi": {
-            "singular": "viulu",
-            "plural": "viulut"
-        },
-        "nl": {
-            "singular": "de viool",
-            "plural": "de violen"
+    "concepts": {
+        "violin": {
+            "hypernym": "musical instrument"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "violin",
+            "label": {
+                "singular": "violin",
+                "plural": "violins"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "violin",
+            "label": {
+                "singular": "viulu",
+                "plural": "viulut"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "violin",
+            "label": {
+                "singular": "de viool",
+                "plural": "de violen"
+            },
+            "language": "nl"
+        }
+    ]
 }
