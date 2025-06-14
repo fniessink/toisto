@@ -1,23 +1,39 @@
 {
-    "it was delicious": {
-        "roots": {
-            "en": [
-                "thanks",
-                "to be"
-            ],
-            "fi": [
-                "thanks",
-                "to be",
-                "good"
-            ],
-            "nl": [
-                "thanks",
-                "to be",
-                "tasty"
-            ]
+    "concepts": {
+        "it was delicious": {
+            "roots": {
+                "en": [
+                    "thanks",
+                    "to be"
+                ],
+                "fi": [
+                    "thanks",
+                    "to be",
+                    "good"
+                ],
+                "nl": [
+                    "thanks",
+                    "to be",
+                    "tasty"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "it was delicious",
+            "label": "Thank you, it was delicious!|Thanks, it was delicious!",
+            "language": "en"
         },
-        "en": "Thank you, it was delicious!|Thanks, it was delicious!",
-        "fi": "Kiitos, oli hyvää!",
-        "nl": "Dank je, het was lekker!|Dank u, het was lekker!|Bedankt, het was lekker!"
-    }
+        {
+            "concept": "it was delicious",
+            "label": "Kiitos, oli hyvää!",
+            "language": "fi"
+        },
+        {
+            "concept": "it was delicious",
+            "label": "Dank je, het was lekker!|Dank u, het was lekker!|Bedankt, het was lekker!",
+            "language": "nl"
+        }
+    ]
 }

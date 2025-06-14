@@ -1,25 +1,77 @@
 {
-    "more": {
-        "example": "i drank more water",
-        "en": "more",
-        "fi": "lisää;;Lisää cannot be used for comparisons, for example 'more than'; for that use 'enemmän kuin'.",
-        "nl": "meer"
+    "concepts": {
+        "more": {
+            "example": "i drank more water"
+        },
+        "more than": {
+            "example": "i love you more than he does"
+        },
+        "i drank more water": {},
+        "i love you more than he does": {
+            "roots": "more than"
+        }
     },
-    "more than": {
-        "example": "i love you more than he does",
-        "en": "more than",
-        "fi": "enemmän kuin",
-        "nl": "meer dan"
-    },
-    "i drank more water": {
-        "en": "I drank more water.",
-        "fi": "Minä join lisää vettä.",
-        "nl": "Ik dronk meer water."
-    },
-    "i love you more than he does": {
-        "roots": "more than",
-        "en": "I love you more than he does.|I love you more than he.",
-        "fi": "Minä rakastan sinua enemmän kuin hän.",
-        "nl": "Ik hou meer van jou dan hij.|Ik houd meer van jou dan hij.|Ik hou meer van jou dan hij doet.|Ik houd meer van jou dan hij."
-    }
+    "labels": [
+        {
+            "concept": "more",
+            "label": "more",
+            "language": "en"
+        },
+        {
+            "concept": "more",
+            "label": "lisää",
+            "language": "fi",
+            "note": "Lisää cannot be used for comparisons, for example 'more than'. For comparisons use 'enemmän kuin'."
+        },
+        {
+            "concept": "more",
+            "label": "meer",
+            "language": "nl"
+        },
+        {
+            "concept": "more than",
+            "label": "more than",
+            "language": "en"
+        },
+        {
+            "concept": "more than",
+            "label": "enemmän kuin",
+            "language": "fi"
+        },
+        {
+            "concept": "more than",
+            "label": "meer dan",
+            "language": "nl"
+        },
+        {
+            "concept": "i drank more water",
+            "label": "I drank more water.",
+            "language": "en"
+        },
+        {
+            "concept": "i drank more water",
+            "label": "Minä join lisää vettä.",
+            "language": "fi"
+        },
+        {
+            "concept": "i drank more water",
+            "label": "Ik dronk meer water.",
+            "language": "nl"
+        },
+        {
+            "concept": "i love you more than he does",
+            "label": "I love you more than he does.|I love you more than he.",
+            "language": "en"
+        },
+        {
+            "concept": "i love you more than he does",
+            "label": "Minä rakastan sinua enemmän kuin hän.",
+            "language": "fi"
+        },
+        {
+            "concept": "i love you more than he does",
+            "label": "Ik hou meer van jou dan hij.|Ik houd meer van jou dan hij.|Ik hou meer van jou dan hij doet.|Ik houd meer van jou dan hij.",
+            "language": "nl"
+        }
+    ]
 }

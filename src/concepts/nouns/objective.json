@@ -1,7 +1,22 @@
 {
-    "objective": {
-        "en": "objective",
-        "fi": "tehtävä",
-        "nl": "de opdracht"
-    }
+    "concepts": {
+        "objective": {}
+    },
+    "labels": [
+        {
+            "concept": "objective",
+            "label": "objective",
+            "language": "en"
+        },
+        {
+            "concept": "objective",
+            "label": "tehtävä",
+            "language": "fi"
+        },
+        {
+            "concept": "objective",
+            "label": "de opdracht",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,25 +1,59 @@
 {
-    "basketball": {
-        "example": "I play basketball",
-        "hypernym": "team sport",
-        "roots": "ball",
-        "en": "basketball",
-        "fi": [
-            "koripallo",
-            "koris*"
-        ],
-        "nl": "het basketbal"
+    "concepts": {
+        "basketball": {
+            "example": "I play basketball",
+            "hypernym": "team sport",
+            "roots": "ball"
+        },
+        "I play basketball": {
+            "roots": [
+                "to play a sport",
+                "basketball"
+            ]
+        }
     },
-    "I play basketball": {
-        "roots": [
-            "to play a sport",
-            "basketball"
-        ],
-        "en": "I play basketball.",
-        "fi": [
-            "Minä pelaan koripalloa.",
-            "Mä pelaan korista.*"
-        ],
-        "nl": "Ik speel basketbal."
-    }
+    "labels": [
+        {
+            "concept": "basketball",
+            "label": "basketball",
+            "language": "en"
+        },
+        {
+            "concept": "basketball",
+            "label": "koripallo",
+            "language": "fi"
+        },
+        {
+            "concept": "basketball",
+            "label": "koris",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "basketball",
+            "label": "het basketbal",
+            "language": "nl"
+        },
+        {
+            "concept": "I play basketball",
+            "label": "I play basketball.",
+            "language": "en"
+        },
+        {
+            "concept": "I play basketball",
+            "label": "Minä pelaan koripalloa.",
+            "language": "fi"
+        },
+        {
+            "concept": "I play basketball",
+            "label": "Mä pelaan korista.",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "I play basketball",
+            "label": "Ik speel basketbal.",
+            "language": "nl"
+        }
+    ]
 }

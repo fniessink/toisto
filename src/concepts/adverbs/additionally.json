@@ -1,7 +1,22 @@
 {
-    "additionally": {
-        "en": "additionally",
-        "fi": "lisäksi",
-        "nl": "bovendien"
-    }
+    "concepts": {
+        "additionally": {}
+    },
+    "labels": [
+        {
+            "concept": "additionally",
+            "label": "additionally",
+            "language": "en"
+        },
+        {
+            "concept": "additionally",
+            "label": "lisäksi",
+            "language": "fi"
+        },
+        {
+            "concept": "additionally",
+            "label": "bovendien",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,17 +1,33 @@
 {
-    "donkey": {
-        "hypernym": "animal",
-        "en": {
-            "singular": "donkey",
-            "plural": "donkeys"
-        },
-        "fi": {
-            "singular": "aasi",
-            "plural": "aasit"
-        },
-        "nl": {
-            "singular": "de ezel",
-            "plural": "de ezels"
+    "concepts": {
+        "donkey": {
+            "hypernym": "animal"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "donkey",
+            "label": {
+                "singular": "donkey",
+                "plural": "donkeys"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "donkey",
+            "label": {
+                "singular": "aasi",
+                "plural": "aasit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "donkey",
+            "label": {
+                "singular": "de ezel",
+                "plural": "de ezels"
+            },
+            "language": "nl"
+        }
+    ]
 }

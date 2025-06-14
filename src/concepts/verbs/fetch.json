@@ -1,7 +1,22 @@
 {
-    "to fetch": {
-        "en": "to fetch",
-        "fi": "hakea",
-        "nl": "ophalen"
-    }
+    "concepts": {
+        "to fetch": {}
+    },
+    "labels": [
+        {
+            "concept": "to fetch",
+            "label": "to fetch",
+            "language": "en"
+        },
+        {
+            "concept": "to fetch",
+            "label": "hakea",
+            "language": "fi"
+        },
+        {
+            "concept": "to fetch",
+            "label": "ophalen",
+            "language": "nl"
+        }
+    ]
 }

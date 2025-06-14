@@ -1,10 +1,27 @@
 {
-    "cheers": {
-        "en": "Cheers!",
-        "fi": [
-            "Kippis!",
-            "Skool!"
-        ],
-        "nl": "Proost!"
-    }
+    "concepts": {
+        "cheers": {}
+    },
+    "labels": [
+        {
+            "concept": "cheers",
+            "label": "Cheers!",
+            "language": "en"
+        },
+        {
+            "concept": "cheers",
+            "label": "Kippis!",
+            "language": "fi"
+        },
+        {
+            "concept": "cheers",
+            "label": "Skool!",
+            "language": "fi"
+        },
+        {
+            "concept": "cheers",
+            "label": "Proost!",
+            "language": "nl"
+        }
+    ]
 }

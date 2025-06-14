@@ -1,16 +1,31 @@
 {
-    "fact": {
-        "en": {
-            "singular": "fact",
-            "plural": "facts"
+    "concepts": {
+        "fact": {}
+    },
+    "labels": [
+        {
+            "concept": "fact",
+            "label": {
+                "singular": "fact",
+                "plural": "facts"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "fakta",
-            "plural": "faktat"
+        {
+            "concept": "fact",
+            "label": {
+                "singular": "fakta",
+                "plural": "faktat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het feit",
-            "plural": "de feiten"
+        {
+            "concept": "fact",
+            "label": {
+                "singular": "het feit",
+                "plural": "de feiten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

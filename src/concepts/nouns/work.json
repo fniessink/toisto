@@ -1,79 +1,148 @@
 {
-    "work": {
-        "en": "work",
-        "fi": [
-            "työ",
-            "homma"
-        ],
-        "nl": [
-            "het werk",
-            "de arbeid"
-        ]
-    },
-    "workday": {
-        "hypernym": "day",
-        "roots": [
-            "work",
-            "day"
-        ],
-        "en": "workday",
-        "fi": "työpäivä",
-        "nl": "de werkdag"
-    },
-    "workplace": {
-        "hypernym": "place",
-        "involves": "work",
-        "roots": {
-            "en": [
+    "concepts": {
+        "work": {},
+        "workday": {
+            "hypernym": "day",
+            "roots": [
                 "work",
-                "place"
-            ],
-            "fi": "work",
-            "nl": [
-                "work",
-                "place"
+                "day"
             ]
         },
-        "en": "workplace",
-        "fi": "työpiste",
-        "nl": "de werkplek"
-    },
-    "working time": {
-        "involves": "work",
-        "roots": {
-            "en": [
-                "work",
-                "time",
-                "hour"
-            ],
-            "fi": [
-                "work",
-                "time"
-            ],
-            "nl": [
-                "work",
-                "time"
-            ]
+        "workplace": {
+            "hypernym": "place",
+            "involves": "work",
+            "roots": {
+                "en": [
+                    "work",
+                    "place"
+                ],
+                "fi": "work",
+                "nl": [
+                    "work",
+                    "place"
+                ]
+            }
         },
-        "en": [
-            "working time",
-            "working hours"
-        ],
-        "fi": "työaika",
-        "nl": "de werktijd"
-    },
-    "remote work": {
-        "hypernym": "work",
-        "roots": {
-            "en": "work",
-            "fi": "work",
-            "nl": [
-                "home",
-                "work"
-            ]
+        "working time": {
+            "involves": "work",
+            "roots": {
+                "en": [
+                    "work",
+                    "time",
+                    "hour"
+                ],
+                "fi": [
+                    "work",
+                    "time"
+                ],
+                "nl": [
+                    "work",
+                    "time"
+                ]
+            }
         },
-        "en": "remote work",
-        "fi": "etätyö",
-        "nl": "het thuiswerk"
-    }
+        "remote work": {
+            "hypernym": "work",
+            "roots": {
+                "en": "work",
+                "fi": "work",
+                "nl": [
+                    "home",
+                    "work"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "work",
+            "label": "work",
+            "language": "en"
+        },
+        {
+            "concept": "work",
+            "label": "työ",
+            "language": "fi"
+        },
+        {
+            "concept": "work",
+            "label": "homma",
+            "language": "fi"
+        },
+        {
+            "concept": "work",
+            "label": "het werk",
+            "language": "nl"
+        },
+        {
+            "concept": "work",
+            "label": "de arbeid",
+            "language": "nl"
+        },
+        {
+            "concept": "workday",
+            "label": "workday",
+            "language": "en"
+        },
+        {
+            "concept": "workday",
+            "label": "työpäivä",
+            "language": "fi"
+        },
+        {
+            "concept": "workday",
+            "label": "de werkdag",
+            "language": "nl"
+        },
+        {
+            "concept": "workplace",
+            "label": "workplace",
+            "language": "en"
+        },
+        {
+            "concept": "workplace",
+            "label": "työpiste",
+            "language": "fi"
+        },
+        {
+            "concept": "workplace",
+            "label": "de werkplek",
+            "language": "nl"
+        },
+        {
+            "concept": "working time",
+            "label": "working time",
+            "language": "en"
+        },
+        {
+            "concept": "working time",
+            "label": "working hours",
+            "language": "en"
+        },
+        {
+            "concept": "working time",
+            "label": "työaika",
+            "language": "fi"
+        },
+        {
+            "concept": "working time",
+            "label": "de werktijd",
+            "language": "nl"
+        },
+        {
+            "concept": "remote work",
+            "label": "remote work",
+            "language": "en"
+        },
+        {
+            "concept": "remote work",
+            "label": "etätyö",
+            "language": "fi"
+        },
+        {
+            "concept": "remote work",
+            "label": "het thuiswerk",
+            "language": "nl"
+        }
+    ]
 }

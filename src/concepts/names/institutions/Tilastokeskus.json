@@ -1,7 +1,22 @@
 {
-    "Tilastokeskus": {
-        "en": "Statistics Finland",
-        "fi": "Tilastokeskus",
-        "nl": "(Fins bureau voor de statistiek)"
-    }
+    "concepts": {
+        "Tilastokeskus": {}
+    },
+    "labels": [
+        {
+            "concept": "Tilastokeskus",
+            "label": "Statistics Finland",
+            "language": "en"
+        },
+        {
+            "concept": "Tilastokeskus",
+            "label": "Tilastokeskus",
+            "language": "fi"
+        },
+        {
+            "concept": "Tilastokeskus",
+            "label": "(Fins bureau voor de statistiek)",
+            "language": "nl"
+        }
+    ]
 }

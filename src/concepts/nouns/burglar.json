@@ -1,23 +1,51 @@
 {
-    "burglar": {
-        "involves": [
-            "to break in",
-            "burglary"
-        ],
-        "roots": {
-            "fi": [
-                "burglary",
-                "thief"
-            ]
+    "concepts": {
+        "burglar": {
+            "involves": [
+                "to break in",
+                "burglary"
+            ],
+            "roots": {
+                "fi": [
+                    "burglary",
+                    "thief"
+                ]
+            }
         },
-        "en": "burglar",
-        "fi": "murtovaras",
-        "nl": "de inbreker"
+        "burglary": {
+            "involves": "burglar"
+        }
     },
-    "burglary": {
-        "involves": "burglar",
-        "en": "burglary",
-        "fi": "murto",
-        "nl": "de inbraak"
-    }
+    "labels": [
+        {
+            "concept": "burglar",
+            "label": "burglar",
+            "language": "en"
+        },
+        {
+            "concept": "burglar",
+            "label": "murtovaras",
+            "language": "fi"
+        },
+        {
+            "concept": "burglar",
+            "label": "de inbreker",
+            "language": "nl"
+        },
+        {
+            "concept": "burglary",
+            "label": "burglary",
+            "language": "en"
+        },
+        {
+            "concept": "burglary",
+            "label": "murto",
+            "language": "fi"
+        },
+        {
+            "concept": "burglary",
+            "label": "de inbraak",
+            "language": "nl"
+        }
+    ]
 }

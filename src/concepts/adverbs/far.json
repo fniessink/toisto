@@ -1,17 +1,45 @@
 {
-    "far": {
-        "antonym": "near",
-        "en": [
-            "far",
-            "far away"
-        ],
-        "fi": [
-            "kauas",
-            "kaukana"
-        ],
-        "nl": [
-            "ver",
-            "ver weg"
-        ]
-    }
+    "concepts": {
+        "far": {
+            "antonym": "near"
+        }
+    },
+    "labels": [
+        {
+            "concept": "far",
+            "label": "far",
+            "language": "en"
+        },
+        {
+            "concept": "far",
+            "label": "far away",
+            "language": "en"
+        },
+        {
+            "concept": "far",
+            "label": "kauas",
+            "language": "fi"
+        },
+        {
+            "concept": "far",
+            "label": "kaukana",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "distant",
+                "far"
+            ],
+            "label": "ver",
+            "language": "nl"
+        },
+        {
+            "concept": [
+                "distant",
+                "far"
+            ],
+            "label": "ver weg",
+            "language": "nl"
+        }
+    ]
 }

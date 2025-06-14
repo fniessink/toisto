@@ -1,19 +1,35 @@
 {
-    "continent": {
-        "roots": {
-            "fi": "country"
-        },
-        "en": {
-            "singular": "continent",
-            "plural": "continents"
-        },
-        "fi": {
-            "singular": "maanosa",
-            "plural": "maanosat"
-        },
-        "nl": {
-            "singular": "het continent",
-            "plural": "de continenten"
+    "concepts": {
+        "continent": {
+            "roots": {
+                "fi": "country"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "continent",
+            "label": {
+                "singular": "continent",
+                "plural": "continents"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "continent",
+            "label": {
+                "singular": "maanosa",
+                "plural": "maanosat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "continent",
+            "label": {
+                "singular": "het continent",
+                "plural": "de continenten"
+            },
+            "language": "nl"
+        }
+    ]
 }

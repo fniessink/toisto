@@ -1,7 +1,22 @@
 {
-    "youth": {
-        "en": "youth",
-        "fi": "nuoruus",
-        "nl": "de jeugd"
-    }
+    "concepts": {
+        "youth": {}
+    },
+    "labels": [
+        {
+            "concept": "youth",
+            "label": "youth",
+            "language": "en"
+        },
+        {
+            "concept": "youth",
+            "label": "nuoruus",
+            "language": "fi"
+        },
+        {
+            "concept": "youth",
+            "label": "de jeugd",
+            "language": "nl"
+        }
+    ]
 }

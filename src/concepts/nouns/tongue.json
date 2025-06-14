@@ -1,8 +1,25 @@
 {
-    "tongue": {
-        "holonym": "mouth",
-        "en": "tongue",
-        "fi": "kieli;anatomy",
-        "nl": "de tong"
-    }
+    "concepts": {
+        "tongue": {
+            "holonym": "mouth"
+        }
+    },
+    "labels": [
+        {
+            "concept": "tongue",
+            "label": "tongue",
+            "language": "en"
+        },
+        {
+            "concept": "tongue",
+            "label": "kieli",
+            "language": "fi",
+            "tip": "anatomy"
+        },
+        {
+            "concept": "tongue",
+            "label": "de tong",
+            "language": "nl"
+        }
+    ]
 }

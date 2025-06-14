@@ -1,16 +1,31 @@
 {
-    "phrase": {
-        "en": {
-            "singular": "phrase",
-            "plural": "phrases"
+    "concepts": {
+        "phrase": {}
+    },
+    "labels": [
+        {
+            "concept": "phrase",
+            "label": {
+                "singular": "phrase",
+                "plural": "phrases"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "fraasi",
-            "plural": "fraasit"
+        {
+            "concept": "phrase",
+            "label": {
+                "singular": "fraasi",
+                "plural": "fraasit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de frase",
-            "plural": "de frasen|de frases"
+        {
+            "concept": "phrase",
+            "label": {
+                "singular": "de frase",
+                "plural": "de frasen|de frases"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

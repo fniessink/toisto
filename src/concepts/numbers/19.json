@@ -1,24 +1,46 @@
 {
-    "19": {
-        "hypernym": "number",
-        "roots": [
-            "9",
-            "10"
-        ],
-        "en": {
-            "cardinal": "nineteen",
-            "ordinal": "nineteenth"
-        },
-        "fi": {
-            "cardinal": [
-                "yhdeksäntoista",
-                "yheksäntoist*"
-            ],
-            "ordinal": "yhdeksästoista"
-        },
-        "nl": {
-            "cardinal": "negentien",
-            "ordinal": "negentiende"
+    "concepts": {
+        "19": {
+            "hypernym": "number",
+            "roots": [
+                "9",
+                "10"
+            ]
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "19",
+            "label": {
+                "cardinal": "nineteen",
+                "ordinal": "nineteenth"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "19",
+            "label": {
+                "cardinal": "yhdeksäntoista",
+                "ordinal": "yhdeksästoista"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "19",
+            "label": {
+                "cardinal": "yheksäntoist",
+                "ordinal": "yhdeksästoista"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "19",
+            "label": {
+                "cardinal": "negentien",
+                "ordinal": "negentiende"
+            },
+            "language": "nl"
+        }
+    ]
 }

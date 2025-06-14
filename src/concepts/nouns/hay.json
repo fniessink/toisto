@@ -1,7 +1,22 @@
 {
-    "hay": {
-        "en": "hay",
-        "fi": "heinä",
-        "nl": "het hooi"
-    }
+    "concepts": {
+        "hay": {}
+    },
+    "labels": [
+        {
+            "concept": "hay",
+            "label": "hay",
+            "language": "en"
+        },
+        {
+            "concept": "hay",
+            "label": "heinä",
+            "language": "fi"
+        },
+        {
+            "concept": "hay",
+            "label": "het hooi",
+            "language": "nl"
+        }
+    ]
 }

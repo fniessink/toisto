@@ -1,29 +1,65 @@
 {
-    "at the latest": {
-        "example": "friday at the latest",
-        "en": [
-            "at the latest",
-            "no later than"
-        ],
-        "fi": [
-            "viimeistään",
-            "mennessä"
-        ],
-        "nl": "uiterlijk"
+    "concepts": {
+        "at the latest": {
+            "example": "friday at the latest"
+        },
+        "friday at the latest": {
+            "roots": [
+                "at the latest",
+                "friday"
+            ]
+        }
     },
-    "friday at the latest": {
-        "roots": [
-            "at the latest",
-            "friday"
-        ],
-        "en": [
-            "friday at the latest",
-            "no later than friday"
-        ],
-        "fi": [
-            "perjantaina viimeistään",
-            "perjantaihin mennessä"
-        ],
-        "nl": "uiterlijk vrijdag"
-    }
+    "labels": [
+        {
+            "concept": "at the latest",
+            "label": "at the latest",
+            "language": "en"
+        },
+        {
+            "concept": "at the latest",
+            "label": "no later than",
+            "language": "en"
+        },
+        {
+            "concept": "at the latest",
+            "label": "viimeistään",
+            "language": "fi"
+        },
+        {
+            "concept": "at the latest",
+            "label": "mennessä",
+            "language": "fi"
+        },
+        {
+            "concept": "at the latest",
+            "label": "uiterlijk",
+            "language": "nl"
+        },
+        {
+            "concept": "friday at the latest",
+            "label": "friday at the latest",
+            "language": "en"
+        },
+        {
+            "concept": "friday at the latest",
+            "label": "no later than friday",
+            "language": "en"
+        },
+        {
+            "concept": "friday at the latest",
+            "label": "perjantaina viimeistään",
+            "language": "fi"
+        },
+        {
+            "concept": "friday at the latest",
+            "label": "perjantaihin mennessä",
+            "language": "fi"
+        },
+        {
+            "concept": "friday at the latest",
+            "label": "uiterlijk vrijdag",
+            "language": "nl"
+        }
+    ]
 }

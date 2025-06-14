@@ -1,8 +1,24 @@
 {
-    "allergy": {
-        "involves": "health",
-        "en": "allergy",
-        "fi": "allergia",
-        "nl": "de allergie"
-    }
+    "concepts": {
+        "allergy": {
+            "involves": "health"
+        }
+    },
+    "labels": [
+        {
+            "concept": "allergy",
+            "label": "allergy",
+            "language": "en"
+        },
+        {
+            "concept": "allergy",
+            "label": "allergia",
+            "language": "fi"
+        },
+        {
+            "concept": "allergy",
+            "label": "de allergie",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,23 +1,41 @@
 {
-    "teacher": {
-        "hypernym": "profession",
-        "en": {
-            "singular": "teacher",
-            "plural": "teachers"
-        },
-        "fi": {
-            "singular": "opettaja",
-            "plural": "opettajat"
-        },
-        "nl": {
-            "singular": [
-                "de docent",
-                "de leraar"
-            ],
-            "plural": [
-                "de docenten",
-                "de leraren"
-            ]
+    "concepts": {
+        "teacher": {
+            "hypernym": "profession"
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "teacher",
+            "label": {
+                "singular": "teacher",
+                "plural": "teachers"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "teacher",
+            "label": {
+                "singular": "opettaja",
+                "plural": "opettajat"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "teacher",
+            "label": {
+                "singular": "de docent",
+                "plural": "de docenten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "teacher",
+            "label": {
+                "singular": "de leraar",
+                "plural": "de leraren"
+            },
+            "language": "nl"
+        }
+    ]
 }

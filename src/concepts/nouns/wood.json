@@ -1,19 +1,58 @@
 {
-    "wood": {
-        "holonym": "tree",
-        "en": "wood",
-        "fi": "puu",
-        "nl": "het hout"
+    "concepts": {
+        "wood": {
+            "holonym": "tree"
+        },
+        "firewood": {
+            "hypernym": "wood"
+        },
+        "woodwork": {}
     },
-    "firewood": {
-        "hypernym": "wood",
-        "en": "firewood",
-        "fi": "polttopuut",
-        "nl": "het brandhout"
-    },
-    "woodwork": {
-        "en": "woodwork",
-        "fi": "puutyöt",
-        "nl": "de houtbewerking"
-    }
+    "labels": [
+        {
+            "concept": "wood",
+            "label": "wood",
+            "language": "en"
+        },
+        {
+            "concept": "wood",
+            "label": "puu",
+            "language": "fi"
+        },
+        {
+            "concept": "wood",
+            "label": "het hout",
+            "language": "nl"
+        },
+        {
+            "concept": "firewood",
+            "label": "firewood",
+            "language": "en"
+        },
+        {
+            "concept": "firewood",
+            "label": "polttopuut",
+            "language": "fi"
+        },
+        {
+            "concept": "firewood",
+            "label": "het brandhout",
+            "language": "nl"
+        },
+        {
+            "concept": "woodwork",
+            "label": "woodwork",
+            "language": "en"
+        },
+        {
+            "concept": "woodwork",
+            "label": "puutyöt",
+            "language": "fi"
+        },
+        {
+            "concept": "woodwork",
+            "label": "de houtbewerking",
+            "language": "nl"
+        }
+    ]
 }

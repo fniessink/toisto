@@ -1,18 +1,37 @@
 {
-    "sometimes": {
-        "en": [
-            "sometimes",
-            "occasionally"
-        ],
-        "fi": [
-            "joskus",
-            "silloin tällöin"
-        ],
-        "nl": [
-            "soms",
-            "wel eens",
-            "zo nu en dan",
-            "af en toe"
-        ]
-    }
+    "concepts": {
+        "sometimes": {}
+    },
+    "labels": [
+        {
+            "concept": "sometimes",
+            "label": "sometimes",
+            "language": "en"
+        },
+        {
+            "concept": "sometimes",
+            "label": "joskus",
+            "language": "fi"
+        },
+        {
+            "concept": "sometimes",
+            "label": "silloin tällöin",
+            "language": "fi"
+        },
+        {
+            "concept": "sometimes",
+            "label": "wel eens",
+            "language": "nl"
+        },
+        {
+            "concept": "sometimes",
+            "label": "zo nu en dan",
+            "language": "nl"
+        },
+        {
+            "concept": "sometimes",
+            "label": "af en toe",
+            "language": "nl"
+        }
+    ]
 }

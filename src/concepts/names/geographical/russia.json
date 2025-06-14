@@ -1,19 +1,47 @@
 {
-    "russia": {
-        "hypernym": "country",
-        "roots": {
-            "nl": "country"
+    "concepts": {
+        "russia": {
+            "hypernym": "country",
+            "roots": {
+                "nl": "country"
+            }
         },
-        "en": "Russia",
-        "fi": "Venäjä",
-        "nl": "Rusland"
+        "russian": {
+            "hypernym": "nationality",
+            "involves": "russia",
+            "roots": "russia"
+        }
     },
-    "russian": {
-        "hypernym": "nationality",
-        "involves": "russia",
-        "roots": "russia",
-        "en": "Russian",
-        "fi": "venäläinen",
-        "nl": "Russisch"
-    }
+    "labels": [
+        {
+            "concept": "russia",
+            "label": "Russia",
+            "language": "en"
+        },
+        {
+            "concept": "russia",
+            "label": "Venäjä",
+            "language": "fi"
+        },
+        {
+            "concept": "russia",
+            "label": "Rusland",
+            "language": "nl"
+        },
+        {
+            "concept": "russian",
+            "label": "Russian",
+            "language": "en"
+        },
+        {
+            "concept": "russian",
+            "label": "venäläinen",
+            "language": "fi"
+        },
+        {
+            "concept": "russian",
+            "label": "Russisch",
+            "language": "nl"
+        }
+    ]
 }

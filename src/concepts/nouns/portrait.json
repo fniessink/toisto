@@ -1,16 +1,31 @@
 {
-    "portrait": {
-        "en": {
-            "singular": "portrait",
-            "plural": "portraits"
+    "concepts": {
+        "portrait": {}
+    },
+    "labels": [
+        {
+            "concept": "portrait",
+            "label": {
+                "singular": "portrait",
+                "plural": "portraits"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "muotokuva",
-            "plural": "muotokuvat"
+        {
+            "concept": "portrait",
+            "label": {
+                "singular": "muotokuva",
+                "plural": "muotokuvat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het portret",
-            "plural": "de portretten"
+        {
+            "concept": "portrait",
+            "label": {
+                "singular": "het portret",
+                "plural": "de portretten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

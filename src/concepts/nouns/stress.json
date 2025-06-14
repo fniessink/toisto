@@ -1,7 +1,22 @@
 {
-    "stress": {
-        "en": "stress",
-        "fi": "stressi",
-        "nl": "de stress"
-    }
+    "concepts": {
+        "stress": {}
+    },
+    "labels": [
+        {
+            "concept": "stress",
+            "label": "stress",
+            "language": "en"
+        },
+        {
+            "concept": "stress",
+            "label": "stressi",
+            "language": "fi"
+        },
+        {
+            "concept": "stress",
+            "label": "de stress",
+            "language": "nl"
+        }
+    ]
 }

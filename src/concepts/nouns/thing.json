@@ -1,25 +1,67 @@
 {
-    "thing": {
-        "en": [
-            "thing;that is abstract",
-            "business"
-        ],
-        "fi": "asia",
-        "nl": [
-            "het ding;that is abstract",
-            "de zaak"
-        ]
+    "concepts": {
+        "thing": {},
+        "thing (concrete)": {}
     },
-    "thing (concrete)": {
-        "en": [
-            "object",
-            "item",
-            "thing;that is physical, concrete, tangible"
-        ],
-        "fi": "esine",
-        "nl": [
-            "het ding;that is physical, concrete, tangible",
-            "het voorwerp"
-        ]
-    }
+    "labels": [
+        {
+            "concept": "thing",
+            "label": "thing",
+            "language": "en",
+            "tip": "that is abstract"
+        },
+        {
+            "concept": "thing",
+            "label": "business",
+            "language": "en"
+        },
+        {
+            "concept": "thing",
+            "label": "asia",
+            "language": "fi"
+        },
+        {
+            "concept": "thing",
+            "label": "het ding",
+            "language": "nl",
+            "tip": "that is abstract"
+        },
+        {
+            "concept": "thing",
+            "label": "de zaak",
+            "language": "nl"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "object",
+            "language": "en"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "item",
+            "language": "en"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "thing",
+            "language": "en",
+            "tip": "that is physical, concrete, tangible"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "esine",
+            "language": "fi"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "het ding",
+            "language": "nl",
+            "tip": "that is physical, concrete, tangible"
+        },
+        {
+            "concept": "thing (concrete)",
+            "label": "het voorwerp",
+            "language": "nl"
+        }
+    ]
 }

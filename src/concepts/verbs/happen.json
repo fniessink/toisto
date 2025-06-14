@@ -1,7 +1,22 @@
 {
-    "to happen": {
-        "en": "to happen",
-        "fi": "tapahtua",
-        "nl": "gebeuren"
-    }
+    "concepts": {
+        "to happen": {}
+    },
+    "labels": [
+        {
+            "concept": "to happen",
+            "label": "to happen",
+            "language": "en"
+        },
+        {
+            "concept": "to happen",
+            "label": "tapahtua",
+            "language": "fi"
+        },
+        {
+            "concept": "to happen",
+            "label": "gebeuren",
+            "language": "nl"
+        }
+    ]
 }

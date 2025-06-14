@@ -1,29 +1,68 @@
 {
-    "break": {
-        "en": "break",
-        "fi": "tauko",
-        "nl": "de pauze"
+    "concepts": {
+        "break": {},
+        "lunchbreak": {
+            "hypernym": "break",
+            "involves": "lunch",
+            "roots": [
+                "lunch",
+                "break"
+            ]
+        },
+        "coffee break": {
+            "hypernym": "break",
+            "involves": "coffee",
+            "roots": [
+                "coffee",
+                "break"
+            ]
+        }
     },
-    "lunchbreak": {
-        "hypernym": "break",
-        "involves": "lunch",
-        "roots": [
-            "lunch",
-            "break"
-        ],
-        "en": "lunchbreak|lunch break",
-        "fi": "lounastauko",
-        "nl": "de lunchpauze"
-    },
-    "coffee break": {
-        "hypernym": "break",
-        "involves": "coffee",
-        "roots": [
-            "coffee",
-            "break"
-        ],
-        "en": "coffee break",
-        "fi": "kahvitauko",
-        "nl": "de koffiepauze"
-    }
+    "labels": [
+        {
+            "concept": "break",
+            "label": "break",
+            "language": "en"
+        },
+        {
+            "concept": "break",
+            "label": "tauko",
+            "language": "fi"
+        },
+        {
+            "concept": "break",
+            "label": "de pauze",
+            "language": "nl"
+        },
+        {
+            "concept": "lunchbreak",
+            "label": "lunchbreak|lunch break",
+            "language": "en"
+        },
+        {
+            "concept": "lunchbreak",
+            "label": "lounastauko",
+            "language": "fi"
+        },
+        {
+            "concept": "lunchbreak",
+            "label": "de lunchpauze",
+            "language": "nl"
+        },
+        {
+            "concept": "coffee break",
+            "label": "coffee break",
+            "language": "en"
+        },
+        {
+            "concept": "coffee break",
+            "label": "kahvitauko",
+            "language": "fi"
+        },
+        {
+            "concept": "coffee break",
+            "label": "de koffiepauze",
+            "language": "nl"
+        }
+    ]
 }

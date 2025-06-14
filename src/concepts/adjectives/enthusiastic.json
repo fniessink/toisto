@@ -1,7 +1,22 @@
 {
-    "enthusiastic": {
-        "en": "enthusiastic",
-        "fi": "innokas",
-        "nl": "enthousiast"
-    }
+    "concepts": {
+        "enthusiastic": {}
+    },
+    "labels": [
+        {
+            "concept": "enthusiastic",
+            "label": "enthusiastic",
+            "language": "en"
+        },
+        {
+            "concept": "enthusiastic",
+            "label": "innokas",
+            "language": "fi"
+        },
+        {
+            "concept": "enthusiastic",
+            "label": "enthousiast",
+            "language": "nl"
+        }
+    ]
 }

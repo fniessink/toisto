@@ -1,41 +1,79 @@
 {
-    "bad": {
-        "antonym": "good",
-        "en": {
-            "positive degree": "bad",
-            "comparative degree": "badder",
-            "superlative degree": "baddest"
+    "concepts": {
+        "bad": {
+            "antonym": "good"
         },
-        "fi": {
-            "positive degree": [
-                "huono",
-                "paha"
-            ],
-            "comparative degree": [
-                "huonompi",
-                "pahempi"
-            ],
-            "superlative degree": [
-                "huonoin",
-                "pahin"
-            ]
-        },
-        "nl": {
-            "positive degree": "slecht",
-            "comparative degree": "slechter",
-            "superlative degree": "slechtst"
-        }
+        "bad (sad)": {}
     },
-    "bad (sad)": {
-        "en": [
-            "bad",
-            "sad",
-            "nasty"
-        ],
-        "fi": "ikävä",
-        "nl": [
-            "vervelend",
-            "naar"
-        ]
-    }
+    "labels": [
+        {
+            "concept": "bad",
+            "label": {
+                "positive degree": "bad",
+                "comparative degree": "badder",
+                "superlative degree": "baddest"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "bad",
+            "label": {
+                "positive degree": "huono",
+                "comparative degree": "huonompi",
+                "superlative degree": "huonoin"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "bad",
+            "label": {
+                "positive degree": "paha",
+                "comparative degree": "pahempi",
+                "superlative degree": "pahin"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "bad",
+            "label": {
+                "positive degree": "slecht",
+                "comparative degree": "slechter",
+                "superlative degree": "slechtst"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "bad (sad)",
+            "label": "bad",
+            "language": "en"
+        },
+        {
+            "concept": "bad (sad)",
+            "label": "sad",
+            "language": "en"
+        },
+        {
+            "concept": "bad (sad)",
+            "label": "nasty",
+            "language": "en"
+        },
+        {
+            "concept": [
+                "bad (sad)",
+                "boring"
+            ],
+            "label": "ikävä",
+            "language": "fi"
+        },
+        {
+            "concept": "bad (sad)",
+            "label": "vervelend",
+            "language": "nl"
+        },
+        {
+            "concept": "bad (sad)",
+            "label": "naar",
+            "language": "nl"
+        }
+    ]
 }

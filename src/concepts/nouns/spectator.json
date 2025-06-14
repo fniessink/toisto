@@ -1,16 +1,31 @@
 {
-    "spectator": {
-        "en": {
-            "singular": "spectator",
-            "plural": "spectators"
+    "concepts": {
+        "spectator": {}
+    },
+    "labels": [
+        {
+            "concept": "spectator",
+            "label": {
+                "singular": "spectator",
+                "plural": "spectators"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "katsjoja",
-            "plural": "katsjojat"
+        {
+            "concept": "spectator",
+            "label": {
+                "singular": "katsjoja",
+                "plural": "katsjojat"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de toeschouwer",
-            "plural": "de toeschouwers"
+        {
+            "concept": "spectator",
+            "label": {
+                "singular": "de toeschouwer",
+                "plural": "de toeschouwers"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

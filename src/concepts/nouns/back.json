@@ -1,35 +1,63 @@
 {
-    "back": {
-        "holonym": "body",
-        "en": {
-            "singular": "back",
-            "plural": "backs"
+    "concepts": {
+        "back": {
+            "holonym": "body"
         },
-        "fi": {
-            "singular": "selkä",
-            "plural": "selät"
-        },
-        "nl": {
-            "singular": "de rug",
-            "plural": "de ruggen"
+        "backpack": {
+            "roots": {
+                "en": "back",
+                "nl": "back"
+            }
         }
     },
-    "backpack": {
-        "roots": {
-            "en": "back",
-            "nl": "back"
+    "labels": [
+        {
+            "concept": "back",
+            "label": {
+                "singular": "back",
+                "plural": "backs"
+            },
+            "language": "en"
         },
-        "en": {
-            "singular": "backpack",
-            "plural": "backpacks"
+        {
+            "concept": "back",
+            "label": {
+                "singular": "selkä",
+                "plural": "selät"
+            },
+            "language": "fi"
         },
-        "fi": {
-            "singular": "reppu",
-            "plural": "reput"
+        {
+            "concept": "back",
+            "label": {
+                "singular": "de rug",
+                "plural": "de ruggen"
+            },
+            "language": "nl"
         },
-        "nl": {
-            "singular": "de rugzak",
-            "plural": "de rugzakken"
+        {
+            "concept": "backpack",
+            "label": {
+                "singular": "backpack",
+                "plural": "backpacks"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "backpack",
+            "label": {
+                "singular": "reppu",
+                "plural": "reput"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "backpack",
+            "label": {
+                "singular": "de rugzak",
+                "plural": "de rugzakken"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

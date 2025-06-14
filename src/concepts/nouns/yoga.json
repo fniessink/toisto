@@ -1,7 +1,22 @@
 {
-    "yoga": {
-        "en": "yoga",
-        "fi": "jooga",
-        "nl": "de yoga"
-    }
+    "concepts": {
+        "yoga": {}
+    },
+    "labels": [
+        {
+            "concept": "yoga",
+            "label": "yoga",
+            "language": "en"
+        },
+        {
+            "concept": "yoga",
+            "label": "jooga",
+            "language": "fi"
+        },
+        {
+            "concept": "yoga",
+            "label": "de yoga",
+            "language": "nl"
+        }
+    ]
 }

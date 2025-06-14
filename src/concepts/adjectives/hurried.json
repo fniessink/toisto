@@ -1,10 +1,27 @@
 {
-    "unhurried": {
-        "en": "unhurried",
-        "fi": "kiireetön",
-        "nl": [
-            "kalm",
-            "rustig"
-        ]
-    }
+    "concepts": {
+        "unhurried": {}
+    },
+    "labels": [
+        {
+            "concept": "unhurried",
+            "label": "unhurried",
+            "language": "en"
+        },
+        {
+            "concept": "unhurried",
+            "label": "kiireetön",
+            "language": "fi"
+        },
+        {
+            "concept": "unhurried",
+            "label": "kalm",
+            "language": "nl"
+        },
+        {
+            "concept": "unhurried",
+            "label": "rustig",
+            "language": "nl"
+        }
+    ]
 }

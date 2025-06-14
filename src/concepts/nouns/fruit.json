@@ -1,18 +1,46 @@
 {
-    "fruit": {
-        "example": "fruit is healthy",
-        "hypernym": "food",
-        "en": "fruit",
-        "fi": "hedelmä",
-        "nl": "het fruit"
+    "concepts": {
+        "fruit": {
+            "example": "fruit is healthy",
+            "hypernym": "food"
+        },
+        "fruit is healthy": {
+            "roots": [
+                "fruit",
+                "healthy"
+            ]
+        }
     },
-    "fruit is healthy": {
-        "roots": [
-            "fruit",
-            "healthy"
-        ],
-        "en": "Fruit is healthy.",
-        "fi": "Hedelmä on terveellinen.",
-        "nl": "Fruit is gezond."
-    }
+    "labels": [
+        {
+            "concept": "fruit",
+            "label": "fruit",
+            "language": "en"
+        },
+        {
+            "concept": "fruit",
+            "label": "hedelmä",
+            "language": "fi"
+        },
+        {
+            "concept": "fruit",
+            "label": "het fruit",
+            "language": "nl"
+        },
+        {
+            "concept": "fruit is healthy",
+            "label": "Fruit is healthy.",
+            "language": "en"
+        },
+        {
+            "concept": "fruit is healthy",
+            "label": "Hedelmä on terveellinen.",
+            "language": "fi"
+        },
+        {
+            "concept": "fruit is healthy",
+            "label": "Fruit is gezond.",
+            "language": "nl"
+        }
+    ]
 }

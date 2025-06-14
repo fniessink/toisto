@@ -1,10 +1,28 @@
 {
-    "anything else": {
-        "en": "Anything else?",
-        "fi": [
-            "Tuleeko muuta?",
-            "Tuleeks muuta?*"
-        ],
-        "nl": "Anders nog iets?"
-    }
+    "concepts": {
+        "anything else": {}
+    },
+    "labels": [
+        {
+            "concept": "anything else",
+            "label": "Anything else?",
+            "language": "en"
+        },
+        {
+            "concept": "anything else",
+            "label": "Tuleeko muuta?",
+            "language": "fi"
+        },
+        {
+            "concept": "anything else",
+            "label": "Tuleeks muuta?",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "anything else",
+            "label": "Anders nog iets?",
+            "language": "nl"
+        }
+    ]
 }

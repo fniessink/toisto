@@ -1,7 +1,22 @@
 {
-    "to hope": {
-        "en": "to hope",
-        "fi": "toivota",
-        "nl": "hopen"
-    }
+    "concepts": {
+        "to hope": {}
+    },
+    "labels": [
+        {
+            "concept": "to hope",
+            "label": "to hope",
+            "language": "en"
+        },
+        {
+            "concept": "to hope",
+            "label": "toivota",
+            "language": "fi"
+        },
+        {
+            "concept": "to hope",
+            "label": "hopen",
+            "language": "nl"
+        }
+    ]
 }

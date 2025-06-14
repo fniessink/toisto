@@ -1,19 +1,34 @@
 {
-    "round": {
-        "en": {
-            "positive degree": "round",
-            "comparative degree": "rounder",
-            "superlative degree": "roundest"
+    "concepts": {
+        "round": {}
+    },
+    "labels": [
+        {
+            "concept": "round",
+            "label": {
+                "positive degree": "round",
+                "comparative degree": "rounder",
+                "superlative degree": "roundest"
+            },
+            "language": "en"
         },
-        "fi": {
-            "positive degree": "pyöreä",
-            "comparative degree": "pyöreämpi",
-            "superlative degree": "pyörein"
+        {
+            "concept": "round",
+            "label": {
+                "positive degree": "pyöreä",
+                "comparative degree": "pyöreämpi",
+                "superlative degree": "pyörein"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "positive degree": "rond",
-            "comparative degree": "ronder",
-            "superlative degree": "rondst"
+        {
+            "concept": "round",
+            "label": {
+                "positive degree": "rond",
+                "comparative degree": "ronder",
+                "superlative degree": "rondst"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

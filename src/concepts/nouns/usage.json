@@ -1,7 +1,22 @@
 {
-    "usage": {
-        "en": "usage",
-        "fi": "käyttäminen",
-        "nl": "het gebruik"
-    }
+    "concepts": {
+        "usage": {}
+    },
+    "labels": [
+        {
+            "concept": "usage",
+            "label": "usage",
+            "language": "en"
+        },
+        {
+            "concept": "usage",
+            "label": "käyttäminen",
+            "language": "fi"
+        },
+        {
+            "concept": "usage",
+            "label": "het gebruik",
+            "language": "nl"
+        }
+    ]
 }

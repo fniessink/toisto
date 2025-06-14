@@ -1,23 +1,51 @@
 {
-    "year": {
-        "holonym": "decade",
-        "en": {
-            "singular": "year",
-            "plural": "years"
+    "concepts": {
+        "year": {
+            "holonym": "decade"
         },
-        "fi": {
-            "singular": "vuosi",
-            "plural": "vuodet"
-        },
-        "nl": {
-            "singular": "het jaar",
-            "plural": "de jaren"
+        "once a year": {
+            "roots": "year"
         }
     },
-    "once a year": {
-        "roots": "year",
-        "en": "once a year",
-        "fi": "kerran vuodessa",
-        "nl": "één keer per jaar|een keer per jaar"
-    }
+    "labels": [
+        {
+            "concept": "year",
+            "label": {
+                "singular": "year",
+                "plural": "years"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "year",
+            "label": {
+                "singular": "vuosi",
+                "plural": "vuodet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "year",
+            "label": {
+                "singular": "het jaar",
+                "plural": "de jaren"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "once a year",
+            "label": "once a year",
+            "language": "en"
+        },
+        {
+            "concept": "once a year",
+            "label": "kerran vuodessa",
+            "language": "fi"
+        },
+        {
+            "concept": "once a year",
+            "label": "één keer per jaar|een keer per jaar",
+            "language": "nl"
+        }
+    ]
 }

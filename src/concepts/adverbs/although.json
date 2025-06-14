@@ -1,7 +1,22 @@
 {
-    "although": {
-        "en": "although|though",
-        "fi": "tosin",
-        "nl": "weliswaar"
-    }
+    "concepts": {
+        "although": {}
+    },
+    "labels": [
+        {
+            "concept": "although",
+            "label": "although|though",
+            "language": "en"
+        },
+        {
+            "concept": "although",
+            "label": "tosin",
+            "language": "fi"
+        },
+        {
+            "concept": "although",
+            "label": "weliswaar",
+            "language": "nl"
+        }
+    ]
 }

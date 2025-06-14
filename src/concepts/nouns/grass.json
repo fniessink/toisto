@@ -1,16 +1,31 @@
 {
-    "grass": {
-        "en": {
-            "singular": "grass",
-            "plural": "grasses"
+    "concepts": {
+        "grass": {}
+    },
+    "labels": [
+        {
+            "concept": "grass",
+            "label": {
+                "singular": "grass",
+                "plural": "grasses"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "ruoho",
-            "plural": "ruohot"
+        {
+            "concept": "grass",
+            "label": {
+                "singular": "ruoho",
+                "plural": "ruohot"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het gras",
-            "plural": "de grassen"
+        {
+            "concept": "grass",
+            "label": {
+                "singular": "het gras",
+                "plural": "de grassen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

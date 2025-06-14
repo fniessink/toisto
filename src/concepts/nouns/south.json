@@ -1,9 +1,25 @@
 {
-    "south": {
-        "example": "it is warm in the south",
-        "hypernym": "compass point",
-        "en": "south|the South",
-        "fi": "etelä",
-        "nl": "het zuiden"
-    }
+    "concepts": {
+        "south": {
+            "example": "it is warm in the south",
+            "hypernym": "compass point"
+        }
+    },
+    "labels": [
+        {
+            "concept": "south",
+            "label": "south|the South",
+            "language": "en"
+        },
+        {
+            "concept": "south",
+            "label": "etelä",
+            "language": "fi"
+        },
+        {
+            "concept": "south",
+            "label": "het zuiden",
+            "language": "nl"
+        }
+    ]
 }

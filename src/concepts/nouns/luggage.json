@@ -1,7 +1,22 @@
 {
-    "hand luggage": {
-        "en": "hand luggage",
-        "fi": "käsimatkatavara",
-        "nl": "de handbagage"
-    }
+    "concepts": {
+        "hand luggage": {}
+    },
+    "labels": [
+        {
+            "concept": "hand luggage",
+            "label": "hand luggage",
+            "language": "en"
+        },
+        {
+            "concept": "hand luggage",
+            "label": "käsimatkatavara",
+            "language": "fi"
+        },
+        {
+            "concept": "hand luggage",
+            "label": "de handbagage",
+            "language": "nl"
+        }
+    ]
 }

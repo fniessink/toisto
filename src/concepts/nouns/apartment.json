@@ -1,52 +1,95 @@
 {
-    "apartment": {
-        "en": {
-            "singular": "apartment",
-            "plural": "apartments"
+    "concepts": {
+        "apartment": {},
+        "single-room apartment": {
+            "hypernym": "apartment",
+            "roots": {
+                "en": "apartment",
+                "fi": "1",
+                "nl": "apartment"
+            }
         },
-        "fi": {
-            "singular": "asunto",
-            "plural": "asunnot"
-        },
-        "nl": {
-            "singular": "het appartement",
-            "plural": "de appartementen"
+        "two-room apartment": {
+            "hypernym": "apartment",
+            "roots": {
+                "en": [
+                    "2",
+                    "room",
+                    "apartment"
+                ],
+                "fi": "2",
+                "nl": [
+                    "2",
+                    "room",
+                    "apartment"
+                ]
+            }
         }
     },
-    "single-room apartment": {
-        "hypernym": "apartment",
-        "roots": {
-            "en": "apartment",
-            "fi": "1",
-            "nl": "apartment"
+    "labels": [
+        {
+            "concept": "apartment",
+            "label": {
+                "singular": "apartment",
+                "plural": "apartments"
+            },
+            "language": "en"
         },
-        "en": [
-            "studio apartment",
-            "studio"
-        ],
-        "fi": "yksiö",
-        "nl": [
-            "het eenkamerappartement",
-            "de studio"
-        ]
-    },
-    "two-room apartment": {
-        "hypernym": "apartment",
-        "roots": {
-            "en": [
-                "2",
-                "room",
-                "apartment"
-            ],
-            "fi": "2",
-            "nl": [
-                "2",
-                "room",
-                "apartment"
-            ]
+        {
+            "concept": "apartment",
+            "label": {
+                "singular": "asunto",
+                "plural": "asunnot"
+            },
+            "language": "fi"
         },
-        "en": "two-room apartment",
-        "fi": "kaksiö",
-        "nl": "het tweekamerappartement"
-    }
+        {
+            "concept": "apartment",
+            "label": {
+                "singular": "het appartement",
+                "plural": "de appartementen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "single-room apartment",
+            "label": "studio apartment",
+            "language": "en"
+        },
+        {
+            "concept": "single-room apartment",
+            "label": "studio",
+            "language": "en"
+        },
+        {
+            "concept": "single-room apartment",
+            "label": "yksiö",
+            "language": "fi"
+        },
+        {
+            "concept": "single-room apartment",
+            "label": "het eenkamerappartement",
+            "language": "nl"
+        },
+        {
+            "concept": "single-room apartment",
+            "label": "de studio",
+            "language": "nl"
+        },
+        {
+            "concept": "two-room apartment",
+            "label": "two-room apartment",
+            "language": "en"
+        },
+        {
+            "concept": "two-room apartment",
+            "label": "kaksiö",
+            "language": "fi"
+        },
+        {
+            "concept": "two-room apartment",
+            "label": "het tweekamerappartement",
+            "language": "nl"
+        }
+    ]
 }

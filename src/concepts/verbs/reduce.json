@@ -1,7 +1,22 @@
 {
-    "to reduce": {
-        "en": "to reduce",
-        "fi": "pienentää",
-        "nl": "verminderen"
-    }
+    "concepts": {
+        "to reduce": {}
+    },
+    "labels": [
+        {
+            "concept": "to reduce",
+            "label": "to reduce",
+            "language": "en"
+        },
+        {
+            "concept": "to reduce",
+            "label": "pienentää",
+            "language": "fi"
+        },
+        {
+            "concept": "to reduce",
+            "label": "verminderen",
+            "language": "nl"
+        }
+    ]
 }

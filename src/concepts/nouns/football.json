@@ -1,31 +1,67 @@
 {
-    "football": {
-        "example": "I play football",
-        "hypernym": "team sport",
-        "roots": [
-            "ball",
-            "foot"
-        ],
-        "en": "football",
-        "fi": [
-            "jalkapallo",
-            "futis*"
-        ],
-        "nl": "de voetbal"
+    "concepts": {
+        "football": {
+            "example": "I play football",
+            "hypernym": "team sport",
+            "roots": [
+                "ball",
+                "foot"
+            ]
+        },
+        "I play football": {
+            "roots": [
+                "to play a sport",
+                "football"
+            ]
+        }
     },
-    "I play football": {
-        "roots": [
-            "to play a sport",
-            "football"
-        ],
-        "en": "I play football.",
-        "fi": [
-            "Minä pelaan jalkapalloa.",
-            "Mä pelaan futista.*"
-        ],
-        "nl": [
-            "Ik speel voetbal.",
-            "Ik voetbal."
-        ]
-    }
+    "labels": [
+        {
+            "concept": "football",
+            "label": "football",
+            "language": "en"
+        },
+        {
+            "concept": "football",
+            "label": "jalkapallo",
+            "language": "fi"
+        },
+        {
+            "concept": "football",
+            "label": "futis",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "football",
+            "label": "de voetbal",
+            "language": "nl"
+        },
+        {
+            "concept": "I play football",
+            "label": "I play football.",
+            "language": "en"
+        },
+        {
+            "concept": "I play football",
+            "label": "Minä pelaan jalkapalloa.",
+            "language": "fi"
+        },
+        {
+            "concept": "I play football",
+            "label": "Mä pelaan futista.",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "I play football",
+            "label": "Ik speel voetbal.",
+            "language": "nl"
+        },
+        {
+            "concept": "I play football",
+            "label": "Ik voetbal.",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,13 +1,37 @@
 {
-    "to cook": {
-        "en": "to cook",
-        "fi": [
-            "laittaa ruokaa",
-            "kokata*"
-        ],
-        "nl": [
-            "koken",
-            "kokkerellen*"
-        ]
-    }
+    "concepts": {
+        "to cook": {}
+    },
+    "labels": [
+        {
+            "concept": "to cook",
+            "label": "to cook",
+            "language": "en"
+        },
+        {
+            "concept": "to cook",
+            "label": "laittaa ruokaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to cook",
+            "label": "kokata",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": [
+                "to boil",
+                "to cook"
+            ],
+            "label": "koken",
+            "language": "nl"
+        },
+        {
+            "concept": "to cook",
+            "label": "kokkerellen",
+            "language": "nl",
+            "colloquial": true
+        }
+    ]
 }

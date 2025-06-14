@@ -1,7 +1,23 @@
 {
-    "well": {
-        "en": "well",
-        "fi": "hyvin",
-        "nl": "goed;adverb"
-    }
+    "concepts": {
+        "well": {}
+    },
+    "labels": [
+        {
+            "concept": "well",
+            "label": "well",
+            "language": "en"
+        },
+        {
+            "concept": "well",
+            "label": "hyvin",
+            "language": "fi"
+        },
+        {
+            "concept": "well",
+            "label": "goed",
+            "language": "nl",
+            "tip": "adverb"
+        }
+    ]
 }

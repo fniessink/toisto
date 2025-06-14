@@ -1,7 +1,22 @@
 {
-    "calculator": {
-        "en": "calculator",
-        "fi": "laskin",
-        "nl": "de rekenmachine"
-    }
+    "concepts": {
+        "calculator": {}
+    },
+    "labels": [
+        {
+            "concept": "calculator",
+            "label": "calculator",
+            "language": "en"
+        },
+        {
+            "concept": "calculator",
+            "label": "laskin",
+            "language": "fi"
+        },
+        {
+            "concept": "calculator",
+            "label": "de rekenmachine",
+            "language": "nl"
+        }
+    ]
 }

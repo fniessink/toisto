@@ -1,7 +1,22 @@
 {
-    "to interpret": {
-        "en": "to interpret",
-        "fi": "tulkata",
-        "nl": "tolken"
-    }
+    "concepts": {
+        "to interpret": {}
+    },
+    "labels": [
+        {
+            "concept": "to interpret",
+            "label": "to interpret",
+            "language": "en"
+        },
+        {
+            "concept": "to interpret",
+            "label": "tulkata",
+            "language": "fi"
+        },
+        {
+            "concept": "to interpret",
+            "label": "tolken",
+            "language": "nl"
+        }
+    ]
 }

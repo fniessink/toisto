@@ -1,8 +1,24 @@
 {
-    "jaw": {
-        "holonym": "head",
-        "en": "jaw",
-        "fi": "leuka",
-        "nl": "de kaak"
-    }
+    "concepts": {
+        "jaw": {
+            "holonym": "head"
+        }
+    },
+    "labels": [
+        {
+            "concept": "jaw",
+            "label": "jaw",
+            "language": "en"
+        },
+        {
+            "concept": "jaw",
+            "label": "leuka",
+            "language": "fi"
+        },
+        {
+            "concept": "jaw",
+            "label": "de kaak",
+            "language": "nl"
+        }
+    ]
 }

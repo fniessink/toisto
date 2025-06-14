@@ -1,7 +1,22 @@
 {
-    "that is to say": {
-        "en": "that is to say|that is",
-        "fi": "eli",
-        "nl": "oftewel"
-    }
+    "concepts": {
+        "that is to say": {}
+    },
+    "labels": [
+        {
+            "concept": "that is to say",
+            "label": "that is to say|that is",
+            "language": "en"
+        },
+        {
+            "concept": "that is to say",
+            "label": "eli",
+            "language": "fi"
+        },
+        {
+            "concept": "that is to say",
+            "label": "oftewel",
+            "language": "nl"
+        }
+    ]
 }

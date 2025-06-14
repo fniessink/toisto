@@ -1,7 +1,22 @@
 {
-    "in time": {
-        "en": "in time",
-        "fi": "ajoissa",
-        "nl": "op tijd"
-    }
+    "concepts": {
+        "in time": {}
+    },
+    "labels": [
+        {
+            "concept": "in time",
+            "label": "in time",
+            "language": "en"
+        },
+        {
+            "concept": "in time",
+            "label": "ajoissa",
+            "language": "fi"
+        },
+        {
+            "concept": "in time",
+            "label": "op tijd",
+            "language": "nl"
+        }
+    ]
 }

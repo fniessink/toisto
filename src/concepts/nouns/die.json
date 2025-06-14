@@ -1,10 +1,26 @@
 {
-    "die": {
-        "roots": {
-            "nl": "stone"
+    "concepts": {
+        "die": {
+            "roots": {
+                "nl": "stone"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "die",
+            "label": "die",
+            "language": "en"
         },
-        "en": "die",
-        "fi": "noppa",
-        "nl": "de dobbelsteen"
-    }
+        {
+            "concept": "die",
+            "label": "noppa",
+            "language": "fi"
+        },
+        {
+            "concept": "die",
+            "label": "de dobbelsteen",
+            "language": "nl"
+        }
+    ]
 }

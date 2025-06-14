@@ -1,16 +1,31 @@
 {
-    "color": {
-        "en": {
-            "singular": "color|colour",
-            "plural": "colors|colours"
+    "concepts": {
+        "color": {}
+    },
+    "labels": [
+        {
+            "concept": "color",
+            "label": {
+                "singular": "color|colour",
+                "plural": "colors|colours"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "väri",
-            "plural": "värit"
+        {
+            "concept": "color",
+            "label": {
+                "singular": "väri",
+                "plural": "värit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de kleur",
-            "plural": "de kleuren"
+        {
+            "concept": "color",
+            "label": {
+                "singular": "de kleur",
+                "plural": "de kleuren"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

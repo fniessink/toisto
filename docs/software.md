@@ -6,38 +6,81 @@ Built-in concepts are located in `src/concepts` in the form of JSON files.
 
 Users can also create their own files as long as they comply with the description below and pass them to Toisto using the `-f/--file` command-line option.
 
-Each JSON file contains one or more *concepts*. Each concept has *labels* in different languages, identified by *language identifiers*.
+Each JSON file contains zero or more *concepts* and zero or more *labels* in different languages.
 
-A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express the concept in a specific language. The language identifiers are two or three letter strings as listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
+A concept can be anything that can be expressed in language. The labels are words, phrases, or sentences that express a concept in a specific language. The language identifiers are two or three letter strings as listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 The contents of a JSON file looks as follows:
 
 ```json
 {
-    "today": {
-        "en": "today",
-        "fi": "tänään",
-        "nl": "vandaag"
+    "concepts": {
+        "today": {},
+        "yesterday": {},
+        "tomorrow": {},
     },
-    "yesterday": {
-        "en": "yesterday",
-        "fi": "eilen",
-        "nl": "gisteren",
-    },
-    "tomorrow": {
-        "en": "tomorrow",
-        "fi": "huomenna",
-        "nl": "morgen"
-    }
+    "labels": [
+        {
+            "concept": "today",
+            "label": "today",
+            "language": "en"
+        },
+        {
+            "concept": "today",
+            "label": "tänään",
+            "language": "fi"
+        },
+        {
+            "concept": "today",
+            "label": "vandaag",
+            "language": "nl"
+        },
+        {
+            "concept": "yesterday",
+            "label": "yesterday",
+            "language": "en"
+        },
+        {
+            "concept": "yesterday",
+            "label": "eilen",
+            "language": "fi"
+        },
+        {
+            "concept": "yesterday",
+            "label": "gisteren",
+            "language": "nl"
+        },
+        {
+            "concept": "tomorrow",
+            "label": "tomorrow",
+            "language": "en"
+        },
+        {
+            "concept": "tomorrow",
+            "label": "huomenna",
+            "language": "fi"
+        },
+        {
+            "concept": "tomorrow",
+            "label": "morgen",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
-Concepts are represented in the JSON files as JSON objects. The key is an identifier for the concept. It should be unique across all JSON files. The value is a mapping with language identifiers as keys and labels as values. Currently, the built-in JSON files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
+Concepts are represented in the JSON files as JSON objects. The key is an identifier for the concept. It should be unique across all JSON files. In the simplest case, concepts don't have any attributes, see below for possible concept attributes.
+
+Labels are a list of objects that always have three keys: `concept`, `label`, and `language`:
+
+- The `concept` contains one identifier of the concept that the label describes or a list of concept identifiers.
+- The `label` contains the label itself. It is either a string or an object containing different grammatical forms of the label.
+- The `language` contains the language identifier. Currently, the built-in JSON files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
 
 If you add new languages to the built-in files, or create your own JSON files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
 
 > [!NOTE]
-> When using more than two languages is not essential to explain how things work, examples below may contain just two languages.
+> When using multiple languages is not essential to explain how things work, examples below may contain just one or two languages.
 
 ### Letter case and punctuation in labels
 
@@ -51,12 +94,18 @@ When there are multiple ways to spell a label, use the pipe symbol (`|`) to sepa
 
 ```json
 {
-    "vegetable": {
-        "nl": {
-            "singular": "groente",
-            "plural": "de groenten|de groentes"
+    "concepts": {
+        "hotdog": {}
+    },
+    "labels": [
+        "labels": [
+            {
+                "concept": "hotdog",
+                "label": "hotdog|hot dog",
+                "language": "en"
+            }
         }
-    }
+    ]
 }
 ```
 
@@ -103,69 +152,105 @@ These spelling alternatives can be specified under the `<language identifier>-if
 
 ### Labels with spoken language
 
-To indicate that a label is only used in spoken language, add an asterisk (`*`) to the end. Toisto will only quiz the label using speech.
+To indicate that a label is only used in spoken language, add the colloquial flag to the label. Toisto will only quiz the label using speech.
 
 ```json
 {
-    "7": {
-        "en": "seven",
-        "fi": [
-            "seitsemän",
-            "seittemän*"
-        ]
-    }
+    "concepts": {
+        "7": {},
+    },
+    "labels": [
+        {
+            "label": "seven",
+            "language": "en"
+        },
+        {
+            "label": "seitsemän",
+            "language": "fi"
+        },
+        {
+            "label": "seittemän",
+            "language": "fi",
+            "colloquial": true
+        }
+    ]
 }
 ```
+
+### Labels with tips
+
+Sometimes labels are ambiguous. For example, "hän" in Finnish can mean both he or she. To help the user understand which meaning is intended, a tip can be added to the label:
+
+```json
+{
+    "concepts": {
+        "she wants ice cream": {}
+    },
+    "labels": [
+        {
+            "concept": "she wants ice cream",
+            "label": "She wants ice cream.",
+            "language": "en"
+        },
+        {
+            "concept": "she wants ice cream",
+            "label": "Hän haluaa jäätelöä.",
+            "language": "fi",
+            "tip": "feminine"
+        }
+    ]
+}
+```
+
+In the above example, Toisto will show the tip 'feminine' to the user when asking for the English translation of "Hän haluaa jäätelöä".
 
 ### Labels with notes
 
-Sometimes labels are ambiguous. For example, "hän" in Finnish can mean both he or she. To help the user understand which meaning is intended, a note can be added to the label. The note is the part after the semicolon (`;`):
+It's also possible to add notes. The notes will be shown after the user has answered. This can be used to point out extra information, for example:
 
 ```json
 {
-    "she wants ice cream": {
-        "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;feminine",
-    }
-}
-```
-
-In the above example, Toisto will show the note 'feminine' to the user when asking for the English translation of "Hän haluaa jäätelöä".
-
-It's also possible to add two notes. The first note will be shown as part of the quiz instruction. The second note will be shown after the user has answered. This can be used to point out extra information, for example:
-
-```json
-{
-    "she wants ice cream": {
-        "en": "She wants ice cream.",
-        "fi": "Hän haluaa jäätelöä.;feminine;'jäätelöä is the partitive case of 'jäätelö'",
-    }
-}
-```
-
-If only the second note is needed, simply leave the first one empty:
-
-```json
-{
-    "garlic": {
-        "fi": "valkosipuli;;valko- ('white') + sipuli ('onion')"
-    }
+    "concepts": {
+        "I want ice cream": {}
+    },
+    "labels": [
+        {
+            "concept": "I want ice cream",
+            "label": "I want ice cream.",
+            "language": "en"
+        },
+        {
+            "concept": "I want ice cream",
+            "label": "Minä haluan jäätelöä.",
+            "language": "fi",
+            "note": "'jäätelöä' is the partitive case of 'jäätelö'"
+        }
+    ]
 }
 ```
 
 ### Concepts with multiple labels
 
-Labels consist of either one string or a list of strings. A list of strings is used when there are multiple equivalent ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toisto will quiz the user with each synonym, so in the example below users practicing Finnish will be asked to translate both Finnish sentences.
+Add multiple labels if there are multiple ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toisto will quiz the user with each synonym, so in the example below users practicing Finnish will be quizzed about both Finnish sentences.
 
 ```json
 {
-    "what day is it today": {
-        "en": "What day is it today?",
-        "fi": [
-            "Mikä päivä tänään on?",
-            "Mikä päivä on tänään?"
-        ]
-    }
+    "concepts": {
+        "what day is it today": {}
+    },
+    "labels": [
+        {
+            "concept": "what day is it today",
+            "label": "Mikä päivä tänään on?",
+            "language": "fi"
+        },
+        {
+            "concept": "what day is it today",
+            "label": "Mikä päivä on tänään?",
+            "language": "fi"
+        }
+
+    ]
 }
 ```
 
@@ -175,10 +260,21 @@ Some concepts have a label in one language, but not in other languages. Mämmi, 
 
 ```json
 {
-    "mämmi": {
-        "en": "(Traditional Finnish Easter dessert)",
-        "fi": "mämmi"
-    }
+    "concepts": {
+        "mämmi": {}
+    },
+    "labels": [
+        {
+            "concept": "mämmi",
+            "label": "(Traditional Finnish Easter dessert)",
+            "language": "en"
+        },
+        {
+            "concept": "mämmi",
+            "label": "mämmi",
+            "language": "fi"
+        }
+    ]
 }
 ```
 
@@ -194,32 +290,43 @@ If the homographs share a common base concept, such as with verbs, Toisto will b
 
 ```json
 {
-    "to have": {
-        "en": {
-            "singular": {
-                "first person": "...",
-                "second person": "you have",
-                "third person": "..."
+    "concepts": {
+        "to have": {}
+    },
+    "labels": [
+        {
+            "concept": "to have",
+            "label": {
+                "singular": {
+                    "first person": "...",
+                    "second person": "you have",
+                    "third person": "..."
+                },
+                "plural":{
+                    "first person": "...",
+                    "second person": "you have",
+                    "third person": "..."
+                }
             },
-            "plural":{
-                "first person": "...",
-                "second person": "you have",
-                "third person": "..."
-            }
+            "languages": "en"
         },
-        "nl": {
-            "singular": {
-                "first person": "...",
-                "second person": "jij hebt",
-                "third person": "..."
+        {
+            "concept": "to have",
+            "label": {
+                "singular": {
+                    "first person": "...",
+                    "second person": "jij hebt",
+                    "third person": "..."
+                },
+                "plural":{
+                    "first person": "...",
+                    "second person": "jullie hebben",
+                    "third person": "..."
+                }
             },
-            "plural":{
-                "first person": "...",
-                "second person": "jullie hebben",
-                "third person": "..."
-            }
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -231,16 +338,36 @@ If the homographs have different hypernyms, Toisto will provide a hint based on 
 
 ```json
 {
-    "bank (finance)": {
-        "hypernym": "financial institution",
-        "en": "bank",
-        "nl": "de bank"
+    "concepts": {
+        "bank (finance)": {
+            "hypernym": "financial institution",
+        },
+        "bank (furniture)": {
+            "hypernym": "furniture",
+        }
     },
-    "bank (furniture)": {
-        "hypernym": "furniture",
-        "en": "couch",
-        "nl": "de bank"
-    }
+    "labels": [
+        {
+            "concept": "bank (finance)",
+            "label": "bank",
+            "language": "en"
+        },
+        {
+            "concept": "bank (finance)",
+            "label": "de bank",
+            "language": "nl"
+        }
+        {
+            "concept": "bank (furniture)",
+            "label": "couch",
+            "language": "en"
+        },
+        {
+            "concept": "bank (furniture)",
+            "label": "de bank",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -252,23 +379,56 @@ If the homographs involve other concepts, Toisto will provide a hint based on th
 
 ```json
 {
-    "to play a sport": {
-        "involves": "sport",
-        "en": "to play",
-        "fi": "pelata"
+    "concepts": {
+        "sport": {},
+        "to play a sport": {
+            "involves": "sport"
+        },
+        "musical instrument": {},
+        "to play a musical instrument": {
+            "involves": "musical instrument"
+        },
     },
-    "sport": {
-        "en": "sport",
-        "fi": "urheilu"
-    },
-    "to play a musical instrument": {
-        "involves": "musical instrument",
-        "en": "to play",
-        "fi": "soittaa"
-    },
-    "musical instrument": {
-        "en": "musical instrument",
-        "fi": "soitin"
+    "labels": [
+        {
+            "concept": "sport",
+            "label": "sport",
+            "language": "en"
+        },
+        {
+            "concept": "sport",
+            "label": "urheilu",
+            "language": "fi"
+        {
+            "concept": "to play a sport",
+            "label": "to play",
+            "language": "en"
+        },
+        {
+            "concept": "to play a sport",
+            "label": "pelata",
+            "language": "fi"
+        },
+        {
+            "concept": "musical instrument",
+            "label": "musical instrument",
+            "language": "en"
+        },
+        {
+            "concept": "musical instrument",
+            "label": "soitin",
+            "language": "fi"
+        },
+        {
+            "concept": "to play a musical instrument",
+            "label": "to play",
+            "language": "en"
+        },
+        {
+            "concept": "to play a musical instrument",
+            "label": "soittaa",
+            "language": "fi"
+        }
     }
 }
 ```
@@ -287,38 +447,47 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
 
 ```json
 {
-    "to be": {
-        "fi": {
-            "singular": {
-                "first person": "..."
-                "second person": [
-                    "sinä olet",
-                    "Te olette"
-                ],
-                "third person": "..."
+    "concepts": {
+        "to be": {}
+    },
+    "labels": [
+        {
+            "label": {
+                "singular": {
+                    "first person": "..."
+                    "second person": [
+                        "sinä olet",
+                        "Te olette"
+                    ],
+                    "third person": "..."
+                },
+                "plural": {
+                    "first person": "..."
+                    "second person": "te olette",
+                    "third person": "..."
+                }
             },
-            "plural": {
-                "first person": "..."
-                "second person": "te olette",
-                "third person": "..."
-            }
-        }
-        "nl": {
-            "singular": {
-                "first person": "..."
-                "second person": [
-                    "jij bent",
-                    "u bent"
-                ],
-                "third person": "..."
+            "language": "fi"
+        },
+        {
+            "label": {
+                "singular": {
+                    "first person": "..."
+                    "second person": [
+                        "jij bent",
+                        "u bent"
+                    ],
+                    "third person": "..."
+                },
+                "plural": {
+                    "first person": "..."
+                    "second person": "jullie zijn",
+                    "third person": "..."
+                }
             },
-            "plural": {
-                "first person": "..."
-                "second person": "jullie zijn",
-                "third person": "..."
-            }
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -330,16 +499,36 @@ If the capitonyms have different hypernyms, Toisto will provide a hint based on 
 
 ```json
 {
-    "greece": {
-        "hypernym": "country",
-        "en": "Greece",
-        "fi": "Kreikka"
+    "concepts": {
+        "greece": {
+            "hypernym": "country",
+        },
+        "greek": {
+            "hypernym": "language",
+        },
     },
-    "greek": {
-        "hypernym": "language",
-        "en": "Greek",
-        "fi": "kreikka"
-    }
+    "labels": [
+        {
+            "concept": "greece",
+            "label":"Greece",
+            "language": "en"
+        },
+        {
+            "concept": "greece",
+            "label":"Kreikka",
+            "language": "fi"
+        },
+        {
+            "concept": "greek",
+            "label":"Greek",
+            "language": "en"
+        },
+        {
+            "concept": "greek",
+            "label":"kreikka",
+            "language": "fi"
+        }
+    ]
 }
 ```
 
@@ -347,30 +536,51 @@ When quizzing the spoken version of "Kreikka", Toisto provides the hypernym as h
 
 ### Concepts with different meanings per language
 
-Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää", or just "Päivää", is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
+Sometimes a concept in one language can be two different concepts in another language. For example, both in English and Dutch there are separate greetings for the afternoon and the whole day: "Good afternoon" and "Good day" in English and "Goedemiddag" and "Goedendag" in Dutch. In Finnish "Hyvää päivää" is used for both. As an aside, "Hyvää iltapäivää", although grammatically correct, is not used.
 
-If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a note that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context. The note is the part after the semicolon (`;`).
+If we would include all these labels in one concept, Toisto would consider "Goedemiddag" a correct translation of "Good day", which is undesirable. The solution is to have two concepts, one for "good afternoon" and one for "good day". Both concepts get the Finnish labels "Hyvää päivää" and "Päivää". The Finnish labels for the "good afternoon" concept get a tip that Toisto shows when asking for the Dutch or English translation of "Hyvää päivää" or "Päivää" so that the user knows the context.
 
 In the JSON file this looks as follows:
 
 ```json
 {
-    "good afternoon": {
-        "en": "Good afternoon!",
-        "fi": [
-            "Hyvää päivää!;afternoon",
-            "Päivää!;afternoon"
-        ],
-        "nl": "Goedemiddag!"
+    "concepts": {
+        "good afternoon": {},
+        "good day": {}
     },
-    "good day": {
-        "en": "Good day!",
-        "fi": [
-            "Hyvää päivää!",
-            "Päivää!"
-        ],
-        "nl": "Goedendag!"
-    }
+    "labels": [
+        {
+            "concept": "good afternoon",
+            "label": "Good afternoon!",
+            "language": "en"
+        },
+        {
+            "concept": "good afternoon",
+            "label": "Hyvää päivää!",
+            "language": "fi",
+            "tip": "afternoon"
+        },
+        {
+            "concept": "good afternoon",
+            "label": "Goedemiddag!",
+            "language": "nl"
+        },
+        {
+            "concept": "good day",
+            "label": "Good day!",
+            "language": "en"
+        },
+        {
+            "concept": "good day",
+            "label": "Hyvää päivää!",
+            "language": "fi"
+        },
+        {
+            "concept": "good day",
+            "label": "Goedendag!",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -382,16 +592,27 @@ The format of the JSON files is as follows:
 
 ```json
 {
-    "day": {
-        "en": {
-            "singular": "day",
-            "plural": "days"
+    "concepts": {
+        "day": {}
+    },
+    "labels": [
+        {
+            "concept": "day",
+            "label": {
+                "singular": "day",
+                "plural": "days"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "päivä",
-            "plural": "päivät"
+        {
+            "concept": "day",
+            "label": {
+                "singular": "päivä",
+                "plural": "päivät"
+            },
+            "language": "fi"
         }
-    }
+    ]
 }
 ```
 
@@ -401,12 +622,19 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
 
 ```json
 {
-    "table": {
-        "nl": {
-            "root": "de tafel",
-            "diminutive": "het tafeltje"
+    "concepts": {
+        "table": {}
+    },
+    "labels": [
+        {
+            "concept": "table",
+            "label": {
+                "root": "de tafel",
+                "diminutive": "het tafeltje"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -416,16 +644,27 @@ Note that in many languages, diminutives can (also) be formed by using multi-wor
 
 ```json
 {
-    "table": {
-        "nl": {
-            "root": "de tafel",
-            "diminutive": "het tafeltje"
+    "concepts": {
+        "table": {}
+    },
+    "labels": [
+        {
+            "concept": "table",
+            "label": {
+                "root": "de tafel",
+                "diminutive": "het tafeltje"
+            },
+            "language": "nl"
         },
-        "en": {
-            "root": "table",
-            "diminutive": "(little table)"
+        {
+            "concept": "table",
+            "label": {
+                "root": "table",
+                "diminutive": "(little table)"
+            },
+            "language": "en"
         }
-    }
+    ]
 }
 ```
 
@@ -435,16 +674,27 @@ When concepts have multiple genders, these can be specified as follows:
 
 ```json
 {
-    "parent": {
-        "en": {
-            "feminine": "mother",
-            "masculine": "father"
+    "concepts": {
+        "parent": {}
+    },
+    "labels": [
+        {
+            "concept": "parent",
+            "label": {
+                "feminine": "mother",
+                "masculine": "father"
+            },
+            "language": "en"
         },
-        "nl": {
-            "feminine": "moeder",
-            "masculine": "vader"
+        {
+            "concept": "parent",
+            "label": {
+                "feminine": "moeder",
+                "masculine": "vader"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -452,18 +702,29 @@ It is also possible to have a neutral gender:
 
 ```json
 {
-    "parent": {
-        "en": {
-            "feminine": "mother",
-            "masculine": "father",
-            "neutral": "parent"
+    "concepts": {
+        "parent": {}
+    },
+    "labels": [
+        {
+            "concept": "parent",
+            "label": {
+                "feminine": "mother",
+                "masculine": "father",
+                "neutral": "parent"
+            },
+            "language": "en"
         },
-        "nl":{
-            "feminine": "de moeder",
-            "masculine": "de vader",
-            "neutral": "de ouder"
+        {
+            "concept": "parent",
+            "label": {
+                "feminine": "de moeder",
+                "masculine": "de vader",
+                "neutral": "de ouder"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -477,38 +738,49 @@ The format of the JSON files is as follows:
 
 ```json
 {
-    "to have": {
-        "en": {
-            "singular": {
-                "first person": "I have",
-                "second person": "you have",
-                "third person": {
-                    "feminine": "she has",
-                    "masculine": "he has"
+    "concepts": {
+        "to have": {}
+    },
+    "labels": [
+        {
+            "concept": "to have",
+            "label": {
+                "singular": {
+                    "first person": "I have",
+                    "second person": "you have",
+                    "third person": {
+                        "feminine": "she has",
+                        "masculine": "he has"
+                    }
+                },
+                "plural": {
+                    "first person": "we have",
+                    "second person": "you have",
+                    "third person": "they have"
                 }
             },
-            "plural": {
-                "first person": "we have",
-                "second person": "you have",
-                "third person": "they have"
-            }
+            "languages": "en"
         },
-        "nl": {
-            "singular": {
-                "first person": "ik heb",
-                "second person": "jij hebt",
-                "third person": {
-                    "feminine": "zij heeft",
-                    "masculine": "hij heeft"
+        {
+            "concept": "to have",
+            "label": {
+                "singular": {
+                    "first person": "ik heb",
+                    "second person": "jij hebt",
+                    "third person": {
+                        "feminine": "zij heeft",
+                        "masculine": "hij heeft"
+                    }
+                },
+                "plural": {
+                    "first person": "wij hebben",
+                    "second person": "jullie hebben",
+                    "third person": "zij hebben"
                 }
             },
-            "plural": {
-                "first person": "wij hebben",
-                "second person": "jullie hebben",
-                "third person": "zij hebben"
-            }
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -516,16 +788,23 @@ Because Finnish does not distinguish between masculine and feminine gender, the 
 
 ```json
 {
-    "to have": {
-        fi: {
-            "singular": {
-                "first person": "minulla on",
-                "second person": "sinulla on",
-                "third person": "hänellä on"
+    "concepts": {
+        "to have": {}
+    },
+    "labels": [
+        {
+            "concept": "to have",
+            "label": {
+                "singular": {
+                    "first person": "minulla on",
+                    "second person": "sinulla on",
+                    "third person": "hänellä on"
+                },
+                "plural": "..."
             },
-            "plural": "..."
+            "language": "fi"
         }
-    }
+    ]
 }
 ```
 
@@ -535,24 +814,35 @@ When concepts are verbs, infinitives can be specified as follows:
 
 ```json
 {
-    "to have": {
-        "en": {
-            "infinitive": "to have",
-            "singular": {
-                "first person": "I have",
-                "second person": "..."
+    "concepts": {
+        "to have": {}
+    },
+    "labels": [
+        {
+            "concept": "to have",
+            "label": {
+                "infinitive": "to have",
+                "singular": {
+                    "first person": "I have",
+                    "second person": "..."
+                },
+                "plural": "..."
             },
-            "plural": "..."
+            "language": "en"
         },
-        "fi": {
-            "infinitive": "olla (omistaa)",
-            "singular": {
-                "first person": "minulla on",
-                "second person": "..."
+        {
+            "concept": "to have",
+            "label": {
+                "infinitive": "olla (omistaa)",
+                "singular": {
+                    "first person": "minulla on",
+                    "second person": "..."
+                },
+                "plural": "..."
             },
-            "plural": "..."
+            "language": "fi"
         }
-    }
+    ]
 }
 ```
 
@@ -562,20 +852,35 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
 
 ```json
 {
-    "to ask": {
-        "en": {
-            "infinitive": "to ask",
-            "verbal noun": "asking"
+    "concepts": {
+        "to ask": {}
+    },
+    "labels": [
+        {
+            "concepts": "to ask,"
+            "label": {
+                "infinitive": "to ask",
+                "verbal noun": "asking"
+            },
+            "language": "en"
         },
-        "fi": {
-            "infinitive": "kysyä",
-            "verbal noun": "kysyminen"
+        {
+            "concepts": "to ask,"
+            "label": {
+                "infinitive": "kysyä",
+                "verbal noun": "kysyminen"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "infinitive": "vragen",
-            "verbal noun": "het vragen"
+        {
+            "concepts": "to ask,"
+            "label": {
+                "infinitive": "vragen",
+                "verbal noun": "het vragen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -585,39 +890,46 @@ When concepts are verbs, the present tense, past tense, present perfect, and pas
 
 ```json
 {
-    "to be": {
-        "en": {
-            "infinitive": "to be",
-            "present tense": {
-                "singular": {
-                    "first person": "I am",
-                    "second person": "..."
+    "concepts": {
+        "to be": {}
+    },
+    "labels": [
+        {
+            "concept": "to be",
+            "label": {
+                "infinitive": "to be",
+                "present tense": {
+                    "singular": {
+                        "first person": "I am",
+                        "second person": "..."
+                    },
+                    "plural": "..."
                 },
-                "plural": "..."
+                "past tense": {
+                    "singular": {
+                        "first person": "I was",
+                        "second person": "..."
+                    },
+                    "plural": "..."
+                },
+                "present perfect tense": {
+                    "singular": {
+                        "first person": "I have been",
+                        "second person": "..."
+                    },
+                    "plural": "..."
+                },
+                "past perfect tense": {
+                    "singular": {
+                        "first person": "I had been",
+                        "second person": "..."
+                    },
+                    "plural": "..."
+                }
             },
-            "past tense": {
-                "singular": {
-                    "first person": "I was",
-                    "second person": "..."
-                },
-                "plural": "..."
-            },
-            "present perfect tense": {
-                "singular": {
-                    "first person": "I have been",
-                    "second person": "..."
-                },
-                "plural": "..."
-            },
-            "past perfect tense": {
-                "singular": {
-                    "first person": "I had been",
-                    "second person": "..."
-                },
-                "plural": "..."
-            }
+            "language": "en"
         }
-    }
+    ]
 }
 ```
 
@@ -627,41 +939,29 @@ Degrees of comparison are specified as follows:
 
 ```json
 {
-    "small": {
-        "en": {
-            "positive degree": "small",
-            "comparative degree": "smaller",
-            "superlative degree": "smallest"
+    "concepts": {
+        "small": {}
+    },
+    "labels": [
+        {
+            "concept": "small",
+            "label": {
+                "positive degree": "small",
+                "comparative degree": "smaller",
+                "superlative degree": "smallest"
+            },
+            "language": "en"
         },
-        "nl": {
-            "positive degree": "klein",
-            "comparative degree": "kleiner",
-            "superlative degree": "kleinst"
+        {
+            "concept": "small",
+            "label": {
+                "positive degree": "klein",
+                "comparative degree": "kleiner",
+                "superlative degree": "kleinst"
+            },
+            "language": "nl"
         }
-    }
-}
-```
-
-When there are synonyms, they need to be in the same order in every degree. This makes sure that Toisto, in the example below, does not consider "suurin" a superlative of "iso".
-
-```json
-{
-    "big": {
-        "fi": {
-            "positive degree": [
-                "iso",
-                "suuri"
-            ],
-            "comparative degree": [
-                "isompi",
-                "suurempi"
-            ],
-            "superlative degree": [
-                "isoin",
-                "suurin"
-            ]
-        }
-    }
+    ]
 }
 ```
 
@@ -673,18 +973,29 @@ All three moods can be combined as follows:
 
 ```json
 {
-    "you run": {
-        "en": {
-            "declarative": "You run.",
-            "interrogative": "Do you run?",
-            "imperative": "Run!"
+    "concepts": {
+        "you run": {}
+    },
+    "labels": [
+        {
+            "concept": "you run",
+            "label": {
+                "declarative": "You run.",
+                "interrogative": "Do you run?",
+                "imperative": "Run!"
+            },
+            "language": "en"
         },
-        "nl": {
-            "declarative": "Jij rent.",
-            "interrogative": "Ren jij?",
-            "imperative": "Ren!"
+        {
+            "concept": "you run",
+            "label": {
+                "declarative": "Jij rent.",
+                "interrogative": "Ren jij?",
+                "imperative": "Ren!"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -692,16 +1003,27 @@ It is also possible to include just two of the three grammatical moods:
 
 ```json
 {
-    "the car is black": {
-        "en": {
-            "declarative": "The car is black.",
-            "interrogative": "Is the car black?"
+    "concepts": {
+        "the car is black": {}
+    },
+    "labels": [
+        {
+            "concept": "the car is black",
+            "label": {
+                "declarative": "The car is black.",
+                "interrogative": "Is the car black?"
+            },
+            "language": "en"
         },
-        "nl": {
-            "declarative": "De auto is zwart.",
-            "interrogative": "Is de auto zwart?"
+        {
+            "concept": "the car is black",
+            "label": {
+                "declarative": "De auto is zwart.",
+                "interrogative": "Is de auto zwart?"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -711,16 +1033,27 @@ Polarity (affirmative and negative sentence forms) can be specified as follows:
 
 ```json
 {
-    "the car is black": {
-        "en": {
-            "affirmative": "The car is black.",
-            "negative": "The car is not black."
+    "concepts": {
+        "the car is black": {}
+    },
+    "labels": [
+        {
+            "concept": "the car is black",
+            "label": {
+                "affirmative": "The car is black.",
+                "negative": "The car is not black."
+            },
+            "language": "en"
         },
-        "nl": {
-            "affirmative": "De auto is zwart.",
-            "negative": "De auto is niet zwart."
+        {
+            "concept": "the car is black",
+            "label": {
+                "affirmative": "De auto is zwart.",
+                "negative": "De auto is niet zwart."
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -730,16 +1063,27 @@ Cardinal and ordinal numbers can be specified as follows:
 
 ```json
 {
-    "one": {
-        "en": {
-            "cardinal": "one",
-            "ordinal": "first"
+    "concepts": {
+        "1": {}
+    },
+    "labels": [
+        {
+            "concept": "1",
+            "label": {
+                "cardinal": "one",
+                "ordinal": "first"
+            },
+            "language": "en"
         },
-        "fi": {
-            "cardinal": "yksi",
-            "ordinal": "ensimmäinen"
+        {
+            "concept": "1",
+            "label": {
+                "cardinal": "yksi",
+                "ordinal": "ensimmäinen"
+            },
+            "language": "fi"
         }
-    }
+    ]
 }
 ```
 
@@ -749,20 +1093,35 @@ Abbreviations can be specified as follows:
 
 ```json
 {
-    "llc": {
-        "en": {
-            "full form": "limited liability company",
-            "abbreviation": "LLC"
+    "concepts":{
+        "llc": {}
+    },
+    "labels": [
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "limited liability company",
+                "abbreviation": "LLC"
+            },
+            "language": "en"
         },
-        "fi": {
-            "full form": "osakeyhtiö",
-            "abbreviation": "oy"
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "osakeyhtiö",
+                "abbreviation": "oy"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "full form": "de naamloze vennootschap",
-            "abbreviation": "de NV"
+        {
+            "concept": "llc",
+            "label": {
+                "full form": "de naamloze vennootschap",
+                "abbreviation": "de NV"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }
 ```
 
@@ -774,34 +1133,60 @@ When a concept is a compound of one or more other concepts, this can be specifie
 
 ```json
 {
-    "day": {
-        "en": {
-            "singular": "day",
-            "plural": "days"
-        },
-        "nl": {
-            "singular": "de dag",
-            "plural": "de dagen"
+    "concepts": {
+        "day": {},
+        "week": {},
+        "days of the week": {
+            "roots": [
+                "day",
+                "week"
+            ],
         }
     },
-    "week": {
-        "en": {
-            "singular": "week",
-            "plural": "weeks"
+    "labels": [
+        {
+            "concept": "day",
+            "label": {
+                "singular": "day",
+                "plural": "days"
+            },
+            "language": "en"
         },
-        "nl": {
-            "singular": "de week",
-            "plural": "de weken"
+        {
+            "concept": "day",
+            "label": {
+                "singular": "de dag",
+                "plural": "de dagen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "week",
+            "label": {
+                "singular": "week",
+                "plural": "weeks"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "week",
+            "label": {
+                "singular": "de week",
+                "plural": "de weken"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "days of the week",
+            "label": "days of the week",
+            "language": "en"
+        },
+        {
+            "concept": "days of the week",
+            "label": "de dagen van de week",
+            "language": "nl"
         }
-    },
-    "days of the week": {
-        "roots": [
-            "day",
-            "week"
-        ],
-        "en": "days of the week",
-        "nl": "de dagen van de week"
-    }
+    ]
 }
 ```
 
@@ -811,17 +1196,36 @@ If the root concepts differ per language, an object with languages as keys can b
 
 ```json
 {
-    "shirt": {
-        "en": "shirt",
-        "fi": "paita"
+    "concepts": {
+        "shirt": {},
+        "sweater": {
+            "roots": {
+                "fi": "shirt"
+            }
+        }
     },
-    "sweater": {
-        "roots": {
-            "fi": "shirt"
+    "labels": [
+        {
+            "concept": "shirt",
+            "label": "shirt",
+            "language": "en"
         },
-        "en": "sweater",
-        "fi": "neulepaita"
-    }
+        {
+            "concept": "shirt",
+            "label": "paita",
+            "language": "fi"
+        },
+        {
+            "concept": "sweater",
+            "label": "sweater",
+            "language": "en"
+        },
+        {
+            "concept": "sweater",
+            "label": "neulepaita",
+            "language": "fi"
+        }
+    ]
 }
 ```
 
@@ -833,16 +1237,35 @@ When one concept is an antonym (opposite) of another concept, this can be specif
 
 ```json
 {
-    "big": {
-        "en": "big",
-        "nl": "groot",
-        "antonym": "small"
-    },
-    "small": {
-        "en": "small",
-        "nl": "klein",
-        "antonym": "big"
-    }
+    "concepts": {
+        "big": {
+            "antonym": "small"
+        },
+        "small": {
+            "antonym": "big"
+        },
+    "labels": [
+        {
+            "concept": "big",
+            "label": "big",
+            "language": "en"
+        },
+        {
+            "concept": "big",
+            "label": "groot",
+            "language": "nl"
+        },
+        {
+            "concept": "small",
+            "label": "small",
+            "language": "en"
+        },
+        {
+            "concept": "small",
+            "label": "klein",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -859,15 +1282,34 @@ Given the JSON below, the command `toisto practice color`, would select both col
 
 ```json
 {
-    "color": {
-        "en": "color",
-        "nl": "de kleur",
+    "concepts": {
+        "color": {},
+        "red": {
+            "hypernym": "color"
+        }
     },
-    "red": {
-        "hypernym": "color",
-        "en": "red",
-        "nl": "rood",
-    }
+    "labels": [
+        {
+            "concept": "color",
+            "label": "color",
+            "language": "en"
+        },
+        {
+            "concept": "color",
+            "label": "de kleur",
+            "language": "nl"
+        },
+        {
+            "concept": "red",
+            "label": "red",
+            "language": "en"
+        },
+        {
+            "concept": "red",
+            "label": "rood",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -884,15 +1326,33 @@ Given the JSON below, the command `toisto practice car`, would select both the c
 
 ```json
 {
-    "car": {
-        "en": "car",
-        "nl": "de auto",
-    },
-    "wheel": {
-        "holonym": "car",
-        "en": "wheel",
-        "nl": "het wiel",
-    }
+    "concepts": {
+        "car": {},
+        "wheel": {
+            "holonym": "car",
+        },
+    "labels": [
+        {
+            "concept": "car",
+            "label": "car",
+            "language": "en"
+        },
+        {
+            "concept": "car",
+            "label": "de auto",
+            "language": "nl"
+        },
+        {
+            "concept": "wheel",
+            "label": "wheel",
+            "language": "en"
+        },
+        {
+            "concept": "wheel",
+            "label": "het wiel",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -906,22 +1366,47 @@ Given the JSON below, the command `toisto practice "to paint"`, would select "to
 
 ```json
 {
-    "to paint": {
-        "involves": [
-            "painter",
-            "painting"
-        ],
-        "en": "to paint",
-        "nl": "schilderen",
-    },
-    "painter": {
-        "en": "painter",
-        "nl": "de schilder",
-    },
-    "painting": {
-        "en": "painting",
-        "nl": "het schilderij",
-    }
+    "concepts": {
+        "painter": {},
+        "painting": {},
+        "to paint": {
+            "involves": [
+                "painter",
+                "painting"
+            ]
+        },
+    "labels": [
+        {
+            "concept": "to paint",
+            "label": "to paint",
+            "language": "en"
+        },
+        {
+            "concept": "to paint",
+            "label": "schilderen",
+            "language": "nl"
+        },
+        {
+            "concept": "painter",
+            "label": "painter",
+            "language": "en"
+        },
+        {
+            "concept": "painter",
+            "label": "de schilder",
+            "language": "nl"
+        },
+        {
+            "concept": "painting",
+            "label": "painting",
+            "language": "en"
+        },
+        {
+            "concept": "painting",
+            "label": "het schilderij",
+            "language": "nl"
+        }
+    ]
 }
 ```
 
@@ -933,15 +1418,34 @@ When one concept is an example of the usage of another concept, this can be spec
 
 ```json
 {
-    "next to": {
-        "en": "next to",
-        "fi": "vieressä",
-        "example": "the museum is next to the church"
+    "concepts": {
+        "next to": {
+            "example": "the museum is next to the church"
+        },
+        "the museum is next to the church": {}
     },
-    "the museum is next to the church": {
-        "en": "The museum is next to the church.",
-        "fi": "Museo on kirkon vieressä."
-    }
+    "labels": [
+        {
+            "concept": "next to",
+            "label": "next to",
+            "language": "en"
+        },
+        {
+            "concept": "next to",
+            "label": "vieressä",
+            "language": "fi"
+        },
+        {
+            "concept": "the museum is next to the church",
+            "label": "The museum is next to the church.",
+            "language": "en"
+        },
+        {
+            "concept": "the museum is next to the church",
+            "label": "Museo on kirkon vieressä.",
+            "language": "fi"
+        }
+    ]
 }
 ```
 
@@ -953,15 +1457,36 @@ When one concept is a question and the other concept is the answer, this can be 
 
 ```json
 {
-    "what do you like": {
-        "en": "What do you like?;ice cream",
-        "fi": "Mistä sinä pidät?;jäätelöä",
-        "answer": "i like ice cream"
+    "concepts": {
+        "what do you like": {
+            "answer": "i like ice cream"
+        },
+        "i like ice cream": {}
     },
-    "i like ice cream": {
-        "en": "I like ice cream.",
-        "fi": "Minä pidän jäätelöstä.|Pidän jäätelöstä."
-    }
+    "labels": [
+        {
+            "concept": "what do you like",
+            "label": "What do you like?",
+            "language": "en",
+            "tip": "ice cream"
+        },
+        {
+            "concept": "what do you like",
+            "label": "Mistä sinä pidät?",
+            "language": "fi",
+            "tip": "jäätelöä"
+        },
+        {
+            "concept": "i like ice cream.",
+            "label": "I like ice cream.",
+            "language": "en"
+        },
+        {
+            "concept": "i like ice cream.",
+            "label": "Minä pidän jäätelöstä.|Pidän jäätelöstä.",
+            "language": "fi"
+        }
+    ]
 }
 ```
 
@@ -969,27 +1494,48 @@ Answers are also possible if the concept has multiple grammatical forms, like si
 
 ```json
 {
-    "what do you like": {
-        "en": {
-            "singular": "What do you like?;singular/ice cream",
-            "plural": "What do you like?;plural/ice cream"
+    "concepts": {
+        "what do you like": {
+            "answer": "i like ice cream",
         },
-        "fi": {
-            "singular": "Mistä sinä pidät?;jäätelöä",
-            "plural": "Mistä te pidätte?;jäätelöä"
-        },
-        "answer": "i like ice cream"
+        "i like ice cream": {}
     },
-    "i like ice cream": {
-        "en": {
-            "singular": "I like ice cream.",
-            "plural": "We like ice cream."
+    "labels": [
+        {
+            "concept": "what do you like",
+            "label":{
+                "singular": "What do you like?",
+                "plural": "What do you all like?"
+            },
+            "language": "en",
+            "tip": "ice cream"
         },
-        "fi": {
-            "singular": "Minä pidän jäätelöstä.",
-            "plural": "Me pidämme jäätelöstä."
+        {
+            "concept": "what do you like",
+            "label": {
+                "singular": "Mistä sinä pidät?",
+                "plural": "Mistä te pidätte?"
+            },
+            "language": "fi",
+            "tip": "jäätelöä"
+        },
+        {
+            "concept": "i like ice cream",
+            "label": {
+                "singular": "I like ice cream.",
+                "plural": "We like ice cream."
+            },
+            "language": "en"
+        },
+        {
+            "concept": "i like ice cream",
+            "label": {
+                "singular": "Minä pidän jäätelöstä.",
+                "plural": "Me pidämme jäätelöstä."
+            },
+            "language": "fi"
         }
-    }
+    ]
 }
 ```
 
@@ -997,24 +1543,52 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
 
 ```json
 {
-    "do you like ice cream": {
-        "en": "Do you like ice cream?",
-        "fi": "Pidätko sinä jäätelöstä?",
-        "answer": [
-            "yes, i like ice cream",
-            "no, i don't like ice cream"
-        ]
+    "concepts": {
+        "do you like ice cream": {
+            "answer": [
+                "yes, i like ice cream",
+                "no, i don't like ice cream"
+            ],
+        },
+        "yes, i like ice cream": {
+            "answer-only": true
+        },
+        "no, i don't like ice cream": {
+            "answer-only": true
+        }
     },
-    "yes, i like ice cream": {
-        "answer-only": true,
-        "en": "Yes, I do.",
-        "fi": "Pidän."
-    },
-    "no, i don't like ice cream": {
-        "answer-only": true,
-        "en": "No, I don't.",
-        "fi": "En."
-    }
+    "labels": [
+        {
+            "concept": "do you like ice cream",
+            "label": "Do you like ice cream?",
+            "language": "en"
+        },
+        {
+            "concept": "do you like ice cream",
+            "label": "Pidätko sinä jäätelöstä?",
+            "language": "fi"
+        },
+        {
+            "concept": "yes, i like ice cream",
+            "label": "Yes, I do.",
+            "language": "en"
+        },
+        {
+            "concept": "yes, i like ice cream",
+            "label": "Pidän.",
+            "language": "fi"
+        },
+        {
+            "concept": "no, i don't like ice cream",
+            "label": "No, I don't.",
+            "language": "en"
+        },
+        {
+            "concept": "no, i don't like ice cream",
+            "label": "En.",
+            "language": "fi"
+        }
+    ]
 }
 ```
 

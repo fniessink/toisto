@@ -1,13 +1,35 @@
 {
-    "accurately": {
-        "en": [
-            "accurately",
-            "precisely"
-        ],
-        "fi": "tarkasti",
-        "nl": [
-            "nauwkeurig",
-            "precies"
-        ]
-    }
+    "concepts": {
+        "accurately": {}
+    },
+    "labels": [
+        {
+            "concept": "accurately",
+            "label": "accurately",
+            "language": "en"
+        },
+        {
+            "concept": "accurately",
+            "label": "precisely",
+            "language": "en"
+        },
+        {
+            "concept": "accurately",
+            "label": "tarkasti",
+            "language": "fi"
+        },
+        {
+            "concept": "accurately",
+            "label": "nauwkeurig",
+            "language": "nl"
+        },
+        {
+            "concept": [
+                "accurately",
+                "exactly"
+            ],
+            "label": "precies",
+            "language": "nl"
+        }
+    ]
 }

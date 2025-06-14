@@ -1,25 +1,67 @@
 {
-    "sun": {
-        "example": "the sun shines",
-        "holonym": "solar system",
-        "hypernym": "star",
-        "en": "sun",
-        "fi": "aurinko",
-        "nl": "de zon"
+    "concepts": {
+        "sun": {
+            "example": "the sun shines",
+            "holonym": "solar system",
+            "hypernym": "star"
+        },
+        "sunset": {
+            "roots": "sun"
+        },
+        "the sun shines": {
+            "roots": "sun"
+        }
     },
-    "sunset": {
-        "roots": "sun",
-        "en": [
-            "sunset",
-            "sundown"
-        ],
-        "fi": "auringonlasku",
-        "nl": "de zonsondergang"
-    },
-    "the sun shines": {
-        "roots": "sun",
-        "en": "The sun shines.",
-        "fi": "Aurinko paistaa.",
-        "nl": "De zon schijnt."
-    }
+    "labels": [
+        {
+            "concept": "sun",
+            "label": "sun",
+            "language": "en"
+        },
+        {
+            "concept": "sun",
+            "label": "aurinko",
+            "language": "fi"
+        },
+        {
+            "concept": "sun",
+            "label": "de zon",
+            "language": "nl"
+        },
+        {
+            "concept": "sunset",
+            "label": "sunset",
+            "language": "en"
+        },
+        {
+            "concept": "sunset",
+            "label": "sundown",
+            "language": "en"
+        },
+        {
+            "concept": "sunset",
+            "label": "auringonlasku",
+            "language": "fi"
+        },
+        {
+            "concept": "sunset",
+            "label": "de zonsondergang",
+            "language": "nl"
+        },
+        {
+            "concept": "the sun shines",
+            "label": "The sun shines.",
+            "language": "en"
+        },
+        {
+            "concept": "the sun shines",
+            "label": "Aurinko paistaa.",
+            "language": "fi"
+        },
+        {
+            "concept": "the sun shines",
+            "label": "De zon schijnt.",
+            "language": "nl"
+        }
+    ]
 }

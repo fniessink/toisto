@@ -1,8 +1,24 @@
 {
-    "gull": {
-        "hypernym": "bird",
-        "en": "gull",
-        "fi": "lokki",
-        "nl": "de meeuw"
-    }
+    "concepts": {
+        "gull": {
+            "hypernym": "bird"
+        }
+    },
+    "labels": [
+        {
+            "concept": "gull",
+            "label": "gull",
+            "language": "en"
+        },
+        {
+            "concept": "gull",
+            "label": "lokki",
+            "language": "fi"
+        },
+        {
+            "concept": "gull",
+            "label": "de meeuw",
+            "language": "nl"
+        }
+    ]
 }

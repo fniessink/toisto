@@ -1,7 +1,22 @@
 {
-    "carbon footprint": {
-        "en": "carbon footprint",
-        "fi": "hiilijalanjälki",
-        "nl": "CO²-voetafdruk|CO2-voetafdruk"
-    }
+    "concepts": {
+        "carbon footprint": {}
+    },
+    "labels": [
+        {
+            "concept": "carbon footprint",
+            "label": "carbon footprint",
+            "language": "en"
+        },
+        {
+            "concept": "carbon footprint",
+            "label": "hiilijalanjälki",
+            "language": "fi"
+        },
+        {
+            "concept": "carbon footprint",
+            "label": "CO²-voetafdruk|CO2-voetafdruk",
+            "language": "nl"
+        }
+    ]
 }

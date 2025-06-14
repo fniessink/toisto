@@ -1,43 +1,83 @@
 {
-    "galaxy": {
-        "example": "The Milky Way Galaxy is a galaxy",
-        "holonym": "universe",
-        "en": {
-            "singular": "galaxy",
-            "plural": "galaxies"
+    "concepts": {
+        "galaxy": {
+            "example": "The Milky Way Galaxy is a galaxy",
+            "holonym": "universe"
         },
-        "fi": {
-            "singular": "galaksi",
-            "plural": "galaksit"
+        "Milky Way Galaxy": {
+            "example": "The Milky Way Galaxy is a galaxy",
+            "hypernym": "galaxy",
+            "roots": {
+                "en": [
+                    "milk",
+                    "galaxy"
+                ],
+                "nl": "milk",
+                "fi": "bird"
+            }
         },
-        "nl": {
-            "singular": "het sterrenstelsel",
-            "plural": "de sterrenstelsels"
+        "The Milky Way Galaxy is a galaxy": {
+            "roots": [
+                "Milky Way Galaxy",
+                "to be",
+                "galaxy"
+            ]
         }
     },
-    "Milky Way Galaxy": {
-        "example": "The Milky Way Galaxy is a galaxy",
-        "hypernym": "galaxy",
-        "roots": {
-            "en": [
-                "milk",
-                "galaxy"
-            ],
-            "nl": "milk",
-            "fi": "bird"
+    "labels": [
+        {
+            "concept": "galaxy",
+            "label": {
+                "singular": "galaxy",
+                "plural": "galaxies"
+            },
+            "language": "en"
         },
-        "en": "Milky Way Galaxy",
-        "fi": "linnunrata",
-        "nl": "de Melkweg"
-    },
-    "The Milky Way Galaxy is a galaxy": {
-        "roots": [
-            "Milky Way Galaxy",
-            "to be",
-            "galaxy"
-        ],
-        "en": "The Milky Way Galaxy is a galaxy.",
-        "fi": "Linnunrata on galaksi.",
-        "nl": "De Melkweg is een sterrenstelsel."
-    }
+        {
+            "concept": "galaxy",
+            "label": {
+                "singular": "galaksi",
+                "plural": "galaksit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "galaxy",
+            "label": {
+                "singular": "het sterrenstelsel",
+                "plural": "de sterrenstelsels"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "Milky Way Galaxy",
+            "label": "Milky Way Galaxy",
+            "language": "en"
+        },
+        {
+            "concept": "Milky Way Galaxy",
+            "label": "linnunrata",
+            "language": "fi"
+        },
+        {
+            "concept": "Milky Way Galaxy",
+            "label": "de Melkweg",
+            "language": "nl"
+        },
+        {
+            "concept": "The Milky Way Galaxy is a galaxy",
+            "label": "The Milky Way Galaxy is a galaxy.",
+            "language": "en"
+        },
+        {
+            "concept": "The Milky Way Galaxy is a galaxy",
+            "label": "Linnunrata on galaksi.",
+            "language": "fi"
+        },
+        {
+            "concept": "The Milky Way Galaxy is a galaxy",
+            "label": "De Melkweg is een sterrenstelsel.",
+            "language": "nl"
+        }
+    ]
 }

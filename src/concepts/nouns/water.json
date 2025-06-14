@@ -1,35 +1,74 @@
 {
-    "water": {
-        "hypernym": "drink",
-        "en": {
-            "singular": "water",
-            "plural": "waters"
+    "concepts": {
+        "water": {
+            "hypernym": "drink"
         },
-        "fi": {
-            "singular": "vesi",
-            "plural": "vedet"
+        "mineral water": {
+            "hypernym": "water"
         },
-        "nl": {
-            "singular": "het water",
-            "plural": [
-                "de waters",
-                "de wateren"
-            ]
+        "on the water": {
+            "roots": "water"
         }
     },
-    "mineral water": {
-        "hypernym": "water",
-        "en": "mineral water",
-        "fi": [
-            "kivennäisvesi",
-            "vissy"
-        ],
-        "nl": "het mineraalwater"
-    },
-    "on the water": {
-        "roots": "water",
-        "en": "on the water",
-        "fi": "vesillä",
-        "nl": "op het water"
-    }
+    "labels": [
+        {
+            "concept": "water",
+            "label": {
+                "singular": "water",
+                "plural": "waters"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "water",
+            "label": {
+                "singular": "vesi",
+                "plural": "vedet"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "water",
+            "label": {
+                "singular": "het water",
+                "plural": "de waters"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "mineral water",
+            "label": "mineral water",
+            "language": "en"
+        },
+        {
+            "concept": "mineral water",
+            "label": "kivennäisvesi",
+            "language": "fi"
+        },
+        {
+            "concept": "mineral water",
+            "label": "vissy",
+            "language": "fi"
+        },
+        {
+            "concept": "mineral water",
+            "label": "het mineraalwater",
+            "language": "nl"
+        },
+        {
+            "concept": "on the water",
+            "label": "on the water",
+            "language": "en"
+        },
+        {
+            "concept": "on the water",
+            "label": "vesillä",
+            "language": "fi"
+        },
+        {
+            "concept": "on the water",
+            "label": "op het water",
+            "language": "nl"
+        }
+    ]
 }

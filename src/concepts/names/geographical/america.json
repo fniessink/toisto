@@ -1,35 +1,87 @@
 {
-    "america": {
-        "hypernym": "continent",
-        "en": "America",
-        "fi": "Amerikka",
-        "nl": "Amerika"
+    "concepts": {
+        "america": {
+            "hypernym": "continent"
+        },
+        "north america": {
+            "holonym": "america",
+            "roots": [
+                "north",
+                "america"
+            ]
+        },
+        "south america": {
+            "holonym": "america",
+            "roots": [
+                "south",
+                "america"
+            ]
+        },
+        "middle america": {
+            "holonym": "america",
+            "roots": "america"
+        }
     },
-    "north america": {
-        "holonym": "america",
-        "roots": [
-            "north",
-            "america"
-        ],
-        "en": "North America",
-        "fi": "Pohjois-Amerikka",
-        "nl": "Noord-Amerika"
-    },
-    "south america": {
-        "holonym": "america",
-        "roots": [
-            "south",
-            "america"
-        ],
-        "en": "South America",
-        "fi": "Etelä-Amerikka",
-        "nl": "Zuid-Amerika"
-    },
-    "middle america": {
-        "holonym": "america",
-        "roots": "america",
-        "en": "Middle America",
-        "fi": "Väli-Amerikka",
-        "nl": "Midden-Amerika"
-    }
+    "labels": [
+        {
+            "concept": "america",
+            "label": "America",
+            "language": "en"
+        },
+        {
+            "concept": "america",
+            "label": "Amerikka",
+            "language": "fi"
+        },
+        {
+            "concept": "america",
+            "label": "Amerika",
+            "language": "nl"
+        },
+        {
+            "concept": "north america",
+            "label": "North America",
+            "language": "en"
+        },
+        {
+            "concept": "north america",
+            "label": "Pohjois-Amerikka",
+            "language": "fi"
+        },
+        {
+            "concept": "north america",
+            "label": "Noord-Amerika",
+            "language": "nl"
+        },
+        {
+            "concept": "south america",
+            "label": "South America",
+            "language": "en"
+        },
+        {
+            "concept": "south america",
+            "label": "Etelä-Amerikka",
+            "language": "fi"
+        },
+        {
+            "concept": "south america",
+            "label": "Zuid-Amerika",
+            "language": "nl"
+        },
+        {
+            "concept": "middle america",
+            "label": "Middle America",
+            "language": "en"
+        },
+        {
+            "concept": "middle america",
+            "label": "Väli-Amerikka",
+            "language": "fi"
+        },
+        {
+            "concept": "middle america",
+            "label": "Midden-Amerika",
+            "language": "nl"
+        }
+    ]
 }

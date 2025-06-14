@@ -1,7 +1,22 @@
 {
-    "height": {
-        "en": "height",
-        "fi": "korkeus",
-        "nl": "de hoogte"
-    }
+    "concepts": {
+        "height": {}
+    },
+    "labels": [
+        {
+            "concept": "height",
+            "label": "height",
+            "language": "en"
+        },
+        {
+            "concept": "height",
+            "label": "korkeus",
+            "language": "fi"
+        },
+        {
+            "concept": "height",
+            "label": "de hoogte",
+            "language": "nl"
+        }
+    ]
 }

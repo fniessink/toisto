@@ -1,7 +1,22 @@
 {
-    "to scan": {
-        "en": "to scan",
-        "fi": "skannata",
-        "nl": "scannen"
-    }
+    "concepts": {
+        "to scan": {}
+    },
+    "labels": [
+        {
+            "concept": "to scan",
+            "label": "to scan",
+            "language": "en"
+        },
+        {
+            "concept": "to scan",
+            "label": "skannata",
+            "language": "fi"
+        },
+        {
+            "concept": "to scan",
+            "label": "scannen",
+            "language": "nl"
+        }
+    ]
 }

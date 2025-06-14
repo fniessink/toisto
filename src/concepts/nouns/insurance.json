@@ -1,26 +1,77 @@
 {
-    "insurance": {
-        "en": "insurance",
-        "fi": "vakuutus",
-        "nl": "de verzekering"
+    "concepts": {
+        "insurance": {},
+        "insurance company": {
+            "roots": "insurance"
+        },
+        "home insurance": {
+            "hypernym": "insurance",
+            "roots": "insurance"
+        },
+        "insurance premium": {
+            "roots": "insurance"
+        }
     },
-    "insurance company": {
-        "roots": "insurance",
-        "en": "insurance company",
-        "fi": "vakuutusyhtiö",
-        "nl": "de verzekeringsmaatschappij"
-    },
-    "home insurance": {
-        "hypernym": "insurance",
-        "roots": "insurance",
-        "en": "home insurance",
-        "fi": "kotivakuutus",
-        "nl": "de woonverzekering"
-    },
-    "insurance premium": {
-        "roots": "insurance",
-        "en": "insurance premium",
-        "fi": "vakuutusmaksu",
-        "nl": "de verzekeringspremie"
-    }
+    "labels": [
+        {
+            "concept": "insurance",
+            "label": "insurance",
+            "language": "en"
+        },
+        {
+            "concept": "insurance",
+            "label": "vakuutus",
+            "language": "fi"
+        },
+        {
+            "concept": "insurance",
+            "label": "de verzekering",
+            "language": "nl"
+        },
+        {
+            "concept": "insurance company",
+            "label": "insurance company",
+            "language": "en"
+        },
+        {
+            "concept": "insurance company",
+            "label": "vakuutusyhtiö",
+            "language": "fi"
+        },
+        {
+            "concept": "insurance company",
+            "label": "de verzekeringsmaatschappij",
+            "language": "nl"
+        },
+        {
+            "concept": "home insurance",
+            "label": "home insurance",
+            "language": "en"
+        },
+        {
+            "concept": "home insurance",
+            "label": "kotivakuutus",
+            "language": "fi"
+        },
+        {
+            "concept": "home insurance",
+            "label": "de woonverzekering",
+            "language": "nl"
+        },
+        {
+            "concept": "insurance premium",
+            "label": "insurance premium",
+            "language": "en"
+        },
+        {
+            "concept": "insurance premium",
+            "label": "vakuutusmaksu",
+            "language": "fi"
+        },
+        {
+            "concept": "insurance premium",
+            "label": "de verzekeringspremie",
+            "language": "nl"
+        }
+    ]
 }

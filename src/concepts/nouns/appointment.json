@@ -1,13 +1,29 @@
 {
-    "appointment": {
-        "roots": {
-            "fi": [
-                "time",
-                "reservation"
-            ]
+    "concepts": {
+        "appointment": {
+            "roots": {
+                "fi": [
+                    "time",
+                    "reservation"
+                ]
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "appointment",
+            "label": "appointment",
+            "language": "en"
         },
-        "en": "appointment",
-        "fi": "ajanvaraus",
-        "nl": "afspraak"
-    }
+        {
+            "concept": "appointment",
+            "label": "ajanvaraus",
+            "language": "fi"
+        },
+        {
+            "concept": "appointment",
+            "label": "afspraak",
+            "language": "nl"
+        }
+    ]
 }

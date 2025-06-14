@@ -1,7 +1,22 @@
 {
-    "eventually": {
-        "en": "eventually",
-        "fi": "lopulta",
-        "nl": "uiteindelijk"
-    }
+    "concepts": {
+        "eventually": {}
+    },
+    "labels": [
+        {
+            "concept": "eventually",
+            "label": "eventually",
+            "language": "en"
+        },
+        {
+            "concept": "eventually",
+            "label": "lopulta",
+            "language": "fi"
+        },
+        {
+            "concept": "eventually",
+            "label": "uiteindelijk",
+            "language": "nl"
+        }
+    ]
 }

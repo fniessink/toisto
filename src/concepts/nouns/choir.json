@@ -1,19 +1,35 @@
 {
-    "choir": {
-        "holonym": [
-            "singer"
-        ],
-        "en": {
-            "singular": "choir",
-            "plural": "choirs"
-        },
-        "fi": {
-            "singular": "kuoro",
-            "plural": "kuorot"
-        },
-        "nl": {
-            "singular": "het koor",
-            "plural": "de koren"
+    "concepts": {
+        "choir": {
+            "holonym": [
+                "singer"
+            ]
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "choir",
+            "label": {
+                "singular": "choir",
+                "plural": "choirs"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "choir",
+            "label": {
+                "singular": "kuoro",
+                "plural": "kuorot"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "choir",
+            "label": {
+                "singular": "het koor",
+                "plural": "de koren"
+            },
+            "language": "nl"
+        }
+    ]
 }

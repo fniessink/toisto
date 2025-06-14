@@ -1,7 +1,22 @@
 {
-    "payment": {
-        "en": "payment",
-        "fi": "maksu",
-        "nl": "de betaling"
-    }
+    "concepts": {
+        "payment": {}
+    },
+    "labels": [
+        {
+            "concept": "payment",
+            "label": "payment",
+            "language": "en"
+        },
+        {
+            "concept": "payment",
+            "label": "maksu",
+            "language": "fi"
+        },
+        {
+            "concept": "payment",
+            "label": "de betaling",
+            "language": "nl"
+        }
+    ]
 }

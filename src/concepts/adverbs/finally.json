@@ -1,7 +1,22 @@
 {
-    "finally": {
-        "en": "finally",
-        "fi": "vihdoin",
-        "nl": "eindelijk"
-    }
+    "concepts": {
+        "finally": {}
+    },
+    "labels": [
+        {
+            "concept": "finally",
+            "label": "finally",
+            "language": "en"
+        },
+        {
+            "concept": "finally",
+            "label": "vihdoin",
+            "language": "fi"
+        },
+        {
+            "concept": "finally",
+            "label": "eindelijk",
+            "language": "nl"
+        }
+    ]
 }

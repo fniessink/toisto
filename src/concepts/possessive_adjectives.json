@@ -1,188 +1,216 @@
 {
-    "possessive pronoun cat": {
-        "roots": "cat",
-        "en": {
-            "singular": {
-                "singular": {
-                    "first person": "my cat",
-                    "second person": "your cat",
-                    "third person": {
-                        "feminine": "her cat",
-                        "masculine": "his cats"
-                    }
-                },
-                "plural": {
-                    "first person": "our cat",
-                    "second person": "your cat",
-                    "third person": "their cat"
-                }
-            },
-            "plural": {
-                "singular": {
-                    "first person": "my cats",
-                    "second person": "your cats",
-                    "third person": {
-                        "feminine": "her cats",
-                        "masculine": "his cats"
-                    }
-                },
-                "plural": {
-                    "first person": "our cats",
-                    "second person": "your cats",
-                    "third person": "their cats"
-                }
-            }
+    "concepts": {
+        "possessive pronoun cat": {
+            "roots": "cat"
         },
-        "fi": {
-            "singular": {
-                "singular": {
-                    "first person": "minun kissani",
-                    "second person": "sinun kissasi",
-                    "third person": "hänen kissansa"
-                },
-                "plural": {
-                    "first person": "meidän kissamme",
-                    "second person": "teidän kissanne",
-                    "third person": "heidän kissansa"
-                }
-            },
-            "plural": {
-                "singular": {
-                    "first person": "minun kissani",
-                    "second person": "sinun kissasi",
-                    "third person": "hänen kissansa"
-                },
-                "plural": {
-                    "first person": "meidän kissamme",
-                    "second person": "teidän kissanne",
-                    "third person": "heidän kissansa"
-                }
-            }
-        },
-        "nl": {
-            "singular": {
-                "singular": {
-                    "first person": "mijn kat",
-                    "second person": "jouw kat",
-                    "third person": {
-                        "feminine": "haar kat",
-                        "masculine": "zijn katten"
-                    }
-                },
-                "plural": {
-                    "first person": "onze kat",
-                    "second person": "jullie kat",
-                    "third person": "hun kat"
-                }
-            },
-            "plural": {
-                "singular": {
-                    "first person": "mijn katten",
-                    "second person": "jouw katten",
-                    "third person": {
-                        "feminine": "haar katten",
-                        "masculine": "zijn katten"
-                    }
-                },
-                "plural": {
-                    "first person": "onze katten",
-                    "second person": "jullie katten",
-                    "third person": "hun katten"
-                }
-            }
+        "possessive pronoun house": {
+            "roots": "house"
         }
     },
-    "possessive pronoun house": {
-        "roots": "house",
-        "en": {
-            "singular": {
+    "labels": [
+        {
+            "concept": "possessive pronoun cat",
+            "label": {
                 "singular": {
-                    "first person": "my house",
-                    "second person": "your house",
-                    "third person": {
-                        "feminine": "her house",
-                        "masculine": "his house"
+                    "singular": {
+                        "first person": "my cat",
+                        "second person": "your cat",
+                        "third person": {
+                            "feminine": "her cat",
+                            "masculine": "his cats"
+                        }
+                    },
+                    "plural": {
+                        "first person": "our cat",
+                        "second person": "your cat",
+                        "third person": "their cat"
                     }
                 },
                 "plural": {
-                    "first person": "our house",
-                    "second person": "your house",
-                    "third person": "their house"
+                    "singular": {
+                        "first person": "my cats",
+                        "second person": "your cats",
+                        "third person": {
+                            "feminine": "her cats",
+                            "masculine": "his cats"
+                        }
+                    },
+                    "plural": {
+                        "first person": "our cats",
+                        "second person": "your cats",
+                        "third person": "their cats"
+                    }
                 }
             },
-            "plural": {
-                "singular": {
-                    "first person": "my houses",
-                    "second person": "your houses",
-                    "third person": {
-                        "feminine": "her houses",
-                        "masculine": "his houses"
-                    }
-                },
-                "plural": {
-                    "first person": "our houses",
-                    "second person": "your houses",
-                    "third person": "their houses"
-                }
-            }
+            "language": "en"
         },
-        "fi": {
-            "singular": {
+        {
+            "concept": "possessive pronoun cat",
+            "label": {
                 "singular": {
-                    "first person": "minun taloni",
-                    "second person": "sinun talosi",
-                    "third person": "hänen talonsa"
+                    "singular": {
+                        "first person": "minun kissani",
+                        "second person": "sinun kissasi",
+                        "third person": "hänen kissansa"
+                    },
+                    "plural": {
+                        "first person": "meidän kissamme",
+                        "second person": "teidän kissanne",
+                        "third person": "heidän kissansa"
+                    }
                 },
                 "plural": {
-                    "first person": "meidän talomme",
-                    "second person": "teidän talonne",
-                    "third person": "heidän talonsa"
+                    "singular": {
+                        "first person": "minun kissani",
+                        "second person": "sinun kissasi",
+                        "third person": "hänen kissansa"
+                    },
+                    "plural": {
+                        "first person": "meidän kissamme",
+                        "second person": "teidän kissanne",
+                        "third person": "heidän kissansa"
+                    }
                 }
             },
-            "plural": {
-                "singular": {
-                    "first person": "minun taloni",
-                    "second person": "sinun talosi",
-                    "third person": "hänen talonsa"
-                },
-                "plural": {
-                    "first person": "meidän talomme",
-                    "second person": "teidän talonne",
-                    "third person": "heidän talonsa"
-                }
-            }
+            "language": "fi"
         },
-        "nl": {
-            "singular": {
+        {
+            "concept": "possessive pronoun cat",
+            "label": {
                 "singular": {
-                    "first person": "mijn huis",
-                    "second person": "jouw huis",
-                    "third person": {
-                        "feminine": "haar huis",
-                        "masculine": "zijn huis"
+                    "singular": {
+                        "first person": "mijn kat",
+                        "second person": "jouw kat",
+                        "third person": {
+                            "feminine": "haar kat",
+                            "masculine": "zijn katten"
+                        }
+                    },
+                    "plural": {
+                        "first person": "onze kat",
+                        "second person": "jullie kat",
+                        "third person": "hun kat"
                     }
                 },
                 "plural": {
-                    "first person": "ons huis",
-                    "second person": "jullie huis",
-                    "third person": "hun huis"
+                    "singular": {
+                        "first person": "mijn katten",
+                        "second person": "jouw katten",
+                        "third person": {
+                            "feminine": "haar katten",
+                            "masculine": "zijn katten"
+                        }
+                    },
+                    "plural": {
+                        "first person": "onze katten",
+                        "second person": "jullie katten",
+                        "third person": "hun katten"
+                    }
                 }
             },
-            "plural": {
+            "language": "nl"
+        },
+        {
+            "concept": "possessive pronoun house",
+            "label": {
                 "singular": {
-                    "first person": "mijn huizen",
-                    "second person": "jouw huizen",
-                    "third person": {
-                        "feminine": "haar huizen",
-                        "masculine": "zijn huizen"
+                    "singular": {
+                        "first person": "my house",
+                        "second person": "your house",
+                        "third person": {
+                            "feminine": "her house",
+                            "masculine": "his house"
+                        }
+                    },
+                    "plural": {
+                        "first person": "our house",
+                        "second person": "your house",
+                        "third person": "their house"
                     }
                 },
                 "plural": {
-                    "first person": "onze huizen",
-                    "second person": "jullie huizen",
-                    "third person": "hun huizen"
+                    "singular": {
+                        "first person": "my houses",
+                        "second person": "your houses",
+                        "third person": {
+                            "feminine": "her houses",
+                            "masculine": "his houses"
+                        }
+                    },
+                    "plural": {
+                        "first person": "our houses",
+                        "second person": "your houses",
+                        "third person": "their houses"
+                    }
                 }
-            }
+            },
+            "language": "en"
+        },
+        {
+            "concept": "possessive pronoun house",
+            "label": {
+                "singular": {
+                    "singular": {
+                        "first person": "minun taloni",
+                        "second person": "sinun talosi",
+                        "third person": "hänen talonsa"
+                    },
+                    "plural": {
+                        "first person": "meidän talomme",
+                        "second person": "teidän talonne",
+                        "third person": "heidän talonsa"
+                    }
+                },
+                "plural": {
+                    "singular": {
+                        "first person": "minun taloni",
+                        "second person": "sinun talosi",
+                        "third person": "hänen talonsa"
+                    },
+                    "plural": {
+                        "first person": "meidän talomme",
+                        "second person": "teidän talonne",
+                        "third person": "heidän talonsa"
+                    }
+                }
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "possessive pronoun house",
+            "label": {
+                "singular": {
+                    "singular": {
+                        "first person": "mijn huis",
+                        "second person": "jouw huis",
+                        "third person": {
+                            "feminine": "haar huis",
+                            "masculine": "zijn huis"
+                        }
+                    },
+                    "plural": {
+                        "first person": "ons huis",
+                        "second person": "jullie huis",
+                        "third person": "hun huis"
+                    }
+                },
+                "plural": {
+                    "singular": {
+                        "first person": "mijn huizen",
+                        "second person": "jouw huizen",
+                        "third person": {
+                            "feminine": "haar huizen",
+                            "masculine": "zijn huizen"
+                        }
+                    },
+                    "plural": {
+                        "first person": "onze huizen",
+                        "second person": "jullie huizen",
+                        "third person": "hun huizen"
+                    }
+                }
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

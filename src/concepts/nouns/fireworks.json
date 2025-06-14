@@ -1,12 +1,28 @@
 {
-    "fireworks": {
-        "roots": {
-            "en": "fire",
-            "fi": "joy",
-            "nl": "fire"
+    "concepts": {
+        "fireworks": {
+            "roots": {
+                "en": "fire",
+                "fi": "joy",
+                "nl": "fire"
+            }
+        }
+    },
+    "labels": [
+        {
+            "concept": "fireworks",
+            "label": "fireworks",
+            "language": "en"
         },
-        "en": "fireworks",
-        "fi": "ilotulitus",
-        "nl": "het vuurwerk"
-    }
+        {
+            "concept": "fireworks",
+            "label": "ilotulitus",
+            "language": "fi"
+        },
+        {
+            "concept": "fireworks",
+            "label": "het vuurwerk",
+            "language": "nl"
+        }
+    ]
 }

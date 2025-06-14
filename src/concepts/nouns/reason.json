@@ -1,7 +1,22 @@
 {
-    "reason": {
-        "en": "reason",
-        "fi": "syy",
-        "nl": "de reden"
-    }
+    "concepts": {
+        "reason": {}
+    },
+    "labels": [
+        {
+            "concept": "reason",
+            "label": "reason",
+            "language": "en"
+        },
+        {
+            "concept": "reason",
+            "label": "syy",
+            "language": "fi"
+        },
+        {
+            "concept": "reason",
+            "label": "de reden",
+            "language": "nl"
+        }
+    ]
 }

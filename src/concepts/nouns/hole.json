@@ -1,16 +1,31 @@
 {
-    "hole": {
-        "en": {
-            "singular": "hole",
-            "plural": "holes"
+    "concepts": {
+        "hole": {}
+    },
+    "labels": [
+        {
+            "concept": "hole",
+            "label": {
+                "singular": "hole",
+                "plural": "holes"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "reikä",
-            "plural": "reiät"
+        {
+            "concept": "hole",
+            "label": {
+                "singular": "reikä",
+                "plural": "reiät"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het gat",
-            "plural": "de gaten"
+        {
+            "concept": "hole",
+            "label": {
+                "singular": "het gat",
+                "plural": "de gaten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

@@ -1,44 +1,93 @@
 {
-    "market": {
-        "en": {
-            "singular": "market",
-            "plural": "markets"
+    "concepts": {
+        "market": {},
+        "market hall": {
+            "hypernym": "building",
+            "roots": {
+                "en": "market",
+                "fi": "store",
+                "nl": "market"
+            }
         },
-        "fi": {
-            "singular": "tori",
-            "plural": "torit"
-        },
-        "nl": {
-            "singular": "de markt",
-            "plural": "de markten"
+        "flea market": {
+            "hypernym": "market",
+            "roots": [
+                "flea",
+                "market"
+            ]
         }
     },
-    "market hall": {
-        "hypernym": "building",
-        "roots": {
-            "en": "market",
-            "fi": "store",
-            "nl": "market"
+    "labels": [
+        {
+            "concept": "market",
+            "label": {
+                "singular": "market",
+                "plural": "markets"
+            },
+            "language": "en"
         },
-        "en": "market hall",
-        "fi": "kauppahalli",
-        "nl": "de markthal"
-    },
-    "flea market": {
-        "hypernym": "market",
-        "roots": [
-            "flea",
-            "market"
-        ],
-        "en": "flea market",
-        "fi": [
-            "kirpputori",
-            "kirppari*",
-            "kirppis*"
-        ],
-        "nl": [
-            "de rommelmarkt",
-            "de vlooienmarkt"
-        ]
-    }
+        {
+            "concept": "market",
+            "label": {
+                "singular": "tori",
+                "plural": "torit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "market",
+            "label": {
+                "singular": "de markt",
+                "plural": "de markten"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "market hall",
+            "label": "market hall",
+            "language": "en"
+        },
+        {
+            "concept": "market hall",
+            "label": "kauppahalli",
+            "language": "fi"
+        },
+        {
+            "concept": "market hall",
+            "label": "de markthal",
+            "language": "nl"
+        },
+        {
+            "concept": "flea market",
+            "label": "flea market",
+            "language": "en"
+        },
+        {
+            "concept": "flea market",
+            "label": "kirpputori",
+            "language": "fi"
+        },
+        {
+            "concept": "flea market",
+            "label": "kirppari",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "flea market",
+            "label": "kirppis",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "flea market",
+            "label": "de rommelmarkt",
+            "language": "nl"
+        },
+        {
+            "concept": "flea market",
+            "label": "de vlooienmarkt",
+            "language": "nl"
+        }
+    ]
 }

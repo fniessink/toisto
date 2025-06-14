@@ -1,8 +1,24 @@
 {
-    "europe": {
-        "hypernym": "continent",
-        "en": "Europe",
-        "fi": "Eurooppa",
-        "nl": "Europa"
-    }
+    "concepts": {
+        "europe": {
+            "hypernym": "continent"
+        }
+    },
+    "labels": [
+        {
+            "concept": "europe",
+            "label": "Europe",
+            "language": "en"
+        },
+        {
+            "concept": "europe",
+            "label": "Eurooppa",
+            "language": "fi"
+        },
+        {
+            "concept": "europe",
+            "label": "Europa",
+            "language": "nl"
+        }
+    ]
 }

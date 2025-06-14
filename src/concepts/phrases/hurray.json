@@ -1,7 +1,22 @@
 {
-    "hurray": {
-        "en": "Hurray!",
-        "fi": "Hurraa!",
-        "nl": "Hoera!"
-    }
+    "concepts": {
+        "hurray": {}
+    },
+    "labels": [
+        {
+            "concept": "hurray",
+            "label": "Hurray!",
+            "language": "en"
+        },
+        {
+            "concept": "hurray",
+            "label": "Hurraa!",
+            "language": "fi"
+        },
+        {
+            "concept": "hurray",
+            "label": "Hoera!",
+            "language": "nl"
+        }
+    ]
 }

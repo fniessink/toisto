@@ -1,7 +1,22 @@
 {
-    "beauty": {
-        "en": "beauty",
-        "fi": "kauneus",
-        "nl": "de schoonheid"
-    }
+    "concepts": {
+        "beauty": {}
+    },
+    "labels": [
+        {
+            "concept": "beauty",
+            "label": "beauty",
+            "language": "en"
+        },
+        {
+            "concept": "beauty",
+            "label": "kauneus",
+            "language": "fi"
+        },
+        {
+            "concept": "beauty",
+            "label": "de schoonheid",
+            "language": "nl"
+        }
+    ]
 }

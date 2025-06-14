@@ -1,18 +1,49 @@
 {
-    "to turn (a certain age)": {
-        "example": "Liisa turns 40 in June",
-        "en": "to turn;a certain age",
-        "fi": "täyttää;a certain age",
-        "nl": "worden;a certain age"
+    "concepts": {
+        "to turn (a certain age)": {
+            "example": "Liisa turns 40 in June"
+        },
+        "Liisa turns 40 in June": {
+            "roots": [
+                "to turn (a certain age)",
+                "year",
+                "june"
+            ]
+        }
     },
-    "Liisa turns 40 in June": {
-        "roots": [
-            "to turn (a certain age)",
-            "year",
-            "june"
-        ],
-        "en": "Liisa turns 40 years old in June.|Liisa turns 40 in June.",
-        "fi": "Liisa täyttää 40 vuotta kesäkuussa.",
-        "nl": "Liisa wordt 40 jaar in juni.|Liisa wordt 40 in juni."
-    }
+    "labels": [
+        {
+            "concept": "to turn (a certain age)",
+            "label": "to turn",
+            "language": "en",
+            "tip": "a certain age"
+        },
+        {
+            "concept": "to turn (a certain age)",
+            "label": "täyttää",
+            "language": "fi",
+            "tip": "a certain age"
+        },
+        {
+            "concept": "to turn (a certain age)",
+            "label": "worden",
+            "language": "nl",
+            "tip": "a certain age"
+        },
+        {
+            "concept": "Liisa turns 40 in June",
+            "label": "Liisa turns 40 years old in June.|Liisa turns 40 in June.",
+            "language": "en"
+        },
+        {
+            "concept": "Liisa turns 40 in June",
+            "label": "Liisa täyttää 40 vuotta kesäkuussa.",
+            "language": "fi"
+        },
+        {
+            "concept": "Liisa turns 40 in June",
+            "label": "Liisa wordt 40 jaar in juni.|Liisa wordt 40 in juni.",
+            "language": "nl"
+        }
+    ]
 }

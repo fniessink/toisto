@@ -1,7 +1,22 @@
 {
-    "to tell": {
-        "en": "to tell",
-        "fi": "kertoa",
-        "nl": "vertellen"
-    }
+    "concepts": {
+        "to tell": {}
+    },
+    "labels": [
+        {
+            "concept": "to tell",
+            "label": "to tell",
+            "language": "en"
+        },
+        {
+            "concept": "to tell",
+            "label": "kertoa",
+            "language": "fi"
+        },
+        {
+            "concept": "to tell",
+            "label": "vertellen",
+            "language": "nl"
+        }
+    ]
 }

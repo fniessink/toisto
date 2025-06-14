@@ -1,7 +1,22 @@
 {
-    "authority": {
-        "en": "authority",
-        "fi": "viranomainen",
-        "nl": "de autoriteit"
-    }
+    "concepts": {
+        "authority": {}
+    },
+    "labels": [
+        {
+            "concept": "authority",
+            "label": "authority",
+            "language": "en"
+        },
+        {
+            "concept": "authority",
+            "label": "viranomainen",
+            "language": "fi"
+        },
+        {
+            "concept": "authority",
+            "label": "de autoriteit",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,16 +1,31 @@
 {
-    "bag": {
-        "en": {
-            "singular": "bag",
-            "plural": "bags"
+    "concepts": {
+        "bag": {}
+    },
+    "labels": [
+        {
+            "concept": "bag",
+            "label": {
+                "singular": "bag",
+                "plural": "bags"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "laukku",
-            "plural": "laukut"
+        {
+            "concept": "bag",
+            "label": {
+                "singular": "laukku",
+                "plural": "laukut"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de tas",
-            "plural": "de tassen"
+        {
+            "concept": "bag",
+            "label": {
+                "singular": "de tas",
+                "plural": "de tassen"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

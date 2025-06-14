@@ -1,29 +1,69 @@
 {
-    "country": {
-        "en": {
-            "singular": "country",
-            "plural": "countries"
+    "concepts": {
+        "country": {},
+        "neighboring country": {
+            "hypernym": "country",
+            "roots": "country"
         },
-        "fi": {
-            "singular": "maa;geography",
-            "plural": "maat;geography"
-        },
-        "nl": {
-            "singular": "het land",
-            "plural": "de landen"
+        "countryside": {
+            "roots": "country"
         }
     },
-    "neighboring country": {
-        "hypernym": "country",
-        "roots": "country",
-        "en": "neighboring country",
-        "fi": "naapurimaa",
-        "nl": "het buurland"
-    },
-    "countryside": {
-        "roots": "country",
-        "en": "countryside",
-        "fi": "maaseutu",
-        "nl": "het platteland"
-    }
+    "labels": [
+        {
+            "concept": "country",
+            "label": {
+                "singular": "country",
+                "plural": "countries"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "country",
+            "label": {
+                "singular": "maa",
+                "plural": "maat"
+            },
+            "language": "fi",
+            "tip": "geography"
+        },
+        {
+            "concept": "country",
+            "label": {
+                "singular": "het land",
+                "plural": "de landen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "neighboring country",
+            "label": "neighboring country",
+            "language": "en"
+        },
+        {
+            "concept": "neighboring country",
+            "label": "naapurimaa",
+            "language": "fi"
+        },
+        {
+            "concept": "neighboring country",
+            "label": "het buurland",
+            "language": "nl"
+        },
+        {
+            "concept": "countryside",
+            "label": "countryside",
+            "language": "en"
+        },
+        {
+            "concept": "countryside",
+            "label": "maaseutu",
+            "language": "fi"
+        },
+        {
+            "concept": "countryside",
+            "label": "het platteland",
+            "language": "nl"
+        }
+    ]
 }

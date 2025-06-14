@@ -1,8 +1,24 @@
 {
-    "ant": {
-        "hypernym": "insect",
-        "en": "ant",
-        "fi": "muurahainen",
-        "nl": "de mier"
-    }
+    "concepts": {
+        "ant": {
+            "hypernym": "insect"
+        }
+    },
+    "labels": [
+        {
+            "concept": "ant",
+            "label": "ant",
+            "language": "en"
+        },
+        {
+            "concept": "ant",
+            "label": "muurahainen",
+            "language": "fi"
+        },
+        {
+            "concept": "ant",
+            "label": "de mier",
+            "language": "nl"
+        }
+    ]
 }

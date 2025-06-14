@@ -1,43 +1,65 @@
 {
-    "to reserve": {
-        "roots": {
-            "en": "reservation",
-            "fi": [
-                "reservation",
-                "to do"
-            ],
-            "nl": "reservation"
-        },
-        "en": {
-            "infinitive": [
-                "to reserve",
-                "to make a reservation"
-            ],
-            "interrogative": [
-                "do we reserve?",
-                "do we make a reservation?"
-            ]
-        },
-        "fi": {
-            "infinitive": [
-                "varata",
-                "tehdä varaus"
-            ],
-            "interrogative": [
-                "varaammeko?",
-                "varataanks me?*",
-                "teemmeko varaus?"
-            ]
-        },
-        "nl": {
-            "infinitive": [
-                "reserveren",
-                "een reservering maken"
-            ],
-            "interrogative": [
-                "reserveren we?",
-                "maken we een reservering?"
-            ]
+    "concepts": {
+        "to reserve": {
+            "roots": {
+                "en": "reservation",
+                "fi": [
+                    "reservation",
+                    "to do"
+                ],
+                "nl": "reservation"
+            }
         }
-    }
+    },
+    "labels": [
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "to reserve",
+                "interrogative": "do we reserve?"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "to make a reservation",
+                "interrogative": "do we make a reservation?"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "varata",
+                "interrogative": "varaammeko?"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "tehdä varaus",
+                "interrogative": "varataanks me?"
+            },
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "reserveren",
+                "interrogative": "reserveren we?"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "to reserve",
+            "label": {
+                "infinitive": "een reservering maken",
+                "interrogative": "maken we een reservering?"
+            },
+            "language": "nl"
+        }
+    ]
 }

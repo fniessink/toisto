@@ -1,20 +1,60 @@
 {
-    "in my opinion": {
-        "en": "in my opinion",
-        "fi": [
-            "minun mielestäni",
-            "minusta",
-            "mun mielestä*",
-            "musta*"
-        ],
-        "nl": [
-            "naar mijn mening",
-            "volgens mij"
-        ]
+    "concepts": {
+        "in my opinion": {},
+        "in everyone's opinion": {}
     },
-    "in everyone's opinion": {
-        "en": "in everyone's opinion",
-        "fi": "kaikkien mielestä",
-        "nl": "volgens iedereen"
-    }
+    "labels": [
+        {
+            "concept": "in my opinion",
+            "label": "in my opinion",
+            "language": "en"
+        },
+        {
+            "concept": "in my opinion",
+            "label": "minun mielestäni",
+            "language": "fi"
+        },
+        {
+            "concept": "in my opinion",
+            "label": "minusta",
+            "language": "fi"
+        },
+        {
+            "concept": "in my opinion",
+            "label": "mun mielestä",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "in my opinion",
+            "label": "musta",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "in my opinion",
+            "label": "naar mijn mening",
+            "language": "nl"
+        },
+        {
+            "concept": "in my opinion",
+            "label": "volgens mij",
+            "language": "nl"
+        },
+        {
+            "concept": "in everyone's opinion",
+            "label": "in everyone's opinion",
+            "language": "en"
+        },
+        {
+            "concept": "in everyone's opinion",
+            "label": "kaikkien mielestä",
+            "language": "fi"
+        },
+        {
+            "concept": "in everyone's opinion",
+            "label": "volgens iedereen",
+            "language": "nl"
+        }
+    ]
 }

@@ -1,16 +1,31 @@
 {
-    "jog": {
-        "en": {
-            "singular": "jog",
-            "plural": "jogs"
+    "concepts": {
+        "jog": {}
+    },
+    "labels": [
+        {
+            "concept": "jog",
+            "label": {
+                "singular": "jog",
+                "plural": "jogs"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "lenkki",
-            "plural": "lenkit"
+        {
+            "concept": "jog",
+            "label": {
+                "singular": "lenkki",
+                "plural": "lenkit"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de jog",
-            "plural": "de jogs"
+        {
+            "concept": "jog",
+            "label": {
+                "singular": "de jog",
+                "plural": "de jogs"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

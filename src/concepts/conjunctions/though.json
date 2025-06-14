@@ -1,11 +1,32 @@
 {
-    "though": {
-        "en": [
-            "though",
-            "although",
-            "even though"
-        ],
-        "fi": "vaikka",
-        "nl": "hoewel"
-    }
+    "concepts": {
+        "though": {}
+    },
+    "labels": [
+        {
+            "concept": "though",
+            "label": "though",
+            "language": "en"
+        },
+        {
+            "concept": "though",
+            "label": "although",
+            "language": "en"
+        },
+        {
+            "concept": "though",
+            "label": "even though",
+            "language": "en"
+        },
+        {
+            "concept": "though",
+            "label": "vaikka",
+            "language": "fi"
+        },
+        {
+            "concept": "though",
+            "label": "hoewel",
+            "language": "nl"
+        }
+    ]
 }

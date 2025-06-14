@@ -1,16 +1,31 @@
 {
-    "outdoor activity": {
-        "en": {
-            "singular": "outdoor activity",
-            "plural": "outdoor activities"
+    "concepts": {
+        "outdoor activity": {}
+    },
+    "labels": [
+        {
+            "concept": "outdoor activity",
+            "label": {
+                "singular": "outdoor activity",
+                "plural": "outdoor activities"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "ulkoilu",
-            "plural": "ulkoilut"
+        {
+            "concept": "outdoor activity",
+            "label": {
+                "singular": "ulkoilu",
+                "plural": "ulkoilut"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "de buitenactiviteit",
-            "plural": "de buitenactiviteiten"
+        {
+            "concept": "outdoor activity",
+            "label": {
+                "singular": "de buitenactiviteit",
+                "plural": "de buitenactiviteiten"
+            },
+            "language": "nl"
         }
-    }
+    ]
 }

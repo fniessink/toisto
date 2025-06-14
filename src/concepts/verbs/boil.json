@@ -1,7 +1,17 @@
 {
-    "to boil": {
-        "en": "to boil",
-        "fi": "keittää",
-        "nl": "koken"
-    }
+    "concepts": {
+        "to boil": {}
+    },
+    "labels": [
+        {
+            "concept": "to boil",
+            "label": "to boil",
+            "language": "en"
+        },
+        {
+            "concept": "to boil",
+            "label": "keittää",
+            "language": "fi"
+        }
+    ]
 }

@@ -1,34 +1,102 @@
 {
-    "farewell party": {
-        "en": "farewell party",
-        "fi": "läksiäiset",
-        "nl": "het afscheidsfeest"
+    "concepts": {
+        "farewell party": {},
+        "housewarming party": {},
+        "graduation party": {},
+        "high school graduation party": {},
+        "wedding-eve party": {}
     },
-    "housewarming party": {
-        "en": "housewarming party",
-        "fi": [
-            "tupaantuliaiset",
-            "tuparit*"
-        ],
-        "nl": "de housewarming party"
-    },
-    "graduation party": {
-        "en": "graduation party",
-        "fi": "valmistujaiset",
-        "nl": "het afstudeerfeest"
-    },
-    "high school graduation party": {
-        "en": "high school graduation party",
-        "fi": "ylioppilasjuhlat",
-        "nl": "het eindexamenfeest"
-    },
-    "wedding-eve party": {
-        "en": [
-            "wedding-eve party",
-            "bachelor party",
-            "bachelorette party"
-        ],
-        "fi": "polttarit",
-        "nl": "het vrijgezellenfeest"
-    }
+    "labels": [
+        {
+            "concept": "farewell party",
+            "label": "farewell party",
+            "language": "en"
+        },
+        {
+            "concept": "farewell party",
+            "label": "läksiäiset",
+            "language": "fi"
+        },
+        {
+            "concept": "farewell party",
+            "label": "het afscheidsfeest",
+            "language": "nl"
+        },
+        {
+            "concept": "housewarming party",
+            "label": "housewarming party",
+            "language": "en"
+        },
+        {
+            "concept": "housewarming party",
+            "label": "tupaantuliaiset",
+            "language": "fi"
+        },
+        {
+            "concept": "housewarming party",
+            "label": "tuparit",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "housewarming party",
+            "label": "de housewarming party",
+            "language": "nl"
+        },
+        {
+            "concept": "graduation party",
+            "label": "graduation party",
+            "language": "en"
+        },
+        {
+            "concept": "graduation party",
+            "label": "valmistujaiset",
+            "language": "fi"
+        },
+        {
+            "concept": "graduation party",
+            "label": "het afstudeerfeest",
+            "language": "nl"
+        },
+        {
+            "concept": "high school graduation party",
+            "label": "high school graduation party",
+            "language": "en"
+        },
+        {
+            "concept": "high school graduation party",
+            "label": "ylioppilasjuhlat",
+            "language": "fi"
+        },
+        {
+            "concept": "high school graduation party",
+            "label": "het eindexamenfeest",
+            "language": "nl"
+        },
+        {
+            "concept": "wedding-eve party",
+            "label": "wedding-eve party",
+            "language": "en"
+        },
+        {
+            "concept": "wedding-eve party",
+            "label": "bachelor party",
+            "language": "en"
+        },
+        {
+            "concept": "wedding-eve party",
+            "label": "bachelorette party",
+            "language": "en"
+        },
+        {
+            "concept": "wedding-eve party",
+            "label": "polttarit",
+            "language": "fi"
+        },
+        {
+            "concept": "wedding-eve party",
+            "label": "het vrijgezellenfeest",
+            "language": "nl"
+        }
+    ]
 }

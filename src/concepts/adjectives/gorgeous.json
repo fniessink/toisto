@@ -1,7 +1,22 @@
 {
-    "gorgeous": {
-        "en": "gorgeous",
-        "fi": "upea",
-        "nl": "prachtig"
-    }
+    "concepts": {
+        "gorgeous": {}
+    },
+    "labels": [
+        {
+            "concept": "gorgeous",
+            "label": "gorgeous",
+            "language": "en"
+        },
+        {
+            "concept": "gorgeous",
+            "label": "upea",
+            "language": "fi"
+        },
+        {
+            "concept": "gorgeous",
+            "label": "prachtig",
+            "language": "nl"
+        }
+    ]
 }

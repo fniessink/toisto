@@ -5,7 +5,8 @@ from configparser import ConfigParser
 from pathlib import Path
 from unittest.mock import MagicMock, Mock, patch
 
-from toisto.model.language import FI, Language
+from toisto.model.language import FI, NL, Language
+from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.retention import Retention
@@ -231,8 +232,8 @@ class UpdateQuizKeysTest(ToistoTestCase):
     def setUp(self) -> None:
         """Extend to set up test fixtures."""
         super().setUp()
-        self.concept = self.create_concept("english", {})
-        self.quiz = self.create_quiz(self.concept, "englanti", ["Engels"])
+        self.concept = self.create_concept("english", {}, [])
+        self.quiz = self.create_quiz(self.concept, Label(FI, "englanti"), [Label(NL, "Engels")])
 
     def test_updating_an_empty_progress_dict_with_no_quizzes(self):
         """Test that updating an empty progress without quizzes leaves the progress dict unchanged."""

@@ -1,13 +1,32 @@
 {
-    "maybe": {
-        "en": [
-            "maybe",
-            "perhaps"
-        ],
-        "fi": "ehkä",
-        "nl": [
-            "misschien",
-            "wellicht"
-        ]
-    }
+    "concepts": {
+        "maybe": {}
+    },
+    "labels": [
+        {
+            "concept": "maybe",
+            "label": "maybe",
+            "language": "en"
+        },
+        {
+            "concept": "maybe",
+            "label": "perhaps",
+            "language": "en"
+        },
+        {
+            "concept": "maybe",
+            "label": "ehkä",
+            "language": "fi"
+        },
+        {
+            "concept": "maybe",
+            "label": "misschien",
+            "language": "nl"
+        },
+        {
+            "concept": "maybe",
+            "label": "wellicht",
+            "language": "nl"
+        }
+    ]
 }

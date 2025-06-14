@@ -1,10 +1,28 @@
 {
-    "so do I": {
-        "en": "So do I!",
-        "fi": [
-            "Niin minustakin!",
-            "Niin mustakin!*"
-        ],
-        "nl": "Dat vind ik ook!"
-    }
+    "concepts": {
+        "so do I": {}
+    },
+    "labels": [
+        {
+            "concept": "so do I",
+            "label": "So do I!",
+            "language": "en"
+        },
+        {
+            "concept": "so do I",
+            "label": "Niin minustakin!",
+            "language": "fi"
+        },
+        {
+            "concept": "so do I",
+            "label": "Niin mustakin!",
+            "language": "fi",
+            "colloquial": true
+        },
+        {
+            "concept": "so do I",
+            "label": "Dat vind ik ook!",
+            "language": "nl"
+        }
+    ]
 }

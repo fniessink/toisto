@@ -1,7 +1,22 @@
 {
-    "lace": {
-        "en": "lace",
-        "fi": "nyöri",
-        "nl": "de veter"
-    }
+    "concepts": {
+        "lace": {}
+    },
+    "labels": [
+        {
+            "concept": "lace",
+            "label": "lace",
+            "language": "en"
+        },
+        {
+            "concept": "lace",
+            "label": "nyöri",
+            "language": "fi"
+        },
+        {
+            "concept": "lace",
+            "label": "de veter",
+            "language": "nl"
+        }
+    ]
 }

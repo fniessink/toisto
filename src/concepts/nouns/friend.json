@@ -1,70 +1,135 @@
 {
-    "friend": {
-        "en": {
-            "singular": "friend",
-            "plural": "friends"
-        },
-        "fi": {
-            "singular": [
-                "kaveri",
-                "ystävä"
+    "concepts": {
+        "friend": {},
+        "female friend": {
+            "hypernym": [
+                "friend",
+                "girl"
             ],
-            "plural": [
-                "kaverit",
-                "ystävät"
-            ]
+            "roots": {
+                "en": [
+                    "girl",
+                    "friend"
+                ],
+                "fi": [
+                    "girl",
+                    "friend"
+                ],
+                "nl": "friend"
+            }
         },
-        "nl": {
-            "singular": "de vriend",
-            "plural": "de vrienden"
+        "boyfriend": {},
+        "girlfriend": {},
+        "friendship": {
+            "roots": "friend"
         }
     },
-    "female friend": {
-        "hypernym": [
-            "friend",
-            "girl"
-        ],
-        "roots": {
-            "en": [
-                "girl",
-                "friend"
-            ],
-            "fi": [
-                "girl",
-                "friend"
-            ],
-            "nl": "friend"
+    "labels": [
+        {
+            "concept": "friend",
+            "label": {
+                "singular": "friend",
+                "plural": "friends"
+            },
+            "language": "en"
         },
-        "en": "girlfriend",
-        "fi": "tyttöystävä",
-        "nl": "de vriendin"
-    },
-    "boyfriend": {
-        "en": "boyfriend",
-        "fi": [
-            "miesystävä",
-            "poikaystävä"
-        ],
-        "nl": [
-            "de vriend",
-            "het vriendje"
-        ]
-    },
-    "girlfriend": {
-        "en": "girlfriend",
-        "fi": [
-            "naisystävä",
-            "tyttöystävä"
-        ],
-        "nl": [
-            "de vriendin",
-            "het vriendinnetje"
-        ]
-    },
-    "friendship": {
-        "roots": "friend",
-        "en": "friendship",
-        "fi": "ystävyys",
-        "nl": "vriendschap"
-    }
+        {
+            "concept": "friend",
+            "label": {
+                "singular": "kaveri",
+                "plural": "kaverit"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "friend",
+            "label": {
+                "singular": "ystävä",
+                "plural": "ystävät"
+            },
+            "language": "fi"
+        },
+        {
+            "concept": "friend",
+            "label": {
+                "singular": "de vriend",
+                "plural": "de vrienden"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "boyfriend",
+            "label": "boyfriend",
+            "language": "en"
+        },
+        {
+            "concept": "boyfriend",
+            "label": "miesystävä",
+            "language": "fi"
+        },
+        {
+            "concept": "boyfriend",
+            "label": "poikaystävä",
+            "language": "fi"
+        },
+        {
+            "concept": "boyfriend",
+            "label": "de vriend",
+            "language": "nl"
+        },
+        {
+            "concept": "boyfriend",
+            "label": "het vriendje",
+            "language": "nl"
+        },
+        {
+            "concept": [
+                "girlfriend",
+                "female friend"
+            ],
+            "label": "girlfriend",
+            "language": "en"
+        },
+        {
+            "concept": "girlfriend",
+            "label": "naisystävä",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "girlfriend",
+                "female friend"
+            ],
+            "label": "tyttöystävä",
+            "language": "fi"
+        },
+        {
+            "concept": [
+                "girlfriend",
+                "female friend"
+            ],
+            "label": "de vriendin",
+            "language": "nl"
+        },
+        {
+            "concept": "girlfriend",
+            "label": "het vriendinnetje",
+            "language": "nl"
+        },
+        {
+            "concept": "friendship",
+            "label": "friendship",
+            "language": "en"
+        },
+        {
+            "concept": "friendship",
+            "label": "ystävyys",
+            "language": "fi"
+        },
+        {
+            "concept": "friendship",
+            "label": "vriendschap",
+            "language": "nl"
+        }
+    ]
 }

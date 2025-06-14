@@ -1,16 +1,43 @@
 {
-    "to break": {
-        "en": "to break",
-        "fi": "rikkoa",
-        "nl": "breken"
+    "concepts": {
+        "to break": {},
+        "to break in": {
+            "roots": {
+                "en": "to break",
+                "nl": "to break"
+            }
+        }
     },
-    "to break in": {
-        "roots": {
-            "en": "to break",
-            "nl": "to break"
+    "labels": [
+        {
+            "concept": "to break",
+            "label": "to break",
+            "language": "en"
         },
-        "en": "to break in",
-        "fi": "murtautua",
-        "nl": "inbreken"
-    }
+        {
+            "concept": "to break",
+            "label": "rikkoa",
+            "language": "fi"
+        },
+        {
+            "concept": "to break",
+            "label": "breken",
+            "language": "nl"
+        },
+        {
+            "concept": "to break in",
+            "label": "to break in",
+            "language": "en"
+        },
+        {
+            "concept": "to break in",
+            "label": "murtautua",
+            "language": "fi"
+        },
+        {
+            "concept": "to break in",
+            "label": "inbreken",
+            "language": "nl"
+        }
+    ]
 }

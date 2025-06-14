@@ -1,7 +1,22 @@
 {
-    "to camp": {
-        "en": "to camp",
-        "fi": "telttailla",
-        "nl": "kamperen"
-    }
+    "concepts": {
+        "to camp": {}
+    },
+    "labels": [
+        {
+            "concept": "to camp",
+            "label": "to camp",
+            "language": "en"
+        },
+        {
+            "concept": "to camp",
+            "label": "telttailla",
+            "language": "fi"
+        },
+        {
+            "concept": "to camp",
+            "label": "kamperen",
+            "language": "nl"
+        }
+    ]
 }

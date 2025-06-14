@@ -1,8 +1,24 @@
 {
-    "forefinger": {
-        "hypernym": "finger",
-        "en": "forefinger",
-        "fi": "etusormi",
-        "nl": "de wijsvinger"
-    }
+    "concepts": {
+        "forefinger": {
+            "hypernym": "finger"
+        }
+    },
+    "labels": [
+        {
+            "concept": "forefinger",
+            "label": "forefinger",
+            "language": "en"
+        },
+        {
+            "concept": "forefinger",
+            "label": "etusormi",
+            "language": "fi"
+        },
+        {
+            "concept": "forefinger",
+            "label": "de wijsvinger",
+            "language": "nl"
+        }
+    ]
 }

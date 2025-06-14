@@ -1,19 +1,53 @@
 {
-    "bye": {
-        "en": [
-            "Bye!",
-            "Bye bye!"
-        ],
-        "fi": [
-            "Hei hei!",
-            "Moi moi!",
-            "Heippa!",
-            "Moikka!;leaving"
-        ],
-        "nl": [
-            "Doeg!",
-            "Doei!",
-            "Dag!"
-        ]
-    }
+    "concepts": {
+        "bye": {}
+    },
+    "labels": [
+        {
+            "concept": "bye",
+            "label": "Bye!",
+            "language": "en"
+        },
+        {
+            "concept": "bye",
+            "label": "Bye bye!",
+            "language": "en"
+        },
+        {
+            "concept": "bye",
+            "label": "Hei hei!",
+            "language": "fi"
+        },
+        {
+            "concept": "bye",
+            "label": "Moi moi!",
+            "language": "fi"
+        },
+        {
+            "concept": "bye",
+            "label": "Heippa!",
+            "language": "fi"
+        },
+        {
+            "concept": "bye",
+            "label": "Moikka!",
+            "language": "fi",
+            "tip": "leaving"
+        },
+        {
+            "concept": "bye",
+            "label": "Doeg!",
+            "language": "nl"
+        },
+        {
+            "concept": "bye",
+            "label": "Doei!",
+            "language": "nl"
+        },
+        {
+            "concept": "bye",
+            "label": "Dag!",
+            "language": "nl"
+        }
+    ]
 }

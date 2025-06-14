@@ -1,7 +1,22 @@
 {
-    "to queue": {
-        "en": "to queue",
-        "fi": "jonottaa",
-        "nl": "in de rij staan"
-    }
+    "concepts": {
+        "to queue": {}
+    },
+    "labels": [
+        {
+            "concept": "to queue",
+            "label": "to queue",
+            "language": "en"
+        },
+        {
+            "concept": "to queue",
+            "label": "jonottaa",
+            "language": "fi"
+        },
+        {
+            "concept": "to queue",
+            "label": "in de rij staan",
+            "language": "nl"
+        }
+    ]
 }

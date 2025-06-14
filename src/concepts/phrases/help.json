@@ -1,7 +1,22 @@
 {
-    "help": {
-        "en": "Help!",
-        "fi": "Apua!",
-        "nl": "Help!"
-    }
+    "concepts": {
+        "help": {}
+    },
+    "labels": [
+        {
+            "concept": "help",
+            "label": "Help!",
+            "language": "en"
+        },
+        {
+            "concept": "help",
+            "label": "Apua!",
+            "language": "fi"
+        },
+        {
+            "concept": "help",
+            "label": "Help!",
+            "language": "nl"
+        }
+    ]
 }

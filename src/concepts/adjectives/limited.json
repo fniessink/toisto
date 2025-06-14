@@ -1,7 +1,22 @@
 {
-    "limited": {
-        "en": "limited",
-        "fi": "suppea",
-        "nl": "beperkt"
-    }
+    "concepts": {
+        "limited": {}
+    },
+    "labels": [
+        {
+            "concept": "limited",
+            "label": "limited",
+            "language": "en"
+        },
+        {
+            "concept": "limited",
+            "label": "suppea",
+            "language": "fi"
+        },
+        {
+            "concept": "limited",
+            "label": "beperkt",
+            "language": "nl"
+        }
+    ]
 }

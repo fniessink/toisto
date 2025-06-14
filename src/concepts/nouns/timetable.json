@@ -1,17 +1,47 @@
 {
-    "timetable": {
-        "roots": {
-            "en": "time",
-            "fi": "time",
-            "nl": "shift"
+    "concepts": {
+        "timetable": {
+            "roots": {
+                "en": "time",
+                "fi": "time",
+                "nl": "shift"
+            }
         },
-        "en": "timetable",
-        "fi": "aikataulu",
-        "nl": "de dienstregeling"
+        "school timetable": {}
     },
-    "school timetable": {
-        "en": "school timetable",
-        "fi": "lukujärjestys",
-        "nl": "het lesrooster"
-    }
+    "labels": [
+        {
+            "concept": "timetable",
+            "label": "timetable",
+            "language": "en"
+        },
+        {
+            "concept": [
+                "timetable",
+                "schedule"
+            ],
+            "label": "aikataulu",
+            "language": "fi"
+        },
+        {
+            "concept": "timetable",
+            "label": "de dienstregeling",
+            "language": "nl"
+        },
+        {
+            "concept": "school timetable",
+            "label": "school timetable",
+            "language": "en"
+        },
+        {
+            "concept": "school timetable",
+            "label": "lukujärjestys",
+            "language": "fi"
+        },
+        {
+            "concept": "school timetable",
+            "label": "het lesrooster",
+            "language": "nl"
+        }
+    ]
 }

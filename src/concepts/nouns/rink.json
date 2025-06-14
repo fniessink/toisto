@@ -1,9 +1,25 @@
 {
-    "ice rink": {
-        "involves": "skating",
-        "roots": "ice",
-        "en": "ice rink",
-        "fi": "jäähalli",
-        "nl": "de ijsbaan"
-    }
+    "concepts": {
+        "ice rink": {
+            "involves": "skating",
+            "roots": "ice"
+        }
+    },
+    "labels": [
+        {
+            "concept": "ice rink",
+            "label": "ice rink",
+            "language": "en"
+        },
+        {
+            "concept": "ice rink",
+            "label": "jäähalli",
+            "language": "fi"
+        },
+        {
+            "concept": "ice rink",
+            "label": "de ijsbaan",
+            "language": "nl"
+        }
+    ]
 }

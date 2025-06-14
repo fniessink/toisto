@@ -1,18 +1,46 @@
 {
-    "without": {
-        "example": "coffee without milk",
-        "en": "without",
-        "fi": "ilman",
-        "nl": "zonder"
+    "concepts": {
+        "without": {
+            "example": "coffee without milk"
+        },
+        "coffee without milk": {
+            "roots": [
+                "coffee",
+                "without",
+                "milk"
+            ]
+        }
     },
-    "coffee without milk": {
-        "roots": [
-            "coffee",
-            "without",
-            "milk"
-        ],
-        "en": "coffee without milk",
-        "fi": "kahvi ilman maitoa",
-        "nl": "koffie zonder melk"
-    }
+    "labels": [
+        {
+            "concept": "without",
+            "label": "without",
+            "language": "en"
+        },
+        {
+            "concept": "without",
+            "label": "ilman",
+            "language": "fi"
+        },
+        {
+            "concept": "without",
+            "label": "zonder",
+            "language": "nl"
+        },
+        {
+            "concept": "coffee without milk",
+            "label": "coffee without milk",
+            "language": "en"
+        },
+        {
+            "concept": "coffee without milk",
+            "label": "kahvi ilman maitoa",
+            "language": "fi"
+        },
+        {
+            "concept": "coffee without milk",
+            "label": "koffie zonder melk",
+            "language": "nl"
+        }
+    ]
 }

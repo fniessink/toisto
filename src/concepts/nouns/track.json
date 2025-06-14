@@ -1,37 +1,56 @@
 {
-    "track": {
-        "involves": "train",
-        "en": {
-            "singular": "track",
-            "plural": "tracks"
+    "concepts": {
+        "track": {
+            "involves": "train"
         },
-        "fi": {
-            "singular": "raide",
-            "plural": "raiteet"
-        },
-        "nl": {
-            "singular": "het spoor",
-            "plural": "de sporen"
-        }
+        "track (trail)": {}
     },
-    "track (trail)": {
-        "en": {
-            "singular": [
+    "labels": [
+        {
+            "concept": [
                 "track",
-                "trail"
+                "track (trail)"
             ],
-            "plural": [
-                "tracks",
-                "trails"
-            ]
+            "label": {
+                "singular": "track",
+                "plural": "tracks"
+            },
+            "language": "en"
         },
-        "fi": {
-            "singular": "jälki",
-            "plural": "jäljet"
+        {
+            "concept": "track",
+            "label": {
+                "singular": "raide",
+                "plural": "raiteet"
+            },
+            "language": "fi"
         },
-        "nl": {
-            "singular": "het spoor",
-            "plural": "de sporen"
+        {
+            "concept": [
+                "track",
+                "track (trail)"
+            ],
+            "label": {
+                "singular": "het spoor",
+                "plural": "de sporen"
+            },
+            "language": "nl"
+        },
+        {
+            "concept": "track (trail)",
+            "label": {
+                "singular": "trail",
+                "plural": "trails"
+            },
+            "language": "en"
+        },
+        {
+            "concept": "track (trail)",
+            "label": {
+                "singular": "jälki",
+                "plural": "jäljet"
+            },
+            "language": "fi"
         }
-    }
+    ]
 }

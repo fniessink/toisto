@@ -1,7 +1,22 @@
 {
-    "perpetrator": {
-        "en": "perpetrator",
-        "fi": "tekijä",
-        "nl": "de dader"
-    }
+    "concepts": {
+        "perpetrator": {}
+    },
+    "labels": [
+        {
+            "concept": "perpetrator",
+            "label": "perpetrator",
+            "language": "en"
+        },
+        {
+            "concept": "perpetrator",
+            "label": "tekijä",
+            "language": "fi"
+        },
+        {
+            "concept": "perpetrator",
+            "label": "de dader",
+            "language": "nl"
+        }
+    ]
 }

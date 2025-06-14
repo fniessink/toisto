@@ -1,7 +1,22 @@
 {
-    "circus": {
-        "en": "circus",
-        "fi": "sirkus",
-        "nl": "het circus"
-    }
+    "concepts": {
+        "circus": {}
+    },
+    "labels": [
+        {
+            "concept": "circus",
+            "label": "circus",
+            "language": "en"
+        },
+        {
+            "concept": "circus",
+            "label": "sirkus",
+            "language": "fi"
+        },
+        {
+            "concept": "circus",
+            "label": "het circus",
+            "language": "nl"
+        }
+    ]
 }
