@@ -67,7 +67,7 @@ class ParserTest(unittest.TestCase):
         concepts: set[Concept] | None = None,
     ) -> ArgumentParser:
         """Create the argument parser."""
-        with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[dict(name="v9999")])))):
+        with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[{"name": "v9999"}])))):
             return create_argument_parser(config_parser or default_config(), concepts)
 
     @patch("sys.argv", ["toisto", "--help"])

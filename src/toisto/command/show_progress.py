@@ -33,7 +33,7 @@ class QuizSorter:
 def show_progress(progress: Progress, args: Namespace) -> None:
     """Show progress."""
     table = Table(title=f"Progress {ALL_LANGUAGES[progress.target_language]}")
-    justify: dict[str, JustifyMethod] = dict(Attempts="right")
+    justify: dict[str, JustifyMethod] = {"Attempts": "right"}
     for column in ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"):
         table.add_column(column, justify=justify.get(column, "left"))
     sorted_quizzes = sorted(progress.quizzes, key=QuizSorter(progress, args.sort).get_sort_key, reverse=True)

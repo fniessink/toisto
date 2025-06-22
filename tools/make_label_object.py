@@ -12,7 +12,7 @@ for json_filename in pathlib.Path("src/concepts").glob("**/*.json"):
         contents = json.load(json_file)
     for concept_id, concept in contents["concepts"].items():
         for language, label in concept["labels"].items():
-            concept["labels"][language] = dict(concept=concept_id, label=label)
+            concept["labels"][language] = {"concept": concept_id, "label": label}
     with json_filename.open("w", encoding="utf-8") as json_file:
         json.dump(contents, json_file, indent=4, ensure_ascii=False)
         json_file.write("\n")

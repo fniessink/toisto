@@ -12,7 +12,7 @@ for json_filename in pathlib.Path("src/concepts").glob("**/*.json"):
         contents = json.load(json_file)
     if "concepts" in contents:
         continue
-    contents = dict(concepts=contents)
+    contents = {"concepts": contents}
     with json_filename.open("w", encoding="utf-8") as json_file:
         json.dump(contents, json_file, indent=4, ensure_ascii=False)
         json_file.write("\n")

@@ -89,13 +89,13 @@ class PracticeTest(ToistoTestCase):
     @patch("builtins.input", Mock(return_value="Terve\n"))
     def test_answer_with_question(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
-        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch"), self.practice(self.quizzes))
+        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % {"language": "Dutch"}, self.practice(self.quizzes))
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_answer_with_question_listen_quiz(self):
         """Test that the language to answer is stressed, when the user answers the quiz with the wrong language."""
         quizzes = create_quizzes(self.language_pair, (DICTATE,), self.concept)
-        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Finnish"), self.practice(quizzes))
+        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % {"language": "Finnish"}, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="jätski\n"))
     def test_colloquial_answer_when_question_colloquial(self):
@@ -110,7 +110,7 @@ class PracticeTest(ToistoTestCase):
         )
         quizzes = create_quizzes(self.language_pair, (DICTATE,), concept).colloquial
         self.assert_printed(
-            Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % dict(language="Finnish"),
+            Feedback.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE % {"language": "Finnish"},
             self.practice(quizzes),
         )
 
@@ -126,13 +126,13 @@ class PracticeTest(ToistoTestCase):
             ],
         )
         quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept).colloquial
-        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % dict(language="Dutch"), self.practice(quizzes))
+        self.assert_printed(Feedback.TRY_AGAIN_IN_ANSWER_LANGUAGE % {"language": "Dutch"}, self.practice(quizzes))
 
     @patch("builtins.input", Mock(return_value="talo\n"))
     def test_answer_with_question_grammar_quiz(self):
         """Test that the language to answer is not stressed, when the user answers a grammar quiz with the question."""
         concept = self.create_concept(
-            "house", labels=[{"label": dict(singular="talo", plural="talot"), "language": FI}]
+            "house", labels=[{"label": {"singular": "talo", "plural": "talot"}, "language": FI}]
         )
         quizzes = create_quizzes(self.language_pair, (PLURAL,), concept)
         self.assert_printed(Feedback.TRY_AGAIN, self.practice(quizzes))
@@ -188,7 +188,7 @@ class PracticeTest(ToistoTestCase):
             "to ride",
             labels=[
                 {"label": {"third person": "hän ajaa"}, "language": FI},
-                {"label": {"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}, "language": NL},
+                {"label": {"third person": {"feminine": "zij rijdt", "masculine": "hij rijdt"}}, "language": NL},
             ],
         )
         quizzes = create_quizzes(self.language_pair, (READ,), concept)
@@ -206,7 +206,7 @@ class PracticeTest(ToistoTestCase):
             "to ride",
             labels=[
                 {"label": {"third person": "hän ajaa"}, "language": FI},
-                {"label": {"third person": dict(feminine="zij rijdt", masculine="hij rijdt")}, "language": NL},
+                {"label": {"third person": {"feminine": "zij rijdt", "masculine": "hij rijdt"}}, "language": NL},
             ],
         )
         quizzes = create_quizzes(self.language_pair, (INTERPRET,), concept)

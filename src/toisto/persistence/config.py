@@ -38,24 +38,24 @@ class Option:
     default_value: Callable[[], str] | str = ""
 
 
-DEFAULT_MP3PLAYERS = dict(darwin="afplay", linux="mpg123 --quiet")
-CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = dict(
-    languages=dict(
-        target=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
-        source=Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
-    ),
-    commands=dict(
-        mp3player=Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "builtin")),
-    ),
-    practice=dict(
-        progress_update=Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
-    ),
-    progress=dict(
-        folder=Option(Quantifier.ANY, default_value=str(home())),
-    ),
-    identity=dict(uuid=Option(Quantifier.ANY, default_value=str(uuid1()))),
-    files=[],
-)
+DEFAULT_MP3PLAYERS = {"darwin": "afplay", "linux": "mpg123 --quiet"}
+CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = {
+    "languages": {
+        "target": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
+        "source": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
+    },
+    "commands": {
+        "mp3player": Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "builtin")),
+    },
+    "practice": {
+        "progress_update": Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
+    },
+    "progress": {
+        "folder": Option(Quantifier.ANY, default_value=str(home())),
+    },
+    "identity": {"uuid": Option(Quantifier.ANY, default_value=str(uuid1()))},
+    "files": [],
+}
 CONFIG_FILENAME = home() / ".toisto.cfg"
 
 

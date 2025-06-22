@@ -20,7 +20,7 @@ class ProgressTest(ToistoTestCase):
         """Override to set up test fixtures."""
         super().setUp()
         concept = self.create_concept(
-            "english", labels=[dict(label="englanti", language=FI), dict(label="Engels", language=NL)]
+            "english", labels=[{"label": "englanti", "language": FI}, {"label": "Engels", "language": NL}]
         )
         self.quizzes = create_quizzes(FI_NL, (), concept)
         self.progress = Progress(FI, Quizzes(self.quizzes), {})
@@ -72,11 +72,11 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked if roots have eligible quizzes."""
         concept1 = self.create_concept(
             "good day",
-            dict(roots="good"),
-            labels=[dict(label="good day", language=EN), dict(label="goedendag", language=NL)],
+            {"roots": "good"},
+            labels=[{"label": "good day", "language": EN}, {"label": "goedendag", "language": NL}],
         )
         concept2 = self.create_concept(
-            "good", labels=[dict(label="good", language=EN), dict(label="goed", language=NL)]
+            "good", labels=[{"label": "good", "language": EN}, {"label": "goed", "language": NL}]
         )
         quizzes = create_quizzes(NL_EN, (), concept1, concept2)
         progress = Progress(NL, quizzes, {})
@@ -87,11 +87,11 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked, even if the roots only apply to the target language."""
         concept1 = self.create_concept(
             "good day",
-            dict(roots=dict(nl="good")),
-            labels=[dict(label="good day", language=EN), dict(label="goedendag", language=NL)],
+            {"roots": {"nl": "good"}},
+            labels=[{"label": "good day", "language": EN}, {"label": "goedendag", "language": NL}],
         )
         concept2 = self.create_concept(
-            "good", labels=[dict(label="good", language=EN), dict(label="goed", language=NL)]
+            "good", labels=[{"label": "good", "language": EN}, {"label": "goed", "language": NL}]
         )
         quizzes = create_quizzes(NL_EN, (), concept1, concept2)
         progress = Progress(NL, quizzes, {})
@@ -103,24 +103,24 @@ class ProgressTest(ToistoTestCase):
         morning = self.create_concept(
             "morning",
             labels=[
-                dict(label=dict(singular="aamu", plural="aamut"), language=FI),
-                dict(label=dict(singular="de ochtend", plural="de ochtenden"), language=NL),
+                {"label": {"singular": "aamu", "plural": "aamut"}, "language": FI},
+                {"label": {"singular": "de ochtend", "plural": "de ochtenden"}, "language": NL},
             ],
         )
         afternoon = self.create_concept(
             "afternoon",
-            dict(roots="morning"),
+            {"roots": "morning"},
             labels=[
-                dict(label=dict(singular="iltapäivä", plural="iltapäivät"), language=FI),
-                dict(label=dict(singular="de middag", plural="de middagen"), language=NL),
+                {"label": {"singular": "iltapäivä", "plural": "iltapäivät"}, "language": FI},
+                {"label": {"singular": "de middag", "plural": "de middagen"}, "language": NL},
             ],
         )
         evening = self.create_concept(
             "evening",
-            dict(roots="afternoon"),
+            {"roots": "afternoon"},
             labels=[
-                dict(label=dict(singular="ilta", plural="illat"), language=FI),
-                dict(label=dict(singular="de avond", plural="de avonden"), language=NL),
+                {"label": {"singular": "ilta", "plural": "illat"}, "language": FI},
+                {"label": {"singular": "de avond", "plural": "de avonden"}, "language": NL},
             ],
         )
         quizzes = create_quizzes(FI_NL, (), morning, afternoon, evening)
@@ -133,7 +133,7 @@ class ProgressTest(ToistoTestCase):
         """Test that the next quiz is one the user has see before if possible."""
         concepts = [
             self.create_concept(
-                f"id{index}", labels=[dict(label=f"fi{index}", language=FI), dict(label=f"nl{index}", language=NL)]
+                f"id{index}", labels=[{"label": f"fi{index}", "language": FI}, {"label": f"nl{index}", "language": NL}]
             )
             for index in range(5)
         ]
@@ -155,12 +155,12 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
     def setUp(self) -> None:
         """Override to set up test fixtures."""
         super().setUp()
-        example = self.create_concept("example", labels=[dict(label="Puhun englantia", language=FI)])
+        example = self.create_concept("example", labels=[{"label": "Puhun englantia", "language": FI}])
         example_quizzes = create_quizzes(FI_NL, (), example)
         concept = self.create_concept(
             "english",
-            dict(example="example"),
-            labels=[dict(label="englanti", language=FI), dict(label="Engels", language=NL)],
+            {"example": "example"},
+            labels=[{"label": "englanti", "language": FI}, {"label": "Engels", "language": NL}],
         )
         self.concept_quizzes = create_quizzes(FI_NL, (), concept)
         self.quizzes = Quizzes(example_quizzes | self.concept_quizzes)

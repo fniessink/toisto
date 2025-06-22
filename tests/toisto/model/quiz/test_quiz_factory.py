@@ -1,4 +1,4 @@
-"""Concept unit tests."""
+"""Quiz factory unit tests."""
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept
@@ -78,17 +78,17 @@ class QuizFactoryTestCase(ToistoTestCase):
         label_en = {}
         label_nl = {}
         if "present tense" in tense:
-            label_en["present tense"] = dict(singular="I eat", plural="we eat")
-            label_nl["present tense"] = dict(singular="ik eet", plural="wij eten")
+            label_en["present tense"] = {"singular": "I eat", "plural": "we eat"}
+            label_nl["present tense"] = {"singular": "ik eet", "plural": "wij eten"}
         if "past tense" in tense:
-            label_en["past tense"] = dict(singular="I ate", plural="we ate")
-            label_nl["past tense"] = dict(singular="ik at", plural="wij aten")
+            label_en["past tense"] = {"singular": "I ate", "plural": "we ate"}
+            label_nl["past tense"] = {"singular": "ik at", "plural": "wij aten"}
         if "present perfect tense" in tense:
-            label_en["present perfect tense"] = dict(singular="I have eaten", plural="we have eaten")
-            label_nl["present perfect tense"] = dict(singular="ik heb gegeten", plural="wij hebben gegeten")
+            label_en["present perfect tense"] = {"singular": "I have eaten", "plural": "we have eaten"}
+            label_nl["present perfect tense"] = {"singular": "ik heb gegeten", "plural": "wij hebben gegeten"}
         if "past perfect tense" in tense:
-            label_en["past perfect tense"] = dict(singular="I had eaten", plural="we had eaten")
-            label_nl["past perfect tense"] = dict(singular="ik had gegeten", plural="wij hadden gegeten")
+            label_en["past perfect tense"] = {"singular": "I had eaten", "plural": "we had eaten"}
+            label_nl["past perfect tense"] = {"singular": "ik had gegeten", "plural": "wij hadden gegeten"}
         return self.create_concept(
             "to eat", labels=[{"label": label_en, "language": EN}, {"label": label_nl, "language": NL}]
         )
@@ -98,8 +98,8 @@ class QuizFactoryTestCase(ToistoTestCase):
         return self.create_concept(
             "to sleep",
             labels=[
-                {"label": dict(infinitive="to sleep", singular="I sleep", plural="we sleep"), "language": EN},
-                {"label": dict(infinitive="slapen", singular="ik slaap", plural="wij slapen"), "language": NL},
+                {"label": {"infinitive": "to sleep", "singular": "I sleep", "plural": "we sleep"}, "language": EN},
+                {"label": {"infinitive": "slapen", "singular": "ik slaap", "plural": "wij slapen"}, "language": NL},
             ],
         )
 
@@ -308,8 +308,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "ketchup",
             labels=[
-                {"label": dict(singular="ketsuppi", plural="ketsupit"), "language": FI},
-                {"label": dict(singular="de ketchup"), "language": NL},
+                {"label": {"singular": "ketsuppi", "plural": "ketsupit"}, "language": FI},
+                {"label": {"singular": "de ketchup"}, "language": NL},
             ],
         )
         singular, plural = concept.leaf_concepts(FI)
@@ -391,7 +391,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_with_one_language(self):
         """Test that quizzes can be generated from a concept with labels in the target language only."""
         concept = self.create_concept(
-            "mämmi", labels=[{"label": dict(singular="mämmi", plural="mämmit"), "language": FI}]
+            "mämmi", labels=[{"label": {"singular": "mämmi", "plural": "mämmit"}, "language": FI}]
         )
         singular, plural = concept.leaf_concepts(FI)
         quizzes = create_quizzes(FI_NL, (), concept)
@@ -412,7 +412,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
     def test_grammatical_number_with_one_language_reversed(self):
         """Test that no quizzes are generated from a noun concept with labels in the native language."""
         concept = self.create_concept(
-            "mämmi", labels=[{"label": dict(singular="mämmi", plural="mämmit"), "language": FI}]
+            "mämmi", labels=[{"label": {"singular": "mämmi", "plural": "mämmit"}, "language": FI}]
         )
         self.assertSetEqual(Quizzes(), create_quizzes(EN_FI, (), concept))
 
@@ -421,9 +421,9 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "mall",
             labels=[
-                {"label": dict(singular="kauppakeskus", plural="kauppakeskukset"), "language": FI},
-                {"label": dict(singular="ostoskeskus", plural="ostoskeskukset"), "language": FI},
-                {"label": dict(singular="het winkelcentrum", plural="de winkelcentra"), "language": NL},
+                {"label": {"singular": "kauppakeskus", "plural": "kauppakeskukset"}, "language": FI},
+                {"label": {"singular": "ostoskeskus", "plural": "ostoskeskukset"}, "language": FI},
+                {"label": {"singular": "het winkelcentrum", "plural": "de winkelcentra"}, "language": NL},
             ],
         )
         singular, plural = concept.leaf_concepts(FI)
@@ -736,7 +736,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                     "label": {
                         "first person": "I eat",
                         "second person": "you eat",
-                        "third person": dict(feminine="she eats", masculine="he eats"),
+                        "third person": {"feminine": "she eats", "masculine": "he eats"},
                     },
                     "language": EN,
                 },
@@ -744,7 +744,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                     "label": {
                         "first person": "ik eet",
                         "second person": "jij eet",
-                        "third person": dict(feminine="zij eet", masculine="hij eet"),
+                        "third person": {"feminine": "zij eet", "masculine": "hij eet"},
                     },
                     "language": NL,
                 },
@@ -799,7 +799,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                     "label": {
                         "first person": "I eat",
                         "second person": "you eat",
-                        "third person": dict(feminine="she eats", masculine="he eats"),
+                        "third person": {"feminine": "she eats", "masculine": "he eats"},
                     },
                     "language": EN,
                 },
@@ -899,17 +899,17 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             "cat",
             labels=[
                 {
-                    "label": dict(
-                        feminine=dict(singular="her cat", plural="her cats"),
-                        masculine=dict(singular="his cat", plural="his cats"),
-                    ),
+                    "label": {
+                        "feminine": {"singular": "her cat", "plural": "her cats"},
+                        "masculine": {"singular": "his cat", "plural": "his cats"},
+                    },
                     "language": EN,
                 },
                 {
-                    "label": dict(
-                        feminine=dict(singular="haar kat", plural="haar katten"),
-                        masculine=dict(singular="zijn kat", plural="zijn katten"),
-                    ),
+                    "label": {
+                        "feminine": {"singular": "haar kat", "plural": "haar katten"},
+                        "masculine": {"singular": "zijn kat", "plural": "zijn katten"},
+                    },
                     "language": NL,
                 },
             ],
@@ -953,8 +953,8 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "to be",
             labels=[
-                {"label": dict(feminine=["she is", "she's"], masculine=["he is", "he's"]), "language": EN},
-                {"label": dict(feminine="hän on", masculine="hän on"), "language": FI},
+                {"label": {"feminine": ["she is", "she's"], "masculine": ["he is", "he's"]}, "language": EN},
+                {"label": {"feminine": "hän on", "masculine": "hän on"}, "language": FI},
             ],
         )
         feminine, masculine = concept.constituents
@@ -1078,51 +1078,59 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             labels=[
                 {
                     "label": {
-                        "past tense": dict(
-                            singular={
+                        "past tense": {
+                            "singular": {
                                 "first person": "minä olin",
                                 "second person": "sinä olit",
                                 "third person": "hän oli",
                             },
-                            plural={
+                            "plural": {
                                 "first person": "me olimme",
                                 "second person": "te olitte",
                                 "third person": "he olivat",
                             },
-                        ),
-                        "present tense": dict(
-                            singular={
+                        },
+                        "present tense": {
+                            "singular": {
                                 "first person": "minä olen",
                                 "second person": "sinä olet",
                                 "third person": "hän on",
                             },
-                            plural={
+                            "plural": {
                                 "first person": "me olemme",
                                 "second person": "te olette",
                                 "third person": "he ovat",
                             },
-                        ),
+                        },
                     },
                     "language": FI,
                 },
                 {
                     "label": {
-                        "past tense": dict(
-                            singular={"first person": "ik was", "second person": "jij was", "third person": "zij was"},
-                            plural={
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik was",
+                                "second person": "jij was",
+                                "third person": "zij was",
+                            },
+                            "plural": {
                                 "first person": "wij waren",
                                 "second person": "jullie waren",
                                 "third person": "zij waren",
                             },
-                        ),
-                        "present tense": dict(
-                            singular={"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
-                            plural={
+                        },
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik ben",
+                                "second person": "jij bent",
+                                "third person": "zij is",
+                            },
+                            "plural": {
                                 "first person": "wij zijn",
                                 "second person": "jullie zijn",
                                 "third person": "zij zijn",
                             },
-                        ),
+                        },
                     },
                     "language": NL,
                 },
@@ -1404,16 +1412,16 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 {
                     "label": {
                         "infinitive": "to eat",
-                        "present tense": dict(singular="I eat", plural="we eat"),
-                        "past tense": dict(singular="I ate", plural="we ate"),
+                        "present tense": {"singular": "I eat", "plural": "we eat"},
+                        "past tense": {"singular": "I ate", "plural": "we ate"},
                     },
                     "language": EN,
                 },
                 {
                     "label": {
                         "infinitive": "eten",
-                        "present tense": dict(singular="ik eet", plural="wij eten"),
-                        "past tense": dict(singular="ik at", plural="wij aten"),
+                        "present tense": {"singular": "ik eet", "plural": "wij eten"},
+                        "past tense": {"singular": "ik at", "plural": "wij aten"},
                     },
                     "language": NL,
                 },
@@ -1604,7 +1612,7 @@ class DiminutiveTest(ToistoTestCase):
     def test_diminutive_one_language(self):
         """Test that quizzes can be generated for diminutive forms."""
         concept = self.create_concept(
-            "car", labels=[{"label": dict(root="de auto", diminutive="het autootje"), "language": NL}]
+            "car", labels=[{"label": {"root": "de auto", "diminutive": "het autootje"}, "language": NL}]
         )
         root, diminutive = concept.constituents
         auto, autootje = concept.labels(NL)
@@ -1650,7 +1658,7 @@ class DiminutiveTest(ToistoTestCase):
             "car",
             labels=[
                 {"label": "car", "language": EN},
-                {"label": dict(root="de auto", diminutive="het autootje"), "language": NL},
+                {"label": {"root": "de auto", "diminutive": "het autootje"}, "language": NL},
             ],
         )
         root, diminutive = concept.constituents
@@ -1677,7 +1685,9 @@ class NumberTest(ToistoTestCase):
 
     def test_numbers(self):
         """Test that quizzes can be generated for numbers."""
-        concept = self.create_concept("one", labels=[{"label": dict(cardinal="een", ordinal="eerste"), "language": NL}])
+        concept = self.create_concept(
+            "one", labels=[{"label": {"cardinal": "een", "ordinal": "eerste"}, "language": NL}]
+        )
         cardinal, ordinal = concept.constituents
         een, eerste = concept.labels(NL)
         self.assertSetEqual(
@@ -1695,8 +1705,8 @@ class NumberTest(ToistoTestCase):
         concept = self.create_concept(
             "one",
             labels=[
-                {"label": dict(cardinal="one", ordinal="first"), "language": EN},
-                {"label": dict(cardinal="een", ordinal="eerste"), "language": NL},
+                {"label": {"cardinal": "one", "ordinal": "first"}, "language": EN},
+                {"label": {"cardinal": "een", "ordinal": "eerste"}, "language": NL},
             ],
         )
         cardinal, ordinal = concept.constituents
@@ -1797,9 +1807,9 @@ class ColloquialTest(ToistoTestCase):
         concept = self.create_concept(
             "kiosk",
             labels=[
-                {"label": dict(singular="kioski", plural="kioskit"), "language": FI},
-                {"label": dict(singular="kiska", plural="kiskat"), "language": FI, "colloquial": True},
-                {"label": dict(singular="kiosk", plural="kiosks"), "language": EN},
+                {"label": {"singular": "kioski", "plural": "kioskit"}, "language": FI},
+                {"label": {"singular": "kiska", "plural": "kiskat"}, "language": FI, "colloquial": True},
+                {"label": {"singular": "kiosk", "plural": "kiosks"}, "language": EN},
             ],
         )
         singular, plural = concept.leaf_concepts(FI)

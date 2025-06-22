@@ -70,7 +70,7 @@ class ConceptTest(ToistoTestCase):
             "to eat/third person",
             labels=[
                 {"label": "hän syö", "language": FI},
-                {"label": dict(feminine="zij eet", masculine="hij eet"), "language": NL},
+                {"label": {"feminine": "zij eet", "masculine": "hij eet"}, "language": NL},
             ],
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))

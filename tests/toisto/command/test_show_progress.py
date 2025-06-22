@@ -26,7 +26,7 @@ class ShowProgressTestCase(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         concept = self.create_concept(
-            "hello", labels=[dict(label="Terve!", language=FI), dict(label="Hoi!", language=NL)]
+            "hello", labels=[{"label": "Terve!", "language": FI}, {"label": "Hoi!", "language": NL}]
         )
         self.quiz = first(create_quizzes(FI_NL, (READ,), concept))
         self.quizzes = Quizzes({self.quiz})
@@ -48,7 +48,7 @@ class ShowProgressTest(ShowProgressTestCase):
         self.now = datetime.now().astimezone()
         self.start = (self.now - timedelta(hours=1)).isoformat(timespec="seconds")
         self.end = self.now.isoformat(timespec="seconds")
-        self.progress = Progress(FI, self.quizzes, {self.quiz.key: dict(start=self.start, end=self.end)})
+        self.progress = Progress(FI, self.quizzes, {self.quiz.key: {"start": self.start, "end": self.end}})
 
     def test_title(self):
         """Test the table title."""
@@ -85,11 +85,11 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_that_generated_spelling_alternatives_are_not_shown(self):
         """Test that generated spelling alternatives are not included in the progress table."""
         concept = self.create_concept(
-            "veggie", labels=[dict(label="vegetable", language=EN), dict(label="de groente", language=NL)]
+            "veggie", labels=[{"label": "vegetable", "language": EN}, {"label": "de groente", "language": NL}]
         )
         quiz = first(create_quizzes(EN_NL, (READ,), concept))
         quizzes = Quizzes({quiz})
-        progress = Progress(EN, quizzes, {quiz.key: dict(start=self.start, end=self.end)})
+        progress = Progress(EN, quizzes, {quiz.key: {"start": self.start, "end": self.end}})
         Label.ALTERNATIVES_TO_GENERATE[NL] = {re.compile("de groente"): "de groentes"}
         console_print = self.show_progress(progress)
         self.assertEqual("de groente", next(console_print.call_args[0][0].columns[4].cells))
@@ -102,7 +102,7 @@ class ShowProgressSortTestCase(ShowProgressTestCase):
         """Set up test fixtures."""
         super().setUp()
         another_concept = self.create_concept(
-            "carpet", labels=[dict(label="matto", language=FI), dict(label="het tapijt", language=NL)]
+            "carpet", labels=[{"label": "matto", "language": FI}, {"label": "het tapijt", "language": NL}]
         )
         self.another_quiz = first(create_quizzes(FI_NL, (READ,), another_concept))
         self.quizzes = Quizzes({self.quiz, self.another_quiz})
@@ -118,7 +118,7 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
         progress = Progress(
             FI,
             self.quizzes,
-            {self.quiz.key: dict(count=21), self.another_quiz.key: {}},
+            {self.quiz.key: {"count": 21}, self.another_quiz.key: {}},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["21", "0"], list(console_print.call_args[0][0].columns[5].cells))
@@ -128,7 +128,7 @@ class ShowProgressByAttemptsTest(ShowProgressSortTestCase):
         progress = Progress(
             FI,
             self.quizzes,
-            {self.quiz.key: dict(count=21), self.another_quiz.key: dict(count=4)},
+            {self.quiz.key: {"count": 21}, self.another_quiz.key: {"count": 4}},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["21", "4"], list(console_print.call_args[0][0].columns[5].cells))
@@ -151,7 +151,7 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
         progress = Progress(
             FI,
             self.quizzes,
-            {self.quiz.key: dict(start=self.start, end=self.end), self.another_quiz.key: {}},
+            {self.quiz.key: {"start": self.start, "end": self.end}, self.another_quiz.key: {}},
         )
         console_print = self.show_progress(progress)
         self.assertEqual(["88 days", ""], list(console_print.call_args[0][0].columns[6].cells))
@@ -163,8 +163,8 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
             FI,
             self.quizzes,
             {
-                self.quiz.key: dict(start=self.start, end=self.end),
-                self.another_quiz.key: dict(start=another_start, end=self.end),
+                self.quiz.key: {"start": self.start, "end": self.end},
+                self.another_quiz.key: {"start": another_start, "end": self.end},
             },
         )
         console_print = self.show_progress(progress)

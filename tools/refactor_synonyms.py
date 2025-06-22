@@ -33,7 +33,7 @@ for json_filename in pathlib.Path("src/concepts").glob("**/*.json"):
     for label in contents["labels"]:
         for index in range(count_synonyms(label["label"])):
             sliced_label = slice_label(label["label"], index)
-            labels.append(dict(concept=label["concept"], label=sliced_label, language=label["language"]))
+            labels.append({"concept": label["concept"], "label": sliced_label, "language": label["language"]})
     contents["labels"] = labels
     with json_filename.open("w", encoding="utf-8") as json_file:
         json.dump(contents, json_file, indent=4, ensure_ascii=False)

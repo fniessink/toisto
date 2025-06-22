@@ -101,7 +101,7 @@ class Feedback:
         if self.quiz.is_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
             standard = self.quiz.question.colloquial and self.quiz.question.language == self.quiz.answer.language
             try_again = self.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE if standard else self.TRY_AGAIN_IN_ANSWER_LANGUAGE
-            return try_again % dict(language=ALL_LANGUAGES[self.quiz.answer.language])
+            return try_again % {"language": ALL_LANGUAGES[self.quiz.answer.language]}
         return self.TRY_AGAIN
 
     def _correct_answer(self, guess: Label) -> str:

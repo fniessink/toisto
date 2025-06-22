@@ -73,7 +73,7 @@ class RetentionTest(unittest.TestCase):
         start = cast("datetime", self.retention.start).isoformat(timespec="seconds")
         end = cast("datetime", self.retention.end).isoformat(timespec="seconds")
         skip_until = cast("datetime", self.retention.skip_until).isoformat(timespec="seconds")
-        self.assertEqual(dict(start=start, end=end, skip_until=skip_until, count=1), self.retention.as_dict())
+        self.assertEqual({"start": start, "end": end, "skip_until": skip_until, "count": 1}, self.retention.as_dict())
 
     def test_two_guesses_as_dict(self):
         """Test that the retention can be serialized."""

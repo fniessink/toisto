@@ -125,10 +125,10 @@ class ConceptFactory:
     def _constituent_concept_dict(self, category: GrammaticalCategory) -> ConceptJSON:
         """Create a constituent concept dict that can be used to create a constituent concept."""
         antonym_concept_ids = self._related_concept_ids("antonym")
-        antonyms_dict = dict(antonym=[ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids])
+        antonyms_dict = {"antonym": [ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids]}
         answer_concept_ids = self._related_concept_ids("answer")
-        answers_dict = dict(answer=[ConceptId(f"{answer}/{category}") for answer in answer_concept_ids])
-        roots_dict = dict(roots=self._get_roots())
+        answers_dict = {"answer": [ConceptId(f"{answer}/{category}") for answer in answer_concept_ids]}
+        roots_dict = {"roots": self._get_roots()}
         constituent_concept_dict = roots_dict | antonyms_dict | answers_dict
         return cast("ConceptJSON", constituent_concept_dict)
 
