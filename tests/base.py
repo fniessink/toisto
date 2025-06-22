@@ -130,7 +130,7 @@ class ToistoTestCase(unittest.TestCase):
             "means of transportation",
             labels=[
                 {"label": "means of transportation", "language": EN},
-                {"label": dict(singular="het vervoersmiddel", plural="de vervoersmiddelen"), "language": NL},
+                {"label": {"singular": "het vervoersmiddel", "plural": "de vervoersmiddelen"}, "language": NL},
             ],
         )
 

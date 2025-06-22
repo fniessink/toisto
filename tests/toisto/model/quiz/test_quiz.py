@@ -363,23 +363,27 @@ class QuizInstructionTest(QuizTestCase):
             labels=[
                 {
                     "label": {
-                        "present tense": dict(
-                            singular={"second person": "you read"}, plural={"second person": "you read"}
-                        ),
-                        "past tense": dict(
-                            singular={"second person": "you read"}, plural={"second person": "you read"}
-                        ),
+                        "present tense": {
+                            "singular": {"second person": "you read"},
+                            "plural": {"second person": "you read"},
+                        },
+                        "past tense": {
+                            "singular": {"second person": "you read"},
+                            "plural": {"second person": "you read"},
+                        },
                     },
                     "language": EN,
                 },
                 {
                     "label": {
-                        "present tense": dict(
-                            singular={"second person": "jij leest"}, plural={"second person": "jullie lezen"}
-                        ),
-                        "past tense": dict(
-                            singular={"second person": "jij las"}, plural={"second person": "jullie lazen"}
-                        ),
+                        "present tense": {
+                            "singular": {"second person": "jij leest"},
+                            "plural": {"second person": "jullie lezen"},
+                        },
+                        "past tense": {
+                            "singular": {"second person": "jij las"},
+                            "plural": {"second person": "jullie lazen"},
+                        },
                     },
                     "language": NL,
                 },
@@ -478,11 +482,11 @@ class QuizInstructionTest(QuizTestCase):
             "to be",
             labels=[
                 {
-                    "label": dict(singular={"second person": "Te olette"}, plural={"second person": "te olette"}),
+                    "label": {"singular": {"second person": "Te olette"}, "plural": {"second person": "te olette"}},
                     "language": FI,
                 },
                 {
-                    "label": dict(singular={"second person": "u bent"}, plural={"second person": "jullie zijn"}),
+                    "label": {"singular": {"second person": "u bent"}, "plural": {"second person": "jullie zijn"}},
                     "language": NL,
                 },
             ],

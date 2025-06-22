@@ -21,8 +21,8 @@ class AppTest(ToistoTestCase):
         """Set up test fixtures."""
         super().setUp()
         self.concept_file_count = 0  # Counter for generating unique concept files
-        self.current_version = Mock(json=Mock(return_value=[dict(name=VERSION)]))
-        self.latest_version = Mock(json=Mock(return_value=[dict(name="v9999")]))
+        self.current_version = Mock(json=Mock(return_value=[{"name": VERSION}]))
+        self.latest_version = Mock(json=Mock(return_value=[{"name": "v9999"}]))
         self.config = default_config()
 
     @patch("rich.console.Console.pager", MagicMock())

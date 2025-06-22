@@ -12,7 +12,7 @@ class PersistenceTestCase(unittest.TestCase):
     def setUp(self):
         """Override to set up the file path."""
         self.file_path = MagicMock()
-        self.contents = dict(foo="bar")
+        self.contents = {"foo": "bar"}
 
 
 class LoadJSONTest(PersistenceTestCase):

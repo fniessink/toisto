@@ -18,25 +18,25 @@ class ConceptRootsTest(QuizFactoryTestCase):
         """Test that leaf concepts can declare to have roots."""
         mall = self.create_concept(
             "mall",
-            dict(roots=["shop", "centre"]),
-            labels=[dict(label="kauppakeskus", language=FI), dict(label="het winkelcentrum", language=NL)],
+            {"roots": ["shop", "centre"]},
+            labels=[{"label": "kauppakeskus", "language": FI}, {"label": "het winkelcentrum", "language": NL}],
         )
-        shop = self.create_concept("shop", labels=[dict(label="kauppa", language=FI)])
-        centre = self.create_concept("centre", labels=[dict(label="keskusta", language=FI)])
+        shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
+        centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
         self.assertEqual((shop, centre), create_quizzes(FI_NL, (), mall).pop().concept.roots(FI))
 
     def test_concept_relationship_composite_concept(self):
         """Test that composite concepts can declare to have roots."""
         mall = self.create_concept(
             "mall",
-            dict(roots=["shop", "centre"]),
+            {"roots": ["shop", "centre"]},
             labels=[
-                dict(label=dict(singular="kauppakeskus", plural="kauppakeskukset"), language=FI),
-                dict(label=dict(singular="het winkelcentrum", plural="de winkelcentra"), language=NL),
+                {"label": {"singular": "kauppakeskus", "plural": "kauppakeskukset"}, "language": FI},
+                {"label": {"singular": "het winkelcentrum", "plural": "de winkelcentra"}, "language": NL},
             ],
         )
-        shop = self.create_concept("shop", labels=[dict(label="kauppa", language=FI)])
-        centre = self.create_concept("centre", labels=[dict(label="keskusta", language=FI)])
+        shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
+        centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
         for quiz in create_quizzes(FI_NL, (), mall):
             self.assertIn(shop, quiz.concept.roots(FI))
             self.assertIn(centre, quiz.concept.roots(FI))
@@ -45,10 +45,10 @@ class ConceptRootsTest(QuizFactoryTestCase):
         """Test that leaf concepts can declare to have one root."""
         capital = self.create_concept(
             "capital",
-            dict(roots="city"),
-            labels=[dict(label="pääkaupunki", language=FI), dict(label="capital", language=EN)],
+            {"roots": "city"},
+            labels=[{"label": "pääkaupunki", "language": FI}, {"label": "capital", "language": EN}],
         )
-        city = self.create_concept("city", labels=[dict(label="kaupunki", language=FI)])
+        city = self.create_concept("city", labels=[{"label": "kaupunki", "language": FI}])
         self.assertEqual((city,), create_quizzes(FI_NL, (), capital).pop().concept.roots(FI))
 
     def test_generated_concept_ids_for_constituent_concepts(self):
@@ -74,8 +74,8 @@ class AntonymConceptsTest(QuizFactoryTestCase):
     def setUp(self) -> None:
         """Extend to set up text fixtures."""
         super().setUp()
-        self.big = self.create_concept("big", dict(antonym="small"), labels=[dict(label="big", language=EN)])
-        self.small = self.create_concept("small", dict(antonym="big"), labels=[dict(label="small", language=EN)])
+        self.big = self.create_concept("big", {"antonym": "small"}, labels=[{"label": "big", "language": EN}])
+        self.small = self.create_concept("small", {"antonym": "big"}, labels=[{"label": "small", "language": EN}])
         self.quizzes = create_quizzes(EN_NL, (), self.big, self.small)
 
     def test_antonym_leaf_concepts(self):
@@ -100,9 +100,9 @@ class AnswerConceptsTest(QuizFactoryTestCase):
     def test_answer_leaf_concepts(self):
         """Test that quizzes are generated for concepts with answer concepts."""
         question = self.create_concept(
-            "question", dict(answer="answer"), labels=[dict(label="How are you?", language=EN)]
+            "question", {"answer": "answer"}, labels=[{"label": "How are you?", "language": EN}]
         )
-        answer = self.create_concept("answer", labels=[dict(label="I'm fine, thank you.", language=EN)])
+        answer = self.create_concept("answer", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         quizzes = create_quizzes(EN_NL, (), question, answer)
         (answer_label,) = answer.labels(EN)
         answer_quiz = self.create_quiz(question, question.labels(EN)[0], [answer_label], ANSWER)
@@ -112,12 +112,14 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         """Test that quizzes are generated for composite concepts with answer concepts."""
         question = self.create_concept(
             "question",
-            dict(answer="answer"),
-            labels=[dict(label=dict(singular="How are you?", plural="How are you all?"), language=EN)],
+            {"answer": "answer"},
+            labels=[{"label": {"singular": "How are you?", "plural": "How are you all?"}, "language": EN}],
         )
         answer = self.create_concept(
             "answer",
-            labels=[dict(label=dict(singular="I'm fine, thank you.", plural="We're fine, thank you."), language=EN)],
+            labels=[
+                {"label": {"singular": "I'm fine, thank you.", "plural": "We're fine, thank you."}, "language": EN}
+            ],
         )
         quizzes = create_quizzes(EN_NL, (), question, answer)
         how_are_you, how_are_you_all = question.labels(EN)
@@ -130,19 +132,19 @@ class AnswerConceptsTest(QuizFactoryTestCase):
     def test_multiple_answers(self):
         """Test that quizzes can have multiple answers."""
         question = self.create_concept(
-            "question", dict(answer=["fine", "good"]), labels=[dict(label="How are you?", language=EN)]
+            "question", {"answer": ["fine", "good"]}, labels=[{"label": "How are you?", "language": EN}]
         )
-        fine = self.create_concept("fine", labels=[dict(label="I'm fine, thank you.", language=EN)])
-        good = self.create_concept("good", labels=[dict(label="I'm doing good, thank you.", language=EN)])
+        fine = self.create_concept("fine", labels=[{"label": "I'm fine, thank you.", "language": EN}])
+        good = self.create_concept("good", labels=[{"label": "I'm doing good, thank you.", "language": EN}])
         quiz = first(create_quizzes(EN_NL, (ANSWER,), question, fine, good))
         self.assertEqual((fine.labels(EN)[0], good.labels(EN)[0]), quiz.answers)
 
     def test_answer_quiz_order(self):
         """Test that before quizzing for an answer to a question, the answer itself has been quizzed."""
         question = self.create_concept(
-            "question", dict(answer="answer"), labels=[dict(label="How are you?", language=EN)]
+            "question", {"answer": "answer"}, labels=[{"label": "How are you?", "language": EN}]
         )
-        answer = self.create_concept("answer", labels=[dict(label="I'm fine, thank you.", language=EN)])
+        answer = self.create_concept("answer", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         quizzes = create_quizzes(EN_NL, (), question, answer)
         answer_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(ANSWER))
         other_quizzes = quizzes - answer_quizzes

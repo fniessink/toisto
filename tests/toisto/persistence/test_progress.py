@@ -95,10 +95,10 @@ class SaveProgressTest(ProgressTestCase):
         """Test that the progress can be saved."""
         path_open.return_value.__enter__.return_value = json_file = MagicMock()
         save_progress(
-            Progress(Language("fi"), Quizzes(), {"quiz:read": dict(skip_until="3000-01-01T00:00:00+00:00")}),
+            Progress(Language("fi"), Quizzes(), {"quiz:read": {"skip_until": "3000-01-01T00:00:00+00:00"}}),
             self.config,
         )
-        dump.assert_called_once_with({"quiz:read": dict(skip_until="3000-01-01T00:00:00+00:00")}, json_file)
+        dump.assert_called_once_with({"quiz:read": {"skip_until": "3000-01-01T00:00:00+00:00"}}, json_file)
 
 
 class UpdateProgressTest(ToistoTestCase):
