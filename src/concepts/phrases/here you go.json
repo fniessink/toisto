@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "here you go": {
-            "roots": {
-                "fi": "good"
-            }
-        }
+        "here you go": {}
     },
     "labels": {
         "en": [
@@ -16,7 +12,8 @@
         "fi": [
             {
                 "concept": "here you go",
-                "label": "Ole hyvä!"
+                "label": "Ole hyvä!",
+                "roots": "hyvä"
             }
         ],
         "nl": [

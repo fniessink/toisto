@@ -1,14 +1,13 @@
 {
     "concepts": {
-        "handily": {
-            "roots": "hand"
-        }
+        "handily": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "handily",
-                "label": "handily"
+                "label": "handily",
+                "roots": "hand"
             }
         ],
         "fi": [
@@ -20,7 +19,8 @@
         "nl": [
             {
                 "concept": "handily",
-                "label": "handig"
+                "label": "handig",
+                "roots": "de hand"
             }
         ]
     }

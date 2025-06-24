@@ -4,11 +4,10 @@
             "hypernym": "musical instrument"
         },
         "guitarist": {
-            "involves": "guitar",
-            "roots": "guitar"
+            "involves": "guitar"
         },
         "huippukitaristi": {
-            "hypernym": "guiterist"
+            "hypernym": "guitarist"
         }
     },
     "labels": {
@@ -25,11 +24,13 @@
                 "label": {
                     "singular": "guitarist",
                     "plural": "guitarists"
-                }
+                },
+                "roots": "guitar"
             },
             {
                 "concept": "huippukitaristi",
-                "label": "top guitarist"
+                "label": "top guitarist",
+                "roots": "guitarist"
             }
         ],
         "fi": [
@@ -45,11 +46,13 @@
                 "label": {
                     "singular": "kitaristi",
                     "plural": "kitaristit"
-                }
+                },
+                "roots": "kitara"
             },
             {
                 "concept": "huippukitaristi",
-                "label": "huippukitaristi"
+                "label": "huippukitaristi",
+                "roots": "kitaristi"
             }
         ],
         "nl": [
@@ -65,11 +68,13 @@
                 "label": {
                     "singular": "de gitarist",
                     "plural": "de gitaristen"
-                }
+                },
+                "roots": "de gitaar"
             },
             {
                 "concept": "huippukitaristi",
-                "label": "de topgitarist"
+                "label": "de topgitarist",
+                "roots": "de gitarist"
             }
         ]
     }

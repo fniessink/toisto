@@ -17,14 +17,10 @@
             "hypernym": "clothes"
         },
         "underwear": {
-            "hypernym": "clothes",
-            "roots": {
-                "fi": "clothes"
-            }
+            "hypernym": "clothes"
         },
         "underpants": {
-            "hypernym": "underwear",
-            "roots": "trousers"
+            "hypernym": "underwear"
         },
         "hat": {
             "hypernym": "clothes"
@@ -36,17 +32,13 @@
             "hypernym": "clothes"
         },
         "sweater": {
-            "hypernym": "clothes",
-            "roots": {
-                "fi": "shirt"
-            }
+            "hypernym": "clothes"
         },
         "shirt": {
             "hypernym": "clothes"
         },
         "undershirt": {
-            "hypernym": "underwear",
-            "roots": "shirt"
+            "hypernym": "underwear"
         },
         "to dress": {
             "involves": "clothes"
@@ -135,7 +127,8 @@
             },
             {
                 "concept": "undershirt",
-                "label": "undershirt"
+                "label": "undershirt",
+                "roots": "shirt"
             },
             {
                 "concept": "to dress",
@@ -215,11 +208,13 @@
             },
             {
                 "concept": "underwear",
-                "label": "alusvaatteet"
+                "label": "alusvaatteet",
+                "roots": "vaatteet"
             },
             {
                 "concept": "underpants",
-                "label": "alushousut"
+                "label": "alushousut",
+                "roots": "housut"
             },
             {
                 "concept": "hat",
@@ -247,7 +242,8 @@
                 "label": {
                     "singular": "neulepaita",
                     "plural": "neulepaidat"
-                }
+                },
+                "roots": "paita"
             },
             {
                 "concept": "shirt",
@@ -258,7 +254,8 @@
             },
             {
                 "concept": "undershirt",
-                "label": "aluspaita"
+                "label": "aluspaita",
+                "roots": "paita"
             },
             {
                 "concept": "to dress",
@@ -326,7 +323,8 @@
                 "label": {
                     "singular": "de onderbroek",
                     "plural": "de onderbroeken"
-                }
+                },
+                "roots": "de broek"
             },
             {
                 "concept": "hat",
@@ -365,7 +363,8 @@
             },
             {
                 "concept": "undershirt",
-                "label": "onderhemd"
+                "label": "onderhemd",
+                "roots": "het hemd"
             },
             {
                 "concept": "to dress",

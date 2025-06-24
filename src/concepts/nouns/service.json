@@ -1,15 +1,8 @@
 {
     "concepts": {
         "service": {},
-        "customer service": {
-            "roots": [
-                "customer",
-                "service"
-            ]
-        },
-        "service point": {
-            "roots": "service"
-        }
+        "customer service": {},
+        "service point": {}
     },
     "labels": {
         "en": [
@@ -19,11 +12,16 @@
             },
             {
                 "concept": "customer service",
-                "label": "customer service"
+                "label": "customer service",
+                "roots": [
+                    "customer",
+                    "service"
+                ]
             },
             {
                 "concept": "service point",
-                "label": "service point"
+                "label": "service point",
+                "roots": "service"
             }
         ],
         "fi": [
@@ -33,11 +31,16 @@
             },
             {
                 "concept": "customer service",
-                "label": "asiakaspalvelu"
+                "label": "asiakaspalvelu",
+                "roots": [
+                    "asiakas",
+                    "palvelu"
+                ]
             },
             {
                 "concept": "service point",
-                "label": "palvelupiste"
+                "label": "palvelupiste",
+                "roots": "palvelu"
             },
             {
                 "concept": "service point",
@@ -48,19 +51,24 @@
         "nl": [
             {
                 "concept": "service",
-                "label": "service"
+                "label": "de service"
             },
             {
                 "concept": "service",
-                "label": "faciliteit"
+                "label": "de faciliteit"
             },
             {
                 "concept": "customer service",
-                "label": "de klantenservice"
+                "label": "de klantenservice",
+                "roots": [
+                    "de klant",
+                    "de service"
+                ]
             },
             {
                 "concept": "service point",
-                "label": "de servicebalie"
+                "label": "de servicebalie",
+                "roots": "de service"
             }
         ]
     }

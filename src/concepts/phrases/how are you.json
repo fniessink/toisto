@@ -1,21 +1,10 @@
 {
     "concepts": {
         "how are you": {
-            "hypernym": "greeting",
-            "roots": [
-                "what",
-                "how",
-                "to be"
-            ]
+            "hypernym": "greeting"
         },
         "how are you feeling": {},
-        "i am fine": {
-            "roots": {
-                "en": "to be",
-                "fi": "good",
-                "nl": "good"
-            }
-        }
+        "i am fine": {}
     },
     "labels": {
         "en": [
@@ -25,7 +14,8 @@
             },
             {
                 "concept": "how are you feeling",
-                "label": "How are you feeling?"
+                "label": "How are you feeling?",
+                "roots": "How are you?"
             },
             {
                 "concept": "how are you feeling",
@@ -43,7 +33,8 @@
             },
             {
                 "concept": "how are you",
-                "label": "Miten menee?"
+                "label": "Miten menee?",
+                "roots": "mennä"
             },
             {
                 "concept": "how are you feeling",
@@ -59,7 +50,8 @@
             },
             {
                 "concept": "i am fine",
-                "label": "Minulle kuuluu hyvää."
+                "label": "Minulle kuuluu hyvää.",
+                "roots": "hyvä"
             }
         ],
         "nl": [

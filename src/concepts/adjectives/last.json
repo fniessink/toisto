@@ -1,14 +1,8 @@
 {
     "concepts": {
         "last": {},
-        "the last time": {
-            "roots": "last"
-        },
-        "last (in a row)": {
-            "roots": {
-                "fi": "last"
-            }
-        }
+        "the last time": {},
+        "last (in a row)": {}
     },
     "labels": {
         "en": [
@@ -26,7 +20,11 @@
             },
             {
                 "concept": "the last time",
-                "label": "the last time"
+                "label": "the last time",
+                "roots": [
+                    "last",
+                    "time"
+                ]
             }
         ],
         "fi": [
@@ -36,11 +34,13 @@
             },
             {
                 "concept": "the last time",
-                "label": "viimeksi"
+                "label": "viimeksi",
+                "roots": "viime"
             },
             {
                 "concept": "last (in a row)",
-                "label": "viimeinen"
+                "label": "viimeinen",
+                "roots": "viime"
             }
         ],
         "nl": [

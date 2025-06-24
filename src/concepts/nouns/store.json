@@ -2,11 +2,7 @@
     "concepts": {
         "store": {},
         "department store": {
-            "roots": {
-                "en": "store",
-                "fi": "house",
-                "nl": "house"
-            }
+            "hypernym": "store"
         },
         "home appliance store": {
             "hypernym": "store"
@@ -26,11 +22,13 @@
                 "label": {
                     "singular": "department store",
                     "plural": "department stores"
-                }
+                },
+                "roots": "store"
             },
             {
                 "concept": "home appliance store",
-                "label": "home appliance store"
+                "label": "home appliance store",
+                "roots": "store"
             }
         ],
         "fi": [
@@ -46,7 +44,8 @@
                 "label": {
                     "singular": "tavaratalo",
                     "plural": "tavaratalot"
-                }
+                },
+                "roots": "talo"
             },
             {
                 "concept": "home appliance store",
@@ -66,11 +65,13 @@
                 "label": {
                     "singular": "het warenhuis",
                     "plural": "de warenhuizen"
-                }
+                },
+                "roots": "het huis"
             },
             {
                 "concept": "home appliance store",
-                "label": "de winkel voor huishoudelijke apparaten"
+                "label": "de winkel voor huishoudelijke apparaten",
+                "roots": "de winkel"
             }
         ]
     }

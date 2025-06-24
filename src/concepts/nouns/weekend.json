@@ -1,33 +1,11 @@
 {
     "concepts": {
-        "weekend": {
-            "roots": [
-                "end",
-                "week"
-            ]
-        },
-        "at the weekend": {
-            "roots": "weekend"
-        },
-        "last weekend": {
-            "roots": "weekend"
-        },
-        "next weekend": {
-            "roots": "weekend"
-        },
-        "good weekend": {
-            "roots": {
-                "en": [
-                    "good",
-                    "weekend"
-                ],
-                "fi": "weekend",
-                "nl": "weekend"
-            }
-        },
-        "before the weekend": {
-            "roots": "weekend"
-        }
+        "weekend": {},
+        "at the weekend": {},
+        "last weekend": {},
+        "next weekend": {},
+        "good weekend": {},
+        "before the weekend": {}
     },
     "labels": {
         "en": [
@@ -36,27 +14,48 @@
                 "label": {
                     "singular": "weekend",
                     "plural": "weekends"
-                }
+                },
+                "roots": [
+                    "week",
+                    "end"
+                ]
             },
             {
                 "concept": "at the weekend",
-                "label": "at the weekend"
+                "label": "at the weekend",
+                "roots": "weekend"
             },
             {
                 "concept": "last weekend",
-                "label": "last weekend"
+                "label": "last weekend",
+                "roots": [
+                    "last",
+                    "weekend"
+                ]
             },
             {
                 "concept": "next weekend",
-                "label": "next weekend"
+                "label": "next weekend",
+                "roots": [
+                    "next",
+                    "weekend"
+                ]
             },
             {
                 "concept": "good weekend",
-                "label": "Good weekend!"
+                "label": "Good weekend!",
+                "roots": [
+                    "good",
+                    "weekend"
+                ]
             },
             {
                 "concept": "before the weekend",
-                "label": "before the weekend"
+                "label": "before the weekend",
+                "roots": [
+                    "before",
+                    "weekend"
+                ]
             }
         ],
         "fi": [
@@ -65,27 +64,42 @@
                 "label": {
                     "singular": "viikonloppu",
                     "plural": "viikonloput"
-                }
+                },
+                "roots": [
+                    "viikko",
+                    "loppu"
+                ]
             },
             {
                 "concept": "at the weekend",
-                "label": "viikonloppuna"
+                "label": "viikonloppuna",
+                "roots": "viikonloppu"
             },
             {
                 "concept": "last weekend",
-                "label": "viime viikonloppuna"
+                "label": "viime viikonloppuna",
+                "roots": [
+                    "viime",
+                    "viikonloppu"
+                ]
             },
             {
                 "concept": "next weekend",
-                "label": "ensi viikonloppuna"
+                "label": "ensi viikonloppuna",
+                "roots": "viikonloppu"
             },
             {
                 "concept": "good weekend",
-                "label": "Hauskaa viikonloppua!"
+                "label": "Hauskaa viikonloppua!",
+                "roots": [
+                    "hauska",
+                    "viikonloppu"
+                ]
             },
             {
                 "concept": "before the weekend",
-                "label": "viikonlopuksi"
+                "label": "viikonlopuksi",
+                "roots": "viikonloppu"
             }
         ],
         "nl": [
@@ -98,23 +112,31 @@
             },
             {
                 "concept": "at the weekend",
-                "label": "in het weekend"
+                "label": "in het weekend",
+                "roots": "het weekend"
             },
             {
                 "concept": "last weekend",
-                "label": "vorig weekend"
+                "label": "vorig weekend",
+                "roots": [
+                    "vorig",
+                    "het weekend"
+                ]
             },
             {
                 "concept": "next weekend",
-                "label": "volgend weekend"
+                "label": "volgend weekend",
+                "roots": "het weekend"
             },
             {
                 "concept": "good weekend",
-                "label": "Prettig weekend!"
+                "label": "Prettig weekend!",
+                "roots": "het weekend"
             },
             {
                 "concept": "before the weekend",
-                "label": "voor het weekend"
+                "label": "voor het weekend",
+                "roots": "het weekend"
             }
         ]
     }

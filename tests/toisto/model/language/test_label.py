@@ -49,6 +49,11 @@ class LabelTest(ToistoTestCase):
         label = Label(EN, ["Christmas", "Xmas"])
         self.assertEqual((Label(EN, "Christmas"), Label(EN, "Xmas")), label.spelling_alternatives)
 
+    def test_roots(self):
+        """Test that the label can have roots."""
+        label = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
+        self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de kast")]), label.roots)
+
 
 class LabelsTest(ToistoTestCase):
     """Unit tests for the Labels class."""

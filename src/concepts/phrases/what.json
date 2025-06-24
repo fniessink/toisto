@@ -2,19 +2,8 @@
     "concepts": {
         "what do you think": {},
         "what is the matter": {},
-        "what is your name": {
-            "roots": [
-                "what",
-                "to be",
-                "name"
-            ]
-        },
-        "my name is bob": {
-            "roots": [
-                "name",
-                "to be"
-            ]
-        },
+        "what is your name": {},
+        "my name is bob": {},
         "What was it again?": {}
     },
     "labels": {
@@ -29,11 +18,13 @@
             },
             {
                 "concept": "what is your name",
-                "label": "What is your name?"
+                "label": "What is your name?",
+                "roots": "name"
             },
             {
                 "concept": "my name is bob",
-                "label": "My name is Bob."
+                "label": "My name is Bob.",
+                "roots": "name"
             },
             {
                 "concept": "What was it again?",
@@ -56,11 +47,13 @@
             },
             {
                 "concept": "what is your name",
-                "label": "Mikä sinun nimesi on?"
+                "label": "Mikä sinun nimesi on?",
+                "roots": "nimi"
             },
             {
                 "concept": "my name is bob",
-                "label": "Minun nimeni on Bob."
+                "label": "Minun nimeni on Bob.",
+                "roots": "nimi"
             },
             {
                 "concept": "What was it again?",
@@ -78,11 +71,13 @@
             },
             {
                 "concept": "what is your name",
-                "label": "Wat is jouw naam?"
+                "label": "Wat is jouw naam?",
+                "roots": "de naam"
             },
             {
                 "concept": "my name is bob",
-                "label": "Mijn naam is Bob."
+                "label": "Mijn naam is Bob.",
+                "roots": "de naam"
             },
             {
                 "concept": "What was it again?",

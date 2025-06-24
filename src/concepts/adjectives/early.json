@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "early": {
-            "roots": {
-                "fi": "time"
-            }
-        }
+        "early": {}
     },
     "labels": {
         "en": [
@@ -24,7 +20,8 @@
                     "positive degree": "aikaisin",
                     "comparative degree": "aikaisemmin",
                     "superlative degree": "aikaisimmin"
-                }
+                },
+                "roots": "aika"
             }
         ],
         "nl": [

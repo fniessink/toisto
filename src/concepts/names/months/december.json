@@ -1,13 +1,7 @@
 {
     "concepts": {
         "december": {
-            "hypernym": "month",
-            "roots": {
-                "fi": [
-                    "christmas",
-                    "moon"
-                ]
-            }
+            "hypernym": "month"
         }
     },
     "labels": {
@@ -22,7 +16,11 @@
             {
                 "concept": "december",
                 "label": "joulukuu",
-                "note": "In Finnish, names of months are not capitalized"
+                "note": "In Finnish, names of months are not capitalized",
+                "roots": [
+                    "joulu",
+                    "kuu"
+                ]
             }
         ],
         "nl": [

@@ -8,17 +8,7 @@
             "hypernym": "building"
         },
         "movie theater": {
-            "hypernym": "building",
-            "roots": {
-                "en": [
-                    "movie",
-                    "theater"
-                ],
-                "fi": [
-                    "movie",
-                    "theater"
-                ]
-            }
+            "hypernym": "building"
         },
         "opera": {
             "hypernym": "building"
@@ -33,39 +23,18 @@
             "hypernym": "building"
         },
         "library": {
-            "hypernym": "building",
-            "roots": {
-                "fi": "book"
-            }
+            "hypernym": "building"
         },
-        "café": {
-            "roots": {
-                "fi": "coffee"
-            }
-        },
+        "café": {},
         "restaurant": {},
         "office": {},
         "park": {},
         "amusement park": {
-            "hypernym": "attraction",
-            "roots": "park"
+            "hypernym": "attraction"
         },
-        "playground": {
-            "roots": {
-                "en": "ground",
-                "fi": "park",
-                "nl": "garden"
-            }
-        },
+        "playground": {},
         "zoo": {
-            "hypernym": "attraction",
-            "roots": {
-                "fi": "animal",
-                "nl": [
-                    "animal",
-                    "garden"
-                ]
-            }
+            "hypernym": "attraction"
         },
         "castle": {
             "hypernym": [
@@ -82,103 +51,20 @@
         },
         "road": {},
         "path": {},
-        "pedestrian": {
-            "roots": {
-                "fi": "foot",
-                "nl": "foot"
-            }
-        },
+        "pedestrian": {},
         "sidewalk": {},
-        "pedestrian crossing": {
-            "roots": {
-                "en": "pedestrian",
-                "fi": "road",
-                "nl": [
-                    "zebra",
-                    "path"
-                ]
-            }
-        },
+        "pedestrian crossing": {},
         "cyclist": {},
-        "cycle path": {
-            "roots": {
-                "en": [
-                    "bicycle",
-                    "path"
-                ],
-                "fi": [
-                    "bicycle",
-                    "road"
-                ],
-                "nl": [
-                    "bicycle",
-                    "path"
-                ]
-            }
-        },
+        "cycle path": {},
         "square": {},
         "post": {},
-        "post office": {
-            "roots": {
-                "en": [
-                    "post",
-                    "office"
-                ],
-                "fi": "post",
-                "nl": [
-                    "post",
-                    "office"
-                ]
-            }
-        },
-        "mall": {
-            "roots": {
-                "en": "centre",
-                "fi": [
-                    "centre",
-                    "store"
-                ],
-                "nl": [
-                    "centre",
-                    "store"
-                ]
-            }
-        },
-        "that building is a church": {
-            "roots": [
-                "to be",
-                "building",
-                "church"
-            ]
-        },
-        "where is the library": {
-            "roots": [
-                "where",
-                "to be",
-                "library"
-            ]
-        },
-        "there is a christmas tree on the square": {
-            "roots": [
-                "to be",
-                "square",
-                "christmas tree"
-            ]
-        },
-        "I am in the office": {
-            "roots": [
-                "to be",
-                "office"
-            ]
-        },
-        "my house is in this street": {
-            "roots": [
-                "to be",
-                "house",
-                "this",
-                "street"
-            ]
-        }
+        "post office": {},
+        "mall": {},
+        "that building is a church": {},
+        "where is the library": {},
+        "there is a christmas tree on the square": {},
+        "I am in the office": {},
+        "my house is in this street": {}
     },
     "labels": {
         "en": [
@@ -222,7 +108,11 @@
                 "label": {
                     "singular": "movie theater",
                     "plural": "movie theaters"
-                }
+                },
+                "root": [
+                    "movie",
+                    "theater"
+                ]
             },
             {
                 "concept": "opera",
@@ -289,11 +179,16 @@
             },
             {
                 "concept": "amusement park",
-                "label": "amusement park"
+                "label": "amusement park",
+                "roots": "park"
             },
             {
                 "concept": "playground",
-                "label": "playground"
+                "label": "playground",
+                "roots": [
+                    "to play",
+                    "ground"
+                ]
             },
             {
                 "concept": "zoo",
@@ -319,8 +214,14 @@
             {
                 "concept": "centre",
                 "label": {
-                    "singular": "centre",
-                    "plural": "centres"
+                    "singular": [
+                        "centre",
+                        "center"
+                    ],
+                    "plural": [
+                        "centres",
+                        "centers"
+                    ]
                 }
             },
             {
@@ -356,11 +257,13 @@
                 "label": {
                     "singular": "sidewalk",
                     "plural": "sidewalks"
-                }
+                },
+                "roots": "to walk"
             },
             {
                 "concept": "pedestrian crossing",
-                "label": "pedestrian crossing"
+                "label": "pedestrian crossing",
+                "roots": "pedestrian"
             },
             {
                 "concept": "cyclist",
@@ -371,7 +274,11 @@
             },
             {
                 "concept": "cycle path",
-                "label": "cycle path"
+                "label": "cycle path",
+                "roots": [
+                    "cycling",
+                    "path"
+                ]
             },
             {
                 "concept": "square",
@@ -390,7 +297,11 @@
             },
             {
                 "concept": "post office",
-                "label": "post office"
+                "label": "post office",
+                "roots": [
+                    "post",
+                    "office"
+                ]
             },
             {
                 "concept": "mall",
@@ -408,23 +319,43 @@
             },
             {
                 "concept": "that building is a church",
-                "label": "That building is a church."
+                "label": "That building is a church.",
+                "roots": [
+                    "building",
+                    "church"
+                ]
             },
             {
                 "concept": "where is the library",
-                "label": "Where is the library?"
+                "label": "Where is the library?",
+                "roots": [
+                    "Where?",
+                    "library"
+                ]
             },
             {
                 "concept": "there is a christmas tree on the square",
-                "label": "There is a Christmas tree on the square."
+                "label": "There is a Christmas tree on the square.",
+                "roots": [
+                    "Christmas tree",
+                    "square"
+                ]
             },
             {
                 "concept": "I am in the office",
-                "label": "I am in the office."
+                "label": "I am in the office.",
+                "roots": [
+                    "I am",
+                    "office"
+                ]
             },
             {
                 "concept": "my house is in this street",
-                "label": "My house is in this street."
+                "label": "My house is in this street.",
+                "roots": [
+                    "house",
+                    "street"
+                ]
             }
         ],
         "fi": [
@@ -468,7 +399,11 @@
                 "label": {
                     "singular": "elokuvateatteri",
                     "plural": "elokuvateatterit"
-                }
+                },
+                "roots": [
+                    "elokuva",
+                    "teatteri"
+                ]
             },
             {
                 "concept": "opera",
@@ -503,14 +438,16 @@
                 "label": {
                     "singular": "kirjasto",
                     "plural": "kirjastot"
-                }
+                },
+                "roots": "kirja"
             },
             {
                 "concept": "café",
                 "label": {
                     "singular": "kahvila",
                     "plural": "kahvilat"
-                }
+                },
+                "roots": "kahvi"
             },
             {
                 "concept": "restaurant",
@@ -535,18 +472,21 @@
             },
             {
                 "concept": "amusement park",
-                "label": "huvipuisto"
+                "label": "huvipuisto",
+                "roots": "puisto"
             },
             {
                 "concept": "playground",
-                "label": "leikkipuisto"
+                "label": "leikkipuisto",
+                "roots": "puisto"
             },
             {
                 "concept": "zoo",
                 "label": {
                     "singular": "eläintarha",
                     "plural": "eläintarhat"
-                }
+                },
+                "roots": "eläin"
             },
             {
                 "concept": "castle",
@@ -595,18 +535,21 @@
                 "label": {
                     "singular": "jalankulkija",
                     "plural": "jalankulkijat"
-                }
+                },
+                "roots": "jalka"
             },
             {
                 "concept": "sidewalk",
                 "label": {
                     "singular": "jalkakäytävä",
                     "plural": "jalkakäytävät"
-                }
+                },
+                "roots": "jalka"
             },
             {
                 "concept": "pedestrian crossing",
-                "label": "suojatie"
+                "label": "suojatie",
+                "roots": "tie"
             },
             {
                 "concept": "cyclist",
@@ -617,7 +560,11 @@
             },
             {
                 "concept": "cycle path",
-                "label": "pyörätie"
+                "label": "pyörätie",
+                "roots": [
+                    "polkypyörä",
+                    "tie"
+                ]
             },
             {
                 "concept": "square",
@@ -638,7 +585,8 @@
                 "label": {
                     "singular": "kauppakeskus",
                     "plural": "kauppakeskukset"
-                }
+                },
+                "roots": "kauppa"
             },
             {
                 "concept": "mall",
@@ -649,25 +597,45 @@
             },
             {
                 "concept": "that building is a church",
-                "label": "Tuo rakennus on kirkko."
+                "label": "Tuo rakennus on kirkko.",
+                "roots": [
+                    "rakennus",
+                    "kirkko"
+                ]
             },
             {
                 "concept": "where is the library",
-                "label": "Missä on kirjasto?"
+                "label": "Missä on kirjasto?",
+                "roots": [
+                    "Missä?",
+                    "kirjasto"
+                ]
             },
             {
                 "concept": "there is a christmas tree on the square",
-                "label": "Aukiolla on joulukuusi."
+                "label": "Aukiolla on joulukuusi.",
+                "roots": [
+                    "aukio",
+                    "joulukuusi"
+                ]
             },
             {
                 "concept": "I am in the office",
-                "label": "Minä olen toimistolla."
+                "label": "Minä olen toimistolla.",
+                "roots": [
+                    "minä olen",
+                    "toimisto"
+                ]
             },
             {
                 "concept": "my house is in this street",
                 "label": [
                     "Minun taloni on tällä kadulla.",
                     "Taloni on tällä kadulla."
+                ],
+                "roots": [
+                    "talo",
+                    "katu"
                 ]
             }
         ],
@@ -779,22 +747,32 @@
             },
             {
                 "concept": "amusement park",
-                "label": "het pretpark"
+                "label": "het pretpark",
+                "roots": "het park"
             },
             {
                 "concept": "amusement park",
-                "label": "het attractiepark"
+                "label": "het attractiepark",
+                "roots": "het park"
             },
             {
                 "concept": "playground",
-                "label": "de speeltuin"
+                "label": "de speeltuin",
+                "roots": [
+                    "spelen",
+                    "de tuin"
+                ]
             },
             {
                 "concept": "zoo",
                 "label": {
                     "singular": "de dierentuin",
                     "plural": "de dierentuinen"
-                }
+                },
+                "roots": [
+                    "de dieren",
+                    "de tuin"
+                ]
             },
             {
                 "concept": "castle",
@@ -843,7 +821,8 @@
                 "label": {
                     "singular": "de voetganger",
                     "plural": "de voetgangers"
-                }
+                },
+                "roots": "de voet"
             },
             {
                 "concept": "sidewalk",
@@ -854,7 +833,11 @@
             },
             {
                 "concept": "pedestrian crossing",
-                "label": "het zebrapad"
+                "label": "het zebrapad",
+                "roots": [
+                    "de zebra",
+                    "het pad"
+                ]
             },
             {
                 "concept": "cyclist",
@@ -865,7 +848,11 @@
             },
             {
                 "concept": "cycle path",
-                "label": "het fietspad"
+                "label": "het fietspad",
+                "roots": [
+                    "de fiets",
+                    "het pad"
+                ]
             },
             {
                 "concept": "square",
@@ -880,34 +867,62 @@
             },
             {
                 "concept": "post office",
-                "label": "het postkantoor"
+                "label": "het postkantoor",
+                "roots": [
+                    "de post",
+                    "het kantoor"
+                ]
             },
             {
                 "concept": "mall",
                 "label": {
                     "singular": "het winkelcentrum",
                     "plural": "de winkelcentra"
-                }
+                },
+                "roots": [
+                    "de winkel",
+                    "het centrum"
+                ]
             },
             {
                 "concept": "that building is a church",
-                "label": "Dat gebouw is een kerk."
+                "label": "Dat gebouw is een kerk.",
+                "roots": [
+                    "het gebouw",
+                    "de kerk"
+                ]
             },
             {
                 "concept": "where is the library",
-                "label": "Waar is de bibliotheek?"
+                "label": "Waar is de bibliotheek?",
+                "roots": [
+                    "Waar?",
+                    "de bibliotheek"
+                ]
             },
             {
                 "concept": "there is a christmas tree on the square",
-                "label": "Er staat een kerstboom op het plein."
+                "label": "Er staat een kerstboom op het plein.",
+                "roots": [
+                    "de kerstboom",
+                    "het plein"
+                ]
             },
             {
                 "concept": "I am in the office",
-                "label": "Ik ben op kantoor."
+                "label": "Ik ben op kantoor.",
+                "roots": [
+                    "ik ben",
+                    "het kantoor"
+                ]
             },
             {
                 "concept": "my house is in this street",
-                "label": "Mijn huis is in deze straat."
+                "label": "Mijn huis is in deze straat.",
+                "roots": [
+                    "het huis",
+                    "de straat"
+                ]
             }
         ]
     }

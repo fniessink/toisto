@@ -1,13 +1,6 @@
 {
     "concepts": {
-        "shift": {
-            "roots": {
-                "fi": [
-                    "work",
-                    "turn"
-                ]
-            }
-        }
+        "shift": {}
     },
     "labels": {
         "en": [
@@ -19,7 +12,11 @@
         "fi": [
             {
                 "concept": "shift",
-                "label": "työvuoro"
+                "label": "työvuoro",
+                "roots": [
+                    "työ",
+                    "vuoro"
+                ]
             }
         ],
         "nl": [

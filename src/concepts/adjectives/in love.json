@@ -1,34 +1,32 @@
 {
     "concepts": {
-        "in love": {
-            "roots": {
-                "en": "love",
-                "fi": "to fall in love",
-                "nl": "love"
-            }
-        }
+        "in love": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "in love",
-                "label": "in love"
+                "label": "in love",
+                "roots": "love"
             }
         ],
         "fi": [
             {
                 "concept": "in love",
-                "label": "ihastunut"
+                "label": "ihastunut",
+                "roots": "ihastua"
             },
             {
                 "concept": "in love",
-                "label": "rakastunut"
+                "label": "rakastunut",
+                "roots": "rakastua"
             }
         ],
         "nl": [
             {
                 "concept": "in love",
-                "label": "verliefd"
+                "label": "verliefd",
+                "roots": "de liefde"
             }
         ]
     }

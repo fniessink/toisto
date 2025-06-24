@@ -7,8 +7,7 @@
         "when": {},
         "how": {},
         "how many": {
-            "example": "how many degrees is it outside",
-            "roots": "how"
+            "example": "how many degrees is it outside"
         },
         "what kind of": {
             "example": [
@@ -18,79 +17,17 @@
         },
         "to where": {},
         "from which country": {},
-        "where is the water": {
-            "roots": [
-                "where",
-                "to be",
-                "water"
-            ]
-        },
-        "where there": {
-            "roots": [
-                "where",
-                "there"
-            ]
-        },
-        "why are you doing that": {
-            "roots": [
-                "why",
-                "to do"
-            ]
-        },
-        "why is that the case": {
-            "roots": [
-                "why",
-                "to be"
-            ]
-        },
-        "why are you too late": {
-            "roots": [
-                "why",
-                "to be"
-            ]
-        },
-        "why are bananas bent": {
-            "roots": [
-                "why",
-                "banana",
-                "to be"
-            ]
-        },
-        "where is the toilet": {
-            "roots": [
-                "where",
-                "to be",
-                "toilet"
-            ]
-        },
-        "when will you arrive at the airport": {
-            "roots": [
-                "when",
-                "to arrive",
-                "airport"
-            ]
-        },
-        "what kind of cat do you have": {
-            "roots": [
-                "what kind of",
-                "cat",
-                "to have"
-            ]
-        },
-        "what is the weather like": {
-            "roots": [
-                "what kind of",
-                "to be",
-                "weather"
-            ]
-        },
-        "how many degrees is it outside": {
-            "roots": [
-                "how many",
-                "degree",
-                "to be"
-            ]
-        }
+        "where is the water": {},
+        "where there": {},
+        "why are you doing that": {},
+        "why is that the case": {},
+        "why are you too late": {},
+        "why are bananas bent": {},
+        "where is the toilet": {},
+        "when will you arrive at the airport": {},
+        "what kind of cat do you have": {},
+        "what is the weather like": {},
+        "how many degrees is it outside": {}
     },
     "labels": {
         "en": [
@@ -120,11 +57,13 @@
             },
             {
                 "concept": "how many",
-                "label": "How many?"
+                "label": "How many?",
+                "roots": "How?"
             },
             {
                 "concept": "what kind of",
-                "label": "What kind of?"
+                "label": "What kind of?",
+                "roots": "What?"
             },
             {
                 "concept": "to where",
@@ -137,51 +76,90 @@
             },
             {
                 "concept": "where is the water",
-                "label": "Where is the water?"
+                "label": "Where is the water?",
+                "roots": [
+                    "Where?",
+                    "water"
+                ]
             },
             {
                 "concept": "where there",
-                "label": "Where? There!"
+                "label": "Where? There!",
+                "roots": [
+                    "Where?",
+                    "there"
+                ]
             },
             {
                 "concept": "why are you doing that",
-                "label": "Why are you doing that?"
+                "label": "Why are you doing that?",
+                "roots": "Why?"
             },
             {
                 "concept": "why is that the case",
-                "label": "Why is that the case?"
+                "label": "Why is that the case?",
+                "roots": "Why?"
             },
             {
                 "concept": "why are you too late",
-                "label": "Why are you too late?"
+                "label": "Why are you too late?",
+                "roots": "Why?"
             },
             {
                 "concept": "why are bananas bent",
-                "label": "Why are banasas bent?"
+                "label": "Why are bananas bent?",
+                "roots": "Why?"
             },
             {
                 "concept": "where is the toilet",
-                "label": "Where is the toilet?"
+                "label": "Where is the toilet?",
+                "roots": [
+                    "Where?",
+                    "toilet"
+                ]
             },
             {
                 "concept": "where is the toilet",
-                "label": "Where is the restroom?"
+                "label": "Where is the restroom?",
+                "roots": [
+                    "Where?",
+                    "restroom"
+                ]
             },
             {
                 "concept": "when will you arrive at the airport",
-                "label": "When will you arrive at the airport?"
+                "label": "When will you arrive at the airport?",
+                "roots": [
+                    "When?",
+                    "to arrive",
+                    "airport"
+                ]
             },
             {
                 "concept": "what kind of cat do you have",
-                "label": "What kind of cat do you have?"
+                "label": "What kind of cat do you have?",
+                "roots": [
+                    "What kind of?",
+                    "cat"
+                ]
             },
             {
                 "concept": "what is the weather like",
-                "label": "What is the weather like today?"
+                "label": "What is the weather like today?",
+                "roots": [
+                    "What?",
+                    "weather",
+                    "today"
+                ]
             },
             {
                 "concept": "how many degrees is it outside",
-                "label": "How many degrees is it outside?"
+                "label": "How many degrees is it outside?",
+                "roots": [
+                    "How many?",
+                    "degree",
+                    "outside"
+                ]
             }
         ],
         "fi": [
@@ -235,41 +213,66 @@
                 "label": [
                     "Missä vesi on?",
                     "Missä on vesi?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "vesi"
                 ]
             },
             {
                 "concept": "where there",
-                "label": "Missä? Tuossa!"
+                "label": "Missä? Tuossa!",
+                "roots": [
+                    "Missä?",
+                    "tuossa"
+                ]
             },
             {
                 "concept": "why are you doing that",
-                "label": "Miksi teet tuon?"
+                "label": "Miksi teet tuon?",
+                "roots": "Miksi?"
             },
             {
                 "concept": "why are you doing that",
-                "label": "Miksi teet noin?"
+                "label": "Miksi teet noin?",
+                "roots": "Miksi?"
             },
             {
                 "concept": "why is that the case",
-                "label": "Miksi se on noin?"
+                "label": "Miksi se on noin?",
+                "roots": "Miksi?"
             },
             {
                 "concept": "why is that the case",
-                "label": "Miksi se on niin?"
+                "label": "Miksi se on niin?",
+                "roots": "Miksi?"
             },
             {
                 "concept": "why are you too late",
-                "label": "Miksi sinä olet myöhässä?"
+                "label": "Miksi sinä olet myöhässä?",
+                "roots": [
+                    "Miksi?",
+                    "sinä olet",
+                    "myöhässä"
+                ]
             },
             {
                 "concept": "why are bananas bent",
-                "label": "Miksi banaanit ovat käyriä?"
+                "label": "Miksi banaanit ovat käyriä?",
+                "roots": [
+                    "Miksi?",
+                    "banaani"
+                ]
             },
             {
                 "concept": "where is the toilet",
                 "label": [
                     "Missä on wc?",
                     "Missä wc on?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "wc"
                 ]
             },
             {
@@ -277,26 +280,49 @@
                 "label": [
                     "Missä on vessa?",
                     "Missä vessa on?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "vessa"
                 ]
             },
             {
                 "concept": "when will you arrive at the airport",
-                "label": "Milloin saavut lentokentälle?"
+                "label": "Milloin saavut lentokentälle?",
+                "roots": [
+                    "Milloin?",
+                    "sinä saavut",
+                    "lentokenttä"
+                ]
             },
             {
                 "concept": "what kind of cat do you have",
-                "label": "Millainen kissa sinulla on?"
+                "label": "Millainen kissa sinulla on?",
+                "roots": [
+                    "Millainen?",
+                    "kissa",
+                    "sinulla on"
+                ]
             },
             {
                 "concept": "what is the weather like",
                 "label": [
                     "Millainen sää tänään on?",
                     "Millainen ilma tänään on?"
+                ],
+                "roots": [
+                    "Millainen?",
+                    "sää",
+                    "tänään"
                 ]
             },
             {
                 "concept": "how many degrees is it outside",
-                "label": "Kuinka monta astetta ulkona on?"
+                "label": "Kuinka monta astetta ulkona on?",
+                "roots": [
+                    "Kuinka monta?",
+                    "aste"
+                ]
             }
         ],
         "nl": [
@@ -326,19 +352,22 @@
             },
             {
                 "concept": "how many",
-                "label": "Hoeveel"
+                "label": "Hoeveel?"
             },
             {
                 "concept": "what kind of",
-                "label": "Wat voor soort?"
+                "label": "Wat voor soort?",
+                "roots": "Wat?"
             },
             {
                 "concept": "what kind of",
-                "label": "Wat voor een?"
+                "label": "Wat voor een?",
+                "roots": "Wat?"
             },
             {
                 "concept": "to where",
-                "label": "waarheen"
+                "label": "waarheen?",
+                "roots": "Waar?"
             },
             {
                 "concept": "from which country",
@@ -347,44 +376,74 @@
             },
             {
                 "concept": "where is the water",
-                "label": "Waar is het water?"
+                "label": "Waar is het water?",
+                "roots": [
+                    "Waar?",
+                    "het water"
+                ]
             },
             {
                 "concept": "where there",
-                "label": "Waar? Daar!"
+                "label": "Waar? Daar!",
+                "roots": [
+                    "Waar?",
+                    "daar"
+                ]
             },
             {
                 "concept": "why are you doing that",
-                "label": "Waarom doe je dat?"
+                "label": "Waarom doe je dat?",
+                "roots": "Waarom?"
             },
             {
                 "concept": "why is that the case",
-                "label": "Waarom is dat zo?"
+                "label": "Waarom is dat zo?",
+                "roots": "Waarom?"
             },
             {
                 "concept": "why are you too late",
-                "label": "Waarom ben je te laat?"
+                "label": "Waarom ben je te laat?",
+                "roots": [
+                    "Waarom?",
+                    "laat"
+                ]
             },
             {
                 "concept": "why are bananas bent",
                 "label": [
                     "Waarom zijn bananen krom?",
                     "Waarom zijn de bananen krom?"
+                ],
+                "roots": [
+                    "Waarom?",
+                    "de banaan"
                 ]
             },
             {
                 "concept": "where is the toilet",
-                "label": "Waar is de wc?"
+                "label": "Waar is de wc?",
+                "roots": [
+                    "Waar?",
+                    "de wc"
+                ]
             },
             {
                 "concept": "where is the toilet",
-                "label": "Waar is het toilet?"
+                "label": "Waar is het toilet?",
+                "roots": [
+                    "Waar?",
+                    "het toilet"
+                ]
             },
             {
                 "concept": "when will you arrive at the airport",
                 "label": [
                     "Wanneer kom je aan op het vliegveld?",
                     "Wanneer kom je op het vliegveld aan?"
+                ],
+                "roots": [
+                    "Wanneer?",
+                    "het vliegveld"
                 ]
             },
             {
@@ -392,15 +451,28 @@
                 "label": [
                     "Wat voor soort kat heb jij?",
                     "Wat voor een kat heb jij?"
+                ],
+                "roots": [
+                    "Wat voor een?",
+                    "de kat"
                 ]
             },
             {
                 "concept": "what is the weather like",
-                "label": "Wat voor weer is het vandaag?"
+                "label": "Wat voor weer is het vandaag?",
+                "roots": [
+                    "Wat voor een?",
+                    "het weer",
+                    "vandaag"
+                ]
             },
             {
                 "concept": "how many degrees is it outside",
-                "label": "Hoeveel graden is het buiten?"
+                "label": "Hoeveel graden is het buiten?",
+                "roots": [
+                    "Hoeveel?",
+                    "de graad"
+                ]
             }
         ]
     }

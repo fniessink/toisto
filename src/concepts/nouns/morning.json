@@ -4,12 +4,10 @@
             "hypernym": "time of day"
         },
         "at morning": {
-            "hypernym": "time of day",
-            "roots": "morning"
+            "hypernym": "time of day"
         },
         "this morning": {
-            "hypernym": "time of day",
-            "roots": "morning"
+            "hypernym": "time of day"
         }
     },
     "labels": {
@@ -23,11 +21,13 @@
             },
             {
                 "concept": "at morning",
-                "label": "at morning"
+                "label": "at morning",
+                "roots": "morning"
             },
             {
                 "concept": "this morning",
-                "label": "this morning"
+                "label": "this morning",
+                "roots": "morning"
             }
         ],
         "fi": [
@@ -42,15 +42,18 @@
                         "aamut",
                         "aamupäivät"
                     ]
-                }
+                },
+                "roots": "päivä"
             },
             {
                 "concept": "at morning",
-                "label": "aamulla"
+                "label": "aamulla",
+                "roots": "aamu"
             },
             {
                 "concept": "this morning",
-                "label": "tänä aamuna"
+                "label": "tänä aamuna",
+                "roots": "aamu"
             }
         ],
         "nl": [
@@ -62,12 +65,21 @@
                 }
             },
             {
+                "concept": "morning",
+                "label": {
+                    "singular": "de morgen",
+                    "plural": "de morgens"
+                }
+            },
+            {
                 "concept": "at morning",
-                "label": "'s ochtends"
+                "label": "'s ochtends",
+                "roots": "de ochtend"
             },
             {
                 "concept": "this morning",
-                "label": "vanochtend"
+                "label": "vanochtend",
+                "roots": "de ochtend"
             }
         ]
     }

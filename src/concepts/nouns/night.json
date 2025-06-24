@@ -4,44 +4,18 @@
             "hypernym": "time of day"
         },
         "at night": {
-            "hypernym": "time of day",
-            "roots": "night"
+            "hypernym": "time of day"
         },
         "this night": {
-            "hypernym": "time of day",
-            "roots": "night"
+            "hypernym": "time of day"
         },
         "last night": {
-            "hypernym": "time of day",
-            "roots": {
-                "en": "night",
-                "fi": "evening",
-                "nl": [
-                    "yesterday",
-                    "evening"
-                ]
-            }
+            "hypernym": "time of day"
         },
         "midnight": {
-            "hypernym": "time of day",
-            "roots": "night"
+            "hypernym": "time of day"
         },
-        "small hours": {
-            "roots": {
-                "en": [
-                    "small",
-                    "hour"
-                ],
-                "fi": [
-                    "morning",
-                    "night"
-                ],
-                "nl": [
-                    "small",
-                    "hour"
-                ]
-            }
-        }
+        "small hours": {}
     },
     "labels": {
         "en": [
@@ -54,26 +28,37 @@
             },
             {
                 "concept": "at night",
-                "label": "at night"
+                "label": "at night",
+                "roots": "night"
             },
             {
                 "concept": "this night",
-                "label": "this night"
+                "label": "this night",
+                "roots": "night"
             },
             {
                 "concept": "last night",
-                "label": "last night"
+                "label": "last night",
+                "roots": [
+                    "last",
+                    "night"
+                ]
             },
             {
                 "concept": "midnight",
                 "label": {
                     "singular": "midnight",
                     "plural": "midnights"
-                }
+                },
+                "roots": "night"
             },
             {
                 "concept": "small hours",
-                "label": "small hours"
+                "label": "small hours",
+                "roots": [
+                    "small",
+                    "hour"
+                ]
             }
         ],
         "fi": [
@@ -86,26 +71,37 @@
             },
             {
                 "concept": "at night",
-                "label": "yöllä"
+                "label": "yöllä",
+                "roots": "yö"
             },
             {
                 "concept": "this night",
-                "label": "tänä yönä"
+                "label": "tänä yönä",
+                "roots": "yö"
             },
             {
                 "concept": "last night",
-                "label": "viime iltana"
+                "label": "viime iltana",
+                "roots": [
+                    "viime",
+                    "ilta"
+                ]
             },
             {
                 "concept": "midnight",
                 "label": {
                     "singular": "keskiyö",
                     "plural": "keskiyöt"
-                }
+                },
+                "roots": "yö"
             },
             {
                 "concept": "small hours",
-                "label": "aamuyö"
+                "label": "aamuyö",
+                "roots": [
+                    "aamu",
+                    "yö"
+                ]
             }
         ],
         "nl": [
@@ -118,26 +114,37 @@
             },
             {
                 "concept": "at night",
-                "label": "'s nachts"
+                "label": "'s nachts",
+                "roots": "de nacht"
             },
             {
                 "concept": "this night",
-                "label": "vannacht"
+                "label": "vannacht",
+                "roots": "de nacht"
             },
             {
                 "concept": "last night",
-                "label": "gisteravond"
+                "label": "gisteravond",
+                "roots": [
+                    "gisteren",
+                    "de avond"
+                ]
             },
             {
                 "concept": "midnight",
                 "label": {
                     "singular": "de middernacht",
                     "plural": "de middernachten"
-                }
+                },
+                "roots": "de nacht"
             },
             {
                 "concept": "small hours",
-                "label": "de kleine uurtjes"
+                "label": "de kleine uurtjes",
+                "roots": [
+                    "klein",
+                    "het uur"
+                ]
             }
         ]
     }

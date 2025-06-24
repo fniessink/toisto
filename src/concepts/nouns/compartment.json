@@ -1,14 +1,6 @@
 {
     "concepts": {
-        "private compartment": {
-            "roots": {
-                "fi": [
-                    "to sleep",
-                    "cabin"
-                ],
-                "nl": "to sleep"
-            }
-        }
+        "private compartment": {}
     },
     "labels": {
         "en": [
@@ -26,7 +18,8 @@
                 "label": {
                     "singular": "makuuhytti",
                     "plural": "makuuhytit"
-                }
+                },
+                "roots": "hytti"
             }
         ],
         "nl": [

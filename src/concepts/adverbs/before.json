@@ -1,6 +1,7 @@
 {
     "concepts": {
-        "before": {}
+        "before": {},
+        "beforehand": {}
     },
     "labels": {
         "en": [
@@ -10,18 +11,57 @@
                     "prior to"
                 ],
                 "label": "before"
+            },
+            {
+                "concept": "beforehand",
+                "label": "beforehand",
+                "roots": [
+                    "before",
+                    "hand"
+                ]
+            },
+            {
+                "concept": "beforehand",
+                "label": "in advance"
             }
         ],
         "fi": [
             {
                 "concept": "before",
                 "label": "ennen kuin"
+            },
+            {
+                "concept": "beforehand",
+                "label": "etukäteen"
             }
         ],
         "nl": [
             {
                 "concept": "before",
                 "label": "voordat"
+            },
+            {
+                "concept": "beforehand",
+                "label": [
+                    "van tevoren",
+                    "tevoren"
+                ]
+            },
+            {
+                "concept": "beforehand",
+                "label": "vooruit"
+            },
+            {
+                "concept": "beforehand",
+                "label": "bij voorbaat"
+            },
+            {
+                "concept": "beforehand",
+                "label": "vooraf"
+            },
+            {
+                "concept": "beforehand",
+                "label": "op voorhand"
             }
         ]
     }

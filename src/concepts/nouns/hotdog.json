@@ -1,13 +1,7 @@
 {
     "concepts": {
         "hotdog": {
-            "hypernym": "meat",
-            "roots": {
-                "en": [
-                    "hot",
-                    "dog"
-                ]
-            }
+            "hypernym": "meat"
         }
     },
     "labels": {
@@ -23,7 +17,11 @@
                         "hotdogs",
                         "hot dogs"
                     ]
-                }
+                },
+                "roots": [
+                    "hot",
+                    "dog"
+                ]
             }
         ],
         "fi": [

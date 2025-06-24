@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "to dislike": {
-            "roots": {
-                "nl": "to have"
-            }
-        }
+        "to dislike": {}
     },
     "labels": {
         "en": [
@@ -25,7 +21,8 @@
                         "second person": "you dislike",
                         "third person": "they dislike"
                     }
-                }
+                },
+                "roots": "to like"
             }
         ],
         "fi": [
@@ -64,7 +61,8 @@
                         "second person": "jullie hebben een hekel",
                         "third person": "zij hebben een hekel"
                     }
-                }
+                },
+                "roots": "hebben"
             }
         ]
     }

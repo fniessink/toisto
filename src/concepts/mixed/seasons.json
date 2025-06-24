@@ -1,94 +1,37 @@
 {
     "concepts": {
         "season": {
-            "holonym": "year",
-            "roots": {
-                "fi": [
-                    "time",
-                    "year"
-                ],
-                "nl": "year"
-            }
+            "holonym": "year"
         },
         "spring": {
             "hypernym": "season"
         },
-        "in spring": {
-            "roots": "spring"
-        },
-        "next spring": {
-            "roots": "spring"
-        },
-        "last spring": {
-            "roots": "spring"
-        },
+        "in spring": {},
+        "next spring": {},
+        "last spring": {},
         "summer": {
             "hypernym": "season"
         },
-        "in summer": {
-            "roots": "summer"
-        },
-        "next summer": {
-            "roots": "summer"
-        },
-        "last summer": {
-            "roots": "summer"
-        },
-        "during the summer": {
-            "roots": "summer"
-        },
+        "in summer": {},
+        "next summer": {},
+        "last summer": {},
+        "during the summer": {},
         "autumn": {
             "hypernym": "season"
         },
-        "in autumn": {
-            "roots": "autumn"
-        },
-        "next autumn": {
-            "roots": "autumn"
-        },
-        "last autumn": {
-            "roots": "autumn"
-        },
+        "in autumn": {},
+        "next autumn": {},
+        "last autumn": {},
         "winter": {
             "hypernym": "season"
         },
-        "in winter": {
-            "roots": "winter"
-        },
-        "next winter": {
-            "roots": "winter"
-        },
-        "last winter": {
-            "roots": "winter"
-        },
-        "the finnish winter is cold": {
-            "roots": [
-                "winter",
-                "to be",
-                "cold"
-            ]
-        },
-        "the dutch autumn is wet": {
-            "roots": [
-                "autumn",
-                "to be",
-                "wet"
-            ]
-        },
-        "finnish winters are cold": {
-            "roots": [
-                "winter",
-                "to be",
-                "cold"
-            ]
-        },
-        "dutch springs are wet": {
-            "roots": [
-                "spring",
-                "to be",
-                "wet"
-            ]
-        }
+        "in winter": {},
+        "next winter": {},
+        "last winter": {},
+        "the finnish winter is cold": {},
+        "the dutch autumn is wet": {},
+        "finnish winters are cold": {},
+        "dutch springs are wet": {}
     },
     "labels": {
         "en": [
@@ -109,15 +52,18 @@
             },
             {
                 "concept": "in spring",
-                "label": "in spring"
+                "label": "in spring",
+                "roots": "spring"
             },
             {
                 "concept": "next spring",
-                "label": "next spring"
+                "label": "next spring",
+                "roots": "spring"
             },
             {
                 "concept": "last spring",
-                "label": "last spring"
+                "label": "last spring",
+                "roots": "spring"
             },
             {
                 "concept": "summer",
@@ -129,19 +75,23 @@
             },
             {
                 "concept": "in summer",
-                "label": "in summer"
+                "label": "in summer",
+                "roots": "summer"
             },
             {
                 "concept": "next summer",
-                "label": "next summer"
+                "label": "next summer",
+                "roots": "summer"
             },
             {
                 "concept": "last summer",
-                "label": "last summer"
+                "label": "last summer",
+                "roots": "summer"
             },
             {
                 "concept": "during the summer",
-                "label": "during the summer"
+                "label": "during the summer",
+                "roots": "summer"
             },
             {
                 "concept": "autumn",
@@ -161,27 +111,33 @@
             },
             {
                 "concept": "in autumn",
-                "label": "in autumn"
+                "label": "in autumn",
+                "roots": "autumn"
             },
             {
                 "concept": "in autumn",
-                "label": "in fall"
+                "label": "in fall",
+                "roots": "fall"
             },
             {
                 "concept": "next autumn",
-                "label": "next autumn"
+                "label": "next autumn",
+                "roots": "autumn"
             },
             {
                 "concept": "next autumn",
-                "label": "next fall"
+                "label": "next fall",
+                "roots": "fall"
             },
             {
                 "concept": "last autumn",
-                "label": "last autumn"
+                "label": "last autumn",
+                "roots": "autumn"
             },
             {
                 "concept": "last autumn",
-                "label": "last fall"
+                "label": "last fall",
+                "roots": "fall"
             },
             {
                 "concept": "winter",
@@ -193,35 +149,63 @@
             },
             {
                 "concept": "in winter",
-                "label": "in winter"
+                "label": "in winter",
+                "roots": "winter"
             },
             {
                 "concept": "next winter",
-                "label": "next winter"
+                "label": "next winter",
+                "roots": "winter"
             },
             {
                 "concept": "last winter",
-                "label": "last winter"
+                "label": "last winter",
+                "roots": "winter"
             },
             {
                 "concept": "the finnish winter is cold",
-                "label": "The Finnish winter is cold."
+                "label": "The Finnish winter is cold.",
+                "roots": [
+                    "Finnish",
+                    "winter",
+                    "cold"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "The Dutch autumn is wet."
+                "label": "The Dutch autumn is wet.",
+                "roots": [
+                    "Dutch",
+                    "autumn",
+                    "wet"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "The Dutch fall is wet."
+                "label": "The Dutch fall is wet.",
+                "roots": [
+                    "Dutch",
+                    "fall",
+                    "wet"
+                ]
             },
             {
                 "concept": "finnish winters are cold",
-                "label": "Finnish winters are cold."
+                "label": "Finnish winters are cold.",
+                "roots": [
+                    "Finnish",
+                    "winters",
+                    "cold"
+                ]
             },
             {
                 "concept": "dutch springs are wet",
-                "label": "Dutch springs are wet."
+                "label": "Dutch springs are wet.",
+                "roots": [
+                    "Dutch",
+                    "springs",
+                    "wet"
+                ]
             }
         ],
         "fi": [
@@ -230,7 +214,11 @@
                 "label": {
                     "singular": "vuodenaika",
                     "plural": "vuodenajat"
-                }
+                },
+                "roots": [
+                    "vuosi",
+                    "aika"
+                ]
             },
             {
                 "concept": "spring",
@@ -242,15 +230,21 @@
             },
             {
                 "concept": "in spring",
-                "label": "keväällä"
+                "label": "keväällä",
+                "roots": "kevät"
             },
             {
                 "concept": "next spring",
-                "label": "ensi keväänä"
+                "label": "ensi keväänä",
+                "roots": "kevät"
             },
             {
                 "concept": "last spring",
-                "label": "viime keväänä"
+                "label": "viime keväänä",
+                "roots": [
+                    "viime",
+                    "kevät"
+                ]
             },
             {
                 "concept": "summer",
@@ -262,19 +256,26 @@
             },
             {
                 "concept": "in summer",
-                "label": "kesällä"
+                "label": "kesällä",
+                "roots": "kesä"
             },
             {
                 "concept": "next summer",
-                "label": "ensi kesänä"
+                "label": "ensi kesänä",
+                "roots": "kesä"
             },
             {
                 "concept": "last summer",
-                "label": "viime kesänä"
+                "label": "viime kesänä",
+                "roots": [
+                    "viime",
+                    "kesä"
+                ]
             },
             {
                 "concept": "during the summer",
-                "label": "kesäisin"
+                "label": "kesäisin",
+                "roots": "kesä"
             },
             {
                 "concept": "autumn",
@@ -286,15 +287,21 @@
             },
             {
                 "concept": "in autumn",
-                "label": "syksyllä"
+                "label": "syksyllä",
+                "roots": "syksy"
             },
             {
                 "concept": "next autumn",
-                "label": "ensi syksynä"
+                "label": "ensi syksynä",
+                "roots": "syksy"
             },
             {
                 "concept": "last autumn",
-                "label": "viime syksynä"
+                "label": "viime syksynä",
+                "roots": [
+                    "viime",
+                    "syksy"
+                ]
             },
             {
                 "concept": "winter",
@@ -306,39 +313,75 @@
             },
             {
                 "concept": "in winter",
-                "label": "talvella"
+                "label": "talvella",
+                "roots": "talvi"
             },
             {
                 "concept": "next winter",
-                "label": "ensi talvena"
+                "label": "ensi talvena",
+                "roots": "talvi"
             },
             {
                 "concept": "last winter",
-                "label": "viime talvena"
+                "label": "viime talvena",
+                "roots": [
+                    "viime",
+                    "talvi"
+                ]
             },
             {
                 "concept": "the finnish winter is cold",
-                "label": "Suomen talvi on kylmä."
+                "label": "Suomen talvi on kylmä.",
+                "roots": [
+                    "Suomi",
+                    "talvi",
+                    "kylmä"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "Hollannin syksy on märkä."
+                "label": "Hollannin syksy on märkä.",
+                "roots": [
+                    "Hollanti",
+                    "syksy",
+                    "märkä"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "Alankomaiden syksy on märkä."
+                "label": "Alankomaiden syksy on märkä.",
+                "roots": [
+                    "Alankomaat",
+                    "syksy",
+                    "märkä"
+                ]
             },
             {
                 "concept": "finnish winters are cold",
-                "label": "Suomen talvet ovat kylmiä."
+                "label": "Suomen talvet ovat kylmiä.",
+                "roots": [
+                    "Suomi",
+                    "talvi",
+                    "kylmä"
+                ]
             },
             {
                 "concept": "dutch springs are wet",
-                "label": "Hollannin keväät ovat märkiä."
+                "label": "Hollannin keväät ovat märkiä.",
+                "roots": [
+                    "Hollanti",
+                    "kevät",
+                    "märkä"
+                ]
             },
             {
                 "concept": "dutch springs are wet",
-                "label": "Alankomaiden keväät ovat märkiä."
+                "label": "Alankomaiden keväät ovat märkiä.",
+                "roots": [
+                    "Alankomaat",
+                    "kevät",
+                    "märkä"
+                ]
             }
         ],
         "nl": [
@@ -354,7 +397,8 @@
                 "label": {
                     "singular": "het jaargetijde",
                     "plural": "de jaargetijden"
-                }
+                },
+                "roots": "het jaar"
             },
             {
                 "concept": "spring",
@@ -370,31 +414,38 @@
                     "singular": "het voorjaar",
                     "plural": "de voorjaren"
                 },
-                "note": "In Dutch, names of seasons are not capitalized"
+                "note": "In Dutch, names of seasons are not capitalized",
+                "roots": "het jaar"
             },
             {
                 "concept": "in spring",
-                "label": "in de lente"
+                "label": "in de lente",
+                "roots": "de lente"
             },
             {
                 "concept": "in spring",
-                "label": "in het voorjaar"
+                "label": "in het voorjaar",
+                "roots": "het voorjaar"
             },
             {
                 "concept": "next spring",
-                "label": "volgende lente"
+                "label": "volgende lente",
+                "roots": "de lente"
             },
             {
                 "concept": "next spring",
-                "label": "volgend voorjaar"
+                "label": "volgend voorjaar",
+                "roots": "het voorjaar"
             },
             {
                 "concept": "last spring",
-                "label": "vorige lente"
+                "label": "vorige lente",
+                "roots": "de lente"
             },
             {
                 "concept": "last spring",
-                "label": "vorig voorjaar"
+                "label": "vorig voorjaar",
+                "roots": "het voorjaar"
             },
             {
                 "concept": "summer",
@@ -406,19 +457,23 @@
             },
             {
                 "concept": "in summer",
-                "label": "in de zomer"
+                "label": "in de zomer",
+                "roots": "de zomer"
             },
             {
                 "concept": "next summer",
-                "label": "volgende zomer"
+                "label": "volgende zomer",
+                "roots": "de zomer"
             },
             {
                 "concept": "last summer",
-                "label": "vorige zomer"
+                "label": "vorige zomer",
+                "roots": "de zomer"
             },
             {
                 "concept": "during the summer",
-                "label": "'s zomers"
+                "label": "'s zomers",
+                "roots": "de zomer"
             },
             {
                 "concept": "autumn",
@@ -434,31 +489,38 @@
                     "singular": "het najaar",
                     "plural": "de najaren"
                 },
-                "note": "In Dutch, names of seasons are not capitalized"
+                "note": "In Dutch, names of seasons are not capitalized",
+                "roots": "het jaar"
             },
             {
                 "concept": "in autumn",
-                "label": "in de herfst"
+                "label": "in de herfst",
+                "roots": "de herfst"
             },
             {
                 "concept": "in autumn",
-                "label": "in het najaar"
+                "label": "in het najaar",
+                "roots": "het najaar"
             },
             {
                 "concept": "next autumn",
-                "label": "volgende herfst"
+                "label": "volgende herfst",
+                "roots": "de herfst"
             },
             {
                 "concept": "next autumn",
-                "label": "volgend najaar"
+                "label": "volgend najaar",
+                "roots": "het najaar"
             },
             {
                 "concept": "last autumn",
-                "label": "vorige herfst"
+                "label": "vorige herfst",
+                "roots": "de herfst"
             },
             {
                 "concept": "last autumn",
-                "label": "vorig najaar"
+                "label": "vorig najaar",
+                "roots": "het najaar"
             },
             {
                 "concept": "winter",
@@ -470,39 +532,72 @@
             },
             {
                 "concept": "in winter",
-                "label": "in de winter"
+                "label": "in de winter",
+                "roots": "de winter"
             },
             {
                 "concept": "next winter",
-                "label": "volgende winter"
+                "label": "volgende winter",
+                "roots": "de winter"
             },
             {
                 "concept": "last winter",
-                "label": "vorige winter"
+                "label": "vorige winter",
+                "roots": "de winter"
             },
             {
                 "concept": "the finnish winter is cold",
-                "label": "De Finse winter is koud."
+                "label": "De Finse winter is koud.",
+                "roots": [
+                    "Fins",
+                    "de winter",
+                    "koud"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "De Nederlandse herfst is nat."
+                "label": "De Nederlandse herfst is nat.",
+                "roots": [
+                    "Nederlands",
+                    "de herfst",
+                    "nat"
+                ]
             },
             {
                 "concept": "the dutch autumn is wet",
-                "label": "Het Nederlandse najaar is nat."
+                "label": "Het Nederlandse najaar is nat.",
+                "roots": [
+                    "Nederlands",
+                    "het najaar",
+                    "nat"
+                ]
             },
             {
                 "concept": "finnish winters are cold",
-                "label": "Finse winters zijn koud."
+                "label": "Finse winters zijn koud.",
+                "roots": [
+                    "Fins",
+                    "de winter",
+                    "koud"
+                ]
             },
             {
                 "concept": "dutch springs are wet",
-                "label": "Nederlandse lentes zijn nat."
+                "label": "Nederlandse lentes zijn nat.",
+                "roots": [
+                    "Nederlands",
+                    "de lente",
+                    "nat"
+                ]
             },
             {
                 "concept": "dutch springs are wet",
-                "label": "Nederlandse voorjaren zijn nat."
+                "label": "Nederlandse voorjaren zijn nat.",
+                "roots": [
+                    "Nederlands",
+                    "het voorjaar",
+                    "nat"
+                ]
             }
         ]
     }

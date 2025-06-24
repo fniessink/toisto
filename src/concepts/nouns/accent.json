@@ -1,15 +1,10 @@
 {
     "concepts": {
         "accent": {
-            "involves": "language"
+            "involves": "language",
+            "example": "I have a dutch accent"
         },
-        "I have a dutch accent": {
-            "roots": [
-                "to have",
-                "dutch",
-                "accent"
-            ]
-        }
+        "I have a dutch accent": {}
     },
     "labels": {
         "en": [
@@ -22,7 +17,12 @@
             },
             {
                 "concept": "I have a dutch accent",
-                "label": "I have a Dutch accent."
+                "label": "I have a Dutch accent.",
+                "roots": [
+                    "I have",
+                    "Dutch",
+                    "accent"
+                ]
             }
         ],
         "fi": [
@@ -35,7 +35,12 @@
             },
             {
                 "concept": "I have a dutch accent",
-                "label": "Minulla on hollantilainen aksentti."
+                "label": "Minulla on hollantilainen aksentti.",
+                "roots": [
+                    "minulla on",
+                    "hollantilainen",
+                    "aksentti"
+                ]
             }
         ],
         "nl": [
@@ -48,7 +53,12 @@
             },
             {
                 "concept": "I have a dutch accent",
-                "label": "Ik heb een Nederlands accent."
+                "label": "Ik heb een Nederlandse accent.",
+                "roots": [
+                    "ik heb",
+                    "Nederlands",
+                    "het accent"
+                ]
             }
         ]
     }

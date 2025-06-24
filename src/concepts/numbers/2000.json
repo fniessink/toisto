@@ -1,31 +1,39 @@
 {
     "concepts": {
         "2000": {
-            "hypernym": "number",
-            "roots": [
-                "2",
-                "1000"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "2000",
-                "label": "two thousand"
+                "label": "two thousand",
+                "roots": [
+                    "two",
+                    "thousand"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "2000",
                 "label": "kaksituhatta",
+                "roots": [
+                    "kaksi",
+                    "tuhat"
+                ],
                 "note": "'tuhatta' is the partitive case of 'tuhat'"
             }
         ],
         "nl": [
             {
                 "concept": "2000",
-                "label": "tweeduizend"
+                "label": "tweeduizend",
+                "roots": [
+                    "twee",
+                    "duizend"
+                ]
             }
         ]
     }

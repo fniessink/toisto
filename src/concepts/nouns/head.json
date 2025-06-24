@@ -4,11 +4,7 @@
             "holonym": "body"
         },
         "forehead": {
-            "holonym": "head",
-            "roots": {
-                "en": "head",
-                "nl": "head"
-            }
+            "holonym": "head"
         },
         "head (main part)": {}
     },
@@ -26,7 +22,8 @@
             },
             {
                 "concept": "forehead",
-                "label": "forehead"
+                "label": "forehead",
+                "roots": "head"
             }
         ],
         "fi": [
@@ -58,7 +55,8 @@
             },
             {
                 "concept": "forehead",
-                "label": "het voorhoofd"
+                "label": "het voorhoofd",
+                "roots": "het hoofd"
             }
         ]
     }

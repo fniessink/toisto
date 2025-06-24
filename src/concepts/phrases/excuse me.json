@@ -1,12 +1,7 @@
 {
     "concepts": {
         "excuse me": {},
-        "excuse me, can you help me": {
-            "roots": [
-                "excuse me",
-                "to help"
-            ]
-        }
+        "excuse me, can you help me": {}
     },
     "labels": {
         "en": [
@@ -19,7 +14,11 @@
             },
             {
                 "concept": "excuse me, can you help me",
-                "label": "Excuse me, can you help me?"
+                "label": "Excuse me, can you help me?",
+                "roots": [
+                    "Excuse me?",
+                    "Help!"
+                ]
             }
         ],
         "fi": [
@@ -32,7 +31,11 @@
             },
             {
                 "concept": "excuse me, can you help me",
-                "label": "Anteeksi, voitko auttaa minua?"
+                "label": "Anteeksi, voitko auttaa minua?",
+                "roots": [
+                    "Anteeksi?",
+                    "auttaa"
+                ]
             }
         ],
         "nl": [
@@ -48,6 +51,10 @@
                 "label": [
                     "Pardon, kan je me helpen?",
                     "Pardon, kunt u me helpen?"
+                ],
+                "roots": [
+                    "Pardon?",
+                    "helpen"
                 ]
             }
         ]

@@ -1,16 +1,8 @@
 {
     "concepts": {
         "löyly": {},
-        "löylykauha": {
-            "roots": {
-                "fi": "löyly"
-            }
-        },
-        "lölykiulu": {
-            "roots": {
-                "fi": "löyly"
-            }
-        }
+        "löylykauha": {},
+        "lölykiulu": {}
     },
     "labels": {
         "en": [
@@ -37,11 +29,13 @@
             },
             {
                 "concept": "löylykauha",
-                "label": "löylykauha"
+                "label": "löylykauha",
+                "roots": "löyly"
             },
             {
                 "concept": "lölykiulu",
-                "label": "löylykiulu"
+                "label": "löylykiulu",
+                "roots": "löyly"
             }
         ],
         "nl": [

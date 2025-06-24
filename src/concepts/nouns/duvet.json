@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "duvet": {
-            "roots": {
-                "nl": "bed"
-            }
-        }
+        "duvet": {}
     },
     "labels": {
         "en": [
@@ -22,7 +18,8 @@
         "nl": [
             {
                 "concept": "duvet",
-                "label": "het dekbed"
+                "label": "het dekbed",
+                "roots": "het bed"
             }
         ]
     }

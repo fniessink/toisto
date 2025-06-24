@@ -1,11 +1,7 @@
 {
     "concepts": {
         "24": {
-            "hypernym": "number",
-            "roots": [
-                "4",
-                "20"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,11 @@
                 "label": {
                     "cardinal": "twenty-four",
                     "ordinal": "twenty-fourth"
-                }
+                },
+                "roots": [
+                    "twenty",
+                    "four"
+                ]
             }
         ],
         "fi": [
@@ -24,7 +24,12 @@
                 "label": {
                     "cardinal": "kaksikymmentäneljä",
                     "ordinal": "kahdeskymmenesneljäs"
-                }
+                },
+                "roots": [
+                    "kaksi",
+                    "kymmenen",
+                    "neljä"
+                ]
             },
             {
                 "concept": "24",
@@ -41,7 +46,11 @@
                 "label": {
                     "cardinal": "vierentwintig",
                     "ordinal": "vierentwintigste"
-                }
+                },
+                "roots": [
+                    "vier",
+                    "twintig"
+                ]
             }
         ]
     }

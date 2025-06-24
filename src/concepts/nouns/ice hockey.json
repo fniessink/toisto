@@ -1,30 +1,34 @@
 {
     "concepts": {
         "ice hockey": {
-            "hypernym": "sport",
-            "roots": "ice"
+            "hypernym": "sport"
         },
         "ice hockey match": {
             "hypernym": "match",
-            "involves": "ice hockey",
-            "roots": "ice hockey"
+            "involves": "ice hockey"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "ice hockey",
-                "label": "ice hockey"
+                "label": "ice hockey",
+                "roots": "ice"
             },
             {
                 "concept": "ice hockey match",
-                "label": "ice hockey match"
+                "label": "ice hockey match",
+                "roots": [
+                    "ice hockey",
+                    "match"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "ice hockey",
-                "label": "jääkiekko"
+                "label": "jääkiekko",
+                "roots": "jää"
             },
             {
                 "concept": "ice hockey",
@@ -33,17 +37,26 @@
             },
             {
                 "concept": "ice hockey match",
-                "label": "jääkiekko-ottelu"
+                "label": "jääkiekko-ottelu",
+                "roots": [
+                    "jääkiekko",
+                    "ottelu"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "ice hockey",
-                "label": "het ijshockey"
+                "label": "het ijshockey",
+                "roots": "het ijs"
             },
             {
                 "concept": "ice hockey match",
-                "label": "de ijshockeywedstrijd"
+                "label": "de ijshockeywedstrijd",
+                "roots": [
+                    "het ijshockey",
+                    "de wedstrijd"
+                ]
             }
         ]
     }

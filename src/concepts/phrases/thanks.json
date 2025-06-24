@@ -2,21 +2,7 @@
     "concepts": {
         "thanks": {},
         "thanks, same to you": {},
-        "thank you for the meal": {
-            "roots": {
-                "en": [
-                    "thanks"
-                ],
-                "fi": [
-                    "thanks",
-                    "food"
-                ],
-                "nl": [
-                    "thanks",
-                    "to eat"
-                ]
-            }
-        }
+        "thank you for the meal": {}
     },
     "labels": {
         "en": [
@@ -39,6 +25,10 @@
                 "label": [
                     "Thank you for the meal!",
                     "Thanks for the meal!"
+                ],
+                "roots": [
+                    "Thank you!",
+                    "meal"
                 ]
             }
         ],
@@ -54,11 +44,16 @@
             },
             {
                 "concept": "thanks, same to you",
-                "label": "Kiitos samoin!"
+                "label": "Kiitos samoin!",
+                "roots": "Kiitos!"
             },
             {
                 "concept": "thank you for the meal",
-                "label": "Kiitos ruoasta!"
+                "label": "Kiitos ruoasta!",
+                "roots": [
+                    "Kiitos!",
+                    "ruoka"
+                ]
             }
         ],
         "nl": [
@@ -78,6 +73,10 @@
                     "Dank je, van hetzelfde!",
                     "Dank u, van hetzelfde!",
                     "Bedankt, van hetzelfde!"
+                ],
+                "roots": [
+                    "Dank je!",
+                    "hetzelfde"
                 ]
             },
             {
@@ -86,6 +85,10 @@
                     "Dank je voor het eten!",
                     "Dank u voor het eten!",
                     "Bedankt voor het eten!"
+                ],
+                "roots": [
+                    "Dank je!",
+                    "het eten"
                 ]
             }
         ]

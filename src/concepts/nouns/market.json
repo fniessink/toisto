@@ -2,19 +2,10 @@
     "concepts": {
         "market": {},
         "market hall": {
-            "hypernym": "building",
-            "roots": {
-                "en": "market",
-                "fi": "store",
-                "nl": "market"
-            }
+            "hypernym": "building"
         },
         "flea market": {
-            "hypernym": "market",
-            "roots": [
-                "flea",
-                "market"
-            ]
+            "hypernym": "market"
         }
     },
     "labels": {
@@ -28,11 +19,13 @@
             },
             {
                 "concept": "market hall",
-                "label": "market hall"
+                "label": "market hall",
+                "roots": "market"
             },
             {
                 "concept": "flea market",
-                "label": "flea market"
+                "label": "flea market",
+                "roots": "market"
             }
         ],
         "fi": [
@@ -45,11 +38,16 @@
             },
             {
                 "concept": "market hall",
-                "label": "kauppahalli"
+                "label": "kauppahalli",
+                "roots": "kauppa"
             },
             {
                 "concept": "flea market",
-                "label": "kirpputori"
+                "label": "kirpputori",
+                "roots": [
+                    "kirppu",
+                    "tori"
+                ]
             },
             {
                 "concept": "flea market",
@@ -72,15 +70,24 @@
             },
             {
                 "concept": "market hall",
-                "label": "de markthal"
+                "label": "de markthal",
+                "roots": "de markt"
             },
             {
                 "concept": "flea market",
-                "label": "de rommelmarkt"
+                "label": "de rommelmarkt",
+                "roots": [
+                    "de rommel",
+                    "de markt"
+                ]
             },
             {
                 "concept": "flea market",
-                "label": "de vlooienmarkt"
+                "label": "de vlooienmarkt",
+                "roots": [
+                    "de vlooi",
+                    "de markt"
+                ]
             }
         ]
     }

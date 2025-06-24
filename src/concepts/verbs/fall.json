@@ -1,18 +1,13 @@
 {
     "concepts": {
-        "to fall in love": {
-            "roots": {
-                "en": "in love",
-                "fi": "to love",
-                "nl": "in love"
-            }
-        }
+        "to fall in love": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "to fall in love",
-                "label": "to fall in love"
+                "label": "to fall in love",
+                "roots": "in love"
             }
         ],
         "fi": [
@@ -28,7 +23,8 @@
         "nl": [
             {
                 "concept": "to fall in love",
-                "label": "verliefd worden"
+                "label": "verliefd worden",
+                "roots": "verliefd"
             }
         ]
     }

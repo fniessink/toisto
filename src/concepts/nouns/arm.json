@@ -1,10 +1,7 @@
 {
     "concepts": {
         "arm": {
-            "holonym": "body",
-            "roots": {
-                "fi": "hand"
-            }
+            "holonym": "body"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
                 "label": {
                     "singular": "käsivarsi",
                     "plural": "käsivarret"
-                }
+                },
+                "roots": "käsi"
             }
         ],
         "nl": [

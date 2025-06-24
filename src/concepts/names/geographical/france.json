@@ -5,8 +5,7 @@
         },
         "french (nationality)": {
             "hypernym": "nationality",
-            "involves": "france",
-            "roots": "france"
+            "involves": "france"
         }
     },
     "labels": {
@@ -17,7 +16,8 @@
             },
             {
                 "concept": "french (nationality)",
-                "label": "French"
+                "label": "French",
+                "roots": "France"
             }
         ],
         "fi": [
@@ -27,7 +27,8 @@
             },
             {
                 "concept": "french (nationality)",
-                "label": "ranskalainen"
+                "label": "ranskalainen",
+                "roots": "Ranska"
             }
         ],
         "nl": [
@@ -37,7 +38,8 @@
             },
             {
                 "concept": "french (nationality)",
-                "label": "Frans"
+                "label": "Frans",
+                "roots": "Frankrijk"
             }
         ]
     }

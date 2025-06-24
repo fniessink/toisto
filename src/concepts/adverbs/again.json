@@ -1,11 +1,6 @@
 {
     "concepts": {
-        "again": {
-            "roots": {
-                "fi": "new",
-                "nl": "new"
-            }
-        }
+        "again": {}
     },
     "labels": {
         "en": [
@@ -17,13 +12,15 @@
         "fi": [
             {
                 "concept": "again",
-                "label": "uudestaan"
+                "label": "uudestaan",
+                "roots": "uusi"
             }
         ],
         "nl": [
             {
                 "concept": "again",
-                "label": "opnieuw"
+                "label": "opnieuw",
+                "roots": "nieuw"
             }
         ]
     }

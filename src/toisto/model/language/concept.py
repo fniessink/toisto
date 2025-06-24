@@ -20,7 +20,6 @@ RecursiveConceptRelation = Literal["holonym", "hypernym", "involves"]
 NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example"]
 ConceptRelation = Literal[InvertedConceptRelation, NonInvertedConceptRelation]
 RelatedConceptIds = dict[ConceptRelation, ConceptIds]
-RootConceptIds = dict[Language, ConceptIds] | ConceptIds  # Tuple if all languages have the same roots
 
 
 def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
@@ -84,7 +83,6 @@ class Concept:
     _labels: Labels
     _meanings: Labels
     _related_concepts: RelatedConceptIds
-    _roots: RootConceptIds
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
@@ -240,9 +238,13 @@ class Concept:
 
     def roots(self, language: Language) -> Concepts:
         """Return the root concepts recursively, for the specified language."""
-        concept_ids_of_roots = self._roots.get(language, ()) if isinstance(self._roots, dict) else self._roots
-        direct_roots = self.get_concepts(*concept_ids_of_roots)
-        return Concepts(direct_roots + direct_roots.roots(language))
+        concepts = []
+        for label in self.labels(language):
+            for root in label.roots:
+                for root_concept in self.homographs.get_values(root):
+                    if root_concept != self:
+                        concepts.extend([root_concept, *root_concept.roots(language)])
+        return Concepts(concepts)
 
     @property
     def is_complete_sentence(self) -> bool:
@@ -272,10 +274,6 @@ class Concepts(tuple[Concept, ...]):
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concepts for the specified language."""
         return Labels(chain.from_iterable(concept.meanings(language) for concept in self))
-
-    def roots(self, language: Language) -> Concepts:
-        """Return the roots of the concepts for the specified language."""
-        return Concepts(chain.from_iterable(concept.roots(language) for concept in self))
 
     def compounds(self, root: Concept, language: Language) -> Concepts:
         """Return the compounds of the root for the specified language."""

@@ -3,13 +3,7 @@
         "to sleep": {
             "example": "sleeping is important"
         },
-        "sleeping is important": {
-            "roots": [
-                "to sleep",
-                "to be",
-                "important"
-            ]
-        }
+        "sleeping is important": {}
     },
     "labels": {
         "en": [
@@ -52,7 +46,11 @@
             },
             {
                 "concept": "sleeping is important",
-                "label": "Sleeping is important."
+                "label": "Sleeping is important.",
+                "roots": [
+                    "to sleep",
+                    "important"
+                ]
             }
         ],
         "fi": [
@@ -90,7 +88,11 @@
             },
             {
                 "concept": "sleeping is important",
-                "label": "Nukkuminen on tärkeää."
+                "label": "Nukkuminen on tärkeää.",
+                "roots": [
+                    "nukkuminen",
+                    "tärkeä"
+                ]
             }
         ],
         "nl": [
@@ -133,7 +135,11 @@
             },
             {
                 "concept": "sleeping is important",
-                "label": "Slapen is belangrijk."
+                "label": "Slapen is belangrijk.",
+                "roots": [
+                    "slapen",
+                    "belangrijk"
+                ]
             }
         ]
     }

@@ -1,24 +1,12 @@
 {
     "concepts": {
-        "to dtink": {},
-        "to drink coffee": {
-            "roots": {
-                "en": [
-                    "to drink",
-                    "coffee"
-                ],
-                "fi": "coffee",
-                "nl": [
-                    "to drink",
-                    "coffee"
-                ]
-            }
-        }
+        "to drink": {},
+        "to drink coffee": {}
     },
     "labels": {
         "en": [
             {
-                "concept": "to dtink",
+                "concept": "to drink",
                 "label": {
                     "infinitive": "to drink",
                     "verbal noun": "drinking",
@@ -54,12 +42,16 @@
                         "second person": "you drink coffee",
                         "third person": "they drink coffee"
                     }
-                }
+                },
+                "roots": [
+                    "to drink",
+                    "coffee"
+                ]
             }
         ],
         "fi": [
             {
-                "concept": "to dtink",
+                "concept": "to drink",
                 "label": {
                     "infinitive": "juoda",
                     "verbal noun": "juominen",
@@ -89,12 +81,16 @@
                         "second person": "te käytte kahvi",
                         "third person": "he käyvät kahvi"
                     }
-                }
+                },
+                "roots": [
+                    "käydä",
+                    "kahvi"
+                ]
             }
         ],
         "nl": [
             {
-                "concept": "to dtink",
+                "concept": "to drink",
                 "label": {
                     "infinitive": "drinken",
                     "verbal noun": "het drinken",
@@ -130,7 +126,11 @@
                         "second person": "jullie drinken koffie",
                         "third person": "zij drinken koffie"
                     }
-                }
+                },
+                "roots": [
+                    "drinken",
+                    "de koffie"
+                ]
             }
         ]
     }

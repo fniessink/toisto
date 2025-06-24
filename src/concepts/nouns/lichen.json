@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "lichen": {
-            "roots": {
-                "nl": "moss"
-            }
-        }
+        "lichen": {}
     },
     "labels": {
         "en": [
@@ -31,7 +27,8 @@
                 "label": {
                     "singular": "het korstmos",
                     "plural": "de korstmossen"
-                }
+                },
+                "roots": "het mos"
             }
         ]
     }

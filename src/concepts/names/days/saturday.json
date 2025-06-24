@@ -5,11 +5,7 @@
                 "days of the week",
                 "weekend"
             ],
-            "hypernym": "day",
-            "roots": {
-                "en": "day",
-                "nl": "day"
-            }
+            "hypernym": "day"
         }
     },
     "labels": {
@@ -20,7 +16,8 @@
                     "singular": "Saturday",
                     "plural": "Saturdays"
                 },
-                "note": "In English, the names of weekdays are capitalized"
+                "note": "In English, the names of weekdays are capitalized",
+                "roots": "day"
             }
         ],
         "fi": [
@@ -43,7 +40,8 @@
                     ],
                     "plural": "de zaterdagen"
                 },
-                "note": "In Dutch, the names of weekdays are not capitalized"
+                "note": "In Dutch, the names of weekdays are not capitalized",
+                "roots": "de dag"
             }
         ]
     }

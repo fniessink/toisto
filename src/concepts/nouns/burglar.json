@@ -4,13 +4,7 @@
             "involves": [
                 "to break in",
                 "burglary"
-            ],
-            "roots": {
-                "fi": [
-                    "burglary",
-                    "thief"
-                ]
-            }
+            ]
         },
         "burglary": {
             "involves": "burglar"
@@ -30,7 +24,11 @@
         "fi": [
             {
                 "concept": "burglar",
-                "label": "murtovaras"
+                "label": "murtovaras",
+                "roots": [
+                    "murto",
+                    "varas"
+                ]
             },
             {
                 "concept": "burglary",

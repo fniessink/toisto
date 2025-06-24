@@ -540,7 +540,7 @@ Unfortunately, this version is backwards incompatible and progress information f
 - When the quiz type is not "translate", as a reminder, show the meaning of the quizzed concept in the user's language after the quiz is finished. Closes [#31](https://github.com/fniessink/toisto/issues/31).
 - When the user enters an empty answer, repeat the spoken question. Closes [#47](https://github.com/fniessink/toisto/issues/47).
 - Add more concepts to the house and nature topics and add an animals topic.
-- Use Google Translate for text-to-speech, but fall back to the MacOS say command if getting the audio from Google Translate fails.
+- Use Google Translate for text-to-speech, but fall back to the macOS say command if getting the audio from Google Translate fails.
 
 ## v0.1.0 - 2022-11-20
 
@@ -584,7 +584,7 @@ Unfortunately, this version is backwards incompatible and progress information f
 
 ### Fixed
 
-- On MacOS Ventura, the say command that Toisto uses for speech does not print the spoken text, even when told to. Work-around the issue by having Toisto print the question itself.
+- On macOS Ventura, the say command that Toisto uses for speech does not print the spoken text, even when told to. Work-around the issue by having Toisto print the question itself.
 - The plural of one synonym should not be accepted as the plural of another synonym and vice versa. For example, kauppakeskus and ostoskeskus both mean shopping centre, but the plural of kauppakeskus, kauppakeskukset, should still not be accepted as plural for ostoskeskus and vice versa. Fixes [#13](https://github.com/fniessink/toisto/issues/13).
 
 ### Added

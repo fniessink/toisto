@@ -8,26 +8,9 @@
                 "I have a fever of 39 degrees"
             ]
         },
-        "it is three degrees above zero": {
-            "roots": [
-                "degree",
-                "0",
-                "3"
-            ]
-        },
-        "it is four degrees below zero": {
-            "roots": [
-                "degree",
-                "0",
-                "4"
-            ]
-        },
-        "I have a fever of 39 degrees": {
-            "roots": [
-                "fever",
-                "degree"
-            ]
-        }
+        "it is three degrees above zero": {},
+        "it is four degrees below zero": {},
+        "I have a fever of 39 degrees": {}
     },
     "labels": {
         "en": [
@@ -43,19 +26,38 @@
                 "label": [
                     "It is three degrees above zero.",
                     "It is three degrees."
+                ],
+                "roots": [
+                    "three",
+                    "degree",
+                    "zero"
                 ]
             },
             {
                 "concept": "it is four degrees below zero",
-                "label": "It is four degrees below zero."
+                "label": "It is four degrees below zero.",
+                "roots": [
+                    "four",
+                    "degree",
+                    "zero"
+                ]
             },
             {
                 "concept": "it is four degrees below zero",
-                "label": "It is freezing four degrees."
+                "label": "It is freezing four degrees.",
+                "roots": [
+                    "four",
+                    "degree"
+                ]
             },
             {
                 "concept": "I have a fever of 39 degrees",
-                "label": "I have a fever of 39 degrees."
+                "label": "I have a fever of 39 degrees.",
+                "roots": [
+                    "I have",
+                    "fever",
+                    "degree"
+                ]
             }
         ],
         "fi": [
@@ -68,15 +70,28 @@
             },
             {
                 "concept": "it is three degrees above zero",
-                "label": "On kolme astetta lämmintä."
+                "label": "On kolme astetta lämmintä.",
+                "roots": [
+                    "kolme",
+                    "aste"
+                ]
             },
             {
                 "concept": "it is four degrees below zero",
-                "label": "On neljä astetta pakkasta."
+                "label": "On neljä astetta pakkasta.",
+                "roots": [
+                    "neljä",
+                    "aste"
+                ]
             },
             {
                 "concept": "I have a fever of 39 degrees",
-                "label": "Minulla on 39 astetta kuumetta."
+                "label": "Minulla on 39 astetta kuumetta.",
+                "roots": [
+                    "minulla on",
+                    "aste",
+                    "kuume"
+                ]
             }
         ],
         "nl": [
@@ -92,19 +107,38 @@
                 "label": [
                     "Het is drie graden boven nul.",
                     "Het is drie graden."
+                ],
+                "roots": [
+                    "drie",
+                    "de graad",
+                    "nul"
                 ]
             },
             {
                 "concept": "it is four degrees below zero",
-                "label": "Het is vier graden onder nul."
+                "label": "Het is vier graden onder nul.",
+                "roots": [
+                    "vier",
+                    "de graad",
+                    "nul"
+                ]
             },
             {
                 "concept": "it is four degrees below zero",
-                "label": "Het vriest vier graden."
+                "label": "Het vriest vier graden.",
+                "roots": [
+                    "vier",
+                    "de graad"
+                ]
             },
             {
                 "concept": "I have a fever of 39 degrees",
-                "label": "Ik heb 39 graden koorts."
+                "label": "Ik heb 39 graden koorts.",
+                "roots": [
+                    "ik heb",
+                    "de graad",
+                    "de koorts"
+                ]
             }
         ]
     }

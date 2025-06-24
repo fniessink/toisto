@@ -1,13 +1,7 @@
 {
     "concepts": {
         "glove": {
-            "hypernym": "clothes",
-            "roots": {
-                "nl": [
-                    "hand",
-                    "shoe"
-                ]
-            }
+            "hypernym": "clothes"
         }
     },
     "labels": {
@@ -26,7 +20,11 @@
         "nl": [
             {
                 "concept": "glove",
-                "label": "de handschoen"
+                "label": "de handschoen",
+                "roots": [
+                    "de hand",
+                    "de schoen"
+                ]
             }
         ]
     }

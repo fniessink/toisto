@@ -1,13 +1,7 @@
 {
     "concepts": {
         "june": {
-            "hypernym": "month",
-            "roots": {
-                "fi": [
-                    "summer",
-                    "moon"
-                ]
-            }
+            "hypernym": "month"
         }
     },
     "labels": {
@@ -22,7 +16,11 @@
             {
                 "concept": "june",
                 "label": "kesäkuu",
-                "note": "In Finnish, names of months are not capitalized"
+                "note": "In Finnish, names of months are not capitalized",
+                "roots": [
+                    "kesä",
+                    "kuu"
+                ]
             }
         ],
         "nl": [

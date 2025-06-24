@@ -2,17 +2,7 @@
     "concepts": {
         "study": {
             "hypernym": "room",
-            "involves": "work",
-            "roots": {
-                "fi": [
-                    "work",
-                    "room"
-                ],
-                "nl": [
-                    "work",
-                    "room"
-                ]
-            }
+            "involves": "work"
         }
     },
     "labels": {
@@ -25,13 +15,21 @@
         "fi": [
             {
                 "concept": "study",
-                "label": "työhuone"
+                "label": "työhuone",
+                "roots": [
+                    "työ",
+                    "huone"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "study",
-                "label": "de werkkamer"
+                "label": "de werkkamer",
+                "roots": [
+                    "het werk",
+                    "de kamer"
+                ]
             }
         ]
     }

@@ -1,71 +1,27 @@
 {
     "concepts": {
         "time": {},
-        "all the time": {
-            "roots": {
-                "en": "time",
-                "fi": [
-                    "whole",
-                    "time"
-                ],
-                "nl": [
-                    "whole",
-                    "time"
-                ]
-            }
-        },
-        "at the same time": {
-            "roots": "time"
-        },
+        "all the time": {},
+        "at the same time": {},
         "free time": {
-            "hypernym": "time",
-            "roots": "time"
+            "hypernym": "time"
         },
+        "in time": {},
         "now": {},
         "then": {},
         "noon": {
-            "hypernym": "time of day",
-            "roots": {
-                "fi": "day",
-                "nl": [
-                    "12",
-                    "hour",
-                    "afternoon"
-                ]
-            }
+            "hypernym": "time of day"
         },
         "afternoon": {
-            "hypernym": "time of day",
-            "roots": {
-                "en": "noon",
-                "fi": [
-                    "evening",
-                    "day"
-                ],
-                "nl": "day"
-            }
+            "hypernym": "time of day"
         },
         "at day": {
-            "hypernym": "time of day",
-            "roots": "day"
+            "hypernym": "time of day"
         },
         "decade": {
-            "holonym": "century",
-            "roots": {
-                "fi": [
-                    "10",
-                    "year"
-                ]
-            }
+            "holonym": "century"
         },
-        "century": {
-            "roots": {
-                "fi": [
-                    "100",
-                    "year"
-                ]
-            }
-        },
+        "century": {},
         "hour": {
             "holonym": "day"
         },
@@ -74,208 +30,20 @@
         },
         "clock": {},
         "alarm clock": {
-            "hypernym": "clock",
-            "roots": {
-                "en": "clock",
-                "fi": "clock"
-            }
+            "hypernym": "clock"
         },
-        "what time is it": {
-            "roots": {
-                "en": [
-                    "what",
-                    "time",
-                    "to be"
-                ],
-                "fi": [
-                    "what",
-                    "how",
-                    "time",
-                    "clock",
-                    "to be"
-                ],
-                "nl": [
-                    "how",
-                    "to be"
-                ]
-            }
-        },
-        "it is 10:00": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "10",
-                    "clock"
-                ],
-                "fi": [
-                    "to be",
-                    "10",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "10",
-                    "hour"
-                ]
-            }
-        },
-        "it is 2:30": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "2",
-                    "10"
-                ],
-                "fi": [
-                    "to be",
-                    "3",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "3"
-                ]
-            }
-        },
-        "it is 3:15": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "after",
-                    "3"
-                ],
-                "fi": [
-                    "to be",
-                    "after",
-                    "3",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "after",
-                    "3"
-                ]
-            }
-        },
-        "it is 3:45": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "4"
-                ],
-                "fi": [
-                    "to be",
-                    "4",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "4"
-                ]
-            }
-        },
-        "it is 6:20": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "after",
-                    "6",
-                    "20"
-                ],
-                "fi": [
-                    "to be",
-                    "after",
-                    "6",
-                    "20",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "10",
-                    "7"
-                ]
-            }
-        },
-        "it is 6:40": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "7",
-                    "20"
-                ],
-                "fi": [
-                    "to be",
-                    "6",
-                    "7",
-                    "20",
-                    "40",
-                    "clock"
-                ],
-                "nl": [
-                    "to be",
-                    "10",
-                    "7"
-                ]
-            }
-        },
-        "what time": {
-            "roots": {
-                "en": [
-                    "what",
-                    "time"
-                ],
-                "fi": "time",
-                "nl": "how"
-            }
-        },
-        "how long does it take": {
-            "roots": "how"
-        },
-        "it takes one hour": {
-            "roots": {
-                "en": [
-                    "1",
-                    "hour"
-                ],
-                "fi": "hour",
-                "nl": [
-                    "1",
-                    "hour"
-                ]
-            }
-        },
-        "time of day": {
-            "roots": {
-                "en": "time",
-                "fi": [
-                    "24 hours",
-                    "time"
-                ],
-                "nl": [
-                    "time",
-                    "day"
-                ]
-            }
-        },
-        "from 3-5": {
-            "roots": {
-                "en": [
-                    "3",
-                    "5",
-                    "clock"
-                ],
-                "fi": [
-                    "3",
-                    "5",
-                    "clock"
-                ],
-                "nl": [
-                    "3",
-                    "5",
-                    "hour"
-                ]
-            }
-        },
+        "what time is it": {},
+        "it is 10:00": {},
+        "it is 2:30": {},
+        "it is 3:15": {},
+        "it is 3:45": {},
+        "it is 6:20": {},
+        "it is 6:40": {},
+        "what time": {},
+        "how long does it take": {},
+        "it takes one hour": {},
+        "time of day": {},
+        "from 3-5": {},
         "from June to August": {},
         "from Monday to Friday": {}
     },
@@ -290,22 +58,31 @@
             },
             {
                 "concept": "all the time",
-                "label": "all the time"
+                "label": "all the time",
+                "roots": "time"
             },
             {
                 "concept": [
                     "at the same time",
                     "simultaneously"
                 ],
-                "label": "at the same time"
+                "label": "at the same time",
+                "roots": "time"
+            },
+            {
+                "concept": "in time",
+                "label": "in time",
+                "roots": "time"
             },
             {
                 "concept": "free time",
-                "label": "free time"
+                "label": "free time",
+                "roots": "time"
             },
             {
                 "concept": "free time",
-                "label": "spare time"
+                "label": "spare time",
+                "roots": "time"
             },
             {
                 "concept": "now",
@@ -324,11 +101,13 @@
                 "label": {
                     "singular": "afternoon",
                     "plural": "afternoons"
-                }
+                },
+                "roots": "noon"
             },
             {
                 "concept": "at day",
-                "label": "at day"
+                "label": "at day",
+                "roots": "day"
             },
             {
                 "concept": "at day",
@@ -371,47 +150,82 @@
             },
             {
                 "concept": "alarm clock",
-                "label": "alarm clock"
+                "label": "alarm clock",
+                "roots": "clock"
             },
             {
                 "concept": "what time is it",
-                "label": "What time is it?"
+                "label": "What time is it?",
+                "roots": "time"
             },
             {
                 "concept": "it is 10:00",
-                "label": "It is ten o'clock."
+                "label": "It is ten o'clock.",
+                "roots": "clock"
             },
             {
                 "concept": "it is 2:30",
-                "label": "It is half past two."
+                "label": "It is half past two.",
+                "roots": "two"
             },
             {
                 "concept": "it is 3:15",
-                "label": "It is a quarter past three."
+                "label": "It is a quarter past three.",
+                "roots": [
+                    "past",
+                    "three"
+                ]
             },
             {
                 "concept": "it is 3:15",
-                "label": "It is a quarter after three."
+                "label": "It is a quarter after three.",
+                "roots": [
+                    "after",
+                    "three"
+                ]
             },
             {
                 "concept": "it is 3:45",
-                "label": "It is a quarter to four."
+                "label": "It is a quarter to four.",
+                "roots": [
+                    "to",
+                    "four"
+                ]
             },
             {
                 "concept": "it is 6:20",
-                "label": "It is twenty past six."
+                "label": "It is twenty past six.",
+                "roots": [
+                    "twenty",
+                    "past",
+                    "six"
+                ]
             },
             {
                 "concept": "it is 6:20",
-                "label": "It is twenty after six."
+                "label": "It is twenty after six.",
+                "roots": [
+                    "twenty",
+                    "after",
+                    "six"
+                ]
             },
             {
                 "concept": "it is 6:40",
-                "label": "It is twenty to seven."
+                "label": "It is twenty to seven.",
+                "roots": [
+                    "twenty",
+                    "to",
+                    "seven"
+                ]
             },
             {
                 "concept": "what time",
-                "label": "What time?"
+                "label": "What time?",
+                "roots": [
+                    "What?",
+                    "time"
+                ]
             },
             {
                 "concept": "how long does it take",
@@ -419,26 +233,47 @@
             },
             {
                 "concept": "it takes one hour",
-                "label": "It takes one hour."
+                "label": "It takes one hour.",
+                "roots": [
+                    "one",
+                    "hour"
+                ]
             },
             {
                 "concept": "time of day",
-                "label": "time of day"
+                "label": "time of day",
+                "roots": [
+                    "time",
+                    "day"
+                ]
             },
             {
                 "concept": "from 3-5",
                 "label": [
                     "from three o'clock to five o'clock",
                     "from three to five"
+                ],
+                "roots": [
+                    "three",
+                    "five",
+                    "clock"
                 ]
             },
             {
                 "concept": "from June to August",
-                "label": "from June to August"
+                "label": "from June to August",
+                "roots": [
+                    "June",
+                    "August"
+                ]
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "from Monday to Friday"
+                "label": "from Monday to Friday",
+                "roots": [
+                    "Monday",
+                    "Friday"
+                ]
             }
         ],
         "fi": [
@@ -451,15 +286,26 @@
             },
             {
                 "concept": "all the time",
-                "label": "koko ajan"
+                "label": "koko ajan",
+                "roots": "aika"
             },
             {
                 "concept": "at the same time",
-                "label": "samaan aikaan"
+                "label": "samaan aikaan",
+                "roots": "aika"
+            },
+            {
+                "concept": "in time",
+                "label": "ajoissa",
+                "roots": "aika"
             },
             {
                 "concept": "free time",
-                "label": "vapaa-aika"
+                "label": "vapaa-aika",
+                "roots": [
+                    "vapaa",
+                    "aika"
+                ]
             },
             {
                 "concept": "now",
@@ -479,32 +325,43 @@
                 "label": {
                     "singular": "keskipäivä",
                     "plural": "keskipäivät"
-                }
+                },
+                "roots": "päivä"
             },
             {
                 "concept": "afternoon",
                 "label": {
                     "singular": "iltapäivä",
                     "plural": "iltapäivät"
-                }
+                },
+                "roots": [
+                    "ilta",
+                    "päivä"
+                ]
             },
             {
                 "concept": "at day",
-                "label": "päivällä"
+                "label": "päivällä",
+                "roots": "päivä"
             },
             {
                 "concept": "decade",
                 "label": {
                     "singular": "vuosikymmen",
                     "plural": "vuosikymmenet"
-                }
+                },
+                "roots": "vuosi"
             },
             {
                 "concept": "century",
                 "label": {
                     "singular": "vuosisata",
                     "plural": "vuosisadat"
-                }
+                },
+                "roots": [
+                    "vuosi",
+                    "sata"
+                ]
             },
             {
                 "concept": "hour",
@@ -529,82 +386,164 @@
             },
             {
                 "concept": "alarm clock",
-                "label": "herätyskello"
+                "label": "herätyskello",
+                "roots": "kello"
             },
             {
                 "concept": "what time is it",
-                "label": "Paljonko kello on?"
+                "label": "Paljonko kello on?",
+                "roots": [
+                    "paljon",
+                    "kello"
+                ]
             },
             {
                 "concept": "what time is it",
-                "label": "Mitä kello on?"
+                "label": "Mitä kello on?",
+                "roots": [
+                    "Mitä?",
+                    "kello"
+                ]
             },
             {
                 "concept": "it is 10:00",
-                "label": "Kello on kymmenen."
+                "label": "Kello on kymmenen.",
+                "roots": [
+                    "kello",
+                    "kymmenen"
+                ]
             },
             {
                 "concept": "it is 2:30",
-                "label": "Kello on puoli kolme."
+                "label": "Kello on puoli kolme.",
+                "roots": [
+                    "kello",
+                    "puoli",
+                    "kolme"
+                ]
             },
             {
                 "concept": "it is 3:15",
-                "label": "Kello on vartin yli kolme."
+                "label": "Kello on vartin yli kolme.",
+                "roots": [
+                    "kello",
+                    "yli",
+                    "kolme"
+                ]
             },
             {
                 "concept": "it is 3:45",
-                "label": "Kello on varttia vaille neljä."
+                "label": "Kello on varttia vaille neljä.",
+                "roots": [
+                    "kello",
+                    "neljä"
+                ]
             },
             {
                 "concept": "it is 6:20",
-                "label": "Kello on kuusi kaksikymmentä."
+                "label": "Kello on kuusi kaksikymmentä.",
+                "roots": [
+                    "kello",
+                    "kuusi",
+                    "kaksikymmentä"
+                ]
             },
             {
                 "concept": "it is 6:20",
-                "label": "Kello on kaksikymmentä yli kuusi."
+                "label": "Kello on kaksikymmentä yli kuusi.",
+                "roots": [
+                    "kello",
+                    "kaksikymmentä",
+                    "yli",
+                    "kuusi"
+                ]
             },
             {
                 "concept": "it is 6:40",
-                "label": "Kello on kuusi neljäkymmentä."
+                "label": "Kello on kuusi neljäkymmentä.",
+                "roots": [
+                    "kello",
+                    "kuusi",
+                    "neljäkymmentä"
+                ]
             },
             {
                 "concept": "it is 6:40",
-                "label": "Kello on kahtakymmentä vaille seitsemän."
+                "label": "Kello on kahtakymmentä vaille seitsemän.",
+                "roots": [
+                    "kello",
+                    "kaksikymmentä",
+                    "seitsemän"
+                ]
             },
             {
                 "concept": "what time",
-                "label": "Mihin aikaan?"
+                "label": "Mihin aikaan?",
+                "roots": [
+                    "mihin",
+                    "aika"
+                ]
             },
             {
                 "concept": "how long does it take",
-                "label": "Kauanko se kestää?"
+                "label": "Kauanko se kestää?",
+                "roots": [
+                    "kauan",
+                    "kestää"
+                ]
             },
             {
                 "concept": "how long does it take",
-                "label": "Kuinka kauan se kestää?"
+                "label": "Kuinka kauan se kestää?",
+                "roots": [
+                    "Kuinka?",
+                    "kauan",
+                    "kestää"
+                ]
             },
             {
                 "concept": "it takes one hour",
-                "label": "Se kestää tunnin."
+                "label": "Se kestää tunnin.",
+                "roots": [
+                    "kestää",
+                    "tunti"
+                ]
             },
             {
                 "concept": "time of day",
-                "label": "vuorokaudenaika"
+                "label": "vuorokaudenaika",
+                "roots": [
+                    "vuorokausi",
+                    "aika"
+                ]
             },
             {
                 "concept": "from 3-5",
                 "label": [
                     "kello kolmesta kello viiteen",
                     "kolmesta viiteen"
+                ],
+                "roots": [
+                    "kello",
+                    "kolme",
+                    "viisi"
                 ]
             },
             {
                 "concept": "from June to August",
-                "label": "kesäkuusta elokuun"
+                "label": "kesäkuusta elokuun",
+                "roots": [
+                    "kesäkuu",
+                    "elokuu"
+                ]
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "maanantaista perjantaihin"
+                "label": "maanantaista perjantaihin",
+                "roots": [
+                    "maanantai",
+                    "perjantai"
+                ]
             }
         ],
         "nl": [
@@ -617,15 +556,26 @@
             },
             {
                 "concept": "all the time",
-                "label": "de hele tijd"
+                "label": "de hele tijd",
+                "roots": "de tijd"
             },
             {
                 "concept": "at the same time",
-                "label": "op dezelfde tijd"
+                "label": "op dezelfde tijd",
+                "roots": "de tijd"
+            },
+            {
+                "concept": "in time",
+                "label": "op tijd",
+                "roots": "de tijd"
             },
             {
                 "concept": "free time",
-                "label": "de vrije tijd"
+                "label": "de vrije tijd",
+                "roots": [
+                    "vrij",
+                    "de tijd"
+                ]
             },
             {
                 "concept": "now",
@@ -637,18 +587,25 @@
             },
             {
                 "concept": "noon",
-                "label": "twaalf uur 's middags"
+                "label": "twaalf uur 's middags",
+                "roots": [
+                    "twaalf",
+                    "het uur",
+                    "de middag"
+                ]
             },
             {
                 "concept": "afternoon",
                 "label": {
                     "singular": "de middag",
                     "plural": "de middagen"
-                }
+                },
+                "roots": "de dag"
             },
             {
                 "concept": "at day",
-                "label": "overdag"
+                "label": "overdag",
+                "roots": "de dag"
             },
             {
                 "concept": "decade",
@@ -691,65 +648,122 @@
             },
             {
                 "concept": "what time is it",
-                "label": "Hoe laat is het?"
+                "label": "Hoe laat is het?",
+                "roots": "laat"
             },
             {
                 "concept": "it is 10:00",
-                "label": "Het is tien uur."
+                "label": "Het is tien uur.",
+                "roots": [
+                    "tien",
+                    "het uur"
+                ]
             },
             {
                 "concept": "it is 2:30",
-                "label": "Het is half drie."
+                "label": "Het is half drie.",
+                "roots": [
+                    "half",
+                    "drie"
+                ]
             },
             {
                 "concept": "it is 3:15",
-                "label": "Het is kwart over drie."
+                "label": "Het is kwart over drie.",
+                "roots": [
+                    "over",
+                    "drie"
+                ]
             },
             {
                 "concept": "it is 3:45",
-                "label": "Het is kwart voor vier."
+                "label": "Het is kwart voor vier.",
+                "roots": [
+                    "voor",
+                    "vier"
+                ]
             },
             {
                 "concept": "it is 6:20",
-                "label": "Het is tien voor half zeven."
+                "label": "Het is tien voor half zeven.",
+                "roots": [
+                    "tien",
+                    "voor",
+                    "half",
+                    "zeven"
+                ]
             },
             {
                 "concept": "it is 6:40",
-                "label": "Het is tien over half zeven."
+                "label": "Het is tien over half zeven.",
+                "roots": [
+                    "tien",
+                    "over",
+                    "half",
+                    "zeven"
+                ]
             },
             {
                 "concept": "what time",
-                "label": "Hoe laat?"
+                "label": "Hoe laat?",
+                "roots": [
+                    "Hoe?",
+                    "laat"
+                ]
             },
             {
                 "concept": "how long does it take",
-                "label": "Hoe lang duurt het?"
+                "label": "Hoe lang duurt het?",
+                "roots": [
+                    "Hoe?",
+                    "lang",
+                    "duren"
+                ]
             },
             {
                 "concept": "it takes one hour",
                 "label": [
                     "Het duurt één uur.",
                     "Het duurt een uur."
+                ],
+                "roots": [
+                    "duren",
+                    "één",
+                    "het uur"
                 ]
             },
             {
                 "concept": "time of day",
-                "label": "tijdstip van de dag"
+                "label": "tijdstip van de dag",
+                "roots": "de dag"
             },
             {
                 "concept": "from 3-5",
                 "label": [
                     "van drie uur tot vijf uur",
                     "van drie tot vijf"
+                ],
+                "roots": [
+                    "drie",
+                    "vijf",
+                    "het uur"
                 ]
             },
             {
                 "concept": "from June to August",
-                "label": "van juni tot augustus"
+                "label": "van juni tot augustus",
+                "roots": [
+                    "juni",
+                    "augustus"
+                ]
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "van maandag tot vrijdag"
+                "label": "van maandag tot vrijdag",
+                "roots": [
+                    "maandag",
+                    "vrijdag"
+                ]
             }
         ]
     }

@@ -4,14 +4,7 @@
             "hypernym": "animal"
         },
         "reindeer": {
-            "hypernym": "animal",
-            "roots": {
-                "en": "deer",
-                "nl": [
-                    "to run",
-                    "animal"
-                ]
-            }
+            "hypernym": "animal"
         }
     },
     "labels": {
@@ -25,7 +18,8 @@
                 "label": {
                     "singular": "reindeer",
                     "plural": "reindeer"
-                }
+                },
+                "roots": "deer"
             }
         ],
         "fi": [
@@ -64,7 +58,11 @@
                 "label": {
                     "singular": "het rendier",
                     "plural": "de rendieren"
-                }
+                },
+                "roots": [
+                    "rennen",
+                    "het dier"
+                ]
             }
         ]
     }

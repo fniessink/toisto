@@ -4,22 +4,13 @@
             "hypernym": "continent"
         },
         "north america": {
-            "holonym": "america",
-            "roots": [
-                "north",
-                "america"
-            ]
+            "holonym": "america"
         },
         "south america": {
-            "holonym": "america",
-            "roots": [
-                "south",
-                "america"
-            ]
+            "holonym": "america"
         },
         "middle america": {
-            "holonym": "america",
-            "roots": "america"
+            "holonym": "america"
         }
     },
     "labels": {
@@ -30,15 +21,24 @@
             },
             {
                 "concept": "north america",
-                "label": "North America"
+                "label": "North America",
+                "roots": [
+                    "north",
+                    "America"
+                ]
             },
             {
                 "concept": "south america",
-                "label": "South America"
+                "label": "South America",
+                "roots": [
+                    "south",
+                    "America"
+                ]
             },
             {
                 "concept": "middle america",
-                "label": "Middle America"
+                "label": "Middle America",
+                "roots": "America"
             }
         ],
         "fi": [
@@ -48,15 +48,24 @@
             },
             {
                 "concept": "north america",
-                "label": "Pohjois-Amerikka"
+                "label": "Pohjois-Amerikka",
+                "roots": [
+                    "pohjoinen",
+                    "Amerikka"
+                ]
             },
             {
                 "concept": "south america",
-                "label": "Etelä-Amerikka"
+                "label": "Etelä-Amerikka",
+                "roots": [
+                    "etelä",
+                    "Amerikka"
+                ]
             },
             {
                 "concept": "middle america",
-                "label": "Väli-Amerikka"
+                "label": "Väli-Amerikka",
+                "roots": "Amerikka"
             }
         ],
         "nl": [
@@ -66,15 +75,24 @@
             },
             {
                 "concept": "north america",
-                "label": "Noord-Amerika"
+                "label": "Noord-Amerika",
+                "roots": [
+                    "het noorden",
+                    "Amerika"
+                ]
             },
             {
                 "concept": "south america",
-                "label": "Zuid-Amerika"
+                "label": "Zuid-Amerika",
+                "roots": [
+                    "het zuiden",
+                    "Amerika"
+                ]
             },
             {
                 "concept": "middle america",
-                "label": "Midden-Amerika"
+                "label": "Midden-Amerika",
+                "roots": "Amerika"
             }
         ]
     }

@@ -1,10 +1,7 @@
 {
     "concepts": {
         "chapter": {
-            "holonym": "book",
-            "roots": {
-                "nl": "head (main part)"
-            }
+            "holonym": "book"
         }
     },
     "labels": {
@@ -32,7 +29,8 @@
                 "label": {
                     "singular": "het hoofdstuk",
                     "plural": "de hoofdstukken"
-                }
+                },
+                "roots": "het hoofd"
             }
         ]
     }

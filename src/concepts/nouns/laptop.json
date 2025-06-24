@@ -1,10 +1,7 @@
 {
     "concepts": {
         "laptop": {
-            "hypernym": "computer",
-            "roots": {
-                "fi": "computer"
-            }
+            "hypernym": "computer"
         }
     },
     "labels": {
@@ -17,7 +14,8 @@
         "fi": [
             {
                 "concept": "laptop",
-                "label": "kannettava tietokone"
+                "label": "kannettava tietokone",
+                "roots": "tietokone"
             },
             {
                 "concept": "laptop",

@@ -5,24 +5,11 @@
             "hypernym": [
                 "friend",
                 "girl"
-            ],
-            "roots": {
-                "en": [
-                    "girl",
-                    "friend"
-                ],
-                "fi": [
-                    "girl",
-                    "friend"
-                ],
-                "nl": "friend"
-            }
+            ]
         },
         "boyfriend": {},
         "girlfriend": {},
-        "friendship": {
-            "roots": "friend"
-        }
+        "friendship": {}
     },
     "labels": {
         "en": [
@@ -35,18 +22,27 @@
             },
             {
                 "concept": "boyfriend",
-                "label": "boyfriend"
+                "label": "boyfriend",
+                "roots": [
+                    "boy",
+                    "friend"
+                ]
             },
             {
                 "concept": [
                     "girlfriend",
                     "female friend"
                 ],
-                "label": "girlfriend"
+                "label": "girlfriend",
+                "roots": [
+                    "girl",
+                    "friend"
+                ]
             },
             {
                 "concept": "friendship",
-                "label": "friendship"
+                "label": "friendship",
+                "roots": "friend"
             }
         ],
         "fi": [
@@ -66,26 +62,43 @@
             },
             {
                 "concept": "boyfriend",
-                "label": "miesystävä"
+                "label": "miesystävä",
+                "roots": [
+                    "mies",
+                    "ystävä"
+                ]
             },
             {
                 "concept": "boyfriend",
-                "label": "poikaystävä"
+                "label": "poikaystävä",
+                "roots": [
+                    "poika",
+                    "ystävä"
+                ]
             },
             {
                 "concept": "girlfriend",
-                "label": "naisystävä"
+                "label": "naisystävä",
+                "roots": [
+                    "nainen",
+                    "ystävä"
+                ]
             },
             {
                 "concept": [
                     "girlfriend",
                     "female friend"
                 ],
-                "label": "tyttöystävä"
+                "label": "tyttöystävä",
+                "roots": [
+                    "tyttö",
+                    "ystävä"
+                ]
             },
             {
                 "concept": "friendship",
-                "label": "ystävyys"
+                "label": "ystävyys",
+                "roots": "ystävä"
             }
         ],
         "nl": [
@@ -102,22 +115,26 @@
             },
             {
                 "concept": "boyfriend",
-                "label": "het vriendje"
+                "label": "het vriendje",
+                "roots": "de vriend"
             },
             {
                 "concept": [
                     "girlfriend",
                     "female friend"
                 ],
-                "label": "de vriendin"
+                "label": "de vriendin",
+                "roots": "de vriend"
             },
             {
                 "concept": "girlfriend",
-                "label": "het vriendinnetje"
+                "label": "het vriendinnetje",
+                "roots": "de vriendin"
             },
             {
                 "concept": "friendship",
-                "label": "vriendschap"
+                "label": "vriendschap",
+                "roots": "de vriend"
             }
         ]
     }

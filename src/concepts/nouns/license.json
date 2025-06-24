@@ -1,12 +1,6 @@
 {
     "concepts": {
-        "driver's license": {
-            "roots": {
-                "en": "driver",
-                "fi": "to drive",
-                "nl": "to drive"
-            }
-        }
+        "driver's license": {}
     },
     "labels": {
         "en": [
@@ -16,19 +10,25 @@
                     "driver's license",
                     "driver's license",
                     "driving license"
+                ],
+                "roots": [
+                    "driver",
+                    "to drive"
                 ]
             }
         ],
         "fi": [
             {
                 "concept": "driver's license",
-                "label": "ajokortti"
+                "label": "ajokortti",
+                "roots": "kortti"
             }
         ],
         "nl": [
             {
                 "concept": "driver's license",
-                "label": "het rijbewijs"
+                "label": "het rijbewijs",
+                "roots": "rijden"
             }
         ]
     }

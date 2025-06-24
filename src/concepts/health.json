@@ -3,16 +3,11 @@
         "health": {},
         "health centre": {
             "hypernym": "building",
-            "involves": "health care",
-            "roots": "health"
+            "involves": "health care"
         },
         "care": {},
         "health care": {
-            "hypernym": "care",
-            "roots": [
-                "health",
-                "care"
-            ]
+            "hypernym": "care"
         },
         "disease": {
             "involves": "patient"
@@ -28,9 +23,7 @@
             "example": "I have a fever",
             "involves": "patient"
         },
-        "I have a fever": {
-            "roots": "fever"
-        },
+        "I have a fever": {},
         "blood": {
             "holonym": "body"
         },
@@ -45,24 +38,15 @@
             "hypernym": [
                 "ache",
                 "pain"
-            ],
-            "roots": [
-                "head",
-                "ache"
             ]
         },
-        "I have a headache": {
-            "roots": "headache"
-        },
+        "I have a headache": {},
         "hospital": {
             "hypernym": "building",
             "involves": [
                 "health care",
                 "medicine"
-            ],
-            "roots": {
-                "nl": "house"
-            }
+            ]
         },
         "pharmacy": {
             "hypernym": "building",
@@ -83,6 +67,10 @@
                 "label": [
                     "health centre",
                     "health center"
+                ],
+                "roots": [
+                    "health",
+                    "centre"
                 ]
             },
             {
@@ -91,7 +79,11 @@
             },
             {
                 "concept": "health care",
-                "label": "health care"
+                "label": "health care",
+                "roots": [
+                    "health",
+                    "care"
+                ]
             },
             {
                 "concept": "disease",
@@ -127,7 +119,11 @@
             },
             {
                 "concept": "I have a fever",
-                "label": "I have a fever."
+                "label": "I have a fever.",
+                "roots": [
+                    "I have",
+                    "fever"
+                ]
             },
             {
                 "concept": "blood",
@@ -155,11 +151,19 @@
                 "label": {
                     "singular": "headache",
                     "plural": "headaches"
-                }
+                },
+                "roots": [
+                    "head",
+                    "ache"
+                ]
             },
             {
                 "concept": "I have a headache",
-                "label": "I have a headache."
+                "label": "I have a headache.",
+                "roots": [
+                    "I have",
+                    "headache"
+                ]
             },
             {
                 "concept": "hospital",
@@ -183,7 +187,11 @@
             },
             {
                 "concept": "health centre",
-                "label": "terveysasema"
+                "label": "terveysasema",
+                "roots": [
+                    "terveys",
+                    "asema"
+                ]
             },
             {
                 "concept": "care",
@@ -191,7 +199,11 @@
             },
             {
                 "concept": "health care",
-                "label": "terveydenhoito"
+                "label": "terveydenhoito",
+                "roots": [
+                    "terveys",
+                    "hoito"
+                ]
             },
             {
                 "concept": "disease",
@@ -227,7 +239,11 @@
             },
             {
                 "concept": "I have a fever",
-                "label": "Minulla on kuumetta."
+                "label": "Minulla on kuumetta.",
+                "roots": [
+                    "minulla on",
+                    "kuume"
+                ]
             },
             {
                 "concept": "blood",
@@ -255,18 +271,27 @@
                 "label": {
                     "singular": "päänsärky",
                     "plural": "päänsäryt"
-                }
+                },
+                "roots": [
+                    "pää",
+                    "särky"
+                ]
             },
             {
                 "concept": "I have a headache",
-                "label": "Minulla on pää kipeä"
+                "label": "Minulla on pää kipeä",
+                "roots": [
+                    "minulla on",
+                    "pää"
+                ]
             },
             {
                 "concept": "hospital",
                 "label": {
                     "singular": "sairaala",
                     "plural": "sairaalat"
-                }
+                },
+                "roots": "sairas"
             },
             {
                 "concept": "pharmacy",
@@ -283,7 +308,11 @@
             },
             {
                 "concept": "health centre",
-                "label": "het gezondheidscentrum"
+                "label": "het gezondheidscentrum",
+                "roots": [
+                    "de gezondheid",
+                    "het centrum"
+                ]
             },
             {
                 "concept": "care",
@@ -291,7 +320,11 @@
             },
             {
                 "concept": "health care",
-                "label": "de gezondheidszorg"
+                "label": "de gezondheidszorg",
+                "roots": [
+                    "de gezondheid",
+                    "de zorg"
+                ]
             },
             {
                 "concept": "disease",
@@ -330,45 +363,55 @@
             },
             {
                 "concept": "I have a fever",
-                "label": "Ik heb koorts."
+                "label": "Ik heb koorts.",
+                "roots": [
+                    "ik heb",
+                    "de koorts"
+                ]
             },
             {
                 "concept": "blood",
                 "label": "het bloed"
             },
             {
-                "concept": "ache",
+                "concept": [
+                    "ache",
+                    "pain"
+                ],
                 "label": {
                     "singular": "de pijn",
                     "plural": "de pijnen"
-                },
-                "tip": "dull"
-            },
-            {
-                "concept": "pain",
-                "label": {
-                    "singular": "de pijn",
-                    "plural": "de pijnen"
-                },
-                "tip": "sharp"
+                }
             },
             {
                 "concept": "headache",
                 "label": {
                     "singular": "de hoofdpijn",
                     "plural": "de hoofdpijnen"
-                }
+                },
+                "roots": [
+                    "het hoofd",
+                    "de pijn"
+                ]
             },
             {
                 "concept": "I have a headache",
-                "label": "Ik heb hoofdpijn."
+                "label": "Ik heb hoofdpijn.",
+                "roots": [
+                    "ik heb",
+                    "de hoofdpijn"
+                ]
             },
             {
                 "concept": "hospital",
                 "label": {
                     "singular": "het ziekenhuis",
                     "plural": "de ziekenhuizen"
-                }
+                },
+                "roots": [
+                    "ziek",
+                    "het huis"
+                ]
             },
             {
                 "concept": "pharmacy",

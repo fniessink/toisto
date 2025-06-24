@@ -7,7 +7,8 @@
         "en": [
             {
                 "concept": "to cancel a reservation",
-                "label": "to cancel a reservation"
+                "label": "to cancel a reservation",
+                "roots": "reservation"
             },
             {
                 "concept": "canceled",
@@ -17,7 +18,8 @@
         "fi": [
             {
                 "concept": "to cancel a reservation",
-                "label": "perua varaus"
+                "label": "perua varaus",
+                "roots": "varaus"
             },
             {
                 "concept": "canceled",
@@ -27,7 +29,8 @@
         "nl": [
             {
                 "concept": "to cancel a reservation",
-                "label": "een reservering annuleren"
+                "label": "een reservering annuleren",
+                "roots": "de reservering"
             },
             {
                 "concept": "canceled",

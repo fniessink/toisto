@@ -2,16 +2,12 @@
     "concepts": {
         "art": {},
         "artist": {
-            "involves": "art",
-            "roots": "art"
+            "involves": "art"
         },
         "art exhibition": {
-            "involves": "art",
-            "roots": "art"
+            "involves": "art"
         },
-        "art form": {
-            "roots": "art"
-        }
+        "art form": {}
     },
     "labels": {
         "en": [
@@ -24,18 +20,21 @@
                 "label": {
                     "singular": "artist",
                     "plural": "artists"
-                }
+                },
+                "roots": "art"
             },
             {
                 "concept": "art exhibition",
                 "label": {
                     "singular": "art exhibition",
                     "plural": "art exhibitions"
-                }
+                },
+                "roots": "art"
             },
             {
                 "concept": "art form",
-                "label": "art form"
+                "label": "art form",
+                "roots": "art"
             }
         ],
         "fi": [
@@ -48,18 +47,21 @@
                 "label": {
                     "singular": "taiteilija",
                     "plural": "taiteilijat"
-                }
+                },
+                "roots": "taide"
             },
             {
                 "concept": "art exhibition",
                 "label": {
                     "singular": "taidenäyttely",
                     "plural": "taidenäyttelyt"
-                }
+                },
+                "roots": "taide"
             },
             {
                 "concept": "art form",
-                "label": "taidemuoto"
+                "label": "taidemuoto",
+                "roots": "taide"
             }
         ],
         "nl": [
@@ -78,18 +80,21 @@
                         "feminine": "de kunstenaars",
                         "masculine": "de kunstenaressen"
                     }
-                }
+                },
+                "roots": "de kunst"
             },
             {
                 "concept": "art exhibition",
                 "label": {
                     "singular": "de kunsttentoonstelling",
                     "plural": "de kunsttentoonstellingen"
-                }
+                },
+                "roots": "de kunst"
             },
             {
                 "concept": "art form",
-                "label": "de kunstvorm"
+                "label": "de kunstvorm",
+                "roots": "de kunst"
             }
         ]
     }

@@ -7,9 +7,7 @@
             "example": "i love you more than he does"
         },
         "i drank more water": {},
-        "i love you more than he does": {
-            "roots": "more than"
-        }
+        "i love you more than he does": {}
     },
     "labels": {
         "en": [
@@ -23,13 +21,22 @@
             },
             {
                 "concept": "i drank more water",
-                "label": "I drank more water."
+                "label": "I drank more water.",
+                "roots": [
+                    "more",
+                    "water"
+                ]
             },
             {
                 "concept": "i love you more than he does",
                 "label": [
                     "I love you more than he does.",
                     "I love you more than he."
+                ],
+                "roots": [
+                    "I love",
+                    "more than",
+                    "he does"
                 ]
             }
         ],
@@ -45,11 +52,19 @@
             },
             {
                 "concept": "i drank more water",
-                "label": "Minä join lisää vettä."
+                "label": "Minä join lisää vettä.",
+                "roots": [
+                    "lisää",
+                    "vesi"
+                ]
             },
             {
                 "concept": "i love you more than he does",
-                "label": "Minä rakastan sinua enemmän kuin hän."
+                "label": "Minä rakastan sinua enemmän kuin hän.",
+                "roots": [
+                    "minä rakastan",
+                    "enemmän kuin"
+                ]
             }
         ],
         "nl": [
@@ -63,7 +78,11 @@
             },
             {
                 "concept": "i drank more water",
-                "label": "Ik dronk meer water."
+                "label": "Ik dronk meer water.",
+                "roots": [
+                    "meer",
+                    "het water"
+                ]
             },
             {
                 "concept": "i love you more than he does",
@@ -72,6 +91,11 @@
                     "Ik houd meer van jou dan hij.",
                     "Ik hou meer van jou dan hij doet.",
                     "Ik houd meer van jou dan hij."
+                ],
+                "roots": [
+                    "ik hou van",
+                    "meer dan",
+                    "hij doet"
                 ]
             }
         ]

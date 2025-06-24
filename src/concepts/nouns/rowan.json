@@ -1,10 +1,7 @@
 {
     "concepts": {
         "rowan": {
-            "hypernym": "tree",
-            "roots": {
-                "nl": "berry"
-            }
+            "hypernym": "tree"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
         "nl": [
             {
                 "concept": "rowan",
-                "label": "de lijsterbes"
+                "label": "de lijsterbes",
+                "roots": "de bes"
             }
         ]
     }

@@ -131,7 +131,9 @@ class FilterTest(ToistoTestCase):
 
     def test_add_concepts_that_have_selected_concepts_as_root(self):
         """Test that the concepts that have a selected concept as root are added."""
-        little_bar = self.create_concept("little bar", {"roots": self.bar_id})
+        little_bar = self.create_concept(
+            "little bar", labels=[{"label": "little bar", "language": EN, "roots": ["bar"]}]
+        )
         self.assertEqual(
             {self.bar, little_bar},
             self.filter_concepts(concepts=self.concepts | {little_bar}, selected_concepts=["bar"]),

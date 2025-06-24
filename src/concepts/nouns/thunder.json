@@ -1,35 +1,8 @@
 {
     "concepts": {
         "thunder": {},
-        "thunderstorm": {
-            "roots": {
-                "en": [
-                    "thunder",
-                    "storm"
-                ],
-                "fi": [
-                    "thunder",
-                    "storm"
-                ],
-                "nl": "weather"
-            }
-        },
-        "there is a thunderstorm": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "thunderstorm"
-                ],
-                "fi": [
-                    "to be",
-                    "thunder"
-                ],
-                "nl": [
-                    "to be",
-                    "thunder"
-                ]
-            }
-        }
+        "thunderstorm": {},
+        "there is a thunderstorm": {}
     },
     "labels": {
         "en": [
@@ -39,14 +12,19 @@
             },
             {
                 "concept": "thunderstorm",
-                "label": "thunderstorm"
+                "label": "thunderstorm",
+                "roots": [
+                    "thunder",
+                    "storm"
+                ]
             },
             {
                 "concept": "there is a thunderstorm",
                 "label": [
                     "There is a thunderstorm.",
                     "There's a thunderstorm."
-                ]
+                ],
+                "roots": "thunderstorm"
             }
         ],
         "fi": [
@@ -56,19 +34,29 @@
             },
             {
                 "concept": "thunderstorm",
-                "label": "ukkosmyrsky"
+                "label": "ukkosmyrsky",
+                "roots": [
+                    "ukkonen",
+                    "myrsky"
+                ]
             },
             {
                 "concept": "there is a thunderstorm",
-                "label": "Ukkostaa."
+                "label": "Ukkostaa.",
+                "roots": "ukkonen"
             },
             {
                 "concept": "there is a thunderstorm",
-                "label": "On ukkonen."
+                "label": "On ukkonen.",
+                "roots": "ukkonen"
             },
             {
                 "concept": "there is a thunderstorm",
-                "label": "On ukonilma."
+                "label": "On ukonilma.",
+                "roots": [
+                    "ukkonen",
+                    "ilma"
+                ]
             }
         ],
         "nl": [
@@ -78,11 +66,13 @@
             },
             {
                 "concept": "thunderstorm",
-                "label": "het onweer"
+                "label": "het onweer",
+                "roots": "het weer"
             },
             {
                 "concept": "there is a thunderstorm",
-                "label": "Het onweert."
+                "label": "Het onweert.",
+                "roots": "het onweer"
             }
         ]
     }

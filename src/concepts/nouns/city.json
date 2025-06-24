@@ -1,12 +1,7 @@
 {
     "concepts": {
         "city": {},
-        "townsman": {
-            "roots": {
-                "fi": "city",
-                "nl": "city"
-            }
-        }
+        "townsman": {}
     },
     "labels": {
         "en": [
@@ -19,11 +14,13 @@
             },
             {
                 "concept": "townsman",
-                "label": "townsman"
+                "label": "townsman",
+                "roots": "man"
             },
             {
                 "concept": "townsman",
-                "label": "townswoman"
+                "label": "townswoman",
+                "roots": "woman"
             }
         ],
         "fi": [
@@ -36,7 +33,8 @@
             },
             {
                 "concept": "townsman",
-                "label": "kaupunkilainen"
+                "label": "kaupunkilainen",
+                "roots": "kaupunki"
             }
         ],
         "nl": [
@@ -52,7 +50,8 @@
                 "label": [
                     "de stadsbewoner",
                     "de stadbewoner"
-                ]
+                ],
+                "roots": "de stad"
             }
         ]
     }

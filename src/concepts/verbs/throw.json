@@ -1,11 +1,7 @@
 {
     "concepts": {
         "to throw": {},
-        "heittää löylyä": {
-            "roots": {
-                "fi": "to throw"
-            }
-        }
+        "heittää löylyä": {}
     },
     "labels": {
         "en": [
@@ -26,7 +22,8 @@
             },
             {
                 "concept": "heittää löylyä",
-                "label": "heittää löylyä"
+                "label": "heittää löylyä",
+                "roots": "heittää"
             }
         ],
         "nl": [

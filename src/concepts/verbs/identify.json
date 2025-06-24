@@ -1,14 +1,7 @@
 {
     "concepts": {
         "to identify (oneself)": {},
-        "to identify with bank information": {
-            "roots": {
-                "fi": [
-                    "to identify (oneself)",
-                    "bank information"
-                ]
-            }
-        }
+        "to identify with bank information": {}
     },
     "labels": {
         "en": [
@@ -29,7 +22,8 @@
             },
             {
                 "concept": "to identify with bank information",
-                "label": "tunnistautua pankkitunnuksilla"
+                "label": "tunnistautua pankkitunnuksilla",
+                "roots": "tunnistautua"
             }
         ],
         "nl": [

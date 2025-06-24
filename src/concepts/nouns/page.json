@@ -3,12 +3,7 @@
         "page": {
             "holonym": "chapter"
         },
-        "web page": {
-            "roots": [
-                "web",
-                "page"
-            ]
-        }
+        "web page": {}
     },
     "labels": {
         "en": [
@@ -24,6 +19,10 @@
                 "label": [
                     "web page",
                     "webpage"
+                ],
+                "roots": [
+                    "web",
+                    "page"
                 ]
             }
         ],
@@ -37,11 +36,19 @@
             },
             {
                 "concept": "web page",
-                "label": "verkkosivu"
+                "label": "verkkosivu",
+                "roots": [
+                    "verkko",
+                    "sivu"
+                ]
             },
             {
                 "concept": "web page",
-                "label": "nettisivu"
+                "label": "nettisivu",
+                "roots": [
+                    "netti",
+                    "sivu"
+                ]
             }
         ],
         "nl": [
@@ -54,11 +61,19 @@
             },
             {
                 "concept": "web page",
-                "label": "de webpagina"
+                "label": "de webpagina",
+                "roots": [
+                    "het web",
+                    "de pagina"
+                ]
             },
             {
                 "concept": "web page",
-                "label": "de internetpagina"
+                "label": "de internetpagina",
+                "roots": [
+                    "het internet",
+                    "de pagina"
+                ]
             }
         ]
     }

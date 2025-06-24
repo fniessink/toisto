@@ -4,13 +4,7 @@
             "example": "is the fish fresh",
             "hypernym": "food"
         },
-        "is the fish fresh": {
-            "roots": [
-                "to be",
-                "fish",
-                "fresh"
-            ]
-        }
+        "is the fish fresh": {}
     },
     "labels": {
         "en": [
@@ -23,7 +17,11 @@
             },
             {
                 "concept": "is the fish fresh",
-                "label": "Is the fish fresh?"
+                "label": "Is the fish fresh?",
+                "roots": [
+                    "fish",
+                    "fresh"
+                ]
             }
         ],
         "fi": [
@@ -36,7 +34,11 @@
             },
             {
                 "concept": "is the fish fresh",
-                "label": "Onko kala tuoretta?"
+                "label": "Onko kala tuoretta?",
+                "roots": [
+                    "kala",
+                    "tuore"
+                ]
             }
         ],
         "nl": [
@@ -49,7 +51,11 @@
             },
             {
                 "concept": "is the fish fresh",
-                "label": "Is de vis vers?"
+                "label": "Is de vis vers?",
+                "roots": [
+                    "de vis",
+                    "vers"
+                ]
             }
         ]
     }

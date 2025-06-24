@@ -11,21 +11,25 @@
         "en": [
             {
                 "concept": "salty",
-                "label": "salty"
+                "label": "salty",
+                "roots": "salt"
             },
             {
                 "concept": "saltless",
-                "label": "saltless"
+                "label": "saltless",
+                "roots": "salt"
             }
         ],
         "fi": [
             {
                 "concept": "salty",
-                "label": "suolainen"
+                "label": "suolainen",
+                "roots": "suola"
             },
             {
                 "concept": "saltless",
-                "label": "suolaton"
+                "label": "suolaton",
+                "roots": "suola"
             }
         ],
         "nl": [

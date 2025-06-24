@@ -2,12 +2,7 @@
     "concepts": {
         "to fill": {},
         "to fill out": {},
-        "to fill out a form": {
-            "roots": [
-                "to fill out",
-                "form"
-            ]
-        }
+        "to fill out a form": {}
     },
     "labels": {
         "en": [
@@ -17,11 +12,16 @@
             },
             {
                 "concept": "to fill out",
-                "label": "to fill out"
+                "label": "to fill out",
+                "roots": "to fill"
             },
             {
                 "concept": "to fill out a form",
-                "label": "to fill out a form"
+                "label": "to fill out a form",
+                "roots": [
+                    "to fill out",
+                    "form"
+                ]
             }
         ],
         "fi": [
@@ -34,7 +34,11 @@
             },
             {
                 "concept": "to fill out a form",
-                "label": "täyttää lomake"
+                "label": "täyttää lomake",
+                "roots": [
+                    "täyttää",
+                    "lomake"
+                ]
             }
         ],
         "nl": [
@@ -44,11 +48,16 @@
             },
             {
                 "concept": "to fill out",
-                "label": "invullen"
+                "label": "invullen",
+                "roots": "vullen"
             },
             {
                 "concept": "to fill out a form",
-                "label": "een formulier invullen"
+                "label": "een formulier invullen",
+                "roots": [
+                    "het formulier",
+                    "invullen"
+                ]
             }
         ]
     }

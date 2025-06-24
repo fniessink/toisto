@@ -1,10 +1,7 @@
 {
     "concepts": {
         "estonia": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            }
+            "hypernym": "country"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
         "nl": [
             {
                 "concept": "estonia",
-                "label": "Estland"
+                "label": "Estland",
+                "roots": "het land"
             }
         ]
     }

@@ -8,8 +8,7 @@
         },
         "russian": {
             "hypernym": "nationality",
-            "involves": "russia",
-            "roots": "russia"
+            "involves": "russia"
         }
     },
     "labels": {
@@ -20,7 +19,8 @@
             },
             {
                 "concept": "russian",
-                "label": "Russian"
+                "label": "Russian",
+                "roots": "Russia"
             }
         ],
         "fi": [
@@ -30,17 +30,20 @@
             },
             {
                 "concept": "russian",
-                "label": "venäläinen"
+                "label": "venäläinen",
+                "roots": "Venäjä"
             }
         ],
         "nl": [
             {
                 "concept": "russia",
-                "label": "Rusland"
+                "label": "Rusland",
+                "roots": "het land"
             },
             {
                 "concept": "russian",
-                "label": "Russisch"
+                "label": "Russisch",
+                "roots": "Rusland"
             }
         ]
     }

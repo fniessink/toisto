@@ -6,9 +6,7 @@
         "mineral water": {
             "hypernym": "water"
         },
-        "on the water": {
-            "roots": "water"
-        }
+        "on the water": {}
     },
     "labels": {
         "en": [
@@ -21,11 +19,13 @@
             },
             {
                 "concept": "mineral water",
-                "label": "mineral water"
+                "label": "mineral water",
+                "roots": "water"
             },
             {
                 "concept": "on the water",
-                "label": "on the water"
+                "label": "on the water",
+                "roots": "water"
             }
         ],
         "fi": [
@@ -38,7 +38,8 @@
             },
             {
                 "concept": "mineral water",
-                "label": "kivennäisvesi"
+                "label": "kivennäisvesi",
+                "roots": "vesi"
             },
             {
                 "concept": "mineral water",
@@ -46,7 +47,8 @@
             },
             {
                 "concept": "on the water",
-                "label": "vesillä"
+                "label": "vesillä",
+                "roots": "vesi"
             }
         ],
         "nl": [
@@ -59,11 +61,13 @@
             },
             {
                 "concept": "mineral water",
-                "label": "het mineraalwater"
+                "label": "het mineraalwater",
+                "roots": "het water"
             },
             {
                 "concept": "on the water",
-                "label": "op het water"
+                "label": "op het water",
+                "roots": "het water"
             }
         ]
     }

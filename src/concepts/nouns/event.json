@@ -2,11 +2,7 @@
     "concepts": {
         "event": {},
         "cultural event": {
-            "hypernym": "event",
-            "roots": [
-                "culture",
-                "event"
-            ]
+            "hypernym": "event"
         }
     },
     "labels": {
@@ -20,7 +16,11 @@
             },
             {
                 "concept": "cultural event",
-                "label": "cultural event"
+                "label": "cultural event",
+                "roots": [
+                    "culture",
+                    "event"
+                ]
             }
         ],
         "fi": [
@@ -33,7 +33,11 @@
             },
             {
                 "concept": "cultural event",
-                "label": "kulttuuritapahtuma"
+                "label": "kulttuuritapahtuma",
+                "roots": [
+                    "kulttuuri",
+                    "tapahtuma"
+                ]
             }
         ],
         "nl": [
@@ -46,7 +50,11 @@
             },
             {
                 "concept": "cultural event",
-                "label": "het culturele evenement"
+                "label": "het culturele evenement",
+                "roots": [
+                    "de cultuur",
+                    "het evenement"
+                ]
             }
         ]
     }

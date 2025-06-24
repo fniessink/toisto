@@ -5,8 +5,7 @@
         },
         "brazilian": {
             "hypernym": "nationality",
-            "involves": "brazil",
-            "roots": "brazil"
+            "involves": "brazil"
         }
     },
     "labels": {
@@ -17,7 +16,8 @@
             },
             {
                 "concept": "brazilian",
-                "label": "Brazilian"
+                "label": "Brazilian",
+                "roots": "Brazil"
             }
         ],
         "fi": [
@@ -27,7 +27,8 @@
             },
             {
                 "concept": "brazilian",
-                "label": "brasilialainen"
+                "label": "brasilialainen",
+                "roots": "Brasilia"
             }
         ],
         "nl": [
@@ -37,7 +38,8 @@
             },
             {
                 "concept": "brazilian",
-                "label": "Braziliaans"
+                "label": "Braziliaans",
+                "roots": "Brazilië"
             }
         ]
     }

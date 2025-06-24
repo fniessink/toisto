@@ -2,18 +2,9 @@
     "concepts": {
         "course": {},
         "finnish course": {
-            "hypernym": "course",
-            "roots": [
-                "finnish",
-                "course"
-            ]
+            "hypernym": "course"
         },
-        "course day": {
-            "roots": [
-                "course",
-                "day"
-            ]
-        }
+        "course day": {}
     },
     "labels": {
         "en": [
@@ -23,11 +14,19 @@
             },
             {
                 "concept": "finnish course",
-                "label": "Finnish course"
+                "label": "Finnish course",
+                "roots": [
+                    "Finnish",
+                    "course"
+                ]
             },
             {
                 "concept": "course day",
-                "label": "course day"
+                "label": "course day",
+                "roots": [
+                    "course",
+                    "day"
+                ]
             }
         ],
         "fi": [
@@ -37,11 +36,19 @@
             },
             {
                 "concept": "finnish course",
-                "label": "suomen kurssi"
+                "label": "suomen kurssi",
+                "roots": [
+                    "Suomi",
+                    "kurssi"
+                ]
             },
             {
                 "concept": "course day",
-                "label": "kurssipäivä"
+                "label": "kurssipäivä",
+                "roots": [
+                    "kurssi",
+                    "päivä"
+                ]
             }
         ],
         "nl": [
@@ -51,11 +58,19 @@
             },
             {
                 "concept": "finnish course",
-                "label": "de cursus Fins"
+                "label": "de cursus Fins",
+                "roots": [
+                    "de cursus",
+                    "Fins"
+                ]
             },
             {
                 "concept": "course day",
-                "label": "de cursusdag"
+                "label": "de cursusdag",
+                "roots": [
+                    "de cursus",
+                    "de dag"
+                ]
             }
         ]
     }
