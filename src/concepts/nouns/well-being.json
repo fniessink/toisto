@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "well-being": {
-            "roots": {
-                "fi": "well"
-            }
-        }
+        "well-being": {}
     },
     "labels": {
         "en": [
@@ -16,7 +12,8 @@
         "fi": [
             {
                 "concept": "well-being",
-                "label": "hyvinvointi"
+                "label": "hyvinvointi",
+                "roots": "hyvin"
             },
             {
                 "concept": "well-being",

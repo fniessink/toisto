@@ -2,12 +2,9 @@
     "concepts": {
         "country": {},
         "neighboring country": {
-            "hypernym": "country",
-            "roots": "country"
+            "hypernym": "country"
         },
-        "countryside": {
-            "roots": "country"
-        }
+        "countryside": {}
     },
     "labels": {
         "en": [
@@ -20,11 +17,13 @@
             },
             {
                 "concept": "neighboring country",
-                "label": "neighboring country"
+                "label": "neighboring country",
+                "roots": "country"
             },
             {
                 "concept": "countryside",
-                "label": "countryside"
+                "label": "countryside",
+                "roots": "country"
             }
         ],
         "fi": [
@@ -38,11 +37,13 @@
             },
             {
                 "concept": "neighboring country",
-                "label": "naapurimaa"
+                "label": "naapurimaa",
+                "roots": "maa"
             },
             {
                 "concept": "countryside",
-                "label": "maaseutu"
+                "label": "maaseutu",
+                "roots": "maa"
             }
         ],
         "nl": [
@@ -55,11 +56,13 @@
             },
             {
                 "concept": "neighboring country",
-                "label": "het buurland"
+                "label": "het buurland",
+                "roots": "het land"
             },
             {
                 "concept": "countryside",
-                "label": "het platteland"
+                "label": "het platteland",
+                "roots": "het land"
             }
         ]
     }

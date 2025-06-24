@@ -2,27 +2,15 @@
     "concepts": {
         "name": {},
         "first name": {
-            "hypernym": "name",
-            "roots": "name"
+            "hypernym": "name"
         },
         "given name": {
-            "hypernym": "name",
-            "roots": "name"
+            "hypernym": "name"
         },
         "last name": {
-            "hypernym": "name",
-            "roots": "name"
+            "hypernym": "name"
         },
-        "naming": {
-            "roots": {
-                "en": "name",
-                "fi": "name",
-                "nl": [
-                    "name",
-                    "to give"
-                ]
-            }
-        }
+        "naming": {}
     },
     "labels": {
         "en": [
@@ -35,23 +23,34 @@
             },
             {
                 "concept": "first name",
-                "label": "first name"
+                "label": "first name",
+                "roots": [
+                    "first",
+                    "name"
+                ]
             },
             {
                 "concept": "given name",
-                "label": "given name"
+                "label": "given name",
+                "roots": "name"
             },
             {
                 "concept": "last name",
-                "label": "last name"
+                "label": "last name",
+                "roots": [
+                    "last",
+                    "name"
+                ]
             },
             {
                 "concept": "last name",
-                "label": "surname"
+                "label": "surname",
+                "roots": "name"
             },
             {
                 "concept": "naming",
-                "label": "naming"
+                "label": "naming",
+                "roots": "name"
             }
         ],
         "fi": [
@@ -64,19 +63,23 @@
             },
             {
                 "concept": "first name",
-                "label": "etunimi"
+                "label": "etunimi",
+                "roots": "nimi"
             },
             {
                 "concept": "given name",
-                "label": "kutsumanimi"
+                "label": "kutsumanimi",
+                "roots": "nimi"
             },
             {
                 "concept": "last name",
-                "label": "sukunimi"
+                "label": "sukunimi",
+                "roots": "nimi"
             },
             {
                 "concept": "naming",
-                "label": "nimiäiset"
+                "label": "nimiäiset",
+                "roots": "nimi"
             }
         ],
         "nl": [
@@ -89,19 +92,23 @@
             },
             {
                 "concept": "first name",
-                "label": "de voornaam"
+                "label": "de voornaam",
+                "roots": "de naam"
             },
             {
                 "concept": "given name",
-                "label": "de roepnaam"
+                "label": "de roepnaam",
+                "roots": "de naam"
             },
             {
                 "concept": "last name",
-                "label": "de achternaam"
+                "label": "de achternaam",
+                "roots": "de naam"
             },
             {
                 "concept": "naming",
-                "label": "de naamgeving"
+                "label": "de naamgeving",
+                "roots": "de naam"
             }
         ]
     }

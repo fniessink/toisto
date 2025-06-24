@@ -3,9 +3,7 @@
         "important": {
             "example": "sleeping is important"
         },
-        "more important than": {
-            "roots": "important"
-        }
+        "more important than": {}
     },
     "labels": {
         "en": [
@@ -19,7 +17,8 @@
             },
             {
                 "concept": "more important than",
-                "label": "more important than"
+                "label": "more important than",
+                "roots": "important"
             }
         ],
         "fi": [
@@ -33,7 +32,8 @@
             },
             {
                 "concept": "more important than",
-                "label": "tärkeämpi kuin"
+                "label": "tärkeämpi kuin",
+                "roots": "tärkeämpi"
             }
         ],
         "nl": [
@@ -47,7 +47,8 @@
             },
             {
                 "concept": "more important than",
-                "label": "belangrijker dan"
+                "label": "belangrijker dan",
+                "roots": "belangrijker"
             }
         ]
     }

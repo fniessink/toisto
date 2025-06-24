@@ -1,23 +1,27 @@
 {
     "concepts": {
-        "timetable": {
-            "roots": {
-                "en": "time",
-                "fi": "time",
-                "nl": "shift"
-            }
-        },
-        "school timetable": {}
+        "timetable": {},
+        "school timetable": {
+            "hypernym": "timetable"
+        }
     },
     "labels": {
         "en": [
             {
                 "concept": "timetable",
-                "label": "timetable"
+                "label": "timetable",
+                "roots": [
+                    "time",
+                    "table"
+                ]
             },
             {
                 "concept": "school timetable",
-                "label": "school timetable"
+                "label": "school timetable",
+                "roots": [
+                    "school",
+                    "timetable"
+                ]
             }
         ],
         "fi": [
@@ -26,7 +30,8 @@
                     "timetable",
                     "schedule"
                 ],
-                "label": "aikataulu"
+                "label": "aikataulu",
+                "roots": "aika"
             },
             {
                 "concept": "school timetable",
@@ -36,11 +41,13 @@
         "nl": [
             {
                 "concept": "timetable",
-                "label": "de dienstregeling"
+                "label": "de dienstregeling",
+                "roots": "de dienst"
             },
             {
                 "concept": "school timetable",
-                "label": "het lesrooster"
+                "label": "het lesrooster",
+                "roots": "het rooster"
             }
         ]
     }

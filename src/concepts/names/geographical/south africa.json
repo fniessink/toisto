@@ -1,30 +1,38 @@
 {
     "concepts": {
         "south africa": {
-            "hypernym": "country",
-            "roots": [
-                "south",
-                "africa"
-            ]
+            "hypernym": "country"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "south africa",
-                "label": "South Africa"
+                "label": "South Africa",
+                "roots": [
+                    "south",
+                    "Africa"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "south africa",
-                "label": "Etelä-Afrikka"
+                "label": "Etelä-Afrikka",
+                "roots": [
+                    "etelä",
+                    "Afrikka"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "south africa",
-                "label": "Zuid-Afrika"
+                "label": "Zuid-Afrika",
+                "roots": [
+                    "het zuiden",
+                    "Afrika"
+                ]
             }
         ]
     }

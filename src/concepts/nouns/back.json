@@ -3,12 +3,7 @@
         "back": {
             "holonym": "body"
         },
-        "backpack": {
-            "roots": {
-                "en": "back",
-                "nl": "back"
-            }
-        }
+        "backpack": {}
     },
     "labels": {
         "en": [
@@ -24,7 +19,8 @@
                 "label": {
                     "singular": "backpack",
                     "plural": "backpacks"
-                }
+                },
+                "roots": "back"
             }
         ],
         "fi": [
@@ -56,7 +52,8 @@
                 "label": {
                     "singular": "de rugzak",
                     "plural": "de rugzakken"
-                }
+                },
+                "roots": "de rug"
             }
         ]
     }

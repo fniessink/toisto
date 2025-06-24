@@ -1,10 +1,7 @@
 {
     "concepts": {
         "mushroom": {
-            "hypernym": "food",
-            "roots": {
-                "nl": "chair"
-            }
+            "hypernym": "food"
         }
     },
     "labels": {
@@ -32,7 +29,8 @@
                 "label": {
                     "singular": "de paddenstoel",
                     "plural": "de paddenstoelen"
-                }
+                },
+                "roots": "de stoel"
             }
         ]
     }

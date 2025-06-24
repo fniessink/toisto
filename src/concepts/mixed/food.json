@@ -7,67 +7,32 @@
         "drink": {
             "holonym": "food and drink"
         },
-        "food and drink": {
-            "roots": [
-                "drink",
-                "food"
-            ]
-        },
+        "food and drink": {},
         "vegetable": {
             "hypernym": "food"
         },
-        "meal": {
-            "roots": {
-                "nl": "time"
-            }
-        },
+        "meal": {},
         "breakfast": {
-            "hypernym": "meal",
-            "roots": {
-                "fi": "morning"
-            }
+            "hypernym": "meal"
         },
         "snack": {
             "hypernym": "food"
         },
         "dinner": {
-            "hypernym": "meal",
-            "roots": {
-                "fi": [
-                    "day",
-                    "evening"
-                ],
-                "nl": [
-                    "evening",
-                    "food"
-                ]
-            }
+            "hypernym": "meal"
         },
         "evening snack": {
             "hypernym": "snack"
         },
         "appetiser": {
-            "holonym": "meal",
-            "roots": {
-                "fi": "food"
-            }
+            "holonym": "meal"
         },
         "main dish": {
-            "holonym": "meal",
-            "roots": {
-                "fi": [
-                    "head (main part)",
-                    "food"
-                ],
-                "nl": "head (main part)"
-            }
+            "holonym": "meal"
         },
         "dessert": {
             "holonym": "meal",
-            "hypernym": "food",
-            "roots": {
-                "fi": "food"
-            }
+            "hypernym": "food"
         },
         "macaroni casserole": {
             "hypernym": "food"
@@ -82,39 +47,19 @@
             "hypernym": "meat"
         },
         "wiener": {
-            "hypernym": "meat",
-            "roots": {
-                "nl": "sausage"
-            }
+            "hypernym": "meat"
         },
         "shrimp": {
-            "hypernym": "food",
-            "roots": {
-                "fi": "crab"
-            }
+            "hypernym": "food"
         },
         "chicken": {
             "hypernym": "meat"
         },
         "beef": {
-            "hypernym": "meat",
-            "roots": {
-                "fi": "meat",
-                "nl": "meat"
-            }
+            "hypernym": "meat"
         },
         "pork": {
-            "hypernym": "meat",
-            "roots": {
-                "fi": [
-                    "pig",
-                    "meat"
-                ],
-                "nl": [
-                    "pig",
-                    "meat"
-                ]
-            }
+            "hypernym": "meat"
         },
         "dressing": {
             "hypernym": "food"
@@ -126,17 +71,10 @@
             "hypernym": "food"
         },
         "karelian pasty": {
-            "hypernym": "food",
-            "roots": {
-                "fi": "pie"
-            }
+            "hypernym": "food"
         },
         "bread roll": {
-            "hypernym": "food",
-            "roots": {
-                "en": "bread",
-                "nl": "bread"
-            }
+            "hypernym": "food"
         },
         "butter": {
             "hypernym": "food"
@@ -151,21 +89,10 @@
             "hypernym": "drink"
         },
         "oat milk": {
-            "hypernym": "drink",
-            "roots": "milk"
+            "hypernym": "drink"
         },
         "hot chocolate": {
-            "hypernym": "drink",
-            "roots": {
-                "en": [
-                    "hot",
-                    "chocolate"
-                ],
-                "nl": [
-                    "chocolate",
-                    "milk"
-                ]
-            }
+            "hypernym": "drink"
         },
         "yoghurt": {
             "hypernym": "food"
@@ -192,43 +119,19 @@
             "hypernym": "fruit"
         },
         "strawberry": {
-            "hypernym": "berry",
-            "roots": {
-                "en": "berry"
-            }
+            "hypernym": "berry"
         },
         "cloudberry": {
-            "hypernym": "berry",
-            "roots": {
-                "en": [
-                    "cloud",
-                    "berry"
-                ]
-            }
+            "hypernym": "berry"
         },
         "raspberry": {
-            "hypernym": "berry",
-            "roots": {
-                "en": "berry"
-            }
+            "hypernym": "berry"
         },
         "bilberry": {
-            "hypernym": "berry",
-            "roots": {
-                "en": "berry",
-                "fi": "black",
-                "nl": [
-                    "forest",
-                    "berry"
-                ]
-            }
+            "hypernym": "berry"
         },
         "lingonberry": {
-            "hypernym": "berry",
-            "roots": {
-                "en": "berry",
-                "nl": "berry"
-            }
+            "hypernym": "berry"
         },
         "spice": {
             "hypernym": "food"
@@ -240,10 +143,7 @@
             "hypernym": "fruit"
         },
         "potato": {
-            "hypernym": "food",
-            "roots": {
-                "nl": "apple"
-            }
+            "hypernym": "food"
         },
         "steak": {
             "hypernym": "meat"
@@ -300,17 +200,7 @@
             "hypernym": "vegetable"
         },
         "sandwich": {
-            "hypernym": "bread",
-            "roots": {
-                "fi": [
-                    "butter",
-                    "bread"
-                ],
-                "nl": [
-                    "butter",
-                    "ham"
-                ]
-            }
+            "hypernym": "bread"
         },
         "nut": {
             "hypernym": "food"
@@ -319,14 +209,7 @@
             "hypernym": "fruit"
         },
         "currant": {
-            "hypernym": "berry",
-            "roots": {
-                "fi": [
-                    "wine",
-                    "berry"
-                ],
-                "nl": "berry"
-            }
+            "hypernym": "berry"
         },
         "cider": {
             "hypernym": "drink"
@@ -338,11 +221,7 @@
             "hypernym": "drink"
         },
         "soft drink": {
-            "hypernym": "drink",
-            "roots": {
-                "en": "drink",
-                "nl": "drink"
-            }
+            "hypernym": "drink"
         },
         "tea": {
             "hypernym": "drink"
@@ -351,40 +230,19 @@
             "hypernym": "fruit"
         },
         "cauliflower": {
-            "hypernym": "vegetable",
-            "roots": {
-                "en": "flower",
-                "fi": [
-                    "flower",
-                    "cabbage"
-                ],
-                "nl": [
-                    "flower",
-                    "cabbage"
-                ]
-            }
+            "hypernym": "vegetable"
         },
         "egg": {
             "hypernym": "food"
         },
         "aubergine": {
-            "hypernym": "vegetable",
-            "roots": {
-                "en": "egg",
-                "fi": "egg"
-            }
+            "hypernym": "vegetable"
         },
         "corn": {
             "hypernym": "vegetable"
         },
         "garlic": {
-            "hypernym": "vegetable",
-            "roots": {
-                "fi": [
-                    "white",
-                    "onion"
-                ]
-            }
+            "hypernym": "vegetable"
         },
         "paprika": {
             "hypernym": "vegetable"
@@ -396,10 +254,7 @@
             "hypernym": "vegetable"
         },
         "zucchini": {
-            "hypernym": "vegetable",
-            "roots": {
-                "fi": "summer"
-            }
+            "hypernym": "vegetable"
         },
         "cookie": {
             "hypernym": "food"
@@ -414,8 +269,7 @@
             "hypernym": "food"
         },
         "whipped cream": {
-            "hypernym": "cream",
-            "roots": "cream"
+            "hypernym": "cream"
         },
         "candy": {
             "hypernym": "food"
@@ -424,11 +278,7 @@
             "hypernym": "food"
         },
         "chocolate ice cream": {
-            "hypernym": "ice cream",
-            "roots": [
-                "chocolate",
-                "ice cream"
-            ]
+            "hypernym": "ice cream"
         },
         "vanilla": {
             "hypernym": "food"
@@ -437,10 +287,7 @@
             "hypernym": "fruit"
         },
         "pineapple": {
-            "hypernym": "fruit",
-            "roots": {
-                "en": "apple"
-            }
+            "hypernym": "fruit"
         },
         "melon": {
             "hypernym": "fruit"
@@ -472,52 +319,19 @@
         },
         "hungry": {},
         "i am hungry": {
-            "involves": "food",
-            "roots": {
-                "en": [
-                    "to be",
-                    "hungry"
-                ],
-                "fi": [
-                    "to have",
-                    "hunger"
-                ],
-                "nl": [
-                    "to have",
-                    "hunger"
-                ]
-            }
+            "involves": "food"
         },
         "thirsty": {
             "involves": "drink"
         },
         "i am thirsty": {
-            "involves": "drink",
-            "roots": {
-                "en": [
-                    "to be",
-                    "thirsty"
-                ],
-                "fi": [
-                    "to have",
-                    "thirsty"
-                ],
-                "nl": [
-                    "to have",
-                    "thirsty"
-                ]
-            }
+            "involves": "drink"
         },
         "come eat": {
-            "involves": "food",
-            "roots": [
-                "to come",
-                "to eat"
-            ]
+            "involves": "food"
         },
         "the food is ready": {
-            "involves": "food",
-            "roots": "food"
+            "involves": "food"
         }
     },
     "labels": {
@@ -531,7 +345,11 @@
             },
             {
                 "concept": "mealtime",
-                "label": "mealtime"
+                "label": "mealtime",
+                "roots": [
+                    "meal",
+                    "time"
+                ]
             },
             {
                 "concept": "drink",
@@ -542,7 +360,11 @@
             },
             {
                 "concept": "food and drink",
-                "label": "food and drink"
+                "label": "food and drink",
+                "roots": [
+                    "food",
+                    "drink"
+                ]
             },
             {
                 "concept": "vegetable",
@@ -621,7 +443,11 @@
             },
             {
                 "concept": "wiener",
-                "label": "hot dog"
+                "label": "hot dog",
+                "roots": [
+                    "hot",
+                    "dog"
+                ]
             },
             {
                 "concept": "shrimp",
@@ -672,7 +498,8 @@
                 "label": [
                     "bread roll",
                     "roll"
-                ]
+                ],
+                "roots": "bread"
             },
             {
                 "concept": "butter",
@@ -694,15 +521,24 @@
             },
             {
                 "concept": "buttermilk",
-                "label": "buttermilk"
+                "label": "buttermilk",
+                "roots": [
+                    "butter",
+                    "milk"
+                ]
             },
             {
                 "concept": "oat milk",
-                "label": "oat milk"
+                "label": "oat milk",
+                "roots": "milk"
             },
             {
                 "concept": "hot chocolate",
-                "label": "hot chocolate"
+                "label": "hot chocolate",
+                "roots": [
+                    "hot",
+                    "chocolate"
+                ]
             },
             {
                 "concept": "yoghurt",
@@ -754,27 +590,36 @@
                 "label": {
                     "singular": "strawberry",
                     "plural": "strawberries"
-                }
+                },
+                "roots": "berry"
             },
             {
                 "concept": "cloudberry",
-                "label": "cloudberry"
+                "label": "cloudberry",
+                "roots": "berry"
             },
             {
                 "concept": "raspberry",
-                "label": "raspberry"
+                "label": "raspberry",
+                "roots": "berry"
             },
             {
                 "concept": "bilberry",
-                "label": "bilberry"
+                "label": "bilberry",
+                "roots": "berry"
             },
             {
                 "concept": "lingonberry",
-                "label": "lingonberry"
+                "label": "lingonberry",
+                "roots": "berry"
             },
             {
                 "concept": "lingonberry",
-                "label": "cowberry"
+                "label": "cowberry",
+                "roots": [
+                    "cow",
+                    "berry"
+                ]
             },
             {
                 "concept": "spice",
@@ -958,6 +803,10 @@
                 "label": [
                     "soft drink",
                     "softdrink"
+                ],
+                "roots": [
+                    "soft",
+                    "drink"
                 ]
             },
             {
@@ -973,7 +822,8 @@
             },
             {
                 "concept": "cauliflower",
-                "label": "cauliflower"
+                "label": "cauliflower",
+                "roots": "flower"
             },
             {
                 "concept": "egg",
@@ -985,7 +835,11 @@
             },
             {
                 "concept": "aubergine",
-                "label": "eggplant"
+                "label": "eggplant",
+                "roots": [
+                    "egg",
+                    "plant"
+                ]
             },
             {
                 "concept": "corn",
@@ -1038,7 +892,8 @@
             },
             {
                 "concept": "whipped cream",
-                "label": "whipped cream"
+                "label": "whipped cream",
+                "roots": "cream"
             },
             {
                 "concept": "candy",
@@ -1050,7 +905,11 @@
             },
             {
                 "concept": "chocolate ice cream",
-                "label": "chocolate ice cream"
+                "label": "chocolate ice cream",
+                "roots": [
+                    "chocolate",
+                    "ice cream"
+                ]
             },
             {
                 "concept": "vanilla",
@@ -1068,7 +927,8 @@
                 "label": {
                     "singular": "pineapple",
                     "plural": "pineapples"
-                }
+                },
+                "roots": "apple"
             },
             {
                 "concept": "melon",
@@ -1153,7 +1013,8 @@
                 "label": [
                     "breakfast cereal",
                     "cereal"
-                ]
+                ],
+                "roots": "breakfast"
             },
             {
                 "concept": "porridge",
@@ -1169,7 +1030,11 @@
             },
             {
                 "concept": "i am hungry",
-                "label": "I am hungry."
+                "label": "I am hungry.",
+                "roots": [
+                    "I am",
+                    "hungry"
+                ]
             },
             {
                 "concept": "thirsty",
@@ -1177,15 +1042,21 @@
             },
             {
                 "concept": "i am thirsty",
-                "label": "I am thirsty."
+                "label": "I am thirsty.",
+                "roots": [
+                    "I am",
+                    "thirsty"
+                ]
             },
             {
                 "concept": "come eat",
-                "label": "Come eat!"
+                "label": "Come eat!",
+                "roots": "to eat"
             },
             {
                 "concept": "the food is ready",
-                "label": "The food is ready!"
+                "label": "The food is ready!",
+                "roots": "food"
             }
         ],
         "fi": [
@@ -1198,7 +1069,8 @@
             },
             {
                 "concept": "mealtime",
-                "label": "ruokailu"
+                "label": "ruokailu",
+                "roots": "ruoka"
             },
             {
                 "concept": "drink",
@@ -1209,7 +1081,11 @@
             },
             {
                 "concept": "food and drink",
-                "label": "ruoka ja juoma"
+                "label": "ruoka ja juoma",
+                "roots": [
+                    "ruoka",
+                    "juoma"
+                ]
             },
             {
                 "concept": "vegetable",
@@ -1227,11 +1103,13 @@
             },
             {
                 "concept": "breakfast",
-                "label": "aamupala"
+                "label": "aamupala",
+                "roots": "aamu"
             },
             {
                 "concept": "breakfast",
-                "label": "aamiainen"
+                "label": "aamiainen",
+                "roots": "aamu"
             },
             {
                 "concept": "snack",
@@ -1239,27 +1117,36 @@
             },
             {
                 "concept": "dinner",
-                "label": "päivällinen"
+                "label": "päivällinen",
+                "roots": "päivä"
             },
             {
                 "concept": "dinner",
-                "label": "illallinen"
+                "label": "illallinen",
+                "roots": "ilta"
             },
             {
                 "concept": "evening snack",
-                "label": "iltapala"
+                "label": "iltapala",
+                "roots": "ilta"
             },
             {
                 "concept": "appetiser",
-                "label": "alkuruoka"
+                "label": "alkuruoka",
+                "roots": "ruoka"
             },
             {
                 "concept": "main dish",
-                "label": "pääruoka"
+                "label": "pääruoka",
+                "roots": [
+                    "pää",
+                    "ruoka"
+                ]
             },
             {
                 "concept": "dessert",
-                "label": "jälkiruoka"
+                "label": "jälkiruoka",
+                "roots": "ruoka"
             },
             {
                 "concept": "macaroni casserole",
@@ -1294,11 +1181,16 @@
             },
             {
                 "concept": "beef",
-                "label": "naudanliha"
+                "label": "naudanliha",
+                "roots": "liha"
             },
             {
                 "concept": "pork",
-                "label": "porsaanliha"
+                "label": "porsaanliha",
+                "roots": [
+                    "porsas",
+                    "liha"
+                ]
             },
             {
                 "concept": "dressing",
@@ -1323,7 +1215,8 @@
             },
             {
                 "concept": "karelian pasty",
-                "label": "karjalanpiirakka"
+                "label": "karjalanpiirakka",
+                "roots": "piirakka"
             },
             {
                 "concept": "bread roll",
@@ -1353,7 +1246,8 @@
             },
             {
                 "concept": "oat milk",
-                "label": "kauramaito"
+                "label": "kauramaito",
+                "roots": "maito"
             },
             {
                 "concept": "hot chocolate",
@@ -1516,7 +1410,8 @@
                 "label": {
                     "singular": "viinirypäle",
                     "plural": "viinirypäleet"
-                }
+                },
+                "roots": "viini"
             },
             {
                 "concept": "sugar",
@@ -1564,7 +1459,11 @@
                 "label": {
                     "singular": "voileipä",
                     "plural": "voileivät"
-                }
+                },
+                "roots": [
+                    "voi",
+                    "leipä"
+                ]
             },
             {
                 "concept": "nut",
@@ -1582,7 +1481,11 @@
             },
             {
                 "concept": "currant",
-                "label": "viinimarja"
+                "label": "viinimarja",
+                "roots": [
+                    "viini",
+                    "marja"
+                ]
             },
             {
                 "concept": "cider",
@@ -1613,7 +1516,11 @@
             },
             {
                 "concept": "cauliflower",
-                "label": "kukkakaali"
+                "label": "kukkakaali",
+                "roots": [
+                    "kukka",
+                    "kaali"
+                ]
             },
             {
                 "concept": "egg",
@@ -1621,7 +1528,8 @@
             },
             {
                 "concept": "aubergine",
-                "label": "munakoiso"
+                "label": "munakoiso",
+                "roots": "muna"
             },
             {
                 "concept": "corn",
@@ -1633,7 +1541,11 @@
                     "singular": "valkosipuli",
                     "plural": "valkosipulit"
                 },
-                "note": "valko- ('white') + sipuli ('onion')"
+                "note": "valko- ('white') + sipuli ('onion')",
+                "roots": [
+                    "valkoinen",
+                    "sipuli"
+                ]
             },
             {
                 "concept": "paprika",
@@ -1652,7 +1564,8 @@
             },
             {
                 "concept": "zucchini",
-                "label": "kesäkurpitsa"
+                "label": "kesäkurpitsa",
+                "roots": "kesä"
             },
             {
                 "concept": "cookie",
@@ -1667,7 +1580,8 @@
             },
             {
                 "concept": "cinnamon roll",
-                "label": "korvapuusti"
+                "label": "korvapuusti",
+                "roots": "korva"
             },
             {
                 "concept": "cream",
@@ -1675,7 +1589,8 @@
             },
             {
                 "concept": "whipped cream",
-                "label": "kermavaahto"
+                "label": "kermavaahto",
+                "roots": "kerma"
             },
             {
                 "concept": "candy",
@@ -1687,7 +1602,11 @@
             },
             {
                 "concept": "chocolate ice cream",
-                "label": "suklaajäätelö"
+                "label": "suklaajäätelö",
+                "roots": [
+                    "suklaa",
+                    "jäätelö"
+                ]
             },
             {
                 "concept": "vanilla",
@@ -1803,7 +1722,11 @@
             },
             {
                 "concept": "i am hungry",
-                "label": "Minulla on nälkä."
+                "label": "Minulla on nälkä.",
+                "roots": [
+                    "minulla on",
+                    "nälkä"
+                ]
             },
             {
                 "concept": "thirsty",
@@ -1811,7 +1734,11 @@
             },
             {
                 "concept": "i am thirsty",
-                "label": "Minulla on jano."
+                "label": "Minulla on jano.",
+                "roots": [
+                    "minulla on",
+                    "jano"
+                ]
             },
             {
                 "concept": "come eat",
@@ -1819,7 +1746,8 @@
             },
             {
                 "concept": "the food is ready",
-                "label": "Ruoka on valmista!"
+                "label": "Ruoka on valmista!",
+                "roots": "ruoka"
             }
         ],
         "nl": [
@@ -1845,7 +1773,8 @@
             },
             {
                 "concept": "food and drink",
-                "label": "het eten en drinken"
+                "label": "het eten en drinken",
+                "roots": "het eten"
             },
             {
                 "concept": "vegetable",
@@ -1862,7 +1791,8 @@
                 "label": {
                     "singular": "de maaltijd",
                     "plural": "de maaltijden"
-                }
+                },
+                "roots": "de tijd"
             },
             {
                 "concept": "breakfast",
@@ -1870,11 +1800,16 @@
             },
             {
                 "concept": "snack",
-                "label": "het tussendoortje"
+                "label": "het tussendoortje",
+                "roots": "tussen"
             },
             {
                 "concept": "dinner",
-                "label": "het avondeten"
+                "label": "het avondeten",
+                "roots": [
+                    "de avond",
+                    "het eten"
+                ]
             },
             {
                 "concept": "evening snack",
@@ -1919,7 +1854,8 @@
             },
             {
                 "concept": "wiener",
-                "label": "de knakworst"
+                "label": "de knakworst",
+                "roots": "de worst"
             },
             {
                 "concept": "shrimp",
@@ -1934,11 +1870,13 @@
             },
             {
                 "concept": "beef",
-                "label": "het rundvlees"
+                "label": "het rundvlees",
+                "roots": "het vlees"
             },
             {
                 "concept": "pork",
-                "label": "het varkensvlees"
+                "label": "het varkensvlees",
+                "roots": "het vlees"
             },
             {
                 "concept": "dressing",
@@ -1964,7 +1902,8 @@
             },
             {
                 "concept": "bread roll",
-                "label": "het broodje"
+                "label": "het broodje",
+                "roots": "het brood"
             },
             {
                 "concept": "butter",
@@ -1983,15 +1922,21 @@
             },
             {
                 "concept": "buttermilk",
-                "label": "de karnemelk"
+                "label": "de karnemelk",
+                "roots": "de melk"
             },
             {
                 "concept": "oat milk",
-                "label": "de havermelk"
+                "label": "de havermelk",
+                "roots": "de melk"
             },
             {
                 "concept": "hot chocolate",
-                "label": "de chocolademelk"
+                "label": "de chocolademelk",
+                "roots": [
+                    "de chocolade",
+                    "de melk"
+                ]
             },
             {
                 "concept": "yoghurt",
@@ -2055,11 +2000,19 @@
             },
             {
                 "concept": "bilberry",
-                "label": "de bosbes"
+                "label": "de bosbes",
+                "roots": [
+                    "het bos",
+                    "de bes"
+                ]
             },
             {
                 "concept": "lingonberry",
-                "label": "de vossenbes"
+                "label": "de vossenbes",
+                "roots": [
+                    "de vos",
+                    "de bes"
+                ]
             },
             {
                 "concept": "spice",
@@ -2087,7 +2040,11 @@
                 "label": {
                     "singular": "de aardappel",
                     "plural": "de aardappels"
-                }
+                },
+                "roots": [
+                    "de aarde",
+                    "de appel"
+                ]
             },
             {
                 "concept": "steak",
@@ -2209,7 +2166,11 @@
                 "label": {
                     "singular": "de boterham",
                     "plural": "de boterhammen"
-                }
+                },
+                "roots": [
+                    "de boter",
+                    "de ham"
+                ]
             },
             {
                 "concept": "nut",
@@ -2227,7 +2188,8 @@
             },
             {
                 "concept": "currant",
-                "label": "de aalbes"
+                "label": "de aalbes",
+                "roots": "de bes"
             },
             {
                 "concept": "cider",
@@ -2243,7 +2205,8 @@
             },
             {
                 "concept": "soft drink",
-                "label": "de frisdrank"
+                "label": "de frisdrank",
+                "roots": "de drank"
             },
             {
                 "concept": "tea",
@@ -2258,7 +2221,11 @@
             },
             {
                 "concept": "cauliflower",
-                "label": "de bloemkool"
+                "label": "de bloemkool",
+                "roots": [
+                    "de bloem",
+                    "de kool"
+                ]
             },
             {
                 "concept": "egg",
@@ -2311,7 +2278,8 @@
             },
             {
                 "concept": "cinnamon roll",
-                "label": "het kaneelbroodje"
+                "label": "het kaneelbroodje",
+                "roots": "het brood"
             },
             {
                 "concept": "cream",
@@ -2319,7 +2287,8 @@
             },
             {
                 "concept": "whipped cream",
-                "label": "de slagroom"
+                "label": "de slagroom",
+                "roots": "de room"
             },
             {
                 "concept": "candy",
@@ -2334,6 +2303,10 @@
                 "label": [
                     "het chocolade-ijsje",
                     "het chocolade-ijs"
+                ],
+                "roots": [
+                    "de chocolade",
+                    "het ijs"
                 ]
             },
             {
@@ -2426,11 +2399,13 @@
             },
             {
                 "concept": "frying pan",
-                "label": "de koekenpan"
+                "label": "de koekenpan",
+                "roots": "de pan"
             },
             {
                 "concept": "frying pan",
-                "label": "de braadpan"
+                "label": "de braadpan",
+                "roots": "de pan"
             },
             {
                 "concept": "napkin",
@@ -2438,7 +2413,8 @@
             },
             {
                 "concept": "breakfast cereal",
-                "label": "de ontbijtgranen"
+                "label": "de ontbijtgranen",
+                "roots": "het ontbijt"
             },
             {
                 "concept": "porridge",
@@ -2450,19 +2426,28 @@
             },
             {
                 "concept": "hungry",
-                "label": "hongerig"
+                "label": "hongerig",
+                "roots": "de honger"
             },
             {
                 "concept": "i am hungry",
-                "label": "Ik heb honger."
+                "label": "Ik heb honger.",
+                "roots": [
+                    "ik heb",
+                    "de honger"
+                ]
             },
             {
                 "concept": "thirsty",
-                "label": "dorst"
+                "label": "de dorst"
             },
             {
                 "concept": "i am thirsty",
-                "label": "Ik heb dorst."
+                "label": "Ik heb dorst.",
+                "roots": [
+                    "ik heb",
+                    "de dorst"
+                ]
             },
             {
                 "concept": "come eat",
@@ -2470,7 +2455,8 @@
             },
             {
                 "concept": "the food is ready",
-                "label": "Het eten is klaar!"
+                "label": "Het eten is klaar!",
+                "roots": "het eten"
             }
         ]
     }

@@ -1,31 +1,39 @@
 {
     "concepts": {
         "300": {
-            "hypernym": "number",
-            "roots": [
-                "3",
-                "100"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "300",
-                "label": "three hundred"
+                "label": "three hundred",
+                "roots": [
+                    "three",
+                    "hundred"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "300",
                 "label": "kolmesataa",
+                "roots": [
+                    "kolme",
+                    "sata"
+                ],
                 "note": "'sataa' is the partitive case of 'sata'"
             }
         ],
         "nl": [
             {
                 "concept": "300",
-                "label": "driehonderd"
+                "label": "driehonderd",
+                "roots": [
+                    "drie",
+                    "honderd"
+                ]
             }
         ]
     }

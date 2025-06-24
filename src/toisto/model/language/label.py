@@ -24,6 +24,7 @@ class Label:
     __slots__ = (
         "__dict__",
         "_notes",
+        "_roots",
         "_tip",
         "_values",
         "colloquial",
@@ -32,11 +33,12 @@ class Label:
 
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
-    def __init__(
+    def __init__(  # noqa: PLR0913
         self,
         language: Language,
         value: str | list[str],
         notes: tuple[str, ...] = (),
+        roots: tuple[str, ...] = (),
         tip: str = "",
         *,
         colloquial: bool = False,
@@ -46,6 +48,7 @@ class Label:
         self.colloquial = colloquial
         self._values = value if isinstance(value, list) else [value]
         self._notes = notes
+        self._roots = roots
         self._tip = tip
 
     def __eq__(self, other: object) -> bool:
@@ -149,6 +152,11 @@ class Label:
     def word_count(self) -> int:
         """Return the label word count."""
         return len(str(self.first_spelling_alternative).split(" "))
+
+    @property
+    def roots(self) -> Labels:
+        """Return the label roots."""
+        return Labels([Label(self.language, root) for root in self._roots])
 
 
 class Labels:  # noqa: PLW1641

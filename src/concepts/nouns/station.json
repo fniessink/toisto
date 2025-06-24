@@ -3,44 +3,21 @@
         "station": {},
         "bus station": {
             "hypernym": "station",
-            "involves": "bus",
-            "roots": [
-                "bus",
-                "station"
-            ]
+            "involves": "bus"
         },
         "train station": {
             "hypernym": "station",
-            "involves": "train",
-            "roots": [
-                "train",
-                "station"
-            ]
+            "involves": "train"
         },
         "metro station": {
             "hypernym": "station",
-            "involves": "metro",
-            "roots": [
-                "metro",
-                "station"
-            ]
+            "involves": "metro"
         },
         "terminal station": {
-            "hypernym": "train station",
-            "roots": {
-                "fi": [
-                    "head (main part)",
-                    "station"
-                ],
-                "nl": [
-                    "end",
-                    "station"
-                ]
-            }
+            "hypernym": "train station"
         },
         "gas station": {
-            "hypernym": "station",
-            "roots": "station"
+            "hypernym": "station"
         }
     },
     "labels": {
@@ -54,26 +31,40 @@
             },
             {
                 "concept": "bus station",
-                "label": "bus station"
+                "label": "bus station",
+                "roots": [
+                    "bus",
+                    "station"
+                ]
             },
             {
                 "concept": "train station",
-                "label": "train station"
+                "label": "train station",
+                "roots": [
+                    "train",
+                    "station"
+                ]
             },
             {
                 "concept": "metro station",
-                "label": "metro station"
+                "label": "metro station",
+                "roots": [
+                    "metro",
+                    "station"
+                ]
             },
             {
                 "concept": "terminal station",
-                "label": [
-                    "terminal station",
-                    "terminal"
+                "label": "terminal station",
+                "roots": [
+                    "terminal",
+                    "station"
                 ]
             },
             {
                 "concept": "gas station",
-                "label": "gas station"
+                "label": "gas station",
+                "roots": "station"
             }
         ],
         "fi": [
@@ -86,23 +77,37 @@
             },
             {
                 "concept": "bus station",
-                "label": "linja-autoasema"
+                "label": "linja-autoasema",
+                "roots": [
+                    "linja-auto",
+                    "asema"
+                ]
             },
             {
                 "concept": "train station",
-                "label": "rautatieasema"
+                "label": "rautatieasema",
+                "roots": "asema"
             },
             {
                 "concept": "metro station",
-                "label": "metroasema"
+                "label": "metroasema",
+                "roots": [
+                    "metro",
+                    "asema"
+                ]
             },
             {
                 "concept": "terminal station",
-                "label": "pääteasema"
+                "label": "pääteasema",
+                "roots": [
+                    "pääte",
+                    "asema"
+                ]
             },
             {
                 "concept": "gas station",
-                "label": "huoltoasema"
+                "label": "huoltoasema",
+                "roots": "asema"
             }
         ],
         "nl": [
@@ -115,23 +120,40 @@
             },
             {
                 "concept": "bus station",
-                "label": "het busstation"
+                "label": "het busstation",
+                "roots": [
+                    "de bus",
+                    "het station"
+                ]
             },
             {
                 "concept": "train station",
-                "label": "het treinstation"
+                "label": "het treinstation",
+                "roots": [
+                    "de trein",
+                    "het station"
+                ]
             },
             {
                 "concept": "metro station",
-                "label": "het metrostation"
+                "label": "het metrostation",
+                "roots": [
+                    "de metro",
+                    "het station"
+                ]
             },
             {
                 "concept": "terminal station",
-                "label": "het eindstation"
+                "label": "het eindstation",
+                "roots": [
+                    "het einde",
+                    "het station"
+                ]
             },
             {
                 "concept": "gas station",
-                "label": "het tankstation"
+                "label": "het tankstation",
+                "roots": "het station"
             }
         ]
     }

@@ -3,6 +3,9 @@
         "finger": {
             "holonym": "hand"
         },
+        "forefinger": {
+            "hypernym": "finger"
+        },
         "middle finger": {
             "hypernym": "finger"
         },
@@ -23,22 +26,33 @@
                 }
             },
             {
+                "concept": "forefinger",
+                "label": "forefinger",
+                "roots": "finger"
+            },
+            {
                 "concept": "middle finger",
-                "label": "middle finger"
+                "label": "middle finger",
+                "roots": "finger"
             },
             {
                 "concept": "ring finger",
                 "label": {
                     "singular": "ring finger",
                     "plural": "ring fingers"
-                }
+                },
+                "roots": "finger"
             },
             {
                 "concept": "little finger",
                 "label": {
                     "singular": "little finger",
                     "plural": "little fingers"
-                }
+                },
+                "roots": [
+                    "little",
+                    "finger"
+                ]
             }
         ],
         "fi": [
@@ -50,8 +64,14 @@
                 }
             },
             {
+                "concept": "forefinger",
+                "label": "etusormi",
+                "roots": "sormi"
+            },
+            {
                 "concept": "middle finger",
-                "label": "keskisormi"
+                "label": "keskisormi",
+                "roots": "sormi"
             },
             {
                 "concept": "ring finger",
@@ -65,7 +85,8 @@
                 "label": {
                     "singular": "pikkusormi",
                     "plural": "pikkusormet"
-                }
+                },
+                "roots": "sormi"
             }
         ],
         "nl": [
@@ -77,15 +98,22 @@
                 }
             },
             {
+                "concept": "forefinger",
+                "label": "de wijsvinger",
+                "roots": "de vinger"
+            },
+            {
                 "concept": "middle finger",
-                "label": "de middelvinger"
+                "label": "de middelvinger",
+                "roots": "de vinger"
             },
             {
                 "concept": "ring finger",
                 "label": {
                     "singular": "de ringvinger",
                     "plural": "de ringvingers"
-                }
+                },
+                "roots": "de vinger"
             },
             {
                 "concept": "little finger",

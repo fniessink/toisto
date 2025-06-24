@@ -27,7 +27,8 @@
             },
             {
                 "concept": "gymnasium",
-                "label": "liikuntasali"
+                "label": "liikuntasali",
+                "roots": "sali"
             }
         ],
         "nl": [
@@ -43,7 +44,11 @@
                 "label": {
                     "singular": "de sportschool",
                     "plural": "de sportscholen"
-                }
+                },
+                "roots": [
+                    "de sport",
+                    "de school"
+                ]
             },
             {
                 "concept": "gym",

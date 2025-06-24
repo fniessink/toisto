@@ -6,23 +6,9 @@
         },
         "Milky Way Galaxy": {
             "example": "The Milky Way Galaxy is a galaxy",
-            "hypernym": "galaxy",
-            "roots": {
-                "en": [
-                    "milk",
-                    "galaxy"
-                ],
-                "nl": "milk",
-                "fi": "bird"
-            }
+            "hypernym": "galaxy"
         },
-        "The Milky Way Galaxy is a galaxy": {
-            "roots": [
-                "Milky Way Galaxy",
-                "to be",
-                "galaxy"
-            ]
-        }
+        "The Milky Way Galaxy is a galaxy": {}
     },
     "labels": {
         "en": [
@@ -35,11 +21,16 @@
             },
             {
                 "concept": "Milky Way Galaxy",
-                "label": "Milky Way Galaxy"
+                "label": "Milky Way Galaxy",
+                "roots": [
+                    "milk",
+                    "galaxy"
+                ]
             },
             {
                 "concept": "The Milky Way Galaxy is a galaxy",
-                "label": "The Milky Way Galaxy is a galaxy."
+                "label": "The Milky Way Galaxy is a galaxy.",
+                "roots": "Milky Way Galaxy"
             }
         ],
         "fi": [
@@ -52,11 +43,16 @@
             },
             {
                 "concept": "Milky Way Galaxy",
-                "label": "linnunrata"
+                "label": "linnunrata",
+                "roots": "lintu"
             },
             {
                 "concept": "The Milky Way Galaxy is a galaxy",
-                "label": "Linnunrata on galaksi."
+                "label": "Linnunrata on galaksi.",
+                "roots": [
+                    "linnunrata",
+                    "galaksi"
+                ]
             }
         ],
         "nl": [
@@ -65,15 +61,24 @@
                 "label": {
                     "singular": "het sterrenstelsel",
                     "plural": "de sterrenstelsels"
-                }
+                },
+                "roots": "de ster"
             },
             {
                 "concept": "Milky Way Galaxy",
-                "label": "de Melkweg"
+                "label": "de Melkweg",
+                "roots": [
+                    "de melk",
+                    "de weg"
+                ]
             },
             {
                 "concept": "The Milky Way Galaxy is a galaxy",
-                "label": "De Melkweg is een sterrenstelsel."
+                "label": "De Melkweg is een sterrenstelsel.",
+                "roots": [
+                    "de Melkweg",
+                    "het sterrenstelsel"
+                ]
             }
         ]
     }

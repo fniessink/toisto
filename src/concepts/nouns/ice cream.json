@@ -1,29 +1,9 @@
 {
     "concepts": {
         "ice cream": {
-            "hypernym": "food",
-            "roots": {
-                "en": [
-                    "ice",
-                    "cream"
-                ],
-                "fi": "ice",
-                "nl": "ice"
-            }
+            "hypernym": "food"
         },
-        "ice cream kiosk": {
-            "roots": {
-                "en": [
-                    "kiosk",
-                    "ice cream"
-                ],
-                "fi": [
-                    "kiosk",
-                    "ice cream"
-                ],
-                "nl": "ice cream"
-            }
-        }
+        "ice cream kiosk": {}
     },
     "labels": {
         "en": [
@@ -32,11 +12,19 @@
                 "label": {
                     "singular": "ice cream",
                     "plural": "ice creams"
-                }
+                },
+                "roots": [
+                    "ice",
+                    "cream"
+                ]
             },
             {
                 "concept": "ice cream kiosk",
-                "label": "ice cream kiosk"
+                "label": "ice cream kiosk",
+                "roots": [
+                    "ice cream",
+                    "kiosk"
+                ]
             }
         ],
         "fi": [
@@ -57,7 +45,11 @@
             },
             {
                 "concept": "ice cream kiosk",
-                "label": "jäätelökioski"
+                "label": "jäätelökioski",
+                "roots": [
+                    "jäätelö",
+                    "kioski"
+                ]
             }
         ],
         "nl": [
@@ -73,7 +65,8 @@
             },
             {
                 "concept": "ice cream kiosk",
-                "label": "de ijskraam"
+                "label": "de ijskraam",
+                "roots": "het ijs"
             }
         ]
     }

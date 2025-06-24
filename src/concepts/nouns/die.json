@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "die": {
-            "roots": {
-                "nl": "stone"
-            }
-        }
+        "die": {}
     },
     "labels": {
         "en": [
@@ -22,7 +18,8 @@
         "nl": [
             {
                 "concept": "die",
-                "label": "de dobbelsteen"
+                "label": "de dobbelsteen",
+                "roots": "de steen"
             }
         ]
     }

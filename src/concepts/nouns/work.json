@@ -3,54 +3,18 @@
         "work": {},
         "workday": {
             "hypernym": "day",
-            "roots": [
-                "work",
-                "day"
-            ]
+            "involves": "work"
         },
         "workplace": {
             "hypernym": "place",
-            "involves": "work",
-            "roots": {
-                "en": [
-                    "work",
-                    "place"
-                ],
-                "fi": "work",
-                "nl": [
-                    "work",
-                    "place"
-                ]
-            }
+            "involves": "work"
         },
         "working time": {
             "involves": "work",
-            "roots": {
-                "en": [
-                    "work",
-                    "time",
-                    "hour"
-                ],
-                "fi": [
-                    "work",
-                    "time"
-                ],
-                "nl": [
-                    "work",
-                    "time"
-                ]
-            }
+            "hypernym": "time"
         },
         "remote work": {
-            "hypernym": "work",
-            "roots": {
-                "en": "work",
-                "fi": "work",
-                "nl": [
-                    "home",
-                    "work"
-                ]
-            }
+            "hypernym": "work"
         }
     },
     "labels": {
@@ -61,23 +25,40 @@
             },
             {
                 "concept": "workday",
-                "label": "workday"
+                "label": "workday",
+                "roots": [
+                    "work",
+                    "day"
+                ]
             },
             {
                 "concept": "workplace",
-                "label": "workplace"
+                "label": "workplace",
+                "roots": [
+                    "work",
+                    "place"
+                ]
             },
             {
                 "concept": "working time",
-                "label": "working time"
+                "label": "working time",
+                "roots": [
+                    "work",
+                    "time"
+                ]
             },
             {
                 "concept": "working time",
-                "label": "working hours"
+                "label": "working hours",
+                "roots": [
+                    "work",
+                    "hours"
+                ]
             },
             {
                 "concept": "remote work",
-                "label": "remote work"
+                "label": "remote work",
+                "roots": "work"
             }
         ],
         "fi": [
@@ -91,19 +72,29 @@
             },
             {
                 "concept": "workday",
-                "label": "työpäivä"
+                "label": "työpäivä",
+                "roots": [
+                    "työ",
+                    "päivä"
+                ]
             },
             {
                 "concept": "workplace",
-                "label": "työpiste"
+                "label": "työpiste",
+                "roots": "työ"
             },
             {
                 "concept": "working time",
-                "label": "työaika"
+                "label": "työaika",
+                "roots": [
+                    "työ",
+                    "aika"
+                ]
             },
             {
                 "concept": "remote work",
-                "label": "etätyö"
+                "label": "etätyö",
+                "roots": "työ"
             }
         ],
         "nl": [
@@ -117,19 +108,32 @@
             },
             {
                 "concept": "workday",
-                "label": "de werkdag"
+                "label": "de werkdag",
+                "roots": [
+                    "het werk",
+                    "de dag"
+                ]
             },
             {
                 "concept": "workplace",
-                "label": "de werkplek"
+                "label": "de werkplek",
+                "roots": "het werk"
             },
             {
                 "concept": "working time",
-                "label": "de werktijd"
+                "label": "de werktijd",
+                "roots": [
+                    "het werk",
+                    "de tijd"
+                ]
             },
             {
                 "concept": "remote work",
-                "label": "het thuiswerk"
+                "label": "het thuiswerk",
+                "roots": [
+                    "het thuis",
+                    "het werk"
+                ]
             }
         ]
     }

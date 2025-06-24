@@ -3,18 +3,7 @@
         "bed": {},
         "double bed": {
             "example": "they are looking for a double bed",
-            "hypernym": "bed",
-            "roots": {
-                "en": "bed",
-                "fi": [
-                    "pair",
-                    "bed"
-                ],
-                "nl": [
-                    "2",
-                    "bed"
-                ]
-            }
+            "hypernym": "bed"
         },
         "going to bed": {},
         "bedspread": {}
@@ -30,15 +19,18 @@
             },
             {
                 "concept": "double bed",
-                "label": "double bed"
+                "label": "double bed",
+                "roots": "bed"
             },
             {
                 "concept": "going to bed",
-                "label": "going to bed"
+                "label": "going to bed",
+                "roots": "bed"
             },
             {
                 "concept": "bedspread",
-                "label": "bedspread"
+                "label": "bedspread",
+                "roots": "bed"
             }
         ],
         "fi": [
@@ -51,7 +43,11 @@
             },
             {
                 "concept": "double bed",
-                "label": "parisänky"
+                "label": "parisänky",
+                "roots": [
+                    "pari",
+                    "sänky"
+                ]
             },
             {
                 "concept": "going to bed",
@@ -59,7 +55,8 @@
             },
             {
                 "concept": "bedspread",
-                "label": "päiväpeitto"
+                "label": "päiväpeitto",
+                "roots": "päivä"
             }
         ],
         "nl": [
@@ -72,11 +69,16 @@
             },
             {
                 "concept": "double bed",
-                "label": "het tweepersoonsbed"
+                "label": "het tweepersoonsbed",
+                "roots": "het bed"
             },
             {
                 "concept": "going to bed",
-                "label": "het gaan slapen"
+                "label": "het gaan slapen",
+                "roots": [
+                    "gaan",
+                    "slapen"
+                ]
             },
             {
                 "concept": "bedspread",

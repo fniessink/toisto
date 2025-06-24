@@ -2,34 +2,37 @@
     "concepts": {
         "football": {
             "example": "I play football",
-            "hypernym": "team sport",
-            "roots": [
-                "ball",
-                "foot"
-            ]
+            "hypernym": "team sport"
         },
-        "I play football": {
-            "roots": [
-                "to play a sport",
-                "football"
-            ]
-        }
+        "I play football": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "football",
-                "label": "football"
+                "label": "football",
+                "roots": [
+                    "foot",
+                    "ball"
+                ]
             },
             {
                 "concept": "I play football",
-                "label": "I play football."
+                "label": "I play football.",
+                "roots": [
+                    "I play",
+                    "football"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "football",
-                "label": "jalkapallo"
+                "label": "jalkapallo",
+                "roots": [
+                    "jalka",
+                    "pallo"
+                ]
             },
             {
                 "concept": "football",
@@ -38,7 +41,11 @@
             },
             {
                 "concept": "I play football",
-                "label": "Minä pelaan jalkapalloa."
+                "label": "Minä pelaan jalkapalloa.",
+                "roots": [
+                    "minä pelaan",
+                    "jalkapallo"
+                ]
             },
             {
                 "concept": "I play football",
@@ -49,11 +56,19 @@
         "nl": [
             {
                 "concept": "football",
-                "label": "de voetbal"
+                "label": "het voetbal",
+                "roots": [
+                    "de voet",
+                    "de bal"
+                ]
             },
             {
                 "concept": "I play football",
-                "label": "Ik speel voetbal."
+                "label": "Ik speel voetbal.",
+                "roots": [
+                    "ik speel",
+                    "het voetbal"
+                ]
             },
             {
                 "concept": "I play football",

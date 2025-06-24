@@ -1,11 +1,7 @@
 {
     "concepts": {
-        "possessive pronoun cat": {
-            "roots": "cat"
-        },
-        "possessive pronoun house": {
-            "roots": "house"
-        }
+        "possessive pronoun cat": {},
+        "possessive pronoun house": {}
     },
     "labels": {
         "en": [
@@ -42,7 +38,8 @@
                             "third person": "their cats"
                         }
                     }
-                }
+                },
+                "roots": "cat"
             },
             {
                 "concept": "possessive pronoun house",
@@ -77,7 +74,8 @@
                             "third person": "their houses"
                         }
                     }
-                }
+                },
+                "roots": "house"
             }
         ],
         "fi": [
@@ -108,7 +106,8 @@
                             "third person": "heidän kissansa"
                         }
                     }
-                }
+                },
+                "roots": "kissa"
             },
             {
                 "concept": "possessive pronoun house",
@@ -137,7 +136,8 @@
                             "third person": "heidän talonsa"
                         }
                     }
-                }
+                },
+                "roots": "talo"
             }
         ],
         "nl": [
@@ -174,7 +174,8 @@
                             "third person": "hun katten"
                         }
                     }
-                }
+                },
+                "roots": "de kat"
             },
             {
                 "concept": "possessive pronoun house",
@@ -209,7 +210,8 @@
                             "third person": "hun huizen"
                         }
                     }
-                }
+                },
+                "roots": "het huis"
             }
         ]
     }

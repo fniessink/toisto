@@ -2,8 +2,7 @@
     "concepts": {
         "protection": {},
         "basic protection": {
-            "hypernym": "protection",
-            "roots": "protection"
+            "hypernym": "protection"
         }
     },
     "labels": {
@@ -14,7 +13,8 @@
             },
             {
                 "concept": "basic protection",
-                "label": "basic protection"
+                "label": "basic protection",
+                "roots": "protection"
             }
         ],
         "fi": [
@@ -24,7 +24,8 @@
             },
             {
                 "concept": "basic protection",
-                "label": "perusturva"
+                "label": "perusturva",
+                "roots": "turva"
             }
         ],
         "nl": [
@@ -34,7 +35,8 @@
             },
             {
                 "concept": "basic protection",
-                "label": "de basisbescherming"
+                "label": "de basisbescherming",
+                "roots": "de bescherming"
             }
         ]
     }

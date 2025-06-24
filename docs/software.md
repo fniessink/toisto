@@ -71,7 +71,7 @@ Concepts are represented in the JSON files as JSON objects. The key is an identi
 Labels are a objects with language identifiers as keys and list of labels as values. Currently, the built-in JSON files contain English with identifier `en`, Finnish with identifier `fi`, and Dutch with identifier `nl`.
 
 Each label always has at least two keys: `concept` and `label`:
-- The `concept` contains one identifier of the concept that the label describes or a list of concept identifiers.
+- The `concept` contains either one identifier of the concept that the label describes or a list of concept identifiers.
 - The `label` contains the label itself. It is either a string or an object containing different grammatical forms of the label.
 
 If you add new languages to the built-in files, or create your own JSON files, be sure to check that the language identifiers used are listed in the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry).
@@ -236,6 +236,74 @@ It's also possible to add notes. The notes will be shown after the user has answ
 }
 ```
 
+### Compound labels
+
+When a label is a compound of one or more other labels, this can be specified with the `roots` relation. Toisto will only quiz a concept with *compound* labels when all concepts with the *root* labels (including roots of roots) have been quizzed. The `roots` relationship can be specified by adding a `roots` key to the label with a list of concept identifiers as value:
+
+```json
+{
+    "concepts": {
+        "day": {},
+        "week": {},
+        "days of the week": {}
+    },
+    "labels": [
+        "en": [
+            {
+                "concept": "day",
+                "label": {
+                    "singular": "day",
+                    "plural": "days"
+                }
+            },
+            {
+                "concept": "week",
+                "label": {
+                    "singular": "week",
+                    "plural": "weeks"
+                }
+            },
+            {
+                "concept": "days of the week",
+                "label": "days of the week"
+                "roots": [
+                    "days",
+                    "week"
+                ],
+            }
+        ],
+        "nl": [
+            {
+                "concept": "day",
+                "label": {
+                    "singular": "de dag",
+                    "plural": "de dagen"
+                }
+            },
+            {
+                "concept": "week",
+                "label": {
+                    "singular": "de week",
+                    "plural": "de weken"
+                }
+            },
+            {
+                "concept": "days of the week",
+                "label": "de dagen van de week"
+                "roots": [
+                    "de dagen"
+                    "de week"
+                ],
+            }
+        ]
+    ]
+}
+```
+
+The roots can be any grammatical form of the root label, but should be the first spelling alternative of a label if there are multiple. Also, the roots should be labels of different concepts.
+
+If a concept has exactly one root, for example because not all roots have been included in the JSON files yet, the `roots` value can be a string instead of a list of concept identifiers.
+
 ### Concepts with multiple labels
 
 Add multiple labels if there are multiple ways to express the concept in a language, as with "Mikä päivä tänään on?" and "Mikä päivä on tänään?" below. Toisto will quiz the user with each synonym, so in the example below users practicing Finnish will be quizzed about both Finnish sentences.
@@ -350,29 +418,29 @@ If the homographs have different hypernyms, Toisto will provide a hint based on 
 ```json
 {
     "concepts": {
-        "bank (finance)": {
+        "bank": {
             "hypernym": "financial institution",
         },
-        "bank (furniture)": {
+        "couch": {
             "hypernym": "furniture",
         }
     },
     "labels": {
         "en": [
             {
-                "concept": "bank (finance)",
+                "concept": "bank",
                 "label": "bank"
             },
             {
-                "concept": "bank (furniture)",
+                "concept": "couch",
                 "label": "couch"
             }
         ],
         "nl": [
             {
                 "concept": [
-                    "bank (finance)",
-                    "bank (furniture)",
+                    "bank",
+                    "couch",
                 ],
                 "label": "de bank"
             }
@@ -594,7 +662,7 @@ In the JSON file this looks as follows:
 
 ### Grammatical number
 
-When concepts can have both singular and plural forms, such as with most nouns, these are represented in the JSON as mappings with `singular` and `plural` as keys and concepts as values.
+When concepts can have both singular and plural forms, such as with most nouns, these are represented in the JSON as mappings with `singular` and `plural` as keys and labels as values.
 
 The format of the JSON files is as follows:
 
@@ -1163,108 +1231,6 @@ Abbreviations can be specified as follows:
 
 ## Concept relationships
 
-### Compound concepts
-
-When a concept is a compound of one or more other concepts, this can be specified with the `roots` relation. Toisto will only quiz a *compound* concept when all *root* concepts (including roots of roots) have been quizzed. The `roots` relationship can be specified by adding a `roots` key to the concept with a list of concept identifiers as value:
-
-```json
-{
-    "concepts": {
-        "day": {},
-        "week": {},
-        "days of the week": {
-            "roots": [
-                "day",
-                "week"
-            ],
-        }
-    },
-    "labels": [
-        "en": [
-            {
-                "concept": "day",
-                "label": {
-                    "singular": "day",
-                    "plural": "days"
-                }
-            },
-            {
-                "concept": "week",
-                "label": {
-                    "singular": "week",
-                    "plural": "weeks"
-                }
-            },
-            {
-                "concept": "days of the week",
-                "label": "days of the week"
-            }
-        ],
-        "nl": [
-            {
-                "concept": "day",
-                "label": {
-                    "singular": "de dag",
-                    "plural": "de dagen"
-                }
-            },
-            {
-                "concept": "week",
-                "label": {
-                    "singular": "de week",
-                    "plural": "de weken"
-                }
-            },
-            {
-                "concept": "days of the week",
-                "label": "de dagen van de week"
-            }
-        ]
-    ]
-}
-```
-
-If a concept has exactly one root, for example because not all roots have been included in the JSON files yet, the `roots` value can be a string instead of a list of concept identifiers.
-
-If the root concepts differ per language, an object with languages as keys can be used:
-
-```json
-{
-    "concepts": {
-        "shirt": {},
-        "sweater": {
-            "roots": {
-                "fi": "shirt"
-            }
-        }
-    },
-    "labels": {
-        "en": [
-            {
-                "concept": "shirt",
-                "label": "shirt"
-            },
-            {
-                "concept": "sweater",
-                "label": "sweater"
-            }
-        ],
-        "fi": [
-            {
-                "concept": "shirt",
-                "label": "paita"
-            },
-            {
-                "concept": "sweater",
-                "label": "neulepaita"
-            }
-        ]
-    }
-}
-```
-
-If the plural of a compound word is easily derived from the plural of the last root, built-in JSON files may omit the plural of the compound word.
-
 ### Antonyms
 
 When one concept is an antonym (opposite) of another concept, this can be specified with the `antonym` relation. Toisto will add quizzes to ask users for the antonym of concepts in their target language.
@@ -1668,7 +1634,7 @@ If a user knows the correct answer the first time a quiz is presented, the quiz 
 
 ## Progress savefile
 
-When the program is stopped, progress is saved in a file named `.toisto-progress-{target language}.json` in the user's home folder, for example `.toisto-progress-fi.json`. So each target language gets its own progress file.
+When the program is stopped, progress is saved in a file named `.toisto-{device specific id}-progress-{target language}.json` in the user's home folder, for example `.toisto-c5323926-33e2-1eef-a453-2922a2aed6c5-progress-fi.json`. So each target language gets its own progress file.
 
 Each entry in the file is the progress of one specific quiz. The key denotes the quiz, the value contains information about the user's retention of the quiz. This looks as follows:
 

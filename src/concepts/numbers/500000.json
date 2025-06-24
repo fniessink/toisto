@@ -1,32 +1,42 @@
 {
     "concepts": {
         "500000": {
-            "hypernym": "number",
-            "roots": [
-                "5",
-                "100",
-                "1000"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "500000",
-                "label": "five hunderd thousand"
+                "label": "five hunderd thousand",
+                "roots": [
+                    "five",
+                    "hundred",
+                    "thousand"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "500000",
                 "label": "viisisataatuhatta",
+                "roots": [
+                    "viisi",
+                    "sata",
+                    "tuhat"
+                ],
                 "note": "'sataa' and 'tuhatta' are the partitive case of 'sata' and 'tuhat' respectively"
             }
         ],
         "nl": [
             {
                 "concept": "500000",
-                "label": "vijfhonderdduizend"
+                "label": "vijfhonderdduizend",
+                "roots": [
+                    "vijf",
+                    "honderd",
+                    "duizend"
+                ]
             }
         ]
     }

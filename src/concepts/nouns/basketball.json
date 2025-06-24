@@ -2,31 +2,31 @@
     "concepts": {
         "basketball": {
             "example": "I play basketball",
-            "hypernym": "team sport",
-            "roots": "ball"
+            "hypernym": "team sport"
         },
-        "I play basketball": {
-            "roots": [
-                "to play a sport",
-                "basketball"
-            ]
-        }
+        "I play basketball": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "basketball",
-                "label": "basketball"
+                "label": "basketball",
+                "roots": "ball"
             },
             {
                 "concept": "I play basketball",
-                "label": "I play basketball."
+                "label": "I play basketball.",
+                "roots": [
+                    "I play",
+                    "basketball"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "basketball",
-                "label": "koripallo"
+                "label": "koripallo",
+                "roots": "pallo"
             },
             {
                 "concept": "basketball",
@@ -35,22 +35,32 @@
             },
             {
                 "concept": "I play basketball",
-                "label": "Minä pelaan koripalloa."
+                "label": "Minä pelaan koripalloa.",
+                "roots": [
+                    "minä pelaan",
+                    "koripallo"
+                ]
             },
             {
                 "concept": "I play basketball",
                 "label": "Mä pelaan korista.",
-                "colloquial": true
+                "colloquial": true,
+                "roots": "koris"
             }
         ],
         "nl": [
             {
                 "concept": "basketball",
-                "label": "het basketbal"
+                "label": "het basketbal",
+                "roots": "de bal"
             },
             {
                 "concept": "I play basketball",
-                "label": "Ik speel basketbal."
+                "label": "Ik speel basketbal.",
+                "roots": [
+                    "ik speel",
+                    "het basketbal"
+                ]
             }
         ]
     }

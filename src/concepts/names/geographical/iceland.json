@@ -1,15 +1,11 @@
 {
     "concepts": {
         "iceland": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            }
+            "hypernym": "country"
         },
         "icelandic (nationality)": {
             "hypernym": "nationality",
-            "involves": "iceland",
-            "roots": "iceland"
+            "involves": "iceland"
         }
     },
     "labels": {
@@ -20,7 +16,8 @@
             },
             {
                 "concept": "icelandic (nationality)",
-                "label": "Icelandic"
+                "label": "Icelandic",
+                "roots": "Iceland"
             }
         ],
         "fi": [
@@ -30,17 +27,23 @@
             },
             {
                 "concept": "icelandic (nationality)",
-                "label": "islantilainen"
+                "label": "islantilainen",
+                "roots": "Islanti"
             }
         ],
         "nl": [
             {
                 "concept": "iceland",
-                "label": "IJsland"
+                "label": "IJsland",
+                "roots": [
+                    "het ijs",
+                    "het land"
+                ]
             },
             {
                 "concept": "icelandic (nationality)",
-                "label": "IJslands"
+                "label": "IJslands",
+                "roots": "IJsland"
             }
         ]
     }

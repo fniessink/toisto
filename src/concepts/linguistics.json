@@ -1,62 +1,31 @@
 {
     "concepts": {
-        "grammar": {
-            "roots": {
-                "fi": "language"
-            }
-        },
+        "grammar": {},
         "word": {},
-        "word order": {
-            "roots": "word"
-        },
-        "vocabulary": {
-            "roots": {
-                "fi": "word",
-                "nl": "word"
-            }
-        },
+        "word order": {},
+        "vocabulary": {},
         "compound word": {
-            "hypernym": "word",
-            "roots": "word"
+            "hypernym": "word"
         },
         "sentence": {},
-        "consonant": {
-            "roots": {
-                "nl": "vowel"
-            }
-        },
+        "consonant": {},
         "question word": {
-            "hypernym": "word",
-            "roots": [
-                "question",
-                "word"
-            ]
+            "hypernym": "word"
         },
         "subject": {},
         "infinitive": {},
         "adjective": {},
         "pronoun": {},
         "personal pronoun": {
-            "hypernym": "pronoun",
-            "roots": [
-                "pronoun"
-            ]
+            "hypernym": "pronoun"
         },
         "ending": {},
         "personal ending": {
-            "hypernym": "ending",
-            "roots": {
-                "en": "ending",
-                "nl": "ending"
-            }
+            "hypernym": "ending"
         },
         "intonation": {},
         "genitive": {},
-        "singular": {
-            "roots": {
-                "fi": "1"
-            }
-        },
+        "singular": {},
         "imperfect": {}
     },
     "labels": {
@@ -74,7 +43,8 @@
             },
             {
                 "concept": "word order",
-                "label": "word order"
+                "label": "word order",
+                "roots": "word"
             },
             {
                 "concept": "vocabulary",
@@ -82,7 +52,8 @@
             },
             {
                 "concept": "compound word",
-                "label": "compound word"
+                "label": "compound word",
+                "roots": "word"
             },
             {
                 "concept": "sentence",
@@ -100,7 +71,11 @@
             },
             {
                 "concept": "question word",
-                "label": "question word"
+                "label": "question word",
+                "roots": [
+                    "question",
+                    "word"
+                ]
             },
             {
                 "concept": "subject",
@@ -123,7 +98,8 @@
             },
             {
                 "concept": "personal pronoun",
-                "label": "personal pronoun"
+                "label": "personal pronoun",
+                "roots": "pronoun"
             },
             {
                 "concept": "ending",
@@ -131,7 +107,8 @@
             },
             {
                 "concept": "personal ending",
-                "label": "personal ending"
+                "label": "personal ending",
+                "roots": "ending"
             },
             {
                 "concept": "intonation",
@@ -153,7 +130,8 @@
         "fi": [
             {
                 "concept": "grammar",
-                "label": "kielioppi"
+                "label": "kielioppi",
+                "roots": "kieli"
             },
             {
                 "concept": "word",
@@ -170,15 +148,18 @@
             },
             {
                 "concept": "word order",
-                "label": "sanajärjestys"
+                "label": "sanajärjestys",
+                "roots": "sana"
             },
             {
                 "concept": "vocabulary",
-                "label": "sanasto"
+                "label": "sanasto",
+                "roots": "sana"
             },
             {
                 "concept": "compound word",
-                "label": "yhdyssana"
+                "label": "yhdyssana",
+                "roots": "sana"
             },
             {
                 "concept": "sentence",
@@ -196,7 +177,11 @@
             },
             {
                 "concept": "question word",
-                "label": "kysymyssana"
+                "label": "kysymyssana",
+                "roots": [
+                    "kysymys",
+                    "sana"
+                ]
             },
             {
                 "concept": "subject",
@@ -219,7 +204,8 @@
             },
             {
                 "concept": "personal pronoun",
-                "label": "persoonapronomini"
+                "label": "persoonapronomini",
+                "roots": "pronomini"
             },
             {
                 "concept": "ending",
@@ -239,7 +225,8 @@
             },
             {
                 "concept": "singular",
-                "label": "yksikkö"
+                "label": "yksikkö",
+                "roots": "yksi"
             },
             {
                 "concept": "imperfect",
@@ -266,18 +253,21 @@
             },
             {
                 "concept": "word order",
-                "label": "de woordvolgorde"
+                "label": "de woordvolgorde",
+                "roots": "het woord"
             },
             {
                 "concept": "vocabulary",
-                "label": "de woordenschat"
+                "label": "de woordenschat",
+                "roots": "het woord"
             },
             {
                 "concept": "compound word",
                 "label": [
                     "het samengestelde woord",
                     "samengesteld woord"
-                ]
+                ],
+                "roots": "het woord"
             },
             {
                 "concept": "sentence",
@@ -291,11 +281,16 @@
                 "label": {
                     "singular": "de medeklinker",
                     "plural": "de medeklinkers"
-                }
+                },
+                "roots": "de klinker"
             },
             {
                 "concept": "question word",
-                "label": "het vraagwoord"
+                "label": "het vraagwoord",
+                "roots": [
+                    "de vraag",
+                    "het woord"
+                ]
             },
             {
                 "concept": "subject",
@@ -318,7 +313,8 @@
             },
             {
                 "concept": "personal pronoun",
-                "label": "het persoonlijk voornaamwoord"
+                "label": "het persoonlijk voornaamwoord",
+                "roots": "het voornaamwoord"
             },
             {
                 "concept": "ending",
@@ -326,7 +322,8 @@
             },
             {
                 "concept": "personal ending",
-                "label": "de persoonsuitgang"
+                "label": "de persoonsuitgang",
+                "roots": "de uitgang"
             },
             {
                 "concept": "intonation",

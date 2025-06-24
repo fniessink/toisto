@@ -15,13 +15,15 @@
         "fi": [
             {
                 "concept": "leaving homewards",
-                "label": "kotiinlähtö"
+                "label": "kotiinlähtö",
+                "roots": "koti"
             }
         ],
         "nl": [
             {
                 "concept": "leaving homewards",
-                "label": "het vertrek naar huis"
+                "label": "het vertrek naar huis",
+                "roots": "het huis"
             }
         ]
     }

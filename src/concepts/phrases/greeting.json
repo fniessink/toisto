@@ -1,60 +1,22 @@
 {
     "concepts": {
         "a pleasure to meet you": {
-            "hypernym": "greeting",
-            "roots": {
-                "en": "to meet (someone new)",
-                "fi": [
-                    "funny",
-                    "to meet (someone new)"
-                ],
-                "nl": "to meet (someone new)"
-            }
+            "hypernym": "greeting"
         },
         "good afternoon": {
-            "hypernym": "greeting",
-            "roots": {
-                "en": [
-                    "good",
-                    "afternoon"
-                ],
-                "fi": [
-                    "good",
-                    "day"
-                ],
-                "nl": [
-                    "good",
-                    "afternoon"
-                ]
-            }
+            "hypernym": "greeting"
         },
         "good day": {
-            "hypernym": "greeting",
-            "roots": [
-                "good",
-                "day"
-            ]
+            "hypernym": "greeting"
         },
         "good evening": {
-            "hypernym": "greeting",
-            "roots": [
-                "good",
-                "evening"
-            ]
+            "hypernym": "greeting"
         },
         "good morning": {
-            "hypernym": "greeting",
-            "roots": [
-                "good",
-                "morning"
-            ]
+            "hypernym": "greeting"
         },
         "good night": {
-            "hypernym": "greeting",
-            "roots": [
-                "good",
-                "night"
-            ]
+            "hypernym": "greeting"
         },
         "hello": {
             "hypernym": "greeting"
@@ -71,30 +33,51 @@
                     "A pleasure to meet you!",
                     "Pleasure to meet you!",
                     "Nice to meet you!"
-                ]
+                ],
+                "roots": "to meet"
             },
             {
                 "concept": "good afternoon",
-                "label": "Good afternoon!"
+                "label": "Good afternoon!",
+                "roots": [
+                    "good",
+                    "afternoon"
+                ]
             },
             {
                 "concept": "good day",
-                "label": "Good day!"
+                "label": "Good day!",
+                "roots": [
+                    "good",
+                    "day"
+                ]
             },
             {
                 "concept": "good evening",
-                "label": "Good evening!"
+                "label": "Good evening!",
+                "roots": [
+                    "good",
+                    "evening"
+                ]
             },
             {
                 "concept": "good morning",
                 "label": [
                     "Good morning!",
                     "Morning!"
+                ],
+                "roots": [
+                    "good",
+                    "morning"
                 ]
             },
             {
                 "concept": "good night",
-                "label": "Good night!"
+                "label": "Good night!",
+                "roots": [
+                    "good",
+                    "night"
+                ]
             },
             {
                 "concept": "hello",
@@ -108,11 +91,19 @@
         "fi": [
             {
                 "concept": "a pleasure to meet you",
-                "label": "Hauska tutustua!"
+                "label": "Hauska tutustua!",
+                "roots": [
+                    "hauska",
+                    "tutustua"
+                ]
             },
             {
                 "concept": "good afternoon",
                 "label": "Hyvää päivää!",
+                "roots": [
+                    "hyvä",
+                    "päivä"
+                ],
                 "tip": "afternoon"
             },
             {
@@ -120,6 +111,10 @@
                 "label": [
                     "Hyvää päivää!",
                     "Päivää!"
+                ],
+                "roots": [
+                    "hyvä",
+                    "päivä"
                 ]
             },
             {
@@ -127,6 +122,10 @@
                 "label": [
                     "Hyvää iltaa!",
                     "Iltaa!"
+                ],
+                "roots": [
+                    "hyvä",
+                    "ilta"
                 ]
             },
             {
@@ -134,11 +133,22 @@
                 "label": [
                     "Hyvää huomenta!",
                     "Huomenta!"
+                ],
+                "roots": [
+                    "hyvä",
+                    "huomenna"
                 ]
             },
             {
                 "concept": "good night",
-                "label": "Hyvää yötä!"
+                "label": [
+                    "Hyvää yötä!",
+                    "Yötä!"
+                ],
+                "roots": [
+                    "hyvä",
+                    "yö"
+                ]
             },
             {
                 "concept": "hello",
@@ -164,30 +174,51 @@
                 "label": [
                     "Aangenaam kennis te maken!",
                     "Prettig kennis te maken!"
-                ]
+                ],
+                "roots": "kennismaken"
             },
             {
                 "concept": "good afternoon",
-                "label": "Goedemiddag!"
+                "label": "Goedemiddag!",
+                "roots": [
+                    "goed",
+                    "de middag"
+                ]
             },
             {
                 "concept": "good day",
-                "label": "Goedendag!"
+                "label": "Goedendag!",
+                "roots": [
+                    "goed",
+                    "de dag"
+                ]
             },
             {
                 "concept": "good evening",
-                "label": "Goedenavond!"
+                "label": "Goedenavond!",
+                "roots": [
+                    "goed",
+                    "de avond"
+                ]
             },
             {
                 "concept": "good morning",
                 "label": [
                     "Goedemorgen!",
                     "Morgen!"
+                ],
+                "roots": [
+                    "goed",
+                    "de morgen"
                 ]
             },
             {
                 "concept": "good night",
-                "label": "Goedenacht!"
+                "label": "Goedenacht!",
+                "roots": [
+                    "goed",
+                    "de nacht"
+                ]
             },
             {
                 "concept": "hello",

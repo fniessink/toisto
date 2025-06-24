@@ -1,14 +1,9 @@
 {
     "concepts": {
         "april": {
-            "hypernym": "month",
-            "roots": {
-                "fi": "moon"
-            }
+            "hypernym": "month"
         },
-        "in april": {
-            "roots": "april"
-        }
+        "in april": {}
     },
     "labels": {
         "en": [
@@ -19,18 +14,21 @@
             },
             {
                 "concept": "in april",
-                "label": "In April."
+                "label": "in April",
+                "roots": "April"
             }
         ],
         "fi": [
             {
                 "concept": "april",
                 "label": "huhtikuu",
-                "note": "In Finnish, names of months are not capitalized"
+                "note": "In Finnish, names of months are not capitalized",
+                "roots": "kuu"
             },
             {
                 "concept": "in april",
-                "label": "Huhtikuussa."
+                "label": "huhtikuussa",
+                "roots": "huhtikuu"
             }
         ],
         "nl": [
@@ -41,7 +39,8 @@
             },
             {
                 "concept": "in april",
-                "label": "In april."
+                "label": "in april",
+                "roots": "april"
             }
         ]
     }

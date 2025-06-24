@@ -1,11 +1,6 @@
 {
     "concepts": {
-        "from afar": {
-            "roots": {
-                "en": "far",
-                "nl": "far"
-            }
-        }
+        "from afar": {}
     },
     "labels": {
         "en": [
@@ -23,7 +18,8 @@
         "nl": [
             {
                 "concept": "from afar",
-                "label": "van ver"
+                "label": "van ver",
+                "roots": "ver"
             }
         ]
     }

@@ -1,13 +1,6 @@
 {
     "concepts": {
-        "appointment": {
-            "roots": {
-                "fi": [
-                    "time",
-                    "reservation"
-                ]
-            }
-        }
+        "appointment": {}
     },
     "labels": {
         "en": [
@@ -19,7 +12,11 @@
         "fi": [
             {
                 "concept": "appointment",
-                "label": "ajanvaraus"
+                "label": "ajanvaraus",
+                "roots": [
+                    "aika",
+                    "varaus"
+                ]
             }
         ],
         "nl": [

@@ -5,17 +5,7 @@
         },
         "cheesecake": {
             "example": "I would like a slice of cheesecake",
-            "hypernym": "food",
-            "roots": {
-                "en": [
-                    "cheese",
-                    "cake"
-                ],
-                "fi": [
-                    "cheese",
-                    "cake"
-                ]
-            }
+            "hypernym": "food"
         },
         "I would like a slice of cheesecake": {}
     },
@@ -30,11 +20,16 @@
             },
             {
                 "concept": "cheesecake",
-                "label": "cheesecake"
+                "label": "cheesecake",
+                "roots": [
+                    "cheese",
+                    "cake"
+                ]
             },
             {
                 "concept": "I would like a slice of cheesecake",
-                "label": "I would like a piece of cheesecake."
+                "label": "I would like a piece of cheesecake.",
+                "roots": "cheesecake"
             }
         ],
         "fi": [
@@ -47,11 +42,16 @@
             },
             {
                 "concept": "cheesecake",
-                "label": "juustokakku"
+                "label": "juustokakku",
+                "roots": [
+                    "juusto",
+                    "kakku"
+                ]
             },
             {
                 "concept": "I would like a slice of cheesecake",
-                "label": "Minä haluaisin palan juustokakkua."
+                "label": "Minä haluaisin palan juustokakkua.",
+                "roots": "juustokakku"
             }
         ],
         "nl": [
@@ -68,7 +68,8 @@
             },
             {
                 "concept": "I would like a slice of cheesecake",
-                "label": "Ik wil graag een stuk cheesecake."
+                "label": "Ik wil graag een stuk cheesecake.",
+                "roots": "de cheesecake"
             }
         ]
     }

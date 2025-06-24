@@ -3,13 +3,7 @@
         "sky": {
             "example": "the sky is blue"
         },
-        "the sky is blue": {
-            "roots": [
-                "sky",
-                "to be",
-                "blue"
-            ]
-        }
+        "the sky is blue": {}
     },
     "labels": {
         "en": [
@@ -19,7 +13,11 @@
             },
             {
                 "concept": "the sky is blue",
-                "label": "The sky is blue."
+                "label": "The sky is blue.",
+                "roots": [
+                    "sky",
+                    "blue"
+                ]
             }
         ],
         "fi": [
@@ -32,7 +30,11 @@
             },
             {
                 "concept": "the sky is blue",
-                "label": "Taivas on sininen."
+                "label": "Taivas on sininen.",
+                "roots": [
+                    "taivas",
+                    "sininen"
+                ]
             }
         ],
         "nl": [
@@ -43,7 +45,11 @@
             },
             {
                 "concept": "the sky is blue",
-                "label": "De lucht is blauw."
+                "label": "De lucht is blauw.",
+                "roots": [
+                    "de lucht",
+                    "blauw"
+                ]
             }
         ]
     }

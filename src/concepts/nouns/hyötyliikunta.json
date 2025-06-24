@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "hyötyliikunta": {
-            "roots": {
-                "fi": "exercise (physical activity)"
-            }
-        }
+        "hyötyliikunta": {}
     },
     "labels": {
         "en": [
@@ -17,7 +13,8 @@
         "fi": [
             {
                 "concept": "hyötyliikunta",
-                "label": "hyötyliikunta"
+                "label": "hyötyliikunta",
+                "roots": "liikunta"
             }
         ],
         "nl": [

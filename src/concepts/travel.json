@@ -2,19 +2,10 @@
     "concepts": {
         "tourism": {},
         "entry fee": {
-            "hypernym": "price",
-            "roots": {
-                "nl": "price"
-            }
+            "hypernym": "price"
         },
         "free (no payment)": {},
-        "opening hours": {
-            "roots": {
-                "en": "hour",
-                "fi": "time",
-                "nl": "time"
-            }
-        },
+        "opening hours": {},
         "flight": {
             "involves": "airplane"
         },
@@ -22,15 +13,7 @@
             "hypernym": "means of transportation"
         },
         "port": {},
-        "airport": {
-            "roots": {
-                "en": "port",
-                "fi": [
-                    "flight",
-                    "station"
-                ]
-            }
-        },
+        "airport": {},
         "airplane": {
             "hypernym": "means of transportation"
         },
@@ -44,46 +27,24 @@
             "hypernym": "means of transportation"
         },
         "tram": {
-            "hypernym": "means of transportation",
-            "roots": {
-                "en": "street"
-            }
+            "hypernym": "means of transportation"
         },
         "bus": {
-            "hypernym": "means of transportation",
-            "roots": {
-                "fi": "car"
-            }
+            "hypernym": "means of transportation"
         },
-        "driver": {
-            "roots": {
-                "en": "to drive"
-            }
-        },
+        "driver": {},
         "motorist": {
             "hypernym": "driver",
-            "involves": "car",
-            "roots": {
-                "fi": "car",
-                "nl": "car"
-            }
+            "involves": "car"
         },
         "bus driver": {
             "hypernym": "driver",
-            "involves": "bus",
-            "roots": [
-                "bus",
-                "driver"
-            ]
+            "involves": "bus"
         },
         "stop": {},
         "bus stop": {
             "hypernym": "stop",
-            "involves": "bus",
-            "roots": [
-                "bus",
-                "stop"
-            ]
+            "involves": "bus"
         },
         "public transportation": {
             "hypernym": "means of transportation"
@@ -93,18 +54,10 @@
             "hypernym": [
                 "parking",
                 "building"
-            ],
-            "roots": {
-                "en": "parking"
-            }
+            ]
         },
         "parking spot": {
-            "hypernym": "parking",
-            "roots": {
-                "en": "parking",
-                "fi": "place",
-                "nl": "place"
-            }
+            "hypernym": "parking"
         },
         "parking": {
             "involves": "car"
@@ -114,61 +67,29 @@
         },
         "means of transportation": {},
         "delivery van": {
-            "hypernym": "means of transportation",
-            "roots": {
-                "fi": "car"
-            }
+            "hypernym": "means of transportation"
         },
         "lorry": {
-            "hypernym": "means of transportation",
-            "roots": {
-                "fi": "car"
-            }
+            "hypernym": "means of transportation"
         },
         "motorcycle": {
-            "hypernym": "means of transportation",
-            "roots": {
-                "fi": "bicycle",
-                "nl": "bicycle"
-            }
+            "hypernym": "means of transportation"
         },
-        "giving directions": {
-            "roots": {
-                "fi": "road",
-                "nl": "road"
-            }
-        },
+        "giving directions": {},
         "it is near": {
-            "antonym": "it is far",
-            "roots": "near"
+            "antonym": "it is far"
         },
         "it is far": {
-            "antonym": "it is near",
-            "roots": "far"
+            "antonym": "it is near"
         },
         "straight ahead": {},
-        "go straight ahead on Mariankatu": {
-            "roots": [
-                "to go",
-                "straight ahead"
-            ]
-        },
+        "go straight ahead on Mariankatu": {},
         "turn left": {},
         "turn right": {},
         "go to Mariankatu": {},
         "crossroads": {},
-        "turn left at the crossroads": {
-            "roots": [
-                "turn left",
-                "crossroads"
-            ]
-        },
-        "street corner": {
-            "roots": [
-                "street",
-                "corner"
-            ]
-        }
+        "turn left at the crossroads": {},
+        "street corner": {}
     },
     "labels": {
         "en": [
@@ -190,7 +111,8 @@
             },
             {
                 "concept": "opening hours",
-                "label": "opening hours"
+                "label": "opening hours",
+                "roots": "hours"
             },
             {
                 "concept": "flight",
@@ -212,7 +134,11 @@
             },
             {
                 "concept": "airport",
-                "label": "airport"
+                "label": "airport",
+                "roots": [
+                    "air",
+                    "port"
+                ]
             },
             {
                 "concept": "airplane",
@@ -225,7 +151,8 @@
                         "airplanes",
                         "planes"
                     ]
-                }
+                },
+                "roots": "air"
             },
             {
                 "concept": "boat",
@@ -260,7 +187,11 @@
                 "label": {
                     "singular": "streetcar",
                     "plural": "streetcars"
-                }
+                },
+                "roots": [
+                    "street",
+                    "car"
+                ]
             },
             {
                 "concept": "bus",
@@ -282,7 +213,11 @@
             },
             {
                 "concept": "bus driver",
-                "label": "bus driver"
+                "label": "bus driver",
+                "roots": [
+                    "bus",
+                    "driver"
+                ]
             },
             {
                 "concept": "stop",
@@ -293,7 +228,11 @@
             },
             {
                 "concept": "bus stop",
-                "label": "bus stop"
+                "label": "bus stop",
+                "roots": [
+                    "bus",
+                    "stop"
+                ]
             },
             {
                 "concept": "public transportation",
@@ -308,11 +247,16 @@
             },
             {
                 "concept": "parking garage",
-                "label": "parking garage"
+                "label": "parking garage",
+                "roots": [
+                    "parking",
+                    "garage"
+                ]
             },
             {
                 "concept": "parking spot",
-                "label": "parking spot"
+                "label": "parking spot",
+                "roots": "parking"
             },
             {
                 "concept": "parking",
@@ -358,11 +302,13 @@
             },
             {
                 "concept": "it is near",
-                "label": "It is near."
+                "label": "It is near.",
+                "roots": "near"
             },
             {
                 "concept": "it is far",
-                "label": "It is far."
+                "label": "It is far.",
+                "roots": "far"
             },
             {
                 "concept": "straight ahead",
@@ -386,15 +332,21 @@
             },
             {
                 "concept": "crossroads",
-                "label": "crossroads"
+                "label": "crossroads",
+                "roots": "roads"
             },
             {
                 "concept": "turn left at the crossroads",
-                "label": "Turn left at the crossroads."
+                "label": "Turn left at the crossroads.",
+                "roots": "crossroads"
             },
             {
                 "concept": "street corner",
-                "label": "street corner"
+                "label": "street corner",
+                "roots": [
+                    "street",
+                    "corner"
+                ]
             }
         ],
         "fi": [
@@ -412,15 +364,18 @@
             },
             {
                 "concept": "free (no payment)",
-                "label": "vapaa pääsy"
+                "label": "vapaa pääsy",
+                "roots": "vapaa"
             },
             {
                 "concept": "free (no payment)",
-                "label": "maksuton"
+                "label": "maksuton",
+                "roots": "maksu"
             },
             {
                 "concept": "opening hours",
-                "label": "aukioloajat"
+                "label": "aukioloajat",
+                "roots": "ajat"
             },
             {
                 "concept": "flight",
@@ -442,18 +397,24 @@
             },
             {
                 "concept": "airport",
-                "label": "lentoasema"
+                "label": "lentoasema",
+                "roots": [
+                    "lento",
+                    "asema"
+                ]
             },
             {
                 "concept": "airport",
-                "label": "lentokenttä"
+                "label": "lentokenttä",
+                "roots": "lento"
             },
             {
                 "concept": "airplane",
                 "label": {
                     "singular": "lentokone",
                     "plural": "lentokoneet"
-                }
+                },
+                "roots": "lento"
             },
             {
                 "concept": "boat",
@@ -481,14 +442,16 @@
                 "label": {
                     "singular": "maanalainen",
                     "plural": "maanalaiset"
-                }
+                },
+                "roots": "maa"
             },
             {
                 "concept": "tram",
                 "label": {
                     "singular": "raitiovaunu",
                     "plural": "raitiovaunut"
-                }
+                },
+                "roots": "vaunu"
             },
             {
                 "concept": "tram",
@@ -510,7 +473,8 @@
                 "label": {
                     "singular": "linja-auto",
                     "plural": "linja-autot"
-                }
+                },
+                "roots": "auto"
             },
             {
                 "concept": "driver",
@@ -529,11 +493,19 @@
             },
             {
                 "concept": "bus driver",
-                "label": "linja-autonkuljettaja"
+                "label": "linja-autonkuljettaja",
+                "roots": [
+                    "linja-auto",
+                    "kuljettaja"
+                ]
             },
             {
                 "concept": "bus driver",
-                "label": "bussikuski"
+                "label": "bussikuski",
+                "roots": [
+                    "bussi",
+                    "kuski"
+                ]
             },
             {
                 "concept": "stop",
@@ -544,11 +516,19 @@
             },
             {
                 "concept": "bus stop",
-                "label": "linja-autopysäkki"
+                "label": "linja-autopysäkki",
+                "roots": [
+                    "linja-auto",
+                    "pysäkki"
+                ]
             },
             {
                 "concept": "bus stop",
-                "label": "bussipysäkki"
+                "label": "bussipysäkki",
+                "roots": [
+                    "bussi",
+                    "pysäkki"
+                ]
             },
             {
                 "concept": "public transportation",
@@ -568,7 +548,8 @@
             },
             {
                 "concept": "parking spot",
-                "label": "parkkipaikka"
+                "label": "parkkipaikka",
+                "roots": "paikka"
             },
             {
                 "concept": "parking",
@@ -590,11 +571,16 @@
             },
             {
                 "concept": "delivery van",
-                "label": "pakettiauto"
+                "label": "pakettiauto",
+                "roots": "auto"
             },
             {
                 "concept": "lorry",
-                "label": "rekka-auto"
+                "label": [
+                    "rekka-auto",
+                    "rekka"
+                ],
+                "roots": "auto"
             },
             {
                 "concept": "motorcycle",
@@ -609,11 +595,13 @@
             },
             {
                 "concept": "it is near",
-                "label": "Se on lähellä."
+                "label": "Se on lähellä.",
+                "roots": "lähellä"
             },
             {
                 "concept": "it is far",
-                "label": "Se on kaukana."
+                "label": "Se on kaukana.",
+                "roots": "kaukana"
             },
             {
                 "concept": "straight ahead",
@@ -621,7 +609,8 @@
             },
             {
                 "concept": "go straight ahead on Mariankatu",
-                "label": "Mene Mariankatua suoraan eteenpäin."
+                "label": "Mene Mariankatua suoraan eteenpäin.",
+                "roots": "suoraan eteenpäin"
             },
             {
                 "concept": "turn left",
@@ -641,11 +630,16 @@
             },
             {
                 "concept": "turn left at the crossroads",
-                "label": "Käänny risteyksestä vasemmalle."
+                "label": "Käänny risteyksestä vasemmalle.",
+                "roots": "risteys"
             },
             {
                 "concept": "street corner",
-                "label": "kadunkulma"
+                "label": "kadunkulma",
+                "roots": [
+                    "katu",
+                    "kulma"
+                ]
             }
         ],
         "nl": [
@@ -655,7 +649,8 @@
             },
             {
                 "concept": "entry fee",
-                "label": "de toegangsprijs"
+                "label": "de toegangsprijs",
+                "roots": "de prijs"
             },
             {
                 "concept": "free (no payment)",
@@ -663,7 +658,8 @@
             },
             {
                 "concept": "opening hours",
-                "label": "de openingstijden"
+                "label": "de openingstijden",
+                "roots": "de tijd"
             },
             {
                 "concept": "flight",
@@ -685,7 +681,8 @@
             },
             {
                 "concept": "airport",
-                "label": "het vliegveld"
+                "label": "het vliegveld",
+                "roots": "het veld"
             },
             {
                 "concept": "airplane",
@@ -738,11 +735,16 @@
                 "label": {
                     "singular": "de automobilist",
                     "plural": "de automobilisten"
-                }
+                },
+                "roots": "de auto"
             },
             {
                 "concept": "bus driver",
-                "label": "de buschauffeur"
+                "label": "de buschauffeur",
+                "roots": [
+                    "de bus",
+                    "de chauffeur"
+                ]
             },
             {
                 "concept": "stop",
@@ -753,7 +755,11 @@
             },
             {
                 "concept": "bus stop",
-                "label": "de bushalte"
+                "label": "de bushalte",
+                "roots": [
+                    "de bus",
+                    "de halte"
+                ]
             },
             {
                 "concept": "public transportation",
@@ -765,11 +771,13 @@
             },
             {
                 "concept": "parking garage",
-                "label": "de parkeergarage"
+                "label": "de parkeergarage",
+                "roots": "de garage"
             },
             {
                 "concept": "parking spot",
-                "label": "de parkeerplaats"
+                "label": "de parkeerplaats",
+                "roots": "de plaats"
             },
             {
                 "concept": "parking",
@@ -791,38 +799,46 @@
             },
             {
                 "concept": "delivery van",
-                "label": "de bestelwagen"
+                "label": "de bestelwagen",
+                "roots": "de wagen"
             },
             {
                 "concept": "lorry",
-                "label": "de vrachtwagen"
+                "label": "de vrachtwagen",
+                "roots": "de wagen"
             },
             {
                 "concept": "motorcycle",
                 "label": [
                     "de motorfiets",
                     "de motor"
-                ]
+                ],
+                "roots": "de fiets"
             },
             {
                 "concept": "giving directions",
-                "label": "de weg wijzen"
+                "label": "de weg wijzen",
+                "roots": "de weg"
             },
             {
                 "concept": "it is near",
-                "label": "Het is dichtbij."
+                "label": "Het is dichtbij.",
+                "roots": "dichtbij"
             },
             {
                 "concept": "it is near",
-                "label": "Het is in de buurt."
+                "label": "Het is in de buurt.",
+                "roots": "in de buurt"
             },
             {
                 "concept": "it is far",
-                "label": "Het is ver."
+                "label": "Het is ver.",
+                "roots": "ver"
             },
             {
                 "concept": "it is far",
-                "label": "Het is ver weg."
+                "label": "Het is ver weg.",
+                "roots": "ver weg"
             },
             {
                 "concept": "straight ahead",
@@ -830,7 +846,8 @@
             },
             {
                 "concept": "go straight ahead on Mariankatu",
-                "label": "Ga rechtdoor op de Mariankatu."
+                "label": "Ga rechtdoor op de Mariankatu.",
+                "roots": "rechtdoor"
             },
             {
                 "concept": "turn left",
@@ -850,11 +867,16 @@
             },
             {
                 "concept": "turn left at the crossroads",
-                "label": "Sla links af bij het kruispunt."
+                "label": "Sla links af bij het kruispunt.",
+                "roots": "het kruispunt"
             },
             {
                 "concept": "street corner",
-                "label": "de straathoek"
+                "label": "de straathoek",
+                "roots": [
+                    "de straat",
+                    "de hoek"
+                ]
             }
         ]
     }

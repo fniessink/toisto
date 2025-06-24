@@ -3,12 +3,7 @@
         "hand": {
             "holonym": "body"
         },
-        "handwork": {
-            "roots": [
-                "hand",
-                "work"
-            ]
-        }
+        "handwork": {}
     },
     "labels": {
         "en": [
@@ -24,7 +19,11 @@
                 "label": {
                     "singular": "handwork",
                     "plural": "handworks"
-                }
+                },
+                "roots": [
+                    "hand",
+                    "work"
+                ]
             }
         ],
         "fi": [
@@ -40,7 +39,11 @@
                 "label": {
                     "singular": "käsityö",
                     "plural": "käsityöt"
-                }
+                },
+                "roots": [
+                    "käsi",
+                    "työ"
+                ]
             }
         ],
         "nl": [
@@ -56,7 +59,11 @@
                 "label": {
                     "singular": "het handwerk",
                     "plural": "de handwerken"
-                }
+                },
+                "roots": [
+                    "de hand",
+                    "het werk"
+                ]
             }
         ]
     }

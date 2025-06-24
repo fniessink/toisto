@@ -1,88 +1,27 @@
 {
     "concepts": {
         "flower": {},
-        "desert": {
-            "roots": {
-                "fi": "country"
-            }
-        },
+        "desert": {},
         "valley": {},
-        "world": {
-            "roots": {
-                "fi": "country"
-            }
-        },
+        "world": {},
         "ground": {},
         "fire": {},
         "volcano": {
-            "hypernym": "mountain",
-            "roots": {
-                "fi": [
-                    "fire",
-                    "mountain"
-                ]
-            }
+            "hypernym": "mountain"
         },
         "cave": {},
         "canyon": {},
         "rainforest": {
-            "hypernym": "forest",
-            "roots": [
-                "rain",
-                "forest"
-            ]
+            "hypernym": "forest"
         },
-        "glacier": {
-            "roots": {
-                "fi": "ice"
-            }
-        },
-        "northern lights": {
-            "roots": {
-                "en": "north",
-                "fi": "fire",
-                "nl": "north"
-            }
-        },
-        "it is cold in the north": {
-            "roots": [
-                "to be",
-                "cold",
-                "north"
-            ]
-        },
-        "it is warm in the south": {
-            "roots": [
-                "to be",
-                "warm",
-                "south"
-            ]
-        },
-        "she is from the north": {
-            "roots": [
-                "north",
-                "to come"
-            ]
-        },
-        "they live in the west": {
-            "roots": [
-                "west",
-                "to live"
-            ]
-        },
-        "the city is in the east": {
-            "roots": [
-                "city",
-                "to be",
-                "east"
-            ]
-        },
-        "we walk in the forest": {
-            "roots": [
-                "to walk",
-                "forest"
-            ]
-        }
+        "glacier": {},
+        "northern lights": {},
+        "it is cold in the north": {},
+        "it is warm in the south": {},
+        "she is from the north": {},
+        "they live in the west": {},
+        "the city is in the east": {},
+        "we walk in the forest": {}
     },
     "labels": {
         "en": [
@@ -160,7 +99,11 @@
                         "rainforests",
                         "rain forests"
                     ]
-                }
+                },
+                "roots": [
+                    "rain",
+                    "forest"
+                ]
             },
             {
                 "concept": "glacier",
@@ -175,35 +118,73 @@
             },
             {
                 "concept": "it is cold in the north",
-                "label": "It is cold in the north."
+                "label": "It is cold in the north.",
+                "roots": [
+                    "cold",
+                    "north"
+                ]
             },
             {
                 "concept": "it is warm in the south",
-                "label": "It is warm in the south."
+                "label": "It is warm in the south.",
+                "roots": [
+                    "warm",
+                    "south"
+                ]
             },
             {
                 "concept": "she is from the north",
-                "label": "She is from the north."
+                "label": "She is from the north.",
+                "roots": [
+                    "north"
+                ]
             },
             {
                 "concept": "she is from the north",
-                "label": "She comes from the north."
+                "label": "She comes from the north.",
+                "roots": [
+                    "north"
+                ]
             },
             {
                 "concept": "they live in the west",
-                "label": "They live in the west."
+                "label": "They live in the west.",
+                "roots": [
+                    "they live",
+                    "west"
+                ]
             },
             {
                 "concept": "the city is in the east",
-                "label": "The city is in the east."
+                "label": "The city is in the east.",
+                "roots": [
+                    "city",
+                    "east"
+                ]
+            },
+            {
+                "concept": "we walk in the east",
+                "label": "We walk in the east.",
+                "roots": [
+                    "we walk",
+                    "east"
+                ]
             },
             {
                 "concept": "we walk in the forest",
-                "label": "We walk in the forest."
+                "label": "We walk in the forest.",
+                "roots": [
+                    "we walk",
+                    "forest"
+                ]
             },
             {
                 "concept": "we walk in the forest",
-                "label": "We walk in the wood."
+                "label": "We walk in the wood.",
+                "roots": [
+                    "we walk",
+                    "wood"
+                ]
             }
         ],
         "fi": [
@@ -226,7 +207,8 @@
                 "label": {
                     "singular": "autiomaa",
                     "plural": "autiomaat"
-                }
+                },
+                "roots": "maa"
             },
             {
                 "concept": "valley",
@@ -237,7 +219,11 @@
             },
             {
                 "concept": "world",
-                "label": "maailma"
+                "label": "maailma",
+                "roots": [
+                    "maa",
+                    "ilma"
+                ]
             },
             {
                 "concept": "ground",
@@ -259,7 +245,11 @@
                 "label": {
                     "singular": "tulivuori",
                     "plural": "tulivuoret"
-                }
+                },
+                "roots": [
+                    "tuli",
+                    "vuori"
+                ]
             },
             {
                 "concept": "cave",
@@ -280,52 +270,91 @@
                 "label": {
                     "singular": "sademetsä",
                     "plural": "sademetsät"
-                }
+                },
+                "roots": [
+                    "sade",
+                    "metsä"
+                ]
             },
             {
                 "concept": "glacier",
                 "label": {
                     "singular": "jäätikkö",
                     "plural": "jäätiköt"
-                }
+                },
+                "roots": "jää"
             },
             {
                 "concept": "northern lights",
-                "label": "revontulet"
+                "label": "revontulet",
+                "roots": "tulet"
             },
             {
                 "concept": "it is cold in the north",
-                "label": "Pohjoisessa on kylmä."
+                "label": "Pohjoisessa on kylmä.",
+                "roots": [
+                    "pohjoinen",
+                    "kylmä"
+                ]
             },
             {
                 "concept": "it is warm in the south",
-                "label": "Etelässä on lämmin."
+                "label": "Etelässä on lämmin.",
+                "roots": [
+                    "etelä",
+                    "lämmin"
+                ]
             },
             {
                 "concept": "she is from the north",
                 "label": "Hän tulee pohjoisesta.",
+                "roots": [
+                    "hän tulee",
+                    "pohjoinen"
+                ],
                 "tip": "feminine"
             },
             {
                 "concept": "she is from the north",
                 "label": "Hän on kotoisin pohjoisesta.",
+                "roots": [
+                    "hän on",
+                    "kotoisin",
+                    "pohjoinen"
+                ],
                 "tip": "feminine"
             },
             {
                 "concept": "they live in the west",
-                "label": "He asuvat lännessä."
+                "label": "He asuvat lännessä.",
+                "roots": [
+                    "he asuvat",
+                    "länsi"
+                ]
             },
             {
                 "concept": "the city is in the east",
-                "label": "Kaupunki on idässä."
+                "label": "Kaupunki on idässä.",
+                "roots": [
+                    "kaupunki",
+                    "itä"
+                ]
             },
             {
                 "concept": "the city is in the east",
-                "label": "Kaupunki sijaitsee idässä."
+                "label": "Kaupunki sijaitsee idässä.",
+                "roots": [
+                    "kaupunki",
+                    "itä"
+                ]
             },
             {
                 "concept": "we walk in the forest",
-                "label": "Me kävelemme metsässä."
+                "label": "Me kävelemme metsässä.",
+                "roots": [
+                    "me kävelemme",
+                    "metsä"
+                ]
             }
         ],
         "nl": [
@@ -394,7 +423,11 @@
                 "label": {
                     "singular": "het regenwoud",
                     "plural": "de regenwouden"
-                }
+                },
+                "roots": [
+                    "de regen",
+                    "het woud"
+                ]
             },
             {
                 "concept": "glacier",
@@ -405,34 +438,62 @@
             },
             {
                 "concept": "northern lights",
-                "label": "het noorderlicht"
+                "label": "het noorderlicht",
+                "roots": "het noorden"
             },
             {
                 "concept": "it is cold in the north",
                 "label": [
                     "Het is koud in het noorden.",
                     "In het noorden is het koud."
+                ],
+                "roots": [
+                    "het noorden",
+                    "koud"
                 ]
             },
             {
                 "concept": "it is warm in the south",
-                "label": "Het is warm in het zuiden."
+                "label": [
+                    "Het is warm in het zuiden.",
+                    "In het zuiden is het warm."
+                ],
+                "roots": [
+                    "het zuiden",
+                    "warm"
+                ]
             },
             {
                 "concept": "she is from the north",
-                "label": "Zij komt uit het noorden."
+                "label": "Zij komt uit het noorden.",
+                "roots": [
+                    "het noorden",
+                    "koud"
+                ]
             },
             {
                 "concept": "they live in the west",
-                "label": "Zij wonen in het westen."
+                "label": "Zij wonen in het westen.",
+                "roots": [
+                    "zij wonen",
+                    "het westen"
+                ]
             },
             {
                 "concept": "the city is in the east",
-                "label": "De stad ligt in het oosten."
+                "label": "De stad ligt in het oosten.",
+                "roots": [
+                    "de stad",
+                    "het oosten"
+                ]
             },
             {
                 "concept": "we walk in the forest",
-                "label": "Wij wandelen in het bos."
+                "label": "Wij wandelen in het bos.",
+                "roots": [
+                    "wandelen",
+                    "het bos"
+                ]
             }
         ]
     }

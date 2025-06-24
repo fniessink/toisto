@@ -2,8 +2,7 @@
     "concepts": {
         "vowel": {},
         "vowel harmony": {
-            "involves": "finnish",
-            "roots": "vowel"
+            "involves": "finnish"
         }
     },
     "labels": {
@@ -17,7 +16,8 @@
             },
             {
                 "concept": "vowel harmony",
-                "label": "vowel harmony"
+                "label": "vowel harmony",
+                "roots": "vowel"
             }
         ],
         "fi": [
@@ -30,7 +30,8 @@
             },
             {
                 "concept": "vowel harmony",
-                "label": "vokaaliharmonia"
+                "label": "vokaaliharmonia",
+                "roots": "vokaali"
             }
         ],
         "nl": [
@@ -43,7 +44,8 @@
             },
             {
                 "concept": "vowel harmony",
-                "label": "de klinkerharmonie"
+                "label": "de klinkerharmonie",
+                "roots": "de klinker"
             }
         ]
     }

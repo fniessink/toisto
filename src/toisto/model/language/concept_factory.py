@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Required, TypedDict, cast, get_args
 
 from . import Language
-from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds, RootConceptIds
+from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds
 from .grammar import GrammaticalCategory
 from .label import Label, Labels
 
@@ -25,6 +25,7 @@ LabelJSON = TypedDict(
         "language": Required[Language],
         "meaning-only": bool,
         "note": str | list[str],
+        "roots": str | list[str],
         "tip": str,
     },
     total=False,
@@ -40,7 +41,6 @@ ConceptJSON = TypedDict(
         "holonym": ConceptIdListOrString,
         "hypernym": ConceptIdListOrString,
         "involves": ConceptIdListOrString,
-        "roots": ConceptIdDictOrListOrString,
     },
     total=False,
 )
@@ -63,7 +63,6 @@ class ConceptFactory:
             self._labels(),
             self._meanings(),
             self._related_concepts(),
-            self._root_concepts(),
             self._answer_only(),
         )
 
@@ -79,10 +78,12 @@ class ConceptFactory:
                 label["label"], list
             ):
                 note = label.get("note", [])
-                notes = [note] if isinstance(note, str) else note
+                notes = tuple([note] if isinstance(note, str) else note)
                 tip = label.get("tip", "")
                 colloquial = label.get("colloquial", False)
-                labels.append(Label(label["language"], label["label"], tuple(notes), tip, colloquial=colloquial))
+                root_or_roots = label.get("roots", [])
+                roots = tuple([root_or_roots] if isinstance(root_or_roots, str) else root_or_roots)
+                labels.append(Label(label["language"], label["label"], notes, roots, tip, colloquial=colloquial))
         return Labels(labels)
 
     def _meanings(self) -> Labels:
@@ -98,16 +99,6 @@ class ConceptFactory:
     def _related_concepts(self) -> RelatedConceptIds:
         """Create the related concepts."""
         return {relation: self._related_concept_ids(relation) for relation in get_args(ConceptRelation)}
-
-    def _root_concepts(self) -> RootConceptIds:
-        """Retrieve the roots from the concept dict."""
-        roots = self._get_roots()
-        if isinstance(roots, dict):  # Roots are not the same for all languages
-            return {
-                language: tuple(concept_ids) if isinstance(concept_ids, list) else (concept_ids,)
-                for language, concept_ids in roots.items()
-            }
-        return tuple(roots) if isinstance(roots, list) else (roots,)
 
     def _answer_only(self) -> bool:
         """Return whether the concept is answer-only."""
@@ -128,8 +119,7 @@ class ConceptFactory:
         antonyms_dict = {"antonym": [ConceptId(f"{antonym}/{category}") for antonym in antonym_concept_ids]}
         answer_concept_ids = self._related_concept_ids("answer")
         answers_dict = {"answer": [ConceptId(f"{answer}/{category}") for answer in answer_concept_ids]}
-        roots_dict = {"roots": self._get_roots()}
-        constituent_concept_dict = roots_dict | antonyms_dict | answers_dict
+        constituent_concept_dict = antonyms_dict | answers_dict
         return cast("ConceptJSON", constituent_concept_dict)
 
     def _constituent_concept_labels(self, category: GrammaticalCategory) -> list[LabelJSON]:
@@ -142,6 +132,7 @@ class ConceptFactory:
                     language=label["language"],
                     label=label["label"][category],
                     note=label.get("note", []),
+                    roots=label.get("roots", []),
                     tip=label.get("tip", ""),
                     colloquial=label.get("colloquial", False),
                 )
@@ -155,10 +146,6 @@ class ConceptFactory:
             if isinstance(label["label"], dict):
                 grammatical_categories |= {key for key in label["label"] if key in get_args(GrammaticalCategory)}
         return tuple(category for category in get_args(GrammaticalCategory) if category in grammatical_categories)
-
-    def _get_roots(self) -> ConceptIdDictOrListOrString:
-        """Get the roots from the concept dict."""
-        return self.concept_dict.get("roots", {})
 
     def _related_concept_ids(self, relation: ConceptRelation) -> ConceptIds:
         """Return the ids of the related concept(s)."""

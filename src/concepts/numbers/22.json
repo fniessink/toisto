@@ -15,7 +15,11 @@
                 "label": {
                     "cardinal": "twenty-two",
                     "ordinal": "twenty-second"
-                }
+                },
+                "roots": [
+                    "twenty",
+                    "two"
+                ]
             }
         ],
         "fi": [
@@ -24,7 +28,11 @@
                 "label": {
                     "cardinal": "kaksikymmentäkaksi",
                     "ordinal": "kahdeskymmenestoinen"
-                }
+                },
+                "roots": [
+                    "kaksi",
+                    "kymmenen"
+                ]
             },
             {
                 "concept": "22",
@@ -41,7 +49,11 @@
                 "label": {
                     "cardinal": "tweeëntwintig",
                     "ordinal": "tweeëntwintigste"
-                }
+                },
+                "roots": [
+                    "twee",
+                    "twintig"
+                ]
             }
         ]
     }

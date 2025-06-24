@@ -6,27 +6,7 @@
                 "the man got up in the middle of the conversation and left"
             ]
         },
-        "the table is in the middle of the room": {
-            "roots": {
-                "en": [
-                    "table",
-                    "to be",
-                    "in the middle",
-                    "room"
-                ],
-                "nl": [
-                    "table",
-                    "in the middle",
-                    "room"
-                ],
-                "fi": [
-                    "table",
-                    "to be",
-                    "in the middle",
-                    "room"
-                ]
-            }
-        },
+        "the table is in the middle of the room": {},
         "the man got up in the middle of the conversation and left": {}
     },
     "labels": {
@@ -37,11 +17,21 @@
             },
             {
                 "concept": "the table is in the middle of the room",
-                "label": "The table is in the middle of the room."
+                "label": "The table is in the middle of the room.",
+                "roots": [
+                    "table",
+                    "in the middle",
+                    "room"
+                ]
             },
             {
                 "concept": "the man got up in the middle of the conversation and left",
-                "label": "The man got up in the middle of the conversation and left."
+                "label": "The man got up in the middle of the conversation and left.",
+                "roots": [
+                    "man",
+                    "in the middle",
+                    "conversation"
+                ]
             }
         ],
         "fi": [
@@ -55,11 +45,20 @@
             },
             {
                 "concept": "the table is in the middle of the room",
-                "label": "Pöytä on huoneen keskellä."
+                "label": "Pöytä on huoneen keskellä.",
+                "roots": [
+                    "pöytä",
+                    "huone",
+                    "keskellä"
+                ]
             },
             {
                 "concept": "the man got up in the middle of the conversation and left",
-                "label": "Mies nousi kesken keskustelun ja lähti pois."
+                "label": "Mies nousi kesken keskustelun ja lähti pois.",
+                "roots": [
+                    "mies",
+                    "kesken"
+                ]
             }
         ],
         "nl": [
@@ -77,15 +76,30 @@
             },
             {
                 "concept": "the table is in the middle of the room",
-                "label": "De tafel staat in het midden van de kamer."
+                "label": "De tafel staat in het midden van de kamer.",
+                "roots": [
+                    "de tafel",
+                    "in het midden",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "the table is in the middle of the room",
-                "label": "De tafel staat midden in de kamer."
+                "label": "De tafel staat midden in de kamer.",
+                "roots": [
+                    "de tafel",
+                    "middenin",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "the man got up in the middle of the conversation and left",
-                "label": "De man stond op midden in het gesprek en vertrok."
+                "label": "De man stond op midden in het gesprek en vertrok.",
+                "roots": [
+                    "de man",
+                    "middenin",
+                    "het gesprek"
+                ]
             }
         ]
     }

@@ -4,18 +4,10 @@
             "holonym": "foot"
         },
         "big toe": {
-            "hypernym": "toe",
-            "roots": [
-                "big",
-                "toe"
-            ]
+            "hypernym": "toe"
         },
         "small toe": {
-            "hypernym": "toe",
-            "roots": [
-                "small",
-                "toe"
-            ]
+            "hypernym": "toe"
         }
     },
     "labels": {
@@ -29,11 +21,19 @@
             },
             {
                 "concept": "big toe",
-                "label": "big toe"
+                "label": "big toe",
+                "roots": [
+                    "big",
+                    "toe"
+                ]
             },
             {
                 "concept": "small toe",
-                "label": "small toe"
+                "label": "small toe",
+                "roots": [
+                    "small",
+                    "toe"
+                ]
             }
         ],
         "fi": [
@@ -46,11 +46,16 @@
             },
             {
                 "concept": "big toe",
-                "label": "isovarvas"
+                "label": "isovarvas",
+                "roots": [
+                    "iso",
+                    "varvas"
+                ]
             },
             {
                 "concept": "small toe",
-                "label": "pikkuvarvas"
+                "label": "pikkuvarvas",
+                "roots": "varvas"
             }
         ],
         "nl": [
@@ -63,11 +68,19 @@
             },
             {
                 "concept": "big toe",
-                "label": "de grote teen"
+                "label": "de grote teen",
+                "roots": [
+                    "groot",
+                    "de teen"
+                ]
             },
             {
                 "concept": "small toe",
-                "label": "de kleine teen"
+                "label": "de kleine teen",
+                "roots": [
+                    "klein",
+                    "de teen"
+                ]
             }
         ]
     }

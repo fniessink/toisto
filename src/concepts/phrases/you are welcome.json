@@ -1,21 +1,16 @@
 {
     "concepts": {
-        "you are welcome": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "welcome"
-                ],
-                "nl": "thanks",
-                "fi": "no"
-            }
-        }
+        "you are welcome": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "you are welcome",
-                "label": "You are welcome!"
+                "label": "You are welcome!",
+                "roots": [
+                    "you are",
+                    "Welcome!"
+                ]
             }
         ],
         "fi": [

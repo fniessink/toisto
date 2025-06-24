@@ -1,10 +1,7 @@
 {
     "concepts": {
         "england": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            }
+            "hypernym": "country"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
         "nl": [
             {
                 "concept": "england",
-                "label": "Engeland"
+                "label": "Engeland",
+                "roots": "het land"
             }
         ]
     }

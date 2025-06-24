@@ -46,7 +46,7 @@ class Speech:
                 raise
 
     def _say_with_apple_say(self, language: Language, text: str, slow: bool) -> None:
-        """Say the text with the Apple say command that's available on MacOS and iOS."""
+        """Say the text with the Apple say command that's available on macOS and iOS."""
         voice_arg = ["-v", self.apple_say_voices[language]]
         # On iOS the argument for --rate/-r is not words per minute like on the Mac, but something else:
         ashell = self.platform == "ashell"

@@ -4,12 +4,7 @@
             "example": "onions make me cry",
             "hypernym": "vegetable"
         },
-        "onions make me cry": {
-            "roots": [
-                "onion",
-                "to cry"
-            ]
-        }
+        "onions make me cry": {}
     },
     "labels": {
         "en": [
@@ -22,7 +17,11 @@
             },
             {
                 "concept": "onions make me cry",
-                "label": "Onions make me cry."
+                "label": "Onions make me cry.",
+                "roots": [
+                    "onion",
+                    "to cry"
+                ]
             }
         ],
         "fi": [
@@ -35,7 +34,11 @@
             },
             {
                 "concept": "onions make me cry",
-                "label": "Sipulit saavat minut itkemään."
+                "label": "Sipulit saavat minut itkemään.",
+                "roots": [
+                    "sipuli",
+                    "itkea"
+                ]
             }
         ],
         "nl": [
@@ -48,11 +51,19 @@
             },
             {
                 "concept": "onions make me cry",
-                "label": "Uien laten me huilen."
+                "label": "Uien laten me huilen.",
+                "roots": [
+                    "de ui",
+                    "huilen"
+                ]
             },
             {
                 "concept": "onions make me cry",
-                "label": "Ik moet huilen van uien."
+                "label": "Ik moet huilen van uien.",
+                "roots": [
+                    "de ui",
+                    "huilen"
+                ]
             }
         ]
     }

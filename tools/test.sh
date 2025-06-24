@@ -1,6 +1,6 @@
 #/bin/bash
 
-green -r
+uv run green -r
 
 if [[ "$1" == "--fix" ]]; then
     uvx ruff check --fix .
@@ -23,7 +23,7 @@ fi
 uvx bandit --quiet -r src tests tools
 
 if [[ "$1" == "--fix" ]]; then
-    python tools/format_json.py
+    uv run --no-project --script tools/format_json.py
 else
-    python tools/format_json.py --check-only
+    uv run --no-project --script tools/format_json.py --check-only
 fi

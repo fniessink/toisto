@@ -1,27 +1,29 @@
 {
     "concepts": {
         "first aid": {
-            "holonym": "health care",
-            "roots": "first"
+            "holonym": "health care"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "first aid",
-                "label": "first aid"
+                "label": "first aid",
+                "roots": "first"
             }
         ],
         "fi": [
             {
                 "concept": "first aid",
-                "label": "ensiapu"
+                "label": "ensiapu",
+                "roots": "ensin"
             }
         ],
         "nl": [
             {
                 "concept": "first aid",
-                "label": "de eerste hulp"
+                "label": "de eerste hulp",
+                "roots": "eerste"
             }
         ]
     }

@@ -3,13 +3,7 @@
         "without": {
             "example": "coffee without milk"
         },
-        "coffee without milk": {
-            "roots": [
-                "coffee",
-                "without",
-                "milk"
-            ]
-        }
+        "coffee without milk": {}
     },
     "labels": {
         "en": [
@@ -19,7 +13,12 @@
             },
             {
                 "concept": "coffee without milk",
-                "label": "coffee without milk"
+                "label": "coffee without milk",
+                "roots": [
+                    "coffee",
+                    "without",
+                    "milk"
+                ]
             }
         ],
         "fi": [
@@ -29,7 +28,12 @@
             },
             {
                 "concept": "coffee without milk",
-                "label": "kahvi ilman maitoa"
+                "label": "kahvi ilman maitoa",
+                "roots": [
+                    "kahvi",
+                    "ilman",
+                    "maito"
+                ]
             }
         ],
         "nl": [
@@ -39,7 +43,12 @@
             },
             {
                 "concept": "coffee without milk",
-                "label": "koffie zonder melk"
+                "label": "koffie zonder melk",
+                "roots": [
+                    "de koffie",
+                    "zonder",
+                    "de melk"
+                ]
             }
         ]
     }

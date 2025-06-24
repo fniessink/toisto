@@ -3,13 +3,7 @@
         "around": {
             "example": "they sit around the table"
         },
-        "they sit around the table": {
-            "roots": [
-                "to sit",
-                "around",
-                "table"
-            ]
-        }
+        "they sit around the table": {}
     },
     "labels": {
         "en": [
@@ -19,7 +13,12 @@
             },
             {
                 "concept": "they sit around the table",
-                "label": "They sit around the table."
+                "label": "They sit around the table.",
+                "roots": [
+                    "they sit",
+                    "around",
+                    "table"
+                ]
             }
         ],
         "fi": [
@@ -29,7 +28,12 @@
             },
             {
                 "concept": "they sit around the table",
-                "label": "He istuvat pöydän ympärillä."
+                "label": "He istuvat pöydän ympärillä.",
+                "roots": [
+                    "he istuvat",
+                    "pöytä",
+                    "ympärillä"
+                ]
             }
         ],
         "nl": [
@@ -43,11 +47,21 @@
             },
             {
                 "concept": "they sit around the table",
-                "label": "Zij zitten rond de tafel."
+                "label": "Zij zitten rond de tafel.",
+                "roots": [
+                    "zij zitten",
+                    "rond",
+                    "de tafel"
+                ]
             },
             {
                 "concept": "they sit around the table",
-                "label": "Zij zitten om de tafel."
+                "label": "Zij zitten om de tafel.",
+                "roots": [
+                    "zij zitten",
+                    "om",
+                    "de tafel"
+                ]
             }
         ]
     }

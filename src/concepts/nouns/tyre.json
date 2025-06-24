@@ -2,11 +2,7 @@
     "concepts": {
         "tyre": {},
         "wintertyre": {
-            "hypernym": "tyre",
-            "roots": [
-                "winter",
-                "tyre"
-            ]
+            "hypernym": "tyre"
         }
     },
     "labels": {
@@ -23,6 +19,10 @@
                 "label": [
                     "winter tyre",
                     "winter tire"
+                ],
+                "roots": [
+                    "winter",
+                    "tyre"
                 ]
             }
         ],
@@ -33,7 +33,11 @@
             },
             {
                 "concept": "wintertyre",
-                "label": "talvirengas"
+                "label": "talvirengas",
+                "roots": [
+                    "talvi",
+                    "rengas"
+                ]
             }
         ],
         "nl": [
@@ -43,7 +47,11 @@
             },
             {
                 "concept": "wintertyre",
-                "label": "de winterband"
+                "label": "de winterband",
+                "roots": [
+                    "de winter",
+                    "de band"
+                ]
             }
         ]
     }

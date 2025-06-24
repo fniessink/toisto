@@ -1,6 +1,6 @@
 # Toisto
 
-Toisto is an app to practice languages that runs in the [terminal](https://en.wikipedia.org/wiki/Terminal_emulator). It is developed in Python and available for Windows, Linux, MacOS, and iOS (iPhone and iPad).
+Toisto is an app to practice languages that runs in the [terminal](https://en.wikipedia.org/wiki/Terminal_emulator). It is developed in Python and available for Windows, Linux, macOS, and iOS (iPhone and iPad).
 
 *Toisto* is Finnish and means *reiteration, playback, repetition, reproduction*.
 
@@ -107,9 +107,9 @@ $ uv tool upgrade toisto
 </details>
 
 <details>
-<summary>How to install Toisto on MacOS</summary>
+<summary>How to install Toisto on macOS</summary>
 
-1. (Optional) On MacOS, Toisto works best in a more modern terminal than the default one that MacOS offers. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default MacOS terminal app, though.
+1. (Optional) On macOS, Toisto works best in a more modern terminal than the default one that macOS offers. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default macOS terminal app, though.
 
 2. Install [uv](https://docs.astral.sh/uv/#getting-started). <details><summary>What is uv?</summary>uv is a tool that can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.</details>
 
@@ -267,9 +267,9 @@ progress_update = 20
 
 ### How to configure a different mp3 player
 
-On Windows, Linux, and MacOS, Toisto uses Google Translate's text-to-speech API to convert text to speech and then plays the resulting mp3 file using an mp3 player. On iOS, Toisto uses the `say` command to convert text to speech and an mp3 player is not used.
+On Windows, Linux, and macOS, Toisto uses Google Translate's text-to-speech API to convert text to speech and then plays the resulting mp3 file using an mp3 player. On iOS, Toisto uses the `say` command to convert text to speech and an mp3 player is not used.
 
-By default, Toisto uses `afplay` on MacOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play the mp3 files.
+By default, Toisto uses `afplay` on macOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play the mp3 files.
 
 You can configure Toisto to use a different mp3 player:
 

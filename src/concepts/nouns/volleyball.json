@@ -4,28 +4,32 @@
             "example": "I play volleyball",
             "hypernym": "team sport"
         },
-        "I play volleyball": {
-            "roots": [
-                "to play a sport",
-                "volleyball"
-            ]
-        }
+        "I play volleyball": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "volleyball",
-                "label": "volleyball"
+                "label": "volleyball",
+                "roots": "ball"
             },
             {
                 "concept": "I play volleyball",
-                "label": "I play volleyball."
+                "label": "I play volleyball.",
+                "roots": [
+                    "I play",
+                    "volleyball"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "volleyball",
-                "label": "lentopallo"
+                "label": "lentopallo",
+                "roots": [
+                    "lento",
+                    "pallo"
+                ]
             },
             {
                 "concept": "volleyball",
@@ -34,7 +38,11 @@
             },
             {
                 "concept": "I play volleyball",
-                "label": "Minä pelaan lentopalloa."
+                "label": "Minä pelaan lentopalloa.",
+                "roots": [
+                    "minä pelaan",
+                    "lentopallo"
+                ]
             },
             {
                 "concept": "I play volleyball",
@@ -45,11 +53,16 @@
         "nl": [
             {
                 "concept": "volleyball",
-                "label": "het volleybal"
+                "label": "het volleybal",
+                "roots": "de bal"
             },
             {
                 "concept": "I play volleyball",
-                "label": "Ik speel volleybal."
+                "label": "Ik speel volleybal.",
+                "roots": [
+                    "ik speel",
+                    "het volleybal"
+                ]
             }
         ]
     }

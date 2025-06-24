@@ -1,13 +1,7 @@
 {
     "concepts": {
         "september": {
-            "hypernym": "month",
-            "roots": {
-                "fi": [
-                    "autumn",
-                    "moon"
-                ]
-            }
+            "hypernym": "month"
         }
     },
     "labels": {
@@ -22,7 +16,8 @@
             {
                 "concept": "september",
                 "label": "syyskuu",
-                "note": "In Finnish, names of months are not capitalized"
+                "note": "In Finnish, names of months are not capitalized",
+                "roots": "kuu"
             }
         ],
         "nl": [

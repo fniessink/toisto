@@ -3,11 +3,7 @@
         "lamp": {},
         "table lamp": {
             "example": "I am looking for a table lamp",
-            "hypernym": "lamp",
-            "roots": [
-                "table",
-                "lamp"
-            ]
+            "hypernym": "lamp"
         },
         "standing lamp": {
             "hypernym": "lamp"
@@ -24,11 +20,16 @@
             },
             {
                 "concept": "table lamp",
-                "label": "table lamp"
+                "label": "table lamp",
+                "roots": [
+                    "table",
+                    "lamp"
+                ]
             },
             {
                 "concept": "standing lamp",
-                "label": "standing lamp"
+                "label": "standing lamp",
+                "roots": "lamp"
             }
         ],
         "fi": [
@@ -48,15 +49,27 @@
             },
             {
                 "concept": "table lamp",
-                "label": "pöytälamppu"
+                "label": "pöytälamppu",
+                "roots": [
+                    "pöytä",
+                    "lamppu"
+                ]
             },
             {
                 "concept": "table lamp",
-                "label": "pöytävalaisin"
+                "label": "pöytävalaisin",
+                "roots": [
+                    "pöytä",
+                    "valaisin"
+                ]
             },
             {
                 "concept": "standing lamp",
-                "label": "jalkalamppu"
+                "label": "jalkalamppu",
+                "roots": [
+                    "jalka",
+                    "lamppu"
+                ]
             }
         ],
         "nl": [
@@ -69,11 +82,16 @@
             },
             {
                 "concept": "table lamp",
-                "label": "de tafellamp"
+                "label": "de tafellamp",
+                "roots": [
+                    "de tafel",
+                    "de lamp"
+                ]
             },
             {
                 "concept": "standing lamp",
-                "label": "de staande lamp"
+                "label": "de staande lamp",
+                "roots": "de lamp"
             }
         ]
     }

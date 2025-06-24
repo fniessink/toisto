@@ -1,11 +1,7 @@
 {
     "concepts": {
         "Kansaneläkelaitos": {},
-        "Kela-kortti": {
-            "roots": {
-                "fi": "Kansaneläkelaitos"
-            }
-        }
+        "Kela-kortti": {}
     },
     "labels": {
         "en": [
@@ -24,7 +20,11 @@
             },
             {
                 "concept": "Kela-kortti",
-                "label": "Kela-kortti"
+                "label": "Kela-kortti",
+                "roots": [
+                    "Kela",
+                    "kortti"
+                ]
             }
         ],
         "nl": [

@@ -1,9 +1,7 @@
 {
     "concepts": {
         "metre": {},
-        "square metre": {
-            "roots": "metre"
-        }
+        "square metre": {}
     },
     "labels": {
         "en": [
@@ -25,6 +23,10 @@
                 "label": [
                     "square metre",
                     "square meter"
+                ],
+                "roots": [
+                    "square",
+                    "metre"
                 ]
             }
         ],
@@ -38,12 +40,17 @@
             },
             {
                 "concept": "square metre",
-                "label": "neliömetri"
+                "label": "neliömetri",
+                "roots": [
+                    "neljä",
+                    "metri"
+                ]
             },
             {
                 "concept": "square metre",
                 "label": "neliö",
-                "colloquial": true
+                "colloquial": true,
+                "roots": "neljä"
             }
         ],
         "nl": [
@@ -56,7 +63,8 @@
             },
             {
                 "concept": "square metre",
-                "label": "de vierkante meter"
+                "label": "de vierkante meter",
+                "roots": "de meter"
             }
         ]
     }

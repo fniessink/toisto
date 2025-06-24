@@ -2,8 +2,7 @@
     "concepts": {
         "signature": {},
         "digital signature": {
-            "hypernym": "signature",
-            "roots": "signature"
+            "hypernym": "signature"
         }
     },
     "labels": {
@@ -14,7 +13,8 @@
             },
             {
                 "concept": "digital signature",
-                "label": "digital signature"
+                "label": "digital signature",
+                "roots": "signature"
             }
         ],
         "fi": [
@@ -24,17 +24,23 @@
             },
             {
                 "concept": "digital signature",
-                "label": "sähköinen allekirjoitus"
+                "label": "sähköinen allekirjoitus",
+                "roots": "allekirjoitus"
             }
         ],
         "nl": [
             {
                 "concept": "signature",
-                "label": "de handtekening"
+                "label": "de handtekening",
+                "roots": [
+                    "de hand",
+                    "de tekening"
+                ]
             },
             {
                 "concept": "digital signature",
-                "label": "de digitale handtekening"
+                "label": "de digitale handtekening",
+                "roots": "de handtekening"
             }
         ]
     }

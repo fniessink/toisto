@@ -7,46 +7,13 @@
             "hypernym": "grandparent"
         },
         "grandmother": {
-            "hypernym": "grandparent",
-            "roots": {
-                "en": "mother",
-                "fi": [
-                    "big",
-                    "mother"
-                ],
-                "nl": [
-                    "big",
-                    "mother"
-                ]
-            }
+            "hypernym": "grandparent"
         },
         "grandfather": {
-            "hypernym": "grandparent",
-            "roots": {
-                "en": "father",
-                "fi": [
-                    "big",
-                    "father"
-                ],
-                "nl": [
-                    "big",
-                    "father"
-                ]
-            }
+            "hypernym": "grandparent"
         },
         "grandparent": {
-            "holonym": "family",
-            "roots": {
-                "en": "parent",
-                "fi": [
-                    "big",
-                    "parent"
-                ],
-                "nl": [
-                    "big",
-                    "parent"
-                ]
-            }
+            "holonym": "family"
         }
     },
     "labels": {
@@ -67,15 +34,18 @@
             },
             {
                 "concept": "grandmother",
-                "label": "grandmother"
+                "label": "grandmother",
+                "roots": "mother"
             },
             {
                 "concept": "grandfather",
-                "label": "grandfather"
+                "label": "grandfather",
+                "roots": "father"
             },
             {
                 "concept": "grandparent",
-                "label": "grandparent"
+                "label": "grandparent",
+                "roots": "parent"
             }
         ],
         "fi": [
@@ -109,15 +79,27 @@
             },
             {
                 "concept": "grandmother",
-                "label": "isoäiti"
+                "label": "isoäiti",
+                "roots": [
+                    "iso",
+                    "äiti"
+                ]
             },
             {
                 "concept": "grandfather",
-                "label": "isoisä"
+                "label": "isoisä",
+                "roots": [
+                    "iso",
+                    "isä"
+                ]
             },
             {
                 "concept": "grandparent",
-                "label": "isovanhempi"
+                "label": "isovanhempi",
+                "roots": [
+                    "iso",
+                    "vanhempi"
+                ]
             }
         ],
         "nl": [
@@ -137,15 +119,27 @@
             },
             {
                 "concept": "grandmother",
-                "label": "de grootmoeder"
+                "label": "de grootmoeder",
+                "roots": [
+                    "groot",
+                    "de moeder"
+                ]
             },
             {
                 "concept": "grandfather",
-                "label": "de grootvader"
+                "label": "de grootvader",
+                "roots": [
+                    "groot",
+                    "de vader"
+                ]
             },
             {
                 "concept": "grandparent",
-                "label": "de grootouder"
+                "label": "de grootouder",
+                "roots": [
+                    "groot",
+                    "de ouder"
+                ]
             }
         ]
     }

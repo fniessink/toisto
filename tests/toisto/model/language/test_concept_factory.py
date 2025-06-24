@@ -2,7 +2,7 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept
-from toisto.model.language.label import Label
+from toisto.model.language.label import Label, Labels
 
 from ....base import LabelDict, ToistoTestCase
 
@@ -74,46 +74,51 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_roots(self):
         """Test that a concept can have roots."""
-        concept = self.create_concept(
+        mall = self.create_concept(
             "mall",
-            {"roots": ["shop", "centre"]},
-            labels=[{"label": "kauppakeskus", "language": FI}, {"label": "het winkelcentrum", "language": NL}],
+            labels=[{"label": "kauppakeskus", "language": FI, "roots": ["kauppa", "keskusta"]}],
         )
         shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
         centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
-        self.assertEqual((shop, centre), concept.roots(FI))
-        self.assertEqual((concept,), shop.compounds(FI))
+        self.assertEqual((shop, centre), mall.roots(FI))
+        self.assertEqual((mall,), shop.compounds(FI))
 
-    def test_language_specific_roots(self):
-        """Test that a concept can have a root in one language but not in another."""
-        decade = self.create_concept(
-            "decade",
-            {"roots": {"fi": "year"}},
-            labels=[{"label": "vuosikymmen", "language": FI}, {"label": "decade", "language": EN}],
+    def test_label_roots(self):
+        """Test that a concept can have a label with roots."""
+        concept = self.create_concept(
+            "kitchen table",
+            labels=[{"label": "de keukentafel", "language": NL, "roots": ["de keuken", "de tafel"]}],
         )
-        year = self.create_concept("year", labels=[{"label": "vuosi", "language": FI}])
-        self.assertEqual((year,), decade.roots(FI))
-        self.assertEqual((), decade.roots(EN))
+        self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), concept.labels(NL)[0].roots)
+
+    def test_composite_concept_label_roots(self):
+        """Test thst a composite concept can have labels with roots."""
+        concept = self.create_concept(
+            "kitchen table",
+            labels=[
+                {
+                    "label": {"singular": "de keukentafel", "plural": "de keukentafels"},
+                    "language": NL,
+                    "roots": ["de keuken", "de tafel"],
+                }
+            ],
+        )
+        for constituent in concept.constituents:
+            self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), constituent.labels(NL)[0].roots)
 
     def test_roots_are_recursive(self):
         """Test that the roots of a concept are recursive."""
         diner_table_chair = self.create_concept(
             "diner table chair",
-            {"roots": ["diner table", "chair"]},
-            labels=[{"label": "diner table chair", "language": EN}, {"label": "de eettafelstoel", "language": NL}],
+            labels=[{"label": "de eettafelstoel", "language": NL, "roots": ["de eettafel", "de stoel"]}],
         )
         diner_table = self.create_concept(
             "diner table",
-            {"roots": "table"},
-            labels=[{"label": "diner table", "language": EN}, {"label": "de eettafel", "language": NL}],
+            labels=[{"label": "de eettafel", "language": NL, "roots": ["de tafel"]}],
         )
-        chair = self.create_concept(
-            "chair", labels=[{"label": "chair", "language": EN}, {"label": "de stoel", "language": NL}]
-        )
-        table = self.create_concept(
-            "table", labels=[{"label": "table", "language": EN}, {"label": "de tafel", "language": NL}]
-        )
-        self.assertEqual((diner_table, chair, table), diner_table_chair.roots(EN))
+        chair = self.create_concept("chair", labels=[{"label": "de stoel", "language": NL}])
+        table = self.create_concept("table", labels=[{"label": "de tafel", "language": NL}])
+        self.assertEqual((diner_table, table, chair), diner_table_chair.roots(NL))
 
     def test_homograph(self):
         """Test that a concept can have a homograph concept."""

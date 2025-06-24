@@ -1,18 +1,6 @@
 {
     "concepts": {
-        "how do you spell that": {
-            "roots": {
-                "en": "how",
-                "fi": [
-                    "how",
-                    "to write"
-                ],
-                "nl": [
-                    "how",
-                    "to write"
-                ]
-            }
-        }
+        "how do you spell that": {}
     },
     "labels": {
         "en": [
@@ -24,13 +12,15 @@
         "fi": [
             {
                 "concept": "how do you spell that",
-                "label": "Miten se kirjoitetaan?"
+                "label": "Miten se kirjoitetaan?",
+                "roots": "kirjoittaa"
             }
         ],
         "nl": [
             {
                 "concept": "how do you spell that",
-                "label": "Hoe schrijf je dat?"
+                "label": "Hoe schrijf je dat?",
+                "roots": "schrijven"
             }
         ]
     }

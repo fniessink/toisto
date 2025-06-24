@@ -1,10 +1,7 @@
 {
     "concepts": {
         "shank": {
-            "holonym": "leg",
-            "roots": {
-                "nl": "leg"
-            }
+            "holonym": "leg"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
         "nl": [
             {
                 "concept": "shank",
-                "label": "het onderbeen"
+                "label": "het onderbeen",
+                "roots": "het been"
             }
         ]
     }

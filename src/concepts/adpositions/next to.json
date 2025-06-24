@@ -3,14 +3,7 @@
         "next to": {
             "example": "the museum is next to the church"
         },
-        "the museum is next to the church": {
-            "roots": [
-                "museum",
-                "to be",
-                "next to",
-                "church"
-            ]
-        }
+        "the museum is next to the church": {}
     },
     "labels": {
         "en": [
@@ -20,7 +13,12 @@
             },
             {
                 "concept": "the museum is next to the church",
-                "label": "The museum is next to the church."
+                "label": "The museum is next to the church.",
+                "roots": [
+                    "museum",
+                    "next to",
+                    "church"
+                ]
             }
         ],
         "fi": [
@@ -30,7 +28,12 @@
             },
             {
                 "concept": "the museum is next to the church",
-                "label": "Museo on kirkon vieressä."
+                "label": "Museo on kirkon vieressä.",
+                "roots": [
+                    "museo",
+                    "kirkko",
+                    "vieressä"
+                ]
             }
         ],
         "nl": [
@@ -40,7 +43,12 @@
             },
             {
                 "concept": "the museum is next to the church",
-                "label": "Het museum is naast de kerk."
+                "label": "Het museum is naast de kerk.",
+                "roots": [
+                    "het museum",
+                    "naast",
+                    "de kerk"
+                ]
             }
         ]
     }

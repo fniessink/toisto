@@ -3,12 +3,7 @@
         "to spend (time)": {
             "example": "We spend Easter at home"
         },
-        "We spend Easter at home": {
-            "roots": [
-                "to spend (time)",
-                "easter"
-            ]
-        }
+        "We spend Easter at home": {}
     },
     "labels": {
         "en": [
@@ -18,7 +13,11 @@
             },
             {
                 "concept": "We spend Easter at home",
-                "label": "We spend Easter at home."
+                "label": "We spend Easter at home.",
+                "roots": [
+                    "to spend",
+                    "Easter"
+                ]
             }
         ],
         "fi": [
@@ -28,7 +27,11 @@
             },
             {
                 "concept": "We spend Easter at home",
-                "label": "Me vietämme pääsiäistä kotona."
+                "label": "Me vietämme pääsiäistä kotona.",
+                "roots": [
+                    "viettää",
+                    "pääsiäinen"
+                ]
             }
         ],
         "nl": [
@@ -38,7 +41,11 @@
             },
             {
                 "concept": "We spend Easter at home",
-                "label": "We brengen Pasen thuis door."
+                "label": "We brengen Pasen thuis door.",
+                "roots": [
+                    "doorbrengen",
+                    "Pasen"
+                ]
             }
         ]
     }

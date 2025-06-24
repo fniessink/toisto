@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "statue": {
-            "roots": {
-                "nl": "sculpture"
-            }
-        }
+        "statue": {}
     },
     "labels": {
         "en": [
@@ -31,7 +27,8 @@
                 "label": {
                     "singular": "het standbeeld",
                     "plural": "de standbeelden"
-                }
+                },
+                "roots": "het beeld"
             }
         ]
     }

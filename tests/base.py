@@ -68,6 +68,7 @@ LabelDict = TypedDict(
         "language": Required[Language],
         "meaning-only": bool,
         "note": str | list[str],
+        "roots": str | list[str],
         "tip": str,
     },
     total=False,
