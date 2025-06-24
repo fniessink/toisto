@@ -1,17 +1,6 @@
 {
     "concepts": {
-        "mnemonic": {
-            "roots": {
-                "fi": [
-                    "memory",
-                    "rule"
-                ],
-                "nl": [
-                    "donkey",
-                    "bridge"
-                ]
-            }
-        }
+        "mnemonic": {}
     },
     "labels": {
         "en": [
@@ -23,13 +12,21 @@
         "fi": [
             {
                 "concept": "mnemonic",
-                "label": "muistisääntö"
+                "label": "muistisääntö",
+                "roots": [
+                    "muisti",
+                    "sääntö"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "mnemonic",
-                "label": "het ezelsbruggetje"
+                "label": "het ezelsbruggetje",
+                "roots": [
+                    "de ezel",
+                    "de brug"
+                ]
             }
         ]
     }

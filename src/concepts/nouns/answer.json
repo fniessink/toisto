@@ -1,10 +1,7 @@
 {
     "concepts": {
         "answer": {
-            "antonym": "question",
-            "roots": {
-                "nl": "word"
-            }
+            "antonym": "question"
         }
     },
     "labels": {
@@ -32,7 +29,8 @@
                 "label": {
                     "singular": "het antwoord",
                     "plural": "de antwoorden"
-                }
+                },
+                "roots": "het woord"
             }
         ]
     }

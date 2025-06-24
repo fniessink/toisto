@@ -4,11 +4,7 @@
             "hypernym": "sport"
         },
         "winter swimming": {
-            "hypernym": "swimming",
-            "roots": [
-                "winter",
-                "swimming"
-            ]
+            "hypernym": "swimming"
         }
     },
     "labels": {
@@ -19,7 +15,11 @@
             },
             {
                 "concept": "winter swimming",
-                "label": "winter swimming"
+                "label": "winter swimming",
+                "roots": [
+                    "winter",
+                    "to swim"
+                ]
             }
         ],
         "fi": [
@@ -29,7 +29,11 @@
             },
             {
                 "concept": "winter swimming",
-                "label": "talviuinti"
+                "label": "talviuinti",
+                "roots": [
+                    "talvi",
+                    "uinti"
+                ]
             }
         ],
         "nl": [
@@ -39,7 +43,11 @@
             },
             {
                 "concept": "winter swimming",
-                "label": "het winterzwemmen"
+                "label": "het winterzwemmen",
+                "roots": [
+                    "de winter",
+                    "het zwemmen"
+                ]
             }
         ]
     }

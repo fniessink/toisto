@@ -1,42 +1,12 @@
 {
     "concepts": {
         "to want": {},
-        "i want coffee": {
-            "roots": [
-                "to want",
-                "coffee"
-            ]
-        },
-        "you want milk": {
-            "roots": [
-                "to want",
-                "milk"
-            ]
-        },
-        "she wants ice cream": {
-            "roots": [
-                "to want",
-                "ice cream"
-            ]
-        },
-        "we want cake": {
-            "roots": [
-                "to want",
-                "cake"
-            ]
-        },
-        "you want sugar": {
-            "roots": [
-                "to want",
-                "sugar"
-            ]
-        },
-        "they want a cookie": {
-            "roots": [
-                "to want",
-                "cookie"
-            ]
-        }
+        "i want coffee": {},
+        "you want milk": {},
+        "she wants ice cream": {},
+        "we want cake": {},
+        "you want sugar": {},
+        "they want a cookie": {}
     },
     "labels": {
         "en": [
@@ -61,29 +31,52 @@
             },
             {
                 "concept": "i want coffee",
-                "label": "I want coffee."
+                "label": "I want coffee.",
+                "roots": [
+                    "I want",
+                    "coffee"
+                ]
             },
             {
                 "concept": "you want milk",
                 "label": "You want milk.",
-                "tip": "singular"
+                "roots": [
+                    "you want",
+                    "milk"
+                ]
             },
             {
                 "concept": "she wants ice cream",
-                "label": "She wants ice cream."
+                "label": "She wants ice cream.",
+                "roots": [
+                    "she wants",
+                    "ice cream"
+                ]
             },
             {
                 "concept": "we want cake",
-                "label": "We want cake."
+                "label": "We want cake.",
+                "roots": [
+                    "we want",
+                    "cake"
+                ]
             },
             {
                 "concept": "you want sugar",
                 "label": "You want sugar.",
-                "tip": "plural"
+                "tip": "plural",
+                "roots": [
+                    "you want",
+                    "sugar"
+                ]
             },
             {
                 "concept": "they want a cookie",
-                "label": "They want a cookie."
+                "label": "They want a cookie.",
+                "roots": [
+                    "they want",
+                    "cookie"
+                ]
             }
         ],
         "fi": [
@@ -110,32 +103,56 @@
                     "Minä haluan kahvia.",
                     "Haluan kahvia."
                 ],
+                "roots": [
+                    "minä haluan",
+                    "kahvi"
+                ],
                 "note": "'kahvia' is the partitive case of 'kahvi'"
             },
             {
                 "concept": "you want milk",
                 "label": "Sinä haluat maitoa.",
+                "roots": [
+                    "sinä haluat",
+                    "maito"
+                ],
                 "note": "'maitoa' is the partitive case of 'maito'"
             },
             {
                 "concept": "she wants ice cream",
                 "label": "Hän haluaa jäätelöä.",
+                "roots": [
+                    "hän haluaa",
+                    "jäätelö"
+                ],
                 "note": "'jäätelöä is the partitive case of 'jäätelö'",
                 "tip": "feminine"
             },
             {
                 "concept": "we want cake",
                 "label": "Me haluamme kakkua.",
+                "roots": [
+                    "me haluamme",
+                    "kakku"
+                ],
                 "note": "'kakkua' is the partitive case of 'kakku'"
             },
             {
                 "concept": "you want sugar",
                 "label": "Te haluatte sokeria.",
+                "roots": [
+                    "te haluatte",
+                    "sokeri"
+                ],
                 "note": "'sokeria' is the partitive case of 'sokeri'"
             },
             {
                 "concept": "they want a cookie",
                 "label": "He haluavat keksiä.",
+                "roots": [
+                    "he haluavat",
+                    "keksi"
+                ],
                 "note": "'keksiä' is the partitive case of 'keksi'"
             }
         ],
@@ -164,30 +181,54 @@
             },
             {
                 "concept": "i want coffee",
-                "label": "Ik wil koffie."
+                "label": "Ik wil koffie.",
+                "roots": [
+                    "ik wil",
+                    "de koffie"
+                ]
             },
             {
                 "concept": "you want milk",
                 "label": [
                     "Jij wilt melk.",
                     "Jij wil melk."
+                ],
+                "roots": [
+                    "jij wilt",
+                    "de melk"
                 ]
             },
             {
                 "concept": "she wants ice cream",
-                "label": "Zij wil ijs."
+                "label": "Zij wil ijs.",
+                "roots": [
+                    "zij wil",
+                    "het ijs"
+                ]
             },
             {
                 "concept": "we want cake",
-                "label": "Wij willen taart."
+                "label": "Wij willen taart.",
+                "roots": [
+                    "wij willen",
+                    "de taart"
+                ]
             },
             {
                 "concept": "you want sugar",
-                "label": "Jullie willen suiker."
+                "label": "Jullie willen suiker.",
+                "roots": [
+                    "jullie willen",
+                    "de suiker"
+                ]
             },
             {
                 "concept": "they want a cookie",
-                "label": "Zij willen een koekje."
+                "label": "Zij willen een koekje.",
+                "roots": [
+                    "zij willen",
+                    "het koekje"
+                ]
             }
         ]
     }

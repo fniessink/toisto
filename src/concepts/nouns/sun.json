@@ -5,12 +5,8 @@
             "holonym": "solar system",
             "hypernym": "star"
         },
-        "sunset": {
-            "roots": "sun"
-        },
-        "the sun shines": {
-            "roots": "sun"
-        }
+        "sunset": {},
+        "the sun shines": {}
     },
     "labels": {
         "en": [
@@ -20,15 +16,18 @@
             },
             {
                 "concept": "sunset",
-                "label": "sunset"
+                "label": "sunset",
+                "roots": "sun"
             },
             {
                 "concept": "sunset",
-                "label": "sundown"
+                "label": "sundown",
+                "roots": "sun"
             },
             {
                 "concept": "the sun shines",
-                "label": "The sun shines."
+                "label": "The sun shines.",
+                "roots": "sun"
             }
         ],
         "fi": [
@@ -38,11 +37,13 @@
             },
             {
                 "concept": "sunset",
-                "label": "auringonlasku"
+                "label": "auringonlasku",
+                "roots": "aurinko"
             },
             {
                 "concept": "the sun shines",
-                "label": "Aurinko paistaa."
+                "label": "Aurinko paistaa.",
+                "roots": "aurinko"
             }
         ],
         "nl": [
@@ -52,11 +53,13 @@
             },
             {
                 "concept": "sunset",
-                "label": "de zonsondergang"
+                "label": "de zonsondergang",
+                "roots": "de zon"
             },
             {
                 "concept": "the sun shines",
-                "label": "De zon schijnt."
+                "label": "De zon schijnt.",
+                "roots": "de zon"
             }
         ]
     }

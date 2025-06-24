@@ -1,27 +1,29 @@
 {
     "concepts": {
         "evening allowance": {
-            "hypernym": "salary",
-            "roots": "evening"
+            "hypernym": "salary"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "evening allowance",
-                "label": "evening allowance"
+                "label": "evening allowance",
+                "roots": "evening"
             }
         ],
         "fi": [
             {
                 "concept": "evening allowance",
-                "label": "iltalisä"
+                "label": "iltalisä",
+                "roots": "ilta"
             }
         ],
         "nl": [
             {
                 "concept": "evening allowance",
-                "label": "de avondtoeslag"
+                "label": "de avondtoeslag",
+                "roots": "de avond"
             }
         ]
     }

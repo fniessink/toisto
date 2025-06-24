@@ -3,21 +3,7 @@
         "chair": {},
         "office chair": {
             "example": "we are looking for an office chair",
-            "hypernym": "chair",
-            "roots": {
-                "en": [
-                    "office",
-                    "chair"
-                ],
-                "fi": [
-                    "job",
-                    "chair"
-                ],
-                "nl": [
-                    "desk",
-                    "chair"
-                ]
-            }
+            "hypernym": "chair"
         }
     },
     "labels": {
@@ -31,7 +17,11 @@
             },
             {
                 "concept": "office chair",
-                "label": "office chair"
+                "label": "office chair",
+                "roots": [
+                    "office",
+                    "chair"
+                ]
             }
         ],
         "fi": [
@@ -44,7 +34,11 @@
             },
             {
                 "concept": "office chair",
-                "label": "työtuoli"
+                "label": "työtuoli",
+                "roots": [
+                    "työ",
+                    "tuoli"
+                ]
             }
         ],
         "nl": [
@@ -57,7 +51,11 @@
             },
             {
                 "concept": "office chair",
-                "label": "de bureaustoel"
+                "label": "de bureaustoel",
+                "roots": [
+                    "het bureau",
+                    "de stoel"
+                ]
             }
         ]
     }

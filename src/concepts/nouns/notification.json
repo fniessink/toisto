@@ -1,12 +1,7 @@
 {
     "concepts": {
         "notification": {},
-        "moving notice": {
-            "roots": {
-                "fi": "notification",
-                "nl": "notification"
-            }
-        }
+        "moving notice": {}
     },
     "labels": {
         "en": [
@@ -26,7 +21,8 @@
             },
             {
                 "concept": "moving notice",
-                "label": "muuttoilmoitus"
+                "label": "muuttoilmoitus",
+                "roots": "ilmoitus"
             }
         ],
         "nl": [
@@ -40,7 +36,8 @@
             },
             {
                 "concept": "moving notice",
-                "label": "het verhuisbericht"
+                "label": "het verhuisbericht",
+                "roots": "het bericht"
             }
         ]
     }

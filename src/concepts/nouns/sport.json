@@ -9,12 +9,10 @@
             "involves": "team"
         },
         "sports club": {
-            "involves": "sport",
-            "roots": "sport"
+            "involves": "sport"
         },
         "sports fan": {
-            "involves": "sport",
-            "roots": "sport"
+            "involves": "sport"
         }
     },
     "labels": {
@@ -25,19 +23,32 @@
             },
             {
                 "concept": "spectator sport",
-                "label": "spectator sport"
+                "label": "spectator sport",
+                "roots": [
+                    "spectator",
+                    "sport"
+                ]
             },
             {
                 "concept": "team sport",
-                "label": "team sport"
+                "label": "team sport",
+                "roots": [
+                    "team",
+                    "sport"
+                ]
             },
             {
                 "concept": "sports club",
-                "label": "sports club"
+                "label": "sports club",
+                "roots": [
+                    "sport",
+                    "club"
+                ]
             },
             {
                 "concept": "sports fan",
-                "label": "sports fan"
+                "label": "sports fan",
+                "roots": "sport"
             }
         ],
         "fi": [
@@ -51,23 +62,31 @@
             },
             {
                 "concept": "spectator sport",
-                "label": "penkkiurheilu"
+                "label": "penkkiurheilu",
+                "roots": "urheilu"
             },
             {
                 "concept": "team sport",
-                "label": "joukkuelaji"
+                "label": "joukkuelaji",
+                "roots": "joukkue"
             },
             {
                 "concept": "team sport",
-                "label": "joukkueurheilu"
+                "label": "joukkueurheilu",
+                "roots": [
+                    "joukkue",
+                    "urheilu"
+                ]
             },
             {
                 "concept": "sports club",
-                "label": "urheiluseura"
+                "label": "urheiluseura",
+                "roots": "urheilu"
             },
             {
                 "concept": "sports fan",
-                "label": "penkkiurheilija"
+                "label": "penkkiurheilija",
+                "roots": "urheilu"
             }
         ],
         "nl": [
@@ -81,19 +100,32 @@
             },
             {
                 "concept": "spectator sport",
-                "label": "de kijksport"
+                "label": "de kijksport",
+                "roots": [
+                    "kijken",
+                    "de sport"
+                ]
             },
             {
                 "concept": "team sport",
-                "label": "de teamsport"
+                "label": "de teamsport",
+                "roots": [
+                    "het team",
+                    "de sport"
+                ]
             },
             {
                 "concept": "sports club",
-                "label": "de sportclub"
+                "label": "de sportclub",
+                "roots": [
+                    "de sport",
+                    "de club"
+                ]
             },
             {
                 "concept": "sports fan",
-                "label": "de sportfan"
+                "label": "de sportfan",
+                "roots": "de sport"
             }
         ]
     }

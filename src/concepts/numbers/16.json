@@ -1,11 +1,7 @@
 {
     "concepts": {
         "16": {
-            "hypernym": "number",
-            "roots": [
-                "6",
-                "10"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,8 @@
                 "label": {
                     "cardinal": "sixteen",
                     "ordinal": "sixteenth"
-                }
+                },
+                "roots": "six"
             }
         ],
         "fi": [
@@ -24,7 +21,8 @@
                 "label": {
                     "cardinal": "kuusitoista",
                     "ordinal": "kuudestoista"
-                }
+                },
+                "roots": "kuusi"
             },
             {
                 "concept": "16",
@@ -41,7 +39,11 @@
                 "label": {
                     "cardinal": "zestien",
                     "ordinal": "zestiende"
-                }
+                },
+                "roots": [
+                    "zes",
+                    "tien"
+                ]
             }
         ]
     }

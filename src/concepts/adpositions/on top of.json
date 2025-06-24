@@ -3,24 +3,7 @@
         "on top of": {
             "example": "the lamp is on top of the cabinet"
         },
-        "the lamp is on top of the cabinet": {
-            "roots": {
-                "en": [
-                    "lamp",
-                    "to be",
-                    "on top of"
-                ],
-                "nl": [
-                    "lamp",
-                    "on top of"
-                ],
-                "fi": [
-                    "lamp",
-                    "to be",
-                    "on top of"
-                ]
-            }
-        }
+        "the lamp is on top of the cabinet": {}
     },
     "labels": {
         "en": [
@@ -30,7 +13,12 @@
             },
             {
                 "concept": "the lamp is on top of the cabinet",
-                "label": "The lamp is on top of the cabinet."
+                "label": "The lamp is on top of the cabinet.",
+                "roots": [
+                    "lamp",
+                    "on top of",
+                    "cabinet"
+                ]
             }
         ],
         "fi": [
@@ -40,7 +28,12 @@
             },
             {
                 "concept": "the lamp is on top of the cabinet",
-                "label": "Lamppu on kaapin päällä."
+                "label": "Lamppu on kaapin päällä.",
+                "roots": [
+                    "lamppu",
+                    "kaappi",
+                    "päällä"
+                ]
             }
         ],
         "nl": [
@@ -50,7 +43,12 @@
             },
             {
                 "concept": "the lamp is on top of the cabinet",
-                "label": "De lamp staat op de kast."
+                "label": "De lamp staat op de kast.",
+                "roots": [
+                    "de lamp",
+                    "op",
+                    "de kast"
+                ]
             }
         ]
     }

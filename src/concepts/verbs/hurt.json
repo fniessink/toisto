@@ -1,13 +1,6 @@
 {
     "concepts": {
-        "to hurt": {
-            "roots": {
-                "nl": [
-                    "to do",
-                    "pain"
-                ]
-            }
-        }
+        "to hurt": {}
     },
     "labels": {
         "en": [
@@ -67,7 +60,11 @@
                         "second person": "jullie doen pijn",
                         "third person": "zij doen pijn"
                     }
-                }
+                },
+                "roots": [
+                    "de pijn",
+                    "doen"
+                ]
             }
         ]
     }

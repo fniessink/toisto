@@ -4,11 +4,7 @@
             "hypernym": "means of transportation"
         },
         "dining car": {
-            "holonym": "train",
-            "roots": {
-                "en": "car",
-                "fi": "wagon"
-            }
+            "holonym": "train"
         }
     },
     "labels": {
@@ -22,7 +18,8 @@
             },
             {
                 "concept": "dining car",
-                "label": "dining car"
+                "label": "dining car",
+                "roots": "car"
             }
         ],
         "fi": [
@@ -35,7 +32,11 @@
             },
             {
                 "concept": "dining car",
-                "label": "ravintolavaunu"
+                "label": "ravintolavaunu",
+                "roots": [
+                    "ravintola",
+                    "vaunu"
+                ]
             }
         ],
         "nl": [
@@ -67,7 +68,8 @@
             },
             {
                 "concept": "dining car",
-                "label": "restauratiewagen"
+                "label": "restauratiewagen",
+                "roots": "de wagen"
             }
         ]
     }

@@ -33,7 +33,12 @@
             },
             {
                 "concept": "I stayed home yesterday",
-                "label": "I stayed home yesterday."
+                "label": "I stayed home yesterday.",
+                "roots": [
+                    "to stay",
+                    "home",
+                    "yesterday"
+                ]
             }
         ],
         "fi": [
@@ -59,7 +64,12 @@
             },
             {
                 "concept": "I stayed home yesterday",
-                "label": "Jäin eilen kotiin."
+                "label": "Jäin eilen kotiin.",
+                "roots": [
+                    "jäädä",
+                    "koti",
+                    "eilen"
+                ]
             }
         ],
         "nl": [
@@ -88,7 +98,12 @@
             },
             {
                 "concept": "I stayed home yesterday",
-                "label": "Ik bleef gisteren thuis."
+                "label": "Ik bleef gisteren thuis.",
+                "roots": [
+                    "blijven",
+                    "het thuis",
+                    "gisteren"
+                ]
             }
         ]
     }

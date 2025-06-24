@@ -3,18 +3,7 @@
         "table": {},
         "dining table": {
             "example": "you are looking for a dining table",
-            "hypernym": "table",
-            "roots": {
-                "en": "table",
-                "fi": [
-                    "food",
-                    "table"
-                ],
-                "nl": [
-                    "to eat",
-                    "table"
-                ]
-            }
+            "hypernym": "table"
         }
     },
     "labels": {
@@ -28,7 +17,8 @@
             },
             {
                 "concept": "dining table",
-                "label": "dining table"
+                "label": "dining table",
+                "roots": "table"
             }
         ],
         "fi": [
@@ -41,7 +31,11 @@
             },
             {
                 "concept": "dining table",
-                "label": "ruokapöytä"
+                "label": "ruokapöytä",
+                "roots": [
+                    "ruoka",
+                    "pöytä"
+                ]
             }
         ],
         "nl": [
@@ -54,7 +48,11 @@
             },
             {
                 "concept": "dining table",
-                "label": "de eettafel"
+                "label": "de eettafel",
+                "roots": [
+                    "het eten",
+                    "de tafel"
+                ]
             }
         ]
     }

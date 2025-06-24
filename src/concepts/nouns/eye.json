@@ -4,13 +4,7 @@
             "example": "you have beautiful eyes",
             "holonym": "face"
         },
-        "you have beautiful eyes": {
-            "roots": [
-                "to have",
-                "beautiful",
-                "eye"
-            ]
-        }
+        "you have beautiful eyes": {}
     },
     "labels": {
         "en": [
@@ -23,7 +17,12 @@
             },
             {
                 "concept": "you have beautiful eyes",
-                "label": "You have beautiful eyes."
+                "label": "You have beautiful eyes.",
+                "roots": [
+                    "you have",
+                    "beautiful",
+                    "eyes"
+                ]
             }
         ],
         "fi": [
@@ -36,7 +35,12 @@
             },
             {
                 "concept": "you have beautiful eyes",
-                "label": "Sinulla on kauniit silmät."
+                "label": "Sinulla on kauniit silmät.",
+                "roots": [
+                    "sinulla on",
+                    "kaunis",
+                    "silmät"
+                ]
             }
         ],
         "nl": [
@@ -49,7 +53,12 @@
             },
             {
                 "concept": "you have beautiful eyes",
-                "label": "Jij hebt mooie ogen."
+                "label": "Jij hebt mooie ogen.",
+                "roots": [
+                    "jij hebt",
+                    "mooi",
+                    "de ogen"
+                ]
             }
         ]
     }

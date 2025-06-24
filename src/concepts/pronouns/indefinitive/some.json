@@ -1,16 +1,8 @@
 {
     "concepts": {
         "some": {},
-        "somebody": {
-            "roots": {
-                "en": "some"
-            }
-        },
-        "something": {
-            "roots": {
-                "en": "some"
-            }
-        }
+        "somebody": {},
+        "something": {}
     },
     "labels": {
         "en": [
@@ -24,15 +16,27 @@
             },
             {
                 "concept": "somebody",
-                "label": "somebody"
+                "label": "somebody",
+                "roots": [
+                    "some",
+                    "body"
+                ]
             },
             {
                 "concept": "somebody",
-                "label": "someone"
+                "label": "someone",
+                "roots": [
+                    "some",
+                    "one"
+                ]
             },
             {
                 "concept": "something",
-                "label": "something"
+                "label": "something",
+                "roots": [
+                    "some",
+                    "thing"
+                ]
             }
         ],
         "fi": [

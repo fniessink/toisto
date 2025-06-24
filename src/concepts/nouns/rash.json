@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "rash": {
-            "roots": {
-                "fi": "skin"
-            }
-        }
+        "rash": {}
     },
     "labels": {
         "en": [
@@ -16,7 +12,8 @@
         "fi": [
             {
                 "concept": "rash",
-                "label": "ihottuma"
+                "label": "ihottuma",
+                "roots": "iho"
             }
         ],
         "nl": [

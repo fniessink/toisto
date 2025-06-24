@@ -1,44 +1,43 @@
 {
     "concepts": {
-        "who are you": {
-            "roots": [
-                "who",
-                "to be"
-            ]
-        },
-        "I am alice": {
-            "roots": "to be"
-        }
+        "who are you": {},
+        "I am alice": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "who are you",
-                "label": "Who are you?"
+                "label": "Who are you?",
+                "roots": "are you?"
             },
             {
                 "concept": "I am alice",
-                "label": "I am Alice."
+                "label": "I am Alice.",
+                "roots": "I am"
             }
         ],
         "fi": [
             {
                 "concept": "who are you",
-                "label": "Kuka sinä olet?"
+                "label": "Kuka sinä olet?",
+                "roots": "sinä olet"
             },
             {
                 "concept": "I am alice",
-                "label": "Minä olen Alice."
+                "label": "Minä olen Alice.",
+                "roots": "minä olen"
             }
         ],
         "nl": [
             {
                 "concept": "who are you",
-                "label": "Wie ben jij?"
+                "label": "Wie ben jij?",
+                "roots": "ben jij?"
             },
             {
                 "concept": "I am alice",
-                "label": "Ik ben Alice."
+                "label": "Ik ben Alice.",
+                "roots": "ik ben"
             }
         ]
     }

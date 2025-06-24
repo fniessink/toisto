@@ -1,34 +1,12 @@
 {
     "concepts": {
         "wedding": {},
-        "wedding couple": {
-            "roots": {
-                "en": "wedding",
-                "fi": "wedding"
-            }
-        },
+        "wedding couple": {},
         "wedding dress": {
-            "hypernym": "dress",
-            "roots": {
-                "en": [
-                    "wedding",
-                    "dress"
-                ],
-                "fi": [
-                    "wedding",
-                    "suit"
-                ],
-                "nl": "dress"
-            }
+            "hypernym": "dress"
         },
-        "wedding ring": {
-            "roots": {
-                "en": "wedding"
-            }
-        },
-        "wedding waltz": {
-            "roots": "wedding"
-        }
+        "wedding ring": {},
+        "wedding waltz": {}
     },
     "labels": {
         "en": [
@@ -38,19 +16,26 @@
             },
             {
                 "concept": "wedding couple",
-                "label": "wedding couple"
+                "label": "wedding couple",
+                "roots": "wedding"
             },
             {
                 "concept": "wedding dress",
-                "label": "wedding dress"
+                "label": "wedding dress",
+                "roots": [
+                    "wedding",
+                    "dress"
+                ]
             },
             {
                 "concept": "wedding ring",
-                "label": "wedding ring"
+                "label": "wedding ring",
+                "roots": "wedding"
             },
             {
                 "concept": "wedding waltz",
-                "label": "wedding waltz"
+                "label": "wedding waltz",
+                "roots": "wedding"
             }
         ],
         "fi": [
@@ -60,11 +45,19 @@
             },
             {
                 "concept": "wedding couple",
-                "label": "hääpari"
+                "label": "hääpari",
+                "roots": [
+                    "häät",
+                    "pari"
+                ]
             },
             {
                 "concept": "wedding dress",
-                "label": "hääpuku"
+                "label": "hääpuku",
+                "roots": [
+                    "häät",
+                    "puku"
+                ]
             },
             {
                 "concept": "wedding ring",
@@ -72,7 +65,8 @@
             },
             {
                 "concept": "wedding waltz",
-                "label": "häävalssi"
+                "label": "häävalssi",
+                "roots": "häät"
             }
         ],
         "nl": [
@@ -86,11 +80,13 @@
             },
             {
                 "concept": "wedding couple",
-                "label": "het bruidspaar"
+                "label": "het bruidspaar",
+                "roots": "het paar"
             },
             {
                 "concept": "wedding dress",
-                "label": "de bruidsjurk"
+                "label": "de bruidsjurk",
+                "roots": "de jurk"
             },
             {
                 "concept": "wedding ring",
@@ -98,7 +94,8 @@
             },
             {
                 "concept": "wedding waltz",
-                "label": "de bruiloftswals"
+                "label": "de bruiloftswals",
+                "roots": "de bruiloft"
             }
         ]
     }

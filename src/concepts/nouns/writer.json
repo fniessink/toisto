@@ -2,7 +2,7 @@
     "concepts": {
         "writer": {
             "hypernym": "profession",
-            "roots": "to write"
+            "involves": "to write"
         }
     },
     "labels": {
@@ -21,7 +21,8 @@
                 "label": {
                     "singular": "kirjailija",
                     "plural": "kirjailijat"
-                }
+                },
+                "roots": "kirja"
             }
         ],
         "nl": [

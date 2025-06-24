@@ -11,7 +11,11 @@
             },
             {
                 "concept": "application for compensation",
-                "label": "application for compensation"
+                "label": "application for compensation",
+                "roots": [
+                    "application",
+                    "compensation"
+                ]
             }
         ],
         "fi": [
@@ -21,7 +25,11 @@
             },
             {
                 "concept": "application for compensation",
-                "label": "korvaushakemus"
+                "label": "korvaushakemus",
+                "roots": [
+                    "korvaus",
+                    "hakemus"
+                ]
             }
         ],
         "nl": [
@@ -31,7 +39,8 @@
             },
             {
                 "concept": "application for compensation",
-                "label": "de aanvraag tot schadevergoeding"
+                "label": "de aanvraag tot schadevergoeding",
+                "roots": "de aanvraag"
             },
             {
                 "concept": "application for compensation",

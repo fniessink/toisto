@@ -3,12 +3,7 @@
         "to continue": {
             "example": "to continue the journey"
         },
-        "to continue the journey": {
-            "roots": [
-                "to continue",
-                "journey"
-            ]
-        }
+        "to continue the journey": {}
     },
     "labels": {
         "en": [
@@ -26,7 +21,11 @@
             },
             {
                 "concept": "to continue the journey",
-                "label": "to continue the journey"
+                "label": "to continue the journey",
+                "roots": [
+                    "to continue",
+                    "journey"
+                ]
             }
         ],
         "fi": [
@@ -36,7 +35,8 @@
             },
             {
                 "concept": "to continue the journey",
-                "label": "jatkaa matkaa"
+                "label": "jatkaa matkaa",
+                "roots": "matka"
             }
         ],
         "nl": [
@@ -54,7 +54,8 @@
             },
             {
                 "concept": "to continue the journey",
-                "label": "de reis voortzetten"
+                "label": "de reis voortzetten",
+                "roots": "de reis"
             }
         ]
     }

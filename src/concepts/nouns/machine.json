@@ -1,8 +1,7 @@
 {
     "concepts": {
         "coffee machine": {
-            "involves": "coffee",
-            "roots": "coffee"
+            "involves": "coffee"
         },
         "sewing machine": {
             "involves": "to sew"
@@ -12,7 +11,8 @@
         "en": [
             {
                 "concept": "coffee machine",
-                "label": "coffee machine"
+                "label": "coffee machine",
+                "roots": "coffee"
             },
             {
                 "concept": "sewing machine",
@@ -22,7 +22,8 @@
         "fi": [
             {
                 "concept": "coffee machine",
-                "label": "kahviautomaatti"
+                "label": "kahviautomaatti",
+                "roots": "kahvi"
             },
             {
                 "concept": "sewing machine",
@@ -32,7 +33,8 @@
         "nl": [
             {
                 "concept": "coffee machine",
-                "label": "de koffieautomaat"
+                "label": "de koffieautomaat",
+                "roots": "de koffie"
             },
             {
                 "concept": "sewing machine",

@@ -4,8 +4,7 @@
             "holonym": "house"
         },
         "basement storage unit": {
-            "holonym": "basement",
-            "roots": "basement"
+            "holonym": "basement"
         }
     },
     "labels": {
@@ -19,7 +18,8 @@
             },
             {
                 "concept": "basement storage unit",
-                "label": "basement storage unit"
+                "label": "basement storage unit",
+                "roots": "basement"
             }
         ],
         "fi": [
@@ -32,7 +32,8 @@
             },
             {
                 "concept": "basement storage unit",
-                "label": "kellarikomero"
+                "label": "kellarikomero",
+                "roots": "kellari"
             }
         ],
         "nl": [
@@ -45,7 +46,8 @@
             },
             {
                 "concept": "basement storage unit",
-                "label": "de kelderbox"
+                "label": "de kelderbox",
+                "roots": "de kelder"
             }
         ]
     }

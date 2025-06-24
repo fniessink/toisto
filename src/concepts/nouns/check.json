@@ -2,8 +2,7 @@
     "concepts": {
         "check": {},
         "security check": {
-            "hypernym": "check",
-            "roots": "check"
+            "hypernym": "check"
         }
     },
     "labels": {
@@ -14,7 +13,8 @@
             },
             {
                 "concept": "security check",
-                "label": "security check"
+                "label": "security check",
+                "roots": "check"
             }
         ],
         "fi": [
@@ -24,7 +24,8 @@
             },
             {
                 "concept": "security check",
-                "label": "turvatarkastus"
+                "label": "turvatarkastus",
+                "roots": "tarkastus"
             }
         ],
         "nl": [
@@ -34,7 +35,8 @@
             },
             {
                 "concept": "security check",
-                "label": "de veiligheidscontrole"
+                "label": "de veiligheidscontrole",
+                "roots": "de controle"
             }
         ]
     }

@@ -1,29 +1,9 @@
 {
     "concepts": {
-        "verb": {
-            "roots": {
-                "nl": [
-                    "job",
-                    "word"
-                ]
-            }
-        },
-        "verb type": {
-            "roots": "verb"
-        },
+        "verb": {},
+        "verb type": {},
         "main verb": {
-            "hypernym": "verb",
-            "roots": {
-                "en": "verb",
-                "fi": [
-                    "head (main part)",
-                    "verb"
-                ],
-                "nl": [
-                    "head (main part)",
-                    "verb"
-                ]
-            }
+            "hypernym": "verb"
         },
         "transitive verb": {
             "antonym": "intransitive verb",
@@ -48,23 +28,28 @@
             },
             {
                 "concept": "verb type",
-                "label": "verb type"
+                "label": "verb type",
+                "roots": "verb"
             },
             {
                 "concept": "main verb",
-                "label": "main verb"
+                "label": "main verb",
+                "roots": "verb"
             },
             {
                 "concept": "transitive verb",
-                "label": "transitive verb"
+                "label": "transitive verb",
+                "roots": "verb"
             },
             {
                 "concept": "intransitive verb",
-                "label": "intransitive verb"
+                "label": "intransitive verb",
+                "roots": "verb"
             },
             {
                 "concept": "perceptional verb",
-                "label": "perceptional verb"
+                "label": "perceptional verb",
+                "roots": "verb"
             }
         ],
         "fi": [
@@ -77,23 +62,31 @@
             },
             {
                 "concept": "verb type",
-                "label": "verbityyppi"
+                "label": "verbityyppi",
+                "roots": "verbi"
             },
             {
                 "concept": "main verb",
-                "label": "pääverbi"
+                "label": "pääverbi",
+                "roots": [
+                    "pää",
+                    "verbi"
+                ]
             },
             {
                 "concept": "transitive verb",
-                "label": "transitiiviverbi"
+                "label": "transitiiviverbi",
+                "roots": "verbi"
             },
             {
                 "concept": "intransitive verb",
-                "label": "intransitiiviverbi"
+                "label": "intransitiiviverbi",
+                "roots": "verbi"
             },
             {
                 "concept": "perceptional verb",
-                "label": "astiverbi"
+                "label": "astiverbi",
+                "roots": "verbi"
             }
         ],
         "nl": [
@@ -102,36 +95,48 @@
                 "label": {
                     "singular": "het werkwoord",
                     "plural": "de werkwoorden"
-                }
+                },
+                "roots": [
+                    "het werk",
+                    "het woord"
+                ]
             },
             {
                 "concept": "verb type",
-                "label": "het werkwoordtype"
+                "label": "het werkwoordtype",
+                "roots": "het werkwoord"
             },
             {
                 "concept": "main verb",
-                "label": "het hoofdwerkwoord"
+                "label": "het hoofdwerkwoord",
+                "roots": [
+                    "het hoofd",
+                    "het werkwoord"
+                ]
             },
             {
                 "concept": "transitive verb",
                 "label": [
                     "het transitieve werkwoord",
                     "transitief werkwoord"
-                ]
+                ],
+                "roots": "het werkwoord"
             },
             {
                 "concept": "intransitive verb",
                 "label": [
                     "het intransitieve werkwoord",
                     "intransitief werkwoord"
-                ]
+                ],
+                "roots": "het werkwoord"
             },
             {
                 "concept": "perceptional verb",
                 "label": [
                     "het perceptieve werkwoord",
                     "perceptief werkwoord"
-                ]
+                ],
+                "roots": "het werkwoord"
             }
         ]
     }

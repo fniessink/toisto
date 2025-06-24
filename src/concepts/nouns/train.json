@@ -7,14 +7,7 @@
         "long-distance train": {
             "hypernym": "train"
         },
-        "the train departs from platform 4": {
-            "roots": [
-                "train",
-                "to leave",
-                "platform",
-                "4"
-            ]
-        }
+        "the train departs from platform 4": {}
     },
     "labels": {
         "en": [
@@ -27,11 +20,17 @@
             },
             {
                 "concept": "long-distance train",
-                "label": "long-distance train"
+                "label": "long-distance train",
+                "roots": "train"
             },
             {
                 "concept": "the train departs from platform 4",
-                "label": "The train departs from platform four."
+                "label": "The train departs from platform four.",
+                "roots": [
+                    "train",
+                    "platform",
+                    "four"
+                ]
             }
         ],
         "fi": [
@@ -44,11 +43,17 @@
             },
             {
                 "concept": "long-distance train",
-                "label": "kaukojuna"
+                "label": "kaukojuna",
+                "roots": "juna"
             },
             {
                 "concept": "the train departs from platform 4",
-                "label": "Juna lähtee laiturilta neljä."
+                "label": "Juna lähtee laiturilta neljä.",
+                "roots": [
+                    "juna",
+                    "laituri",
+                    "neljä"
+                ]
             }
         ],
         "nl": [
@@ -61,11 +66,17 @@
             },
             {
                 "concept": "long-distance train",
-                "label": "langeafstandstrein"
+                "label": "de langeafstandstrein",
+                "roots": "de trein"
             },
             {
                 "concept": "the train departs from platform 4",
-                "label": "De trein vertrekt van perron vier."
+                "label": "De trein vertrekt van perron vier.",
+                "roots": [
+                    "de trein",
+                    "het perron",
+                    "vier"
+                ]
             }
         ]
     }

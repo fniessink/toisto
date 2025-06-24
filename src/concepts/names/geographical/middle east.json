@@ -5,27 +5,29 @@
                 "africa",
                 "asia",
                 "europe"
-            ],
-            "roots": "east"
+            ]
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "middle east",
-                "label": "Middle East"
+                "label": "Middle East",
+                "roots": "east"
             }
         ],
         "fi": [
             {
                 "concept": "middle east",
-                "label": "Lähi-itä"
+                "label": "Lähi-itä",
+                "roots": "itä"
             }
         ],
         "nl": [
             {
                 "concept": "middle east",
-                "label": "het Midden-Oosten"
+                "label": "het Midden-Oosten",
+                "roots": "het oosten"
             }
         ]
     }

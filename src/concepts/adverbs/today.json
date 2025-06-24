@@ -1,76 +1,51 @@
 {
     "concepts": {
         "today": {
-            "hypernym": "day",
-            "roots": {
-                "en": "day"
-            }
+            "hypernym": "day"
         },
-        "what day is it today": {
-            "roots": {
-                "en": [
-                    "what",
-                    "day",
-                    "to be",
-                    "today"
-                ],
-                "fi": [
-                    "what",
-                    "day",
-                    "to be",
-                    "today"
-                ],
-                "nl": [
-                    "which",
-                    "day",
-                    "to be",
-                    "today"
-                ]
-            }
-        },
-        "today it is monday": {
-            "roots": [
-                "today",
-                "to be",
-                "monday"
-            ]
-        },
-        "today it is saturday": {
-            "roots": [
-                "today",
-                "to be",
-                "saturday"
-            ]
-        },
+        "what day is it today": {},
+        "today it is monday": {},
+        "today it is saturday": {},
         "tomorrow it is sunday what day is it today": {
-            "answer": "today it is saturday",
-            "roots": [
-                "tomorrow it is sunday",
-                "what day is it today"
-            ]
+            "answer": "today it is saturday"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "today",
-                "label": "today"
+                "label": "today",
+                "roots": "day"
             },
             {
                 "concept": "what day is it today",
-                "label": "What day is it today?"
+                "label": "What day is it today?",
+                "roots": "today"
             },
             {
                 "concept": "today it is monday",
-                "label": "Today it is Monday."
+                "label": "Today it is Monday.",
+                "roots": [
+                    "today",
+                    "Monday"
+                ]
             },
             {
                 "concept": "today it is saturday",
-                "label": "Today it is Saturday."
+                "label": "Today it is Saturday.",
+                "roots": [
+                    "today",
+                    "Saturday"
+                ]
             },
             {
                 "concept": "tomorrow it is sunday what day is it today",
-                "label": "Tomorrow it is Sunday. What day is it today?"
+                "label": "Tomorrow it is Sunday. What day is it today?",
+                "roots": [
+                    "tomorrow",
+                    "Sunday",
+                    "today"
+                ]
             }
         ],
         "fi": [
@@ -83,21 +58,45 @@
                 "label": [
                     "Mikä päivä tänään on?",
                     "Mikä päivä on tänään?"
+                ],
+                "roots": [
+                    "Mikä?",
+                    "päivä",
+                    "hän on",
+                    "tänään"
                 ]
             },
             {
                 "concept": "today it is monday",
-                "label": "Tänään on maanantai."
+                "label": "Tänään on maanantai.",
+                "roots": [
+                    "tänään",
+                    "hän on",
+                    "maanantai"
+                ]
             },
             {
                 "concept": "today it is saturday",
-                "label": "Tänään on lauantai."
+                "label": "Tänään on lauantai.",
+                "roots": [
+                    "tänään",
+                    "hän on",
+                    "lauantai"
+                ]
             },
             {
                 "concept": "tomorrow it is sunday what day is it today",
                 "label": [
                     "Huomenna on sunnuntai. Mikä päivä tänään on?",
                     "Huomenna on sunnuntai. Mikä päivä on tänään?"
+                ],
+                "roots": [
+                    "huomenna",
+                    "hän on",
+                    "sunnuntai",
+                    "Mikä?",
+                    "päivä",
+                    "tänään"
                 ]
             }
         ],
@@ -108,19 +107,40 @@
             },
             {
                 "concept": "what day is it today",
-                "label": "Welke dag is het vandaag?"
+                "label": "Welke dag is het vandaag?",
+                "roots": [
+                    "de dag",
+                    "hij is",
+                    "vandaag"
+                ]
             },
             {
                 "concept": "today it is monday",
-                "label": "Vandaag is het maandag."
+                "label": "Vandaag is het maandag.",
+                "roots": [
+                    "vandaag",
+                    "hij is",
+                    "maandag"
+                ]
             },
             {
                 "concept": "today it is saturday",
-                "label": "Vandaag is het zaterdag."
+                "label": "Vandaag is het zaterdag.",
+                "roots": [
+                    "vandaag",
+                    "zaterdag"
+                ]
             },
             {
                 "concept": "tomorrow it is sunday what day is it today",
-                "label": "Morgen is het zondag. Welke dag is het vandaag?"
+                "label": "Morgen is het zondag. Welke dag is het vandaag?",
+                "roots": [
+                    "morgen",
+                    "hij is",
+                    "zondag",
+                    "de dag",
+                    "vandaag"
+                ]
             }
         ]
     }

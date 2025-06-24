@@ -4,16 +4,7 @@
             "example": "my throat hurts",
             "holonym": "body"
         },
-        "my throat hurts": {
-            "roots": {
-                "en": "throat",
-                "fi": "throat",
-                "nl": [
-                    "throat",
-                    "pain"
-                ]
-            }
-        }
+        "my throat hurts": {}
     },
     "labels": {
         "en": [
@@ -23,7 +14,11 @@
             },
             {
                 "concept": "my throat hurts",
-                "label": "My throat hurts."
+                "label": "My throat hurts.",
+                "roots": [
+                    "throat",
+                    "to hurt"
+                ]
             }
         ],
         "fi": [
@@ -36,7 +31,11 @@
             },
             {
                 "concept": "my throat hurts",
-                "label": "Kurkkuni sattuu."
+                "label": "Kurkkuni sattuu.",
+                "roots": [
+                    "kurkku",
+                    "sattua"
+                ]
             }
         ],
         "nl": [
@@ -46,7 +45,11 @@
             },
             {
                 "concept": "my throat hurts",
-                "label": "Mijn keel doet pijn."
+                "label": "Mijn keel doet pijn.",
+                "roots": [
+                    "de keel",
+                    "de pijn"
+                ]
             }
         ]
     }

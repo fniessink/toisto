@@ -4,17 +4,7 @@
             "antonym": "bad luck"
         },
         "bad luck": {
-            "antonym": "luck",
-            "roots": {
-                "en": [
-                    "bad",
-                    "luck"
-                ],
-                "fi": [
-                    "bad",
-                    "luck"
-                ]
-            }
+            "antonym": "luck"
         }
     },
     "labels": {
@@ -25,7 +15,11 @@
             },
             {
                 "concept": "bad luck",
-                "label": "bad luck"
+                "label": "bad luck",
+                "roots": [
+                    "bad",
+                    "luck"
+                ]
             }
         ],
         "fi": [
@@ -35,7 +29,11 @@
             },
             {
                 "concept": "bad luck",
-                "label": "huono onni"
+                "label": "huono onni",
+                "roots": [
+                    "huono",
+                    "onni"
+                ]
             }
         ],
         "nl": [

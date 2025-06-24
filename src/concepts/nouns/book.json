@@ -5,26 +5,10 @@
             "hypernym": "book"
         },
         "non-fiction book": {
-            "hypernym": "book",
-            "roots": {
-                "en": "book",
-                "fi": [
-                    "knowledge",
-                    "book"
-                ],
-                "nl": "book"
-            }
+            "hypernym": "book"
         },
         "bookcase": {
-            "example": "she is looking for a bookcase",
-            "roots": {
-                "en": "book",
-                "fi": [
-                    "book",
-                    "shelf"
-                ],
-                "nl": "book"
-            }
+            "example": "she is looking for a bookcase"
         }
     },
     "labels": {
@@ -44,15 +28,18 @@
             },
             {
                 "concept": "audiobook",
-                "label": "audiobook"
+                "label": "audiobook",
+                "roots": "book"
             },
             {
                 "concept": "non-fiction book",
-                "label": "non-fiction book"
+                "label": "non-fiction book",
+                "roots": "book"
             },
             {
                 "concept": "bookcase",
-                "label": "bookcase"
+                "label": "bookcase",
+                "roots": "book"
             }
         ],
         "fi": [
@@ -71,15 +58,21 @@
             },
             {
                 "concept": "audiobook",
-                "label": "äänikirja"
+                "label": "äänikirja",
+                "roots": "kirja"
             },
             {
                 "concept": "non-fiction book",
-                "label": "tietokirja"
+                "label": "tietokirja",
+                "roots": "kirja"
             },
             {
                 "concept": "bookcase",
-                "label": "kirjahylly"
+                "label": "kirjahylly",
+                "roots": [
+                    "kirja",
+                    "hylly"
+                ]
             }
         ],
         "nl": [
@@ -98,23 +91,31 @@
             },
             {
                 "concept": "audiobook",
-                "label": "het gesproken boek"
+                "label": "het gesproken boek",
+                "roots": "het boek"
             },
             {
                 "concept": "audiobook",
-                "label": "het luisterboek"
+                "label": "het luisterboek",
+                "roots": "het boek"
             },
             {
                 "concept": "audiobook",
-                "label": "het audioboek"
+                "label": "het audioboek",
+                "roots": "het boek"
             },
             {
                 "concept": "non-fiction book",
-                "label": "het non-fictieboek"
+                "label": "het non-fictieboek",
+                "roots": "het boek"
             },
             {
                 "concept": "bookcase",
-                "label": "de boekenkast"
+                "label": "de boekenkast",
+                "roots": [
+                    "het boek",
+                    "de kast"
+                ]
             }
         ]
     }

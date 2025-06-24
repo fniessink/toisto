@@ -5,11 +5,7 @@
             "example": "alice sits to the left of bob"
         },
         "alice sits to the left of bob": {
-            "antonym": "alice sits to the right of bob",
-            "roots": [
-                "to sit",
-                "to the left"
-            ]
+            "antonym": "alice sits to the right of bob"
         }
     },
     "labels": {
@@ -20,7 +16,11 @@
             },
             {
                 "concept": "alice sits to the left of bob",
-                "label": "Alice sits to the left of Bob."
+                "label": "Alice sits to the left of Bob.",
+                "roots": [
+                    "she sits",
+                    "to the left"
+                ]
             }
         ],
         "fi": [
@@ -30,7 +30,11 @@
             },
             {
                 "concept": "alice sits to the left of bob",
-                "label": "Alice istuu Bobin vasemmalla puolella."
+                "label": "Alice istuu Bobin vasemmalla puolella.",
+                "roots": [
+                    "hän istuu",
+                    "vasemmalla puolella"
+                ]
             }
         ],
         "nl": [
@@ -40,7 +44,11 @@
             },
             {
                 "concept": "alice sits to the left of bob",
-                "label": "Alice zit aan de linkerkant van Bob."
+                "label": "Alice zit aan de linkerkant van Bob.",
+                "roots": [
+                    "zij zit",
+                    "aan de linkerkant"
+                ]
             }
         ]
     }

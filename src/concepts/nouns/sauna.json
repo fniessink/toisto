@@ -2,33 +2,16 @@
     "concepts": {
         "sauna": {},
         "sauna stove": {
-            "holonym": "sauna",
-            "roots": {
-                "en": "sauna",
-                "nl": "sauna"
-            }
+            "holonym": "sauna"
         },
         "sauna bench": {
-            "holonym": "sauna",
-            "roots": {
-                "en": "sauna",
-                "nl": "sauna"
-            }
+            "holonym": "sauna"
         },
         "puusauna": {
-            "hypernym": "sauna",
-            "roots": {
-                "fi": [
-                    "wood",
-                    "sauna"
-                ]
-            }
+            "hypernym": "sauna"
         },
         "sähkösauna": {
-            "hypernym": "sauna",
-            "roots": {
-                "fi": "sauna"
-            }
+            "hypernym": "sauna"
         }
     },
     "labels": {
@@ -39,15 +22,21 @@
             },
             {
                 "concept": "sauna stove",
-                "label": "sauna stove"
+                "label": "sauna stove",
+                "roots": [
+                    "sauna",
+                    "stove"
+                ]
             },
             {
                 "concept": "sauna stove",
-                "label": "sauna heater"
+                "label": "sauna heater",
+                "roots": "sauna"
             },
             {
                 "concept": "sauna bench",
-                "label": "sauna bench"
+                "label": "sauna bench",
+                "roots": "sauna"
             },
             {
                 "concept": "puusauna",
@@ -75,11 +64,16 @@
             },
             {
                 "concept": "puusauna",
-                "label": "puusauna"
+                "label": "puusauna",
+                "roots": [
+                    "puu",
+                    "sauna"
+                ]
             },
             {
                 "concept": "sähkösauna",
-                "label": "sähkösauna"
+                "label": "sähkösauna",
+                "roots": "sauna"
             }
         ],
         "nl": [
@@ -89,11 +83,16 @@
             },
             {
                 "concept": "sauna stove",
-                "label": "de saunakachel"
+                "label": "de saunakachel",
+                "roots": "de sauna"
             },
             {
                 "concept": "sauna bench",
-                "label": "de saunabank"
+                "label": "de saunabank",
+                "roots": [
+                    "de sauna",
+                    "de bank"
+                ]
             },
             {
                 "concept": "puusauna",

@@ -72,8 +72,10 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked if roots have eligible quizzes."""
         concept1 = self.create_concept(
             "good day",
-            {"roots": "good"},
-            labels=[{"label": "good day", "language": EN}, {"label": "goedendag", "language": NL}],
+            labels=[
+                {"label": "good day", "language": EN, "roots": ["good"]},
+                {"label": "goedendag", "language": NL, "roots": ["goed"]},
+            ],
         )
         concept2 = self.create_concept(
             "good", labels=[{"label": "good", "language": EN}, {"label": "goed", "language": NL}]
@@ -87,8 +89,7 @@ class ProgressTest(ToistoTestCase):
         """Test that quizzes are blocked, even if the roots only apply to the target language."""
         concept1 = self.create_concept(
             "good day",
-            {"roots": {"nl": "good"}},
-            labels=[{"label": "good day", "language": EN}, {"label": "goedendag", "language": NL}],
+            labels=[{"label": "good day", "language": EN}, {"label": "goedendag", "language": NL, "roots": ["goed"]}],
         )
         concept2 = self.create_concept(
             "good", labels=[{"label": "good", "language": EN}, {"label": "goed", "language": NL}]
@@ -109,15 +110,13 @@ class ProgressTest(ToistoTestCase):
         )
         afternoon = self.create_concept(
             "afternoon",
-            {"roots": "morning"},
             labels=[
-                {"label": {"singular": "iltapäivä", "plural": "iltapäivät"}, "language": FI},
+                {"label": {"singular": "iltapäivä", "plural": "iltapäivät"}, "language": FI, "roots": ["ilta"]},
                 {"label": {"singular": "de middag", "plural": "de middagen"}, "language": NL},
             ],
         )
         evening = self.create_concept(
             "evening",
-            {"roots": "afternoon"},
             labels=[
                 {"label": {"singular": "ilta", "plural": "illat"}, "language": FI},
                 {"label": {"singular": "de avond", "plural": "de avonden"}, "language": NL},

@@ -2,12 +2,7 @@
     "concepts": {
         "wednesday": {
             "holonym": "days of the week",
-            "hypernym": "day",
-            "roots": {
-                "en": "day",
-                "fi": "week",
-                "nl": "day"
-            }
+            "hypernym": "day"
         },
         "on wednesday": {
             "roots": "wednesday"
@@ -21,11 +16,13 @@
                     "singular": "Wednesday",
                     "plural": "Wednesdays"
                 },
-                "note": "In English, the names of weekdays are capitalized"
+                "note": "In English, the names of weekdays are capitalized",
+                "roots": "day"
             },
             {
                 "concept": "on wednesday",
-                "label": "on Wednesday"
+                "label": "on Wednesday",
+                "roots": "Wednesday"
             }
         ],
         "fi": [
@@ -35,11 +32,13 @@
                     "singular": "keskiviikko",
                     "plural": "keskiviikot"
                 },
-                "note": "In Finnish, the names of weekdays are not capitalized"
+                "note": "In Finnish, the names of weekdays are not capitalized",
+                "roots": "viikko"
             },
             {
                 "concept": "on wednesday",
-                "label": "keskiviikkona"
+                "label": "keskiviikkona",
+                "roots": "keskiviikko"
             }
         ],
         "nl": [
@@ -52,11 +51,13 @@
                     ],
                     "plural": "de woensdagen"
                 },
-                "note": "In Dutch, the names of weekdays are not capitalized"
+                "note": "In Dutch, the names of weekdays are not capitalized",
+                "roots": "de dag"
             },
             {
                 "concept": "on wednesday",
-                "label": "op woensdag"
+                "label": "op woensdag",
+                "roots": "woensdag"
             }
         ]
     }

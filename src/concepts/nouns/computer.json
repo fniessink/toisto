@@ -1,10 +1,6 @@
 {
     "concepts": {
-        "computer": {
-            "roots": {
-                "fi": "knowledge"
-            }
-        }
+        "computer": {}
     },
     "labels": {
         "en": [
@@ -16,7 +12,8 @@
         "fi": [
             {
                 "concept": "computer",
-                "label": "tietokone"
+                "label": "tietokone",
+                "roots": "tieto"
             }
         ],
         "nl": [

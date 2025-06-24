@@ -3,19 +3,11 @@
         "break": {},
         "lunchbreak": {
             "hypernym": "break",
-            "involves": "lunch",
-            "roots": [
-                "lunch",
-                "break"
-            ]
+            "involves": "lunch"
         },
         "coffee break": {
             "hypernym": "break",
-            "involves": "coffee",
-            "roots": [
-                "coffee",
-                "break"
-            ]
+            "involves": "coffee"
         }
     },
     "labels": {
@@ -29,11 +21,19 @@
                 "label": [
                     "lunchbreak",
                     "lunch break"
+                ],
+                "roots": [
+                    "lunch",
+                    "break"
                 ]
             },
             {
                 "concept": "coffee break",
-                "label": "coffee break"
+                "label": "coffee break",
+                "roots": [
+                    "coffee",
+                    "break"
+                ]
             }
         ],
         "fi": [
@@ -43,11 +43,19 @@
             },
             {
                 "concept": "lunchbreak",
-                "label": "lounastauko"
+                "label": "lounastauko",
+                "roots": [
+                    "lounas",
+                    "tauko"
+                ]
             },
             {
                 "concept": "coffee break",
-                "label": "kahvitauko"
+                "label": "kahvitauko",
+                "roots": [
+                    "kahvi",
+                    "tauko"
+                ]
             }
         ],
         "nl": [
@@ -57,11 +65,19 @@
             },
             {
                 "concept": "lunchbreak",
-                "label": "de lunchpauze"
+                "label": "de lunchpauze",
+                "roots": [
+                    "de lunch",
+                    "de pauze"
+                ]
             },
             {
                 "concept": "coffee break",
-                "label": "de koffiepauze"
+                "label": "de koffiepauze",
+                "roots": [
+                    "de koffie",
+                    "de pauze"
+                ]
             }
         ]
     }

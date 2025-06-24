@@ -4,12 +4,10 @@
             "hypernym": "time of day"
         },
         "in the evening": {
-            "hypernym": "time of day",
-            "roots": "evening"
+            "hypernym": "time of day"
         },
         "this evening": {
-            "hypernym": "time of day",
-            "roots": "evening"
+            "hypernym": "time of day"
         }
     },
     "labels": {
@@ -23,11 +21,13 @@
             },
             {
                 "concept": "in the evening",
-                "label": "in the evening"
+                "label": "in the evening",
+                "roots": "evening"
             },
             {
                 "concept": "this evening",
-                "label": "this evening"
+                "label": "this evening",
+                "roots": "evening"
             }
         ],
         "fi": [
@@ -40,11 +40,13 @@
             },
             {
                 "concept": "in the evening",
-                "label": "illalla"
+                "label": "illalla",
+                "roots": "ilta"
             },
             {
                 "concept": "this evening",
-                "label": "tänä iltana"
+                "label": "tänä iltana",
+                "roots": "ilta"
             }
         ],
         "nl": [
@@ -57,11 +59,13 @@
             },
             {
                 "concept": "in the evening",
-                "label": "'s avonds"
+                "label": "'s avonds",
+                "roots": "de avond"
             },
             {
                 "concept": "this evening",
-                "label": "vanavond"
+                "label": "vanavond",
+                "roots": "de avond"
             }
         ]
     }

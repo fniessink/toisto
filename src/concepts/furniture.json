@@ -2,23 +2,9 @@
     "concepts": {
         "sofa": {},
         "pillow": {},
-        "desk": {
-            "roots": {
-                "fi": [
-                    "job",
-                    "to write",
-                    "table"
-                ]
-            }
-        },
+        "desk": {},
         "carpet": {},
-        "the cat is sleeping on the carpet": {
-            "roots": [
-                "cat",
-                "to sleep",
-                "carpet"
-            ]
-        }
+        "the cat is sleeping on the carpet": {}
     },
     "labels": {
         "en": [
@@ -52,7 +38,12 @@
             },
             {
                 "concept": "the cat is sleeping on the carpet",
-                "label": "The cat is sleeping on the carpet."
+                "label": "The cat is sleeping on the carpet.",
+                "roots": [
+                    "cat",
+                    "to sleep",
+                    "carpet"
+                ]
             }
         ],
         "fi": [
@@ -75,14 +66,19 @@
                 "label": {
                     "singular": "työpöytä",
                     "plural": "työpöydät"
-                }
+                },
+                "roots": [
+                    "työ",
+                    "pöytä"
+                ]
             },
             {
                 "concept": "desk",
                 "label": {
                     "singular": "kirjoituspöytä",
                     "plural": "kirjoituspöydät"
-                }
+                },
+                "roots": "pöytä"
             },
             {
                 "concept": "carpet",
@@ -93,7 +89,12 @@
             },
             {
                 "concept": "the cat is sleeping on the carpet",
-                "label": "Kissa nukkuu matolla."
+                "label": "Kissa nukkuu matolla.",
+                "roots": [
+                    "kissa",
+                    "nukkua",
+                    "matto"
+                ]
             }
         ],
         "nl": [
@@ -127,7 +128,12 @@
             },
             {
                 "concept": "the cat is sleeping on the carpet",
-                "label": "De kat slaapt op het tapijt."
+                "label": "De kat slaapt op het tapijt.",
+                "roots": [
+                    "de kat",
+                    "slapen",
+                    "het tapijt"
+                ]
             }
         ]
     }

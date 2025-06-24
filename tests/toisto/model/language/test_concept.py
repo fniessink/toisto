@@ -128,3 +128,11 @@ class ConceptTest(ToistoTestCase):
             labels=[{"label": {"singular": "The house is big.", "plural": "The houses are big."}, "language": EN}],
         )
         self.assertTrue(composite_concept.is_complete_sentence)
+
+    def test_roots_do_not_include_self(self):
+        """Test that roots do not include the concept itself, even when the root label belongs to the concept."""
+        concept = self.create_concept(
+            "motorbike",
+            labels=[{"label": "motorbike", "roots": "bike", "language": EN}, {"label": "bike", "language": EN}],
+        )
+        self.assertNotIn(concept, concept.roots(EN))

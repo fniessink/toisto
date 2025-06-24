@@ -1,13 +1,7 @@
 {
     "concepts": {
         "to invite": {},
-        "to invite along": {
-            "roots": {
-                "en": "to invite",
-                "fi": "to request",
-                "nl": "to ask"
-            }
-        }
+        "to invite along": {}
     },
     "labels": {
         "en": [
@@ -17,7 +11,8 @@
             },
             {
                 "concept": "to invite along",
-                "label": "to invite along"
+                "label": "to invite along",
+                "roots": "to invite"
             }
         ],
         "fi": [
@@ -27,7 +22,8 @@
             },
             {
                 "concept": "to invite along",
-                "label": "pyytää mukaan"
+                "label": "pyytää mukaan",
+                "roots": "pyytää"
             }
         ],
         "nl": [
@@ -37,7 +33,8 @@
             },
             {
                 "concept": "to invite along",
-                "label": "meevragen"
+                "label": "meevragen",
+                "roots": "vragen"
             }
         ]
     }

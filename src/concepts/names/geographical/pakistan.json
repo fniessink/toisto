@@ -5,8 +5,7 @@
         },
         "pakistani": {
             "hypernym": "nationality",
-            "involves": "pakistan",
-            "roots": "pakistan"
+            "involves": "pakistan"
         }
     },
     "labels": {
@@ -17,7 +16,8 @@
             },
             {
                 "concept": "pakistani",
-                "label": "Pakistani"
+                "label": "Pakistani",
+                "roots": "Pakistan"
             }
         ],
         "fi": [
@@ -27,7 +27,8 @@
             },
             {
                 "concept": "pakistani",
-                "label": "pakistanilainen"
+                "label": "pakistanilainen",
+                "roots": "Pakistan"
             }
         ],
         "nl": [
@@ -37,7 +38,8 @@
             },
             {
                 "concept": "pakistani",
-                "label": "Pakistaans"
+                "label": "Pakistaans",
+                "roots": "Pakistan"
             }
         ]
     }

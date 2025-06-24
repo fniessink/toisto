@@ -2,15 +2,7 @@
     "concepts": {
         "student": {},
         "exchange student": {
-            "hypernym": "student",
-            "roots": {
-                "en": "student",
-                "fi": [
-                    "transfer",
-                    "student"
-                ],
-                "nl": "student"
-            }
+            "hypernym": "student"
         },
         "student cap": {}
     },
@@ -25,11 +17,13 @@
             },
             {
                 "concept": "exchange student",
-                "label": "exchange student"
+                "label": "exchange student",
+                "roots": "student"
             },
             {
                 "concept": "student cap",
-                "label": "student cap"
+                "label": "student cap",
+                "roots": "student"
             }
         ],
         "fi": [
@@ -42,7 +36,11 @@
             },
             {
                 "concept": "exchange student",
-                "label": "vaihto-opiskelija"
+                "label": "vaihto-opiskelija",
+                "roots": [
+                    "vaihto",
+                    "opiskelija"
+                ]
             },
             {
                 "concept": "student cap",
@@ -59,7 +57,8 @@
             },
             {
                 "concept": "exchange student",
-                "label": "de uitwisselingsstudent"
+                "label": "uitwisselingsstudent",
+                "roots": "de student"
             },
             {
                 "concept": "student cap",

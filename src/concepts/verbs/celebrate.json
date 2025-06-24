@@ -3,12 +3,7 @@
         "to celebrate": {
             "example": "We celebrated Liisa's birthday at the cottage."
         },
-        "We celebrated Liisa's birthday at the cottage": {
-            "roots": [
-                "to celebrate",
-                "birthday"
-            ]
-        }
+        "We celebrated Liisa's birthday at the cottage": {}
     },
     "labels": {
         "en": [
@@ -18,7 +13,8 @@
             },
             {
                 "concept": "We celebrated Liisa's birthday at the cottage",
-                "label": "We celebrated Liisa's birthday at the cottage."
+                "label": "We celebrated Liisa's birthday at the cottage.",
+                "roots": "birthday"
             }
         ],
         "fi": [
@@ -28,7 +24,11 @@
             },
             {
                 "concept": "We celebrated Liisa's birthday at the cottage",
-                "label": "Me juhlimme Liisan syntymäpäivää mökillä."
+                "label": "Me juhlimme Liisan syntymäpäivää mökillä.",
+                "roots": [
+                    "juhlia",
+                    "syntymäpäivä"
+                ]
             }
         ],
         "nl": [
@@ -38,7 +38,11 @@
             },
             {
                 "concept": "We celebrated Liisa's birthday at the cottage",
-                "label": "We vierden Liisa's verjaardag in het huisje."
+                "label": "We vierden Liisa's verjaardag in het huisje.",
+                "roots": [
+                    "vieren",
+                    "de verjaardag"
+                ]
             }
         ]
     }

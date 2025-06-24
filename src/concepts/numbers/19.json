@@ -1,11 +1,7 @@
 {
     "concepts": {
         "19": {
-            "hypernym": "number",
-            "roots": [
-                "9",
-                "10"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,8 @@
                 "label": {
                     "cardinal": "nineteen",
                     "ordinal": "nineteenth"
-                }
+                },
+                "roots": "nine"
             }
         ],
         "fi": [
@@ -24,7 +21,8 @@
                 "label": {
                     "cardinal": "yhdeksäntoista",
                     "ordinal": "yhdeksästoista"
-                }
+                },
+                "roots": "yhdeksän"
             },
             {
                 "concept": "19",
@@ -41,7 +39,11 @@
                 "label": {
                     "cardinal": "negentien",
                     "ordinal": "negentiende"
-                }
+                },
+                "roots": [
+                    "negen",
+                    "tien"
+                ]
             }
         ]
     }

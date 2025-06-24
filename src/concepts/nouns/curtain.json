@@ -2,11 +2,7 @@
     "concepts": {
         "curtain": {},
         "roller blind": {
-            "example": "you are looking for a roller blind",
-            "roots": {
-                "fi": "curtain",
-                "nl": "curtain"
-            }
+            "example": "you are looking for a roller blind"
         }
     },
     "labels": {
@@ -33,7 +29,8 @@
             },
             {
                 "concept": "roller blind",
-                "label": "rullaverho"
+                "label": "rullaverho",
+                "roots": "verho"
             }
         ],
         "nl": [
@@ -46,7 +43,8 @@
             },
             {
                 "concept": "roller blind",
-                "label": "het rolgordijn"
+                "label": "het rolgordijn",
+                "roots": "het gordijn"
             }
         ]
     }

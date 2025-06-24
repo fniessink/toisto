@@ -1,12 +1,7 @@
 {
     "concepts": {
         "to break": {},
-        "to break in": {
-            "roots": {
-                "en": "to break",
-                "nl": "to break"
-            }
-        }
+        "to break in": {}
     },
     "labels": {
         "en": [
@@ -16,7 +11,8 @@
             },
             {
                 "concept": "to break in",
-                "label": "to break in"
+                "label": "to break in",
+                "roots": "to break"
             }
         ],
         "fi": [
@@ -36,7 +32,8 @@
             },
             {
                 "concept": "to break in",
-                "label": "inbreken"
+                "label": "inbreken",
+                "roots": "breken"
             }
         ]
     }

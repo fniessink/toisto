@@ -12,11 +12,13 @@
         "en": [
             {
                 "concept": "healthy",
-                "label": "healthy"
+                "label": "healthy",
+                "roots": "health"
             },
             {
                 "concept": "unhealthy",
-                "label": "unhealthy"
+                "label": "unhealthy",
+                "roots": "healthy"
             }
         ],
         "fi": [
@@ -26,7 +28,8 @@
             },
             {
                 "concept": "unhealthy",
-                "label": "epäterveellinen"
+                "label": "epäterveellinen",
+                "roots": "terveellinen"
             }
         ],
         "nl": [
@@ -36,7 +39,8 @@
             },
             {
                 "concept": "unhealthy",
-                "label": "ongezond"
+                "label": "ongezond",
+                "roots": "gezond"
             }
         ]
     }

@@ -1,13 +1,7 @@
 {
     "concepts": {
         "to run": {},
-        "to run errands": {
-            "roots": {
-                "en": "to run",
-                "fi": "thing",
-                "nl": "thing"
-            }
-        }
+        "to run errands": {}
     },
     "labels": {
         "en": [
@@ -52,7 +46,8 @@
             },
             {
                 "concept": "to run errands",
-                "label": "to run errands"
+                "label": "to run errands",
+                "roots": "to run"
             }
         ],
         "fi": [

@@ -1,11 +1,7 @@
 {
     "concepts": {
         "80": {
-            "hypernym": "number",
-            "roots": [
-                "8",
-                "10"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,8 @@
                 "label": {
                     "cardinal": "eighty",
                     "ordinal": "eightieth"
-                }
+                },
+                "roots": "eight"
             }
         ],
         "fi": [
@@ -24,7 +21,11 @@
                 "label": {
                     "cardinal": "kahdeksankymmentä",
                     "ordinal": "kahdeksaskymmenes"
-                }
+                },
+                "roots": [
+                    "kahdeksan",
+                    "kymmenen"
+                ]
             },
             {
                 "concept": "80",

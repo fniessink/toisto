@@ -4,13 +4,7 @@
             "example": "the coffee is hot",
             "hypernym": "drink"
         },
-        "the coffee is hot": {
-            "roots": [
-                "coffee",
-                "to be",
-                "hot"
-            ]
-        }
+        "the coffee is hot": {}
     },
     "labels": {
         "en": [
@@ -23,7 +17,11 @@
             },
             {
                 "concept": "the coffee is hot",
-                "label": "The coffee is hot."
+                "label": "The coffee is hot.",
+                "roots": [
+                    "coffee",
+                    "hot"
+                ]
             }
         ],
         "fi": [
@@ -36,7 +34,11 @@
             },
             {
                 "concept": "the coffee is hot",
-                "label": "Kahvi on kuumaa."
+                "label": "Kahvi on kuumaa.",
+                "roots": [
+                    "kahvi",
+                    "kuuma"
+                ]
             }
         ],
         "nl": [
@@ -49,7 +51,11 @@
             },
             {
                 "concept": "the coffee is hot",
-                "label": "De koffie is heet."
+                "label": "De koffie is heet.",
+                "roots": [
+                    "de koffie",
+                    "heet"
+                ]
             }
         ]
     }

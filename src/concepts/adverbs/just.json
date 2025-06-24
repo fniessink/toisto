@@ -1,9 +1,7 @@
 {
     "concepts": {
         "just": {},
-        "just now": {
-            "roots": "just"
-        }
+        "just now": {}
     },
     "labels": {
         "en": [
@@ -16,7 +14,11 @@
             },
             {
                 "concept": "just now",
-                "label": "just now"
+                "label": "just now",
+                "roots": [
+                    "just",
+                    "now"
+                ]
             },
             {
                 "concept": "just now",
@@ -49,7 +51,11 @@
             },
             {
                 "concept": "just now",
-                "label": "juuri nyt"
+                "label": "juuri nyt",
+                "roots": [
+                    "juuri",
+                    "nyt"
+                ]
             }
         ],
         "nl": [
@@ -67,11 +73,13 @@
             },
             {
                 "concept": "just now",
-                "label": "daarnet"
+                "label": "daarnet",
+                "roots": "net"
             },
             {
                 "concept": "just now",
-                "label": "zojuist"
+                "label": "zojuist",
+                "roots": "juist"
             }
         ]
     }

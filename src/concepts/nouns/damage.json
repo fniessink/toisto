@@ -2,7 +2,7 @@
     "concepts": {
         "damage": {},
         "damage to personal property": {
-            "roots": "damage"
+            "hypernym": "damage"
         }
     },
     "labels": {
@@ -13,7 +13,8 @@
             },
             {
                 "concept": "damage to personal property",
-                "label": "damage to personal property"
+                "label": "damage to personal property",
+                "roots": "damage"
             }
         ],
         "fi": [
@@ -23,7 +24,8 @@
             },
             {
                 "concept": "damage to personal property",
-                "label": "irtaimistovahinko"
+                "label": "irtaimistovahinko",
+                "roots": "vahinko"
             }
         ],
         "nl": [
@@ -33,7 +35,8 @@
             },
             {
                 "concept": "damage to personal property",
-                "label": "de schade aan persoonlijke eigendommen"
+                "label": "de schade aan persoonlijke eigendommen",
+                "roots": "de schade"
             }
         ]
     }

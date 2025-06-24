@@ -1,17 +1,7 @@
 {
     "concepts": {
         "bilingual": {
-            "involves": "language",
-            "roots": {
-                "fi": [
-                    "2",
-                    "language"
-                ],
-                "nl": [
-                    "2",
-                    "language"
-                ]
-            }
+            "involves": "language"
         }
     },
     "labels": {
@@ -24,13 +14,21 @@
         "fi": [
             {
                 "concept": "bilingual",
-                "label": "kaksikielinen"
+                "label": "kaksikielinen",
+                "roots": [
+                    "kaksi",
+                    "kieli"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "bilingual",
-                "label": "tweetalig"
+                "label": "tweetalig",
+                "roots": [
+                    "twee",
+                    "de taal"
+                ]
             }
         ]
     }

@@ -1,11 +1,6 @@
 {
     "concepts": {
-        "very well, thank you": {
-            "roots": [
-                "good",
-                "thanks"
-            ]
-        }
+        "very well, thank you": {}
     },
     "labels": {
         "en": [
@@ -14,13 +9,21 @@
                 "label": [
                     "Very well, thank you!",
                     "Very well, thanks!"
+                ],
+                "roots": [
+                    "well",
+                    "Thank you!"
                 ]
             }
         ],
         "fi": [
             {
                 "concept": "very well, thank you",
-                "label": "Ihan hyvää, kiitos!"
+                "label": "Ihan hyvää, kiitos!",
+                "roots": [
+                    "hyvä",
+                    "Kiitos!"
+                ]
             }
         ],
         "nl": [
@@ -30,6 +33,10 @@
                     "Heel goed, dank je!",
                     "Heel goed, dank u!",
                     "Heel goed, bedankt!"
+                ],
+                "roots": [
+                    "goed",
+                    "Dank je!"
                 ]
             }
         ]

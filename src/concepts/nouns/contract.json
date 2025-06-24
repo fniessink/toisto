@@ -2,11 +2,7 @@
     "concepts": {
         "contract": {},
         "employment contract": {
-            "hypernym": "contract",
-            "roots": {
-                "fi": "work",
-                "nl": "work"
-            }
+            "hypernym": "contract"
         }
     },
     "labels": {
@@ -17,7 +13,8 @@
             },
             {
                 "concept": "employment contract",
-                "label": "employment contract"
+                "label": "employment contract",
+                "roots": "contract"
             }
         ],
         "fi": [
@@ -27,7 +24,11 @@
             },
             {
                 "concept": "employment contract",
-                "label": "työsopimus"
+                "label": "työsopimus",
+                "roots": [
+                    "työ",
+                    "sopimus"
+                ]
             }
         ],
         "nl": [
@@ -37,7 +38,11 @@
             },
             {
                 "concept": "employment contract",
-                "label": "het arbeidscontract"
+                "label": "het arbeidscontract",
+                "roots": [
+                    "de arbeid",
+                    "het contract"
+                ]
             }
         ]
     }

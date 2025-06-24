@@ -28,7 +28,7 @@ class SayTest(unittest.TestCase):
     @patch("toisto.ui.speech.run")
     @patch("toisto.ui.speech.Popen")
     def test_google_translate_fails_on_mac_os(self, popen: Mock, run: Mock) -> None:
-        """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
+        """Test that the say program is called with the correct arguments, when Google Translate fails on macOS."""
         run.return_value = available_voices = Mock()
         available_voices.stdout = ""
         self.config.set("commands", "mp3player", "afplay")
@@ -51,7 +51,7 @@ class SayTest(unittest.TestCase):
     @patch("toisto.ui.speech.run")
     @patch("toisto.ui.speech.Popen")
     def test_google_translate_fails_on_mac_os_twice(self, popen: Mock, run: Mock) -> None:
-        """Test that the say program is called with the correct arguments, when Google Translate fails on MacOS."""
+        """Test that the say program is called with the correct arguments, when Google Translate fails on macOS."""
         run.return_value = available_voices = Mock()
         available_voices.stdout = ""
         self.config.set("commands", "mp3player", "afplay")

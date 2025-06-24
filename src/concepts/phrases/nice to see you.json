@@ -1,25 +1,30 @@
 {
     "concepts": {
-        "nice to see you after such a long time": {
-            "roots": [
-                "nice",
-                "to see",
-                "long",
-                "time"
-            ]
-        }
+        "nice to see you after such a long time": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "nice to see you after such a long time",
-                "label": "Nice to see you after such a long time!"
+                "label": "Nice to see you after such a long time!",
+                "roots": [
+                    "nice",
+                    "to see",
+                    "long",
+                    "time"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "nice to see you after such a long time",
-                "label": "Kiva nähdä pitkästä aikaa!"
+                "label": "Kiva nähdä pitkästä aikaa!",
+                "roots": [
+                    "kiva",
+                    "nähdä",
+                    "pitkä",
+                    "aika"
+                ]
             }
         ],
         "nl": [
@@ -28,6 +33,12 @@
                 "label": [
                     "Leuk je na zo lange tijd te zien!",
                     "Leuk je te zien na zo lange tijd!"
+                ],
+                "roots": [
+                    "leuk",
+                    "lang",
+                    "de tijd",
+                    "zien"
                 ]
             }
         ]

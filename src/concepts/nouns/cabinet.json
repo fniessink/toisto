@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "cabinet": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cabinet",
+                "label": {
+                    "singular": "cabinet",
+                    "plural": "cabinets"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cabinet",
+                "label": {
+                    "singular": "kaappi",
+                    "plural": "kaapit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cabinet",
+                "label": {
+                    "singular": "de kast",
+                    "plural": "de kasten"
+                }
+            }
+        ]
+    }
+}

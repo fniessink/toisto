@@ -1,15 +1,6 @@
 {
     "concepts": {
-        "to reserve": {
-            "roots": {
-                "en": "reservation",
-                "fi": [
-                    "reservation",
-                    "to do"
-                ],
-                "nl": "reservation"
-            }
-        }
+        "to reserve": {}
     },
     "labels": {
         "en": [
@@ -25,7 +16,8 @@
                 "label": {
                     "infinitive": "to make a reservation",
                     "interrogative": "do we make a reservation?"
-                }
+                },
+                "roots": "reservation"
             }
         ],
         "fi": [
@@ -42,6 +34,10 @@
                     "infinitive": "tehdä varaus",
                     "interrogative": "varataanks me?"
                 },
+                "roots": [
+                    "tehdä",
+                    "varaus"
+                ],
                 "colloquial": true
             }
         ],
@@ -58,7 +54,8 @@
                 "label": {
                     "infinitive": "een reservering maken",
                     "interrogative": "maken we een reservering?"
-                }
+                },
+                "roots": "de reservering"
             }
         ]
     }
