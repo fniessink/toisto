@@ -4,11 +4,7 @@
             "hypernym": "sport"
         },
         "downhill skiing": {
-            "hypernym": "skiing",
-            "roots": {
-                "en": "skiing",
-                "nl": "skiing"
-            }
+            "hypernym": "skiing"
         }
     },
     "labels": {
@@ -19,7 +15,8 @@
             },
             {
                 "concept": "downhill skiing",
-                "label": "downhill skiing"
+                "label": "downhill skiing",
+                "roots": "skiing"
             }
         ],
         "fi": [
@@ -39,7 +36,8 @@
             },
             {
                 "concept": "downhill skiing",
-                "label": "het alpine skiën"
+                "label": "het alpine skiën",
+                "roots": "het skiën"
             }
         ]
     }

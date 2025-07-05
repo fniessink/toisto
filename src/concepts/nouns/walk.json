@@ -16,11 +16,13 @@
             },
             {
                 "concept": "walking",
-                "label": "walking"
+                "label": "walking",
+                "roots": "walk"
             },
             {
                 "concept": "Nordic walking",
-                "label": "Nordic walking"
+                "label": "Nordic walking",
+                "roots": "walking"
             }
         ],
         "fi": [
@@ -33,13 +35,15 @@
             },
             {
                 "concept": "Nordic walking",
-                "label": "sauvakävely"
+                "label": "sauvakävely",
+                "roots": "kävely"
             }
         ],
         "nl": [
             {
                 "concept": "walk",
-                "label": "de wandeling"
+                "label": "de wandeling",
+                "roots": "wandelen"
             },
             {
                 "concept": "walking",

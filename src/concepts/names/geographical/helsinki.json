@@ -5,11 +5,7 @@
             "hypernym": "capital"
         },
         "north helsinki": {
-            "holonym": "helsinki",
-            "roots": [
-                "north",
-                "helsinki"
-            ]
+            "holonym": "helsinki"
         }
     },
     "labels": {
@@ -20,7 +16,11 @@
             },
             {
                 "concept": "north helsinki",
-                "label": "North Helsinki"
+                "label": "North Helsinki",
+                "roots": [
+                    "north",
+                    "Helsinki"
+                ]
             }
         ],
         "fi": [
@@ -30,7 +30,11 @@
             },
             {
                 "concept": "north helsinki",
-                "label": "Pohjois-Helsinki"
+                "label": "Pohjois-Helsinki",
+                "roots": [
+                    "pohjoinen",
+                    "Helsinki"
+                ]
             }
         ],
         "nl": [
@@ -40,7 +44,11 @@
             },
             {
                 "concept": "north helsinki",
-                "label": "Helsinki-Noord"
+                "label": "Helsinki-North",
+                "roots": [
+                    "het noorden",
+                    "Helsinki"
+                ]
             }
         ]
     }

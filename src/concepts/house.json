@@ -24,62 +24,22 @@
         "stairs": {},
         "elevator": {},
         "living room": {
-            "hypernym": "room",
-            "roots": {
-                "en": [
-                    "room",
-                    "to live"
-                ],
-                "fi": "room",
-                "nl": [
-                    "house",
-                    "room",
-                    "to live"
-                ]
-            }
+            "hypernym": "room"
         },
         "kitchen": {
             "hypernym": "room"
         },
         "dining room": {
-            "hypernym": "room",
-            "roots": {
-                "en": [
-                    "room"
-                ],
-                "fi": [
-                    "food",
-                    "room"
-                ],
-                "nl": [
-                    "to eat",
-                    "room"
-                ]
-            }
+            "hypernym": "room"
         },
         "bedroom": {
-            "hypernym": "room",
-            "roots": {
-                "en": [
-                    "room",
-                    "bed"
-                ],
-                "fi": "room",
-                "nl": [
-                    "room",
-                    "to sleep"
-                ]
-            }
+            "hypernym": "room"
         },
         "bath": {
             "holonym": "bathroom"
         },
         "bathroom": {
-            "hypernym": "room",
-            "roots": [
-                "bath",
-                "room"
-            ]
+            "hypernym": "room"
         },
         "toilet": {
             "hypernym": "room"
@@ -181,7 +141,11 @@
             },
             {
                 "concept": "living room",
-                "label": "living room"
+                "label": "living room",
+                "roots": [
+                    "to live",
+                    "room"
+                ]
             },
             {
                 "concept": "kitchen",
@@ -192,11 +156,16 @@
             },
             {
                 "concept": "dining room",
-                "label": "dining room"
+                "label": "dining room",
+                "roots": "room"
             },
             {
                 "concept": "bedroom",
-                "label": "bedroom"
+                "label": "bedroom",
+                "roots": [
+                    "bed",
+                    "room"
+                ]
             },
             {
                 "concept": "bath",
@@ -207,11 +176,16 @@
             },
             {
                 "concept": "bathroom",
-                "label": "bathroom"
+                "label": "bathroom",
+                "roots": [
+                    "bath",
+                    "room"
+                ]
             },
             {
                 "concept": "toilet",
-                "label": "restroom"
+                "label": "restroom",
+                "roots": "room"
             },
             {
                 "concept": "toilet",
@@ -310,7 +284,8 @@
             },
             {
                 "concept": "living room",
-                "label": "olohuone"
+                "label": "olohuone",
+                "roots": "huone"
             },
             {
                 "concept": "kitchen",
@@ -321,11 +296,16 @@
             },
             {
                 "concept": "dining room",
-                "label": "ruokahuone"
+                "label": "ruokahuone",
+                "roots": [
+                    "ruoka",
+                    "huone"
+                ]
             },
             {
                 "concept": "bedroom",
-                "label": "makuuhuone"
+                "label": "makuuhuone",
+                "roots": "huone"
             },
             {
                 "concept": "bath",
@@ -336,7 +316,11 @@
             },
             {
                 "concept": "bathroom",
-                "label": "kylpyhuone"
+                "label": "kylpyhuone",
+                "roots": [
+                    "kylpy",
+                    "huone"
+                ]
             },
             {
                 "concept": "toilet",
@@ -413,7 +397,8 @@
                 "label": {
                     "singular": "de baksteen",
                     "plural": "de bakstenen"
-                }
+                },
+                "roots": "de steen"
             },
             {
                 "concept": "step",
@@ -435,11 +420,19 @@
             },
             {
                 "concept": "living room",
-                "label": "de huiskamer"
+                "label": "de huiskamer",
+                "roots": [
+                    "het huis",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "living room",
-                "label": "de woonkamer"
+                "label": "de woonkamer",
+                "roots": [
+                    "wonen",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "kitchen",
@@ -450,11 +443,19 @@
             },
             {
                 "concept": "dining room",
-                "label": "de eetkamer"
+                "label": "de eetkamer",
+                "roots": [
+                    "eten",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "bedroom",
-                "label": "de slaapkamer"
+                "label": "de slaapkamer",
+                "roots": [
+                    "slapen",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "bath",
@@ -465,7 +466,11 @@
             },
             {
                 "concept": "bathroom",
-                "label": "de badkamer"
+                "label": "de badkamer",
+                "roots": [
+                    "het bad",
+                    "de kamer"
+                ]
             },
             {
                 "concept": "toilet",

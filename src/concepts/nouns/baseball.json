@@ -4,28 +4,29 @@
             "example": "I play Finnish baseball",
             "hypernym": "team sport"
         },
-        "I play Finnish baseball": {
-            "roots": [
-                "to play a sport",
-                "Finnish baseball"
-            ]
-        }
+        "I play Finnish baseball": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "Finnish baseball",
-                "label": "Finnish baseball"
+                "label": "Finnish baseball",
+                "roots": "Finnish"
             },
             {
                 "concept": "I play Finnish baseball",
-                "label": "I play Finnish baseball."
+                "label": "I play Finnish baseball.",
+                "roots": [
+                    "I play",
+                    "Finnish baseball"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "Finnish baseball",
-                "label": "pesäpallo"
+                "label": "pesäpallo",
+                "roots": "pallo"
             },
             {
                 "concept": "Finnish baseball",
@@ -34,22 +35,32 @@
             },
             {
                 "concept": "I play Finnish baseball",
-                "label": "Minä pelaan pesäpalloa."
+                "label": "Minä pelaan pesäpalloa.",
+                "roots": [
+                    "minä pelaan",
+                    "pesäpallo"
+                ]
             },
             {
                 "concept": "I play Finnish baseball",
                 "label": "Mä pelaan pesistä.",
-                "colloquial": true
+                "colloquial": true,
+                "roots": "pesis"
             }
         ],
         "nl": [
             {
                 "concept": "Finnish baseball",
-                "label": "het Fins honkbal"
+                "label": "het Fins honkbal",
+                "roots": "Fins"
             },
             {
                 "concept": "I play Finnish baseball",
-                "label": "Ik speel Fins honkbal."
+                "label": "Ik speel Fins honkbal.",
+                "roots": [
+                    "ik speel",
+                    "het Fins honkbal"
+                ]
             }
         ]
     }

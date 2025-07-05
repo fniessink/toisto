@@ -1,16 +1,7 @@
 {
     "concepts": {
         "rhino": {
-            "hypernym": "animal",
-            "roots": {
-                "fi": [
-                    "horn"
-                ],
-                "nl": [
-                    "horn",
-                    "nose"
-                ]
-            }
+            "hypernym": "animal"
         }
     },
     "labels": {
@@ -35,7 +26,8 @@
                 "label": {
                     "singular": "sarvikuono",
                     "plural": "sarvikuonot"
-                }
+                },
+                "roots": "sarvi"
             }
         ],
         "nl": [
@@ -44,7 +36,11 @@
                 "label": {
                     "singular": "de neushoorn",
                     "plural": "de neushoorns"
-                }
+                },
+                "roots": [
+                    "de neus",
+                    "de hoorn"
+                ]
             }
         ]
     }

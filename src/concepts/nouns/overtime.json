@@ -1,36 +1,27 @@
 {
     "concepts": {
-        "overtime": {
-            "roots": {
-                "en": "time",
-                "fi": [
-                    "after",
-                    "work"
-                ],
-                "nl": [
-                    "after",
-                    "work"
-                ]
-            }
-        }
+        "overtime": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "overtime",
-                "label": "overtime"
+                "label": "overtime",
+                "roots": "time"
             }
         ],
         "fi": [
             {
                 "concept": "overtime",
-                "label": "ylityö"
+                "label": "ylityö",
+                "roots": "työ"
             }
         ],
         "nl": [
             {
                 "concept": "overtime",
-                "label": "het overwerk"
+                "label": "het overwerk",
+                "roots": "het werk"
             }
         ]
     }

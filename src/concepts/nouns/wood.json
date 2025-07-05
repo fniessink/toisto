@@ -16,11 +16,19 @@
             },
             {
                 "concept": "firewood",
-                "label": "firewood"
+                "label": "firewood",
+                "roots": [
+                    "fire",
+                    "wood"
+                ]
             },
             {
                 "concept": "woodwork",
-                "label": "woodwork"
+                "label": "woodwork",
+                "roots": [
+                    "wood",
+                    "work"
+                ]
             }
         ],
         "fi": [
@@ -30,11 +38,16 @@
             },
             {
                 "concept": "firewood",
-                "label": "polttopuut"
+                "label": "polttopuut",
+                "roots": "puu"
             },
             {
                 "concept": "woodwork",
-                "label": "puutyöt"
+                "label": "puutyöt",
+                "roots": [
+                    "puu",
+                    "työ"
+                ]
             }
         ],
         "nl": [
@@ -44,11 +57,13 @@
             },
             {
                 "concept": "firewood",
-                "label": "het brandhout"
+                "label": "het brandhout",
+                "roots": "het hout"
             },
             {
                 "concept": "woodwork",
-                "label": "de houtbewerking"
+                "label": "de houtbewerking",
+                "roots": "het hout"
             }
         ]
     }

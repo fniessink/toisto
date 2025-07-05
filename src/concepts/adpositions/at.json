@@ -2,12 +2,8 @@
     "concepts": {
         "at someone's place": {},
         "at the immediate vicinity of": {},
-        "bob sits at the table": {
-            "roots": "at the immediate vicinity of"
-        },
-        "alice spent the night at bob's place": {
-            "roots": "at someone's place"
-        }
+        "bob sits at the table": {},
+        "alice spent the night at bob's place": {}
     },
     "labels": {
         "en": [
@@ -23,11 +19,22 @@
             },
             {
                 "concept": "bob sits at the table",
-                "label": "Bob sits at the table."
+                "label": "Bob sits at the table.",
+                "roots": [
+                    "he sits",
+                    "at",
+                    "table"
+                ]
             },
             {
                 "concept": "alice spent the night at bob's place",
-                "label": "Alice spent the night at Bob's place."
+                "label": "Alice spent the night at Bob's place.",
+                "roots": [
+                    "to spend",
+                    "night",
+                    "at",
+                    "place"
+                ]
             }
         ],
         "fi": [
@@ -41,11 +48,17 @@
             },
             {
                 "concept": "bob sits at the table",
-                "label": "Bob istuu pöydän ääressä."
+                "label": "Bob istuu pöydän ääressä.",
+                "roots": [
+                    "hän istuu",
+                    "pöytä",
+                    "ääressä"
+                ]
             },
             {
                 "concept": "alice spent the night at bob's place",
-                "label": "Alice yöpyi Bobin luona."
+                "label": "Alice yöpyi Bobin luona.",
+                "roots": "luona"
             }
         ],
         "nl": [
@@ -62,17 +75,31 @@
             },
             {
                 "concept": "bob sits at the table",
-                "label": "Bob zit aan de tafel."
+                "label": "Bob zit aan de tafel.",
+                "roots": [
+                    "hij zit",
+                    "aan",
+                    "de tafel"
+                ]
             },
             {
                 "concept": "bob sits at the table",
-                "label": "Bob zit bij de tafel."
+                "label": "Bob zit bij de tafel.",
+                "roots": [
+                    "hij zit",
+                    "bij",
+                    "de tafel"
+                ]
             },
             {
                 "concept": "alice spent the night at bob's place",
                 "label": [
                     "Alice bleef bij Bob slapen.",
                     "Alice bleef slapen bij Bob."
+                ],
+                "roots": [
+                    "bij",
+                    "slapen"
                 ]
             }
         ]

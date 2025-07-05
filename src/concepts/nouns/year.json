@@ -3,9 +3,7 @@
         "year": {
             "holonym": "decade"
         },
-        "once a year": {
-            "roots": "year"
-        }
+        "once a year": {}
     },
     "labels": {
         "en": [
@@ -18,7 +16,8 @@
             },
             {
                 "concept": "once a year",
-                "label": "once a year"
+                "label": "once a year",
+                "roots": "year"
             }
         ],
         "fi": [
@@ -31,7 +30,8 @@
             },
             {
                 "concept": "once a year",
-                "label": "kerran vuodessa"
+                "label": "kerran vuodessa",
+                "roots": "vuosi"
             }
         ],
         "nl": [
@@ -47,6 +47,10 @@
                 "label": [
                     "één keer per jaar",
                     "een keer per jaar"
+                ],
+                "roots": [
+                    "één",
+                    "het jaar"
                 ]
             }
         ]

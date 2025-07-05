@@ -1,11 +1,7 @@
 {
     "concepts": {
         "21": {
-            "hypernym": "number",
-            "roots": [
-                "1",
-                "20"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,11 @@
                 "label": {
                     "cardinal": "twenty-one",
                     "ordinal": "twenty-first"
-                }
+                },
+                "roots": [
+                    "twenty",
+                    "one"
+                ]
             }
         ],
         "fi": [
@@ -24,7 +24,12 @@
                 "label": {
                     "cardinal": "kaksikymmentäyksi",
                     "ordinal": "kahdeskymmenesensimmäinen"
-                }
+                },
+                "roots": [
+                    "kaksi",
+                    "kymmenen",
+                    "yksi"
+                ]
             },
             {
                 "concept": "21",
@@ -41,7 +46,11 @@
                 "label": {
                     "cardinal": "eenentwintig",
                     "ordinal": "eenentwintigste"
-                }
+                },
+                "roots": [
+                    "één",
+                    "twintig"
+                ]
             }
         ]
     }

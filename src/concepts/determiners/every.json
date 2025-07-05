@@ -7,30 +7,10 @@
         "in any case": {
             "hypernym": "every"
         },
-        "every morning": {
-            "roots": [
-                "every",
-                "morning"
-            ]
-        },
-        "every day": {
-            "roots": [
-                "every",
-                "day"
-            ]
-        },
-        "every week": {
-            "roots": [
-                "every",
-                "week"
-            ]
-        },
-        "every year": {
-            "roots": [
-                "every",
-                "year"
-            ]
-        }
+        "every morning": {},
+        "every day": {},
+        "every week": {},
+        "every year": {}
     },
     "labels": {
         "en": [
@@ -44,7 +24,8 @@
             },
             {
                 "concept": "everywhere",
-                "label": "everywhere"
+                "label": "everywhere",
+                "roots": "every"
             },
             {
                 "concept": [
@@ -55,19 +36,35 @@
             },
             {
                 "concept": "every morning",
-                "label": "every morning"
+                "label": "every morning",
+                "roots": [
+                    "every",
+                    "morning"
+                ]
             },
             {
                 "concept": "every day",
-                "label": "every day"
+                "label": "every day",
+                "roots": [
+                    "every",
+                    "day"
+                ]
             },
             {
                 "concept": "every week",
-                "label": "every week"
+                "label": "every week",
+                "roots": [
+                    "every",
+                    "week"
+                ]
             },
             {
                 "concept": "every year",
-                "label": "every year"
+                "label": "every year",
+                "roots": [
+                    "every",
+                    "year"
+                ]
             }
         ],
         "fi": [
@@ -78,37 +75,66 @@
             {
                 "concept": "everywhere",
                 "label": "joka paikassa",
+                "roots": [
+                    "joka",
+                    "paikka"
+                ],
                 "tip": "inessive"
             },
             {
                 "concept": "everywhere",
                 "label": "joka paikasta",
+                "roots": [
+                    "joka",
+                    "paikka"
+                ],
                 "tip": "elative"
             },
             {
                 "concept": "everywhere",
                 "label": "joka paikkaan",
+                "roots": [
+                    "joka",
+                    "paikka"
+                ],
                 "tip": "illative"
             },
             {
                 "concept": "in any case",
-                "label": "joka tapauksessa"
+                "label": "joka tapauksessa",
+                "roots": "joka"
             },
             {
                 "concept": "every morning",
-                "label": "joka aamu"
+                "label": "joka aamu",
+                "roots": [
+                    "joka",
+                    "aamu"
+                ]
             },
             {
                 "concept": "every day",
-                "label": "joka päivä"
+                "label": "joka päivä",
+                "roots": [
+                    "joka",
+                    "päivä"
+                ]
             },
             {
                 "concept": "every week",
-                "label": "joka viikko"
+                "label": "joka viikko",
+                "roots": [
+                    "joka",
+                    "viikko"
+                ]
             },
             {
                 "concept": "every year",
-                "label": "joka vuosi"
+                "label": "joka vuosi",
+                "roots": [
+                    "joka",
+                    "vuosi"
+                ]
             }
         ],
         "nl": [
@@ -126,53 +152,88 @@
             },
             {
                 "concept": "everywhere",
-                "label": "iedere plek"
+                "label": "iedere plek",
+                "roots": "ieder"
             },
             {
                 "concept": [
                     "in any case",
                     "at least"
                 ],
-                "label": "in ieder geval"
+                "label": "in ieder geval",
+                "roots": "ieder"
             },
             {
                 "concept": [
                     "at least",
                     "in any case"
                 ],
-                "label": "in elk geval"
+                "label": "in elk geval",
+                "roots": "elk"
             },
             {
                 "concept": "every morning",
-                "label": "iedere ochtend"
+                "label": "iedere ochtend",
+                "roots": [
+                    "ieder",
+                    "de ochtend"
+                ]
             },
             {
                 "concept": "every morning",
-                "label": "elke ochtend"
+                "label": "elke ochtend",
+                "roots": [
+                    "elk",
+                    "de ochtend"
+                ]
             },
             {
                 "concept": "every day",
-                "label": "iedere dag"
+                "label": "iedere dag",
+                "roots": [
+                    "ieder",
+                    "de dag"
+                ]
             },
             {
                 "concept": "every day",
-                "label": "elke dag"
+                "label": "elke dag",
+                "roots": [
+                    "elk",
+                    "de dag"
+                ]
             },
             {
                 "concept": "every week",
-                "label": "iedere week"
+                "label": "iedere week",
+                "roots": [
+                    "ieder",
+                    "de week"
+                ]
             },
             {
                 "concept": "every week",
-                "label": "elke week"
+                "label": "elke week",
+                "roots": [
+                    "elk",
+                    "de week"
+                ]
             },
             {
                 "concept": "every year",
-                "label": "ieder jaar"
+                "label": "ieder jaar",
+                "roots": [
+                    "ieder",
+                    "het jaar"
+                ]
             },
             {
                 "concept": "every year",
-                "label": "elk jaar"
+                "label": "elk jaar",
+                "roots": [
+                    "elk",
+                    "het jaar"
+                ]
             }
         ]
     }

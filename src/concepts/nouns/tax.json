@@ -1,22 +1,8 @@
 {
     "concepts": {
         "tax": {},
-        "tax office": {
-            "roots": [
-                "tax",
-                "office"
-            ]
-        },
-        "tax return": {
-            "roots": {
-                "en": "tax",
-                "fi": [
-                    "tax",
-                    "notification"
-                ],
-                "nl": "tax"
-            }
-        }
+        "tax office": {},
+        "tax return": {}
     },
     "labels": {
         "en": [
@@ -26,11 +12,19 @@
             },
             {
                 "concept": "tax office",
-                "label": "tax office"
+                "label": "tax office",
+                "roots": [
+                    "tax",
+                    "office"
+                ]
             },
             {
                 "concept": "tax return",
-                "label": "tax return"
+                "label": "tax return",
+                "roots": [
+                    "tax",
+                    "return"
+                ]
             }
         ],
         "fi": [
@@ -40,11 +34,19 @@
             },
             {
                 "concept": "tax office",
-                "label": "verotoimisto"
+                "label": "verotoimisto",
+                "roots": [
+                    "vero",
+                    "toimisto"
+                ]
             },
             {
                 "concept": "tax return",
-                "label": "veroilmoitus"
+                "label": "veroilmoitus",
+                "roots": [
+                    "vero",
+                    "ilmoitus"
+                ]
             }
         ],
         "nl": [
@@ -54,11 +56,19 @@
             },
             {
                 "concept": "tax office",
-                "label": "het belastingkantoor"
+                "label": "het belastingkantoor",
+                "roots": [
+                    "de belasting",
+                    "het kantoor"
+                ]
             },
             {
                 "concept": "tax return",
-                "label": "de belastingaangifte"
+                "label": "de belastingaangifte",
+                "roots": [
+                    "de belasting",
+                    "de aangifte"
+                ]
             }
         ]
     }

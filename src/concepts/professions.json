@@ -7,17 +7,7 @@
             "hypernym": "profession"
         },
         "dentist": {
-            "hypernym": "profession",
-            "roots": {
-                "fi": [
-                    "tooth",
-                    "physician"
-                ],
-                "nl": [
-                    "tooth",
-                    "physician"
-                ]
-            }
+            "hypernym": "profession"
         },
         "nurse": {
             "hypernym": "profession"
@@ -26,25 +16,16 @@
             "hypernym": [
                 "profession",
                 "driver"
-            ],
-            "roots": [
-                "lorry",
-                "driver"
             ]
         },
         "taxi driver": {
             "hypernym": [
                 "profession",
                 "driver"
-            ],
-            "roots": [
-                "taxi",
-                "driver"
             ]
         },
         "car mechanic": {
-            "hypernym": "profession",
-            "roots": "car"
+            "hypernym": "profession"
         },
         "farmer": {
             "hypernym": "profession"
@@ -89,14 +70,10 @@
             "hypernym": "profession"
         },
         "real estate broker": {
-            "hypernym": "broker",
-            "roots": "broker"
+            "hypernym": "broker"
         },
         "managing director": {
-            "hypernym": "profession",
-            "roots": {
-                "nl": "company"
-            }
+            "hypernym": "profession"
         },
         "staff manager": {
             "hypernym": "profession"
@@ -135,15 +112,7 @@
             "hypernym": "profession"
         },
         "kitchenhand": {
-            "hypernym": "profession",
-            "roots": {
-                "en": [
-                    "kitchen",
-                    "hand"
-                ],
-                "fi": "kitchen",
-                "nl": "kitchen"
-            }
+            "hypernym": "profession"
         },
         "kindergarten teacher": {
             "hypernym": "teacher"
@@ -189,19 +158,32 @@
             },
             {
                 "concept": "truck driver",
-                "label": "truck driver"
+                "label": "truck driver",
+                "roots": [
+                    "truck",
+                    "driver"
+                ]
             },
             {
                 "concept": "taxi driver",
-                "label": "taxi driver"
+                "label": "taxi driver",
+                "roots": [
+                    "taxi",
+                    "driver"
+                ]
             },
             {
                 "concept": "taxi driver",
-                "label": "cabdriver"
+                "label": "cabdriver",
+                "roots": [
+                    "cab",
+                    "driver"
+                ]
             },
             {
                 "concept": "car mechanic",
-                "label": "car mechanic"
+                "label": "car mechanic",
+                "roots": "car"
             },
             {
                 "concept": "farmer",
@@ -221,7 +203,8 @@
             },
             {
                 "concept": "firefighter",
-                "label": "firefighter"
+                "label": "firefighter",
+                "roots": "fire"
             },
             {
                 "concept": "priest",
@@ -245,7 +228,11 @@
             },
             {
                 "concept": "mailman",
-                "label": "mailman"
+                "label": "mailman",
+                "roots": [
+                    "mail",
+                    "man"
+                ]
             },
             {
                 "concept": "janitor",
@@ -261,7 +248,8 @@
             },
             {
                 "concept": "real estate broker",
-                "label": "real estate broker"
+                "label": "real estate broker",
+                "roots": "broker"
             },
             {
                 "concept": "managing director",
@@ -285,7 +273,8 @@
             },
             {
                 "concept": "bookkeeper",
-                "label": "bookkeeper"
+                "label": "bookkeeper",
+                "roots": "book"
             },
             {
                 "concept": "journalist",
@@ -305,7 +294,8 @@
             },
             {
                 "concept": "hairdresser",
-                "label": "hairdresser"
+                "label": "hairdresser",
+                "roots": "hair"
             },
             {
                 "concept": "barber",
@@ -325,11 +315,16 @@
             },
             {
                 "concept": "kitchenhand",
-                "label": "kitchenhand"
+                "label": "kitchenhand",
+                "roots": [
+                    "kitchen",
+                    "hand"
+                ]
             },
             {
                 "concept": "kindergarten teacher",
-                "label": "kindergarten teacher"
+                "label": "kindergarten teacher",
+                "roots": "teacher"
             },
             {
                 "concept": "nanny",
@@ -341,7 +336,11 @@
             },
             {
                 "concept": "housewife",
-                "label": "housewife"
+                "label": "housewife",
+                "roots": [
+                    "house",
+                    "wife"
+                ]
             },
             {
                 "concept": "sewer",
@@ -367,27 +366,42 @@
             },
             {
                 "concept": "dentist",
-                "label": "hammaslääkäri"
+                "label": "hammaslääkäri",
+                "roots": [
+                    "hammas",
+                    "lääkäri"
+                ]
             },
             {
                 "concept": "nurse",
-                "label": "sairaanhoitaja"
+                "label": "sairaanhoitaja",
+                "roots": "sairas"
             },
             {
                 "concept": "truck driver",
-                "label": "rekkakuski"
+                "label": "rekkakuski",
+                "roots": [
+                    "rekka-auto",
+                    "kuski"
+                ]
             },
             {
                 "concept": "taxi driver",
-                "label": "taksikuski"
+                "label": "taksikuski",
+                "roots": [
+                    "taksi",
+                    "kuski"
+                ]
             },
             {
                 "concept": "car mechanic",
-                "label": "automekaanikko"
+                "label": "automekaanikko",
+                "roots": "auto"
             },
             {
                 "concept": "farmer",
-                "label": "maanviljelijä"
+                "label": "maanviljelijä",
+                "roots": "maa"
             },
             {
                 "concept": "singer",
@@ -403,7 +417,8 @@
             },
             {
                 "concept": "firefighter",
-                "label": "palomies"
+                "label": "palomies",
+                "roots": "mies"
             },
             {
                 "concept": "priest",
@@ -411,7 +426,8 @@
             },
             {
                 "concept": "entrepeneur",
-                "label": "yrittäjä"
+                "label": "yrittäjä",
+                "roots": "yrittää"
             },
             {
                 "concept": "architect",
@@ -423,7 +439,8 @@
             },
             {
                 "concept": "plumber",
-                "label": "putkimies"
+                "label": "putkimies",
+                "roots": "mies"
             },
             {
                 "concept": "electrician",
@@ -431,11 +448,13 @@
             },
             {
                 "concept": "electrician",
-                "label": "sähkömies"
+                "label": "sähkömies",
+                "roots": "mies"
             },
             {
                 "concept": "mailman",
-                "label": "postinjakaja"
+                "label": "postinjakaja",
+                "roots": "posti"
             },
             {
                 "concept": "janitor",
@@ -451,7 +470,8 @@
             },
             {
                 "concept": "real estate broker",
-                "label": "kiinteistonvälittäjä"
+                "label": "kiinteistonvälittäjä",
+                "roots": "välittäjä"
             },
             {
                 "concept": "managing director",
@@ -471,7 +491,8 @@
             },
             {
                 "concept": "bookkeeper",
-                "label": "kirjanpitäjä"
+                "label": "kirjanpitäjä",
+                "roots": "kirja"
             },
             {
                 "concept": "journalist",
@@ -507,15 +528,18 @@
             },
             {
                 "concept": "kitchenhand",
-                "label": "keittiöapulainen"
+                "label": "keittiöapulainen",
+                "roots": "keittiö"
             },
             {
                 "concept": "kindergarten teacher",
-                "label": "lastentarhanopettaja"
+                "label": "lastentarhanopettaja",
+                "roots": "opettaja"
             },
             {
                 "concept": "nanny",
-                "label": "lastenhoitaja"
+                "label": "lastenhoitaja",
+                "roots": "lapsi"
             },
             {
                 "concept": "researcher",
@@ -523,7 +547,11 @@
             },
             {
                 "concept": "housewife",
-                "label": "kotiäiti"
+                "label": "kotiäiti",
+                "roots": [
+                    "koti",
+                    "äiti"
+                ]
             },
             {
                 "concept": "sewer",
@@ -553,7 +581,11 @@
             },
             {
                 "concept": "dentist",
-                "label": "de tandarts"
+                "label": "de tandarts",
+                "roots": [
+                    "de tand",
+                    "de arts"
+                ]
             },
             {
                 "concept": "nurse",
@@ -561,15 +593,24 @@
             },
             {
                 "concept": "truck driver",
-                "label": "de vrachtwagenchauffeur"
+                "label": "de vrachtwagenchauffeur",
+                "roots": [
+                    "de vrachtwagen",
+                    "de chauffeur"
+                ]
             },
             {
                 "concept": "taxi driver",
-                "label": "de taxichauffeur"
+                "label": "de taxichauffeur",
+                "roots": [
+                    "de taxi",
+                    "de chauffeur"
+                ]
             },
             {
                 "concept": "car mechanic",
-                "label": "de automonteur"
+                "label": "de automonteur",
+                "roots": "de auto"
             },
             {
                 "concept": "farmer",
@@ -577,7 +618,8 @@
             },
             {
                 "concept": "farmer",
-                "label": "de landbouwer"
+                "label": "de landbouwer",
+                "roots": "het land"
             },
             {
                 "concept": "singer",
@@ -597,7 +639,8 @@
             },
             {
                 "concept": "firefighter",
-                "label": "de brandweerman"
+                "label": "de brandweerman",
+                "roots": "de man"
             },
             {
                 "concept": "priest",
@@ -621,7 +664,8 @@
             },
             {
                 "concept": "mailman",
-                "label": "de postbode"
+                "label": "de postbode",
+                "roots": "de post"
             },
             {
                 "concept": "janitor",
@@ -637,11 +681,13 @@
             },
             {
                 "concept": "real estate broker",
-                "label": "de vastgoedmakelaar"
+                "label": "de vastgoedmakelaar",
+                "roots": "de makelaar"
             },
             {
                 "concept": "managing director",
-                "label": "de bedrijfsleider"
+                "label": "de bedrijfsleider",
+                "roots": "het bedrijf"
             },
             {
                 "concept": "managing director",
@@ -664,7 +710,8 @@
             },
             {
                 "concept": "bookkeeper",
-                "label": "de boekhouder"
+                "label": "de boekhouder",
+                "roots": "het boek"
             },
             {
                 "concept": "journalist",
@@ -707,7 +754,8 @@
             },
             {
                 "concept": "kitchenhand",
-                "label": "de keukenhulp"
+                "label": "de keukenhulp",
+                "roots": "de keuken"
             },
             {
                 "concept": "kindergarten teacher",
@@ -718,7 +766,8 @@
                 "label": {
                     "feminine": "de kinderverzorgster",
                     "masculine": "de kinderverzorger"
-                }
+                },
+                "roots": "het kind"
             },
             {
                 "concept": "researcher",
@@ -726,7 +775,11 @@
             },
             {
                 "concept": "housewife",
-                "label": "de huismoeder"
+                "label": "de huismoeder",
+                "roots": [
+                    "het huis",
+                    "de moeder"
+                ]
             },
             {
                 "concept": "sewer",

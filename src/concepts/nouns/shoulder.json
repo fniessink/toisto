@@ -1,10 +1,7 @@
 {
     "concepts": {
         "shoulder": {
-            "holonym": "body",
-            "roots": {
-                "fi": "head"
-            }
+            "holonym": "body"
         }
     },
     "labels": {
@@ -23,7 +20,8 @@
                 "label": {
                     "singular": "olkapää",
                     "plural": "olkapäät"
-                }
+                },
+                "roots": "pää"
             },
             {
                 "concept": "shoulder",

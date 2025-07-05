@@ -1,11 +1,7 @@
 {
     "concepts": {
         "orange (fruit)": {
-            "hypernym": "fruit",
-            "roots": {
-                "en": "orange",
-                "nl": "apple"
-            }
+            "hypernym": "fruit"
         }
     },
     "labels": {
@@ -33,7 +29,8 @@
                 "label": {
                     "singular": "de sinaasappel",
                     "plural": "de sinaasappels"
-                }
+                },
+                "roots": "de appel"
             }
         ]
     }

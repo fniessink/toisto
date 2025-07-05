@@ -4,12 +4,7 @@
             "example": "fruit is healthy",
             "hypernym": "food"
         },
-        "fruit is healthy": {
-            "roots": [
-                "fruit",
-                "healthy"
-            ]
-        }
+        "fruit is healthy": {}
     },
     "labels": {
         "en": [
@@ -19,7 +14,11 @@
             },
             {
                 "concept": "fruit is healthy",
-                "label": "Fruit is healthy."
+                "label": "Fruit is healthy.",
+                "roots": [
+                    "fruit",
+                    "healthy"
+                ]
             }
         ],
         "fi": [
@@ -29,7 +28,11 @@
             },
             {
                 "concept": "fruit is healthy",
-                "label": "Hedelmä on terveellinen."
+                "label": "Hedelmä on terveellinen.",
+                "roots": [
+                    "hedelmä",
+                    "terveellinen"
+                ]
             }
         ],
         "nl": [
@@ -39,7 +42,11 @@
             },
             {
                 "concept": "fruit is healthy",
-                "label": "Fruit is gezond."
+                "label": "Fruit is gezond.",
+                "roots": [
+                    "het fruit",
+                    "gezond"
+                ]
             }
         ]
     }

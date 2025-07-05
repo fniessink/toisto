@@ -3,12 +3,7 @@
         "lunch": {
             "hypernym": "meal"
         },
-        "packed lunch": {
-            "roots": {
-                "en": "lunch",
-                "nl": "lunch"
-            }
-        }
+        "packed lunch": {}
     },
     "labels": {
         "en": [
@@ -18,7 +13,8 @@
             },
             {
                 "concept": "packed lunch",
-                "label": "packed lunch"
+                "label": "packed lunch",
+                "roots": "lunch"
             }
         ],
         "fi": [
@@ -38,7 +34,8 @@
             },
             {
                 "concept": "packed lunch",
-                "label": "het lunchpakket"
+                "label": "het lunchpakket",
+                "roots": "de lunch"
             }
         ]
     }

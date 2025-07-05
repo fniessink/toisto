@@ -3,27 +3,7 @@
         "below": {
             "example": "the glass is underneath the table"
         },
-        "the glass is underneath the table": {
-            "roots": {
-                "en": [
-                    "glass",
-                    "to be",
-                    "below",
-                    "table"
-                ],
-                "nl": [
-                    "glass",
-                    "below",
-                    "table"
-                ],
-                "fi": [
-                    "glass",
-                    "to be",
-                    "below",
-                    "table"
-                ]
-            }
-        }
+        "the glass is underneath the table": {}
     },
     "labels": {
         "en": [
@@ -41,7 +21,13 @@
             },
             {
                 "concept": "the glass is underneath the table",
-                "label": "The glass is underneath the table."
+                "label": "The glass is underneath the table.",
+                "roots": [
+                    "glass",
+                    "to be",
+                    "underneath",
+                    "table"
+                ]
             }
         ],
         "fi": [
@@ -51,7 +37,13 @@
             },
             {
                 "concept": "the glass is underneath the table",
-                "label": "Lasi on pöydän alla."
+                "label": "Lasi on pöydän alla.",
+                "roots": [
+                    "lasi",
+                    "olla",
+                    "pöytä",
+                    "alla"
+                ]
             }
         ],
         "nl": [
@@ -65,7 +57,12 @@
             },
             {
                 "concept": "the glass is underneath the table",
-                "label": "Het glas staat onder de tafel."
+                "label": "Het glas staat onder de tafel.",
+                "roots": [
+                    "het glas",
+                    "onder",
+                    "de tafel"
+                ]
             }
         ]
     }

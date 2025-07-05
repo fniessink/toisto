@@ -1,31 +1,19 @@
 {
     "concepts": {
         "what is 15 + 4": {
-            "answer": "that is 19",
-            "roots": [
-                "15",
-                "4"
-            ]
+            "answer": "that is 19"
         },
         "that is 19": {
             "answer-only": true
         },
         "what is 3 x 10": {
-            "answer": "that is 30",
-            "roots": [
-                "3",
-                "10"
-            ]
+            "answer": "that is 30"
         },
         "that is 30": {
             "answer-only": true
         },
         "what is 20 - 7": {
-            "answer": "that is 13",
-            "roots": [
-                "20",
-                "7"
-            ]
+            "answer": "that is 13"
         },
         "that is 13": {
             "answer-only": true
@@ -35,79 +23,130 @@
         "en": [
             {
                 "concept": "what is 15 + 4",
-                "label": "What is fifteen plus four?"
+                "label": "What is fifteen plus four?",
+                "roots": [
+                    "fifteen",
+                    "plus",
+                    "four"
+                ]
             },
             {
                 "concept": "that is 19",
-                "label": "That is nineteen."
+                "label": "That is nineteen.",
+                "roots": "nineteen"
             },
             {
                 "concept": "what is 3 x 10",
-                "label": "What is three times ten?"
+                "label": "What is three times ten?",
+                "roots": [
+                    "three",
+                    "ten"
+                ]
             },
             {
                 "concept": "that is 30",
-                "label": "That is thirty."
+                "label": "That is thirty.",
+                "roots": "thirty"
             },
             {
                 "concept": "what is 20 - 7",
-                "label": "What is twenty minus seven?"
+                "label": "What is, twenty minus seven?",
+                "roots": [
+                    "twenty",
+                    "minus",
+                    "seven"
+                ]
             },
             {
                 "concept": "that is 13",
-                "label": "That is thirteen."
+                "label": "That is thirteen.",
+                "roots": "thirteen"
             }
         ],
         "fi": [
             {
                 "concept": "what is 15 + 4",
-                "label": "Mitä on viisitoista plus neljä?"
+                "label": "Mitä on viisitoista plus neljä?",
+                "roots": [
+                    "viisitoista",
+                    "plus",
+                    "neljä"
+                ]
             },
             {
                 "concept": "that is 19",
-                "label": "Se on yhdeksäntoista."
+                "label": "Se on yhdeksäntoista.",
+                "roots": "yhdeksäntoista"
             },
             {
                 "concept": "what is 3 x 10",
-                "label": "Mitä on kolme kertaa kymmenen?"
+                "label": "Mitä on kolme kertaa kymmenen?",
+                "roots": [
+                    "kolme",
+                    "kymmenen"
+                ]
             },
             {
                 "concept": "that is 30",
-                "label": "Se on kolmekymmentä."
+                "label": "Se on kolmekymmentä.",
+                "roots": "kolmekymmentä"
             },
             {
                 "concept": "what is 20 - 7",
-                "label": "Mitä on kaksikymmentä minus seitsemän?"
+                "label": "Mitä on kaksikymmentä miinus seitsemän?",
+                "roots": [
+                    "kaksikymmentä",
+                    "miinus",
+                    "seitsemän"
+                ]
             },
             {
                 "concept": "that is 13",
-                "label": "Se on kolmetoista."
+                "label": "Se on kolmetoista.",
+                "roots": "kolmetoista"
             }
         ],
         "nl": [
             {
                 "concept": "what is 15 + 4",
-                "label": "Wat is vijftien plus vier?"
+                "label": "Wat is vijftien plus vier?",
+                "roots": [
+                    "vijftien",
+                    "de plus",
+                    "vier"
+                ]
             },
             {
                 "concept": "that is 19",
-                "label": "Dat is negentien."
+                "label": "Dat is negentien.",
+                "roots": "negentien"
             },
             {
                 "concept": "what is 3 x 10",
-                "label": "Wat is drie keer tien?"
+                "label": "Wat is drie keer tien?",
+                "roots": [
+                    "drie",
+                    "tien"
+                ]
             },
             {
                 "concept": "that is 30",
-                "label": "Dat is dertig."
+                "label": "Dat is dertig.",
+                "roots": "dertig"
             },
             {
                 "concept": "what is 20 - 7",
-                "label": "Wat is twintig min zeven?"
+                "label": "Wat is twintig min zeven?",
+                "roots": [
+                    "twintig",
+                    "de min",
+                    "zeven"
+                ]
             },
             {
                 "concept": "that is 13",
-                "label": "Dat is dertien."
+                "label": "Dat is dertien.",
+                "roots": "dertien"
             }
         ]
     }

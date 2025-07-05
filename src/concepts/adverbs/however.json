@@ -3,13 +3,7 @@
         "however": {
             "example": "I am busy, however, I am here"
         },
-        "I am busy, however, I am here": {
-            "roots": [
-                "to be",
-                "however",
-                "here"
-            ]
-        }
+        "I am busy, however, I am here": {}
     },
     "labels": {
         "en": [
@@ -39,31 +33,66 @@
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, however, I am here."
+                "label": "I am busy, however, I am here.",
+                "roots": [
+                    "I am",
+                    "however",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, still I am here."
+                "label": "I am busy, still I am here.",
+                "roots": [
+                    "I am",
+                    "still",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, yet I am here."
+                "label": "I am busy, yet I am here.",
+                "roots": [
+                    "I am",
+                    "yet",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, nevertheless I am here."
+                "label": "I am busy, nevertheless I am here.",
+                "roots": [
+                    "I am",
+                    "nevertheless",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, nonetheless I am here."
+                "label": "I am busy, nonetheless I am here.",
+                "roots": [
+                    "I am",
+                    "nonetheless",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, but I am here anyway."
+                "label": "I am busy, but I am here anyway.",
+                "roots": [
+                    "I am",
+                    "but",
+                    "here"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "I am busy, but I am here regardless."
+                "label": "I am busy, but I am here regardless.",
+                "roots": [
+                    "I am",
+                    "here",
+                    "regardless"
+                ]
             }
         ],
         "fi": [
@@ -83,15 +112,36 @@
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "Minulla on kiire, silti olen tässä."
+                "label": "Minulla on kiire, silti olen tässä.",
+                "roots": [
+                    "minulla on",
+                    "kiire",
+                    "silti",
+                    "minä olen",
+                    "tässä"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "Minulla on kiire, kuitenkaan olen tässä."
+                "label": "Minulla on kiire, kuitenkaan olen tässä.",
+                "roots": [
+                    "minulla on",
+                    "kiire",
+                    "kuitenkaan",
+                    "minä olen",
+                    "tässä"
+                ]
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "Minulla on kiire, kuitenkin olen tässä."
+                "label": "Minulla on kiire, kuitenkin olen tässä.",
+                "roots": [
+                    "minulla on",
+                    "kiire",
+                    "kuitenkin",
+                    "minä olen",
+                    "tässä"
+                ]
             }
         ],
         "nl": [
@@ -101,7 +151,13 @@
             },
             {
                 "concept": "I am busy, however, I am here",
-                "label": "Ik heb het druk, toch ben ik hier."
+                "label": "Ik heb het druk, toch ben ik hier.",
+                "roots": [
+                    "ik heb",
+                    "toch",
+                    "ik ben",
+                    "hier"
+                ]
             }
         ]
     }

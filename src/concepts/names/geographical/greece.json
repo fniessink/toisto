@@ -1,10 +1,7 @@
 {
     "concepts": {
         "greece": {
-            "hypernym": "country",
-            "roots": {
-                "nl": "country"
-            }
+            "hypernym": "country"
         },
         "greek": {
             "hypernym": "nationality",
@@ -19,7 +16,8 @@
             },
             {
                 "concept": "greek",
-                "label": "Greek"
+                "label": "Greek",
+                "roots": "Greece"
             }
         ],
         "fi": [
@@ -29,17 +27,20 @@
             },
             {
                 "concept": "greek",
-                "label": "kreikkalainen"
+                "label": "kreikkalainen",
+                "roots": "Kreikka"
             }
         ],
         "nl": [
             {
                 "concept": "greece",
-                "label": "Griekenland"
+                "label": "Griekenland",
+                "roots": "het land"
             },
             {
                 "concept": "greek",
-                "label": "Grieks"
+                "label": "Grieks",
+                "roots": "Griekenland"
             }
         ]
     }

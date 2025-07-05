@@ -1,36 +1,36 @@
 {
     "concepts": {
-        "happy birthday": {
-            "roots": {
-                "en": [
-                    "happy",
-                    "birthday"
-                ],
-                "fi": "birthday",
-                "nl": [
-                    "congratulations",
-                    "birthday"
-                ]
-            }
-        }
+        "happy birthday": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "happy birthday",
-                "label": "Happy birthday!"
+                "label": "Happy birthday!",
+                "roots": [
+                    "happy",
+                    "birthday"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "happy birthday",
-                "label": "Hyvää syntymäpäivää!"
+                "label": "Hyvää syntymäpäivää!",
+                "roots": [
+                    "hyvä",
+                    "syntymäpäivä"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "happy birthday",
-                "label": "Gefeliciteerd met je verjaardag!"
+                "label": "Gefeliciteerd met je verjaardag!",
+                "roots": [
+                    "feliciteren",
+                    "de verjaardag"
+                ]
             }
         ]
     }

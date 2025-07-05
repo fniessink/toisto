@@ -5,11 +5,7 @@
         },
         "horseriding": {
             "hypernym": "outdoor activity",
-            "involves": "horse",
-            "roots": {
-                "en": "horse",
-                "nl": "horse"
-            }
+            "involves": "horse"
         }
     },
     "labels": {
@@ -23,7 +19,8 @@
             },
             {
                 "concept": "horseriding",
-                "label": "horseriding"
+                "label": "horseriding",
+                "roots": "horse"
             }
         ],
         "fi": [
@@ -49,7 +46,11 @@
             },
             {
                 "concept": "horseriding",
-                "label": "het paardrijden"
+                "label": "het paardrijden",
+                "roots": [
+                    "het paard",
+                    "rijden"
+                ]
             }
         ]
     }

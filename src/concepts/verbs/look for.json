@@ -1,42 +1,12 @@
 {
     "concepts": {
         "to look for": {},
-        "I am looking for a table lamp": {
-            "roots": [
-                "to look for",
-                "table lamp"
-            ]
-        },
-        "you are looking for a dining table": {
-            "roots": [
-                "to look for",
-                "dining table"
-            ]
-        },
-        "she is looking for a bookcase": {
-            "roots": [
-                "to look for",
-                "bookcase"
-            ]
-        },
-        "we are looking for an office chair": {
-            "roots": [
-                "to look for",
-                "office chair"
-            ]
-        },
-        "you are looking for a roller blind": {
-            "roots": [
-                "to look for",
-                "roller blind"
-            ]
-        },
-        "they are looking for a double bed": {
-            "roots": [
-                "to look for",
-                "double bed"
-            ]
-        }
+        "I am looking for a table lamp": {},
+        "you are looking for a dining table": {},
+        "she is looking for a bookcase": {},
+        "we are looking for an office chair": {},
+        "you are looking for a roller blind": {},
+        "they are looking for a double bed": {}
     },
     "labels": {
         "en": [
@@ -61,92 +31,166 @@
             },
             {
                 "concept": "I am looking for a table lamp",
-                "label": "I am looking for a table lamp."
+                "label": "I am looking for a table lamp.",
+                "roots": [
+                    "to look for",
+                    "table lamp"
+                ]
             },
             {
                 "concept": "you are looking for a dining table",
                 "label": "You are looking for a dining table.",
+                "roots": [
+                    "to look for",
+                    "dining table"
+                ],
                 "tip": "singular"
             },
             {
                 "concept": "she is looking for a bookcase",
-                "label": "She is looking for a bookcase."
+                "label": "She is looking for a bookcase.",
+                "roots": [
+                    "to look for",
+                    "bookcase"
+                ]
             },
             {
                 "concept": "we are looking for an office chair",
-                "label": "We are looking for an office chair."
+                "label": "We are looking for an office chair.",
+                "roots": [
+                    "to look for",
+                    "office chair"
+                ]
             },
             {
                 "concept": "you are looking for a roller blind",
                 "label": "You are looking for a roller blind.",
-                "tip": "plural"
+                "roots": [
+                    "to look for",
+                    "roller blind"
+                ]
             },
             {
                 "concept": "they are looking for a double bed",
-                "label": "They are looking for a double bed."
+                "label": "They are looking for a double bed.",
+                "roots": [
+                    "to look for",
+                    "double bed"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "I am looking for a table lamp",
                 "label": "Minä etsin pöytälamppua.",
+                "roots": [
+                    "minä etsin",
+                    "pöytälamppu"
+                ],
                 "note": "'pöytälamppua' is the partitive case of 'pöytälamppu'"
             },
             {
                 "concept": "I am looking for a table lamp",
                 "label": "Minä etsin pöytävalaisinta.",
+                "roots": [
+                    "minä etsin",
+                    "pöytävalaisin"
+                ],
                 "note": "'pöytävalaisinta' is the partitive case of 'pöytävalaisin'"
             },
             {
                 "concept": "you are looking for a dining table",
-                "label": "Sinä etsit ruokapöytää."
+                "label": "Sinä etsit ruokapöytää.",
+                "roots": [
+                    "sinä etsit",
+                    "ruokapöytä"
+                ]
             },
             {
                 "concept": "she is looking for a bookcase",
-                "label": "Hän etsii kirjahyllya.",
-                "note": "'kirjahyllya' is the partitive case of 'kirjahylly'",
-                "tip": "feminine"
+                "label": "Hän etsii kirjahyllyä.",
+                "roots": [
+                    "hän etsii",
+                    "kirjahylly"
+                ],
+                "note": "'kirjahyllyä' is the partitive case of 'kirjahylly'"
             },
             {
                 "concept": "we are looking for an office chair",
                 "label": "Me etsimme työtuolia.",
+                "roots": [
+                    "me etsimme",
+                    "työtuoli"
+                ],
                 "note": "'työtuolia' is the partitive case of 'työtuoli'"
             },
             {
                 "concept": "you are looking for a roller blind",
                 "label": "Te etsitte rullaverhoa.",
+                "roots": [
+                    "te etsitte",
+                    "rullaverho"
+                ],
                 "note": "'rullaverhoa' is the partitive case of 'rullaverho'"
             },
             {
                 "concept": "they are looking for a double bed",
                 "label": "He etsivät parisänkyä.",
+                "roots": [
+                    "he etsivät",
+                    "parisänky"
+                ],
                 "note": "'parisänkyä' is the partitive case of 'parisänky'"
             }
         ],
         "nl": [
             {
                 "concept": "I am looking for a table lamp",
-                "label": "Ik zoek een tafellamp."
+                "label": "Ik zoek een tafellamp.",
+                "roots": [
+                    "ik zoek",
+                    "de tafellamp"
+                ]
             },
             {
                 "concept": "you are looking for a dining table",
-                "label": "Jij zoekt een eettafel."
+                "label": "Jij zoekt een eettafel.",
+                "roots": [
+                    "jij zoekt",
+                    "de eettafel"
+                ]
             },
             {
                 "concept": "she is looking for a bookcase",
-                "label": "Zij zoekt een boekenkast."
+                "label": "Zij zoekt een boekenkast.",
+                "roots": [
+                    "zij zoekt",
+                    "de boekenkast"
+                ]
             },
             {
                 "concept": "we are looking for an office chair",
-                "label": "Wij zoeken een bureaustoel."
+                "label": "Wij zoeken een bureaustoel.",
+                "roots": [
+                    "wij zoeken",
+                    "de bureaustoel"
+                ]
             },
             {
                 "concept": "you are looking for a roller blind",
-                "label": "Jullie zoeken een rolgordijn."
+                "label": "Jullie zoeken een rolgordijn.",
+                "roots": [
+                    "jullie zoeken",
+                    "het rolgordijn"
+                ]
             },
             {
                 "concept": "they are looking for a double bed",
-                "label": "Zij zoeken een tweepersoonsbed."
+                "label": "Zij zoeken een tweepersoonsbed.",
+                "roots": [
+                    "zij zoeken",
+                    "het tweepersoonsbed"
+                ]
             }
         ]
     }

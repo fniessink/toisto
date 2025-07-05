@@ -4,8 +4,7 @@
             "hypernym": "means of transportation"
         },
         "racing bicycle": {
-            "hypernym": "bicycle",
-            "roots": "bicycle"
+            "hypernym": "bicycle"
         }
     },
     "labels": {
@@ -19,7 +18,8 @@
             },
             {
                 "concept": "racing bicycle",
-                "label": "racing bicycle"
+                "label": "racing bicycle",
+                "roots": "bicycle"
             }
         ],
         "fi": [
@@ -38,7 +38,8 @@
             },
             {
                 "concept": "racing bicycle",
-                "label": "kilpapyörä"
+                "label": "kilpapyörä",
+                "roots": "polkypyörä"
             }
         ],
         "nl": [
@@ -51,7 +52,8 @@
             },
             {
                 "concept": "racing bicycle",
-                "label": "de racefiets"
+                "label": "de racefiets",
+                "roots": "de fiets"
             }
         ]
     }

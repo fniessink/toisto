@@ -2,45 +2,13 @@
     "concepts": {
         "language": {},
         "spoken language": {
-            "hypernym": "language",
-            "roots": [
-                "language"
-            ]
+            "hypernym": "language"
         },
         "written language": {
-            "hypernym": "language",
-            "roots": {
-                "en": [
-                    "to write",
-                    "language"
-                ],
-                "fi": [
-                    "book",
-                    "language"
-                ],
-                "nl": [
-                    "to write",
-                    "language"
-                ]
-            }
+            "hypernym": "language"
         },
         "mother tongue": {
-            "hypernym": "language",
-            "roots": {
-                "en": [
-                    "mother",
-                    "tongue"
-                ],
-                "fi": [
-                    "mother",
-                    "language",
-                    "tongue"
-                ],
-                "nl": [
-                    "mother",
-                    "language"
-                ]
-            }
+            "hypernym": "language"
         },
         "english": {
             "hypernym": "language"
@@ -100,11 +68,7 @@
             "hypernym": "language"
         },
         "south african": {
-            "hypernym": "language",
-            "roots": [
-                "south",
-                "africa"
-            ]
+            "hypernym": "language"
         },
         "portuguese": {
             "hypernym": "language"
@@ -133,15 +97,21 @@
             },
             {
                 "concept": "spoken language",
-                "label": "spoken language"
+                "label": "spoken language",
+                "roots": "language"
             },
             {
                 "concept": "written language",
-                "label": "written language"
+                "label": "written language",
+                "roots": "language"
             },
             {
                 "concept": "mother tongue",
-                "label": "mother tongue"
+                "label": "mother tongue",
+                "roots": [
+                    "mother",
+                    "tongue"
+                ]
             },
             {
                 "concept": "english",
@@ -279,15 +249,24 @@
             },
             {
                 "concept": "spoken language",
-                "label": "puhekieli"
+                "label": "puhekieli",
+                "roots": "kieli"
             },
             {
                 "concept": "written language",
-                "label": "kirjakieli"
+                "label": "kirjakieli",
+                "roots": [
+                    "kirja",
+                    "kieli"
+                ]
             },
             {
                 "concept": "mother tongue",
-                "label": "äidinkieli"
+                "label": "äidinkieli",
+                "roots": [
+                    "äiti",
+                    "kieli"
+                ]
             },
             {
                 "concept": "english",
@@ -425,15 +404,27 @@
             },
             {
                 "concept": "spoken language",
-                "label": "de spreektaal"
+                "label": "de spreektaal",
+                "roots": [
+                    "spreken",
+                    "de taal"
+                ]
             },
             {
                 "concept": "written language",
-                "label": "de schrijftaal"
+                "label": "de schrijftaal",
+                "roots": [
+                    "schrijven",
+                    "de taal"
+                ]
             },
             {
                 "concept": "mother tongue",
-                "label": "de moedertaal"
+                "label": "de moedertaal",
+                "roots": [
+                    "de moeder",
+                    "de taal"
+                ]
             },
             {
                 "concept": "english",

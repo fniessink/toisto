@@ -2,11 +2,7 @@
     "concepts": {
         "inflammation": {},
         "bacterial inflammation": {
-            "hypernym": "inflammation",
-            "roots": [
-                "bacterium",
-                "inflammation"
-            ]
+            "hypernym": "inflammation"
         }
     },
     "labels": {
@@ -20,7 +16,11 @@
             },
             {
                 "concept": "bacterial inflammation",
-                "label": "bacterial inflammation"
+                "label": "bacterial inflammation",
+                "roots": [
+                    "bacterium",
+                    "inflammation"
+                ]
             }
         ],
         "fi": [
@@ -33,7 +33,11 @@
             },
             {
                 "concept": "bacterial inflammation",
-                "label": "bakteeritulehdus"
+                "label": "bakteeritulehdus",
+                "roots": [
+                    "bakteeri",
+                    "tulehdus"
+                ]
             }
         ],
         "nl": [
@@ -46,7 +50,11 @@
             },
             {
                 "concept": "bacterial inflammation",
-                "label": "de bacteriële ontsteking"
+                "label": "de bacteriële ontsteking",
+                "roots": [
+                    "de bacterie",
+                    "de ontsteking"
+                ]
             }
         ]
     }

@@ -33,7 +33,7 @@ class MissingConfigTest(ConfigTestCase):
 
     @patch("sys.platform", "darwin")
     def test_default_mp3player_on_macos(self):
-        """Test default mp3 player on MacOS."""
+        """Test default mp3 player on macOS."""
         self.assertEqual("afplay", self.read_config().get("commands", "mp3player"))
 
     @patch("sys.platform", "windows")

@@ -5,22 +5,14 @@
         },
         "travel program": {
             "hypernym": "program",
-            "involves": "travel",
-            "roots": "travel"
+            "involves": "travel"
         },
         "travel insurance": {
             "involves": "travel",
-            "roots": [
-                "travel",
-                "insurance"
-            ]
+            "hypernym": "insurance"
         },
-        "traveler": {
-            "roots": "travel"
-        },
-        "traveling": {
-            "roots": "travel"
-        }
+        "traveler": {},
+        "traveling": {}
     },
     "labels": {
         "en": [
@@ -40,19 +32,29 @@
             },
             {
                 "concept": "travel program",
-                "label": "travel program"
+                "label": "travel program",
+                "roots": [
+                    "travel",
+                    "program"
+                ]
             },
             {
                 "concept": "travel insurance",
-                "label": "travel insurance"
+                "label": "travel insurance",
+                "roots": [
+                    "travel",
+                    "insurance"
+                ]
             },
             {
                 "concept": "traveler",
-                "label": "traveler"
+                "label": "traveler",
+                "roots": "travel"
             },
             {
                 "concept": "traveling",
-                "label": "traveling"
+                "label": "traveling",
+                "roots": "travel"
             }
         ],
         "fi": [
@@ -65,19 +67,29 @@
             },
             {
                 "concept": "travel program",
-                "label": "matkaohjelma"
+                "label": "matkaohjelma",
+                "roots": [
+                    "matka",
+                    "ohjelma"
+                ]
             },
             {
                 "concept": "travel insurance",
-                "label": "matkavakuutus"
+                "label": "matkavakuutus",
+                "roots": [
+                    "matka",
+                    "vakuutus"
+                ]
             },
             {
                 "concept": "traveler",
-                "label": "matkustaja"
+                "label": "matkustaja",
+                "roots": "matka"
             },
             {
                 "concept": "traveling",
-                "label": "matkustaminen"
+                "label": "matkustaminen",
+                "roots": "matka"
             }
         ],
         "nl": [
@@ -90,19 +102,29 @@
             },
             {
                 "concept": "travel program",
-                "label": "het reisprogramma"
+                "label": "het reisprogramma",
+                "roots": [
+                    "de reis",
+                    "het programma"
+                ]
             },
             {
                 "concept": "travel insurance",
-                "label": "de reisverzekering"
+                "label": "de reisverzekering",
+                "roots": [
+                    "de reis",
+                    "de verzekering"
+                ]
             },
             {
                 "concept": "traveler",
-                "label": "de reiziger"
+                "label": "de reiziger",
+                "roots": "de reis"
             },
             {
                 "concept": "traveling",
-                "label": "het reizen"
+                "label": "het reizen",
+                "roots": "de reis"
             }
         ]
     }

@@ -2,11 +2,7 @@
     "concepts": {
         "tuesday": {
             "holonym": "days of the week",
-            "hypernym": "day",
-            "roots": {
-                "en": "day",
-                "nl": "day"
-            }
+            "hypernym": "day"
         }
     },
     "labels": {
@@ -17,7 +13,8 @@
                     "singular": "Tuesday",
                     "plural": "Tuesdays"
                 },
-                "note": "In English, the names of weekdays are capitalized"
+                "note": "In English, the names of weekdays are capitalized",
+                "roots": "day"
             }
         ],
         "fi": [
@@ -40,7 +37,8 @@
                     ],
                     "plural": "de dinsdagen"
                 },
-                "note": "In Dutch, the names of weekdays are not capitalized"
+                "note": "In Dutch, the names of weekdays are not capitalized",
+                "roots": "de dag"
             }
         ]
     }

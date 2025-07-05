@@ -4,11 +4,7 @@
             "antonym": "woman"
         },
         "best man": {
-            "hypernym": "man",
-            "roots": {
-                "en": "man",
-                "fi": "man"
-            }
+            "hypernym": "man"
         }
     },
     "labels": {
@@ -22,7 +18,8 @@
             },
             {
                 "concept": "best man",
-                "label": "best man"
+                "label": "best man",
+                "roots": "man"
             }
         ],
         "fi": [

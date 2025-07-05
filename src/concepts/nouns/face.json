@@ -3,12 +3,7 @@
         "face": {
             "example": "he has a friendly face"
         },
-        "he has a friendly face": {
-            "roots": [
-                "friendly",
-                "face"
-            ]
-        }
+        "he has a friendly face": {}
     },
     "labels": {
         "en": [
@@ -21,7 +16,12 @@
             },
             {
                 "concept": "he has a friendly face",
-                "label": "He has a friendly face."
+                "label": "He has a friendly face.",
+                "roots": [
+                    "he has",
+                    "friendly",
+                    "face"
+                ]
             }
         ],
         "fi": [
@@ -33,7 +33,12 @@
             {
                 "concept": "he has a friendly face",
                 "label": "Hänellä on ystävälliset kasvot.",
-                "tip": "masculine"
+                "tip": "masculine",
+                "roots": [
+                    "hänellä on",
+                    "ystävällinen",
+                    "kasvot"
+                ]
             }
         ],
         "nl": [
@@ -46,7 +51,12 @@
             },
             {
                 "concept": "he has a friendly face",
-                "label": "Hij heeft een vriendelijk gezicht."
+                "label": "Hij heeft een vriendelijk gezicht.",
+                "roots": [
+                    "hij heeft",
+                    "vriendelijk",
+                    "het gezicht"
+                ]
             }
         ]
     }

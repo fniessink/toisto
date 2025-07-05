@@ -7,44 +7,12 @@
             "hypernym": "sibling"
         },
         "sibling": {
-            "holonym": "family",
-            "roots": {
-                "nl": [
-                    "brother",
-                    "sister"
-                ]
-            }
+            "holonym": "family"
         },
-        "how many brothers and sisters do you have": {
-            "roots": [
-                "how many",
-                "to have",
-                "brother",
-                "sister"
-            ]
-        },
-        "I have x brothers and y sisters": {
-            "roots": [
-                "to have",
-                "2",
-                "brother",
-                "1",
-                "sister"
-            ]
-        },
-        "I have no siblings": {
-            "roots": [
-                "to have",
-                "sibling"
-            ]
-        },
-        "I am an only child": {
-            "roots": [
-                "to be",
-                "sole",
-                "child"
-            ]
-        }
+        "how many brothers and sisters do you have": {},
+        "I have x brothers and y sisters": {},
+        "I have no siblings": {},
+        "I am an only child": {}
     },
     "labels": {
         "en": [
@@ -71,23 +39,48 @@
             },
             {
                 "concept": "how many brothers and sisters do you have",
-                "label": "How many brothers and sisters do you have?"
+                "label": "How many brothers and sisters do you have?",
+                "roots": [
+                    "brother",
+                    "sister"
+                ]
             },
             {
                 "concept": "I have x brothers and y sisters",
-                "label": "I have two brothers and one sister."
+                "label": "I have two brothers and one sister.",
+                "roots": [
+                    "I have",
+                    "two",
+                    "brother",
+                    "one",
+                    "sister"
+                ]
             },
             {
                 "concept": "I have no siblings",
-                "label": "I have no siblings."
+                "label": "I have no siblings.",
+                "roots": [
+                    "I have",
+                    "sibling"
+                ]
             },
             {
                 "concept": "I have no siblings",
-                "label": "I have no brothers and sisters."
+                "label": "I have no brothers and sisters.",
+                "roots": [
+                    "I have",
+                    "brother",
+                    "sister"
+                ]
             },
             {
                 "concept": "I am an only child",
-                "label": "I am an only child."
+                "label": "I am an only child.",
+                "roots": [
+                    "I am",
+                    "only",
+                    "child"
+                ]
             }
         ],
         "fi": [
@@ -126,23 +119,50 @@
             },
             {
                 "concept": "how many brothers and sisters do you have",
-                "label": "Kuinka monta veljeä ja siskoa sinulla on?"
+                "label": "Kuinka monta veljeä ja siskoa sinulla on?",
+                "roots": [
+                    "Kuinka monta?",
+                    "veli",
+                    "sisko",
+                    "sinulla on"
+                ]
             },
             {
                 "concept": "I have x brothers and y sisters",
-                "label": "Minulla on kaksi veljeä ja yksi sisko."
+                "label": "Minulla on kaksi veljeä ja yksi sisko.",
+                "roots": [
+                    "minulla on",
+                    "kaksi",
+                    "veli",
+                    "yksi",
+                    "sisko"
+                ]
             },
             {
                 "concept": "I have no siblings",
-                "label": "Minulla ei ole sisaruksia."
+                "label": "Minulla ei ole sisaruksia.",
+                "roots": [
+                    "minulla ei ole",
+                    "sisarus"
+                ]
             },
             {
                 "concept": "I have no siblings",
-                "label": "Minulla ei ole veljiä tai siskoja."
+                "label": "Minulla ei ole veljiä tai siskoja.",
+                "roots": [
+                    "minulla ei ole",
+                    "veli",
+                    "sisko"
+                ]
             },
             {
                 "concept": "I am an only child",
-                "label": "Minä olen ainoa lapsi."
+                "label": "Minä olen ainoa lapsi.",
+                "roots": [
+                    "minä olen",
+                    "ainoa",
+                    "lapsi"
+                ]
             }
         ],
         "nl": [
@@ -182,22 +202,45 @@
             },
             {
                 "concept": "how many brothers and sisters do you have",
-                "label": "Hoeveel broers en zussen heb jij?"
+                "label": "Hoeveel broers en zussen heb jij?",
+                "roots": [
+                    "Hoeveel?",
+                    "de broer",
+                    "de zus",
+                    "heb jij?"
+                ]
             },
             {
                 "concept": "I have x brothers and y sisters",
                 "label": [
                     "Ik heb twee broers en één zus",
                     "Ik heb twee broers en een zus."
+                ],
+                "roots": [
+                    "ik heb",
+                    "twee",
+                    "de broer",
+                    "één",
+                    "de zus"
                 ]
             },
             {
                 "concept": "I have no siblings",
-                "label": "Ik heb geen broers en zussen."
+                "label": "Ik heb geen broers en zussen.",
+                "roots": [
+                    "ik heb",
+                    "de broer",
+                    "de zus"
+                ]
             },
             {
                 "concept": "I am an only child",
-                "label": "Ik ben enig kind."
+                "label": "Ik ben enig kind.",
+                "roots": [
+                    "ik ben",
+                    "enig",
+                    "het kind"
+                ]
             }
         ]
     }

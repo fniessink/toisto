@@ -1,17 +1,7 @@
 {
     "concepts": {
-        "the car is black": {
-            "roots": [
-                "to be",
-                "car",
-                "black"
-            ]
-        },
-        "to speak english": {
-            "roots": [
-                "english"
-            ]
-        }
+        "the car is black": {},
+        "to speak english": {}
     },
     "labels": {
         "en": [
@@ -74,7 +64,12 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "to be",
+                    "car",
+                    "black"
+                ]
             },
             {
                 "concept": "to speak english",
@@ -253,7 +248,11 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "to speak",
+                    "English"
+                ]
             }
         ],
         "fi": [
@@ -310,7 +309,11 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "auto",
+                    "musta"
+                ]
             },
             {
                 "concept": "to speak english",
@@ -423,7 +426,11 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "puhua",
+                    "englanti"
+                ]
             }
         ],
         "nl": [
@@ -474,7 +481,12 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "zijn",
+                    "de auto",
+                    "zwart"
+                ]
             },
             {
                 "concept": "to speak english",
@@ -611,7 +623,11 @@
                             }
                         }
                     }
-                }
+                },
+                "roots": [
+                    "spreken",
+                    "het Engels"
+                ]
             }
         ]
     }

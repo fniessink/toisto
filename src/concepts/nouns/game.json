@@ -6,18 +6,7 @@
         },
         "computer game": {
             "hypernym": "game",
-            "involves": "computer",
-            "roots": {
-                "en": [
-                    "computer",
-                    "game"
-                ],
-                "fi": "computer",
-                "nl": [
-                    "computer",
-                    "game"
-                ]
-            }
+            "involves": "computer"
         }
     },
     "labels": {
@@ -34,14 +23,19 @@
                 "label": {
                     "singular": "board game",
                     "plural": "board games"
-                }
+                },
+                "roots": "game"
             },
             {
                 "concept": "computer game",
                 "label": {
                     "singular": "computer game",
                     "plural": "computer games"
-                }
+                },
+                "roots": [
+                    "computer",
+                    "game"
+                ]
             }
         ],
         "fi": [
@@ -57,14 +51,19 @@
                 "label": {
                     "singular": "lautapeli",
                     "plural": "lautapelit"
-                }
+                },
+                "roots": "peli"
             },
             {
                 "concept": "computer game",
                 "label": {
                     "singular": "tietokonepeli",
                     "plural": "tietokonepelit"
-                }
+                },
+                "roots": [
+                    "tietokone",
+                    "peli"
+                ]
             }
         ],
         "nl": [
@@ -82,6 +81,10 @@
                     "plural": [
                         "de bordspellen",
                         "de bordspelen"
+                    ],
+                    "roots": [
+                        "het bord",
+                        "het spel"
                     ]
                 }
             },
@@ -90,7 +93,11 @@
                 "label": {
                     "singular": "het computerspel",
                     "plural": "de computerspellen"
-                }
+                },
+                "roots": [
+                    "de computer",
+                    "het spel"
+                ]
             }
         ]
     }

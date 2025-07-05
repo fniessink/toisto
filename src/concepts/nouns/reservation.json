@@ -13,7 +13,8 @@
             },
             {
                 "concept": "seat reservation",
-                "label": "seat reservation"
+                "label": "seat reservation",
+                "roots": "reservation"
             }
         ],
         "fi": [
@@ -23,7 +24,11 @@
             },
             {
                 "concept": "seat reservation",
-                "label": "paikkavaraus"
+                "label": "paikkavaraus",
+                "roots": [
+                    "paikka",
+                    "varaus"
+                ]
             }
         ],
         "nl": [
@@ -33,7 +38,11 @@
             },
             {
                 "concept": "seat reservation",
-                "label": "de plaatsreservering"
+                "label": "de plaatsreservering",
+                "roots": [
+                    "de plaats",
+                    "de reservering"
+                ]
             }
         ]
     }

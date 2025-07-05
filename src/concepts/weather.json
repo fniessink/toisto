@@ -7,46 +7,12 @@
             ]
         },
         "dry weather": {
-            "hypernym": "weather",
-            "roots": {
-                "en": [
-                    "dry",
-                    "weather"
-                ],
-                "nl": [
-                    "dry",
-                    "weather"
-                ]
-            }
+            "hypernym": "weather"
         },
         "hot weather": {
-            "hypernym": "weather",
-            "roots": {
-                "en": [
-                    "hot",
-                    "weather"
-                ]
-            }
+            "hypernym": "weather"
         },
-        "how is the weather": {
-            "roots": {
-                "en": [
-                    "how",
-                    "to be",
-                    "weather"
-                ],
-                "fi": [
-                    "what kind of",
-                    "to be",
-                    "weather"
-                ],
-                "nl": [
-                    "how",
-                    "to be",
-                    "weather"
-                ]
-            }
-        },
+        "how is the weather": {},
         "rain": {
             "example": "it is raining"
         },
@@ -62,12 +28,10 @@
         "storm": {},
         "fog": {},
         "rainy": {
-            "example": "it is rainy",
-            "roots": "rain"
+            "example": "it is rainy"
         },
         "sunny": {
-            "example": "it is sunny",
-            "roots": "sun"
+            "example": "it is sunny"
         },
         "windy": {
             "example": "it is windy",
@@ -77,89 +41,29 @@
             "example": [
                 "it is cloudy",
                 "it is partly cloudy"
-            ],
-            "roots": "cloud"
+            ]
         },
         "snowy": {
             "roots": "snow"
         },
         "stormy": {
-            "example": "it is stormy",
-            "roots": "storm"
+            "example": "it is stormy"
         },
         "foggy": {
-            "example": "it is foggy",
-            "roots": "fog"
+            "example": "it is foggy"
         },
-        "it is raining": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "rain"
-                ],
-                "fi": "rain",
-                "nl": "rain"
-            }
-        },
-        "it is snowing": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "snow"
-                ],
-                "fi": "snow",
-                "nl": "snow"
-            }
-        },
-        "sleet is falling": {
-            "roots": "sleet"
-        },
+        "it is raining": {},
+        "it is snowing": {},
+        "sleet is falling": {},
         "it is freezing": {},
-        "it is rainy": {
-            "roots": [
-                "to be",
-                "rainy"
-            ]
-        },
-        "it is sunny": {
-            "roots": [
-                "to be",
-                "sunny"
-            ]
-        },
-        "it is windy": {
-            "roots": [
-                "to be",
-                "windy"
-            ]
-        },
-        "it is cloudy": {
-            "roots": [
-                "to be",
-                "cloudy"
-            ]
-        },
-        "it is partly cloudy": {
-            "roots": "it is cloudy"
-        },
-        "it is storming": {
-            "roots": [
-                "to be",
-                "stormy"
-            ]
-        },
-        "it is stormy": {
-            "roots": [
-                "to be",
-                "stormy"
-            ]
-        },
-        "it is foggy": {
-            "roots": [
-                "to be",
-                "foggy"
-            ]
-        }
+        "it is rainy": {},
+        "it is sunny": {},
+        "it is windy": {},
+        "it is cloudy": {},
+        "it is partly cloudy": {},
+        "it is storming": {},
+        "it is stormy": {},
+        "it is foggy": {}
     },
     "labels": {
         "en": [
@@ -169,11 +73,19 @@
             },
             {
                 "concept": "dry weather",
-                "label": "dry weather"
+                "label": "dry weather",
+                "roots": [
+                    "dry",
+                    "weather"
+                ]
             },
             {
                 "concept": "hot weather",
-                "label": "hot weather"
+                "label": "hot weather",
+                "roots": [
+                    "hot",
+                    "weather"
+                ]
             },
             {
                 "concept": "hot weather",
@@ -184,6 +96,10 @@
                 "label": [
                     "How is the weather?",
                     "How's the weather?"
+                ],
+                "roots": [
+                    "How?",
+                    "weather"
                 ]
             },
             {
@@ -223,43 +139,53 @@
             },
             {
                 "concept": "rainy",
-                "label": "rainy"
+                "label": "rainy",
+                "roots": "rain"
             },
             {
                 "concept": "sunny",
-                "label": "sunny"
+                "label": "sunny",
+                "roots": "sun"
             },
             {
                 "concept": "windy",
-                "label": "windy"
+                "label": "windy",
+                "roots": "wind"
             },
             {
                 "concept": "cloudy",
-                "label": "cloudy"
+                "label": "cloudy",
+                "roots": "cloud"
             },
             {
                 "concept": "snowy",
-                "label": "snowy"
+                "label": "snowy",
+                "roots": "snow"
             },
             {
                 "concept": "stormy",
-                "label": "stormy"
+                "label": "stormy",
+                "roots": "storm"
             },
             {
                 "concept": "foggy",
-                "label": "foggy"
+                "label": "foggy",
+                "roots": "fog"
             },
             {
                 "concept": "it is raining",
-                "label": "It is raining."
+                "label": "It is raining.",
+                "roots": "rain"
             },
             {
                 "concept": "it is snowing",
-                "label": "It is snowing."
+                "label": "It is snowing.",
+                "roots": "snow"
             },
             {
                 "concept": "sleet is falling",
-                "label": "Sleet is falling."
+                "label": "Sleet is falling.",
+                "roots": "sleet"
             },
             {
                 "concept": "it is freezing",
@@ -267,35 +193,43 @@
             },
             {
                 "concept": "it is rainy",
-                "label": "It is rainy."
+                "label": "It is rainy.",
+                "roots": "rainy"
             },
             {
                 "concept": "it is sunny",
-                "label": "It is sunny."
+                "label": "It is sunny.",
+                "roots": "sunny"
             },
             {
                 "concept": "it is windy",
-                "label": "It is windy."
+                "label": "It is windy.",
+                "roots": "windy"
             },
             {
                 "concept": "it is cloudy",
-                "label": "It is cloudy."
+                "label": "It is cloudy.",
+                "roots": "cloudy"
             },
             {
                 "concept": "it is partly cloudy",
-                "label": "It is partly cloudy."
+                "label": "It is partly cloudy.",
+                "roots": "cloudy"
             },
             {
                 "concept": "it is storming",
-                "label": "It is storming."
+                "label": "It is storming.",
+                "roots": "storm"
             },
             {
                 "concept": "it is stormy",
-                "label": "It is stormy."
+                "label": "It is stormy.",
+                "roots": "storm"
             },
             {
                 "concept": "it is foggy",
-                "label": "It is foggy."
+                "label": "It is foggy.",
+                "roots": "foggy"
             }
         ],
         "fi": [
@@ -313,11 +247,16 @@
             },
             {
                 "concept": "how is the weather",
-                "label": "Millainen sää on?"
+                "label": "Millainen sää on?",
+                "roots": [
+                    "Millainen?",
+                    "sää"
+                ]
             },
             {
                 "concept": "how is the weather",
-                "label": "Minkälainen sää on?"
+                "label": "Minkälainen sää on?",
+                "roots": "sää"
             },
             {
                 "concept": "rain",
@@ -360,27 +299,33 @@
             },
             {
                 "concept": "sunny",
-                "label": "aurinkoinen"
+                "label": "aurinkoinen",
+                "roots": "aurinko"
             },
             {
                 "concept": "windy",
-                "label": "tuulinen"
+                "label": "tuulinen",
+                "roots": "tuuli"
             },
             {
                 "concept": "cloudy",
-                "label": "pilvinen"
+                "label": "pilvinen",
+                "roots": "pilvi"
             },
             {
                 "concept": "snowy",
-                "label": "luminen"
+                "label": "luminen",
+                "roots": "lumi"
             },
             {
                 "concept": "stormy",
-                "label": "myrskyinen"
+                "label": "myrskyinen",
+                "roots": "myrsky"
             },
             {
                 "concept": "foggy",
-                "label": "sumuinen"
+                "label": "sumuinen",
+                "roots": "sumu"
             },
             {
                 "concept": "it is raining",
@@ -396,7 +341,8 @@
             },
             {
                 "concept": "sleet is falling",
-                "label": "Sataa räntää."
+                "label": "Sataa räntää.",
+                "roots": "räntä"
             },
             {
                 "concept": "it is freezing",
@@ -408,11 +354,13 @@
             },
             {
                 "concept": "it is sunny",
-                "label": "On aurinkoista."
+                "label": "On aurinkoista.",
+                "roots": "aurinkoinen"
             },
             {
                 "concept": "it is windy",
-                "label": "On tuulista."
+                "label": "On tuulista.",
+                "roots": "tuulinen"
             },
             {
                 "concept": "it is windy",
@@ -420,23 +368,31 @@
             },
             {
                 "concept": "it is cloudy",
-                "label": "On pilvistä."
+                "label": "On pilvistä.",
+                "roots": "pilvinen"
             },
             {
                 "concept": "it is partly cloudy",
-                "label": "On puolipilvistä."
+                "label": "On puolipilvistä.",
+                "roots": [
+                    "puoli",
+                    "pilvinen"
+                ]
             },
             {
                 "concept": "it is storming",
-                "label": "On myrsky."
+                "label": "On myrsky.",
+                "roots": "myrsky"
             },
             {
                 "concept": "it is stormy",
-                "label": "On myrskyistä."
+                "label": "On myrskyistä.",
+                "roots": "myrskyinen"
             },
             {
                 "concept": "it is foggy",
-                "label": "On sumuista."
+                "label": "On sumuista.",
+                "roots": "sumuinen"
             }
         ],
         "nl": [
@@ -449,6 +405,10 @@
                 "label": [
                     "het droge weer",
                     "droog weer"
+                ],
+                "roots": [
+                    "droog",
+                    "het weer"
                 ]
             },
             {
@@ -457,7 +417,11 @@
             },
             {
                 "concept": "how is the weather",
-                "label": "Hoe is het weer?"
+                "label": "Hoe is het weer?",
+                "roots": [
+                    "Hoe?",
+                    "het weer"
+                ]
             },
             {
                 "concept": "rain",
@@ -480,7 +444,11 @@
             },
             {
                 "concept": "sleet",
-                "label": "de natte sneeuw"
+                "label": "de natte sneeuw",
+                "roots": [
+                    "nat",
+                    "de sneeuw"
+                ]
             },
             {
                 "concept": "ice",
@@ -496,43 +464,53 @@
             },
             {
                 "concept": "rainy",
-                "label": "regenachtig"
+                "label": "regenachtig",
+                "roots": "de regen"
             },
             {
                 "concept": "sunny",
-                "label": "zonnig"
+                "label": "zonnig",
+                "roots": "de zon"
             },
             {
                 "concept": "windy",
-                "label": "winderig"
+                "label": "winderig",
+                "roots": "de wind"
             },
             {
                 "concept": "cloudy",
-                "label": "bewolkt"
+                "label": "bewolkt",
+                "roots": "de wolk"
             },
             {
                 "concept": "snowy",
-                "label": "besneeuwd"
+                "label": "besneeuwd",
+                "roots": "de sneeuw"
             },
             {
                 "concept": "stormy",
-                "label": "stormachtig"
+                "label": "stormachtig",
+                "roots": "de storm"
             },
             {
                 "concept": "foggy",
-                "label": "mistig"
+                "label": "mistig",
+                "roots": "de mist"
             },
             {
                 "concept": "it is raining",
-                "label": "Het regent."
+                "label": "Het regent.",
+                "roots": "de regen"
             },
             {
                 "concept": "it is snowing",
-                "label": "Het sneeuwt."
+                "label": "Het sneeuwt.",
+                "roots": "de sneeuw"
             },
             {
                 "concept": "sleet is falling",
-                "label": "Er valt natte sneeuw."
+                "label": "Er valt natte sneeuw.",
+                "roots": "de natte sneeuw"
             },
             {
                 "concept": "it is freezing",
@@ -540,15 +518,18 @@
             },
             {
                 "concept": "it is rainy",
-                "label": "Het is regenachtig."
+                "label": "Het is regenachtig.",
+                "roots": "regenachtig"
             },
             {
                 "concept": "it is sunny",
-                "label": "Het is zonnig."
+                "label": "Het is zonnig.",
+                "roots": "zonnig"
             },
             {
                 "concept": "it is windy",
-                "label": "Het is winderig."
+                "label": "Het is winderig.",
+                "roots": "winderig"
             },
             {
                 "concept": "it is windy",
@@ -556,7 +537,8 @@
             },
             {
                 "concept": "it is cloudy",
-                "label": "Het is bewolkt."
+                "label": "Het is bewolkt.",
+                "roots": "bewolkt"
             },
             {
                 "concept": "it is partly cloudy",
@@ -568,11 +550,13 @@
             },
             {
                 "concept": "it is stormy",
-                "label": "Het is stormachtig."
+                "label": "Het is stormachtig.",
+                "roots": "stormachtig"
             },
             {
                 "concept": "it is foggy",
-                "label": "Het is mistig."
+                "label": "Het is mistig.",
+                "roots": "mistig"
             }
         ]
     }

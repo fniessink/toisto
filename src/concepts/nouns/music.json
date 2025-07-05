@@ -3,12 +3,7 @@
         "music": {
             "hypernym": "area, field, domain (one's field of expertise or activity)"
         },
-        "musical instrument": {
-            "roots": {
-                "en": "music",
-                "nl": "music"
-            }
-        }
+        "musical instrument": {}
     },
     "labels": {
         "en": [
@@ -21,7 +16,8 @@
                 "label": {
                     "singular": "musical instrument",
                     "plural": "musical instruments"
-                }
+                },
+                "roots": "music"
             }
         ],
         "fi": [
@@ -47,7 +43,8 @@
                 "label": {
                     "singular": "het muziekinstrument",
                     "plural": "de muziekinstrumenten"
-                }
+                },
+                "roots": "de muziek"
             }
         ]
     }

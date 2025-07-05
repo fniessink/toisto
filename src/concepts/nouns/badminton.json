@@ -2,17 +2,9 @@
     "concepts": {
         "badminton": {
             "example": "I play badminton",
-            "hypernym": "sport",
-            "roots": {
-                "fi": "ball"
-            }
+            "hypernym": "sport"
         },
-        "I play badminton": {
-            "roots": [
-                "to play a sport",
-                "badminton"
-            ]
-        }
+        "I play badminton": {}
     },
     "labels": {
         "en": [
@@ -22,27 +14,37 @@
             },
             {
                 "concept": "I play badminton",
-                "label": "I play badminton."
+                "label": "I play badminton.",
+                "roots": [
+                    "I play",
+                    "badminton"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "badminton",
-                "label": "sulkapallo"
+                "label": "sulkapallo",
+                "roots": "pallo"
             },
             {
+                "colloquial": true,
                 "concept": "badminton",
-                "label": "sulkis",
-                "colloquial": true
+                "label": "sulkis"
             },
             {
                 "concept": "I play badminton",
-                "label": "Minä pelaan sulkapalloa."
+                "label": "Minä pelaan sulkapalloa.",
+                "roots": [
+                    "minä pelaan",
+                    "sulkapallo"
+                ]
             },
             {
+                "colloquial": true,
                 "concept": "I play badminton",
                 "label": "Mä pelaan sulkista.",
-                "colloquial": true
+                "roots": "sulkis"
             }
         ],
         "nl": [
@@ -52,7 +54,11 @@
             },
             {
                 "concept": "I play badminton",
-                "label": "Ik speel badminton."
+                "label": "Ik speel badminton.",
+                "roots": [
+                    "ik speel",
+                    "het badminton"
+                ]
             }
         ]
     }

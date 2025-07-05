@@ -1,19 +1,7 @@
 {
     "concepts": {
         "user": {},
-        "username": {
-            "roots": {
-                "en": [
-                    "user",
-                    "name"
-                ],
-                "fi": "user",
-                "nl": [
-                    "user",
-                    "name"
-                ]
-            }
-        }
+        "username": {}
     },
     "labels": {
         "en": [
@@ -23,7 +11,11 @@
             },
             {
                 "concept": "username",
-                "label": "username"
+                "label": "username",
+                "roots": [
+                    "user",
+                    "name"
+                ]
             }
         ],
         "fi": [
@@ -33,7 +25,8 @@
             },
             {
                 "concept": "username",
-                "label": "käyttäjätunnus"
+                "label": "käyttäjätunnus",
+                "roots": "käyttäjä"
             }
         ],
         "nl": [
@@ -43,7 +36,11 @@
             },
             {
                 "concept": "username",
-                "label": "de gebruikersnaam"
+                "label": "de gebruikersnaam",
+                "roots": [
+                    "de gebruiker",
+                    "de naam"
+                ]
             }
         ]
     }

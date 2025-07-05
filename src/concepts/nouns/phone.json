@@ -5,11 +5,7 @@
             "hypernym": "telephone"
         },
         "smartphone": {
-            "hypernym": "mobile telephone",
-            "roots": {
-                "en": "telephone",
-                "fi": "telephone"
-            }
+            "hypernym": "mobile telephone"
         }
     },
     "labels": {
@@ -27,7 +23,8 @@
                     "mobile telephone",
                     "mobile phone",
                     "mobile"
-                ]
+                ],
+                "roots": "telephone"
             },
             {
                 "concept": "mobile telephone",
@@ -36,11 +33,13 @@
                     "cellular phone",
                     "cell phone",
                     "cellphone"
-                ]
+                ],
+                "roots": "telephone"
             },
             {
                 "concept": "smartphone",
-                "label": "smartphone"
+                "label": "smartphone",
+                "roots": "telephone"
             }
         ],
         "fi": [
@@ -50,7 +49,11 @@
             },
             {
                 "concept": "mobile telephone",
-                "label": "matkapuhelin"
+                "label": "matkapuhelin",
+                "roots": [
+                    "matka",
+                    "puhelin"
+                ]
             },
             {
                 "concept": "mobile telephone",
@@ -59,7 +62,8 @@
             },
             {
                 "concept": "smartphone",
-                "label": "älypuhelin"
+                "label": "älypuhelin",
+                "roots": "puhelin"
             }
         ],
         "nl": [
@@ -73,7 +77,8 @@
                     "de mobiele telefoon",
                     "de mobiel",
                     "het mobieltje"
-                ]
+                ],
+                "roots": "de telefoon"
             },
             {
                 "concept": "smartphone",

@@ -2,14 +2,7 @@
     "concepts": {
         "monday": {
             "holonym": "days of the week",
-            "hypernym": "day",
-            "roots": {
-                "en": "day",
-                "nl": [
-                    "moon",
-                    "day"
-                ]
-            }
+            "hypernym": "day"
         },
         "on monday": {
             "roots": "monday"
@@ -23,14 +16,16 @@
                     "singular": "Monday",
                     "plural": "Mondays"
                 },
-                "note": "In English, the names of weekdays are capitalized"
+                "note": "In English, the names of weekdays are capitalized",
+                "roots": "day"
             },
             {
                 "concept": "on monday",
                 "label": {
                     "singular": "on Monday",
                     "plural": "on Mondays"
-                }
+                },
+                "roots": "Monday"
             }
         ],
         "fi": [
@@ -47,7 +42,8 @@
                 "label": {
                     "singular": "maanantaina",
                     "plural": "maanantaisin"
-                }
+                },
+                "roots": "maanantai"
             }
         ],
         "nl": [
@@ -60,14 +56,16 @@
                     ],
                     "plural": "de maandagen"
                 },
-                "note": "In Dutch, the names of weekdays are not capitalized"
+                "note": "In Dutch, the names of weekdays are not capitalized",
+                "roots": "de dag"
             },
             {
                 "concept": "on monday",
                 "label": {
                     "singular": "op maandag",
                     "plural": "op maandagen"
-                }
+                },
+                "roots": "maandag"
             }
         ]
     }

@@ -2,11 +2,7 @@
     "concepts": {
         "cup": {},
         "coffee cup": {
-            "hypernym": "cup",
-            "roots": [
-                "coffee",
-                "cup"
-            ]
+            "hypernym": "cup"
         }
     },
     "labels": {
@@ -17,7 +13,11 @@
             },
             {
                 "concept": "coffee cup",
-                "label": "coffee cup"
+                "label": "coffee cup",
+                "roots": [
+                    "coffee",
+                    "cup"
+                ]
             }
         ],
         "fi": [
@@ -27,7 +27,11 @@
             },
             {
                 "concept": "coffee cup",
-                "label": "kahvikuppi"
+                "label": "kahvikuppi",
+                "roots": [
+                    "kahvi",
+                    "kuppi"
+                ]
             }
         ],
         "nl": [
@@ -37,7 +41,11 @@
             },
             {
                 "concept": "coffee cup",
-                "label": "het koffiekopje"
+                "label": "het koffiekopje",
+                "roots": [
+                    "de koffie",
+                    "het kopje"
+                ]
             }
         ]
     }

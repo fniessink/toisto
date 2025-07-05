@@ -30,15 +30,24 @@
             },
             {
                 "concept": "plane ticket",
-                "label": "plane ticket"
+                "label": "plane ticket",
+                "roots": [
+                    "airplane",
+                    "ticket"
+                ]
             },
             {
                 "concept": "return ticket",
-                "label": "return ticket"
+                "label": "return ticket",
+                "roots": [
+                    "return",
+                    "ticket"
+                ]
             },
             {
                 "concept": "one-way ticket",
-                "label": "one-way ticket"
+                "label": "one-way ticket",
+                "roots": "ticket"
             }
         ],
         "fi": [
@@ -54,11 +63,19 @@
                 "label": {
                     "singular": "matkalippu",
                     "plural": "matkaliput"
-                }
+                },
+                "roots": [
+                    "matka",
+                    "lippu"
+                ]
             },
             {
                 "concept": "plane ticket",
-                "label": "lentolippu"
+                "label": "lentolippu",
+                "roots": [
+                    "lento",
+                    "lippu"
+                ]
             },
             {
                 "concept": "return ticket",
@@ -66,14 +83,16 @@
                     "menopaluulippu",
                     "menopaluu",
                     "meno-paluu"
-                ]
+                ],
+                "roots": "lippu"
             },
             {
                 "concept": "one-way ticket",
                 "label": [
                     "menolippu",
                     "meno"
-                ]
+                ],
+                "roots": "lippu"
             }
         ],
         "nl": [

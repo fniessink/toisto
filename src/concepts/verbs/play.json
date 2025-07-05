@@ -6,12 +6,7 @@
         "to play a sport": {
             "involves": "sport"
         },
-        "to play darts": {
-            "roots": {
-                "en": "to play a sport",
-                "fi": "to throw"
-            }
-        }
+        "to play darts": {}
     },
     "labels": {
         "en": [
@@ -87,7 +82,8 @@
             },
             {
                 "concept": "to play darts",
-                "label": "to play darts"
+                "label": "to play darts",
+                "roots": "to play"
             }
         ],
         "fi": [

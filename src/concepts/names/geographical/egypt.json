@@ -5,8 +5,7 @@
         },
         "egyptian": {
             "hypernym": "nationality",
-            "involves": "egypt",
-            "roots": "egypt"
+            "involves": "egypt"
         }
     },
     "labels": {
@@ -17,7 +16,8 @@
             },
             {
                 "concept": "egyptian",
-                "label": "Egyptian"
+                "label": "Egyptian",
+                "roots": "Egypt"
             }
         ],
         "fi": [
@@ -27,7 +27,8 @@
             },
             {
                 "concept": "egyptian",
-                "label": "egyptiläinen"
+                "label": "egyptiläinen",
+                "roots": "Egypti"
             }
         ],
         "nl": [
@@ -37,7 +38,8 @@
             },
             {
                 "concept": "egyptian",
-                "label": "Egyptisch"
+                "label": "Egyptisch",
+                "roots": "Egypte"
             }
         ]
     }

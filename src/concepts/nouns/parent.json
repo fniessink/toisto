@@ -2,11 +2,7 @@
     "concepts": {
         "parent": {
             "antonym": "child",
-            "holonym": "family",
-            "roots": {
-                "fi": "old",
-                "nl": "old"
-            }
+            "holonym": "family"
         },
         "mother": {
             "antonym": [
@@ -23,36 +19,27 @@
             "hypernym": "parent"
         },
         "stepfather": {
-            "hypernym": "father",
-            "roots": "father"
+            "hypernym": "father"
         },
         "stepmother": {
-            "hypernym": "mother",
-            "roots": "mother"
+            "hypernym": "mother"
         },
         "parent-in-law": {
-            "hypernym": "parent",
-            "roots": "parent"
+            "hypernym": "parent"
         },
         "mother-in-law": {
             "hypernym": [
                 "parent-in-law",
                 "mother"
-            ],
-            "roots": "mother"
+            ]
         },
         "father-in-law": {
             "hypernym": [
                 "parent-in-law",
                 "father"
-            ],
-            "roots": "father"
+            ]
         },
-        "godparent": {
-            "roots": {
-                "en": "parent"
-            }
-        }
+        "godparent": {}
     },
     "labels": {
         "en": [
@@ -82,36 +69,42 @@
                 "label": {
                     "singular": "stepfather",
                     "plural": "stepfathers"
-                }
+                },
+                "roots": "father"
             },
             {
                 "concept": "stepmother",
                 "label": {
                     "singular": "stepmother",
                     "plural": "stepmothers"
-                }
+                },
+                "roots": "mother"
             },
             {
                 "concept": "parent-in-law",
-                "label": "parent-in-law"
+                "label": "parent-in-law",
+                "roots": "parent"
             },
             {
                 "concept": "mother-in-law",
                 "label": {
                     "singular": "mother-in-law",
                     "plural": "mothers-in-law"
-                }
+                },
+                "roots": "mother"
             },
             {
                 "concept": "father-in-law",
                 "label": {
                     "singular": "father-in-law",
                     "plural": "fathers-in-law"
-                }
+                },
+                "roots": "father"
             },
             {
                 "concept": "godparent",
-                "label": "godparent"
+                "label": "godparent",
+                "roots": "parent"
             }
         ],
         "fi": [
@@ -142,18 +135,21 @@
                 "label": {
                     "singular": "isäpuoli",
                     "plural": "isäpuolet"
-                }
+                },
+                "roots": "isä"
             },
             {
                 "concept": "stepmother",
                 "label": {
                     "singular": "äitipuoli",
                     "plural": "äitipuolet"
-                }
+                },
+                "roots": "äiti"
             },
             {
                 "concept": "parent-in-law",
-                "label": "appivanhempi"
+                "label": "appivanhempi",
+                "roots": "vanhempi"
             },
             {
                 "concept": "mother-in-law",
@@ -201,32 +197,37 @@
                 "label": {
                     "singular": "de stiefvader",
                     "plural": "de stiefvaders"
-                }
+                },
+                "roots": "de vader"
             },
             {
                 "concept": "stepmother",
                 "label": {
                     "singular": "de stiefmoeder",
                     "plural": "de stiefmoeders"
-                }
+                },
+                "roots": "de moeder"
             },
             {
                 "concept": "parent-in-law",
-                "label": "de schoonouder"
+                "label": "de schoonouder",
+                "roots": "de ouder"
             },
             {
                 "concept": "mother-in-law",
                 "label": {
                     "singular": "de schoonmoeder",
                     "plural": "de schoonmoeders"
-                }
+                },
+                "roots": "de moeder"
             },
             {
                 "concept": "father-in-law",
                 "label": {
                     "singular": "de schoonvader",
                     "plural": "de schoonvaders"
-                }
+                },
+                "roots": "de vader"
             },
             {
                 "concept": "godparent",

@@ -3,115 +3,33 @@
         "christmas": {
             "hypernym": "holiday"
         },
-        "at christmas": {
-            "roots": "christmas"
-        },
+        "at christmas": {},
         "christmas eve": {
-            "holonym": "christmas",
-            "roots": {
-                "en": "christmas",
-                "fi": "christmas",
-                "nl": [
-                    "christmas",
-                    "evening"
-                ]
-            }
+            "holonym": "christmas"
         },
         "christmas day": {
             "holonym": "christmas",
-            "hypernym": "day",
-            "roots": [
-                "christmas",
-                "day"
-            ]
+            "hypernym": "day"
         },
         "boxing day": {
             "holonym": "christmas",
-            "hypernym": "day",
-            "roots": {
-                "en": "day",
-                "fi": "day",
-                "nl": [
-                    "christmas",
-                    "day"
-                ]
-            }
+            "hypernym": "day"
         },
-        "merry christmas": {
-            "roots": {
-                "en": "christmas",
-                "fi": [
-                    "good",
-                    "christmas"
-                ],
-                "nl": [
-                    "cheerful",
-                    "christmas"
-                ]
-            }
-        },
+        "merry christmas": {},
         "pikkujoulu": {},
         "christmas tree": {
-            "hypernym": "tree",
-            "roots": {
-                "en": [
-                    "christmas",
-                    "tree"
-                ],
-                "fi": [
-                    "christmas",
-                    "spruce"
-                ],
-                "nl": [
-                    "christmas",
-                    "tree"
-                ]
-            }
+            "hypernym": "tree"
         },
-        "santa": {
-            "roots": {
-                "fi": "christmas",
-                "nl": "christmas"
-            }
-        },
+        "santa": {},
         "elf": {},
         "angel": {},
-        "bauble": {
-            "roots": {
-                "fi": [
-                    "christmas tree",
-                    "christmas"
-                ],
-                "nl": "christmas"
-            }
-        },
+        "bauble": {},
         "new year": {
-            "hypernym": "holiday",
-            "roots": [
-                "new",
-                "year"
-            ]
+            "hypernym": "holiday"
         },
-        "happy new year": {
-            "roots": {
-                "en": [
-                    "happy",
-                    "new year"
-                ],
-                "fi": [
-                    "good",
-                    "new",
-                    "year"
-                ],
-                "nl": [
-                    "happy",
-                    "new year"
-                ]
-            }
-        },
+        "happy new year": {},
         "valentine's day": {
-            "hypernym": "holiday",
-            "roots": "day"
+            "hypernym": "holiday"
         },
         "epiphany": {
             "hypernym": "holiday"
@@ -122,39 +40,15 @@
         "easter": {
             "hypernym": "holiday"
         },
-        "happy easter": {
-            "roots": {
-                "en": [
-                    "happy",
-                    "easter"
-                ],
-                "fi": [
-                    "good",
-                    "easter"
-                ],
-                "nl": [
-                    "cheerful",
-                    "easter"
-                ]
-            }
-        },
+        "happy easter": {},
         "first of may": {
-            "hypernym": "holiday",
-            "roots": {
-                "en": "may",
-                "nl": "day"
-            }
+            "hypernym": "holiday"
         },
         "midsummer": {
-            "hypernym": "holiday",
-            "roots": {
-                "en": "summer",
-                "nl": "summer"
-            }
+            "hypernym": "holiday"
         },
         "finnish independence day": {
-            "hypernym": "holiday",
-            "roots": "day"
+            "hypernym": "holiday"
         }
     },
     "labels": {
@@ -166,26 +60,37 @@
             },
             {
                 "concept": "at christmas",
-                "label": "at Christmas"
+                "label": "at Christmas",
+                "roots": [
+                    "at",
+                    "Christmas"
+                ]
             },
             {
                 "concept": "christmas eve",
                 "label": "Christmas Eve",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": "Christmas"
             },
             {
                 "concept": "christmas day",
                 "label": "Christmas Day",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": [
+                    "Christmas",
+                    "day"
+                ]
             },
             {
                 "concept": "boxing day",
                 "label": "Boxing Day",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": "day"
             },
             {
                 "concept": "merry christmas",
-                "label": "Merry Christmas!"
+                "label": "Merry Christmas!",
+                "roots": "Christmas"
             },
             {
                 "concept": "pikkujoulu",
@@ -194,7 +99,11 @@
             },
             {
                 "concept": "christmas tree",
-                "label": "Christmas tree"
+                "label": "Christmas tree",
+                "roots": [
+                    "Christmas",
+                    "tree"
+                ]
             },
             {
                 "concept": "santa",
@@ -218,16 +127,25 @@
             {
                 "concept": "new year",
                 "label": "New Year",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": [
+                    "new",
+                    "year"
+                ]
             },
             {
                 "concept": "happy new year",
-                "label": "Happy New Year!"
+                "label": "Happy New Year!",
+                "roots": [
+                    "happy",
+                    "New Year"
+                ]
             },
             {
                 "concept": "valentine's day",
                 "label": "Valentine's Day",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": "day"
             },
             {
                 "concept": "epiphany",
@@ -246,16 +164,25 @@
             },
             {
                 "concept": "happy easter",
-                "label": "Happy Easter!"
+                "label": "Happy Easter!",
+                "roots": [
+                    "happy",
+                    "Easter"
+                ]
             },
             {
                 "concept": "first of may",
                 "label": "First of May",
-                "note": "In English, the names of holidays are capitalized"
+                "note": "In English, the names of holidays are capitalized",
+                "roots": [
+                    "first",
+                    "May"
+                ]
             },
             {
                 "concept": "midsummer",
-                "label": "midsummer"
+                "label": "midsummer",
+                "roots": "summer"
             },
             {
                 "concept": "finnish independence day",
@@ -271,38 +198,55 @@
             },
             {
                 "concept": "at christmas",
-                "label": "joulana"
+                "label": "joulana",
+                "roots": "joulu"
             },
             {
                 "concept": "christmas eve",
                 "label": "jouluaatto",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": "joulu"
             },
             {
                 "concept": "christmas day",
                 "label": "joulupäivä",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": [
+                    "joulu",
+                    "päivä"
+                ]
             },
             {
                 "concept": "boxing day",
                 "label": "tapaninpäivä",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": "päivä"
             },
             {
                 "concept": "merry christmas",
-                "label": "Hyvää joulua!"
+                "label": "Hyvää joulua!",
+                "roots": [
+                    "hyvä",
+                    "joulu"
+                ]
             },
             {
                 "concept": "pikkujoulu",
-                "label": "pikkujoulu"
+                "label": "pikkujoulu",
+                "roots": "joulu"
             },
             {
                 "concept": "christmas tree",
-                "label": "joulukuusi"
+                "label": "joulukuusi",
+                "roots": [
+                    "joulu",
+                    "kuusi"
+                ]
             },
             {
                 "concept": "santa",
-                "label": "joulupukki"
+                "label": "joulupukki",
+                "roots": "joulu"
             },
             {
                 "concept": "elf",
@@ -317,21 +261,38 @@
                 "label": [
                     "joulukuusenpallo",
                     "joulupallo"
+                ],
+                "roots": [
+                    "joulukuusi",
+                    "pallo"
                 ]
             },
             {
                 "concept": "new year",
                 "label": "uusivuosi",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": [
+                    "uusi",
+                    "vuosi"
+                ]
             },
             {
                 "concept": "happy new year",
-                "label": "Hyvää uutta vuotta!"
+                "label": "Hyvää uutta vuotta!",
+                "roots": [
+                    "hyvä",
+                    "uusi",
+                    "vuosi"
+                ]
             },
             {
                 "concept": "valentine's day",
                 "label": "ystävänpäivä",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": [
+                    "ystävä",
+                    "päivä"
+                ]
             },
             {
                 "concept": "epiphany",
@@ -341,7 +302,8 @@
             {
                 "concept": "shrovetide",
                 "label": "laskiainen",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": "laskea"
             },
             {
                 "concept": "easter",
@@ -350,7 +312,11 @@
             },
             {
                 "concept": "happy easter",
-                "label": "Hyvää pääsiäistä!"
+                "label": "Hyvää pääsiäistä!",
+                "roots": [
+                    "hyvä",
+                    "pääsiäinen"
+                ]
             },
             {
                 "concept": "first of may",
@@ -365,37 +331,67 @@
             {
                 "concept": "finnish independence day",
                 "label": "itsenäisyyspäivä",
-                "note": "In Finnish, the names of holidays are not capitalized"
+                "note": "In Finnish, the names of holidays are not capitalized",
+                "roots": "päivä"
             }
         ],
         "nl": [
             {
                 "concept": "christmas",
-                "label": "Kerstmis",
+                "label": [
+                    "Kerstmis",
+                    "Kerst"
+                ],
                 "note": "In Dutch, the names of holidays are capitalized"
             },
             {
+                "concept": "christmas",
+                "label": "kerstfeest"
+            },
+            {
                 "concept": "at christmas",
-                "label": "met Kerstmis"
+                "label": "met Kerstmis",
+                "roots": [
+                    "met",
+                    "Kerstmis"
+                ]
             },
             {
                 "concept": "christmas eve",
                 "label": "kerstavond",
-                "note": "In Dutch, the names of holidays are capitalized, but derived words are not"
+                "note": "In Dutch, the names of holidays are capitalized, but derived words are not",
+                "roots": [
+                    "Kerstmis",
+                    "de avond"
+                ]
             },
             {
                 "concept": "christmas day",
                 "label": "eerste kerstdag",
-                "note": "In Dutch, the names of holidays are capitalized, but derived words are not"
+                "note": "In Dutch, the names of holidays are capitalized, but derived words are not",
+                "roots": [
+                    "eerste",
+                    "Kerstmis",
+                    "de dag"
+                ]
             },
             {
                 "concept": "boxing day",
                 "label": "tweede kerstdag",
-                "note": "In Dutch, the names of holidays are capitalized, but derived words are not"
+                "note": "In Dutch, the names of holidays are capitalized, but derived words are not",
+                "roots": [
+                    "tweede",
+                    "Kerstmis",
+                    "de dag"
+                ]
             },
             {
                 "concept": "merry christmas",
-                "label": "Vrolijk kerstfeest!"
+                "label": "Vrolijk kerstfeest!",
+                "roots": [
+                    "vrolijk",
+                    "kerstfeest"
+                ]
             },
             {
                 "concept": "pikkujoulu",
@@ -404,11 +400,19 @@
             },
             {
                 "concept": "christmas tree",
-                "label": "de kerstboom"
+                "label": "de kerstboom",
+                "roots": [
+                    "Kerstmis",
+                    "de boom"
+                ]
             },
             {
                 "concept": "santa",
-                "label": "de kerstman"
+                "label": "de kerstman",
+                "roots": [
+                    "Kerstmis",
+                    "de man"
+                ]
             },
             {
                 "concept": "elf",
@@ -420,31 +424,46 @@
             },
             {
                 "concept": "bauble",
-                "label": "de kerstbal"
+                "label": "de kerstbal",
+                "roots": [
+                    "Kerstmis",
+                    "de bal"
+                ]
             },
             {
                 "concept": "new year",
                 "label": "Nieuwjaar",
-                "note": "In Dutch, the names of holidays are capitalized"
+                "note": "In Dutch, the names of holidays are capitalized",
+                "roots": [
+                    "nieuw",
+                    "het jaar"
+                ]
             },
             {
                 "concept": "happy new year",
-                "label": "Gelukkig nieuwjaar!"
+                "label": "Gelukkig nieuwjaar!",
+                "roots": [
+                    "gelukkig",
+                    "Nieuwjaar"
+                ]
             },
             {
                 "concept": "valentine's day",
                 "label": "Valentijnsdag",
-                "note": "In Dutch, the names of holidays are capitalized"
+                "note": "In Dutch, the names of holidays are capitalized",
+                "roots": "de dag"
             },
             {
                 "concept": "epiphany",
                 "label": "Driekoningen",
-                "note": "In Dutch, the names of holidays are capitalized"
+                "note": "In Dutch, the names of holidays are capitalized",
+                "roots": "drie"
             },
             {
                 "concept": "shrovetide",
                 "label": "Vastenavond",
-                "note": "In Dutch, the names of holidays are capitalized"
+                "note": "In Dutch, the names of holidays are capitalized",
+                "roots": "de avond"
             },
             {
                 "concept": "easter",
@@ -453,16 +472,25 @@
             },
             {
                 "concept": "happy easter",
-                "label": "Vrolijk Pasen!"
+                "label": "Vrolijk Pasen!",
+                "roots": [
+                    "vrolijk",
+                    "Pasen"
+                ]
             },
             {
                 "concept": "first of may",
                 "label": "Dag van de arbeid",
-                "note": "In Dutch, the names of holidays are capitalized"
+                "note": "In Dutch, the names of holidays are capitalized",
+                "roots": [
+                    "de dag",
+                    "de arbeid"
+                ]
             },
             {
                 "concept": "midsummer",
-                "label": "midzomer"
+                "label": "midzomer",
+                "roots": "de zomer"
             },
             {
                 "concept": "finnish independence day",

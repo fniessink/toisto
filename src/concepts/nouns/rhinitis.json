@@ -3,9 +3,7 @@
         "rhinitus": {
             "example": "I have a cold"
         },
-        "I have a cold": {
-            "roots": "rhinitus"
-        }
+        "I have a cold": {}
     },
     "labels": {
         "en": [
@@ -19,7 +17,11 @@
             },
             {
                 "concept": "I have a cold",
-                "label": "I have a cold."
+                "label": "I have a cold.",
+                "roots": [
+                    "I have",
+                    "cold"
+                ]
             }
         ],
         "fi": [
@@ -29,7 +31,11 @@
             },
             {
                 "concept": "I have a cold",
-                "label": "Minulla on nuha."
+                "label": "Minulla on nuha.",
+                "roots": [
+                    "minulla on",
+                    "nuha"
+                ]
             },
             {
                 "concept": "I have a cold",

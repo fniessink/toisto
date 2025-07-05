@@ -1,22 +1,12 @@
 {
     "concepts": {
-        "coworker": {
-            "roots": {
-                "fi": [
-                    "work",
-                    "friend"
-                ]
-            }
-        },
+        "coworker": {},
         "construction worker": {
-            "hypernym": "profession",
-            "roots": {
-                "fi": "building"
-            }
+            "hypernym": "profession"
         },
         "youth worker": {
             "hypernym": "profession",
-            "roots": "youth"
+            "involves": "youth"
         }
     },
     "labels": {
@@ -31,13 +21,18 @@
             },
             {
                 "concept": "youth worker",
-                "label": "youth worker"
+                "label": "youth worker",
+                "roots": "youth"
             }
         ],
         "fi": [
             {
                 "concept": "coworker",
-                "label": "työkaveri"
+                "label": "työkaveri",
+                "roots": [
+                    "työ",
+                    "kaveri"
+                ]
             },
             {
                 "concept": "coworker",
@@ -45,7 +40,11 @@
             },
             {
                 "concept": "construction worker",
-                "label": "rakennusmies"
+                "label": "rakennusmies",
+                "roots": [
+                    "rakennus",
+                    "mies"
+                ]
             },
             {
                 "concept": "youth worker",
@@ -67,7 +66,8 @@
             },
             {
                 "concept": "youth worker",
-                "label": "de jeugdwerker"
+                "label": "de jeugdwerker",
+                "roots": "de jeugd"
             }
         ]
     }

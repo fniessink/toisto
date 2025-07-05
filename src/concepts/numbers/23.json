@@ -1,11 +1,7 @@
 {
     "concepts": {
         "23": {
-            "hypernym": "number",
-            "roots": [
-                "3",
-                "20"
-            ]
+            "hypernym": "number"
         }
     },
     "labels": {
@@ -15,7 +11,11 @@
                 "label": {
                     "cardinal": "twenty-three",
                     "ordinal": "twenty-third"
-                }
+                },
+                "roots": [
+                    "twenty",
+                    "three"
+                ]
             }
         ],
         "fi": [
@@ -24,7 +24,12 @@
                 "label": {
                     "cardinal": "kaksikymmentäkolme",
                     "ordinal": "kahdeskymmeneskolmas"
-                }
+                },
+                "roots": [
+                    "kaksi",
+                    "kymmenen",
+                    "kolme"
+                ]
             },
             {
                 "concept": "23",
@@ -41,7 +46,11 @@
                 "label": {
                     "cardinal": "drieëntwintig",
                     "ordinal": "drieëntwintigste"
-                }
+                },
+                "roots": [
+                    "drie",
+                    "twintig"
+                ]
             }
         ]
     }

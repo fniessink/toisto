@@ -3,12 +3,7 @@
         "at the latest": {
             "example": "friday at the latest"
         },
-        "friday at the latest": {
-            "roots": [
-                "at the latest",
-                "friday"
-            ]
-        }
+        "friday at the latest": {}
     },
     "labels": {
         "en": [
@@ -22,11 +17,19 @@
             },
             {
                 "concept": "friday at the latest",
-                "label": "friday at the latest"
+                "label": "Friday at the latest",
+                "roots": [
+                    "Friday",
+                    "at the latest"
+                ]
             },
             {
                 "concept": "friday at the latest",
-                "label": "no later than friday"
+                "label": "no later than Friday",
+                "roots": [
+                    "no later than",
+                    "Friday"
+                ]
             }
         ],
         "fi": [
@@ -40,11 +43,19 @@
             },
             {
                 "concept": "friday at the latest",
-                "label": "perjantaina viimeistään"
+                "label": "perjantaina viimeistään",
+                "roots": [
+                    "perjantai",
+                    "viimeistään"
+                ]
             },
             {
                 "concept": "friday at the latest",
-                "label": "perjantaihin mennessä"
+                "label": "perjantaihin mennessä",
+                "roots": [
+                    "perjantai",
+                    "mennessä"
+                ]
             }
         ],
         "nl": [
@@ -54,7 +65,11 @@
             },
             {
                 "concept": "friday at the latest",
-                "label": "uiterlijk vrijdag"
+                "label": "uiterlijk vrijdag",
+                "roots": [
+                    "uiterlijk",
+                    "vrijdag"
+                ]
             }
         ]
     }

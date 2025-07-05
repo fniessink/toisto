@@ -4,16 +4,7 @@
             "antonym": "parent",
             "holonym": "family"
         },
-        "childhood": {
-            "roots": {
-                "en": "child",
-                "fi": "child",
-                "nl": [
-                    "child",
-                    "time"
-                ]
-            }
-        },
+        "childhood": {},
         "daughter": {
             "antonym": [
                 "mother",
@@ -30,15 +21,7 @@
             "holonym": "family",
             "hypernym": "child"
         },
-        "they have x children and y grandchildren": {
-            "roots": [
-                "to have",
-                "3",
-                "child",
-                "6",
-                "grandchild"
-            ]
-        }
+        "they have x children and y grandchildren": {}
     },
     "labels": {
         "en": [
@@ -51,7 +34,8 @@
             },
             {
                 "concept": "childhood",
-                "label": "childhood"
+                "label": "childhood",
+                "roots": "child"
             },
             {
                 "concept": "daughter",
@@ -69,7 +53,14 @@
             },
             {
                 "concept": "they have x children and y grandchildren",
-                "label": "They have three children and six grandchildren."
+                "label": "They have three children and six grandchildren.",
+                "roots": [
+                    "they have",
+                    "three",
+                    "child",
+                    "six",
+                    "grandchild"
+                ]
             }
         ],
         "fi": [
@@ -82,7 +73,8 @@
             },
             {
                 "concept": "childhood",
-                "label": "lapsuus"
+                "label": "lapsuus",
+                "roots": "lapsi"
             },
             {
                 "concept": "daughter",
@@ -100,7 +92,14 @@
             },
             {
                 "concept": "they have x children and y grandchildren",
-                "label": "Heillä on kolme lasta ja kuusi lastenlasta."
+                "label": "Heillä on kolme lasta ja kuusi lastenlasta.",
+                "roots": [
+                    "heillä on",
+                    "kolme",
+                    "lapsi",
+                    "kuusi",
+                    "lapsenlapsi"
+                ]
             }
         ],
         "nl": [
@@ -119,7 +118,11 @@
             },
             {
                 "concept": "childhood",
-                "label": "de kindertijd"
+                "label": "de kindertijd",
+                "roots": [
+                    "het kind",
+                    "de tijd"
+                ]
             },
             {
                 "concept": "daughter",
@@ -149,7 +152,14 @@
             },
             {
                 "concept": "they have x children and y grandchildren",
-                "label": "Zij hebben drie kinderen en zes kleinkinderen."
+                "label": "Zij hebben drie kinderen en zes kleinkinderen.",
+                "roots": [
+                    "zij hebben",
+                    "drie",
+                    "het kind",
+                    "zes",
+                    "het kleinkind"
+                ]
             }
         ]
     }

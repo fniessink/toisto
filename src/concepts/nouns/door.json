@@ -3,24 +3,7 @@
         "door": {
             "holonym": "wall"
         },
-        "the door is locked": {
-            "roots": {
-                "en": [
-                    "to be",
-                    "door"
-                ],
-                "fi": [
-                    "to be",
-                    "door",
-                    "lock"
-                ],
-                "nl": [
-                    "to be",
-                    "door",
-                    "lock"
-                ]
-            }
-        }
+        "the door is locked": {}
     },
     "labels": {
         "en": [
@@ -33,7 +16,8 @@
             },
             {
                 "concept": "the door is locked",
-                "label": "The door is locked."
+                "label": "The door is locked.",
+                "roots": "door"
             }
         ],
         "fi": [
@@ -46,7 +30,8 @@
             },
             {
                 "concept": "the door is locked",
-                "label": "Ovi on lukossa."
+                "label": "Ovi on lukossa.",
+                "roots": "ovi"
             }
         ],
         "nl": [
@@ -59,7 +44,11 @@
             },
             {
                 "concept": "the door is locked",
-                "label": "De deur is op slot."
+                "label": "De deur is op slot.",
+                "roots": [
+                    "de deur",
+                    "het slot"
+                ]
             }
         ]
     }

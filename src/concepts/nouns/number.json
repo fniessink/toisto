@@ -1,18 +1,8 @@
 {
     "concepts": {
         "number": {},
-        "emergency number": {
-            "roots": {
-                "en": "number",
-                "fi": "number"
-            }
-        },
-        "queueing number": {
-            "roots": {
-                "en": "number",
-                "fi": "number"
-            }
-        }
+        "emergency number": {},
+        "queueing number": {}
     },
     "labels": {
         "en": [
@@ -25,11 +15,13 @@
             },
             {
                 "concept": "emergency number",
-                "label": "emergency number"
+                "label": "emergency number",
+                "roots": "number"
             },
             {
                 "concept": "queueing number",
-                "label": "queueing number"
+                "label": "queueing number",
+                "roots": "number"
             }
         ],
         "fi": [
@@ -42,11 +34,16 @@
             },
             {
                 "concept": "emergency number",
-                "label": "hätänumero"
+                "label": "hätänumero",
+                "roots": "numero"
             },
             {
                 "concept": "queueing number",
-                "label": "vuoronumero"
+                "label": "vuoronumero",
+                "roots": [
+                    "vuoro",
+                    "numero"
+                ]
             }
         ],
         "nl": [

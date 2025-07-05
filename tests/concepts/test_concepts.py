@@ -35,11 +35,13 @@ class ConceptsTest(ToistoTestCase):
         self.assertEqual(1, len(Concept.instances.get_values(ConceptId("welcome"))))
 
     def test_roots_exist(self):
-        """Test that all roots use existing concept ids."""
+        """Test that all roots use existing labels."""
         for concept in self.concepts:
             for language in BUILT_IN_LANGUAGES:
-                for root in concept.roots(language):
-                    self.assertIn(root, Concept.instances.get_values(root.concept_id))
+                for label in concept.labels(language):
+                    for root in label.roots:
+                        if not Concept.homographs.get_values(root):
+                            self.fail(f"root '{root}' of label '{label}' is not a valid label in language {language}")
 
     def test_related_concepts_exist(self):
         """Test that all related concepts use existing concept ids."""

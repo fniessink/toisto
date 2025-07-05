@@ -1,20 +1,10 @@
 {
     "concepts": {
         "no": {},
-        "no but": {
-            "roots": "no"
-        },
+        "no but": {},
         "no more": {},
-        "no problem": {
-            "roots": {
-                "en": "no",
-                "fi": "nothing",
-                "nl": "nothing"
-            }
-        },
-        "no rush": {
-            "roots": "hurry"
-        }
+        "no problem": {},
+        "no rush": {}
     },
     "labels": {
         "en": [
@@ -24,19 +14,29 @@
             },
             {
                 "concept": "no but",
-                "label": "no, but"
+                "label": "no, but",
+                "roots": "No!"
             },
             {
                 "concept": "no more",
-                "label": "no more"
+                "label": "no more",
+                "roots": [
+                    "No!",
+                    "more"
+                ]
             },
             {
                 "concept": "no problem",
-                "label": "No problem!"
+                "label": "No problem!",
+                "roots": "No!"
             },
             {
                 "concept": "no rush",
-                "label": "No rush."
+                "label": "No rush.",
+                "roots": [
+                    "No!",
+                    "rush"
+                ]
             }
         ],
         "fi": [
@@ -46,7 +46,8 @@
             },
             {
                 "concept": "no but",
-                "label": "ei, vaan"
+                "label": "ei, vaan",
+                "roots": "Ei!"
             },
             {
                 "concept": "no but",
@@ -55,15 +56,18 @@
             },
             {
                 "concept": "no more",
-                "label": "ei enää"
+                "label": "ei enää",
+                "roots": "Ei!"
             },
             {
                 "concept": "no problem",
-                "label": "Ei se mitään!"
+                "label": "Ei se mitään!",
+                "roots": "Ei!"
             },
             {
                 "concept": "no rush",
-                "label": "Ei mitään kiirettä."
+                "label": "Ei mitään kiirettä.",
+                "roots": "kiire"
             }
         ],
         "nl": [
@@ -73,7 +77,8 @@
             },
             {
                 "concept": "no but",
-                "label": "nee, maar"
+                "label": "nee, maar",
+                "roots": "Nee!"
             },
             {
                 "concept": "no more",
@@ -96,11 +101,13 @@
             },
             {
                 "concept": "no rush",
-                "label": "Er is geen haast bij."
+                "label": "Er is geen haast bij.",
+                "roots": "de haast"
             },
             {
                 "concept": "no rush",
-                "label": "Geen haast."
+                "label": "Geen haast.",
+                "roots": "de haast"
             }
         ]
     }

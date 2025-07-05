@@ -13,7 +13,11 @@
             },
             {
                 "concept": "Bob eats with Alice",
-                "label": "Bob eats with Alice."
+                "label": "Bob eats with Alice.",
+                "roots": [
+                    "he eats",
+                    "with"
+                ]
             }
         ],
         "fi": [
@@ -23,7 +27,11 @@
             },
             {
                 "concept": "Bob eats with Alice",
-                "label": "Bob syö Alicen kanssa."
+                "label": "Bob syö Alicen kanssa.",
+                "roots": [
+                    "hän syö",
+                    "kanssa"
+                ]
             }
         ],
         "nl": [
@@ -33,7 +41,11 @@
             },
             {
                 "concept": "Bob eats with Alice",
-                "label": "Bob eet met Alice."
+                "label": "Bob eet met Alice.",
+                "roots": [
+                    "hij eet",
+                    "met"
+                ]
             }
         ]
     }

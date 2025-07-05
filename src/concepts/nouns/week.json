@@ -1,43 +1,13 @@
 {
     "concepts": {
         "week": {},
-        "days of the week": {
-            "roots": [
-                "day",
-                "week"
-            ]
-        },
-        "this week": {
-            "roots": [
-                "this",
-                "week"
-            ]
-        },
-        "last week": {
-            "roots": "week"
-        },
-        "next week": {
-            "roots": "week"
-        },
-        "in which week": {
-            "roots": "week"
-        },
-        "once a week": {
-            "roots": "week"
-        },
-        "twice a week": {
-            "roots": {
-                "en": "week",
-                "fi": [
-                    "2",
-                    "week"
-                ],
-                "nl": [
-                    "2",
-                    "week"
-                ]
-            }
-        }
+        "days of the week": {},
+        "this week": {},
+        "last week": {},
+        "next week": {},
+        "in which week": {},
+        "once a week": {},
+        "twice a week": {}
     },
     "labels": {
         "en": [
@@ -50,31 +20,50 @@
             },
             {
                 "concept": "days of the week",
-                "label": "days of the week"
+                "label": "days of the week",
+                "roots": [
+                    "day",
+                    "week"
+                ]
             },
             {
                 "concept": "this week",
-                "label": "this week"
+                "label": "this week",
+                "roots": "week"
             },
             {
                 "concept": "last week",
-                "label": "last week"
+                "label": "last week",
+                "roots": [
+                    "last",
+                    "week"
+                ]
             },
             {
                 "concept": "next week",
-                "label": "next week"
+                "label": "next week",
+                "roots": [
+                    "next",
+                    "week"
+                ]
             },
             {
                 "concept": "in which week",
-                "label": "In which week?"
+                "label": "In which week?",
+                "roots": [
+                    "Which?",
+                    "week"
+                ]
             },
             {
                 "concept": "once a week",
-                "label": "once a week"
+                "label": "once a week",
+                "roots": "week"
             },
             {
                 "concept": "twice a week",
-                "label": "twice a week"
+                "label": "twice a week",
+                "roots": "week"
             }
         ],
         "fi": [
@@ -87,35 +76,52 @@
             },
             {
                 "concept": "days of the week",
-                "label": "viikonpäivät"
+                "label": "viikonpäivät",
+                "roots": [
+                    "viikko",
+                    "päivä"
+                ]
             },
             {
                 "concept": "this week",
-                "label": "tällä viikolla"
+                "label": "tällä viikolla",
+                "roots": "viikko"
             },
             {
                 "concept": "last week",
-                "label": "viime viikolla"
+                "label": "viime viikolla",
+                "roots": [
+                    "viime",
+                    "viikko"
+                ]
             },
             {
                 "concept": "next week",
-                "label": "ensi viikolla"
+                "label": "ensi viikolla",
+                "roots": "viikko"
             },
             {
                 "concept": "next week",
-                "label": "seuraavalla viikolla"
+                "label": "seuraavalla viikolla",
+                "roots": "viikko"
             },
             {
                 "concept": "in which week",
-                "label": "Millä viikolla?"
+                "label": "Millä viikolla?",
+                "roots": "viikko"
             },
             {
                 "concept": "once a week",
-                "label": "kerran viikossa"
+                "label": "kerran viikossa",
+                "roots": "viikko"
             },
             {
                 "concept": "twice a week",
-                "label": "kaksi kertaa viikossa"
+                "label": "kaksi kertaa viikossa",
+                "roots": [
+                    "kaksi",
+                    "viikko"
+                ]
             }
         ],
         "nl": [
@@ -128,34 +134,53 @@
             },
             {
                 "concept": "days of the week",
-                "label": "de dagen van de week"
+                "label": "de dagen van de week",
+                "roots": [
+                    "de dagen",
+                    "de week"
+                ]
             },
             {
                 "concept": "this week",
-                "label": "deze week"
+                "label": "deze week",
+                "roots": "de week"
             },
             {
                 "concept": "last week",
-                "label": "vorige week"
+                "label": "vorige week",
+                "roots": [
+                    "vorig",
+                    "de week"
+                ]
             },
             {
                 "concept": "next week",
-                "label": "volgende week"
+                "label": "volgende week",
+                "roots": "de week"
             },
             {
                 "concept": "in which week",
-                "label": "In welke week?"
+                "label": "In welke week?",
+                "roots": "de week"
             },
             {
                 "concept": "once a week",
                 "label": [
                     "één keer per week",
                     "een keer per week"
+                ],
+                "roots": [
+                    "één",
+                    "de week"
                 ]
             },
             {
                 "concept": "twice a week",
-                "label": "twee keer per week"
+                "label": "twee keer per week",
+                "roots": [
+                    "twee",
+                    "de week"
+                ]
             }
         ]
     }
