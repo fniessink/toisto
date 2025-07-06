@@ -42,21 +42,17 @@ class QuizType:
         """Return the question for the quiz type. Can be overridden for quiz types that transform questions."""
         return question
 
-    def question_notes(self, question: Label, answers: Labels) -> list[str]:
-        """Return the notes to be shown before the quiz has been answered."""
-        return (
-            [question.question_note]
-            if question.question_note and self.question_notes_applicable(question, first(answers))
-            else []
-        )
+    def tips(self, question: Label, answers: Labels) -> list[str]:
+        """Return the tips to be shown before the quiz has been answered."""
+        return [question.tip] if question.tip and self.tips_applicable(question, first(answers)) else []
 
-    def question_notes_applicable(self, question: Label, answer: Label) -> bool:
-        """Return whether the question should get question notes."""
+    def tips_applicable(self, question: Label, answer: Label) -> bool:
+        """Return whether the quiz should get tips."""
         return question.language != answer.language
 
-    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:
+    def notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
-        return question.answer_notes
+        return question.notes
 
     def other_answers(self, guess: Label, answers: Labels) -> Labels:
         """Return the answers not equal to the guess."""
@@ -96,8 +92,8 @@ class TranslationQuizType(QuizType):
 class SemanticQuizType(QuizType):
     """Semantic quiz type."""
 
-    def question_notes_applicable(self, question: Label, answer: Label) -> bool:
-        """Override to return True because semantic quizzes should always get a question note."""
+    def tips_applicable(self, question: Label, answer: Label) -> bool:
+        """Override to return True because semantic quizzes should always get a tip."""
         return True
 
     @property
@@ -144,13 +140,13 @@ class WriteQuizType(TranslationQuizType):
 
     _action: str = "write"
 
-    def question_notes(self, question: Label, answers: Labels) -> list[str]:
-        """Return the note to be shown before the quiz has been answered."""
-        return [question_note] if (question_note := first(answers).question_note) else []
+    def tips(self, question: Label, answers: Labels) -> list[str]:
+        """Return the tips to be shown before the quiz has been answered."""
+        return [tip] if (tip := first(answers).tip) else []
 
-    def answer_notes(self, question: Label, answers: Labels) -> Sequence[str]:
+    def notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
-        return tuple(chain.from_iterable(answer.answer_notes for answer in answers))
+        return tuple(chain.from_iterable(answer.notes for answer in answers))
 
 
 @final
@@ -178,8 +174,8 @@ class DictateQuizType(ListenOnlyQuizType):
         instruction = super().instruction(question)
         return instruction + " standard" if question.colloquial else instruction
 
-    def question_notes_applicable(self, question: Label, answer: Label) -> bool:
-        """Override to return True because dictate quizzes should always get a question note."""
+    def tips_applicable(self, question: Label, answer: Label) -> bool:
+        """Override to return True because dictate quizzes should always get a tip."""
         return True
 
 

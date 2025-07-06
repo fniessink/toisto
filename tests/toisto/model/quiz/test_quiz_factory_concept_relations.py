@@ -1,59 +1,18 @@
 """Concept relations unit tests."""
 
-from toisto.model.language import EN, FI
+from toisto.model.language import EN
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
-from ....base import EN_NL, FI_EN, FI_NL
+from ....base import EN_NL, FI_NL
 from .test_quiz_factory import QuizFactoryTestCase
 
 
-class ConceptRootsTest(QuizFactoryTestCase):
-    """Unit tests for roots."""
-
-    def test_concept_relationship_leaf_concept(self):
-        """Test that leaf concepts can declare to have roots."""
-        mall = self.create_concept(
-            "mall",
-            labels=[{"label": "kauppakeskus", "language": FI, "roots": ["kauppa", "keskusta"]}],
-        )
-        shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
-        centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
-        self.assertEqual((shop, centre), create_quizzes(FI_NL, (), mall).pop().concept.roots(FI))
-
-    def test_concept_relationship_composite_concept(self):
-        """Test that composite concepts can have roots."""
-        mall = self.create_concept(
-            "mall",
-            labels=[
-                {
-                    "label": {"singular": "kauppakeskus", "plural": "kauppakeskukset"},
-                    "language": FI,
-                    "roots": ["kauppa", "keskusta"],
-                },
-                {"label": {"singular": "mall", "plural": "malls"}, "language": EN},
-            ],
-        )
-        shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
-        centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
-        for quiz in create_quizzes(FI_EN, (), mall):
-            self.assertIn(shop, quiz.concept.roots(FI))
-            self.assertIn(centre, quiz.concept.roots(FI))
-
-    def test_concept_relationship_leaf_concept_one_root(self):
-        """Test that leaf concepts can declare to have one root."""
-        capital = self.create_concept(
-            "capital",
-            labels=[
-                {"label": "pääkaupunki", "language": FI, "roots": ["kaupunki"]},
-                {"label": "capital", "language": EN},
-            ],
-        )
-        city = self.create_concept("city", labels=[{"label": "kaupunki", "language": FI}])
-        self.assertEqual((city,), create_quizzes(FI_EN, (), capital).pop().concept.roots(FI))
+class ConstituentConceptsTest(QuizFactoryTestCase):
+    """Unit tests for constituent concepts."""
 
     def test_generated_concept_ids_for_constituent_concepts(self):
         """Test that constituent concepts get a generated concept id."""

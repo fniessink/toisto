@@ -40,6 +40,8 @@ def filter_concepts(
             + concept.get_related_concepts("meronym")
             + concept.get_related_concepts("involves")
             + concept.get_related_concepts("involved_by")
-            + concept.compounds(language)
         )
+    for concept in all_selected_concepts.copy():
+        for compound in concept.labels(language).compounds:
+            all_selected_concepts |= concepts_by_label[str(compound)]
     return all_selected_concepts

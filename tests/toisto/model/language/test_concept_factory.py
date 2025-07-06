@@ -27,13 +27,13 @@ class ConcepFactoryTest(ToistoTestCase):
         """Test that a leaf concept can have a note."""
         notes = ["In English, the names of languages are capitalized"]
         concept = self.create_concept("english", labels=[{"label": "English", "language": EN, "note": notes}])
-        self.assertEqual(tuple(notes), concept.labels(EN)[0].answer_notes)
+        self.assertEqual(tuple(notes), concept.labels(EN)[0].notes)
 
     def test_leaf_concept_with_tip(self):
         """Test that a leaf concept can have a tip."""
         tip = "A tip"
         concept = self.create_concept("english", labels=[{"label": "English", "language": EN, "tip": tip}])
-        self.assertEqual(tip, concept.labels(EN)[0].question_note)
+        self.assertEqual(tip, concept.labels(EN)[0].tip)
 
     def test_leaf_concept_with_colloquial_label(self):
         """Test that a leaf concept can have a colloquial label."""
@@ -72,17 +72,6 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual((Label(FI, "kol", colloquial=True),), concept.labels(FI))
         self.assertEqual((Label(FI, "kolme"), Label(FI, "kolmes")), concept.constituents.labels(FI))
 
-    def test_roots(self):
-        """Test that a concept can have roots."""
-        mall = self.create_concept(
-            "mall",
-            labels=[{"label": "kauppakeskus", "language": FI, "roots": ["kauppa", "keskusta"]}],
-        )
-        shop = self.create_concept("shop", labels=[{"label": "kauppa", "language": FI}])
-        centre = self.create_concept("centre", labels=[{"label": "keskusta", "language": FI}])
-        self.assertEqual((shop, centre), mall.roots(FI))
-        self.assertEqual((mall,), shop.compounds(FI))
-
     def test_label_roots(self):
         """Test that a concept can have a label with roots."""
         concept = self.create_concept(
@@ -92,7 +81,7 @@ class ConcepFactoryTest(ToistoTestCase):
         self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), concept.labels(NL)[0].roots)
 
     def test_composite_concept_label_roots(self):
-        """Test thst a composite concept can have labels with roots."""
+        """Test that a composite concept can have labels with roots."""
         concept = self.create_concept(
             "kitchen table",
             labels=[
@@ -105,20 +94,6 @@ class ConcepFactoryTest(ToistoTestCase):
         )
         for constituent in concept.constituents:
             self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), constituent.labels(NL)[0].roots)
-
-    def test_roots_are_recursive(self):
-        """Test that the roots of a concept are recursive."""
-        diner_table_chair = self.create_concept(
-            "diner table chair",
-            labels=[{"label": "de eettafelstoel", "language": NL, "roots": ["de eettafel", "de stoel"]}],
-        )
-        diner_table = self.create_concept(
-            "diner table",
-            labels=[{"label": "de eettafel", "language": NL, "roots": ["de tafel"]}],
-        )
-        chair = self.create_concept("chair", labels=[{"label": "de stoel", "language": NL}])
-        table = self.create_concept("table", labels=[{"label": "de tafel", "language": NL}])
-        self.assertEqual((diner_table, table, chair), diner_table_chair.roots(NL))
 
     def test_homograph(self):
         """Test that a concept can have a homograph concept."""

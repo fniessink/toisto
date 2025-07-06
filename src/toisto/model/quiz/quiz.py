@@ -125,30 +125,30 @@ class Quiz:
         instruction_text = self.quiz_type.instruction(self.question)
         if self.question.is_complete_sentence:
             instruction_text = instruction_text.replace("write ", "write a complete sentence ")
-        return f"{instruction_text} {ALL_LANGUAGES[self.answer.language]}{self._question_note}"
+        return f"{instruction_text} {ALL_LANGUAGES[self.answer.language]}{self._tips}"
 
     @property
-    def answer_notes(self) -> Sequence[str]:
+    def notes(self) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
-        return self.quiz_type.answer_notes(self._question, self._answers)
+        return self.quiz_type.notes(self._question, self._answers)
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
         return bool(Quizzes(self.blocked_by) & quizzes)
 
     @property
-    def _question_note(self) -> str:
-        """Return the note(s) to be shown as part of the question, if applicable."""
+    def _tips(self) -> str:
+        """Return the tip(s) to be shown as part of the question, if applicable."""
         question = self._question
-        notes = self.quiz_type.question_notes(question, self._answers)
+        tips = self.quiz_type.tips(question, self._answers)
         if homographs := self.concept.get_homographs(question):
-            notes.extend(self._homonym_notes(homographs))
+            tips.extend(self._homonym_tips(homographs))
         if isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
-            notes.extend(self._homonym_notes(capitonyms))
-        return f" ({'; '.join(notes)})" if notes else ""
+            tips.extend(self._homonym_tips(capitonyms))
+        return f" ({'; '.join(tips)})" if tips else ""
 
-    def _homonym_notes(self, homonyms: Concepts) -> Sequence[str]:
-        """Return the note(s) to be shown as part of the question, if the question has one or more homonyms."""
+    def _homonym_tips(self, homonyms: Concepts) -> Sequence[str]:
+        """Return the tip(s) to be shown as part of the question, if the question has one or more homonyms."""
         if self.concept.same_base_concept(*homonyms):
             return self.concept.grammatical_differences(*homonyms)
         language = self.question.language
@@ -167,6 +167,10 @@ class Quizzes(set[Quiz]):
     def by_concept(self, concept: Concept) -> Quizzes:
         """Return the quizzes for the concept."""
         return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
+
+    def by_label(self, label: Label) -> Quizzes:
+        """Return the quizzes for the label."""
+        return self._quizzes_by_label.get(label, Quizzes())
 
     def related_quizzes(self, quiz: Quiz) -> Quizzes:
         """Return the quizzes related to the quiz, meaning quizzes for the same concept and quizzes for examples."""
@@ -191,3 +195,16 @@ class Quizzes(set[Quiz]):
         for quiz in self:
             quizzes_by_concept.setdefault(quiz.concept.base_concept, Quizzes()).add(quiz)
         return quizzes_by_concept
+
+    @cached_property
+    def _quizzes_by_label(self) -> dict[Label, Quizzes]:
+        """Return the quizzes by label cache.
+
+        Can't use functools.cache as Quizzes instances are not hashable, so use a dict as cache.
+        Note that the cache is not updated when quizzes are added or removed after initialization.
+        """
+        quizzes_by_label: dict[Label, Quizzes] = {}
+        for quiz in self:
+            for label in [quiz.question, *quiz.answers]:
+                quizzes_by_label.setdefault(label, Quizzes()).add(quiz)
+        return quizzes_by_label

@@ -73,8 +73,8 @@ class ProgressTest(ToistoTestCase):
         concept1 = self.create_concept(
             "good day",
             labels=[
-                {"label": "good day", "language": EN, "roots": ["good"]},
-                {"label": "goedendag", "language": NL, "roots": ["goed"]},
+                {"label": "good day", "language": EN, "roots": "good"},
+                {"label": "goedendag", "language": NL, "roots": "goed"},
             ],
         )
         concept2 = self.create_concept(

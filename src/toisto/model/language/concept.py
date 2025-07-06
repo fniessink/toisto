@@ -63,18 +63,9 @@ class Concept:
     the client asks for a concept is the concept instance looked up in the concept registry (Concept.instances). This
     prevents the need for a second pass after instantiating concepts from the concept files to create the relations.
 
-    Next to the relations that are based on the meaning of the concepts, concepts can also be related via their labels:
-
-    - The roots relation is used to capture the relation between compound labels and their roots. For example, the
-      word 'blackboard' contains two roots, 'black' and 'board'. The concept with the compound label refers to its
-      roots with the roots attribute. The roots relation can also be used for sentences, in which case the individual
-      words of a sentence are the roots. The roots relation is transitive. The relationships can be different for
-      different languages. For example, the Dutch label 'schoolbord' has different roots than the English equivalent
-      'blackboard'.
-
-    - Toisto automatically keeps track of two types of homonyms: capitonyms and homographs. Concept labels are
-      capitonyms when they only differ in capitalization. Concept labels are homographs when they are written exactly
-      the same.
+    Next to the relations that are based on the meaning of the concepts, concepts can also be related via their labels.
+    Toisto automatically keeps track of two types of homonyms: capitonyms and homographs. Concept labels are capitonyms
+    when they only differ in capitalization. Concept labels are homographs when they are written exactly the same.
     """
 
     concept_id: ConceptId
@@ -232,20 +223,6 @@ class Concept:
         """Return whether this concept has its own labels or meanings for the specified language."""
         return any((self._labels + self._meanings).with_language(language))
 
-    def compounds(self, language: Language) -> Concepts:
-        """Return the compounds of the concept."""
-        return self.get_all_concepts().compounds(self, language)
-
-    def roots(self, language: Language) -> Concepts:
-        """Return the root concepts recursively, for the specified language."""
-        concepts = []
-        for label in self.labels(language):
-            for root in label.roots:
-                for root_concept in self.homographs.get_values(root):
-                    if root_concept != self:
-                        concepts.extend([root_concept, *root_concept.roots(language)])
-        return Concepts(concepts)
-
     @property
     def is_complete_sentence(self) -> bool:
         """Return whether this concept is a complete sentence."""
@@ -274,7 +251,3 @@ class Concepts(tuple[Concept, ...]):
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concepts for the specified language."""
         return Labels(chain.from_iterable(concept.meanings(language) for concept in self))
-
-    def compounds(self, root: Concept, language: Language) -> Concepts:
-        """Return the compounds of the root for the specified language."""
-        return Concepts(concept for concept in self if root in concept.roots(language))
