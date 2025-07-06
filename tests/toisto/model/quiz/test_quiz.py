@@ -156,7 +156,7 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, Label(FI, "talo"), [Label(NL, "het huis")])
         self.assertEqual((), quiz.other_answers(self.huis))
 
-    def test_note(self):
+    def test_tips_and_notes(self):
         """Test that the tip is added to the instruction, the notes are not, and neither are added to the question."""
         questions = [
             Label(EN, "You are", tip="singular"),
@@ -166,21 +166,21 @@ class QuizTest(QuizTestCase):
         ]
         for question in questions:
             quiz = self.create_quiz(self.concept, question, [Label(NL, "Jij bent")])
-            hint = " (singular)" if question.question_note == "singular" else ""
+            hint = " (singular)" if question.tip == "singular" else ""
             self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
             self.assertEqual(Label(EN, "You are"), quiz.question)
 
-    def test_question_note_is_ignored_in_answer(self):
-        """Test that a note in the answer is ignored."""
+    def test_tip_is_ignored_in_answer(self):
+        """Test that a tip in the answer is ignored."""
         you_are = Label(EN, "You are")
         quiz = self.create_quiz(self.concept, Label(NL, "Jij bent", tip="singular"), [you_are])
         self.assertEqual(you_are, quiz.answer)
 
-    def test_all_answer_notes_are_shown(self):
-        """Test that all answer notes are shown."""
+    def test_all_notes_are_shown(self):
+        """Test that all notes are shown."""
         answers = [Label(NL, "want", notes=("explain want",)), Label(NL, "omdat", notes=("explain omdat",))]
         quiz = self.create_quiz(self.concept, Label(EN, "because"), answers, WRITE)
-        self.assertEqual(("explain want", "explain omdat"), quiz.answer_notes)
+        self.assertEqual(("explain want", "explain omdat"), quiz.notes)
 
 
 class OrderQuizTest(QuizTestCase):
@@ -261,19 +261,19 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(self.concept, sentence, [sentence], DICTATE)
         self.assertEqual("Listen and write a complete sentence in English", quiz.instruction)
 
-    def test_question_note_is_not_shown_when_question_and_answer_language_are_the_same(self):
-        """Test that a note is not shown if the question and answer languages are the same."""
+    def test_tip_is_not_shown_when_question_and_answer_language_are_the_same(self):
+        """Test that a tip is not shown if the question and answer languages are the same."""
         quiz = self.create_quiz(self.concept, Label(FI, "Hän on", tip="some tip"), [Label(FI, "He ovat")], PLURAL)
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
-    def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):
-        """Test that a note is shown if the question and answer languages are the same and the quiz type is dictate."""
+    def test_tip_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):
+        """Test that a tip is shown if the question and answer languages are the same and the quiz type is dictate."""
         suomi = Label(FI, "Suomi", tip="country")
         quiz = self.create_quiz(self.concept, suomi, [suomi], DICTATE)
         self.assertEqual("Listen and write in Finnish (country)", quiz.instruction)
 
-    def test_question_note_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
-        """Test that a note is shown if the question and answer languages are the same and the quiz type is answer."""
+    def test_tip_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_answer(self):
+        """Test that a tip is shown if the question and answer languages are the same and the quiz type is answer."""
         quiz = self.create_quiz(
             self.concept,
             Label(FI, "Onko hän Bob?", tip="positive or negative"),
@@ -282,25 +282,25 @@ class QuizInstructionTest(QuizTestCase):
         )
         self.assertEqual("Give the [underline]answer[/underline] in Finnish (positive or negative)", quiz.instruction)
 
-    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_dictate(self):
-        """Test that colloquial labels get an automatic note."""
+    def test_colloquial_labels_get_an_automatic_tip_when_quiz_type_is_dictate(self):
+        """Test that colloquial labels get an automatic tip."""
         seittemän = Label(FI, "seittemän", colloquial=True)
         seitsemän = Label(FI, "seitsemän")
         quiz = self.create_quiz(self.concept, seittemän, [seitsemän], DICTATE)
         self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
 
-    def test_colloquial_labels_get_an_automatic_note_when_quiz_type_is_interpret(self):
-        """Test that colloquial labels get an automatic note."""
+    def test_colloquial_labels_get_an_automatic_tip_when_quiz_type_is_interpret(self):
+        """Test that colloquial labels get an automatic tip."""
         quiz = self.create_quiz(self.concept, Label(FI, "seittemän", colloquial=True), [Label(NL, "zeven")], INTERPRET)
         self.assertEqual("Listen to the colloquial Finnish and write in Dutch", quiz.instruction)
 
-    def test_sentences_get_an_automatic_note_when_quiz_type_is_listen(self):
-        """Test that sentences get an automatic note when the quiz type is a listen quiz."""
+    def test_sentences_get_an_automatic_tip_when_quiz_type_is_listen(self):
+        """Test that sentences get an automatic tip when the quiz type is a listen quiz."""
         quiz = self.create_quiz(self.concept, Label(FI, "Terve!"), [Label(NL, "Hallo!")], INTERPRET)
         self.assertEqual("Listen and write a complete sentence in Dutch", quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_the_hypernym(self):
-        """Test that homographs get an automatic note based on the hypernym."""
+    def test_homographs_get_an_automatic_tip_based_on_the_hypernym(self):
+        """Test that homographs get an automatic tip based on the hypernym."""
         bank_nl: LabelDict = {"label": "de bank", "language": NL}
         # Create the homograph of sofa:
         self.create_concept("bank (finance)", labels=[{"label": "pankki", "language": FI}, bank_nl])
@@ -318,8 +318,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
         self.assertEqual("Listen and write in Dutch (het meubilair)", quiz.instruction)
 
-    def test_non_homographs_do_not_get_an_automatic_note_based_on_the_hypernym(self):
-        """Test that concepts that are not homograph do not get an automatic note based on the hypernym."""
+    def test_non_homographs_do_not_get_an_automatic_tip_based_on_the_hypernym(self):
+        """Test that concepts that are not homograph do not get an automatic tip based on the hypernym."""
         fly_en: LabelDict = {"label": "fly", "language": EN}
         # Create the homograph of fly:
         self.create_concept("to fly", labels=[fly_en, {"label": "vliegen", "language": NL}])
@@ -329,8 +329,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(fly, vlieg, [vlieg], DICTATE)
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_only_the_first_hypernym(self):
-        """Test that homographs get an automatic note based on the first hypernym if there are multiple."""
+    def test_homographs_get_an_automatic_tip_based_on_only_the_first_hypernym(self):
+        """Test that homographs get an automatic tip based on the first hypernym if there are multiple."""
         bank_nl: LabelDict = {"label": "de bank", "language": NL}
         # Create the homograph of sofa:
         self.create_concept("bank (finance)", labels=[{"label": "pankki", "language": FI}, bank_nl])
@@ -345,8 +345,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
         self.assertEqual("Listen and write in Dutch (het zitmeubel)", quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_the_common_base_concept(self):
-        """Test that homographs get an automatic note based on the common base concept."""
+    def test_homographs_get_an_automatic_tip_based_on_the_common_base_concept(self):
+        """Test that homographs get an automatic tip based on the common base concept."""
         concept = self.create_verb_with_grammatical_number_and_person()
         second_person_singular = next(
             leaf_concept
@@ -356,8 +356,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, Label(EN, "you have"), [Label(NL, "jij hebt")], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_the_common_base_concept_when_more_than_two_homographs(self):
-        """Test that homographs get an automatic note based on the common base concept."""
+    def test_homographs_get_an_automatic_tip_based_on_the_common_base_concept_when_more_than_two_homographs(self):
+        """Test that homographs get an automatic tip based on the common base concept."""
         concept = self.create_concept(
             "to read",
             labels=[
@@ -397,8 +397,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, Label(EN, "you read"), [Label(NL, "jij leest")], INTERPRET)
         self.assertEqual("Listen and write in Dutch (present tense; singular)", quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_the_holonym(self):
-        """Test that homographs get an automatic note based on the holonym."""
+    def test_homographs_get_an_automatic_tip_based_on_the_holonym(self):
+        """Test that homographs get an automatic tip based on the holonym."""
         self.create_concept(
             "tree",
             labels=[
@@ -420,8 +420,8 @@ class QuizInstructionTest(QuizTestCase):
         read_quiz = self.create_quiz(wood, puu, [hout], READ)
         self.assertEqual("Translate into Dutch (part of 'puu')", read_quiz.instruction)
 
-    def test_homographs_get_an_automatic_note_based_on_the_involved_concept(self):
-        """Test that homographs get an automatic note based on the involved concept."""
+    def test_homographs_get_an_automatic_tip_based_on_the_involved_concept(self):
+        """Test that homographs get an automatic tip based on the involved concept."""
         play_en: LabelDict = {"label": "to play", "language": EN}
         self.create_concept(
             "sport", labels=[{"label": "sport", "language": EN, "note": "this should not be shown as part of the note"}]
@@ -437,8 +437,8 @@ class QuizInstructionTest(QuizTestCase):
         write_quiz = self.create_quiz(play_instrument, Label(EN, "to play"), [Label(FI, "soittaa")], WRITE)
         self.assertEqual("Translate into Finnish", write_quiz.instruction)
 
-    def test_capitonyms_get_an_automatic_note_based_on_the_hypernym(self):
-        """Test that capitonyms get an automatic note based on the hypernym, for listening quizzes."""
+    def test_capitonyms_get_an_automatic_tip_based_on_the_hypernym(self):
+        """Test that capitonyms get an automatic tip based on the hypernym, for listening quizzes."""
         self.create_concept(
             "greece", labels=[{"label": "Kreikka", "language": FI}, {"label": "Griekenland", "language": NL}]
         )
@@ -454,8 +454,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(greek, kreikka, [Label(NL, "Grieks")], READ)
         self.assertEqual("Translate into Dutch", quiz.instruction)
 
-    def test_capitonyms_get_an_automatic_note_based_on_only_the_first_hypernym(self):
-        """Test that capitonyms get an automatic note based on the first hypernym if there are multiple."""
+    def test_capitonyms_get_an_automatic_tip_based_on_only_the_first_hypernym(self):
+        """Test that capitonyms get an automatic tip based on the first hypernym if there are multiple."""
         # Create the capitonym of greek:
         self.create_concept(
             "greece", labels=[{"label": "Kreikka", "language": FI}, {"label": "Griekenland", "language": NL}]
@@ -476,8 +476,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(greek, kreikka, [kreikka], DICTATE)
         self.assertEqual("Listen and write in Finnish (indoeurooppalainen kieli)", quiz.instruction)
 
-    def test_capitonyms_get_an_automatic_note_based_on_the_common_base_concept(self):
-        """Test that capitonyms get an automatic note based on the common base concept."""
+    def test_capitonyms_get_an_automatic_tip_based_on_the_common_base_concept(self):
+        """Test that capitonyms get an automatic tip based on the common base concept."""
         concept = self.create_concept(
             "to be",
             labels=[

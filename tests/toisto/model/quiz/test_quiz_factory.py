@@ -1763,7 +1763,7 @@ class QuizNoteTest(ToistoTestCase):
             ],
         )
         for quiz in create_quizzes(FI_NL, (), concept):
-            self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.answer_notes[0])
+            self.assertEqual("In Finnish, the names of languages are not capitalized", quiz.notes[0])
 
 
 class ColloquialTest(ToistoTestCase):

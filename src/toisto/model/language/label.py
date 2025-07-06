@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from collections.abc import Iterable, Iterator, Sequence
+from collections.abc import Iterable, Iterator
 from functools import cached_property
 from itertools import chain
 from random import shuffle
@@ -23,15 +23,17 @@ class Label:
 
     __slots__ = (
         "__dict__",
-        "_notes",
         "_roots",
-        "_tip",
         "_values",
         "colloquial",
         "language",
+        "notes",
+        "tip",
     )  # Without adding __dict__ to slots @cached_property does not work
 
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
+
+    instances: ClassVar[dict[str, Label]] = {}
 
     def __init__(  # noqa: PLR0913
         self,
@@ -45,11 +47,12 @@ class Label:
     ) -> None:
         """Initialize the label."""
         self.language = language
-        self.colloquial = colloquial
         self._values = value if isinstance(value, list) else [value]
-        self._notes = notes
+        self.notes = notes
         self._roots = roots
-        self._tip = tip
+        self.tip = tip
+        self.colloquial = colloquial
+        self.instances[self._values[0]] = self
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -77,10 +80,14 @@ class Label:
 
     __repr__ = __str__
 
+    def copy(self, value: str) -> Label:
+        """Return a copy of this label with a different value."""
+        return Label(self.language, value, self.notes, self._roots, self.tip, colloquial=self.colloquial)
+
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Extract the spelling alternatives from the label."""
-        return Labels([Label(self.language, value, colloquial=self.colloquial) for value in self._values])
+        return Labels([self.copy(value) for value in self._values])
 
     @cached_property
     def spelling_alternatives(self) -> Labels:
@@ -90,7 +97,7 @@ class Label:
         for alternative in alternatives:
             for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
                 if re.search(pattern, str(alternative)):
-                    generated_alternative = Label(self.language, re.sub(pattern, replacement, str(alternative)))
+                    generated_alternative = self.copy(re.sub(pattern, replacement, str(alternative)))
                     if alternative.starts_with_upper_case:
                         generated_alternative = generated_alternative.with_upper_case_first_letter
                     generated_alternatives.add(generated_alternative)
@@ -106,27 +113,17 @@ class Label:
         """Return the first spelling alternative of the label in random word order."""
         words = str(self.first_spelling_alternative).split(" ")
         shuffle(words)
-        return Label(self.language, " ".join(words))
-
-    @property
-    def question_note(self) -> str:
-        """Return the label question note."""
-        return self._tip
-
-    @property
-    def answer_notes(self) -> Sequence[str]:
-        """Return the label answer notes."""
-        return self._notes
+        return self.copy(" ".join(words))
 
     @property
     def with_upper_case_first_letter(self) -> Label:
         """Return the label with the first letter upper cased."""
-        return Label(self.language, first_upper(self._values[0]))
+        return self.copy(first_upper(self._values[0]))
 
     @property
     def lower_case(self) -> Label:
         """Return the label in lower case."""
-        return Label(self.language, self._values[0].lower())
+        return self.copy(self._values[0].lower())
 
     @property
     def is_complete_sentence(self) -> bool:
@@ -156,7 +153,16 @@ class Label:
     @property
     def roots(self) -> Labels:
         """Return the label roots."""
-        return Labels([Label(self.language, root) for root in self._roots])
+        roots = []
+        for root in self._roots:
+            root_label = self.instances[root]
+            roots.extend([root_label, *root_label.roots])
+        return Labels(roots)
+
+    @property
+    def compounds(self) -> Labels:
+        """Return the label compounds."""
+        return Labels([label for label in self.instances.values() if self in label.roots])
 
 
 class Labels:  # noqa: PLW1641
@@ -226,6 +232,12 @@ class Labels:  # noqa: PLW1641
     def first_non_generated_spelling_alternatives(self) -> Labels:
         """Return the first non-generated spelling alternative for each label."""
         return Labels(first(label.non_generated_spelling_alternatives) for label in self._labels)
+
+    @property
+    def compounds(self) -> Labels:
+        """Return the compounds of the labels."""
+        compounds = [label.compounds for label in self._labels]
+        return Labels(chain(*compounds))
 
     @property
     def as_strings(self) -> tuple[str, ...]:

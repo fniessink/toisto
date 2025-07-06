@@ -101,18 +101,17 @@ class Progress:
         return Quizzes(
             quiz
             for quiz in potential_quizzes
-            if not self.__root_concepts_have_quizzes(quiz, eligible_quizzes)
-            and not quiz.is_blocked_by(eligible_quizzes)
+            if not self.__root_labels_have_quizzes(quiz, eligible_quizzes) and not quiz.is_blocked_by(eligible_quizzes)
         )
 
-    def __root_concepts_have_quizzes(self, quiz: Quiz, eligible_quizzes: Quizzes) -> bool:
-        """Return whether the quiz's concept has root concepts that have quizzes."""
-        return any(
-            other_quiz
-            for root in quiz.concept.roots(self.target_language)
-            for other_quiz in self.quizzes.by_concept(root)
-            if other_quiz != quiz and other_quiz in eligible_quizzes
-        )
+    def __root_labels_have_quizzes(self, quiz: Quiz, eligible_quizzes: Quizzes) -> bool:
+        """Return whether the quiz's labels have root labels that have quizzes."""
+        for label in {quiz.question, *quiz.answers}:
+            for root in label.roots:
+                for other_quiz in self.quizzes.by_label(root):
+                    if other_quiz != quiz and other_quiz in eligible_quizzes:
+                        return True
+        return False
 
     def as_dict(self) -> ProgressDict:
         """Return the progress as dict."""

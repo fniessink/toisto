@@ -42,7 +42,7 @@ class LabelTest(ToistoTestCase):
         """Test that the label can have a note."""
         note = "In English, the names of holidays are capitalized"
         label = Label(EN, "Christmas", (note,))
-        self.assertEqual((note,), label.answer_notes)
+        self.assertEqual((note,), label.notes)
 
     def test_spelling_alternatives(self):
         """Test that the label can have spelling alternatives."""
@@ -54,6 +54,38 @@ class LabelTest(ToistoTestCase):
         label = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
         self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de kast")]), label.roots)
 
+    def test_compounds(self):
+        """Test that the label can have compounds."""
+        Label.instances.clear()
+        kast = Label(NL, "de kast")
+        keuken = Label(NL, "de keuken")
+        keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
+        self.assertEqual((keukenkast,), kast.compounds)
+        self.assertEqual((keukenkast,), keuken.compounds)
+
+    def test_recursive_roots(self):
+        """Test that getting the roots is recursive."""
+        Label.instances.clear()
+        keukenkastdeur = Label(NL, "de keukenkastdeur", roots=("de keukenkast", "de deur"))
+        keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
+        keuken = Label(NL, "de keuken")
+        kast = Label(NL, "de kast")
+        deur = Label(NL, "de deur")
+        self.assertEqual(Labels([keukenkast, keuken, kast, deur]), keukenkastdeur.roots)
+
+    def test_recursive_compounds(self):
+        """Test that getting the compounds is recursive."""
+        Label.instances.clear()
+        keukenkastdeur = Label(NL, "de keukenkastdeur", roots=("de keukenkast", "de deur"))
+        keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
+        keuken = Label(NL, "de keuken")
+        kast = Label(NL, "de kast")
+        deur = Label(NL, "de deur")
+        self.assertEqual(Labels([keukenkastdeur, keukenkast]), kast.compounds)
+        self.assertEqual(Labels([keukenkastdeur, keukenkast]), keuken.compounds)
+        self.assertEqual(Labels([keukenkastdeur]), deur.compounds)
+        self.assertEqual(Labels([keukenkastdeur]), keukenkast.compounds)
+
 
 class LabelsTest(ToistoTestCase):
     """Unit tests for the Labels class."""
@@ -61,3 +93,12 @@ class LabelsTest(ToistoTestCase):
     def test_repr(self):
         """Test the representation of multiple labels."""
         self.assertEqual("('English', 'Nederlands')", repr(Labels([Label(EN, "English"), Label(NL, "Nederlands")])))
+
+    def test_compounds(self):
+        """Test that all compounds of all labels are returned."""
+        Label.instances.clear()
+        raam = Label(NL, "het raam")
+        zolder = Label(NL, "de zolder")
+        zolderraam = Label(NL, "het zolderraam", roots=("de zolder", "het raam"))
+        self.assertEqual((zolderraam,), Labels([raam]).compounds)
+        self.assertEqual((zolderraam,), Labels([zolder]).compounds)

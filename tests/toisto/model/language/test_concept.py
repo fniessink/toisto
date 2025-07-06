@@ -20,8 +20,6 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((), concept.constituents)
         self.assertEqual((), concept.labels(FI))
         self.assertEqual((), concept.meanings(FI))
-        self.assertEqual((), concept.roots(FI))
-        self.assertEqual((), concept.compounds(FI))
         self.assertFalse(concept.answer_only)
         for relation in get_args(ConceptRelation):
             self.assertEqual((), concept.get_related_concepts(relation))
@@ -128,11 +126,3 @@ class ConceptTest(ToistoTestCase):
             labels=[{"label": {"singular": "The house is big.", "plural": "The houses are big."}, "language": EN}],
         )
         self.assertTrue(composite_concept.is_complete_sentence)
-
-    def test_roots_do_not_include_self(self):
-        """Test that roots do not include the concept itself, even when the root label belongs to the concept."""
-        concept = self.create_concept(
-            "motorbike",
-            labels=[{"label": "motorbike", "roots": "bike", "language": EN}, {"label": "bike", "language": EN}],
-        )
-        self.assertNotIn(concept, concept.roots(EN))
