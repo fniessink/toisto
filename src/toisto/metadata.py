@@ -12,7 +12,7 @@ from toisto.model.language import EN, FI, NL
 from toisto.tools import first
 
 _metadata = metadata("Toisto")
-NAME: Final = _metadata["name"]
+NAME: Final = _metadata["name"].capitalize()
 SUMMARY: Final = _metadata["summary"]
 _homepage_url = _metadata["Project-URL"].split(", ")[1]
 README_URL: Final = f"{_homepage_url}?tab=readme-ov-file#toisto"

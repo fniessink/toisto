@@ -52,8 +52,7 @@ class LoadConceptsTest(ToistoTestCase):
         ]
         self.assertRaises(SystemExit, self.loader.load_concepts, Path("file1"), Path("file2"))
         self.assertIn(
-            f"Toisto cannot read file {Path('file2')}: concept identifier 'concept_id' also occurs in "
-            f"file {Path('file1')}.\n",
+            f"cannot read file {Path('file2')}: concept identifier 'concept_id' also occurs in file {Path('file1')}.\n",
             stderr_write.call_args_list[1][0][0],
         )
 
