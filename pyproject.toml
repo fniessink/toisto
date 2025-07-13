@@ -1,10 +1,10 @@
 [build-system]
-requires = ["uv_build>=0.7.19,<0.8.0"]
-build-backend = "uv_build"
+requires = ["setuptools<81"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "Toisto"
-version = "0.35.0"
+version = "0.36.0"
 authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"

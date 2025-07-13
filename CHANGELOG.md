@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Changed
 
 - Change the concept file format to separate concepts and labels to that labels can be linked to multiple concepts.
-- Replace the conventions for specfyying spelling alternatives, colloquial language, tips, and notes with proper JSON syntax.
+- Replace the conventions for specifying spelling alternatives, colloquial language, tips, and notes with proper JSON syntax.
 - Toisto now requires Python 3.11 or newer.
 
 ## 0.35.0 - 2025-04-28
