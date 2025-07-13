@@ -1,7 +1,10 @@
 {
     "concepts": {
         "cold": {
-            "antonym": "hot"
+            "antonym": [
+                "hot",
+                "warm"
+            ]
         }
     },
     "labels": {
