@@ -1,9 +1,15 @@
 {
     "concepts": {
-        "sole": {}
+        "sole": {
+            "example": "I am an only child"
+        }
     },
     "labels": {
         "en": [
+            {
+                "concept": "sole",
+                "label": "only"
+            },
             {
                 "concept": "sole",
                 "label": "sole"
