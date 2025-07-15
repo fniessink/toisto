@@ -12,7 +12,8 @@ def map_concepts_by_label(concepts: set[Concept], language: Language) -> dict[st
     for concept in concepts:
         labels = concept.labels(language) or concept.meanings(language)
         for label in labels:
-            concepts_by_label.setdefault(str(label.first_spelling_alternative), set()).add(concept)
+            for spelling_alternative in label.spelling_alternatives:
+                concepts_by_label.setdefault(str(spelling_alternative), set()).add(concept)
     return concepts_by_label
 
 
