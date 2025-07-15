@@ -84,8 +84,9 @@ class Concept:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
         for label in self._labels:
-            self.capitonyms.add_item(label, self)
             self.homographs.add_item(label, self)
+            if not label.is_complete_sentence:
+                self.capitonyms.add_item(label, self)
 
     def __hash__(self) -> int:
         """Return the concept hash."""
