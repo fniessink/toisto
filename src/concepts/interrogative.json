@@ -340,7 +340,11 @@
             },
             {
                 "concept": "where from",
-                "label": "Waar vandaan?"
+                "label": [
+                    "Waarvandaan?",
+                    "Waar vandaan?"
+                ],
+                "roots": "Waar?"
             },
             {
                 "concept": "when",

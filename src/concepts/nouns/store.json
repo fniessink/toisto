@@ -1,11 +1,16 @@
 {
     "concepts": {
-        "store": {},
+        "store": {
+            "example": "alice works in a store"
+        },
         "department store": {
             "hypernym": "store"
         },
         "home appliance store": {
             "hypernym": "store"
+        },
+        "alice works in a store": {
+            "involves": "store"
         }
     },
     "labels": {
@@ -29,6 +34,11 @@
                 "concept": "home appliance store",
                 "label": "home appliance store",
                 "roots": "store"
+            },
+            {
+                "concept": "alice works in a store",
+                "label": "Alice works in a store.",
+                "roots": "store"
             }
         ],
         "fi": [
@@ -50,6 +60,11 @@
             {
                 "concept": "home appliance store",
                 "label": "kodinkoneliike"
+            },
+            {
+                "concept": "alice works in a store",
+                "label": "Alice on töissä kaupassa.",
+                "roots": "kauppa"
             }
         ],
         "nl": [
@@ -71,6 +86,11 @@
             {
                 "concept": "home appliance store",
                 "label": "de winkel voor huishoudelijke apparaten",
+                "roots": "de winkel"
+            },
+            {
+                "concept": "alice works in a store",
+                "label": "Alice werkt in een winkel.",
                 "roots": "de winkel"
             }
         ]
