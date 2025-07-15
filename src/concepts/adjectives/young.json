@@ -1,8 +1,10 @@
 {
     "concepts": {
         "young": {
-            "antonym": "old"
-        }
+            "antonym": "old",
+            "example": "bob is a finnish young man"
+        },
+        "bob is a young man": {}
     },
     "labels": {
         "en": [
@@ -13,6 +15,15 @@
                     "comparative degree": "younger",
                     "superlative degree": "youngest"
                 }
+            },
+            {
+                "concept": "bob is a finnish young man",
+                "label": "Bob is a Finnish young man.",
+                "roots": [
+                    "Finnish",
+                    "young",
+                    "man"
+                ]
             }
         ],
         "fi": [
@@ -23,6 +34,15 @@
                     "comparative degree": "nuorempi",
                     "superlative degree": "nuorin"
                 }
+            },
+            {
+                "concept": "bob is a finnish young man",
+                "label": "Bob on suomalainen nuori mies.",
+                "roots": [
+                    "suomalainen",
+                    "nuori",
+                    "mies"
+                ]
             }
         ],
         "nl": [
@@ -33,6 +53,15 @@
                     "comparative degree": "jonger",
                     "superlative degree": "jongst"
                 }
+            },
+            {
+                "concept": "bob is a finnish young man",
+                "label": "Bob is een Finse jonge man",
+                "roots": [
+                    "Fins",
+                    "jong",
+                    "de man"
+                ]
             }
         ]
     }
