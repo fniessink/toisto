@@ -286,6 +286,10 @@ class SemanticQuizFactory(BaseQuizFactory):
         """Return the questions."""
         return concept.own_labels(self.language_pair.target).non_colloquial
 
+    def question_meanings(self, concept: Concept) -> Labels:
+        """Return the question meanings of the concept."""
+        return concept.meanings(self.language_pair.source)
+
     def answers(self, concept: Concept) -> Labels:
         """Return the answers."""
         labels = []
@@ -295,7 +299,7 @@ class SemanticQuizFactory(BaseQuizFactory):
 
     def answer_meanings(self, concept: Concept) -> Labels:
         """Return the answer meanings of the concept."""
-        meanings = list(concept.meanings(self.language_pair.source))
+        meanings: list[Label] = []
         for related_concept in concept.get_related_concepts(self.concept_relation):
             meanings.extend(related_concept.meanings(self.language_pair.source))
         return Labels(meanings)

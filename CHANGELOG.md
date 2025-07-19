@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.36.3 - 2025-07-19
+
+### Fixed
+
+- Failing an antonym quiz for a concept with multiple antonyms would result in confusing feedback. Fixes [#1043](https://github.com/fniessink/toisto/issues/1043).
+
 ## 0.36.2 - 2025-07-15
 
 ### Fixed

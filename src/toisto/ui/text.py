@@ -86,12 +86,11 @@ class Feedback:
             feedback += self.INCORRECT + self._correct_answer(cast("Label", guess))
         else:
             feedback += self._correct_answers()
-        feedback += self._colloquial() + self._meaning()
         if evaluation == Evaluation.CORRECT:
             feedback += self._other_answers(cast("Label", guess))
         elif evaluation == Evaluation.INCORRECT:
             feedback += self._other_answers(self.quiz.answer)
-        feedback += self._notes()
+        feedback += self._colloquial() + self._meaning() + self._notes()
         if evaluation == Evaluation.CORRECT:
             feedback += self._examples()
         return feedback

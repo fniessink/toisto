@@ -84,7 +84,10 @@
                 }
             },
             {
-                "concept": "son",
+                "concept": [
+                    "boy",
+                    "son"
+                ],
                 "label": {
                     "singular": "poika",
                     "plural": "pojat"
