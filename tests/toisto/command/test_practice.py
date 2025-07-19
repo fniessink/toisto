@@ -9,7 +9,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import DICTATE, INTERPRET, PLURAL, READ, WRITE
+from toisto.model.quiz.quiz_type import ANTONYM, DICTATE, INTERPRET, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
 from toisto.ui.text import DONE, Feedback, ProgressUpdate, console
@@ -322,6 +322,34 @@ class PracticeTest(ToistoTestCase):
             f"'{linkified('pöytävalaisin')}'.[/secondary]\n"
             "[secondary]Example: 'Ik zoek een tafellamp.' meaning 'Minä etsin pöytälamppua.' and "
             "'Minä etsin pöytävalaisinta.'[/secondary]\n"
+        )
+        self.assert_printed(expected_feedback, self.practice(quizzes))
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n"]))
+    def test_quiz_with_multiple_antonyms(self):
+        """Test that the correct meaning of the antonyms is given."""
+        son = self.create_concept(
+            "son",
+            {"antonym": ["daughter", "father"]},
+            labels=[{"label": "poika", "language": FI}, {"label": "de zoon", "language": NL}],
+        )
+        self.create_concept(
+            "daughter",
+            {},
+            labels=[{"label": "tytär", "language": FI}, {"label": "de dochter", "language": NL}],
+        )
+        self.create_concept(
+            "father",
+            {},
+            labels=[{"label": "isä", "language": FI}, {"label": "de vader", "language": NL}],
+        )
+        quizzes = create_quizzes(FI_NL, (ANTONYM,), son)
+        expected_feedback = (
+            f"{Feedback.INCORRECT}The correct answer is '[inserted]{linkified('tytär')}[/inserted]'.\n"
+            f"[secondary]Another correct answer is '{linkified('isä')}'.[/secondary]\n"
+            f"[secondary]Meaning '{linkified('de')} {linkified('zoon')}', respectively "
+            f"'{linkified('de')} {linkified('dochter')}' and "
+            f"'{linkified('de')} {linkified('vader')}'.[/secondary]\n"
         )
         self.assert_printed(expected_feedback, self.practice(quizzes))
 

@@ -1,60 +1,99 @@
 [build-system]
-requires = ["setuptools<81"]
 build-backend = "setuptools.build_meta"
 
+requires = [ "setuptools<81" ]
+
 [project]
-name = "Toisto"
-version = "0.36.2"
-authors = [{ name = "Frank Niessink", email = "frank@niessink.com" }]
+name = "toisto"
+version = "0.36.3"
 description = "Toisto is a command-line terminal app to practice languages."
 readme = "README.md"
+keywords = [ "dutch", "english", "finnish", "language learning" ]
 license = "Apache-2.0"
-license-files = ["LICENSE"]
-keywords = ["language learning", "finnish", "dutch", "english"]
+license-files = [ "LICENSE" ]
+authors = [ { name = "Frank Niessink", email = "frank@niessink.com" } ]
 requires-python = ">=3.11"
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: End Users/Desktop",
-    "Natural Language :: English",
-    "Operating System :: MacOS",
-    "Operating System :: Microsoft :: Windows",
-    "Operating System :: POSIX :: Linux",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Education",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "Natural Language :: English",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Education",
 ]
 dependencies = [
-    "dramatic == 0.4.1.post1",
-    "gTTS == 2.5.4",
-    "pygame == 2.6.1",
-    "requests >= 2.28.0",
-    "rich == 14.0.0",
-    "rich-argparse == 1.7.1",
+  "dramatic==0.4.1.post1",
+  "gtts==2.5.4",
+  "pygame==2.6.1",
+  "requests>=2.28",
+  "rich==14",
+  "rich-argparse==1.7.1",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "bandit == 1.8.5",
-    "build == 1.2.2.post1",
-    "coverage == 7.9.1",
-    "fixit == 2.1.0",
-    "gprof2dot == 2025.4.14",
-    "green == 4.0.2",
-    "mypy == 1.16.1",
-    "ruff == 0.12.1",
-    "types-requests == 2.32.4.20250611",
-    "unittest-xml-reporting == 3.2.0",
-    "vulture == 2.14",
+optional-dependencies.dev = [
+  "bandit==1.8.5",
+  "build==1.2.2.post1",
+  "coverage==7.9.1",
+  "fixit==2.1",
+  "gprof2dot==2025.4.14",
+  "green==4.0.2",
+  "mypy==1.16.1",
+  "ruff==0.12.1",
+  "types-requests==2.32.4.20250611",
+  "unittest-xml-reporting==3.2",
+  "vulture==2.14",
 ]
+urls.Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
+urls.Issues = "https://github.com/fniessink/toisto/issues"
+urls.Repository = "https://github.com/fniessink/toisto"
+scripts.toisto = "toisto.app:main"
 
-[project.scripts]
-toisto = "toisto.app:main"
+[tool.setuptools.packages.find]
+where = [ "src" ]
 
-[project.urls]
-Repository = "https://github.com/fniessink/toisto"
-Issues = "https://github.com/fniessink/toisto/issues"
-Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
+[tool.setuptools.package-data]
+"*" = [ "*.json" ]
+languages = [ "*.txt" ]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+lint.select = [ "ALL" ]
+lint.ignore = [
+  "ARG002",  # Prevent 'Unused method argument: `concept`' errors
+  "COM812",  # This rule may cause conflicts when used with the ruff formatter
+  "D107",    # Prevent 'Missing docstring in `__init__`' errors
+  "D203",    # Prevent warning about incompatible rules
+  "D213",    # Prevent warning about incompatible rules
+  "FBT003",  # Prevent 'Boolean positional value in function call' errors
+  "ISC001",  # This rule may cause conflicts when used with the ruff formatter
+  "PLC2401", # Allow non-ascii characters in variable names
+  "PT",      # We don't use Pytest
+  "TC001",   # Prevent 'Move application import `...` into a type-checking block' errors
+  "TC002",   # Prevent 'Move third-party import `...` into a type-checking block' errors
+  "TC003",   # Prevent 'Move standard library import `...` into a type-checking block' errors
+  "TID252",  # Prevent 'Relative imports from parent modules are banned' errors
+]
+lint.per-file-ignores.".vulture-whitelist.py" = [ "ALL" ]
+lint.per-file-ignores."__init__.py" = [ "D104" ]
+lint.per-file-ignores."src/toisto/app.py" = [ "E402" ]
+lint.per-file-ignores."src/toisto/ui/speech.py" = [ "FBT001", "FBT002" ]
+lint.per-file-ignores."tests/*" = [ "ANN201" ]
+lint.isort.section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "second-party",
+  "first-party",
+  "local-folder",
+]
+lint.isort.sections."second-party" = [ "toisto" ]
 
 [tool.coverage.run]
 branch = true
@@ -62,7 +101,7 @@ relative_files = true
 
 [tool.coverage.report]
 exclude_also = [
-    "if TYPE_CHECKING:",
+  "if TYPE_CHECKING:",
 ]
 fail_under = 100
 skip_covered = true
@@ -70,15 +109,12 @@ skip_covered = true
 [tool.coverage.xml]
 output = "build/coverage.xml"
 
-[tool.fixit]
-python-version = "3.11"
-
 [tool.mypy]
 python_version = "3.11"
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["dramatic", "green.output", "gtts", "xmlrunner.result"]
+module = [ "dramatic", "green.output", "gtts", "xmlrunner.result" ]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
@@ -86,57 +122,11 @@ module = "toisto.persistence.json_file"
 disable_error_code = "type-arg"         # Don't complain about JSON types not being completely specified
 
 [[tool.mypy.overrides]]
-module = ["tests.*"]
+module = [ "tests.*" ]
 allow_untyped_defs = true # Allow for not specifying None as return value on every test method
 
-[tool.ruff]
-target-version = "py311"
-line-length = 120
-
-[tool.ruff.lint]
-select = ["ALL"]
-ignore = [
-    "ARG002",  # Prevent 'Unused method argument: `concept`' errors
-    "COM812",  # This rule may cause conflicts when used with the ruff formatter
-    "D107",    # Prevent 'Missing docstring in `__init__`' errors
-    "D203",    # Prevent warning about incompatible rules
-    "D213",    # Prevent warning about incompatible rules
-    "FBT003",  # Prevent 'Boolean positional value in function call' errors
-    "ISC001",  # This rule may cause conflicts when used with the ruff formatter
-    "PLC2401", # Allow non-ascii characters in variable names
-    "PT",      # We don't use Pytest
-    "TC001",   # Prevent 'Move application import `...` into a type-checking block' errors
-    "TC002",   # Prevent 'Move third-party import `...` into a type-checking block' errors
-    "TC003",   # Prevent 'Move standard library import `...` into a type-checking block' errors
-    "TID252",  # Prevent 'Relative imports from parent modules are banned' errors
-]
-
-[tool.ruff.lint.isort]
-section-order = [
-    "future",
-    "standard-library",
-    "third-party",
-    "second-party",
-    "first-party",
-    "local-folder",
-]
-
-[tool.ruff.lint.isort.sections]
-"second-party" = ["toisto"]
-
-[tool.ruff.lint.per-file-ignores]
-"src/toisto/app.py" = ["E402"]
-"src/toisto/ui/speech.py" = ["FBT001", "FBT002"]
-"__init__.py" = ["D104"]
-"tests/*" = ["ANN201"]
-".vulture-whitelist.py" = ["ALL"]
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-"*" = ["*.json"]
-languages = ["*.txt"]
+[tool.fixit]
+python-version = "3.11"
 
 [tool.vulture]
-ignore_names = ["_SubParsersAction", "optionxform"]
+ignore_names = [ "_SubParsersAction", "optionxform" ]
