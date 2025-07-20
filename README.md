@@ -78,12 +78,6 @@ oranje
 ```console
 $ uv tool install toisto
 ```
-
-If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
-
-```console
-$ uv tool upgrade toisto
-```
 </details>
 
 <details>
@@ -97,12 +91,6 @@ $ uv tool upgrade toisto
 
 ```console
 $ uv tool install toisto
-```
-
-If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
-
-```console
-$ uv tool upgrade toisto
 ```
 </details>
 
@@ -118,12 +106,6 @@ $ uv tool upgrade toisto
 ```console
 $ uv tool install toisto
 ```
-
-If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
-
-```console
-$ uv tool upgrade toisto
-```
 </details>
 
 <details>
@@ -133,14 +115,9 @@ $ uv tool upgrade toisto
 
 2. Install Toisto using pip. <details><summary>What is pip?</summary>pip is a tool that can install packages developed in Python. It comes bundled with Python. a-Shell has Python pre-installed, and thus pip as well.</details>
 
-   ```console
-   $ pip install toisto
-   ```
-
-If you have already installed Toisto and a newer version is available, upgrade Toisto as follows:
-
 ```console
-$ pip upgrade toisto
+$ pip install toisto
+```
 ```
 </details>
 

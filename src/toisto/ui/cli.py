@@ -10,13 +10,14 @@ from typing import TYPE_CHECKING, get_args
 from rich_argparse import RichHelpFormatter
 
 from toisto.command.show_progress import SortColumn
-from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, VERSION, latest_version
+from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, latest_version
 from toisto.model.filter import map_concepts_by_label
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 from toisto.model.quiz.quiz_type import QuizType
 from toisto.persistence.folder import home
+from toisto.ui.text import version_message
 
 if TYPE_CHECKING:
     from argparse import _SubParsersAction
@@ -76,9 +77,9 @@ class CommandBuilder:
 
     LANGUAGE_ARGUMENT_REQUIRED = True
 
-    def __init__(self, subparsers: "_SubParsersAction[ArgumentParser]", config: ConfigParser) -> None:
+    def __init__(self, subparsers: "_SubParsersAction[ArgumentParser]", config: ConfigParser | None = None) -> None:
         self.subparsers = subparsers
-        self.config = config
+        self.config = ConfigParser() if config is None else config
 
     def _add_command(self, command: str, description: str, command_help: str) -> ArgumentParser:
         """Add a command."""
@@ -266,27 +267,83 @@ class ProgressCommandBuilder(CommandBuilder):
         )
 
 
+class SelfUpgradeCommandBuilder(CommandBuilder):
+    """Self-upgrade command builder."""
+
+    LANGUAGE_ARGUMENT_REQUIRED = False
+
+    def add_command(self) -> None:
+        """Add a command to upgrade Toisto."""
+        self._add_command("upgrade", "Upgrade Toisto.", "upgrade Toisto to the latest version")
+
+
+class SelfUninstallCommandBuilder(CommandBuilder):
+    """Self-uninstall command builder."""
+
+    LANGUAGE_ARGUMENT_REQUIRED = False
+
+    def add_command(self) -> None:
+        """Add a command to uninstall Toisto."""
+        self._add_command(
+            "uninstall",
+            "Uninstall Toisto.",
+            "uninstall Toisto, excluding configuration and progress files",
+        )
+
+
+class SelfVersionCommandBuilder(CommandBuilder):
+    """Self-version command builder."""
+
+    LANGUAGE_ARGUMENT_REQUIRED = False
+
+    def add_command(self) -> None:
+        """Add a command to show the current version."""
+        self._add_command(
+            "version",
+            "Show the current version.",
+            "show the installed version and the latest version available if it is newer",
+        )
+
+
+class SelfCommandsBuilder(CommandBuilder):
+    """Self commands builder."""
+
+    LANGUAGE_ARGUMENT_REQUIRED = False
+
+    def add_commands(self) -> None:
+        """Add a self command group."""
+        command_help = (
+            "manage Toisto itself, for example `%(prog)s self upgrade` to upgrade Toisto to the latest version"
+        )
+        parser = self._add_command("self", "Manage Toisto itself.", command_help)
+        subparsers = parser.add_subparsers(dest="self", title="commands", required=True, help="type `toisto self {command} --help` for more information on a command")
+        SelfUpgradeCommandBuilder(subparsers).add_command()
+        SelfUninstallCommandBuilder(subparsers).add_command()
+        SelfVersionCommandBuilder(subparsers).add_command()
+
+
 def create_argument_parser(config: ConfigParser, concepts: set[Concept] | None = None) -> ArgumentParser:
     """Create the argument parser."""
     epilog = f"See {README_URL} for more information."
     argument_parser = ArgumentParser(description=SUMMARY, epilog=epilog, formatter_class=RichHelpFormatter)
-    latest = latest_version()
-    version = f"v{VERSION}" + (f" ({latest} is available)" if latest and latest.strip("v") > VERSION else "")
-    argument_parser.add_argument("-V", "--version", action="version", version=version)
+    argument_parser.add_argument("-V", "--version", action="version", version=version_message(latest_version()))
     command_help = "default: practice; type `%(prog)s {command} --help` for more information on a command"
     subparsers = argument_parser.add_subparsers(dest="command", title="commands", help=command_help)
     ConfigureCommandBuilder(subparsers, config).add_command()
     PracticeCommandBuilder(subparsers, config).add_command(concepts or set())
     ProgressCommandBuilder(subparsers, config).add_command(concepts or set())
-    if not {"configure", "practice", "progress", "-h", "--help", "-V", "--version"} & set(sys.argv):
+    SelfCommandsBuilder(subparsers, config).add_commands()
+    if not {"configure", "practice", "progress", "self", "-h", "--help", "-V", "--version"} & set(sys.argv):
         sys.argv.insert(1, "practice")  # Insert practice as default subcommand
+    if sys.argv[1:] == ["self"]:
+        sys.argv.append("--help")
     return argument_parser
 
 
 def parse_arguments(argument_parser: ArgumentParser) -> Namespace:
     """Parse and validate the command-line arguments."""
     namespace = argument_parser.parse_args()
-    if namespace.target_language == namespace.source_language and namespace.command != "configure":
+    if namespace.command not in ("configure", "self") and namespace.target_language == namespace.source_language:
         message = f"target and source language are the same: '{namespace.target_language}' "
         argument_parser.error(message)
     return namespace

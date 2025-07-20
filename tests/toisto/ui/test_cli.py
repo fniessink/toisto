@@ -50,6 +50,42 @@ QUIZ_TYPE_OPTION = """-q, --quiz-type {quiz type}
                         masculine, negative, neuter, order, ordinal, past perfect tense, past tense, plural, positive
                         degree, present perfect tense, present tense, read, second person, singular, superlative
                         degree, third person, verbal noun, write"""
+HELP_MESSAGE = f"""Usage: toisto [-h] [-V] {{configure,practice,progress,self}} ...
+
+Toisto is a command-line terminal app to practice languages.
+
+Options:
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
+
+Commands:
+  {{configure,practice,progress,self}}
+                        default: practice; type `toisto {{command}} --help` for more information on a command
+    configure           configure options, for example `toisto configure --target fi --source en` to make practicing
+                        Finnish from English the default
+    practice            practice a language, for example `toisto practice --target fi --source en` to practice Finnish
+                        from English
+    progress            show progress, for example `toisto progress --target fi --source en` to show progress on
+                        practicing Finnish from English
+    self                manage Toisto itself, for example `toisto self upgrade` to upgrade Toisto to the latest
+                        version
+
+See {README_URL} for more information.
+"""
+SELF_HELP_MESSAGE = """Usage: toisto self [-h] {upgrade,uninstall,version} ...
+
+Manage Toisto itself.
+
+Options:
+  -h, --help            show this help message and exit
+
+Commands:
+  {upgrade,uninstall,version}
+                        type `toisto self {command} --help` for more information on a command
+    upgrade             upgrade Toisto to the latest version
+    uninstall           uninstall Toisto, excluding configuration and progress files
+    version             show the installed version and the latest version available if it is newer
+"""
 
 
 class ParserTest(unittest.TestCase):
@@ -75,29 +111,7 @@ class ParserTest(unittest.TestCase):
     def test_help(self, sys_stdout_write: Mock) -> None:
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(
-            f"""Usage: toisto [-h] [-V] {{configure,practice,progress}} ...
-
-Toisto is a command-line terminal app to practice languages.
-
-Options:
-  -h, --help            show this help message and exit
-  -V, --version         show program's version number and exit
-
-Commands:
-  {{configure,practice,progress}}
-                        default: practice; type `toisto {{command}} --help` for more information on a command
-    configure           configure options, for example `toisto configure --target fi --source en` to make practicing
-                        Finnish from English the default
-    practice            practice a language, for example `toisto practice --target fi --source en` to practice Finnish
-                        from English
-    progress            show progress, for example `toisto progress --target fi --source en` to show progress on
-                        practicing Finnish from English
-
-See {README_URL} for more information.
-""",
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
-        )
+        self.assertEqual(HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--target", "nl", "--source", "fi"])
@@ -257,7 +271,7 @@ Options:
   {PROGRESS_OPTION % "0"}
   {MP3PLAYER_OPTION}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
     @patch("sys.platform", "darwin")
@@ -302,7 +316,7 @@ Options:
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
     @patch("sys.platform", "darwin")
@@ -329,7 +343,7 @@ Options:
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
     @patch("sys.platform", "darwin")
@@ -340,7 +354,6 @@ Options:
         config_parser = default_config()
         config_parser.set("practice", "progress_update", "42")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
-        self.maxDiff = None
         self.assertEqual(
             f"""{PRACTICE_USAGE}
 
@@ -356,7 +369,7 @@ Options:
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % 42}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
     @patch("sys.argv", ["toisto", "progress", "--help"])
@@ -381,7 +394,7 @@ Options:
   -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[2][0][0]),
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
     @patch("sys.platform", "darwin")
@@ -442,3 +455,17 @@ Options:
             "invalid choice 'foo' (run `toisto practice -h` to see the valid choices)",
             sys_stderr_write.call_args_list[1][0][0],
         )
+
+    @patch("sys.argv", ["toisto", "self"])
+    @patch("sys.stdout.write")
+    def test_self_command(self, sys_stdout_write: Mock) -> None:
+        """Test that invoking help without arguments prints the help for self."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertEqual(SELF_HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+
+    @patch("sys.argv", ["toisto", "self", "--help"])
+    @patch("sys.stdout.write")
+    def test_self_help(self, sys_stdout_write: Mock) -> None:
+        """Test the help for self."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertEqual(SELF_HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))

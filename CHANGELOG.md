@@ -4,6 +4,13 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.37.0 - [Unreleased]
+
+### Added
+
+- Add command to upgrade Toisto to the latest version (`toisto self upgrade`). Closes [#1045](https://github.com/fniessink/toisto/issues/1045).
+- Add command to uninstall Toisto (`toisto self uninstall`). Closes [#1046](https://github.com/fniessink/toisto/issues/1046).
+
 ## 0.36.3 - 2025-07-19
 
 ### Fixed
