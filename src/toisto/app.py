@@ -7,6 +7,7 @@ with suppress(ImportError):
 
 from .command.configure import configure
 from .command.practice import practice
+from .command.self import Self
 from .command.show_progress import show_progress
 from .metadata import BUILT_IN_CONCEPT_JSON_FILES, latest_version
 from .model.filter import filter_concepts
@@ -32,7 +33,6 @@ class CLI:
         self.build_in_concepts = self.loader.load_concepts(*BUILT_IN_CONCEPT_JSON_FILES)
         self.argument_parser = create_argument_parser(self.config, self.build_in_concepts)
         self.args = parse_arguments(self.argument_parser)
-        self.language_pair = LanguagePair(self.args.target_language, self.args.source_language)
 
     @property
     def progress(self) -> Progress:
@@ -45,6 +45,11 @@ class CLI:
         quizzes = create_quizzes(self.language_pair, quiz_types, *filtered_concepts)
         return load_progress(target_language, quizzes, self.argument_parser, self.config)
 
+    @property
+    def language_pair(self) -> LanguagePair:
+        """Return the language pair."""
+        return LanguagePair(self.args.target_language, self.args.source_language)
+
 
 def main() -> None:
     """Run the main program."""
@@ -54,6 +59,15 @@ def main() -> None:
             configure(cli.argument_parser, cli.config, cli.args)
         case "progress":
             show_progress(cli.progress, cli.args)
+        case "self":
+            self = Self(cli.argument_parser)
+            match cli.args.self:
+                case "upgrade":
+                    self.upgrade()
+                case "uninstall":
+                    self.uninstall()
+                case _:
+                    self.version(console.print)
         case _:  # Default command is "practice"
             show_welcome(console.print, latest_version(), cli.config)
             practice(console.print, cli.language_pair, cli.progress, cli.config, cli.args)

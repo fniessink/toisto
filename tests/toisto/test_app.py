@@ -57,13 +57,21 @@ class AppTest(ToistoTestCase):
         }}
         """
 
+    def welcome_message(self, patched_print: Mock) -> str:
+        """Return the welcome message that was printed."""
+        return str(patched_print.call_args_list[4][0][0])
+
+    def version_message(self, patched_print: Mock) -> str:
+        """Return the version message that was printed."""
+        return str(patched_print.call_args_list[5][0][0].renderable)
+
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
     def test_practice(self, requests_get: Mock) -> None:
         """Test that the practice command can be invoked."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
+        self.assertTrue(self.welcome_message(patched_print).startswith("👋 Welcome to [underline]Toisto"))
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl", "concept-1 in fi"])
     @patch("requests.get")
@@ -71,7 +79,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command can be invoked with a specific concept."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
+        self.assertTrue(self.welcome_message(patched_print).startswith("👋 Welcome to [underline]Toisto"))
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
@@ -80,8 +88,9 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a new version and an upgrade instruction."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
-        self.assertIn("uv tool upgrade", patched_print.call_args_list[3][0][0].renderable)
+        version_message = self.version_message(patched_print)
+        self.assertIn("v9999", version_message)
+        self.assertIn("toisto self upgrade", version_message)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=["", "toisto"]))
@@ -90,8 +99,9 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a new version and an upgrade instruction."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
-        self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
+        version_message = self.version_message(patched_print)
+        self.assertIn("v9999", version_message)
+        self.assertIn("toisto self upgrade", version_message)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=["", ""]))
@@ -100,8 +110,9 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a new version and an upgrade instruction."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
-        self.assertIn("pip upgrade", patched_print.call_args_list[3][0][0].renderable)
+        version_message = self.version_message(patched_print)
+        self.assertIn("v9999", version_message)
+        self.assertIn("toisto self upgrade", version_message)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("toisto.metadata.check_output", Mock(side_effect=[OSError, "toisto"]))
@@ -110,8 +121,9 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a new version and an upgrade instruction."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertIn("v9999", patched_print.call_args_list[3][0][0].renderable)
-        self.assertIn("pipx upgrade", patched_print.call_args_list[3][0][0].renderable)
+        version_message = self.version_message(patched_print)
+        self.assertIn("v9999", version_message)
+        self.assertIn("toisto self upgrade", version_message)
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
@@ -119,7 +131,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command does not show the current version."""
         requests_get.return_value = self.current_version
         patched_print = self.run_main()
-        self.assertNotEqual(VERSION, patched_print.call_args_list[3][0][0].renderable)
+        self.assertNotEqual(VERSION, self.version_message(patched_print))
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
@@ -127,7 +139,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command starts even if GitHub cannot be reached to get the latest version."""
         requests_get.side_effect = requests.ConnectionError
         patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].startswith("👋 Welcome to [underline]Toisto"))
+        self.assertTrue(self.welcome_message(patched_print).startswith("👋 Welcome to [underline]Toisto"))
 
     @patch.object(sys, "argv", ["toisto", "progress", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
@@ -135,7 +147,7 @@ class AppTest(ToistoTestCase):
         """Test that the progress command can be invoked."""
         requests_get.return_value = self.latest_version
         patched_print = self.run_main()
-        self.assertTrue(patched_print.call_args_list[2][0][0].title.startswith("Progress"))
+        self.assertTrue(patched_print.call_args_list[4][0][0].title.startswith("Progress"))
 
     @patch.object(sys, "argv", ["toisto", "practice", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
@@ -143,7 +155,7 @@ class AppTest(ToistoTestCase):
         """Test that the practice command shows a tip when the user hasn't configured their languages."""
         requests_get.return_value = self.current_version
         patched_print = self.run_main()
-        self.assertEqual(CONFIG_LANGUAGE_TIP, patched_print.call_args_list[3][0][0].renderable)
+        self.assertEqual(CONFIG_LANGUAGE_TIP, patched_print.call_args_list[5][0][0].renderable)
 
     @patch.object(sys, "argv", ["toisto", "practice"])
     @patch("requests.get")
@@ -154,7 +166,7 @@ class AppTest(ToistoTestCase):
         self.config.set("languages", "target", "fi")
         self.config.set("languages", "source", "nl")
         patched_print = self.run_main()
-        self.assertNotIn(CONFIG_LANGUAGE_TIP, patched_print.call_args_list[3][0][0])
+        self.assertNotIn(CONFIG_LANGUAGE_TIP, patched_print.call_args_list[5][0][0])
 
     @patch.object(sys, "argv", ["toisto", "configure", "--target", "fi", "--source", "nl"])
     @patch("requests.get")
@@ -166,3 +178,34 @@ class AppTest(ToistoTestCase):
         self.run_main()
         self.assertEqual("fi", self.config["languages"]["target"])
         self.assertEqual("nl", self.config["languages"]["source"])
+
+    @patch.object(sys, "argv", ["toisto", "self", "upgrade"])
+    @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
+    @patch("requests.get")
+    @patch("toisto.command.self.check_output")
+    def test_self_upgrade(self, check_output: Mock, requests_get: Mock) -> None:
+        """Test that the self upgrade command can be invoked."""
+        requests_get.return_value = self.latest_version
+        self.run_main()
+        check_output.assert_called_once_with(["uv", "tool", "upgrade", "toisto"])
+
+    @patch.object(sys, "argv", ["toisto", "self", "uninstall"])
+    @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
+    @patch("requests.get")
+    @patch("toisto.command.self.check_output")
+    def test_self_uninstall(self, check_output: Mock, requests_get: Mock) -> None:
+        """Test that the self uninstall command can be invoked."""
+        requests_get.return_value = self.latest_version
+        self.run_main()
+        check_output.assert_called_once_with(["uv", "tool", "uninstall", "toisto"])
+
+    @patch.object(sys, "argv", ["toisto", "self", "version"])
+    @patch("requests.get")
+    @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
+    def test_self_version(self, requests_get: Mock) -> None:
+        """Test that the self version command can be invoked."""
+        requests_get.return_value = self.latest_version
+        patched_print = self.run_main()
+        version_message = patched_print.call_args_list[4][0][0]
+        self.assertIn("v9999", version_message)
+        self.assertIn("toisto self upgrade", version_message)

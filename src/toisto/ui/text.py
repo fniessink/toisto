@@ -8,7 +8,7 @@ from typing import Final, cast
 from rich.console import Console
 from rich.panel import Panel
 
-from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION, installation_tool
+from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
@@ -46,7 +46,7 @@ How does it work?
 
 NEWS: Final[str] = (
     f"🎉 {NAME} [white not bold]{{0}}[/white not bold] is [link={CHANGELOG_URL}]available[/link]. "
-    f"Upgrade with [code]{{1}} upgrade {NAME}[/code]."
+    f"Upgrade with [code]{NAME.lower()} self upgrade[/code]."
 )
 
 CONFIG_LANGUAGE_TIP: Final[str] = (
@@ -202,12 +202,23 @@ def show_welcome(write_output: Callable[..., None], latest_version: str | None, 
     new_version_available = latest_version and latest_version.strip("v") > VERSION
     languages_configured = config.has_option("languages", "target") and config.has_option("languages", "source")
     if new_version_available:
-        news = NEWS.format(latest_version, installation_tool())
+        news = NEWS.format(latest_version)
         write_output(Panel(news, expand=False))
     elif not languages_configured:
         write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
     if new_version_available or not languages_configured:
         write_output()
+
+
+def version_message(latest_version: str | None) -> str:
+    """Return the version message."""
+    newer = latest_version and latest_version.strip("v") > VERSION
+    return f"[white not bold]v{VERSION}[/white not bold]" + (
+        f" ([white not bold]{latest_version}[/white not bold] is available, "
+        "run [code]toisto self upgrade[/code] to install)"
+        if newer
+        else ""
+    )
 
 
 def bulleted_list(label: str, items: Sequence[str], style: str = "secondary", bullet: str = "-") -> str:
