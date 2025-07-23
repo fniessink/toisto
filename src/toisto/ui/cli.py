@@ -316,7 +316,12 @@ class SelfCommandsBuilder(CommandBuilder):
             "manage Toisto itself, for example `%(prog)s self upgrade` to upgrade Toisto to the latest version"
         )
         parser = self._add_command("self", "Manage Toisto itself.", command_help)
-        subparsers = parser.add_subparsers(dest="self", title="commands", required=True, help="type `toisto self {command} --help` for more information on a command")
+        subparsers = parser.add_subparsers(
+            dest="self",
+            title="commands",
+            required=True,
+            help="type `toisto self {command} --help` for more information on a command",
+        )
         SelfUpgradeCommandBuilder(subparsers).add_command()
         SelfUninstallCommandBuilder(subparsers).add_command()
         SelfVersionCommandBuilder(subparsers).add_command()

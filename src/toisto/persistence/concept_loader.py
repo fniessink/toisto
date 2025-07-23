@@ -7,7 +7,8 @@ from typing import TypedDict, cast
 from ..metadata import NAME
 from ..model.language import Language
 from ..model.language.concept import Concept, ConceptId
-from ..model.language.concept_factory import ConceptJSON, LabelJSON, create_concept
+from ..model.language.concept_factory import ConceptJSON, create_concept
+from ..model.language.label_factory import LabelJSON
 from .identifier_registry import IdentifierRegistry
 from .json_file import load_json
 

@@ -3,33 +3,11 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Required, TypedDict, cast, get_args
+from typing import TypedDict, cast, get_args
 
-from . import Language
-from .concept import Concept, ConceptId, ConceptIds, ConceptRelation, RelatedConceptIds
+from .concept import Concept, ConceptId, ConceptIdListOrString, ConceptIds, ConceptRelation, RelatedConceptIds
 from .grammar import GrammaticalCategory
-from .label import Label, Labels
-
-ConceptIdListOrString = ConceptId | list[ConceptId]
-ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
-
-JSONGrammar = dict[GrammaticalCategory, str]
-JSONRecursiveGrammar = dict[GrammaticalCategory, JSONGrammar]
-
-LabelJSON = TypedDict(
-    "LabelJSON",
-    {
-        "colloquial": bool,
-        "concept": Required[ConceptIdListOrString],
-        "label": Required[str | JSONGrammar | JSONRecursiveGrammar],
-        "language": Required[Language],
-        "meaning-only": bool,
-        "note": str | list[str],
-        "roots": str | list[str],
-        "tip": str,
-    },
-    total=False,
-)
+from .label_factory import LabelFactory, LabelJSON
 
 ConceptJSON = TypedDict(
     "ConceptJSON",
@@ -46,13 +24,17 @@ ConceptJSON = TypedDict(
 )
 
 
-@dataclass(frozen=True)
+@dataclass()
 class ConceptFactory:
-    """Create concepts from the concept dict."""
+    """Create concepts from the concept JSON."""
 
     concept_id: ConceptId
     concept_dict: ConceptJSON
     labels: list[LabelJSON]
+
+    def __post_init__(self) -> None:
+        """Create the label factory."""
+        self.label_factory = LabelFactory(self.labels)
 
     def create_concept(self, parent: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
@@ -60,8 +42,8 @@ class ConceptFactory:
             self.concept_id,
             parent,
             self._constituent_concepts(),
-            self._labels(),
-            self._meanings(),
+            self.label_factory.create_labels(),
+            self.label_factory.create_meanings(),
             self._related_concepts(),
             self._answer_only(),
         )
@@ -69,32 +51,6 @@ class ConceptFactory:
     def _constituent_concepts(self) -> ConceptIds:
         """Create a constituent concept for each grammatical category."""
         return tuple(self._constituent_concept(category) for category in self._grammatical_categories())
-
-    def _labels(self) -> Labels:
-        """Create the labels from the concept dict."""
-        labels = []
-        for label in self.labels:
-            if (isinstance(label["label"], str) and not label.get("meaning-only", False)) or isinstance(
-                label["label"], list
-            ):
-                note = label.get("note", [])
-                notes = tuple([note] if isinstance(note, str) else note)
-                tip = label.get("tip", "")
-                colloquial = label.get("colloquial", False)
-                root_or_roots = label.get("roots", [])
-                roots = tuple([root_or_roots] if isinstance(root_or_roots, str) else root_or_roots)
-                labels.append(Label(label["language"], label["label"], notes, roots, tip, colloquial=colloquial))
-        return Labels(labels)
-
-    def _meanings(self) -> Labels:
-        """Create the meanings from the concept dict."""
-        return Labels(
-            [
-                Label(label["language"], label["label"])
-                for label in self.labels
-                if isinstance(label["label"], str) and not label.get("colloquial", False)
-            ]
-        )
 
     def _related_concepts(self) -> RelatedConceptIds:
         """Create the related concepts."""

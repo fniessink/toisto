@@ -10,8 +10,9 @@ from xmlrunner.result import _DuplicateWriter as DuplicateWriter
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptJSON, LabelJSON, create_concept
+from toisto.model.language.concept_factory import ConceptJSON, create_concept
 from toisto.model.language.label import Label, Labels
+from toisto.model.language.label_factory import LabelJSON
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import READ, QuizType
 

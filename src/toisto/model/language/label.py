@@ -33,7 +33,7 @@ class Label:
 
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
-    instances: ClassVar[dict[str, Label]] = {}
+    instances: ClassVar[dict[str, Label]] = {}  # Mapping of (non-generated) spelling alternatives to Label instances
 
     def __init__(  # noqa: PLR0913
         self,
@@ -52,7 +52,8 @@ class Label:
         self._roots = roots
         self.tip = tip
         self.colloquial = colloquial
-        self.instances[self._values[0]] = self
+        for spelling_alternative in self._values:
+            self.instances[spelling_alternative] = self
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -75,7 +76,7 @@ class Label:
         return hash(f"{self.language}{self}")
 
     def __str__(self) -> str:
-        """Return the label string value."""
+        """Return the label string value of the first spelling alternative."""
         return self._values[0]
 
     __repr__ = __str__
@@ -86,7 +87,7 @@ class Label:
 
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
-        """Extract the spelling alternatives from the label."""
+        """Return the spelling alternatives, excluding generated alternatives, as separate labels."""
         return Labels([self.copy(value) for value in self._values])
 
     @cached_property
