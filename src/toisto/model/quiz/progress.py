@@ -68,7 +68,7 @@ class Progress:
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
             if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes):
                 quiz = unblocked_quizzes.pop()
-                self.__recent_concepts.append(quiz.concept.base_concept)
+                self.__recent_concepts.append(quiz.concept)
                 return quiz
         return None
 
@@ -82,7 +82,7 @@ class Progress:
 
     def __is_eligible(self, quiz: Quiz) -> bool:
         """Return whether the quiz is not silenced and not the current quiz."""
-        return quiz.concept.base_concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
+        return quiz.concept not in self.__recent_concepts and not self.get_retention(quiz).is_silenced()
 
     def __has_concept_in_progress(self, quiz: Quiz) -> bool:
         """Return whether the quiz's concept has been presented to the user before."""
