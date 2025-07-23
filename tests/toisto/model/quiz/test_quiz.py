@@ -344,12 +344,9 @@ class QuizInstructionTest(QuizTestCase):
     def test_homographs_get_an_automatic_tip_based_on_the_grammatical_categories(self):
         """Test that homographs get an automatic tip based on the grammatical categories."""
         concept = self.create_verb_with_grammatical_number_and_person()
-        second_person_singular = next(
-            leaf_concept
-            for leaf_concept in concept.leaf_concepts(EN)
-            if leaf_concept.concept_id == "to have/singular/second person"
-        )
-        quiz = self.create_quiz(second_person_singular, Label(EN, "you have"), [Label(NL, "jij hebt")], INTERPRET)
+        you_have = concept.labels(EN)[1]
+        jij_hebt = concept.labels(NL)[1]
+        quiz = self.create_quiz(concept, you_have, [jij_hebt], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
     def test_homographs_get_an_automatic_tip_based_on_the_grammatical_categories_when_more_than_two_homographs(self):
@@ -385,12 +382,9 @@ class QuizInstructionTest(QuizTestCase):
                 },
             ],
         )
-        second_person_singular = next(
-            leaf_concept
-            for leaf_concept in concept.leaf_concepts(EN)
-            if leaf_concept.concept_id == "to read/present tense/singular/second person"
-        )
-        quiz = self.create_quiz(second_person_singular, Label(EN, "you read"), [Label(NL, "jij leest")], INTERPRET)
+        you_read = concept.labels(EN)[0]
+        jij_leest = concept.labels(NL)[0]
+        quiz = self.create_quiz(concept, you_read, [jij_leest], INTERPRET)
         self.assertEqual("Listen and write in Dutch (present tense; singular)", quiz.instruction)
 
     def test_homographs_get_an_automatic_tip_based_on_the_holonym(self):
@@ -487,12 +481,9 @@ class QuizInstructionTest(QuizTestCase):
                 },
             ],
         )
-        second_person_singular = next(
-            leaf_concept
-            for leaf_concept in concept.leaf_concepts(FI)
-            if leaf_concept.concept_id == "to be/singular/second person"
-        )
-        quiz = self.create_quiz(second_person_singular, Label(FI, "Te olette"), [Label(NL, "u bent")], INTERPRET)
+        Te_olette, _ = concept.labels(FI)  # noqa: N806
+        u_bent, _ = concept.labels(NL)
+        quiz = self.create_quiz(concept, Te_olette, [u_bent], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
 

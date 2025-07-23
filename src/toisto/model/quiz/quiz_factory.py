@@ -109,8 +109,7 @@ class TranslationQuizFactory(BaseQuizFactory):
 
     def skip_concept(self, concept: Concept) -> bool:
         """Return whether to create quizzes for the concept."""
-        language = self.language_pair.target
-        return super().skip_concept(concept) or concept.is_composite(language) or not self.answers(concept)
+        return super().skip_concept(concept) or not self.answers(concept)
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
@@ -133,7 +132,7 @@ class ReadQuizFactory(TranslationQuizFactory):
 
     def questions(self, concept: Concept) -> Labels:
         """Return the questions."""
-        return concept.own_labels(self.language_pair.target).non_colloquial
+        return concept.labels(self.language_pair.target).non_colloquial
 
     def answers(self, concept: Concept) -> Labels:
         """Return the answers."""
@@ -175,11 +174,7 @@ class DictateQuizFactory(TranslationQuizFactory):
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        return (
-            Labels(answer for answer in answers if answer.grammatical_categories == question.grammatical_categories)
-            if question.colloquial
-            else Labels((question,))
-        )
+        return answers.with_same_grammatical_categories_as(question) if question.colloquial else Labels((question,))
 
 
 @dataclass
@@ -190,7 +185,7 @@ class InterpretQuizFactory(TranslationQuizFactory):
 
     def questions(self, concept: Concept) -> Labels:
         """Return the questions."""
-        return concept.own_labels(self.language_pair.target)
+        return concept.labels(self.language_pair.target)
 
     def answers(self, concept: Concept) -> Labels:
         """Return the answers."""
@@ -208,14 +203,16 @@ class GrammaticalQuizFactory(BaseQuizFactory):
     def create_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes."""
         quizzes = Quizzes()
-        for question_concept, answer_concept in permutations(concept.leaf_concepts(self.language_pair.target), r=2):
-            self.question_concept, self.answer_concept = question_concept, answer_concept
-            self.quiz_type = self.grammatical_quiz_type(question_concept, answer_concept)
+        for question_label, answer_label in permutations(concept.labels(self.language_pair.target).non_colloquial, r=2):
+            self.quiz_type = self.grammatical_quiz_type(question_label, answer_label)
+            self._question = question_label
+            self._answer = answer_label
             quizzes |= super().create_quizzes(concept, previous_quizzes)
+            previous_quizzes |= quizzes
         return quizzes
 
     @staticmethod
-    def grammatical_quiz_type(label1: Concept | Label, label2: Concept | Label) -> QuizType | None:
+    def grammatical_quiz_type(label1: Label, label2: Label) -> QuizType | None:
         """Return the quiz type to change the grammatical category of label1 into that of label2.
 
         For example, to change "I am" into "they are" would mean changing the grammatical number from singular to plural
@@ -232,19 +229,19 @@ class GrammaticalQuizFactory(BaseQuizFactory):
 
     def questions(self, concept: Concept) -> Labels:
         """Return the questions."""
-        return self.question_concept.labels(self.language_pair.target).non_colloquial
+        return Labels([self._question])
 
     def answers(self, concept: Concept) -> Labels:
         """Return the answers."""
-        return self.answer_concept.labels(self.language_pair.target).non_colloquial
+        return Labels([self._answer])
 
     def question_meanings(self, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
-        return self.question_concept.meanings(self.language_pair.source)
+        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(self._question)
 
     def answer_meanings(self, concept: Concept) -> Labels:
         """Return the answer meanings of the concept."""
-        return self.answer_concept.meanings(self.language_pair.source)
+        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(self._answer)
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
@@ -302,7 +299,7 @@ class SemanticQuizFactory(BaseQuizFactory):
 
     def questions(self, concept: Concept) -> Labels:
         """Return the questions."""
-        return concept.own_labels(self.language_pair.target).non_colloquial
+        return concept.labels(self.language_pair.target).non_colloquial
 
     def question_meanings(self, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
@@ -324,9 +321,7 @@ class SemanticQuizFactory(BaseQuizFactory):
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        return Labels(
-            [answer for answer in answers if question.grammatical_categories == answer.grammatical_categories]
-        )
+        return answers.with_same_grammatical_categories_as(question)
 
     def blocked_by(self, concept: Concept, previous_quizzes: Quizzes) -> tuple[Quiz, ...]:
         """Return the quizzes that block the created quizzes."""
@@ -354,24 +349,13 @@ class QuizFactory:
 
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
-        return Quizzes(
-            self.composite_concept_quizzes(concept, previous_quizzes)
-            | self.leaf_concept_quizzes(concept, previous_quizzes),
-        )
-
-    def composite_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
-        """Create the quizzes for a composite concept."""
-        quizzes = Quizzes()
-        for constituent_concept in concept.constituents:
-            quizzes |= self.concept_quizzes(constituent_concept, Quizzes(quizzes | previous_quizzes))
-        quizzes |= self.grammatical_quiz_factory.create_quizzes(concept, Quizzes(quizzes | previous_quizzes))
-        return quizzes
-
-    def leaf_concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
-        """Create the quizzes for a leaf concept."""
+        previous_quizzes = previous_quizzes or Quizzes()
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
+        previous_quizzes |= translation_quizzes
         semantic_quizzes = self.semantic_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
-        return Quizzes(translation_quizzes | semantic_quizzes)
+        previous_quizzes |= semantic_quizzes
+        grammatical_quizzes = self.grammatical_quiz_factory.create_quizzes(concept, previous_quizzes)
+        return Quizzes(translation_quizzes | semantic_quizzes | grammatical_quizzes)
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create the translation quizzes for a concept."""
