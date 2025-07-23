@@ -178,6 +178,15 @@ class Label:
         """Return the label compounds."""
         return Labels(label for label in chain(*self.instances.values()) if self in label.roots)
 
+    def grammatical_differences(self, *labels: Label) -> tuple[GrammaticalCategory, ...]:
+        """Return the grammatical differences between this label and the other labels."""
+        differences = set()
+        for grammatical_category in self.grammatical_categories:
+            for label in labels:
+                if grammatical_category not in label.grammatical_categories:
+                    differences.add(grammatical_category)
+        return tuple(sorted(differences))
+
 
 class Labels:  # noqa: PLW1641
     """Labels collection."""
@@ -214,6 +223,10 @@ class Labels:  # noqa: PLW1641
     def with_language(self, language: Language) -> Labels:
         """Return the labels with the specified language."""
         return Labels(label for label in self._labels if label.language == language)
+
+    def with_same_grammatical_categories_as(self, other: Label) -> Labels:
+        """Return the labels with the specified grammatical categories."""
+        return Labels(label for label in self._labels if label.grammatical_categories == other.grammatical_categories)
 
     @property
     def non_colloquial(self) -> Labels:
@@ -257,3 +270,7 @@ class Labels:  # noqa: PLW1641
     def as_strings(self) -> tuple[str, ...]:
         """Return the labels as strings."""
         return tuple(str(label) for label in self._labels)
+
+    def count(self, label: Label) -> int:
+        """Return the number of times label occurs in self."""
+        return self._labels.count(label)

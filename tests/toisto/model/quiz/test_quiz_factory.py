@@ -323,7 +323,6 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, ketsuppi, [ketchup], INTERPRET),
                 self.create_quiz(concept, ketsupit, [ketchup], INTERPRET),
                 self.create_quiz(concept, ketchup, [ketsuppi], WRITE),
-                self.create_quiz(concept, ketchup, [ketsupit], WRITE),
                 self.create_quiz(concept, ketsuppi, [ketsupit], PLURAL),
                 self.create_quiz(concept, ketsupit, [ketsuppi], SINGULAR),
             },
@@ -349,7 +348,6 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, vervoersmiddelen, [vervoersmiddelen], DICTATE),
                 self.create_quiz(concept, vervoersmiddelen, [means_of_transportation], READ),
                 self.create_quiz(concept, vervoersmiddelen, [vervoersmiddel], SINGULAR),
-                self.create_quiz(concept, means_of_transportation, [vervoersmiddelen], WRITE),
                 self.create_quiz(concept, means_of_transportation, [vervoersmiddel], WRITE),
             },
             quizzes,
@@ -425,7 +423,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 {"label": {"singular": "het winkelcentrum", "plural": "de winkelcentra"}, "language": NL},
             ],
         )
-        kauppakeskus, ostoskeskus, kauppakeskukset, ostoskeskukset = concept.labels(FI)
+        kauppakeskus, kauppakeskukset, ostoskeskus, ostoskeskukset = concept.labels(FI)
         winkelcentrum, winkelcentra = concept.labels(NL)
         self.assertSetEqual(
             {
@@ -593,7 +591,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             ],
         )
         big, bigger, biggest = concept.labels(EN)
-        iso, suuri, isompi, suurempi, isoin, suurin = concept.labels(FI)
+        iso, isompi, isoin, suuri, suurempi, suurin = concept.labels(FI)
         self.assertSetEqual(
             {
                 self.create_quiz(concept, iso, [big], READ),
@@ -1621,7 +1619,6 @@ class DiminutiveTest(ToistoTestCase):
                 self.create_quiz(concept, autootje, [car], READ),
                 self.create_quiz(concept, auto, [autootje], DIMINUTIVE),
                 self.create_quiz(concept, autootje, [car], INTERPRET),
-                self.create_quiz(concept, car, [autootje], WRITE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -1682,7 +1679,7 @@ class AbbreviationTest(ToistoTestCase):
         concept = self.create_concept(
             "llc", labels=[{"label": {"full form": "naamloze vennootschap", "abbreviation": "NV"}, "language": NL}]
         )
-        nv, naamloze_vennootschap = concept.labels(NL)
+        naamloze_vennootschap, nv = concept.labels(NL)
         self.assertSetEqual(
             {
                 self.create_quiz(concept, naamloze_vennootschap, [naamloze_vennootschap], DICTATE),
@@ -1756,7 +1753,7 @@ class ColloquialTest(ToistoTestCase):
                 {"label": {"singular": "kiosk", "plural": "kiosks"}, "language": EN},
             ],
         )
-        kioski, kiska, kioskit, kiskat = concept.labels(FI)
+        kioski, kioskit, kiska, kiskat = concept.labels(FI)
         kiosk, kiosks = concept.labels(EN)
         self.assertSetEqual(
             {

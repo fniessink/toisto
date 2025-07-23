@@ -15,31 +15,6 @@ class ConcepFactoryTest(ToistoTestCase):
         super().setUp()
         Concept.instances.clear()
 
-    def test_leaf_concept(self):
-        """Test that a leaf concept has no constituent concepts."""
-        concept = self.create_concept(
-            "english",
-            labels=[{"label": "English", "language": EN}, {"label": "Engels", "language": NL}],
-        )
-        self.assertEqual((), concept.constituents)
-
-    def test_leaf_concept_with_note(self):
-        """Test that a leaf concept can have a note."""
-        notes = ["In English, the names of languages are capitalized"]
-        concept = self.create_concept("english", labels=[{"label": "English", "language": EN, "note": notes}])
-        self.assertEqual(tuple(notes), concept.labels(EN)[0].notes)
-
-    def test_leaf_concept_with_tip(self):
-        """Test that a leaf concept can have a tip."""
-        tip = "A tip"
-        concept = self.create_concept("english", labels=[{"label": "English", "language": EN, "tip": tip}])
-        self.assertEqual(tip, concept.labels(EN)[0].tip)
-
-    def test_leaf_concept_with_colloquial_label(self):
-        """Test that a leaf concept can have a colloquial label."""
-        concept = self.create_concept("thanks", labels=[{"label": "kiiti", "language": FI, "colloquial": True}])
-        self.assertTrue(concept.labels(FI)[0].colloquial)
-
     def test_concept_with_composite_labels(self):
         """Test a concept with composite labels."""
         concept = self.create_concept(
@@ -70,8 +45,9 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": "kol", "language": FI, "colloquial": True},
             ],
         )
-        self.assertEqual((Label(FI, "kol", colloquial=True),), concept.labels(FI))
-        self.assertEqual((Label(FI, "kolme"), Label(FI, "kolmes")), concept.constituents.labels(FI))
+        self.assertEqual(
+            (Label(FI, "kolme"), Label(FI, "kolmes"), Label(FI, "kol", colloquial=True)), concept.labels(FI)
+        )
 
     def test_label_roots(self):
         """Test that a concept can have a label with roots."""
@@ -115,39 +91,6 @@ class ConcepFactoryTest(ToistoTestCase):
         little = self.create_concept("little", labels=[{"label": "little", "language": EN}])
         small = self.create_concept("small", labels=[{"label": "small", "language": EN}])
         self.assertEqual((small, little), big.get_related_concepts("antonym"))
-
-    def test_antonyms_of_composite(self):
-        """Test that a composite concept can have an antonym."""
-        big = self.create_concept(
-            "big",
-            {"antonym": "small"},
-            labels=[
-                {
-                    "label": {
-                        "positive degree": "big",
-                        "comparative degree": "bigger",
-                        "superlative degree": "biggest",
-                    },
-                    "language": EN,
-                },
-            ],
-        )
-        small = self.create_concept(
-            "small",
-            labels=[
-                {
-                    "label": {
-                        "positive degree": "small",
-                        "comparative degree": "smaller",
-                        "superlative degree": "smallest",
-                    },
-                    "language": EN,
-                },
-            ],
-        )
-        self.assertEqual((small,), big.get_related_concepts("antonym"))
-        for index in range(3):
-            self.assertEqual((small.constituents[index],), big.constituents[index].get_related_concepts("antonym"))
 
     def test_hypernym_and_hyponym(self):
         """Test that a concept can have a hypernym concept, and that the hypernym has the concept as hyponym."""
@@ -195,21 +138,6 @@ class ConcepFactoryTest(ToistoTestCase):
         yes = self.create_concept("yes", labels=[{"label": "Yes!", "language": EN}])
         no = self.create_concept("no", labels=[{"label": "No!", "language": EN}])
         self.assertEqual((yes, no), question.get_related_concepts("answer"))
-
-    def test_answer_of_composite(self):
-        """Test that a composite concept can have answers."""
-        question = self.create_concept(
-            "question",
-            {"answer": "answer"},
-            labels=[{"label": {"singular": "Puhutko englantia?", "plural": "Puhutteko englantia?"}, "language": FI}],
-        )
-        answer = self.create_concept(
-            "answer",
-            labels=[{"label": {"singular": "Puhun.", "plural": "Puhumme."}, "language": FI}],
-        )
-        self.assertEqual((answer,), question.get_related_concepts("answer"))
-        for index in range(2):
-            self.assertEqual((answer.constituents[index],), question.constituents[index].get_related_concepts("answer"))
 
     def test_example(self):
         """Test that a concept can have an example."""

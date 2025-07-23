@@ -9,7 +9,7 @@ from functools import cached_property
 from toisto.tools import first
 
 from ..language import LanguagePair
-from ..language.concept import Concept, Concepts
+from ..language.concept import Concept
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .evaluation import Evaluation
@@ -135,15 +135,19 @@ class Quiz:
         question = self._question
         tips = self.quiz_type.tips(question, self._answers)
         if homographs := self.concept.get_homographs(question):
-            tips.extend(self._homonym_tips(homographs))
-        if isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
-            tips.extend(self._homonym_tips(capitonyms))
+            homograph_labels = [label for label in homographs[0].labels(self.question.language) if label == question]
+            tips.extend(self._homonym_tips(*homograph_labels))
+        elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
+            capitonym_labels = [
+                label for label in capitonyms[0].labels(question.language) if label.lower_case == question.lower_case
+            ]
+            tips.extend(self._homonym_tips(*capitonym_labels))
         return f" ({'; '.join(tips)})" if tips else ""
 
-    def _homonym_tips(self, homonyms: Concepts) -> Sequence[str]:
+    def _homonym_tips(self, *homonym_labels: Label) -> Sequence[str]:
         """Return the tip(s) to be shown as part of the question, if the question has one or more homonyms."""
-        if self.concept.same_base_concept(*homonyms):
-            return self.concept.grammatical_differences(*homonyms)
+        if differences := self._question.grammatical_differences(*homonym_labels):
+            return differences
         language = self.question.language
         if hypernyms := self.concept.get_related_concepts("hypernym"):
             return [str(hypernym.labels(language)[0]) for hypernym in hypernyms[:1]]
@@ -159,7 +163,7 @@ class Quizzes(set[Quiz]):
 
     def by_concept(self, concept: Concept) -> Quizzes:
         """Return the quizzes for the concept."""
-        return self._quizzes_by_concept.get(concept.base_concept, Quizzes())
+        return self._quizzes_by_concept.get(concept, Quizzes())
 
     def by_label(self, label: Label) -> Quizzes:
         """Return the quizzes for the label."""
@@ -186,7 +190,7 @@ class Quizzes(set[Quiz]):
         """
         quizzes_by_concept: dict[Concept, Quizzes] = {}
         for quiz in self:
-            quizzes_by_concept.setdefault(quiz.concept.base_concept, Quizzes()).add(quiz)
+            quizzes_by_concept.setdefault(quiz.concept, Quizzes()).add(quiz)
         return quizzes_by_concept
 
     @cached_property

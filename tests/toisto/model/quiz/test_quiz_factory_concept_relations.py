@@ -7,28 +7,8 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
-from ....base import EN_NL, FI_NL
+from ....base import EN_NL
 from .test_quiz_factory import QuizFactoryTestCase
-
-
-class ConstituentConceptsTest(QuizFactoryTestCase):
-    """Unit tests for constituent concepts."""
-
-    def test_generated_concept_ids_for_constituent_concepts(self):
-        """Test that constituent concepts get a generated concept id."""
-        concept = self.create_noun_with_grammatical_number()
-        expected_concept_ids: dict[tuple[str, str], str] = {
-            ("aamu", "de ochtend"): "morning/singular",
-            ("aamu", "aamu"): "morning/singular",
-            ("de ochtend", "aamu"): "morning/singular",
-            ("aamut", "de ochtenden"): "morning/plural",
-            ("aamut", "aamut"): "morning/plural",
-            ("de ochtenden", "aamut"): "morning/plural",
-            ("aamu", "aamut"): "morning",
-            ("aamut", "aamu"): "morning",
-        }
-        for quiz in create_quizzes(FI_NL, (), concept):
-            self.assertEqual(expected_concept_ids[(str(quiz.question), str(quiz.answers[0]))], quiz.concept.concept_id)
 
 
 class AntonymConceptsTest(QuizFactoryTestCase):

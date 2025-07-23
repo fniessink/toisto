@@ -16,8 +16,6 @@ class ConceptTest(ToistoTestCase):
         """Test the default attributes of a concept."""
         concept = self.create_concept("concept_id", {})
         self.assertEqual("concept_id", concept.concept_id)
-        self.assertIsNone(concept.parent)
-        self.assertEqual((), concept.constituents)
         self.assertEqual((), concept.labels(FI))
         self.assertEqual((), concept.meanings(FI))
         self.assertFalse(concept.answer_only)
@@ -30,15 +28,6 @@ class ConceptTest(ToistoTestCase):
             "thirty", labels=[{"label": "kolmekymmentä", "language": FI}, {"label": "dertig", "language": NL}]
         )
         self.assertEqual(concept, Concept.instances.get_values(ConceptId("thirty"))[0])
-
-    def test_is_composite(self):
-        """Test that a composite concept is composite, and a leaf concept is not."""
-        concept = self.create_noun_invariant_in_english()
-        self.assertTrue(concept.is_composite(NL))
-        self.assertFalse(concept.is_composite(EN))
-        for constituent in concept.constituents:
-            for language in EN, NL:
-                self.assertFalse(constituent.is_composite(language))
 
     def test_meaning(self):
         """Test the meaning of a concept."""
