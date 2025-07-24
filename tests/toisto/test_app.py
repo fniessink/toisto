@@ -1,5 +1,6 @@
 """Unit tests for the app."""
 
+import pathlib
 import sys
 from contextlib import suppress
 from unittest.mock import MagicMock, Mock, patch
@@ -32,6 +33,7 @@ class AppTest(ToistoTestCase):
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
     @patch("toisto.app.read_config")
+    @patch("toisto.metadata.BUILT_IN_CONCEPT_JSON_FILES", [pathlib.Path("test1.json"), pathlib.Path("test2.json")])
     def run_main(self, read_config: Mock, path_open: Mock) -> Mock:
         """Run the main function and return the patched print method."""
         read_config.return_value = self.config
