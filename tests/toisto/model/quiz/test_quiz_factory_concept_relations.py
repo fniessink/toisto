@@ -41,7 +41,7 @@ class AntonymConceptsTest(QuizFactoryTestCase):
         self.small = self.create_concept("small", {"antonym": "big"}, labels=[{"label": "small", "language": EN}])
         self.quizzes = create_quizzes(EN_NL, (), self.big, self.small)
 
-    def test_antonym_leaf_concepts(self):
+    def test_antonym_concepts(self):
         """Test that quizzes are generated for concepts with antonym concepts."""
         for concept, answer in [(self.big, "small"), (self.small, "big")]:
             antonym = self.create_quiz(concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
@@ -60,8 +60,8 @@ class AntonymConceptsTest(QuizFactoryTestCase):
 class AnswerConceptsTest(QuizFactoryTestCase):
     """Unit tests for answer concepts."""
 
-    def test_answer_leaf_concepts(self):
-        """Test that quizzes are generated for concepts with answer concepts."""
+    def test_single_answer(self):
+        """Test that quizzes are generated for concepts with an answer concept."""
         question = self.create_concept(
             "question", {"answer": "answer"}, labels=[{"label": "How are you?", "language": EN}]
         )
@@ -71,8 +71,8 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         answer_quiz = self.create_quiz(question, question.labels(EN)[0], [answer_label], ANSWER)
         self.assertIn(answer_quiz, quizzes)
 
-    def test_answer_composite_concepts(self):
-        """Test that quizzes are generated for composite concepts with answer concepts."""
+    def test_answer_grammatical_categories(self):
+        """Test that quizzes are generated for multiple grammatical categories."""
         question = self.create_concept(
             "question",
             {"answer": "answer"},
