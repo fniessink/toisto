@@ -40,8 +40,8 @@ class ConceptTest(ToistoTestCase):
             for language in EN, NL:
                 self.assertFalse(constituent.is_composite(language))
 
-    def test_meaning_leaf_concept(self):
-        """Test the meaning of a leaf concept."""
+    def test_meaning(self):
+        """Test the meaning of a concept."""
         concept = self.create_concept(
             "one", labels=[{"label": "yksi", "language": FI}, {"label": "een", "language": NL}]
         )
@@ -66,6 +66,7 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((), concept.labels(NL))
         self.assertEqual((Label(NL, "Finse paascake"),), concept.meanings(NL))
         self.assertEqual((), concept.labels(EN))
+        self.assertEqual((), concept.meanings(EN))
 
     def test_meaning_with_composite_labels(self):
         """Test the meaning of a concept with composite labels."""

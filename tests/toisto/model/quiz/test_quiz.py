@@ -345,8 +345,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
         self.assertEqual("Listen and write in Dutch (het zitmeubel)", quiz.instruction)
 
-    def test_homographs_get_an_automatic_tip_based_on_the_common_base_concept(self):
-        """Test that homographs get an automatic tip based on the common base concept."""
+    def test_homographs_get_an_automatic_tip_based_on_the_grammatical_categories(self):
+        """Test that homographs get an automatic tip based on the grammatical categories."""
         concept = self.create_verb_with_grammatical_number_and_person()
         second_person_singular = next(
             leaf_concept
@@ -356,8 +356,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(second_person_singular, Label(EN, "you have"), [Label(NL, "jij hebt")], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
 
-    def test_homographs_get_an_automatic_tip_based_on_the_common_base_concept_when_more_than_two_homographs(self):
-        """Test that homographs get an automatic tip based on the common base concept."""
+    def test_homographs_get_an_automatic_tip_based_on_the_grammatical_categories_when_more_than_two_homographs(self):
+        """Test that homographs get an automatic tip based on the grammatical categories."""
         concept = self.create_concept(
             "to read",
             labels=[
