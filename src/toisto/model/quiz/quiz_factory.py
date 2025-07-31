@@ -215,7 +215,7 @@ class GrammaticalQuizFactory(BaseQuizFactory):
         return quizzes
 
     @staticmethod
-    def grammatical_quiz_type(concept1: Concept, concept2: Concept) -> QuizType | None:
+    def grammatical_quiz_type(concept1: Concept | Label, concept2: Concept | Label) -> QuizType | None:
         """Return the quiz type to change the grammatical category of concept1 into that of concept2.
 
         For example, to change "I am" into "they are" would mean changing the grammatical number from singular to plural

@@ -39,11 +39,18 @@ class ConceptFactory:
 
     def create_concept(self, parent: ConceptId | None = None) -> Concept:
         """Create a concept from the concept_dict."""
+        grammatical_categories = cast("tuple[GrammaticalCategory]", tuple(self.concept_id.split("/")[1:]))
         return Concept(
             self.concept_id,
             parent,
             self._constituent_concepts(),
-            Labels([label for label in self.label_factory.create_labels() if not label.grammatical_base]),
+            Labels(
+                [
+                    label
+                    for label in self.label_factory.create_labels(grammatical_categories)
+                    if not label.grammatical_base
+                ]
+            ),
             self._related_concepts(),
             self._answer_only(),
         )

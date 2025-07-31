@@ -30,8 +30,8 @@ class QuizRelationsTest(QuizFactoryTestCase):
     def test_earlier_grammatical_quizzes_block_later_grammatical_quizzes(self):
         """Test that e.g. quizzes for singular forms block quizzes for plural forms."""
         quizzes = create_quizzes(FI_NL, (), self.create_noun_with_grammatical_number())
-        singular_quizzes = {quiz for quiz in quizzes if "singular" in quiz.concept.concept_id}
-        plural_quizzes = {quiz for quiz in quizzes if "plural" in quiz.concept.concept_id}
+        singular_quizzes = {quiz for quiz in quizzes if "singular" in quiz.question.grammatical_categories}
+        plural_quizzes = {quiz for quiz in quizzes if "plural" in quiz.question.grammatical_categories}
         for quiz in plural_quizzes:
             self.assertTrue(quiz.is_blocked_by(Quizzes(singular_quizzes)))
 
