@@ -45,12 +45,30 @@ class ConceptTest(ToistoTestCase):
         concept = self.create_concept(
             "one", labels=[{"label": "yksi", "language": FI}, {"label": "een", "language": NL}]
         )
+        self.assertEqual((Label(FI, "yksi"),), concept.labels(FI))
         self.assertEqual((Label(FI, "yksi"),), concept.meanings(FI))
+        self.assertEqual((Label(NL, "een"),), concept.labels(NL))
         self.assertEqual((Label(NL, "een"),), concept.meanings(NL))
+        self.assertEqual((), concept.labels(EN))
         self.assertEqual((), concept.meanings(EN))
 
-    def test_meaning_composite_concept(self):
-        """Test the meaning of a composite concept."""
+    def test_meaning_only(self):
+        """Test that a label can be meaning-only."""
+        concept = self.create_concept(
+            "mämmi",
+            labels=[
+                {"label": "mämmi", "language": FI},
+                {"label": "Finse paascake", "language": NL, "meaning-only": True},
+            ],
+        )
+        self.assertEqual((Label(FI, "mämmi"),), concept.labels(FI))
+        self.assertEqual((Label(FI, "mämmi"),), concept.meanings(FI))
+        self.assertEqual((), concept.labels(NL))
+        self.assertEqual((Label(NL, "Finse paascake"),), concept.meanings(NL))
+        self.assertEqual((), concept.labels(EN))
+
+    def test_meaning_with_composite_labels(self):
+        """Test the meaning of a concept with composite labels."""
         concept = self.create_concept(
             "table",
             labels=[
@@ -63,7 +81,7 @@ class ConceptTest(ToistoTestCase):
         self.assertEqual((), concept.meanings(FI))
 
     def test_meaning_mixed_concept(self):
-        """Test the meaning of a concept that is leaf in one language and composite in another."""
+        """Test the meaning of a concept that has a composite label in one language and not in another."""
         concept = self.create_concept(
             "to eat/third person",
             labels=[
@@ -89,6 +107,7 @@ class ConceptTest(ToistoTestCase):
             self.assertEqual((Label(EN, "means of transportation"),), each_concept.labels(EN))
         self.assertEqual((Label(NL, "het vervoersmiddel"),), singular.labels(NL))
         self.assertEqual((Label(NL, "de vervoersmiddelen"),), plural.labels(NL))
+        self.assertEqual((Label(EN, "means of transportation"),), concept.labels(EN))
         self.assertEqual((Label(NL, "het vervoersmiddel"), Label(NL, "de vervoersmiddelen")), concept.labels(NL))
 
     def test_homographs(self):

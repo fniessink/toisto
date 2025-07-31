@@ -40,8 +40,8 @@ class ConcepFactoryTest(ToistoTestCase):
         concept = self.create_concept("thanks", labels=[{"label": "kiiti", "language": FI, "colloquial": True}])
         self.assertTrue(concept.labels(FI)[0].colloquial)
 
-    def test_composite_concept(self):
-        """Test that a composite concept has constituent concepts."""
+    def test_concept_with_composite_labels(self):
+        """Test a concept with composite labels."""
         concept = self.create_concept(
             "morning",
             labels=[
@@ -50,18 +50,20 @@ class ConcepFactoryTest(ToistoTestCase):
             ],
         )
         self.assertEqual(2, len(concept.constituents))
+        self.assertEqual((Label(FI, "aamu"), Label(FI, "aamut")), concept.labels(FI))
+        self.assertEqual((Label(NL, "de ochtend"), Label(NL, "de ochtenden")), concept.labels(NL))
 
-    def test_composite_concept_with_colloquial_labels(self):
-        """Test that a composite concept has constituent concepts."""
+    def test_concept_with_colloquial_labels(self):
+        """Test a concept with colloquial labels."""
         concept = self.create_concept(
             "tram",
             labels=[{"label": {"singular": "ratikka", "plural": "ratikat"}, "language": FI, "colloquial": True}],
         )
-        for constituent in concept.constituents:
-            self.assertTrue(constituent.labels(FI)[0].colloquial)
+        for label in concept.labels(FI):
+            self.assertTrue(label.colloquial)
 
-    def test_composite_concept_with_one_colloquial_label(self):
-        """Test that a composite concept has constituent concepts."""
+    def test_concept_with_colloquial_and_non_colloquial_labels(self):
+        """Test a concept with colloquial and non-colloquial labels."""
         concept = self.create_concept(
             "three",
             labels=[
@@ -80,8 +82,8 @@ class ConcepFactoryTest(ToistoTestCase):
         )
         self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), concept.labels(NL)[0].roots)
 
-    def test_composite_concept_label_roots(self):
-        """Test that a composite concept can have labels with roots."""
+    def test_composite_label_roots(self):
+        """Test that a concept can have composite labels with roots."""
         concept = self.create_concept(
             "kitchen table",
             labels=[
@@ -92,8 +94,8 @@ class ConcepFactoryTest(ToistoTestCase):
                 }
             ],
         )
-        for constituent in concept.constituents:
-            self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), constituent.labels(NL)[0].roots)
+        for label in concept.labels(NL):
+            self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), label.roots)
 
     def test_homograph(self):
         """Test that a concept can have a homograph concept."""

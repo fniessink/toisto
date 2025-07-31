@@ -56,7 +56,6 @@ class LabelTest(ToistoTestCase):
 
     def test_compounds(self):
         """Test that the label can have compounds."""
-        Label.instances.clear()
         kast = Label(NL, "de kast")
         keuken = Label(NL, "de keuken")
         keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
@@ -65,7 +64,6 @@ class LabelTest(ToistoTestCase):
 
     def test_recursive_roots(self):
         """Test that getting the roots is recursive."""
-        Label.instances.clear()
         keukenkastdeur = Label(NL, "de keukenkastdeur", roots=("de keukenkast", "de deur"))
         keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
         keuken = Label(NL, "de keuken")
@@ -75,7 +73,6 @@ class LabelTest(ToistoTestCase):
 
     def test_recursive_compounds(self):
         """Test that getting the compounds is recursive."""
-        Label.instances.clear()
         keukenkastdeur = Label(NL, "de keukenkastdeur", roots=("de keukenkast", "de deur"))
         keukenkast = Label(NL, "de keukenkast", roots=("de keuken", "de kast"))
         keuken = Label(NL, "de keuken")
@@ -96,7 +93,6 @@ class LabelsTest(ToistoTestCase):
 
     def test_compounds(self):
         """Test that all compounds of all labels are returned."""
-        Label.instances.clear()
         raam = Label(NL, "het raam")
         zolder = Label(NL, "de zolder")
         zolderraam = Label(NL, "het zolderraam", roots=("de zolder", "het raam"))

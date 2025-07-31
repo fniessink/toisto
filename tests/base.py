@@ -84,6 +84,7 @@ class ToistoTestCase(unittest.TestCase):
         Concept.instances.clear()
         Concept.capitonyms.clear()
         Concept.homographs.clear()
+        Label.instances.clear()
 
     @staticmethod
     def create_concept(
