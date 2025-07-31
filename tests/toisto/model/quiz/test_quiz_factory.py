@@ -1859,29 +1859,29 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_adjective_with_degrees_of_comparison(self):
         """Test the grammatical quiz types for an adjective with degrees of comparison."""
-        positive, comparative, superlative = self.create_adjective_with_degrees_of_comparison().leaf_concepts(EN)
-        for concept in (positive, comparative):
-            self.assertEqual(SUPERLATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, superlative))
-        for concept in (positive, superlative):
-            self.assertEqual(COMPARATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, comparative))
-        for concept in (comparative, superlative):
-            self.assertEqual(POSITIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(concept, positive))
+        positive, comparative, superlative = self.create_adjective_with_degrees_of_comparison().labels(EN)
+        for label in (positive, comparative):
+            self.assertEqual(SUPERLATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(label, superlative))
+        for label in (positive, superlative):
+            self.assertEqual(COMPARATIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(label, comparative))
+        for label in (comparative, superlative):
+            self.assertEqual(POSITIVE_DEGREE, GrammaticalQuizFactory.grammatical_quiz_type(label, positive))
 
     def test_noun_with_grammatical_number(self):
         """Test the grammatical quiz types for a noun with singular and plural form."""
-        singular, plural = self.create_noun_with_grammatical_number().leaf_concepts(FI)
+        singular, plural = self.create_noun_with_grammatical_number().labels(FI)
         self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
         self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
 
     def test_noun_with_grammatical_gender(self):
         """Test the grammatical quiz types for a noun with grammatical gender."""
-        feminine, maasculine = self.create_noun_with_grammatical_gender().leaf_concepts(EN)
-        self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(feminine, maasculine))
-        self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(maasculine, feminine))
+        feminine, masculine = self.create_noun_with_grammatical_gender().labels(EN)
+        self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(feminine, masculine))
+        self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(masculine, feminine))
 
     def test_noun_with_grammatical_gender_including_neuter(self):
         """Test the grammatical quiz types for a noun with grammatical gender including neuter."""
-        feminine, masculine, neuter = self.create_noun_with_grammatical_gender_including_neuter().leaf_concepts(NL)
+        feminine, masculine, neuter = self.create_noun_with_grammatical_gender_including_neuter().labels(NL)
         for concept in (feminine, neuter):
             self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(concept, masculine))
         for concept in (feminine, masculine):
@@ -1892,7 +1892,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
     def test_noun_with_grammatical_number_and_gender(self):
         """Test the grammatical quiz types for a noun with grammatical number and gender."""
         noun = self.create_noun_with_grammatical_number_and_gender()
-        singular_feminine, singular_masculine, plural_feminine, plural_masculine = noun.leaf_concepts(EN)
+        singular_feminine, singular_masculine, plural_feminine, plural_masculine = noun.labels(EN)
         for feminine, masculine in ((singular_feminine, singular_masculine), (plural_feminine, plural_masculine)):
             self.assertEqual(MASCULINE, GrammaticalQuizFactory.grammatical_quiz_type(feminine, masculine))
             self.assertEqual(FEMININE, GrammaticalQuizFactory.grammatical_quiz_type(masculine, feminine))
@@ -1902,8 +1902,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_verb_with_person(self):
         """Test the grammatical quiz types for a verb with grammatical person."""
-        verb = self.create_verb_with_person()
-        first, second, third = verb.leaf_concepts(EN)
+        first, second, third = self.create_verb_with_person().labels(EN)
         for concept in (first, second):
             self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, third))
         for concept in (first, third):
@@ -1914,7 +1913,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
     def test_verb_with_tense_and_person(self):
         """Test the grammatical quiz types for a verb with tense and grammatical person."""
         verb = self.create_verb_with_tense_and_person("present tense", "past tense")
-        present_singular, present_plural, past_singular, past_plural = verb.leaf_concepts(NL)
+        present_singular, present_plural, past_singular, past_plural = verb.labels(NL)
         for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
             self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
@@ -1925,7 +1924,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
     def test_verb_with_infinitive_and_person(self):
         """Test the grammatical quiz types for a verb with infinitive and grammatical person."""
         verb = self.create_verb_with_infinitive_and_person()
-        infinitive, singular, plural = verb.leaf_concepts(EN)
+        infinitive, singular, plural = verb.labels(EN)
         for concept in (infinitive, singular):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(concept, plural))
         for concept in (infinitive, plural):
@@ -1943,7 +1942,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             first_plural,
             second_plural,
             third_plural,
-        ) = verb.leaf_concepts(NL)
+        ) = verb.labels(NL)
         for singular, plural in (
             (first_singular, first_plural),
             (second_singular, second_plural),
@@ -1972,7 +1971,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
             first_plural,
             second_plural,
             third_plural,
-        ) = verb.leaf_concepts(NL)
+        ) = verb.labels(NL)
         for singular, plural in (
             (first_singular, first_plural),
             (second_singular, second_plural),
