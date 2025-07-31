@@ -88,9 +88,9 @@ class BaseQuizFactory:
         """Return the quizzes that block the created quizzes."""
         return tuple(previous_quizzes) if previous_quizzes else ()
 
+    @abstractmethod
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        return answers
 
     def zip_questions_and_answers(self, questions: Labels, answers: Labels) -> Iterable[tuple[Label, Label]]:
         """Zip the questions and answers."""
@@ -98,7 +98,9 @@ class BaseQuizFactory:
 
     def include_question(self, question: Label, answer: Label) -> bool:
         """Return whether to include the question."""
-        return True
+        return (question.grammatical_categories == answer.grammatical_categories) and (
+            question.grammatical_base == answer.grammatical_base
+        )
 
 
 @dataclass
@@ -109,6 +111,18 @@ class TranslationQuizFactory(BaseQuizFactory):
         """Return whether to create quizzes for the concept."""
         language = self.language_pair.target
         return super().skip_concept(concept) or concept.is_composite(language) or not self.answers(concept)
+
+    def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
+        """Return the answers for the question."""
+        return Labels(
+            [
+                answer
+                for answer in answers
+                if not answer.grammatical_categories
+                or set(question.grammatical_categories) <= set(answer.grammatical_categories)
+                or set(question.grammatical_categories) >= set(answer.grammatical_categories)
+            ]
+        )
 
 
 @dataclass
@@ -161,7 +175,11 @@ class DictateQuizFactory(TranslationQuizFactory):
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        return answers if question.colloquial else Labels((question,))
+        return (
+            Labels([answer for answer in answers if answer.grammatical_categories == question.grammatical_categories])
+            if question.colloquial
+            else Labels((question,))
+        )
 
 
 @dataclass
@@ -238,7 +256,7 @@ class GrammaticalQuizFactory(BaseQuizFactory):
 
     def include_question(self, question: Label, answer: Label) -> bool:
         """Return whether to include the question."""
-        return question != answer
+        return question.grammatical_base == answer.grammatical_base and question != answer
 
 
 @dataclass
@@ -303,6 +321,12 @@ class SemanticQuizFactory(BaseQuizFactory):
         for related_concept in concept.get_related_concepts(self.concept_relation):
             meanings.extend(related_concept.meanings(self.language_pair.source))
         return Labels(meanings)
+
+    def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
+        """Return the answers for the question."""
+        return Labels(
+            [answer for answer in answers if question.grammatical_categories == answer.grammatical_categories]
+        )
 
     def blocked_by(self, concept: Concept, previous_quizzes: Quizzes) -> tuple[Quiz, ...]:
         """Return the quizzes that block the created quizzes."""
