@@ -1055,18 +1055,6 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             labels=[
                 {
                     "label": {
-                        "past tense": {
-                            "singular": {
-                                "first person": "minä olin",
-                                "second person": "sinä olit",
-                                "third person": "hän oli",
-                            },
-                            "plural": {
-                                "first person": "me olimme",
-                                "second person": "te olitte",
-                                "third person": "he olivat",
-                            },
-                        },
                         "present tense": {
                             "singular": {
                                 "first person": "minä olen",
@@ -1079,23 +1067,23 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                                 "third person": "he ovat",
                             },
                         },
+                        "past tense": {
+                            "singular": {
+                                "first person": "minä olin",
+                                "second person": "sinä olit",
+                                "third person": "hän oli",
+                            },
+                            "plural": {
+                                "first person": "me olimme",
+                                "second person": "te olitte",
+                                "third person": "he olivat",
+                            },
+                        },
                     },
                     "language": FI,
                 },
                 {
                     "label": {
-                        "past tense": {
-                            "singular": {
-                                "first person": "ik was",
-                                "second person": "jij was",
-                                "third person": "zij was",
-                            },
-                            "plural": {
-                                "first person": "wij waren",
-                                "second person": "jullie waren",
-                                "third person": "zij waren",
-                            },
-                        },
                         "present tense": {
                             "singular": {
                                 "first person": "ik ben",
@@ -1106,6 +1094,18 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                                 "first person": "wij zijn",
                                 "second person": "jullie zijn",
                                 "third person": "zij zijn",
+                            },
+                        },
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik was",
+                                "second person": "jij was",
+                                "third person": "zij was",
+                            },
+                            "plural": {
+                                "first person": "wij waren",
+                                "second person": "jullie waren",
+                                "third person": "zij waren",
                             },
                         },
                     },
