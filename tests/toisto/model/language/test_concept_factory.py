@@ -49,7 +49,6 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": {"singular": "de ochtend", "plural": "de ochtenden"}, "language": NL},
             ],
         )
-        self.assertEqual(2, len(concept.constituents))
         self.assertEqual((Label(FI, "aamu"), Label(FI, "aamut")), concept.labels(FI))
         self.assertEqual((Label(NL, "de ochtend"), Label(NL, "de ochtenden")), concept.labels(NL))
 

@@ -34,7 +34,8 @@ class Label:
 
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
-    instances: ClassVar[dict[str, Label]] = {}  # Mapping of (non-generated) spelling alternatives to Label instances
+    # Mapping of (non-generated) spelling alternatives to Label instances:
+    instances: ClassVar[dict[tuple[Language, str], Label]] = {}
 
     def __init__(  # noqa: PLR0913
         self,
@@ -56,7 +57,7 @@ class Label:
         self.colloquial = colloquial
         self.meaning_only = meaning_only
         for spelling_alternative in self._values:
-            self.instances[spelling_alternative] = self
+            self.instances[(language, spelling_alternative)] = self
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -159,7 +160,7 @@ class Label:
         """Return the label roots."""
         roots = []
         for root in self._roots:
-            root_label = self.instances[root]
+            root_label = self.instances[(self.language, root)]
             roots.extend([root_label, *root_label.roots])
         return Labels(roots)
 
