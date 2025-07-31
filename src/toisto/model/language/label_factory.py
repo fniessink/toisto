@@ -33,23 +33,11 @@ LabelJSON = TypedDict(
 class LabelFactory:
     """Create Labels from the label JSON."""
 
-    labels: list[LabelJSON]
+    json_labels: list[LabelJSON]
 
     def create_labels(self) -> Labels:
         """Create labels from the list of JSON labels."""
-        return Labels([self._create_label(label) for label in self.labels if self._is_label(label)])
-
-    def create_meanings(self) -> Labels:
-        """Create meanings from the list of JSON labels."""
-        return Labels([self._create_meaning(label) for label in self.labels if self._is_meaning(label)])
-
-    def _is_label(self, label: LabelJSON) -> bool:
-        """Return whether the JSON label is a label, meaning it is a leaf label and not meaning-only."""
-        return self._is_leaf_label(label) and not label.get("meaning-only", False)
-
-    def _is_meaning(self, label: LabelJSON) -> bool:
-        """Return whether the JSON label is a meaning, so it can be used to explain the meaning of a concept."""
-        return self._is_leaf_label(label) and not label.get("colloquial", False)
+        return Labels([self._create_label(label) for label in self.json_labels if self._is_leaf_label(label)])
 
     def _is_leaf_label(self, label: LabelJSON) -> bool:
         """Return whether the label is a leaf label, meaning it has no grammar."""
@@ -62,10 +50,7 @@ class LabelFactory:
         notes = tuple([note] if isinstance(note, str) else note)
         tip = label.get("tip", "")
         colloquial = label.get("colloquial", False)
+        meaning_only = label.get("meaning-only", False)
         root_or_roots = label.get("roots", [])
         roots = tuple([root_or_roots] if isinstance(root_or_roots, str) else root_or_roots)
-        return Label(label["language"], value, notes, roots, tip, colloquial=colloquial)
-
-    def _create_meaning(self, label: LabelJSON) -> Label:
-        """Create a meaning label from the label JSON."""
-        return Label(label["language"], cast("str | list[str]", label["label"]))
+        return Label(label["language"], value, notes, roots, tip, colloquial=colloquial, meaning_only=meaning_only)

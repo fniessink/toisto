@@ -27,6 +27,7 @@ class Label:
         "_values",
         "colloquial",
         "language",
+        "meaning_only",
         "notes",
         "tip",
     )  # Without adding __dict__ to slots @cached_property does not work
@@ -44,6 +45,7 @@ class Label:
         tip: str = "",
         *,
         colloquial: bool = False,
+        meaning_only: bool = False,
     ) -> None:
         """Initialize the label."""
         self.language = language
@@ -52,6 +54,7 @@ class Label:
         self._roots = roots
         self.tip = tip
         self.colloquial = colloquial
+        self.meaning_only = meaning_only
         for spelling_alternative in self._values:
             self.instances[spelling_alternative] = self
 
