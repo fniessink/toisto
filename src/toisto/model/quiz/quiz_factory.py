@@ -215,15 +215,15 @@ class GrammaticalQuizFactory(BaseQuizFactory):
         return quizzes
 
     @staticmethod
-    def grammatical_quiz_type(concept1: Concept | Label, concept2: Concept | Label) -> QuizType | None:
-        """Return the quiz type to change the grammatical category of concept1 into that of concept2.
+    def grammatical_quiz_type(label1: Concept | Label, label2: Concept | Label) -> QuizType | None:
+        """Return the quiz type to change the grammatical category of label1 into that of label2.
 
         For example, to change "I am" into "they are" would mean changing the grammatical number from singular to plural
         and changing the grammatical person from first person to third person. To prevent the quiz from becoming too
         complex ("Give the affirmative past tense plural third person...") we limit the number of quiz types.
         """
         quiz_types: list[GrammaticalQuizType] = []
-        for category1, category2 in zip_longest(concept1.grammatical_categories, concept2.grammatical_categories):
+        for category1, category2 in zip_longest(label1.grammatical_categories, label2.grammatical_categories):
             if category1 != category2:
                 quiz_types.extend(GrammaticalQuizType.instances.get_values(category2))
         if set(quiz_types) <= {FEMININE, MASCULINE, NEUTER, THIRD_PERSON} and len(quiz_types) > 1:
