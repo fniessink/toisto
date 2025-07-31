@@ -476,8 +476,8 @@ class QuizInstructionTest(QuizTestCase):
         quiz = self.create_quiz(greek, kreikka, [kreikka], DICTATE)
         self.assertEqual("Listen and write in Finnish (indoeurooppalainen kieli)", quiz.instruction)
 
-    def test_capitonyms_get_an_automatic_tip_based_on_the_common_base_concept(self):
-        """Test that capitonyms get an automatic tip based on the common base concept."""
+    def test_capitonyms_get_an_automatic_tip_based_on_the_grammatical_category(self):
+        """Test that capitonyms get an automatic tip based on the grammatical category."""
         concept = self.create_concept(
             "to be",
             labels=[

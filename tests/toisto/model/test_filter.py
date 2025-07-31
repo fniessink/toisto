@@ -6,7 +6,6 @@ from unittest.mock import Mock, patch
 from toisto.model.filter import filter_concepts
 from toisto.model.language import EN
 from toisto.model.language.concept import Concept
-from toisto.model.language.label import Label
 
 from ...base import ToistoTestCase
 
