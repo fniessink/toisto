@@ -7,6 +7,7 @@ from typing import TypedDict, cast, get_args
 
 from .concept import Concept, ConceptId, ConceptIdListOrString, ConceptIds, ConceptRelation, RelatedConceptIds
 from .grammar import GrammaticalCategory
+from .label import Labels
 from .label_factory import LabelFactory, LabelJSON
 
 ConceptJSON = TypedDict(
@@ -42,7 +43,7 @@ class ConceptFactory:
             self.concept_id,
             parent,
             self._constituent_concepts(),
-            self.label_factory.create_labels(),
+            Labels([label for label in self.label_factory.create_labels() if not label.grammatical_base]),
             self._related_concepts(),
             self._answer_only(),
         )
