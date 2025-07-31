@@ -12,6 +12,7 @@ from typing import ClassVar
 from toisto.tools import first, first_upper
 
 from . import Language
+from .grammar import GrammaticalCategory
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 
@@ -26,6 +27,8 @@ class Label:
         "_roots",
         "_values",
         "colloquial",
+        "grammatical_base",
+        "grammatical_categories",
         "language",
         "meaning_only",
         "notes",
@@ -44,6 +47,8 @@ class Label:
         notes: tuple[str, ...] = (),
         roots: tuple[str, ...] = (),
         tip: str = "",
+        grammatical_base: str = "",
+        grammatical_categories: tuple[GrammaticalCategory, ...] = (),
         *,
         colloquial: bool = False,
         meaning_only: bool = False,
@@ -55,6 +60,8 @@ class Label:
         self._roots = roots
         self.tip = tip
         self.colloquial = colloquial
+        self.grammatical_base = grammatical_base
+        self.grammatical_categories = grammatical_categories
         self.meaning_only = meaning_only
         for spelling_alternative in self._values:
             self.instances[(language, spelling_alternative)] = self
