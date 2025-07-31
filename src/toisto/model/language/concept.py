@@ -75,7 +75,6 @@ class Concept:
     _parent: ConceptId | None
     _constituents: ConceptIds
     _labels: Labels
-    _meanings: Labels
     _related_concepts: RelatedConceptIds
     answer_only: bool
 
@@ -171,7 +170,7 @@ class Concept:
 
     def own_labels(self, language: Language) -> Labels:
         """Return the labels of this concept for the specified language."""
-        return self._labels.with_language(language) if self._has_own_labels_or_meanings(language) else Labels()
+        return Labels([label for label in self._labels.with_language(language) if not label.meaning_only])
 
     def ancestor_labels(self, language: Language) -> Labels:
         """Return the labels of the first ancestor concept that has labels for the specified language."""
@@ -185,7 +184,7 @@ class Concept:
 
     def own_meanings(self, language: Language) -> Labels:
         """Return the meanings of this concept for the specified language."""
-        return self._meanings.with_language(language) if self._has_own_labels_or_meanings(language) else Labels()
+        return Labels([label for label in self._labels.with_language(language) if not label.colloquial])
 
     def ancestor_meanings(self, language: Language) -> Labels:
         """Return the meanings of the first ancestor concept that has meanings for the specified language."""
@@ -218,22 +217,16 @@ class Concept:
         language.
         """
         return not (
-            self._has_own_labels_or_meanings(language)
+            any((self._labels).with_language(language))
             or self.ancestor_labels(language)
             or self.ancestor_meanings(language)
         )
-
-    def _has_own_labels_or_meanings(self, language: Language) -> bool:
-        """Return whether this concept has its own labels or meanings for the specified language."""
-        return any((self._labels + self._meanings).with_language(language))
 
     @property
     def is_complete_sentence(self) -> bool:
         """Return whether this concept is a complete sentence."""
         if self._labels:
             return first(self._labels).is_complete_sentence
-        if self._meanings:
-            return first(self._meanings).is_complete_sentence
         if self._constituents:
             return first(self.get_concepts(first(self._constituents))).is_complete_sentence
         return False

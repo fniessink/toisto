@@ -43,7 +43,6 @@ class ConceptFactory:
             parent,
             self._constituent_concepts(),
             self.label_factory.create_labels(),
-            self.label_factory.create_meanings(),
             self._related_concepts(),
             self._answer_only(),
         )

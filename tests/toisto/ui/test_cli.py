@@ -297,8 +297,8 @@ Options:
         foo = ConceptId("foo")
         bar = ConceptId("bar")
         concepts = {
-            Concept(foo, None, (), Labels((Label(EN, "foo"),)), Labels(), {}, False),
-            Concept(bar, None, (), Labels((Label(EN, "bar"),)), Labels(), {}, False),
+            Concept(foo, None, (), Labels((Label(EN, "foo"),)), {}, False),
+            Concept(bar, None, (), Labels((Label(EN, "bar"),)), {}, False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
