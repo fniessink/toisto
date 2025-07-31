@@ -83,6 +83,11 @@ class LabelTest(ToistoTestCase):
         self.assertEqual(Labels([keukenkastdeur]), deur.compounds)
         self.assertEqual(Labels([keukenkastdeur]), keukenkast.compounds)
 
+    def test_meaning_only(self):
+        """Test that a label can be a meaning only."""
+        mämmi = Label(NL, "Finse paascake", meaning_only=True)
+        self.assertTrue(mämmi.meaning_only)
+
 
 class LabelsTest(ToistoTestCase):
     """Unit tests for the Labels class."""
