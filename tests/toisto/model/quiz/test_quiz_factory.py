@@ -1923,8 +1923,7 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_verb_with_infinitive_and_person(self):
         """Test the grammatical quiz types for a verb with infinitive and grammatical person."""
-        verb = self.create_verb_with_infinitive_and_person()
-        infinitive, singular, plural = verb.labels(EN)
+        infinitive, singular, plural = self.create_verb_with_infinitive_and_person().labels(EN)
         for concept in (infinitive, singular):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(concept, plural))
         for concept in (infinitive, plural):
