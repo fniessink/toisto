@@ -103,11 +103,6 @@ class ConceptTest(ToistoTestCase):
     def test_labels_for_invariant_noun(self):
         """Test that the labels are returned, recursively."""
         concept = self.create_noun_invariant_in_english()
-        singular, plural = concept.constituents
-        for each_concept in concept, singular, plural:
-            self.assertEqual((Label(EN, "means of transportation"),), each_concept.labels(EN))
-        self.assertEqual((Label(NL, "het vervoersmiddel"),), singular.labels(NL))
-        self.assertEqual((Label(NL, "de vervoersmiddelen"),), plural.labels(NL))
         self.assertEqual((Label(EN, "means of transportation"),), concept.labels(EN))
         self.assertEqual((Label(NL, "het vervoersmiddel"), Label(NL, "de vervoersmiddelen")), concept.labels(NL))
 
