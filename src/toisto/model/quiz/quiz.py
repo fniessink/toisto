@@ -51,13 +51,6 @@ class Quiz:
         question = self._question.first_spelling_alternative
         return f"{self.question.language}:{self.answer.language}:{question}:{self.answer}:{self.quiz_type.action}"
 
-    @property
-    def old_key(self) -> str:
-        """Return a string version of the quiz as it was used before."""
-        concept_id = self.concept.base_concept.concept_id
-        question = self._question.first_spelling_alternative
-        return f"{concept_id}:{self.question.language}:{self.answer.language}:{question}:{self.quiz_type.action}"
-
     def has_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:
         """Return whether this quiz has the specified quiz type."""
         return self.quiz_type.is_quiz_type(quiz_type)

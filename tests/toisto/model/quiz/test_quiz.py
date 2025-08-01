@@ -74,10 +74,6 @@ class QuizTest(QuizTestCase):
         """Test the repr() function."""
         self.assertEqual("fi:nl:englanti:Engels:read", repr(self.quiz))
 
-    def test_old_key(self):
-        """Test the old key property."""
-        self.assertEqual("english:fi:nl:englanti:read", self.quiz.old_key)
-
     def test_is_correct(self):
         """Test a correct guess."""
         self.assertTrue(self.quiz.is_correct(self.engels, FI_NL))
