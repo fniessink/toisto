@@ -228,7 +228,7 @@ def bulleted_list(label: str, items: Sequence[str], style: str = "secondary", bu
     items = [punctuated(item) for item in items]
     if len(items) == 1:
         return wrapped(f"{label}: {items[0]}", style)
-    return wrapped(f"{label}s:\n" + "\n".join([f"{bullet} {item}" for item in items]), style)
+    return wrapped(f"{label}s:\n" + "\n".join(f"{bullet} {item}" for item in items), style)
 
 
 def linkified_and_enumerated(*texts: str) -> str:
