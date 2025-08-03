@@ -176,7 +176,7 @@ class DictateQuizFactory(TranslationQuizFactory):
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
         return (
-            Labels([answer for answer in answers if answer.grammatical_categories == question.grammatical_categories])
+            Labels(answer for answer in answers if answer.grammatical_categories == question.grammatical_categories)
             if question.colloquial
             else Labels((question,))
         )

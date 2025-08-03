@@ -99,7 +99,7 @@ class Label:
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Return the spelling alternatives, excluding generated alternatives, as separate labels."""
-        return Labels([self.copy(value) for value in self._values])
+        return Labels(self.copy(value) for value in self._values)
 
     @cached_property
     def spelling_alternatives(self) -> Labels:
@@ -176,7 +176,7 @@ class Label:
     @property
     def compounds(self) -> Labels:
         """Return the label compounds."""
-        return Labels([label for label in chain(*self.instances.values()) if self in label.roots])
+        return Labels(label for label in chain(*self.instances.values()) if self in label.roots)
 
 
 class Labels:  # noqa: PLW1641

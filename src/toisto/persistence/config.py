@@ -125,7 +125,7 @@ def write_config(
         config_file_text = StringIO()
         config_parser.write(config_file_text, space_around_delimiters=False)
         # Remove the equal sign from lines that only have keys, such as in the files section:
-        stripped_config_file_text = "\n".join([line.rstrip("=") for line in config_file_text.getvalue().splitlines()])
+        stripped_config_file_text = "\n".join(line.rstrip("=") for line in config_file_text.getvalue().splitlines())
         with config_filename.open("w", encoding="utf-8") as config_file:
             config_file.write(stripped_config_file_text)
     except OSError as reason:

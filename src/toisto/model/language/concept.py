@@ -170,7 +170,7 @@ class Concept:
 
     def own_labels(self, language: Language) -> Labels:
         """Return the labels of this concept for the specified language."""
-        return Labels([label for label in self._labels.with_language(language) if not label.meaning_only])
+        return Labels(label for label in self._labels.with_language(language) if not label.meaning_only)
 
     def ancestor_labels(self, language: Language) -> Labels:
         """Return the labels of the first ancestor concept that has labels for the specified language."""
@@ -184,7 +184,7 @@ class Concept:
 
     def own_meanings(self, language: Language) -> Labels:
         """Return the meanings of this concept for the specified language."""
-        return Labels([label for label in self._labels.with_language(language) if not label.colloquial])
+        return Labels(label for label in self._labels.with_language(language) if not label.colloquial)
 
     def ancestor_meanings(self, language: Language) -> Labels:
         """Return the meanings of the first ancestor concept that has meanings for the specified language."""
