@@ -145,12 +145,12 @@ class Label:
     @property
     def starts_with_upper_case(self) -> bool:
         """Return whether the label starts with an upper case letter."""
-        return self._values[0][0].isupper()
+        return self._values[0] and self._values[0][0].isupper()
 
     @property
     def ends_with_punctuation(self) -> bool:
         """Return whether the label ends with punctuation."""
-        return str(self._values[0])[-1] in END_OF_SENTENCE_PUNCTUATION
+        return self._values[0] and str(self._values[0])[-1] in END_OF_SENTENCE_PUNCTUATION
 
     @property
     def pronounceable(self) -> str:

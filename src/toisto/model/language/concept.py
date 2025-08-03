@@ -27,9 +27,6 @@ def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
     return cast("ConceptRelation", {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
 
 
-HomonymRegistry = Registry[Label, "Concept"]
-
-
 @dataclass(frozen=True)
 class Concept:
     """Class representing language concepts.
@@ -67,16 +64,10 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
-    capitonyms: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.lower_case)
-    homographs: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label)
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
-        for label in self._labels:
-            self.homographs.add_item(label, self)
-            if not label.is_complete_sentence:
-                self.capitonyms.add_item(label, self)
 
     def __hash__(self) -> int:
         """Return the concept hash."""
@@ -102,24 +93,50 @@ class Concept:
         return Concepts(related_concepts_list)
 
     def get_homographs(self, label: Label) -> Concepts:
-        """Return the homographs for the label, provided it is a label of this concept."""
-        return self._get_homonyms(label, self.homographs)
-
-    def get_capitonyms(self, label: Label) -> Concepts:
-        """Return the capitonyms for the label, provided it is a label of this concept."""
-        if self._labels.lower_case.count(label.lower_case) > 1:
-            return Concepts([self])
-        capitonyms = self._get_homonyms(label, self.capitonyms)
-        # Weed out the homographs:
-        return Concepts(concept for concept in capitonyms if label not in concept.labels(label.language))
-
-    def _get_homonyms(self, label: Label, homonym_registry: HomonymRegistry) -> Concepts:
-        """Return the homonyms for the label as registered in the given homonym registry."""
-        if self._labels.count(label) > 1:
-            return Concepts([self])
+        """Return the concepts that have homographs for the given label."""
         if label not in self._labels:
             return Concepts()
-        return Concepts(homonym for homonym in homonym_registry.get_values(label) if homonym != self)
+
+        # Check if this concept has multiple instances of the same label
+        if self._labels.count(label) > 1:
+            return Concepts([self])
+
+        # Find all concepts that have a label with the same string representation
+        homograph_concepts = []
+        for concept in self.instances.get_all_values():
+            if concept != self:
+                for concept_label in concept._labels:
+                    if (str(concept_label) == str(label) and
+                        concept_label.language == label.language and
+                        not concept_label.meaning_only):
+                        homograph_concepts.append(concept)
+                        break
+
+        return Concepts(homograph_concepts)
+
+    def get_capitonyms(self, label: Label) -> Concepts:
+        """Return the concepts that have capitonyms for the given label."""
+        if label not in self._labels:
+            return Concepts()
+
+        # Check if this concept has multiple cases of the same label
+        if self._labels.lower_case.count(label.lower_case) > 1:
+            return Concepts([self])
+
+        # Find all concepts that have a label that only differs in capitalization
+        capitonym_concepts = []
+        for concept in self.instances.get_all_values():
+            if concept != self:
+                for concept_label in concept._labels:
+                    if (str(concept_label).lower() == str(label).lower() and
+                        str(concept_label) != str(label) and
+                        concept_label.language == label.language and
+                        not concept_label.meaning_only and
+                        not concept_label.is_complete_sentence):
+                        capitonym_concepts.append(concept)
+                        break
+
+        return Concepts(capitonym_concepts)
 
     def labels(self, language: Language) -> Labels:
         """Return the labels of the concept for the specified language."""
