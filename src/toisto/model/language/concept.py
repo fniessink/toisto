@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import chain
 from typing import ClassVar, Literal, NewType, cast, get_args
 
 from toisto.tools import Registry, first
@@ -140,3 +141,7 @@ class Concepts(tuple[Concept, ...]):
     """Tuple of concepts."""
 
     __slots__ = ()
+
+    def labels(self, language: Language) -> Labels:
+        """Return the labels of the concepts."""
+        return Labels(chain(*(concept.labels(language) for concept in self)))
