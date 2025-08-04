@@ -135,11 +135,11 @@ class Quiz:
         question = self._question
         tips = self.quiz_type.tips(question, self._answers)
         if homographs := self.concept.get_homographs(question):
-            homograph_labels = [label for label in homographs[0].labels(self.question.language) if label == question]
+            homograph_labels = [label for label in homographs.labels(self.question.language) if label == question]
             tips.extend(self._homonym_tips(*homograph_labels))
         elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
             capitonym_labels = [
-                label for label in capitonyms[0].labels(question.language) if label.lower_case == question.lower_case
+                label for label in capitonyms.labels(question.language) if label.lower_case == question.lower_case
             ]
             tips.extend(self._homonym_tips(*capitonym_labels))
         return f" ({'; '.join(tips)})" if tips else ""
