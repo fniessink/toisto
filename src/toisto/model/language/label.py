@@ -15,6 +15,7 @@ from . import Language
 from .grammar import GrammaticalCategory
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
+HomonymMapping = dict[tuple[Language, str], list["Label"]]
 
 END_OF_SENTENCE_PUNCTUATION = "?!."
 
@@ -37,8 +38,8 @@ class Label:
 
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
-    # Mapping of (non-generated) spelling alternatives to Label instances:
-    instances: ClassVar[dict[tuple[Language, str], set[Label]]] = {}
+    homograph_mapping: ClassVar[HomonymMapping] = {}
+    capitonym_mapping: ClassVar[HomonymMapping] = {}
 
     def __init__(  # noqa: PLR0913
         self,
@@ -64,18 +65,27 @@ class Label:
         self.grammatical_categories = grammatical_categories
         self.meaning_only = meaning_only
         for spelling_alternative in self._values:
-            self.instances.setdefault((language, spelling_alternative), set()).add(self)
+            self.homograph_mapping.setdefault((language, spelling_alternative), []).append(self)
+            self.capitonym_mapping.setdefault((language, spelling_alternative.lower()), []).append(self)
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
         if isinstance(other, Label):
-            return self.language == other.language and str(self) == str(other)
+            return (
+                self.language == other.language
+                and str(self) == str(other)
+                and self.grammatical_categories == other.grammatical_categories
+            )
         return False
 
     def __ne__(self, other: object) -> bool:
         """Return whether the labels are not equal."""
         if isinstance(other, Label):
-            return self.language != other.language or str(self) != str(other)
+            return (
+                self.language != other.language
+                or str(self) != str(other)
+                or self.grammatical_categories != other.grammatical_categories
+            )
         return True
 
     def __bool__(self) -> bool:
@@ -94,26 +104,32 @@ class Label:
 
     def copy(self, value: str) -> Label:
         """Return a copy of this label with a different value."""
+        if value == self._values[0]:
+            return self
         return Label(self.language, value, self.notes, self._roots, self.tip, colloquial=self.colloquial)
 
-    @property
+    @cached_property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Return the spelling alternatives, excluding generated alternatives, as separate labels."""
         return Labels(self.copy(value) for value in self._values)
 
     @cached_property
-    def spelling_alternatives(self) -> Labels:
-        """Extract the spelling alternatives from the label and generate additional spelling alternatives."""
-        alternatives = self.non_generated_spelling_alternatives
+    def generated_spelling_alternatives(self) -> Labels:
+        """Generate additional spelling alternatives."""
         generated_alternatives = set()
-        for alternative in alternatives:
+        for alternative in self.non_generated_spelling_alternatives:
             for pattern, replacement in self.ALTERNATIVES_TO_GENERATE.get(self.language, {}).items():
                 if re.search(pattern, str(alternative)):
-                    generated_alternative = self.copy(re.sub(pattern, replacement, str(alternative)))
+                    value = re.sub(pattern, replacement, str(alternative))
                     if alternative.starts_with_upper_case:
-                        generated_alternative = generated_alternative.with_upper_case_first_letter
-                    generated_alternatives.add(generated_alternative)
-        return alternatives + Labels(generated_alternatives)
+                        value = first_upper(value)
+                    generated_alternatives.add(self.copy(value))
+        return Labels(generated_alternatives)
+
+    @property
+    def spelling_alternatives(self) -> Labels:
+        """Extract the spelling alternatives from the label and generate additional spelling alternatives."""
+        return self.non_generated_spelling_alternatives + self.generated_spelling_alternatives
 
     @cached_property
     def first_spelling_alternative(self) -> Label:
@@ -126,16 +142,6 @@ class Label:
         words = str(self.first_spelling_alternative).split(" ")
         shuffle(words)
         return self.copy(" ".join(words))
-
-    @property
-    def with_upper_case_first_letter(self) -> Label:
-        """Return the label with the first letter upper cased."""
-        return self.copy(first_upper(self._values[0]))
-
-    @property
-    def lower_case(self) -> Label:
-        """Return the label in lower case."""
-        return self.copy(self._values[0].lower())
 
     @property
     def is_complete_sentence(self) -> bool:
@@ -167,7 +173,7 @@ class Label:
         """Return the label roots."""
         roots: list[Label] = []
         for root in self._roots:
-            root_labels = self.instances[(self.language, root)]
+            root_labels = self.homograph_mapping[(self.language, root)]
             roots.extend(root_labels)
             for root_label in root_labels:
                 roots.extend(root_label.roots)
@@ -176,16 +182,31 @@ class Label:
     @property
     def compounds(self) -> Labels:
         """Return the label compounds."""
-        return Labels(label for label in chain(*self.instances.values()) if self in label.roots)
+        return Labels(label for label in chain(*self.homograph_mapping.values()) if self in label.roots)
 
     def grammatical_differences(self, *labels: Label) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical differences between this label and the other labels."""
         differences = set()
         for grammatical_category in self.grammatical_categories:
             for label in labels:
-                if grammatical_category not in label.grammatical_categories:
+                if label.grammatical_categories and grammatical_category not in label.grammatical_categories:
                     differences.add(grammatical_category)
         return tuple(sorted(differences))
+
+    def is_homograph(self, other: Label) -> bool:
+        """Return whether this label and the other label are homographs."""
+        return self.language == other.language and str(self) == str(other)
+
+    @property
+    def homographs(self) -> Labels:
+        """Return the homographs of this label."""
+        return Labels(label for label in self.homograph_mapping[(self.language, str(self))] if self is not label)
+
+    @property
+    def capitonyms(self) -> Labels:
+        """Return the capitonyms of this label."""
+        capitonym_key = (self.language, str(self).lower())
+        return Labels(label for label in self.capitonym_mapping[capitonym_key] if not self.is_homograph(label))
 
 
 class Labels:  # noqa: PLW1641
@@ -234,11 +255,6 @@ class Labels:  # noqa: PLW1641
         return Labels(label for label in self._labels if not label.colloquial)
 
     @property
-    def lower_case(self) -> Labels:
-        """Return the labels in lower case."""
-        return Labels(label.lower_case for label in self._labels)
-
-    @property
     def spelling_alternatives(self) -> Labels:
         """Return the spelling alternatives for each label."""
         spelling_alternatives = [label.spelling_alternatives for label in self._labels]
@@ -270,7 +286,3 @@ class Labels:  # noqa: PLW1641
     def as_strings(self) -> tuple[str, ...]:
         """Return the labels as strings."""
         return tuple(str(label) for label in self._labels)
-
-    def count(self, label: Label) -> int:
-        """Return the number of times label occurs in self."""
-        return self._labels.count(label)

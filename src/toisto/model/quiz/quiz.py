@@ -14,7 +14,7 @@ from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .evaluation import Evaluation
 from .match import match
-from .quiz_type import ListenOnlyQuizType, QuizType
+from .quiz_type import GrammaticalQuizType, ListenOnlyQuizType, QuizType
 
 
 @dataclass(frozen=True)
@@ -67,11 +67,7 @@ class Quiz:
 
     def is_correct(self, guess: Label, language_pair: LanguagePair) -> bool:
         """Return whether the guess is correct."""
-        answers = self.answers
-        if guess.language == language_pair.source:
-            guess = guess.lower_case
-            answers = answers.lower_case
-        return match(str(guess), *answers.as_strings)
+        return match(str(guess), *self.answers.as_strings, case_sensitive=guess.language != language_pair.source)
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
@@ -134,14 +130,10 @@ class Quiz:
         """Return the tip(s) to be shown as part of the question, if applicable."""
         question = self._question
         tips = self.quiz_type.tips(question, self._answers)
-        if homographs := self.concept.get_homographs(question):
-            homograph_labels = [label for label in homographs.labels(self.question.language) if label == question]
-            tips.extend(self._homonym_tips(*homograph_labels))
-        elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := self.concept.get_capitonyms(question)):
-            capitonym_labels = [
-                label for label in capitonyms.labels(question.language) if label.lower_case == question.lower_case
-            ]
-            tips.extend(self._homonym_tips(*capitonym_labels))
+        if not isinstance(self.quiz_type, GrammaticalQuizType) and (homographs := question.homographs):
+            tips.extend(self._homonym_tips(*homographs))
+        elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := question.capitonyms):
+            tips.extend(self._homonym_tips(*capitonyms))
         return f" ({'; '.join(tips)})" if tips else ""
 
     def _homonym_tips(self, *homonym_labels: Label) -> Sequence[str]:

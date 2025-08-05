@@ -3,13 +3,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from itertools import chain
 from typing import ClassVar, Literal, NewType, cast, get_args
 
 from toisto.tools import Registry, first
 
 from . import Language
-from .label import Label, Labels
+from .label import Labels
 
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
@@ -26,9 +25,6 @@ RelatedConceptIds = dict[ConceptRelation, ConceptIds]
 def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
     """Return the inverted relation."""
     return cast("ConceptRelation", {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
-
-
-HomonymRegistry = Registry[Label, "Concept"]
 
 
 @dataclass(frozen=True)
@@ -68,16 +64,10 @@ class Concept:
     answer_only: bool
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
-    capitonyms: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label.lower_case)
-    homographs: ClassVar[HomonymRegistry] = HomonymRegistry(lambda label: label)
 
     def __post_init__(self) -> None:
         """Add the concept to the concept registry."""
         self.instances.add_item(self.concept_id, self)
-        for label in self._labels:
-            self.homographs.add_item(label, self)
-            if not label.is_complete_sentence:
-                self.capitonyms.add_item(label, self)
 
     def __hash__(self) -> int:
         """Return the concept hash."""
@@ -102,26 +92,6 @@ class Concept:
             related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
         return Concepts(related_concepts_list)
 
-    def get_homographs(self, label: Label) -> Concepts:
-        """Return the homographs for the label, provided it is a label of this concept."""
-        return self._get_homonyms(label, self.homographs)
-
-    def get_capitonyms(self, label: Label) -> Concepts:
-        """Return the capitonyms for the label, provided it is a label of this concept."""
-        if self._labels.lower_case.count(label.lower_case) > 1:
-            return Concepts([self])
-        capitonyms = self._get_homonyms(label, self.capitonyms)
-        # Weed out the homographs:
-        return Concepts(concept for concept in capitonyms if label not in concept.labels(label.language))
-
-    def _get_homonyms(self, label: Label, homonym_registry: HomonymRegistry) -> Concepts:
-        """Return the homonyms for the label as registered in the given homonym registry."""
-        if self._labels.count(label) > 1:
-            return Concepts([self])
-        if label not in self._labels:
-            return Concepts()
-        return Concepts(homonym for homonym in homonym_registry.get_values(label) if homonym != self)
-
     def labels(self, language: Language) -> Labels:
         """Return the labels of the concept for the specified language."""
         labels = Labels(label for label in self._labels if not label.meaning_only)
@@ -141,7 +111,3 @@ class Concepts(tuple[Concept, ...]):
     """Tuple of concepts."""
 
     __slots__ = ()
-
-    def labels(self, language: Language) -> Labels:
-        """Return the labels of the concepts."""
-        return Labels(chain(*(concept.labels(language) for concept in self)))

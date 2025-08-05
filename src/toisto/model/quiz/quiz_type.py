@@ -59,7 +59,8 @@ class QuizType:
         return Labels(
             answer
             for answer in answers
-            if not match(str(guess.lower_case), str(answer.lower_case)) and guess not in answer.spelling_alternatives
+            if not match(str(guess), str(answer), case_sensitive=False)
+            and guess not in answer.generated_spelling_alternatives
         )
 
     def is_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:
