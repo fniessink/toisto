@@ -2,9 +2,9 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept
-from toisto.model.language.label import Label, Labels
+from toisto.model.language.label import Label
 
-from ....base import LabelDict, ToistoTestCase
+from ....base import ToistoTestCase
 
 
 class ConcepFactoryTest(ToistoTestCase):
@@ -24,8 +24,12 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": {"singular": "de ochtend", "plural": "de ochtenden"}, "language": NL},
             ],
         )
-        self.assertEqual((Label(FI, "aamu"), Label(FI, "aamut")), concept.labels(FI))
-        self.assertEqual((Label(NL, "de ochtend"), Label(NL, "de ochtenden")), concept.labels(NL))
+        aamu = Label(FI, "aamu", grammatical_categories=("singular",))
+        aamut = Label(FI, "aamut", grammatical_categories=("plural",))
+        self.assertEqual((aamu, aamut), concept.labels(FI))
+        ochtend = Label(NL, "de ochtend", grammatical_categories=("singular",))
+        ochtenden = Label(NL, "de ochtenden", grammatical_categories=("plural",))
+        self.assertEqual((ochtend, ochtenden), concept.labels(NL))
 
     def test_concept_with_colloquial_labels(self):
         """Test a concept with colloquial labels."""
@@ -45,21 +49,28 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": "kol", "language": FI, "colloquial": True},
             ],
         )
-        self.assertEqual(
-            (Label(FI, "kolme"), Label(FI, "kolmes"), Label(FI, "kol", colloquial=True)), concept.labels(FI)
-        )
+        kolme = Label(FI, "kolme", grammatical_categories=("cardinal",))
+        kolmes = Label(FI, "kolmes", grammatical_categories=("ordinal",))
+        kol = Label(FI, "kol", colloquial=True)
+        self.assertEqual((kolme, kolmes, kol), concept.labels(FI))
 
     def test_label_roots(self):
         """Test that a concept can have a label with roots."""
-        concept = self.create_concept(
+        kitchen = self.create_concept("kitchen", labels=[{"label": "de keuken", "language": NL}])
+        table = self.create_concept("table", labels=[{"label": "de tafel", "language": NL}])
+        kitchen_table = self.create_concept(
             "kitchen table",
             labels=[{"label": "de keukentafel", "language": NL, "roots": ["de keuken", "de tafel"]}],
         )
-        self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), concept.labels(NL)[0].roots)
+        (keuken,) = kitchen.labels(NL)
+        (tafel,) = table.labels(NL)
+        self.assertEqual((keuken, tafel), kitchen_table.labels(NL)[0].roots)
 
     def test_composite_label_roots(self):
         """Test that a concept can have composite labels with roots."""
-        concept = self.create_concept(
+        kitchen = self.create_concept("kitchen", labels=[{"label": "de keuken", "language": NL}])
+        table = self.create_concept("table", labels=[{"label": "de tafel", "language": NL}])
+        kitchen_table = self.create_concept(
             "kitchen table",
             labels=[
                 {
@@ -69,15 +80,10 @@ class ConcepFactoryTest(ToistoTestCase):
                 }
             ],
         )
-        for label in concept.labels(NL):
-            self.assertEqual(Labels([Label(NL, "de keuken"), Label(NL, "de tafel")]), label.roots)
-
-    def test_homograph(self):
-        """Test that a concept can have a homograph concept."""
-        wind_label: LabelDict = {"concept": ["wind (weather)", "wind (verb)"], "label": "wind", "language": EN}
-        wind_weather = self.create_concept("wind (weather)", labels=[wind_label])
-        wind_verb = self.create_concept("wind (verb)", labels=[wind_label])
-        self.assertEqual((wind_weather,), wind_verb.get_homographs(Label(EN, "wind")))
+        (keuken,) = kitchen.labels(NL)
+        (tafel,) = table.labels(NL)
+        for label in kitchen_table.labels(NL):
+            self.assertEqual((keuken, tafel), label.roots)
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""

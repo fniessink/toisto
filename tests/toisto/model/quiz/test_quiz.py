@@ -1,7 +1,7 @@
 """Quiz unit tests."""
 
 from toisto.model.language import EN, FI, NL
-from toisto.model.language.label import Label, Labels
+from toisto.model.language.label import Label
 from toisto.model.quiz.quiz_type import (
     ABBREVIATION,
     AFFIRMATIVE,
@@ -310,7 +310,7 @@ class QuizInstructionTest(QuizTestCase):
             {"hypernym": "furniture"},
             labels=[{"label": "sofa", "language": FI}, bank_nl],
         )
-        bank_label = Label(NL, "de bank")
+        (bank_label,) = sofa.labels(NL)
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
         self.assertEqual("Listen and write in Dutch (het meubilair)", quiz.instruction)
 
@@ -321,7 +321,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("to fly", labels=[fly_en, {"label": "vliegen", "language": NL}])
         self.create_concept("insect", {})  # Create the hypernym of fly
         fly = self.create_concept("fly", {"hypernym": "insect"}, labels=[fly_en, {"label": "de vlieg", "language": NL}])
-        vlieg = Label(NL, "de vlieg")
+        (vlieg,) = fly.labels(NL)
         quiz = self.create_quiz(fly, vlieg, [vlieg], DICTATE)
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
 
@@ -337,7 +337,7 @@ class QuizInstructionTest(QuizTestCase):
         sofa = self.create_concept(
             "sofa", {"hypernym": "seating"}, labels=[{"label": "sohva", "language": FI}, bank_nl]
         )
-        bank_label = Label(NL, "de bank")
+        (bank_label,) = sofa.labels(NL)
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
         self.assertEqual("Listen and write in Dutch (het zitmeubel)", quiz.instruction)
 
@@ -401,8 +401,8 @@ class QuizInstructionTest(QuizTestCase):
             {"holonym": "tree"},
             labels=[{"label": "puu", "language": FI}, {"label": "het hout", "language": NL}],
         )
-        hout = Label(NL, "het hout")
-        puu = Label(FI, "puu")
+        (hout,) = wood.labels(NL)
+        (puu,) = wood.labels(FI)
         write_quiz = self.create_quiz(wood, puu, [hout], WRITE)
         self.assertEqual("Translate into Dutch (part of 'puu')", write_quiz.instruction)
         dictate_quiz = self.create_quiz(wood, puu, [hout], INTERPRET)
@@ -412,19 +412,24 @@ class QuizInstructionTest(QuizTestCase):
 
     def test_homographs_get_an_automatic_tip_based_on_the_involved_concept(self):
         """Test that homographs get an automatic tip based on the involved concept."""
-        play_en: LabelDict = {"label": "to play", "language": EN}
         self.create_concept(
             "sport", labels=[{"label": "sport", "language": EN, "note": "this should not be shown as part of the note"}]
         )
-        play_instrument = self.create_concept("to play a musical instrument", labels=[play_en])
+        play_instrument = self.create_concept(
+            "to play a musical instrument",
+            labels=[{"label": "to play", "language": EN}, {"label": "soittaa", "language": FI}],
+        )
         play_sport = self.create_concept(
             "to play a sport",
             {"involves": "sport"},
-            labels=[play_en, {"label": "pelata", "language": FI}],
+            labels=[{"label": "to play", "language": EN}, {"label": "pelata", "language": FI}],
         )
-        write_quiz = self.create_quiz(play_sport, Label(EN, "to play"), [Label(FI, "pelata")], WRITE)
+        (to_play,) = play_sport.labels(EN)
+        (pelata,) = play_sport.labels(FI)
+        (soittaa,) = play_instrument.labels(FI)
+        write_quiz = self.create_quiz(play_sport, to_play, [pelata], WRITE)
         self.assertEqual("Translate into Finnish (involves 'sport')", write_quiz.instruction)
-        write_quiz = self.create_quiz(play_instrument, Label(EN, "to play"), [Label(FI, "soittaa")], WRITE)
+        write_quiz = self.create_quiz(play_instrument, to_play, [soittaa], WRITE)
         self.assertEqual("Translate into Finnish", write_quiz.instruction)
 
     def test_capitonyms_get_an_automatic_tip_based_on_the_hypernym(self):
@@ -438,10 +443,11 @@ class QuizInstructionTest(QuizTestCase):
             {"hypernym": "language"},
             labels=[{"label": "kreikka", "language": FI}, {"label": "Grieks", "language": NL}],
         )
-        kreikka = Label(FI, "kreikka")
+        (kreikka,) = greek.labels(FI)
+        (grieks,) = greek.labels(NL)
         quiz = self.create_quiz(greek, kreikka, [kreikka], DICTATE)
         self.assertEqual("Listen and write in Finnish (kieli)", quiz.instruction)
-        quiz = self.create_quiz(greek, kreikka, [Label(NL, "Grieks")], READ)
+        quiz = self.create_quiz(greek, kreikka, [grieks], READ)
         self.assertEqual("Translate into Dutch", quiz.instruction)
 
     def test_capitonyms_get_an_automatic_tip_based_on_only_the_first_hypernym(self):
@@ -462,7 +468,7 @@ class QuizInstructionTest(QuizTestCase):
             {"hypernym": "Indo-European language"},
             labels=[{"label": "kreikka", "language": FI}, {"label": "Grieks", "language": NL}],
         )
-        kreikka = Label(FI, "kreikka")
+        (kreikka,) = greek.labels(FI)
         quiz = self.create_quiz(greek, kreikka, [kreikka], DICTATE)
         self.assertEqual("Listen and write in Finnish (indoeurooppalainen kieli)", quiz.instruction)
 
@@ -507,14 +513,12 @@ class QuizSpellingAlternativesTests(QuizTestCase):
             self.assertTrue(quiz.is_correct(Label(NL, alternative), FI_NL))
 
     def test_other_answers_with_spelling_alternatives(self):
-        """Test the spelling alternatives are returned as other answers."""
+        """Test that spelling alternatives are returned as other answers."""
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi."), [Label(NL, ["Een", "Eén"]), Label(NL, "één")])
-        alternatives = ("Een", "Eén", "één")
-        for alternative in alternatives:
-            other_answers = list(alternatives)
-            other_answers.remove(alternative)
-            answer = Label(NL, alternative)
-            self.assertEqual(Labels(Label(NL, answer) for answer in other_answers), quiz.other_answers(answer))
+        Een, Eén, één = (Label(NL, "Een"), Label(NL, "Eén"), Label(NL, "één"))  # noqa: N806
+        self.assertEqual((Eén, één), quiz.other_answers(Een))
+        self.assertEqual((Een, één), quiz.other_answers(Eén))
+        self.assertEqual((Een, Eén), quiz.other_answers(één))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""
@@ -584,5 +588,5 @@ class QuizEqualityTests(QuizTestCase):
 
     def test_not_equal_when_answers_have_different_case(self):
         """Test that quizzes are not equal if only the case of the answers differs."""
-        answers = [answer.lower_case for answer in self.quiz.answers]
+        answers = [answer.copy(str(answer).lower()) for answer in self.quiz.answers]
         self.assertNotEqual(self.copy_quiz(self.quiz, answers=answers), self.quiz)

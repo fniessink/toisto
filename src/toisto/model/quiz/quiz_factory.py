@@ -207,8 +207,7 @@ class GrammaticalQuizFactory(BaseQuizFactory):
             self.quiz_type = self.grammatical_quiz_type(question_label, answer_label)
             self._question = question_label
             self._answer = answer_label
-            quizzes |= super().create_quizzes(concept, previous_quizzes)
-            previous_quizzes |= quizzes
+            quizzes |= super().create_quizzes(concept, Quizzes(previous_quizzes | quizzes))
         return quizzes
 
     @staticmethod
@@ -253,7 +252,7 @@ class GrammaticalQuizFactory(BaseQuizFactory):
 
     def include_question(self, question: Label, answer: Label) -> bool:
         """Return whether to include the question."""
-        return question.grammatical_base == answer.grammatical_base and question != answer
+        return question.grammatical_base == answer.grammatical_base and not question.is_homograph(answer)
 
 
 @dataclass

@@ -5,6 +5,7 @@ from typing import ClassVar, get_args
 
 from toisto.metadata import BUILT_IN_CONCEPT_JSON_FILES, BUILT_IN_LANGUAGES
 from toisto.model.language.concept import Concept, ConceptId, NonInvertedConceptRelation
+from toisto.model.language.label import Label
 from toisto.persistence.concept_loader import ConceptLoader
 
 from ..base import ToistoTestCase
@@ -40,7 +41,7 @@ class ConceptsTest(ToistoTestCase):
             for language in BUILT_IN_LANGUAGES:
                 for label in concept.labels(language):
                     for root in label.roots:
-                        if not Concept.homographs.get_values(root):
+                        if (language, str(root)) not in Label.homograph_mapping:
                             self.fail(f"root '{root}' of label '{label}' is not a valid label in language {language}")
 
     def test_related_concepts_exist(self):

@@ -1,10 +1,12 @@
 """Unit tests for concepts."""
 
-from typing import get_args
+from itertools import product
+from typing import cast, get_args
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
-from toisto.model.language.label import Label, Labels
+from toisto.model.language.grammar import GrammaticalCategory
+from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
 
@@ -66,8 +68,12 @@ class ConceptTest(ToistoTestCase):
                 {"label": {"singular": "de tafel", "plural": "de tafels"}, "language": NL},
             ],
         )
-        self.assertEqual((Label(EN, "table"), Label(EN, "tables")), concept.meanings(EN))
-        self.assertEqual((Label(NL, "de tafel"), Label(NL, "de tafels")), concept.meanings(NL))
+        table = Label(EN, "table", grammatical_categories=("singular",))
+        tables = Label(EN, "tables", grammatical_categories=("plural",))
+        self.assertEqual((table, tables), concept.meanings(EN))
+        tafel = Label(NL, "de tafel", grammatical_categories=("singular",))
+        tafels = Label(NL, "de tafels", grammatical_categories=("plural",))
+        self.assertEqual((tafel, tafels), concept.meanings(NL))
         self.assertEqual((), concept.meanings(FI))
 
     def test_meaning_mixed_concept(self):
@@ -80,37 +86,29 @@ class ConceptTest(ToistoTestCase):
             ],
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
-        self.assertEqual((Label(NL, "zij eet"), Label(NL, "hij eet")), concept.meanings(NL))
+        zij_eet = Label(NL, "zij eet", grammatical_categories=("feminine",))
+        hij_eet = Label(NL, "hij eet", grammatical_categories=("masculine",))
+        self.assertEqual((zij_eet, hij_eet), concept.meanings(NL))
         self.assertEqual((), concept.meanings(EN))
 
     def test_labels(self):
         """Test that the labels are returned, recursively."""
         concept = self.create_verb_with_grammatical_number_and_person()
-        expected_labels = ("I have", "you have", "she has", "we have", "you have", "they have")
-        self.assertEqual(Labels(Label(EN, label) for label in expected_labels), concept.labels(EN))
+        expected_label_values = ("I have", "you have", "she has", "we have", "you have", "they have")
+        grammatical_categories = product(("singular", "plural"), ("first person", "second person", "third person"))
+        expected_labels = tuple(
+            Label(EN, label, grammatical_categories=cast("tuple[GrammaticalCategory]", grammatical_categories))
+            for label, grammatical_categories in zip(expected_label_values, grammatical_categories, strict=False)
+        )
+        self.assertEqual(expected_labels, concept.labels(EN))
 
     def test_labels_for_invariant_noun(self):
         """Test that the labels are returned, recursively."""
         concept = self.create_noun_invariant_in_english()
         self.assertEqual((Label(EN, "means of transportation"),), concept.labels(EN))
-        self.assertEqual((Label(NL, "het vervoersmiddel"), Label(NL, "de vervoersmiddelen")), concept.labels(NL))
-
-    def test_homographs(self):
-        """Test that notes are ignored when determining homographs."""
-        bank = self.create_concept("bank", labels=[{"label": "de bank", "language": NL, "note": "some note"}])
-        sofa = self.create_concept("sofa", labels=[{"label": "de bank", "language": NL}])
-        self.assertEqual((bank,), sofa.get_homographs(Label(NL, "de bank")))
-
-    def test_capitonyms(self):
-        """Test that notes are ignored when determining capitonyms."""
-        greece = self.create_concept("greece", labels=[{"label": "Kreikki", "language": FI}])
-        greek = self.create_concept(
-            "greek",
-            labels=[
-                {"label": "kreikki", "language": FI, "note": "In Finnish, the names of languages are not capitalized"}
-            ],
-        )
-        self.assertEqual((greece,), greek.get_capitonyms(Label(FI, "kreikki")))
+        vervoersmiddel = Label(NL, "het vervoersmiddel", grammatical_categories=("singular",))
+        vervoersmiddelen = Label(NL, "de vervoersmiddelen", grammatical_categories=("plural",))
+        self.assertEqual((vervoersmiddel, vervoersmiddelen), concept.labels(NL))
 
     def test_is_sentence(self):
         """Test the is-sentence property."""
