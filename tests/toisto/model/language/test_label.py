@@ -12,8 +12,10 @@ class LabelTest(ToistoTestCase):
     def test_equality(self):
         """Test that labels are not equal to non-labels."""
         label = same_label = Label(EN, "English")
-        self.assertTrue(label == same_label)
-        self.assertFalse(label != same_label)
+        labels_equal = label == same_label
+        self.assertTrue(labels_equal)
+        labels_not_equal = label != same_label
+        self.assertFalse(labels_not_equal)
         equal_to_object = label == object()
         self.assertFalse(equal_to_object)
         not_equal_to_object = label != object()

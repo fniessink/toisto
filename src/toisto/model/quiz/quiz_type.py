@@ -35,7 +35,7 @@ class QuizType:
         return self._action
 
     def instruction(self, question: Label) -> str:
-        """Return the quiz type instruction."""
+        """Return the quiz type instruction. Subclasses may use the question to generate the instruction."""
         return self._instruction if self._instruction else f"Give the [underline]{self.action}[/underline] in"
 
     def question(self, question: Label) -> Label:
@@ -51,7 +51,10 @@ class QuizType:
         return question.language != answer.language
 
     def notes(self, question: Label, answers: Labels) -> Sequence[str]:
-        """Return the notes to be shown after the quiz has been answered."""
+        """Return the notes to be shown after the quiz has been answered.
+
+        Subclasses may use the answers to generate the notes.
+        """
         return question.notes
 
     def other_answers(self, guess: Label, answers: Labels) -> Labels:
