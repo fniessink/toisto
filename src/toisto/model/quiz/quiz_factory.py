@@ -73,19 +73,22 @@ class BaseQuizFactory:
         """Return the question."""
 
     def answers(self, concept: Concept) -> Labels:
-        """Return the answers."""
+        """Return the answers. Subclasses may use the concept to derive the answers."""
         return Labels()
 
     def question_meanings(self, concept: Concept) -> Labels:
-        """Return the question meanings of the concept."""
+        """Return the question meanings. Subclasses may use the concept to derive the question meanings."""
         return Labels()
 
     def answer_meanings(self, concept: Concept) -> Labels:
-        """Return the answer meanings of the concept."""
+        """Return the answer meanings. Subclasses may use the concept to derive the answer meanings."""
         return Labels()
 
     def blocked_by(self, concept: Concept, previous_quizzes: Quizzes) -> tuple[Quiz, ...]:
-        """Return the quizzes that block the created quizzes."""
+        """Return the quizzes that block the created quizzes.
+
+        Subclasses may use the concept to derive the blocking quizzes.
+        """
         return tuple(previous_quizzes) if previous_quizzes else ()
 
     @abstractmethod
@@ -93,7 +96,7 @@ class BaseQuizFactory:
         """Return the answers for the question."""
 
     def zip_questions_and_answers(self, questions: Labels, answers: Labels) -> Iterable[tuple[Label, Label]]:
-        """Zip the questions and answers."""
+        """Zip the questions and answers. Subclasses may use the answers to zip."""
         return zip(questions, questions, strict=True)
 
     def include_question(self, question: Label, answer: Label) -> bool:
