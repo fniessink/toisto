@@ -4,7 +4,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Required, TypedDict, cast
-from uuid import uuid4
+
+from toisto.tools import first
 
 from . import Language
 from .concept import ConceptIdListOrString
@@ -45,15 +46,13 @@ class LabelFactory:
             if isinstance(json_label["label"], (str, list)):
                 labels.append(self._create_label(json_label, grammatical_categories, grammatical_base))
             else:
-                grammatical_base_for_slices = grammatical_base or str(uuid4())
+                grammatical_base_for_slices = grammatical_base or self.grammatical_base(json_label)
                 for grammatical_category, json_label_value in json_label["label"].items():
                     json_label_slice = json_label.copy()
                     json_label_slice["label"] = json_label_value
-                    labels.extend(
-                        LabelFactory([json_label_slice]).create_labels(
-                            (*grammatical_categories, grammatical_category), grammatical_base_for_slices
-                        )
-                    )
+                    slice_grammatical_categories = (*grammatical_categories, grammatical_category)
+                    factory = LabelFactory([json_label_slice])
+                    labels.extend(factory.create_labels(slice_grammatical_categories, grammatical_base_for_slices))
         return Labels(labels)
 
     def _create_label(
@@ -79,3 +78,14 @@ class LabelFactory:
             colloquial=colloquial,
             meaning_only=meaning_only,
         )
+
+    @classmethod
+    def grammatical_base(cls, json_label: LabelJSON) -> str:
+        """Return the grammatical base of the JSON label."""
+        if isinstance(json_label["label"], str):
+            return json_label["label"]
+        if isinstance(json_label["label"], list):
+            return first(json_label["label"])
+        json_label_slice = json_label.copy()
+        json_label_slice["label"] = cast("str | JSONRecursiveGrammar", first(json_label["label"].values()))
+        return cls.grammatical_base(json_label_slice)
