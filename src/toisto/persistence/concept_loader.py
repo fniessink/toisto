@@ -12,15 +12,12 @@ from ..model.language.label_factory import LabelJSON
 from .identifier_registry import IdentifierRegistry
 from .json_file import load_json
 
-Concepts = dict[ConceptId, ConceptJSON]
-Labels = dict[Language, list[LabelJSON]]
-
 
 class JSON(TypedDict):
     """Concept-and-label JSON file."""
 
-    concepts: Concepts
-    labels: Labels
+    concepts: dict[ConceptId, ConceptJSON]
+    labels: dict[Language, list[LabelJSON]]
 
 
 class ConceptLoader:
@@ -32,21 +29,16 @@ class ConceptLoader:
 
     def load_concepts(self, *paths: Path) -> set[Concept]:
         """Load the concept from the concept JSON files."""
-        concepts: Concepts = {}
-        all_labels: dict[ConceptId, list[LabelJSON]] = {}
-        for path in paths:
-            file_paths = path.rglob("*.json") if path.is_dir() else [path]
-            for file_path in file_paths:
-                json = self._load_file(file_path)
-                concepts |= json.get("concepts", {})
-                labels = json.get("labels", {})
-                for language, language_labels in labels.items():
-                    for label in language_labels:
-                        label["language"] = language
-                        concept_ids = label["concept"] if isinstance(label["concept"], list) else [label["concept"]]
-                        for concept_id in concept_ids:
-                            all_labels.setdefault(concept_id, []).append(label)
-        return self._create_concepts(concepts, all_labels)
+        concepts: dict[ConceptId, ConceptJSON] = {}
+        labels: list[LabelJSON] = []
+        for file_path in self._json_paths(*paths):
+            json = self._load_file(file_path)
+            concepts |= json.get("concepts", {})
+            for language, language_labels in json.get("labels", {}).items():
+                for label in language_labels:
+                    label["language"] = language
+                    labels.append(label)
+        return self._create_concepts(concepts, labels)
 
     def _load_file(self, file_path: Path) -> JSON:
         """Load JSON file and check that concept identifiers are unique."""
@@ -58,9 +50,21 @@ class ConceptLoader:
             self.argument_parser.error(f"{NAME} cannot read file {file_path}: {reason}.\n")
         return json
 
-    def _create_concepts(self, concepts: Concepts, labels: dict[ConceptId, list[LabelJSON]]) -> set[Concept]:
+    def _create_concepts(self, concepts: dict[ConceptId, ConceptJSON], labels: list[LabelJSON]) -> set[Concept]:
         """Create the concepts."""
+        concept_id_to_labels_mapping: dict[ConceptId, list[LabelJSON]] = {}
+        for label in labels:
+            concept_ids = label["concept"] if isinstance(label["concept"], list) else [label["concept"]]
+            for concept_id in concept_ids:
+                concept_id_to_labels_mapping.setdefault(concept_id, []).append(label)
         return {
-            create_concept(concept_key, concept_value, labels.get(concept_key, []))
+            create_concept(concept_key, concept_value, concept_id_to_labels_mapping.get(concept_key, []))
             for concept_key, concept_value in concepts.items()
         }
+
+    def _json_paths(self, *paths: Path) -> list[Path]:
+        """Return the JSON file paths."""
+        json_paths: list[Path] = []
+        for path in paths:
+            json_paths.extend(path.rglob("*.json") if path.is_dir() else [path])
+        return json_paths
