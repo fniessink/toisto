@@ -51,6 +51,8 @@ Update the [changelog](../CHANGELOG.md).
 
 Update the version number in [`pyproject.toml`](../pyproject.toml).
 
+Update the version number in [`sonar-project.properties`](../sonar-project.properties).
+
 Commit and push the changes and merge the branch.
 
 Clean up old build and dist files:
