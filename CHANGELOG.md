@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## 0.37.0 - [Unreleased]
 
+### Fixed
+
+- Only show the base grammatical form of labels when listing the concepts users can practice under `toisto practice --help`. Fixes [#1072](https://github.com/fniessink/toisto/issues/1072).
+
 ### Added
 
 - Add command to upgrade Toisto to the latest version (`toisto self upgrade`). Closes [#1045](https://github.com/fniessink/toisto/issues/1045).
