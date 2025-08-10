@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of SonarCloud analysis
       - name: Install uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
-          version: "0.7.19"
+          version: "0.8.8"
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -36,8 +36,7 @@ jobs:
           uvx coverage xml  # SonarCloud needs a Cobertura compatible XML coverage report
           uv run python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
       - name: SonarCloud scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         if: env.SONAR_TOKEN != null
