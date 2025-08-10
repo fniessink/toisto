@@ -91,14 +91,14 @@ class FilterTest(ToistoTestCase):
 
     def test_do_not_add_holonyms_of_selected_concepts(self):
         """Test that the holonyms of selected concepts are not added."""
-        bar_part = self.create_concept("bar part", {"holonym": self.thing_id})
-        bar_part_part = self.create_concept(
-            "bar part part", {"holonym": bar_part.concept_id}, labels=[{"label": "bar part part", "language": EN}]
+        thing_part = self.create_concept("thing part", {"holonym": self.thing_id})
+        thing_part_part = self.create_concept(
+            "thing part part", {"holonym": thing_part.concept_id}, labels=[{"label": "thing part part", "language": EN}]
         )
         self.assertEqual(
-            {bar_part_part},
+            {thing_part_part},
             self.filter_concepts(
-                concepts=self.concepts | {bar_part, bar_part_part}, selected_concepts=["bar part part"]
+                concepts=self.concepts | {thing_part, thing_part_part}, selected_concepts=["thing part part"]
             ),
         )
 

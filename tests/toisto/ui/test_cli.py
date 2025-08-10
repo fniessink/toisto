@@ -294,11 +294,21 @@ Options:
     @patch("sys.stdout.write")
     def test_practice_help(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
-        concept1 = ConceptId("concept1")
-        concept2 = ConceptId("concept2")
+        self.maxDiff = None
         concepts = {
-            Concept(concept1, Labels((Label(EN, "concept1"),)), {}, answer_only=False),
-            Concept(concept2, Labels((Label(EN, "concept2"),)), {}, answer_only=False),
+            Concept(ConceptId("included"), Labels((Label(EN, "included"),)), {}, answer_only=False),
+            Concept(ConceptId("answer only"), Labels((Label(EN, "answer only, so not listed"),)), {}, answer_only=True),
+            Concept(
+                ConceptId("concept with plural"),
+                Labels(
+                    (
+                        Label(EN, "singular", grammatical_base="singular", grammatical_categories=("singular",)),
+                        Label(EN, "plural", grammatical_base="singular", grammatical_categories=("plural",)),
+                    ),
+                ),
+                {},
+                answer_only=False,
+            ),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
@@ -306,7 +316,7 @@ Options:
 
 {PRACTICE_DESCRIPTION}
 
-{POSITIONAL_ARGUMENTS % " concept1, concept2"}
+{POSITIONAL_ARGUMENTS % " included, singular"}
 
 Options:
   {HELP_OPTION}

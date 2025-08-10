@@ -11,12 +11,12 @@ from rich_argparse import RichHelpFormatter
 
 from toisto.command.show_progress import SortColumn
 from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, latest_version
-from toisto.model.filter import map_concepts_by_label
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
 from toisto.model.quiz.quiz_type import QuizType
 from toisto.persistence.folder import home
+from toisto.tools import first
 from toisto.ui.text import version_message
 
 if TYPE_CHECKING:
@@ -107,19 +107,21 @@ class CommandBuilder:
 
     def add_concept_argument(self, parser: ArgumentParser, concepts: set[Concept]) -> None:
         """Add the concept argument."""
-        concepts_by_label = map_concepts_by_label(concepts, self.get_target_language())
-        labels = sorted(
-            label
-            for (label, concepts) in concepts_by_label.items()
-            if not concepts.copy().pop().is_complete_sentence
-            and not concepts.copy().pop().get_related_concepts("hypernym")
-        )
+        concepts = {
+            concept
+            for concept in concepts
+            if not concept.is_complete_sentence
+            and not concept.get_related_concepts("hypernym")
+            and not concept.answer_only
+        }
+        language = self.get_target_language()
+        all_labels = sorted(str(first(labels)) for concept in concepts if (labels := concept.labels(language)))
         parser.add_argument(
             "concepts",
             metavar="{concept}",
             nargs="*",
-            help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(labels)}",
-            type=OptionChecker(tuple(labels)),
+            help=f"concept to use, can be repeated; default: all; built-in concepts: {', '.join(all_labels)}",
+            type=OptionChecker(tuple(all_labels)),
         )
 
     def get_target_language(self) -> Language:
