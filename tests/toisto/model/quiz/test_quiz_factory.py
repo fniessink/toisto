@@ -1,7 +1,8 @@
 """Quiz factory unit tests."""
 
 from toisto.model.language import EN, FI, NL
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept_factory import ConceptJSON
 from toisto.model.language.grammar import Tense
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
@@ -43,7 +44,7 @@ from toisto.model.quiz.quiz_type import (
 )
 from toisto.tools import first
 
-from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ConceptDict, LabelDict, ToistoTestCase
+from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, LabelDict, ToistoTestCase
 
 
 class QuizFactoryTestCase(ToistoTestCase):
@@ -151,7 +152,7 @@ class QuizFactoryTestCase(ToistoTestCase):
                 "language": NL,
             },
         ]
-        big: ConceptDict = {"antonym": antonym} if antonym else {}
+        big: ConceptJSON = {"antonym": ConceptId(antonym)} if antonym else {}
         return self.create_concept("big", big, labels=labels)
 
     def create_noun(self) -> Concept:
@@ -636,7 +637,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
         big_concept = self.create_adjective_with_degrees_of_comparison(antonym="small")
         small_concept = self.create_concept(
             "small",
-            {"antonym": "big"},
+            {"antonym": ConceptId("big")},
             labels=[
                 {
                     "label": {
@@ -1652,7 +1653,7 @@ class NumberTest(ToistoTestCase):
                 {"label": {"cardinal": "een", "ordinal": "eerste"}, "language": NL},
             ],
         )
-        one, first = concept.labels(EN)
+        one, first_ = concept.labels(EN)
         een, eerste = concept.labels(NL)
         self.assertSetEqual(
             {
@@ -1660,10 +1661,10 @@ class NumberTest(ToistoTestCase):
                 self.create_quiz(concept, een, [een], DICTATE),
                 self.create_quiz(concept, een, [one], INTERPRET),
                 self.create_quiz(concept, one, [een], WRITE),
-                self.create_quiz(concept, eerste, [first], READ),
+                self.create_quiz(concept, eerste, [first_], READ),
                 self.create_quiz(concept, eerste, [eerste], DICTATE),
-                self.create_quiz(concept, eerste, [first], INTERPRET),
-                self.create_quiz(concept, first, [eerste], WRITE),
+                self.create_quiz(concept, eerste, [first_], INTERPRET),
+                self.create_quiz(concept, first_, [eerste], WRITE),
                 self.create_quiz(concept, eerste, [een], CARDINAL),
                 self.create_quiz(concept, een, [eerste], ORDINAL),
             },
@@ -1794,10 +1795,10 @@ class ColloquialTest(ToistoTestCase):
         """Test the generated quizzes when colloquial labels and related concepts are combined."""
         yes = self.create_concept(
             "yes",
-            {"antonym": "no"},
+            {"antonym": ConceptId("no")},
             labels=[{"label": "kylla", "language": FI}, {"label": "kyl", "language": FI, "colloquial": True}],
         )
-        no = self.create_concept("no", {"antonym": "yes"}, labels=[{"label": "ei", "language": FI}])
+        no = self.create_concept("no", {"antonym": ConceptId("yes")}, labels=[{"label": "ei", "language": FI}])
         kylla, kyl = yes.labels(FI)
         (ei,) = no.labels(FI)
         self.assertSetEqual(

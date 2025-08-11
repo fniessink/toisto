@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Required, TypedDict, cast
+from typing import NotRequired, Required, TypedDict, cast
 
 from toisto.tools import first
 
@@ -18,16 +18,16 @@ JSONRecursiveGrammar = dict[GrammaticalCategory, JSONGrammar]
 LabelJSON = TypedDict(
     "LabelJSON",
     {
-        "colloquial": bool,
+        "colloquial": NotRequired[bool],
         "concept": Required[ConceptIdListOrString],
         "label": Required[str | list[str] | JSONGrammar | JSONRecursiveGrammar],
         "language": Required[Language],
-        "meaning-only": bool,
-        "note": str | list[str],
-        "roots": str | list[str],
-        "tip": str,
+        "meaning-only": NotRequired[bool],
+        "note": NotRequired[str | list[str]],
+        "roots": NotRequired[str | list[str]],
+        "tip": NotRequired[str],
     },
-    total=False,
+    total=True,
 )
 
 

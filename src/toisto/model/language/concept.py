@@ -13,7 +13,6 @@ from .label import Labels
 ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
 ConceptIdListOrString = ConceptId | list[ConceptId]
-ConceptIdDictOrListOrString = dict[Language, ConceptIdListOrString] | ConceptIdListOrString
 
 InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
 RecursiveConceptRelation = Literal["holonym", "hypernym", "involves"]

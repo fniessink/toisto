@@ -1,6 +1,7 @@
 """Quiz unit tests."""
 
 from toisto.model.language import EN, FI, NL
+from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz_type import (
     ABBREVIATION,
@@ -307,7 +308,7 @@ class QuizInstructionTest(QuizTestCase):
         )
         sofa = self.create_concept(
             "bank",
-            {"hypernym": "furniture"},
+            {"hypernym": ConceptId("furniture")},
             labels=[{"label": "sofa", "language": FI}, bank_nl],
         )
         (bank_label,) = sofa.labels(NL)
@@ -320,7 +321,9 @@ class QuizInstructionTest(QuizTestCase):
         # Create the homograph of fly:
         self.create_concept("to fly", labels=[fly_en, {"label": "vliegen", "language": NL}])
         self.create_concept("insect", {})  # Create the hypernym of fly
-        fly = self.create_concept("fly", {"hypernym": "insect"}, labels=[fly_en, {"label": "de vlieg", "language": NL}])
+        fly = self.create_concept(
+            "fly", {"hypernym": ConceptId("insect")}, labels=[fly_en, {"label": "de vlieg", "language": NL}]
+        )
         (vlieg,) = fly.labels(NL)
         quiz = self.create_quiz(fly, vlieg, [vlieg], DICTATE)
         self.assertEqual("Listen and write in Dutch", quiz.instruction)
@@ -333,9 +336,11 @@ class QuizInstructionTest(QuizTestCase):
         # Create the hypernym of seating:
         self.create_concept("furniture", {})
         # Create the hypernym of sofa:
-        self.create_concept("seating", {"hypernym": "furniture"}, labels=[{"label": "het zitmeubel", "language": NL}])
+        self.create_concept(
+            "seating", {"hypernym": ConceptId("furniture")}, labels=[{"label": "het zitmeubel", "language": NL}]
+        )
         sofa = self.create_concept(
-            "sofa", {"hypernym": "seating"}, labels=[{"label": "sohva", "language": FI}, bank_nl]
+            "sofa", {"hypernym": ConceptId("seating")}, labels=[{"label": "sohva", "language": FI}, bank_nl]
         )
         (bank_label,) = sofa.labels(NL)
         quiz = self.create_quiz(sofa, bank_label, [bank_label], DICTATE)
@@ -398,7 +403,7 @@ class QuizInstructionTest(QuizTestCase):
         )
         wood = self.create_concept(
             "wood",
-            {"holonym": "tree"},
+            {"holonym": ConceptId("tree")},
             labels=[{"label": "puu", "language": FI}, {"label": "het hout", "language": NL}],
         )
         (hout,) = wood.labels(NL)
@@ -421,7 +426,7 @@ class QuizInstructionTest(QuizTestCase):
         )
         play_sport = self.create_concept(
             "to play a sport",
-            {"involves": "sport"},
+            {"involves": ConceptId("sport")},
             labels=[{"label": "to play", "language": EN}, {"label": "pelata", "language": FI}],
         )
         (to_play,) = play_sport.labels(EN)
@@ -440,7 +445,7 @@ class QuizInstructionTest(QuizTestCase):
         self.create_concept("language", labels=[{"label": "kieli", "language": FI}])
         greek = self.create_concept(
             "greek",
-            {"hypernym": "language"},
+            {"hypernym": ConceptId("language")},
             labels=[{"label": "kreikka", "language": FI}, {"label": "Grieks", "language": NL}],
         )
         (kreikka,) = greek.labels(FI)
@@ -460,12 +465,12 @@ class QuizInstructionTest(QuizTestCase):
         # Create the hypernym of greek:
         self.create_concept(
             "Indo-European language",
-            {"hypernym": "language"},
+            {"hypernym": ConceptId("language")},
             labels=[{"label": "indoeurooppalainen kieli", "language": FI}],
         )
         greek = self.create_concept(
             "greek",
-            {"hypernym": "Indo-European language"},
+            {"hypernym": ConceptId("Indo-European language")},
             labels=[{"label": "kreikka", "language": FI}, {"label": "Grieks", "language": NL}],
         )
         (kreikka,) = greek.labels(FI)

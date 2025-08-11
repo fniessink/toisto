@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, Mock, call, patch
 
 from toisto.command.practice import practice
 from toisto.model.language import FI, NL, LanguagePair
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -50,7 +50,7 @@ class PracticeTest(ToistoTestCase):
                 )
                 return self.create_concept(
                     "table lamp",
-                    {"example": "I am looking for a table lamp"},
+                    {"example": ConceptId("I am looking for a table lamp")},
                     labels=[
                         {"label": "pöytälamppu", "language": FI},
                         {"label": "pöytävalaisin", "language": FI},
@@ -264,7 +264,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the example is shown after the quiz."""
         concept = self.create_concept(
             "next to",
-            {"example": "the museum is next to the church"},
+            {"example": ConceptId("the museum is next to the church")},
             labels=[{"label": "vieressä", "language": FI}, {"label": "naast", "language": NL}],
         )
         self.create_concept(
@@ -287,7 +287,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the examples are shown after the quiz."""
         concept = self.create_concept(
             "black",
-            {"example": ["the car is black", "the cars are black"]},
+            {"example": [ConceptId("the car is black"), ConceptId("the cars are black")]},
             labels=[{"label": "musta", "language": FI}, {"label": "zwart", "language": NL}],
         )
         self.create_concept(
@@ -343,7 +343,7 @@ class PracticeTest(ToistoTestCase):
         """Test that the correct meaning of the antonyms is given."""
         son = self.create_concept(
             "son",
-            {"antonym": ["daughter", "father"]},
+            {"antonym": [ConceptId("daughter"), ConceptId("father")]},
             labels=[{"label": "poika", "language": FI}, {"label": "de zoon", "language": NL}],
         )
         self.create_concept(

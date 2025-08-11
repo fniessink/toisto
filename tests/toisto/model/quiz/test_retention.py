@@ -2,7 +2,7 @@
 
 import unittest
 from datetime import UTC, datetime, timedelta
-from typing import cast
+from typing import Literal, cast
 
 from toisto.model.quiz.retention import Retention
 
@@ -14,10 +14,10 @@ class RetentionTest(unittest.TestCase):
         """Override to set up fixtures."""
         self.retention = Retention()
 
-    def guess(self, *guesses: bool) -> None:
+    def guess(self, *guesses: Literal["correct", "incorrect"]) -> None:
         """Register the guesses with the retention."""
         for guess in guesses:
-            if guess:
+            if guess == "correct":
                 self.retention.increase()
                 self.retention.start = (self.retention.start or datetime.now().astimezone()) - timedelta(minutes=30)
             else:
@@ -34,7 +34,7 @@ class RetentionTest(unittest.TestCase):
 
     def test_is_silenced_if_initial_answer_is_correct(self):
         """Test that a retention is silenced if the initial guess is correct."""
-        self.guess(True)
+        self.guess("correct")
         self.assertTrue(self.retention.is_silenced())
         self.assertGreaterEqual(
             (self.retention.skip_until or datetime.min.replace(tzinfo=UTC)).replace(microsecond=0),
@@ -43,13 +43,13 @@ class RetentionTest(unittest.TestCase):
 
     def test_is_not_silenced_after_one_correct_guess(self):
         """Test that a retention is not silenced after one correct guess."""
-        self.guess(False, True)
+        self.guess("incorrect", "correct")
         self.assertFalse(self.retention.is_silenced())
         self.assertIsNone(self.retention.skip_until)
 
     def test_is_silenced_after_two_correct_guesses(self):
         """Test that a retention is silenced after two correct guesses."""
-        self.guess(False, True, True)
+        self.guess("incorrect", "correct", "correct")
         self.assertTrue(self.retention.is_silenced())
         self.assertGreater(
             self.retention.skip_until or datetime.min.replace(tzinfo=UTC),
@@ -58,7 +58,7 @@ class RetentionTest(unittest.TestCase):
 
     def test_is_reset_after_an_incorrect_guess(self):
         """Test that a retention is reset after an incorrect guess."""
-        self.guess(True, False)
+        self.guess("correct", "incorrect")
         self.assertFalse(self.retention.is_silenced())
         self.assertIsNone(self.retention.skip_until)
         self.assertEqual(2, self.retention.count)
@@ -69,7 +69,7 @@ class RetentionTest(unittest.TestCase):
 
     def test_one_guess_as_dict(self):
         """Test that the retention can be serialized."""
-        self.guess(True)
+        self.guess("correct")
         start = cast("datetime", self.retention.start).isoformat(timespec="seconds")
         end = cast("datetime", self.retention.end).isoformat(timespec="seconds")
         skip_until = cast("datetime", self.retention.skip_until).isoformat(timespec="seconds")
@@ -77,7 +77,7 @@ class RetentionTest(unittest.TestCase):
 
     def test_two_guesses_as_dict(self):
         """Test that the retention can be serialized."""
-        self.guess(True, True)
+        self.guess("correct", "correct")
         self.assertIn("start", self.retention.as_dict())
         self.assertIn("end", self.retention.as_dict())
         self.assertIn("skip_until", self.retention.as_dict())
@@ -88,7 +88,7 @@ class RetentionTest(unittest.TestCase):
 
     def test_one_guess_from_dict(self):
         """Test that a retention can be deserialized."""
-        self.guess(True)
+        self.guess("correct")
         start = cast("datetime", self.retention.start).replace(microsecond=0)
         end = cast("datetime", self.retention.end).replace(microsecond=0)
         skip_until = cast("datetime", self.retention.skip_until).replace(microsecond=0)

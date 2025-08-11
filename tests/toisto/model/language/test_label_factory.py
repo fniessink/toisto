@@ -1,14 +1,16 @@
 """Unit tests for the label factory."""
 
-from typing import cast
+from typing import TYPE_CHECKING, cast
 
 from toisto.model.language import EN, NL
 from toisto.model.language.concept import ConceptId
-from toisto.model.language.grammar import GrammaticalCategory
 from toisto.model.language.label import Label
 from toisto.model.language.label_factory import LabelFactory, LabelJSON
 
 from ....base import ToistoTestCase
+
+if TYPE_CHECKING:
+    from toisto.model.language.grammar import GrammaticalCategory
 
 
 class LabelFactoryTest(ToistoTestCase):
