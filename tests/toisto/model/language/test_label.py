@@ -112,7 +112,7 @@ class LabelTest(ToistoTestCase):
     def test_capitonyms_within_concept(self):
         """Test capitonyms within one concept."""
         concept = self.create_concept(
-            "to be",
+            "olla",
             labels=[
                 {
                     "label": {"singular": {"second person": "Te olette"}, "plural": {"second person": "te olette"}},

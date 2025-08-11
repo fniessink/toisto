@@ -1,6 +1,7 @@
 """Concept relations unit tests."""
 
 from toisto.model.language import EN
+from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -17,8 +18,12 @@ class AntonymConceptsTest(QuizFactoryTestCase):
     def setUp(self) -> None:
         """Extend to set up text fixtures."""
         super().setUp()
-        self.big = self.create_concept("big", {"antonym": "small"}, labels=[{"label": "big", "language": EN}])
-        self.small = self.create_concept("small", {"antonym": "big"}, labels=[{"label": "small", "language": EN}])
+        self.big = self.create_concept(
+            "big", {"antonym": ConceptId("small")}, labels=[{"label": "big", "language": EN}]
+        )
+        self.small = self.create_concept(
+            "small", {"antonym": ConceptId("big")}, labels=[{"label": "small", "language": EN}]
+        )
         self.quizzes = create_quizzes(EN_NL, (), self.big, self.small)
 
     def test_antonym_concepts(self):
@@ -43,7 +48,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
     def test_single_answer(self):
         """Test that quizzes are generated for concepts with an answer concept."""
         question = self.create_concept(
-            "question", {"answer": "answer"}, labels=[{"label": "How are you?", "language": EN}]
+            "question", {"answer": ConceptId("answer")}, labels=[{"label": "How are you?", "language": EN}]
         )
         answer = self.create_concept("answer", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         quizzes = create_quizzes(EN_NL, (), question, answer)
@@ -55,7 +60,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
         """Test that quizzes are generated for multiple grammatical categories."""
         question = self.create_concept(
             "question",
-            {"answer": "answer"},
+            {"answer": ConceptId("answer")},
             labels=[{"label": {"singular": "How are you?", "plural": "How are you all?"}, "language": EN}],
         )
         answer = self.create_concept(
@@ -75,7 +80,9 @@ class AnswerConceptsTest(QuizFactoryTestCase):
     def test_multiple_answers(self):
         """Test that quizzes can have multiple answers."""
         question = self.create_concept(
-            "question", {"answer": ["fine", "good"]}, labels=[{"label": "How are you?", "language": EN}]
+            "question",
+            {"answer": [ConceptId("fine"), ConceptId("good")]},
+            labels=[{"label": "How are you?", "language": EN}],
         )
         fine = self.create_concept("fine", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         good = self.create_concept("good", labels=[{"label": "I'm doing good, thank you.", "language": EN}])
@@ -85,7 +92,7 @@ class AnswerConceptsTest(QuizFactoryTestCase):
     def test_answer_quiz_order(self):
         """Test that before quizzing for an answer to a question, the answer itself has been quizzed."""
         question = self.create_concept(
-            "question", {"answer": "answer"}, labels=[{"label": "How are you?", "language": EN}]
+            "question", {"answer": ConceptId("answer")}, labels=[{"label": "How are you?", "language": EN}]
         )
         answer = self.create_concept("answer", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         quizzes = create_quizzes(EN_NL, (), question, answer)

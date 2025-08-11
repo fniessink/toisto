@@ -294,11 +294,11 @@ Options:
     @patch("sys.stdout.write")
     def test_practice_help(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
-        foo = ConceptId("foo")
-        bar = ConceptId("bar")
+        concept1 = ConceptId("concept1")
+        concept2 = ConceptId("concept2")
         concepts = {
-            Concept(foo, Labels((Label(EN, "foo"),)), {}, False),
-            Concept(bar, Labels((Label(EN, "bar"),)), {}, False),
+            Concept(concept1, Labels((Label(EN, "concept1"),)), {}, answer_only=False),
+            Concept(concept2, Labels((Label(EN, "concept2"),)), {}, answer_only=False),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
         self.assertEqual(
@@ -306,7 +306,7 @@ Options:
 
 {PRACTICE_DESCRIPTION}
 
-{POSITIONAL_ARGUMENTS % " bar, foo"}
+{POSITIONAL_ARGUMENTS % " concept1, concept2"}
 
 Options:
   {HELP_OPTION}

@@ -1,16 +1,20 @@
 """Progress unit tests."""
 
-from typing import cast
+from typing import TYPE_CHECKING, cast
 
 from toisto.model.language import EN, FI, NL
+from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
-from toisto.model.quiz.quiz import Quiz, Quizzes
+from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, TranslationQuizType
 from toisto.tools import first
 
 from ....base import FI_NL, NL_EN, ToistoTestCase
+
+if TYPE_CHECKING:
+    from toisto.model.quiz.quiz import Quiz
 
 
 class ProgressTest(ToistoTestCase):
@@ -158,7 +162,7 @@ class ProgressOfRelatedQuizzesTest(ToistoTestCase):
         example_quizzes = create_quizzes(FI_NL, (), example)
         concept = self.create_concept(
             "english",
-            {"example": "example"},
+            {"example": ConceptId("example")},
             labels=[{"label": "englanti", "language": FI}, {"label": "Engels", "language": NL}],
         )
         self.concept_quizzes = create_quizzes(FI_NL, (), concept)

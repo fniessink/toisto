@@ -1,14 +1,16 @@
 """Unit tests for concepts."""
 
 from itertools import product
-from typing import cast, get_args
+from typing import TYPE_CHECKING, cast, get_args
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
-from toisto.model.language.grammar import GrammaticalCategory
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
+
+if TYPE_CHECKING:
+    from toisto.model.language.grammar import GrammaticalCategory
 
 
 class ConceptTest(ToistoTestCase):
@@ -122,7 +124,9 @@ class ConceptTest(ToistoTestCase):
                 "meaning only", labels=[{"label": "Hei!", "language": FI, "meaning-only": True}]
             ).is_complete_sentence
         )
-        self.assertFalse(self.create_concept("involves only", {"involves": ["other concept"]}).is_complete_sentence)
+        self.assertFalse(
+            self.create_concept("involves only", {"involves": ConceptId("other concept")}).is_complete_sentence
+        )
         composite_concept = self.create_concept(
             "the house is big",
             labels=[{"label": {"singular": "The house is big.", "plural": "The houses are big."}, "language": EN}],

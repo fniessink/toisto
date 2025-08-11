@@ -23,7 +23,12 @@ def _run_command(command: str, *args: str) -> None:
     # message: "[B603:subprocess_without_hell_equals_true] subprocess call - check for execution of untrusted input".
     # Popen should be safe as it is invoked with either "say" or an mp3 play command provided by the user in their
     # config file.
-    Popen([command, *args], stdin=DEVNULL, stdout=DEVNULL, stderr=DEVNULL)  # noqa: S603, # nosec subprocess_without_shell_equals_true
+    Popen(  # noqa: S603, # nosec subprocess_without_shell_equals_true
+        [command, *args],
+        stdin=DEVNULL,
+        stdout=DEVNULL,
+        stderr=DEVNULL,
+    )
 
 
 class Speech:
@@ -36,14 +41,15 @@ class Speech:
     def say(self, language: Language, text: str, slow: bool = False) -> None:
         """Say the text in the specified language."""
         if self.platform == "ashell":
-            return self._say_with_apple_say(language, text, slow)
-        try:
-            self._say_with_google_translate(language, text, slow)
-        except RuntimeError:
-            if self.platform == "darwin":
-                self._say_with_apple_say(language, text, slow)
-            else:
-                raise
+            self._say_with_apple_say(language, text, slow)
+        else:
+            try:
+                self._say_with_google_translate(language, text, slow)
+            except RuntimeError:
+                if self.platform == "darwin":
+                    self._say_with_apple_say(language, text, slow)
+                else:
+                    raise
 
     def _say_with_apple_say(self, language: Language, text: str, slow: bool) -> None:
         """Say the text with the Apple say command that's available on macOS and iOS."""

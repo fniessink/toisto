@@ -3,18 +3,21 @@
 import unittest
 from collections.abc import Collection, Sequence
 from io import StringIO
-from typing import Final, Required, TypedDict, cast
+from typing import TYPE_CHECKING, Final, Required, TypedDict, cast
 
 from green.output import GreenStream
 from xmlrunner.result import _DuplicateWriter as DuplicateWriter
 
 from toisto.model.language import EN, FI, NL, Language, LanguagePair
-from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept import Concept
 from toisto.model.language.concept_factory import ConceptJSON, create_concept
 from toisto.model.language.label import Label, Labels
-from toisto.model.language.label_factory import LabelJSON
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import READ, QuizType
+
+if TYPE_CHECKING:
+    from toisto.model.language.concept import ConceptId
+    from toisto.model.language.label_factory import LabelJSON
 
 # The DramaticTextIOWrapper of the dramatic package expects the stdout stream to have a buffer attribute,
 # but the GreenStream created by green and the DuplicateWriter created by xmlrunner do not have one, causing an
@@ -32,40 +35,21 @@ NL_EN: Final[LanguagePair] = LanguagePair(NL, EN)
 NL_FI: Final[LanguagePair] = LanguagePair(NL, FI)
 
 ConceptIdListOrString = str | list[str]
-ConceptIdDictOrListOrString = dict[str, ConceptIdListOrString] | ConceptIdListOrString
-
-ConceptDict = TypedDict(
-    "ConceptDict",
-    {
-        "antonym": ConceptIdListOrString,
-        "answer": ConceptIdListOrString,
-        "answer-only": bool,
-        "example": ConceptIdListOrString,
-        "holonym": ConceptIdListOrString,
-        "hypernym": ConceptIdListOrString,
-        "involves": ConceptIdListOrString,
-        "roots": ConceptIdDictOrListOrString,
-    },
-    total=False,
-)
 
 LabelDict = TypedDict(
     "LabelDict",
     {
         "colloquial": bool,
         "concept": ConceptIdListOrString,
-        "label": (
-            Required[
-                str
-                | list[str]
-                | dict[str, Collection[str]]
-                | dict[str, list[str]]
-                | dict[str, str]
-                | dict[str, dict[str, str]]
-                | dict[str, str | dict[str, str]]
-                | dict[str, dict[str, dict[str, str]]]
-            ]
-        ),
+        "label": Required[
+            str
+            | list[str]
+            | dict[str, str]
+            | dict[str, list[str]]
+            | dict[str, Collection[str]]
+            | dict[str, dict[str, str]]
+            | dict[str, dict[str, dict[str, str]]]
+        ],
         "language": Required[Language],
         "meaning-only": bool,
         "note": str | list[str],
@@ -87,7 +71,7 @@ class ToistoTestCase(unittest.TestCase):
 
     @staticmethod
     def create_concept(
-        concept_id: str, concept_dict: ConceptDict | None = None, labels: list[LabelDict] | None = None
+        concept_id: str, concept_dict: ConceptJSON | None = None, labels: list[LabelDict] | None = None
     ) -> Concept:
         """Create a concept."""
         concept_dict = concept_dict or {}
@@ -95,9 +79,7 @@ class ToistoTestCase(unittest.TestCase):
         for label in labels:
             if "concept" not in label:
                 label["concept"] = concept_id
-        return create_concept(
-            cast("ConceptId", concept_id), cast("ConceptJSON", concept_dict), cast("list[LabelJSON]", labels)
-        )
+        return create_concept(cast("ConceptId", concept_id), concept_dict, cast("list[LabelJSON]", labels))
 
     def create_quiz(
         self,

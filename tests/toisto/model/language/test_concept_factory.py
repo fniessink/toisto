@@ -1,7 +1,7 @@
 """Concept factory unit tests."""
 
 from toisto.model.language import EN, FI, NL
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -87,13 +87,15 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_antonym(self):
         """Test that a concept can have an antonym concept."""
-        big = self.create_concept("big", {"antonym": "small"}, labels=[{"label": "big", "language": EN}])
+        big = self.create_concept("big", {"antonym": ConceptId("small")}, labels=[{"label": "big", "language": EN}])
         small = self.create_concept("small", labels=[{"label": "small", "language": EN}])
         self.assertEqual((small,), big.get_related_concepts("antonym"))
 
     def test_multiple_antonyms(self):
         """Test that a concept can have multiple antonyms."""
-        big = self.create_concept("big", {"antonym": ["small", "little"]}, labels=[{"label": "big", "language": EN}])
+        big = self.create_concept(
+            "big", {"antonym": [ConceptId("small"), ConceptId("little")]}, labels=[{"label": "big", "language": EN}]
+        )
         little = self.create_concept("little", labels=[{"label": "little", "language": EN}])
         small = self.create_concept("small", labels=[{"label": "small", "language": EN}])
         self.assertEqual((small, little), big.get_related_concepts("antonym"))
@@ -101,37 +103,39 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_hypernym_and_hyponym(self):
         """Test that a concept can have a hypernym concept, and that the hypernym has the concept as hyponym."""
         canine = self.create_concept("canine", labels=[{"label": "canine", "language": EN}])
-        dog = self.create_concept("dog", {"hypernym": "canine"}, labels=[{"label": "dog", "language": EN}])
+        dog = self.create_concept("dog", {"hypernym": ConceptId("canine")}, labels=[{"label": "dog", "language": EN}])
         self.assertEqual((canine,), dog.get_related_concepts("hypernym"))
         self.assertEqual((dog,), canine.get_related_concepts("hyponym"))
 
     def test_hypernyms_and_hyponyms_are_transitive(self):
         """Test that a concept's hypernyms and hyponyms are transitive."""
         animal = self.create_concept("animal", labels=[{"label": "animal", "language": EN}])
-        canine = self.create_concept("canine", {"hypernym": "animal"}, labels=[{"label": "canine", "language": EN}])
-        dog = self.create_concept("dog", {"hypernym": "canine"}, labels=[{"label": "dog", "language": EN}])
+        canine = self.create_concept(
+            "canine", {"hypernym": ConceptId("animal")}, labels=[{"label": "canine", "language": EN}]
+        )
+        dog = self.create_concept("dog", {"hypernym": ConceptId("canine")}, labels=[{"label": "dog", "language": EN}])
         self.assertEqual((canine, animal), dog.get_related_concepts("hypernym"))
         self.assertEqual((canine, dog), animal.get_related_concepts("hyponym"))
 
     def test_holonym_and_meronym(self):
         """Test that a concept can have a holonym concept, and that the meronym has the concept as holonym."""
         animal = self.create_concept("animal", labels=[{"label": "animal", "language": EN}])
-        tail = self.create_concept("tail", {"holonym": "animal"}, labels=[{"label": "tail", "language": EN}])
+        tail = self.create_concept("tail", {"holonym": ConceptId("animal")}, labels=[{"label": "tail", "language": EN}])
         self.assertEqual((animal,), tail.get_related_concepts("holonym"))
         self.assertEqual((tail,), animal.get_related_concepts("meronym"))
 
     def test_holonyms_and_meronyms_are_transitive(self):
         """Test that a concept's holonyms and meronyms are transitive."""
         animal = self.create_concept("animal", labels=[{"label": "animal", "language": EN}])
-        head = self.create_concept("head", {"holonym": "animal"}, labels=[{"label": "head", "language": EN}])
-        eye = self.create_concept("eye", {"holonym": "head"}, labels=[{"label": "eye", "language": EN}])
+        head = self.create_concept("head", {"holonym": ConceptId("animal")}, labels=[{"label": "head", "language": EN}])
+        eye = self.create_concept("eye", {"holonym": ConceptId("head")}, labels=[{"label": "eye", "language": EN}])
         self.assertEqual((head, animal), eye.get_related_concepts("holonym"))
         self.assertEqual((head, eye), animal.get_related_concepts("meronym"))
 
     def test_answer(self):
         """Test that a concept can have an answer relation with another concept."""
         question = self.create_concept(
-            "ice cream", {"answer": "yes"}, labels=[{"label": "Do you like ice cream?", "language": EN}]
+            "ice cream", {"answer": ConceptId("yes")}, labels=[{"label": "Do you like ice cream?", "language": EN}]
         )
         answer = self.create_concept("yes", labels=[{"label": "Yes!", "language": EN}])
         self.assertEqual((answer,), question.get_related_concepts("answer"))
@@ -139,7 +143,9 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_multiple_answers(self):
         """Test that a concept can have an answer relation with multiple concepts."""
         question = self.create_concept(
-            "ice cream", {"answer": ["yes", "no"]}, labels=[{"label": "Do you like ice cream?", "language": EN}]
+            "ice cream",
+            {"answer": [ConceptId("yes"), ConceptId("no")]},
+            labels=[{"label": "Do you like ice cream?", "language": EN}],
         )
         yes = self.create_concept("yes", labels=[{"label": "Yes!", "language": EN}])
         no = self.create_concept("no", labels=[{"label": "No!", "language": EN}])
@@ -148,7 +154,9 @@ class ConcepFactoryTest(ToistoTestCase):
     def test_example(self):
         """Test that a concept can have an example."""
         concept = self.create_concept(
-            "next to", {"example": "the museum is next to the church"}, labels=[{"label": "vieressä", "language": FI}]
+            "next to",
+            {"example": ConceptId("the museum is next to the church")},
+            labels=[{"label": "vieressä", "language": FI}],
         )
         example = self.create_concept(
             "the museum is next to the church", labels=[{"label": "Museo on kirkon vieressä.", "language": FI}]
@@ -157,7 +165,7 @@ class ConcepFactoryTest(ToistoTestCase):
 
     def test_multiple_examples(self):
         """Test that a concept can have multiple examples."""
-        examples = ["the car is black", "the cars are black"]
+        examples = [ConceptId("the car is black"), ConceptId("the cars are black")]
         concept = self.create_concept("black", {"example": examples}, labels=[{"label": "musta", "language": FI}])
         example1 = self.create_concept("the car is black", labels=[{"label": "Auto on musta.", "language": FI}])
         example2 = self.create_concept("the cars are black", labels=[{"label": "Autot ovat mustia.", "language": FI}])

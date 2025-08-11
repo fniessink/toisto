@@ -74,6 +74,7 @@ class SayTest(unittest.TestCase):
         popen.assert_called_once()
         self.assertEqual(popen.call_args_list[0][0][0][0], "afplay")
 
+    @patch("toisto.ui.speech.gTTS", Mock())
     @patch("toisto.ui.speech.music")
     def test_call_builtin_player(self, music: Mock) -> None:
         """Test that the bultin music player (Pygame) is called."""

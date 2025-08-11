@@ -71,7 +71,6 @@ lint.ignore = [
   "D107",    # Prevent 'Missing docstring in `__init__`' errors
   "D203",    # Prevent warning about incompatible rules
   "D213",    # Prevent warning about incompatible rules
-  "FBT003",  # Prevent 'Boolean positional value in function call' errors
   "ISC001",  # This rule may cause conflicts when used with the ruff formatter
   "PLC2401", # Allow non-ascii characters in variable names
   "PT",      # We don't use Pytest

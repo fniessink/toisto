@@ -3,6 +3,7 @@
 from unittest import TestCase
 
 from toisto.model.language import FI, NL
+from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
@@ -248,7 +249,9 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_example_with_spelling_alternatives(self):
         """Test that the post quiz example is formatted correctly when the example has spelling alternatives."""
         hi = self.create_concept(
-            "hi", {"example": "hi alice"}, labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
+            "hi",
+            {"example": ConceptId("hi alice")},
+            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
         )
         self.create_concept(
             "hi alice",
@@ -264,7 +267,9 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_example_with_write_quiz(self):
         """Test that the post quiz example is in the right language when the quiz type is write."""
         hi = self.create_concept(
-            "hi", {"example": "hi alice"}, labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
+            "hi",
+            {"example": ConceptId("hi alice")},
+            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
         )
         self.create_concept(
             "hi alice", labels=[{"label": "Terve Alice!", "language": FI}, {"label": "Hoi Alice!", "language": NL}]
@@ -279,7 +284,9 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_example_with_multiple_meanings(self):
         """Test that the post quiz example is not repeated if an example has multiple meanings."""
         hi = self.create_concept(
-            "hi", {"example": "hi alice"}, labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
+            "hi",
+            {"example": ConceptId("hi alice")},
+            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
         )
         self.create_concept(
             "hi alice",
@@ -300,7 +307,9 @@ class FeedbackTestCase(ToistoTestCase):
     def test_post_quiz_example_with_colloquial_labels(self):
         """Test that the star is removed from colloquial labels."""
         hi = self.create_concept(
-            "hi", {"example": "hi alice"}, labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
+            "hi",
+            {"example": ConceptId("hi alice")},
+            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
         )
         self.create_concept(
             "hi alice",
@@ -325,7 +334,7 @@ class FeedbackTestCase(ToistoTestCase):
         """Test that the post quiz example is for the correct synonym."""
         near = self.create_concept(
             "near",
-            {"example": "it is near"},
+            {"example": ConceptId("it is near")},
             labels=[
                 {"label": "lähellä", "language": FI},
                 {"label": "dichtbij", "language": NL},
