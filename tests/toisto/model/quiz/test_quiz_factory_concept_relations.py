@@ -1,41 +1,51 @@
 """Concept relations unit tests."""
 
 from toisto.model.language import EN
-from toisto.model.language.concept import ConceptId
+from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
-from ....base import EN_NL
+from ....base import EN_NL, LabelDict
 from .test_quiz_factory import QuizFactoryTestCase
 
 
 class AntonymConceptsTest(QuizFactoryTestCase):
     """Unit tests for antonym concepts."""
 
-    def setUp(self) -> None:
-        """Extend to set up text fixtures."""
-        super().setUp()
-        self.big = self.create_concept(
-            "big", {"antonym": ConceptId("small")}, labels=[{"label": "big", "language": EN}]
-        )
-        self.small = self.create_concept(
-            "small", {"antonym": ConceptId("big")}, labels=[{"label": "small", "language": EN}]
-        )
-        self.quizzes = create_quizzes(EN_NL, (), self.big, self.small)
+    def create_antonyms(self, *, add_comparative_degree: bool = False) -> tuple[Concept, Concept]:
+        """Create two antonym concepts."""
+        small_label: LabelDict = {"label": "small", "language": EN}
+        if add_comparative_degree:
+            small_label["label"] = {"positive degree": "small", "comparative degree": "smaller"}
+        small = self.create_concept("small", {"antonym": ConceptId("big")}, labels=[small_label])
+        big = self.create_concept("big", {"antonym": ConceptId("small")}, labels=[{"label": "big", "language": EN}])
+        return small, big
 
     def test_antonym_concepts(self):
         """Test that quizzes are generated for concepts with antonym concepts."""
-        for concept, answer in [(self.big, "small"), (self.small, "big")]:
+        small, big = self.create_antonyms()
+        quizzes = create_quizzes(EN_NL, (), big, small)
+        for concept, answer in [(big, "small"), (small, "big")]:
             antonym = self.create_quiz(concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
-            self.assertIn(antonym, self.quizzes)
+            self.assertIn(antonym, quizzes)
+
+    def test_antonym_concepts_with_different_grammatical_forms(self):
+        """Test that quizzes are generated for concepts with antonym concepts that have grammar."""
+        small, big = self.create_antonyms(add_comparative_degree=True)
+        quizzes = create_quizzes(EN_NL, (), big, small)
+        for concept, answer in [(big, "small"), (small, "big")]:
+            antonym = self.create_quiz(concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
+            self.assertIn(antonym, quizzes)
 
     def test_antonym_quiz_order(self):
         """Test that before quizzing for an antonym, the anytonym itself has been quizzed."""
-        antonym_quizzes = Quizzes(quiz for quiz in self.quizzes if quiz.has_quiz_type(ANTONYM))
-        other_quizzes = self.quizzes - antonym_quizzes
+        small, big = self.create_antonyms()
+        quizzes = create_quizzes(EN_NL, (), big, small)
+        antonym_quizzes = Quizzes(quiz for quiz in quizzes if quiz.has_quiz_type(ANTONYM))
+        other_quizzes = quizzes - antonym_quizzes
         for antonym_quiz in antonym_quizzes:
             for other_quiz in other_quizzes:
                 message = f"{antonym_quiz.key} should be blocked by {other_quiz.key}, but isn't"

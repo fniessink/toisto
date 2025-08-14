@@ -55,7 +55,7 @@ class BaseQuizFactory:
                 answer_meanings,
             )
             for question, answer in self.zip_questions_and_answers(questions, answers)
-            if self.include_question(question, answer)
+            if self.include_question(question, answer) and self.answers_for_question(question, answer, answers)
         )
 
     def skip_quiz_type(self) -> bool:

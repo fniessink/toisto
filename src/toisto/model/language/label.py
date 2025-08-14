@@ -184,6 +184,19 @@ class Label:
         """Return the label compounds."""
         return Labels(label for label in chain(*self.homograph_mapping.values()) if self in label.roots)
 
+    @property
+    def is_grammatical_base(self) -> bool:
+        """Return whether this label has the grammatical base form."""
+        return str(self) == self.grammatical_base
+
+    def has_same_grammatical_form(self, other: Label) -> bool:
+        """Return whether this label has the same grammatical form as the other label."""
+        return (
+            self.grammatical_categories == other.grammatical_categories
+            or (not self.grammatical_categories and other.is_grammatical_base)
+            or (not other.grammatical_categories and self.is_grammatical_base)
+        )
+
     def grammatical_differences(self, *labels: Label) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical differences between this label and the other labels."""
         differences = set()
@@ -247,7 +260,7 @@ class Labels:  # noqa: PLW1641
 
     def with_same_grammatical_categories_as(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
-        return Labels(label for label in self._labels if label.grammatical_categories == other.grammatical_categories)
+        return Labels(label for label in self._labels if label.has_same_grammatical_form(other))
 
     @property
     def non_colloquial(self) -> Labels:
