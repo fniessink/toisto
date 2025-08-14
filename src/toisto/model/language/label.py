@@ -12,7 +12,7 @@ from typing import ClassVar
 from toisto.tools import first, first_upper
 
 from . import Language
-from .grammar import GrammaticalCategory
+from .grammar import GrammaticalCategory, GrammaticalForm
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 HomonymMapping = dict[tuple[Language, str], list["Label"]]
@@ -28,8 +28,7 @@ class Label:
         "_roots",
         "_values",
         "colloquial",
-        "grammatical_base",
-        "grammatical_categories",
+        "grammatical_form",
         "language",
         "meaning_only",
         "notes",
@@ -45,11 +44,10 @@ class Label:
         self,
         language: Language,
         value: str | list[str],
+        grammatical_form: GrammaticalForm | None = None,
         notes: tuple[str, ...] = (),
         roots: tuple[str, ...] = (),
         tip: str = "",
-        grammatical_base: str = "",
-        grammatical_categories: tuple[GrammaticalCategory, ...] = (),
         *,
         colloquial: bool = False,
         meaning_only: bool = False,
@@ -57,12 +55,11 @@ class Label:
         """Initialize the label."""
         self.language = language
         self._values = value if isinstance(value, list) else [value]
+        self.grammatical_form = grammatical_form or GrammaticalForm()
         self.notes = notes
         self._roots = roots
         self.tip = tip
         self.colloquial = colloquial
-        self.grammatical_base = grammatical_base
-        self.grammatical_categories = grammatical_categories
         self.meaning_only = meaning_only
         for spelling_alternative in self._values:
             self.homograph_mapping.setdefault((language, spelling_alternative), []).append(self)
@@ -74,7 +71,7 @@ class Label:
             return (
                 self.language == other.language
                 and str(self) == str(other)
-                and self.grammatical_categories == other.grammatical_categories
+                and self.grammatical_form == other.grammatical_form
             )
         return False
 
@@ -84,7 +81,7 @@ class Label:
             return (
                 self.language != other.language
                 or str(self) != str(other)
-                or self.grammatical_categories != other.grammatical_categories
+                or self.grammatical_form != other.grammatical_form
             )
         return True
 
@@ -106,7 +103,16 @@ class Label:
         """Return a copy of this label with a different value."""
         if value == self._values[0]:
             return self
-        return Label(self.language, value, self.notes, self._roots, self.tip, colloquial=self.colloquial)
+        return Label(
+            self.language,
+            value,
+            self.grammatical_form,
+            self.notes,
+            self._roots,
+            self.tip,
+            colloquial=self.colloquial,
+            meaning_only=self.meaning_only,
+        )
 
     @cached_property
     def non_generated_spelling_alternatives(self) -> Labels:
@@ -187,23 +193,23 @@ class Label:
     @property
     def is_grammatical_base(self) -> bool:
         """Return whether this label has the grammatical base form."""
-        return str(self) == self.grammatical_base
+        return str(self) == self.grammatical_form.grammatical_base
 
     def has_same_grammatical_form(self, other: Label) -> bool:
         """Return whether this label has the same grammatical form as the other label."""
+        self_grammatical_categories = self.grammatical_form.grammatical_categories
+        other_grammatical_categories = other.grammatical_form.grammatical_categories
         return (
-            self.grammatical_categories == other.grammatical_categories
-            or (not self.grammatical_categories and other.is_grammatical_base)
-            or (not other.grammatical_categories and self.is_grammatical_base)
+            self_grammatical_categories == other_grammatical_categories
+            or (not self_grammatical_categories and other.is_grammatical_base)
+            or (not other_grammatical_categories and self.is_grammatical_base)
         )
 
     def grammatical_differences(self, *labels: Label) -> tuple[GrammaticalCategory, ...]:
         """Return the grammatical differences between this label and the other labels."""
         differences = set()
-        for grammatical_category in self.grammatical_categories:
-            for label in labels:
-                if label.grammatical_categories and grammatical_category not in label.grammatical_categories:
-                    differences.add(grammatical_category)
+        for label in labels:
+            differences |= label.grammatical_form.grammatical_differences(self.grammatical_form)
         return tuple(sorted(differences))
 
     def is_homograph(self, other: Label) -> bool:

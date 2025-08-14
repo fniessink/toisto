@@ -18,11 +18,11 @@ class GrammaticalQuizTypeTest(ToistoTestCase):
 
     def test_composite_is_quiz_type(self):
         """Test that a composite grammatical quiz type is indeed a grammatical quiz type."""
-        self.assertTrue(GrammaticalQuizType(quiz_types=(PLURAL, THIRD_PERSON)).is_quiz_type(PLURAL))
+        self.assertTrue(GrammaticalQuizType(quiz_types=frozenset((PLURAL, THIRD_PERSON))).is_quiz_type(PLURAL))
 
     def test_composite_is_not_quiz_type(self):
         """Test a composite grammatical quiz type is not a semantical quiz type."""
-        self.assertFalse(GrammaticalQuizType(quiz_types=(PLURAL, THIRD_PERSON)).is_quiz_type(ANTONYM))
+        self.assertFalse(GrammaticalQuizType(quiz_types=frozenset((PLURAL, THIRD_PERSON))).is_quiz_type(ANTONYM))
 
     def test_leaf_quiz_type_is_registered(self):
         """Test that a leaf quiz type is registered."""
