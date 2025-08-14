@@ -176,12 +176,12 @@
                         "first person": "Me olemme maalaamassa taloa.",
                         "second person": "Te olette maalaamassa taloa.",
                         "third person": "He ovat maalaamassa taloa."
-                    },
-                    "roots": [
-                        "maalata",
-                        "talo"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
             },
             {
                 "concept": "to be able to",
@@ -195,12 +195,12 @@
                         "first person": "Me osaamme maalata talon.",
                         "second person": "Te osaatte maalata talon.",
                         "third person": "He osaavat maalata talon."
-                    },
-                    "roots": [
-                        "maalata",
-                        "talo"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
             },
             {
                 "concept": "to have to",
@@ -214,12 +214,12 @@
                         "first person": "Meidän täytyy maalata talo.",
                         "second person": "Teidän täytyy maalata talo.",
                         "third person": "Heidän täytyy maalata talo."
-                    },
-                    "roots": [
-                        "maalata",
-                        "talo"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
             },
             {
                 "concept": "to be allowed to",
@@ -233,12 +233,12 @@
                         "first person": "Me saamme maalata talon.",
                         "second person": "Te saatte maalata talon.",
                         "third person": "He saavat maalata talon."
-                    },
-                    "roots": [
-                        "maalata",
-                        "talo"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "maalata",
+                    "talo"
+                ]
             },
             {
                 "concept": "to want to",
@@ -252,13 +252,13 @@
                         "first person": "Me haluamme maalata talon.",
                         "second person": "Te haluatte maalata talon.",
                         "third person": "He haluavat maalata talon."
-                    },
-                    "roots": [
-                        "haluta",
-                        "maalata",
-                        "talo"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "haluta",
+                    "maalata",
+                    "talo"
+                ]
             }
         ],
         "nl": [
@@ -277,12 +277,12 @@
                         "first person": "Wij hebben het huis geschilderd.",
                         "second person": "Jullie hebben het huis geschilderd.",
                         "third person": "Zij hebben het huis geschilderd."
-                    },
-                    "roots": [
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "schilderen",
+                    "het huis"
+                ]
             },
             {
                 "concept": "to be (aux)",
@@ -299,13 +299,13 @@
                         "first person": "Wij zijn het huis aan het schilderen.",
                         "second person": "Jullie zijn het huis aan het schilderen.",
                         "third person": "Zij zijn het huis aan het schilderen."
-                    },
-                    "roots": [
-                        "zijn",
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "zijn",
+                    "schilderen",
+                    "het huis"
+                ]
             },
             {
                 "concept": "to be able to",
@@ -322,13 +322,13 @@
                         "first person": "Wij kunnen het huis schilderen.",
                         "second person": "Jullie kunnen het huis schilderen.",
                         "third person": "Zij kunnen het huis schilderen."
-                    },
-                    "roots": [
-                        "kunnen",
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "kunnen",
+                    "schilderen",
+                    "het huis"
+                ]
             },
             {
                 "concept": "to have to",
@@ -345,12 +345,12 @@
                         "first person": "Wij moeten het huis schilderen.",
                         "second person": "Jullie moeten het huis schilderen.",
                         "third person": "Zij moeten het huis schilderen."
-                    },
-                    "roots": [
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "schilderen",
+                    "het huis"
+                ]
             },
             {
                 "concept": "to be allowed to",
@@ -367,12 +367,12 @@
                         "first person": "Wij mogen het huis schilderen.",
                         "second person": "Jullie mogen het huis schilderen.",
                         "third person": "Zij mogen het huis schilderen."
-                    },
-                    "roots": [
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "schilderen",
+                    "het huis"
+                ]
             },
             {
                 "concept": "to want to",
@@ -389,13 +389,13 @@
                         "first person": "Wij willen het huis schilderen.",
                         "second person": "Jullie willen het huis schilderen.",
                         "third person": "Zij willen het huis schilderen."
-                    },
-                    "roots": [
-                        "willen",
-                        "schilderen",
-                        "het huis"
-                    ]
-                }
+                    }
+                },
+                "roots": [
+                    "willen",
+                    "schilderen",
+                    "het huis"
+                ]
             }
         ]
     }
