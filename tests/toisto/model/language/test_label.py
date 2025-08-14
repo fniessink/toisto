@@ -45,7 +45,7 @@ class LabelTest(ToistoTestCase):
     def test_note(self):
         """Test that the label can have a note."""
         note = "In English, the names of holidays are capitalized"
-        label = Label(EN, "Christmas", (note,))
+        label = Label(EN, "Christmas", notes=(note,))
         self.assertEqual((note,), label.notes)
 
     def test_spelling_alternatives(self):
