@@ -3,7 +3,7 @@
 from abc import abstractmethod
 from collections.abc import Iterable
 from dataclasses import dataclass
-from itertools import permutations, zip_longest
+from itertools import permutations
 from typing import ClassVar
 
 from ..language import LanguagePair
@@ -101,9 +101,7 @@ class BaseQuizFactory:
 
     def include_question(self, question: Label, answer: Label) -> bool:
         """Return whether to include the question."""
-        return (question.grammatical_categories == answer.grammatical_categories) and (
-            question.grammatical_base == answer.grammatical_base
-        )
+        return question.grammatical_form == answer.grammatical_form
 
 
 @dataclass
@@ -116,13 +114,14 @@ class TranslationQuizFactory(BaseQuizFactory):
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
+        question_grammatical_categories = question.grammatical_form.grammatical_categories
         return Labels(
             [
                 answer
                 for answer in answers
-                if not answer.grammatical_categories
-                or set(question.grammatical_categories) <= set(answer.grammatical_categories)
-                or set(question.grammatical_categories) >= set(answer.grammatical_categories)
+                if not answer.grammatical_form.grammatical_categories
+                or question_grammatical_categories <= answer.grammatical_form.grammatical_categories
+                or question_grammatical_categories >= answer.grammatical_form.grammatical_categories
             ]
         )
 
@@ -222,11 +221,10 @@ class GrammaticalQuizFactory(BaseQuizFactory):
         complex ("Give the affirmative past tense plural third person...") we limit the number of quiz types.
         """
         quiz_types: list[GrammaticalQuizType] = []
-        for category1, category2 in zip_longest(label1.grammatical_categories, label2.grammatical_categories):
-            if category1 != category2:
-                quiz_types.extend(GrammaticalQuizType.instances.get_values(category2))
+        for grammatical_category in label2.grammatical_differences(label1):
+            quiz_types.extend(GrammaticalQuizType.instances.get_values(grammatical_category))
         if set(quiz_types) <= {FEMININE, MASCULINE, NEUTER, THIRD_PERSON} and len(quiz_types) > 1:
-            return GrammaticalQuizType(quiz_types=tuple(quiz_types))
+            return GrammaticalQuizType(quiz_types=frozenset(quiz_types))
         return quiz_types[0] if len(quiz_types) == 1 else None
 
     def questions(self, concept: Concept) -> Labels:
@@ -255,7 +253,10 @@ class GrammaticalQuizFactory(BaseQuizFactory):
 
     def include_question(self, question: Label, answer: Label) -> bool:
         """Return whether to include the question."""
-        return question.grammatical_base == answer.grammatical_base and not question.is_homograph(answer)
+        return (
+            question.grammatical_form.grammatical_base == answer.grammatical_form.grammatical_base
+            and not question.is_homograph(answer)
+        )
 
 
 @dataclass

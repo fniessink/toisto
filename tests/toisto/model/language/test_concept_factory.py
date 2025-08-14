@@ -2,6 +2,7 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.grammar import GrammaticalForm
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -24,11 +25,11 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": {"singular": "de ochtend", "plural": "de ochtenden"}, "language": NL},
             ],
         )
-        aamu = Label(FI, "aamu", grammatical_categories=("singular",))
-        aamut = Label(FI, "aamut", grammatical_categories=("plural",))
+        aamu = Label(FI, "aamu", GrammaticalForm("aamu", "singular"))
+        aamut = Label(FI, "aamut", GrammaticalForm("aamu", "plural"))
         self.assertEqual((aamu, aamut), concept.labels(FI))
-        ochtend = Label(NL, "de ochtend", grammatical_categories=("singular",))
-        ochtenden = Label(NL, "de ochtenden", grammatical_categories=("plural",))
+        ochtend = Label(NL, "de ochtend", GrammaticalForm("de ochtend", "singular"))
+        ochtenden = Label(NL, "de ochtenden", GrammaticalForm("de ochtend", "plural"))
         self.assertEqual((ochtend, ochtenden), concept.labels(NL))
 
     def test_concept_with_colloquial_labels(self):
@@ -49,8 +50,8 @@ class ConcepFactoryTest(ToistoTestCase):
                 {"label": "kol", "language": FI, "colloquial": True},
             ],
         )
-        kolme = Label(FI, "kolme", grammatical_categories=("cardinal",))
-        kolmes = Label(FI, "kolmes", grammatical_categories=("ordinal",))
+        kolme = Label(FI, "kolme", GrammaticalForm("kolme", "cardinal"))
+        kolmes = Label(FI, "kolmes", GrammaticalForm("kolme", "ordinal"))
         kol = Label(FI, "kol", colloquial=True)
         self.assertEqual((kolme, kolmes, kol), concept.labels(FI))
 

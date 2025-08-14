@@ -11,6 +11,7 @@ from unittest.mock import Mock, patch
 from toisto.metadata import README_URL
 from toisto.model.language import EN
 from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.grammar import GrammaticalForm
 from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
 from toisto.persistence.folder import home
@@ -302,8 +303,8 @@ Options:
                 ConceptId("concept with plural"),
                 Labels(
                     (
-                        Label(EN, "singular", grammatical_base="singular", grammatical_categories=("singular",)),
-                        Label(EN, "plural", grammatical_base="singular", grammatical_categories=("plural",)),
+                        Label(EN, "singular", GrammaticalForm("singular", "singular")),
+                        Label(EN, "plural", GrammaticalForm("singular", "plural")),
                     ),
                 ),
                 {},

@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING, cast
 
 from toisto.model.language import EN, NL
 from toisto.model.language.concept import ConceptId
+from toisto.model.language.grammar import GrammaticalForm
 from toisto.model.language.label import Label
 from toisto.model.language.label_factory import LabelFactory, LabelJSON
 
@@ -49,28 +50,28 @@ class LabelFactoryTest(ToistoTestCase):
     def test_create_label(self):
         """Test creating a single label."""
         chair_json = self.label("chair")
-        self.assertEqual((Label(EN, "chair"),), LabelFactory([chair_json]).create_labels())
+        self.assertEqual((Label(EN, "chair"),), LabelFactory().create_labels([chair_json]))
 
     def test_create_labels(self):
         """Test creating multiple labels."""
         chair_json = self.label("chair")
         table_json = self.label("table")
         self.assertEqual(
-            (Label(EN, "chair"), Label(EN, "table")), LabelFactory([chair_json, table_json]).create_labels()
+            (Label(EN, "chair"), Label(EN, "table")), LabelFactory().create_labels([chair_json, table_json])
         )
 
     def test_create_label_with_spelling_alternatives(self):
         """Test creating a label with spelling alternatives."""
         color_json = self.label_with_spelling_alternatives()
-        self.assertEqual((Label(EN, ["color", "colour"]),), LabelFactory([color_json]).create_labels())
+        self.assertEqual((Label(EN, ["color", "colour"]),), LabelFactory().create_labels([color_json]))
 
     def test_create_synonym_labels(self):
         """Test creating synonym labels."""
         begin_json = self.label("begin")
         start_json = self.label("start", concept_id="begin")
         self.assertEqual(
-            (Label(EN, "begin", grammatical_base="begin"), Label(EN, "start", grammatical_base="start")),
-            LabelFactory([begin_json, start_json]).create_labels(),
+            (Label(EN, "begin"), Label(EN, "start")),
+            LabelFactory().create_labels([begin_json, start_json]),
         )
 
     def test_create_label_with_grammatical_forms(self):
@@ -78,10 +79,10 @@ class LabelFactoryTest(ToistoTestCase):
         chair_json = self.label_with_grammatical_number()
         self.assertEqual(
             (
-                Label(EN, "chair", grammatical_base="chair", grammatical_categories=("singular",)),
-                Label(EN, "chairs", grammatical_base="chair", grammatical_categories=("plural",)),
+                Label(EN, "chair", GrammaticalForm("chair", "singular")),
+                Label(EN, "chairs", GrammaticalForm("chair", "plural")),
             ),
-            LabelFactory([chair_json]).create_labels(),
+            LabelFactory().create_labels([chair_json]),
         )
 
     def test_create_label_with_nested_grammatical_forms(self):
@@ -90,30 +91,30 @@ class LabelFactoryTest(ToistoTestCase):
         base = "de stoel"
         self.assertEqual(
             (
-                Label(NL, "de stoel", grammatical_base=base, grammatical_categories=("root", "singular")),
-                Label(NL, "de stoelen", grammatical_base=base, grammatical_categories=("root", "plural")),
-                Label(NL, "het stoeltje", grammatical_base=base, grammatical_categories=("diminutive", "singular")),
-                Label(NL, "de stoeltjes", grammatical_base=base, grammatical_categories=("diminutive", "plural")),
+                Label(NL, "de stoel", GrammaticalForm(base, "root", "singular")),
+                Label(NL, "de stoelen", GrammaticalForm(base, "root", "plural")),
+                Label(NL, "het stoeltje", GrammaticalForm(base, "diminutive", "singular")),
+                Label(NL, "de stoeltjes", GrammaticalForm(base, "diminutive", "plural")),
             ),
-            LabelFactory([chair_json]).create_labels(),
+            LabelFactory().create_labels([chair_json]),
         )
 
     def test_grammatical_base(self):
         """Test the grammatical base of a simple label."""
         chair_json = self.label("chair")
-        self.assertEqual("chair", LabelFactory.grammatical_base(chair_json))
+        self.assertEqual("chair", LabelFactory.grammatical_base_for(chair_json))
 
     def test_grammatical_base_with_spelling_alternatives(self):
         """Test the grammatical base of a label with spelling alternatives."""
         color_json = self.label_with_spelling_alternatives()
-        self.assertEqual("color", LabelFactory.grammatical_base(color_json))
+        self.assertEqual("color", LabelFactory.grammatical_base_for(color_json))
 
     def test_grammatical_base_with_grammatical_forms(self):
         """Test the grammatical base of a label with different grammatical forms."""
         chair_json = self.label_with_grammatical_number()
-        self.assertEqual("chair", LabelFactory.grammatical_base(chair_json))
+        self.assertEqual("chair", LabelFactory.grammatical_base_for(chair_json))
 
     def test_grammatical_base_with_nested_grammatical_forms(self):
         """Test the grammatical base of a label with nested grammatical forms."""
         chair_json = self.label_with_grammatical_number_and_diminutive()
-        self.assertEqual("de stoel", LabelFactory.grammatical_base(chair_json))
+        self.assertEqual("de stoel", LabelFactory.grammatical_base_for(chair_json))

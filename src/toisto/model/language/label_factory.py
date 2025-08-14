@@ -9,7 +9,7 @@ from toisto.tools import first
 
 from . import Language
 from .concept import ConceptIdListOrString
-from .grammar import GrammaticalCategory
+from .grammar import GrammaticalCategory, GrammaticalForm
 from .label import Label, Labels
 
 JSONGrammar = dict[GrammaticalCategory, str]
@@ -35,29 +35,25 @@ LabelJSON = TypedDict(
 class LabelFactory:
     """Create Labels from the label JSON."""
 
-    json_labels: list[LabelJSON]
+    grammatical_base: str = ""
 
-    def create_labels(
-        self, grammatical_categories: tuple[GrammaticalCategory, ...] = (), grammatical_base: str = ""
-    ) -> Labels:
+    def create_labels(self, json_labels: list[LabelJSON], *grammatical_categories: GrammaticalCategory) -> Labels:
         """Create labels from the list of JSON labels."""
         labels: list[Label] = []
-        for json_label in self.json_labels:
+        for json_label in json_labels:
             if isinstance(json_label["label"], (str, list)):
-                labels.append(self._create_label(json_label, grammatical_categories, grammatical_base))
+                labels.append(self._create_label(json_label, *grammatical_categories))
             else:
-                grammatical_base_for_slices = grammatical_base or self.grammatical_base(json_label)
+                grammatical_base_for_slices = self.grammatical_base or self.grammatical_base_for(json_label)
+                factory = LabelFactory(grammatical_base_for_slices)
                 for grammatical_category, json_label_value in json_label["label"].items():
                     json_label_slice = json_label.copy()
                     json_label_slice["label"] = json_label_value
                     slice_grammatical_categories = (*grammatical_categories, grammatical_category)
-                    factory = LabelFactory([json_label_slice])
-                    labels.extend(factory.create_labels(slice_grammatical_categories, grammatical_base_for_slices))
+                    labels.extend(factory.create_labels([json_label_slice], *slice_grammatical_categories))
         return Labels(labels)
 
-    def _create_label(
-        self, label: LabelJSON, grammatical_categories: tuple[GrammaticalCategory, ...], grammatical_base: str
-    ) -> Label:
+    def _create_label(self, label: LabelJSON, *grammatical_categories: GrammaticalCategory) -> Label:
         """Create a label from the label JSON."""
         value = cast("str | list[str]", label["label"])
         note = label.get("note", [])
@@ -70,17 +66,16 @@ class LabelFactory:
         return Label(
             label["language"],
             value,
+            GrammaticalForm(self.grammatical_base, *grammatical_categories),
             notes,
             roots,
             tip,
-            grammatical_base,
-            grammatical_categories,
             colloquial=colloquial,
             meaning_only=meaning_only,
         )
 
     @classmethod
-    def grammatical_base(cls, json_label: LabelJSON) -> str:
+    def grammatical_base_for(cls, json_label: LabelJSON) -> str:
         """Return the grammatical base of the JSON label."""
         if isinstance(json_label["label"], str):
             return json_label["label"]
@@ -88,4 +83,4 @@ class LabelFactory:
             return first(json_label["label"])
         json_label_slice = json_label.copy()
         json_label_slice["label"] = cast("str | JSONRecursiveGrammar", first(json_label["label"].values()))
-        return cls.grammatical_base(json_label_slice)
+        return cls.grammatical_base_for(json_label_slice)
