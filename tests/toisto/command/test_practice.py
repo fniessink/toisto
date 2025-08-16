@@ -19,11 +19,8 @@ from toisto.ui.text import DONE, Feedback, ProgressUpdate, console
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
 
-@patch("pathlib.Path.open", MagicMock())
-@patch("toisto.ui.speech.gTTS", Mock())
-@patch("toisto.ui.speech.Popen", Mock())
-class PracticeTest(ToistoTestCase):
-    """Test the practice command."""
+class PracticeBase(ToistoTestCase):
+    """Base class for practice unit tests."""
 
     def create_concept_fixture(
         self, concept_type: Literal["colloquial", "example", "gender", "plural"] | None = None
@@ -104,6 +101,13 @@ class PracticeTest(ToistoTestCase):
     def assert_not_printed(self, argument: str, patched_print: Mock, **kwargs: str | bool) -> None:
         """Assert that the argument is not in the call arguments list of the patched print method."""
         self.assertNotIn(call(argument, **kwargs), patched_print.call_args_list)
+
+
+@patch("pathlib.Path.open", MagicMock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
+class PracticeTest(PracticeBase):
+    """Test the practice command."""
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_quiz(self):
@@ -394,6 +398,29 @@ class PracticeTest(ToistoTestCase):
         self.assert_printed(Feedback.TRY_AGAIN, patched_print)
         self.assert_printed(f"The correct answer is '{linkified('Hoi!')}'\n", patched_print)
 
+    @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
+    def test_quiz_done(self):
+        """Test that the user is quizzed until done."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_printed(DONE, patched_print)
+
+    @patch("builtins.input", Mock(side_effect=[EOFError]))
+    def test_exit(self):
+        """Test that the user can quit."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assertEqual(call(), patched_print.call_args_list[-1])
+
+
+@patch("pathlib.Path.open", MagicMock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
+class PracticeProgressTest(PracticeBase):
+    """Test the progress shown during practice."""
+
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_progress(self):
         """Test that progress is shown after a correct answer."""
@@ -443,19 +470,3 @@ class PracticeTest(ToistoTestCase):
         patched_print = self.practice(FI_NL, quizzes, progress, progress_update=1)
         progress_update = ProgressUpdate(progress, 1)
         self.assert_printed(progress_update(), patched_print, end="", highlight=False)
-
-    @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
-    def test_quiz_done(self):
-        """Test that the user is quizzed until done."""
-        concept = self.create_concept_fixture()
-        quizzes = create_quizzes(FI_NL, (READ,), concept)
-        patched_print = self.practice(FI_NL, quizzes)
-        self.assert_printed(DONE, patched_print)
-
-    @patch("builtins.input", Mock(side_effect=[EOFError]))
-    def test_exit(self):
-        """Test that the user can quit."""
-        concept = self.create_concept_fixture()
-        quizzes = create_quizzes(FI_NL, (READ,), concept)
-        patched_print = self.practice(FI_NL, quizzes)
-        self.assertEqual(call(), patched_print.call_args_list[-1])

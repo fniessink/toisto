@@ -281,9 +281,9 @@ class QuizInstructionTest(QuizTestCase):
 
     def test_colloquial_labels_get_an_automatic_tip_when_quiz_type_is_dictate(self):
         """Test that colloquial labels get an automatic tip."""
-        seittemän = Label(FI, "seittemän", colloquial=True)
-        seitsemän = Label(FI, "seitsemän")
-        quiz = self.create_quiz(self.concept, seittemän, [seitsemän], DICTATE)
+        seven_colloquial = Label(FI, "seittemän", colloquial=True)
+        seven = Label(FI, "seitsemän")
+        quiz = self.create_quiz(self.concept, seven_colloquial, [seven], DICTATE)
         self.assertEqual("Listen to the colloquial Finnish and write in standard Finnish", quiz.instruction)
 
     def test_colloquial_labels_get_an_automatic_tip_when_quiz_type_is_interpret(self):
@@ -492,10 +492,12 @@ class QuizInstructionTest(QuizTestCase):
                 },
             ],
         )
-        Te_olette, _ = concept.labels(FI)  # noqa: N806
-        u_bent, _ = concept.labels(NL)
-        quiz = self.create_quiz(concept, Te_olette, [u_bent], INTERPRET)
+        fi_singular, fi_plural = concept.labels(FI)
+        nl_singular, nl_plural = concept.labels(NL)
+        quiz = self.create_quiz(concept, fi_singular, [nl_singular], INTERPRET)
         self.assertEqual("Listen and write in Dutch (singular)", quiz.instruction)
+        quiz = self.create_quiz(concept, fi_plural, [nl_plural], INTERPRET)
+        self.assertEqual("Listen and write in Dutch (plural)", quiz.instruction)
 
 
 class QuizSpellingAlternativesTests(QuizTestCase):
@@ -520,10 +522,10 @@ class QuizSpellingAlternativesTests(QuizTestCase):
     def test_other_answers_with_spelling_alternatives(self):
         """Test that spelling alternatives are returned as other answers."""
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi."), [Label(NL, ["Een", "Eén"]), Label(NL, "één")])
-        Een, Eén, één = (Label(NL, "Een"), Label(NL, "Eén"), Label(NL, "één"))  # noqa: N806
-        self.assertEqual((Eén, één), quiz.other_answers(Een))
-        self.assertEqual((Een, één), quiz.other_answers(Eén))
-        self.assertEqual((Een, Eén), quiz.other_answers(één))
+        a_capitalized, one_capitalized, one = (Label(NL, "Een"), Label(NL, "Eén"), Label(NL, "één"))
+        self.assertEqual((one_capitalized, one), quiz.other_answers(a_capitalized))
+        self.assertEqual((a_capitalized, one), quiz.other_answers(one_capitalized))
+        self.assertEqual((a_capitalized, one_capitalized), quiz.other_answers(one))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""

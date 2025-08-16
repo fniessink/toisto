@@ -11,7 +11,7 @@ from rich.panel import Panel
 from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
-from toisto.model.language.label import END_OF_SENTENCE_PUNCTUATION, Label
+from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
@@ -243,7 +243,7 @@ def wrapped(text: str, style: str, postfix: str = "\n") -> str:
 
 def punctuated(text: str) -> str:
     """Return the text with an added period, if it has no punctuation yet."""
-    return text if set(text[-2:]) & set(END_OF_SENTENCE_PUNCTUATION) else f"{text}."
+    return text if set(text[-2:]) & set(Label.END_OF_SENTENCE_PUNCTUATION) else f"{text}."
 
 
 def quoted(text: str, quote: str = "'") -> str:

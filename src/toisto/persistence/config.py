@@ -78,8 +78,8 @@ class ConfigSchemaValidator:
 
     def _validate_section(self, section: str) -> None:
         """Validate the section, including its options."""
-        if section not in (allowed_sections := CONFIG_SCHEMA.keys()):
-            self._error(f"unknown section '{section}'. Allowed sections are: {', '.join(allowed_sections)}.")
+        if section not in CONFIG_SCHEMA:
+            self._error(f"unknown section '{section}'. Allowed sections are: {', '.join(CONFIG_SCHEMA.keys())}.")
         section_schema = CONFIG_SCHEMA[section]
         if isinstance(section_schema, dict):
             for option in self._config_parser[section]:

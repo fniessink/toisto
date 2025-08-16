@@ -89,8 +89,8 @@ class LabelTest(ToistoTestCase):
 
     def test_meaning_only(self):
         """Test that a label can be a meaning only."""
-        mämmi = Label(NL, "Finse paascake", meaning_only=True)
-        self.assertTrue(mämmi.meaning_only)
+        cake = Label(NL, "Finse paascake", meaning_only=True)
+        self.assertTrue(cake.meaning_only)
 
     def test_homonym_within_concept(self):
         """Test homonyms within one concept."""
@@ -120,9 +120,9 @@ class LabelTest(ToistoTestCase):
                 }
             ],
         )
-        Te_olette, te_olette = concept.labels(FI)  # noqa: N806
-        self.assertEqual((Te_olette,), te_olette.capitonyms)
-        self.assertEqual((te_olette,), Te_olette.capitonyms)
+        singular, plural = concept.labels(FI)
+        self.assertEqual((singular,), plural.capitonyms)
+        self.assertEqual((plural,), singular.capitonyms)
 
 
 class LabelsTest(ToistoTestCase):

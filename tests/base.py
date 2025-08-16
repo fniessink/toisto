@@ -81,8 +81,8 @@ class ToistoTestCase(unittest.TestCase):
                 label["concept"] = concept_id
         return create_concept(cast("ConceptId", concept_id), concept_dict, cast("list[LabelJSON]", labels))
 
+    @staticmethod
     def create_quiz(
-        self,
         concept: Concept,
         question: Label,
         answers: Sequence[Label],
