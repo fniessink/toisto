@@ -192,7 +192,7 @@ class FeedbackTestCase(ToistoTestCase):
             labels=[{"label": {"first person": "ik eet", "third person": {"feminine": "zij eet"}}, "language": NL}],
         )
         quiz = create_quizzes(NL_FI, (FEMININE,), concept).pop()
-        expected_text = "[quiz]Give the [underline]third person feminine[/underline] in Dutch:[/quiz]"
+        expected_text = "[quiz]Give the [underline]feminine third person[/underline] in Dutch:[/quiz]"
         self.assertEqual(expected_text, instruction(quiz))
 
     def test_post_quiz_note(self):

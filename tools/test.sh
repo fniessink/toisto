@@ -3,11 +3,11 @@
 uv run green -r
 
 if [[ "$1" == "--fix" ]]; then
-    uvx ruff check --fix .
     uvx ruff format .
+    uvx ruff check --fix .
 else
-    uvx ruff check .
     uvx ruff format --check .
+    uvx ruff check .
 fi
 
 uvx mypy --python-executable=.venv/bin/python src tests tools

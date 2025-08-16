@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING, cast, get_args
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId, ConceptRelation
+from toisto.model.language.grammar import GrammaticalForm
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase
@@ -70,11 +71,11 @@ class ConceptTest(ToistoTestCase):
                 {"label": {"singular": "de tafel", "plural": "de tafels"}, "language": NL},
             ],
         )
-        table = Label(EN, "table", grammatical_categories=("singular",))
-        tables = Label(EN, "tables", grammatical_categories=("plural",))
+        table = Label(EN, "table", GrammaticalForm("table", "singular"))
+        tables = Label(EN, "tables", GrammaticalForm("table", "plural"))
         self.assertEqual((table, tables), concept.meanings(EN))
-        tafel = Label(NL, "de tafel", grammatical_categories=("singular",))
-        tafels = Label(NL, "de tafels", grammatical_categories=("plural",))
+        tafel = Label(NL, "de tafel", GrammaticalForm("de tafel", "singular"))
+        tafels = Label(NL, "de tafels", GrammaticalForm("de tafel", "plural"))
         self.assertEqual((tafel, tafels), concept.meanings(NL))
         self.assertEqual((), concept.meanings(FI))
 
@@ -88,8 +89,8 @@ class ConceptTest(ToistoTestCase):
             ],
         )
         self.assertEqual((Label(FI, "hän syö"),), concept.meanings(FI))
-        zij_eet = Label(NL, "zij eet", grammatical_categories=("feminine",))
-        hij_eet = Label(NL, "hij eet", grammatical_categories=("masculine",))
+        zij_eet = Label(NL, "zij eet", GrammaticalForm("zij eet", "feminine"))
+        hij_eet = Label(NL, "hij eet", GrammaticalForm("zij eet", "masculine"))
         self.assertEqual((zij_eet, hij_eet), concept.meanings(NL))
         self.assertEqual((), concept.meanings(EN))
 
@@ -99,7 +100,7 @@ class ConceptTest(ToistoTestCase):
         expected_label_values = ("I have", "you have", "she has", "we have", "you have", "they have")
         grammatical_categories = product(("singular", "plural"), ("first person", "second person", "third person"))
         expected_labels = tuple(
-            Label(EN, label, grammatical_categories=cast("tuple[GrammaticalCategory]", grammatical_categories))
+            Label(EN, label, GrammaticalForm("I have", *cast("tuple[GrammaticalCategory]", grammatical_categories)))
             for label, grammatical_categories in zip(expected_label_values, grammatical_categories, strict=False)
         )
         self.assertEqual(expected_labels, concept.labels(EN))
@@ -108,8 +109,8 @@ class ConceptTest(ToistoTestCase):
         """Test that the labels are returned, recursively."""
         concept = self.create_noun_invariant_in_english()
         self.assertEqual((Label(EN, "means of transportation"),), concept.labels(EN))
-        vervoersmiddel = Label(NL, "het vervoersmiddel", grammatical_categories=("singular",))
-        vervoersmiddelen = Label(NL, "de vervoersmiddelen", grammatical_categories=("plural",))
+        vervoersmiddel = Label(NL, "het vervoersmiddel", GrammaticalForm("het vervoersmiddel", "singular"))
+        vervoersmiddelen = Label(NL, "de vervoersmiddelen", GrammaticalForm("het vervoersmiddel", "plural"))
         self.assertEqual((vervoersmiddel, vervoersmiddelen), concept.labels(NL))
 
     def test_is_sentence(self):

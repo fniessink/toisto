@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from itertools import chain
 from typing import ClassVar, cast, final
 
@@ -110,7 +110,7 @@ class SemanticQuizType(QuizType):
 class GrammaticalQuizType(QuizType):
     """Grammatical quiz type."""
 
-    quiz_types: tuple[QuizType, ...] = ()  # Grammatical quizzes can be composite
+    quiz_types: frozenset[QuizType] = field(default_factory=frozenset)  # Grammatical quizzes can be composite
 
     instances: ClassVar[Registry[str, GrammaticalQuizType]] = Registry[str, "GrammaticalQuizType"]()
 
@@ -123,18 +123,22 @@ class GrammaticalQuizType(QuizType):
     @property
     def action(self) -> str:
         """Return the quiz type action."""
-        return "+".join(quiz_type.action for quiz_type in self.quiz_types) if self.quiz_types else super().action
+        return self._composite_action(separator="+") if self.quiz_types else super().action
 
     def instruction(self, question: Label) -> str:
         """Return the quiz type instruction."""
-        actions = " ".join(quiz_type.action for quiz_type in self.quiz_types) if self.quiz_types else super().action
-        return f"Give the [underline]{actions}[/underline] in"
+        action = self._composite_action(separator=" ") if self.quiz_types else super().action
+        return f"Give the [underline]{action}[/underline] in"
 
     def is_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:
         """Extend to also check whether the constituent quiz types match the given quiz type."""
         if self.quiz_types:
             return any(constituent_quiz_type.is_quiz_type(quiz_type) for constituent_quiz_type in self.quiz_types)
         return super().is_quiz_type(quiz_type)
+
+    def _composite_action(self, *, separator: str) -> str:
+        """Return the composite action."""
+        return separator.join(sorted(quiz_type.action for quiz_type in self.quiz_types))
 
 
 @final

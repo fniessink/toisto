@@ -129,7 +129,7 @@ class ProgressTest(ToistoTestCase):
         quizzes = create_quizzes(FI_NL, (), morning, afternoon, evening)
         progress = Progress(FI, quizzes, {}, skip_concepts=2)
         while quiz := progress.next_quiz():
-            self.assertIn("singular", quiz.concept.labels(FI)[0].grammatical_categories)
+            self.assertIn("singular", quiz.concept.labels(FI)[0].grammatical_form.grammatical_categories)
             progress.mark_evaluation(quiz, Evaluation.CORRECT)
 
     def test_next_quiz_is_quiz_with_progress(self):
