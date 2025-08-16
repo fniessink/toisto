@@ -10,7 +10,7 @@ FI: Final[Language] = Language("fi")
 NL: Final[Language] = Language("nl")
 
 
-@dataclass
+@dataclass(frozen=True)
 class LanguagePair:
     """Target and source language pair."""
 

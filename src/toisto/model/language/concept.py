@@ -93,12 +93,11 @@ class Concept:
 
     def labels(self, language: Language) -> Labels:
         """Return the labels of the concept for the specified language."""
-        labels = Labels(label for label in self._labels if not label.meaning_only)
-        return labels.with_language(language)
+        return self._labels.with_language(language).not_meaning_only
 
     def meanings(self, language: Language) -> Labels:
         """Return the meanings of the concept for the specified language."""
-        return self._labels.non_colloquial.with_language(language)
+        return self._labels.with_language(language).non_colloquial
 
     @property
     def is_complete_sentence(self) -> bool:
@@ -106,7 +105,4 @@ class Concept:
         return first(self._labels).is_complete_sentence if self._labels else False
 
 
-class Concepts(tuple[Concept, ...]):
-    """Tuple of concepts."""
-
-    __slots__ = ()
+Concepts = tuple[Concept, ...]

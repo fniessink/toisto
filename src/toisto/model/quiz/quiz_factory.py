@@ -2,7 +2,7 @@
 
 from abc import abstractmethod
 from collections.abc import Iterable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from itertools import permutations
 from typing import ClassVar
 
@@ -107,6 +107,10 @@ class BaseQuizFactory:
 @dataclass
 class TranslationQuizFactory(BaseQuizFactory):
     """Create translation quizzes for a concept."""
+
+    @abstractmethod
+    def questions(self, concept: Concept) -> Labels:
+        """Return the question."""
 
     def skip_concept(self, concept: Concept) -> bool:
         """Return whether to create quizzes for the concept."""
@@ -333,18 +337,13 @@ class SemanticQuizFactory(BaseQuizFactory):
         return super().blocked_by(concept, previous_quizzes)
 
 
+@dataclass(frozen=True)
 class QuizFactory:
     """Create quizzes for multiple concepts."""
 
-    def __init__(self, language_pair: LanguagePair, quiz_types: tuple[QuizType, ...]) -> None:
-        self.language_pair = language_pair
-        self.read_quiz_factory = ReadQuizFactory(self.language_pair, quiz_types)
-        self.write_quiz_factory = WriteQuizFactory(self.language_pair, quiz_types)
-        self.dictate_quiz_factory = DictateQuizFactory(self.language_pair, quiz_types)
-        self.interpret_quiz_factory = InterpretQuizFactory(self.language_pair, quiz_types)
-        self.grammatical_quiz_factory = GrammaticalQuizFactory(self.language_pair, quiz_types)
-        self.semantic_quiz_factory = SemanticQuizFactory(self.language_pair, quiz_types)
-        self.order_quiz_factory = OrderQuizFactory(self.language_pair, quiz_types)
+    language_pair: LanguagePair
+    quiz_types: tuple[QuizType, ...]
+    factories: dict[type[BaseQuizFactory], BaseQuizFactory] = field(default_factory=dict)
 
     def create_quizzes(self, *concepts: Concept) -> Quizzes:
         """Create quizzes for the concepts."""
@@ -357,26 +356,36 @@ class QuizFactory:
         previous_quizzes |= translation_quizzes
         semantic_quizzes = self.semantic_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
         previous_quizzes |= semantic_quizzes
-        grammatical_quizzes = self.grammatical_quiz_factory.create_quizzes(concept, previous_quizzes)
+        grammatical_quizzes = self._quizzes(concept, previous_quizzes, GrammaticalQuizFactory)
         return Quizzes(translation_quizzes | semantic_quizzes | grammatical_quizzes)
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create the translation quizzes for a concept."""
         previous_quizzes = previous_quizzes or Quizzes()
-        read_quizzes = self.read_quiz_factory.create_quizzes(concept, previous_quizzes)
+        read_quizzes = self._quizzes(concept, previous_quizzes, ReadQuizFactory)
         previous_quizzes |= read_quizzes
-        dictate_quizzes = self.dictate_quiz_factory.create_quizzes(concept, previous_quizzes)
+        dictate_quizzes = self._quizzes(concept, previous_quizzes, DictateQuizFactory)
         previous_quizzes |= dictate_quizzes
-        write_quizzes = self.write_quiz_factory.create_quizzes(concept, previous_quizzes)
+        write_quizzes = self._quizzes(concept, previous_quizzes, WriteQuizFactory)
         previous_quizzes |= write_quizzes
-        interpret_quizzes = self.interpret_quiz_factory.create_quizzes(concept, previous_quizzes)
+        interpret_quizzes = self._quizzes(concept, previous_quizzes, InterpretQuizFactory)
         return Quizzes(read_quizzes | write_quizzes | dictate_quizzes | interpret_quizzes)
 
     def semantic_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create semantic quizzes for the concept."""
-        semantic_quizzes = self.semantic_quiz_factory.create_quizzes(concept, previous_quizzes)
-        semantic_quizzes |= self.order_quiz_factory.create_quizzes(concept, previous_quizzes)
+        semantic_quizzes = self._quizzes(concept, previous_quizzes, SemanticQuizFactory)
+        semantic_quizzes |= self._quizzes(concept, previous_quizzes, OrderQuizFactory)
         return semantic_quizzes
+
+    def _quizzes(self, concept: Concept, previous_quizzes: Quizzes, factory_class: type[BaseQuizFactory]) -> Quizzes:
+        """Create the quizzes for a concept using the quiz factory."""
+        return self._factory(factory_class).create_quizzes(concept, previous_quizzes)
+
+    def _factory(self, factory_class: type[BaseQuizFactory]) -> BaseQuizFactory:
+        """Create and cache the factory."""
+        if factory := self.factories.get(factory_class):
+            return factory
+        return self.factories.setdefault(factory_class, factory_class(self.language_pair, self.quiz_types))
 
 
 def create_quizzes(language_pair: LanguagePair, quiz_types: tuple[QuizType, ...], *concepts: Concept) -> Quizzes:

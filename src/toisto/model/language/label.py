@@ -17,8 +17,6 @@ from .grammar import GrammaticalCategory, GrammaticalForm
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 HomonymMapping = dict[tuple[Language, str], list["Label"]]
 
-END_OF_SENTENCE_PUNCTUATION = "?!."
-
 
 class Label:
     """Class representing labels for concepts."""
@@ -35,6 +33,7 @@ class Label:
         "tip",
     )  # Without adding __dict__ to slots @cached_property does not work
 
+    END_OF_SENTENCE_PUNCTUATION = "?!."
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
     homograph_mapping: ClassVar[HomonymMapping] = {}
@@ -162,7 +161,7 @@ class Label:
     @property
     def ends_with_punctuation(self) -> bool:
         """Return whether the label ends with punctuation."""
-        return str(self._values[0])[-1] in END_OF_SENTENCE_PUNCTUATION
+        return str(self._values[0])[-1] in self.END_OF_SENTENCE_PUNCTUATION
 
     @property
     def pronounceable(self) -> str:
@@ -272,6 +271,11 @@ class Labels:  # noqa: PLW1641
     def non_colloquial(self) -> Labels:
         """Return the non-colloquial labels."""
         return Labels(label for label in self._labels if not label.colloquial)
+
+    @property
+    def not_meaning_only(self) -> Labels:
+        """Return the labels that are not meaning-only."""
+        return Labels(label for label in self._labels if not label.meaning_only)
 
     @property
     def spelling_alternatives(self) -> Labels:

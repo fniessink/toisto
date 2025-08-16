@@ -295,7 +295,6 @@ Options:
     @patch("sys.stdout.write")
     def test_practice_help(self, sys_stdout_write: Mock) -> None:
         """Test that the practice help message is displayed."""
-        self.maxDiff = None
         concepts = {
             Concept(ConceptId("included"), Labels((Label(EN, "included"),)), {}, answer_only=False),
             Concept(ConceptId("answer only"), Labels((Label(EN, "answer only, so not listed"),)), {}, answer_only=True),

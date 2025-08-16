@@ -9,7 +9,7 @@ from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
 from ....base import EN_NL, LabelDict
-from .test_quiz_factory import QuizFactoryTestCase
+from .quiz_factory_test_case import QuizFactoryTestCase
 
 
 class AntonymConceptsTest(QuizFactoryTestCase):

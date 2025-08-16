@@ -1,9 +1,7 @@
 """Quiz factory unit tests."""
 
 from toisto.model.language import EN, FI, NL
-from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.concept_factory import ConceptJSON
-from toisto.model.language.grammar import Tense
+from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import GrammaticalQuizFactory, create_quizzes
@@ -44,174 +42,8 @@ from toisto.model.quiz.quiz_type import (
 )
 from toisto.tools import first
 
-from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, LabelDict, ToistoTestCase
-
-
-class QuizFactoryTestCase(ToistoTestCase):
-    """Base class for quiz factory unit tests."""
-
-    def create_verb_with_person(self) -> Concept:
-        """Create a verb with grammatical person."""
-        return self.create_concept(
-            "to eat",
-            labels=[
-                {
-                    "label": {
-                        "first person": "I eat",
-                        "second person": "you eat",
-                        "third person": "she eats",
-                    },
-                    "language": EN,
-                },
-                {
-                    "label": {
-                        "first person": "ik eet",
-                        "second person": "jij eet",
-                        "third person": "zij eet",
-                    },
-                    "language": NL,
-                },
-            ],
-        )
-
-    def create_verb_with_tense_and_person(self, *tense: Tense) -> Concept:
-        """Create a verb with grammatical person nested within tense."""
-        label_en = {}
-        label_nl = {}
-        if "present tense" in tense:
-            label_en["present tense"] = {"singular": "I eat", "plural": "we eat"}
-            label_nl["present tense"] = {"singular": "ik eet", "plural": "wij eten"}
-        if "past tense" in tense:
-            label_en["past tense"] = {"singular": "I ate", "plural": "we ate"}
-            label_nl["past tense"] = {"singular": "ik at", "plural": "wij aten"}
-        if "present perfect tense" in tense:
-            label_en["present perfect tense"] = {"singular": "I have eaten", "plural": "we have eaten"}
-            label_nl["present perfect tense"] = {"singular": "ik heb gegeten", "plural": "wij hebben gegeten"}
-        if "past perfect tense" in tense:
-            label_en["past perfect tense"] = {"singular": "I had eaten", "plural": "we had eaten"}
-            label_nl["past perfect tense"] = {"singular": "ik had gegeten", "plural": "wij hadden gegeten"}
-        return self.create_concept(
-            "to eat", labels=[{"label": label_en, "language": EN}, {"label": label_nl, "language": NL}]
-        )
-
-    def create_verb_with_infinitive_and_person(self) -> Concept:
-        """Create a verb with infinitive and grammatical person."""
-        return self.create_concept(
-            "to sleep",
-            labels=[
-                {"label": {"infinitive": "to sleep", "singular": "I sleep", "plural": "we sleep"}, "language": EN},
-                {"label": {"infinitive": "slapen", "singular": "ik slaap", "plural": "wij slapen"}, "language": NL},
-            ],
-        )
-
-    def create_verb_with_infinitive_and_number_and_person(self) -> Concept:
-        """Create a verb with infinitive and grammatical number nested with person."""
-        return self.create_concept(
-            "to be",
-            labels=[
-                {
-                    "label": {
-                        "infinitive": "olla",
-                        "singular": {
-                            "first person": "minä olen",
-                            "second person": "sinä olet",
-                            "third person": "hän on",
-                        },
-                        "plural": {
-                            "first person": "me olemme",
-                            "second person": "te olette",
-                            "third person": "he ovat",
-                        },
-                    },
-                    "language": FI,
-                },
-                {
-                    "label": {
-                        "infinitive": "zijn",
-                        "singular": {"first person": "ik ben", "second person": "jij bent", "third person": "zij is"},
-                        "plural": {
-                            "first person": "wij zijn",
-                            "second person": "jullie zijn",
-                            "third person": "zij zijn",
-                        },
-                    },
-                    "language": NL,
-                },
-            ],
-        )
-
-    def create_adjective_with_degrees_of_comparison(self, antonym: str = "") -> Concept:
-        """Create an adjective with degrees of comparison."""
-        labels: list[LabelDict] = [
-            {
-                "label": {"positive degree": "big", "comparative degree": "bigger", "superlative degree": "biggest"},
-                "language": EN,
-            },
-            {
-                "label": {"positive degree": "groot", "comparative degree": "groter", "superlative degree": "grootst"},
-                "language": NL,
-            },
-        ]
-        big: ConceptJSON = {"antonym": ConceptId(antonym)} if antonym else {}
-        return self.create_concept("big", big, labels=labels)
-
-    def create_noun(self) -> Concept:
-        """Create a simple noun."""
-        return self.create_concept(
-            "mall", labels=[{"label": "kauppakeskus", "language": FI}, {"label": "het winkelcentrum", "language": NL}]
-        )
-
-    def create_noun_with_grammatical_number(self) -> Concept:
-        """Create a noun with grammatical number."""
-        return self.create_concept(
-            "morning",
-            labels=[
-                {"label": {"singular": "aamu", "plural": "aamut"}, "language": FI},
-                {"label": {"singular": "de ochtend", "plural": "de ochtenden"}, "language": NL},
-            ],
-        )
-
-    def create_noun_with_grammatical_gender(self) -> Concept:
-        """Create a noun with grammatical gender."""
-        return self.create_concept(
-            "cat",
-            labels=[
-                {"label": {"feminine": "her cat", "masculine": "his cat"}, "language": EN},
-                {"label": {"feminine": "haar kat", "masculine": "zijn kat"}, "language": NL},
-            ],
-        )
-
-    def create_noun_with_grammatical_gender_including_neuter(self) -> Concept:
-        """Create a noun with grammatical gender, including neuter."""
-        return self.create_concept(
-            "bone",
-            labels=[
-                {"label": {"feminine": "her bone", "masculine": "his bone", "neuter": "its bone"}, "language": EN},
-                {"label": {"feminine": "haar bot", "masculine": "zijn bot", "neuter": "zijn bot"}, "language": NL},
-            ],
-        )
-
-    def create_noun_with_grammatical_number_and_gender(self) -> Concept:
-        """Create a noun with grammatical number and grammatical gender."""
-        return self.create_concept(
-            "cat",
-            labels=[
-                {
-                    "label": {
-                        "singular": {"feminine": "her cat", "masculine": "his cat"},
-                        "plural": {"feminine": "her cats", "masculine": "his cats"},
-                    },
-                    "language": EN,
-                },
-                {
-                    "label": {
-                        "singular": {"feminine": "haar kat", "masculine": "zijn kat"},
-                        "plural": {"feminine": "haar katten", "masculine": "zijn katten"},
-                    },
-                    "language": NL,
-                },
-            ],
-        )
+from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
+from .quiz_factory_test_case import OLLA_PRESENT_TENSE, ZIJN_PRESENT_TENSE, QuizFactoryTestCase
 
 
 class ConceptQuizzesTest(QuizFactoryTestCase):
@@ -1054,18 +886,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
             labels=[
                 {
                     "label": {
-                        "present tense": {
-                            "singular": {
-                                "first person": "minä olen",
-                                "second person": "sinä olet",
-                                "third person": "hän on",
-                            },
-                            "plural": {
-                                "first person": "me olemme",
-                                "second person": "te olette",
-                                "third person": "he ovat",
-                            },
-                        },
+                        "present tense": OLLA_PRESENT_TENSE,
                         "past tense": {
                             "singular": {
                                 "first person": "minä olin",
@@ -1083,18 +904,7 @@ class ConceptQuizzesTest(QuizFactoryTestCase):
                 },
                 {
                     "label": {
-                        "present tense": {
-                            "singular": {
-                                "first person": "ik ben",
-                                "second person": "jij bent",
-                                "third person": "zij is",
-                            },
-                            "plural": {
-                                "first person": "wij zijn",
-                                "second person": "jullie zijn",
-                                "third person": "zij zijn",
-                            },
-                        },
+                        "present tense": ZIJN_PRESENT_TENSE,
                         "past tense": {
                             "singular": {
                                 "first person": "ik was",
@@ -1248,7 +1058,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
 
     def test_present_and_past_tense_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for present and past tense nested with grammatical person."""
-        concept = self.create_verb_with_tense_and_person("present tense", "past tense")
+        concept = self.create_verb_with_tense_and_person()
         i_eat, we_eat, i_ate, we_ate = concept.labels(EN)
         ik_eet, wij_eten, ik_at, wij_aten = concept.labels(NL)
         self.assertSetEqual(
@@ -1283,9 +1093,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
 
     def test_all_tenses_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for all tenses nested with grammatical person."""
-        concept = self.create_verb_with_tense_and_person(
-            "present tense", "past tense", "present perfect tense", "past perfect tense"
-        )
+        concept = self.create_verb_with_tense_and_person(include_perfect_tense=True)
         ik_eet, wij_eten, ik_at, wij_aten, ik_heb_gegeten, wij_hebben_gegeten, ik_had_gegeten, wij_hadden_gegeten = (
             concept.labels(NL)
         )
@@ -1900,17 +1708,17 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
 
     def test_verb_with_person(self):
         """Test the grammatical quiz types for a verb with grammatical person."""
-        first, second, third = self.create_verb_with_person().labels(EN)
-        for concept in (first, second):
-            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, third))
-        for concept in (first, third):
-            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, second))
-        for concept in (second, third):
-            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, first))
+        first_person, second_person, third_person = self.create_verb_with_person().labels(EN)
+        for concept in (first_person, second_person):
+            self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, third_person))
+        for concept in (first_person, third_person):
+            self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, second_person))
+        for concept in (second_person, third_person):
+            self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(concept, first_person))
 
     def test_verb_with_tense_and_person(self):
         """Test the grammatical quiz types for a verb with tense and grammatical person."""
-        verb = self.create_verb_with_tense_and_person("present tense", "past tense")
+        verb = self.create_verb_with_tense_and_person()
         present_singular, present_plural, past_singular, past_plural = verb.labels(NL)
         for singular, plural in ((present_singular, present_plural), (past_singular, past_plural)):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
@@ -2000,55 +1808,3 @@ class OrderQuizTest(QuizFactoryTestCase):
         quizzes = create_quizzes(EN_NL, (ORDER,), concept)
         quiz = first(quizzes)
         self.assertEqual(ORDER, quiz.quiz_type)
-
-
-class FilterByQuizTypeTest(QuizFactoryTestCase):
-    """Unit tests for limiting the quiz types created."""
-
-    def test_filter_quizzes(self):
-        """Test that quizzes can be limited to certain quiz types."""
-        concept = self.create_concept(
-            "english", labels=[{"label": "English", "language": EN}, {"label": "Engels", "language": NL}]
-        )
-        (english,) = concept.labels(EN)
-        (engels,) = concept.labels(NL)
-        self.assertSetEqual(
-            {
-                self.create_quiz(concept, engels, [english], READ),
-                self.create_quiz(concept, english, [engels], WRITE),
-            },
-            create_quizzes(NL_EN, (READ, WRITE), concept),
-        )
-        self.assertSetEqual(
-            {
-                self.create_quiz(concept, engels, [engels], DICTATE),
-                self.create_quiz(concept, engels, [english], INTERPRET),
-            },
-            create_quizzes(NL_EN, (DICTATE, INTERPRET), concept),
-        )
-
-    def test_filter_grammatical_number(self):
-        """Test that quizzes can be filtered for plural and singular quiz types."""
-        concept = self.create_noun_with_grammatical_number()
-        aamu, aamut = concept.labels(FI)
-        self.assertSetEqual(
-            {self.create_quiz(concept, aamut, [aamu], SINGULAR)},
-            create_quizzes(FI_NL, (SINGULAR,), concept),
-        )
-        self.assertSetEqual(
-            {self.create_quiz(concept, aamu, [aamut], PLURAL)},
-            create_quizzes(FI_NL, (PLURAL,), concept),
-        )
-
-    def test_filter_grammatical_gender(self):
-        """Test that quizzes can be generated for feminine and masculine grammatical genders."""
-        concept = self.create_noun_with_grammatical_gender()
-        haar_kat, zijn_kat = concept.labels(NL)
-        self.assertSetEqual(
-            {self.create_quiz(concept, haar_kat, [zijn_kat], MASCULINE)},
-            create_quizzes(NL_EN, (MASCULINE,), concept),
-        )
-        self.assertSetEqual(
-            {self.create_quiz(concept, zijn_kat, [haar_kat], FEMININE)},
-            create_quizzes(NL_EN, (FEMININE,), concept),
-        )
