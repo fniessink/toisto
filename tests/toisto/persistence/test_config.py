@@ -11,7 +11,7 @@ from toisto.persistence.config import CONFIG_FILENAME, default_config, read_conf
 class ConfigTestCase(unittest.TestCase):
     """Base class for config unit tests."""
 
-    def read_config(self, path_open: Mock | None = None, *contents: str) -> ConfigParser:
+    def read_config(self, path_open: Mock | None = None, /, *contents: str) -> ConfigParser:
         """Read the config file."""
         if path_open:
             path_open.return_value.__enter__.return_value.__iter__.return_value = iter(contents)

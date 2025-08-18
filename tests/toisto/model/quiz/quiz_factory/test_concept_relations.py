@@ -12,8 +12,8 @@ from .....base import EN_NL, LabelDict
 from .quiz_factory_test_case import QuizFactoryTestCase
 
 
-class AntonymConceptsTest(QuizFactoryTestCase):
-    """Unit tests for antonym concepts."""
+class AntonymQuizzesTest(QuizFactoryTestCase):
+    """Unit tests for antonym quizzes."""
 
     def create_antonyms(self, *, add_comparative_degree: bool = False) -> tuple[Concept, Concept]:
         """Create two antonym concepts."""
@@ -52,7 +52,7 @@ class AntonymConceptsTest(QuizFactoryTestCase):
                 self.assertTrue(antonym_quiz.is_blocked_by(Quizzes({other_quiz})), message)
 
 
-class AnswerConceptsTest(QuizFactoryTestCase):
+class AnswerQuizzesTest(QuizFactoryTestCase):
     """Unit tests for answer concepts."""
 
     def test_single_answer(self):
