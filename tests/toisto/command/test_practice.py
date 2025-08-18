@@ -106,8 +106,8 @@ class PracticeBase(ToistoTestCase):
 @patch("pathlib.Path.open", MagicMock())
 @patch("toisto.ui.speech.gTTS", Mock())
 @patch("toisto.ui.speech.Popen", Mock())
-class PracticeTest(PracticeBase):
-    """Test the practice command."""
+class PracticeAnswerTest(PracticeBase):
+    """Test the practice command with different types of answers."""
 
     @patch("builtins.input", Mock(return_value="Hoi\n"))
     def test_quiz(self):
@@ -200,6 +200,13 @@ class PracticeTest(PracticeBase):
         self.practice(FI_NL, quizzes)
         self.assertEqual({"slow": True}, say.call_args_list[-1][-1])
         self.assertEqual([call("\x1b[F", end="")], print_.call_args_list)
+
+
+@patch("pathlib.Path.open", MagicMock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
+class PracticeFeedbackTest(PracticeBase):
+    """Test the practice command feedback."""
 
     @patch("builtins.input", Mock(return_value="hoi\n"))
     def test_quiz_question(self):
@@ -370,6 +377,13 @@ class PracticeTest(PracticeBase):
             f"'{linkified('de')} {linkified('vader')}'.[/secondary]\n"
         )
         self.assert_printed(expected_feedback, patched_print)
+
+
+@patch("pathlib.Path.open", MagicMock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
+class PracticeLifeCycleTest(PracticeBase):
+    """Test the practice command life cycle."""
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "Hoi\n", EOFError]))
     def test_quiz_try_again(self):

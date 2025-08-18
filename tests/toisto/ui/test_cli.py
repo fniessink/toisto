@@ -89,8 +89,8 @@ Commands:
 """
 
 
-class ParserTest(unittest.TestCase):
-    """Unit tests for the CLI parser."""
+class ParserTestCase(unittest.TestCase):
+    """Base class for the CLI parser unit tests."""
 
     ANSI_ESCAPE_CODES = re.compile(r"\x1B\[\d+(;\d+){0,2}m")
 
@@ -107,12 +107,20 @@ class ParserTest(unittest.TestCase):
         with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[{"name": "v9999"}])))):
             return create_argument_parser(config_parser or default_config(), concepts)
 
+
+class HelpTest(ParserTestCase):
+    """Unit tests for the help option."""
+
     @patch("sys.argv", ["toisto", "--help"])
     @patch("sys.stdout.write")
     def test_help(self, sys_stdout_write: Mock) -> None:
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+
+
+class ConfigureCommandTest(ParserTestCase):
+    """Unit tests for the configure command."""
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--target", "nl", "--source", "fi"])
@@ -275,6 +283,10 @@ Options:
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
+
+class PracticeCommandTest(ParserTestCase):
+    """Unit tests for the practice command."""
+
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi"])
     def test_practice_command(self) -> None:
@@ -382,31 +394,6 @@ Options:
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
 
-    @patch("sys.argv", ["toisto", "progress", "--help"])
-    @patch("sys.stdout.write")
-    def test_progress_help(self, sys_stdout_write: Mock) -> None:
-        """Test that the progress help message is displayed."""
-        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(
-            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-q {{quiz type}}] \
-[-S {{option}}] [{{concept}} ...]
-
-Show progress.
-
-{POSITIONAL_ARGUMENTS % ""}
-
-Options:
-  {HELP_OPTION}
-  {TARGET_OPTION % ""}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
-  {QUIZ_TYPE_OPTION}
-  -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
-                        retention
-""",
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
-        )
-
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "--target", "nl", "--source", "fi"])
     def test_no_command(self) -> None:
@@ -421,20 +408,6 @@ Options:
             quiz_type=[],
         )
         self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
-
-    @patch("sys.argv", ["toisto", "--version"])
-    @patch.object(ArgumentParser, "_print_message")
-    def test_version_long_option(self, print_message: Mock) -> None:
-        """Test that the app writes the version number to stdout."""
-        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
-
-    @patch("sys.argv", ["toisto", "-V"])
-    @patch.object(ArgumentParser, "_print_message")
-    def test_version_short_option(self, print_message: Mock) -> None:
-        """Test that the app writes the version number to stdout."""
-        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
 
     @patch("sys.argv", ["toisto", "practice", "--target", "42", "--source", "@@"])
     @patch("sys.stderr.write")
@@ -466,6 +439,39 @@ Options:
             sys_stderr_write.call_args_list[1][0][0],
         )
 
+
+class ProgressCommandTest(ParserTestCase):
+    """Unit tests for the progress command."""
+
+    @patch("sys.argv", ["toisto", "progress", "--help"])
+    @patch("sys.stdout.write")
+    def test_progress_help(self, sys_stdout_write: Mock) -> None:
+        """Test that the progress help message is displayed."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertEqual(
+            f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-q {{quiz type}}] \
+[-S {{option}}] [{{concept}} ...]
+
+Show progress.
+
+{POSITIONAL_ARGUMENTS % ""}
+
+Options:
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION}
+  {EXTRA_OPTION}
+  {QUIZ_TYPE_OPTION}
+  -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
+                        retention
+""",
+            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+        )
+
+
+class SelfCommandTest(ParserTestCase):
+    """Unit tests for the self command."""
+
     @patch("sys.argv", ["toisto", "self"])
     @patch("sys.stdout.write")
     def test_self_command(self, sys_stdout_write: Mock) -> None:
@@ -479,3 +485,21 @@ Options:
         """Test the help for self."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
         self.assertEqual(SELF_HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+
+
+class VersionTest(ParserTestCase):
+    """Unit tests for the version option."""
+
+    @patch("sys.argv", ["toisto", "--version"])
+    @patch.object(ArgumentParser, "_print_message")
+    def test_version_long_option(self, print_message: Mock) -> None:
+        """Test that the app writes the version number to stdout."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
+
+    @patch("sys.argv", ["toisto", "-V"])
+    @patch.object(ArgumentParser, "_print_message")
+    def test_version_short_option(self, print_message: Mock) -> None:
+        """Test that the app writes the version number to stdout."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")

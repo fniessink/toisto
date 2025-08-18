@@ -2,16 +2,7 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import (
-    DICTATE,
-    FEMININE,
-    INTERPRET,
-    MASCULINE,
-    PLURAL,
-    READ,
-    SINGULAR,
-    WRITE,
-)
+from toisto.model.quiz.quiz_type import DICTATE, FEMININE, INTERPRET, MASCULINE, PLURAL, READ, SINGULAR, WRITE
 
 from .....base import FI_NL, NL_EN
 from .quiz_factory_test_case import QuizFactoryTestCase
