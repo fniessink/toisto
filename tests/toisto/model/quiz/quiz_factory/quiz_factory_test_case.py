@@ -6,7 +6,7 @@ from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptJSON
 
-from ....base import LabelDict, ToistoTestCase
+from .....base import LabelDict, ToistoTestCase
 
 OLLA_PRESENT_TENSE = {
     "singular": {"first person": "minä olen", "second person": "sinä olet", "third person": "hän on"},

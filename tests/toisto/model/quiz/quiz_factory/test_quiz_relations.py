@@ -4,7 +4,7 @@ from toisto.model.quiz.quiz import Quizzes
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import GrammaticalQuizType, ListenOnlyQuizType, TranslationQuizType
 
-from ....base import FI_NL
+from .....base import FI_NL
 from .quiz_factory_test_case import QuizFactoryTestCase
 
 

@@ -13,7 +13,7 @@ from toisto.model.quiz.quiz_type import (
     WRITE,
 )
 
-from ....base import FI_NL, NL_EN
+from .....base import FI_NL, NL_EN
 from .quiz_factory_test_case import QuizFactoryTestCase
 
 

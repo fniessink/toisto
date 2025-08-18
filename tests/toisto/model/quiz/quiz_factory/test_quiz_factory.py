@@ -42,7 +42,7 @@ from toisto.model.quiz.quiz_type import (
 )
 from toisto.tools import first
 
-from ....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
+from .....base import EN_FI, EN_NL, FI_EN, FI_NL, NL_EN, NL_FI, ToistoTestCase
 from .quiz_factory_test_case import OLLA_PRESENT_TENSE, ZIJN_PRESENT_TENSE, QuizFactoryTestCase
 
 
