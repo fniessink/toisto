@@ -8,7 +8,7 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANSWER, ANTONYM
 from toisto.tools import first
 
-from ....base import EN_NL, LabelDict
+from .....base import EN_NL, LabelDict
 from .quiz_factory_test_case import QuizFactoryTestCase
 
 
