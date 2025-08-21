@@ -3,7 +3,8 @@
 import sys
 from collections.abc import Callable, Sequence
 from configparser import ConfigParser
-from typing import Final, cast
+from datetime import datetime
+from typing import Final
 
 from rich.console import Console
 from rich.panel import Panel
@@ -16,9 +17,11 @@ from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import GrammaticalQuizType
+from toisto.model.quiz.retention import Retention
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
+from .format import format_duration
 from .style import theme
 
 console = Console(theme=theme)
@@ -75,24 +78,26 @@ class Feedback:
         self.quiz = quiz
         self.language_pair = language_pair
 
-    def __call__(self, evaluation: Evaluation, guess: Label | None = None) -> str:
+    def text(self, evaluation: Evaluation, guess: Label, retention: Retention | None) -> str:
         """Return the feedback about the user's guess."""
         if evaluation == Evaluation.TRY_AGAIN:
-            return self._try_again(cast("Label", guess))
+            return self._try_again(guess)
         feedback = ""
         if evaluation == Evaluation.CORRECT:
             feedback += self.CORRECT
         elif evaluation == Evaluation.INCORRECT:
-            feedback += self.INCORRECT + self._correct_answer(cast("Label", guess))
+            feedback += self.INCORRECT + self._correct_answer(guess)
         else:
             feedback += self._correct_answers()
         if evaluation == Evaluation.CORRECT:
-            feedback += self._other_answers(cast("Label", guess))
+            feedback += self._other_answers(guess)
         elif evaluation == Evaluation.INCORRECT:
             feedback += self._other_answers(self.quiz.answer)
         feedback += self._colloquial() + self._meaning() + self._notes()
         if evaluation == Evaluation.CORRECT:
             feedback += self._examples()
+        if retention is not None:
+            feedback += self._retention(retention, evaluation)
         return feedback
 
     def _try_again(self, guess: Label) -> str:
@@ -158,6 +163,22 @@ class Feedback:
         """Format the label as example."""
         label_str = quoted(str(label))
         return f"{label_str} (colloquial)" if label.colloquial else label_str
+
+    def _retention(self, retention: Retention, evaluation: Evaluation) -> str:
+        """Return the retention as text."""
+        if retention.skip_until:
+            next_up = f"Up next in {format_duration(retention.skip_until - datetime.now().astimezone())}."
+        else:
+            next_up = "Up next soon."
+        count = retention.count
+        if evaluation == Evaluation.CORRECT:
+            count_description = f"Quizzed {count} times." if count > 1 else "Correct on the first try!"
+        else:
+            count_description = f"Quizzed {count} times." if count > 1 else "Quizzed once."
+        retention_length = (
+            f"Retention {format_duration(retention.length)}." if retention.length else "No retention yet."
+        )
+        return f"[retention]{count_description} {retention_length} {next_up}[/retention]\n"
 
 
 class ProgressUpdate:

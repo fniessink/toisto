@@ -91,7 +91,8 @@ class PracticeBase(ToistoTestCase):
         if progress is None:
             progress = self.progress(language_pair, quizzes)
         with patch("rich.console.Console.print") as patched_print:
-            practice(console.print, language_pair, progress, config, Namespace(progress_update=progress_update))
+            namespace = Namespace(progress_update=progress_update, show_quiz_retention=False)
+            practice(console.print, language_pair, progress, config, namespace)
         return patched_print
 
     def assert_printed(self, output: str, patched_print: Mock, **kwargs: str | bool) -> None:
@@ -230,8 +231,7 @@ class PracticeFeedbackTest(PracticeBase):
         concept = self.create_concept_fixture()
         quizzes = create_quizzes(FI_NL, (DICTATE,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n"
-        self.assert_printed(expected_feedback, patched_print)
+        self.assert_printed(f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n", patched_print)
 
     @patch("builtins.input", Mock(return_value="talot\n"))
     def test_quiz_with_multiple_meanings(self):

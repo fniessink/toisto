@@ -176,6 +176,17 @@ class CommandBuilder:
             help=f"show a progress update after each {{frequency}} quizzes; default: {default} (0 means never)",
         )
 
+    def add_show_quiz_retention_argument(self, parser: ArgumentParser) -> None:
+        """Add the show quiz retention argument to the command."""
+        default = self.config.get("practice", "show_quiz_retention")
+        parser.add_argument(
+            "-r",
+            "--show-quiz-retention",
+            choices=["yes", "no"],
+            default=default,
+            help=f"show the quiz retention after each quiz; default: {default}",
+        )
+
     def add_mp3player_argument(self, parser: ArgumentParser) -> None:
         """Add the mp3 player argument to the command."""
         default = self.config.get("commands", "mp3player")
@@ -221,6 +232,7 @@ class ConfigureCommandBuilder(CommandBuilder):
         self.add_extra_concepts_arguments(parser)
         self.add_progress_folder_argument(parser)
         self.add_progress_update_argument(parser)
+        self.add_show_quiz_retention_argument(parser)
         self.add_mp3player_argument(parser)
 
 
@@ -239,6 +251,7 @@ class PracticeCommandBuilder(CommandBuilder):
         self.add_extra_concepts_arguments(parser)
         self.add_quiz_type_argument(parser)
         self.add_progress_update_argument(parser)
+        self.add_show_quiz_retention_argument(parser)
 
 
 class ProgressCommandBuilder(CommandBuilder):

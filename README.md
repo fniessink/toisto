@@ -187,8 +187,8 @@ When running the previous command, Toisto creates a file `.toisto.cfg` in your h
 
 ```ini
 [languages]
-target = nl
-source = en
+target=nl
+source=en
 ```
 
 ### How to configure extra concept files
@@ -239,7 +239,22 @@ When running the previous command, Toisto creates a file `.toisto.cfg` in your h
 
 ```ini
 [practice]
-progress_update = 20
+progress_update=20
+```
+
+### How to configure display of quiz retention
+
+To have Toisto show retention after each quiz, you can turn this on in Toisto's configuration file:
+
+```console
+$ toisto configure --show-quiz-retention
+```
+
+When running the previous command, Toisto creates a file `.toisto.cfg` in your home directory if it doesn't exist, adds the `practice` section if it doesn't exist, and sets the show quiz retention to yes:
+
+```ini
+[practice]
+show_quiz_retention=yes
 ```
 
 ### How to configure a different mp3 player
@@ -258,7 +273,7 @@ When running the previous command, Toisto creates a file `.toisto.cfg` in your h
 
 ```ini
 [commands]
-mp3player = name_of_mp3_player or `builtin`
+mp3player=name_of_mp3_player or `builtin`
 ```
 
 Make sure the mp3 player is on the `PATH` or include the complete filepath of the mp3 player.

@@ -1,5 +1,6 @@
 """Unit tests for the output."""
 
+from datetime import datetime, timedelta
 from unittest import TestCase
 
 from toisto.model.language import FI, NL
@@ -8,6 +9,7 @@ from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, FEMININE, READ, WRITE
+from toisto.model.quiz.retention import Retention
 from toisto.ui.dictionary import DICTIONARY_URL, linkified
 from toisto.ui.text import Feedback, enumerated, instruction
 
@@ -54,7 +56,7 @@ class FeedbackTest(ToistoTestCase):
         )
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(Feedback.CORRECT, feedback(Evaluation.CORRECT, GUESS))
+        self.assertIn(Feedback.CORRECT, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
     def test_show_colloquial_language(self):
         """Test that the colloquial language, that is only spoken, is shown."""
@@ -75,9 +77,13 @@ class FeedbackTest(ToistoTestCase):
         for quiz in create_quizzes(FI_NL, (DICTATE,), concept):
             feedback = Feedback(quiz, FI_NL)
             if quiz.question.colloquial:
-                self.assertEqual(expected_feedback_correct, feedback(Evaluation.CORRECT, Label(FI, "kiitos")))
-                self.assertEqual(expected_feedback_incorrect, feedback(Evaluation.INCORRECT, Label(FI, "hei")))
-                self.assertEqual(expected_feedback_on_skip, feedback(Evaluation.SKIPPED))
+                self.assertIn(
+                    expected_feedback_correct, feedback.text(Evaluation.CORRECT, Label(FI, "kiitos"), Retention())
+                )
+                self.assertIn(
+                    expected_feedback_incorrect, feedback.text(Evaluation.INCORRECT, Label(FI, "hei"), Retention())
+                )
+                self.assertIn(expected_feedback_on_skip, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
@@ -95,7 +101,7 @@ class FeedbackTest(ToistoTestCase):
             f"{Feedback.CORRECT}[secondary]Another correct answer is '{expected_other_answer}'.[/secondary]\n"
         )
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(expected_text, feedback(Evaluation.CORRECT, GUESS))
+        self.assertIn(expected_text, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
@@ -112,7 +118,7 @@ class FeedbackTest(ToistoTestCase):
         other_answers = enumerated(*[f"'{linkified(str(answer))}'" for answer in quiz.other_answers(GUESS)])
         expected_text = f"{Feedback.CORRECT}[secondary]Other correct answers are {other_answers}.[/secondary]\n"
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(expected_text, feedback(Evaluation.CORRECT, GUESS))
+        self.assertIn(expected_text, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
     def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
@@ -125,7 +131,7 @@ class FeedbackTest(ToistoTestCase):
             f"[secondary]Meaning '{linkified('hoi')}'.[/secondary]\n"
         )
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(expected_text, feedback(Evaluation.INCORRECT, Label(FI, "incorrect")))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(FI, "incorrect"), Retention()))
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
@@ -143,7 +149,7 @@ class FeedbackTest(ToistoTestCase):
             f"[secondary]Another correct answer is '{linkified('hei')}'.[/secondary]\n"
         )
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(expected_text, feedback(Evaluation.INCORRECT, Label(FI, "incorrect")))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(FI, "incorrect"), Retention()))
 
     def test_do_not_show_generated_alternative_answers_on_incorrect_guess(self):
         """Test that generated alternative answers are not shown when the user guesses incorrectly."""
@@ -153,7 +159,7 @@ class FeedbackTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (READ,), concept).pop()
         expected_text = f"{Feedback.INCORRECT}The correct answer is '[inserted]{linkified('het huis')}[/inserted]'.\n"
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(expected_text, feedback(Evaluation.INCORRECT, Label(NL, "incorrect")))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(NL, "incorrect"), Retention()))
 
     def test_do_not_show_generated_alternative_answers_on_question_mark(self):
         """Test that generated alternative answers are not shown when the user enters a question mark."""
@@ -163,7 +169,7 @@ class FeedbackTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (READ,), concept).pop()
         expected_text = f"The correct answer is '{linkified('het huis')}'.\n"
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(expected_text, feedback(Evaluation.SKIPPED))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -175,7 +181,7 @@ class FeedbackTest(ToistoTestCase):
             f"The correct answer is '{linkified('terve')}'.\n[secondary]Meaning '{linkified('hoi')}'.[/secondary]\n"
         )
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(expected_text, feedback(Evaluation.SKIPPED))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
     def test_show_feedback_on_question_mark_with_multiple_answers(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
@@ -193,7 +199,7 @@ class FeedbackTest(ToistoTestCase):
             "'[link=https://en.wiktionary.org/wiki/hei]hei[/link]'.\n"
         )
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(expected_text, feedback(Evaluation.SKIPPED))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
 
 class FeedbackNotesTestCase(ToistoTestCase):
@@ -206,9 +212,9 @@ class FeedbackNotesTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(NL_FI, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, NL_FI)
-        self.assertEqual(
+        self.assertIn(
             "[secondary]Note: 'Hoi' is an informal greeting.[/secondary]",
-            feedback(Evaluation.CORRECT, Label(NL, "hoi")).split("\n")[-2],
+            feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
         )
 
     def test_multiple_notes(self):
@@ -223,7 +229,7 @@ class FeedbackNotesTestCase(ToistoTestCase):
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
             "[secondary]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.[/secondary]\n",
-            feedback(Evaluation.CORRECT, Label(FI, "moi")),
+            feedback.text(Evaluation.CORRECT, Label(FI, "moi"), Retention()),
         )
 
     def test_note_on_incorrect_answer(self):
@@ -233,9 +239,9 @@ class FeedbackNotesTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             "[secondary]Note: 'Moi' is an informal greeting.[/secondary]",
-            feedback(Evaluation.INCORRECT, Label(FI, "toi")).split("\n")[-2],
+            feedback.text(Evaluation.INCORRECT, Label(FI, "toi"), Retention()),
         )
 
     def test_note_on_skip_to_answer(self):
@@ -245,9 +251,58 @@ class FeedbackNotesTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             "[secondary]Note: 'Moi' is an informal greeting.[/secondary]",
-            feedback(Evaluation.SKIPPED, Label(FI, "?")).split("\n")[-2],
+            feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()),
+        )
+
+
+class FeedbackRetentionTestCase(ToistoTestCase):
+    """Unit tests for the retention returned by the feedback function."""
+
+    def create_feedback(self) -> Feedback:
+        """Create a feedback fixture."""
+        concept = self.create_concept(
+            "hi", labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
+        )
+        quiz = create_quizzes(NL_FI, (READ,), concept).pop()
+        return Feedback(quiz, NL_FI)
+
+    def test_retention_feedback_correct_after_first_quiz(self):
+        """Test the retention feedback after the quiz has been answered correctly on the first try."""
+        feedback = self.create_feedback()
+        skip_until = datetime.now().astimezone() + timedelta(hours=24)
+        self.assertIn(
+            "[retention]Correct on the first try! No retention yet. Up next in 24 hours.[/retention]",
+            feedback.text(Evaluation.CORRECT, GUESS, Retention(count=1, skip_until=skip_until)),
+        )
+        self.assertIn(Feedback.CORRECT, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
+
+    def test_retention_feedback_incorrect_after_first_quiz(self):
+        """Test the retention feedback after the quiz has been answered incorrectly on the first try."""
+        feedback = self.create_feedback()
+        self.assertIn(
+            "[retention]Quizzed once. No retention yet. Up next soon.[/retention]",
+            feedback.text(Evaluation.INCORRECT, GUESS, Retention(count=1)),
+        )
+        self.assertIn(Feedback.INCORRECT, feedback.text(Evaluation.INCORRECT, GUESS, Retention()))
+
+    def test_retention_feedback_correct_after_second_quiz(self):
+        """Test the retention feedback after the quiz has been answered correctly on the second try."""
+        feedback = self.create_feedback()
+        end = datetime.now().astimezone()
+        start = end - timedelta(weeks=4)
+        self.assertIn(
+            "[retention]Quizzed 2 times. Retention 4 weeks. Up next soon.[/retention]",
+            feedback.text(Evaluation.CORRECT, GUESS, Retention(count=2, start=start, end=end)),
+        )
+
+    def test_retention_feedback_incorrect_after_second_quiz(self):
+        """Test the retention feedback retention after the quiz has been answered incorrectly on the second try."""
+        feedback = self.create_feedback()
+        self.assertIn(
+            "[retention]Quizzed 2 times. No retention yet. Up next soon.[/retention]",
+            feedback.text(Evaluation.INCORRECT, GUESS, Retention(count=2)),
         )
 
 
@@ -267,9 +322,9 @@ class FeedbackExampleTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (READ,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             Feedback.CORRECT + "[secondary]Example: 'Moi Alice!' meaning 'Hoi Alice!'[/secondary]\n",
-            feedback(Evaluation.CORRECT, Label(NL, "hoi")),
+            feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
         )
 
     def test_example_with_write_quiz(self):
@@ -284,9 +339,9 @@ class FeedbackExampleTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             Feedback.CORRECT + "[secondary]Example: 'Terve Alice!' meaning 'Hoi Alice!'[/secondary]\n",
-            feedback(Evaluation.CORRECT, GUESS),
+            feedback.text(Evaluation.CORRECT, GUESS, Retention()),
         )
 
     def test_example_with_multiple_meanings(self):
@@ -306,10 +361,10 @@ class FeedbackExampleTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             Feedback.CORRECT
             + "[secondary]Example: 'Terve Alice!' meaning 'Hoi Alice!' and 'Hallo Alice!'[/secondary]\n",
-            feedback(Evaluation.CORRECT, GUESS),
+            feedback.text(Evaluation.CORRECT, GUESS, Retention()),
         )
 
     def test_example_with_colloquial_labels(self):
@@ -330,12 +385,12 @@ class FeedbackExampleTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             Feedback.CORRECT
             + "[secondary]Examples:\n"
             + "- 'Terve Alice!' meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).\n"
             + "- 'Moi Alice!' (colloquial) meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).[/secondary]\n",
-            feedback(Evaluation.CORRECT, GUESS),
+            feedback.text(Evaluation.CORRECT, GUESS, Retention()),
         )
 
     def test_example_with_synonyms(self):
@@ -359,11 +414,11 @@ class FeedbackExampleTestCase(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (READ,), near).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertEqual(
+        self.assertIn(
             Feedback.CORRECT + "[secondary]Another correct answer is "
             "'[link=https://en.wiktionary.org/wiki/dichtbij]dichtbij[/link]'.[/secondary]\n"
             "[secondary]Example: 'Se on lähellä.' meaning 'Het is dichtbij.' and 'Het is in de buurt.'[/secondary]\n",
-            feedback(Evaluation.CORRECT, Label(NL, "in de buurt")),
+            feedback.text(Evaluation.CORRECT, Label(NL, "in de buurt"), Retention()),
         )
 
 

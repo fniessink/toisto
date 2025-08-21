@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Add command to upgrade Toisto to the latest version (`toisto self upgrade`). Closes [#1045](https://github.com/fniessink/toisto/issues/1045).
 - Add command to uninstall Toisto (`toisto self uninstall`). Closes [#1046](https://github.com/fniessink/toisto/issues/1046).
+- Add option to show quiz retention after each quiz (`toisto --show-quiz-retention yes`, to configure: `toisto configure --show-quiz-retention yes`).
 
 ## 0.36.3 - 2025-07-19
 

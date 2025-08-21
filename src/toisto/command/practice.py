@@ -3,6 +3,7 @@
 from argparse import Namespace
 from collections.abc import Callable
 from configparser import ConfigParser
+from dataclasses import dataclass
 
 import dramatic
 
@@ -18,37 +19,40 @@ from toisto.ui.speech import Speech
 from toisto.ui.text import DONE, Feedback, ProgressUpdate, instruction
 
 
-def do_quiz_attempt(quiz: Quiz, speech: Speech, attempt: int) -> Label:
-    """Present the question and get the answer from the user."""
-    repeat_speech = False
-    while True:
-        speech.say(quiz.question.language, quiz.question.pronounceable, slow=repeat_speech or attempt > 1)
-        if answer := Label(quiz.answer.language, input("> ").strip()):
-            break
-        repeat_speech = True
-        print("\033[F", end="")  # noqa: T201  # Move cursor one line up
-    return answer
+@dataclass(frozen=True)
+class QuizMaster:
+    """Do quizzes."""
 
+    write_output: Callable[..., None]
+    language_pair: LanguagePair
+    progress: Progress
+    speech: Speech
+    show_quiz_retention: bool
 
-def do_quiz(
-    write_output: Callable[..., None],
-    language_pair: LanguagePair,
-    quiz: Quiz,
-    progress: Progress,
-    speech: Speech,
-) -> None:
-    """Do one quiz and update the progress."""
-    feedback = Feedback(quiz, language_pair)
-    write_output(instruction(quiz))
-    if not quiz.has_quiz_type(ListenOnlyQuizType):
-        write_output(linkified(str(quiz.question)))
-    for attempt in range(1, 3):
-        guess = do_quiz_attempt(quiz, speech, attempt)
-        evaluation = quiz.evaluate(guess, language_pair, attempt)
-        progress.mark_evaluation(quiz, evaluation)
-        write_output(feedback(evaluation, guess))
-        if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
-            break
+    def do_quiz(self, quiz: Quiz) -> None:
+        """Do one quiz and update the progress."""
+        feedback = Feedback(quiz, self.language_pair)
+        self.write_output(instruction(quiz))
+        if not quiz.has_quiz_type(ListenOnlyQuizType):
+            self.write_output(linkified(str(quiz.question)))
+        for attempt in range(1, 3):
+            guess = self.do_quiz_attempt(quiz, attempt)
+            evaluation = quiz.evaluate(guess, self.language_pair, attempt)
+            retention = self.progress.mark_evaluation(quiz, evaluation)
+            self.write_output(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
+            if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
+                break
+
+    def do_quiz_attempt(self, quiz: Quiz, attempt: int) -> Label:
+        """Present the question and get the answer from the user."""
+        repeat_speech = False
+        while True:
+            self.speech.say(quiz.question.language, quiz.question.pronounceable, slow=repeat_speech or attempt > 1)
+            if answer := Label(quiz.answer.language, input("> ").strip()):
+                break
+            repeat_speech = True
+            print("\033[F", end="")  # noqa: T201  # Move cursor one line up
+        return answer
 
 
 def practice(
@@ -61,9 +65,10 @@ def practice(
     """Practice a language."""
     progress_update = ProgressUpdate(progress, args.progress_update)
     speech = Speech(config)
+    quiz_master = QuizMaster(write_output, language_pair, progress, speech, args.show_quiz_retention == "yes")
     try:
         while quiz := progress.next_quiz():
-            do_quiz(write_output, language_pair, quiz, progress, speech)
+            quiz_master.do_quiz(quiz)
             save_progress(progress, config)
             with dramatic.output.at_speed(120):
                 # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:

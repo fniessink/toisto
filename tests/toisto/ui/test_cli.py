@@ -17,17 +17,15 @@ from toisto.persistence.config import default_config
 from toisto.persistence.folder import home
 from toisto.ui.cli import create_argument_parser, parse_arguments
 
-CONFIGURE_USAGE = (
-    "Usage: toisto configure [-h] [-t {language}] [-s {language}] [-e {path}] [-p {path}] [-u {frequency}] "
-    "[-m {mp3player}]"
-)
-PRACTICE_USAGE = (
-    "Usage: toisto practice [-h] -t {language} -s {language} [-e {path}] [-q {quiz type}] [-u {frequency}] "
-    "[{concept} ...]"
-)
+CONFIGURE_USAGE = """Usage: toisto configure [-h] [-t {language}] [-s {language}] [-e {path}] [-p {path}] \
+[-u {frequency}] [-r {yes,no}]
+                        [-m {mp3player}]"""
+PRACTICE_USAGE = """Usage: toisto practice [-h] -t {language} -s {language} [-e {path}] [-q {quiz type}] \
+[-u {frequency}] [-r {yes,no}]
+                       [{concept} ...]"""
 CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
 PRACTICE_USAGE_OPTIONAL_TARGET = """Usage: toisto practice [-h] [-t {language}] -s {language} [-e {path}] \
-[-q {quiz type}] [-u {frequency}]
+[-q {quiz type}] [-u {frequency}] [-r {yes,no}]
                        [{concept} ...]"""
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
@@ -42,6 +40,8 @@ PROGRESS_FOLDER = f"""-p, --progress-folder {{path}}
                         folder where to save progress; default: {home()!s}"""
 PROGRESS_OPTION = """-u, --progress-update {frequency}
                         show a progress update after each {frequency} quizzes; default: %s (0 means never)"""
+RETENTION_OPTION = """-r, --show-quiz-retention {yes,no}
+                        show the quiz retention after each quiz; default: no"""
 MP3PLAYER_OPTION = """-m, --mp3player {mp3player}
                         mp3 player to play sounds; default: afplay"""
 QUIZ_TYPE_OPTION = """-q, --quiz-type {quiz type}
@@ -97,6 +97,13 @@ class ParserTestCase(unittest.TestCase):
     def setUp(self) -> None:
         """Set up the test fixtures."""
         os.environ["COLUMNS"] = "120"  # Set the width of the terminal to match the formatting of the expected results
+        self.default_namespace = {
+            "extra": [],
+            "progress_update": 0,
+            "show_quiz_retention": False,
+            "source_language": None,
+            "target_language": None,
+        }
 
     def argument_parser(
         self,
@@ -122,20 +129,40 @@ class HelpTest(ParserTestCase):
 class ConfigureCommandTest(ParserTestCase):
     """Unit tests for the configure command."""
 
+    def setUp(self) -> None:
+        """Set up the test fixtures."""
+        super().setUp()
+        self.default_namespace |= {
+            "command": "configure",
+            "mp3player": "afplay",
+            "progress_folder": home(),
+            "show_quiz_retention": "no",
+        }
+
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--target", "nl", "--source", "fi"])
     def test_configure_command(self) -> None:
         """Test that the configure command can be specified."""
-        expected_namespace = Namespace(
-            command="configure",
-            extra=[],
-            mp3player="afplay",
-            progress_folder=home(),
-            progress_update=0,
-            source_language="fi",
-            target_language="nl",
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        expected_namespace = {
+            **self.default_namespace,
+            "target_language": "nl",
+            "source_language": "fi",
+        }
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--progress-update", "5"])
+    def test_configure_progress_update(self) -> None:
+        """Test that the progress update frequency can be configured."""
+        expected_namespace = {**self.default_namespace, "progress_update": 5}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--show-quiz-retention", "yes"])
+    def test_configure_quiz_retention(self) -> None:
+        """Test that showing the quiz retention can be configured."""
+        expected_namespace = {**self.default_namespace, "show_quiz_retention": "yes"}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
@@ -143,16 +170,8 @@ class ConfigureCommandTest(ParserTestCase):
     @patch("toisto.ui.cli.Path.exists", Mock(return_value=True))
     def test_configure_progress_folder(self) -> None:
         """Test that the progress folder can be configured."""
-        expected_namespace = Namespace(
-            command="configure",
-            extra=[],
-            mp3player="afplay",
-            progress_folder=Path("/home/user/toisto"),
-            progress_update=0,
-            source_language=None,
-            target_language=None,
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        expected_namespace = {**self.default_namespace, "progress_folder": Path("/home/user/toisto")}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--progress-folder", "/home/user/toisto"])
@@ -186,16 +205,8 @@ class ConfigureCommandTest(ParserTestCase):
     @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/extra.json")))
     def test_configure_concept_file(self) -> None:
         """Test that a concept file can be configured."""
-        expected_namespace = Namespace(
-            command="configure",
-            extra=[Path("/home/user/extra.json")],
-            mp3player="afplay",
-            progress_folder=home(),
-            progress_update=0,
-            source_language=None,
-            target_language=None,
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        expected_namespace = {**self.default_namespace, "extra": [Path("/home/user/extra.json")]}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/toisto"])
@@ -205,16 +216,8 @@ class ConfigureCommandTest(ParserTestCase):
     @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto")))
     def test_configure_concept_folder(self) -> None:
         """Test that a concept folder can be configured."""
-        expected_namespace = Namespace(
-            command="configure",
-            extra=[Path("/home/user/toisto")],
-            mp3player="afplay",
-            progress_folder=home(),
-            progress_update=0,
-            source_language=None,
-            target_language=None,
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        expected_namespace = {**self.default_namespace, "extra": [Path("/home/user/toisto")]}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--extra", "~/toisto/extra.json"])
@@ -223,16 +226,8 @@ class ConfigureCommandTest(ParserTestCase):
     @patch("toisto.ui.cli.Path.resolve", Mock(return_value=Path("/home/user/toisto/extra.json")))
     def test_configure_concept_file_with_relative_path(self) -> None:
         """Test that a concept file with a relative path can be configured."""
-        expected_namespace = Namespace(
-            command="configure",
-            extra=[Path("/home/user/toisto/extra.json")],
-            mp3player="afplay",
-            progress_folder=home(),
-            progress_update=0,
-            source_language=None,
-            target_language=None,
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        expected_namespace = {**self.default_namespace, "extra": [Path("/home/user/toisto/extra.json")]}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "configure", "--extra", "/home/user/extra.json"])
@@ -278,6 +273,7 @@ Options:
   {EXTRA_OPTION}
   {PROGRESS_FOLDER}
   {PROGRESS_OPTION % "0"}
+  {RETENTION_OPTION}
   {MP3PLAYER_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
@@ -287,20 +283,23 @@ Options:
 class PracticeCommandTest(ParserTestCase):
     """Unit tests for the practice command."""
 
+    def setUp(self) -> None:
+        """Set up the test fixtures."""
+        super().setUp()
+        self.default_namespace |= {
+            "command": "practice",
+            "concepts": [],
+            "quiz_type": [],
+            "source_language": "fi",
+            "target_language": "nl",
+            "show_quiz_retention": "no",
+        }
+
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi"])
     def test_practice_command(self) -> None:
         """Test that the practice command can be specified."""
-        expected_namespace = Namespace(
-            command="practice",
-            target_language="nl",
-            source_language="fi",
-            concepts=[],
-            extra=[],
-            progress_update=0,
-            quiz_type=[],
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        self.assertEqual(Namespace(**self.default_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.platform", "darwin")
     @patch("sys.argv", ["toisto", "practice", "--help"])
@@ -337,6 +336,7 @@ Options:
   {EXTRA_OPTION}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
+  {RETENTION_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
@@ -364,6 +364,7 @@ Options:
   {EXTRA_OPTION}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
+  {RETENTION_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
@@ -390,6 +391,7 @@ Options:
   {EXTRA_OPTION}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % 42}
+  {RETENTION_OPTION}
 """,
             self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
         )
@@ -398,16 +400,7 @@ Options:
     @patch("sys.argv", ["toisto", "--target", "nl", "--source", "fi"])
     def test_no_command(self) -> None:
         """Test that the practice command is returned if the user did not specify a command."""
-        expected_namespace = Namespace(
-            command="practice",
-            target_language="nl",
-            source_language="fi",
-            concepts=[],
-            extra=[],
-            progress_update=0,
-            quiz_type=[],
-        )
-        self.assertEqual(expected_namespace, parse_arguments(self.argument_parser()))
+        self.assertEqual(Namespace(**self.default_namespace), parse_arguments(self.argument_parser()))
 
     @patch("sys.argv", ["toisto", "practice", "--target", "42", "--source", "@@"])
     @patch("sys.stderr.write")
@@ -438,6 +431,20 @@ Options:
             "invalid choice 'foo' (run `toisto practice -h` to see the valid choices)",
             sys_stderr_write.call_args_list[1][0][0],
         )
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "practice", "--target", "nl", "--source", "fi", "--progress-update", "5"])
+    def test_progress_update(self) -> None:
+        """Test that the progress update frequency can be configured."""
+        expected_namespace = {**self.default_namespace, "progress_update": 5}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "practice", "--show-quiz-retention", "yes", "--target", "nl", "--source", "fi"])
+    def test_show_quiz_retention(self) -> None:
+        """Test that the quiz retention can be shown."""
+        expected_namespace = {**self.default_namespace, "show_quiz_retention": "yes"}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
 
 class ProgressCommandTest(ParserTestCase):
