@@ -35,21 +35,23 @@ class Progress:
         quiz_type = key.rsplit(":", maxsplit=1)[-1]
         return bool(QuizType.actions.get_values(quiz_type))
 
-    def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> None:
-        """Mark the evaluation.
+    def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> Retention:
+        """Mark the evaluation and return the current quiz retention.
 
         If the answer was correct, increase the retention of the quiz, and pause related quizzes for a little while.
         If the answer was incorrect or skipped, reset the retention of the quiz.
         """
         self.answers[evaluation] += 1
+        retention = self.__progress_dict.setdefault(quiz.key, Retention())
         match evaluation:
             case Evaluation.CORRECT:
-                self.__progress_dict.setdefault(quiz.key, Retention()).increase()
+                retention.increase()
                 self.__pause_related_quizzes(quiz)
             case Evaluation.INCORRECT | Evaluation.SKIPPED:
-                self.__progress_dict.setdefault(quiz.key, Retention()).reset()
+                retention.reset()
             case _:
-                return
+                pass
+        return retention
 
     def __pause_related_quizzes(self, quiz: Quiz) -> None:
         """Pause related quizzes for a little while."""

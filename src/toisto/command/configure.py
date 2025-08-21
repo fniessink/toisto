@@ -22,6 +22,9 @@ def configure(argument_parser: ArgumentParser, config: ConfigParser, args: Names
     if "progress_update" in args:
         ensure_section(config, "practice")
         config.set("practice", "progress_update", str(args.progress_update))
+    if "show_quiz_retention" in args:
+        ensure_section(config, "practice")
+        config.set("practice", "show_quiz_retention", args.show_quiz_retention)
     if "mp3player" in args:
         ensure_section(config, "commands")
         config.set("commands", "mp3player", args.mp3player)

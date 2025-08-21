@@ -55,6 +55,7 @@ CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = {
     },
     "practice": {
         "progress_update": Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], "0", lambda value: value.isdigit()),
+        "show_quiz_retention": Option(Quantifier.ONE_OF, ["no", "yes"], "no"),
     },
     "progress": {"folder": Option(Quantifier.ANY, default_value=str(home()))},
     "identity": {"uuid": Option(Quantifier.ANY, default_value=str(uuid1()))},

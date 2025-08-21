@@ -9,5 +9,6 @@ theme = Theme(
         "language": "light_goldenrod2 bold",
         "quiz": "medium_purple1",
         "secondary": "grey69",
+        "retention": "grey50",
     }
 )

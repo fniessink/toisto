@@ -48,6 +48,12 @@ class ConfigureTest(ToistoTestCase):
         configure(self.argument_parser, config, Namespace(progress_update="12"))
         self.assert_configured(write_config, config, ("practice", "progress_update", "12"))
 
+    def test_change_show_quiz_retention(self, write_config: Mock) -> None:
+        """Test changing whether quiz retention should be shown."""
+        config = ConfigParser()
+        configure(self.argument_parser, config, Namespace(show_quiz_retention="yes"))
+        self.assert_configured(write_config, config, ("practice", "show_quiz_retention", "yes"))
+
     def test_change_mp3_player(self, write_config: Mock) -> None:
         """Test changing the mp3 player."""
         config = ConfigParser()

@@ -32,24 +32,25 @@ class ProgressTest(ToistoTestCase):
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
         quiz = self.quizzes.pop()
-        self.assertIsNone(self.progress.get_retention(quiz).start)
-        self.assertIsNone(self.progress.get_retention(quiz).end)
-        self.assertIsNone(self.progress.get_retention(quiz).skip_until)
+        retention = self.progress.get_retention(quiz)
+        self.assertIsNone(retention.start)
+        self.assertIsNone(retention.end)
+        self.assertIsNone(retention.skip_until)
 
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
-        self.assertIsNotNone(self.progress.get_retention(quiz).start)
-        self.assertIsNotNone(self.progress.get_retention(quiz).end)
+        retention = self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
+        self.assertIsNotNone(retention.start)
+        self.assertIsNotNone(retention.end)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
         quiz = self.quizzes.pop()
-        self.progress.mark_evaluation(quiz, Evaluation.INCORRECT)
-        self.assertIsNone(self.progress.get_retention(quiz).start)
-        self.assertIsNone(self.progress.get_retention(quiz).end)
-        self.assertIsNone(self.progress.get_retention(quiz).skip_until)
+        retention = self.progress.mark_evaluation(quiz, Evaluation.INCORRECT)
+        self.assertIsNone(retention.start)
+        self.assertIsNone(retention.end)
+        self.assertIsNone(retention.skip_until)
 
     def test_next_quiz(self):
         """Test that the next quiz is not silenced."""
@@ -143,8 +144,8 @@ class ProgressTest(ToistoTestCase):
         quizzes = create_quizzes(FI_NL, (DICTATE,), *concepts)
         progress = Progress(FI, quizzes, {})
         random_quiz = next(iter(quizzes))
-        progress.mark_evaluation(random_quiz, Evaluation.CORRECT)
-        progress.get_retention(random_quiz).skip_until = None
+        retention = progress.mark_evaluation(random_quiz, Evaluation.CORRECT)
+        retention.skip_until = None
         self.assertEqual(progress.next_quiz(), random_quiz)
 
     def test_as_dict(self):
