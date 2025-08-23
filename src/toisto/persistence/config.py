@@ -34,25 +34,29 @@ class Option:
 
     quantifier: Quantifier
     allowed_values: Iterable[str] = field(default_factory=list)
-    is_valid: Callable[[str], bool] = field(default=lambda _value: True)
     default_value: Callable[[], str] | str = ""
+    validate: Callable[[str], bool] | None = None
+
+    def is_valid(self, value: str) -> bool:
+        """Return whether the value is a valid option value."""
+        if self.validate is None:
+            return value in self.allowed_values if self.allowed_values else True
+        return self.validate(value)
 
 
 DEFAULT_MP3PLAYERS = {"darwin": "afplay", "linux": "mpg123 --quiet"}
 CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = {
     "languages": {
-        "target": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
-        "source": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys(), ALL_LANGUAGES.__contains__),
+        "target": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
+        "source": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
     },
     "commands": {
         "mp3player": Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "builtin")),
     },
     "practice": {
-        "progress_update": Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], lambda value: value.isdigit(), "0"),
+        "progress_update": Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], "0", lambda value: value.isdigit()),
     },
-    "progress": {
-        "folder": Option(Quantifier.ANY, default_value=str(home())),
-    },
+    "progress": {"folder": Option(Quantifier.ANY, default_value=str(home()))},
     "identity": {"uuid": Option(Quantifier.ANY, default_value=str(uuid1()))},
     "files": [],
 }
