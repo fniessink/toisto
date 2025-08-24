@@ -154,7 +154,7 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
             {self.quiz.key: {"start": self.start, "end": self.end}, self.another_quiz.key: {}},
         )
         console_print = self.show_progress(progress)
-        self.assertEqual(["88 days", ""], list(console_print.call_args[0][0].columns[6].cells))
+        self.assertEqual(["3 months", ""], list(console_print.call_args[0][0].columns[6].cells))
 
     def test_sort_by_retention_numerically(self):
         """Test that the quizzes are sorted by retention length numerically, not lexically."""
@@ -168,4 +168,4 @@ class ShowProgressByRetentionTest(ShowProgressSortTestCase):
             },
         )
         console_print = self.show_progress(progress)
-        self.assertEqual(["88 days", "9 days"], list(console_print.call_args[0][0].columns[6].cells))
+        self.assertEqual(["3 months", "9 days"], list(console_print.call_args[0][0].columns[6].cells))
