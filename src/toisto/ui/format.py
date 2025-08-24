@@ -30,21 +30,17 @@ def format_duration(duration: timedelta) -> str:
 
     """
     seconds = abs(duration).total_seconds()
-    if (years := round(seconds / SECONDS_PER_YEAR)) > 1:
-        formatted_duration = f"{years} years"
-    elif (months := round(seconds / SECONDS_PER_MONTH)) > 1:
-        formatted_duration = f"{months} months"
-    elif (weeks := round(seconds / SECONDS_PER_WEEK)) > 1:
-        formatted_duration = f"{weeks} weeks"
-    elif (days := round(seconds / SECONDS_PER_DAY)) > 1:
-        formatted_duration = f"{days} days"
-    elif (hours := round(seconds / SECONDS_PER_HOUR)) > 1:
-        formatted_duration = f"{hours} hours"
-    elif (minutes := round(seconds / SECONDS_PER_MINUTE)) > 1:
-        formatted_duration = f"{minutes} minutes"
-    else:
-        formatted_duration = f"{round(seconds)} second{'' if seconds == 1 else 's'}"
-    return formatted_duration
+    for unit, seconds_per_unit in (
+        ("year", SECONDS_PER_YEAR),
+        ("month", SECONDS_PER_MONTH),
+        ("week", SECONDS_PER_WEEK),
+        ("day", SECONDS_PER_DAY),
+        ("hour", SECONDS_PER_HOUR),
+        ("minute", SECONDS_PER_MINUTE),
+    ):
+        if (nr_units := round(seconds / seconds_per_unit)) > 1:
+            return f"{nr_units} {unit}s"
+    return f"{round(seconds)} second{'' if seconds == 1 else 's'}"
 
 
 def format_datetime(date_time: datetime) -> str:
