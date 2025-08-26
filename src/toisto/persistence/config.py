@@ -98,12 +98,13 @@ class ConfigSchemaValidator:
                 f"unknown option '{option_name}' in section '{section}'. "
                 f"Allowed options are: {', '.join(allowed_options)}.",
             )
-        value = self._config_parser.get(section, option_name)
-        if not option.is_valid(value):
-            self._error(
-                f"incorrect value '{value}' for option '{option_name}' in section '{section}'. "
-                f"Allowed values are {option.quantifier.value}: {', '.join(option.allowed_values)}.",
-            )
+        else:
+            value = self._config_parser.get(section, option_name)
+            if not option.is_valid(value):
+                self._error(
+                    f"incorrect value '{value}' for option '{option_name}' in section '{section}'. "
+                    f"Allowed values are {option.quantifier.value}: {', '.join(option.allowed_values)}.",
+                )
 
 
 def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_FILENAME) -> ConfigParser:
