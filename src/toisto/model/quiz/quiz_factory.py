@@ -41,8 +41,6 @@ class BaseQuizFactory:
             return Quizzes()
         questions = self.questions(concept)
         answers = self.answers(concept)
-        question_meanings = self.question_meanings(concept)
-        answer_meanings = self.answer_meanings(concept)
         blocked_by = self.blocked_by(concept, previous_quizzes)
         return Quizzes(
             Quiz(
@@ -51,8 +49,8 @@ class BaseQuizFactory:
                 self.answers_for_question(question, answer, answers),
                 self.quiz_type,
                 blocked_by,
-                question_meanings,
-                answer_meanings,
+                self.question_meanings(question, concept),
+                self.answer_meanings(answer, concept),
             )
             for question, answer in self.zip_questions_and_answers(questions, answers)
             if self.include_question(question, answer) and self.answers_for_question(question, answer, answers)
@@ -76,12 +74,12 @@ class BaseQuizFactory:
         """Return the answers. Subclasses may use the concept to derive the answers."""
         return Labels()
 
-    def question_meanings(self, concept: Concept) -> Labels:
-        """Return the question meanings. Subclasses may use the concept to derive the question meanings."""
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
+        """Return the question meanings. Subclasses may use question and concept to derive the question meanings."""
         return Labels()
 
-    def answer_meanings(self, concept: Concept) -> Labels:
-        """Return the answer meanings. Subclasses may use the concept to derive the answer meanings."""
+    def answer_meanings(self, answer: Label, concept: Concept) -> Labels:
+        """Return the answer meanings. Subclasses may use answer and concept to derive the answer meanings."""
         return Labels()
 
     def blocked_by(self, concept: Concept, previous_quizzes: Quizzes) -> tuple[Quiz, ...]:
@@ -174,7 +172,7 @@ class DictateQuizFactory(TranslationQuizFactory):
         """Return the answers."""
         return concept.labels(self.language_pair.target).non_colloquial
 
-    def question_meanings(self, concept: Concept) -> Labels:
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(self.language_pair.source)
 
@@ -197,9 +195,9 @@ class InterpretQuizFactory(TranslationQuizFactory):
         """Return the answers."""
         return concept.labels(self.language_pair.source).non_colloquial
 
-    def question_meanings(self, concept: Concept) -> Labels:
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
-        return concept.meanings(self.language_pair.target)
+        return concept.meanings(self.language_pair.target).with_same_grammatical_categories_as(question)
 
 
 @dataclass
@@ -239,13 +237,13 @@ class GrammaticalQuizFactory(BaseQuizFactory):
         """Return the answers."""
         return Labels([self._answer])
 
-    def question_meanings(self, concept: Concept) -> Labels:
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
-        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(self._question)
+        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(question)
 
-    def answer_meanings(self, concept: Concept) -> Labels:
+    def answer_meanings(self, answer: Label, concept: Concept) -> Labels:
         """Return the answer meanings of the concept."""
-        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(self._answer)
+        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(answer)
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
@@ -274,7 +272,7 @@ class OrderQuizFactory(BaseQuizFactory):
         """Return the questions."""
         return concept.labels(self.language_pair.target).non_colloquial
 
-    def answer_meanings(self, concept: Concept) -> Labels:
+    def answer_meanings(self, answer: Label, concept: Concept) -> Labels:
         """Return the answer meanings of the concept."""
         return concept.meanings(self.language_pair.source)
 
@@ -308,7 +306,7 @@ class SemanticQuizFactory(BaseQuizFactory):
         """Return the questions."""
         return concept.labels(self.language_pair.target).non_colloquial
 
-    def question_meanings(self, concept: Concept) -> Labels:
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(self.language_pair.source)
 
@@ -319,7 +317,7 @@ class SemanticQuizFactory(BaseQuizFactory):
             labels.extend(list(related_concept.labels(self.language_pair.target)))
         return Labels(labels)
 
-    def answer_meanings(self, concept: Concept) -> Labels:
+    def answer_meanings(self, answer: Label, concept: Concept) -> Labels:
         """Return the answer meanings of the concept."""
         meanings: list[Label] = []
         for related_concept in concept.get_related_concepts(self.concept_relation):
