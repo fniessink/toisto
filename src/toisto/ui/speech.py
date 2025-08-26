@@ -23,7 +23,7 @@ def _run_command(command: str, *args: str) -> None:
     # message: "[B603:subprocess_without_hell_equals_true] subprocess call - check for execution of untrusted input".
     # Popen should be safe as it is invoked with either "say" or an mp3 play command provided by the user in their
     # config file.
-    Popen(  # noqa: S603, # nosec subprocess_without_shell_equals_true
+    Popen(  # nosec: subprocess_without_shell_equals_true # noqa: S603
         [command, *args],
         stdin=DEVNULL,
         stdout=DEVNULL,
