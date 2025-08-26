@@ -8,7 +8,7 @@ from toisto.model.language.concept import ConceptId
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import DICTATE, FEMININE, READ, WRITE
+from toisto.model.quiz.quiz_type import DICTATE, FEMININE, INTERPRET, READ, WRITE
 from toisto.model.quiz.retention import Retention
 from toisto.ui.dictionary import DICTIONARY_URL, linkified
 from toisto.ui.text import Feedback, enumerated, instruction
@@ -16,7 +16,7 @@ from toisto.ui.text import Feedback, enumerated, instruction
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
 
-class InstructionTestCase(ToistoTestCase):
+class InstructionTest(ToistoTestCase):
     """Unit tests for the instruction."""
 
     def test_instruction(self):
@@ -202,7 +202,7 @@ class FeedbackTest(ToistoTestCase):
         self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
 
-class FeedbackNotesTestCase(ToistoTestCase):
+class FeedbackNotesTest(ToistoTestCase):
     """Unit tests for the notes given by the feedback function."""
 
     def test_note(self):
@@ -257,7 +257,7 @@ class FeedbackNotesTestCase(ToistoTestCase):
         )
 
 
-class FeedbackRetentionTestCase(ToistoTestCase):
+class FeedbackRetentionTest(ToistoTestCase):
     """Unit tests for the retention returned by the feedback function."""
 
     def create_feedback(self) -> Feedback:
@@ -306,7 +306,29 @@ class FeedbackRetentionTestCase(ToistoTestCase):
         )
 
 
-class FeedbackExampleTestCase(ToistoTestCase):
+class FeedbackMeaningTest(ToistoTestCase):
+    """Unit tests for the meaning given by the feedback function."""
+
+    def test_meaning_interpret_quiz_type(self):
+        """Test that the correct meaning is given when the quiz is an interpret quiz with singular and plural forms."""
+        engineer = self.create_concept(
+            "engineer",
+            {},
+            labels=[
+                {"label": {"singular": "ingenieur", "plural": "ingenieurs"}, "language": NL},
+                {"label": {"singular": "insinööri", "plural": "insinöörit"}, "language": FI},
+            ],
+        )
+        for quiz in create_quizzes(FI_NL, (INTERPRET,), engineer):
+            feedback = Feedback(quiz, FI_NL)
+            question = quiz.question
+            self.assertIn(
+                f"[secondary]Meaning '[link=https://en.wiktionary.org/wiki/{question}]{question}[/link]'.[/secondary]\n",
+                feedback.text(Evaluation.CORRECT, Label(NL, "ingenieur"), Retention()),
+            )
+
+
+class FeedbackExampleTest(ToistoTestCase):
     """Unit tests for the examples given by the feedback function."""
 
     def test_example_with_spelling_alternatives(self):
