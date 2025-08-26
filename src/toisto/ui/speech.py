@@ -89,7 +89,7 @@ class Speech:
     @cached_property
     def apple_say_voices(self) -> dict[Language, str]:
         """Return the best available voices."""
-        available_voices = run(["say", "-v", "?"], capture_output=True, check=False, text=True).stdout  # noqa: S607, # nosec subprocess_without_shell_equals_true, start_process_with_partial_path
+        available_voices = run(["say", "-v", "?"], capture_output=True, check=False, text=True).stdout  # nosec subprocess_without_shell_equals_true, start_process_with_partial_path # noqa: S607
         voices = {}
         for language, voice in {EN: "Daniel", FI: "Satu", NL: "Xander"}.items():
             enhanced_voice = f"{voice} (Enhanced)"
