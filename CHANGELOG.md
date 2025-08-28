@@ -10,12 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Only show the base grammatical form of labels when listing the concepts users can practice under `toisto practice --help`. Fixes [#1072](https://github.com/fniessink/toisto/issues/1072).
 - Give the correct meaning when the quiz is an interpret quiz with singular and plural forms. Fixes [#1090](https://github.com/fniessink/toisto/issues/1090).
+- Apply the tip for the Finnish verb 'to have',  which is 'olla', to the infinitive only. Fixes [#1091](https://github.com/fniessink/toisto/issues/1091).
 
 ### Added
 
 - Add command to upgrade Toisto to the latest version (`toisto self upgrade`). Closes [#1045](https://github.com/fniessink/toisto/issues/1045).
 - Add command to uninstall Toisto (`toisto self uninstall`). Closes [#1046](https://github.com/fniessink/toisto/issues/1046).
 - Add option to show quiz retention after each quiz (`toisto --show-quiz-retention yes`, to configure: `toisto configure --show-quiz-retention yes`).
+- Allow for specifying to which grammatical forms a note or tip applies so notes and tips can be applied to specific grammatical forms. Enables fixing [#1091](https://github.com/fniessink/toisto/issues/1091).
 
 ## 0.36.3 - 2025-07-19
 

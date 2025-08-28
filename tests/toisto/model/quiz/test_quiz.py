@@ -134,7 +134,7 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(
             self.concept,
             Label(FI, "Yksi"),
-            [Label(NL, "Een"), Label(NL, "Eén", tip="tip should be ignored")],
+            [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
         )
         self.assertEqual(("Eén",), quiz.other_answers(self.een).as_strings)
 
@@ -143,7 +143,7 @@ class QuizTest(QuizTestCase):
         quiz = self.create_quiz(
             self.concept,
             Label(FI, "Yksi"),
-            [Label(NL, "Een"), Label(NL, "Eén", tip="tip should be ignored")],
+            [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
             DICTATE,
         )
         self.assertEqual((), quiz.other_answers(self.een))
@@ -156,21 +156,21 @@ class QuizTest(QuizTestCase):
     def test_tips_and_notes(self):
         """Test that the tip is added to the instruction, the notes are not, and neither are added to the question."""
         questions = [
-            Label(EN, "You are", tip="singular"),
-            Label(EN, "You are", tip="singular", notes=("post quiz note",)),
+            Label(EN, "You are", tips=("singular",)),
+            Label(EN, "You are", tips=("singular",), notes=("post quiz note",)),
             Label(EN, "You are", notes=("post quiz note",)),
             Label(EN, "You are", notes=("post quiz note 1", "post quiz note 2")),
         ]
         for question in questions:
             quiz = self.create_quiz(self.concept, question, [Label(NL, "Jij bent")])
-            hint = " (singular)" if question.tip == "singular" else ""
+            hint = " (singular)" if question.tips == ("singular",) else ""
             self.assertEqual(f"Translate into Dutch{hint}", quiz.instruction)
             self.assertEqual(Label(EN, "You are"), quiz.question)
 
     def test_tip_is_ignored_in_answer(self):
         """Test that a tip in the answer is ignored."""
         you_are = Label(EN, "You are")
-        quiz = self.create_quiz(self.concept, Label(NL, "Jij bent", tip="singular"), [you_are])
+        quiz = self.create_quiz(self.concept, Label(NL, "Jij bent", tips=("singular",)), [you_are])
         self.assertEqual(you_are, quiz.answer)
 
     def test_all_notes_are_shown(self):
@@ -260,12 +260,12 @@ class QuizInstructionTest(QuizTestCase):
 
     def test_tip_is_not_shown_when_question_and_answer_language_are_the_same(self):
         """Test that a tip is not shown if the question and answer languages are the same."""
-        quiz = self.create_quiz(self.concept, Label(FI, "Hän on", tip="some tip"), [Label(FI, "He ovat")], PLURAL)
+        quiz = self.create_quiz(self.concept, Label(FI, "Hän on", tips=("some tip",)), [Label(FI, "He ovat")], PLURAL)
         self.assertEqual("Give the [underline]plural[/underline] in Finnish", quiz.instruction)
 
     def test_tip_is_shown_when_question_language_equals_answer_language_and_quiz_type_is_dictate(self):
         """Test that a tip is shown if the question and answer languages are the same and the quiz type is dictate."""
-        suomi = Label(FI, "Suomi", tip="country")
+        suomi = Label(FI, "Suomi", tips=("country",))
         quiz = self.create_quiz(self.concept, suomi, [suomi], DICTATE)
         self.assertEqual("Listen and write in Finnish (country)", quiz.instruction)
 
@@ -273,7 +273,7 @@ class QuizInstructionTest(QuizTestCase):
         """Test that a tip is shown if the question and answer languages are the same and the quiz type is answer."""
         quiz = self.create_quiz(
             self.concept,
-            Label(FI, "Onko hän Bob?", tip="positive or negative"),
+            Label(FI, "Onko hän Bob?", tips=("positive or negative",)),
             [Label(FI, "On"), Label(FI, "Ei")],
             ANSWER,
         )

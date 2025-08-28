@@ -214,9 +214,9 @@
             {
                 "concept": "to have",
                 "label": {
+                    "infinitive": "olla",
                     "declarative": {
                         "affirmative": {
-                            "infinitive": "olla;omistaa",
                             "present tense": {
                                 "singular": {
                                     "first person": "minulla on",
@@ -323,6 +323,9 @@
                             }
                         }
                     }
+                },
+                "tip": {
+                    "infinitive": "omistaa"
                 }
             },
             {

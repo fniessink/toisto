@@ -11,14 +11,12 @@ Toisto is beta software at the moment. It comes with a limited set of words and 
 
 ## Example sessions
 
-<details>
-<summary>Example session as GIF</summary>
+### Example session as GIF
+
 <video src="https://github.com/fniessink/toisto/assets/3530545/8598dc4d-09ad-4057-9793-cee2fe54e420" controls="controls" style="max-width: 730px;">
 </video>
-</details>
 
-<details>
-<summary>Example session in text format</summary>
+### Example session in text format
 
 ```console
 $ toisto practice --target fi --source nl
@@ -64,12 +62,10 @@ oranje
 > oransie
 ❌ Incorrect. The correct answer is "oranssi".
 ```
-</details>
 
 ## How to install Toisto
 
-<details>
-<summary>How to install Toisto on Windows</summary>
+### How to install Toisto on Windows
 
 1. Install [uv](https://docs.astral.sh/uv/#getting-started). <details><summary>What is uv?</summary>uv is a tool that can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.</details>
 
@@ -78,10 +74,8 @@ oranje
 ```console
 $ uv tool install toisto
 ```
-</details>
 
-<details>
-<summary>How to install Toisto on Linux</summary>
+### How to install Toisto on Linux
 
 1. On Linux, you must have an mp3 player installed so Toisto can speak. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [How to configure a different mp3 player](#how-to-configure-a-different-mp3-player) below.
 
@@ -92,10 +86,8 @@ $ uv tool install toisto
 ```console
 $ uv tool install toisto
 ```
-</details>
 
-<details>
-<summary>How to install Toisto on macOS</summary>
+### How to install Toisto on macOS
 
 1. (Optional) On macOS, Toisto works best in a more modern terminal than the default one that macOS offers. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default macOS terminal app, though.
 
@@ -106,10 +98,8 @@ $ uv tool install toisto
 ```console
 $ uv tool install toisto
 ```
-</details>
 
-<details>
-<summary>How to install Toisto on iOS (iPhone or iPad)</summary>
+### How to install Toisto on iOS (iPhone or iPad)
 
 1. Install the free [a-Shell app](https://holzschu.github.io/a-Shell_iOS/). <details><summary>What is a-Shell?</summary>a-Shell provides a Unix-like terminal for Toisto to run in. It has Python pre-installed.</details>
 
@@ -119,7 +109,6 @@ $ uv tool install toisto
 $ pip install toisto
 ```
 ```
-</details>
 
 ## How to use Toisto
 
