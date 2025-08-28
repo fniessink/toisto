@@ -42,9 +42,9 @@ class QuizType:
         """Return the question for the quiz type. Can be overridden for quiz types that transform questions."""
         return question
 
-    def tips(self, question: Label, answers: Labels) -> list[str]:
+    def tips(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the tips to be shown before the quiz has been answered."""
-        return [question.tip] if question.tip and self.tips_applicable(question, first(answers)) else []
+        return question.tips if question.tips and self.tips_applicable(question, first(answers)) else ()
 
     def tips_applicable(self, question: Label, answer: Label) -> bool:
         """Return whether the quiz should get tips."""
@@ -148,9 +148,9 @@ class WriteQuizType(TranslationQuizType):
 
     _action: str = "write"
 
-    def tips(self, question: Label, answers: Labels) -> list[str]:
+    def tips(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the tips to be shown before the quiz has been answered."""
-        return [tip] if (tip := first(answers).tip) else []
+        return tips if (tips := first(answers).tips) else ()
 
     def notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""

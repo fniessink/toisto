@@ -209,6 +209,41 @@ Sometimes labels are ambiguous. For example, "hän" in Finnish can mean both he 
 
 In the above example, Toisto will show the tip 'feminine' to the user when asking for the English translation of "Hän haluaa jäätelöä".
 
+If the label has multiple grammatical forms and the tip should only be shown for some of the forms, the grammatical forms can be specified as follows:
+
+```json
+{
+    "concepts": {
+        "to have": {}
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "to have",
+                "label": {
+                    "infinitive": "olla",
+                    "present tense": {
+                        "singular": {
+                            "first person": "minulla on",
+                            "second person": "..."
+                        },
+                        "plural": {
+                            "first person": "meillä on",
+                            "second person": "..."
+                        }
+                    }
+                },
+                "tip": {
+                    "infinitive": "omistaa"
+                }
+            }
+        ]
+    }
+}
+```
+
+Tips can be either a single string or a list of strings.
+
 ### Labels with notes
 
 It's also possible to add notes. The notes will be shown after the user has answered. This can be used to point out extra information, for example:
@@ -219,12 +254,6 @@ It's also possible to add notes. The notes will be shown after the user has answ
         "I want ice cream": {}
     },
     "labels": {
-        "en": [
-            {
-                "concept": "I want ice cream",
-                "label": "I want ice cream."
-            }
-        ],
         "fi": [
             {
                 "concept": "I want ice cream",
@@ -235,6 +264,32 @@ It's also possible to add notes. The notes will be shown after the user has answ
     }
 }
 ```
+
+If the label has multiple grammatical forms and the note should only be shown for some of the forms, the grammatical forms can be specified as follows:
+
+```json
+{
+    "concepts": {
+        "I want a cookie": {}
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "I want a cookie",
+                "label": {
+                    "singular": "Minä haluan keksin.",
+                    "plural": "Me haluamme keksejä."
+                },
+                "note": {
+                    "plural": "'keksejä' is the plural partitive case of 'keksi'"
+                }
+            }
+        ]
+    }
+}
+```
+
+Notes can be either a single string or a list of strings.
 
 ### Compound labels
 

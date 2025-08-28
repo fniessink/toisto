@@ -30,7 +30,7 @@ class Label:
         "language",
         "meaning_only",
         "notes",
-        "tip",
+        "tips",
     )  # Without adding __dict__ to slots @cached_property does not work
 
     END_OF_SENTENCE_PUNCTUATION = "?!."
@@ -46,7 +46,7 @@ class Label:
         grammatical_form: GrammaticalForm | None = None,
         notes: tuple[str, ...] = (),
         roots: tuple[str, ...] = (),
-        tip: str = "",
+        tips: tuple[str, ...] = (),
         *,
         colloquial: bool = False,
         meaning_only: bool = False,
@@ -57,7 +57,7 @@ class Label:
         self.grammatical_form = grammatical_form or GrammaticalForm()
         self.notes = notes
         self._roots = roots
-        self.tip = tip
+        self.tips = tips
         self.colloquial = colloquial
         self.meaning_only = meaning_only
         for spelling_alternative in self._values:
@@ -108,7 +108,7 @@ class Label:
             self.grammatical_form,
             self.notes,
             self._roots,
-            self.tip,
+            self.tips,
             colloquial=self.colloquial,
             meaning_only=self.meaning_only,
         )

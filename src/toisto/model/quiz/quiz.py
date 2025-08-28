@@ -129,7 +129,7 @@ class Quiz:
     def _tips(self) -> str:
         """Return the tip(s) to be shown as part of the question, if applicable."""
         question = self._question
-        tips = self.quiz_type.tips(question, self._answers)
+        tips = list(self.quiz_type.tips(question, self._answers))
         if not isinstance(self.quiz_type, GrammaticalQuizType) and (homographs := question.homographs):
             tips.extend(self._homonym_tips(*homographs))
         elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := question.capitonyms):
