@@ -9,7 +9,8 @@ from toisto.tools import first
 
 from . import Language
 from .concept import ConceptIdListOrString
-from .grammar import GrammaticalCategory, GrammaticalForm
+from .grammatical_category import GrammaticalCategory
+from .grammatical_form import GrammaticalForm
 from .label import Label, Labels
 
 JSONGrammar = str | list[str] | dict[GrammaticalCategory, "JSONGrammar"]
