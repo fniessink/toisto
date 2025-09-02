@@ -11,7 +11,7 @@ from unittest.mock import Mock, patch
 from toisto.metadata import README_URL
 from toisto.model.language import EN
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.grammar import GrammaticalForm
+from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
 from toisto.persistence.folder import home

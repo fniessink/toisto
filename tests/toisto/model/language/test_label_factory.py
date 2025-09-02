@@ -4,7 +4,7 @@ from typing import cast
 
 from toisto.model.language import EN, NL
 from toisto.model.language.concept import ConceptId
-from toisto.model.language.grammar import GrammaticalForm
+from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label
 from toisto.model.language.label_factory import JSONGrammar, LabelFactory, LabelJSON
 from toisto.tools import first

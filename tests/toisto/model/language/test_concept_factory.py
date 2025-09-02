@@ -2,7 +2,7 @@
 
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId
-from toisto.model.language.grammar import GrammaticalForm
+from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label
 
 from ....base import ToistoTestCase

@@ -1,6 +1,6 @@
 """Unit tests for grammar."""
 
-from toisto.model.language.grammar import GrammaticalForm
+from toisto.model.language.grammatical_form import GrammaticalForm
 
 from ....base import ToistoTestCase
 

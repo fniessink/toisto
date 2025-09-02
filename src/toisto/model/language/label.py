@@ -12,7 +12,8 @@ from typing import ClassVar
 from toisto.tools import first, first_upper
 
 from . import Language
-from .grammar import GrammaticalCategory, GrammaticalForm
+from .grammatical_category import GrammaticalCategory
+from .grammatical_form import GrammaticalForm
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
 HomonymMapping = dict[tuple[Language, str], list["Label"]]
