@@ -346,7 +346,7 @@ When a label is a compound of one or more other labels, this can be specified wi
                 "concept": "days of the week",
                 "label": "de dagen van de week"
                 "roots": [
-                    "de dagen"
+                    "de dagen",
                     "de week"
                 ],
             }
