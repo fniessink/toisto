@@ -22,18 +22,6 @@ HomonymMapping = dict[tuple[Language, str], list["Label"]]
 class Label:
     """Class representing labels for concepts."""
 
-    __slots__ = (
-        "__dict__",
-        "_roots",
-        "_values",
-        "colloquial",
-        "grammatical_form",
-        "language",
-        "meaning_only",
-        "notes",
-        "tips",
-    )  # Without adding __dict__ to slots @cached_property does not work
-
     END_OF_SENTENCE_PUNCTUATION = "?!."
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
 
@@ -61,6 +49,7 @@ class Label:
         self.tips = tips
         self.colloquial = colloquial
         self.meaning_only = meaning_only
+        self.other_grammatical_categories: dict[GrammaticalCategory, Label] = {}
         for spelling_alternative in self._values:
             self.homograph_mapping.setdefault((language, spelling_alternative), []).append(self)
             self.capitonym_mapping.setdefault((language, spelling_alternative.lower()), []).append(self)
@@ -205,12 +194,16 @@ class Label:
             or (not other_grammatical_categories and self.is_grammatical_base)
         )
 
-    def grammatical_differences(self, *labels: Label) -> tuple[GrammaticalCategory, ...]:
+    def has_same_grammatical_base(self, other: Label) -> bool:
+        """Return whether this label has the same grammatical base as the other label."""
+        return self.grammatical_form.grammatical_base == other.grammatical_form.grammatical_base
+
+    def grammatical_differences(self, *labels: Label) -> frozenset[GrammaticalCategory]:
         """Return the grammatical differences between this label and the other labels."""
-        differences = set()
+        differences: set[GrammaticalCategory] = set()
         for label in labels:
             differences |= label.grammatical_form.grammatical_differences(self.grammatical_form)
-        return tuple(sorted(differences))
+        return frozenset(differences)
 
     def is_homograph(self, other: Label) -> bool:
         """Return whether this label and the other label are homographs."""
@@ -264,9 +257,17 @@ class Labels:  # noqa: PLW1641
         """Return the labels with the specified language."""
         return Labels(label for label in self._labels if label.language == language)
 
+    def excluding(self, other_label: Label) -> Labels:
+        """Return all labels except the other label."""
+        return Labels(label for label in self._labels if label != other_label)
+
     def with_same_grammatical_categories_as(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
         return Labels(label for label in self._labels if label.has_same_grammatical_form(other))
+
+    def with_same_grammatical_base(self, other: Label) -> Labels:
+        """Return the labels with the specified grammatical categories."""
+        return Labels(label for label in self._labels if label.has_same_grammatical_base(other))
 
     @property
     def non_colloquial(self) -> Labels:

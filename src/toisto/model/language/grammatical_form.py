@@ -10,7 +10,7 @@ class GrammaticalForm:
 
     def __init__(self, grammatical_base: str = "", /, *grammatical_categories: GrammaticalCategory) -> None:
         self.grammatical_base = grammatical_base  # Base form of a label, for example "table" is the base of "tables"
-        self.grammatical_categories = set(grammatical_categories)
+        self.grammatical_categories = frozenset(grammatical_categories)
 
     def __eq__(self, other: object) -> bool:
         """Return whether the grammatical forms are equal."""
@@ -34,6 +34,6 @@ class GrammaticalForm:
         """Return the hash."""
         return hash(f"{self.grammatical_base}{sorted(str(category) for category in self.grammatical_categories)}")
 
-    def grammatical_differences(self, other: GrammaticalForm) -> set[GrammaticalCategory]:
+    def grammatical_differences(self, other: GrammaticalForm) -> frozenset[GrammaticalCategory]:
         """Return the grammatical differences between this grammatical form and the other form."""
         return other.grammatical_categories.difference(self.grammatical_categories)

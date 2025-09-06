@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import random
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from itertools import chain
@@ -55,7 +56,17 @@ class QuizType:
 
         Subclasses may use the answers to generate the notes.
         """
-        return question.notes
+        notes = list(question.notes)
+        if self._include_grammatical_notes() and question.other_grammatical_categories:
+            other_grammatical_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
+            other_label = question.other_grammatical_categories[other_grammatical_category]
+            also = " also" if str(question) == str(other_label) else ""
+            notes.append(f"The {other_grammatical_category} of '{question}' is{also} '{other_label}'.")
+        return tuple(notes)
+
+    def _include_grammatical_notes(self) -> bool:
+        """Return whether to include the grammatical notes for the grammatical categories."""
+        return True
 
     def other_answers(self, guess: Label, answers: Labels) -> Labels:
         """Return the answers not equal to the guess."""
@@ -139,6 +150,10 @@ class GrammaticalQuizType(QuizType):
     def _composite_action(self, *, separator: str) -> str:
         """Return the composite action."""
         return separator.join(sorted(quiz_type.action for quiz_type in self.quiz_types))
+
+    def _include_grammatical_notes(self) -> bool:
+        """Return whether to include the grammatical notes for the grammatical categories."""
+        return False
 
 
 @final
