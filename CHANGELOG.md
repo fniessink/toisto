@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add command to uninstall Toisto (`toisto self uninstall`). Closes [#1046](https://github.com/fniessink/toisto/issues/1046).
 - Add option to show quiz retention after each quiz (`toisto --show-quiz-retention yes`, to configure: `toisto configure --show-quiz-retention yes`).
 - Allow for specifying to which grammatical forms a note or tip applies so notes and tips can be applied to specific grammatical forms. Enables fixing [#1091](https://github.com/fniessink/toisto/issues/1091).
+- Introduce separate quiz types for the grammatical number of pronouns as the grammatical number of a pronoun does not necessarily agree with the grammatical number of its noun.
 
 ## 0.36.3 - 2025-07-19
 
