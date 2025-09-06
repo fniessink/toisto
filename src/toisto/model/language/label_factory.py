@@ -39,18 +39,20 @@ class LabelFactory:
 
     def create_labels(self, json_labels: list[LabelJSON], *grammatical_categories: GrammaticalCategory) -> Labels:
         """Create labels from the list of JSON labels."""
-        labels: list[Label] = []
+        label_list: list[Label] = []
         for json_label in json_labels:
             if isinstance(json_label["label"], (str, list)):
-                labels.append(self._create_label(json_label, *grammatical_categories))
+                label_list.append(self._create_label(json_label, *grammatical_categories))
             else:
                 grammatical_base_for_slices = self.grammatical_base or self.grammatical_base_for(json_label)
                 factory = LabelFactory(grammatical_base_for_slices)
                 for grammatical_category in json_label["label"]:
                     json_label_slice = self._slice_json_label(json_label, grammatical_category)
                     slice_grammatical_categories = (*grammatical_categories, grammatical_category)
-                    labels.extend(factory.create_labels([json_label_slice], *slice_grammatical_categories))
-        return Labels(labels)
+                    label_list.extend(factory.create_labels([json_label_slice], *slice_grammatical_categories))
+        labels = Labels(label_list)
+        self._register_other_grammatical_categories(labels)
+        return labels
 
     def _slice_json_label(self, json_label: LabelJSON, grammatical_category: GrammaticalCategory) -> LabelJSON:
         """Return the slice of the JSON label by grammatical category."""
@@ -81,6 +83,14 @@ class LabelFactory:
             colloquial=colloquial,
             meaning_only=meaning_only,
         )
+
+    def _register_other_grammatical_categories(self, labels: Labels) -> None:
+        """For each label, register other grammatical forms of that label."""
+        for label in labels:
+            for other_label in labels.with_language(label.language).excluding(label).with_same_grammatical_base(label):
+                grammatical_differences = other_label.grammatical_differences(label)
+                if len(grammatical_differences) == 1:
+                    label.other_grammatical_categories[first(grammatical_differences)] = other_label
 
     @classmethod
     def grammatical_base_for(cls, json_label: LabelJSON) -> str:

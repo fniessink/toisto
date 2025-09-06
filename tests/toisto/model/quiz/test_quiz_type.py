@@ -1,6 +1,9 @@
 """Quiz type unit tests."""
 
-from toisto.model.quiz.quiz_type import ANTONYM, PLURAL, THIRD_PERSON, GrammaticalQuizType, QuizType
+from toisto.model.language import EN
+from toisto.model.language.grammatical_form import GrammaticalForm
+from toisto.model.language.label import Label, Labels
+from toisto.model.quiz.quiz_type import ANTONYM, PLURAL, SINGULAR, THIRD_PERSON, GrammaticalQuizType, QuizType
 
 from ....base import ToistoTestCase
 
@@ -32,3 +35,38 @@ class GrammaticalQuizTypeTest(ToistoTestCase):
         """Test that a non-leaf quiz type is not registered."""
         QuizType()
         self.assertEqual((), QuizType.actions.get_values(""))
+
+
+class QuizTypeNotesTest(ToistoTestCase):
+    """Unit tests for the quiz type notes."""
+
+    def test_default_notes(self):
+        """Test that the quiz type notes are the question notes by default."""
+        self.assertEqual(("note",), ANTONYM.notes(Label(EN, "label", notes=("note",)), Labels()))
+
+    def test_grammatical_notes(self):
+        """Test that the quiz type notes include grammatical notes."""
+        table = Label(EN, "table", grammatical_form=GrammaticalForm("table", "singular"))
+        tables = Label(EN, "tables", grammatical_form=GrammaticalForm("table", "plural"))
+        table.other_grammatical_categories["plural"] = tables
+        tables.other_grammatical_categories["singular"] = table
+        self.assertEqual(("The plural of 'table' is 'tables'.",), ANTONYM.notes(table, Labels()))
+        self.assertEqual(("The singular of 'tables' is 'table'.",), ANTONYM.notes(tables, Labels()))
+
+    def test_omit_grammatical_notes(self):
+        """Test that the quiz type notes do not include grammatical notes for the grammatical quiz."""
+        table = Label(EN, "table", grammatical_form=GrammaticalForm("table", "singular"))
+        tables = Label(EN, "tables", grammatical_form=GrammaticalForm("table", "plural"))
+        table.other_grammatical_categories["plural"] = tables
+        tables.other_grammatical_categories["singular"] = table
+        self.assertEqual((), PLURAL.notes(table, Labels()))
+        self.assertEqual((), SINGULAR.notes(tables, Labels()))
+
+    def test_grammatical_notes_for_equal_labels(self):
+        """Test that 'also' is inserted if both labels in the grammatical note are equal."""
+        sheep_singular = Label(EN, "sheep", grammatical_form=GrammaticalForm("sheep", "singular"))
+        sheep_plural = Label(EN, "sheep", grammatical_form=GrammaticalForm("sheep", "plural"))
+        sheep_singular.other_grammatical_categories["plural"] = sheep_plural
+        sheep_plural.other_grammatical_categories["singular"] = sheep_singular
+        self.assertEqual(("The plural of 'sheep' is also 'sheep'.",), ANTONYM.notes(sheep_singular, Labels()))
+        self.assertEqual(("The singular of 'sheep' is also 'sheep'.",), ANTONYM.notes(sheep_plural, Labels()))
