@@ -717,9 +717,11 @@ In the JSON file this looks as follows:
 
 ### Grammatical number
 
-When concepts can have both singular and plural forms, such as with most nouns, these are represented in the JSON as mappings with `singular` and `plural` as keys and labels as values.
+Most verbs, nouns, and pronouns can occur in both singular and plural forms. These forms are represented in the JSON as mapping with a key for the singular form and a key for the plural form. The values can be be strings or list of strings (in case of spelling alternatives) or other grammatical forms.
 
-The format of the JSON files is as follows:
+#### Nouns
+
+Nouns are represented as follows:
 
 ```json
 {
@@ -742,6 +744,69 @@ The format of the JSON files is as follows:
                 "label": {
                     "singular": "päivä",
                     "plural": "päivät"
+                }
+            }
+        ]
+    }
+}
+```
+
+#### Verbs
+
+Verbs are represented as follows:
+
+```json
+{
+    "concepts": {
+        "to have"
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to have",
+                "label": {
+                    "singular": {
+                        "first person": "I have",
+                        "second person": "you have",
+                        "third person": {
+                            "feminine": "she has",
+                            "masculine": "he has"
+                        }
+                    },
+                    "plural": {
+                        "first person": "we have",
+                        "second person": "you have",
+                        "third person": "they have"
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+#### Pronouns
+
+As the grammatical number of pronouns doesn't necessarily agree with the grammatical person of the noun, pronouns have their own keys `singular pronoun` and `plural pronoun`:
+
+```json
+{
+    "concepts": {
+        "cat": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cat",
+                "label": {
+                    "singular": {
+                        "singular pronoun": "my cat",
+                        "plural pronoun": "our cat",
+                    },
+                    "plural": {
+                        "singular pronoun": "my cats",
+                        "plural pronoun": "our cats",
+                    }
                 }
             }
         ]

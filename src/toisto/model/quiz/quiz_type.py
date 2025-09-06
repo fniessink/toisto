@@ -198,6 +198,8 @@ INTERPRET = ListenOnlyQuizType("interpret")
 # Grammatical quiz types
 PLURAL = GrammaticalQuizType("plural")
 SINGULAR = GrammaticalQuizType("singular")
+PLURAL_PRONOUN = GrammaticalQuizType("plural pronoun")
+SINGULAR_PRONOUN = GrammaticalQuizType("singular pronoun")
 FIRST_PERSON = GrammaticalQuizType("first person")
 SECOND_PERSON = GrammaticalQuizType("second person")
 THIRD_PERSON = GrammaticalQuizType("third person")
