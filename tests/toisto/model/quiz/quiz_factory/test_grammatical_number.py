@@ -11,9 +11,11 @@ from toisto.model.quiz.quiz_type import (
     INTERPRET,
     MASCULINE,
     PLURAL,
+    PLURAL_PRONOUN,
     READ,
     SECOND_PERSON,
     SINGULAR,
+    SINGULAR_PRONOUN,
     THIRD_PERSON,
     WRITE,
 )
@@ -44,6 +46,23 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, aamut, [aamu], SINGULAR),
             },
             create_quizzes(FI_NL, (), concept),
+        )
+
+    def test_grammatical_number_pronoun(self):
+        """Test that quizzes can be generated for different grammatical numbers of pronouns."""
+        concept = self.create_concept(
+            "cat",
+            labels=[{"label": {"singular pronoun": "my cat", "plural pronoun": "our cat"}, "language": EN}],
+        )
+        my_cat, our_cat = concept.labels(EN)
+        self.assertSetEqual(
+            {
+                self.create_quiz(concept, my_cat, [our_cat], PLURAL_PRONOUN),
+                self.create_quiz(concept, our_cat, [my_cat], SINGULAR_PRONOUN),
+                self.create_quiz(concept, my_cat, [my_cat], DICTATE),
+                self.create_quiz(concept, our_cat, [our_cat], DICTATE),
+            },
+            create_quizzes(EN_NL, (), concept),
         )
 
     def test_grammatical_number_without_plural(self):

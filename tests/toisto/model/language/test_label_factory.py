@@ -59,6 +59,21 @@ class LabelFactoryTestCase(ToistoTestCase):
         }
         return self.with_tip_or_note(label_json, tip, note)
 
+    def label_with_nested_grammatical_number(self, *, tip: JSONGrammar = "", note: JSONGrammar = "") -> LabelJSON:
+        """Create a label with nested grammatical number."""
+        label_json: LabelJSON = {
+            "concept": ConceptId("chair"),
+            "label": cast(
+                "JSONGrammar",
+                {
+                    "singular": {"singular pronoun": "my chair", "plural pronoun": "our chair"},
+                    "plural": {"singular pronoun": "my chairs", "plural pronoun": "our chairs"},
+                },
+            ),
+            "language": EN,
+        }
+        return self.with_tip_or_note(label_json, tip, note)
+
 
 class LabelFactoryTest(LabelFactoryTestCase):
     """Label factory unit tests."""
@@ -110,6 +125,20 @@ class LabelFactoryTest(LabelFactoryTestCase):
                 Label(NL, "de stoelen", GrammaticalForm(base, "root", "plural")),
                 Label(NL, "het stoeltje", GrammaticalForm(base, "diminutive", "singular")),
                 Label(NL, "de stoeltjes", GrammaticalForm(base, "diminutive", "plural")),
+            ),
+            self.factory.create_labels([chair_json]),
+        )
+
+    def test_create_label_with_nested_grammatical_number(self):
+        """Test creating labels with nested grammatical number."""
+        chair_json = self.label_with_nested_grammatical_number()
+        base = "my chair"
+        self.assertEqual(
+            (
+                Label(EN, "my chair", GrammaticalForm(base, "singular", "singular pronoun")),
+                Label(EN, "our chair", GrammaticalForm(base, "singular", "plural pronoun")),
+                Label(EN, "my chairs", GrammaticalForm(base, "plural", "singular pronoun")),
+                Label(EN, "our chairs", GrammaticalForm(base, "plural", "plural pronoun")),
             ),
             self.factory.create_labels([chair_json]),
         )

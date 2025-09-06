@@ -48,9 +48,9 @@ QUIZ_TYPE_OPTION = """-q, --quiz-type {quiz type}
                         quiz types to use, can be repeated; default: all; available quiz types: abbreviation,
                         affirmative, answer, antonym, cardinal, comparative degree, declarative, dictate, diminutive,
                         feminine, first person, full form, imperative, infinitive, interpret, interrogative,
-                        masculine, negative, neuter, order, ordinal, past perfect tense, past tense, plural, positive
-                        degree, present perfect tense, present tense, read, second person, singular, superlative
-                        degree, third person, verbal noun, write"""
+                        masculine, negative, neuter, order, ordinal, past perfect tense, past tense, plural, plural
+                        pronoun, positive degree, present perfect tense, present tense, read, second person, singular,
+                        singular pronoun, superlative degree, third person, verbal noun, write"""
 HELP_MESSAGE = f"""Usage: toisto [-h] [-V] {{configure,practice,progress,self}} ...
 
 Toisto is a command-line terminal app to practice languages.
