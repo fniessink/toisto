@@ -24,7 +24,7 @@ from .diff import colored_diff
 from .format import format_duration
 from .style import theme
 
-console = Console(theme=theme)
+console = Console(theme=theme, highlight=False)
 
 LINK_KEY: Final[str] = "⌘ (the command key)" if sys.platform == "darwin" else "Ctrl (the control key)"
 
