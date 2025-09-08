@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Only show the base grammatical form of labels when listing the concepts users can practice under `toisto practice --help`. Fixes [#1072](https://github.com/fniessink/toisto/issues/1072).
 - Give the correct meaning when the quiz is an interpret quiz with singular and plural forms. Fixes [#1090](https://github.com/fniessink/toisto/issues/1090).
 - Apply the tip for the Finnish verb 'to have', which is 'olla', to the infinitive only. Fixes [#1091](https://github.com/fniessink/toisto/issues/1091).
+- Fix coloring of answers with quotes. Fixes [#1112](https://github.com/fniessink/toisto/issues/1112).
 
 ### Added
 
