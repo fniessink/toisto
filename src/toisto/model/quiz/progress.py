@@ -49,8 +49,6 @@ class Progress:
                 self.__pause_related_quizzes(quiz)
             case Evaluation.INCORRECT | Evaluation.SKIPPED:
                 retention.reset()
-            case _:
-                pass
         return retention
 
     def __pause_related_quizzes(self, quiz: Quiz) -> None:
