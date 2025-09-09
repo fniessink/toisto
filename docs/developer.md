@@ -47,11 +47,17 @@ tools/profile.sh
 
 Create a branch.
 
-Update the [changelog](../CHANGELOG.md).
+Update the version number in:
 
-Update the version number in [`pyproject.toml`](../pyproject.toml).
+- the [changelog](../CHANGELOG.md),
+- [`pyproject.toml`](../pyproject.toml), and
+- [`sonar-project.properties`](../sonar-project.properties).
 
-Update the version number in [`sonar-project.properties`](../sonar-project.properties).
+Update `uv.lock` by running:
+
+```console
+$ uv lock
+```
 
 Commit and push the changes and merge the branch.
 
