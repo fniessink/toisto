@@ -3,9 +3,9 @@
 from toisto.model.language import EN, FI, NL
 from toisto.model.language.label import Label
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import INTERPRET
+from toisto.model.quiz.quiz_type import DICTATE, INTERPRET
 
-from .....base import FI_EN, FI_NL, ToistoTestCase
+from .....base import EN_NL, FI_EN, FI_NL, ToistoTestCase
 
 
 class MeaningsTest(ToistoTestCase):
@@ -40,3 +40,19 @@ class MeaningsTest(ToistoTestCase):
         for quiz in interpret_quizzes:
             self.assertEqual((Label(FI, "kaksikymmentä"),), quiz.question_meanings)
             self.assertEqual((), quiz.answer_meanings)
+
+    def test_dictate_with_plural(self):
+        """Test that the meaning of a quiz that dictates a singular does not include plural."""
+        concept = self.create_concept(
+            "table",
+            labels=[
+                {"label": {"singular": "table", "plural": "tables"}, "language": EN},
+                {"label": {"singular": "de tafel", "plural": "de tafels"}, "language": NL},
+            ],
+        )
+        dictate_quizzes = create_quizzes(EN_NL, (DICTATE,), concept)
+        for quiz in dictate_quizzes:
+            self.assertEqual(
+                ("de tafel",) if str(quiz.question) == "table" else ("de tafels",),
+                tuple(str(meaning) for meaning in quiz.question_meanings),
+            )

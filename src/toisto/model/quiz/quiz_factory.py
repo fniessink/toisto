@@ -160,7 +160,7 @@ class WriteQuizFactory(TranslationQuizFactory):
 
 @dataclass
 class DictateQuizFactory(TranslationQuizFactory):
-    """Create dicate quizzes for a concept."""
+    """Create dictate quizzes for a concept."""
 
     quiz_type: QuizType | None = DICTATE
 
@@ -174,7 +174,7 @@ class DictateQuizFactory(TranslationQuizFactory):
 
     def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
-        return concept.meanings(self.language_pair.source)
+        return concept.meanings(self.language_pair.source).with_same_grammatical_categories_as(question)
 
     def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""

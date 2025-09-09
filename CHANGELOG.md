@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Labels in notes did not get a link to Wiktionary. Fixes [#1113](https://github.com/fniessink/toisto/issues/1113).
+- After a dictate quiz, don't give the meaning of the singular form when the plural form was quizzed. Fixes [#1120](https://github.com/fniessink/toisto/issues/1120).
 
 ## 0.37.0 - 2025-09-09
 
