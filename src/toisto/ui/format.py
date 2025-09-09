@@ -2,6 +2,8 @@
 
 from datetime import datetime, timedelta
 
+from toisto.model.language.label import Label
+
 DAYS_PER_YEAR = 365.25
 MONTHS_PER_YEAR = 12
 DAYS_PER_WEEK = 7
@@ -51,3 +53,8 @@ def format_datetime(date_time: datetime) -> str:
 def quoted(text: str, quote: str = "'") -> str:
     """Return a quoted version of the text."""
     return f"{quote}{text}{quote}"
+
+
+def punctuated(text: str) -> str:
+    """Return the text with an added period, if it has no punctuation yet."""
+    return text if set(text[-2:]) & set(Label.END_OF_SENTENCE_PUNCTUATION) else f"{text}."
