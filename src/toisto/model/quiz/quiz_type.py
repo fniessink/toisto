@@ -12,6 +12,8 @@ from toisto.model.language.concept import ConceptRelation
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
 from toisto.tools import Registry, first
+from toisto.ui.dictionary import linkified
+from toisto.ui.format import quoted
 
 from .match import match
 
@@ -61,7 +63,9 @@ class QuizType:
             other_grammatical_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
             other_label = question.other_grammatical_categories[other_grammatical_category]
             also = " also" if str(question) == str(other_label) else ""
-            notes.append(f"The {other_grammatical_category} of '{question}' is{also} '{other_label}'.")
+            question_str = quoted(linkified(str(question)))
+            other_label_str = quoted(linkified(str(other_label)))
+            notes.append(f"The {other_grammatical_category} of {question_str} is{also} {other_label_str}.")
         return tuple(notes)
 
     def _include_grammatical_notes(self) -> bool:

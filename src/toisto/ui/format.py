@@ -46,3 +46,8 @@ def format_duration(duration: timedelta) -> str:
 def format_datetime(date_time: datetime) -> str:
     """Return a human readable version of the datetime."""
     return date_time.replace(tzinfo=None).isoformat(sep=" ", timespec="minutes")
+
+
+def quoted(text: str, quote: str = "'") -> str:
+    """Return a quoted version of the text."""
+    return f"{quote}{text}{quote}"

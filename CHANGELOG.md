@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.37.1 - [Unreleased]
+
+### Fixed
+
+- Labels in notes did not get a link to Wiktionary. Fixes [#1113](https://github.com/fniessink/toisto/issues/1113).
+
 ## 0.37.0 - 2025-09-09
 
 ### Fixed
