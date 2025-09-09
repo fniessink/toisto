@@ -21,7 +21,7 @@ from toisto.model.quiz.retention import Retention
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
-from .format import format_duration, quoted
+from .format import format_duration, punctuated, quoted
 from .style import theme
 
 console = Console(theme=theme, highlight=False)
@@ -207,7 +207,7 @@ class ProgressUpdate:
             feedback.append(f"skipped {skipped} ({skipped / total:.0%})")
         return wrapped(
             f"Progress update after {total} quiz{'zes' if total > 1 else ''}: you {enumerated(*feedback)}.",
-            "light_sky_blue3",
+            "progress",
             postfix="\n\n",
         )
 
@@ -260,11 +260,6 @@ def linkified_and_enumerated(*texts: str) -> str:
 def wrapped(text: str, style: str, postfix: str = "\n") -> str:
     """Return the text wrapped with the style."""
     return f"[{style}]{text}[/{style}]{postfix}"
-
-
-def punctuated(text: str) -> str:
-    """Return the text with an added period, if it has no punctuation yet."""
-    return text if set(text[-2:]) & set(Label.END_OF_SENTENCE_PUNCTUATION) else f"{text}."
 
 
 def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:
