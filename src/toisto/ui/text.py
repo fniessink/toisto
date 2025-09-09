@@ -21,7 +21,7 @@ from toisto.model.quiz.retention import Retention
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
-from .format import format_duration
+from .format import format_duration, quoted
 from .style import theme
 
 console = Console(theme=theme, highlight=False)
@@ -265,11 +265,6 @@ def wrapped(text: str, style: str, postfix: str = "\n") -> str:
 def punctuated(text: str) -> str:
     """Return the text with an added period, if it has no punctuation yet."""
     return text if set(text[-2:]) & set(Label.END_OF_SENTENCE_PUNCTUATION) else f"{text}."
-
-
-def quoted(text: str, quote: str = "'") -> str:
-    """Return a quoted version of the text."""
-    return f"{quote}{text}{quote}"
 
 
 def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:

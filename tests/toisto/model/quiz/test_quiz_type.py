@@ -4,6 +4,8 @@ from toisto.model.language import EN
 from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz_type import ANTONYM, PLURAL, SINGULAR, THIRD_PERSON, GrammaticalQuizType, QuizType
+from toisto.ui.dictionary import linkified
+from toisto.ui.format import quoted
 
 from ....base import ToistoTestCase
 
@@ -50,8 +52,10 @@ class QuizTypeNotesTest(ToistoTestCase):
         tables = Label(EN, "tables", grammatical_form=GrammaticalForm("table", "plural"))
         table.other_grammatical_categories["plural"] = tables
         tables.other_grammatical_categories["singular"] = table
-        self.assertEqual(("The plural of 'table' is 'tables'.",), ANTONYM.notes(table, Labels()))
-        self.assertEqual(("The singular of 'tables' is 'table'.",), ANTONYM.notes(tables, Labels()))
+        table_note = quoted(linkified("table"))
+        tables_note = quoted(linkified("tables"))
+        self.assertEqual((f"The plural of {table_note} is {tables_note}.",), ANTONYM.notes(table, Labels()))
+        self.assertEqual((f"The singular of {tables_note} is {table_note}.",), ANTONYM.notes(tables, Labels()))
 
     def test_omit_grammatical_notes(self):
         """Test that the quiz type notes do not include grammatical notes for the grammatical quiz."""
@@ -68,5 +72,6 @@ class QuizTypeNotesTest(ToistoTestCase):
         sheep_plural = Label(EN, "sheep", grammatical_form=GrammaticalForm("sheep", "plural"))
         sheep_singular.other_grammatical_categories["plural"] = sheep_plural
         sheep_plural.other_grammatical_categories["singular"] = sheep_singular
-        self.assertEqual(("The plural of 'sheep' is also 'sheep'.",), ANTONYM.notes(sheep_singular, Labels()))
-        self.assertEqual(("The singular of 'sheep' is also 'sheep'.",), ANTONYM.notes(sheep_plural, Labels()))
+        sheep = quoted(linkified("sheep"))
+        self.assertEqual((f"The plural of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_singular, Labels()))
+        self.assertEqual((f"The singular of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_plural, Labels()))
