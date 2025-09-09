@@ -70,5 +70,6 @@ $ toisto configure --target fi --source en
 
 - [User guide](docs/userguide.md).
 - [Background information](docs/background.md) on why Toisto exists and what the future plans are.
-- [Software documentation](docs/software.md) describes the inner workings of Toisto, including the format of the concept files.
+- [Concept files](docs/concept_files.md) describes the format of the concept files.
+- [Software documentation](docs/software.md) describes how Toisto works.
 - [Developer documentation](docs/developer.md) provides information on how to develop, test, and release Toisto. This is aimed at people who (want to help) develop Toisto.
