@@ -56,7 +56,7 @@ Update the version number in:
 Update `uv.lock` by running:
 
 ```console
-$ uv lock
+uv lock
 ```
 
 Commit and push the changes and merge the branch.
