@@ -1,7 +1,6 @@
 """Unit tests for the output."""
 
 from datetime import datetime, timedelta
-from unittest import TestCase
 
 from toisto.model.language import FI, NL
 from toisto.model.language.concept import ConceptId
@@ -10,8 +9,9 @@ from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, FEMININE, INTERPRET, READ, WRITE
 from toisto.model.quiz.retention import Retention
-from toisto.ui.dictionary import DICTIONARY_URL, linkified
-from toisto.ui.text import Feedback, enumerated, instruction
+from toisto.ui.dictionary import linkified
+from toisto.ui.format import enumerated
+from toisto.ui.text import Feedback, instruction
 
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
@@ -442,44 +442,3 @@ class FeedbackExampleTest(ToistoTestCase):
             "[secondary]Example: 'Se on lähellä.' meaning 'Het is dichtbij.' and 'Het is in de buurt.'[/secondary]\n",
             feedback.text(Evaluation.CORRECT, Label(NL, "in de buurt"), Retention()),
         )
-
-
-class LinkifyTest(TestCase):
-    """Unit tests for the linkify method."""
-
-    def test_linkify(self):
-        """Test the linkify method."""
-        self.assertEqual(f"[link={DICTIONARY_URL}/test]Test[/link]", linkified("Test"))
-
-    def test_linkify_multiple_words(self):
-        """Test the linkify method."""
-        expected_text = f"[link={DICTIONARY_URL}/test]Test[/link] [link={DICTIONARY_URL}/words]words[/link]"
-        self.assertEqual(expected_text, linkified("Test words"))
-
-    def test_punctuation(self):
-        """Test that punctuation is not linked."""
-        self.assertEqual(f"[link={DICTIONARY_URL}/test]Test[/link].", linkified("Test."))
-
-
-class EnumeratedTest(TestCase):
-    """Unit tests for the enumerated method."""
-
-    def test_no_arguments(self):
-        """Test the enumerated method without arguments."""
-        self.assertEqual("", enumerated())
-
-    def test_empty_string(self):
-        """Test the enumerated method with an empty string."""
-        self.assertEqual("", enumerated(""))
-
-    def test_one_word(self):
-        """Test the enumerated method with one word."""
-        self.assertEqual("foo", enumerated("foo"))
-
-    def test_two_words(self):
-        """Test the enumerated method with two words."""
-        self.assertEqual("foo and bar", enumerated("foo", "bar"))
-
-    def test_three_words(self):
-        """Test the enumerated method with three words."""
-        self.assertEqual("foo, bar, and baz", enumerated("foo", "bar", "baz"))
