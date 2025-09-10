@@ -19,9 +19,9 @@ from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import GrammaticalQuizType
 from toisto.model.quiz.retention import Retention
 
-from .dictionary import DICTIONARY_URL, linkified
+from .dictionary import DICTIONARY_URL
 from .diff import colored_diff
-from .format import format_duration, punctuated, quoted
+from .format import enumerated, format_duration, linkified_and_enumerated, punctuated, quoted, wrapped
 from .style import theme
 
 console = Console(theme=theme, highlight=False)
@@ -83,16 +83,13 @@ class Feedback:
         if evaluation == Evaluation.TRY_AGAIN:
             return self._try_again(guess)
         feedback = ""
-        if evaluation == Evaluation.CORRECT:
-            feedback += self.CORRECT
-        elif evaluation == Evaluation.INCORRECT:
-            feedback += self.INCORRECT + self._correct_answer(guess)
-        else:
-            feedback += self._correct_answers()
-        if evaluation == Evaluation.CORRECT:
-            feedback += self._other_answers(guess)
-        elif evaluation == Evaluation.INCORRECT:
-            feedback += self._other_answers(self.quiz.answer)
+        match evaluation:
+            case Evaluation.CORRECT:
+                feedback += self.CORRECT + self._other_answers(guess)
+            case Evaluation.INCORRECT:
+                feedback += self.INCORRECT + self._correct_answer(guess) + self._other_answers(self.quiz.answer)
+            case _:
+                feedback += self._correct_answers()
         feedback += self._colloquial() + self._meaning() + self._notes()
         if evaluation == Evaluation.CORRECT:
             feedback += self._examples()
@@ -250,27 +247,3 @@ def bulleted_list(label: str, items: Sequence[str], style: str = "secondary", bu
     if len(items) == 1:
         return wrapped(f"{label}: {items[0]}", style)
     return wrapped(f"{label}s:\n" + "\n".join(f"{bullet} {item}" for item in items), style)
-
-
-def linkified_and_enumerated(*texts: str) -> str:
-    """Return a linkified and enumerated version of the texts."""
-    return enumerated(*(f"{quoted(linkified(text))}" for text in texts))
-
-
-def wrapped(text: str, style: str, postfix: str = "\n") -> str:
-    """Return the text wrapped with the style."""
-    return f"[{style}]{text}[/{style}]{postfix}"
-
-
-def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:
-    """Return an enumerated version of the text."""
-    match len(texts):
-        case length if length > min_enumeration_length:
-            comma_separated_texts = ", ".join(texts[:-1]) + ","
-            return enumerated(comma_separated_texts, texts[-1])
-        case length if length == min_enumeration_length:
-            return " and ".join(texts)
-        case length if length == 1:
-            return texts[0]
-        case _:
-            return ""

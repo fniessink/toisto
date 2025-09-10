@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta
 
 from toisto.model.language.label import Label
+from toisto.ui.dictionary import linkified
 
 DAYS_PER_YEAR = 365.25
 MONTHS_PER_YEAR = 12
@@ -58,3 +59,27 @@ def quoted(text: str, quote: str = "'") -> str:
 def punctuated(text: str) -> str:
     """Return the text with an added period, if it has no punctuation yet."""
     return text if set(text[-2:]) & set(Label.END_OF_SENTENCE_PUNCTUATION) else f"{text}."
+
+
+def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:
+    """Return an enumerated version of the text."""
+    match len(texts):
+        case length if length > min_enumeration_length:
+            comma_separated_texts = ", ".join(texts[:-1]) + ","
+            return enumerated(comma_separated_texts, texts[-1])
+        case length if length == min_enumeration_length:
+            return " and ".join(texts)
+        case length if length == 1:
+            return texts[0]
+        case _:
+            return ""
+
+
+def wrapped(text: str, style: str, postfix: str = "\n") -> str:
+    """Return the text wrapped with the style."""
+    return f"[{style}]{text}[/{style}]{postfix}"
+
+
+def linkified_and_enumerated(*texts: str) -> str:
+    """Return a linkified and enumerated version of the texts."""
+    return enumerated(*(f"{quoted(linkified(text))}" for text in texts))

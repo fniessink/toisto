@@ -3,7 +3,7 @@
 from datetime import timedelta
 from unittest import TestCase
 
-from toisto.ui.format import format_duration
+from toisto.ui.format import enumerated, format_duration
 
 
 class FormatDurationTest(TestCase):
@@ -116,3 +116,27 @@ class FormatDurationTest(TestCase):
     def test_format_duration_two_years(self):
         """Test format years."""
         self.assertEqual("2 years", format_duration(timedelta(days=2 * 365)))
+
+
+class EnumeratedTest(TestCase):
+    """Unit tests for the enumerated method."""
+
+    def test_no_arguments(self):
+        """Test the enumerated method without arguments."""
+        self.assertEqual("", enumerated())
+
+    def test_empty_string(self):
+        """Test the enumerated method with an empty string."""
+        self.assertEqual("", enumerated(""))
+
+    def test_one_word(self):
+        """Test the enumerated method with one word."""
+        self.assertEqual("foo", enumerated("foo"))
+
+    def test_two_words(self):
+        """Test the enumerated method with two words."""
+        self.assertEqual("foo and bar", enumerated("foo", "bar"))
+
+    def test_three_words(self):
+        """Test the enumerated method with three words."""
+        self.assertEqual("foo, bar, and baz", enumerated("foo", "bar", "baz"))
