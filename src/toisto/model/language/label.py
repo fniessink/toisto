@@ -9,6 +9,7 @@ from itertools import chain
 from random import shuffle
 from typing import ClassVar
 
+from toisto.match import match
 from toisto.tools import first, first_upper
 
 from . import Language
@@ -268,6 +269,10 @@ class Labels:  # noqa: PLW1641
     def with_same_grammatical_base(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
         return Labels(label for label in self._labels if label.has_same_grammatical_base(other))
+
+    def matching(self, other: Label, *, case_sensitive: bool = True) -> Labels:
+        """Return the labels that match the other label."""
+        return Labels(label for label in self._labels if match(str(label), str(other), case_sensitive=case_sensitive))
 
     @property
     def non_colloquial(self) -> Labels:

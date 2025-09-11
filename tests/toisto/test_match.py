@@ -2,7 +2,7 @@
 
 import unittest
 
-from toisto.model.quiz.match import match
+from toisto.match import match
 
 
 class MatchTest(unittest.TestCase):
