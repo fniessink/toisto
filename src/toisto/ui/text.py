@@ -4,6 +4,7 @@ import sys
 from collections.abc import Callable, Sequence
 from configparser import ConfigParser
 from datetime import datetime
+from itertools import chain
 from typing import Final
 
 from rich.console import Console
@@ -11,6 +12,7 @@ from rich.panel import Panel
 
 from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
+from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
@@ -19,7 +21,7 @@ from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import GrammaticalQuizType
 from toisto.model.quiz.retention import Retention
 
-from .dictionary import DICTIONARY_URL
+from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
 from .format import enumerated, format_duration, linkified_and_enumerated, punctuated, quoted, wrapped
 from .style import theme
@@ -77,16 +79,19 @@ class Feedback:
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
         self.quiz = quiz
         self.language_pair = language_pair
+        self.incorrect_guesses: list[Label] = []
 
     def text(self, evaluation: Evaluation, guess: Label, retention: Retention | None) -> str:
         """Return the feedback about the user's guess."""
         if evaluation == Evaluation.TRY_AGAIN:
+            self.incorrect_guesses.append(guess)
             return self._try_again(guess)
         feedback = ""
         match evaluation:
             case Evaluation.CORRECT:
                 feedback += self.CORRECT + self._other_answers(guess)
             case Evaluation.INCORRECT:
+                self.incorrect_guesses.append(guess)
                 feedback += self.INCORRECT + self._correct_answer(guess) + self._other_answers(self.quiz.answer)
             case _:
                 feedback += self._correct_answers()
@@ -144,7 +149,25 @@ class Feedback:
 
     def _notes(self) -> str:
         """Return the notes, if any."""
-        return bulleted_list("Note", self.quiz.notes)
+        return bulleted_list("Note", list(self.quiz.notes) + self._notes_for_incorrect_guesses())
+
+    def _notes_for_incorrect_guesses(self) -> list[str]:
+        """Create notes for incorrect guesses."""
+        question = self.quiz.question
+        if question.language == self.quiz.answer.language:
+            return []
+        return [
+            f"Your incorrect answer {quoted(linkified(str(guess)))} is "
+            f"{linkified_and_enumerated(*chain(*meanings))} in {ALL_LANGUAGES[question.language]}"
+            for guess in self.incorrect_guesses
+            if (
+                meanings := [
+                    concept.meanings(question.language).with_same_grammatical_categories_as(question).as_strings
+                    for concept in Concept.instances.get_all_values()
+                    if concept.meanings(guess.language).matching(guess)
+                ]
+            )
+        ]
 
     def _examples(self) -> str:
         """Return the quiz's examples, if any."""

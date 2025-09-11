@@ -8,14 +8,13 @@ from dataclasses import dataclass, field
 from itertools import chain
 from typing import ClassVar, cast, final
 
+from toisto.match import match
 from toisto.model.language.concept import ConceptRelation
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
 from toisto.tools import Registry, first
 from toisto.ui.dictionary import linkified
 from toisto.ui.format import quoted
-
-from .match import match
 
 
 @dataclass(frozen=True)

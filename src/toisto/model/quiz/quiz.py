@@ -13,7 +13,6 @@ from ..language.concept import Concept
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .evaluation import Evaluation
-from .match import match
 from .quiz_type import GrammaticalQuizType, ListenOnlyQuizType, QuizType
 
 
@@ -67,12 +66,12 @@ class Quiz:
 
     def is_correct(self, guess: Label, language_pair: LanguagePair) -> bool:
         """Return whether the guess is correct."""
-        return match(str(guess), *self.answers.as_strings, case_sensitive=guess.language != language_pair.source)
+        return any(self.answers.matching(guess, case_sensitive=guess.language != language_pair.source))
 
     def is_question(self, guess: Label) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
         questions = Labels((self._question,)) + self._question_meanings
-        return match(str(guess), *questions.spelling_alternatives.as_strings)
+        return any(questions.spelling_alternatives.matching(guess))
 
     @property
     def question(self) -> Label:
