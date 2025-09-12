@@ -272,7 +272,11 @@ class Labels:  # noqa: PLW1641
 
     def matching(self, other: Label, *, case_sensitive: bool = True) -> Labels:
         """Return the labels that match the other label."""
-        return Labels(label for label in self._labels if match(str(label), str(other), case_sensitive=case_sensitive))
+        return Labels(
+            label
+            for label in self._labels
+            if match(str(other), *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
+        )
 
     @property
     def non_colloquial(self) -> Labels:
