@@ -164,7 +164,7 @@ class Feedback:
                 meanings := [
                     concept.meanings(question.language).with_same_grammatical_categories_as(question).as_strings
                     for concept in Concept.instances.get_all_values()
-                    if concept.meanings(guess.language).matching(guess)
+                    if concept.labels(guess.language).matching(guess)
                 ]
             )
         ]
