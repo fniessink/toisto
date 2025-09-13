@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## 0.38.0 - [Unreleased]
 
+### Fixed
+
+- Link colloquial labels in notes to Wiktionary. Fixes [#1126](https://github.com/fniessink/toisto/issues/1126).
+
 ### Added
 
 - Give meaning of incorrect answer, when possible. Closes [#1111](https://github.com/fniessink/toisto/issues/1111).

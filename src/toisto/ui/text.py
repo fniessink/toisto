@@ -133,7 +133,7 @@ class Feedback:
         """Return the feedback about the colloquial label, if any."""
         if self.quiz.question.colloquial:
             language = ALL_LANGUAGES[self.quiz.question.language]
-            question = quoted(str(self.quiz.question).strip("*"))
+            question = quoted(linkified(str(self.quiz.question)))
             return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), "secondary")
         return ""
 
@@ -174,7 +174,7 @@ class Feedback:
 
     def _example_label(self, label: Label) -> str:
         """Format the label as example."""
-        label_str = quoted(str(label))
+        label_str = quoted(linkified(str(label)))
         return f"{label_str} (colloquial)" if label.colloquial else label_str
 
     def _retention(self, retention: Retention, evaluation: Evaluation) -> str:
