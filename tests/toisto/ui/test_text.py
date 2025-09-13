@@ -282,6 +282,28 @@ class FeedbackNotesTest(ToistoTestCase):
             feedback.text(Evaluation.CORRECT, Label(NL, "thuis"), Retention()),
         )
 
+    def test_note_on_incorrect_answer_that_has_different_meaning_and_has_different_grammatical_forms(self):
+        """Test that the note is given when the answer is incorrect."""
+        self.create_concept(
+            "house",
+            labels=[
+                {"label": {"singular": "talo", "plural": "talot"}, "language": FI},
+                {"label": {"singular": "huis", "plural": "huizen"}, "language": NL},
+            ],
+        )
+        home = self.create_concept(
+            "home",
+            labels=[{"label": "koti", "language": FI}, {"label": "thuis", "language": NL}],
+        )
+        quiz = create_quizzes(FI_NL, (INTERPRET,), home).pop()
+        feedback = Feedback(quiz, FI_NL)
+        feedback.incorrect_guesses = [Label(NL, "huizen")]
+        self.assertIn(
+            f"[secondary]Note: Your incorrect answer '{linkified('huizen')}' is "
+            f"'{linkified('talot')}' in Finnish.[/secondary]",
+            feedback.text(Evaluation.CORRECT, Label(NL, "thuis"), Retention()),
+        )
+
     def test_note_on_skip_to_answer(self):
         """Test that the note is given when the user skips to the answer."""
         concept = self.create_concept(

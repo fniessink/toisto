@@ -4,7 +4,6 @@ import sys
 from collections.abc import Callable, Sequence
 from configparser import ConfigParser
 from datetime import datetime
-from itertools import chain
 from typing import Final
 
 from rich.console import Console
@@ -156,18 +155,20 @@ class Feedback:
         question = self.quiz.question
         if question.language == self.quiz.answer.language:
             return []
-        return [
-            f"Your incorrect answer {quoted(linkified(str(guess)))} is "
-            f"{linkified_and_enumerated(*chain(*meanings))} in {ALL_LANGUAGES[question.language]}"
-            for guess in self.incorrect_guesses
-            if (
-                meanings := [
-                    concept.meanings(question.language).with_same_grammatical_categories_as(question).as_strings
-                    for concept in Concept.instances.get_all_values()
-                    if concept.labels(guess.language).matching(guess)
-                ]
-            )
-        ]
+        notes = []
+        for guess in self.incorrect_guesses:
+            meanings: list[str] = []
+            for concept in Concept.instances.get_all_values():
+                for label in concept.labels(guess.language).matching(guess):
+                    meanings.extend(
+                        concept.meanings(question.language).with_same_grammatical_categories_as(label).as_strings
+                    )
+            if meanings:
+                notes.append(
+                    f"Your incorrect answer {quoted(linkified(str(guess)))} is "
+                    f"{linkified_and_enumerated(*meanings)} in {ALL_LANGUAGES[question.language]}"
+                )
+        return notes
 
     def _examples(self) -> str:
         """Return the quiz's examples, if any."""
