@@ -68,7 +68,7 @@ class FeedbackTest(ToistoTestCase):
                 {"label": "kiitti", "language": FI, "colloquial": True},
             ],
         )
-        colloquial = "[secondary]The colloquial Finnish spoken was 'kiitti'.[/secondary]\n"
+        colloquial = f"[secondary]The colloquial Finnish spoken was '{linkified('kiitti')}'.[/secondary]\n"
         meaning = f"[secondary]Meaning '{linkified('dank')}'.[/secondary]\n"
         answer = f"The correct answer is '[inserted]{linkified('kiitos')}[/inserted]'.\n"
         expected_feedback_correct = Feedback.CORRECT + colloquial + meaning
@@ -194,10 +194,7 @@ class FeedbackTest(ToistoTestCase):
             ],
         )
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
-        expected_text = (
-            "The correct answers are '[link=https://en.wiktionary.org/wiki/terve]terve[/link]' and "
-            "'[link=https://en.wiktionary.org/wiki/hei]hei[/link]'.\n"
-        )
+        expected_text = f"The correct answers are '{linkified('terve')}' and '{linkified('hei')}'.\n"
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
 
@@ -400,9 +397,8 @@ class FeedbackMeaningTest(ToistoTestCase):
         )
         for quiz in create_quizzes(FI_NL, (INTERPRET,), engineer):
             feedback = Feedback(quiz, FI_NL)
-            question = quiz.question
             self.assertIn(
-                f"[secondary]Meaning '[link=https://en.wiktionary.org/wiki/{question}]{question}[/link]'.[/secondary]\n",
+                f"[secondary]Meaning '{linkified(str(quiz.question))}'.[/secondary]\n",
                 feedback.text(Evaluation.CORRECT, Label(NL, "ingenieur"), Retention()),
             )
 
@@ -424,7 +420,8 @@ class FeedbackExampleTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (READ,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
-            Feedback.CORRECT + "[secondary]Example: 'Moi Alice!' meaning 'Hoi Alice!'[/secondary]\n",
+            Feedback.CORRECT
+            + (f"[secondary]Example: '{linkified('Moi Alice!')}' meaning '{linkified('Hoi Alice!')}'[/secondary]\n"),
             feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
         )
 
@@ -441,7 +438,8 @@ class FeedbackExampleTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
-            Feedback.CORRECT + "[secondary]Example: 'Terve Alice!' meaning 'Hoi Alice!'[/secondary]\n",
+            Feedback.CORRECT
+            + (f"[secondary]Example: '{linkified('Terve Alice!')}' meaning '{linkified('Hoi Alice!')}'[/secondary]\n"),
             feedback.text(Evaluation.CORRECT, GUESS, Retention()),
         )
 
@@ -464,12 +462,13 @@ class FeedbackExampleTest(ToistoTestCase):
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
             Feedback.CORRECT
-            + "[secondary]Example: 'Terve Alice!' meaning 'Hoi Alice!' and 'Hallo Alice!'[/secondary]\n",
+            + f"[secondary]Example: '{linkified('Terve Alice!')}' meaning '{linkified('Hoi Alice!')}' and "
+            f"'{linkified('Hallo Alice!')}'[/secondary]\n",
             feedback.text(Evaluation.CORRECT, GUESS, Retention()),
         )
 
     def test_example_with_colloquial_labels(self):
-        """Test that the star is removed from colloquial labels."""
+        """Test examples with colloquial labels."""
         hi = self.create_concept(
             "hi",
             {"example": ConceptId("hi alice")},
@@ -486,13 +485,12 @@ class FeedbackExampleTest(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(
-            Feedback.CORRECT
-            + "[secondary]Examples:\n"
-            + "- 'Terve Alice!' meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).\n"
-            + "- 'Moi Alice!' (colloquial) meaning 'Hallo Alice!' and 'Hoi Alice!' (colloquial).[/secondary]\n",
-            feedback.text(Evaluation.CORRECT, GUESS, Retention()),
-        )
+        expected_feedback = f"""{Feedback.CORRECT}[secondary]Examples:
+- '{linkified("Terve Alice!")}' meaning '{linkified("Hallo Alice!")}' and '{linkified("Hoi Alice!")}' (colloquial).
+- '{linkified("Moi Alice!")}' (colloquial) meaning '{linkified("Hallo Alice!")}' and '{linkified("Hoi Alice!")}' \
+(colloquial).[/secondary]
+"""
+        self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
     def test_example_with_synonyms(self):
         """Test that the post quiz example is for the correct synonym."""
@@ -515,9 +513,9 @@ class FeedbackExampleTest(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (READ,), near).pop()
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(
-            Feedback.CORRECT + "[secondary]Another correct answer is "
-            "'[link=https://en.wiktionary.org/wiki/dichtbij]dichtbij[/link]'.[/secondary]\n"
-            "[secondary]Example: 'Se on lähellä.' meaning 'Het is dichtbij.' and 'Het is in de buurt.'[/secondary]\n",
-            feedback.text(Evaluation.CORRECT, Label(NL, "in de buurt"), Retention()),
-        )
+        expected_feedback = f"""{Feedback.CORRECT}\
+[secondary]Another correct answer is '{linkified("dichtbij")}'.[/secondary]
+[secondary]Example: '{linkified("Se on lähellä.")}' meaning '{linkified("Het is dichtbij.")}' and \
+'{linkified("Het is in de buurt.")}'[/secondary]
+"""
+        self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, Label(NL, "in de buurt"), Retention()))
