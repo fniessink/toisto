@@ -263,6 +263,25 @@ class FeedbackNotesTest(ToistoTestCase):
             feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
         )
 
+    def test_note_on_incorrect_answer_that_has_different_meaning_that_is_repeated(self):
+        """Test that the note is not repeated if the same incorrect answer is given twice."""
+        self.create_concept(
+            "hello",
+            labels=[{"label": "terve", "language": FI}, {"label": "hallo", "language": NL}],
+        )
+        hi = self.create_concept(
+            "hi",
+            labels=[{"label": "moi", "language": FI}, {"label": "hoi", "language": NL}],
+        )
+        quiz = create_quizzes(FI_NL, (INTERPRET,), hi).pop()
+        feedback = Feedback(quiz, FI_NL)
+        feedback.incorrect_guesses = [Label(NL, "hallo")]
+        self.assertIn(
+            f"[secondary]Note: Your incorrect answer '{linkified('hallo')}' is "
+            f"'{linkified('terve')}' in Finnish.[/secondary]",
+            feedback.text(Evaluation.INCORRECT, Label(NL, "hallo"), Retention()),
+        )
+
     def test_note_on_incorrect_answer_that_has_different_meaning_and_is_spelling_variant(self):
         """Test that the note is given when the answer is incorrect."""
         self.create_concept(

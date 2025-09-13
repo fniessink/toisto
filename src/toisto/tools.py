@@ -2,7 +2,7 @@
 
 import os
 import sys
-from collections.abc import Callable, Iterable
+from collections.abc import Callable, Generator, Iterable
 from itertools import chain
 from typing import Generic, TypeVar
 
@@ -23,6 +23,15 @@ def first(sequence: Iterable[T], where: Callable[[T], bool] = lambda _item: True
 def first_upper(string: str) -> str:
     """Return a copy of the string with the first letter capitalized and the rest unchanged."""
     return string[0].upper() + string[1:] if string else ""
+
+
+def unique(sequence: Iterable[T]) -> Generator[T, None, None]:
+    """Return a generator that yields unique items from the sequence in order."""
+    seen = set()
+    for item in sequence:
+        if item not in seen:
+            seen.add(item)
+            yield item
 
 
 Key = TypeVar("Key")
