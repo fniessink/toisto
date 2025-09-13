@@ -11,14 +11,15 @@ from rich.panel import Panel
 
 from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
-from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label
+from toisto.model.language.translation import meanings
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
 from toisto.model.quiz.quiz_type import GrammaticalQuizType
 from toisto.model.quiz.retention import Retention
+from toisto.tools import unique
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
@@ -152,23 +153,14 @@ class Feedback:
 
     def _notes_for_incorrect_guesses(self) -> list[str]:
         """Create notes for incorrect guesses."""
-        question = self.quiz.question
-        if question.language == self.quiz.answer.language:
+        if self.quiz.question.language == self.quiz.answer.language:
             return []
-        notes = []
-        for guess in self.incorrect_guesses:
-            meanings: list[str] = []
-            for concept in Concept.instances.get_all_values():
-                for label in concept.labels(guess.language).matching(guess):
-                    meanings.extend(
-                        concept.meanings(question.language).with_same_grammatical_categories_as(label).as_strings
-                    )
-            if meanings:
-                notes.append(
-                    f"Your incorrect answer {quoted(linkified(str(guess)))} is "
-                    f"{linkified_and_enumerated(*meanings)} in {ALL_LANGUAGES[question.language]}"
-                )
-        return notes
+        return [
+            f"Your incorrect answer {quoted(linkified(str(guess)))} is "
+            f"{linkified_and_enumerated(*guess_meanings.as_strings)} in {ALL_LANGUAGES[self.quiz.question.language]}"
+            for guess in unique(self.incorrect_guesses)
+            if (guess_meanings := meanings(guess, self.quiz.question.language))
+        ]
 
     def _examples(self) -> str:
         """Return the quiz's examples, if any."""
