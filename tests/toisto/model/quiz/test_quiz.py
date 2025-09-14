@@ -150,8 +150,15 @@ class QuizTest(QuizTestCase):
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers do not include generated spelling alternatives."""
-        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [Label(NL, "het huis")])
+        load_spelling_alternatives(FI_NL)
+        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [self.huis])
         self.assertEqual((), quiz.other_answers(self.huis))
+
+    def test_no_base_of_generated_spelling_alternatives_as_other_answer(self):
+        """Test that the other answers don't include the base of a generated spelling alternative if given as answer."""
+        load_spelling_alternatives(FI_NL)
+        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [self.huis])
+        self.assertEqual((), quiz.other_answers(Label(NL, "huis")))
 
     def test_tips_and_notes(self):
         """Test that the tip is added to the instruction, the notes are not, and neither are added to the question."""
@@ -524,7 +531,7 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi."), [Label(NL, ["Een", "Eén"]), Label(NL, "één")])
         a_capitalized, one_capitalized, one = (Label(NL, "Een"), Label(NL, "Eén"), Label(NL, "één"))
         self.assertEqual((one_capitalized, one), quiz.other_answers(a_capitalized))
-        self.assertEqual((a_capitalized, one), quiz.other_answers(one_capitalized))
+        self.assertEqual((one,), quiz.other_answers(one_capitalized))
         self.assertEqual((a_capitalized, one_capitalized), quiz.other_answers(one))
 
     def test_generated_spelling_alternative_is_correct(self):

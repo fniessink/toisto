@@ -8,7 +8,6 @@ from dataclasses import dataclass, field
 from itertools import chain
 from typing import ClassVar, cast, final
 
-from toisto.match import match
 from toisto.model.language.concept import ConceptRelation
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
@@ -74,10 +73,7 @@ class QuizType:
     def other_answers(self, guess: Label, answers: Labels) -> Labels:
         """Return the answers not equal to the guess."""
         return Labels(
-            answer
-            for answer in answers
-            if not match(str(guess), str(answer), case_sensitive=False)
-            and guess not in answer.generated_spelling_alternatives
+            answer for answer in answers if not answer.spelling_alternatives.matching(guess, case_sensitive=False)
         )
 
     def is_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:

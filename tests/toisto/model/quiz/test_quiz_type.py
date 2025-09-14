@@ -1,13 +1,14 @@
 """Quiz type unit tests."""
 
-from toisto.model.language import EN
+from toisto.model.language import EN, NL
 from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
-from toisto.model.quiz.quiz_type import ANTONYM, PLURAL, SINGULAR, THIRD_PERSON, GrammaticalQuizType, QuizType
+from toisto.model.quiz.quiz_type import ANTONYM, PLURAL, READ, SINGULAR, THIRD_PERSON, GrammaticalQuizType, QuizType
+from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 from toisto.ui.dictionary import linkified
 from toisto.ui.format import quoted
 
-from ....base import ToistoTestCase
+from ....base import EN_NL, ToistoTestCase
 
 
 class GrammaticalQuizTypeTest(ToistoTestCase):
@@ -75,3 +76,45 @@ class QuizTypeNotesTest(ToistoTestCase):
         sheep = quoted(linkified("sheep"))
         self.assertEqual((f"The plural of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_singular, Labels()))
         self.assertEqual((f"The singular of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_plural, Labels()))
+
+
+class QuizTypeOtherAnswersTest(ToistoTestCase):
+    """Unit tests for the other answers method."""
+
+    def setUp(self) -> None:
+        """Extend to set up test fixtures."""
+        super().setUp()
+        load_spelling_alternatives(EN_NL)
+        self.table = Label(EN, "table")
+        self.chart = Label(EN, "chart")
+        self.tafel = Label(NL, "de tafel")
+        self.wrong_answer = Label(EN, "tabel")
+
+    def test_one_answer_answered_correctly(self):
+        """Test that having one answer being answered correcty means there are no other answers."""
+        self.assertEqual((), READ.other_answers(self.table, Labels([self.table])))
+
+    def test_one_answer_answered_incorrectly(self):
+        """Test that having one answer being answered incorrecty means there is one other answer."""
+        self.assertEqual((self.table,), READ.other_answers(self.wrong_answer, Labels([self.table])))
+
+    def test_two_answers_answered_correctly(self):
+        """Test that having two answers, one of them being given as answer means there is one other answer."""
+        self.assertEqual((self.table,), READ.other_answers(self.chart, Labels([self.chart, self.table])))
+
+    def test_two_answers_answered_incorrectly(self):
+        """Test that having two answers, and an incorrect answer, means there are two other answers."""
+        self.assertEqual(
+            (self.chart, self.table),
+            READ.other_answers(self.wrong_answer, Labels([self.chart, self.table])),
+        )
+
+    def test_one_answer_with_spelling_alternative_answered_correctly(self):
+        """Test one answer with spelling alternative being answered correcty."""
+        answer = Label(NL, "de tafel")
+        self.assertEqual((), READ.other_answers(answer, Labels([self.tafel])))
+
+    def test_one_answer_with_spelling_alternative_answered_correctly_with_alternative(self):
+        """Test one answer with spelling alternative being answered correcty with the spelling alternative."""
+        answer = Label(NL, "tafel")
+        self.assertEqual((), READ.other_answers(answer, Labels([self.tafel])))
