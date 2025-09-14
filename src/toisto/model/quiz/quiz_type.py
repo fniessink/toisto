@@ -59,12 +59,12 @@ class QuizType:
         """
         notes = list(question.notes)
         if self._include_grammatical_notes() and question.other_grammatical_categories:
-            other_grammatical_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
-            other_label = question.other_grammatical_categories[other_grammatical_category]
+            other_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
+            other_label = question.other_grammatical_categories[other_category]
             also = " also" if str(question) == str(other_label) else ""
             question_str = quoted(linkified(str(question)))
             other_label_str = quoted(linkified(str(other_label)))
-            notes.append(f"The {other_grammatical_category} of {question_str} is{also} {other_label_str}.")
+            notes.append(f"The {other_category} of {question_str} is{also} {other_label_str}.")
         return tuple(notes)
 
     def _include_grammatical_notes(self) -> bool:

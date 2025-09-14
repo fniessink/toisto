@@ -1,7 +1,7 @@
 """Output for the user."""
 
 import sys
-from collections.abc import Callable, Sequence
+from collections.abc import Callable
 from configparser import ConfigParser
 from datetime import datetime
 from typing import Final
@@ -23,7 +23,7 @@ from toisto.tools import unique
 
 from .dictionary import DICTIONARY_URL, linkified
 from .diff import colored_diff
-from .format import enumerated, format_duration, linkified_and_enumerated, punctuated, quoted, wrapped
+from .format import bulleted_list, enumerated, format_duration, linkified_and_enumerated, punctuated, quoted, wrapped
 from .style import theme
 
 console = Console(theme=theme, highlight=False)
@@ -126,7 +126,7 @@ class Feedback:
         if other_answers := self.quiz.other_answers(guess):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
             answers = linkified_and_enumerated(*other_answers.as_strings)
-            return wrapped(punctuated(f"{label} {answers}"), "secondary")
+            return wrapped(punctuated(f"{label} {answers}"), style="answer")
         return ""
 
     def _colloquial(self) -> str:
@@ -134,7 +134,7 @@ class Feedback:
         if self.quiz.question.colloquial:
             language = ALL_LANGUAGES[self.quiz.question.language]
             question = quoted(linkified(str(self.quiz.question)))
-            return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), "secondary")
+            return wrapped(punctuated(f"The colloquial {language} spoken was {question}"), style="colloquial")
         return ""
 
     def _meaning(self) -> str:
@@ -142,14 +142,14 @@ class Feedback:
         question_meanings = linkified_and_enumerated(*self.quiz.question_meanings.as_strings)
         answer_meanings = linkified_and_enumerated(*self.quiz.answer_meanings.as_strings)
         if question_meanings and answer_meanings:
-            meanings = f"{question_meanings}, respectively {answer_meanings}"
+            quiz_meanings = f"{question_meanings}, respectively {answer_meanings}"
         else:
-            meanings = question_meanings or answer_meanings
-        return wrapped(punctuated(f"Meaning {meanings}"), "secondary") if meanings else ""
+            quiz_meanings = question_meanings or answer_meanings
+        return wrapped(punctuated(f"Meaning {quiz_meanings}"), style="meaning") if quiz_meanings else ""
 
     def _notes(self) -> str:
         """Return the notes, if any."""
-        return bulleted_list("Note", list(self.quiz.notes) + self._notes_for_incorrect_guesses())
+        return bulleted_list("Note", list(self.quiz.notes) + self._notes_for_incorrect_guesses(), style="note")
 
     def _notes_for_incorrect_guesses(self) -> list[str]:
         """Create notes for incorrect guesses."""
@@ -170,7 +170,7 @@ class Feedback:
             example_meanings = example.labels(self.language_pair.source).first_non_generated_spelling_alternatives
             enumerated_meanings = enumerated(*[self._example_label(meaning) for meaning in example_meanings])
             examples.extend(f"{self._example_label(label)} meaning {enumerated_meanings}" for label in example_labels)
-        return bulleted_list("Example", examples)
+        return bulleted_list("Example", examples, style="example")
 
     def _example_label(self, label: Label) -> str:
         """Format the label as example."""
@@ -220,14 +220,14 @@ class ProgressUpdate:
             feedback.append(f"skipped {skipped} ({skipped / total:.0%})")
         return wrapped(
             f"Progress update after {total} quiz{'zes' if total > 1 else ''}: you {enumerated(*feedback)}.",
-            "progress",
+            style="progress",
             postfix="\n\n",
         )
 
 
 def instruction(quiz: Quiz) -> str:
     """Return the instruction for the quiz."""
-    return wrapped(f"{quiz.instruction}:", "quiz", postfix="")
+    return wrapped(f"{quiz.instruction}:", style="quiz", postfix="")
 
 
 def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
@@ -253,13 +253,3 @@ def version_message(latest_version: str | None) -> str:
         if newer
         else ""
     )
-
-
-def bulleted_list(label: str, items: Sequence[str], style: str = "secondary", bullet: str = "-") -> str:
-    """Create a bulleted list of the items."""
-    if len(items) == 0:
-        return ""
-    items = [punctuated(item) for item in items]
-    if len(items) == 1:
-        return wrapped(f"{label}: {items[0]}", style)
-    return wrapped(f"{label}s:\n" + "\n".join(f"{bullet} {item}" for item in items), style)
