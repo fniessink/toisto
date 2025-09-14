@@ -1,5 +1,6 @@
 """Formatting."""
 
+from collections.abc import Sequence
 from datetime import datetime, timedelta
 
 from toisto.model.language.label import Label
@@ -75,7 +76,7 @@ def enumerated(*texts: str, min_enumeration_length: int = 2) -> str:
             return ""
 
 
-def wrapped(text: str, style: str, postfix: str = "\n") -> str:
+def wrapped(text: str, *, style: str, postfix: str = "\n") -> str:
     """Return the text wrapped with the style."""
     return f"[{style}]{text}[/{style}]{postfix}"
 
@@ -83,3 +84,16 @@ def wrapped(text: str, style: str, postfix: str = "\n") -> str:
 def linkified_and_enumerated(*texts: str) -> str:
     """Return a linkified and enumerated version of the texts."""
     return enumerated(*(f"{quoted(linkified(text))}" for text in texts))
+
+
+def bulleted_list(label: str, items: Sequence[str], style: str, *, bullet: str = "-") -> str:
+    """Create a bulleted list of the items."""
+    items = [punctuated(item) for item in items]
+    match len(items):
+        case 0:
+            return ""
+        case 1:
+            text = f"{label}: {items[0]}"
+        case _:
+            text = f"{label}s:\n" + "\n".join(f"{bullet} {item}" for item in items)
+    return wrapped(text, style=style)

@@ -231,7 +231,7 @@ class PracticeFeedbackTest(PracticeBase):
         concept = self.create_concept_fixture()
         quizzes = create_quizzes(FI_NL, (DICTATE,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        self.assert_printed(f"{Feedback.CORRECT}[secondary]Meaning '{linkified('Hoi!')}'[/secondary]\n", patched_print)
+        self.assert_printed(f"{Feedback.CORRECT}[meaning]Meaning '{linkified('Hoi!')}'[/meaning]\n", patched_print)
 
     @patch("builtins.input", Mock(return_value="talot\n"))
     def test_quiz_with_multiple_meanings(self):
@@ -240,8 +240,8 @@ class PracticeFeedbackTest(PracticeBase):
         quizzes = create_quizzes(FI_NL, (PLURAL,), concept)
         patched_print = self.practice(FI_NL, quizzes)
         expected_feedback = (
-            f"{Feedback.CORRECT}[secondary]Meaning '{linkified('huis')}', "
-            f"respectively '{linkified('huizen')}'.[/secondary]\n"
+            f"{Feedback.CORRECT}[meaning]Meaning '{linkified('huis')}', "
+            f"respectively '{linkified('huizen')}'.[/meaning]\n"
         )
         self.assert_printed(expected_feedback, patched_print)
 
@@ -252,7 +252,7 @@ class PracticeFeedbackTest(PracticeBase):
         quizzes = create_quizzes(FI_NL, (READ,), concept)
         patched_print = self.practice(FI_NL, quizzes)
         expected_feedback = (
-            f"{Feedback.CORRECT}[secondary]Another correct answer is '{linkified('zij rijdt')}'.[/secondary]\n"
+            f"{Feedback.CORRECT}[answer]Another correct answer is '{linkified('zij rijdt')}'.[/answer]\n"
         )
         self.assert_printed(expected_feedback, patched_print)
 
@@ -262,7 +262,7 @@ class PracticeFeedbackTest(PracticeBase):
         concept = self.create_concept_fixture("gender")
         quizzes = create_quizzes(FI_NL, (INTERPRET,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"{Feedback.CORRECT}[secondary]Meaning '{linkified('hän ajaa')}'.[/secondary]\n"
+        expected_feedback = f"{Feedback.CORRECT}[meaning]Meaning '{linkified('hän ajaa')}'.[/meaning]\n"
         self.assert_printed(expected_feedback, patched_print)
 
     @patch("builtins.input", Mock(return_value="vieressä\n"))
@@ -282,9 +282,9 @@ class PracticeFeedbackTest(PracticeBase):
         )
         quizzes = create_quizzes(FI_NL, (DICTATE,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"""{Feedback.CORRECT}[secondary]Meaning '{linkified("naast")}'.[/secondary]
-[secondary]Example: '{linkified("Museo on kirkon vieressä.")}' meaning '{linkified("Het museum is naast de kerk.")}'\
-[/secondary]
+        expected_feedback = f"""{Feedback.CORRECT}[meaning]Meaning '{linkified("naast")}'.[/meaning]
+[example]Example: '{linkified("Museo on kirkon vieressä.")}' meaning '{linkified("Het museum is naast de kerk.")}'\
+[/example]
 """
         self.assert_printed(expected_feedback, patched_print)
 
@@ -309,10 +309,10 @@ class PracticeFeedbackTest(PracticeBase):
         )
         quizzes = create_quizzes(FI_NL, (DICTATE,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"""{Feedback.CORRECT}[secondary]Meaning '{linkified("zwart")}'.[/secondary]
-[secondary]Examples:
+        expected_feedback = f"""{Feedback.CORRECT}[meaning]Meaning '{linkified("zwart")}'.[/meaning]
+[example]Examples:
 - '{linkified("Auto on musta.")}' meaning '{linkified("De auto is zwart.")}'
-- '{linkified("Autot ovat mustia.")}' meaning '{linkified("De auto's zijn zwart.")}'[/secondary]
+- '{linkified("Autot ovat mustia.")}' meaning '{linkified("De auto's zijn zwart.")}'[/example]
 """
         self.assert_printed(expected_feedback, patched_print)
 
@@ -323,10 +323,10 @@ class PracticeFeedbackTest(PracticeBase):
         quizzes = create_quizzes(FI_NL, (DICTATE,), concept)
         quizzes = Quizzes(quiz for quiz in quizzes if quiz.answer == Label(FI, "pöytävalaisin"))
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"""{Feedback.CORRECT}[secondary]Meaning '{linkified("de tafellamp")}'.[/secondary]
-[secondary]Examples:
+        expected_feedback = f"""{Feedback.CORRECT}[meaning]Meaning '{linkified("de tafellamp")}'.[/meaning]
+[example]Examples:
 - '{linkified("Minä etsin pöytälamppua.")}' meaning '{linkified("Ik zoek een tafellamp.")}'
-- '{linkified("Minä etsin pöytävalaisinta.")}' meaning '{linkified("Ik zoek een tafellamp.")}'[/secondary]
+- '{linkified("Minä etsin pöytävalaisinta.")}' meaning '{linkified("Ik zoek een tafellamp.")}'[/example]
 """
         self.assert_printed(expected_feedback, patched_print)
 
@@ -337,9 +337,9 @@ class PracticeFeedbackTest(PracticeBase):
         quizzes = create_quizzes(NL_FI, (DICTATE,), concept)
         patched_print = self.practice(NL_FI, quizzes)
         expected_feedback = f"""{Feedback.CORRECT}\
-[secondary]Meaning '{linkified("pöytälamppu")}' and '{linkified("pöytävalaisin")}'.[/secondary]
-[secondary]Example: '{linkified("Ik zoek een tafellamp.")}' meaning '{linkified("Minä etsin pöytälamppua.")}' and \
-'{linkified("Minä etsin pöytävalaisinta.")}'[/secondary]
+[meaning]Meaning '{linkified("pöytälamppu")}' and '{linkified("pöytävalaisin")}'.[/meaning]
+[example]Example: '{linkified("Ik zoek een tafellamp.")}' meaning '{linkified("Minä etsin pöytälamppua.")}' and \
+'{linkified("Minä etsin pöytävalaisinta.")}'[/example]
 """
         self.assert_printed(expected_feedback, patched_print)
 
@@ -364,9 +364,9 @@ class PracticeFeedbackTest(PracticeBase):
         quizzes = create_quizzes(FI_NL, (ANTONYM,), son)
         patched_print = self.practice(FI_NL, quizzes)
         expected_feedback = f"""{Feedback.INCORRECT}The correct answer is '[inserted]{linkified("tytär")}[/inserted]'.
-[secondary]Another correct answer is '{linkified("isä")}'.[/secondary]
-[secondary]Meaning '{linkified("de zoon")}', respectively '{linkified("de dochter")}' and '{linkified("de vader")}'.\
-[/secondary]
+[answer]Another correct answer is '{linkified("isä")}'.[/answer]
+[meaning]Meaning '{linkified("de zoon")}', respectively '{linkified("de dochter")}' and '{linkified("de vader")}'.\
+[/meaning]
 """
         self.assert_printed(expected_feedback, patched_print)
 
