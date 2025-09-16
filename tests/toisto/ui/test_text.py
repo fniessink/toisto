@@ -70,7 +70,7 @@ class FeedbackTest(ToistoTestCase):
         )
         colloquial = f"[colloquial]The colloquial Finnish spoken was '{linkified('kiitti')}'.[/colloquial]\n"
         meaning = f"[meaning]Meaning '{linkified('dank')}'.[/meaning]\n"
-        answer = f"The correct answer is '[inserted]{linkified('kiitos')}[/inserted]'.\n"
+        answer = f"The correct answer is '{linkified('kiitos')}'.\n"
         expected_feedback_correct = Feedback.CORRECT + colloquial + meaning
         expected_feedback_incorrect = Feedback.INCORRECT + answer + colloquial + meaning
         expected_feedback_on_skip = f"The correct answer is '{linkified('kiitos')}'.\n" + colloquial + meaning
@@ -125,7 +125,7 @@ class FeedbackTest(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         expected_text = (
-            f"{Feedback.INCORRECT}The correct answer is '[inserted]{linkified('terve')}[/inserted]'.\n"
+            f"{Feedback.INCORRECT}The correct answer is '{linkified('terve')}'.\n"
             f"[meaning]Meaning '{linkified('hoi')}'.[/meaning]\n"
         )
         feedback = Feedback(quiz, FI_NL)
@@ -143,8 +143,7 @@ class FeedbackTest(ToistoTestCase):
         )
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         expected_text = (
-            f"{Feedback.INCORRECT}The correct answer is '[inserted]{linkified('terve')}[/inserted]'.\n"
-            f"[answer]Another correct answer is '{linkified('hei')}'.[/answer]\n"
+            f"{Feedback.INCORRECT}The correct answers are '{linkified('terve')}' and '{linkified('hei')}'.\n"
         )
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(FI, "incorrect"), Retention()))
@@ -155,7 +154,7 @@ class FeedbackTest(ToistoTestCase):
             "house", labels=[{"label": "het huis", "language": NL}, {"label": "talo", "language": FI}]
         )
         quiz = create_quizzes(FI_NL, (READ,), concept).pop()
-        expected_text = f"{Feedback.INCORRECT}The correct answer is '[inserted]{linkified('het huis')}[/inserted]'.\n"
+        expected_text = f"{Feedback.INCORRECT}The correct answer is '{linkified('het huis')}'.\n"
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(NL, "incorrect"), Retention()))
 

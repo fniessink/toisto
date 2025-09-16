@@ -363,8 +363,8 @@ class PracticeFeedbackTest(PracticeBase):
         )
         quizzes = create_quizzes(FI_NL, (ANTONYM,), son)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"""{Feedback.INCORRECT}The correct answer is '[inserted]{linkified("tytär")}[/inserted]'.
-[answer]Another correct answer is '{linkified("isä")}'.[/answer]
+        expected_feedback = f"""\
+{Feedback.INCORRECT}The correct answers are '{linkified("tytär")}' and '{linkified("isä")}'.
 [meaning]Meaning '{linkified("de zoon")}', respectively '{linkified("de dochter")}' and '{linkified("de vader")}'.\
 [/meaning]
 """

@@ -2,7 +2,6 @@
 
 import unittest
 
-from toisto.ui.dictionary import linkified
 from toisto.ui.diff import colored_diff
 
 
@@ -15,7 +14,10 @@ class DiffTest(unittest.TestCase):
 
     def test_wildly_different_strings(self):
         """Test that wildly different strings are green."""
-        self.assertEqual(f"[inserted]{linkified('different')}[/inserted]", colored_diff("completely", "different"))
+        self.assertEqual(
+            "[inserted]diff[/inserted]e[inserted]ren[/inserted]t[deleted]ely[/deleted]",
+            colored_diff("completely", "different"),
+        )
 
     def test_text_deleted(self):
         """Test that deleted parts are red."""
@@ -49,4 +51,4 @@ class DiffTest(unittest.TestCase):
 
     def test_make_inserted_whitespace_not_visible(self):
         """Test that inserted whitespace is not made visible."""
-        self.assertEqual(f"[inserted]{linkified('de morgen')}[/inserted]", colored_diff("uhm", "de morgen"))
+        self.assertEqual("[inserted]de [/inserted]m[inserted]orgen[/inserted]", colored_diff("uhm", "de morgen"))

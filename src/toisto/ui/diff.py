@@ -2,8 +2,6 @@
 
 from difflib import SequenceMatcher
 
-from .dictionary import linkified
-
 
 def show_whitespace(text: str) -> str:
     """Make whitespace visible so it can be colored."""
@@ -20,11 +18,9 @@ def deleted(old_text: str) -> str:
     return f"[deleted]{show_whitespace(old_text)}[/deleted]"
 
 
-def colored_diff(old_text: str, new_text: str, min_ratio_for_diff: float = 0.6) -> str:
+def colored_diff(old_text: str, new_text: str) -> str:
     """Return a colored string showing the diffs between old and new text."""
     matcher = SequenceMatcher(a=old_text.lower(), b=new_text.lower())
-    if matcher.ratio() < min_ratio_for_diff:
-        return inserted(linkified(new_text))
     result = ""
     for operator, old_start, old_end, new_start, new_end in matcher.get_opcodes():
         old_fragment, new_fragment = (old_text[old_start:old_end], new_text[new_start:new_end])
