@@ -92,7 +92,7 @@ class Feedback:
                 feedback += self.CORRECT + self._other_answers(guess)
             case Evaluation.INCORRECT:
                 self.incorrect_guesses.append(guess)
-                feedback += self.INCORRECT + self._correct_answer(guess) + self._other_answers(self.quiz.answer)
+                feedback += self.INCORRECT + self._correct_answers(guess)
             case _:
                 feedback += self._correct_answers()
         feedback += self._colloquial() + self._meaning() + self._notes()
@@ -110,20 +110,19 @@ class Feedback:
             return try_again % {"language": ALL_LANGUAGES[self.quiz.answer.language]}
         return self.TRY_AGAIN
 
-    def _correct_answer(self, guess: Label) -> str:
+    def _correct_answers(self, guess: Label | None = None) -> str:
         """Return the quiz's correct answer."""
-        answer = quoted(colored_diff(str(guess), str(self.quiz.answer)))
-        return punctuated(f"The correct answer is {answer}") + "\n"
-
-    def _correct_answers(self) -> str:
-        """Return the quiz's correct answers."""
-        label = "The correct answer is" if len(self.quiz.non_generated_answers) == 1 else "The correct answers are"
-        answers = linkified_and_enumerated(*self.quiz.non_generated_answers.as_strings)
+        correct_answers = self.quiz.non_generated_answers
+        if guess and (closest_answer := correct_answers.most_similar_label(guess)):
+            answer = quoted(colored_diff(str(guess), str(closest_answer)))
+            return punctuated(f"The correct answer is {answer}") + "\n" + self._other_answers(closest_answer)
+        label = "The correct answer is" if len(correct_answers) == 1 else "The correct answers are"
+        answers = linkified_and_enumerated(*correct_answers.as_strings)
         return punctuated(f"{label} {answers}") + "\n"
 
-    def _other_answers(self, guess: Label) -> str:
+    def _other_answers(self, answer: Label) -> str:
         """Return the quiz's other answers, if any."""
-        if other_answers := self.quiz.other_answers(guess):
+        if other_answers := self.quiz.other_answers(answer):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
             answers = linkified_and_enumerated(*other_answers.as_strings)
             return wrapped(punctuated(f"{label} {answers}"), style="answer")
