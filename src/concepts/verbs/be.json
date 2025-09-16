@@ -637,32 +637,74 @@
                         "negative": {
                             "present tense": {
                                 "singular": {
-                                    "first person": "ik ben niet",
-                                    "second person": "jij bent niet",
+                                    "first person": [
+                                        "ik ben niet",
+                                        "ik ben geen"
+                                    ],
+                                    "second person": [
+                                        "jij bent niet",
+                                        "jij bent geen"
+                                    ],
                                     "third person": {
-                                        "feminine": "zij is niet",
-                                        "masculine": "hij is niet"
+                                        "feminine": [
+                                            "zij is niet",
+                                            "zij is geen"
+                                        ],
+                                        "masculine": [
+                                            "hij is niet",
+                                            "hij is geen"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "wij zijn niet",
-                                    "second person": "jullie zijn niet",
-                                    "third person": "zij zijn niet"
+                                    "first person": [
+                                        "wij zijn niet",
+                                        "wij zijn geen"
+                                    ],
+                                    "second person": [
+                                        "jullie zijn niet",
+                                        "jullie zijn geen"
+                                    ],
+                                    "third person": [
+                                        "zij zijn niet",
+                                        "zij zijn geen"
+                                    ]
                                 }
                             },
                             "past tense": {
                                 "singular": {
-                                    "first person": "ik was niet",
-                                    "second person": "jij was niet",
+                                    "first person": [
+                                        "ik was niet",
+                                        "ik was geen"
+                                    ],
+                                    "second person": [
+                                        "jij was niet",
+                                        "jij was geen"
+                                    ],
                                     "third person": {
-                                        "feminine": "zij was niet",
-                                        "masculine": "hij was niet"
+                                        "feminine": [
+                                            "zij was niet",
+                                            "zij was geen"
+                                        ],
+                                        "masculine": [
+                                            "hij was niet",
+                                            "hij was geen"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "wij waren niet",
-                                    "second person": "jullie waren niet",
-                                    "third person": "zij waren niet"
+                                    "first person": [
+                                        "wij waren niet",
+                                        "wij waren geen"
+                                    ],
+                                    "second person": [
+                                        "jullie waren niet",
+                                        "jullie waren geen"
+                                    ],
+                                    "third person": [
+                                        "zij waren niet",
+                                        "zij waren geen"
+                                    ]
                                 }
                             },
                             "present perfect tense": {
@@ -763,32 +805,74 @@
                         "negative": {
                             "present tense": {
                                 "singular": {
-                                    "first person": "ben ik niet?",
-                                    "second person": "ben jij niet?",
+                                    "first person": [
+                                        "ben ik niet?",
+                                        "ben ik geen?"
+                                    ],
+                                    "second person": [
+                                        "ben jij niet?",
+                                        "ben jij geen?"
+                                    ],
                                     "third person": {
-                                        "feminine": "is zij niet?",
-                                        "masculine": "is hij niet?"
+                                        "feminine": [
+                                            "is zij niet?",
+                                            "is zij geen?"
+                                        ],
+                                        "masculine": [
+                                            "is hij niet?",
+                                            "is hij geen"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "zijn wij niet?",
-                                    "second person": "zijn jullie niet?",
-                                    "third person": "zijn zij niet?"
+                                    "first person": [
+                                        "zijn wij niet?",
+                                        "zijn wij geen?"
+                                    ],
+                                    "second person": [
+                                        "zijn jullie niet?",
+                                        "zijn jullie geen?"
+                                    ],
+                                    "third person": [
+                                        "zijn zij niet?",
+                                        "zijn zij geen?"
+                                    ]
                                 }
                             },
                             "past tense": {
                                 "singular": {
-                                    "first person": "was ik niet?",
-                                    "second person": "was jij niet?",
+                                    "first person": [
+                                        "was ik niet?",
+                                        "was ik geen?"
+                                    ],
+                                    "second person": [
+                                        "was jij niet?",
+                                        "was jij geen?"
+                                    ],
                                     "third person": {
-                                        "feminine": "was zij niet?",
-                                        "masculine": "was hij niet?"
+                                        "feminine": [
+                                            "was zij niet?",
+                                            "was zij geen?"
+                                        ],
+                                        "masculine": [
+                                            "was hij niet?",
+                                            "was hij geen?"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "waren wij niet?",
-                                    "second person": "waren jullie niet?",
-                                    "third person": "waren zij niet?"
+                                    "first person": [
+                                        "waren wij niet?",
+                                        "waren wij geen?"
+                                    ],
+                                    "second person": [
+                                        "waren jullie niet?",
+                                        "waren jullie geen?"
+                                    ],
+                                    "third person": [
+                                        "waren zij niet?",
+                                        "waren zij geen?"
+                                    ]
                                 }
                             },
                             "present perfect tense": {

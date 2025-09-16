@@ -390,32 +390,74 @@
                         "negative": {
                             "present tense": {
                                 "singular": {
-                                    "first person": "ik heb niet",
-                                    "second person": "jij hebt niet",
+                                    "first person": [
+                                        "ik heb niet",
+                                        "ik heb geen"
+                                    ],
+                                    "second person": [
+                                        "jij hebt niet",
+                                        "jij hebt geen"
+                                    ],
                                     "third person": {
-                                        "feminine": "zij heeft niet",
-                                        "masculine": "hij heeft niet"
+                                        "feminine": [
+                                            "zij heeft niet",
+                                            "zij heeft geen"
+                                        ],
+                                        "masculine": [
+                                            "hij heeft niet",
+                                            "hij heeft geen"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "wij hebben niet",
-                                    "second person": "jullie hebben niet",
-                                    "third person": "zij hebben niet"
+                                    "first person": [
+                                        "wij hebben niet",
+                                        "wij hebben geen"
+                                    ],
+                                    "second person": [
+                                        "jullie hebben niet",
+                                        "jullie hebben geen"
+                                    ],
+                                    "third person": [
+                                        "zij hebben niet",
+                                        "zij hebben geen"
+                                    ]
                                 }
                             },
                             "past tense": {
                                 "singular": {
-                                    "first person": "ik had niet",
-                                    "second person": "jij had niet",
+                                    "first person": [
+                                        "ik had niet",
+                                        "ik had geen"
+                                    ],
+                                    "second person": [
+                                        "jij had niet",
+                                        "jij had geen"
+                                    ],
                                     "third person": {
-                                        "feminine": "zij had niet",
-                                        "masculine": "hij had niet"
+                                        "feminine": [
+                                            "zij had niet",
+                                            "zij had geen"
+                                        ],
+                                        "masculine": [
+                                            "hij had niet",
+                                            "hij had geen"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "wij hadden niet",
-                                    "second person": "jullie hadden niet",
-                                    "third person": "zij hadden niet"
+                                    "first person": [
+                                        "wij hadden niet",
+                                        "wij hadden geen"
+                                    ],
+                                    "second person": [
+                                        "jullie hadden niet",
+                                        "jullie hadden geen"
+                                    ],
+                                    "third person": [
+                                        "zij hadden niet",
+                                        "zij hadden geen"
+                                    ]
                                 }
                             }
                         }
@@ -456,32 +498,74 @@
                         "negative": {
                             "present tense": {
                                 "singular": {
-                                    "first person": "heb ik niet?",
-                                    "second person": "heb jij niet?",
+                                    "first person": [
+                                        "heb ik niet?",
+                                        "heb ik geen?"
+                                    ],
+                                    "second person": [
+                                        "heb jij niet?",
+                                        "heb jij geen?"
+                                    ],
                                     "third person": {
-                                        "feminine": "heeft zij niet?",
-                                        "masculine": "heeft hij niet?"
+                                        "feminine": [
+                                            "heeft zij niet?",
+                                            "heeft zij geen?"
+                                        ],
+                                        "masculine": [
+                                            "heeft hij niet?",
+                                            "heeft hij geen?"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "hebben wij niet?",
-                                    "second person": "hebben jullie niet?",
-                                    "third person": "hebben zij niet?"
+                                    "first person": [
+                                        "hebben wij niet?",
+                                        "hebben wij geen?"
+                                    ],
+                                    "second person": [
+                                        "hebben jullie niet?",
+                                        "hebben jullie geen?"
+                                    ],
+                                    "third person": [
+                                        "hebben zij niet?",
+                                        "hebben zij geen?"
+                                    ]
                                 }
                             },
                             "past tense": {
                                 "singular": {
-                                    "first person": "had ik niet?",
-                                    "second person": "had jij niet?",
+                                    "first person": [
+                                        "had ik niet?",
+                                        "had ik geen?"
+                                    ],
+                                    "second person": [
+                                        "had jij niet?",
+                                        "had jij geen?"
+                                    ],
                                     "third person": {
-                                        "feminine": "had zij niet?",
-                                        "masculine": "had hij niet?"
+                                        "feminine": [
+                                            "had zij niet?",
+                                            "had zij geen?"
+                                        ],
+                                        "masculine": [
+                                            "had hij niet?",
+                                            "had hij geen?"
+                                        ]
                                     }
                                 },
                                 "plural": {
-                                    "first person": "hadden wij niet?",
-                                    "second person": "hadden jullie niet?",
-                                    "third person": "hadden zij niet?"
+                                    "first person": [
+                                        "hadden wij niet?",
+                                        "hadden wij geen?"
+                                    ],
+                                    "second person": [
+                                        "hadden jullie niet?",
+                                        "hadden jullie geen?"
+                                    ],
+                                    "third person": [
+                                        "hadden zij niet?",
+                                        "hadden zij geen?"
+                                    ]
                                 }
                             }
                         }
