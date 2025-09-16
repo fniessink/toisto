@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
+- Add variants with "geen" to negative forms of verbs in Dutch. Fixes [#1134](https://github.com/fniessink/toisto/issues/1134).
 - When the user answers incorrectly and none of the correct answers are similar to the guess, list all correct answers instead of differentiating between one correct answer and other correct answers. Fixes [#1135](https://github.com/fniessink/toisto/issues/1135).
 - Don't show an answer as another correct answer if the user's answer was a generated alternative. Fixes [#1136](https://github.com/fniessink/toisto/issues/1136).
 
