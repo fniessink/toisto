@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+import re
 from collections.abc import Sequence
 from dataclasses import dataclass, field
 from itertools import chain
@@ -56,7 +57,7 @@ class QuizType:
 
         Subclasses may use the answers to generate the notes.
         """
-        notes = list(question.notes)
+        notes = [re.sub("'([^']+)'", lambda match: linkified(str(match[0])), note) for note in question.notes]
         if self._include_grammatical_notes() and question.other_grammatical_categories:
             other_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
             other_label = question.other_grammatical_categories[other_category]

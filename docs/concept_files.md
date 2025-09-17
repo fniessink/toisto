@@ -289,7 +289,7 @@ If the label has multiple grammatical forms and the note should only be shown fo
 }
 ```
 
-Notes can be either a single string or a list of strings.
+Notes can be either a single string or a list of strings. Words in single quotes, like 'keksejä' and 'keksi' above, will get a link to [Wiktionary](https://en.wiktionary.org/).
 
 ### Compound labels
 

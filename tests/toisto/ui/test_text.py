@@ -202,12 +202,12 @@ class FeedbackNotesTest(ToistoTestCase):
     def test_note(self):
         """Test that the post quiz note is formatted correctly."""
         concept = self.create_concept(
-            "hi", labels=[{"label": "hoi", "language": NL, "note": "'Hoi' is an informal greeting"}]
+            "hi", labels=[{"label": "hoi", "language": NL, "note": "'hoi' is an informal greeting"}]
         )
         quiz = create_quizzes(NL_FI, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(
-            "[note]Note: 'Hoi' is an informal greeting.[/note]",
+            f"[note]Note: '{linkified('hoi')}' is an informal greeting.[/note]",
             feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
         )
 
@@ -216,25 +216,26 @@ class FeedbackNotesTest(ToistoTestCase):
         concept = self.create_concept(
             "hi",
             labels=[
-                {"label": "moi", "language": FI, "note": ["Moi is an informal greeting", "'Moi moi' means goodbye"]}
+                {"label": "moi", "language": FI, "note": ["'moi' is an informal greeting", "'moi moi' means goodbye"]}
             ],
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
-            "[note]Notes:\n- Moi is an informal greeting.\n- 'Moi moi' means goodbye.[/note]\n",
+            f"[note]Notes:\n- '{linkified('moi')}' is an informal greeting.\n"
+            f"- '{linkified('moi moi')}' means goodbye.[/note]\n",
             feedback.text(Evaluation.CORRECT, Label(FI, "moi"), Retention()),
         )
 
     def test_note_on_incorrect_answer(self):
         """Test that the note is given when the answer is incorrect."""
         concept = self.create_concept(
-            "hi", labels=[{"label": "moi", "language": FI, "note": "'Moi' is an informal greeting"}]
+            "hi", labels=[{"label": "moi", "language": FI, "note": "'moi' is an informal greeting"}]
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
-            "[note]Note: 'Moi' is an informal greeting.[/note]",
+            f"[note]Note: '{linkified('moi')}' is an informal greeting.[/note]",
             feedback.text(Evaluation.INCORRECT, Label(FI, "toi"), Retention()),
         )
 
@@ -316,12 +317,12 @@ class FeedbackNotesTest(ToistoTestCase):
     def test_note_on_skip_to_answer(self):
         """Test that the note is given when the user skips to the answer."""
         concept = self.create_concept(
-            "hi", labels=[{"label": "moi", "language": FI, "note": "'Moi' is an informal greeting"}]
+            "hi", labels=[{"label": "moi", "language": FI, "note": "'moi' is an informal greeting"}]
         )
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
-            "[note]Note: 'Moi' is an informal greeting.[/note]",
+            f"[note]Note: '{linkified('moi')}' is an informal greeting.[/note]",
             feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()),
         )
 
