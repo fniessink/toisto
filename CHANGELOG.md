@@ -4,11 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.39.0 - [Unreleased]
+## 0.38.2 - [Unreleased]
 
-### Added
+### Fixed
 
-- Link quoted words in notes in concept JSON files to Wiktionary. Closes [#1143](https://github.com/fniessink/toisto/issues/1143).
+- Link quoted words in notes in concept JSON files to Wiktionary. Fixes [#1143](https://github.com/fniessink/toisto/issues/1143).
+- Remove confusing tip for the Finnish label 'hammas' (tooth). Fixes [#1148](https://github.com/fniessink/toisto/issues/1148).
 
 ## 0.38.1 - 2025-09-17
 
