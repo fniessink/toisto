@@ -7,50 +7,54 @@
             {
                 "concept": "to visit",
                 "label": {
-                    "infinitive": "to visit",
-                    "present tense": {
-                        "singular": {
-                            "first person": "I visit",
-                            "second person": "you visit",
-                            "third person": {
-                                "feminine": "she visits",
-                                "masculine": "he visits"
+                    "imperfective": {
+                        "infinitive": "to visit",
+                        "present tense": {
+                            "singular": {
+                                "first person": "I visit",
+                                "second person": "you visit",
+                                "third person": {
+                                    "feminine": "she visits",
+                                    "masculine": "he visits"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we visit",
+                                "second person": "you visit",
+                                "third person": "they visit"
                             }
                         },
-                        "plural": {
-                            "first person": "we visit",
-                            "second person": "you visit",
-                            "third person": "they visit"
+                        "past tense": {
+                            "singular": {
+                                "first person": "I visited",
+                                "second person": "you visited",
+                                "third person": {
+                                    "feminine": "she visited",
+                                    "masculine": "he visited"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we visited",
+                                "second person": "you visited",
+                                "third person": "they visited"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "I visited",
-                            "second person": "you visited",
-                            "third person": {
-                                "feminine": "she visited",
-                                "masculine": "he visited"
+                    "perfective": {
+                        "present ptense": {
+                            "singular": {
+                                "first person": "I have visited",
+                                "second person": "you have visited",
+                                "third person": {
+                                    "feminine": "she has visited",
+                                    "masculine": "he has visited"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we have visited",
+                                "second person": "you have visited",
+                                "third person": "they have visited"
                             }
-                        },
-                        "plural": {
-                            "first person": "we visited",
-                            "second person": "you visited",
-                            "third person": "they visited"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "I have visited",
-                            "second person": "you have visited",
-                            "third person": {
-                                "feminine": "she has visited",
-                                "masculine": "he has visited"
-                            }
-                        },
-                        "plural": {
-                            "first person": "we have visited",
-                            "second person": "you have visited",
-                            "third person": "they have visited"
                         }
                     }
                 }
@@ -60,41 +64,45 @@
             {
                 "concept": "to visit",
                 "label": {
-                    "infinitive": "käydä",
-                    "present tense": {
-                        "singular": {
-                            "first person": "minä käyn",
-                            "second person": "sinä käyt",
-                            "third person": "hän käy"
+                    "imperfective": {
+                        "infinitive": "käydä",
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä käyn",
+                                "second person": "sinä käyt",
+                                "third person": "hän käy"
+                            },
+                            "plural": {
+                                "first person": "me käymme",
+                                "second person": "te käytte",
+                                "third person": "he käyvät"
+                            }
                         },
-                        "plural": {
-                            "first person": "me käymme",
-                            "second person": "te käytte",
-                            "third person": "he käyvät"
+                        "past tense": {
+                            "singular": {
+                                "first person": "minä kävin",
+                                "second person": "sinä kävit",
+                                "third person": "hän kävi"
+                            },
+                            "plural": {
+                                "first person": "me käyvimme",
+                                "second person": "te käyvitte",
+                                "third person": "he käyvivät"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "minä kävin",
-                            "second person": "sinä kävit",
-                            "third person": "hän kävi"
-                        },
-                        "plural": {
-                            "first person": "me käyvimme",
-                            "second person": "te käyvitte",
-                            "third person": "he käyvivät"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "minä olen käynyt",
-                            "second person": "sinä olet käynyt",
-                            "third person": "hän on käynyt"
-                        },
-                        "plural": {
-                            "first person": "me olemme käyneet",
-                            "second person": "te olette käyneet",
-                            "third person": "he ovat käyneet"
+                    "perfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä olen käynyt",
+                                "second person": "sinä olet käynyt",
+                                "third person": "hän on käynyt"
+                            },
+                            "plural": {
+                                "first person": "me olemme käyneet",
+                                "second person": "te olette käyneet",
+                                "third person": "he ovat käyneet"
+                            }
                         }
                     }
                 },
@@ -105,50 +113,54 @@
             {
                 "concept": "to visit",
                 "label": {
-                    "infinitive": "bezoeken",
-                    "present tense": {
-                        "singular": {
-                            "first person": "ik bezoek",
-                            "second person": "jij bezoekt",
-                            "third person": {
-                                "feminine": "zij bezoekt",
-                                "masculine": "hij bezoekt"
+                    "imperfective": {
+                        "infinitive": "bezoeken",
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik bezoek",
+                                "second person": "jij bezoekt",
+                                "third person": {
+                                    "feminine": "zij bezoekt",
+                                    "masculine": "hij bezoekt"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij bezoeken",
+                                "second person": "jullie bezoeken",
+                                "third person": "zij bezoeken"
                             }
                         },
-                        "plural": {
-                            "first person": "wij bezoeken",
-                            "second person": "jullie bezoeken",
-                            "third person": "zij bezoeken"
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik bezocht",
+                                "second person": "jij bezocht",
+                                "third person": {
+                                    "feminine": "zij bezocht",
+                                    "masculine": "hij bezocht"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij bezochten",
+                                "second person": "jullie bezochten",
+                                "third person": "zij bezochten"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "ik bezocht",
-                            "second person": "jij bezocht",
-                            "third person": {
-                                "feminine": "zij bezocht",
-                                "masculine": "hij bezocht"
+                    "perfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik heb bezocht",
+                                "second person": "jij hebt bezocht",
+                                "third person": {
+                                    "feminine": "zij heeft bezocht",
+                                    "masculine": "hij heeft bezocht"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij hebben bezocht",
+                                "second person": "jullie hebben bezocht",
+                                "third person": "zij hebben bezocht"
                             }
-                        },
-                        "plural": {
-                            "first person": "wij bezochten",
-                            "second person": "jullie bezochten",
-                            "third person": "zij bezochten"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "ik heb bezocht",
-                            "second person": "jij hebt bezocht",
-                            "third person": {
-                                "feminine": "zij heeft bezocht",
-                                "masculine": "hij heeft bezocht"
-                            }
-                        },
-                        "plural": {
-                            "first person": "wij hebben bezocht",
-                            "second person": "jullie hebben bezocht",
-                            "third person": "zij hebben bezocht"
                         }
                     }
                 }

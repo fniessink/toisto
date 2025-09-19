@@ -1098,7 +1098,7 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
 
 ### Tenses
 
-When concepts are verbs, the present tense, past tense, present perfect, and past perfect tense can be specified as follows:
+When concepts are verbs, the present tense and the past tense can be specified as follows:
 
 ```json
 {
@@ -1124,17 +1124,38 @@ When concepts are verbs, the present tense, past tense, present perfect, and pas
                             "second person": "..."
                         },
                         "plural": "..."
-                    },
-                    "present perfect tense": {
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+### Grammatical aspect
+
+When concepts are verbs, the perfective and imperfective aspect can be specified as follows:
+
+```json
+{
+    "concepts": {
+        "to be": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to be",
+                "label": {
+                    "imperfective": {
                         "singular": {
-                            "first person": "I have been",
+                            "first person": "I am",
                             "second person": "..."
                         },
                         "plural": "..."
                     },
-                    "past perfect tense": {
+                    "perfective": {
                         "singular": {
-                            "first person": "I had been",
+                            "first person": "I have been",
                             "second person": "..."
                         },
                         "plural": "..."

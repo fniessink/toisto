@@ -5,12 +5,12 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import (
     DICTATE,
     FIRST_PERSON,
+    IMPERFECTIVE,
     INFINITIVE,
     INTERPRET,
-    PAST_PERFECT_TENSE,
     PAST_TENSE,
+    PERFECTIVE,
     PLURAL,
-    PRESENT_PERFECT_TENSE,
     PRESENT_TENSE,
     READ,
     SECOND_PERSON,
@@ -63,7 +63,7 @@ class TenseQuizzesTest(QuizFactoryTestCase):
 
     def test_all_tenses_nested_with_grammatical_person(self):
         """Test that quizzes can be generated for all tenses nested with grammatical person."""
-        concept = self.create_verb_with_tense_and_person(include_perfect_tense=True)
+        concept = self.create_verb_with_tense_and_person(include_aspect=True)
         ik_eet, wij_eten, ik_at, wij_aten, ik_heb_gegeten, wij_hebben_gegeten, ik_had_gegeten, wij_hadden_gegeten = (
             concept.labels(NL)
         )
@@ -111,29 +111,21 @@ class TenseQuizzesTest(QuizFactoryTestCase):
                 self.create_quiz(concept, ik_had_gegeten, [wij_hadden_gegeten], PLURAL),
                 self.create_quiz(concept, wij_hadden_gegeten, [ik_had_gegeten], SINGULAR),
                 self.create_quiz(concept, ik_eet, [ik_at], PAST_TENSE),
-                self.create_quiz(concept, ik_eet, [ik_heb_gegeten], PRESENT_PERFECT_TENSE),
-                self.create_quiz(concept, ik_eet, [ik_had_gegeten], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, ik_eet, [ik_heb_gegeten], PERFECTIVE),
                 self.create_quiz(concept, wij_eten, [wij_aten], PAST_TENSE),
-                self.create_quiz(concept, wij_eten, [wij_hebben_gegeten], PRESENT_PERFECT_TENSE),
-                self.create_quiz(concept, wij_eten, [wij_hadden_gegeten], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, wij_eten, [wij_hebben_gegeten], PERFECTIVE),
                 self.create_quiz(concept, ik_at, [ik_eet], PRESENT_TENSE),
-                self.create_quiz(concept, ik_at, [ik_heb_gegeten], PRESENT_PERFECT_TENSE),
-                self.create_quiz(concept, ik_at, [ik_had_gegeten], PAST_PERFECT_TENSE),
+                self.create_quiz(concept, ik_at, [ik_had_gegeten], PERFECTIVE),
                 self.create_quiz(concept, wij_aten, [wij_eten], PRESENT_TENSE),
-                self.create_quiz(concept, wij_aten, [wij_hebben_gegeten], PRESENT_PERFECT_TENSE),
-                self.create_quiz(concept, wij_aten, [wij_hadden_gegeten], PAST_PERFECT_TENSE),
-                self.create_quiz(concept, ik_heb_gegeten, [ik_eet], PRESENT_TENSE),
-                self.create_quiz(concept, ik_heb_gegeten, [ik_had_gegeten], PAST_PERFECT_TENSE),
-                self.create_quiz(concept, ik_heb_gegeten, [ik_at], PAST_TENSE),
-                self.create_quiz(concept, wij_hebben_gegeten, [wij_eten], PRESENT_TENSE),
-                self.create_quiz(concept, wij_hebben_gegeten, [wij_aten], PAST_TENSE),
-                self.create_quiz(concept, wij_hebben_gegeten, [wij_hadden_gegeten], PAST_PERFECT_TENSE),
-                self.create_quiz(concept, ik_had_gegeten, [ik_eet], PRESENT_TENSE),
-                self.create_quiz(concept, ik_had_gegeten, [ik_at], PAST_TENSE),
-                self.create_quiz(concept, ik_had_gegeten, [ik_heb_gegeten], PRESENT_PERFECT_TENSE),
-                self.create_quiz(concept, wij_hadden_gegeten, [wij_eten], PRESENT_TENSE),
-                self.create_quiz(concept, wij_hadden_gegeten, [wij_aten], PAST_TENSE),
-                self.create_quiz(concept, wij_hadden_gegeten, [wij_hebben_gegeten], PRESENT_PERFECT_TENSE),
+                self.create_quiz(concept, wij_aten, [wij_hadden_gegeten], PERFECTIVE),
+                self.create_quiz(concept, ik_heb_gegeten, [ik_eet], IMPERFECTIVE),
+                self.create_quiz(concept, ik_heb_gegeten, [ik_had_gegeten], PAST_TENSE),
+                self.create_quiz(concept, wij_hebben_gegeten, [wij_eten], IMPERFECTIVE),
+                self.create_quiz(concept, wij_hebben_gegeten, [wij_hadden_gegeten], PAST_TENSE),
+                self.create_quiz(concept, ik_had_gegeten, [ik_at], IMPERFECTIVE),
+                self.create_quiz(concept, ik_had_gegeten, [ik_heb_gegeten], PRESENT_TENSE),
+                self.create_quiz(concept, wij_hadden_gegeten, [wij_aten], IMPERFECTIVE),
+                self.create_quiz(concept, wij_hadden_gegeten, [wij_hebben_gegeten], PRESENT_TENSE),
             },
             create_quizzes(NL_EN, (), concept),
         )

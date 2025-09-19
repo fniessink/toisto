@@ -9,49 +9,53 @@
                 "concept": "to live",
                 "label": {
                     "infinitive": "to live",
-                    "present tense": {
-                        "singular": {
-                            "first person": "I live",
-                            "second person": "you live",
-                            "third person": {
-                                "feminine": "she lives",
-                                "masculine": "he lives"
+                    "imperfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "I live",
+                                "second person": "you live",
+                                "third person": {
+                                    "feminine": "she lives",
+                                    "masculine": "he lives"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we live",
+                                "second person": "you live",
+                                "third person": "they live"
                             }
                         },
-                        "plural": {
-                            "first person": "we live",
-                            "second person": "you live",
-                            "third person": "they live"
+                        "past tense": {
+                            "singular": {
+                                "first person": "I lived",
+                                "second person": "you lived",
+                                "third person": {
+                                    "feminine": "she lived",
+                                    "masculine": "he lived"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we lived",
+                                "second person": "you lived",
+                                "third person": "they lived"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "I lived",
-                            "second person": "you lived",
-                            "third person": {
-                                "feminine": "she lived",
-                                "masculine": "he lived"
+                    "perfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "I have lived",
+                                "second person": "you have lived",
+                                "third person": {
+                                    "feminine": "she has lived",
+                                    "masculine": "he has lived"
+                                }
+                            },
+                            "plural": {
+                                "first person": "we have lived",
+                                "second person": "you have lived",
+                                "third person": "they have lived"
                             }
-                        },
-                        "plural": {
-                            "first person": "we lived",
-                            "second person": "you lived",
-                            "third person": "they lived"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "I have lived",
-                            "second person": "you have lived",
-                            "third person": {
-                                "feminine": "she has lived",
-                                "masculine": "he has lived"
-                            }
-                        },
-                        "plural": {
-                            "first person": "we have lived",
-                            "second person": "you have lived",
-                            "third person": "they have lived"
                         }
                     }
                 }
@@ -66,40 +70,44 @@
                 "concept": "to live",
                 "label": {
                     "infinitive": "asua",
-                    "present tense": {
-                        "singular": {
-                            "first person": "minä asun",
-                            "second person": "sinä asut",
-                            "third person": "hän asuu"
+                    "imperfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä asun",
+                                "second person": "sinä asut",
+                                "third person": "hän asuu"
+                            },
+                            "plural": {
+                                "first person": "me asumme",
+                                "second person": "te asutte",
+                                "third person": "he asuvat"
+                            }
                         },
-                        "plural": {
-                            "first person": "me asumme",
-                            "second person": "te asutte",
-                            "third person": "he asuvat"
+                        "past tense": {
+                            "singular": {
+                                "first person": "minä asuin",
+                                "second person": "sinä asuit",
+                                "third person": "hän asui"
+                            },
+                            "plural": {
+                                "first person": "me asuimme",
+                                "second person": "te asuitte",
+                                "third person": "he asuivat"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "minä asuin",
-                            "second person": "sinä asuit",
-                            "third person": "hän asui"
-                        },
-                        "plural": {
-                            "first person": "me asuimme",
-                            "second person": "te asuitte",
-                            "third person": "he asuivat"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "minä olen asunut",
-                            "second person": "sinä olet asunut",
-                            "third person": "hän on asunut"
-                        },
-                        "plural": {
-                            "first person": "me olemme asuneet",
-                            "second person": "te olette asuneet",
-                            "third person": "he ovat asuneet"
+                    "perfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "minä olen asunut",
+                                "second person": "sinä olet asunut",
+                                "third person": "hän on asunut"
+                            },
+                            "plural": {
+                                "first person": "me olemme asuneet",
+                                "second person": "te olette asuneet",
+                                "third person": "he ovat asuneet"
+                            }
                         }
                     }
                 }
@@ -114,49 +122,53 @@
                 "concept": "to live",
                 "label": {
                     "infinitive": "wonen",
-                    "present tense": {
-                        "singular": {
-                            "first person": "ik woon",
-                            "second person": "jij woont",
-                            "third person": {
-                                "feminine": "zij woont",
-                                "masculine": "hij woont"
+                    "imperfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik woon",
+                                "second person": "jij woont",
+                                "third person": {
+                                    "feminine": "zij woont",
+                                    "masculine": "hij woont"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij wonen",
+                                "second person": "jullie wonen",
+                                "third person": "zij wonen"
                             }
                         },
-                        "plural": {
-                            "first person": "wij wonen",
-                            "second person": "jullie wonen",
-                            "third person": "zij wonen"
+                        "past tense": {
+                            "singular": {
+                                "first person": "ik woonde",
+                                "second person": "jij woonde",
+                                "third person": {
+                                    "feminine": "zij woonde",
+                                    "masculine": "hij woonde"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij woonden",
+                                "second person": "jullie woonden",
+                                "third person": "zij woonden"
+                            }
                         }
                     },
-                    "past tense": {
-                        "singular": {
-                            "first person": "ik woonde",
-                            "second person": "jij woonde",
-                            "third person": {
-                                "feminine": "zij woonde",
-                                "masculine": "hij woonde"
+                    "perfective": {
+                        "present tense": {
+                            "singular": {
+                                "first person": "ik heb gewoond",
+                                "second person": "jij hebt gewoond",
+                                "third person": {
+                                    "feminine": "zij heeft gewoond",
+                                    "masculine": "hij heeft gewoond"
+                                }
+                            },
+                            "plural": {
+                                "first person": "wij hebben gewoond",
+                                "second person": "jullie hebben gewoond",
+                                "third person": "zij hebben gewoond"
                             }
-                        },
-                        "plural": {
-                            "first person": "wij woonden",
-                            "second person": "jullie woonden",
-                            "third person": "zij woonden"
-                        }
-                    },
-                    "present perfect tense": {
-                        "singular": {
-                            "first person": "ik heb gewoond",
-                            "second person": "jij hebt gewoond",
-                            "third person": {
-                                "feminine": "zij heeft gewoond",
-                                "masculine": "hij heeft gewoond"
-                            }
-                        },
-                        "plural": {
-                            "first person": "wij hebben gewoond",
-                            "second person": "jullie hebben gewoond",
-                            "third person": "zij hebben gewoond"
                         }
                     }
                 }

@@ -14,271 +14,287 @@
                 "label": {
                     "declarative": {
                         "affirmative": {
-                            "infinitive": "to be",
-                            "present tense": {
-                                "singular": {
-                                    "first person": "I am",
-                                    "second person": "you are",
-                                    "third person": {
-                                        "feminine": "she is",
-                                        "masculine": "he is"
+                            "imperfective": {
+                                "infinitive": "to be",
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "I am",
+                                        "second person": "you are",
+                                        "third person": {
+                                            "feminine": "she is",
+                                            "masculine": "he is"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we are",
+                                        "second person": "you are",
+                                        "third person": "they are"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "we are",
-                                    "second person": "you are",
-                                    "third person": "they are"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "I was",
+                                        "second person": "you were",
+                                        "third person": {
+                                            "feminine": "she was",
+                                            "masculine": "he was"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we were",
+                                        "second person": "you were",
+                                        "third person": "they were"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "I was",
-                                    "second person": "you were",
-                                    "third person": {
-                                        "feminine": "she was",
-                                        "masculine": "he was"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "I have been",
+                                        "second person": "you have been",
+                                        "third person": {
+                                            "feminine": "she has been",
+                                            "masculine": "he has been"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we have been",
+                                        "second person": "you have been",
+                                        "third person": "they have been"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "we were",
-                                    "second person": "you were",
-                                    "third person": "they were"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "I have been",
-                                    "second person": "you have been",
-                                    "third person": {
-                                        "feminine": "she has been",
-                                        "masculine": "he has been"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "I had been",
+                                        "second person": "you had been",
+                                        "third person": {
+                                            "feminine": "she had been",
+                                            "masculine": "he had been"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we had been",
+                                        "second person": "you had been",
+                                        "third person": "they had been"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "we have been",
-                                    "second person": "you have been",
-                                    "third person": "they have been"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "I had been",
-                                    "second person": "you had been",
-                                    "third person": {
-                                        "feminine": "she had been",
-                                        "masculine": "he had been"
-                                    }
-                                },
-                                "plural": {
-                                    "first person": "we had been",
-                                    "second person": "you had been",
-                                    "third person": "they had been"
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "I am not",
-                                    "second person": "you are not",
-                                    "third person": {
-                                        "feminine": "she is not",
-                                        "masculine": "he is not"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "I am not",
+                                        "second person": "you are not",
+                                        "third person": {
+                                            "feminine": "she is not",
+                                            "masculine": "he is not"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we are not",
+                                        "second person": "you are not",
+                                        "third person": "they are not"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "we are not",
-                                    "second person": "you are not",
-                                    "third person": "they are not"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "I was not",
+                                        "second person": "you were not",
+                                        "third person": {
+                                            "feminine": "she was not",
+                                            "masculine": "he was not"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we were not",
+                                        "second person": "you were not",
+                                        "third person": "they were not"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "I was not",
-                                    "second person": "you were not",
-                                    "third person": {
-                                        "feminine": "she was not",
-                                        "masculine": "he was not"
+                            "perfective": {
+                                "perfect tense": {
+                                    "singular": {
+                                        "first person": "I have not been",
+                                        "second person": "you have not been",
+                                        "third person": {
+                                            "feminine": "she has not been",
+                                            "masculine": "he has not been"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we have not been",
+                                        "second person": "you have not been",
+                                        "third person": "they have not been"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "we were not",
-                                    "second person": "you were not",
-                                    "third person": "they were not"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "I have not been",
-                                    "second person": "you have not been",
-                                    "third person": {
-                                        "feminine": "she has not been",
-                                        "masculine": "he has not been"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "I had not been",
+                                        "second person": "you had not been",
+                                        "third person": {
+                                            "feminine": "she had not been",
+                                            "masculine": "he had not been"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "we had not been",
+                                        "second person": "you had not been",
+                                        "third person": "they had not been"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "we have not been",
-                                    "second person": "you have not been",
-                                    "third person": "they have not been"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "I had not been",
-                                    "second person": "you had not been",
-                                    "third person": {
-                                        "feminine": "she had not been",
-                                        "masculine": "he had not been"
-                                    }
-                                },
-                                "plural": {
-                                    "first person": "we had not been",
-                                    "second person": "you had not been",
-                                    "third person": "they had not been"
                                 }
                             }
                         }
                     },
                     "interrogative": {
                         "affirmative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "am I?",
-                                    "second person": "are you?",
-                                    "third person": {
-                                        "feminine": "is she?",
-                                        "masculine": "is he?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "am I?",
+                                        "second person": "are you?",
+                                        "third person": {
+                                            "feminine": "is she?",
+                                            "masculine": "is he?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "are we?",
+                                        "second person": "are you?",
+                                        "third person": "are they?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "are we?",
-                                    "second person": "are you?",
-                                    "third person": "are they?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "was I?",
+                                        "second person": "were you?",
+                                        "third person": {
+                                            "feminine": "was she?",
+                                            "masculine": "was he?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "were we?",
+                                        "second person": "were you?",
+                                        "third person": "were they?"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "was I?",
-                                    "second person": "were you?",
-                                    "third person": {
-                                        "feminine": "was she?",
-                                        "masculine": "was he?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "have I been?",
+                                        "second person": "have you been?",
+                                        "third person": {
+                                            "feminine": "has she been?",
+                                            "masculine": "has he been?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "have we been?",
+                                        "second person": "have you been?",
+                                        "third person": "have they been?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "were we?",
-                                    "second person": "were you?",
-                                    "third person": "were they?"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "have I been?",
-                                    "second person": "have you been?",
-                                    "third person": {
-                                        "feminine": "has she been?",
-                                        "masculine": "has he been?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "had I been?",
+                                        "second person": "had you been?",
+                                        "third person": {
+                                            "feminine": "had she been?",
+                                            "masculine": "had he been?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "had we been?",
+                                        "second person": "had you been?",
+                                        "third person": "had they been?"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "have we been?",
-                                    "second person": "have you been?",
-                                    "third person": "have they been?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "had I been?",
-                                    "second person": "had you been?",
-                                    "third person": {
-                                        "feminine": "had she been?",
-                                        "masculine": "had he been?"
-                                    }
-                                },
-                                "plural": {
-                                    "first person": "had we been?",
-                                    "second person": "had you been?",
-                                    "third person": "had they been?"
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "am I not?",
-                                    "second person": "are you not?",
-                                    "third person": {
-                                        "feminine": "is she not?",
-                                        "masculine": "is he not?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "am I not?",
+                                        "second person": "are you not?",
+                                        "third person": {
+                                            "feminine": "is she not?",
+                                            "masculine": "is he not?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "are we not?",
+                                        "second person": "are you not?",
+                                        "third person": "are they not?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "are we not?",
-                                    "second person": "are you not?",
-                                    "third person": "are they not?"
-                                }
-                            },
-                            "past tense": {
-                                "singular": {
-                                    "first person": [
-                                        "was I not?",
-                                        "wasn't I"
-                                    ],
-                                    "second person": [
-                                        "were you not?",
-                                        "weren't you?"
-                                    ],
-                                    "third person": {
-                                        "feminine": [
-                                            "was she not?",
-                                            "wasn't she?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": [
+                                            "was I not?",
+                                            "wasn't I"
                                         ],
-                                        "masculine": "was he not?"
+                                        "second person": [
+                                            "were you not?",
+                                            "weren't you?"
+                                        ],
+                                        "third person": {
+                                            "feminine": [
+                                                "was she not?",
+                                                "wasn't she?"
+                                            ],
+                                            "masculine": "was he not?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": [
+                                            "were we not?",
+                                            "weren't we?"
+                                        ],
+                                        "second person": [
+                                            "were you not?",
+                                            "weren't you?"
+                                        ],
+                                        "third person": [
+                                            "were they not?",
+                                            "weren't they?"
+                                        ]
                                     }
-                                },
-                                "plural": {
-                                    "first person": [
-                                        "were we not?",
-                                        "weren't we?"
-                                    ],
-                                    "second person": [
-                                        "were you not?",
-                                        "weren't you?"
-                                    ],
-                                    "third person": [
-                                        "were they not?",
-                                        "weren't they?"
-                                    ]
                                 }
                             },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "have I not been?",
-                                    "second person": "have you not been?",
-                                    "third person": {
-                                        "feminine": "has she not been?",
-                                        "masculine": "has he not been?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "have I not been?",
+                                        "second person": "have you not been?",
+                                        "third person": {
+                                            "feminine": "has she not been?",
+                                            "masculine": "has he not been?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "have we not been?",
+                                        "second person": "have you not been?",
+                                        "third person": "have they not been?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "have we not been?",
-                                    "second person": "have you not been?",
-                                    "third person": "have they not been?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "had I not been?",
-                                    "second person": "had you not been?",
-                                    "third person": {
-                                        "feminine": "had she not been?",
-                                        "masculine": "had he not been?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "had I not been?",
+                                        "second person": "had you not been?",
+                                        "third person": {
+                                            "feminine": "had she not been?",
+                                            "masculine": "had he not been?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "had we not been?",
+                                        "second person": "had you not been?",
+                                        "third person": "had they not been?"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "had we not been?",
-                                    "second person": "had you not been?",
-                                    "third person": "had they not been?"
                                 }
                             }
                         }
@@ -327,205 +343,221 @@
                 "label": {
                     "declarative": {
                         "affirmative": {
-                            "infinitive": "olla",
-                            "present tense": {
-                                "singular": {
-                                    "first person": "minä olen",
-                                    "second person": "sinä olet",
-                                    "third person": "hän on"
+                            "imperfective": {
+                                "infinitive": "olla",
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "minä olen",
+                                        "second person": "sinä olet",
+                                        "third person": "hän on"
+                                    },
+                                    "plural": {
+                                        "first person": "me olemme",
+                                        "second person": "te olette",
+                                        "third person": "he ovat"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "me olemme",
-                                    "second person": "te olette",
-                                    "third person": "he ovat"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "minä olin",
+                                        "second person": "sinä olit",
+                                        "third person": "hän oli"
+                                    },
+                                    "plural": {
+                                        "first person": "me olimme",
+                                        "second person": "te olitte",
+                                        "third person": "he olivat"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "minä olin",
-                                    "second person": "sinä olit",
-                                    "third person": "hän oli"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "minä olen ollut",
+                                        "second person": "sinä olet ollut",
+                                        "third person": "hän on ollut"
+                                    },
+                                    "plural": {
+                                        "first person": "me olemme olleet",
+                                        "second person": "te olette olleet",
+                                        "third person": "he ovat olleet"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "me olimme",
-                                    "second person": "te olitte",
-                                    "third person": "he olivat"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "minä olen ollut",
-                                    "second person": "sinä olet ollut",
-                                    "third person": "hän on ollut"
-                                },
-                                "plural": {
-                                    "first person": "me olemme olleet",
-                                    "second person": "te olette olleet",
-                                    "third person": "he ovat olleet"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "minä olin ollut",
-                                    "second person": "sinä olit ollut",
-                                    "third person": "hän oli ollut"
-                                },
-                                "plural": {
-                                    "first person": "me olimme olleet",
-                                    "second person": "te olitte olleet",
-                                    "third person": "he olivat olleet"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "minä olin ollut",
+                                        "second person": "sinä olit ollut",
+                                        "third person": "hän oli ollut"
+                                    },
+                                    "plural": {
+                                        "first person": "me olimme olleet",
+                                        "second person": "te olitte olleet",
+                                        "third person": "he olivat olleet"
+                                    }
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "minä en ole",
-                                    "second person": "sinä et ole",
-                                    "third person": "hän ei ole"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "minä en ole",
+                                        "second person": "sinä et ole",
+                                        "third person": "hän ei ole"
+                                    },
+                                    "plural": {
+                                        "first person": "me emme ole",
+                                        "second person": "te ette ole",
+                                        "third person": "he eivät ole"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "me emme ole",
-                                    "second person": "te ette ole",
-                                    "third person": "he eivät ole"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "minä en ollut",
+                                        "second person": "sinä et ollut",
+                                        "third person": "hän ei ollut"
+                                    },
+                                    "plural": {
+                                        "first person": "me emme olleet",
+                                        "second person": "te ette olleet",
+                                        "third person": "he eivät olleet"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "minä en ollut",
-                                    "second person": "sinä et ollut",
-                                    "third person": "hän ei ollut"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "minä en ole ollut",
+                                        "second person": "sinä et ole ollut",
+                                        "third person": "hän ei ole ollut"
+                                    },
+                                    "plural": {
+                                        "first person": "me emme ole olleet",
+                                        "second person": "te ette ole olleet",
+                                        "third person": "he eivät ole olleet"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "me emme olleet",
-                                    "second person": "te ette olleet",
-                                    "third person": "he eivät olleet"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "minä en ole ollut",
-                                    "second person": "sinä et ole ollut",
-                                    "third person": "hän ei ole ollut"
-                                },
-                                "plural": {
-                                    "first person": "me emme ole olleet",
-                                    "second person": "te ette ole olleet",
-                                    "third person": "he eivät ole olleet"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "minä en ollut ollut",
-                                    "second person": "sinä et ollut ollut",
-                                    "third person": "hän ei ollut ollut"
-                                },
-                                "plural": {
-                                    "first person": "me emme olleet olleet",
-                                    "second person": "te ette olleet olleet",
-                                    "third person": "he eivät olleet olleet"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "minä en ollut ollut",
+                                        "second person": "sinä et ollut ollut",
+                                        "third person": "hän ei ollut ollut"
+                                    },
+                                    "plural": {
+                                        "first person": "me emme olleet olleet",
+                                        "second person": "te ette olleet olleet",
+                                        "third person": "he eivät olleet olleet"
+                                    }
                                 }
                             }
                         }
                     },
                     "interrogative": {
                         "affirmative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "olenko minä?",
-                                    "second person": "oletko sinä?",
-                                    "third person": "onko hän?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "olenko minä?",
+                                        "second person": "oletko sinä?",
+                                        "third person": "onko hän?"
+                                    },
+                                    "plural": {
+                                        "first person": "olemmeko me?",
+                                        "second person": "oletteko te?",
+                                        "third person": "ovatko he?"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "olemmeko me?",
-                                    "second person": "oletteko te?",
-                                    "third person": "ovatko he?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "olinko minä?",
+                                        "second person": "olitko sinä?",
+                                        "third person": "oliko hän?"
+                                    },
+                                    "plural": {
+                                        "first person": "olimmeko me?",
+                                        "second person": "olitteko te?",
+                                        "third person": "olivatko he?"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "olinko minä?",
-                                    "second person": "olitko sinä?",
-                                    "third person": "oliko hän?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "olenko minä ollut?",
+                                        "second person": "oletko sinä ollut?",
+                                        "third person": "onko hän ollut?"
+                                    },
+                                    "plural": {
+                                        "first person": "olemmeko me olleet?",
+                                        "second person": "oletteko te olleet?",
+                                        "third person": "ovatko he olleet?"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "olimmeko me?",
-                                    "second person": "olitteko te?",
-                                    "third person": "olivatko he?"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "olenko minä ollut?",
-                                    "second person": "oletko sinä ollut?",
-                                    "third person": "onko hän ollut?"
-                                },
-                                "plural": {
-                                    "first person": "olemmeko me olleet?",
-                                    "second person": "oletteko te olleet?",
-                                    "third person": "ovatko he olleet?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "olinko minä ollut?",
-                                    "second person": "olitko sinä ollut?",
-                                    "third person": "oliko hän ollut?"
-                                },
-                                "plural": {
-                                    "first person": "olimmeko me olleet?",
-                                    "second person": "olitteko te olleet?",
-                                    "third person": "olivatko he olleet?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "olinko minä ollut?",
+                                        "second person": "olitko sinä ollut?",
+                                        "third person": "oliko hän ollut?"
+                                    },
+                                    "plural": {
+                                        "first person": "olimmeko me olleet?",
+                                        "second person": "olitteko te olleet?",
+                                        "third person": "olivatko he olleet?"
+                                    }
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "enkö minä ole?",
-                                    "second person": "etkö sinä ole?",
-                                    "third person": "eikö hän ole?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "enkö minä ole?",
+                                        "second person": "etkö sinä ole?",
+                                        "third person": "eikö hän ole?"
+                                    },
+                                    "plural": {
+                                        "first person": "emmekö me ole?",
+                                        "second person": "ettekö te ole?",
+                                        "third person": "eivätkö he ole?"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "emmekö me ole?",
-                                    "second person": "ettekö te ole?",
-                                    "third person": "eivätkö he ole?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "enkö minä ole?",
+                                        "second person": "etkö sinä ollut?",
+                                        "third person": "eikö hän ollut?"
+                                    },
+                                    "plural": {
+                                        "first person": "emmekö me olleet?",
+                                        "second person": "ettekö te olleet?",
+                                        "third person": "eivätkö he olleet?"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "enkö minä ole?",
-                                    "second person": "etkö sinä ollut?",
-                                    "third person": "eikö hän ollut?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "enkö minä ole ollut?",
+                                        "second person": "etkö sinä ole ollut?",
+                                        "third person": "eikö hän ole ollut?"
+                                    },
+                                    "plural": {
+                                        "first person": "emmekö me ole olleet?",
+                                        "second person": "ettekö te ole olleet?",
+                                        "third person": "eivätkö he ole olleet?"
+                                    }
                                 },
-                                "plural": {
-                                    "first person": "emmekö me olleet?",
-                                    "second person": "ettekö te olleet?",
-                                    "third person": "eivätkö he olleet?"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "enkö minä ole ollut?",
-                                    "second person": "etkö sinä ole ollut?",
-                                    "third person": "eikö hän ole ollut?"
-                                },
-                                "plural": {
-                                    "first person": "emmekö me ole olleet?",
-                                    "second person": "ettekö te ole olleet?",
-                                    "third person": "eivätkö he ole olleet?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "enkö minä ollut ollut?",
-                                    "second person": "etkö sinä ollut ollut?",
-                                    "third person": "eikö hän ollut ollut?"
-                                },
-                                "plural": {
-                                    "first person": "emmekö me olleet olleet?",
-                                    "second person": "ettekö te olleet olleet?",
-                                    "third person": "eivätkö he olleet olleet?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "enkö minä ollut ollut?",
+                                        "second person": "etkö sinä ollut ollut?",
+                                        "third person": "eikö hän ollut ollut?"
+                                    },
+                                    "plural": {
+                                        "first person": "emmekö me olleet olleet?",
+                                        "second person": "ettekö te olleet olleet?",
+                                        "third person": "eivätkö he olleet olleet?"
+                                    }
                                 }
                             }
                         }
@@ -572,337 +604,353 @@
                 "label": {
                     "declarative": {
                         "affirmative": {
-                            "infinitive": "zijn",
-                            "present tense": {
-                                "singular": {
-                                    "first person": "ik ben",
-                                    "second person": "jij bent",
-                                    "third person": {
-                                        "feminine": "zij is",
-                                        "masculine": "hij is"
+                            "imperfective": {
+                                "present tense": {
+                                    "infinitive": "zijn",
+                                    "singular": {
+                                        "first person": "ik ben",
+                                        "second person": "jij bent",
+                                        "third person": {
+                                            "feminine": "zij is",
+                                            "masculine": "hij is"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij zijn",
+                                        "second person": "jullie zijn",
+                                        "third person": "zij zijn"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "wij zijn",
-                                    "second person": "jullie zijn",
-                                    "third person": "zij zijn"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "ik was",
+                                        "second person": "jij was",
+                                        "third person": {
+                                            "feminine": "zij was",
+                                            "masculine": "hij was"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij waren",
+                                        "second person": "jullie waren",
+                                        "third person": "zij waren"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "ik was",
-                                    "second person": "jij was",
-                                    "third person": {
-                                        "feminine": "zij was",
-                                        "masculine": "hij was"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "ik ben geweest",
+                                        "second person": "jij bent geweest",
+                                        "third person": {
+                                            "feminine": "zij is geweest",
+                                            "masculine": "hij is geweest"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij zijn geweest",
+                                        "second person": "jullie zijn geweest",
+                                        "third person": "zij zijn geweest"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "wij waren",
-                                    "second person": "jullie waren",
-                                    "third person": "zij waren"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "ik ben geweest",
-                                    "second person": "jij bent geweest",
-                                    "third person": {
-                                        "feminine": "zij is geweest",
-                                        "masculine": "hij is geweest"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "ik was geweest",
+                                        "second person": "jij was geweest",
+                                        "third person": {
+                                            "feminine": "zij was geweest",
+                                            "masculine": "hij was geweest"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij waren geweest",
+                                        "second person": "jullie waren geweest",
+                                        "third person": "zij waren geweest"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "wij zijn geweest",
-                                    "second person": "jullie zijn geweest",
-                                    "third person": "zij zijn geweest"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "ik was geweest",
-                                    "second person": "jij was geweest",
-                                    "third person": {
-                                        "feminine": "zij was geweest",
-                                        "masculine": "hij was geweest"
-                                    }
-                                },
-                                "plural": {
-                                    "first person": "wij waren geweest",
-                                    "second person": "jullie waren geweest",
-                                    "third person": "zij waren geweest"
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": [
-                                        "ik ben niet",
-                                        "ik ben geen"
-                                    ],
-                                    "second person": [
-                                        "jij bent niet",
-                                        "jij bent geen"
-                                    ],
-                                    "third person": {
-                                        "feminine": [
-                                            "zij is niet",
-                                            "zij is geen"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": [
+                                            "ik ben niet",
+                                            "ik ben geen"
                                         ],
-                                        "masculine": [
-                                            "hij is niet",
-                                            "hij is geen"
+                                        "second person": [
+                                            "jij bent niet",
+                                            "jij bent geen"
+                                        ],
+                                        "third person": {
+                                            "feminine": [
+                                                "zij is niet",
+                                                "zij is geen"
+                                            ],
+                                            "masculine": [
+                                                "hij is niet",
+                                                "hij is geen"
+                                            ]
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": [
+                                            "wij zijn niet",
+                                            "wij zijn geen"
+                                        ],
+                                        "second person": [
+                                            "jullie zijn niet",
+                                            "jullie zijn geen"
+                                        ],
+                                        "third person": [
+                                            "zij zijn niet",
+                                            "zij zijn geen"
                                         ]
                                     }
                                 },
-                                "plural": {
-                                    "first person": [
-                                        "wij zijn niet",
-                                        "wij zijn geen"
-                                    ],
-                                    "second person": [
-                                        "jullie zijn niet",
-                                        "jullie zijn geen"
-                                    ],
-                                    "third person": [
-                                        "zij zijn niet",
-                                        "zij zijn geen"
-                                    ]
-                                }
-                            },
-                            "past tense": {
-                                "singular": {
-                                    "first person": [
-                                        "ik was niet",
-                                        "ik was geen"
-                                    ],
-                                    "second person": [
-                                        "jij was niet",
-                                        "jij was geen"
-                                    ],
-                                    "third person": {
-                                        "feminine": [
-                                            "zij was niet",
-                                            "zij was geen"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": [
+                                            "ik was niet",
+                                            "ik was geen"
                                         ],
-                                        "masculine": [
-                                            "hij was niet",
-                                            "hij was geen"
+                                        "second person": [
+                                            "jij was niet",
+                                            "jij was geen"
+                                        ],
+                                        "third person": {
+                                            "feminine": [
+                                                "zij was niet",
+                                                "zij was geen"
+                                            ],
+                                            "masculine": [
+                                                "hij was niet",
+                                                "hij was geen"
+                                            ]
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": [
+                                            "wij waren niet",
+                                            "wij waren geen"
+                                        ],
+                                        "second person": [
+                                            "jullie waren niet",
+                                            "jullie waren geen"
+                                        ],
+                                        "third person": [
+                                            "zij waren niet",
+                                            "zij waren geen"
                                         ]
                                     }
-                                },
-                                "plural": {
-                                    "first person": [
-                                        "wij waren niet",
-                                        "wij waren geen"
-                                    ],
-                                    "second person": [
-                                        "jullie waren niet",
-                                        "jullie waren geen"
-                                    ],
-                                    "third person": [
-                                        "zij waren niet",
-                                        "zij waren geen"
-                                    ]
                                 }
                             },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "ik ben niet geweest",
-                                    "second person": "jij bent niet geweest",
-                                    "third person": {
-                                        "feminine": "zij is niet geweest",
-                                        "masculine": "hij is niet geweest"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "ik ben niet geweest",
+                                        "second person": "jij bent niet geweest",
+                                        "third person": {
+                                            "feminine": "zij is niet geweest",
+                                            "masculine": "hij is niet geweest"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij zijn niet geweest",
+                                        "second person": "jullie zijn niet geweest",
+                                        "third person": "zij zijn niet geweest"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "wij zijn niet geweest",
-                                    "second person": "jullie zijn niet geweest",
-                                    "third person": "zij zijn niet geweest"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "ik was niet geweest",
-                                    "second person": "jij was niet geweest",
-                                    "third person": {
-                                        "feminine": "zij was niet geweest",
-                                        "masculine": "hij was niet geweest"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "ik was niet geweest",
+                                        "second person": "jij was niet geweest",
+                                        "third person": {
+                                            "feminine": "zij was niet geweest",
+                                            "masculine": "hij was niet geweest"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "wij waren niet geweest",
+                                        "second person": "jullie waren niet geweest",
+                                        "third person": "zij waren niet geweest"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "wij waren niet geweest",
-                                    "second person": "jullie waren niet geweest",
-                                    "third person": "zij waren niet geweest"
                                 }
                             }
                         }
                     },
                     "interrogative": {
                         "affirmative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": "ben ik?",
-                                    "second person": "ben jij?",
-                                    "third person": {
-                                        "feminine": "is zij?",
-                                        "masculine": "is hij?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "ben ik?",
+                                        "second person": "ben jij?",
+                                        "third person": {
+                                            "feminine": "is zij?",
+                                            "masculine": "is hij?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "zijn wij?",
+                                        "second person": "zijn jullie?",
+                                        "third person": "zijn zij?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "zijn wij?",
-                                    "second person": "zijn jullie?",
-                                    "third person": "zijn zij?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "was ik?",
+                                        "second person": "was jij?",
+                                        "third person": {
+                                            "feminine": "was zij?",
+                                            "masculine": "was hij?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "waren wij?",
+                                        "second person": "waren jullie?",
+                                        "third person": "waren zij?"
+                                    }
                                 }
                             },
-                            "past tense": {
-                                "singular": {
-                                    "first person": "was ik?",
-                                    "second person": "was jij?",
-                                    "third person": {
-                                        "feminine": "was zij?",
-                                        "masculine": "was hij?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "ben ik geweest?",
+                                        "second person": "ben jij geweest?",
+                                        "third person": {
+                                            "feminine": "is zij geweest?",
+                                            "masculine": "is hij geweest?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "zijn wij geweest?",
+                                        "second person": "zijn jullie geweest?",
+                                        "third person": "zijn zij geweest?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "waren wij?",
-                                    "second person": "waren jullie?",
-                                    "third person": "waren zij?"
-                                }
-                            },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "ben ik geweest?",
-                                    "second person": "ben jij geweest?",
-                                    "third person": {
-                                        "feminine": "is zij geweest?",
-                                        "masculine": "is hij geweest?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "was ik geweest?",
+                                        "second person": "was jij geweest?",
+                                        "third person": {
+                                            "feminine": "was zij geweest?",
+                                            "masculine": "was hij geweest?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "waren wij geweest?",
+                                        "second person": "waren jullie geweest?",
+                                        "third person": "waren zij geweest?"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "zijn wij geweest?",
-                                    "second person": "zijn jullie geweest?",
-                                    "third person": "zijn zij geweest?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "was ik geweest?",
-                                    "second person": "was jij geweest?",
-                                    "third person": {
-                                        "feminine": "was zij geweest?",
-                                        "masculine": "was hij geweest?"
-                                    }
-                                },
-                                "plural": {
-                                    "first person": "waren wij geweest?",
-                                    "second person": "waren jullie geweest?",
-                                    "third person": "waren zij geweest?"
                                 }
                             }
                         },
                         "negative": {
-                            "present tense": {
-                                "singular": {
-                                    "first person": [
-                                        "ben ik niet?",
-                                        "ben ik geen?"
-                                    ],
-                                    "second person": [
-                                        "ben jij niet?",
-                                        "ben jij geen?"
-                                    ],
-                                    "third person": {
-                                        "feminine": [
-                                            "is zij niet?",
-                                            "is zij geen?"
+                            "imperfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": [
+                                            "ben ik niet?",
+                                            "ben ik geen?"
                                         ],
-                                        "masculine": [
-                                            "is hij niet?",
-                                            "is hij geen"
+                                        "second person": [
+                                            "ben jij niet?",
+                                            "ben jij geen?"
+                                        ],
+                                        "third person": {
+                                            "feminine": [
+                                                "is zij niet?",
+                                                "is zij geen?"
+                                            ],
+                                            "masculine": [
+                                                "is hij niet?",
+                                                "is hij geen"
+                                            ]
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": [
+                                            "zijn wij niet?",
+                                            "zijn wij geen?"
+                                        ],
+                                        "second person": [
+                                            "zijn jullie niet?",
+                                            "zijn jullie geen?"
+                                        ],
+                                        "third person": [
+                                            "zijn zij niet?",
+                                            "zijn zij geen?"
                                         ]
                                     }
                                 },
-                                "plural": {
-                                    "first person": [
-                                        "zijn wij niet?",
-                                        "zijn wij geen?"
-                                    ],
-                                    "second person": [
-                                        "zijn jullie niet?",
-                                        "zijn jullie geen?"
-                                    ],
-                                    "third person": [
-                                        "zijn zij niet?",
-                                        "zijn zij geen?"
-                                    ]
-                                }
-                            },
-                            "past tense": {
-                                "singular": {
-                                    "first person": [
-                                        "was ik niet?",
-                                        "was ik geen?"
-                                    ],
-                                    "second person": [
-                                        "was jij niet?",
-                                        "was jij geen?"
-                                    ],
-                                    "third person": {
-                                        "feminine": [
-                                            "was zij niet?",
-                                            "was zij geen?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": [
+                                            "was ik niet?",
+                                            "was ik geen?"
                                         ],
-                                        "masculine": [
-                                            "was hij niet?",
-                                            "was hij geen?"
+                                        "second person": [
+                                            "was jij niet?",
+                                            "was jij geen?"
+                                        ],
+                                        "third person": {
+                                            "feminine": [
+                                                "was zij niet?",
+                                                "was zij geen?"
+                                            ],
+                                            "masculine": [
+                                                "was hij niet?",
+                                                "was hij geen?"
+                                            ]
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": [
+                                            "waren wij niet?",
+                                            "waren wij geen?"
+                                        ],
+                                        "second person": [
+                                            "waren jullie niet?",
+                                            "waren jullie geen?"
+                                        ],
+                                        "third person": [
+                                            "waren zij niet?",
+                                            "waren zij geen?"
                                         ]
                                     }
-                                },
-                                "plural": {
-                                    "first person": [
-                                        "waren wij niet?",
-                                        "waren wij geen?"
-                                    ],
-                                    "second person": [
-                                        "waren jullie niet?",
-                                        "waren jullie geen?"
-                                    ],
-                                    "third person": [
-                                        "waren zij niet?",
-                                        "waren zij geen?"
-                                    ]
                                 }
                             },
-                            "present perfect tense": {
-                                "singular": {
-                                    "first person": "ben ik niet geweest?",
-                                    "second person": "ben jij niet geweest?",
-                                    "third person": {
-                                        "feminine": "is zij niet geweest?",
-                                        "masculine": "is hij niet geweest?"
+                            "perfective": {
+                                "present tense": {
+                                    "singular": {
+                                        "first person": "ben ik niet geweest?",
+                                        "second person": "ben jij niet geweest?",
+                                        "third person": {
+                                            "feminine": "is zij niet geweest?",
+                                            "masculine": "is hij niet geweest?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "zijn wij niet geweest?",
+                                        "second person": "zijn jullie niet geweest?",
+                                        "third person": "zijn zij niet geweest?"
                                     }
                                 },
-                                "plural": {
-                                    "first person": "zijn wij niet geweest?",
-                                    "second person": "zijn jullie niet geweest?",
-                                    "third person": "zijn zij niet geweest?"
-                                }
-                            },
-                            "past perfect tense": {
-                                "singular": {
-                                    "first person": "was ik niet geweest?",
-                                    "second person": "was jij niet geweest?",
-                                    "third person": {
-                                        "feminine": "was zij niet geweest?",
-                                        "masculine": "was hij niet geweest?"
+                                "past tense": {
+                                    "singular": {
+                                        "first person": "was ik niet geweest?",
+                                        "second person": "was jij niet geweest?",
+                                        "third person": {
+                                            "feminine": "was zij niet geweest?",
+                                            "masculine": "was hij niet geweest?"
+                                        }
+                                    },
+                                    "plural": {
+                                        "first person": "waren wij niet geweest?",
+                                        "second person": "waren jullie niet geweest?",
+                                        "third person": "waren zij niet geweest?"
                                     }
-                                },
-                                "plural": {
-                                    "first person": "waren wij niet geweest?",
-                                    "second person": "waren jullie niet geweest?",
-                                    "third person": "waren zij niet geweest?"
                                 }
                             }
                         }

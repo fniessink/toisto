@@ -23,16 +23,17 @@ Grammatical quizzes:
 9. Change the gender of a concept.
 9. Provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
 10. Change the tense of a concept between infinitive, present tense, and past tense.
-11. Change the grammatical mood of a concept between declarative, interrogative, and imperative mood.
-12. Change the polarity from affirmative to negative and vice versa.
-13. Change cardinal numbers into ordinal numbers and vice versa.
+11. Change the aspect of a concept from perfective to imperfective and vice versa.
+12. Change the grammatical mood of a concept between declarative, interrogative, and imperative mood.
+13. Change the polarity from affirmative to negative and vice versa.
+14. Change cardinal numbers into ordinal numbers and vice versa.
 
 Semantic quizzes:
 
-14. Give the antonym.
-15. Answer a question.
-16. Abbreviate a concept or give the full-form of the abbreviation.
-17. Put the words of a shuffled sentence in the right order.
+15. Give the antonym.
+16. Answer a question.
+17. Abbreviate a concept or give the full-form of the abbreviation.
+18. Put the words of a shuffled sentence in the right order.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
 
