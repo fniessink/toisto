@@ -6,7 +6,7 @@ from toisto.model.language import EN, FI, NL
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.concept_factory import ConceptJSON
 
-from .....base import LabelDict, ToistoTestCase
+from .....base import LabelDict, LabelDictLabel, ToistoTestCase
 
 OLLA_PRESENT_TENSE = {
     "singular": {"first person": "minä olen", "second person": "sinä olet", "third person": "hän on"},
@@ -38,21 +38,37 @@ class QuizFactoryTestCase(ToistoTestCase):
             ],
         )
 
-    def create_verb_with_tense_and_person(self, *, include_perfect_tense: bool = False) -> Concept:
+    def create_verb_with_tense_and_person(self, *, include_aspect: bool = False) -> Concept:
         """Create a verb with grammatical person nested within tense."""
-        label_en = {
+        label_en: LabelDictLabel = {
             "present tense": {"singular": "I eat", "plural": "we eat"},
             "past tense": {"singular": "I ate", "plural": "we ate"},
         }
-        label_nl = {
+        label_nl: LabelDictLabel = {
             "present tense": {"singular": "ik eet", "plural": "wij eten"},
             "past tense": {"singular": "ik at", "plural": "wij aten"},
         }
-        if include_perfect_tense:
-            label_en["present perfect tense"] = {"singular": "I have eaten", "plural": "we have eaten"}
-            label_nl["present perfect tense"] = {"singular": "ik heb gegeten", "plural": "wij hebben gegeten"}
-            label_en["past perfect tense"] = {"singular": "I had eaten", "plural": "we had eaten"}
-            label_nl["past perfect tense"] = {"singular": "ik had gegeten", "plural": "wij hadden gegeten"}
+        if include_aspect:
+            label_en = cast(
+                "LabelDictLabel",
+                {
+                    "imperfective": label_en,
+                    "perfective": {
+                        "present tense": {"singular": "I have eaten", "plural": "we have eaten"},
+                        "past tense": {"singular": "I had eaten", "plural": "we had eaten"},
+                    },
+                },
+            )
+            label_nl = cast(
+                "LabelDictLabel",
+                {
+                    "imperfective": label_nl,
+                    "perfective": {
+                        "present tense": {"singular": "ik heb gegeten", "plural": "wij hebben gegeten"},
+                        "past tense": {"singular": "ik had gegeten", "plural": "wij hadden gegeten"},
+                    },
+                },
+            )
         return self.create_concept(
             "to eat", labels=[{"label": label_en, "language": EN}, {"label": label_nl, "language": NL}]
         )

@@ -36,20 +36,22 @@ NL_FI: Final[LanguagePair] = LanguagePair(NL, FI)
 
 ConceptIdListOrString = str | list[str]
 
+LabelDictLabel = (
+    str
+    | list[str]
+    | dict[str, str]
+    | dict[str, list[str]]
+    | dict[str, Collection[str]]
+    | dict[str, dict[str, str]]
+    | dict[str, dict[str, dict[str, str]]]
+)
+
 LabelDict = TypedDict(
     "LabelDict",
     {
         "colloquial": bool,
         "concept": ConceptIdListOrString,
-        "label": Required[
-            str
-            | list[str]
-            | dict[str, str]
-            | dict[str, list[str]]
-            | dict[str, Collection[str]]
-            | dict[str, dict[str, str]]
-            | dict[str, dict[str, dict[str, str]]]
-        ],
+        "label": Required[LabelDictLabel],
         "language": Required[Language],
         "meaning-only": bool,
         "note": str | list[str],
