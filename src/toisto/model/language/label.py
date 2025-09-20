@@ -254,6 +254,10 @@ class Labels:  # noqa: PLW1641
         """Return the addition of the labels."""
         return Labels(self._labels + other._labels)
 
+    def __getattr__(self, attribute: str) -> Label:
+        """Return the label with the given string value. Used in unit tests."""
+        return first([label for label in self._labels if str(label).lower().replace(" ", "_") == attribute])
+
     def __getitem__(self, index: int) -> Label:
         """Return the Label at the specified position."""
         return self._labels[index]

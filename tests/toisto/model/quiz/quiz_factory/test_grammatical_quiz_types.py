@@ -102,58 +102,43 @@ class GrammaticalQuizTypesTest(QuizFactoryTestCase):
     def test_verb_with_person_and_number(self):
         """Test the grammatical quiz types for a verb with grammatical person and number."""
         verb = self.create_verb_with_grammatical_number_and_person()
-        (
-            first_singular,
-            second_singular,
-            third_singular,
-            first_plural,
-            second_plural,
-            third_plural,
-        ) = verb.labels(NL)
+        nl = verb.labels(NL)
         for singular, plural in (
-            (first_singular, first_plural),
-            (second_singular, second_plural),
-            (third_singular, third_plural),
+            (nl.ik_heb, nl.wij_hebben),
+            (nl.jij_hebt, nl.jullie_hebben),
+            (nl.zij_heeft, nl.zij_hebben),
         ):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
             self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
-        for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
+        for first_person, second_person in ((nl.ik_heb, nl.jij_hebt), (nl.wij_hebben, nl.jullie_hebben)):
             self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, second_person))
             self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, first_person))
-        for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
+        for first_person, third_person in ((nl.ik_heb, nl.zij_heeft), (nl.wij_hebben, nl.zij_hebben)):
             self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, third_person))
             self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, first_person))
-        for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
+        for second_person, third_person in ((nl.jij_hebt, nl.zij_heeft), (nl.jullie_hebben, nl.zij_hebben)):
             self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, third_person))
             self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, second_person))
 
     def test_verb_with_infinitive_and_person_and_number(self):
         """Test the grammatical quiz types for a verb with infinitive, grammatical person and number."""
         verb = self.create_verb_with_infinitive_and_number_and_person()
-        (
-            infinitive,
-            first_singular,
-            second_singular,
-            third_singular,
-            first_plural,
-            second_plural,
-            third_plural,
-        ) = verb.labels(NL)
+        nl = verb.labels(NL)
         for singular, plural in (
-            (first_singular, first_plural),
-            (second_singular, second_plural),
-            (third_singular, third_plural),
+            (nl.ik_ben, nl.wij_zijn),
+            (nl.jij_bent, nl.jullie_zijn),
+            (nl.zij_is, nl.zij_zijn),
         ):
             self.assertEqual(PLURAL, GrammaticalQuizFactory.grammatical_quiz_type(singular, plural))
             self.assertEqual(SINGULAR, GrammaticalQuizFactory.grammatical_quiz_type(plural, singular))
-            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(infinitive, singular))
-            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(infinitive, plural))
-        for first_person, second_person in ((first_singular, second_singular), (first_plural, second_plural)):
+            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(nl.zijn, singular))
+            self.assertIsNone(GrammaticalQuizFactory.grammatical_quiz_type(nl.zijn, plural))
+        for first_person, second_person in ((nl.ik_ben, nl.jij_bent), (nl.wij_zijn, nl.jullie_zijn)):
             self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, second_person))
             self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, first_person))
-        for first_person, third_person in ((first_singular, third_singular), (first_plural, third_plural)):
+        for first_person, third_person in ((nl.ik_ben, nl.zij_is), (nl.wij_zijn, nl.zij_zijn)):
             self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(first_person, third_person))
             self.assertEqual(FIRST_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, first_person))
-        for second_person, third_person in ((second_singular, third_singular), (second_plural, third_plural)):
+        for second_person, third_person in ((nl.jij_bent, nl.zij_is), (nl.jullie_zijn, nl.zij_zijn)):
             self.assertEqual(THIRD_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(second_person, third_person))
             self.assertEqual(SECOND_PERSON, GrammaticalQuizFactory.grammatical_quiz_type(third_person, second_person))
