@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Dictation quizzes for labels with a capital would get an unnecessary tip when presented more than once in one practice session. Fixes [#1150](https://github.com/fniessink/toisto/issues/1150).
+
 ### Changed
 
 - Explicitly distinguish between grammatical aspect (perfective and imperfective) and grammatical tense (present tense and past tense). Closes [#1147](https://github.com/fniessink/toisto/issues/1147).

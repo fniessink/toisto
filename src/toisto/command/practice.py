@@ -8,7 +8,6 @@ from dataclasses import dataclass
 import dramatic
 
 from toisto.model.language import LanguagePair
-from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
@@ -37,18 +36,18 @@ class QuizMaster:
             self.write_output(linkified(str(quiz.question)))
         for attempt in range(1, 3):
             guess = self.do_quiz_attempt(quiz, attempt)
-            evaluation = quiz.evaluate(guess, self.language_pair, attempt)
+            evaluation = quiz.evaluate(guess, self.language_pair.source, attempt)
             retention = self.progress.mark_evaluation(quiz, evaluation)
             self.write_output(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
             if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
                 break
 
-    def do_quiz_attempt(self, quiz: Quiz, attempt: int) -> Label:
+    def do_quiz_attempt(self, quiz: Quiz, attempt: int) -> str:
         """Present the question and get the answer from the user."""
         repeat_speech = False
         while True:
             self.speech.say(quiz.question.language, quiz.question.pronounceable, slow=repeat_speech or attempt > 1)
-            if answer := Label(quiz.answer.language, input("> ").strip()):
+            if answer := input("> ").strip():
                 break
             repeat_speech = True
             print("\033[F", end="")  # noqa: T201  # Move cursor one line up

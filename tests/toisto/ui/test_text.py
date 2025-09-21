@@ -4,7 +4,6 @@ from datetime import datetime, timedelta
 
 from toisto.model.language import FI, NL
 from toisto.model.language.concept import ConceptId
-from toisto.model.language.label import Label
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, FEMININE, INTERPRET, READ, WRITE
@@ -13,7 +12,11 @@ from toisto.ui.dictionary import linkified
 from toisto.ui.format import enumerated
 from toisto.ui.text import Feedback, instruction
 
-from ...base import FI_NL, NL_FI, ToistoTestCase
+from ...base import FI_NL, NL_FI, LabelDict, ToistoTestCase
+
+HEI: LabelDict = {"label": "hei", "language": FI}
+HOI: LabelDict = {"label": "hoi", "language": NL}
+TERVE: LabelDict = {"label": "terve", "language": FI}
 
 
 class InstructionTest(ToistoTestCase):
@@ -21,14 +24,7 @@ class InstructionTest(ToistoTestCase):
 
     def test_instruction(self):
         """Test that the quiz instruction is correctly formatted."""
-        concept = self.create_concept(
-            "hi",
-            labels=[
-                {"label": "hoi", "language": NL},
-                {"label": "terve", "language": FI},
-                {"label": "hei", "language": FI},
-            ],
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE, HEI])
         quiz = create_quizzes(FI_NL, (WRITE,), concept).pop()
         self.assertEqual("[quiz]Translate into Finnish:[/quiz]", instruction(quiz))
 
@@ -43,7 +39,7 @@ class InstructionTest(ToistoTestCase):
         self.assertEqual(expected_text, instruction(quiz))
 
 
-GUESS = Label(FI_NL.target, "terve")
+GUESS = "terve"
 
 
 class FeedbackTest(ToistoTestCase):
@@ -51,9 +47,7 @@ class FeedbackTest(ToistoTestCase):
 
     def test_correct_first_time(self):
         """Test that the correct feedback is given when the user guesses correctly."""
-        concept = self.create_concept(
-            "hi", labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(Feedback.CORRECT, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
@@ -77,24 +71,13 @@ class FeedbackTest(ToistoTestCase):
         for quiz in create_quizzes(FI_NL, (DICTATE,), concept):
             feedback = Feedback(quiz, FI_NL)
             if quiz.question.colloquial:
-                self.assertIn(
-                    expected_feedback_correct, feedback.text(Evaluation.CORRECT, Label(FI, "kiitos"), Retention())
-                )
-                self.assertIn(
-                    expected_feedback_incorrect, feedback.text(Evaluation.INCORRECT, Label(FI, "hei"), Retention())
-                )
-                self.assertIn(expected_feedback_on_skip, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
+                self.assertIn(expected_feedback_correct, feedback.text(Evaluation.CORRECT, "kiitos", Retention()))
+                self.assertIn(expected_feedback_incorrect, feedback.text(Evaluation.INCORRECT, "hei", Retention()))
+                self.assertIn(expected_feedback_on_skip, feedback.text(Evaluation.SKIPPED, "?", Retention()))
 
     def test_show_alternative_answer(self):
         """Test that alternative answers are shown."""
-        concept = self.create_concept(
-            "hi",
-            labels=[
-                {"label": "hoi", "language": NL},
-                {"label": "terve", "language": FI},
-                {"label": "hei", "language": FI},
-            ],
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE, HEI])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         expected_other_answer = linkified(str(quiz.other_answers(GUESS)[0]))
         expected_text = f"{Feedback.CORRECT}[answer]Another correct answer is '{expected_other_answer}'.[/answer]\n"
@@ -103,50 +86,33 @@ class FeedbackTest(ToistoTestCase):
 
     def test_show_alternative_answers(self):
         """Test that alternative answers are shown."""
-        concept = self.create_concept(
-            "hi",
-            labels=[
-                {"label": "hoi", "language": NL},
-                {"label": "terve", "language": FI},
-                {"label": "hei", "language": FI},
-                {"label": "hei hei", "language": FI},
-            ],
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE, HEI, {"label": "hei hei", "language": FI}])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
-        other_answers = enumerated(*[f"'{linkified(str(answer))}'" for answer in quiz.other_answers(GUESS)])
+        other_answers = enumerated(*[f"'{linkified(str(answer))}'" for answer in quiz.other_answers("terve")])
         expected_text = f"{Feedback.CORRECT}[answer]Other correct answers are {other_answers}.[/answer]\n"
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(expected_text, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
     def test_show_feedback_on_incorrect_guess(self):
         """Test that the correct feedback is given when the user guesses incorrectly."""
-        concept = self.create_concept(
-            "hi", labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE])
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         expected_text = (
             f"{Feedback.INCORRECT}The correct answer is '{linkified('terve')}'.\n"
             f"[meaning]Meaning '{linkified('hoi')}'.[/meaning]\n"
         )
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(FI, "incorrect"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, "incorrect", Retention()))
 
     def test_show_alternative_answers_on_incorrect_guess(self):
         """Test that alternative answers are also given when the user guesses incorrectly."""
-        concept = self.create_concept(
-            "hi",
-            labels=[
-                {"label": "hoi", "language": NL},
-                {"label": "terve", "language": FI},
-                {"label": "hei", "language": FI},
-            ],
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE, HEI])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         expected_text = (
             f"{Feedback.INCORRECT}The correct answers are '{linkified('terve')}' and '{linkified('hei')}'.\n"
         )
         feedback = Feedback(quiz, NL_FI)
-        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(FI, "incorrect"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, "incorrect", Retention()))
 
     def test_do_not_show_generated_alternative_answers_on_incorrect_guess(self):
         """Test that generated alternative answers are not shown when the user guesses incorrectly."""
@@ -156,7 +122,7 @@ class FeedbackTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (READ,), concept).pop()
         expected_text = f"{Feedback.INCORRECT}The correct answer is '{linkified('het huis')}'.\n"
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, Label(NL, "incorrect"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.INCORRECT, "incorrect", Retention()))
 
     def test_do_not_show_generated_alternative_answers_on_question_mark(self):
         """Test that generated alternative answers are not shown when the user enters a question mark."""
@@ -166,34 +132,25 @@ class FeedbackTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (READ,), concept).pop()
         expected_text = f"The correct answer is '{linkified('het huis')}'.\n"
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, "?", Retention()))
 
     def test_show_feedback_on_question_mark(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
-        concept = self.create_concept(
-            "hi", labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE])
         quiz = create_quizzes(FI_NL, (DICTATE,), concept).pop()
         expected_text = (
             f"The correct answer is '{linkified('terve')}'.\n[meaning]Meaning '{linkified('hoi')}'.[/meaning]\n"
         )
         feedback = Feedback(quiz, FI_NL)
-        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, "?", Retention()))
 
     def test_show_feedback_on_question_mark_with_multiple_answers(self):
         """Test that the correct feedback is given when the user doesn't know the answer."""
-        concept = self.create_concept(
-            "hi",
-            labels=[
-                {"label": "hoi", "language": NL},
-                {"label": "terve", "language": FI},
-                {"label": "hei", "language": FI},
-            ],
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE, HEI])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         expected_text = f"The correct answers are '{linkified('terve')}' and '{linkified('hei')}'.\n"
         feedback = Feedback(quiz, NL_FI)
-        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()))
+        self.assertIn(expected_text, feedback.text(Evaluation.SKIPPED, "?", Retention()))
 
 
 class FeedbackNotesTest(ToistoTestCase):
@@ -208,7 +165,7 @@ class FeedbackNotesTest(ToistoTestCase):
         feedback = Feedback(quiz, NL_FI)
         self.assertIn(
             f"[note]Note: '{linkified('hoi')}' is an informal greeting.[/note]",
-            feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
+            feedback.text(Evaluation.CORRECT, "hoi", Retention()),
         )
 
     def test_multiple_notes(self):
@@ -224,7 +181,7 @@ class FeedbackNotesTest(ToistoTestCase):
         self.assertIn(
             f"[note]Notes:\n- '{linkified('moi')}' is an informal greeting.\n"
             f"- '{linkified('moi moi')}' means goodbye.[/note]\n",
-            feedback.text(Evaluation.CORRECT, Label(FI, "moi"), Retention()),
+            feedback.text(Evaluation.CORRECT, "moi", Retention()),
         )
 
     def test_note_on_incorrect_answer(self):
@@ -236,43 +193,31 @@ class FeedbackNotesTest(ToistoTestCase):
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
             f"[note]Note: '{linkified('moi')}' is an informal greeting.[/note]",
-            feedback.text(Evaluation.INCORRECT, Label(FI, "toi"), Retention()),
+            feedback.text(Evaluation.INCORRECT, "toi", Retention()),
         )
 
     def test_note_on_incorrect_answer_that_has_different_meaning(self):
         """Test that the note is given when the answer is incorrect."""
-        self.create_concept(
-            "hello",
-            labels=[{"label": "terve", "language": FI}, {"label": "hallo", "language": NL}],
-        )
-        hi = self.create_concept(
-            "hi",
-            labels=[{"label": "moi", "language": FI}, {"label": "hoi", "language": NL}],
-        )
+        self.create_concept("hello", labels=[TERVE, {"label": "hallo", "language": NL}])
+        hi = self.create_concept("hi", labels=[{"label": "moi", "language": FI}, HOI])
         quiz = create_quizzes(FI_NL, (INTERPRET,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        feedback.incorrect_guesses = [Label(NL, "hallo")]
+        feedback.incorrect_guesses = ["hallo"]
         self.assertIn(
             f"[note]Note: Your incorrect answer '{linkified('hallo')}' is '{linkified('terve')}' in Finnish.[/note]",
-            feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
+            feedback.text(Evaluation.CORRECT, "hoi", Retention()),
         )
 
     def test_note_on_incorrect_answer_that_has_different_meaning_that_is_repeated(self):
         """Test that the note is not repeated if the same incorrect answer is given twice."""
-        self.create_concept(
-            "hello",
-            labels=[{"label": "terve", "language": FI}, {"label": "hallo", "language": NL}],
-        )
-        hi = self.create_concept(
-            "hi",
-            labels=[{"label": "moi", "language": FI}, {"label": "hoi", "language": NL}],
-        )
+        self.create_concept("hello", labels=[TERVE, {"label": "hallo", "language": NL}])
+        hi = self.create_concept("hi", labels=[{"label": "moi", "language": FI}, HOI])
         quiz = create_quizzes(FI_NL, (INTERPRET,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
-        feedback.incorrect_guesses = [Label(NL, "hallo")]
+        feedback.incorrect_guesses = ["hallo"]
         self.assertIn(
             f"[note]Note: Your incorrect answer '{linkified('hallo')}' is '{linkified('terve')}' in Finnish.[/note]",
-            feedback.text(Evaluation.INCORRECT, Label(NL, "hallo"), Retention()),
+            feedback.text(Evaluation.INCORRECT, "hallo", Retention()),
         )
 
     def test_note_on_incorrect_answer_that_has_different_meaning_and_is_spelling_variant(self):
@@ -287,10 +232,10 @@ class FeedbackNotesTest(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (INTERPRET,), home).pop()
         feedback = Feedback(quiz, FI_NL)
-        feedback.incorrect_guesses = [Label(NL, "huis")]
+        feedback.incorrect_guesses = ["huis"]
         self.assertIn(
             f"[note]Note: Your incorrect answer '{linkified('huis')}' is '{linkified('talo')}' in Finnish.[/note]",
-            feedback.text(Evaluation.CORRECT, Label(NL, "thuis"), Retention()),
+            feedback.text(Evaluation.CORRECT, "thuis", Retention()),
         )
 
     def test_note_on_incorrect_answer_that_has_different_meaning_and_has_different_grammatical_forms(self):
@@ -308,10 +253,10 @@ class FeedbackNotesTest(ToistoTestCase):
         )
         quiz = create_quizzes(FI_NL, (INTERPRET,), home).pop()
         feedback = Feedback(quiz, FI_NL)
-        feedback.incorrect_guesses = [Label(NL, "huizen")]
+        feedback.incorrect_guesses = ["huizen"]
         self.assertIn(
             f"[note]Note: Your incorrect answer '{linkified('huizen')}' is '{linkified('talot')}' in Finnish.[/note]",
-            feedback.text(Evaluation.CORRECT, Label(NL, "thuis"), Retention()),
+            feedback.text(Evaluation.CORRECT, "thuis", Retention()),
         )
 
     def test_note_on_skip_to_answer(self):
@@ -323,7 +268,7 @@ class FeedbackNotesTest(ToistoTestCase):
         feedback = Feedback(quiz, FI_NL)
         self.assertIn(
             f"[note]Note: '{linkified('moi')}' is an informal greeting.[/note]",
-            feedback.text(Evaluation.SKIPPED, Label(FI, "?"), Retention()),
+            feedback.text(Evaluation.SKIPPED, "?", Retention()),
         )
 
 
@@ -332,9 +277,7 @@ class FeedbackRetentionTest(ToistoTestCase):
 
     def create_feedback(self) -> Feedback:
         """Create a feedback fixture."""
-        concept = self.create_concept(
-            "hi", labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}]
-        )
+        concept = self.create_concept("hi", labels=[HOI, TERVE])
         quiz = create_quizzes(NL_FI, (READ,), concept).pop()
         return Feedback(quiz, NL_FI)
 
@@ -393,7 +336,7 @@ class FeedbackMeaningTest(ToistoTestCase):
             feedback = Feedback(quiz, FI_NL)
             self.assertIn(
                 f"[meaning]Meaning '{linkified(str(quiz.question))}'.[/meaning]\n",
-                feedback.text(Evaluation.CORRECT, Label(NL, "ingenieur"), Retention()),
+                feedback.text(Evaluation.CORRECT, "ingenieur", Retention()),
             )
 
 
@@ -402,11 +345,7 @@ class FeedbackExampleTest(ToistoTestCase):
 
     def test_example_with_spelling_alternatives(self):
         """Test that the post quiz example is formatted correctly when the example has spelling alternatives."""
-        hi = self.create_concept(
-            "hi",
-            {"example": ConceptId("hi alice")},
-            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
-        )
+        hi = self.create_concept("hi", {"example": ConceptId("hi alice")}, labels=[HOI, TERVE])
         self.create_concept(
             "hi alice",
             labels=[{"label": ["Moi Alice!", "Hei Alice!"], "language": FI}, {"label": "Hoi Alice!", "language": NL}],
@@ -416,16 +355,12 @@ class FeedbackExampleTest(ToistoTestCase):
         self.assertIn(
             Feedback.CORRECT
             + (f"[example]Example: '{linkified('Moi Alice!')}' meaning '{linkified('Hoi Alice!')}'[/example]\n"),
-            feedback.text(Evaluation.CORRECT, Label(NL, "hoi"), Retention()),
+            feedback.text(Evaluation.CORRECT, "hoi", Retention()),
         )
 
     def test_example_with_write_quiz(self):
         """Test that the post quiz example is in the right language when the quiz type is write."""
-        hi = self.create_concept(
-            "hi",
-            {"example": ConceptId("hi alice")},
-            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
-        )
+        hi = self.create_concept("hi", {"example": ConceptId("hi alice")}, labels=[HOI, TERVE])
         self.create_concept(
             "hi alice", labels=[{"label": "Terve Alice!", "language": FI}, {"label": "Hoi Alice!", "language": NL}]
         )
@@ -439,11 +374,7 @@ class FeedbackExampleTest(ToistoTestCase):
 
     def test_example_with_multiple_meanings(self):
         """Test that the post quiz example is not repeated if an example has multiple meanings."""
-        hi = self.create_concept(
-            "hi",
-            {"example": ConceptId("hi alice")},
-            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
-        )
+        hi = self.create_concept("hi", {"example": ConceptId("hi alice")}, labels=[HOI, TERVE])
         self.create_concept(
             "hi alice",
             labels=[
@@ -463,11 +394,7 @@ class FeedbackExampleTest(ToistoTestCase):
 
     def test_example_with_colloquial_labels(self):
         """Test examples with colloquial labels."""
-        hi = self.create_concept(
-            "hi",
-            {"example": ConceptId("hi alice")},
-            labels=[{"label": "hoi", "language": NL}, {"label": "terve", "language": FI}],
-        )
+        hi = self.create_concept("hi", {"example": ConceptId("hi alice")}, labels=[HOI, TERVE])
         self.create_concept(
             "hi alice",
             labels=[
@@ -512,4 +439,4 @@ class FeedbackExampleTest(ToistoTestCase):
 [example]Example: '{linkified("Se on lähellä.")}' meaning '{linkified("Het is dichtbij.")}' and \
 '{linkified("Het is in de buurt.")}'[/example]
 """
-        self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, Label(NL, "in de buurt"), Retention()))
+        self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, "in de buurt", Retention()))
