@@ -41,7 +41,7 @@ from toisto.model.quiz.quiz_type import (
 )
 from toisto.persistence.spelling_alternatives import load_spelling_alternatives
 
-from ....base import EN_NL, FI_EN, FI_NL, NL_FI, LabelDict, ToistoTestCase
+from ....base import EN_NL, FI_NL, LabelDict, ToistoTestCase
 
 
 class QuizTestCase(ToistoTestCase):
@@ -57,13 +57,6 @@ class QuizTestCase(ToistoTestCase):
 class QuizTest(QuizTestCase):
     """Unit tests for the quiz class."""
 
-    def setUp(self):
-        """Set up fixtures."""
-        super().setUp()
-        self.engels = Label(NL, "Engels")
-        self.een = Label(NL, "Een")
-        self.huis = Label(NL, "het huis")
-
     def test_defaults(self):
         """Test default values of optional attributes."""
         self.assertEqual(READ, self.quiz.quiz_type)
@@ -77,57 +70,56 @@ class QuizTest(QuizTestCase):
 
     def test_is_correct(self):
         """Test a correct guess."""
-        self.assertTrue(self.quiz.is_correct(self.engels, FI_NL))
+        self.assertTrue(self.quiz.is_correct("Engels", NL))
 
     def test_is_not_correct(self):
         """Test an incorrect guess."""
-        self.assertFalse(self.quiz.is_correct(Label(NL, "engles"), FI_NL))
+        self.assertFalse(self.quiz.is_correct("engles", NL))
 
     def test_upper_case_answer_is_correct(self):
         """Test that an upper case answer for a lower case question is correct."""
         quiz = self.create_quiz(self.create_concept("house", {}), Label(FI, "talo"), [Label(NL, "het huis")])
-        self.assertTrue(quiz.is_correct(Label(NL, "Het huis"), FI_NL))
+        self.assertTrue(quiz.is_correct("het huis", NL))
 
     def test_lower_case_answer_is_correct(self):
         """Test that a lower case answer to an upper case question is correct, if source language == answer language."""
-        self.assertTrue(self.quiz.is_correct(Label(NL, "engels"), FI_NL))
+        self.assertTrue(self.quiz.is_correct("engels", NL))
 
     def test_case_matches_for_read_and_interpret_quizzes(self):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
         suomi = Label(FI, "suomi")
-        suomi_finland = Label(FI, "Suomi")
         het_fins = Label(NL, "het Fins")
         for quiz_type in (READ, INTERPRET):
             quiz = self.create_quiz(concept, suomi, [het_fins], quiz_type)
-            self.assertTrue(quiz.is_correct(Label(NL, "Fins"), FI_NL), quiz)
-            self.assertTrue(quiz.is_correct(Label(NL, "fins"), FI_NL), quiz)
+            self.assertTrue(quiz.is_correct("Fins", NL), quiz)
+            self.assertTrue(quiz.is_correct("fins", NL), quiz)
 
             quiz = self.create_quiz(concept, het_fins, [suomi], quiz_type)
-            self.assertTrue(quiz.is_correct(suomi_finland, NL_FI))
-            self.assertTrue(quiz.is_correct(suomi, NL_FI))
+            self.assertTrue(quiz.is_correct("Suomi", FI))
+            self.assertTrue(quiz.is_correct("suomi", FI))
 
     def test_case_matches_for_listen_quizzes(self):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
         concept = self.create_concept("finnish", {})
         suomi = Label(FI, "suomi")
         quiz = self.create_quiz(concept, suomi, [suomi])
-        self.assertFalse(quiz.is_correct(Label(FI, "Suomi"), FI_NL))
-        self.assertTrue(quiz.is_correct(suomi, FI_NL))
-        self.assertTrue(quiz.is_correct(Label(FI, "suomi"), FI_NL))
+        self.assertFalse(quiz.is_correct("Suomi", NL))
+        self.assertTrue(quiz.is_correct("suomi", NL))
+        self.assertTrue(quiz.is_correct("suomi", NL))
         het_fins = Label(NL, "het Fins")
         quiz = self.create_quiz(concept, het_fins, [het_fins], WRITE)
-        self.assertFalse(quiz.is_correct(Label(NL, "fins"), NL_FI))
-        self.assertTrue(quiz.is_correct(Label(NL, "Fins"), NL_FI))
+        self.assertFalse(quiz.is_correct("fins", FI))
+        self.assertTrue(quiz.is_correct("Fins", FI))
 
     def test_get_answer(self):
         """Test that the answer is returned."""
-        self.assertEqual(self.engels, self.quiz.answer)
+        self.assertEqual(Label(NL, "Engels"), self.quiz.answer)
 
     def test_get_first_answer(self):
         """Test that the first answer is returned when there are multiple."""
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi"), [Label(NL, "Een"), Label(NL, "Eén")])
-        self.assertEqual(self.een, quiz.answer)
+        self.assertEqual(Label(NL, "Een"), quiz.answer)
 
     def test_other_answers(self):
         """Test that the other answers can be retrieved."""
@@ -136,7 +128,7 @@ class QuizTest(QuizTestCase):
             Label(FI, "Yksi"),
             [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
         )
-        self.assertEqual(("Eén",), quiz.other_answers(self.een).as_strings)
+        self.assertEqual(("Eén",), quiz.other_answers("Een").as_strings)
 
     def test_no_other_answers_when_quiz_type_is_listen(self):
         """Test that the other answers are not returned if the quiz type is dictate."""
@@ -146,19 +138,19 @@ class QuizTest(QuizTestCase):
             [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
             DICTATE,
         )
-        self.assertEqual((), quiz.other_answers(self.een))
+        self.assertEqual((), quiz.other_answers("Een"))
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers do not include generated spelling alternatives."""
         load_spelling_alternatives(FI_NL)
-        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [self.huis])
-        self.assertEqual((), quiz.other_answers(self.huis))
+        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [Label(NL, "het huis")])
+        self.assertEqual((), quiz.other_answers("het huis"))
 
     def test_no_base_of_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers don't include the base of a generated spelling alternative if given as answer."""
         load_spelling_alternatives(FI_NL)
-        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [self.huis])
-        self.assertEqual((), quiz.other_answers(Label(NL, "huis")))
+        quiz = self.create_quiz(self.concept, Label(FI, "talo"), [Label(NL, "het huis")])
+        self.assertEqual((), quiz.other_answers("huis"))
 
     def test_tips_and_notes(self):
         """Test that the tip is added to the instruction, the notes are not, and neither are added to the question."""
@@ -206,7 +198,7 @@ class OrderQuizTest(QuizTestCase):
         labels = ["We eat breakfast in the kitchen.", "In the kitchen we eat breakfast."]
         quiz = self.create_quiz(self.concept, Label(EN, labels[0]), [Label(EN, labels)], ORDER)
         for label in labels:
-            self.assertTrue(quiz.is_correct(Label(EN, label), EN_NL))
+            self.assertTrue(quiz.is_correct(label, NL))
 
 
 class QuizInstructionTest(QuizTestCase):
@@ -524,48 +516,46 @@ class QuizSpellingAlternativesTests(QuizTestCase):
         """Test that an answer that matches a spelling alternative is correct."""
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi."), [Label(NL, ["Een", "Eén"]), Label(NL, "één")])
         for alternative in ("Een", "Eén", "één"):
-            self.assertTrue(quiz.is_correct(Label(NL, alternative), FI_NL))
+            self.assertTrue(quiz.is_correct(alternative, NL))
 
     def test_other_answers_with_spelling_alternatives(self):
         """Test that spelling alternatives are returned as other answers."""
         quiz = self.create_quiz(self.concept, Label(FI, "Yksi."), [Label(NL, ["Een", "Eén"]), Label(NL, "één")])
         a_capitalized, one_capitalized, one = (Label(NL, "Een"), Label(NL, "Eén"), Label(NL, "één"))
-        self.assertEqual((one_capitalized, one), quiz.other_answers(a_capitalized))
-        self.assertEqual((one,), quiz.other_answers(one_capitalized))
-        self.assertEqual((a_capitalized, one_capitalized), quiz.other_answers(one))
+        self.assertEqual((one_capitalized, one), quiz.other_answers("Een"))
+        self.assertEqual((one,), quiz.other_answers("Eén"))
+        self.assertEqual((a_capitalized, one_capitalized), quiz.other_answers("één"))
 
     def test_generated_spelling_alternative_is_correct(self):
         """Test that a generated spelling alternative is accepted as answer."""
         load_spelling_alternatives(EN_NL)
         quiz = self.create_quiz(self.concept, Label(NL, "Het is waar."), [Label(EN, "It is true.")])
-        self.assertTrue(quiz.is_correct(Label(EN, "It's true"), EN_NL))
+        self.assertTrue(quiz.is_correct("It's true", NL))
         quiz = self.create_quiz(self.concept, Label(NL, "Het is."), [Label(EN, "It is.")])
-        self.assertTrue(quiz.is_correct(Label(EN, "It's."), EN_NL))
+        self.assertTrue(quiz.is_correct("It's.", NL))
         quiz = self.create_quiz(self.concept, Label(NL, "Ik ben Alice."), [Label(EN, "I am Alice.")])
-        self.assertTrue(quiz.is_correct(Label(EN, "I'm Alice."), EN_NL))
+        self.assertTrue(quiz.is_correct("I'm Alice.", NL))
         quiz = self.create_quiz(self.concept, Label(NL, "Ik overval."), [Label(EN, "I ambush.")])
-        self.assertFalse(quiz.is_correct(Label(EN, "I'mbush."), EN_NL))
+        self.assertFalse(quiz.is_correct("I'mbush.", NL))
         quiz = self.create_quiz(self.concept, Label(EN, "house"), [Label(NL, "het huis")])
-        self.assertTrue(quiz.is_correct(Label(NL, "huis"), EN_NL))
+        self.assertTrue(quiz.is_correct("huis", NL))
         quiz = self.create_quiz(self.concept, Label(EN, "I am"), [Label(FI, "minä olen")])
-        self.assertTrue(quiz.is_correct(Label(FI, "olen"), FI_EN))
+        self.assertTrue(quiz.is_correct("olen", EN))
         quiz = self.create_quiz(self.concept, Label(EN, "I am Alice."), [Label(FI, "Minä olen Alice.")])
-        self.assertTrue(quiz.is_correct(Label(FI, "Olen Alice."), FI_EN))
+        self.assertTrue(quiz.is_correct("Olen Alice.", EN))
 
     def test_generated_spelling_alternative_is_no_other_answer(self):
         """Test that a generated spelling alternative is not an other answer."""
         load_spelling_alternatives(EN_NL)
         quiz = self.create_quiz(self.concept, Label(EN, "pain"), [Label(NL, "de pijn")])
-        answer = Label(NL, "pijn")
-        self.assertTrue(quiz.is_correct(answer, EN_NL))
-        self.assertEqual((), quiz.other_answers(answer))
+        self.assertTrue(quiz.is_correct("pijn", NL))
+        self.assertEqual((), quiz.other_answers("pijn"))
 
     def test_capitalized_answer_without_article(self):
         """Test that the article can be left out, even though the noun starts with a capital."""
         load_spelling_alternatives(FI_NL)
         quiz = self.create_quiz(self.concept, Label(FI, "englanti"), [Label(NL, "het Engels")])
-        answer = Label(NL, "Engels")
-        self.assertTrue(quiz.is_correct(answer, FI_NL))
+        self.assertTrue(quiz.is_correct("Engels", NL))
 
 
 class QuizEqualityTests(QuizTestCase):

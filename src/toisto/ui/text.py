@@ -79,9 +79,9 @@ class Feedback:
     def __init__(self, quiz: Quiz, language_pair: LanguagePair) -> None:
         self.quiz = quiz
         self.language_pair = language_pair
-        self.incorrect_guesses: list[Label] = []
+        self.incorrect_guesses: list[str] = []
 
-    def text(self, evaluation: Evaluation, guess: Label, retention: Retention | None) -> str:
+    def text(self, evaluation: Evaluation, guess: str, retention: Retention | None) -> str:
         """Return the feedback about the user's guess."""
         if evaluation == Evaluation.TRY_AGAIN:
             self.incorrect_guesses.append(guess)
@@ -102,7 +102,7 @@ class Feedback:
             feedback += self._retention(retention, evaluation)
         return feedback
 
-    def _try_again(self, guess: Label) -> str:
+    def _try_again(self, guess: str) -> str:
         """Return the feedback when the first attempt is incorrect."""
         if self.quiz.is_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
             standard = self.quiz.question.colloquial and self.quiz.question.language == self.quiz.answer.language
@@ -110,17 +110,17 @@ class Feedback:
             return try_again % {"language": ALL_LANGUAGES[self.quiz.answer.language]}
         return self.TRY_AGAIN
 
-    def _correct_answers(self, guess: Label | None = None) -> str:
+    def _correct_answers(self, guess: str = "") -> str:
         """Return the quiz's correct answer."""
         correct_answers = self.quiz.non_generated_answers
         if guess and (closest_answer := correct_answers.most_similar_label(guess)):
-            answer = quoted(colored_diff(str(guess), str(closest_answer)))
-            return punctuated(f"The correct answer is {answer}") + "\n" + self._other_answers(closest_answer)
+            answer = quoted(colored_diff(guess, str(closest_answer)))
+            return punctuated(f"The correct answer is {answer}") + "\n" + self._other_answers(str(closest_answer))
         label = "The correct answer is" if len(correct_answers) == 1 else "The correct answers are"
         answers = linkified_and_enumerated(*correct_answers.as_strings)
         return punctuated(f"{label} {answers}") + "\n"
 
-    def _other_answers(self, answer: Label) -> str:
+    def _other_answers(self, answer: str) -> str:
         """Return the quiz's other answers, if any."""
         if other_answers := self.quiz.other_answers(answer):
             label = "Another correct answer is" if len(other_answers) == 1 else "Other correct answers are"
@@ -158,7 +158,7 @@ class Feedback:
             f"Your incorrect answer {quoted(linkified(str(guess)))} is "
             f"{linkified_and_enumerated(*guess_meanings.as_strings)} in {ALL_LANGUAGES[self.quiz.question.language]}"
             for guess in unique(self.incorrect_guesses)
-            if (guess_meanings := meanings(guess, self.quiz.question.language))
+            if (guess_meanings := meanings(guess, self.quiz.answer.language, self.quiz.question.language))
         ]
 
     def _examples(self) -> str:

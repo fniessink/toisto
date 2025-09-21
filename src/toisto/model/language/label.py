@@ -222,12 +222,12 @@ class Label:
         capitonym_key = (self.language, str(self).lower())
         return Labels(label for label in self.capitonym_mapping[capitonym_key] if not self.is_homograph(label))
 
-    def similarity(self, other: Label) -> float:
-        """Return the similarity between this label and the other label as float in the range [0, 1].
+    def similarity(self, text: str) -> float:
+        """Return the similarity between this label and the text as float in the range [0, 1].
 
-        A similarity of 1 means the labels are equal and 0 means they are completely different.
+        A similarity of 1 means the label and text are equal and 0 means they are completely different.
         """
-        return SequenceMatcher(a=str(self).lower(), b=str(other).lower()).ratio()
+        return SequenceMatcher(a=str(self).lower(), b=text.lower()).ratio()
 
 
 class Labels:  # noqa: PLW1641
@@ -282,18 +282,18 @@ class Labels:  # noqa: PLW1641
         """Return the labels with the specified grammatical categories."""
         return Labels(label for label in self._labels if label.has_same_grammatical_base(other))
 
-    def most_similar_label(self, other: Label, min_similarity: float = 0.6) -> Label | None:
-        """Return the most similar label to the other label that has at least the minimum simularity."""
-        if similar_labels := [label for label in self._labels if label.similarity(other) >= min_similarity]:
-            return sorted(similar_labels, key=lambda label: label.similarity(other))[-1]
+    def most_similar_label(self, text: str, min_similarity: float = 0.6) -> Label | None:
+        """Return the label most similar to the text that has at least the minimum simularity."""
+        if similar_labels := [label for label in self._labels if label.similarity(text) >= min_similarity]:
+            return sorted(similar_labels, key=lambda label: label.similarity(text))[-1]
         return None
 
-    def matching(self, other: Label, *, case_sensitive: bool = True) -> Labels:
-        """Return the labels that match the other label."""
+    def matching(self, text: str, *, case_sensitive: bool = True) -> Labels:
+        """Return the labels that match the text."""
         return Labels(
             label
             for label in self._labels
-            if match(str(other), *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
+            if match(text, *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
         )
 
     @property

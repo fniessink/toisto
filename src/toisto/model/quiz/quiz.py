@@ -8,7 +8,7 @@ from functools import cached_property
 
 from toisto.tools import first
 
-from ..language import LanguagePair
+from ..language import Language
 from ..language.concept import Concept
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
@@ -54,21 +54,21 @@ class Quiz:
         """Return whether this quiz has the specified quiz type."""
         return self.quiz_type.is_quiz_type(quiz_type)
 
-    def evaluate(self, guess: Label, language_pair: LanguagePair, attempt: int) -> Evaluation:
+    def evaluate(self, guess: str, source_language: Language, attempt: int) -> Evaluation:
         """Evaluate the user's guess."""
-        if self.is_correct(guess, language_pair):
+        if self.is_correct(guess, source_language):
             return Evaluation.CORRECT
-        if str(guess) == "?":
+        if guess == "?":
             return Evaluation.SKIPPED
         if attempt == 1:
             return Evaluation.TRY_AGAIN
         return Evaluation.INCORRECT
 
-    def is_correct(self, guess: Label, language_pair: LanguagePair) -> bool:
+    def is_correct(self, guess: str, source_language: Language) -> bool:
         """Return whether the guess is correct."""
-        return any(self.answers.matching(guess, case_sensitive=guess.language != language_pair.source))
+        return any(self.answers.matching(guess, case_sensitive=self.answer.language != source_language))
 
-    def is_question(self, guess: Label) -> bool:
+    def is_question(self, guess: str) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
         questions = Labels((self._question,)) + self._question_meanings
         return any(questions.spelling_alternatives.matching(guess))
@@ -103,7 +103,7 @@ class Quiz:
         """Return the first spelling alternative of the answer meanings."""
         return self._answer_meanings.first_spelling_alternatives
 
-    def other_answers(self, guess: Label) -> Labels:
+    def other_answers(self, guess: str) -> Labels:
         """Return the answers not equal to the guess."""
         return self.quiz_type.other_answers(guess, self.non_generated_answers)
 

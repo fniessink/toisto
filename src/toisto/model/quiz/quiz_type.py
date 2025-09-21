@@ -71,7 +71,7 @@ class QuizType:
         """Return whether to include the grammatical notes for the grammatical categories."""
         return True
 
-    def other_answers(self, guess: Label, answers: Labels) -> Labels:
+    def other_answers(self, guess: str, answers: Labels) -> Labels:
         """Return the answers not equal to the guess."""
         return Labels(
             answer for answer in answers if not answer.spelling_alternatives.matching(guess, case_sensitive=False)
@@ -91,7 +91,7 @@ class ListenOnlyQuizType(QuizType):
         colloquial_note = f"to the colloquial {ALL_LANGUAGES[question.language]} "
         return f"Listen {colloquial_note if question.colloquial else ''}and write in"
 
-    def other_answers(self, guess: Label, answers: Labels) -> Labels:
+    def other_answers(self, guess: str, answers: Labels) -> Labels:
         """Override because returning other answers doesn't make sense if the user has to type what is spoken."""
         return Labels()
 

@@ -88,11 +88,11 @@ class QuizTypeOtherAnswersTest(ToistoTestCase):
         self.table = Label(EN, "table")
         self.chart = Label(EN, "chart")
         self.tafel = Label(NL, "de tafel")
-        self.wrong_answer = Label(EN, "tabel")
+        self.wrong_answer = "tabel"
 
     def test_one_answer_answered_correctly(self):
         """Test that having one answer being answered correcty means there are no other answers."""
-        self.assertEqual((), READ.other_answers(self.table, Labels([self.table])))
+        self.assertEqual((), READ.other_answers("table", Labels([self.table])))
 
     def test_one_answer_answered_incorrectly(self):
         """Test that having one answer being answered incorrecty means there is one other answer."""
@@ -100,7 +100,7 @@ class QuizTypeOtherAnswersTest(ToistoTestCase):
 
     def test_two_answers_answered_correctly(self):
         """Test that having two answers, one of them being given as answer means there is one other answer."""
-        self.assertEqual((self.table,), READ.other_answers(self.chart, Labels([self.chart, self.table])))
+        self.assertEqual((self.table,), READ.other_answers("chart", Labels([self.chart, self.table])))
 
     def test_two_answers_answered_incorrectly(self):
         """Test that having two answers, and an incorrect answer, means there are two other answers."""
@@ -111,10 +111,8 @@ class QuizTypeOtherAnswersTest(ToistoTestCase):
 
     def test_one_answer_with_spelling_alternative_answered_correctly(self):
         """Test one answer with spelling alternative being answered correcty."""
-        answer = Label(NL, "de tafel")
-        self.assertEqual((), READ.other_answers(answer, Labels([self.tafel])))
+        self.assertEqual((), READ.other_answers("de tafel", Labels([self.tafel])))
 
     def test_one_answer_with_spelling_alternative_answered_correctly_with_alternative(self):
         """Test one answer with spelling alternative being answered correcty with the spelling alternative."""
-        answer = Label(NL, "tafel")
-        self.assertEqual((), READ.other_answers(answer, Labels([self.tafel])))
+        self.assertEqual((), READ.other_answers("tafel", Labels([self.tafel])))
