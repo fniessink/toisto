@@ -35,19 +35,8 @@ class DiminutiveTest(ToistoTestCase):
             ],
         )
         de_auto, autootje = concept.labels(NL)
-        auto, pikkuauto = concept.labels(FI)
         self.assertSetEqual(
-            {
-                self.create_quiz(concept, de_auto, [auto], READ),
-                self.create_quiz(concept, de_auto, [de_auto], DICTATE),
-                self.create_quiz(concept, de_auto, [auto], INTERPRET),
-                self.create_quiz(concept, auto, [de_auto], WRITE),
-                self.create_quiz(concept, de_auto, [autootje], DIMINUTIVE),
-                self.create_quiz(concept, autootje, [autootje], DICTATE),
-                self.create_quiz(concept, autootje, [pikkuauto], READ),
-                self.create_quiz(concept, autootje, [pikkuauto], INTERPRET),
-                self.create_quiz(concept, pikkuauto, [autootje], WRITE),
-            },
+            self.translation_quizzes(concept, NL, FI) | {self.create_quiz(concept, de_auto, [autootje], DIMINUTIVE)},
             create_quizzes(NL_FI, (), concept),
         )
 

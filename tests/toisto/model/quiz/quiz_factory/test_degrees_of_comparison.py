@@ -25,21 +25,9 @@ class DegreesOfComparisonQuizzesTest(QuizFactoryTestCase):
         """Test that quizzes can be generated for degrees of comparison."""
         concept = self.create_adjective_with_degrees_of_comparison()
         groot, groter, grootst = concept.labels(NL)
-        big, bigger, biggest = concept.labels(EN)
         self.assertSetEqual(
-            {
-                self.create_quiz(concept, groot, [big], READ),
-                self.create_quiz(concept, groot, [groot], DICTATE),
-                self.create_quiz(concept, groot, [big], INTERPRET),
-                self.create_quiz(concept, big, [groot], WRITE),
-                self.create_quiz(concept, groter, [bigger], READ),
-                self.create_quiz(concept, groter, [groter], DICTATE),
-                self.create_quiz(concept, groter, [bigger], INTERPRET),
-                self.create_quiz(concept, bigger, [groter], WRITE),
-                self.create_quiz(concept, grootst, [biggest], READ),
-                self.create_quiz(concept, grootst, [grootst], DICTATE),
-                self.create_quiz(concept, grootst, [biggest], INTERPRET),
-                self.create_quiz(concept, biggest, [grootst], WRITE),
+            self.translation_quizzes(concept, NL, EN)
+            | {
                 self.create_quiz(concept, groot, [groter], COMPARATIVE_DEGREE),
                 self.create_quiz(concept, groot, [grootst], SUPERLATIVE_DEGREE),
                 self.create_quiz(concept, groter, [groot], POSITIVE_DEGREE),
@@ -147,22 +135,10 @@ class DegreesOfComparisonQuizzesTest(QuizFactoryTestCase):
             ],
         )
         groot, groter, grootst = big_concept.labels(NL)
-        big, bigger, biggest = big_concept.labels(EN)
         klein, kleiner, kleinst = small_concept.labels(NL)
         self.assertSetEqual(
-            {
-                self.create_quiz(big_concept, groot, [big], READ),
-                self.create_quiz(big_concept, groot, [groot], DICTATE),
-                self.create_quiz(big_concept, groot, [big], INTERPRET),
-                self.create_quiz(big_concept, big, [groot], WRITE),
-                self.create_quiz(big_concept, groter, [bigger], READ),
-                self.create_quiz(big_concept, groter, [groter], DICTATE),
-                self.create_quiz(big_concept, groter, [bigger], INTERPRET),
-                self.create_quiz(big_concept, bigger, [groter], WRITE),
-                self.create_quiz(big_concept, grootst, [biggest], READ),
-                self.create_quiz(big_concept, grootst, [grootst], DICTATE),
-                self.create_quiz(big_concept, grootst, [biggest], INTERPRET),
-                self.create_quiz(big_concept, biggest, [grootst], WRITE),
+            self.translation_quizzes(big_concept, NL, EN)
+            | {
                 self.create_quiz(big_concept, groot, [groter], COMPARATIVE_DEGREE),
                 self.create_quiz(big_concept, groot, [grootst], SUPERLATIVE_DEGREE),
                 self.create_quiz(big_concept, groot, [klein], ANTONYM),

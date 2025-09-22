@@ -2,7 +2,7 @@
 
 from toisto.model.language import EN, NL
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import CARDINAL, DICTATE, INTERPRET, ORDINAL, READ, WRITE
+from toisto.model.quiz.quiz_type import CARDINAL, DICTATE, ORDINAL
 
 from .....base import NL_EN, ToistoTestCase
 
@@ -35,18 +35,10 @@ class NumberTest(ToistoTestCase):
                 {"label": {"cardinal": "een", "ordinal": "eerste"}, "language": NL},
             ],
         )
-        one, first_ = concept.labels(EN)
         een, eerste = concept.labels(NL)
         self.assertSetEqual(
-            {
-                self.create_quiz(concept, een, [one], READ),
-                self.create_quiz(concept, een, [een], DICTATE),
-                self.create_quiz(concept, een, [one], INTERPRET),
-                self.create_quiz(concept, one, [een], WRITE),
-                self.create_quiz(concept, eerste, [first_], READ),
-                self.create_quiz(concept, eerste, [eerste], DICTATE),
-                self.create_quiz(concept, eerste, [first_], INTERPRET),
-                self.create_quiz(concept, first_, [eerste], WRITE),
+            self.translation_quizzes(concept, NL, EN)
+            | {
                 self.create_quiz(concept, eerste, [een], CARDINAL),
                 self.create_quiz(concept, een, [eerste], ORDINAL),
             },
