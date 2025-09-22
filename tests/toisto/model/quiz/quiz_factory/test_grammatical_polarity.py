@@ -2,7 +2,7 @@
 
 from toisto.model.language import EN, NL
 from toisto.model.quiz.quiz_factory import create_quizzes
-from toisto.model.quiz.quiz_type import AFFIRMATIVE, DICTATE, INTERPRET, NEGATIVE, ORDER, READ, WRITE
+from toisto.model.quiz.quiz_type import AFFIRMATIVE, NEGATIVE, ORDER
 
 from .....base import NL_EN, ToistoTestCase
 
@@ -20,17 +20,9 @@ class GrammaticalPolarityTest(ToistoTestCase):
             ],
         )
         de_auto_is_zwart, de_auto_is_niet_zwart = concept.labels(NL)
-        the_car_is_black, the_car_is_not_black = concept.labels(EN)
         self.assertSetEqual(
-            {
-                self.create_quiz(concept, de_auto_is_zwart, [the_car_is_black], READ),
-                self.create_quiz(concept, de_auto_is_zwart, [de_auto_is_zwart], DICTATE),
-                self.create_quiz(concept, de_auto_is_zwart, [the_car_is_black], INTERPRET),
-                self.create_quiz(concept, the_car_is_black, [de_auto_is_zwart], WRITE),
-                self.create_quiz(concept, de_auto_is_niet_zwart, [the_car_is_not_black], READ),
-                self.create_quiz(concept, de_auto_is_niet_zwart, [de_auto_is_niet_zwart], DICTATE),
-                self.create_quiz(concept, de_auto_is_niet_zwart, [the_car_is_not_black], INTERPRET),
-                self.create_quiz(concept, the_car_is_not_black, [de_auto_is_niet_zwart], WRITE),
+            self.translation_quizzes(concept, NL, EN)
+            | {
                 self.create_quiz(concept, de_auto_is_zwart, [de_auto_is_niet_zwart], NEGATIVE),
                 self.create_quiz(concept, de_auto_is_niet_zwart, [de_auto_is_zwart], AFFIRMATIVE),
                 self.create_quiz(concept, de_auto_is_niet_zwart, [de_auto_is_niet_zwart], ORDER),

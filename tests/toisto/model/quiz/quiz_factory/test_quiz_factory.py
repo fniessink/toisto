@@ -17,17 +17,7 @@ class QuizFactoryTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "english", labels=[{"label": "English", "language": EN}, {"label": "Engels", "language": NL}]
         )
-        (engels,) = concept.labels(NL)
-        (english,) = concept.labels(EN)
-        self.assertSetEqual(
-            {
-                self.create_quiz(concept, engels, [english], READ),
-                self.create_quiz(concept, engels, [engels], DICTATE),
-                self.create_quiz(concept, engels, [english], INTERPRET),
-                self.create_quiz(concept, english, [engels], WRITE),
-            },
-            create_quizzes(NL_EN, (), concept),
-        )
+        self.assertSetEqual(self.translation_quizzes(concept, NL, EN), create_quizzes(NL_EN, (), concept))
 
     def test_only_listening_quizzes_for_one_language(self):
         """Test that only listening quizzes are generated for a concept with one language."""
@@ -107,21 +97,9 @@ class QuizFactoryTest(QuizFactoryTestCase):
         """Test the infinitive verb form."""
         concept = self.create_verb_with_infinitive_and_person()
         slapen, ik_slaap, wij_slapen = concept.labels(NL)
-        to_sleep, i_sleep, we_sleep = concept.labels(EN)
         self.assertSetEqual(
-            {
-                self.create_quiz(concept, slapen, [to_sleep], READ),
-                self.create_quiz(concept, slapen, [slapen], DICTATE),
-                self.create_quiz(concept, slapen, [to_sleep], INTERPRET),
-                self.create_quiz(concept, to_sleep, [slapen], WRITE),
-                self.create_quiz(concept, ik_slaap, [i_sleep], READ),
-                self.create_quiz(concept, ik_slaap, [ik_slaap], DICTATE),
-                self.create_quiz(concept, ik_slaap, [i_sleep], INTERPRET),
-                self.create_quiz(concept, i_sleep, [ik_slaap], WRITE),
-                self.create_quiz(concept, wij_slapen, [we_sleep], READ),
-                self.create_quiz(concept, wij_slapen, [wij_slapen], DICTATE),
-                self.create_quiz(concept, wij_slapen, [we_sleep], INTERPRET),
-                self.create_quiz(concept, we_sleep, [wij_slapen], WRITE),
+            self.translation_quizzes(concept, NL, EN)
+            | {
                 self.create_quiz(concept, wij_slapen, [slapen], INFINITIVE),
                 self.create_quiz(concept, ik_slaap, [slapen], INFINITIVE),
                 self.create_quiz(concept, slapen, [wij_slapen], PLURAL),

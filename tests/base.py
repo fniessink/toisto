@@ -13,7 +13,7 @@ from toisto.model.language.concept import Concept
 from toisto.model.language.concept_factory import ConceptJSON, create_concept
 from toisto.model.language.label import Label, Labels
 from toisto.model.quiz.quiz import Quiz
-from toisto.model.quiz.quiz_type import READ, QuizType
+from toisto.model.quiz.quiz_type import DICTATE, INTERPRET, READ, WRITE, QuizType
 
 if TYPE_CHECKING:
     from toisto.model.language.concept import ConceptId
@@ -109,6 +109,20 @@ class ToistoTestCase(unittest.TestCase):
             quiz_type=quiz_type or quiz.quiz_type,
             blocked_by=quiz.blocked_by,
         )
+
+    def translation_quizzes(self, concept: Concept, target_language: Language, source_language: Language) -> set[Quiz]:
+        """Create the translation quizzes for the concept."""
+        quizzes = set()
+        target_labels = concept.labels(target_language)
+        source_labels = concept.labels(source_language)
+        for target_label, source_label in zip(target_labels, source_labels, strict=True):
+            quizzes |= {
+                self.create_quiz(concept, target_label, [source_label], READ),
+                self.create_quiz(concept, target_label, [target_label], DICTATE),
+                self.create_quiz(concept, target_label, [source_label], INTERPRET),
+                self.create_quiz(concept, source_label, [target_label], WRITE),
+            }
+        return quizzes
 
     def create_noun_invariant_in_english(self) -> Concept:
         """Return a concept that is composite in Dutch and not composite in English."""

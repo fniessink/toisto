@@ -231,11 +231,11 @@ class GrammaticalQuizFactory(BaseQuizFactory):
 
     def questions(self, concept: Concept) -> Labels:
         """Return the questions."""
-        return Labels([self._question])
+        return Labels((self._question,))
 
     def answers(self, concept: Concept) -> Labels:
         """Return the answers."""
-        return Labels([self._answer])
+        return Labels((self._answer,))
 
     def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings of the concept."""
