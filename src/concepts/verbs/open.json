@@ -1,12 +1,19 @@
 {
     "concepts": {
-        "to open": {},
-        "to open (intransitive)": {}
+        "to open": {
+            "hypernym": "transitive verb"
+        },
+        "to open (intransitive)": {
+            "hypernym": "intransitive verb"
+        }
     },
     "labels": {
         "en": [
             {
-                "concept": "to open",
+                "concept": [
+                    "to open",
+                    "to open (intransitive)"
+                ],
                 "label": {
                     "infinitive": "to open",
                     "singular": {
@@ -23,26 +30,6 @@
                         "third person": "they open"
                     }
                 }
-            },
-            {
-                "concept": "to open (intransitive)",
-                "label": {
-                    "infinitive": "to open",
-                    "singular": {
-                        "first person": "I open;intransitive",
-                        "second person": "you open;intransitive",
-                        "third person": {
-                            "feminine": "she opens;intransitive",
-                            "masculine": "he opens;intransitive"
-                        }
-                    },
-                    "plural": {
-                        "first person": "we open;intransitive",
-                        "second person": "you open;intransitive",
-                        "third person": "they open;intransitive"
-                    }
-                },
-                "tip": "intransitive"
             }
         ],
         "fi": [
