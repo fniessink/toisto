@@ -1,22 +1,26 @@
 {
     "concepts": {
-        "to marry": {},
-        "to marry (transitive)": {}
+        "to marry": {
+            "hypernym": "intransitive verb",
+            "involves": "marriage"
+        },
+        "to marry (transitive)": {
+            "hypernym": "transitive verb",
+            "involves": "marriage"
+        }
     },
     "labels": {
         "en": [
             {
-                "concept": "to marry",
+                "concept": [
+                    "to marry",
+                    "to marry (transitive)"
+                ],
                 "label": "to marry"
             },
             {
                 "concept": "to marry",
                 "label": "to get married"
-            },
-            {
-                "concept": "to marry (transitive)",
-                "label": "to marry",
-                "tip": "transitive"
             }
         ],
         "fi": [
@@ -26,19 +30,16 @@
             },
             {
                 "concept": "to marry (transitive)",
-                "label": "vihkiä",
-                "tip": "transitive"
+                "label": "vihkiä"
             }
         ],
         "nl": [
             {
-                "concept": "to marry",
+                "concept": [
+                    "to marry",
+                    "to marry (transitive)"
+                ],
                 "label": "trouwen"
-            },
-            {
-                "concept": "to marry (transitive)",
-                "label": "trouwen",
-                "tip": "transitive"
             }
         ]
     }
