@@ -44,11 +44,17 @@
         ],
         "nl": [
             {
-                "concept": "to love",
+                "concept": [
+                    "to love",
+                    "to like"
+                ],
                 "label": {
                     "infinitive": "houden van",
                     "singular": {
-                        "first person": "ik hou van",
+                        "first person": [
+                            "ik hou van",
+                            "ik houd van"
+                        ],
                         "second person": "jij houdt van",
                         "third person": {
                             "feminine": "zij houdt van",

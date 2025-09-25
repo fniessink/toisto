@@ -3,7 +3,10 @@
         "what": {},
         "why": {},
         "where": {},
-        "where from": {},
+        "where from": {
+            "example": "where are you from"
+        },
+        "where are you from": {},
         "when": {},
         "how": {},
         "how many": {
@@ -17,6 +20,7 @@
         },
         "to where": {},
         "from which country": {},
+        "from which country are you": {},
         "where is the water": {},
         "where there": {},
         "why are you doing that": {},
@@ -48,6 +52,11 @@
                 "label": "Where from?"
             },
             {
+                "concept": "where are you from",
+                "label": "Where are you from?",
+                "roots": "Where from?"
+            },
+            {
                 "concept": "when",
                 "label": "When?"
             },
@@ -73,6 +82,11 @@
                 "concept": "from which country",
                 "label": "from which country",
                 "meaning-only": true
+            },
+            {
+                "concept": "from which country are you",
+                "label": "From which country are you?",
+                "roots": "country"
             },
             {
                 "concept": "where is the water",
@@ -181,6 +195,14 @@
                 "label": "Mistä?"
             },
             {
+                "concept": "where are you from",
+                "label": "Mistä sinä olet kotoisin?",
+                "roots": [
+                    "Mistä?",
+                    "sinä olet"
+                ]
+            },
+            {
                 "concept": "when",
                 "label": "Milloin?"
             },
@@ -207,6 +229,14 @@
             {
                 "concept": "from which country",
                 "label": "minkämaalainen"
+            },
+            {
+                "concept": "from which country are you",
+                "label": "Minkämaalainen sinä olet?",
+                "roots": [
+                    "minkämaalainen",
+                    "sinä olet"
+                ]
             },
             {
                 "concept": "where is the water",
@@ -347,6 +377,14 @@
                 "roots": "Waar?"
             },
             {
+                "concept": "where are you from",
+                "label": "Waar kom jij vandaan?",
+                "roots": [
+                    "jij komt",
+                    "Waar vandaan?"
+                ]
+            },
+            {
                 "concept": "when",
                 "label": "Wanneer?"
             },
@@ -377,6 +415,14 @@
                 "concept": "from which country",
                 "label": "uit welk land",
                 "meaning-only": true
+            },
+            {
+                "concept": "from which country are you",
+                "label": "Uit welk land kom jij?",
+                "roots": [
+                    "het land",
+                    "jij komt"
+                ]
             },
             {
                 "concept": "where is the water",
