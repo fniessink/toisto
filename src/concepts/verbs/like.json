@@ -1,6 +1,9 @@
 {
     "concepts": {
-        "to like": {}
+        "to like": {
+            "example": "I like ice cream"
+        },
+        "I like ice cream": {}
     },
     "labels": {
         "en": [
@@ -22,6 +25,14 @@
                         "third person": "they like"
                     }
                 }
+            },
+            {
+                "concept": "I like ice cream",
+                "label": "I like ice cream.",
+                "roots": [
+                    "I like",
+                    "ice cream"
+                ]
             }
         ],
         "fi": [
@@ -56,6 +67,14 @@
                         "third person": "he tykkäävät"
                     }
                 }
+            },
+            {
+                "concept": "I like ice cream",
+                "label": "Minä pidän jäätelöstä.",
+                "roots": [
+                    "minä pidän",
+                    "jäätelö"
+                ]
             }
         ],
         "nl": [
@@ -77,6 +96,17 @@
                         "third person": "zij vinden leuk"
                     }
                 }
+            },
+            {
+                "concept": "I like ice cream",
+                "label": [
+                    "Ik hou van ijs.",
+                    "Ik houd van ijs."
+                ],
+                "roots": [
+                    "ik houd van",
+                    "het ijs"
+                ]
             }
         ]
     }

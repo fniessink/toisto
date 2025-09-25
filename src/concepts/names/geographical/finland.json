@@ -6,6 +6,12 @@
         "finnish": {
             "hypernym": "nationality",
             "involves": "finland"
+        },
+        "I am from Finland": {
+            "involves": "finland"
+        },
+        "I am Finnish": {
+            "involves": "finnish"
         }
     },
     "labels": {
@@ -18,6 +24,22 @@
                 "concept": "finnish",
                 "label": "Finnish",
                 "roots": "Finland"
+            },
+            {
+                "concept": "I am from Finland",
+                "label": "I am from Finland.",
+                "roots": [
+                    "I am",
+                    "Finland"
+                ]
+            },
+            {
+                "concept": "I am Finnish",
+                "label": "I am Finnish.",
+                "roots": [
+                    "I am",
+                    "Finnish"
+                ]
             }
         ],
         "fi": [
@@ -30,6 +52,22 @@
                 "concept": "finnish",
                 "label": "suomalainen",
                 "roots": "Suomi"
+            },
+            {
+                "concept": "I am from Finland",
+                "label": "Minä olen kotoisin Suomesta.",
+                "roots": [
+                    "minä olen",
+                    "Suomi"
+                ]
+            },
+            {
+                "concept": "I am Finnish",
+                "label": "Minä olen suomalainen.",
+                "roots": [
+                    "minä olen",
+                    "Suomi"
+                ]
             }
         ],
         "nl": [
@@ -42,6 +80,22 @@
                 "concept": "finnish",
                 "label": "Fins",
                 "roots": "Finland"
+            },
+            {
+                "concept": "I am from Finland",
+                "label": "Ik kom uit Finland.",
+                "roots": [
+                    "ik kom",
+                    "Finland"
+                ]
+            },
+            {
+                "concept": "I am Finnish",
+                "label": "Ik ben Fins.",
+                "roots": [
+                    "ik ben",
+                    "Fins"
+                ]
             }
         ]
     }
