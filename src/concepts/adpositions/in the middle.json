@@ -46,6 +46,7 @@
             {
                 "concept": "the table is in the middle of the room",
                 "label": "Pöytä on huoneen keskellä.",
+                "cloze": "Pöytä on (huone) keskellä.",
                 "roots": [
                     "pöytä",
                     "huone",
@@ -77,6 +78,7 @@
             {
                 "concept": "the table is in the middle of the room",
                 "label": "De tafel staat in het midden van de kamer.",
+                "cloze": "De tafel (hangt/ligt/staat/zit) in het midden van de kamer.",
                 "roots": [
                     "de tafel",
                     "in het midden",
@@ -86,6 +88,7 @@
             {
                 "concept": "the table is in the middle of the room",
                 "label": "De tafel staat midden in de kamer.",
+                "cloze": "De tafel (hangt/ligt/staat/zit) midden in de kamer.",
                 "roots": [
                     "de tafel",
                     "middenin",

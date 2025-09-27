@@ -83,6 +83,7 @@
             {
                 "concept": "I am looking for a table lamp",
                 "label": "Minä etsin pöytälamppua.",
+                "cloze": "Minä etsin (pöytälamppu).",
                 "roots": [
                     "minä etsin",
                     "pöytälamppu"
@@ -92,6 +93,7 @@
             {
                 "concept": "I am looking for a table lamp",
                 "label": "Minä etsin pöytävalaisinta.",
+                "cloze": "Minä etsin (pöytävalaisin).",
                 "roots": [
                     "minä etsin",
                     "pöytävalaisin"
@@ -101,6 +103,7 @@
             {
                 "concept": "you are looking for a dining table",
                 "label": "Sinä etsit ruokapöytää.",
+                "cloze": "Sinä etsit (ruokapöytä).",
                 "roots": [
                     "sinä etsit",
                     "ruokapöytä"
@@ -109,6 +112,7 @@
             {
                 "concept": "she is looking for a bookcase",
                 "label": "Hän etsii kirjahyllyä.",
+                "cloze": "Hän etsii (kirjahylly).",
                 "roots": [
                     "hän etsii",
                     "kirjahylly"
@@ -118,6 +122,7 @@
             {
                 "concept": "we are looking for an office chair",
                 "label": "Me etsimme työtuolia.",
+                "cloze": "Me etsimme (työtuoli).",
                 "roots": [
                     "me etsimme",
                     "työtuoli"
@@ -127,6 +132,7 @@
             {
                 "concept": "you are looking for a roller blind",
                 "label": "Te etsitte rullaverhoa.",
+                "cloze": "Te etsitte (rullaverho).",
                 "roots": [
                     "te etsitte",
                     "rullaverho"
@@ -136,6 +142,7 @@
             {
                 "concept": "they are looking for a double bed",
                 "label": "He etsivät parisänkyä.",
+                "cloze": "He etsivät (parisänky).",
                 "roots": [
                     "he etsivät",
                     "parisänky"

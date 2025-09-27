@@ -71,6 +71,7 @@
             {
                 "concept": "I like ice cream",
                 "label": "Minä pidän jäätelöstä.",
+                "cloze": "Minä pidän (jäätelö).",
                 "roots": [
                     "minä pidän",
                     "jäätelö"

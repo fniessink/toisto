@@ -112,6 +112,7 @@
             {
                 "concept": "you want milk",
                 "label": "Sinä haluat maitoa.",
+                "cloze": "Sinä haluat (maito).",
                 "roots": [
                     "sinä haluat",
                     "maito"
@@ -121,6 +122,7 @@
             {
                 "concept": "she wants ice cream",
                 "label": "Hän haluaa jäätelöä.",
+                "cloze": "Hän haluaa (jäätelö).",
                 "roots": [
                     "hän haluaa",
                     "jäätelö"
@@ -131,6 +133,7 @@
             {
                 "concept": "we want cake",
                 "label": "Me haluamme kakkua.",
+                "cloze": "Me haluamme (kakku).",
                 "roots": [
                     "me haluamme",
                     "kakku"
@@ -140,6 +143,7 @@
             {
                 "concept": "you want sugar",
                 "label": "Te haluatte sokeria.",
+                "cloze": "Te haluatte (sokeri).",
                 "roots": [
                     "te haluatte",
                     "sokeri"
@@ -149,6 +153,7 @@
             {
                 "concept": "they want a cookie",
                 "label": "He haluavat keksiä.",
+                "cloze": "He haluavat (keksi).",
                 "roots": [
                     "he haluavat",
                     "keksi"

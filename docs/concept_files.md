@@ -508,7 +508,7 @@ If the homographs have different hypernyms, Toisto will provide a hint based on 
 
 When quizzing the translation of "bank", Toisto provides the hypernym as hint, for example: "Listen and write in Dutch (furniture)".
 
-#### Hints based on invoved concepts
+#### Hints based on involved concepts
 
 If the homographs involve other concepts, Toisto will provide a hint based on the involved concepts. For example, in the case of the English verb "to play", there are two different verbs in Finnish: "pelata" for playing a sport and "soittaa" for playing a musical instrument:
 
@@ -719,7 +719,7 @@ In the JSON file this looks as follows:
 
 ### Grammatical number
 
-Most verbs, nouns, and pronouns can occur in both singular and plural forms. These forms are represented in the JSON as mapping with a key for the singular form and a key for the plural form. The values can be be strings or list of strings (in case of spelling alternatives) or other grammatical forms.
+Most verbs, nouns, and pronouns can occur in both singular and plural forms. These forms are represented in the JSON as mapping with a key for the singular form and a key for the plural form. The values can be strings or list of strings (in case of spelling alternatives) or other grammatical forms.
 
 #### Nouns
 
@@ -1732,3 +1732,45 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
 ```
 
 The answer concepts in the previous example have the key `answer-only` set to `true`. This tells Toisto not to generate quizzes for these two concepts. Given how Finnish and English deal with answering yes/no questions differently, it doesn't make sense to ask users to, for example, translate "Yes, I do" into "Pidän".
+
+## Cloze tests
+
+Cloze tests, also called cloze deletions, are supported by adding a separate `cloze` key to the label, and replacing the words the user needs to fill in with words between brackets:
+
+```json
+{
+    "concepts": {
+        "I like ice cream": {}
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "I like ice cream",
+                "label": "Minä pidän jäätelöstä.",
+                "cloze": "Minä pidän (jäätelö)."
+            }
+        ]
+    }
+}
+```
+
+If the label has different grammatical forms, it is possible to add cloze tests for the different grammatical forms:
+
+```json
+{
+    "concepts": {
+        "I like ice cream": {}
+    },
+    "labels": {
+        "fi": [
+            {
+                "concept": "I like ice cream",
+                "label": {
+                    "singular": "Minä pidän jäätelöstä.",
+                    "plural": "Me pidämme "
+                "cloze": "Minä pidän (jäätelö)."
+            }
+        ]
+    }
+}
+```

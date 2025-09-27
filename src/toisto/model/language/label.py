@@ -38,6 +38,7 @@ class Label:
         notes: tuple[str, ...] = (),
         roots: tuple[str, ...] = (),
         tips: tuple[str, ...] = (),
+        cloze_tests: tuple[str, ...] = (),
         *,
         colloquial: bool = False,
         meaning_only: bool = False,
@@ -49,6 +50,7 @@ class Label:
         self.notes = notes
         self._roots = roots
         self.tips = tips
+        self._cloze_tests = cloze_tests
         self.colloquial = colloquial
         self.meaning_only = meaning_only
         self.other_grammatical_categories: dict[GrammaticalCategory, Label] = {}
@@ -180,6 +182,11 @@ class Label:
     def compounds(self) -> Labels:
         """Return the label compounds."""
         return Labels(label for label in chain(*self.homograph_mapping.values()) if self in label.roots)
+
+    @property
+    def cloze_tests(self) -> Labels:
+        """Return the cloze tests."""
+        return Labels(Label(self.language, cloze_test) for cloze_test in self._cloze_tests)
 
     @property
     def is_grammatical_base(self) -> bool:
@@ -333,6 +340,11 @@ class Labels:  # noqa: PLW1641
         """Return the compounds of the labels."""
         compounds = [label.compounds for label in self._labels]
         return Labels(chain(*compounds))
+
+    @property
+    def cloze_tests(self) -> Labels:
+        """Return the cloze tests of the labels."""
+        return Labels(chain(*[label.cloze_tests for label in self._labels]))
 
     @property
     def as_strings(self) -> tuple[str, ...]:

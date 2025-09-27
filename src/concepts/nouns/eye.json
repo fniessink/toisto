@@ -36,6 +36,7 @@
             {
                 "concept": "you have beautiful eyes",
                 "label": "Sinulla on kauniit silmät.",
+                "cloze": "Sinulla on (kaunis) (silmä).",
                 "roots": [
                     "sinulla on",
                     "kaunis",
@@ -54,6 +55,7 @@
             {
                 "concept": "you have beautiful eyes",
                 "label": "Jij hebt mooie ogen.",
+                "cloze": "Jij hebt (mooi) (oog).",
                 "roots": [
                     "jij hebt",
                     "mooi",

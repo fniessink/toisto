@@ -31,6 +31,7 @@
             {
                 "concept": "the cat sits in front of the window",
                 "label": "Kissa istuu ikkunan edessä.",
+                "cloze": "Kissa istuu (ikkuna) edessä.",
                 "roots": [
                     "kissa",
                     "hän istuu",

@@ -29,6 +29,7 @@
             {
                 "concept": "the lamp is on top of the cabinet",
                 "label": "Lamppu on kaapin päällä.",
+                "cloze": "Lamppu on (kaappi) päällä.",
                 "roots": [
                     "lamppu",
                     "kaappi",
@@ -44,6 +45,7 @@
             {
                 "concept": "the lamp is on top of the cabinet",
                 "label": "De lamp staat op de kast.",
+                "cloze": "De lamp (hangt/ligt/staat/zit) op de kast.",
                 "roots": [
                     "de lamp",
                     "op",

@@ -96,6 +96,7 @@
             {
                 "concept": "they have x children and y grandchildren",
                 "label": "Heillä on kolme lasta ja kuusi lastenlasta.",
+                "cloze": "Heillä on kolme (lapsi) ja kuusi (lastenlapsi).",
                 "roots": [
                     "heillä on",
                     "kolme",

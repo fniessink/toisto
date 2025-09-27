@@ -292,6 +292,7 @@
             {
                 "concept": "it is cold in the north",
                 "label": "Pohjoisessa on kylmä.",
+                "cloze": "(Pohjoinen) on kylmä.",
                 "roots": [
                     "pohjoinen",
                     "kylmä"
@@ -300,6 +301,7 @@
             {
                 "concept": "it is warm in the south",
                 "label": "Etelässä on lämmin.",
+                "cloze": "(Etelä) on lämmin.",
                 "roots": [
                     "etelä",
                     "lämmin"
@@ -308,6 +310,7 @@
             {
                 "concept": "she is from the north",
                 "label": "Hän tulee pohjoisesta.",
+                "cloze": "Hän tulee (pohjoinen).",
                 "roots": [
                     "hän tulee",
                     "pohjoinen"
@@ -317,6 +320,7 @@
             {
                 "concept": "she is from the north",
                 "label": "Hän on kotoisin pohjoisesta.",
+                "cloze": "Hän on kotoisin (pohjoinen).",
                 "roots": [
                     "hän on",
                     "kotoisin",
@@ -327,6 +331,7 @@
             {
                 "concept": "they live in the west",
                 "label": "He asuvat lännessä.",
+                "cloze": "He asuvat (länsi).",
                 "roots": [
                     "he asuvat",
                     "länsi"
@@ -335,6 +340,7 @@
             {
                 "concept": "the city is in the east",
                 "label": "Kaupunki on idässä.",
+                "cloze": "Kaupunki on (itä).",
                 "roots": [
                     "kaupunki",
                     "itä"
@@ -343,6 +349,7 @@
             {
                 "concept": "the city is in the east",
                 "label": "Kaupunki sijaitsee idässä.",
+                "cloze": "Kaupunki sijaitsee (itä).",
                 "roots": [
                     "kaupunki",
                     "itä"
@@ -351,6 +358,7 @@
             {
                 "concept": "we walk in the forest",
                 "label": "Me kävelemme metsässä.",
+                "cloze": "Me kävelemme (metsä).",
                 "roots": [
                     "me kävelemme",
                     "metsä"
@@ -482,6 +490,7 @@
             {
                 "concept": "the city is in the east",
                 "label": "De stad ligt in het oosten.",
+                "cloze": "De stad (hangt/ligt/staat/zit) in het oosten.",
                 "roots": [
                     "de stad",
                     "het oosten"
