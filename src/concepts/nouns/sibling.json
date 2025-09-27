@@ -130,6 +130,7 @@
             {
                 "concept": "I have x brothers and y sisters",
                 "label": "Minulla on kaksi veljeä ja yksi sisko.",
+                "cloze": "Minulla on kaksi (veli) ja yksi (sisko).",
                 "roots": [
                     "minulla on",
                     "kaksi",
@@ -149,6 +150,7 @@
             {
                 "concept": "I have no siblings",
                 "label": "Minulla ei ole veljiä tai siskoja.",
+                "cloze": "Minulla ei ole (veli) tai (sisko).",
                 "roots": [
                     "minulla ei ole",
                     "veli",

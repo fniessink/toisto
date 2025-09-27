@@ -240,6 +240,7 @@
             {
                 "concept": "I have a fever",
                 "label": "Minulla on kuumetta.",
+                "cloze": "Minulla on (kuume).",
                 "roots": [
                     "minulla on",
                     "kuume"

@@ -9,6 +9,7 @@ from toisto.model.quiz.quiz_type import (
     ANSWER,
     ANTONYM,
     CARDINAL,
+    CLOZE_TEST,
     COMPARATIVE_DEGREE,
     DECLARATIVE,
     DICTATE,
@@ -241,11 +242,12 @@ class QuizInstructionTest(QuizTestCase):
             ORDINAL: "Give the [underline]ordinal[/underline] in Finnish",
             ABBREVIATION: "Give the [underline]abbreviation[/underline] in Finnish",
             FULL_FORM: "Give the [underline]full form[/underline] in Finnish",
+            CLOZE_TEST: "Repeat with the [underline]bracketed words in the correct form[/underline], in Finnish",
         }
         for quiz_type, expected_instruction in expected_instructions.items():
             quiz = self.create_quiz(
                 self.concept,
-                Label(FI, "Hei"),
+                Label(FI, "Hei", cloze_tests=("cloze test",)),
                 [Label(NL if expected_instruction.endswith("Dutch") else FI, "Hei hei")],
                 quiz_type,
             )

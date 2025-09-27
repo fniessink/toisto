@@ -35,6 +35,7 @@
             {
                 "concept": "the coffee is hot",
                 "label": "Kahvi on kuumaa.",
+                "cloze": "Kahvi on (kuuma).",
                 "roots": [
                     "kahvi",
                     "kuuma"

@@ -31,6 +31,7 @@
             {
                 "concept": "alice sits between bob and carol",
                 "label": "Alice istuu Bobin ja Carolin välissä.",
+                "cloze": "Alice istuu (Bob ja Carol) välissä.",
                 "roots": [
                     "hän istuu",
                     "välissä"

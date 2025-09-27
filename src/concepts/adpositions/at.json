@@ -49,6 +49,7 @@
             {
                 "concept": "bob sits at the table",
                 "label": "Bob istuu pöydän ääressä.",
+                "cloze_test": "Bob istuu (pöytä) ääressä.",
                 "roots": [
                     "hän istuu",
                     "pöytä",
@@ -58,6 +59,7 @@
             {
                 "concept": "alice spent the night at bob's place",
                 "label": "Alice yöpyi Bobin luona.",
+                "cloze": "Alice yöpyi (Bob) luona.",
                 "roots": "luona"
             }
         ],

@@ -49,6 +49,7 @@
             {
                 "concept": "the train departs from platform 4",
                 "label": "Juna lähtee laiturilta neljä.",
+                "cloze": "Juna lähtee (laituri) neljä.",
                 "roots": [
                     "juna",
                     "laituri",

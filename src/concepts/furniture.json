@@ -90,6 +90,7 @@
             {
                 "concept": "the cat is sleeping on the carpet",
                 "label": "Kissa nukkuu matolla.",
+                "cloze": "Kissa nukkuu (mato).",
                 "roots": [
                     "kissa",
                     "nukkua",

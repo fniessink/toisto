@@ -26,6 +26,7 @@
             {
                 "concept": "I am eating soup",
                 "label": "Minä syön keittoa.",
+                "cloze": "Minä syön (keitto).",
                 "roots": [
                     "minä syön",
                     "keitto"

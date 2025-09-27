@@ -187,6 +187,19 @@ class OrderQuizType(SemanticQuizType):
 
 @final
 @dataclass(frozen=True)
+class ClozeTestQuizType(SemanticQuizType):
+    """Cloze test quiz type."""
+
+    _action: str = "cloze"
+    _instruction: str = "Repeat with the [underline]bracketed words in the correct form[/underline], in"
+
+    def other_answers(self, guess: str, answers: Labels) -> Labels:
+        """Override because returning other answers doesn't make sense if the user has to repeat the question."""
+        return Labels()
+
+
+@final
+@dataclass(frozen=True)
 class DictateQuizType(ListenOnlyQuizType):
     """Dictate quiz type."""
 
@@ -245,3 +258,4 @@ FULL_FORM = GrammaticalQuizType("full form")
 ANSWER = SemanticQuizType("answer")
 ANTONYM = SemanticQuizType("antonym")
 ORDER = OrderQuizType()
+CLOZE_TEST = ClozeTestQuizType()

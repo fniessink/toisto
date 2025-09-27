@@ -614,6 +614,7 @@
             {
                 "concept": "there is a christmas tree on the square",
                 "label": "Aukiolla on joulukuusi.",
+                "cloze": "(Aukio) on joulukuusi.",
                 "roots": [
                     "aukio",
                     "joulukuusi"
@@ -622,6 +623,7 @@
             {
                 "concept": "I am in the office",
                 "label": "Minä olen toimistolla.",
+                "cloze": "Minä olen (toimisto).",
                 "roots": [
                     "minä olen",
                     "toimisto"
@@ -903,6 +905,7 @@
             {
                 "concept": "there is a christmas tree on the square",
                 "label": "Er staat een kerstboom op het plein.",
+                "cloze": "Er (hangt/ligt/staat/zit) een kerstboom op het plein.",
                 "roots": [
                     "de kerstboom",
                     "het plein"

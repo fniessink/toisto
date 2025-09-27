@@ -18,6 +18,7 @@ JSONGrammar = str | list[str] | dict[GrammaticalCategory, "JSONGrammar"]
 LabelJSON = TypedDict(
     "LabelJSON",
     {
+        "cloze": NotRequired[JSONGrammar],
         "colloquial": NotRequired[bool],
         "concept": Required[ConceptIdListOrString],
         "label": Required[JSONGrammar],
@@ -57,7 +58,7 @@ class LabelFactory:
     def _slice_json_label(self, json_label: LabelJSON, grammatical_category: GrammaticalCategory) -> LabelJSON:
         """Return the slice of the JSON label by grammatical category."""
         json_label_slice = json_label.copy()
-        for attribute in ("label", "note", "tip"):
+        for attribute in ("label", "note", "tip", "cloze"):
             if (value := json_label.get(attribute)) and isinstance(value, dict):
                 json_label_slice[attribute] = value.get(grammatical_category, [])
         return json_label_slice
@@ -69,6 +70,8 @@ class LabelFactory:
         notes = tuple([note] if isinstance(note, str) else note)
         tip = label.get("tip", [])
         tips = tuple([tip] if isinstance(tip, str) else tip)
+        cloze_test = label.get("cloze", [])
+        cloze_tests = tuple([cloze_test] if isinstance(cloze_test, str) else cloze_test)
         colloquial = label.get("colloquial", False)
         meaning_only = label.get("meaning-only", False)
         root_or_roots = label.get("roots", [])
@@ -80,6 +83,7 @@ class LabelFactory:
             notes,
             roots,
             tips,
+            cloze_tests,
             colloquial=colloquial,
             meaning_only=meaning_only,
         )

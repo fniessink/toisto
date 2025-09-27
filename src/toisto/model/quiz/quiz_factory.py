@@ -13,6 +13,7 @@ from .quiz import Quiz, Quizzes
 from .quiz_type import (
     ANSWER,
     ANTONYM,
+    CLOZE_TEST,
     DICTATE,
     FEMININE,
     INTERPRET,
@@ -37,7 +38,7 @@ class BaseQuizFactory:
 
     def create_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes."""
-        if self.quiz_type is None or self.skip_quiz_type() or self.skip_concept(concept):
+        if self.quiz_type is None or self.skip_quiz_type(concept) or self.skip_concept(concept):
             return Quizzes()
         questions = self.questions(concept)
         answers = self.answers(concept)
@@ -56,7 +57,7 @@ class BaseQuizFactory:
             if self.include_question(question, answer) and self.answers_for_question(question, answer, answers)
         )
 
-    def skip_quiz_type(self) -> bool:
+    def skip_quiz_type(self, concept: Concept) -> bool:
         """Return whether to create quizzes for the quiz type."""
         if self.quiz_type and self.quiz_types:
             return all(not self.quiz_type.is_quiz_type(quiz_type) for quiz_type in self.quiz_types)
@@ -286,6 +287,33 @@ class OrderQuizFactory(BaseQuizFactory):
 
 
 @dataclass
+class ClozeTestQuizFactory(BaseQuizFactory):
+    """Create cloze test quizzes for a concept."""
+
+    quiz_type: QuizType | None = CLOZE_TEST
+
+    def questions(self, concept: Concept) -> Labels:
+        """Return the questions."""
+        return concept.labels(self.language_pair.target).cloze_tests
+
+    def answers(self, concept: Concept) -> Labels:
+        """Return the answers."""
+        return concept.labels(self.language_pair.target)
+
+    def answers_for_question(self, question: Label, answer: Label, answers: Labels) -> Labels:
+        """Return the answers for the question."""
+        return answers
+
+    def question_meanings(self, question: Label, concept: Concept) -> Labels:
+        """Return the question meanings."""
+        return concept.labels(self.language_pair.source)
+
+    def skip_quiz_type(self, concept: Concept) -> bool:
+        """Return whether to create quizzes for the quiz type."""
+        return not self.questions(concept)
+
+
+@dataclass
 class SemanticQuizFactory(BaseQuizFactory):
     """Create semantic quizzes for a concept."""
 
@@ -373,6 +401,7 @@ class QuizFactory:
         """Create semantic quizzes for the concept."""
         semantic_quizzes = self._quizzes(concept, previous_quizzes, SemanticQuizFactory)
         semantic_quizzes |= self._quizzes(concept, previous_quizzes, OrderQuizFactory)
+        semantic_quizzes |= self._quizzes(concept, previous_quizzes, ClozeTestQuizFactory)
         return semantic_quizzes
 
     def _quizzes(self, concept: Concept, previous_quizzes: Quizzes, factory_class: type[BaseQuizFactory]) -> Quizzes:

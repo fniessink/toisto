@@ -49,6 +49,7 @@ LabelDictLabel = (
 LabelDict = TypedDict(
     "LabelDict",
     {
+        "cloze": str | list[str] | dict[str, str],
         "colloquial": bool,
         "concept": ConceptIdListOrString,
         "label": Required[LabelDictLabel],

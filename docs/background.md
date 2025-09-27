@@ -26,8 +26,6 @@ Add more languages, but this requires help from native speakers in those languag
 
 Add more grammar and semantics. For example, more verb tenses.
 
-Add more quiz types, such as cloze deletions or reading exercises.
-
 Explain grammar.
 
 Internationalise the user interface.

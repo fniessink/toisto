@@ -28,6 +28,7 @@
             {
                 "concept": "Bob eats with Alice",
                 "label": "Bob syö Alicen kanssa.",
+                "cloze": "Bob syö (Alice) kanssa.",
                 "roots": [
                     "hän syö",
                     "kanssa"
