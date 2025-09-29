@@ -378,12 +378,14 @@ class QuizFactory:
     def concept_quizzes(self, concept: Concept, previous_quizzes: Quizzes) -> Quizzes:
         """Create the quizzes for a concept."""
         previous_quizzes = previous_quizzes or Quizzes()
+        cloze_test_quizzes = self._quizzes(concept, previous_quizzes, ClozeTestQuizFactory)
+        previous_quizzes |= cloze_test_quizzes
         translation_quizzes = self.translation_quizzes(concept, previous_quizzes)
         previous_quizzes |= translation_quizzes
         semantic_quizzes = self.semantic_quizzes(concept, Quizzes(translation_quizzes | previous_quizzes))
         previous_quizzes |= semantic_quizzes
         grammatical_quizzes = self._quizzes(concept, previous_quizzes, GrammaticalQuizFactory)
-        return Quizzes(translation_quizzes | semantic_quizzes | grammatical_quizzes)
+        return Quizzes(cloze_test_quizzes | translation_quizzes | semantic_quizzes | grammatical_quizzes)
 
     def translation_quizzes(self, concept: Concept, previous_quizzes: Quizzes | None = None) -> Quizzes:
         """Create the translation quizzes for a concept."""
@@ -401,7 +403,6 @@ class QuizFactory:
         """Create semantic quizzes for the concept."""
         semantic_quizzes = self._quizzes(concept, previous_quizzes, SemanticQuizFactory)
         semantic_quizzes |= self._quizzes(concept, previous_quizzes, OrderQuizFactory)
-        semantic_quizzes |= self._quizzes(concept, previous_quizzes, ClozeTestQuizFactory)
         return semantic_quizzes
 
     def _quizzes(self, concept: Concept, previous_quizzes: Quizzes, factory_class: type[BaseQuizFactory]) -> Quizzes:
