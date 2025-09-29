@@ -187,7 +187,7 @@ class OrderQuizType(SemanticQuizType):
 
 @final
 @dataclass(frozen=True)
-class ClozeTestQuizType(SemanticQuizType):
+class ClozeTestQuizType(QuizType):
     """Cloze test quiz type."""
 
     _action: str = "cloze"
@@ -214,6 +214,9 @@ class DictateQuizType(ListenOnlyQuizType):
         """Override to return True because dictate quizzes should always get a tip."""
         return True
 
+
+# Cloze test
+CLOZE_TEST = ClozeTestQuizType()
 
 # Translate quiz types
 READ = TranslationQuizType("read")
@@ -258,4 +261,3 @@ FULL_FORM = GrammaticalQuizType("full form")
 ANSWER = SemanticQuizType("answer")
 ANTONYM = SemanticQuizType("antonym")
 ORDER = OrderQuizType()
-CLOZE_TEST = ClozeTestQuizType()
