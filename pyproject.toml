@@ -27,7 +27,7 @@ classifiers = [
   "Topic :: Education",
 ]
 dependencies = [
-  "dramatic==0.4.1.post1",
+  "dramatic==0.5.0",
   "gtts==2.5.4",
   "pygame==2.6.1",
   "requests>=2.28",
@@ -37,13 +37,12 @@ dependencies = [
 
 optional-dependencies.dev = [
   "bandit==1.8.6",
-  "build==1.2.2.post1",
   "coverage==7.10.7",
   "fixit==2.1.0",
   "gprof2dot==2025.4.14",
   "green==4.0.2",
   "mypy==1.18.2",
-  "ruff==0.13.2",
+  "ruff==0.13.3",
   "types-requests==2.32.4.20250913",
   "unittest-xml-reporting==3.2.0",
   "vulture==2.14",
