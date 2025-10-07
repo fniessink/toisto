@@ -1,9 +1,17 @@
 {
     "concepts": {
         "to like": {
-            "example": "I like ice cream"
+            "example": [
+                "I like ice cream",
+                "I like porridge",
+                "I like pear",
+                "I like apple"
+            ]
         },
-        "I like ice cream": {}
+        "I like ice cream": {},
+        "I like porridge": {},
+        "I like pear": {},
+        "I like apple": {}
     },
     "labels": {
         "en": [
@@ -32,6 +40,30 @@
                 "roots": [
                     "I like",
                     "ice cream"
+                ]
+            },
+            {
+                "concept": "I like porridge",
+                "label": "I like porridge.",
+                "roots": [
+                    "I like",
+                    "porridge"
+                ]
+            },
+            {
+                "concept": "I like pear",
+                "label": "I like pear.",
+                "roots": [
+                    "I like",
+                    "pear"
+                ]
+            },
+            {
+                "concept": "I like apple",
+                "label": "I like apple.",
+                "roots": [
+                    "I like",
+                    "apple"
                 ]
             }
         ],
@@ -76,6 +108,33 @@
                     "minä pidän",
                     "jäätelö"
                 ]
+            },
+            {
+                "concept": "I like porridge",
+                "label": "Minä pidän puurosta.",
+                "cloze": "Minä pidän (puuro).",
+                "roots": [
+                    "minä pidän",
+                    "puuro"
+                ]
+            },
+            {
+                "concept": "I like pear",
+                "label": "Minä pidän päärynästä.",
+                "cloze": "Minä pidän (päärynä).",
+                "roots": [
+                    "minä pidän",
+                    "päärynä"
+                ]
+            },
+            {
+                "concept": "I like apple",
+                "label": "Minä pidän omenasta.",
+                "cloze": "Minä pidän (omena).",
+                "roots": [
+                    "minä pidän",
+                    "omena"
+                ]
             }
         ],
         "nl": [
@@ -107,6 +166,39 @@
                 "roots": [
                     "ik houd van",
                     "het ijs"
+                ]
+            },
+            {
+                "concept": "I like porridge",
+                "label": [
+                    "Ik hou van pap.",
+                    "Ik houd van pap."
+                ],
+                "roots": [
+                    "ik houd van",
+                    "de pap"
+                ]
+            },
+            {
+                "concept": "I like pear",
+                "label": [
+                    "Ik hou van peer.",
+                    "Ik houd van peer."
+                ],
+                "roots": [
+                    "ik houd van",
+                    "de peer"
+                ]
+            },
+            {
+                "concept": "I like apple",
+                "label": [
+                    "Ik hou van appel.",
+                    "Ik houd van appel."
+                ],
+                "roots": [
+                    "ik houd van",
+                    "de appel"
                 ]
             }
         ]

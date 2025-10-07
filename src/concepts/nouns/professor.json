@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "professor": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "professor",
+                "label": {
+                    "single": "professor",
+                    "plural": "professors"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "professor",
+                "label": {
+                    "single": "professori",
+                    "plural": "professorit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "professor",
+                "label": {
+                    "singular": "de professor",
+                    "plural": "de professoren"
+                }
+            }
+        ]
+    }
+}

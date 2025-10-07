@@ -6,6 +6,12 @@
                 "weekend"
             ],
             "hypernym": "day"
+        },
+        "on sunday": {
+            "involves": "sunday"
+        },
+        "every sunday": {
+            "involves": "sunday"
         }
     },
     "labels": {
@@ -13,13 +19,35 @@
             {
                 "concept": "sunday",
                 "label": {
-                    "singular": "Sunday",
-                    "plural": "Sundays"
+                    "full form": {
+                        "singular": "Sunday",
+                        "plural": "Sundays"
+                    },
+                    "abbreviation": [
+                        "Sun.",
+                        "Sun"
+                    ]
                 },
                 "note": "In English, the names of weekdays are capitalized",
                 "roots": [
                     "sun",
                     "day"
+                ]
+            },
+            {
+                "concept": "on sunday",
+                "label": {
+                    "singular": "on Sunday",
+                    "plural": "on Sundays"
+                },
+                "roots": "Sunday"
+            },
+            {
+                "concept": "every sunday",
+                "label": "every Sunday",
+                "roots": [
+                    "every",
+                    "Sunday"
                 ]
             }
         ],
@@ -27,27 +55,67 @@
             {
                 "concept": "sunday",
                 "label": {
-                    "singular": "sunnuntai",
-                    "plural": "sunnuntait"
+                    "full form": {
+                        "singular": "sunnuntai",
+                        "plural": "sunnuntait"
+                    },
+                    "abbreviation": "su"
                 },
                 "note": "In Finnish, the names of weekdays are not capitalized"
+            },
+            {
+                "concept": "on sunday",
+                "label": {
+                    "singular": "sunnuntaina",
+                    "plural": "sunnuntaisin"
+                },
+                "roots": "sunnuntai"
+            },
+            {
+                "concept": "every sunday",
+                "label": "joka sunnuntai",
+                "roots": [
+                    "joka",
+                    "sunnuntai"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "sunday",
                 "label": {
-                    "singular": [
-                        "zondag",
-                        "de zondag"
-                    ],
-                    "plural": "de zondagen"
+                    "full form": {
+                        "singular": [
+                            "zondag",
+                            "de zondag"
+                        ],
+                        "plural": "de zondagen"
+                    },
+                    "abbreviation": "zo"
                 },
                 "note": "In Dutch, the names of weekdays are not capitalized",
                 "roots": [
                     "de zon",
                     "de dag"
                 ]
+            },
+            {
+                "concept": "on sunday",
+                "label": {
+                    "singular": "op zondag",
+                    "plural": "op zondagen"
+                },
+                "roots": "de zondag"
+            },
+            {
+                "concept": "every sunday",
+                "label": "elke zondag",
+                "roots": "de zondag"
+            },
+            {
+                "concept": "every sunday",
+                "label": "iedere zondag",
+                "roots": "de zondag"
             }
         ]
     }

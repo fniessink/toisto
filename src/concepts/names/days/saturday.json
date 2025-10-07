@@ -6,6 +6,12 @@
                 "weekend"
             ],
             "hypernym": "day"
+        },
+        "on saturday": {
+            "involves": "saturday"
+        },
+        "every saturday": {
+            "involves": "saturday"
         }
     },
     "labels": {
@@ -13,35 +19,97 @@
             {
                 "concept": "saturday",
                 "label": {
-                    "singular": "Saturday",
-                    "plural": "Saturdays"
+                    "full form": {
+                        "singular": "Saturday",
+                        "plural": "Saturdays"
+                    },
+                    "abbreviation": [
+                        "Sat.",
+                        "Sat"
+                    ]
                 },
                 "note": "In English, the names of weekdays are capitalized",
                 "roots": "day"
+            },
+            {
+                "concept": "on saturday",
+                "label": {
+                    "singular": "on Saturday",
+                    "plural": "on Saturdays"
+                },
+                "roots": "Saturday"
+            },
+            {
+                "concept": "every saturday",
+                "label": "every Saturday",
+                "roots": [
+                    "every",
+                    "Saturday"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "saturday",
                 "label": {
-                    "singular": "lauantai",
-                    "plural": "lauantait"
+                    "full form": {
+                        "singular": "lauantai",
+                        "plural": "lauantait"
+                    },
+                    "abbreviation": "la"
                 },
                 "note": "In Finnish, the names of weekdays are not capitalized"
+            },
+            {
+                "concept": "on saturday",
+                "label": {
+                    "singular": "lauantaina",
+                    "plural": "lauantaisin"
+                },
+                "roots": "lauantai"
+            },
+            {
+                "concept": "every saturday",
+                "label": "joka lauantai",
+                "roots": [
+                    "joka",
+                    "lauantai"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "saturday",
                 "label": {
-                    "singular": [
-                        "zaterdag",
-                        "de zaterdag"
-                    ],
-                    "plural": "de zaterdagen"
+                    "full form": {
+                        "singular": [
+                            "zaterdag",
+                            "de zaterdag"
+                        ],
+                        "plural": "de zaterdagen"
+                    },
+                    "abbreviation": "za"
                 },
                 "note": "In Dutch, the names of weekdays are not capitalized",
                 "roots": "de dag"
+            },
+            {
+                "concept": "on saturday",
+                "label": {
+                    "singular": "op zaterdag",
+                    "plural": "op zaterdagen"
+                },
+                "roots": "de zaterdag"
+            },
+            {
+                "concept": "every saturday",
+                "label": "elke zaterdag",
+                "roots": "de zaterdag"
+            },
+            {
+                "concept": "every saturday",
+                "label": "iedere zaterdag",
+                "roots": "de zaterdag"
             }
         ]
     }

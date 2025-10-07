@@ -1,7 +1,10 @@
 {
     "concepts": {
-        "just": {},
-        "just now": {}
+        "just": {
+            "example": "just a while ago"
+        },
+        "just now": {},
+        "just a while ago": {}
     },
     "labels": {
         "en": [
@@ -23,6 +26,11 @@
             {
                 "concept": "just now",
                 "label": "a moment ago"
+            },
+            {
+                "concept": "just a while ago",
+                "label": "just a while ago",
+                "roots": "just"
             }
         ],
         "fi": [
@@ -56,6 +64,14 @@
                     "juuri",
                     "nyt"
                 ]
+            },
+            {
+                "concept": "just a while ago",
+                "label": "vasta äsken",
+                "roots": [
+                    "vasta",
+                    "äsken"
+                ]
             }
         ],
         "nl": [
@@ -80,6 +96,17 @@
                 "concept": "just now",
                 "label": "zojuist",
                 "roots": "juist"
+            },
+            {
+                "concept": "just a while ago",
+                "label": [
+                    "nog maar net",
+                    "nog maar pas"
+                ],
+                "roots": [
+                    "net",
+                    "pas"
+                ]
             }
         ]
     }

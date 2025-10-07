@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "gram": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "gram",
+                "label": {
+                    "single": "gram",
+                    "plural": "grams"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gram",
+                "label": {
+                    "single": "gramma",
+                    "plural": "grammat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gram",
+                "label": {
+                    "singular": "de gram",
+                    "plural": "de grammen"
+                }
+            }
+        ]
+    }
+}

@@ -3,6 +3,12 @@
         "thursday": {
             "holonym": "days of the week",
             "hypernym": "day"
+        },
+        "on thursday": {
+            "involves": "thursday"
+        },
+        "every thursday": {
+            "involves": "thursday"
         }
     },
     "labels": {
@@ -10,35 +16,97 @@
             {
                 "concept": "thursday",
                 "label": {
-                    "singular": "Thursday",
-                    "plural": "Thursdays"
+                    "full form": {
+                        "singular": "Thursday",
+                        "plural": "Thursdays"
+                    },
+                    "abbreviation": [
+                        "Thu.",
+                        "Thu"
+                    ]
                 },
                 "note": "In English, the names of weekdays are capitalized",
                 "roots": "day"
+            },
+            {
+                "concept": "on thursday",
+                "label": {
+                    "singular": "on Thursday",
+                    "plural": "on Thursdays"
+                },
+                "roots": "Thursday"
+            },
+            {
+                "concept": "every thursday",
+                "label": "every Thursday",
+                "roots": [
+                    "every",
+                    "Thursday"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "thursday",
                 "label": {
-                    "singular": "torstai",
-                    "plural": "torstait"
+                    "full form": {
+                        "singular": "torstai",
+                        "plural": "torstait"
+                    },
+                    "abbreviation": "to"
                 },
                 "note": "In Finnish, the names of weekdays are not capitalized"
+            },
+            {
+                "concept": "on thursday",
+                "label": {
+                    "singular": "torstaina",
+                    "plural": "torstaisin"
+                },
+                "roots": "torstai"
+            },
+            {
+                "concept": "every thursday",
+                "label": "joka torstai",
+                "roots": [
+                    "joka",
+                    "torstai"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "thursday",
                 "label": {
-                    "singular": [
-                        "donderdag",
-                        "de donderdag"
-                    ],
-                    "plural": "de donderdagen"
+                    "full form": {
+                        "singular": [
+                            "donderdag",
+                            "de donderdag"
+                        ],
+                        "plural": "de donderdagen"
+                    },
+                    "abbreviation": "do"
                 },
                 "note": "In Dutch, the names of weekdays are not capitalized",
                 "roots": "de dag"
+            },
+            {
+                "concept": "on thursday",
+                "label": {
+                    "singular": "op donderdag",
+                    "plural": "op donderdagen"
+                },
+                "roots": "de donderdag"
+            },
+            {
+                "concept": "every thursday",
+                "label": "elke donderdag",
+                "roots": "de donderdag"
+            },
+            {
+                "concept": "every thursday",
+                "label": "iedere donderdag",
+                "roots": "de donderdag"
             }
         ]
     }

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "minister": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "minister",
+                "label": {
+                    "single": "minister",
+                    "plural": "ministers"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "minister",
+                "label": {
+                    "single": "ministeri",
+                    "plural": "ministerit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "minister",
+                "label": {
+                    "singular": "de minister",
+                    "plural": "de ministers"
+                }
+            }
+        ]
+    }
+}

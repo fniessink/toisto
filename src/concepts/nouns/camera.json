@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "camera": {
+            "hypernym": "device"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "camera",
+                "label": {
+                    "single": "camera",
+                    "plural": "cameras"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "camera",
+                "label": {
+                    "single": "kamera",
+                    "plural": "kamerat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "camera",
+                "label": {
+                    "singular": "de camera",
+                    "plural": "de camera's"
+                }
+            }
+        ]
+    }
+}

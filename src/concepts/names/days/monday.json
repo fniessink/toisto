@@ -5,7 +5,10 @@
             "hypernym": "day"
         },
         "on monday": {
-            "roots": "monday"
+            "involves": "monday"
+        },
+        "every monday": {
+            "involves": "monday"
         }
     },
     "labels": {
@@ -13,8 +16,14 @@
             {
                 "concept": "monday",
                 "label": {
-                    "singular": "Monday",
-                    "plural": "Mondays"
+                    "full form": {
+                        "singular": "Monday",
+                        "plural": "Mondays"
+                    },
+                    "abbreviation": [
+                        "Mon.",
+                        "Mon"
+                    ]
                 },
                 "note": "In English, the names of weekdays are capitalized",
                 "roots": "day"
@@ -26,14 +35,25 @@
                     "plural": "on Mondays"
                 },
                 "roots": "Monday"
+            },
+            {
+                "concept": "every monday",
+                "label": "every Monday",
+                "roots": [
+                    "every",
+                    "Monday"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "monday",
                 "label": {
-                    "singular": "maanantai",
-                    "plural": "maanantait"
+                    "full form": {
+                        "singular": "maanantai",
+                        "plural": "maanantait"
+                    },
+                    "abbreviation": "ma"
                 },
                 "note": "In Finnish, the names of weekdays are not capitalized"
             },
@@ -44,17 +64,28 @@
                     "plural": "maanantaisin"
                 },
                 "roots": "maanantai"
+            },
+            {
+                "concept": "every monday",
+                "label": "joka maanantai",
+                "roots": [
+                    "joka",
+                    "maanantai"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "monday",
                 "label": {
-                    "singular": [
-                        "maandag",
-                        "de maandag"
-                    ],
-                    "plural": "de maandagen"
+                    "full form": {
+                        "singular": [
+                            "maandag",
+                            "de maandag"
+                        ],
+                        "plural": "de maandagen"
+                    },
+                    "abbreviation": "ma"
                 },
                 "note": "In Dutch, the names of weekdays are not capitalized",
                 "roots": "de dag"
@@ -65,7 +96,17 @@
                     "singular": "op maandag",
                     "plural": "op maandagen"
                 },
-                "roots": "maandag"
+                "roots": "de maandag"
+            },
+            {
+                "concept": "every monday",
+                "label": "elke maandag",
+                "roots": "de maandag"
+            },
+            {
+                "concept": "every monday",
+                "label": "iedere maandag",
+                "roots": "de maandag"
             }
         ]
     }

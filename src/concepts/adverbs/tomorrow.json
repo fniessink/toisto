@@ -1,7 +1,11 @@
 {
     "concepts": {
         "tomorrow": {
-            "hypernym": "day"
+            "hypernym": "day",
+            "example": [
+                "tomorrow it is tuesday",
+                "tomorrow it is sunday"
+            ]
         },
         "the day after tomorrow": {
             "hypernym": "day"

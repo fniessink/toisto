@@ -1,0 +1,42 @@
+{
+    "concepts": {
+        "giraffe": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "giraffe",
+                "label": {
+                    "single": "giraffe",
+                    "plural": "giraffes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "giraffe",
+                "label": {
+                    "single": "kenguru",
+                    "plural": "kengurut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "giraffe",
+                "label": {
+                    "singular": [
+                        "de giraf",
+                        "de giraffe"
+                    ],
+                    "plural": [
+                        "de giraffen",
+                        "de giraffes"
+                    ]
+                }
+            }
+        ]
+    }
+}

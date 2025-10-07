@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "cognac": {
+            "hypernym": "drink"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cognac",
+                "label": {
+                    "singular": "cognac",
+                    "plural": "cognacs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cognac",
+                "label": {
+                    "singular": "konjakki",
+                    "plural": "konjakit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cognac",
+                "label": {
+                    "singular": "de cognac",
+                    "plural": "de cognacs"
+                }
+            }
+        ]
+    }
+}

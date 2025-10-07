@@ -1,25 +1,42 @@
 {
     "concepts": {
-        "what": {},
-        "why": {},
-        "where": {},
+        "what": {
+            "hypernym": "question word"
+        },
+        "why": {
+            "hypernym": "question word"
+        },
+        "where": {
+            "hypernym": "question word"
+        },
         "where from": {
+            "hypernym": "question word",
             "example": "where are you from"
         },
         "where are you from": {},
-        "when": {},
-        "how": {},
+        "when": {
+            "hypernym": "question word"
+        },
+        "how": {
+            "hypernym": "question word"
+        },
         "how many": {
+            "hypernym": "question word",
             "example": "how many degrees is it outside"
         },
         "what kind of": {
+            "hypernym": "question word",
             "example": [
                 "what is the weather like",
                 "what kind of cat do you have"
             ]
         },
-        "to where": {},
-        "from which country": {},
+        "to where": {
+            "hypernym": "question word"
+        },
+        "from which country": {
+            "hypernym": "question word"
+        },
         "from which country are you": {},
         "where is the water": {},
         "where there": {},

@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "soon": {
+            "example": "it will rain soon"
+        },
+        "it will rain soon": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "soon",
+                "label": "soon"
+            },
+            {
+                "concept": "it will rain soon",
+                "label": "It will rain soon.",
+                "roots": "soon"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "soon",
+                "label": "kohta"
+            },
+            {
+                "concept": "it will rain soon",
+                "label": "Kohta sataa.",
+                "roots": "kohta"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "soon",
+                "label": "binnenkort"
+            },
+            {
+                "concept": "it will rain soon",
+                "label": "Het gaat binnenkort regenen.",
+                "roots": "binnenkort"
+            }
+        ]
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "kangaroo": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "kangaroo",
+                "label": {
+                    "single": "kangaroo",
+                    "plural": "kangaroos"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "kangaroo",
+                "label": {
+                    "single": "kenguru",
+                    "plural": "kengurut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "kangaroo",
+                "label": {
+                    "singular": "de kangoeroe",
+                    "plural": "de kangoeroes"
+                }
+            }
+        ]
+    }
+}

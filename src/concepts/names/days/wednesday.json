@@ -5,7 +5,10 @@
             "hypernym": "day"
         },
         "on wednesday": {
-            "roots": "wednesday"
+            "involves": "wednesday"
+        },
+        "every wednesday": {
+            "involves": "wednesday"
         }
     },
     "labels": {
@@ -13,51 +16,98 @@
             {
                 "concept": "wednesday",
                 "label": {
-                    "singular": "Wednesday",
-                    "plural": "Wednesdays"
+                    "full form": {
+                        "singular": "Wednesday",
+                        "plural": "Wednesdays"
+                    },
+                    "abbreviation": [
+                        "Wed.",
+                        "Wed"
+                    ]
                 },
                 "note": "In English, the names of weekdays are capitalized",
                 "roots": "day"
             },
             {
                 "concept": "on wednesday",
-                "label": "on Wednesday",
+                "label": {
+                    "singular": "on Wednesday",
+                    "plural": "on Wednesdays"
+                },
                 "roots": "Wednesday"
+            },
+            {
+                "concept": "every wednesday",
+                "label": "every Wednesday",
+                "roots": [
+                    "every",
+                    "Wednesday"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "wednesday",
                 "label": {
-                    "singular": "keskiviikko",
-                    "plural": "keskiviikot"
+                    "full form": {
+                        "singular": "keskiviikko",
+                        "plural": "keskiviikot"
+                    },
+                    "abbreviation": "ke"
                 },
                 "note": "In Finnish, the names of weekdays are not capitalized",
                 "roots": "viikko"
             },
             {
                 "concept": "on wednesday",
-                "label": "keskiviikkona",
+                "label": {
+                    "singular": "keskiviikkona",
+                    "plural": "keskiviikkoisin"
+                },
                 "roots": "keskiviikko"
+            },
+            {
+                "concept": "every wednesday",
+                "label": "joka keskiviikko",
+                "roots": [
+                    "joka",
+                    "keskiviikko"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "wednesday",
                 "label": {
-                    "singular": [
-                        "woensdag",
-                        "de woensdag"
-                    ],
-                    "plural": "de woensdagen"
+                    "full form": {
+                        "singular": [
+                            "woensdag",
+                            "de woensdag"
+                        ],
+                        "plural": "de woensdagen"
+                    },
+                    "abbreviation": "wo"
                 },
                 "note": "In Dutch, the names of weekdays are not capitalized",
                 "roots": "de dag"
             },
             {
                 "concept": "on wednesday",
-                "label": "op woensdag",
+                "label": {
+                    "singular": "op woensdag",
+                    "plural": "op woensdagen"
+                },
                 "roots": "woensdag"
+            },
+            {
+                "concept": "every wednesday",
+                "label": "elke woensdag",
+                "roots": "de woensdag"
+            },
+            {
+                "concept": "every tuesday",
+                "label": "iedere woensdag",
+                "roots": "de woensdag"
             }
         ]
     }

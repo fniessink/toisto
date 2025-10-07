@@ -1,7 +1,10 @@
 {
     "concepts": {
         "up": {},
-        "up to": {}
+        "up to": {
+            "example": "I am on vacation until Sunday"
+        },
+        "I am on vacation until Sunday": {}
     },
     "labels": {
         "en": [
@@ -20,6 +23,20 @@
             {
                 "concept": "up to",
                 "label": "up to"
+            },
+            {
+                "concept": "up to",
+                "label": "until"
+            },
+            {
+                "concept": "I am on vacation until Sunday",
+                "label": "I am on vacation until Sunday.",
+                "roots": [
+                    "I am",
+                    "vacation",
+                    "until",
+                    "Sunday"
+                ]
             }
         ],
         "fi": [
@@ -30,6 +47,16 @@
             {
                 "concept": "up to",
                 "label": "asti"
+            },
+            {
+                "concept": "I am on vacation until Sunday",
+                "label": "Minä olen lomalla sunnuntaihin asti.",
+                "roots": [
+                    "minä olen",
+                    "loma",
+                    "sunnuntai",
+                    "asti"
+                ]
             }
         ],
         "nl": [
@@ -48,6 +75,19 @@
             {
                 "concept": "up to",
                 "label": "tot en met"
+            },
+            {
+                "concept": "I am on vacation until Sunday",
+                "label": [
+                    "Ik ben op vakantie tot en met zondag.",
+                    "Ik ben tot en met zondag op vakantie."
+                ],
+                "roots": [
+                    "ik ben",
+                    "de vakantie",
+                    "tot en met",
+                    "zondag"
+                ]
             }
         ]
     }

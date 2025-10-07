@@ -1,6 +1,9 @@
 {
     "concepts": {
-        "bar": {}
+        "bar": {
+            "example": "the bar is open"
+        },
+        "the bar is open": {}
     },
     "labels": {
         "en": [
@@ -10,6 +13,14 @@
                     "singular": "bar",
                     "plural": "bars"
                 }
+            },
+            {
+                "concept": "the bar is open",
+                "label": "The bar is open.",
+                "roots": [
+                    "bar",
+                    "open"
+                ]
             }
         ],
         "fi": [
@@ -19,6 +30,14 @@
                     "singular": "baari",
                     "plural": "baarit"
                 }
+            },
+            {
+                "concept": "the bar is open",
+                "label": "Baari on auki.",
+                "roots": [
+                    "baari",
+                    "auki"
+                ]
             }
         ],
         "nl": [
@@ -28,6 +47,14 @@
                     "singular": "de bar",
                     "plural": "de bars"
                 }
+            },
+            {
+                "concept": "the bar is open",
+                "label": "De bar is open.",
+                "roots": [
+                    "de bar",
+                    "open"
+                ]
             }
         ]
     }

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "president": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "president",
+                "label": {
+                    "single": "president",
+                    "plural": "presidents"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "president",
+                "label": {
+                    "single": "presidentti",
+                    "plural": "presidentit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "president",
+                "label": {
+                    "singular": "de president",
+                    "plural": "de presidenten"
+                }
+            }
+        ]
+    }
+}

@@ -1,6 +1,8 @@
 {
     "concepts": {
-        "which": {}
+        "which": {
+            "hypernym": "question word"
+        }
     },
     "labels": {
         "en": [
@@ -22,11 +24,10 @@
         "nl": [
             {
                 "concept": "which",
-                "label": "Welke?"
-            },
-            {
-                "concept": "which",
-                "label": "Welk?"
+                "label": [
+                    "Welke?",
+                    "Welk?"
+                ]
             }
         ]
     }
