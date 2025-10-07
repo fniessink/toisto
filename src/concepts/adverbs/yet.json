@@ -1,6 +1,9 @@
 {
     "concepts": {
-        "yet": {}
+        "yet": {
+            "example": "I am not at work yet"
+        },
+        "I am not at work yet": {}
     },
     "labels": {
         "en": [
@@ -10,18 +13,45 @@
                     "yet"
                 ],
                 "label": "yet"
+            },
+            {
+                "concept": "I am not at work yet",
+                "label": "I am not at work yet.",
+                "roots": [
+                    "I am",
+                    "work",
+                    "yet"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "yet",
                 "label": "vielä"
+            },
+            {
+                "concept": "I am not at work yet",
+                "label": "Minä en ole vielä tôissä.",
+                "roots": [
+                    "minä olen",
+                    "vielä",
+                    "työ"
+                ]
             }
         ],
         "nl": [
             {
                 "concept": "yet",
                 "label": "nog"
+            },
+            {
+                "concept": "I am not at work yet",
+                "label": "Ik ben nog niet op het werk.",
+                "roots": [
+                    "ik ben",
+                    "nog",
+                    "het werk"
+                ]
             }
         ]
     }

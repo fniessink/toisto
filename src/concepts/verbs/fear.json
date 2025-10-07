@@ -1,6 +1,9 @@
 {
     "concepts": {
-        "to fear": {}
+        "to fear": {
+            "example": "elephants fear mice"
+        },
+        "elephants fear mice": {}
     },
     "labels": {
         "en": [
@@ -22,6 +25,15 @@
                         "third person": "they fear"
                     }
                 }
+            },
+            {
+                "concept": "elephants fear mice",
+                "label": "Elephants fear mice.",
+                "roots": [
+                    "elephant",
+                    "to fear",
+                    "mouse"
+                ]
             }
         ],
         "fi": [
@@ -40,6 +52,15 @@
                         "third person": "he pelkäävät"
                     }
                 }
+            },
+            {
+                "concept": "elephants fear mice",
+                "label": "Norsut pelkäävät hiiriä.",
+                "roots": [
+                    "norsu",
+                    "pelätä",
+                    "hiiri"
+                ]
             }
         ],
         "nl": [
@@ -61,6 +82,15 @@
                         "third person": "zij zijn bang"
                     }
                 }
+            },
+            {
+                "concept": "elephants fear mice",
+                "label": "Olifanten zijn bang voor muizen.",
+                "roots": [
+                    "de olifant",
+                    "bang zijn",
+                    "de muis"
+                ]
             }
         ]
     }

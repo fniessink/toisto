@@ -1,7 +1,10 @@
 {
     "concepts": {
         "fruit": {
-            "example": "fruit is healthy",
+            "example": [
+                "fruit is healthy",
+                "fruits contains little energy"
+            ],
             "hypernym": "food"
         },
         "fruit is healthy": {}

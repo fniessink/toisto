@@ -8,8 +8,7 @@
         "therefore": {},
         "too": {},
         "exactly": {},
-        "hopefully": {},
-        "already": {}
+        "hopefully": {}
     },
     "labels": {
         "en": [
@@ -48,10 +47,6 @@
             {
                 "concept": "hopefully",
                 "label": "hopefully"
-            },
-            {
-                "concept": "already",
-                "label": "already"
             }
         ],
         "fi": [
@@ -86,10 +81,6 @@
             {
                 "concept": "hopefully",
                 "label": "toivottavasti"
-            },
-            {
-                "concept": "already",
-                "label": "jo"
             }
         ],
         "nl": [
@@ -128,10 +119,6 @@
             {
                 "concept": "hopefully",
                 "label": "hopelijk"
-            },
-            {
-                "concept": "already",
-                "label": "al"
             }
         ]
     }

@@ -269,7 +269,10 @@
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "from Monday to Friday",
+                "label": {
+                    "full form": "from Monday to Friday",
+                    "abbreviation": "Mon-Fri"
+                },
                 "roots": [
                     "Monday",
                     "Friday"
@@ -539,7 +542,10 @@
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "maanantaista perjantaihin",
+                "label": {
+                    "full form": "maanantaista perjantaihin",
+                    "abbreviation": "ma-pe"
+                },
                 "roots": [
                     "maanantai",
                     "perjantai"
@@ -759,7 +765,10 @@
             },
             {
                 "concept": "from Monday to Friday",
-                "label": "van maandag tot vrijdag",
+                "label": {
+                    "full form": "van maandag tot vrijdag",
+                    "abbreviation": "ma-vr"
+                },
                 "roots": [
                     "maandag",
                     "vrijdag"

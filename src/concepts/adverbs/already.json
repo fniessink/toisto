@@ -1,0 +1,55 @@
+{
+    "concepts": {
+        "already": {
+            "example": "are you alrady at work"
+        },
+        "are you already at work": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "already",
+                "label": "already"
+            },
+            {
+                "concept": "are you already at work",
+                "label": "Are you already at work?",
+                "roots": [
+                    "you are",
+                    "already",
+                    "work"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "already",
+                "label": "jo"
+            },
+            {
+                "concept": "are you already at work",
+                "label": "Oletko jo töissä?",
+                "roots": [
+                    "sinä olet",
+                    "jo",
+                    "työ"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "already",
+                "label": "al"
+            },
+            {
+                "concept": "are you already at work",
+                "label": "Ben je al op het werk?",
+                "roots": [
+                    "jij bent",
+                    "al",
+                    "het werk"
+                ]
+            }
+        ]
+    }
+}

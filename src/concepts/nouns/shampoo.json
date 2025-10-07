@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "shampoo": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "shampoo",
+                "label": "shampoo"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "shampoo",
+                "label": "sampoo"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "shampoo",
+                "label": "de shampoo"
+            }
+        ]
+    }
+}

@@ -227,7 +227,8 @@
             "hypernym": "drink"
         },
         "pear": {
-            "hypernym": "fruit"
+            "hypernym": "fruit",
+            "example": "I like pear"
         },
         "cauliflower": {
             "hypernym": "vegetable"
@@ -283,9 +284,6 @@
         "vanilla": {
             "hypernym": "food"
         },
-        "banana": {
-            "hypernym": "fruit"
-        },
         "pineapple": {
             "hypernym": "fruit"
         },
@@ -312,7 +310,8 @@
             "hypernym": "food"
         },
         "porridge": {
-            "hypernym": "food"
+            "hypernym": "food",
+            "example": "I like porridge"
         },
         "hunger": {
             "involves": "food"
@@ -916,13 +915,6 @@
                 "label": "vanilla"
             },
             {
-                "concept": "banana",
-                "label": {
-                    "singular": "banana",
-                    "plural": "bananas"
-                }
-            },
-            {
                 "concept": "pineapple",
                 "label": {
                     "singular": "pineapple",
@@ -1286,8 +1278,14 @@
             {
                 "concept": "pizza",
                 "label": {
-                    "singular": "pizza",
-                    "plural": "pizzat"
+                    "singular": [
+                        "pizza",
+                        "pitsa"
+                    ],
+                    "plural": [
+                        "pizzat",
+                        "pitsat"
+                    ]
                 }
             },
             {
@@ -1611,13 +1609,6 @@
             {
                 "concept": "vanilla",
                 "label": "vanilja"
-            },
-            {
-                "concept": "banana",
-                "label": {
-                    "singular": "banaani",
-                    "plural": "banaanit"
-                }
             },
             {
                 "concept": "pineapple",
@@ -2312,13 +2303,6 @@
             {
                 "concept": "vanilla",
                 "label": "vanille"
-            },
-            {
-                "concept": "banana",
-                "label": {
-                    "singular": "de banaan",
-                    "plural": "de bananen"
-                }
             },
             {
                 "concept": "pineapple",

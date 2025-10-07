@@ -1,0 +1,61 @@
+{
+    "concepts": {
+        "energy": {},
+        "fruits contain little energy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "energy",
+                "label": {
+                    "singular": "energy",
+                    "plural": "energies"
+                }
+            },
+            {
+                "concept": "fruits contain little energy",
+                "label": "Fruits contain little energy.",
+                "roots": [
+                    "fruit",
+                    "energy"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "energy",
+                "label": {
+                    "singular": "energia",
+                    "plural": "energiat"
+                }
+            },
+            {
+                "concept": "fruits contain little energy",
+                "label": "Hedelmät sisältävät vähän energiaa.",
+                "roots": [
+                    "hedelmä",
+                    "vähän",
+                    "energia"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "energy",
+                "label": {
+                    "singular": "de energie",
+                    "plural": "de energieën"
+                }
+            },
+            {
+                "concept": "fruits contain little energy",
+                "label": "Fruit bevat weinig energie.",
+                "roots": [
+                    "het fruit",
+                    "weinig",
+                    "de energie"
+                ]
+            }
+        ]
+    }
+}

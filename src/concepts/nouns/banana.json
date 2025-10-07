@@ -1,0 +1,108 @@
+{
+    "concepts": {
+        "banana": {
+            "hypernym": "fruit",
+            "example": [
+                "the banana is yellow",
+                "is the banana ripe"
+            ]
+        },
+        "the banana is yellow": {},
+        "is the banana ripe": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "banana",
+                "label": {
+                    "singular": "banana",
+                    "plural": "bananas"
+                }
+            },
+            {
+                "concept": "the banana is yellow",
+                "label": {
+                    "singular": "The banana is yellow.",
+                    "plural": "The bananas are yellow."
+                },
+                "roots": [
+                    "banana",
+                    "yellow"
+                ]
+            },
+            {
+                "concept": "is the banana ripe",
+                "label": {
+                    "singular": "Is the banana ripe?",
+                    "plural": "Are the bananas ripe?"
+                },
+                "roots": [
+                    "banana",
+                    "ripe"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "banana",
+                "label": {
+                    "singular": "banaani",
+                    "plural": "banaanit"
+                }
+            },
+            {
+                "concept": "the banana is yellow",
+                "label": {
+                    "singular": "Banaani on keltainen.",
+                    "plural": "Banaanit ovat keltaisia."
+                },
+                "roots": [
+                    "banaani",
+                    "keltainen"
+                ]
+            },
+            {
+                "concept": "is the banana ripe",
+                "label": {
+                    "singular": "Onko banaani kypsä?",
+                    "plural": "Ovatko banaanit kypsiä?"
+                },
+                "roots": [
+                    "banaani",
+                    "kypsä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "banana",
+                "label": {
+                    "singular": "de banaan",
+                    "plural": "de bananen"
+                }
+            },
+            {
+                "concept": "the banana is yellow",
+                "label": {
+                    "singular": "De banaan is geel.",
+                    "plural": "De bananen zijn geel."
+                },
+                "roots": [
+                    "de banaan",
+                    "geel"
+                ]
+            },
+            {
+                "concept": "is the banana ripe",
+                "label": {
+                    "singular": "Is de banaan rijp?",
+                    "plural": "Zijn de bananen rijp?"
+                },
+                "roots": [
+                    "de banaan",
+                    "rijp"
+                ]
+            }
+        ]
+    }
+}

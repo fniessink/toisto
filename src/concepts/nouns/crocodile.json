@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "crocodile": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "crocodile",
+                "label": {
+                    "single": "crocodile",
+                    "plural": "crocodiles"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "crocodile",
+                "label": {
+                    "single": "krokotiili",
+                    "plural": "krokotiilit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "crocodile",
+                "label": {
+                    "singular": "de krokodil",
+                    "plural": "de krokodillen"
+                }
+            }
+        ]
+    }
+}

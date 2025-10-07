@@ -1,7 +1,10 @@
 {
     "concepts": {
         "to live": {},
-        "to live together": {}
+        "to live together": {},
+        "I live in Vaasa": {},
+        "I live in Jyväskylä": {},
+        "I live in Amsterdam": {}
     },
     "labels": {
         "en": [
@@ -62,7 +65,23 @@
             },
             {
                 "concept": "to live together",
-                "label": "to live together"
+                "label": "to live together",
+                "roots": "to live"
+            },
+            {
+                "concept": "I live in Vaasa",
+                "label": "I live in Vaasa.",
+                "roots": "I live"
+            },
+            {
+                "concept": "I live in Jyväskylä",
+                "label": "I live in Jyväskylä.",
+                "roots": "I live"
+            },
+            {
+                "concept": "I live in Amsterdam",
+                "label": "I live in Amsterdam.",
+                "roots": "I live"
             }
         ],
         "fi": [
@@ -115,6 +134,24 @@
             {
                 "concept": "to live together",
                 "label": "asua yhdessä"
+            },
+            {
+                "concept": "I live in Vaasa",
+                "label": "Minä asun Vaasassa.",
+                "cloze": "Minä asun (Vaasa).",
+                "roots": "minä asun"
+            },
+            {
+                "concept": "I live in Jyväskylä",
+                "label": "Minä asun Jyväskylässä.",
+                "cloze": "Minä asun (Jyväskylä).",
+                "roots": "minä asun"
+            },
+            {
+                "concept": "I live in Amsterdam",
+                "label": "Minä asun Amsterdamissa.",
+                "cloze": "Minä asun (Amsterdam).",
+                "roots": "minä asun"
             }
         ],
         "nl": [
@@ -176,6 +213,21 @@
             {
                 "concept": "to live together",
                 "label": "samenwonen"
+            },
+            {
+                "concept": "I live in Vaasa",
+                "label": "Ik woon in Vaasa.",
+                "roots": "ik woon"
+            },
+            {
+                "concept": "I live in Jyväskylä",
+                "label": "Ik woon in Jyväskylä.",
+                "roots": "ik woon"
+            },
+            {
+                "concept": "I live in Amsterdam",
+                "label": "Ik woon in Amsterdam.",
+                "roots": "ik woon"
             }
         ]
     }

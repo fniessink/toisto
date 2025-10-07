@@ -1,8 +1,10 @@
 {
     "concepts": {
         "elephant": {
-            "hypernym": "animal"
-        }
+            "hypernym": "animal",
+            "example": "the elephant has two big ears"
+        },
+        "the elephant has a trunk": {}
     },
     "labels": {
         "en": [
@@ -12,6 +14,19 @@
                     "singular": "elephant",
                     "plural": "elephants"
                 }
+            },
+            {
+                "concept": "the elephant has two big ears",
+                "label": {
+                    "singular": "The elephant has two big ears.",
+                    "plural": "Elephants have two big ears."
+                },
+                "roots": [
+                    "elephant",
+                    "two",
+                    "big",
+                    "ear"
+                ]
             }
         ],
         "fi": [
@@ -28,6 +43,32 @@
                     "singular": "norsu",
                     "plural": "norsut"
                 }
+            },
+            {
+                "concept": "the elephant has two big ears",
+                "label": {
+                    "singular": "Elefantilla on kaksi isoa korvaa.",
+                    "plural": "Elefanteilla on kaksi isoa korvaa."
+                },
+                "roots": [
+                    "elefantti",
+                    "kaksi",
+                    "iso",
+                    "korva"
+                ]
+            },
+            {
+                "concept": "the elephant has two big ears",
+                "label": {
+                    "singular": "Norsulla on kaksi isoa korvaa.",
+                    "plural": "Norsuilla on kaksi isoa korvaa."
+                },
+                "roots": [
+                    "norsu",
+                    "kaksi",
+                    "iso",
+                    "korva"
+                ]
             }
         ],
         "nl": [
@@ -37,6 +78,19 @@
                     "singular": "de olifant",
                     "plural": "de olifanten"
                 }
+            },
+            {
+                "concept": "the elephant has two big ears",
+                "label": {
+                    "singular": "De olifant heeft twee grote oren.",
+                    "plural": "Olifanten hebben twee grote oren."
+                },
+                "roots": [
+                    "de olifant",
+                    "twee",
+                    "groot",
+                    "het oor"
+                ]
             }
         ]
     }

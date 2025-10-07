@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "gangster": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "gangster",
+                "label": {
+                    "single": "gangster",
+                    "plural": "gangsters"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gangster",
+                "label": {
+                    "single": "gangsteri",
+                    "plural": "gangsterit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gangster",
+                "label": {
+                    "singular": "de gangster",
+                    "plural": "de gangsters"
+                }
+            }
+        ]
+    }
+}

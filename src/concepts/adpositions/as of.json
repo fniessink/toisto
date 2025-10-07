@@ -1,0 +1,61 @@
+{
+    "concepts": {
+        "as of": {
+            "example": "I am on vacation as of Monday"
+        },
+        "I am on vacation as of Monday": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "as of",
+                "label": "as of"
+            },
+            {
+                "concept": "I am on vacation as of Monday",
+                "label": "I am on vacation as of Monday.",
+                "roots": [
+                    "I am",
+                    "vacation",
+                    "as of",
+                    "Monday"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "as of",
+                "label": "alkaen"
+            },
+            {
+                "concept": "I am on vacation as of Monday",
+                "label": "Minä olen lomalla maanantaista alkaen.",
+                "roots": [
+                    "minä olen",
+                    "loma",
+                    "maanantai",
+                    "alkaen"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "as of",
+                "label": "vanaf"
+            },
+            {
+                "concept": "I am on vacation as of Monday",
+                "label": [
+                    "Ik ben op vakantie vanaf maandag.",
+                    "Ik ben vanaf maandag op vakantie."
+                ],
+                "roots": [
+                    "ik ben",
+                    "de vakantie",
+                    "vanaf",
+                    "de maandag"
+                ]
+            }
+        ]
+    }
+}

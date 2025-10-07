@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "gallery": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "gallery",
+                "label": {
+                    "single": "gallery",
+                    "plural": "galleries"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "gallery",
+                "label": {
+                    "single": "galleria",
+                    "plural": "galleriat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "gallery",
+                "label": {
+                    "singular": "de galerie",
+                    "plural": "de galerieën"
+                }
+            }
+        ]
+    }
+}

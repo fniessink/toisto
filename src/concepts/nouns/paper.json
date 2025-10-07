@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "paper": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "paper",
+                    "plural": "paper"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "paperi",
+                    "plural": "paperit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "het papier",
+                    "plural": "de papieren"
+                }
+            }
+        ]
+    }
+}
