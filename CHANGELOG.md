@@ -8,8 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
+- Add 'hersens' as alternative spelling in Dutch for 'brain'. Fixes [#1169](https://github.com/fniessink/toisto/issues/1169).
 - When giving the meaning of incorrect answers, don't repeat labels that are homographs. Fixes [#1174](https://github.com/fniessink/toisto/issues/1174).
-- Add "hersens" as alternative spelling for brain in Dutch. Fixes [#1169](https://github.com/fniessink/toisto/issues/1169).
+- Add 'wateren' as alternative spelling in Dutch for 'waters'. Fixes [#1175](https://github.com/fniessink/toisto/issues/1175).
 
 ## 0.40.0 - 2025-09-28
 
