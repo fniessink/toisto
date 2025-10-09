@@ -11,7 +11,7 @@ from random import shuffle
 from typing import ClassVar
 
 from toisto.match import match
-from toisto.tools import first, first_upper
+from toisto.tools import first, first_upper, unique
 
 from . import Language
 from .grammatical_category import GrammaticalCategory
@@ -338,8 +338,7 @@ class Labels:  # noqa: PLW1641
     @property
     def compounds(self) -> Labels:
         """Return the compounds of the labels."""
-        compounds = [label.compounds for label in self._labels]
-        return Labels(chain(*compounds))
+        return Labels(chain(*[label.compounds for label in self._labels]))
 
     @property
     def cloze_tests(self) -> Labels:
@@ -348,5 +347,5 @@ class Labels:  # noqa: PLW1641
 
     @property
     def as_strings(self) -> tuple[str, ...]:
-        """Return the labels as strings."""
-        return tuple(str(label) for label in self._labels)
+        """Return the labels as strings, without duplicates."""
+        return tuple(unique(str(label) for label in self._labels))
