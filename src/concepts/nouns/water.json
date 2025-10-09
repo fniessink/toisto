@@ -56,7 +56,10 @@
                 "concept": "water",
                 "label": {
                     "singular": "het water",
-                    "plural": "de waters"
+                    "plural": [
+                        "de waters",
+                        "de wateren"
+                    ]
                 }
             },
             {
