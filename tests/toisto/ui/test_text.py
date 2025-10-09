@@ -208,6 +208,27 @@ class FeedbackNotesTest(ToistoTestCase):
             feedback.text(Evaluation.CORRECT, "hoi", Retention()),
         )
 
+    def test_note_on_incorrect_answer_that_has_homograph_meanings(self):
+        """Test that the note is given when the answer has two meanings that are homographs."""
+        less = self.create_concept(
+            "less", labels=[{"label": "vähemmän", "language": FI}, {"label": "minder", "language": NL}]
+        )
+        self.create_concept("elder", labels=[{"label": "vanhempi", "language": FI}, {"label": "ouder", "language": NL}])
+        self.create_concept(
+            "older",
+            labels=[
+                {"label": {"comparative degree": "vanhempi"}, "language": FI},
+                {"label": {"comparative degree": "ouder"}, "language": NL},
+            ],
+        )
+        quiz = create_quizzes(FI_NL, (INTERPRET,), less).pop()
+        feedback = Feedback(quiz, FI_NL)
+        feedback.incorrect_guesses = ["ouder"]
+        self.assertIn(
+            f"[note]Note: Your incorrect answer '{linkified('ouder')}' is '{linkified('vanhempi')}' in Finnish.[/note]",
+            feedback.text(Evaluation.CORRECT, "minder", Retention()),
+        )
+
     def test_note_on_incorrect_answer_that_has_different_meaning_that_is_repeated(self):
         """Test that the note is not repeated if the same incorrect answer is given twice."""
         self.create_concept("hello", labels=[TERVE, {"label": "hallo", "language": NL}])
