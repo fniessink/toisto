@@ -428,9 +428,10 @@ class FeedbackExampleTest(ToistoTestCase):
         quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
         feedback = Feedback(quiz, FI_NL)
         expected_feedback = f"""{Feedback.CORRECT}[example]Examples:
-- '{linkified("Terve Alice!")}' meaning '{linkified("Hallo Alice!")}' and '{linkified("Hoi Alice!")}' (colloquial).
 - '{linkified("Moi Alice!")}' (colloquial) meaning '{linkified("Hallo Alice!")}' and '{linkified("Hoi Alice!")}' \
-(colloquial).[/example]
+(colloquial).
+- '{linkified("Terve Alice!")}' meaning '{linkified("Hallo Alice!")}' and '{linkified("Hoi Alice!")}' (colloquial).\
+[/example]
 """
         self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, GUESS, Retention()))
 
@@ -461,3 +462,22 @@ class FeedbackExampleTest(ToistoTestCase):
 '{linkified("Het is in de buurt.")}'[/example]
 """
         self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, "in de buurt", Retention()))
+
+    def test_limit_the_number_of_examples(self):
+        """Test that the number of examples shown is limited."""
+        names = ["Alice", "Bob", "Carol", "David"]
+        hi = self.create_concept("hi", {"example": [ConceptId(f"hi {name}") for name in names]}, labels=[HOI, TERVE])
+        for name in names:
+            self.create_concept(
+                f"hi {name}",
+                labels=[{"label": f"Terve {name}!", "language": FI}, {"label": f"Hoi {name}!", "language": NL}],
+            )
+        quiz = create_quizzes(FI_NL, (WRITE,), hi).pop()
+        text = Feedback(quiz, FI_NL).text(Evaluation.CORRECT, GUESS, Retention())
+        examples = [f"- '{linkified(f'Terve {name}!')}' meaning '{linkified(f'Hoi {name}!')}'" for name in names]
+        self.assertTrue(
+            (examples[0] not in text and examples[1] in text and examples[2] in text and examples[3] in text)
+            or (examples[0] in text and examples[1] not in text and examples[2] in text and examples[3] in text)
+            or (examples[0] in text and examples[1] in text and examples[2] not in text and examples[3] in text)
+            or (examples[0] in text and examples[1] in text and examples[2] in text and examples[3] not in text)
+        )

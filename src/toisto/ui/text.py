@@ -4,6 +4,7 @@ import sys
 from collections.abc import Callable
 from configparser import ConfigParser
 from datetime import datetime
+from random import sample
 from typing import Final
 
 from rich.console import Console
@@ -161,7 +162,7 @@ class Feedback:
             if (guess_meanings := meanings(guess, self.quiz.answer.language, self.quiz.question.language))
         ]
 
-    def _examples(self) -> str:
+    def _examples(self, max_nr_examples: int = 3) -> str:
         """Return the quiz's examples, if any."""
         examples: list[str] = []
         for example in self.quiz.concept.get_related_concepts("example"):
@@ -169,7 +170,8 @@ class Feedback:
             example_meanings = example.labels(self.language_pair.source).first_non_generated_spelling_alternatives
             enumerated_meanings = enumerated(*[self._example_label(meaning) for meaning in example_meanings])
             examples.extend(f"{self._example_label(label)} meaning {enumerated_meanings}" for label in example_labels)
-        return bulleted_list("Example", examples, style="example")
+        examples_to_show = sorted(sample(examples, min(len(examples), max_nr_examples)))  # nosec
+        return bulleted_list("Example", examples_to_show, style="example")
 
     def _example_label(self, label: Label) -> str:
         """Format the label as example."""
