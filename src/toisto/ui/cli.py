@@ -115,7 +115,7 @@ class CommandBuilder:
             and not concept.answer_only
         }
         language = self.get_target_language()
-        all_labels = sorted({str(first(labels)) for concept in concepts if (labels := concept.labels(language))})
+        all_labels = sorted({str(first(labels)) for concept in concepts if (labels := concept.meanings(language))})
         parser.add_argument(
             "concepts",
             metavar="{concept}",
