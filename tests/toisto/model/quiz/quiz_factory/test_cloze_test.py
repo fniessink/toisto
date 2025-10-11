@@ -1,7 +1,8 @@
 """Quiz factory unit tests."""
 
 from toisto.model.language import EN, FI
-from toisto.model.language.concept import Concept
+from toisto.model.language.concept import Concept, ConceptId
+from toisto.model.language.concept_factory import ConceptJSON
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import CLOZE_TEST
 
@@ -93,3 +94,19 @@ class QuizClozeTestTest(ToistoTestCase):
             {self.create_quiz(concept, cloze, [minä], CLOZE_TEST) for cloze in minä.cloze_tests},
             create_quizzes(FI_NL, (CLOZE_TEST,), concept),
         )
+
+    def test_instruction_does_not_contain_tip_when_quizzed_multiple_times(self):
+        """Test the quiz instruction does not contain a tip when the quiz is given multiple times."""
+        self.create_concept("store", labels=[{"concept": "store", "label": "kauppa", "language": FI}])
+        concept = self.create_concept(
+            "works in a store",
+            ConceptJSON({"involves": ConceptId("store")}),
+            labels=[{"label": "Alice on töissä kauppassa.", "cloze": "Alice on töissä (kauppa).", "language": FI}],
+        )
+        (label,) = concept.labels(FI)
+        for _ in range(2):
+            quiz = self.create_quiz(concept, label.cloze_tests[0], [label], CLOZE_TEST)
+            self.assertEqual(
+                "Repeat with the [underline]bracketed words in the correct form[/underline], in Finnish",
+                quiz.instruction,
+            )
