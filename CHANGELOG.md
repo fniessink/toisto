@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Add 'wateren' as alternative spelling in Dutch for 'waters'. Fixes [#1175](https://github.com/fniessink/toisto/issues/1175).
 - Cloze test quizzes would get a useless tip when presented multiple times. Fixes [#1176](https://github.com/fniessink/toisto/issues/1176).
 - Limit the number of examples shown to three per quiz. Fixes [#1180](https://github.com/fniessink/toisto/issues/1180).
+- When running `toisto practice --help`, don't repeat homographs in the list of concepts. Fixes [#1183](https://github.com/fniessink/toisto/issues/1183).
 
 ## 0.40.0 - 2025-09-28
 
