@@ -183,7 +183,7 @@ class Label:
         """Return the label compounds."""
         return Labels(label for label in chain(*self.homograph_mapping.values()) if self in label.roots)
 
-    @property
+    @cached_property
     def cloze_tests(self) -> Labels:
         """Return the cloze tests."""
         return Labels(Label(self.language, cloze_test) for cloze_test in self._cloze_tests)
