@@ -18,10 +18,10 @@ class NumberTest(ToistoTestCase):
         een, eerste = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, een, [een], DICTATE),
-                self.create_quiz(concept, eerste, [eerste], DICTATE),
-                self.create_quiz(concept, een, [eerste], ORDINAL),
-                self.create_quiz(concept, eerste, [een], CARDINAL),
+                self.create_quiz(NL_EN, concept, een, [een], DICTATE),
+                self.create_quiz(NL_EN, concept, eerste, [eerste], DICTATE),
+                self.create_quiz(NL_EN, concept, een, [eerste], ORDINAL),
+                self.create_quiz(NL_EN, concept, eerste, [een], CARDINAL),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -37,10 +37,10 @@ class NumberTest(ToistoTestCase):
         )
         een, eerste = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, eerste, [een], CARDINAL),
-                self.create_quiz(concept, een, [eerste], ORDINAL),
+                self.create_quiz(NL_EN, concept, eerste, [een], CARDINAL),
+                self.create_quiz(NL_EN, concept, een, [eerste], ORDINAL),
             },
             create_quizzes(NL_EN, (), concept),
         )

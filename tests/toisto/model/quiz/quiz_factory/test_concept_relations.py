@@ -29,7 +29,7 @@ class AntonymQuizzesTest(QuizFactoryTestCase):
         small, big = self.create_antonyms()
         quizzes = create_quizzes(EN_NL, (), big, small)
         for concept, answer in [(big, "small"), (small, "big")]:
-            antonym = self.create_quiz(concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
+            antonym = self.create_quiz(EN_NL, concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
             self.assertIn(antonym, quizzes)
 
     def test_antonym_concepts_with_different_grammatical_forms(self):
@@ -37,7 +37,7 @@ class AntonymQuizzesTest(QuizFactoryTestCase):
         small, big = self.create_antonyms(add_comparative_degree=True)
         quizzes = create_quizzes(EN_NL, (), big, small)
         for concept, answer in [(big, "small"), (small, "big")]:
-            antonym = self.create_quiz(concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
+            antonym = self.create_quiz(EN_NL, concept, concept.labels(EN)[0], [Label(EN, answer)], ANTONYM)
             self.assertIn(antonym, quizzes)
 
     def test_antonym_quiz_order(self):
@@ -63,7 +63,7 @@ class AnswerQuizzesTest(QuizFactoryTestCase):
         answer = self.create_concept("answer", labels=[{"label": "I'm fine, thank you.", "language": EN}])
         quizzes = create_quizzes(EN_NL, (), question, answer)
         (answer_label,) = answer.labels(EN)
-        answer_quiz = self.create_quiz(question, question.labels(EN)[0], [answer_label], ANSWER)
+        answer_quiz = self.create_quiz(EN_NL, question, question.labels(EN)[0], [answer_label], ANSWER)
         self.assertIn(answer_quiz, quizzes)
 
     def test_answer_grammatical_categories(self):
@@ -82,8 +82,8 @@ class AnswerQuizzesTest(QuizFactoryTestCase):
         quizzes = create_quizzes(EN_NL, (), question, answer)
         how_are_you, how_are_you_all = question.labels(EN)
         i_am_fine, we_are_fine = answer.labels(EN)
-        singular_answer_quiz = self.create_quiz(question, how_are_you, [i_am_fine], ANSWER)
-        plural_answer_quiz = self.create_quiz(question, how_are_you_all, [we_are_fine], ANSWER)
+        singular_answer_quiz = self.create_quiz(EN_NL, question, how_are_you, [i_am_fine], ANSWER)
+        plural_answer_quiz = self.create_quiz(EN_NL, question, how_are_you_all, [we_are_fine], ANSWER)
         self.assertIn(singular_answer_quiz, quizzes)
         self.assertIn(plural_answer_quiz, quizzes)
 

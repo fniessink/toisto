@@ -25,21 +25,21 @@ class ColloquialTest(ToistoTestCase):
         (zeven,) = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, seitsemän, [zeven], READ),
-                self.create_quiz(concept, seitsemän, [seitsemän], DICTATE),
-                self.create_quiz(concept, zeven, [seitsemän], WRITE),
-                self.create_quiz(concept, seitsemän, [zeven], INTERPRET),
-                self.create_quiz(concept, seittemän, [seitsemän], DICTATE),
-                self.create_quiz(concept, seittemän, [zeven], INTERPRET),
+                self.create_quiz(FI_NL, concept, seitsemän, [zeven], READ),
+                self.create_quiz(FI_NL, concept, seitsemän, [seitsemän], DICTATE),
+                self.create_quiz(FI_NL, concept, zeven, [seitsemän], WRITE),
+                self.create_quiz(FI_NL, concept, seitsemän, [zeven], INTERPRET),
+                self.create_quiz(FI_NL, concept, seittemän, [seitsemän], DICTATE),
+                self.create_quiz(FI_NL, concept, seittemän, [zeven], INTERPRET),
             },
             create_quizzes(FI_NL, (), concept),
         )
         self.assertSetEqual(
             {
-                self.create_quiz(concept, zeven, [seitsemän], READ),
-                self.create_quiz(concept, zeven, [zeven], DICTATE),
-                self.create_quiz(concept, seitsemän, [zeven], WRITE),
-                self.create_quiz(concept, zeven, [seitsemän], INTERPRET),
+                self.create_quiz(NL_FI, concept, zeven, [seitsemän], READ),
+                self.create_quiz(NL_FI, concept, zeven, [zeven], DICTATE),
+                self.create_quiz(NL_FI, concept, seitsemän, [zeven], WRITE),
+                self.create_quiz(NL_FI, concept, zeven, [seitsemän], INTERPRET),
             },
             create_quizzes(NL_FI, (), concept),
         )
@@ -58,35 +58,35 @@ class ColloquialTest(ToistoTestCase):
         kiosk, kiosks = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, kioski, [kiosk], READ),
-                self.create_quiz(concept, kioski, [kioski], DICTATE),
-                self.create_quiz(concept, kiosk, [kioski], WRITE),
-                self.create_quiz(concept, kioski, [kiosk], INTERPRET),
-                self.create_quiz(concept, kiska, [kiosk], INTERPRET),
-                self.create_quiz(concept, kiska, [kioski], DICTATE),
-                self.create_quiz(concept, kioskit, [kiosks], READ),
-                self.create_quiz(concept, kioskit, [kioskit], DICTATE),
-                self.create_quiz(concept, kiosks, [kioskit], WRITE),
-                self.create_quiz(concept, kioskit, [kiosks], INTERPRET),
-                self.create_quiz(concept, kiskat, [kiosks], INTERPRET),
-                self.create_quiz(concept, kiskat, [kioskit], DICTATE),
-                self.create_quiz(concept, kioski, [kioskit], PLURAL),
-                self.create_quiz(concept, kioskit, [kioski], SINGULAR),
+                self.create_quiz(FI_EN, concept, kioski, [kiosk], READ),
+                self.create_quiz(FI_EN, concept, kioski, [kioski], DICTATE),
+                self.create_quiz(FI_EN, concept, kiosk, [kioski], WRITE),
+                self.create_quiz(FI_EN, concept, kioski, [kiosk], INTERPRET),
+                self.create_quiz(FI_EN, concept, kiska, [kiosk], INTERPRET),
+                self.create_quiz(FI_EN, concept, kiska, [kioski], DICTATE),
+                self.create_quiz(FI_EN, concept, kioskit, [kiosks], READ),
+                self.create_quiz(FI_EN, concept, kioskit, [kioskit], DICTATE),
+                self.create_quiz(FI_EN, concept, kiosks, [kioskit], WRITE),
+                self.create_quiz(FI_EN, concept, kioskit, [kiosks], INTERPRET),
+                self.create_quiz(FI_EN, concept, kiskat, [kiosks], INTERPRET),
+                self.create_quiz(FI_EN, concept, kiskat, [kioskit], DICTATE),
+                self.create_quiz(FI_EN, concept, kioski, [kioskit], PLURAL),
+                self.create_quiz(FI_EN, concept, kioskit, [kioski], SINGULAR),
             },
             create_quizzes(FI_EN, (), concept),
         )
         self.assertSetEqual(
             {
-                self.create_quiz(concept, kiosk, [kioski], READ),
-                self.create_quiz(concept, kiosk, [kiosk], DICTATE),
-                self.create_quiz(concept, kioski, [kiosk], WRITE),
-                self.create_quiz(concept, kiosk, [kioski], INTERPRET),
-                self.create_quiz(concept, kiosks, [kioskit], READ),
-                self.create_quiz(concept, kiosks, [kiosks], DICTATE),
-                self.create_quiz(concept, kioskit, [kiosks], WRITE),
-                self.create_quiz(concept, kiosks, [kioskit], INTERPRET),
-                self.create_quiz(concept, kiosk, [kiosks], PLURAL),
-                self.create_quiz(concept, kiosks, [kiosk], SINGULAR),
+                self.create_quiz(EN_FI, concept, kiosk, [kioski], READ),
+                self.create_quiz(EN_FI, concept, kiosk, [kiosk], DICTATE),
+                self.create_quiz(EN_FI, concept, kioski, [kiosk], WRITE),
+                self.create_quiz(EN_FI, concept, kiosk, [kioski], INTERPRET),
+                self.create_quiz(EN_FI, concept, kiosks, [kioskit], READ),
+                self.create_quiz(EN_FI, concept, kiosks, [kiosks], DICTATE),
+                self.create_quiz(EN_FI, concept, kioskit, [kiosks], WRITE),
+                self.create_quiz(EN_FI, concept, kiosks, [kioskit], INTERPRET),
+                self.create_quiz(EN_FI, concept, kiosk, [kiosks], PLURAL),
+                self.create_quiz(EN_FI, concept, kiosks, [kiosk], SINGULAR),
             },
             create_quizzes(EN_FI, (), concept),
         )
@@ -103,16 +103,16 @@ class ColloquialTest(ToistoTestCase):
         (ei,) = no.labels(FI)
         self.assertSetEqual(
             {
-                self.create_quiz(yes, kylla, [kylla], DICTATE),
-                self.create_quiz(yes, kyl, [kylla], DICTATE),
-                self.create_quiz(yes, kylla, [ei], ANTONYM),
+                self.create_quiz(FI_EN, yes, kylla, [kylla], DICTATE),
+                self.create_quiz(FI_EN, yes, kyl, [kylla], DICTATE),
+                self.create_quiz(FI_EN, yes, kylla, [ei], ANTONYM),
             },
             create_quizzes(FI_EN, (), yes),
         )
         self.assertSetEqual(
             {
-                self.create_quiz(no, ei, [ei], DICTATE),
-                self.create_quiz(no, ei, [kylla], ANTONYM),
+                self.create_quiz(FI_EN, no, ei, [ei], DICTATE),
+                self.create_quiz(FI_EN, no, ei, [kylla], ANTONYM),
             },
             create_quizzes(FI_EN, (), no),
         )

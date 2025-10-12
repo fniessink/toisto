@@ -21,10 +21,10 @@ class GrammaticalMoodTest(ToistoTestCase):
         )
         de_auto_is_zwart, is_de_auto_zwart = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, de_auto_is_zwart, [is_de_auto_zwart], INTERROGATIVE),
-                self.create_quiz(concept, is_de_auto_zwart, [de_auto_is_zwart], DECLARATIVE),
+                self.create_quiz(NL_EN, concept, de_auto_is_zwart, [is_de_auto_zwart], INTERROGATIVE),
+                self.create_quiz(NL_EN, concept, is_de_auto_zwart, [de_auto_is_zwart], DECLARATIVE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -40,10 +40,10 @@ class GrammaticalMoodTest(ToistoTestCase):
         )
         jij_rent, ren = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, jij_rent, [ren], IMPERATIVE),
-                self.create_quiz(concept, ren, [jij_rent], DECLARATIVE),
+                self.create_quiz(NL_EN, concept, jij_rent, [ren], IMPERATIVE),
+                self.create_quiz(NL_EN, concept, ren, [jij_rent], DECLARATIVE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -65,14 +65,14 @@ class GrammaticalMoodTest(ToistoTestCase):
         )
         jij_rent, ren_jij, ren = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, jij_rent, [ren], IMPERATIVE),
-                self.create_quiz(concept, jij_rent, [ren_jij], INTERROGATIVE),
-                self.create_quiz(concept, ren, [jij_rent], DECLARATIVE),
-                self.create_quiz(concept, ren, [ren_jij], INTERROGATIVE),
-                self.create_quiz(concept, ren_jij, [ren], IMPERATIVE),
-                self.create_quiz(concept, ren_jij, [jij_rent], DECLARATIVE),
+                self.create_quiz(NL_EN, concept, jij_rent, [ren], IMPERATIVE),
+                self.create_quiz(NL_EN, concept, jij_rent, [ren_jij], INTERROGATIVE),
+                self.create_quiz(NL_EN, concept, ren, [jij_rent], DECLARATIVE),
+                self.create_quiz(NL_EN, concept, ren, [ren_jij], INTERROGATIVE),
+                self.create_quiz(NL_EN, concept, ren_jij, [ren], IMPERATIVE),
+                self.create_quiz(NL_EN, concept, ren_jij, [jij_rent], DECLARATIVE),
             },
             create_quizzes(NL_EN, (), concept),
         )

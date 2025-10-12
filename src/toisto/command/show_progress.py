@@ -41,7 +41,7 @@ def show_progress(progress: Progress, args: Namespace) -> None:
         retention = progress.get_retention(quiz)
         skip = retention.skip_until
         table.add_row(
-            quiz.quiz_type.action,
+            quiz.action,
             str(quiz.question),
             quiz.question.language,
             quiz.answer.language,

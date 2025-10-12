@@ -21,11 +21,11 @@ class GrammaticalPolarityTest(ToistoTestCase):
         )
         de_auto_is_zwart, de_auto_is_niet_zwart = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, de_auto_is_zwart, [de_auto_is_niet_zwart], NEGATIVE),
-                self.create_quiz(concept, de_auto_is_niet_zwart, [de_auto_is_zwart], AFFIRMATIVE),
-                self.create_quiz(concept, de_auto_is_niet_zwart, [de_auto_is_niet_zwart], ORDER),
+                self.create_quiz(NL_EN, concept, de_auto_is_zwart, [de_auto_is_niet_zwart], NEGATIVE),
+                self.create_quiz(NL_EN, concept, de_auto_is_niet_zwart, [de_auto_is_zwart], AFFIRMATIVE),
+                self.create_quiz(NL_EN, concept, de_auto_is_niet_zwart, [de_auto_is_niet_zwart], ORDER),
             },
             create_quizzes(NL_EN, (), concept),
         )

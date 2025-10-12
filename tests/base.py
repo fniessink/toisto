@@ -86,14 +86,14 @@ class ToistoTestCase(unittest.TestCase):
 
     @staticmethod
     def create_quiz(
+        language_pair: LanguagePair,
         concept: Concept,
         question: Label,
         answers: Sequence[Label],
         quiz_type: QuizType = READ,
-        blocked_by: tuple[Quiz, ...] = (),
     ) -> Quiz:
         """Create a quiz."""
-        return Quiz(concept, question, Labels(answers), quiz_type, blocked_by)
+        return Quiz(language_pair, concept, question, Labels(answers), quiz_type, quiz_type.action)
 
     def copy_quiz(
         self,
@@ -104,24 +104,24 @@ class ToistoTestCase(unittest.TestCase):
     ) -> Quiz:
         """Copy the quiz, overriding some of its parameters."""
         return self.create_quiz(
+            quiz.language_pair,
             quiz.concept,
             question=question or quiz.question,
             answers=answers or list(quiz.answers),
             quiz_type=quiz_type or quiz.quiz_type,
-            blocked_by=quiz.blocked_by,
         )
 
-    def translation_quizzes(self, concept: Concept, target_language: Language, source_language: Language) -> set[Quiz]:
+    def translation_quizzes(self, language_pair: LanguagePair, concept: Concept) -> set[Quiz]:
         """Create the translation quizzes for the concept."""
         quizzes = set()
-        target_labels = concept.labels(target_language)
-        source_labels = concept.labels(source_language)
+        target_labels = concept.labels(language_pair.target)
+        source_labels = concept.labels(language_pair.source)
         for target_label, source_label in zip(target_labels, source_labels, strict=True):
             quizzes |= {
-                self.create_quiz(concept, target_label, [source_label], READ),
-                self.create_quiz(concept, target_label, [target_label], DICTATE),
-                self.create_quiz(concept, target_label, [source_label], INTERPRET),
-                self.create_quiz(concept, source_label, [target_label], WRITE),
+                self.create_quiz(language_pair, concept, target_label, [source_label], READ),
+                self.create_quiz(language_pair, concept, target_label, [target_label], DICTATE),
+                self.create_quiz(language_pair, concept, target_label, [source_label], INTERPRET),
+                self.create_quiz(language_pair, concept, source_label, [target_label], WRITE),
             }
         return quizzes
 

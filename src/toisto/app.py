@@ -14,7 +14,7 @@ from .model.filter import filter_concepts
 from .model.language import LanguagePair
 from .model.quiz.progress import Progress
 from .model.quiz.quiz_factory import create_quizzes
-from .model.quiz.quiz_type import QuizType
+from .model.quiz.quiz_type import QUIZ_TYPES
 from .persistence.concept_loader import ConceptLoader
 from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
@@ -41,7 +41,7 @@ class CLI:
         target_language = self.args.target_language
         concepts = self.build_in_concepts | self.loader.load_concepts(*self.args.extra)
         filtered_concepts = filter_concepts(concepts, self.args.concepts, target_language, self.argument_parser)
-        quiz_types = tuple(QuizType.actions.get_values(quiz_type)[0] for quiz_type in self.args.quiz_type)
+        quiz_types = tuple(quiz_type for quiz_type in QUIZ_TYPES if quiz_type.action in self.args.quiz_type)
         quizzes = create_quizzes(self.language_pair, quiz_types, *filtered_concepts)
         return load_progress(target_language, quizzes, self.argument_parser, self.config)
 

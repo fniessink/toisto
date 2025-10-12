@@ -18,9 +18,9 @@ class DiminutiveTest(ToistoTestCase):
         auto, autootje = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, auto, [auto], DICTATE),
-                self.create_quiz(concept, autootje, [autootje], DICTATE),
-                self.create_quiz(concept, auto, [autootje], DIMINUTIVE),
+                self.create_quiz(NL_EN, concept, auto, [auto], DICTATE),
+                self.create_quiz(NL_EN, concept, autootje, [autootje], DICTATE),
+                self.create_quiz(NL_EN, concept, auto, [autootje], DIMINUTIVE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -36,7 +36,8 @@ class DiminutiveTest(ToistoTestCase):
         )
         de_auto, autootje = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, FI) | {self.create_quiz(concept, de_auto, [autootje], DIMINUTIVE)},
+            self.translation_quizzes(NL_FI, concept)
+            | {self.create_quiz(NL_FI, concept, de_auto, [autootje], DIMINUTIVE)},
             create_quizzes(NL_FI, (), concept),
         )
 
@@ -53,14 +54,14 @@ class DiminutiveTest(ToistoTestCase):
         auto, autootje = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, auto, [car], READ),
-                self.create_quiz(concept, auto, [auto], DICTATE),
-                self.create_quiz(concept, auto, [car], INTERPRET),
-                self.create_quiz(concept, car, [auto], WRITE),
-                self.create_quiz(concept, autootje, [autootje], DICTATE),
-                self.create_quiz(concept, autootje, [car], READ),
-                self.create_quiz(concept, auto, [autootje], DIMINUTIVE),
-                self.create_quiz(concept, autootje, [car], INTERPRET),
+                self.create_quiz(NL_EN, concept, auto, [car], READ),
+                self.create_quiz(NL_EN, concept, auto, [auto], DICTATE),
+                self.create_quiz(NL_EN, concept, auto, [car], INTERPRET),
+                self.create_quiz(NL_EN, concept, car, [auto], WRITE),
+                self.create_quiz(NL_EN, concept, autootje, [autootje], DICTATE),
+                self.create_quiz(NL_EN, concept, autootje, [car], READ),
+                self.create_quiz(NL_EN, concept, auto, [autootje], DIMINUTIVE),
+                self.create_quiz(NL_EN, concept, autootje, [car], INTERPRET),
             },
             create_quizzes(NL_EN, (), concept),
         )

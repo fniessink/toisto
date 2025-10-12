@@ -1,6 +1,6 @@
 """Quiz factory unit tests."""
 
-from toisto.model.language import EN
+from toisto.model.language import EN, NL
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ORDER
 from toisto.tools import first
@@ -15,8 +15,13 @@ class OrderQuizTest(QuizFactoryTestCase):
     def test_generate_order_quiz_for_long_enough_sentences(self):
         """Test that order quizzes are generated for long enough sentences."""
         concept = self.create_concept(
-            "breakfast", labels=[{"label": "We eat breakfast in the kitchen.", "language": EN}]
+            "breakfast",
+            labels=[
+                {"label": "We eat breakfast in the kitchen.", "language": EN},
+                {"label": "We ontbijten in de keuken.", "language": NL},
+            ],
         )
         quizzes = create_quizzes(EN_NL, (ORDER,), concept)
         quiz = first(quizzes)
-        self.assertEqual(ORDER, quiz.quiz_type)
+        self.assertEqual("order", quiz.action)
+        self.assertEqual(("We ontbijten in de keuken.",), quiz.answer_meanings.as_strings)

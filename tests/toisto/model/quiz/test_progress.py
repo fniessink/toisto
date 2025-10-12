@@ -31,7 +31,7 @@ class ProgressTest(ToistoTestCase):
 
     def test_progress_new_quiz(self):
         """Test that a new quiz has no progress."""
-        quiz = self.quizzes.pop()
+        quiz = first(self.quizzes)
         retention = self.progress.get_retention(quiz)
         self.assertIsNone(retention.start)
         self.assertIsNone(retention.end)
@@ -39,14 +39,14 @@ class ProgressTest(ToistoTestCase):
 
     def test_update_progress_correct(self):
         """Test that the progress of a quiz can be updated."""
-        quiz = self.quizzes.pop()
+        quiz = first(self.quizzes)
         retention = self.progress.mark_evaluation(quiz, Evaluation.CORRECT)
         self.assertIsNotNone(retention.start)
         self.assertIsNotNone(retention.end)
 
     def test_update_progress_incorrect(self):
         """Test that the progress of a quiz can be updated."""
-        quiz = self.quizzes.pop()
+        quiz = first(self.quizzes)
         retention = self.progress.mark_evaluation(quiz, Evaluation.INCORRECT)
         self.assertIsNone(retention.start)
         self.assertIsNone(retention.end)
