@@ -5,10 +5,11 @@ from collections import deque
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.persistence.progress_format import ProgressDict
+from toisto.tools import first
 
 from .evaluation import Evaluation
 from .quiz import Quiz, Quizzes
-from .quiz_type import QuizType
+from .quiz_type import QUIZ_TYPES
 from .retention import Retention
 
 
@@ -32,8 +33,8 @@ class Progress:
 
     def valid(self, key: str) -> bool:
         """Return whether the key is valid."""
-        quiz_type = key.rsplit(":", maxsplit=1)[-1]
-        return bool(QuizType.actions.get_values(quiz_type))
+        action = key.rsplit(":", maxsplit=1)[-1]
+        return action in [quiz_type.action for quiz_type in QUIZ_TYPES]
 
     def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> Retention:
         """Mark the evaluation and return the current quiz retention.
@@ -67,7 +68,7 @@ class Progress:
         quizzes_in_progress = Quizzes(quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz))
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
             if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes):
-                quiz = unblocked_quizzes.pop()
+                quiz = first(unblocked_quizzes)
                 self.__recent_concepts.append(quiz.concept)
                 return quiz
         return None
@@ -94,10 +95,7 @@ class Progress:
         return quiz.key in self.__progress_dict
 
     def __unblocked_quizzes(self, potential_quizzes: Quizzes, eligible_quizzes: Quizzes) -> Quizzes:
-        """Return the quizzes that are not blocked by other quizzes.
-
-        Quiz A is blocked by quiz B if the concept of quiz A is a compound with a root that is quizzed by quiz B.
-        """
+        """Return the quizzes that are not blocked by other quizzes."""
         return Quizzes(
             quiz
             for quiz in potential_quizzes

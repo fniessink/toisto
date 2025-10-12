@@ -27,7 +27,7 @@ class QuizClozeTestTest(ToistoTestCase):
         concept = self.create_concept_with_cloze()
         (he_speaks,) = concept.labels(EN)
         self.assertSetEqual(
-            {self.create_quiz(concept, he_speaks.cloze_tests[0], [he_speaks], CLOZE_TEST)},
+            {self.create_quiz(EN_FI, concept, he_speaks.cloze_tests[0], [he_speaks], CLOZE_TEST)},
             create_quizzes(EN_FI, (CLOZE_TEST,), concept),
         )
 
@@ -44,7 +44,7 @@ class QuizClozeTestTest(ToistoTestCase):
             labels=[{"label": "Minä pidän jäätelöstä.", "language": FI, "cloze": "Minä pidän (jäätelö)."}],
         )
         for quiz in create_quizzes(FI_NL, (CLOZE_TEST,), concept):
-            self.assertEqual(CLOZE_TEST, quiz.quiz_type)
+            self.assertEqual("cloze", quiz.action)
             self.assertEqual("Minä pidän (jäätelö).", str(quiz.question))
 
     def test_one_language_multiple_answers(self):
@@ -73,7 +73,7 @@ class QuizClozeTestTest(ToistoTestCase):
         )
         (minä, _me) = concept.labels(FI)
         self.assertSetEqual(
-            {self.create_quiz(concept, minä.cloze_tests[0], [minä], CLOZE_TEST)},
+            {self.create_quiz(FI_NL, concept, minä.cloze_tests[0], [minä], CLOZE_TEST)},
             create_quizzes(FI_NL, (CLOZE_TEST,), concept),
         )
 
@@ -91,7 +91,7 @@ class QuizClozeTestTest(ToistoTestCase):
         )
         (minä,) = concept.labels(FI)
         self.assertSetEqual(
-            {self.create_quiz(concept, cloze, [minä], CLOZE_TEST) for cloze in minä.cloze_tests},
+            {self.create_quiz(FI_NL, concept, cloze, [minä], CLOZE_TEST) for cloze in minä.cloze_tests},
             create_quizzes(FI_NL, (CLOZE_TEST,), concept),
         )
 
@@ -105,7 +105,7 @@ class QuizClozeTestTest(ToistoTestCase):
         )
         (label,) = concept.labels(FI)
         for _ in range(2):
-            quiz = self.create_quiz(concept, label.cloze_tests[0], [label], CLOZE_TEST)
+            quiz = self.create_quiz(FI_NL, concept, label.cloze_tests[0], [label], CLOZE_TEST)
             self.assertEqual(
                 "Repeat with the [underline]bracketed words in the correct form[/underline], in Finnish",
                 quiz.instruction,

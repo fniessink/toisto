@@ -17,14 +17,14 @@ class QuizFactoryTest(QuizFactoryTestCase):
         concept = self.create_concept(
             "english", labels=[{"label": "English", "language": EN}, {"label": "Engels", "language": NL}]
         )
-        self.assertSetEqual(self.translation_quizzes(concept, NL, EN), create_quizzes(NL_EN, (), concept))
+        self.assertSetEqual(self.translation_quizzes(NL_EN, concept), create_quizzes(NL_EN, (), concept))
 
     def test_only_listening_quizzes_for_one_language(self):
         """Test that only listening quizzes are generated for a concept with one language."""
         concept = self.create_concept("english", labels=[{"label": "Engels", "language": NL}])
         (engels,) = concept.labels(NL)
         self.assertSetEqual(
-            {self.create_quiz(concept, engels, [engels], DICTATE)},
+            {self.create_quiz(NL_EN, concept, engels, [engels], DICTATE)},
             create_quizzes(NL_EN, (), concept),
         )
 
@@ -51,11 +51,11 @@ class QuizFactoryTest(QuizFactoryTestCase):
         couch, bank_en = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, bank_nl, [couch, bank_en], READ),
-                self.create_quiz(concept, bank_nl, [bank_nl], DICTATE),
-                self.create_quiz(concept, bank_nl, [couch, bank_en], INTERPRET),
-                self.create_quiz(concept, couch, [bank_nl], WRITE),
-                self.create_quiz(concept, bank_en, [bank_nl], WRITE),
+                self.create_quiz(NL_EN, concept, bank_nl, [couch, bank_en], READ),
+                self.create_quiz(NL_EN, concept, bank_nl, [bank_nl], DICTATE),
+                self.create_quiz(NL_EN, concept, bank_nl, [couch, bank_en], INTERPRET),
+                self.create_quiz(NL_EN, concept, couch, [bank_nl], WRITE),
+                self.create_quiz(NL_EN, concept, bank_en, [bank_nl], WRITE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -80,15 +80,15 @@ class QuizFactoryTest(QuizFactoryTestCase):
         she_is, he_is = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, hän_on, [she_is], READ),
-                self.create_quiz(concept, hän_on, [hän_on], DICTATE),
-                self.create_quiz(concept, hän_on, [she_is], INTERPRET),
-                self.create_quiz(concept, she_is, [hän_on], WRITE),
-                self.create_quiz(concept, hän_on, [he_is], READ),
-                self.create_quiz(concept, hän_on, [hän_on], DICTATE),
-                self.create_quiz(concept, hän_on, [he_is], INTERPRET),
-                self.create_quiz(concept, he_is, [hän_on], WRITE),
-                self.create_quiz(concept, hän_on, [he_is], INTERPRET),
+                self.create_quiz(FI_EN, concept, hän_on, [she_is], READ),
+                self.create_quiz(FI_EN, concept, hän_on, [hän_on], DICTATE),
+                self.create_quiz(FI_EN, concept, hän_on, [she_is], INTERPRET),
+                self.create_quiz(FI_EN, concept, she_is, [hän_on], WRITE),
+                self.create_quiz(FI_EN, concept, hän_on, [he_is], READ),
+                self.create_quiz(FI_EN, concept, hän_on, [hän_on], DICTATE),
+                self.create_quiz(FI_EN, concept, hän_on, [he_is], INTERPRET),
+                self.create_quiz(FI_EN, concept, he_is, [hän_on], WRITE),
+                self.create_quiz(FI_EN, concept, hän_on, [he_is], INTERPRET),
             },
             create_quizzes(FI_EN, (), concept),
         )
@@ -98,14 +98,14 @@ class QuizFactoryTest(QuizFactoryTestCase):
         concept = self.create_verb_with_infinitive_and_person()
         slapen, ik_slaap, wij_slapen = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, wij_slapen, [slapen], INFINITIVE),
-                self.create_quiz(concept, ik_slaap, [slapen], INFINITIVE),
-                self.create_quiz(concept, slapen, [wij_slapen], PLURAL),
-                self.create_quiz(concept, ik_slaap, [wij_slapen], PLURAL),
-                self.create_quiz(concept, slapen, [ik_slaap], SINGULAR),
-                self.create_quiz(concept, wij_slapen, [ik_slaap], SINGULAR),
+                self.create_quiz(NL_EN, concept, wij_slapen, [slapen], INFINITIVE),
+                self.create_quiz(NL_EN, concept, ik_slaap, [slapen], INFINITIVE),
+                self.create_quiz(NL_EN, concept, slapen, [wij_slapen], PLURAL),
+                self.create_quiz(NL_EN, concept, ik_slaap, [wij_slapen], PLURAL),
+                self.create_quiz(NL_EN, concept, slapen, [ik_slaap], SINGULAR),
+                self.create_quiz(NL_EN, concept, wij_slapen, [ik_slaap], SINGULAR),
             },
             create_quizzes(NL_EN, (), concept),
         )

@@ -18,10 +18,10 @@ class AbbreviationQuizzesTest(ToistoTestCase):
         naamloze_vennootschap, nv = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, naamloze_vennootschap, [naamloze_vennootschap], DICTATE),
-                self.create_quiz(concept, nv, [nv], DICTATE),
-                self.create_quiz(concept, naamloze_vennootschap, [nv], ABBREVIATION),
-                self.create_quiz(concept, nv, [naamloze_vennootschap], FULL_FORM),
+                self.create_quiz(NL_EN, concept, naamloze_vennootschap, [naamloze_vennootschap], DICTATE),
+                self.create_quiz(NL_EN, concept, nv, [nv], DICTATE),
+                self.create_quiz(NL_EN, concept, naamloze_vennootschap, [nv], ABBREVIATION),
+                self.create_quiz(NL_EN, concept, nv, [naamloze_vennootschap], FULL_FORM),
             },
             create_quizzes(NL_EN, (), concept),
         )

@@ -32,10 +32,10 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_number()
         aamu, aamut = concept.labels(FI)
         self.assertSetEqual(
-            self.translation_quizzes(concept, FI, NL)
+            self.translation_quizzes(FI_NL, concept)
             | {
-                self.create_quiz(concept, aamu, [aamut], PLURAL),
-                self.create_quiz(concept, aamut, [aamu], SINGULAR),
+                self.create_quiz(FI_NL, concept, aamu, [aamut], PLURAL),
+                self.create_quiz(FI_NL, concept, aamut, [aamu], SINGULAR),
             },
             create_quizzes(FI_NL, (), concept),
         )
@@ -49,10 +49,10 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         my_cat, our_cat = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, my_cat, [our_cat], PLURAL_PRONOUN),
-                self.create_quiz(concept, our_cat, [my_cat], SINGULAR_PRONOUN),
-                self.create_quiz(concept, my_cat, [my_cat], DICTATE),
-                self.create_quiz(concept, our_cat, [our_cat], DICTATE),
+                self.create_quiz(EN_NL, concept, my_cat, [our_cat], PLURAL_PRONOUN),
+                self.create_quiz(EN_NL, concept, our_cat, [my_cat], SINGULAR_PRONOUN),
+                self.create_quiz(EN_NL, concept, my_cat, [my_cat], DICTATE),
+                self.create_quiz(EN_NL, concept, our_cat, [our_cat], DICTATE),
             },
             create_quizzes(EN_NL, (), concept),
         )
@@ -71,15 +71,15 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         (ketchup,) = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, ketsuppi, [ketchup], READ),
-                self.create_quiz(concept, ketsupit, [ketchup], READ),
-                self.create_quiz(concept, ketsuppi, [ketsuppi], DICTATE),
-                self.create_quiz(concept, ketsupit, [ketsupit], DICTATE),
-                self.create_quiz(concept, ketsuppi, [ketchup], INTERPRET),
-                self.create_quiz(concept, ketsupit, [ketchup], INTERPRET),
-                self.create_quiz(concept, ketchup, [ketsuppi], WRITE),
-                self.create_quiz(concept, ketsuppi, [ketsupit], PLURAL),
-                self.create_quiz(concept, ketsupit, [ketsuppi], SINGULAR),
+                self.create_quiz(FI_NL, concept, ketsuppi, [ketchup], READ),
+                self.create_quiz(FI_NL, concept, ketsupit, [ketchup], READ),
+                self.create_quiz(FI_NL, concept, ketsuppi, [ketsuppi], DICTATE),
+                self.create_quiz(FI_NL, concept, ketsupit, [ketsupit], DICTATE),
+                self.create_quiz(FI_NL, concept, ketsuppi, [ketchup], INTERPRET),
+                self.create_quiz(FI_NL, concept, ketsupit, [ketchup], INTERPRET),
+                self.create_quiz(FI_NL, concept, ketchup, [ketsuppi], WRITE),
+                self.create_quiz(FI_NL, concept, ketsuppi, [ketsupit], PLURAL),
+                self.create_quiz(FI_NL, concept, ketsupit, [ketsuppi], SINGULAR),
             },
             quizzes,
         )
@@ -95,15 +95,15 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         (means_of_transportation,) = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, vervoersmiddel, [means_of_transportation], INTERPRET),
-                self.create_quiz(concept, vervoersmiddel, [vervoersmiddel], DICTATE),
-                self.create_quiz(concept, vervoersmiddel, [means_of_transportation], READ),
-                self.create_quiz(concept, vervoersmiddel, [vervoersmiddelen], PLURAL),
-                self.create_quiz(concept, vervoersmiddelen, [means_of_transportation], INTERPRET),
-                self.create_quiz(concept, vervoersmiddelen, [vervoersmiddelen], DICTATE),
-                self.create_quiz(concept, vervoersmiddelen, [means_of_transportation], READ),
-                self.create_quiz(concept, vervoersmiddelen, [vervoersmiddel], SINGULAR),
-                self.create_quiz(concept, means_of_transportation, [vervoersmiddel], WRITE),
+                self.create_quiz(NL_EN, concept, vervoersmiddel, [means_of_transportation], INTERPRET),
+                self.create_quiz(NL_EN, concept, vervoersmiddel, [vervoersmiddel], DICTATE),
+                self.create_quiz(NL_EN, concept, vervoersmiddel, [means_of_transportation], READ),
+                self.create_quiz(NL_EN, concept, vervoersmiddel, [vervoersmiddelen], PLURAL),
+                self.create_quiz(NL_EN, concept, vervoersmiddelen, [means_of_transportation], INTERPRET),
+                self.create_quiz(NL_EN, concept, vervoersmiddelen, [vervoersmiddelen], DICTATE),
+                self.create_quiz(NL_EN, concept, vervoersmiddelen, [means_of_transportation], READ),
+                self.create_quiz(NL_EN, concept, vervoersmiddelen, [vervoersmiddel], SINGULAR),
+                self.create_quiz(NL_EN, concept, means_of_transportation, [vervoersmiddel], WRITE),
             },
             quizzes,
         )
@@ -120,20 +120,22 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         self.assertSetEqual(
             {
                 self.create_quiz(
+                    EN_NL,
                     concept,
                     means_of_transportation,
                     [vervoersmiddel, vervoersmiddelen],
                     INTERPRET,
                 ),
                 self.create_quiz(
+                    EN_NL,
                     concept,
                     means_of_transportation,
                     [vervoersmiddel, vervoersmiddelen],
                     READ,
                 ),
-                self.create_quiz(concept, vervoersmiddel, [means_of_transportation], WRITE),
-                self.create_quiz(concept, vervoersmiddelen, [means_of_transportation], WRITE),
-                self.create_quiz(concept, means_of_transportation, [means_of_transportation], DICTATE),
+                self.create_quiz(EN_NL, concept, vervoersmiddel, [means_of_transportation], WRITE),
+                self.create_quiz(EN_NL, concept, vervoersmiddelen, [means_of_transportation], WRITE),
+                self.create_quiz(EN_NL, concept, means_of_transportation, [means_of_transportation], DICTATE),
             },
             quizzes,
         )
@@ -150,10 +152,10 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         mämmi, mämmit = concept.labels(FI)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, mämmi, [mämmi], DICTATE),
-                self.create_quiz(concept, mämmit, [mämmit], DICTATE),
-                self.create_quiz(concept, mämmi, [mämmit], PLURAL),
-                self.create_quiz(concept, mämmit, [mämmi], SINGULAR),
+                self.create_quiz(FI_NL, concept, mämmi, [mämmi], DICTATE),
+                self.create_quiz(FI_NL, concept, mämmit, [mämmit], DICTATE),
+                self.create_quiz(FI_NL, concept, mämmi, [mämmit], PLURAL),
+                self.create_quiz(FI_NL, concept, mämmit, [mämmi], SINGULAR),
             },
             quizzes,
         )
@@ -182,24 +184,24 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         nl = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, fi.kauppakeskus, [nl.winkelcentrum], READ),
-                self.create_quiz(concept, fi.ostoskeskus, [nl.winkelcentrum], READ),
-                self.create_quiz(concept, fi.kauppakeskus, [fi.kauppakeskus], DICTATE),
-                self.create_quiz(concept, fi.kauppakeskus, [nl.winkelcentrum], INTERPRET),
-                self.create_quiz(concept, fi.ostoskeskus, [fi.ostoskeskus], DICTATE),
-                self.create_quiz(concept, fi.ostoskeskus, [nl.winkelcentrum], INTERPRET),
-                self.create_quiz(concept, nl.winkelcentrum, [fi.kauppakeskus, fi.ostoskeskus], WRITE),
-                self.create_quiz(concept, fi.kauppakeskukset, [nl.winkelcentra], READ),
-                self.create_quiz(concept, fi.ostoskeskukset, [nl.winkelcentra], READ),
-                self.create_quiz(concept, fi.kauppakeskukset, [fi.kauppakeskukset], DICTATE),
-                self.create_quiz(concept, fi.kauppakeskukset, [nl.winkelcentra], INTERPRET),
-                self.create_quiz(concept, fi.ostoskeskukset, [fi.ostoskeskukset], DICTATE),
-                self.create_quiz(concept, fi.ostoskeskukset, [nl.winkelcentra], INTERPRET),
-                self.create_quiz(concept, nl.winkelcentra, [fi.kauppakeskukset, fi.ostoskeskukset], WRITE),
-                self.create_quiz(concept, fi.kauppakeskus, [fi.kauppakeskukset], PLURAL),
-                self.create_quiz(concept, fi.ostoskeskus, [fi.ostoskeskukset], PLURAL),
-                self.create_quiz(concept, fi.kauppakeskukset, [fi.kauppakeskus], SINGULAR),
-                self.create_quiz(concept, fi.ostoskeskukset, [fi.ostoskeskus], SINGULAR),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskus, [nl.winkelcentrum], READ),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskus, [nl.winkelcentrum], READ),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskus, [fi.kauppakeskus], DICTATE),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskus, [nl.winkelcentrum], INTERPRET),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskus, [fi.ostoskeskus], DICTATE),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskus, [nl.winkelcentrum], INTERPRET),
+                self.create_quiz(FI_NL, concept, nl.winkelcentrum, [fi.kauppakeskus, fi.ostoskeskus], WRITE),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskukset, [nl.winkelcentra], READ),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskukset, [nl.winkelcentra], READ),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskukset, [fi.kauppakeskukset], DICTATE),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskukset, [nl.winkelcentra], INTERPRET),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskukset, [fi.ostoskeskukset], DICTATE),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskukset, [nl.winkelcentra], INTERPRET),
+                self.create_quiz(FI_NL, concept, nl.winkelcentra, [fi.kauppakeskukset, fi.ostoskeskukset], WRITE),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskus, [fi.kauppakeskukset], PLURAL),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskus, [fi.ostoskeskukset], PLURAL),
+                self.create_quiz(FI_NL, concept, fi.kauppakeskukset, [fi.kauppakeskus], SINGULAR),
+                self.create_quiz(FI_NL, concept, fi.ostoskeskukset, [fi.ostoskeskus], SINGULAR),
             },
             create_quizzes(FI_NL, (), concept),
         )
@@ -209,32 +211,32 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         concept = self.create_verb_with_infinitive_and_number_and_person()
         nl = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, FI)
+            self.translation_quizzes(NL_FI, concept)
             | {
-                self.create_quiz(concept, nl.ik_ben, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.jij_bent, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.zij_is, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.ik_ben, [nl.jij_bent], SECOND_PERSON),
-                self.create_quiz(concept, nl.ik_ben, [nl.zij_is], THIRD_PERSON),
-                self.create_quiz(concept, nl.jij_bent, [nl.ik_ben], FIRST_PERSON),
-                self.create_quiz(concept, nl.jij_bent, [nl.zij_is], THIRD_PERSON),
-                self.create_quiz(concept, nl.zij_is, [nl.ik_ben], FIRST_PERSON),
-                self.create_quiz(concept, nl.zij_is, [nl.jij_bent], SECOND_PERSON),
-                self.create_quiz(concept, nl.wij_zijn, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.jullie_zijn, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.zij_zijn, [nl.zijn], INFINITIVE),
-                self.create_quiz(concept, nl.wij_zijn, [nl.jullie_zijn], SECOND_PERSON),
-                self.create_quiz(concept, nl.wij_zijn, [nl.zij_zijn], THIRD_PERSON),
-                self.create_quiz(concept, nl.jullie_zijn, [nl.wij_zijn], FIRST_PERSON),
-                self.create_quiz(concept, nl.jullie_zijn, [nl.zij_zijn], THIRD_PERSON),
-                self.create_quiz(concept, nl.zij_zijn, [nl.wij_zijn], FIRST_PERSON),
-                self.create_quiz(concept, nl.zij_zijn, [nl.jullie_zijn], SECOND_PERSON),
-                self.create_quiz(concept, nl.ik_ben, [nl.wij_zijn], PLURAL),
-                self.create_quiz(concept, nl.wij_zijn, [nl.ik_ben], SINGULAR),
-                self.create_quiz(concept, nl.jij_bent, [nl.jullie_zijn], PLURAL),
-                self.create_quiz(concept, nl.jullie_zijn, [nl.jij_bent], SINGULAR),
-                self.create_quiz(concept, nl.zij_is, [nl.zij_zijn], PLURAL),
-                self.create_quiz(concept, nl.zij_zijn, [nl.zij_is], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.ik_ben, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.jij_bent, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.zij_is, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.ik_ben, [nl.jij_bent], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.ik_ben, [nl.zij_is], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jij_bent, [nl.ik_ben], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jij_bent, [nl.zij_is], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_is, [nl.ik_ben], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_is, [nl.jij_bent], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.wij_zijn, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.jullie_zijn, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.zij_zijn, [nl.zijn], INFINITIVE),
+                self.create_quiz(NL_FI, concept, nl.wij_zijn, [nl.jullie_zijn], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.wij_zijn, [nl.zij_zijn], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jullie_zijn, [nl.wij_zijn], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jullie_zijn, [nl.zij_zijn], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_zijn, [nl.wij_zijn], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_zijn, [nl.jullie_zijn], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.ik_ben, [nl.wij_zijn], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.wij_zijn, [nl.ik_ben], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.jij_bent, [nl.jullie_zijn], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.jullie_zijn, [nl.jij_bent], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.zij_is, [nl.zij_zijn], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.zij_zijn, [nl.zij_is], SINGULAR),
             },
             create_quizzes(NL_FI, (), concept),
         )
@@ -244,26 +246,26 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         concept = self.create_verb_with_grammatical_number_and_person()
         nl = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, FI)
+            self.translation_quizzes(NL_FI, concept)
             | {
-                self.create_quiz(concept, nl.ik_heb, [nl.jij_hebt], SECOND_PERSON),
-                self.create_quiz(concept, nl.ik_heb, [nl.zij_heeft], THIRD_PERSON),
-                self.create_quiz(concept, nl.jij_hebt, [nl.ik_heb], FIRST_PERSON),
-                self.create_quiz(concept, nl.jij_hebt, [nl.zij_heeft], THIRD_PERSON),
-                self.create_quiz(concept, nl.zij_heeft, [nl.ik_heb], FIRST_PERSON),
-                self.create_quiz(concept, nl.zij_heeft, [nl.jij_hebt], SECOND_PERSON),
-                self.create_quiz(concept, nl.wij_hebben, [nl.jullie_hebben], SECOND_PERSON),
-                self.create_quiz(concept, nl.wij_hebben, [nl.zij_hebben], THIRD_PERSON),
-                self.create_quiz(concept, nl.jullie_hebben, [nl.wij_hebben], FIRST_PERSON),
-                self.create_quiz(concept, nl.jullie_hebben, [nl.zij_hebben], THIRD_PERSON),
-                self.create_quiz(concept, nl.zij_hebben, [nl.wij_hebben], FIRST_PERSON),
-                self.create_quiz(concept, nl.zij_hebben, [nl.jullie_hebben], SECOND_PERSON),
-                self.create_quiz(concept, nl.ik_heb, [nl.wij_hebben], PLURAL),
-                self.create_quiz(concept, nl.wij_hebben, [nl.ik_heb], SINGULAR),
-                self.create_quiz(concept, nl.jij_hebt, [nl.jullie_hebben], PLURAL),
-                self.create_quiz(concept, nl.jullie_hebben, [nl.jij_hebt], SINGULAR),
-                self.create_quiz(concept, nl.zij_heeft, [nl.zij_hebben], PLURAL),
-                self.create_quiz(concept, nl.zij_hebben, [nl.zij_heeft], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.ik_heb, [nl.jij_hebt], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.ik_heb, [nl.zij_heeft], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jij_hebt, [nl.ik_heb], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jij_hebt, [nl.zij_heeft], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_heeft, [nl.ik_heb], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_heeft, [nl.jij_hebt], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.wij_hebben, [nl.jullie_hebben], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.wij_hebben, [nl.zij_hebben], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jullie_hebben, [nl.wij_hebben], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.jullie_hebben, [nl.zij_hebben], THIRD_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_hebben, [nl.wij_hebben], FIRST_PERSON),
+                self.create_quiz(NL_FI, concept, nl.zij_hebben, [nl.jullie_hebben], SECOND_PERSON),
+                self.create_quiz(NL_FI, concept, nl.ik_heb, [nl.wij_hebben], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.wij_hebben, [nl.ik_heb], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.jij_hebt, [nl.jullie_hebben], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.jullie_hebben, [nl.jij_hebt], SINGULAR),
+                self.create_quiz(NL_FI, concept, nl.zij_heeft, [nl.zij_hebben], PLURAL),
+                self.create_quiz(NL_FI, concept, nl.zij_hebben, [nl.zij_heeft], SINGULAR),
             },
             create_quizzes(NL_FI, (), concept),
         )
@@ -273,16 +275,16 @@ class GrammaticalNumberQuizzesTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_number_and_gender()
         nl = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, nl.haar_kat, [nl.zijn_kat], MASCULINE),
-                self.create_quiz(concept, nl.zijn_kat, [nl.haar_kat], FEMININE),
-                self.create_quiz(concept, nl.haar_katten, [nl.zijn_katten], MASCULINE),
-                self.create_quiz(concept, nl.zijn_katten, [nl.haar_katten], FEMININE),
-                self.create_quiz(concept, nl.haar_kat, [nl.haar_katten], PLURAL),
-                self.create_quiz(concept, nl.haar_katten, [nl.haar_kat], SINGULAR),
-                self.create_quiz(concept, nl.zijn_kat, [nl.zijn_katten], PLURAL),
-                self.create_quiz(concept, nl.zijn_katten, [nl.zijn_kat], SINGULAR),
+                self.create_quiz(NL_EN, concept, nl.haar_kat, [nl.zijn_kat], MASCULINE),
+                self.create_quiz(NL_EN, concept, nl.zijn_kat, [nl.haar_kat], FEMININE),
+                self.create_quiz(NL_EN, concept, nl.haar_katten, [nl.zijn_katten], MASCULINE),
+                self.create_quiz(NL_EN, concept, nl.zijn_katten, [nl.haar_katten], FEMININE),
+                self.create_quiz(NL_EN, concept, nl.haar_kat, [nl.haar_katten], PLURAL),
+                self.create_quiz(NL_EN, concept, nl.haar_katten, [nl.haar_kat], SINGULAR),
+                self.create_quiz(NL_EN, concept, nl.zijn_kat, [nl.zijn_katten], PLURAL),
+                self.create_quiz(NL_EN, concept, nl.zijn_katten, [nl.zijn_kat], SINGULAR),
             },
             create_quizzes(NL_EN, (), concept),
         )

@@ -27,14 +27,14 @@ class GrammaticalPersonQuizzesTest(QuizFactoryTestCase):
         concept = self.create_verb_with_person()
         ik_eet, jij_eet, zij_eet = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, ik_eet, [jij_eet], SECOND_PERSON),
-                self.create_quiz(concept, ik_eet, [zij_eet], THIRD_PERSON),
-                self.create_quiz(concept, jij_eet, [ik_eet], FIRST_PERSON),
-                self.create_quiz(concept, jij_eet, [zij_eet], THIRD_PERSON),
-                self.create_quiz(concept, zij_eet, [ik_eet], FIRST_PERSON),
-                self.create_quiz(concept, zij_eet, [jij_eet], SECOND_PERSON),
+                self.create_quiz(NL_EN, concept, ik_eet, [jij_eet], SECOND_PERSON),
+                self.create_quiz(NL_EN, concept, ik_eet, [zij_eet], THIRD_PERSON),
+                self.create_quiz(NL_EN, concept, jij_eet, [ik_eet], FIRST_PERSON),
+                self.create_quiz(NL_EN, concept, jij_eet, [zij_eet], THIRD_PERSON),
+                self.create_quiz(NL_EN, concept, zij_eet, [ik_eet], FIRST_PERSON),
+                self.create_quiz(NL_EN, concept, zij_eet, [jij_eet], SECOND_PERSON),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -63,23 +63,23 @@ class GrammaticalPersonQuizzesTest(QuizFactoryTestCase):
             ],
         )
         ik_eet, jij_eet, zij_eet, hij_eet = concept.labels(NL)
-        third_person_feminine = GrammaticalQuizType(quiz_types=frozenset((THIRD_PERSON, FEMININE)))
-        third_person_masculine = GrammaticalQuizType(quiz_types=frozenset((THIRD_PERSON, MASCULINE)))
+        third_person_feminine = GrammaticalQuizType("feminine third person")
+        third_person_masculine = GrammaticalQuizType("masculine third person")
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, zij_eet, [hij_eet], MASCULINE),
-                self.create_quiz(concept, hij_eet, [zij_eet], FEMININE),
-                self.create_quiz(concept, ik_eet, [jij_eet], SECOND_PERSON),
-                self.create_quiz(concept, ik_eet, [zij_eet], third_person_feminine),
-                self.create_quiz(concept, ik_eet, [hij_eet], third_person_masculine),
-                self.create_quiz(concept, jij_eet, [ik_eet], FIRST_PERSON),
-                self.create_quiz(concept, jij_eet, [zij_eet], third_person_feminine),
-                self.create_quiz(concept, jij_eet, [hij_eet], third_person_masculine),
-                self.create_quiz(concept, zij_eet, [ik_eet], FIRST_PERSON),
-                self.create_quiz(concept, zij_eet, [jij_eet], SECOND_PERSON),
-                self.create_quiz(concept, hij_eet, [ik_eet], FIRST_PERSON),
-                self.create_quiz(concept, hij_eet, [jij_eet], SECOND_PERSON),
+                self.create_quiz(NL_EN, concept, zij_eet, [hij_eet], MASCULINE),
+                self.create_quiz(NL_EN, concept, hij_eet, [zij_eet], FEMININE),
+                self.create_quiz(NL_EN, concept, ik_eet, [jij_eet], SECOND_PERSON),
+                self.create_quiz(NL_EN, concept, ik_eet, [zij_eet], third_person_feminine),
+                self.create_quiz(NL_EN, concept, ik_eet, [hij_eet], third_person_masculine),
+                self.create_quiz(NL_EN, concept, jij_eet, [ik_eet], FIRST_PERSON),
+                self.create_quiz(NL_EN, concept, jij_eet, [zij_eet], third_person_feminine),
+                self.create_quiz(NL_EN, concept, jij_eet, [hij_eet], third_person_masculine),
+                self.create_quiz(NL_EN, concept, zij_eet, [ik_eet], FIRST_PERSON),
+                self.create_quiz(NL_EN, concept, zij_eet, [jij_eet], SECOND_PERSON),
+                self.create_quiz(NL_EN, concept, hij_eet, [ik_eet], FIRST_PERSON),
+                self.create_quiz(NL_EN, concept, hij_eet, [jij_eet], SECOND_PERSON),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -107,25 +107,25 @@ class GrammaticalPersonQuizzesTest(QuizFactoryTestCase):
         i_eat, you_eat, she_eats, he_eats = concept.labels(EN)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, syön, [i_eat], READ),
-                self.create_quiz(concept, syön, [syön], DICTATE),
-                self.create_quiz(concept, syön, [i_eat], INTERPRET),
-                self.create_quiz(concept, i_eat, [syön], WRITE),
-                self.create_quiz(concept, syöt, [you_eat], READ),
-                self.create_quiz(concept, syöt, [syöt], DICTATE),
-                self.create_quiz(concept, syöt, [you_eat], INTERPRET),
-                self.create_quiz(concept, you_eat, [syöt], WRITE),
-                self.create_quiz(concept, syö, [she_eats, he_eats], READ),
-                self.create_quiz(concept, syö, [syö], DICTATE),
-                self.create_quiz(concept, syö, [she_eats, he_eats], INTERPRET),
-                self.create_quiz(concept, she_eats, [syö], WRITE),
-                self.create_quiz(concept, he_eats, [syö], WRITE),
-                self.create_quiz(concept, syön, [syöt], SECOND_PERSON),
-                self.create_quiz(concept, syön, [syö], THIRD_PERSON),
-                self.create_quiz(concept, syöt, [syön], FIRST_PERSON),
-                self.create_quiz(concept, syöt, [syö], THIRD_PERSON),
-                self.create_quiz(concept, syö, [syön], FIRST_PERSON),
-                self.create_quiz(concept, syö, [syöt], SECOND_PERSON),
+                self.create_quiz(FI_EN, concept, syön, [i_eat], READ),
+                self.create_quiz(FI_EN, concept, syön, [syön], DICTATE),
+                self.create_quiz(FI_EN, concept, syön, [i_eat], INTERPRET),
+                self.create_quiz(FI_EN, concept, i_eat, [syön], WRITE),
+                self.create_quiz(FI_EN, concept, syöt, [you_eat], READ),
+                self.create_quiz(FI_EN, concept, syöt, [syöt], DICTATE),
+                self.create_quiz(FI_EN, concept, syöt, [you_eat], INTERPRET),
+                self.create_quiz(FI_EN, concept, you_eat, [syöt], WRITE),
+                self.create_quiz(FI_EN, concept, syö, [she_eats, he_eats], READ),
+                self.create_quiz(FI_EN, concept, syö, [syö], DICTATE),
+                self.create_quiz(FI_EN, concept, syö, [she_eats, he_eats], INTERPRET),
+                self.create_quiz(FI_EN, concept, she_eats, [syö], WRITE),
+                self.create_quiz(FI_EN, concept, he_eats, [syö], WRITE),
+                self.create_quiz(FI_EN, concept, syön, [syöt], SECOND_PERSON),
+                self.create_quiz(FI_EN, concept, syön, [syö], THIRD_PERSON),
+                self.create_quiz(FI_EN, concept, syöt, [syön], FIRST_PERSON),
+                self.create_quiz(FI_EN, concept, syöt, [syö], THIRD_PERSON),
+                self.create_quiz(FI_EN, concept, syö, [syön], FIRST_PERSON),
+                self.create_quiz(FI_EN, concept, syö, [syöt], SECOND_PERSON),
             },
             create_quizzes(FI_EN, (), concept),
         )

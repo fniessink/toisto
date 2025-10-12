@@ -20,15 +20,15 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
         (engels,) = concept.labels(NL)
         self.assertSetEqual(
             {
-                self.create_quiz(concept, engels, [english], READ),
-                self.create_quiz(concept, english, [engels], WRITE),
+                self.create_quiz(NL_EN, concept, engels, [english], READ),
+                self.create_quiz(NL_EN, concept, english, [engels], WRITE),
             },
             create_quizzes(NL_EN, (READ, WRITE), concept),
         )
         self.assertSetEqual(
             {
-                self.create_quiz(concept, engels, [engels], DICTATE),
-                self.create_quiz(concept, engels, [english], INTERPRET),
+                self.create_quiz(NL_EN, concept, engels, [engels], DICTATE),
+                self.create_quiz(NL_EN, concept, engels, [english], INTERPRET),
             },
             create_quizzes(NL_EN, (DICTATE, INTERPRET), concept),
         )
@@ -38,11 +38,11 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_number()
         aamu, aamut = concept.labels(FI)
         self.assertSetEqual(
-            {self.create_quiz(concept, aamut, [aamu], SINGULAR)},
+            {self.create_quiz(FI_NL, concept, aamut, [aamu], SINGULAR)},
             create_quizzes(FI_NL, (SINGULAR,), concept),
         )
         self.assertSetEqual(
-            {self.create_quiz(concept, aamu, [aamut], PLURAL)},
+            {self.create_quiz(FI_NL, concept, aamu, [aamut], PLURAL)},
             create_quizzes(FI_NL, (PLURAL,), concept),
         )
 
@@ -51,10 +51,10 @@ class FilterByQuizTypeTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_gender()
         haar_kat, zijn_kat = concept.labels(NL)
         self.assertSetEqual(
-            {self.create_quiz(concept, haar_kat, [zijn_kat], MASCULINE)},
+            {self.create_quiz(NL_EN, concept, haar_kat, [zijn_kat], MASCULINE)},
             create_quizzes(NL_EN, (MASCULINE,), concept),
         )
         self.assertSetEqual(
-            {self.create_quiz(concept, zijn_kat, [haar_kat], FEMININE)},
+            {self.create_quiz(NL_EN, concept, zijn_kat, [haar_kat], FEMININE)},
             create_quizzes(NL_EN, (FEMININE,), concept),
         )

@@ -1,5 +1,7 @@
 #/bin/bash
 
+export UV_PYTHON=3.11
+
 uv run green -r
 
 if [[ "$1" == "--fix" ]]; then

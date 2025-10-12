@@ -16,10 +16,10 @@ class GrammaticalGenderQuizzesTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_gender()
         haar_kat, zijn_kat = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, haar_kat, [zijn_kat], MASCULINE),
-                self.create_quiz(concept, zijn_kat, [haar_kat], FEMININE),
+                self.create_quiz(NL_EN, concept, haar_kat, [zijn_kat], MASCULINE),
+                self.create_quiz(NL_EN, concept, zijn_kat, [haar_kat], FEMININE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -29,11 +29,11 @@ class GrammaticalGenderQuizzesTest(QuizFactoryTestCase):
         concept = self.create_noun_with_grammatical_gender_including_neuter()
         haar_bot, zijn_bot, _ = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, haar_bot, [zijn_bot], MASCULINE),
-                self.create_quiz(concept, haar_bot, [zijn_bot], NEUTER),
-                self.create_quiz(concept, zijn_bot, [haar_bot], FEMININE),
+                self.create_quiz(NL_EN, concept, haar_bot, [zijn_bot], MASCULINE),
+                self.create_quiz(NL_EN, concept, haar_bot, [zijn_bot], NEUTER),
+                self.create_quiz(NL_EN, concept, zijn_bot, [haar_bot], FEMININE),
             },
             create_quizzes(NL_EN, (), concept),
         )
@@ -61,16 +61,16 @@ class GrammaticalGenderQuizzesTest(QuizFactoryTestCase):
         )
         haar_kat, haar_katten, zijn_kat, zijn_katten = concept.labels(NL)
         self.assertSetEqual(
-            self.translation_quizzes(concept, NL, EN)
+            self.translation_quizzes(NL_EN, concept)
             | {
-                self.create_quiz(concept, haar_kat, [haar_katten], PLURAL),
-                self.create_quiz(concept, haar_katten, [haar_kat], SINGULAR),
-                self.create_quiz(concept, zijn_kat, [zijn_katten], PLURAL),
-                self.create_quiz(concept, zijn_katten, [zijn_kat], SINGULAR),
-                self.create_quiz(concept, haar_kat, [zijn_kat], MASCULINE),
-                self.create_quiz(concept, zijn_kat, [haar_kat], FEMININE),
-                self.create_quiz(concept, haar_katten, [zijn_katten], MASCULINE),
-                self.create_quiz(concept, zijn_katten, [haar_katten], FEMININE),
+                self.create_quiz(NL_EN, concept, haar_kat, [haar_katten], PLURAL),
+                self.create_quiz(NL_EN, concept, haar_katten, [haar_kat], SINGULAR),
+                self.create_quiz(NL_EN, concept, zijn_kat, [zijn_katten], PLURAL),
+                self.create_quiz(NL_EN, concept, zijn_katten, [zijn_kat], SINGULAR),
+                self.create_quiz(NL_EN, concept, haar_kat, [zijn_kat], MASCULINE),
+                self.create_quiz(NL_EN, concept, zijn_kat, [haar_kat], FEMININE),
+                self.create_quiz(NL_EN, concept, haar_katten, [zijn_katten], MASCULINE),
+                self.create_quiz(NL_EN, concept, zijn_katten, [haar_katten], FEMININE),
             },
             create_quizzes(NL_EN, (), concept),
         )

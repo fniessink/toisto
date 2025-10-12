@@ -3,30 +3,29 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from functools import cached_property
 
 from toisto.tools import first
 
-from ..language import Language
+from ..language import Language, LanguagePair
 from ..language.concept import Concept
 from ..language.iana_language_subtag_registry import ALL_LANGUAGES
 from ..language.label import Label, Labels
 from .evaluation import Evaluation
-from .quiz_type import GrammaticalQuizType, ListenOnlyQuizType, QuizType
+from .quiz_type import QuizAction, QuizType
 
 
 @dataclass(frozen=True)
 class Quiz:
     """Class representing a quiz."""
 
+    language_pair: LanguagePair
     concept: Concept
     _question: Label
     _answers: Labels
     quiz_type: QuizType
-    blocked_by: tuple[Quiz, ...]
-    _question_meanings: Labels = field(default_factory=Labels)
-    _answer_meanings: Labels = field(default_factory=Labels)
+    action: QuizAction
 
     def __repr__(self) -> str:
         """Return a representation of the quiz for test purposes."""
@@ -48,7 +47,7 @@ class Quiz:
     def key(self) -> str:
         """Return a string version of the quiz that can be used as key in the progress dict."""
         question = self._question.first_spelling_alternative
-        return f"{self.question.language}:{self.answer.language}:{question}:{self.answer}:{self.quiz_type.action}"
+        return f"{self.question.language}:{self.answer.language}:{question}:{self.answer}:{self.action}"
 
     def has_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:
         """Return whether this quiz has the specified quiz type."""
@@ -70,7 +69,8 @@ class Quiz:
 
     def is_question(self, guess: str) -> bool:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
-        questions = Labels((self._question,)) + self._question_meanings
+        question_meanings = self.quiz_type.question_meanings(self.language_pair, self.question, self.concept)
+        questions = Labels((self._question,)) + question_meanings
         return any(questions.spelling_alternatives.matching(guess))
 
     @property
@@ -96,12 +96,14 @@ class Quiz:
     @property
     def question_meanings(self) -> Labels:
         """Return the first spelling alternative of the question meanings."""
-        return self._question_meanings.first_spelling_alternatives
+        question_meanings = self.quiz_type.question_meanings(self.language_pair, self.question, self.concept)
+        return question_meanings.first_spelling_alternatives
 
     @property
     def answer_meanings(self) -> Labels:
         """Return the first spelling alternative of the answer meanings."""
-        return self._answer_meanings.first_spelling_alternatives
+        answer_meanings = self.quiz_type.answer_meanings(self.language_pair, self.concept, self.answer)
+        return answer_meanings.first_spelling_alternatives
 
     def other_answers(self, guess: str) -> Labels:
         """Return the answers not equal to the guess."""
@@ -110,7 +112,7 @@ class Quiz:
     @property
     def instruction(self) -> str:
         """Generate the quiz instruction."""
-        instruction_text = self.quiz_type.instruction(self.question)
+        instruction_text = self.quiz_type.instruction(self.question, self.action)
         if self.question.is_complete_sentence:
             instruction_text = instruction_text.replace("write ", "write a complete sentence ")
         return f"{instruction_text} {ALL_LANGUAGES[self.answer.language]}{self._tips}"
@@ -122,47 +124,50 @@ class Quiz:
 
     def is_blocked_by(self, quizzes: Quizzes) -> bool:
         """Return whether this quiz should come after any of the given quizzes."""
-        return bool(Quizzes(self.blocked_by) & quizzes)
+        return any(self.quiz_type.blocked_by(quiz_type) for quiz_type in quizzes.quiz_types)
 
     @property
     def _tips(self) -> str:
         """Return the tip(s) to be shown as part of the question, if applicable."""
-        question = self._question
-        tips = list(self.quiz_type.tips(question, self._answers))
-        if not isinstance(self.quiz_type, GrammaticalQuizType) and (homographs := question.homographs):
-            tips.extend(self._homonym_tips(*homographs))
-        elif isinstance(self.quiz_type, ListenOnlyQuizType) and (capitonyms := question.capitonyms):
-            tips.extend(self._homonym_tips(*capitonyms))
+        tips = self.quiz_type.tips(self.concept, self._question, self._answers)
         return f" ({'; '.join(tips)})" if tips else ""
 
-    def _homonym_tips(self, *homonym_labels: Label) -> Sequence[str]:
-        """Return the tip(s) to be shown as part of the question, if the question has one or more homonyms."""
-        if differences := self._question.grammatical_differences(*homonym_labels):
-            return [str(category) for category in sorted(differences)]
-        language = self.question.language
-        if hypernyms := self.concept.get_related_concepts("hypernym"):
-            return [str(hypernym.labels(language)[0]) for hypernym in hypernyms[:1]]
-        if holonyms := self.concept.get_related_concepts("holonym"):
-            return [f"part of '{holonym.labels(language)[0]}'" for holonym in holonyms]
-        if involved_concepts := self.concept.get_related_concepts("involves"):
-            return [f"involves '{concept.labels(language)[0]}'" for concept in involved_concepts]
-        return []
 
-
-class Quizzes(set[Quiz]):
+class Quizzes(frozenset[Quiz]):
     """Set of quizzes."""
+
+    def __or__(self, other: Quizzes) -> Quizzes:  # type: ignore[override]
+        """Return the union of self and other."""
+        return self.__class__(super().__or__(other))
 
     def by_concept(self, concept: Concept) -> Quizzes:
         """Return the quizzes for the concept."""
-        return self._quizzes_by_concept.get(concept, Quizzes())
+        return self.__quizzes_by_concept.get(concept, Quizzes())
+
+    @cached_property
+    def __quizzes_by_concept(self) -> dict[Concept, Quizzes]:
+        """Return the quizzes by concept."""
+        mapping: dict[Concept, Quizzes] = {}
+        for quiz in self:
+            mapping[quiz.concept] = mapping.get(quiz.concept, Quizzes()) | Quizzes({quiz})
+        return mapping
 
     def by_label(self, label: Label) -> Quizzes:
         """Return the quizzes for the label."""
-        return self._quizzes_by_label.get(label, Quizzes())
+        return self.__quizzes_by_label.get(label, Quizzes())
+
+    @cached_property
+    def __quizzes_by_label(self) -> dict[Label, Quizzes]:
+        """Return the quizzes by label."""
+        mapping: dict[Label, Quizzes] = {}
+        for quiz in self:
+            for label in {quiz.question, *quiz.answers}:
+                mapping[label] = mapping.get(label, Quizzes()) | Quizzes({quiz})
+        return mapping
 
     def related_quizzes(self, quiz: Quiz) -> Quizzes:
         """Return the quizzes related to the quiz, meaning quizzes for the same concept and quizzes for examples."""
-        quizzes = Quizzes(self.by_concept(quiz.concept))
+        quizzes = self.by_concept(quiz.concept)
         for example in quiz.concept.get_related_concepts("example"):
             quizzes |= self.by_concept(example)
         return quizzes
@@ -173,26 +178,6 @@ class Quizzes(set[Quiz]):
         return self.__class__(quiz for quiz in self if quiz.question.colloquial)
 
     @cached_property
-    def _quizzes_by_concept(self) -> dict[Concept, Quizzes]:
-        """Return the quizzes by concept cache.
-
-        Can't use functools.cache as Quizzes instances are not hashable, so use a dict as cache.
-        Note that the cache is not updated when quizzes are added or removed after initialization.
-        """
-        quizzes_by_concept: dict[Concept, Quizzes] = {}
-        for quiz in self:
-            quizzes_by_concept.setdefault(quiz.concept, Quizzes()).add(quiz)
-        return quizzes_by_concept
-
-    @cached_property
-    def _quizzes_by_label(self) -> dict[Label, Quizzes]:
-        """Return the quizzes by label cache.
-
-        Can't use functools.cache as Quizzes instances are not hashable, so use a dict as cache.
-        Note that the cache is not updated when quizzes are added or removed after initialization.
-        """
-        quizzes_by_label: dict[Label, Quizzes] = {}
-        for quiz in self:
-            for label in [quiz.question, *quiz.answers]:
-                quizzes_by_label.setdefault(label, Quizzes()).add(quiz)
-        return quizzes_by_label
+    def quiz_types(self) -> set[QuizType]:
+        """Return the quiz types of the quizzes."""
+        return {quiz.quiz_type for quiz in self}

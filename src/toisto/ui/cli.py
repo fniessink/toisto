@@ -14,7 +14,7 @@ from toisto.metadata import BUILT_IN_LANGUAGES, README_URL, SUMMARY, latest_vers
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES, IANA_LANGUAGE_SUBTAG_REGISTRY_URL
-from toisto.model.quiz.quiz_type import QuizType
+from toisto.model.quiz.quiz_type import QUIZ_TYPES
 from toisto.persistence.folder import home
 from toisto.tools import first
 from toisto.ui.text import version_message
@@ -200,7 +200,7 @@ class CommandBuilder:
 
     def add_quiz_type_argument(self, parser: ArgumentParser) -> None:
         """Add the quiz type argument to the command."""
-        quiz_types = sorted(QuizType.actions.get_all_keys())
+        quiz_types = sorted([quiz_type.action for quiz_type in QUIZ_TYPES])
         parser.add_argument(
             "-q",
             "--quiz-type",
