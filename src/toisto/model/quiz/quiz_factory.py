@@ -65,7 +65,7 @@ class BaseQuizFactory:
 
     def skip_concept(self, concept: Concept) -> bool:
         """Return whether to create quizzes for the concept."""
-        return concept.answer_only
+        return concept.answer_only or not self.questions(concept)
 
     @abstractmethod
     def questions(self, concept: Concept) -> Labels:
@@ -307,10 +307,6 @@ class ClozeTestQuizFactory(BaseQuizFactory):
     def question_meanings(self, question: Label, concept: Concept) -> Labels:
         """Return the question meanings."""
         return concept.labels(self.language_pair.source)
-
-    def skip_quiz_type(self, concept: Concept) -> bool:
-        """Return whether to create quizzes for the quiz type."""
-        return not self.questions(concept)
 
 
 @dataclass
