@@ -38,7 +38,7 @@ dependencies = [
 
 optional-dependencies.dev = [
   "bandit==1.8.6",
-  "coverage==7.10.7",
+  "coverage==7.11.0",
   "fixit==2.1.0",
   "gprof2dot==2025.4.14",
   "green==4.0.2",
