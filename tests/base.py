@@ -114,8 +114,8 @@ class ToistoTestCase(unittest.TestCase):
     def translation_quizzes(self, language_pair: LanguagePair, concept: Concept) -> set[Quiz]:
         """Create the translation quizzes for the concept."""
         quizzes = set()
-        target_labels = concept.labels(language_pair.target)
-        source_labels = concept.labels(language_pair.source)
+        target_labels = concept.labels(language_pair.target).non_colloquial
+        source_labels = concept.labels(language_pair.source).non_colloquial
         for target_label, source_label in zip(target_labels, source_labels, strict=True):
             quizzes |= {
                 self.create_quiz(language_pair, concept, target_label, [source_label], READ),

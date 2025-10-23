@@ -49,7 +49,7 @@ class QuizType:
         """Return whether to include the question."""
         return question.grammatical_form == answer.grammatical_form
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings. Subclasses may use question and concept to derive the question meanings."""
         return Labels()
 
@@ -190,7 +190,7 @@ class SemanticQuizType(QuizType):
         """Return whether this quiz type is blocked by the given quiz type."""
         return True if not isinstance(quiz_type, self.__class__) else super().blocked_by(quiz_type)
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(language_pair.source)
 
@@ -248,7 +248,7 @@ class GrammaticalQuizType(QuizType):
             and not question.is_homograph(answer)
         )
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(language_pair.source).with_same_grammatical_categories_as(question)
 
@@ -275,7 +275,7 @@ class GrammaticalQuizType(QuizType):
         }
         if quiz_actions <= {"feminine", "masculine", "neuter", "third person"} and len(quiz_actions) > 1:
             return " ".join(sorted(quiz_actions))
-        return quiz_actions.pop() if len(quiz_actions) == 1 else None
+        return first(quiz_actions) if len(quiz_actions) == 1 else None
 
 
 @final
@@ -334,24 +334,9 @@ class OrderQuizType(SemanticQuizType):
         return Labels((question,))  # Question and answer are equal, the question is shuffled when the quiz is presented
 
 
-@final
 @dataclass(frozen=True)
-class AnswerQuizType(SemanticQuizType):
-    """Answer quiz type."""
-
-    action: QuizAction = "answer"
-
-    def _skip_concept(self, language_pair: LanguagePair, concept: Concept) -> bool:
-        """Return whether to create quizzes for the concept."""
-        return super()._skip_concept(language_pair, concept) or not concept.get_related_concepts(self.concept_relation)
-
-
-@final
-@dataclass(frozen=True)
-class AntonymQuizType(SemanticQuizType):
-    """Antonym quiz type."""
-
-    action: QuizAction = "antonym"
+class RelationshipQuizType(SemanticQuizType):
+    """Quiz type based on concept relationship."""
 
     def _skip_concept(self, language_pair: LanguagePair, concept: Concept) -> bool:
         """Return whether to create quizzes for the concept."""
@@ -370,7 +355,7 @@ class ClozeTestQuizType(QuizType):
         """Return the questions."""
         return concept.labels(language_pair.target).cloze_tests
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings."""
         return concept.labels(language_pair.source)
 
@@ -394,7 +379,7 @@ class DictateQuizType(ListenOnlyQuizType):
         """Return the questions."""
         return concept.labels(language_pair.target)
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(language_pair.source).with_same_grammatical_categories_as(question)
 
@@ -428,7 +413,7 @@ class InterpretQuizType(ListenOnlyQuizType):
         """Return the questions."""
         return concept.labels(language_pair.target)
 
-    def question_meanings(self, language_pair: LanguagePair, question: Label, concept: Concept) -> Labels:
+    def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(language_pair.target).with_same_grammatical_categories_as(question)
 
@@ -456,8 +441,8 @@ DICTATE = DictateQuizType()
 INTERPRET = InterpretQuizType()
 
 # Semantic quiz types
-ANSWER = AnswerQuizType()
-ANTONYM = AntonymQuizType()
+ANSWER = RelationshipQuizType("answer")
+ANTONYM = RelationshipQuizType("antonym")
 ORDER = OrderQuizType()
 
 # Cloze test
