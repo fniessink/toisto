@@ -94,18 +94,17 @@ class QuizTest(QuizTestCase):
             quiz = self.create_quiz(FI_NL, concept, suomi, [het_fins], quiz_type)
             self.assertTrue(quiz.is_correct("Fins", NL), quiz)
             self.assertTrue(quiz.is_correct("fins", NL), quiz)
-
             quiz = self.create_quiz(FI_NL, concept, het_fins, [suomi], quiz_type)
             self.assertTrue(quiz.is_correct("Suomi", FI))
             self.assertTrue(quiz.is_correct("suomi", FI))
 
     def test_case_matches_for_listen_quizzes(self):
         """Test that a lower case answer is incorrect when the answer should be upper case, and vice versa."""
+        load_spelling_alternatives(FI_NL)
         concept = self.create_concept("finnish", {})
         suomi = Label(FI, "suomi")
-        quiz = self.create_quiz(FI_NL, concept, suomi, [suomi])
+        quiz = self.create_quiz(FI_NL, concept, suomi, [suomi], DICTATE)
         self.assertFalse(quiz.is_correct("Suomi", NL))
-        self.assertTrue(quiz.is_correct("suomi", NL))
         self.assertTrue(quiz.is_correct("suomi", NL))
         het_fins = Label(NL, "het Fins")
         quiz = self.create_quiz(NL_FI, concept, het_fins, [het_fins], WRITE)
