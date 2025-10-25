@@ -2,24 +2,24 @@
 
 export UV_PYTHON=3.11
 
-uv run green -r
+uv run green -r tests
 
 if [[ "$1" == "--fix" ]]; then
-    uvx ruff format .
-    uvx ruff check --fix .
+    uvx ruff format src tests tools
+    uvx ruff check --fix src tests tools
 else
-    uvx ruff format --check .
-    uvx ruff check .
+    uvx ruff format --check src tests tools
+    uvx ruff check src tests tools
 fi
 
 uvx mypy --python-executable=.venv/bin/python src tests tools
 
-uvx vulture --exclude .venv .
+uvx vulture --exclude .venv src tests tools .vulture-whitelist.py
 
 if [[ "$1" == "--fix" ]]; then
-    uvx fixit fix .
+    uvx fixit fix src tests tools
 else
-    uvx fixit lint .
+    uvx fixit lint src tests tools
 fi
 
 uvx bandit --quiet -r src tests tools
