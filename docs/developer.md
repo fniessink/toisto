@@ -43,6 +43,20 @@ To invoke Toisto with the profiler, create the dot file, convert it to a PNG ima
 tools/profile.sh
 ```
 
+## How to run mutation tests
+
+To run the mutation test:
+
+```console
+mutmut run
+```
+
+To browse the results:
+
+```console
+mutmut browse
+```
+
 ## How to release
 
 Create a branch.

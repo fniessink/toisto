@@ -2,6 +2,7 @@ build
 dist
 html
 htmlcov
+mutants
 venv
 .coverage*
 .mutmut-cache

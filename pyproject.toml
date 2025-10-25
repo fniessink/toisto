@@ -42,6 +42,7 @@ optional-dependencies.dev = [
   "fixit==2.1.0",
   "gprof2dot==2025.4.14",
   "green==4.0.2",
+  "mutmut==3.3.1",
   "mypy==1.18.2",
   "ruff==0.14.1",
   "types-requests==2.32.4.20250913",
@@ -52,6 +53,15 @@ urls.Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
 urls.Issues = "https://github.com/fniessink/toisto/issues"
 urls.Repository = "https://github.com/fniessink/toisto"
 scripts.toisto = "toisto.app:main"
+
+[tool.mutmut]
+paths_to_mutate = [ "src/toisto/" ]
+pytest_add_cli_args_test_selection= [ "tests/" ]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::UserWarning",
+]
 
 [tool.setuptools.packages.find]
 where = [ "src" ]
