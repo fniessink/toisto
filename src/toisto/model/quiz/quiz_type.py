@@ -83,9 +83,9 @@ class QuizType:
         Subclasses may use the answers to generate the notes.
         """
         notes = [re.sub("'([^']+)'", lambda match: linkified(str(match[0])), note) for note in question.notes]
-        if self._include_grammatical_notes() and question.other_grammatical_categories:
-            other_category = random.choice(list(question.other_grammatical_categories.keys()))  # noqa: S311 # nosec
-            other_label = question.other_grammatical_categories[other_category]
+        if self._include_grammatical_notes() and question.grammatical_form.other_grammatical_categories:
+            other_category = random.choice(list(question.grammatical_form.other_grammatical_categories.keys()))  # noqa: S311 # nosec
+            other_label = question.grammatical_form.other_grammatical_categories[other_category]
             also = " also" if str(question) == str(other_label) else ""
             question_str = quoted(linkified(str(question)))
             other_label_str = quoted(linkified(str(other_label)))

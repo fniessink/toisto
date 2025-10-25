@@ -34,8 +34,8 @@ class QuizTypeNotesTest(ToistoTestCase):
         """Test that the quiz type notes include grammatical notes."""
         table = Label(EN, "table", grammatical_form=GrammaticalForm("table", "singular"))
         tables = Label(EN, "tables", grammatical_form=GrammaticalForm("table", "plural"))
-        table.other_grammatical_categories["plural"] = tables
-        tables.other_grammatical_categories["singular"] = table
+        table.grammatical_form.other_grammatical_categories["plural"] = tables
+        tables.grammatical_form.other_grammatical_categories["singular"] = table
         table_note = quoted(linkified("table"))
         tables_note = quoted(linkified("tables"))
         self.assertEqual((f"The plural of {table_note} is {tables_note}.",), ANTONYM.notes(table, Labels()))
@@ -45,8 +45,8 @@ class QuizTypeNotesTest(ToistoTestCase):
         """Test that the quiz type notes do not include grammatical notes for the grammatical quiz."""
         table = Label(EN, "table", grammatical_form=GrammaticalForm("table", "singular"))
         tables = Label(EN, "tables", grammatical_form=GrammaticalForm("table", "plural"))
-        table.other_grammatical_categories["plural"] = tables
-        tables.other_grammatical_categories["singular"] = table
+        table.grammatical_form.other_grammatical_categories["plural"] = tables
+        tables.grammatical_form.other_grammatical_categories["singular"] = table
         self.assertEqual((), PLURAL.notes(table, Labels()))
         self.assertEqual((), SINGULAR.notes(tables, Labels()))
 
@@ -54,8 +54,8 @@ class QuizTypeNotesTest(ToistoTestCase):
         """Test that 'also' is inserted if both labels in the grammatical note are equal."""
         sheep_singular = Label(EN, "sheep", grammatical_form=GrammaticalForm("sheep", "singular"))
         sheep_plural = Label(EN, "sheep", grammatical_form=GrammaticalForm("sheep", "plural"))
-        sheep_singular.other_grammatical_categories["plural"] = sheep_plural
-        sheep_plural.other_grammatical_categories["singular"] = sheep_singular
+        sheep_singular.grammatical_form.other_grammatical_categories["plural"] = sheep_plural
+        sheep_plural.grammatical_form.other_grammatical_categories["singular"] = sheep_singular
         sheep = quoted(linkified("sheep"))
         self.assertEqual((f"The plural of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_singular, Labels()))
         self.assertEqual((f"The singular of {sheep} is also {sheep}.",), ANTONYM.notes(sheep_plural, Labels()))
