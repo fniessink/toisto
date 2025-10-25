@@ -53,7 +53,6 @@ class Label:
         self._cloze_tests = cloze_tests
         self.colloquial = colloquial
         self.meaning_only = meaning_only
-        self.other_grammatical_categories: dict[GrammaticalCategory, Label] = {}
         for spelling_alternative in self._values:
             self.homograph_mapping.setdefault((language, spelling_alternative), []).append(self)
             self.capitonym_mapping.setdefault((language, spelling_alternative.lower()), []).append(self)

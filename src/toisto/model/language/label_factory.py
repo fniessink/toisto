@@ -94,7 +94,7 @@ class LabelFactory:
             for other_label in labels.with_language(label.language).excluding(label).with_same_grammatical_base(label):
                 grammatical_differences = other_label.grammatical_differences(label)
                 if len(grammatical_differences) == 1:
-                    label.other_grammatical_categories[first(grammatical_differences)] = other_label
+                    label.grammatical_form.other_grammatical_categories[first(grammatical_differences)] = other_label
 
     @classmethod
     def grammatical_base_for(cls, json_label: LabelJSON) -> str:
