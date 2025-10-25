@@ -14,16 +14,21 @@ ConceptId = NewType("ConceptId", str)
 ConceptIds = tuple[ConceptId, ...]
 ConceptIdListOrString = ConceptId | list[ConceptId]
 
-InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
 RecursiveConceptRelation = Literal["holonym", "hypernym", "involves"]
+InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
 NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example"]
 ConceptRelation = Literal[InvertedConceptRelation, NonInvertedConceptRelation]
 RelatedConceptIds = dict[ConceptRelation, ConceptIds]
 
 
-def inverted(relation: InvertedConceptRelation) -> ConceptRelation:
-    """Return the inverted relation."""
-    return cast("ConceptRelation", {"hyponym": "hypernym", "involved_by": "involves", "meronym": "holonym"}[relation])
+def inverted(inverted_relation: InvertedConceptRelation) -> RecursiveConceptRelation:
+    """Given an inverted concept relation, return the non-inverted relation."""
+    inversions: dict[InvertedConceptRelation, RecursiveConceptRelation] = {
+        "hyponym": "hypernym",
+        "involved_by": "involves",
+        "meronym": "holonym",
+    }
+    return inversions[inverted_relation]
 
 
 @dataclass(frozen=True)

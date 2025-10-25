@@ -181,6 +181,16 @@ class AppTest(ToistoTestCase):
         self.assertEqual("fi", self.config["languages"]["target"])
         self.assertEqual("nl", self.config["languages"]["source"])
 
+    @patch.object(sys, "argv", ["toisto", "configure", "--target", "fi", "--source", "nl"])
+    @patch("requests.get")
+    def test_configure_parse_error(self, requests_get: Mock) -> None:
+        """Test that an error message is shown if the config file is invalid."""
+        requests_get.return_value = self.latest_version
+        self.config["practice"]["progress_update"] = "invalid"
+        with patch("sys.stderr.write") as std_err_write:
+            self.run_main()
+        self.assertIn("invalid int value: 'invalid'", std_err_write.call_args_list[0][0][0])
+
     @patch.object(sys, "argv", ["toisto", "self", "upgrade"])
     @patch("toisto.metadata.check_output", Mock(return_value="toisto"))
     @patch("requests.get")

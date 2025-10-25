@@ -8,8 +8,8 @@ from configparser import ConfigParser
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-from toisto.metadata import README_URL
-from toisto.model.language import EN
+from toisto.metadata import README_URL, VERSION
+from toisto.model.language import EN, FI
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
@@ -24,8 +24,9 @@ PRACTICE_USAGE = """Usage: toisto practice [-h] -t {language} -s {language} [-e 
 [-u {frequency}] [-r {yes,no}]
                        [{concept} ...]"""
 CONFIGURE_DESCRIPTION = f"Configure options and save them in {home()!s}/.toisto.cfg."
-PRACTICE_USAGE_OPTIONAL_TARGET = """Usage: toisto practice [-h] [-t {language}] -s {language} [-e {path}] \
-[-q {quiz type}] [-u {frequency}] [-r {yes,no}]
+PRACTICE_USAGE_OPTIONAL_LANGUAGES = """Usage: toisto practice [-h] [-t {language}] [-s {language}] [-e {path}] \
+[-q {quiz type}] [-u {frequency}]
+                       [-r {yes,no}]
                        [{concept} ...]"""
 PRACTICE_DESCRIPTION = "Practice a language."
 POSITIONAL_ARGUMENTS = """Positional Arguments:
@@ -34,8 +35,8 @@ HELP_OPTION = "-h, --help            show this help message and exit"
 TARGET_OPTION = """-t, --target {language}
                         target language; %slanguages available in built-in concepts: en, fi, nl"""
 SOURCE_OPTION = """-s, --source {language}
-                        source language; languages available in built-in concepts: en, fi, nl"""
-EXTRA_OPTION = "-e, --extra {path}    file or folder with extra concepts to read, can be repeated; default: none"
+                        source language; %slanguages available in built-in concepts: en, fi, nl"""
+EXTRA_OPTION = "-e, --extra {path}    file or folder with extra concepts to read, can be repeated; default: %s"
 PROGRESS_FOLDER = f"""-p, --progress-folder {{path}}
                         folder where to save progress; default: {home()!s}"""
 PROGRESS_OPTION = """-u, --progress-update {frequency}
@@ -73,20 +74,6 @@ Commands:
 
 See {README_URL} for more information.
 """
-SELF_HELP_MESSAGE = """Usage: toisto self [-h] {upgrade,uninstall,version} ...
-
-Manage Toisto itself.
-
-Options:
-  -h, --help            show this help message and exit
-
-Commands:
-  {upgrade,uninstall,version}
-                        type `toisto self {command} --help` for more information on a command
-    upgrade             upgrade Toisto to the latest version
-    uninstall           uninstall Toisto, excluding configuration and progress files
-    version             show the installed version and the latest version available if it is newer
-"""
 
 
 class ParserTestCase(unittest.TestCase):
@@ -109,10 +96,15 @@ class ParserTestCase(unittest.TestCase):
         self,
         config_parser: ConfigParser | None = None,
         concepts: set[Concept] | None = None,
+        latest_version: str = f"v{VERSION}",
     ) -> ArgumentParser:
         """Create the argument parser."""
-        with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[{"name": "v9999"}])))):
+        with patch("requests.get", Mock(return_value=Mock(json=Mock(return_value=[{"name": latest_version}])))):
             return create_argument_parser(config_parser or default_config(), concepts)
+
+    def assert_output(self, expected_output: str, write: Mock) -> None:
+        """Check the expected output."""
+        self.assertEqual(expected_output, self.ANSI_ESCAPE_CODES.sub("", write.call_args_list[3][0][0]))
 
 
 class HelpTest(ParserTestCase):
@@ -123,7 +115,14 @@ class HelpTest(ParserTestCase):
     def test_help(self, sys_stdout_write: Mock) -> None:
         """Test that the help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+        self.assert_output(HELP_MESSAGE, sys_stdout_write)
+
+    @patch("sys.argv", ["toisto", "-h"])
+    @patch("sys.stdout.write")
+    def test_help_short_option(self, sys_stdout_write: Mock) -> None:
+        """Test that the help message is displayed."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assert_output(HELP_MESSAGE, sys_stdout_write)
 
 
 class ConfigureCommandTest(ParserTestCase):
@@ -261,7 +260,7 @@ class ConfigureCommandTest(ParserTestCase):
     def test_configure_help(self, sys_stdout_write: Mock) -> None:
         """Test that the configure help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(
+        self.assert_output(
             f"""{CONFIGURE_USAGE}
 
 {CONFIGURE_DESCRIPTION}
@@ -269,14 +268,42 @@ class ConfigureCommandTest(ParserTestCase):
 Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
+  {SOURCE_OPTION % ""}
+  {EXTRA_OPTION % "none"}
   {PROGRESS_FOLDER}
   {PROGRESS_OPTION % "0"}
   {RETENTION_OPTION}
   {MP3PLAYER_OPTION}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+            sys_stdout_write,
+        )
+
+    @patch("sys.platform", "darwin")
+    @patch("sys.argv", ["toisto", "configure", "--help"])
+    @patch("sys.stdout.write")
+    def test_configure_help_with_extra_files(self, sys_stdout_write: Mock) -> None:
+        """Test that the configure help message is displayed."""
+        config_parser = default_config()
+        config_parser.add_section("files")
+        config_parser.set("files", "extra1.json", "")
+        config_parser.set("files", "extra2.json", "")
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser=config_parser))
+        self.assert_output(
+            f"""{CONFIGURE_USAGE}
+
+{CONFIGURE_DESCRIPTION}
+
+Options:
+  {HELP_OPTION}
+  {TARGET_OPTION % ""}
+  {SOURCE_OPTION % ""}
+  {EXTRA_OPTION % "extra1.json, extra2.json"}
+  {PROGRESS_FOLDER}
+  {PROGRESS_OPTION % "0"}
+  {RETENTION_OPTION}
+  {MP3PLAYER_OPTION}
+""",
+            sys_stdout_write,
         )
 
 
@@ -308,6 +335,13 @@ class PracticeCommandTest(ParserTestCase):
         """Test that the practice help message is displayed."""
         concepts = {
             Concept(ConceptId("included"), Labels((Label(EN, "included"),)), {}, answer_only=False),
+            Concept(
+                ConceptId("hyponym"),
+                Labels((Label(EN, "hyponym, so not listed"),)),
+                {"hypernym": (ConceptId("included"),)},
+                answer_only=False,
+            ),
+            Concept(ConceptId("sentence"), Labels((Label(EN, "Sentence, so not listed."),)), {}, answer_only=False),
             Concept(ConceptId("answer only"), Labels((Label(EN, "answer only, so not listed"),)), {}, answer_only=True),
             Concept(
                 ConceptId("concept with plural"),
@@ -322,7 +356,7 @@ class PracticeCommandTest(ParserTestCase):
             ),
         }
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(concepts=concepts))
-        self.assertEqual(
+        self.assert_output(
             f"""{PRACTICE_USAGE}
 
 {PRACTICE_DESCRIPTION}
@@ -332,13 +366,13 @@ class PracticeCommandTest(ParserTestCase):
 Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
+  {SOURCE_OPTION % ""}
+  {EXTRA_OPTION % "none"}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
   {RETENTION_OPTION}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+            sys_stdout_write,
         )
 
     @patch("sys.platform", "darwin")
@@ -349,24 +383,30 @@ Options:
         config_parser = default_config()
         config_parser.add_section("languages")
         config_parser.set("languages", "target", "fi")
-        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
-        self.assertEqual(
-            f"""{PRACTICE_USAGE_OPTIONAL_TARGET}
+        config_parser.set("languages", "source", "nl")
+        concepts = {
+            Concept(
+                ConceptId("included"), Labels((Label(EN, "not included"), Label(FI, "included"))), {}, answer_only=False
+            ),
+        }
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser, concepts=concepts))
+        self.assert_output(
+            f"""{PRACTICE_USAGE_OPTIONAL_LANGUAGES}
 
 {PRACTICE_DESCRIPTION}
 
-{POSITIONAL_ARGUMENTS % ""}
+{POSITIONAL_ARGUMENTS % " included"}
 
 Options:
   {HELP_OPTION}
   {TARGET_OPTION % "default: fi; "}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
+  {SOURCE_OPTION % "default: nl; "}
+  {EXTRA_OPTION % "none"}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % "0"}
   {RETENTION_OPTION}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+            sys_stdout_write,
         )
 
     @patch("sys.platform", "darwin")
@@ -377,7 +417,7 @@ Options:
         config_parser = default_config()
         config_parser.set("practice", "progress_update", "42")
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
-        self.assertEqual(
+        self.assert_output(
             f"""{PRACTICE_USAGE}
 
 {PRACTICE_DESCRIPTION}
@@ -387,13 +427,13 @@ Options:
 Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
+  {SOURCE_OPTION % ""}
+  {EXTRA_OPTION % "none"}
   {QUIZ_TYPE_OPTION}
   {PROGRESS_OPTION % 42}
   {RETENTION_OPTION}
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+            sys_stdout_write,
         )
 
     @patch("sys.platform", "darwin")
@@ -446,6 +486,31 @@ Options:
         expected_namespace = {**self.default_namespace, "show_quiz_retention": "yes"}
         self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
 
+    @patch("sys.argv", ["toisto", "practice", "--quiz-type", "dictate", "--target", "nl", "--source", "fi"])
+    def test_quiz_type(self) -> None:
+        """Test that a quiz type can be selected."""
+        expected_namespace = {**self.default_namespace, "quiz_type": ["dictate"]}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
+
+    @patch(
+        "sys.argv",
+        ["toisto", "practice", "--quiz-type", "dictate", "--quiz-type", "write", "--target", "nl", "--source", "fi"],
+    )
+    def test_quiz_types(self) -> None:
+        """Test that multiple quiz types can be selected."""
+        expected_namespace = {**self.default_namespace, "quiz_type": ["dictate", "write"]}
+        self.assertEqual(Namespace(**expected_namespace), parse_arguments(self.argument_parser()))
+
+    @patch("sys.argv", ["toisto", "practice", "--quiz-type", "foo", "--target", "nl", "--source", "fi"])
+    @patch("sys.stderr.write")
+    def test_incorrect_quiz_type(self, sys_stderr_write: Mock) -> None:
+        """Test that an error message is shown when an incorrect quiz type is selected."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        self.assertIn(
+            "invalid choice 'foo' (run `toisto practice -h` to see the valid choices)",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
 
 class ProgressCommandTest(ParserTestCase):
     """Unit tests for the progress command."""
@@ -455,7 +520,7 @@ class ProgressCommandTest(ParserTestCase):
     def test_progress_help(self, sys_stdout_write: Mock) -> None:
         """Test that the progress help message is displayed."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(
+        self.assert_output(
             f"""Usage: toisto progress [-h] -t {{language}} -s {{language}} [-e {{path}}] [-q {{quiz type}}] \
 [-S {{option}}] [{{concept}} ...]
 
@@ -466,32 +531,118 @@ Show progress.
 Options:
   {HELP_OPTION}
   {TARGET_OPTION % ""}
-  {SOURCE_OPTION}
-  {EXTRA_OPTION}
+  {SOURCE_OPTION % ""}
+  {EXTRA_OPTION % "none"}
   {QUIZ_TYPE_OPTION}
   -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
                         retention
 """,
-            self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]),
+            sys_stdout_write,
+        )
+
+    @patch("sys.argv", ["toisto", "progress", "--help"])
+    @patch("sys.stdout.write")
+    def test_progress_help_with_languages_in_config(self, sys_stdout_write: Mock) -> None:
+        """Test that the progress help message is displayed."""
+        config_parser = default_config()
+        config_parser.add_section("languages")
+        config_parser.set("languages", "target", "fi")
+        config_parser.set("languages", "source", "nl")
+        self.maxDiff = None
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(config_parser))
+        self.assert_output(
+            f"""Usage: toisto progress [-h] [-t {{language}}] [-s {{language}}] [-e {{path}}] [-q {{quiz type}}] \
+[-S {{option}}] [{{concept}} ...]
+
+Show progress.
+
+{POSITIONAL_ARGUMENTS % ""}
+
+Options:
+  {HELP_OPTION}
+  {TARGET_OPTION % "default: fi; "}
+  {SOURCE_OPTION % "default: nl; "}
+  {EXTRA_OPTION % "none"}
+  {QUIZ_TYPE_OPTION}
+  -S, --sort {{option}}   how to sort progress information; default: by retention; available options: attempts,
+                        retention
+""",
+            sys_stdout_write,
         )
 
 
 class SelfCommandTest(ParserTestCase):
     """Unit tests for the self command."""
 
+    SELF_HELP = """Usage: toisto self [-h] {upgrade,uninstall,version} ...
+
+Manage Toisto itself.
+
+Options:
+  -h, --help            show this help message and exit
+
+Commands:
+  {upgrade,uninstall,version}
+                        type `toisto self {command} --help` for more information on a command
+    upgrade             upgrade Toisto to the latest version
+    uninstall           uninstall Toisto, excluding configuration and progress files
+    version             show the installed version and the latest version available if it is newer
+"""
+    SELF_COMMAND_HELP = """Usage: toisto self %s [-h]
+
+%s.
+
+Options:
+  -h, --help  show this help message and exit
+"""
+
     @patch("sys.argv", ["toisto", "self"])
+    @patch("sys.stderr.write")
     @patch("sys.stdout.write")
-    def test_self_command(self, sys_stdout_write: Mock) -> None:
+    def test_self_command(self, sys_stdout_write: Mock, sys_stderr_write: Mock) -> None:
         """Test that invoking help without arguments prints the help for self."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(SELF_HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+        sys_stderr_write.assert_not_called()
+        self.assert_output(self.SELF_HELP, sys_stdout_write)
 
     @patch("sys.argv", ["toisto", "self", "--help"])
+    @patch("sys.stderr.write")
     @patch("sys.stdout.write")
-    def test_self_help(self, sys_stdout_write: Mock) -> None:
+    def test_self_help(self, sys_stdout_write: Mock, sys_stderr_write: Mock) -> None:
         """Test the help for self."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertEqual(SELF_HELP_MESSAGE, self.ANSI_ESCAPE_CODES.sub("", sys_stdout_write.call_args_list[3][0][0]))
+        sys_stderr_write.assert_not_called()
+        self.assert_output(self.SELF_HELP, sys_stdout_write)
+
+    @patch("sys.argv", ["toisto", "self", "upgrade", "--help"])
+    @patch("sys.stderr.write")
+    @patch("sys.stdout.write")
+    def test_self_upgrade_help(self, sys_stdout_write: Mock, sys_stderr_write: Mock) -> None:
+        """Test the help for self upgrade."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        sys_stderr_write.assert_not_called()
+        expected_message = self.SELF_COMMAND_HELP % ("upgrade", "Upgrade Toisto")
+        self.assert_output(expected_message, sys_stdout_write)
+
+    @patch("sys.argv", ["toisto", "self", "uninstall", "--help"])
+    @patch("sys.stderr.write")
+    @patch("sys.stdout.write")
+    def test_self_uninstall_help(self, sys_stdout_write: Mock, sys_stderr_write: Mock) -> None:
+        """Test the help for self uninstall."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        sys_stderr_write.assert_not_called()
+        expected_message = self.SELF_COMMAND_HELP % ("uninstall", "Uninstall Toisto")
+        self.assert_output(expected_message, sys_stdout_write)
+
+    @patch("sys.argv", ["toisto", "self", "version", "--help"])
+    @patch("sys.stderr.write")
+    @patch("sys.stdout.write")
+    def test_self_version_help(self, sys_stdout_write: Mock, sys_stderr_write: Mock) -> None:
+        """Test the help for self version."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
+        sys_stderr_write.assert_not_called()
+        expected_message = self.SELF_COMMAND_HELP % ("version", "Show the current version")
+        self.assert_output(expected_message, sys_stdout_write)
 
 
 class VersionTest(ParserTestCase):
@@ -502,11 +653,21 @@ class VersionTest(ParserTestCase):
     def test_version_long_option(self, print_message: Mock) -> None:
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
+        self.assertEqual(f"v{VERSION}\n", print_message.call_args_list[0][0][0])
 
     @patch("sys.argv", ["toisto", "-V"])
     @patch.object(ArgumentParser, "_print_message")
     def test_version_short_option(self, print_message: Mock) -> None:
         """Test that the app writes the version number to stdout."""
         self.assertRaises(SystemExit, parse_arguments, self.argument_parser())
-        self.assertRegex(print_message.call_args_list[0][0][0], r"\d+.\d+.\d+")
+        self.assertEqual(f"v{VERSION}\n", print_message.call_args_list[0][0][0])
+
+    @patch("sys.argv", ["toisto", "--version"])
+    @patch.object(ArgumentParser, "_print_message")
+    def test_version_when_newer_version_available(self, print_message: Mock) -> None:
+        """Test that the app writes the version number to stdout."""
+        self.assertRaises(SystemExit, parse_arguments, self.argument_parser(latest_version="v9999"))
+        self.assertEqual(
+            f"v{VERSION} (v9999 is available, run toisto self upgrade to install)\n",
+            print_message.call_args_list[0][0][0],
+        )

@@ -133,6 +133,16 @@ class ReadInvalidConfigTest(ConfigTestCase):
             sys_stderr_write.call_args_list[1][0][0],
         )
 
+    def test_invalid_option_with_multiple_values(self, path_open: Mock, sys_stderr_write: Mock) -> None:
+        """Test reading an invalid config (invalid option)."""
+        config_file_contents = ["[languages]\n", "foo = fi\n"]
+        self.assertRaises(SystemExit, self.read_config, path_open, *config_file_contents)
+        self.assertIn(
+            f"While reading from '{CONFIG_FILENAME}': unknown option 'foo' in section 'languages'. "
+            "Allowed options are: source, target.",
+            sys_stderr_write.call_args_list[1][0][0],
+        )
+
     def test_invalid_one_of_option_value(self, path_open: Mock, sys_stderr_write: Mock) -> None:
         """Test reading an invalid config (invalid option value, one of)."""
         config_file_contents = ["[languages]\n", "target = foo\n"]

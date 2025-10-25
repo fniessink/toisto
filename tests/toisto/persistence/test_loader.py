@@ -44,6 +44,26 @@ class LoadConceptsTest(ToistoTestCase):
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.open")
     @patch("sys.stderr.write")
+    def test_load_empty_file(self, stderr_write: Mock, path_open: Mock) -> None:
+        """Test that an error message is given when the concept file is empty."""
+        path_open.return_value.__enter__.return_value.read.side_effect = [""]
+        self.assertRaises(SystemExit, self.loader.load_concepts, Path("empty-file"))
+        self.assertIn(
+            "cannot read file empty-file: Expecting value: line 1 column 1 (char 0).",
+            stderr_write.call_args_list[1][0][0],
+        )
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
+    def test_load_file_without_concepts_and_labels(self, stderr_write: Mock, path_open: Mock) -> None:
+        """Test that a concept file without concepts and labels can be loaded."""
+        path_open.return_value.__enter__.return_value.read.side_effect = ["{}\n"]
+        self.assertEqual(set(), self.loader.load_concepts(Path("valid-empty-file")))
+
+    @patch("pathlib.Path.exists", Mock(return_value=True))
+    @patch("pathlib.Path.open")
+    @patch("sys.stderr.write")
     def test_load_concepts_with_same_concept_id(self, stderr_write: Mock, path_open: Mock) -> None:
         """Test that an error message is given when a concept file contains the same concept id as another file."""
         path_open.return_value.__enter__.return_value.read.side_effect = [

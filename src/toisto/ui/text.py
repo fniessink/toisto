@@ -1,7 +1,6 @@
 """Output for the user."""
 
 import sys
-from collections.abc import Callable
 from configparser import ConfigParser
 from datetime import datetime
 from random import sample
@@ -231,26 +230,28 @@ def instruction(quiz: Quiz) -> str:
     return wrapped(f"{quiz.instruction}:", style="quiz", postfix="")
 
 
-def show_welcome(write_output: Callable[..., None], latest_version: str | None, config: ConfigParser) -> None:
+def show_welcome(latest_version: str | None, config: ConfigParser) -> None:
     """Show the welcome message."""
-    write_output(WELCOME)
-    new_version_available = latest_version and latest_version.strip("v") > VERSION
+    console.print(WELCOME)
+    new_version_available = _new_version_available(latest_version)
     languages_configured = config.has_option("languages", "target") and config.has_option("languages", "source")
     if new_version_available:
         news = NEWS.format(latest_version)
-        write_output(Panel(news, expand=False))
+        console.print(Panel.fit(news), "")
     elif not languages_configured:
-        write_output(Panel(CONFIG_LANGUAGE_TIP, expand=False))
-    if new_version_available or not languages_configured:
-        write_output()
+        console.print(Panel.fit(CONFIG_LANGUAGE_TIP), "")
 
 
 def version_message(latest_version: str | None) -> str:
     """Return the version message."""
-    newer = latest_version and latest_version.strip("v") > VERSION
     return f"[white not bold]v{VERSION}[/white not bold]" + (
         f" ([white not bold]{latest_version}[/white not bold] is available, "
         "run [code]toisto self upgrade[/code] to install)"
-        if newer
+        if _new_version_available(latest_version)
         else ""
     )
+
+
+def _new_version_available(latest_version: str | None) -> bool:
+    """Return whether a newer version is available."""
+    return bool(latest_version and latest_version.removeprefix("v") > VERSION)

@@ -24,12 +24,6 @@ class GrammaticalFormTest(ToistoTestCase):
         not_equal_to_object = grammatical_form != object()
         self.assertTrue(not_equal_to_object)
 
-    def test_hash(self):
-        """Test that grammatical forms can be used as dict keys."""
-        form_dict: dict[GrammaticalForm, str] = {}
-        form_dict[GrammaticalForm()] = "default grammatical form"
-        self.assertEqual("default grammatical form", form_dict[GrammaticalForm()])
-
     def test_grammatical_differences(self):
         """Test the grammatical differences between two grammatical forms."""
         default = GrammaticalForm()

@@ -1,7 +1,6 @@
 """Practice command."""
 
 from argparse import Namespace
-from collections.abc import Callable
 from configparser import ConfigParser
 from dataclasses import dataclass
 
@@ -15,14 +14,13 @@ from toisto.model.quiz.quiz_type import ListenOnlyQuizType
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkified
 from toisto.ui.speech import Speech
-from toisto.ui.text import DONE, Feedback, ProgressUpdate, instruction
+from toisto.ui.text import DONE, Feedback, ProgressUpdate, console, instruction
 
 
 @dataclass(frozen=True)
 class QuizMaster:
     """Do quizzes."""
 
-    write_output: Callable[..., None]
     language_pair: LanguagePair
     progress: Progress
     speech: Speech
@@ -31,14 +29,14 @@ class QuizMaster:
     def do_quiz(self, quiz: Quiz) -> None:
         """Do one quiz and update the progress."""
         feedback = Feedback(quiz, self.language_pair)
-        self.write_output(instruction(quiz))
+        console.print(instruction(quiz))
         if not quiz.has_quiz_type(ListenOnlyQuizType):
-            self.write_output(linkified(str(quiz.question)))
+            console.print(linkified(str(quiz.question)))
         for attempt in range(1, 3):
             guess = self.do_quiz_attempt(quiz, attempt)
             evaluation = quiz.evaluate(guess, self.language_pair.source, attempt)
             retention = self.progress.mark_evaluation(quiz, evaluation)
-            self.write_output(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
+            console.print(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
             if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
                 break
 
@@ -54,24 +52,18 @@ class QuizMaster:
         return answer
 
 
-def practice(
-    write_output: Callable[..., None],
-    language_pair: LanguagePair,
-    progress: Progress,
-    config: ConfigParser,
-    args: Namespace,
-) -> None:
+def practice(language_pair: LanguagePair, progress: Progress, config: ConfigParser, args: Namespace) -> None:
     """Practice a language."""
     progress_update = ProgressUpdate(progress, args.progress_update)
     speech = Speech(config)
-    quiz_master = QuizMaster(write_output, language_pair, progress, speech, args.show_quiz_retention == "yes")
+    quiz_master = QuizMaster(language_pair, progress, speech, args.show_quiz_retention == "yes")
     try:
         while quiz := progress.next_quiz():
             quiz_master.do_quiz(quiz)
             save_progress(progress, config)
             with dramatic.output.at_speed(120):
                 # Turn off highlighting to work around https://github.com/treyhunner/dramatic/issues/8:
-                write_output(progress_update(), end="", highlight=False)
-        write_output(DONE)
+                console.print(progress_update(), end="", highlight=False)
+        console.print(DONE)
     except (KeyboardInterrupt, EOFError):
-        write_output()  # Make sure the shell prompt is displayed on a new line
+        console.print()  # Make sure the shell prompt is displayed on a new line

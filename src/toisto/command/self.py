@@ -1,12 +1,11 @@
 """Self commands."""
 
 from argparse import ArgumentParser
-from collections.abc import Callable
 from subprocess import check_output  # nosec import_subprocess
 from typing import NoReturn
 
 from toisto.metadata import NAME, installation_tool, latest_version
-from toisto.ui.text import version_message
+from toisto.ui.text import console, version_message
 
 
 class Self:
@@ -19,17 +18,17 @@ class Self:
 
     def uninstall(self) -> NoReturn:
         """Uninstall the program and exit."""
-        command = ["pip", "uninstall", "--yes"] if self.tool == "pip" else [*self.tool.split(" "), "uninstall"]
+        command = ["pip", "uninstall", "--yes"] if self.tool == "pip" else [*self.tool.split(), "uninstall"]
         self._run_command([*command, self.program_name])
 
     def upgrade(self) -> NoReturn:
         """Upgrade the program and exit."""
-        command = ["pip", "install", "--upgrade"] if self.tool == "pip" else [*self.tool.split(" "), "upgrade"]
+        command = ["pip", "install", "--upgrade"] if self.tool == "pip" else [*self.tool.split(), "upgrade"]
         self._run_command([*command, self.program_name])
 
-    def version(self, console_print: Callable[..., None]) -> NoReturn:
+    def version(self) -> NoReturn:
         """Print the program's version and exit."""
-        console_print(version_message(latest_version()))
+        console.print(version_message(latest_version()))
         self.argument_parser.exit()
 
     def _run_command(self, command: list[str]) -> NoReturn:

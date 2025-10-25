@@ -1,16 +1,22 @@
 """Unit tests for the output."""
 
+from configparser import ConfigParser
 from datetime import datetime, timedelta
+from unittest.mock import patch
 
+from rich.panel import Panel
+
+from toisto.metadata import VERSION
 from toisto.model.language import FI, NL
 from toisto.model.language.concept import ConceptId
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import DICTATE, INTERPRET, READ, WRITE
 from toisto.model.quiz.retention import Retention
+from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
 from toisto.ui.format import enumerated
-from toisto.ui.text import Feedback, instruction
+from toisto.ui.text import CONFIG_LANGUAGE_TIP, NEWS, WELCOME, Feedback, instruction, show_welcome
 
 from ...base import FI_NL, NL_FI, LabelDict, ToistoTestCase
 
@@ -482,3 +488,74 @@ class FeedbackExampleTest(ToistoTestCase):
             or (examples[0] in text and examples[1] in text and examples[2] not in text and examples[3] in text)
             or (examples[0] in text and examples[1] in text and examples[2] in text and examples[3] not in text)
         )
+
+
+class WelcomeTest(ToistoTestCase):
+    """Test the welcome message."""
+
+    def setUp(self) -> None:
+        """Extend to add mock."""
+        super().setUp()
+        patcher = patch("rich.console.Console.print")
+        self.patched_print = patcher.start()
+        self.addCleanup(patcher.stop)
+
+    @staticmethod
+    def create_config(target: str = "fi", source: str = "nl") -> ConfigParser:
+        """Create a config fixture."""
+        config = default_config()
+        config.add_section("languages")
+        if target:
+            config["languages"]["target"] = target
+        if source:
+            config["languages"]["source"] = source
+        return config
+
+    def assert_output(self, *expected_renderables: str | Panel) -> None:
+        """Check the output."""
+        renderables = []
+        for call in self.patched_print.call_args_list:
+            renderables.extend(call[0])
+        for expected_renderable, renderable in zip(expected_renderables, renderables, strict=True):
+            inner_renderable = renderable.renderable if isinstance(renderable, Panel) else renderable
+            self.assertEqual(expected_renderable, inner_renderable)
+
+    def test_default_message(self) -> None:
+        """Test the default message."""
+        show_welcome("", self.create_config())
+        self.assert_output(WELCOME)
+
+    def test_show_new_version(self) -> None:
+        """Test that a new version is announced."""
+        show_welcome("v9999", self.create_config())
+        self.assert_output(WELCOME, NEWS.format("v9999"), "")
+
+    def test_do_not_show_old_version(self) -> None:
+        """Test that a new version is not announced if the current version is newer."""
+        show_welcome("v0", self.create_config())
+        self.assert_output(WELCOME)
+
+    def test_do_not_show_current_version(self) -> None:
+        """Test that a new version is not announced if it's the current version."""
+        show_welcome(f"v{VERSION}", self.create_config())
+        self.assert_output(WELCOME)
+
+    def test_show_language_tip_when_no_languages_are_configured(self) -> None:
+        """Test that a tip is shown when the user has configured one language."""
+        show_welcome("", default_config())
+        self.assert_output(WELCOME, CONFIG_LANGUAGE_TIP, "")
+
+    def test_show_language_tip_when_only_source_language_is_configured(self) -> None:
+        """Test that a tip is shown when the user hasn't configured languages."""
+        show_welcome("", self.create_config(target=""))
+        self.assert_output(WELCOME, CONFIG_LANGUAGE_TIP, "")
+
+    def test_show_language_tip_when_only_target_language_is_configured(self) -> None:
+        """Test that a tip is shown when the user hasn't configured languages."""
+        show_welcome("", self.create_config(source=""))
+        self.assert_output(WELCOME, CONFIG_LANGUAGE_TIP, "")
+
+    def test_language_tip_is_not_shown_when_there_is_a_new_version(self) -> None:
+        """Test that the language config tip is not shown when a new version is announced."""
+        show_welcome("v9999", default_config())
+        self.assert_output(WELCOME, NEWS.format("v9999"), "")

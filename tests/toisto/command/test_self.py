@@ -70,7 +70,7 @@ class SelfVersionTests(SelfTestCase):
     def test_version(self) -> None:
         """Test that the current version is shown."""
         with patch("rich.console.Console.print") as patched_print:
-            self.assertRaises(SystemExit, self.self.version, patched_print)
+            self.assertRaises(SystemExit, self.self.version)
         patched_print.assert_called_once_with(
             f"[white not bold]v{VERSION}[/white not bold] ([white not bold]v9999[/white not bold] is available, "
             "run [code]toisto self upgrade[/code] to install)"

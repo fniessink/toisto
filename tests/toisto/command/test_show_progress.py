@@ -42,6 +42,8 @@ class ShowProgressTestCase(ToistoTestCase):
 class ShowProgressTest(ShowProgressTestCase):
     """Test the show progress command."""
 
+    COLUMN_HEADERS = ("Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until")
+
     def setUp(self) -> None:
         """Extend to set up retention."""
         super().setUp()
@@ -58,16 +60,19 @@ class ShowProgressTest(ShowProgressTestCase):
     def test_column_headers(self):
         """Test that the column headers are shown."""
         console_print = self.show_progress(self.progress)
-        for index, value in enumerate(
-            ["Quiz type", "Question", "From", "To", "Answer(s)", "Attempts", "Retention", "Not quizzed until"],
-        ):
+        for index, value in enumerate(self.COLUMN_HEADERS):
             self.assertEqual(value, console_print.call_args[0][0].columns[index].header)
 
     def test_quiz(self):
         """Test that quizzes are shown."""
         console_print = self.show_progress(self.progress)
+        attempts_column_index = self.COLUMN_HEADERS.index("Attempts")
         for index, value in enumerate(["read", "Terve!", "fi", "nl", "Hoi!", "0", "60 minutes", ""]):
             self.assertEqual(value, first(console_print.call_args[0][0].columns[index].cells))
+            self.assertEqual(
+                "right" if index == attempts_column_index else "left",
+                console_print.call_args[0][0].columns[index].justify,
+            )
 
     def test_quiz_silenced_until_time_in_the_future(self):
         """Test that if the time until which a quiz is silenced lies in the future, it is shown."""
@@ -81,6 +86,18 @@ class ShowProgressTest(ShowProgressTestCase):
         self.progress.get_retention(self.quiz).skip_until = self.now - timedelta(days=1)
         console_print = self.show_progress(self.progress)
         self.assertEqual("", first(console_print.call_args[0][0].columns[7].cells))
+
+    def test_that_spelling_alternatives_are_shown(self):
+        """Test that spelling alternatives are included in the progress table."""
+        concept = self.create_concept(
+            "veggie",
+            labels=[{"label": "vegetable", "language": EN}, {"label": ["de groente", "de groentes"], "language": NL}],
+        )
+        quiz = first(create_quizzes(EN_NL, (READ,), concept))
+        quizzes = Quizzes({quiz})
+        progress = Progress(EN, quizzes, {quiz.key: {"start": self.start, "end": self.end}})
+        console_print = self.show_progress(progress)
+        self.assertEqual("de groente - de groentes", next(console_print.call_args[0][0].columns[4].cells))
 
     def test_that_generated_spelling_alternatives_are_not_shown(self):
         """Test that generated spelling alternatives are not included in the progress table."""

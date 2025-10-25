@@ -33,7 +33,7 @@ class Progress:
 
     def valid(self, key: str) -> bool:
         """Return whether the key is valid."""
-        action = key.rsplit(":", maxsplit=1)[-1]
+        action = key.rsplit(":")[-1]
         return action in [quiz_type.action for quiz_type in QUIZ_TYPES]
 
     def mark_evaluation(self, quiz: Quiz, evaluation: Evaluation) -> Retention:

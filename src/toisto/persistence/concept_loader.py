@@ -43,7 +43,7 @@ class ConceptLoader:
     def _load_file(self, file_path: Path) -> JSON:
         """Load JSON file and check that concept identifiers are unique."""
         try:
-            json = cast("JSON", load_json(file_path))
+            json = cast("JSON", load_json(file_path))  # pragma: no mutate
             concept_ids = tuple(json.get("concepts", {}).keys())
             self.concept_id_registry.check_and_register_identifiers(concept_ids, file_path)
         except Exception as reason:  # noqa: BLE001

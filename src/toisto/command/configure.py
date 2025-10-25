@@ -7,6 +7,7 @@ from rich.panel import Panel
 from rich.syntax import Syntax
 
 from toisto.persistence.config import CONFIG_FILENAME, write_config
+from toisto.tools import first
 from toisto.ui.text import console
 
 
@@ -15,7 +16,7 @@ def configure(argument_parser: ArgumentParser, config: ConfigParser, args: Names
     for language in ("target_language", "source_language"):
         if language in args and getattr(args, language):
             ensure_section(config, "languages")
-            config.set("languages", language.split("_", maxsplit=1)[0], getattr(args, language))
+            config.set("languages", first(language.split("_")), getattr(args, language))
     if "progress_folder" in args:
         ensure_section(config, "progress")
         config.set("progress", "folder", str(args.progress_folder))
@@ -44,6 +45,6 @@ def ensure_section(config: ConfigParser, section: str) -> None:
 
 def show_config_file() -> None:
     """Show the config file."""
-    with CONFIG_FILENAME.open("rt") as config_file:
+    with CONFIG_FILENAME.open() as config_file:
         config_file_contents = Syntax(config_file.read(), "ini")
     console.print(Panel(config_file_contents, title=str(CONFIG_FILENAME)))

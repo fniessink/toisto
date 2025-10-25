@@ -5,6 +5,7 @@ from configparser import ConfigParser
 from pathlib import Path
 from unittest.mock import MagicMock, Mock, patch
 
+from toisto.metadata import NAME
 from toisto.model.language import FI, Language
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
@@ -41,10 +42,18 @@ class LoadProgressTest(ProgressTestCase):
     @patch("sys.stderr.write")
     @patch("pathlib.Path.open")
     def test_load_invalid_progress(self, path_open: Mock, stderr_write: Mock) -> None:
-        """Test that the the program exists if the progress cannot be loaded."""
+        """Test that the program exits if the progress cannot be loaded."""
         path_open.return_value.__enter__.return_value.read.return_value = "invalid"
         self.assertRaises(SystemExit, load_progress, Language("en"), Quizzes(), ArgumentParser(), self.config)
-        self.assertIn("cannot parse the progress information in /home/user", stderr_write.call_args_list[1][0][0])
+        self.assertIn(
+            f"""cannot parse the progress information in /home/user/.{NAME.lower()}-uuid-progress-en.json: \
+Expecting value: line 1 column 1 (char 0).
+To fix this, remove or rename /home/user/.{NAME.lower()}-uuid-progress-en.json and start {NAME} again.
+Unfortunately, this will reset your progress.
+Please consider opening a bug report at https://github.com/fniessink/{NAME.lower()}.
+Be sure to attach the invalid progress file to the issue.""",
+            stderr_write.call_args_list[1][0][0],
+        )
 
     @patch("pathlib.Path.exists", Mock(return_value=True))
     @patch("pathlib.Path.glob", Mock(return_value=[Path("/home/user/.toisto-uuid-progress-en.json")]))

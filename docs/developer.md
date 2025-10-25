@@ -51,6 +51,8 @@ To run the mutation test:
 mutmut run
 ```
 
+If mutmut fails to run the 'clean tests', simply restart `mutmut run`.
+
 To browse the results:
 
 ```console

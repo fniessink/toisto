@@ -21,7 +21,8 @@ TAGS_API_URL: Final = "https://api.github.com/repos/fniessink/toisto/tags"
 VERSION: Final = version(NAME)
 BUILT_IN_LANGUAGES: Final = [EN, FI, NL]
 
-# File locations
+# Files
+ENCODING = "utf-8"
 _data_folder = Path(__file__).parent.parent
 BUILT_IN_CONCEPT_JSON_FILES: Final = sorted((_data_folder / "concepts").glob("**/*.json"))
 _languages_folder = _data_folder / "languages"
