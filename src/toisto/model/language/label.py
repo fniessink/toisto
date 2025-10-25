@@ -235,6 +235,13 @@ class Label:
         """
         return SequenceMatcher(a=str(self).lower(), b=text.lower()).ratio()
 
+    def register_other_grammatical_categories(self, labels: Labels) -> None:
+        """Register the other grammatical forms of this label."""
+        for label in labels.with_language(self.language).with_same_grammatical_base(self):
+            grammatical_differences = label.grammatical_differences(self)
+            if len(grammatical_differences) == 1:
+                self.grammatical_form.other_grammatical_categories[first(grammatical_differences)] = label
+
 
 class Labels:  # noqa: PLW1641
     """Labels collection."""
@@ -244,7 +251,7 @@ class Labels:  # noqa: PLW1641
 
     def __repr__(self) -> str:
         """Return the string representation of the labels."""
-        return repr(tuple(repr(label) for label in self._labels))
+        return repr(tuple(repr(label) for label in self))
 
     def __eq__(self, other: object) -> bool:
         """Return whether the labels are equal."""
@@ -262,7 +269,7 @@ class Labels:  # noqa: PLW1641
 
     def __getattr__(self, attribute: str) -> Label:
         """Return the label with the given string value. Used in unit tests."""
-        return first([label for label in self._labels if str(label).lower().replace(" ", "_") == attribute])
+        return first([label for label in self if str(label).lower().replace(" ", "_") == attribute])
 
     def __getitem__(self, index: int) -> Label:
         """Return the Label at the specified position."""
@@ -274,23 +281,19 @@ class Labels:  # noqa: PLW1641
 
     def with_language(self, language: Language) -> Labels:
         """Return the labels with the specified language."""
-        return Labels(label for label in self._labels if label.language == language)
-
-    def excluding(self, other_label: Label) -> Labels:
-        """Return all labels except the other label."""
-        return Labels(label for label in self._labels if label != other_label)
+        return Labels(label for label in self if label.language == language)
 
     def with_same_grammatical_categories_as(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
-        return Labels(label for label in self._labels if label.has_same_grammatical_form(other))
+        return Labels(label for label in self if label.has_same_grammatical_form(other))
 
     def with_same_grammatical_base(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
-        return Labels(label for label in self._labels if label.has_same_grammatical_base(other))
+        return Labels(label for label in self if label.has_same_grammatical_base(other))
 
     def most_similar_label(self, text: str, min_similarity: float = 0.6) -> Label | None:
         """Return the label most similar to the text that has at least the minimum simularity."""
-        if similar_labels := [label for label in self._labels if label.similarity(text) >= min_similarity]:
+        if similar_labels := [label for label in self if label.similarity(text) >= min_similarity]:
             return sorted(similar_labels, key=lambda label: label.similarity(text))[-1]
         return None
 
@@ -298,53 +301,58 @@ class Labels:  # noqa: PLW1641
         """Return the labels that match the text."""
         return Labels(
             label
-            for label in self._labels
+            for label in self
             if match(text, *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
         )
+
+    def register_other_grammatical_categories(self) -> None:
+        """For each label, register other grammatical forms of that label."""
+        for label in self:
+            label.register_other_grammatical_categories(self)
 
     @property
     def non_colloquial(self) -> Labels:
         """Return the non-colloquial labels."""
-        return Labels(label for label in self._labels if not label.colloquial)
+        return Labels(label for label in self if not label.colloquial)
 
     @property
     def not_meaning_only(self) -> Labels:
         """Return the labels that are not meaning-only."""
-        return Labels(label for label in self._labels if not label.meaning_only)
+        return Labels(label for label in self if not label.meaning_only)
 
     @property
     def spelling_alternatives(self) -> Labels:
         """Return the spelling alternatives for each label."""
-        spelling_alternatives = [label.spelling_alternatives for label in self._labels]
+        spelling_alternatives = [label.spelling_alternatives for label in self]
         return Labels(chain(*spelling_alternatives))
 
     @property
     def first_spelling_alternatives(self) -> Labels:
         """Return the first spelling alternatives for each label."""
-        return Labels(label.first_spelling_alternative for label in self._labels)
+        return Labels(label.first_spelling_alternative for label in self)
 
     @property
     def non_generated_spelling_alternatives(self) -> Labels:
         """Return the non-generated spelling alternatives for each label."""
-        non_generated_spelling_alternatives = [label.non_generated_spelling_alternatives for label in self._labels]
+        non_generated_spelling_alternatives = [label.non_generated_spelling_alternatives for label in self]
         return Labels(chain(*non_generated_spelling_alternatives))
 
     @property
     def first_non_generated_spelling_alternatives(self) -> Labels:
         """Return the first non-generated spelling alternative for each label."""
-        return Labels(first(label.non_generated_spelling_alternatives) for label in self._labels)
+        return Labels(first(label.non_generated_spelling_alternatives) for label in self)
 
     @property
     def compounds(self) -> Labels:
         """Return the compounds of the labels."""
-        return Labels(chain(*[label.compounds for label in self._labels]))
+        return Labels(chain(*[label.compounds for label in self]))
 
     @property
     def cloze_tests(self) -> Labels:
         """Return the cloze tests of the labels."""
-        return Labels(chain(*[label.cloze_tests for label in self._labels]))
+        return Labels(chain(*[label.cloze_tests for label in self]))
 
     @property
     def as_strings(self) -> tuple[str, ...]:
         """Return the labels as strings, without duplicates."""
-        return tuple(unique(str(label) for label in self._labels))
+        return tuple(unique(str(label) for label in self))
