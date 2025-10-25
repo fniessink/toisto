@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Final, NoReturn
 from uuid import uuid1
 
+from toisto.metadata import ENCODING
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.tools import platform
 
@@ -97,7 +98,7 @@ class ConfigSchemaValidator:
         if option is None:
             self._error(
                 f"unknown option '{option_name}' in section '{section}'. "
-                f"Allowed options are: {', '.join(allowed_options)}.",
+                f"Allowed options are: {', '.join(sorted(allowed_options))}.",
             )
         else:
             value = self._config_parser.get(section, option_name)
@@ -112,7 +113,7 @@ def read_config(argument_parser: ArgumentParser, config_filename: Path = CONFIG_
     """Read the config file, validate it, and exit with an error message if it doesn't pass."""
     parser = _create_config_parser()
     try:
-        with config_filename.open("r", encoding="utf-8") as config_file:
+        with config_filename.open(encoding=ENCODING) as config_file:
             parser.read_file(config_file)
     except FileNotFoundError:
         pass
@@ -130,9 +131,10 @@ def write_config(
     try:
         config_file_text = StringIO()
         config_parser.write(config_file_text, space_around_delimiters=False)
+        lines = config_file_text.getvalue().splitlines()
         # Remove the equal sign from lines that only have keys, such as in the files section:
-        stripped_config_file_text = "\n".join(line.rstrip("=") for line in config_file_text.getvalue().splitlines())
-        with config_filename.open("w", encoding="utf-8") as config_file:
+        stripped_config_file_text = "\n".join(line.removesuffix("=") for line in lines)
+        with config_filename.open("w", encoding=ENCODING) as config_file:
             config_file.write(stripped_config_file_text)
     except OSError as reason:
         argument_parser.error(str(reason))

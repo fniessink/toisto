@@ -14,7 +14,7 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANTONYM, DICTATE, INTERPRET, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
-from toisto.ui.text import DONE, Feedback, ProgressUpdate, console
+from toisto.ui.text import DONE, Feedback, ProgressUpdate
 
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
@@ -92,7 +92,7 @@ class PracticeBase(ToistoTestCase):
             progress = self.progress(language_pair, quizzes)
         with patch("rich.console.Console.print") as patched_print:
             namespace = Namespace(progress_update=progress_update, show_quiz_retention=False)
-            practice(console.print, language_pair, progress, config, namespace)
+            practice(language_pair, progress, config, namespace)
         return patched_print
 
     def assert_printed(self, output: str, patched_print: Mock, **kwargs: str | bool) -> None:

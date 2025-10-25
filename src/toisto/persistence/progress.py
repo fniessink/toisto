@@ -2,7 +2,6 @@
 
 from argparse import ArgumentParser
 from configparser import ConfigParser
-from datetime import UTC, datetime
 from pathlib import Path
 
 from toisto.metadata import NAME
@@ -49,9 +48,10 @@ def load_progress_file(progress_filepath: Path, argument_parser: ArgumentParser)
     except Exception as reason:  # noqa: BLE001
         return argument_parser.error(
             f"""{NAME} cannot parse the progress information in {progress_filepath}: {reason}.
-To fix this, remove or rename {progress_filepath} and start {NAME} again. Unfortunately, this will reset your
-progress. Please consider opening a bug report at https://github.com/fniessink/{NAME.lower()}. Be sure to attach
-the invalid progress file to the issue.
+To fix this, remove or rename {progress_filepath} and start {NAME} again.
+Unfortunately, this will reset your progress.
+Please consider opening a bug report at https://github.com/fniessink/{NAME.lower()}.
+Be sure to attach the invalid progress file to the issue.
 """,
         )
     return progress_dict
@@ -68,13 +68,10 @@ def save_progress(progress: Progress, config: ConfigParser) -> None:
 
 def update_progress_dict(progress_dict: ProgressDict, *progress_dicts: ProgressDict) -> None:
     """Update the progress dict with the pauses from the other progress dicts."""
-    min_date = datetime.min.replace(tzinfo=UTC).isoformat()
     for other_progress_dict in progress_dicts:
         for key in other_progress_dict:
-            if "skip_until" in other_progress_dict[key]:
-                other_skip_until = other_progress_dict[key].get("skip_until", min_date)
-                if key in progress_dict:
-                    current_skip_until = progress_dict[key].get("skip_until", min_date)
+            if other_skip_until := other_progress_dict[key].get("skip_until"):
+                if key in progress_dict and (current_skip_until := progress_dict[key].get("skip_until")):
                     progress_dict[key]["skip_until"] = max(current_skip_until, other_skip_until)
                 else:
                     progress_dict[key] = {"skip_until": other_skip_until}

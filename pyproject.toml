@@ -138,6 +138,7 @@ allow_untyped_defs = true # Allow for not specifying None as return value on eve
 
 [tool.mutmut]
 paths_to_mutate = [ "src/toisto/" ]
+also_copy = [ "src/concepts", "src/languages" ]
 pytest_add_cli_args_test_selection = [ "tests/" ]
 
 [tool.fixit]

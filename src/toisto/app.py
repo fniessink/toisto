@@ -20,7 +20,7 @@ from .persistence.config import default_config, read_config
 from .persistence.progress import load_progress
 from .persistence.spelling_alternatives import load_spelling_alternatives
 from .ui.cli import create_argument_parser, parse_arguments
-from .ui.text import console, show_welcome
+from .ui.text import show_welcome
 
 
 class CLI:
@@ -67,7 +67,7 @@ def main() -> None:
                 case "uninstall":
                     self.uninstall()
                 case _:
-                    self.version(console.print)
+                    self.version()
         case _:  # Default command is "practice"
-            show_welcome(console.print, latest_version(), cli.config)
-            practice(console.print, cli.language_pair, cli.progress, cli.config, cli.args)
+            show_welcome(latest_version(), cli.config)
+            practice(cli.language_pair, cli.progress, cli.config, cli.args)

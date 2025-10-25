@@ -114,7 +114,7 @@ class CommandBuilder:
             and not concept.get_related_concepts("hypernym")
             and not concept.answer_only
         }
-        language = self.get_target_language()
+        language = self._get_target_language()
         all_labels = sorted({str(first(labels)) for concept in concepts if (labels := concept.meanings(language))})
         parser.add_argument(
             "concepts",
@@ -124,9 +124,9 @@ class CommandBuilder:
             type=OptionChecker(tuple(all_labels)),
         )
 
-    def get_target_language(self) -> Language:
+    def _get_target_language(self) -> Language:
         """Return the target language as specified on the command-line or in the config file. Fallback to English."""
-        language_parser = ArgumentParser(add_help=False, exit_on_error=False)
+        language_parser = ArgumentParser(add_help=False, exit_on_error=False)  # pragma: no mutate
         self.add_language_arguments(language_parser, required=False)
         try:
             namespace = language_parser.parse_known_args()[0]
@@ -135,7 +135,7 @@ class CommandBuilder:
         if "target_language" in namespace and namespace.target_language is not None:
             language_str = namespace.target_language
         else:
-            language_str = self.config.get("languages", "target", fallback="en")
+            language_str = "en"
         return Language(language_str)
 
     def add_extra_concepts_arguments(self, parser: ArgumentParser) -> None:
@@ -154,48 +154,44 @@ class CommandBuilder:
 
     def add_progress_folder_argument(self, parser: ArgumentParser) -> None:
         """Add the progress folder argument to the command."""
-        default = Path(self.config.get("progress", "folder"))
         parser.add_argument(
             "-p",
             "--progress-folder",
             metavar="{path}",
             type=check_folder,
-            default=default,
-            help=f"folder where to save progress; default: {default}",
+            default=Path(self.config.get("progress", "folder")),
+            help="folder where to save progress; default: %(default)s",
         )
 
     def add_progress_update_argument(self, parser: ArgumentParser) -> None:
         """Add the progress update argument to the command."""
-        default = self.config.get("practice", "progress_update")
         parser.add_argument(
             "-u",
             "--progress-update",
             metavar="{frequency}",
             type=int,
-            default=default,
-            help=f"show a progress update after each {{frequency}} quizzes; default: {default} (0 means never)",
+            default=self.config.get("practice", "progress_update"),
+            help="show a progress update after each {frequency} quizzes; default: %(default)s (0 means never)",
         )
 
     def add_show_quiz_retention_argument(self, parser: ArgumentParser) -> None:
         """Add the show quiz retention argument to the command."""
-        default = self.config.get("practice", "show_quiz_retention")
         parser.add_argument(
             "-r",
             "--show-quiz-retention",
             choices=["yes", "no"],
-            default=default,
-            help=f"show the quiz retention after each quiz; default: {default}",
+            default=self.config.get("practice", "show_quiz_retention"),
+            help="show the quiz retention after each quiz; default: %(default)s",
         )
 
     def add_mp3player_argument(self, parser: ArgumentParser) -> None:
         """Add the mp3 player argument to the command."""
-        default = self.config.get("commands", "mp3player")
         parser.add_argument(
             "-m",
             "--mp3player",
             metavar="{mp3player}",
-            default=default,
-            help=f"mp3 player to play sounds; default: {default}",
+            default=self.config.get("commands", "mp3player"),
+            help="mp3 player to play sounds; default: %(default)s",
         )
 
     def add_quiz_type_argument(self, parser: ArgumentParser) -> None:
@@ -278,7 +274,7 @@ class ProgressCommandBuilder(CommandBuilder):
             metavar="{option}",
             choices=sorted(get_args(SortColumn)),
             default="retention",
-            help="how to sort progress information; default: by retention; available options: %(choices)s",
+            help="how to sort progress information; default: by %(default)s; available options: %(choices)s",
         )
 
 
@@ -334,7 +330,6 @@ class SelfCommandsBuilder(CommandBuilder):
         subparsers = parser.add_subparsers(
             dest="self",
             title="commands",
-            required=True,
             help="type `toisto self {command} --help` for more information on a command",
         )
         SelfUpgradeCommandBuilder(subparsers).add_command()
@@ -352,7 +347,7 @@ def create_argument_parser(config: ConfigParser, concepts: set[Concept] | None =
     ConfigureCommandBuilder(subparsers, config).add_command()
     PracticeCommandBuilder(subparsers, config).add_command(concepts or set())
     ProgressCommandBuilder(subparsers, config).add_command(concepts or set())
-    SelfCommandsBuilder(subparsers, config).add_commands()
+    SelfCommandsBuilder(subparsers).add_commands()
     if not {"configure", "practice", "progress", "self", "-h", "--help", "-V", "--version"} & set(sys.argv):
         sys.argv.insert(1, "practice")  # Insert practice as default subcommand
     if sys.argv[1:] == ["self"]:
