@@ -52,7 +52,7 @@ class LabelFactory:
                     slice_grammatical_categories = (*grammatical_categories, grammatical_category)
                     label_list.extend(factory.create_labels([json_label_slice], *slice_grammatical_categories))
         labels = Labels(label_list)
-        self._register_other_grammatical_categories(labels)
+        labels.register_other_grammatical_categories()
         return labels
 
     def _slice_json_label(self, json_label: LabelJSON, grammatical_category: GrammaticalCategory) -> LabelJSON:
@@ -87,14 +87,6 @@ class LabelFactory:
             colloquial=colloquial,
             meaning_only=meaning_only,
         )
-
-    def _register_other_grammatical_categories(self, labels: Labels) -> None:
-        """For each label, register other grammatical forms of that label."""
-        for label in labels:
-            for other_label in labels.with_language(label.language).excluding(label).with_same_grammatical_base(label):
-                grammatical_differences = other_label.grammatical_differences(label)
-                if len(grammatical_differences) == 1:
-                    label.grammatical_form.other_grammatical_categories[first(grammatical_differences)] = other_label
 
     @classmethod
     def grammatical_base_for(cls, json_label: LabelJSON) -> str:
