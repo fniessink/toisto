@@ -44,7 +44,7 @@ optional-dependencies.dev = [
   "green==4.0.2",
   "mutmut==3.3.1",
   "mypy==1.18.2",
-  "ruff==0.14.1",
+  "ruff==0.14.2",
   "types-requests==2.32.4.20250913",
   "unittest-xml-reporting==3.2.0",
   "vulture==2.14",
