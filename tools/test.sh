@@ -1,28 +1,43 @@
 #/bin/bash
 
 export UV_PYTHON=3.11
+CODE_FOLDERS="src tests tools"
+
+uv sync --all-extras --quiet
 
 uv run green -r tests
 
 if [[ "$1" == "--fix" ]]; then
-    uvx ruff format src tests tools
-    uvx ruff check --fix src tests tools
+    uv run ruff format $CODE_FOLDERS
+    uv run ruff check --fix $CODE_FOLDERS
 else
-    uvx ruff format --check src tests tools
-    uvx ruff check src tests tools
+    uv run ruff format --check $CODE_FOLDERS
+    uv run ruff check $CODE_FOLDERS
 fi
 
-uvx mypy --python-executable=.venv/bin/python src tests tools
+uv run mypy --python-executable=.venv/bin/python $CODE_FOLDERS
 
-uvx vulture --exclude .venv src tests tools .vulture-whitelist.py
+uv run vulture --exclude .venv $CODE_FOLDERS .vulture-whitelist.py
 
 if [[ "$1" == "--fix" ]]; then
-    uvx fixit fix src tests tools
+    uv run fixit fix $CODE_FOLDERS
 else
-    uvx fixit lint src tests tools
+    uv run fixit lint $CODE_FOLDERS
 fi
 
-uvx bandit --quiet -r src tests tools
+uv run bandit --quiet -r $CODE_FOLDERS
+
+if [[ "$1" == "--fix" ]]; then
+    uv run troml suggest --fix
+else
+    uv run troml check
+fi
+
+if [[ "$1" == "--fix" ]]; then
+    uv run pyproject-fmt pyproject.toml
+else
+    uv run pyproject-fmt --check pyproject.toml
+fi
 
 if [[ "$1" == "--fix" ]]; then
     uv run --no-project --script tools/format_json.py
