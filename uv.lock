@@ -567,6 +567,29 @@ wheels = [
 ]
 
 [[package]]
+name = "pyproject-fmt"
+version = "2.11.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "toml-fmt-common" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a8/ef/7ad92c11631fbb147f048f1549d0304c8c41f4514698fa69ff1fbad23797/pyproject_fmt-2.11.0.tar.gz", hash = "sha256:24d2370fccbc29a7d696479ab0792ff81b188accabf399e0b35fd3c433780d1f", size = 46894, upload-time = "2025-10-15T07:05:13.692Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/69/5ce9f6707a609c2f24f7d5f37a1e3491fd716de782523c7d437534e5c7e8/pyproject_fmt-2.11.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:10fa7a48ad2bb7ba625aade29458da4b8881e3fd17493778858eadf4580b47b6", size = 1268375, upload-time = "2025-10-15T07:04:51.577Z" },
+    { url = "https://files.pythonhosted.org/packages/60/05/460d052864473736c4c22f7ae4700fd399d8b09211fa12da9b556614ef3d/pyproject_fmt-2.11.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:d40cca8175e7a0a786fa5164660fcb81a485cf3c16661b7613da5b45cf873c05", size = 1203589, upload-time = "2025-10-15T07:04:53.402Z" },
+    { url = "https://files.pythonhosted.org/packages/33/b1/bfbae99403fd848832ecddb105a911d5077e098a2f0befe2f56581c1aaa7/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:40d58d0408ea61613c368eef53ae9529bcf9b515cec2dd8d4d7cd66245b210d2", size = 1262489, upload-time = "2025-10-15T07:04:54.86Z" },
+    { url = "https://files.pythonhosted.org/packages/e3/33/a231655de9bb90e80ad122504d98e007c3fc1bb90cb9d16287e4b07a02f7/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:15170fb8bb5210776fb454a94f886cf689d878e1c0e638542866fbfbcc03ac6f", size = 1221299, upload-time = "2025-10-15T07:04:56.275Z" },
+    { url = "https://files.pythonhosted.org/packages/60/01/5fa267f7aaf0cf34a1168c3d1e794fad79c8c72d12a6c6e332c9e5c1965b/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:33dca45403260cd638f1053892105420c36ce849bb57b1170d147c33becddc3b", size = 1534025, upload-time = "2025-10-15T07:04:57.497Z" },
+    { url = "https://files.pythonhosted.org/packages/38/c1/33f5b15485257f14a24250be072c4f85673f92b5e0aa04316dda81abefd3/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e69ecc2b093c205587774aefa20b3921daa20497501668bcdce147a833c24b15", size = 1421465, upload-time = "2025-10-15T07:04:59.121Z" },
+    { url = "https://files.pythonhosted.org/packages/9d/fd/97b19890f8ef519918c131512cc30b62ae76a1c9e22e450c06c7d2e31112/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f90d48d44ea5cc1b039c3be32844c7f3bdb83429a0c15a295d4f2009ef6573c6", size = 1370545, upload-time = "2025-10-15T07:05:00.34Z" },
+    { url = "https://files.pythonhosted.org/packages/43/bd/cf541f37ceef41149ea3c53d0a19e58ee9af86f6b9e5221e3ccc99ffb635/pyproject_fmt-2.11.0-cp39-abi3-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:deaa68f27c1cd02d6bbff6fe7c6e5106285a8693fb09b55101d3f8921a62c8c5", size = 1376150, upload-time = "2025-10-15T07:05:01.597Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/f0/b6e46f9907feebe16427d870576fca7b1b6796764cf24174b209a6be7c85/pyproject_fmt-2.11.0-cp39-abi3-musllinux_1_2_i686.whl", hash = "sha256:3e524725f4dfbfeebeac330407b52f473d0a82c031d270e94de5ab3503c01ad9", size = 1507505, upload-time = "2025-10-15T07:05:02.886Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/9e/7c754d068ff4321e7a24c25375e45fe05364d4d97e623a883c5f0d6981f6/pyproject_fmt-2.11.0-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:6349df395f8f31210fa31996462182256ead3c4cf396f3779850e87500320230", size = 1543867, upload-time = "2025-10-15T07:05:04.133Z" },
+    { url = "https://files.pythonhosted.org/packages/36/7f/181005917615c27a315edbd75ef1e8c9d3e22564530de6ca33e701db27ef/pyproject_fmt-2.11.0-cp39-abi3-win32.whl", hash = "sha256:6b74f58146540d47c774dddd5014b38c605bdfad47f334ca5b89f9a3ac8f514c", size = 1116975, upload-time = "2025-10-15T07:05:05.642Z" },
+    { url = "https://files.pythonhosted.org/packages/10/39/0c69c7329f2c021f18b897c19df707e915a2ab44abdaf60b620c784a3621/pyproject_fmt-2.11.0-cp39-abi3-win_amd64.whl", hash = "sha256:14875b58e0004f6c0382a2e5ac3d0854e57abdfae7571f9f2612498ae6a8e462", size = 1223127, upload-time = "2025-10-15T07:05:07.237Z" },
+]
+
+[[package]]
 name = "pytest"
 version = "8.4.2"
 source = { registry = "https://pypi.org/simple" }
@@ -764,6 +787,15 @@ wheels = [
 ]
 
 [[package]]
+name = "shellingham"
+version = "1.5.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b27b655beb4b4e9c62313a4e8da8c676e142cc210d58e/shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de", size = 10310, upload-time = "2023-10-24T04:13:40.426Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686", size = 9755, upload-time = "2023-10-24T04:13:38.866Z" },
+]
+
+[[package]]
 name = "stevedore"
 version = "5.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -814,7 +846,9 @@ dev = [
     { name = "green" },
     { name = "mutmut" },
     { name = "mypy" },
+    { name = "pyproject-fmt" },
     { name = "ruff" },
+    { name = "troml" },
     { name = "types-requests" },
     { name = "unittest-xml-reporting" },
     { name = "vulture" },
@@ -832,15 +866,35 @@ requires-dist = [
     { name = "mutmut", marker = "extra == 'dev'", specifier = "==3.3.1" },
     { name = "mypy", marker = "extra == 'dev'", specifier = "==1.18.2" },
     { name = "pygame", specifier = "==2.6.1" },
+    { name = "pyproject-fmt", marker = "extra == 'dev'", specifier = "==2.11.0" },
     { name = "requests", specifier = ">=2.28" },
     { name = "rich", specifier = "==14.2.0" },
     { name = "rich-argparse", specifier = "==1.7.1" },
     { name = "ruff", marker = "extra == 'dev'", specifier = "==0.14.2" },
+    { name = "troml", marker = "extra == 'dev'", specifier = "==0.4.1" },
     { name = "types-requests", marker = "extra == 'dev'", specifier = "==2.32.4.20250913" },
     { name = "unittest-xml-reporting", marker = "extra == 'dev'", specifier = "==3.2.0" },
     { name = "vulture", marker = "extra == 'dev'", specifier = "==2.14" },
 ]
 provides-extras = ["dev"]
+
+[[package]]
+name = "toml-fmt-common"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/7a/fca432020e0b2134f7bb8fa4bf4714f6f0d1c72a08100c96b582c22098bc/toml_fmt_common-1.0.1.tar.gz", hash = "sha256:7a29e99e527ffac456043296a0f1d8c03aaa1b06167bd39ad5e3cc5041f31c17", size = 9626, upload-time = "2024-10-20T05:01:31.278Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e8/7f/094a5d096adaf2a51de24c8650530625a262bef0c654fc981165ad45821f/toml_fmt_common-1.0.1-py3-none-any.whl", hash = "sha256:7a6542e36a7167fa94b8b997d3f8debadbb4ab757c7d78a77304579bd7a0cc7d", size = 5666, upload-time = "2024-10-20T05:01:29.468Z" },
+]
+
+[[package]]
+name = "tomlkit"
+version = "0.13.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cc/18/0bbf3884e9eaa38819ebe46a7bd25dcd56b67434402b66a58c4b8e552575/tomlkit-0.13.3.tar.gz", hash = "sha256:430cf247ee57df2b94ee3fbe588e71d362a941ebb545dec29b53961d61add2a1", size = 185207, upload-time = "2025-06-05T07:13:44.947Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/75/8539d011f6be8e29f339c42e633aae3cb73bffa95dd0f9adec09b9c58e85/tomlkit-0.13.3-py3-none-any.whl", hash = "sha256:c89c649d79ee40629a9fda55f8ace8c6a1b42deb912b2a8fd8d942ddadb606b0", size = 38901, upload-time = "2025-06-05T07:13:43.546Z" },
+]
 
 [[package]]
 name = "trailrunner"
@@ -852,6 +906,45 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4d/93/630e10bacd897daeb9ff5a408f4e7cb0fc2f243e7e3ef00f9e6cf319b11c/trailrunner-1.4.0.tar.gz", hash = "sha256:3fe61e259e6b2e5192f321c265985b7a0dc18497ced62b2da244f08104978398", size = 15836, upload-time = "2023-03-27T07:54:35.515Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b1/29/21001afea86bac5016c3940b43de3ce4786b0d8337d4ea79bb903c649ce3/trailrunner-1.4.0-py3-none-any.whl", hash = "sha256:a286d39f2723f28d167347f41cf8f232832648709366e722f55cf5545772a48e", size = 11071, upload-time = "2023-03-27T07:54:32.514Z" },
+]
+
+[[package]]
+name = "troml"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+    { name = "tomlkit" },
+    { name = "trove-classifiers" },
+    { name = "typer" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/89/e3/81d7e78cd1508435f02baea95325342f8e997ee25bfa9104c3d49e64e5ae/troml-0.4.1.tar.gz", hash = "sha256:d71b6ea5dcc503bb31937b05f7a7752076d00052c2a0c963f33a2325d0dc0c4b", size = 12620, upload-time = "2025-09-14T19:05:57.709Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/30/92d5e111c77a89df4267b359a1463e703d47b4e10dc7f33a4b49a2e3252b/troml-0.4.1-py3-none-any.whl", hash = "sha256:cac2bd3663f03af716c221e795500a9ca85eca6b4e27b816db10c89d04f35905", size = 13625, upload-time = "2025-09-14T19:05:56.388Z" },
+]
+
+[[package]]
+name = "trove-classifiers"
+version = "2025.9.11.17"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ca/9a/778622bc06632529817c3c524c82749a112603ae2bbcf72ee3eb33a2c4f1/trove_classifiers-2025.9.11.17.tar.gz", hash = "sha256:931ca9841a5e9c9408bc2ae67b50d28acf85bef56219b56860876dd1f2d024dd", size = 16975, upload-time = "2025-09-11T17:07:50.97Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e1/85/a4ff8758c66f1fc32aa5e9a145908394bf9cf1c79ffd1113cfdeb77e74e4/trove_classifiers-2025.9.11.17-py3-none-any.whl", hash = "sha256:5d392f2d244deb1866556457d6f3516792124a23d1c3a463a2e8668a5d1c15dd", size = 14158, upload-time = "2025-09-11T17:07:49.886Z" },
+]
+
+[[package]]
+name = "typer"
+version = "0.20.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "rich" },
+    { name = "shellingham" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8f/28/7c85c8032b91dbe79725b6f17d2fffc595dff06a35c7a30a37bef73a1ab4/typer-0.20.0.tar.gz", hash = "sha256:1aaf6494031793e4876fb0bacfa6a912b551cf43c1e63c800df8b1a866720c37", size = 106492, upload-time = "2025-10-20T17:03:49.445Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/78/64/7713ffe4b5983314e9d436a90d5bd4f63b6054e2aca783a3cfc44cb95bbf/typer-0.20.0-py3-none-any.whl", hash = "sha256:5b463df6793ec1dca6213a3cf4c0f03bc6e322ac5e16e13ddd622a889489784a", size = 47028, upload-time = "2025-10-20T17:03:47.617Z" },
 ]
 
 [[package]]
