@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.40.2 - 2025-11-04
+
+### Fixed
+
+- Toisto was not working when using Python 3.14 on Windows because Pygame is not available for Python 3.14. Fixed by switching to the Pygame community edition. Fixes [#1203](https://github.com/fniessink/toisto/issues/1203).
+
 ## 0.40.1 - 2025-10-12
 
 ### Fixed
