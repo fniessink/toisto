@@ -45,7 +45,7 @@ optional-dependencies.dev = [
     "mutmut==3.3.1",
     "mypy==1.18.2",
     "pyproject-fmt==2.11.1",
-    "ruff==0.14.3",
+    "ruff==0.14.4",
     "troml==0.4.1",
     "types-requests==2.32.4.20250913",
     "unittest-xml-reporting==3.2.0",
