@@ -12,7 +12,7 @@ keywords = [ "dutch", "english", "finnish", "language learning" ]
 license = "Apache-2.0"
 license-files = [ "LICENSE" ]
 authors = [ { name = "Frank Niessink", email = "frank@niessink.com" } ]
-requires-python = ">=3.11,<=3.14"
+requires-python = ">=3.13,<=3.14"
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: End Users/Desktop",
@@ -22,8 +22,6 @@ classifiers = [
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Topic :: Education",
@@ -63,7 +61,7 @@ where = [ "src" ]
 languages = [ "*.txt" ]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py313"
 line-length = 120
 
 lint.select = [ "ALL" ]
@@ -120,7 +118,7 @@ skip_covered = true
 output = "build/coverage.xml"
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.13"
 strict = true
 
 [[tool.mypy.overrides]]
@@ -141,7 +139,7 @@ also_copy = [ "src/concepts", "src/languages" ]
 pytest_add_cli_args_test_selection = [ "tests/" ]
 
 [tool.fixit]
-python-version = "3.11"
+python-version = "3.13"
 
 [tool.vulture]
 ignore_names = [ "_SubParsersAction", "optionxform" ]

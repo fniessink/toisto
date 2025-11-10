@@ -4,11 +4,15 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.40.3 - [Unreleased]
+## 0.41.0 - [Unreleased]
 
 ### Fixed
 
-- Toisto was not working on iOS and iPadOS because the Pygame community edition does not install. Fixed by removing the dependency on Pygame and requiring a mp3 player on Windows.
+- Toisto was not working on iOS and iPadOS because the Pygame community edition does not install. Fixed by removing the dependency on Pygame and requiring an mp3 player on Windows.
+
+### Changed
+
+- Require at least Python 3.13 as a-Shell upgraded its Python version to 3.13.
 
 ## 0.40.2 - 2025-11-04
 

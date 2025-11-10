@@ -2,14 +2,11 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
-from typing import Generic, TypeVar
 
 from ..metadata import NAME
 
-Identifier = TypeVar("Identifier")
 
-
-class IdentifierRegistry(Generic[Identifier]):
+class IdentifierRegistry[Identifier]:
     """Registry to check the uniqueness of domain object identifiers across files."""
 
     def __init__(self, domain_object_name: str, argument_parser: ArgumentParser) -> None:

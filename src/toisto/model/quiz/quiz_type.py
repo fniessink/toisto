@@ -7,7 +7,7 @@ import re
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 from itertools import chain, permutations
-from typing import ClassVar, TypeAlias, cast, final
+from typing import ClassVar, cast, final
 
 from toisto.model.language import LanguagePair
 from toisto.model.language.concept import Concept, ConceptRelation
@@ -19,7 +19,7 @@ from toisto.ui.format import quoted
 
 from .tips import homonym_tips
 
-QuizAction: TypeAlias = str
+type QuizAction = str
 
 
 @dataclass(frozen=True)
