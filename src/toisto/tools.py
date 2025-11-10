@@ -4,7 +4,6 @@ import os
 import sys
 from collections.abc import Callable, Generator, Iterable
 from itertools import chain
-from typing import Generic, TypeVar
 
 
 def platform() -> str:
@@ -12,10 +11,7 @@ def platform() -> str:
     return "ashell" if os.environ.get("TERM_PROGRAM") == "a-Shell" else sys.platform
 
 
-T = TypeVar("T")
-
-
-def first(sequence: Iterable[T], where: Callable[[T], bool] = lambda _item: True) -> T:
+def first[T](sequence: Iterable[T], where: Callable[[T], bool] = lambda _item: True) -> T:
     """Return the first item in the sequence."""
     return next(item for item in sequence if where(item))
 
@@ -25,7 +21,7 @@ def first_upper(string: str) -> str:
     return string[0].upper() + string[1:] if string else ""
 
 
-def unique(sequence: Iterable[T]) -> Generator[T, None, None]:
+def unique[T](sequence: Iterable[T]) -> Generator[T]:
     """Return a generator that yields unique items from the sequence in order."""
     seen = set()
     for item in sequence:
@@ -34,11 +30,7 @@ def unique(sequence: Iterable[T]) -> Generator[T, None, None]:
             yield item
 
 
-Key = TypeVar("Key")
-Value = TypeVar("Value")
-
-
-class Registry(Generic[Key, Value]):
+class Registry[Key, Value]:
     """Registry for looking up values by their key."""
 
     def __init__(self, key_transformer: Callable[[Key], Key] = lambda key: key) -> None:

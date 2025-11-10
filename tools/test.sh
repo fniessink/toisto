@@ -1,6 +1,6 @@
 #/bin/bash
 
-export UV_PYTHON=3.11
+export UV_PYTHON=3.13
 CODE_FOLDERS="src tests tools"
 
 uv sync --all-extras --quiet
