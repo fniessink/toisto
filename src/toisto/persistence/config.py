@@ -45,14 +45,14 @@ class Option:
         return self.validate(value)
 
 
-DEFAULT_MP3PLAYERS = {"darwin": "afplay", "linux": "mpg123 --quiet"}
+DEFAULT_MP3PLAYERS = {"darwin": "afplay"}
 CONFIG_SCHEMA: Final[dict[str, dict[str, Option] | list[str]]] = {
     "languages": {
         "target": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
         "source": Option(Quantifier.ONE_OF, ALL_LANGUAGES.keys()),
     },
     "commands": {
-        "mp3player": Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "builtin")),
+        "mp3player": Option(Quantifier.ANY, default_value=lambda: DEFAULT_MP3PLAYERS.get(platform(), "mpg123 --quiet")),
     },
     "practice": {
         "progress_update": Option(Quantifier.INTEGER, ["0", "1", "2", "3", "..."], "0", lambda value: value.isdigit()),

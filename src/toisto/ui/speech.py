@@ -4,14 +4,10 @@ from __future__ import annotations
 
 import tempfile
 from configparser import ConfigParser
-from contextlib import redirect_stderr, redirect_stdout, suppress
 from functools import cached_property
 from subprocess import DEVNULL, Popen, run  # nosec import_subprocess
 
 from gtts import gTTS, gTTSError
-
-with suppress(ModuleNotFoundError), redirect_stderr(None), redirect_stdout(None):
-    from pygame.mixer import music
 
 from toisto.model.language import EN, FI, NL, Language
 from toisto.tools import platform
@@ -76,15 +72,7 @@ class Speech:
 
     def _play_mp3(self, mp3_file: tempfile._TemporaryFileWrapper[bytes]) -> None:
         """Play the MP3 file."""
-        mp3_play_command = self.config.get("commands", "mp3player")
-        if mp3_play_command == "builtin":
-            try:
-                music.queue(mp3_file.name)
-            except NameError as error:
-                message = "Can't use builtin (Pygame) music player on this platform"
-                raise RuntimeError(message) from error
-        else:
-            _run_command(mp3_play_command, mp3_file.name)
+        _run_command(self.config.get("commands", "mp3player"), mp3_file.name)
 
     @cached_property
     def apple_say_voices(self) -> dict[Language, str]:

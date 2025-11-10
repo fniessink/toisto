@@ -39,7 +39,7 @@ class MissingConfigTest(ConfigTestCase):
     @patch("sys.platform", "windows")
     def test_default_mp3player_on_windows(self):
         """Test default mp3 player on Windows."""
-        self.assertEqual("builtin", self.read_config().get("commands", "mp3player"))
+        self.assertEqual("mpg123 --quiet", self.read_config().get("commands", "mp3player"))
 
     def test_default_practice_progress_update(self):
         """Test the default practice progress frequency value."""
