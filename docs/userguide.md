@@ -173,7 +173,7 @@ show_quiz_retention=yes
 
 On Windows, Linux, and macOS, Toisto uses Google Translate's text-to-speech API to convert text to speech and then plays the resulting mp3 file using an mp3 player. On iOS and iPadOS, Toisto uses the `say` command to convert text to speech and an mp3 player is not used.
 
-By default, Toisto uses `afplay` on macOS, `mpg123` on Linux, and a builtin library (Pygame) on Windows to play the mp3 files.
+By default, Toisto uses `afplay` on macOS and `mpg123` on Linux and Windows to play the mp3 files.
 
 You can configure Toisto to use a different mp3 player:
 
@@ -185,7 +185,7 @@ When running the previous command, Toisto creates a file `.toisto.cfg` in your h
 
 ```ini
 [commands]
-mp3player=name_of_mp3_player or `builtin`
+mp3player=name_of_mp3_player
 ```
 
 Make sure the mp3 player is on the `PATH` or include the complete filepath of the mp3 player.

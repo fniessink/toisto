@@ -28,7 +28,7 @@ $ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 With uv you can install tools developed in Python, such as Toisto. Advantage of uv is that it also installs Python, if needed.
 
-On **Linux**, you must have an mp3 player installed so Toisto can speak. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [configure a different mp3 player](docs/userguide.md#Configure-a-different-mp3-player) below.
+On **Linux** and **Windows**, you must have an mp3 player installed so Toisto can speak. By default, Toisto expects `mpg123` to be available. If you want to use a different mp3 player, you can configure Toisto to do so, see [configure a different mp3 player](docs/userguide.md#Configure-a-different-mp3-player) below.
 
 On **macOS**, Toisto works best in a more modern terminal than the default macOS terminal. We test with [iTerm2](https://iterm2.com). Toisto should work mostly fine with the default macOS terminal app though, so installing iTerm2 or another terminal is optional.
 
