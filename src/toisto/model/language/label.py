@@ -14,7 +14,7 @@ from toisto.match import match
 from toisto.tools import first, first_upper, unique
 
 from . import Language
-from .grammatical_category import GrammaticalCategory
+from .grammatical_category import DEFAULT_CATEGORIES, GrammaticalCategory
 from .grammatical_form import GrammaticalForm
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
@@ -194,8 +194,8 @@ class Label:
 
     def has_same_grammatical_form(self, other: Label) -> bool:
         """Return whether this label has the same grammatical form as the other label."""
-        self_grammatical_categories = self.grammatical_form.grammatical_categories
-        other_grammatical_categories = other.grammatical_form.grammatical_categories
+        self_grammatical_categories = self.grammatical_form.grammatical_categories - DEFAULT_CATEGORIES
+        other_grammatical_categories = other.grammatical_form.grammatical_categories - DEFAULT_CATEGORIES
         return (
             self_grammatical_categories == other_grammatical_categories
             or (not self_grammatical_categories and other.is_grammatical_base)

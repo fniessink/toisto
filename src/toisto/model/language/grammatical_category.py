@@ -30,3 +30,5 @@ GrammaticalCategory = Literal[
     Number,
     Abbreviation,
 ]
+
+DEFAULT_CATEGORIES: frozenset[GrammaticalCategory] = frozenset({"root", "full form"})
