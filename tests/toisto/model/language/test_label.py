@@ -1,6 +1,9 @@
 """Unit tests for labels."""
 
+from itertools import permutations
+
 from toisto.model.language import EN, FI, NL
+from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
 
 from ....base import ToistoTestCase
@@ -123,6 +126,47 @@ class LabelTest(ToistoTestCase):
         singular, plural = concept.labels(FI)
         self.assertEqual((singular,), plural.capitonyms)
         self.assertEqual((plural,), singular.capitonyms)
+
+    def test_grammatical_form(self):
+        """Test grammatical form."""
+        house = Label(EN, "house")
+        mouse = Label(EN, "mouse")
+        self.assertTrue(mouse.has_same_grammatical_form(house))
+        mouse = Label(EN, "mouse", GrammaticalForm("mouse", "singular"))
+        mice = Label(EN, "mice", GrammaticalForm("mouse", "plural"))
+        self.assertFalse(mouse.has_same_grammatical_form(mice))
+
+    def test_grammatical_form_diminutive(self):
+        """Test the grammatical form of diminutives."""
+        mouse = Label(EN, "mouse", GrammaticalForm("mouse", "singular"))
+        mice = Label(EN, "mice", GrammaticalForm("mouse", "plural"))
+        muis = Label(NL, "de muis", GrammaticalForm("de muis", "root", "singular"))
+        muisje = Label(NL, "het muisje", GrammaticalForm("de muis", "diminutive", "singular"))
+        muizen = Label(NL, "de muizen", GrammaticalForm("de muis", "root", "plural"))
+        muisjes = Label(NL, "de muisjes", GrammaticalForm("de muis", "diminutive", "plural"))
+        for labels in ((mouse, mice), (muis, muizen, muisje, muisjes)):
+            for form1, form2 in permutations(labels, r=2):
+                self.assertFalse(form1.has_same_grammatical_form(form2))
+        for diminutive in (muisje, muisjes):
+            for root in (mouse, mice):
+                self.assertFalse(diminutive.has_same_grammatical_form(root))
+                self.assertFalse(root.has_same_grammatical_form(diminutive))
+        self.assertTrue(muis.has_same_grammatical_form(mouse))
+        self.assertTrue(mouse.has_same_grammatical_form(muis))
+        self.assertTrue(muizen.has_same_grammatical_form(mice))
+        self.assertTrue(mice.has_same_grammatical_form(muizen))
+
+    def test_grammatical_form_abbreviation(self):
+        """Test the grammatical form of abbeviations."""
+        onder_andere = Label(NL, "onder andere", GrammaticalForm("onder andere", "full form"))
+        o_a = Label(NL, "o.a.", GrammaticalForm("onder andere", "abbreviation"))
+        among_others = Label(EN, "among others")
+        self.assertFalse(onder_andere.has_same_grammatical_form(o_a))
+        self.assertFalse(o_a.has_same_grammatical_form(onder_andere))
+        self.assertTrue(onder_andere.has_same_grammatical_form(among_others))
+        self.assertTrue(among_others.has_same_grammatical_form(onder_andere))
+        self.assertFalse(among_others.has_same_grammatical_form(o_a))
+        self.assertFalse(o_a.has_same_grammatical_form(among_others))
 
 
 class LabelsTest(ToistoTestCase):

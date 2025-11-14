@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Toisto was not working on iOS and iPadOS because the Pygame community edition does not install. Fixed by removing the dependency on Pygame and requiring an mp3 player on Windows.
+- Show meaning when quizzing a label that has a diminutive in one language, but not the other. Fixes [#1167](https://github.com/fniessink/toisto/issues/1167).
 
 ### Changed
 
