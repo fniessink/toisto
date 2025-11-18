@@ -50,8 +50,8 @@ class ConceptFactory:
 
     def _related_concept_ids(self, relation: ConceptRelation) -> ConceptIds:
         """Return the ids of the related concept(s)."""
-        related = cast("ConceptIdListOrString", self.concept_json.get(relation, []))
-        return tuple(related) if isinstance(related, list) else (related,)
+        related = self.concept_json.get(relation, [])
+        return tuple(related) if isinstance(related, list) else (cast("ConceptId", related),)
 
     def _answer_only(self) -> bool:
         """Return whether the concept is answer-only."""

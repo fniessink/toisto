@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from io import StringIO
 from pathlib import Path
-from typing import Final, NoReturn
+from typing import Final
 from uuid import uuid1
 
 from toisto.metadata import ENCODING
@@ -73,7 +73,7 @@ class ConfigSchemaValidator:
         self._config_parser = config_parser
         self._config_filename = config_filename
 
-    def _error(self, message: str) -> NoReturn:
+    def _error(self, message: str) -> None:
         """Report the error and exit."""
         self._argument_parser.error(f"While reading from '{self._config_filename}': {message}")
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Literal
+from typing import Literal, cast
 
 GrammaticalAspect = Literal["imperfective", "perfective"]
 GrammaticalGender = Literal["feminine", "masculine", "neuter"]
@@ -31,4 +31,6 @@ GrammaticalCategory = Literal[
     Abbreviation,
 ]
 
-DEFAULT_CATEGORIES: frozenset[GrammaticalCategory] = frozenset({"root", "full form"})
+DEFAULT_CATEGORIES: frozenset[GrammaticalCategory] = cast(
+    "frozenset[GrammaticalCategory]", frozenset({"root", "full form"})
+)
