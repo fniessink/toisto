@@ -22,9 +22,9 @@ if TYPE_CHECKING:
 # The DramaticTextIOWrapper of the dramatic package expects the stdout stream to have a buffer attribute,
 # but the GreenStream created by green and the DuplicateWriter created by xmlrunner do not have one, causing an
 # AttributeError: 'GreenStream' object has no attribute 'buffer'. Adding a StringIO buffer attribute to the
-# GreenStream class and DuplicateWriter class works around this:
-GreenStream.buffer = StringIO()
-DuplicateWriter.buffer = StringIO()
+# GreenStream and DuplicateWriter classes works around this:
+GreenStream.buffer = StringIO()  # ty: ignore[unresolved-attribute]
+DuplicateWriter.buffer = StringIO()  # ty: ignore[unresolved-attribute]
 
 # Language pairs (target, source) used in the unit tests
 EN_FI: Final[LanguagePair] = LanguagePair(EN, FI)

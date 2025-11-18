@@ -15,6 +15,8 @@ else
     uv run ruff check $CODE_FOLDERS
 fi
 
+uv run ty check $CODE_FOLDERS
+
 uv run mypy --python-executable=.venv/bin/python $CODE_FOLDERS
 
 uv run vulture --exclude .venv $CODE_FOLDERS .vulture-whitelist.py

@@ -10,7 +10,7 @@ from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quizzes
 
 from .json_file import dump_json, load_json
-from .progress_format import ProgressDict
+from .progress_format import ProgressDict, RetentionDict
 
 
 def get_progress_filepath(target_language: Language, folder: Path, uuid: str = "") -> Path:
@@ -74,4 +74,4 @@ def update_progress_dict(progress_dict: ProgressDict, *progress_dicts: ProgressD
                 if key in progress_dict and (current_skip_until := progress_dict[key].get("skip_until")):
                     progress_dict[key]["skip_until"] = max(current_skip_until, other_skip_until)
                 else:
-                    progress_dict[key] = {"skip_until": other_skip_until}
+                    progress_dict[key] = RetentionDict(skip_until=other_skip_until)
