@@ -24,13 +24,13 @@ uv pip install -e .[dev]
 Run all tests and quality checks as follows:
 
 ```console
-tools/test.sh
+just all
 ```
 
 To also apply automated fixes where possible:
 
 ```console
-tools/test.sh --fix
+just all fix
 ```
 
 ## How to profile
@@ -40,7 +40,7 @@ Make sure you have [Graphviz](https://graphviz.org) installed.
 To invoke Toisto with the profiler, create the dot file, convert it to a PNG image, and open it, run:
 
 ```console
-tools/profile.sh
+just profile
 ```
 
 ## How to run mutation tests
@@ -77,29 +77,10 @@ uv lock
 
 Commit and push the changes and merge the branch.
 
-Clean up old build and dist files:
+Create and upload the distribution files to PyPI and tag and push the commit by running:
 
 ```console
-rm -rf build dist
-```
-
-Create the distribution files by running:
-
-```console
-uv build
-```
-
-Upload the distribution files to PyPI by running:
-
-```console
-uv publish
-```
-
-Tag the commit and push it:
-
-```console
-git tag vX.Y.Z
-git push --tags
+just publish
 ```
 
 ## How to keep dependencies up-to-date
