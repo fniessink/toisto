@@ -74,7 +74,7 @@ _ci: (test 'cov') (_sonarcloud) (quality)
 publish:
     rm -rf build dist
     uv build
-    uv publish
+    uv publish --token `python -c "import configparser, pathlib; c = configparser.ConfigParser(); c.read(pathlib.Path('~/.pypirc').expanduser()); print(c['pypi']['password'])"`
     git tag v`python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])"`
     git push --tags
 
