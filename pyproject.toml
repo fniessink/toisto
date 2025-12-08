@@ -39,7 +39,7 @@ optional-dependencies.dev = [
     "fixit==2.2.1",
     "gprof2dot==2025.4.14",
     "green==4.0.2",
-    "mutmut==3.3.1",
+    "mutmut==3.4.0",
     "mypy==1.18.2",
     "pyproject-fmt==2.11.1",
     "ruff==0.14.7",
