@@ -1,7 +1,13 @@
 {
     "concepts": {
         "pig": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "boar": {
+            "hypernym": "pig"
+        },
+        "guinea pig": {
+            "hypernym": "mammal"
         }
     },
     "labels": {
@@ -11,6 +17,23 @@
                 "label": {
                     "singular": "pig",
                     "plural": "pigs"
+                }
+            },
+            {
+                "concept": "boar",
+                "label": {
+                    "singular": "boar",
+                    "plural": [
+                        "boar",
+                        "boars"
+                    ]
+                }
+            },
+            {
+                "concept": "guinea pig",
+                "label": {
+                    "singular": "guinea pig",
+                    "plural": "guinea pigs"
                 }
             }
         ],
@@ -35,6 +58,20 @@
                     "singular": "sika",
                     "plural": "siat"
                 }
+            },
+            {
+                "concept": "boar",
+                "label": {
+                    "singular": "karju",
+                    "plural": "karjut"
+                }
+            },
+            {
+                "concept": "guinea pig",
+                "label": {
+                    "singular": "marsu",
+                    "plural": "marsut"
+                }
             }
         ],
         "nl": [
@@ -43,6 +80,20 @@
                 "label": {
                     "singular": "het varken",
                     "plural": "de varkens"
+                }
+            },
+            {
+                "concept": "boar",
+                "label": {
+                    "singular": "de beer",
+                    "plural": "de beren"
+                }
+            },
+            {
+                "concept": "guinea pig",
+                "label": {
+                    "singular": "de cavia",
+                    "plural": "de cavia's"
                 }
             }
         ]

@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "whale": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "whale",
+                "label": {
+                    "singular": "whale",
+                    "plural": "whales"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "whale",
+                "label": {
+                    "singular": "valas",
+                    "plural": "valaat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "whale",
+                "label": {
+                    "singular": "de walvis",
+                    "plural": "de walvissen"
+                },
+                "roots": "de vis"
+            }
+        ]
+    }
+}

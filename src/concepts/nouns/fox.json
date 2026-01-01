@@ -1,7 +1,10 @@
 {
     "concepts": {
         "fox": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "arctic fox": {
+            "hypernym": "fox"
         }
     },
     "labels": {
@@ -12,6 +15,14 @@
                     "singular": "fox",
                     "plural": "foxes"
                 }
+            },
+            {
+                "concept": "arctic fox",
+                "label": {
+                    "singular": "arctic fox",
+                    "plural": "arctic foxes"
+                },
+                "roots": "fox"
             }
         ],
         "fi": [
@@ -20,6 +31,13 @@
                 "label": {
                     "singular": "kettu",
                     "plural": "ketut"
+                }
+            },
+            {
+                "concept": "arctic fox",
+                "label": {
+                    "singular": "naali",
+                    "plural": "naalit"
                 }
             }
         ],
@@ -30,6 +48,14 @@
                     "singular": "de vos",
                     "plural": "de vossen"
                 }
+            },
+            {
+                "concept": "arctic fox",
+                "label": {
+                    "singular": "de poolvos",
+                    "plural": "de poolvossen"
+                },
+                "roots": "de vos"
             }
         ]
     }

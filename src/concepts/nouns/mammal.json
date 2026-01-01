@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "mammal": {
+            "hypernym": "animal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mammal",
+                "label": {
+                    "singular": "mammal",
+                    "plural": "mammals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mammal",
+                "label": {
+                    "singular": "nisäkäs",
+                    "plural": "nisäkkäät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mammal",
+                "label": {
+                    "singular": "het zoogdier",
+                    "plural": "de zoogdieren"
+                },
+                "roots": "het dier"
+            }
+        ]
+    }
+}

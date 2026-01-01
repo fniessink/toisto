@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "lynx": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lynx",
+                "label": {
+                    "singular": "lynx",
+                    "plural": [
+                        "lynx",
+                        "lynxes"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lynx",
+                "label": {
+                    "singular": "apina",
+                    "plural": "apinat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lynx",
+                "label": {
+                    "singular": "de lynx",
+                    "plural": "de lynxen"
+                }
+            }
+        ]
+    }
+}

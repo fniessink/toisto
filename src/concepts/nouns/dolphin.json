@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "dolphin": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dolphin",
+                "label": {
+                    "singular": "dolphin",
+                    "plural": "dolphins"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dolphin",
+                "label": {
+                    "singular": "delfiini",
+                    "plural": "delfiinit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dolphin",
+                "label": {
+                    "singular": "de dolfijn",
+                    "plural": "de dolfijnen"
+                }
+            }
+        ]
+    }
+}

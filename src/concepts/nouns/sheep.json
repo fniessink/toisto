@@ -1,9 +1,12 @@
 {
     "concepts": {
         "sheep": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
         },
         "ram": {
+            "hypernym": "sheep"
+        },
+        "lamb": {
             "hypernym": "sheep"
         }
     },
@@ -19,6 +22,13 @@
             {
                 "concept": "ram",
                 "label": "ram"
+            },
+            {
+                "concept": "lamb",
+                "label": {
+                    "singular": "lamb",
+                    "plural": "lamb"
+                }
             }
         ],
         "fi": [
@@ -32,6 +42,13 @@
             {
                 "concept": "ram",
                 "label": "pässi"
+            },
+            {
+                "concept": "lamb",
+                "label": {
+                    "singular": "karitsa",
+                    "plural": "karitsat"
+                }
             }
         ],
         "nl": [
@@ -45,6 +62,13 @@
             {
                 "concept": "ram",
                 "label": "de ram"
+            },
+            {
+                "concept": "lamb",
+                "label": {
+                    "singular": "het lam",
+                    "plural": "de lammeren"
+                }
             }
         ]
     }

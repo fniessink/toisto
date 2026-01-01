@@ -1,0 +1,62 @@
+{
+    "concepts": {
+        "goat": {
+            "hypernym": "mammal"
+        },
+        "billy goat": {
+            "hypernym": "goat"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "goat",
+                "label": {
+                    "singular": "goat",
+                    "plural": "goats"
+                }
+            },
+            {
+                "concept": "billy goat",
+                "label": {
+                    "singular": "billy goat",
+                    "plural": "billy goats"
+                },
+                "roots": "goat"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "goat",
+                "label": {
+                    "singular": "vuohi",
+                    "plural": "vuohet"
+                }
+            },
+            {
+                "concept": "billy goat",
+                "label": {
+                    "singular": "pukki",
+                    "plural": "pukit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "goat",
+                "label": {
+                    "singular": "de geit",
+                    "plural": "de geiten"
+                }
+            },
+            {
+                "concept": "billy goat",
+                "label": {
+                    "singular": "de geitenbok",
+                    "plural": "de geitenbokken"
+                },
+                "roots": "de geit"
+            }
+        ]
+    }
+}

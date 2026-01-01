@@ -1,34 +1,34 @@
 {
     "concepts": {
-        "zebra": {
+        "bison": {
             "hypernym": "mammal"
         }
     },
     "labels": {
         "en": [
             {
-                "concept": "zebra",
+                "concept": "bison",
                 "label": {
-                    "singular": "zebra",
-                    "plural": "zebras"
+                    "singular": "bison",
+                    "plural": "bison"
                 }
             }
         ],
         "fi": [
             {
-                "concept": "zebra",
+                "concept": "bison",
                 "label": {
-                    "singular": "seepra",
-                    "plural": "seeprat"
+                    "singular": "visentti",
+                    "plural": "visentit"
                 }
             }
         ],
         "nl": [
             {
-                "concept": "zebra",
+                "concept": "bison",
                 "label": {
-                    "singular": "de zebra",
-                    "plural": "de zebra's"
+                    "singular": "de bizon",
+                    "plural": "de bizons"
                 }
             }
         ]

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "dromedary": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dromedary",
+                "label": {
+                    "singular": "dromedary",
+                    "plural": "dromedaries"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dromedary",
+                "label": {
+                    "singular": "dromedaari",
+                    "plural": "dromedaarit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dromedary",
+                "label": {
+                    "singular": "de dromedaris",
+                    "plural": "de dromedarissen"
+                }
+            }
+        ]
+    }
+}

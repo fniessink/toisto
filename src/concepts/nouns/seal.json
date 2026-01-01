@@ -1,0 +1,40 @@
+{
+    "concepts": {
+        "seal": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "seal",
+                "label": {
+                    "singular": "seal",
+                    "plural": "seals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "seal",
+                "label": {
+                    "singular": "hylje",
+                    "plural": "hylkeet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "seal",
+                "label": {
+                    "singular": "de zeehond",
+                    "plural": "de zeehonden"
+                },
+                "roots": [
+                    "de zee",
+                    "de hond"
+                ]
+            }
+        ]
+    }
+}

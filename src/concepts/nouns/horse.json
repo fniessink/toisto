@@ -1,7 +1,18 @@
 {
     "concepts": {
         "horse": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "mare": {
+            "antonym": "stallion",
+            "hypernym": "horse"
+        },
+        "stallion": {
+            "antonym": "mare",
+            "hypernym": "horse"
+        },
+        "foal": {
+            "hypernym": "horse"
         },
         "horseriding": {
             "hypernym": "outdoor activity",
@@ -15,6 +26,27 @@
                 "label": {
                     "singular": "horse",
                     "plural": "horses"
+                }
+            },
+            {
+                "concept": "mare",
+                "label": {
+                    "singular": "mare",
+                    "plural": "mares"
+                }
+            },
+            {
+                "concept": "stallion",
+                "label": {
+                    "singular": "stallion",
+                    "plural": "stallions"
+                }
+            },
+            {
+                "concept": "foal",
+                "label": {
+                    "singular": "foal",
+                    "plural": "foals"
                 }
             },
             {
@@ -32,6 +64,27 @@
                 }
             },
             {
+                "concept": "mare",
+                "label": {
+                    "singular": "tamma",
+                    "plural": "tammat"
+                }
+            },
+            {
+                "concept": "stallion",
+                "label": {
+                    "singular": "ori",
+                    "plural": "oriit"
+                }
+            },
+            {
+                "concept": "foal",
+                "label": {
+                    "singular": "varsa",
+                    "plural": "varsat"
+                }
+            },
+            {
                 "concept": "horseriding",
                 "label": "ratsastus"
             }
@@ -42,6 +95,27 @@
                 "label": {
                     "singular": "het paard",
                     "plural": "de paarden"
+                }
+            },
+            {
+                "concept": "mare",
+                "label": {
+                    "singular": "de merrie",
+                    "plural": "de merries"
+                }
+            },
+            {
+                "concept": "stallion",
+                "label": {
+                    "singular": "de hengst",
+                    "plural": "de hengsten"
+                }
+            },
+            {
+                "concept": "foal",
+                "label": {
+                    "singular": "het veulen",
+                    "plural": "de veulens"
                 }
             },
             {

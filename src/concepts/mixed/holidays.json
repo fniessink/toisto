@@ -246,7 +246,10 @@
             {
                 "concept": "santa",
                 "label": "joulupukki",
-                "roots": "joulu"
+                "roots": [
+                    "joulu",
+                    "pukki"
+                ]
             },
             {
                 "concept": "elf",

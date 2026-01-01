@@ -1,0 +1,71 @@
+{
+    "concepts": {
+        "raccoon": {
+            "hypernym": "mammal"
+        },
+        "raccoon dog": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "raccoon",
+                "label": {
+                    "singular": "raccoon",
+                    "plural": "raccoons"
+                }
+            },
+            {
+                "concept": "raccoon dog",
+                "label": {
+                    "singular": "raccoon dog",
+                    "plural": "raccoon dogs"
+                },
+                "roots": [
+                    "raccoon",
+                    "dog"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "raccoon",
+                "label": {
+                    "singular": "pesukarhu",
+                    "plural": "pesukarhut"
+                },
+                "roots": "karhu"
+            },
+            {
+                "concept": "raccoon dog",
+                "label": {
+                    "singular": "supikoira",
+                    "plural": "supikoira"
+                },
+                "roots": "koira"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "raccoon",
+                "label": {
+                    "singular": "de wasbeer",
+                    "plural": "de wasberen"
+                },
+                "roots": "de beer"
+            },
+            {
+                "concept": "raccoon dog",
+                "label": {
+                    "singular": "de wasbeerhond",
+                    "plural": "de wasbeerhonden"
+                },
+                "roots": [
+                    "de wasbeer",
+                    "de hond"
+                ]
+            }
+        ]
+    }
+}
