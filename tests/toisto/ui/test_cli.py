@@ -15,7 +15,7 @@ from toisto.model.language.grammatical_form import GrammaticalForm
 from toisto.model.language.label import Label, Labels
 from toisto.persistence.config import default_config
 from toisto.persistence.folder import home
-from toisto.ui.cli import create_argument_parser, parse_arguments
+from toisto.ui.cli import create_argument_parser, parse_arguments, practiceable_concepts
 
 CONFIGURE_USAGE = """Usage: toisto configure [-h] [-t {language}] [-s {language}] [-e {path}] [-p {path}] \
 [-u {frequency}] [-r {yes,no}]
@@ -671,3 +671,48 @@ class VersionTest(ParserTestCase):
             f"v{VERSION} (v9999 is available, run toisto self upgrade to install)\n",
             print_message.call_args_list[0][0][0],
         )
+
+
+class PracticeableConceptsTest(unittest.TestCase):
+    """Unit tests for the practiceable concepts filter."""
+
+    def test_empty_set(self):
+        """Test that filtering the practiceable concepts from an empty set results in an empty set."""
+        self.assertEqual(set(), practiceable_concepts(set()))
+
+    def test_regular_concept(self):
+        """Test that a regular concept can be practiced."""
+        concept = Concept(ConceptId("concept"), Labels((Label(EN, "concept"),)), {}, answer_only=False)
+        self.assertEqual({concept}, practiceable_concepts({concept}))
+
+    def test_answer_only(self):
+        """Test that an answer-only concept is not practiceable."""
+        answer_only = Concept(ConceptId("concept"), Labels((Label(EN, "concept"),)), {}, answer_only=True)
+        self.assertEqual(set(), practiceable_concepts({answer_only}))
+
+    def test_sentence(self):
+        """Test that a sentence is not practiceable."""
+        sentence = Concept(ConceptId("concept"), Labels((Label(EN, "Concept."),)), {}, answer_only=False)
+        self.assertEqual(set(), practiceable_concepts({sentence}))
+
+    def test_hypernym_and_hyponym(self):
+        """Test that a hypernym is practiceable and its hyponym is not."""
+        hypernym = Concept(ConceptId("hypernym"), Labels((Label(EN, "hypernym"),)), {}, answer_only=False)
+        hyponym = Concept(
+            ConceptId("hyponym"),
+            Labels((Label(EN, "hyponym"),)),
+            {"hypernym": (ConceptId("hypernym"),)},
+            answer_only=False,
+        )
+        self.assertEqual({hypernym}, practiceable_concepts({hypernym, hyponym}))
+
+    def test_concept_that_both_hypernym_and_hyponym(self):
+        """Test that a concept that is both hypernym and hyponym is practiceable."""
+        hypernym = Concept(ConceptId("hypernym"), Labels((Label(EN, "hypernym"),)), {}, answer_only=False)
+        both = Concept(
+            ConceptId("both"), Labels((Label(EN, "both"),)), {"hypernym": (ConceptId("hypernym"),)}, answer_only=False
+        )
+        hyponym = Concept(
+            ConceptId("hyponym"), Labels((Label(EN, "hyponym"),)), {"hypernym": (ConceptId("both"),)}, answer_only=False
+        )
+        self.assertEqual({hypernym, both}, practiceable_concepts({hypernym, both, hyponym}))

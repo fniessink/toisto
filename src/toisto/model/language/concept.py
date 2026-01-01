@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import ClassVar, Literal, NewType, cast, get_args
 
 from toisto.tools import Registry, first
@@ -19,6 +19,9 @@ InvertedConceptRelation = Literal["hyponym", "involved_by", "meronym"]
 NonInvertedConceptRelation = Literal[RecursiveConceptRelation, "antonym", "answer", "example"]
 ConceptRelation = Literal[InvertedConceptRelation, NonInvertedConceptRelation]
 RelatedConceptIds = dict[ConceptRelation, ConceptIds]
+
+INVERTED_CONCEPT_RELATIONS = get_args(InvertedConceptRelation)
+RECURSIVE_CONCEPT_RELATIONS = get_args(RecursiveConceptRelation)
 
 
 def inverted(inverted_relation: InvertedConceptRelation) -> RecursiveConceptRelation:
@@ -66,6 +69,7 @@ class Concept:
     _labels: Labels
     _related_concepts: RelatedConceptIds
     answer_only: bool
+    cache: dict[ConceptRelation, Concepts] = field(default_factory=dict)
 
     instances: ClassVar[Registry[ConceptId, Concept]] = Registry[ConceptId, "Concept"]()
 
@@ -79,22 +83,27 @@ class Concept:
 
     def get_related_concepts(self, relation: ConceptRelation, *visited_concepts: Concept) -> Concepts:
         """Return the related concepts."""
+        if relation in self.cache:
+            return self.cache[relation]
         if self in visited_concepts:
             return Concepts()  # Prevent recursion error
-        if relation in get_args(InvertedConceptRelation):
+        if relation in INVERTED_CONCEPT_RELATIONS:
             inverted_relation = inverted(cast("InvertedConceptRelation", relation))
-            return Concepts(
+            self.cache[relation] = related_concepts = Concepts(
                 concept
                 for concept in Concepts(self.instances.get_all_values())
                 if self in concept.get_related_concepts(inverted_relation, self, *visited_concepts)
             )
+            return related_concepts
         related_concepts = Concepts(self.instances.get_values(*self._related_concepts.get(relation, [])))
-        if relation not in get_args(RecursiveConceptRelation):
+        if relation not in RECURSIVE_CONCEPT_RELATIONS:
+            self.cache[relation] = related_concepts
             return related_concepts
         related_concepts_list = list(related_concepts)
         for concept in related_concepts:
             related_concepts_list.extend(concept.get_related_concepts(relation, self, *visited_concepts))
-        return Concepts(related_concepts_list)
+        self.cache[relation] = related_concepts = Concepts(related_concepts_list)
+        return related_concepts
 
     def labels(self, language: Language) -> Labels:
         """Return the labels of the concept for the specified language."""
