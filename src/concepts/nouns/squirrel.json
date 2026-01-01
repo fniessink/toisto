@@ -1,26 +1,68 @@
 {
     "concepts": {
         "squirrel": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "flying squirel": {
+            "hypernym": "squirrel"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "squirrel",
-                "label": "squirrel"
+                "label": {
+                    "singular": "squirrel",
+                    "plural": "squirrels"
+                }
+            },
+            {
+                "concept": "flying squirrel",
+                "label": {
+                    "singular": "flying squirrel",
+                    "plural": "flying squirrels"
+                },
+                "roots": [
+                    "to fly",
+                    "squirrel"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "squirrel",
-                "label": "orava"
+                "label": {
+                    "singular": "orava",
+                    "plural": "oravat"
+                }
+            },
+            {
+                "concept": "flying squirrel",
+                "label": {
+                    "singular": "liito-orava",
+                    "plural": "liito-oravat"
+                },
+                "roots": "orava"
             }
         ],
         "nl": [
             {
                 "concept": "squirrel",
-                "label": "de eekhoorn"
+                "label": {
+                    "singular": "de eekhoorn",
+                    "plural": "de eekhoorns"
+                }
+            },
+            {
+                "concept": "flying squirrel",
+                "label": {
+                    "singular": "de vliegende eekhoorn",
+                    "plural": "de vliegende eekhoorns"
+                },
+                "roots": [
+                    "vliegen",
+                    "de eekhoorn"
+                ]
             }
         ]
     }

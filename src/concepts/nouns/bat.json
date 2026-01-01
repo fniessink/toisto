@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "bat": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bat",
+                "label": {
+                    "singular": "bat",
+                    "plural": "bat"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bat",
+                "label": {
+                    "singular": "lepakko",
+                    "plural": "lepakot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bat",
+                "label": {
+                    "singular": "de vleermuis",
+                    "plural": "de vleermuizen"
+                },
+                "roots": "de muis"
+            }
+        ]
+    }
+}

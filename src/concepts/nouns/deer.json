@@ -1,10 +1,19 @@
 {
     "concepts": {
         "deer": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
         },
         "reindeer": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "fallow deer": {
+            "hypernym": "mammal"
+        },
+        "red deer": {
+            "hypernym": "mammal"
+        },
+        "roe deer": {
+            "hypernym": "mammal"
         }
     },
     "labels": {
@@ -20,6 +29,33 @@
                     "plural": "reindeer"
                 },
                 "roots": "deer"
+            },
+            {
+                "concept": "fallow deer",
+                "label": {
+                    "singular": "fallow deer",
+                    "plural": "fallow deer"
+                },
+                "roots": "deer"
+            },
+            {
+                "concept": "red deer",
+                "label": {
+                    "singular": "red deer",
+                    "plural": "red deer"
+                },
+                "roots": [
+                    "red",
+                    "deer"
+                ]
+            },
+            {
+                "concept": "roe deer",
+                "label": {
+                    "singular": "roe deer",
+                    "plural": "roe deer"
+                },
+                "roots": "deer"
             }
         ],
         "fi": [
@@ -27,7 +63,7 @@
                 "concept": "deer",
                 "label": {
                     "singular": "kauris",
-                    "plural": "kaurit"
+                    "plural": "kauriit"
                 }
             },
             {
@@ -43,6 +79,47 @@
                     "singular": "poro",
                     "plural": "porot"
                 }
+            },
+            {
+                "concept": "fallow deer",
+                "label": {
+                    "singular": "kuusipeura",
+                    "plural": "kuusipeurat"
+                },
+                "roots": [
+                    "kuusi",
+                    "peura"
+                ]
+            },
+            {
+                "concept": "fallow deer",
+                "label": {
+                    "singular": "täpläkauris",
+                    "plural": "täpläkauriit"
+                },
+                "roots": "kauris"
+            },
+            {
+                "concept": "red deer",
+                "label": {
+                    "singular": "saksanhirvi",
+                    "plural": "saksanhirvet"
+                },
+                "roots": [
+                    "Saksa",
+                    "hirvi"
+                ]
+            },
+            {
+                "concept": "roe deer",
+                "label": {
+                    "singular": "metsäkauris",
+                    "plural": "metsäkauriit"
+                },
+                "roots": [
+                    "metsä",
+                    "kauris"
+                ]
             }
         ],
         "nl": [
@@ -63,6 +140,29 @@
                     "rennen",
                     "het dier"
                 ]
+            },
+            {
+                "concept": "fallow deer",
+                "label": {
+                    "singular": "het damhert",
+                    "plural": "de damherten"
+                },
+                "roots": "het hert"
+            },
+            {
+                "concept": "red deer",
+                "label": {
+                    "singular": "het edelhert",
+                    "plural": "de edelherten"
+                },
+                "roots": "het hert"
+            },
+            {
+                "concept": "roe deer",
+                "label": {
+                    "singular": "de ree",
+                    "plural": "de reeën"
+                }
             }
         ]
     }

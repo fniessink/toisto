@@ -1,7 +1,13 @@
 {
     "concepts": {
         "cow": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
+        },
+        "calf": {
+            "hypernym": [
+                "cow",
+                "bull"
+            ]
         }
     },
     "labels": {
@@ -12,6 +18,13 @@
                     "singular": "cow",
                     "plural": "cows"
                 }
+            },
+            {
+                "concept": "calf",
+                "label": {
+                    "singular": "calf",
+                    "plural": "calves"
+                }
             }
         ],
         "fi": [
@@ -21,6 +34,13 @@
                     "singular": "lehmä",
                     "plural": "lehmät"
                 }
+            },
+            {
+                "concept": "calf",
+                "label": {
+                    "singular": "vasikka",
+                    "plural": "vasikat"
+                }
             }
         ],
         "nl": [
@@ -29,6 +49,13 @@
                 "label": {
                     "singular": "de koe",
                     "plural": "de koeien"
+                }
+            },
+            {
+                "concept": "calf",
+                "label": {
+                    "singular": "het kalf",
+                    "plural": "de kalveren"
                 }
             }
         ]

@@ -18,11 +18,16 @@
         "nl": [
             {
                 "concept": "strait",
-                "label": "de zeestraat"
+                "label": "de zeestraat",
+                "roots": [
+                    "de zee",
+                    "de straat"
+                ]
             },
             {
                 "concept": "strait",
-                "label": "de zee-engte"
+                "label": "de zee-engte",
+                "roots": "de zee"
             }
         ]
     }

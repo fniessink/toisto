@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "walrus": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "walrus",
+                "label": {
+                    "singular": "walrus",
+                    "plural": [
+                        "walrus",
+                        "walruses"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "walrus",
+                "label": {
+                    "singular": "mursu",
+                    "plural": "mursut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "walrus",
+                "label": {
+                    "singular": "de walrus",
+                    "plural": "de walrussen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "hamster": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hamster",
+                "label": {
+                    "singular": "hamster",
+                    "plural": "hamsters"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hamster",
+                "label": {
+                    "singular": "hamsteri",
+                    "plural": "hamsterit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hamster",
+                "label": {
+                    "singular": "de hamster",
+                    "plural": "de hamsters"
+                }
+            }
+        ]
+    }
+}

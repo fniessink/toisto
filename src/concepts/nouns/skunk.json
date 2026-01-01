@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "skunk": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "skunk",
+                "label": {
+                    "singular": "skunk",
+                    "plural": "skunks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "skunk",
+                "label": {
+                    "singular": "haisunäätä",
+                    "plural": "haisunäädät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "skunk",
+                "label": {
+                    "singular": "het stinkdier",
+                    "plural": "de stinkdieren"
+                },
+                "roots": "het dier"
+            }
+        ]
+    }
+}

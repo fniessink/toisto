@@ -1,0 +1,54 @@
+{
+    "concepts": {
+        "leopard": {
+            "hypernym": "mammal"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "leopard",
+                "label": {
+                    "singular": "leopard",
+                    "plural": "leopards"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "leopard",
+                "label": {
+                    "singular": "leopardi",
+                    "plural": "leopardit"
+                }
+            },
+            {
+                "concept": "leopard",
+                "label": {
+                    "singular": "pantteri",
+                    "plural": "pantterit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "leopard",
+                "label": {
+                    "singular": "de panter",
+                    "plural": "de panters"
+                }
+            },
+            {
+                "concept": "leopard",
+                "label": {
+                    "singular": [
+                        "de luipaard",
+                        "het luipaard"
+                    ],
+                    "plural": "de luipaarden"
+                },
+                "roots": "het paard"
+            }
+        ]
+    }
+}

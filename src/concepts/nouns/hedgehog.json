@@ -1,26 +1,35 @@
 {
     "concepts": {
         "hedgehog": {
-            "hypernym": "animal"
+            "hypernym": "mammal"
         }
     },
     "labels": {
         "en": [
             {
                 "concept": "hedgehog",
-                "label": "hedgehog"
+                "label": {
+                    "singular": "hedgehog",
+                    "plural": "hedgehogs"
+                }
             }
         ],
         "fi": [
             {
                 "concept": "hedgehog",
-                "label": "siili"
+                "label": {
+                    "singular": "siili",
+                    "plural": "siilit"
+                }
             }
         ],
         "nl": [
             {
                 "concept": "hedgehog",
-                "label": "de egel"
+                "label": {
+                    "singular": "de egel",
+                    "plural": "de egels"
+                }
             }
         ]
     }
