@@ -1,7 +1,9 @@
 {
     "concepts": {
         "to live": {},
-        "to live together": {},
+        "to live together": {
+            "hypernym": "to live"
+        },
         "I live in Vaasa": {},
         "I live in Jyväskylä": {},
         "I live in Amsterdam": {}

@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased]
 
+### Fixed
+
+- Allow for practicing any concept with hyponyms. Fixes [#1227](https://github.com/fniessink/toisto/issues/1227).
+
 ### Added
 
 - Add more mammals.

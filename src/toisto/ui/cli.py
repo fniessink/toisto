@@ -58,6 +58,23 @@ def check_folder_or_file(path_name: str) -> Path:
     return path.resolve()
 
 
+def practiceable_concepts(concepts: set[Concept]) -> set[Concept]:
+    """Return the concept that are practiceable.
+
+    Practiceable concepts are concepts that:
+    - are not answer-only,
+    - are not a complete sentence, and
+    - don't have a hypernym unless they also have one or more hyponyms.
+    """
+    return {
+        concept
+        for concept in concepts
+        if not concept.answer_only
+        and not concept.is_complete_sentence
+        and (not concept.get_related_concepts("hypernym") or concept.get_related_concepts("hyponym"))
+    }
+
+
 @dataclass(frozen=True)
 class OptionChecker:
     """Class to check whether the given option is present in the list of options."""
@@ -107,13 +124,7 @@ class CommandBuilder:
 
     def add_concept_argument(self, parser: ArgumentParser, concepts: set[Concept]) -> None:
         """Add the concept argument."""
-        concepts = {
-            concept
-            for concept in concepts
-            if not concept.is_complete_sentence
-            and not concept.get_related_concepts("hypernym")
-            and not concept.answer_only
-        }
+        concepts = practiceable_concepts(concepts)
         language = self._get_target_language()
         all_labels = sorted({str(first(labels)) for concept in concepts if (labels := concept.meanings(language))})
         parser.add_argument(
