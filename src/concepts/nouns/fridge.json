@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "fridge": {
+            "holonym": "kitchen"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "fridge",
+                "label": {
+                    "single": "fridge",
+                    "plural": "fridges"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "fridge",
+                "label": {
+                    "single": "jääkaappi",
+                    "plural": "jääkaapit"
+                },
+                "roots": [
+                    "jää",
+                    "kaappi"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fridge",
+                "label": {
+                    "singular": "de koelkast",
+                    "plural": "de koelkasten"
+                },
+                "roots": [
+                    "koel",
+                    "de kast"
+                ]
+            }
+        ]
+    }
+}

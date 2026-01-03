@@ -1,0 +1,90 @@
+{
+    "concepts": {
+        "wall": {},
+        "outer wall": {
+            "hypernym": "wall"
+        },
+        "dividing wall": {
+            "hypernym": "wall"
+        },
+        "wallpaper": {
+            "hypernym": "paper",
+            "involves": "wall"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "wall",
+                    "plural": "walls"
+                }
+            },
+            {
+                "concept": "outer wall",
+                "label": "outer wall",
+                "roots": "wall"
+            },
+            {
+                "concept": "dividing wall",
+                "label": "dividing wall",
+                "roots": "wall"
+            },
+            {
+                "concept": "wallpaper",
+                "label": "wallpaper",
+                "roots": [
+                    "wall",
+                    "paper"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "seinä",
+                    "plural": "seinät"
+                }
+            },
+            {
+                "concept": "outer wall",
+                "label": "ulkoseinä",
+                "roots": "seinä"
+            },
+            {
+                "concept": "dividing wall",
+                "label": "väliseinä",
+                "roots": "seinä"
+            },
+            {
+                "concept": "wallpaper",
+                "label": "tapetti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wall",
+                "label": {
+                    "singular": "de muur",
+                    "plural": "de muren"
+                }
+            },
+            {
+                "concept": "outer wall",
+                "label": "de buitenmuur",
+                "roots": "de muur"
+            },
+            {
+                "concept": "dividing wall",
+                "label": "de tussenmuur",
+                "roots": "de muur"
+            },
+            {
+                "concept": "wallpaper",
+                "label": "het behang"
+            }
+        ]
+    }
+}

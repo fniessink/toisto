@@ -1,0 +1,53 @@
+{
+    "concepts": {
+        "oven": {
+            "holonym": "kitchen"
+        },
+        "microwave oven": {
+            "holonym": "kitchen"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "oven",
+                "label": "oven"
+            },
+            {
+                "concept": "microwave oven",
+                "label": [
+                    "microwave oven",
+                    "microwave"
+                ],
+                "roots": "oven"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "oven",
+                "label": "uuni"
+            },
+            {
+                "concept": "microwave oven",
+                "label": [
+                    "mikroaaltouuni",
+                    "mikro"
+                ],
+                "roots": [
+                    "mikroaalto",
+                    "uuni"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "oven",
+                "label": "de oven"
+            },
+            {
+                "concept": "microwave oven",
+                "label": "de magnetron"
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "floor": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "floor",
+                    "plural": "floors"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "lattia",
+                    "plural": "lattiat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "floor",
+                "label": {
+                    "singular": "de vloer",
+                    "plural": "de vloeren"
+                }
+            }
+        ]
+    }
+}

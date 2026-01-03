@@ -1,0 +1,46 @@
+{
+    "concepts": {
+        "desk": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "desk",
+                "label": {
+                    "singular": "desk",
+                    "plural": "desks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "desk",
+                "label": {
+                    "singular": "kirjoituspöytä",
+                    "plural": "kirjoituspöydät"
+                },
+                "roots": "pöytä"
+            },
+            {
+                "concept": "desk",
+                "label": {
+                    "singular": "työpöytä",
+                    "plural": "työpöydät"
+                },
+                "roots": [
+                    "työ",
+                    "pöytä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "desk",
+                "label": {
+                    "singular": "het bureau",
+                    "plural": "de bureaus"
+                }
+            }
+        ]
+    }
+}

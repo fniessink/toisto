@@ -1,8 +1,5 @@
 {
     "concepts": {
-        "room": {
-            "holonym": "house"
-        },
         "home": {},
         "garden": {},
         "house": {},
@@ -10,11 +7,6 @@
             "holonym": "house"
         },
         "barbecue": {},
-        "wall": {},
-        "floor": {},
-        "window": {
-            "holonym": "wall"
-        },
         "brick": {
             "holonym": "wall"
         },
@@ -23,37 +15,12 @@
         },
         "stairs": {},
         "elevator": {},
-        "living room": {
-            "hypernym": "room"
-        },
-        "kitchen": {
-            "hypernym": "room"
-        },
-        "dining room": {
-            "hypernym": "room"
-        },
-        "bedroom": {
-            "hypernym": "room"
-        },
         "bath": {
             "holonym": "bathroom"
-        },
-        "bathroom": {
-            "hypernym": "room"
-        },
-        "toilet": {
-            "hypernym": "room"
         }
     },
     "labels": {
         "en": [
-            {
-                "concept": "room",
-                "label": {
-                    "singular": "room",
-                    "plural": "rooms"
-                }
-            },
             {
                 "concept": "home",
                 "label": {
@@ -90,27 +57,6 @@
                 }
             },
             {
-                "concept": "wall",
-                "label": {
-                    "singular": "wall",
-                    "plural": "walls"
-                }
-            },
-            {
-                "concept": "floor",
-                "label": {
-                    "singular": "floor",
-                    "plural": "floors"
-                }
-            },
-            {
-                "concept": "window",
-                "label": {
-                    "singular": "window",
-                    "plural": "windows"
-                }
-            },
-            {
                 "concept": "brick",
                 "label": {
                     "singular": "brick",
@@ -140,66 +86,14 @@
                 }
             },
             {
-                "concept": "living room",
-                "label": "living room",
-                "roots": [
-                    "to live",
-                    "room"
-                ]
-            },
-            {
-                "concept": "kitchen",
-                "label": {
-                    "singular": "kitchen",
-                    "plural": "kitchens"
-                }
-            },
-            {
-                "concept": "dining room",
-                "label": "dining room",
-                "roots": "room"
-            },
-            {
-                "concept": "bedroom",
-                "label": "bedroom",
-                "roots": [
-                    "bed",
-                    "room"
-                ]
-            },
-            {
                 "concept": "bath",
                 "label": {
                     "singular": "bath",
                     "plural": "baths"
                 }
-            },
-            {
-                "concept": "bathroom",
-                "label": "bathroom",
-                "roots": [
-                    "bath",
-                    "room"
-                ]
-            },
-            {
-                "concept": "toilet",
-                "label": "restroom",
-                "roots": "room"
-            },
-            {
-                "concept": "toilet",
-                "label": "toilet"
             }
         ],
         "fi": [
-            {
-                "concept": "room",
-                "label": {
-                    "singular": "huone",
-                    "plural": "huoneet"
-                }
-            },
             {
                 "concept": "home",
                 "label": {
@@ -236,27 +130,6 @@
                 }
             },
             {
-                "concept": "wall",
-                "label": {
-                    "singular": "seinä",
-                    "plural": "seinät"
-                }
-            },
-            {
-                "concept": "floor",
-                "label": {
-                    "singular": "lattia",
-                    "plural": "lattiat"
-                }
-            },
-            {
-                "concept": "window",
-                "label": {
-                    "singular": "ikkuna",
-                    "plural": "ikkunat"
-                }
-            },
-            {
                 "concept": "brick",
                 "label": {
                     "singular": "tiili",
@@ -283,62 +156,14 @@
                 }
             },
             {
-                "concept": "living room",
-                "label": "olohuone",
-                "roots": "huone"
-            },
-            {
-                "concept": "kitchen",
-                "label": {
-                    "singular": "keittiö",
-                    "plural": "keittiöt"
-                }
-            },
-            {
-                "concept": "dining room",
-                "label": "ruokahuone",
-                "roots": [
-                    "ruoka",
-                    "huone"
-                ]
-            },
-            {
-                "concept": "bedroom",
-                "label": "makuuhuone",
-                "roots": "huone"
-            },
-            {
                 "concept": "bath",
                 "label": {
                     "singular": "kylpy",
                     "plural": "kylpyjä"
                 }
-            },
-            {
-                "concept": "bathroom",
-                "label": "kylpyhuone",
-                "roots": [
-                    "kylpy",
-                    "huone"
-                ]
-            },
-            {
-                "concept": "toilet",
-                "label": "wc"
-            },
-            {
-                "concept": "toilet",
-                "label": "vessa"
             }
         ],
         "nl": [
-            {
-                "concept": "room",
-                "label": {
-                    "singular": "de kamer",
-                    "plural": "de kamers"
-                }
-            },
             {
                 "concept": "home",
                 "label": "het thuis"
@@ -372,27 +197,6 @@
                 }
             },
             {
-                "concept": "wall",
-                "label": {
-                    "singular": "de muur",
-                    "plural": "de muren"
-                }
-            },
-            {
-                "concept": "floor",
-                "label": {
-                    "singular": "de vloer",
-                    "plural": "de vloeren"
-                }
-            },
-            {
-                "concept": "window",
-                "label": {
-                    "singular": "het raam",
-                    "plural": "de ramen"
-                }
-            },
-            {
                 "concept": "brick",
                 "label": {
                     "singular": "de baksteen",
@@ -419,66 +223,11 @@
                 }
             },
             {
-                "concept": "living room",
-                "label": "de huiskamer",
-                "roots": [
-                    "het huis",
-                    "de kamer"
-                ]
-            },
-            {
-                "concept": "living room",
-                "label": "de woonkamer",
-                "roots": [
-                    "wonen",
-                    "de kamer"
-                ]
-            },
-            {
-                "concept": "kitchen",
-                "label": {
-                    "singular": "de keuken",
-                    "plural": "de keukens"
-                }
-            },
-            {
-                "concept": "dining room",
-                "label": "de eetkamer",
-                "roots": [
-                    "eten",
-                    "de kamer"
-                ]
-            },
-            {
-                "concept": "bedroom",
-                "label": "de slaapkamer",
-                "roots": [
-                    "slapen",
-                    "de kamer"
-                ]
-            },
-            {
                 "concept": "bath",
                 "label": {
                     "singular": "het bad",
                     "plural": "de baden"
                 }
-            },
-            {
-                "concept": "bathroom",
-                "label": "de badkamer",
-                "roots": [
-                    "het bad",
-                    "de kamer"
-                ]
-            },
-            {
-                "concept": "toilet",
-                "label": "de wc"
-            },
-            {
-                "concept": "toilet",
-                "label": "het toilet"
             }
         ]
     }

@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "roof": {
+            "holonym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "roof",
+                "label": {
+                    "singular": "roof",
+                    "plural": "roofs"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": [
+                    "ceiling",
+                    "roof"
+                ],
+                "label": {
+                    "singular": "katto",
+                    "plural": "katot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "roof",
+                "label": {
+                    "singular": "het dak",
+                    "plural": "de daken"
+                }
+            }
+        ]
+    }
+}

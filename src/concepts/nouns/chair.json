@@ -1,6 +1,11 @@
 {
     "concepts": {
-        "chair": {},
+        "chair": {
+            "hypernym": "piece of furniture"
+        },
+        "arm chair": {
+            "hypernym": "chair"
+        },
         "office chair": {
             "example": "we are looking for an office chair",
             "hypernym": "chair"
@@ -14,6 +19,14 @@
                     "singular": "chair",
                     "plural": "chairs"
                 }
+            },
+            {
+                "concept": "arm chair",
+                "label": "arm chair",
+                "roots": [
+                    "arm",
+                    "chair"
+                ]
             },
             {
                 "concept": "office chair",
@@ -33,6 +46,11 @@
                 }
             },
             {
+                "concept": "arm chair",
+                "label": "nojatuoli",
+                "roots": "tuoli"
+            },
+            {
                 "concept": "office chair",
                 "label": "työtuoli",
                 "roots": [
@@ -48,6 +66,11 @@
                     "singular": "de stoel",
                     "plural": "de stoelen"
                 }
+            },
+            {
+                "concept": "arm chair",
+                "label": "de leunstoel",
+                "roots": "de stoel"
             },
             {
                 "concept": "office chair",

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "sofa": {
+            "hypernym": "piece of furniture"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sofa",
+                "label": {
+                    "singular": "sofa",
+                    "plural": "sofas"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sofa",
+                "label": {
+                    "singular": "sohva",
+                    "plural": "sohvat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sofa",
+                "label": {
+                    "singular": "de sofa",
+                    "plural": "de sofa's"
+                }
+            }
+        ]
+    }
+}

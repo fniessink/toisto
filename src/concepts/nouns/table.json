@@ -1,9 +1,15 @@
 {
     "concepts": {
-        "table": {},
+        "table": {
+            "hypernym": "piece of furniture"
+        },
         "dining table": {
             "example": "you are looking for a dining table",
             "hypernym": "table"
+        },
+        "kitchen table": {
+            "hypernym": "table",
+            "holonym": "kitchen"
         }
     },
     "labels": {
@@ -19,6 +25,14 @@
                 "concept": "dining table",
                 "label": "dining table",
                 "roots": "table"
+            },
+            {
+                "concept": "kitchen table",
+                "label": "kitchen table",
+                "roots": [
+                    "kitchen",
+                    "table"
+                ]
             }
         ],
         "fi": [
@@ -36,6 +50,14 @@
                     "ruoka",
                     "pöytä"
                 ]
+            },
+            {
+                "concept": "kitchen table",
+                "label": "keittiön pöytä",
+                "roots": [
+                    "keittiö",
+                    "pöytä"
+                ]
             }
         ],
         "nl": [
@@ -51,6 +73,14 @@
                 "label": "de eettafel",
                 "roots": [
                     "het eten",
+                    "de tafel"
+                ]
+            },
+            {
+                "concept": "kitchen table",
+                "label": "de keukentafel",
+                "roots": [
+                    "de keuken",
                     "de tafel"
                 ]
             }

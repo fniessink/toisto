@@ -1,0 +1,65 @@
+{
+    "concepts": {
+        "carpet": {
+            "example": "the cat is sleeping on the carpet"
+        },
+        "the cat is sleeping on the carpet": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "carpet",
+                "label": {
+                    "singular": "carpet",
+                    "plural": "carpets"
+                }
+            },
+            {
+                "concept": "the cat is sleeping on the carpet",
+                "label": "The cat is sleeping on the carpet.",
+                "roots": [
+                    "cat",
+                    "to sleep",
+                    "carpet"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "carpet",
+                "label": {
+                    "singular": "matto",
+                    "plural": "matot"
+                }
+            },
+            {
+                "concept": "the cat is sleeping on the carpet",
+                "label": "Kissa nukkuu matolla.",
+                "cloze": "Kissa nukkuu (mato).",
+                "roots": [
+                    "kissa",
+                    "nukkua",
+                    "matto"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "carpet",
+                "label": {
+                    "singular": "het tapijt",
+                    "plural": "de tapijten"
+                }
+            },
+            {
+                "concept": "the cat is sleeping on the carpet",
+                "label": "De kat slaapt op het tapijt.",
+                "roots": [
+                    "de kat",
+                    "slapen",
+                    "het tapijt"
+                ]
+            }
+        ]
+    }
+}

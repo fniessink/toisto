@@ -1,0 +1,56 @@
+{
+    "concepts": {
+        "furniture": {},
+        "piece of furniture": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "furniture",
+                "label": "furniture"
+            },
+            {
+                "concept": "piece of furniture",
+                "label": {
+                    "singular": "piece of furniture",
+                    "plural": "pieces of furniture"
+                },
+                "roots": "furniture"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "furniture",
+                "label": "huonekalut",
+                "roots": "huonekalu"
+            },
+            {
+                "concept": "piece of furniture",
+                "label": {
+                    "singular": "huonekalu",
+                    "plural": "huonekalut"
+                },
+                "roots": "huone"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "furniture",
+                "label": "het meubilair"
+            },
+            {
+                "concept": "piece of furniture",
+                "label": {
+                    "singular": [
+                        "het meubelstuk",
+                        "het meubel"
+                    ],
+                    "plural": [
+                        "de meubelstukken",
+                        "de meubels"
+                    ]
+                }
+            }
+        ]
+    }
+}

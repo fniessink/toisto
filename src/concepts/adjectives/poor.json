@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "poor": {
+            "antonym": "rich"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "poor",
+                "label": "poor"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "poor",
+                "label": "köyhä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "poor",
+                "label": "arm"
+            }
+        ]
+    }
+}

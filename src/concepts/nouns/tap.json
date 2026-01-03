@@ -1,0 +1,31 @@
+{
+    "concepts": {
+        "water tap": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "water tap",
+                "label": "water tap",
+                "roots": "water"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "water tap",
+                "label": "vesihana",
+                "roots": "vesi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "water tap",
+                "label": [
+                    "de waterkraan",
+                    "de kraan"
+                ],
+                "roots": "het water"
+            }
+        ]
+    }
+}

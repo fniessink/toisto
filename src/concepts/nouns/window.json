@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "window": {
+            "holonym": "wall"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "window",
+                    "plural": "windows"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "ikkuna",
+                    "plural": "ikkunat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "window",
+                "label": {
+                    "singular": "het raam",
+                    "plural": "de ramen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "sad": {
+            "antonym": "cheerful"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sad",
+                "label": {
+                    "positive degree": "sad",
+                    "comparative degree": "sadder",
+                    "superlative degree": "saddest"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sad",
+                "label": {
+                    "positive degree": "surullinen",
+                    "comparative degree": "surullisempi,",
+                    "superlative degree": "surullisin"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sad",
+                "label": {
+                    "positive degree": "verdrietig",
+                    "comparative degree": "verdrietiger",
+                    "superlative degree": "verdrietigst"
+                }
+            }
+        ]
+    }
+}

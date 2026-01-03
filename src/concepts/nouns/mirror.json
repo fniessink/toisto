@@ -1,0 +1,60 @@
+{
+    "concepts": {
+        "mirror": {},
+        "full-length mirror": {
+            "hypernym": "mirror"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mirror",
+                "label": {
+                    "singular": "mirror",
+                    "plural": "mirrors"
+                }
+            },
+            {
+                "concept": "full-length mirror",
+                "label": "full-length mirror",
+                "roots": [
+                    "full",
+                    "length",
+                    "mirror"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mirror",
+                "label": {
+                    "singular": "peili",
+                    "plural": "peilit"
+                }
+            },
+            {
+                "concept": "full-length mirror",
+                "label": "kokovartalopeili",
+                "roots": [
+                    "koko",
+                    "vartalo",
+                    "peili"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mirror",
+                "label": {
+                    "singular": "de spiegel",
+                    "plural": "de spiegels"
+                }
+            },
+            {
+                "concept": "full-length mirror",
+                "label": "de passpiegel",
+                "roots": "de spiegel"
+            }
+        ]
+    }
+}
