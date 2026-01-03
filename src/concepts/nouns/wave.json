@@ -1,6 +1,9 @@
 {
     "concepts": {
-        "wave": {}
+        "wave": {},
+        "microwave": {
+            "hypernym": "wave"
+        }
     },
     "labels": {
         "en": [
@@ -10,6 +13,11 @@
                     "singular": "wave",
                     "plural": "waves"
                 }
+            },
+            {
+                "concept": "microwave",
+                "label": "microwave",
+                "roots": "wave"
             }
         ],
         "fi": [
@@ -19,6 +27,11 @@
                     "singular": "aalto",
                     "plural": "aallot"
                 }
+            },
+            {
+                "concept": "microwave",
+                "label": "mikroaalto",
+                "roots": "aalto"
             }
         ],
         "nl": [
@@ -28,6 +41,11 @@
                     "singular": "de golf",
                     "plural": "de golven"
                 }
+            },
+            {
+                "concept": "microwave",
+                "label": "de microgolf",
+                "roots": "de golf"
             }
         ]
     }

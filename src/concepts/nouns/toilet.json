@@ -1,0 +1,115 @@
+{
+    "concepts": {
+        "toilet": {
+            "hypernym": "room"
+        },
+        "toilet bowl": {
+            "holonym": "toilet"
+        },
+        "toilet seat": {
+            "holonym": "toilet"
+        },
+        "toilet paper": {
+            "hypernym": "paper",
+            "holonym": "toilet"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "toilet",
+                "label": "restroom",
+                "roots": "room"
+            },
+            {
+                "concept": "toilet",
+                "label": "toilet"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "toilet bowl",
+                "roots": "toilet"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "toilet seat",
+                "roots": "toilet"
+            },
+            {
+                "concept": "toilet paper",
+                "label": "toilet paper",
+                "roots": [
+                    "toilet",
+                    "paper"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "toilet",
+                "label": "wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "vessa"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "vessanpönttö",
+                "roots": "vessa"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "vessaistuin",
+                "roots": "vessa"
+            },
+            {
+                "concept": "toilet paper",
+                "label": "vessapaperi",
+                "roots": [
+                    "vessa",
+                    "paperi"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "toilet",
+                "label": "de wc"
+            },
+            {
+                "concept": "toilet",
+                "label": "het toilet"
+            },
+            {
+                "concept": "toilet bowl",
+                "label": "de toiletpot",
+                "roots": "het toilet"
+            },
+            {
+                "concept": "toilet seat",
+                "label": "de toiletbril",
+                "roots": [
+                    "het toilet",
+                    "de bril"
+                ]
+            },
+            {
+                "concept": "toilet seat",
+                "label": "de wc-bril",
+                "roots": [
+                    "de wc",
+                    "de bril"
+                ]
+            },
+            {
+                "concept": "toilet paper",
+                "label": "het toiletpapier",
+                "roots": [
+                    "het toilet",
+                    "het papier"
+                ]
+            }
+        ]
+    }
+}

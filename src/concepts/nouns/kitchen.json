@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "kitchen": {
+            "hypernym": "room"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "kitchen",
+                    "plural": "kitchens"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "keittiö",
+                    "plural": "keittiöt"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "kitchen",
+                "label": {
+                    "singular": "de keuken",
+                    "plural": "de keukens"
+                }
+            }
+        ]
+    }
+}

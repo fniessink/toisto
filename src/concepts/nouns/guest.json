@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "guest": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "guest",
+                "label": {
+                    "singular": "guest",
+                    "plural": "guests"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "guest",
+                "label": {
+                    "singular": "vieras",
+                    "plural": "vieraat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "guest",
+                "label": {
+                    "singular": "de gast",
+                    "plural": "de gasten"
+                }
+            }
+        ]
+    }
+}

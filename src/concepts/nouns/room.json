@@ -1,0 +1,143 @@
+{
+    "concepts": {
+        "room": {
+            "holonym": "house"
+        },
+        "living room": {
+            "hypernym": "room"
+        },
+        "dining room": {
+            "hypernym": "room"
+        },
+        "bedroom": {
+            "hypernym": "room"
+        },
+        "bathroom": {
+            "hypernym": "room"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "room",
+                    "plural": "rooms"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "living room",
+                "roots": [
+                    "to live",
+                    "room"
+                ]
+            },
+            {
+                "concept": "dining room",
+                "label": "dining room",
+                "roots": "room"
+            },
+            {
+                "concept": "bedroom",
+                "label": "bedroom",
+                "roots": [
+                    "bed",
+                    "room"
+                ]
+            },
+            {
+                "concept": "bathroom",
+                "label": "bathroom",
+                "roots": [
+                    "bath",
+                    "room"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "huone",
+                    "plural": "huoneet"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "olohuone",
+                "roots": "huone"
+            },
+            {
+                "concept": "dining room",
+                "label": "ruokahuone",
+                "roots": [
+                    "ruoka",
+                    "huone"
+                ]
+            },
+            {
+                "concept": "bedroom",
+                "label": "makuuhuone",
+                "roots": "huone"
+            },
+            {
+                "concept": "bathroom",
+                "label": "kylpyhuone",
+                "roots": [
+                    "kylpy",
+                    "huone"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "room",
+                "label": {
+                    "singular": "de kamer",
+                    "plural": "de kamers"
+                }
+            },
+            {
+                "concept": "living room",
+                "label": "de huiskamer",
+                "roots": [
+                    "het huis",
+                    "de kamer"
+                ]
+            },
+            {
+                "concept": "living room",
+                "label": "de woonkamer",
+                "roots": [
+                    "wonen",
+                    "de kamer"
+                ]
+            },
+            {
+                "concept": "dining room",
+                "label": "de eetkamer",
+                "roots": [
+                    "eten",
+                    "de kamer"
+                ]
+            },
+            {
+                "concept": "bedroom",
+                "label": "de slaapkamer",
+                "roots": [
+                    "slapen",
+                    "de kamer"
+                ]
+            },
+            {
+                "concept": "bathroom",
+                "label": "de badkamer",
+                "roots": [
+                    "het bad",
+                    "de kamer"
+                ]
+            }
+        ]
+    }
+}

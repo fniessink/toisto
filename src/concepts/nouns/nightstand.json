@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "nightstand": {
+            "hypernym": "furniture"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "nightstand",
+                "label": "nightstand",
+                "roots": "night"
+            },
+            {
+                "concept": "nightstand",
+                "label": "bedside table",
+                "roots": [
+                    "bed",
+                    "table"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "nightstand",
+                "label": "yöpöytä",
+                "roots": [
+                    "yö",
+                    "pöytä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nightstand",
+                "label": "het nachtkastje",
+                "roots": [
+                    "de nacht",
+                    "de kast"
+                ]
+            }
+        ]
+    }
+}
