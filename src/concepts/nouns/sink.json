@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "kitchen sink": {
+            "holonym": "kitchen"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "kitchen sink",
+                "label": "kitchen sink"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "kitchen sink",
+                "label": "tiskiallas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "kitchen sink",
+                "label": "de gootsteen",
+                "roots": "de steen"
+            }
+        ]
+    }
+}

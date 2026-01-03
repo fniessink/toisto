@@ -1,0 +1,89 @@
+{
+    "concepts": {
+        "towel": {},
+        "bath towel": {
+            "hypernym": "towel"
+        },
+        "guest towel": {
+            "hypernym": "towel"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "towel",
+                "label": {
+                    "singular": "towel",
+                    "plural": "towels"
+                }
+            },
+            {
+                "concept": "bath towel",
+                "label": "bath towel",
+                "roots": [
+                    "bath",
+                    "towel"
+                ]
+            },
+            {
+                "concept": "guest towel",
+                "label": "guest towel",
+                "roots": [
+                    "guest",
+                    "towel"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "towel",
+                "label": {
+                    "singular": "pyyhe",
+                    "plural": "pyyhkeet"
+                }
+            },
+            {
+                "concept": "bath towel",
+                "label": "kylpypyyhe",
+                "roots": [
+                    "kylpy",
+                    "pyyhe"
+                ]
+            },
+            {
+                "concept": "guest towel",
+                "label": "vieraspyyhe",
+                "roots": [
+                    "vieras",
+                    "pyyhe"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "towel",
+                "label": {
+                    "singular": "de handdoek",
+                    "plural": "de handdoeken"
+                },
+                "roots": "de hand"
+            },
+            {
+                "concept": "bath towel",
+                "label": "de badhanddoek",
+                "roots": [
+                    "het bad",
+                    "de handdoek"
+                ]
+            },
+            {
+                "concept": "guest towel",
+                "label": "de gastenhanddoek",
+                "roots": [
+                    "de gast",
+                    "de handdoek"
+                ]
+            }
+        ]
+    }
+}

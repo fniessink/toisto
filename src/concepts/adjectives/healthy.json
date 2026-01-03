@@ -4,6 +4,9 @@
             "antonym": "unhealthy",
             "example": "fruit is healthy"
         },
+        "healthy (free from disease)": {
+            "antonym": "sick"
+        },
         "unhealthy": {
             "antonym": "healthy"
         }
@@ -11,7 +14,10 @@
     "labels": {
         "en": [
             {
-                "concept": "healthy",
+                "concept": [
+                    "healthy",
+                    "healthy (free from disease)"
+                ],
                 "label": "healthy",
                 "roots": "health"
             },
@@ -24,7 +30,12 @@
         "fi": [
             {
                 "concept": "healthy",
-                "label": "terveellinen"
+                "label": "terveellinen",
+                "roots": "terve"
+            },
+            {
+                "concept": "healthy (free from disease)",
+                "label": "terve"
             },
             {
                 "concept": "unhealthy",
@@ -34,7 +45,10 @@
         ],
         "nl": [
             {
-                "concept": "healthy",
+                "concept": [
+                    "healthy",
+                    "healthy (free from disease)"
+                ],
                 "label": "gezond"
             },
             {

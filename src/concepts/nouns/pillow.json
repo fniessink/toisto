@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "pillow": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pillow",
+                "label": {
+                    "singular": "pillow",
+                    "plural": "pillows"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pillow",
+                "label": {
+                    "singular": "tyyny",
+                    "plural": "tyynyt"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pillow",
+                "label": {
+                    "singular": "het kussen",
+                    "plural": "de kussens"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "concepts": {
+        "freezer": {
+            "holonym": "kitchen"
+        },
+        "freezer compartment": {
+            "holonym": "fridge"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "freezer",
+                "label": {
+                    "single": "freezer",
+                    "plural": "freezer"
+                }
+            },
+            {
+                "concept": "freezer compartment",
+                "label": "freezer compartment",
+                "roots": "freezer"
+            },
+            {
+                "concept": "freezer compartment",
+                "label": "freezer section",
+                "roots": "freezer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "freezer",
+                "label": {
+                    "single": "pakastin",
+                    "plural": "pakastimet"
+                }
+            },
+            {
+                "concept": "freezer compartment",
+                "label": "pakastelokero"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "freezer",
+                "label": {
+                    "singular": "de vriezer",
+                    "plural": "de vriezers"
+                }
+            },
+            {
+                "concept": "freezer compartment",
+                "label": "het vriesvak"
+            }
+        ]
+    }
+}

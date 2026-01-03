@@ -1,0 +1,43 @@
+{
+    "concepts": {
+        "dishwasher": {},
+        "dishwashing liquid": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dishwasher",
+                "label": "dishwasher"
+            },
+            {
+                "concept": "dishwashing liquid",
+                "label": "dishwashing liquid"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dishwasher",
+                "label": "tiskikone",
+                "colloquial": true
+            },
+            {
+                "concept": "dishwasher",
+                "label": "astianpesukone"
+            },
+            {
+                "concept": "dishwashing liquid",
+                "label": "tiskiaine"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dishwasher",
+                "label": "de vaatwasser"
+            },
+            {
+                "concept": "dishwashing liquid",
+                "label": "het afwasmiddel"
+            }
+        ]
+    }
+}

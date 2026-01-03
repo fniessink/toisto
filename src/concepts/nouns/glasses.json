@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "glasses": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "glasses",
+                "label": "glasses"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "glasses",
+                "label": [
+                    "silmälasit",
+                    "lasit"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "glasses",
+                "label": "de bril"
+            }
+        ]
+    }
+}

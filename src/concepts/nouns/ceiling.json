@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "ceiling": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ceiling",
+                "label": {
+                    "singular": "ceiling",
+                    "plural": "ceilings"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ceiling",
+                "label": {
+                    "singular": "het plafond",
+                    "plural": "de plafonds"
+                }
+            }
+        ]
+    }
+}
