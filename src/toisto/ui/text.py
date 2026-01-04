@@ -13,7 +13,7 @@ from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label
-from toisto.model.language.translation import meanings
+from toisto.model.language.lookup import is_colloquial, meanings
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
@@ -156,6 +156,7 @@ class Feedback:
             return []
         return [
             f"Your incorrect answer {quoted(linkified(str(guess)))} is "
+            f"{'colloquial for ' if is_colloquial(guess, self.quiz.answer.language) else ''}"
             f"{linkified_and_enumerated(*guess_meanings.as_strings)} in {ALL_LANGUAGES[self.quiz.question.language]}"
             for guess in unique(self.incorrect_guesses)
             if (guess_meanings := meanings(guess, self.quiz.answer.language, self.quiz.question.language))
