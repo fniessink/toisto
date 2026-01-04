@@ -203,6 +203,25 @@ class FeedbackNotesTest(ToistoTestCase):
             feedback.text(Evaluation.INCORRECT, "toi", Retention()),
         )
 
+    def test_note_on_incorrect_answer_that_is_colloquial(self):
+        """Test that the note is given when the answer is a colloquial form of the question."""
+        concept = self.create_concept(
+            "movie",
+            labels=[
+                {"label": "elokukova", "language": FI},
+                {"label": "leffa", "language": FI, "colloquial": True},
+                {"label": "de film", "language": NL},
+            ],
+        )
+        (quiz,) = create_quizzes(NL_FI, (INTERPRET,), concept)
+        feedback = Feedback(quiz, NL_FI)
+        feedback.incorrect_guesses = ["leffa"]
+        self.assertIn(
+            f"[note]Note: Your incorrect answer '{linkified('leffa')}' is colloquial for "
+            f"'{linkified('de film')}' in Dutch.[/note]",
+            feedback.text(Evaluation.INCORRECT, "leffa", Retention()),
+        )
+
     def test_note_on_incorrect_answer_that_has_different_meaning(self):
         """Test that the note is given when the answer is incorrect."""
         self.create_concept("hello", labels=[TERVE, {"label": "hallo", "language": NL}])

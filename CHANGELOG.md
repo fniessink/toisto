@@ -9,10 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Allow for practicing any concept with hyponyms. Fixes [#1227](https://github.com/fniessink/toisto/issues/1227).
+- When the user gives an incorrect answer that is the colloquial version of the correct answer, note so after the quiz. Fixes [#1229](https://github.com/fniessink/toisto/issues/1229).
 
 ### Added
 
-- Add more mammals.
+- Add more words and phrases.
 
 ## 0.41.0 - 2025-11-29
 
