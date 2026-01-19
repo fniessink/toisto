@@ -47,7 +47,7 @@ optional-dependencies.dev = [
     "troml==0.4.1",
     "ty==0.0.8",
     "types-requests==2.32.4.20250913",
-    "unittest-xml-reporting==3.2.0",
+    "unittest-xml-reporting==4.0.0",
     "vulture==2.14",
 ]
 urls.Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
