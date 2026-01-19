@@ -45,7 +45,7 @@ optional-dependencies.dev = [
     "ruff==0.14.10",
     "rust-just==1.46.0",
     "troml==0.4.1",
-    "ty==0.0.8",
+    "ty==0.0.11",
     "types-requests==2.32.4.20250913",
     "unittest-xml-reporting==3.2.0",
     "vulture==2.14",
