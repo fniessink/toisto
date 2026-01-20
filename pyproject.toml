@@ -42,12 +42,12 @@ optional-dependencies.dev = [
     "mutmut==3.4.0",
     "mypy==1.19.1",
     "pyproject-fmt==2.11.1",
-    "ruff==0.14.10",
+    "ruff==0.14.11",
     "rust-just==1.46.0",
     "troml==0.4.1",
-    "ty==0.0.8",
-    "types-requests==2.32.4.20250913",
-    "unittest-xml-reporting==3.2.0",
+    "ty==0.0.11",
+    "types-requests==2.32.4.20260107",
+    "unittest-xml-reporting==4.0.0",
     "vulture==2.14",
 ]
 urls.Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
