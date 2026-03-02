@@ -35,7 +35,7 @@ class QuizType:
 
     def instruction(self, question: Label, action: QuizAction) -> str:
         """Return the quiz type instruction. Subclasses may use the question to generate the instruction."""
-        return self._instruction if self._instruction else f"Give the [underline]{action}[/underline] in"
+        return self._instruction or f"Give the [underline]{action}[/underline] in"
 
     def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
         """Return the questions."""
