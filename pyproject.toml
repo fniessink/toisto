@@ -1,6 +1,5 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-
 requires = [ "setuptools<81" ]
 
 [project]
@@ -41,7 +40,7 @@ optional-dependencies.dev = [
     "green==4.0.2",
     "mutmut==3.5.0",
     "mypy==1.19.1",
-    "pyproject-fmt==2.11.1",
+    "pyproject-fmt==2.16.1",
     "ruff==0.15.2",
     "rust-just==1.46.0",
     "troml==0.4.1",
@@ -55,17 +54,14 @@ urls.Issues = "https://github.com/fniessink/toisto/issues"
 urls.Repository = "https://github.com/fniessink/toisto"
 scripts.toisto = "toisto.app:main"
 
-[tool.setuptools.packages.find]
-where = [ "src" ]
-
-[tool.setuptools.package-data]
-"*" = [ "*.json" ]
-languages = [ "*.txt" ]
+[tool.setuptools]
+package-data."*" = [ "*.json" ]
+package-data.languages = [ "*.txt" ]
+packages.find.where = [ "src" ]
 
 [tool.ruff]
 target-version = "py313"
 line-length = 120
-
 lint.select = [ "ALL" ]
 lint.ignore = [
     "ARG002",  # Prevent 'Unused method argument: `concept`' errors
@@ -98,26 +94,22 @@ lint.isort.sections."second-party" = [ "toisto" ]
 
 [tool.pyproject-fmt]
 indent = 4
-keep_full_version = true # Don't remove trailing zero's from version specifiers
+keep_full_version = true  # Don't remove trailing zero's from version specifiers
 
-[tool.pytest.ini_options]
-filterwarnings = [
+[tool.pytest]
+ini_options.filterwarnings = [
     "ignore::UserWarning",
 ]
 
-[tool.coverage.run]
-branch = true
-relative_files = true
-
-[tool.coverage.report]
-exclude_also = [
+[tool.coverage]
+run.branch = true
+run.relative_files = true
+report.exclude_also = [
     "if TYPE_CHECKING:",
 ]
-fail_under = 100
-skip_covered = true
-
-[tool.coverage.xml]
-output = "build/coverage.xml"
+report.fail_under = 100
+report.skip_covered = true
+xml.output = "build/coverage.xml"
 
 [tool.mypy]
 python_version = "3.13"
@@ -129,11 +121,11 @@ ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = "toisto.persistence.json_file"
-disable_error_code = "type-arg"         # Don't complain about JSON types not being completely specified
+disable_error_code = "type-arg"  # Don't complain about JSON types not being completely specified
 
 [[tool.mypy.overrides]]
 module = [ "tests.*" ]
-allow_untyped_defs = true # Allow for not specifying None as return value on every test method
+allow_untyped_defs = true  # Allow for not specifying None as return value on every test method
 
 [tool.mutmut]
 paths_to_mutate = [ "src/toisto/" ]
