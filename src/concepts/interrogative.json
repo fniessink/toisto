@@ -1,7 +1,8 @@
 {
     "concepts": {
         "what": {
-            "hypernym": "question word"
+            "hypernym": "question word",
+            "involves": "thing"
         },
         "why": {
             "hypernym": "question word"
