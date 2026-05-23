@@ -202,6 +202,17 @@ class Label:
             or (not other_grammatical_categories and self.is_grammatical_base)
         )
 
+    def has_compatible_grammatical_categories(self, other: Label) -> bool:
+        """Return whether this label's grammatical categories are compatible with the other label's.
+
+        Two labels are compatible when one's categories are a subset of the other's. This is the lenient
+        rule for cross-language matching: it accommodates languages whose category systems differ in
+        granularity (e.g., Finnish marks cases that English does not).
+        """
+        my_categories = self.grammatical_form.grammatical_categories
+        other_categories = other.grammatical_form.grammatical_categories
+        return my_categories <= other_categories or my_categories >= other_categories
+
     def has_same_grammatical_base(self, other: Label) -> bool:
         """Return whether this label has the same grammatical base as the other label."""
         return self.grammatical_form.grammatical_base == other.grammatical_form.grammatical_base
@@ -286,6 +297,10 @@ class Labels:  # noqa: PLW1641
     def with_same_grammatical_categories_as(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""
         return Labels(label for label in self if label.has_same_grammatical_form(other))
+
+    def with_compatible_grammatical_categories_as(self, other: Label) -> Labels:
+        """Return the labels whose grammatical categories are compatible with the other label's."""
+        return Labels(label for label in self if label.has_compatible_grammatical_categories(other))
 
     def with_same_grammatical_base(self, other: Label) -> Labels:
         """Return the labels with the specified grammatical categories."""

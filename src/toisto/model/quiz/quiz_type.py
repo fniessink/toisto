@@ -170,16 +170,7 @@ class TranslationQuizType(QuizType):
     @staticmethod
     def _answers_for_question(question: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        question_grammatical_categories = question.grammatical_form.grammatical_categories
-        return Labels(
-            [
-                answer
-                for answer in answers
-                if not answer.grammatical_form.grammatical_categories
-                or question_grammatical_categories <= answer.grammatical_form.grammatical_categories
-                or question_grammatical_categories >= answer.grammatical_form.grammatical_categories
-            ]
-        )
+        return answers.with_compatible_grammatical_categories_as(question)
 
 
 @dataclass(frozen=True)
@@ -420,16 +411,7 @@ class InterpretQuizType(ListenOnlyQuizType):
     @staticmethod
     def _answers_for_question(question: Label, answers: Labels) -> Labels:
         """Return the answers for the question."""
-        question_grammatical_categories = question.grammatical_form.grammatical_categories
-        return Labels(
-            [
-                answer
-                for answer in answers
-                if not answer.grammatical_form.grammatical_categories
-                or question_grammatical_categories <= answer.grammatical_form.grammatical_categories
-                or question_grammatical_categories >= answer.grammatical_form.grammatical_categories
-            ]
-        )
+        return answers.with_compatible_grammatical_categories_as(question)
 
 
 # Translate quiz types
