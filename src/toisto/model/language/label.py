@@ -22,7 +22,13 @@ HomonymMapping = dict[tuple[Language, str], list["Label"]]
 
 
 class Label:
-    """Class representing labels for concepts."""
+    """Class representing labels for concepts.
+
+    Each Label registers itself in the class-level homograph_mapping and capitonym_mapping during __init__;
+    the roots, compounds, homographs, and capitonyms properties read these mappings. The mappings are
+    populated incrementally during loading, so querying these properties mid-load may return partial results.
+    Tests must clear both mappings between cases (handled by ToistoTestCase.tearDown).
+    """
 
     END_OF_SENTENCE_PUNCTUATION = "?!."
     ALTERNATIVES_TO_GENERATE: ClassVar[SpellingAlternatives] = {}  # These are loaded upon start of the application
@@ -168,7 +174,12 @@ class Label:
 
     @property
     def roots(self) -> Labels:
-        """Return the label roots."""
+        """Return the label roots.
+
+        Note that a cycle in the roots graph (a label transitively referencing itself) will cause unbounded recursion
+        and raise RecursionError. Cycles are treated as malformed concept-files rather than a code bug, so this
+        property does not guard against them.
+        """
         roots: list[Label] = []
         for root in self._roots:
             root_labels = self.homograph_mapping[(self.language, root)]
