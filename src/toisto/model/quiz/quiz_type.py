@@ -45,9 +45,9 @@ class QuizType:
         """Return the question for the quiz type. Can be overridden for quiz types that transform questions."""
         return question
 
-    def _include_question(self, question: Label, answer: Label) -> bool:
+    def _include_question(self, question: Label) -> bool:
         """Return whether to include the question."""
-        return question.grammatical_form == answer.grammatical_form
+        return True
 
     def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings. Subclasses may use question and concept to derive the question meanings."""
@@ -83,9 +83,8 @@ class QuizType:
         Subclasses may use the answers to generate the notes.
         """
         notes = [re.sub("'([^']+)'", lambda match: linkified(str(match[0])), note) for note in question.notes]
-        if self._include_grammatical_notes() and question.grammatical_form.other_grammatical_categories:
-            other_category = random.choice(list(question.grammatical_form.other_grammatical_categories.keys()))  # noqa: S311 # nosec
-            other_label = question.grammatical_form.other_grammatical_categories[other_category]
+        if self._include_grammatical_notes() and question.other_grammatical_categories:
+            other_category, other_label = random.choice(list(question.other_grammatical_categories.items()))  # noqa: S311 # nosec
             also = " also" if str(question) == str(other_label) else ""
             question_str = quoted(linkified(str(question)))
             other_label_str = quoted(linkified(str(other_label)))
@@ -116,8 +115,8 @@ class QuizType:
         answers = self.answers(language_pair, concept)
         return [
             (question, answers_for_question, self.action)
-            for question, answer in zip(questions, questions, strict=True)
-            if self._include_question(question, answer)
+            for question in questions
+            if self._include_question(question)
             and (answers_for_question := self._answers_for_question(question, answers))
         ]
 
@@ -224,7 +223,7 @@ class GrammaticalQuizType(QuizType):
         """Generate the questions and answers for each question."""
         results = []
         for question, answer in permutations(concept.labels(language_pair.target).non_colloquial, r=2):
-            if self._include_question(question, answer) and (action := self.grammatical_quiz_action(question, answer)):
+            if self._include_pair(question, answer) and (action := self.grammatical_quiz_action(question, answer)):
                 results.append((question, Labels((answer,)), action))
         return results
 
@@ -232,12 +231,10 @@ class GrammaticalQuizType(QuizType):
         """Return whether this quiz type is blocked by the given quiz type."""
         return super().blocked_by(quiz_type) if isinstance(quiz_type, self.__class__) else True
 
-    def _include_question(self, question: Label, answer: Label) -> bool:
-        """Return whether to include the question."""
-        return (
-            question.grammatical_form.grammatical_base == answer.grammatical_form.grammatical_base
-            and not question.is_homograph(answer)
-        )
+    @staticmethod
+    def _include_pair(question: Label, answer: Label) -> bool:
+        """Return whether to include a (question, answer) pair as a grammatical quiz."""
+        return question.has_same_grammatical_base(answer) and not question.is_homograph(answer)
 
     def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
@@ -307,7 +304,7 @@ class OrderQuizType(SemanticQuizType):
     action: QuizAction = "order"
     _instruction: str = "Give the [underline]right order[/underline] of the words in"
 
-    def _include_question(self, question: Label, answer: Label) -> bool:
+    def _include_question(self, question: Label) -> bool:
         """Return whether to include the question."""
         return question.word_count >= self.MIN_WORD_COUNT
 

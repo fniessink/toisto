@@ -257,6 +257,11 @@ class Label:
         """
         return SequenceMatcher(a=str(self).lower(), b=text.lower()).ratio()
 
+    @property
+    def other_grammatical_categories(self) -> dict[GrammaticalCategory, Label]:
+        """Return the grammatical categories that distinguish this label from sibling forms of the same base."""
+        return self.grammatical_form.other_grammatical_categories
+
     def register_other_grammatical_categories(self, labels: Labels) -> None:
         """Register the other grammatical forms of this label."""
         for label in labels.with_language(self.language).with_same_grammatical_base(self):
