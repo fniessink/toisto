@@ -104,7 +104,7 @@ class Feedback:
 
     def _try_again(self, guess: str) -> str:
         """Return the feedback when the first attempt is incorrect."""
-        if self.quiz.is_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
+        if self.quiz.guess_equals_question(guess) and not self.quiz.has_quiz_type(GrammaticalQuizType):
             standard = self.quiz.question.colloquial and self.quiz.question.language == self.quiz.answer.language
             try_again = self.TRY_AGAIN_IN_ANSWER_STANDARD_LANGUAGE if standard else self.TRY_AGAIN_IN_ANSWER_LANGUAGE
             return try_again % {"language": ALL_LANGUAGES[self.quiz.answer.language]}

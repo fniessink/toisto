@@ -67,8 +67,8 @@ class Quiz:
         """Return whether the guess is correct."""
         return any(self.answers.matching(guess, case_sensitive=self.answer.language != source_language))
 
-    def is_question(self, guess: str) -> bool:
-        """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
+    def guess_equals_question(self, guess: str) -> bool:
+        """Return whether the guess matches the question instead of an answer (common listening-quiz mistake)."""
         question_meanings = self.quiz_type.question_meanings(self.language_pair, self.concept, self.question)
         questions = Labels((self._question, *question_meanings))
         return bool(questions.matching(guess))
@@ -113,8 +113,6 @@ class Quiz:
     def instruction(self) -> str:
         """Generate the quiz instruction."""
         instruction_text = self.quiz_type.instruction(self.question, self.action)
-        if self.question.is_complete_sentence:
-            instruction_text = instruction_text.replace("write ", "write a complete sentence ")
         return f"{instruction_text} {ALL_LANGUAGES[self.answer.language]}{self._tips}"
 
     @property
