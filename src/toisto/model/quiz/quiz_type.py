@@ -117,10 +117,8 @@ class QuizType:
         return True
 
     def other_answers(self, guess: str, answers: Labels) -> Labels:
-        """Return the answers not equal to the guess."""
-        return Labels(
-            answer for answer in answers if not answer.spelling_alternatives.matching(guess, case_sensitive=False)
-        )
+        """Return the alternate valid answers not equal to the guess."""
+        return answers.not_matching(guess, case_sensitive=False)
 
     def is_quiz_type(self, quiz_type: QuizType | type[QuizType]) -> bool:
         """Return whether this quiz type matches the given quiz type."""
@@ -163,10 +161,6 @@ class ListenOnlyQuizType(QuizType):
         """Override to return the quiz type instruction for listen-only quizzes."""
         colloquial_note = f"to the colloquial {ALL_LANGUAGES[question.language]} "
         return f"Listen {colloquial_note if question.colloquial else ''}and write in"
-
-    def other_answers(self, guess: str, answers: Labels) -> Labels:
-        """Override because returning other answers doesn't make sense if the user has to type what is spoken."""
-        return Labels()
 
     def _homonym_tips(self, concept: Concept, question: Label) -> Sequence[str]:
         """Return the extra tip for homonyms."""
@@ -292,6 +286,18 @@ class GrammaticalQuizType(QuizType):
         return first(quiz_actions) if len(quiz_actions) == 1 else None
 
 
+@dataclass(frozen=True)
+class ReproductionQuizType(QuizType):
+    """Quiz type where the user reproduces a single specific form.
+
+    Because there is only one expected answer, no alternate valid answers are shown after a correct response.
+    """
+
+    def other_answers(self, guess: str, answers: Labels) -> Labels:
+        """Return no alternates: this quiz type expects a specific reproduction, not one of many translations."""
+        return Labels()
+
+
 @final
 @dataclass(frozen=True)
 class ReadQuizType(TranslationQuizType):
@@ -352,7 +358,7 @@ class RelationshipQuizType(SemanticQuizType):
 
 @final
 @dataclass(frozen=True)
-class ClozeTestQuizType(QuizType):
+class ClozeTestQuizType(ReproductionQuizType):
     """Cloze test quiz type."""
 
     action: QuizAction = "cloze"
@@ -371,14 +377,10 @@ class ClozeTestQuizType(QuizType):
         """Override because cloze answers include colloquial labels (no .non_colloquial filter)."""
         return concept.labels(self.direction.answer_language(language_pair))
 
-    def other_answers(self, guess: str, answers: Labels) -> Labels:
-        """Override because returning other answers doesn't make sense if the user has to repeat the question."""
-        return Labels()
-
 
 @final
 @dataclass(frozen=True)
-class DictateQuizType(ListenOnlyQuizType):
+class DictateQuizType(ListenOnlyQuizType, ReproductionQuizType):
     """Dictate quiz type."""
 
     action: QuizAction = "dictate"

@@ -130,8 +130,8 @@ class QuizTest(QuizTestCase):
         )
         self.assertEqual(("Eén",), quiz.other_answers("Een").as_strings)
 
-    def test_no_other_answers_when_quiz_type_is_listen(self):
-        """Test that the other answers are not returned if the quiz type is dictate."""
+    def test_no_other_answers_for_dictate_quiz(self):
+        """Test that other answers are not shown for dictate quizzes (user reproduces what they hear)."""
         quiz = self.create_quiz(
             FI_NL,
             self.concept,
@@ -140,6 +140,28 @@ class QuizTest(QuizTestCase):
             DICTATE,
         )
         self.assertEqual((), quiz.other_answers("Een"))
+
+    def test_no_other_answers_for_cloze_test_quiz(self):
+        """Test that other answers are not shown for cloze test quizzes (user reproduces the bracketed form)."""
+        quiz = self.create_quiz(
+            FI_NL,
+            self.concept,
+            Label(FI, "Yksi"),
+            [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
+            CLOZE_TEST,
+        )
+        self.assertEqual((), quiz.other_answers("Een"))
+
+    def test_other_answers_are_shown_for_interpret_quiz(self):
+        """Test that other answers are shown for interpret quizzes (multiple valid translations may exist)."""
+        quiz = self.create_quiz(
+            FI_NL,
+            self.concept,
+            Label(FI, "Yksi"),
+            [Label(NL, "Een"), Label(NL, "Eén", tips=("tip should be ignored",))],
+            INTERPRET,
+        )
+        self.assertEqual(("Eén",), quiz.other_answers("Een").as_strings)
 
     def test_no_generated_spelling_alternatives_as_other_answer(self):
         """Test that the other answers do not include generated spelling alternatives."""

@@ -258,11 +258,14 @@ class PracticeFeedbackTest(PracticeBase):
 
     @patch("builtins.input", Mock(return_value="hij rijdt\n"))
     def test_quiz_third_person_interpret_quiz(self):
-        """Test that both the masculine and feminine form are correct."""
+        """Test that both the masculine and feminine form are correct, and the alternate is surfaced."""
         concept = self.create_concept_fixture("gender")
         quizzes = create_quizzes(FI_NL, (INTERPRET,), concept)
         patched_print = self.practice(FI_NL, quizzes)
-        expected_feedback = f"{Feedback.CORRECT}[meaning]Meaning '{linkified('hän ajaa')}'.[/meaning]\n"
+        expected_feedback = (
+            f"{Feedback.CORRECT}[answer]Another correct answer is '{linkified('zij rijdt')}'.[/answer]\n"
+            f"[meaning]Meaning '{linkified('hän ajaa')}'.[/meaning]\n"
+        )
         self.assert_printed(expected_feedback, patched_print)
 
     @patch("builtins.input", Mock(return_value="vieressä\n"))

@@ -71,7 +71,7 @@ class Quiz:
         """Return whether the guess is not the answer, but the question (common user error with listening quizzes)."""
         question_meanings = self.quiz_type.question_meanings(self.language_pair, self.concept, self.question)
         questions = Labels((self._question, *question_meanings))
-        return any(questions.spelling_alternatives.matching(guess))
+        return bool(questions.matching(guess))
 
     @property
     def question(self) -> Label:

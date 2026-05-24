@@ -329,11 +329,19 @@ class Labels:  # noqa: PLW1641
         return None
 
     def matching(self, text: str, *, case_sensitive: bool = True) -> Labels:
-        """Return the labels that match the text."""
+        """Return the labels whose spelling alternatives match the text."""
         return Labels(
             label
             for label in self
             if match(text, *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
+        )
+
+    def not_matching(self, text: str, *, case_sensitive: bool = True) -> Labels:
+        """Return the labels whose spelling alternatives do not match the text."""
+        return Labels(
+            label
+            for label in self
+            if not match(text, *label.spelling_alternatives.as_strings, case_sensitive=case_sensitive)
         )
 
     def register_other_grammatical_categories(self) -> None:
