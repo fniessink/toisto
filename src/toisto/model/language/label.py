@@ -14,7 +14,7 @@ from toisto.match import match
 from toisto.tools import first, first_upper, unique
 
 from . import Language
-from .grammatical_category import DEFAULT_CATEGORIES, GrammaticalCategory
+from .grammatical_category import DEFAULT_CATEGORIES, SEMANTIC_NON_DEFAULT_CATEGORIES, GrammaticalCategory
 from .grammatical_form import GrammaticalForm
 
 SpellingAlternatives = dict[Language, dict[re.Pattern[str], str]]
@@ -219,9 +219,15 @@ class Label:
         Two labels are compatible when one's categories are a subset of the other's. This is the lenient
         rule for cross-language matching: it accommodates languages whose category systems differ in
         granularity (e.g., Finnish marks cases that English does not).
+
+        However, categories in SEMANTIC_NON_DEFAULT_CATEGORIES (e.g., partitive) encode a meaning distinction
+        that the unmarked form in another language does not carry. If one label has such a category and the
+        other lacks it, they are not compatible.
         """
         my_categories = self.grammatical_form.grammatical_categories
         other_categories = other.grammatical_form.grammatical_categories
+        if (my_categories ^ other_categories) & SEMANTIC_NON_DEFAULT_CATEGORIES:
+            return False
         return my_categories <= other_categories or my_categories >= other_categories
 
     def has_same_grammatical_base(self, other: Label) -> bool:
@@ -238,6 +244,11 @@ class Label:
     def is_homograph(self, other: Label) -> bool:
         """Return whether this label and the other label are homographs."""
         return self.language == other.language and str(self) == str(other)
+
+    def contains(self, other: Label) -> bool:
+        """Return whether this label's text mentions the other label as a whole word."""
+        pattern = re.compile(rf"\b{re.escape(str(other))}\b", re.IGNORECASE)
+        return bool(pattern.search(str(self)))
 
     @property
     def homographs(self) -> Labels:

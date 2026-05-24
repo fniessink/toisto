@@ -156,6 +156,35 @@ class LabelTest(ToistoTestCase):
         self.assertTrue(muizen.has_same_grammatical_form(mice))
         self.assertTrue(mice.has_same_grammatical_form(muizen))
 
+    def test_contains(self):
+        """Test that contains matches whole-word occurrences and is case-insensitive."""
+        sentence = Label(FI, "Rakastan eläimiä.")
+        elaimia = Label(FI, "eläimiä")
+        elain = Label(FI, "eläin")
+        self.assertTrue(sentence.contains(elaimia))
+        self.assertFalse(sentence.contains(elain))  # eläin is not in "Rakastan eläimiä."
+        zoo_sentence = Label(FI, "Menen eläintarhaan.")
+        self.assertFalse(zoo_sentence.contains(elain))  # eläin is a substring of eläintarhaan but not a whole word
+        capital = Label(FI, "Eläimiä on paljon.")
+        self.assertTrue(capital.contains(elaimia))  # case-insensitive
+
+    def test_compatible_grammatical_categories_for_case(self):
+        """Test compatibility with grammatical case across languages.
+
+        Nominative is a default category (compatible with unmarked forms in other languages); partitive is a
+        semantic non-default that should not match an unmarked form.
+        """
+        animal = Label(EN, "animal", GrammaticalForm("animal", "singular"))
+        elain = Label(FI, "eläin", GrammaticalForm("eläin", "singular", "nominative"))
+        elainta = Label(FI, "eläintä", GrammaticalForm("eläin", "singular", "partitive"))
+        self.assertTrue(animal.has_compatible_grammatical_categories(elain))
+        self.assertTrue(elain.has_compatible_grammatical_categories(animal))
+        self.assertFalse(animal.has_compatible_grammatical_categories(elainta))
+        self.assertFalse(elainta.has_compatible_grammatical_categories(animal))
+        # Within Finnish, the two cases are not compatible with each other either.
+        self.assertFalse(elain.has_compatible_grammatical_categories(elainta))
+        self.assertFalse(elainta.has_compatible_grammatical_categories(elain))
+
     def test_grammatical_form_abbreviation(self):
         """Test the grammatical form of abbeviations."""
         onder_andere = Label(NL, "onder andere", GrammaticalForm("onder andere", "full form"))

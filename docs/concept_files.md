@@ -816,6 +816,46 @@ As the grammatical number of pronouns doesn't necessarily agree with the grammat
 }
 ```
 
+### Grammatical case
+
+Some languages (e.g., Finnish) inflect nouns for grammatical case. Cases can be nested inside the grammatical number forms by using a key for each case:
+
+```json
+{
+    "concepts": {
+        "animal": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "animal",
+                "label": {
+                    "singular": "animal",
+                    "plural": "animals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "animal",
+                "label": {
+                    "singular": {
+                        "nominative": "eläin",
+                        "partitive": "eläintä"
+                    },
+                    "plural": {
+                        "nominative": "eläimet",
+                        "partitive": "eläimiä"
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+With the example above, Toisto will quiz users for the partitive of `eläin` (and the nominative of `eläintä`) when Finnish is the target language. Other languages do not need to specify a case: nominative is treated as the default form, so English `animal` is matched against the Finnish nominative when translating between languages. Non-nominative cases (such as the partitive) are only used for in-language transformation quizzes and are not accepted as translations of the unmarked form in another language.
+
 ### Diminutive
 
 When a concept has a diminutive, the diminutive can be included in the JSON file by using `root` for the base form of the concept and `diminutive` for the diminutive form:

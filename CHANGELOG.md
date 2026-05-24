@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Add more words and phrases.
+- Add support for nominative and partitive cases (mainly useful for Finnish at the moment).
 
 ## 0.41.0 - 2025-11-29
 
