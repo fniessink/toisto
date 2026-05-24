@@ -163,10 +163,22 @@ class Feedback:
         ]
 
     def _examples(self, max_nr_examples: int = 3) -> str:
-        """Return the quiz's examples, if any."""
+        """Return the quiz's examples, if any.
+
+        For grammatical quizzes, only examples that contain the quizzed form are shown, so the example
+        demonstrates the specific inflection the user just produced. Translation quizzes show all examples,
+        since any form of the word still reinforces the concept being translated.
+        """
+        target = self.language_pair.target
+        relevant = self.quiz.answer if self.quiz.answer.language == target else self.quiz.question
+        filter_by_form = self.quiz.has_quiz_type(GrammaticalQuizType)
         examples: list[str] = []
         for example in self.quiz.concept.get_related_concepts("example"):
-            example_labels = example.labels(self.language_pair.target).first_non_generated_spelling_alternatives
+            example_labels = list(example.labels(target).first_non_generated_spelling_alternatives)
+            if filter_by_form:
+                example_labels = [label for label in example_labels if label.contains(relevant)]
+            if not example_labels:
+                continue
             example_meanings = example.labels(self.language_pair.source).first_non_generated_spelling_alternatives
             enumerated_meanings = enumerated(*[self._example_label(meaning) for meaning in example_meanings])
             examples.extend(f"{self._example_label(label)} meaning {enumerated_meanings}" for label in example_labels)

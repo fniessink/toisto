@@ -1,8 +1,14 @@
 {
     "concepts": {
         "cat": {
-            "hypernym": "pet"
-        }
+            "hypernym": "pet",
+            "example": [
+                "i have two cats",
+                "she has many cats"
+            ]
+        },
+        "i have two cats": {},
+        "she has many cats": {}
     },
     "labels": {
         "en": [
@@ -12,15 +18,41 @@
                     "singular": "cat",
                     "plural": "cats"
                 }
+            },
+            {
+                "concept": "i have two cats",
+                "label": "I have two cats.",
+                "roots": "cat"
+            },
+            {
+                "concept": "she has many cats",
+                "label": "She has many cats.",
+                "roots": "cat"
             }
         ],
         "fi": [
             {
                 "concept": "cat",
                 "label": {
-                    "singular": "kissa",
-                    "plural": "kissat"
+                    "singular": {
+                        "nominative": "kissa",
+                        "partitive": "kissaa"
+                    },
+                    "plural": {
+                        "nominative": "kissat",
+                        "partitive": "kissoja"
+                    }
                 }
+            },
+            {
+                "concept": "i have two cats",
+                "label": "Minulla on kaksi kissaa.",
+                "roots": "kissa"
+            },
+            {
+                "concept": "she has many cats",
+                "label": "Hänellä on paljon kissoja.",
+                "roots": "kissa"
             }
         ],
         "nl": [
@@ -30,6 +62,16 @@
                     "singular": "de kat",
                     "plural": "de katten"
                 }
+            },
+            {
+                "concept": "i have two cats",
+                "label": "Ik heb twee katten.",
+                "roots": "de kat"
+            },
+            {
+                "concept": "she has many cats",
+                "label": "Zij heeft veel katten.",
+                "roots": "de kat"
             }
         ]
     }

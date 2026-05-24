@@ -489,6 +489,55 @@ class FeedbackExampleTest(ToistoTestCase):
 """
         self.assertIn(expected_feedback, feedback.text(Evaluation.CORRECT, "in de buurt", Retention()))
 
+    def test_grammatical_quiz_only_shows_examples_containing_the_quizzed_form(self):
+        """Test that a grammatical quiz only shows examples containing the form being practiced."""
+        cat = self.create_concept(
+            "cat",
+            {"example": [ConceptId("i have a cat"), ConceptId("i have two cats")]},
+            labels=[
+                {
+                    "label": {
+                        "singular": {"nominative": "kissa", "partitive": "kissaa"},
+                    },
+                    "language": FI,
+                },
+                {"label": {"singular": "de kat"}, "language": NL},
+            ],
+        )
+        self.create_concept(
+            "i have a cat",
+            labels=[{"label": "Minulla on kissa.", "language": FI}, {"label": "Ik heb een kat.", "language": NL}],
+        )
+        self.create_concept(
+            "i have two cats",
+            labels=[
+                {"label": "Minulla on kaksi kissaa.", "language": FI},
+                {"label": "Ik heb twee katten.", "language": NL},
+            ],
+        )
+        partitive_quiz = next(quiz for quiz in create_quizzes(FI_NL, (), cat) if quiz.action == "partitive")
+        feedback_text = Feedback(partitive_quiz, FI_NL).text(Evaluation.CORRECT, "kissaa", Retention())
+        self.assertIn(linkified("Minulla on kaksi kissaa."), feedback_text)
+        self.assertNotIn(linkified("Minulla on kissa."), feedback_text)
+
+    def test_translation_quiz_shows_examples_even_when_form_does_not_match(self):
+        """Test that translation quizzes still show examples that use an inflected form."""
+        lamp = self.create_concept(
+            "table lamp",
+            {"example": ConceptId("i am looking for a table lamp")},
+            labels=[{"label": "pöytälamppu", "language": FI}, {"label": "de tafellamp", "language": NL}],
+        )
+        self.create_concept(
+            "i am looking for a table lamp",
+            labels=[
+                {"label": "Minä etsin pöytälamppua.", "language": FI},
+                {"label": "Ik zoek een tafellamp.", "language": NL},
+            ],
+        )
+        (quiz,) = create_quizzes(FI_NL, (READ,), lamp)
+        feedback_text = Feedback(quiz, FI_NL).text(Evaluation.CORRECT, "de tafellamp", Retention())
+        self.assertIn(linkified("Minä etsin pöytälamppua."), feedback_text)
+
     def test_limit_the_number_of_examples(self):
         """Test that the number of examples shown is limited."""
         names = ["Alice", "Bob", "Carol", "David"]

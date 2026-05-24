@@ -470,6 +470,8 @@ CARDINAL = GrammaticalQuizType("cardinal")
 ORDINAL = GrammaticalQuizType("ordinal")
 ABBREVIATION = GrammaticalQuizType("abbreviation")
 FULL_FORM = GrammaticalQuizType("full form")
+NOMINATIVE = GrammaticalQuizType("nominative")
+PARTITIVE = GrammaticalQuizType("partitive")
 
 GRAMMATICAL_QUIZ_TYPES = (
     PLURAL,
@@ -501,6 +503,8 @@ GRAMMATICAL_QUIZ_TYPES = (
     ORDINAL,
     ABBREVIATION,
     FULL_FORM,
+    NOMINATIVE,
+    PARTITIVE,
 )
 
 QUIZ_TYPES = NON_GRAMMATICAL_QUIZ_TYPES + GRAMMATICAL_QUIZ_TYPES

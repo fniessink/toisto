@@ -1,9 +1,15 @@
 {
     "concepts": {
         "hand": {
-            "holonym": "body"
+            "holonym": "body",
+            "example": [
+                "i have two hands",
+                "i need more hands"
+            ]
         },
-        "handwork": {}
+        "handwork": {},
+        "i have two hands": {},
+        "i need more hands": {}
     },
     "labels": {
         "en": [
@@ -24,14 +30,30 @@
                     "hand",
                     "work"
                 ]
+            },
+            {
+                "concept": "i have two hands",
+                "label": "I have two hands.",
+                "roots": "hand"
+            },
+            {
+                "concept": "i need more hands",
+                "label": "I need more hands.",
+                "roots": "hand"
             }
         ],
         "fi": [
             {
                 "concept": "hand",
                 "label": {
-                    "singular": "käsi",
-                    "plural": "kädet"
+                    "singular": {
+                        "nominative": "käsi",
+                        "partitive": "kättä"
+                    },
+                    "plural": {
+                        "nominative": "kädet",
+                        "partitive": "käsiä"
+                    }
                 }
             },
             {
@@ -44,6 +66,16 @@
                     "käsi",
                     "työ"
                 ]
+            },
+            {
+                "concept": "i have two hands",
+                "label": "Minulla on kaksi kättä.",
+                "roots": "käsi"
+            },
+            {
+                "concept": "i need more hands",
+                "label": "Tarvitsen lisää käsiä.",
+                "roots": "käsi"
             }
         ],
         "nl": [
@@ -64,6 +96,16 @@
                     "de hand",
                     "het werk"
                 ]
+            },
+            {
+                "concept": "i have two hands",
+                "label": "Ik heb twee handen.",
+                "roots": "de hand"
+            },
+            {
+                "concept": "i need more hands",
+                "label": "Ik heb meer handen nodig.",
+                "roots": "de hand"
             }
         ]
     }

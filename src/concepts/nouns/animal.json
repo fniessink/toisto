@@ -1,6 +1,13 @@
 {
     "concepts": {
-        "animal": {}
+        "animal": {
+            "example": [
+                "i love animals",
+                "i do not want an animal"
+            ]
+        },
+        "i love animals": {},
+        "i do not want an animal": {}
     },
     "labels": {
         "en": [
@@ -10,15 +17,41 @@
                     "singular": "animal",
                     "plural": "animals"
                 }
+            },
+            {
+                "concept": "i love animals",
+                "label": "I love animals.",
+                "roots": "animal"
+            },
+            {
+                "concept": "i do not want an animal",
+                "label": "I do not want an animal.",
+                "roots": "animal"
             }
         ],
         "fi": [
             {
                 "concept": "animal",
                 "label": {
-                    "singular": "eläin",
-                    "plural": "eläimet"
+                    "singular": {
+                        "nominative": "eläin",
+                        "partitive": "eläintä"
+                    },
+                    "plural": {
+                        "nominative": "eläimet",
+                        "partitive": "eläimiä"
+                    }
                 }
+            },
+            {
+                "concept": "i love animals",
+                "label": "Rakastan eläimiä.",
+                "roots": "eläin"
+            },
+            {
+                "concept": "i do not want an animal",
+                "label": "En halua eläintä.",
+                "roots": "eläin"
             }
         ],
         "nl": [
@@ -28,6 +61,16 @@
                     "singular": "het dier",
                     "plural": "de dieren"
                 }
+            },
+            {
+                "concept": "i love animals",
+                "label": "Ik hou van dieren.",
+                "roots": "het dier"
+            },
+            {
+                "concept": "i do not want an animal",
+                "label": "Ik wil geen dier.",
+                "roots": "het dier"
             }
         ]
     }

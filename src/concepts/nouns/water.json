@@ -1,12 +1,17 @@
 {
     "concepts": {
         "water": {
-            "hypernym": "drink"
+            "hypernym": "drink",
+            "example": [
+                "i drank more water",
+                "the shop sells different mineral waters"
+            ]
         },
         "mineral water": {
             "hypernym": "water"
         },
-        "on the water": {}
+        "on the water": {},
+        "finland has many waters": {}
     },
     "labels": {
         "en": [
@@ -26,14 +31,29 @@
                 "concept": "on the water",
                 "label": "on the water",
                 "roots": "water"
+            },
+            {
+                "concept": "the shop sells different mineral waters",
+                "label": "The shop sells different mineral waters.",
+                "roots": [
+                    "shop",
+                    "different",
+                    "mineral water"
+                ]
             }
         ],
         "fi": [
             {
                 "concept": "water",
                 "label": {
-                    "singular": "vesi",
-                    "plural": "vedet"
+                    "singular": {
+                        "nominative": "vesi",
+                        "partitive": "vettä"
+                    },
+                    "plural": {
+                        "nominative": "vedet",
+                        "partitive": "vesiä"
+                    }
                 }
             },
             {
@@ -49,6 +69,15 @@
                 "concept": "on the water",
                 "label": "vesillä",
                 "roots": "vesi"
+            },
+            {
+                "concept": "the shop sells different mineral waters",
+                "label": "Kaupassa myydään erilaisia kivennäisvesiä.",
+                "roots": [
+                    "kauppa",
+                    "erilainen",
+                    "kivennäisvesi"
+                ]
             }
         ],
         "nl": [
@@ -71,6 +100,15 @@
                 "concept": "on the water",
                 "label": "op het water",
                 "roots": "het water"
+            },
+            {
+                "concept": "the shop sells different mineral waters",
+                "label": "De winkel verkoopt verschillende mineraalwaters.",
+                "roots": [
+                    "de winkel",
+                    "verschillend",
+                    "het mineraalwater"
+                ]
             }
         ]
     }
