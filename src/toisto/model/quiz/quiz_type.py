@@ -6,10 +6,11 @@ import random
 import re
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
+from enum import Enum, auto
 from itertools import chain, permutations
 from typing import ClassVar, cast, final
 
-from toisto.model.language import LanguagePair
+from toisto.model.language import Language, LanguagePair
 from toisto.model.language.concept import Concept, ConceptRelation
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
 from toisto.model.language.label import Label, Labels
@@ -22,12 +23,32 @@ from .tips import homonym_tips
 type QuizAction = str
 
 
+class QuizDirection(Enum):
+    """The language relationship between a quiz's question and its answer.
+
+    SOURCE_TO_SOURCE is intentionally omitted: no use quizzing the user in a language they already speak.
+    """
+
+    TARGET_TO_SOURCE = auto()
+    SOURCE_TO_TARGET = auto()
+    TARGET_TO_TARGET = auto()
+
+    def question_language(self, language_pair: LanguagePair) -> Language:
+        """Return the language the question is presented in."""
+        return language_pair.source if self is QuizDirection.SOURCE_TO_TARGET else language_pair.target
+
+    def answer_language(self, language_pair: LanguagePair) -> Language:
+        """Return the language the answer is expected in."""
+        return language_pair.source if self is QuizDirection.TARGET_TO_SOURCE else language_pair.target
+
+
 @dataclass(frozen=True)
 class QuizType:
     """Base quiz type."""
 
     action: QuizAction = ""  # Default action for the quiz type
     _instruction: str = ""  # Instruction telling the user what action(s) they need to perform to answer the quiz
+    direction: QuizDirection = QuizDirection.TARGET_TO_SOURCE  # Languages of question and answer
 
     def _skip_concept(self, language_pair: LanguagePair, concept: Concept) -> bool:
         """Return whether to create quizzes for the concept."""
@@ -39,7 +60,7 @@ class QuizType:
 
     def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
         """Return the questions."""
-        return concept.labels(language_pair.target).non_colloquial
+        return concept.labels(self.direction.question_language(language_pair)).non_colloquial
 
     def question(self, question: Label) -> Label:
         """Return the question for the quiz type. Can be overridden for quiz types that transform questions."""
@@ -55,7 +76,7 @@ class QuizType:
 
     def answers(self, language_pair: LanguagePair, concept: Concept) -> Labels:
         """Return the answers. Subclasses may use the concept to derive the answers."""
-        return concept.labels(language_pair.source).non_colloquial
+        return concept.labels(self.direction.answer_language(language_pair)).non_colloquial
 
     def answer_meanings(self, language_pair: LanguagePair, concept: Concept, answer: Label) -> Labels:
         """Return the answer meanings. Subclasses may use answer and concept to derive the answer meanings."""
@@ -176,6 +197,8 @@ class TranslationQuizType(QuizType):
 class SemanticQuizType(QuizType):
     """Semantic quiz type."""
 
+    direction: QuizDirection = QuizDirection.TARGET_TO_TARGET
+
     def blocked_by(self, quiz_type: QuizType) -> bool:
         """Return whether this quiz type is blocked by the given quiz type."""
         return True if not isinstance(quiz_type, self.__class__) else super().blocked_by(quiz_type)
@@ -185,10 +208,10 @@ class SemanticQuizType(QuizType):
         return concept.meanings(language_pair.source)
 
     def answers(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the answers."""
+        """Override to take answers from related concepts."""
         labels = []
         for related_concept in concept.get_related_concepts(self.concept_relation):
-            labels.extend(list(related_concept.labels(language_pair.target)))
+            labels.extend(list(related_concept.labels(self.direction.answer_language(language_pair))))
         return Labels(labels)
 
     def answer_meanings(self, language_pair: LanguagePair, concept: Concept, answer: Label) -> Labels:
@@ -217,12 +240,15 @@ class SemanticQuizType(QuizType):
 class GrammaticalQuizType(QuizType):
     """Grammatical quiz type."""
 
+    direction: QuizDirection = QuizDirection.TARGET_TO_TARGET
+
     def questions_and_answers(
         self, language_pair: LanguagePair, concept: Concept
     ) -> Iterable[tuple[Label, Labels, QuizAction]]:
         """Generate the questions and answers for each question."""
         results = []
-        for question, answer in permutations(concept.labels(language_pair.target).non_colloquial, r=2):
+        question_language = self.direction.question_language(language_pair)
+        for question, answer in permutations(concept.labels(question_language).non_colloquial, r=2):
             if self._include_pair(question, answer) and (action := self.grammatical_quiz_action(question, answer)):
                 results.append((question, Labels((answer,)), action))
         return results
@@ -280,14 +306,7 @@ class WriteQuizType(TranslationQuizType):
     """Write a translation quiz type."""
 
     action: QuizAction = "write"
-
-    def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the questions."""
-        return concept.labels(language_pair.source).non_colloquial
-
-    def answers(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the answers."""
-        return concept.labels(language_pair.target).non_colloquial
+    direction: QuizDirection = QuizDirection.SOURCE_TO_TARGET
 
     def notes(self, question: Label, answers: Labels) -> Sequence[str]:
         """Return the notes to be shown after the quiz has been answered."""
@@ -338,18 +357,19 @@ class ClozeTestQuizType(QuizType):
 
     action: QuizAction = "cloze"
     _instruction: str = "Repeat with the [underline]bracketed words in the correct form[/underline], in"
+    direction: QuizDirection = QuizDirection.TARGET_TO_TARGET
 
     def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the questions."""
-        return concept.labels(language_pair.target).cloze_tests
+        """Override to return cloze-test labels instead of regular labels."""
+        return concept.labels(self.direction.question_language(language_pair)).cloze_tests
 
     def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings."""
         return concept.labels(language_pair.source)
 
     def answers(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the answers."""
-        return concept.labels(language_pair.target)
+        """Override because cloze answers include colloquial labels (no .non_colloquial filter)."""
+        return concept.labels(self.direction.answer_language(language_pair))
 
     def other_answers(self, guess: str, answers: Labels) -> Labels:
         """Override because returning other answers doesn't make sense if the user has to repeat the question."""
@@ -362,18 +382,15 @@ class DictateQuizType(ListenOnlyQuizType):
     """Dictate quiz type."""
 
     action: QuizAction = "dictate"
+    direction: QuizDirection = QuizDirection.TARGET_TO_TARGET
 
     def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the questions."""
-        return concept.labels(language_pair.target)
+        """Override to include colloquial labels (the user listens to colloquial and writes standard)."""
+        return concept.labels(self.direction.question_language(language_pair))
 
     def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
         return concept.meanings(language_pair.source).with_same_grammatical_categories_as(question)
-
-    def answers(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the answers."""
-        return concept.labels(language_pair.target).non_colloquial
 
     def instruction(self, question: Label, action: QuizAction) -> str:
         """Extend to add "standard" for dictate quizzes."""
@@ -398,8 +415,8 @@ class InterpretQuizType(ListenOnlyQuizType):
     action: QuizAction = "interpret"
 
     def questions(self, language_pair: LanguagePair, concept: Concept) -> Labels:
-        """Return the questions."""
-        return concept.labels(language_pair.target)
+        """Override to include colloquial labels (the user listens to a colloquial form and translates it)."""
+        return concept.labels(self.direction.question_language(language_pair))
 
     def question_meanings(self, language_pair: LanguagePair, concept: Concept, question: Label) -> Labels:
         """Return the question meanings of the concept."""
