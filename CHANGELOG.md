@@ -4,12 +4,13 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## 0.42.0 - 2026-06-06
 
 ### Fixed
 
 - Allow for practicing any concept with hyponyms. Fixes [#1227](https://github.com/fniessink/toisto/issues/1227).
 - When the user gives an incorrect answer that is the colloquial version of the correct answer, note so after the quiz. Fixes [#1229](https://github.com/fniessink/toisto/issues/1229).
+- Resume practicing the same concepts after restarting Toisto, instead of switching to seemingly unrelated ones.
 
 ### Added
 
