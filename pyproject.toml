@@ -40,7 +40,7 @@ optional-dependencies.dev = [
     "green==4.0.2",
     "mutmut==3.5.0",
     "mypy==1.19.1",
-    "pyproject-fmt==2.16.1",
+    "pyproject-fmt==2.21.2",
     "ruff==0.15.2",
     "rust-just==1.46.0",
     "troml==0.4.1",
@@ -90,26 +90,11 @@ lint.isort.section-order = [
     "first-party",
     "local-folder",
 ]
-lint.isort.sections."second-party" = [ "toisto" ]
+lint.isort.sections.second-party = [ "toisto" ]
 
 [tool.pyproject-fmt]
 indent = 4
 keep_full_version = true  # Don't remove trailing zero's from version specifiers
-
-[tool.pytest]
-ini_options.filterwarnings = [
-    "ignore::UserWarning",
-]
-
-[tool.coverage]
-run.branch = true
-run.relative_files = true
-report.exclude_also = [
-    "if TYPE_CHECKING:",
-]
-report.fail_under = 100
-report.skip_covered = true
-xml.output = "build/coverage.xml"
 
 [tool.mypy]
 python_version = "3.13"
@@ -126,6 +111,21 @@ disable_error_code = "type-arg"  # Don't complain about JSON types not being com
 [[tool.mypy.overrides]]
 module = [ "tests.*" ]
 allow_untyped_defs = true  # Allow for not specifying None as return value on every test method
+
+[tool.pytest]
+ini_options.filterwarnings = [
+    "ignore::UserWarning",
+]
+
+[tool.coverage]
+run.branch = true
+run.relative_files = true
+report.exclude_also = [
+    "if TYPE_CHECKING:",
+]
+report.fail_under = 100
+report.skip_covered = true
+xml.output = "build/coverage.xml"
 
 [tool.mutmut]
 paths_to_mutate = [ "src/toisto/" ]
