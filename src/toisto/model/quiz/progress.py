@@ -5,7 +5,6 @@ from collections import deque
 from toisto.model.language import Language
 from toisto.model.language.concept import Concept
 from toisto.persistence.progress_format import ProgressDict
-from toisto.tools import first
 
 from .evaluation import Evaluation
 from .quiz import Quiz, Quizzes
@@ -68,10 +67,18 @@ class Progress:
         quizzes_in_progress = Quizzes(quiz for quiz in quizzes_for_concepts_in_progress if self.__in_progress(quiz))
         for potential_quizzes in [quizzes_in_progress, quizzes_for_concepts_in_progress, eligible_quizzes]:
             if unblocked_quizzes := self.__unblocked_quizzes(potential_quizzes, eligible_quizzes):
-                quiz = first(unblocked_quizzes)
+                quiz = min(unblocked_quizzes, key=self.__priority)
                 self.__recent_concepts.append(quiz.concept)
                 return quiz
         return None
+
+    def __priority(self, quiz: Quiz) -> tuple[int, str]:
+        """Return the sort key for picking the next quiz within a tier.
+
+        Most-practiced first (count descending), with the quiz key as a stable tiebreaker. Using a deterministic
+        priority rather than relying on frozenset iteration order keeps quiz selection consistent across restarts.
+        """
+        return (-self.get_retention(quiz).count, quiz.key)
 
     def get_retention(self, quiz: Quiz) -> Retention:
         """Return the quiz retention."""

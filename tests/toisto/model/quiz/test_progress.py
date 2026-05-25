@@ -148,6 +148,45 @@ class ProgressTest(ToistoTestCase):
         retention.skip_until = None
         self.assertEqual(progress.next_quiz(), random_quiz)
 
+    def test_next_quiz_prefers_most_practiced(self):
+        """Test that within an eligible pool the most-practiced quiz comes first.
+
+        Picking the quiz with the highest presentation count keeps a session focused on the concepts the
+        user has been actively working on, rather than wandering across the entire history.
+        """
+        concepts = [
+            self.create_concept(
+                f"id{index}", labels=[{"label": f"fi{index}", "language": FI}, {"label": f"nl{index}", "language": NL}]
+            )
+            for index in range(3)
+        ]
+        quizzes = create_quizzes(FI_NL, (DICTATE,), *concepts)
+        progress = Progress(FI, quizzes, {})
+        # Pick any quiz and bump its count via incorrect evaluations (which don't silence the quiz).
+        chosen = next(iter(quizzes))
+        for _ in range(3):
+            progress.mark_evaluation(chosen, Evaluation.INCORRECT)
+        # The very next quiz must be the highest-count (most-practiced) one.
+        self.assertEqual(chosen, progress.next_quiz())
+
+    def test_next_quiz_is_deterministic_across_progress_instances(self):
+        """Test that recreating Progress from the same on-disk state yields the same next quiz.
+
+        This is the pause-equals-restart property: two Progress objects built from identical progress dicts
+        and the same quiz set must agree on what comes next, even though Quizzes is a frozenset whose
+        iteration order is randomised across processes in real runs.
+        """
+        concepts = [
+            self.create_concept(
+                f"id{index}", labels=[{"label": f"fi{index}", "language": FI}, {"label": f"nl{index}", "language": NL}]
+            )
+            for index in range(4)
+        ]
+        quizzes = create_quizzes(FI_NL, (DICTATE,), *concepts)
+        progress_a = Progress(FI, quizzes, {})
+        progress_b = Progress(FI, quizzes, {})
+        self.assertEqual(progress_a.next_quiz(), progress_b.next_quiz())
+
     def test_as_dict(self):
         """Test that the progress can be retrieved as dict."""
         self.assertEqual({}, self.progress.as_dict())
