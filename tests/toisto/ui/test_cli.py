@@ -84,7 +84,7 @@ class ParserTestCase(unittest.TestCase):
     def setUp(self) -> None:
         """Set up the test fixtures."""
         os.environ["COLUMNS"] = "120"  # Set the width of the terminal to match the formatting of the expected results
-        self.default_namespace = {
+        self.default_namespace: dict[str, bool | int | list[str] | str | None | Path] = {
             "extra": [],
             "progress_update": 0,
             "show_quiz_retention": False,

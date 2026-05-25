@@ -151,7 +151,7 @@ def _create_config_parser() -> ConfigParser:
     """Return a config parser without configuration."""
     parser = ConfigParser(allow_no_value=True)
     # The files section has options that are file names, we don't want those to be lower cased:
-    parser.optionxform = lambda optionstr: optionstr  # type: ignore[method-assign]
+    parser.optionxform = lambda optionstr: optionstr  # type: ignore[method-assign] # ty: ignore[invalid-assignment]
     return parser
 
 

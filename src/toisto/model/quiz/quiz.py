@@ -134,7 +134,7 @@ class Quiz:
 class Quizzes(frozenset[Quiz]):
     """Set of quizzes."""
 
-    def __or__(self, other: Quizzes) -> Quizzes:  # type: ignore[override]
+    def __or__(self, other: Quizzes) -> Quizzes:  # type: ignore[override] # ty: ignore[invalid-method-override]
         """Return the union of self and other."""
         return self.__class__(super().__or__(other))
 
