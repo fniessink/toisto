@@ -47,7 +47,7 @@ optional-dependencies.dev = [
     "ty==0.0.18",
     "types-requests==2.32.4.20260107",
     "unittest-xml-reporting==4.0.0",
-    "vulture==2.14",
+    "vulture==2.16",
 ]
 urls.Changelog = "https://github.com/fniessink/toisto/blob/main/CHANGELOG.md"
 urls.Issues = "https://github.com/fniessink/toisto/issues"
