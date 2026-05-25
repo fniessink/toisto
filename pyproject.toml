@@ -30,7 +30,7 @@ dependencies = [
     "gtts==2.5.4",
     "requests==2.33.0",
     "rich==14.3.3",
-    "rich-argparse==1.7.2",
+    "rich-argparse==1.8.0",
 ]
 optional-dependencies.dev = [
     "bandit==1.9.3",
