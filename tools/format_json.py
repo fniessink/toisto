@@ -8,8 +8,6 @@ from subprocess import check_output  # nosec import_subprocess
 
 def format_json_file(json_file: Path, check_only: bool) -> int:  # noqa: FBT001
     """Format a JSON file."""
-    if json_file.is_dir():
-        return 0
     unformatted_content = json_file.read_text()
     formatted_content = json.dumps(json.loads(unformatted_content), ensure_ascii=False, indent=4)
     if unformatted_content.rstrip("\n") == formatted_content.rstrip("\n"):  # Ignore final newline
@@ -25,8 +23,9 @@ def format_json_file(json_file: Path, check_only: bool) -> int:  # noqa: FBT001
 def format_json_files(check_only: bool) -> int:  # noqa: FBT001
     """Format the JSON files."""
     list_files_command = "git ls-files -z -- *.json"
-    json_filenames = check_output(list_files_command, shell=True).decode().split("\0")  # nosec # noqa: S602
-    return max([format_json_file(Path(json_filename), check_only) for json_filename in json_filenames], default=0)
+    output = check_output(list_files_command, shell=True).decode()  # nosec # noqa: S602
+    json_filenames = [name for name in output.split("\0") if name]
+    return max([format_json_file(Path(name), check_only) for name in json_filenames], default=0)
 
 
 if __name__ == "__main__":

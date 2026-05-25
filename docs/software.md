@@ -20,22 +20,36 @@ Grammatical quizzes:
 5. Singularize a plural concept or pluralize a singular concept.
 6. Diminutize a concept.
 7. Change the person of a concept.
-9. Change the gender of a concept.
+8. Change the gender of a concept.
 9. Provide the positive, comparative, or superlative degree of comparison, given an adjective in another degree.
 10. Change the tense of a concept between infinitive, present tense, and past tense.
 11. Change the aspect of a concept from perfective to imperfective and vice versa.
 12. Change the grammatical mood of a concept between declarative, interrogative, and imperative mood.
 13. Change the polarity from affirmative to negative and vice versa.
 14. Change cardinal numbers into ordinal numbers and vice versa.
+15. Change the grammatical case of a noun (nominative ↔ partitive).
+16. Fill in the missing inflected word in a sentence (cloze test).
 
 Semantic quizzes:
 
-15. Give the antonym.
-16. Answer a question.
-17. Abbreviate a concept or give the full-form of the abbreviation.
-18. Put the words of a shuffled sentence in the right order.
+17. Give the antonym.
+18. Answer a question.
+19. Abbreviate a concept or give the full-form of the abbreviation.
+20. Put the words of a shuffled sentence in the right order.
 
 Except when asking the user to translate from the source language to the target language, quizzes only use the user's target language.
+
+## Extending grammatical categories
+
+To add a new grammatical case (e.g., `"genitive"`) or another value of an existing grammatical category, edit:
+
+1. **`src/toisto/model/language/grammatical_category.py`** — add the value to the relevant `Literal` type (e.g., `GrammaticalCase`). If the value is meaning-changing across languages — i.e., it should *not* be accepted as a translation of the unmarked form in another language — also add it to `SEMANTIC_NON_DEFAULT_CATEGORIES`. The default value of a category (e.g., `"nominative"` for case) belongs in `DEFAULT_CATEGORIES` instead.
+
+2. **`src/toisto/model/quiz/quiz_type.py`** — define a `GrammaticalQuizType` instance for the value (e.g., `GENITIVE = GrammaticalQuizType("genitive")`) and append it to `GRAMMATICAL_QUIZ_TYPES`.
+
+3. **`docs/concept_files.md`** — list the new value in the relevant section so concept authors know they can use it.
+
+Concept JSON files can then use the value as a nested key in label objects; the label factory and quiz generator handle it without further changes.
 
 ## Spaced repetition
 

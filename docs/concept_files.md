@@ -15,7 +15,7 @@ The contents of a JSON file looks as follows:
     "concepts": {
         "today": {},
         "yesterday": {},
-        "tomorrow": {},
+        "tomorrow": {}
     },
     "labels": {
         "en": [
@@ -60,7 +60,7 @@ The contents of a JSON file looks as follows:
                 "label": "morgen"
             }
         ]
-    ]
+    }
 }
 ```
 
@@ -156,7 +156,7 @@ To indicate that a label is only used in spoken language, add the colloquial fla
 ```json
 {
     "concepts": {
-        "7": {},
+        "7": {}
     },
     "labels": {
         "en": [
@@ -291,9 +291,21 @@ If the label has multiple grammatical forms and the note should only be shown fo
 
 Notes can be either a single string or a list of strings. Words in single quotes, like 'keksejä' and 'keksi' above, will get a link to [Wiktionary](https://en.wiktionary.org/).
 
+#### Common uses for notes
+
+Notes are a good place for any meta-information that helps the user understand the label but isn't itself a translation. Some patterns in use in the built-in concepts:
+
+- **Explaining an inflected form** — e.g., `"'jäätelöä' is the partitive case of 'jäätelö'"`.
+- **Finnish verb type** — e.g., `"'kirjoittaa' is verbityyppi 1"`.
+- **Usage or grammar rules** — e.g., `"Use 'many' with countable nouns and 'much' with uncountable nouns"`, or `"'kuitenkaan' is used chiefly in the negative"`.
+- **Orthography conventions** — e.g., `"In English, names of months are capitalized"`.
+- **Word formation hints** — e.g., `"'musta' ('black') + -ikka (diminutive suffix)"`.
+
+Put the note on the canonical (top-level) label and it will be shown for every grammatical form. If you want a note that only applies to a specific form, use the form-keyed dict shown above.
+
 ### Compound labels
 
-When a label is a compound of one or more other labels, this can be specified with the `roots` relation. Toisto will only quiz a concept with *compound* labels when all concepts with the *root* labels (including roots of roots) have been quizzed. The `roots` relationship can be specified by adding a `roots` key to the label with a list of concept identifiers as value:
+When a label is a compound of one or more other labels, this can be specified with the `roots` relation. Toisto will only quiz a concept with *compound* labels when all concepts with the *root* labels (including roots of roots) have been quizzed. The `roots` relationship is specified by adding a `roots` key to the label with a list of root *label texts* (not concept identifiers) in the same language:
 
 ```json
 {
@@ -302,7 +314,7 @@ When a label is a compound of one or more other labels, this can be specified wi
         "week": {},
         "days of the week": {}
     },
-    "labels": [
+    "labels": {
         "en": [
             {
                 "concept": "day",
@@ -320,11 +332,11 @@ When a label is a compound of one or more other labels, this can be specified wi
             },
             {
                 "concept": "days of the week",
-                "label": "days of the week"
+                "label": "days of the week",
                 "roots": [
                     "days",
                     "week"
-                ],
+                ]
             }
         ],
         "nl": [
@@ -344,20 +356,25 @@ When a label is a compound of one or more other labels, this can be specified wi
             },
             {
                 "concept": "days of the week",
-                "label": "de dagen van de week"
+                "label": "de dagen van de week",
                 "roots": [
                     "de dagen",
                     "de week"
-                ],
+                ]
             }
         ]
-    ]
+    }
 }
 ```
 
-The roots can be any grammatical form of the root label, but should be the first spelling alternative of a label if there are multiple. Also, the roots should be labels of different concepts.
+Each entry in `roots` is matched against a label in the same language as the compound label. Notes:
 
-If a concept has exactly one root, for example because not all roots have been included in the JSON files yet, the `roots` value can be a string instead of a list of concept identifiers.
+- A root can be any grammatical form of the root concept (singular or plural, infinitive or conjugated, nominative or partitive, etc.). In the example above, `"days"` is the plural form of the `day` concept.
+- If a root label has multiple spelling variants, use its first spelling alternative.
+- Each root should be a label of a different concept than the compound itself.
+- Match is exact: a misspelled root won't be found, so it will silently have no effect.
+
+If a concept has exactly one root, for example because not all roots have been included in the JSON files yet, the `roots` value can be a string instead of a list.
 
 ## Concepts
 
@@ -476,10 +493,10 @@ If the homographs have different hypernyms, Toisto will provide a hint based on 
 {
     "concepts": {
         "bank": {
-            "hypernym": "financial institution",
+            "hypernym": "financial institution"
         },
         "couch": {
-            "hypernym": "furniture",
+            "hypernym": "furniture"
         }
     },
     "labels": {
@@ -497,7 +514,7 @@ If the homographs have different hypernyms, Toisto will provide a hint based on 
             {
                 "concept": [
                     "bank",
-                    "couch",
+                    "couch"
                 ],
                 "label": "de bank"
             }
@@ -522,9 +539,9 @@ If the homographs involve other concepts, Toisto will provide a hint based on th
         "musical instrument": {},
         "to play a musical instrument": {
             "involves": "musical instrument"
-        },
+        }
     },
-    "labels": [
+    "labels": {
         "en": [
             {
                 "concept": "sport",
@@ -586,7 +603,7 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
             {
                 "label": {
                     "singular": {
-                        "first person": "..."
+                        "first person": "...",
                         "second person": [
                             "sinä olet",
                             "Te olette"
@@ -594,7 +611,7 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
                         "third person": "..."
                     },
                     "plural": {
-                        "first person": "..."
+                        "first person": "...",
                         "second person": "te olette",
                         "third person": "..."
                     }
@@ -605,7 +622,7 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
             {
                 "label": {
                     "singular": {
-                        "first person": "..."
+                        "first person": "...",
                         "second person": [
                             "jij bent",
                             "u bent"
@@ -613,7 +630,7 @@ If the capitonyms share a common base concept, such as with verbs, Toisto will b
                         "third person": "..."
                     },
                     "plural": {
-                        "first person": "..."
+                        "first person": "...",
                         "second person": "jullie zijn",
                         "third person": "..."
                     }
@@ -634,11 +651,11 @@ If the capitonyms have different hypernyms, Toisto will provide a hint based on 
 {
     "concepts": {
         "greece": {
-            "hypernym": "country",
+            "hypernym": "country"
         },
         "greek": {
-            "hypernym": "language",
-        },
+            "hypernym": "language"
+        }
     },
     "labels": {
         "en": [
@@ -648,7 +665,7 @@ If the capitonyms have different hypernyms, Toisto will provide a hint based on 
             },
             {
                 "concept": "greek",
-                "label":"Greek",
+                "label":"Greek"
             }
         ],
         "fi": [
@@ -760,7 +777,7 @@ Verbs are represented as follows:
 ```json
 {
     "concepts": {
-        "to have"
+        "to have": {}
     },
     "labels": {
         "en": [
@@ -803,11 +820,11 @@ As the grammatical number of pronouns doesn't necessarily agree with the grammat
                 "label": {
                     "singular": {
                         "singular pronoun": "my cat",
-                        "plural pronoun": "our cat",
+                        "plural pronoun": "our cat"
                     },
                     "plural": {
                         "singular pronoun": "my cats",
-                        "plural pronoun": "our cats",
+                        "plural pronoun": "our cats"
                     }
                 }
             }
@@ -854,7 +871,16 @@ Some languages (e.g., Finnish) inflect nouns for grammatical case. Cases can be 
 }
 ```
 
-With the example above, Toisto will quiz users for the partitive of `eläin` (and the nominative of `eläintä`) when Finnish is the target language. Other languages do not need to specify a case: nominative is treated as the default form, so English `animal` is matched against the Finnish nominative when translating between languages. Non-nominative cases (such as the partitive) are only used for in-language transformation quizzes and are not accepted as translations of the unmarked form in another language.
+With the example above, Toisto will quiz users for the partitive of `eläin` (and the nominative of `eläintä`) when Finnish is the target language. Other languages do not need to specify a case: nominative is treated as the default form, so English `animal` is matched against the Finnish nominative when translating between languages.
+
+This means the following for quizzes:
+
+- **Translating into Finnish** (`Translate into Finnish: animal`) accepts only the nominative form (`eläin`). `eläintä` is *not* an accepted answer — even though it is also a form of "animal" — because it carries a meaning the unmarked English form doesn't.
+- **Translating from Finnish** to another language only happens from the nominative (`Translate into English: eläin` → `animal`). There is no `Translate into English: eläintä` quiz; the partitive is not paired with an unmarked translation.
+- **In-Finnish transformation quizzes** (`Give the partitive of eläin` → `eläintä`, and the reverse) work between any two case forms of the same noun.
+- **Example sentences** may use any case freely — `Rakastan eläimiä.` is fine as an example of the `animal` concept. (See [Examples](#examples) for how the example picker handles grammatical quizzes.)
+
+Only nominative and partitive are currently supported. Adding another case (for example, genitive) requires a code change; see [Extending grammatical categories](./software.md#extending-grammatical-categories).
 
 ### Diminutive
 
@@ -865,7 +891,7 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
     "concepts": {
         "table": {}
     },
-    "labels": [
+    "labels": {
         "nl": [
             {
                 "concept": "table",
@@ -875,7 +901,7 @@ When a concept has a diminutive, the diminutive can be included in the JSON file
                 }
             }
         ]
-    ]
+    }
 }
 ```
 
@@ -940,7 +966,7 @@ When concepts have multiple genders, these can be specified as follows:
 }
 ```
 
-It is also possible to have a neutral gender:
+It is also possible to have a neuter gender:
 
 ```json
 {
@@ -954,7 +980,7 @@ It is also possible to have a neutral gender:
                 "label": {
                     "feminine": "mother",
                     "masculine": "father",
-                    "neutral": "parent"
+                    "neuter": "parent"
                 }
             }
         ],
@@ -964,7 +990,7 @@ It is also possible to have a neutral gender:
                 "label": {
                     "feminine": "de moeder",
                     "masculine": "de vader",
-                    "neutral": "de ouder"
+                    "neuter": "de ouder"
                 }
             }
         ]
@@ -1077,7 +1103,7 @@ When concepts are verbs, infinitives can be specified as follows:
                     "plural": "..."
                 }
             }
-        ]
+        ],
         "nl": [
             {
                 "concept": "to have",
@@ -1107,7 +1133,7 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
     "labels": {
         "en": [
             {
-                "concepts": "to ask,"
+                "concept": "to ask",
                 "label": {
                     "infinitive": "to ask",
                     "verbal noun": "asking"
@@ -1116,7 +1142,7 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
         ],
         "fi": [
             {
-                "concepts": "to ask,"
+                "concept": "to ask",
                 "label": {
                     "infinitive": "kysyä",
                     "verbal noun": "kysyminen"
@@ -1125,7 +1151,7 @@ When concepts are verbs, verbal nouns (fourth infinitive in Finnish) can be spec
         ],
         "nl": [
             {
-                "concepts": "to ask,"
+                "concept": "to ask",
                 "label": {
                     "infinitive": "vragen",
                     "verbal noun": "het vragen"
@@ -1426,7 +1452,8 @@ When one concept is an antonym (opposite) of another concept, this can be specif
         },
         "small": {
             "antonym": "big"
-        },
+        }
+    },
     "labels": {
         "en": [
             {
@@ -1436,7 +1463,7 @@ When one concept is an antonym (opposite) of another concept, this can be specif
             {
                 "concept": "small",
                 "label": "small"
-            },
+            }
         ],
         "nl": [
             {
@@ -1480,7 +1507,7 @@ Given the JSON below, the command `toisto practice color`, would select both col
             {
                 "concept": "red",
                 "label": "red"
-            },
+            }
         ],
         "nl": [
             {
@@ -1512,8 +1539,9 @@ Given the JSON below, the command `toisto practice car`, would select both the c
     "concepts": {
         "car": {},
         "wheel": {
-            "holonym": "car",
-        },
+            "holonym": "car"
+        }
+    },
     "labels": {
         "en": [
             {
@@ -1523,7 +1551,7 @@ Given the JSON below, the command `toisto practice car`, would select both the c
             {
                 "concept": "wheel",
                 "label": "wheel"
-            },
+            }
         ],
         "nl": [
             {
@@ -1557,7 +1585,8 @@ Given the JSON below, the command `toisto practice "to paint"`, would select "to
                 "painter",
                 "painting"
             ]
-        },
+        }
+    },
     "labels": {
         "en": [
             {
@@ -1632,6 +1661,14 @@ When one concept is an example of the usage of another concept, this can be spec
 
 If a concept has multiple examples, the `example` value can be a list of concept identifiers instead of a string.
 
+#### Form-aware filtering for grammatical quizzes
+
+For grammatical quizzes (e.g., "give the partitive of *eläin*"), Toisto only shows examples whose target-language label contains the form the user just produced as a whole word. This way an answer of `eläintä` is illustrated by `En halua eläintä.`, not by a sibling sentence using `eläimiä`.
+
+A consequence: if a concept has only one example and it uses a different inflection than the one being quizzed, no example is shown for that quiz. The fix is to add a second example concept that uses the missing form. For instance, the `cat` concept has both `Minulla on kaksi kissaa.` (singular partitive) and `Hänellä on paljon kissoja.` (plural partitive), so both `kissa → kissaa` and `kissat → kissoja` quizzes find a matching example.
+
+Translation quizzes (read, write, dictate, interpret) are not filtered. Any example of the concept will be shown since the example is reinforcing the concept rather than a specific inflected form.
+
 ### Questions/answers
 
 When one concept is a question and the other concept is the answer, this can be specified using the `answer` relation. Toisto will add a quiz, asking the user to answer the question in their target language.
@@ -1652,7 +1689,7 @@ When one concept is a question and the other concept is the answer, this can be 
                 "tip": "ice cream"
             },
             {
-                "concept": "i like ice cream.",
+                "concept": "i like ice cream",
                 "label": "I like ice cream."
             }
         ],
@@ -1663,7 +1700,7 @@ When one concept is a question and the other concept is the answer, this can be 
                 "tip": "jäätelöä"
             },
             {
-                "concept": "i like ice cream.",
+                "concept": "i like ice cream",
                 "label": "Minä pidän jäätelöstä."
             }
         ]
@@ -1677,7 +1714,7 @@ Answers are also possible if the concept has multiple grammatical forms, like si
 {
     "concepts": {
         "what do you like": {
-            "answer": "i like ice cream",
+            "answer": "i like ice cream"
         },
         "i like ice cream": {}
     },
@@ -1729,7 +1766,7 @@ If a concept has multiple answers, the `answer` value can be a list of concept i
             "answer": [
                 "yes, i like ice cream",
                 "no, i don't like ice cream"
-            ],
+            ]
         },
         "yes, i like ice cream": {
             "answer-only": true
@@ -1807,8 +1844,12 @@ If the label has different grammatical forms, it is possible to add cloze tests 
                 "concept": "I like ice cream",
                 "label": {
                     "singular": "Minä pidän jäätelöstä.",
-                    "plural": "Me pidämme "
-                "cloze": "Minä pidän (jäätelö)."
+                    "plural": "Me pidämme jäätelöstä."
+                },
+                "cloze": {
+                    "singular": "Minä pidän (jäätelö).",
+                    "plural": "Me pidämme (jäätelö)."
+                }
             }
         ]
     }

@@ -36,8 +36,12 @@ pyproject-fmt *fix: uv-sync
 format-json *fix:
     uv run --no-project --script tools/format_json.py {{ if fix == "fix" { "" } else { "--check-only" } }}
 
+# Check that JSON code blocks in markdown files are valid JSON.
+validate-markdown-json:
+    uv run --no-project --script tools/validate_markdown_json.py
+
 # Run the linters. Pass 'fix' to also fix issues.
-lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json fix)
+lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json fix) validate-markdown-json
 
 # Check the code for typing issues
 ty: uv-sync
