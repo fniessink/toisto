@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Wait for the user to press Enter after an incorrectly answered or skipped quiz before showing the next quiz, so the correct answer can be read. Fixes [#1283](https://github.com/fniessink/toisto/issues/1283).
+- Speak the correct answer after an incorrectly answered or skipped quiz, when the answer is in the target language. Fixes [#1284](https://github.com/fniessink/toisto/issues/1284).
 
 ## 0.42.0 - 2026-06-06
 
