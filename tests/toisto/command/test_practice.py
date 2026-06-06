@@ -206,6 +206,49 @@ class PracticeAnswerTest(PracticeBase):
 @patch("pathlib.Path.open", MagicMock())
 @patch("toisto.ui.speech.gTTS", Mock())
 @patch("toisto.ui.speech.Popen", Mock())
+class PracticeSpeakAnswerTest(PracticeBase):
+    """Test that the correct answer is spoken after an incorrect or skipped answer."""
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
+    @patch("toisto.command.practice.Speech.say")
+    def test_speak_answer_after_incorrect_answer(self, say: Mock) -> None:
+        """Test that the correct answer is spoken after an incorrect answer when it is in the target language."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (WRITE,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertIn(call(FI, "Terve!", slow=True), say.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=["?\n", EOFError]))
+    @patch("toisto.command.practice.Speech.say")
+    def test_speak_answer_after_skipped_answer(self, say: Mock) -> None:
+        """Test that the correct answer is spoken after a skipped answer when it is in the target language."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (WRITE,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertIn(call(FI, "Terve!", slow=True), say.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
+    @patch("toisto.command.practice.Speech.say")
+    def test_do_not_speak_answer_in_source_language(self, say: Mock) -> None:
+        """Test that the correct answer is not spoken when it is in the source language."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertNotIn(call(NL, "Hoi!", slow=True), say.call_args_list)
+
+    @patch("builtins.input", Mock(return_value="Terve!\n"))
+    @patch("toisto.command.practice.Speech.say")
+    def test_do_not_speak_answer_after_correct_answer(self, say: Mock) -> None:
+        """Test that the correct answer is not spoken after a correct answer."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (WRITE,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertNotIn(call(FI, "Terve!", slow=True), say.call_args_list)
+
+
+@patch("pathlib.Path.open", MagicMock())
+@patch("toisto.ui.speech.gTTS", Mock())
+@patch("toisto.ui.speech.Popen", Mock())
 class PracticeFeedbackTest(PracticeBase):
     """Test the practice command feedback."""
 

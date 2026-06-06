@@ -38,9 +38,15 @@ class QuizMaster:
             retention = self.progress.mark_evaluation(quiz, evaluation)
             console.print(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
             if evaluation in (Evaluation.SKIPPED, Evaluation.INCORRECT):
+                self.say_answer(quiz)
                 self.wait_for_keypress()
             if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
                 break
+
+    def say_answer(self, quiz: Quiz) -> None:
+        """Say the correct answer, but only if it is in the target language; no need to speak the source language."""
+        if quiz.answer.language == self.language_pair.target:
+            self.speech.say(quiz.answer.language, quiz.answer.pronounceable, slow=True)
 
     def wait_for_keypress(self) -> None:
         """Wait for the user to press Enter before showing the next quiz, so they can read the correct answer."""
