@@ -4,12 +4,21 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timedelta
+from math import e, log
 from typing import Final
 
 from toisto.persistence.progress_format import RetentionDict
 
 optional_datetime = datetime | None
-SKIP_INTERVAL_GROWTH_FACTOR: Final = 5  # Cf. https://artofmemory.com/blog/the-pimsleur-language-method/
+
+# After a correct answer a quiz is "silenced" (not presented again) for an interval that is a multiple of its
+# current retention period (see the `Retention` docstring and `Retention.increase` for the full rationale). That
+# multiple is the "growth factor". Instead of a constant factor, Toisto dampens the factor as the retention period
+# grows: short intervals keep expanding quickly, long intervals expand more slowly. The two constants below are the
+# knobs of that damping function; see `Retention.increase` for an extensive explanation of the formula.
+SKIP_INTERVAL_MAX_GROWTH_FACTOR: Final = 5  # Growth factor approached for very short retention periods
+SKIP_INTERVAL_DAMPING_TIMESCALE: Final = timedelta(days=1)  # Retention period scale at which damping kicks in
+
 SKIP_INTERVAL_WHEN_FIRST_ANSWER_IS_CORRECT: Final = timedelta(days=1)
 SKIP_INTERVAL_WHEN_RELATED_QUIZ_IS_ANSWERED_CORRECTLY: Final = timedelta(minutes=5)
 
@@ -32,9 +41,30 @@ class Retention:
         if self.count == 1:
             self.skip_until = now + SKIP_INTERVAL_WHEN_FIRST_ANSWER_IS_CORRECT
         elif now > self.start:
-            self.skip_until = now + (now - self.start) * SKIP_INTERVAL_GROWTH_FACTOR
+            retention_period = now - self.start
+            self.skip_until = now + retention_period * self.__growth_factor(retention_period)
         else:
             self.skip_until = None
+
+    @staticmethod
+    def __growth_factor(retention_period: timedelta) -> float:
+        """Return the (damped) growth factor for the given retention period.
+
+        The next silence interval is retention_period * growth_factor. Rather than a constant factor (which would
+        compound the interval by a fixed multiple on every review and soon overshoot the user's forgetting curve),
+        the factor is damped so it is largest for short retention periods and eases off for longer ones:
+
+                                     B
+            growth_factor(R) = -------------, ratio = R / tau
+                               ln(e + ratio)
+
+        with B = SKIP_INTERVAL_MAX_GROWTH_FACTOR and tau = SKIP_INTERVAL_DAMPING_TIMESCALE. The "e +" keeps the
+        denominator at 1 for very short R (so short intervals get almost the full factor B) and lets the factor
+        decay slowly as R grows. See the "Spaced repetition" section in docs/software.md for the rationale, the
+        resulting schedule, and the supporting literature.
+        """
+        ratio = retention_period / SKIP_INTERVAL_DAMPING_TIMESCALE  # dimensionless: how many "timescales" long
+        return SKIP_INTERVAL_MAX_GROWTH_FACTOR / log(e + ratio)
 
     def pause(self) -> None:
         """Pause this quiz for a brief while because a related quiz was answered correctly."""
