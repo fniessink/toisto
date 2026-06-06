@@ -56,6 +56,22 @@ class RetentionTest(unittest.TestCase):
             datetime.now().astimezone() + timedelta(minutes=1),
         )
 
+    def test_growth_factor_is_damped_for_long_retention_periods(self):
+        """Test that the growth factor decreases as the retention period grows.
+
+        Short retention periods are expanded with (nearly) the maximum growth factor, while long retention periods
+        are expanded with a smaller factor, preventing intervals from running away to months and years.
+        """
+        now = datetime.now().astimezone()
+        short = Retention(start=now - timedelta(minutes=5), count=2)
+        long = Retention(start=now - timedelta(days=100), count=2)
+        short.increase()
+        long.increase()
+        short_factor = (cast("datetime", short.skip_until) - now) / timedelta(minutes=5)
+        long_factor = (cast("datetime", long.skip_until) - now) / timedelta(days=100)
+        self.assertAlmostEqual(5, short_factor, places=1)  # Approaches the maximum factor for short periods
+        self.assertLess(long_factor, 3)  # Damped well below the maximum factor for long periods
+
     def test_is_reset_after_an_incorrect_guess(self):
         """Test that a retention is reset after an incorrect guess."""
         self.guess("correct", "incorrect")
