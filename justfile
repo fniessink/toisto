@@ -3,7 +3,7 @@ set positional-arguments
 export UV_PYTHON := `cat .python-version`
 
 _default:
-  @just --list
+    @just --list
 
 code_folders := "src tests tools"
 
@@ -17,16 +17,16 @@ test *cov: uv-sync
 
 # Check the code for formatting and quality issues. Pass 'fix' to also fix issues.
 ruff *fix: uv-sync
-    uv run ruff format {{ if fix == "fix" { "" } else { "--check " } }}{{code_folders}}
-    uv run ruff check {{ if fix == "fix" { "--fix " } else { "" } }}{{code_folders}}
+    uv run ruff format {{ if fix == "fix" { "" } else { "--check " } }}{{ code_folders }}
+    uv run ruff check {{ if fix == "fix" { "--fix " } else { "" } }}{{ code_folders }}
 
 # Check the code for quality issues. Pass 'fix' to also fix issues.
 fixit *fix: uv-sync
-    uv run fixit {{ if fix == "fix" { "fix" } else { "lint"} }} {{code_folders}}
+    uv run fixit {{ if fix == "fix" { "fix" } else { "lint" } }} {{ code_folders }}
 
 # Check the classifiers in pyproject.toml. Pass 'fix' to also fix issues.
 troml *fix: uv-sync
-    uv run troml {{ if fix == "fix" { "suggest --fix" } else { "check"} }}
+    uv run troml {{ if fix == "fix" { "suggest --fix" } else { "check" } }}
 
 # Check the format of pyproject.toml. Pass 'fix' to also fix issues.
 pyproject-fmt *fix: uv-sync
@@ -45,25 +45,25 @@ lint *fix: (ruff fix) (fixit fix) (troml fix) (pyproject-fmt fix) (format-json f
 
 # Check the code for typing issues
 ty: uv-sync
-    uv run ty check {{code_folders}}
+    uv run ty check {{ code_folders }}
 
 # Check the code for typing issues
 mypy: uv-sync
-    uv run mypy --python-executable=.venv/bin/python {{code_folders}}
+    uv run mypy --python-executable=.venv/bin/python {{ code_folders }}
 
 # Run the type checkers
 type-check: ty mypy
 
 # Check the code for security issues
 bandit: uv-sync
-    uv run bandit --quiet -r {{code_folders}}
+    uv run bandit --quiet -r {{ code_folders }}
 
 # Check the code for dead code
 vulture: uv-sync
-    uv run vulture --exclude .venv {{code_folders}} .vulture-whitelist.py
+    uv run vulture --exclude .venv {{ code_folders }} .vulture-whitelist.py
 
 # Run the formatters, linters, and checkers. Pass 'fix' to also fix issues.
-quality *fix: (lint fix) (type-check) (bandit) (vulture)
+quality *fix: (lint fix) type-check bandit vulture
 
 # Run all checks. Pass 'fix' to also fix issues
 all *fix: (test 'cov') (quality fix)
@@ -72,14 +72,14 @@ _sonarcloud:
     uv run coverage xml # SonarCloud needs a Cobertura compatible XML coverage report
     uv run python -m xmlrunner discover --output-file build/xunit.xml  # SonarCloud needs a JUnit compatible XML report
 
-_ci: (test 'cov') (_sonarcloud) (quality)
+_ci: (test 'cov') _sonarcloud quality
 
 # Build and publish the distribution packages.
 publish:
     rm -rf build dist
     uv build
-    uv publish --token `python -c "import configparser, pathlib; c = configparser.ConfigParser(); c.read(pathlib.Path('~/.pypirc').expanduser()); print(c['pypi']['password'])"`
-    git tag v`python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])"`
+    uv publish --token `uvx python -c "import configparser, pathlib; c = configparser.ConfigParser(); c.read(pathlib.Path('~/.pypirc').expanduser()); print(c['pypi']['password'])"`
+    git tag v`uvx python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])"`
     git push --tags
 
 # Profile the code.
