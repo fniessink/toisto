@@ -4,7 +4,10 @@ from argparse import Namespace
 from typing import Literal
 from unittest.mock import MagicMock, Mock, call, patch
 
-from toisto.command.practice import practice
+from rich.control import Control
+from rich.segment import ControlType
+
+from toisto.command.practice import ERASE_ENTIRE_LINE, practice
 from toisto.model.language import FI, NL, LanguagePair
 from toisto.model.language.concept import Concept, ConceptId
 from toisto.model.language.label import Label
@@ -103,6 +106,14 @@ class PracticeBase(ToistoTestCase):
         """Assert that the argument is not in the call arguments list of the patched print method."""
         self.assertNotIn(call(argument, **kwargs), patched_print.call_args_list)
 
+    @staticmethod
+    def control_segments(patched_control: Mock) -> list[tuple[object, ...]]:
+        """Return the rendered segments for each call to the patched console.control method.
+
+        Control instances do not implement equality, so compare their (value-comparable) segments instead.
+        """
+        return [tuple(control.segment for control in args.args) for args in patched_control.call_args_list]
+
 
 @patch("pathlib.Path.open", MagicMock())
 @patch("toisto.ui.speech.gTTS", Mock())
@@ -192,15 +203,15 @@ class PracticeAnswerTest(PracticeBase):
         self.assert_printed(Feedback.TRY_AGAIN, patched_print)
 
     @patch("builtins.input", Mock(side_effect=["\n", "Hoi\n"]))
-    @patch("builtins.print")
+    @patch("toisto.command.practice.console.control")
     @patch("toisto.command.practice.Speech.say")
-    def test_quiz_empty_answer(self, say: Mock, print_: Mock) -> None:
+    def test_quiz_empty_answer(self, say: Mock, control: Mock) -> None:
         """Test that the speech is repeated more slowly when the user hits enter without answer."""
         concept = self.create_concept_fixture()
         quizzes = create_quizzes(FI_NL, (READ,), concept)
         self.practice(FI_NL, quizzes)
         self.assertEqual({"slow": True}, say.call_args_list[-1][-1])
-        self.assertEqual([call("\x1b[F", end="")], print_.call_args_list)
+        self.assertEqual([(Control.move_to_column(0, -1).segment,)], self.control_segments(control))
 
 
 @patch("pathlib.Path.open", MagicMock())
@@ -460,13 +471,17 @@ class PracticeLifeCycleTest(PracticeBase):
         self.assert_printed(CONTINUE, patched_print, end="")
 
     @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
-    @patch("builtins.print")
-    def test_pause_prompt_is_erased(self, print_: Mock) -> None:
+    @patch("toisto.command.practice.console.control")
+    def test_pause_prompt_is_erased(self, control: Mock) -> None:
         """Test that the "Press Enter to continue" prompt is erased after the user presses Enter."""
         concept = self.create_concept_fixture()
         quizzes = create_quizzes(FI_NL, (READ,), concept)
         self.practice(FI_NL, quizzes)
-        self.assertIn(call("\033[F\033[2K", end="", flush=True), print_.call_args_list)
+        erase_prompt = (
+            Control.move_to_column(0, -1).segment,
+            Control((ControlType.ERASE_IN_LINE, ERASE_ENTIRE_LINE)).segment,
+        )
+        self.assertIn(erase_prompt, self.control_segments(control))
 
     @patch("builtins.input")
     def test_no_pause_after_correct_answer(self, input_: Mock) -> None:
