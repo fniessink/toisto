@@ -14,7 +14,7 @@ from toisto.model.quiz.quiz_factory import create_quizzes
 from toisto.model.quiz.quiz_type import ANTONYM, DICTATE, INTERPRET, PLURAL, READ, WRITE
 from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
-from toisto.ui.text import DONE, Feedback, ProgressUpdate
+from toisto.ui.text import CONTINUE, DONE, Feedback, ProgressUpdate
 
 from ...base import FI_NL, NL_FI, ToistoTestCase
 
@@ -126,7 +126,7 @@ class PracticeAnswerTest(PracticeBase):
         patched_print = self.practice(FI_NL, quizzes)
         self.assert_printed(Feedback.CORRECT, patched_print)
 
-    @patch("builtins.input", Mock(side_effect=["H o i!\n", "Ho i!\n"]))
+    @patch("builtins.input", Mock(side_effect=["H o i!\n", "Ho i!\n", "\n"]))
     def test_answer_with_spaces(self):
         """Test that answers with spaces inside are not considered correct."""
         concept = self.create_concept_fixture()
@@ -346,7 +346,7 @@ class PracticeFeedbackTest(PracticeBase):
 """
         self.assert_printed(expected_feedback, patched_print)
 
-    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n"]))
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
     def test_quiz_with_multiple_antonyms(self):
         """Test that the correct meaning of the antonyms is given."""
         son = self.create_concept(
@@ -406,6 +406,76 @@ class PracticeLifeCycleTest(PracticeBase):
         patched_print = self.practice(FI_NL, quizzes)
         self.assert_printed(Feedback.TRY_AGAIN, patched_print)
         self.assert_printed(f"The correct answer is '{linkified('Hoi!')}'\n", patched_print)
+
+    @patch("builtins.input")
+    def test_pause_after_incorrect_answer(self, input_: Mock) -> None:
+        """Test that the user must press Enter after an incorrect answer before the next quiz is shown."""
+        input_.side_effect = ["incorrect\n", "incorrect again\n", "\n"]
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_printed(CONTINUE, patched_print, end="")
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
+    @patch("builtins.print")
+    def test_pause_prompt_is_erased(self, print_: Mock) -> None:
+        """Test that the "Press Enter to continue" prompt is erased after the user presses Enter."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertIn(call("\033[F\033[2K", end="", flush=True), print_.call_args_list)
+
+    @patch("builtins.input")
+    def test_no_pause_after_correct_answer(self, input_: Mock) -> None:
+        """Test that the user is not paused after a correct answer."""
+        input_.side_effect = ["Hoi\n", EOFError]
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_not_printed(CONTINUE, patched_print, end="")
+
+    @patch("builtins.input")
+    def test_pause_after_skip_on_first_attempt(self, input_: Mock) -> None:
+        """Test that the user must press Enter after skipping on the first attempt before the next quiz is shown."""
+        input_.side_effect = ["?\n", EOFError]
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_printed(CONTINUE, patched_print, end="")
+
+    @patch("builtins.input")
+    def test_pause_after_skip_on_second_attempt(self, input_: Mock) -> None:
+        """Test that the user must press Enter after skipping on the second attempt before the next quiz is shown."""
+        input_.side_effect = ["incorrect\n", "?\n", EOFError]
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_printed(CONTINUE, patched_print, end="")
+
+    @patch("builtins.input")
+    def test_no_pause_after_correct_second_attempt(self, input_: Mock) -> None:
+        """Test that the user is not paused when the second attempt is correct."""
+        input_.side_effect = ["incorrect\n", "Hoi\n", EOFError]
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assert_not_printed(CONTINUE, patched_print, end="")
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", EOFError]))
+    def test_quit_with_ctrl_d_on_pause(self):
+        """Test that the user can quit cleanly by pressing Ctrl-D on the pause after an incorrect answer."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assertEqual(call(), patched_print.call_args_list[-1])
+
+    @patch("builtins.input", Mock(side_effect=["?\n", KeyboardInterrupt]))
+    def test_quit_with_ctrl_c_on_pause(self):
+        """Test that the user can quit cleanly by pressing Ctrl-C on the pause after a skipped answer."""
+        concept = self.create_concept_fixture()
+        quizzes = create_quizzes(FI_NL, (READ,), concept)
+        patched_print = self.practice(FI_NL, quizzes)
+        self.assertEqual(call(), patched_print.call_args_list[-1])
 
     @patch("builtins.input", Mock(side_effect=["hoi\n", "hoi\n"]))
     def test_quiz_done(self):
@@ -470,7 +540,7 @@ class PracticeProgressTest(PracticeBase):
         progress_update = ProgressUpdate(progress, 1)
         self.assert_printed(progress_update(), patched_print, end="", highlight=False)
 
-    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n"]))
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
     def test_progress_after_incorrect_answer(self):
         """Test that progress is shown after an incorrect answer."""
         concept = self.create_concept_fixture()

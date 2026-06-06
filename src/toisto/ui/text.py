@@ -38,7 +38,8 @@ Practice as many words and phrases as you like, for as long as you like.
 a quiz correctly, {NAME} will wait longer before repeating it. If you
 answer incorrectly, you get one additional attempt to give the correct
 answer. If the second attempt is not correct either, {NAME} will reset
-the quiz interval.
+the quiz interval. Whenever the correct answer is shown, {NAME} waits
+for you to press Enter before showing the next quiz, so you can read it.
 
 How does it work?
 ● To answer a quiz: type the answer, followed by Enter.
@@ -62,6 +63,8 @@ CONFIG_LANGUAGE_TIP: Final[str] = (
 DONE: Final[str] = f"""👍 Good job. You're done for now. Please come back later or try a different concept.
 [secondary]Type `{NAME.lower()} -h` for more information.[/secondary]
 """
+
+CONTINUE: Final[str] = "[continue]Press Enter to continue.[/continue] "
 
 
 class Feedback:
