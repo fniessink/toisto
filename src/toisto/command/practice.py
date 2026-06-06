@@ -14,7 +14,7 @@ from toisto.model.quiz.quiz_type import ListenOnlyQuizType
 from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkified
 from toisto.ui.speech import Speech
-from toisto.ui.text import DONE, Feedback, ProgressUpdate, console, instruction
+from toisto.ui.text import CONTINUE, DONE, Feedback, ProgressUpdate, console, instruction
 
 
 @dataclass(frozen=True)
@@ -37,8 +37,18 @@ class QuizMaster:
             evaluation = quiz.evaluate(guess, self.language_pair.source, attempt)
             retention = self.progress.mark_evaluation(quiz, evaluation)
             console.print(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
+            if evaluation in (Evaluation.SKIPPED, Evaluation.INCORRECT):
+                self.wait_for_keypress()
             if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
                 break
+
+    def wait_for_keypress(self) -> None:
+        """Wait for the user to press Enter before showing the next quiz, so they can read the correct answer."""
+        console.print(CONTINUE, end="")
+        input()
+        # Move the cursor up and erase the "Press Enter" prompt. Flush so the escape reaches the terminal before
+        # the next output (e.g. the progress update), which is written through a different (Rich/dramatic) stream.
+        print("\033[F\033[2K", end="", flush=True)  # noqa: T201
 
     def do_quiz_attempt(self, quiz: Quiz, attempt: int) -> str:
         """Present the question and get the answer from the user."""

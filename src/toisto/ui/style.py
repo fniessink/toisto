@@ -9,6 +9,7 @@ theme = Theme(
         "language": "light_goldenrod2 bold",
         "progress": "light_sky_blue3",
         "quiz": "medium_purple1",
+        "continue": "dark_orange",
         "answer": "grey69",
         "secondary": "grey69",
         "colloquial": "grey69",

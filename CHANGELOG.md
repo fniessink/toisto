@@ -4,6 +4,12 @@ All notable changes to Toisto will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Wait for the user to press Enter after an incorrectly answered or skipped quiz before showing the next quiz, so the correct answer can be read. Fixes [#1283](https://github.com/fniessink/toisto/issues/1283).
+
 ## 0.42.0 - 2026-06-06
 
 ### Fixed
