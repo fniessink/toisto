@@ -3,8 +3,11 @@
 from argparse import Namespace
 from configparser import ConfigParser
 from dataclasses import dataclass
+from typing import Final
 
 import dramatic
+from rich.control import Control
+from rich.segment import ControlType
 
 from toisto.model.language import LanguagePair
 from toisto.model.quiz.evaluation import Evaluation
@@ -15,6 +18,10 @@ from toisto.persistence.progress import save_progress
 from toisto.ui.dictionary import linkified
 from toisto.ui.speech import Speech
 from toisto.ui.text import CONTINUE, DONE, Feedback, ProgressUpdate, console, instruction
+
+# Mode for the ANSI "Erase in Line" (CSI n K) control code; 2 means erase the entire line (0 = cursor to end of
+# line, 1 = start of line to cursor, 2 = whole line).
+ERASE_ENTIRE_LINE: Final = 2
 
 
 @dataclass(frozen=True)
@@ -52,9 +59,8 @@ class QuizMaster:
         """Wait for the user to press Enter before showing the next quiz, so they can read the correct answer."""
         console.print(CONTINUE, end="")
         input()
-        # Move the cursor up and erase the "Press Enter" prompt. Flush so the escape reaches the terminal before
-        # the next output (e.g. the progress update), which is written through a different (Rich/dramatic) stream.
-        print("\033[F\033[2K", end="", flush=True)  # noqa: T201
+        # Move the cursor to the start of the previous line and erase it, to remove the "Press Enter" prompt.
+        console.control(Control.move_to_column(0, -1), Control((ControlType.ERASE_IN_LINE, ERASE_ENTIRE_LINE)))
 
     def do_quiz_attempt(self, quiz: Quiz, attempt: int) -> str:
         """Present the question and get the answer from the user."""
@@ -64,7 +70,7 @@ class QuizMaster:
             if answer := input("> ").strip():
                 break
             repeat_speech = True
-            print("\033[F", end="")  # noqa: T201  # Move cursor one line up
+            console.control(Control.move_to_column(0, -1))  # Move the cursor to the start of the previous line
         return answer
 
 
