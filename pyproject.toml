@@ -33,7 +33,7 @@ dependencies = [
     "rich-argparse==1.8.0",
 ]
 optional-dependencies.dev = [
-    "bandit==1.9.3",
+    "bandit==1.9.4",
     "coverage==7.14.0",
     "fixit==2.2.1",
     "gprof2dot==2025.4.14",
