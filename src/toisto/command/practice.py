@@ -10,6 +10,7 @@ from rich.control import Control
 from rich.segment import ControlType
 
 from toisto.model.language import LanguagePair
+from toisto.model.language.label import Labels
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
 from toisto.model.quiz.quiz import Quiz
@@ -45,15 +46,16 @@ class QuizMaster:
             retention = self.progress.mark_evaluation(quiz, evaluation)
             console.print(feedback.text(evaluation, guess, retention if self.show_quiz_retention else None))
             if evaluation in (Evaluation.SKIPPED, Evaluation.INCORRECT):
-                self.say_answer(quiz)
+                self.say_answer(quiz, feedback.shown_answers(guess))
                 self.wait_for_keypress()
             if evaluation in (Evaluation.CORRECT, Evaluation.SKIPPED):
                 break
 
-    def say_answer(self, quiz: Quiz) -> None:
-        """Say the correct answer, but only if it is in the target language; no need to speak the source language."""
+    def say_answer(self, quiz: Quiz, answers: Labels) -> None:
+        """Say the correct answer(s), but only if it is in the target language; no need to speak the source language."""
         if quiz.answer.language == self.language_pair.target:
-            self.speech.say(quiz.answer.language, quiz.answer.pronounceable, slow=True)
+            text = " . ".join([answer.pronounceable for answer in answers])
+            self.speech.say(quiz.answer.language, text, slow=True)
 
     def wait_for_keypress(self) -> None:
         """Wait for the user to press Enter before showing the next quiz, so they can read the correct answer."""

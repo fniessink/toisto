@@ -12,7 +12,7 @@ from rich.panel import Panel
 from toisto.metadata import CHANGELOG_URL, NAME, README_URL, VERSION
 from toisto.model.language import LanguagePair
 from toisto.model.language.iana_language_subtag_registry import ALL_LANGUAGES
-from toisto.model.language.label import Label
+from toisto.model.language.label import Label, Labels
 from toisto.model.language.lookup import is_colloquial, meanings
 from toisto.model.quiz.evaluation import Evaluation
 from toisto.model.quiz.progress import Progress
@@ -130,6 +130,13 @@ class Feedback:
             answers = linkified_and_enumerated(*other_answers.as_strings)
             return wrapped(punctuated(f"{label} {answers}"), style="answer")
         return ""
+
+    def shown_answers(self, guess: str = "") -> Labels:
+        """Return the quiz's answers shown as feedback."""
+        correct_answers = self.quiz.non_generated_answers
+        if guess and (closest_answer := correct_answers.most_similar_label(guess)):
+            return Labels([closest_answer, *self.quiz.other_answers(str(closest_answer))])
+        return correct_answers
 
     def _colloquial(self) -> str:
         """Return the feedback about the colloquial label, if any."""

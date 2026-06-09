@@ -19,14 +19,16 @@ from toisto.persistence.config import default_config
 from toisto.ui.dictionary import linkified
 from toisto.ui.text import CONTINUE, DONE, Feedback, ProgressUpdate
 
-from ...base import FI_NL, NL_FI, ToistoTestCase
+from ...base import FI_NL, NL_FI, LabelDict, ToistoTestCase
 
 
 class PracticeBase(ToistoTestCase):
     """Base class for practice unit tests."""
 
     def create_concept_fixture(
-        self, concept_type: Literal["colloquial", "example", "gender", "plural"] | None = None
+        self,
+        concept_type: Literal["colloquial", "example", "gender", "plural"] | None = None,
+        *labels: LabelDict,
     ) -> Concept:
         """Create a concept fixture."""
         match concept_type:
@@ -78,7 +80,7 @@ class PracticeBase(ToistoTestCase):
                 )
             case _:
                 return self.create_concept(
-                    "hi", labels=[{"label": "Terve!", "language": FI}, {"label": "Hoi!", "language": NL}]
+                    "hi", labels=[{"label": "Terve!", "language": FI}, {"label": "Hoi!", "language": NL}, *labels]
                 )
 
     def progress(self, language_pair: LanguagePair, quizzes: Quizzes) -> Progress:
@@ -228,6 +230,15 @@ class PracticeSpeakAnswerTest(PracticeBase):
         quizzes = create_quizzes(FI_NL, (WRITE,), concept)
         self.practice(FI_NL, quizzes)
         self.assertIn(call(FI, "Terve!", slow=True), say.call_args_list)
+
+    @patch("builtins.input", Mock(side_effect=["incorrect\n", "incorrect again\n", "\n"]))
+    @patch("toisto.command.practice.Speech.say")
+    def test_speak_multiple_answers_after_incorrect_answer(self, say: Mock) -> None:
+        """Test that the correct answers are spoken after an incorrect answer when they are in the target language."""
+        concept = self.create_concept_fixture(None, {"label": "Moi!", "language": FI})
+        quizzes = create_quizzes(FI_NL, (WRITE,), concept)
+        self.practice(FI_NL, quizzes)
+        self.assertIn(call(FI, "Terve! . Moi!", slow=True), say.call_args_list)
 
     @patch("builtins.input", Mock(side_effect=["?\n", EOFError]))
     @patch("toisto.command.practice.Speech.say")
