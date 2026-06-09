@@ -41,7 +41,7 @@ optional-dependencies.dev = [
     "mutmut==3.5.0",
     "mypy==2.1.0",
     "pyproject-fmt==2.21.2",
-    "ruff==0.15.2",
+    "ruff==0.15.15",
     "rust-just==1.51.0",
     "troml==0.4.1",
     "ty==0.0.39",
