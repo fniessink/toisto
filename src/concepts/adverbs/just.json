@@ -1,10 +1,15 @@
 {
     "concepts": {
         "just": {
-            "example": "just a while ago"
+            "example": "just a while ago",
+            "hypernym": "time"
         },
-        "just now": {},
-        "just a while ago": {}
+        "just now": {
+            "hypernym": "time"
+        },
+        "just a while ago": {
+            "hypernym": "time"
+        }
     },
     "labels": {
         "en": [
