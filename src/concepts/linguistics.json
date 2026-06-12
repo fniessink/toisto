@@ -1,17 +1,9 @@
 {
     "concepts": {
         "grammar": {},
-        "word": {},
-        "word order": {},
         "vocabulary": {},
-        "compound word": {
-            "hypernym": "word"
-        },
         "sentence": {},
         "consonant": {},
-        "question word": {
-            "hypernym": "word"
-        },
         "subject": {},
         "infinitive": {},
         "adjective": {},
@@ -35,25 +27,8 @@
                 "label": "grammar"
             },
             {
-                "concept": "word",
-                "label": {
-                    "singular": "word",
-                    "plural": "words"
-                }
-            },
-            {
-                "concept": "word order",
-                "label": "word order",
-                "roots": "word"
-            },
-            {
                 "concept": "vocabulary",
                 "label": "vocabulary"
-            },
-            {
-                "concept": "compound word",
-                "label": "compound word",
-                "roots": "word"
             },
             {
                 "concept": "sentence",
@@ -68,14 +43,6 @@
                     "singular": "consonant",
                     "plural": "consonants"
                 }
-            },
-            {
-                "concept": "question word",
-                "label": "question word",
-                "roots": [
-                    "question",
-                    "word"
-                ]
             },
             {
                 "concept": "subject",
@@ -134,31 +101,8 @@
                 "roots": "kieli"
             },
             {
-                "concept": "word",
-                "label": {
-                    "root": {
-                        "singular": "sana",
-                        "plural": "sanat"
-                    },
-                    "diminutive": {
-                        "singular": "pikkusana",
-                        "plural": "pikkusanat"
-                    }
-                }
-            },
-            {
-                "concept": "word order",
-                "label": "sanajärjestys",
-                "roots": "sana"
-            },
-            {
                 "concept": "vocabulary",
                 "label": "sanasto",
-                "roots": "sana"
-            },
-            {
-                "concept": "compound word",
-                "label": "yhdyssana",
                 "roots": "sana"
             },
             {
@@ -174,14 +118,6 @@
                     "singular": "konsonantti",
                     "plural": "konsonantit"
                 }
-            },
-            {
-                "concept": "question word",
-                "label": "kysymyssana",
-                "roots": [
-                    "kysymys",
-                    "sana"
-                ]
             },
             {
                 "concept": "subject",
@@ -239,34 +175,8 @@
                 "label": "de grammatica"
             },
             {
-                "concept": "word",
-                "label": {
-                    "root": {
-                        "singular": "het woord",
-                        "plural": "de woorden"
-                    },
-                    "diminutive": {
-                        "singular": "het woordje",
-                        "plural": "de woordjes"
-                    }
-                }
-            },
-            {
-                "concept": "word order",
-                "label": "de woordvolgorde",
-                "roots": "het woord"
-            },
-            {
                 "concept": "vocabulary",
                 "label": "de woordenschat",
-                "roots": "het woord"
-            },
-            {
-                "concept": "compound word",
-                "label": [
-                    "het samengestelde woord",
-                    "samengesteld woord"
-                ],
                 "roots": "het woord"
             },
             {
@@ -283,14 +193,6 @@
                     "plural": "de medeklinkers"
                 },
                 "roots": "de klinker"
-            },
-            {
-                "concept": "question word",
-                "label": "het vraagwoord",
-                "roots": [
-                    "de vraag",
-                    "het woord"
-                ]
             },
             {
                 "concept": "subject",

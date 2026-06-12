@@ -1,24 +1,48 @@
 {
     "concepts": {
-        "other": {}
+        "other": {
+            "example": "the other students go home"
+        },
+        "the other students go home": {}
     },
     "labels": {
         "en": [
             {
                 "concept": "other",
-                "label": "other"
+                "label": {
+                    "singular": "other",
+                    "plural": "others"
+                }
+            },
+            {
+                "concept": "the other students go home",
+                "label": "The other students go home."
             }
         ],
         "fi": [
             {
                 "concept": "other",
-                "label": "muu"
+                "label": {
+                    "singular": "muu",
+                    "plural": "muut"
+                }
+            },
+            {
+                "concept": "the other students go home",
+                "label": "Muut opiskelijat menevät kotiin."
             }
         ],
         "nl": [
             {
                 "concept": "other",
-                "label": "ander"
+                "label": {
+                    "singular": "ander",
+                    "plural": "andere"
+                }
+            },
+            {
+                "concept": "the other students go home",
+                "label": "De andere studenten gaan naar huis."
             }
         ]
     }

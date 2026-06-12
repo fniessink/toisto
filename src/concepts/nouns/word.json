@@ -1,0 +1,110 @@
+{
+    "concepts": {
+        "word": {},
+        "word order": {},
+        "compound word": {
+            "hypernym": "word"
+        },
+        "question word": {
+            "hypernym": "word"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "word",
+                "label": {
+                    "singular": "word",
+                    "plural": "words"
+                }
+            },
+            {
+                "concept": "word order",
+                "label": "word order",
+                "roots": "word"
+            },
+            {
+                "concept": "compound word",
+                "label": "compound word",
+                "roots": "word"
+            },
+            {
+                "concept": "question word",
+                "label": "question word",
+                "roots": [
+                    "question",
+                    "word"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "word",
+                "label": {
+                    "root": {
+                        "singular": "sana",
+                        "plural": "sanat"
+                    },
+                    "diminutive": {
+                        "singular": "pikkusana",
+                        "plural": "pikkusanat"
+                    }
+                }
+            },
+            {
+                "concept": "word order",
+                "label": "sanajärjestys",
+                "roots": "sana"
+            },
+            {
+                "concept": "compound word",
+                "label": "yhdyssana",
+                "roots": "sana"
+            },
+            {
+                "concept": "question word",
+                "label": "kysymyssana",
+                "roots": [
+                    "kysymys",
+                    "sana"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "word",
+                "label": {
+                    "root": {
+                        "singular": "het woord",
+                        "plural": "de woorden"
+                    },
+                    "diminutive": {
+                        "singular": "het woordje",
+                        "plural": "de woordjes"
+                    }
+                }
+            },
+            {
+                "concept": "word order",
+                "label": "de woordvolgorde",
+                "roots": "het woord"
+            },
+            {
+                "concept": "compound word",
+                "label": [
+                    "het samengestelde woord",
+                    "samengesteld woord"
+                ],
+                "roots": "het woord"
+            },
+            {
+                "concept": "question word",
+                "label": "het vraagwoord",
+                "roots": [
+                    "de vraag",
+                    "het woord"
+                ]
+            }
+        ]
+    }
+}
