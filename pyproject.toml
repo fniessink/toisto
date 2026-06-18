@@ -40,7 +40,7 @@ optional-dependencies.dev = [
     "green==4.0.2",
     "mutmut==3.6.0",
     "mypy==2.1.0",
-    "pyproject-fmt==2.21.2",
+    "pyproject-fmt==2.24.0",
     "ruff==0.15.17",
     "rust-just==1.51.0",
     "troml==0.4.1",
@@ -55,9 +55,9 @@ urls.Repository = "https://github.com/fniessink/toisto"
 scripts.toisto = "toisto.app:main"
 
 [tool.setuptools]
+packages.find.where = [ "src" ]
 package-data."*" = [ "*.json" ]
 package-data.languages = [ "*.txt" ]
-packages.find.where = [ "src" ]
 
 [tool.ruff]
 target-version = "py313"
@@ -91,6 +91,9 @@ lint.isort.section-order = [
     "local-folder",
 ]
 lint.isort.sections.second-party = [ "toisto" ]
+
+[tool.vulture]
+ignore_names = [ "_SubParsersAction", "optionxform" ]
 
 [tool.pyproject-fmt]
 indent = 4
@@ -134,6 +137,3 @@ pytest_add_cli_args_test_selection = [ "tests/" ]
 
 [tool.fixit]
 python-version = "3.13"
-
-[tool.vulture]
-ignore_names = [ "_SubParsersAction", "optionxform" ]
