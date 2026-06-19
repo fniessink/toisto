@@ -4,14 +4,15 @@
             "hypernym": "drink",
             "example": [
                 "i drank more water",
-                "the shop sells different mineral waters"
+                "the store sells different mineral waters"
             ]
         },
         "mineral water": {
             "hypernym": "water"
         },
         "on the water": {},
-        "finland has many waters": {}
+        "finland has many waters": {},
+        "the store sells different mineral waters": {}
     },
     "labels": {
         "en": [
@@ -33,10 +34,10 @@
                 "roots": "water"
             },
             {
-                "concept": "the shop sells different mineral waters",
-                "label": "The shop sells different mineral waters.",
+                "concept": "the store sells different mineral waters",
+                "label": "The store sells different mineral waters.",
                 "roots": [
-                    "shop",
+                    "store",
                     "different",
                     "mineral water"
                 ]
@@ -71,7 +72,7 @@
                 "roots": "vesi"
             },
             {
-                "concept": "the shop sells different mineral waters",
+                "concept": "the store sells different mineral waters",
                 "label": "Kaupassa myydään erilaisia kivennäisvesiä.",
                 "roots": [
                     "kauppa",
@@ -102,7 +103,7 @@
                 "roots": "het water"
             },
             {
-                "concept": "the shop sells different mineral waters",
+                "concept": "the store sells different mineral waters",
                 "label": "De winkel verkoopt verschillende mineraalwaters.",
                 "roots": [
                     "de winkel",
