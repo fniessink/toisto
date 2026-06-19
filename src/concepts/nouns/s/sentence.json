@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "sentence": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sentence",
+                "label": {
+                    "singular": "sentence",
+                    "plural": "sentences"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sentence",
+                "label": {
+                    "singular": "lause",
+                    "plural": "lauseet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sentence",
+                "label": {
+                    "singular": "de zin",
+                    "plural": "de zinnen"
+                }
+            }
+        ]
+    }
+}

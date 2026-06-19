@@ -1,0 +1,29 @@
+{
+    "concepts": {
+        "bank card": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bank card",
+                "label": "bank card"
+            },
+            {
+                "concept": "bank card",
+                "label": "debit card"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bank card",
+                "label": "kortti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bank card",
+                "label": "de bankpas"
+            }
+        ]
+    }
+}

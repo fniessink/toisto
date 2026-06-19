@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "housewife": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "housewife",
+                "label": "housewife",
+                "roots": [
+                    "house",
+                    "wife"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "housewife",
+                "label": "kotiäiti",
+                "roots": [
+                    "koti",
+                    "äiti"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "housewife",
+                "label": "de huismoeder",
+                "roots": [
+                    "het huis",
+                    "de moeder"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "free (no payment)": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "free (no payment)",
+                "label": "free"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "free (no payment)",
+                "label": "ilmainen"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "vapaa pääsy",
+                "roots": "vapaa"
+            },
+            {
+                "concept": "free (no payment)",
+                "label": "maksuton",
+                "roots": "maksu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "free (no payment)",
+                "label": "gratis"
+            }
+        ]
+    }
+}

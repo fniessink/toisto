@@ -1,0 +1,62 @@
+{
+    "concepts": {
+        "paper": {},
+        "toilet paper": {
+            "hypernym": "paper",
+            "holonym": "toilet"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "paper",
+                    "plural": "paper"
+                }
+            },
+            {
+                "concept": "toilet paper",
+                "label": "toilet paper",
+                "roots": [
+                    "toilet",
+                    "paper"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "paperi",
+                    "plural": "paperit"
+                }
+            },
+            {
+                "concept": "toilet paper",
+                "label": "vessapaperi",
+                "roots": [
+                    "vessa",
+                    "paperi"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "paper",
+                "label": {
+                    "singular": "het papier",
+                    "plural": "de papieren"
+                }
+            },
+            {
+                "concept": "toilet paper",
+                "label": "het toiletpapier",
+                "roots": [
+                    "het toilet",
+                    "het papier"
+                ]
+            }
+        ]
+    }
+}

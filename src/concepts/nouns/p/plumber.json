@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "plumber": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "plumber",
+                "label": "plumber"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "plumber",
+                "label": "putkiasentaja"
+            },
+            {
+                "concept": "plumber",
+                "label": "putkimies",
+                "roots": "mies"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "plumber",
+                "label": "de loodgieter"
+            }
+        ]
+    }
+}

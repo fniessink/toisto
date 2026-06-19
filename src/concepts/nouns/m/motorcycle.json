@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "motorcycle": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "motorcycle",
+                "label": "motorcycle"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "motorcycle",
+                "label": [
+                    "moottoripyörä",
+                    "pyörä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "motorcycle",
+                "label": [
+                    "de motorfiets",
+                    "de motor"
+                ],
+                "roots": "de fiets"
+            }
+        ]
+    }
+}

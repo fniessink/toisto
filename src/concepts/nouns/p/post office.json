@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "post office": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "post office",
+                "label": "post office",
+                "roots": [
+                    "post",
+                    "office"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "post office",
+                "label": "het postkantoor",
+                "roots": [
+                    "de post",
+                    "het kantoor"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "brick": {
+            "holonym": "wall"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "brick",
+                    "plural": "bricks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "tiili",
+                    "plural": "tiilet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "brick",
+                "label": {
+                    "singular": "de baksteen",
+                    "plural": "de bakstenen"
+                },
+                "roots": "de steen"
+            }
+        ]
+    }
+}

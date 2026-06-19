@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "decade": {
+            "holonym": "century"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "decade",
+                "label": {
+                    "singular": "decade",
+                    "plural": "decades"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "decade",
+                "label": {
+                    "singular": "vuosikymmen",
+                    "plural": "vuosikymmenet"
+                },
+                "roots": "vuosi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "decade",
+                "label": {
+                    "singular": "het decennium",
+                    "plural": "de decennia"
+                }
+            }
+        ]
+    }
+}

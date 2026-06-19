@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "movie theater": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "movie theater",
+                "label": {
+                    "singular": "movie theater",
+                    "plural": "movie theaters"
+                },
+                "root": [
+                    "movie",
+                    "theater"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "movie theater",
+                "label": {
+                    "singular": "elokuvateatteri",
+                    "plural": "elokuvateatterit"
+                },
+                "roots": [
+                    "elokuva",
+                    "teatteri"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "movie theater",
+                "label": {
+                    "singular": "de bioscoop",
+                    "plural": "de bioscopen"
+                }
+            }
+        ]
+    }
+}

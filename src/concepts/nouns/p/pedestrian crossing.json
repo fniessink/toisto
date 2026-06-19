@@ -1,0 +1,31 @@
+{
+    "concepts": {
+        "pedestrian crossing": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pedestrian crossing",
+                "label": "pedestrian crossing",
+                "roots": "pedestrian"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pedestrian crossing",
+                "label": "suojatie",
+                "roots": "tie"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pedestrian crossing",
+                "label": "het zebrapad",
+                "roots": [
+                    "de zebra",
+                    "het pad"
+                ]
+            }
+        ]
+    }
+}

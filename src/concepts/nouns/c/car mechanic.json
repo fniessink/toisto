@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "car mechanic": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "car mechanic",
+                "label": "car mechanic",
+                "roots": "car"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "car mechanic",
+                "label": "automekaanikko",
+                "roots": "auto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "car mechanic",
+                "label": "de automonteur",
+                "roots": "de auto"
+            }
+        ]
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "wound": {
+            "involves": "patient"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wound",
+                "label": {
+                    "singular": "wound",
+                    "plural": "wounds"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wound",
+                "label": {
+                    "singular": "haava",
+                    "plural": "haavat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wound",
+                "label": {
+                    "singular": "de wond",
+                    "plural": "de wonden"
+                }
+            }
+        ]
+    }
+}

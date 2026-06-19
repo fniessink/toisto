@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "health": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "health",
+                "label": "health"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "health",
+                "label": "terveys"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "health",
+                "label": "de gezondheid"
+            }
+        ]
+    }
+}

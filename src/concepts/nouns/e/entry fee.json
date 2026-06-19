@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "entry fee": {
+            "hypernym": "price"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "entry fee",
+                "label": "entry fee"
+            },
+            {
+                "concept": "entry fee",
+                "label": "entrance fee"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "entry fee",
+                "label": "pääsymaksu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "entry fee",
+                "label": "de toegangsprijs",
+                "roots": "de prijs"
+            }
+        ]
+    }
+}

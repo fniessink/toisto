@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "sock": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sock",
+                "label": {
+                    "singular": "sock",
+                    "plural": "socks"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sock",
+                "label": {
+                    "singular": "sukka",
+                    "plural": "sukat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sock",
+                "label": {
+                    "singular": "de sok",
+                    "plural": "de sokken"
+                }
+            }
+        ]
+    }
+}

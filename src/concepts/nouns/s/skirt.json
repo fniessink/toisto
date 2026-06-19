@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "skirt": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "skirt",
+                "label": {
+                    "singular": "skirt",
+                    "plural": "skirts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "skirt",
+                "label": {
+                    "singular": "hame",
+                    "plural": "hameet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "skirt",
+                "label": {
+                    "singular": "de rok",
+                    "plural": "de rokken"
+                }
+            }
+        ]
+    }
+}

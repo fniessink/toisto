@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "electrician": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "electrician",
+                "label": "electrician"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "electrician",
+                "label": "sähköasentaja"
+            },
+            {
+                "concept": "electrician",
+                "label": "sähkömies",
+                "roots": "mies"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "electrician",
+                "label": "de elektricien"
+            }
+        ]
+    }
+}

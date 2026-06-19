@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "helicopter": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "helicopter",
+                "label": "helicopter"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "helicopter",
+                "label": "helikopteri"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "helicopter",
+                "label": "de helikopter"
+            }
+        ]
+    }
+}

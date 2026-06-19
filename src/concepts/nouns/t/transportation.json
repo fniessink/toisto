@@ -1,0 +1,53 @@
+{
+    "concepts": {
+        "means of transportation": {},
+        "public transportation": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "means of transportation",
+                "label": "means of transportation"
+            },
+            {
+                "concept": "public transportation",
+                "label": [
+                    "public transportation",
+                    "public transport"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "means of transportation",
+                "label": {
+                    "singular": "kulkuväline",
+                    "plural": "kulkuvälineet"
+                }
+            },
+            {
+                "concept": "public transportation",
+                "label": "joukkoliikenne"
+            },
+            {
+                "concept": "public transportation",
+                "label": "julkinen liikenne"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "means of transportation",
+                "label": {
+                    "singular": "het vervoersmiddel",
+                    "plural": "de vervoersmiddelen"
+                }
+            },
+            {
+                "concept": "public transportation",
+                "label": "het openbaar vervoer"
+            }
+        ]
+    }
+}

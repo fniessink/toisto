@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "at day": {
+            "hypernym": "time of day"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "at day",
+                "label": "at day",
+                "roots": "day"
+            },
+            {
+                "concept": "at day",
+                "label": "in the daytime"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "at day",
+                "label": "päivällä",
+                "roots": "päivä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "at day",
+                "label": "overdag",
+                "roots": "de dag"
+            }
+        ]
+    }
+}

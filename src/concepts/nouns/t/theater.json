@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "theater": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "theater",
+                "label": {
+                    "singular": "theater",
+                    "plural": "theaters"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "theater",
+                "label": {
+                    "singular": "teatteri",
+                    "plural": "teatterit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "theater",
+                "label": {
+                    "singular": "het theater",
+                    "plural": "de theaters"
+                }
+            }
+        ]
+    }
+}

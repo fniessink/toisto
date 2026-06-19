@@ -1,0 +1,33 @@
+{
+    "concepts": {
+        "farmer": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "farmer",
+                "label": "farmer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "farmer",
+                "label": "maanviljelijä",
+                "roots": "maa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "farmer",
+                "label": "de boer"
+            },
+            {
+                "concept": "farmer",
+                "label": "de landbouwer",
+                "roots": "het land"
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "pain": {
+            "involves": "patient"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pain",
+                "label": {
+                    "singular": "pain",
+                    "plural": "pains"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pain",
+                "label": {
+                    "singular": "kipu",
+                    "plural": "kivut"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "then": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "then",
+                "label": "then"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "then",
+                "label": "sitten"
+            },
+            {
+                "concept": "then",
+                "label": "sit",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "then",
+                "label": "dan"
+            }
+        ]
+    }
+}

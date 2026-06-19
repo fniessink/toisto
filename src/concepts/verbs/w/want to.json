@@ -1,0 +1,78 @@
+{
+    "concepts": {
+        "to want to": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "to want to",
+                "label": {
+                    "singular": {
+                        "first person": "I want to paint the house.",
+                        "second person": "You want to paint the house.",
+                        "third person": {
+                            "feminine": "She wants to paint the house.",
+                            "masculine": "He wants to paint the house."
+                        }
+                    },
+                    "plural": {
+                        "first person": "We want to paint the house.",
+                        "second person": "You want to paint the house.",
+                        "third person": "They want to paint the house."
+                    }
+                },
+                "roots": [
+                    "to paint",
+                    "house"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "to want to",
+                "label": {
+                    "singular": {
+                        "first person": "Minä haluan maalata talon.",
+                        "second person": "Sinä haluat maalata talon.",
+                        "third person": "Hän haluaa maalata talon."
+                    },
+                    "plural": {
+                        "first person": "Me haluamme maalata talon.",
+                        "second person": "Te haluatte maalata talon.",
+                        "third person": "He haluavat maalata talon."
+                    }
+                },
+                "roots": [
+                    "haluta",
+                    "maalata",
+                    "talo"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "to want to",
+                "label": {
+                    "singular": {
+                        "first person": "Ik wil het huis schilderen.",
+                        "second person": "Jij wilt het huis schilderen.",
+                        "third person": {
+                            "feminine": "Zij wil het huis schilderen.",
+                            "masculine": "Hij wil het huis schilderen."
+                        }
+                    },
+                    "plural": {
+                        "first person": "Wij willen het huis schilderen.",
+                        "second person": "Jullie willen het huis schilderen.",
+                        "third person": "Zij willen het huis schilderen."
+                    }
+                },
+                "roots": [
+                    "willen",
+                    "schilderen",
+                    "het huis"
+                ]
+            }
+        ]
+    }
+}

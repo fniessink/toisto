@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "fire": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "fire",
+                    "plural": "fires"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "tuli",
+                    "plural": "tulet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fire",
+                "label": {
+                    "singular": "het vuur",
+                    "plural": "de vuren"
+                }
+            }
+        ]
+    }
+}

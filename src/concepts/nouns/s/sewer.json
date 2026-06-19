@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "sewer": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sewer",
+                "label": "sewer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sewer",
+                "label": "ompelija"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sewer",
+                "label": "de naaister"
+            }
+        ]
+    }
+}

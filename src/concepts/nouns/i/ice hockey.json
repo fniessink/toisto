@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "ice hockey": {
+            "hypernym": "sport"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ice hockey",
+                "label": "ice hockey",
+                "roots": "ice"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ice hockey",
+                "label": "jääkiekko",
+                "roots": "jää"
+            },
+            {
+                "concept": "ice hockey",
+                "label": "lätkä",
+                "colloquial": true
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ice hockey",
+                "label": "het ijshockey",
+                "roots": "het ijs"
+            }
+        ]
+    }
+}

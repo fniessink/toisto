@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "underpants": {
+            "hypernym": "underwear"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "underpants",
+                "label": "underpants"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "underpants",
+                "label": "alushousut",
+                "roots": "housut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "underpants",
+                "label": {
+                    "singular": "de onderbroek",
+                    "plural": "de onderbroeken"
+                },
+                "roots": "de broek"
+            }
+        ]
+    }
+}

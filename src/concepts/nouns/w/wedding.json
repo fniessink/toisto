@@ -1,0 +1,78 @@
+{
+    "concepts": {
+        "wedding": {},
+        "wedding couple": {},
+        "wedding ring": {},
+        "wedding waltz": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "wedding",
+                "label": "wedding"
+            },
+            {
+                "concept": "wedding couple",
+                "label": "wedding couple",
+                "roots": "wedding"
+            },
+            {
+                "concept": "wedding ring",
+                "label": "wedding ring",
+                "roots": "wedding"
+            },
+            {
+                "concept": "wedding waltz",
+                "label": "wedding waltz",
+                "roots": "wedding"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "wedding",
+                "label": "häät"
+            },
+            {
+                "concept": "wedding couple",
+                "label": "hääpari",
+                "roots": [
+                    "häät",
+                    "pari"
+                ]
+            },
+            {
+                "concept": "wedding ring",
+                "label": "vihkisormus"
+            },
+            {
+                "concept": "wedding waltz",
+                "label": "häävalssi",
+                "roots": "häät"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "wedding",
+                "label": "de bruiloft"
+            },
+            {
+                "concept": "wedding",
+                "label": "de trouwerij"
+            },
+            {
+                "concept": "wedding couple",
+                "label": "het bruidspaar",
+                "roots": "het paar"
+            },
+            {
+                "concept": "wedding ring",
+                "label": "de trouwring"
+            },
+            {
+                "concept": "wedding waltz",
+                "label": "de bruiloftswals",
+                "roots": "de bruiloft"
+            }
+        ]
+    }
+}

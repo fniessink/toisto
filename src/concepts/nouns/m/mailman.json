@@ -1,0 +1,33 @@
+{
+    "concepts": {
+        "mailman": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "mailman",
+                "label": "mailman",
+                "roots": [
+                    "mail",
+                    "man"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "mailman",
+                "label": "postinjakaja",
+                "roots": "posti"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "mailman",
+                "label": "de postbode",
+                "roots": "de post"
+            }
+        ]
+    }
+}

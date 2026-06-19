@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "turn right": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "turn right",
+                "label": "Turn right."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "turn right",
+                "label": "Käänny oikealle."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "turn right",
+                "label": "Sla rechts af."
+            }
+        ]
+    }
+}

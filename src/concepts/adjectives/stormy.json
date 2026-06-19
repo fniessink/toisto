@@ -1,0 +1,46 @@
+{
+    "concepts": {
+        "stormy": {
+            "example": "it is stormy"
+        },
+        "it is stormy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "stormy",
+                "label": "stormy",
+                "roots": "storm"
+            },
+            {
+                "concept": "it is stormy",
+                "label": "It is stormy.",
+                "roots": "storm"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "stormy",
+                "label": "myrskyinen",
+                "roots": "myrsky"
+            },
+            {
+                "concept": "it is stormy",
+                "label": "On myrskyistä.",
+                "roots": "myrskyinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "stormy",
+                "label": "stormachtig",
+                "roots": "de storm"
+            },
+            {
+                "concept": "it is stormy",
+                "label": "Het is stormachtig.",
+                "roots": "stormachtig"
+            }
+        ]
+    }
+}

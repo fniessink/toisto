@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "hour": {
+            "holonym": "day"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hour",
+                "label": {
+                    "singular": "hour",
+                    "plural": "hours"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hour",
+                "label": {
+                    "singular": "tunti",
+                    "plural": "tunnit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hour",
+                "label": {
+                    "singular": "het uur",
+                    "plural": "de uren"
+                }
+            }
+        ]
+    }
+}

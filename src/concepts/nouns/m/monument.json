@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "monument": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "monument",
+                "label": {
+                    "singular": "monument",
+                    "plural": "monuments"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "monument",
+                "label": {
+                    "singular": "monumentti",
+                    "plural": "monumentit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "monument",
+                "label": {
+                    "singular": "het monument",
+                    "plural": "de monumenten"
+                }
+            }
+        ]
+    }
+}

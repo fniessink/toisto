@@ -1,0 +1,41 @@
+{
+    "concepts": {
+        "elevator": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "elevator",
+                    "plural": "elevators"
+                }
+            },
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "lift",
+                    "plural": "lifts"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "hissi",
+                    "plural": "hissit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "elevator",
+                "label": {
+                    "singular": "de lift",
+                    "plural": "de liften"
+                }
+            }
+        ]
+    }
+}

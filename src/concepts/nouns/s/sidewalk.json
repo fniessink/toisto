@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "sidewalk": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "sidewalk",
+                "label": {
+                    "singular": "sidewalk",
+                    "plural": "sidewalks"
+                },
+                "roots": "to walk"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "sidewalk",
+                "label": {
+                    "singular": "jalkakäytävä",
+                    "plural": "jalkakäytävät"
+                },
+                "roots": "jalka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "sidewalk",
+                "label": {
+                    "singular": "de stoep",
+                    "plural": "de stoepen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "concepts": {
+        "dress": {
+            "hypernym": "clothes"
+        },
+        "wedding dress": {
+            "hypernym": "dress"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dress",
+                "label": {
+                    "singular": "dress",
+                    "plural": "dresses"
+                }
+            },
+            {
+                "concept": "wedding dress",
+                "label": "wedding dress",
+                "roots": [
+                    "wedding",
+                    "dress"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dress",
+                "label": {
+                    "singular": "mekko",
+                    "plural": "mekot"
+                }
+            },
+            {
+                "concept": "wedding dress",
+                "label": "hääpuku",
+                "roots": [
+                    "häät",
+                    "puku"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dress",
+                "label": {
+                    "singular": "de jurk",
+                    "plural": "de jurken"
+                }
+            },
+            {
+                "concept": "wedding dress",
+                "label": "de bruidsjurk",
+                "roots": "de jurk"
+            }
+        ]
+    }
+}

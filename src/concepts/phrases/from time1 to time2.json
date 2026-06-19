@@ -1,0 +1,108 @@
+{
+    "concepts": {
+        "from 3-5": {},
+        "from June to August": {},
+        "from Monday to Friday": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "from 3-5",
+                "label": [
+                    "from three o'clock to five o'clock",
+                    "from three to five"
+                ],
+                "roots": [
+                    "three",
+                    "five",
+                    "clock"
+                ]
+            },
+            {
+                "concept": "from June to August",
+                "label": "from June to August",
+                "roots": [
+                    "June",
+                    "August"
+                ]
+            },
+            {
+                "concept": "from Monday to Friday",
+                "label": {
+                    "full form": "from Monday to Friday",
+                    "abbreviation": "Mon-Fri"
+                },
+                "roots": [
+                    "Monday",
+                    "Friday"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "from 3-5",
+                "label": [
+                    "kello kolmesta kello viiteen",
+                    "kolmesta viiteen"
+                ],
+                "roots": [
+                    "kello",
+                    "kolme",
+                    "viisi"
+                ]
+            },
+            {
+                "concept": "from June to August",
+                "label": "kesäkuusta elokuun",
+                "roots": [
+                    "kesäkuu",
+                    "elokuu"
+                ]
+            },
+            {
+                "concept": "from Monday to Friday",
+                "label": {
+                    "full form": "maanantaista perjantaihin",
+                    "abbreviation": "ma-pe"
+                },
+                "roots": [
+                    "maanantai",
+                    "perjantai"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "from 3-5",
+                "label": [
+                    "van drie uur tot vijf uur",
+                    "van drie tot vijf"
+                ],
+                "roots": [
+                    "drie",
+                    "vijf",
+                    "het uur"
+                ]
+            },
+            {
+                "concept": "from June to August",
+                "label": "van juni tot augustus",
+                "roots": [
+                    "juni",
+                    "augustus"
+                ]
+            },
+            {
+                "concept": "from Monday to Friday",
+                "label": {
+                    "full form": "van maandag tot vrijdag",
+                    "abbreviation": "ma-vr"
+                },
+                "roots": [
+                    "maandag",
+                    "vrijdag"
+                ]
+            }
+        ]
+    }
+}

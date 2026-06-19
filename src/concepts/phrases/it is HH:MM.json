@@ -1,0 +1,202 @@
+{
+    "concepts": {
+        "it is 10:00": {},
+        "it is 2:30": {},
+        "it is 3:15": {},
+        "it is 3:45": {},
+        "it is 6:20": {},
+        "it is 6:40": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "it is 10:00",
+                "label": "It is ten o'clock.",
+                "roots": "clock"
+            },
+            {
+                "concept": "it is 2:30",
+                "label": "It is half past two.",
+                "roots": "two"
+            },
+            {
+                "concept": "it is 3:15",
+                "label": "It is a quarter past three.",
+                "roots": [
+                    "past",
+                    "three"
+                ]
+            },
+            {
+                "concept": "it is 3:15",
+                "label": "It is a quarter after three.",
+                "roots": [
+                    "after",
+                    "three"
+                ]
+            },
+            {
+                "concept": "it is 3:45",
+                "label": "It is a quarter to four.",
+                "roots": [
+                    "to",
+                    "four"
+                ]
+            },
+            {
+                "concept": "it is 6:20",
+                "label": "It is twenty past six.",
+                "roots": [
+                    "twenty",
+                    "past",
+                    "six"
+                ]
+            },
+            {
+                "concept": "it is 6:20",
+                "label": "It is twenty after six.",
+                "roots": [
+                    "twenty",
+                    "after",
+                    "six"
+                ]
+            },
+            {
+                "concept": "it is 6:40",
+                "label": "It is twenty to seven.",
+                "roots": [
+                    "twenty",
+                    "to",
+                    "seven"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "it is 10:00",
+                "label": "Kello on kymmenen.",
+                "roots": [
+                    "kello",
+                    "kymmenen"
+                ]
+            },
+            {
+                "concept": "it is 2:30",
+                "label": "Kello on puoli kolme.",
+                "roots": [
+                    "kello",
+                    "puoli",
+                    "kolme"
+                ]
+            },
+            {
+                "concept": "it is 3:15",
+                "label": "Kello on vartin yli kolme.",
+                "roots": [
+                    "kello",
+                    "yli",
+                    "kolme"
+                ]
+            },
+            {
+                "concept": "it is 3:45",
+                "label": "Kello on varttia vaille neljä.",
+                "roots": [
+                    "kello",
+                    "neljä"
+                ]
+            },
+            {
+                "concept": "it is 6:20",
+                "label": "Kello on kuusi kaksikymmentä.",
+                "roots": [
+                    "kello",
+                    "kuusi",
+                    "kaksikymmentä"
+                ]
+            },
+            {
+                "concept": "it is 6:20",
+                "label": "Kello on kaksikymmentä yli kuusi.",
+                "roots": [
+                    "kello",
+                    "kaksikymmentä",
+                    "yli",
+                    "kuusi"
+                ]
+            },
+            {
+                "concept": "it is 6:40",
+                "label": "Kello on kuusi neljäkymmentä.",
+                "roots": [
+                    "kello",
+                    "kuusi",
+                    "neljäkymmentä"
+                ]
+            },
+            {
+                "concept": "it is 6:40",
+                "label": "Kello on kahtakymmentä vaille seitsemän.",
+                "roots": [
+                    "kello",
+                    "kaksikymmentä",
+                    "seitsemän"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "it is 10:00",
+                "label": "Het is tien uur.",
+                "roots": [
+                    "tien",
+                    "het uur"
+                ]
+            },
+            {
+                "concept": "it is 2:30",
+                "label": "Het is half drie.",
+                "roots": [
+                    "half",
+                    "drie"
+                ]
+            },
+            {
+                "concept": "it is 3:15",
+                "label": "Het is kwart over drie.",
+                "roots": [
+                    "over",
+                    "drie"
+                ]
+            },
+            {
+                "concept": "it is 3:45",
+                "label": "Het is kwart voor vier.",
+                "roots": [
+                    "voor",
+                    "vier"
+                ]
+            },
+            {
+                "concept": "it is 6:20",
+                "label": "Het is tien voor half zeven.",
+                "roots": [
+                    "tien",
+                    "voor",
+                    "half",
+                    "zeven"
+                ]
+            },
+            {
+                "concept": "it is 6:40",
+                "label": "Het is tien over half zeven.",
+                "roots": [
+                    "tien",
+                    "over",
+                    "half",
+                    "zeven"
+                ]
+            }
+        ]
+    }
+}

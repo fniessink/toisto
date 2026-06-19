@@ -1,0 +1,162 @@
+{
+    "concepts": {
+        "driver": {},
+        "truck driver": {
+            "hypernym": [
+                "driver",
+                "profession"
+            ]
+        },
+        "taxi driver": {
+            "hypernym": [
+                "driver",
+                "profession"
+            ]
+        },
+        "motorist": {
+            "hypernym": "driver",
+            "involves": "car"
+        },
+        "bus driver": {
+            "hypernym": [
+                "driver",
+                "profession"
+            ],
+            "involves": "bus"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "driver",
+                "label": "driver"
+            },
+            {
+                "concept": "truck driver",
+                "label": "truck driver",
+                "roots": [
+                    "truck",
+                    "driver"
+                ]
+            },
+            {
+                "concept": "taxi driver",
+                "label": "taxi driver",
+                "roots": [
+                    "taxi",
+                    "driver"
+                ]
+            },
+            {
+                "concept": "taxi driver",
+                "label": "cabdriver",
+                "roots": [
+                    "cab",
+                    "driver"
+                ]
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "motorist",
+                    "plural": "motorists"
+                }
+            },
+            {
+                "concept": "bus driver",
+                "label": "bus driver",
+                "roots": [
+                    "bus",
+                    "driver"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "driver",
+                "label": "kuljettaja"
+            },
+            {
+                "concept": "driver",
+                "label": "kuski"
+            },
+            {
+                "concept": "truck driver",
+                "label": "rekkakuski",
+                "roots": [
+                    "rekka-auto",
+                    "kuski"
+                ]
+            },
+            {
+                "concept": "taxi driver",
+                "label": "taksikuski",
+                "roots": [
+                    "taksi",
+                    "kuski"
+                ]
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "autoilija",
+                    "plural": "autoilijat"
+                }
+            },
+            {
+                "concept": "bus driver",
+                "label": "linja-autonkuljettaja",
+                "roots": [
+                    "linja-auto",
+                    "kuljettaja"
+                ]
+            },
+            {
+                "concept": "bus driver",
+                "label": "bussikuski",
+                "roots": [
+                    "bussi",
+                    "kuski"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "driver",
+                "label": "de chauffeur"
+            },
+            {
+                "concept": "truck driver",
+                "label": "de vrachtwagenchauffeur",
+                "roots": [
+                    "de vrachtwagen",
+                    "de chauffeur"
+                ]
+            },
+            {
+                "concept": "taxi driver",
+                "label": "de taxichauffeur",
+                "roots": [
+                    "de taxi",
+                    "de chauffeur"
+                ]
+            },
+            {
+                "concept": "motorist",
+                "label": {
+                    "singular": "de automobilist",
+                    "plural": "de automobilisten"
+                },
+                "roots": "de auto"
+            },
+            {
+                "concept": "bus driver",
+                "label": "de buschauffeur",
+                "roots": [
+                    "de bus",
+                    "de chauffeur"
+                ]
+            }
+        ]
+    }
+}

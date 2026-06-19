@@ -1,0 +1,33 @@
+{
+    "concepts": {
+        "meeting": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "meeting",
+                "label": "meeting"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "meeting",
+                "label": "kokous"
+            },
+            {
+                "concept": "meeting",
+                "label": "palaveri"
+            },
+            {
+                "concept": "meeting",
+                "label": "neuvottelu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "meeting",
+                "label": "de vergadering"
+            }
+        ]
+    }
+}

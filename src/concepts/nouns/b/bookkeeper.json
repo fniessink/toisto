@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "bookkeeper": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bookkeeper",
+                "label": "bookkeeper",
+                "roots": "book"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bookkeeper",
+                "label": "kirjanpitäjä",
+                "roots": "kirja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bookkeeper",
+                "label": "de boekhouder",
+                "roots": "het boek"
+            }
+        ]
+    }
+}

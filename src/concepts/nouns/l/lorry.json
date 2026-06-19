@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "lorry": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "lorry",
+                "label": "lorry"
+            },
+            {
+                "concept": "lorry",
+                "label": "truck"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "lorry",
+                "label": [
+                    "rekka-auto",
+                    "rekka"
+                ],
+                "roots": "auto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "lorry",
+                "label": "de vrachtwagen",
+                "roots": "de wagen"
+            }
+        ]
+    }
+}

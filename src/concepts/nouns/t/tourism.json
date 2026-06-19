@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "tourism": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "tourism",
+                "label": "tourism"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "tourism",
+                "label": "matkailu"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "tourism",
+                "label": "het toerisme"
+            }
+        ]
+    }
+}

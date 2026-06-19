@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "metro": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "metro",
+                    "plural": "metros"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "metro",
+                    "plural": "metrot"
+                }
+            },
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "maanalainen",
+                    "plural": "maanalaiset"
+                },
+                "roots": "maa"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "metro",
+                "label": {
+                    "singular": "de metro",
+                    "plural": "de metro's"
+                }
+            }
+        ]
+    }
+}

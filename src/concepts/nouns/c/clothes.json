@@ -1,0 +1,25 @@
+{
+    "concepts": {
+        "clothes": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "clothes",
+                "label": "clothes"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "clothes",
+                "label": "vaatteet"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "clothes",
+                "label": "de kleren"
+            }
+        ]
+    }
+}

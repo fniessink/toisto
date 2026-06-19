@@ -1,0 +1,37 @@
+{
+    "concepts": {
+        "street corner": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "street corner",
+                "label": "street corner",
+                "roots": [
+                    "street",
+                    "corner"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "street corner",
+                "label": "kadunkulma",
+                "roots": [
+                    "katu",
+                    "kulma"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "street corner",
+                "label": "de straathoek",
+                "roots": [
+                    "de straat",
+                    "de hoek"
+                ]
+            }
+        ]
+    }
+}

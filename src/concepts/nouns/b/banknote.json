@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "banknote": {
+            "hypernym": "money"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "banknote",
+                "label": [
+                    "banknote",
+                    "note"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "banknote",
+                "label": "seteli"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "banknote",
+                "label": "het bankbiljet"
+            }
+        ]
+    }
+}

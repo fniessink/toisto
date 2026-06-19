@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "veranda": {
+            "holonym": "house"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "veranda",
+                    "plural": "verandas"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "veranta",
+                    "plural": "verannat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "veranda",
+                "label": {
+                    "singular": "de veranda",
+                    "plural": "de veranda's"
+                }
+            }
+        ]
+    }
+}

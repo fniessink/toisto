@@ -1,0 +1,45 @@
+{
+    "concepts": {
+        "hospital": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hospital",
+                "label": {
+                    "singular": "hospital",
+                    "plural": "hospitals"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hospital",
+                "label": {
+                    "singular": "sairaala",
+                    "plural": "sairaalat"
+                },
+                "roots": "sairas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hospital",
+                "label": {
+                    "singular": "het ziekenhuis",
+                    "plural": "de ziekenhuizen"
+                },
+                "roots": [
+                    "ziek",
+                    "het huis"
+                ]
+            }
+        ]
+    }
+}

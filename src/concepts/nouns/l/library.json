@@ -1,0 +1,63 @@
+{
+    "concepts": {
+        "library": {
+            "example": "where is the library",
+            "hypernym": "building"
+        },
+        "where is the library": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "library",
+                "label": {
+                    "singular": "library",
+                    "plural": "libraries"
+                }
+            },
+            {
+                "concept": "where is the library",
+                "label": "Where is the library?",
+                "roots": [
+                    "Where?",
+                    "library"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "library",
+                "label": {
+                    "singular": "kirjasto",
+                    "plural": "kirjastot"
+                },
+                "roots": "kirja"
+            },
+            {
+                "concept": "where is the library",
+                "label": "Missä on kirjasto?",
+                "roots": [
+                    "Missä?",
+                    "kirjasto"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "library",
+                "label": {
+                    "singular": "de bibliotheek",
+                    "plural": "de bibliotheken"
+                }
+            },
+            {
+                "concept": "where is the library",
+                "label": "Waar is de bibliotheek?",
+                "roots": [
+                    "Waar?",
+                    "de bibliotheek"
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "place": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "place",
+                "label": {
+                    "singular": "place",
+                    "plural": "places"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "place",
+                "label": {
+                    "singular": "paikka",
+                    "plural": "paikat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "place",
+                "label": {
+                    "singular": "de plaats",
+                    "plural": "de plaatsen"
+                }
+            }
+        ]
+    }
+}

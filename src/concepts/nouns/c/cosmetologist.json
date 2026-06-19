@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "cosmetologist": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cosmetologist",
+                "label": "cosmetologist"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cosmetologist",
+                "label": "kosmetologi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cosmetologist",
+                "label": "de schoonheidsspecialist"
+            }
+        ]
+    }
+}

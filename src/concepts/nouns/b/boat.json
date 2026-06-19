@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "boat": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "boat",
+                    "plural": "boats"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "vene",
+                    "plural": "veneet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "boat",
+                "label": {
+                    "singular": "de boot",
+                    "plural": "de boten"
+                }
+            }
+        ]
+    }
+}

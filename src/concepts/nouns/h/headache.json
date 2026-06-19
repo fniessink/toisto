@@ -1,0 +1,77 @@
+{
+    "concepts": {
+        "headache": {
+            "example": "I have a headache",
+            "hypernym": [
+                "ache",
+                "pain"
+            ]
+        },
+        "I have a headache": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "headache",
+                "label": {
+                    "singular": "headache",
+                    "plural": "headaches"
+                },
+                "roots": [
+                    "head",
+                    "ache"
+                ]
+            },
+            {
+                "concept": "I have a headache",
+                "label": "I have a headache.",
+                "roots": [
+                    "I have",
+                    "headache"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "headache",
+                "label": {
+                    "singular": "päänsärky",
+                    "plural": "päänsäryt"
+                },
+                "roots": [
+                    "pää",
+                    "särky"
+                ]
+            },
+            {
+                "concept": "I have a headache",
+                "label": "Minulla on pää kipeä",
+                "roots": [
+                    "minulla on",
+                    "pää"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "headache",
+                "label": {
+                    "singular": "de hoofdpijn",
+                    "plural": "de hoofdpijnen"
+                },
+                "roots": [
+                    "het hoofd",
+                    "de pijn"
+                ]
+            },
+            {
+                "concept": "I have a headache",
+                "label": "Ik heb hoofdpijn.",
+                "roots": [
+                    "ik heb",
+                    "de hoofdpijn"
+                ]
+            }
+        ]
+    }
+}

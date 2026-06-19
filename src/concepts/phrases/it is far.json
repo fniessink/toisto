@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "it is far": {
+            "antonym": "it is near"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "it is far",
+                "label": "It is far.",
+                "roots": "far"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "it is far",
+                "label": "Se on kaukana.",
+                "roots": "kaukana"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "it is far",
+                "label": "Het is ver.",
+                "roots": "ver"
+            },
+            {
+                "concept": "it is far",
+                "label": "Het is ver weg.",
+                "roots": "ver weg"
+            }
+        ]
+    }
+}

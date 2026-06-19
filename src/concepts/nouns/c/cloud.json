@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "cloud": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cloud",
+                "label": {
+                    "singular": "cloud",
+                    "plural": "clouds"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cloud",
+                "label": {
+                    "singular": "pilvi",
+                    "plural": "pilvet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cloud",
+                "label": {
+                    "singular": "de wolk",
+                    "plural": "de wolken"
+                }
+            }
+        ]
+    }
+}

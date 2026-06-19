@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "amusement park": {
+            "hypernym": "attraction"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "amusement park",
+                "label": "amusement park",
+                "roots": "park"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "amusement park",
+                "label": "huvipuisto",
+                "roots": "puisto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "amusement park",
+                "label": "het pretpark",
+                "roots": "het park"
+            },
+            {
+                "concept": "amusement park",
+                "label": "het attractiepark",
+                "roots": "het park"
+            }
+        ]
+    }
+}

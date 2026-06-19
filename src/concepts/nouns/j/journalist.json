@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "journalist": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "journalist",
+                "label": "journalist"
+            },
+            {
+                "concept": "journalist",
+                "label": "reporter"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "journalist",
+                "label": "toimittaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "journalist",
+                "label": "de journalist"
+            },
+            {
+                "concept": "journalist",
+                "label": "de verslaggever"
+            }
+        ]
+    }
+}

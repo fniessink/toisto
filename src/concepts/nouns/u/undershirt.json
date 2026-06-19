@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "undershirt": {
+            "hypernym": "underwear"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "undershirt",
+                "label": "undershirt",
+                "roots": "shirt"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "undershirt",
+                "label": "aluspaita",
+                "roots": "paita"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "undershirt",
+                "label": "onderhemd",
+                "roots": "het hemd"
+            }
+        ]
+    }
+}

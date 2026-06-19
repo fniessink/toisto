@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "flight": {
+            "involves": "airplane"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "flight",
+                    "plural": "flights"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "lento",
+                    "plural": "lennot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "flight",
+                "label": {
+                    "singular": "de vlucht",
+                    "plural": "de vluchten"
+                }
+            }
+        ]
+    }
+}

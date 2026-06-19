@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "snowy": {
+            "roots": "snow"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "snowy",
+                "label": "snowy",
+                "roots": "snow"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "snowy",
+                "label": "luminen",
+                "roots": "lumi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "snowy",
+                "label": "besneeuwd",
+                "roots": "de sneeuw"
+            }
+        ]
+    }
+}

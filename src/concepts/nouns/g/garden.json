@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "garden": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "garden",
+                    "plural": "gardens"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "piha",
+                    "plural": "pihat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "garden",
+                "label": {
+                    "singular": "de tuin",
+                    "plural": "de tuinen"
+                }
+            }
+        ]
+    }
+}

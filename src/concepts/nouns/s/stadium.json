@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "stadium": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "stadium",
+                "label": {
+                    "singular": "stadium",
+                    "plural": "stadiums"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "stadium",
+                "label": {
+                    "singular": "stadion",
+                    "plural": "stadionit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "stadium",
+                "label": {
+                    "singular": "het stadion",
+                    "plural": "de stadions"
+                }
+            }
+        ]
+    }
+}

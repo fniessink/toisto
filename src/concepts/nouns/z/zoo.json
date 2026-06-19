@@ -1,0 +1,41 @@
+{
+    "concepts": {
+        "zoo": {
+            "hypernym": "attraction"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "zoo",
+                "label": {
+                    "singular": "zoo",
+                    "plural": "zoos"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "zoo",
+                "label": {
+                    "singular": "eläintarha",
+                    "plural": "eläintarhat"
+                },
+                "roots": "eläin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "zoo",
+                "label": {
+                    "singular": "de dierentuin",
+                    "plural": "de dierentuinen"
+                },
+                "roots": [
+                    "de dieren",
+                    "de tuin"
+                ]
+            }
+        ]
+    }
+}

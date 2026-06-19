@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "ground": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "ground",
+                    "plural": "grounds"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "maa",
+                    "plural": "maat"
+                },
+                "tip": "solid surface of the earth"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "ground",
+                "label": {
+                    "singular": "de grond",
+                    "plural": "de gronden"
+                }
+            }
+        ]
+    }
+}

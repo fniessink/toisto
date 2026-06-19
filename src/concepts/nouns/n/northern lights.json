@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "northern lights": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "northern lights",
+                "label": "northern lights"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "northern lights",
+                "label": "revontulet",
+                "roots": "tulet"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "northern lights",
+                "label": "het noorderlicht",
+                "roots": "het noorden"
+            }
+        ]
+    }
+}

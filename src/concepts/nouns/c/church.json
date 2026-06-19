@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "church": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "church",
+                "label": {
+                    "singular": "church",
+                    "plural": "churches"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "church",
+                "label": {
+                    "singular": "kirkko",
+                    "plural": "kirkot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "church",
+                "label": {
+                    "singular": "de kerk",
+                    "plural": "de kerken"
+                }
+            }
+        ]
+    }
+}

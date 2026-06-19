@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "consonant": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "consonant",
+                "label": {
+                    "singular": "consonant",
+                    "plural": "consonants"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "consonant",
+                "label": {
+                    "singular": "konsonantti",
+                    "plural": "konsonantit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "consonant",
+                "label": {
+                    "singular": "de medeklinker",
+                    "plural": "de medeklinkers"
+                },
+                "roots": "de klinker"
+            }
+        ]
+    }
+}

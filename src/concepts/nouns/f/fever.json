@@ -1,0 +1,54 @@
+{
+    "concepts": {
+        "fever": {
+            "example": "I have a fever",
+            "involves": "patient"
+        },
+        "I have a fever": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "fever",
+                "label": "fever"
+            },
+            {
+                "concept": "I have a fever",
+                "label": "I have a fever.",
+                "roots": [
+                    "I have",
+                    "fever"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "fever",
+                "label": "kuume"
+            },
+            {
+                "concept": "I have a fever",
+                "label": "Minulla on kuumetta.",
+                "cloze": "Minulla on (kuume).",
+                "roots": [
+                    "minulla on",
+                    "kuume"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "fever",
+                "label": "de koorts"
+            },
+            {
+                "concept": "I have a fever",
+                "label": "Ik heb koorts.",
+                "roots": [
+                    "ik heb",
+                    "de koorts"
+                ]
+            }
+        ]
+    }
+}

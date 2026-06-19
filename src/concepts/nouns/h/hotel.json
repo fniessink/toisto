@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "hotel": {
+            "hypernym": "building"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hotel",
+                "label": {
+                    "singular": "hotel",
+                    "plural": "hotels"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hotel",
+                "label": {
+                    "singular": "hotelli",
+                    "plural": "hotellit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hotel",
+                "label": {
+                    "singular": "het hotel",
+                    "plural": "de hotels"
+                }
+            }
+        ]
+    }
+}

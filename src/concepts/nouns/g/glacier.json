@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "glacier": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "glacier",
+                    "plural": "glaciers"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "jäätikkö",
+                    "plural": "jäätiköt"
+                },
+                "roots": "jää"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "glacier",
+                "label": {
+                    "singular": "de gletsjer",
+                    "plural": "de gletsjers"
+                }
+            }
+        ]
+    }
+}

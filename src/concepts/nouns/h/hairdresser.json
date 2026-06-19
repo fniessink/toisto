@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "hairdresser": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hairdresser",
+                "label": "hairdresser",
+                "roots": "hair"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hairdresser",
+                "label": "kampaaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hairdresser",
+                "label": "de kapper"
+            }
+        ]
+    }
+}

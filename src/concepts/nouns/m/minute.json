@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "minute": {
+            "holonym": "hour"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "minute",
+                "label": {
+                    "singular": "minute",
+                    "plural": "minutes"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "minute",
+                "label": {
+                    "singular": "minuutti",
+                    "plural": "minuutit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "minute",
+                "label": {
+                    "singular": "de minuut",
+                    "plural": "de minuten"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "concepts": {
+        "straight ahead": {},
+        "go straight ahead on Mariankatu": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "straight ahead",
+                "label": "straight ahead"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Go straight ahead on Mariankatu."
+            }
+        ],
+        "fi": [
+            {
+                "concept": "straight ahead",
+                "label": "suoraan eteenpäin"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Mene Mariankatua suoraan eteenpäin.",
+                "roots": "suoraan eteenpäin"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "straight ahead",
+                "label": "rechtdoor"
+            },
+            {
+                "concept": "go straight ahead on Mariankatu",
+                "label": "Ga rechtdoor op de Mariankatu.",
+                "roots": "rechtdoor"
+            }
+        ]
+    }
+}

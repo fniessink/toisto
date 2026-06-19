@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "parking spot": {
+            "hypernym": "parking"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "parking spot",
+                "label": "parking spot",
+                "roots": "parking"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "parking spot",
+                "label": "parkkipaikka",
+                "roots": "paikka"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "parking spot",
+                "label": "de parkeerplaats",
+                "roots": "de plaats"
+            }
+        ]
+    }
+}

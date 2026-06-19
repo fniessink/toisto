@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "hat": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "hat",
+                "label": {
+                    "singular": "hat",
+                    "plural": "hats"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "hat",
+                "label": {
+                    "singular": "hattu",
+                    "plural": "hatut"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "hat",
+                "label": {
+                    "singular": "de hoed",
+                    "plural": "de hoeden"
+                }
+            }
+        ]
+    }
+}

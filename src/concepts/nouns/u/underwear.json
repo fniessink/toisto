@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "underwear": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "underwear",
+                "label": "underwear"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "underwear",
+                "label": "alusvaatteet",
+                "roots": "vaatteet"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "underwear",
+                "label": "het ondergoed"
+            }
+        ]
+    }
+}

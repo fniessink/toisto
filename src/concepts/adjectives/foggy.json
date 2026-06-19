@@ -1,0 +1,46 @@
+{
+    "concepts": {
+        "foggy": {
+            "example": "it is foggy"
+        },
+        "it is foggy": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "foggy",
+                "label": "foggy",
+                "roots": "fog"
+            },
+            {
+                "concept": "it is foggy",
+                "label": "It is foggy.",
+                "roots": "foggy"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "foggy",
+                "label": "sumuinen",
+                "roots": "sumu"
+            },
+            {
+                "concept": "it is foggy",
+                "label": "On sumuista.",
+                "roots": "sumuinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "foggy",
+                "label": "mistig",
+                "roots": "de mist"
+            },
+            {
+                "concept": "it is foggy",
+                "label": "Het is mistig.",
+                "roots": "mistig"
+            }
+        ]
+    }
+}

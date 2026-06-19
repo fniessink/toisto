@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "physician": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "physician",
+                "label": "doctor"
+            },
+            {
+                "concept": "physician",
+                "label": "physician"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "physician",
+                "label": "lääkäri"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "physician",
+                "label": "de arts"
+            },
+            {
+                "concept": "physician",
+                "label": "de dokter"
+            }
+        ]
+    }
+}

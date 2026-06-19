@@ -1,0 +1,30 @@
+{
+    "concepts": {
+        "trousers": {
+            "hypernym": "clothes"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "trousers",
+                "label": "trousers"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "trousers",
+                "label": "housut"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "trousers",
+                "label": {
+                    "singular": "de broek",
+                    "plural": "de broeken"
+                }
+            }
+        ]
+    }
+}

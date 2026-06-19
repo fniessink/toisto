@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "singer": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "singer",
+                "label": "singer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "singer",
+                "label": "laulaja"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "singer",
+                "label": "de zanger"
+            }
+        ]
+    }
+}

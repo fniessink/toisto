@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "police officer": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "police officer",
+                "label": "police officer"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "police officer",
+                "label": "poliisi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "police officer",
+                "label": "de politieagent"
+            }
+        ]
+    }
+}

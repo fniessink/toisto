@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "price": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "price",
+                    "plural": "prices"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "hinta",
+                    "plural": "hinnat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "price",
+                "label": {
+                    "singular": "de prijs",
+                    "plural": "de prijzen"
+                }
+            }
+        ]
+    }
+}

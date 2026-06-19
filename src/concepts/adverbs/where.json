@@ -1,0 +1,140 @@
+{
+    "concepts": {
+        "where": {
+            "hypernym": "question word",
+            "example": [
+                "where is the water",
+                "where there",
+                "where is the toilet"
+            ]
+        },
+        "where is the water": {},
+        "where there": {},
+        "where is the toilet": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "where",
+                "label": "Where?"
+            },
+            {
+                "concept": "where is the water",
+                "label": "Where is the water?",
+                "roots": [
+                    "Where?",
+                    "water"
+                ]
+            },
+            {
+                "concept": "where there",
+                "label": "Where? There!",
+                "roots": [
+                    "Where?",
+                    "there"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Where is the toilet?",
+                "roots": [
+                    "Where?",
+                    "toilet"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Where is the restroom?",
+                "roots": [
+                    "Where?",
+                    "restroom"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "where",
+                "label": "Missä?"
+            },
+            {
+                "concept": "where is the water",
+                "label": [
+                    "Missä vesi on?",
+                    "Missä on vesi?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "vesi"
+                ]
+            },
+            {
+                "concept": "where there",
+                "label": "Missä? Tuossa!",
+                "roots": [
+                    "Missä?",
+                    "tuossa"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": [
+                    "Missä on wc?",
+                    "Missä wc on?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "wc"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": [
+                    "Missä on vessa?",
+                    "Missä vessa on?"
+                ],
+                "roots": [
+                    "Missä?",
+                    "vessa"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "where",
+                "label": "Waar?"
+            },
+            {
+                "concept": "where is the water",
+                "label": "Waar is het water?",
+                "roots": [
+                    "Waar?",
+                    "het water"
+                ]
+            },
+            {
+                "concept": "where there",
+                "label": "Waar? Daar!",
+                "roots": [
+                    "Waar?",
+                    "daar"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Waar is de wc?",
+                "roots": [
+                    "Waar?",
+                    "de wc"
+                ]
+            },
+            {
+                "concept": "where is the toilet",
+                "label": "Waar is het toilet?",
+                "roots": [
+                    "Waar?",
+                    "het toilet"
+                ]
+            }
+        ]
+    }
+}

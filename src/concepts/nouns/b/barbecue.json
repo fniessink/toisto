@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "barbecue": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "barbecue",
+                    "plural": "barbecues"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "grilli",
+                    "plural": "grillit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "barbecue",
+                "label": {
+                    "singular": "de barbecue",
+                    "plural": "de barbecues"
+                }
+            }
+        ]
+    }
+}

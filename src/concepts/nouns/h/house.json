@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "house": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "house",
+                    "plural": "houses"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "talo",
+                    "plural": "talot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "house",
+                "label": {
+                    "singular": "het huis",
+                    "plural": "de huizen"
+                }
+            }
+        ]
+    }
+}

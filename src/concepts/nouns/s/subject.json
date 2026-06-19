@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "subject": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "subject",
+                "label": {
+                    "singular": "subject",
+                    "plural": "subjects"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "subject",
+                "label": {
+                    "singular": "subjekti",
+                    "plural": "subjektit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "subject",
+                "label": {
+                    "singular": "het onderwerp",
+                    "plural": "de onderwerpen"
+                }
+            }
+        ]
+    }
+}

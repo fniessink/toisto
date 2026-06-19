@@ -1,0 +1,51 @@
+{
+    "concepts": {
+        "clock": {},
+        "alarm clock": {
+            "hypernym": "clock"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "clock",
+                "label": {
+                    "singular": "clock",
+                    "plural": "clocks"
+                }
+            },
+            {
+                "concept": "alarm clock",
+                "label": "alarm clock",
+                "roots": "clock"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "clock",
+                "label": {
+                    "singular": "kello",
+                    "plural": "kellot"
+                }
+            },
+            {
+                "concept": "alarm clock",
+                "label": "herätyskello",
+                "roots": "kello"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "clock",
+                "label": {
+                    "singular": "de klok",
+                    "plural": "de klokken"
+                }
+            },
+            {
+                "concept": "alarm clock",
+                "label": "de wekker"
+            }
+        ]
+    }
+}

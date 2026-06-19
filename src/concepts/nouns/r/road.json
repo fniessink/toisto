@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "road": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "road",
+                "label": {
+                    "singular": "road",
+                    "plural": "roads"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "road",
+                "label": {
+                    "singular": "tie",
+                    "plural": "tiet"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "road",
+                "label": {
+                    "singular": "de weg",
+                    "plural": "de wegen"
+                }
+            }
+        ]
+    }
+}

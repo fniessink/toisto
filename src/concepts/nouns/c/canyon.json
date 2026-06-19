@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "canyon": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "canyon",
+                    "plural": "canyons"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "rotko",
+                    "plural": "rotkot"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "canyon",
+                "label": {
+                    "singular": "de kloof",
+                    "plural": "de kloven"
+                }
+            }
+        ]
+    }
+}

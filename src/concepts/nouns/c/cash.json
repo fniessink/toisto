@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "cash": {
+            "hypernym": "money"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "cash",
+                "label": "cash"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "cash",
+                "label": "käteinen"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "cash",
+                "label": "contant"
+            }
+        ]
+    }
+}

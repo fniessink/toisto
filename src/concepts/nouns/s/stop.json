@@ -1,0 +1,70 @@
+{
+    "concepts": {
+        "stop": {},
+        "bus stop": {
+            "hypernym": "stop",
+            "involves": "bus"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "stop",
+                    "plural": "stops"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "bus stop",
+                "roots": [
+                    "bus",
+                    "stop"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "pysäkki",
+                    "plural": "pysäkit"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "linja-autopysäkki",
+                "roots": [
+                    "linja-auto",
+                    "pysäkki"
+                ]
+            },
+            {
+                "concept": "bus stop",
+                "label": "bussipysäkki",
+                "roots": [
+                    "bussi",
+                    "pysäkki"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "stop",
+                "label": {
+                    "singular": "de halte",
+                    "plural": "de haltes"
+                }
+            },
+            {
+                "concept": "bus stop",
+                "label": "de bushalte",
+                "roots": [
+                    "de bus",
+                    "de halte"
+                ]
+            }
+        ]
+    }
+}

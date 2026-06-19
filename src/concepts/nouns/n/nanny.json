@@ -1,0 +1,32 @@
+{
+    "concepts": {
+        "nanny": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "nanny",
+                "label": "nanny"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "nanny",
+                "label": "lastenhoitaja",
+                "roots": "lapsi"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nanny",
+                "label": {
+                    "feminine": "de kinderverzorgster",
+                    "masculine": "de kinderverzorger"
+                },
+                "roots": "het kind"
+            }
+        ]
+    }
+}

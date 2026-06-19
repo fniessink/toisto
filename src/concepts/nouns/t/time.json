@@ -1,0 +1,87 @@
+{
+    "concepts": {
+        "time": {},
+        "free time": {
+            "hypernym": "time"
+        },
+        "time of day": {
+            "hypernym": "time"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "time",
+                "label": {
+                    "singular": "time",
+                    "plural": "times"
+                }
+            },
+            {
+                "concept": "free time",
+                "label": "free time",
+                "roots": "time"
+            },
+            {
+                "concept": "free time",
+                "label": "spare time",
+                "roots": "time"
+            },
+            {
+                "concept": "time of day",
+                "label": "time of day",
+                "roots": [
+                    "time",
+                    "day"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "time",
+                "label": {
+                    "singular": "aika",
+                    "plural": "ajat"
+                }
+            },
+            {
+                "concept": "free time",
+                "label": "vapaa-aika",
+                "roots": [
+                    "vapaa",
+                    "aika"
+                ]
+            },
+            {
+                "concept": "time of day",
+                "label": "vuorokaudenaika",
+                "roots": [
+                    "vuorokausi",
+                    "aika"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "time",
+                "label": {
+                    "singular": "de tijd",
+                    "plural": "de tijden"
+                }
+            },
+            {
+                "concept": "free time",
+                "label": "de vrije tijd",
+                "roots": [
+                    "vrij",
+                    "de tijd"
+                ]
+            },
+            {
+                "concept": "time of day",
+                "label": "tijdstip van de dag",
+                "roots": "de dag"
+            }
+        ]
+    }
+}

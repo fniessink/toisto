@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "airplane": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": [
+                        "airplane",
+                        "plane"
+                    ],
+                    "plural": [
+                        "airplanes",
+                        "planes"
+                    ]
+                },
+                "roots": "air"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": "lentokone",
+                    "plural": "lentokoneet"
+                },
+                "roots": "lento"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "airplane",
+                "label": {
+                    "singular": "het vliegtuig",
+                    "plural": "de vliegtuigen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "concepts": {
+        "bus": {
+            "hypernym": "means of transportation"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "bus",
+                    "plural": "buses"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "bussi",
+                    "plural": "bussit"
+                }
+            },
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "linja-auto",
+                    "plural": "linja-autot"
+                },
+                "roots": "auto"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bus",
+                "label": {
+                    "singular": "de bus",
+                    "plural": "de bussen"
+                }
+            }
+        ]
+    }
+}

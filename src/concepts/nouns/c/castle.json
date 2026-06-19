@@ -1,0 +1,39 @@
+{
+    "concepts": {
+        "castle": {
+            "hypernym": [
+                "attraction",
+                "building"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "castle",
+                "label": {
+                    "singular": "castle",
+                    "plural": "castles"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "castle",
+                "label": {
+                    "singular": "linna",
+                    "plural": "linnat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "castle",
+                "label": {
+                    "singular": "het kasteel",
+                    "plural": "de kastelen"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "concepts": {
+        "building": {
+            "example": "that building is a church"
+        },
+        "that building is a church": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "building",
+                "label": {
+                    "singular": "building",
+                    "plural": "buildings"
+                }
+            },
+            {
+                "concept": "that building is a church",
+                "label": "That building is a church.",
+                "roots": [
+                    "building",
+                    "church"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "building",
+                "label": {
+                    "singular": "rakennus",
+                    "plural": "rakennukset"
+                }
+            },
+            {
+                "concept": "that building is a church",
+                "label": "Tuo rakennus on kirkko.",
+                "roots": [
+                    "rakennus",
+                    "kirkko"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "building",
+                "label": {
+                    "singular": "het gebouw",
+                    "plural": "de gebouwen"
+                }
+            },
+            {
+                "concept": "that building is a church",
+                "label": "Dat gebouw is een kerk.",
+                "roots": [
+                    "het gebouw",
+                    "de kerk"
+                ]
+            }
+        ]
+    }
+}

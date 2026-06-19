@@ -1,0 +1,31 @@
+{
+    "concepts": {
+        "staff manager": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "staff manager",
+                "label": "staff manager"
+            },
+            {
+                "concept": "staff manager",
+                "label": "personnel manager"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "staff manager",
+                "label": "henkilöstöpäällikkö"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "staff manager",
+                "label": "de personeelschef"
+            }
+        ]
+    }
+}

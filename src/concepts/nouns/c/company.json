@@ -1,0 +1,94 @@
+{
+    "concepts": {
+        "company": {},
+        "llc": {
+            "hypernym": "company"
+        },
+        "insurance company": {
+            "hypernym": "company"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "company",
+                "label": "company"
+            },
+            {
+                "concept": "company",
+                "label": "firm"
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "limited liability company",
+                    "abbreviation": "LLC"
+                }
+            },
+            {
+                "concept": "insurance company",
+                "label": "insurance company",
+                "roots": [
+                    "insurance",
+                    "company"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "company",
+                "label": "yritys"
+            },
+            {
+                "concept": "company",
+                "label": "yhtiö"
+            },
+            {
+                "concept": "company",
+                "label": "firma",
+                "colloquial": true
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "osakeyhtiö",
+                    "abbreviation": "oy"
+                }
+            },
+            {
+                "concept": "insurance company",
+                "label": "vakuutusyhtiö",
+                "roots": [
+                    "vakuutus",
+                    "yhtiö"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "company",
+                "label": "de onderneming"
+            },
+            {
+                "concept": "company",
+                "label": "de firma"
+            },
+            {
+                "concept": "company",
+                "label": "het bedrijf"
+            },
+            {
+                "concept": "llc",
+                "label": {
+                    "full form": "de naamloze vennootschap",
+                    "abbreviation": "de NV"
+                }
+            },
+            {
+                "concept": "insurance company",
+                "label": "de verzekeringsmaatschappij",
+                "roots": "de verzekering"
+            }
+        ]
+    }
+}

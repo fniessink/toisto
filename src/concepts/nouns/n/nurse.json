@@ -1,0 +1,28 @@
+{
+    "concepts": {
+        "nurse": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "nurse",
+                "label": "nurse"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "nurse",
+                "label": "sairaanhoitaja",
+                "roots": "sairas"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "nurse",
+                "label": "de verpleegkundige"
+            }
+        ]
+    }
+}

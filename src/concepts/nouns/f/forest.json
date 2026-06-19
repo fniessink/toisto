@@ -1,0 +1,84 @@
+{
+    "concepts": {
+        "forest": {
+            "example": "we walk in the forest"
+        },
+        "we walk in the forest": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "forest",
+                    "plural": "forests"
+                }
+            },
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "wood",
+                    "plural": "woods"
+                }
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "We walk in the forest.",
+                "roots": [
+                    "we walk",
+                    "forest"
+                ]
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "We walk in the wood.",
+                "roots": [
+                    "we walk",
+                    "wood"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "metsä",
+                    "plural": "metsät"
+                }
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "Me kävelemme metsässä.",
+                "cloze": "Me kävelemme (metsä).",
+                "roots": [
+                    "me kävelemme",
+                    "metsä"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "het bos",
+                    "plural": "de bossen"
+                }
+            },
+            {
+                "concept": "forest",
+                "label": {
+                    "singular": "het woud",
+                    "plural": "de wouden"
+                }
+            },
+            {
+                "concept": "we walk in the forest",
+                "label": "Wij wandelen in het bos.",
+                "roots": [
+                    "wandelen",
+                    "het bos"
+                ]
+            }
+        ]
+    }
+}

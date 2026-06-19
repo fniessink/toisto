@@ -1,0 +1,36 @@
+{
+    "concepts": {
+        "bath": {
+            "holonym": "bathroom"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "bath",
+                    "plural": "baths"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "kylpy",
+                    "plural": "kylpyjä"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "bath",
+                "label": {
+                    "singular": "het bad",
+                    "plural": "de baden"
+                }
+            }
+        ]
+    }
+}

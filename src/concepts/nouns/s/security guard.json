@@ -1,0 +1,27 @@
+{
+    "concepts": {
+        "security guard": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "security guard",
+                "label": "security guard"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "security guard",
+                "label": "vartija"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "security guard",
+                "label": "de beveiliger"
+            }
+        ]
+    }
+}

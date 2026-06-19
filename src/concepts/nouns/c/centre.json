@@ -1,0 +1,40 @@
+{
+    "concepts": {
+        "centre": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "centre",
+                "label": {
+                    "singular": [
+                        "centre",
+                        "center"
+                    ],
+                    "plural": [
+                        "centres",
+                        "centers"
+                    ]
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "centre",
+                "label": {
+                    "singular": "keskusta",
+                    "plural": "keskustat"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "centre",
+                "label": {
+                    "singular": "het centrum",
+                    "plural": "de centra"
+                }
+            }
+        ]
+    }
+}

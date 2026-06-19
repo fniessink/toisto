@@ -1,0 +1,34 @@
+{
+    "concepts": {
+        "village": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "village",
+                "label": {
+                    "singular": "village",
+                    "plural": "villages"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "village",
+                "label": {
+                    "singular": "kylä",
+                    "plural": "kylät"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "village",
+                "label": {
+                    "singular": "het dorp",
+                    "plural": "de dorpen"
+                }
+            }
+        ]
+    }
+}

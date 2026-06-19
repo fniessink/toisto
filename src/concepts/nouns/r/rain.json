@@ -1,0 +1,46 @@
+{
+    "concepts": {
+        "rain": {
+            "example": "it is raining"
+        },
+        "it is raining": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "rain",
+                "label": "rain"
+            },
+            {
+                "concept": "it is raining",
+                "label": "It is raining.",
+                "roots": "rain"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "rain",
+                "label": "sade"
+            },
+            {
+                "concept": "it is raining",
+                "label": "Sataa vettä."
+            },
+            {
+                "concept": "it is raining",
+                "label": "Sataa."
+            }
+        ],
+        "nl": [
+            {
+                "concept": "rain",
+                "label": "de regen"
+            },
+            {
+                "concept": "it is raining",
+                "label": "Het regent.",
+                "roots": "de regen"
+            }
+        ]
+    }
+}

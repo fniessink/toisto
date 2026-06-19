@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "dentist": {
+            "hypernym": "profession"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "dentist",
+                "label": "dentist"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "dentist",
+                "label": "hammaslääkäri",
+                "roots": [
+                    "hammas",
+                    "lääkäri"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "dentist",
+                "label": "de tandarts",
+                "roots": [
+                    "de tand",
+                    "de arts"
+                ]
+            }
+        ]
+    }
+}

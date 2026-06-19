@@ -1,0 +1,64 @@
+{
+    "concepts": {
+        "street": {
+            "example": "my house is in this street"
+        },
+        "my house is in this street": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "street",
+                "label": {
+                    "singular": "street",
+                    "plural": "streets"
+                }
+            },
+            {
+                "concept": "my house is in this street",
+                "label": "My house is in this street.",
+                "roots": [
+                    "house",
+                    "street"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "street",
+                "label": {
+                    "singular": "katu",
+                    "plural": "kadut"
+                }
+            },
+            {
+                "concept": "my house is in this street",
+                "label": [
+                    "Minun taloni on tällä kadulla.",
+                    "Taloni on tällä kadulla."
+                ],
+                "roots": [
+                    "talo",
+                    "katu"
+                ]
+            }
+        ],
+        "nl": [
+            {
+                "concept": "street",
+                "label": {
+                    "singular": "de straat",
+                    "plural": "de straten"
+                }
+            },
+            {
+                "concept": "my house is in this street",
+                "label": "Mijn huis is in deze straat.",
+                "roots": [
+                    "het huis",
+                    "de straat"
+                ]
+            }
+        ]
+    }
+}

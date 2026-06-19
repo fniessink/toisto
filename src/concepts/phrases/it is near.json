@@ -1,0 +1,35 @@
+{
+    "concepts": {
+        "it is near": {
+            "antonym": "it is far"
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "it is near",
+                "label": "It is near.",
+                "roots": "near"
+            }
+        ],
+        "fi": [
+            {
+                "concept": "it is near",
+                "label": "Se on lähellä.",
+                "roots": "lähellä"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "it is near",
+                "label": "Het is dichtbij.",
+                "roots": "dichtbij"
+            },
+            {
+                "concept": "it is near",
+                "label": "Het is in de buurt.",
+                "roots": "in de buurt"
+            }
+        ]
+    }
+}

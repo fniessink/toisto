@@ -1,0 +1,112 @@
+{
+    "concepts": {
+        "weather": {
+            "example": [
+                "how is the weather",
+                "what is the weather like"
+            ]
+        },
+        "dry weather": {
+            "hypernym": "weather"
+        },
+        "hot weather": {
+            "hypernym": "weather"
+        },
+        "how is the weather": {}
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "weather",
+                "label": "weather"
+            },
+            {
+                "concept": "dry weather",
+                "label": "dry weather",
+                "roots": [
+                    "dry",
+                    "weather"
+                ]
+            },
+            {
+                "concept": "hot weather",
+                "label": "hot weather",
+                "roots": [
+                    "hot",
+                    "weather"
+                ]
+            },
+            {
+                "concept": "hot weather",
+                "label": "heat"
+            },
+            {
+                "concept": "how is the weather",
+                "label": [
+                    "How is the weather?",
+                    "How's the weather?"
+                ],
+                "roots": [
+                    "How?",
+                    "weather"
+                ]
+            }
+        ],
+        "fi": [
+            {
+                "concept": "weather",
+                "label": "sää"
+            },
+            {
+                "concept": "dry weather",
+                "label": "pouta"
+            },
+            {
+                "concept": "hot weather",
+                "label": "helle"
+            },
+            {
+                "concept": "how is the weather",
+                "label": "Millainen sää on?",
+                "roots": [
+                    "Millainen?",
+                    "sää"
+                ]
+            },
+            {
+                "concept": "how is the weather",
+                "label": "Minkälainen sää on?",
+                "roots": "sää"
+            }
+        ],
+        "nl": [
+            {
+                "concept": "weather",
+                "label": "het weer"
+            },
+            {
+                "concept": "dry weather",
+                "label": [
+                    "het droge weer",
+                    "droog weer"
+                ],
+                "roots": [
+                    "droog",
+                    "het weer"
+                ]
+            },
+            {
+                "concept": "hot weather",
+                "label": "de hitte"
+            },
+            {
+                "concept": "how is the weather",
+                "label": "Hoe is het weer?",
+                "roots": [
+                    "Hoe?",
+                    "het weer"
+                ]
+            }
+        ]
+    }
+}

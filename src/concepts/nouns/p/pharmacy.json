@@ -1,0 +1,40 @@
+{
+    "concepts": {
+        "pharmacy": {
+            "hypernym": "building",
+            "involves": [
+                "health care",
+                "medicine"
+            ]
+        }
+    },
+    "labels": {
+        "en": [
+            {
+                "concept": "pharmacy",
+                "label": {
+                    "singular": "pharmacy",
+                    "plural": "pharmacies"
+                }
+            }
+        ],
+        "fi": [
+            {
+                "concept": "pharmacy",
+                "label": {
+                    "singular": "apteekki",
+                    "plural": "apteekit"
+                }
+            }
+        ],
+        "nl": [
+            {
+                "concept": "pharmacy",
+                "label": {
+                    "singular": "de apotheek",
+                    "plural": "de apotheken"
+                }
+            }
+        ]
+    }
+}
